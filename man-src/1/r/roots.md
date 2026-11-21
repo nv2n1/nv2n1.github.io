@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-roots/"
 description: "roots.exe – Remote ROOT interpretor server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> roots.exe &#8211; Remote ROOT interpretor server </p>
 <h2>SEE</h2>
 <p> <code><a href="/docs/linux/man/1-root/">root</a>(1)</code></p>
 <h2>ORIGINAL AUTHORS</h2>

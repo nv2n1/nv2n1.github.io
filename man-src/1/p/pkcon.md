@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pkcon/"
 description: "pkcon – PackageKit console client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pkcon &#8211; PackageKit console client </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkcon</code> [<code>OPTION</code>&#8230;] [<code>COMMAND</code>]</dt></dl>

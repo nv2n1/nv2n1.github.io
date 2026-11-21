@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-openjade/"
 description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 ---
 
-<h2 class="name">NAME</h2>
-<p> openjade &#8211; apply a DSSSL stylesheet to an SGML or XML document </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>openjade</code> [<code>-vCegG2s</code>] [<code>-b&nbsp;</code><i>encoding</i>] [<code>-f&nbsp;</code><i>error_file</i>] [<code>-c&nbsp;</code><i>catalog_sysid</i>] [<code>-D&nbsp;</code><i>dir</i>] [<code>-a&nbsp;</code><i>link_type</i>] [<code>-A&nbsp;</code><i>arch</i>] [<code>-E&nbsp;</code><i>max_errors</i>] [<code>-i&nbsp;</code><i>entity</i>] [<code>-w&nbsp;</code><i>warning_type</i>] [<code>-d&nbsp;</code><i>dsssl_spec</i>] [<code>-V&nbsp;</code><i>variable[=value</i>]] [<code>-t&nbsp;</code><i>output_type</i>] [<code>-o&nbsp;</code><i>output_file</i>] [<i>sysid</i>&#8230;] </dt>

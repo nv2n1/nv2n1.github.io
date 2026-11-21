@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-remove/"
 description: "ANTLR3_BITSET_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_BITSET_struct &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3bitset.h">antlr3bitset.h</a>&gt;</p>
 <h3>Data Fields</h3>

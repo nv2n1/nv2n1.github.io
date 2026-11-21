@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hp-levels/"
 description: "hp-levels – Supply Levels Utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hp-levels &#8211; Supply Levels Utility </p>
 <h2>DESCRIPTION</h2>
 <p> Display bar graphs of current supply levels for supported HPLIP printers.</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-permission-reset/"
 description: "flatpak-permission-reset – Reset permissions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-permission-reset &#8211; Reset permissions </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak permission-reset</code> [OPTION&#8230;] APP_ID</dt>

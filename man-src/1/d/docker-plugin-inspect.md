@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-plugin-inspect/"
 description: "docker-plugin-inspect – Display detailed information on one or more plugins"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-plugin-inspect &#8211; Display detailed information on one or more plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker plugin inspect [OPTIONS] PLUGIN [PLUGIN&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cunbdb/"
 description: "cunbdb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cunbdb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_get_obj/"
 description: "hdf_get_obj – return the HDF data set node at a named location"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_get_obj &#8211; return the HDF data set node at a named location </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

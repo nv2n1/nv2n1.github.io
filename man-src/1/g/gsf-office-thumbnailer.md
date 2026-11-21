@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gsf-office-thumbnailer/"
 description: "gsf-office-thumbnailer – office files thumbnailer for the GNOME desktop"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gsf-office-thumbnailer &#8211; office files thumbnailer for the GNOME desktop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsf-office-thumbnailer</code> [<i>OPTIONS</i>] <i>infile</i> <i>outfile</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-aio_cancel/"
 description: "aio_cancel – cancel an outstanding asynchronous I/O request"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aio_cancel &#8211; cancel an outstanding asynchronous I/O request </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>int aio_cancel(int </code><i>fd</i><code>, struct aiocb *</code><i>aiocbp</i><code>);</code> </p>

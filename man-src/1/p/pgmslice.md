@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmslice/"
 description: "pgmslice – extract one line of pixel values out of a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmslice &#8211; extract one line of pixel values out of a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmslice</code> <code>-row</code>|<code>-col</code> <i>line</i> [<i>pgmfile</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlthanks/"
 description: "perlbug – how to submit bug reports on Perl"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlbug &#8211; how to submit bug reports on Perl </p>
 <h2>SYNOPSIS</h2>
 <p> <code>perlbug</code> </p>
 <p> <code>perlbug</code> [ <code>-v</code> ] [ <code>-a</code> <i>address</i> ] [ <code>-s</code> <i>subject</i> ] [ <code>-b</code> <i>body</i> | <code>-f</code> <i>inputfile</i> ] [ <code>-F</code> <i>outputfile</i> ] [ <code>-r</code> <i>returnaddress</i> ] [ <code>-e</code> <i>editor</i> ] [ <code>-c</code> <i>adminaddress</i> | <code>-C</code> ] [ <code>-S</code> ] [ <code>-t</code> ] [ <code>-d</code> ] [ <code>-h</code> ] [ <code>-T</code> ] </p>

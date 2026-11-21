@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gradient-convert/"
 description: "gradient-convert – convert gradients between formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gradient-convert &#8211; convert gradients between formats </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gradient-convert</code> [-b&nbsp;<wbr><i>rgb</i>] [-B] [-c] [-f&nbsp;<wbr><i>rgb</i>] [-g&nbsp;<wbr><i>geometry</i>] [-h] [-i&nbsp;<wbr><i>format</i>] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>format</i>] [-p] [-T&nbsp;<wbr><i>rgb</i>] [-v] [-V] <i>infile</i> <i>outfile</i></dt></dl>

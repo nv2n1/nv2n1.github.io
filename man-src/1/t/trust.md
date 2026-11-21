@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trust/"
 description: "trust – Tool for operating on the trust policy store"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trust &#8211; Tool for operating on the trust policy store </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>trust list</code></dt>

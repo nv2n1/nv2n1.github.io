@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bf_copy/"
 description: "bf_copy – shell script to copy a bogofilter working directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bf_copy &#8211; shell script to copy a bogofilter working directory </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bf_copy</code> [-c] <i>source_dir</i> <i>destination_dir</i></dt></dl>

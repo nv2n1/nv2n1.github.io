@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-splitfont/"
 description: "splitfont – extract characters from an ISO-type font."
 ---
 
-<h2 class="name">NAME</h2>
-<p> splitfont &#8211; extract characters from an ISO-type font.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>splitfont</code> <i>fontfile</i> <i>&lt;character range&gt;&#8230;</i> </p>
 <h2>DESCRIPTION</h2>

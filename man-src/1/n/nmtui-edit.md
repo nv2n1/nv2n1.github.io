@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nmtui-edit/"
 description: "nmtui – Text User Interface for controlling NetworkManager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nmtui &#8211; Text User Interface for controlling NetworkManager </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nmtui-edit | nmtui edit </code> {<i>name</i>&nbsp;|&nbsp;<i>id</i>}</dt>

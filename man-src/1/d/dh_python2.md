@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_python2/"
 description: "dh_python2 – calculates Python dependencies, adds maintainer scripts to byte compile files, etc."
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_python2 &#8211; calculates Python dependencies, adds maintainer scripts to byte compile files, etc. </p>
 <h2>SYNOPSIS</h2>
 <p> dh_python2 -p PACKAGE [-V [X.Y][-][A.B]] DIR_OR_FILE [-X REGEXPR]</p>
 <h2>DESCRIPTION</h2>

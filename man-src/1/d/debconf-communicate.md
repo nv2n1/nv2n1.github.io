@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debconf-communicate/"
 description: "debconf-communicate – communicate with debconf"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debconf-communicate &#8211; communicate with debconf </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 echo commands | debconf - communicate[options][package]

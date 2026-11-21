@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nmblookup/"
 description: "nmblookup – NetBIOS over TCP/IP client used to lookup NetBIOS names"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nmblookup &#8211; NetBIOS over TCP/IP client used to lookup NetBIOS names </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

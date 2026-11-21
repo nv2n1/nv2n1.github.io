@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-beakerlib/"
 description: "BeakerLib – a shell-level integration testing library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> BeakerLib &#8211; a shell-level integration testing library </p>
 <h2>DESCRIPTION</h2>
 <p> BeakerLib is a shell-level integration testing library, providing convenience functions which simplify writing, running and analysis of integration and blackbox tests. </p>
 <p> The essential features include:</p>

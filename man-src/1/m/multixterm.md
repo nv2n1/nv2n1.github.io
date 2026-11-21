@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-multixterm/"
 description: "multixterm – drive multiple xterms separately or together"
 ---
 
-<h2 class="name">NAME</h2>
-<p> multixterm &#8211; drive multiple xterms separately or together </p>
 <h2>SYNOPSIS</h2>
 <p> <code>multixterm</code> [ <i>args</i> ]</p>
 <h2>DESCRIPTION</h2>

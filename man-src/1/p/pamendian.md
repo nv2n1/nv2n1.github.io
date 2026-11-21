@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamendian/"
 description: "pamendian – reverse endianness of a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamendian &#8211; reverse endianness of a Netpbm image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamendian</code> </p>
 <h2>DESCRIPTION</h2>

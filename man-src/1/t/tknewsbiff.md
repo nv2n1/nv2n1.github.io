@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tknewsbiff/"
 description: "tknewsbiff – pop up a window when news appears"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tknewsbiff &#8211; pop up a window when news appears </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tknewsbiff</code> [ <i>server or config-file</i> ] </p>
 <h2>INTRODUCTION</h2>

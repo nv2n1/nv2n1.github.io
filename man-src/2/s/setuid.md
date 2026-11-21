@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setuid/"
 description: "setuid – set user identity"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setuid &#8211; set user identity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>

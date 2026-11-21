@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlaccess/"
 description: "mysqlaccess – client for checking access privileges"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlaccess &#8211; client for checking access privileges </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlaccess [</code><i>host_name</i><code> [</code><i>user_name</i><code> [</code><i>db_name</i><code>]]] [</code><i>options</i><code>]</code></dt></dl>

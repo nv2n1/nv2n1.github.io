@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fwide/"
 description: "fwide – set and determine the orientation of a FILE stream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fwide &#8211; set and determine the orientation of a FILE stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;

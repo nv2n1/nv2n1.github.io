@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kcstashtest/"
 description: "kcstashtest – command line interface to test the stash database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kcstashtest &#8211; command line interface to test the stash database</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>kcstashtest</code>&#8216; is a utility for facility test and performance test of the stash database. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>

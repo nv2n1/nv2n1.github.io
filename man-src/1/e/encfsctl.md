@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-encfsctl/"
 description: "encfsctl – administrative tool for working with EncFS filesystems"
 ---
 
-<h2 class="name">NAME</h2>
-<p> encfsctl &#8211; administrative tool for working with EncFS filesystems </p>
 <h2>SYNOPSIS</h2>
 <p> <code>encfsctl</code> [<i>command</i> <i>command_args</i>] </p>
 <p> <code>encfsctl</code> [info] <i>rootdir</i> </p>

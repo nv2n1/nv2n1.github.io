@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-curl-config/"
 description: "curl-config – Get information about a libcurl installation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> curl-config &#8211; Get information about a libcurl installation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>curl-config [options]</code></p>
 <h2>DESCRIPTION</h2>

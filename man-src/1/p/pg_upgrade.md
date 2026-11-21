@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pg_upgrade/"
 description: "pg_upgrade – upgrade a PostgreSQL server instance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pg_upgrade &#8211; upgrade a PostgreSQL server instance </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_upgrade</code> <code>-b</code> <i>oldbindir</i> <code>-B</code> <i>newbindir</i> <code>-d</code> <i>olddatadir</i> <code>-D</code> <i>newdatadir</i> [<i>option</i>&#8230;]</dt></dl>

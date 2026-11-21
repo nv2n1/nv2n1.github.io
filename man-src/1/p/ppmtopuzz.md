@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtopuzz/"
 description: "ppmtopuzz – convert a portable pixmap into an X11 \"puzzle\" file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtopuzz &#8211; convert a portable pixmap into an X11 &quot;puzzle&quot; file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtopuzz</code> [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

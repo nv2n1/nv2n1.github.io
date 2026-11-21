@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-offlineimap/"
 description: "offlineimap – Synchronize mailboxes and Maildirs both ways or one either way."
 ---
 
-<h2 class="name">NAME</h2>
-<p> offlineimap &#8211; Synchronize mailboxes and Maildirs both ways or one either way. </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>offlineimap</i> (options)

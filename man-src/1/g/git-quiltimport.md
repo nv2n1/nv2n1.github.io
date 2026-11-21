@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-quiltimport/"
 description: "git-quiltimport – Applies a quilt patchset onto the current branch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-quiltimport &#8211; Applies a quilt patchset onto the current branch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git quiltimport[--dry - run | -n][--author&lt;author&gt;][--patches&lt;dir&gt;]

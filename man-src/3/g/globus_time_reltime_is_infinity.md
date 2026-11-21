@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_time_reltime_is_infinity/"
 description: "globus_time.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_time.h &#8211; </p>
 <p> Time Types and Macros.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_types.h&#8217;<br />

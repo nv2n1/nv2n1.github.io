@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-group_member/"
 description: "group_member – test whether a process is in a group"
 ---
 
-<h2 class="name">NAME</h2>
-<p> group_member &#8211; test whether a process is in a group </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int group_member(gid_t </code><i>gid</i><code>);</code> </p>

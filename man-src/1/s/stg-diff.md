@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-diff/"
 description: "stg-diff – Show the tree diff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-diff &#8211; Show the tree diff </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg diff[options][--][ &lt; files or dirs &gt; ]

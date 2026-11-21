@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dblink_open/"
 description: "dblink_open – opens a cursor in a remote database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblink_open &#8211; opens a cursor in a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dblink_open(text cursorname, text sql[, bool fail_on_error]) returns text

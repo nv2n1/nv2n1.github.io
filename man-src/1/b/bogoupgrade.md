@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bogoupgrade/"
 description: "bogoupgrade – upgrades bogofilter database to current version"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bogoupgrade &#8211; upgrades bogofilter database to current version </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogoupgrade</code> [-h] -d&nbsp;<wbr><i>directory</i> [-i&nbsp;<wbr><i>input file</i>] [-o&nbsp;<wbr><i>output file</i>] [-b&nbsp;<wbr><i>path to bogoutil</i>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guestfs-performance/"
 description: "guestfs-performance – engineering libguestfs for greatest performance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guestfs-performance &#8211; engineering libguestfs for greatest performance </p>
 <h2>DESCRIPTION</h2>
 <p> This page documents how to get the greatest performance out of libguestfs, especially when you expect to use libguestfs to manipulate thousands of virtual machines or disk images. </p>
 <p> Three main areas are covered. Libguestfs runs an appliance (a small Linux distribution) inside qemu/KVM. The first two areas are: minimizing the time taken to start this appliance, and the number of times the appliance has to be started. The third area is shortening the time taken for inspection of VMs.</p>

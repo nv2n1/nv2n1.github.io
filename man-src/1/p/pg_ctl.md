@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-pg_ctl/"
 description: "pg_ctl – initialize, start, stop, or control a PostgreSQL server"
 ---
-<h2 class="name">NAME</h2>
-<p> pg_ctl - initialize, start, stop, or control a PostgreSQL server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>pg_ctl</code><code>init[db]</code> [<code>-s</code>] [<code>-D</code>&nbsp;<wbr><i>datadir</i>] [<code>-o</code>&nbsp;<wbr><i>initdb-options</i>] </dt>

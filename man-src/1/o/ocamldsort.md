@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamldsort/"
 description: "ocamldsort – Dependency sorter for OCaml source files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamldsort &#8211; Dependency sorter for OCaml source files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamldsort</code> [ <code>-pp</code> <i> pre-command</i> ] [ <code>-d</code> <i>dep-command</i> ]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-mli</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-nox</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-obj</code>&nbsp;<wbr>|&nbsp;<wbr><code>-byte</code>&nbsp;<wbr>|&nbsp;<wbr><code>-opt</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]&nbsp;<wbr><i>&#8230;</i> </p>

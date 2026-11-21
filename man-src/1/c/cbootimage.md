@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cbootimage/"
 description: "cbootimage – tegra BCT compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cbootimage &#8211; tegra BCT compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cbootimage</code> [ <i>options</i> ] configfile [ <i>inputimage</i> ] <i>outputimage</i></p>
 <h2>DESCRIPTION</h2>

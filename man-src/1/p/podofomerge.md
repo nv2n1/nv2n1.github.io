@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofomerge/"
 description: "podofomerge – merge several PDF files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofomerge &#8211; merge several PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofomerge</code> [inputfile1] [inputfile2] [outputfile] </p>
 <h2>DESCRIPTION</h2>

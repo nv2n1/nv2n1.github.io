@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-olduname/"
 description: "uname – get name and information about current kernel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> uname &#8211; get name and information about current kernel </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/utsname.h&gt;</code> </p>
 <p> <code>int uname(struct utsname *</code><i>buf</i><code>);</code></p>

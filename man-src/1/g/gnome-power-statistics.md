@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-power-statistics/"
 description: "gnome-power-statistics – gnome power statistics gui"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-power-statistics &#8211; gnome power statistics gui </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-power-statistics</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;help</code> ] </p>
 <h2>DESCRIPTION</h2>

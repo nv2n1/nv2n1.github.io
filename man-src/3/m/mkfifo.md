@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mkfifo/"
 description: "mkfifo, mkfifoat – make a FIFO special file (a named pipe)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkfifo, mkfifoat &#8211; make a FIFO special file (a named pipe) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/stat.h&gt;

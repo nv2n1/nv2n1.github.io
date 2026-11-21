@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rst2man/"
 description: "rst2man – generate unix manpages from reStructured text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rst2man &#8211; generate unix manpages from reStructured text </p>
 <h2>SYNOPSIS</h2>
 <p> rst2man [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
 <h2>DESCRIPTION</h2>

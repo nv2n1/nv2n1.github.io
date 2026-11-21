@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-remunge/"
 description: "remunge – MUNGE credential benchmark"
 ---
 
-<h2 class="name">NAME</h2>
-<p> remunge &#8211; MUNGE credential benchmark</p>
 <h2>SYNOPSIS</h2>
 <p> <code>remunge</code> [<i>OPTION</i>]&#8230; </p>
 <h2>DESCRIPTION</h2>

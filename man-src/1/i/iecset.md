@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-iecset/"
 description: "iecset – Set or dump IEC958 status bits"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iecset &#8211; Set or dump IEC958 status bits</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iecset</code> [<i>options</i>] [<i>cmd</i> <i>arg</i>&#8230;] </p>
 <h2>DESCRIPTION</h2>

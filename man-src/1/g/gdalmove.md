@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdalmove/"
 description: "gdalmove – gdalmove.py Transform georeferencing of raster file in place"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdalmove &#8211; gdalmove.py Transform georeferencing of raster file in place </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdalmove.py[-s_srs&lt;srs_defn&gt;] - t_srs&lt;srs_defn&gt;[-et&lt;max_pixel_err&gt;] target_file

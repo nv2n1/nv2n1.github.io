@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getcert-add-scep-ca/"
 description: "getcert"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getcert</p>
 <h2>SYNOPSIS</h2>
 <p> getcert add-scep-ca [options] </p>
 <h2>DESCRIPTION</h2>

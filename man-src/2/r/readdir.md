@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-readdir/"
 description: "readdir – read directory entry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> readdir &#8211; read directory entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 int readdir(unsigned int fd, struct old_linux_dirent *dirp,

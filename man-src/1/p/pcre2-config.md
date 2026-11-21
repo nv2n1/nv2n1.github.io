@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pcre2-config/"
 description: "pcre2-config – program to return PCRE2 configuration"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pcre2-config &#8211; program to return PCRE2 configuration </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pcre2 - config[--prefix][--exec - prefix][--version]

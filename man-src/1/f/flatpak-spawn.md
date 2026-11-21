@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-spawn/"
 description: "flatpak-spawn – Run commands in a sandbox"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-spawn &#8211; Run commands in a sandbox </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak-spawn</code> [OPTION&#8230;] COMMAND [ARGUMENT&#8230;]</dt></dl>

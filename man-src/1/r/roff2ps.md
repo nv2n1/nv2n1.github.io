@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-roff2ps/"
 description: "roff2ps – transform roff code into ps mode"
 ---
 
-<h2 class="name">NAME</h2>
-<p> roff2ps &#8211; transform roff code into ps mode </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>groffer-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code> </p>
 <p> The options <code>-v</code> and <code>&#8211;version</code> print the version information of the program to standard output and exit. The options <code>-h</code> and <code>&#8211;help</code> print a usage information of the program to standard output and stop the program instantly. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-txt2mb/"
 description: "mb2txt, txt2mb – fcitx table related tools"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mb2txt, txt2mb &#8211; fcitx table related tools </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mb2txt </code><i>&lt;mbfile&gt;</i> </p>
 <p> <code>txt2mb </code><i>&lt;txtfile&gt;</i></p>

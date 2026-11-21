@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffmpeg-formats/"
 description: "ffmpeg-formats – FFmpeg formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffmpeg-formats &#8211; FFmpeg formats </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes the supported formats (muxers and demuxers) provided by the libavformat library.</p>
 <h2>FORMAT OPTIONS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-system-switch-displaymanager/"
 description: "system-switch-displaymanager – graphical and text mode interface for choosing graphical display manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> system-switch-displaymanager &#8211; graphical and text mode interface for choosing graphical display manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>system-switch-displaymanager</code> [display manager name]</p>
 <h2>DESCRIPTION</h2>

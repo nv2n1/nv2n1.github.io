@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-selfsign-getcert/"
 description: "selfsign-getcert"
 ---
 
-<h2 class="name">NAME</h2>
-<p> selfsign-getcert</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>selfsign-getcert request&nbsp;<wbr>[options]<br />
 &nbsp;<wbr>selfsign-getcert resubmit&nbsp;<wbr>[options]<br />

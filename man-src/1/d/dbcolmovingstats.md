@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcolmovingstats/"
 description: "dbcolmovingstats – compute moving statistics over a window of a column of data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcolmovingstats &#8211; compute moving statistics over a window of a column of data </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolmovingstats [-am] [-w window-width] [-e EmptyValue] column</p>
 <h2>DESCRIPTION</h2>

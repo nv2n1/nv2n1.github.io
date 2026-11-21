@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-networkctl/"
 description: "networkctl – Query the status of network links"
 ---
 
-<h2 class="name">NAME</h2>
-<p> networkctl &#8211; Query the status of network links </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>networkctl</code> [OPTIONS&#8230;] COMMAND [LINK&#8230;]</dt></dl>

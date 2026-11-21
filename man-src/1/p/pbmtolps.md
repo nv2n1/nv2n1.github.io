@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtolps/"
 description: "pbmtolps – convert PBM image to PostScript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtolps &#8211; convert PBM image to PostScript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtolps</code> [<code>-dpi</code> <i>n</i>] [<i>pbmfile</i>] </p>
 <h2>DESCRIPTION</h2>

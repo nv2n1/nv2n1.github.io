@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bashmount/"
 description: "bashmount – tool to mount and unmount removable media"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bashmount &#8211; tool to mount and unmount removable media </p>
 <h2>SYNOPSIS</h2>
 <p> <i>bashmount</i></p>
 <h2>DESCRIPTION</h2>

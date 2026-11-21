@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbmultistats/"
 description: "dbmultistats – run dbcolstats over each group of inputs identified by some key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbmultistats &#8211; run dbcolstats over each group of inputs identified by some key </p>
 <h2>SYNOPSIS</h2>
 <p> <tt>$0</tt> [-dm] [-c ConfidencePercent] [-f FormatForm] [-q NumberOfQuartiles] -k KeyField ValueField</p>
 <h2>DESCRIPTION</h2>

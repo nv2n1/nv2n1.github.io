@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-broadwayd/"
 description: "broadwayd – Broadway display server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> broadwayd &#8211; Broadway display server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>broadwayd</code> [&#8211;port&nbsp;<i>PORT</i>] [&#8211;address&nbsp;<i>ADDRESS</i>] [&#8211;unixsocket&nbsp;<i>ADDRESS</i>] [<i>:DISPLAY</i>]</dt></dl>

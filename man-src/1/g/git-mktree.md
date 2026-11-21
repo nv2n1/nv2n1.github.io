@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-mktree/"
 description: "git-mktree – Build a tree-object from ls-tree formatted text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-mktree &#8211; Build a tree-object from ls-tree formatted text </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git mktree[-z][--missing][--batch]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rls_stats_t/"
 description: "globus_rls_stats_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_rls_stats_t &#8211; </p>
 <p> Various configuration options and statistics about an RLS server returned in the following structures by <code>globus_rls_client_stats()</code>.</p>
 <h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>

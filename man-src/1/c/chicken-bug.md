@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chicken-bug/"
 description: "chicken-bug – generates a bug report from user input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chicken-bug &#8211; generates a bug report from user input</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chicken-bug</code> [ <i>filename</i> | <i>OPTION &#8230;</i> ] </p>
 <h2>OPTIONS</h2>

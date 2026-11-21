@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autokey-run/"
 description: "autokey-run – command-line execution utility for AutoKey"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autokey-run &#8211; command-line execution utility for AutoKey </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autokey-run</code> -[s|p|f]<i>[name]</i></p>
 <h2>DESCRIPTION</h2>

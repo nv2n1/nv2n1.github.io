@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-winicon/"
 description: "Microsoft Windows icon files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Microsoft Windows icon files</p>
 <h2>DESCRIPTION</h2>
 <p> A Microsoft Windows icon file contains one or more images, at resolutions up to 256 by 256 pixels and various bpp values. The images are encoded either as Portable Network Graphics file (PNG), or in a format similar to Microsoft&#8217;s BMP format. </p>
 <p> If encoded as BMP, the image includes an &amp;lsquo;AND mask&amp;rsquo;, which contains 1-bit transparency data. It may also contain additional 8-bit transparency data together with the color information. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grepmail/"
 description: "grepmail – search mailboxes for mail matching a regular expression"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grepmail &#8211; search mailboxes for mail matching a regular expression </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]

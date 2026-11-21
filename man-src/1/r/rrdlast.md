@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdlast/"
 description: "rrdlast – Return the date of the last data sample in an RRD"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdlast &#8211; Return the date of the last data sample in an RRD </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>last</code> <i>filename</i> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-malloc_hook/"
 description: "__malloc_hook, __malloc_initialize_hook, __memalign_hook, __free_hook, __realloc_hook, __after_morecore_hook – malloc debugging variables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> __malloc_hook, __malloc_initialize_hook, __memalign_hook, __free_hook, __realloc_hook, __after_morecore_hook &#8211; malloc debugging variables </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;malloc.h&gt;

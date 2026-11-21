@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-node-ls/"
 description: "docker-node-ls – List nodes in the swarm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-node-ls &#8211; List nodes in the swarm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker node ls [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

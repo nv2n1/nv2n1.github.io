@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hvtest/"
 description: "hvtest – test cases for QDBM Hovel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hvtest &#8211; test cases for QDBM Hovel</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hvtest write</code> [-qdbm] [-s] <i>name</i> <i>rnum</i><br />
  <code>hvtest read</code> [-qdbm] <i>name</i> <i>rnum</i> </p>

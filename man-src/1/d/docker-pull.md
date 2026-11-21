@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-pull/"
 description: "docker-pull – Pull an image or a repository from a registry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-pull &#8211; Pull an image or a repository from a registry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker pull [OPTIONS] NAME[:TAG|@DIGEST]</code> </p>
 <h2>DESCRIPTION</h2>

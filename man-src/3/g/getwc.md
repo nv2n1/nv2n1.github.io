@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getwc/"
 description: "fgetwc, getwc – read a wide character from a FILE stream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fgetwc, getwc &#8211; read a wide character from a FILE stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

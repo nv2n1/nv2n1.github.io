@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pstopnm/"
 description: "pstopnm – convert a PostScript file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pstopnm &#8211; convert a PostScript file into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstopnm</code> [<code>-stdout</code>] [<code>-forceplain</code>] [<code>-help</code>] [<code>-llx</code> <i>s</i>] [<code>-lly</code> <i>s</i>] [<code>-landscape</code>] [<code>-portrait</code>] [<code>-nocrop</code>] [<code>-pbm</code> |<code>-pgm</code> |<code>-ppm</code>] [<code>-urx</code> <i>s</i>] [<code>-ury</code> <i>s</i>] [<code>-verbose</code>] [<code>-xborder</code> <i>n</i>] [<code>-xmax</code> <i>n</i>] [<code>-xsize</code> <i>f</i>] [<code>-yborder</code> <i>f</i>] [<code>-ymax</code> <i>n</i>] [<code>-ysize</code> <i>n</i>] <i>psfile</i>[<i></i><code>.ps</code>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pktype/"
 description: "pktype – verify and translate a packed font bitmap file to plain text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pktype &#8211; verify and translate a packed font bitmap file to plain text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pktype</code> <i>pk_file</i>[pk]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-diff3/"
 description: "diff3 – compare three files line by line"
 ---
 
-<h2 class="name">NAME</h2>
-<p> diff3 &#8211; compare three files line by line </p>
 <h2>SYNOPSIS</h2>
 <p> <code>diff3</code> [<i>OPTION</i>]&#8230; <i>MYFILE OLDFILE YOURFILE</i></p>
 <h2>DESCRIPTION</h2>

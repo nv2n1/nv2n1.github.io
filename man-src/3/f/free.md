@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-free/"
 description: "malloc, free, calloc, realloc, reallocarray – allocate and free dynamic memory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> malloc, free, calloc, realloc, reallocarray &#8211; allocate and free dynamic memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

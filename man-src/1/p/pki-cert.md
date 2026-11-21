@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-cert/"
 description: "pki-cert – Command-Line Interface for managing certificates on the Certificate System server."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-cert &#8211; Command-Line Interface for managing certificates on the Certificate System server.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - cert pki[CLI options]&lt;subsystem&gt; - cert - find[command options] pki[CLI options]&lt;subsystem&gt; - cert - show&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - revoke&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - hold&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - release - hold&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - profile - find[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - profile - show&lt;profile ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - submit[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - review&lt;request ID&gt;[command options]

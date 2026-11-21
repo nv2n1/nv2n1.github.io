@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-krb5_pac/"
 description: "Heimdal Kerberos 5 PAC handling functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal Kerberos 5 PAC handling functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb5_pac_get_buffer</code> (krb5_context, krb5_pac, uint32_t, krb5_data *)&quot; </p>

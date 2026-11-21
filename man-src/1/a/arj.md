@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arj/"
 description: "arj – Archiver for .arj files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arj &#8211; Archiver for .arj files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>arj</code> <i>command</i> [<i>-switch</i>[<i>&#8211;</i>|<i>+</i>|<i>option</i>]] <i>archive</i>[<i>.arj</i>] [<i>base directory</i>] [<i>!list name</i>|<i>path name</i>|<i>wildcard name</i>]</p>
 <h2>DESCRIPTION</h2>

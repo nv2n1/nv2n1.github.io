@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_create_ah/"
 description: "ibv_create_ah, ibv_destroy_ah – create or destroy an address handle (AH)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_create_ah, ibv_destroy_ah &#8211; create or destroy an address handle (AH) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

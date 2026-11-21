@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-pidfd_getfd/"
 description: "pidfd_getfd – obtain a duplicate of another process’s file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pidfd_getfd &#8211; obtain a duplicate of another process&#8217;s file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 int pidfd_getfd(int pidfd, int targetfd, unsigned int flags);

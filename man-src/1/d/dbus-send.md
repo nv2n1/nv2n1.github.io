@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbus-send/"
 description: "dbus-send – Send a message to a message bus"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbus-send &#8211; Send a message to a message bus </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-send</code> [&#8211;system | &#8211;session | &#8211;bus=<i>ADDRESS</i> | &#8211;peer=<i>ADDRESS</i>] [&#8211;dest=<i>NAME</i>] [&#8211;print-reply&nbsp;[<i>=literal</i>]] [&#8211;reply-timeout=<i>MSEC</i>] [&#8211;type=<i>TYPE</i>] <i>OBJECT_PATH</i> <i>INTERFACE.MEMBER</i> [<i>CONTENTS</i>&#8230;]</dt>

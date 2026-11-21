@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtgsyl/"
 description: "dtgsyl.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtgsyl.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtgsyl</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, DIF, WORK, LWORK, IWORK, INFO)<br />

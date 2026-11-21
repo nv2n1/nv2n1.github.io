@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xhost/"
 description: "xhost – server access control program for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xhost &#8211; server access control program for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xhost</code> [[+-]name &#8230;]</p>
 <h2>DESCRIPTION</h2>

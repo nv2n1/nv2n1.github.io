@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-rebase/"
 description: "guilt-rebase – Rebase pushed patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-rebase &#8211; Rebase pushed patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-rebase</i> &lt;upstream&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-reset/"
 description: "tracker3-reset – Reset the index and configuration"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-reset &#8211; Reset the index and configuration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker3 reset</code> [&#8211;filesystem | &#8211;rss] [&#8211;file <i>FILE</i>]</p>
 <h2>DESCRIPTION</h2>

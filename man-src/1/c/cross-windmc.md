@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cross-windmc/"
 description: "windmc – generates Windows message resources."
 ---
 
-<h2 class="name">NAME</h2>
-<p> windmc &#8211; generates Windows message resources. </p>
 <h2>SYNOPSIS</h2>
 <p> windmc [options] input-file</p>
 <h2>DESCRIPTION</h2>

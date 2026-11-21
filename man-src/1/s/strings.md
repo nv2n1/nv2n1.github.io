@@ -6,8 +6,6 @@ letter: "s"
 url: "/docs/linux/man/1-strings/"
 description: "strings – print the sequences of printable characters in files"
 ---
-<h2 class="name">NAME</h2>
-<p> strings - print the sequences of printable characters in files </p>
 <h2>SYNOPSIS</h2>
 <p> strings [<code>-afovV</code>] [<code>-</code><i>min-len</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>&nbsp;<i>min-len</i>]&nbsp;[<code>--bytes=</code><i>min-len</i>] <br />

@@ -6,8 +6,6 @@ letter: "z"
 url: "/docs/linux/man/1-zsh-lovers/"
 description: "zsh-lovers – tips, tricks and examples for the Z shell"
 ---
-<h2 class="name">NAME</h2>
-<p> zsh-lovers - tips, tricks and examples for the Z shell </p>
 <h2>SYNOPSIS</h2>
 <p> Just read it. ;-)  </p>
 <h2>OVERVIEW</h2>

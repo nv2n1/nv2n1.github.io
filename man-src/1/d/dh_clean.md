@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_clean/"
 description: "dh_clean – clean up package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_clean &#8211; clean up package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_clean</code> [<i>debhelper options</i>] [<code>-k</code>] [<code>-d</code>] [<code>-X</code><i>item</i>] [<i>path</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

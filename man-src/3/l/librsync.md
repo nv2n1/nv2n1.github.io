@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-librsync/"
 description: "librsync – library for delta compression of streams"
 ---
 
-<h2 class="name">NAME</h2>
-<p> librsync &#8211; library for delta compression of streams </p>
 <h2>SYNOPSYS</h2>
 <p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;stdio.h&gt;</code> </p>
 <p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;stdlib.h&gt;</code> </p>

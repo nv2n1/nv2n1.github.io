@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sbbcsd/"
 description: "sbbcsd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sbbcsd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sbbcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, M, P, Q, THETA, PHI, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, B11D, B11E, B12D, B12E, B21D, B21E, B22D, B22E, WORK, LWORK, INFO)<br />

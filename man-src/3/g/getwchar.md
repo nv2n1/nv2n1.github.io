@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getwchar/"
 description: "getwchar – read a wide character from standard input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getwchar &#8211; read a wide character from standard input </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;

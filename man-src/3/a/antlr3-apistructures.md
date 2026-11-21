@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-apistructures/"
 description: "API Typedefs and Structs –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> API Typedefs and Structs &#8211; </p>
 <p> These structures (and the typedefs that you use to reference them and their pointers) are the C equivalent of objects.</p>
 <h3>Data Structures</h3>
 <p> struct <code>ANTLR3_INPUT_STREAM_struct</code><br />

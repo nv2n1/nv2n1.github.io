@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mergecap/"
 description: "mergecap – Merges two or more capture files into one"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mergecap &#8211; Merges two or more capture files into one </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mergecap</code> [&nbsp;<wbr><code>-a</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-F</code>&nbsp;<wbr>&lt;<i>file format</i>&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>&lt;<i>snaplen</i>&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-T</code>&nbsp;<wbr>&lt;<i>encapsulation type</i>&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] <code>-w</code>&nbsp;<wbr>&lt;<i>outfile</i>&gt;|- &lt;<i>infile</i>&gt; [&lt;<i>infile</i>&gt; <i>&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

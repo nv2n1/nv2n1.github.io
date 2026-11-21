@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jcmd/"
 description: "jcmd – Sends diagnostic command requests to a running Java Virtual Machine (JVM)."
 ---
 
-<h2 class="name">NAME</h2>
-<p> jcmd &#8211; Sends diagnostic command requests to a running Java Virtual Machine (JVM). </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

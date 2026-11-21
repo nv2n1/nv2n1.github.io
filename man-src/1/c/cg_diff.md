@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cg_diff/"
 description: "cg_diff – compares two Cachegrind output files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cg_diff &#8211; compares two Cachegrind output files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cg_diff</code> [<i>options</i>] <i>cachegrind-out-file1</i> <i>cachegrind-out-file2</i></dt></dl>

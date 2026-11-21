@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ldclt/"
 description: "ldclt – load test program for LDAP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldclt &#8211; load test program for LDAP </p>
 <h2>SYNOPSYS</h2>
 <p> <code>ldclt </code> [<i>-qQvV</i>] [<i>-E &lt;max errors&gt;</i>] [<i>-b &lt;base DN&gt;</i>] [<i>-h &lt;host&gt;</i>] [<i>-p &lt;port&gt;</i>] [<i>-t &lt;timeout&gt;</i>] [<i>-D &lt;bind DN&gt;</i>] [<i>-w &lt;passwd&gt;</i>] [<i>-o &lt;SASL option&gt;</i>] [<i>-e &lt;execParams&gt;</i>] [<i>-a &lt;max pending&gt;</i>] [<i>-n &lt;nb threads&gt;</i>] [<i>-i &lt;nb times&gt;</i>] [<i>-N &lt;nb samples&gt;</i>] [<i>-I &lt;err number&gt;</i>] [<i>-T &lt;total&gt;</i>] [<i>-r &lt;low&gt; -R &lt;high&gt;</i>] [<i>-f &lt;filter&gt;</i>] [<i>-s &lt;scope&gt;</i>] [<i>-S &lt;slave&gt;</i>] [<i>-P&lt;master port&gt;</i>] [<i>-W &lt;waitsec&gt;</i>] [<i>-Z &lt;certfile&gt;</i>] </p>
 <h2>DESCRIPTION</h2>

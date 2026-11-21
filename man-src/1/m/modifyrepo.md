@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-modifyrepo/"
 description: "modifyrepo – Modify a repomd (xml-rpm-metadata) repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> modifyrepo &#8211; Modify a repomd (xml-rpm-metadata) repository</p>
 <h2>SYNOPSIS</h2>
 <p> <code>modifyrepo</code> [options] &lt;input metadata&gt; &lt;output repodata&gt; </p>
 <h2>DESCRIPTION</h2>

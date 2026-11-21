@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tabix/"
 description: "tabix – Generic indexer for TAB-delimited genome position files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tabix &#8211; Generic indexer for TAB-delimited genome position files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tabix</code> [<code>-0lf</code>] [<code>-p</code> gff|bed|sam|vcf] [<code>-s</code> <i>seqCol</i>] [<code>-b</code> <i>begCol</i>] [<code>-e</code> <i>endCol</i>] [<code>-S</code> <i>lineSkip</i>] [<code>-c</code> <i>metaChar</i>] <i>in.tab.bgz</i> [<i>region1 </i>[<i>region2 </i>[<i>&#8230;</i>]]] </p>
 <h2>DESCRIPTION</h2>

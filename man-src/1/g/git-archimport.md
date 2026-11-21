@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-archimport/"
 description: "git-archimport – Import an Arch repository into git"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-archimport &#8211; Import an Arch repository into git </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git archimport[-h][-v][-o][-a][-f][-T][-D depth][-t tempdir]&lt;archive / branch&gt;[:&lt;git - branch&gt;]...

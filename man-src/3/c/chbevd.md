@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chbevd/"
 description: "chbevd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chbevd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chbevd</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />

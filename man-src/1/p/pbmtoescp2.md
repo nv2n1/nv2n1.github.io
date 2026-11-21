@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoescp2/"
 description: "pbmtoescp2 – convert a PBM image to a ESC/P2 printer file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoescp2 &#8211; convert a PBM image to a ESC/P2 printer file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoescp2</code> </p>
 <p> [<code>-compress=</code><i>compressionmode</i>] [<code>-resolution=</code><i>dpi</i>] [<i>pbmfile</i>] </p>

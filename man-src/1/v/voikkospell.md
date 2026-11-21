@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-voikkospell/"
 description: "voikkospell – test program for Voikko spell checker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> voikkospell &#8211; test program for Voikko spell checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>voikkospell</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

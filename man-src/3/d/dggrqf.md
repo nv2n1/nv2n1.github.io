@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dggrqf/"
 description: "dggrqf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dggrqf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dggrqf</code> (M, P, N, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />

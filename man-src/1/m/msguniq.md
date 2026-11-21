@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msguniq/"
 description: "msguniq – unify duplicate translations in message catalog"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msguniq &#8211; unify duplicate translations in message catalog </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msguniq</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]</p>
 <h2>DESCRIPTION</h2>

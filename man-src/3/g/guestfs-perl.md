@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-guestfs-perl/"
 description: "guestfs-perl – How to use libguestfs from Perl"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guestfs-perl &#8211; How to use libguestfs from Perl </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 use Sys::Guestfs;

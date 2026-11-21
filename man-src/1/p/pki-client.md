@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-client/"
 description: "pki-client – Command-Line Interface for managing the security database on Certificate System client."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-client &#8211; Command-Line Interface for managing the security database on Certificate System client. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] client

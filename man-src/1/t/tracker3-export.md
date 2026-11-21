@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-export/"
 description: "tracker3-export – Export all data from a Tracker database."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-export &#8211; Export all data from a Tracker database. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker3 export</code> [<i>options</i>&#8230;] [<code>IRI</code>&#8230;]</p>
 <h2>DESCRIPTION</h2>

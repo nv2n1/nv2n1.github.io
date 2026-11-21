@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claed8/"
 description: "claed8.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claed8.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claed8</code> (K, N, QSIZ, Q, LDQ, D, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, INDXP, INDX, INDXQ, PERM, GIVPTR, GIVCOL, GIVNUM, INFO)<br />

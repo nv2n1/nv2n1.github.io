@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-packf/"
 description: "packf – pack messages in nmh folder into a single file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> packf &#8211; pack messages in nmh folder into a single file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>packf</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>name</i>] [<code>-mbox</code>] [<code>-mmdf</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

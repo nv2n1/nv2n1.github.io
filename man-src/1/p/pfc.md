@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pfc/"
 description: "pfc – active precompiled filters generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pfc &#8211; active precompiled filters generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pfc</code> &lt;expression&gt; &gt;/etc/ppp/your.active.filter</p>
 <h2>DESCRIPTION</h2>

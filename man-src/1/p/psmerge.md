@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-psmerge/"
 description: "psmerge – filter to merge several PostScript files into one"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psmerge &#8211; filter to merge several PostScript files into one </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psmerge </code> [ <code>-o</code><i>out.ps</i> ] <i>file.ps &#8230;</i></p>
 <h2>DESCRIPTION</h2>

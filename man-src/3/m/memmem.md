@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-memmem/"
 description: "memmem – locate a substring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> memmem &#8211; locate a substring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

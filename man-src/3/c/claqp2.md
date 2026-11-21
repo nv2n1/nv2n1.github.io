@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claqp2/"
 description: "claqp2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claqp2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqp2</code> (M, N, OFFSET, A, LDA, JPVT, TAU, VN1, VN2, WORK)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sshpk-sign/"
 description: "sshpk-sign – sign data using an SSH key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sshpk-sign &#8211; sign data using an SSH key </p>
 <h2>SYNOPSYS</h2>
 <p> <code>sshpk-sign</code> -i KEYPATH [OPTION&#8230;]</p>
 <h2>DESCRIPTION</h2>

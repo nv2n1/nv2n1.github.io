@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-commit-graph/"
 description: "git-commit-graph – Write and verify Git commit-graph files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-commit-graph &#8211; Write and verify Git commit-graph files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git commit - graph verify[--object - dir&lt;dir&gt;][--shallow][--[no - ] progress] git commit - graph write&lt;options&gt;[--object - dir&lt;dir&gt;][--[no - ] progress]

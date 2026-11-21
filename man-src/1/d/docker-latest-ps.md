@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-ps/"
 description: "docker-ps – List containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-ps &#8211; List containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker ps</code> [<code>-a</code>|<code>&#8211;all</code>] [<code>-f</code>|<code>&#8211;filter</code>[=<i>[]</i>]] [<code>&#8211;format</code>=<i>&quot;TEMPLATE&quot;</i>] [<code>&#8211;help</code>] [<code>-l</code>|<code>&#8211;latest</code>] [<code>-n</code>[=<i>-1</i>]] [<code>&#8211;no-trunc</code>] [<code>-q</code>|<code>&#8211;quiet</code>] [<code>-s</code>|<code>&#8211;size</code>] </p>
 <h2>DESCRIPTION</h2>

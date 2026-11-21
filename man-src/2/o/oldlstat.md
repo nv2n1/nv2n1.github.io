@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-oldlstat/"
 description: "stat, fstat, lstat, fstatat – get file status"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stat, fstat, lstat, fstatat &#8211; get file status </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/stat.h&gt;

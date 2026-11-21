@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ttf2pk/"
 description: "ttf2pk – convert a TrueType font into TeX’s PK format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ttf2pk &#8211; convert a TrueType font into TeX&#8217;s PK format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttf2pk</code> [<code>-q</code>] [<code>-n</code>] <i>font-name resolution</i><br />
  <code>ttf2pk</code> <code>-t</code> [<code>-q</code>] <i>font-name</i><br />

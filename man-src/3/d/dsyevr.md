@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dsyevr/"
 description: "dsyevr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsyevr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyevr</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />

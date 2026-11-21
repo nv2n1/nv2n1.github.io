@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mktexmf/"
 description: "mktexmf – create a Metafont source file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mktexmf &#8211; create a Metafont source file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mktexmf</code> <i>font</i></p>
 <h2>DESCRIPTION</h2>

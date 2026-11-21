@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-shutdown/"
 description: "shutdown – shut down part of a full-duplex connection"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shutdown &#8211; shut down part of a full-duplex connection </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/socket.h&gt;</code> </p>
 <p> <code>int shutdown(int </code><i>sockfd</i><code>, int </code><i>how</i><code>);</code></p>

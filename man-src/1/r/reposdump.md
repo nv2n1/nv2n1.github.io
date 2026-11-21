@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reposdump/"
 description: "reposdump – utility for dumping SBLIM Data Gatherer online metric repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> reposdump &#8211; utility for dumping SBLIM Data Gatherer online metric repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reposdump</code> [<i>age</i>] [<i>interval</i>] [<i>directory</i>]</dt></dl>

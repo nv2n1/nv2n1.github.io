@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-winicontopam/"
 description: "winicontopam – convert a Microsoft Windows icon file into a Netpbm PAM file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> winicontopam &#8211; convert a Microsoft Windows icon file into a Netpbm PAM file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>winicontopam</code> [<code>-image=</code><i>index</i> | <code>-allimages</code>] [<code>-andmasks</code>] [<code>-verbose</code>] [<i>icon_file</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>

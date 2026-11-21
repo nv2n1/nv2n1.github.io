@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pcsc-spy/"
 description: "pcsc-spy – A PC/SC spy command"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pcsc-spy &#8211; A PC/SC spy command </p>
 <h2>SYNOPSIS</h2>
 <p> pcsc-spy [<code>-n</code>|<code>&#8211;nocolor</code>] [<code>-d</code>|<code>&#8211;diffable</code>] [<code>-h</code>|<code>&#8211;help</code>] [<i>fifo_filename</i>]</p>
 <h2>DESCRIPTION</h2>

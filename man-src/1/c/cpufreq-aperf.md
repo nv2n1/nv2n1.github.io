@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cpufreq-aperf/"
 description: "cpufreq-aperf – Calculates the average frequency over a time period"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpufreq-aperf &#8211; Calculates the average frequency over a time period </p>
 <h2>SYNTAX</h2>
 <p> cpufreq-aperf [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

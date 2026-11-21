@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-darktable-viewer/"
 description: "darktable-viewer – a stand-alone slideshow viewer that displays the images of your current collection fullscreen"
 ---
 
-<h2 class="name">NAME</h2>
-<p> darktable-viewer &#8211; a stand-alone slideshow viewer that displays the images of your current collection fullscreen </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 darktable - viewer[-h, --help; --version][--random][--repeat][--core&lt;darktable options&gt;]

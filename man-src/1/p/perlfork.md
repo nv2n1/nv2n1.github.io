@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlfork/"
 description: "perlfork – Perl’s fork() emulation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlfork &#8211; Perl&#8217;s fork() emulation </p>
 <h2>SYNOPSIS</h2>
 <pre>
     NOTE:  As of the 5.8.0 release, fork() emulation has considerably

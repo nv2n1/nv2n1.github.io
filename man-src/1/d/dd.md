@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dd/"
 description: "dd – convert and copy a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dd &#8211; convert and copy a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dd</code> [<i>,OPERAND/</i>]&#8230;<br />
  <code>dd</code> <i>,OPTION/</i></p>

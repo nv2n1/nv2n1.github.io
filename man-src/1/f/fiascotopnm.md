@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fiascotopnm/"
 description: "fiascotopnm – Convert compressed FIASCO image to PGM, or PPM"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fiascotopnm &#8211; Convert compressed FIASCO image to PGM, or PPM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fiascotopnm </code> [<i>option</i>]&#8230; [<i>filename</i>]&#8230; </p>
 <h2>DESCRIPTION</h2>

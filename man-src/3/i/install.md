@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-install/"
 description: "install – Installation Before installing QuantLib, make sure that you have a working Boost installation; see"
 ---
 
-<h2 class="name">NAME</h2>
-<p> install &#8211; Installation Before installing QuantLib, make sure that you have a working Boost installation; see </p>
 <p><a rel="nofollow" href="http://www.boost.org/more/getting_started.html">http://www.boost.org/more/getting_started.html</a> for instructions.</p>
 <h2>Linux/Unix/Mac OS X/Cygwin</h2>
 <p> A tarball of the source distribution is available from </p>

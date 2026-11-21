@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-texfont/"
 description: "texfont – font installation tool for ConTeXt"
 ---
 
-<h2 class="name">NAME</h2>
-<p> texfont &#8211; font installation tool for ConTeXt</p>
 <h2>SYNOPSIS</h2>
 <p> <code>texfont</code> [ <i>OPTION</i> &#8230; ] </p>
 <h2>DESCRIPTION</h2>

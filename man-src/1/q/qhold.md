@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qhold/"
 description: "qhold – hold back xxQS_NAMExx jobs from execution"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qhold &#8211; hold back xxQS_NAMExx jobs from execution </p>
 <h2>SYNTAX</h2>
 <p> <code>qhold</code> [<code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230;] [<code>-help</code>] [<i>job/task_id_list</i>] </p>
 <p> <code>qhold</code> [<code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230;] [<code>-help</code>] <code>-u</code> <i>user_list</i></p>

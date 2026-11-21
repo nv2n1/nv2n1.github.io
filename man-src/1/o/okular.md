@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-okular/"
 description: "okular – a universal document viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> okular &#8211; a universal document viewer </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>okular</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>Okular options</i>] [<i>URL</i>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nop/"
 description: "nop – pretty-print graph file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nop &#8211; pretty-print graph file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nop</code> [ <code>-p?</code> ] [ <i>files </i> ]</p>
 <h2>DESCRIPTION</h2>

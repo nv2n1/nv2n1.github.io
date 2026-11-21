@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sg/"
 description: "sg – execute command as different group ID"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sg &#8211; execute command as different group ID </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sg</code> [-] [group&nbsp;[-c&nbsp;]&nbsp;command]</dt></dl>

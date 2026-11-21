@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dl_iterate_phdr/"
 description: "dl_iterate_phdr – walk through list of shared objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dl_iterate_phdr &#8211; walk through list of shared objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

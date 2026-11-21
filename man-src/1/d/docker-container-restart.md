@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-container-restart/"
 description: "docker-container-restart – Restart one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-container-restart &#8211; Restart one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container restart [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

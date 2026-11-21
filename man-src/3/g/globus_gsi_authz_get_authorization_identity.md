@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_authz_get_authorization_identity/"
 description: "GSI Authorization API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GSI Authorization API &#8211; </p>
 <p> Authorization Callouts.</p>
 <h3>Modules</h3>
 <p> <code>GSI Credential Constants</code> </p>

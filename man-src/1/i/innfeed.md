@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-innfeed/"
 description: "innfeed – multi-host, multi-connection, streaming NNTP feeder."
 ---
 
-<h2 class="name">NAME</h2>
-<p> innfeed &#8211; multi-host, multi-connection, streaming NNTP feeder. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>innfeed</code> [ <code>-a spool-dir</code> ] [ <code>-b</code><i> directory</i> ] [ <code>-C</code> ] [ <code>-c</code><i> filename</i> ] [ <code>-d</code><i> num</i> ] [ <code>-e</code><i> bytes</i> ] [ <code>-h</code> ] [ <code>-l</code><i> filename</i> ] [ <code>-m</code> ] [ <code>-M</code> ] [ <code>-o bytes</code> ] [ <code>-p file</code> ] [ <code>-S file</code> ] [ <code>-x </code> ] [ <code>-y</code> ] [ <code>-z </code> ] [ <code>-v</code> ] [ file ]</p>
 <h2>DESCRIPTION</h2>

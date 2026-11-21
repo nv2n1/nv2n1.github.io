@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dsposv/"
 description: "dsposv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsposv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsposv</code> (UPLO, N, NRHS, A, LDA, B, LDB, X, LDX, WORK, SWORK, ITER, INFO)<br />

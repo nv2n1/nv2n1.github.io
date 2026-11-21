@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-p7zip/"
 description: "p7zip – Wrapper on 7-Zip file archiver with high compression ratio"
 ---
 
-<h2 class="name">NAME</h2>
-<p> p7zip &#8211; Wrapper on 7-Zip file archiver with high compression ratio </p>
 <h2>SYNOPSIS</h2>
 <p> <code>p7zip</code> [<code>-c</code>|<code>&#8211;stdout</code>|<code>&#8211;to-stdout</code>] [<code>-d</code>|<code>&#8211;decompress</code>|<code>&#8211;uncompress</code>] [<code>-f</code>|<code>&#8211;force</code>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-k</code>|<code>&#8211;keep</code>] [<code>&#8212;</code>] [<i>file &#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

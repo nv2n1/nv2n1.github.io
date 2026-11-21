@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-openpgpkey/"
 description: "openpgpkey – Create and verify RFC-TBD OPENPGPKEY DNS records"
 ---
 
-<h2 class="name">NAME</h2>
-<p> openpgpkey &#8211; Create and verify RFC-TBD OPENPGPKEY DNS records </p>
 <h2>SYNTAX</h2>
 <p> openpgpkey [<code>&#8211;fetch</code> | <code>&#8211;verify</code>] [<code>&#8211;insecure</code>] [<code>&#8211;resolv.conf /PATH/TO/RESOLV.CONF</code>] <i>user [at] domain</i> </p>
 <p> openpgpkey [<code>&#8211;create</code>] [<code>&#8211;insecure</code>] [<code>&#8211;resolv.conf /PATH/TO/RESOLV.CONF</code>] [<code>&#8211;output {rfc,generic,both}</code>] [<code>&#8211;uid &lt;uid&gt;</code>] [<code>&#8211;keyid &lt;keyid&gt;</code>] <i>user [at] domain</i></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dsbgv/"
 description: "dsbgv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsbgv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, INFO)<br />

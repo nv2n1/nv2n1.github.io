@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gsftopk/"
 description: "gsftopk – render a ghostscript font in TeX pk form"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gsftopk &#8211; render a ghostscript font in TeX pk form </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsftopk</code> [-i <i>path</i>] [-q] [-t] [&#8211;debug=<i>n</i>] [&#8211;dosnames] [&#8211;interpreter=<i>path</i>] [&#8211;mapline=<i>line</i>] [&#8211;mapfile=<i>file</i>] [&#8211;quiet] [&#8211;test] [&#8211;help] [&#8211;version] <i>font</i> <i>dpi</i></p>
 <h2>ARGUMENTS</h2>

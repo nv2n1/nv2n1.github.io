@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clar2v/"
 description: "clar2v.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clar2v.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br />

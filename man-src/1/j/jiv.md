@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jiv/"
 description: "jiv – Image display utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> jiv &#8211; Image display utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jiv</code> [<i>options</i>] [<i>file</i>&#8230;<i>]</i> </p>
 <h2>DESCRIPTION</h2>

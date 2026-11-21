@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slalsd/"
 description: "slalsd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slalsd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, IWORK, INFO)<br />

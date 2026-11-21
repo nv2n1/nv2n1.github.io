@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_fi_sv/"
 description: "tv_grab_fi_sv – Grab TV listings for Finland in Swedish."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_fi_sv &#8211; Grab TV listings for Finland in Swedish. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_fi_sv &#8211;help </p>
 <p> tv_grab_fi_sv &#8211;version </p>

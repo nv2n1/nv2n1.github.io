@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_shlibdeps/"
 description: "dh_shlibdeps – calculate shared library dependencies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_shlibdeps &#8211; calculate shared library dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_shlibdeps</code> [<i>debhelper options</i>] [<code>-L</code><i>package</i>] [<code>-l</code><i>directory</i>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rmf/"
 description: "rmf – remove an nmh folder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rmf &#8211; remove an nmh folder </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rmf </code> [<i>+folder</i>] [<code>-interactive</code> | <code>-nointeractive</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

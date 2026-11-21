@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installlogcheck/"
 description: "dh_installlogcheck – install logcheck rulefiles into etc/logcheck/"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installlogcheck &#8211; install logcheck rulefiles into etc/logcheck/ </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installlogcheck</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

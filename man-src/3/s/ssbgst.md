@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssbgst/"
 description: "ssbgst.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssbgst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, INFO)<br />

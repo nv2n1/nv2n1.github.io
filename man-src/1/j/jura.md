@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jura/"
 description: "jura – Job Usage Reporter of ARC"
 ---
 
-<h2 class="name">NAME</h2>
-<p> jura &#8211; Job Usage Reporter of ARC</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>jura</code> application is a resource-side accounting (usage logging) client. </p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htpurge/"
 description: "htpurge – remove unused odocuments from the database (general maintenance script)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> htpurge &#8211; remove unused odocuments from the database (general maintenance script) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htpurge</code> <i>[-][-a][-c configfile][-u][-v]</i></p>
 <h2>DESCRIPTION</h2>

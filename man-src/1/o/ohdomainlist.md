@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ohdomainlist/"
 description: "ohdomainlist – A openhpi sample application that shows information about domains on the level of the openhpi base library."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ohdomainlist &#8211; A openhpi sample application that shows information about domains on the level of the openhpi base library. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpidomain[-h - V - X] hpidomain[--help][--verbose][--debug]

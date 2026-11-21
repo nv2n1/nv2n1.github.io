@@ -6,8 +6,6 @@ letter: "z"
 url: "/docs/linux/man/1-zshzle/"
 description: "zshzle – zsh command line editor"
 ---
-<h2 class="name">NAME</h2>
-<p> zshzle - zsh command line editor </p>
 <h2>DESCRIPTION</h2>
 <p> If the <code>ZLE</code> option is set (which it is by default in interactive shells) and the shell input is attached to the terminal, the user is able to edit command lines. </p>
 <p> There are two display modes. The first, multiline mode, is the default. It only works if the <code>TERM</code> parameter is set to a valid terminal type that can move the cursor up. The second, single line mode, is used if <code>TERM</code> is invalid or incapable of moving the cursor up, or if the <code>SINGLE_LINE_ZLE</code> option is set. This mode is similar to <code>ksh</code>, and uses no termcap sequences. If <code>TERM</code> is &quot;emacs&quot;, the <code>ZLE</code> option will be unset by default. </p>

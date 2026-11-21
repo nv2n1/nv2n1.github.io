@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-alcc/"
 description: "alcc – text based eD2k links calculator for aMule"
 ---
 
-<h2 class="name">NAME</h2>
-<p> alcc &#8211; text based eD2k links calculator for aMule </p>
 <h2>SYNOPSIS</h2>
 <p> _untranslated<code>[</code>-p<code>]</code> _untranslated<code>[</code>-v<code>]</code> <i>&lt;inputfiles_list&gt;</i> </p>
 <p> _untranslated<code>[</code>-h<code>]</code></p>

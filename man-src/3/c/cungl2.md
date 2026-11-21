@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cungl2/"
 description: "cungl2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cungl2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cungl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />

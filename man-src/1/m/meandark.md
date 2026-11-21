@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-meandark/"
 description: "meandark – CCD dark-frame composition"
 ---
 
-<h2 class="name">NAME</h2>
-<p> meandark &#8211; CCD dark-frame composition</p>
 <h2>SYNOPSIS</h2>
 <p> <code>meandark </code><i>[options] source_file &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

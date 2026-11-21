@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xtotroff/"
 description: "xtotroff – convert X font metrics into GNU troff font metrics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xtotroff &#8211; convert X font metrics into GNU troff font metrics </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-r </code><i>resolution</i> ] [ <code>-s </code><i>point-size</i> ] <i>font-map</i> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

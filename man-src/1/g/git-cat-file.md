@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-cat-file/"
 description: "git-cat-file – Provide content or type and size information for repository objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-cat-file &#8211; Provide content or type and size information for repository objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git cat - file(-t[--allow - unknown - type] | -s[--allow - unknown - type] | -e | -p | &lt;type&gt; | --textconv | --filters)[--path = &lt;path&gt;]&lt;object&gt; git cat - file(--batch[=&lt;format&gt;] | --batch - check[=&lt;format&gt;])[--textconv | --filters][--follow - symlinks]

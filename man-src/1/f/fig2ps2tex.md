@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fig2ps2tex/"
 description: "fig2ps2tex – generate a TeX file for including a PostScript file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fig2ps2tex &#8211; generate a TeX file for including a PostScript file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fig2ps2tex</code> <i>file</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-casinf/"
 description: "casin, casinf, casinl – complex arc sine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> casin, casinf, casinl &#8211; complex arc sine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex casin(double complex </code><i>z</i><code>);</code><br />

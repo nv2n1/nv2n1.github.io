@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-python3m/"
 description: "python – an interpreted, interactive, object-oriented programming language"
 ---
 
-<h2 class="name">NAME</h2>
-<p> python &#8211; an interpreted, interactive, object-oriented programming language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>python</code> [ <code>-B</code> ] [ <code>-b</code> ] [ <code>-d</code> ] [ <code>-E</code> ] [ <code>-h</code> ] [ <code>-i</code> ] [ <code>-I</code> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[ <code>-m</code> <i>module-name</i> ] [ <code>-q</code> ] [ <code>-O</code> ] [ <code>-OO</code> ] [ <code>-s</code> ] [ <code>-S</code> ] [ <code>-u</code> ] </p>

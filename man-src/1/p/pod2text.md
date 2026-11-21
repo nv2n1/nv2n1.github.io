@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pod2text/"
 description: "pod2text – Convert POD data to formatted ASCII text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pod2text &#8211; Convert POD data to formatted ASCII text </p>
 <h2>SYNOPSIS</h2>
 <p> pod2text [<code>-aclostu</code>] [<code>&#8211;code</code>] [<code>&#8211;errors</code>=<i>style</i>] [<code>-i</code> <i>indent</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-q</code> <i>quotes</i>]&nbsp;[<code>&#8211;nourls</code>]&nbsp;[<code>&#8211;stderr</code>]&nbsp;[<code>-w</code> <i>width</i>]<br />

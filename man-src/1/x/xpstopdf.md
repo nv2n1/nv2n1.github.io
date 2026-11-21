@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xpstopdf/"
 description: "xpstopdf – XPS to PDF converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xpstopdf &#8211; XPS to PDF converter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xpstopdf</code> [<i>OPTION</i>&#8230;] FILE [<i>OUTPUT FILE</i>]</dt></dl>

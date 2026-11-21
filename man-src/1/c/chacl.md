@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chacl/"
 description: "chacl – change the access control list of a file or directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chacl &#8211; change the access control list of a file or directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chacl acl pathname&#8230;</code><br />
  <code>chacl -b acl dacl pathname&#8230;</code><br />

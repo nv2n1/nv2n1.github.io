@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-maildirmake/"
 description: "maildirmake – create maildirs and maildir folders"
 ---
 
-<h2 class="name">NAME</h2>
-<p> maildirmake &#8211; create maildirs and maildir folders </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>maildirmake</code> [options&#8230;] {<i>maildir</i>}</dt></dl>

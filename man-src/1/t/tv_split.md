@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_split/"
 description: "tv_split – Split XMLTV listings into separate files by date and channel."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_split &#8211; Split XMLTV listings into separate files by date and channel. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_split &#8211;output <font SIZE="-1">TEMPLATE</font> [<font SIZE="-1">FILE&#8230;</font>]</p>
 <h2>DESCRIPTION</h2>

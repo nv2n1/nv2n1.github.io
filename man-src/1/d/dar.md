@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dar/"
 description: "dar – creates, tests, lists, extracts, compares, merges, isolates dar archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dar &#8211; creates, tests, lists, extracts, compares, merges, isolates dar archives </p>
 <h2>SYNOPSIS</h2>
 <p> dar [-c | -t | -l | -x | -d | -+ | -C] [&lt;path&gt;/]&lt;basename&gt; [&lt;options&gt;] [&lt;user targets&gt;] </p>
 <p> dar -h </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vig_optimize/"
 description: "vig_optimize – Optimise photometric parameters"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vig_optimize &#8211; Optimise photometric parameters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vig_optimize</code> [options] <code>-o</code> <i>output.pto</i> <i>input.pto</i></p>
 <h2>DESCRIPTION</h2>

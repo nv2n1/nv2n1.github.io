@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_output/"
 description: "cgi_output – display the CGI output to the user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_output &#8211; display the CGI output to the user </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

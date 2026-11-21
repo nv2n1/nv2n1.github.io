@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-screensaver/"
 description: "xdg-screensaver – command line tool for controlling the screensaver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-screensaver &#8211; command line tool for controlling the screensaver </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-screensaver</code> <code>suspend&nbsp;</code><i>WindowID</i></dt>

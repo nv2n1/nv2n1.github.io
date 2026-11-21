@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlinfo/"
 description: "dlinfo – obtain information about a dynamically loaded object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlinfo &#8211; obtain information about a dynamically loaded object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE

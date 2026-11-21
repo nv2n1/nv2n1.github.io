@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-repack/"
 description: "git-repack – Pack unpacked objects in a repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-repack &#8211; Pack unpacked objects in a repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git repack[-a][-A][-d][-f][-F][-l][-n][-q][-b][-m][--window = &lt;n&gt;][--depth = &lt;n&gt;][--threads = &lt;n&gt;][--keep - pack = &lt;pack - name&gt;][--write - midx]

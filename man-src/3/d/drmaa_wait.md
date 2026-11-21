@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-drmaa_wait/"
 description: "drmaa_synchronize, drmaa_wait, drmaa_wifexited, drmaa_wexitstatus, drmaa_wifsignaled, drmaa_wtermsig, drmaa_wcoredump, drmaa_wifaborted – Waiting for jobs to finish"
 ---
 
-<h2 class="name">NAME</h2>
-<p> drmaa_synchronize, drmaa_wait, drmaa_wifexited, drmaa_wexitstatus, drmaa_wifsignaled, drmaa_wtermsig, drmaa_wcoredump, drmaa_wifaborted &#8211; Waiting for jobs to finish</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-blaze-add/"
 description: "blaze-add – add a blog post or a page to the BlazeBlogger repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> blaze-add &#8211; add a blog post or a page to the BlazeBlogger repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blaze-add</code> [<code>-pqCPV</code>] [<code>-b</code> <i>directory</i>] [<code>-a</code> <i>author</i>] [<code>-d</code> <i>date</i>] [<code>-t</code> <i>title</i>] [<code>-T</code> <i>tags</i>] [<code>-u</code> <i>url</i>] [<i>file</i>&#8230;] </p>
 <p> <code>blaze-add</code> <code>-h</code> | <code>-v</code></p>

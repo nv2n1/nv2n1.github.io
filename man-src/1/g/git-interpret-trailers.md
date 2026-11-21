@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-interpret-trailers/"
 description: "git-interpret-trailers – Add or parse structured information in commit messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-interpret-trailers &#8211; Add or parse structured information in commit messages </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git interpret - trailers[&lt;options&gt;][(--trailer&lt;token&gt;[(= |

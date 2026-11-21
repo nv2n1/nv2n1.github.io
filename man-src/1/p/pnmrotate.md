@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmrotate/"
 description: "pnmrotate – rotate a portable anymap by some angle"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmrotate &#8211; rotate a portable anymap by some angle </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmrotate</code> [<code>-noantialias</code>] <i>angle</i> [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

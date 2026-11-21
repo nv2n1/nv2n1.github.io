@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jasper/"
 description: "jasper – File format converter specialized in JPEG-2000 encoding"
 ---
 
-<h2 class="name">NAME</h2>
-<p> jasper &#8211; File format converter specialized in JPEG-2000 encoding</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jasper</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

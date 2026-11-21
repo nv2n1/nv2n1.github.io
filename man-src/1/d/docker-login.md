@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-login/"
 description: "docker-login – Log in to a Docker registry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-login &#8211; Log in to a Docker registry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker login [OPTIONS] [SERVER]</code> </p>
 <h2>DESCRIPTION</h2>

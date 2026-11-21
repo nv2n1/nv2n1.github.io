@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htdigest/"
 description: "htdigest – manage user files for digest authentication"
 ---
 
-<h2 class="name">NAME</h2>
-<p> htdigest &#8211; manage user files for digest authentication</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>
 <p> <code>htdigest</code> [ &#8211;<code>c</code> ] <i>passwdfile</i> <i>realm</i> <i>username</i><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sortm/"
 description: "sortm – sort messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sortm &#8211; sort messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sortm</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-all</code> | <code>-noall</code>] [<code>-datefield</code> <i>field</i>] [<code>-textfield</code> <i>field</i>] [<code>-notextfield</code>] [<code>-limit</code> <i>days</i>] [<code>-nolimit</code>] [<code>-check</code> | <code>-nocheck</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

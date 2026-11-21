@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ssindex/"
 description: "ssindex – generate index data for spreadsheet files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssindex &#8211; generate index data for spreadsheet files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssindex </code> [<i>OPTIONS</i>] [<i>FILES</i>] </p>
 <h2>DESCRIPTION</h2>

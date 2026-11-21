@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gaussianstatistics/"
 description: "ql/math/statistics/gaussianstatistics.hpp – statistics tool for gaussian-assumption risk measures"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/statistics/gaussianstatistics.hpp &#8211; statistics tool for gaussian-assumption risk measures </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/distributions/normaldistribution.hpp&gt;<br />
  #include &lt;ql/math/statistics/generalstatistics.hpp&gt; </p>

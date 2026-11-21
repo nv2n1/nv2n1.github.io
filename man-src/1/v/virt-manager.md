@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-manager/"
 description: "virt-manager – display the virtual machine desktop management tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-manager &#8211; display the virtual machine desktop management tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-manager</code> [<font SIZE="-1">OPTIONS</font>]</p>
 <h2>DESCRIPTION</h2>

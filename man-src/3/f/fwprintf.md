@@ -6,8 +6,6 @@ letter: "f"
 url: "/docs/linux/man/3-fwprintf/"
 description: "wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf – formatted wide-character output conversion"
 ---
-<h2 class="name">NAME</h2>
-<p> wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf - formatted wide-character output conversion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;stdio.h&gt; 

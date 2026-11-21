@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nautilus-autorun-software/"
 description: "Run Software – helper tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Run Software &#8211; helper tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nautilus-autorun-software</code> <i>mount-uri</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpipower/"
 description: "hpipower – This sample openhpi application exercises HPI Power Management APIs."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpipower &#8211; This sample openhpi application exercises HPI Power Management APIs. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpipower[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-d - p - r - u - X - h][-b n] hpipower[--domain = nn][--host = host[:port]][--cfgfile = file]

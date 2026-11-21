@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_perl_openssl/"
 description: "dh_perl_openssl – add dependencies required for OpenSSL modules"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_perl_openssl &#8211; add dependencies required for OpenSSL modules </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_perl_openssl</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

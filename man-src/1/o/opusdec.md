@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-opusdec/"
 description: "opusdec – decode audio from Opus format to WAV (or simple audio output)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> opusdec &#8211; decode audio from Opus format to WAV (or simple audio output)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>opusdec</code> [ <code>-hV</code> ] [ <code>&#8211;rate Hz</code> ] [ <code>&#8211;gain dB</code> ] [ <code>&#8211;no-dither</code> ] [ <code>&#8211;force-wav</code> ] [ <code>&#8211;packet-loss pct</code> ] [ <code>&#8211;save-range file</code> ] <code>input.opus</code> [ <code>output.wav</code> ] </p>
 <h2>DESCRIPTION</h2>

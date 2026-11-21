@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-journalctl/"
 description: "journalctl, systemd-journalctl – Query the systemd journal"
 ---
 
-<h2 class="name">NAME</h2>
-<p> journalctl, systemd-journalctl &#8211; Query the systemd journal </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>journalctl </code><code>[OPTIONS&#8230;]</code><code>[MATCH]</code></dt></dl>

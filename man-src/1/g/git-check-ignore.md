@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-check-ignore/"
 description: "git-check-ignore – Debug gitignore / exclude files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-check-ignore &#8211; Debug gitignore / exclude files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git check - ignore[&lt;options&gt;]&lt;pathname&gt;... git check - ignore[&lt;options&gt;]-- stdin

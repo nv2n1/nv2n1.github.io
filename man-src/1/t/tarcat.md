@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tarcat/"
 description: "tarcat – concatenates the pieces of a GNU tar multi-volume archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tarcat &#8211; concatenates the pieces of a GNU tar multi-volume archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tarcat </code> files &#8230;</p>
 <h2>DESCRIPTION</h2>

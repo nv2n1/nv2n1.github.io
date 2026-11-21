@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf/"
 description: "perf – Performance analysis tools for Linux"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf &#8211; Performance analysis tools for Linux </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf[--version][--help][OPTIONS] COMMAND[ARGS]

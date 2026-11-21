@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cairo-dock/"
 description: "cairo-dock – A dock to launch your programs easily."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cairo-dock &#8211; A dock to launch your programs easily.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cairo-dock</code> [options] </p>
 <h2>DESCRIPTION</h2>

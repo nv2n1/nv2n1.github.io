@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mq_unlink/"
 description: "mq_unlink – remove a message queue"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mq_unlink &#8211; remove a message queue </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;

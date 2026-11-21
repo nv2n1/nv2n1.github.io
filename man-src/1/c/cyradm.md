@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cyradm/"
 description: "cyradm – Cyrus administration shell, alter ego of Cyrus::IMAP::Shell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cyradm &#8211; Cyrus administration shell, alter ego of Cyrus::IMAP::Shell </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 $ cyradm[--user user][--[no] rc][--systemrc file][--userrc file] &gt; [--port n][--auth mechanism][--tlskey keyfile][--notls] &gt; [--server] server

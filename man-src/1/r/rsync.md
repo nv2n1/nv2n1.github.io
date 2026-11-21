@@ -6,8 +6,6 @@ letter: "r"
 url: "/docs/linux/man/1-rsync/"
 description: "rsync – a fast, versatile, remote (and local) file-copying tool"
 ---
-<h2 class="name">NAME</h2>
-<p> rsync - a fast, versatile, remote (and local) file-copying tool  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>Local:
     rsync [OPTION...] SRC... [DEST]

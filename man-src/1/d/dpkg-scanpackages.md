@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-scanpackages/"
 description: "dpkg-scanpackages – create Packages index files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-scanpackages &#8211; create Packages index files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-scanpackages</code> [<i>option</i>&#8230;] <i>binary-path</i> [<i>override-file</i> [<i>path-prefix</i>]] <code>&gt;</code> <i>Packages</i></p>
 <h2>DESCRIPTION</h2>

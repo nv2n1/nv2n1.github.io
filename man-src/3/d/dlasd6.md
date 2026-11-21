@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasd6/"
 description: "dlasd6.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasd6.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd6</code> (ICOMPQ, NL, NR, SQRE, D, VF, VL, ALPHA, BETA, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, WORK, IWORK, INFO)<br />

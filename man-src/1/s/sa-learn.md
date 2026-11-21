@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sa-learn/"
 description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sa-learn &#8211; train SpamAssassin&#8217;s Bayesian classifier </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sa-learn</code> [options] [file]&#8230; </p>
 <p> <code>sa-learn</code> [options] &#8211;dump [ all | data | magic ] </p>

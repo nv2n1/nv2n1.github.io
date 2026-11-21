@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-key/"
 description: "pki-key – Command-Line Interface for managing Certificate System keys."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-key &#8211; Command-Line Interface for managing Certificate System keys.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - key pki[CLI options]&lt;subsystem&gt; - key - find[command options] pki[CLI options]&lt;subsystem&gt; - key - show&lt;Key ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - key - request - find[command options] pki[CLI options]&lt;subsystem&gt; - key - request - show&lt;Request ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - key - mod&lt;Key ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - key - template - find[command options] pki[CLI options]&lt;subsystem&gt; - key - template - show&lt;Template ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - key - archive[command options] pki[CLI options]&lt;subsystem&gt; - key - retrieve[command options] pki[CLI options]&lt;subsystem&gt; - key - generate&lt;Client Key ID&gt; --key - algorithm&lt;algorithm&gt;[command options] pki[CLI options]&lt;subsystem&gt; - key - recover[command options] pki[CLI options]&lt;subsystem&gt; - key - request - review&lt;Request ID&gt; --action&lt;action&gt;[command options]

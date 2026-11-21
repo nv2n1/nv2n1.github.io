@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-node-demote/"
 description: "docker-node-demote – Demote one or more nodes from manager in the swarm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-node-demote &#8211; Demote one or more nodes from manager in the swarm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker node demote NODE [NODE&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

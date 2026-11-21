@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pmount/"
 description: "pmount – mount arbitrary hotpluggable devices as normal user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pmount &#8211; mount arbitrary hotpluggable devices as normal user</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmount</code> [ <i>options</i> ] <i>device</i> </p>
 <p> <code>pmount</code> [ <i>options</i> ] <i>device label</i> </p>

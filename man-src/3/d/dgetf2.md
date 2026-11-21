@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgetf2/"
 description: "dgetf2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgetf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgetf2</code> (M, N, A, LDA, IPIV, INFO)<br />

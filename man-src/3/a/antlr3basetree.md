@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3basetree/"
 description: "include/antlr3basetree.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3basetree.h &#8211; </p>
 <p> Definition of the ANTLR3 base tree.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />

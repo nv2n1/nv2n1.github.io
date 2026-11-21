@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mcvarianceswapengine/"
 description: "ql/pricingengines/forward/mcvarianceswapengine.hpp – Monte Carlo variance-swap engine."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/forward/mcvarianceswapengine.hpp &#8211; Monte Carlo variance-swap engine. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
  #include &lt;ql/math/integrals/segmentintegral.hpp&gt;<br />

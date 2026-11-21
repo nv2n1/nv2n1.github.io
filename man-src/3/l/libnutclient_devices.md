@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libnutclient_devices/"
 description: "libnutclient_devices, nutclient_get_devices, nutclient_has_device, nutclient_get_device_description – Device related functions in Network UPS Tools high-level client access library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libnutclient_devices, nutclient_get_devices, nutclient_has_device, nutclient_get_device_description &#8211; Device related functions in Network UPS Tools high-level client access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nutclient.h&gt;

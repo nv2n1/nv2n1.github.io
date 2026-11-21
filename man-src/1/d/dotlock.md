@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dotlock/"
 description: "dotlock.mailutils – lock mail spool files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> dotlock.mailutils &#8211; lock mail spool files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dotlock.mailutils</code> [<i>,OPTION/</i>&#8230;] <i>,FILE/</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_msgid/"
 description: "ldap_result – Wait for the result of an LDAP operation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_result &#8211; Wait for the result of an LDAP operation </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

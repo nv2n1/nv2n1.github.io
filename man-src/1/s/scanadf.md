@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-scanadf/"
 description: "scanadf – acquire multiple images from a scanner equipped with an ADF"
 ---
 
-<h2 class="name">NAME</h2>
-<p> scanadf &#8211; acquire multiple images from a scanner equipped with an ADF </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scanadf</code> [<code>-d</code>|<code>&#8211;device-name</code> <i>dev</i>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-L</code>|<code>&#8211;list-devices</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-V</code>|<code>&#8211;version</code>] [<code>-o</code>|<code>&#8211;output-file</code> <i>name</i>] [<code>-N</code>|<code>&#8211;no-overwrite</code>] [<code>-S</code>|<code>&#8211;scan-script</code> <i>name</i>] [<code>&#8211;script-wait</code>] [<code>-s</code>|<code>&#8211;start-count</code> <i>num</i>] [<code>-e</code>|<code>&#8211;end-count</code> <i>num</i>] [<code>-r</code>|<code>&#8211;raw</code>] [<i>device-specific-options</i>]</p>
 <h2>DESCRIPTION</h2>

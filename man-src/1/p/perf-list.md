@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-list/"
 description: "perf-list – List all symbolic event types"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-list &#8211; List all symbolic event types </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>perf list</i> [hw|sw|cache|tracepoint|pmu|event_glob]

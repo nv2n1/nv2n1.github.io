@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhfixmsg/"
 description: "mhfixmsg – rewrite MIME messages with various transformations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhfixmsg &#8211; rewrite MIME messages with various transformations </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhfixmsg</code> [<i>+folder</i>] [<i>msgs</i> | <i>absolute pathname</i> | -file <i>file</i>] [<code>-decodetext</code></dt>

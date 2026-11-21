@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtomrf/"
 description: "pbmtomrf – convert a PBM format image to MRF"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtomrf &#8211; convert a PBM format image to MRF</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtomrf</code> </p>
 <p> [<i>pbmfile</i>] </p>

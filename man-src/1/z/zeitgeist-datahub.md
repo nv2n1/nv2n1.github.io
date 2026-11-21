@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zeitgeist-datahub/"
 description: "zeitgeist-datahub – passive loggers for Zeitgeist"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zeitgeist-datahub &#8211; passive loggers for Zeitgeist</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zeitgeist-datahub</code> <i>[OPTION]</i> </p>
 <h2>DESCRIPTION</h2>

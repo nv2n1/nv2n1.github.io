@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fixps/"
 description: "fixps – sanitize PostScript files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fixps &#8211; sanitize PostScript files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixps</code> [<i>OPTIONS</i>] <i>FILE</i></p>
 <h2>DESCRIPTION</h2>

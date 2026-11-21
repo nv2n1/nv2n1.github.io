@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlat2s/"
 description: "dlat2s.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlat2s.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlat2s</code> (UPLO, N, A, LDA, SA, LDSA, INFO)<br />

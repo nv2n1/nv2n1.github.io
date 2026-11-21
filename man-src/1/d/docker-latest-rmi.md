@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-rmi/"
 description: "docker-rmi – Remove one or more images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-rmi &#8211; Remove one or more images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker rmi</code> [<code>-f</code>|<code>&#8211;force</code>] [<code>&#8211;help</code>] [<code>&#8211;no-prune</code>] IMAGE [IMAGE&#8230;] </p>
 <h2>DESCRIPTION</h2>

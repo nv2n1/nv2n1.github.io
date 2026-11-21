@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-override/"
 description: "flatpak-override – Override application requirements"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-override &#8211; Override application requirements </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak override</code> [OPTION&#8230;] [APP]</dt></dl>

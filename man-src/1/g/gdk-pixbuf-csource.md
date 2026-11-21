@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdk-pixbuf-csource/"
 description: "gdk-pixbuf-csource – C code generation utility for GdkPixbuf images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdk-pixbuf-csource &#8211; C code generation utility for GdkPixbuf images </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gdk-pixbuf-csource</code> [OPTION&#8230;] [IMAGE]</dt>

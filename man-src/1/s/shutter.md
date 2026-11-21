@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shutter/"
 description: "Shutter – Feature-rich Screenshot Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Shutter &#8211; Feature-rich Screenshot Tool </p>
 <h2>SYNOPSIS</h2>
 <p> shutter [options]</p>
 <h2>COPYRIGHT</h2>

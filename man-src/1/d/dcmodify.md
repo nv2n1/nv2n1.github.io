@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmodify/"
 description: "dcmodify – Modify DICOM files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmodify &#8211; Modify DICOM files </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmodify [options] dcmfile-in...

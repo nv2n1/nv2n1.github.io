@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlbs2000/"
 description: "perlbs2000 – building and installing Perl for BS2000."
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlbs2000 &#8211; building and installing Perl for BS2000. </p>
 <p> This document needs to be updated, but we don&#8217;t know what it should say. Please email comments to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt;. </p>
 <h2>SYNOPSIS</h2>
 <p> This document will help you Configure, build, test and install Perl on <font SIZE="-1">BS2000</font> in the <font SIZE="-1">POSIX</font> subsystem.</p>

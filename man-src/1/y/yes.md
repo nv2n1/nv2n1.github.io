@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-yes/"
 description: "yes – output a string repeatedly until killed"
 ---
 
-<h2 class="name">NAME</h2>
-<p> yes &#8211; output a string repeatedly until killed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>yes</code> [<i>,STRING/</i>]&#8230;<br />
  <code>yes</code> <i>,OPTION/</i></p>

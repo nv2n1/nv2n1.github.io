@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trademgen/"
 description: "trademgen –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trademgen &#8211; </p>
 <pre>
   Interactive command-line utility for the C++ Simulated Travel Demand Generation Library
 </pre>

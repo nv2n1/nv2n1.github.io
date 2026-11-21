@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lzop/"
 description: "lzop – compress or expand files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lzop &#8211; compress or expand files </p>
 <h2>ABSTRACT</h2>
 <p> <code>lzop</code> is a file compressor very similar to <code>gzip</code>. <code>lzop</code> favors speed over compression ratio.</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mallopt/"
 description: "mallopt – set memory allocation parameters"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mallopt &#8211; set memory allocation parameters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>int mallopt(int </code><i>param</i><code>, int </code><i>value</i><code>);</code></p>

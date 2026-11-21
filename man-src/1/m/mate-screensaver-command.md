@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-screensaver-command/"
 description: "mate-screensaver – The MATE Desktop Screensaver and Locker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-screensaver &#8211; The MATE Desktop Screensaver and Locker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-screensaver [OPTIONS]</code></p>
 <h2>DESCRIPTION</h2>

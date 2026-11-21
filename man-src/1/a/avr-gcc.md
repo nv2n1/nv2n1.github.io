@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-avr-gcc/"
 description: "gcc – GNU project C and C++ compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcc &#8211; GNU project C and C++ compiler </p>
 <h2>SYNOPSIS</h2>
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>]<br />
 &nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>-pg</code>]&nbsp;<wbr>[<code>-O</code><i>level</i>]<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gamma4scanimage/"
 description: "gamma4scanimage – create a gamma table for scanimage"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gamma4scanimage &#8211; create a gamma table for scanimage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gamma4scanimage</code> <i>gamma</i> [<i>shadow</i> [<i>highlight</i> [<i>maxin</i> [<i>maxout</i>]]]] </p>
 <h2>DESCRIPTION</h2>

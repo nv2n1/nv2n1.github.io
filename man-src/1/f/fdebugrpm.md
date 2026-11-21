@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fdebugrpm/"
 description: "fdebugrpm – install missing debuginfo packages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fdebugrpm &#8211; install missing debuginfo packages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fdebugrpm</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>

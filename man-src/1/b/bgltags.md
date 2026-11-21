@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bgltags/"
 description: "bgltags – generate tag file for Emacs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bgltags &#8211; generate tag file for Emacs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bgltags</code> [ options ] [ <i>objfile</i> [ <i>gmon.out</i> ] ] </p>
 <h2>DESCRIPTION</h2>

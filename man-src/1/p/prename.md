@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-prename/"
 description: "rename – renames multiple files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rename &#8211; renames multiple files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rename</code> [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-f</code>&nbsp;<wbr>] <i>perlexpr</i> [&nbsp;<wbr><i>files</i>&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>

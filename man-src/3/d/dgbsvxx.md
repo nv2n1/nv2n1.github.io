@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgbsvxx/"
 description: "dgbsvxx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgbsvxx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbsvxx</code> (FACT, TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />

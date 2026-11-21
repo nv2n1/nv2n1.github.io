@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-catior/"
 description: "catior – Utility for viewing components of a stringified IOR"
 ---
 
-<h2 class="name">NAME</h2>
-<p> catior &#8211; Utility for viewing components of a stringified IOR</p>
 <h2>SYNOPSIS</h2>
 <p> <code>catior</code> [-x] &lt;stringified IOR&gt; </p>
 <h2>DESCRIPTION</h2>

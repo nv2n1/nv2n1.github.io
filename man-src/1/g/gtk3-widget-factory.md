@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk3-widget-factory/"
 description: "gtk3-widget-factory – Demonstrate GTK+ widgets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk3-widget-factory &#8211; Demonstrate GTK+ widgets </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk3-widget-factory</code> [&#8211;help]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-newer/"
 description: "newer – compare file modification times"
 ---
 
-<h2 class="name">NAME</h2>
-<p> newer &#8211; compare file modification times </p>
 <h2>SYNOPSIS</h2>
 <p> <code>newer</code> [<i>option</i>] <i>src1 </i> [ <i>src2 &#8230; srcN</i> ] <i>target</i></p>
 <h2>DESCRIPTION</h2>

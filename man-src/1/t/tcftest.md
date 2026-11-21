@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tcftest/"
 description: "tcftest – test cases of the fixed-length database API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tcftest &#8211; test cases of the fixed-length database API</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>tcftest</code>&#8216; is a utility for facility test and performance test. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>width</i>&#8216; specifies the width of the value of each record. `<i>limsiz</i>&#8216; specifies the limit size of the database file. </p>
 <dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ckbcomp/"
 description: "ckbcomp – compile a XKB keyboard description to a keymap suitable for loadkeys or kbdcontrol"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ckbcomp &#8211; compile a XKB keyboard description to a keymap suitable for loadkeys or kbdcontrol</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ckbcomp</code> [<i>OPTION</i>&#8230;]&nbsp;[<i>XKBLAYOUT</i>&nbsp;[<i>XKBVARIANT</i>&nbsp;[<i>XKBOPTIONS</i>]&#8230;]] </p>
 <h2>DESCRIPTION</h2>

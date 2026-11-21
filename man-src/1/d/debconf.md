@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debconf/"
 description: "debconf – run a debconf-using program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debconf &#8211; run a debconf-using program </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 debconf[options] command[args]

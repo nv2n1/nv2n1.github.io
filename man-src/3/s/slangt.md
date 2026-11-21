@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slangt/"
 description: "slangt.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slangt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slangt</code> (NORM, N, DL, D, DU)<br />

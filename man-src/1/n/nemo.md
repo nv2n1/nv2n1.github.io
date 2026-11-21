@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nemo/"
 description: "nemo – the Cinnamon File Manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nemo &#8211; the Cinnamon File Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nemo</code> [<i>options</i>]<i> URIs</i>&#8230; </p>
 <h2>DESCRIPTION</h2>

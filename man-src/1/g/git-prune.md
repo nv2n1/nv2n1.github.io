@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-prune/"
 description: "git-prune – Prune all unreachable objects from the object database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-prune &#8211; Prune all unreachable objects from the object database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git prune[-n][-v][--progress][--expire&lt;time&gt;][--][&lt;head&gt;...]

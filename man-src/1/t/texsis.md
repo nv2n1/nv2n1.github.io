@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-texsis/"
 description: "TeXsis – TeX macros for Physicists"
 ---
 
-<h2 class="name">NAME</h2>
-<p> TeXsis &#8211; TeX macros for Physicists</p>
 <h2>SYNOPSIS</h2>
 <p> <code>texsis </code> [ filename ] </p>
 <h2>DESCRIPTION</h2>

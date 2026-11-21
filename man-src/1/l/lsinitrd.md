@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lsinitrd/"
 description: "lsinitrd – tool to show the contents of an initramfs image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lsinitrd &#8211; tool to show the contents of an initramfs image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsinitrd</code> [<i>OPTION&#8230;</i>] [&lt;image&gt; [&lt;filename&gt; [&lt;filename&gt; [&#8230;] ]]] </p>
 <p> <code>lsinitrd</code> [<i>OPTION&#8230;</i>] -k &lt;kernel-version&gt;</p>

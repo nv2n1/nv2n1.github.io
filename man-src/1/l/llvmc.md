@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvmc/"
 description: "llvmc – The LLVM Compiler Driver (WIP)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvmc &#8211; The LLVM Compiler Driver (WIP) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvmc</code> [<i>options</i>] <i>filenames&#8230;</i></p>
 <h2>DESCRIPTION</h2>

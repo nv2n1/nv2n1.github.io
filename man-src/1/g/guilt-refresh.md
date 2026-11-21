@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-refresh/"
 description: "guilt-refresh – Refresh topmost applied patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-refresh &#8211; Refresh topmost applied patch </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-refresh</i> [&#8211;git] [&#8211;diffstat]</p>
 <h2>DESCRIPTION</h2>

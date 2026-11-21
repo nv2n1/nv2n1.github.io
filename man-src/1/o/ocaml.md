@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocaml/"
 description: "ocaml – The OCaml interactive toplevel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocaml &#8211; The OCaml interactive toplevel</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocaml</code> [ <i>options</i> ] [ <i>object-files</i> ] [ <i>script-file</i> ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rzxcheck/"
 description: "rzxcheck – Check the signature in a ZX Spectrum RZX file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rzxcheck &#8211; Check the signature in a ZX Spectrum RZX file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rzxcheck</code> <i>rzxfile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

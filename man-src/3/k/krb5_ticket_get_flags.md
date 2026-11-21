@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-krb5_ticket_get_flags/"
 description: "Heimdal Kerberos 5 ticket functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal Kerberos 5 ticket functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION unsigned<br />
  long KRB5_LIB_CALL <code>krb5_ticket_get_flags</code> (krb5_context, const krb5_ticket *)&quot; </p>

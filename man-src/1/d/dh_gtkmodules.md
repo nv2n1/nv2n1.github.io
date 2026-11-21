@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_gtkmodules/"
 description: "dh_gtkmodules – create Gtk module files for Gtk modules"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_gtkmodules &#8211; create Gtk module files for Gtk modules </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_gtkmodules</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lspst/"
 description: "lspst – list PST (MS Outlook Personal Folders) file data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lspst &#8211; list PST (MS Outlook Personal Folders) file data </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lspst</code> [<code>-V</code>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-h</code>] pstfile</dt></dl>

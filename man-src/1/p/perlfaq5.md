@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlfaq5/"
 description: "perlfaq5 – Files and Formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlfaq5 &#8211; Files and Formats </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
 <h2>DESCRIPTION</h2>

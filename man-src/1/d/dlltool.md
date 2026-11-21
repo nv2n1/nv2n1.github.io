@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dlltool/"
 description: "dlltool – Create files needed to build and use DLLs."
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlltool &#8211; Create files needed to build and use DLLs. </p>
 <h2>SYNOPSIS</h2>
 <p> dlltool [<code>-d</code>|<code>&#8211;input-def</code> <i>def-file-name</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>|<code>&#8211;base-file</code>&nbsp;<wbr><i>base-file-name</i>]<br />

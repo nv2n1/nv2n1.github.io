@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libtalloc_stealing/"
 description: "libtalloc_stealing – Chapter 2: Stealing a context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libtalloc_stealing &#8211; Chapter 2: Stealing a context</p>
 <h2>Stealing a context</h2>
 <p> Talloc has the ability to change the parent of a talloc context to another one. This operation is commonly referred to as stealing and it is one of the most important actions performed with talloc contexts. </p>
 <p> Stealing a context is necessary if we want the pointer to outlive the context it is created on. This has many possible use cases, for instance stealing a result of a database search to an in-memory cache context, changing the parent of a field of a generic structure to a more specific one or vice-versa. The most common scenario, at least in Samba, is to steal output data from a function-specific context to the output context given as an argument of that function. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-neqn/"
 description: "neqn – format equations for ASCII output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> neqn &#8211; format equations for ASCII output </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>eqn-options</i>]</p>
 <h2>DESCRIPTION</h2>

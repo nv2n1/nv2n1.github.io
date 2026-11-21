@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-istat/"
 description: "istat – Display details of a meta-data structure (i.e. inode)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> istat &#8211; Display details of a meta-data structure (i.e. inode) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>istat [-B </code> <i>num</i> <code>] [-f</code> <i>fstype </i> <code>] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-vV] [-z</code> <i>zone</i> <code>] [-s</code> <i>seconds</i> <code>]</code> <i>image [images] inode</i></p>
 <h2>DESCRIPTION</h2>

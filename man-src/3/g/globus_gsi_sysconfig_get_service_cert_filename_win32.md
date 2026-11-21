@@ -6,8 +6,6 @@ letter: "g"
 url: "/docs/linux/man/3-globus_gsi_sysconfig_get_service_cert_filename_win32/"
 description: "Functions for Win32 platforms –"
 ---
-<h2 class="name">NAME</h2>
-<p> Functions for Win32 platforms - </p>
 <h3>Functions</h3>
 <p> <br />
  globus_result_t <code>globus_gsi_sysconfig_set_key_permissions_win32</code> (char *filename) <br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gchemtable/"
 description: "gchemtable – periodic table of the elements"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gchemtable &#8211; periodic table of the elements </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gchemtable</code> is a periodic table of the elements application.</p>
 <h2>OPTIONS</h2>

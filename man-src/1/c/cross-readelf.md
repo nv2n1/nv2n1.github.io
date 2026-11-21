@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cross-readelf/"
 description: "readelf – Displays information about ELF files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> readelf &#8211; Displays information about ELF files. </p>
 <h2>SYNOPSIS</h2>
 <p> readelf [<code>-a</code>|<code>&#8211;all</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;file-header</code>]<br />

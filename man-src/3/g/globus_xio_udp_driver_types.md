@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_xio_udp_driver_types/"
 description: "Types –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Types &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_XIO_UDP_INVALID_HANDLE</code> </p>
 <h2>Detailed Description</h2>

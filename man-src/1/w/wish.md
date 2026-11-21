@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wish/"
 description: "wish – Simple windowing shell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wish &#8211; Simple windowing shell </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wish</code> ?<code>-encoding </code><i>name</i>? ?<i>fileName arg arg &#8230;</i>?</p>
 <h2>OPTIONS</h2>

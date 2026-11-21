@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-a2ps/"
 description: "a2ps – format files for printing on a PostScript printer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> a2ps &#8211; format files for printing on a PostScript printer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>a2ps</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

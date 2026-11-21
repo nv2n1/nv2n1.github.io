@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-krenew/"
 description: "krenew – Renew a Kerberos ticket"
 ---
 
-<h2 class="name">NAME</h2>
-<p> krenew &#8211; Renew a Kerberos ticket </p>
 <h2>SYNOPSIS</h2>
 <p> <code>krenew</code> [<code>-bhiLstvx</code>] [<code>-c</code> <i>child pid file</i>] [<code>-H</code> <i>minutes</i>]<br />
 &nbsp;<wbr>[<code>-K</code>&nbsp;<wbr><i>minutes</i>]&nbsp;<wbr>[<code>-k</code>&nbsp;<wbr><i>ticket cache</i>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>pid file</i>]<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wlmscpfs/"
 description: "wlmscpfs – DICOM Basic Worklist Management SCP (based on data files)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wlmscpfs &#8211; DICOM Basic Worklist Management SCP (based on data files) </p>
 <h2>SYNOPSIS</h2>
 <pre>
 wlmscpfs [options] port

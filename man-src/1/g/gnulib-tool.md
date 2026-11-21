@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnulib-tool/"
 description: "gnulib-tool – program for authors or maintainers which want to import modules from gnulib into their packages."
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnulib-tool &#8211; program for authors or maintainers which want to import modules from gnulib into their packages.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnulib-tool</code> &#8211;list </p>
 <p> <code>gnulib-tool</code> &#8211;import [module1 &#8230; moduleN] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nm-applet/"
 description: "nm-applet – network monitor and control GUI applet"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nm-applet &#8211; network monitor and control GUI applet </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nm-applet</code> [ <i>OPTIONS</i> ] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-applied/"
 description: "guilt-applied – List applied patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-applied &#8211; List applied patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-applied</i> [-c]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtgsy2/"
 description: "dtgsy2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtgsy2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, IWORK, PQ, INFO)<br />

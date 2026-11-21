@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-container-start/"
 description: "docker-container-start – Start one or more stopped containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-container-start &#8211; Start one or more stopped containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container start [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

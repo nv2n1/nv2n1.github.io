@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mev/"
 description: "mev – a program to report mouse events"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mev &#8211; a program to report mouse events </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mev</code> [ <i>options</i> ] </p>
 <h2>DESCRIPTION</h2>

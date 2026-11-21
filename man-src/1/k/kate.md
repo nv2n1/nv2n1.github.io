@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kate/"
 description: "kate – Advanced text editor for KDE"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kate &#8211; Advanced text editor for KDE </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kate</code> [<code>-s, &#8211;start</code><i></dt>

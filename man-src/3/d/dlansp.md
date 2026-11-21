@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlansp/"
 description: "dlansp.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlansp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlansp</code> (NORM, UPLO, N, AP, WORK)<br />

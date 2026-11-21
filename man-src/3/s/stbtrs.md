@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-stbtrs/"
 description: "stbtrs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stbtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stbtrs</code> (UPLO, TRANS, DIAG, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />

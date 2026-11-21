@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nvidia-settings/"
 description: "nvidia-settings – configure the NVIDIA graphics driver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nvidia-settings &#8211; configure the NVIDIA graphics driver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nvidia-settings [</code><i>options</i><code>]</code><br />
  <code>nvidia-settings [</code><i>options</i><code>] &#8211;no-config</code><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbus-uuidgen/"
 description: "dbus-uuidgen – Utility to generate UUIDs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbus-uuidgen &#8211; Utility to generate UUIDs </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-uuidgen</code> [&#8211;version] [&#8211;ensure&nbsp;[<i>=FILENAME</i>]] [&#8211;get&nbsp;[<i>=FILENAME</i>]]</dt>

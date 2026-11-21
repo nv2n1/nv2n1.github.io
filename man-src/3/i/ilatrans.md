@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ilatrans/"
 description: "ilatrans.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ilatrans.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilatrans</code> (TRANS)<br />

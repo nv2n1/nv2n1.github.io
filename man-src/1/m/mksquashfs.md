@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mksquashfs/"
 description: "mksquashfs – tool to create and append to squashfs filesystems"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mksquashfs &#8211; tool to create and append to squashfs filesystems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mksquashfs</code> <i>SOURCE</i> [<i>SOURCE2</i> <i>&#8230;</i>] <i>DESTINATION</i> [<i>OPTIONS</i>] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtotiff/"
 description: "pamtotiff – convert a Netpbm image to a TIFF file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtotiff &#8211; convert a Netpbm image to a TIFF file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtotiff</code> </p>
 <p> [<code>-none</code> | <code>-packbits</code> | <code>-lzw</code> | <code>-g3</code> | <code>-g4</code> | <code>-flate</code> | <code>-adobeflate</code>] </p>

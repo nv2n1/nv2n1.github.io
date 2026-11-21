@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libavformat/"
 description: "libavformat – multimedia muxing and demuxing library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libavformat &#8211; multimedia muxing and demuxing library </p>
 <h2>DESCRIPTION</h2>
 <p> The libavformat library provides a generic framework for multiplexing and demultiplexing (muxing and demuxing) audio, video and subtitle streams. It encompasses multiple muxers and demuxers for multimedia container formats. </p>
 <p> It also supports several input and output protocols to access a media resource.</p>

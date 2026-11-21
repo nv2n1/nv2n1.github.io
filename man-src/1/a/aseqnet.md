@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aseqnet/"
 description: "aseqnet – ALSA sequencer connectors over network"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aseqnet &#8211; ALSA sequencer connectors over network</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aseqnet</code> [remotehost] </p>
 <h2>DESCRIPTION</h2>

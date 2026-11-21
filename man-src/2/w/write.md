@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-write/"
 description: "write – write to a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> write &#8211; write to a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>ssize_t write(int </code><i>fd</i><code>, const void *</code><i>buf</i><code>, size_t </code><i>count</i><code>);</code></p>

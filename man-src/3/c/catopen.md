@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-catopen/"
 description: "catopen, catclose – open/close a message catalog"
 ---
 
-<h2 class="name">NAME</h2>
-<p> catopen, catclose &#8211; open/close a message catalog </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;nl_types.h&gt;</code> </p>
 <p> <code>nl_catd catopen(const char *</code><i>name</i><code>, int </code><i>flag</i><code>);</code> </p>

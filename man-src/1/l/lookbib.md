@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lookbib/"
 description: "lookbib – search bibliographic databases"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lookbib &#8211; search bibliographic databases </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-i </code><i>string</i> ] [ <code>-t </code><i>n</i> ] <i>filename</i> &#8230; <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

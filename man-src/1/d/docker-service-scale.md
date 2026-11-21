@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-service-scale/"
 description: "docker-service-scale – Scale one or multiple replicated services"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-service-scale &#8211; Scale one or multiple replicated services </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service scale SERVICE=REPLICAS [SERVICE=REPLICAS&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

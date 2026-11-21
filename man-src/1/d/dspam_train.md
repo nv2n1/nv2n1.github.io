@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dspam_train/"
 description: "dspam_train – train a corpus of mail"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dspam_train &#8211; train a corpus of mail</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dspam_train</code> [<code>username</code>] [<code>&#8211;client</code>] [<code>-i&nbsp;<wbr></code>index|<code>spam_corpus</code>&nbsp;<wbr><code>nonspam_corpus</code>] </p>
 <h2>DESCRIPTION</h2>

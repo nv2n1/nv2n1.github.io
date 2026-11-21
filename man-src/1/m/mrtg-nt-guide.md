@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mrtg-nt-guide/"
 description: "mrtg-nt-guide – The MRTG 2.17.4 Windows Installation Guide"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mrtg-nt-guide &#8211; The MRTG 2.17.4 Windows Installation Guide </p>
 <h2>SYNOPSIS</h2>
 <p> Installing <font SIZE="-1">MRTG</font> on a Windows box is not quite as &#8220;click and point&#8221; as some might want it to be. But then again, it is not all that difficult if you follow the instructions below.</p>
 <h2>PREREQUISITES</h2>

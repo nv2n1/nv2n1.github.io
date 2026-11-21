@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-software/"
 description: "gnome-software – Install applications"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-software &#8211; Install applications </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-software</code> [OPTION&#8230;]</dt></dl>

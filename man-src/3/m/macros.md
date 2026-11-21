@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-macros/"
 description: "QuantLib macros –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib macros &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Numeric limits</code> </p>
 <p> <code>Debugging macros</code> </p>

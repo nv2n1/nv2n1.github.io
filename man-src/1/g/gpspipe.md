@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpspipe/"
 description: "gpspipe – tool to connect to gpsd and retrieve sentences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpspipe &#8211; tool to connect to gpsd and retrieve sentences </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpspipe</code> [-h] [-d] [-l] [-o&nbsp;<wbr><i>filename</i>] [-n&nbsp;<wbr><i>count</i>] [-r] [-R] [-s&nbsp;<wbr><i>serial-device</i>] [-t] [-T&nbsp;<wbr><i>timestamp-format</i>] [-u] [-p] [-w] [-S] [-2] [-v] [-D&nbsp;<wbr><i>debug-level</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ab/"
 description: "ab – Apache HTTP server benchmarking tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ab &#8211; Apache HTTP server benchmarking tool</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>
 <p> <code>ab</code> [ &#8211;<code>A</code> <i>auth-username</i>:<i>password</i> ] [ &#8211;<code>b</code> <i>windowsize</i> ] [ &#8211;<code>B</code> <i>local-address</i> ] [ &#8211;<code>c</code> <i>concurrency</i> ] [ &#8211;<code>C</code> <i>cookie-name</i>=<i>value</i> ] [ &#8211;<code>d</code> ] [ &#8211;<code>e</code> <i>csv-file</i> ] [ &#8211;<code>E</code> <i>client-certificate file</i> ] [ &#8211;<code>f</code> <i>protocol</i> ] [ &#8211;<code>g</code> <i>gnuplot-file</i> ] [ &#8211;<code>h</code> ] [ &#8211;<code>H</code> <i>custom-header</i> ] [ &#8211;<code>i</code> ] [ &#8211;<code>k</code> ] [ &#8211;<code>l</code> ] [ &#8211;<code>m</code> <i>HTTP-method</i> ] [ &#8211;<code>n</code> <i>requests</i> ] [ &#8211;<code>p</code> <i>POST-file</i> ] [ &#8211;<code>P</code> <i>proxy-auth-username</i>:<i>password</i> ] [ &#8211;<code>q</code> ] [ &#8211;<code>r</code> ] [ &#8211;<code>s</code> <i>timeout</i> ] [ &#8211;<code>S</code> ] [ &#8211;<code>t</code> <i>timelimit</i> ] [ &#8211;<code>T</code> <i>content-type</i> ] [ &#8211;<code>u</code> <i>PUT-file</i> ] [ &#8211;<code>v</code> <i>verbosity</i>] [ &#8211;<code>V</code> ] [ &#8211;<code>w</code> ] [ &#8211;<code>x</code> <i>&lt;table&gt;-attributes</i> ] [ &#8211;<code>X</code> <i>proxy</i>[:<i>port</i>] ] [ &#8211;<code>y</code> <i>&lt;tr&gt;-attributes</i> ] [ &#8211;<code>z</code> <i>&lt;td&gt;-attributes</i> ] [ &#8211;<code>Z</code> <i>ciphersuite</i> ] [http[s]://]<i>hostname</i>[:<i>port</i>]/<i>path</i><br />

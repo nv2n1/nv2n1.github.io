@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-totem/"
 description: "Totem – GNOME desktop movie player based on GStreamer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Totem &#8211; GNOME desktop movie player based on GStreamer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>totem</code> [<i>option&#8230;</i>]<i> </i>[<i>filenames</i>|<i>URI</i>]</p>
 <h2>DESCRIPTION</h2>

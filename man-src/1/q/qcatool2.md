@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qcatool2/"
 description: "qcatool – command line tool for the Qt Cryptographic Architecture"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qcatool &#8211; command line tool for the Qt Cryptographic Architecture</p>
 <h2>DESCRIPTION</h2>
 <p> qcatool is a command line tool for performing various cryptographic operations with the Qt Cryptographic Architecture (QCA). qcatool can also be used for testing and debugging QCA. </p>
 <h2>USAGE</h2>

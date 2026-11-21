@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-make_strings/"
 description: "make_strings – tool to build lists of localizable strings from Objective-C files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> make_strings &#8211; tool to build lists of localizable strings from Objective-C files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>make_strings</code> [<code>&#8211;help</code>] [<code>&#8211;verbose</code>] [<code>&#8211;aggresive-import</code>] [<code>&#8211;aggressive-match</code>] [<code>&#8211;aggressive-remove</code>] [<code>-L</code> <i>languages</i>] <i>files.[hmc&#8230;]</i> </p>
 <h2>DESCRIPTION</h2>

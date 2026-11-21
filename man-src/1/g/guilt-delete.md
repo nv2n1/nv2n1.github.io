@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-delete/"
 description: "guilt-delete – Delete a patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-delete &#8211; Delete a patch </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-delete</i> [-f] &lt;patchname&gt;</p>
 <h2>DESCRIPTION</h2>

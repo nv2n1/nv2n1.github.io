@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sdptool/"
 description: "sdptool – control and interrogate SDP servers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sdptool &#8211; control and interrogate SDP servers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sdptool</code> [<i>OPTIONS</i>] [<i>COMMAND</i> [<i>PARAMETERS</i>]]</p>
 <h2>DESCRIPTION</h2>

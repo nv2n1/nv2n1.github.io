@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-md5sum/"
 description: "md5sum – compute and check MD5 message digest"
 ---
 
-<h2 class="name">NAME</h2>
-<p> md5sum &#8211; compute and check MD5 message digest </p>
 <h2>SYNOPSIS</h2>
 <p> <code>md5sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

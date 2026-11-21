@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pw-metadata/"
 description: "pw-metadata – The PipeWire metadata"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pw-metadata &#8211; The PipeWire metadata </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pw - metadata[options][id[key[value[type]]]]

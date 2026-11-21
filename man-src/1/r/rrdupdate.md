@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdupdate/"
 description: "rrdupdate – Store a new set of values into the RRD"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdupdate &#8211; Store a new set of values into the RRD </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> {<code>update</code> | <code>updatev</code>} <i>filename</i> [<code>&#8211;template</code>|<code>-t</code>&nbsp;<wbr><i>ds-name</i>[<code>:</code><i>ds-name</i>]&#8230;] [<code>&#8211;daemon</code>|<code>-d</code>&nbsp;<wbr><i>address</i>] [<code>&#8212;</code>] <code>N</code>|<i>timestamp</i><code>:</code><i>value</i>[<code>:</code><i>value</i>&#8230;] <i>at-timestamp</i><code>@</code><i>value</i>[<code>:</code><i>value</i>&#8230;] [<i>timestamp</i><code>:</code><i>value</i>[<code>:</code><i>value</i>&#8230;]&nbsp;<wbr>&#8230;]</p>
 <h2>DESCRIPTION</h2>

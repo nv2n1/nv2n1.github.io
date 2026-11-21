@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sxpm/"
 description: "sxpm – Show an XPM (X PixMap) file and/or convert XPM 1 or 2 files to XPM 3."
 ---
 
-<h2 class="name">NAME</h2>
-<p> sxpm &#8211; Show an XPM (X PixMap) file and/or convert XPM 1 or 2 files to XPM 3. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sxpm</code> [<code>-d</code> displayname] [<code>-g</code> geometry] [<code>-hints</code>] [<code>-icon</code> filename] [<code>-plaid | </code>filename | -] [<code>-o</code> filename | <code>-o</code> -] [<code>-pcmap</code>] [<code>-closecolors</code>] [<code>-nod</code>] [<code>-nom</code>] [<code>-mono | -grey4 | -grey | -color</code>] [<code>-sc</code> symbol color] [<code>-sp</code> symbol pixel] [<code>-cp</code> color pixel] [<code>-rgb</code> filename] [<code>-v</code>]</p>
 <h2>DESCRIPTION</h2>

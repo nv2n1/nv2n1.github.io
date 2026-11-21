@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bashbug/"
 description: "bashbug – report a bug in bash"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bashbug &#8211; report a bug in bash </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bashbug</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<i>bug-report-email-addresses</i>]</dt></dl>

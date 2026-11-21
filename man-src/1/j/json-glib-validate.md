@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-json-glib-validate/"
 description: "json-glib-validate – JSON-GLib validation tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> json-glib-validate &#8211; JSON-GLib validation tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>json-glib-validate</code> [<code>-h</code>,&nbsp;<wbr><code>&#8211;help</code>] URI [URI&#8230;]</dt></dl>

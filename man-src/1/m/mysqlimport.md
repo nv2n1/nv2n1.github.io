@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlimport/"
 description: "mysqlimport – a data import program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlimport &#8211; a data import program </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlimport [</code><i>options</i><code>] </code><i>db_name</i><i>textfile1</i><code> &#8230;</code></dt></dl>

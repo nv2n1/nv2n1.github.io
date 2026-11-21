@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_net_manager_attr_s/"
 description: "globus_net_manager_attr_s –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_net_manager_attr_s &#8211; </p>
 <p> Net Manager Attributes.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_net_manager_attr.h&gt;</p>

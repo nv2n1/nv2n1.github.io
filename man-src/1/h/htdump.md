@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htdump/"
 description: "htdump – write out an ASCII-text version of the document database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> htdump &#8211; write out an ASCII-text version of the document database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htdump</code> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>

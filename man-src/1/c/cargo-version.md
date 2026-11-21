@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-version/"
 description: "cargo-version – Show version information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-version &#8211; Show version information </p>
 <h2>SYNOPSIS</h2>
 <p> cargo version [OPTIONS]</p>
 <h2>OPTIONS</h2>

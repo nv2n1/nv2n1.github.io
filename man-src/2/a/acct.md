@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-acct/"
 description: "acct – switch process accounting on or off"
 ---
 
-<h2 class="name">NAME</h2>
-<p> acct &#8211; switch process accounting on or off </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

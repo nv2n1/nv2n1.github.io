@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbmapreduce/"
 description: "dbmapreduce – reduce all input rows with the same key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbmapreduce &#8211; reduce all input rows with the same key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dbmapreduce[-dMS][-k KeyField][-f CodeFile][-C Filtercode][--][ReduceCommand[ReduceArguments...]]

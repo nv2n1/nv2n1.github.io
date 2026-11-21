@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dmlite_url/"
 description: "dmlite_url –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dmlite_url &#8211; </p>
 <p> Handles URL.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;utils.h&gt;</p>

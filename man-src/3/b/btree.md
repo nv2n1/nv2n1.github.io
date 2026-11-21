@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-btree/"
 description: "btree – btree database access method"
 ---
 
-<h2 class="name">NAME</h2>
-<p> btree &#8211; btree database access method </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;db.h&gt;

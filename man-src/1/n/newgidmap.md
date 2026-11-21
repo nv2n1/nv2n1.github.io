@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-newgidmap/"
 description: "newgidmap – set the gid mapping of a user namespace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> newgidmap &#8211; set the gid mapping of a user namespace </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>newgidmap</code> <i>pid</i> <i>gid</i> <i>lowergid</i> <i>count</i> [<i>pid</i>&nbsp;<wbr><i>gid</i>&nbsp;<wbr><i>lowergid</i>&nbsp;<wbr><i>count</i>&nbsp;<wbr>[&nbsp;<wbr><i>&#8230;</i>&nbsp;<wbr>]]</dt></dl>

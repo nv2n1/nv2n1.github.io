@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkfontdir/"
 description: "mkfontdir – create an index of X font files in a directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkfontdir &#8211; create an index of X font files in a directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkfontdir</code> [<code>-n</code>] [<code>-x</code> <i>suffix</i>] [<code>-r</code>] [<code>-p</code> <i>prefix</i>] [<code>-e</code> <i>encoding-directory-name</i>] &#8230; [<code>&#8212;</code>] [<i>directory-name</i> &#8230; ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-e2cp/"
 description: "e2cp – copies files from/to an e2fs filesystem"
 ---
 
-<h2 class="name">NAME</h2>
-<p> e2cp &#8211; copies files from/to an e2fs filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>e2cp</code> [<i>options</i>]<i> files&#8230; dest</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-roqet/"
 description: "roqet – Rasqal RDF query utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> roqet &#8211; Rasqal RDF query utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>roqet</code> [<code>OPTIONS</code>] <i>&lt;query-URI&gt;</i> <i>[base-URI]</i><br />
  <code>roqet</code> [<code>OPTIONS</code>]<code>-e</code> <i>query-string</i> <i>[base-URI]</i><br />

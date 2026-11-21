@@ -6,8 +6,6 @@ letter: "l"
 url: "/docs/linux/man/3-libraptor/"
 description: "libraptor – Raptor RDF parser and serializer library"
 ---
-<h2 class="name">NAME</h2>
-<p> libraptor - Raptor RDF parser and serializer library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;raptor.h&gt; 

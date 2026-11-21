@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_redirect/"
 description: "cgi_redirect – send an HTTP 302 redirect response"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_redirect &#8211; send an HTTP 302 redirect response </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

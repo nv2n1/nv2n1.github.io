@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mailtool/"
 description: "mailtool – Process mailboxes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mailtool &#8211; Process mailboxes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mailtool</code> [options&#8230;]</dt></dl>

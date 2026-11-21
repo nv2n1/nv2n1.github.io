@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-data_table/"
 description: "QuantLib::MultiCubicSpline – N-dimensional cubic spline interpolation between discrete points."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::MultiCubicSpline &#8211; N-dimensional cubic spline interpolation between discrete points. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/multicubicspline.hpp&gt; </p>
 <h3>Public Types</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-stack/"
 description: "docker-stack – Manage Docker stacks"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-stack &#8211; Manage Docker stacks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stack [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

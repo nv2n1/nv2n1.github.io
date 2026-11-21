@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ftpasswd/"
 description: "ftpasswd – Perl script for managing AuthUserFiles and AuthGroupFiles"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ftpasswd &#8211; Perl script for managing AuthUserFiles and AuthGroupFiles </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftpasswd</code> [ <code>options</code> ]</p>
 <h2>DESCRIPTION</h2>

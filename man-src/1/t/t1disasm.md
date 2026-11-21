@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-t1disasm/"
 description: "t1disasm – disassemble PostScript Type 1 font"
 ---
 
-<h2 class="name">NAME</h2>
-<p> t1disasm &#8211; disassemble PostScript Type 1 font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1disasm</code> [<i>input</i> [<i>output</i>]]</p>
 <h2>DESCRIPTION</h2>

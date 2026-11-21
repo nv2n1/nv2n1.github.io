@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-stats/"
 description: "tracker-stats – Provides statistics on the data indexed"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-stats &#8211; Provides statistics on the data indexed</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-stats</code> [<i>OPTION</i>&#8230;] [[<i>EXPRESSION</i>&#8230;] [<i>EXPRESSION</i>&#8230;]] </p>
 <h2>DESCRIPTION</h2>

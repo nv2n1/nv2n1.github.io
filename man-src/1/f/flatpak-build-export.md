@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-build-export/"
 description: "flatpak-build-export – Create a repository from a build directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-build-export &#8211; Create a repository from a build directory </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-export</code> [OPTION&#8230;] LOCATION DIRECTORY [BRANCH]</dt></dl>

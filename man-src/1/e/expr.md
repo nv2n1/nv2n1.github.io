@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-expr/"
 description: "expr – evaluate expressions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> expr &#8211; evaluate expressions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>expr</code> <i>,EXPRESSION/</i><br />
  <code>expr</code> <i>,OPTION/</i></p>

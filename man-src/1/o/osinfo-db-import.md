@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-osinfo-db-import/"
 description: "osinfo-db-import – Import an osinfo database archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> osinfo-db-import &#8211; Import an osinfo database archive </p>
 <h2>SYNOPSIS</h2>
 <p> osinfo-db-import [<font SIZE="-1">OPTIONS&#8230;</font>] ARCHIVE-FILE</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aspell-import/"
 description: "aspell-import – import old personal dictionaries into GNU Aspell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aspell-import &#8211; import old personal dictionaries into GNU Aspell </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aspell-import</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rdist/"
 description: "rdist – remote file distribution client program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rdist &#8211; remote file distribution client program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdist</code> [ <code>-DFn</code> ] [ <code>-A </code> <i>num</i> ] [ <code>-a </code> <i>num </i> ] [ <code>-d </code> <i>var=value </i> ] [ <code>-l</code> <i>&lt;local logopts&gt;</i> ] [ <code>-L</code> <i>&lt;remote logopts&gt;</i> ] [ <code>-f </code> <i>distfile </i> ] [ <code>-M </code> <i>maxproc</i> ] [ <code>-m </code> <i>host </i> ] [ <code>-o</code> <i>distopts</i> ] [ <code>-t </code> <i>timeout </i> ] [ <code>-p</code> <i>&lt;rdistd-path&gt;</i> ] [ <code>-P</code> <i>&lt;transport-path&gt;</i> ] [ <i>name &#8230;</i> ] </p>
 <p> <code>rdist</code> <code>-DFn</code> <code>-c </code> <i>name &#8230; </i> <i>[login@]host[:dest]</i> </p>

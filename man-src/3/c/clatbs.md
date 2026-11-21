@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clatbs/"
 description: "clatbs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clatbs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />

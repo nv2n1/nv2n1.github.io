@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-errno/"
 description: "errno – look up errno names and descriptions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> errno &#8211; look up errno names and descriptions </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>errno</code> {<i>name-or-code</i>}</dt>

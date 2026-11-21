@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-reset/"
 description: "trace-cmd-reset – turn off all Ftrace tracing to bring back full performance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-reset &#8211; turn off all Ftrace tracing to bring back full performance </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd reset</code> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>

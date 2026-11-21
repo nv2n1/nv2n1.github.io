@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-volume/"
 description: "docker-volume – Manage volumes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-volume &#8211; Manage volumes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker volume COMMAND</code> </p>
 <h2>DESCRIPTION</h2>

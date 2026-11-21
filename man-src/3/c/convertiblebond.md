@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-convertiblebond/"
 description: "ql/instruments/bonds/convertiblebond.hpp – convertible bond class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/instruments/bonds/convertiblebond.hpp &#8211; convertible bond class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bond.hpp&gt;<br />
  #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />

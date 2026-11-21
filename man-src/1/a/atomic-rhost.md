@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-rhost/"
 description: "atomic-rhost – Manage cluster hosts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-rhost &#8211; Manage cluster hosts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic rhost [OPTIONS] SUBCOMMAND</code> </p>
 <p> <code>atomic rhost</code> will issue commands to a Commissaire server over HTTP. </p>

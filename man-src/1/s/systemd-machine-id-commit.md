@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-machine-id-commit/"
 description: "systemd-machine-id-commit – Commit transient machine ID to /etc/machine-id"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-machine-id-commit &#8211; Commit transient machine ID to /etc/machine-id </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-machine-id-commit</code></dt></dl>

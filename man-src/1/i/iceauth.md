@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-iceauth/"
 description: "iceauth – ICE authority file utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iceauth &#8211; ICE authority file utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>iceauth</code> [ <code>-f</code> <i>authfile</i> ] [ <code>-vqibuV</code> ] [ <i>command arg &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>

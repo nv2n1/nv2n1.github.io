@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bootstrap/"
 description: "QuantLib::CompoundForward – compound-forward structure"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::CompoundForward &#8211; compound-forward structure </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/termstructures/compoundforward.hpp&gt; </p>
 <p> Inherits <code>QuantLib::ForwardRateStructure</code>. </p>

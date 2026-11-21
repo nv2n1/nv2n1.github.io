@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgges/"
 description: "cgges.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgges.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, RWORK, BWORK, INFO)<br />

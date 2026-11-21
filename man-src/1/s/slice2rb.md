@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-slice2rb/"
 description: "slice2rb – The Slice to Ruby compiler."
 ---
 
-<h2 class="name">NAME</h2>
-<p> slice2rb &#8211; The Slice to Ruby compiler.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2rb [options] [files] </p>
 <h2>DESCRIPTION</h2>

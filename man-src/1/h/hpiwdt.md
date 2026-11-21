@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpiwdt/"
 description: "hpiwdt – This sample openhpi application reads and enables the watchdog timer."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpiwdt &#8211; This sample openhpi application reads and enables the watchdog timer. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpiwdt[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-t sec][-X][-h] hpiwdt[--domain = nn][--host = host[:port]][--cfgfile = file]

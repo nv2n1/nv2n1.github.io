@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_compare_ext_s/"
 description: "ldap_compare, ldap_compare_s, ldap_compare_ext, ldap_compare_ext_s – Perform an LDAP compare operation."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_compare, ldap_compare_s, ldap_compare_ext, ldap_compare_ext_s &#8211; Perform an LDAP compare operation. </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

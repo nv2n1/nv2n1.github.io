@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sync_file_range2/"
 description: "sync_file_range – sync a file segment with disk"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sync_file_range &#8211; sync a file segment with disk </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

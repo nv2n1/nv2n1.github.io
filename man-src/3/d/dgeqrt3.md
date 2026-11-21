@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgeqrt3/"
 description: "dgeqrt3.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgeqrt3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> recursive subroutine <code>dgeqrt3</code> (M, N, A, LDA, T, LDT, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ospcat/"
 description: "ospcat – SGML print catalog"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ospcat &#8211; SGML print catalog </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ospcat</code> [<code>-b&nbsp;<wbr></code><i>name</i>] [<code>&#8211;bctf=</code><i>name</i>] [<code>-C</code>] [<code>&#8211;catalogs</code>] [<code>-c&nbsp;<wbr></code><i>sysid</i>] [<code>&#8211;catalog=</code><i>sysid</i>] [<code>-f</code>] [<code>&#8211;error-file=</code><i>file</i>] [<code>-D&nbsp;<wbr></code><i>directory</i>] [<code>&#8211;directory=</code><i>directory</i>] [<code>-R</code>] [<code>&#8211;restricted</code>] [<code>-v</code>] [<code>-h</code>] [<code>&#8211;help</code>] [<code>-P&nbsp;<wbr></code><i>literal</i>] [<code>&#8211;public-id=</code><i>literal</i>] [<code>-S&nbsp;<wbr></code><i>literal</i>] [<code>&#8211;system_id=</code><i>literal</i>] [<code>-p&nbsp;<wbr></code><i>name</i>] [<code>&#8211;parameter-entity=</code><i>name</i>] [<code>-d&nbsp;<wbr></code><i>name</i>] [<code>&#8211;doctype=</code><i>name</i>] [<code>-l&nbsp;<wbr></code><i>name</i>] [<code>&#8211;linktype=</code><i>name</i>] [<code>-e&nbsp;<wbr></code><i>name</i>] [<code>&#8211;entity=</code><i>name</i>] [<code>-n&nbsp;<wbr></code><i>name</i>] [<code>&#8211;notation=</code><i>name</i>] [<code>-s&nbsp;<wbr></code><i>name</i>] [<code>&#8211;declaration=</code><i>name</i>]</dt></dl>

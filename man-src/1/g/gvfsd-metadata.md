@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfsd-metadata/"
 description: "gvfsd-metadata – Metadata daemon for gvfs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfsd-metadata &#8211; Metadata daemon for gvfs </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gvfs-metadata</code> [OPTION&#8230;]</dt></dl>

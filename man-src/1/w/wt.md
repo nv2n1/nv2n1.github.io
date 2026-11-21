@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wt/"
 description: "wt – WiredTiger command line utility WiredTiger includes a command line utility, wt."
 ---
 
-<h2 class="name">NAME</h2>
-<p> wt &#8211; WiredTiger command line utility WiredTiger includes a command line utility, wt. </p>
 <h2>SYNOPSIS</h2>
 <p> wt [-LRVv] [-C config] [-E secretkey ] [-h directory] command [command-specific arguments]</p>
 <h2>DESCRIPTION</h2>

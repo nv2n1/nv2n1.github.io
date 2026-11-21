@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dx/"
 description: "QuantLib::TransformedGrid – transformed grid"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::TransformedGrid &#8211; transformed grid </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/transformedgrid.hpp&gt; </p>
 <p> Inherited by LogGrid. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_doxygen/"
 description: "dh_doxygen – helps with packaging doxygen-generated documentation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_doxygen &#8211; helps with packaging doxygen-generated documentation </p>
 <h2>SYNOPSIS</h2>
 <p> dh_doxygen [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<i>directory</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

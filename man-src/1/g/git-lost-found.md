@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-lost-found/"
 description: "git-lost-found – Recover lost refs that luckily have not yet been pruned"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-lost-found &#8211; Recover lost refs that luckily have not yet been pruned </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git lost-found</i>

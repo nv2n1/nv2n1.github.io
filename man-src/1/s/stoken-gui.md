@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stoken-gui/"
 description: "stoken-gui – GTK+ software token"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stoken-gui &#8211; GTK+ software token </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stoken-gui</code> [<i>opts</i>]</p>
 <h2>DESCRIPTION</h2>

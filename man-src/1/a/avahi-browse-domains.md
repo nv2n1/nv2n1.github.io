@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-avahi-browse-domains/"
 description: "avahi-browse – Browse for mDNS/DNS-SD services using the Avahi daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> avahi-browse &#8211; Browse for mDNS/DNS-SD services using the Avahi daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>avahi-browse [</code><i>options</i><code>] </code><i>service-type</i><code> </p>
 <p> avahi-browse [</code><i>options</i><code>] &#8211;all </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fcvt/"
 description: "ecvt, fcvt – convert a floating-point number to a string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecvt, fcvt &#8211; convert a floating-point number to a string </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>
 <p> <code>char *ecvt(double </code><i>number</i><code>, int </code><i>ndigits</i><code>, int *</code><i>decpt</i><code>,</code> <code>int *</code><i>sign</i><code>);</code> </p>

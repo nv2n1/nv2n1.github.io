@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-socketcall/"
 description: "socketcall – socket system calls"
 ---
 
-<h2 class="name">NAME</h2>
-<p> socketcall &#8211; socket system calls </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;linux/net.h&gt;</code> </p>
 <p> <code>int socketcall(int </code><i>call</i><code>, unsigned long *</code><i>args</i><code>);</code></p>

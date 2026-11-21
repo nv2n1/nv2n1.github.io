@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-atoq/"
 description: "atoi, atol, atoll – convert a string to an integer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atoi, atol, atoll &#8211; convert a string to an integer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamsistoaglyph/"
 description: "pamsistoaglyph – convert a single-image stereogram to a red/cyan anaglyphic image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamsistoaglyph &#8211; convert a single-image stereogram to a red/cyan anaglyphic image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamsistoaglyph</code> [&#8211;<code>invert</code>] [&#8211;<code>sep</code>=<i>number</i>] [&#8211;<code>minsep</code>=<i>number</i>] [&#8211;<code>gray</code>=<i>number</i>] [<i>in_netpbmfile</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use either white space or an equals sign between an option name and its value. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glxheads/"
 description: "glxheads – exercise multiple GLX connections"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glxheads &#8211; exercise multiple GLX connections </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glxheads</code> [<i>display</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

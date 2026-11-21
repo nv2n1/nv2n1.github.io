@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ldbrename/"
 description: "ldbrename – Edit LDB databases using your favorite editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldbrename &#8211; Edit LDB databases using your favorite editor </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbrename</code> [-h] [-o options] {olddn} {newdn}</dt></dl>

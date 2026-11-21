@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vboxmanage/"
 description: "VBoxManage – x86 virtualization solution"
 ---
 
-<h2 class="name">NAME</h2>
-<p> VBoxManage &#8211; x86 virtualization solution </p>
 <h2>DESCRIPTION</h2>
 <p> Oracle VM VirtualBox Command Line Management Interface (C) 2005-2019 Oracle Corporation All rights reserved. </p>
 <p> Usage:</p>

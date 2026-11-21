@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_buffer_invalidate/"
 description: "lwres_buffer_init, lwres_buffer_invalidate, lwres_buffer_add, lwres_buffer_subtract, lwres_buffer_clear, lwres_buffer_first, lwres_buffer_forward, lwres_buffer_back, lwres_buffer_getuint8, lwres_bu..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_buffer_init, lwres_buffer_invalidate, lwres_buffer_add, lwres_buffer_subtract, lwres_buffer_clear, lwres_buffer_first, lwres_buffer_forward, lwres_buffer_back, lwres_buffer_getuint8, lwres_buffer_putuint8, lwres_buffer_getuint16, lwres_buffer_putuint16, lwres_buffer_getuint32, lwres_buffer_putuint32, lwres_buffer_putmem, lwres_buffer_getmem &#8211; lightweight resolver buffer management </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwbuffer.h&gt;

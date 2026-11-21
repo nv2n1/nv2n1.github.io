@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmdraw/"
 description: "ppmdraw – draw lines, text, etc on a PPM image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmdraw &#8211; draw lines, text, etc on a PPM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmdraw</code> </p>
 <p> { <code>-script=</code><i>script</i> | <code>-scriptfile=</code><i>filename</i> } [<code>-verbose</code>] </p>

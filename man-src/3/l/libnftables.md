@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libnftables/"
 description: "libnftables – nftables frontend library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libnftables &#8211; nftables frontend library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nftables/libnftables.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcalccmd/"
 description: "gcalccmd – a console calculator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcalccmd &#8211; a console calculator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcalccmd</code> </p>
 <h2>DESCRIPTION</h2>

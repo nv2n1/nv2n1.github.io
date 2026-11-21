@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_icons/"
 description: "dh_icons – Update caches of Freedesktop icons"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_icons &#8211; Update caches of Freedesktop icons </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_icons</code> [<i>debhelper options</i>] [<code>-n</code>]</p>
 <h2>DESCRIPTION</h2>

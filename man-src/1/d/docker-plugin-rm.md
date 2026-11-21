@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-plugin-rm/"
 description: "docker-plugin-rm – Remove one or more plugins"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-plugin-rm &#8211; Remove one or more plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker plugin rm [OPTIONS] PLUGIN [PLUGIN&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

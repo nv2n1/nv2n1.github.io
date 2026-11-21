@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamditherbw/"
 description: "pamditherbw – dither grayscale image to black and white"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamditherbw &#8211; dither grayscale image to black and white</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamditherbw</code> </p>
 <p> [<code>-floyd</code> | <code>-fs</code> | <code>-atkinson</code> | <code>-threshold</code> | <code>-hilbert</code> | <code>-dither8</code> | <code>-d8</code> | <code>-cluster3</code> | <code>-c3</code> | <code>-cluster4</code> | <code>-c4</code> | <code>-cluster8</code> | <code>-c8</code>] </p>

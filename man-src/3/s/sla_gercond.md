@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sla_gercond/"
 description: "sla_gercond.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sla_gercond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>sla_gercond</code> (TRANS, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br />

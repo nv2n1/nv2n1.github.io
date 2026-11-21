@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ipsec_rangetosubnet/"
 description: "ipsec_rangetosubnet – convert address range to subnet"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipsec_rangetosubnet &#8211; convert address range to subnet </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;freeswan.h&gt;

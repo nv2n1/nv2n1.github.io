@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zenmap/"
 description: "zenmap – Graphical Nmap frontend and results viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zenmap &#8211; Graphical Nmap frontend and results viewer </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zenmap</code> [<i>options</i>] [<i>results file</i>]</dt></dl>

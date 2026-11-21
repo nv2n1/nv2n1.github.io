@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fakechroot/"
 description: "fakechroot – gives a fake chroot environment"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fakechroot &#8211; gives a fake chroot environment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fakechroot</code> [<code>-s</code>|<code>&#8211;use-system-libs</code>] [<code>-l</code>|<code>&#8211;lib</code>&nbsp;<wbr><i>library</i>] [<code>&#8212;</code>] [<i>command</i>]</p>
 <h2>DESCRIPTION</h2>

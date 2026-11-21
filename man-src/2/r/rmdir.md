@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-rmdir/"
 description: "rmdir – delete a directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rmdir &#8211; delete a directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int rmdir(const char *</code><i>pathname</i><code>);</code></p>

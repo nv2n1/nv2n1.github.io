@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chcon/"
 description: "chcon – change file security context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chcon &#8211; change file security context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chcon</code> [<i>,OPTION/</i>]&#8230; <i>,CONTEXT FILE/</i>&#8230;<br />
  <code>chcon</code> [<i>,OPTION/</i>]&#8230; [<i>,-u USER/</i>] [<i>,-r ROLE/</i>] [<i>,-l RANGE/</i>] [<i>,-t TYPE/</i>] <i>,FILE/</i>&#8230;<br />

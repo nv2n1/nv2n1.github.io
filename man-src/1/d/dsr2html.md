@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dsr2html/"
 description: "dsr2html – Render DICOM SR file and data set to HTML/XHTML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsr2html &#8211; Render DICOM SR file and data set to HTML/XHTML </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dsr2html[options] dsrfile - in[htmlfile - out]

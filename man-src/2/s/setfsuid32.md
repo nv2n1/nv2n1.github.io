@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setfsuid32/"
 description: "setfsuid – set user identity used for filesystem checks"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setfsuid &#8211; set user identity used for filesystem checks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/fsuid.h&gt;</code> </p>
 <p> <code>int setfsuid(uid_t </code><i>fsuid</i><code>);</code></p>

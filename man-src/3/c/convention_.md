@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-convention_/"
 description: "QuantLib::IborIndex – base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::IborIndex &#8211; base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.) </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/iborindex.hpp&gt; </p>
 <p> Inherits <code>QuantLib::InterestRateIndex</code>. </p>

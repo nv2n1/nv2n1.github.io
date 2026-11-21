@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_pack_job_request_reply_with_extensi
 description: "Message Packing –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Message Packing &#8211; </p>
 <p> Message Packing.</p>
 <h3>Functions</h3>
 <p> int <code>globus_gram_protocol_pack_job_request</code> (int job_state_mask, const char *callback_url, const char *rsl, globus_byte_t **query, globus_size_t *querysize)<br />

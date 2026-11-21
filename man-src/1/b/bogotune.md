@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bogotune/"
 description: "bogotune – find optimum parameter settings for bogofilter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bogotune &#8211; find optimum parameter settings for bogofilter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogotune</code> [-v] [-c&nbsp;<wbr><i>config</i>] [-C] [-d&nbsp;<wbr><i>dir</i>] [-D] [-r&nbsp;<wbr><i>value</i>] [-T&nbsp;<wbr><i>value</i>] -n&nbsp;<wbr><i>okfile</i>&nbsp;<wbr>[[-n]&nbsp;<wbr><i>okfile</i>&nbsp;<wbr>[&#8230;]] -s&nbsp;<wbr><i>spamfile</i>&nbsp;<wbr>[[-s]&nbsp;<wbr><i>spamfile</i>&nbsp;<wbr>[&#8230;]] [-M&nbsp;<wbr><i>file</i>]</dt>

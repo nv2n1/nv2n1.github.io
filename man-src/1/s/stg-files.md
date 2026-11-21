@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-files/"
 description: "stg-files – Show the files modified by a patch (or the current patch)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-files &#8211; Show the files modified by a patch (or the current patch) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg files[options][--][[&lt;branch&gt;:]&lt;patch&gt;]

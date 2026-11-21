@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-capget/"
 description: "capget, capset – set/get capabilities of thread(s)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> capget, capset &#8211; set/get capabilities of thread(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>
 <p> <code>int capget(cap_user_header_t </code><i>hdrp</i><code>, cap_user_data_t </code><i>datap</i><code>);</code> </p>

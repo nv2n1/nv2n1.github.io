@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glade-previewer/"
 description: "glade-previewer – Preview glade user interface definitions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glade-previewer &#8211; Preview glade user interface definitions </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glade-previewer </code><code>[OPTION&#8230;]</code></dt></dl>

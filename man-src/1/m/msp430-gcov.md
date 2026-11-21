@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msp430-gcov/"
 description: "gcov – coverage testing tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcov &#8211; coverage testing tool </p>
 <h2>SYNOPSIS</h2>
 <p> gcov [<code>-v</code>|<code>&#8212;version</code>] [<code>-h</code>|<code>&#8212;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>|<code>&#8212;branch-probabilities</code>]&nbsp;<wbr>[<code>-c</code>|<code>&#8212;branch-counts</code>]<br />

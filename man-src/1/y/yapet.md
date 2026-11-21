@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-yapet/"
 description: "yapet – text based password manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> yapet &#8211; text based password manager </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>yapet</code> [[<code>-c</code>] | [<code>-h</code>] | [<code>-V</code>]] [[<code>-i</code>] | [<code>-r</code>&nbsp;<wbr>{<i>rcfile</i>}]] [[<code>-s</code>] | [<code>-S</code>]] [<code>-t</code>&nbsp;<wbr>{<i>sec</i>}] [<i>filename</i>]</dt></dl>

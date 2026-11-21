@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jcf-dump/"
 description: "jcf-dump – print information about Java class files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> jcf-dump &#8211; print information about Java class files </p>
 <h2>SYNOPSIS</h2>
 <p> jcf-dump [<code>-c</code>] [<code>&#8211;javap</code>]<br />
 &nbsp;<wbr>[<code>&#8211;classpath</code>=<i>path</i>]&nbsp;<wbr>[<code>&#8211;CLASSPATH</code>=<i>path</i>]<br />

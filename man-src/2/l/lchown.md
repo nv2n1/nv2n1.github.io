@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-lchown/"
 description: "chown, fchown, lchown, fchownat – change ownership of a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chown, fchown, lchown, fchownat &#8211; change ownership of a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

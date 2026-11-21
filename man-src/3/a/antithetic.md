@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antithetic/"
 description: "QuantLib::MultiPathGenerator – Generates a multipath from a random number generator."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::MultiPathGenerator &#8211; Generates a multipath from a random number generator. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/montecarlo/multipathgenerator.hpp&gt; </p>
 <h3>Public Types</h3>

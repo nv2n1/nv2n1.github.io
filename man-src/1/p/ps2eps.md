@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ps2eps/"
 description: "ps2eps – convert PostScript to EPS (Encapsulated PostScript) files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ps2eps &#8211; convert PostScript to EPS (Encapsulated PostScript) files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ps2eps</code> [<code>-f</code>] [<code>-q</code>] [<code>-N</code>] [<code>-O</code>] [<code>-n</code>] [<code>-P</code>] [<code>-c</code>] [<code>-C</code>] [<code>-m</code>] [<code>-B</code>] [<code>-E</code>] [<code>-s&nbsp;</code><i>pagedim</i>] [<code>-t&nbsp;</code><i>offset</i>] [<code>-r&nbsp;</code><i>resolution</i>] [<code>-R&nbsp;</code><i>+|-|^</i>] [<code>-l</code>] [<code>-g</code>] [<code>-H</code>] [<code>-d</code>] [<code>-h|&#8211;help</code>] [<code>-a</code>] [<code>-W</code>] [<code>-L</code>] [<code>-V|&#8211;version</code>] [<code>&#8212;</code>] [<i>psfile1</i>] [<i>psfile2</i>] [<i>&#8230;</i>]</dt></dl>

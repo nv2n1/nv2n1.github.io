@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-verify_blkparse/"
 description: "verify_blkparse – verifies an output file produced by blkparse"
 ---
 
-<h2 class="name">NAME</h2>
-<p> verify_blkparse &#8211; verifies an output file produced by blkparse </p>
 <h2>SYNOPSIS</h2>
 <p> <code>verify_blkparse &lt;</code><i>filename</i>&gt; </p>
 <h2>DESCRIPTION</h2>

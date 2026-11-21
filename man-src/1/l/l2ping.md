@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-l2ping/"
 description: "l2ping – Send L2CAP echo request and receive answer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> l2ping &#8211; Send L2CAP echo request and receive answer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>l2ping</code> [<i>OPTIONS</i>] <i>bd_addr</i></p>
 <h2>DESCRIPTION</h2>

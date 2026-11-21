@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtx-grep/"
 description: "mtx-grep – Simple Grepper"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtx-grep &#8211; Simple Grepper </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script grep [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

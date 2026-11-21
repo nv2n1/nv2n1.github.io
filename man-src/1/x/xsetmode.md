@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xsetmode/"
 description: "xsetmode – set the mode for an X Input device"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xsetmode &#8211; set the mode for an X Input device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsetmode</code> <i>device-name</i> <code>ABSOLUTE</code> | <code>RELATIVE</code></p>
 <h2>DESCRIPTION</h2>

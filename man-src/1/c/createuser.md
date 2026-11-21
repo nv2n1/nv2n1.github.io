@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-createuser/"
 description: "createuser – define a new PostgreSQL user account"
 ---
 
-<h2 class="name">NAME</h2>
-<p> createuser &#8211; define a new PostgreSQL user account </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>createuser</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>username</i>]</dt></dl>

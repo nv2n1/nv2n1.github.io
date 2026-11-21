@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-psselect/"
 description: "psselect – select pages from a PostScript file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psselect &#8211; select pages from a PostScript file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psselect</code> [ <code>-q</code> ] [ <code>-e</code> ] [ <code>-o</code> ] [ <code>-r</code> ] [ <code>-p</code><i>pages</i> ] [ <i>pages</i> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
 <h2>DESCRIPTION</h2>

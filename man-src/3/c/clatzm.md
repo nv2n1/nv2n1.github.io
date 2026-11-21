@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clatzm/"
 description: "clatzm.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clatzm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br />

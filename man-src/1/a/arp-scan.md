@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arp-scan/"
 description: "arp-scan – The ARP scanner"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arp-scan &#8211; The ARP scanner </p>
 <h2>SYNOPSIS</h2>
 <p> <code>arp-scan</code> [<i>options</i>]<i> </i>[<i>hosts</i>&#8230;] </p>
 <p> Target hosts must be specified on the command line unless the <code>&#8211;file</code> option is given, in which case the targets are read from the specified file instead, or the <code>&#8211;localnet</code> option is used, in which case the targets are generated from the network interface IP address and netmask. </p>

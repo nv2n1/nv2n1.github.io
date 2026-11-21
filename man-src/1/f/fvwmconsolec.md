@@ -6,8 +6,6 @@ letter: "f"
 url: "/docs/linux/man/1-fvwmconsolec/"
 description: "FvwmConsoleC.pl – Command editor for fvwm command input interface"
 ---
-<h2 class="name">NAME</h2>
-<p>FvwmConsoleC.pl &#8211; Command editor for fvwm command input interface </p>
 <h2>SYNOPSIS</h2>
 <p> FvwmConsole -e /usr/X11/lib/fvwm/FvwmConsoleC.pl </p>
 <h2>COPYRIGHT</h2>

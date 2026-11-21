@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amqp-get/"
 description: "amqp-get – Get a message from a queue on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amqp-get &#8211; Get a message from a queue on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-get</code> [<i>OPTION</i>&#8230;] {-q&nbsp;<wbr><i>queue name</i>}</dt></dl>

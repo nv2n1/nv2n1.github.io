@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvmap/"
 description: "gvmap – find clusters and create a geographical map highlighting clusters."
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvmap &#8211; find clusters and create a geographical map highlighting clusters. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gvmap</code> [ <i>options</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>files</i> ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fdopendir/"
 description: "opendir, fdopendir – open a directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> opendir, fdopendir &#8211; open a directory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;dirent.h&gt;

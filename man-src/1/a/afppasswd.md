@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-afppasswd/"
 description: "afppasswd – netatalk password maintenance utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> afppasswd &#8211; netatalk password maintenance utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>afppasswd</code> [-acfn] [-p&nbsp;<wbr><i>passwd</i>&nbsp;<wbr><i>file</i>] [-u&nbsp;<wbr><i>minimum</i>&nbsp;<wbr><i>uid</i>]</dt></dl>

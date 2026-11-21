@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-writeback/"
 description: "tracker-writeback – Used to write metadata set in Tracker back to physical files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-writeback &#8211; Used to write metadata set in Tracker back to physical files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-writeback</code> [<i>OPTION</i>&#8230;] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sha512sum/"
 description: "sha512sum – compute and check SHA512 message digest"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sha512sum &#8211; compute and check SHA512 message digest </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sha512sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

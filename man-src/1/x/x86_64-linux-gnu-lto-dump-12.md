@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-lto-dump-12/"
 description: "lto-dump – Tool for dumping LTO object files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lto-dump &#8211; Tool for dumping LTO object files </p>
 <h2>SYNOPSIS</h2>
 <p> lto-dump [<code>-list</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-demangle</code>]<br />

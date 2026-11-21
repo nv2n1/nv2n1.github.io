@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-prop/"
 description: "shtool prop – GNU shtool propeller processing indication"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool prop &#8211; GNU shtool propeller processing indication </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool prop</code> [<code>-p</code>|<code>&#8211;prefix</code> <i>str</i>]</p>
 <h2>DESCRIPTION</h2>

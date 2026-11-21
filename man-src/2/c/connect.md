@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-connect/"
 description: "connect – initiate a connection on a socket"
 ---
 
-<h2 class="name">NAME</h2>
-<p> connect &#8211; initiate a connection on a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-assert/"
 description: "assert – abort the program if assertion is false"
 ---
 
-<h2 class="name">NAME</h2>
-<p> assert &#8211; abort the program if assertion is false </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;assert.h&gt;

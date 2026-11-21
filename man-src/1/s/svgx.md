@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-svgx/"
 description: "svgx – extract gradients from SVG files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> svgx &#8211; extract gradients from SVG files. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>svgx</code> [-a] [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-g&nbsp;<wbr><i>geometry</i>] [-h] [-l] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-p] [-s&nbsp;<wbr><i>name</i>] [-t&nbsp;<wbr><i>type</i>] [-T&nbsp;<wbr><i>rgb</i>] [-v] [-V] <i>file</i></dt></dl>

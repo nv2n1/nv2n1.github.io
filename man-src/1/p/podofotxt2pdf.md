@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofotxt2pdf/"
 description: "podofotxt2pdf – convert plain text files into PDF files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofotxt2pdf &#8211; convert plain text files into PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofotxt2pdf</code> [-fontname &lt;name&gt;] [-utf8] [inputfile] [outputfile] </p>
 <h2>DESCRIPTION</h2>

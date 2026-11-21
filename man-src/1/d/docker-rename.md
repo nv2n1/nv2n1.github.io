@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-rename/"
 description: "docker-rename – Rename a container"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-rename &#8211; Rename a container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker rename CONTAINER NEW_NAME</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ilbmtoppm/"
 description: "ilbmtoppm – convert an ILBM file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ilbmtoppm &#8211; convert an ILBM file into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ilbmtoppm</code> [<code>-verbose</code>] [<code>-ignore</code>&lt;chunkID&gt;<code>]</code> [<code>-isham</code>|<code>-isehb</code>] [<code>-adjustcolors</code>] [<i>ILBMfile</i>]</p>
 <h2>DESCRIPTION</h2>

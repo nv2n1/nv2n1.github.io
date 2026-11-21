@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bindfs/"
 description: "bindfs – mount –bind in user-space"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bindfs &#8211; mount &#8211;bind in user-space </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bindfs</code> [<i>options</i>]<i> dir mountpoint </p>
 <p> </i></p>

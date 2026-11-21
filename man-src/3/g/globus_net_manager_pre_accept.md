@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_net_manager_pre_accept/"
 description: "Function Signatures –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Function Signatures &#8211; </p>
 <p> Net Manager Function Signatures </p>
 <p> Function signatures for the Net Manager interface. <code>Net Manager Implementation Tutorial</code>.</p>
 <h3>Typedefs</h3>

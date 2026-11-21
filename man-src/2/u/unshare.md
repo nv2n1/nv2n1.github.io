@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-unshare/"
 description: "unshare – disassociate parts of the process execution context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unshare &#8211; disassociate parts of the process execution context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE

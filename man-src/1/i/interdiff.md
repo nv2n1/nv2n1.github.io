@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-interdiff/"
 description: "interdiff – show differences between two diff files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> interdiff &#8211; show differences between two diff files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>interdiff</code> [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [[-U&nbsp;<i>n</i>] | [&#8211;unified=<i>n</i>]] [[-d&nbsp;<i>PAT</i>] | [&#8211;drop-context=<i>PAT</i>]] [[-q] | [&#8211;quiet]] [[-z] | [&#8211;decompress]] [[-b] | [&#8211;ignore-space-change]] [[-B] | [&#8211;ignore-blank-lines]] [[-i] | [&#8211;ignore-case]] [[-w] | [&#8211;ignore-all-space]] [[&#8211;interpolate] | [&#8211;combine] | [&#8211;flip]] [&#8211;no-revert-omitted] <i>diff1</i> <i>diff2</i></dt>

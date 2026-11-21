@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rdjpgcom/"
 description: "rdjpgcom – display text comments from a JPEG file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rdjpgcom &#8211; display text comments from a JPEG file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdjpgcom</code> [ <code>-raw</code> ] [ <code>-verbose</code> ] [ <i>filename</i> ] </p>
 <h2>DESCRIPTION</h2>

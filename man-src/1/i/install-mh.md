@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-install-mh/"
 description: "install-mh – initialize the nmh environment"
 ---
 
-<h2 class="name">NAME</h2>
-<p> install-mh &#8211; initialize the nmh environment </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/install-mh</code> [<code>-auto</code>] [<code>-check</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

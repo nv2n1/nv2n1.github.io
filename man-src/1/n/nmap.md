@@ -6,8 +6,6 @@ letter: "n"
 url: "/docs/linux/man/1-nmap/"
 description: "nmap – Network exploration tool and security / port scanner"
 ---
-<h2 class="name">NAME</h2>
-<p> nmap - Network exploration tool and security / port scanner </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>nmap</code> [<i>Scan Type</i>...] [<i>Options</i>] {<i>target specification</i>} </dt>

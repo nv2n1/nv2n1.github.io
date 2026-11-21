@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-cxxmap-14/"
 description: "llvm-cxxmap – Mangled name remapping tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-cxxmap &#8211; Mangled name remapping tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-cxxmap</code> [<i>options</i>] <i>symbol-file-1</i> <i>symbol-file-2</i></p>
 <h2>DESCRIPTION</h2>

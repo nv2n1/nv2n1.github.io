@@ -49,8 +49,6 @@ description: "gda-config-tool-3.0 – Tool for managing libgda configuration fil
 </dt><dd> User settings. Override global settings.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>mergeant(1),</code> <code>gda-config-3.0(5)</code> </p>
-<h2 class="name">NAME</h2>
-<p> gda-config-tool-3.0 &#8211; Tool for managing libgda configuration file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gda-config-tool-3.0 [OPTIONS]</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal_fillnodata/"
 description: "gdal_fillnodata – gdal_fillnodata.py fill raster regions by interpolation from edges"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal_fillnodata &#8211; gdal_fillnodata.py fill raster regions by interpolation from edges </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdal_fillnodata.py[-q][-md max_distance][-si smooth_iterations]

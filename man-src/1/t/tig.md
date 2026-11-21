@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tig/"
 description: "tig – text-mode interface for Git"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tig &#8211; text-mode interface for Git </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 tig[options][revisions][--][paths] tig log[options][revisions][--][paths] tig show[options][revisions][--][paths] tig reflog[options][revisions] tig blame[options][rev][--] path

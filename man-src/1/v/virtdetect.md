@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virtdetect/"
 description: "virtdetect — Detect if this system is running as a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virtdetect &#8212; Detect if this system is running as a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <p> virtdetect [ &#8211;verbose ] [ &#8211;detect-host ]</p>
 <h2>DESCRIPTION</h2>

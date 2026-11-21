@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlvar/"
 description: "perlvar – Perl predefined variables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlvar &#8211; Perl predefined variables </p>
 <h2>DESCRIPTION</h2>
 <h3>The Syntax of Variable Names</h3>
 <p> Variable names in Perl can have several formats. Usually, they must begin with a letter or underscore, in which case they can be arbitrarily long (up to an internal limit of 251 characters) and may contain letters, digits, underscores, or the special sequence <tt>&quot;::&quot;</tt> or <tt>&quot;'&quot;</tt>. In this case, the part before the last <tt>&quot;::&quot;</tt> or <tt>&quot;'&quot;</tt> is taken to be a <i>package qualifier</i>; see perlmod. A Unicode letter that is not <font SIZE="-1">ASCII</font> is not considered to be a letter unless <tt>&quot;use utf8&quot;</tt> is in effect, and somewhat more complicated rules apply; see &#8220;Identifier parsing&#8221; in perldata for details. </p>

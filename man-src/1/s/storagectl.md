@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-storagectl/"
 description: "storagectl – The storaged command line tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> storagectl &#8211; The storaged command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>storagectl</code> status</dt>

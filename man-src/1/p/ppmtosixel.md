@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtosixel/"
 description: "ppmtosixel – convert a portable pixmap into DEC sixel format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtosixel &#8211; convert a portable pixmap into DEC sixel format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtosixel</code> [<code>-raw</code>] [<code>-margin</code>] [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-mem/"
 description: "perf-mem – Profile memory accesses"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-mem &#8211; Profile memory accesses </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf mem[&lt;options&gt;](record[&lt;command&gt;] | report)

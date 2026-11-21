@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal_contour/"
 description: "gdal_contour – gdal_contour builds vector contour lines from a raster elevation model"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal_contour &#8211; gdal_contour builds vector contour lines from a raster elevation model </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 Usage : gdal_contour[-b&lt;band&gt;][-a&lt;attribute_name&gt;][-3d][-inodata]

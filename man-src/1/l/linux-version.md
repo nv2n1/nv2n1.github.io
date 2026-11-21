@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-linux-version/"
 description: "linux-version – operate on Linux kernel version strings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> linux-version &#8211; operate on Linux kernel version strings </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>linux-version compare</code><i>&nbsp;VERSION1 OP VERSION2</i></dt>

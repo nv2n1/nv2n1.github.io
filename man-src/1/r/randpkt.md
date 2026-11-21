@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-randpkt/"
 description: "randpkt – Random Packet Generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> randpkt &#8211; Random Packet Generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>randpkt</code> [&nbsp;<wbr><code>-b</code>&nbsp;<wbr>&lt;maxbytes&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>&lt;count&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>&lt;type&gt;&nbsp;<wbr>] &lt;filename&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_callback_create_proxy_callback/"
 description: "Callback Functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Callback Functions &#8211; </p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_gsi_callback_get_X509_STORE_callback_data_index</code> (int *index)<br />
  <i>Get callback data index from X509_STORE. </i><br />

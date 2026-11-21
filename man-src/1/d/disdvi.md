@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-disdvi/"
 description: "disdvi – `disassemble’ a (p)TeX or XeTeX DVI file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> disdvi &#8211; `disassemble&#8217; a (p)TeX or XeTeX DVI file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>disdvi</code> [<code>-p</code>] [<i>dvi_file</i>[<i></i><code>.dvi</code>]]<br />
  <code>disdvi -x</code> [<i>xdv_file</i>[<i></i><code>.xdv</code>]]<br />

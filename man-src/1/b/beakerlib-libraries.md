@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-beakerlib-libraries/"
 description: "BeakerLib – libraries – mechanism for loading shared test code from libraries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> BeakerLib &#8211; libraries &#8211; mechanism for loading shared test code from libraries </p>
 <h2>DESCRIPTION</h2>
 <p> This file contains functions for bringing external code into the test namespace.</p>
 <h2>FUNCTIONS</h2>

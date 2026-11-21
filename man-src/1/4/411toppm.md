@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-411toppm/"
 description: "411toppm – convert Sony Mavica .411 image to ppm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> 411toppm &#8211; convert Sony Mavica .411 image to ppm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>411toppm</code> [<code>-width </code><i>width</i>] [<code>-height </code><i>height</i>] [<i>411file</i>] </p>
 <p> All options may be abbreviated to the shortest unique prefix. </p>

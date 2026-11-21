@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-heim_ntlm_verify_ntlm2/"
 description: "Heimdal NTLM library –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal NTLM library &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>heim_ntlm_build_ntlm1_master</code> (void *, size_t, struct <code>ntlm_buf</code> *, struct <code>ntlm_buf</code> *) </p>
 <p> int <code>heim_ntlm_build_ntlm2_master</code> (void *, size_t, struct <code>ntlm_buf</code> *, struct <code>ntlm_buf</code> *, struct <code>ntlm_buf</code> *) </p>

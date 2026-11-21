@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-urxvtd/"
 description: "urxvtd – urxvt terminal daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> urxvtd &#8211; urxvt terminal daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>urxvtd</code> [-q|&#8211;quiet] [-o|&#8211;opendisplay] [-f|&#8211;fork] [-m|&#8211;mlock] [-e|&#8211;eval <i>perlstring</i>] </p>
 <p> <code>urxvtd</code> -q -o -f # for .xsession use</p>

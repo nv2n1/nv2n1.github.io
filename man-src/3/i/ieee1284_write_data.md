@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ieee1284_write_data/"
 description: "ieee1284_read_data, ieee1284_write_data, ieee1284_data_dir, ieee1284_wait_data – control the data lines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ieee1284_read_data, ieee1284_write_data, ieee1284_data_dir, ieee1284_wait_data &#8211; control the data lines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;

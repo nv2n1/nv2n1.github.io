@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-javaws-itweb/"
 description: "javaws – a Java Web Start client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> javaws &#8211; a Java Web Start client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>javaws </code> [-run-options] jnlp file<br />
  <code>javaws </code> [-control-options]</p>

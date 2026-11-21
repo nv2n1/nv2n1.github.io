@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-container-commit/"
 description: "docker-container-commit – Create a new image from a container’s changes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-container-commit &#8211; Create a new image from a container&#8217;s changes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]</code> </p>
 <h2>DESCRIPTION</h2>

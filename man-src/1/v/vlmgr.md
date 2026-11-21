@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vlmgr/"
 description: "vlmgr – administration utility for QDBM Villa"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vlmgr &#8211; administration utility for QDBM Villa </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vlmgr create</code> [-cz|-cy|-cx] <i>name</i><br />
  <code>vlmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat|-dup] <i>name</i> <i>key</i> <i>val</i><br />

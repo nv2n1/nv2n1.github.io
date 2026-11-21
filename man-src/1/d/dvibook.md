@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvibook/"
 description: "dvibook – rearrange pages in DVI file into signatures"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvibook &#8211; rearrange pages in DVI file into signatures </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvibook</code> [ <code>-q</code> ] [ <code>-s</code><i>&lt;num&gt;</i> ] [ <code>-r</code> ] [ <code>-i</code> <i>infile</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
 <h2>DESCRIPTION</h2>

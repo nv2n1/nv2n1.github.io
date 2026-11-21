@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-krb5_kt_free_entry/"
 description: "Heimdal Kerberos 5 keytab handling functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal Kerberos 5 keytab handling functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb5_kt_register</code> (krb5_context context, const krb5_kt_ops *ops)&quot; </p>

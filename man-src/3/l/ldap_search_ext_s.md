@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_search_ext_s/"
 description: "ldap_search, ldap_search_s, ldap_search_st, ldap_search_ext, ldap_search_ext_s – Perform an LDAP search operation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_search, ldap_search_s, ldap_search_st, ldap_search_ext, ldap_search_ext_s &#8211; Perform an LDAP search operation </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

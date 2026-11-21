@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-redland-db-upgrade/"
 description: "redland-db-upgrade – upgrade older Redland databases to 0.9.12 format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> redland-db-upgrade &#8211; upgrade older Redland databases to 0.9.12 format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>redland-db-upgrade</code> <i>old BDB Name</i> <i>new BDB name</i></p>
 <h2>DESCRIPTION</h2>

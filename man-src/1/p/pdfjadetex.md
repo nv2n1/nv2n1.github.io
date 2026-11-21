@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-pdfjadetex/"
 description: "pdfjadetex – PDF output from JadeTeX"
 ---
-<h2 class="name">NAME</h2>
-<p> pdfjadetex - PDF output from JadeTeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfjadetex</code> [<i>options</i>] [<i>commands</i>]  </p>
 <h2>DESCRIPTION</h2>

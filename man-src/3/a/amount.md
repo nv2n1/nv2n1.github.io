@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-amount/"
 description: "QuantLib::CashFlow – Base class for cash flows."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::CashFlow &#8211; Base class for cash flows. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflow.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Event</code>. </p>

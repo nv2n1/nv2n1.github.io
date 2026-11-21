@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmquant/"
 description: "pnmquant – quantize the colors in a Netpbm image to a smaller set"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmquant &#8211; quantize the colors in a Netpbm image to a smaller set</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmquant</code> [<code>-center</code>|<code>-meancolor</code>|<code>-meanpixel</code>] [<code>-floyd</code>|<code>-fs</code>] [<code>-nofloyd</code>|<code>-nofs</code>] [<code>-spreadbrightness</code>|<code>-spreadluminosity</code>] <i>ncolors</i> [<i>pnmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_handle_set_extensions/"
 description: "Handle Management –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Handle Management &#8211; </p>
 <p> Create/Destroy/Modify a GSI Proxy Handle.</p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />

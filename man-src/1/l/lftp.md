@@ -6,8 +6,6 @@ letter: "l"
 url: "/docs/linux/man/1-lftp/"
 description: "lftp – Sophisticated file transfer program"
 ---
-<h2 class="name">NAME</h2>
-<p> lftp - Sophisticated file transfer program </p>
 <h2>SYNTAX</h2>
 <p> <code>lftp</code> [<code>-d</code>] [<code>-e </code><i>cmd</i>] [<code>-p </code><i>port</i>] [<code>-u </code><i>user</i>[<code>,</code><i>pass</i>]] [<i>site</i>] <br />
  <code>lftp -f </code><i>script_file</i> <br />

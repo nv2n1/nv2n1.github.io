@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_module_descriptor_s/"
 description: "globus_module_descriptor_s –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_module_descriptor_s &#8211; </p>
 <p> Module Descriptor.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_module.h&gt;</p>

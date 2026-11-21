@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-stats/"
 description: "zarafa-stats – Dump zarafa statistics tables."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-stats &#8211; Dump zarafa statistics tables. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-stats</code> <i>TABLE</i></dt></dl>

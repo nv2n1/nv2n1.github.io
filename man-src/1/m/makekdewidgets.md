@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-makekdewidgets/"
 description: "makekdewidgets – Builds Qt(TM) widget plugins from an ini style description file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> makekdewidgets &#8211; Builds Qt(TM) widget plugins from an ini style description file. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>makekdewidgets</code> [Qt(TM)-options] [KDE-options] <i>file</i></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dia/"
 description: "dia – a diagram drawing program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dia &#8211; a diagram drawing program </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dia</code> [<code>-c</code>] [<code>&#8211;credits</code>] [<code>-e&nbsp;<wbr></code><i>OUTPUT</i>] [<code>&#8211;export=</code><i>OUTPUT</i>] [<code>-L&nbsp;<wbr></code><i>LAYER,LAYER,&#8230;</i>] [<code>&#8211;show-layers=</code><i>LAYER,LAYER,&#8230;</i>] [<code>-h</code>] [<code>&#8211;help</code>] [<code>-n</code>] [<code>&#8211;nosplash</code>] [<code>-s&nbsp;<wbr></code><i>WxH</i>] [<code>&#8211;size=</code><i>WxH</i>] [<code>-t&nbsp;<wbr></code><i>FORMAT</i>] [<code>&#8211;filter=</code><i>FORMAT</i>] [<code>-v</code>] [<code>&#8211;version</code>] [file &#8230;]</dt></dl>

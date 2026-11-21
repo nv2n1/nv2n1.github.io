@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getpgrp/"
 description: "setpgid, getpgid, setpgrp, getpgrp – set/get process group"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setpgid, getpgid, setpgrp, getpgrp &#8211; set/get process group </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_proto_descriptor_t/"
 description: "globus_gass_transfer_proto_descriptor_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gass_transfer_proto_descriptor_t &#8211; </p>
 <p> Protocol module descriptor structure.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_transfer_proto.h&gt;</p>

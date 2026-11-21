@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fcn/"
 description: "QuantLib::LevenbergMarquardt – Levenberg-Marquardt optimization method."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::LevenbergMarquardt &#8211; Levenberg-Marquardt optimization method. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/optimization/levenbergmarquardt.hpp&gt; </p>
 <p> Inherits <code>QuantLib::OptimizationMethod</code>. </p>

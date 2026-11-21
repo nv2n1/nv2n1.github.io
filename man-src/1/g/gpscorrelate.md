@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpscorrelate/"
 description: "gpscorrelate – correlates digital images with GPS data filling EXIF fields"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpscorrelate &#8211; correlates digital images with GPS data filling EXIF fields </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpscorrelate</code> [-z | &#8211;timeadd&nbsp;<wbr>+/-<i>HH</i>[:<i>MM</i>]] [-O | &#8211;photooffset&nbsp;<wbr><i>seconds</i>] [-i | &#8211;no-interpolation] [-v | &#8211;verbose] [-d | &#8211;datum&nbsp;<wbr><i>datum</i>] [-n | &#8211;no-write] [-m | &#8211;max-dist&nbsp;<wbr><i>time</i>] [-t | &#8211;ignore-tracksegs] [-M | &#8211;no-mtime] [-f | &#8211;fix-timestamps] [-p | &#8211;degmins] -g&nbsp;<wbr><i>file.gpx</i> <i>image.jpg</i>&#8230;</dt>

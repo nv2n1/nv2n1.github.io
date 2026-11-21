@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lnst-slave/"
 description: "lnst-slave – Linux Network Stack Test slave daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lnst-slave &#8211; Linux Network Stack Test slave daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lnst-slave</code> [<code>-d</code>] [<code>-e</code>] [<code>-h</code>] [<code>-i </code><i>pidfile</i>] [<code>-p </code><i>port_number</i>]</p>
 <h2>DESCRIPTION</h2>

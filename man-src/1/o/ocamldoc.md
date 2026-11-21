@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamldoc/"
 description: "ocamldoc – The OCaml documentation generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamldoc &#8211; The OCaml documentation generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamldoc</code> [ <i>options</i> ] <i>filename</i>&nbsp;<wbr>&#8230; </p>
 <h2>DESCRIPTION</h2>

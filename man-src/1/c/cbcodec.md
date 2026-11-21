@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cbcodec/"
 description: "cbcodec – popular encoders and decoders"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cbcodec &#8211; popular encoders and decoders </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cbcodec url</code> [-d] [-br] [-rs <i>base</i> <i>target</i>] [-l] [-e <i>expr</i>] [<i>file</i>]<br />
  <code>cbcodec base</code> [-d] [-l] [-c <i>num</i>] [-e <i>expr</i>] [<i>file</i>]<br />

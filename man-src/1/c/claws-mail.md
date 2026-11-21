@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-claws-mail/"
 description: "Claws Mail – a GTK+ based fast email and news client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Claws Mail &#8211; a GTK+ based fast email and news client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>claws-mail</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

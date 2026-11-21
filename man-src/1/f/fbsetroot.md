@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fbsetroot/"
 description: "fbsetroot – a simple background utility used by the"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fbsetroot &#8211; a simple background utility used by the </p>
 <p><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) window manager, originally written for and by the original <a href="/docs/linux/man/1-blackbox/">blackbox</a>(1) window manager.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbsetroot</code> [-display <i>display</i>] -solid <i>color</i> </p>

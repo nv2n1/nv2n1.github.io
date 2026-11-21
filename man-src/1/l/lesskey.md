@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lesskey/"
 description: "lesskey – specify key bindings for less"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lesskey &#8211; specify key bindings for less </p>
 <h2>SYNOPSIS (deprecated)</h2>
 <p> <code>lesskey [-o output] [&#8211;] [input]</code><br />
  <code>lesskey [&#8211;output=output] [&#8211;] [input]</code><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installmime/"
 description: "dh_installmime – install mime files into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installmime &#8211; install mime files into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installmime</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

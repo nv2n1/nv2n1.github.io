@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xscreensaver-demo/"
 description: "xscreensaver-demo – interactively control the background xscreensaver daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xscreensaver-demo &#8211; interactively control the background xscreensaver daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-demo</code> [-display <i>host:display.screen</i>] [-prefs] [&#8211;debug]</p>
 <h2>DESCRIPTION</h2>

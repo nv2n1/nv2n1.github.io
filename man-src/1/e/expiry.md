@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-expiry/"
 description: "expiry – check and enforce password expiration policy"
 ---
 
-<h2 class="name">NAME</h2>
-<p> expiry &#8211; check and enforce password expiration policy </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>expiry</code> <i>option</i></dt></dl>

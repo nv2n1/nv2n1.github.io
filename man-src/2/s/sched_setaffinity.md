@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sched_setaffinity/"
 description: "sched_setaffinity, sched_getaffinity – set and get a thread’s CPU affinity mask"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sched_setaffinity, sched_getaffinity &#8211; set and get a thread&#8217;s CPU affinity mask </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

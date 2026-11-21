@@ -6,8 +6,6 @@ letter: "s"
 url: "/docs/linux/man/1-socat/"
 description: "socat – Multipurpose relay (SOcket CAT)"
 ---
-<h2 class="name">NAME</h2>
-<p> socat - Multipurpose relay (SOcket CAT)  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>socat [options] &lt;address&gt; &lt;address&gt;</code> <br />
  <code>socat -V</code> <br />

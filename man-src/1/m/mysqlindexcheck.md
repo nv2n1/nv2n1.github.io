@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlindexcheck/"
 description: "mysqlindexcheck – Identify Potentially Redundant Table Indexes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlindexcheck &#8211; Identify Potentially Redundant Table Indexes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlindexcheck [</code><i>options</i><code>] </code><i>db</i><code>[</code><i>:table</i><code>] &#8230;</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cladiv/"
 description: "cladiv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cladiv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> COMPLEX function <code>cladiv</code> (X, Y)<br />

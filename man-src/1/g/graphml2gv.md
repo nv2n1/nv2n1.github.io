@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-graphml2gv/"
 description: "graphml2gv – GRAPHML-DOT converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> graphml2gv &#8211; GRAPHML-DOT converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>graphml2gv</code> [ <code>-?v</code> ] [ <code>-g</code><i>gname</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
 <h2>DESCRIPTION</h2>

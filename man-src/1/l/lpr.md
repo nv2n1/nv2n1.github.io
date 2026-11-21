@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lpr/"
 description: "lpr – print files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lpr &#8211; print files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lpr</code> [ <code>-E</code> ] [ <code>-H </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-U</code> <i>username</i> ] [ <code>-P </code><i>destination</i>[<code>/</code><i>instance</i>] ] [ <code>-#</code> <i>num-copies</i> [ <code>-h</code> ] [ <code>-l</code> ] [ <code>-m</code> ] [ <code>-o </code><i>option</i>[<code>=</code><i>value</i>] ] [ <code>-p</code> ] [ <code>-q</code> ] [ <code>-r</code> ] [ <code>-C</code> <i>title</i> ] [ <code>-J</code> <i>title</i> ] [ <code>-T</code> <i>title</i> ] [ <i>file(s)</i> ]</p>
 <h2>DESCRIPTION</h2>

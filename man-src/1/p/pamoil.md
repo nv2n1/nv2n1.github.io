@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamoil/"
 description: "pamoil – turn a PAM image into an oil painting"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamoil &#8211; turn a PAM image into an oil painting</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamoil</code> [<code>-n</code> <i>N</i>] [<i>pamfile</i>] </p>
 <h2>DESCRIPTION</h2>

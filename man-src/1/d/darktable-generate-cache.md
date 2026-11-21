@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-darktable-generate-cache/"
 description: "darktable-generate-cache – update darktable’s thumbnail cache"
 ---
 
-<h2 class="name">NAME</h2>
-<p> darktable-generate-cache &#8211; update darktable&#8217;s thumbnail cache </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 darktable - generate - cache[-h, --help; --version][-m, --max - mip&lt;0 - 7&gt;][--core&lt;darktable options&gt;]

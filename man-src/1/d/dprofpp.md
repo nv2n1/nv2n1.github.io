@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dprofpp/"
 description: "dprofpp – display perl profile data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dprofpp &#8211; display perl profile data </p>
 <h2>SYNOPSIS</h2>
 <p> dprofpp [<code>-a</code>|<code>-z</code>|<code>-l</code>|<code>-v</code>|<code>-U</code>] [<code>-d</code>] [<code>-s</code>|<code>-r</code>|<code>-u</code>] [<code>-q</code>] [<code>-F</code>] [<code>-I|-E</code>] [<code>-O cnt</code>] [<code>-A</code>] [<code>-R</code>] [<code>-S</code>] [<code>-g subroutine</code>] [<code>-G</code> &lt;regexp&gt; [<code>-P</code>]] [<code>-f</code> &lt;regexp&gt;] [profile] </p>
 <p> dprofpp <code>-T</code> [<code>-F</code>] [<code>-g subroutine</code>] [profile] </p>

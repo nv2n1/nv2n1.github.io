@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glxdemo/"
 description: "glxdemo – a demonstration of the GLX functions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glxdemo &#8211; a demonstration of the GLX functions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glxdemo</code></p>
 <h2>DESCRIPTION</h2>

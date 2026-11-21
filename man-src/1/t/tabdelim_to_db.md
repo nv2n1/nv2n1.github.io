@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tabdelim_to_db/"
 description: "tabdelim_to_db – convert tab-delimited data into fsdb"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tabdelim_to_db &#8211; convert tab-delimited data into fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>
     tabdelim_to_db &lt;source.tabdelim &gt;target.fsdb

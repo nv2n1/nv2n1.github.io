@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-slice2freezej/"
 description: "slice2freezej – Generates Freeze map and index classes in Java."
 ---
 
-<h2 class="name">NAME</h2>
-<p> slice2freezej &#8211; Generates Freeze map and index classes in Java.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2freezej [options] [files] </p>
 <h2>DESCRIPTION</h2>

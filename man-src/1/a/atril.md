@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atril/"
 description: "Atril – The MATE Document Viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Atril &#8211; The MATE Document Viewer </p>
 <h2>SYNTAX</h2>
 <p> <code>atril [OPTIONS&#8230;] [FILES&#8230;]</code></p>
 <h2>DESCRIPTION</h2>

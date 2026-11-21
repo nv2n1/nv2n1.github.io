@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-repl/"
 description: "repl – reply to a message"
 ---
 
-<h2 class="name">NAME</h2>
-<p> repl &#8211; reply to a message </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repl</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-group</code> | <code>-nogroup</code>] [<code>-cc</code></dt>

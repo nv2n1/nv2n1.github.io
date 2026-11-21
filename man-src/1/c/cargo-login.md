@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-login/"
 description: "cargo-login – Save an API token from the registry locally"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-login &#8211; Save an API token from the registry locally </p>
 <h2>SYNOPSIS</h2>
 <p> cargo login [OPTIONS] [&lt;TOKEN&gt;]</p>
 <h2>OPTIONS</h2>

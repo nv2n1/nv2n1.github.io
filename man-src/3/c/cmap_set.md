@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cmap_set/"
 description: "cmap_set – Store value in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmap_set &#8211; Store value in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_set (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>, const void *</code><i>value</i><code>, size_t </code><i>value_len</i><code>, cmap_value_types_t </code><i>type</i><code>);</code> </p>

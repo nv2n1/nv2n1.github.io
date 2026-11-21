@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bct_dump/"
 description: "bct_dump – tegra BCT disassembly tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bct_dump &#8211; tegra BCT disassembly tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bct_dump</code> <i>bctfile</i></p>
 <h2>DESCRIPTION</h2>

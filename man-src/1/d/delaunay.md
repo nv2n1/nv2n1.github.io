@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-delaunay/"
 description: "delaunay – constructs the constrained Delaunay triangulation of the input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> delaunay &#8211; constructs the constrained Delaunay triangulation of the input</p>
 <h2>SYNOPSIS</h2>
 <p> <code>delaunay</code> [<i>OPTIONS</i>]&nbsp;&lt;&nbsp;<i>file.gts</i> </p>
 <h2>DESCRIPTION</h2>

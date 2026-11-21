@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lattices/"
 description: "Lattice methods –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Lattice methods &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>ExtendedBinomialTree&lt; T &gt;</code><br />
  <i>Binomial tree base class. </i><br />

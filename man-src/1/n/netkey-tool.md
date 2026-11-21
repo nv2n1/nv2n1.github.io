@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-netkey-tool/"
 description: "netkey-tool – administrative utility for Netkey E4 cards"
 ---
 
-<h2 class="name">NAME</h2>
-<p> netkey-tool &#8211; administrative utility for Netkey E4 cards </p>
 <h2>SYNOPSIS</h2>
 <p> <code>netkey-tool</code> [OPTIONS] [COMMAND]</p>
 <h2>DESCRIPTION</h2>

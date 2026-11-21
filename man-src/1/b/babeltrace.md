@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-babeltrace/"
 description: "babeltrace — Babeltrace Trace Viewer and Converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> babeltrace &#8212; Babeltrace Trace Viewer and Converter</p>
 <h2>SYNOPSIS</h2>
 <pre>
 babeltrace [OPTIONS] FILE...

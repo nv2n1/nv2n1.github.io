@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_set_reqkey_keyring/"
 description: "keyctl_set_reqkey_keyring – Set the implicit destination keyring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_set_reqkey_keyring &#8211; Set the implicit destination keyring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

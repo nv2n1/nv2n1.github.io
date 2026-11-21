@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sqlselect_to_db/"
 description: "sqlselect_to_db – convert MySQL or MariaDB selected tables to fsdb"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sqlselect_to_db &#8211; convert MySQL or MariaDB selected tables to fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>
     sqlselect_to_db &lt;source.sqlselect_table &gt;dest.fsdb

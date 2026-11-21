@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmrough/"
 description: "ppmrough – create PPM image of two colors with a ragged border between them"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmrough &#8211; create PPM image of two colors with a ragged border between them</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmrough</code> </p>
 <p> [<code>-left </code><i>pixels</i>] </p>

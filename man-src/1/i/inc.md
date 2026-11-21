@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-inc/"
 description: "inc – incorporate new mail"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inc &#8211; incorporate new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>inc</code> [<i>+folder</i>] [<code>-audit</code> <i>audit-file</i>] [<code>-noaudit</code>] [<code>-changecur</code> | <code>-nochangecur</code>] [<code>-form</code> <i>formfile</i>] [<code>-format</code> <i>string</i>] [<code>-file</code> <i>name</i>] [<code>-silent</code> | <code>-nosilent</code>] [<code>-truncate</code> | <code>-notruncate</code>] [<code>-width</code> <i>columns</i>] [<code>-host</code> <i>hostname</i>] [<code>-port</code> <i>portname/number</i>] [<code>-user</code> <i>username</i>] [<code>-pack</code> <i>file</i>] [<code>-nopack</code>] [<code>-proxy</code> <i>command</i>] [<code>-sasl</code> | <code>-nosasl</code>] [<code>-saslmech</code> <i>mechanism</i>] [<code>-snoop</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

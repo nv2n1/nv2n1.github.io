@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-info/"
 description: "flatpak-info – Show information about an installed application or runtime"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-info &#8211; Show information about an installed application or runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak info</code> [OPTION&#8230;] NAME [BRANCH]</dt></dl>

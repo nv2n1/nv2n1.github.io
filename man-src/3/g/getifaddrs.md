@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getifaddrs/"
 description: "getifaddrs, freeifaddrs – get interface addresses"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getifaddrs, freeifaddrs &#8211; get interface addresses </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ifaddrs.h&gt;

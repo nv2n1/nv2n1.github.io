@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbfilestripcomments/"
 description: "dbfilestripcomments – remove comments from a fsdb file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbfilestripcomments &#8211; remove comments from a fsdb file </p>
 <h2>SYNOPSIS</h2>
 <p> dbfilestripcomments [-h]</p>
 <h2>DESCRIPTION</h2>

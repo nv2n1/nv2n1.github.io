@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cpg_iteration_next/"
 description: "cpg_iteration_next – Return next item in iteration of CPG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpg_iteration_next &#8211; Return next item in iteration of CPG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>cs_error_t cpg_iteration_next (cpg_iteration_handle_t </code><i>handle</i><code>, struct cpg_iteration_description_t *</code><i>description</i><code>);</code> </p>

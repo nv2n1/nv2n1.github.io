@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pango-querymodules/"
 description: "pango-querymodules – Module registration utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pango-querymodules &#8211; Module registration utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pango-querymodules</code> [OPTION&#8230;] [MODULE&#8230;]</dt></dl>

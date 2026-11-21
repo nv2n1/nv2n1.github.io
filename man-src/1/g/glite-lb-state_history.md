@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glite-lb-state_history/"
 description: "glite-lb-state_history – utility to show job state changes stored in Logging and Bookkeeping"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glite-lb-state_history &#8211; utility to show job state changes stored in Logging and Bookkeeping </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-state_history</code> [<code>-f</code> <i>FIELDS</i>] <i>JOBID</i> </p>
 <h2>DESCRIPTION</h2>

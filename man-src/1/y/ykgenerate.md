@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ykgenerate/"
 description: "ykgenerate – construct and encrypt an OTP from given data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ykgenerate &#8211; construct and encrypt an OTP from given data </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ykgenerate</code> <i>AESKEY</i> <i>YK_INTERNALNAME</i> <i>YK_COUNTER</i> <i>YK_LOW</i> <i>YK_HIGH</i> <i>YK_USE</i></p>
 <h2>DESCRIPTION</h2>

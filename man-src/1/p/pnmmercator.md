@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmmercator/"
 description: "pnmmercator – transform a worldmap from rectangular projection to Mercator projection and vice-versa"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmmercator &#8211; transform a worldmap from rectangular projection to Mercator projection and vice-versa</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmmercator</code> [<code>-inverse</code>] [<code>-nomix</code>] [<code>-[v]verbose</code>] [<i>filename</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. </p>

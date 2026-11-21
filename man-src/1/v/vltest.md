@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vltest/"
 description: "vltest – test cases for QDBM Villa"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vltest &#8211; test cases for QDBM Villa</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vltest write</code> [-int] [-cz|-cy|-cx] [-tune <i>lrecmax</i> <i>nidxmax</i> <i>lcnum</i> <i>ncnum</i>] [-fbp <i>num</i>] <i>name</i> <i>rnum</i><br />
  <code>vltest read</code> [-int] <i>name</i><br />

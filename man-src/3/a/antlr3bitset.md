@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3bitset/"
 description: "include/antlr3bitset.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3bitset.h &#8211; </p>
 <p> Defines the basic structures of an ANTLR3 bitset.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />

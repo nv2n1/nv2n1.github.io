@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbsdsh/"
 description: "pbsdsh – distribute task to nodes under pbs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbsdsh &#8211; distribute task to nodes under pbs </p>
 <h2>SYNOPSIS</h2>
 <p> pbsdsh [-c copies] [-o] [-s] [-u] [-v] program [args]<br />
  pbsdsh [-n node] [-o] [-s] [-u] [-v] program [args]<br />

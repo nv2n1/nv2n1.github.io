@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtocis/"
 description: "pbmtocis – convert a PBM image to a CompuServe RLE image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtocis &#8211; convert a PBM image to a CompuServe RLE image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtocis</code> [<code>-i</code>] [<code>-w</code>] [<i>cisfile</i>] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-linearleastsquaresregression/"
 description: "ql/math/linearleastsquaresregression.hpp – general linear least square regression"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/linearleastsquaresregression.hpp &#8211; general linear least square regression </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />
  #include &lt;ql/math/matrixutilities/svd.hpp&gt;<br />

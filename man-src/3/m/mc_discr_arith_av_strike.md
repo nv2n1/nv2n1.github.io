@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mc_discr_arith_av_strike/"
 description: "ql/pricingengines/asian/mc_discr_arith_av_strike.hpp – Monte Carlo engine for discrete arithmetic average-strike Asian."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/asian/mc_discr_arith_av_strike.hpp &#8211; Monte Carlo engine for discrete arithmetic average-strike Asian. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/asian/mcdiscreteasianengine.hpp&gt;<br />
  #include &lt;ql/exercise.hpp&gt; </p>

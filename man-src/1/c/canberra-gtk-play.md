@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-canberra-gtk-play/"
 description: "canberra-gtk-play – play a sound event"
 ---
 
-<h2 class="name">NAME</h2>
-<p> canberra-gtk-play &#8211; play a sound event </p>
 <h2>SYNOPSIS</h2>
 <p> <code>canberra-gtk-play</code> [ <i>OPTIONS&#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>

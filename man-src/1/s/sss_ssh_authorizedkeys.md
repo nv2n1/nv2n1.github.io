@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sss_ssh_authorizedkeys/"
 description: "sss_ssh_authorizedkeys – get OpenSSH authorized keys"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sss_ssh_authorizedkeys &#8211; get OpenSSH authorized keys </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sss_ssh_authorizedkeys</code> [<i>options</i>] <i>USER</i></dt></dl>

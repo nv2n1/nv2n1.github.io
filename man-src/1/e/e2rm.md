@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-e2rm/"
 description: "e2rm – removes files and directories on an ext2 filesystem"
 ---
 
-<h2 class="name">NAME</h2>
-<p> e2rm &#8211; removes files and directories on an ext2 filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>e2rm</code> [<i>options</i>]<i> files&#8230;</i></p>
 <h2>DESCRIPTION</h2>

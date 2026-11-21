@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlartistic/"
 description: "perlartistic – the Perl Artistic License"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlartistic &#8211; the Perl Artistic License </p>
 <h2>SYNOPSIS</h2>
 <pre>
  You can refer to this document in Pod via &quot;L&lt;perlartistic&gt;&quot;

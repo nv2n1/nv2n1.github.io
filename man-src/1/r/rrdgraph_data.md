@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdgraph_data/"
 description: "rrdgraph_data – preparing data for graphing in rrdtool graph"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdgraph_data &#8211; preparing data for graphing in rrdtool graph </p>
 <h2>SYNOPSIS</h2>
 <p> <font SIZE="-1"><code>DEF:</code></font><i>&lt;vname&gt;</i>=<i>&lt;rrdfile&gt;</i>:<i>&lt;ds-name&gt;</i>:<i>&lt;</i><font SIZE="-1"><i>CF</i></font><i>&gt;</i>[:step=<i>&lt;step&gt;</i>][:start=<i>&lt;time&gt;</i>][:end=<i>&lt;time&gt;</i>][:reduce=<i>&lt;</i><font SIZE="-1">CF</font><i>&gt;</i>] </p>
 <p> <font SIZE="-1"><code>VDEF</code></font>:<i>vname</i>=<i></i><font SIZE="-1"><i>RPN</i></font><i> expression</i> </p>

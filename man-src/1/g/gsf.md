@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gsf/"
 description: "gsf – archiving utility using the G Structured File library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gsf &#8211; archiving utility using the G Structured File library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsf</code> [<i>OPTION&#8230;</i>] <i>SUBCOMMAND</i> <i>ARCHIVE&#8230;</i> </p>
 <h2>DESCRIPTION</h2>

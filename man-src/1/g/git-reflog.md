@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-reflog/"
 description: "git-reflog – Manage reflog information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-reflog &#8211; Manage reflog information </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git reflog</i> &lt;subcommand&gt; &lt;options&gt;

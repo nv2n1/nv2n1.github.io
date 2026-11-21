@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tex4ht/"
 description: "TeX4ht – a system for authoring hypertext with TeX and friends"
 ---
 
-<h2 class="name">NAME</h2>
-<p> TeX4ht &#8211; a system for authoring hypertext with TeX and friends </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mk4ht</code> <i>command</i> <i>file</i> [ <i>options1</i> ] [ <i>options2</i> ] [ <i>options3</i> ] </p>
 <p> <code>httex</code>|<code>htlatex</code>|<code>httexi</code> <i>file</i> [ <i>options1</i> ] [ <i>options2</i> ] [ <i>options3</i> ] </p>

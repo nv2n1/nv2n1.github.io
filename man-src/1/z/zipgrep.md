@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zipgrep/"
 description: "zipgrep – search files in a ZIP archive for lines matching a pattern"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zipgrep &#8211; search files in a ZIP archive for lines matching a pattern </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zipgrep</code> [<code>egrep_options</code>] <i>pattern</i> <i>file</i>[<i>.zip</i>] [<i>file(s)</i>&nbsp;&#8230;] [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arcplugin/"
 description: "arcplugin – ARC plugin management utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arcplugin &#8211; ARC plugin management utility</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcplugin</code> command prints description of ARC plugin or creates ARC Plugin Descriptor (APD) file. </p>
 <h2>SYNOPSIS</h2>

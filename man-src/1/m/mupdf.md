@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mupdf/"
 description: "mupdf – MuPDF is a lightweight PDF viewer written in portable C"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mupdf &#8211; MuPDF is a lightweight PDF viewer written in portable C</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mupdf</code> [<i>options</i>]<i> PDFfile</i> </p>
 <h2>DESCRIPTION</h2>

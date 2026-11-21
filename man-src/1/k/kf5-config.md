@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kf5-config/"
 description: "kf5-config – Prints Qt(TM) and Frameworks installation paths"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kf5-config &#8211; Prints Qt(TM) and Frameworks installation paths </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kf5-config</code> [&#8211;expandvars] [&#8211;prefix] [&#8211;exec-prefix] [&#8211;libsuffix] [&#8211;localprefix] [&#8211;version] [&#8211;kde-version] [&#8211;types] [&#8211;path&nbsp;<wbr><i>type</i>] [&#8211;userpath&nbsp;<wbr><i>type</i>] [&#8211;install&nbsp;<wbr><i>type</i>] [&#8211;qt-prefix] [&#8211;qt-binaries] [&#8211;qt-libraries] [&#8211;qt-plugins]</dt></dl>

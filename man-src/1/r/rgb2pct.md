@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rgb2pct/"
 description: "rgb2pct – rgb2pct.py Convert a 24bit RGB image to 8bit paletted"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rgb2pct &#8211; rgb2pct.py Convert a 24bit RGB image to 8bit paletted </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 rgb2pct.py[-n colors | -pct palette_file][-of format] source_file dest_file

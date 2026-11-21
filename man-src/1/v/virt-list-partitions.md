@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-list-partitions/"
 description: "virt-list-partitions – List partitions in a virtual machine or disk image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-list-partitions &#8211; List partitions in a virtual machine or disk image </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - list - partitions[--options] domname virt - list - partitions[--options] disk.img[disk.img...]

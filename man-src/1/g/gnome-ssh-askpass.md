@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-ssh-askpass/"
 description: "gnome-ssh-askpass – prompts a user for a passphrase using GNOME"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-ssh-askpass &#8211; prompts a user for a passphrase using GNOME </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-ssh-askpass</code></p>
 <h2>DESCRIPTION</h2>

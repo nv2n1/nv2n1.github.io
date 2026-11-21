@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-onnode/"
 description: "onnode – run commands on CTDB cluster nodes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> onnode &#8211; run commands on CTDB cluster nodes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>onnode</code> [<i>OPTION</i>&#8230;] {<i>NODES</i>} {<i>COMMAND</i>}</dt></dl>

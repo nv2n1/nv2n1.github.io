@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-texi2any/"
 description: "texi2any – translate Texinfo documents"
 ---
 
-<h2 class="name">NAME</h2>
-<p> texi2any &#8211; translate Texinfo documents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makeinfo</code> [<i>,OPTION/</i>]&#8230; <i>,TEXINFO-FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysql_convert_table_format/"
 description: "mysql_convert_table_format – convert tables to use a given storage engine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysql_convert_table_format &#8211; convert tables to use a given storage engine </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_convert_table_format [</code><i>options</i><code>] </code><i>db_name</i></dt></dl>

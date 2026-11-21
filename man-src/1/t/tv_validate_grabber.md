@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_validate_grabber/"
 description: "tv_validate_grabber – Validate that an xmltv grabber works correctly"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_validate_grabber &#8211; Validate that an xmltv grabber works correctly </p>
 <h2>SYNOPSIS</h2>
 <p> tv_validate_grabber &#8211;help </p>
 <p> tv_validate_grabber [&#8211;config-file &lt;configfile&gt;] [&#8211;keep-files] &lt;cmd&gt;</p>

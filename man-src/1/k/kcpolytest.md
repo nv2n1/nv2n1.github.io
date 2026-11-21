@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kcpolytest/"
 description: "kcpolytest – command line interface to test the polymorphic database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kcpolytest &#8211; command line interface to test the polymorphic database</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>kcpolytest</code>&#8216; is a utility for facility test and performance test of the polymorphic database. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>

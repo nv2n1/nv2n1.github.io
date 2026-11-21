@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-host/"
 description: "atomic-host – Manage Atomic Host Commands"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-host &#8211; Manage Atomic Host Commands </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic host [OPTIONS] COMMAND</code> </p>
 <p> This command is a high-level wrapper for the underlying rpm-ostree tool which can perform upgrades, rollbacks, and system state inspection. It is used for implementations of the Project Atomic Host pattern. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dar_cp/"
 description: "dar_cp – ‘cp’ clone command that is able to copy data located after an I/O error"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dar_cp &#8211; &#8216;cp&#8217; clone command that is able to copy data located after an I/O error </p>
 <h2>SYNOPSIS</h2>
 <p> dar_cp &lt;source file&gt; &lt;destination file&gt; </p>
 <p> dar_cp -h </p>

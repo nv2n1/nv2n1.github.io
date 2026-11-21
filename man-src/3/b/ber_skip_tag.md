@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ber_skip_tag/"
 description: "ber_get_next, ber_skip_tag, ber_peek_tag, ber_scanf, ber_get_int, ber_get_enum, ber_get_stringb, ber_get_stringa, ber_get_stringal, ber_get_stringbv, ber_get_null, ber_get_boolean, ber_get_bitstrin..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ber_get_next, ber_skip_tag, ber_peek_tag, ber_scanf, ber_get_int, ber_get_enum, ber_get_stringb, ber_get_stringa, ber_get_stringal, ber_get_stringbv, ber_get_null, ber_get_boolean, ber_get_bitstring, ber_first_element, ber_next_element &#8211; OpenLDAP LBER simplified Basic Encoding Rules library routines for decoding </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-log/"
 description: "git-log – Show commit logs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-log &#8211; Show commit logs </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git log[&lt;options&gt;][&lt;revision range&gt;][[--]&lt;path&gt;...]

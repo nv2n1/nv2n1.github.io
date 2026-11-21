@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mateconf-gsettings-data-convert/"
 description: "mateconf-gsettings-data-convert – MateConf to GSettings data migration"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mateconf-gsettings-data-convert &#8211; MateConf to GSettings data migration </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mateconf-gsettings-data-convert</code> [option&#8230;]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_error_t/"
 description: "GRAM Error codes –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GRAM Error codes &#8211; </p>
 <p> GRAM Error codes.</p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gram_protocol_error_t</code> </p>

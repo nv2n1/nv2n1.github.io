@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hcrypto_rand/"
 description: "RAND crypto functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> RAND crypto functions &#8211; </p>
 <h3>Functions</h3>
 <p> void <code>RAND_seed</code> (const void *indata, size_t size) </p>
 <p> int <code>RAND_bytes</code> (void *outdata, size_t size) </p>

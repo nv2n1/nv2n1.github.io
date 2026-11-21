@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-python3m-config/"
 description: "python-config – output build options for python C/C++ extensions or embedding"
 ---
 
-<h2 class="name">NAME</h2>
-<p> python-config &#8211; output build options for python C/C++ extensions or embedding </p>
 <h2>SYNOPSIS</h2>
 <p> <code>python-config</code> [ <code>&#8211;prefix</code> ] [ <code>&#8211;exec-prefix</code> ] [ <code>&#8211;includes</code> ] [ <code>&#8211;libs</code> ] [ <code>&#8211;cflags</code> ] [ <code>&#8211;ldflags</code> ] [ <code>&#8211;extension-suffix</code> ] [ <code>&#8211;abiflags</code> ] [ <code>&#8211;help</code> ]</p>
 <h2>DESCRIPTION</h2>

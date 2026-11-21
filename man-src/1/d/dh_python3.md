@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_python3/"
 description: "dh_python3 – calculates Python dependencies, adds maintainer scripts to byte compile files, etc."
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_python3 &#8211; calculates Python dependencies, adds maintainer scripts to byte compile files, etc. </p>
 <h2>SYNOPSIS</h2>
 <p> dh_python3 -p PACKAGE [-V [X.Y][-][A.B]] DIR [-X REGEXPR]</p>
 <h2>DESCRIPTION</h2>

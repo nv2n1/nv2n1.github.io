@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-diffusion_/"
 description: "QuantLib::LfmHullWhiteParameterization – Libor market model parameterization based on Hull White paper"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::LfmHullWhiteParameterization &#8211; Libor market model parameterization based on Hull White paper </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmhullwhiteparam.hpp&gt; </p>
 <p> Inherits <code>QuantLib::LfmCovarianceParameterization</code>. </p>

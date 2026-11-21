@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-uclampset/"
 description: "uclampset – manipulate the utilization clamping attributes of the system or a process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> uclampset &#8211; manipulate the utilization clamping attributes of the system or a process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uclampset</code> [options] [<code>-m</code> <i>uclamp_min</i>] [<code>-M</code> <i>uclamp_max] _command argument</i> </p>
 <p> <code>uclampset</code> [options] [<code>-m</code> <i>uclamp_min</i>] [<code>-M</code> <i>uclamp_max</i>] <code>-p</code> <i>PID</i></p>

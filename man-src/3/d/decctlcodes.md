@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-decctlcodes/"
 description: "Configuration keys for the decoder ctl interface. –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Configuration keys for the decoder ctl interface. &#8211; </p>
 <p> Decoder CTL settings. Decoder CTL settings. </p>
 <p> These defines and macros are for altering the behaviour of the decoder through the <code>daala_decode_ctl</code> interface. </p>
 <p> No keys are currently defined. </p>

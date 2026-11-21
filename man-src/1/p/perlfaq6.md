@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlfaq6/"
 description: "perlfaq6 – Regular Expressions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlfaq6 &#8211; Regular Expressions </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-stream/"
 description: "trace-cmd-stream – stream a trace to stdout as it is happening"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-stream &#8211; stream a trace to stdout as it is happening </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd stream [</code><i>OPTIONS</i><code>]</code> [<i>command</i>]</p>
 <h2>DESCRIPTION</h2>

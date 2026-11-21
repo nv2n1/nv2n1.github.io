@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmpage/"
 description: "pbmpage – create a one page test pattern for printing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmpage &#8211; create a one page test pattern for printing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmpage</code> [<code>-a4</code>] <i>test_pattern</i> </p>
 <h2>DESCRIPTION</h2>

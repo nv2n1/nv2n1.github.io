@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fold/"
 description: "fold – wrap each input line to fit in specified width"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fold &#8211; wrap each input line to fit in specified width </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fold</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

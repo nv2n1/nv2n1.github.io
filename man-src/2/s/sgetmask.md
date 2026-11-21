@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sgetmask/"
 description: "sgetmask, ssetmask – manipulation of signal mask (obsolete)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgetmask, ssetmask &#8211; manipulation of signal mask (obsolete) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>long sgetmask(void);</code> </p>
 <p> <code>long ssetmask(long </code><i>newmask</i><code>);</code> </p>

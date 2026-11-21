@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssbgvd/"
 description: "ssbgvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssbgvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbgvd</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />

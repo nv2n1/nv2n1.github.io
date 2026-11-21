@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlfaq/"
 description: "perlfaq – Frequently asked questions about Perl"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlfaq &#8211; Frequently asked questions about Perl </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
 <h2>DESCRIPTION</h2>

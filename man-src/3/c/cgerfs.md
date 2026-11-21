@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgerfs/"
 description: "cgerfs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgerfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgerfs</code> (TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />

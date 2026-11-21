@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rdfproc/"
 description: "rdfproc – Redland RDF processor utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rdfproc &#8211; Redland RDF processor utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdfproc</code> [<code>options</code>] <i>store-name</i> <i>command</i> <i>arg&#8230;</i></p>
 <h2>EXAMPLE</h2>

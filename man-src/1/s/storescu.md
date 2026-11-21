@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-storescu/"
 description: "storescu – DICOM storage (C-STORE) SCU"
 ---
 
-<h2 class="name">NAME</h2>
-<p> storescu &#8211; DICOM storage (C-STORE) SCU </p>
 <h2>SYNOPSIS</h2>
 <pre>
 storescu [options] peer port dcmfile-in...

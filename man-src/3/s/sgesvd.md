@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sgesvd/"
 description: "sgesvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgesvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, INFO)<br />

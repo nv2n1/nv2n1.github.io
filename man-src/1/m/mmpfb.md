@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mmpfb/"
 description: "mmpfb – creates single-master fonts from multiple master fonts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mmpfb &#8211; creates single-master fonts from multiple master fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mmpfb</code> [OPTIONS&#8230;] <i>font</i></p>
 <h2>DESCRIPTION</h2>

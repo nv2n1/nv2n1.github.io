@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofopdfinfo/"
 description: "podofopdfinfo – provide information about a PDF file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofopdfinfo &#8211; provide information about a PDF file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofopdfinfo</code> [DCPON] [inputfile] </p>
 <h2>DESCRIPTION</h2>

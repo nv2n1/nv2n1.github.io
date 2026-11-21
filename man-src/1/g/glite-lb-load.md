@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glite-lb-load/"
 description: "glite-lb-load – utility for loading job events into the L&B database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glite-lb-load &#8211; utility for loading job events into the L&amp;B database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-load</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pluma/"
 description: "Pluma – The MATE Text Editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Pluma &#8211; The MATE Text Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pluma [OPTIONS&#8230;] [FILES&#8230;]</code></p>
 <h2>DESCRIPTION</h2>

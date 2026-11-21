@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_show_tables/"
 description: "ndb_show_tables – display list of NDB tables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_show_tables &#8211; display list of NDB tables </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_show_tables [</code><i>options</i><code>]</code></dt></dl>

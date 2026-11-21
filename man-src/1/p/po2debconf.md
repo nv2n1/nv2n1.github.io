@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-po2debconf/"
 description: "po2debconf – merge master templates file and PO files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> po2debconf &#8211; merge master templates file and PO files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>po2debconf</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>-o </code><font SIZE="-1">FILE</font>] [<code>-e </code><font SIZE="-1">STRING</font>] <i>master</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-weechat/"
 description: "weechat – the extensible chat client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> weechat &#8211; the extensible chat client </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 weechat[-a | --no - connect][-d | --dir&lt;path&gt;][-p | --no - plugin][-r | --run - command&lt;command&gt;][-s | --no - script][--upgrade] [plugin:option...] weechat[-c | --colors] weechat[-h | --help] weechat[-l | --license] weechat[-v | --version]

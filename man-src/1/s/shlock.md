@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shlock/"
 description: "shlock – Create lock files for use in shell scripts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shlock &#8211; Create lock files for use in shell scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shlock</code> [<code>-b</code>|<code>-c</code>|<code>-u</code>] <code>-f</code> <i>name</i> <code>-p</code> <i>pid</i></p>
 <h2>DESCRIPTION</h2>

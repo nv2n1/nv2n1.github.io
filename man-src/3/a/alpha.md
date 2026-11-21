@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-alpha/"
 description: "QuantLib::GaussianOrthogonalPolynomial – orthogonal polynomial for Gaussian quadratures"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::GaussianOrthogonalPolynomial &#8211; orthogonal polynomial for Gaussian quadratures </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/integrals/gaussianorthogonalpolynomial.hpp&gt; </p>
 <p> Inherited by <code>GaussHermitePolynomial</code>, <code>GaussHyperbolicPolynomial</code>, <code>GaussJacobiPolynomial</code>, and <code>GaussLaguerrePolynomial</code>. </p>

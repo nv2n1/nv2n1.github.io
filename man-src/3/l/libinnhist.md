@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libinnhist/"
 description: "his – routines for managing INN history"
 ---
 
-<h2 class="name">NAME</h2>
-<p> his &#8211; routines for managing INN history </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;inn/history.h&gt;

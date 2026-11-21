@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hid-recorder/"
 description: "hid-recorder – HID Input device recorder."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hid-recorder &#8211; HID Input device recorder. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hid-recorder</code> </p>
 <p> <code>hid-recorder</code> [OPTIONS] [/dev/hidrawX] [[/dev/hidrawY] &#8230; ]</p>

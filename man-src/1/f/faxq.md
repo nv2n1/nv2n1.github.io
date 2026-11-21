@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-faxq/"
 description: "faxq – display fax jobs queued by"
 ---
 
-<h2 class="name">NAME</h2>
-<p> faxq &#8211; display fax jobs queued by </p>
 <p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>faxq</code> [<code>&lt;command&gt;</code>] [<code>-osa</code>] [<code>-v</code>] [<code>-r</code>] [<code>-P</code>&lt;job&gt;<code>&lt;prio&gt;</code>]</p>

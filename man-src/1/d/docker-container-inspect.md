@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-container-inspect/"
 description: "docker-container-inspect – Display detailed information on one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-container-inspect &#8211; Display detailed information on one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container inspect [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

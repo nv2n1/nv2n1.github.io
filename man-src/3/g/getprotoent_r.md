@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getprotoent_r/"
 description: "getprotoent_r, getprotobyname_r, getprotobynumber_r – get protocol entry (reentrant)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getprotoent_r, getprotobyname_r, getprotobynumber_r &#8211; get protocol entry (reentrant) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;

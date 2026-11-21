@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-splain/"
 description: "diagnostics, splain – produce verbose warning diagnostics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> diagnostics, splain &#8211; produce verbose warning diagnostics </p>
 <h2>SYNOPSIS</h2>
 <p> Using the <tt>&quot;diagnostics&quot;</tt> pragma: </p>
 <pre><code>

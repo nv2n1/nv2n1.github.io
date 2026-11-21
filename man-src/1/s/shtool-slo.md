@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-slo/"
 description: "shtool slo – GNU shtool separate linker options by library class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool slo &#8211; GNU shtool separate linker options by library class </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool slo</code> [<code>-p</code>|<code>&#8211;prefix</code> <i>str</i>] &#8212; <code>-L</code><i>dir</i> <code>-l</code><i>lib</i> [<code>-L</code><i>dir</i> <code>-l</code><i>lib</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-a5booklet/"
 description: "a5booklet – copy two A5 pages from a .dvi file to one A4 page in another."
 ---
 
-<h2 class="name">NAME</h2>
-<p> a5booklet &#8211; copy two A5 pages from a .dvi file to one A4 page in another. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>a5booklet</code> <i>file</i><code>[.dvi]</code> </p>
 <h2>DESCRIPTION</h2>

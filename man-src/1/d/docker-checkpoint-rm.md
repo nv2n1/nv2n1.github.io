@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-checkpoint-rm/"
 description: "docker-checkpoint-rm – Remove a checkpoint"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-checkpoint-rm &#8211; Remove a checkpoint </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker checkpoint rm [OPTIONS] CONTAINER CHECKPOINT</code> </p>
 <h2>DESCRIPTION</h2>

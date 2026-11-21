@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk-launch/"
 description: "gtk-launch – Launch an application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk-launch &#8211; Launch an application </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-launch</code> [OPTION&#8230;] APPLICATION [URI&#8230;]</dt></dl>

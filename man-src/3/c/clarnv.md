@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clarnv/"
 description: "clarnv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clarnv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarnv</code> (IDIST, ISEED, N, X)<br />

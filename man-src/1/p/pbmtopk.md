@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtopk/"
 description: "pbmtopk – convert a PBM image into a packed (PK) format font"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtopk &#8211; convert a PBM image into a packed (PK) format font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtopk</code> <i>pkfile</i>[<code>.pk</code>] <i>tfmfile</i>[<code>.tfm</code>] <i>resolution</i> [<code>-s</code> <i>designsize</i>] [<code>-p</code> <i>num</i> <i>param</i>&#8230;] [<code>-C</code> <i>codingscheme</i>] [<code>-F</code> <i>family</i>] [<code>-f</code> <i>optfile</i>] [<code>-c</code> <i>num</i>] [<code>-W</code> <i>width</i>] [<code>-H</code> <i>height</i>] [<code>-D</code> <i>depth</i>] [<code>-I</code> <i>ital</i>] [<code>-h</code> <i>horiz</i>] [<code>-v</code> <i>vert</i>] [<code>-x</code> <i>xoff</i>] [<code>-y</code> <i>yoff</i>] [<i>pbmfile</i> &#8230;] </p>
 <h2>DESCRIPTION</h2>

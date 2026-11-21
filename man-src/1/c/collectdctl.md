@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-collectdctl/"
 description: "collectdctl – Control interface for collectd"
 ---
 
-<h2 class="name">NAME</h2>
-<p> collectdctl &#8211; Control interface for collectd </p>
 <h2>SYNOPSIS</h2>
 <p> collectdctl <i>[options]</i> <i>&lt;command&gt;</i> <i>[command options]</i></p>
 <h2>DESCRIPTION</h2>

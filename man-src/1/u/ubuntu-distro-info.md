@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ubuntu-distro-info/"
 description: "ubuntu-distro-info – provides information about Ubuntu’s distributions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ubuntu-distro-info &#8211; provides information about Ubuntu&#8217;s distributions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ubuntu-distro-info</code> [<i>OPTIONS</i>]</p>
 <h2>OPTIONS</h2>

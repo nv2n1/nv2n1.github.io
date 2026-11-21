@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-strip/"
 description: "strip – Discard symbols from object files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> strip &#8211; Discard symbols from object files. </p>
 <h2>SYNOPSIS</h2>
 <p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br />
 [<code>-I</code>&nbsp;<wbr><i>bfdname</i>&nbsp;<wbr>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perldata/"
 description: "perldata – Perl data types"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perldata &#8211; Perl data types </p>
 <h2>DESCRIPTION</h2>
 <h3>Variable names</h3>
 <p> Perl has three built-in data types: scalars, arrays of scalars, and associative arrays of scalars, known as &#8220;hashes&#8221;. A scalar is a single string (of any size, limited only by the available memory), number, or a reference to something (which will be discussed in perlref). Normal arrays are ordered lists of scalars indexed by number, starting with 0. Hashes are unordered collections of scalar values indexed by their associated string key. </p>

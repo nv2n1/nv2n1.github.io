@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_eu_egon/"
 description: "tv_grab_eu_egon – Grab TV listings for German speaking area."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_eu_egon &#8211; Grab TV listings for German speaking area. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_eu_egon &#8211;help </p>
 <p> tv_grab_eu_egon &#8211;configure [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;gui <font SIZE="-1">OPTION</font>] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aecho/"
 description: "aecho – send AppleTalk Echo Protocol packets to network hosts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aecho &#8211; send AppleTalk Echo Protocol packets to network hosts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aecho</code> [ <code>-c</code><i> count</i> ] ( <code>address</code> | <code>nbpname</code> )</p>
 <h2>DESCRIPTION</h2>

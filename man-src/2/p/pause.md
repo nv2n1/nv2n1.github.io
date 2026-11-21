@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-pause/"
 description: "pause – wait for signal"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pause &#8211; wait for signal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int pause(void);</code></p>

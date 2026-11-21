@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-debugger/"
 description: "ANTLR3_BASE_RECOGNIZER_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_BASE_RECOGNIZER_struct &#8211; </p>
 <p> Base tracking context structure for all types of recognizers.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt;</p>

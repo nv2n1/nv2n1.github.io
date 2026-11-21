@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-session-save/"
 description: "mate-session-save – End or save the current MATE session"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-session-save &#8211; End or save the current MATE session </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-session-save [&#8211;logout] [&#8211;force-logout] [&#8211;logout-dialog] [&#8211;shutdown-dialog] [&#8211;gui] [&#8211;kill [&#8211;silent]]</code></p>
 <h2>DESCRIPTION</h2>

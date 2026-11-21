@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtrsna/"
 description: "dtrsna.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtrsna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, IWORK, INFO)<br />

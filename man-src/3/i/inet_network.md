@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-inet_network/"
 description: "inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof, inet_netof – Internet address manipulation routines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof, inet_netof &#8211; Internet address manipulation routines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/inet.h&gt;

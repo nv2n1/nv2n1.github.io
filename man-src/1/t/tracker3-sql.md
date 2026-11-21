@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-sql/"
 description: "tracker3-sql – Use SQL to query the Tracker databases."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-sql &#8211; Use SQL to query the Tracker databases. </p>
 <h2>SYNOPSIS</h2>
 <pre>
 tracker3 sql -q &lt;sql&gt; | -f &lt;file&gt;

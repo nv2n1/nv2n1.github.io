@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-login/"
 description: "login – begin session on the system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> login &#8211; begin session on the system </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>login</code> [-p] [-h&nbsp;<i>host</i>] [<i>username</i>] [<i>ENV=VAR</i>&#8230;]</dt>

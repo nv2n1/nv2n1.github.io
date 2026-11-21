@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-diff-14/"
 description: "llvm-diff – LLVM structural ‘diff’"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-diff &#8211; LLVM structural &#8216;diff&#8217; </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-diff</code> [<i>options</i>] <i>module 1</i> <i>module 2</i> [<i>global name …</i>]</p>
 <h2>DESCRIPTION</h2>

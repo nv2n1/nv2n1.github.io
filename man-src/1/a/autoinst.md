@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autoinst/"
 description: "autoinst – wrapper around the LCDF TypeTools, for installing and using OpenType fonts in LaTeX."
 ---
 
-<h2 class="name">NAME</h2>
-<p> autoinst &#8211; wrapper around the LCDF TypeTools, for installing and using OpenType fonts in LaTeX. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoinst</code> <i>-help</i> </p>
 <p> <code>autoinst</code> [<i>options</i>] <code>font(s)</code></p>

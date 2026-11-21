@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-eaccess/"
 description: "euidaccess, eaccess – check effective user’s permissions for a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> euidaccess, eaccess &#8211; check effective user&#8217;s permissions for a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

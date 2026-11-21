@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_missing/"
 description: "dh_missing – check for missing files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_missing &#8211; check for missing files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_missing</code> [<code>-X</code><i>item</i>] [<code>&#8211;sourcedir=</code><i>dir</i>] [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

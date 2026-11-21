@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lfmhullwhiteparam/"
 description: "ql/legacy/libormarketmodels/lfmhullwhiteparam.hpp – libor market model parameterization based on Hull White"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/legacy/libormarketmodels/lfmhullwhiteparam.hpp &#8211; libor market model parameterization based on Hull White </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmprocess.hpp&gt;<br />
  #include &lt;ql/legacy/libormarketmodels/lfmcovarparam.hpp&gt; </p>

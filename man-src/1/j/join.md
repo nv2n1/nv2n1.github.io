@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-join/"
 description: "join – join lines of two files on a common field"
 ---
 
-<h2 class="name">NAME</h2>
-<p> join &#8211; join lines of two files on a common field </p>
 <h2>SYNOPSIS</h2>
 <p> <code>join</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i></p>
 <h2>DESCRIPTION</h2>

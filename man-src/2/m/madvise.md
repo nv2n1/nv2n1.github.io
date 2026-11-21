@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-madvise/"
 description: "madvise – give advice about use of memory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> madvise &#8211; give advice about use of memory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/mman.h&gt;</code> </p>
 <p> <code>int madvise(void *</code><i>addr</i><code>, size_t </code><i>length</i><code>, int </code><i>advice</i><code>);</code> </p>

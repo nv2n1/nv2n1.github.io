@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sspgvx/"
 description: "sspgvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sspgvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />

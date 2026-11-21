@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ao_string_tokenize/"
 description: "ao_string_tokenize – tokenize an input string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ao_string_tokenize &#8211; tokenize an input string</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<i>your-opts.h</i>&gt;<br />
  cc [&#8230;] -o outfile infile.c -l<code>opts</code> [&#8230;] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-diffimg/"
 description: "diffimg – Calculates intersection between two images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> diffimg &#8211; Calculates intersection between two images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>diffimg</code> image1 image2 [<i>outimage</i>]</p>
 <h2>DESCRIPTION</h2>

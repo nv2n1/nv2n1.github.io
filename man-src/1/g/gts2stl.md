@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gts2stl/"
 description: "gts2stl – converts a GTS file to STL format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gts2stl &#8211; converts a GTS file to STL format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gts2stl</code> [<i>OPTIONS</i>]&nbsp;&lt;&nbsp;<i>input.gts&nbsp;</i>&gt;&nbsp;<i>output.stl</i> </p>
 <h2>DESCRIPTION</h2>

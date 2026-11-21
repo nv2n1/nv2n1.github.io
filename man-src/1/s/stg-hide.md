@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-hide/"
 description: "stg-hide – Hide a patch in the series"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-hide &#8211; Hide a patch in the series </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg hide[options][--]&lt;patch - range&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-acpibin/"
 description: "acpibin – ACPI binary AML file utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> acpibin &#8211; ACPI binary AML file utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpibin</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> </p>
 <h2>DESCRIPTION</h2>

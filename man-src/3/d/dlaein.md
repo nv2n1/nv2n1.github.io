@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaein/"
 description: "dlaein.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaein</code> (RIGHTV, NOINIT, N, H, LDH, WR, WI, VR, VI, B, LDB, WORK, EPS3, SMLNUM, BIGNUM, INFO)<br />

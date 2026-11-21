@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-tag/"
 description: "docker-tag – Tag an image into a repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-tag &#8211; Tag an image into a repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker tag</code> [<code>&#8211;help</code>] NAME[:TAG] NAME[:TAG] </p>
 <h2>DESCRIPTION</h2>

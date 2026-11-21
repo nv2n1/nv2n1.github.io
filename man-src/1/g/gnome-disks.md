@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-disks/"
 description: "gnome-disks – the GNOME Disks application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-disks &#8211; the GNOME Disks application </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-disks</code> [OPTIONS]</dt></dl>

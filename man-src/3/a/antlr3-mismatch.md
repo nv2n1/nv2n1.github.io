@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-mismatch/"
 description: "src/antlr3treeparser.c –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> src/antlr3treeparser.c &#8211; </p>
 <p> Implementation of the tree parser and overrides for the base recognizer.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3treeparser.h">antlr3treeparser.h</a>&gt; </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-message/"
 description: "ANTLR3_EXCEPTION_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_EXCEPTION_struct &#8211; </p>
 <p> Base structure for an ANTLR3 exception tracker.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3exception.h">antlr3exception.h</a>&gt;</p>

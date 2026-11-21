@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-shlibdeps/"
 description: "dpkg-shlibdeps – generate shared library substvar dependencies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-shlibdeps &#8211; generate shared library substvar dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-shlibdeps</code> [<i>option</i>&#8230;] [<code>-e</code>] <i>executable</i> [<i>option</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

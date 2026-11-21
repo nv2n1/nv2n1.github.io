@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dstebz/"
 description: "dstebz.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dstebz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstebz</code> (RANGE, ORDER, N, VL, VU, IL, IU, ABSTOL, D, E, M, NSPLIT, W, IBLOCK, ISPLIT, WORK, IWORK, INFO)<br />

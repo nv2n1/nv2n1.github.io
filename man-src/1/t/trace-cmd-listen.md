@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-listen/"
 description: "trace-cmd-listen – listen for incoming connection to record tracing."
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-listen &#8211; listen for incoming connection to record tracing. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd listen</code> -p <i>port</i> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>

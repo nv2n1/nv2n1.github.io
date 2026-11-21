@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installudev/"
 description: "dh_installudev – install udev rules files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installudev &#8211; install udev rules files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installudev</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;name=</code><i>name</i>] [<code>&#8211;priority=</code><i>priority</i>]</p>
 <h2>DESCRIPTION</h2>

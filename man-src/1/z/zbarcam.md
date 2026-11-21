@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zbarcam/"
 description: "zbarcam – scan and decode bar codes from a video device"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zbarcam &#8211; scan and decode bar codes from a video device </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zbarcam</code> [<code>-qv</code>] [<code>&#8211;quiet</code>] [<code>&#8211;nodisplay</code>] [<code>&#8211;xml</code>] [<code>&#8211;verbose</code><code>[=</code><i>n</i>]] [<code>&#8211;prescale=</code><i>W</i><code>x</code><i>H</i>] [<code>-S</code><code>[</code><i>symbology</i>.]<i>config</i><code>[=</code><i>value</i>]] [<code>&#8211;set&nbsp;<wbr></code><code>[</code><i>symbology</i>.]<i>config</i><code>[=</code><i>value</i>]] [<i>device</i>]</dt>

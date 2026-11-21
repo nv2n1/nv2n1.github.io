@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-settings-daemon/"
 description: "gnome-settings-daemon – GNOME settings daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-settings-daemon &#8211; GNOME settings daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-settings-daemon </code><code>[OPTION&#8230;]</code></dt></dl>

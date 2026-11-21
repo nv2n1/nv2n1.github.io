@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-extresso/"
 description: "extresso – wrapper for wrestool and icotool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> extresso &#8211; wrapper for wrestool and icotool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>extresso</code> [<i>OPTIONS</i>]&#8230; [<i>FILE</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

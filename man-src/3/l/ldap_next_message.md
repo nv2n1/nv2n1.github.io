@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_next_message/"
 description: "ldap_first_message, ldap_next_message, ldap_count_messages – Stepping through messages in a result chain"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_first_message, ldap_next_message, ldap_count_messages &#8211; Stepping through messages in a result chain </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

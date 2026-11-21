@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-uniconv/"
 description: "uniconv – convert Netatalk volume encoding"
 ---
 
-<h2 class="name">NAME</h2>
-<p> uniconv &#8211; convert Netatalk volume encoding </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>uniconv</code> [-ndv] -c&nbsp;<wbr><i>cnidbackend</i> -f&nbsp;<wbr><i>fromcode</i> -t&nbsp;<wbr><i>tocode</i> [-m&nbsp;<wbr><i>maccode</i>] <i>volumepath</i></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtrsyl/"
 description: "dtrsyl.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtrsyl.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />

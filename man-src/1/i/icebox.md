@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-icebox/"
 description: "icebox – The IceBox C++ service daemon."
 ---
 
-<h2 class="name">NAME</h2>
-<p> icebox &#8211; The IceBox C++ service daemon.</p>
 <h2>SYNOPSIS</h2>
 <p> icebox [options] </p>
 <h2>DESCRIPTION</h2>

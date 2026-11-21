@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-aio_read/"
 description: "aio_read – asynchronous read"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aio_read &#8211; asynchronous read </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>int aio_read(struct aiocb *</code><i>aiocbp</i><code>);</code> </p>

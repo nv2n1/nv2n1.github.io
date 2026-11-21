@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mime-construct/"
 description: "mime-construct – construct and optionally mail MIME messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mime-construct &#8211; construct and optionally mail MIME messages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mime-construct</code> <i>switch</i>&#8230; </p>
 <p> Sorry, it&#8217;s hard to provide a meaningful synopsis. See the examples.</p>

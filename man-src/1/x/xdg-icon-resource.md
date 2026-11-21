@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-icon-resource/"
 description: "xdg-icon-resource – command line tool for (un)installing icon resources"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-icon-resource &#8211; command line tool for (un)installing icon resources </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-icon-resource</code> install [<code>&#8211;noupdate</code>] [<code>&#8211;novendor</code>] [<code>&#8211;theme&nbsp;</code><i>theme</i>] [<code>&#8211;context&nbsp;</code><i>context</i>] [<code>&#8211;mode&nbsp;</code><i>mode</i>] <code>&#8211;size&nbsp;</code><i>size</i> <i>icon-file</i> [<i>icon-name</i>]</dt>

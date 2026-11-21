@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_install/"
 description: "dh_install – install files into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_install &#8211; install files into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_install</code> [<code>-X</code><i>item</i>] [<code>&#8211;autodest</code>] [<code>&#8211;sourcedir=</code><i>dir</i>] [<i>debhelper options</i>] [<i>file|dir</i> &#8230; <i>destdir</i>]</p>
 <h2>DESCRIPTION</h2>

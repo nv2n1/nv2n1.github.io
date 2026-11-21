@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lttng-gen-tp/"
 description: "lttng-gen-tp — LTTng UST 2.x tracepoint code generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lttng-gen-tp &#8212; LTTng UST 2.x tracepoint code generator</p>
 <h2>SYNOPSIS</h2>
 <pre>
 lttng-gen-tp [OPTIONS] TEMPLATE_FILE

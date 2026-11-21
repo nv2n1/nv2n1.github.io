@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sbattach/"
 description: "sbattach – UEFI secure boot detached signature tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sbattach &#8211; UEFI secure boot detached signature tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sbattach</code> <i>,&#8211;attach &lt;sigfile&gt; &lt;efi-boot-image&gt;/</i><br />
  <code>sbattach</code> <i>,&#8211;detach &lt;sigfile&gt; /</i>[<i>,&#8211;remove/</i>] <i>,&lt;efi-boot-image&gt;/</i><br />

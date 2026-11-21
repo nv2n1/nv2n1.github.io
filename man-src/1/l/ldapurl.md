@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ldapurl/"
 description: "ldapurl – LDAP URL formatting tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldapurl &#8211; LDAP URL formatting tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldapurl</code> [<code>-a</code>&nbsp;<wbr>attrs] [<code>-b</code><i>&nbsp;<wbr>searchbase</i>] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-f</code><i>&nbsp;<wbr>filter</i>] [<code>-H</code><i>&nbsp;<wbr>ldapuri</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-s</code>&nbsp;<wbr>{<code>base</code>|<code>one</code>|<code>sub</code>|<code>children</code>}] [<code>-S</code><i>&nbsp;<wbr>scheme</i>]</p>
 <h2>DESCRIPTION</h2>

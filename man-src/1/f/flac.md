@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flac/"
 description: "flac – Free Lossless Audio Codec"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flac &#8211; Free Lossless Audio Codec </p>
 <h2>SYNOPSIS</h2>
 <p> <code>flac</code> [ <i>OPTIONS</i> ] [ <i>infile.wav</i> | <i>infile.rf64</i> | <i>infile.aiff</i> | <i>infile.raw</i> | <i>infile.flac</i> | <i>infile.oga</i> | <i>infile.ogg</i> | <code>&#8211;</code><i> &#8230;</i> ] </p>
 <p> <code>flac</code> [ <code>-d</code> | <code>&#8211;decode</code> | <code>-t</code> | <code>&#8211;test</code> | <code>-a</code> | <code>&#8211;analyze</code> ] [ <i>OPTIONS</i> ] [ <i>infile.flac</i> | <i>infile.oga</i> | <i>infile.ogg</i> | <code>&#8211;</code><i> &#8230;</i> ] </p>

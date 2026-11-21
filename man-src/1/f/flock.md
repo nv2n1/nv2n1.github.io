@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flock/"
 description: "flock – manage locks from shell scripts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flock &#8211; manage locks from shell scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>flock</code> [options] <i>file</i>|<i>directory</i> <i>command</i> [<i>arguments</i>] </p>
 <p> <code>flock</code> [options] <i>file</i>|<i>directory</i> <code>-c</code> <i>command</i> </p>

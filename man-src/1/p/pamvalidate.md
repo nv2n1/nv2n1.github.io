@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamvalidate/"
 description: "pamvalidate – validate Netpbm image format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamvalidate &#8211; validate Netpbm image format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamvalidate</code> </p>
 <h2>DESCRIPTION</h2>

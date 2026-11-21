@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-iconv_open/"
 description: "iconv_open – allocate descriptor for character set conversion"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iconv_open &#8211; allocate descriptor for character set conversion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;iconv.h&gt;

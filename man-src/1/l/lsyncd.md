@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lsyncd/"
 description: "lsyncd – a daemon to continuously synchronize directory trees"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lsyncd &#8211; a daemon to continuously synchronize directory trees </p>
 <h2>SYNOPSIS</h2>
 <p> config file</p>
 <dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-msgget/"
 description: "msgget – get a System V message queue identifier"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msgget &#8211; get a System V message queue identifier </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;

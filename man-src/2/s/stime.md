@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-stime/"
 description: "stime – set time"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stime &#8211; set time </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>int stime(const time_t *</code><i>t</i><code>);</code> </p>

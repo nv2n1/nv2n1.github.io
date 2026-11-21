@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pygettext2/"
 description: "pygettext – Python equivalent of"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pygettext &#8211; Python equivalent of </p>
 <p> <a href="/docs/linux/man/1-xgettext/">xgettext</a>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pygettext</code> [<i>OPTIONS</i>] <i>INPUTFILE </i>&#8230;</p>

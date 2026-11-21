@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tsk_loaddb/"
 description: "tsk_loaddb – populate a SQLite database with metadata from a disk image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tsk_loaddb &#8211; populate a SQLite database with metadata from a disk image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsk_loaddb [-ahkvV] [ -i</code> <i>imgtype</i> <code>] [ -b</code> <i>dev_sector_size</i> <code>] [ -i</code> <i>imgtype</i> <code>] [ -d</code> <i>database</i> <code>]</code> <i>image [images]</i></p>
 <h2>DESCRIPTION</h2>

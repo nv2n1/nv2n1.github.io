@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_alloc_td/"
 description: "ibv_alloc_td(), ibv_dealloc_td() – allocate and deallocate thread domain object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_alloc_td(), ibv_dealloc_td() &#8211; allocate and deallocate thread domain object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sla_porcond/"
 description: "sla_porcond.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sla_porcond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>sla_porcond</code> (UPLO, N, A, LDA, AF, LDAF, CMODE, C, INFO, WORK, IWORK)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xlsclients/"
 description: "xlsclients – list client applications running on a display"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xlsclients &#8211; list client applications running on a display </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xlsclients</code> [-display <i>displayname</i>] [-a] [-l] [-m maxcmdlen] [-version]</p>
 <h2>DESCRIPTION</h2>

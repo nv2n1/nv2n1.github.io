@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-config-create/"
 description: "docker-config-create – Create a config from a file or STDIN"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-config-create &#8211; Create a config from a file or STDIN </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker config create [OPTIONS] CONFIG file|-</code> </p>
 <h2>DESCRIPTION</h2>

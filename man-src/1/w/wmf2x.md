@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wmf2x/"
 description: "wmf2x – Display metafile image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wmf2x &#8211; Display metafile image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmf2x</code> [<i>OPTION</i>] &#8230; &lt;<i>file.wmf</i>&gt; </p>
 <h2>DESCRIPTION</h2>

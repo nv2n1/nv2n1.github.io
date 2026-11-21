@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-filterdiff/"
 description: "filterdiff – extract or exclude diffs from a diff file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> filterdiff &#8211; extract or exclude diffs from a diff file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>filterdiff</code> [[-i&nbsp;<i>PATTERN</i>] | [&#8211;include=<i>PATTERN</i>]] [[-I&nbsp;<i>FILE</i>] | [&#8211;include-from-file=<i>FILE</i>]] [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [&#8211;strip=<i>n</i>] [&#8211;addprefix=<i>PREFIX</i>] [&#8211;addoldprefix=<i>PREFIX</i>] [&#8211;addnewprefix=<i>PREFIX</i>] [[-x&nbsp;<i>PATTERN</i>] | [&#8211;exclude=<i>PATTERN</i>]] [[-X&nbsp;<i>FILE</i>] | [&#8211;exclude-from-file=<i>FILE</i>]] [[-v] | [&#8211;verbose]] [&#8211;clean] [[-z] | [&#8211;decompress]] [[-#&nbsp;<i>RANGE</i>] | [&#8211;hunks=<i>RANGE</i>]] [&#8211;lines=<i>RANGE</i>] [[-F<i>RANGE</i>] | [&#8211;files=<i>RANGE</i>]] [&#8211;annotate] [&#8211;format=<i>FORMAT</i>] [&#8211;as-numbered-lines=<i>WHEN</i>] [&#8211;remove-timestamps] [<i>file</i>&#8230;]</dt>

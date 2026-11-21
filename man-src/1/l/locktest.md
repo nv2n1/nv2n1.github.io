@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-locktest/"
 description: "locktest – Find differences in locking between two SMB servers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> locktest &#8211; Find differences in locking between two SMB servers </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>locktest</code> {//server1/share1} {//server2/share2} [-U user%pass] [-U user%pass] [-s seed] [-o numops] [-a] [-O] [-E] [-Z] [-R range] [-B base] [-M min]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xwd/"
 description: "xwd – dump an image of an X window"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xwd &#8211; dump an image of an X window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xwd</code> [-debug] [-help] [-nobdrs] [-out <i>file</i>] [-xy] [-frame] [-add <i>value</i>] [-root | -id <i>id</i> | -name <i>name</i> ] [-icmap] [-screen] [-silent] [-display <i>display</i>] [-version]</p>
 <h2>DESCRIPTION</h2>

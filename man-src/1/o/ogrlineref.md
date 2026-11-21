@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ogrlineref/"
 description: "ogrlineref – ogrlineref The utility can be used for:"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ogrlineref &#8211; ogrlineref The utility can be used for:</p>
 <dl>
 <dt>&bull;</dt>
 <dd> create linear reference file from input data</dd>

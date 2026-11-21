@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbfilealter/"
 description: "dbfilealter – alter the format of an Fsdb file, changing the row/column separator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbfilealter &#8211; alter the format of an Fsdb file, changing the row/column separator </p>
 <h2>SYNOPSIS</h2>
 <p> dbfilealter [-c] [-F fs] [-R rs] [-Z compression] [column&#8230;]</p>
 <h2>DESCRIPTION</h2>

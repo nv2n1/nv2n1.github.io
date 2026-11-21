@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rpms2solv/"
 description: "rpms2solv – convert one or more rpms into a solv file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rpms2solv &#8211; convert one or more rpms into a solv file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpms2solv</code> [<i>OPTIONS</i>] <i>RPM1.rpm</i> &#8230;</p>
 <h2>DESCRIPTION</h2>

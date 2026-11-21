@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lspgpot/"
 description: "lspgpot – extracts the ownertrust values from PGP keyrings and list them in GnuPG ownertrust format."
 ---
 
-<h2 class="name">NAME</h2>
-<p> lspgpot &#8211; extracts the ownertrust values from PGP keyrings and list them in GnuPG ownertrust format. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lspgpot</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrd-beginners/"
 description: "rrd-beginners – RRDtool Beginners’ Guide"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrd-beginners &#8211; RRDtool Beginners&#8217; Guide </p>
 <h2>SYNOPSIS</h2>
 <p> Helping new RRDtool users to understand the basics of RRDtool</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kpsereadlink/"
 description: "kpsereadlink – print contents of symbolic link"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kpsereadlink &#8211; print contents of symbolic link </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kpsereadlink</code> <i>file</i></p>
 <h2>DESCRIPTION</h2>

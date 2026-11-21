@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-volume-rm/"
 description: "docker-volume-rm – Remove one or more volumes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-volume-rm &#8211; Remove one or more volumes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker volume rm [OPTIONS] VOLUME [VOLUME&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

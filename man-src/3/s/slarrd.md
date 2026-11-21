@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slarrd/"
 description: "slarrd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slarrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrd</code> (RANGE, ORDER, N, VL, VU, IL, IU, GERS, RELTOL, D, E, E2, PIVMIN, NSPLIT, ISPLIT, M, W, WERR, WL, WU, IBLOCK, INDEXW, WORK, IWORK, INFO)<br />

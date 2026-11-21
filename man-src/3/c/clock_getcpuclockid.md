@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clock_getcpuclockid/"
 description: "clock_getcpuclockid – obtain ID of a process CPU-time clock"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clock_getcpuclockid &#8211; obtain ID of a process CPU-time clock </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <pre><code>

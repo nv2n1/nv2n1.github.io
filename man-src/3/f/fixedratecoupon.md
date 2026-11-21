@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fixedratecoupon/"
 description: "ql/cashflows/fixedratecoupon.hpp – Coupon paying a fixed annual rate."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/cashflows/fixedratecoupon.hpp &#8211; Coupon paying a fixed annual rate. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/coupon.hpp&gt;<br />
  #include &lt;ql/interestrate.hpp&gt;<br />

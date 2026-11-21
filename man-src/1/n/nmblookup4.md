@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nmblookup4/"
 description: "nmblookup4 – NetBIOS over TCP/IP client used to lookup NetBIOS names"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nmblookup4 &#8211; NetBIOS over TCP/IP client used to lookup NetBIOS names </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nmblookup4</code> [-M] [-R] [-S] [-r] [-A] [-h] [-B&nbsp;<wbr>&lt;broadcast address&gt;] [-U&nbsp;<wbr>&lt;unicast address&gt;] [-d&nbsp;<wbr>&lt;debug level&gt;] [-s&nbsp;<wbr>&lt;smb config file&gt;] [-i&nbsp;<wbr>&lt;NetBIOS scope&gt;] [-T] [-f] {name}</dt></dl>

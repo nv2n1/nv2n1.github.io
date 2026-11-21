@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffmpeg-devices/"
 description: "ffmpeg-devices – FFmpeg devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffmpeg-devices &#8211; FFmpeg devices </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes the input and output devices provided by the libavdevice library.</p>
 <h2>DEVICE OPTIONS</h2>

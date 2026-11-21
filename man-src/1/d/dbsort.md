@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbsort/"
 description: "dbsort – sort rows based on the the specified columns"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbsort &#8211; sort rows based on the the specified columns </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dbsort[-M MemLimit][-T TemporaryDirectory][-nNrR] column[column...]

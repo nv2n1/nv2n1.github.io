@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtotga/"
 description: "pamtotga – convert a Netpbm image to a TrueVision Targa file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtotga &#8211; convert a Netpbm image to a TrueVision Targa file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtotga</code> [<code>-mono|-cmap|-rgb</code>] [<code>-norle</code>] [<code>-name=</code><i>name</i> [<i>pamfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>

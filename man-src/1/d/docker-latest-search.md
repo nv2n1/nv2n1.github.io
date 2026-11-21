@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-search/"
 description: "docker-search – Search the Docker Hub for images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-search &#8211; Search the Docker Hub for images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker search</code> [<code>-f</code>|<code>&#8211;filter</code>[=<i>[]</i>]] [<code>&#8211;help</code>] [<code>&#8211;limit</code>[=<i>LIMIT</i>]] [<code>&#8211;no-index</code>] [<code>&#8211;no-trunc</code>] TERM </p>
 <h2>DESCRIPTION</h2>

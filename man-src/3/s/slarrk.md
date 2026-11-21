@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slarrk/"
 description: "slarrk.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slarrk.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrk</code> (N, IW, GL, GU, D, E2, PIVMIN, RELTOL, W, WERR, INFO)<br />

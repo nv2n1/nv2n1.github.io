@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-keyctl/"
 description: "keyctl – manipulate the kernel’s key management facility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl &#8211; manipulate the kernel&#8217;s key management facility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

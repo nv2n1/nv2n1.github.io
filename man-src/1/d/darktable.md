@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-darktable/"
 description: "darktable – a digital photography workflow application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> darktable &#8211; a digital photography workflow application </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 darktable[options][IMG_1234.{RAW, ...} | image_folder / ]

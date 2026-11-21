@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glib-genmarshal/"
 description: "glib-genmarshal – C code marshaller generation utility for GLib closures"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glib-genmarshal &#8211; C code marshaller generation utility for GLib closures </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glib-genmarshal</code> [OPTION&#8230;] [FILE&#8230;]</dt></dl>

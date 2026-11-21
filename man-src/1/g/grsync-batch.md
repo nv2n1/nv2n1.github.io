@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grsync-batch/"
 description: "GRSYNC-BATCH – Grsync batch session runner"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GRSYNC-BATCH &#8211; Grsync batch session runner</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grsync-batch [-f] [-d] [session_name|file_name]</code> </p>
 <h2>DESCRIPTION</h2>

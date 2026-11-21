@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cpack/"
 description: "cpack – CPack Command-Line Reference"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpack &#8211; CPack Command-Line Reference </p>
 <h2>SYNOPSIS</h2>
 <pre>
 cpack [&lt;options&gt;]

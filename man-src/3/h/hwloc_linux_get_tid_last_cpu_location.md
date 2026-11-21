@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_linux_get_tid_last_cpu_location/"
 description: "hwlocality_linux – Linux-specific helpers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_linux &#8211; Linux-specific helpers </p>
 <h3>Functions</h3>
 <p> int <code>hwloc_linux_parse_cpumap_file</code> (FILE *file, <code>hwloc_cpuset_t</code> set) </p>
 <p> int <code>hwloc_linux_set_tid_cpubind</code> (<code>hwloc_topology_t</code> topology, pid_t tid, <code>hwloc_const_cpuset_t</code> set) </p>

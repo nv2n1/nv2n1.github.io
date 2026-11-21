@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtbl/"
 description: "tbl – format tables for troff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tbl &#8211; format tables for troff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-Cv</code> ] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

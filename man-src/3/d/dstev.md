@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dstev/"
 description: "dstev.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dstev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstev</code> (JOBZ, N, D, E, Z, LDZ, WORK, INFO)<br />

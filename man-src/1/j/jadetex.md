@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jadetex/"
 description: "jadetex – processing tex files produced by the TeX backend of Jade."
 ---
 
-<h2 class="name">NAME</h2>
-<p> jadetex &#8211; processing tex files produced by the TeX backend of Jade. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jadetex</code> [ first line ]</p>
 <h2>DESCRIPTION</h2>

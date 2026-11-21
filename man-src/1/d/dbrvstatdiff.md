@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbrvstatdiff/"
 description: "dbrvstatdiff – evaluate statistical differences between two random variables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbrvstatdiff &#8211; evaluate statistical differences between two random variables </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dbrvstatdiff[-f format][-c ConfRating]

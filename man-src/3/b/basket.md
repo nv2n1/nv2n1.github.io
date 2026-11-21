@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-basket/"
 description: "ql/experimental/credit/basket.hpp – basket of issuers and related notionals"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/experimental/credit/basket.hpp &#8211; basket of issuers and related notionals </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/default.hpp&gt;<br />
  #include &lt;ql/issuer.hpp&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-asciitopgm/"
 description: "asciitopgm – convert ASCII graphics into a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> asciitopgm &#8211; convert ASCII graphics into a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>asciitopgm</code> <i>[</i>-d divisor<i>]</i> <i>height width</i> [<i>asciifile</i>]</p>
 <h2>DESCRIPTION</h2>

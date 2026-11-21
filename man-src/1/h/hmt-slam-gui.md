@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hmt-slam-gui/"
 description: "hmt-slam-gui – Robotic Hybrid Metric Topological (HMT) mappping GUI"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hmt-slam-gui &#8211; Robotic Hybrid Metric Topological (HMT) mappping GUI </p>
 <h2>SYNOPSIS</h2>
 <p> hmt-slam-gui</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-brlapi_driverspecific/"
 description: "Driver-Specific modes –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Driver-Specific modes &#8211; </p>
 <p> Raw and Suspend Modes mechanism.</p>
 <h3>Functions</h3>
 <p> int <code>BRLAPI_STDCALL</code> <code>brlapi_enterRawMode</code> (const char *driver) </p>

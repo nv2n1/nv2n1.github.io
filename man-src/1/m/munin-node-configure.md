@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-munin-node-configure/"
 description: "munin-node-configure – View and modify which plugins are enabled."
 ---
 
-<h2 class="name">NAME</h2>
-<p> munin-node-configure &#8211; View and modify which plugins are enabled. </p>
 <h2>SYNOPSIS</h2>
 <pre>
   munin-node-configure [options]

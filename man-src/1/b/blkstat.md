@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-blkstat/"
 description: "blkstat – Display details of a file system data unit (i.e. block or sector)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> blkstat &#8211; Display details of a file system data unit (i.e. block or sector) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blkstat [-f</code> <i>fstype </i> <code>] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-vV] </code> <i>image [images] addr</i></p>
 <h2>DESCRIPTION</h2>

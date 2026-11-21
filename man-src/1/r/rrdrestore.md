@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdrestore/"
 description: "rrdrestore – Restore the contents of an RRD from its XML dump format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdrestore &#8211; Restore the contents of an RRD from its XML dump format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>restore</code> <i>filename.xml</i> <i>filename.rrd</i> [<code>&#8211;range-check</code>|<code>-r</code>]</p>
 <h2>DESCRIPTION</h2>

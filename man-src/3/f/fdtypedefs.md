@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fdtypedefs/"
 description: "ql/methods/finitedifferences/fdtypedefs.hpp – default choices for template instantiations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/methods/finitedifferences/fdtypedefs.hpp &#8211; default choices for template instantiations </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/cranknicolson.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/parallelevolver.hpp&gt; </p>

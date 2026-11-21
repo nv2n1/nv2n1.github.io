@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gosh/"
 description: "gosh – a Scheme script interpreter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gosh &#8211; a Scheme script interpreter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gosh</code> [-biqV] [-I <i>path</i> ] [-A <i>path</i> ] [-u <i>module</i> ] [-l <i>file</i> ] [-e <i>expr</i> ] [-E <i>expr</i> ] [-f <i>flag</i> ] [&#8211;] [ <i>script argument &#8230;</i> ] </p>
 <h2>DESCRIPTION</h2>

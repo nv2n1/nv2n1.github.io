@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kbxutil/"
 description: "kbxutil – List, export, import Keybox data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kbxutil &#8211; List, export, import Keybox data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kbxutil</code> [<code>OPTIONS</code>] [<code>FILES</code>] </p>
 <h2>DESCRIPTION</h2>

@@ -8,8 +8,6 @@ url: "/docs/linux/man/1-neotoppm/"
 
 
   </p>
-<h2 class="name">NAME</h2>
-<p> neotoppm &#8211; convert an Atari Neochrome .neo into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>neotoppm</code> [<i>neofile</i>]  </p>
 <h2>DESCRIPTION</h2>

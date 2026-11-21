@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-move_pages/"
 description: "move_pages – move individual pages of a process to another node"
 ---
 
-<h2 class="name">NAME</h2>
-<p> move_pages &#8211; move individual pages of a process to another node </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;numaif.h&gt;

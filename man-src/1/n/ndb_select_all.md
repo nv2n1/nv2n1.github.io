@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_select_all/"
 description: "ndb_select_all – print rows from an NDB table"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_select_all &#8211; print rows from an NDB table </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_select_all -c </code><i>connect_string</i><i>tbl_name</i><code> -d </code><i>db_name</i><code> [&gt; </code><i>file_name</i><code>]</code></dt></dl>

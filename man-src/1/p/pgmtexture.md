@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmtexture/"
 description: "pgmtexture – calculate textural features on a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmtexture &#8211; calculate textural features on a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmtexture</code> [<code>-d</code> <i>d</i>] [<i>pgmfile</i>]</p>
 <h2>DESCRIPTION</h2>

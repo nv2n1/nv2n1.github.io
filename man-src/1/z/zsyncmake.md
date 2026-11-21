@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zsyncmake/"
 description: "zsyncmake – Build control file for"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zsyncmake &#8211; Build control file for </p>
 <p> <a href="/docs/linux/man/1-zsync/">zsync</a>(1)</p>
 <h2>SYNTAX</h2>
 <p> zsyncmake [ { -z | -Z } ] [ -e ] [ -C ] [ -u <i>url</i> ] [ -U <i>url</i> ] [ -b <i>blocksize</i> ] [ -o <i>outfile</i> ] [ -f <i>targetfilename</i> ] [ -v ] <i>filename</i> </p>

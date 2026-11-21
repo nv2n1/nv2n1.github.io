@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mlx4dv_init_obj/"
 description: "mlx4dv_init_obj – Initialize mlx4 direct verbs object from ibv_xxx structures"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mlx4dv_init_obj &#8211; Initialize mlx4 direct verbs object from ibv_xxx structures </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/mlx4dv.h&gt;

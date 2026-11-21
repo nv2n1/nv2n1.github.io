@@ -6,8 +6,6 @@ letter: "d"
 url: "/docs/linux/man/1-dump2dcm/"
 description: "dump2dcm – Convert ASCII dump to DICOM file"
 ---
-<h2 class="name">NAME</h2>
-<p> dump2dcm - Convert ASCII dump to DICOM file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>dump2dcm [options] dumpfile-in dcmfile-out
 </code></pre>

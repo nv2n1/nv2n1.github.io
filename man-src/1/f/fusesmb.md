@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fusesmb/"
 description: "fusesmb – Mount network neighbourhood"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fusesmb &#8211; Mount network neighbourhood</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fusesmb</code> <i>mountpoint</i> [options]</p>
 <h2>DESCRIPTION</h2>

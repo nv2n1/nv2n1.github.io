@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-open/"
 description: "xdg-open – opens a file or URL in the user’s preferred application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-open &#8211; opens a file or URL in the user&#8217;s preferred application </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-open</code> {<i>file</i> | <i>URL</i>}</dt>

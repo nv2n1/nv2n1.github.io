@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-isdnbill/"
 description: "isdnbill – report isdn costs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> isdnbill &#8211; report isdn costs</p>
 <h2>DESCRIPTION</h2>
 <p> isdnbill is a simple and imperfect utility to show the bill for ISDN calls. Note that it is only for indicative purposes! It works best in Germany, and even then there are no guarantees. Consider its use for educational purposes only&#8230; </p>
 <p> For better results, use isdnrep. </p>

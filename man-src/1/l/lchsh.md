@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lchsh/"
 description: "lchsh – Change login shell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lchsh &#8211; Change login shell</p>
 <h2>SYNOPSIS</h2>
 <p> lchsh [<i>OPTION</i>]&#8230; [<i>user</i>] </p>
 <h2>DESCRIPTION</h2>

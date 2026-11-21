@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-remote-add/"
 description: "flatpak-remote-add – Add a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-remote-add &#8211; Add a remote repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-add</code> [OPTION&#8230;] NAME LOCATION</dt></dl>

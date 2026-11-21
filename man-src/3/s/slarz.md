@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slarz/"
 description: "slarz.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slarz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br />

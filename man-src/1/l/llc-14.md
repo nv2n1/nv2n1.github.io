@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llc-14/"
 description: "llc – LLVM static compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llc &#8211; LLVM static compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llc</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

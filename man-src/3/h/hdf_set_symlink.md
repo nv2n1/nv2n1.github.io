@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_set_symlink/"
 description: "hdf_set_symlink – Set part of the tree to link to another"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_set_symlink &#8211; Set part of the tree to link to another </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

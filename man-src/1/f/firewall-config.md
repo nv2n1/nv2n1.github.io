@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-firewall-config/"
 description: "firewall-config – firewalld GUI configuration tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> firewall-config &#8211; firewalld GUI configuration tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>firewall-config</code> [OPTIONS&#8230;]</dt></dl>

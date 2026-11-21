@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ssgrep/"
 description: "ssgrep – search spreadsheets for strings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssgrep &#8211; search spreadsheets for strings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssgrep </code> [<i>OPTIONS</i>] [<i>FILES</i>] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtopng/"
 description: "pnmtopng – convert a portable anymap into a Portable Network Graphics file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtopng &#8211; convert a portable anymap into a Portable Network Graphics file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtopng</code> [-verbose] [-downscale] [-interlace] [-alpha file]<br />
  [-transparent [=]color] [-background color] [-gamma value]<br />

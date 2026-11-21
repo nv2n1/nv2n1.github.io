@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_post_srq_ops/"
 description: "ibv_post_srq_ops – perform on a special shared receive queue (SRQ) configuration manipulations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_post_srq_ops &#8211; perform on a special shared receive queue (SRQ) configuration manipulations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

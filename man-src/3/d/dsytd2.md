@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dsytd2/"
 description: "dsytd2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsytd2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsytd2</code> (UPLO, N, A, LDA, D, E, TAU, INFO)<br />

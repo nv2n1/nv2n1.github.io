@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zipcloak/"
 description: "zipcloak – encrypt entries in a zipfile"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zipcloak &#8211; encrypt entries in a zipfile</p>
 <h2>SYNOPSIS</h2>
 <p> <i>zipcloak</i> [<code>-d</code>] [<code>-b path</code>] [<code>-h</code>] [<code>-v</code>] [<code>-L</code>] zipfile </p>
 <h2>ARGUMENTS</h2>

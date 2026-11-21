@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pulseaudio/"
 description: "pulseaudio – The PulseAudio Sound System"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pulseaudio &#8211; The PulseAudio Sound System </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pulseaudio [</code><i>options</i><code>] </p>
 <p> pulseaudio &#8211;help </p>

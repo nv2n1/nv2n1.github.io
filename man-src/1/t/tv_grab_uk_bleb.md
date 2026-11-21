@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_uk_bleb/"
 description: "tv_grab_uk_bleb – Grab TV listings for the United Kingdom, from bleb.org"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_uk_bleb &#8211; Grab TV listings for the United Kingdom, from bleb.org </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_uk_bleb &#8211;help </p>
 <p> tv_grab_uk_bleb [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">OPTION</font>] </p>

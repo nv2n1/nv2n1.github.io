@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rnews/"
 description: "rnews – Inject individual articles and UUCP batches into INN"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rnews &#8211; Inject individual articles and UUCP batches into INN </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rnews</code> [<code>-NUv</code>] [<code>-h</code> <i>host</i>] [<code>-P</code> <i>port</i>] [<code>-rS</code> <i>server</i>] [<i>file</i>]</p>
 <h2>DESCRIPTION</h2>

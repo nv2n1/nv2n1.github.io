@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-time-admin/"
 description: "time-admin – Time Administration Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> time-admin &#8211; Time Administration Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>time-admin</code> [<i>OPTION&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

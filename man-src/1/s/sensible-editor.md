@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sensible-editor/"
 description: "sensible-editor – sensible editing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sensible-editor &#8211; sensible editing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sensible-editor</code> [OPTIONS&#8230;] </p>
 <h2>DESCRIPTION</h2>

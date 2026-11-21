@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-chroot/"
 description: "chroot – change root directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chroot &#8211; change root directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int chroot(const char *</code><i>path</i><code>);</code> </p>

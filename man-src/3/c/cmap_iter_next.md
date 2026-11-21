@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cmap_iter_next/"
 description: "cmap_iter_next – Return next item in iteration in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmap_iter_next &#8211; Return next item in iteration in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_iter_next(cmap_handle_t </code><i>handle</i><code>, cmap_iter_handle_t </code><i>iter_handle</i><code>, char </code><i>key_name[]</i><code>, size_t *</code><i>value_len</i><code>, cmap_value_types_t *</code><i>type</i><code>);</code> </p>

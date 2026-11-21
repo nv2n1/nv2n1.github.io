@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-endpoint/"
 description: "tracker3-endpoint – Create a SPARQL endpoint"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-endpoint &#8211; Create a SPARQL endpoint </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 endpoint[--dbus - service | -b]&lt;service_name&gt;[--database - path | -d]&lt;database_path&gt;[[--ontology | -o]&lt;ontology_name&gt; |

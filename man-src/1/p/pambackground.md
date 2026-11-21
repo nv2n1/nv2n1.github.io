@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pambackground/"
 description: "pambackground – create a mask of the background area of an image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pambackground &#8211; create a mask of the background area of an image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pambackground</code> </p>
 <p> [<i>netpbmfile</i>] </p>

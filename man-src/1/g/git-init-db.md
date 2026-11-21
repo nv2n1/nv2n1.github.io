@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-init-db/"
 description: "git-init-db – Creates an empty Git repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-init-db &#8211; Creates an empty Git repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git init - db[-q | --quiet][--bare][--template = &lt;template_directory&gt;][--separate - git - dir&lt;git dir&gt;][--shared[=&lt;permissions&gt;]]

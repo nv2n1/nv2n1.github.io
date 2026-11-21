@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pw-cli/"
 description: "pw-cli – The PipeWire Command Line Interface"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pw-cli &#8211; The PipeWire Command Line Interface </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <code>pw-cli</code> [<i>command</i>]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-push/"
 description: "git-push – Update remote refs along with associated objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-push &#8211; Update remote refs along with associated objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git push[--all | --mirror | --tags][--follow - tags][--atomic][-n | --dry - run][--receive - pack = &lt;git - receive - pack&gt;]

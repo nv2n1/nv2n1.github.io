@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arcclean/"
 description: "arcclean – ARC Clean"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arcclean &#8211; ARC Clean</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcclean</code> command removes a job from the remote cluster. </p>
 <h2>SYNOPSIS</h2>

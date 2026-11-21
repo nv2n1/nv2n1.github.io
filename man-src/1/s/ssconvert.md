@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ssconvert/"
 description: "ssconvert – a command line spreadsheet format converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssconvert &#8211; a command line spreadsheet format converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssconvert</code> [<i>OPTIONS</i>] <i>infile</i> <i>outfile</i> </p>
 <p> <code>ssconvert</code> [<i>OPTIONS</i>] <code>&#8211;merge-to</code> <i>outfile</i> <i>infile1</i> <i>infile2</i> <code>&#8230;</code> </p>

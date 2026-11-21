@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lwp-download/"
 description: "lwp-download – Fetch large files from the web"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwp-download &#8211; Fetch large files from the web </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lwp-download</code> [<code>-a</code>] [<code>-s</code>] &lt;<i>url</i>&gt; [&lt;<i>local path</i>&gt;]</p>
 <h2>DESCRIPTION</h2>

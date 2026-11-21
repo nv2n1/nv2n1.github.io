@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stty/"
 description: "stty – change and print terminal line settings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stty &#8211; change and print terminal line settings </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stty</code> [<i>,-F DEVICE | &#8211;file=DEVICE/</i>] [<i>,SETTING/</i>]&#8230;<br />
  <code>stty</code> [<i>,-F DEVICE | &#8211;file=DEVICE/</i>] [<i>,-a|&#8211;all/</i>]<br />

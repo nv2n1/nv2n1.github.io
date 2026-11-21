@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-relink/"
 description: "git-relink – Hardlink common objects in local repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-relink &#8211; Hardlink common objects in local repositories </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git relink</i> [--safe] &lt;dir&gt;... &lt;master_dir&gt;

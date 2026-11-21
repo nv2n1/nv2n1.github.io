@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtoppm/"
 description: "ppmtoppm – copy PPM image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtoppm &#8211; copy PPM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoppm</code> </p>
 <h2>DESCRIPTION</h2>

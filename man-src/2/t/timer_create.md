@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-timer_create/"
 description: "timer_create – create a POSIX per-process timer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> timer_create &#8211; create a POSIX per-process timer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;

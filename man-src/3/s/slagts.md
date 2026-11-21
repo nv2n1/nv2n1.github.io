@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slagts/"
 description: "slagts.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slagts.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slagts</code> (JOB, N, A, B, C, D, IN, Y, TOL, INFO)<br />

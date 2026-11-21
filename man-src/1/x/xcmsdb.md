@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xcmsdb/"
 description: "xcmsdb – Device Color Characterization utility for X Color Management System"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xcmsdb &#8211; Device Color Characterization utility for X Color Management System </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcmsdb</code> [ <code>-query</code> ] [ <code>-remove</code> ] [ <code>-format 32</code>|<code>16</code>|<code>8</code> ] [ <code>-help</code> ] [ <code>-version</code> ] [ <i>filename</i> ]</p>
 <h2>DESCRIPTION</h2>

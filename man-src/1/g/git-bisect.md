@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-bisect/"
 description: "git-bisect – Use binary search to find the commit that introduced a bug"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-bisect &#8211; Use binary search to find the commit that introduced a bug </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git bisect</i> &lt;subcommand&gt; &lt;options&gt;

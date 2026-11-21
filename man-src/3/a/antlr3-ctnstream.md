@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-ctnstream/"
 description: "ANTLR3_TREE_PARSER_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_TREE_PARSER_struct &#8211; </p>
 <p> Internal structure representing an element in a hash bucket.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3treeparser.h">antlr3treeparser.h</a>&gt;</p>

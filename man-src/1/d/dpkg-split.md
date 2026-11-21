@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-split/"
 description: "dpkg-split – Debian package archive split/join tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-split &#8211; Debian package archive split/join tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-split</code> [<i>option</i>&#8230;] <i>command</i></p>
 <h2>DESCRIPTION</h2>

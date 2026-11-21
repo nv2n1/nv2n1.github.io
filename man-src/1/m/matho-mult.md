@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-matho-mult/"
 description: "matho-mult – multiply integers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> matho-mult &#8211; multiply integers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>matho-mult</code> [integers] </p>
 <h2>DESCRIPTION</h2>

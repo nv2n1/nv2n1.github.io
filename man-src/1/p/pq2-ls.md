@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pq2-ls/"
 description: "pq2-ls – List the available datasets in a dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pq2-ls &#8211; List the available datasets in a dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-ls</code> [options] [datasets]</p>
 <h2>DESCRIPTION</h2>

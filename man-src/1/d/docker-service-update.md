@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-service-update/"
 description: "docker-service-update – Update a service"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-service-update &#8211; Update a service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service update [OPTIONS] SERVICE</code> </p>
 <h2>DESCRIPTION</h2>

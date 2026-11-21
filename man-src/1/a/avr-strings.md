@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-avr-strings/"
 description: "strings – print the strings of printable characters in files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> strings &#8211; print the strings of printable characters in files. </p>
 <h2>SYNOPSIS</h2>
 <p> strings [<code>-afovV</code>] [<code>&#8211;</code><i>min-len</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>&nbsp;<wbr><i>min-len</i>]&nbsp;<wbr>[<code>&#8211;bytes=</code><i>min-len</i>]<br />

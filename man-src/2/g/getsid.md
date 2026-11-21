@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getsid/"
 description: "getsid – get session ID"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getsid &#8211; get session ID </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>

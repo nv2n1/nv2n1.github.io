@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-archiver/"
 description: "zarafa-archiver – Manages zarafa archives and performs the archive operation."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-archiver &#8211; Manages zarafa archives and performs the archive operation. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-archiver</code> [<i>OPTION</i>&#8230;]</dt></dl>

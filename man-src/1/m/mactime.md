@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mactime/"
 description: "mactime – Create an ASCII time line of file activity"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mactime &#8211; Create an ASCII time line of file activity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mactime [-b</code> <i>body</i> <code>] [-g </code> <i>group file</i> <code>] [-p </code> <i>password file</i> <code>] [-i</code> <i>(day|hour) index file</i> <code>] [-dhmVy] [-z</code> <i>TIME_ZONE</i> <code>] [DATE_RANGE]</code></p>
 <h2>DESCRIPTION</h2>

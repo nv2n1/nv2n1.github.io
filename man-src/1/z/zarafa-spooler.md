@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-spooler/"
 description: "zarafa-spooler – Start the Zarafa spooler."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-spooler &#8211; Start the Zarafa spooler. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-spooler</code> [<i>OPTION</i>&#8230;] [<i>SERVERNAME</i>]</dt></dl>

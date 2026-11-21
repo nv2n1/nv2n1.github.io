@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tbl-dctrl/"
 description: "tbl-dctrl – generate tabular representations of data in dctrl format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tbl-dctrl &#8211; generate tabular representations of data in dctrl format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tbl-dctrl</code> [ <i>options</i> ] [ <code>-c</code> <i>column-specification</i> &#8230; ] [ <i>filename</i> ] &#8230; </p>
 <p> <code>tbl-dctrl</code> <code>&#8211;version</code> </p>

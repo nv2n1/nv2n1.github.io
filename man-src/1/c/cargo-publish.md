@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-publish/"
 description: "cargo-publish – Upload a package to the registry."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-publish &#8211; Upload a package to the registry. </p>
 <h2>SYNOPSIS</h2>
 <p> cargo publish [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

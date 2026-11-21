@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-vendor/"
 description: "dpkg-vendor – queries information about distribution vendors"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-vendor &#8211; queries information about distribution vendors </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-vendor</code> [<i>option</i>&#8230;] <i>command</i></p>
 <h2>DESCRIPTION</h2>

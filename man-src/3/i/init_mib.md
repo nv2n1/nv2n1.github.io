@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-init_mib/"
 description: "init_mib, add_mibdir, init_mib_internals, add_module_replacement, read_module, read_mib, read_all_mibs, read_objid, read_module_node, get_module_node, snmp_set_mib_warnings, snmp_set_save_descripti..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> init_mib, add_mibdir, init_mib_internals, add_module_replacement, read_module, read_mib, read_all_mibs, read_objid, read_module_node, get_module_node, snmp_set_mib_warnings, snmp_set_save_descriptions, shutdown_mib, print_mib, print_variable, fprint_variable, snprint_variable, sprint_realloc_variable, print_value, fprint_value, snprint_value, sprint_realloc_value, print_objid, fprint_objid, snprint_objid, sprint_realloc_objid, print_description, fprint_description &#8211; mib_api functions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/net-snmp/mib_api.h">net-snmp/mib_api.h</a>&gt;</code> </p>
 <p> <code>void init_mib(void);</code><br />

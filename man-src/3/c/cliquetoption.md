@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cliquetoption/"
 description: "ql/instruments/cliquetoption.hpp – Cliquet option."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/instruments/cliquetoption.hpp &#8211; Cliquet option. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
  #include &lt;ql/instruments/payoffs.hpp&gt;<br />

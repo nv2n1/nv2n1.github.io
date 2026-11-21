@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvipos/"
 description: "dvipos – compute positions in a DVI file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvipos &#8211; compute positions in a DVI file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvipos</code> [ <i>OPTION</i>&#8230; ] <i>infile[.dvi]</i> </p>
 <h2>DESCRIPTION</h2>

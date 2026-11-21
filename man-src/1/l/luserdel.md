@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-luserdel/"
 description: "luserdel – Delete an user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> luserdel &#8211; Delete an user</p>
 <h2>SYNOPSIS</h2>
 <p> luserdel [<i>OPTION</i>]&#8230; <i>user</i> </p>
 <h2>DESCRIPTION</h2>

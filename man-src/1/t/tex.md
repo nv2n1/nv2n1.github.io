@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tex/"
 description: "tex, initex – text formatting and typesetting"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tex, initex &#8211; text formatting and typesetting </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmscale/"
 description: "pnmscale – scale a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmscale &#8211; scale a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmscale</code> <i>scale_factor</i> [<i>pnmfile</i>]<br />
  <code>pnmscale -reduce</code> <i>reduction_factor</i> [<i>pnmfile</i>]<br />

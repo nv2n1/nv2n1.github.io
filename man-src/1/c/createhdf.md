@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-createhdf/"
 description: "createhdf – Create a blank IDE hard disk image in .hdf format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> createhdf &#8211; Create a blank IDE hard disk image in .hdf format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>createhdf</code> [ -c ] [ -s ] <i>cylinders heads sectors file</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kpsestat/"
 description: "kpsestat – compute octal mode from mode of existing file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kpsestat &#8211; compute octal mode from mode of existing file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kpsestat</code> <i>mode</i> <i>file</i></p>
 <h2>DESCRIPTION</h2>

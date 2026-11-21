@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ctel/"
 description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cssh, crsh, ctel, ccon &#8211; Cluster administration tool </p>
 <h2>SYNOPSIS</h2>
 <p> cssh&nbsp;<wbr>[options]&nbsp;<wbr>[[user@]&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;] crsh&nbsp;<wbr>[options]&nbsp;<wbr>[[user@]&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;] ctel&nbsp;<wbr>[options]&nbsp;<wbr>[&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;] ccon&nbsp;<wbr>[options]&nbsp;<wbr>[[user@]&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;]</p>
 <h2>DESCRIPTION</h2>

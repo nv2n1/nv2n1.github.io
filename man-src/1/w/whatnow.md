@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-whatnow/"
 description: "whatnow – prompting front-end for sending messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> whatnow &#8211; prompting front-end for sending messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>whatnow</code> [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-prompt</code> <i>string</i>] [<i>file</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

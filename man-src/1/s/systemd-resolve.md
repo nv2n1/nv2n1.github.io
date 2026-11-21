@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-resolve/"
 description: "resolvectl, resolvconf, systemd-resolve – Resolve domain names, IPV4 and IPv6 addresses, DNS resource records, and services; introspect and reconfigure the DNS resolver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> resolvectl, resolvconf, systemd-resolve &#8211; Resolve domain names, IPV4 and IPv6 addresses, DNS resource records, and services; introspect and reconfigure the DNS resolver </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>resolvectl</code> [OPTIONS&#8230;] {COMMAND} [NAME&#8230;]</dt></dl>

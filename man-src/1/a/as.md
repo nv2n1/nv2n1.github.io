@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-as/"
 description: "AS – the portable GNU assembler."
 ---
 
-<h2 class="name">NAME</h2>
-<p> AS &#8211; the portable GNU assembler. </p>
 <h2>SYNOPSIS</h2>
 <p> as [<code>-a</code>[<code>cdghlns</code>][=<i>file</i>]] [<code>&#8211;alternate</code>] [<code>-D</code>]<br />
 &nbsp;[<code>&#8211;compress-debug-sections</code>]&nbsp;<wbr>&nbsp;[<code>&#8211;nocompress-debug-sections</code>]<br />

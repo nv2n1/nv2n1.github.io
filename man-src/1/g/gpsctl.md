@@ -6,8 +6,6 @@ letter: "g"
 url: "/docs/linux/man/1-gpsctl/"
 description: "gpsctl – control the modes of a GPS"
 ---
-<h2 class="name">NAME</h2>
-<p> gpsctl - control the modes of a GPS </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>gpsctl</code> [-h] [-b | -n] [-x&nbsp;<wbr><i>control</i>] [-e] [-f] [-l] [-s&nbsp;<wbr><i>speed</i>] [-t&nbsp;<wbr><i>devicetype</i>] [-D&nbsp;<wbr><i>debuglevel</i>] [-V] [<i>serial-port</i>] </dt>

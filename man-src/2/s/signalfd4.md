@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-signalfd4/"
 description: "signalfd – create a file descriptor for accepting signals"
 ---
 
-<h2 class="name">NAME</h2>
-<p> signalfd &#8211; create a file descriptor for accepting signals </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/signalfd.h&gt;</code> </p>
 <p> <code>int signalfd(int </code><i>fd</i><code>, const sigset_t *</code><i>mask</i><code>, int </code><i>flags</i><code>);</code></p>

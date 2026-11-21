@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setfsgid32/"
 description: "setfsgid – set group identity used for filesystem checks"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setfsgid &#8211; set group identity used for filesystem checks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/fsuid.h&gt;</code> </p>
 <p> <code>int setfsgid(uid_t </code><i>fsgid</i><code>);</code></p>

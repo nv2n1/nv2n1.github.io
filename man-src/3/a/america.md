@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-america/"
 description: "ql/currencies/america.hpp – American currencies."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/currencies/america.hpp &#8211; American currencies. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/currency.hpp&gt; </p>
 <h3>Classes</h3>

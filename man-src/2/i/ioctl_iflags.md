@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-ioctl_iflags/"
 description: "ioctl_iflags – ioctl() operations for inode flags"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ioctl_iflags &#8211; ioctl() operations for inode flags </p>
 <h2>DESCRIPTION</h2>
 <p> Various Linux filesystems support the notion of <i>inode flags</i>&#8212;attributes that modify the semantics of files and directories. These flags can be retrieved and modified using two <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations: </p>
 <p> int attr; fd = open(&quot;pathname&quot;, &#8230;); </p>

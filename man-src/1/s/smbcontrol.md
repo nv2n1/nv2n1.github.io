@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-smbcontrol/"
 description: "smbcontrol – send messages to smbd, nmbd or winbindd processes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> smbcontrol &#8211; send messages to smbd, nmbd or winbindd processes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

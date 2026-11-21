@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sethostname/"
 description: "gethostname, sethostname – get/set hostname"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gethostname, sethostname &#8211; get/set hostname </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int gethostname(char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-initdb/"
 description: "initdb – create a new PostgreSQL database cluster"
 ---
 
-<h2 class="name">NAME</h2>
-<p> initdb &#8211; create a new PostgreSQL database cluster </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>initdb</code> [<i>option</i>&#8230;] [<code>&#8211;pgdata</code> | <code>-D</code>]<i> directory</i></dt></dl>

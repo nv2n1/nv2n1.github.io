@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-elinks/"
 description: "elinks – lynx-like alternative character mode WWW browser"
 ---
 
-<h2 class="name">NAME</h2>
-<p> elinks &#8211; lynx-like alternative character mode WWW browser </p>
 <h2>SYNOPSIS</h2>
 <p> <i>elinks</i> [OPTION]&#8230; [URL]&#8230; </p>
 <h2>DESCRIPTION</h2>

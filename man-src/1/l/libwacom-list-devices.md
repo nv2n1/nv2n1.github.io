@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libwacom-list-devices/"
 description: "libwacom-list-devices – utility to list supported tablet devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libwacom-list-devices &#8211; utility to list supported tablet devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>libwacom-list-devices [&#8211;format=yaml|datafile]</code> </p>
 <h2>DESCRIPTION</h2>

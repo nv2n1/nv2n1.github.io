@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-alsabat/"
 description: "alsabat – command-line sound tester for ALSA sound card driver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> alsabat &#8211; command-line sound tester for ALSA sound card driver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>alsabat</code> [<i>flags</i>] </p>
 <h2>DESCRIPTION</h2>

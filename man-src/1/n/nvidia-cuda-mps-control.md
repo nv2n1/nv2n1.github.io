@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nvidia-cuda-mps-control/"
 description: "nvidia-cuda-mps-control – NVIDIA CUDA Multi Process Service management program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nvidia-cuda-mps-control &#8211; NVIDIA CUDA Multi Process Service management program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nvidia-cuda-mps-control</code> [<code>-d | -f</code>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rstartd/"
 description: "rstartd – a sample implementation of a Remote Start rsh helper"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rstartd &#8211; a sample implementation of a Remote Start rsh helper </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rstartd</code> </p>
 <p> <code>rstartd.real</code> [-c <i>configfilename</i>]</p>

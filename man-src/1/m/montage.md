@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-montage/"
 description: "montage – create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more."
 ---
 
-<h2 class="name">NAME</h2>
-<p> montage &#8211; create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>montage-im6.q16</code> <i>input-file[s]</i> [<i>options</i>] <i>output-file</i></dt>

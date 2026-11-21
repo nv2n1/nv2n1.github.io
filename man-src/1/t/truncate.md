@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-truncate/"
 description: "truncate – shrink or extend the size of a file to the specified size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> truncate &#8211; shrink or extend the size of a file to the specified size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>truncate</code> <i>,OPTION/</i>&#8230; <i>,FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaed1/"
 description: "slaed1.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaed1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed1</code> (N, D, Q, LDQ, INDXQ, RHO, CUTPNT, WORK, IWORK, INFO)<br />

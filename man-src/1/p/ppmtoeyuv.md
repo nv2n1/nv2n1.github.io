@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtoeyuv/"
 description: "ppmtoeyuv – convert a portable pixmap into a Berkeley YUV file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtoeyuv &#8211; convert a portable pixmap into a Berkeley YUV file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoeyuv</code> [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

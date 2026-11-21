@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fexecve/"
 description: "fexecve – execute program specified via file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fexecve &#8211; execute program specified via file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

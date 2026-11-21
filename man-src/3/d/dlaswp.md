@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaswp/"
 description: "dlaswp.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaswp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaswp</code> (N, A, LDA, K1, K2, IPIV, INCX)<br />

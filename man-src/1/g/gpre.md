@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpre/"
 description: "gpre – Firebird source pre-processor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpre &#8211; Firebird source pre-processor </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>gpre</code> [<i>option</i>&#8230;] <i>input</i> <i>output</i></dt>

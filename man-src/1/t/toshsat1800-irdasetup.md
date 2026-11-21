@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-toshsat1800-irdasetup/"
 description: "toshsat1800-irdasetup – IrDA setup utility for Toshiba Satellite 1800"
 ---
 
-<h2 class="name">NAME</h2>
-<p> toshsat1800-irdasetup &#8211; IrDA setup utility for Toshiba Satellite 1800 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>toshsat1800-irdasetup</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

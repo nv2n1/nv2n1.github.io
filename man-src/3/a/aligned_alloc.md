@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-aligned_alloc/"
 description: "posix_memalign, aligned_alloc, memalign, valloc, pvalloc – allocate aligned memory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> posix_memalign, aligned_alloc, memalign, valloc, pvalloc &#8211; allocate aligned memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

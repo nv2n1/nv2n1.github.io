@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xine-bugreport/"
 description: "xine-check – a checker for the xine video player"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xine-check &#8211; a checker for the xine video player</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xine-check </code> [<i>-q</i>] [<i>-v</i>] [<i>-B</i>] [<i>-b</i>]<br />
  <code>xine-bugreport</code> [<i>-q</i>] [<i>-v</i>] [<i>-B</i>] </p>

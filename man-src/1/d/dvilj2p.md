@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvilj2p/"
 description: "dvilj4, dvilj4l, dvilj2p, dvilj – convert a TeX DVI file to PCL, for HP LaserJet printers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvilj4, dvilj4l, dvilj2p, dvilj &#8211; convert a TeX DVI file to PCL, for HP LaserJet printers </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]

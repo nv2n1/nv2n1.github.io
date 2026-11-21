@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasq6/"
 description: "dlasq6.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasq6.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasq6</code> (I0, N0, Z, PP, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2)<br />

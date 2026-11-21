@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debconf-updatepo/"
 description: "debconf-updatepo – update PO files about debconf templates"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debconf-updatepo &#8211; update PO files about debconf templates </p>
 <h2>SYNOPSIS</h2>
 <p> <code>debconf-updatepo</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>&#8211;skip-pot</code>] [<code>&#8211;skip-merge</code>] [<code>&#8211;msgid-bugs-address=</code><font SIZE="-1">EMAIL</font>]</p>
 <h2>DESCRIPTION</h2>

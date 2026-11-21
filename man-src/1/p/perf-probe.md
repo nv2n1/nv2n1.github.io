@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-probe/"
 description: "perf-probe – Define new dynamic tracepoints"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-probe &#8211; Define new dynamic tracepoints </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf probe[options]-- add = PROBE[...] or

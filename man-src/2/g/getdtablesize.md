@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getdtablesize/"
 description: "getdtablesize – get file descriptor table size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getdtablesize &#8211; get file descriptor table size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int getdtablesize(void);</code> </p>

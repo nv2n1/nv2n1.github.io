@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gftodvi/"
 description: "gftodvi – make proof sheets from generic font files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gftodvi &#8211; make proof sheets from generic font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gftodvi</code> [<code>-overflow-label-offset=</code><i>,real/</i>] [<code>-verbose</code>] <i>gf_file_name</i></p>
 <h2>DESCRIPTION</h2>

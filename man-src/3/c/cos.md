@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cos/"
 description: "cos, cosf, cosl – cosine function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cos, cosf, cosl &#8211; cosine function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

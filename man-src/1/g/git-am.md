@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-am/"
 description: "git-am – Apply a series of patches from a mailbox"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-am &#8211; Apply a series of patches from a mailbox </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git am[--signoff][--keep][--[no - ] keep - cr][--[no - ] utf8]

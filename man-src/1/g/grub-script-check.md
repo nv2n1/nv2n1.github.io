@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grub-script-check/"
 description: "grub-script-check – check grub.cfg for syntax errors"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grub-script-check &#8211; check grub.cfg for syntax errors </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-script-check</code> [<i>,OPTION/</i>&#8230;] [<i>,PATH/</i>]</p>
 <h2>DESCRIPTION</h2>

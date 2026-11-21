@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clauum/"
 description: "clauum.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clauum.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clauum</code> (UPLO, N, A, LDA, INFO)<br />

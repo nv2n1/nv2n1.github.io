@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pto_move/"
 description: "pto_move – Move a project file with all images in it."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pto_move &#8211; Move a project file with all images in it. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pto_move</code> [options] path1/source.pto path2/dest.pto</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-dup3/"
 description: "dup, dup2, dup3 – duplicate a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dup, dup2, dup3 &#8211; duplicate a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

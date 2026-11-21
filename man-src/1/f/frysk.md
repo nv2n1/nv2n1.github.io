@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-frysk/"
 description: "frysk – launches the Frysk Execution Analysis Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> frysk &#8211; launches the Frysk Execution Analysis Tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>frysk</code></dt></dl>

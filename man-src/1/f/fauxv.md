@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fauxv/"
 description: "fauxv – print the auxiliary vector"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fauxv &#8211; print the auxiliary vector </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fauxv</code> [<i>options</i>] {<i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>

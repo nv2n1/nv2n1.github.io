@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-gateway/"
 description: "zarafa-gateway – Start the Zarafa IMAP/POP3 Gateway."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-gateway &#8211; Start the Zarafa IMAP/POP3 Gateway. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-gateway</code> [<i>OPTION</i>&#8230;]</dt></dl>

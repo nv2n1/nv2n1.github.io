@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-megamv/"
 description: "megamv – move or rename files or folders on your Mega.co.nz account"
 ---
 
-<h2 class="name">NAME</h2>
-<p> megamv &#8211; move or rename files or folders on your Mega.co.nz account </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>megamv</i> &lt;srcpaths&gt;... &lt;destpath&gt;

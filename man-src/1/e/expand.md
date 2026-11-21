@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-expand/"
 description: "expand – convert tabs to spaces"
 ---
 
-<h2 class="name">NAME</h2>
-<p> expand &#8211; convert tabs to spaces </p>
 <h2>SYNOPSIS</h2>
 <p> <code>expand</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

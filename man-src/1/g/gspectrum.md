@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gspectrum/"
 description: "gspectrum – a small spectrum viewer application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gspectrum &#8211; a small spectrum viewer application </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gspectrum</code> [<code>OPTION(S)</code>&#8230;] [<i>FILE</i>&#8230;]</dt></dl>

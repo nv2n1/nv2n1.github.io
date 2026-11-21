@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaeda/"
 description: "dlaeda.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaeda.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaeda</code> (N, TLVLS, CURLVL, CURPBM, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, Q, QPTR, Z, ZTEMP, INFO)<br />

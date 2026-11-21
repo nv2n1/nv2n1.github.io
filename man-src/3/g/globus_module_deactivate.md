@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_module_deactivate/"
 description: "globus_module.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_module.h &#8211; </p>
 <p> Reference Counting Module Activation and Deactivation.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_error_generic.h&#8217;<br />

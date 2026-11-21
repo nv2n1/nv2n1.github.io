@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-regsvr32-stable/"
 description: "regsvr32 – Wine DLL Registration Server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> regsvr32 &#8211; Wine DLL Registration Server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>regsvr32</code> [<code>/u</code>] [<code>/s</code>] [<code>/n</code>] [<code>/i</code>[<code>:</code><i>cmdline</i>]] <i>dllname</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hhvm/"
 description: "hhvm – Execute PHP and Hack files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hhvm &#8211; Execute PHP and Hack files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hhvm</code> [<i>OPTIONS</i>] [<i>-f</i>] file [<i>[</i>&#8212;<i>]</i>args<i>&#8230;</i>]<br />
  <code>hhvm</code> &#8211;php [<i>PHP-OPTIONS</i>] [<i>-f</i>] file [<i>[</i>&#8212;<i>]</i>args<i>&#8230;</i>] </p>

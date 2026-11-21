@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rls_client_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Activation &#8211; </p>
 <p> This module must be activated before any functions in this API may be used.</p>
 <h3>Defines</h3>
 <p> #define <code>GLOBUS_RLS_CLIENT_MODULE</code> (&amp;<code>globus_rls_client_module</code>) </p>

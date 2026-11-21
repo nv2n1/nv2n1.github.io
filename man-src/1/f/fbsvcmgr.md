@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fbsvcmgr/"
 description: "fbsvcmgr – access services API of Firebird"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fbsvcmgr &#8211; access services API of Firebird </p>
 <h2>SYNOPSYS</h2>
 <dl>
 <dt>fbsvcmgr service_mgr <i>parameter&#8230;</i></dt>

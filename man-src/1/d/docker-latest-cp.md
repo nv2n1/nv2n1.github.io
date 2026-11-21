@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-cp/"
 description: "docker-cp – Copy files/folders between a container and the local filesystem."
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-cp &#8211; Copy files/folders between a container and the local filesystem. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker cp</code> [<code>&#8211;help</code>] CONTAINER:SRC_PATH DEST_PATH|- </p>
 <p> <code>docker cp</code> [<code>&#8211;help</code>] SRC_PATH|- CONTAINER:DEST_PATH </p>

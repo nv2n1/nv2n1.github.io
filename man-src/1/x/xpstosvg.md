@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xpstosvg/"
 description: "xpstosvg – XPS to SVG converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xpstosvg &#8211; XPS to SVG converter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xpstosvg</code> [<i>OPTION</i>&#8230;] FILE [<i>OUTPUT FILE</i>]</dt></dl>

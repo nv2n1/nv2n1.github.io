@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xconsole/"
 description: "xconsole – monitor system console messages with X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xconsole &#8211; monitor system console messages with X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xconsole</code> [-<i>toolkitoption</i> &#8230;] [-file <i>file-name</i>] [-notify] [-stripNonprint] [-daemon] [-verbose] [-exitOnFail]</p>
 <h2>DESCRIPTION</h2>

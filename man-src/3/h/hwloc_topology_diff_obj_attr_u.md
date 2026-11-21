@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_topology_diff_obj_attr_u/"
 description: "hwloc_topology_diff_obj_attr_u –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwloc_topology_diff_obj_attr_u &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;diff.h&gt;</p>
 <h3>Data Structures</h3>

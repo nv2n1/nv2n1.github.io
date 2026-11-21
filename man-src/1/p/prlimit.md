@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-prlimit/"
 description: "prlimit – get and set process resource limits"
 ---
 
-<h2 class="name">NAME</h2>
-<p> prlimit &#8211; get and set process resource limits </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prlimit</code> [options] [<code>&#8211;resource</code>[=<i>limits</i>]] [<code>&#8211;pid</code> <i>PID</i>] </p>
 <p> <code>prlimit</code> [options] [<code>&#8211;resource</code>[=<i>limits</i>]] <i>command</i> [<i>argument</i>&#8230;]</p>

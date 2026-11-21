@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nspr-config/"
 description: "nspr-config – Return meta information about nspr libraries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nspr-config &#8211; Return meta information about nspr libraries </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nspr-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;includedir</code>] [<code>&#8211;libs</code>] [<code>&#8211;cflags</code>] [<code>&#8211;libdir</code>] [<code>&#8211;version</code>]</dt></dl>

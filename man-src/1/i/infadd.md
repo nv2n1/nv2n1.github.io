@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-infadd/"
 description: "infadd – infinite additions to LDAP server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> infadd &#8211; infinite additions to LDAP server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>infadd</code> <i>-s suffix -u bindDN -w password </i>[<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

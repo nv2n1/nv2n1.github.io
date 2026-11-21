@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml2dsr/"
 description: "xml2dsr – Convert DICOM SR file and data set to XML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml2dsr &#8211; Convert DICOM SR file and data set to XML </p>
 <h2>SYNOPSIS</h2>
 <pre>
 xml2dsr [options] xmlfile-in dsrfile-out

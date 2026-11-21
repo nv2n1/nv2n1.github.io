@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-cgls/"
 description: "systemd-cgls – Recursively show control group contents"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-cgls &#8211; Recursively show control group contents </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-cgls</code> [OPTIONS&#8230;] [CGROUP&#8230;]</dt>

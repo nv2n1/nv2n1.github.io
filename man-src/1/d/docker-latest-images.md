@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-images/"
 description: "docker-images – List images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-images &#8211; List images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker images</code> [<code>&#8211;help</code>] [<code>-a</code>|<code>&#8211;all</code>] [<code>&#8211;digests</code>] [<code>-f</code>|<code>&#8211;filter</code>[=<i>[]</i>]] [<code>&#8211;no-trunc</code>] [<code>-q</code>|<code>&#8211;quiet</code>] [REPOSITORY[:TAG]] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ionice/"
 description: "ionice – set or get process I/O scheduling class and priority"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ionice &#8211; set or get process I/O scheduling class and priority </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ionice</code> [<code>-c</code> <i>class</i>] [<code>-n</code> <i>level</i>] [<code>-t</code>] <code>-p</code> <i>PID</i> </p>
 <p> <code>ionice</code> [<code>-c</code> <i>class</i>] [<code>-n</code> <i>level</i>] [<code>-t</code>] <code>-P</code> <i>PGID</i> </p>

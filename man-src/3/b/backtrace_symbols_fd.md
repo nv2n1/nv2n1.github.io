@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-backtrace_symbols_fd/"
 description: "backtrace, backtrace_symbols, backtrace_symbols_fd – support for application self-debugging"
 ---
 
-<h2 class="name">NAME</h2>
-<p> backtrace, backtrace_symbols, backtrace_symbols_fd &#8211; support for application self-debugging </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;execinfo.h&gt;</code> </p>
 <p> <code>int backtrace(void</code> <code>**</code><i>buffer</i><code>,</code> <code>int</code> <i>size</i><code>);</code> </p>

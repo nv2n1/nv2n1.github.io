@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndctl-disable-region/"
 description: "ndctl-disable-region – disable the given region(s) and all descendant namespaces"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndctl-disable-region &#8211; disable the given region(s) and all descendant namespaces </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>ndctl disable-region</i> &lt;region&gt; [&lt;options&gt;]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mrpt-performance/"
 description: "mrpt-performance – Complete performance test for MRPT"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mrpt-performance &#8211; Complete performance test for MRPT </p>
 <h2>SYNOPSIS</h2>
 <p> mrpt-performance</p>
 <h2>DESCRIPTION</h2>

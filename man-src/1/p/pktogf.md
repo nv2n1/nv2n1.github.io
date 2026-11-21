@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pktogf/"
 description: "pktogf – convert packed font files to generic font files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pktogf &#8211; convert packed font files to generic font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pktogf</code> [<code>-v</code>] <i>pk_file_name</i> [<i>gf_file_name</i>]</p>
 <h2>DESCRIPTION</h2>

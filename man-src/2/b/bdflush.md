@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-bdflush/"
 description: "bdflush – start, flush, or tune buffer-dirty-flush daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bdflush &#8211; start, flush, or tune buffer-dirty-flush daemon </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/kdaemon.h&gt;

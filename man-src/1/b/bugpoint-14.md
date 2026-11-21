@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bugpoint-14/"
 description: "bugpoint – automatic test case reduction tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bugpoint &#8211; automatic test case reduction tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bugpoint</code> [<i>options</i>] [<i>input LLVM ll/bc files</i>] [<i>LLVM passes</i>] <code>–args</code> <i>program arguments</i></p>
 <h2>DESCRIPTION</h2>

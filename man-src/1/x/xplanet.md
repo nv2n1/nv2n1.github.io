@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xplanet/"
 description: "xplanet – render an image of a planet into an X window or file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xplanet &#8211; render an image of a planet into an X window or file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xplanet</code> <i>[options]</i> </p>
 <h2>DESCRIPTION</h2>

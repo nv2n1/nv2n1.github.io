@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installmanpages/"
 description: "dh_installmanpages – old-style man page installer (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installmanpages &#8211; old-style man page installer (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installmanpages</code> [<i>debhelper options</i>] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

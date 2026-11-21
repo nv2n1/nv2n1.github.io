@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-totem-video-thumbnailer/"
 description: "totem-video-thumbnailer – video thumbnailer for the GNOME desktop"
 ---
 
-<h2 class="name">NAME</h2>
-<p> totem-video-thumbnailer &#8211; video thumbnailer for the GNOME desktop </p>
 <h2>SYNOPSYS</h2>
 <p> <code>totem-video-thumbnailer</code> [-j|&#8211;jpeg] [-l|&#8211;no-limit] [-s size] input output [backend options]</p>
 <h2>DESCRIPTION</h2>

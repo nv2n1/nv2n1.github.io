@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bluez-simple-agent/"
 description: "bluez-simple-agent – A PIN management and agent program for pairing to Bluetooth device."
 ---
 
-<h2 class="name">NAME</h2>
-<p> bluez-simple-agent &#8211; A PIN management and agent program for pairing to Bluetooth device. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bluez-simple-agent [&lt;hciX&gt;] [&lt;bdaddr&gt;] [remove]</code></dt></dl>

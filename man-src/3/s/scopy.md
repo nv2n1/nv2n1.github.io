@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-scopy/"
 description: "scopy.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> scopy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>scopy</code> (N, SX, INCX, SY, INCY)<br />

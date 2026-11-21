@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fityk/"
 description: "fityk – non-linear curve fitting and data analysis"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fityk &#8211; non-linear curve fitting and data analysis </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fityk</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;<br />
  <code>cfityk</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>

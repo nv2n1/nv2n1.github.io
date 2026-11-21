@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamdepth/"
 description: "pamdepth – change the maxval in a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamdepth &#8211; change the maxval in a Netpbm image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamdepth</code> <i>newmaxval</i> [<i>netpbmfile</i>] </p>
 <h2>DESCRIPTION</h2>

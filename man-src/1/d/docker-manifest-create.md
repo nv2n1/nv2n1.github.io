@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-manifest-create/"
 description: "docker-manifest-create – Create a local manifest list for annotating and pushing to a registry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-manifest-create &#8211; Create a local manifest list for annotating and pushing to a registry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker manifest create MANIFEST_LIST MANIFEST [MANIFEST&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

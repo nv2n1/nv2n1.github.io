@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perlfunc/"
 description: "perlfunc – Perl builtin functions"
 ---
-<h2 class="name">NAME</h2>
-<p> perlfunc - Perl builtin functions </p>
 <h2>DESCRIPTION</h2>
 <p> The functions in this section can serve as terms in an expression. They fall into two major categories: list operators and named unary operators. These differ in their precedence relationship with a following comma. (See the precedence table in perlop.) List operators take more than one argument, while unary operators can never take more than one argument. Thus, a comma terminates the argument of a unary operator, but merely separates the arguments of a list operator. A unary operator generally provides scalar context to its argument, while a list operator may provide either scalar or list contexts for its arguments. If it does both, scalar arguments come first and list argument follow, and there can only ever be one such list argument. For instance, <code>&quot;splice&quot;</code> has three scalar arguments followed by a list, whereas <code>&quot;gethostbyname&quot;</code> has four scalar arguments. </p>
 <p> In the syntax descriptions that follow, list operators that expect a list (and provide list context for elements of the list) are shown with <font SIZE="-1">LIST</font> as an argument. Such a list may consist of any combination of scalar arguments or list values; the list values will be included in the list as if each individual element were interpolated at that point in the list, forming a longer single-dimensional list value. Commas should separate literal elements of the <font SIZE="-1">LIST.</font> </p>

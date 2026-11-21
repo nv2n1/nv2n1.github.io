@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_job_manager_rsl_validation_file/"
 description: "globus_gram_job_manager_rsl_validation_file – RSL Validation File Format The idea behind the RSL Validation file is to provide a mechanism for job manager scheduler interfaces to implement RSL exte..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gram_job_manager_rsl_validation_file &#8211; RSL Validation File Format The idea behind the RSL Validation file is to provide a mechanism for job manager scheduler interfaces to implement RSL extensions, while having the job manager still be able to decide whether a job request contains a valid RSL string. </p>
 <p> In addition to indicating what RSL attributes are valid, the RSL validation file contains information about when the RSL attribute may be used, it&#8217;s default value, and the format of the attribute&#8217;s value. </p>
 <h2>File Format</h2>
 <h3>Comments</h3>

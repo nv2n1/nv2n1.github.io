@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-histories/"
 description: "QuantLib::IndexManager – global repository for past index fixings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::IndexManager &#8211; global repository for past index fixings </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/indexmanager.hpp&gt; </p>
 <p> Inherits <code>Singleton&lt; IndexManager &gt;</code>. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_auto_configure/"
 description: "dh_auto_configure – automatically configure a package prior to building"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_auto_configure &#8211; automatically configure a package prior to building </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_auto_configure</code> [<i>build system options</i>] [<i>debhelper options</i>] [<code>&#8212;</code> <i>params</i>]</p>
 <h2>DESCRIPTION</h2>

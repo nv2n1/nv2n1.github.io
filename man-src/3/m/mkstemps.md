@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mkstemps/"
 description: "mkstemp, mkostemp, mkstemps, mkostemps – create a unique temporary file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkstemp, mkostemp, mkstemps, mkostemps &#8211; create a unique temporary file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

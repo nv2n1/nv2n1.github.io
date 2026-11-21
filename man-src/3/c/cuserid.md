@@ -6,8 +6,6 @@ letter: "c"
 url: "/docs/linux/man/3-cuserid/"
 description: "getlogin, getlogin_r, cuserid – get username"
 ---
-<h2 class="name">NAME</h2>
-<p> getlogin, getlogin_r, cuserid - get username </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>char *getlogin(void);</code> <br />

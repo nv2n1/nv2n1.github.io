@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mcheck/"
 description: "mcheck – verify all files on an MS-DOS formatted disk"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mcheck &#8211; verify all files on an MS-DOS formatted disk </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mcheck</code> [<i>msdosdrive</i>]</p>
 <h2>DESCRIPTION</h2>

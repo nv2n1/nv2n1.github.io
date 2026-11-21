@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-slice2html/"
 description: "slice2html – The Slice to HTML documentation tool."
 ---
 
-<h2 class="name">NAME</h2>
-<p> slice2html &#8211; The Slice to HTML documentation tool.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2html [options] [files] </p>
 <h2>DESCRIPTION</h2>

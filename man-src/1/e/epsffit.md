@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-epsffit/"
 description: "epsffit – fit encapsulated PostScript file (EPSF) into constrained size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> epsffit &#8211; fit encapsulated PostScript file (EPSF) into constrained size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>epsffit</code> [ <code>-c</code> ] [ <code>-r</code> ] [ <code>-a</code> ] [ <code>-m</code> ] [ <code>-s</code> ] <i>llx lly urx ury</i> [ <code>infile</code> [ <code>outfile</code> ] ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-presage_demo_text/"
 description: "presage_demo_text – presage demo program (text)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> presage_demo_text &#8211; presage demo program (text) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>presage_demo_text</code> [<i>,OPTION/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

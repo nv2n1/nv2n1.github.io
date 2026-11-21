@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlshow/"
 description: "mysqlshow – display database, table, and column information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlshow &#8211; display database, table, and column information </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlshow [</code><i>options</i><code>] [</code><i>db_name</i><code> [</code><i>tbl_name</i><code> [</code><i>col_name</i><code>]]]</code></dt></dl>

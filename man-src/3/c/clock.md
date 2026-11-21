@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clock/"
 description: "clock – determine processor time"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clock &#8211; determine processor time </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;

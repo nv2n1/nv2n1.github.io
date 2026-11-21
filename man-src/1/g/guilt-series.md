@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-series/"
 description: "guilt-series – Print the stack of patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-series &#8211; Print the stack of patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-series</i> [-v | -g | -e]</p>
 <h2>DESCRIPTION</h2>

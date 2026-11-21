@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-worktree/"
 description: "git-worktree – Manage multiple working trees"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-worktree &#8211; Manage multiple working trees </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git worktree add[-f][--detach][--checkout][--lock[--reason&lt;string&gt;]][-b&lt;new - branch&gt;]&lt;path&gt;[&lt;commit - ish&gt;] git worktree list[--porcelain] git worktree lock[--reason&lt;string&gt;]&lt;worktree&gt;

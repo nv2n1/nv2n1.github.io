@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sfinfo/"
 description: "sfinfo – display information about audio files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sfinfo &#8211; display information about audio files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfinfo</code> [<i>options</i>] <i>audio files</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -6,8 +6,6 @@ letter: "g"
 url: "/docs/linux/man/1-git-grep/"
 description: "git-grep – Print lines matching a pattern"
 ---
-<h2 class="name">NAME</h2>
-<p> git-grep - Print lines matching a pattern </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
  git grep  [-a | --text] [-I] [--textconv] [-i | --ignore-case] [-w | --word-regexp]

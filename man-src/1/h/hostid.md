@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hostid/"
 description: "hostid – print the numeric identifier for the current host"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hostid &#8211; print the numeric identifier for the current host </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hostid</code> [<i>,OPTION/</i>]</p>
 <h2>DESCRIPTION</h2>

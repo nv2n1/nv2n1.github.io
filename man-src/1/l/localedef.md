@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-localedef/"
 description: "localedef – compile locale definition files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> localedef &#8211; compile locale definition files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>localedef</code> [<i>options</i>] <i>outputpath</i><br />
  <code>localedef &#8211;add-to-archive</code> [<i>options</i>] <i>compiledpath</i><br />

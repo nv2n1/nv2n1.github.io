@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdb_entry_ex/"
 description: "hdb_entry_ex –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdb_entry_ex &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>
 <h2>Detailed Description</h2>

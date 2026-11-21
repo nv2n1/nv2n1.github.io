@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_dwz/"
 description: "dh_dwz – optimize DWARF debug information in ELF binaries via dwz"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_dwz &#8211; optimize DWARF debug information in ELF binaries via dwz </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_dwz</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>
 <h2>DESCRIPTION</h2>

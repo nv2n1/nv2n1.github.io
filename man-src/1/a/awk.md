@@ -6,8 +6,6 @@ letter: "a"
 url: "/docs/linux/man/1-awk/"
 description: "gawk – pattern scanning and processing language"
 ---
-<h2 class="name">NAME</h2>
-<p> gawk - pattern scanning and processing language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />
  <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] [ <code>--</code> ] <i>program-text</i> file ...  </p>

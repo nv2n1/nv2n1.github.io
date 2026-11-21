@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcl2inc/"
 description: "dcl2inc – postprocess ftnchek .dcl files to create separate INCLUDE files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcl2inc &#8211; postprocess ftnchek .dcl files to create separate INCLUDE files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dcl2inc</code> <i>*.dcl</i></p>
 <h2>DESCRIPTION</h2>

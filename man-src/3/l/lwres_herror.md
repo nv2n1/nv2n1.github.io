@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_herror/"
 description: "lwres_herror, lwres_hstrerror – lightweight resolver error message generation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_herror, lwres_hstrerror &#8211; lightweight resolver error message generation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;

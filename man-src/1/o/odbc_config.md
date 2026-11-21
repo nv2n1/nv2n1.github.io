@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-odbc_config/"
 description: "odbc_config – get compile options for compiling unixODBC client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> odbc_config &#8211; get compile options for compiling unixODBC client</p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>&#8211;prefix</code> ] [ <code>&#8211;exec-prefix</code> ] [ <code>&#8211;include-prefix</code> ] [ <code>&#8211;lib-prefix</code> ] [ <code>&#8211;bin-prefix</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;libs</code> ] [ <code>&#8211;static-libs</code> ] [ <code>&#8211;libtool-libs</code> ] [ <code>&#8211;cflags</code> ] [ <code>&#8211;odbcversion</code> ] [ <code>&#8211;odbcini</code> ] [ <code>&#8211;odbcinstini</code> ] [ <code>&#8211;header</code> ] [ <code>&#8211;ulen</code> ] </p>
 <h2>DESCRIPTION</h2>

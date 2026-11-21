@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getitimer/"
 description: "getitimer, setitimer – get or set value of an interval timer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getitimer, setitimer &#8211; get or set value of an interval timer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/time.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sbvarsign/"
 description: "sbvarsign – UEFI authenticated variable signing tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sbvarsign &#8211; UEFI authenticated variable signing tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sbvarsign</code> [<i>,options/</i>] <i>,&#8211;key &lt;keyfile&gt; &#8211;cert &lt;certfile&gt; &lt;var-name&gt; &lt;var-data-file&gt;/</i></p>
 <h2>DESCRIPTION</h2>

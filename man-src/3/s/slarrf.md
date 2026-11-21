@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slarrf/"
 description: "slarrf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slarrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrf</code> (N, D, L, LD, CLSTRT, CLEND, W, WGAP, WERR, SPDIAM, CLGAPL, CLGAPR, PIVMIN, SIGMA, DPLUS, LPLUS, WORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl589delta/"
 description: "perl589delta – what is new for perl v5.8.9"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl589delta &#8211; what is new for perl v5.8.9 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.8.8 release and the 5.8.9 release.</p>
 <h2>Notice</h2>

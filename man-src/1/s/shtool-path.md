@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-path/"
 description: "shtool path – GNU shtool command dealing with shell path variables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool path &#8211; GNU shtool command dealing with shell path variables </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool path</code> [<code>-s</code>|<code>&#8211;suppress</code>] [<code>-r</code>|<code>&#8211;reverse</code>] [<code>-d</code>|<code>&#8211;dirname</code>] [<code>-b</code>|<code>&#8211;basename</code>] [<code>-m</code>|<code>&#8211;magic</code>] [<code>-p</code>|<code>&#8211;path</code> <i>path</i>] <i>str</i> [<i>str</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

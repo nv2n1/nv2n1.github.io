@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gfm/"
 description: "gfm – a program to manipulate files for TI’s handhelds"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gfm &#8211; a program to manipulate files for TI&#8217;s handhelds</p>
 <h2>SYNOPSYS</h2>
 <p> <code>gfm</code> [-h / &#8211;help] [-v / &#8211;version] filename </p>
 <h2>DESCRIPTION</h2>

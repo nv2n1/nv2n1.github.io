@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfce4-display-settings/"
 description: "xfce4-display-settings – Display settings for Xfce"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfce4-display-settings &#8211; Display settings for Xfce </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>

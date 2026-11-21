@@ -8,8 +8,6 @@ url: "/docs/linux/man/7-user_namespaces/"
 
 
  </p>
-<h2 class="name">NAME</h2>
-<p> user_namespaces &#8211; overview of Linux user namespaces </p>
 <h2>DESCRIPTION</h2>
 <p> For an overview of namespaces, see <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7). </p>
 <p> User namespaces isolate security-related identifiers and attributes, in particular, user IDs and group IDs (see <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)), the root directory, keys (see <code><a href="/docs/linux/man/7-keyrings/">keyrings</a></code>(7)), and capabilities (see <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7)). A process&#8217;s user and group IDs can be different inside and outside a user namespace. In particular, a process can have a normal unprivileged user ID outside a user namespace while at the same time having a user ID of 0 inside the namespace; in other words, the process has full privileges for operations inside the user namespace, but is unprivileged for operations outside the namespace.  </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cnid_index/"
 description: "cnid_index – check and repair Netatalk CNID database indexes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cnid_index &#8211; check and repair Netatalk CNID database indexes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cnid_index</code> <i>dbdir</i></dt></dl>

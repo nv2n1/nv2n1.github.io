@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amidi/"
 description: "amidi – read from and write to ALSA RawMIDI ports"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amidi &#8211; read from and write to ALSA RawMIDI ports</p>
 <h2>SYNOPSIS</h2>
 <p> <code>amidi</code> [<i>-p port</i>] [<i>-s file</i> | <i>-S data</i>] [<i>-r file</i>] [<i>-d</i>] [<i>-t seconds</i>] [<i>-a</i>] </p>
 <h2>DESCRIPTION</h2>

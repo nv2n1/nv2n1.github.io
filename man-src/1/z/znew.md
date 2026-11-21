@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-znew/"
 description: "znew – recompress .Z files to .gz files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> znew &#8211; recompress .Z files to .gz files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>znew</code> [ -ftv9PK] [ name.Z &#8230; ]</p>
 <h2>DESCRIPTION</h2>

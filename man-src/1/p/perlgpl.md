@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlgpl/"
 description: "perlgpl – the GNU General Public License, version 1"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlgpl &#8211; the GNU General Public License, version 1 </p>
 <h2>SYNOPSIS</h2>
 <pre>
  You can refer to this document in Pod via &quot;L&lt;perlgpl&gt;&quot;

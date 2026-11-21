@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mceuropeangjrgarchengine/"
 description: "ql/pricingengines/vanilla/mceuropeangjrgarchengine.hpp – Monte Carlo GJR-GARCH-model engine for European options."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/vanilla/mceuropeangjrgarchengine.hpp &#8211; Monte Carlo GJR-GARCH-model engine for European options. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/mcvanillaengine.hpp&gt;<br />
  #include &lt;ql/processes/gjrgarchprocess.hpp&gt; </p>

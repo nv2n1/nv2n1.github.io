@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqladmin/"
 description: "mysqladmin – client for administering a MySQL server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqladmin &#8211; client for administering a MySQL server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqladmin [</code><i>options</i><code>] </code><i>command</i><code> [</code><i>command-options</i><code>] [</code><i>command</i><code> [</code><i>command-options</i><code>]] &#8230;</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-eqn2graph/"
 description: "eqn2graph – convert an EQN equation into a cropped image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> eqn2graph &#8211; convert an EQN equation into a cropped image </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-format </code><i>output-format</i> ] [<i>convert-arguments</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-leastsquare/"
 description: "ql/math/optimization/leastsquare.hpp – Least square cost function."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/optimization/leastsquare.hpp &#8211; Least square cost function. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/optimization/problem.hpp&gt;<br />
  #include &lt;ql/math/optimization/conjugategradient.hpp&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdalinfo/"
 description: "gdalinfo – gdalinfo lists information about a raster dataset"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdalinfo &#8211; gdalinfo lists information about a raster dataset </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdalinfo[--help - general][-mm][-stats][-hist][-nogcp][-nomd]

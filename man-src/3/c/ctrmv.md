@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctrmv/"
 description: "ctrmv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctrmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrmv</code> (UPLO, TRANS, DIAG, N, A, LDA, X, INCX)<br />

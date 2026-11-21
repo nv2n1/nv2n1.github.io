@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pi1toppm/"
 description: "pi1toppm – convert an Atari Degas .pi1 into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pi1toppm &#8211; convert an Atari Degas .pi1 into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pi1toppm</code> [<i>pi1file</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chetrs2/"
 description: "chetrs2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chetrs2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br />

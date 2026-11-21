@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-tkill/"
 description: "tkill, tgkill – send a signal to a thread"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tkill, tgkill &#8211; send a signal to a thread </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 int tkill(int tid, int sig);

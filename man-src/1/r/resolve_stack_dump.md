@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-resolve_stack_dump/"
 description: "resolve_stack_dump – resolve numeric stack trace dump to symbols"
 ---
 
-<h2 class="name">NAME</h2>
-<p> resolve_stack_dump &#8211; resolve numeric stack trace dump to symbols </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>resolve_stack_dump [</code><i>options</i><code>] </code><i>symbols_file</i><code> [</code><i>numeric_dump_file</i><code>]</code></dt></dl>

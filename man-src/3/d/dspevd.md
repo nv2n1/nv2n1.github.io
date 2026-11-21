@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dspevd/"
 description: "dspevd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dspevd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspevd</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />

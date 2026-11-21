@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_copy_glob_stat_t/"
 description: "globus_gass_copy_glob_stat_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gass_copy_glob_stat_t &#8211; </p>
 <p> Glob expanded entry information.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_copy.h&gt;</p>

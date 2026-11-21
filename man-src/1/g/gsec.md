@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gsec/"
 description: "gsec — deprecated Firebird user management utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gsec &#8212; deprecated Firebird user management utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsec</code> [<i>option</i>&#8230;] <i>command</i> [<i>parameter</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

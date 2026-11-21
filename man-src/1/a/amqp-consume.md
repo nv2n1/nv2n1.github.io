@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amqp-consume/"
 description: "amqp-consume – Consume messages from a queue on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amqp-consume &#8211; Consume messages from a queue on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-consume</code> [<i>OPTION</i>&#8230;] {<i>command</i>} [<i>args</i>&#8230;]</dt></dl>

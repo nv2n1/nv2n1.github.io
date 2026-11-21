@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-deluged/"
 description: "deluged – a bittorrent client daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> deluged &#8211; a bittorrent client daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>deluged [options]</code> </p>
 <h2>DESCRIPTION</h2>

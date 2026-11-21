@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libpbm/"
 description: "libpbm – libnetpbm functions to read and write PBM image files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libpbm &#8211; libnetpbm functions to read and write PBM image files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/pbm.h&gt;</code> </p>
 <p> <code>bit **pbm_allocarray(int</code> <i>cols</i><code>, int </code><i>rows</i><code>);</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mmls/"
 description: "mmls – Display the partition layout of a volume system (partition tables)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mmls &#8211; Display the partition layout of a volume system (partition tables) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mmls [-t</code> <i>mmtype </i> <code>] [-o</code> <i>offset</i> <code>] [ -i</code> <i>imgtype</i> <code>] [-b dev_sector_size] [-BrvV] [-aAmM]</code> <i>image [images]</i></p>
 <h2>DESCRIPTION</h2>

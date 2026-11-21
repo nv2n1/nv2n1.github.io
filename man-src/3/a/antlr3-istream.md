@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-istream/"
 description: "ANTLR3_INPUT_STREAM_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_INPUT_STREAM_struct &#8211; </p>
 <p> Master context structure for an ANTLR3 C runtime based input stream.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;</p>

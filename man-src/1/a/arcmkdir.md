@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arcmkdir/"
 description: "arcmkdir – create directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arcmkdir &#8211; create directories</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcmkdir</code> command creates directories on grid storage elements and indexing services. </p>
 <h2>SYNOPSIS</h2>

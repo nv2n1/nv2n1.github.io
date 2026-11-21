@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdb-add-index/"
 description: "gdb-add-index – Add index files to speed up GDB"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdb-add-index &#8211; Add index files to speed up GDB </p>
 <h2>SYNOPSIS</h2>
 <p> gdb-add-index <i>filename</i></p>
 <h2>DESCRIPTION</h2>

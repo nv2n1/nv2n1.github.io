@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rmcp_ping/"
 description: "rmcp_ping – IPMI RMCP Ping program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rmcp_ping &#8211; IPMI RMCP Ping program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rmcp_ping</code> [<code>-p</code> <i>port</i>] [<code>-t</code> <i>waittime</i>] [<code>-s</code> <i>starttag</i>] [<code>-d</code>] <i>destination</i> </p>
 <h2>DESCRIPTION</h2>

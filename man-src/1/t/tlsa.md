@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tlsa/"
 description: "tlsa – Create and verify RFC-6698 TLSA DNS records"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tlsa &#8211; Create and verify RFC-6698 TLSA DNS records </p>
 <h2>SYNTAX</h2>
 <p> tlsa [<code>-h</code>] [<code>&#8211;verify</code>] [<code>-create</code>] [<code>&#8211;version</code>] [<code>-4</code>] [<code>-6</code><code>&#8211;insecure</code>] [<code>&#8211;resolv.conf /PATH/TO/RESOLV.CONF</code>] [<code>&#8211;port PORT</code>] [<code>&#8211;starttls {auto,smtp,imap,pop3,ftp}</code>] [<code>&#8211;protocol {tcp,udp,sctp}</code>] [<code>&#8211;ponly-rr</code>] [<code>&#8211;rootkey /PATH/TO/ROOT.KEY</code>] [<code>&#8211;ca-cert /PATH/TO/CERTSTORE</code>] [<code>&#8211;debug</code>] [<code>&#8211;quiet</code>] [<code>&#8211;certificate CERTIFICATE</code>] [<code>&#8211;output {rfc,generic,both}</code>] [<code>&#8211;usage {0,1,2,3}</code>] [<code>&#8211;selector {0,1}</code>] [<code>-mtype {0,1,2}</code>] <i>hostname</i></p>
 <h2>DESCRIPTION</h2>

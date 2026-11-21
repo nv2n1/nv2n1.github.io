@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-djvuxml/"
 description: "djvutoxml, djvuxmlparser – DjVuLibre XML Tools."
 ---
 
-<h2 class="name">NAME</h2>
-<p> djvutoxml, djvuxmlparser &#8211; DjVuLibre XML Tools.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>djvutoxml [</code><i>options</i><code>] </code><i>inputdjvufile</i><code> [</code><i>outputxmlfile</i><code>]</code><br />
  <code>djvuxmlparser [ -o </code><i>djvufile</i><code> ] </code><i>inputxmlfile</i> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-atof/"
 description: "atof – convert a string to a double"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atof &#8211; convert a string to a double </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

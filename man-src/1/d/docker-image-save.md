@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-image-save/"
 description: "docker-image-save – Save one or more images to a tar archive (streamed to STDOUT by default)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-image-save &#8211; Save one or more images to a tar archive (streamed to STDOUT by default) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image save [OPTIONS] IMAGE [IMAGE&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

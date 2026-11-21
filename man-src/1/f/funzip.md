@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-funzip/"
 description: "funzip – filter for extracting from a ZIP archive in a pipe"
 ---
 
-<h2 class="name">NAME</h2>
-<p> funzip &#8211; filter for extracting from a ZIP archive in a pipe </p>
 <h2>SYNOPSIS</h2>
 <p> <code>funzip</code> [<code>-password</code>] [<i>input[.zip|.gz]</i>]</p>
 <h2>ARGUMENTS</h2>

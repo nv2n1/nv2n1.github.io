@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-doxyindexer/"
 description: "doxyindexer – creates a search index from raw search data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> doxyindexer &#8211; creates a search index from raw search data </p>
 <h2>SYNOPSIS</h2>
 <p> <code>doxyindexer</code> [<i>-o output_dir</i>] <i>searchdata.xml </i>[<i>searchdata2.xml</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

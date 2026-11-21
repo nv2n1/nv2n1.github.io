@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cockpit-bridge/"
 description: "cockpit-bridge – Cockpit Host Bridge"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cockpit-bridge &#8211; Cockpit Host Bridge </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cockpit-bridge</code> [<code>&#8211;help</code>] [<code>&#8211;packages</code>]</dt></dl>

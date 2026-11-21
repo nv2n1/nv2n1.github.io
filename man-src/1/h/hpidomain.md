@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpidomain/"
 description: "hpidomain – A openhpi sample application that shows information about domains. It can also set the domain tag."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpidomain &#8211; A openhpi sample application that shows information about domains. It can also set the domain tag. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpidomain[-D id][-N host[:port]][-C&lt;cfgfile&gt;][-t tttt][-V - X - h] hpidomain[--domain = id][--host = host[:port]][--cfgfile = file]

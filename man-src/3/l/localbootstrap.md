@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-localbootstrap/"
 description: "ql/termstructures/localbootstrap.hpp – localised-term-structure bootstrapper for most curve types."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/termstructures/localbootstrap.hpp &#8211; localised-term-structure bootstrapper for most curve types. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br />
  #include &lt;ql/math/optimization/costfunction.hpp&gt;<br />

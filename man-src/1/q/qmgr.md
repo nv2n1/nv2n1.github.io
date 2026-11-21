@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qmgr/"
 description: "qmgr – pbs batch system manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qmgr &#8211; pbs batch system manager </p>
 <h2>SYNOPSIS</h2>
 <p> qmgr [-a] [-c command] [-e] [-n] [-z] [server&#8230;]</p>
 <h2>DESCRIPTION</h2>

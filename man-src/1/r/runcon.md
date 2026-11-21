@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-runcon/"
 description: "runcon – run command with specified security context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> runcon &#8211; run command with specified security context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>runcon</code> <i>,CONTEXT COMMAND /</i>[<i>,args/</i>]<br />
  <code>runcon</code> [ <i>,-c /</i>] [<i>,-u USER/</i>] [<i>,-r ROLE/</i>] [<i>,-t TYPE/</i>] [<i>,-l RANGE/</i>] <i>,COMMAND /</i>[<i>,args/</i>]</p>

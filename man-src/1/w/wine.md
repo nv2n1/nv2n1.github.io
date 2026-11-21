@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wine/"
 description: "wine – run Windows programs on Unix"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wine &#8211; run Windows programs on Unix </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wine</code> <i>program </i>[<i>arguments</i>]<br />
  <code>wine &#8211;help</code><br />

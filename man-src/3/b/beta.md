@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-beta/"
 description: "ql/math/beta.hpp – Beta and beta incomplete functions."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/beta.hpp &#8211; Beta and beta incomplete functions. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/distributions/gammadistribution.hpp&gt; </p>
 <h3>Functions</h3>

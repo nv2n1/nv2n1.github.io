@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chattr/"
 description: "chattr – change file attributes on a Linux file system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chattr &#8211; change file attributes on a Linux file system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chattr</code> [ <code>-RVf</code> ] [ <code>-v</code> <i>version</i> ] [ <code>-p</code> <i>project</i> ] [ <i>mode</i> ] <i>files&#8230;</i></p>
 <h2>DESCRIPTION</h2>

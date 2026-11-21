@@ -6,8 +6,6 @@ letter: "i"
 url: "/docs/linux/man/1-i686-w64-mingw32-gfortran/"
 description: "gfortran – GNU Fortran compiler"
 ---
-<h2 class="name">NAME</h2>
-<p> gfortran - GNU Fortran compiler </p>
 <h2>SYNOPSIS</h2>
 <p> gfortran [<code>-c</code>|<code>-S</code>|<code>-E</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>-pg</code>]&nbsp;<wbr>[<code>-O</code><i>level</i>] <br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-less/"
 description: "gvfs-less – Execute less on the output of gvfs-cat"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-less &#8211; Execute less on the output of gvfs-cat </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gvfs-less </code><code>[OPTION&#8230;]</code><code>[LOCATION&#8230;]</code></dt></dl>

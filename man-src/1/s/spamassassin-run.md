@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-spamassassin-run/"
 description: "spamassassin – simple front-end filtering script for SpamAssassin"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spamassassin &#8211; simple front-end filtering script for SpamAssassin </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spamassassin</code> [options] [ &lt; <i>mailmessage</i> | <i>path</i> &#8230; ] </p>
 <p> <code>spamassassin</code> <code>-d</code> [ &lt; <i>mailmessage</i> | <i>path</i> &#8230; ] </p>

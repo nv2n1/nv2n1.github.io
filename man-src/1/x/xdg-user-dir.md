@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-user-dir/"
 description: "xdg-user-dir – Find an XDG user dir"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-user-dir &#8211; Find an XDG user dir </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-user-dir</code> [NAME]</dt></dl>

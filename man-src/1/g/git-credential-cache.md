@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-credential-cache/"
 description: "git-credential-cache – Helper to temporarily store passwords in memory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-credential-cache &#8211; Helper to temporarily store passwords in memory </p>
 <h2>SYNOPSIS</h2>
 <pre>
 git config credential.helper 'cache [&lt;options&gt;]'

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_chown/"
 description: "keyctl_chown – Change the ownership of a key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_chown &#8211; Change the ownership of a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

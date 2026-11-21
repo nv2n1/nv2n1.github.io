@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-monkeysphere/"
 description: "monkeysphere – Monkeysphere client user interface"
 ---
 
-<h2 class="name">NAME</h2>
-<p> monkeysphere &#8211; Monkeysphere client user interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>monkeysphere </code><i>subcommand</i> [<i>args</i>] </p>
 <h2>DESCRIPTION</h2>

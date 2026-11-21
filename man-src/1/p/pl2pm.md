@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pl2pm/"
 description: "pl2pm – Rough tool to translate Perl4 .pl files to Perl5 .pm modules."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pl2pm &#8211; Rough tool to translate Perl4 .pl files to Perl5 .pm modules. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pl2pm</code> <i>files</i></p>
 <h2>DESCRIPTION</h2>

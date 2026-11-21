@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-v2v-copy-to-local/"
 description: "virt-v2v-copy-to-local – Copy a remote guest to the local machine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-v2v-copy-to-local &#8211; Copy a remote guest to the local machine </p>
 <h2>SYNOPSIS</h2>
 <pre>
  virt-v2v-copy-to-local -ic LIBVIRT_URI GUEST

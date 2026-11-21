@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtopnm/"
 description: "pnmtopnm – copy a PNM image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtopnm &#8211; copy a PNM image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtopnm</code> </p>
 <p> [<i>pnmfile</i>] </p>

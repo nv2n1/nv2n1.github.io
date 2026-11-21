@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rootd/"
 description: "rootd – The ROOT file server daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rootd &#8211; The ROOT file server daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rootd</code> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>

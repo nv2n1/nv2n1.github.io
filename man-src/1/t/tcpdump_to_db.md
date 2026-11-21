@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tcpdump_to_db/"
 description: "tcpdump_to_db – convert tcpdump textual output to fsdb"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tcpdump_to_db &#8211; convert tcpdump textual output to fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>
     tcpdump_to_db [-T] &lt; source.tcpdump &gt; target.fsdb

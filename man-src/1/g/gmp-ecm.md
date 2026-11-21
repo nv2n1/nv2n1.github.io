@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gmp-ecm/"
 description: "ecm – integer factorization using ECM, P-1 or P+1"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecm &#8211; integer factorization using ECM, P-1 or P+1 </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ecm</code> [<code>options</code>] <i>B1</i> [<i>B2min</i>&#8211;<i>B2max</i> | <i>B2</i>]</dt>

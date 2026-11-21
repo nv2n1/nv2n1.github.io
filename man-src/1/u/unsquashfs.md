@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unsquashfs/"
 description: "unsquashfs – tool to uncompress squashfs filesystems"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unsquashfs &#8211; tool to uncompress squashfs filesystems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>unsquashfs</code> [<i>OPTIONS</i>] <i>FILESYSTEM</i> [<i>directories or files to extract</i>] </p>
 <h2>DESCRIPTION</h2>

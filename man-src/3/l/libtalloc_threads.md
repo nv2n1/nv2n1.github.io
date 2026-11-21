@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libtalloc_threads/"
 description: "libtalloc_threads – Chapter 8: Using threads with talloc"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libtalloc_threads &#8211; Chapter 8: Using threads with talloc</p>
 <h2>and thread safety</h2>
 <p> The talloc library is not internally thread-safe, in that accesses to variables on a talloc context are not controlled by mutexes or other thread-safe primitives. </p>
 <p> However, so long as <code>talloc_disable_null_tracking()</code> is called from the main thread to disable global variable access within talloc, then each thread can safely use its own top level talloc context allocated off the NULL context. </p>

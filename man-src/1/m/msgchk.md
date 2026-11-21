@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msgchk/"
 description: "msgchk – check for messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msgchk &#8211; check for messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>msgchk</code> [<code>-date</code> | <code>-nodate</code>] [<code>-notify</code></dt>

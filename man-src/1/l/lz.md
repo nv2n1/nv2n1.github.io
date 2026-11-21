@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lz/"
 description: "lz – gunzips and shows a listing of a gzip’d tar’d archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lz &#8211; gunzips and shows a listing of a gzip&#8217;d tar&#8217;d archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lz </code> <i>file</i></p>
 <h2>DESCRIPTION</h2>

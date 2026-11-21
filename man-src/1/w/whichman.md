@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-whichman/"
 description: "whichman – show the location of a man page using a fault tolerant approximate matching algorithm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> whichman &#8211; show the location of a man page using a fault tolerant approximate matching algorithm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>whichman</code> [-#ehIp][-t#] man-page-name</p>
 <h2>DESCRIPTION</h2>

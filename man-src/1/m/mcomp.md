@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mcomp/"
 description: "mcomp – Compares two files using mtools"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mcomp &#8211; Compares two files using mtools </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mcomp</code> <i>file-on-floppy</i> <i>local-file</i></p>
 <h2>DESCRIPTION</h2>

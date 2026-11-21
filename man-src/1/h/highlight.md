@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-highlight/"
 description: "Highlight – a universal sourcecode to formatted text converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Highlight &#8211; a universal sourcecode to formatted text converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>highlight</code> [OPTIONS]&#8230; [FILES]&#8230; </p>
 <h2>DESCRIPTION</h2>

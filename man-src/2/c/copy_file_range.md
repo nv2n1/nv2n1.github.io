@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-copy_file_range/"
 description: "copy_file_range – Copy a range of data from one file to another"
 ---
 
-<h2 class="name">NAME</h2>
-<p> copy_file_range &#8211; Copy a range of data from one file to another </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE

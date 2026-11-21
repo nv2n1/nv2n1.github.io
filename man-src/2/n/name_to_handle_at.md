@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-name_to_handle_at/"
 description: "name_to_handle_at, open_by_handle_at – obtain handle for a pathname and open file via a handle"
 ---
 
-<h2 class="name">NAME</h2>
-<p> name_to_handle_at, open_by_handle_at &#8211; obtain handle for a pathname and open file via a handle </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

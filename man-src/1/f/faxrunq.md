@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-faxrunq/"
 description: "faxrunq – send fax jobs queued by"
 ---
 
-<h2 class="name">NAME</h2>
-<p> faxrunq &#8211; send fax jobs queued by </p>
 <p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>faxrunq</code></p>

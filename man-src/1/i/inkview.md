@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-inkview/"
 description: "Inkview – an SVG viewer and slideshow program."
 ---
 
-<h2 class="name">NAME</h2>
-<p> Inkview &#8211; an SVG viewer and slideshow program. </p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&quot;inkview [options] [filename ...]&quot;</tt> </p>
 <p> options: </p>

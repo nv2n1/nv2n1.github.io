@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-xml-validate/"
 description: "virt-xml-validate – validate libvirt XML files against a schema"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-xml-validate &#8211; validate libvirt XML files against a schema </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-xml-validate</code> <i>XML-FILE</i> [<i>SCHEMA-NAME</i>] </p>
 <p> <code>virt-xml-validate</code> <i></i><font SIZE="-1"><i>OPTION</i></font><i></i></p>

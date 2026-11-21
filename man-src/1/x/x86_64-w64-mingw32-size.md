@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-size/"
 description: "size – list section sizes and total size."
 ---
 
-<h2 class="name">NAME</h2>
-<p> size &#8211; list section sizes and total size. </p>
 <h2>SYNOPSIS</h2>
 <p> size [<code>-A</code>|<code>-B</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]<br />

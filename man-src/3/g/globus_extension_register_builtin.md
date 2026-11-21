@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_extension_register_builtin/"
 description: "globus_extension.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_extension.h &#8211; </p>
 <p> Globus Extension Modules.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hashdeep/"
 description: "hashdeep – Compute, compare, or audit multiple message digests"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hashdeep &#8211; Compute, compare, or audit multiple message digests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hashdeep </code> -V | -h<br />
  <code>hashdeep</code> [-c &lt;alg1&gt;[,&lt;alg2&gt;]] [-k &lt;file&gt;] [-i &lt;size&gt;] [-f &lt;file&gt;] [-o &lt;fbcplsde&gt;] [-amxwMXreEspblvv] [-F&lt;bum&gt;] [-j &lt;num&gt;] [<code>FILES</code>] </p>

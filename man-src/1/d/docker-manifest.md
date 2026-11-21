@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-manifest/"
 description: "docker-manifest – Manage Docker image manifests and manifest lists"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-manifest &#8211; Manage Docker image manifests and manifest lists </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker manifest COMMAND</code> </p>
 <h2>DESCRIPTION</h2>

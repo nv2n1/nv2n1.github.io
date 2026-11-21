@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-export/"
 description: "docker-export – Export the contents of a container’s filesystem as a tar archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-export &#8211; Export the contents of a container&#8217;s filesystem as a tar archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker export</code> [<code>&#8211;help</code>] [<code>-o</code>|<code>&#8211;output</code>[=<i>&quot;&quot;</i>]] CONTAINER </p>
 <h2>DESCRIPTION</h2>

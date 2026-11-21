@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cifscreds/"
 description: "cifscreds – manage NTLM credentials in kernel keyring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cifscreds &#8211; manage NTLM credentials in kernel keyring </p>
 <h2>SYNOPSIS</h2>
 <p> cifscreds add|clear|clearall|update [-u username] [-d] host|domain</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbroweval/"
 description: "dbroweval – evaluate code for each row of a fsdb file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbroweval &#8211; evaluate code for each row of a fsdb file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dbroweval[-f CodeFile] code[code...]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-container-wait/"
 description: "docker-container-wait – Block until one or more containers stop, then print their exit codes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-container-wait &#8211; Block until one or more containers stop, then print their exit codes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container wait CONTAINER [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

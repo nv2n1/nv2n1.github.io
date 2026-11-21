@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_clear/"
 description: "keyctl_clear – Clear a keyring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_clear &#8211; Clear a keyring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

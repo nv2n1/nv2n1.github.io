@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mt-gnu/"
 description: "mt – control magnetic tape drive operation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mt &#8211; control magnetic tape drive operation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mt</code> [<code>-V</code>] [<code>-f</code> <i>device</i>] [<code>&#8211;file=</code><i>device</i>] [<code>&#8211;rsh-command=</code><i>command</i>] [<code>&#8211;version</code>] <i>operation</i> [<i>count</i>]</p>
 <h2>DESCRIPTION</h2>

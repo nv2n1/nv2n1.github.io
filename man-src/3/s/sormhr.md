@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sormhr/"
 description: "sormhr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sormhr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sormhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />

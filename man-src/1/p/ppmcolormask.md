@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmcolormask/"
 description: "ppmcolormask – produce mask of areas of a certain color in a PPM file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmcolormask &#8211; produce mask of areas of a certain color in a PPM file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmcolormask</code> <i>color</i> [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

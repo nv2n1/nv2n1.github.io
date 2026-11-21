@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-atexit/"
 description: "atexit – register a function to be called at normal process termination"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atexit &#8211; register a function to be called at normal process termination </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

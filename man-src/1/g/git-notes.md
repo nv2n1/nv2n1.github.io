@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-notes/"
 description: "git-notes – Add or inspect object notes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-notes &#8211; Add or inspect object notes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git notes[list[&lt;object&gt;]] git notes add[-f][--allow - empty][-F&lt;file&gt; | -m&lt;msg&gt; | (-c | -C) &lt; object &gt; ][&lt;object&gt;] git notes copy[-f](--stdin | &lt;from - object&gt;[&lt;to - object&gt;])

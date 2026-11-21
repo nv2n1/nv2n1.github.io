@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-users-admin/"
 description: "users-admin – Users Administration Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> users-admin &#8211; Users Administration Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>users-admin</code> [<i>OPTION&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

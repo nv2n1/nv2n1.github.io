@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_na_dtv/"
 description: "tv_grab_na_dtv – Grab TV listings from DirecTV."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_na_dtv &#8211; Grab TV listings from DirecTV. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_na_dtv &#8211;help </p>
 <p> tv_grab_na_dtv &#8211;configure [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>] </p>

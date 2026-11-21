@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libinput-debug-events/"
 description: "libinput-debug-events – debug helper for libinput"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libinput-debug-events &#8211; debug helper for libinput </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput debug-events </code><i>[options]</i> </p>
 <p> <code>libinput debug-events </code><i>[options]</i><code> &#8211;udev </code><i>&lt;seat&gt;</i> </p>

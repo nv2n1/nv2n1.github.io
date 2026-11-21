@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-perf_event_open/"
 description: "perf_event_open – set up performance monitoring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf_event_open &#8211; set up performance monitoring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/hw_breakpoint.h&gt;

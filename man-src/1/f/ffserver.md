@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffserver/"
 description: "ffserver – ffserver video server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffserver &#8211; ffserver video server </p>
 <h2>SYNOPSIS</h2>
 <p> ffserver [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

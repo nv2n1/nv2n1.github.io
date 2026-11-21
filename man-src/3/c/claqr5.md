@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claqr5/"
 description: "claqr5.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claqr5.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqr5</code> (WANTT, WANTZ, KACC22, N, KTOP, KBOT, NSHFTS, S, H, LDH, ILOZ, IHIZ, Z, LDZ, V, LDV, U, LDU, NV, WV, LDWV, NH, WH, LDWH)<br />

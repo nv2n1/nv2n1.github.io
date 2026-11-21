@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-link_/"
 description: "QuantLib::Handle – Shared handle to an observable."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Handle &#8211; Shared handle to an observable. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/handle.hpp&gt; </p>
 <h3>Public Member Functions</h3>

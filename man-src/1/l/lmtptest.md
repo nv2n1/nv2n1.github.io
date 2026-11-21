@@ -8,8 +8,6 @@ description: "lmtptest – interactive LMTP test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
-<p> lmtptest &#8211; interactive LMTP test program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lmtptest</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-a</code> <i>userid</i> ] [ <code>-u</code> <i>userid</i> ] [ <code>-k</code> <i>num</i> ] [ <code>-l</code> <i>num</i> ] </p>

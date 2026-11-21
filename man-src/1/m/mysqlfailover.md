@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlfailover/"
 description: "mysqlfailover – Automatic replication failover"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlfailover &#8211; Automatic replication failover </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlfailover [</code><i>options</i><code>]</code></dt></dl>

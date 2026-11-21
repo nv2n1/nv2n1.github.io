@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ftello/"
 description: "fseeko, ftello – seek to or report file position"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fseeko, ftello &#8211; seek to or report file position </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

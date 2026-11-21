@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-admin/"
 description: "zarafa-admin – Manages Zarafa users and stores."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-admin &#8211; Manages Zarafa users and stores. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-admin</code> <i>ACTION</i> [<i>OPTION</i>&#8230;]</dt></dl>

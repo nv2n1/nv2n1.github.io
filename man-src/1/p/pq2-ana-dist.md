@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pq2-ana-dist/"
 description: "pq2-ana-dist – Analyse the file distribution of a dataset (or a set of datasets) from a dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pq2-ana-dist &#8211; Analyse the file distribution of a dataset (or a set of datasets) from a dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-ana-dist</code> [options] datasets</p>
 <h2>DESCRIPTION</h2>

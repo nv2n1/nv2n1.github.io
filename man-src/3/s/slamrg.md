@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slamrg/"
 description: "slamrg.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slamrg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slamrg</code> (N1, N2, A, STRD1, STRD2, INDEX)<br />

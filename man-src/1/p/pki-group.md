@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-group/"
 description: "pki-group – Command-Line Interface for managing Certificate System groups."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-group &#8211; Command-Line Interface for managing Certificate System groups.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - group pki[CLI options]&lt;subsystem&gt; - group - find[command options] pki[CLI options]&lt;subsystem&gt; - group - show&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - add&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - mod&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - del&lt;group ID&gt;[command options]

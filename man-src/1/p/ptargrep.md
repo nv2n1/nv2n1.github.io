@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ptargrep/"
 description: "ptargrep – Apply pattern matching to the contents of files in a tar archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ptargrep &#8211; Apply pattern matching to the contents of files in a tar archive </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 ptargrep[options]&lt;pattern&gt;&lt;tar file&gt;... Options : --basename | -b ignore directory paths from archive-- ignore - case | -i do case -insensitive pattern matching-- list - only | -l list matching filenames rather than extracting matches-- verbose | -v write debugging message to STDERR-- help | -? detailed help message

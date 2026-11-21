@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gouldtoppm/"
 description: "gouldtoppm – convert Gould scanner file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gouldtoppm &#8211; convert Gould scanner file into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gouldtoppm</code> [<i>gouldfile</i>]</p>
 <h2>DESCRIPTION</h2>

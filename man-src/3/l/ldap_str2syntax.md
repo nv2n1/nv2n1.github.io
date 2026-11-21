@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_str2syntax/"
 description: "ldap_str2syntax, ldap_syntax2str, ldap_syntax2name, ldap_syntax_free, ldap_str2matchingrule, ldap_matchingrule2str, ldap_matchingrule2name, ldap_matchingrule_free, ldap_str2attributetype, ldap_attr..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_str2syntax, ldap_syntax2str, ldap_syntax2name, ldap_syntax_free, ldap_str2matchingrule, ldap_matchingrule2str, ldap_matchingrule2name, ldap_matchingrule_free, ldap_str2attributetype, ldap_attributetype2str, ldap_attributetype2name, ldap_attributetype_free, ldap_str2objectclass, ldap_objectclass2str, ldap_objectclass2name, ldap_objectclass_free, ldap_scherr2str &#8211; Schema definition handling routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cher/"
 description: "cher.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cher.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cher</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br />

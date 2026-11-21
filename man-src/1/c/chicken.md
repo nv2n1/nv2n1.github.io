@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chicken/"
 description: "chicken – A Scheme-to-C translator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chicken &#8211; A Scheme-to-C translator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chicken</code> <i>PATHNAME</i> [ <i>OPTION &#8230;</i> ] </p>
 <h2>DESCRIPTION</h2>

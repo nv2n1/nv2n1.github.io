@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal_edit/"
 description: "gdal_edit – gdal_edit.py Edit in place various information of an existing GDAL dataset"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal_edit &#8211; gdal_edit.py Edit in place various information of an existing GDAL dataset </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdal_edit[--help - general][-ro][-a_srs srs_def][-a_ullr ulx uly lrx lry]

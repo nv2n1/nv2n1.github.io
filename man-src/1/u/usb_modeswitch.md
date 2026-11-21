@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-usb_modeswitch/"
 description: "usb_modeswitch – control the mode of ‘multi-state’ USB devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> usb_modeswitch &#8211; control the mode of &#8216;multi-state&#8217; USB devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>usb_modeswitch</code> [<code>-heWQDIvpVPmM23rwKdHSOBGTNALnsRiuagft</code>] [<code>-c </code><i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

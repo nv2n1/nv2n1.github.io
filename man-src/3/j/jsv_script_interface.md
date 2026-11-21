@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-jsv_script_interface/"
 description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_sub_get_param, jsv_sub_add_param, jsv_sub_del_param, jsv_is_env, jsv_get_env, jsv_add_env, jsv_mod_env, jsv_del_env, jsv_accept, js..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_sub_get_param, jsv_sub_add_param, jsv_sub_del_param, jsv_is_env, jsv_get_env, jsv_add_env, jsv_mod_env, jsv_del_env, jsv_accept, jsv_correct, jsv_reject, jsv_reject_wait, jsv_show_params, jsv_show_envs, jsv_log_info, jsv_log_warning, jsv_log_error, jsv_main, jsv_logging_enabled &#8211; xxQS_NAMExx Job Submission Verifier Scripting Interface </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <code>jsv_clear_params</code>();

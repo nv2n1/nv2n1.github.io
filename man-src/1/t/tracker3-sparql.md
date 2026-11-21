@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-sparql/"
 description: "tracker3-sparql – Use SparQL to query the Tracker databases."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-sparql &#8211; Use SparQL to query the Tracker databases. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 sparql - q&lt;sparql&gt;[-u] | -f&lt;file&gt;

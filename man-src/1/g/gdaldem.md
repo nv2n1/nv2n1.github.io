@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdaldem/"
 description: "gdaldem – gdaldem Tools to analyze and visualize DEMs. (since GDAL 1.7.0)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdaldem &#8211; gdaldem Tools to analyze and visualize DEMs. (since GDAL 1.7.0) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 - To generate a shaded relief map from any GDAL - supported elevation raster:

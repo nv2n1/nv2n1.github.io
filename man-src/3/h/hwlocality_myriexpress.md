@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwlocality_myriexpress/"
 description: "hwlocality_myriexpress – Interoperability with Myrinet Express"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_myriexpress &#8211; Interoperability with Myrinet Express </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_mx_board_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, unsigned id, <code>hwloc_cpuset_t</code> set) </p>
 <p> static int <code>hwloc_mx_endpoint_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, mx_endpoint_t endpoint, <code>hwloc_cpuset_t</code> set) </p>

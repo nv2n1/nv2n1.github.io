@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-esd-config/"
 description: "esd-config – The Enlightened Sound Daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> esd-config &#8211; The Enlightened Sound Daemon </p>
 <h2>DESCRIPTION</h2>
 <p> esd-config is a tool that is used to configure to determine the compiler and linker flags that should be used to compile and link programs that use EsounD. It is also used internally to the .m4 macros for <font SIZE="-1">GNU</font> autoconf that are included with EsounD.</p>
 <h2>USAGE</h2>

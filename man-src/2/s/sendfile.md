@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sendfile/"
 description: "sendfile – transfer data between file descriptors"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sendfile &#8211; transfer data between file descriptors </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sendfile.h&gt;</code> </p>
 <p> <code>ssize_t sendfile(int</code><i> out_fd</i><code>, int</code><i> in_fd</i><code>, off_t *</code><i></i><code>offset</code><i>, size_t</i><code> count</code><i>);</i></p>

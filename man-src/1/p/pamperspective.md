@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamperspective/"
 description: "pamperspective – a reverse scanline renderer for Netpbm images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamperspective &#8211; a reverse scanline renderer for Netpbm images</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pamperspective

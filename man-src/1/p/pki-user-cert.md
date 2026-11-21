@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-user-cert/"
 description: "pki-user-cert – Command-Line Interface for managing Certificate System user certificates."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-user-cert &#8211; Command-Line Interface for managing Certificate System user certificates.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - user - cert pki[CLI options]&lt;subsystem&gt; - user - cert - find&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - cert - show&lt;user ID&gt;&lt;cert ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - cert - add&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - cert - del&lt;user ID&gt;&lt;cert ID&gt;[command options]

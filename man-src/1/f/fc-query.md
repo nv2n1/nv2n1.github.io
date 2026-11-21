@@ -8,8 +8,6 @@ url: "/docs/linux/man/1-fc-query/"
 
 
  </p>
-<h2 class="name">NAME</h2>
-<p> fc-query &#8211; query font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-query</code> [ <code>-Vh</code> ] </p>
 <p> <br />

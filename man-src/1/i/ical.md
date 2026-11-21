@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ical/"
 description: "ical – A Hijri/Islamic calendar (and converter)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ical &#8211; A Hijri/Islamic calendar (and converter) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ical</code> [<code>&#8211;gregorian</code> yyyymmdd] [<code>&#8211;hijri</code> yyyymmdd] [<code>&#8211;umm_alqura</code>] [<code>&#8211;fixed_view</code>] [<code>&#8211;dual</code>] [<code>&#8211;help</code>]</p>
 <h2>DESCRIPTION</h2>

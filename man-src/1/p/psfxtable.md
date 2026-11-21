@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-psfxtable/"
 description: "psfxtable – handle Unicode character tables for console fonts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psfxtable &#8211; handle Unicode character tables for console fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psfxtable</code> [<code>-i</code> <i>infont</i>] [<code>-o</code> <i>outfont</i>] [<code>-it</code> <i>intable</i>] [<code>-ot</code> <i>outtable</i>] [<code>-nt</code>]</p>
 <h2>DESCRIPTION</h2>

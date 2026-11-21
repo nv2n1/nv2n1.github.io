@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zcmp/"
 description: "zcmp, zdiff – compare compressed files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zcmp, zdiff &#8211; compare compressed files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zcmp</code> [ cmp_options ] file1 [ file2 ]<br />
  <code>zdiff</code> [ diff_options ] file1 [ file2 ]</p>

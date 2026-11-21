@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-extend_dmalloc/"
 description: "extend_dmalloc – Analyze return-addresses from dmalloc logfiles."
 ---
 
-<h2 class="name">NAME</h2>
-<p> extend_dmalloc &#8211; Analyze return-addresses from dmalloc logfiles. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>extend_dmalloc</code> [<i>dmalloc-log</i><code>binary</code>]</dt></dl>

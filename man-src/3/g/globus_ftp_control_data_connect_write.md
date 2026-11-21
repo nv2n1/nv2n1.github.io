@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_ftp_control_data_connect_write/"
 description: "GridFTP Data Connections –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GridFTP Data Connections &#8211; </p>
 <p> Data Connections.</p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_ftp_control_data_connect_read</code> (globus_ftp_control_handle_t *handle, globus_ftp_control_data_connect_callback_t callback, void *user_arg)<br />

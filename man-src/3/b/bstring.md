@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bstring/"
 description: "bcmp, bcopy, bzero, memccpy, memchr, memcmp, memcpy, memfrob, memmem, memmove, memset – byte string operations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bcmp, bcopy, bzero, memccpy, memchr, memcmp, memcpy, memfrob, memmem, memmove, memset &#8211; byte string operations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;

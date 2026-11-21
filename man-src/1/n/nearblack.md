@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nearblack/"
 description: "nearblack – nearblack convert nearly black/white borders to black"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nearblack &#8211; nearblack convert nearly black/white borders to black </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 nearblack[-of format][-white | [ -color c1, c2, c3... cn ] * ][-near dist][-nb non_black_pixels]

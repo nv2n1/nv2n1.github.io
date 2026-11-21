@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tclsh8/"
 description: "tclsh – Simple shell containing Tcl interpreter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tclsh &#8211; Simple shell containing Tcl interpreter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tclsh</code> ?<code>-encoding </code><i>name</i>? ?<i>fileName arg arg &#8230;</i>? </p>
 <h2>DESCRIPTION</h2>

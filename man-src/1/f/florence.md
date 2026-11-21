@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-florence/"
 description: "florence – extensible and scalable virtual keyboard for GNOME"
 ---
 
-<h2 class="name">NAME</h2>
-<p> florence &#8211; extensible and scalable virtual keyboard for GNOME </p>
 <h2>SYNOPSIS</h2>
 <p> <code>florence</code> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>

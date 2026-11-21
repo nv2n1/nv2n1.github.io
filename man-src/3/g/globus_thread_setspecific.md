@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_thread_setspecific/"
 description: "Thread-Specific Storage –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Thread-Specific Storage &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_thread_key_create</code> (<code>globus_thread_key_t</code> *key, <code>globus_thread_key_destructor_func_t</code> destructor)<br />
  <i>Create a key for thread-specific storage. </i><br />

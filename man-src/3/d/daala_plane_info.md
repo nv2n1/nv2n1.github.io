@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-daala_plane_info/"
 description: "daala_plane_info –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> daala_plane_info &#8211; </p>
 <p> Subsampling factors for a plane as a power of 2.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>

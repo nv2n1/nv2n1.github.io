@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fls/"
 description: "fls – List file and directory names in a disk image."
 ---
 
-<h2 class="name">NAME</h2>
-<p> fls &#8211; List file and directory names in a disk image. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fls [-adDFlpruvV] [-m</code> <i>mnt</i> <code>] [-z</code> <i>zone</i> <code>] [-f</code> <i>fstype</i> <code>] [-s</code> <i>seconds</i> <code>] [-i </code> <i>imgtype</i> <code>] [-o </code> <i>imgoffset</i> <code>] [-b dev_sector_size] </code> <i>image [images] </i> <code>[</code> <i>inode</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

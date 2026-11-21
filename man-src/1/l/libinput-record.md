@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libinput-record/"
 description: "libinput-record – record kernel events"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libinput-record &#8211; record kernel events </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput record [options] [</code><i>/dev/input/event0</i><code> [</code><i>/dev/input/event1</i><code> &#8230;]]</code></p>
 <h2>DESCRIPTION</h2>

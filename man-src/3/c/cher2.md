@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cher2/"
 description: "cher2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cher2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cher2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />

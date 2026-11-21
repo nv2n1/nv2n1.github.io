@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pi3topbm/"
 description: "pi3topbm – convert an Atari Degas .pi3 file into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pi3topbm &#8211; convert an Atari Degas .pi3 file into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pi3topbm</code> [<i>pi3file</i>]</p>
 <h2>DESCRIPTION</h2>

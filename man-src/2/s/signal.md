@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-signal/"
 description: "signal – ANSI C signal handling"
 ---
 
-<h2 class="name">NAME</h2>
-<p> signal &#8211; ANSI C signal handling </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>typedef void (*sighandler_t)(int);</code> </p>

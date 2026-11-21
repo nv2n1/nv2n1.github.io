@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-finalized_/"
 description: "QuantLib::MarketModelComposite – Composition of two or more market-model products."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::MarketModelComposite &#8211; Composition of two or more market-model products. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/marketmodels/products/compositeproduct.hpp&gt; </p>
 <p> Inherits <code>QuantLib::MarketModelMultiProduct</code>. </p>

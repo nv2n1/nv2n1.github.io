@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml-rpc-api2cpp/"
 description: "xml-rpc-api2cpp – Make a C++ wrapper class for an XML-RPC API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml-rpc-api2cpp &#8211; Make a C++ wrapper class for an XML-RPC API </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xml-rpc-api2cpp</code> <i>server-url</i> <i>remote-method-prefix</i> <i>c++-class-name</i></p>
 <h2>DESCRIPTION</h2>

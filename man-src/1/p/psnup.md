@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-psnup/"
 description: "psnup – multiple pages per sheet"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psnup &#8211; multiple pages per sheet </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psnup</code> [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] [ <code>-p</code><i>paper</i> ] [ <code>-W</code><i>width</i> ] [ <code>-H</code><i>height</i> ] [ <code>-P</code><i>paper</i> ] [ <code>-l</code> ] [ <code>-r</code> ] [ <code>-f</code> ] [ <code>-c</code> ] [ <code>-m</code><i>margin</i> ] [ <code>-b</code><i>border</i> ] [ <code>-d</code><i>lwidth</i> ] [ <code>-s</code><i>scale</i> ] [ <code>&#8211;</code><i>nup</i> ] [ <code>-q</code> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
 <h2>DESCRIPTION</h2>

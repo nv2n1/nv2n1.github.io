@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xpbsmon/"
 description: "xpbsmon – GUI for displaying, monitoring the nodes/execution hosts under PBS"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xpbsmon &#8211; GUI for displaying, monitoring the nodes/execution hosts under PBS </p>
 <h2>SYNOPSIS</h2>
 <p> xpbsmon</p>
 <h2>DESCRIPTION</h2>

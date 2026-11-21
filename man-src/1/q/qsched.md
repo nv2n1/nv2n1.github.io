@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qsched/"
 description: "qsched, process-scheduler-log – show scheduling information on resource reservation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qsched, process-scheduler-log &#8211; show scheduling information on resource reservation </p>
 <h2>SYNTAX</h2>
 <p> <code>qsched</code> [<code>-u&nbsp;</code><i>user</i>|<code>&#8211;user=</code><i>user</i>] [<code>-a</code>|<code>&#8211;all</code>] [<code>-j&nbsp;</code><i>jid_list</i>|<code>&#8211;jid=</code><i>jid_list</i>] [<code>-f</code>|<code>&#8211;full</code>] [<code>-s</code> <code>j</code>|<code>&#8211;sort=j</code>] [<code>-q</code>|<code>&#8211;queues</code>] [<code>-d</code>|<code>&#8211;debug</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />
  <code>process-scheduler-log</code> [<code>-v</code>]</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_copy_handle_s/"
 description: "globus_gass_copy_handle_s –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gass_copy_handle_s &#8211; </p>
 <p> Copy Handle.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_copy.h&gt;</p>

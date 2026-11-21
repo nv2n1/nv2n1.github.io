@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_pt_meo/"
 description: "tv_grab_pt_meo – Grab TV listings for MEO from SAPO in Portugal."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_pt_meo &#8211; Grab TV listings for MEO from SAPO in Portugal. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_pt_meo &#8211;help </p>
 <p> tv_grab_pt_meo &#8211;configure [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>] </p>

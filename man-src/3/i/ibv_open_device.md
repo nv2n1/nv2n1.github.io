@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_open_device/"
 description: "ibv_open_device, ibv_close_device – open and close an RDMA device context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_open_device, ibv_close_device &#8211; open and close an RDMA device context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

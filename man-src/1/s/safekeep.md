@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-safekeep/"
 description: "safekeep – Client/server backup script"
 ---
 
-<h2 class="name">NAME</h2>
-<p> safekeep &#8211; Client/server backup script </p>
 <h2>SYNOPSIS</h2>
 <p> <i>safekeep</i> &#8211;server [-q] [-v] [&#8211;noemail] [&#8211;force] [-c file] [&#8211;cleanup] &lt;clientid&gt;* </p>
 <p> <i>safekeep</i> &#8211;keys [-q] [-v] [&#8211;noemail] [-c file] [-i file] [&#8211;status] [&#8211;print] [&#8211;deploy] &lt;clientid&gt;* </p>

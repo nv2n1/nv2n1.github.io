@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mb2org/"
 description: "createPYMB, readPYBase, readPYMB, mb2org, scel2org – fcitx Pinyin related tools"
 ---
 
-<h2 class="name">NAME</h2>
-<p> createPYMB, readPYBase, readPYMB, mb2org, scel2org &#8211; fcitx Pinyin related tools </p>
 <h2>SYNOPSIS</h2>
 <p> <code>createPYMB</code> <i>&lt;PinyinFile&gt;</i> <i>&lt;PhraseFile&gt;</i> </p>
 <p> <code>readPYBase [</code><i>-b &lt;PinyinMBFile&gt;</i><code>] [</code><i>-h</i><code>]</code> </p>

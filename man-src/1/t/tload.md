@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tload/"
 description: "tload – graphic representation of system load average"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tload &#8211; graphic representation of system load average </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tload</code> [<i>options</i>] [<i>tty</i>]</p>
 <h2>DESCRIPTION</h2>

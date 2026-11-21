@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-trust-key-load/"
 description: "docker-trust-key-load – Load a private key file for signing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-trust-key-load &#8211; Load a private key file for signing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker trust key load [OPTIONS] KEYFILE</code> </p>
 <h2>DESCRIPTION</h2>

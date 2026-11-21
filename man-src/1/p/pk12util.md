@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pk12util/"
 description: "pk12util – Export and import keys and certificate to or from a PKCS #12 file and the NSS database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pk12util &#8211; Export and import keys and certificate to or from a PKCS #12 file and the NSS database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pk12util</code> [-i p12File|-l p12File|-o p12File] [-d&nbsp;<wbr>[sql:]directory] [-h tokenname] [-P dbprefix] [-r] [-v] [-k slotPasswordFile|-K slotPassword] [-w p12filePasswordFile|-W p12filePassword]</dt></dl>

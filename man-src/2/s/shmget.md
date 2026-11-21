@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-shmget/"
 description: "shmget – allocates a System V shared memory segment"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shmget &#8211; allocates a System V shared memory segment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ipc.h&gt;</code><br />
  <code>#include &lt;sys/shm.h&gt;</code> </p>

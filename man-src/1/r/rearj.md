@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rearj/"
 description: "rearj – Converts other archive formats to .arj files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rearj &#8211; Converts other archive formats to .arj files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rearj</code> [<i>options</i>] &lt;<i>!listfile(s)</i>|<i>filespec(s)</i>|<i>wildname(s)</i>&gt;</p>
 <h2>DESCRIPTION</h2>

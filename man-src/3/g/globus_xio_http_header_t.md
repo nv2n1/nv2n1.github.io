@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_xio_http_header_t/"
 description: "globus_xio_http_header_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_xio_http_header_t &#8211; </p>
 <p> HTTP Header.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_xio_http.h&gt;</p>

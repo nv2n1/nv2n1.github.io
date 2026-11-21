@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-josm/"
 description: "josm – Java OpenStreetMap Editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> josm &#8211; Java OpenStreetMap Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>josm</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-ioctl_ns/"
 description: "ioctl_ns – ioctl() operations for Linux namespaces"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ioctl_ns &#8211; ioctl() operations for Linux namespaces </p>
 <h2>DESCRIPTION</h2>
 <h3>Discovering namespace relationships</h3>
 <p> The following <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations are provided to allow discovery of namespace relationships (see <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7) and <code><a href="/docs/linux/man/7-pid_namespaces/">pid_namespaces</a></code>(7)). The form of the calls is: </p>

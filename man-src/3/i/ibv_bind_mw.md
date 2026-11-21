@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_bind_mw/"
 description: "ibv_bind_mw – post a request to bind a type 1 memory window to a memory region"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_bind_mw &#8211; post a request to bind a type 1 memory window to a memory region </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

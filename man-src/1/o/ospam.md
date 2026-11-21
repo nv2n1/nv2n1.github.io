@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ospam/"
 description: "ospam – An SGML/XML markup stream editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ospam &#8211; An SGML/XML markup stream editor </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ospam</code> [<code>-CeghilprRvx</code>] [<code>-a</code><i>linktype</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>bctf</i>] [<code>-c</code><i>catalog_file</i>] [<code>-D</code><i>directory</i>] [<code>-f</code><i>file</i>] [<code>-m</code><i>markup_option</i>] [<code>-o</code><i>entity_name</i>] [<code>-w</code><i>warning_type</i>] [<i>sysid</i>&#8230;]</dt></dl>

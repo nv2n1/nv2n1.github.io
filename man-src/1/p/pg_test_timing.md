@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pg_test_timing/"
 description: "pg_test_timing – measure timing overhead"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pg_test_timing &#8211; measure timing overhead </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_test_timing</code> [<i>option</i>&#8230;]</dt></dl>

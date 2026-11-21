@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-extract/"
 description: "llvm-extract – extract a function from an LLVM module"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-extract &#8211; extract a function from an LLVM module </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-extract</code> [<i>options</i>] <code>&#8211;func</code> <i>function-name</i> [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unicode_stop/"
 description: "unicode_stop – revert keyboard and console from unicode mode"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unicode_stop &#8211; revert keyboard and console from unicode mode </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unicode_stop</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofoimgextract/"
 description: "podofoimgextract – Extract all images from a PDF file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofoimgextract &#8211; Extract all images from a PDF file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofoimgextract</code> [inputfile] [outputdirectory] </p>
 <h2>DESCRIPTION</h2>

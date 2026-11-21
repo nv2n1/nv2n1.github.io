@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pod2texi/"
 description: "pod2texi – convert Pod to Texinfo"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pod2texi &#8211; convert Pod to Texinfo </p>
 <h2>SYNOPSIS</h2>
 <pre>
   pod2texi [OPTION]... POD...

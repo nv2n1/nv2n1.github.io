@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-db_to_csv/"
 description: "db_to_csv – convert fsdb to the comma-separated-value file-format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> db_to_csv &#8211; convert fsdb to the comma-separated-value file-format </p>
 <h2>SYNOPSIS</h2>
 <pre>
     db_to_csv [-C]

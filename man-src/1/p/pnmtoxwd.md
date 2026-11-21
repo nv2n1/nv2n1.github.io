@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtoxwd/"
 description: "pnmtoxwd – convert a portable anymap into an X11 window dump"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtoxwd &#8211; convert a portable anymap into an X11 window dump </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtoxwd</code> [<code>-pseudodepth</code> <i>n</i>] [<code>-directcolor</code>] [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

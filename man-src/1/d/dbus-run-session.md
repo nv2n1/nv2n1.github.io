@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbus-run-session/"
 description: "dbus-run-session – start a process as a new D-Bus session"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbus-run-session &#8211; start a process as a new D-Bus session </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-run-session</code> [&#8211;config-file&nbsp;<i>FILENAME</i>] [&#8211;dbus-daemon&nbsp;<i>BINARY</i>] [&#8211;] <i>PROGRAM</i> [<i>ARGUMENTS</i>&#8230;]</dt>

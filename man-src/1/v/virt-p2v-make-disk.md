@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-p2v-make-disk/"
 description: "virt-p2v-make-disk – Build the virt-p2v disk using virt-builder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-p2v-make-disk &#8211; Build the virt-p2v disk using virt-builder </p>
 <h2>SYNOPSIS</h2>
 <pre>
  virt-p2v-make-disk -o /dev/sdX [os-version]

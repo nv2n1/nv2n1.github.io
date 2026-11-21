@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlapmt/"
 description: "dlapmt.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlapmt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlapmt</code> (FORWRD, M, N, X, LDX, K)<br />

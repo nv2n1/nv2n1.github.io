@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-history/"
 description: "docker-history – Show the history of an image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-history &#8211; Show the history of an image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker history [OPTIONS] IMAGE</code> </p>
 <h2>DESCRIPTION</h2>

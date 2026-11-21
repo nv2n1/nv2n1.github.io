@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-cgtop/"
 description: "systemd-cgtop – Show top control groups by their resource usage"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-cgtop &#8211; Show top control groups by their resource usage </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-cgtop</code> [OPTIONS&#8230;] [GROUP]</dt></dl>

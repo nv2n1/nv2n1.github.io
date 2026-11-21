@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-displacements/"
 description: "QuantLib::MarketModel – base class for market models"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::MarketModel &#8211; base class for market models </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/marketmodels/marketmodel.hpp&gt; </p>
 <p> Inherited by <code>AbcdVol</code>, CotSwapToFwdAdapter, FlatVol, FwdPeriodAdapter, FwdToCotSwapAdapter, and PseudoRootFacade. </p>

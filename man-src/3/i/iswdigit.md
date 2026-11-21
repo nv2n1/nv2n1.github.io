@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-iswdigit/"
 description: "iswdigit – test for decimal digit wide character"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iswdigit &#8211; test for decimal digit wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;

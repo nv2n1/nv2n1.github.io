@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-session-selector/"
 description: "gnome-session-selector – Selects a session to use with gnome-session"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-session-selector &#8211; Selects a session to use with gnome-session </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-session-selector</code> [session]</dt></dl>

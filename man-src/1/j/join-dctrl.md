@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-join-dctrl/"
 description: "join-dctrl – perform relational join on data in dctrl format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> join-dctrl &#8211; perform relational join on data in dctrl format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>join-dctrl</code> [ <i>options</i> ] <i>filename</i> <i>filename</i> </p>
 <p> <code>join-dctrl</code> <code>&#8211;version</code> </p>

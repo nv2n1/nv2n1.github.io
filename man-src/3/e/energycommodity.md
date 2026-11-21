@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-energycommodity/"
 description: "ql/experimental/commodities/energycommodity.hpp – Energy commodity."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/experimental/commodities/energycommodity.hpp &#8211; Energy commodity. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/commodities/commodity.hpp&gt;<br />
  #include &lt;ql/experimental/commodities/commoditytype.hpp&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_delete_all/"
 description: "ndb_delete_all – delete all rows from an NDB table"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_delete_all &#8211; delete all rows from an NDB table </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_delete_all </code><i>options</i></dt></dl>

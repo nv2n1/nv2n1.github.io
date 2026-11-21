@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-rt_sigtimedwait/"
 description: "sigwaitinfo, sigtimedwait, rt_sigtimedwait – synchronously wait for queued signals"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sigwaitinfo, sigtimedwait, rt_sigtimedwait &#8211; synchronously wait for queued signals </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;

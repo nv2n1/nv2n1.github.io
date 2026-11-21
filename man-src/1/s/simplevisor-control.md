@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-simplevisor-control/"
 description: "simplevisor-control – run simplevisor as a service"
 ---
 
-<h2 class="name">NAME</h2>
-<p> simplevisor-control &#8211; run simplevisor as a service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>simplevisor-control</code> command [path]</p>
 <h2>DESCRIPTION</h2>

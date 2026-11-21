@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-udisksctl/"
 description: "udisksctl – The udisks command line tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> udisksctl &#8211; The udisks command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>udisksctl</code> status</dt>

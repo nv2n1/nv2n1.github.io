@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-cherry/"
 description: "git-cherry – Find commits yet to be applied to upstream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-cherry &#8211; Find commits yet to be applied to upstream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git cherry[-v][&lt;upstream&gt;[&lt;head&gt;[&lt;limit&gt;]]]

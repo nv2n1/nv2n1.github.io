@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grid-proxy-init/"
 description: "grid-proxy-init – Generate a new proxy certificate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grid-proxy-init &#8211; Generate a new proxy certificate </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-proxy-init</code> -help | -usage | -version </p>
 <p> <code>grid-proxy-init</code> [OPTIONS]</p>

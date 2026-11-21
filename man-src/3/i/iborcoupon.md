@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-iborcoupon/"
 description: "ql/cashflows/iborcoupon.hpp – Coupon paying a Libor-type index."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/cashflows/iborcoupon.hpp &#8211; Coupon paying a Libor-type index. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt;<br />
  #include &lt;ql/indexes/iborindex.hpp&gt;<br />

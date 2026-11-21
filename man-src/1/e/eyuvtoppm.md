@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-eyuvtoppm/"
 description: "eyuvtoppm – convert a Berkeley YUV file to a portable pixmap file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> eyuvtoppm &#8211; convert a Berkeley YUV file to a portable pixmap file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>eyuvtoppm</code> [<code>&#8211;width</code> <i>width</i>] [<code>&#8211;height</code> <i>height</i>] [<i>eyuvfile</i>] </p>
 <h2>DESCRIPTION</h2>

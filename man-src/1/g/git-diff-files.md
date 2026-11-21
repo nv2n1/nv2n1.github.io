@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-diff-files/"
 description: "git-diff-files – Compares files in the working tree and the index"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-diff-files &#8211; Compares files in the working tree and the index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git diff - files[-q][-0 | -1 | -2 | -3 | -c | --cc][&lt;common diff options&gt;][&lt;path&gt;...]

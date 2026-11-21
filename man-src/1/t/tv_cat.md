@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_cat/"
 description: "tv_cat – Concatenate XMLTV listings files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_cat &#8211; Concatenate XMLTV listings files. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_cat [&#8211;help] [&#8211;utf8] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
 <h2>DESCRIPTION</h2>

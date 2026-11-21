@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pstops/"
 description: "pstops – shuffle pages in a PostScript file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pstops &#8211; shuffle pages in a PostScript file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstops</code> [ <code>-q</code> ] [ <code>-b</code> ] [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] [ <code>-p</code><i>paper</i> ] [ <code>-d</code><i>lwidth</i> ] <i>pagespecs</i> [ <i>infile</i> [ <i>outfile</i> ] ]</p>
 <h2>DESCRIPTION</h2>

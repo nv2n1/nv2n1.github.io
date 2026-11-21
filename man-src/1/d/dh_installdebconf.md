@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installdebconf/"
 description: "dh_installdebconf – install files used by debconf in package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installdebconf &#8211; install files used by debconf in package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installdebconf</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8212;</code> <i>params</i>]</p>
 <h2>DESCRIPTION</h2>

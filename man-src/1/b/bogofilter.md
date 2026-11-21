@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bogofilter/"
 description: "bogofilter – fast Bayesian spam filter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bogofilter &#8211; fast Bayesian spam filter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogofilter</code> [help options | classification options | registration options | parameter options | info options] [general options] [config file options]</dt></dl>

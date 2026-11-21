@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlstyle/"
 description: "perlstyle – Perl style guide"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlstyle &#8211; Perl style guide </p>
 <h2>DESCRIPTION</h2>
 <p> Each programmer will, of course, have his or her own preferences in regards to formatting, but there are some general guidelines that will make your programs easier to read, understand, and maintain. </p>
 <p> The most important thing is to run your programs under the <code>-w</code> flag at all times. You may turn it off explicitly for particular portions of code via the <tt>&quot;no warnings&quot;</tt> pragma or the <tt>$^W</tt> variable if you must. You should also always run under <tt>&quot;use strict&quot;</tt> or know the reason why not. The <tt>&quot;use sigtrap&quot;</tt> and even <tt>&quot;use diagnostics&quot;</tt> pragmas may also prove useful. </p>

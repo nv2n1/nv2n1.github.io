@@ -6,8 +6,6 @@ letter: "d"
 url: "/docs/linux/man/1-dvips/"
 description: "dvips – convert a TeX DVI file to PostScript"
 ---
-<h2 class="name">NAME</h2>
-<p> dvips - convert a TeX DVI file to PostScript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvips</code> [<i>OPTIONS</i>] <i>file</i>[<code>.dvi</code>]  </p>
 <h2>DESCRIPTION</h2>

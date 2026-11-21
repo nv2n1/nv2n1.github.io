@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-extensions/"
 description: "gnome-extensions – Command line tool for managing GNOME extensions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-extensions &#8211; Command line tool for managing GNOME extensions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-extensions</code> help [<i>COMMAND</i>] </p>
 <p> <code>gnome-extensions</code> version </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ike-scan/"
 description: "ike-scan – Discover and fingerprint IKE hosts (IPsec VPN servers)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ike-scan &#8211; Discover and fingerprint IKE hosts (IPsec VPN servers) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ike-scan</code> [<i>options</i>]<i> </i>[<i>hosts</i>&#8230;] </p>
 <p> Target hosts must be specified on the command line unless the <code>&#8211;file</code> option is specified.</p>

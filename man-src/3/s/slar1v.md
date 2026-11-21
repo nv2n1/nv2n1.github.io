@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slar1v/"
 description: "slar1v.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slar1v.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slar1v</code> (N, B1, BN, LAMBDA, D, L, LD, LLD, PIVMIN, GAPTOL, Z, WANTNC, NEGCNT, ZTZ, MINGMA, R, ISUPPZ, NRMINV, RESID, RQCORR, WORK)<br />

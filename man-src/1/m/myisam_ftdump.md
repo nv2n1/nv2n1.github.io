@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-myisam_ftdump/"
 description: "myisam_ftdump – display full-text index information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> myisam_ftdump &#8211; display full-text index information </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>myisam_ftdump [</code><i>options</i><code>] </code><i>tbl_name</i><i>index_num</i></dt></dl>

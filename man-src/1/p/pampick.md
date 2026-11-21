@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pampick/"
 description: "pampick – pick images out of a multi-image Netpbm image stream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pampick &#8211; pick images out of a multi-image Netpbm image stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pampick</code> </p>
 <p> <i>image_sequence_number</i> &#8230; </p>

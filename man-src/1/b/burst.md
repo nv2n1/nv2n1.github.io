@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-burst/"
 description: "burst – explode digests into messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> burst &#8211; explode digests into messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>burst</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-mime</code> | <code>-nomime</code>] [<code>-automime</code>] [<code>-quiet</code> | <code>-noquiet</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

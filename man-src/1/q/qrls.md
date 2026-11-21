@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qrls/"
 description: "qrls – release xxQS_NAMExx jobs from previous hold states"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qrls &#8211; release xxQS_NAMExx jobs from previous hold states </p>
 <h2>SYNTAX</h2>
 <p> <code>qrls</code> [ <code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230; ] [ <code>-help</code> ] [ <code>job/task_id_list</code> ] </p>
 <p> <code>qrls</code> [ <code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230; ] [ <code>-help</code> ] <code>-u user_list</code></p>

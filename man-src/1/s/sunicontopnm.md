@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sunicontopnm/"
 description: "sunicontopnm – convert a Sun icon into a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sunicontopnm &#8211; convert a Sun icon into a Netpbm image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sunicontopnm</code> [<i>iconfile</i>] </p>
 <h2>DESCRIPTION</h2>

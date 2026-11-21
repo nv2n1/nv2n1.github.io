@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlgit/"
 description: "perlgit – Detailed information about git and the Perl repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlgit &#8211; Detailed information about git and the Perl repository </p>
 <h2>DESCRIPTION</h2>
 <p> This document provides details on using git to develop Perl. If you are just interested in working on a quick patch, see perlhack first. This document is intended for people who are regular contributors to Perl, including those with write access to the git repository.</p>
 <h2>CLONING THE REPOSITORY</h2>

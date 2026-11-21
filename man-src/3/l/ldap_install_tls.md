@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_install_tls/"
 description: "ldap_start_tls, ldap_start_tls_s, ldap_tls_inplace, ldap_install_tls – LDAP TLS initialization routines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_start_tls, ldap_start_tls_s, ldap_tls_inplace, ldap_install_tls &#8211; LDAP TLS initialization routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

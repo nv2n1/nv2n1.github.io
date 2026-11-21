@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-text2ngram/"
 description: "text2ngram – generate statistical n-gram data from text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> text2ngram &#8211; generate statistical n-gram data from text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>text2ngram</code> [<i>,OPTION/</i>]&#8230; <i>,infiles/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

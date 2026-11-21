@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk-query-immodules-3/"
 description: "gtk-query-immodules-3.0 – Input method module registration utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk-query-immodules-3.0 &#8211; Input method module registration utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-query-immodules-3.0</code> [&#8211;update-cache] [MODULE&#8230;]</dt></dl>

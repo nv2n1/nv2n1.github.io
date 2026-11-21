@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhpath/"
 description: "mhpath – print full pathnames of nmh messages and folders"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhpath &#8211; print full pathnames of nmh messages and folders </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhpath</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

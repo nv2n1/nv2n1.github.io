@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fini_selinuxmnt/"
 description: "init_selinuxmnt – initialize the global variable selinux_mnt"
 ---
 
-<h2 class="name">NAME</h2>
-<p> init_selinuxmnt &#8211; initialize the global variable selinux_mnt </p>
 <h2>SYNOPSIS</h2>
 <p> <code>static void init_selinuxmnt(void);</code> </p>
 <p> <code>static void fini_selinuxmnt(void);</code> </p>

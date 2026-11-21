@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lpasswd/"
 description: "lpasswd – Change group or user password"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lpasswd &#8211; Change group or user password</p>
 <h2>SYNOPSIS</h2>
 <p> lpasswd [<i>OPTION</i>]&#8230; [<i>name</i>] </p>
 <h2>DESCRIPTION</h2>

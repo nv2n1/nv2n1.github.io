@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arc-config-check/"
 description: "arc-config-check – checks the arc.conf for inconsistencies, known problems or (in a future development) just general bad taste."
 ---
 
-<h2 class="name">NAME</h2>
-<p> arc-config-check &#8211; checks the arc.conf for inconsistencies, known problems or (in a future development) just general bad taste.</p>
 <h2>SYNOPSIS</h2>
 <p> arc-config-check &#8211;printall </p>
 <h2>DESCRIPTION</h2>

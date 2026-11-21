@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamfunc/"
 description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamfunc &#8211; Apply a simple monadic arithmetic function to a Netpbm image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamfunc</code> { <code>-multiplier=</code><i>realnum</i> | <code>-divisor=</code><i>realnum</i> | <code>-adder=</code><i>integer</i> | <code>-subtractor=</code><i>integer</i> | <code>-min=</code><i>wholenum</i> | <code>-max=</code><i>wholenum</i> <code>-andmask=</code><i>hexmask</i> <code>-ormask=</code><i>hexmask</i> <code>-xormask=</code><i>hexmask</i> <code>-not</code> <code>-shiftleft=</code><i>count</i> <code>-shiftright=</code><i>count</i> } [<i>filespec</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>

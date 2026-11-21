@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-apport-bug/"
 description: "apport-bug, apport-collect – file a bug report using Apport, or update an existing report"
 ---
 
-<h2 class="name">NAME</h2>
-<p> apport-bug, apport-collect &#8211; file a bug report using Apport, or update an existing report</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apport-bug</code> </p>
 <p> <code>apport-bug</code> <i>symptom </i>|<i> pid </i>|<i> package </i>|<i> program path </i>|<i> .apport/.crash file</i> </p>

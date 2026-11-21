@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-gui/"
 description: "git-gui – A portable graphical interface to Git"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-gui &#8211; A portable graphical interface to Git </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git gui[&lt;command&gt;][arguments]

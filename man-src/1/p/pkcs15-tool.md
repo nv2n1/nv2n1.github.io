@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pkcs15-tool/"
 description: "pkcs15-tool – utility for manipulating PKCS #15 data structures on smart cards and similar security tokens"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pkcs15-tool &#8211; utility for manipulating PKCS #15 data structures on smart cards and similar security tokens </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pkcs15-tool</code> [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

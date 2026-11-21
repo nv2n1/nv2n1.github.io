@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getcifsacl/"
 description: "getcifsacl – Userspace helper to display an ACL in a security descriptor for Common Internet File System (CIFS)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getcifsacl &#8211; Userspace helper to display an ACL in a security descriptor for Common Internet File System (CIFS) </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

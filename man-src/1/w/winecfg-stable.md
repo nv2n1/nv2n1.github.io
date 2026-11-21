@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-winecfg-stable/"
 description: "winecfg – Wine Configuration Editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> winecfg &#8211; Wine Configuration Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>winecfg</code></p>
 <h2>DESCRIPTION</h2>

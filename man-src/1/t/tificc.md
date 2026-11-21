@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tificc/"
 description: "tificc – little cms ICC profile applier for TIFF."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tificc &#8211; little cms ICC profile applier for TIFF. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tificc</code> [<i>options</i>]<i> input.tif output.tif</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-machinectl/"
 description: "machinectl – Control the systemd machine manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> machinectl &#8211; Control the systemd machine manager </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>machinectl</code> [OPTIONS&#8230;] {COMMAND} [NAME&#8230;]</dt></dl>

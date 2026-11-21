@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cmap_context_get/"
 description: "cmap_context_get – Gets the context variable for a CMAP instance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmap_context_get &#8211; Gets the context variable for a CMAP instance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_context_get (cmap_handle_t </code><i>handle</i><code>, const void **</code><i>context</i><code>);</code> </p>

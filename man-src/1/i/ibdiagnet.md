@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ibdiagnet/"
 description: "ibdiagnet – IB diagnostic net"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibdiagnet &#8211; IB diagnostic net </p>
 <h2>SYNOPSYS</h2>
 <p> ibdiagnet [-c &lt;count&gt;] [-v] [-r] [-vlr] [-u] [-o &lt;out-dir&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-t&nbsp;<wbr>&lt;topo-file&gt;]&nbsp;<wbr>[-s&nbsp;<wbr>&lt;sys-name&gt;]&nbsp;<wbr>[-i&nbsp;<wbr>&lt;dev-index&gt;]&nbsp;<wbr>[-p&nbsp;<wbr>&lt;port-num&gt;]&nbsp;<wbr>[-wt]<br />

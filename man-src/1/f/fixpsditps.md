@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fixpsditps/"
 description: "fixpsditps – filter to fix Transcript psdit documents so PSUtils work"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fixpsditps &#8211; filter to fix Transcript psdit documents so PSUtils work </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixpsditps </code> &lt; <i>psdit.ps</i> &gt; <i>Fixed.ps</i></p>
 <h2>DESCRIPTION</h2>

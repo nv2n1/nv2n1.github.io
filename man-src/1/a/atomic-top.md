@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-top/"
 description: "atomic-top – Run a top-like list of active container processes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-top &#8211; Run a top-like list of active container processes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic top</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-d</code>][<code>-o, &#8211;optional=[time, stime, ppid, uid, gid, user, group]</code>][<code>-n</code>] [Containers to monitor] </p>
 <h2>DESCRIPTION</h2>

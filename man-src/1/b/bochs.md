@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bochs/"
 description: "bochs – Portable x86 Emulator."
 ---
 
-<h2 class="name">NAME</h2>
-<p> bochs &#8211; Portable x86 Emulator. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bochs</code> [<i>bochs_options</i>] [<i>bochsrc_options</i>]</p>
 <h2>DESCRIPTION</h2>

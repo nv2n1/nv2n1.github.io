@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmcjpls/"
 description: "dcmcjpls – Encode DICOM file to JPEG-LS transfer syntax"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmcjpls &#8211; Encode DICOM file to JPEG-LS transfer syntax </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmcjpls [options] dcmfile-in dcmfile-out

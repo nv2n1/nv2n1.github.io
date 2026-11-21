@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-h2ph/"
 description: "h2ph – convert .h C header files to .ph Perl header files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> h2ph &#8211; convert .h C header files to .ph Perl header files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>h2ph [-d destination directory] [-r | -a] [-l] [-h] [-e] [-D] [-Q] [headerfiles]</code></p>
 <h2>DESCRIPTION</h2>

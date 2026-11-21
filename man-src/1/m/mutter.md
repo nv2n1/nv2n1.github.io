@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mutter/"
 description: "MUTTER – Clutter based compositing GTK2 Window Manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> MUTTER &#8211; Clutter based compositing GTK2 Window Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mutter</code> [&#8211;display=<i>DISPLAY</i>] [&#8211;replace] [&#8211;sm-client-id=<i>ID</i>] [&#8211;sm-disable] [&#8211;sm-save-file=<i>FILENAME</i>] [&#8211;version] [&#8211;help] [[&#8211;] command [argument&#8230;]]</p>
 <h2>DESCRIPTION</h2>

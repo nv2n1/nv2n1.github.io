@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pjtoppm/"
 description: "pjtoppm – convert an HP PaintJet file to a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pjtoppm &#8211; convert an HP PaintJet file to a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pjtoppm</code> [<i>paintjet</i>]</p>
 <h2>DESCRIPTION</h2>

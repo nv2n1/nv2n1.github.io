@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dbdsdc/"
 description: "dbdsdc.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbdsdc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dbdsdc</code> (UPLO, COMPQ, N, D, E, U, LDU, VT, LDVT, Q, IQ, WORK, IWORK, INFO)<br />

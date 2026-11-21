@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ftff/"
 description: "ftff – fault tolerant file find utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ftff &#8211; fault tolerant file find utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftff</code> [-#fFhIpq][-t#][start_directory] file_to_find</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airserv-ng/"
 description: "airserv-ng – a wireless card server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airserv-ng &#8211; a wireless card server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airserv-ng</code> &lt;options&gt;</p>
 <h2>DESCRIPTION</h2>

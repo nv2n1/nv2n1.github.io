@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ftnchek/"
 description: "ftnchek – Fortran 77 program checker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ftnchek &#8211; Fortran 77 program checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftnchek</code> [ <code>-arguments</code>[=<i>list</i>] ] [ <code>-array</code>[=<i>list</i>] ]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>&#8211;</code>[<code>no</code>]<code>brief</code> ] [ <code>-calltree</code>[=<i>list</i>] ] [ <code>&#8211;</code>[<code>no</code>]<code>check</code> ]<br />

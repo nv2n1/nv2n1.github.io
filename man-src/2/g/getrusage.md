@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getrusage/"
 description: "getrusage – get resource usage"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getrusage &#8211; get resource usage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/time.h&gt;</code><br />
  <code>#include &lt;sys/resource.h&gt;</code> </p>

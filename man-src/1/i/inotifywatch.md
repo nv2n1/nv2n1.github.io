@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-inotifywatch/"
 description: "inotifywatch – gather filesystem access statistics using inotify"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inotifywatch &#8211; gather filesystem access statistics using inotify</p>
 <h2>SYNOPSIS</h2>
 <p> <code>inotifywatch</code> [<code>-hvzrqf</code>] [<code>-e</code> &lt;event&gt; ] [<code>-t</code> &lt;seconds&gt; ] [<code>-a</code> &lt;event&gt; ] [<code>-d</code> &lt;event&gt; ] &lt;file&gt; [ &#8230; ] </p>
 <h2>DESCRIPTION</h2>

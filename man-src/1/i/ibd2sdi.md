@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ibd2sdi/"
 description: "ibd2sdi – InnoDB utility for extracting serialized dictionary information (SDI) from an InnoDB tablespace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibd2sdi &#8211; InnoDB utility for extracting serialized dictionary information (SDI) from an InnoDB tablespace </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ibd2sdi [</code><i>options</i><code>] </code><i>file_name1</i><code> [</code><i>file_name2 file_name3 &#8230;]</i></dt></dl>

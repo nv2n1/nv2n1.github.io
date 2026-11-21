@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-psql/"
 description: "psql – PostgreSQL interactive terminal"
 ---
-<h2 class="name">NAME</h2>
-<p> psql - PostgreSQL interactive terminal </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>psql</code> [<i>option</i>...] [<i>dbname</i>&nbsp;<wbr>[<i>username</i>]] </dt>

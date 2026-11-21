@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaisnan/"
 description: "dlaisnan.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaisnan.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> LOGICAL function <code>dlaisnan</code> (DIN1, DIN2)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtotga/"
 description: "ppmtotga – convert portable pixmap into a TrueVision Targa file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtotga &#8211; convert portable pixmap into a TrueVision Targa file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtotga</code> [<code>-mono|-cmap|-rgb</code>] [<code>-norle</code>] [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

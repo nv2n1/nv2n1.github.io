@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perltex/"
 description: "perltex – enable LaTeX macros to be defined in terms of Perl code"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perltex &#8211; enable LaTeX macros to be defined in terms of Perl code </p>
 <h2>SYNOPSIS</h2>
 <p> perltex [<code>&#8211;help</code>] [<code>&#8211;latex</code>=<i>program</i>] [<code>&#8212;</code>[<code>no</code>]<code>safe</code>] [<code>&#8211;permit</code>=<i>feature</i>] [<code>&#8211;makesty</code>] [<i>latex options</i>]</p>
 <h2>DESCRIPTION</h2>

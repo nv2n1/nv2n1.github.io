@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-objcopy-14/"
 description: "llvm-objcopy – object copying and editing tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-objcopy &#8211; object copying and editing tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-objcopy</code> [<i>options</i>] <i>input</i> [<i>output</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gbak/"
 description: "gbak — backup /restore Firebird database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gbak &#8212; backup /restore Firebird database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gbak</code> -b [<i>backup option</i>&#8230;] [<i>common option</i>&#8230;] <i>source</i> <i>target</i> </p>
 <p> <code>gbak</code> -c|-r [<i>restore option</i>&#8230;] [<i>common option</i>&#8230;] <i>source</i> <i>target</i></p>

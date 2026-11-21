@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlag2/"
 description: "dlag2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlag2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlag2</code> (A, LDA, B, LDB, SAFMIN, SCALE1, SCALE2, WR1, WR2, WI)<br />

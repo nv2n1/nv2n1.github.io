@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dates/"
 description: "QuantLib::Exercise – Base exercise class."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Exercise &#8211; Base exercise class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/exercise.hpp&gt; </p>
 <p> Inherited by <code>EarlyExercise</code>, and <code>EuropeanExercise</code>. </p>

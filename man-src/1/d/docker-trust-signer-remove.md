@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-trust-signer-remove/"
 description: "docker-trust-signer-remove – Remove a signer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-trust-signer-remove &#8211; Remove a signer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker trust signer remove [OPTIONS] NAME REPOSITORY [REPOSITORY&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

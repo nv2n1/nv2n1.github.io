@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-link-14/"
 description: "llvm-link – LLVM bitcode linker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-link &#8211; LLVM bitcode linker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-link</code> [<i>options</i>] <i>filename …</i></p>
 <h2>DESCRIPTION</h2>

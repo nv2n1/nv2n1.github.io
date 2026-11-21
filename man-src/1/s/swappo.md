@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-swappo/"
 description: "swappo – swap msgid and msgstr fields in a PO file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> swappo &#8211; swap msgid and msgstr fields in a PO file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>swappo</code> [<i>filename.po</i>]</dt></dl>

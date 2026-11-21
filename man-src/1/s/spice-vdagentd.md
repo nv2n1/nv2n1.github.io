@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-spice-vdagentd/"
 description: "spice-vdagentd – Spice guest agent daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spice-vdagentd &#8211; Spice guest agent daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spice-vdagent</code> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>

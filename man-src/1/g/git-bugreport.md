@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-bugreport/"
 description: "git-bugreport – Collect information for user to file a bug report"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-bugreport &#8211; Collect information for user to file a bug report </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git bugreport[(-o | --output - directory) &lt; path &gt; ][(-s | --suffix) &lt; format &gt; ]

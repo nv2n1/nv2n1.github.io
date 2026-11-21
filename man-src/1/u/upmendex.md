@@ -6,8 +6,6 @@ letter: "u"
 url: "/docs/linux/man/1-upmendex/"
 description: "upmendex – Multilingual index processor"
 ---
-<h2 class="name">NAME</h2>
-<p> upmendex - Multilingual index processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>upmendex</code> [-ilqrcgf] [<code>-s</code><i> sty</i>] [<code>-d</code><i> dic</i>] [<code>-o</code><i> ind</i>] [<code>-t</code><i> log</i>] [<code>-p</code><i> no</i>] [<code>--</code>] [<i> idx0 idx1 idx2 ...</i>] <br />
  <code>upmendex</code> <code>--help</code>  </p>

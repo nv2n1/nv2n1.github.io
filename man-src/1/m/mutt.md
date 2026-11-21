@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mutt/"
 description: "mutt – The Mutt Mail User Agent"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mutt &#8211; The Mutt Mail User Agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mutt</code> [-nRyzZ] [-e <i>cmd</i>] [-F <i>file</i>] [-m <i>type</i>] [-f <i>file</i>] </p>
 <p> <code>mutt </code> [-Enx] [-e <i>cmd</i>] [-F <i>file</i>] [-H <i>file</i>] [-i <i>file</i>] [-s <i>subj</i>] [-b <i>addr</i>] [-c <i>addr</i>] [-a <i>file</i> [&#8230;] &#8211;] <i>addr|mailto_url</i> [&#8230;] </p>

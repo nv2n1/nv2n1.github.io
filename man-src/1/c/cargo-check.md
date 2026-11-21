@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-check/"
 description: "cargo-check – Check the current project"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-check &#8211; Check the current project </p>
 <h2>SYNOPSIS</h2>
 <p> cargo check [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autoreconf/"
 description: "autoreconf – Update generated configuration files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autoreconf &#8211; Update generated configuration files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoreconf</code> [<i>,OPTION/</i>]&#8230; [<i>,DIRECTORY/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

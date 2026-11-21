@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installemacsen/"
 description: "dh_installemacsen – register an Emacs add on package"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installemacsen &#8211; register an Emacs add on package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installemacsen</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;priority=</code><i>n</i>] [<code>&#8211;flavor=</code><i>foo</i>]</p>
 <h2>DESCRIPTION</h2>

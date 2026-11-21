@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-exonerate/"
 description: "exonerate – a generic tool for sequence comparison"
 ---
 
-<h2 class="name">NAME</h2>
-<p> exonerate &#8211; a generic tool for sequence comparison</p>
 <h2>SYNOPSIS</h2>
 <p> <code>exonerate [ options ] &lt;query path&gt; &lt;target path&gt;</code> </p>
 <h2>DESCRIPTION</h2>

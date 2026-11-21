@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ebrowse/"
 description: "ebrowse – create a class hierarchy database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ebrowse &#8211; create a class hierarchy database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ebrowse</code> [<i>options</i>] [<i>FILES</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

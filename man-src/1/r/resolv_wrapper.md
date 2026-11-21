@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-resolv_wrapper/"
 description: "resolv_wrapper – A wrapper for dns name resolving or dns faking."
 ---
 
-<h2 class="name">NAME</h2>
-<p> resolv_wrapper &#8211; A wrapper for dns name resolving or dns faking. </p>
 <h2>SYNOPSIS</h2>
 <p> LD_PRELOAD=libresolv_wrapper.so RESOLV_WRAPPER_CONF=&quot;/path/to/resolv.conf&quot; <code>./myapplication</code></p>
 <h2>DESCRIPTION</h2>

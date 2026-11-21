@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-data/"
 description: "ntlm_buf –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ntlm_buf &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;heimntlm.h&gt;</p>
 <h3>Data Fields</h3>

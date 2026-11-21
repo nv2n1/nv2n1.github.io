@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppdi/"
 description: "ppdi – import ppd files (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppdi &#8211; import ppd files (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppdi</code> [ <code>-I</code> <i>include-directory</i> ] [ <code>-o</code> <i>source-file</i> ] <i>ppd-file</i> [ &#8230; <i>ppd-file</i> ]</p>
 <h2>DESCRIPTION</h2>

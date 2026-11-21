@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ngettext/"
 description: "ngettext – translate message and choose plural form"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ngettext &#8211; translate message and choose plural form </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ngettext</code> [<i>,OPTION/</i>] [<i>,TEXTDOMAIN/</i>] <i>,MSGID MSGID-PLURAL COUNT/</i></p>
 <h2>DESCRIPTION</h2>

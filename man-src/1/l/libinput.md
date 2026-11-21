@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libinput/"
 description: "libinput – tool to interface with libinput"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libinput &#8211; tool to interface with libinput </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput [&#8211;help|&#8211;version] </code><i>&lt;command&gt;</i> <i>[&lt;args&gt;]</i></p>
 <h2>DESCRIPTION</h2>

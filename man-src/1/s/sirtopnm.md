@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sirtopnm/"
 description: "sirtopnm – convert a Solitaire file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sirtopnm &#8211; convert a Solitaire file into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sirtopnm</code> [<i>sirfile</i>]</p>
 <h2>DESCRIPTION</h2>

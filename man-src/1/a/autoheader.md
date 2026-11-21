@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autoheader/"
 description: "autoheader – Create a template header for configure"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autoheader &#8211; Create a template header for configure </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoheader</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE-FILE/</i>]</p>
 <h2>DESCRIPTION</h2>

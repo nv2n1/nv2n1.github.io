@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaqsb/"
 description: "slaqsb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaqsb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqsb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br />

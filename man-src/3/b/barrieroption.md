@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-barrieroption/"
 description: "ql/instruments/barrieroption.hpp – Barrier option on a single asset."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/instruments/barrieroption.hpp &#8211; Barrier option on a single asset. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
  #include &lt;ql/instruments/barriertype.hpp&gt;<br />

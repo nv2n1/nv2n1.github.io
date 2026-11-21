@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fgetgrent/"
 description: "fgetgrent – get group file entry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fgetgrent &#8211; get group file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;grp.h&gt;

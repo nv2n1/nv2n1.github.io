@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtomap/"
 description: "ppmtomap – extract all colors from a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtomap &#8211; extract all colors from a portable pixmap</p>
 <h2>DESCRIPTION</h2>
 <p> This program exists only for backward compatibility. </p>
 <p> Use <code>pnmcolormap</code>, which replaced it in January 2002. </p>

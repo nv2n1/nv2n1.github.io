@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sjisconv/"
 description: "sjisconv – convert a TeX document in SJIS encoding into `preprocessed’ form."
 ---
 
-<h2 class="name">NAME</h2>
-<p> sjisconv &#8211; convert a TeX document in SJIS encoding into `preprocessed&#8217; form. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sjisconv</code> &lt; <i>infile</i> &gt; <i>outfile</i></p>
 <h2>DESCRIPTION</h2>

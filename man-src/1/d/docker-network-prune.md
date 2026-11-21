@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-network-prune/"
 description: "docker-network-prune – Remove all unused networks"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-network-prune &#8211; Remove all unused networks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker network prune [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

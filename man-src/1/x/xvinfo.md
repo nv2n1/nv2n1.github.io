@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xvinfo/"
 description: "xvinfo – Print out X-Video extension adaptor information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xvinfo &#8211; Print out X-Video extension adaptor information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xvinfo</code> [-display <i>displayname</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcolcreate/"
 description: "dbcolcreate – create new columns"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcolcreate &#8211; create new columns </p>
 <h2>SYNOPSIS</h2>
 <pre>
     dbcolcreate NewColumn1 [NewColumn2]

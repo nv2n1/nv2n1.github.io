@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-go-get/"
 description: "go-get – add dependencies to current module and install them"
 ---
 
-<h2 class="name">NAME</h2>
-<p> go-get &#8211; add dependencies to current module and install them </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go get</code> [-d] [-t] [-u] [-v] [<i>build flags</i>] [<i>packages</i>]</p>
 <h2>DESCRIPTION</h2>

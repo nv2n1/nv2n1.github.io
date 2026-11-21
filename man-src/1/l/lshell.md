@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lshell/"
 description: "lshell – Limited Shell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lshell &#8211; Limited Shell</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lshell </code> [<i>OPTIONS</i>] </p>
 <h2>DESCRIPTION</h2>

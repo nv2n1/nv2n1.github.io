@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fcitx-remote/"
 description: "fcitx-remote – Tool for control fcitx state via console"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fcitx-remote &#8211; Tool for control fcitx state via console </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fcitx-remote</code> [<i>OPTION</i>]</p>
 <h2>OPTIONS</h2>

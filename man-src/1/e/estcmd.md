@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-estcmd/"
 description: "estcmd – command line interface of the core API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> estcmd &#8211; command line interface of the core API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db</code> </p>
 <p> <code>estcmd put [-tr] [-cl] [-ws] [-apn|-acc] [-xs|-xl|-xh||-xh2|-xh3] [-sv|-si|-sa] db [file]</code> </p>

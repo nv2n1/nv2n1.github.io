@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-csysv_rook/"
 description: "csysv_rook.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> csysv_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csysv_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-subst/"
 description: "shtool subst – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool subst &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-sed/">sed</a>(1) substitution operations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool subst</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-n</code>|<code>&#8211;nop</code>] [<code>-w</code>|<code>&#8211;warning</code>] [<code>-q</code>|<code>&#8211;quiet</code>] [<code>-s</code>|<code>&#8211;stealth</code>] [<code>-i</code>|<code>&#8211;interactive</code>] [<code>-b</code>|<code>&#8211;backup</code> <i>ext</i>] [<code>-e</code>|<code>&#8211;exec</code> <i>cmd</i>] [<code>-f</code>|<code>&#8211;file</code> <i>cmd-file</i>] [<i>file</i>] [<i>file</i> &#8230;]</p>

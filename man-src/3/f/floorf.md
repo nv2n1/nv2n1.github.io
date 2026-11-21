@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-floorf/"
 description: "floor, floorf, floorl – largest integral value not greater than argument"
 ---
 
-<h2 class="name">NAME</h2>
-<p> floor, floorf, floorl &#8211; largest integral value not greater than argument </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

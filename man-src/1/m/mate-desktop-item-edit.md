@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-desktop-item-edit/"
 description: "mate-desktop-item-edit – A small tool to edit .desktop files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-desktop-item-edit &#8211; A small tool to edit .desktop files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-desktop-item-edit [OPTIONS] [FILE]</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cue2toc/"
 description: "cue2toc – convert CUE to TOC format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cue2toc &#8211; convert CUE to TOC format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cue2toc</code> [<code>-hnqv</code>] [<code>-o</code> <i>tocfile</i>] [<code>-w</code> <i>wavefile</i>] [<i>cuefile</i>] </p>
 <h2>DESCRIPTION</h2>

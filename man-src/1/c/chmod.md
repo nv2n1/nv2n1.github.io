@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chmod/"
 description: "chmod – change file mode bits"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chmod &#8211; change file mode bits </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,MODE/</i>[<i>,,MODE/</i>]&#8230; <i>,FILE/</i>&#8230;<br />
  <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,OCTAL-MODE FILE/</i>&#8230;<br />

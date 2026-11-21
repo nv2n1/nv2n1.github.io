@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3errors/"
 description: "include/antlr3errors.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3errors.h &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Defines</h3>
 <p> #define <code>ANTLR3_CHARSTREAM_EOF</code> 0xFFFFFFFF<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lwp-dump/"
 description: "lwp-dump – See what headers and content is returned for a URL"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwp-dump &#8211; See what headers and content is returned for a URL </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lwp-dump</code> [ <i>options</i> ] <i></i><font SIZE="-1"><i>URL</i></font><i></i></p>
 <h2>DESCRIPTION</h2>

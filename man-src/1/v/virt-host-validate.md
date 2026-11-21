@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-host-validate/"
 description: "virt-host-validate – validate host virtualization setup"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-host-validate &#8211; validate host virtualization setup </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-host-validate</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>&#8230;] [<i>HV-TYPE</i>]</p>
 <h2>DESCRIPTION</h2>

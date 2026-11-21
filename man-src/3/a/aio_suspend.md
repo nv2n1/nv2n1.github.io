@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-aio_suspend/"
 description: "aio_suspend – wait for asynchronous I/O operation or timeout"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aio_suspend &#8211; wait for asynchronous I/O operation or timeout </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;aio.h&gt;

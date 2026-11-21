@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-westcos-tool/"
 description: "westcos-tool – utility for manipulating data structure on westcos smart card and similar security tokens"
 ---
 
-<h2 class="name">NAME</h2>
-<p> westcos-tool &#8211; utility for manipulating data structure on westcos smart card and similar security tokens </p>
 <h2>SYNOPSIS</h2>
 <p> <code>westcos-tool</code> [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

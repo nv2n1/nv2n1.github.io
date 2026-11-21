@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-features-matching/"
 description: "features-matching – Demonstration of image feature matching"
 ---
 
-<h2 class="name">NAME</h2>
-<p> features-matching &#8211; Demonstration of image feature matching </p>
 <h2>SYNOPSIS</h2>
 <p> features-matching</p>
 <h2>DESCRIPTION</h2>

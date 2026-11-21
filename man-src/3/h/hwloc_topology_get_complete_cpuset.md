@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_topology_get_complete_cpuset/"
 description: "hwlocality_helper_topology_sets – CPU and node sets of entire topologies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_helper_topology_sets &#8211; CPU and node sets of entire topologies </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_const_cpuset_t</code> <code>hwloc_topology_get_complete_cpuset</code> (<code>hwloc_topology_t</code> topology) </p>
 <p> static <code>hwloc_const_cpuset_t</code> <code>hwloc_topology_get_topology_cpuset</code> (<code>hwloc_topology_t</code> topology) </p>

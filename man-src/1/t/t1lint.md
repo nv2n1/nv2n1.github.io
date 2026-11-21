@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-t1lint/"
 description: "t1lint – check a PostScript Type 1 font for correctness"
 ---
 
-<h2 class="name">NAME</h2>
-<p> t1lint &#8211; check a PostScript Type 1 font for correctness </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1lint</code> <i>font</i> [<i>font</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

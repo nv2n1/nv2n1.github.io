@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-init/"
 description: "git-init – Create an empty Git repository or reinitialize an existing one"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-init &#8211; Create an empty Git repository or reinitialize an existing one </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git init[-q | --quiet][--bare][--template = &lt;template_directory&gt;]

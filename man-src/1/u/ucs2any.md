@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ucs2any/"
 description: "ucs2any – generate BDF fonts containing subsets of ISO 10646-1 codepoints"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ucs2any &#8211; generate BDF fonts containing subsets of ISO 10646-1 codepoints </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ucs2any</code> [ <code>+d</code> | <code>-d</code> ] <i>source-name</i> { <i>mapping-file</i> <i>registry-encoding</i> } &#8230;</p>
 <h2>DESCRIPTION</h2>

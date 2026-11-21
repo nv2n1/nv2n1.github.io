@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gradient_/"
 description: "QuantLib::LineSearch – Base class for line search."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::LineSearch &#8211; Base class for line search. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/optimization/linesearch.hpp&gt; </p>
 <p> Inherited by <code>ArmijoLineSearch</code>. </p>

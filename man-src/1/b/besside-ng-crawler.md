@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-besside-ng-crawler/"
 description: "besside-ng-crawler – filter EAPOL frames from a directory of capture files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> besside-ng-crawler &#8211; filter EAPOL frames from a directory of capture files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>besside-ng-crawler</code> &lt;Input Directory&gt; &lt;Output File&gt;</p>
 <h2>DESCRIPTION</h2>

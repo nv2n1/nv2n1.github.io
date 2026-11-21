@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdiffmk/"
 description: "gdiffmk – mark differences between groff/nroff/troff files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdiffmk &#8211; mark differences between groff/nroff/troff files </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-a </code><i>addmark</i> ] [ <code>-c </code><i>changemark</i> ] [ <code>-d </code><i>deletemark</i> ] [<code>-D</code> [<code>-B</code>] [<code>-M</code> <i>mark1 mark2</i>]] [ <code>-x </code><i>diffcmd</i> ] [ <code>&#8212;</code> ] <i>file1</i> <i>file2</i> [<i>output</i>] <code>&#8211;help</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

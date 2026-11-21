@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-localconstantvol/"
 description: "ql/termstructures/volatility/equityfx/localconstantvol.hpp – Local constant volatility, no time dependence, no asset dependence."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/termstructures/volatility/equityfx/localconstantvol.hpp &#8211; Local constant volatility, no time dependence, no asset dependence. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/equityfx/localvoltermstructure.hpp&gt; </p>

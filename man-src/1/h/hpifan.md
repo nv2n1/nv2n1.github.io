@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpifan/"
 description: "hpifan – An openhpi sample application that shows \"Fan Control\" management instruments"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpifan &#8211; An openhpi sample application that shows &quot;Fan Control&quot; management instruments </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpifan[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-h][-s auto | nn][-X] hpifan[--domain = nn][--host = host[:port]][--cfgfile = file][--help][--speed = auto | nn][--debug]

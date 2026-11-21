@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwlocality_objects/"
 description: "hwlocality_objects – Object Structure and Attributes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_objects &#8211; Object Structure and Attributes </p>
 <h3>Data Structures</h3>
 <p> struct <code>hwloc_obj_memory_s</code> </p>
 <p> struct <code>hwloc_obj_memory_s::hwloc_obj_memory_page_type_s</code> </p>

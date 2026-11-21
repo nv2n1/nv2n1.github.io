@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-format-patch/"
 description: "git-format-patch – Prepare patches for e-mail submission"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-format-patch &#8211; Prepare patches for e-mail submission </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git format - patch[-k][(-o | --output - directory) &lt; dir &gt; | --stdout]

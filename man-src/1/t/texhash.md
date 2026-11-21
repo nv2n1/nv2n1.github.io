@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-texhash/"
 description: "mktexlsr – create ls-R databases"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mktexlsr &#8211; create ls-R databases </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mktexlsr</code> [<i>directories</i>]</p>
 <h2>DESCRIPTION</h2>

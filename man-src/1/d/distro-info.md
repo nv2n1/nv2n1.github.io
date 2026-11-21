@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-distro-info/"
 description: "distro-info – provides information about the distributions’ releases"
 ---
 
-<h2 class="name">NAME</h2>
-<p> distro-info &#8211; provides information about the distributions&#8217; releases </p>
 <h2>SYNOPSIS</h2>
 <p> <code>distro-info</code> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>

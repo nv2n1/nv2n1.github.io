@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgehd2/"
 description: "cgehd2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgehd2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgehd2</code> (N, ILO, IHI, A, LDA, TAU, WORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grub-mklayout/"
 description: "grub-mklayout – generate a GRUB keyboard layout file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grub-mklayout &#8211; generate a GRUB keyboard layout file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mklayout</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>]</p>
 <h2>DESCRIPTION</h2>

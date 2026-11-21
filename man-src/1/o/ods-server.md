@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ods-server/"
 description: "ods-server – minimal OBEX server based on obex-data-server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ods-server &#8211; minimal OBEX server based on obex-data-server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ods-server</code> [<i>options</i>] <i>profile path</i></p>
 <h2>DESCRIPTION</h2>

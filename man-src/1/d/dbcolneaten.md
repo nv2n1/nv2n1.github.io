@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcolneaten/"
 description: "dbcolneaten – pretty-print columns of Fsdb data (assuming a monospaced font)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcolneaten &#8211; pretty-print columns of Fsdb data (assuming a monospaced font) </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolneaten [-E] [field_settings]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-dib/"
 description: "virt-dib – Run diskimage-builder elements"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-dib &#8211; Run diskimage-builder elements </p>
 <h2>SYNOPSIS</h2>
 <pre>
  virt-dib -B DIB-LIB [options] elements...

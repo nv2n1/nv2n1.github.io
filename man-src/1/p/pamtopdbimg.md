@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtopdbimg/"
 description: "pamtodbimg – convert a Netpbm image to a Palm Pilot Image Viewer PDB Image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtodbimg &#8211; convert a Netpbm image to a Palm Pilot Image Viewer PDB Image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtopdbimg</code> </p>
 <p> [<code>-notefile=</code><i>filename</i>] [<code>-title=</code><i>text</i>] [<code>-compressed</code>] [<code>-uncompressed</code>] [<code>-maybecompressed</code>] [<code>-4depth</code>] </p>

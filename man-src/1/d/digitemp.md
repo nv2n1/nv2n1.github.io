@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-digitemp/"
 description: "digitemp – program to read from 1-wire temperature sensors."
 ---
 
-<h2 class="name">NAME</h2>
-<p> digitemp &#8211; program to read from 1-wire temperature sensors. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>digitemp</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

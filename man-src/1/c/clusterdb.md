@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-clusterdb/"
 description: "clusterdb – cluster a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clusterdb &#8211; cluster a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>clusterdb</code> [<i>connection-option</i>&#8230;] [<code>&#8211;verbose</code> | <code>-v</code>] [<code>&#8211;table</code>&nbsp;<wbr>|&nbsp;<wbr><code>-t</code>&nbsp;<wbr><i>table</i>] [<i>dbname</i>]</dt>

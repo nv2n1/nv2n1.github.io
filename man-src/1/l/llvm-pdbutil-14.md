@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-pdbutil-14/"
 description: "llvm-pdbutil – PDB File forensics and diagnostics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-pdbutil &#8211; PDB File forensics and diagnostics</p>
 <dl>
 <dt>&bull;</dt>
 <dd> <i>Synopsis</i></dd>

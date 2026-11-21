@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sa-awl/"
 description: "sa-awl – examine and manipulate SpamAssassin’s auto-whitelist db"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sa-awl &#8211; examine and manipulate SpamAssassin&#8217;s auto-whitelist db </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sa-awl</code> [&#8211;clean] [&#8211;min n] [dbfile]</p>
 <h2>DESCRIPTION</h2>

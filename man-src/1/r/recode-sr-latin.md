@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-recode-sr-latin/"
 description: "recode-sr-latin – convert Serbian text from Cyrillic to Latin script"
 ---
 
-<h2 class="name">NAME</h2>
-<p> recode-sr-latin &#8211; convert Serbian text from Cyrillic to Latin script </p>
 <h2>SYNOPSIS</h2>
 <p> <code>recode-sr-latin</code> [<i>OPTION</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pango-view/"
 description: "pango-view (pango) – Pango text viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pango-view (pango) &#8211; Pango text viewer </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>

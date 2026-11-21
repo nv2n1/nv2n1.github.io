@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk4-query-settings/"
 description: "gtk4-query-settings – Print name and value of GTK settings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk4-query-settings &#8211; Print name and value of GTK settings </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <code>gtk4-query-settings</code> [PATTERN]

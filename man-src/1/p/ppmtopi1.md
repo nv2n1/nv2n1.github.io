@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtopi1/"
 description: "ppmtopi1 – convert a portable pixmap into an Atari Degas .pi1 file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtopi1 &#8211; convert a portable pixmap into an Atari Degas .pi1 file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtopi1</code> [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

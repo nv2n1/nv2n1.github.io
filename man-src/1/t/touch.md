@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-touch/"
 description: "touch – change file timestamps"
 ---
 
-<h2 class="name">NAME</h2>
-<p> touch &#8211; change file timestamps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>touch</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

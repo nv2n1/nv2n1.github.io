@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tie/"
 description: "tie – merge or apply WEB change files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tie &#8211; merge or apply WEB change files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tie</code> <code>-c</code>|<code>-m</code> <i>outputfile masterfile</i> <i>changefile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

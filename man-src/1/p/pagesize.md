@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pagesize/"
 description: "pagesize – Print supported system page sizes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pagesize &#8211; Print supported system page sizes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pagesize [options]</code></p>
 <h2>DESCRIPTION</h2>

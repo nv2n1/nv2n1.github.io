@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-usb-devices/"
 description: "usb-devices – print USB device details"
 ---
 
-<h2 class="name">NAME</h2>
-<p> usb-devices &#8211; print USB device details </p>
 <h2>SYNOPSIS</h2>
 <p> <code>usb-devices</code> </p>
 <h2>DESCRIPTION</h2>

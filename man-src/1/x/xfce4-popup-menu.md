@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfce4-popup-menu/"
 description: "xfce4-popup-menu – shows the Xfce Menu"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfce4-popup-menu &#8211; shows the Xfce Menu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-popup-menu</code> </p>
 <h2>DESCRIPTION</h2>

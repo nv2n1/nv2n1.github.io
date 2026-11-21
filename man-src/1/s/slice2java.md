@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-slice2java/"
 description: "slice2java – The Slice to Java compiler."
 ---
 
-<h2 class="name">NAME</h2>
-<p> slice2java &#8211; The Slice to Java compiler.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2java [options] [files] </p>
 <h2>DESCRIPTION</h2>

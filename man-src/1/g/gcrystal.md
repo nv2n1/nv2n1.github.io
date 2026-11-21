@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcrystal/"
 description: "gcrystal – light model visualizer for crystal structures"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcrystal &#8211; light model visualizer for crystal structures </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gcrystal</code> [<code>OPTION(S)</code>&#8230;] [<i>FILE</i>&#8230;]</dt></dl>

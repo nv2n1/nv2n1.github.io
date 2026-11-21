@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bogolexer/"
 description: "bogolexer – Utility program for separating email messages into tokens"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bogolexer &#8211; Utility program for separating email messages into tokens </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogolexer</code> [-p] [-q] [-h] [-n] [-v] [-x&nbsp;<wbr><i>flags</i>] [-c&nbsp;<wbr><i>file</i>] [-C] [-D] [-I&nbsp;<wbr><i>file</i>] [-O&nbsp;<wbr><i>file</i>] [-V]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndrdump/"
 description: "ndrdump – DCE/RPC Packet Parser and Dumper"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndrdump &#8211; DCE/RPC Packet Parser and Dumper </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndrdump</code> [-c context] {pipe} {function} {in|out} {filename}</dt>

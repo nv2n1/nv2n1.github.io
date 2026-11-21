@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcm-viewer/"
 description: "gcm-viewer – GNOME Color Manager Profile Viewer Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcm-viewer &#8211; GNOME Color Manager Profile Viewer Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcm-viewer</code> [ <code>&#8211;verbose</code> ] </p>
 <h2>DESCRIPTION</h2>

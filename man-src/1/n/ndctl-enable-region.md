@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndctl-enable-region/"
 description: "ndctl-enable-region – enable the given region(s) and all descendant namespaces"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndctl-enable-region &#8211; enable the given region(s) and all descendant namespaces </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>ndctl enable-region</i> &lt;region&gt; [&lt;options&gt;]

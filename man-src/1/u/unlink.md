@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unlink/"
 description: "unlink – call the unlink function to remove the specified file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unlink &#8211; call the unlink function to remove the specified file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unlink</code> <i>,FILE/</i><br />
  <code>unlink</code> <i>,OPTION/</i></p>

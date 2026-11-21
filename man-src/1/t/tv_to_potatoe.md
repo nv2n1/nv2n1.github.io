@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_to_potatoe/"
 description: "tv_to_potatoe – Convert XMLTV listings to potatoe format."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_to_potatoe &#8211; Convert XMLTV listings to potatoe format. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_to_potatoe [&#8211;help] [&#8211;outdir <font SIZE="-1">PATH</font>] [&#8211;lang <font SIZE="-1">LANGUAGE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
 <h2>DESCRIPTION</h2>

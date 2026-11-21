@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-bcanalyzer-14/"
 description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-bcanalyzer &#8211; LLVM bitcode analyzer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-bcanalyzer</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

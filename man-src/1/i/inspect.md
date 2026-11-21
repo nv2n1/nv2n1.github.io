@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-inspect/"
 description: "inspect – Boost code inspection tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inspect &#8211; Boost code inspection tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>inspect</code> [<i>-cvs</i>] [<i>-text</i>] [<i>-brief</i>] [<i>options</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

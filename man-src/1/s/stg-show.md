@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-show/"
 description: "stg-show – Show the commit corresponding to a patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-show &#8211; Show the commit corresponding to a patch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg show[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]

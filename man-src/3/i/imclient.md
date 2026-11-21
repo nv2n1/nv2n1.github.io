@@ -8,8 +8,6 @@ description: "imclient library – authenticating callback interface to IMAP/IMS
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
-<p> imclient library &#8211; authenticating callback interface to IMAP/IMSP servers </p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;cyrus/imclient.h&gt; </p>
 <p> </code> </p>

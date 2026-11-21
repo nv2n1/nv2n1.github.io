@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-resolveip/"
 description: "resolveip – resolve host name to IP address or vice versa"
 ---
 
-<h2 class="name">NAME</h2>
-<p> resolveip &#8211; resolve host name to IP address or vice versa </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>resolveip [</code><i>options</i><code>] {</code><i>host_name</i><code>|</code><i>ip-addr</i><code>} &#8230;</code></dt></dl>

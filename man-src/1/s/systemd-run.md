@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-run/"
 description: "systemd-run – Run programs in transient scope units, service units, or path-, socket-, or timer-triggered service units"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-run &#8211; Run programs in transient scope units, service units, or path-, socket-, or timer-triggered service units </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-run</code> [OPTIONS&#8230;] <i>COMMAND</i>&nbsp;[ARGS&#8230;]</dt>

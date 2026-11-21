@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-at-properties/"
 description: "mate-at-properties – configure MATE Assistive Technologies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-at-properties &#8211; configure MATE Assistive Technologies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-at-properties</code> [<i>OPTIONS&#8230;]</i></p>
 <h2>DESCRIPTION</h2>

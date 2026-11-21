@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-resize/"
 description: "virt-resize – Resize a virtual machine disk"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-resize &#8211; Resize a virtual machine disk </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - resize[--resize / dev / sdaN = [+ / -]&lt;size&gt;[%]]

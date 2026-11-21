@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dmlite_security_context/"
 description: "dmlite_security_context –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dmlite_security_context &#8211; </p>
 <p> Security context.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;dmlite.h&gt;</p>

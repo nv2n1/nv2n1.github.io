@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grid-cert-request/"
 description: "grid-cert-request – Generate a X.509 certificate request and corresponding private key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grid-cert-request &#8211; Generate a X.509 certificate request and corresponding private key </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-cert-request</code> -help | -h | -? | -usage | -version-versions </p>
 <p> <code>grid-cert-request</code> [OPTIONS]</p>

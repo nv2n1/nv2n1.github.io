@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chprfs/"
 description: "chprfs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chprfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />

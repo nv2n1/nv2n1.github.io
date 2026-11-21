@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_handle_attrs/"
 description: "Handle Attributes –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Handle Attributes &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />
  globus_l_gsi_proxy_handle_attrs_s * <code>globus_gsi_proxy_handle_attrs_t</code>&quot;<br />

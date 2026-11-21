@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ldbsearch/"
 description: "ldbsearch – Search for records in a LDB database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldbsearch &#8211; Search for records in a LDB database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbsearch</code> [-h] [-s base|one|sub] [-b basedn] [-i] [-H LDB-URL] [expression] [attributes]</dt></dl>

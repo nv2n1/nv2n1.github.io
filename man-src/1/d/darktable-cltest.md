@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-darktable-cltest/"
 description: "darktable-cltest – check if there is a usable OpenCL environment for darktable to use"
 ---
 
-<h2 class="name">NAME</h2>
-<p> darktable-cltest &#8211; check if there is a usable OpenCL environment for darktable to use </p>
 <h2>SYNOPSIS</h2>
 <pre>
     darktable-cltest

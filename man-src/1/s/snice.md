@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-snice/"
 description: "skill, snice – send a signal or report process status"
 ---
 
-<h2 class="name">NAME</h2>
-<p> skill, snice &#8211; send a signal or report process status </p>
 <h2>SYNOPSIS</h2>
 <p> <code>skill</code> [<i>signal</i>] [<i>options</i>] <i>expression</i><br />
  <code>snice</code> [<i>new priority</i>] [<i>options</i>] <i>expression</i></p>

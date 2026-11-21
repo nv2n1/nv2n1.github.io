@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-session-inhibit/"
 description: "gnome-session-inhibit – inhibit gnome-session functionality"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-session-inhibit &#8211; inhibit gnome-session functionality </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-session-inhibit</code> [OPTION&#8230;] [COMMAND]</dt></dl>

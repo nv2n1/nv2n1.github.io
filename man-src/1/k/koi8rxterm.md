@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-koi8rxterm/"
 description: "koi8rxterm – X terminal emulator for KOI8-R environments"
 ---
 
-<h2 class="name">NAME</h2>
-<p> koi8rxterm &#8211; X terminal emulator for KOI8-R environments </p>
 <h2>SYNOPSIS</h2>
 <p> <code>koi8rxterm</code> [ <i>xterm-options</i> ]</p>
 <h2>DESCRIPTION</h2>

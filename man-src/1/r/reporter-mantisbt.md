@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reporter-mantisbt/"
 description: "reporter-mantisbt – Reports problem to Mantis Bug Tracker."
 ---
 
-<h2 class="name">NAME</h2>
-<p> reporter-mantisbt &#8211; Reports problem to Mantis Bug Tracker. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>reporter-mantisbt</i> [-vrf] [-c CONFFILE]&#8230; [-F FMTFILE] [-A FMTFILE2] -d DIR </p>
 <p> Or: </p>

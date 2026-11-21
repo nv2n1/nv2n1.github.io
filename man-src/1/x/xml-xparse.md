@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml-xparse/"
 description: "xml-xparse – A simple command-line XML parsing application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml-xparse &#8211; A simple command-line XML parsing application</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xml-xparse</code> [options] document.xml </p>
 <h2>DESCRIPTION</h2>

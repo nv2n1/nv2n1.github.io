@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-euptex/"
 description: "ptex, uptex, eptex, euptex – Japanese \"Publishing TeX\""
 ---
 
-<h2 class="name">NAME</h2>
-<p> ptex, uptex, eptex, euptex &#8211; Japanese &quot;Publishing TeX&quot; </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ptex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]</p>
 <h2>DESCRIPTION</h2>

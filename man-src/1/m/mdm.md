@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mdm/"
 description: "MDM – The MDM Display Manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> MDM &#8211; The MDM Display Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdm [options]</code><br />
  <code>mdmsetup [options]</code></p>

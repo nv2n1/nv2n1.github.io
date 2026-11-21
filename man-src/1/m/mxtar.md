@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mxtar/"
 description: "mxtar – Wrapper for using GNU tar directly from a floppy disk"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mxtar &#8211; Wrapper for using GNU tar directly from a floppy disk </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mxtar </code> [ <code>&#8211;</code> ] <i>[ tar-options ]</i> <i>file</i></p>
 <h2>DESCRIPTION</h2>

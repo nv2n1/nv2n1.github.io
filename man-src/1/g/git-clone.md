@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-clone/"
 description: "git-clone – Clone a repository into a new directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-clone &#8211; Clone a repository into a new directory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git clone[--template = &lt;template_directory&gt;]

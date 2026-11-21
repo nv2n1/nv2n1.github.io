@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-membarrier/"
 description: "membarrier – issue memory barriers on a set of threads"
 ---
 
-<h2 class="name">NAME</h2>
-<p> membarrier &#8211; issue memory barriers on a set of threads </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/membarrier.h&gt;

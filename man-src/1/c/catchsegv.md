@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-catchsegv/"
 description: "catchsegv – Catch segmentation faults in programs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> catchsegv &#8211; Catch segmentation faults in programs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>catchsegv</code> <code>program</code> [<code>args</code>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-sched/"
 description: "perf-sched – Tool to trace/measure scheduler properties (latencies)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-sched &#8211; Tool to trace/measure scheduler properties (latencies) </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>perf sched</i> {record|latency|map|replay|script}

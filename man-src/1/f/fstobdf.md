@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fstobdf/"
 description: "fstobdf – generate BDF font from X font server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fstobdf &#8211; generate BDF font from X font server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fstobdf</code> [ <code>-server</code> <i>servername</i> ] <code>-fn</code> <i>fontname</i></p>
 <h2>DESCRIPTION</h2>

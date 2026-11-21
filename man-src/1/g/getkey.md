@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getkey/"
 description: "getkey – wait until a key is pressed"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getkey &#8211; wait until a key is pressed</p>
 <h2>SYNOPSIS</h2>
 <p> <code>getkey</code> [<i>OPTION</i>]&#8230; [<i>KEYS</i>] </p>
 <h2>DESCRIPTION</h2>

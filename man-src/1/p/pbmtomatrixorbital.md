@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtomatrixorbital/"
 description: "pbmtomatrixorbital – convert a PBM image to a Matrix Orbital LCD image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtomatrixorbital &#8211; convert a PBM image to a Matrix Orbital LCD image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtomatrixorbital</code> </p>
 <p> [<i>pbmfile</i>] </p>

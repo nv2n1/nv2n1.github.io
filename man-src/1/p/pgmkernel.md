@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmkernel/"
 description: "pgmkernel – generate a convolution kernel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmkernel &#8211; generate a convolution kernel </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmkernel</code> [ <code>-weight</code> <i>w</i> ] <i>width </i> [ <i>height </i> ]</p>
 <h2>DESCRIPTION</h2>

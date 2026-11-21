@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sharesec/"
 description: "sharesec – Set or get share ACLs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sharesec &#8211; Set or get share ACLs </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgsvj1/"
 description: "dgsvj1.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgsvj1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgsvj1</code> (JOBV, M, N, N1, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br />

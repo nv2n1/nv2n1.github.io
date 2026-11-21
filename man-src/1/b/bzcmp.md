@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bzcmp/"
 description: "bzcmp, bzdiff – compare bzip2 compressed files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bzcmp, bzdiff &#8211; compare bzip2 compressed files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bzcmp</code> [ cmp_options ] file1 [ file2 ]<br />
  <code>bzdiff</code> [ diff_options ] file1 [ file2 ]</p>

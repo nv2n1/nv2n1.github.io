@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-raptor-config/"
 description: "raptor-config – script to get information about the installed version of Raptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> raptor-config &#8211; script to get information about the installed version of Raptor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>raptor-config</code> [&#8211;cflags] [&#8211;options] [&#8211;help] [&#8211;libs] [&#8211;libtool-libs] [&#8211;private-libs] [&#8211;prefix<i>[=DIR]</i>] [&#8211;version-decimal] [&#8211;version]</p>
 <h2>DESCRIPTION</h2>

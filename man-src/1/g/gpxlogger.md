@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpxlogger/"
 description: "gps, xgps, xgpsspeed, cgps, lcdgps, cgpxlogger – test clients for gpsd"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gps, xgps, xgpsspeed, cgps, lcdgps, cgpxlogger &#8211; test clients for gpsd </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xgps</code> [<i>X-options</i>] [-h] [-V] [-j] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [-altunits&nbsp;<wbr>{[feet]&nbsp;<wbr>|&nbsp;<wbr>[meters]}] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>

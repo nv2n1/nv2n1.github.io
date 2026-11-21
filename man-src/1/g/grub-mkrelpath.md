@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grub-mkrelpath/"
 description: "grub-mkrelpath – make a system path relative to its root"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grub-mkrelpath &#8211; make a system path relative to its root </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mkrelpath</code> [<i>,OPTION/</i>&#8230;] <i>,PATH/</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sshpk-conv/"
 description: "sshpk-conv – convert between key formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sshpk-conv &#8211; convert between key formats </p>
 <h2>SYNOPSYS</h2>
 <p> <code>sshpk-conv</code> -t FORMAT [FILENAME] [OPTIONS&#8230;] </p>
 <p> <code>sshpk-conv</code> -i [FILENAME] [OPTIONS&#8230;]</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-createdb/"
 description: "createdb – create a new PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> createdb &#8211; create a new PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>createdb</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>dbname</i>&nbsp;<wbr>[<i>description</i>]]</dt></dl>

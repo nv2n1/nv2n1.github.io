@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rootcint/"
 description: "rootcint – ROOT Dictionary generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rootcint &#8211; ROOT Dictionary generator </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 rootcint header_file[+][-][!]...[LinkDef.h] &gt; dict_file

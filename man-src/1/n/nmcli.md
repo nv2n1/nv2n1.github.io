@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nmcli/"
 description: "nmcli – command-line tool for controlling NetworkManager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nmcli &#8211; command-line tool for controlling NetworkManager </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nmcli</code> [<i>OPTIONS</i>&#8230;] {<code>help</code> | <code>general</code> | <code>networking</code> | <code>radio</code> | <code>connection</code> | <code>device</code> | <code>agent</code> | <code>monitor</code>} [<i>COMMAND</i>] [<i>ARGUMENTS</i>&#8230;]</dt></dl>

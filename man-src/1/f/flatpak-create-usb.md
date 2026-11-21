@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-create-usb/"
 description: "flatpak-create-usb – Copy apps and/or runtimes onto removable media."
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-create-usb &#8211; Copy apps and/or runtimes onto removable media. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak create-usb</code> [OPTION&#8230;] MOUNT-PATH REF&#8230;</dt></dl>

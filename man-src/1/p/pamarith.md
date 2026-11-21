@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamarith/"
 description: "pamarith – perform arithmetic on two Netpbm images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamarith &#8211; perform arithmetic on two Netpbm images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamarith</code> <code>-add</code> | <code>-subtract</code> | <code>-multiply</code> | <code>-divide</code> | <code>-difference</code> | <code>-minimum</code> | <code>-maximum</code> | <code>-mean</code> | <code>-compare</code> | <code>-and</code> | <code>-or</code> | <code>-nand</code> | <code>-nor</code> | <code>-xor</code> | <code>-shiftleft</code> | <code>-shiftright</code> <i>pamfile1</i> <i>pamfile2</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-factor/"
 description: "factor – factor numbers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> factor &#8211; factor numbers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>factor</code> [<i>,NUMBER/</i>]&#8230;<br />
  <code>factor</code> <i>,OPTION/</i></p>

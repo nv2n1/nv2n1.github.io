@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-assert_perror/"
 description: "assert_perror – test errnum and abort"
 ---
 
-<h2 class="name">NAME</h2>
-<p> assert_perror &#8211; test errnum and abort </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xinput/"
 description: "xinput – utility to configure and test X input devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xinput &#8211; utility to configure and test X input devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xinput [OPTIONS] [DEVICE]</code> </p>
 <h2>DESCRIPTION</h2>

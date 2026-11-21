@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airolib-ng/"
 description: "airolib-ng – manage and create a WPA/WPA2 pre-computed hashes tables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airolib-ng &#8211; manage and create a WPA/WPA2 pre-computed hashes tables </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airolib-ng</code> &lt;database&gt; &lt;operation&gt; [options]</p>
 <h2>DESCRIPTION</h2>

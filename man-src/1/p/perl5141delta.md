@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perl5141delta/"
 description: "perl5141delta – what is new for perl v5.14.1"
 ---
-<h2 class="name">NAME</h2>
-<p> perl5141delta - what is new for perl v5.14.1 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.14.0 release and the 5.14.1 release. </p>
 <p> If you are upgrading from an earlier release such as 5.12.0, first read perl5140delta, which describes differences between 5.12.0 and 5.14.0.  </p>

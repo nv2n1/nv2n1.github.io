@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sggsvd/"
 description: "sggsvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sggsvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggsvd</code> (JOBU, JOBV, JOBQ, M, N, P, K, L, A, LDA, B, LDB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, IWORK, INFO)<br />

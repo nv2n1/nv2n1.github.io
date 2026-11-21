@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-remctl/"
 description: "remctl – Remote execution tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> remctl &#8211; Remote execution tool </p>
 <h2>SYNOPSIS</h2>
 <p> remctl [<code>-dhv</code>] [<code>-b</code> <i>source-ip</i>] [<code>-p</code> <i>port</i>] [<code>-s</code> <i>service</i>]<br />
 &nbsp;<wbr><i>host</i>&nbsp;<wbr><i>command</i>&nbsp;<wbr>[<i>subcommand</i>&nbsp;<wbr>[<i>parameters</i>&nbsp;<wbr>&#8230;]]</p>

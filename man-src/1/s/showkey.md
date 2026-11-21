@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-showkey/"
 description: "showkey – examine the codes sent by the keyboard"
 ---
 
-<h2 class="name">NAME</h2>
-<p> showkey &#8211; examine the codes sent by the keyboard </p>
 <h2>SYNOPSIS</h2>
 <p> showkey [-h|&#8211;help] [-a|&#8211;ascii] [-s|&#8211;scancodes] [-k|&#8211;keycodes] [-V|&#8211;version]</p>
 <h2>DESCRIPTION</h2>

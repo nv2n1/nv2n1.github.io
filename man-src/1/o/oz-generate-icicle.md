@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-oz-generate-icicle/"
 description: "oz-generate-icicle – tool to generate an ICICLE (package manifest) of a disk image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> oz-generate-icicle &#8211; tool to generate an ICICLE (package manifest) of a disk image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oz-generate-icicle [OPTIONS] &lt;tdl-file&gt; &lt;libvirt-xml-file&gt;</code> </p>
 <h2>DESCRIPTION</h2>

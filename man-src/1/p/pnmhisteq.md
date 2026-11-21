@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmhisteq/"
 description: "pnmhisteq – histogram equalise a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmhisteq &#8211; histogram equalise a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmhisteq</code><br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-gray</code>] [<code>-rmap</code> <i>pgmfile</i>] [<code>-wmap</code> <i>pgmfile</i>] [<code>-verbose</code>] [<i>pnmfile</i>]</p>

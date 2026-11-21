@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qmod/"
 description: "qmod – modify a xxQS_NAMExx queue and running job"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qmod &#8211; modify a xxQS_NAMExx queue and running job </p>
 <h2>SYNTAX</h2>
 <p> <code>qmod</code> [<i>options</i>] [<i>wc_job_range_list</i>|<i>wc_queue_list</i>] </p>
 <h2>DESCRIPTION</h2>

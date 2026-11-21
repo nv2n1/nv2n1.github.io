@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkzftree/"
 description: "mkzftree – Create a zisofs/RockRidge compressed file tree"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkzftree &#8211; Create a zisofs/RockRidge compressed file tree </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkzftree</code> [<i>OPTIONS</i>]&#8230; <i>INPUT</i> <i>OUTPUT</i></p>
 <h2>DESCRIPTION</h2>

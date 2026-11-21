@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlatdf/"
 description: "dlatdf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlatdf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlatdf</code> (IJOB, N, Z, LDZ, RHS, RDSUM, RDSCAL, IPIV, JPIV)<br />

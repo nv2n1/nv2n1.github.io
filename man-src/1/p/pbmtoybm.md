@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoybm/"
 description: "pbmtoybm – convert a portable bitmap into a Bennet Yee \"face\" file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoybm &#8211; convert a portable bitmap into a Bennet Yee &quot;face&quot; file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoybm</code> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

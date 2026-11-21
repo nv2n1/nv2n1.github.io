@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trademgen_with_db/"
 description: "trademgen_with_db –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trademgen_with_db &#8211; </p>
 <pre>
   Database-enabled C++ Simulated Travel Demand Generation Library
 </pre>

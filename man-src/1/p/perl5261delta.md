@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl5261delta/"
 description: "perl5261delta – what is new for perl v5.26.1"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl5261delta &#8211; what is new for perl v5.26.1 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.26.0 release and the 5.26.1 release. </p>
 <p> If you are upgrading from an earlier release such as 5.24.0, first read perl5260delta, which describes differences between 5.24.0 and 5.26.0.</p>

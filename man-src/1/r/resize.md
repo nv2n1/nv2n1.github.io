@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-resize/"
 description: "resize – set environment and terminal settings to current xterm window size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> resize &#8211; set environment and terminal settings to current xterm window size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>resize</code> [ <code>-v</code> | <code>-u</code> | <code>-c</code> ] [ <code>-s</code> [ <i>row col</i> ] ]</p>
 <h2>DESCRIPTION</h2>

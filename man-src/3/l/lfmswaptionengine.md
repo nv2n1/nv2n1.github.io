@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lfmswaptionengine/"
 description: "ql/legacy/libormarketmodels/lfmswaptionengine.hpp – libor forward model swaption engine based on black formula"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/legacy/libormarketmodels/lfmswaptionengine.hpp &#8211; libor forward model swaption engine based on black formula </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/swaption.hpp&gt;<br />
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br />

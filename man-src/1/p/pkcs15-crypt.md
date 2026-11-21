@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pkcs15-crypt/"
 description: "pkcs15-crypt – perform crypto operations using pkcs15 smart card"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pkcs15-crypt &#8211; perform crypto operations using pkcs15 smart card </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pkcs15-crypt</code> [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

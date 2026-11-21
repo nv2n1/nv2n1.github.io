@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ethstatus/"
 description: "ethstatus – Console-based ethernet statistics monitor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ethstatus &#8211; Console-based ethernet statistics monitor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ethstatus</code> [ -h ] [ -i interface ] [ -v videomode ] [ -S bps[k|m|g] ] [ -s speed ] (backward compatibility)</p>
 <h2>DESCRIPTION</h2>

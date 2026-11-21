@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-bucket/"
 description: "ANTLR3_HASH_ENUM_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_HASH_ENUM_struct &#8211; </p>
 <p> Internal structure representing an enumeration of a table.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>

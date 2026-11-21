@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdfinfo/"
 description: "pdfinfo – Portable Document Format (PDF) document information extractor (version 3.03)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdfinfo &#8211; Portable Document Format (PDF) document information extractor (version 3.03) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfinfo</code> [options] [<i>PDF-file</i>]</p>
 <h2>DESCRIPTION</h2>

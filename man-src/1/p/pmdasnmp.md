@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pmdasnmp/"
 description: "pmdasnmp – Gateway from SNMP to PCP (PMDA)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pmdasnmp &#8211; Gateway from SNMP to PCP (PMDA) </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdasnmp</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which provides a generic gateway from <font SIZE="-1">PCP</font> queries from a <font SIZE="-1">PCP</font> client to <font SIZE="-1">SNMP</font> queries to one or more <font SIZE="-1">SNMP</font> agents.</p>
 <h2>INSTALLATION</h2>

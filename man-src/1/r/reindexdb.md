@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reindexdb/"
 description: "reindexdb – reindex a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> reindexdb &#8211; reindex a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reindexdb</code> [<i>connection-option</i>&#8230;] [<code>&#8211;table</code> | <code>-t</code> <i>table</i>] [<code>&#8211;index</code> | <code>-i</code> <i>index</i>] [<i>dbname</i>]</dt>

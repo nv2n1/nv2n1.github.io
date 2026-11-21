@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-regpatch/"
 description: "regpatch – Applies registry patches to registry files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> regpatch &#8211; Applies registry patches to registry files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>regpatch</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;credentials=CREDENTIALS] [location] [patch-file]</dt></dl>

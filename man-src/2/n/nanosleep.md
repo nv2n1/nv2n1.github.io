@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-nanosleep/"
 description: "nanosleep – high-resolution sleep"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nanosleep &#8211; high-resolution sleep </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>int nanosleep(const struct timespec *</code><i>req</i><code>, struct timespec *</code><i>rem</i><code>);</code> </p>

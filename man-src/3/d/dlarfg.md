@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlarfg/"
 description: "dlarfg.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlarfg.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarfg</code> (N, ALPHA, X, INCX, TAU)<br />

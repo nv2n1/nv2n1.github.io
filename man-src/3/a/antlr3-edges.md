@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-edges/"
 description: "ANTLR3_TOPO_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_TOPO_struct &#8211; </p>
 <p> A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>

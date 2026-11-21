@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-smbtree/"
 description: "smbtree – A text based smb network browser"
 ---
 
-<h2 class="name">NAME</h2>
-<p> smbtree &#8211; A text based smb network browser </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

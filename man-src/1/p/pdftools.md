@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdftools/"
 description: "pdftools – analyze PDF files, change image colors"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdftools &#8211; analyze PDF files, change image colors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftools</code> [ <i>OPTION</i> &#8230; ] &lt;file&gt; [ &lt;file&gt; &#8230; ] </p>
 <h2>DESCRIPTION</h2>

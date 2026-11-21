@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_cred_get_lifetime/"
 description: "Credential Handle Management –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Credential Handle Management &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />
  globus_l_gsi_cred_handle_s * <code>globus_gsi_cred_handle_t</code>&quot; </p>

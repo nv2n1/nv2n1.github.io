@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ldbedit/"
 description: "ldbedit – Edit LDB databases using your preferred editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldbedit &#8211; Edit LDB databases using your preferred editor </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbedit</code> [-?] [&#8211;usage] [-s base|one|sub] [-b basedn] [-a] [-e editor] [-H LDB-URL] [expression] [attributes&#8230;]</dt></dl>

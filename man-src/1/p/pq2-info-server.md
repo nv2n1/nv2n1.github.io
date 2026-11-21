@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pq2-info-server/"
 description: "pq2-info-server – Display info about the datasets on a given server from a dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pq2-info-server &#8211; Display info about the datasets on a given server from a dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-info-server</code> [options] server</p>
 <h2>DESCRIPTION</h2>

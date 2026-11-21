@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shigofumi/"
 description: "shigofumi – ISDS client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shigofumi &#8211; ISDS client </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>shigofumi</code> [<code>-c</code>&nbsp;<wbr><i>FILE</i>]</dt>

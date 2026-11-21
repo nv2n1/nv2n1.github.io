@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-common-lisp-controller/"
 description: "common-lisp-controller – Common Lisp system management tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> common-lisp-controller &#8211; Common Lisp system management tool</p>
 <h2>DESCRIPTION</h2>
 <p> The <i>common-lisp-controller</i> system will manage the installed Common Lisp <i>implementations</i> and <i>libraries</i> on the system. The main function is to enable every user to load any available <i>library</i> and to store the compiled files in a user and implementation specific cache directory. </p>
 <p> On upgrades of either <i>implementations</i> or <i>libraries</i> these directories will be cleared so that no old fasl files will remain. </p>

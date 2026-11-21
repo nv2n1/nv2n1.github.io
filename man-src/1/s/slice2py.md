@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-slice2py/"
 description: "slice2py – The Slice to Python compiler."
 ---
 
-<h2 class="name">NAME</h2>
-<p> slice2py &#8211; The Slice to Python compiler.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2py [options] [files] </p>
 <h2>DESCRIPTION</h2>

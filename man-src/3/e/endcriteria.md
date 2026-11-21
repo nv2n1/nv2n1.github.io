@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-endcriteria/"
 description: "ql/math/optimization/endcriteria.hpp – Optimization criteria class."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/optimization/endcriteria.hpp &#8211; Optimization criteria class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/utilities/null.hpp&gt;<br />
  #include &lt;iostream&gt; </p>

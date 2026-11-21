@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-toshset/"
 description: "toshset – manipulate bios and hardware settings of Toshiba laptops"
 ---
 
-<h2 class="name">NAME</h2>
-<p> toshset &#8211; manipulate bios and hardware settings of Toshiba laptops </p>
 <h2>SYNOPSIS</h2>
 <p> <code>toshset</code> [<i>TOGGLEOPTIONS</i> | <i>QUERYOPTIONS</i> | <i>FEATUREOPTIONS</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

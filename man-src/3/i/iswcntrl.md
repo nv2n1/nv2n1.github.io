@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-iswcntrl/"
 description: "iswcntrl – test for control wide character"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iswcntrl &#8211; test for control wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;

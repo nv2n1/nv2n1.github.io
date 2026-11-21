@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-afile/"
 description: "afile – display type and creator of Apple Macintosh files (netatalk format)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> afile &#8211; display type and creator of Apple Macintosh files (netatalk format) </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>afile</code> [-a] <i>file</i>&#8230;</dt>

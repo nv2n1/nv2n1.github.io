@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-futex/"
 description: "futex – fast user-space locking"
 ---
 
-<h2 class="name">NAME</h2>
-<p> futex &#8211; fast user-space locking </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/futex.h&gt;

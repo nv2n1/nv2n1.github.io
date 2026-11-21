@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shell-quote/"
 description: "shell-quote – quote arguments for safe use, unmodified in a shell command"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shell-quote &#8211; quote arguments for safe use, unmodified in a shell command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shell-quote</code> [<i>switch</i>]&#8230; <i>arg</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

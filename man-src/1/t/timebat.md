@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-timebat/"
 description: "timebat – CCD time correction"
 ---
 
-<h2 class="name">NAME</h2>
-<p> timebat &#8211; CCD time correction</p>
 <h2>SYNOPSIS</h2>
 <p> <code>timebat </code><i>[options] </i><code>tcor=</code><i>seconds source_file &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

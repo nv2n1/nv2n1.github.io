@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_distrib_flags_e/"
 description: "hwlocality_helper_distribute – Distributing items over a topology"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_helper_distribute &#8211; Distributing items over a topology </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_distrib_flags_e</code> { <code>HWLOC_DISTRIB_FLAG_REVERSE</code> } </p>
 <h3>Functions</h3>

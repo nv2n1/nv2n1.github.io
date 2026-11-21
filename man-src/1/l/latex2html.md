@@ -6,8 +6,6 @@ letter: "l"
 url: "/docs/linux/man/1-latex2html/"
 description: "latex2html – translate LaTeX files to HTML (HyperText Markup Language)"
 ---
-<h2 class="name">NAME</h2>
-<p> latex2html - translate LaTeX files to HTML (HyperText Markup Language) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>latex2html</code> <i>[options]</i> [target [target ...]]  </p>
 <h2>DESCRIPTION</h2>

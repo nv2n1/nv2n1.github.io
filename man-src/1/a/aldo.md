@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aldo/"
 description: "aldo – A fully console morse code trainer written in ISO C++."
 ---
 
-<h2 class="name">NAME</h2>
-<p> aldo &#8211; A fully console morse code trainer written in ISO C++.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aldo</code> </p>
 <h2>DESCRIPTION</h2>

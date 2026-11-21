@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tapestat/"
 description: "tapestat – Report tape statistics."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tapestat &#8211; Report tape statistics.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tapestat [ -k | -m ] [ -t ] [ -V ] [ -y ] [ -z ] [ &#8211;human ] [</code> <i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>
 <h2>DESCRIPTION</h2>

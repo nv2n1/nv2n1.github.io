@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdlua/"
 description: "RRDLua – Lua binding for RRDTool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> RRDLua &#8211; Lua binding for RRDTool </p>
 <h2>SYNOPSIS</h2>
 <pre>
   require 'rrd'

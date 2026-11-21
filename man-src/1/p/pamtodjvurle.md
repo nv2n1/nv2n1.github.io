@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtodjvurle/"
 description: "pamtodjvurle – convert a Netpbm image to DjVu Color RLE format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtodjvurle &#8211; convert a Netpbm image to DjVu Color RLE format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtodjvurle</code> </p>
 <p> [<code>-transparent</code> <i>color</i>] [<i>netpbmfile</i> [<i>rlefile</i>]] </p>

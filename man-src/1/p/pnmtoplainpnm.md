@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtoplainpnm/"
 description: "pnmtoplainpnm – convert portable any map to plain (ASCII) anymap format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtoplainpnm &#8211; convert portable any map to plain (ASCII) anymap format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtoplainpnm</code> [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

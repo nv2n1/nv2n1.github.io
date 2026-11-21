@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-krb5_err/"
 description: "Heimdal Kerberos 5 error reporting functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal Kerberos 5 error reporting functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION char<br />
  *KRB5_LIB_CALL <code>KRB5_DEPRECATED_FUNCTION</code> (&#8216;Use <code>krb5_get_error_message</code> instead&#8217;)&quot; </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cutycapt/"
 description: "cutycapt – utility to capture WebKit’s rendering of a web page"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cutycapt &#8211; utility to capture WebKit&#8217;s rendering of a web page </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cutycapt</code> [<i>options</i>] <code>&#8211;url=</code><i><a rel="nofollow" href="http://www.someurl.com">http://www.someurl.com</a></i> <code>&#8211;out=</code><i>output.png</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-context/"
 description: "docker-context – Manage contexts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-context &#8211; Manage contexts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker context</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtile/"
 description: "pnmtile – replicate a portable anymap into a specified size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtile &#8211; replicate a portable anymap into a specified size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtile</code> <i>width height</i> [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

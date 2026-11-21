@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dropdb/"
 description: "dropdb – remove a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dropdb &#8211; remove a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dropdb</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] <i>dbname</i></dt></dl>

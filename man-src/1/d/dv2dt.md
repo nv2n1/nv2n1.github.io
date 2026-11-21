@@ -6,8 +6,6 @@ letter: "d"
 url: "/docs/linux/man/1-dv2dt/"
 description: "dv2dt – convert a binary TeX DVI file to DTL text representation"
 ---
-<h2 class="name">NAME</h2>
-<p> dv2dt - convert a binary TeX DVI file to DTL text representation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dv2dt</code> <i>input-DVI-file</i> <i>output-DTL-file</i> </p>
 <p> If the filenames are omitted, then <i>stdin</i> and <i>stdout</i> are assumed.  </p>

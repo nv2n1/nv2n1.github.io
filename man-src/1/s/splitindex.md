@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-splitindex/"
 description: "splitindex – manual page for splitindex 0.2a"
 ---
 
-<h2 class="name">NAME</h2>
-<p> splitindex &#8211; manual page for splitindex 0.2a </p>
 <h2>SYNOPSIS</h2>
 <p> <code>splitindex.pl</code> [<i>OPTION</i>] &#8230; <i>INTERMEDIATE-INDEX-FILE </i>[<i>MAKEINDEX-OPTION</i>] &#8230; </p>
 <p> <code>splitindex</code> [<i>OPTION</i>] &#8230; <i>INTERMEDIATE-INDEX-FILE </i>[<i>MAKEINDEX-OPTION</i>] &#8230; </p>

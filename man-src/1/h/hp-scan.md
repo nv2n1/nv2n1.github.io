@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hp-scan/"
 description: "hp-scan – Scan Utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hp-scan &#8211; Scan Utility </p>
 <h2>DESCRIPTION</h2>
 <p> SANE-based scan utility for HPLIP supported all-in-one/mfp devices.</p>
 <h2>SYNOPSIS</h2>

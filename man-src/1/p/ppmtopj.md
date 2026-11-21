@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtopj/"
 description: "ppmtopj – convert a portable pixmap to an HP PaintJet file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtopj &#8211; convert a portable pixmap to an HP PaintJet file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtopj</code> [-gamma <i>val</i>] [<code>-xpos</code> <i>val</i>] [<code>-ypos</code> <i>val</i>] [<code>-back</code> <code>dark</code>|<code>lite</code>] [<code>-rle</code>] [<code>-center</code>] [<code>-render</code> <code>none|snap|bw|dither|diffuse|monodither|monodiffuse|clusterdither|monoclusterdither</code>] [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

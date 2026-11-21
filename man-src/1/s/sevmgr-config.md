@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sevmgr-config/"
 description: "sevmgr-config –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sevmgr-config &#8211; </p>
 <pre>
     Configuration Script for the C++ Simulation-Oriented Discrete Event Management Library
 </pre>

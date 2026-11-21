@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zeisstopnm/"
 description: "zeisstopnm – convert a Zeiss confocal file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zeisstopnm &#8211; convert a Zeiss confocal file into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zeisstopnm</code> [<i>-pgm</i> | <i>-ppm</i>] [<i>zeissfile</i>]</p>
 <h2>DESCRIPTION</h2>

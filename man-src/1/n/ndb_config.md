@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_config/"
 description: "ndb_config – extract MySQL Cluster configuration information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_config &#8211; extract MySQL Cluster configuration information </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_config </code><i>options</i></dt></dl>

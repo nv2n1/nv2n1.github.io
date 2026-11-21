@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reporter-upload/"
 description: "reporter-upload – Uploads compressed tarball of problem directory."
 ---
 
-<h2 class="name">NAME</h2>
-<p> reporter-upload &#8211; Uploads compressed tarball of problem directory. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>reporter-upload</i> [-c CONFFILE]&#8230; [-d DIR] [-u URL] [-b FILE] [-r FILE]</p>
 <h2>DESCRIPTION</h2>

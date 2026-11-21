@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hman/"
 description: "hman – browse the on-line manual pages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hman &#8211; browse the on-line manual pages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hman</code> [ -P <i>browser</i> ] [ -H <i>host</i> ] [ <i>section</i> ] <i>name</i><br />
  <code>hman</code> [ -P <i>browser</i> ] [ -H <i>host</i> ] [ <i>section</i> ] [ index ]</p>

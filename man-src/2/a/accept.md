@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-accept/"
 description: "accept, accept4 – accept a connection on a socket"
 ---
 
-<h2 class="name">NAME</h2>
-<p> accept, accept4 &#8211; accept a connection on a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;

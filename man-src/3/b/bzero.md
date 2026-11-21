@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bzero/"
 description: "bzero, explicit_bzero – zero a byte string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bzero, explicit_bzero &#8211; zero a byte string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;strings.h&gt;

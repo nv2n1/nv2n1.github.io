@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-local-getcert/"
 description: "local-getcert"
 ---
 
-<h2 class="name">NAME</h2>
-<p> local-getcert</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>local-getcert request&nbsp;<wbr>[options]<br />
 &nbsp;<wbr>local-getcert resubmit&nbsp;<wbr>[options]<br />

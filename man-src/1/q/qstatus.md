@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qstatus/"
 description: "qstatus – xxQS_NAMExx qstatus script"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qstatus &#8211; xxQS_NAMExx qstatus script </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qstatus</code> [<code>-acghjlmnot</code>] [<code>-s </code><i>SORT_FIELD_LIST</i>] [<i>USER</i>]</p>
 <h2>DESCRIPTION</h2>

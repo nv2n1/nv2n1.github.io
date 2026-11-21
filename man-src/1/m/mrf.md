@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mrf/"
 description: "MRF – monochrome recursive format (compressed bitmaps)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> MRF &#8211; monochrome recursive format (compressed bitmaps)</p>
 <h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> MRF is a compressed format for bilevel (1-bit mono) images. It achieves better compression for some such images than either GIF or PNG. (It&#8217;s also very easy to implement (about the same difficulty as RLE, I&#8217;d say) and an MRF reader needs no tables/buffers, which may make it useful for tiny machines). </p>

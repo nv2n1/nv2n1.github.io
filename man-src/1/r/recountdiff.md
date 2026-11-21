@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-recountdiff/"
 description: "recountdiff – recompute patch counts and offsets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> recountdiff &#8211; recompute patch counts and offsets </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>recountdiff</code> [<i>file</i>&#8230;]</dt>

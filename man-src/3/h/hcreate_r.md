@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hcreate_r/"
 description: "hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r – hash table management"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r &#8211; hash table management </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;search.h&gt;

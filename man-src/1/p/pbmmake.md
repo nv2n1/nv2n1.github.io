@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmmake/"
 description: "pbmmake – create a blank bitmap of a specified size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmmake &#8211; create a blank bitmap of a specified size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmmake</code> [<code>-white</code>|<code>-black</code>|<code>-gray</code> ] <i>width height</i></p>
 <h2>DESCRIPTION</h2>

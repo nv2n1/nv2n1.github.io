@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-std-codecvt-5/"
 description: "std::wbuffer_convert<Codecvt,Elem,Tr>::rdbuf – std::wbuffer_convert<Codecvt,Elem,Tr>::rdbuf"
 ---
 
-<h2 class="name">NAME</h2>
-<p> std::wbuffer_convert&lt;Codecvt,Elem,Tr&gt;::rdbuf &#8211; std::wbuffer_convert&lt;Codecvt,Elem,Tr&gt;::rdbuf</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;locale&gt;<br />
 std::streambuf* rdbuf() const; <b>(1)</b><br />

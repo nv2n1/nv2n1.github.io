@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-extract/"
 description: "trace-cmd-extract – extract out the data from the Ftrace Linux tracer."
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-extract &#8211; extract out the data from the Ftrace Linux tracer. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd extract [</code><i>OPTIONS</i><code>]</code></p>
 <h2>DESCRIPTION</h2>

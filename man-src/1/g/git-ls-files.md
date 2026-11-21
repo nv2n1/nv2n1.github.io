@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-ls-files/"
 description: "git-ls-files – Show information about files in the index and the working tree"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-ls-files &#8211; Show information about files in the index and the working tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git ls - files[-z][-t][-v][-f](--[cached | deleted | others | ignored | stage | unmerged | killed | modified]) *

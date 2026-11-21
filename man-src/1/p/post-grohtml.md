@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-post-grohtml/"
 description: "grohtml – HTML driver for groff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grohtml &#8211; HTML driver for groff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-bhlnprVy</code> ] [ <code>-a </code><i>aa-text-bits</i> ] [ <code>-D </code><i>dir</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-g </code><i>aa-graphic-bits</i> ] [ <code>-i </code><i>resolution</i> ] [ <code>-I </code><i>image-stem</i> ] [ <code>-j </code><i>filename</i> ] [ <code>-o </code><i>image-vertical-offset</i> ] [ <code>-s </code><i>size</i> ] [ <code>-S </code><i>level</i> ] [ <code>-x </code><i>html-dialect</i> ] [<i>file</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

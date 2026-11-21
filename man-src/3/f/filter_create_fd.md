@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-filter_create_fd/"
 description: "filter_create_fd – Create a sub process and return the requested pipes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> filter_create_fd &#8211; Create a sub process and return the requested pipes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/filter.h&gt;

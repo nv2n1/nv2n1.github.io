@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libgpsd/"
 description: "libgpsd – service library for GPS applications"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libgpsd &#8211; service library for GPS applications </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 C:

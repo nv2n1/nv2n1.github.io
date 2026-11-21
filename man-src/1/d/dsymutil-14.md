@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dsymutil-14/"
 description: "dsymutil – manipulate archived DWARF debug symbol files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsymutil &#8211; manipulate archived DWARF debug symbol files </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <code>dsymutil</code> [<i>options</i>] <i>executable</i>

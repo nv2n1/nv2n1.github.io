@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dspam_crc/"
 description: "dspam_crc – calculate the DSPAM CRC/hash value for a text token"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dspam_crc &#8211; calculate the DSPAM CRC/hash value for a text token</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dspam_crc</code> <i>[token]</i></p>
 <h2>DESCRIPTION</h2>

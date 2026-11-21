@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-echoping_postgresql/"
 description: "echoping_postgresql – echoping plugin which connects to a PostgreSQL RDBMS server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> echoping_postgresql &#8211; echoping plugin which connects to a PostgreSQL RDBMS server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [echoping options] -m postgresql <code>hostname</code> [-c<i>conninfo]</i> [-e] [-r] [SQL-request]</p>
 <h2>DESCRIPTION</h2>

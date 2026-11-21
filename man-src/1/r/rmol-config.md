@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rmol-config/"
 description: "rmol-config –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rmol-config &#8211; </p>
 <pre>
     Configuration Script for the C++ Revenue Management Optimisation Library
 </pre>

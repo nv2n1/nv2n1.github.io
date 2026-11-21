@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamldumpobj/"
 description: "ocamldumpobj – disassembler for OCaml executable and .cmo object files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamldumpobj &#8211; disassembler for OCaml executable and .cmo object files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamldumpobj</code> file &#8230;</p>
 <h2>DESCRIPTION</h2>

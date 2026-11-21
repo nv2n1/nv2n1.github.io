@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rigmem/"
 description: "rigmem – backup and restore memory of radio transceivers and receivers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rigmem &#8211; backup and restore memory of radio transceivers and receivers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rigmem</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamphletangler/"
 description: "pamphletangler – Extract code bits from LaTeX pamphlet files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamphletangler &#8211; Extract code bits from LaTeX pamphlet files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamphletangler</code> [<font SIZE="-1">OPTION&#8230;</font>] <i></i><font SIZE="-1"><i>FILE</i></font><i></i> <i></i><font SIZE="-1"><i>CHUNKNAME</i></font><i></i></p>
 <h2>DESCRIPTION</h2>

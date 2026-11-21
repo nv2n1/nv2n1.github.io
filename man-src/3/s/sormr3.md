@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sormr3/"
 description: "sormr3.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sormr3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sormr3</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, INFO)<br />

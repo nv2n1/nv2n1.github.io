@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasyf_rook/"
 description: "dlasyf_rook.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasyf_rook.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasyf_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />

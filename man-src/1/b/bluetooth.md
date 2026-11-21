@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bluetooth/"
 description: "bluetooth – enable/disable internal bluetooth device"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bluetooth &#8211; enable/disable internal bluetooth device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bluetooth </code>[<i>command</i>] </p>
 <h2>COMMANDS</h2>

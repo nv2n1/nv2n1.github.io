@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssyr/"
 description: "ssyr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssyr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyr</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br />

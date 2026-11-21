@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmwheel/"
 description: "ppmwheel – make a PPM image of a color wheel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmwheel &#8211; make a PPM image of a color wheel</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmwheel</code> <i>diameter</i> </p>
 <h2>DESCRIPTION</h2>

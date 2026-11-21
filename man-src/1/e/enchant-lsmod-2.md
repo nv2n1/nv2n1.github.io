@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-enchant-lsmod-2/"
 description: "Enchant – list provider and dictionary information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Enchant &#8211; list provider and dictionary information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>enchant-lsmod-2</code> [[<code>-lang</code>|<code>-word-chars</code>] [<code>language_tag</code>]|<code>-list-dicts</code>|<code>-help</code>|<code>-version</code>] </p>
 <h2>DESCRIPTION</h2>

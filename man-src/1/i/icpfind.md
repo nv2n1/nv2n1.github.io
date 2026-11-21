@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-icpfind/"
 description: "icpfind – Use heuristic control-point detection strategies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> icpfind &#8211; Use heuristic control-point detection strategies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>icpfind</code> [options] -o <i>output.pto</i> <i>input.pto</i></p>
 <h2>DESCRIPTION</h2>

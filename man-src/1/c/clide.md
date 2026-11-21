@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-clide/"
 description: "clide – color and style highlighting program for text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clide &#8211; color and style highlighting program for text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>clide</code> [options] [file1] [file2] [&#8230;fileN] </p>
 <p> <code>| clide</code> [options] (<font SIZE="-1">STDIN</font> through pipe) </p>

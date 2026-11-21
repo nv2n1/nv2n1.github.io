@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-arm_fadvise/"
 description: "posix_fadvise – predeclare an access pattern for file data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> posix_fadvise &#8211; predeclare an access pattern for file data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt;

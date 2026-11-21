@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-snmpkey/"
 description: "snmpkey – Create SNMPv3 security keys for the Net::SNMP module"
 ---
 
-<h2 class="name">NAME</h2>
-<p> snmpkey &#8211; Create SNMPv3 security keys for the Net::SNMP module </p>
 <h2>USAGE</h2>
 <p> The <tt>&quot;snmpkey&quot;</tt> utility generates security keys based on a password and an authoritativeEngineID passed on the command line. This key can then be used by the Net::SNMP module instead of the plain text password when creating SNMPv3 objects. </p>
 <pre><code>

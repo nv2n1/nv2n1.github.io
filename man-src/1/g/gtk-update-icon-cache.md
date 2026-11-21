@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk-update-icon-cache/"
 description: "gtk-update-icon-cache – Icon theme caching utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk-update-icon-cache &#8211; Icon theme caching utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-update-icon-cache</code> [&#8211;force] [&#8211;ignore-theme-index] [&#8211;index-only | &#8211;include-image-data] [&#8211;source&nbsp;<i>NAME</i>] [&#8211;quiet] [&#8211;validate] <i>PATH</i></dt></dl>

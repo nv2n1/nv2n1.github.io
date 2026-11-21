@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcjh/"
 description: "gcjh – – generate header files from Java class files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcjh &#8211; &#8211; generate header files from Java class files </p>
 <h2>SYNOPSIS</h2>
 <p> gcjh [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>CLASS</i></font><i></i>&#8230;</p>
 <h2>DESCRIPTION</h2>

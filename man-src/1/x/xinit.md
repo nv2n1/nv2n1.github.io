@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xinit/"
 description: "xinit – X Window System initializer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xinit &#8211; X Window System initializer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xinit</code> [ [ <i>client</i> ] <i>options</i> &#8230; ] [ <code>&#8212;</code> [ <i>server</i> ] [ <i>display</i> ] <i>options</i> &#8230; ]</p>
 <h2>DESCRIPTION</h2>

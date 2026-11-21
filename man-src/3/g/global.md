@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-global/"
 description: "QuantLib::BackwardFlat – Backward-flat interpolation factory and traits."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::BackwardFlat &#8211; Backward-flat interpolation factory and traits. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/backwardflatinterpolation.hpp&gt; </p>
 <h3>Public Member Functions</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rcvstore/"
 description: "rcvstore – asynchronously incorporate mail into a folder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rcvstore &#8211; asynchronously incorporate mail into a folder </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/rcvstore</code> [<i>+folder</i>] [<code>-create</code> | <code>-nocreate</code>] [<code>-unseen</code> | <code>-nounseen</code>] [<code>-zero</code> | <code>-nozero</code>] [<code>-sequence</code> <i>name</i> &#8230;] [<code>-public</code> | <code>-nopublic</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

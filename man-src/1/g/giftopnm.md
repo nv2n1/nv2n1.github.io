@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-giftopnm/"
 description: "giftopnm – convert a GIF file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> giftopnm &#8211; convert a GIF file into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>giftopnm</code> [<code>&#8211;alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<code>-verbose</code>] [<code>-comments</code>] [<code>-image</code> <i>N</i>] [<i>GIFfile</i>] </p>
 <h2>DESCRIPTION</h2>

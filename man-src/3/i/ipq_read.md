@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ipq_read/"
 description: "ipq_read — read queue messages from ip_queue and read into supplied buffer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipq_read &#8212; read queue messages from ip_queue and read into supplied buffer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>

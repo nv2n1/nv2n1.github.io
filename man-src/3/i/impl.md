@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-impl/"
 description: "QuantLib::CuriouslyRecurringTemplate – Support for the curiously recurring template pattern."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::CuriouslyRecurringTemplate &#8211; Support for the curiously recurring template pattern. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/patterns/curiouslyrecurring.hpp&gt; </p>
 <h3>Protected Member Functions</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-osinfo-db-validate/"
 description: "osinfo-db-validate – Validate libosinfo XML data files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> osinfo-db-validate &#8211; Validate libosinfo XML data files </p>
 <h2>SYNOPSIS</h2>
 <p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] </p>
 <p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">LOCAL-PATH1</font> [<font SIZE="-1">LOCAL-PATH2&#8230;</font>] </p>

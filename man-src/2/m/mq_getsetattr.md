@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mq_getsetattr/"
 description: "mq_getsetattr – get/set message queue attributes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mq_getsetattr &#8211; get/set message queue attributes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;

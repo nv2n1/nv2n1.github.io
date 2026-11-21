@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpievents/"
 description: "hpievents – An openhpi sample application that polls for events."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpievents &#8211; An openhpi sample application that polls for events. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpievents[-D&lt;value&gt;][-N host[:port]][-C&lt;cfgfile&gt;][-t BLOCK | SAHPI_TIMEOUT_BLOCK | n][-d - X - h] hpievents[--domain = nn][--host = host[:port]][--cfgfile = file]

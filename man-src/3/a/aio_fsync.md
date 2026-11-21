@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-aio_fsync/"
 description: "aio_fsync – asynchronous file synchronization"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aio_fsync &#8211; asynchronous file synchronization </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>int aio_fsync(int </code><i>op</i><code>, struct aiocb *</code><i>aiocbp</i><code>);</code> </p>

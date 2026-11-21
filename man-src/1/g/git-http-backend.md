@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-http-backend/"
 description: "git-http-backend – Server side implementation of Git over HTTP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-http-backend &#8211; Server side implementation of Git over HTTP </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git http-backend</i>

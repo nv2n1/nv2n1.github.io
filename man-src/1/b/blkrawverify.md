@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-blkrawverify/"
 description: "blkrawverify – verifies an output file produced by blkparse"
 ---
 
-<h2 class="name">NAME</h2>
-<p> blkrawverify &#8211; verifies an output file produced by blkparse </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blkrawverify &lt;</code><i>dev</i>&gt; [&lt;<i>dev</i>&gt;&#8230;] </p>
 <h2>DESCRIPTION</h2>

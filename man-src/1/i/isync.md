@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-isync/"
 description: "isync – synchronize IMAP4 and Maildir mailboxes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> isync &#8211; synchronize IMAP4 and Maildir mailboxes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>isync</code> [<i>options</i> &#8230;] {<i>mailbox</i> &#8230;|<i>-a</i>|<i>-l</i>}</p>
 <h2>DESCRIPTION</h2>

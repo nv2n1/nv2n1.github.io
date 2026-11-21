@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-oprofile/"
 description: "oprofile – a system-wide profiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> oprofile &#8211; a system-wide profiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opcontrol</code> [ <i>options</i> ]<br />
  <code>opreport</code> [ <i>options</i> ] [ profile specification ]<br />

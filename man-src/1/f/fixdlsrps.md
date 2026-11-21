@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fixdlsrps/"
 description: "fixdlsrps – filter to fix DviLaser/PS documents to work with PSUtils"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fixdlsrps &#8211; filter to fix DviLaser/PS documents to work with PSUtils </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixdlsrps </code> &lt; <i>dvilaser.ps</i> &gt; <i>Fixed.ps</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-permission-set/"
 description: "flatpak-permission-set – Set permissions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-permission-set &#8211; Set permissions </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak permission-set</code> [OPTION&#8230;] TABLE ID APP_ID [PERMISSION&#8230;]</dt></dl>

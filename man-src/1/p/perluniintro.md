@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perluniintro/"
 description: "perluniintro – Perl Unicode introduction"
 ---
-<h2 class="name">NAME</h2>
-<p> perluniintro - Perl Unicode introduction </p>
 <h2>DESCRIPTION</h2>
 <p> This document gives a general idea of Unicode and how to use Unicode in Perl. See ``Further Resources&#8217;&#8216; for references to more in-depth treatments of Unicode.  </p>
 <h3>Unicode</h3>

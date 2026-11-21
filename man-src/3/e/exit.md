@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-exit/"
 description: "exit – cause normal process termination"
 ---
 
-<h2 class="name">NAME</h2>
-<p> exit &#8211; cause normal process termination </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

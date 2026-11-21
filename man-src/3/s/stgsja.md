@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-stgsja/"
 description: "stgsja.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stgsja.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stgsja</code> (JOBU, JOBV, JOBQ, M, P, N, K, L, A, LDA, B, LDB, TOLA, TOLB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, NCYCLE, INFO)<br />

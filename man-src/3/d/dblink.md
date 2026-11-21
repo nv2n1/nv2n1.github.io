@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dblink/"
 description: "dblink – executes a query in a remote database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblink &#8211; executes a query in a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dblink(text connname, text sql[, bool fail_on_error]) returns setof record

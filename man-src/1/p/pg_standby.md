@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pg_standby/"
 description: "pg_standby – supports the creation of a PostgreSQL warm standby server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pg_standby &#8211; supports the creation of a PostgreSQL warm standby server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_standby</code> [<i>option</i>&#8230;] <i>archivelocation</i> <i>nextwalfile</i> <i>xlogfilepath</i> [<i>restartwalfile</i>]</dt></dl>

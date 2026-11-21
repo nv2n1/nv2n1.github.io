@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ffs/"
 description: "ffs, ffsl, ffsll – find first bit set in a word"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffs, ffsl, ffsll &#8211; find first bit set in a word </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;strings.h&gt;

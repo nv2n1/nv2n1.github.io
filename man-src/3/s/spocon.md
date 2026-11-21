@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-spocon/"
 description: "spocon.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spocon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br />

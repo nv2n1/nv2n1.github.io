@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-latexmk/"
 description: "latexmk – generate LaTeX document"
 ---
 
-<h2 class="name">NAME</h2>
-<p> latexmk &#8211; generate LaTeX document </p>
 <h2>SYNOPSIS</h2>
 <p> <code>latexmk [options] [file &#8230;] </code></p>
 <h2>DESCRIPTION</h2>

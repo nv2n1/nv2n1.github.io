@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal_polygonize/"
 description: "gdal_polygonize – gdal_polygonize.py produces a polygon feature layer from a raster"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal_polygonize &#8211; gdal_polygonize.py produces a polygon feature layer from a raster </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdal_polygonize.py[-8][-nomask][-mask filename] raster_file[-b band]

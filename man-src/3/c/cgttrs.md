@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgttrs/"
 description: "cgttrs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgttrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br />

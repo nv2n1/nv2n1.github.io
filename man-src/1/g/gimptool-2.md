@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gimptool-2/"
 description: "gimptool-2.0 – script to perform various GIMPy functions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gimptool-2.0 &#8211; script to perform various GIMPy functions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gimptool-2.0</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;help] [&#8211;quiet] [&#8211;silent] [-n] [&#8211;just-print] [&#8211;dry-run] [&#8211;recon] [&#8211;msvc-syntax] [&#8211;bindir] [&#8211;sbindir] [&#8211;libexecdir] [&#8211;datadir] [&#8211;sysconfdir] [&#8211;sharedstatedir] [&#8211;localstatedir] [&#8211;libdir] [&#8211;infodir] [&#8211;mandir] [&#8211;includedir] [&#8211;gimpplugindir] [&#8211;gimpdatadir] [&#8211;libs] [&#8211;libs-noui] [&#8211;cflags] [&#8211;cflags-noi] [&#8211;build <i>plug-in.c</i>] [&#8211;build-strip <i>plug-in.c</i>] [&#8211;install <i>plug-in.c</i>] [&#8211;install-strip <i>plug-in.c</i>] [&#8211;install-admin <i>plug-in.c</i>] [&#8211;install-bin <i>plug-in</i>] [&#8211;install-admin-strip <i>plug-in.c</i>] [&#8211;install-bin-strip <i>plug-in</i>] [&#8211;install-admin-bin <i>plug-in</i>] [&#8211;install-script <i>script.scm</i>] [&#8211;install-admin-script <i>script.scm</i>] [&#8211;uninstall-bin <i>plug-in</i>] [&#8211;uninstall-admin-bin <i>plug-in</i>] [&#8211;uninstall-script <i>script.scm</i>] [&#8211;uninstall-admin-script <i>script.scm</i>] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xkibitz/"
 description: "xkibitz – allow multiple people to interact in an xterm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xkibitz &#8211; allow multiple people to interact in an xterm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xkibitz</code> [ <i>xkibitz-args</i> ] [ <i>program program-args&#8230;</i> ] </p>
 <h2>INTRODUCTION</h2>

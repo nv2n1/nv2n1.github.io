@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-appstreamcli/"
 description: "appstreamcli – Handle AppStream metadata formats and query AppStream data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> appstreamcli &#8211; Handle AppStream metadata formats and query AppStream data </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>appstreamcli</code> [<code>COMMAND</code>]</dt></dl>

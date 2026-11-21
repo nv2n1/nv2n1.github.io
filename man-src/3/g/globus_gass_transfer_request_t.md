@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_request_t/"
 description: "globus_gass_transfer_request_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gass_transfer_request_t &#8211; </p>
 <p> Request handle.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_transfer.h&gt;</p>

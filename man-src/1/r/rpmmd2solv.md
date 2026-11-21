@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rpmmd2solv/"
 description: "rpmmd2solv – convert files in rpm-md format into a solv file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rpmmd2solv &#8211; convert files in rpm-md format into a solv file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmmd2solv</code> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pstruct/"
 description: "c2ph, pstruct – Dump C structures as generated from \"cc -g -S\" stabs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> c2ph, pstruct &#8211; Dump C structures as generated from &quot;cc -g -S&quot; stabs </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 c2ph[-dpnP][var = val][files...]

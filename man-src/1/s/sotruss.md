@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sotruss/"
 description: "sotruss – trace shared library calls through PLT"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sotruss &#8211; trace shared library calls through PLT </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sotruss</code> [<i>,OPTION/</i>&#8230;] [<i>,&#8211;/</i>] <i>,EXECUTABLE /</i>[<i>,EXECUTABLE-OPTION/</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

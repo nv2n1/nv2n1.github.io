@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-mime/"
 description: "gvfs-mime"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-mime </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-mime</code> has been deprecated and it is redirected to <code>gio mime</code>.</p>
 <h2>SEE ALSO</h2>

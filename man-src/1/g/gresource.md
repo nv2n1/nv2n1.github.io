@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gresource/"
 description: "gresource – GResource tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gresource &#8211; GResource tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gresource</code> [&#8211;section&nbsp;<i>SECTION</i>] list <i>FILE</i> [<i>PATH</i>]</dt>

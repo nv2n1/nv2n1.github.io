@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-udo/"
 description: "udo – convert files from UDO into different formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> udo &#8211; convert files from UDO into different formats</p>
 <h2>SYNOPSIS</h2>
 <p> udo [-adDghHilmnpqrstvwWxy] source file<br />
  udo [-adDghHilmnpqrstvwWxy] -o destination file source file </p>

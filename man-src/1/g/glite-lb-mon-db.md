@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glite-lb-mon-db/"
 description: "glite-lb-mon-db – program for monitoring the number of jobs in the LB system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glite-lb-mon-db &#8211; program for monitoring the number of jobs in the LB system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-mon-db</code> <code>[-m dbstring -d -v -h]</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-mkdir/"
 description: "gvfs-mkdir"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-mkdir </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-mkdir</code> has been deprecated and it is redirected to <code>gio mkdir</code>.</p>
 <h2>SEE ALSO</h2>

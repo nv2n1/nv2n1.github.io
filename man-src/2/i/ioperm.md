@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-ioperm/"
 description: "ioperm – set port input/output permissions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ioperm &#8211; set port input/output permissions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/io.h&gt;</code> /* for glibc */ </p>
 <p> <code>int ioperm(unsigned long </code><i>from</i><code>, unsigned long </code><i>num</i><code>, int </code><i>turn_on</i><code>);</code></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installtex/"
 description: "dh_installtex – register Type 1 fonts, hyphenation patterns, or formats with TeX"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installtex &#8211; register Type 1 fonts, hyphenation patterns, or formats with TeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installtex</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;flavor=</code><i>flavor</i>[,<i>flavor</i>]] [<code>map=MixedMap,</code><i>file.map</i>] [<code>map=Map,</code><i>file.map</i>] [<code>map=KanjiMap,</code><i>file.map</i>] [<code>mapfile=</code><i>file.cfg</i>] [<code>hyphen=</code><i>lang</i>,<i>file</i>[,lhm=<i>n</i>][,rhm=<i>n</i>][,synonym=<i>syn</i>,&#8230;]] [<code>hyphenfile=</code><i>file.cnf</i>] [<code>format=</code><i>format</i>,<i>engine</i>,<i>hyphenfile</i>,<i>rest args</i>] [<code>formatfile=</code><i>file.cnf</i>]</p>
 <h2>DESCRIPTION</h2>

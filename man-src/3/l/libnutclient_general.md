@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libnutclient_general/"
 description: "libnutclient_general, nutclient_destroy, strarr_alloc, strarr_free – General and utility functions in Network UPS Tools high-level client access library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libnutclient_general, nutclient_destroy, strarr_alloc, strarr_free &#8211; General and utility functions in Network UPS Tools high-level client access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nutclient.h&gt;

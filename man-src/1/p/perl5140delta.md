@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl5140delta/"
 description: "perl5140delta – what is new for perl v5.14.0"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl5140delta &#8211; what is new for perl v5.14.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.12.0 release and the 5.14.0 release. </p>
 <p> If you are upgrading from an earlier release such as 5.10.0, first read perl5120delta, which describes differences between 5.10.0 and 5.12.0. </p>

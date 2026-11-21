@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cdrwtool/"
 description: "cdrwtool – perform various actions on a CD-R, CD-RW, and DVD-R"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cdrwtool &#8211; perform various actions on a CD-R, CD-RW, and DVD-R</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cdrwtool -d </code><i>device</i><code> -i | -g</code> </p>
 <p> <code>cdrwtool -d </code><i>device</i><code> -s [ </code><i>write-parameters</i><code> ]</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unshield/"
 description: "unshield – extract CAB files from an InstallShield installer archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unshield &#8211; extract CAB files from an InstallShield installer archive </p>
 <h2>SYNOPSIS</h2>
 <p> unshield [-c COMPONENT] [-d DIRECTORY] [-D LEVEL] [-g GROUP] [-h] [-j] [-L] [-n] [-o] [-O] [-r] [-v] [-V] c|g|l|t|x CABFILE</p>
 <h2>DESCRIPTION</h2>

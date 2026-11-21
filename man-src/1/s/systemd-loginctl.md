@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-loginctl/"
 description: "loginctl, systemd-loginctl – Control the systemd login manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> loginctl, systemd-loginctl &#8211; Control the systemd login manager </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>loginctl </code><code>[OPTIONS&#8230;]</code><code>{COMMAND}</code><code>[NAME&#8230;]</code></dt></dl>

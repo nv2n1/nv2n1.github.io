@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdalwarp/"
 description: "gdalwarp – gdalwarp image reprojection and warping utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdalwarp &#8211; gdalwarp image reprojection and warping utility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdalwarp[--help - general][--formats]

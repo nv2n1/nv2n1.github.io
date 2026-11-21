@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tred/"
 description: "tred – transitive reduction filter for directed graphs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tred &#8211; transitive reduction filter for directed graphs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tred</code> [ <code>-v?</code> ] [ <i>files </i> ]</p>
 <h2>DESCRIPTION</h2>

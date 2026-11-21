@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kgb-bot/"
 description: "kgb-bot – an IRC bot helping collaborative work"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kgb-bot &#8211; an IRC bot helping collaborative work </p>
 <h2>SYNOPSIS</h2>
 <p> kgb-bot [&#8211;config <i>file</i>] [&#8211;foreground] [&#8211;simulate <i>file</i>]</p>
 <h2>OPTIONS</h2>

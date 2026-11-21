@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-systemctl/"
 description: "systemctl, systemd-systemctl – Control the systemd system and service manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemctl, systemd-systemctl &#8211; Control the systemd system and service manager </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemctl </code><code>[OPTIONS&#8230;]</code><code>{COMMAND}</code><code>[NAME&#8230;]</code></dt></dl>

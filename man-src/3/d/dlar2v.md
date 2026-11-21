@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlar2v/"
 description: "dlar2v.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlar2v.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-locstats-14/"
 description: "llvm-locstats – calculate statistics on DWARF debug location"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-locstats &#8211; calculate statistics on DWARF debug location </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-locstats</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

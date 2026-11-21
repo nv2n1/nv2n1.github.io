@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-yuvmedianfilter/"
 description: "yuvmedianfilter – A filter for yuv images produced by the mjpeg tools"
 ---
 
-<h2 class="name">NAME</h2>
-<p> yuvmedianfilter &#8211; A filter for yuv images produced by the mjpeg tools</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvmedianfilter</code> [<code>-r</code> <i>num</i>] [<code>-R</code> <i>num</i>] [<code>-t</code> <i>num</i>] [<code>-T</code> <i>num</i>] [<code>-I</code> <i>num</i>] [<code>-f</code>] [<code>-w</code> <i>num</i>] [<code>-s</code> <i>num</i>] [<code>-v</code> <i>num</i>] [<code>-h</code>] </p>
 <h2>DESCRIPTION</h2>

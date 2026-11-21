@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hcrypto_des/"
 description: "DES crypto functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> DES crypto functions &#8211; </p>
 <h3>Functions</h3>
 <p> void <code>DES_set_odd_parity</code> (DES_cblock *key) </p>
 <p> int HC_DEPRECATED <code>DES_check_key_parity</code> (DES_cblock *key) </p>

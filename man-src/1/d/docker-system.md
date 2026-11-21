@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-system/"
 description: "docker-system – Manage Docker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-system &#8211; Manage Docker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker system</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmddumpfont/"
 description: "ppmddumpfont – dump a Ppmdfont file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmddumpfont &#8211; dump a Ppmdfont file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmddumpfont</code> </p>
 <h2>DESCRIPTION</h2>

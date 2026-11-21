@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3interfaces/"
 description: "include/antlr3interfaces.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3interfaces.h &#8211; </p>
 <p> Declarations for all the antlr3 C runtime interfaces/classes.</p>
 <h2>SYNOPSIS</h2>
 <h3>Typedefs</h3>

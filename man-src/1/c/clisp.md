@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-clisp/"
 description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 ---
 
-<h2 class="name">NAME</h2>
-<p> clisp &#8211; ANSI Common Lisp compiler, interpreter and debugger. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>clisp</code> [[<code>-h</code>] | [<code>&#8211;help</code>]] [<code>&#8211;version</code>] [<code>&#8211;license</code>] [<code>-help-image</code>] [<code>-B&nbsp;<wbr></code><i>lisp-lib-dir</i>] [<code>-K&nbsp;<wbr></code><i>linking-set</i>] [<code>-M&nbsp;<wbr></code><i>mem-file</i>] [<code>-m&nbsp;<wbr></code><i>memory-size</i>] [<code>-L&nbsp;<wbr></code><i>language</i>] [<code>-N&nbsp;<wbr></code><i>locale-dir</i>] [<code>-E</code><i>domain</i>&nbsp;<wbr><i>encoding</i>] [[<code>-q</code>] | [<code>&#8211;quiet</code>] | [<code>&#8211;silent</code>] | [<code>-v</code>] | [<code>&#8211;verbose</code>]] [<code>-on-error&nbsp;<wbr></code><i>action</i>] [<code>-repl</code>] [<code>-w</code>] [<code>-I</code>] [[<code>-ansi</code>] | [<code>-traditional</code>]] [<code>-modern</code>] [<code>-p&nbsp;<wbr></code><i>package</i>] [<code>-C</code>] [<code>-norc</code>] [<code>-lp&nbsp;<wbr></code><i>directory</i>&#8230;] [<code>-i&nbsp;<wbr></code><i>init-file</i>&#8230;] [<code>-c</code>&nbsp;<wbr>[<code>-l</code>]&nbsp;<wbr><i>lisp-file</i>&nbsp;<wbr>[<code>-o</code><code>&nbsp;<wbr></code><i>output-file</i>]&#8230;] [<code>-x&nbsp;<wbr></code><i>expressions</i>&#8230;] [<i>lisp-file</i>&nbsp;<wbr>[<i>argument</i>&#8230;]]</dt></dl>

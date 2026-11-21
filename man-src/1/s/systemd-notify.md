@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-notify/"
 description: "systemd-notify – Notify service manager about start-up completion and other daemon status changes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-notify &#8211; Notify service manager about start-up completion and other daemon status changes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-notify </code><code>[OPTIONS&#8230;]</code><code>[VARIABLE=VALUE&#8230;]</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasq3/"
 description: "dlasq3.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasq3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasq3</code> (I0, N0, Z, PP, DMIN, SIGMA, DESIG, QMAX, NFAIL, ITER, NDIV, IEEE, TTYPE, DMIN1, DMIN2, DN, DN1, DN2, G, TAU)<br />

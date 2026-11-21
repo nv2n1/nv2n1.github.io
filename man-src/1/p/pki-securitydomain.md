@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-securitydomain/"
 description: "pki-securitydomain – Command-Line Interface for managing Certificate System security domain."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-securitydomain &#8211; Command-Line Interface for managing Certificate System security domain.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] securitydomain

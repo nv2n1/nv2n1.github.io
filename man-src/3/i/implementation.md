@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-implementation/"
 description: "QuantLib::Parameter – Base class for model arguments."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Parameter &#8211; Base class for model arguments. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/parameter.hpp&gt; </p>
 <p> Inherited by <code>ConstantParameter</code>, <code>NullParameter</code>, <code>PiecewiseConstantParameter</code>, and <code>TermStructureFittingParameter</code>. </p>

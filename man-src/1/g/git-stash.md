@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-stash/"
 description: "git-stash – Stash the changes in a dirty working directory away"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-stash &#8211; Stash the changes in a dirty working directory away </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git stash list[&lt;log - options&gt;] git stash show[-u | --include - untracked | --only - untracked][&lt;diff - options&gt;][&lt;stash&gt;] git stash drop[-q | --quiet][&lt;stash&gt;] git stash(pop | apply)[--index][-q | --quiet][&lt;stash&gt;] git stash branch&lt;branchname&gt;[&lt;stash&gt;] git stash[push[-p | --patch][-k | --[no - ] keep - index][-q | --quiet]

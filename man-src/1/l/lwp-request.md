@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lwp-request/"
 description: "lwp-request, GET, POST, HEAD – Simple command line user agent"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwp-request, GET, POST, HEAD &#8211; Simple command line user agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lwp-request</code> [<code>-afPuUsSedvhx</code>] [<code>-m</code> <i>method</i>] [<code>-b</code> <i>base </i><font SIZE="-1"><i>URL</i></font><i></i>] [<code>-t</code> <i>timeout</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>&nbsp;<wbr><i>if-modified-since</i>]&nbsp;<wbr>[<code>-c</code>&nbsp;<wbr><i>content-type</i>]<br />

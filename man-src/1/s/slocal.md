@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-slocal/"
 description: "slocal – asynchronously filter and deliver new mail"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slocal &#8211; asynchronously filter and deliver new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/slocal</code> [<code>-addr</code> <i>address</i>] [<code>-info</code> <i>data</i>] [<code>-sender</code> <i>sender</i>] [<code>-user</code> <i>username</i>] [<code>-mailbox</code> <i>mbox</i>] [<code>-file</code> <i>file</i>] [<code>-maildelivery</code> <i>deliveryfile</i>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-suppressdup</code> | <code>-nosuppressdup</code>] [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

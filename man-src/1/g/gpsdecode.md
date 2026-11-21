@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpsdecode/"
 description: "gpsdecode – decode GPS, RTCM or AIS streams into a readable format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpsdecode &#8211; decode GPS, RTCM or AIS streams into a readable format </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsdecode</code> [-c] [-d] [-e] [-j] [-s] [-t&nbsp;<wbr><i>typelist</i>] [-u] [-v] [-D&nbsp;<wbr><i>debuglevel</i>] [-V]</dt></dl>

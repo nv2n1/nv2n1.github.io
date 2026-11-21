@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-p4/"
 description: "git-p4 – Import from and submit to Perforce repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-p4 &#8211; Import from and submit to Perforce repositories </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git p4 clone[&lt;sync options&gt;][&lt;clone options&gt;]&lt;p4 depot path&gt;... git p4 sync[&lt;sync options&gt;][&lt;p4 depot path&gt;...] git p4 rebase

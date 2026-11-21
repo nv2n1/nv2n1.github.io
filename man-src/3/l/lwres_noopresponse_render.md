@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_noopresponse_render/"
 description: "lwres_nooprequest_render, lwres_noopresponse_render, lwres_nooprequest_parse, lwres_noopresponse_parse, lwres_noopresponse_free, lwres_nooprequest_free – lightweight resolver no-op message handling"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_nooprequest_render, lwres_noopresponse_render, lwres_nooprequest_parse, lwres_noopresponse_parse, lwres_noopresponse_free, lwres_nooprequest_free &#8211; lightweight resolver no-op message handling </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;

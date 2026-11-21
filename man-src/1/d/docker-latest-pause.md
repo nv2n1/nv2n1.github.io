@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-pause/"
 description: "docker-pause – Pause all processes within a container"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-pause &#8211; Pause all processes within a container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker pause</code> CONTAINER [CONTAINER&#8230;] </p>
 <h2>DESCRIPTION</h2>

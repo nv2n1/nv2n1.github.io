@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-logfactor5/"
 description: "logfactor5 – GUI tool for viewing logging events"
 ---
 
-<h2 class="name">NAME</h2>
-<p> logfactor5 &#8211; GUI tool for viewing logging events</p>
 <h2>SYNOPSIS</h2>
 <p> <code>logfactor5</code> </p>
 <h2>DESCRIPTION</h2>

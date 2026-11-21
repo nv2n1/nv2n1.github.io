@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmramp/"
 description: "pgmramp – generate a grayscale ramp"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmramp &#8211; generate a grayscale ramp </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmramp</code> <code>-lr</code>|<code>-tb</code> | <code>-rectangle</code>|<code>-ellipse</code> <i>width height</i></p>
 <h2>DESCRIPTION</h2>

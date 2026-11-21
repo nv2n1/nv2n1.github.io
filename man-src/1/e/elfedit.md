@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-elfedit/"
 description: "elfedit – update ELF header and program property of ELF files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> elfedit &#8211; update ELF header and program property of ELF files </p>
 <h2>SYNOPSIS</h2>
 <p> elfedit [<code>&#8211;input-mach=</code><i>machine</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;input-type=</code><i>type</i>]<br />

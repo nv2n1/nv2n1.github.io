@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtx-check/"
 description: "mtx-check – Basic ConTeXt Syntax Checking"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtx-check &#8211; Basic ConTeXt Syntax Checking </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script check [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

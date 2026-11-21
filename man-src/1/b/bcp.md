@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bcp/"
 description: "bcp – extract subsets of Boost"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bcp &#8211; extract subsets of Boost </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bcp</code> <code>&#8211;list</code> [<i>options</i>] <i>module-list</i><br />
  <code>bcp</code> [<i>options</i>] <i>module-list output-path</i><br />

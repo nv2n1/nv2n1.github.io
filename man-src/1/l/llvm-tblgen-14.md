@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-tblgen-14/"
 description: "llvm-tblgen – Target Description to C++ Code for LLVM"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-tblgen &#8211; Target Description to C++ Code for LLVM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-tblgen</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

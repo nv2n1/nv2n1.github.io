@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mdig/"
 description: "mdig – DNS pipelined lookup utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mdig &#8211; DNS pipelined lookup utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdig</code> <i>{@server</i>} [<code>-f</code> filename] [<code>-h</code>] [<code>-v</code>] [ [<code>-4</code>] | [<code>-6</code>] ] [<code>-m</code>] [<code>-b</code> address] [<code>-p</code> port#] [<code>-c</code> class] [<code>-t</code> type] [<code>-i</code>] [<code>-x</code> addr] [plusopt&#8230;] </p>
 <p> <code>mdig</code> {<code>-h</code>} </p>

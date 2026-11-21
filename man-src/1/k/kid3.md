@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kid3/"
 description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kid3, kid3-qt, kid3-cli &#8211; Kid3 ID3 Tagger </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kid3</code> [<code>&#8211;help</code> | <code>&#8211;help-qt</code> | <code>&#8211;help-kde</code> | <code>&#8211;help-all</code></dt>

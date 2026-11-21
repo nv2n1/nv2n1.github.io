@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cheevx/"
 description: "cheevx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cheevx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cheevx</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, RWORK, IWORK, IFAIL, INFO)<br />

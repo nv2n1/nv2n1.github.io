@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-yasm/"
 description: "yasm – The Yasm Modular Assembler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> yasm &#8211; The Yasm Modular Assembler </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>yasm</code> [<code>-f&nbsp;<wbr></code><i>format</i>] [<code>-o&nbsp;<wbr></code><i>outfile</i>] [<i>other options</i>&#8230;] {<i>infile</i>}</dt>

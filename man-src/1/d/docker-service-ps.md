@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-service-ps/"
 description: "docker-service-ps – List the tasks of one or more services"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-service-ps &#8211; List the tasks of one or more services </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service ps [OPTIONS] SERVICE [SERVICE&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

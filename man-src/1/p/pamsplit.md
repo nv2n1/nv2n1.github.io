@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamsplit/"
 description: "pamsplit – split a multi-image Netpbm file into single-image files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamsplit &#8211; split a multi-image Netpbm file into single-image files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamsplit</code> </p>
 <p> [<i>netpbmfile</i> </p>

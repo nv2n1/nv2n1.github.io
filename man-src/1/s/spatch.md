@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-spatch/"
 description: "spatch – apply a semantic patch file to a set of C files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spatch &#8211; apply a semantic patch file to a set of C files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>spatch</code> <code>-sp_file</code> <i>&lt;SP&gt;</i> <i>&lt;files&gt;</i> <code>[-o </code> <i>&lt;outfile&gt;</i> <code>] </code> <code>[-iso_file </code> <i>&lt;iso&gt;</i> <code>] </code> <code>[</code> <i>options</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-callablebond/"
 description: "ql/experimental/callablebonds/callablebond.hpp – callable bond classes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/experimental/callablebonds/callablebond.hpp &#8211; callable bond classes </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/schedule.hpp&gt;<br />
  #include &lt;ql/pricingengine.hpp&gt;<br />

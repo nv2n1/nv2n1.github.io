@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-blackformula/"
 description: "ql/pricingengines/blackformula.hpp – Black formula."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/blackformula.hpp &#8211; Black formula. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/option.hpp&gt;<br />
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>

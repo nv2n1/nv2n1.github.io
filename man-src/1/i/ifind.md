@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ifind/"
 description: "ifind – Find the meta-data structure that has allocated a given disk unit or file name."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ifind &#8211; Find the meta-data structure that has allocated a given disk unit or file name. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ifind [-avVl] [-f fstype] [-d data_unit] </code> <code>[-n file] [-p par_inode] [-z ZONE] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images]</i></p>
 <h2>DESCRIPTION</h2>

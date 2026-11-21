@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-eject/"
 description: "eject – eject removable media"
 ---
 
-<h2 class="name">NAME</h2>
-<p> eject &#8211; eject removable media </p>
 <p> <code>eject</code> [options] <i>device</i>|<i>mountpoint</i> </p>
 <h2>DESCRIPTION</h2>
 <p> <code>eject</code> allows removable media (typically a CD-ROM, floppy disk, tape, JAZ, ZIP or USB disk) to be ejected under software control. The command can also control some multi-disc CD-ROM changers, the auto-eject feature supported by some devices, and close the disc tray of some CD-ROM drives. </p>

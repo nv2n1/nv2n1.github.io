@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamwipeout/"
 description: "pamwipeout – replace detail with smooth gradient from one edge to the other"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamwipeout &#8211; replace detail with smooth gradient from one edge to the other</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamwipeout</code> {<code>-lr | -tb</code>} [<i>filename</i>] </p>
 <p> Minimum unique abbreviation of options is acceptable. You may use double hyphens instead of single hyphen to denote options. </p>

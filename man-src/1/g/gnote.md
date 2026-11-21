@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnote/"
 description: "gnote – A simple note-taking application for Gnome"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnote &#8211; A simple note-taking application for Gnome</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnote</code> <i>[OPTION] &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

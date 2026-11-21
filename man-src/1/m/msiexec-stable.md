@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msiexec-stable/"
 description: "msiexec – Wine MSI Installer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msiexec &#8211; Wine MSI Installer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msiexec</code> <i>command</i> {<i>required parameter</i>} [<i>optional parameter</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

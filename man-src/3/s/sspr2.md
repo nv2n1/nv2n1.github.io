@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sspr2/"
 description: "sspr2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sspr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, AP)<br />

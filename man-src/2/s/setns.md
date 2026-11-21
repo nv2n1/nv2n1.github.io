@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setns/"
 description: "setns – reassociate thread with a namespace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setns &#8211; reassociate thread with a namespace </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

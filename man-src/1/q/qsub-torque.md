@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qsub-torque/"
 description: "qsub – submit pbs job"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qsub &#8211; submit pbs job </p>
 <h2>SYNOPSIS</h2>
 <p> qsub [-a date_time] [-A account_string] [-b secs] [-c checkpoint_options] [-C directive_prefix] [-d path] [-D path] [-e path] [-f] [-h] [-I] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-M user_list] [-n node exclusive] [-N name] [-o path] [-p priority] [-P proxy_username[:group]] [-q destination] [-r c] [-S path_list] [-t array_request] [-T prologue/epilogue script_name] [-u user_list] [-v variable_list] [-V] [-w] path [-W additional_attributes] [-x] [-X] [-z] [script]</p>
 <h2>DESCRIPTION</h2>

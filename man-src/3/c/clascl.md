@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clascl/"
 description: "clascl.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clascl.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br />

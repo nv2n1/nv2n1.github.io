@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-rt_sigqueueinfo/"
 description: "rt_sigqueueinfo, rt_tgsigqueueinfo – queue a signal and data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rt_sigqueueinfo, rt_tgsigqueueinfo &#8211; queue a signal and data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 int rt_sigqueueinfo(pid_t tgid, int sig, siginfo_t *info);

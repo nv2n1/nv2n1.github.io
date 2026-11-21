@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-repocutter/"
 description: "repocutter – surgical and filtering operations on Subversion dump files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> repocutter &#8211; surgical and filtering operations on Subversion dump files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repocutter</code> [-q] [-r&nbsp;<wbr><i>selection</i>] <i>subcommand</i></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_const_cpuset_t/"
 description: "hwlocality_object_sets – Object Sets (hwloc_cpuset_t and hwloc_nodeset_t)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_object_sets &#8211; Object Sets (hwloc_cpuset_t and hwloc_nodeset_t) </p>
 <h3>Typedefs</h3>
 <p> typedef <code>hwloc_bitmap_t</code> <code>hwloc_cpuset_t</code> </p>
 <p> typedef <code>hwloc_const_bitmap_t</code> <code>hwloc_const_cpuset_t</code> </p>

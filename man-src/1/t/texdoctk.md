@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-texdoctk/"
 description: "texdoctk – GUI for easier access of TeX package and program documentations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> texdoctk &#8211; GUI for easier access of TeX package and program documentations </p>
 <h2>SYNOPSIS</h2>
 <p> <code>texdoctk</code> -[aq]</p>
 <h2>DESCRIPTION</h2>

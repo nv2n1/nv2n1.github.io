@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-statx/"
 description: "statx – get file status (extended)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> statx &#8211; get file status (extended) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt; /* Definition of AT_* constants */

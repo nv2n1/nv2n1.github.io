@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbfilevalidate/"
 description: "dbfilevalidate – insure the source input is a well-formed Fsdb file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbfilevalidate &#8211; insure the source input is a well-formed Fsdb file </p>
 <h2>SYNOPSIS</h2>
 <pre>
     dbfilevalidate [-vc]

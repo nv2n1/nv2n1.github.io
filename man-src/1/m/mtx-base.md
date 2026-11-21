@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtx-base/"
 description: "mtx-base – ConTeXt TDS Management Tool (aka luatools)"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtx-base &#8211; ConTeXt TDS Management Tool&nbsp;(aka luatools) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script base [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

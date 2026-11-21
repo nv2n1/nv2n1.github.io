@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtoacad/"
 description: "ppmtoacad – convert portable pixmap to AutoCAD database or slide"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtoacad &#8211; convert portable pixmap to AutoCAD database or slide </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoacad</code> [<code>-dxb</code>] [<code>-poly</code>] [<code>-background</code> <i>colour</i>] [<code>-white</code>] [<code>-aspect</code> <i>ratio</i>] [<code>-8</code>] [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

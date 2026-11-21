@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mkdir/"
 description: "mkdir, mkdirat – create a directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkdir, mkdirat &#8211; create a directory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/stat.h&gt;

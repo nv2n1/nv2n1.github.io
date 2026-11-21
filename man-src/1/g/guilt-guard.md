@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-guard/"
 description: "guilt-guard – Assign guards to patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-guard &#8211; Assign guards to patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-guard</i> [-l | &#8211;list | -n | &#8211;none | [&lt;patchname&gt;] [(+|-)&lt;guard&gt;&#8230;]]</p>
 <h2>DESCRIPTION</h2>

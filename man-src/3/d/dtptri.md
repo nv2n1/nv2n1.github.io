@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtptri/"
 description: "dtptri.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtptri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtptri</code> (UPLO, DIAG, N, AP, INFO)<br />

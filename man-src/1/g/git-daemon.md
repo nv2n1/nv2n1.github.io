@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-daemon/"
 description: "git-daemon – A really simple server for Git repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-daemon &#8211; A really simple server for Git repositories </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git daemon[--verbose][--syslog][--export - all]

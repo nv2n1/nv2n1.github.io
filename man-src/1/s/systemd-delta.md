@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-delta/"
 description: "systemd-delta – Find overridden configuration files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-delta &#8211; Find overridden configuration files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-delta</code> [OPTIONS&#8230;] [<i>PREFIX</i>[/<i>SUFFIX</i>]|<i>SUFFIX</i>&#8230;]</dt></dl>

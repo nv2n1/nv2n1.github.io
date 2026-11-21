@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-revert/"
 description: "git-revert – Revert some existing commits"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-revert &#8211; Revert some existing commits </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git revert[--[no - ] edit][-n][-m parent - number][-s][-S[&lt;keyid&gt;]]&lt;commit&gt;... git revert(--continue | --skip | --abort | --quit)

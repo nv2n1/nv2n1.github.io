@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-import/"
 description: "docker-import – Create an empty filesystem image and import the contents of the tarball (.tar, .tar.gz, .tgz, .bzip, .tar.xz, .txz) into it, then optionally tag it."
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-import &#8211; Create an empty filesystem image and import the contents of the tarball (.tar, .tar.gz, .tgz, .bzip, .tar.xz, .txz) into it, then optionally tag it. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker import</code> [<code>-c</code>|<code>&#8211;change</code>[=<i>[]</i>]] [<code>-m</code>|<code>&#8211;message</code>[=<i>MESSAGE</i>]] [<code>&#8211;help</code>] file|URL|<code>&#8211;</code>[REPOSITORY[:TAG]] </p>
 <h2>OPTIONS</h2>

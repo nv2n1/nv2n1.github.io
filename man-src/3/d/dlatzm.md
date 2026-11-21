@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlatzm/"
 description: "dlatzm.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlatzm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br />

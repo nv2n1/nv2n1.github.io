@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-statoverride/"
 description: "dpkg-statoverride – override ownership and mode of files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-statoverride &#8211; override ownership and mode of files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-statoverride</code> [<i>option</i>&#8230;] <i>command</i></p>
 <h2>DESCRIPTION</h2>

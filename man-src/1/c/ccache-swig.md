@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ccache-swig/"
 description: "ccache-swig – a fast compiler cache"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ccache-swig &#8211; a fast compiler cache</p>
 <h2>SYNOPSIS</h2>
 <p> ccache-swig [OPTION] </p>
 <p> ccache-swig &lt;compiler&gt; [COMPILER OPTIONS] </p>

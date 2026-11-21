@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlanv2/"
 description: "dlanv2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlanv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlanv2</code> (A, B, C, D, RT1R, RT1I, RT2R, RT2I, CS, SN)<br />

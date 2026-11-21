@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndiff/"
 description: "ndiff – Utility to compare the results of Nmap scans"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndiff &#8211; Utility to compare the results of Nmap scans </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndiff</code> [<i>options</i>] {<i>a.xml</i>} {<i>b.xml</i>}</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-col/"
 description: "col – filter reverse line feeds from input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> col &#8211; filter reverse line feeds from input </p>
 <h2>SYNOPSIS</h2>
 <p> <code>col</code> <i>options</i></p>
 <h2>DESCRIPTION</h2>

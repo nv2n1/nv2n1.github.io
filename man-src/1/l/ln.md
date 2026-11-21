@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ln/"
 description: "ln – make links between files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ln &#8211; make links between files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ln</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,TARGET LINK_NAME/</i><br />
  <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,TARGET/</i><br />

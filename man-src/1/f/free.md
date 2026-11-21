@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-free/"
 description: "free – Display amount of free and used memory in the system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> free &#8211; Display amount of free and used memory in the system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>free</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

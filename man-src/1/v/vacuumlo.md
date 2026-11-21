@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vacuumlo/"
 description: "vacuumlo – remove orphaned large objects from a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vacuumlo &#8211; remove orphaned large objects from a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>vacuumlo</code> [<i>option</i>&#8230;] <i>dbname</i>&#8230;</dt></dl>

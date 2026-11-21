@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-apt-file/"
 description: "apt-file — APT package searching utility — command-line interface"
 ---
 
-<h2 class="name">NAME</h2>
-<p> apt-file &#8212; APT package searching utility &#8212; command-line interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>apt-file</code> [<i>options</i>] search <i>pattern</i> </p>
 <p> <code>apt-file</code> [<i>options</i>] show <i>package</i></p>

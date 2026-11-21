@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-hash-object/"
 description: "git-hash-object – Compute object ID and optionally creates a blob from a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-hash-object &#8211; Compute object ID and optionally creates a blob from a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git hash - object[-t&lt;type&gt;][-w][--path = &lt;file&gt; | --no - filters][--stdin[--literally]][--]&lt;file&gt;... git hash - object[-t&lt;type&gt;][-w]-- stdin - paths[--no - filters]

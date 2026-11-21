@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kwallet-query/"
 description: "kwallet-query – KDE Wallet command-line manipulation tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kwallet-query &#8211; KDE Wallet command-line manipulation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kwallet-query</code> <i>OPTIONS</i> <i>wallet</i></p>
 <h2>DESCRIPTION</h2>

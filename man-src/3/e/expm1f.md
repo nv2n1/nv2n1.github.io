@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-expm1f/"
 description: "expm1, expm1f, expm1l – exponential minus 1"
 ---
 
-<h2 class="name">NAME</h2>
-<p> expm1, expm1f, expm1l &#8211; exponential minus 1 </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

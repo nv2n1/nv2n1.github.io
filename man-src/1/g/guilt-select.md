@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-select/"
 description: "guilt-select – Select guards to apply when pushing patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-select &#8211; Select guards to apply when pushing patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-select</i> [ -n | &#8211;none | -s | &#8211;series | [&#8211;pop|&#8211;reapply] &lt;guards&#8230;&gt; ]</p>
 <h2>DESCRIPTION</h2>

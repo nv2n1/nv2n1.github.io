@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bootstraphelper/"
 description: "ql/termstructures/bootstraphelper.hpp – base helper class used for bootstrapping"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/termstructures/bootstraphelper.hpp &#8211; base helper class used for bootstrapping </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/quote.hpp&gt;<br />
  #include &lt;ql/time/date.hpp&gt;<br />

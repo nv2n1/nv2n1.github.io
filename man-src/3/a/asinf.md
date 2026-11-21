@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-asinf/"
 description: "asin, asinf, asinl – arc sine function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> asin, asinf, asinl &#8211; arc sine function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_destroy_flow/"
 description: "ibv_create_flow, ibv_destroy_flow – create or destroy flow steering rules"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_create_flow, ibv_destroy_flow &#8211; create or destroy flow steering rules </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

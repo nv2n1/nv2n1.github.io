@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctbsv/"
 description: "ctbsv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctbsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctbsv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br />

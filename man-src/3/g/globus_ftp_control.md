@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_ftp_control/"
 description: "GridFTP Control API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GridFTP Control API &#8211; </p>
 <p> GridFTP Control API.</p>
 <h3>Modules</h3>
 <p> <code>GridFTP Constants</code><br />

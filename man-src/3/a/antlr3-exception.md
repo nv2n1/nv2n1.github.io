@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-exception/"
 description: "ANTLR3_RECOGNIZER_SHARED_STATE_struct –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ANTLR3_RECOGNIZER_SHARED_STATE_struct &#8211; </p>
 <p> All the data elements required to track the current state of any recognizer (lexer, parser, tree parser).</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3recognizersharedstate.h">antlr3recognizersharedstate.h</a>&gt;</p>

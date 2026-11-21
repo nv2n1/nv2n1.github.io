@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kjscmd5/"
 description: "kjscmd5 – Frameworks KJSEmbed interpreter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kjscmd5 &#8211; Frameworks KJSEmbed interpreter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kjscmd5</code> [&#8211;help] [[-e] | [&#8211;exec]] [[-i] | [-interactive]] [file]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_join_session_keyring/"
 description: "keyctl_join_session_keyring – Join a different session keyring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_join_session_keyring &#8211; Join a different session keyring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

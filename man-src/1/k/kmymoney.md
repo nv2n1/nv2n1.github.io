@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kmymoney/"
 description: "kmymoney – the personal finances manager for KDE"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kmymoney &#8211; the personal finances manager for KDE </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kmymoney</code> [<code>Generic Options</code>] [<code>Qt Options</code>] [<code>KDE Options</code>] [<code>Options</code>] [<code>File</code>]</dt></dl>

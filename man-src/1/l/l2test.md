@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-l2test/"
 description: "l2test – L2CAP testing tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> l2test &#8211; L2CAP testing tool </p>
 <h2>DESCRIPTION</h2>
 <p> l2test &#8211; L2CAP testing tool Usage:</p>
 <dl>

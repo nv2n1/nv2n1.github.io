@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-remote-list/"
 description: "flatpak-remote-list – List remote repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-remote-list &#8211; List remote repositories </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-list</code> [OPTION&#8230;]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rstpep2html/"
 description: "rstpep2html – convert reST Python Enhancement Proposals to HTML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rstpep2html &#8211; convert reST Python Enhancement Proposals to HTML </p>
 <h2>SYNOPSIS</h2>
 <p> rstpep2html [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
 <h2>DESCRIPTION</h2>

@@ -6,8 +6,6 @@ letter: "c"
 url: "/docs/linux/man/3-cfmakeraw/"
 description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw, cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, cfsetspeed – get and set terminal attributes, line control, get ..."
 ---
-<h2 class="name">NAME</h2>
-<p> termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw, cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, cfsetspeed - get and set terminal attributes, line control, get and set baud rate </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;termios.h&gt; 

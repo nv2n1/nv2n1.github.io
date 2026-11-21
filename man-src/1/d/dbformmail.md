@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbformmail/"
 description: "dbformmail – write a shell script that will send e-mail to many people"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbformmail &#8211; write a shell script that will send e-mail to many people </p>
 <h2>SYNOPSIS</h2>
 <p> dbformmail [-m <font SIZE="-1">MECHANISM</font>] format_file.txt</p>
 <h2>DESCRIPTION</h2>

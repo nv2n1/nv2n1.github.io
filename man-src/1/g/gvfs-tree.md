@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-tree/"
 description: "gvfs-tree"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-tree </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-tree</code> has been deprecated and it is redirected to <code>gio tree</code>.</p>
 <h2>SEE ALSO</h2>

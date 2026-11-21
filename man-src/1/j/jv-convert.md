@@ -6,8 +6,6 @@ letter: "j"
 url: "/docs/linux/man/1-jv-convert/"
 description: "jv-convert – Convert file from one encoding to another"
 ---
-<h2 class="name">NAME</h2>
-<p> jv-convert - Convert file from one encoding to another </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jv-convert</code> [<font SIZE="-1"><code>OPTION</code></font>] ... [<i></i><font SIZE="-1"><i>INPUTFILE</i></font><i></i> [<i></i><font SIZE="-1"><i>OUTPUTFILE</i></font><i></i>]]  </p>
 <h2>DESCRIPTION</h2>

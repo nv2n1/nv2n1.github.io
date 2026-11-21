@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clasr/"
 description: "clasr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clasr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br />

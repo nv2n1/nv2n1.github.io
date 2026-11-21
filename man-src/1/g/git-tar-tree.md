@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-tar-tree/"
 description: "git-tar-tree – Create a tar archive of the files in the named tree object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-tar-tree &#8211; Create a tar archive of the files in the named tree object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git tar - tree[--remote = &lt;repo&gt;]&lt;tree - ish&gt;[&lt;base&gt;]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-blackcallablebondengine/"
 description: "ql/experimental/callablebonds/blackcallablebondengine.hpp – Black-formula callable bond engines."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/experimental/callablebonds/blackcallablebondengine.hpp &#8211; Black-formula callable bond engines. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/callablebonds/callablebond.hpp&gt;<br />
  #include &lt;ql/experimental/callablebonds/callablebondvolstructure.hpp&gt; </p>

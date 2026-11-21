@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-innmail/"
 description: "innmail – Simple mail-sending program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> innmail &#8211; Simple mail-sending program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>innmail</code> [<code>-h</code>] [<code>-s</code> <i>subject</i>] <i>address</i> [<i>address</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

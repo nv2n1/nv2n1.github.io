@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamx/"
 description: "pamx – display Netpbm image in X Window System window"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamx &#8211; display Netpbm image in X Window System window</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamx</code> </p>
 <p> [<code>-fullscreen</code>] [<code>-install</code>] [<code>-private</code>] [<code>-fit</code>] [<code>-pixmap</code>] [<code>-verbose</code>] [<code>-display=</code><i>x-display</i>] [<code>-title=</code><i>text</i>] [<code>-foreground=</code><i>color</i>] [<code>-background=</code><i>color</i>] [<code>-border=</code><i>color</i>] [<code>-geometry=</code><i>x-geometry-string</i>] [<code>-visual=</code><i>name</i>] <i>netpbm_file</i> </p>

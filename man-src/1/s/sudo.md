@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sudo/"
 description: "sudo, sudoedit – execute a command as another user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sudo, sudoedit &#8211; execute a command as another user </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sudo</code> <code>-h</code> | <code>-K</code> | <code>-k</code> | <code>-L</code> | <code>-V</code> </p>
 <p> <code>sudo</code> <code>-v</code> [<code>-AknS</code>] [<code>-g</code>&nbsp;<wbr><i>group name</i>|<i>#gid</i>] [<code>-p</code>&nbsp;<wbr><i>prompt</i>] [<code>-u</code>&nbsp;<wbr><i>username</i>|<i>#uid</i>] </p>

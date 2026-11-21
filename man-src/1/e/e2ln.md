@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-e2ln/"
 description: "e2ln – create hard links on an ext2 filesystem"
 ---
 
-<h2 class="name">NAME</h2>
-<p> e2ln &#8211; create hard links on an ext2 filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>e2ln</code> [<i>options</i>]<i> source destination</i></p>
 <h2>DESCRIPTION</h2>

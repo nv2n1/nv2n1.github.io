@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-secret/"
 description: "docker-secret – Manage Docker secrets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-secret &#8211; Manage Docker secrets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker secret</code> </p>
 <h2>DESCRIPTION</h2>

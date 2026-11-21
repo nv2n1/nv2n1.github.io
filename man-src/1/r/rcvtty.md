@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rcvtty/"
 description: "rcvtty – report new mail"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rcvtty &#8211; report new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/rcvtty</code> [<i>command</i>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-width</code> <i>columns</i>] [<code>-bell</code> | <code>-nobell</code>] [<code>-newline</code> | <code>-nonewline</code>] [<code>-biff</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

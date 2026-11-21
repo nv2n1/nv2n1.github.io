@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtouil/"
 description: "pamtouil – convert a PNM or PNM/alpha image into a Motif UIL icon file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtouil &#8211; convert a PNM or PNM/alpha image into a Motif UIL icon file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtouil</code> [<code>-name=</code><i>uilname</i>] [<i>pamfile</i>] </p>
 <p> You may abbreviate any option to its shortest unique prefix. You may use two hyphens instead of one to delimit an option. You may separate an option from its value with whitespace instead of <code>=</code>. </p>

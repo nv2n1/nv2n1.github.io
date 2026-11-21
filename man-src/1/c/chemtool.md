@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chemtool/"
 description: "chemtool – chemical structures editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chemtool &#8211; chemical structures editor</p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chemtool</code> [<i>filename</i>] </dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perldebug/"
 description: "perldebug – Perl debugging"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perldebug &#8211; Perl debugging </p>
 <h2>DESCRIPTION</h2>
 <p> First of all, have you tried using <tt>&quot;use strict;&quot;</tt> and <tt>&quot;use warnings;&quot;</tt>? </p>
 <p> If you&#8217;re new to the Perl debugger, you may prefer to read perldebtut, which is a tutorial introduction to the debugger. </p>

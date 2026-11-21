@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgiwrap_init_std/"
 description: "cgiwrap_init_std – Initialize cgiwrap with default functions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgiwrap_init_std &#8211; Initialize cgiwrap with default functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgiwrap.h&gt;

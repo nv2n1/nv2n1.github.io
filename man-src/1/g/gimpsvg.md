@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gimpsvg/"
 description: "gimpsvg – convert a GIMP gradient (ggr) to the SVG format."
 ---
 
-<h2 class="name">NAME</h2>
-<p> gimpsvg &#8211; convert a GIMP gradient (ggr) to the SVG format. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gimpsvg</code> [-g&nbsp;<wbr><i>geometry</i>] [-h] [-o&nbsp;<wbr><i>file</i>] [-p] [-s&nbsp;<wbr><i>samples</i>] [-v] [-V] [<i>file</i>]</dt></dl>

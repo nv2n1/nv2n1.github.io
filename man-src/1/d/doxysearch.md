@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-doxysearch/"
 description: "doxysearch.cgi – search engine used for searching in doxygen documentation."
 ---
 
-<h2 class="name">NAME</h2>
-<p> doxysearch.cgi &#8211; search engine used for searching in doxygen documentation. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>doxysearch.cgi</code></p>
 <h2>DESCRIPTION</h2>

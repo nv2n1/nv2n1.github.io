@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-umount/"
 description: "umount.ecryptfs_private – eCryptfs private unmount helper."
 ---
 
-<h2 class="name">NAME</h2>
-<p> umount.ecryptfs_private &#8211; eCryptfs private unmount helper.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>umount.ecryptfs_private</code> [-f] </p>
 <p> <code>NOTE:</code> This program will <code>not</code> clear the relevant keys from the user&#8217;s keyring. For this reason, it is recommended that users use <code><a href="/docs/linux/man/1-ecryptfs-umount-private/">ecryptfs-umount-private</a></code>(1) instead! </p>

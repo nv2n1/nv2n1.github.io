@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chsh/"
 description: "chsh – change login shell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chsh &#8211; change login shell </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chsh</code> [<i>options</i>] [<i>LOGIN</i>]</dt></dl>

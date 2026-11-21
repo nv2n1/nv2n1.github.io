@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-exiv2/"
 description: "exiv2 – Image metadata manipulation tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> exiv2 &#8211; Image metadata manipulation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>exiv2</code> [<i>options</i>] [<i>action</i>] <i>file</i> &#8230; </p>
 <h2>DESCRIPTION</h2>

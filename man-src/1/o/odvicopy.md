@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-odvicopy/"
 description: "dvicopy, odvicopy – produce modified copy of DVI file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvicopy, odvicopy &#8211; produce modified copy of DVI file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvicopy</code> [<i>options</i>] [<i>infile</i>[<i></i><code>.dvi</code>] [<i>outfile</i>[<i></i><code>.dvi</code>]]]</p>
 <h2>DESCRIPTION</h2>

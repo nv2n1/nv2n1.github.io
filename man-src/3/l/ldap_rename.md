@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_rename/"
 description: "ldap_rename, ldap_rename_s – Renames the specified entry."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_rename, ldap_rename_s &#8211; Renames the specified entry. </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

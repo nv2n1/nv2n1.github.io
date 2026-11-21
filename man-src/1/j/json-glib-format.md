@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-json-glib-format/"
 description: "json-glib-format – JSON-GLib formatting tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> json-glib-format &#8211; JSON-GLib formatting tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>json-glib-format</code> [<code>-h</code>,&nbsp;<wbr><code>&#8211;help</code>] [<code>&#8211;prettify</code>] [<code>&#8211;indent-spaces</code>&nbsp;<wbr><i>SPACES</i>] URI [URI&#8230;]</dt></dl>

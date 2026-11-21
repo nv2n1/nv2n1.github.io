@@ -6,8 +6,6 @@ letter: "a"
 url: "/docs/linux/man/1-ascii/"
 description: "ascii – report character aliases"
 ---
-<h2 class="name">NAME</h2>
-<p> ascii - report character aliases </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ascii</code> [-dxohv] [-t] [<i>char-alias</i>...] </dt>

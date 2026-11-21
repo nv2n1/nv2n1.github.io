@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-rename/"
 description: "gvfs-rename"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-rename </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-rename</code> has been deprecated and it is redirected to <code>gio rename</code>.</p>
 <h2>SEE ALSO</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sgejsv/"
 description: "sgejsv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgejsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgejsv</code> (JOBA, JOBU, JOBV, JOBR, JOBT, JOBP, M, N, A, LDA, SVA, U, LDU, V, LDV, WORK, LWORK, IWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-oz-customize/"
 description: "oz-customize – tool to automatically modify installed operating system files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> oz-customize &#8211; tool to automatically modify installed operating system files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oz-customize [OPTIONS] &lt;tdl-file&gt; &lt;libvirt-xml-file&gt;</code> </p>
 <h2>DESCRIPTION</h2>

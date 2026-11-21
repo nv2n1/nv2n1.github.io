@@ -6,8 +6,6 @@ letter: "b"
 url: "/docs/linux/man/1-bash/"
 description: "bash – GNU Bourne-Again SHell"
 ---
-<h2 class="name">NAME</h2>
-<p> bash - GNU Bourne-Again SHell </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bash</code> [options] [command_string | file]  </p>
 <h2>COPYRIGHT</h2>

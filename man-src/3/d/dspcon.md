@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dspcon/"
 description: "dspcon.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dspcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspcon</code> (UPLO, N, AP, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />

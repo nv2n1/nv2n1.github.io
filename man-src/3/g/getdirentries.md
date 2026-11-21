@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getdirentries/"
 description: "getdirentries – get directory entries in a filesystem-independent format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getdirentries &#8211; get directory entries in a filesystem-independent format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dirent.h&gt;</code> </p>
 <p> <code>ssize_t getdirentries(int </code><i>fd</i><code>, char *</code><i>buf</i><code>, size_t </code><i>nbytes</i> <code>, off_t *</code><i>basep</i><code>);</code> </p>

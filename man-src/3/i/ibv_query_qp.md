@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_query_qp/"
 description: "ibv_query_qp – get the attributes of a queue pair (QP)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_query_qp &#8211; get the attributes of a queue pair (QP) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

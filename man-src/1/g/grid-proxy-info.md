@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grid-proxy-info/"
 description: "grid-proxy-info – Display information about a proxy certificate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grid-proxy-info &#8211; Display information about a proxy certificate </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-proxy-info</code> -help | -usage | -version </p>
 <p> <code>grid-proxy-info</code> -e | -exists [-valid <i>HOURS:MINUTES</i> | -v <i>HOURS:MINUTES</i>] [-hours <i>HOURS</i> | -h <i>HOURS</i>] [-bits <i>BITS</i> | -b <i>BITS</i>] </p>

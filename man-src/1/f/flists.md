@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flists/"
 description: "flist, flists – list the number of messages in given sequence(s)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flist, flists &#8211; list the number of messages in given sequence(s) </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flist</code> [<i>+folder1</i> [<i>+folder2</i> &#8230;]] [<code>-sequence</code> <i>name1</i> [<code>-sequence</code> <i>name2</i> &#8230;]] [<code>-all</code> | <code>-noall</code>] [<code>-showzero</code> | <code>-noshowzero</code>] [<code>-recurse</code> | <code>-norecurse</code>] [<code>-fast</code> | <code>-nofast</code>] [<code>-alpha</code> | <code>-noalpha</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

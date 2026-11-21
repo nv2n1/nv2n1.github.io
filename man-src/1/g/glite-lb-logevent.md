@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glite-lb-logevent/"
 description: "glite-lb-logevent – program for logging events to L&B subsystem"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glite-lb-logevent &#8211; program for logging events to L&amp;B subsystem</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-logevent</code> <code>-s Application -e UserTag</code> <code>-j</code> <i>JOBID </i> <code>-c</code> <i>SEQCODE </i> <code>&#8211;name </code> <i>NAME</i> <code>&#8211;value</code> <i>VALUE</i> </p>
 <h2>DESCRIPTION</h2>

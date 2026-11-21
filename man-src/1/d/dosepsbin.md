@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dosepsbin/"
 description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dosepsbin &#8212; Extract PS/WMF/TIFF sections from DOS EPS binary files </p>
 <h2>VERSION</h2>
 <p> 2012-03-22 v1.2</p>
 <h2>SYNOPSIS</h2>

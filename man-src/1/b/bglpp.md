@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bglpp/"
 description: "bglpp – a Scheme Pretty Printer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bglpp &#8211; a Scheme Pretty Printer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bglpp</code> [ options ] <i>sourcefile</i> </p>
 <h2>DESCRIPTION</h2>

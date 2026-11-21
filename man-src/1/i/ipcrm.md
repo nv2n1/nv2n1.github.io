@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ipcrm/"
 description: "ipcrm – remove certain IPC resources"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipcrm &#8211; remove certain IPC resources </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipcrm</code> [options] </p>
 <p> <code>ipcrm</code> [<code>shm</code>|<code>msg</code>|<code>sem</code>] <i>ID</i> &#8230;</p>

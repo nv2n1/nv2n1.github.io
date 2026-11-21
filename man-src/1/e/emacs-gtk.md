@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-emacs-gtk/"
 description: "emacs – GNU project Emacs editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> emacs &#8211; GNU project Emacs editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>emacs</code> [ <i>command-line switches</i> ] [ <i>files &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>

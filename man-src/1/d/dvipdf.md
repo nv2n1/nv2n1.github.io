@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvipdf/"
 description: "dvipdf – Convert TeX DVI file to PDF using ghostscript and dvips"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvipdf &#8211; Convert TeX DVI file to PDF using ghostscript and dvips </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvipdf</code> [ <i>options</i> ] <i>input.dvi</i> [ <i>output.pdf</i> ] &#8230;</p>
 <h2>DESCRIPTION</h2>

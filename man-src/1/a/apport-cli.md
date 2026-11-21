@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-apport-cli/"
 description: "apport-cli, apport-gtk, apport-kde – Apport user interfaces for reporting problems"
 ---
 
-<h2 class="name">NAME</h2>
-<p> apport-cli, apport-gtk, apport-kde &#8211; Apport user interfaces for reporting problems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apport-cli</code> </p>
 <p> <code>apport-cli </code> [ <code>&#8211;save </code><i>file</i> ] <i>symptom </i>|<i> pid </i>|<i> package </i>|<i> program path </i>|<i> .apport/.crash file</i> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-im-launch/"
 description: "im-launch – launch input method and execute session program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> im-launch &#8211; launch input method and execute session program </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>im-launch </code><i>SESSION-PROGRAM</i></dt>

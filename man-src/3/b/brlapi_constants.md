@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-brlapi_constants/"
 description: "brlapi_constants.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> brlapi_constants.h &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Defines</h3>
 <p> #define <code>BRLAPI_KEY_CMD_NOOP</code> (BRLAPI_KEY_CMD(0) + 0) </p>

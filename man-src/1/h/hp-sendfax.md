@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hp-sendfax/"
 description: "hp-sendfax – PC Sendfax Utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hp-sendfax &#8211; PC Sendfax Utility </p>
 <h2>DESCRIPTION</h2>
 <p> PC send fax for HPLIP supported multifunction printers.</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chetri2x/"
 description: "chetri2x.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chetri2x.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetri2x</code> (UPLO, N, A, LDA, IPIV, WORK, NB, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_mgm/"
 description: "ndb_mgm – the MySQL Cluster management client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_mgm &#8211; the MySQL Cluster management client </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_mgm </code><i>options</i></dt></dl>

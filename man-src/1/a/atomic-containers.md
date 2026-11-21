@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-containers/"
 description: "atomic-containers – operations on containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-containers &#8211; operations on containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic containers COMMAND [OPTIONS] [CONTAINERS&#8230;]</code> </p>
 <p> atomic containers allows the user to view and operate on containers </p>

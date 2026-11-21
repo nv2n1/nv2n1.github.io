@@ -6,8 +6,6 @@ letter: "f"
 url: "/docs/linux/man/1-fig2dev/"
 description: "fig2dev – translates Fig code to various graphics languages"
 ---
-<h2 class="name">NAME</h2>
-<p> fig2dev - translates Fig code to various graphics languages  </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>fig2dev</code> [<code>-L</code><i>language</i>] [<code>-m</code><i>mag</i>] [<code>-s</code><i>fsize</i>] [<code>-Z</code><i>maxdimension</i>] [<code>-D</code><i>+/-rangelist</i> [<code>-K</code>]] [<i>other options</i>] [<i>fig-file</i> [<i>out-file</i>]] </dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-checkmk/"
 description: "checkmk – Awk script for generating C unit tests for use with the Check unit testing framework."
 ---
 
-<h2 class="name">NAME</h2>
-<p> checkmk &#8211; Awk script for generating C unit tests for use with the Check unit testing framework. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>checkmk</code> [ <code>clean_mode=1</code> ] [ <i>input-file</i> ] </p>
 <h2>DESCRIPTION</h2>

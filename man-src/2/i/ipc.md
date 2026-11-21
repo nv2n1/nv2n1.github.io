@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-ipc/"
 description: "ipc – System V IPC system calls"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipc &#8211; System V IPC system calls </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 int ipc(unsigned int call, int first, int second, int third,

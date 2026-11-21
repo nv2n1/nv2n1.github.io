@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bsd_signal/"
 description: "bsd_signal – signal handling with BSD semantics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bsd_signal &#8211; signal handling with BSD semantics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>typedef void (*sighandler_t)(int);</code> </p>

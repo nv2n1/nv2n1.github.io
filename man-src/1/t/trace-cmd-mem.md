@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-mem/"
 description: "trace-cmd-mem – show memory usage of certain kmem events"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-mem &#8211; show memory usage of certain kmem events </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd mem</code> [<i>OPTIONS</i>][<i>input-file</i>]</p>
 <h2>DESCRIPTION</h2>

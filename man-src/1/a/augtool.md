@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-augtool/"
 description: "augtool – inspect and modify configuration files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> augtool &#8211; inspect and modify configuration files </p>
 <h2>SYNOPSIS</h2>
 <p> augtool [<font SIZE="-1">OPTIONS</font>] [<font SIZE="-1">COMMAND</font>]</p>
 <h2>DESCRIPTION</h2>

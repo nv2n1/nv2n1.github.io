@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlauditadmin/"
 description: "mysqlauditadmin – Maintain the audit log"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlauditadmin &#8211; Maintain the audit log </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlauditadmin [</code><i>OPTIONS</i><code>]&#8230; </code><code>mysqlauditadmin [</code><i>OPTIONS</i><code>]&#8230; [</code><i>COMMAND</i><code>]</code><code>mysqlauditadmin l=</code><i>user:pass [at] host:port</i><code> [</code><i>OPTIONS</i><code>]&#8230; [</code><i>COMMAND</i><code>[&#8211;value=</code><i>VALUE</i><code>]]</code><code>mysqlauditadmin &#8211;file-stats &#8211;audit-log-name=</code><i>FULL_PATH</i><code>mysqlauditadmin copy &#8211;audit-log-name=</code><i>FULL_PATH</i><code> &#8211;copy-to=</code><i>DESTINATION</i><code> [&#8211;remote-login=</code><i>user:host</i><code>]</code></dt></dl>

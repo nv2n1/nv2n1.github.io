@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-mail/"
 description: "stg-mail – Send a patch or series of patches by e-mail"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-mail &#8211; Send a patch or series of patches by e-mail </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg mail[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]

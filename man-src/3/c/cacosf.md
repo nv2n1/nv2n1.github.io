@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cacosf/"
 description: "cacos, cacosf, cacosl – complex arc cosine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cacos, cacosf, cacosl &#8211; complex arc cosine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex cacos(double complex </code><i>z</i><code>);</code><br />

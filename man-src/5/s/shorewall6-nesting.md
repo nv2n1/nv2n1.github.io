@@ -8,8 +8,6 @@ url: "/docs/linux/man/5-shorewall6-nesting/"
 
 
  </p>
-<h2 class="name">NAME</h2>
-<p> nesting &#8211; shorewall6 Nested Zones </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><i>child-zone</i>[:<i>parent-zone</i>[,<i>parent-zone</i>]...] </dt>

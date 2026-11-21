@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rabbitmq-server/"
 description: "rabbitmq-server – start RabbitMQ AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rabbitmq-server &#8211; start RabbitMQ AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rabbitmq-server</code> [-detached]</dt></dl>

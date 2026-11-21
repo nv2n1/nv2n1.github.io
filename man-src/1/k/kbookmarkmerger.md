@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kbookmarkmerger/"
 description: "kbookmarkmerger – A program for merging a given set of bookmarks into the user’s list of bookmarks."
 ---
 
-<h2 class="name">NAME</h2>
-<p> kbookmarkmerger &#8211; A program for merging a given set of bookmarks into the user&#8217;s list of bookmarks. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kbookmarkmerger</code> [Qt Options&#8230;] [KDE Options&#8230;] {directory}</dt></dl>

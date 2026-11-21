@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasv2/"
 description: "dlasv2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasv2</code> (F, G, H, SSMIN, SSMAX, SNR, CSR, SNL, CSL)<br />

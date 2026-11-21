@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-faac/"
 description: "faac – open source MPEG-4 and MPEG-2 AAC encoder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> faac &#8211; open source MPEG-4 and MPEG-2 AAC encoder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>faac</code> [<i>options</i>] [-o&nbsp;<wbr><i>outfile</i>] <i>infiles</i> &#8230; </p>
 <p> &lt;<i>infiles</i>&gt; and/or &lt;<i>outfile</i>&gt; can be &quot;-&quot;, which means stdin/stdout. </p>

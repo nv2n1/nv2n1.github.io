@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grid-matching/"
 description: "grid-matching – Executes occupancy grid matching techniques"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grid-matching &#8211; Executes occupancy grid matching techniques </p>
 <h2>SYNOPSIS</h2>
 <p> grid-matching &#8211;match &#8211;map1=<i>grid1.simplemap</i> &#8211;map2=<i>grid1.simplemap</i> [<i>options</i>] grid-matching &#8211;detect-test &#8211;map1=<i>grid1.simplemap</i> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

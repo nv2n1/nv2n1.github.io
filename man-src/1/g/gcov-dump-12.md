@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcov-dump-12/"
 description: "gcov-dump – offline gcda and gcno profile dump tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcov-dump &#8211; offline gcda and gcno profile dump tool </p>
 <h2>SYNOPSIS</h2>
 <p> gcov-dump [<code>-v</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>&#8211;help</code>]<br />

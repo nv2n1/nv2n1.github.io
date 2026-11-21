@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-shmop/"
 description: "shmat, shmdt – System V shared memory operations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shmat, shmdt &#8211; System V shared memory operations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/shm.h&gt;

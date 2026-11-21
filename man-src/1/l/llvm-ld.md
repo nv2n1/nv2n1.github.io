@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-ld/"
 description: "llvm-ld – LLVM linker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-ld &#8211; LLVM linker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-ld</code> &lt;options&gt; &lt;files&gt;</p>
 <h2>DESCRIPTION</h2>

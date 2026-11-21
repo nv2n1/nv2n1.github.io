@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-remote-ext/"
 description: "git-remote-ext – Bridge smart transport to external command."
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-remote-ext &#8211; Bridge smart transport to external command. </p>
 <h2>SYNOPSIS</h2>
 <pre>
 git remote add &lt;nick&gt; &quot;ext::&lt;command&gt;[ &lt;arguments&gt;...]&quot;

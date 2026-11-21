@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-merge-file/"
 description: "git-merge-file – Run a three-way file merge"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-merge-file &#8211; Run a three-way file merge </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git merge - file[-L&lt;current - name&gt;[-L&lt;base - name&gt;[-L&lt;other - name&gt;]]]

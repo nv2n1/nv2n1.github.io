@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ogr2ogr/"
 description: "ogr2ogr – ogr2ogr converts simple features data between file formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ogr2ogr &#8211; ogr2ogr converts simple features data between file formats </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 Usage : ogr2ogr[--help - general][-skipfailures][-append][-update]

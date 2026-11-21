@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-i686-w64-mingw32-nlmconv/"
 description: "nlmconv – converts object code into an NLM."
 ---
 
-<h2 class="name">NAME</h2>
-<p> nlmconv &#8211; converts object code into an NLM. </p>
 <h2>SYNOPSIS</h2>
 <p> nlmconv [<code>-I</code> <i>bfdname</i>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;output-target=</code><i>bfdname</i>]<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-new/"
 description: "stg-new – Create a new, empty patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-new &#8211; Create a new, empty patch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg new[options][--][&lt;name&gt;]

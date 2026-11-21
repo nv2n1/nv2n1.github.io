@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_set_thread_cpubind/"
 description: "hwlocality_cpubinding – CPU binding"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_cpubinding &#8211; CPU binding </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_cpubind_flags_t</code> { <code>HWLOC_CPUBIND_PROCESS</code>, <code>HWLOC_CPUBIND_THREAD</code>, <code>HWLOC_CPUBIND_STRICT</code>, <code>HWLOC_CPUBIND_NOMEMBIND</code> } </p>
 <h3>Functions</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-supermin5/"
 description: "supermin – Tool for creating and building supermin appliances"
 ---
 
-<h2 class="name">NAME</h2>
-<p> supermin &#8211; Tool for creating and building supermin appliances </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 supermin-- prepare - o OUTPUTDIR PACKAGE[PACKAGE...] supermin-- build - o OUTPUTDIR - f chroot | ext2 INPUT[INPUT...]

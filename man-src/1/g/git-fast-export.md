@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-fast-export/"
 description: "git-fast-export – Git data exporter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-fast-export &#8211; Git data exporter </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git fast-export [&lt;options&gt;]</i> | <i>git fast-import</i>

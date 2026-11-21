@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgbtf2/"
 description: "dgbtf2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgbtf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />

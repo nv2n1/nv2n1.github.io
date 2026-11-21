@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlbug/"
 description: "mysqlbug – generate bug report"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlbug &#8211; generate bug report </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlbug</code></dt></dl>

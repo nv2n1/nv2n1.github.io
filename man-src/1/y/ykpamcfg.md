@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ykpamcfg/"
 description: "ykpamcfg – Manage user settings for the Yubico PAM module"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ykpamcfg &#8211; Manage user settings for the Yubico PAM module </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ykmapcfg</code> [-1 | -2] [-A] [-p] [-i] [-v] [-V] [-h]</p>
 <h2>OPTIONS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fluxstyle/"
 description: "fluxstyle – A comprehensive look at styles/themes for"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fluxstyle &#8211; A comprehensive look at styles/themes for </p>
 <p><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1).</p>
 <h2>SYNOPSIS</h2>
 <p> This document describes various options available for fluxbox styles. </p>

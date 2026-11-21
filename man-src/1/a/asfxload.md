@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-asfxload/"
 description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sfxload, asfxload &#8211; load a SoundFont file on the Emux WaveTable</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfxload</code> [<i>-options</i>]<i> fontfile</i> </p>
 <p> <code>asfxload</code> [<i>-options</i>]<i> fontfile</i> </p>

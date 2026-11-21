@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-mailinfo/"
 description: "git-mailinfo – Extracts patch and authorship from a single e-mail message"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-mailinfo &#8211; Extracts patch and authorship from a single e-mail message </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git mailinfo[-k | -b][-u | --encoding = &lt;encoding&gt; | -n]

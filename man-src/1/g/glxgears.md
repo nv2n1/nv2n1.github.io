@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glxgears/"
 description: "glxgears – “gears” demo for GLX"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glxgears &#8211; &#8220;gears&#8221; demo for GLX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glxgears</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

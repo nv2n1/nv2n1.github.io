@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libpnm/"
 description: "libpnm – libnetpbm functions to read and write PNM image files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libpnm &#8211; libnetpbm functions to read and write PNM image files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/pnm.h&gt;</code> </p>
 <p> <code>void pnm_init(</code> <code>int *</code><i>argcP</i><code>,</code> <code>char *</code><i>argv</i><code>[]</code> <code>);</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lp/"
 description: "lp – print files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lp &#8211; print files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lp</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-c</code> ] [ <code>-d </code><i>destination</i>[<code>/</code><i>instance</i>] ] [ <code>-h </code><i>hostname</i>[<code>:</code><i>port</i>] ] [ <code>-m</code> ] [ <code>-n</code> <i>num-copies</i> ] [ <code>-o </code><i>option</i>[<code>=</code><i>value</i>] ] [ <code>-q</code> <i>priority</i> ] [ <code>-s</code> ] [ <code>-t</code> <i>title</i> ] [ <code>-H</code> <i>handling</i> ] [ <code>-P</code> <i>page-list</i> ] [ <code>&#8212;</code> ] [ <i>file(s)</i> ]<br />
  <code>lp</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-c</code> ] [ <code>-h </code><i>hostname</i>[<code>:</code><i>port</i>] ] [ <code>-i</code> <i>job-id</i> ] [ <code>-n</code> <i>num-copies</i> ] [ <code>-o </code><i>option</i>[<code>=</code><i>value</i>] ] [ <code>-q</code> <i>priority</i> ] [ <code>-t</code> <i>title</i> ] [ <code>-H</code> <i>handling</i> ] [ <code>-P</code> <i>page-list</i> ]</p>

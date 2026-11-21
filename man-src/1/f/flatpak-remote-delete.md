@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-remote-delete/"
 description: "flatpak-remote-delete – Delete a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-remote-delete &#8211; Delete a remote repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-delete</code> [OPTION&#8230;] NAME</dt></dl>

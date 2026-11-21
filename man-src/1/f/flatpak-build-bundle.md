@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-build-bundle/"
 description: "flatpak-build-bundle – Create a single-file bundle from a local repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-build-bundle &#8211; Create a single-file bundle from a local repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-bundle</code> [OPTION&#8230;] LOCATION FILENAME NAME [BRANCH]</dt></dl>

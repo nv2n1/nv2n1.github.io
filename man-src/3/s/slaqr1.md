@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaqr1/"
 description: "slaqr1.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaqr1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqr1</code> (N, H, LDH, SR1, SI1, SR2, SI2, V)<br />

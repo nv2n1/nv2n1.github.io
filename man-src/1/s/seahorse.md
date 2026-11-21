@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-seahorse/"
 description: "seahorse – Passwords and Keys"
 ---
 
-<h2 class="name">NAME</h2>
-<p> seahorse &#8211; Passwords and Keys </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>seahorse</code> [OPTIONS&#8230;] [FILES&#8230;]</dt></dl>

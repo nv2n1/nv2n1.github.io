@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-html2ps/"
 description: "html2ps – convert HTML to PostScript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> html2ps &#8211; convert HTML to PostScript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>html2ps</code> [ <code>-2cdDFghHLnORtTuUv</code> ] [ <code>-b</code><i> URL</i> ] [ <code>-C</code><i> string</i> ] [ <code>-e</code><i> encoding</i> ] [ <code>-f</code><i> file[:file[:&#8230;]]</i> ] [ <code>-i</code><i> num</i> ] [ <code>-k</code><i> file</i> ] [ <code>-l</code><i> lang</i> ] [ <code>-m</code><i> num</i> ] [ <code>-M</code><i> num</i> ] [ <code>-N</code><i> num</i> ] [ <code>-o</code><i> file</i> ] [ <code>-r</code><i> path</i> ] [ <code>-s</code><i> num</i> ] [ <code>-S</code><i> string</i> ] [ <code>-W</code><i> string</i> ] [ <code>-x</code><i> num</i> ] [ <i>URL|file</i> ]</p>
 <h2>DESCRIPTION</h2>

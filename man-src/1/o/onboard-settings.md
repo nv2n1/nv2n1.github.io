@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-onboard-settings/"
 description: "onboard-settings – On-screen Keyboard (configuration dialog)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> onboard-settings &#8211; On-screen Keyboard (configuration dialog) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>onboard-settings</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-set_tid_address/"
 description: "set_tid_address – set pointer to thread ID"
 ---
 
-<h2 class="name">NAME</h2>
-<p> set_tid_address &#8211; set pointer to thread ID </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/unistd.h&gt;

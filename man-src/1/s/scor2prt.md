@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-scor2prt/"
 description: "scor2prt – source-parts separation program for pmx, a MusiXTeX preprocessor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> scor2prt &#8211; source-parts separation program for pmx, a MusiXTeX preprocessor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scor2prt</code> basename<i>[.pmx]</i></p>
 <h2>DESCRIPTION</h2>

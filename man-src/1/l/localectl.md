@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-localectl/"
 description: "localectl – Control the system locale and keyboard layout settings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> localectl &#8211; Control the system locale and keyboard layout settings </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>localectl</code> [OPTIONS&#8230;] {COMMAND}</dt></dl>

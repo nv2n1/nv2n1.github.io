@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qping/"
 description: "qping – check application status of xxQS_NAMExx daemons."
 ---
 
-<h2 class="name">NAME</h2>
-<p> qping &#8211; check application status of xxQS_NAMExx daemons.</p>
 <h2>SYNTAX</h2>
 <p> <code>qping</code> [<code>-help</code>] [<code>-noalias</code>] [<code>-ssl</code>|<code>-tcp</code>] [[[<code>-i</code> <i>interval</i>] [<code>-info</code>] [<code>-f</code>]] | [[ <code>-dump_tag</code> <i>tag</i> [<i>param</i>]] [<code>-dump</code>] [<code>-nonewline</code>]]] <i>host port name id</i> </p>
 <h2>DESCRIPTION</h2>

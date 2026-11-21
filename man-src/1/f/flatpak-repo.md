@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-repo/"
 description: "flatpak-repo – Show information about a local repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-repo &#8211; Show information about a local repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak repo</code> [OPTION&#8230;] LOCATION</dt></dl>

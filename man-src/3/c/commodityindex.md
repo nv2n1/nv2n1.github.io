@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-commodityindex/"
 description: "ql/experimental/commodities/commodityindex.hpp – Commodity index."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/experimental/commodities/commodityindex.hpp &#8211; Commodity index. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/commodities/commoditycurve.hpp&gt;<br />
  #include &lt;ql/indexes/indexmanager.hpp&gt; </p>

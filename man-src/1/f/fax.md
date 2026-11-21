@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fax/"
 description: "fax – make, send, receive, view or print a fax"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fax &#8211; make, send, receive, view or print a fax </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fax</code> <code>help</code> </p>
 <p> <code>fax</code> <code>make</code> [<code>-l</code>] <i>file</i> </p>

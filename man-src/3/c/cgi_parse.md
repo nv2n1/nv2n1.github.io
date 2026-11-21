@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_parse/"
 description: "cgi_parse – Parse incoming CGI data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_parse &#8211; Parse incoming CGI data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

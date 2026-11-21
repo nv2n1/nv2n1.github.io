@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamlmklib/"
 description: "ocamlmklib – generate libraries with mixed C / Caml code."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamlmklib &#8211; generate libraries with mixed C / Caml code. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocalmklib</code> [<i>options</i>]<i> files</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-f2py/"
 description: "f2py – Fortran to Python interface generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> f2py &#8211; Fortran to Python interface generator </p>
 <h2>SYNOPSIS</h2>
 <p> (1) To construct extension module sources: </p>
 <p> <code>f2py</code> [&lt;options&gt;] &lt;fortran files&gt; [[[only:]||[skip:]] &lt;fortran functions&gt; ] [: &lt;fortran files&gt; &#8230;] </p>

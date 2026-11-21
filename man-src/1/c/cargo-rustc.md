@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-rustc/"
 description: "cargo-rustc – Compile a package and all of its dependencies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-rustc &#8211; Compile a package and all of its dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> cargo rustc [OPTIONS] [&#8211;] [&lt;OPTS&gt;&#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wavpack/"
 description: "wavpack – encode wav files to wavpack"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wavpack &#8211; encode wav files to wavpack </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>wavpack</code> [<i>-options</i>] <i>INFILE</i>&#8230; [<code>-o&nbsp;<wbr></code><i>OUTFILE</i>]</dt></dl>

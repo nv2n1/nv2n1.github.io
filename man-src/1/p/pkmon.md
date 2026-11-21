@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pkmon/"
 description: "pkmon – PackageKit console client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pkmon &#8211; PackageKit console client </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkmon</code> [<code>search</code>] [<code>debug install</code>] [<code>remove</code>]</dt></dl>

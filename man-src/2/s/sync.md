@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sync/"
 description: "sync, syncfs – commit filesystem caches to disk"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sync, syncfs &#8211; commit filesystem caches to disk </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>void sync(void);</code> </p>

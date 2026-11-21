@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-emacsclient/"
 description: "emacsclient – tells a running Emacs to visit a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> emacsclient &#8211; tells a running Emacs to visit a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>emacsclient</code> <i>[options] files &#8230;</i></p>
 <h2>DESCRIPTION</h2>

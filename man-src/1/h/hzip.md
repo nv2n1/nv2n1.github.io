@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hzip/"
 description: "hunzip – compress and encrypt dictionary files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hunzip &#8211; compress and encrypt dictionary files </p>
 <h2>SYNOPSIS</h2>
 <p> hzip [-h] [-P password] [file(s)]</p>
 <h2>DESCRIPTION</h2>

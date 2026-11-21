@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xsetpointer/"
 description: "xsetpointer – set an X Input device as the main pointer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xsetpointer &#8211; set an X Input device as the main pointer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsetpointer -l</code> | <i>device-name</i></p>
 <h2>DESCRIPTION</h2>

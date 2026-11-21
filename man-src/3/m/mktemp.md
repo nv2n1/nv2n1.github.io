@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mktemp/"
 description: "mktemp – make a unique temporary filename"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mktemp &#8211; make a unique temporary filename </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

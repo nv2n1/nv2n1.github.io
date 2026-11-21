@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-on_ac_power/"
 description: "on_ac_power – test whether computer is running on AC power"
 ---
 
-<h2 class="name">NAME</h2>
-<p> on_ac_power &#8211; test whether computer is running on AC power </p>
 <h2>SYNOPSIS</h2>
 <p> <code>on_ac_power</code></p>
 <h2>DESCRIPTION</h2>

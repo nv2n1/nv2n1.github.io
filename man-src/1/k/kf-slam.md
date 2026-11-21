@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kf-slam/"
 description: "kf-slam – SLAM method using Kalman filtering"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kf-slam &#8211; SLAM method using Kalman filtering </p>
 <h2>SYNOPSIS</h2>
 <p> kf-slam <i>config_file.ini</i></p>
 <h2>DESCRIPTION</h2>

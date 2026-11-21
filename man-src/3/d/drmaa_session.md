@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-drmaa_session/"
 description: "drmaa_init, drmaa_exit – Start/finish xxQS_NAMExx DRMAA session"
 ---
 
-<h2 class="name">NAME</h2>
-<p> drmaa_init, drmaa_exit &#8211; Start/finish xxQS_NAMExx DRMAA session</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>

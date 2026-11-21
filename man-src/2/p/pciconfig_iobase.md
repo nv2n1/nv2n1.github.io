@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-pciconfig_iobase/"
 description: "pciconfig_read, pciconfig_write, pciconfig_iobase – pci device information handling"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pciconfig_read, pciconfig_write, pciconfig_iobase &#8211; pci device information handling </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;pci.h&gt;

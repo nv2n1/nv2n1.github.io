@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msexpand/"
 description: "msexpand – decompress data compressed using"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msexpand &#8211; decompress data compressed using </p>
 <p> <a href="/docs/linux/man/1-mscompress/">mscompress</a>(1) or COMPRESS.EXE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>msexpand</code> [ <code>-h</code> ]<br />

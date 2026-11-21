@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ansible-pull/"
 description: "ansible-pull – pull playbooks from VCS server and run them using this machine as the target."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ansible-pull &#8211; pull playbooks from VCS server and run them using this machine as the target. </p>
 <h2>SYNOPSIS</h2>
 <p> ansible-pull -U URL [options] [ &lt;filename.yml&gt; ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lnst-pool-wizard/"
 description: "lnst-pool-wizard – Linux Network Stack Test Pool Wizard"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lnst-pool-wizard &#8211; Linux Network Stack Test Pool Wizard </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lnst-pool-wizard</code> [<code>-h</code>] [<i>MODE</i>] [<code>-p </code><i>pool_dir</i>] [<i>HOSTNAME[:PORT]</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

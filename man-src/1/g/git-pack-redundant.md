@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-pack-redundant/"
 description: "git-pack-redundant – Find redundant pack files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-pack-redundant &#8211; Find redundant pack files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git pack - redundant[--verbose][--alt - odb]&lt;--all |.pack filename...&gt;

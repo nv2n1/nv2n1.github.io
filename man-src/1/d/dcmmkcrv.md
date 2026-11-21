@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmmkcrv/"
 description: "dcmmkcrv – Add 2D curve data to image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmmkcrv &#8211; Add 2D curve data to image </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmmkcrv [options] dcmfile-in curvedata-in dcmfile-out

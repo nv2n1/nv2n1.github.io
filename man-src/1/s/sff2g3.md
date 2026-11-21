@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sff2g3/"
 description: "sff2g3 – convert CAPI SFF fax files into G3 fax files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sff2g3 &#8211; convert CAPI SFF fax files into G3 fax files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sff2g3</code> [<code>-r</code>] [<code>-d</code>] [<code>-v</code>] <code>input.SFF output.%03d.g3 </code></p>
 <h2>DESCRIPTION</h2>

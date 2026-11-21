@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffmpeg-protocols/"
 description: "ffmpeg-protocols – FFmpeg protocols"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffmpeg-protocols &#8211; FFmpeg protocols </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes the input and output protocols provided by the libavformat library.</p>
 <h2>PROTOCOL OPTIONS</h2>

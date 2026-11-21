@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ilazlr/"
 description: "ilazlr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ilazlr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilazlr</code> (M, N, A, LDA)<br />

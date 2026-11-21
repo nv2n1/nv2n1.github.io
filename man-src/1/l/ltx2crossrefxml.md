@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ltx2crossrefxml/"
 description: "ltx2crossrefxml.pl – create XML files for submitting to crossref.org"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ltx2crossrefxml.pl &#8211; create XML files for submitting to crossref.org </p>
 <h2>SYNOPSIS</h2>
 <p> ltx2crossrefxml [<code>-c</code> <i>config_file</i>] [<code>-o</code> <i>output_file</i>] [<code>-input-is-xml</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>latex_file1</i>&nbsp;<i>latex_file2</i>&nbsp;&#8230;</p>

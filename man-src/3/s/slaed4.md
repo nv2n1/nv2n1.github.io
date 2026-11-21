@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaed4/"
 description: "slaed4.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaed4.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed4</code> (N, I, D, Z, DELTA, RHO, DLAM, INFO)<br />

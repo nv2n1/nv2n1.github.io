@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glilypond/"
 description: "glilypond – integrate lilypond parts into groff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glilypond &#8211; integrate lilypond parts into groff </p>
 <h2>SYNOPSIS</h2>
 <p> [{<code>&#8211;ly2eps</code>|<code>&#8211;pdf2eps</code>}] [<code>-e</code> <i>directory</i>] [ <code>-k</code> ] [<code>-o</code> <i>output-file</i>] [<code>-p</code> <i>filename-prefix</i>] [<code>-t</code> <i>tdir</i>] [{<code>-v</code>|<code>-V</code>}] [ <code>&#8211;</code> ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] [{<code>&#8211;ly2eps</code>|<code>&#8211;pdf2eps</code>}] [<code>&#8211;eps_dir</code> <i>directory</i>] [ <code>&#8211;keep_all</code> ] [<code>&#8211;output</code> <i>output-file</i>] [<code>&#8211;prefix</code> <i>filename-prefix</i>] [<code>&#8211;temp_dir</code> <i>tdir</i>] [ <code>&#8211;verbose</code> ] [ <code>&#8211;</code> ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-?</code> <code>-h</code> <code>&#8211;help</code> <code>&#8211;usage</code> <code>-l</code> <code>&#8211;license</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-atalk_aton/"
 description: "atalk_aton – AppleTalk address parsing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atalk_aton &#8211; AppleTalk address parsing </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netatalk/at.h&gt;

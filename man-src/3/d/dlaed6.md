@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaed6/"
 description: "dlaed6.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaed6.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaed6</code> (KNITER, ORGATI, RHO, D, Z, FINIT, TAU, INFO)<br />

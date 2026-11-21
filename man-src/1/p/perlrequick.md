@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlrequick/"
 description: "perlrequick – Perl regular expressions quick start"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlrequick &#8211; Perl regular expressions quick start </p>
 <h2>DESCRIPTION</h2>
 <p> This page covers the very basics of understanding, creating and using regular expressions (&#8216;regexes&#8217;) in Perl.</p>
 <h2>The Guide</h2>

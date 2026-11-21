@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sprof/"
 description: "sprof – read and display shared object profiling data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sprof &#8211; read and display shared object profiling data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 sprof[option]... shared - object - path[profile - data - path]

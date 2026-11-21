@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-izmax1/"
 description: "izmax1.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> izmax1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>izmax1</code> (N, CX, INCX)<br />

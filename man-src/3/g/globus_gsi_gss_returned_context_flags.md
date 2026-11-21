@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_gss_returned_context_flags/"
 description: "Return Flags –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Return Flags &#8211; </p>
 <p> Return Flags.</p>
 <h3>Macros</h3>
 <p> #define <code>GSS_C_GLOBUS_RECEIVED_LIMITED_PROXY_FLAG</code><br />

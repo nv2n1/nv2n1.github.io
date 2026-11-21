@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cs_parse_file/"
 description: "cs_parse_file – parse a CS template file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cs_parse_file &#8211; parse a CS template file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;

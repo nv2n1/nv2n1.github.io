@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtojbig/"
 description: "pnmtojbig – PNM to JBIG file converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtojbig &#8211; PNM to JBIG file converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtojbig</code> </p>
 <p> [<i>options</i>] [<i>input-file</i> [<i>output-file</i>]] </p>

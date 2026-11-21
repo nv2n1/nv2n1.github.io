@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhbuild/"
 description: "mhbuild – translate MIME composition draft"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhbuild &#8211; translate MIME composition draft </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhbuild</code> <i>file</i> [<code>-auto</code> | <code>-noauto</code>] [<code>-list</code> | <code>-nolist</code>] [<code>-realsize</code> | <code>-norealsize</code>] [<code>-headers</code> | <code>-noheaders</code>] [<code>-directives</code> | <code>-nodirectives</code>] [<code>-rfc934mode</code> | <code>-norfc934mode</code>] [<code>-contentid</code> | <code>-nocontentid</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-disposition</code> | <code>-nodisposition</code>] [<code>-check</code> | <code>-nocheck</code>] [<code>-headerencoding</code> <i>encoding-algorithm</i> | <code>-autoheaderencoding</code>] [<code>-maxunencoded</code> <i>line-length</i>] [<code>-dist</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lav2wav/"
 description: "lav2wav – Extract the audio out of MJPEG container files to stdout"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lav2wav &#8211; Extract the audio out of MJPEG container files to stdout</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lav2wav</code> [<code>-s</code> <i>num</i>] [<code>-c</code> <i>num</i>] [<code>-v</code> <i>num</i>] [<code>-I</code>] [<code>-R</code>] [<code>-r</code> <i>samplerate,</i> <i>bitesize,</i> <i>channels</i>] <i>lavfile1 </i>[<i>lavfile2 </i>&#8230;<i> lavfileN</i>] </p>
 <h2>DESCRIPTION</h2>

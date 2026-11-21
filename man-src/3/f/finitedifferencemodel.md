@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-finitedifferencemodel/"
 description: "ql/methods/finitedifferences/finitedifferencemodel.hpp – generic finite difference model"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/methods/finitedifferences/finitedifferencemodel.hpp &#8211; generic finite difference model </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/stepcondition.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cg_annotate/"
 description: "cg_annotate – post-processing tool for Cachegrind"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cg_annotate &#8211; post-processing tool for Cachegrind </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cg_annotate</code> [<i>options</i>] <i>cachegrind-out-file</i> [<i>source-files</i>&#8230;]</dt></dl>

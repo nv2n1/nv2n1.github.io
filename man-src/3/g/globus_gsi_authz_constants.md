@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_authz_constants/"
 description: "GSI Credential Constants –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GSI Credential Constants &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gsi_authz_error_t</code> { <code>GLOBUS_GSI_AUTHZ_ERROR_SUCCESS</code> = 0, <code>GLOBUS_GSI_AUTHZ_ERROR_ERRNO</code> = 1, <code>GLOBUS_GSI_AUTHZ_ERROR_BAD_PARAMETER</code> = 2, <code>GLOBUS_GSI_AUTHZ_ERROR_CALLOUT</code> = 3 } </p>
 <h2>Detailed Description</h2>

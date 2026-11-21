@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-derdump/"
 description: "derdump_ – Dumps C-sequence strings from a DER encoded certificate file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> derdump_ &#8211; Dumps C-sequence strings from a DER encoded certificate file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>derdump</code> [<code>-r</code>] [<code>-i&nbsp;<wbr></code><i>input-file</i>] [<code>-o&nbsp;<wbr></code><i>output-file</i>]</dt></dl>

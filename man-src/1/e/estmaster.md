@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-estmaster/"
 description: "estmaster – master process of node servers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> estmaster &#8211; master process of node servers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>estmaster init [-ex] rootdir</code> </p>
 <p> <code>estmaster start [-bg] [-ro] [-st] rootdir</code> </p>

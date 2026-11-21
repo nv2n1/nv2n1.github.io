@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rls_client_connection/"
 description: "Connection Management –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Connection Management &#8211; </p>
 <p> Functions to open and close connections to an RLS server.</p>
 <h3>Defines</h3>
 <p> #define <code>GLOBUS_RLS_URL_SCHEME</code> &#8216;rls&#8217; </p>

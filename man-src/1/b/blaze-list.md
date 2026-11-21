@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-blaze-list/"
 description: "blaze-list – browse the content of the BlazeBlogger repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> blaze-list &#8211; browse the content of the BlazeBlogger repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blaze-list</code> [<code>-cpqrsCPSV</code>] [<code>-b</code> <i>directory</i>] [<code>-I</code> <i>id</i>] [<code>-a</code> <i>author</i>] [<code>-t</code> <i>title</i>] [<code>-T</code> <i>tag</i>] [<code>-d</code> <i>day</i>] [<code>-m</code> <i>month</i>] [<code>-y</code> <i>year</i>] [<code>-n</code> <i>number</i>] </p>
 <p> <code>blaze-list</code> <code>-h</code> | <code>-v</code></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-rebase/"
 description: "git-rebase – Reapply commits on top of another base tip"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-rebase &#8211; Reapply commits on top of another base tip </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git rebase[-i | --interactive][&lt;options&gt;][--exec&lt;cmd&gt;]

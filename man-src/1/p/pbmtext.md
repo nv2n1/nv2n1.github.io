@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtext/"
 description: "pbmtext – render text into a bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtext &#8211; render text into a bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtext</code> [<code>-font</code> <i>fontfile</i>] [<code>-builtin</code> <i>fontname</i>] [<code>-space</code> <i>pixels</i>] [<code>-lspace</code> <i>pixels</i>] [<i>text</i>] </p>
 <h2>DESCRIPTION</h2>

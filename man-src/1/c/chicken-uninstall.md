@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chicken-uninstall/"
 description: "chicken-uninstall – uninstall extension library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chicken-uninstall &#8211; uninstall extension library</p>
 <h2>SYNOPSIS</h2>
 <p> chicken-uninstall [OPTION | PATTERN] &#8230; </p>
 <h2>DESCRIPTION</h2>

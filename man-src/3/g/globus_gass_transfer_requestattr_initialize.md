@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_requestattr_initialize/"
 description: "Implementing Request Attributes –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Implementing Request Attributes &#8211; </p>
 <h3>Functions</h3>
 <p> globus_object_t * <code>globus_gass_transfer_requestattr_initialize</code> (globus_object_t *obj, char *proxy_url, globus_size_t block_size, globus_gass_transfer_file_mode_t file_mode, globus_bool_t connection_reuse) </p>
 <p> globus_object_t * <code>globus_gass_transfer_socket_requestattr_initialize</code> (globus_object_t *obj, char *proxy_url, globus_size_t block_size, globus_gass_transfer_file_mode_t file_mode, globus_bool_t connection_reuse, int sndbuf, int rcvbuf, globus_bool_t nodelay) </p>

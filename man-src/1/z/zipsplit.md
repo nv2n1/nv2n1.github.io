@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zipsplit/"
 description: "zipsplit – split a zipfile into smaller zipfiles"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zipsplit &#8211; split a zipfile into smaller zipfiles</p>
 <h2>SYNOPSIS</h2>
 <p> <i>zipsplit</i> [<code>-t</code>] [<code>-i</code>] [<code>-p</code>] [<code>-s</code>] [<code>-n size</code>] [<code>-r room</code>] [<code>-b path</code>] [<code>-h</code>] [<code>-v</code>] [<code>-L</code>] zipfile </p>
 <h2>ARGUMENTS</h2>

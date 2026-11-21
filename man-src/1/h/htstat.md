@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htstat/"
 description: "htstat – returns statistics on the document and word databases, much like the -s option to htdig or htmerge."
 ---
 
-<h2 class="name">NAME</h2>
-<p> htstat &#8211; returns statistics on the document and word databases, much like the -s option to htdig or htmerge. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htstat</code> <i>[-v][-a][-c configfile][-u]</i></p>
 <h2>DESCRIPTION</h2>

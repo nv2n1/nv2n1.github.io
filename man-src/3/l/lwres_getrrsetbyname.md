@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_getrrsetbyname/"
 description: "lwres_getrrsetbyname, lwres_freerrset – retrieve DNS records"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_getrrsetbyname, lwres_freerrset &#8211; retrieve DNS records </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;

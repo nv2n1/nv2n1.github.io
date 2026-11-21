@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cheese/"
 description: "cheese – tool to take pictures and videos from your webcam"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cheese &#8211; tool to take pictures and videos from your webcam </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cheese</code> [option&#8230;]</dt></dl>

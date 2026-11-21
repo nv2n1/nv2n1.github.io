@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xprop/"
 description: "xprop – property displayer for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xprop &#8211; property displayer for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xprop</code> [-help] [-grammar] [-id <i>id</i>] [-root] [-name <i>name</i>] [-frame] [-font <i>font</i>] [-display <i>display</i>] [-len <i>n</i>] [-notype] [-fs <i>file</i>] [-remove <i>property-name</i>] [-set <i>property-name</i> <i>value</i>] [-spy] [-version] [-f <i>atom</i> <i>format</i> [<i>dformat</i>]]* [<i>format</i> [<i>dformat</i>] <i>atom</i>]*</p>
 <h2>SUMMARY</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ogginfo/"
 description: "ogginfo – gives information about Ogg files, and does extensive validity checking"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ogginfo &#8211; gives information about Ogg files, and does extensive validity checking</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ogginfo</code> [ <code>-q</code> ] [ <code>-v</code> ] [ <code>-h</code> ] <i>file1.ogg</i> <code>&#8230;</code> <i>fileN.ogg</i> </p>
 <h2>DESCRIPTION</h2>

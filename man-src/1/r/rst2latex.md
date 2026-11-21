@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rst2latex/"
 description: "rst2latex – convert reST documents to LaTeX"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rst2latex &#8211; convert reST documents to LaTeX </p>
 <h2>SYNOPSIS</h2>
 <p> rst2latex [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
 <h2>DESCRIPTION</h2>

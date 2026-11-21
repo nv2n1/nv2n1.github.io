@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-logout/"
 description: "docker-logout – Log out from a Docker registry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-logout &#8211; Log out from a Docker registry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker logout [SERVER]</code> </p>
 <h2>DESCRIPTION</h2>

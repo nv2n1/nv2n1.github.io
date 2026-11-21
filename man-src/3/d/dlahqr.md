@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlahqr/"
 description: "dlahqr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlahqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, INFO)<br />

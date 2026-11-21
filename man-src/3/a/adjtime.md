@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-adjtime/"
 description: "adjtime – correct the time to synchronize the system clock"
 ---
 
-<h2 class="name">NAME</h2>
-<p> adjtime &#8211; correct the time to synchronize the system clock </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/time.h&gt;

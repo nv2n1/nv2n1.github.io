@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-ask-password/"
 description: "systemd-ask-password – Query the user for a system password"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-ask-password &#8211; Query the user for a system password </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-ask-password </code><code>[OPTIONS&#8230;]</code><code>[MESSAGE]</code></dt></dl>

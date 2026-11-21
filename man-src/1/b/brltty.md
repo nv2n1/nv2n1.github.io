@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-brltty/"
 description: "brltty – refreshable braille display driver for Linux/Unix"
 ---
 
-<h2 class="name">NAME</h2>
-<p> brltty &#8211; refreshable braille display driver for Linux/Unix </p>
 <h2>SYNOPSIS</h2>
 <p> <code>brltty </code>[<i>option</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

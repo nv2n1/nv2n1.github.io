@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-exegesis-14/"
 description: "llvm-exegesis – LLVM Machine Instruction Benchmark"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-exegesis &#8211; LLVM Machine Instruction Benchmark </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-exegesis</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

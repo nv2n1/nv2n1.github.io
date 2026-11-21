@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_cpuset_from_glibc_sched_affinity/"
 description: "hwlocality_glibc_sched – Interoperability with glibc sched affinity"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_glibc_sched &#8211; Interoperability with glibc sched affinity </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_cpuset_to_glibc_sched_affinity</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> hwlocset, cpu_set_t *schedset, size_t schedsetsize) </p>
 <p> static int <code>hwloc_cpuset_from_glibc_sched_affinity</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_cpuset_t</code> hwlocset, const cpu_set_t *schedset, size_t schedsetsize) </p>

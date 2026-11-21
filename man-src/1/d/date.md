@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-date/"
 description: "date – print or set the system date and time"
 ---
 
-<h2 class="name">NAME</h2>
-<p> date &#8211; print or set the system date and time </p>
 <h2>SYNOPSIS</h2>
 <p> <code>date</code> [<i>,OPTION/</i>]&#8230; [<i>,+FORMAT/</i>]<br />
  <code>date</code> [<i>,-u|&#8211;utc|&#8211;universal/</i>] [<i>,MMDDhhmm/</i>[[<i>,CC/</i>]<i>,YY/</i>][<i>,.ss/</i>]]</p>

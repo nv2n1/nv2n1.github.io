@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vfyserv/"
 description: "vfyserv_ – TBD"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vfyserv_ &#8211; TBD </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>vfyserv</code></dt></dl>

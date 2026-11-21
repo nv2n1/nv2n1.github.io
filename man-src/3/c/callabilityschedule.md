@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-callabilityschedule/"
 description: "ql/instruments/callabilityschedule.hpp – Schedule of put/call dates."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/instruments/callabilityschedule.hpp &#8211; Schedule of put/call dates. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/event.hpp&gt;<br />
  #include &lt;ql/utilities/null.hpp&gt;<br />

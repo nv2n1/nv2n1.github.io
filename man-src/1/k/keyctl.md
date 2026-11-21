@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-keyctl/"
 description: "keyctl – key management facility control"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl &#8211; key management facility control </p>
 <h2>SYNOPSIS</h2>
 <p> <code>keyctl</code> &#8211;version<br />
  <code>keyctl</code> show [-x] [&lt;keyring&gt;]<br />

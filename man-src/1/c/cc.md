@@ -6,8 +6,6 @@ letter: "c"
 url: "/docs/linux/man/1-cc/"
 description: "gcc – GNU project C and C++ compiler"
 ---
-<h2 class="name">NAME</h2>
-<p> gcc - GNU project C and C++ compiler </p>
 <h2>SYNOPSIS</h2>
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>]&nbsp;[<code>-pg</code>]&nbsp;[<code>-O</code><i>level</i>] <br />

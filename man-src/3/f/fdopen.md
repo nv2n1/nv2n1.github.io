@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fdopen/"
 description: "fopen, fdopen, freopen – stream open functions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fopen, fdopen, freopen &#8211; stream open functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

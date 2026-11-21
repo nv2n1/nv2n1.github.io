@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ali/"
 description: "ali – list mail aliases"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ali &#8211; list mail aliases </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ali</code> [<code>-alias</code> <i>aliasfile</i>] [<code>-list</code> | <code>-nolist</code>] [<code>-user</code> | <code>-nouser</code>] [<code>-version</code>] [<code>-help</code>] [<i>aliases</i> &#8230;]</dt></dl>

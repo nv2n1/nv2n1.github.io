@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getcert-refresh/"
 description: "getcert"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getcert</p>
 <h2>SYNOPSIS</h2>
 <p> getcert refresh [options] </p>
 <h2>DESCRIPTION</h2>

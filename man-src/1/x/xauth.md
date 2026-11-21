@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xauth/"
 description: "xauth – X authority file utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xauth &#8211; X authority file utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xauth</code> [ <code>-f</code> <i>authfile</i> ] [ <code>-vqibn</code> ] [ <i>command arg &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>

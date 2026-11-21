@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffmpeg-codecs/"
 description: "ffmpeg-codecs – FFmpeg codecs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffmpeg-codecs &#8211; FFmpeg codecs </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes the codecs (decoders and encoders) provided by the libavcodec library.</p>
 <h2>CODEC OPTIONS</h2>

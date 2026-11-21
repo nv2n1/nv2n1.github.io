@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlunicode/"
 description: "perlunicode – Unicode support in Perl"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlunicode &#8211; Unicode support in Perl </p>
 <h2>DESCRIPTION</h2>
 <p> If you haven&#8217;t already, before reading this document, you should become familiar with both perlunitut and perluniintro. </p>
 <p> Unicode aims to <font SIZE="-1"><code>UNI</code></font>-fy the en-<font SIZE="-1"><code>CODE</code></font>-ings of all the world&#8217;s character sets into a single Standard. For quite a few of the various coding standards that existed when Unicode was first created, converting from each to Unicode essentially meant adding a constant to each code point in the original standard, and converting back meant just subtracting that same constant. For <font SIZE="-1">ASCII</font> and <font SIZE="-1">ISO-8859-1,</font> the constant is 0. For <font SIZE="-1">ISO-8859-5,</font> (Cyrillic) the constant is 864; for Hebrew (<font SIZE="-1">ISO-8859-8</font>), it&#8217;s 1488; Thai (<font SIZE="-1">ISO-8859-11</font>), 3424; and so forth. This made it easy to do the conversions, and facilitated the adoption of Unicode. </p>

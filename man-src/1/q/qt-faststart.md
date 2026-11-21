@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qt-faststart/"
 description: "qt-faststart – utility for Quicktime files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qt-faststart &#8211; utility for Quicktime files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qt-faststart</code> </p>
 <h2>DESCRIPTION</h2>

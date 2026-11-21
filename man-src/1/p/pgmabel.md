@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmabel/"
 description: "pgmabel – create cross section using Abel Integration for Deconvolution"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmabel &#8211; create cross section using Abel Integration for Deconvolution</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmabel</code> [<code>-help</code>] [<code>-axis</code> <i>axis</i>] [<code>-factor</code> <i>factor</i>] [<code>-pixsize</code> <i>pixsize</i>] [<code>-left</code> | <code>-right</code>] [<code>-verbose</code>] [<i>filespec</i>] </p>
 <h2>DESCRIPTION</h2>

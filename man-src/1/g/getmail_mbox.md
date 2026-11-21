@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getmail_mbox/"
 description: "getmail_mbox – read a message from stdin and deliver to a named mboxrd-format mbox file with fcntl-style locking."
 ---
 
-<h2 class="name">NAME</h2>
-<p> getmail_mbox &#8211; read a message from stdin and deliver to a named mboxrd-format mbox file with fcntl-style locking. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getmail_mbox</code> [<i>OPTION</i>] <i>PATH</i></p>
 <h2>DESCRIPTION</h2>

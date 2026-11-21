@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-user-dirs-update/"
 description: "xdg-user-dirs-update – Update XDG user dir configuration"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-user-dirs-update &#8211; Update XDG user dir configuration </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-user-dirs-update</code> [OPTION&#8230;] [&#8211;set&nbsp;<i>NAME</i>&nbsp;<i>PATH</i>&#8230;]</dt></dl>

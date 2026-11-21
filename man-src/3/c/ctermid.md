@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctermid/"
 description: "ctermid – get controlling terminal name"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctermid &#8211; get controlling terminal name </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

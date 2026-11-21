@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-basename/"
 description: "basename, dirname – parse pathname components"
 ---
 
-<h2 class="name">NAME</h2>
-<p> basename, dirname &#8211; parse pathname components </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libgen.h&gt;

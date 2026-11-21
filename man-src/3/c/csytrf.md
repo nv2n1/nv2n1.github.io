@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-csytrf/"
 description: "csytrf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> csytrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csytrf</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />

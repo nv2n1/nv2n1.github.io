@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctanl/"
 description: "ctan, ctanf, ctanl – complex tangent function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctan, ctanf, ctanl &#8211; complex tangent function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex ctan(double complex </code><i>z</i><code>);</code><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhmail/"
 description: "mhmail – send or read mail"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhmail &#8211; send or read mail </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhmail</code> [<code>-to</code>] addrs &#8230; [<code>-attach</code> <i>file</i>] [<code>-body</code> <i>text</i>] [<code>-cc</code> <i>addrs</i> &#8230;] [<code>-from</code> <i>addr</i>] [<code>-headerfield</code> <i>name:value</i>] [<code>-subject</code> <i>subject</i>] [<code>-resent</code>] [switches for <i>post</i> &#8230; | -profile [switches for <i>send</i> &#8230;]] [<code>-send</code> | <code>-nosend</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

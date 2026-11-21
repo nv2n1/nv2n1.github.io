@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-iproxy/"
 description: "iproxy – proxy that enables tcp service access to iPhone/iPod"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iproxy &#8211; proxy that enables tcp service access to iPhone/iPod </p>
 <h2>SYNOPSIS</h2>
 <p> <code>iproxy </code> [LOCAL_TCP_PORT] [DEVICE_TCP_PORT] </p>
 <h2>DESCRIPTION</h2>

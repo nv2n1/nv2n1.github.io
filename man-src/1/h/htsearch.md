@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htsearch/"
 description: "htsearch – create document index and word database for the ht://Dig search engine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> htsearch &#8211; create document index and word database for the ht://Dig search engine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htsearch</code> <i>[options] [query_string]</i></p>
 <h2>DESCRIPTION</h2>

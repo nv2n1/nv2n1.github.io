@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getresuid/"
 description: "getresuid, getresgid – get real, effective and saved user/group IDs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getresuid, getresgid &#8211; get real, effective and saved user/group IDs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
  <code>#include &lt;unistd.h&gt;</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-user/"
 description: "pki-user – Command-Line Interface for managing Certificate System users."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-user &#8211; Command-Line Interface for managing Certificate System users.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - user pki[CLI options]&lt;subsystem&gt; - user - find[command options] pki[CLI options]&lt;subsystem&gt; - user - show&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - add&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - mod&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - del&lt;user ID&gt;[command options]

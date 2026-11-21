@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-path/"
 description: "systemd-path – List and query system and user paths"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-path &#8211; List and query system and user paths </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-path</code> [OPTIONS&#8230;] [NAME&#8230;]</dt></dl>

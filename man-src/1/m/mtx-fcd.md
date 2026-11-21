@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtx-fcd/"
 description: "mtx-fcd – Fast Directory Change"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtx-fcd &#8211; Fast Directory Change </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script fcd [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

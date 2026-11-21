@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glite-lb-purge/"
 description: "glite-lb-purge – utility for removing inactive jobs from the L&B database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glite-lb-purge &#8211; utility for removing inactive jobs from the L&amp;B database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-purge</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

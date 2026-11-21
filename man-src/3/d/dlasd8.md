@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasd8/"
 description: "dlasd8.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasd8.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd8</code> (ICOMPQ, K, D, Z, VF, VL, DIFL, DIFR, LDDIFR, DSIGMA, WORK, INFO)<br />

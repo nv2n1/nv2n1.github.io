@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hcitool/"
 description: "hcitool – Configure Bluetooth connections"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hcitool &#8211; Configure Bluetooth connections </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hcitool</code> -h </p>
 <p> <code>hcitool</code> <i>COMMAND</i> &#8211;help </p>

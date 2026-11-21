@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sensible-browser/"
 description: "sensible-browser – sensible web browsing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sensible-browser &#8211; sensible web browsing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sensible-browser</code> url </p>
 <h2>DESCRIPTION</h2>

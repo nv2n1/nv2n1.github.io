@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcm-picker/"
 description: "gcm-picker – GNOME Color Manager Color Picker Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcm-picker &#8211; GNOME Color Manager Color Picker Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcm-picker</code> [ <code>&#8211;verbose</code> ] </p>
 <h2>DESCRIPTION</h2>

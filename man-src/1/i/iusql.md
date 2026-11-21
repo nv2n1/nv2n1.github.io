@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-iusql/"
 description: "isql, iusql – unixODBC command-line interactive SQL tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> isql, iusql &#8211; unixODBC command-line interactive SQL tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>isql</code> <i>DSN</i> [<i>USER</i> [<i>PASSWORD</i>]] [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

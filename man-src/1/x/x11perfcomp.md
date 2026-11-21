@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x11perfcomp/"
 description: "x11perfcomp – X11 server performance comparison program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> x11perfcomp &#8211; X11 server performance comparison program </p>
 <h2>SYNTAX</h2>
 <p> <code>x11perfcomp</code> [ -r | -ro ] [ -l label_file ] files</p>
 <h2>DESCRIPTION</h2>

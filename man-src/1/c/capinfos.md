@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-capinfos/"
 description: "capinfos – Prints information about capture files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> capinfos &#8211; Prints information about capture files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>capinfos</code> [&nbsp;<wbr><code>-a</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-A</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-b</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-B</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-C</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-d</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-e</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-E</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-H</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-i</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-l</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-L</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-m</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-M</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-N</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-o</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-q</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-Q</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-r</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-R</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-S</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-T</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-u</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-x</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-y</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-z</code>&nbsp;<wbr>] &lt;<i>infile</i>&gt; <i>&#8230;</i></p>
 <h2>DESCRIPTION</h2>

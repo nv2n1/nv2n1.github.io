@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-myisamchk/"
 description: "myisamchk – MyISAM table-maintenance utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> myisamchk &#8211; MyISAM table-maintenance utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>myisamchk [</code><i>options</i><code>] </code><i>tbl_name</i><code> &#8230;</code></dt></dl>

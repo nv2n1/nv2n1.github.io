@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kdesu/"
 description: "kdesu – Runs a program with elevated privileges"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kdesu &#8211; Runs a program with elevated privileges </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kdesu</code> [<code>-c</code><i> command</i>] [<code>-d</code>] [<code>-f</code><i> file</i>] [<code>-i</code><i> icon name</i>] [<code>-n</code>] [<code>-p</code><i> priority</i>] [<code>-r</code>] [<code>-s</code>] [<code>-t</code>] [<code>-u</code><i> user</i>] [<code>&#8211;noignorebutton</code>] [<code>&#8211;attach</code><i> winid</i>]</dt>

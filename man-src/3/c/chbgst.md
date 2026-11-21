@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chbgst/"
 description: "chbgst.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chbgst.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chbgst</code> (VECT, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, X, LDX, WORK, RWORK, INFO)<br />

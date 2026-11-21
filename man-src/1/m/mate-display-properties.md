@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-display-properties/"
 description: "mate-display-properties – customize MATE display behavor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-display-properties &#8211; customize MATE display behavor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-display-properties</code> [<i>OPTIONS&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

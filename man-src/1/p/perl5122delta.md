@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl5122delta/"
 description: "perl5122delta – what is new for perl v5.12.2"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl5122delta &#8211; what is new for perl v5.12.2 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.12.1 release and the 5.12.2 release. </p>
 <p> If you are upgrading from an earlier major version, such as 5.10.1, first read perl5120delta, which describes differences between 5.10.1 and 5.12.0, as well as perl5121delta, which describes earlier changes in the 5.12 stable release series.</p>

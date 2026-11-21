@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_bool_t/"
 description: "Globus Common API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Globus Common API &#8211; </p>
 <p> Common Data Structures and Functions.</p>
 <h3>Modules</h3>
 <p> <code>Globus Callback</code><br />

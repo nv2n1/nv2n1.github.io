@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-build-init/"
 description: "flatpak-build-init – Initialize a build directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-build-init &#8211; Initialize a build directory </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-init</code> [OPTION&#8230;] DIRECTORY APPNAME SDK RUNTIME [BRANCH]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal2tiles/"
 description: "gdal2tiles – gdal2tiles.py generates directory with TMS tiles, KMLs and simple web viewers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal2tiles &#8211; gdal2tiles.py generates directory with TMS tiles, KMLs and simple web viewers </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdal2tiles.py[-p profile][-r resampling][-s srs][-z zoom]

@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-popclient/"
 description: "fetchmail – fetch mail from a POP, IMAP, ETRN, or ODMR-capable server"
 ---
-<h2 class="name">NAME</h2>
-<p> fetchmail - fetch mail from a POP, IMAP, ETRN, or ODMR-capable server  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fetchmail</code> [<i>option...</i>] [<i>mailserver...</i>] <br />
  <code>fetchmailconf</code> </p>

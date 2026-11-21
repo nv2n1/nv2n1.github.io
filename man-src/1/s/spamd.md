@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-spamd/"
 description: "spamd – daemonized version of spamassassin"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spamd &#8211; daemonized version of spamassassin </p>
 <h2>SYNOPSIS</h2>
 <p> spamd [options] </p>
 <p> Options: </p>

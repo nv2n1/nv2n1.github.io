@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_get_int_value/"
 description: "hdf_get_int_value – Return the integer value of a point in the data set"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_get_int_value &#8211; Return the integer value of a point in the data set </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

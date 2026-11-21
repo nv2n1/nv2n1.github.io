@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-psmandup/"
 description: "psmandup – print duplex on non duplex printers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psmandup &#8211; print duplex on non duplex printers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psmandup</code> <i>FILE</i></p>
 <h2>DESCRIPTION</h2>

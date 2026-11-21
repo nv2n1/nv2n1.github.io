@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdfarranger/"
 description: "PDF Arranger – Application for PDF Merging, Rearranging, Splitting, and Cropping"
 ---
 
-<h2 class="name">NAME</h2>
-<p> PDF Arranger &#8211; Application for PDF Merging, Rearranging, Splitting, and Cropping </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfarranger [file1] [file2] &#8230;</code></p>
 <h2>DESCRIPTION</h2>

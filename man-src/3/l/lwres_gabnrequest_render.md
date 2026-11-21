@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_gabnrequest_render/"
 description: "lwres_gabnrequest_render, lwres_gabnresponse_render, lwres_gabnrequest_parse, lwres_gabnresponse_parse, lwres_gabnresponse_free, lwres_gabnrequest_free – lightweight resolver getaddrbyname message ..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_gabnrequest_render, lwres_gabnresponse_render, lwres_gabnrequest_parse, lwres_gabnresponse_parse, lwres_gabnresponse_free, lwres_gabnrequest_free &#8211; lightweight resolver getaddrbyname message handling </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_getaddrinfo/"
 description: "lwres_getaddrinfo, lwres_freeaddrinfo – socket address structure to host and service name"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_getaddrinfo, lwres_freeaddrinfo &#8211; socket address structure to host and service name </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;

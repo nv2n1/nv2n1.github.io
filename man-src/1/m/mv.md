@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mv/"
 description: "mv – move (rename) files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mv &#8211; move (rename) files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mv</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br />
  <code>mv</code> [<i>,OPTION/</i>]&#8230; <i>,SOURCE/</i>&#8230; <i>,DIRECTORY/</i><br />

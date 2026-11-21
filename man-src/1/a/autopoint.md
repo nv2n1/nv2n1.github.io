@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autopoint/"
 description: "autopoint – copies standard gettext infrastructure"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autopoint &#8211; copies standard gettext infrastructure </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autopoint</code> [<i>OPTION</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

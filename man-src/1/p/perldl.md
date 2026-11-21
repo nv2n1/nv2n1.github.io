@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perldl/"
 description: "perldl – Simple shell for PDL (see also pdl2)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perldl &#8211; Simple shell for PDL (see also pdl2) </p>
 <h2>SYNOPSIS</h2>
 <p> Use <font SIZE="-1">PDL</font> interactively: </p>
 <pre>

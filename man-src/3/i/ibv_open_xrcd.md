@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_open_xrcd/"
 description: "ibv_open_xrcd, ibv_close_xrcd – open or close an XRC protection domain (XRCDs)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_open_xrcd, ibv_close_xrcd &#8211; open or close an XRC protection domain (XRCDs) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

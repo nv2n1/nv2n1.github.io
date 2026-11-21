@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-opreport/"
 description: "opreport – produce symbol or binary image summaries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> opreport &#8211; produce symbol or binary image summaries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opreport</code> [ <i>options</i> ] [profile specification]</p>
 <h2>DESCRIPTION</h2>

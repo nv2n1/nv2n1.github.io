@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pslog/"
 description: "pslog – report current logs path of a process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pslog &#8211; report current logs path of a process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pslog</code> <i>pid</i> &#8230;<br />
  <code>pslog -V</code></p>

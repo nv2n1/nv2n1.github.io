@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grephistory/"
 description: "grephistory – Query the INN history database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grephistory &#8211; Query the INN history database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grephistory</code> [<code>-eilnqsv</code>] [<code>-f</code> <i>db</i>] [<i>message-id</i>]</p>
 <h2>DESCRIPTION</h2>

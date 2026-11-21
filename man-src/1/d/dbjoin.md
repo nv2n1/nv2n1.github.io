@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbjoin/"
 description: "dbjoin – join two tables on common columns"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbjoin &#8211; join two tables on common columns </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dbjoin[-Sid]-- input table1.fsdb-- input table2.fsdb[-nNrR] column[column...]

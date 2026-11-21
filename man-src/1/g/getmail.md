@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getmail/"
 description: "getmail – retrieve messages from one or more POP3, IMAP4, or SDPS mailboxes and deliver to a maildir, mboxrd-format mbox file, or external MDA"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getmail &#8211; retrieve messages from one or more POP3, IMAP4, or SDPS mailboxes and deliver to a maildir, mboxrd-format mbox file, or external MDA </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getmail</code> [<i>OPTION</i>] &#8230;</p>
 <h2>DESCRIPTION</h2>

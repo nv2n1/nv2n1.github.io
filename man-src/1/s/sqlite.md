@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sqlite/"
 description: "sqlite – A command line interface for SQLite"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sqlite &#8211; A command line interface for SQLite </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sqlite</code> [<i>options</i>]<i> filename </i>[<i>SQL</i>]</p>
 <h3>SUMMARY</h3>

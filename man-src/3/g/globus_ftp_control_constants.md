@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_ftp_control_constants/"
 description: "GridFTP Constants –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GridFTP Constants &#8211; </p>
 <p> Constants.</p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_FTP_CONTROL_MODULE</code> (&amp;globus_i_ftp_control_module)<br />

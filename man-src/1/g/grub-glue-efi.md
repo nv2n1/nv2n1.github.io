@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grub-glue-efi/"
 description: "grub-glue-efi – generate a fat binary for EFI"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grub-glue-efi &#8211; generate a fat binary for EFI </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-glue-efi</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>]</p>
 <h2>DESCRIPTION</h2>

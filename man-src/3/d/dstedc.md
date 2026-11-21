@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dstedc/"
 description: "dstedc.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dstedc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />

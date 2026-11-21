@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nameclt/"
 description: "nameclt – Naming Service client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nameclt &#8211; Naming Service client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nameclt</code> [-ior &lt;object-reference&gt;] [-advanced] &lt;operation&gt; </p>
 <h2>DESCRIPTION</h2>

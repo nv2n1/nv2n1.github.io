@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-php/"
 description: "php – PHP Command Line Interface ‘CLI’"
 ---
 
-<h2 class="name">NAME</h2>
-<p> php &#8211; PHP Command Line Interface &#8216;CLI&#8217; </p>
 <p> php-cgi &#8211; PHP Common Gateway Interface &#8216;CGI&#8217; command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>php</code> [options] [ <code>-f</code> ] <i>file</i> [[&#8211;] <i>args&#8230;</i>] </p>

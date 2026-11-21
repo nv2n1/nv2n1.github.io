@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-times/"
 description: "times – get process times"
 ---
 
-<h2 class="name">NAME</h2>
-<p> times &#8211; get process times </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/times.h&gt;</code> </p>
 <p> <code>clock_t times(struct tms *</code><i>buf</i><code>);</code></p>

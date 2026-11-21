@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtpqrt2/"
 description: "dtpqrt2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtpqrt2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtpqrt2</code> (M, N, L, A, LDA, B, LDB, T, LDT, INFO)<br />

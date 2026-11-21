@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perlunitut/"
 description: "perlunitut – Perl Unicode Tutorial"
 ---
-<h2 class="name">NAME</h2>
-<p> perlunitut - Perl Unicode Tutorial </p>
 <h2>DESCRIPTION</h2>
 <p> The days of just flinging strings around are over. It&#8217;s well established that modern programs need to be capable of communicating funny accented letters, and things like euro symbols. This means that programmers need new habits. It&#8217;s easy to program Unicode capable software, but it does require discipline to do it right. </p>
 <p> There&#8217;s a lot to know about character sets, and text encodings. It&#8217;s probably best to spend a full day learning all this, but the basics can be learned in minutes. </p>

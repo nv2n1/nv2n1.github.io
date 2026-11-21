@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cloc/"
 description: "cloc – Count, and compute differences of, lines of source code and comments."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cloc &#8211; Count, and compute differences of, lines of source code and comments. </p>
 <h2>SYNOPSIS</h2>
 <pre>
   cloc [options] &lt;FILE|DIR&gt; ...

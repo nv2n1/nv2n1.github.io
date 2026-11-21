@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkjobtexmf/"
 description: "mkjobtexmf — Generate a texmf tree for a particular job"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkjobtexmf &#8212; Generate a texmf tree for a particular job </p>
 <h2>VERSION</h2>
 <p> 2011-11-10 v0.8</p>
 <h2>SYNOPSIS</h2>

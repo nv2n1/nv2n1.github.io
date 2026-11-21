@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ttftotype42/"
 description: "ttftotype42 – create PostScript Type 42 wrapper of TrueType font"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ttftotype42 &#8211; create PostScript Type 42 wrapper of TrueType font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttftotype42</code> [<i>input</i> [<i>output</i>]]</p>
 <h2>DESCRIPTION</h2>

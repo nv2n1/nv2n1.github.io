@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_gnbaresponse_free/"
 description: "lwres_gnbarequest_render, lwres_gnbaresponse_render, lwres_gnbarequest_parse, lwres_gnbaresponse_parse, lwres_gnbaresponse_free, lwres_gnbarequest_free – lightweight resolver getnamebyaddress messa..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_gnbarequest_render, lwres_gnbaresponse_render, lwres_gnbarequest_parse, lwres_gnbaresponse_parse, lwres_gnbaresponse_free, lwres_gnbarequest_free &#8211; lightweight resolver getnamebyaddress message handling </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;

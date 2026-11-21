@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autoconf/"
 description: "autoconf – Generate configuration scripts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autoconf &#8211; Generate configuration scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoconf</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE-FILE/</i>]</p>
 <h2>DESCRIPTION</h2>

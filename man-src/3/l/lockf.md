@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lockf/"
 description: "lockf – apply, test or remove a POSIX lock on an open file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lockf &#8211; apply, test or remove a POSIX lock on an open file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int lockf(int </code><i>fd</i><code>, int </code><i>cmd</i><code>, off_t </code><i>len</i><code>);</code> </p>

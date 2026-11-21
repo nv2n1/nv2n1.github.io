@@ -8,8 +8,6 @@ description: "libnetpbm_draw \\- Libnetpbm PPM Drawing Function Manual"
 ---
 
 <p>Table Of Contents</p>
-<h2 class="name">NAME</h2>
-<p> libnetpbm_draw \- Libnetpbm PPM Drawing Function Manual </p>
 <h2>DESCRIPTION</h2>
 <p> This reference manual covers functions in the <code>libnetpbm</code> library for drawing images, using the PPM image format and the <code>libnetpbm</code> in-memory image formats. </p>
 <p> We actually have very little information here; this is mainly a framework for adding documentation later if someone becomes interested in this facility. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-natspec/"
 description: "natspec – command line utility to access libnatspec functions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> natspec &#8211; command line utility to access libnatspec functions </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>natspec</code> [<code>-c</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;codepage</code>] [<code>-f</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;fsenc</code>] [<code>&#8211;utf8</code>] [<code>&#8211;country-id</code>] [<code>&#8211;system-locale</code>] [<code>-i</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;info</code>] [<code>-a&nbsp;<wbr></code><i>encoding</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;transl&nbsp;<wbr></code><i>encoding</i>] [<code>-v</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;verbose</code>] [<code>-s&nbsp;<wbr></code><i>operating system</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;charset&nbsp;<wbr></code><i>operating system</i>]</dt>

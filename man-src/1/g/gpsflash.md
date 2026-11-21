@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpsflash/"
 description: "gpsflash – 2-stage firmware loader for GPS chipsets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpsflash &#8211; 2-stage firmware loader for GPS chipsets </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsflash</code> [-n] [-l&nbsp;<wbr><i>loader-file</i>] -f&nbsp;<wbr><i>firmware-file</i> {<i>tty</i>}</dt></dl>

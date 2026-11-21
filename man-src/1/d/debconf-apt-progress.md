@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debconf-apt-progress/"
 description: "debconf-apt-progress – install packages using debconf to display a progress bar"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debconf-apt-progress &#8211; install packages using debconf to display a progress bar </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 debconf - apt - progress[--] command[args...] debconf - apt - progress-- config debconf - apt - progress-- start debconf - apt - progress-- from waypoint-- to waypoint[--] command[args...] debconf - apt - progress-- stop

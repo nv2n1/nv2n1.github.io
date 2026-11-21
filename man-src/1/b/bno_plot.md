@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bno_plot/"
 description: "bno_plot – generate interactive 3D plot of IO blocks and sizes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bno_plot &#8211; generate interactive 3D plot of IO blocks and sizes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bno_plot</code> [ -h | &#8211;help ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>-v | &#8211;verbose&nbsp;<wbr>] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fsvs/"
 description: "FSVS – fast versioning tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> FSVS &#8211; fast versioning tool </p>
 <h2>SYNOPSIS</h2>
 <p> fsvs command [options] [args] </p>
 <p> The following commands are understood by fsvs:</p>

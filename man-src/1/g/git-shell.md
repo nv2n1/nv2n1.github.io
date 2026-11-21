@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-shell/"
 description: "git-shell – Restricted login shell for Git-only SSH access"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-shell &#8211; Restricted login shell for Git-only SSH access </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>chsh</i> -s $(command -v git-shell) &lt;user&gt;

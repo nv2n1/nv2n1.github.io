@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clacpy/"
 description: "clacpy.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clacpy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br />

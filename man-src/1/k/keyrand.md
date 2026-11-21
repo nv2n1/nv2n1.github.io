@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-keyrand/"
 description: "keyrand – utility for collecting random data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyrand &#8211; utility for collecting random data </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>keyrand</code> {<i>bits</i>} {<i>outfile</i>}</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fastrm/"
 description: "fastrm – Quickly remove a list of files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fastrm &#8211; Quickly remove a list of files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fastrm</code> [<code>-de</code>] [<code>-c</code>|<code>-c</code><i>I</i>] [<code>-s</code>|<code>-s</code><i>M</i>] [<code>-u</code>|<code>-u</code><i>N</i>] <i>base-directory</i></p>
 <h2>DESCRIPTION</h2>

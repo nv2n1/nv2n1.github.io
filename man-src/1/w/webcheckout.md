@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-webcheckout/"
 description: "webcheckout – check out repositories referenced on a web page"
 ---
 
-<h2 class="name">NAME</h2>
-<p> webcheckout &#8211; check out repositories referenced on a web page </p>
 <h2>SYNOPSIS</h2>
 <p> <code>webcheckout</code> [options] url [destdir]</p>
 <h2>DESCRIPTION</h2>

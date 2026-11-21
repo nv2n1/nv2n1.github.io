@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-insw/"
 description: "outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, outb_p, outw_p, outl_p, inb_p, inw_p, inl_p – port I/O"
 ---
 
-<h2 class="name">NAME</h2>
-<p> outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, outb_p, outw_p, outl_p, inb_p, inw_p, inl_p &#8211; port I/O </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/io.h&gt;

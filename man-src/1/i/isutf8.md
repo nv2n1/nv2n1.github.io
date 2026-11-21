@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-isutf8/"
 description: "isutf8 – check whether files are valid UTF-8"
 ---
 
-<h2 class="name">NAME</h2>
-<p> isutf8 &#8211; check whether files are valid UTF-8 </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>isutf8</code> [<code>-hqliv</code>] [<code>&#8211;help</code>] [<code>&#8211;quiet</code>] [<code>&#8211;list</code>] [<code>&#8211;invert</code>] [<code>&#8211;verbose</code>] [[<i>file</i>&#8230;]]</dt></dl>

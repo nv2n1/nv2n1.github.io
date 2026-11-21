@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cspmv/"
 description: "cspmv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cspmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cspmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br />

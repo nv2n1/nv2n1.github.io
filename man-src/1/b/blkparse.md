@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-blkparse/"
 description: "blkparse – produce formatted output of event streams of block devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> blkparse &#8211; produce formatted output of event streams of block devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blkparse [ </code><i>options</i> ] </p>
 <h2>DESCRIPTION</h2>

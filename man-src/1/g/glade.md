@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glade/"
 description: "glade – Create GTK+ user interfaces"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glade &#8211; Create GTK+ user interfaces </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glade </code><code>[OPTION&#8230;]</code><code>[FILE&#8230;]</code></dt></dl>

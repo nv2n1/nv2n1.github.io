@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fcron-update-crontabs/"
 description: "fcron-update-crontabs – refreshes all fcron crontabs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fcron-update-crontabs &#8211; refreshes all fcron crontabs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fcron-update-crontabs</code></p>
 <h2>DESCRIPTION</h2>

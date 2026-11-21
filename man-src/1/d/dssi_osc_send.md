@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dssi_osc_send/"
 description: "dssi_osc_send – send OSC messages to DSSI applications."
 ---
 
-<h2 class="name">NAME</h2>
-<p> dssi_osc_send &#8211; send OSC messages to DSSI applications. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dssi_osc_send</code> <i>&lt;option&gt; &lt;OSC URL&gt; &lt;values&gt;</i></p>
 <h2>DESCRIPTION</h2>

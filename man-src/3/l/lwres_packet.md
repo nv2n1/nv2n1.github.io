@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_packet/"
 description: "lwres_lwpacket_renderheader, lwres_lwpacket_parseheader – lightweight resolver packet handling functions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_lwpacket_renderheader, lwres_lwpacket_parseheader &#8211; lightweight resolver packet handling functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwpacket.h&gt;

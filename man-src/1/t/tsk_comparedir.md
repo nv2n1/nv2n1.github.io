@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tsk_comparedir/"
 description: "tsk_comparedir – compare the contents of a directory with the contents of an image or local device."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tsk_comparedir &#8211; compare the contents of a directory with the contents of an image or local device. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsk_comparedir [-vV] [-n</code> <i>start_inum</i> <code>] [ -f</code> <i>fstype</i> <code>] [ -i</code> <i>imgtype</i> <code>] [ -b</code> <i>dev_sector_size</i> <code>] [ -o</code> <i>sector_offset</i> <code>]</code> <i>image [images] comparison_directory</i></p>
 <h2>DESCRIPTION</h2>

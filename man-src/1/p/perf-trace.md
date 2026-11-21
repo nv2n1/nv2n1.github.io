@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-trace/"
 description: "perf-trace – strace inspired tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-trace &#8211; strace inspired tool </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>perf trace</i>

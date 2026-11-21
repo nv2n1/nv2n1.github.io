@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-ar-14/"
 description: "llvm-ar – LLVM archiver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-ar &#8211; LLVM archiver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-ar</code> [-]{dmpqrstx}[abcDilLNoOPsSTuUvV] [relpos] [count] archive [files…]</p>
 <h2>DESCRIPTION</h2>

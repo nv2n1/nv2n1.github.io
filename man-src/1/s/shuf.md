@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shuf/"
 description: "shuf – generate random permutations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shuf &#8211; generate random permutations </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shuf</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]<br />
  <code>shuf</code> <i>,-e /</i>[<i>,OPTION/</i>]&#8230; [<i>,ARG/</i>]&#8230;<br />

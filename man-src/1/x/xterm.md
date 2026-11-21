@@ -6,8 +6,6 @@ letter: "x"
 url: "/docs/linux/man/1-xterm/"
 description: "xterm – terminal emulator for X"
 ---
-<h2 class="name">NAME</h2>
-<p> xterm - terminal emulator for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xterm</code> [-<i>toolkitoption</i> ...] [-<i>option</i> ...] [<i>shell</i>]  </p>
 <h2>DESCRIPTION</h2>

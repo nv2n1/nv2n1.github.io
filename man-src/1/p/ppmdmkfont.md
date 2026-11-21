@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmdmkfont/"
 description: "ppmdmkfont – Create Ppmdfont ‘standard’."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmdmkfont &#8211; Create Ppmdfont &#8216;standard&#8217;.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmdmkfont</code> </p>
 <h2>DESCRIPTION</h2>

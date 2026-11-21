@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_error_reporter/"
 description: "ndb_error_reporter – NDB error-reporting utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_error_reporter &#8211; NDB error-reporting utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_error_reporter </code><i>options</i></dt></dl>

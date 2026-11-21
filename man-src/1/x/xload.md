@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xload/"
 description: "xload – system load average display for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xload &#8211; system load average display for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xload</code><tt>&nbsp;<wbr>&nbsp;</tt>[-<i>toolkitoption</i> &#8230;] [-scale <i>integer</i>] [-update <i>seconds</i>] [-hl <i>color</i>] [-highlight <i>color</i>] [-remote <i>host</i>]</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[-jumpscroll&nbsp;<i>pixels</i>]&nbsp;[-label&nbsp;<i>string</i>]&nbsp;[-nolabel]&nbsp;[-lights]</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-curlftpfs/"
 description: "curlftpfs – mount a ftp host as a local directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> curlftpfs &#8211; mount a ftp host as a local directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>curlftpfs [options]</code> <i>host path</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-odtest/"
 description: "odtest – test cases for QDBM Odeum"
 ---
 
-<h2 class="name">NAME</h2>
-<p> odtest &#8211; test cases for QDBM Odeum</p>
 <h2>SYNOPSIS</h2>
 <p> <code>odtest write</code> [-tune <i>ibnum</i> <i>idnum</i> <i>cbnum</i> <i>csiz</i>] <i>name</i> <i>dnum</i> <i>wnum</i> <i>pnum</i><br />
  <code>odtest read</code> <i>name</i><br />

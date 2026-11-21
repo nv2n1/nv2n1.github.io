@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-reset/"
 description: "git-reset – Reset current HEAD to the specified state"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-reset &#8211; Reset current HEAD to the specified state </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git reset[-q][&lt;tree - ish&gt;][--]&lt;pathspec&gt;... git reset[-q][--pathspec - from - file = &lt;file&gt;[--pathspec - file - nul]][&lt;tree - ish&gt;] git reset(--patch | -p)[&lt;tree - ish&gt;][--][&lt;pathspec&gt;...] git reset[--soft | --mixed[-N] | --hard | --merge | --keep][-q][&lt;commit&gt;]

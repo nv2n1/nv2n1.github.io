@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arora/"
 description: "Arora – Lightweight web browser based on Qt and WebKit"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Arora &#8211; Lightweight web browser based on Qt and WebKit</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arora [Qt options] [url]</code> </p>
 <h2>DESCRIPTION</h2>

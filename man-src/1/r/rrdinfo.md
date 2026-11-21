@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdinfo/"
 description: "rrdinfo – extract header information from an RRD"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdinfo &#8211; extract header information from an RRD </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>info</code> <i>filename</i> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>
 <h2>DESCRIPTION</h2>

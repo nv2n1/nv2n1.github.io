@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slantr/"
 description: "slantr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slantr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slantr</code> (NORM, UPLO, DIAG, M, N, A, LDA, WORK)<br />

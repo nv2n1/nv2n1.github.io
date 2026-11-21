@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dopgtr/"
 description: "dopgtr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dopgtr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dopgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br />

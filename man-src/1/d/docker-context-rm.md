@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-context-rm/"
 description: "docker-context-rm – Remove one or more contexts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-context-rm &#8211; Remove one or more contexts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker context rm CONTEXT [CONTEXT&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

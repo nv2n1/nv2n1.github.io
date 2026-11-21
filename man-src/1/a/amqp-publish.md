@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amqp-publish/"
 description: "amqp-publish – Publish a message on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amqp-publish &#8211; Publish a message on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-publish</code> [<i>OPTION</i>&#8230;]</dt></dl>

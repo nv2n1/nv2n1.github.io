@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_post_recv/"
 description: "ibv_post_recv – post a list of work requests (WRs) to a receive queue"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_post_recv &#8211; post a list of work requests (WRs) to a receive queue </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

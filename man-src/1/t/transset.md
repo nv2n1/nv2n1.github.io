@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-transset/"
 description: "transset – Set transparency on a window"
 ---
 
-<h2 class="name">NAME</h2>
-<p> transset &#8211; Set transparency on a window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>transset</code> [<i>-options &#8230;</i>] [<i>opacity</i>]</p>
 <h2>DESCRIPTION</h2>

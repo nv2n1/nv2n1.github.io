@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pmdasamba/"
 description: "pmdasamba – Samba performance metrics domain agent (PMDA)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pmdasamba &#8211; Samba performance metrics domain agent (PMDA) </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdasamba</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from Samba, a Windows <font SIZE="-1">SMB/CIFS</font> server for <font SIZE="-1">UNIX.</font> </p>
 <p> In order for values to be made available by this <font SIZE="-1">PMDA,</font> Samba must have been built with profiling support (<font SIZE="-1">WITH_PROFILE</font> in &#8220;smbd -b&#8221; output). This <font SIZE="-1">PMDA</font> dynamically enumerates much of its metric hierarchy, based on the contents of &#8220;smbstatus &#8211;profile&#8221;. </p>

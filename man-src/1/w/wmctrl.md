@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wmctrl/"
 description: "wmctrl – interact with a EWMH/NetWM compatible X Window Manager."
 ---
 
-<h2 class="name">NAME</h2>
-<p> wmctrl &#8211; interact with a EWMH/NetWM compatible X Window Manager. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmctrl</code> [<i> options </i>|<i> actions </i>]<i>&#8230;</i> </p>
 <h2>DESCRIPTION</h2>

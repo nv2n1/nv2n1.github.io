@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lgroupdel/"
 description: "lgroupdel – Delete an user group"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lgroupdel &#8211; Delete an user group</p>
 <h2>SYNOPSIS</h2>
 <p> lgroupdel [<i>OPTION</i>]&#8230; <i>group</i> </p>
 <h2>DESCRIPTION</h2>

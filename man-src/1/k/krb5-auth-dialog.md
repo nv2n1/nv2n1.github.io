@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-krb5-auth-dialog/"
 description: "krb5-auth-dialog – Kerberos 5 credential checking"
 ---
 
-<h2 class="name">NAME</h2>
-<p> krb5-auth-dialog &#8211; Kerberos 5 credential checking</p>
 <h2>SYNOPSIS</h2>
 <p> <code>krb5-auth-dialog [&#8211;always|&#8211;auto]</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airrac/"
 description: "airrac –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airrac &#8211; </p>
 <pre>
   Command-line utility for the C++ Simulated Revenue Accounting (RAC) System Library
 </pre>

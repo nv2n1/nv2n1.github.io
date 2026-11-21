@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvired/"
 description: "dvired – print dvi-files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvired &#8211; print dvi-files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvired</code> [ <code>options</code> ] <code>file</code></p>
 <h2>DESCRIPTION</h2>

@@ -6,8 +6,6 @@ letter: "h"
 url: "/docs/linux/man/1-hd/"
 description: "hexdump – display file contents in hexadecimal, decimal, octal, or ascii"
 ---
-<h2 class="name">NAME</h2>
-<p> hexdump - display file contents in hexadecimal, decimal, octal, or ascii </p>
 <p> <code>hexdump</code> <i>options file</i> ... </p>
 <p> <code>hd</code> <i>options file</i> ... </p>
 <h2>DESCRIPTION</h2>

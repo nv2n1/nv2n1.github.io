@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-pop/"
 description: "stg-pop – Pop one or more patches from the stack"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-pop &#8211; Pop one or more patches from the stack </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg pop[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]

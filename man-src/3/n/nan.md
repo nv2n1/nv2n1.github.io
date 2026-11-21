@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-nan/"
 description: "nan, nanf, nanl – return ‘Not a Number’"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nan, nanf, nanl &#8211; return &#8216;Not a Number&#8217; </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double nan(const char *</code><i>tagp</i><code>);</code><br />

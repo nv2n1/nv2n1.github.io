@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_system_config_defines/"
 description: "Defines –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Defines &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GSI_SYSCONFIG_SET_KEY_PERMISSIONS</code> </p>
 <p> #define <code>GLOBUS_GSI_SYSCONFIG_GET_HOME_DIR</code> </p>

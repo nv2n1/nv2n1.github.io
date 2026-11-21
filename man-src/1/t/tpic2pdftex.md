@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tpic2pdftex/"
 description: "tpic2pdftex – convert tpic \\specials for use by pdftex"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tpic2pdftex &#8211; convert tpic \specials for use by pdftex</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pic</code> -t <i>somefile.pic</i> | <code>tpic2pdftex</code> &gt; <i>somefile.tex</i> </p>
 <p> Process <i>somefile.tex</i> by <code>pdftex/pdflatex.</code> </p>

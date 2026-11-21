@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmupc/"
 description: "pbmupc – create a Universal Product Code bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmupc &#8211; create a Universal Product Code bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmupc</code> [<code>-s1</code>|<code>-s2</code>] <i>type manufac product</i></p>
 <h2>DESCRIPTION</h2>

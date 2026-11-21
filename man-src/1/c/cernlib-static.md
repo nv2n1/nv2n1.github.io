@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cernlib-static/"
 description: "cernlib-static – get libraries needed to link with CERN Program Library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cernlib-static &#8211; get libraries needed to link with CERN Program Library </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cernlib-static</code> [options] <i>library[/version]</i> <i>&#8230;</i> </p>
 <h2>DESCRIPTION</h2>

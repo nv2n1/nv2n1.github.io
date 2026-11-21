@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claqr0/"
 description: "claqr0.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claqr0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqr0</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br />

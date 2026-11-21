@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasy2/"
 description: "dlasy2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasy2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasy2</code> (LTRANL, LTRANR, ISGN, N1, N2, TL, LDTL, TR, LDTR, B, LDB, SCALE, X, LDX, XNORM, INFO)<br />

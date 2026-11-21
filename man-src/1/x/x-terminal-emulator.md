@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x-terminal-emulator/"
 description: "Terminator – Multiple GNOME terminals in one window"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Terminator &#8211; Multiple GNOME terminals in one window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>terminator</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

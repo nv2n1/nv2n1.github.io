@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-module/"
 description: "module – command interface to the Modules package"
 ---
 
-<h2 class="name">NAME</h2>
-<p> module &#8211; command interface to the Modules package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>module</code> [ <i>switches</i> ] [ <i>sub-command</i> ] <i>[ sub-command-args ]</i></p>
 <h2>DESCRIPTION</h2>

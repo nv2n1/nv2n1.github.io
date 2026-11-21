@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-folder/"
 description: "folder, folders – set/list current folder/message"
 ---
 
-<h2 class="name">NAME</h2>
-<p> folder, folders &#8211; set/list current folder/message </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>folder</code> [<i>+folder</i>] [<i>msg</i>] [<code>-all</code> | <code>-noall</code>] [<code>-create</code> | <code>-nocreate</code>] [<code>-fast</code> | <code>-nofast</code>] [<code>-header</code> | <code>-noheader</code>] [<code>-recurse</code> | <code>-norecurse</code>] [<code>-total</code> | <code>-nototal</code>] [<code>-list</code> | <code>-nolist</code>] [<code>-push</code> | <code>-pop</code>] [<code>-pack</code> | <code>-nopack</code>] [<code>-print</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

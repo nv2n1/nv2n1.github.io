@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndctl-create-namespace/"
 description: "ndctl-create-namespace – provision or reconfigure a namespace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndctl-create-namespace &#8211; provision or reconfigure a namespace </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>ndctl create-namespace</i> [&lt;options&gt;]

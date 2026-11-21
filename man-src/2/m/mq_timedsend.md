@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mq_timedsend/"
 description: "mq_send, mq_timedsend – send a message to a message queue"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mq_send, mq_timedsend &#8211; send a message to a message queue </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;

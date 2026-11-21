@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fwupdagent/"
 description: "fwupdagent – firmware updating agent"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fwupdagent &#8211; firmware updating agent </p>
 <h2>SYNOPSIS</h2>
 <p> fwupdagent [CMD]</p>
 <h2>DESCRIPTION</h2>

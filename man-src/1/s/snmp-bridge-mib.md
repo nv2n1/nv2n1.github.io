@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-snmp-bridge-mib/"
 description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> snmp-bridge-mib &#8211; provide Linux bridge information via SNMP </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>snmp-bridge-mib</code> {bridge}</dt></dl>

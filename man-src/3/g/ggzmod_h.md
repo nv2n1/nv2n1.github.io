@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ggzmod_h/"
 description: "ggzmod.h – Common functions for interfacing a game server and GGZ."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ggzmod.h &#8211; Common functions for interfacing a game server and GGZ. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ggz.h&gt;<br />
  #include &lt;ggz_common.h&gt; </p>

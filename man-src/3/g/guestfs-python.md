@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-guestfs-python/"
 description: "guestfs-python – How to use libguestfs from Python"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guestfs-python &#8211; How to use libguestfs from Python </p>
 <h2>SYNOPSIS</h2>
 <pre>
  import guestfs

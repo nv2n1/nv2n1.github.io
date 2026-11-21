@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mark/"
 description: "mark – manipulate message sequences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mark &#8211; manipulate message sequences </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mark</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-sequence</code> <i>name</i> &#8230;] [<code>-add</code> | <code>-delete</code>] [<code>-list</code>] [<code>-public</code> | <code>-nopublic</code>] [<code>-zero</code> | <code>-nozero</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

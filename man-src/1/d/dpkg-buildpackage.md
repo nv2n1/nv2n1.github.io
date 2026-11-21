@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-buildpackage/"
 description: "dpkg-buildpackage – build binary or source packages from sources"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-buildpackage &#8211; build binary or source packages from sources </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-buildpackage</code> [<i>option</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

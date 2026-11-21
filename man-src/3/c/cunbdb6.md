@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cunbdb6/"
 description: "cunbdb6.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cunbdb6.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunbdb6</code> (M1, M2, N, X1, INCX1, X2, INCX2, Q1, LDQ1, Q2, LDQ2, WORK, LWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-alc/"
 description: "aLinkCreator – the aMule eD2k link creator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aLinkCreator &#8211; the aMule eD2k link creator </p>
 <h2>SYNOPSIS</h2>
 <h2>DESCRIPTION</h2>
 <p> <code>alc</code> is a graphical utility to create an eD2k link to any file on your computer. </p>

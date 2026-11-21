@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-session-inhibit/"
 description: "mate-session-inhibit – inhibit mate-session functionality"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-session-inhibit &#8211; inhibit mate-session functionality </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mate-session-inhibit</code> [OPTION&#8230;] {COMMAND}</dt></dl>

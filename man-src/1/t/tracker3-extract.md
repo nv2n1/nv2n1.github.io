@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-extract/"
 description: "tracker3-extract – Extract metadata from a file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-extract &#8211; Extract metadata from a file. </p>
 <h2>SYNOPSYS</h2>
 <p> <code>tracker3 extract</code> <i>FILE</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-firewall-offline-cmd/"
 description: "firewall-offline-cmd – firewalld offline command line client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> firewall-offline-cmd &#8211; firewalld offline command line client </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>firewall-offline-cmd</code> [OPTIONS&#8230;]</dt></dl>

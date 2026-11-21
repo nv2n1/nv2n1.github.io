@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lavplay/"
 description: "lavplay – Playback and edit MJPEG video"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lavplay &#8211; Playback and edit MJPEG video</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lavplay</code> [<i>options</i>] <i>lavfile1 [lavfile2 &#8230; lavfileN]</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-strings-14/"
 description: "llvm-strings – print strings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-strings &#8211; print strings </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-strings</code> [<i>options</i>] [<i>input…</i>]</p>
 <h2>DESCRIPTION</h2>

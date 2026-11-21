@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-combine/"
 description: "combine – combine sets of lines from two files using boolean operations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> combine &#8211; combine sets of lines from two files using boolean operations </p>
 <h2>SYNOPSIS</h2>
 <p> combine file1 and file2 </p>
 <p> combine file1 not file2 </p>

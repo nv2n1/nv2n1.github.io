@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_parse_sort_control/"
 description: "ldap_parse_sort_control – Decode the information returned from a search operation that used a server-side sort control"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_parse_sort_control &#8211; Decode the information returned from a search operation that used a server-side sort control </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

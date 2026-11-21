@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mptopdf/"
 description: "mptopdf – convert MetaPost figures to PDF"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mptopdf &#8211; convert MetaPost figures to PDF </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mptopdf [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

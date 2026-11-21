@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-cherry-pick/"
 description: "git-cherry-pick – Apply the changes introduced by some existing commits"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-cherry-pick &#8211; Apply the changes introduced by some existing commits </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git cherry - pick[--edit][-n][-m parent - number][-s][-x][--ff][-S[&lt;keyid&gt;]]&lt;commit&gt;... git cherry - pick(--continue | --skip | --abort | --quit)

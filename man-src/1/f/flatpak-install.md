@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-install/"
 description: "flatpak-install – Install an application or runtime"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-install &#8211; Install an application or runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak install</code> [OPTION&#8230;] [REMOTE] REF&#8230;</dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nomarch/"
 description: "nomarch – extract `.arc’ archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nomarch &#8211; extract `.arc&#8217; archives </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nomarch</code> [<i>-hlptUv</i>] [<code>archive.arc</code>] [<code>match1</code> [<code>match2</code> &#8230; ]] </p>
 <h2>DESCRIPTION</h2>

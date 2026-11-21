@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-setxkbmap/"
 description: "setxkbmap – set the keyboard using the X Keyboard Extension"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setxkbmap &#8211; set the keyboard using the X Keyboard Extension </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setxkbmap [</code> <i>args</i> <code>] [</code> <i>layout</i> <code>[</code> <i>variant</i> <code>[</code> <i>option &#8230;</i> <code>] ] ]</code></p>
 <h2>DESCRIPTION</h2>

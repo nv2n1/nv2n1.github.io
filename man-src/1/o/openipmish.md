@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-openipmish/"
 description: "openipmish – Shell interface to an IPMI system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> openipmish &#8211; Shell interface to an IPMI system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>openipmish</code> [<i>option</i>] </p>
 <h2>DESCRIPTION</h2>

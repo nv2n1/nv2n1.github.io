@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_add/"
 description: "ldap_add_ext, ldap_add_ext_s – Perform an LDAP add operation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_add_ext, ldap_add_ext_s &#8211; Perform an LDAP add operation </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

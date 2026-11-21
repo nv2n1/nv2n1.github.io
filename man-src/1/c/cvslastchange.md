@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cvslastchange/"
 description: "cvslastchange – Display the last change committed to CVS for a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cvslastchange &#8211; Display the last change committed to CVS for a file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cvslastchange</code> [<i>file</i>]</dt></dl>

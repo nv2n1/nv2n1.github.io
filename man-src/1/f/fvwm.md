@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fvwm/"
 description: "Fvwm – F? Virtual Window Manager for X11"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Fvwm &#8211; F? Virtual Window Manager for X11 </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fvwm</code> [<code>-c</code>&nbsp;<wbr><i>config-command</i>] [<code>-d</code>&nbsp;<wbr><i>displayname</i>] [<code>-f</code>&nbsp;<wbr><i>config-file</i>] [<code>-r</code>] [<code>-s</code>&nbsp;<wbr>[<i>screen_num</i>]] [<code>-V</code>] [<code>-C</code>&nbsp;<wbr><i>visual-class</i> | <code>-I</code>&nbsp;<wbr><i>visual-id</i>] [<code>-l</code>&nbsp;<wbr><i>colors</i>&nbsp;<wbr>[<code>-L</code>]&nbsp;<wbr>[<code>-A</code>]&nbsp;<wbr>[<code>-S</code>]&nbsp;<wbr>[<code>-P</code>]] [<code>-D</code>] [<code>-h</code>] [<code>-i</code>&nbsp;<wbr><i>client-id</i>] [<code>-F</code>&nbsp;<wbr><i>state-file</i>] [<code>&#8211;debug-stack-ring</code>] [<code>-blackout</code>]</dt></dl>

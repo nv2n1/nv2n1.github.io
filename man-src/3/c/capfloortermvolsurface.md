@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-capfloortermvolsurface/"
 description: "ql/termstructures/volatility/capfloor/capfloortermvolsurface.hpp – Cap/floor smile volatility surface."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/termstructures/volatility/capfloor/capfloortermvolsurface.hpp &#8211; Cap/floor smile volatility surface. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/capfloor/capfloortermvolatilitystructure.hpp&gt;<br />
  #include &lt;ql/math/interpolations/interpolation2d.hpp&gt;<br />

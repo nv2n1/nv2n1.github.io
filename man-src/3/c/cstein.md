@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cstein/"
 description: "cstein.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cstein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />

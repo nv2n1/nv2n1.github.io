@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gps2udp/"
 description: "gps2udp – feed the take from gpsd to one or more aggregation sites"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gps2udp &#8211; feed the take from gpsd to one or more aggregation sites </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gps2udp</code> [-h] [-n] [-j] [-a] [-u&nbsp;<wbr><i>hostname:udpport</i>] [-c&nbsp;<wbr><i>count</i>] [-d&nbsp;<wbr><i>1|2</i>] [-v] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt></dl>

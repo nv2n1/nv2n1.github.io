@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-build-import-bundle/"
 description: "flatpak-build-import-bundle – Import a file bundle into a local repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-build-import-bundle &#8211; Import a file bundle into a local repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-import-bundle</code> [OPTION&#8230;] LOCATION FILENAME</dt></dl>

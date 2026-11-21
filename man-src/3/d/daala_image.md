@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-daala_image/"
 description: "daala_image –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> daala_image &#8211; </p>
 <p> Representation of an image or video frame.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>

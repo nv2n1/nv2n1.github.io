@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-evemu-describe/"
 description: "evemu-describe, evemu-record – print information and events from an input device"
 ---
 
-<h2 class="name">NAME</h2>
-<p> evemu-describe, evemu-record &#8211; print information and events from an input device </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 evemu - describe[/ dev / input / eventX][output file]

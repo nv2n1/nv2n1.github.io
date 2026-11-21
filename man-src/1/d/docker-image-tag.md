@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-image-tag/"
 description: "docker-image-tag – Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-image-tag &#8211; Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</code> </p>
 <h2>DESCRIPTION</h2>

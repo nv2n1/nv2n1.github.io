@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-upower/"
 description: "upower – UPower command line tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> upower &#8211; UPower command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>upower</code> [<code>&#8211;dump</code>] [<code>&#8211;enumerate</code>] [<code>&#8211;monitor-detail</code>] [<code>&#8211;monitor</code>] [<code>&#8211;show-info</code>] [<code>&#8211;version</code>] [<code>&#8211;wakeups</code>] [<code>&#8211;help</code>]</dt></dl>

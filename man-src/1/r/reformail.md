@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reformail/"
 description: "reformail – E-mail reformatting tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> reformail &#8211; E-mail reformatting tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reformail</code> -s command [option&#8230;]</dt>

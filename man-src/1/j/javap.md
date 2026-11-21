@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-javap/"
 description: "javap – Disassembles one or more class files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> javap &#8211; Disassembles one or more class files. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

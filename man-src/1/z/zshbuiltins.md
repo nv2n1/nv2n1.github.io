@@ -6,8 +6,6 @@ letter: "z"
 url: "/docs/linux/man/1-zshbuiltins/"
 description: "zshbuiltins – zsh built-in commands"
 ---
-<h2 class="name">NAME</h2>
-<p> zshbuiltins - zsh built-in commands </p>
 <h2>SHELL BUILTIN COMMANDS</h2>
 <p> Some shell builtin commands take options as described in individual entries; these are often referred to in the list below as `<code>flags</code>&#8216; to avoid confusion with shell options, which may also have an effect on the behaviour of builtin commands. In this introductory section, `<code>option</code>&#8216; always has the meaning of an option to a command that should be familiar to most command line users. </p>
 <p> Typically, options are single letters preceded by a hyphen (<code>-</code>). Options that take an argument accept it either immediately following the option letter or after white space, for example `<code>print -C3 {1..9}</code>&#8216; or `<code>print -C 3 {1..9}</code>&#8216; are equivalent. Arguments to options are not the same as arguments to the command; the documentation indicates which is which. Options that do not take an argument may be combined in a single word, for example `<code>print -rca -- *</code>&#8216; and `<code>print -r -c -a -- *</code>&#8216; are equivalent. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-transcode/"
 description: "transcode – LINUX video stream processing tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> transcode &#8211; LINUX video stream processing tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>transcode</code> -i&nbsp;<wbr><i>name</i> [-o&nbsp;<wbr><i>name</i>] [-y&nbsp;<wbr><i>vmod,amod</i>] [-w&nbsp;<wbr><i>vbitrate</i>&nbsp;<wbr>[&nbsp;<wbr><i>,vkeyframes</i>&nbsp;<wbr>[&nbsp;<wbr><i>,vcrispness</i>&nbsp;<wbr>]&nbsp;<wbr>]] [-a&nbsp;<wbr><i>atrack</i>&nbsp;<wbr>[&nbsp;<wbr><i>,vtrack</i>&nbsp;<wbr>]] [-b&nbsp;<wbr><i>abitrate</i>&nbsp;<wbr>[&nbsp;<wbr><i>,is_vbr</i>&nbsp;<wbr>[&nbsp;<wbr><i>,quality</i>&nbsp;<wbr>[&nbsp;<wbr><i>,mode</i>&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]] [-M&nbsp;<wbr><i>demuxer_mode</i>] [-F&nbsp;<wbr><i>codec_string</i>] [<i>other</i>&nbsp;<wbr><i>options</i>]</dt></dl>

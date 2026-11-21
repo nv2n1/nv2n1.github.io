@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pg_archivecleanup/"
 description: "pg_archivecleanup – clean up PostgreSQL WAL archive files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pg_archivecleanup &#8211; clean up PostgreSQL WAL archive files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_archivecleanup</code> [<i>option</i>&#8230;] <i>archivelocation</i> <i>oldestkeptwalfile</i></dt></dl>

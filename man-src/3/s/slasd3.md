@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slasd3/"
 description: "slasd3.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slasd3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasd3</code> (NL, NR, SQRE, K, D, Q, LDQ, DSIGMA, U, LDU, U2, LDU2, VT, LDVT, VT2, LDVT2, IDXC, CTOT, Z, INFO)<br />

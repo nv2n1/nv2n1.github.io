@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cmp/"
 description: "cmp – compare two files byte by byte"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmp &#8211; compare two files byte by byte </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cmp</code> [<i>OPTION</i>]&#8230; <i>FILE1 </i>[<i>FILE2 </i>[<i>SKIP1 </i>[<i>SKIP2</i>]]]</p>
 <h2>DESCRIPTION</h2>

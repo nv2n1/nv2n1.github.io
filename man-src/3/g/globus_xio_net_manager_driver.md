@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_xio_net_manager_driver/"
 description: "Globus XIO Net Manager Driver –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Globus XIO Net Manager Driver &#8211; </p>
 <p> Net Manager XIO Driver.</p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_net_manager_cntl_t</code> { <code>GLOBUS_XIO_NET_MANAGER_SET_TASK_ID</code>, <code>GLOBUS_XIO_NET_MANAGER_GET_TASK_ID</code> } </p>

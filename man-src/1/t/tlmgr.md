@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tlmgr/"
 description: "tlmgr – the native TeX Live Manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tlmgr &#8211; the native TeX Live Manager </p>
 <h2>SYNOPSIS</h2>
 <p> tlmgr [<i>option</i>&#8230;] <i>action</i> [<i>option</i>&#8230;] [<i>operand</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

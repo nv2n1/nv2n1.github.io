@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xscreensaver-getimage/"
 description: "xscreensaver-getimage – put some randomly-selected image on the root window"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xscreensaver-getimage &#8211; put some randomly-selected image on the root window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-getimage</code> [-display <i>host:display.screen</i>] [&#8211;verbose] window-id [pixmap-id]</p>
 <h2>DESCRIPTION</h2>

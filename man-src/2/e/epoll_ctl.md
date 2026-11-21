@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-epoll_ctl/"
 description: "epoll_ctl – control interface for an epoll file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> epoll_ctl &#8211; control interface for an epoll file descriptor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/epoll.h&gt;</code> </p>
 <p> <code>int epoll_ctl(int </code><i>epfd</i><code>, int </code><i>op</i><code>, int </code><i>fd</i><code>, struct epoll_event *</code><i>event</i><code>);</code></p>

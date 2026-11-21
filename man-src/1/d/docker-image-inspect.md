@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-image-inspect/"
 description: "docker-image-inspect – Display detailed information on one or more images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-image-inspect &#8211; Display detailed information on one or more images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image inspect [OPTIONS] IMAGE [IMAGE&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

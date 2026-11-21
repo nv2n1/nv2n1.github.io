@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-nice/"
 description: "nice – change process priority"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nice &#8211; change process priority </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int nice(int </code><i>inc</i><code>);</code> </p>

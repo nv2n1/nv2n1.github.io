@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtotiff/"
 description: "pnmtotiff – convert a portable anymap into a TIFF file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtotiff &#8211; convert a portable anymap into a TIFF file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtotiff</code> [<code>-none</code>|<code>-packbits</code>|<code>-lzw</code>|<code>-g3</code>|<code>-g4</code>] [<code>-2d</code>] [<code>-fill</code>] [<code>-predictor</code> <i>n</i>] [<code>-msb2lsb</code>|<code>-lsb2msb</code>] [<code>-rowsperstrip</code> <i>n</i>] [<code>-minisblack</code>|<code>-miniswhite</code>] [<code>-truecolor</code>] [<code>-color</code>] [<code>-indexbits</code> <i>1|2|4|8</i>] [<i>pnmfile</i>] </p>
 <p> Minimum unambiguous abbreviations of options are acceptable. </p>

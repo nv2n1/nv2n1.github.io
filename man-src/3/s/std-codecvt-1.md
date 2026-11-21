@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-std-codecvt-1/"
 description: "std::codecvt<InternT,ExternT,State>::length,do_length – std::codecvt<InternT,ExternT,State>::length,do_length"
 ---
 
-<h2 class="name">NAME</h2>
-<p> std::codecvt&lt;InternT,ExternT,State&gt;::length,do_length &#8211; std::codecvt&lt;InternT,ExternT,State&gt;::length,do_length</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;locale&gt;<br />
 public:<br />

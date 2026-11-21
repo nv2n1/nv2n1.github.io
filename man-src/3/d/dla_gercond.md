@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dla_gercond/"
 description: "dla_gercond.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dla_gercond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dla_gercond</code> (TRANS, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br />

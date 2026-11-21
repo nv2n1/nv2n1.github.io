@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-postalias/"
 description: "postalias – Postfix alias database maintenance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> postalias &#8211; Postfix alias database maintenance </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postalias</code> [<code>-Nfinoprsuvw</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>key</i>] [<code>-q </code><i>key</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>file_type</i>:]<i>file_name</i>&nbsp;&#8230;</p>

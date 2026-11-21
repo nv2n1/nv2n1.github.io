@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sshfp/"
 description: "sshfp – Generate SSHFP DNS records from knownhosts files or ssh-keyscan"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sshfp &#8211; Generate SSHFP DNS records from knownhosts files or ssh-keyscan </p>
 <h2>SYNTAX</h2>
 <p> sshfp [<code>-k</code> &lt;<i>knownhosts_file</i>&gt;] [<code>-d</code>] [<code>-a</code>] [<code>&#8211;type</code> &lt;algo&gt;] [<code>&#8211;digest</code> &lt;digest&gt;] [&lt;<i>host1</i>&gt; [<i>host2 &#8230;]</i>] </p>
 <p> sshfp <code>-s</code> [<code>-p</code> &lt;<i>port</i>&gt;] [<code>-d</code>] [<code>-a</code>] [<code>&#8211;type</code> &lt;algo&gt;] [<code>&#8211;digest</code> &lt;digest&gt;] [<code>-n &lt;nameserver</code>&gt;<i>] &lt;domain1</i>&gt; [<i>domain2</i>] &lt;<i>host1</i>&gt; [<i>host2 &#8230;</i>] &gt;</p>

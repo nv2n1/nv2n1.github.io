@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getfscreatecon_raw/"
 description: "getfscreatecon, setfscreatecon – get or set the SELinux security context used for creating a new file system object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getfscreatecon, setfscreatecon &#8211; get or set the SELinux security context used for creating a new file system object </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int getfscreatecon(char **</code><i>con</i><code>);</code> </p>

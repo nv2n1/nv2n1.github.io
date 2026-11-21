@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ps2ascii/"
 description: "ps2ascii – Ghostscript translator from PostScript or PDF to ASCII"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ps2ascii &#8211; Ghostscript translator from PostScript or PDF to ASCII </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ps2ascii</code> [ <i>input.ps</i> [ <i>output.txt</i> ] ]<br />
  <code>ps2ascii</code> <i>input.pdf</i> [ <i>output.txt</i> ]</p>

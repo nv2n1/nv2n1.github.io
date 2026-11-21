@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dircolors/"
 description: "dircolors – color setup for ls"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dircolors &#8211; color setup for ls </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dircolors</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>
 <h2>DESCRIPTION</h2>

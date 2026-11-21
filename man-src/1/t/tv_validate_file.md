@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_validate_file/"
 description: "tv_validate_file – Validate that a file contains valid xmltv data."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_validate_file &#8211; Validate that a file contains valid xmltv data. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_validate_file &#8211;help </p>
 <p> tv_validate_grabber [&#8211;dtd-file &lt;dtdfile&gt;] &lt;file&gt;</p>

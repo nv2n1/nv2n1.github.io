@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvitomp/"
 description: "dvitomp – convert a TeX DVI file to a MetaPost MPXFILE"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvitomp &#8211; convert a TeX DVI file to a MetaPost MPXFILE </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvitomp</code> [<i>OPTIONS</i>] <i>dvifile</i>[<i></i><code>.dvi</code>] [<i>mpxfile</i>[<i></i><code>.mpx</code>]] </p>
 <p> <code>mpost </code> <code>&#8211;dvitomp</code> <i>dvifile</i>[<i></i><code>.dvi</code>] [<i>mpxfile</i>[<i></i><code>.mpx</code>]]</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ark/"
 description: "ark – KDE archiving tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ark &#8211; KDE archiving tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ark</code> [<code>-b</code>] [<code>-a</code>] [<code>-e</code>] [<code>-c</code>] [<code>-f</code><i></dt>

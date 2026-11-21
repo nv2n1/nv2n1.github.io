@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-align_image_stack/"
 description: "align_image_stack – Align overlapping images for HDR or focus stack creation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> align_image_stack &#8211; Align overlapping images for HDR or focus stack creation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>align_image_stack</code> [options] <i>input files</i></p>
 <h2>DESCRIPTION</h2>

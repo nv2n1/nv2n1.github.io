@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlrepair/"
 description: "mysqlcheck – a table maintenance program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlcheck &#8211; a table maintenance program </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlcheck [</code><i>options</i><code>] [</code><i>db_name</i><code> [</code><i>tbl_name</i><code> &#8230;]]</code></dt></dl>

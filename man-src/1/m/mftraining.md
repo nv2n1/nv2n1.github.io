@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mftraining/"
 description: "mftraining – feature training for Tesseract"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mftraining &#8211; feature training for Tesseract </p>
 <h2>SYNOPSIS</h2>
 <p> mftraining -U <i>unicharset</i> -O <i>lang.unicharset</i> <i>FILE</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

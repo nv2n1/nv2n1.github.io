@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libtoolize/"
 description: "libtoolize – Prepare a package to use libtool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libtoolize &#8211; Prepare a package to use libtool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libtoolize</code> [<i>,OPTION/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

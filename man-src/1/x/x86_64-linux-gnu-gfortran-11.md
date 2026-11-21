@@ -6,8 +6,6 @@ letter: "x"
 url: "/docs/linux/man/1-x86_64-linux-gnu-gfortran-11/"
 description: "gfortran – GNU Fortran compiler"
 ---
-<h2 class="name">NAME</h2>
-<p> gfortran - GNU Fortran compiler </p>
 <h2>SYNOPSIS</h2>
 <p> gfortran [<code>-c</code>|<code>-S</code>|<code>-E</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>]&nbsp;[<code>-pg</code>]&nbsp;[<code>-O</code><i>level</i>] <br />

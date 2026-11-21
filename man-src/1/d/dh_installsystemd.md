@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installsystemd/"
 description: "dh_installsystemd – install systemd unit files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installsystemd &#8211; install systemd unit files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installsystemd</code> [<i>debhelper options</i>] [<code>&#8211;restart-after-upgrade</code>] [<code>&#8211;no-stop-on-upgrade</code>] [<code>&#8211;no-enable</code>] [<code>&#8211;name=</code><i>name</i>] [<i>unit file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rls_rli_info_t/"
 description: "globus_rls_rli_info_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_rls_rli_info_t &#8211; </p>
 <p> Information about RLI server, returned by <code>globus_rls_client_lrc_rli_info()</code> and <code>globus_rls_client_lrc_rli_list()</code>.</p>
 <h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>

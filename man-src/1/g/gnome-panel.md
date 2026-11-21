@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-panel/"
 description: "gnome-panel – Display the GNOME panel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-panel &#8211; Display the GNOME panel </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-about [&#8211;replace]</code></p>
 <h2>DESCRIPTION</h2>

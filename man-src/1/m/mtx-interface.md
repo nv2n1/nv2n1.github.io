@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtx-interface/"
 description: "mtx-interface – ConTeXt Interface Related Goodies"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtx-interface &#8211; ConTeXt Interface Related Goodies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script interface [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

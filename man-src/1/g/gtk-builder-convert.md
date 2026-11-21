@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk-builder-convert/"
 description: "gtk-builder-convert – Glade file conversion utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk-builder-convert &#8211; Glade file conversion utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-builder-convert</code> [&#8211;skip-windows] [&#8211;target-version&nbsp;<i>version</i>] [&#8211;root&nbsp;<i>name</i>] {input} {output}</dt></dl>

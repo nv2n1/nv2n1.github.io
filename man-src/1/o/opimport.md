@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-opimport/"
 description: "opimport – converts sample database files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> opimport &#8211; converts sample database files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opimport</code> [ <i>options</i> ] input_file</p>
 <h2>DESCRIPTION</h2>

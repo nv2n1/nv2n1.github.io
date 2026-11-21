@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mudraw/"
 description: "mudraw – render PDF/XPS/CBZ/EPUB documents"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mudraw &#8211; render PDF/XPS/CBZ/EPUB documents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mudraw</code> [<i>options</i>] file [<i>pages]</i> </p>
 <h2>DESCRIPTION</h2>

@@ -6,8 +6,6 @@ letter: "f"
 url: "/docs/linux/man/1-fincore/"
 description: "fincore – count pages of file contents in core"
 ---
-<h2 class="name">NAME</h2>
-<p> fincore - count pages of file contents in core </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fincore</code> [options] <i>file</i>...  </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamlopt/"
 description: "ocamlopt – The OCaml native-code compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamlopt &#8211; The OCaml native-code compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlopt</code> [ <i>options</i> ] <i>filename</i>&nbsp;<wbr>&#8230; </p>
 <p> <code>ocamlopt.opt</code> (same options) </p>

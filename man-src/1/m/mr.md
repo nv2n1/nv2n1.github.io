@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mr/"
 description: "mr – a tool to manage all your version control repos"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mr &#8211; a tool to manage all your version control repos </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mr</code> [options] checkout </p>
 <p> <code>mr</code> [options] update </p>

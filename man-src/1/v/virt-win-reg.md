@@ -6,8 +6,6 @@ letter: "v"
 url: "/docs/linux/man/1-virt-win-reg/"
 description: "virt-win-reg – Export and merge Windows Registry entries from a Windows guest"
 ---
-<h2 class="name">NAME</h2>
-<p> virt-win-reg - Export and merge Windows Registry entries from a Windows guest </p>
 <h2>SYNOPSIS</h2>
 <pre><code> virt-win-reg domname 'HKLM\Path\To\Subkey'
  virt-win-reg domname 'HKLM\Path\To\Subkey' name

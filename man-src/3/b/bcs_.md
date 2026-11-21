@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bcs_/"
 description: "QuantLib::MixedScheme – Mixed (explicit/implicit) scheme for finite difference methods."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::MixedScheme &#8211; Mixed (explicit/implicit) scheme for finite difference methods. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/mixedscheme.hpp&gt; </p>
 <h3>Public Types</h3>

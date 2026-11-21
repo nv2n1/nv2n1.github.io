@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-anno/"
 description: "anno – annotate messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> anno &#8211; annotate messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>anno</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-component</code> <i>field</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-date</code> | <code>-nodate</code>] [<code>-draft</code>] [<code>-append</code>] [<code>-list</code>] [<code>-delete</code>] [<code>-number</code> <i>[</i>num|all<i>]]</i> [<code>-preserve</code> | <code>-nopreserve</code>] [<code>-version</code>] [<code>-help</code>] [<code>-text</code> <i>body</i>]</dt></dl>

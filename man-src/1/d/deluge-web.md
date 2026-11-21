@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-deluge-web/"
 description: "deluge-web – a bittorrent client ajax web interface"
 ---
 
-<h2 class="name">NAME</h2>
-<p> deluge-web &#8211; a bittorrent client ajax web interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>deluge-web [options]</code> </p>
 <h2>DESCRIPTION</h2>

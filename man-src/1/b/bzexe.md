@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bzexe/"
 description: "bzexe – compress executable files in place"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bzexe &#8211; compress executable files in place </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bzexe</code> [ name &#8230; ]</p>
 <h2>DESCRIPTION</h2>

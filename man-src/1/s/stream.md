@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stream/"
 description: "stream – a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats."
 ---
 
-<h2 class="name">NAME</h2>
-<p> stream &#8211; a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>stream-im6.q16</code> [<i>options</i>] <i>input-file</i> <i>output-file</i></dt>

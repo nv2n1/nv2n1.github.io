@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_gssapi_extensions/"
 description: "GSSAPI Extensions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GSSAPI Extensions &#8211; </p>
 <p> extensions</p>
 <h3>Modules</h3>
 <p> <code>Buffer Set Utilities</code><br />

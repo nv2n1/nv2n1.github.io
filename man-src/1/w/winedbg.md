@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-winedbg/"
 description: "winedbg – Wine debugger"
 ---
 
-<h2 class="name">NAME</h2>
-<p> winedbg &#8211; Wine debugger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>winedbg</code> [ <i>options</i> ] [ <i>program_name</i> [ <i>program_arguments</i> ] | <i>wpid</i> ] </p>
 <p> <code>winedbg &#8211;gdb</code> [ <i>options</i> ] [ <i>program_name</i> [ <i>program_arguments</i> ] | <i>wpid</i> ] </p>

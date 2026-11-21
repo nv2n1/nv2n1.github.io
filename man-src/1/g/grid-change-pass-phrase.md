@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grid-change-pass-phrase/"
 description: "grid-change-pass-phrase – Change the pass phrase of a private key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grid-change-pass-phrase &#8211; Change the pass phrase of a private key </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-change-pass-phrase</code> -help | -usage | -version | -versions </p>
 <p> <code>grid-change-pass-phrase</code> [-file <i>PRIVATE-KEY</i>]</p>

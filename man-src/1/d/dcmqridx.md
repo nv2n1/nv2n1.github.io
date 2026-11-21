@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmqridx/"
 description: "dcmqridx – Register a DICOM image file in an image database index file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmqridx &#8211; Register a DICOM image file in an image database index file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dcmqridx[options] index - out[dcmfile - in...]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-p2v/"
 description: "virt-p2v – Convert a physical machine to use KVM"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-p2v &#8211; Convert a physical machine to use KVM </p>
 <h2>SYNOPSIS</h2>
 <pre>
  virt-p2v

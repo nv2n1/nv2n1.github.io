@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rls_sender_info_t/"
 description: "globus_rls_sender_info_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_rls_sender_info_t &#8211; </p>
 <p> Information about server sending updates to an rli, returned by <code>globus_rls_client_rli_sender_list()</code>.</p>
 <h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-callgrind_annotate/"
 description: "callgrind_annotate – post-processing tool for the Callgrind"
 ---
 
-<h2 class="name">NAME</h2>
-<p> callgrind_annotate &#8211; post-processing tool for the Callgrind </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>callgrind_annotate</code> [<i>options</i>] [<i>callgrind-out-file</i>&nbsp;[<i>source-files</i>&#8230;]]</dt></dl>

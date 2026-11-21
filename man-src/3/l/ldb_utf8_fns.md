@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldb_utf8_fns/"
 description: "ldb_utf8_fns –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldb_utf8_fns &#8211; </p>
 <p> The user can optionally supply a custom utf8 functions, to handle comparisons and casefolding.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ldb.h&gt;</p>

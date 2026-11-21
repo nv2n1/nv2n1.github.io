@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libnutclient_tcp/"
 description: "libnutclient_tcp, nutclient_tcp_create_client, nutclient_tcp_is_connected, nutclient_tcp_disconnect, nutclient_tcp_reconnect, nutclient_tcp_set_timeout, nutclient_tcp_get_timeout – TCP protocol rel..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> libnutclient_tcp, nutclient_tcp_create_client, nutclient_tcp_is_connected, nutclient_tcp_disconnect, nutclient_tcp_reconnect, nutclient_tcp_set_timeout, nutclient_tcp_get_timeout &#8211; TCP protocol related function for Network UPS Tools high-level client access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nutclient.h&gt;

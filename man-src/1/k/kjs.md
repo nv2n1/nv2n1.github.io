@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kjs/"
 description: "kjs – KDE ECMAScript compatible interpreter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kjs &#8211; KDE ECMAScript compatible interpreter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kjs</code> [[&#8211;help] | [-help] | [-h]] [[-e<i>&nbsp;<wbr>statement</i>]] [<i>script</i>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-growisofs/"
 description: "growisofs – combined genisoimage frontend/DVD recording program."
 ---
 
-<h2 class="name">NAME</h2>
-<p> growisofs &#8211; combined genisoimage frontend/DVD recording program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>growisofs</code> [<code>-dry-run</code>] [<code>-dvd-compat</code>] [<code>-overburn</code>] [<code>-speed=1</code>] -[<code>Z|M</code>] <i>/dev/dvd</i> <i>&lt;genisoimage-options&gt;</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-maintscript-helper/"
 description: "dpkg-maintscript-helper – works around known dpkg limitations in maintainer scripts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-maintscript-helper &#8211; works around known dpkg limitations in maintainer scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-maintscript-helper</code> <i>command</i> [<i>parameter</i>&#8230;] <code>&#8212;</code> <i>maint-script-parameter</i>&#8230;</p>
 <h2>COMMANDS AND PARAMETERS</h2>

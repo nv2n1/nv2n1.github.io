@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libinput-debug-tablet/"
 description: "libinput-debug-tablet – debug and visualize tablet axes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libinput-debug-tablet &#8211; debug and visualize tablet axes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput debug-tablet [&#8211;help] [options] [</code><i>/dev/input/event0]</i></p>
 <h2>DESCRIPTION</h2>

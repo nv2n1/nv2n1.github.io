@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pmdanews/"
 description: "pmdanews – sample Usenet news performance metrics domain agent (PMDA)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pmdanews &#8211; sample Usenet news performance metrics domain agent (PMDA) </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdanews</code> is an example Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values related to a set of newsgroups.</p>
 <h2>INSTALLATION</h2>

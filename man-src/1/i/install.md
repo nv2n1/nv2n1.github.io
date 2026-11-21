@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-install/"
 description: "install – copy files and set attributes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> install &#8211; copy files and set attributes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>install</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br />
  <code>install</code> [<i>,OPTION/</i>]&#8230; <i>,SOURCE/</i>&#8230; <i>,DIRECTORY/</i><br />

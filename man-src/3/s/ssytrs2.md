@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssytrs2/"
 description: "ssytrs2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssytrs2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br />

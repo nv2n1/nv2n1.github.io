@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libtalloc_destructors/"
 description: "libtalloc_destructors – Chapter 4: Using destructors"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libtalloc_destructors &#8211; Chapter 4: Using destructors</p>
 <h2>Using destructors</h2>
 <p> Destructors are well known methods in the world of object oriented programming. A destructor is a method of an object that is automatically run when the object is destroyed. It is usually used to return resources taken by the object back to the system (e.g. closing file descriptors, terminating connection to a database, deallocating memory). </p>
 <p> With talloc we can take the advantage of destructors even in C. We can easily attach our own destructor to a talloc context. When the context is freed, the destructor will run automatically. </p>

@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-piconv/"
 description: "piconv —"
 ---
-<h2 class="name">NAME</h2>
-<p> piconv -- </p>
 <p> <a href="/docs/linux/man/1-iconv/">iconv</a>(1), reinvented in perl  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>  piconv [-f from_encoding] [-t to_encoding]

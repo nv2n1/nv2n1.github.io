@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-start-pulseaudio-x11/"
 description: "start-pulseaudio-x11 – PulseAudio Sound Server X11 Startup Script"
 ---
 
-<h2 class="name">NAME</h2>
-<p> start-pulseaudio-x11 &#8211; PulseAudio Sound Server X11 Startup Script </p>
 <h2>SYNOPSIS</h2>
 <p> <code>start-pulseaudio-x11 [</code><i>pulseaudio options</i><code>] </code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-prompter/"
 description: "prompter – prompting editor front-end for nmh"
 ---
 
-<h2 class="name">NAME</h2>
-<p> prompter &#8211; prompting editor front-end for nmh </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>prompter</code> [<code>-erase</code> <i>chr</i>] [<code>-kill</code> <i>chr</i>] [<code>-prepend</code> | <code>-noprepend</code>] [<code>-rapid</code> | <code>-norapid</code>] [<code>-doteof</code> | <code>-nodoteof</code>] <i>file</i> [<code>-version</code>] [<code>-help</code>]</dt></dl>

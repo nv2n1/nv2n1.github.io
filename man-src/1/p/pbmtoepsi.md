@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoepsi/"
 description: "pbmtoepsi – convert a portable bitmap into an encapsulated PostScript style preview bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoepsi &#8211; convert a portable bitmap into an encapsulated PostScript style preview bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoepsi</code> [<code>-bbonly</code>] [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

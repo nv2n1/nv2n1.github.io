@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-printafm/"
 description: "printafm – Print the metrics from a Postscript font in AFM format using ghostscript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> printafm &#8211; Print the metrics from a Postscript font in AFM format using ghostscript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>printafm</code> <i>fontname</i></p>
 <h2>DESCRIPTION</h2>

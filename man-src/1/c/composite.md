@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-composite/"
 description: "composite – overlaps one image over another."
 ---
 
-<h2 class="name">NAME</h2>
-<p> composite &#8211; overlaps one image over another. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>composite-im6.q16</code> <code>[</code> <i>options</i> <code>&#8230; ]</code> <i>change-file base-file</i> <code>[</code> <i>mask-file</i> <code>]</code> <i>output-image</i></dt>

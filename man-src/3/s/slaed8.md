@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaed8/"
 description: "slaed8.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaed8.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed8</code> (ICOMPQ, K, N, QSIZ, D, Q, LDQ, INDXQ, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, PERM, GIVPTR, GIVCOL, GIVNUM, INDXP, INDX, INFO)<br />

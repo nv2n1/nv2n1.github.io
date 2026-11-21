@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podebconf-display-po/"
 description: "podebconf-display-po – display content of a PO file in a debconf interface"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podebconf-display-po &#8211; display content of a PO file in a debconf interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>podebconf-display-po</code> [<code>-h</code>] [<code>-f</code> <i></i><font SIZE="-1"><i>FRONTEND</i></font><i></i>] <i>file.po</i></p>
 <h2>DESCRIPTION</h2>

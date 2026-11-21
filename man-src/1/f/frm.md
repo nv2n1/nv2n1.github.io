@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-frm/"
 description: "frm.mailutils – display From: lines."
 ---
 
-<h2 class="name">NAME</h2>
-<p> frm.mailutils &#8211; display From: lines. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>frm.mailutils</code> [<i>,OPTION/</i>&#8230;] [<i>,URL /</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-set_thread_area/"
 description: "get_thread_area, set_thread_area – manipulate thread-local storage information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> get_thread_area, set_thread_area &#8211; manipulate thread-local storage information </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/unistd.h&gt;

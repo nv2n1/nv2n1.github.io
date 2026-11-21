@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-uninstall/"
 description: "cargo-uninstall – Remove a Rust binary"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-uninstall &#8211; Remove a Rust binary </p>
 <h2>SYNOPSIS</h2>
 <p> cargo uninstall [OPTIONS] &lt;SPEC&gt; </p>
 <p> cargo uninstall (-h | &#8211;help)</p>

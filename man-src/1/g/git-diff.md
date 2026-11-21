@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-diff/"
 description: "git-diff – Show changes between commits, commit and working tree, etc"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-diff &#8211; Show changes between commits, commit and working tree, etc </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git diff[&lt;options&gt;][&lt;commit&gt;][--][&lt;path&gt;...] git diff[&lt;options&gt;]-- cached[--merge - base][&lt;commit&gt;][--][&lt;path&gt;...] git diff[&lt;options&gt;][--merge - base]&lt;commit&gt;[&lt;commit&gt;...]&lt;commit&gt;[--][&lt;path&gt;...] git diff[&lt;options&gt;]&lt;commit&gt;...&lt;commit&gt;[--][&lt;path&gt;...] git diff[&lt;options&gt;]&lt;blob&gt;&lt;blob&gt;

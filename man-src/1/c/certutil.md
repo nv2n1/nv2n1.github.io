@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-certutil/"
 description: "certutil – Manage keys and certificate in both NSS databases and other NSS tokens"
 ---
 
-<h2 class="name">NAME</h2>
-<p> certutil &#8211; Manage keys and certificate in both NSS databases and other NSS tokens </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>certutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>

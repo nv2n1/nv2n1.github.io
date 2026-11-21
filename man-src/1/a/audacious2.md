@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-audacious2/"
 description: "audacious2 – an advanced audio player."
 ---
 
-<h2 class="name">NAME</h2>
-<p> audacious2 &#8211; an advanced audio player.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>audacious2</code> [OPTION] &#8230; [FILE] &#8230; </p>
 <h2>DESCRIPTION</h2>

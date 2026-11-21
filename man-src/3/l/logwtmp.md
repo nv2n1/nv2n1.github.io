@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-logwtmp/"
 description: "updwtmp, logwtmp – append an entry to the wtmp file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> updwtmp, logwtmp &#8211; append an entry to the wtmp file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;utmp.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sge_ckpt/"
 description: "Grid Engine Checkpointing – the Grid Engine checkpointing mechanism and checkpointing support"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Grid Engine Checkpointing &#8211; the Grid Engine checkpointing mechanism and checkpointing support </p>
 <h2>DESCRIPTION</h2>
 <p> Grid Engine supports two levels of checkpointing: the user level and a operating system provided transparent level. User level checkpointing refers to applications, which do their own checkpointing by writing restart files at certain times or algorithmic steps and by properly processing these restart files when restarted. </p>
 <p> Transparent checkpointing has to be provided by the operating system and is usually integrated in the operating system kernel. An example for a kernel integrated checkpointing facility is the Hibernator package from Softway for SGI IRIX platforms. </p>

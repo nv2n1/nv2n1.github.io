@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-editres/"
 description: "editres – a dynamic resource editor for X Toolkit applications"
 ---
 
-<h2 class="name">NAME</h2>
-<p> editres &#8211; a dynamic resource editor for X Toolkit applications </p>
 <h2>SYNTAX</h2>
 <p> <code>editres</code> [ <i>-toolkitoption</i> &#8230; ]</p>
 <h2>OPTIONS</h2>

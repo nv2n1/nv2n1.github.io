@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmcomp/"
 description: "pnmcomp – composite (overlay) two portable anymap files together"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmcomp &#8211; composite (overlay) two portable anymap files together </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmcomp</code> [<code>-xoff=</code><i>X</i> | <code>-align=</code>{<code>left</code>,<code>center</code>,<code>right</code>}]<br />
  [<code>-yoff=</code><i>Y</i> | <code>-valign=</code>{<code>top</code>,<code>middle</code>,<code>bottom</code>}]<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ro-localization/"
 description: "ro-localization – Monte-Carlo localization for beacon range-only measurements"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ro-localization &#8211; Monte-Carlo localization for beacon range-only measurements </p>
 <h2>SYNOPSIS</h2>
 <p> ro-localization <i>config_file.ini</i></p>
 <h2>DESCRIPTION</h2>

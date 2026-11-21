@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ecryptfs-setup-swap/"
 description: "ecryptfs-setup-swap – ensure that any swap space is encrypted"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecryptfs-setup-swap &#8211; ensure that any swap space is encrypted</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-setup-swap</code> [-f|&#8211;force] </p>
 <h2>DESCRIPTION</h2>

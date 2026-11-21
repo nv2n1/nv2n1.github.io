@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wmf2svg/"
 description: "wmf2svg – Convert metafile image to W3C’s scalable vector graphic (SVG) format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wmf2svg &#8211; Convert metafile image to W3C&#8217;s scalable vector graphic (SVG) format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmf2svg</code> [<i>OPTION</i>] &#8230; [<code>-o</code><i> &lt;file.swg</i>&gt;] &lt;<i>file.wmf</i>&gt; </p>
 <p> <code>wmf2svg</code> [<i>OPTION</i>] &#8230; <code>&#8211;auto</code><i> &lt;file1.wmf</i>&gt; [&lt;<i>file2.wmf</i>&gt; &#8230;] </p>

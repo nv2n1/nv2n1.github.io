@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_sysconfig_get_user_cert_filename_unix/"
 description: "Functions for UNIX platforms –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Functions for UNIX platforms &#8211; </p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_gsi_sysconfig_set_key_permissions_unix</code> (char *filename)<br />
  <i>UNIX &#8211; Set Key Permissions. </i><br />

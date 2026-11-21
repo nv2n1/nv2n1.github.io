@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-op-check-perfevents/"
 description: "op-check-perfevents – checks for kernel perf pmu support"
 ---
 
-<h2 class="name">NAME</h2>
-<p> op-check-perfevents &#8211; checks for kernel perf pmu support </p>
 <h2>SYNOPSIS</h2>
 <p> <code>op-check-perfevents</code> [ <i>options</i> ]</p>
 <h2>DESCRIPTION</h2>

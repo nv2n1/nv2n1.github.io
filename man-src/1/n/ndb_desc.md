@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_desc/"
 description: "ndb_desc – describe NDB tables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_desc &#8211; describe NDB tables </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_desc </code><i>options</i></dt></dl>

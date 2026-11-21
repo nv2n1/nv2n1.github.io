@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bti-shrink-urls/"
 description: "bti-shrink-urls – convert URLs to a shorter form using a web service"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bti-shrink-urls &#8211; convert URLs to a shorter form using a web service </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bti</code> [<code>&#8211;escaped</code>] [<code>&#8211;help</code>] [<code>URL</code>]</dt></dl>

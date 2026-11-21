@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dblink_get_result/"
 description: "dblink_get_result – gets an async query result"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblink_get_result &#8211; gets an async query result </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dblink_get_result(text connname [, bool fail_on_error]) returns setof record

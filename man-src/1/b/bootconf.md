@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bootconf/"
 description: "bootconf – bootconf"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bootconf &#8211; bootconf </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bootconf</code> [options&#8230;]</dt></dl>

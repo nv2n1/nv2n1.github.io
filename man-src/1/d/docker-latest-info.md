@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-info/"
 description: "docker-info – Display system-wide information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-info &#8211; Display system-wide information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker info</code> [<code>&#8211;help</code>] </p>
 <h2>DESCRIPTION</h2>

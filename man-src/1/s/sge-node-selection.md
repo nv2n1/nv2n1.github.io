@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sge-node-selection/"
 description: "busy-nodes, idle-nodes, dead-nodes, nodes-in-job, qselect-node-list – List xxQS_NAMExx node names by various criteria"
 ---
 
-<h2 class="name">NAME</h2>
-<p> busy-nodes, idle-nodes, dead-nodes, nodes-in-job, qselect-node-list &#8211; List xxQS_NAMExx node names by various criteria </p>
 <h2>SYNOPSIS</h2>
 <p> <code>busy-nodes</code> [<code>-w</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />
  <code>idle-nodes</code> [<code>-w</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />

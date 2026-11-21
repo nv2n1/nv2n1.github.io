@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-check-module/"
 description: "check-module – program to check gnulib modules."
 ---
 
-<h2 class="name">NAME</h2>
-<p> check-module &#8211; program to check gnulib modules.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>check-module [OPTIONS] FILE&#8230;</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-ps/"
 description: "flatpak-ps – Enumerate running instances"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-ps &#8211; Enumerate running instances </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak ps</code> [OPTION&#8230;]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hfind/"
 description: "hfind – Lookup a hash value in a hash database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hfind &#8211; Lookup a hash value in a hash database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hfind [-i</code> <i>db_type</i> <code>] [-f</code> <i>lookup_file</i> <code>] [-eq] </code> <i>db_file [hashes]</i></p>
 <h2>DESCRIPTION</h2>

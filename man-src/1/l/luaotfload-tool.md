@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-luaotfload-tool/"
 description: "luaotfload-tool – generate and query the Luaotfload font names database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> luaotfload-tool &#8211; generate and query the Luaotfload font names database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>luaotfload-tool</code> [ -bcDfFiIlLnpqRSuvVhw ]</p>
 <dl>

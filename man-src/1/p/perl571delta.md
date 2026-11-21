@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl571delta/"
 description: "perl571delta – what’s new for perl v5.7.1"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl571delta &#8211; what&#8217;s new for perl v5.7.1 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.7.0 release and the 5.7.1 release. </p>
 <p> (To view the differences between the 5.6.0 release and the 5.7.0 release, see perl570delta.)</p>

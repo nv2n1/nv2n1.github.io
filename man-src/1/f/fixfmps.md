@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fixfmps/"
 description: "fixfmps – filter to fix Framemaker documents so PSUtils work"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fixfmps &#8211; filter to fix Framemaker documents so PSUtils work </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixfmps </code> &lt; <i>Framemaker.ps</i> &gt; <i>Fixed.ps</i></p>
 <h2>DESCRIPTION</h2>

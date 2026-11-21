@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-derrick/"
 description: "derrick — a simple network stream recorder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> derrick &#8212; a simple network stream recorder </p>
 <h2>SYNOPSIS</h2>
 <p> <code>derrick</code> [<code>-mvVh</code>] [<code>-i</code> <i>interface</i>] [<code>-r</code> <i>file</i>] [<code>-f</code> <i>expression</i>] [<code>-l</code> <i>file</i>] [<code>-b</code> <i>bytes</i>] [<code>-t</code> <i>lines</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xcursorgen/"
 description: "xcursorgen – create an X cursor file from a collection of PNG images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xcursorgen &#8211; create an X cursor file from a collection of PNG images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcursorgen</code> [ <code>-V</code> ] [ <code>&#8211;version</code> ] [ <code>-?</code> ] [ <code>&#8211;help</code> ] [ <code>-p</code> <i>dir</i> ] [ <code>&#8211;prefix</code> <i>dir</i> ] [ <i>config-file</i> [ <i>output-file</i> ] ]</p>
 <h2>DESCRIPTION</h2>

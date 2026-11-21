@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jigdo-lite/"
 description: "jigdo-lite – Download jigdo files using wget"
 ---
 
-<h2 class="name">NAME</h2>
-<p> jigdo-lite &#8211; Download jigdo files using wget </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jigdo-lite</code> [ <code>URL</code> ] </p>
 <h2>DESCRIPTION</h2>

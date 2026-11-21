@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysql_config/"
 description: "mysql_config – get compile options for compiling clients"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysql_config &#8211; get compile options for compiling clients </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_config </code><i>options</i></dt></dl>

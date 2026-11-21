@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-io_submit/"
 description: "io_submit – submit asynchronous I/O blocks for processing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> io_submit &#8211; submit asynchronous I/O blocks for processing </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */

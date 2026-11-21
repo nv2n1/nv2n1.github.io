@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-easytag/"
 description: "easytag – tag editor for MP3, Ogg Vorbis files and more"
 ---
 
-<h2 class="name">NAME</h2>
-<p> easytag &#8211; tag editor for MP3, Ogg Vorbis files and more </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>easytag</code> [OPTION]</dt>

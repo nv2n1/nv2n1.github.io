@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-avc_cleanup/"
 description: "avc_open, avc_destroy, avc_reset, avc_cleanup – userspace SELinux AVC setup and teardown"
 ---
 
-<h2 class="name">NAME</h2>
-<p> avc_open, avc_destroy, avc_reset, avc_cleanup &#8211; userspace SELinux AVC setup and teardown </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>

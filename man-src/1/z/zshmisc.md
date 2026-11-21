@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zshmisc/"
 description: "zshmisc – everything and then some"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zshmisc &#8211; everything and then some </p>
 <h2>SIMPLE COMMANDS &amp; PIPELINES</h2>
 <p> A <i>simple command</i> is a sequence of optional parameter assignments followed by blank-separated words, with optional redirections interspersed. For a description of assignment, see the beginning of <i><a href="/docs/linux/man/1-zshparam/">zshparam</a></i>(1). </p>
 <p> The first word is the command to be executed, and the remaining words, if any, are arguments to the command. If a command name is given, the parameter assignments modify the environment of the command when it is executed. The value of a simple command is its exit status, or 128 plus the signal number if terminated by a signal. For example, </p>

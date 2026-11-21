@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-metacity/"
 description: "METACITY – minimal GTK2 Window Manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> METACITY &#8211; minimal GTK2 Window Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>metacity</code> [&#8211;display=<i>DISPLAY</i>] [&#8211;replace] [&#8211;sm-client-id=<i>ID</i>] [&#8211;sm-disable] [&#8211;sm-save-file=<i>FILENAME</i>] [&#8211;sync] [&#8211;composite] [&#8211;no-composite] [&#8211;no-force-fullscreen] [&#8211;version] [&#8211;help]</p>
 <h2>DESCRIPTION</h2>

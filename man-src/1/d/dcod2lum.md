@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcod2lum/"
 description: "dcod2lum – Convert hardcopy characteristic curve file to softcopy format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcod2lum &#8211; Convert hardcopy characteristic curve file to softcopy format </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcod2lum in-file out-file

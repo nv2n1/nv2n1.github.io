@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcj-dbtool/"
 description: "gcj-dbtool – Manipulate class file mapping databases for libgcj"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcj-dbtool &#8211; Manipulate class file mapping databases for libgcj </p>
 <h2>SYNOPSIS</h2>
 <p> gcj-dbtool <font SIZE="-1"><code>OPTION</code></font> <i></i><font SIZE="-1"><i>DBFILE</i></font><i></i> [<font SIZE="-1"><code>MORE</code></font>] &#8230; </p>
 <p> gcj-dbtool [<code>-0</code>] [<code>&#8211;</code>] [<code>-n</code>] [<code>-a</code>] [<code>-f</code>]<br />

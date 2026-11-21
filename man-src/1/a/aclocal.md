@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aclocal/"
 description: "aclocal – manual page for aclocal 1.16.5"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aclocal &#8211; manual page for aclocal 1.16.5 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aclocal</code> [<i>,OPTION/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

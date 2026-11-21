@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-btowc/"
 description: "btowc – convert single byte to wide character"
 ---
 
-<h2 class="name">NAME</h2>
-<p> btowc &#8211; convert single byte to wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;

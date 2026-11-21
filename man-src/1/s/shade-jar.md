@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shade-jar/"
 description: "shade-jar – rename Java namespace in JAR file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shade-jar &#8211; rename Java namespace in JAR file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bin/shade-jar</code> <code>orig-namespace</code> <code>shaded-namespace</code> <code>in-jar</code> <code>out-jar</code></p>
 <h2>DESCRIPTION</h2>

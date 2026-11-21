@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-mime/"
 description: "xdg-mime – command line tool for querying information about file type handling and adding descriptions for new file types"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-mime &#8211; command line tool for querying information about file type handling and adding descriptions for new file types </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-mime</code> query {filetype | default} &#8230;</dt>

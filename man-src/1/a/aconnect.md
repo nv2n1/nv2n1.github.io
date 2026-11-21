@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aconnect/"
 description: "aconnect – ALSA sequencer connection manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aconnect &#8211; ALSA sequencer connection manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aconnect</code> [-d] [-options] sender receiver<br />
  <code>aconnect</code> -i|-o [-options]<br />

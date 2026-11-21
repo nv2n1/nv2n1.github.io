@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-commit/"
 description: "guilt-commit – Commit specified number of patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-commit &#8211; Commit specified number of patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-commit</i> -n &lt;num&gt; | -a | &#8211;all </p>
 <p> Turn specified number of bottom most patches into Git commits. This removes the the patches from the series, and status file.</p>

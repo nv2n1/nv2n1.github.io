@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdftops/"
 description: "pdftops – Portable Document Format (PDF) to PostScript converter (version 3.03)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdftops &#8211; Portable Document Format (PDF) to PostScript converter (version 3.03) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftops</code> [options] &lt;PDF-file&gt; [&lt;PS-file&gt;]</p>
 <h2>DESCRIPTION</h2>

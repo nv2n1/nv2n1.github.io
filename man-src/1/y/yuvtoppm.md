@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-yuvtoppm/"
 description: "yuvtoppm – convert Abekas YUV bytes into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> yuvtoppm &#8211; convert Abekas YUV bytes into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvtoppm</code> <i>width height</i> [<i>imagedata</i>]</p>
 <h2>DESCRIPTION</h2>

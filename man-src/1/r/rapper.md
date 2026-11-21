@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rapper/"
 description: "rapper – Raptor RDF parsing and serializing utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rapper &#8211; Raptor RDF parsing and serializing utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rapper</code> [<code>OPTIONS</code>] <i>INPUT-URI</i> <i>[INPUT-BASE-URI]</i></p>
 <h2>EXAMPLE</h2>

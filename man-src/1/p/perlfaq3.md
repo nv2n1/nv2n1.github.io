@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlfaq3/"
 description: "perlfaq3 – Programming Tools"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlfaq3 &#8211; Programming Tools </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
 <h2>DESCRIPTION</h2>

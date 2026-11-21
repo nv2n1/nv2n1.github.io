@@ -8,8 +8,6 @@ description: "fbgs – Poor man’s PostScript/pdf viewer for the linux framebuf
 ---
 
 <p>#</p>
-<h2 class="name">NAME</h2>
-<p> fbgs &#8211; Poor man&#8217;s PostScript/pdf viewer for the linux framebuffer console. # # </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbgs</code><br />
 &nbsp;<wbr>[<code>-l</code>|<code>-xl</code>|<code>-xxl</code>|<code>-r</code>&nbsp;<wbr><i>n</i>]&nbsp;<wbr>[<code>-c</code>]&nbsp;<wbr>[<code>-b</code>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>password</i>]&nbsp;<wbr>[<code>&#8211;fp</code>&nbsp;<wbr><i>number</i>]&nbsp;<wbr>[<code>&#8211;lp</code>&nbsp;<wbr><i>number</i>]&nbsp;<wbr>[<i>fbi options</i>]&nbsp;<wbr><i>file</i> # #</p>

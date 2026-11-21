@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bioradtopgm/"
 description: "bioradtopgm – convert a Biorad confocal file into a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bioradtopgm &#8211; convert a Biorad confocal file into a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bioradtopgm</code> [<code>-image#</code>] [<i>imagedata</i>]</p>
 <h2>DESCRIPTION</h2>

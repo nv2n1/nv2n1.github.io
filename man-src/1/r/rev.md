@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rev/"
 description: "rev – reverse lines characterwise"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rev &#8211; reverse lines characterwise </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rev</code> [option] [<i>file</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

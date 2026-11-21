@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qorder/"
 description: "qorder – exchange order of two pbs batch jobs in a queue."
 ---
 
-<h2 class="name">NAME</h2>
-<p> qorder &#8211; exchange order of two pbs batch jobs in a queue. </p>
 <h2>SYNOPSIS</h2>
 <p> qorder job_identifier job_identifier</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libtmpfilefd/"
 description: "pm_tmpfile_fd() – create a temporary unnamed file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pm_tmpfile_fd() &#8211; create a temporary unnamed file</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netpbm/pm.h&gt;

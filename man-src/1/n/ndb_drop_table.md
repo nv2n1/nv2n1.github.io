@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndb_drop_table/"
 description: "ndb_drop_table – drop an NDB table"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndb_drop_table &#8211; drop an NDB table </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_drop_table </code><i>options</i></dt></dl>

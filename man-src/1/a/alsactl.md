@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-alsactl/"
 description: "alsactl – advanced controls for ALSA soundcard driver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> alsactl &#8211; advanced controls for ALSA soundcard driver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>alsactl</code> [<i>options</i>] [<i>store</i>|<i>restore</i>|<i>init</i>] &lt;card # or id or device&gt; </p>
 <p> <code>alsactl</code> <i>monitor</i> &lt;card # or id&gt; </p>

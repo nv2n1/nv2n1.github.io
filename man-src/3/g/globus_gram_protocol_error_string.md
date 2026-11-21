@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_error_string/"
 description: "Error Messages –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Error Messages &#8211; </p>
 <p> GRAM Error Messages Functions in this section handle converting GRAM error codes to strings which can help the user diagnose GRAM problems.</p>
 <h3>Functions</h3>
 <p> const char * <code>globus_gram_protocol_error_string</code> (int error_code)<br />

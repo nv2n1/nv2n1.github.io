@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtopjxl/"
 description: "ppmtopjxl – convert a PPM image to an HP PaintJet XL PCL file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtopjxl &#8211; convert a PPM image to an HP PaintJet XL PCL file</p>
 <h2>SYNOPSIS</h2>
 <p> ppmtopjxl [<code>-nopack</code>] [<code>-gamma</code> <i>n</i>] [<code>-presentation</code>] [<code>-dark</code>] [<code>-diffuse</code>] [<code>-cluster</code>] [<code>-dither</code>] [<code>-xshift</code> <i>s</i>] [<code>-yshift</code> <i>s</i>] [<code>-xshift</code> <i>s</i>] [<code>-yshift</code> <i>s</i>] [{<code>-xsize</code>|<code>-width</code>|<code>-xscale</code>} <i>s</i>] [{<code>-ysize</code>|<code>-height</code>|<code>-yscale</code>} <i>s</i>] [<i>ppmfile</i>] </p>
 <h2>DESCRIPTION</h2>

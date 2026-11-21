@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-is_context_customizable/"
 description: "is_context_customizable – check whether SELinux context type is customizable by the administrator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> is_context_customizable &#8211; check whether SELinux context type is customizable by the administrator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int is_context_customizable(char *</code><i>scon</i><code>);</code></p>

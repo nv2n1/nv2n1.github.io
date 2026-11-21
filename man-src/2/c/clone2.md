@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-clone2/"
 description: "clone, __clone2, clone3 – create a child process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clone, __clone2, clone3 &#8211; create a child process </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 /* Prototype for the glibc wrapper function */

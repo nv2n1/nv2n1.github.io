@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmcrater/"
 description: "pgmcrater – create cratered terrain by fractal forgery"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmcrater &#8211; create cratered terrain by fractal forgery </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmcrater</code><br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-number</code> <i>n</i>] [<code>-height</code>|<code>-ysize</code> <i>s</i>] [<code>-width</code>|<code>-xsize</code> <i>s</i>] [<code>-gamma</code> <i>g</i>] </p>

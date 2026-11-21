@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlhacktips/"
 description: "perlhacktips – Tips for Perl core C code hacking"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlhacktips &#8211; Tips for Perl core C code hacking </p>
 <h2>DESCRIPTION</h2>
 <p> This document will help you learn the best way to go about hacking on the Perl core C code. It covers common problems, debugging, profiling, and more. </p>
 <p> If you haven&#8217;t read perlhack and perlhacktut yet, you might want to do that first.</p>

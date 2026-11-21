@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-server/"
 description: "zarafa-server – Start the Zarafa storage server."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-server &#8211; Start the Zarafa storage server. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-server</code> [<i>OPTION</i>]</dt></dl>

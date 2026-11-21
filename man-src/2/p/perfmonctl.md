@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-perfmonctl/"
 description: "perfmonctl – interface to IA-64 performance monitoring unit"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perfmonctl &#8211; interface to IA-64 performance monitoring unit </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;perfmon.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-muffin-window-demo/"
 description: "muffin-window-demo – demo of window features"
 ---
 
-<h2 class="name">NAME</h2>
-<p> muffin-window-demo &#8211; demo of window features </p>
 <h2>SYNOPSIS</h2>
 <p> <code>muffin-window-demo</code></p>
 <h2>DESCRIPTION</h2>

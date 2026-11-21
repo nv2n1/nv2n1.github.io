@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-matho-pascal/"
 description: "matho-pascal – display Pascal’s triangle"
 ---
 
-<h2 class="name">NAME</h2>
-<p> matho-pascal &#8211; display Pascal&#8217;s triangle</p>
 <h2>SYNOPSIS</h2>
 <p> <code>matho-pascal</code> [number-of-lines] </p>
 <h2>DESCRIPTION</h2>

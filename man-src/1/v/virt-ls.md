@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-ls/"
 description: "virt-ls – List files in a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-ls &#8211; List files in a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - ls[--options] - d domname directory[directory...] virt - ls[--options] - a disk.img[-a disk.img...] directory[directory...]

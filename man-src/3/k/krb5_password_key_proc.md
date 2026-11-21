@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-krb5_password_key_proc/"
 description: "Heimdal Kerberos 5 deprecated functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal Kerberos 5 deprecated functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb5_change_password</code> (krb5_context context, krb5_creds *creds, const char *newpw, int *result_code, krb5_data *result_code_string, krb5_data *result_string) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>

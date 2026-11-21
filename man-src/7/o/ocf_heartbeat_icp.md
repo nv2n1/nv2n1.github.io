@@ -8,8 +8,6 @@ url: "/docs/linux/man/7-ocf_heartbeat_icp/"
 
 
  </p>
-<h2 class="name">NAME</h2>
-<p> ocf_heartbeat_ICP &#8211; Manages an ICP Vortex clustered host drive </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ICP</code> [start | stop | status | monitor | meta-data | validate-all] </dt>

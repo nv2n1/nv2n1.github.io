@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kf5kross/"
 description: "kf5kross – KDE application to run kross scripts."
 ---
 
-<h2 class="name">NAME</h2>
-<p> kf5kross &#8211; KDE application to run kross scripts. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kf5kross</code> [-h, &#8211;help] [-v, &#8211;version] [&#8211;author] [&#8211;license] [file &#8230;]</dt></dl>

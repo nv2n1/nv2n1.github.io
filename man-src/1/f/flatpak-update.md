@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-update/"
 description: "flatpak-update – Update an application or runtime"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-update &#8211; Update an application or runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak update</code> [OPTION&#8230;] [REF&#8230;]</dt>

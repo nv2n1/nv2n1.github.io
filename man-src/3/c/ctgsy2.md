@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctgsy2/"
 description: "ctgsy2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctgsy2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, INFO)<br />

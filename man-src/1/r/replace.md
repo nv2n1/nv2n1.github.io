@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-replace/"
 description: "replace – a string-replacement utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> replace &#8211; a string-replacement utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>replace </code><i>arguments</i></dt></dl>

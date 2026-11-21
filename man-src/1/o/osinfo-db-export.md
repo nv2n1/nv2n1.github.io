@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-osinfo-db-export/"
 description: "osinfo-db-export – Export to a osinfo database archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> osinfo-db-export &#8211; Export to a osinfo database archive </p>
 <h2>SYNOPSIS</h2>
 <p> osinfo-db-export [<font SIZE="-1">OPTIONS&#8230;</font>] [<font SIZE="-1">ARCHIVE-FILE</font>]</p>
 <h2>DESCRIPTION</h2>

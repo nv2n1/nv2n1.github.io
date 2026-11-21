@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ibdiagpath/"
 description: "ibdiagpath – IB diagnostic path"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibdiagpath &#8211; IB diagnostic path </p>
 <h2>SYNOPSYS</h2>
 <p> ibdiagpath<br />
 &nbsp;<wbr>&nbsp;<wbr>{-n&nbsp;<wbr>&lt;[src-name,]dst-name&gt;|-l&nbsp;<wbr>&lt;[src-lid,]dst-lid&gt;|-d&nbsp;<wbr>&lt;p1,p2,p3,&#8230;&gt;}<br />

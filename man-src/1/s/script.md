@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-script/"
 description: "script – make typescript of terminal session"
 ---
 
-<h2 class="name">NAME</h2>
-<p> script &#8211; make typescript of terminal session </p>
 <h2>SYNOPSIS</h2>
 <p> <code>script</code> [options] [<i>file</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chrt/"
 description: "chrt – manipulate the real-time attributes of a process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chrt &#8211; manipulate the real-time attributes of a process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chrt</code> [options] <i>priority command argument</i> &#8230; </p>
 <p> <code>chrt</code> [options] <code>-p</code> [<i>priority</i>] <i>PID</i></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-csytri/"
 description: "csytri.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> csytri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csytri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />

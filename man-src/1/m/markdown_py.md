@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-markdown_py/"
 description: "markdown_py – a Python implementation of John Gruber’s Markdown."
 ---
 
-<h2 class="name">NAME</h2>
-<p> markdown_py &#8211; a Python implementation of John Gruber&#8217;s Markdown.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>markdown_py [</code><i>options</i>] [<i>INPUT_FILE</i>]</p>
 <dl>

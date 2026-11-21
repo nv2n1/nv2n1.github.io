@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-true/"
 description: "true – do nothing, successfully"
 ---
 
-<h2 class="name">NAME</h2>
-<p> true &#8211; do nothing, successfully </p>
 <h2>SYNOPSIS</h2>
 <p> <code>true</code> [<i>,ignored command line arguments/</i>]<br />
  <code>true</code> <i>,OPTION/</i></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlopen/"
 description: "dlclose, dlopen, dlmopen – open and close a shared object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlclose, dlopen, dlmopen &#8211; open and close a shared object </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>void *dlopen(const char *</code><i>filename</i><code>, int </code><i>flags</i><code>);</code> </p>

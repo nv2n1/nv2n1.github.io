@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdf2ps/"
 description: "pdf2ps – Ghostscript PDF to PostScript translator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdf2ps &#8211; Ghostscript PDF to PostScript translator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdf2ps</code> [ <i>options</i> ] <i>input.pdf [output.ps]</i></p>
 <h2>DESCRIPTION</h2>

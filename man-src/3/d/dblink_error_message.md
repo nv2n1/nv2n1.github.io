@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dblink_error_message/"
 description: "dblink_error_message – gets last error message on the named connection"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblink_error_message &#8211; gets last error message on the named connection </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dblink_error_message(text connname) returns text

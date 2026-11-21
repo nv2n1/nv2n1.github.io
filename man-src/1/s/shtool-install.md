@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-install/"
 description: "shtool install – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool install &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-install/">install</a>(1) command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool install</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-d</code>|<code>&#8211;mkdir</code>] [<code>-c</code>|<code>&#8211;copy</code>] [<code>-C</code>|<code>&#8211;compare-copy</code>] [<code>-s</code>|<code>&#8211;strip</code>] [<code>-m</code>|<code>&#8211;mode</code> <i>mode</i>] [<code>-o</code>|<code>&#8211;owner</code> <i>owner</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] [<code>-e</code>|<code>&#8211;exec</code> <i>sed-cmd</i>] <i>file</i> [<i>file</i> &#8230;] <i>path</i></p>

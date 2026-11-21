@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-disk-image-mounter/"
 description: "gnome-disk-image-mounter – Attach and mount disk images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-disk-image-mounter &#8211; Attach and mount disk images </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-disk-image-mounter</code> [&#8211;writable] [<i>URI</i>&#8230;]</dt></dl>

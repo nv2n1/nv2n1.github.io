@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mimeview/"
 description: "mimeview – display files, using mailcap mechanism."
 ---
 
-<h2 class="name">NAME</h2>
-<p> mimeview &#8211; display files, using mailcap mechanism. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mimeview</code> [<i>,OPTION/</i>&#8230;] <i>,FILE /</i>[<i>,FILE /</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

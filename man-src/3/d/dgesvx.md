@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgesvx/"
 description: "dgesvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgesvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgesvx</code> (FACT, TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />

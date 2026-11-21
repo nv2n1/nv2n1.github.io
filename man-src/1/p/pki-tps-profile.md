@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-tps-profile/"
 description: "pki-tps-profile – Command-Line Interface for managing Certificate System TPS profiles."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-tps-profile &#8211; Command-Line Interface for managing Certificate System TPS profiles.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] tps - profile pki[CLI options] tps - profile - find[command options] pki[CLI options] tps - profile - show&lt;profile ID&gt;[command options] pki[CLI options] tps - profile - add-- input&lt;file path&gt;[command options] pki[CLI options] tps - profile - mod&lt;profile ID&gt; &amp;nbsp;

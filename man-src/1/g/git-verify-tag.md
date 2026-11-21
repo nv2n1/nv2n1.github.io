@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-verify-tag/"
 description: "git-verify-tag – Check the GPG signature of tags"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-verify-tag &#8211; Check the GPG signature of tags </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git verify-tag</i> [--format=&lt;format&gt;] &lt;tag&gt;...

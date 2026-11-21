@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-secret-create/"
 description: "docker-secret-create – Create a secret from a file or STDIN as content"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-secret-create &#8211; Create a secret from a file or STDIN as content </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker secret create [OPTIONS] SECRET [file|-]</code> </p>
 <h2>DESCRIPTION</h2>

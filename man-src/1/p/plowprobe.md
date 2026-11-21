@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-plowprobe/"
 description: "plowprobe – Gather information from file sharing download links"
 ---
 
-<h2 class="name">NAME</h2>
-<p> plowprobe &#8211; Gather information from file sharing download links</p>
 <h2>SYNOPSIS</h2>
 <p> <code>plowprobe</code> [<i>OPTIONS</i>]&#8230; [<i>MODULE_OPTIONS</i>]&#8230; <i>URL</i>|<i>FILE</i>&#8230; </p>
 <h2>DESCRIPTION</h2>

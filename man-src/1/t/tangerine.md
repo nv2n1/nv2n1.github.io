@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tangerine/"
 description: "tangerine – Perl dependency metadata tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tangerine &#8211; Perl dependency metadata tool </p>
 <h2>SYNOPSIS</h2>
 <p> tangerine [options] &lt;files or directories&gt;</p>
 <h2>DESCRIPTION</h2>

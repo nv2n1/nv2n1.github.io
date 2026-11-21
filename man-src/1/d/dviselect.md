@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dviselect/"
 description: "dviselect – extract pages from DVI files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dviselect &#8211; extract pages from DVI files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dviselect</code> [ <code>-s</code> ] [ <code>-i</code> <i>infile</i> ] [ <code>-o</code> <i>outfile</i> ] <i>list of pages</i> [ <i>infile</i> [ <i>outfile</i> ] ]</p>
 <h2>DESCRIPTION</h2>

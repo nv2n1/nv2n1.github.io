@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-txtconv/"
 description: "txtconv – A tool to apply TECkit mappings to convert the encoding of a plain text file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> txtconv &#8211; A tool to apply TECkit mappings to convert the encoding of a plain text file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>txtconv</code> <i>,-i inFile -o outFile /</i>[<i>,-t tecFile/</i>] [<i>,-r/</i>] [<i>,-if inForm/</i>] [<i>,-of outForm/</i>] [<i>,-nobom/</i>] [<i>,-nf/</i>[<i>,cd/</i>]] [<i>,-u n/</i>]</p>
 <h2>OPTIONS</h2>

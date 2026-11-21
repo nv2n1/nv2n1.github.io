@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-travelccm-config/"
 description: "travelccm-config –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> travelccm-config &#8211; </p>
 <pre>
     Configuration Script for the C++ Travel Customer Choice Model Library
 </pre>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clargv/"
 description: "clargv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clargv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clargv</code> (N, X, INCX, Y, INCY, C, INCC)<br />

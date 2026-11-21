@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-search/"
 description: "tracker3-search – Search for content by type or across all types"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-search &#8211; Search for content by type or across all types </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker3 search</code> [<i>options</i>&#8230;] [[<i>expression1</i>] &#8230;]</p>
 <h2>DESCRIPTION</h2>

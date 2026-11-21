@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctrsv/"
 description: "ctrsv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctrsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrsv</code> (UPLO, TRANS, DIAG, N, A, LDA, X, INCX)<br />

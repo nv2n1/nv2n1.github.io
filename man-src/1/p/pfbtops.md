@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pfbtops/"
 description: "pfbtops – translate Printer Font Binary files to PostScript ASCII"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pfbtops &#8211; translate Printer Font Binary files to PostScript ASCII </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>pfb-file</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

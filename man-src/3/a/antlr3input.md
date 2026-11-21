@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3input/"
 description: "include/antlr3input.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3input.h &#8211; </p>
 <p> Defines the basic structures used to manipulate character streams from any input source.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />

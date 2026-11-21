@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-publish/"
 description: "stg-publish – Push the stack changes to a merge-friendly branch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-publish &#8211; Push the stack changes to a merge-friendly branch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg publish[options][--][branch]

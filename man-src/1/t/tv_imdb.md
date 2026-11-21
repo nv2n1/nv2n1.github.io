@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_imdb/"
 description: "tv_imdb – Augment XMLTV listings files with imdb.com data."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_imdb &#8211; Augment XMLTV listings files with imdb.com data. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_imdb &#8211;imdbdir &lt;dir&gt; [&#8211;help] [&#8211;quiet] [&#8211;download]<br />
 &nbsp;<wbr>[&#8211;prepStage&nbsp;<wbr>(1-9,all)] </p>

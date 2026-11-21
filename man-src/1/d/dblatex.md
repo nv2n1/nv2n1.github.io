@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dblatex/"
 description: "dblatex – convert DocBook to LaTeX, DVI, PostScript, and PDF"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblatex &#8211; convert DocBook to LaTeX, DVI, PostScript, and PDF </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dblatex</code> [<code>options</code>] {<i>file</i>&nbsp;<wbr>| -}</dt></dl>

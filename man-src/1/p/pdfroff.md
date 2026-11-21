@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdfroff/"
 description: "pdfroff – create PDF documents using groff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdfroff &#8211; create PDF documents using groff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-abcegilpstzCEGNRSUVXZ</code> ] [ <code>-d </code><i>cs</i> ] [ <code>-f </code><i>fam</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-L </code><i>arg</i> ] [ <code>-m </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-n </code><i>num</i> ] [ <code>-o </code><i>list</i> ] [ <code>-P </code><i>arg</i> ] [ <code>-r </code><i>cn</i> ] [ <code>-T </code><i>dev</i> ] [ <code>-w </code><i>name</i> ] [ <code>-W </code><i>name</i> ] [ <code>&#8211;emit-ps</code> ] [ <code>&#8211;no-toc-relocation</code> ] [ <code>&#8211;no-kill-null-pages</code> ] [<code>&#8211;stylesheet=</code><i>name</i>] [ <code>&#8211;no-pdf-output</code> ] [<code>&#8211;pdf-output=</code><i>name</i>] [ <code>&#8211;no-reference-dictionary</code> ] [<code>&#8211;reference-dictionary=</code><i>name</i>] [ <code>&#8211;report-progress</code> ] [ <code>&#8211;keep-temporary-files</code> ] [<i>file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> [<i>groff-option</i> &#8230;] <code>&#8211;version</code> [<i>groff-option</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

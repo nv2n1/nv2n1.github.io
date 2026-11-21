@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_check/"
 description: "tv_check – Check TV guide listings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_check &#8211; Check TV guide listings </p>
 <h2>SYNOPSIS</h2>
 <p> tv_check &#8211;configure|&#8211;scan [other options]</p>
 <h2>DESCRIPTIONS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmquant/"
 description: "ppmquant – quantize the colors in a portable pixmap down to a specified number"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmquant &#8211; quantize the colors in a portable pixmap down to a specified number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmquant</code> [<code>-floyd</code>|<code>-fs</code>] <i>ncolors</i> [<i>ppmfile</i>]<br />
  <code>ppmquant</code> [<code>-floyd</code>|<code>-fs</code>] [<code>-nofloyd</code>|<code>-nofs</code>] <code>-mapfile</code> <i>mapfile</i> [<i>ppmfile</i>] </p>

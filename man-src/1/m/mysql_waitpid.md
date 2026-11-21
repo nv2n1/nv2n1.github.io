@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysql_waitpid/"
 description: "mysql_waitpid – kill process and wait for its termination"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysql_waitpid &#8211; kill process and wait for its termination </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_waitpid [</code><i>options</i><code>] </code><i>pid</i><i>wait_time</i></dt></dl>

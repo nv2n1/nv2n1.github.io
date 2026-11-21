@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qrttoppm/"
 description: "qrttoppm – convert output from the QRT ray tracer into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qrttoppm &#8211; convert output from the QRT ray tracer into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qrttoppm</code> [<i>qrtfile</i>]</p>
 <h2>DESCRIPTION</h2>

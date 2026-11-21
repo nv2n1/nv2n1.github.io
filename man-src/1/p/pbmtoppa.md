@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoppa/"
 description: "pbmtoppa – convert PBM image to HP Printer Performance Architecture (PPA)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoppa &#8211; convert PBM image to HP Printer Performance Architecture (PPA) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoppa</code> </p>
 <p> [<i>pbm_file</i> [<i>ppa_file</i>]] </p>

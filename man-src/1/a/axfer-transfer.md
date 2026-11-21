@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-axfer-transfer/"
 description: "axfer-transfer – transferrer of audio data frame for sound devices and nodes."
 ---
 
-<h2 class="name">NAME</h2>
-<p> axfer-transfer &#8211; transferrer of audio data frame for sound devices and nodes.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>axfer transfer</code> <i>direction</i> [ <i>common-options</i> ] [ <i>backend-options</i> ] [ <i>filepath</i> ] </p>
 <p> <code>axfer transfer</code> <i>direction</i> [ <i>common-options</i> ] [ <i>backend-options</i> ] <i>-I</i> | <i>&#8211;separate-channels filepath &#8230;</i> </p>

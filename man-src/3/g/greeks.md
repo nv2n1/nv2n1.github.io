@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-greeks/"
 description: "ql/pricingengines/greeks.hpp – default greek calculations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/greeks.hpp &#8211; default greek calculations </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Functions</h3>

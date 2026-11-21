@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libswresample/"
 description: "libswresample – audio resampling library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libswresample &#8211; audio resampling library </p>
 <h2>DESCRIPTION</h2>
 <p> The libswresample library performs highly optimized audio resampling, rematrixing and sample format conversion operations. </p>
 <p> Specifically, this library performs the following conversions:</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-clang-tblgen-14/"
 description: "clang-tblgen – Description to C++ Code for Clang"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clang-tblgen &#8211; Description to C++ Code for Clang </p>
 <h2>SYNOPSIS</h2>
 <p> <code>clang-tblgen</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

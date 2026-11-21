@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ln/"
 description: "QuantLib::Factorial – Factorial numbers calculator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Factorial &#8211; Factorial numbers calculator </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/factorial.hpp&gt; </p>
 <h3>Static Public Member Functions</h3>

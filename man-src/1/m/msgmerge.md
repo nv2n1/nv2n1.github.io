@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msgmerge/"
 description: "msgmerge – merge message catalog and template"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msgmerge &#8211; merge message catalog and template </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgmerge</code> [<i>OPTION</i>] <i>def.po ref.pot</i></p>
 <h2>DESCRIPTION</h2>

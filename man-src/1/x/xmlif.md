@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xmlif/"
 description: "xmlif – conditional processing instructions for XML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xmlif &#8211; conditional processing instructions for XML </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xmlif</code> [attrib=value&#8230;]</dt></dl>

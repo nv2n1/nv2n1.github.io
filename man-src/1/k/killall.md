@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-killall/"
 description: "killall – kill processes by name"
 ---
 
-<h2 class="name">NAME</h2>
-<p> killall &#8211; kill processes by name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>killall</code> [<code>-Z</code>,<code>&nbsp;&#8211;context</code> <i>pattern</i>] [<code>-e</code>,<code>&nbsp;&#8211;exact</code>] [<code>-g</code>,<code>&nbsp;&#8211;process-group</code>] [<code>-i</code>,<code>&nbsp;&#8211;interactive</code>] [<code>-n</code>,<code>&nbsp;&#8211;ns</code> <i>PID</i>] [<code>-o</code>,<code>&nbsp;&#8211;older-than</code> <i>TIME</i>] [<code>-q</code>,<code>&nbsp;&#8211;quiet</code>] [<code>-r</code>,<code>&nbsp;&#8211;regexp</code>] [<code>-s</code>,<code>&nbsp;&#8211;signal</code> <i>SIGNAL</i>,&nbsp;<code>&#8211;</code><i>SIGNAL</i>] [<code>-u</code>,<code>&nbsp;&#8211;user</code> <i>user</i>] [<code>-v</code>,<code>&nbsp;&#8211;verbose</code>] [<code>-w</code>,<code>&nbsp;&#8211;wait</code>] [<code>-y</code>,<code>&nbsp;&#8211;younger-than</code> <i>TIME</i>] [<code>-I</code>,<code>&nbsp;&#8211;ignore-case</code>] [<code>-V</code>,<code>&nbsp;&#8211;version</code>] [<code>&#8212;</code>] <i>name</i> &#8230;<br />
  <code>killall</code> -l<br />

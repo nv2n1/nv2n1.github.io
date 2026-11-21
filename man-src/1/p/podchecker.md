@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podchecker/"
 description: "podchecker – check the syntax of POD format documentation files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podchecker &#8211; check the syntax of POD format documentation files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>podchecker</code> [<code>-help</code>] [<code>-man</code>] [<code>-(no)warnings</code>] [<i>file</i> &#8230;]</p>
 <h2>OPTIONS AND ARGUMENTS</h2>

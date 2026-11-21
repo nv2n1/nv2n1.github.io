@@ -8,8 +8,6 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 ---
 
 </dl>
-<h2 class="name">NAME</h2>
-<p> gm &#8211; command-line utility to create, edit, compare, convert, or display images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gm animate</code> <code>[</code> <i>options &#8230;</i> <code>]</code> <i>file</i> <code>[ [</code> <i>options &#8230;</i> <code>]</code> <i>file &#8230;</i> <code>]</code> </p>
 <p> <code>gm batch</code> <code>[</code> <i>options &#8230;</i> <code>]</code> <code>[</code> <i>script</i> <code>]</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cs_init/"
 description: "cs_init – create and initialize a CS context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cs_init &#8211; create and initialize a CS context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;

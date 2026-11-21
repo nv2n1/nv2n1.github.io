@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_delete/"
 description: "ldap_delete, ldap_delete_s, ldap_delete_ext, ldap_delete_ext_s – Perform an LDAP delete operation."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_delete, ldap_delete_s, ldap_delete_ext, ldap_delete_ext_s &#8211; Perform an LDAP delete operation. </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

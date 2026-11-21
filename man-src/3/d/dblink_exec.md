@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dblink_exec/"
 description: "dblink_exec – executes a command in a remote database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblink_exec &#8211; executes a command in a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dblink_exec(text connname, text sql[, bool fail_on_error]) returns text

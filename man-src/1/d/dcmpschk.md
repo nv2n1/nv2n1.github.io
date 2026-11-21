@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmpschk/"
 description: "dcmpschk – Checking tool for presentation states"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmpschk &#8211; Checking tool for presentation states </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dcmpschk[options][dcmfile - in...]

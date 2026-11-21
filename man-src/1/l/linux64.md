@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-linux64/"
 description: "setarch – change reported architecture in new program environment and/or set personality flags"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setarch &#8211; change reported architecture in new program environment and/or set personality flags </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setarch</code> [<i>arch</i>] [options] [<i>program</i> [<i>argument</i>&#8230;]] </p>
 <p> <code>setarch</code> <code>&#8211;list</code>|<code>-h</code>|<code>-V</code> </p>

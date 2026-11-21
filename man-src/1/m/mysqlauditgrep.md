@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlauditgrep/"
 description: "mysqlauditgrep – Search an audit log"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlauditgrep &#8211; Search an audit log </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code> mysqlauditgrep [</code><i>OPTIONS</i><code>]&#8230; </code><i>AUDIT_LOG_FILE</i><code> mysqlauditgrep &#8211;file-stats[&#8211;format=</code><i>FORMAT</i><code>] </code><i>AUDIT_LOG_FILE</i><code> mysqlauditgrep &#8211;format=</code><i>FORMAT</i><i>AUDIT_LOG_FILE</i><code> mysqlauditgrep [&#8211;users=</code><i>USERS</i><code>] [&#8211;start-date=</code><i>START_DATE</i><code>] [&#8211;end-date=</code><i>END_DATE</i><code>] [&#8211;pattern=</code><i>PATTERN</i><code>[&#8211;regexp]] [&#8211;query-type=</code><i>QUERY_TYPE</i><code>] [&#8211;event-type=</code><i>EVENT_TYPE</i><code>] [&#8211;status=</code><i>STATUS</i><code>] [&#8211;format=</code><i>FORMAT</i><code>] </code><i>AUDIT_LOG_FILE</i></dt></dl>

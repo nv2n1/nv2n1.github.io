@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-includeres/"
 description: "includeres – filter to include resources in a PostScript document"
 ---
 
-<h2 class="name">NAME</h2>
-<p> includeres &#8211; filter to include resources in a PostScript document </p>
 <h2>SYNOPSIS</h2>
 <p> <code>includeres </code> &lt; <i>document.ps</i> &gt; <i>output.ps</i></p>
 <h2>DESCRIPTION</h2>

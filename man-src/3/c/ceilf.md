@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ceilf/"
 description: "ceil, ceilf, ceill – ceiling function: smallest integral value not less than argument"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ceil, ceilf, ceill &#8211; ceiling function: smallest integral value not less than argument </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

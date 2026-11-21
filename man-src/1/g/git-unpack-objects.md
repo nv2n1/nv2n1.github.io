@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-unpack-objects/"
 description: "git-unpack-objects – Unpack objects from a packed archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-unpack-objects &#8211; Unpack objects from a packed archive </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git unpack - objects[-n][-q][-r][--strict]

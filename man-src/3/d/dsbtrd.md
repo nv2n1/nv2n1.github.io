@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dsbtrd/"
 description: "dsbtrd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsbtrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br />

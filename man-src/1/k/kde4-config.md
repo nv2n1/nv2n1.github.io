@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kde4-config/"
 description: "kde4-config – Prints KDE installation paths"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kde4-config &#8211; Prints KDE installation paths </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kde4-config</code> [&#8211;expandvars] [&#8211;prefix] [&#8211;exec-prefix] [&#8211;libsuffix] [&#8211;localprefix] [&#8211;version] [&#8211;types] [&#8211;path&nbsp;<wbr><i>type</i>] [&#8211;userpath&nbsp;<wbr><i>type</i>] [&#8211;install&nbsp;<wbr><i>type</i>]</dt></dl>

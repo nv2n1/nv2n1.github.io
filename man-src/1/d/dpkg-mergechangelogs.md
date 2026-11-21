@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-mergechangelogs/"
 description: "dpkg-mergechangelogs – 3-way merge of debian/changelog files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-mergechangelogs &#8211; 3-way merge of debian/changelog files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-mergechangelogs</code> [<i>option</i>&#8230;] <i>old</i> <i>new-a</i> <i>new-b</i> [<i>out</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-echoscu/"
 description: "echoscu – DICOM verification (C-ECHO) SCU"
 ---
 
-<h2 class="name">NAME</h2>
-<p> echoscu &#8211; DICOM verification (C-ECHO) SCU </p>
 <h2>SYNOPSIS</h2>
 <pre>
 echoscu [options] peer port

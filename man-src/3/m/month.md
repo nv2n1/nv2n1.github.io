@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-month/"
 description: "QuantLib::Date – Concrete date class."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Date &#8211; Concrete date class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/date.hpp&gt; </p>
 <h3>Public Member Functions</h3>

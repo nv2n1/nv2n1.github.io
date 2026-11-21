@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debconf-escape/"
 description: "debconf-escape – helper when working with debconf’s escape capability"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debconf-escape &#8211; helper when working with debconf&#8217;s escape capability </p>
 <h2>SYNOPSIS</h2>
 <pre>
  debconf-escape -e &lt; unescaped-text

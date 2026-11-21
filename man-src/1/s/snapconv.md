@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-snapconv/"
 description: "snapconv – Sinclair ZX Spectrum snapshot converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> snapconv &#8211; Sinclair ZX Spectrum snapshot converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>snapconv</code> [ -c ] [ -n ] <i>infile outfile</i></p>
 <h2>DESCRIPTION</h2>

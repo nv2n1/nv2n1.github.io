@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mbind/"
 description: "mbind – set memory policy for a memory range"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mbind &#8211; set memory policy for a memory range </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;numaif.h&gt;

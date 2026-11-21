@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg/"
 description: "stg – Manage stacks of patches using the Git content tracker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg &#8211; Manage stacks of patches using the Git content tracker </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg[--version | --help] stg[--help&lt;command&gt; | &lt;command&gt; --help] stg&lt;command&gt;[COMMAND OPTIONS][ARGS]

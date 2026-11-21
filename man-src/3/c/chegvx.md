@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chegvx/"
 description: "chegvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chegvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chegvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, A, LDA, B, LDB, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, RWORK, IWORK, IFAIL, INFO)<br />

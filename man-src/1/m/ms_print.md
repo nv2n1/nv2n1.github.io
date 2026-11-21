@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ms_print/"
 description: "ms_print – post-processing tool for Massif"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ms_print &#8211; post-processing tool for Massif </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ms_print</code> [<i>options</i>] <i>massif-out-file</i></dt></dl>

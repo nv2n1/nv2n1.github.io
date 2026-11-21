@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mlir-tblgen-14/"
 description: "mlir-tblgen – Description to C++ Code for MLIR"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mlir-tblgen &#8211; Description to C++ Code for MLIR </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlir-tblgen</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fc-conflist/"
 description: "fc-conflist – Show the ruleset files information on the system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fc-conflist &#8211; Show the ruleset files information on the system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-conflist</code> [ <code>-Vh</code> ] </p>
 <p>&nbsp;[&nbsp;<code>&#8211;version</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&#8211;help</code>&nbsp;]&nbsp;</p>

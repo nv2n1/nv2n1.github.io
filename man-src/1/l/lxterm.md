@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lxterm/"
 description: "lxterm – locale-sensitive wrapper for xterm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lxterm &#8211; locale-sensitive wrapper for xterm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxterm</code> [ <i>xterm-options</i> ]</p>
 <h2>DESCRIPTION</h2>

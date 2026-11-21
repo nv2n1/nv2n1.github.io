@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ieee1284_free_ports/"
 description: "ieee1284_free_ports – safely deallocate a port list"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ieee1284_free_ports &#8211; safely deallocate a port list </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;

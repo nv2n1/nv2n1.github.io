@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtolj/"
 description: "pbmtolj – convert a portable bitmap into HP LaserJet format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtolj &#8211; convert a portable bitmap into HP LaserJet format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtolj</code> [<code>-resolution</code> <i>N</i>] [<code>-float</code>] [<code>-noreset</code>] [<code>-packbits</code>] [<code>-delta</code>] [<code>-compress</code>] [<i>pbmfile</i>] [<code>-copies</code> <i>N</i>] </p>
 <h2>DESCRIPTION</h2>

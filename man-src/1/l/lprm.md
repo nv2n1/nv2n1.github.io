@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lprm/"
 description: "lprm – cancel print jobs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lprm &#8211; cancel print jobs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lprm</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h</code> <i>server</i>[<i>:port</i>] ] [ <code>-P</code> <i>destination</i>[<i>/instance</i>] ] [ <code>&#8211;</code> ] [ <i>job-id(s)</i> ]</p>
 <h2>DESCRIPTION</h2>

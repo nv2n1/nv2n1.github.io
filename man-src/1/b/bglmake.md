@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bglmake/"
 description: "bglmake – create or update Bigloo makefiles"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bglmake &#8211; create or update Bigloo makefiles</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bglmake</code> [ options ] [ sourcefile ] </p>
 <h2>DESCRIPTION</h2>

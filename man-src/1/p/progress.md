@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-progress/"
 description: "progress – Coreutils Progress Viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> progress &#8211; Coreutils Progress Viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>progress</code> [ <code>-qdwmM</code> ] [ <code>-W</code> <i>secs</i> ] [ <code>-c</code> <i>command</i> ] [ <code>-p</code> <i>pid</i> ]<br />
  <code>progress -v</code> | <code>&#8211;version</code><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-stop/"
 description: "docker-stop – Stop one or more running containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-stop &#8211; Stop one or more running containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stop [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-software-editor/"
 description: "gnome-software-editor – Design the featured banners for GNOME Software"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-software-editor &#8211; Design the featured banners for GNOME Software </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-software-editor</code> [OPTION&#8230;]</dt></dl>

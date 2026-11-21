@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ogr_utilities/"
 description: "ogr_utilities – OGR Utility Programs The following utilities are distributed as part of the OGR Simple Features toolkit:"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ogr_utilities &#8211; OGR Utility Programs The following utilities are distributed as part of the OGR Simple Features toolkit: </p>
 <dl>
 <dt>&bull;</dt>
 <dd> <code>ogrinfo</code> &#8211; Lists information about an OGR supported data source</dd>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-remote-helpers/"
 description: "git-remote-helpers – Helper programs to interact with remote repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-remote-helpers &#8211; Helper programs to interact with remote repositories </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git remote-&lt;transport&gt;</i> &lt;repository&gt; [&lt;URL&gt;]

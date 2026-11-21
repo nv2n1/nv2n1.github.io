@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_get_nbobjs_inside_cpuset_by_type/"
 description: "hwlocality_helper_find_inside – Finding Objects inside a CPU set"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_helper_find_inside &#8211; Finding Objects inside a CPU set </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_first_largest_obj_inside_cpuset</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set) </p>
 <p> int <code>hwloc_get_largest_objs_inside_cpuset</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, <code>hwloc_obj_t</code> *restrict objs, int max) </p>

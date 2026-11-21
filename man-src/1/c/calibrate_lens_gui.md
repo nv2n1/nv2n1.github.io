@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-calibrate_lens_gui/"
 description: "calibrate_lens_gui – Lens distortion calibration by straight line feature identification"
 ---
 
-<h2 class="name">NAME</h2>
-<p> calibrate_lens_gui &#8211; Lens distortion calibration by straight line feature identification </p>
 <h2>SYNOPSIS</h2>
 <p> <code>calibrate_lens_gui</code></p>
 <h2>DESCRIPTION</h2>

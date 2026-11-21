@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stoken/"
 description: "stoken – software token for cryptographic authentication"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stoken &#8211; software token for cryptographic authentication </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stoken</code> [<code>tokencode</code>] [<code>&#8211;stdin</code>] [<code>&#8211;force</code>] [<code>&#8211;next</code>] [<i>opts</i>] </p>
 <p> <code>stoken</code> <code>import</code> {<code>&#8211;file=</code><i>file</i> | <code>&#8211;token=</code><i>token_string</i>} [<code>&#8211;force</code>] [<i>opts</i>] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cd-it8/"
 description: "cd-it8 – Color Manager Testing Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cd-it8 &#8211; Color Manager Testing Tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cd-it8</code> [<code>&#8211;verbose</code>]</dt></dl>

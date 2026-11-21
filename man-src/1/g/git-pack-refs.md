@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-pack-refs/"
 description: "git-pack-refs – Pack heads and tags for efficient repository access"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-pack-refs &#8211; Pack heads and tags for efficient repository access </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git pack - refs[--all][--no - prune]

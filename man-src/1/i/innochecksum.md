@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-innochecksum/"
 description: "innochecksum – offline InnoDB file checksum utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> innochecksum &#8211; offline InnoDB file checksum utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>innochecksum [</code><i>options</i><code>] </code><i>file_name</i></dt></dl>

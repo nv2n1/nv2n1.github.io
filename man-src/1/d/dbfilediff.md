@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbfilediff/"
 description: "dbfilediff – compare two fsdb tables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbfilediff &#8211; compare two fsdb tables </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dbfilediff[-Eq][-N diff_column_name]-- input table1.fsdb-- input table2.fsdb

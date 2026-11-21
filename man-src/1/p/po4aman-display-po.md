@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-po4aman-display-po/"
 description: "po4aman-display-po – display a translated man page according to a PO"
 ---
 
-<h2 class="name">NAME</h2>
-<p> po4aman-display-po &#8211; display a translated man page according to a PO </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>po4aman-display-po</code> <code>-p</code> <i>PO_FILE</i> [<code>-m</code>&nbsp;<wbr><i>MASTER_FILE</i>] [<code>-o</code>&nbsp;<wbr><i>PO4A_OPT</i>]</dt>

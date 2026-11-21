@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qemu-io/"
 description: "qemu-io – QEMU Disk exerciser"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qemu-io &#8211; QEMU Disk exerciser </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qemu-io [-h] [-V] [-rsnm] [-c cmd] &#8230; [file]</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-retrace-server-reposync/"
 description: "retrace-server-reposync – Maintains local repository cache for Retrace server."
 ---
 
-<h2 class="name">NAME</h2>
-<p> retrace-server-reposync &#8211; Maintains local repository cache for Retrace server. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>retrace-server-reposync</i> distribution version architecture</p>
 <h2>DESCRIPTION</h2>

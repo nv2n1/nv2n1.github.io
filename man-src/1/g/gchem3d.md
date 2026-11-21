@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gchem3d/"
 description: "gchem3d – a small chemical viewer application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gchem3d &#8211; a small chemical viewer application </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gchem3d</code> [<code>OPTION(S)</code>&#8230;] [<i>FILE</i>&#8230;]</dt></dl>

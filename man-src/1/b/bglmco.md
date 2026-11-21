@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bglmco/"
 description: "bglmco – produces module checksum object files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> bglmco &#8211; produces module checksum object files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bglmco</code> [ options ] [ sourcefile ] </p>
 <h2>DESCRIPTION</h2>

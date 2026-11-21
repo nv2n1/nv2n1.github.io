@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tomboy/"
 description: "tomboy – A simple note-taking application for Gnome"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tomboy &#8211; A simple note-taking application for Gnome</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tomboy</code> <i>[OPTION] &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

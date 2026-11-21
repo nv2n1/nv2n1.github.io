@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ccoshl/"
 description: "ccosh, ccoshf, ccoshl – complex hyperbolic cosine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ccosh, ccoshf, ccoshl &#8211; complex hyperbolic cosine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex ccosh(double complex </code><i>z</i><code>);</code><br />

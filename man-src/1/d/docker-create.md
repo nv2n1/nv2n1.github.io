@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-create/"
 description: "docker-create – Create a new container"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-create &#8211; Create a new container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker create [OPTIONS] IMAGE [COMMAND] [ARG&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

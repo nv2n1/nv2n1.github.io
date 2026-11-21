@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fdstepconditionengine/"
 description: "ql/pricingengines/vanilla/fdstepconditionengine.hpp – Finite-differences step-condition engine."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/vanilla/fdstepconditionengine.hpp &#8211; Finite-differences step-condition engine. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/fdtypedefs.hpp&gt;<br />

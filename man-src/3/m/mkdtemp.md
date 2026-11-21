@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mkdtemp/"
 description: "mkdtemp – create a unique temporary directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkdtemp &#8211; create a unique temporary directory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libinput-list-devices/"
 description: "libinput-list-devices – list local devices as recognized by libinput and default values of their configuration"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libinput-list-devices &#8211; list local devices as recognized by libinput and default values of their configuration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput list-devices [&#8211;help]</code></p>
 <h2>DESCRIPTION</h2>

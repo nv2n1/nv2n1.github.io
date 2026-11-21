@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-imgsize/"
 description: "imgsize – read the dimensions of an image in several popular formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> imgsize &#8211; read the dimensions of an image in several popular formats </p>
 <h2>USAGE</h2>
 <pre><code>
 imgsize[-r | -a | -f fmt] file[file...]

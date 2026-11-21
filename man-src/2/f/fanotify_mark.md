@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-fanotify_mark/"
 description: "fanotify_mark – add, remove, or modify an fanotify mark on a filesystem object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fanotify_mark &#8211; add, remove, or modify an fanotify mark on a filesystem object </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/fanotify.h&gt;

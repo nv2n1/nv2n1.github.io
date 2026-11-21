@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-pwrite/"
 description: "pread, pwrite – read from or write to a file descriptor at a given offset"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pread, pwrite &#8211; read from or write to a file descriptor at a given offset </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>ssize_t pread(int </code><i>fd</i><code>, void *</code><i>buf</i><code>, size_t </code><i>count</i><code>, off_t </code><i>offset</i><code>);</code> </p>

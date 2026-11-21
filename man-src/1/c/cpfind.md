@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cpfind/"
 description: "cpfind – Feature matching for panoramic stitching"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpfind &#8211; Feature matching for panoramic stitching </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpfind</code> [options] -o <i>output_project</i> <i>project.pto</i> </p>
 <p> <code>cpfind</code> [options] -k i0 -k i1 [&#8230;] <i>project.pto</i> </p>

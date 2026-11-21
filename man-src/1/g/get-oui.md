@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-get-oui/"
 description: "get-oui – Fetch the arp-scan OUI file from the IEEE website"
 ---
 
-<h2 class="name">NAME</h2>
-<p> get-oui &#8211; Fetch the arp-scan OUI file from the IEEE website </p>
 <h2>SYNOPSIS</h2>
 <p> <code>get-oui</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

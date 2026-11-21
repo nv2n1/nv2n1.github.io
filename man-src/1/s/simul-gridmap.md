@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-simul-gridmap/"
 description: "simul-gridmap – Robot dataset simulator from a gridmap and a predefined robot path"
 ---
 
-<h2 class="name">NAME</h2>
-<p> simul-gridmap &#8211; Robot dataset simulator from a gridmap and a predefined robot path </p>
 <h2>SYNOPSIS</h2>
 <p> simul-gridmap <i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hx509_context_init/"
 description: "hx509 library –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hx509 library &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_context_init</code> (hx509_context *context) </p>
 <p> void <code>hx509_context_free</code> (hx509_context *context) </p>

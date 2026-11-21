@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-tty-ask-password-agent/"
 description: "systemd-tty-ask-password-agent – List or process pending systemd password requests"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-tty-ask-password-agent &#8211; List or process pending systemd password requests </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-tty-ask-password-agent</code> [OPTIONS&#8230;] [VARIABLE=VALUE&#8230;]</dt></dl>

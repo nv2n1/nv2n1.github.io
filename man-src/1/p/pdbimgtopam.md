@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdbimgtopam/"
 description: "pdbimgtopam – convert a Palm Pilot Image Viewer PDB Image to a PAM image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdbimgtopam &#8211; convert a Palm Pilot Image Viewer PDB Image to a PAM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdbimgtopam</code> </p>
 <p> [<code>-notefile=</code><i>filename</i>] [<code>-verbose</code>] </p>

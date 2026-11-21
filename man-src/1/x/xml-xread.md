@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml-xread/"
 description: "xml-xread – A simple command-line XML parsing application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml-xread &#8211; A simple command-line XML parsing application</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xml-xread</code> [options] document.xml </p>
 <h2>DESCRIPTION</h2>

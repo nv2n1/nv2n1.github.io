@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-uniq/"
 description: "uniq – report or omit repeated lines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> uniq &#8211; report or omit repeated lines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uniq</code> [<i>,OPTION/</i>]&#8230; [<i>,INPUT /</i>[<i>,OUTPUT/</i>]]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ps2epsi/"
 description: "ps2epsi – generate conforming Encapsulated PostScript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ps2epsi &#8211; generate conforming Encapsulated PostScript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ps2epsi</code> <i>infile.ps</i> [ <i>outfile.epsi</i> ] <code>(Unix)</code><br />
  <code>ps2epsi</code> <i>infile.ps</i> [ <i>outfile.epi</i> ] <code>(DOS)</code></p>

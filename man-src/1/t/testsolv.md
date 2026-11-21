@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-testsolv/"
 description: "testsolv – run a libsolv testcase through the solver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> testsolv &#8211; run a libsolv testcase through the solver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>testsolv</code> [<i>OPTIONS</i>] <i>TESTCASE</i></p>
 <h2>DESCRIPTION</h2>

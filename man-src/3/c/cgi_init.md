@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_init/"
 description: "cgi_init – Initialize ClearSilver CGI environment"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_init &#8211; Initialize ClearSilver CGI environment </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

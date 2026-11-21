@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xditview/"
 description: "xditview – display ditroff output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xditview &#8211; display ditroff output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xditview</code> [ &#8211;<i>toolkitoption</i> &#8230; ] [ &#8211;<i>option</i> &#8230; ] [ <i>filename</i> ]</p>
 <h2>DESCRIPTION</h2>

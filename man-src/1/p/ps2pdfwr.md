@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ps2pdfwr/"
 description: "ps2pdfwr – Convert PostScript to PDF without specifying CompatibilityLevel, using ghostscript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ps2pdfwr &#8211; Convert PostScript to PDF without specifying CompatibilityLevel, using ghostscript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ps2pdfwr</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]</p>
 <h2>DESCRIPTION</h2>

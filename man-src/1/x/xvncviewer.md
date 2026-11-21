@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xvncviewer/"
 description: "vncviewer – VNC viewer for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vncviewer &#8211; VNC viewer for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][:<i>display#</i>]<br />
  <code>vncviewer</code> [<i>options</i>] <code>-listen</code> [<i>port</i>]</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nproc/"
 description: "nproc – print the number of processing units available"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nproc &#8211; print the number of processing units available </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nproc</code> [<i>,OPTION/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

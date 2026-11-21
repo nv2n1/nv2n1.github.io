@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmflip/"
 description: "pnmflip – perform one or more flip operations on a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmflip &#8211; perform one or more flip operations on a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmflip</code> [<code>-leftright</code>|<code>-lr</code>] [<code>-topbottom</code>|<code>-tb</code>] [<code>-transpose</code>|<code>-xy</code>] [<code>-rotate90</code>|<code>-r90</code>|<code>-ccw</code> ] [<code>-rotate270</code>|<code>-r270</code>|<code>-cw</code> ] [<code>-rotate180</code>|<code>-r180</code>] [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

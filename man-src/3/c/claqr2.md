@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claqr2/"
 description: "claqr2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claqr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqr2</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SH, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br />

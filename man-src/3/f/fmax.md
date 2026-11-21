@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fmax/"
 description: "fmax, fmaxf, fmaxl – determine maximum of two floating-point numbers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fmax, fmaxf, fmaxl &#8211; determine maximum of two floating-point numbers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double fmax(double </code><i>x</i><code>, double </code><i>y</i><code>);</code> <code>float fmaxf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code> <code>long double fmaxl(long double </code><i>x</i><code>, long double </code><i>y</i><code>);</code> </p>

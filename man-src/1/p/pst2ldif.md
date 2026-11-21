@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pst2ldif/"
 description: "pst2ldif – extract contacts from a MS Outlook .pst file in .ldif format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pst2ldif &#8211; extract contacts from a MS Outlook .pst file in .ldif format </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pst2ldif</code> [<code>-V</code>] [<code>-b&nbsp;<wbr></code><i>ldap-base</i>] [<code>-c&nbsp;<wbr></code><i>class</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-l&nbsp;<wbr></code><i>extra-line</i>] [<code>-o</code>] [<code>-h</code>] pstfilename</dt></dl>

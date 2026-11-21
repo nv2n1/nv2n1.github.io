@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dar_split/"
 description: "dar_split – dar helper to split an archive over several tapes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dar_split &#8211; dar helper to split an archive over several tapes </p>
 <h2>SYNOPSIS</h2>
 <p> dar_split { split_input | split_output } &lt;filename&gt; </p>
 <p> dar_split -v </p>

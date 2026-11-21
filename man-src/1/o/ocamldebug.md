@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamldebug/"
 description: "ocamldebug – the OCaml source-level replay debugger."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamldebug &#8211; the OCaml source-level replay debugger. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamldebug</code> [&nbsp;<wbr><i>options</i>&nbsp;<wbr>]&nbsp;<wbr><i>program</i>&nbsp;<wbr>[&nbsp;<wbr><i>arguments</i>&nbsp;<wbr>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hash/"
 description: "hash – hash database access method"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hash &#8211; hash database access method </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;db.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amqp-delete-queue/"
 description: "amqp-delete-queue – Delete a queue from an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amqp-delete-queue &#8211; Delete a queue from an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-delete-queue</code> [<i>OPTION</i>&#8230;] {-q&nbsp;<wbr><i>queue name</i>}</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sbkeysync/"
 description: "sbkeysync – UEFI secure boot key synchronization tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sbkeysync &#8211; UEFI secure boot key synchronization tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sbkeysync</code> [<i>,options/</i>]</p>
 <h2>DESCRIPTION</h2>

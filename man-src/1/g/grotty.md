@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grotty/"
 description: "grotty – groff driver for typewriter-like devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grotty &#8211; groff driver for typewriter-like devices </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-bBcdfhioruUv</code> ] [ <code>-F </code><i>dir</i> ] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

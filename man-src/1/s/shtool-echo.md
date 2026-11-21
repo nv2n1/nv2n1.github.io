@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-echo/"
 description: "shtool echo – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool echo &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-echo/">echo</a>(1) extensional command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool echo</code> [<code>-n</code>|<code>&#8211;newline</code>] [<code>-e</code>|<code>&#8211;expand</code>] <i>string</i></p>

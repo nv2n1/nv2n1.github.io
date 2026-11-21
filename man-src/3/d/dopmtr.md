@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dopmtr/"
 description: "dopmtr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dopmtr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dopmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br />

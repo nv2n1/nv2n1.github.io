@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slatrs/"
 description: "slatrs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slatrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br />

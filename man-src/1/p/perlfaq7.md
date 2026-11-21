@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlfaq7/"
 description: "perlfaq7 – General Perl Language Issues"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlfaq7 &#8211; General Perl Language Issues </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
 <h2>DESCRIPTION</h2>

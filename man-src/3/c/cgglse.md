@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgglse/"
 description: "cgglse.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgglse.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-float/"
 description: "stg-float – Push patches to the top, even if applied"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-float &#8211; Push patches to the top, even if applied </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg float[--]&lt;patches&gt;

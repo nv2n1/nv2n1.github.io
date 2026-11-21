@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cross-objcopy/"
 description: "objcopy – copy and translate object files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> objcopy &#8211; copy and translate object files </p>
 <h2>SYNOPSIS</h2>
 <p> objcopy [<code>-F</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />

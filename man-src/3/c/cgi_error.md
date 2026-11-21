@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_error/"
 description: "cgi_error – display an error string to the user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_error &#8211; display an error string to the user </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

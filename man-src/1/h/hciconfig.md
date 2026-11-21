@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hciconfig/"
 description: "hciconfig – Configure Bluetooth devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hciconfig &#8211; Configure Bluetooth devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hciconfig</code> -h </p>
 <p> <code>hciconfig</code> [-a] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-netpbm/"
 description: "netpbm – package of graphics manipulation programs and libraries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> netpbm &#8211; package of graphics manipulation programs and libraries</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Netpbm</code> is a package of graphics programs and programming libraries. </p>
 <p> There are over 220 separate programs in the package, most of which have &quot;pbm&quot;, &quot;pgm&quot;, &quot;ppm&quot;, or &quot;pnm&quot; in their names. For example, <code>pnmscale</code> and <code>giftopnm</code>. </p>

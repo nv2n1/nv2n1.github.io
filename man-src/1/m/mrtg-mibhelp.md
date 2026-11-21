@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mrtg-mibhelp/"
 description: "mrtg-mibhelp – A Table of some interesting OIDs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mrtg-mibhelp &#8211; A Table of some interesting OIDs </p>
 <h2>OVERVIEW</h2>
 <p> This File Contains a collection of interesting <font SIZE="-1">MIB</font> Entries &#8230; mrtg knows about their names &#8230; depending on the <font SIZE="-1">ASN</font>.1 Syntax you may have to put <code>gauge</code> into the <code>Options[]:</code> parameter. </p>
 <p> For information about how to create a <code>Target[]:</code> parameter which references these <font SIZE="-1">MIB</font> entries, please consult mrtg-reference.</p>

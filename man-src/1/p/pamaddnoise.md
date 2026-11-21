@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamaddnoise/"
 description: "pamaddnoise – add noise to a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamaddnoise &#8211; add noise to a Netpbm image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamaddnoise</code> </p>
 <p> [<code>-type</code> <i>noise_type</i>] </p>

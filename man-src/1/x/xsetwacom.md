@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xsetwacom/"
 description: "xsetwacom – commandline utility to query and modify wacom driver settings."
 ---
 
-<h2 class="name">NAME</h2>
-<p> xsetwacom &#8211; commandline utility to query and modify wacom driver settings. </p>
 <h2>SYNOPSIS</h2>
 <p> xsetwacom [options] [command [arguments]] </p>
 <h2>DESCRIPTION</h2>

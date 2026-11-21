@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-avr-nm/"
 description: "nm – list symbols from object files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nm &#8211; list symbols from object files </p>
 <h2>SYNOPSIS</h2>
 <p> nm [<code>-A</code>|<code>-o</code>|<code>&#8211;print-file-name</code>] [<code>-a</code>|<code>&#8211;debug-syms</code>]<br />
 [<code>-B</code>|<code>&#8211;format=bsd</code>]&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]<br />

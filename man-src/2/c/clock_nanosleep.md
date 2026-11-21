@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-clock_nanosleep/"
 description: "clock_nanosleep – high-resolution sleep with specifiable clock"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clock_nanosleep &#8211; high-resolution sleep with specifiable clock </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <pre><code>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amixer/"
 description: "amixer – command-line mixer for ALSA soundcard driver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amixer &#8211; command-line mixer for ALSA soundcard driver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>amixer</code> [<i>-option</i>] [<i>cmd</i>]</p>
 <h2>DESCRIPTION</h2>

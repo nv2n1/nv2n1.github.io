@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-showrgb/"
 description: "showrgb – display an rgb color-name database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> showrgb &#8211; display an rgb color-name database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>showrgb</code> [ <i>database</i> ]</p>
 <h2>DESCRIPTION</h2>

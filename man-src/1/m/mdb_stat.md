@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mdb_stat/"
 description: "mdb_stat – LMDB environment status tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mdb_stat &#8211; LMDB environment status tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdb_stat</code> [<code>-V</code>] [<code>-e</code>] [<code>-f</code>[<code>f</code>[<code>f</code>]]] [<code>-n</code>] [<code>-r</code>[<code>r</code>]] [<code>-a</code>&nbsp;<wbr>| <code>-s</code><i>&nbsp;<wbr>subdb</i>] <code>&nbsp;<wbr>envpath</code></p>
 <h2>DESCRIPTION</h2>

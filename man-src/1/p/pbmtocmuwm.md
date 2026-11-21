@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtocmuwm/"
 description: "pbmtocmuwm – convert a portable bitmap into a CMU window manager bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtocmuwm &#8211; convert a portable bitmap into a CMU window manager bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtocmuwm</code> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

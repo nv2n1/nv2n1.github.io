@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wrjpgcom/"
 description: "wrjpgcom – insert text comments into a JPEG file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wrjpgcom &#8211; insert text comments into a JPEG file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wrjpgcom</code> [ <code>-replace</code> ] [ <code>-comment</code><i> text</i> ] [ <code>-cfile</code><i> name</i> ] [ <i>filename</i> ] </p>
 <h2>DESCRIPTION</h2>

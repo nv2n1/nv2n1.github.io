@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-root-config/"
 description: "root-config – ROOT utility for your Makefiles"
 ---
 
-<h2 class="name">NAME</h2>
-<p> root-config &#8211; ROOT utility for your Makefiles </p>
 <h2>SYNOPSIS</h2>
 <p> <code>root-config</code> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>

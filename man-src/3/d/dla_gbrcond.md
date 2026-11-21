@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dla_gbrcond/"
 description: "dla_gbrcond.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dla_gbrcond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dla_gbrcond</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, CMODE, C, INFO, WORK, IWORK)<br />

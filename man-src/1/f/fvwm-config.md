@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fvwm-config/"
 description: "fvwm-config – query an existing fvwm installation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fvwm-config &#8211; query an existing fvwm installation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fvwm-config</code> [<i>&#8211;help</i>] [<i>&#8211;version</i>] [<i>&#8211;info</i>] [<i>&#8211;prefix</i>] [<i>&#8211;exec-prefix</i>] [<i>&#8211;bindir</i>] [<i>&#8211;datadir</i>] [<i>&#8211;libexecdir</i>] [<i>&#8211;sysconfdir</i>] [<i>&#8211;mandir</i>] [<i>&#8211;localedir</i>] [<i>&#8211;fvwm-moduledir</i>] [<i>&#8211;fvwm-datadir</i>] [<i>&#8211;fvwm-perllibdir</i>] [<i>&#8211;default-imagepath</i>] [<i>&#8211;default-userdir</i>] [<i>&#8211;fvwm-exe</i>] [<i>&#8211;supports</i>] [<i>&#8211;supports-&lt;feature&gt;</i>]</p>
 <h2>DESCRIPTION</h2>

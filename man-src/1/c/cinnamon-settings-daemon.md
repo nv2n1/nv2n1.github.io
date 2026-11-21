@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cinnamon-settings-daemon/"
 description: "cinnamon-settings-daemon – Cinnamon settings daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cinnamon-settings-daemon &#8211; Cinnamon settings daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cinnamon-settings-daemon </code><code>[OPTION&#8230;]</code></dt></dl>

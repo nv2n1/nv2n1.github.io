@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-covariance/"
 description: "QuantLib::LfmCovarianceParameterization – Libor market model parameterization"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::LfmCovarianceParameterization &#8211; Libor market model parameterization </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmcovarparam.hpp&gt; </p>
 <p> Inherited by <code>LfmCovarianceProxy</code>, and <code>LfmHullWhiteParameterization</code>. </p>

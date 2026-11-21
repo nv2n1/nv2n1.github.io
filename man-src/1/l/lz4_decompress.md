@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lz4_decompress/"
 description: "lz4_decompress – decompress mysqlpump LZ4-compressed output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lz4_decompress &#8211; decompress mysqlpump LZ4-compressed output </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lz4_decompress </code><i>input_file</i><i>output_file</i></dt></dl>

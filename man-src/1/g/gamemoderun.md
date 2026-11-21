@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gamemoderun/"
 description: "gamemoderun – invoke gamemode into any program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gamemoderun &#8211; invoke gamemode into any program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gamemoderun</code> PROGRAM</p>
 <h2>DESCRIPTION</h2>

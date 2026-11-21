@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-strace/"
 description: "strace – trace system calls and signals"
 ---
 
-<h2 class="name">NAME</h2>
-<p> strace &#8211; trace system calls and signals </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-ACdffhikqqrtttTvVwxxyyzZ</code> ] [ <code>-I </code><i>n</i> ] [ <code>-b </code><i>execve</i> ] [<code>-e</code><i>&nbsp;expr</i>]&#8230; [ <code>-O </code><i>overhead</i> ] [ <code>-S </code><i>sortby</i> ] [ <code>-U </code><i>columns</i> ] [ <code>-a </code><i>column</i> ] [ <code>-o </code><i>file</i> ] [ <code>-s </code><i>strsize</i> ] [ <code>-X </code><i>format</i> ] [<code>-P</code><i>&nbsp;path</i>]&#8230; [<code>-p</code><i>&nbsp;pid</i>]&#8230; [ <code>&#8211;seccomp-bpf</code> ] { <code>-p</code><i>&nbsp;pid</i> | [ <code>-DDD</code> ] [<code>-E</code><i>&nbsp;var[=<i>val</i>]</i>]&#8230; [ <code>-u </code><i>username</i> ] <i>command</i> [<i>args</i>] } <code>-c</code> [ <code>-dfwzZ</code> ] [ <code>-I </code><i>n</i> ] [ <code>-b </code><i>execve</i> ] [<code>-e</code><i>&nbsp;expr</i>]&#8230; [ <code>-O </code><i>overhead</i> ] [ <code>-S </code><i>sortby</i> ] [ <code>-U </code><i>columns</i> ] [<code>-P</code><i>&nbsp;path</i>]&#8230; [<code>-p</code><i>&nbsp;pid</i>]&#8230; [ <code>&#8211;seccomp-bpf</code> ] { <code>-p</code><i>&nbsp;pid</i> | [ <code>-DDD</code> ] [<code>-E</code><i>&nbsp;var[=<i>val</i>]</i>]&#8230; [ <code>-u </code><i>username</i> ] <i>command</i> [<i>args</i>] }</p>
 <h2>DESCRIPTION</h2>

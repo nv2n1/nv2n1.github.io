@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getenv/"
 description: "getenv, secure_getenv – get an environment variable"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getenv, secure_getenv &#8211; get an environment variable </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

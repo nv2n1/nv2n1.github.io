@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-apply/"
 description: "git-apply – Apply a patch to files and/or to the index"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-apply &#8211; Apply a patch to files and/or to the index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git apply[--stat][--numstat][--summary][--check][--index | --intent - to - add][--3way]

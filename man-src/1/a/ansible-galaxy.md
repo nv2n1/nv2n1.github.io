@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ansible-galaxy/"
 description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ansible-galaxy &#8211; manage roles using galaxy.ansible.com </p>
 <h2>SYNOPSIS</h2>
 <p> ansible-galaxy [delete|import|info|init|install|list|login|remove|search|setup] [&#8211;help] [options] &#8230;</p>
 <h2>DESCRIPTION</h2>

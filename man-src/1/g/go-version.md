@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-go-version/"
 description: "go-version – print the build information for Go executables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> go-version &#8211; print the build information for Go executables </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go version</code> [<code>-m</code>] [<code>-v</code>] [<i>file &#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

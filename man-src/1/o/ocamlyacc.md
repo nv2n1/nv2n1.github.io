@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamlyacc/"
 description: "ocamlyacc – The OCaml parser generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamlyacc &#8211; The OCaml parser generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlyacc</code> [ <code>-b</code><i>prefix</i> ] [ <code>-q</code> ] [ <code>-v</code> ] [ <code>-version</code> ] [ <code>-vnum</code> ] <i>filename.mly</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-clean/"
 description: "git-clean – Remove untracked files from the working tree"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-clean &#8211; Remove untracked files from the working tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git clean[-d][-f][-i][-n][-q][-e&lt;pattern&gt;][-x | -X][--]&lt;path&gt;...

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ccos/"
 description: "ccos, ccosf, ccosl – complex cosine function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ccos, ccosf, ccosl &#8211; complex cosine function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex ccos(double complex </code><i>z</i><code>);</code><br />

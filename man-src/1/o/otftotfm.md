@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-otftotfm/"
 description: "otftotfm – create TeX font metrics from OpenType fonts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> otftotfm &#8211; create TeX font metrics from OpenType fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>otftotfm</code> [<code>-a</code>] [<code>options</code>] <i>fontfile</i> [<i>texname</i>]</p>
 <h2>DESCRIPTION</h2>

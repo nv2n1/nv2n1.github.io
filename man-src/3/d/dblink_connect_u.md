@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dblink_connect_u/"
 description: "dblink_connect_u – opens a persistent connection to a remote database, insecurely"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblink_connect_u &#8211; opens a persistent connection to a remote database, insecurely </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dblink_connect_u(text connstr) returns text

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-atan2f/"
 description: "atan2, atan2f, atan2l – arc tangent function of two variables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atan2, atan2f, atan2l &#8211; arc tangent function of two variables </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

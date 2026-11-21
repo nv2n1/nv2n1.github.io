@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rancid-cvs/"
 description: "rancid-cvs – initialize CVS, Subversion or git and rancid group files and directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rancid-cvs &#8211; initialize CVS, Subversion or git and rancid group files and directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rancid-cvs</code> [<code>-V</code>] [<code>-f&nbsp;<wbr></code>config_file]&nbsp;<wbr>[group [group &#8230;]]</p>
 <h2>DESCRIPTION</h2>

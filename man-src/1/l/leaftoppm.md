@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-leaftoppm/"
 description: "leaftoppm – convert Interleaf image format to a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> leaftoppm &#8211; convert Interleaf image format to a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>leaftoppm</code> [<i>leaffile</i>] </p>
 <h2>DESCRIPTION</h2>

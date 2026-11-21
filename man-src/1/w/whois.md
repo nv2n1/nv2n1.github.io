@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-whois/"
 description: "whois – client for the whois directory service"
 ---
 
-<h2 class="name">NAME</h2>
-<p> whois &#8211; client for the whois directory service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>whois</code> [ {~<code>-h</code>~|~<code>&#8211;host</code>~} <i>HOST</i> ] [ {~<code>-p</code>~|~<code>&#8211;port</code>~} <i>PORT</i> ] [~<code>-abBcdGHIKlLmMrRx</code> ] [~<code>-g</code><i>~SOURCE:FIRST-LAST</i> ] [~<code>-i</code>~ <i>ATTR</i>[,<i>ATTR</i>]&#8230;~] [~<code>-s</code>~ <i>SOURCE</i>[,<i>SOURCE</i>]&#8230;~] [~<code>-T</code>~ <i>TYPE</i>[,<i>TYPE</i>]&#8230;~] [~<code>&#8211;verbose</code>~] [~<code>&#8211;no-recursion</code>~] <i>OBJECT</i> </p>
 <p> <code>whois</code> <code>-q</code> <i>KEYWORD</i> </p>

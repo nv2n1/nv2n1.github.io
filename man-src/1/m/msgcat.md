@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msgcat/"
 description: "msgcat – combines several message catalogs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msgcat &#8211; combines several message catalogs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgcat</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

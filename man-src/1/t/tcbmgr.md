@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tcbmgr/"
 description: "tcbmgr – the command line utility of the B+ tree database API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tcbmgr &#8211; the command line utility of the B+ tree database API</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>tcbmgr</code>&#8216; is a utility for test and debugging of the B+ tree database API and its applications. `<i>path</i>&#8216; specifies the path of a database file. `<i>lmemb</i>&#8216; specifies the number of members in each leaf page. `<i>nmemb</i>&#8216; specifies the number of members in each non-leaf page. `<i>bnum</i>&#8216; specifies the number of buckets. `<i>apow</i>&#8216; specifies the power of the alignment. `<i>fpow</i>&#8216; specifies the power of the free block pool. `<i>key</i>&#8216; specifies the key of a record. `<i>value</i>&#8216; specifies the value of a record. `<i>file</i>&#8216; specifies the input file. </p>
 <dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-pki-validate/"
 description: "virt-pki-validate – validate libvirt PKI files are configured correctly"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-pki-validate &#8211; validate libvirt PKI files are configured correctly </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-pki-validate</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]</p>
 <h2>DESCRIPTION</h2>

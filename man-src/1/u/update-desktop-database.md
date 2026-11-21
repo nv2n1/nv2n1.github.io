@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-update-desktop-database/"
 description: "update-desktop-database – Build cache database of MIME types handled by desktop files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> update-desktop-database &#8211; Build cache database of MIME types handled by desktop files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>update-desktop-database [-q|&#8211;quiet] [-v|&#8211;verbose] [DIRECTORY&#8230;]</code></p>
 <h2>DESCRIPTION</h2>

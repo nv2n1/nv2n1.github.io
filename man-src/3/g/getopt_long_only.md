@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getopt_long_only/"
 description: "getopt, getopt_long, getopt_long_only, optarg, optind, opterr, optopt – Parse command-line options"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getopt, getopt_long, getopt_long_only, optarg, optind, opterr, optopt &#8211; Parse command-line options </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

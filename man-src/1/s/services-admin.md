@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-services-admin/"
 description: "services-admin – Services Administration Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> services-admin &#8211; Services Administration Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>services-admin</code> [<i>OPTION&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

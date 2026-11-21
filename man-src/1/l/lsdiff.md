@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lsdiff/"
 description: "lsdiff – show which files are modified by a patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lsdiff &#8211; show which files are modified by a patch </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lsdiff</code> [[-n] | [&#8211;line-number]] [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [&#8211;strip=<i>n</i>] [&#8211;addprefix=<i>PREFIX</i>] [[-s] | [&#8211;status]] [[-E] | [&#8211;empty-files-as-removed]] [[-i&nbsp;<i>PATTERN</i>] | [&#8211;include=<i>PATTERN</i>]] [[-x&nbsp;<i>PATTERN</i>] | [&#8211;exclude=<i>PATTERN</i>]] [[-z] | [&#8211;decompress]] [[-#&nbsp;<i>RANGE</i>] | [&#8211;hunks=<i>RANGE</i>]] [&#8211;lines=<i>RANGE</i>] [[-F<i>RANGE</i>] | [&#8211;files=<i>RANGE</i>]] [[-H] | [&#8211;with-filename]] [[-h] | [&#8211;no-filename]] [[-v] | [&#8211;verbose]&#8230;] [<i>file</i>&#8230;]</dt>

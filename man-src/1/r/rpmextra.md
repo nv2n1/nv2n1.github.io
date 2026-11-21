@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rpmextra/"
 description: "rpmextra – display extra packages : not from distribution repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rpmextra &#8211; display extra packages : not from distribution repositories </p>
 <h2>DESCRIPTION</h2>
 <p> rpmextra search for extra packages : packages installed on the system that are not available in any repository listed in the config file </p>
 <p> this packages are often installed manually and are not updated as others packages by distribution tools</p>

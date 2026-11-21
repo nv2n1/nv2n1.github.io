@@ -6,8 +6,6 @@ letter: "a"
 url: "/docs/linux/man/1-autosp/"
 description: "autosp – preprocessor to generate note-spacing commands for MusiXTeX scores"
 ---
-<h2 class="name">NAME</h2>
-<p> autosp - preprocessor to generate note-spacing commands for MusiXTeX scores  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autosp </code> [<code>-v | --version | -h | --help</code>] </p>
 <p> <code>autosp</code> [<code>-d | --dotted</code>] [<code>-l | --log</code>] <i>infile</i>[.aspc] [<i>outfile</i>[<i></i>.tex]] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libnutclient_commands/"
 description: "libnutclient_commands, nutclient_get_device_commands, nutclient_has_device_command, nutclient_get_device_command_description, nutclient_execute_device_command – Instant command related functions in..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> libnutclient_commands, nutclient_get_device_commands, nutclient_has_device_command, nutclient_get_device_command_description, nutclient_execute_device_command &#8211; Instant command related functions in Network UPS Tools high-level client access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nutclient.h&gt;

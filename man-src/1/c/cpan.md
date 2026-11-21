@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cpan/"
 description: "cpan – easily interact with CPAN from the command line"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpan &#8211; easily interact with CPAN from the command line </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #with arguments and no switches, installs specified modules

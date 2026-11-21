@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-setvtrgb/"
 description: "setvtrgb – customize the console color map"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setvtrgb &#8211; customize the console color map </p>
 <h2>SYNOPSIS</h2>
 <p> <code>setvtrgb</code> vga </p>
 <p> <code>setvtrgb</code> <i>FILE</i>|-</p>

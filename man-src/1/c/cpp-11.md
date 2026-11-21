@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cpp-11/"
 description: "cpp – The C Preprocessor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpp &#8211; The C Preprocessor </p>
 <h2>SYNOPSIS</h2>
 <p> cpp [<code>-D</code><i>macro</i>[=<i>defn</i>]&#8230;] [<code>-U</code><i>macro</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code><i>dir</i>&#8230;]&nbsp;[<code>-iquote</code><i>dir</i>&#8230;]<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa/"
 description: "zarafa – Zarafa server overview."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa &#8211; Zarafa server overview. </p>
 <h2>DESCRIPTION</h2>
 <p> Zarafa is a full-featured e-mail and groupware solution, focused towards clients using the MAPI standard. The Zarafa suite consists of the following parts: </p>
 <p> zarafa-server</p>

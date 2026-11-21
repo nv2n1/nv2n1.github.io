@@ -7,10 +7,6 @@ url: "/docs/linux/man/3-is_selinux_enabled/"
 description: "is_selinux_enabled – check whether SELinux is enabled"
 ---
 
-<h2 class="name">NAME</h2>
-<p> is_selinux_enabled &#8211; check whether SELinux is enabled </p>
-<h2 class="name">NAME</h2>
-<p> is_selinux_mls_enabled &#8211; check whether SELinux is enabled for (Multi Level Security) MLS </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int is_selinux_enabled();</code> </p>

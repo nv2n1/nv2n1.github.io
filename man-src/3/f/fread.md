@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fread/"
 description: "fread, fwrite – binary stream input/output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fread, fwrite &#8211; binary stream input/output </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

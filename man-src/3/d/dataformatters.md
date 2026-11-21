@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dataformatters/"
 description: "ql/utilities/dataformatters.hpp – output manipulators"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/utilities/dataformatters.hpp &#8211; output manipulators </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/utilities/null.hpp&gt;<br />
  #include &lt;ostream&gt; </p>

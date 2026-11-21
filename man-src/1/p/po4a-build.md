@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-po4a-build/"
 description: "po4a-build – build translated documentation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> po4a-build &#8211; build translated documentation </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>po4a-build</code> [<code>-f</code> | <code>&#8211;file</code><i> FILE</i>] [<code>&#8211;pot-only</code>]</dt>

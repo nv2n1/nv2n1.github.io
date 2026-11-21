@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ftpmail/"
 description: "ftpmail – FIFO-based Perl script for sending email based on proftpd TransferLog"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ftpmail &#8211; FIFO-based Perl script for sending email based on proftpd TransferLog </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftpmail</code> [ <code>&#8211;help</code> ] [ <code>&#8211;fifo</code> <i>fifo-path</i> ] [ <code>&#8211;from</code> <i>email-address</i> ] [ <code>&#8211;log</code> <i>xferlog-file</i> ] [ <code>&#8211;recipient</code> <i>email-address</i> ] [ <code>&#8211;subject</code> <i>email-subject</i> ] [ <code>&#8211;smtp-server</code> <i>server-address</i> ] [ <code>&#8211;attach-file</code> ] [ <code>&#8211;auth</code> <i>smtp-auth-info-file</i> ] [ <code>&#8211;ignore-users</code> <i>regex-pattern</i> ] [ <code>&#8211;watch-users</code> <i>regex-pattern</i> ]</p>
 <h2>DESCRIPTION</h2>

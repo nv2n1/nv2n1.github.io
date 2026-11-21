@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shares-admin/"
 description: "shares-admin – Shared Folders Administration Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shares-admin &#8211; Shared Folders Administration Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shares-admin</code> [<i>OPTION&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

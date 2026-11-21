@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qselect-torque/"
 description: "qselect – select pbs batch jobs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qselect &#8211; select pbs batch jobs </p>
 <h2>SYNOPSIS</h2>
 <p> qselect [-a [op]date_time] [-A account_string] [-e] [-c [op]interval] [-h hold_list] [-l resource_list] [-N name] [-p [op]priority] [-q destination] [-r rerun] [-s states] [-u user_list]</p>
 <h2>DESCRIPTION</h2>

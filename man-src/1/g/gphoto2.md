@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gphoto2/"
 description: "gphoto2 – command-line gphoto2 client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gphoto2 &#8211; command-line gphoto2 client </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gphoto2</code> [&#8211;debug] [&#8211;debug-logfile&nbsp;<wbr><i>FILENAME</i>] [[-q] | [&#8211;quiet]] [[-v] | [&#8211;verbose]] [[-h] | [&#8211;help]]</dt>

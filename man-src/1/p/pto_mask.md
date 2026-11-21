@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pto_mask/"
 description: "pto_mask – Apply a mask"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pto_mask &#8211; Apply a mask </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pto_mask</code> [options] input.pto</p>
 <h2>DESCRIPTION</h2>

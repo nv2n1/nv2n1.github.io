@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-divert/"
 description: "dpkg-divert – override a package’s version of a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-divert &#8211; override a package&#8217;s version of a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-divert</code> [<i>option</i>&#8230;] <i>command</i></p>
 <h2>DESCRIPTION</h2>

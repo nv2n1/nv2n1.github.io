@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-genkey/"
 description: "genkey – generate SSL certificates and certificate requests"
 ---
 
-<h2 class="name">NAME</h2>
-<p> genkey &#8211; generate SSL certificates and certificate requests </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>genkey</code> [<code>&#8211;test</code>] [<code>&#8211;days&nbsp;<wbr></code><i>count</i>] [[<code>&#8211;genreq</code>] | [<code>&#8211;makeca</code>] | [<code>&#8211;nss</code>] | [<code>&#8211;renew</code>] | [<code>&#8211;cacert</code>]] {<i>hostname</i>}</dt></dl>

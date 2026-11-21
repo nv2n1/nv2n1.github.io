@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rst2odt_prepstyles/"
 description: "rst2odt_prepstyles – strip paper size specifications off of rst2odt stylesheets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rst2odt_prepstyles &#8211; strip paper size specifications off of rst2odt stylesheets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rst2odt_prepstyles</code> <i>FILE</i></p>
 <h2>DESCRIPTION</h2>

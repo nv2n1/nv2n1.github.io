@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bg5conv/"
 description: "bg5conv – convert a TeX document in Big 5 encoding into `preprocessed’ form."
 ---
 
-<h2 class="name">NAME</h2>
-<p> bg5conv &#8211; convert a TeX document in Big 5 encoding into `preprocessed&#8217; form. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bg5conv</code> &lt; <i>infile</i> &gt; <i>outfile</i></p>
 <h2>DESCRIPTION</h2>

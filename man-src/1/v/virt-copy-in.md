@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-copy-in/"
 description: "virt-copy-in – Copy files and directories into a virtual machine disk image."
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-copy-in &#8211; Copy files and directories into a virtual machine disk image. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - copy - in - a disk.img file | dir[file | dir...] / destination virt - copy - in - d domain file | dir[file | dir...] / destination

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-des_setparity/"
 description: "des_crypt, ecb_crypt, cbc_crypt, des_setparity, DES_FAILED – fast DES encryption"
 ---
 
-<h2 class="name">NAME</h2>
-<p> des_crypt, ecb_crypt, cbc_crypt, des_setparity, DES_FAILED &#8211; fast DES encryption </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;rpc/des_crypt.h&gt;

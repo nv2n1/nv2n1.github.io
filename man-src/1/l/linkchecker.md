@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-linkchecker/"
 description: "linkchecker – command line client to check HTML documents and websites for broken links"
 ---
 
-<h2 class="name">NAME</h2>
-<p> linkchecker &#8211; command line client to check HTML documents and websites for broken links </p>
 <h2>SYNOPSIS</h2>
 <p> <code>linkchecker</code> [<i>options</i>] [<i>file-or-url</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

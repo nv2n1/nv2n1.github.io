@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-leaf/"
 description: "leaf – Lightweight Editor of Ascii(and more) Files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> leaf &#8211; Lightweight Editor of Ascii(and more) Files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>leaf</code> [-f] [-d&nbsp;<wbr><i>dictionary</i>] [+<i>n</i>] [<i>filename</i>]</dt></dl>

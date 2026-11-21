@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-cacheflush/"
 description: "cacheflush – flush contents of instruction and/or data cache"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cacheflush &#8211; flush contents of instruction and/or data cache </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/cachectl.h&gt;

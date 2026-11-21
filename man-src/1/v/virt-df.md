@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-df/"
 description: "virt-df – Display free space on virtual filesystems"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-df &#8211; Display free space on virtual filesystems </p>
 <h2>SYNOPSIS</h2>
 <p> All guests: </p>
 <pre>

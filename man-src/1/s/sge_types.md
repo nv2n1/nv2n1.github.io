@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sge_types/"
 description: "sge_types – Grid Engine type descriptions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sge_types &#8211; Grid Engine type descriptions </p>
 <h2>DESCRIPTION</h2>
 <p> The Grid Engine user interface consists of several programs and files. Some command-line switches and several file attributes are types. The syntax for these types is explained in this page. </p>
 <h2>OBJECT TYPES</h2>

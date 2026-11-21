@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_modify_ext/"
 description: "ldap_modify_ext, ldap_modify_ext_s – Perform an LDAP modify operation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_modify_ext, ldap_modify_ext_s &#8211; Perform an LDAP modify operation </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

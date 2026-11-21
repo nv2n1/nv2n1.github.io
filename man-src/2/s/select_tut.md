@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-select_tut/"
 description: "select, pselect – synchronous I/O multiplexing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> select, pselect &#8211; synchronous I/O multiplexing </p>
 <h2>SYNOPSIS</h2>
 <p> See <code><a href="/docs/linux/man/2-select/">select</a></code>(2)</p>
 <h2>DESCRIPTION</h2>

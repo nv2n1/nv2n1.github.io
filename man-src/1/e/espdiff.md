@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-espdiff/"
 description: "espdiff – apply the appropriate transformation to a set of patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> espdiff &#8211; apply the appropriate transformation to a set of patches </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>espdiff</code> [&#8211;deep-brainwave-mode] [&#8211;recurse] [&#8211;compare] [<i>file</i>&#8230;]</dt>

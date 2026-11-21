@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofotxtextract/"
 description: "podofotxtextract – Extract all text from a PDF file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofotxtextract &#8211; Extract all text from a PDF file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofotxtextract</code> [inputfile] </p>
 <h2>DESCRIPTION</h2>

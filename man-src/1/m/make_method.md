@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-make_method/"
 description: "make_method – Turn Perl code into an XML description for RPC::XML::Server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> make_method &#8211; Turn Perl code into an XML description for RPC::XML::Server </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 make_method-- name = system.identification-- helptext = 'System ID string' --signature = string-- code = ident.pl-- output = ident.xpl

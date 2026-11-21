@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-gettid/"
 description: "gettid – get thread identification"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gettid &#8211; get thread identification </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-torify/"
 description: "torify – wrapper for torsocks and tor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> torify &#8211; wrapper for torsocks and tor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>torify</code> <i>application</i> [<i>application&#8217;s</i> <i>arguments</i>]</p>
 <h2>DESCRIPTION</h2>

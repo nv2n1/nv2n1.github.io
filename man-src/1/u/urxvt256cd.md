@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-urxvt256cd/"
 description: "urxvt256cd – urxvt256c terminal daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> urxvt256cd &#8211; urxvt256c terminal daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>urxvt256cd</code> [-q|&#8211;quiet] [-o|&#8211;opendisplay] [-f|&#8211;fork] [-m|&#8211;mlock] [-e|&#8211;eval <i>perlstring</i>] </p>
 <p> <code>urxvt256cd</code> -q -o -f # for .xsession use</p>

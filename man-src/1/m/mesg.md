@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mesg/"
 description: "mesg – display (or do not display) messages from other users"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mesg &#8211; display (or do not display) messages from other users </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mesg</code> [<i>option</i>] [<code>n</code>|<code>y</code>]</p>
 <h2>DESCRIPTION</h2>

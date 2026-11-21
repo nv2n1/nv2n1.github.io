@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clarzb/"
 description: "clarzb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clarzb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mutter-message/"
 description: "MUTTER-MESSAGE – a command to send a message to Mutter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> MUTTER-MESSAGE &#8211; a command to send a message to Mutter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>MUTTER-MESSAGE</code> [restart|reload-theme|enable-keybindings|disable-keybindings]</p>
 <h2>DESCRIPTION</h2>

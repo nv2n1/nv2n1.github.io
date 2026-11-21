@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-fmt-merge-msg/"
 description: "git-fmt-merge-msg – Produce a merge commit message"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-fmt-merge-msg &#8211; Produce a merge commit message </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git fmt - merge - msg[-m&lt;message&gt;][--log[=&lt;n&gt;] | --no - log] git fmt - merge - msg[-m&lt;message&gt;][--log[=&lt;n&gt;] | --no - log] - F&lt;file&gt;

@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perl5240delta/"
 description: "perl5240delta – what is new for perl v5.24.0"
 ---
-<h2 class="name">NAME</h2>
-<p> perl5240delta - what is new for perl v5.24.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes the differences between the 5.22.0 release and the 5.24.0 release.  </p>
 <h2>Core Enhancements</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-mkdir/"
 description: "shtool mkdir – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool mkdir &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-mkdir/">mkdir</a>(1) style command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool mkdir</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-f</code>|<code>&#8211;force</code>] [<code>-p</code>|<code>&#8211;parents</code>] [<code>-m</code>|<code>&#8211;mode</code> <i>mode</i>] [<code>-o</code>|<code>&#8211;owner</code> <i>owner</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] <i>dir</i> [<i>dir</i> &#8230;]</p>

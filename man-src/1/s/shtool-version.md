@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-version/"
 description: "shtool version – GNU shtool maintain version information file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool version &#8211; GNU shtool maintain version information file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool version</code> [<code>-l</code>|<code>&#8211;language</code> <i>lang</i>] [<code>-n</code>|<code>&#8211;name</code> <i>name</i>] [<code>-p</code>|<code>&#8211;prefix</code> <i>prefix</i>] [<code>-s</code>|<code>&#8211;set</code> <i>version</i>] [<code>-e</code>|<code>&#8211;edit</code>] [<code>-i</code>|<code>&#8211;increase</code> <i>knob</i>] [<code>-d</code>|<code>&#8211;display</code> <i>type</i>] <i>file</i></p>
 <h2>DESCRIPTION</h2>

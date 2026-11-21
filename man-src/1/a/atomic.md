@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic/"
 description: "atomic – Atomic Management Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic &#8211; Atomic Management Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic</code> [OPTIONS] COMMAND [arg&#8230;]<br />
 &nbsp;<wbr>&nbsp;<wbr>{containers,diff,images,install,mount,pull,push,run,scan,sign,stop,storage,migrate,top,trust,uninstall,unmount,umount,update,verify,version} </p>

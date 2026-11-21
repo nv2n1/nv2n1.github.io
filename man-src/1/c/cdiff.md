@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cdiff/"
 description: "cdiff – a wrapper tool for colordiff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cdiff &#8211; a wrapper tool for colordiff </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cdiff</code> {<i>URL|FILE</i>}</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rapt-file/"
 description: "rapt-file – APT package searching utility — search remotely"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rapt-file &#8211; APT package searching utility &#8212; search remotely </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rapt-file</code> [ <code>options</code> ] [ <code>action</code> ] [ <code>pattern</code> ] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-yuvfps/"
 description: "yuvfps – Converts to a different frame rate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> yuvfps &#8211; Converts to a different frame rate</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvfps </code> [<code>-r</code> <i>Num:Den</i>] [<code>-s</code> <i>Num:Den</i>] [<code>-i</code> <i>Interlacing</i>] [<code>-I</code> <i>Interlacing</i>] [<code>-c</code>] [<code>-n</code>] [<code>-w</code>] [<code>-v 0</code>&#8211;<code>2</code>] [<code>-h</code>] </p>
 <h2>DESCRIPTION</h2>

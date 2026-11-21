@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmdepth/"
 description: "pnmdepth – change the maxval in a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmdepth &#8211; change the maxval in a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmdepth</code> <i>newmaxval</i> [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

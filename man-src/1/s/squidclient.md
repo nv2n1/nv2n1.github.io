@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-squidclient/"
 description: "squidclient – A simple HTTP web client tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> squidclient &#8211; A simple HTTP web client tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>squidclient</code> <code>[ -aknNrsv ] </code> <code>[ &#8211;ping [ping-options] ] </code> <code>[ &#8211;https] [tls-options] [ -A</code> string <code>] [ -h | &#8211;host</code> remote host <code>] [ -H &#8216;</code> string <code>&#8216; ] [ -i</code> IMS <code>] [ -j &#8216;</code> Host header <code>&#8216; ] [ -l | &#8211;local</code> host <code>] [ -m</code> method <code>] [ -p | &#8211;port</code> port <code>] [ -P</code> file <code>] [ -t</code> count <code>] [ -T</code> timeout <code>] [ -u</code> user <code>] [ -U</code> user <code>] [ -V</code> version <code>] [ -w</code> password <code>] [ -W</code> password <code>] </code> url </p>
 <p> <code>Ping options: [ -g</code> count <code>] [ -I</code> interval <code>] </code> </p>

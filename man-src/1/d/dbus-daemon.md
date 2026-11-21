@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbus-daemon/"
 description: "dbus-daemon – Message bus daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbus-daemon &#8211; Message bus daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-daemon</code></dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cppequ/"
 description: "cppequ.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cppequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cppequ</code> (UPLO, N, AP, S, SCOND, AMAX, INFO)<br />

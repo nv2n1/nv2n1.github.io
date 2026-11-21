@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-scansources/"
 description: "dpkg-scansources – create Sources index files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-scansources &#8211; create Sources index files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-scansources</code> [<i>option</i>&#8230;] <i>binary-dir</i> [<i>override-file</i> [<i>path-prefix</i>]] <code>&gt;</code> <i>Sources</i></p>
 <h2>DESCRIPTION</h2>

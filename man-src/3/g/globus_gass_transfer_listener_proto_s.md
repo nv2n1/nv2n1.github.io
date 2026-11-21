@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_listener_proto_s/"
 description: "globus_gass_transfer_listener_proto_s –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gass_transfer_listener_proto_s &#8211; </p>
 <p> Protocol module listener handling structure.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_transfer_proto.h&gt;</p>

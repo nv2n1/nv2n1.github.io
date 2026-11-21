@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flumotion-manager/"
 description: "flumotion-manager – streaming media server central management"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flumotion-manager &#8211; streaming media server central management</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flumotion-manager</code> [ <code>&#8211;</code> ] [ <code>&#8211;debug</code> <i>debug configuration</i> ] [ <code>-L</code> <i>logdir</i> ] [ <code>-R</code> <i>rundir</i> ] [ <code>-H</code> <i>host</i> ] [ <code>-P</code> <i>port</i> ] [ <code>-T</code> <i>protocol</i> ] [ <code>-C</code> <i>certificate</i> ] [ <code>-n</code> <i>name</i> ] [ <code>-s</code> <i>servicename</i> ] [ <code>-D</code> ] [ <code>&#8211;daemonize-to=directory</code> ] <i>manager.xml [flow1.xml flow2.xml &#8230;]</i> </p>
 <h2>DESCRIPTION</h2>

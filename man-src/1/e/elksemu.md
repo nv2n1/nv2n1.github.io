@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-elksemu/"
 description: "elksemu – Embedded Linux Kernel Subset emulator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> elksemu &#8211; Embedded Linux Kernel Subset emulator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>/lib/elksemu</code> <code>program</code> [<code>arguments</code>]</p>
 <h2>DESCRIPTION</h2>

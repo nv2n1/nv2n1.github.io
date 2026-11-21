@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-prlimit/"
 description: "getrlimit, setrlimit, prlimit – get/set resource limits"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getrlimit, setrlimit, prlimit &#8211; get/set resource limits </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/time.h&gt;</code><br />
  <code>#include &lt;sys/resource.h&gt;</code> </p>

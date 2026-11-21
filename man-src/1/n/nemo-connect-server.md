@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nemo-connect-server/"
 description: "nemo-connect-server – To Access a remote server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nemo-connect-server &#8211; To Access a remote server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nemo-connect-server</code> [<i>options</i>] [<i>URI</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-patgen/"
 description: "patgen – generate patterns for TeX hyphenation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> patgen &#8211; generate patterns for TeX hyphenation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>patgen</code> <i>dictionary_file pattern_file patout_file translate_file</i></p>
 <h2>DESCRIPTION</h2>

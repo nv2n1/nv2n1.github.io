@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pkaction/"
 description: "pkaction – Get details about a registered action"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pkaction &#8211; Get details about a registered action </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkaction</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-screen/"
 description: "screen – screen manager with VT100/ANSI terminal emulation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> screen &#8211; screen manager with VT100/ANSI terminal emulation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>screen</code> [ <code>&#8211;</code><i>options</i> ] [ <i>cmd</i> [ <i>args</i> ] ]<br />
  <code>screen -r</code> [[<i>pid</i><code>.</code>]<i>tty</i>[<code>.</code><i>host</i>]]<br />

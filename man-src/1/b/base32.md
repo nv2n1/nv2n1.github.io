@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-base32/"
 description: "base32 – base32 encode/decode data and print to standard output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> base32 &#8211; base32 encode/decode data and print to standard output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>base32</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>
 <h2>DESCRIPTION</h2>

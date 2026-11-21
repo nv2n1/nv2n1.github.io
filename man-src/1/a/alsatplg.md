@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-alsatplg/"
 description: "alsatplg – ALSA Topology Compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> alsatplg &#8211; ALSA Topology Compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <i>alsatplg</i> &lt;options&gt; [command]</p>
 <h2>DESCRIPTION</h2>

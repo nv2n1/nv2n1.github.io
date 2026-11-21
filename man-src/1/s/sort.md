@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sort/"
 description: "sort – sort lines of text files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sort &#8211; sort lines of text files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sort</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;<br />
  <code>sort</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;files0-from=F/</i></p>

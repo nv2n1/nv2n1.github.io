@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaexc/"
 description: "slaexc.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaexc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaexc</code> (WANTQ, N, T, LDT, Q, LDQ, J1, N1, N2, WORK, INFO)<br />

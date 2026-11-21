@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk-query-settings/"
 description: "gtk-query-settings – Utility to print name and value of all GtkSettings properties"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk-query-settings &#8211; Utility to print name and value of all GtkSettings properties </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-query-settings</code> [<i>PATTERN</i>]</dt></dl>

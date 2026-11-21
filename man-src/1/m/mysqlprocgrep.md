@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlprocgrep/"
 description: "mysqlprocgrep – Search Server Process Lists"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlprocgrep &#8211; Search Server Process Lists </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlprocgrep [</code><i>options</i><code>]</code></dt></dl>

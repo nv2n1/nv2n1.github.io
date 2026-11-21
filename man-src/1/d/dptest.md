@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dptest/"
 description: "dptest – test cases for QDBM Depot"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dptest &#8211; test cases for QDBM Depot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dptest write</code> [-s] <i>name</i> <i>rnum</i> <i>bnum</i><br />
  <code>dptest read</code> [-wb] <i>name</i><br />

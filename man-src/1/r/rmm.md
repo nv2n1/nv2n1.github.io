@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rmm/"
 description: "rmm – remove messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rmm &#8211; remove messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rmm</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-unlink</code> | <code>-nounlink</code>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

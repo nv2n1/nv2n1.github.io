@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fstopgm/"
 description: "fstopgm – convert a Usenix FaceSaver(tm) file into a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fstopgm &#8211; convert a Usenix FaceSaver(tm) file into a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fstopgm</code> [<i>fsfile</i>]</p>
 <h2>DESCRIPTION</h2>

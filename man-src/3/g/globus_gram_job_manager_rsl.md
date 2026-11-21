@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_job_manager_rsl/"
 description: "globus_gram_job_manager_rsl – RSL Attributes This page contains a list of all RSL attributes which are supported by the GRAM Job Manager."
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gram_job_manager_rsl &#8211; RSL Attributes This page contains a list of all RSL attributes which are supported by the GRAM Job Manager. </p>
 <p>&nbsp;<wbr> </p>
 <p> <code>arguments</code></p>
 <dl>

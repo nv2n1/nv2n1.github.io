@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-audit/"
 description: "pki-audit – Command-Line Interface for managing Certificate System audit configuration."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-audit &#8211; Command-Line Interface for managing Certificate System audit configuration.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - audit pki[CLI options]&lt;subsystem&gt; - audit - show[command options] pki[CLI options]&lt;subsystem&gt; - audit - mod-- action&lt;action&gt;[command options] pki[CLI options]&lt;subsystem&gt; - audit - mod-- input&lt;input file&gt;[command options]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamedge/"
 description: "pamedge – edge-detect an image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamedge &#8211; edge-detect an image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamedge</code> [<i>imagefile</i>] </p>
 <h2>DESCRIPTION</h2>

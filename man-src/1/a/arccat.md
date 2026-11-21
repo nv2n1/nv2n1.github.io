@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arccat/"
 description: "arccat – ARC Catenate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arccat &#8211; ARC Catenate</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arccat</code> command can be used to view the stdout or stderr of a running job. It can also be used to show A-REX&#8217;s error log of a job. </p>
 <h2>SYNOPSIS</h2>

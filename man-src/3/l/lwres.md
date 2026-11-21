@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres/"
 description: "lwres – introduction to the lightweight resolver library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres &#8211; introduction to the lightweight resolver library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;

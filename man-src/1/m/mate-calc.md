@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-calc/"
 description: "mate-calc – (mate-calculator) – The MATE Desktop Environment Calculator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-calc &#8211; (mate-calculator) &#8211; The MATE Desktop Environment Calculator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-calc [OPTIONS&#8230;] [FILES&#8230;]</code></p>
 <h2>DESCRIPTION</h2>

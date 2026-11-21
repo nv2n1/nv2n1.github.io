@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-augparse/"
 description: "augparse – execute an Augeas module"
 ---
 
-<h2 class="name">NAME</h2>
-<p> augparse &#8211; execute an Augeas module </p>
 <h2>SYNOPSIS</h2>
 <p> augparse [<font SIZE="-1">OPTIONS</font>] <font SIZE="-1">MODULE</font></p>
 <h2>DESCRIPTION</h2>

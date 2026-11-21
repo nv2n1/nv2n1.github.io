@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamldep/"
 description: "ocamldep – Dependency generator for OCaml"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamldep &#8211; Dependency generator for OCaml</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamldep</code> [ <i>options</i> ] <i>filename &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

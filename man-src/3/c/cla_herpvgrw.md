@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cla_herpvgrw/"
 description: "cla_herpvgrw.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cla_herpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>cla_herpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br />

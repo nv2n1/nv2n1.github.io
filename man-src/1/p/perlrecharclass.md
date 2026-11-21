@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perlrecharclass/"
 description: "perlrecharclass – Perl Regular Expression Character Classes"
 ---
-<h2 class="name">NAME</h2>
-<p> perlrecharclass - Perl Regular Expression Character Classes </p>
 <h2>DESCRIPTION</h2>
 <p> The top level documentation about Perl regular expressions is found in perlre. </p>
 <p> This manual page discusses the syntax and use of character classes in Perl regular expressions. </p>

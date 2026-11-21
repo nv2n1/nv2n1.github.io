@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cd-fix-profile/"
 description: "cd-fix-profile – Color Manager Testing Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cd-fix-profile &#8211; Color Manager Testing Tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cd-fix-profile</code> [<code>&#8211;verbose</code>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fixing/"
 description: "QuantLib::Index – purely virtual base class for indexes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Index &#8211; purely virtual base class for indexes </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/index.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Observable</code>. </p>

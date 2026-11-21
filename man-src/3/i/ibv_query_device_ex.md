@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_query_device_ex/"
 description: "ibv_query_device_ex – query an RDMA device’s attributes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_query_device_ex &#8211; query an RDMA device&#8217;s attributes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-cat/"
 description: "gvfs-cat"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-cat </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-cat</code> has been deprecated and it is redirected to <code>gio cat</code>.</p>
 <h2>SEE ALSO</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dave/"
 description: "dave – DAV Explorer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dave &#8211; DAV Explorer </p>
 <h2>SYNOPSIS</h2>
 <pre>
     dave [OPTIONS] URL

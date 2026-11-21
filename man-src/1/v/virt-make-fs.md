@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-make-fs/"
 description: "virt-make-fs – Make a filesystem from a tar archive or files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-make-fs &#8211; Make a filesystem from a tar archive or files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - make - fs[--options] input.tar output.img virt - make - fs[--options] input.tar.gz output.img virt - make - fs[--options] directory output.img

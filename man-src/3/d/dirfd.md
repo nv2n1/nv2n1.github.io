@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dirfd/"
 description: "dirfd – get directory stream file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dirfd &#8211; get directory stream file descriptor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;dirent.h&gt;</code> </p>

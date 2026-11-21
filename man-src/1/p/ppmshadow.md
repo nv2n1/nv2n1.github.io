@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmshadow/"
 description: "ppmshadow – add simulated shadows to a portable pixmap image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmshadow &#8211; add simulated shadows to a portable pixmap image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmshadow</code> [<code>-b</code> <i>blur_size</i>] [<code>-k</code>] [<code>-t</code>] [<code>-x</code> <i>xoffset</i>] [<code>-y</code> <i>yoffset</i>] [<code>-u</code>] [<i>pnmfile</i>] </p>
 <h2>DESCRIPTION</h2>

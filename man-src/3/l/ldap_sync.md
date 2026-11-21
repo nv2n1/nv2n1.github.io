@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_sync/"
 description: "ldap_sync_init, ldap_sync_init_refresh_only, ldap_sync_init_refresh_and_persist, ldap_sync_poll – LDAP sync routines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_sync_init, ldap_sync_init_refresh_only, ldap_sync_init_refresh_and_persist, ldap_sync_poll &#8211; LDAP sync routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

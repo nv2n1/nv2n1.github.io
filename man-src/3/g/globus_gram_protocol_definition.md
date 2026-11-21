@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_definition/"
 description: "globus_gram_protocol_definition – GRAM Protocol Definition The GRAM Protocol is used to handle communication between the Gatekeeper, Job Manager, and GRAM Clients. The protocol is based on a subset..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gram_protocol_definition &#8211; GRAM Protocol Definition The GRAM Protocol is used to handle communication between the Gatekeeper, Job Manager, and GRAM Clients. The protocol is based on a subset of the HTTP/1.1 protocol, with a small set of message types and responses sent as the body of the HTTP requests and responses. This document describes GRAM Protocol version 2.</p>
 <h3>Framing</h3>
 <p> GRAM messages are framed in HTTP/1.1 messages. However, only a small subset of the HTTP specification is used or understood by the GRAM system. All GRAM requests are HTTP POST messages. Only the following HTTP headers are understood:</p>
 <dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chseqr/"
 description: "chseqr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chseqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, W, Z, LDZ, WORK, LWORK, INFO)<br />

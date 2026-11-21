@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhl/"
 description: "mhl – produce formatted listings of nmh messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhl &#8211; produce formatted listings of nmh messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/mhl</code> [<code>-bell</code> | <code>-nobell</code>] [<code>-clear</code> | <code>-noclear</code>] [<code>-folder</code> <i>+folder</i>] [<code>-form</code> <i>formfile</i>] [<code>-length</code> <i>lines</i>] [<code>-width</code> <i>columns</i>] [<code>-moreproc</code> <i>program</i>] [<code>-nomoreproc</code>] [<code>-fmtproc</code> <i>program</i>] [<code>-nofmtproc</code>] [<i>files</i> <i>&#8230;</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

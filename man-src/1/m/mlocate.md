@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mlocate/"
 description: "locate – find files by name"
 ---
 
-<h2 class="name">NAME</h2>
-<p> locate &#8211; find files by name</p>
 <h2>SYNOPSIS</h2>
 <p> <code>locate</code> [<i>OPTION</i>]&#8230; <i>PATTERN</i>&#8230; </p>
 <h2>DESCRIPTION</h2>

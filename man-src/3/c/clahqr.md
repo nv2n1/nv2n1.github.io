@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clahqr/"
 description: "clahqr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clahqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, W, ILOZ, IHIZ, Z, LDZ, INFO)<br />

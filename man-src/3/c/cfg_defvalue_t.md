@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cfg_defvalue_t/"
 description: "cfg_defvalue_t – Data structure holding the default value given by the initialization macros."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cfg_defvalue_t &#8211; Data structure holding the default value given by the initialization macros. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>

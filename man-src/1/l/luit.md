@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-luit/"
 description: "luit – Locale and ISO 2022 support for Unicode terminals"
 ---
 
-<h2 class="name">NAME</h2>
-<p> luit &#8211; Locale and ISO 2022 support for Unicode terminals </p>
 <h2>SYNOPSIS</h2>
 <p> <code>luit</code> [ <i>options</i> ] [ <code>&#8212;</code> ] [ <i>program</i> [ <i>args</i> ] ]</p>
 <h2>DESCRIPTION</h2>

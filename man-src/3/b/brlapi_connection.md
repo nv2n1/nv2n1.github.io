@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-brlapi_connection/"
 description: "Connecting to BrlAPI –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Connecting to BrlAPI &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>brlapi_connectionSettings_t</code><br />
  <i>Settings structure for BrlAPI</i> connection.</p>

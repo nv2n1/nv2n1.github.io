@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-build-sign/"
 description: "flatpak-build-sign – Sign an application or runtime"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-build-sign &#8211; Sign an application or runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-sign</code> [OPTION&#8230;] LOCATION ID [BRANCH]</dt></dl>

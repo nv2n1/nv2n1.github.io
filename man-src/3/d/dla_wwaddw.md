@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dla_wwaddw/"
 description: "dla_wwaddw.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dla_wwaddw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dla_wwaddw</code> (N, X, Y, W)<br />

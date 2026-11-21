@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-postqueue/"
 description: "postqueue – Postfix queue control"
 ---
 
-<h2 class="name">NAME</h2>
-<p> postqueue &#8211; Postfix queue control </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 To flush the mail queue : postqueue[-v][-c config_dir] - f postqueue[-v][-c config_dir] - i queue_id postqueue[-v][-c config_dir] - s site

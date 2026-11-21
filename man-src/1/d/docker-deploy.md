@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-deploy/"
 description: "docker-deploy – Deploy a new stack or update an existing stack"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-deploy &#8211; Deploy a new stack or update an existing stack </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker deploy [OPTIONS] STACK</code> </p>
 <h2>DESCRIPTION</h2>

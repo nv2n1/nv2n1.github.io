@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dumpkeys/"
 description: "dumpkeys – dump keyboard translation tables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dumpkeys &#8211; dump keyboard translation tables </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dumpkeys</code> [ <code>-h &#8211;help -i &#8211;short-info -l -s &#8211;long-info</code> <code>-n &#8211;numeric -f &#8211;full-table -1 &#8211;separate-lines</code> <code>-S</code><i>shape</i> <code>&#8211;shape=</code><i>shape</i> <code>-t &#8211;funcs-only -k &#8211;keys-only -d &#8211;compose-only</code> <code>-c</code><i>charset</i> <code>&#8211;charset=</code><i>charset</i> <code>-v &#8211;verbose -V &#8211;version</code> ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arlatex/"
 description: "arlatex – archive a number of ancillary LaTeX files into a master .tex file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arlatex &#8211; archive a number of ancillary LaTeX files into a master .tex file </p>
 <h2>SYNOPSIS</h2>
 <p> arlatex [<code>&#8211;outfile</code>=<i>filename</i><i>.tex</i>] <code>&#8211;document</code>=<i>filename</i><i>.tex</i> <i>filename</i> &#8230; </p>
 <p> arlatex <code>&#8211;version</code> </p>

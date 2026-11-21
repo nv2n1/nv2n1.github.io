@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airtun-ng/"
 description: "airtun-ng – a virtual tunnel interface creator for aircrack-ng"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airtun-ng &#8211; a virtual tunnel interface creator for aircrack-ng </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airtun-ng</code> [options] &lt;interface name&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arcrm/"
 description: "arcrm – delete files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arcrm &#8211; delete files</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcrm</code> command deletes files on grid storage elements and indexing services. </p>
 <h2>SYNOPSIS</h2>

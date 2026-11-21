@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aaxine/"
 description: "aaxine – an ASCII art video player"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aaxine &#8211; an ASCII art video player</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aaxine </code> [<i>aalib-options</i>] [<i>-A</i>&lt;audio-driver&gt;] [<i>-a</i>&lt;audio-channel&gt;] [<i>-R</i>&lt;rec-by&gt;] [<i>MRL</i>&#8230;] </p>
 <h2>DESCRIPTION</h2>

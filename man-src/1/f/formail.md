@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-formail/"
 description: "formail – mail (re)formatter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> formail &#8211; mail (re)formatter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>formail</code> [<i></i><code>+</code>skip] [<i></i><code>&#8211;</code>total] [<code>-bczfrktedqBY</code>] [<code>-p</code> <i>prefix</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-D</code> <i>maxlen idcache</i>]<br />

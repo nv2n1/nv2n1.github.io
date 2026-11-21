@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-readahead/"
 description: "readahead – initiate file readahead into page cache"
 ---
 
-<h2 class="name">NAME</h2>
-<p> readahead &#8211; initiate file readahead into page cache </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pg_controldata/"
 description: "pg_controldata – display control information of a PostgreSQL database cluster"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pg_controldata &#8211; display control information of a PostgreSQL database cluster </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_controldata</code> [<i>option</i>] [<i>datadir</i>]</dt></dl>

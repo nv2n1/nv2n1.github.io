@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-icat/"
 description: "icat – Output the contents of a file based on its inode number."
 ---
 
-<h2 class="name">NAME</h2>
-<p> icat &#8211; Output the contents of a file based on its inode number. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>icat [-hrsvV] [-f</code> <i>fstype</i> <code>] [-i</code> <i>imgtype</i> <code>] [-o </code> <i>imgoffset</i> <code>] [-b dev_sector_size] </code> <i>image [images] inode </i></p>
 <h2>DESCRIPTION</h2>

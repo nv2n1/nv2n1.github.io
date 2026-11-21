@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xmodmap/"
 description: "xmodmap – utility for modifying keymaps and pointer button mappings in X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xmodmap &#8211; utility for modifying keymaps and pointer button mappings in X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmodmap</code> [-options &#8230;] [filename]</p>
 <h2>DESCRIPTION</h2>

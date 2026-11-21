@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gio-querymodules/"
 description: "gio-querymodules – GIO module cache creation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gio-querymodules &#8211; GIO module cache creation </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gio-querymodules</code> {DIRECTORY&#8230;}</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cmap_iter_init/"
 description: "cmap_iter_init – Initialize iterator for keys stored in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmap_iter_init &#8211; Initialize iterator for keys stored in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_iter_init (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>prefix</i><code>, cmap_iter_handle_t *</code><i>cmap_iter_handle</i><code>);</code> </p>

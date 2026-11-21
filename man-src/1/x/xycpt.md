@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xycpt/"
 description: "xycpt – generate GMT colour palette table (cpt) files from column data."
 ---
 
-<h2 class="name">NAME</h2>
-<p> xycpt &#8211; generate GMT colour palette table (cpt) files from column data. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xycpt</code> [-b&nbsp;<wbr><i>rgb</i>] [-d] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-r&nbsp;<wbr><i>registration</i>] [-u] [-v] [-V] [<i>file</i>]</dt></dl>

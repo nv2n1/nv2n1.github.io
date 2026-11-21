@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-restore/"
 description: "git-restore – Restore working tree files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-restore &#8211; Restore working tree files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git restore[&lt;options&gt;][--source = &lt;tree&gt;][--staged][--worktree][--]&lt;pathspec&gt;... git restore[&lt;options&gt;][--source = &lt;tree&gt;][--staged][--worktree]-- pathspec - from - file = &lt;file&gt;[--pathspec - file - nul] git restore(-p | --patch)[&lt;options&gt;][--source = &lt;tree&gt;][--staged][--worktree][--][&lt;pathspec&gt;...]

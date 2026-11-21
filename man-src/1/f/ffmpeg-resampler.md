@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffmpeg-resampler/"
 description: "ffmpeg-resampler – FFmpeg Resampler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffmpeg-resampler &#8211; FFmpeg Resampler </p>
 <h2>DESCRIPTION</h2>
 <p> The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio format and packing layout.</p>
 <h2>RESAMPLER OPTIONS</h2>

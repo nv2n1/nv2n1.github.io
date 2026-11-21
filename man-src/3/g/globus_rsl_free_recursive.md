@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rsl_free_recursive/"
 description: "RSL Memory Management –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> RSL Memory Management &#8211; </p>
 <h3>Functions</h3>
 <p> globus_rsl_t * <code>globus_rsl_copy_recursive</code> (globus_rsl_t *ast_node)<br />
  <i>Create a deep copy of an RSL syntax tree. </i><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-document-info/"
 description: "flatpak-document-info – Show information about exported files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-document-info &#8211; Show information about exported files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak document-info</code> [OPTION&#8230;] FILE</dt></dl>

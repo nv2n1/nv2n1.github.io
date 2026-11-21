@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ecryptfs-mount-private/"
 description: "ecryptfs-mount-private – interactive eCryptfs private mount wrapper script."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecryptfs-mount-private &#8211; interactive eCryptfs private mount wrapper script.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-mount-private</code> </p>
 <h2>DESCRIPTION</h2>

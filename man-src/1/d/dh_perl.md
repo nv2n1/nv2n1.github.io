@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_perl/"
 description: "dh_perl – calculates Perl dependencies and cleans up after MakeMaker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_perl &#8211; calculates Perl dependencies and cleans up after MakeMaker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_perl</code> [<i>debhelper options</i>] [<code>-d</code>] [<i>library dirs</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

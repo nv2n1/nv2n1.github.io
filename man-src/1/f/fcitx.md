@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fcitx/"
 description: "fcitx – Free Chinese Input Toy of X – a Chinese IME for XIM"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fcitx &#8211; Free Chinese Input Toy of X &#8211; a Chinese IME for XIM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fcitx</code> [<i>OPTION</i>]</p>
 <h2>DESCRIPTION</h2>

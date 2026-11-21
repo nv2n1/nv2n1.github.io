@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lli-14/"
 description: "lli – manual page for lli 14"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lli &#8211; manual page for lli 14 </p>
 <h2>DESCRIPTION</h2>
 <p> OVERVIEW: llvm interpreter &amp; dynamic compiler </p>
 <p> USAGE: lli [options] &lt;input bitcode&gt; &lt;program arguments&gt;&#8230; </p>

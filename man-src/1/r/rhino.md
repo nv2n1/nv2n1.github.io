@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rhino/"
 description: "rhino – invokes the JavaScript shell for running scripts in batch mode or interactive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rhino &#8211; invokes the JavaScript shell for running scripts in batch mode or interactive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rhino</code> <i>[options]</i> <i>script_filename_or_url</i> <i>[script_arguments]</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-convdate/"
 description: "convdate – Convert to/from RFC 5322 dates and seconds since epoch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> convdate &#8211; Convert to/from RFC 5322 dates and seconds since epoch </p>
 <h2>SYNOPSIS</h2>
 <p> <code>convdate</code> [<code>-dhl</code>] [<code>-c</code> | <code>-n</code> | <code>-s</code>] [<i>date</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

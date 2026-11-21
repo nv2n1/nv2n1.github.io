@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppdhtml/"
 description: "ppdhtml – cups html summary generator (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppdhtml &#8211; cups html summary generator (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppdhtml</code> [ <code>-D </code><i>name</i>[<code>=</code><i>value</i>] ] [ <code>-I</code> <i>include-directory</i> ] <i>source-file</i></p>
 <h2>DESCRIPTION</h2>

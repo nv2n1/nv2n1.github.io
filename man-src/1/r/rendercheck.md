@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rendercheck/"
 description: "rendercheck – simple tests of the X Render extension."
 ---
 
-<h2 class="name">NAME</h2>
-<p> rendercheck &#8211; simple tests of the X Render extension. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 rendercheck[-d | --display display][-i | --iter][--sync][-t | --tests test1, test2, test3, ...][-o | --ops op1, op2, op3, ...]

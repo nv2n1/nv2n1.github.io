@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-scpp/"
 description: "shtool scpp – GNU shtool C source file pre-processor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool scpp &#8211; GNU shtool C source file pre-processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool scpp</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-p</code>|<code>&#8211;preserve</code>] [<code>-f</code>|<code>&#8211;filter</code> <i>filter</i>] [<code>-o</code>|<code>&#8211;output</code> <i>ofile</i>] [<code>-t</code>|<code>&#8211;template</code> <i>tfile</i>] [<code>-M</code>|<code>&#8211;mark</code> <i>mark</i>] [<code>-D</code>|<code>&#8211;define</code> <i>dname</i>] [<code>-C</code>|<code>&#8211;class</code> <i>cname</i>] <i>file</i> [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

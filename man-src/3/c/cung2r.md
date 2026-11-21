@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cung2r/"
 description: "cung2r.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cung2r.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cung2r</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />

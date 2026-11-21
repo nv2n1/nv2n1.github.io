@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cptcont/"
 description: "cptcont – create a continuous GMT colour palette table (cpt) file based on the colours of a non-continuous cpt file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cptcont &#8211; create a continuous GMT colour palette table (cpt) file based on the colours of a non-continuous cpt file. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptcont</code> [-h] [-m] [-o&nbsp;<wbr><i>file</i>] [-p&nbsp;<wbr><i>percent</i>] [-v] [-V] [<i>file</i>]</dt></dl>

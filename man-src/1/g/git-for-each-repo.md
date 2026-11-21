@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-for-each-repo/"
 description: "git-for-each-repo – Run a Git command on a list of repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-for-each-repo &#8211; Run a Git command on a list of repositories </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git for-each-repo --config=&lt;config&gt; [--] &lt;arguments&gt;

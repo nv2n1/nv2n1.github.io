@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssbevd/"
 description: "ssbevd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssbevd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbevd</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />

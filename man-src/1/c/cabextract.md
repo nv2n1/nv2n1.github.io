@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cabextract/"
 description: "cabextract – program to extract files from Microsoft cabinet (.cab) archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cabextract &#8211; program to extract files from Microsoft cabinet (.cab) archives </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cabextract</code> [<code>-d</code><i>dir</i><code>]</code> [<code>-f</code>] [<code>-F</code><i>pattern</i><code>]</code> [<code>-h</code>] [<code>-l</code>] [<code>-L</code>] [<code>-p</code>] [<code>-q</code>] [<code>-s</code>] [<code>-t</code>] [<code>-v</code>] <i> cabinet files &#8230;</i></p>
 <h2>DESCRIPTION</h2>

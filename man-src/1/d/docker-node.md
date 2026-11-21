@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-node/"
 description: "docker-node – Manage Swarm nodes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-node &#8211; Manage Swarm nodes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker node</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lttng/"
 description: "lttng — LTTng 2.x tracer control command line tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lttng &#8212; LTTng 2.x tracer control command line tool</p>
 <h2>SYNOPSIS</h2>
 <p> lttng [OPTIONS] &lt;COMMAND&gt;</p>
 <h2>DESCRIPTION</h2>

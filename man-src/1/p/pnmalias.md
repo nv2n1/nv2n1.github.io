@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmalias/"
 description: "pnmalias – antialias a portable anyumap."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmalias &#8211; antialias a portable anyumap. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmalias</code> [<code>-bgcolor</code> <i>color</i>] [<code>-fgcolor</code> <i>color</i>] [<code>-bonly</code>] [<code>-fonly</code>] [<code>-balias</code>] [<code>-falias</code>] [<code>-weight</code> <i>w</i>] [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

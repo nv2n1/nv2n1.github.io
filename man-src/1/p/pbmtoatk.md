@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoatk/"
 description: "pbmtoatk – convert portable bitmap to Andrew Toolkit raster object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoatk &#8211; convert portable bitmap to Andrew Toolkit raster object </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoatk</code> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

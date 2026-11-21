@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-runuser/"
 description: "runuser – run a command with substitute user and group ID"
 ---
 
-<h2 class="name">NAME</h2>
-<p> runuser &#8211; run a command with substitute user and group ID </p>
 <h2>SYNOPSIS</h2>
 <p> <code>runuser</code> [options] <code>-u</code> <i>user</i> [[&#8211;] <i>command</i> [<i>argument</i>&#8230;]] </p>
 <p> <code>runuser</code> [options] [<code>&#8211;</code>] [<i>user</i> [<i>argument</i>&#8230;]]</p>

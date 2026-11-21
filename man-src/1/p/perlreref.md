@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perlreref/"
 description: "perlreref – Perl Regular Expressions Reference"
 ---
-<h2 class="name">NAME</h2>
-<p> perlreref - Perl Regular Expressions Reference </p>
 <h2>DESCRIPTION</h2>
 <p> This is a quick reference to Perl&#8217;s regular expressions. For full information see perlre and perlop, as well as the ``<font SIZE="-1">SEE ALSO&#8217;&#8216;</font> section in this document.  </p>
 <font SIZE="-1"></font><h3>OPERATORS</h3>

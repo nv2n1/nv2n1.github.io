@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ilogbl/"
 description: "ilogb, ilogbf, ilogbl – get integer exponent of a floating-point value"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ilogb, ilogbf, ilogbl &#8211; get integer exponent of a floating-point value </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>int ilogb(double </code><i>x</i><code>);</code><br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xetex-unsafe/"
 description: "xetex-unsafe, xelatex-unsafe – run xe(la)latex unsafely"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xetex-unsafe, xelatex-unsafe &#8211; run xe(la)latex unsafely </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xetex-unsafe</code> [<i>xetex-options</i>] <code>xelatex-unsafe</code> [<i>xetex-options</i>]</p>
 <h2>DESCRIPTION</h2>

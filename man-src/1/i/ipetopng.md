@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ipetopng/"
 description: "ipetopng – Save an Ipe document as a bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipetopng &#8211; Save an Ipe document as a bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipetopng</code> <i>page</i> <i>resolution</i> <i>input-file</i> <i>output-file</i> </p>
 <h2>DESCRIPTION</h2>

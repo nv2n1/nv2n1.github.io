@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-openipmicmd/"
 description: "openipmicmd – An IPMI Command Interface"
 ---
 
-<h2 class="name">NAME</h2>
-<p> openipmicmd &#8211; An IPMI Command Interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>openipmicmd</code> [<code>-k</code> <i>entry-to-execute</i>] <code>&lt;connection parms&gt;</code> </p>
 <h2>DESCRIPTION</h2>

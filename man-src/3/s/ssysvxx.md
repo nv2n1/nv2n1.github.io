@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssysvxx/"
 description: "ssysvxx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssysvxx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssysvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />

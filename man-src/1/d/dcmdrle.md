@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmdrle/"
 description: "dcmdrle – Decode RLE-compressed DICOM file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmdrle &#8211; Decode RLE-compressed DICOM file </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmdrle [options] dcmfile-in dcmfile-out

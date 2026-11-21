@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_create_srq/"
 description: "ibv_create_srq, ibv_destroy_srq – create or destroy a shared receive queue (SRQ)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_create_srq, ibv_destroy_srq &#8211; create or destroy a shared receive queue (SRQ) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

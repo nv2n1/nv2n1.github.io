@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gperl/"
 description: "gperl – groff preprocessor for Perl parts in roff files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gperl &#8211; groff preprocessor for Perl parts in roff files </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

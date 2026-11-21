@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-avlcpt/"
 description: "avlcpt – convert ArcView Legend gradients to GMT colour palette tables"
 ---
 
-<h2 class="name">NAME</h2>
-<p> avlcpt &#8211; convert ArcView Legend gradients to GMT colour palette tables </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>avlcpt</code> [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-l&nbsp;<wbr><i>adjust</i>] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-p&nbsp;<wbr><i>precision</i>] [-u&nbsp;<wbr><i>adjust</i>] [-v] [-V] [<i>file</i>]</dt></dl>

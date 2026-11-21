@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gsettings-schema-convert/"
 description: "gsettings-schema-convert – GConf to GSettings schema conversion"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gsettings-schema-convert &#8211; GConf to GSettings schema conversion </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gsettings-schema-convert</code> [option&#8230;] {file}</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-btattach/"
 description: "btattach – Attach serial devices to BlueZ stack"
 ---
 
-<h2 class="name">NAME</h2>
-<p> btattach &#8211; Attach serial devices to BlueZ stack </p>
 <h2>SYNOPSIS</h2>
 <p> <code>btattach</code> [<code>-B</code> <i>device</i>] [<code>-A</code> <i>device</i>] [<code>-P</code> <i>protocol</i>] [<code>-R</code>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zshcalsys/"
 description: "zshcalsys – zsh calendar system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zshcalsys &#8211; zsh calendar system </p>
 <h2>DESCRIPTION</h2>
 <p> The shell is supplied with a series of functions to replace and enhance the traditional Unix <code>calendar</code> programme, which warns the user of imminent or future events, details of which are stored in a text file (typically <code>calendar</code> in the user&#8217;s home directory). The version provided here includes a mechanism for alerting the user when an event is due. </p>
 <p> In addition functions <code>age</code>, <code>before</code> and <code>after</code> are provided that can be used in a glob qualifier; they allow files to be selected based on their modification times. </p>

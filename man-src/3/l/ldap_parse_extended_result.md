@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_parse_extended_result/"
 description: "ldap_parse_result – Parsing results"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_parse_result &#8211; Parsing results </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

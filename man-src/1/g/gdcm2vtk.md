@@ -7,10 +7,6 @@ url: "/docs/linux/man/1-gdcm2vtk/"
 description: "gdcm2vtk – .TH \"gdcm2vtk\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdcm2vtk &#8211; .TH &quot;gdcm2vtk&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
-<h2 class="name">NAME</h2>
-<p> gdcm2vtk &#8211; .SH &quot;SYNOPSIS&quot; </p>
 <pre>
 gdcm2vtk [options] file-in file-out
 </pre>

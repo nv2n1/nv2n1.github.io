@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-systemd-id128/"
 description: "systemd-id128 – Generate and print sd-128 identifiers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> systemd-id128 &#8211; Generate and print sd-128 identifiers </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-id128</code> [OPTIONS&#8230;] new</dt>

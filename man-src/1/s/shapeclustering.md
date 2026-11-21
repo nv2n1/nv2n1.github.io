@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shapeclustering/"
 description: "shapeclustering – shape clustering training for Tesseract"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shapeclustering &#8211; shape clustering training for Tesseract </p>
 <h2>SYNOPSIS</h2>
 <p> shapeclustering -D <i>output_dir</i> -U <i>unicharset</i> -O <i>mfunicharset</i> -F <i>font_props</i> -X <i>xheights</i> <i>FILE</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

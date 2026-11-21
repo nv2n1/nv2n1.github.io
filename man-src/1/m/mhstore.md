@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhstore/"
 description: "mhstore – store contents of MIME messages into files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhstore &#8211; store contents of MIME messages into files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhstore</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>file</i>] [<code>-outfile</code> <i>outfile</i>] [<code>-part</code> <i>number</i>] &#8230; [<code>-type</code> <i>content</i>] &#8230; [<code>-auto</code> | <code>-noauto</code>] [<code>-clobber</code> <i>always</i> | <i>auto</i> | <i>suffix</i> | <i>ask</i> | <i>never</i>] [<code>-rcache</code> <i>policy</i>] [<code>-wcache</code> <i>policy</i>] [<code>-check</code> | <code>-nocheck</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

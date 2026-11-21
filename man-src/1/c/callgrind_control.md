@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-callgrind_control/"
 description: "callgrind_control – observe and control programs being run by Callgrind"
 ---
 
-<h2 class="name">NAME</h2>
-<p> callgrind_control &#8211; observe and control programs being run by Callgrind </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>callgrind_control</code> [<i>options</i>] [<i>pid|program-name</i>&#8230;]</dt></dl>

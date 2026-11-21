@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chfn/"
 description: "chfn – change real user name and information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chfn &#8211; change real user name and information </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chfn</code> [<i>options</i>] [<i>LOGIN</i>]</dt></dl>

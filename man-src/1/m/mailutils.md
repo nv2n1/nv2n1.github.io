@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mailutils/"
 description: "mailutils – Mailutils multi-purpose tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mailutils &#8211; Mailutils multi-purpose tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mailutils</code> [<i>,OPTION/</i>&#8230;] <i>,COMMAND /</i>[<i>,CMDOPTS/</i>]</p>
 <h2>DESCRIPTION</h2>

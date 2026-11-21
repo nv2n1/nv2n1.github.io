@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-fsck/"
 description: "zarafa-fsck – Start the Zarafa fsck calendar check program."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-fsck &#8211; Start the Zarafa fsck calendar check program. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-fsck</code> [<i>OPTION</i>&#8230;] [<i>FILTER</i>&#8230;]</dt></dl>

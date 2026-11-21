@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airmass/"
 description: "airmass – Computing airmass coefficient"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airmass &#8211; Computing airmass coefficient</p>
 <h2>SYNOPSIS</h2>
 <p> <code>airmass </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br />
  <code>airmass </code><i>[options]</i> &#8211; terminal mode </p>

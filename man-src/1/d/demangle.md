@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-demangle/"
 description: "demangle – Undo C++ name mangling for symbols"
 ---
 
-<h2 class="name">NAME</h2>
-<p> demangle &#8211; Undo C++ name mangling for symbols </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>demangle</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppdpo/"
 description: "ppdpo – ppd message catalog generator (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppdpo &#8211; ppd message catalog generator (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppdpo</code> [ <code>-D </code><i>name</i>[<code>=</code><i>value</i>] ] [ <code>-I</code> <i>include-directory</i> ] [ <code>-o</code> <i>output-file</i> ] <i>source-file</i></p>
 <h2>DESCRIPTION</h2>

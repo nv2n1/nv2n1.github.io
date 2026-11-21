@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-log1p/"
 description: "log1p, log1pf, log1pl – logarithm of 1 plus argument"
 ---
 
-<h2 class="name">NAME</h2>
-<p> log1p, log1pf, log1pl &#8211; logarithm of 1 plus argument </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chafa/"
 description: "chafa – Character art facsimile generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chafa &#8211; Character art facsimile generator </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chafa</code> [OPTION&#8230;] [IMAGE&#8230;]</dt></dl>

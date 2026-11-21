@@ -6,8 +6,6 @@ letter: "e"
 url: "/docs/linux/man/1-echo/"
 description: "echo – display a line of text"
 ---
-<h2 class="name">NAME</h2>
-<p> echo - display a line of text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>echo</code> [<i>,SHORT-OPTION/</i>]... [<i>,STRING/</i>]... <br />
  <code>echo</code> <i>,LONG-OPTION/</i>  </p>

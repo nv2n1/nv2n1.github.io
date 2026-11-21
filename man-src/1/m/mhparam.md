@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhparam/"
 description: "mhparam – print nmh profile and context components"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhparam &#8211; print nmh profile and context components </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhparam</code> [<i>components</i>] [<code>-all</code>] [<code>-component</code> | <code>-nocomponent</code>] [<code>-version</code>] [<code>-help</code>] [<code>-debug</code>]</dt></dl>

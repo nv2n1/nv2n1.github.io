@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vidalia/"
 description: "vidalia – Controller GUI for tor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vidalia &#8211; Controller GUI for tor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vidalia</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

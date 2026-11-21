@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ptksh/"
 description: "ptksh – Perl/Tk script to provide a graphical user interface for testing Perl/Tk commands and scripts."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ptksh &#8211; Perl/Tk script to provide a graphical user interface for testing Perl/Tk commands and scripts. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 % ptksh ? scriptfile ? ... version information... ptksh &gt; $b = $mw-&gt;Button(-text = &gt; 'Hi', -command = &gt; sub{print 'Hi'})

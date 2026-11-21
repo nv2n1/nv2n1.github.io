@@ -6,8 +6,6 @@ letter: "l"
 url: "/docs/linux/man/1-lsipc/"
 description: "lsipc – show information on IPC facilities currently employed in the system"
 ---
-<h2 class="name">NAME</h2>
-<p> lsipc - show information on IPC facilities currently employed in the system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsipc</code> [options]  </p>
 <h2>DESCRIPTION</h2>

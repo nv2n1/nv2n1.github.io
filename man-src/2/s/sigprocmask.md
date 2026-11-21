@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sigprocmask/"
 description: "sigprocmask, rt_sigprocmask – examine and change blocked signals"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sigprocmask, rt_sigprocmask &#8211; examine and change blocked signals </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <pre><code>

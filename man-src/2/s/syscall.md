@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-syscall/"
 description: "syscall – indirect system call"
 ---
 
-<h2 class="name">NAME</h2>
-<p> syscall &#8211; indirect system call </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/syscall.h&gt; /* For SYS_xxx definitions */

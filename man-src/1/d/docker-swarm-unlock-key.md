@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-swarm-unlock-key/"
 description: "docker-swarm-unlock-key – Manage the unlock key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-swarm-unlock-key &#8211; Manage the unlock key </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker swarm unlock-key [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl5005delta/"
 description: "perl5005delta – what’s new for perl5.005"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl5005delta &#8211; what&#8217;s new for perl5.005 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.004 release and this one.</p>
 <h2>About the new versioning system</h2>

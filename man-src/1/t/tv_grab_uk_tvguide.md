@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_uk_tvguide/"
 description: "tv_grab_uk_tvguide – Grab TV listings for UK from the TV Guide UK website."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_uk_tvguide &#8211; Grab TV listings for UK from the TV Guide UK website. </p>
 <h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings in <font SIZE="-1">XMLTV</font> format for many channels available in <font SIZE="-1">UK.</font> The data come from tvguide.co.uk </p>
 <p> First you must run <code>tv_grab_uk_tvguide &#8211;configure</code> to choose which channels you want to receive. </p>

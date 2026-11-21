@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clahrd/"
 description: "clahrd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clahrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />

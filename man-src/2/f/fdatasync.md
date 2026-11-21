@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-fdatasync/"
 description: "fsync, fdatasync – synchronize a file’s in-core state with storage device"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fsync, fdatasync &#8211; synchronize a file&#8217;s in-core state with storage device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int fsync(int </code><i>fd</i><code>);</code> </p>

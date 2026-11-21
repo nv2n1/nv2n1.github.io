@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-poll/"
 description: "poll, ppoll – wait for some event on a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> poll, ppoll &#8211; wait for some event on a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;poll.h&gt;

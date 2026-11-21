@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-obexctl/"
 description: "obexctl – A command-line interface of BlueZ for OBEX (file transfer)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> obexctl &#8211; A command-line interface of BlueZ for OBEX (file transfer) </p>
 <p> Usage:</p>
 <dl>
 <dt>

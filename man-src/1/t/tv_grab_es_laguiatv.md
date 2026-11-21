@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_es_laguiatv/"
 description: "tv_grab_es_laguiatv – Alternative TV grabber for Spain."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_es_laguiatv &#8211; Alternative TV grabber for Spain. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_es_laguiatv &#8211;help </p>
 <p> tv_grab_es_laguiatv [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">OPTION</font>] </p>

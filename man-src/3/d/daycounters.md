@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-daycounters/"
 description: "Day counters –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Day counters &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>Actual360</code><br />
  <i>Actual/360 day count convention. </i><br />

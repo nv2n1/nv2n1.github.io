@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-figtoipe/"
 description: "figtoipe – Convert FIG figures into Ipe format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> figtoipe &#8211; Convert FIG figures into Ipe format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>figtoipe </code> [-g] [-p <i>preamble</i>] <i>FIGfile</i> <i>XMLfile</i> </p>
 <h2>DESCRIPTION</h2>

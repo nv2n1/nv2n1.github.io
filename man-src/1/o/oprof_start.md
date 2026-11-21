@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-oprof_start/"
 description: "oprof_start – A GUI interface for OProfile"
 ---
 
-<h2 class="name">NAME</h2>
-<p> oprof_start &#8211; A GUI interface for OProfile </p>
 <h2>SYNOPSIS</h2>
 <p> <code>oprof_start</code> [ <i>options</i> ]</p>
 <h2>DESCRIPTION</h2>

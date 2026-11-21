@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-accuracy_/"
 description: "QuantLib::EurodollarFuturesImpliedStdDevQuote – quote for the Eurodollar-future implied standard deviation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::EurodollarFuturesImpliedStdDevQuote &#8211; quote for the Eurodollar-future implied standard deviation </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/quotes/eurodollarfuturesquote.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Quote</code>, and <code>QuantLib::LazyObject</code>. </p>

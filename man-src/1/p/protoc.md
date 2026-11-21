@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-protoc/"
 description: "protoc – compile protocol buffer description files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> protoc &#8211; compile protocol buffer description files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>protoc</code> [<code>&#8211;cpp_out=</code><i>OUT_DIR</i>] [<code>&#8211;java_out=</code><i>OUT_DIR</i>] [<code>&#8211;python_out=</code><i>OUT_DIR</i>] [<code>-I</code><i>PATH</i>&nbsp;|&nbsp;<code>&#8211;proto_path=</code><i>PATH</i>] <i>PROTO_FILE</i></dt>

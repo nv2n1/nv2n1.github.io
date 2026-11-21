@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nbackup/"
 description: "nbackup – Physical backup manager for Firebird"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nbackup &#8211; Physical backup manager for Firebird </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>nbackup</code> [<i>option</i>&#8230;] -l|-u|-f <i>database</i></dt>

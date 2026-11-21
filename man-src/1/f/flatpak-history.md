@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-history/"
 description: "flatpak-history – Show history"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-history &#8211; Show history </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak history</code> [OPTION&#8230;]</dt></dl>

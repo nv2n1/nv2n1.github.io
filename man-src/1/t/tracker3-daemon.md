@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-daemon/"
 description: "tracker3-daemon – Start, stop, restart and list daemons responsible for indexing content"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-daemon &#8211; Start, stop, restart and list daemons responsible for indexing content </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 daemon [options...]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-conundrumpricer/"
 description: "ql/cashflows/conundrumpricer.hpp – CMS-coupon pricer."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/cashflows/conundrumpricer.hpp &#8211; CMS-coupon pricer. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/couponpricer.hpp&gt;<br />
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>

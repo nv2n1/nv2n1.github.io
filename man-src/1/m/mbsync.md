@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mbsync/"
 description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mbsync &#8211; synchronize IMAP4 and Maildir mailboxes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mbsync</code> [<i>options</i> &#8230;] &#123;&#123;<i>channel</i>[<code>:</code><i>box</i>[{<code>,</code>|<code>
 </code>}&#8230;]]|<i>group</i>} &#8230;|<code>-a</code>}</p>

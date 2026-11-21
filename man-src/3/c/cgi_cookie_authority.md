@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_cookie_authority/"
 description: "cgi_cookie_authority – determine the cookie authority for a domain"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_cookie_authority &#8211; determine the cookie authority for a domain </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

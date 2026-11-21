@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-go-vet/"
 description: "go-vet – report likely mistakes in packages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> go-vet &#8211; report likely mistakes in packages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go vet</code> [<code>-n</code>] [<code>-x</code>] [<code>-vettool</code> <i>prog</i>] [<i>build flags</i>] [<i>vet flags</i>] [<i>packages</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lio_listio/"
 description: "lio_listio – initiate a list of I/O requests"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lio_listio &#8211; initiate a list of I/O requests </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;aio.h&gt;

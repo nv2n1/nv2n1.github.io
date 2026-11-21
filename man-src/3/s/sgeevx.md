@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sgeevx/"
 description: "sgeevx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgeevx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgeevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, WR, WI, VL, LDVL, VR, LDVR, ILO, IHI, SCALE, ABNRM, RCONDE, RCONDV, WORK, LWORK, IWORK, INFO)<br />

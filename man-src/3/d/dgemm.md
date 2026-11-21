@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgemm/"
 description: "dgemm.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgemm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />

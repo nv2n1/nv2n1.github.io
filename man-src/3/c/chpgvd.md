@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chpgvd/"
 description: "chpgvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chpgvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getseuserbyname/"
 description: "getseuserbyname – get SELinux username and level for a given Linux username"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getseuserbyname &#8211; get SELinux username and level for a given Linux username </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int getseuserbyname(const char *</code><i>linuxuser</i><code>, char **</code><i>selinuxuser</i><code>, char **</code><i>level</i><code>);</code></p>

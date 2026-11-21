@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rsl_constructors/"
 description: "RSL Constructors –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> RSL Constructors &#8211; </p>
 <h3>Functions</h3>
 <p> globus_rsl_t * <code>globus_rsl_make_boolean</code> (int operator, globus_list_t *children)<br />
  <i>RSL boolean constructor. </i><br />

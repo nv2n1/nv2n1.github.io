@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_prep/"
 description: "dh_prep – perform cleanups in preparation for building a binary package"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_prep &#8211; perform cleanups in preparation for building a binary package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_prep</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mft/"
 description: "mft – translate Metafont or MetaPost code to TeX code for prettyprinting"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mft &#8211; translate Metafont or MetaPost code to TeX code for prettyprinting </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mft</code> [<i>OPTIONS</i>] <i>mf_file_name</i>[<code>.mf</code>|<code>.mp</code>]</p>
 <h2>DESCRIPTION</h2>

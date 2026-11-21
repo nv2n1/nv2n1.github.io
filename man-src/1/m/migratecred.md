@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-migratecred/"
 description: "migratecred – Migrate credentials from one instance of Directory Server to another"
 ---
 
-<h2 class="name">NAME</h2>
-<p> migratecred &#8211; Migrate credentials from one instance of Directory Server to another </p>
 <h2>SYNOPSIS</h2>
 <p> <code>migratecred </code> -o OldInstancePath -n NewInstancePath -c OldCredential [<i>-p NewPluginPath</i>]</p>
 <h2>DESCRIPTION</h2>

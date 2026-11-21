@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-fork/"
 description: "guilt-fork – Fork the topmost applied patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-fork &#8211; Fork the topmost applied patch </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-fork</i> [&lt;new_name&gt;]</p>
 <h2>DESCRIPTION</h2>

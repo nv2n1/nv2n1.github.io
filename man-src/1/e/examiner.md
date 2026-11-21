@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-examiner/"
 description: "examiner – A ELF binary executable analyzer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> examiner &#8211; A ELF binary executable analyzer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>examiner</code> [ <code>-hvVsHRLq</code> ] [ <code>-d directory</code> ] [ <code>-C coroner.conf</code> ] [ <code>-o outfile</code> ] [ <code>-c &#8216;comment char&#8217;</code> ] -x executable</p>
 <h2>DESCRIPTION</h2>

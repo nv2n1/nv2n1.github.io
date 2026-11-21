@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-packetforge-ng/"
 description: "packetforge-ng – forge packets: ARP, UDP, ICMP or custom packets."
 ---
 
-<h2 class="name">NAME</h2>
-<p> packetforge-ng &#8211; forge packets: ARP, UDP, ICMP or custom packets. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>packetforge-ng</code> &lt;mode&gt; &lt;options&gt;</p>
 <h2>DESCRIPTION</h2>

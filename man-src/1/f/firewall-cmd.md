@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-firewall-cmd/"
 description: "firewall-cmd – firewalld command line client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> firewall-cmd &#8211; firewalld command line client </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>firewall-cmd</code> [OPTIONS&#8230;]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmdist/"
 description: "ppmdist – simplistic grayscale assignment for machine generated, color images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmdist &#8211; simplistic grayscale assignment for machine generated, color images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmdist</code> [<code>-intensity</code>|<code>-frequency</code>] [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

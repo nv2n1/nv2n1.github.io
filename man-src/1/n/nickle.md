@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nickle/"
 description: "nickle – a desk calculator language"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nickle &#8211; a desk calculator language </p>
 <h2>SYNOPSIS</h2>
 <p> nickle [&#8211;help|&#8211;usage] [-f file] [-l library] [-e expr] [ script ] [&#8211;] [arg &#8230;]</p>
 <h2>DESCRIPTION</h2>

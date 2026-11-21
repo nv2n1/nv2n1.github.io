@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mailbot/"
 description: "mailbot – A MIME-aware autoresponder utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mailbot &#8211; A MIME-aware autoresponder utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mailbot</code> [options] {<i>program</i>} [arg&#8230;]</dt></dl>

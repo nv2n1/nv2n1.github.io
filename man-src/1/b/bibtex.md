@@ -6,8 +6,6 @@ letter: "b"
 url: "/docs/linux/man/1-bibtex/"
 description: "bibtex – make a bibliography for (La)TeX"
 ---
-<h2 class="name">NAME</h2>
-<p> bibtex - make a bibliography for (La)TeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bibtex</code> [<code>-min-crossrefs=</code><i>number</i>] [<code>-terse</code>] <i>auxname</i>[<i></i><code>.aux</code>]  </p>
 <h2>DESCRIPTION</h2>

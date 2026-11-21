@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guestfs-internals/"
 description: "guestfs-internals – architecture and internals of libguestfs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guestfs-internals &#8211; architecture and internals of libguestfs </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page is for hackers who want to understand how libguestfs works internally. This is just a description of how libguestfs works now, and it may change at any time in the future.</p>
 <h2>ARCHITECTURE</h2>

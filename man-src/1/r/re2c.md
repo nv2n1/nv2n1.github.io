@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-re2c/"
 description: "re2c – convert regular expressions to C/C++"
 ---
 
-<h2 class="name">NAME</h2>
-<p> re2c &#8211; convert regular expressions to C/C++ </p>
 <h2>SYNOPSIS</h2>
 <p> <code>re2c</code> [<i>OPTIONS</i>] <i>FILE</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqluc/"
 description: "mysqluc – Command line client for running MySQL Utilities"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqluc &#8211; Command line client for running MySQL Utilities </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqluc [&#8211;help | &#8211;version | [ | &#8211;verbose | &#8211;quiet |] &#8211;width=&lt;num&gt; | &#8211;utildir=&lt;path&gt; | &#8211;execute &lt;command list&gt; &lt;variable&gt;=&lt;value&gt;]</code></dt></dl>

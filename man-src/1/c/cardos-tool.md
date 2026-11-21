@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cardos-tool/"
 description: "cardos-tool – displays information about Card OS-based security tokens or format them"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cardos-tool &#8211; displays information about Card OS-based security tokens or format them </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cardos-tool</code> [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

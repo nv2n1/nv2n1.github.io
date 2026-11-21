@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-latex-git-log/"
 description: "latex-git-log – Generates the version history of a git project as LaTeX source code."
 ---
 
-<h2 class="name">NAME</h2>
-<p> latex-git-log &#8211; Generates the version history of a git project as LaTeX source code. </p>
 <h2>SYNOPSIS</h2>
 <p> latex-git-log [options] </p>
 <p> Options: </p>

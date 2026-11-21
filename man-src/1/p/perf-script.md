@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-script/"
 description: "perf-script – Read perf.data (created by perf record) and display trace output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-script &#8211; Read perf.data (created by perf record) and display trace output </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf script[&lt;options&gt;] perf script[&lt;options&gt;] record&lt;script&gt;[&lt;record - options&gt;]&lt;command&gt;

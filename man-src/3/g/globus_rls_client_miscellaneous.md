@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rls_client_miscellaneous/"
 description: "Miscellaneous –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Miscellaneous &#8211; </p>
 <p> Miscellaneous functions and types.</p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_rls_attribute_t</code><br />

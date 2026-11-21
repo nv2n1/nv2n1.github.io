@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-repotool/"
 description: "repotool – query or manipulate a CVS, Subversion, git, bzr, hg, or darcs repository in a uniform way"
 ---
 
-<h2 class="name">NAME</h2>
-<p> repotool &#8211; query or manipulate a CVS, Subversion, git, bzr, hg, or darcs repository in a uniform way </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repotool</code> [<i>action</i>] [<i>URL-or-dir</i>]</dt></dl>

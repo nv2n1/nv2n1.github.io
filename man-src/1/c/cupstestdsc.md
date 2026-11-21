@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cupstestdsc/"
 description: "cupstestdsc – test conformance of postscript files (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cupstestdsc &#8211; test conformance of postscript files (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cupstestdsc</code> [ <code>-h</code> ] <i>filename.ps</i> [ &#8230; <i>filenameN.ps</i> ]<br />
  <code>cupstestdsc</code> [ <code>-h</code> ] <code>&#8211;</code></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-edsadmin/"
 description: "EDSAdmin – the Erudite Directory Service Admin tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> EDSAdmin &#8211; the Erudite Directory Service Admin tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>edsadmin</code> [<i>&#8211;raw_mode</i>] </p>
 <h2>DESCRIPTION</h2>

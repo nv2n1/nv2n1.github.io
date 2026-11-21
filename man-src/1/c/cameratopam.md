@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cameratopam/"
 description: "cameratopam – convert raw camera image to PAM"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cameratopam &#8211; convert raw camera image to PAM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cameratopam</code> </p>
 <p> [<i>input_file_name</i>] </p>

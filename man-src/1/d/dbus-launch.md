@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbus-launch/"
 description: "dbus-launch – Utility to start a message bus from a shell script"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbus-launch &#8211; Utility to start a message bus from a shell script </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-launch</code> [&#8211;version] [&#8211;help] [&#8211;sh-syntax] [&#8211;csh-syntax] [&#8211;auto-syntax] [&#8211;binary-syntax] [&#8211;close-stderr] [&#8211;exit-with-session] [&#8211;exit-with-x11] [&#8211;autolaunch=<i>MACHINEID</i>] [&#8211;config-file=<i>FILENAME</i>] [<i>PROGRAM</i>] [<i>ARGS</i>&#8230;]</dt>

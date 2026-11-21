@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fdebuginfo/"
 description: "fdebuginfo – display the debug-info paths for a process and its shared modules"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fdebuginfo &#8211; display the debug-info paths for a process and its shared modules </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fdebuginfo</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>

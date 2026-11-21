@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_jobmanager_callout_error_t/"
 description: "Datatypes –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Datatypes &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gram_jobmanager_callout_error_t</code> { <code>GLOBUS_GRAM_JOBMANAGER_CALLOUT_BAD_CREDS</code> = 0, <code>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_SYSTEM_ERROR</code> = 1, <code>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED</code> = 2, <code>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED_INVALID_JOB</code> = 3, <code>GLOBUS_GRAM_JOBMANAGER_CALLOUT_AUTHZ_DENIED_BAD_EXECUTABLE</code> = 4, <code>GLOBUS_GRAM_JOBMANAGER_CALLOUT_ERROR_LAST</code> = 5 } </p>
 <h2>Detailed Description</h2>

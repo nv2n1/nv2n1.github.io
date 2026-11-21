@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-evince-thumbnailer/"
 description: "evince-thumbnailer – create png thumbnails from PostScript and PDF documents"
 ---
 
-<h2 class="name">NAME</h2>
-<p> evince-thumbnailer &#8211; create png thumbnails from PostScript and PDF documents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>evince-thumbnailer</code> [-s <code>size</code>] <code>input</code> <code>output</code></p>
 <h2>DESCRIPTION</h2>

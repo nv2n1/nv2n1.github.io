@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-brlapi__write/"
 description: "Writing on the braille display –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Writing on the braille display &#8211; </p>
 <p> Write text to the braille display.</p>
 <h3>Data Structures</h3>
 <p> struct <code>brlapi_writeArguments_t</code> </p>

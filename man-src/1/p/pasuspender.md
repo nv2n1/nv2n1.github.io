@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pasuspender/"
 description: "pasuspender – Temporarily suspend PulseAudio"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pasuspender &#8211; Temporarily suspend PulseAudio </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pasuspender [</code><i>options</i><code>] &#8212; </code><i>PROGRAM</i><code> [</code><i>ARGUMENTS &#8230;</i><code>] </p>
 <p> pasuspender &#8211;help </p>

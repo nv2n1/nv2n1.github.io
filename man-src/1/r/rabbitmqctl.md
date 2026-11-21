@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rabbitmqctl/"
 description: "rabbitmqctl – command line tool for managing a RabbitMQ broker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rabbitmqctl &#8211; command line tool for managing a RabbitMQ broker </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rabbitmqctl</code> [-n&nbsp;<wbr><i>node</i>] [-t&nbsp;<wbr><i>timeout</i>] [-q] {<i>command</i>} [<i>command options</i>&#8230;]</dt></dl>

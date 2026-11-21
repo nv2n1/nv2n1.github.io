@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdftosrc/"
 description: "pdftosrc – extract source file or stream from PDF file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdftosrc &#8211; extract source file or stream from PDF file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftosrc</code> <i>PDF-file</i> [<i>stream-object-number</i>]</p>
 <h2>DESCRIPTION</h2>

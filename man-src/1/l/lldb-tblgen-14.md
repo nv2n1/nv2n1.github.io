@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lldb-tblgen-14/"
 description: "lldb-tblgen – Description to C++ Code for LLDB"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lldb-tblgen &#8211; Description to C++ Code for LLDB </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lldb-tblgen</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

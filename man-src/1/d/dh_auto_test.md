@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_auto_test/"
 description: "dh_auto_test – automatically runs a package’s test suites"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_auto_test &#8211; automatically runs a package&#8217;s test suites </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_auto_test</code> [<i>build system options</i>] [<i>debhelper options</i>] [<code>&#8212;</code> <i>params</i>]</p>
 <h2>DESCRIPTION</h2>

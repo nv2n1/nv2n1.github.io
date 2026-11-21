@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_get_common_ancestor_obj/"
 description: "hwlocality_helper_ancestors – Looking at Ancestor and Child Objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_helper_ancestors &#8211; Looking at Ancestor and Child Objects </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_ancestor_obj_by_depth</code> (<code>hwloc_topology_t</code> topology, unsigned depth, <code>hwloc_obj_t</code> obj) </p>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_ancestor_obj_by_type</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_type_t</code> type, <code>hwloc_obj_t</code> obj) </p>

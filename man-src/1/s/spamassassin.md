@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-spamassassin/"
 description: "spamassassin – extensible email filter used to identify spam"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spamassassin &#8211; extensible email filter used to identify spam </p>
 <h2>DESCRIPTION</h2>
 <p> SpamAssassin is an intelligent email filter which uses a diverse range of tests to identify unsolicited bulk email, more commonly known as &#8220;spam&#8221;. These tests are applied to email headers and content to classify email using advanced statistical methods. In addition, SpamAssassin has a modular architecture that allows other technologies to be quickly wielded against spam and is designed for easy integration into virtually any email system.</p>
 <h2>SYNOPSIS</h2>

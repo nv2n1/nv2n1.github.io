@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-verify-pack/"
 description: "git-verify-pack – Validate packed Git archive files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-verify-pack &#8211; Validate packed Git archive files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git verify - pack[-v | --verbose][-s | --stat - only][--]&lt;pack&gt;.idx...

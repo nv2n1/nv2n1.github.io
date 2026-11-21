@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_list_t/"
 description: "globus_list –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_list &#8211; </p>
 <p> List data type.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_list.h&gt;</p>

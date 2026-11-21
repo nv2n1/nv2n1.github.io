@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-update-ref/"
 description: "git-update-ref – Update the object name stored in a ref safely"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-update-ref &#8211; Update the object name stored in a ref safely </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git update - ref[-m&lt;reason&gt;][--no - deref](-d&lt;ref&gt;[&lt;oldvalue&gt;] | [--create - reflog]&lt;ref&gt;&lt;newvalue&gt;[&lt;oldvalue&gt;] | --stdin[-z])

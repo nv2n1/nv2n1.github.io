@@ -8,8 +8,6 @@ url: "/docs/linux/man/5-shorewall6-hosts/"
 
 
  </p>
-<h2 class="name">NAME</h2>
-<p> hosts &#8211; shorewall6 file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>/etc/shorewall6/hosts</code></dt>

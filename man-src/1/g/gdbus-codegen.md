@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdbus-codegen/"
 description: "gdbus-codegen – D-Bus code and documentation generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdbus-codegen &#8211; D-Bus code and documentation generator </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gdbus-codegen</code> [<code>-h</code>,&nbsp;<code>&#8211;help</code>] [<code>&#8211;interface-prefix</code>&nbsp;<i>org.project.Prefix</i>] [<code>&#8211;generate-c-code</code>&nbsp;<i>OUTFILES</i>] [<code>&#8211;c-namespace</code>&nbsp;<i>YourProject</i>] [<code>&#8211;c-generate-object-manager</code>] [<code>&#8211;c-generate-autocleanup</code>&nbsp;none|objects|all] [<code>&#8211;output-directory</code>&nbsp;<i>OUTDIR</i>] [<code>&#8211;generate-docbook</code>&nbsp;<i>OUTFILES</i>] [<code>&#8211;pragma-once</code>] [<code>&#8211;xml-files</code>&nbsp;<i>FILE</i>] [<code>&#8211;header</code>] [<code>&#8211;body</code>] [<code>&#8211;interface-info-header</code>] [<code>&#8211;interface-info-body</code>] [<code>&#8211;output</code>&nbsp;<i>OUTFILE</i>] [<code>&#8211;annotate</code>&nbsp;<i>ELEMENT</i>&nbsp;<i>KEY</i>&nbsp;<i>VALUE</i>]&#8230; [<code>&#8211;glib-min-required</code>&nbsp;<i>VERSION</i>] [<code>&#8211;glib-max-allowed</code>&nbsp;<i>VERSION</i>] FILE [FILE&#8230;]</dt></dl>

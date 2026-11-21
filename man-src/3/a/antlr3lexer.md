@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3lexer/"
 description: "include/antlr3lexer.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3lexer.h &#8211; </p>
 <p> Base interface for any ANTLR3 lexer.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-drmaa_misc/"
 description: "drmaa_strerror, drmaa_get_contact, drmaa_version, drmaa_get_DRM_system – Miscellaneous DRMAA functions."
 ---
 
-<h2 class="name">NAME</h2>
-<p> drmaa_strerror, drmaa_get_contact, drmaa_version, drmaa_get_DRM_system &#8211; Miscellaneous DRMAA functions.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>

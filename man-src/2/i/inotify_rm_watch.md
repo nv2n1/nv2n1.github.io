@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-inotify_rm_watch/"
 description: "inotify_rm_watch – remove an existing watch from an inotify instance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inotify_rm_watch &#8211; remove an existing watch from an inotify instance </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/inotify.h&gt;</code> </p>
 <p> <code>int inotify_rm_watch(int </code><i>fd</i><code>, int </code><i>wd</i><code>);</code></p>

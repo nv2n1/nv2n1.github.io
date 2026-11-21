@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_cuda_get_device_cpuset/"
 description: "hwlocality_cuda – Interoperability with the CUDA Driver API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_cuda &#8211; Interoperability with the CUDA Driver API </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_cuda_get_device_pci_ids</code> (<code>hwloc_topology_t</code> topology, CUdevice cudevice, int *domain, int *bus, int *dev) </p>
 <p> static int <code>hwloc_cuda_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, CUdevice cudevice, <code>hwloc_cpuset_t</code> set) </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autokey-gtk/"
 description: "autokey-gtk – keyboard automation utility for GNOME and GTK"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autokey-gtk &#8211; keyboard automation utility for GNOME and GTK </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autokey-gtk</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-compare/"
 description: "compare – mathematically and visually annotate the difference between an image and its reconstruction."
 ---
 
-<h2 class="name">NAME</h2>
-<p> compare &#8211; mathematically and visually annotate the difference between an image and its reconstruction. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>compare-im6.q16</code> <i>input-file</i> <i>input-file</i> [<i>options</i>] <i>output-file</i></dt>

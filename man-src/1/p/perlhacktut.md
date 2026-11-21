@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlhacktut/"
 description: "perlhacktut – Walk through the creation of a simple C code patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlhacktut &#8211; Walk through the creation of a simple C code patch </p>
 <h2>DESCRIPTION</h2>
 <p> This document takes you through a simple patch example. </p>
 <p> If you haven&#8217;t read perlhack yet, go do that first! You might also want to read through perlsource too. </p>

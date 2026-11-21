@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grub-mkstandalone/"
 description: "grub-mkstandalone – make a memdisk-based GRUB image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grub-mkstandalone &#8211; make a memdisk-based GRUB image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mkstandalone</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTION/</i>] <i>,SOURCE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

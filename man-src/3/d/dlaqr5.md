@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaqr5/"
 description: "dlaqr5.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaqr5.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqr5</code> (WANTT, WANTZ, KACC22, N, KTOP, KBOT, NSHFTS, SR, SI, H, LDH, ILOZ, IHIZ, Z, LDZ, V, LDV, U, LDU, NV, WV, LDWV, NH, WH, LDWH)<br />

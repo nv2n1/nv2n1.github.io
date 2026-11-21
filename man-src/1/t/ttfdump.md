@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ttfdump/"
 description: "ttfdump – Dumping the contents of a TrueType Font file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ttfdump &#8211; Dumping the contents of a TrueType Font file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttfdump</code> [<code>-h</code>] [<code>-t</code> <i>tablename</i>] [<code>-g</code> <i>glyphnumber</i>] [<code>-c</code> <i>collection</i>] [<code>-o</code> <i>dumpfile</i>] [<code>-i</code>] <i>ttfile</i></p>
 <h2>DESCRIPTION</h2>

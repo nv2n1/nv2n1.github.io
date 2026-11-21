@@ -6,8 +6,6 @@ letter: "g"
 url: "/docs/linux/man/1-git-for-each-ref/"
 description: "git-for-each-ref – Output information on each ref"
 ---
-<h2 class="name">NAME</h2>
-<p> git-for-each-ref - Output information on each ref </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
  git for-each-ref  [--count=&lt;count&gt;] [--shell|--perl|--python|--tcl]

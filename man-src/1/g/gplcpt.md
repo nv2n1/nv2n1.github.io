@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gplcpt/"
 description: "gplcpt – convert GIMP colour palette (gpl) to GMT colour palette table (cpt)."
 ---
 
-<h2 class="name">NAME</h2>
-<p> gplcpt &#8211; convert GIMP colour palette (gpl) to GMT colour palette table (cpt). </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gplcpt</code> [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-v] [-V] [<i>file</i>]</dt></dl>

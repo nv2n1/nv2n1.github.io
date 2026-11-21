@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xclipboard/"
 description: "xclipboard – X clipboard client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xclipboard &#8211; X clipboard client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xclipboard</code> [ <i>-toolkitoption</i> &#8230; ] [ <code>-w</code> ] [ <code>-nw</code> ]</p>
 <h2>DESCRIPTION</h2>

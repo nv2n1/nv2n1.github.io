@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwlocality_helper_find_cache/"
 description: "hwlocality_helper_find_cache – Looking at Cache Objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_helper_find_cache &#8211; Looking at Cache Objects </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_get_cache_type_depth</code> (<code>hwloc_topology_t</code> topology, unsigned cachelevel, <code>hwloc_obj_cache_type_t</code> cachetype) </p>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_cache_covering_cpuset</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set) </p>

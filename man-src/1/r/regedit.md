@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-regedit/"
 description: "regedit – Wine registry editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> regedit &#8211; Wine registry editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>regedit</code> [<i>text file</i>]</p>
 <h2>DESCRIPTION</h2>

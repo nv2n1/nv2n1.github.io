@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-radeontop/"
 description: "radeontop – tool to show GPU utilization"
 ---
 
-<h2 class="name">NAME</h2>
-<p> radeontop &#8211; tool to show GPU utilization </p>
 <h2>SYNOPSIS</h2>
 <p> <code>radeontop [-chv] [-b </code><i>bus</i><code>] [-d </code><i>file</i><code>] [-l </code><i>limit</i><code>] [-t </code><i>ticks</i><code>]</code></p>
 <h2>DESCRIPTION</h2>

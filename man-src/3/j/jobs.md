@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-jobs/"
 description: "Remembering submitted job in session. –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Remembering submitted job in session. &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>drmaa_job_s</code><br />
  <i>Job data stored for each submitted job. </i><br />

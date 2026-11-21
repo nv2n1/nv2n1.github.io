@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vidir/"
 description: "vidir – edit directories and filenames"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vidir &#8211; edit directories and filenames </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vidir</code> [<code>&#8211;verbose</code>] [<i>directory</i>|<i>file</i>|<code>&#8211;</code>]&#8230;</p>
 <h2>DESCRIPTION</h2>

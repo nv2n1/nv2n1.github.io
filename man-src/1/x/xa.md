@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xa/"
 description: "xa – 6502/R65C02/65816 cross-assembler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xa &#8211; 6502/R65C02/65816 cross-assembler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xa</code> [<i>OPTION</i>]&#8230; <i>FILE</i> </p>
 <h2>DESCRIPTION</h2>

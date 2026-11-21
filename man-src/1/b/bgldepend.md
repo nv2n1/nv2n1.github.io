@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bgldepend/"
 description: "bgldepend – create Bigloo dependencies in makefiles"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bgldepend &#8211; create Bigloo dependencies in makefiles</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bgldepend</code> [ options ] <i>sourcefile &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

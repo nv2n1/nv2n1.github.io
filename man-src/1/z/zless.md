@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zless/"
 description: "zless – file perusal filter for crt viewing of compressed text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zless &#8211; file perusal filter for crt viewing of compressed text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zless</code> [ name &#8230; ]</p>
 <h2>DESCRIPTION</h2>

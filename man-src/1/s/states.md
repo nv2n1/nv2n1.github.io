@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-states/"
 description: "states – awk alike text processing tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> states &#8211; awk alike text processing tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>states</code> [<code>-hvV</code>] [<code>-D </code><i>var</i><code>=</code><i>val</i>] [<code>-f </code><i>file</i>] [<code>-o </code><i>outputfile</i>] [<code>-p </code><i>path</i>] [<code>-s </code><i>startstate</i>] [<code>-W </code><i>level</i>] [<i>filename</i> &#8230;] </p>
 <h2>DESCRIPTION</h2>

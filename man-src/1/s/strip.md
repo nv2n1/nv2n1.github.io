@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-strip/"
 description: "strip – discard symbols and other data from object files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> strip &#8211; discard symbols and other data from object files </p>
 <h2>SYNOPSIS</h2>
 <p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code>&nbsp;<i>bfdname</i>&nbsp;|<code>&#8211;input-target=</code><i>bfdname</i>]<br />

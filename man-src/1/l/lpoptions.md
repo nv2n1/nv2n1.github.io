@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lpoptions/"
 description: "lpoptions – display or set printer options and defaults"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lpoptions &#8211; display or set printer options and defaults </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-d </code><i>destination</i>[<code>/</code><i>instance</i>] [ <code>-l</code> ]<br />
  <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-p </code><i>destination</i>[<code>/</code><i>instance</i>] ] <code>-o </code><i>option</i>[<code>=</code><i>value</i>] &#8230;<br />

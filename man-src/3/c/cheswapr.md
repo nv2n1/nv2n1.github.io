@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cheswapr/"
 description: "cheswapr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cheswapr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cheswapr</code> (UPLO, N, A, LDA, I1, I2)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grab_uk_guardian/"
 description: "tv_grab_uk_guardian – Grab TV listings for UK from The Guardian website."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grab_uk_guardian &#8211; Grab TV listings for UK from The Guardian website. </p>
 <h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings in <font SIZE="-1">XMLTV</font> format for many channels available in <font SIZE="-1">UK.</font> The data come from &lt;<a rel="nofollow" href="http://theguardian.co.uk">http://theguardian.co.uk</a>&gt; </p>
 <p> First you must run <code>tv_grab_uk_guardian &#8211;configure</code> to choose which channels you want to receive. </p>

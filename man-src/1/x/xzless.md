@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xzless/"
 description: "xzless, lzless – view xz or lzma compressed (text) files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xzless, lzless &#8211; view xz or lzma compressed (text) files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xzless</code> [<i>file</i>&#8230;]<br />
  <code>lzless</code> [<i>file</i>&#8230;]</p>

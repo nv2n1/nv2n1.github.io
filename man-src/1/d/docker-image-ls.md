@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-image-ls/"
 description: "docker-image-ls – List images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-image-ls &#8211; List images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image ls [OPTIONS] [REPOSITORY[:TAG]]</code> </p>
 <h2>DESCRIPTION</h2>

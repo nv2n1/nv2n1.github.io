@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmcie/"
 description: "ppmcie – draw a CIE color chart as a PPM image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmcie &#8211; draw a CIE color chart as a PPM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmcie</code> [<code>-rec709</code>|<code>-cie</code>|<code>-ebu</code>|<code>-hdtv</code>|<code>-ntsc</code>|<code>-smpte</code>] [<code>-xy</code>|<code>-upvp</code>] [<code>-red</code> <i>rx</i> <i>ry</i>] [<code>-green</code> <i>gx</i> <i>gy</i>] [<code>-blue</code> <i>bx</i> <i>by</i>] [<code>-white</code> <i>wx</i> <i>wy</i>] [<code>-size</code> <i>edge</i>] [<code>-xsize</code>|<code>-width</code> <i>width</i>] [<code>-ysize</code>|<code>-height</code> <i>height</i>] [<code>-noblack</code>] [<code>-nowpoint</code>] [<code>-nolabel</code>] [<code>-noaxes</code>] [<code>-full</code>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. </p>

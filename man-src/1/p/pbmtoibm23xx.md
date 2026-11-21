@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoibm23xx/"
 description: "pbmtoibm23xx – convert a PBM image to IBM 23XX printer stream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoibm23xx &#8211; convert a PBM image to IBM 23XX printer stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoibm23xxx</code> [<code>-xres=</code><i>dpi</i>] [<code>-yres=</code><i>dpi</i>] [<i>pbmfile</i> &#8230;] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>

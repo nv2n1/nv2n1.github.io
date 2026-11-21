@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sge_share_mon/"
 description: "sge_share_mon – print xxQS_NAMExx live share tree"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sge_share_mon &#8211; print xxQS_NAMExx live share tree </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sge_share_mon</code> [<code>-c</code> <i>count</i>] [<code>-d</code> <i>delimiter</i>] [<code>-f</code> <i>field</i>,<i>field</i>&#8230;] [<code>-h</code>] [<code>-i</code> <i>interval</i>] [<code>-l</code> <i>delimiter</i>] [<code>-m</code> <i>output_mode</i>] [<code>-n</code>] [<code>-o</code> <i>output_file</i>] [<code>-r</code> <i>delimiter</i>] [<code>-s</code> <i>string_format</i>] [<code>-t</code>] [<code>-u</code>] [<code>-x</code>]</p>
 <h2>DESCRIPTION</h2>

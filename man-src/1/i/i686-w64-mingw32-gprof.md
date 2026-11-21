@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-i686-w64-mingw32-gprof/"
 description: "gprof – display call graph profile data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gprof &#8211; display call graph profile data </p>
 <h2>SYNOPSIS</h2>
 <p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQZ][<i>name</i>] ]<br />
 &nbsp;<wbr>[&nbsp;<wbr>-I&nbsp;<wbr><i>dirs</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-d[<i>num</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-k&nbsp;<wbr><i>from/to</i>&nbsp;<wbr>]<br />

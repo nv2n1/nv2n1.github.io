@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claed0/"
 description: "claed0.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claed0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claed0</code> (QSIZ, N, D, E, Q, LDQ, QSTORE, LDQS, RWORK, IWORK, INFO)<br />

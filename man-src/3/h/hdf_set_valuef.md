@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_set_valuef/"
 description: "hdf_set_valuef – Set the value of a named node"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_set_valuef &#8211; Set the value of a named node </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

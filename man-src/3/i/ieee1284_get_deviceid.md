@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ieee1284_get_deviceid/"
 description: "ieee1284_get_deviceid – retrieve an IEEE 1284 Device ID"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ieee1284_get_deviceid &#8211; retrieve an IEEE 1284 Device ID </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kombine/"
 description: "kombine – Combining (averaging) of CCD frames"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kombine &#8211; Combining (averaging) of CCD frames</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kombine </code><i>[options] source_file &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

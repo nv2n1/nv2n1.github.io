@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-check_mk/"
 description: "check_mk – command line utility for managing Check_MK"
 ---
 
-<h2 class="name">NAME</h2>
-<p> check_mk &#8211; command line utility for managing Check_MK</p>
 <h2>SYNOPSIS</h2>
 <p> <code>check_mk</code> [<i>GLOBAL OPTIONS</i>] [<i>MODE</i>] [<i>MODE OPTIONS</i>] [<i>ARGUMENTS&#8230;</i>] </p>
 <h2>DESCRIPTION</h2>

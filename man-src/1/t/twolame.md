@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-twolame/"
 description: "twolame – an optimised MPEG Audio Layer 2 (MP2) encoder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> twolame &#8211; an optimised MPEG Audio Layer 2 (MP2) encoder </p>
 <h2>SYNOPSIS</h2>
 <p> <i>twolame</i> [options] &lt;infile&gt; [outfile]</p>
 <h2>DESCRIPTION</h2>

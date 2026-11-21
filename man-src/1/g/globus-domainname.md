@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-globus-domainname/"
 description: "globus-domainname – Print the local system’s DNS domain name"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus-domainname &#8211; Print the local system&#8217;s DNS domain name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-domainname</code> [ -h | -help ] [ -version -versions ]</p>
 <h2>DESCRIPTION</h2>

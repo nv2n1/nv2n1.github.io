@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-architecture/"
 description: "dpkg-architecture – set and determine the architecture for package building"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-architecture &#8211; set and determine the architecture for package building </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-architecture</code> [<i>option</i>&#8230;] [<i>command</i>]</p>
 <h2>DESCRIPTION</h2>

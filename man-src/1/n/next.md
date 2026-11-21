@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-next/"
 description: "next – show the next message"
 ---
 
-<h2 class="name">NAME</h2>
-<p> next &#8211; show the next message </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>next </code> [<i>+folder</i>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></dt>

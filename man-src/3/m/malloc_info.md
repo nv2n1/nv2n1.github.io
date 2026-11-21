@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-malloc_info/"
 description: "malloc_info – export malloc state to a stream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> malloc_info &#8211; export malloc state to a stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;malloc.h&gt;

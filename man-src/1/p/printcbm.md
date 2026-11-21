@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-printcbm/"
 description: "printcbm – list a Commodore BASIC file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> printcbm &#8211; list a Commodore BASIC file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>printcbm</code> <i>FILE</i> </p>
 <h2>DESCRIPTION</h2>

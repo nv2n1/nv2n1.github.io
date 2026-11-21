@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bond/"
 description: "ql/instruments/bond.hpp – concrete bond class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/instruments/bond.hpp &#8211; concrete bond class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt;<br />
  #include &lt;ql/cashflow.hpp&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pkexec/"
 description: "pkexec – Execute a command as another user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pkexec &#8211; Execute a command as another user </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkexec</code> [<code>&#8211;version</code>] [<code>&#8211;disable-internal-agent</code>] [<code>&#8211;help</code>]</dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xsane/"
 description: "xsane – scanner frontend for SANE"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xsane &#8211; scanner frontend for SANE </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsane</code> [<code>&#8211;version</code>|<code>-v</code>] [<code>&#8211;license</code>|<code>-l</code>] [<code>&#8211;device-settings</code> <i>file</i> |<code>-d</code> <i>file</i>] [<code>&#8211;viewer</code>|<code>-V</code>] [<code>&#8211;save</code>|<code>-s</code>] [<code>&#8211;copy</code>|<code>-c</code>] [<code>&#8211;fax</code>|<code>-f</code>] [<code>&#8211;mail</code>|<code>-m</code>] [<code>&#8211;no-mode-selection</code>|<code>-n</code>] [<code>&#8211;Fixed</code>|<code>-F</code>] [<code>&#8211;Resizable</code>|<code>-R</code>] [<code>&#8211;print-filenames</code>|<code>-p</code>] [<code>&#8211;force-filename</code> <i>name</i> |<code>-N</code> <i>name</i>] [<code>&#8211;display</code> <i>d</i>] [<code>&#8211;sync</code>] [<i>devicename</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-retrace-server-interact/"
 description: "retrace-server-interact – use Retrace server’s chroot for interactive debugging."
 ---
 
-<h2 class="name">NAME</h2>
-<p> retrace-server-interact &#8211; use Retrace server&#8217;s chroot for interactive debugging. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>retrace-server-interact</i> [-h] [&#8211;priv] task_id action</p>
 <h2>DESCRIPTION</h2>

@@ -6,8 +6,6 @@ letter: "d"
 url: "/docs/linux/man/3-dblink_connect/"
 description: "dblink_connect – opens a persistent connection to a remote database"
 ---
-<h2 class="name">NAME</h2>
-<p> dblink_connect - opens a persistent connection to a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>dblink_connect(text connstr) returns text
 dblink_connect(text connname, text connstr) returns text

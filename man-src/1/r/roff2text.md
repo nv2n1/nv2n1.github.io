@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-roff2text/"
 description: "roff2text – transform roff code into text mode"
 ---
 
-<h2 class="name">NAME</h2>
-<p> roff2text &#8211; transform roff code into text mode </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>groffer-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code> </p>
 <p> The options <code>-v</code> and <code>&#8211;version</code> print the version information of the program to standard output and exit. The options <code>-h</code> and <code>&#8211;help</code> print a usage information of the program to standard output and stop the program instantly. </p>

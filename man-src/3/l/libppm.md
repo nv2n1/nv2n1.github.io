@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libppm/"
 description: "libppm – functions for PPM programs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libppm &#8211; functions for PPM programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/ppm.h&gt;</code> </p>
 <p> <code>void ppm_init(</code><code>int *</code> <i>argcP</i><code>,</code><br />

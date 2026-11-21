@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-remote-modify/"
 description: "flatpak-remote-modify – Modify a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-remote-modify &#8211; Modify a remote repository </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-modify</code> [OPTION&#8230;] NAME</dt></dl>

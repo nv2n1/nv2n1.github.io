@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tsk_recover/"
 description: "tsk_recover – Export files from an image into a local directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tsk_recover &#8211; Export files from an image into a local directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsk_recover [-vVae] [ -f</code> <i>fstype</i> <code>] [ -i</code> <i>imgtype</i> <code>] [ -b</code> <i>dev_sector_size</i> <code>] [ -o</code> <i>sector_offset</i> <code>] [ -d </code> <i>dir_inum</i> <code>]</code> <i>image [images] output_dir </i></p>
 <h2>DESCRIPTION</h2>

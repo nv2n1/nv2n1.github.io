@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autokey-qt/"
 description: "autokey-qt – keyboard automation utility for KDE and QT"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autokey-qt &#8211; keyboard automation utility for KDE and QT </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autokey-qt</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

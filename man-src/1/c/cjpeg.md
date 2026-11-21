@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cjpeg/"
 description: "cjpeg – compress an image file to a JPEG file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cjpeg &#8211; compress an image file to a JPEG file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cjpeg</code> [ <i>options</i> ] [ <i>filename</i> ] </p>
 <h2>DESCRIPTION</h2>

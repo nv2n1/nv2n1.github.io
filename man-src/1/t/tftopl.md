@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tftopl/"
 description: "tftopl – convert TeX font metric (tfm) files to property lists"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tftopl &#8211; convert TeX font metric (tfm) files to property lists </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tftopl</code> [<i>OPTIONS</i>] <i>tfm_name</i>[<i></i><code>.tfm</code>] [<i>pl_name</i>[<i></i><code>.pl</code>]]</p>
 <h2>DESCRIPTION</h2>

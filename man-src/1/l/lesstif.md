@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lesstif/"
 description: "LessTif – an open-source Motif replacement"
 ---
 
-<h2 class="name">NAME</h2>
-<p> LessTif &#8211; an open-source Motif replacement </p>
 <h2>SUMMARY</h2>
 <p> <code>LessTif</code> is a free replacement for OSF/Motif&#174;. </p>
 <p> As with Motif&#174;, LessTif consists of a widget set, a window manager, and a UIL implementation (libMrm and the UIL compiler). In LessTif, our main area of attention is the widget set. We also have a working window manager mwm, but UIL is not under very active development. </p>

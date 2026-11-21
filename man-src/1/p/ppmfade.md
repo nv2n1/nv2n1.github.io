@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmfade/"
 description: "ppmfade – generate a transition between two image files using special effects."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmfade &#8211; generate a transition between two image files using special effects. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmfade</code> [ <code>-f </code> <i>first.ppm</i> ] [ <code>-l </code> <i>last.ppm</i> ] [ <code>-mix</code>|<code>-spread</code>|<code>-shift</code>|<code>-relief</code>|<code>-oil</code>|<code>-edge</code>|<code>-bentley</code>|<code>-block</code> ] [ <code>-base </code> <i>name</i> ] </p>
 <h2>DESCRIPTION</h2>

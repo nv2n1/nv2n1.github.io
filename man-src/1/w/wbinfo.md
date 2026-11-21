@@ -6,8 +6,6 @@ letter: "w"
 url: "/docs/linux/man/1-wbinfo/"
 description: "wbinfo – Query information from winbind daemon"
 ---
-<h2 class="name">NAME</h2>
-<p> wbinfo - Query information from winbind daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dd> <p> wbinfo [-a user%password] [--all-domains] [--allocate-gid] [--allocate-uid] [-c] [--ccache-save] [--change-user-password] [-D domain] [--dc-info domain] [--domain domain] [--dsgetdcname domain] [-g] [--getdcname domain] [--get-auth-user] [-G gid] [--gid-info gid] [--group-info group] [--help|-?] [-i user] [-I ip] [-K user%password] [--krb5ccname cctype] [--lanman] [--logoff] [--logoff-uid uid] [--logoff-user username] [--lookup-sids] [-m] [-n name] [-N netbios-name] [--ntlmv1] [--ntlmv2] [--online-status] [--own-domain] [-p] [-P|--ping-dc] [--pam-logon user%password] [-r user] [-R|--lookup-rids] [--remove-gid-mapping gid,sid] [--remove-uid-mapping uid,sid] [-s sid] [--separator] [--sequence] [--set-auth-user user%password] [--set-gid-mapping gid,sid] [--set-uid-mapping uid,sid] [-S sid] [--sid-aliases sid] [--sid-to-fullname sid] [--sids-to-unix-ids sidlist] [-t] [-u] [--uid-info uid] [--usage] [--user-domgroups sid] [--user-sidinfo sid] [--user-sids sid] [-U uid] [-V] [--verbose] [-Y sid] </p>

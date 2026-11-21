@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldb_message/"
 description: "ldb_message –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldb_message &#8211; </p>
 <p> a <code>ldb_message</code> represents all or part of a record.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ldb.h&gt;</p>

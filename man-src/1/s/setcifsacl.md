@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-setcifsacl/"
 description: "setcifsacl – Userspace helper to alter an ACL in a security descriptor for Common Internet File System (CIFS)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setcifsacl &#8211; Userspace helper to alter an ACL in a security descriptor for Common Internet File System (CIFS) </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

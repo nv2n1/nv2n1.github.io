@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setresgid32/"
 description: "setresuid, setresgid – set real, effective and saved user or group ID"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setresuid, setresgid &#8211; set real, effective and saved user or group ID </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
  <code>#include &lt;unistd.h&gt;</code> </p>

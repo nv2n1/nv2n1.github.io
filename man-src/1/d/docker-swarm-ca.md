@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-swarm-ca/"
 description: "docker-swarm-ca – Display and rotate the root CA"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-swarm-ca &#8211; Display and rotate the root CA </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker swarm ca [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

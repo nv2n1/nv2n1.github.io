@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmtolispm/"
 description: "pgmtolispm – convert a portable graymap into Lisp Machine format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmtolispm &#8211; convert a portable graymap into Lisp Machine format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmtolispm</code> [<i>pgmfile</i>]</p>
 <h2>DESCRIPTION</h2>

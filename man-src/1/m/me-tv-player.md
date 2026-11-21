@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-me-tv-player/"
 description: "me-tv – a digital television (DVB) viewer for GNOME"
 ---
 
-<h2 class="name">NAME</h2>
-<p> me-tv &#8211; a digital television (DVB) viewer for GNOME</p>
 <h2>SYNOPSIS</h2>
 <p> <code>me-tv</code> <i>[-?|&#8211;help]</i> <i>[-v|&#8211;verbose]</i> <i>[-s|&#8211;safe-mode]</i> <i>[-m|&#8211;minimised]</i> <i>[&#8211;disable-epg]</i> <i>[&#8211;disable-epg-thread]</i> <i>[&#8211;no-screensaver-inhibit]</i> <i>[&#8211;devices]</i> <i>[&#8211;read-timeout]</i> <i>[&#8211;display=DISPLAY]</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gij/"
 description: "gij – GNU interpreter for Java bytecode"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gij &#8211; GNU interpreter for Java bytecode </p>
 <h2>SYNOPSIS</h2>
 <p> gij [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>JARFILE</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;] </p>
 <p> gij [<code>-jar</code>] [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>CLASS</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;]<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mail/"
 description: "mail.mailutils – process mail messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mail.mailutils &#8211; process mail messages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mail.mailutils</code> [<i>,OPTION/</i>&#8230;] [<i>,address/</i>&#8230;]<br />
  <code>mail.mailutils</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTION/</i>&#8230;] [<i>,file/</i>]<br />

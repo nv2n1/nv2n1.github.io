@@ -6,8 +6,6 @@ letter: "d"
 url: "/docs/linux/man/1-dvi2tty/"
 description: "dvi2tty – preview a TeX DVI file on an ordinary ASCII terminal"
 ---
-<h2 class="name">NAME</h2>
-<p> dvi2tty - preview a TeX DVI file on an ordinary ASCII terminal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvi2tty</code> [ options ] dvifile  </p>
 <h2>DESCRIPTION</h2>

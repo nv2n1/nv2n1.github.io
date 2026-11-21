@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-torsocks/"
 description: "torsocks — Shell wrapper to simplify the use of the"
 ---
 
-<h2 class="name">NAME</h2>
-<p> torsocks &#8212; Shell wrapper to simplify the use of the </p>
 <p><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8) library to transparently torify an application. </p>
 <h2>SYNOPSIS</h2>
 <p> torsocks [OPTIONS] [COMMAND [ARG &#8230;]] </p>

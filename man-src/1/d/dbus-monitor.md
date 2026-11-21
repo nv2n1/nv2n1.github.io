@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbus-monitor/"
 description: "dbus-monitor – debug probe to print message bus messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbus-monitor &#8211; debug probe to print message bus messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-monitor</code> [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>ADDRESS</i>] [&#8211;profile | &#8211;monitor | &#8211;pcap | &#8211;binary] [<i>watch</i>&nbsp;<i>expressions</i>]</dt>

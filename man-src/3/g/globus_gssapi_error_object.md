@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gssapi_error_object/"
 description: "Error Construction –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Error Construction &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_ERROR_TYPE_GSSAPI</code> </p>
 <h3>Functions</h3>

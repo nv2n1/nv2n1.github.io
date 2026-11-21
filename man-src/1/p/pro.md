@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pro/"
 description: "pro – Manage Ubuntu Pro services from Canonical"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pro &#8211; Manage Ubuntu Pro services from Canonical </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pro</code> &lt;command&gt; [&lt;args&gt;]<br />
  <code>ua</code> &lt;command&gt; [&lt;args&gt;]<br />

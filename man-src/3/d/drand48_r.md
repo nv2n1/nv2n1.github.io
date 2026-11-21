@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-drand48_r/"
 description: "drand48_r, erand48_r, lrand48_r, nrand48_r, mrand48_r, jrand48_r, srand48_r, seed48_r, lcong48_r – generate uniformly distributed pseudo-random numbers reentrantly"
 ---
 
-<h2 class="name">NAME</h2>
-<p> drand48_r, erand48_r, lrand48_r, nrand48_r, mrand48_r, jrand48_r, srand48_r, seed48_r, lcong48_r &#8211; generate uniformly distributed pseudo-random numbers reentrantly </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

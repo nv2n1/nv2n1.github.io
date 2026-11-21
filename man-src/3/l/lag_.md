@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lag_/"
 description: "QuantLib::InflationSwap – Abstract base class for inflation swaps."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::InflationSwap &#8211; Abstract base class for inflation swaps. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/inflationswap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal_rasterize/"
 description: "gdal_rasterize – gdal_rasterize burns vector geometries into a raster"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal_rasterize &#8211; gdal_rasterize burns vector geometries into a raster </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 Usage : gdal_rasterize[-b band] * [-i][-at][-burn value] * | [-a attribute_name][-3d]

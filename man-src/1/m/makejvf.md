@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-makejvf/"
 description: "makejvf – Make Japanese VF file from Japanese TeX TFM file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> makejvf &#8211; Make Japanese VF file from Japanese TeX TFM file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makejvf</code> [&lt;<i>options</i>&gt;] &lt;<i>TeX TFM file</i>&gt; &lt;<i>PS font TFM</i>&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qgpumode/"
 description: "qgpumode – change GPU mode"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qgpumode &#8211; change GPU mode </p>
 <h2>SYNOPSIS</h2>
 <p> qgpumode -H host -g gpuid -m mode</p>
 <h2>DESCRIPTION</h2>

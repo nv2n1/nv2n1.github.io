@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-shortlog/"
 description: "git-shortlog – Summarize ‘git log’ output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-shortlog &#8211; Summarize &#8216;git log&#8217; output </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git shortlog[&lt;options&gt;][&lt;revision range&gt;][[--]&lt;path&gt;...] git log-- pretty = short | git shortlog[&lt;options&gt;]

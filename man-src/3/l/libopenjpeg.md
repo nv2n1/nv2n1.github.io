@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libopenjpeg/"
 description: "libopenjpeg – a library for reading and writing JPEG2000 image files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> libopenjpeg &#8211; a library for reading and writing JPEG2000 image files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;openjpeg.h&gt;</code> </p>
 <h3>CONVERSION FORMATS</h3>

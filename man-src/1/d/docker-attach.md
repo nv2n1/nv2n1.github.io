@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-attach/"
 description: "docker-attach – Attach local standard input, output, and error streams to a running container"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-attach &#8211; Attach local standard input, output, and error streams to a running container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker attach [OPTIONS] CONTAINER</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbfilecat/"
 description: "dbfilecat – concatenate two files with identical schema"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbfilecat &#8211; concatenate two files with identical schema </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dbfilecat-- input A.fsdb[--input B.fsdb...]

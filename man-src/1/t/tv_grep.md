@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_grep/"
 description: "tv_grep – Filter programmes and channels from an XMLTV listings file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_grep &#8211; Filter programmes and channels from an XMLTV listings file. </p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&quot;tv_grep [--help] [--output FILE] [--ignore-case|-i] (EXPR | REGEXP) [FILE...]&quot;</tt></p>
 <h2>DESCRIPTION</h2>

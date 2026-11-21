@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-weave/"
 description: "weave – translate WEB to TeX"
 ---
 
-<h2 class="name">NAME</h2>
-<p> weave &#8211; translate WEB to TeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>weave</code> [<code>-x</code>] <i>webfile</i>[<i></i><code>.web</code>] [<i>changefile</i>[<i></i><code>.ch</code>]]</p>
 <h2>DESCRIPTION</h2>

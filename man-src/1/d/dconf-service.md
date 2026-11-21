@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dconf-service/"
 description: "dconf-service – D-Bus service for writes to the dconf database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dconf-service &#8211; D-Bus service for writes to the dconf database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dconf-service</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffplay/"
 description: "ffplay – FFplay media player"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffplay &#8211; FFplay media player </p>
 <h2>SYNOPSIS</h2>
 <p> ffplay [<i>options</i>] [<i>input_url</i>]</p>
 <h2>DESCRIPTION</h2>

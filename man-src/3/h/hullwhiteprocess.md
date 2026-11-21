@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hullwhiteprocess/"
 description: "ql/processes/hullwhiteprocess.hpp – Hull-White stochastic processes."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/processes/hullwhiteprocess.hpp &#8211; Hull-White stochastic processes. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/forwardmeasureprocess.hpp&gt;<br />
  #include &lt;ql/processes/ornsteinuhlenbeckprocess.hpp&gt;<br />

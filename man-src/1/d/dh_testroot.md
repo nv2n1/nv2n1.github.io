@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_testroot/"
 description: "dh_testroot – ensure that a package is built with necessary level of root permissions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_testroot &#8211; ensure that a package is built with necessary level of root permissions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_testroot</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlguts/"
 description: "perlguts – Introduction to the Perl API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlguts &#8211; Introduction to the Perl API </p>
 <h2>DESCRIPTION</h2>
 <p> This document attempts to describe how to use the Perl <font SIZE="-1">API,</font> as well as to provide some info on the basic workings of the Perl core. It is far from complete and probably contains many errors. Please refer any questions or comments to the author below.</p>
 <h2>Variables</h2>

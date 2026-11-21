@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkfifo/"
 description: "mkfifo – make FIFOs (named pipes)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkfifo &#8211; make FIFOs (named pipes) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkfifo</code> [<i>,OPTION/</i>]&#8230; <i>,NAME/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

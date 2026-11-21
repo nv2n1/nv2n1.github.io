@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_error/"
 description: "ldap_perror, ld_errno, ldap_result2error, ldap_errlist, ldap_err2string – LDAP protocol error handling routines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_perror, ld_errno, ldap_result2error, ldap_errlist, ldap_err2string &#8211; LDAP protocol error handling routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-addr2line/"
 description: "addr2line – convert addresses into file names and line numbers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> addr2line &#8211; convert addresses into file names and line numbers </p>
 <h2>SYNOPSIS</h2>
 <p> addr2line [<code>-a</code>|<code>&#8211;addresses</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-b</code>&nbsp;<i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />

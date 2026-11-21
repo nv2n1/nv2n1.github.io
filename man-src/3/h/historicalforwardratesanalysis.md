@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-historicalforwardratesanalysis/"
 description: "ql/models/marketmodels/historicalforwardratesanalysis.hpp – Statistical analysis of historical forward rates."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/models/marketmodels/historicalforwardratesanalysis.hpp &#8211; Statistical analysis of historical forward rates. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt;<br />
  #include &lt;ql/time/calendar.hpp&gt;<br />

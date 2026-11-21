@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-achfile/"
 description: "achfile – change type and/or creator of Apple Macintosh files (netatalk format)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> achfile &#8211; change type and/or creator of Apple Macintosh files (netatalk format) </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>achfile</code> [-t&nbsp;<wbr><i>type</i>] [-c&nbsp;<wbr><i>creator</i>] <i>file</i>&#8230;</dt></dl>

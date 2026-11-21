@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-functional/"
 description: "ql/math/functional.hpp – functionals and combinators not included in the STL"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/functional.hpp &#8211; functionals and combinators not included in the STL </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/types.hpp&gt;<br />
  #include &lt;cmath&gt;<br />

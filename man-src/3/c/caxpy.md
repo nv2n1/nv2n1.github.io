@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-caxpy/"
 description: "caxpy.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> caxpy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>caxpy</code> (N, CA, CX, INCX, CY, INCY)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-speaker-test/"
 description: "speaker-test – command-line speaker test tone generator for ALSA"
 ---
 
-<h2 class="name">NAME</h2>
-<p> speaker-test &#8211; command-line speaker test tone generator for ALSA </p>
 <h2>SYNOPSIS</h2>
 <p> <code>speaker-test [-options]</code> </p>
 <h2>DESCRIPTION</h2>

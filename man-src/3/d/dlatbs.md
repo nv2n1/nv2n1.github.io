@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlatbs/"
 description: "dlatbs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlatbs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />

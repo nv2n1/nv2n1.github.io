@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msp430-cpp/"
 description: "cpp – The C Preprocessor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpp &#8211; The C Preprocessor </p>
 <h2>SYNOPSIS</h2>
 <p> cpp [<code>-D</code><i>macro</i>[=<i>defn</i>]&#8230;] [<code>-U</code><i>macro</i>]<br />
 &nbsp;<wbr>[<code>-I</code><i>dir</i>&#8230;]&nbsp;<wbr>[<code>-W</code><i>warn</i>&#8230;]<br />

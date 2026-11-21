@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libinput-quirks-validate/"
 description: "libinput-quirks – quirk debug helper for libinput"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libinput-quirks &#8211; quirk debug helper for libinput </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput quirks list [&#8211;data-dir /path/to/dir] [&#8211;verbose] </code><i>/dev/input/event0</i> </p>
 <p> <code>libinput quirks validate [&#8211;data-dir /path/to/dir] [&#8211;verbose]</code> </p>

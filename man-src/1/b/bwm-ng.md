@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bwm-ng/"
 description: "bwm-ng – Bandwidth Monitor NG (Next Generation), a live bandwidth monitor for network and disk io."
 ---
 
-<h2 class="name">NAME</h2>
-<p> bwm-ng &#8211; Bandwidth Monitor NG (Next Generation), a live bandwidth monitor for network and disk io. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bwm-ng [options]</code><i> &#8230; [configfile]</i></p>
 <h2>DESCRIPTION</h2>

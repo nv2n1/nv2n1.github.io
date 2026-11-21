@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gcvt/"
 description: "gcvt – convert a floating-point number to a string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcvt &#8211; convert a floating-point number to a string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

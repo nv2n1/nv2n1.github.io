@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_sysconfig/"
 description: "Globus GSI System Config API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Globus GSI System Config API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Defines</code> </p>
 <p> <code>Functions for UNIX platforms</code> </p>

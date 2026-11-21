@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wsdl2hed/"
 description: "wsdl2hed – ARC skeleton generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wsdl2hed &#8211; ARC skeleton generator</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>wsdl2hed</code> command creates the C++ skeleton from a WSDL file. </p>
 <h2>SYNOPSIS</h2>

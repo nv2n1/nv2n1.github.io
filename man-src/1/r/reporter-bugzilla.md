@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reporter-bugzilla/"
 description: "reporter-bugzilla – Reports problem to Bugzilla."
 ---
 
-<h2 class="name">NAME</h2>
-<p> reporter-bugzilla &#8211; Reports problem to Bugzilla. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>reporter-bugzilla</i> [-vbf] [-g GROUP]&#8230; [-c CONFFILE]&#8230; [-F FMTFILE] [-A FMTFILE2] -d DIR </p>
 <p> Or: </p>

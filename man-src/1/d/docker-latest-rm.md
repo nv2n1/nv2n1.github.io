@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-rm/"
 description: "docker-rm – Remove one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-rm &#8211; Remove one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker rm</code> [<code>-f</code>|<code>&#8211;force</code>] [<code>-l</code>|<code>&#8211;link</code>] [<code>-v</code>|<code>&#8211;volumes</code>] CONTAINER [CONTAINER&#8230;] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cungr2/"
 description: "cungr2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cungr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cungr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-update-gtk-immodules/"
 description: "update-gtk-immodules – Update GTK+ immodule cache"
 ---
 
-<h2 class="name">NAME</h2>
-<p> update-gtk-immodules &#8211; Update GTK+ immodule cache </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>update-gtk-immodules</code> [HOST_TRIPLET]</dt></dl>

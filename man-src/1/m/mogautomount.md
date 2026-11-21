@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mogautomount/"
 description: "mogautomount – automatically discover and mount MogileFS disks"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mogautomount &#8211; automatically discover and mount MogileFS disks </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 mogautomount[--verbose | -v] mogautomount[--help | -h]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htcopy/"
 description: "htcopy – HTTP client with LCGDM extensions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> htcopy &#8211; HTTP client with LCGDM extensions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>htcopy</code> [options] <i>[source] [destination]</i> </p>
 <h2>DESCRIPTION</h2>

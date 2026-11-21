@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bakefilize/"
 description: "bakefilize – prepare Bakefile project for use with Autoconf"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bakefilize &#8211; prepare Bakefile project for use with Autoconf </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bakefilize</code> [<code>&#8211;copy</code>] [<code>&#8211;dry-run</code>] [<code>&#8211;force</code>] [<code>&#8211;verbose</code>] [<code>&#8211;help</code>]</dt></dl>

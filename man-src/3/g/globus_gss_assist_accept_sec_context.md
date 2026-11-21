@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gss_assist_accept_sec_context/"
 description: "Security Context Management –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Security Context Management &#8211; </p>
 <p> Security Context Creation and Use.</p>
 <h3>Functions</h3>
 <p> OM_uint32 <code>globus_gss_assist_accept_sec_context</code> (OM_uint32 *minor_status, gss_ctx_id_t *context_handle, const gss_cred_id_t cred_handle, char **src_name_char, OM_uint32 *ret_flags, int *user_to_user_flag, int *token_status, gss_cred_id_t *delegated_cred_handle, int(*gss_assist_get_token)(void *, void **, size_t *), void *gss_assist_get_context, int(*gss_assist_send_token)(void *, void *, size_t), void *gss_assist_send_context)<br />

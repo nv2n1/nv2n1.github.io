@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slauu2/"
 description: "slauu2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slauu2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slauu2</code> (UPLO, N, A, LDA, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htdig/"
 description: "htdig – retrieve HTML documents for ht://Dig search engine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> htdig &#8211; retrieve HTML documents for ht://Dig search engine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htdig</code> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>

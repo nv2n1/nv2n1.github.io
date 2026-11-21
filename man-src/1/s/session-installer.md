@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-session-installer/"
 description: "session-installer – allows applications to easily install and remove software"
 ---
 
-<h2 class="name">NAME</h2>
-<p> session-installer &#8211; allows applications to easily install and remove software </p>
 <h2>SYNOPSIS</h2>
 <p> <code>session-installer</code></p>
 <h2>DESCRIPTION</h2>

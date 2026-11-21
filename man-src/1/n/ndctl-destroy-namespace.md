@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndctl-destroy-namespace/"
 description: "ndctl-destroy-namespace – destroy the given namespace(s)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndctl-destroy-namespace &#8211; destroy the given namespace(s) </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>ndctl destroy-namespace</i> &lt;namespace&gt; [&lt;options&gt;]

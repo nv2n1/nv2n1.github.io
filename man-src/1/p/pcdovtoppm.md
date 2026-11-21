@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pcdovtoppm/"
 description: "pcdovtoppm – create index image for a photo CD"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pcdovtoppm &#8211; create index image for a photo CD</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcdovtoppm</code> [<code>-m </code><i>width</i>] [<code>-s </code><i>size</i>] [<code>-a </code><i>across</i>] [<code>-c </code><i>colors</i>] [<code>-f </code><i>font</i>] [<code>-b</code>|<code>-w</code>] [<i>pcdfile</i>] </p>
 <h2>DESCRIPTION</h2>

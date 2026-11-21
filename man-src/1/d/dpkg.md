@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg/"
 description: "dpkg – package manager for Debian"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg &#8211; package manager for Debian </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg</code> [<i>option</i>&#8230;] <i>action</i></p>
 <h2>WARNING</h2>

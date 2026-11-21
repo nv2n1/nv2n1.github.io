@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-yuvkineco/"
 description: "yuvkineco – revert 2-3 pulldown movie"
 ---
 
-<h2 class="name">NAME</h2>
-<p> yuvkineco &#8211; revert 2-3 pulldown movie</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvkineco</code> [<i>options</i>] [<code>-C</code> <i>PATH</i>]<br />
  <code>yuvkineco</code> [<i>options</i>] <code>-O</code>|<code>N</code> <i>PATH</i> </p>

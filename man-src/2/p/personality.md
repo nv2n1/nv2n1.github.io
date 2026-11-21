@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-personality/"
 description: "personality – set the process execution domain"
 ---
 
-<h2 class="name">NAME</h2>
-<p> personality &#8211; set the process execution domain </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/personality.h&gt;</code> </p>
 <p> <code>int personality(unsigned long </code><i>persona</i><code>);</code></p>

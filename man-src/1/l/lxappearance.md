@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lxappearance/"
 description: "lxappearance – GTK+ theme switcher"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lxappearance &#8211; GTK+ theme switcher </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lxappearance</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setsockopt/"
 description: "getsockopt, setsockopt – get and set options on sockets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getsockopt, setsockopt &#8211; get and set options on sockets </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;

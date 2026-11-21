@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-submodule/"
 description: "git-submodule – Initialize, update or inspect submodules"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-submodule &#8211; Initialize, update or inspect submodules </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git submodule[--quiet][--cached] git submodule[--quiet] add[&lt;options&gt;][--]&lt;repository&gt;[&lt;path&gt;] git submodule[--quiet] status[--cached][--recursive][--][&lt;path&gt;...] git submodule[--quiet] init[--][&lt;path&gt;...] git submodule[--quiet] deinit[-f | --force](--all | [--]&lt;path&gt;...)

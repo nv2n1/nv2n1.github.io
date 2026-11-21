@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pssvg/"
 description: "pssvg – convert Photoshop® gradients to SVG."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pssvg &#8211; convert Photoshop&#174; gradients to SVG. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pssvg</code> [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-o&nbsp;<wbr><i>file</i>] [-t&nbsp;<wbr><i>format</i>] [-v] [-V] <i>file</i></dt></dl>

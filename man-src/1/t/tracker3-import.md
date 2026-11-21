@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-import/"
 description: "tracker3-import – Import data into a Tracker database."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-import &#8211; Import data into a Tracker database. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker3 import</code> FILE.ttl</p>
 <h2>DESCRIPTION</h2>

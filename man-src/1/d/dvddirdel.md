@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvddirdel/"
 description: "dvddirdel – Deletes a previously authored DVD directory structure in DIR"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvddirdel &#8211; Deletes a previously authored DVD directory structure in DIR </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvddirdel</code> [ <code>-o </code><i>DIR</i> ] </p>
 <h2>DESCRIPTION</h2>

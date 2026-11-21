@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcolstatscores/"
 description: "dbcolstatscores – compute z-scores or t-scores for each value in a population"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcolstatscores &#8211; compute z-scores or t-scores for each value in a population </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolstatscores [-t] [&#8211;tmean=MEAN] [&#8211;tstddev=STDDEV] column</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppa-purge/"
 description: "ppa-purge – disables a PPA and reverts to official packages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppa-purge &#8211; disables a PPA and reverts to official packages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppa-purge [-h | [-d &lt;distribution&gt;] [-s &lt;host&gt;] [-p &lt;ppaname&gt;] &lt;ppa:&lt;ppaowner[/ppaname&gt;]&gt;]</code> </p>
 <h2>DESCRIPTION</h2>

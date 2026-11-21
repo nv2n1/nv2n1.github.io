@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sevmgr_demo/"
 description: "sevmgr_demo –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sevmgr_demo &#8211; </p>
 <pre>
       Command-line demonstration utility for the C++ Simulation-Oriented Discrete Event Management Library
 </pre>

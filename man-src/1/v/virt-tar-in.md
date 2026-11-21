@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-tar-in/"
 description: "virt-tar-in – Unpack a tarball into a virtual machine disk image."
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-tar-in &#8211; Unpack a tarball into a virtual machine disk image. </p>
 <h2>SYNOPSIS</h2>
 <pre>
  virt-tar-in -a disk.img data.tar /destination

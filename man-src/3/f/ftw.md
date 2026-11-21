@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ftw/"
 description: "ftw, nftw – file tree walk"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ftw, nftw &#8211; file tree walk </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ftw.h&gt;

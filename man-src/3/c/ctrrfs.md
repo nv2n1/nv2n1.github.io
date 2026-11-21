@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctrrfs/"
 description: "ctrrfs.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctrrfs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrrfs</code> (UPLO, TRANS, DIAG, N, NRHS, A, LDA, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />

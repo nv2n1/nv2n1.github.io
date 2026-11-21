@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-passwd/"
 description: "passwd – change user password"
 ---
 
-<h2 class="name">NAME</h2>
-<p> passwd &#8211; change user password </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>passwd</code> [<i>options</i>] [<i>LOGIN</i>]</dt></dl>

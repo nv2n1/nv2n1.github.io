@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-scan/"
 description: "atomic-scan – Scan for CVEs in a container or image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-scan &#8211; Scan for CVEs in a container or image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic scan</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>&#8211;list</code>] [<code>&#8211;scanner</code>] [<code>&#8211;scan_type</code>] [<code>&#8211;verbose</code>] [<code>&#8211;all</code> | <code>&#8211;images</code> | <code>&#8211;containers</code> | <code>&#8211;rootfs</code> rootfs path to scan| IMAGE or CONTAINER names &#8230;] </p>
 <h2>DESCRIPTION</h2>

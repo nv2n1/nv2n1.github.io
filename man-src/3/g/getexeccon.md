@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getexeccon/"
 description: "getexeccon, setexeccon – get or set the SELinux security context used for executing a new process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getexeccon, setexeccon &#8211; get or set the SELinux security context used for executing a new process </p>
 <p> rpm_execcon &#8211; run a helper for rpm in an appropriate security context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>

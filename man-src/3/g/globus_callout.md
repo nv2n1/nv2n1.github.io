@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_callout/"
 description: "Globus Callout API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Globus Callout API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code><br />
  <i>Callback API Activation. </i><br />

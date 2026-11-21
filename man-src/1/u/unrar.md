@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unrar/"
 description: "unrar – extract files from rar archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unrar &#8211; extract files from rar archives </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unrar</code> <i>command</i> [<i>-switch</i> &#8230;] <i>archive</i> [<i>file</i> &#8230;] [@<i>listfiles</i> &#8230;] [<i>path</i> &#8230;] [<i>path_to_extract</i>/]</p>
 <h2>DESCRIPTION</h2>

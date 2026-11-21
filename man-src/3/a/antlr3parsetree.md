@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3parsetree/"
 description: "include/antlr3parsetree.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3parsetree.h &#8211; </p>
 <p> Abstraction of Common tree to provide payload and string representation of node.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3basetree.h">antlr3basetree.h</a>&gt; </p>

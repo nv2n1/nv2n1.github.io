@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pg_dumpall/"
 description: "pg_dumpall – extract a PostgreSQL database cluster into a script file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pg_dumpall &#8211; extract a PostgreSQL database cluster into a script file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_dumpall</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;]</dt></dl>

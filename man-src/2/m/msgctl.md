@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-msgctl/"
 description: "msgctl – System V message control operations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> msgctl &#8211; System V message control operations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;

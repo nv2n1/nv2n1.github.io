@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xpstopng/"
 description: "xpstopng – XPS to PNG converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xpstopng &#8211; XPS to PNG converter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xpstopng</code> [<i>OPTION</i>&#8230;] FILE [<i>OUTPUT FILE</i>]</dt></dl>

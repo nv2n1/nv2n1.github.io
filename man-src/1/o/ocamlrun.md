@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamlrun/"
 description: "ocamlrun – The OCaml bytecode interpreter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamlrun &#8211; The OCaml bytecode interpreter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlrun</code> [ <i>options</i> ] <i>filename argument &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

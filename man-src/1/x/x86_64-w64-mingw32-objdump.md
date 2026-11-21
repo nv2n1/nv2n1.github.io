@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-objdump/"
 description: "objdump – display information from object files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> objdump &#8211; display information from object files. </p>
 <h2>SYNOPSIS</h2>
 <p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />

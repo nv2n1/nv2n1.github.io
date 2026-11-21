@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nice/"
 description: "nice – run a program with modified scheduling priority"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nice &#8211; run a program with modified scheduling priority </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nice</code> [<i>,OPTION/</i>] [<i>,COMMAND /</i>[<i>,ARG/</i>]&#8230;]</p>
 <h2>DESCRIPTION</h2>

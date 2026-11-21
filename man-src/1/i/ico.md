@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ico/"
 description: "ico – animate an icosahedron or other polyhedron"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ico &#8211; animate an icosahedron or other polyhedron </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ico</code> [-display display] [-geometry geometry] [-r] [-d pattern] [-i] [-dbl] [-faces] [-noedges] [-sleep n] [-obj object] [-colors color-list] </p>
 <p> <code>ico</code> -objhelp </p>

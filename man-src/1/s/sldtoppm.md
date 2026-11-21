@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sldtoppm/"
 description: "sldtoppm – convert an AutoCAD slide file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sldtoppm &#8211; convert an AutoCAD slide file into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sldtoppm</code> [<code>-adjust</code>] [<code>-dir</code>] [<code>-height</code>|<code>-ysize</code> <i>s</i>] [<code>-info</code>] [<code>-lib</code>|<code>-Lib</code> <i>name</i>] [<code>-scale</code> <i>s</i>] [<code>-verbose</code>] [<code>-width</code>|<code>-xsize</code> <i>s</i>] [<i>slidefile</i>]</p>
 <h2>DESCRIPTION</h2>

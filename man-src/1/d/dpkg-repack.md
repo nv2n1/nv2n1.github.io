@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-repack/"
 description: "dpkg-repack – put an unpacked .deb file back together"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-repack &#8211; put an unpacked .deb file back together </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-repack</code> [<code>&#8211;root=dir</code>] [<code>&#8211;arch=architecture</code>] [<code>&#8211;generate</code>] <code>packagename</code> [<code>packagename &#8230;</code>] </p>
 <h2>DESCRIPTION</h2>

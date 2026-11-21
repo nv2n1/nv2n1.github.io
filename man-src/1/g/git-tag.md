@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-tag/"
 description: "git-tag – Create, list, delete or verify a tag object signed with GPG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-tag &#8211; Create, list, delete or verify a tag object signed with GPG </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git tag[-a | -s | -u&lt;keyid&gt;][-f][-m&lt;msg&gt; | -F&lt;file&gt;][-e]&lt;tagname&gt;[&lt;commit&gt; | &lt;object&gt;] git tag - d&lt;tagname&gt;... git tag[-n[&lt;num&gt;]] - l[--contains&lt;commit&gt;][--no - contains&lt;commit&gt;][--points - at&lt;object&gt;][--column[=&lt;options&gt;] | --no - column][--create - reflog][--sort = &lt;key&gt;][--format = &lt;format&gt;][--merged&lt;commit&gt;][--no - merged&lt;commit&gt;][&lt;pattern&gt;...] git tag - v[--format = &lt;format&gt;]&lt;tagname&gt;...

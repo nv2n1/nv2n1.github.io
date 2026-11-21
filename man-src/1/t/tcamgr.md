@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tcamgr/"
 description: "tcamgr – the command line utility of the abstract database API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tcamgr &#8211; the command line utility of the abstract database API</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>tcamgr</code>&#8216; is a utility for test and debugging of the abstract database API and its applications. `<i>name</i>&#8216; specifies the name of a database. `<i>key</i>&#8216; specifies the key of a record. `<i>value</i>&#8216; specifies the value of a record. `<i>params</i>&#8216; specifies the tuning parameters. `<i>func</i>&#8216; specifies the name of a function. `<i>arg</i>&#8216; specifies the arguments of the function. `<i>dest</i>&#8216; specifies the path of the destination file. </p>
 <dl>

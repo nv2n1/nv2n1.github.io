@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmquantall/"
 description: "pnmquantall – run Pnmquant on a bunch of files all at once, so they share a common colormap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmquantall &#8211; run Pnmquant on a bunch of files all at once, so they share a common colormap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmquantall</code> </p>
 <p> [<code>-ext</code> <i>extension</i>] <i>ncolors</i> <i>netpbm_file</i>&#8230; </p>

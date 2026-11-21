@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xscreensaver-command/"
 description: "xscreensaver-command – control a running xscreensaver process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xscreensaver-command &#8211; control a running xscreensaver process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-command</code> [-display <i>host:display.screen</i>] [-help | -demo | -prefs | -activate | -deactivate | -cycle | -next | -prev | -select <i>n</i> | -exit | -restart | -lock | -version | -time | -watch]</p>
 <h2>DESCRIPTION</h2>

@@ -6,8 +6,6 @@ letter: "m"
 url: "/docs/linux/man/1-mkvpropedit/"
 description: "mkvpropedit – Modify properties of existing Matroska(TM) files without a complete remux"
 ---
-<h2 class="name">NAME</h2>
-<p> mkvpropedit - Modify properties of existing Matroska(TM) files without a complete remux </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>mkvpropedit</code> [options] {source-filename} {actions} </dt>

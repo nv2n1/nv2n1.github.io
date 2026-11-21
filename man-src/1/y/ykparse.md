@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ykparse/"
 description: "ykparse – decrypt and show information inside a YubiKey OTP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ykparse &#8211; decrypt and show information inside a YubiKey OTP </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ykparse</code> <i>AESKEY</i> <i>TOKEN</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-od/"
 description: "od – dump files in octal and other formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> od &#8211; dump files in octal and other formats </p>
 <h2>SYNOPSIS</h2>
 <p> <code>od</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;<br />
  <code>od</code> [<i>,-abcdfilosx/</i>]&#8230; [<i>,FILE/</i>] [[<i>,+/</i>]<i>,OFFSET/</i>[<i>,./</i>][<i>,b/</i>]]<br />

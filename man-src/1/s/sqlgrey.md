@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sqlgrey/"
 description: "sqlgrey – Postfix Greylisting Policy Server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sqlgrey &#8211; Postfix Greylisting Policy Server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sqlgrey</code> [<i>options</i>&#8230;] </p>
 <pre><code>

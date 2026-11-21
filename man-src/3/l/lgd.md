@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lgd/"
 description: "QuantLib::Basket –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Basket &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/basket.hpp&gt; </p>
 <h3>Public Member Functions</h3>

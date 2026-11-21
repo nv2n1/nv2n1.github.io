@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fixwpps/"
 description: "fixwpps – filter to fix WP documents so PSUtils work"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fixwpps &#8211; filter to fix WP documents so PSUtils work </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixwpps </code> &lt; <i>WordPerfect.ps</i> &gt; <i>Fixed.ps</i></p>
 <h2>DESCRIPTION</h2>

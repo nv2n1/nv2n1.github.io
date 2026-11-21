@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aircrack-ng/"
 description: "aircrack-ng – a 802.11 WEP / WPA-PSK key cracker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aircrack-ng &#8211; a 802.11 WEP / WPA-PSK key cracker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aircrack-ng</code> [options] &lt;.cap / .ivs file(s)&gt;</p>
 <h2>DESCRIPTION</h2>

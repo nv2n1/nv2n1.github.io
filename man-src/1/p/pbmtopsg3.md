@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtopsg3/"
 description: "pbmtopsg3 – convert PBM images to Postscript with G3 fax compression"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtopsg3 &#8211; convert PBM images to Postscript with G3 fax compression</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtopsg3</code> [<code>&#8211;title=</code><i>title</i>] [<code>&#8211;dpi=</code><i>dpi</i>] [<i>filespec</i>] </p>
 <h2>DESCRIPTION</h2>

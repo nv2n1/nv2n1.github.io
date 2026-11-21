@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amuleweb/"
 description: "amuleweb – aMule web server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amuleweb &#8211; aMule web server </p>
 <h2>SYNOPSIS</h2>
 <p> [<code>-h</code> <i>&lt;host&gt;</i>] [<code>-p</code> <i>&lt;port&gt;</i>] [<code>-P</code> <i>&lt;password&gt;</i>] [<code>-f</code> <i>&lt;path&gt;</i>] _untranslated<code>[</code>-q<code>]</code> _untranslated<code>[</code>-v<code>]</code> [<code>-l</code> <i>&lt;lang&gt;</i>] _untranslated<code>[</code>-w<code>]</code> [<code>-t</code> <i>&lt;name&gt;</i>] [<code>-s</code> <i>&lt;port&gt;</i>] _untranslated<code>[</code>-u<code>]</code> [<code>-U</code> <i>&lt;port&gt;</i>] _untranslated<code>[</code>-z<code>]</code> _untranslated<code>[</code>-Z<code>]</code> [<code>-A</code> <i>&lt;password&gt;</i>] [<code>-G</code> <i>&lt;password&gt;</i>] _untranslated<code>[</code>-a|-d<code>]</code> _untranslated<code>[</code>-L<code>]</code> _untranslated<code>[</code>&#8211;no-php<code>]</code> _untranslated<code>[</code>-N<code>]</code> </p>
 <p> [<code>&#8211;create-config-from</code>=<i>&lt;path&gt;</i>] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sgelsx/"
 description: "sgelsx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgelsx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgelsx</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, INFO)<br />

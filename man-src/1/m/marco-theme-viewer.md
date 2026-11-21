@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-marco-theme-viewer/"
 description: "marco-theme-viewer – Marco Theme Previewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> marco-theme-viewer &#8211; Marco Theme Previewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>marco-theme-viewer [THEME]</code></p>
 <h2>DESCRIPTION</h2>

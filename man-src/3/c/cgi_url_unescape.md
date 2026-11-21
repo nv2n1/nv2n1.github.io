@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_url_unescape/"
 description: "cgi_url_unescape – unescape an url encoded string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_url_unescape &#8211; unescape an url encoded string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

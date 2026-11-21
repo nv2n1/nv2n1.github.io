@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-makedat/"
 description: "makedat – create GDBM/DB files for maildrop"
 ---
 
-<h2 class="name">NAME</h2>
-<p> makedat &#8211; create GDBM/DB files for maildrop </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>makedat</code> {-src=<i>textfile</i>} {-tmp=<i>tmpfile</i>} {-file=<i>gdbmfile</i>} [-cidr]</dt></dl>

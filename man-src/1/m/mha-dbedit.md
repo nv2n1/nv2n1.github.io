@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mha-dbedit/"
 description: "mha-dbedit – make database edits to a MHonArc archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mha-dbedit &#8211; make database edits to a MHonArc archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mha-dbedit</code>&nbsp;<wbr>[<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_xio_http_errors_t/"
 description: "Error Types –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Error Types &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_http_errors_t</code> { <code>GLOBUS_XIO_HTTP_ERROR_INVALID_HEADER</code>, <code>GLOBUS_XIO_HTTP_ERROR_PARSE</code>, <code>GLOBUS_XIO_HTTP_ERROR_NO_ENTITY</code>, <code>GLOBUS_XIO_HTTP_ERROR_EOF</code>, <code>GLOBUS_XIO_HTTP_ERROR_PERSISTENT_CONNECTION_DROPPED</code> } </p>
 <h2>Detailed Description</h2>

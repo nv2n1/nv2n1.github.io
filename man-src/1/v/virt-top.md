@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-top/"
 description: "virt-top – ‘top’-like utility for virtualization stats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-top &#8211; &#8216;top&#8217;-like utility for virtualization stats </p>
 <h2>SUMMARY</h2>
 <p> virt-top [-options]</p>
 <h2>DESCRIPTION</h2>

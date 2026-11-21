@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bjam148/"
 description: "bjam – Command-line utility to build Boost-related C++ projects with Boost.Build"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bjam &#8211; Command-line utility to build Boost-related C++ projects with Boost.Build </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bjam</code> [-a] [-dx] [-fx] [-jx] [-lx] [-n] [-ox] [-px] [-q] [-sx=y] [-tx] [-v] [&#8211;x] </p>
 <p> <i>bjam</i> accepts the following options: </p>

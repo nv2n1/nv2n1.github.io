@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_request_set_type/"
 description: "Request Handles –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Request Handles &#8211; </p>
 <p> Request Handles.</p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_gass_transfer_request_t</code><br />

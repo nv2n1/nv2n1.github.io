@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcol/"
 description: "dbcol – select columns from an Fsdb file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcol &#8211; select columns from an Fsdb file </p>
 <h2>SYNOPSIS</h2>
 <p> dbcol [-v] [-e -] [column&#8230;]</p>
 <h2>DESCRIPTION</h2>

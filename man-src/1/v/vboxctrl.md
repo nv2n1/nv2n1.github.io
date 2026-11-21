@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vboxctrl/"
 description: "vboxctrl – control vbox functions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vboxctrl &#8211; control vbox functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vboxctrl</code> [{-c | -r}] {-a | -n | -p | -j} [-s spool]<br />
  <code>vboxctrl</code> -v </p>

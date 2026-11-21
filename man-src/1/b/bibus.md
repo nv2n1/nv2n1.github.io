@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bibus/"
 description: "bibus – Bibus is a bibliographic database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bibus &#8211; Bibus is a bibliographic database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bibus</code></p>
 <h2>DESCRIPTION</h2>

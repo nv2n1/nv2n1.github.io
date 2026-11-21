@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hcrypto_misc/"
 description: "hcrypto miscellaneous functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hcrypto miscellaneous functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>PKCS5_PBKDF2_HMAC_SHA1</code> (const void *password, size_t password_len, const void *salt, size_t salt_len, unsigned long iter, size_t keylen, void *key) </p>
 <h2>Detailed Description</h2>

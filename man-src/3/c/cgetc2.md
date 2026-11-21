@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgetc2/"
 description: "cgetc2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgetc2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br />

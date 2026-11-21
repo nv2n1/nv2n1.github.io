@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autogen/"
 description: "autogen – The Automated Program Generator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autogen &#8211; The Automated Program Generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autogen</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i>[[=| ]<i>value</i>]]&#8230;[ &lt;def-file&gt; ] </p>
 <p> AutoGen creates text files from templates using external definitions.</p>

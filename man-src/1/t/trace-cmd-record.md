@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-record/"
 description: "trace-cmd-record – record a trace from the Ftrace Linux internal tracer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-record &#8211; record a trace from the Ftrace Linux internal tracer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd record</code> [<i>OPTIONS</i>] [<i>command</i>]</p>
 <h2>DESCRIPTION</h2>

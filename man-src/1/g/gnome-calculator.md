@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-calculator/"
 description: "gnome-calculator – a desktop calculator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-calculator &#8211; a desktop calculator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-calculator</code> [ <i>OPTION</i> ] &#8230;</p>
 <h2>DESCRIPTION</h2>

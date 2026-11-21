@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-trust-revoke/"
 description: "docker-trust-revoke – Remove trust for an image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-trust-revoke &#8211; Remove trust for an image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker trust revoke [OPTIONS] IMAGE[:TAG]</code> </p>
 <h2>DESCRIPTION</h2>

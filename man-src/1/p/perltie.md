@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perltie/"
 description: "perltie – how to hide an object class in a simple variable"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perltie &#8211; how to hide an object class in a simple variable </p>
 <h2>SYNOPSIS</h2>
 <pre>
  tie VARIABLE, CLASSNAME, LIST

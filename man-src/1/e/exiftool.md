@@ -6,8 +6,6 @@ letter: "e"
 url: "/docs/linux/man/1-exiftool/"
 description: "exiftool – Read and write meta information in files"
 ---
-<h2 class="name">NAME</h2>
-<p> exiftool - Read and write meta information in files </p>
 <h2>SYNOPSIS</h2>
 <h3>Reading</h3>
 <p> <code>exiftool</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] [-<i></i><font SIZE="-1"><i>TAG</i></font><i></i>...] [--<i></i><font SIZE="-1"><i>TAG</i></font><i></i>...] <i></i><font SIZE="-1"><i>FILE</i></font><i></i>...  </p>

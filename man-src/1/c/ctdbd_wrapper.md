@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ctdbd_wrapper/"
 description: "ctdbd_wrapper – Wrapper for ctdbd"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctdbd_wrapper &#8211; Wrapper for ctdbd </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ctdbd_wrapper</code> {<i>PIDFILE</i>} {start | stop}</dt></dl>

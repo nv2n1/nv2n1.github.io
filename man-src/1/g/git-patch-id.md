@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-patch-id/"
 description: "git-patch-id – Compute unique ID for a patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-patch-id &#8211; Compute unique ID for a patch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git patch - id[--stable | --unstable]

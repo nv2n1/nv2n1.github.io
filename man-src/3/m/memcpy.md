@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-memcpy/"
 description: "memcpy – copy memory area"
 ---
 
-<h2 class="name">NAME</h2>
-<p> memcpy &#8211; copy memory area </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;

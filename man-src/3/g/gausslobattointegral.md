@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gausslobattointegral/"
 description: "ql/math/integrals/gausslobattointegral.hpp – integral of a one-dimensional function using the adaptive Gauss-Lobatto integral"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/integrals/gausslobattointegral.hpp &#8211; integral of a one-dimensional function using the adaptive Gauss-Lobatto integral </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/errors.hpp&gt;<br />
  #include &lt;ql/utilities/null.hpp&gt;<br />

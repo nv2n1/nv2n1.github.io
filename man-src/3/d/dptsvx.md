@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dptsvx/"
 description: "dptsvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dptsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dptsvx</code> (FACT, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, INFO)<br />

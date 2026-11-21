@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlpump/"
 description: "mysqlpump – a database backup program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlpump &#8211; a database backup program </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlpump [</code><i>options</i><code>] [</code><i>db_name</i><code> [</code><i>tbl_name</i><code> &#8230;]]</code></dt></dl>

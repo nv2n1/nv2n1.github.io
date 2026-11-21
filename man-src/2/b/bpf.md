@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-bpf/"
 description: "bpf – perform a command on an extended BPF map or program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bpf &#8211; perform a command on an extended BPF map or program </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/bpf.h&gt;

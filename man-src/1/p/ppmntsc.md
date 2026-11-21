@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmntsc/"
 description: "ppmntsc – make a portable pixmap look like taken from an American TV"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmntsc &#8211; make a portable pixmap look like taken from an American TV </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmntsc</code> [ <code>&#8211;pal</code> ] [ <code>&#8211;legalonly</code> ] [ <code>&#8211;illegalonly</code> ] [ <code>&#8211;correctedonly</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;debug</code> ] [ <i>infile</i> ] </p>
 <p> Minimum unique abbreviations of options are acceptable. </p>

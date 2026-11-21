@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-go-fix/"
 description: "go-fix – update packages to use new APIs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> go-fix &#8211; update packages to use new APIs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go fix</code> [<i>packages</i>]</p>
 <h2>DESCRIPTION</h2>

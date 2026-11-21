@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libsolv-constantids/"
 description: "libsolv-constantids – fixed Ids for often used strings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libsolv-constantids &#8211; fixed Ids for often used strings </p>
 <h2>DESCRIPTION</h2>
 <p> Constant Ids are Ids of strings that are often needed. They are defined to ease programming and reduce the number of pool_str2id calls. The constant Ids are part of the binary ABI of libsolv, a minor version update will only add new constants and not change existing Ids to maintain compatible. The on-disk solv format works does not use the fixed Ids, but instead references the strings, so solv files can still be read when the ABI is broken.</p>
 <h2>SPECIAL STRINGS</h2>

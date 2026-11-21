@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-options/"
 description: "trace-cmd-options – list available options from trace-cmd plugins"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-options &#8211; list available options from trace-cmd plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd options</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fcvt_r/"
 description: "ecvt_r, fcvt_r, qecvt_r, qfcvt_r – convert a floating-point number to a string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecvt_r, fcvt_r, qecvt_r, qfcvt_r &#8211; convert a floating-point number to a string </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-svn/"
 description: "git-svn – Bidirectional operation between a Subversion repository and Git"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-svn &#8211; Bidirectional operation between a Subversion repository and Git </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git svn&lt;command&gt;[options][arguments]

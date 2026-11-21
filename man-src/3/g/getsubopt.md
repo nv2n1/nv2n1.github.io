@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getsubopt/"
 description: "getsubopt – parse suboption arguments from a string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getsubopt &#8211; parse suboption arguments from a string </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>
 <p> <code>int getsubopt(char **optionp</code><i>, char * const *</i><code>tokens</code><i>, char **</i><code>valuep</code><i>);</i> </p>

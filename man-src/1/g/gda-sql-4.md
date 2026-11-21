@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gda-sql-4/"
 description: "gda-sql – an SQL console based on Libgda"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gda-sql &#8211; an SQL console based on Libgda</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gda-sql</code> [&#8211;help] [-v] [&#8211;version] [-o] [&#8211;output-file <i>&lt;filename&gt;</i>] [-C] [&#8211;command] [-f] [&#8211;commands-file <i>&lt;filename&gt;</i>] [-i] [&#8211;interactive] [-l] [&#8211;list-dsn] [-L] [&#8211;list-providers] [-s] [&#8211;http-port <i>&lt;port&gt;</i>] [-t] [&#8211;http-token <i>&lt;token phrase&gt;</i>] [&#8211;data-files-list] [&#8211;data-files-purge <i>&lt;criteria&gt;</i>] [connection&#8217;s spec] [connection&#8217;s spec&#8230;] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-user-membership/"
 description: "pki-user-membership – Command-Line Interface for managing Certificate System user memberships."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-user-membership &#8211; Command-Line Interface for managing Certificate System user memberships.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - user - membership pki[CLI options]&lt;subsystem&gt; - user - membership - find&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - membership - add&lt;user ID&gt;&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - membership - del&lt;user ID&gt;&lt;group ID&gt;[command options]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpscat/"
 description: "gpscat – dump the output from a GPS"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpscat &#8211; dump the output from a GPS </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpscat</code> [-s&nbsp;<wbr><i>speed</i>] [-p] [-t] [-D&nbsp;<wbr><i>debuglevel</i>] <i>file-or-serial-port</i></dt></dl>

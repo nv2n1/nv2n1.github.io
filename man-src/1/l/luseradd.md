@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-luseradd/"
 description: "luseradd – Add an user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> luseradd &#8211; Add an user</p>
 <h2>SYNOPSIS</h2>
 <p> luseradd [<i>OPTION</i>]&#8230; <i>user</i> </p>
 <h2>DESCRIPTION</h2>

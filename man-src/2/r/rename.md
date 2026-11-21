@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-rename/"
 description: "rename, renameat, renameat2 – change the name or location of a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rename, renameat, renameat2 &#8211; change the name or location of a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

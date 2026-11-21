@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_error_set_source/"
 description: "Error Data Accessors and Modifiers –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Error Data Accessors and Modifiers &#8211; </p>
 <h3>Get Source</h3>
 <p> <code>globus_module_descriptor_t</code> * <code>globus_error_get_source</code> (globus_object_t *error) </p>
 <h3>Set Source</h3>

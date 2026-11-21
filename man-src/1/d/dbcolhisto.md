@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcolhisto/"
 description: "dbcolhisto – compute a histogram over a column of Fsdb data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcolhisto &#8211; compute a histogram over a column of Fsdb data </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolhisto [-ag] [-W BucketWidth] [-S BucketStart] [-E BucketEnd] [-N NumberOfBuckets] column</p>
 <h2>DESCRIPTION</h2>

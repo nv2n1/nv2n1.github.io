@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wall/"
 description: "wall – write a message to all users"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wall &#8211; write a message to all users </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wall</code> [<code>-n</code>] [<code>-t</code> <i>timeout</i>] [<code>-g</code> <i>group</i>] [<i>message</i> | <i>file</i>]</p>
 <h2>DESCRIPTION</h2>

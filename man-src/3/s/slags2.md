@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slags2/"
 description: "slags2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slags2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br />

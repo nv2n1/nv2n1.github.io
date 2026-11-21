@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cheequb/"
 description: "cheequb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cheequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cheequb</code> (UPLO, N, A, LDA, S, SCOND, AMAX, WORK, INFO)<br />

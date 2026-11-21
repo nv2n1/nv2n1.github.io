@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installmenu/"
 description: "dh_installmenu – install Debian menu files into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installmenu &#8211; install Debian menu files into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installmenu</code> [<code>debhelper options</code>] [<code>-n</code>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cscal/"
 description: "cscal.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cscal.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cscal</code> (N, CA, CX, INCX)<br />

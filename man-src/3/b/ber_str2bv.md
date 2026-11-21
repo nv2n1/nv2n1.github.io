@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ber_str2bv/"
 description: "ber_int_t, ber_uint_t, ber_len_t, ber_slen_t, ber_tag_t, struct berval, BerValue, BerVarray, BerElement, ber_bvfree, ber_bvecfree, ber_bvecadd, ber_bvarray_free, ber_bvarray_add, ber_bvdup, ber_dup..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ber_int_t, ber_uint_t, ber_len_t, ber_slen_t, ber_tag_t, struct berval, BerValue, BerVarray, BerElement, ber_bvfree, ber_bvecfree, ber_bvecadd, ber_bvarray_free, ber_bvarray_add, ber_bvdup, ber_dupbv, ber_bvstr, ber_bvstrdup, ber_str2bv, ber_alloc_t, ber_init, ber_init2, ber_free &#8211; OpenLDAP LBER types and allocation functions </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>
 <h2>SYNOPSIS</h2>

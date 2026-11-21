@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-icestormadmin/"
 description: "icestormadmin – The IceStorm administration tool."
 ---
 
-<h2 class="name">NAME</h2>
-<p> icestormadmin &#8211; The IceStorm administration tool.</p>
 <h2>SYNOPSIS</h2>
 <p> icestormadmin [options] [file&#8230;] </p>
 <h2>DESCRIPTION</h2>

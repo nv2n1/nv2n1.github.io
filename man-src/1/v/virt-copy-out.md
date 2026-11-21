@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-copy-out/"
 description: "virt-copy-out – Copy files and directories out of a virtual machine disk image."
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-copy-out &#8211; Copy files and directories out of a virtual machine disk image. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - copy - out - a disk.img / file | dir[/ file | dir...] localdir virt - copy - out - d domain / file | dir[/ file | dir...] localdir

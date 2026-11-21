@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-odidx/"
 description: "odidx – indexer of document files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> odidx &#8211; indexer of document files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>odidx register</code> [-l <i>file</i>] [-wmax <i>num</i>] [-tsuf <i>sufs</i>] [-hsuf <i>sufs</i>] <i>name</i>[<i>dir</i>]<br />
  <code>odidx relate</code> <i>name</i><br />

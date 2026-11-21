@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamthreshold/"
 description: "pamthreshold – threshold grayscale image to black and white"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamthreshold &#8211; threshold grayscale image to black and white</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamthreshold</code> [<code>-simple</code>] [<code>-local=</code><i>width</i><code>x</code><i>height</i>] [<code>-dual=</code><i>width</i><code>x</code><i>height</i>] [<code>-threshold=</code><i>threshold</i>] [<code>-contrast=</code><i>threshold</i>] [<i>inputpamfile</i>] </p>
 <p> Minimum unique abbreviations of options are acceptable. You may use double hyphens instead of a single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>

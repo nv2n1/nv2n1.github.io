@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpgcompose/"
 description: "gpgcompose – Generate a stream of OpenPGP packets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpgcompose &#8211; Generate a stream of OpenPGP packets</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpgcompose</code> [[<i>OPTION</i> [<i>ARGS</i>]] &#8230; ] </p>
 <p> <code>gpgcompose &#8211;help</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-upload-archive/"
 description: "git-upload-archive – Send archive back to git-archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-upload-archive &#8211; Send archive back to git-archive </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git upload-archive</i> &lt;directory&gt;

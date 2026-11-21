@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sysfs/"
 description: "sysfs – get filesystem type information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sysfs &#8211; get filesystem type information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>int sysfs(int </code><i>option</i><code>, const char *</code><i>fsname</i><code>);</code> </p>
 <p> <code>int sysfs(int </code><i>option</i><code>, unsigned int </code><i>fs_index</i><code>, char *</code><i>buf</i><code>);</code> </p>

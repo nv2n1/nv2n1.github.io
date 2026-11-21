@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-s2p/"
 description: "psed – a stream editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psed &#8211; a stream editor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-an][-e script][-f script - file]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-h2root/"
 description: "h2root – convert PAW HBOOK files to ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> h2root &#8211; convert PAW HBOOK files to ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>h2root</code> <i>file.hbook file.root [compress] [tolower] [lrecl]</i></p>
 <h2>DESCRIPTION</h2>

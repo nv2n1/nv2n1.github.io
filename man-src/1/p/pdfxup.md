@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdfxup/"
 description: "pdfxup – n-up tool with reduced margins"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdfxup &#8211; n-up tool with reduced margins </p>
 <h2>SYNOPSIS</h2>
 <p> pdfxup [OPTIONS] [FILE]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamenlarge/"
 description: "pamenlarge – Enlarge a Netpbm image N times"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamenlarge &#8211; Enlarge a Netpbm image N times</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamenlarge</code> <i>N</i> [<i>pnmfile</i>] </p>
 <h2>DESCRIPTION</h2>

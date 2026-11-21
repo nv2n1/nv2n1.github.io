@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-plugin/"
 description: "docker-plugin – Manage plugins"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-plugin &#8211; Manage plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker plugin</code> </p>
 <h2>DESCRIPTION</h2>

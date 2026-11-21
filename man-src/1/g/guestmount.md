@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guestmount/"
 description: "guestmount – Mount a guest filesystem on the host using FUSE and libguestfs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guestmount &#8211; Mount a guest filesystem on the host using FUSE and libguestfs </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 guestmount[--options] - a disk.img - m device[--ro] mountpoint guestmount[--options] - a disk.img - i[--ro] mountpoint guestmount[--options] - d Guest - i[--ro] mountpoint

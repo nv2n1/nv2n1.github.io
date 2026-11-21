@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sethostid/"
 description: "gethostid, sethostid – get or set the unique identifier of the current host"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gethostid, sethostid &#8211; get or set the unique identifier of the current host </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>long gethostid(void);</code><br />

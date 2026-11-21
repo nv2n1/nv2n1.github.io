@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-clean/"
 description: "cargo-clean – Remove generated artifacts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-clean &#8211; Remove generated artifacts </p>
 <h2>SYNOPSIS</h2>
 <p> cargo clean [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

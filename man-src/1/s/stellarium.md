@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stellarium/"
 description: "stellarium – A real-time realistic planetarium"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stellarium &#8211; A real-time realistic planetarium </p>
 <h2>SYNOPSIS</h2>
 <p> stellarium [<font SIZE="-1"><code>OPTIONS</code></font>]</p>
 <h2>DESCRIPTION</h2>

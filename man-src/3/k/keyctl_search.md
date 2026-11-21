@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_search/"
 description: "keyctl_search – Search a keyring for a key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_search &#8211; Search a keyring for a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

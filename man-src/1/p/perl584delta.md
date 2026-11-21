@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl584delta/"
 description: "perl584delta – what is new for perl v5.8.4"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl584delta &#8211; what is new for perl v5.8.4 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.8.3 release and the 5.8.4 release.</p>
 <h2>Incompatible Changes</h2>

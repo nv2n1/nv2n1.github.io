@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cross-ar/"
 description: "ar – create, modify, and extract from archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ar &#8211; create, modify, and extract from archives </p>
 <h2>SYNOPSIS</h2>
 <p> ar [<code>-X32_64</code>] [<code>&#8211;</code>]<i>p</i>[<i>mod</i>] [<code>&#8211;plugin</code> <i>name</i>] [<code>&#8211;target</code> <i>bfdname</i>] [<i>relpos</i>] [<i>count</i>] <i>archive</i> [<i>member</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

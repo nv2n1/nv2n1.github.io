@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-refresh/"
 description: "stg-refresh – Generate a new commit for the current patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-refresh &#8211; Generate a new commit for the current patch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg refresh[options][--][ &lt; files or dirs &gt; ]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_requestattr_set_socket_rcvbuf/"
 description: "Request Attributes –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Request Attributes &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_gass_transfer_requestattr_init</code> (globus_gass_transfer_requestattr_t *attr, char *url_scheme) </p>
 <p> int <code>globus_gass_transfer_requestattr_destroy</code> (globus_gass_transfer_requestattr_t *attr) </p>

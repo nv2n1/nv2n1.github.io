@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guestfs-release-notes/"
 description: "guestfs-release-notes – libguestfs Release Notes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guestfs-release-notes &#8211; libguestfs Release Notes </p>
 <h2>RELEASE NOTES FOR LIBGUESTFS 1.40</h2>
 <p> These release notes only cover the differences from the previous stable/dev branch split (1.38.0). For detailed changelogs, please see the git repository, or the ChangeLog file distributed in the tarball.</p>
 <h3>New features</h3>

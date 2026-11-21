@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_obj_top/"
 description: "hdf_obj_top – Return the pointer to the top dataset node"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_obj_top &#8211; Return the pointer to the top dataset node </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

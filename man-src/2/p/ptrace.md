@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-ptrace/"
 description: "ptrace – process trace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ptrace &#8211; process trace </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ptrace.h&gt;

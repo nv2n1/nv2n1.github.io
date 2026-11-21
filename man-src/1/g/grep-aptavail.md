@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grep-aptavail/"
 description: "grep-dctrl, grep-status, grep-available, grep-aptavail, grep-debtags – grep Debian control files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grep-dctrl, grep-status, grep-available, grep-aptavail, grep-debtags &#8211; grep Debian control files </p>
 <h2>SYNOPSIS</h2>
 <p> <i>command</i> <code>&#8211;copying</code>|<code>-C</code> | <code>&#8211;help</code>|<code>-h</code> | <code>&#8211;version</code>|<code>-V</code> </p>
 <p> <i>command</i> [<i>options</i>] <i>filter</i> [ <i>file</i>&#8230; ] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-vmsplice/"
 description: "vmsplice – splice user pages to/from a pipe"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vmsplice &#8211; splice user pages to/from a pipe </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

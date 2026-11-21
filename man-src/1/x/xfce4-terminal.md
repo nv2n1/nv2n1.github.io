@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfce4-terminal/"
 description: "xfce4-terminal – A Terminal emulator for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfce4-terminal &#8211; A Terminal emulator for X </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xfce4-terminal</code> [OPTION&#8230;]</dt></dl>

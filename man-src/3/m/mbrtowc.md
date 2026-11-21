@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mbrtowc/"
 description: "mbrtowc – convert a multibyte sequence to a wide character"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mbrtowc &#8211; convert a multibyte sequence to a wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;

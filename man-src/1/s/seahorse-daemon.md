@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-seahorse-daemon/"
 description: "seahorse-daemon – seahorse pass phrase caching agent"
 ---
 
-<h2 class="name">NAME</h2>
-<p> seahorse-daemon &#8211; seahorse pass phrase caching agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>seahorse-daemon</code> [ <i>OPTION</i>&#8230; ] </p>
 <h2>DESCRIPTION</h2>

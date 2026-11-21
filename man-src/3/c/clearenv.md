@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clearenv/"
 description: "clearenv – clear the environment"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clearenv &#8211; clear the environment </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

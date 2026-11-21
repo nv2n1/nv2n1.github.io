@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installppp/"
 description: "dh_installppp – install ppp ip-up and ip-down files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installppp &#8211; install ppp ip-up and ip-down files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installppp</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>
 <h2>DESCRIPTION</h2>

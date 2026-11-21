@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-https/"
 description: "httpie – CLI, cURL-like tool for humans"
 ---
 
-<h2 class="name">NAME</h2>
-<p> httpie &#8211; CLI, cURL-like tool for humans </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>http</code></dt>

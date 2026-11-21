@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-session/"
 description: "mate-session – Start the MATE Desktop Environment."
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-session &#8211; Start the MATE Desktop Environment. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-session [OPTIONS]</code></p>
 <h2>DESCRIPTION</h2>

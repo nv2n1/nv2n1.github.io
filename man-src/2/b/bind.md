@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-bind/"
 description: "bind – bind a name to a socket"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bind &#8211; bind a name to a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;

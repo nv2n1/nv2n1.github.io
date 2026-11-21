@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdb_free/"
 description: "HDB –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> HDB &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>
 <h3>Data Fields</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtogo/"
 description: "pbmtogo – convert a portable bitmap into compressed GraphOn graphics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtogo &#8211; convert a portable bitmap into compressed GraphOn graphics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtogo</code> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

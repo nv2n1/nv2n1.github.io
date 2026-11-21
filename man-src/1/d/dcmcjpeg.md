@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmcjpeg/"
 description: "dcmcjpeg – Encode DICOM file to JPEG transfer syntax"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmcjpeg &#8211; Encode DICOM file to JPEG transfer syntax </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmcjpeg [options] dcmfile-in dcmfile-out

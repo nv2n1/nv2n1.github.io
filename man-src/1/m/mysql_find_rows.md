@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysql_find_rows/"
 description: "mysql_find_rows – extract SQL statements from files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysql_find_rows &#8211; extract SQL statements from files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_find_rows [</code><i>options</i><code>] [</code><i>file_name</i><code> &#8230;]</code></dt></dl>

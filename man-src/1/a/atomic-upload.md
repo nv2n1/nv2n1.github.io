@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-upload/"
 description: "atomic-push – push Image to repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-push &#8211; push Image to repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic push</code> [<code>-a</code>][<code>&#8211;activation_key</code>[=<i>ACTIVATION_KEY</i>]] [<code>&#8211;debug</code>] [<code>-h</code>|<code>&#8211;help</code>] [<code>&#8211;pulp</code>] [<code>-p</code>][<code>&#8211;password</code>[=<i>PASSWORD</i>]] [<code>-r</code>][<code>&#8211;repository_id</code>[=<i>REPOSITORY_ID</i>]] [<code>&#8211;satellite</code>] [<code>&#8211;sign-by</code>] [<code>&#8211;t</code>][<code>&#8211;type</code>] [<code>-u</code>][<code>&#8211;username</code>[=<i>USERNAME</i>]] [<code>-U</code>][<code>&#8211;url</code>[=<i>URL</i>]] [<code>&#8211;verify_ssl</code>[=<i>VERIFY_SSL</i>]] </p>
 <h2>DESCRIPTION</h2>

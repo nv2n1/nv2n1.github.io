@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ipq_create_handle/"
 description: "ipq_create_handle, ipq_destroy_handle — create and destroy libipq handles."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipq_create_handle, ipq_destroy_handle &#8212; create and destroy libipq handles. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>

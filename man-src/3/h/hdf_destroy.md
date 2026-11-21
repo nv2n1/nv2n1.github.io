@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_destroy/"
 description: "hdf_destroy – deallocate an HDF data set"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_destroy &#8211; deallocate an HDF data set </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

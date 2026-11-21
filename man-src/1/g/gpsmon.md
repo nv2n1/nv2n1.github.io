@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpsmon/"
 description: "gpsmon – real-time GPS packet monitor and control utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpsmon &#8211; real-time GPS packet monitor and control utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsmon</code> [-L] [-V] [-h] [-n] [-a] [-l&nbsp;<wbr><i>logfile</i>] [-t&nbsp;<wbr><i>driver-prefix</i>] [[&nbsp;<wbr><i>server</i>&nbsp;<wbr>[<i>:port</i>&nbsp;<wbr>[<i>:device</i>]]&nbsp;<wbr>|&nbsp;<wbr><i>device</i>]] [-D&nbsp;<wbr><i>debuglevel</i>]</dt></dl>

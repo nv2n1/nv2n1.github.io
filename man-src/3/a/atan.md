@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-atan/"
 description: "atan, atanf, atanl – arc tangent function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atan, atanf, atanl &#8211; arc tangent function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

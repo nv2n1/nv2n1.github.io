@@ -6,8 +6,6 @@ letter: "d"
 url: "/docs/linux/man/1-dvipng/"
 description: "dvipng – A DVI-to-PNG translator"
 ---
-<h2 class="name">NAME</h2>
-<p> dvipng - A DVI-to-PNG translator </p>
 <h2>SYNOPSIS</h2>
 <p> dvipng [options] filename </p>
 <p> dvipng [options] [filename] -  </p>

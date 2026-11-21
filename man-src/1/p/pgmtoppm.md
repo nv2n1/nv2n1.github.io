@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmtoppm/"
 description: "pgmtoppm – colorize a portable graymap into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmtoppm &#8211; colorize a portable graymap into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmtoppm</code> <i>colorspec</i> [<i>pgmfile</i>]<br />
  <code>pgmtoppm</code> <i>colorspec1</i><code>&#8211;</code><i>colorspec2</i> [<i>pgmfile</i>]<br />

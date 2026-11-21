@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-evolver/"
 description: "QuantLib::FiniteDifferenceModel – Generic finite difference model."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::FiniteDifferenceModel &#8211; Generic finite difference model. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/finitedifferencemodel.hpp&gt; </p>
 <h3>Public Types</h3>

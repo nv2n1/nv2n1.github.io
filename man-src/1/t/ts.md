@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ts/"
 description: "ts – timestamp input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ts &#8211; timestamp input </p>
 <h2>SYNOPSIS</h2>
 <p> ts [-r] [-i | -s] [-m] [format]</p>
 <h2>DESCRIPTION</h2>

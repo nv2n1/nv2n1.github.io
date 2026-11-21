@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-profiles/"
 description: "profiles – A utility to report and change SIDs in registry files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> profiles &#8211; A utility to report and change SIDs in registry files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

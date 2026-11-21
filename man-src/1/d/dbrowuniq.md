@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbrowuniq/"
 description: "dbrowuniq – eliminate adjacent rows with duplicate fields, maybe counting"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbrowuniq &#8211; eliminate adjacent rows with duplicate fields, maybe counting </p>
 <h2>SYNOPSIS</h2>
 <p> dbrowuniq [-cFLB] [uniquifying fields&#8230;]</p>
 <h2>DESCRIPTION</h2>

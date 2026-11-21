@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtoxpm/"
 description: "ppmtoxpm – convert a portable pixmap into an X11 pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtoxpm &#8211; convert a portable pixmap into an X11 pixmap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoxpm </code> [<code>-name=</code><i>xpmname</i>] [<code>-rgb=</code><i>rgb-textfile</i>] [<code>-alphamask=</code><i>pgmfile</i>] [<i>ppmfile</i>] </p>
 <p> Minimum unique abbrevations are acceptable. </p>

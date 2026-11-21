@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdbus/"
 description: "gdbus – Tool for working with D-Bus objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdbus &#8211; Tool for working with D-Bus objects </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gdbus</code> introspect [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> &#8211;object-path&nbsp;<i>/path/to/object</i> [&#8211;xml] [&#8211;recurse] [&#8211;only-properties]</dt>

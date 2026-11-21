@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-show-index/"
 description: "git-show-index – Show packed archive index"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-show-index &#8211; Show packed archive index </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git show-index</i> [--object-format=&lt;hash-algorithm&gt;]

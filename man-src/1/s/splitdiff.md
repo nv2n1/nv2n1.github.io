@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-splitdiff/"
 description: "splitdiff – separate out incremental patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> splitdiff &#8211; separate out incremental patches </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>splitdiff</code> [-a] [-d] [-D&nbsp;<i>dir</i>] [-p&nbsp;<i>n</i>] [-E] [<i>file</i>]</dt>

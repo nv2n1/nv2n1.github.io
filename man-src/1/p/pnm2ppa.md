@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnm2ppa/"
 description: "pnm2ppa – convert portable anymap (PNM) images to HP’s PPA printer format."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnm2ppa &#8211; convert portable anymap (PNM) images to HP&#8217;s PPA printer format. </p>
 <h2>SYNOPSIS</h2>
 <p> pnm2ppa [options] [ -i <i>infile</i> ] [ -o <i>outfile</i> ] </p>
 <h2>DESCRIPTION</h2>

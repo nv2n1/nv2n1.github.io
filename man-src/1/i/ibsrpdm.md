@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ibsrpdm/"
 description: "ibsrpdm – Discover SRP targets on an InfiniBand Fabric"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibsrpdm &#8211; Discover SRP targets on an InfiniBand Fabric</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ibsrpdm [</code><i>OPTIONS</i><code>]</code> </p>
 <h2>DESCRIPTION</h2>

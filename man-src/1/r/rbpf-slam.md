@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rbpf-slam/"
 description: "rbpf-slam – Robot map building with Rao-Blackwellized Particle Filters"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rbpf-slam &#8211; Robot map building with Rao-Blackwellized Particle Filters </p>
 <h2>SYNOPSIS</h2>
 <p> rbpf-slam <i>config_file.ini</i></p>
 <h2>DESCRIPTION</h2>

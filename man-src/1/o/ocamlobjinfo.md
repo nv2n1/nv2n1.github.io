@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamlobjinfo/"
 description: "ocamlobjinfo – dump information about OCaml compiled objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamlobjinfo &#8211; dump information about OCaml compiled objects </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlobjinfo</code> file &#8230;</p>
 <h2>DESCRIPTION</h2>

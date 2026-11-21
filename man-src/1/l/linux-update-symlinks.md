@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-linux-update-symlinks/"
 description: "linux-update-symlinks – maintain symlinks to default kernel and initramfs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> linux-update-symlinks &#8211; maintain symlinks to default kernel and initramfs</p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>linux-update-symlinks</code>&nbsp;{<code>install</code>|<code>upgrade</code>|<code>remove</code>} <i>VERSION IMAGE-PATH</i> </dt>

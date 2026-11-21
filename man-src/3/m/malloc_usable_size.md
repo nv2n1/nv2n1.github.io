@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-malloc_usable_size/"
 description: "malloc_usable_size – obtain size of block of memory allocated from heap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> malloc_usable_size &#8211; obtain size of block of memory allocated from heap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>size_t malloc_usable_size (void *</code><i>ptr</i><code>);</code></p>

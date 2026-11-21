@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmprscp/"
 description: "dcmprscp – DICOM basic grayscale print management SCP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmprscp &#8211; DICOM basic grayscale print management SCP </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmprscp [options]

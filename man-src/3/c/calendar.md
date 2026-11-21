@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-calendar/"
 description: "ql/time/calendar.hpp – calendar class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/time/calendar.hpp &#8211; calendar class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/date.hpp&gt;<br />
  #include &lt;ql/time/businessdayconvention.hpp&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlagtf/"
 description: "dlagtf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlagtf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlagtf</code> (N, A, LAMBDA, B, C, TOL, D, IN, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dragon/"
 description: "dragon – a video player that has a usability focus"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dragon &#8211; a video player that has a usability focus </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dragon</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>URL</i>]</dt></dl>

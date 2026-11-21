@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ldd/"
 description: "ldd – print shared object dependencies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldd &#8211; print shared object dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldd</code> [<i>option</i>]&#8230; <i>file</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-epoll_create1/"
 description: "epoll_create, epoll_create1 – open an epoll file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> epoll_create, epoll_create1 &#8211; open an epoll file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/epoll.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pydoc/"
 description: "pydoc2.7 – the Python documentation tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pydoc2.7 &#8211; the Python documentation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pydoc2.7</code> <i>name</i> </p>
 <p> <code>pydoc2.7 -k</code> <i>keyword</i> </p>

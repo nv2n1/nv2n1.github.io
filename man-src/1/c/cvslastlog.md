@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cvslastlog/"
 description: "cvslastlog – Prints the log entry for the last commit for a file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cvslastlog &#8211; Prints the log entry for the last commit for a file. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cvslastlog</code> [<i>filename</i>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-a2ping/"
 description: "a2ping.pl — convert between PS, EPS and PDF and other page description formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> a2ping.pl &#8212; convert between PS, EPS and PDF and other page description formats </p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<code>a2ping.pl</code>&nbsp;[<code>&#8212;</code>]<code>help</code><br />
 &nbsp;<code>a2ping.pl</code>&nbsp;[<code>&#8212;</code>]<code>doc</code><br />

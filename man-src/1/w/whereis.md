@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-whereis/"
 description: "whereis – locate the binary, source, and manual page files for a command"
 ---
 
-<h2 class="name">NAME</h2>
-<p> whereis &#8211; locate the binary, source, and manual page files for a command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>whereis</code> [options] [<code>-BMS</code> <i>directory</i>&#8230; <code>-f</code>] <i>name</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

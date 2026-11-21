@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-apt-sortpkgs/"
 description: "apt-sortpkgs – Utility to sort package index files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> apt-sortpkgs &#8211; Utility to sort package index files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>apt-sortpkgs</code> [<code>-s</code>] [<code>-o=</code><i>config_string</i>] [<code>-c=</code><i>config_file</i>] <i>filename</i>&#8230; {-v | &#8211;version} {-h | &#8211;help}</dt></dl>

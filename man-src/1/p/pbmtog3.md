@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtog3/"
 description: "pbmtog3 – convert a portable bitmap into a Group 3 fax file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtog3 &#8211; convert a portable bitmap into a Group 3 fax file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtog3</code> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

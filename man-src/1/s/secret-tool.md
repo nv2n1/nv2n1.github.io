@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-secret-tool/"
 description: "secret-tool – Store and retrieve passwords"
 ---
 
-<h2 class="name">NAME</h2>
-<p> secret-tool &#8211; Store and retrieve passwords </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>secret-tool store </code><code>&#8211;label=&#8217;Label&#8217;</code><code>{attribute}</code><code>{value}</code><code> &#8230;</code></dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkafmmap/"
 description: "mkafmmap – creates font map for AFM files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkafmmap &#8211; creates font map for AFM files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkafmmap</code> [<i>options</i>]<i> files</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

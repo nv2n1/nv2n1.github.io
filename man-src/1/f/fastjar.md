@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fastjar/"
 description: "fastjar – archive tool for Java archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fastjar &#8211; archive tool for Java archives </p>
 <h2>SYNOPSIS</h2>
 <p> fastjar <code>-ctxu</code> [<font SIZE="-1"><code>OPTIONS</code></font>] [<i>jar-file</i>] [<i>manifest-file</i>] [<code>-C</code> <i>dir</i>] <i>files</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

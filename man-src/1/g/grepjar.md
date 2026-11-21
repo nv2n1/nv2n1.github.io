@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grepjar/"
 description: "grepjar – search files in a jar file for a pattern"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grepjar &#8211; search files in a jar file for a pattern </p>
 <h2>SYNOPSIS</h2>
 <p> grepjar [<code>-bcinsw</code>] <code>-e</code> <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> | <i></i><font SIZE="-1"><i>PATTERN</i></font><i></i> <i>files</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

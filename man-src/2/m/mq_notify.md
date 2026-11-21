@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mq_notify/"
 description: "mq_notify – register for notification when a message is available"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mq_notify &#8211; register for notification when a message is available </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;

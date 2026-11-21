@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gobject-query/"
 description: "gobject-query – display a tree of types"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gobject-query &#8211; display a tree of types </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gobject-query</code> froots [OPTION&#8230;]</dt>

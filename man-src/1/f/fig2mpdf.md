@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fig2mpdf/"
 description: "fig2mpdf – creation of multilayer pdf or eps figures from fig files using latex for typesetting"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fig2mpdf &#8211; creation of multilayer pdf or eps figures from fig files using latex for typesetting </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fig2mpdf</code> [<i>OPTION</i>]&#8230; <i>FILE</i></p>
 <h2>DESCRIPTION</h2>

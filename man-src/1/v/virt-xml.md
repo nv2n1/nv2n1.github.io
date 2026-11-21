@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-xml/"
 description: "virt-xml – Edit libvirt XML using command line options."
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-xml &#8211; Edit libvirt XML using command line options. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-xml</code> <font SIZE="-1">DOMAIN</font> XML-ACTION XML-OPTION [<font SIZE="-1">OUTPUT-OPTION</font>] [<font SIZE="-1">MISC-OPTIONS</font>] &#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-refile/"
 description: "refile – file message in other folders"
 ---
 
-<h2 class="name">NAME</h2>
-<p> refile &#8211; file message in other folders </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>refile</code> [<i>msgs</i>] [<code>-draft</code>] [<code>-link</code> | <code>-nolink</code>] [<code>-preserve</code> | <code>-nopreserve</code>] [<code>-retainsequences</code> | <code>-noretainsequences</code>] [<code>-unlink</code> | <code>-nounlink</code>] [<code>-src</code> <i>+folder</i>] [<code>-file</code> <i>file</i>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] <i>+folder1</i> &#8230; [<code>-version</code>] [<code>-help</code>]</dt></dl>

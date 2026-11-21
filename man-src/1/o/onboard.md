@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-onboard/"
 description: "onboard – On-screen Keyboard"
 ---
 
-<h2 class="name">NAME</h2>
-<p> onboard &#8211; On-screen Keyboard </p>
 <h2>SYNOPSIS</h2>
 <p> <code>onboard</code> [ <i>options</i> ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-std-codecvt-2-2/"
 description: "std::codecvt_byname – std::codecvt_byname"
 ---
 
-<h2 class="name">NAME</h2>
-<p> std::codecvt_byname &#8211; std::codecvt_byname</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;locale&gt;<br />
 template&lt; class InternT, class ExternT, class State &gt;<br />

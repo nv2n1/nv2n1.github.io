@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-monitor-dir/"
 description: "gvfs-monitor-dir"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-monitor-dir </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-monitor-dir</code> has been deprecated and it is redirected to <code>gio monitor</code>.</p>
 <h2>SEE ALSO</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_xio_file_driver_cntls/"
 description: "Attributes and Cntls –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Attributes and Cntls &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_file_attr_cmd_t</code> { <code>GLOBUS_XIO_FILE_SET_MODE</code>, <code>GLOBUS_XIO_FILE_GET_MODE</code>, <code>GLOBUS_XIO_FILE_SET_FLAGS</code>, <code>GLOBUS_XIO_FILE_GET_FLAGS</code>, <code>GLOBUS_XIO_FILE_SET_TRUNC_OFFSET</code>, <code>GLOBUS_XIO_FILE_GET_TRUNC_OFFSET</code>, <code>GLOBUS_XIO_FILE_SET_HANDLE</code>, <code>GLOBUS_XIO_FILE_GET_HANDLE</code>, <code>GLOBUS_XIO_FILE_SET_BLOCKING_IO</code>, <code>GLOBUS_XIO_FILE_GET_BLOCKING_IO</code>, <code>GLOBUS_XIO_FILE_SEEK</code> } </p>
 <h3>Functions</h3>

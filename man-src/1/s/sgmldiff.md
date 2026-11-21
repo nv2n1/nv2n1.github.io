@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sgmldiff/"
 description: "sgmldiff – Find differences in the markup of two SGML files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgmldiff &#8211; Find differences in the markup of two SGML files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgmldiff</code> [ <code>options </code><i> &#8230;</i> ] <i>file1</i> <i>file2</i> [ <code>-a</code> | <code>&#8211;attributes</code><br />
 &nbsp;<wbr>|&nbsp;<wbr><code>-c&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>attributes | nesting | textpos&nbsp;<wbr>]</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;context&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>attributes | nesting | textpos&nbsp;<wbr>]</code><br />

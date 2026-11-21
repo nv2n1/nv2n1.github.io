@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bindresvport/"
 description: "bindresvport – bind a socket to a privileged IP port"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bindresvport &#8211; bind a socket to a privileged IP port </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netinet/in.h&gt;

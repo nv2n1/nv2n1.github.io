@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nautilus-sendto/"
 description: "nautilus-sendto – convenience application to send a file via email"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nautilus-sendto &#8211; convenience application to send a file via email </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nautilus-sendto</code> [<i>OPTIONS</i> <i>|</i> <i>FILES&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

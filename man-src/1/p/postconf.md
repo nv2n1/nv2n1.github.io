@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-postconf/"
 description: "postconf – Postfix configuration utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> postconf &#8211; Postfix configuration utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>Managing main.cf:</code> </p>
 <p> <code>postconf</code> [<code>-dfhHnopvx</code>] [<code>-c </code><i>config_dir</i>] [<code>-C </code><i>class,&#8230;</i>] [<i>parameter &#8230;</i>] </p>

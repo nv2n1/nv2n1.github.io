@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-credential/"
 description: "git-credential – Retrieve and store user credentials"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-credential &#8211; Retrieve and store user credentials </p>
 <h2>SYNOPSIS</h2>
 <pre>
 git credential &lt;fill|approve|reject&gt;

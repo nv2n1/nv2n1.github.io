@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-source/"
 description: "dpkg-source – Debian source package (.dsc) manipulation tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-source &#8211; Debian source package (.dsc) manipulation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-source</code> [<i>option</i>&#8230;] <i>command</i></p>
 <h2>DESCRIPTION</h2>

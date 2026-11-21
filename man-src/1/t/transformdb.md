@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-transformdb/"
 description: "transformdb – The Freeze database migration tool."
 ---
 
-<h2 class="name">NAME</h2>
-<p> transformdb &#8211; The Freeze database migration tool.</p>
 <h2>SYNOPSIS</h2>
 <p> transformdb -o FILE [-i] [slice-options] [type-options]</p>
 <dl>

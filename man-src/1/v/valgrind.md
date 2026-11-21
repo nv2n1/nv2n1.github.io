@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-valgrind/"
 description: "valgrind – a suite of tools for debugging and profiling programs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> valgrind &#8211; a suite of tools for debugging and profiling programs </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>valgrind</code> [<i>valgrind-options</i>] [<code>your-program</code>] [<i>your-program-options</i>]</dt></dl>

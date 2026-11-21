@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xgettext/"
 description: "xgettext – extract gettext strings from source"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xgettext &#8211; extract gettext strings from source </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xgettext</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

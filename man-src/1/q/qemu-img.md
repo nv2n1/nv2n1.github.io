@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qemu-img/"
 description: "qemu-img – QEMU disk image utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qemu-img &#8211; QEMU disk image utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qemu-img</code> [<i>standard</i> <i>options</i>] <i>command</i> [<i>command</i> <i>options</i>]</p>
 <h2>DESCRIPTION</h2>

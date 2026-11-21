@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmreduce/"
 description: "pbmreduce – read a portable bitmap and reduce it N times"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmreduce &#8211; read a portable bitmap and reduce it N times </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmreduce</code> [<code>-floyd</code>|<code>-fs</code>|<code>-threshold</code> ] [<code>-value</code> <i>val</i>] <i>N</i> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

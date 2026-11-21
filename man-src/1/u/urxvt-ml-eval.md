@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-urxvt-ml-eval/"
 description: "eval – evaluate arbitrary perl code using actions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> eval &#8211; evaluate arbitrary perl code using actions </p>
 <h2>EXAMPLES</h2>
 <pre>
   URxvt.keysym.M-c: eval:selection_to_clipboard

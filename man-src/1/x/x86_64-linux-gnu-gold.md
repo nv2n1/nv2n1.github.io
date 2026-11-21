@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-gold/"
 description: "gold – The GNU ELF linker"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gold &#8211; The GNU ELF linker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ld.gold</code> [<i>,options/</i>] <i>,file/</i>&#8230;</p>
 <h2>OPTIONS</h2>

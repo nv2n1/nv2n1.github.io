@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reporter-rhtsupport/"
 description: "reporter-rhtsupport – Reports problem to RHTSupport."
 ---
 
-<h2 class="name">NAME</h2>
-<p> reporter-rhtsupport &#8211; Reports problem to RHTSupport. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>reporter-rhtsupport</i> [-v] [-c CONFFILE] [-F FMTFILE] [-u -C UR_CONFFILE] -d DIR </p>
 <p> Or: </p>

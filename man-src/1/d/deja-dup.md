@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-deja-dup/"
 description: "deja-dup – a desktop backup tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> deja-dup &#8211; a desktop backup tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>deja-dup</code> [OPTIONS…]<br />
  <code>deja-dup</code> &#8211;backup<br />

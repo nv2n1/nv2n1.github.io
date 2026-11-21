@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlsolaris/"
 description: "perlsolaris – Perl version 5 on Solaris systems"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlsolaris &#8211; Perl version 5 on Solaris systems </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes various features of Sun&#8217;s Solaris operating system that will affect how Perl version 5 (hereafter just perl) is compiled and/or runs. Some issues relating to the older SunOS 4.x are also discussed, though they may be out of date. </p>
 <p> For the most part, everything should just work. </p>

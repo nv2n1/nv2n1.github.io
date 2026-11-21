@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-prepmx/"
 description: "prepmx – preprocessor for PMX, easy music typesetting program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> prepmx &#8211; preprocessor for PMX, easy music typesetting program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prepmx</code> [<i>options</i>] <i>jobname</i> [<i>outdir/</i>] [<i>stylefile</i>]</p>
 <h2>DESCRIPTION</h2>

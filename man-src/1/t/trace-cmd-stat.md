@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-stat/"
 description: "trace-cmd-stat – show the status of the tracing (ftrace) system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-stat &#8211; show the status of the tracing (ftrace) system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd stat</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-copysign/"
 description: "copysign, copysignf, copysignl – copy sign of a number"
 ---
 
-<h2 class="name">NAME</h2>
-<p> copysign, copysignf, copysignl &#8211; copy sign of a number </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

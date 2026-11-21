@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bt-device/"
 description: "bt-device – a bluetooth device manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bt-device &#8211; a bluetooth device manager </p>
 <h2>SYNOPSIS</h2>
 <p> bt-device [<font SIZE="-1">OPTION&#8230;</font>] </p>
 <p> Help Options:<br />

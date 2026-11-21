@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cas/"
 description: "cas – c aMule statistics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cas &#8211; c aMule statistics </p>
 <h2>SYNOPSIS</h2>
 <p> _untranslated<code>[</code>-o<code>]</code> _untranslated<code>[</code>-p<code>]</code> [<code>-c</code> <i>&lt;path&gt;</i>] </p>
 <p> _untranslated<code>[</code>-h<code>]</code></p>

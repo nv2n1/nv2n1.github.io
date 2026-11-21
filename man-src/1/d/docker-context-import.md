@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-context-import/"
 description: "docker-context-import – Import a context from a tar or zip file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-context-import &#8211; Import a context from a tar or zip file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker context import CONTEXT FILE|-</code> </p>
 <h2>DESCRIPTION</h2>

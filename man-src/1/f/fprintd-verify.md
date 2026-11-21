@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fprintd-verify/"
 description: "fprintd – Fingerprint management daemon, and test applications"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fprintd &#8211; Fingerprint management daemon, and test applications </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fprintd-enroll</code> [-f finger] [usename] </p>
 <p> <code>fprintd-list</code> username [usernames&#8230;] </p>

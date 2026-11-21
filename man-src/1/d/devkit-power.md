@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-devkit-power/"
 description: "devkit-power – DeviceKit-power command line tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> devkit-power &#8211; DeviceKit-power command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>devkit-power</code> [<code>&#8211;enumerate</code>] [<code>&#8211;monitor</code>] [<code>&#8211;monitor-detail</code>] [<code>&#8211;help</code>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-thunar/"
 description: "Thunar – File Manager for the Xfce Desktop Environment"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Thunar &#8211; File Manager for the Xfce Desktop Environment </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>Thunar</code> [options] [[URI]&#8230;]</dt>

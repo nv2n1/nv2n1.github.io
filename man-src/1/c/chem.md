@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chem/"
 description: "chem – groff preprocessor for producing chemical structure diagrams"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chem &#8211; groff preprocessor for producing chemical structure diagrams </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

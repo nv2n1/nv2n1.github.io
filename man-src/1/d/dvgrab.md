@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvgrab/"
 description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and audio data from FireWire"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvgrab &#8212; Capture DV or MPEG-2 Transport Stream (HDV) video and audio data from FireWire</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvgrab</code> [<i>options</i>] [<i>base</i>] [-] </p>
 <h2>DESCRIPTION</h2>

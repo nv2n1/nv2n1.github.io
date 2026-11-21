@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml2dcm/"
 description: "xml2dcm – Convert XML document to DICOM file or data set"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml2dcm &#8211; Convert XML document to DICOM file or data set </p>
 <h2>SYNOPSIS</h2>
 <pre>
 xml2dcm [options] xmlfile-in dcmfile-out

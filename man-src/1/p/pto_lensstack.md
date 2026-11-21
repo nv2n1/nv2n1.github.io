@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pto_lensstack/"
 description: "pto_lensstack – modify assigned lenses and stack in pto files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pto_lensstack &#8211; modify assigned lenses and stack in pto files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pto_lensstack</code> [options] input.pto</p>
 <h2>DESCRIPTION</h2>

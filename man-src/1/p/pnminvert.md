@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnminvert/"
 description: "pnminvert – invert a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnminvert &#8211; invert a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnminvert</code> [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

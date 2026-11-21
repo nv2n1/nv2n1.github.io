@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wvgain/"
 description: "wvgain – adds ReplayGain information to wavpack files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wvgain &#8211; adds ReplayGain information to wavpack files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>wvgain</code> [<i>-options</i>] <i>INFILE</i>&#8230;</dt></dl>

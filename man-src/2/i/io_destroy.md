@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-io_destroy/"
 description: "io_destroy – destroy an asynchronous I/O context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> io_destroy &#8211; destroy an asynchronous I/O context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-header/"
 description: "guilt-header – Print a patch header"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-header &#8211; Print a patch header </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-header</i> [-eE] [&lt;patchname&gt;]</p>
 <h2>DESCRIPTION</h2>

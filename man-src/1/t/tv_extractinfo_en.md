@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tv_extractinfo_en/"
 description: "tv_extractinfo_en – read English-language listings and extract info from programme descriptions."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tv_extractinfo_en &#8211; read English-language listings and extract info from programme descriptions. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_extractinfo_en [&#8211;help] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
 <h2>DESCRIPTION</h2>

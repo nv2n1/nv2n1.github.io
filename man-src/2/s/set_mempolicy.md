@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-set_mempolicy/"
 description: "set_mempolicy – set default NUMA memory policy for a thread and its children"
 ---
 
-<h2 class="name">NAME</h2>
-<p> set_mempolicy &#8211; set default NUMA memory policy for a thread and its children </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;numaif.h&gt;

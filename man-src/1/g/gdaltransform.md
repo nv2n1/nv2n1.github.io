@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdaltransform/"
 description: "gdaltransform – gdaltransform transforms coordinates"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdaltransform &#8211; gdaltransform transforms coordinates </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdaltransform[--help - general]

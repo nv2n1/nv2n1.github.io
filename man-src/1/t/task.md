@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-task/"
 description: "task – A command line todo manager."
 ---
 
-<h2 class="name">NAME</h2>
-<p> task &#8211; A command line todo manager.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>task &lt;filter&gt; &lt;command&gt; [ &lt;mods&gt; | &lt;args&gt; ]</code><br />
  <code>task &#8211;version</code> </p>

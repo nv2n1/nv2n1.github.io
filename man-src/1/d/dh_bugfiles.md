@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_bugfiles/"
 description: "dh_bugfiles – install bug reporting customization files into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_bugfiles &#8211; install bug reporting customization files into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_bugfiles</code> [<code>-A</code>] [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

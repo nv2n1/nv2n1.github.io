@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwlocality_diff/"
 description: "hwlocality_diff – Topology differences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_diff &#8211; Topology differences </p>
 <h3>Data Structures</h3>
 <p> union <code>hwloc_topology_diff_obj_attr_u</code> </p>
 <p> struct <code>hwloc_topology_diff_obj_attr_u::hwloc_topology_diff_obj_attr_uint64_s</code> </p>

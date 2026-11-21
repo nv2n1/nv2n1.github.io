@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qstat-torque/"
 description: "qstat – show status of pbs batch jobs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qstat &#8211; show status of pbs batch jobs </p>
 <h2>SYNOPSIS</h2>
 <p> qstat [-f [-1]] [-l] [-W site_specific] [-x] [job_identifier&#8230; | destination&#8230;] </p>
 <p> qstat [-a|-i|-r|-e] [-l] [-n [-1]] [-s] [-G|-M] [-R] [-u user_list] [job_identifier&#8230; |&nbsp;<wbr> destination&#8230;] </p>

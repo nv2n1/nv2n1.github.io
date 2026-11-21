@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mhonarc/"
 description: "mhonarc – convert mail/news messages to HTML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mhonarc &#8211; convert mail/news messages to HTML </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mhonarc</code>&nbsp;<wbr>[<i>options</i>]&nbsp;<wbr>[<i>arguments</i>]</p>
 <h2>DESCRIPTION</h2>

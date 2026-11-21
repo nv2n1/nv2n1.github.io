@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zsh/"
 description: "zsh – the Z shell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zsh &#8211; the Z shell </p>
 <h2>OVERVIEW</h2>
 <p> Because zsh contains many features, the zsh manual has been split into a number of sections: </p>
 <dl>

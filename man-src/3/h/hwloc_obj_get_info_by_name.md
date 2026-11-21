@@ -6,8 +6,6 @@ letter: "h"
 url: "/docs/linux/man/3-hwloc_obj_get_info_by_name/"
 description: "hwlocality_object_strings – Manipulating Object Type, Sets and Attributes as Strings"
 ---
-<h2 class="name">NAME</h2>
-<p> hwlocality_object_strings - Manipulating Object Type, Sets and Attributes as Strings </p>
 <h3>Functions</h3>
 <p> <br />
  const char * <code>hwloc_obj_type_string</code> (<code>hwloc_obj_type_t</code> type) <br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdflushcached/"
 description: "rrdflushcached – Flush the values for a spcific RRD file from memory."
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdflushcached &#8211; Flush the values for a spcific RRD file from memory. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>flushcached</code> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>] <i>filename</i> [<i>filename</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

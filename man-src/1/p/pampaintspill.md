@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pampaintspill/"
 description: "pampaintspill – smoothly spill colors into the background"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pampaintspill &#8211; smoothly spill colors into the background</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pampaintspill</code> [<code>&#8211;bgcolor</code>=<i>color</i>] [<code>&#8211;wrap</code>] [<code>&#8211;all</code>] [<code>&#8211;downsample</code>=<i>number</i>] [<code>&#8211;power</code>=<i>number</i>] [<i>filename</i>] </p>
 <p> Minimum unique abbreviations of option are acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>

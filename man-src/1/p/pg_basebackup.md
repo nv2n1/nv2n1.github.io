@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pg_basebackup/"
 description: "pg_basebackup – take a base backup of a PostgreSQL cluster"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pg_basebackup &#8211; take a base backup of a PostgreSQL cluster </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_basebackup</code> [<i>option</i>&#8230;]</dt></dl>

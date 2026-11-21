@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl56delta/"
 description: "perl56delta – what’s new for perl v5.6.0"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl56delta &#8211; what&#8217;s new for perl v5.6.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.005 release and the 5.6.0 release.</p>
 <h2>Core Enhancements</h2>

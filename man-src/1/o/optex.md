@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-optex/"
 description: "optex – OPmac and Plain TeX for LuaTeX engine."
 ---
 
-<h2 class="name">NAME</h2>
-<p> optex &#8211; OPmac and Plain TeX for LuaTeX engine. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>optex</code> [ first line ]</p>
 <h2>DESCRIPTION</h2>

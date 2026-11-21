@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mc_discr_geom_av_price/"
 description: "ql/pricingengines/asian/mc_discr_geom_av_price.hpp – Monte Carlo engine for discrete geometric average price Asian."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/asian/mc_discr_geom_av_price.hpp &#8211; Monte Carlo engine for discrete geometric average price Asian. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/asian/mcdiscreteasianengine.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br />

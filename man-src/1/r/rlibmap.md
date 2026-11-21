@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rlibmap/"
 description: "rlibmap – ROOT utility to create class to library maps"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rlibmap &#8211; ROOT utility to create class to library maps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rlibmap</code> [-f] [[-r|-o] <i>mapfile</i>] -l <i>library</i> -d <i>dependecy</i> -c <i>Linkdef</i></p>
 <h2>DESCRIPTION</h2>

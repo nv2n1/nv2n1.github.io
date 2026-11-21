@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fstep/"
 description: "fstep – instruction steps a given program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fstep &#8211; instruction steps a given program </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fstep</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230;}</dt></dl>

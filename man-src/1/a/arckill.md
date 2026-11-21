@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arckill/"
 description: "arckill – ARC Kill"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arckill &#8211; ARC Kill</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arckill</code> command is used to kill running jobs. </p>
 <h2>SYNOPSIS</h2>

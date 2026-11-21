@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml2ag/"
 description: "xml2ag – XML to AutoGen Definiton Converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml2ag &#8211; XML to AutoGen Definiton Converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xml2ag</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i>[[=| ]<i>value</i>]]&#8230;[ &lt;def-file&gt; ] </p>
 <p> This program will convert any arbitrary XML file into equivalent AutoGen definitions, and invoke AutoGen.</p>

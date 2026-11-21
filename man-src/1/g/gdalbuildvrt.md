@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdalbuildvrt/"
 description: "gdalbuildvrt – gdalbuildvrt Builds a VRT from a list of datasets. (compiled by default since GDAL 1.6.1)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdalbuildvrt &#8211; gdalbuildvrt Builds a VRT from a list of datasets. (compiled by default since GDAL 1.6.1) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdalbuildvrt[-tileindex field_name]

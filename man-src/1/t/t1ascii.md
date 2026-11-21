@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-t1ascii/"
 description: "t1ascii – convert PostScript Type 1 font from binary to ASCII"
 ---
 
-<h2 class="name">NAME</h2>
-<p> t1ascii &#8211; convert PostScript Type 1 font from binary to ASCII </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1ascii</code> [<code>-l</code> <i>length</i>] [<i>input</i> [<i>output</i>]]</p>
 <h2>DESCRIPTION</h2>

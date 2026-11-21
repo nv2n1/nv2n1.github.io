@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mairix/"
 description: "mairix – index and search mail folders"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mairix &#8211; index and search mail folders </p>
 <h2>SYNOPSIS</h2>
 <h3>Indexing</h3>
 <p> <code>mairix</code> [ <code>-v</code>|<code>&#8211;verbose</code> ] [ <code>-p</code>|<code>&#8211;purge</code> ] [ <code>-f</code>|<code>&#8211;rcfile</code> <i>mairixrc</i> ] [ <code>-F</code>|<code>&#8211;fast-index</code> ] </p>

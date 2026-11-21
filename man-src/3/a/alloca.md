@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-alloca/"
 description: "alloca – allocate memory that is automatically freed"
 ---
 
-<h2 class="name">NAME</h2>
-<p> alloca &#8211; allocate memory that is automatically freed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;alloca.h&gt;</code> </p>
 <p> <code>void *alloca(size_t </code><i>size</i><code>);</code></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqld_safe/"
 description: "mysqld_safe – MySQL server startup script"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqld_safe &#8211; MySQL server startup script </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqld_safe </code><i>options</i></dt></dl>

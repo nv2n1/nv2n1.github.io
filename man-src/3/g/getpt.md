@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getpt/"
 description: "getpt – open a new pseudoterminal master"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getpt &#8211; open a new pseudoterminal master </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-estconfig/"
 description: "estconfig – configuration utility of Hyper Estraier"
 ---
 
-<h2 class="name">NAME</h2>
-<p> estconfig &#8211; configuration utility of Hyper Estraier</p>
 <h2>SYNOPSIS</h2>
 <p> <code>estconfig &#8211;version</code> </p>
 <p> <code>estconfig &#8211;prefix</code> </p>

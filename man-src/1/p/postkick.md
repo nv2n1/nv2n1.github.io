@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-postkick/"
 description: "postkick – kick a Postfix service"
 ---
 
-<h2 class="name">NAME</h2>
-<p> postkick &#8211; kick a Postfix service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postkick</code> [<code>-c </code><i>config_dir</i>] [<code>-v</code>] <i>class service request</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_autotools-dev_updateconfig/"
 description: "dh_autotools-dev_updateconfig – update config.sub and config.guess"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_autotools-dev_updateconfig &#8211; update config.sub and config.guess </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_autotools-dev_updateconfig</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chpev/"
 description: "chpev.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chpev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, RWORK, INFO)<br />

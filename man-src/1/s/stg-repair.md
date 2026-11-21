@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-repair/"
 description: "stg-repair – Fix StGit metadata if branch was modified with git commands"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-repair &#8211; Fix StGit metadata if branch was modified with git commands </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> repair

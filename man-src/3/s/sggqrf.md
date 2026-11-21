@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sggqrf/"
 description: "sggqrf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sggqrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggqrf</code> (N, M, P, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />

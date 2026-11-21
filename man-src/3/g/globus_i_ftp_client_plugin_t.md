@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_i_ftp_client_plugin_t/"
 description: "globus_i_ftp_client_plugin_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_i_ftp_client_plugin_t &#8211; </p>
 <p> FTP Client Plugin. </p>
 <p> Each plugin implementation should define a method for initializing one of these structures. Plugins may be implemented as either a static function table, or a specialized plugin with plugin-specific attributes.</p>
 <h2>SYNOPSIS</h2>

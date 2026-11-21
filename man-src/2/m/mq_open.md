@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mq_open/"
 description: "mq_open – open a message queue"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mq_open &#8211; open a message queue </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt; /* For O_* constants */

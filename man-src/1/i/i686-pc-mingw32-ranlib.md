@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-ranlib/"
 description: "ranlib – generate index to archive."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ranlib &#8211; generate index to archive. </p>
 <h2>SYNOPSIS</h2>
 <p> ranlib [<code>-vVt</code>] <i>archive</i></p>
 <h2>DESCRIPTION</h2>

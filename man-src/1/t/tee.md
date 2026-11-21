@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tee/"
 description: "tee – read from standard input and write to standard output and files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tee &#8211; read from standard input and write to standard output and files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tee</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

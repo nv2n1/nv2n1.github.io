@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-blame/"
 description: "git-blame – Show what revision and author last modified each line of a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-blame &#8211; Show what revision and author last modified each line of a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git blame[-c][-b][-l][--root][-t][-f][-n][-s][-e][-p][-w][--incremental]

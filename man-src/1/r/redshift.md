@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-redshift/"
 description: "redshift – set color temperature of display according to time of day"
 ---
 
-<h2 class="name">NAME</h2>
-<p> redshift &#8211; set color temperature of display according to time of day </p>
 <h2>SYNOPSIS</h2>
 <p> <code>redshift</code> [<code>-l</code> <i>LAT</i><code>:</code><i>LON</i> | <code>-l</code> <i>PROVIDER</i><code>:</code><i>OPTIONS</i>] [<code>-t</code> <i>DAY</i><code>:</code><i>NIGHT</i>] [<i>OPTIONS</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

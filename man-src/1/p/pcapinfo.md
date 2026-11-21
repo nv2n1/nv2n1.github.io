@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pcapinfo/"
 description: "pcapinfo – Prints detailed information about the network devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pcapinfo &#8211; Prints detailed information about the network devices </p>
 <h2>SYNOPSIS</h2>
 <pre>
     pcapinfo

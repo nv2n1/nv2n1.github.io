@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-csyequb/"
 description: "csyequb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> csyequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csyequb</code> (UPLO, N, A, LDA, S, SCOND, AMAX, WORK, INFO)<br />

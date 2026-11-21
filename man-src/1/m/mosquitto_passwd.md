@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mosquitto_passwd/"
 description: "mosquitto_passwd – manage password files for mosquitto"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mosquitto_passwd &#8211; manage password files for mosquitto </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mosquitto_passwd</code> [<code>-c</code> | <code>-D</code>] <i>passwordfile</i> <i>username</i></dt>

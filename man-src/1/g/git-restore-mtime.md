@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-restore-mtime/"
 description: "git-restore-mtime – Restore original modification time of files based on the date of the most recent commit that modified them"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-restore-mtime &#8211; Restore original modification time of files based on the date of the most recent commit that modified them </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>git-restore-mtime</code></dt>

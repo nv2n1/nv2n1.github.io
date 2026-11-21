@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sigaction/"
 description: "sigaction, rt_sigaction – examine and change a signal action"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sigaction, rt_sigaction &#8211; examine and change a signal action </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;

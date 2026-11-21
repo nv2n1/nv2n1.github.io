@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdb2/"
 description: "pdb2.7 – the Python debugger"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdb2.7 &#8211; the Python debugger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdb2.7</code> <i>script [&#8230;]</i></p>
 <h2>DESCRIPTION</h2>

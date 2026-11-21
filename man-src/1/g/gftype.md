@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gftype/"
 description: "gftype – translate a generic font file for humans to read"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gftype &#8211; translate a generic font file for humans to read </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gftype</code> [<code>-i</code>] [<code>-m</code>] <i>gf_file_name</i> [<i>output_file_name</i>]</p>
 <h2>DESCRIPTION</h2>

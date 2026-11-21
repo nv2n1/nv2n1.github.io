@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cups/"
 description: "cups – a standards-based, open source printing system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cups &#8211; a standards-based, open source printing system </p>
 <h2>DESCRIPTION</h2>
 <p> <code>CUPS</code> is the software you use to print from applications like word processors, email readers, photo editors, and web browsers. It converts the page descriptions produced by your application (put a paragraph here, draw a line there, and so forth) into something your printer can understand and then sends the information to the printer for printing. </p>
 <p> Now, since every printer manufacturer does things differently, printing can be very complicated. <code>CUPS</code> does its best to hide this from you and your application so that you can concentrate on printing and less on how to print. Generally, the only time you need to know anything about your printer is when you use it for the first time, and even then <code>CUPS</code> can often figure things out on its own.</p>

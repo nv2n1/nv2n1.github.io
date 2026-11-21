@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-repomapper/"
 description: "repomapper – update and manipulate contributor maps"
 ---
 
-<h2 class="name">NAME</h2>
-<p> repomapper &#8211; update and manipulate contributor maps </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repomapper</code> [-i] [-p&nbsp;<wbr><i>passwordfile</i>] [-u&nbsp;<wbr><i>updatefile</i>] [-h&nbsp;<wbr><i>host</i>] <i>contribmap</i></dt></dl>

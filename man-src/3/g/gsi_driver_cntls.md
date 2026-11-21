@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gsi_driver_cntls/"
 description: "Attributes and Cntls –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Attributes and Cntls &#8211; </p>
 <p> GSI driver specific attrs and cntls.</p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_gsi_cmd_t</code> { <code>GLOBUS_XIO_GSI_SET_CREDENTIAL</code>, <code>GLOBUS_XIO_GSI_GET_CREDENTIAL</code>, <code>GLOBUS_XIO_GSI_SET_GSSAPI_REQ_FLAGS</code>, <code>GLOBUS_XIO_GSI_GET_GSSAPI_REQ_FLAGS</code>, <code>GLOBUS_XIO_GSI_SET_PROXY_MODE</code>, <code>GLOBUS_XIO_GSI_GET_PROXY_MODE</code>, <code>GLOBUS_XIO_GSI_SET_AUTHORIZATION_MODE</code>, <code>GLOBUS_XIO_GSI_GET_AUTHORIZATION_MODE</code>, <code>GLOBUS_XIO_GSI_SET_DELEGATION_MODE</code>, <code>GLOBUS_XIO_GSI_GET_DELEGATION_MODE</code>, <code>GLOBUS_XIO_GSI_SET_SSL_COMPATIBLE</code>, <code>GLOBUS_XIO_GSI_SET_ANON</code>, <code>GLOBUS_XIO_GSI_SET_WRAP_MODE</code>, <code>GLOBUS_XIO_GSI_GET_WRAP_MODE</code>, <code>GLOBUS_XIO_GSI_SET_BUFFER_SIZE</code>, <code>GLOBUS_XIO_GSI_GET_BUFFER_SIZE</code>, <code>GLOBUS_XIO_GSI_SET_PROTECTION_LEVEL</code>, <code>GLOBUS_XIO_GSI_GET_PROTECTION_LEVEL</code>, <code>GLOBUS_XIO_GSI_GET_TARGET_NAME</code>, <code>GLOBUS_XIO_GSI_SET_TARGET_NAME</code>, <code>GLOBUS_XIO_GSI_GET_CONTEXT</code>, <code>GLOBUS_XIO_GSI_GET_DELEGATED_CRED</code>, <code>GLOBUS_XIO_GSI_GET_PEER_NAME</code>, <code>GLOBUS_XIO_GSI_GET_LOCAL_NAME</code>, <code>GLOBUS_XIO_GSI_INIT_DELEGATION</code>, <code>GLOBUS_XIO_GSI_REGISTER_INIT_DELEGATION</code>, <code>GLOBUS_XIO_GSI_ACCEPT_DELEGATION</code>, <code>GLOBUS_XIO_GSI_REGISTER_ACCEPT_DELEGATION</code>, <code>GLOBUS_XIO_GSI_FORCE_SERVER_MODE</code> } </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ecryptfs-insert-wrapped-passphrase-into-keyring/"
 description: "ecryptfs-insert-wrapped-passphrase-into-keyring – unwrap a wrapped passphrase from file and insert into the kernel keyring."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecryptfs-insert-wrapped-passphrase-into-keyring &#8211; unwrap a wrapped passphrase from file and insert into the kernel keyring.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-insert-wrapped-passphrase-into-keyring [file]</code> </p>
 <p> printf &quot;%s&quot; &quot;wrapping passphrase&quot; | <code>ecryptfs-insert-wrapped-passphrase-into-keyring [file] &#8211;</code> </p>

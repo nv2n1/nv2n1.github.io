@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofoincrementalupdates/"
 description: "podofoincrementalupdates – Provides information about incremental updates in PDF files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofoincrementalupdates &#8211; Provides information about incremental updates in PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofoincrementalupdates</code> [-e N out.pdf] file.pdf </p>
 <h2>DESCRIPTION</h2>

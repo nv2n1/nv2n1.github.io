@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-odmgr/"
 description: "odmgr – administration utility for QDBM Odeum"
 ---
 
-<h2 class="name">NAME</h2>
-<p> odmgr &#8211; administration utility for QDBM Odeum </p>
 <h2>SYNOPSIS</h2>
 <p> <code>odmgr create</code> <i>name</i><br />
  <code>odmgr put</code> [-uri <i>str</i>] [-title <i>str</i>] [-author <i>str</i>] [-date <i>str</i>] [-wmax <i>num</i>] [-keep] <i>name</i> [<i>file</i>]<br />

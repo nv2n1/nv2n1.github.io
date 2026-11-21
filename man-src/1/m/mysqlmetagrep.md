@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlmetagrep/"
 description: "mysqlmetagrep – Search Database Object Definitions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlmetagrep &#8211; Search Database Object Definitions </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlmetagrep [</code><i>options</i><code>] [</code><i>pattern</i><code> | </code><i>server</i><code>] &#8230;</code></dt></dl>

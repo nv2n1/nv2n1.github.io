@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arcrename/"
 description: "arcrename – rename file or directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arcrename &#8211; rename file or directory</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcrename</code> renames files or directories on grid storage elements and indexing services. </p>
 <h2>SYNOPSIS</h2>

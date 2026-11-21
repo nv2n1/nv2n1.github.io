@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-krb5_rd_req_in_set_pac_check/"
 description: "Heimdal Kerberos 5 authentication functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal Kerberos 5 authentication functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb5_rd_req_ctx</code> (krb5_context, krb5_auth_context *, const krb5_data *, krb5_const_principal, krb5_rd_req_in_ctx, krb5_rd_req_out_ctx *)&quot; </p>

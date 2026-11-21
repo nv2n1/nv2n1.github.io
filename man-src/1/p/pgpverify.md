@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgpverify/"
 description: "pgpverify – Cryptographically verify Usenet control messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgpverify &#8211; Cryptographically verify Usenet control messages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgpverify</code> [<code>&#8211;findid</code>=<i>string</i>] [<code>&#8211;test</code>] &lt; <i>message</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chgeqz/"
 description: "chgeqz.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chgeqz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chgeqz</code> (JOB, COMPQ, COMPZ, N, ILO, IHI, H, LDH, T, LDT, ALPHA, BETA, Q, LDQ, Z, LDZ, WORK, LWORK, RWORK, INFO)<br />

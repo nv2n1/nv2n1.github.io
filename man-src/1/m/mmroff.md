@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mmroff/"
 description: "mmroff – cross-reference preprocessor for GNU roff mm macro package"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mmroff &#8211; cross-reference preprocessor for GNU roff mm macro package </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-x</code> ] <i>groff-arguments</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dspam_merge/"
 description: "dspam_merge – merge several users’ metadata into a composite"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dspam_merge &#8211; merge several users&#8217; metadata into a composite</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dspam_merge</code> [<code>&#8211;profile=</code><i>PROFILE</i>] <code>&nbsp;<wbr>user1 user2 &#8230; userN</code><code>&nbsp;<wbr>-o</code><i>&nbsp;<wbr>username</i></p>
 <h2>DESCRIPTION</h2>

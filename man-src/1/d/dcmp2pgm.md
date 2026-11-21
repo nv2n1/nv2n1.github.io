@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmp2pgm/"
 description: "dcmp2pgm – Read DICOM image and presentation state and render bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmp2pgm &#8211; Read DICOM image and presentation state and render bitmap </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dcmp2pgm[options] dcmimage - in[bitmap - out]

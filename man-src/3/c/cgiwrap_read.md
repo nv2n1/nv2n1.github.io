@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgiwrap_read/"
 description: "cgiwrap_read – cgiwrap input function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgiwrap_read &#8211; cgiwrap input function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgiwrap.h&gt;

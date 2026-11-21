@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmtorast/"
 description: "pnmtorast – convert a portable pixmap into a Sun rasterfile"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmtorast &#8211; convert a portable pixmap into a Sun rasterfile </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtorast</code> [<code>-standard</code>|<code>-rle</code>] [<i>pnmfile</i>]</p>
 <h2>DESCRIPTION</h2>

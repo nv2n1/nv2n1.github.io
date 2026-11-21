@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlapll/"
 description: "dlapll.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlapll.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlapll</code> (N, X, INCX, Y, INCY, SSMIN)<br />

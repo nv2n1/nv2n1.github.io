@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssteqr/"
 description: "ssteqr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssteqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />

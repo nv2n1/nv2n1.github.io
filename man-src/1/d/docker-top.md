@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-top/"
 description: "docker-top – Display the running processes of a container"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-top &#8211; Display the running processes of a container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker top CONTAINER [ps OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

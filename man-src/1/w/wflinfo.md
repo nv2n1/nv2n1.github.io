@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wflinfo/"
 description: "wflinfo – a utility for printing OpenGL or OpenGL ES driver information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wflinfo &#8211; a utility for printing OpenGL or OpenGL ES driver information </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>wflinfo</code> <code>&#8211;platform=</code><i>platform</i> <code>&#8211;api=</code><i>api</i> [<i>OPTIONS</i>]</dt></dl>

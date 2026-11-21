@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-request_key/"
 description: "request_key – request a key from the kernel’s key management facility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> request_key &#8211; request a key from the kernel&#8217;s key management facility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

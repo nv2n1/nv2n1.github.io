@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libgpsmm/"
 description: "libgpsmm, libQgpsmm – C++ and QT class wrapper for the GPS daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libgpsmm, libQgpsmm &#8211; C++ and QT class wrapper for the GPS daemon </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 C++:

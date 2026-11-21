@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal_proximity/"
 description: "gdal_proximity – gdal_proximity.py produces a raster proximity map"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal_proximity &#8211; gdal_proximity.py produces a raster proximity map </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdal_proximity.py srcfile dstfile[-srcband n][-dstband n]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-muffin-theme-viewer/"
 description: "muffin-theme-viewer – view muffin themes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> muffin-theme-viewer &#8211; view muffin themes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>muffin-theme-viewer</code> [ <i>THEMENAME</i> ]</p>
 <h2>DESCRIPTION</h2>

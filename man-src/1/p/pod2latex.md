@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pod2latex/"
 description: "pod2latex – convert pod documentation to latex format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pod2latex &#8211; convert pod documentation to latex format </p>
 <h2>SYNOPSIS</h2>
 <pre>
   pod2latex *.pm

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fdebugdump/"
 description: "fdebugdump – dumps a hierarchy of the debug info dies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fdebugdump &#8211; dumps a hierarchy of the debug info dies </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fdebugrpm</code> {<i>executable</i>}</dt></dl>

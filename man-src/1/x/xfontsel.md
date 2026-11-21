@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfontsel/"
 description: "xfontsel – point and click selection of X11 font names"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfontsel &#8211; point and click selection of X11 font names </p>
 <h2>SYNTAX</h2>
 <p> <code>xfontsel</code> [-<i>toolkitoption</i> &#8230;] [<code>-pattern </code><i>fontname</i>] [<code>-print</code>] [<code>-sample </code><i>text</i>] [<code>-sample16 </code><i>text16</i>] [<code>-sampleUCS </code><i>textUCS</i>] [<code>-scaled</code>] </p>
 <h2>DESCRIPTION</h2>

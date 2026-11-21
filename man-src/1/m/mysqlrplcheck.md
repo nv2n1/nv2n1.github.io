@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlrplcheck/"
 description: "mysqlrplcheck – Check Replication Prerequisitiess"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlrplcheck &#8211; Check Replication Prerequisitiess </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlrplcheck [</code><i>options</i><code>]</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-logbl/"
 description: "logb, logbf, logbl – get exponent of a floating-point value"
 ---
 
-<h2 class="name">NAME</h2>
-<p> logb, logbf, logbl &#8211; get exponent of a floating-point value </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double logb(double </code><i>x</i><code>);</code><br />

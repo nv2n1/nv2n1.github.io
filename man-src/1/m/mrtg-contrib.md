@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mrtg-contrib/"
 description: "mrtg-contrib – Contribution Guidelines for MRTG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mrtg-contrib &#8211; Contribution Guidelines for MRTG </p>
 <h2>DESCRIPTION</h2>
 <p> If you have written an extension to mrtg or created a bug fix, please consider contributing it to the project. As I get quite a number of contributions every week, here are a few guidelines which explain how to contribute so that I can use the contribution without too much additional work.</p>
 <h3>Translations</h3>

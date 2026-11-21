@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-context-export/"
 description: "docker-context-export – Export a context to a tar or kubeconfig file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-context-export &#8211; Export a context to a tar or kubeconfig file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker context export [OPTIONS] CONTEXT [FILE|-]</code> </p>
 <h2>DESCRIPTION</h2>

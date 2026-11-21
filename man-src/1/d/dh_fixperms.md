@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_fixperms/"
 description: "dh_fixperms – fix permissions of files in package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_fixperms &#8211; fix permissions of files in package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_fixperms</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>]</p>
 <h2>DESCRIPTION</h2>

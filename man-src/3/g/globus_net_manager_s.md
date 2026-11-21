@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_net_manager_s/"
 description: "globus_net_manager_s –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_net_manager_s &#8211; </p>
 <p> Net Manager Definition.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_net_manager.h&gt;</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_cudart_get_device_osdev_by_index/"
 description: "hwlocality_cudart – Interoperability with the CUDA Runtime API"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_cudart &#8211; Interoperability with the CUDA Runtime API </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_cudart_get_device_pci_ids</code> (<code>hwloc_topology_t</code> topology, int idx, int *domain, int *bus, int *dev) </p>
 <p> static int <code>hwloc_cudart_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, int idx, <code>hwloc_cpuset_t</code> set) </p>

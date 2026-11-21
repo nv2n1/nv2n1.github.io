@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xset/"
 description: "xset – user preference utility for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xset &#8211; user preference utility for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xset</code> [-display <i>display</i>]<br />
  [-b] [b {on|off}] [b [<i>volume</i> [<i>pitch</i> [<i>duration</i>]]]]<br />

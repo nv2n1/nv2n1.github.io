@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-munge/"
 description: "munge – MUNGE credential encoder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> munge &#8211; MUNGE credential encoder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>munge</code> [<i>OPTION</i>]&#8230; </p>
 <h2>DESCRIPTION</h2>

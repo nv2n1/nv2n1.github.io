@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctbcon/"
 description: "ctbcon.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctbcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, RWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-smbcquotas/"
 description: "smbcquotas – Set or get QUOTAs of NTFS 5 shares"
 ---
 
-<h2 class="name">NAME</h2>
-<p> smbcquotas &#8211; Set or get QUOTAs of NTFS 5 shares </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

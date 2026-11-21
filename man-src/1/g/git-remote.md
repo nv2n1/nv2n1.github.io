@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-remote/"
 description: "git-remote – Manage set of tracked repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-remote &#8211; Manage set of tracked repositories </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git remote[-v | --verbose] git remote add[-t&lt;branch&gt;][-m&lt;master&gt;][-f][--[no - ] tags][--mirror = (fetch | push)]&lt;name&gt;&lt;url&gt;

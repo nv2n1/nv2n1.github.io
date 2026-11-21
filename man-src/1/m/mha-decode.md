@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mha-decode/"
 description: "mha-decode – Decode MIME messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mha-decode &#8211; Decode MIME messages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mha-decode</code>&nbsp;<wbr>[<i>options</i>]&nbsp;<wbr><i>mailfolder</i>&nbsp;<wbr>&#8230; </p>
 <p> <code>mha-decode</code>&nbsp;<wbr>[<i>options</i>]&nbsp;<wbr>-single&nbsp;<wbr><i>msg.822</i></p>

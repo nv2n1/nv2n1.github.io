@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtrttf/"
 description: "dtrttf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtrttf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrttf</code> (TRANSR, UPLO, N, A, LDA, ARF, INFO)<br />

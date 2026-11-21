@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-img2dcm/"
 description: "img2dcm – Convert standard image formats into DICOM format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> img2dcm &#8211; Convert standard image formats into DICOM format </p>
 <h2>SYNOPSIS</h2>
 <pre>
 img2dcm [options] imgfile-in dcmfile-out

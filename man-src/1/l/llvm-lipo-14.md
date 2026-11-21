@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-lipo-14/"
 description: "llvm-lipo – LLVM tool for manipulating universal binaries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-lipo &#8211; LLVM tool for manipulating universal binaries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-lipo</code> [<i>filenames…</i>] [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

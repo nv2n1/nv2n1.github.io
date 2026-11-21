@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mimeopen/"
 description: "mimeopen – Open files by mimetype"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mimeopen &#8211; Open files by mimetype </p>
 <h2>SYNOPSIS</h2>
 <p> mimeopen [options] [-] files</p>
 <h2>DESCRIPTION</h2>

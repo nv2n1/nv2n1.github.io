@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-localtime_r/"
 description: "asctime, ctime, gmtime, localtime, mktime, asctime_r, ctime_r, gmtime_r, localtime_r – transform date and time to broken-down time or ASCII"
 ---
 
-<h2 class="name">NAME</h2>
-<p> asctime, ctime, gmtime, localtime, mktime, asctime_r, ctime_r, gmtime_r, localtime_r &#8211; transform date and time to broken-down time or ASCII </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lshw/"
 description: "lshw – list hardware"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lshw &#8211; list hardware </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lshw</code> [ <code>-version</code> ] </p>
 <p> <code>lshw</code> [ <code>-help</code> ] </p>

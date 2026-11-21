@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-isatty/"
 description: "isatty – test whether a file descriptor refers to a terminal"
 ---
 
-<h2 class="name">NAME</h2>
-<p> isatty &#8211; test whether a file descriptor refers to a terminal </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

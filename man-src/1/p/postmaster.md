@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-postmaster/"
 description: "postmaster – PostgreSQL database server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> postmaster &#8211; PostgreSQL database server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>postmaster</code> [<i>option</i>&#8230;]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-transicc/"
 description: "transicc – little cms ColorSpace conversion calculator."
 ---
 
-<h2 class="name">NAME</h2>
-<p> transicc &#8211; little cms ColorSpace conversion calculator. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>transicc</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

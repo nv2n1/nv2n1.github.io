@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glxinfo/"
 description: "glxinfo – show information about the GLX implementation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glxinfo &#8211; show information about the GLX implementation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glxinfo</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

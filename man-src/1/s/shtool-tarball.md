@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-tarball/"
 description: "shtool tarball – GNU shtool command for rolling standardized tarballs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool tarball &#8211; GNU shtool command for rolling standardized tarballs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool tarball</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-o</code>|<code>&#8211;output</code> <i>tarball</i>] [<code>-c</code>|<code>&#8211;compress</code> <i>prog</i>] [<code>-d</code>|<code>&#8211;directory</code> <i>directory</i>] [<code>-u</code>|<code>&#8211;user</code> <i>user</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] [<code>-e</code>|<code>&#8211;exclude</code> <i>pattern</i>] <i>path</i> [<i>path</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

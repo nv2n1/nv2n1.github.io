@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-calc-cmd/"
 description: "mate-calc-cmd – A console calculator for the MATE Desktop Environment."
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-calc-cmd &#8211; A console calculator for the MATE Desktop Environment. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-calc-cmd</code></p>
 <h2>DESCRIPTION</h2>

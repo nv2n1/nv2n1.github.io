@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debconf-set-selections/"
 description: "debconf-set-selections – insert new values into the debconf database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debconf-set-selections &#8211; insert new values into the debconf database </p>
 <h2>SYNOPSIS</h2>
 <pre>
  debconf-set-selections file

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_scour/"
 description: "dh_scour – run scour optimizer on shipped SVG files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_scour &#8211; run scour optimizer on shipped SVG files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_scour</code> [<i>debhelper options</i>] [<code>&#8212;</code>&nbsp;<i>params</i>]</p>
 <h2>DESCRIPTION</h2>

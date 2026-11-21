@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmpsrcv/"
 description: "dcmpsrcv – Network receive for presentation state viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmpsrcv &#8211; Network receive for presentation state viewer </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmpsrcv [options] config-file

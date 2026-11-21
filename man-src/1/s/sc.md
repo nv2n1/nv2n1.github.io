@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sc/"
 description: "sc – Splunk Client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sc &#8211; Splunk Client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sc</code> [&#8211;host &lt;host&gt;] [&#8211;port &lt;port&gt;] [&#8211;login &lt;login&gt;] [&#8211;password &lt;password&gt;] [&#8211;insecure] &lt;subcommand&gt; [&lt;arguments&gt;,&#8230;]</p>
 <h2>DESCRIPTION</h2>

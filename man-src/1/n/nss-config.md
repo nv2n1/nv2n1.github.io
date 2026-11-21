@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nss-config/"
 description: "nss-config – Return meta information about nss libraries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nss-config &#8211; Return meta information about nss libraries </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nss-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;includedir</code>] [<code>&#8211;libs</code>] [<code>&#8211;cflags</code>] [<code>&#8211;libdir</code>] [<code>&#8211;version</code>]</dt></dl>

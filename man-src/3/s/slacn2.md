@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slacn2/"
 description: "slacn2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slacn2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slacn2</code> (N, V, X, ISGN, EST, KASE, ISAVE)<br />

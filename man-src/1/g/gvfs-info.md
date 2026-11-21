@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-info/"
 description: "gvfs-info"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-info </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-info</code> has been deprecated and it is redirected to <code>gio info</code>.</p>
 <h2>SEE ALSO</h2>

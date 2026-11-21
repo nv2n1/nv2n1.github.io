@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-udisks-tcp-bridge/"
 description: "udisks-tcp-bridge – udisks TCP/IP bridge"
 ---
 
-<h2 class="name">NAME</h2>
-<p> udisks-tcp-bridge &#8211; udisks TCP/IP bridge </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>udisks-tcp-bridge </code> [<code>&#8211;port</code>&nbsp;<wbr><i>port</i>] [<code>&#8211;help</code>]</dt></dl>

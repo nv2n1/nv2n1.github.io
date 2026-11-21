@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_ftp_client_api/"
 description: "Globus FTP Client API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Globus FTP Client API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>
 <p> <code>Restart Markers</code> </p>

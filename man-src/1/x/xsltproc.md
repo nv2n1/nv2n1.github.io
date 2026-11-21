@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xsltproc/"
 description: "xsltproc – command line XSLT processor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xsltproc &#8211; command line XSLT processor </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xsltproc</code> [[<code>-V</code> | <code>&#8211;version</code>] [<code>-v</code> | <code>&#8211;verbose</code>] [{<code>-o</code> | <code>&#8211;output</code>} {<i>FILE</i> | <i>DIRECTORY</i>}] | <code>&#8211;timing</code> | <code>&#8211;repeat</code> | <code>&#8211;debug</code> | <code>&#8211;novalid</code> | <code>&#8211;noout</code> | <code>&#8211;maxdepth&nbsp;<wbr></code><i>VALUE</i> | <code>&#8211;html</code> | <code>&#8211;encoding&nbsp;<wbr></code><i>ENCODING</i><code>&nbsp;<wbr></code> | <code>&#8211;param&nbsp;<wbr></code><i>PARAMNAME</i><code>&nbsp;<wbr></code><i>PARAMVALUE</i><code>&nbsp;<wbr></code> | <code>&#8211;stringparam&nbsp;<wbr></code><i>PARAMNAME</i><code>&nbsp;<wbr></code><i>PARAMVALUE</i><code>&nbsp;<wbr></code> | <code>&#8211;nonet</code> | <code>&#8211;path&nbsp;<wbr>&quot;</code><i>PATH(S)</i><code>&quot;</code> | <code>&#8211;load-trace</code> | <code>&#8211;catalogs</code> | <code>&#8211;xinclude</code> | [<code>&#8211;profile</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;norman</code>] | <code>&#8211;dumpextensions</code> | <code>&#8211;nowrite</code> | <code>&#8211;nomkdir</code> | <code>&#8211;writesubtree&nbsp;<wbr></code><i>PATH</i> | <code>&#8211;nodtdattr</code>] [<i>STYLESHEET</i>] {<i>XML-FILE</i> | -}</dt></dl>

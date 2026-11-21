@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mpqcrun/"
 description: "mpqcrun – The mpqcrun program simplifies running MPQC."
 ---
 
-<h2 class="name">NAME</h2>
-<p> mpqcrun &#8211; The mpqcrun program simplifies running MPQC.</p>
 <h2>Synopsis</h2>
 <pre><code>
 mpqcrun[options][file1.in][file2.in]...

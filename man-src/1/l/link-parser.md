@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-link-parser/"
 description: "link-parser – parses natural language sentences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> link-parser &#8211; parses natural language sentences </p>
 <h2>SYNOPSIS</h2>
 <p> <code>link-parser</code> [language] [-pp pp_knowledge_file] [-c constituent_knowledge_file] [-a affix_file] [-ppoff] [-coff] [-aoff] [-batch] [-&lt;special &quot;!&quot; command&gt;]</p>
 <h2>DESCRIPTION</h2>

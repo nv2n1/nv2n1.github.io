@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ipsec_ttodata/"
 description: "ipsec_ttodata, ipsec_datatot – convert binary data bytes from and to text formats"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipsec_ttodata, ipsec_datatot &#8211; convert binary data bytes from and to text formats </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;freeswan.h&gt;

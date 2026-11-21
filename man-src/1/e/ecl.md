@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ecl/"
 description: "ecl – Embeddable Common LISP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecl &#8211; Embeddable Common LISP </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecl</code> [<code>-dir</code> <i>dir</i>] [<code>-load</code> <i>file</i>] [<code>-eval</code> <i>expr</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>-compile</code> <i>file</i><br />

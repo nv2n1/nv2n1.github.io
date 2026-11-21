@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mpost/"
 description: "mpost, pmpost, upmpost – MetaPost, a system for creating graphics r-mpost, r-pmpost, r-upmpost – restricted MetaPost"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mpost, pmpost, upmpost &#8211; MetaPost, a system for creating graphics r-mpost, r-pmpost, r-upmpost &#8211; restricted MetaPost </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpost</code> [<i>options</i>] [<i>commands</i>] </p>
 <p> <code>mpost </code> <code>&#8211;dvitomp</code> <i>dvifile</i>[<code>.dvi</code>] [<i>mpxfile</i>[<code>.mpx</code>]] </p>

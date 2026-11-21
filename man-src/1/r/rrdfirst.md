@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdfirst/"
 description: "rrdfirst – Return the date of the first data sample in an RRA within an RRD"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdfirst &#8211; Return the date of the first data sample in an RRA within an RRD </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>first</code> <i>filename</i> [<i>&#8211;rraindex number</i>]</p>
 <h2>DESCRIPTION</h2>

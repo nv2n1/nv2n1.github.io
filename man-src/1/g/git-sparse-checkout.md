@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-sparse-checkout/"
 description: "git-sparse-checkout – Initialize and modify the sparse-checkout configuration, which reduces the checkout to a set of paths given by a list of patterns."
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-sparse-checkout &#8211; Initialize and modify the sparse-checkout configuration, which reduces the checkout to a set of paths given by a list of patterns. </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git sparse-checkout &lt;subcommand&gt; [options]</i>

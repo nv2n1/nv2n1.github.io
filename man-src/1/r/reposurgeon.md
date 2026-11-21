@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-reposurgeon/"
 description: "reposurgeon – surgical operations on repositories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> reposurgeon &#8211; surgical operations on repositories </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reposurgeon</code> [<i>command</i>&#8230;]</dt></dl>

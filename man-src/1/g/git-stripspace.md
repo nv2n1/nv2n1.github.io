@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-stripspace/"
 description: "git-stripspace – Remove unnecessary whitespace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-stripspace &#8211; Remove unnecessary whitespace </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git stripspace[-s | --strip - comments] git stripspace[-c | --comment - lines]

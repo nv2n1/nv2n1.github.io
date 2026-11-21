@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sensors-conf-convert/"
 description: "sensors-conf-convert – convert sensors.conf from lm-sensors 2 format to lm-sensors 3 format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sensors-conf-convert &#8211; convert sensors.conf from lm-sensors 2 format to lm-sensors 3 format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sensors-conf-convert</code> <i>&lt; /etc/sensors.conf &gt; /etc/sensors3.conf</i></p>
 <h2>DESCRIPTION</h2>

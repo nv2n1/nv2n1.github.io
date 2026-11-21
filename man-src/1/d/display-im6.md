@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-display-im6/"
 description: "display – displays an image or image sequence on any X server."
 ---
 
-<h2 class="name">NAME</h2>
-<p> display &#8211; displays an image or image sequence on any X server. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>display-im6.q16</code> [<i>options</i>] <i>input-file</i></dt>

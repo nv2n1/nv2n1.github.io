@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-v2v/"
 description: "virt-v2v – Convert a guest to use KVM"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-v2v &#8211; Convert a guest to use KVM </p>
 <h2>SYNOPSIS</h2>
 <pre>
  virt-v2v -ic <a href="vpx://vcenter.example.com/Datacenter/esxi">vpx://vcenter.example.com/Datacenter/esxi</a> vmware_guest

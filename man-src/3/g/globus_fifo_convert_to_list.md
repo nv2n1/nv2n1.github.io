@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_fifo_convert_to_list/"
 description: "FIFO Queue –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> FIFO Queue &#8211; </p>
 <p> FIFO Queue Implementation.</p>
 <h3>Typedefs</h3>
 <p> typedef struct globus_fifo_s * <code>globus_fifo_t</code> </p>

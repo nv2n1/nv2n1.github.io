@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-module_info/"
 description: "module_info – find information about modules"
 ---
 
-<h2 class="name">NAME</h2>
-<p> module_info &#8211; find information about modules </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 module_info[B&lt;-a&gt;][B&lt;-s&gt;][B&lt;-p&gt;][B&lt;-m&gt;] MODULE | FILE...

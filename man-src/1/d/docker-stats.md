@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-stats/"
 description: "docker-stats – Display a live stream of container(s) resource usage statistics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-stats &#8211; Display a live stream of container(s) resource usage statistics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stats [OPTIONS] [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

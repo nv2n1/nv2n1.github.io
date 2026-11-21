@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ecryptfs-generate-tpm-key/"
 description: "ecryptfs-generate-tpm-key – generate an eCryptfs key for TPM hardware."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecryptfs-generate-tpm-key &#8211; generate an eCryptfs key for TPM hardware.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-generate-tpm-key -p PCR </code> [-p PCR]&#8230; </p>
 <h2>DESCRIPTION</h2>

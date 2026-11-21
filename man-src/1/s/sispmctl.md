@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sispmctl/"
 description: "sispmctl – Gembird Silver Shield PM ConTroL program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sispmctl &#8211; Gembird Silver Shield PM ConTroL program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sispmctl</code> <i>-s</i> </p>
 <p> <code>sispmctl [</code> <i>-q</i> <code>] [</code> <i>-n</i> <code>] [</code> <i>-d</i> <code>0&#8230; ]</code> <code>[</code> <i>-D</i> <code>&#8230; ]</code> <i>-b</i> <code>&lt;on|off&gt;</code> </p>

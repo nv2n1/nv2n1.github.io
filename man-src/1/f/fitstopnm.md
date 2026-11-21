@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fitstopnm/"
 description: "fitstopnm – convert a FITS file into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fitstopnm &#8211; convert a FITS file into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fitstopnm</code> [<code>-image</code> <i>N</i>] [<code>-noraw</code>] [<code>-scanmax</code>] [<code>-printmax</code>] [<code>-min</code> <i>f</i>] [<code>-max</code> <i>f</i>] [<i>FITSfile</i>]</p>
 <h2>DESCRIPTION</h2>

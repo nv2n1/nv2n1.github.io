@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pk-device-rebind/"
 description: "pk-device-rebind – Device software reloader"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pk-device-rebind &#8211; Device software reloader </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pk-device-rebind</code> [<code>&#8211;help</code>]</dt></dl>

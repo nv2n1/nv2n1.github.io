@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dptsv/"
 description: "dptsv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dptsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dptsv</code> (N, NRHS, D, E, B, LDB, INFO)<br />

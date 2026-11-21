@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gatttool/"
 description: "gatttool – tool for Bluetooth Low Energy device"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gatttool &#8211; tool for Bluetooth Low Energy device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gatttool</code></p>
 <h2>DESCRIPTION</h2>

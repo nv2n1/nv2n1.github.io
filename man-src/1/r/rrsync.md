@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrsync/"
 description: "rrsync – a script to setup restricted rsync users via ssh logins"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrsync &#8211; a script to setup restricted rsync users via ssh logins</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 rrsync[-ro | -rw][-munge][-no - del][-no - lock] DIR

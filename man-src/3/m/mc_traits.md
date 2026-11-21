@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mc_traits/"
 description: "QuantLib::MonteCarloModel – General-purpose Monte Carlo model for path samples."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::MonteCarloModel &#8211; General-purpose Monte Carlo model for path samples. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/montecarlo/montecarlomodel.hpp&gt; </p>
 <h3>Public Types</h3>

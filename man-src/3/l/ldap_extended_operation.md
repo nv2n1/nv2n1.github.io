@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_extended_operation/"
 description: "ldap_extended_operation, ldap_extended_operation_s – Extends the LDAP operations to the LDAP server."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_extended_operation, ldap_extended_operation_s &#8211; Extends the LDAP operations to the LDAP server. </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

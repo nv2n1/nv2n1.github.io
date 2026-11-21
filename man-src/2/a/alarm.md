@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-alarm/"
 description: "alarm – set an alarm clock for delivery of a signal"
 ---
 
-<h2 class="name">NAME</h2>
-<p> alarm &#8211; set an alarm clock for delivery of a signal </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

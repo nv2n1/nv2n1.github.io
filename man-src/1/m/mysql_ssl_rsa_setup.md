@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysql_ssl_rsa_setup/"
 description: "mysql_ssl_rsa_setup – create SSL/RSA files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysql_ssl_rsa_setup &#8211; create SSL/RSA files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_ssl_rsa_setup [</code><i>options</i><code>]</code></dt></dl>

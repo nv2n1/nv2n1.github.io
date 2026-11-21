@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-merge-base/"
 description: "git-merge-base – Find as good common ancestors as possible for a merge"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-merge-base &#8211; Find as good common ancestors as possible for a merge </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git merge - base[-a | --all]&lt;commit&gt;&lt;commit&gt;... git merge - base[-a | --all]-- octopus&lt;commit&gt;... git merge - base-- is - ancestor&lt;commit&gt;&lt;commit&gt; git merge - base-- independent&lt;commit&gt;... git merge - base-- fork - point&lt;ref&gt;[&lt;commit&gt;]

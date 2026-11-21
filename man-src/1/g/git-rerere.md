@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-rerere/"
 description: "git-rerere – Reuse recorded resolution of conflicted merges"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-rerere &#8211; Reuse recorded resolution of conflicted merges </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git rerere</i> [<i>clear</i>|<i>forget</i> &lt;pathspec&gt;|<i>diff</i>|<i>remaining</i>|<i>status</i>|<i>gc</i>]

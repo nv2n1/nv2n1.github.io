@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dblink_is_busy/"
 description: "dblink_is_busy – checks if connection is busy with an async query"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dblink_is_busy &#8211; checks if connection is busy with an async query </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dblink_is_busy(text connname) returns int

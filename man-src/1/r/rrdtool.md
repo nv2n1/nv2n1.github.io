@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdtool/"
 description: "rrdtool – Round Robin Database Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdtool &#8211; Round Robin Database Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>&#8211;</code> [workdir]| <i>function</i></p>
 <h2>DESCRIPTION</h2>

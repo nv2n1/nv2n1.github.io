@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-count-objects/"
 description: "git-count-objects – Count unpacked number of objects and their disk consumption"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-count-objects &#8211; Count unpacked number of objects and their disk consumption </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git count - objects[-v][-H | --human - readable]

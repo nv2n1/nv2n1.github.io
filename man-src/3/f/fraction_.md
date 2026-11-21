@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fraction_/"
 description: "QuantLib::PagodaOption – Roofed Asian option on a number of assets."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::PagodaOption &#8211; Roofed Asian option on a number of assets. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/pagodaoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::MultiAssetOption</code>. </p>

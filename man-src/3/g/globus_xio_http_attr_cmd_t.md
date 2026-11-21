@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_xio_http_attr_cmd_t/"
 description: "Attributes and Cntls –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Attributes and Cntls &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_http_handle_cmd_t</code> { <code>GLOBUS_XIO_HTTP_HANDLE_SET_RESPONSE_HEADER</code>, <code>GLOBUS_XIO_HTTP_HANDLE_SET_RESPONSE_STATUS_CODE</code>, <code>GLOBUS_XIO_HTTP_HANDLE_SET_RESPONSE_REASON_PHRASE</code>, <code>GLOBUS_XIO_HTTP_HANDLE_SET_RESPONSE_HTTP_VERSION</code>, <code>GLOBUS_XIO_HTTP_HANDLE_SET_END_OF_ENTITY</code> } </p>
 <p> enum <code>globus_xio_http_attr_cmd_t</code> { <code>GLOBUS_XIO_HTTP_ATTR_SET_REQUEST_METHOD</code>, <code>GLOBUS_XIO_HTTP_ATTR_SET_REQUEST_HTTP_VERSION</code>, <code>GLOBUS_XIO_HTTP_ATTR_SET_REQUEST_HEADER</code>, <code>GLOBUS_XIO_HTTP_ATTR_DELAY_WRITE_HEADER</code>, <code>GLOBUS_XIO_HTTP_GET_REQUEST</code>, <code>GLOBUS_XIO_HTTP_GET_RESPONSE</code> } </p>

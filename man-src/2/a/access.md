@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-access/"
 description: "access, faccessat, faccessat2 – check user’s permissions for a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> access, faccessat, faccessat2 &#8211; check user&#8217;s permissions for a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-phpreflect/"
 description: "phpreflect – Reverse-engineer classes, interfaces, functions, constants, namespaces and more"
 ---
 
-<h2 class="name">NAME</h2>
-<p> phpreflect &#8211; Reverse-engineer classes, interfaces, functions, constants, namespaces and more </p>
 <h2>SYNOPSIS</h2>
 <p> <code>phpreflect</code> [<i>options</i>] <i>command</i> [<i>arguments</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-integrate/"
 description: "QuantLib::NumericHaganPricer – CMS-coupon pricer."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::NumericHaganPricer &#8211; CMS-coupon pricer. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/conundrumpricer.hpp&gt; </p>
 <p> Inherits <code>QuantLib::HaganPricer</code>. </p>

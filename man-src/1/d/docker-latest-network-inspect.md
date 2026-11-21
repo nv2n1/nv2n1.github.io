@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-network-inspect/"
 description: "docker-network-inspect – inspect a network"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-network-inspect &#8211; inspect a network </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker network inspect</code> [<code>-f</code>|<code>&#8211;format</code>[=<i>FORMAT</i>]] [<code>&#8211;help</code>] NETWORK [NETWORK&#8230;] </p>
 <h2>DESCRIPTION</h2>

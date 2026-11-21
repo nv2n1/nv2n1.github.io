@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vcut/"
 description: "vcut – cuts Ogg Vorbis files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vcut &#8211; cuts Ogg Vorbis files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vcut</code> <i>infile.ogg</i> <i>outfile1.ogg</i> <i>outfile2.ogg</i> <i>[ cutpoint | +cutpoint]</i> </p>
 <h2>DESCRIPTION</h2>

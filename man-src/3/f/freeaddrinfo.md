@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-freeaddrinfo/"
 description: "getaddrinfo, freeaddrinfo, gai_strerror – network address and service translation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getaddrinfo, freeaddrinfo, gai_strerror &#8211; network address and service translation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-migrate-pubring-from-classic-gpg/"
 description: "migrate-pubring-from-classic-gpg – Migrate a public keyring from \"classic\" to \"modern\" GnuPG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> migrate-pubring-from-classic-gpg &#8211; Migrate a public keyring from &quot;classic&quot; to &quot;modern&quot; GnuPG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>migrate-pubring-from-classic-gpg</code> [ <code>GPGHOMEDIR</code> | <i>&#8211;default</i> ] </p>
 <h2>DESCRIPTION</h2>

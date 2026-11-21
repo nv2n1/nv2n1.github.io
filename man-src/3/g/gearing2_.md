@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gearing2_/"
 description: "QuantLib::DoubleStickyRatchetPayoff – Intermediate class for single/double sticky/ratchet payoffs."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::DoubleStickyRatchetPayoff &#8211; Intermediate class for single/double sticky/ratchet payoffs. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/stickyratchet.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Payoff</code>. </p>

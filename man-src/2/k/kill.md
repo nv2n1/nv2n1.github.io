@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-kill/"
 description: "kill – send signal to a process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kill &#8211; send signal to a process </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;

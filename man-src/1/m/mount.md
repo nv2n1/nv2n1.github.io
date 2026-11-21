@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mount/"
 description: "mount.ecryptfs_private – eCryptfs private mount helper."
 ---
 
-<h2 class="name">NAME</h2>
-<p> mount.ecryptfs_private &#8211; eCryptfs private mount helper.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mount.ecryptfs_private [ALIAS]</code> </p>
 <p> <code>NOTE:</code> This program will <code>not</code> dynamically load the relevant keys. For this reason, it is recommended that users use <code><a href="/docs/linux/man/1-ecryptfs-mount-private/">ecryptfs-mount-private</a></code>(1) instead! </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-asprintf/"
 description: "asprintf, vasprintf – print to allocated string"
 ---
 
-<h2 class="name">NAME</h2>
-<p> asprintf, vasprintf &#8211; print to allocated string </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
  <code>#include &lt;stdio.h&gt;</code> </p>

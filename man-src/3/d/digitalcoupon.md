@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-digitalcoupon/"
 description: "ql/cashflows/digitalcoupon.hpp – Floating-rate coupon with digital call/put option."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/cashflows/digitalcoupon.hpp &#8211; Floating-rate coupon with digital call/put option. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt;<br />
  #include &lt;ql/cashflows/couponpricer.hpp&gt;<br />

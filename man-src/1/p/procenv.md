@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-procenv/"
 description: "procenv – display process environment details"
 ---
 
-<h2 class="name">NAME</h2>
-<p> procenv &#8211; display process environment details </p>
 <h2>SYNOPSIS</h2>
 <p> <code>procenv</code> [<i>OPTION</i>]</p>
 <h2>DESCRIPTION</h2>

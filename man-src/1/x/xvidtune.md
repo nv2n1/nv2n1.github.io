@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xvidtune/"
 description: "xvidtune – video mode tuner for Xorg"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xvidtune &#8211; video mode tuner for Xorg </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xvidtune</code> [ <code>-show</code> | <code>-prev</code> | <code>-next</code> | <code>-unlock</code> ] [ <i>-toolkitoption</i> &#8230; ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rcvpack/"
 description: "rcvpack – append message to file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rcvpack &#8211; append message to file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/rcvpack</code> <i>file</i> [<code>-mbox</code>] [<code>-mmdf</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

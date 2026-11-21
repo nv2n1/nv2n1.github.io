@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-choom/"
 description: "choom – display and adjust OOM-killer score."
 ---
 
-<h2 class="name">NAME</h2>
-<p> choom &#8211; display and adjust OOM-killer score. </p>
 <p> <code>choom</code> <code>-p</code> <i>PID</i> </p>
 <p> <code>choom</code> <code>-p</code> <i>PID</i> <code>-n</code> <i>number</i> </p>
 <p> <code>choom</code> <code>-n</code> <i>number</i> [&#8211;] <i>command</i> [<i>argument</i> &#8230;] </p>

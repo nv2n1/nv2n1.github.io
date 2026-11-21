@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wesside-ng/"
 description: "wesside-ng – crack a WEP key of an open network without user intervention"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wesside-ng &#8211; crack a WEP key of an open network without user intervention </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wesside-ng</code> &lt;options&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-switch/"
 description: "git-switch – Switch branches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-switch &#8211; Switch branches </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git switch[&lt;options&gt;][--no - guess]&lt;branch&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-identify/"
 description: "identify – describes the format and characteristics of one or more image files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> identify &#8211; describes the format and characteristics of one or more image files. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>identify-im6.q16</code> [<i>options</i>] <i>input-file</i></dt>

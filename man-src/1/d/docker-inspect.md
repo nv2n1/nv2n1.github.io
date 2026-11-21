@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-inspect/"
 description: "docker-inspect – Return low-level information on Docker objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-inspect &#8211; Return low-level information on Docker objects </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker inspect [OPTIONS] NAME|ID [NAME|ID&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

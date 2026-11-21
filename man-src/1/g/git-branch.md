@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-branch/"
 description: "git-branch – List, create, or delete branches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-branch &#8211; List, create, or delete branches </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git branch[--color[=&lt;when&gt;] | --no - color][--show - current]

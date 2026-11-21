@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dpkg-genbuildinfo/"
 description: "dpkg-genbuildinfo – generate Debian .buildinfo files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dpkg-genbuildinfo &#8211; generate Debian .buildinfo files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-genbuildinfo</code> [<i>option</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

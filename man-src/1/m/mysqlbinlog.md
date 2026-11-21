@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlbinlog/"
 description: "mysqlbinlog – utility for processing binary log files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlbinlog &#8211; utility for processing binary log files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlbinlog [</code><code>options</code><code>] </code><i>log_file</i><code> &#8230;</code></dt></dl>

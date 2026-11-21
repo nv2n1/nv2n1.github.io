@@ -8,8 +8,6 @@ description: "installsieve – user utility for managing sieve scripts"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
-<p> installsieve &#8211; user utility for managing sieve scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>installsieve</code></p>
 <h2>DESCRIPTION</h2>

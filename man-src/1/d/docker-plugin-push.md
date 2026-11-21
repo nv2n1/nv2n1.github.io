@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-plugin-push/"
 description: "docker-plugin-push – Push a plugin to a registry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-plugin-push &#8211; Push a plugin to a registry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker plugin push [OPTIONS] PLUGIN[:TAG]</code> </p>
 <h2>DESCRIPTION</h2>

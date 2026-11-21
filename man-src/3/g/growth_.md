@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-growth_/"
 description: "QuantLib::BlackScholesCalculator – Black-Scholes 1973 calculator class."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::BlackScholesCalculator &#8211; Black-Scholes 1973 calculator class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/blackscholescalculator.hpp&gt; </p>
 <p> Inherits <code>QuantLib::BlackCalculator</code>. </p>

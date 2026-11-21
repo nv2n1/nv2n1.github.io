@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docbook2man-spec/"
 description: "docbook2man-spec.pl – convert DocBook RefEntries to man pages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docbook2man-spec.pl &#8211; convert DocBook RefEntries to man pages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgmlspl</code> <code>docbook2man-spec.pl</code> </p>
 <p> <code>nsgmls</code> [ <i>sgml document</i> ]<code>| sgmlspl</code> <code>docbook2man-spec.pl</code> </p>

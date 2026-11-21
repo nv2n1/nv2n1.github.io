@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fc-validate/"
 description: "fc-validate – validate font files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fc-validate &#8211; validate font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-validate</code> [ <code>-Vhv</code> ] </p>
 <p>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-i&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;&#8211;index&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-l&nbsp;</code><i>lang</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;&#8211;lang&nbsp;</code><i>lang</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&#8211;verbose</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&#8211;version</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&#8211;help</code>&nbsp;]&nbsp;<wbr>&nbsp;<i>font-file</i><i>&#8230;</i></p>

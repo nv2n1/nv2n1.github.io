@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Activation &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GASS_TRANSFER_MODULE</code> </p>
 <h2>Detailed Description</h2>

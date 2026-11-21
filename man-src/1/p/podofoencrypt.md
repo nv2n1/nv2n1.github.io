@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofoencrypt/"
 description: "podofoencrypt – encrypt PDF files and set PDF security settings"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofoencrypt &#8211; encrypt PDF files and set PDF security settings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofoencrypt</code> [&#8211;rc4v1] [&#8211;rc4v2] [&#8211;aes] [-u &lt;userpassword&gt;] -o &lt;ownerpassword&gt; &lt;inputfile&gt; &lt;outputfile&gt; </p>
 <h2>DESCRIPTION</h2>

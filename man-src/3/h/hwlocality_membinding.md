@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwlocality_membinding/"
 description: "hwlocality_membinding – Memory binding"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_membinding &#8211; Memory binding </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_membind_policy_t</code> { <code>HWLOC_MEMBIND_DEFAULT</code>, <code>HWLOC_MEMBIND_FIRSTTOUCH</code>, <code>HWLOC_MEMBIND_BIND</code>, <code>HWLOC_MEMBIND_INTERLEAVE</code>, <code>HWLOC_MEMBIND_REPLICATE</code>, <code>HWLOC_MEMBIND_NEXTTOUCH</code>, <code>HWLOC_MEMBIND_MIXED</code> } </p>
 <p> enum <code>hwloc_membind_flags_t</code> { <code>HWLOC_MEMBIND_PROCESS</code>, <code>HWLOC_MEMBIND_THREAD</code>, <code>HWLOC_MEMBIND_STRICT</code>, <code>HWLOC_MEMBIND_MIGRATE</code>, <code>HWLOC_MEMBIND_NOCPUBIND</code> } </p>

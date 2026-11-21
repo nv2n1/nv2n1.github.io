@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pto_gen/"
 description: "pto_gen – Generate a Hugin project file from a list of images."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pto_gen &#8211; Generate a Hugin project file from a list of images. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pto_gen</code> [options] <i>image</i> [&#8230;]</p>
 <h2>DESCRIPTION</h2>

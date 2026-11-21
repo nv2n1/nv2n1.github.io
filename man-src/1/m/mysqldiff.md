@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqldiff/"
 description: "mysqldiff – Identify Differences Among Database Objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqldiff &#8211; Identify Differences Among Database Objects </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldiff [</code><i>options</i><code>] {</code><i>db1</i><code>[</code><i>:db1</i><code>] | {</code><i>db1.obj1</i><code>[</code><i>:db2.obj2</i><code>]} &#8230;</code></dt></dl>

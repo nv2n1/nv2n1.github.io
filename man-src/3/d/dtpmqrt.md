@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtpmqrt/"
 description: "dtpmqrt.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtpmqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br />

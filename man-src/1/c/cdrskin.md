@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cdrskin/"
 description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cdrskin &#8211; burns preformatted data to CD, DVD, and BD via libburn. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cdrskin</code> [<i>options</i>|<i>track_source_addresses</i>] </p>
 <h2>DESCRIPTION</h2>

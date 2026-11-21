@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rnano/"
 description: "rnano – a restricted nano"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rnano &#8211; a restricted nano</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rnano</code> [<i>options</i>] [[+<i>line</i>[,<i>column</i>]]&nbsp;<i>file</i>]&#8230; </p>
 <h2>DESCRIPTION</h2>

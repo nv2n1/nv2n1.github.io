@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grepdiff/"
 description: "grepdiff – show files modified by a diff containing a regex"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grepdiff &#8211; show files modified by a diff containing a regex </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>grepdiff</code> [[-n] | [&#8211;line-number]] [[-N] | [&#8211;number-files]] [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [&#8211;strip=<i>n</i>] [&#8211;addprefix=<i>PREFIX</i>] [&#8211;addoldprefix=<i>PREFIX</i>] [&#8211;addnewprefix=<i>PREFIX</i>] [[-s] | [&#8211;status]] [[-i&nbsp;<i>PATTERN</i>] | [&#8211;include=<i>PATTERN</i>]] [[-I&nbsp;<i>FILE</i>] | [&#8211;include-from-file=<i>FILE</i>]] [[-x&nbsp;<i>PATTERN</i>] | [&#8211;exclude=<i>PATTERN</i>]] [[-X&nbsp;<i>FILE</i>] | [&#8211;exclude-from-file=<i>FILE</i>]] [[-#&nbsp;<i>RANGE</i>] | [&#8211;hunks=<i>RANGE</i>]] [&#8211;lines=<i>RANGE</i>] [[-F<i>RANGE</i>] | [&#8211;files=<i>RANGE</i>]] [&#8211;annotate] [&#8211;as-numbered-lines=<i>WHEN</i>] [&#8211;format=<i>FORMAT</i>] [&#8211;remove-timestamps] [[-v] | [&#8211;verbose]] [[-z] | [&#8211;decompress]] [[-E] | [&#8211;extended-regexp]] [[-H] | [&#8211;with-filename]] [[-h] | [&#8211;no-filename]] [&#8211;output-matching=<i>WHAT</i>] {[<i>REGEX</i>] | [-f&nbsp;<i>FILE</i>]} [<i>file</i>&#8230;]</dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-profile2map/"
 description: "profile2map – Fuse profiler output converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> profile2map &#8211; Fuse profiler output converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>profile2map</code> <i>infile outfile</i></p>
 <h2>DESCRIPTION</h2>

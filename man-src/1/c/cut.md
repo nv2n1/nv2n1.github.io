@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cut/"
 description: "cut – remove sections from each line of files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cut &#8211; remove sections from each line of files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cut</code> <i>,OPTION/</i>&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

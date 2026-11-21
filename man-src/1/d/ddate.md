@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ddate/"
 description: "ddate – convert Gregorian dates to Discordian dates"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ddate &#8211; convert Gregorian dates to Discordian dates </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ddate</code> [<i></i><code>+</code>format] [<i>date</i>]</p>
 <h2>DESCRIPTION</h2>

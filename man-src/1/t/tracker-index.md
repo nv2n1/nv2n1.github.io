@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-index/"
 description: "tracker-index – List, pause, resume and command data miners indexing content"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-index &#8211; List, pause, resume and command data miners indexing content</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 tracker index-- reindex - mime - type&lt;mime1&gt;[[-m[mime2]]...] tracker index-- file&lt;file1&gt; [[file2]...] tracker index-- import &lt;file1&gt; [[file2]...] tracker index-- backup&lt;file&gt; | --restore&lt;file&gt;

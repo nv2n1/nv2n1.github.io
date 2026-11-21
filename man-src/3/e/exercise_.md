@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-exercise_/"
 description: "QuantLib::Option – base option class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Option &#8211; base option class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/option.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>

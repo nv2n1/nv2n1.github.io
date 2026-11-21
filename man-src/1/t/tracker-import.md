@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-import/"
 description: "tracker-import – Imports Turtle file data into the database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-import &#8211; Imports Turtle file data into the database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-import</code> <i>FILE</i> </p>
 <h2>DESCRIPTION</h2>

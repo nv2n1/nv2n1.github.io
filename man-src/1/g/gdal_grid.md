@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal_grid/"
 description: "gdal_grid – gdal_grid creates regular grid from the scattered data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal_grid &#8211; gdal_grid creates regular grid from the scattered data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdal_grid[-ot{Byte / Int16 / UInt16 / UInt32 / Int32 / Float32 / Float64 /

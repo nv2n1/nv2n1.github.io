@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cptcat/"
 description: "cptcat – concatenate GMT colour palette tables."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cptcat &#8211; concatenate GMT colour palette tables. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptcat</code> [-h] [-o&nbsp;<wbr><i>file</i>] [-v] [-V] <i>file</i>&#8230;</dt></dl>

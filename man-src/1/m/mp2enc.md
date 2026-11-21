@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mp2enc/"
 description: "mp2enc – Simple MPEG-1 layer-II audio encoder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mp2enc &#8211; Simple MPEG-1 layer-II audio encoder </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mp2enc</code> [<code>-v</code> <i>num</i>] [<code>-b</code> <i>bitrate_kbps</i>] [<code>-r</code> <i>output_sampling_rate_hz</i>] [<code>-R</code> <i>rate,chans,bits</i>] [<code>-s</code> ] [<code>-m</code> ] [<code>-e</code> ] [<code>-V</code> ] [<code>-?</code>] <code>-o</code><i>&nbsp;<wbr>output_filename</i> </p>
 <h2>DESCRIPTION</h2>

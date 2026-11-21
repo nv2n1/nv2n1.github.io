@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-argument_type/"
 description: "QuantLib::Interpolation – base class for 1-D interpolations."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Interpolation &#8211; base class for 1-D interpolations. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Extrapolator</code>. </p>

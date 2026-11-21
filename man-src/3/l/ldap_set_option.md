@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_set_option/"
 description: "ldap_get_option, ldap_set_option – LDAP option handling routines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_get_option, ldap_set_option &#8211; LDAP option handling routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

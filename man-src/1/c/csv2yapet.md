@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-csv2yapet/"
 description: "csv2yapet – convert CSV file to YAPET file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> csv2yapet &#8211; convert CSV file to YAPET file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>csv2yapet</code> [[<code>-c</code>] | [<code>-h</code>] | [<code>-V</code>]] [<code>-p</code>&nbsp;<wbr>{<i>password</i>}] [<code>-q</code>] [<code>-s</code>&nbsp;<wbr>{<i>separator</i>}] {<i>src</i>} {<i>dst</i>}</dt></dl>

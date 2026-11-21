@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-psresize/"
 description: "psresize – rescales and centers a document for new output paper size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psresize &#8211; rescales and centers a document for new output paper size </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psresize</code> [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] [ <code>-p</code><i>paper</i> ] [ <code>-W</code><i>width</i> ] [ <code>-H</code><i>height</i> ] [ <code>-P</code><i>paper</i> ] [ <code>-q</code> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
 <h2>DESCRIPTION</h2>

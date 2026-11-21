@@ -6,8 +6,6 @@ letter: "a"
 url: "/docs/linux/man/1-afm2pl/"
 description: "afm2pl – convert AFM font metrics to TeX pl font metrics"
 ---
-<h2 class="name">NAME</h2>
-<p> afm2pl - convert AFM font metrics to TeX pl font metrics </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>afm2pl</code> [<code>-p</code>&nbsp;<i>encoding_file</i>] [<code>-o</code>] [<code>-e</code>&nbsp;<i>extension_factor</i>] [<code>-s</code>&nbsp;<i>slant_factor</i>] [<code>-f</code>&nbsp;<i>font_dimensions</i>] [<code>-k</code>] [<code>-m</code>&nbsp;<i>letter_spacing</i>] [<code>-l</code>&nbsp;<i>ligkern_spec</i>] [<code>-L</code>&nbsp;<i>ligkern_spec</i>] [<code>-n</code>] <i>input_file[.afm]</i> [<i>output_file[.pl]</i>] </dt>

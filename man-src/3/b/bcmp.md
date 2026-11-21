@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bcmp/"
 description: "bcmp – compare byte sequences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bcmp &#8211; compare byte sequences </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;strings.h&gt;

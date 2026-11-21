@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssbgvx/"
 description: "ssbgvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssbgvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-linux-check-removal/"
 description: "linux-check-removal – check whether removal of a kernel is safe"
 ---
 
-<h2 class="name">NAME</h2>
-<p> linux-check-removal &#8211; check whether removal of a kernel is safe </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>linux-check-removal</code><i>&nbsp;VERSION</i></dt></dl>

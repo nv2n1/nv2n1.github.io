@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamundice/"
 description: "pamundice – combine grid of images (tiles) into one"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamundice &#8211; combine grid of images (tiles) into one</p>
 <h2>EXAMPLE</h2>
 <pre>
 <tt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-krazy2all/"
 description: "krazy2all – Sanity checks KDE source code."
 ---
 
-<h2 class="name">NAME</h2>
-<p> krazy2all &#8211; Sanity checks KDE source code. </p>
 <h2>SYNOPSIS</h2>
 <p> krazy2all [options]</p>
 <h2>DESCRIPTION</h2>

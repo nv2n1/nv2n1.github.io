@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-prof/"
 description: "llvm-prof – print execution profile of LLVM program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-prof &#8211; print execution profile of LLVM program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-prof</code> [<i>options</i>] [<i>bitcode file</i>] [<i>llvmprof.out</i>]</p>
 <h2>DESCRIPTION</h2>

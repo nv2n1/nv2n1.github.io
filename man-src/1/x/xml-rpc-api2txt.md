@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml-rpc-api2txt/"
 description: "xml-rpc-api2txt – Print out a description of an XML-RPC API as text"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml-rpc-api2txt &#8211; Print out a description of an XML-RPC API as text </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xml-rpc-api2txt</code> <i>server-url</i></p>
 <h2>DESCRIPTION</h2>

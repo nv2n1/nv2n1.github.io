@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamlookup/"
 description: "pamlookup – map an image to a new image by using it as indices into a table"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamlookup &#8211; map an image to a new image by using it as indices into a table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamlookup</code> <code>-lookupfile=</code><i>lookupfile</i> <code>-missingcolor=</code><i>color</i> [<code>-fit</code>] <i>indexfile</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>

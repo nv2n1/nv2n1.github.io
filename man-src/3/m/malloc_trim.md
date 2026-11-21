@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-malloc_trim/"
 description: "malloc_trim – release free memory from the heap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> malloc_trim &#8211; release free memory from the heap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>int malloc_trim(size_t </code><i>pad</i><code>);</code></p>

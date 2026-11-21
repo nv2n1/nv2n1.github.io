@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssytri2x/"
 description: "ssytri2x.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssytri2x.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytri2x</code> (UPLO, N, A, LDA, IPIV, WORK, NB, INFO)<br />

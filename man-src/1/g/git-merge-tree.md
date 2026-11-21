@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-merge-tree/"
 description: "git-merge-tree – Show three-way merge without touching index"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-merge-tree &#8211; Show three-way merge without touching index </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git merge-tree</i> &lt;base-tree&gt; &lt;branch1&gt; &lt;branch2&gt;

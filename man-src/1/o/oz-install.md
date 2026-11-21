@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-oz-install/"
 description: "oz-install – tool to automatically install operating systems into files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> oz-install &#8211; tool to automatically install operating systems into files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oz-install [OPTIONS] &lt;tdl-file&gt;</code> </p>
 <h2>DESCRIPTION</h2>

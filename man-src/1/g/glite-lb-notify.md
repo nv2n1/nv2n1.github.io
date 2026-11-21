@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glite-lb-notify/"
 description: "glite-lb-notify – Register and receive notification from L&B"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glite-lb-notify &#8211; Register and receive notification from L&amp;B</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glite-lb-notify </code><br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>new</code> [ { <code>-s</code><i> socket_fd</i> | <code>-a </code><i>fake_addr</i> } <code>-t </code><i>requested_validity</i> <code>-j </code><i>jobid </i>| { <code>-o </code><i>owner </i> | <code>-O </code> } <code>-n </code><i>network_server </i> <code>-v</code><i> virtual_organization</i> <code>-c</code> <code>-J</code> <code>-B</code> <code>-T</code> <code>-E</code> <code>-f</code><i> flags</i> ] </p>

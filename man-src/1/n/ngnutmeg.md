@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ngnutmeg/"
 description: "ngnutmeg – ngspice post-processor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ngnutmeg &#8211; ngspice post-processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ngnutmeg</code> [<i>options</i>] [<i>datafile</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cashflow/"
 description: "ql/cashflow.hpp – Base class for cash flows."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/cashflow.hpp &#8211; Base class for cash flows. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/event.hpp&gt;<br />
  #include &lt;ql/math/comparison.hpp&gt;<br />

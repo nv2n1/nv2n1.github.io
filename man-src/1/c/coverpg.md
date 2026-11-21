@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-coverpg/"
 description: "make.coverpg – create a fax coverpg on stdout"
 ---
 
-<h2 class="name">NAME</h2>
-<p> make.coverpg &#8211; create a fax coverpg on stdout </p>
 <h2>SYNOPSIS</h2>
 <p> make.coverpg [options] &lt;pages&gt; &lt;sender-ID&gt; &lt;sender-NAME&gt; &lt;receiver-ID&gt; &lt;receiver-NAME&gt; &lt;date&gt; &lt;time&gt;</p>
 <h2>DESCRIPTION</h2>

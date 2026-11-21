@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-drmaa_session_s/"
 description: "drmaa_session_s –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> drmaa_session_s &#8211; </p>
 <p> DRMAA session data.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;drmaa_impl.h&gt;</p>

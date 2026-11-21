@@ -6,8 +6,6 @@ letter: "e"
 url: "/docs/linux/man/1-etex/"
 description: "etex – extended (plain) TeX"
 ---
-<h2 class="name">NAME</h2>
-<p> etex - extended (plain) TeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>etex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]  </p>
 <h2>DESCRIPTION</h2>

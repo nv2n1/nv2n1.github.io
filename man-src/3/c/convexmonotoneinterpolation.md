@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-convexmonotoneinterpolation/"
 description: "ql/math/interpolations/convexmonotoneinterpolation.hpp – convex monotone interpolation method"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/interpolations/convexmonotoneinterpolation.hpp &#8211; convex monotone interpolation method </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;map&gt; </p>

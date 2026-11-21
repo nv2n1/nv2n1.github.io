@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-pull/"
 description: "atomic-pull – fetch an image locally"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-pull &#8211; fetch an image locally </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic pull</code> [<code>-h|&#8211;help</code>] [<code>&#8211;storage=[ostree|docker]</code>] [<code>-t</code>|<code>&#8211;type</code> atomic] IMAGE </p>
 <h2>DESCRIPTION</h2>

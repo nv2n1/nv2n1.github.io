@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stompclt/"
 description: "stompclt – versatile STOMP client"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stompclt &#8211; versatile STOMP client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stompclt</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]</p>
 <h2>DESCRIPTION</h2>

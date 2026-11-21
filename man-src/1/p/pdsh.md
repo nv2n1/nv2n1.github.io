@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdsh/"
 description: "pdsh – issue commands to groups of hosts in parallel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdsh &#8211; issue commands to groups of hosts in parallel</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdsh</code> [<i>options</i>]&#8230; command </p>
 <h2>DESCRIPTION</h2>

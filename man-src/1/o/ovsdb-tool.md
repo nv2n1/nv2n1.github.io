@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ovsdb-tool/"
 description: "ovsdb-tool – Open vSwitch database management utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ovsdb-tool &#8211; Open vSwitch database management utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ovsdb-tool </code>[<i>options</i>] <code>create </code>[<i>db</i> [<i>schema</i>]]<br />
  <code>ovsdb-tool </code>[<i>options</i>] <code>compact </code>[<i>db</i> [<i>target</i>]]<br />

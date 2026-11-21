@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-djvuextract/"
 description: "djvuextract – Extract chunks from DjVu image files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> djvuextract &#8211; Extract chunks from DjVu image files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>djvuextract [-page=</code><i>pagenum</i><code>] </code><i>djvufile</i><code> [</code><i>chkid</i><code>=</code><i>filename</i><code>]&#8230;</code> </p>
 <h2>DESCRIPTION</h2>

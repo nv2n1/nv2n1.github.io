@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-index_/"
 description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::FloatingRateCoupon &#8211; base floating-rate coupon class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Coupon</code>, and <code>QuantLib::Observer</code>. </p>

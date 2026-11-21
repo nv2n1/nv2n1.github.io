@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-g2root/"
 description: "g2root – convert GEANT geometry files to ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> g2root &#8211; convert GEANT geometry files to ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>g2rootd</code> <i>[-f map_name] geant_name macro_name</i></p>
 <h2>DESCRIPTION</h2>

@@ -8,8 +8,6 @@ description: "pamtosrf – convert a sequence of Netpbm images to a SRF image fi
 ---
 
 <p>&lt;html xmlns=&quot;<a rel="nofollow" href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>&quot; xml:lang=&quot;en&quot;&gt; </p>
-<h2 class="name">NAME</h2>
-<p> pamtosrf &#8211; convert a sequence of Netpbm images to a SRF image file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtosrf</code> [<code>-verbose</code>] [<i>netpbmfile</i>] </p>
 <h2>DESCRIPTION</h2>

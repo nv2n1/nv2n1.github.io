@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_get_cq_event/"
 description: "ibv_get_cq_event, ibv_ack_cq_events – get and acknowledge completion queue (CQ) events"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_get_cq_event, ibv_ack_cq_events &#8211; get and acknowledge completion queue (CQ) events</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

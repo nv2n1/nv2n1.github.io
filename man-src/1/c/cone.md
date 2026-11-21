@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cone/"
 description: "cone – Read and send E-mail messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cone &#8211; Read and send E-mail messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cone</code> [-r] [-c&nbsp;<wbr><i>directory</i>]</dt></dl>

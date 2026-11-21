@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaqr2/"
 description: "dlaqr2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaqr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqr2</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SR, SI, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br />

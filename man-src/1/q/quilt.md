@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-quilt/"
 description: "quilt – tool to manage series of patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> quilt &#8211; tool to manage series of patches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>quilt</code> [-h] command [options] </p>
 <h2>DESCRIPTION</h2>

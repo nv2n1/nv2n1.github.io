@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ieee1284_terminate/"
 description: "ieee1284_negotiate, ieee1284_terminate – IEEE 1284 negotiation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ieee1284_negotiate, ieee1284_terminate &#8211; IEEE 1284 negotiation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;

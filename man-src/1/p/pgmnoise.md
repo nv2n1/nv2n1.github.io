@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmnoise/"
 description: "pgmnoise – create a graymap made up of white noise"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmnoise &#8211; create a graymap made up of white noise </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmnoise </code> <i>width height</i></p>
 <h2>DESCRIPTION</h2>

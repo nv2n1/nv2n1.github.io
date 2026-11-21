@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-service-logs/"
 description: "docker-service-logs – Fetch the logs of a service or task"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-service-logs &#8211; Fetch the logs of a service or task </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service logs [OPTIONS] SERVICE|TASK</code> </p>
 <h2>DESCRIPTION</h2>

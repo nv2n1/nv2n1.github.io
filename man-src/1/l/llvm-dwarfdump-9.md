@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-dwarfdump-9/"
 description: "llvm-dwarfdump – manual page for llvm-dwarfdump 9"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-dwarfdump &#8211; manual page for llvm-dwarfdump 9 </p>
 <h2>DESCRIPTION</h2>
 <p> OVERVIEW: pretty-print DWARF debug information in object files and debug info archives. </p>
 <p> USAGE: llvm-dwarfdump [options] &lt;input object files or .dSYM bundles&gt; </p>

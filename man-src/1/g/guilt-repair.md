@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-repair/"
 description: "guilt-repair – Repair the repository state"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-repair &#8211; Repair the repository state </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-repair</i> &#8211;full | &#8211;status</p>
 <h2>DESCRIPTION</h2>

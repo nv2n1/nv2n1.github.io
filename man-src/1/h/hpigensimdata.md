@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpigensimdata/"
 description: "hpigensimdata – A openhpi client application supplementing the dynamic simulator plugin."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpigensimdata &#8211; A openhpi client application supplementing the dynamic simulator plugin. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpigensimdata[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-r res_id][-f filename][-m UPD | INIT][-h] hpigensimdata[--domain = nn][--host = host[:port]][--cfgfile = file]

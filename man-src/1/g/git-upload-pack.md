@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-upload-pack/"
 description: "git-upload-pack – Send objects packed back to git-fetch-pack"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-upload-pack &#8211; Send objects packed back to git-fetch-pack </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git - upload - pack[--[no - ] strict][--timeout = &lt;n&gt;][--stateless - rpc][--advertise - refs]&lt;directory&gt;

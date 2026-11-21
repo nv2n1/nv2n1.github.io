@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-startfluxbox/"
 description: "startfluxbox – start a fluxbox session"
 ---
 
-<h2 class="name">NAME</h2>
-<p> startfluxbox &#8211; start a fluxbox session </p>
 <h2>SYNOPSIS</h2>
 <p> <code>startfluxbox</code></p>
 <h2>DESCRIPTION</h2>

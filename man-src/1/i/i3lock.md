@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-i3lock/"
 description: "i3lock – slightly improved version of slock"
 ---
 
-<h2 class="name">NAME</h2>
-<p> i3lock &#8211; slightly improved version of slock</p>
 <h2>SYNOPSIS</h2>
 <p> <code>i3lock</code> [-v] [-n] [-b] [-d] </p>
 <h2>DESCRIPTION</h2>

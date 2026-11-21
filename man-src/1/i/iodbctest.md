@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-iodbctest/"
 description: "iodbctest, iodbctestw – iODBC Demonstration programs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iodbctest, iodbctestw &#8211; iODBC Demonstration programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iodbctest</code> [<code>&quot;DSN=xxxx[;UID=xxxx][;PWD=xxxx][;OPT=value]&quot;</code>]<br />
  <code>iodbctestw</code> [<code>&quot;DSN=xxxx[;UID=xxxx][;PWD=xxxx][;OPT=value]&quot;</code>] </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wifi/"
 description: "wifi – enable/disable internal wifi (wireless lan) device"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wifi &#8211; enable/disable internal wifi (wireless lan) device</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wifi </code>[<i>command</i>] </p>
 <h2>COMMANDS</h2>

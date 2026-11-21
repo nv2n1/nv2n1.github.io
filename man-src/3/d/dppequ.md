@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dppequ/"
 description: "dppequ.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dppequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dppequ</code> (UPLO, N, AP, S, SCOND, AMAX, INFO)<br />

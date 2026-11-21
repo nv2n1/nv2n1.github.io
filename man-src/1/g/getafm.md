@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getafm/"
 description: "getafm – create an AFM file for a PostScript font."
 ---
 
-<h2 class="name">NAME</h2>
-<p> getafm &#8211; create an AFM file for a PostScript font. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getafm </code> <i>FontName</i> &gt; <i>output.ps</i></p>
 <h2>DESCRIPTION</h2>

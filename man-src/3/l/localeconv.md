@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-localeconv/"
 description: "localeconv – get numeric formatting information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> localeconv &#8211; get numeric formatting information </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;locale.h&gt;

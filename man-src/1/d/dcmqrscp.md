@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmqrscp/"
 description: "dcmqrscp – DICOM image archive (central test node)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmqrscp &#8211; DICOM image archive (central test node) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dcmqrscp[options][port]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-size-9/"
 description: "llvm-size – manual page for llvm-size 9"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-size &#8211; manual page for llvm-size 9 </p>
 <h2>DESCRIPTION</h2>
 <p> OVERVIEW: llvm object size dumper </p>
 <p> USAGE: llvm-size [options] &lt;input files&gt; </p>

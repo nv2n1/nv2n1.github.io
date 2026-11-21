@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvi2fax/"
 description: "dvi2fax – convert a TeX DVI file to G3 fax format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvi2fax &#8211; convert a TeX DVI file to G3 fax format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvi2fax</code> [<code>-hi</code>|<code>-lo</code>] <i>file</i>[.dvi] [<i>options for dvips</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aria2c/"
 description: "aria2c – The ultra fast download utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aria2c &#8211; The ultra fast download utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aria2c</code> [&lt;OPTIONS&gt;] [&lt;URI&gt;|&lt;MAGNET&gt;|&lt;TORRENT_FILE&gt;|&lt;METALINK_FILE&gt;] &#8230;</p>
 <h2>DESCRIPTION</h2>

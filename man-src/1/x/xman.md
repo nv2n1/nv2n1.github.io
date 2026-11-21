@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xman/"
 description: "xman – Manual page display program for the X Window System"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xman &#8211; Manual page display program for the X Window System </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xman</code> [ <i>-options</i> &#8230; ]</p>
 <h2>DESCRIPTION</h2>

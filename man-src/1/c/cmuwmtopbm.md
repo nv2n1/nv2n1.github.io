@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cmuwmtopbm/"
 description: "cmuwmtopbm – convert a CMU window manager bitmap into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmuwmtopbm &#8211; convert a CMU window manager bitmap into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cmuwmtopbm</code> [<i>cmuwmfile</i>]</p>
 <h2>DESCRIPTION</h2>

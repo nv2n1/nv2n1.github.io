@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-db_upgrade/"
 description: "db5.3_upgrade – Upgrade the Berkeley DB version to the current release version."
 ---
 
-<h2 class="name">NAME</h2>
-<p> db5.3_upgrade &#8211; Upgrade the Berkeley DB version to the current release version. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_upgrade</code> [-NsVv] [-h home] [-P password] file &#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-mkln/"
 description: "shtool mkln – GNU shtool enhanced"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool mkln &#8211; GNU shtool enhanced </p>
 <p><a href="/docs/linux/man/1-ln/">ln</a>(1) replacement</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool mkln</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-f</code>|<code>&#8211;force</code>] [<code>-s</code>|<code>&#8211;symbolic</code>] <i>src-path</i> [<i>src-path</i> &#8230;] <i>dst-path</i></p>

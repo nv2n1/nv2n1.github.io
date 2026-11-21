@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaqr3/"
 description: "slaqr3.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaqr3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqr3</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SR, SI, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br />

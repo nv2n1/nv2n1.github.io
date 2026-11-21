@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-pull/"
 description: "git-pull – Fetch from and integrate with another repository or a local branch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-pull &#8211; Fetch from and integrate with another repository or a local branch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git pull[&lt;options&gt;][&lt;repository&gt;[&lt;refspec&gt;...]]

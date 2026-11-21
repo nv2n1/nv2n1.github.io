@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gxmessage/"
 description: "gxmessage – a GTK-based xmessage clone"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gxmessage &#8211; a GTK-based xmessage clone </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gxmessage</code> [<i>OPTIONS</i>] <code>message</code> &#8230;<br />
  <code>gxmessage</code> [<i>OPTIONS</i>] -file <i>FILENAME</i></p>

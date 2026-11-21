@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ohhandler/"
 description: "ohhandler – An openhpi sample application that uses the openhpi additional interfaces to control openhpi configuration. That is plugins can be loaded, plugin instances (handlers) created, unloaded ..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ohhandler &#8211; An openhpi sample application that uses the openhpi additional interfaces to control openhpi configuration. That is plugins can be loaded, plugin instances (handlers) created, unloaded or their configuration displayed. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 ohhandler[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] command&lt;specific arguments&gt;

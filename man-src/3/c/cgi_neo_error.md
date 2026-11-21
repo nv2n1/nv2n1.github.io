@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_neo_error/"
 description: "cgi_neo_error – display a NEOERR call backtrace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_neo_error &#8211; display a NEOERR call backtrace </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installpam/"
 description: "dh_installpam – install pam support files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installpam &#8211; install pam support files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installpam</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>
 <h2>DESCRIPTION</h2>

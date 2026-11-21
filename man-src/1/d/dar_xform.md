@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dar_xform/"
 description: "dar_xform – disk archive \"re-slicer\""
 ---
 
-<h2 class="name">NAME</h2>
-<p> dar_xform &#8211; disk archive &quot;re-slicer&quot; </p>
 <h2>SYNOPSIS</h2>
 <p> dar_xform [options] [&lt;path&gt;/]source [&lt;path&gt;/]destination </p>
 <p> dar_xform -h </p>

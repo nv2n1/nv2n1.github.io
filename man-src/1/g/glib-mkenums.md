@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glib-mkenums/"
 description: "glib-mkenums – C language enum description generation utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glib-mkenums &#8211; C language enum description generation utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glib-mkenums</code> [OPTION&#8230;] [FILE&#8230;]</dt></dl>

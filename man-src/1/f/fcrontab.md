@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fcrontab/"
 description: "fcrontab – manipulate per-user fcrontab files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fcrontab &#8211; manipulate per-user fcrontab files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fcrontab</code> [ <code>-c </code><i>file</i> ] [ <code>-n</code> ] <i>file</i> [ <i>user</i> | <code>-u </code><i>user</i> ] </p>
 <p> <code>fcrontab</code> [ <code>-c </code><i>file</i> ] [ <code>-n</code> ] { <code>-l</code> | <code>-r</code> | <code>-e</code> | <code>-z</code> } [ <i>user</i> | <code>-u </code><i>user</i> ] </p>

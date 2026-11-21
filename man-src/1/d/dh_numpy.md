@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_numpy/"
 description: "dh_numpy – adds Numpy depends to python:Depends substvar"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_numpy &#8211; adds Numpy depends to python:Depends substvar </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_numpy</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

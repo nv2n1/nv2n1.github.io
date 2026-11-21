@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_rsl_assist_attributes_canonicalize/"
 description: "RSL Helper Functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> RSL Helper Functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_rsl_assist_attributes_canonicalize</code> (globus_rsl_t *rsl)<br />
  <i>Canonicalize all attribute names in an RSL parse tree. </i><br />

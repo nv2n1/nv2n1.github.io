@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-needle/"
 description: "tracker-needle – GNOME user interface similar to tracker-search"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-needle &#8211; GNOME user interface similar to tracker-search</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-needle</code> </p>
 <h2>DESCRIPTION</h2>

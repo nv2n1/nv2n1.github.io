@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3recognizersharedstate/"
 description: "include/antlr3recognizersharedstate.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3recognizersharedstate.h &#8211; </p>
 <p> While the C runtime does not need to model the state of multiple lexers and parsers in the same way as the Java runtime does it is no overhead to reflect that model.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>

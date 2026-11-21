@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-otfinfo/"
 description: "otfinfo – report information about OpenType fonts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> otfinfo &#8211; report information about OpenType fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>otfinfo</code> [<code>-sfzpvag</code>] [<i>FILE&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

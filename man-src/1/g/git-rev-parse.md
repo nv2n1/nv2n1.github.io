@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-rev-parse/"
 description: "git-rev-parse – Pick out and massage parameters"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-rev-parse &#8211; Pick out and massage parameters </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git rev-parse</i> [&lt;options&gt;] &lt;args&gt;...

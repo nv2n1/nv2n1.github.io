@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sladiv/"
 description: "sladiv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sladiv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sladiv</code> (A, B, C, D, P, Q)<br />

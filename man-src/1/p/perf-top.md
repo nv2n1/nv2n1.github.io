@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-top/"
 description: "perf-top – System profiling tool."
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-top &#8211; System profiling tool. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf top[-e&lt;EVENT&gt; | --event = EVENT][&lt;options&gt;]

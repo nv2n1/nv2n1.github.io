@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debian-distro-info/"
 description: "debian-distro-info – provides information about Debian’s distributions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debian-distro-info &#8211; provides information about Debian&#8217;s distributions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>debian-distro-info</code> [<i>OPTIONS</i>]</p>
 <h2>OPTIONS</h2>

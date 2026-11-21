@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-find_key_by_type_and_name/"
 description: "find_key_by_type_and_name – Find a key by type and name"
 ---
 
-<h2 class="name">NAME</h2>
-<p> find_key_by_type_and_name &#8211; Find a key by type and name </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

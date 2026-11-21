@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-archivemail/"
 description: "archivemail – archive and compress your old email"
 ---
 
-<h2 class="name">NAME</h2>
-<p> archivemail &#8211; archive and compress your old email </p>
 <h2>SYNOPSIS</h2>
 <p> <code>archivemail</code> [ <code>options</code> ] <i>MAILBOX</i><i> &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

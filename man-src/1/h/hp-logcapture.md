@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hp-logcapture/"
 description: "hp-logcapture – HPLIP logs capture Utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hp-logcapture &#8211; HPLIP logs capture Utility </p>
 <h2>DESCRIPTION</h2>
 <p> Captures the HPLIP log files.</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fhpd/"
 description: "fhpd – a command line debugger"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fhpd &#8211; a command line debugger </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fhpd</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>

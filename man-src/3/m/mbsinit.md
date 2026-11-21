@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mbsinit/"
 description: "mbsinit – test for initial shift state"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mbsinit &#8211; test for initial shift state </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;

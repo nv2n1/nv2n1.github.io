@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dysize/"
 description: "dysize – get number of days for a given year"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dysize &#8211; get number of days for a given year </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>int dysize(int </code><i>year</i><code>);</code> </p>

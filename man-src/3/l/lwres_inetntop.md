@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_inetntop/"
 description: "lwres_net_ntop – lightweight resolver IP address presentation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_net_ntop &#8211; lightweight resolver IP address presentation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/net.h&gt;

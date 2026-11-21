@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libinput-measure-touch-size/"
 description: "libinput-measure-touch-size – measure touch size and orientation of devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libinput-measure-touch-size &#8211; measure touch size and orientation of devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput measure touch-size [&#8211;help] [options]</code> [<i>/dev/input/event0] </i></p>
 <h2>DESCRIPTION</h2>

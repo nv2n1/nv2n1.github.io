@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-inotify_add_watch/"
 description: "inotify_add_watch – add a watch to an initialized inotify instance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inotify_add_watch &#8211; add a watch to an initialized inotify instance </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/inotify.h&gt;</code> </p>
 <p> <code>int inotify_add_watch(int </code><i>fd</i><code>, const char *</code><i>pathname</i><code>, uint32_t </code><i>mask</i><code>);</code></p>

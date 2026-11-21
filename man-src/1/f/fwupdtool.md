@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fwupdtool/"
 description: "fwupdtool – standalone firmware update utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fwupdtool &#8211; standalone firmware update utility </p>
 <h2>SYNOPSIS</h2>
 <p> fwupdtool [CMD]</p>
 <h2>DESCRIPTION</h2>

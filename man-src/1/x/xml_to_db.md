@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml_to_db/"
 description: "xml_to_db – convert a subset of XML into fsdb"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml_to_db &#8211; convert a subset of XML into fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>
     xml_to_db -k EntityField &lt;source.xml

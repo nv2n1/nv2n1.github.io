@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mscompress/"
 description: "mscompress – compress data using LZ77 algorithm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mscompress &#8211; compress data using LZ77 algorithm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mscompress</code> [ <code>-h</code> ]<br />
  <code>mscompress</code> [ <code>-V</code> ]<br />

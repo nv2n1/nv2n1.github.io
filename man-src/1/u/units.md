@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-units/"
 description: "units — unit conversion and calculation program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> units &#8212; unit conversion and calculation program</p>
 <h2>SYNOPSIS</h2>
 <p> &#8216;units&#8217; [<i>options</i>] [<i>from-unit</i> [<i>to-unit</i>]] </p>
 <h2>DESCRIPTION</h2>

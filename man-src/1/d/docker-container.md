@@ -8,8 +8,6 @@ url: "/docs/linux/man/1-docker-container/"
 
 
  </p>
-<h2 class="name">NAME</h2>
-<p> docker-container &#8211; Manage containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container</code> </p>
 <h2>DESCRIPTION</h2>

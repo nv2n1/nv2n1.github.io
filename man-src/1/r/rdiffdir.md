@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rdiffdir/"
 description: "rdiffdir – compute and apply signatures and diffs to directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rdiffdir &#8211; compute and apply signatures and diffs to directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdiffdir</code> <code>[</code><i>options</i><code>]</code> <code>sig[nature]</code> <i>basis_dir signature_file</i> </p>
 <p> <code>rdiffdir</code> <code>[</code><i>options</i><code>]</code> <code>delta</code> <i>full_sigtar</i> <code>{</code><i>incr_sigtar</i><code>}</code> <i>new_dir delta_file</i> </p>

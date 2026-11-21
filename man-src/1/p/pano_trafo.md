@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pano_trafo/"
 description: "pano_trafo – Transform image coordinates."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pano_trafo &#8211; Transform image coordinates. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pano_trafo</code> [options] <i>pano.pto</i> <i>image_number</i></p>
 <h2>DESCRIPTION</h2>

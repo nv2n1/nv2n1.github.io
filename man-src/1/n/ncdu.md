@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ncdu/"
 description: "ncdu – NCurses Disk Usage"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ncdu &#8211; NCurses Disk Usage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncdu</code> [<i>options</i>] <i>dir</i></p>
 <h2>DESCRIPTION</h2>

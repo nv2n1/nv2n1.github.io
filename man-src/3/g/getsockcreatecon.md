@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getsockcreatecon/"
 description: "getsockcreatecon, setsockcreatecon – get or set the SELinux security context used for creating a new labeled sockets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getsockcreatecon, setsockcreatecon &#8211; get or set the SELinux security context used for creating a new labeled sockets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int getsockcreatecon(char **</code><i>con</i><code>);</code> </p>

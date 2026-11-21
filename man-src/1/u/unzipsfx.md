@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unzipsfx/"
 description: "unzipsfx – self-extracting stub for prepending to ZIP archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unzipsfx &#8211; self-extracting stub for prepending to ZIP archives </p>
 <h2>SYNOPSIS</h2>
 <p> <code>&lt;name of unzipsfx+archive combo&gt;</code> [<code>-cfptuz</code>[<code>ajnoqsCLV$</code>]] [<i>file(s)</i>&nbsp;&#8230; [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;]]</p>
 <h2>DESCRIPTION</h2>

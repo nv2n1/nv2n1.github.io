@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jigdo-file/"
 description: "jigdo-file – Prepare files for Jigsaw Download (distribution of huge files, e.g. CD images)."
 ---
 
-<h2 class="name">NAME</h2>
-<p> jigdo-file &#8211; Prepare files for Jigsaw Download (distribution of huge files, e.g. CD images). </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jigdo-file</code> <i> COMMAND</i> [ <code>&#8211;image=</code><i>cdrom.iso</i> ] [ <code>&#8211;jigdo=</code><i>cdrom.jigdo</i> ] [ <code>&#8211;template=</code><i>cdrom.template</i> ] [ <code>&#8211;force</code> ] [ <code>MORE OPTIONS</code> ] [ <i>FILES</i><i> &#8230;</i> | <code>&#8211;files-from=</code><i>f</i> ]<br />
 &nbsp;<wbr><code>Common COMMANDs: make-template, make-image, verify</code> </p>

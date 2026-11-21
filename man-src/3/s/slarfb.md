@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slarfb/"
 description: "slarfb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slarfb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />

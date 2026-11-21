@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clarz/"
 description: "clarz.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clarz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br />

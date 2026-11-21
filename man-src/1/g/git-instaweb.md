@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-instaweb/"
 description: "git-instaweb – Instantly browse your working repository in gitweb"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-instaweb &#8211; Instantly browse your working repository in gitweb </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git instaweb[--local][--httpd = &lt;httpd&gt;][--port = &lt;port&gt;]

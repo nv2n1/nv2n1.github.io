@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sendmmsg/"
 description: "sendmmsg – send multiple messages on a socket"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sendmmsg &#8211; send multiple messages on a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

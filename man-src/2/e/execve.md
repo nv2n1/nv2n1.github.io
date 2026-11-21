@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-execve/"
 description: "execve – execute program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> execve &#8211; execute program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int execve(const char *</code><i>pathname</i><code>, char *const </code><i>argv</i><code>[],</code><br />

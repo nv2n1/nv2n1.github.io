@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-min12xxw/"
 description: "min12xxw – Convert pbmraw streams to Minolta PagePro 12xxW languages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> min12xxw &#8211; Convert pbmraw streams to Minolta PagePro 12xxW languages </p>
 <h2>SYNOPSIS</h2>
 <p> min12xxw [options] </p>
 <h2>DESCRIPTION</h2>

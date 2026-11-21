@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mvxattr/"
 description: "mvxattr – Recursively rename extended attributes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mvxattr &#8211; Recursively rename extended attributes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

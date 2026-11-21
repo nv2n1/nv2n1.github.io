@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xpstops/"
 description: "xpstops – XPS to PostScript converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xpstops &#8211; XPS to PostScript converter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xpstops</code> [<i>OPTION</i>&#8230;] FILE [<i>OUTPUT FILE</i>]</dt></dl>

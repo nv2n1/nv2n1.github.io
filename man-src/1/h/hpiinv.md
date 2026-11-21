@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpiinv/"
 description: "hpiinv – An openhpi sample application that shows resources’ inventory records."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpiinv &#8211; An openhpi sample application that shows resources&#8217; inventory records. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpiinv[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-V][-X][-a tag][-h] hpiinv[--domain = nn][--host = host[:port]][--cfgfile = file][--verbose][--debug][--asset - tag = tag][--help]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fdshoutengine/"
 description: "ql/pricingengines/vanilla/fdshoutengine.hpp – Finite-differences shout engine."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/vanilla/fdshoutengine.hpp &#8211; Finite-differences shout engine. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/fdstepconditionengine.hpp&gt;<br />
  #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt;<br />

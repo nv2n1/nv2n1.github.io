@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ieee1284_epp_write_addr/"
 description: "ieee1284_nibble_read, ieee1284_compat_write, ieee1284_byte_read, ieee1284_epp_read_data, ieee1284_epp_write_data, ieee1284_epp_read_addr, ieee1284_epp_write_addr, ieee1284_ecp_read_data, ieee1284_e..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ieee1284_nibble_read, ieee1284_compat_write, ieee1284_byte_read, ieee1284_epp_read_data, ieee1284_epp_write_data, ieee1284_epp_read_addr, ieee1284_epp_write_addr, ieee1284_ecp_read_data, ieee1284_ecp_write_data, ieee1284_ecp_read_addr, ieee1284_ecp_write_addr &#8211; data transfer functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;

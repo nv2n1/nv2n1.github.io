@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-add_key/"
 description: "add_key – add a key to the kernel’s key management facility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> add_key &#8211; add a key to the kernel&#8217;s key management facility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

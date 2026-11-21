@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasdq/"
 description: "dlasdq.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasdq.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasdq</code> (UPLO, SQRE, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />

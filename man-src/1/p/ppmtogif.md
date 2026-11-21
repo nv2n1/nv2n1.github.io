@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtogif/"
 description: "ppmtogif – convert a portable pixmap into a GIF file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtogif &#8211; convert a portable pixmap into a GIF file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtogif</code> [<code>-interlace</code>] [<code>-sort</code>] [<code>-map</code> <i>mapfile</i>]<br />
  [<code>-transparent</code> [<code>=</code>]<i>color</i>] [<code>-alpha</code> <i>pgmfile</i>] [<code>-comment</code> <i>text</i>] [<code>-nolzw</code>]<br />

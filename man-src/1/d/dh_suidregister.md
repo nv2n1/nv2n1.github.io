@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_suidregister/"
 description: "dh_suidregister – suid registration program (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_suidregister &#8211; suid registration program (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> Do not run!</p>
 <h2>DESCRIPTION</h2>

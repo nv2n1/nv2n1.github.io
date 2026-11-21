@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-uuidgen/"
 description: "uuidgen – create a new UUID value"
 ---
 
-<h2 class="name">NAME</h2>
-<p> uuidgen &#8211; create a new UUID value </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uuidgen</code> [options]</p>
 <h2>DESCRIPTION</h2>

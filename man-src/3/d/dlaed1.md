@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlaed1/"
 description: "dlaed1.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlaed1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaed1</code> (N, D, Q, LDQ, INDXQ, RHO, CUTPNT, WORK, IWORK, INFO)<br />

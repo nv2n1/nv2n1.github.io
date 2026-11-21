@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mdb_load/"
 description: "mdb_load – LMDB environment import tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mdb_load &#8211; LMDB environment import tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdb_load</code> [<code>-V</code>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-n</code>] [<code>-s</code><i>&nbsp;<wbr>subdb</i>] [<code>-N</code>] [<code>-T</code>] <code>&nbsp;<wbr>envpath</code></p>
 <h2>DESCRIPTION</h2>

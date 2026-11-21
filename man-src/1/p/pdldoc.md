@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdldoc/"
 description: "pdldoc – shell interface to PDL documentation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdldoc &#8211; shell interface to PDL documentation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdldoc</code> &lt;text&gt;</p>
 <h2>DESCRIPTION</h2>

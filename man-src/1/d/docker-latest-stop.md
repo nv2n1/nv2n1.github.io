@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-stop/"
 description: "docker-stop – Stop a container by sending SIGTERM and then SIGKILL after a grace period"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-stop &#8211; Stop a container by sending SIGTERM and then SIGKILL after a grace period </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stop</code> [<code>&#8211;help</code>] [<code>-t</code>|<code>&#8211;time</code>[=<i>10</i>]] CONTAINER [CONTAINER&#8230;] </p>
 <h2>DESCRIPTION</h2>

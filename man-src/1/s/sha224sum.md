@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sha224sum/"
 description: "sha224sum – compute and check SHA224 message digest"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sha224sum &#8211; compute and check SHA224 message digest </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sha224sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

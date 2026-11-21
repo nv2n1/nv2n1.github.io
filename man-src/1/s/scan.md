@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-scan/"
 description: "scan – produce a one line per message scan listing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> scan &#8211; produce a one line per message scan listing </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>scan</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-clear</code> | <code>-noclear</code>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-width</code> <i>columns</i>] [<code>-reverse</code> | <code>-noreverse</code>] [<code>-file</code> <i>filename</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

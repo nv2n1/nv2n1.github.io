@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndctl/"
 description: "ndctl – Manage \"libnvdimm\" subsystem devices (Non-volatile Memory)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndctl &#8211; Manage &quot;libnvdimm&quot; subsystem devices (Non-volatile Memory) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 ndctl[--version][--help][OPTIONS] COMMAND[ARGS]

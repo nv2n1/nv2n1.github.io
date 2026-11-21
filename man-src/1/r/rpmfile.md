@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rpmfile/"
 description: "rpmfile – list file modes and types in RPM packages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rpmfile &#8211; list file modes and types in RPM packages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmfile</code> [<code>-h</code>] [<code>-a</code>] [<code>-p</code>] [<i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;] [<i></i><font SIZE="-1"><i>DIR</i></font><i></i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

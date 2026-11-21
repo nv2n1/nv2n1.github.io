@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bf_tar/"
 description: "bf_tar – shell script to write a tar file of a bogofilter directory to stdout"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bf_tar &#8211; shell script to write a tar file of a bogofilter directory to stdout </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bf_tar</code> [-r] [-R] <i>bogofilter_directory</i></dt></dl>

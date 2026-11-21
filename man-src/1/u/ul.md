@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ul/"
 description: "ul – do underlining"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ul &#8211; do underlining </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ul</code> [options] [<i>file</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

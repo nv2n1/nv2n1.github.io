@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_poll_cq/"
 description: "ibv_poll_cq – poll a completion queue (CQ)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_poll_cq &#8211; poll a completion queue (CQ) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

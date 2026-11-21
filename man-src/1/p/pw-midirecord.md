@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pw-midirecord/"
 description: "pw-cat – Play and record media with PipeWire"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pw-cat &#8211; Play and record media with PipeWire </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pw - cat[options][FILE] pw - play[options][FILE] pw - record[options][FILE] pw - midiplay[options][FILE] pw - midirecord[options][FILE]

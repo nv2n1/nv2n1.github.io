@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gkrellm/"
 description: "gkrellm – The GNU Krell Monitors"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gkrellm &#8211; The GNU Krell Monitors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gkrellm</code> [ <code>&#8211;help</code> ] [ <code>-t</code> | <code>&#8211;theme</code> dir ] [ <code>-g</code> | <code>&#8211;geometry</code> +x+y ] [ <code>-wm</code> ] [ <code>-w</code> | <code>&#8211;withdrawn</code> ] [ <code>-c</code> | <code>&#8211;config</code> suffix ] [ <code>-nc</code> ] [ <code>-f</code> | <code>&#8211;force-host-config</code> ] [ <code>-demo</code> ] [ <code>-p</code> | <code>&#8211;plugin</code> plugin.so ] [ <code>-s</code> | <code>&#8211;server</code> hostname ] [ <code>-P</code> | <code>&#8211;port</code> server_port ] [ <code>-l</code> | <code>&#8211;logfile</code> path ] </p>
 <h2>DESCRIPTION</h2>

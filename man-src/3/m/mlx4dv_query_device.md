@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mlx4dv_query_device/"
 description: "mlx4dv_query_device – Query device capabilities specific to mlx4"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mlx4dv_query_device &#8211; Query device capabilities specific to mlx4 </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/mlx4dv.h&gt;

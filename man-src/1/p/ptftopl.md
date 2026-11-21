@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ptftopl/"
 description: "ptftopl, uptftopl – Convert Japanese pTeX font metric (JFM) files to propery list"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ptftopl, uptftopl &#8211; Convert Japanese pTeX font metric (JFM) files to propery list </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ptftopl</code> [<i>OPTIONS</i>] <i>tfm_name</i>[<i></i><code>.tfm</code>] [<i>pl_name</i>[<i></i><code>.pl</code>]]</p>
 <h2>DESCRIPTION</h2>

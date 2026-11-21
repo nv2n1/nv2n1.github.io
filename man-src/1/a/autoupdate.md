@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-autoupdate/"
 description: "autoupdate – Update a configure.ac to a newer Autoconf"
 ---
 
-<h2 class="name">NAME</h2>
-<p> autoupdate &#8211; Update a configure.ac to a newer Autoconf </p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoupdate</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE-FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

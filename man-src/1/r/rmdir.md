@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rmdir/"
 description: "rmdir – remove empty directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rmdir &#8211; remove empty directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rmdir</code> [<i>,OPTION/</i>]&#8230; <i>,DIRECTORY/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -9,8 +9,6 @@ description: "tpmtoken_objects – display the objects in the user’s TPM PKCS#
 
 <p>TPM Management &#8211; tpmtoken_objects<br />
  </center></p>
-<h2 class="name">NAME</h2>
-<p> tpmtoken_objects &#8211; display the objects in the user&#8217;s TPM PKCS#11 data store </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tpmtoken_objects</code> [ OPTION ] </p>
 <h2>DESCRIPTION</h2>

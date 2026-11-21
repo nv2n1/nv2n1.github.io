@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ssytrf/"
 description: "ssytrf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssytrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytrf</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />

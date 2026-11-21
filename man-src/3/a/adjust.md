@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-adjust/"
 description: "QuantLib::Calendar – calendar class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Calendar &#8211; calendar class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/calendar.hpp&gt; </p>
 <p> Inherited by <code>Argentina</code>, <code>Australia</code>, <code>BespokeCalendar</code>, <code>Brazil</code>, <code>Canada</code>, <code>China</code>, <code>CzechRepublic</code>, <code>Denmark</code>, <code>Finland</code>, <code>Germany</code>, <code>HongKong</code>, <code>Hungary</code>, <code>Iceland</code>, <code>India</code>, <code>Indonesia</code>, <code>Italy</code>, <code>Japan</code>, <code>JointCalendar</code>, <code>Mexico</code>, <code>NewZealand</code>, <code>Norway</code>, <code>NullCalendar</code>, <code>Poland</code>, <code>SaudiArabia</code>, <code>Singapore</code>, <code>Slovakia</code>, <code>SouthAfrica</code>, <code>SouthKorea</code>, <code>Sweden</code>, <code>Switzerland</code>, <code>Taiwan</code>, <code>TARGET</code>, <code>Turkey</code>, <code>Ukraine</code>, <code>UnitedKingdom</code>, and <code>UnitedStates</code>. </p>

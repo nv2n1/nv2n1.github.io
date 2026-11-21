@@ -8,8 +8,6 @@ description: "exiftran – transform digital camera jpeg images # #"
 ---
 
 <p>#</p>
-<h2 class="name">NAME</h2>
-<p> exiftran &#8211; transform digital camera jpeg images # # </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>exiftran</code> [<i>options</i>] <i>file1 file2 &#8230; fileN</i></dt>

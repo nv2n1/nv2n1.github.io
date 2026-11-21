@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gsi/"
 description: "gsi – Gambit-C Scheme Interpreter and Compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gsi &#8211; Gambit-C Scheme Interpreter and Compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsi </code> [ &#8211;<code>:</code><i>arg</i>,&#8230; ] [ <code>-f</code> ] [ <code>-v</code> ] [[-] [ <code>-e</code> ] [ <i>file</i> ]]&#8230;<br />
  <code>gsc </code> [<i>options</i>] [<i>files</i>] </p>

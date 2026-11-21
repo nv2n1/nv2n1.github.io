@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-read-tree/"
 description: "git-read-tree – Reads tree information into the index"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-read-tree &#8211; Reads tree information into the index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git read - tree[[-m[--trivial][--aggressive] | --reset | --prefix = &lt;prefix&gt;]

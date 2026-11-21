@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_filehandle/"
 description: "cgi_filehandle – return a file pointer to an uploaded file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_filehandle &#8211; return a file pointer to an uploaded file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

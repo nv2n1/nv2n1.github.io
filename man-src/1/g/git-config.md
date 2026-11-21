@@ -6,8 +6,6 @@ letter: "g"
 url: "/docs/linux/man/1-git-config/"
 description: "git-config – Get and set repository or global options"
 ---
-<h2 class="name">NAME</h2>
-<p> git-config - Get and set repository or global options </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
  git config  [&lt;file-option&gt;] [--type=&lt;type&gt;] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] name [value [value-pattern]]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unexpand/"
 description: "unexpand – convert spaces to tabs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> unexpand &#8211; convert spaces to tabs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unexpand</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

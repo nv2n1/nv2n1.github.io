@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lattice_/"
 description: "QuantLib::LatticeShortRateModelEngine – Engine for a short-rate model specialized on a lattice."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::LatticeShortRateModelEngine &#8211; Engine for a short-rate model specialized on a lattice. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/latticeshortratemodelengine.hpp&gt; </p>
 <p> Inherits <code>GenericModelEngine&lt; ShortRateModel, Arguments, Results &gt;</code>. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqldiskusage/"
 description: "mysqldiskusage – Show Database Disk Usage"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqldiskusage &#8211; Show Database Disk Usage </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldiskusage [</code><i>options</i><code>] </code><i>db</i><code> &#8230;</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_net_manager_types/"
 description: "Net Manager Data Types –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Net Manager Data Types &#8211; </p>
 <p> Net Manager Data Types.</p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_net_manager_s</code><br />

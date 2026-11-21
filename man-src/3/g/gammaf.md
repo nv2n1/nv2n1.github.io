@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gammaf/"
 description: "gamma, gammaf, gammal – (logarithm of the) gamma function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gamma, gammaf, gammal &#8211; (logarithm of the) gamma function </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double gamma(double </code><i>x</i><code>);</code><br />

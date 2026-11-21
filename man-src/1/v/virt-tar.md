@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-tar/"
 description: "virt-tar – Extract or upload files to a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-tar &#8211; Extract or upload files to a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - tar[--options] - x domname directory tarball virt - tar[--options] - u domname tarball directory virt - tar[--options] disk.img[disk.img...] - x directory tarball virt - tar[--options] disk.img[disk.img...] - u tarball directory

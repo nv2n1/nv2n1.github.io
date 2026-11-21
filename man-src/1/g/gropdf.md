@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gropdf/"
 description: "gropdf – PDF driver for groff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gropdf &#8211; PDF driver for groff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-dels</code> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-p </code><i>paper-size</i> ] #.OP -w n [<code>-u</code> [<i>cmapfile</i>]] [ <code>-y </code><i>foundry</i> ] [<i>file</i> &#8230;] <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-commodity/"
 description: "ql/experimental/commodities/commodity.hpp – Commodity base class."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/experimental/commodities/commodity.hpp &#8211; Commodity base class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt;<br />
  #include &lt;ql/money.hpp&gt;<br />

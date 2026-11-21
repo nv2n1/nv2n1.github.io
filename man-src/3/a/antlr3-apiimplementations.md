@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-apiimplementations/"
 description: "API Implementation functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> API Implementation functions &#8211; </p>
 <p> API implementation functions are the default implementation of each of the methods in a particular typedef structure.</p>
 <h3>Modules</h3>
 <p> <code>pANTLR3_BASE_RECOGNIZER Base Recognizer Implementation</code> </p>

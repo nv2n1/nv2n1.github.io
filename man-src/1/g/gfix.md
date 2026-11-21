@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gfix/"
 description: "gfix — miscelenous Firebird database maintenance"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gfix &#8212; miscelenous Firebird database maintenance </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfix</code> <i>command</i> [<i>option</i>&#8230;] <i>database</i></p>
 <h2>DESCRIPTION</h2>

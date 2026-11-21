@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-build-classpath/"
 description: "build-classpath – build a Java CLASSPATH"
 ---
 
-<h2 class="name">NAME</h2>
-<p> build-classpath &#8211; build a Java CLASSPATH </p>
 <h2>SYNOPSIS</h2>
 <p> <code>build-classpath</code> JAR|artifact-coordinates [JAR|artifact-coordinates &#8230;]</p>
 <h2>DESCRIPTION</h2>

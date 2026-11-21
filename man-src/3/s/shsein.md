@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-shsein/"
 description: "shsein.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shsein.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>shsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, WR, WI, VL, LDVL, VR, LDVR, MM, M, WORK, IFAILL, IFAILR, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkpasswd/"
 description: "mkpasswd – Overfeatured front end to"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkpasswd &#8211; Overfeatured front end to </p>
 <p> <a href="/docs/linux/man/3-crypt/">crypt</a>(3)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkpasswd</code> <i>PASSWORD</i> [<i>SALT</i>]</p>

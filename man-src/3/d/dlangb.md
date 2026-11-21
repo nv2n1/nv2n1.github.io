@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlangb/"
 description: "dlangb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlangb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlangb</code> (NORM, N, KL, KU, AB, LDAB, WORK)<br />

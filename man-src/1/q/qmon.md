@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qmon/"
 description: "qmon – X-Windows OSF/Motif graphical user interface for xxQS_NAMExx"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qmon &#8211; X-Windows OSF/Motif graphical user interface for xxQS_NAMExx </p>
 <h2>SYNTAX</h2>
 <p> <code>qmon</code> [options]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdalsrsinfo/"
 description: "gdalsrsinfo – gdalsrsinfo lists info about a given SRS in number of formats (WKT, PROJ.4, etc.)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdalsrsinfo &#8211; gdalsrsinfo lists info about a given SRS in number of formats (WKT, PROJ.4, etc.) </p>
 <h2>SYNOPSIS</h2>
 <pre>
 Usage: gdalsrsinfo [options] srs_def

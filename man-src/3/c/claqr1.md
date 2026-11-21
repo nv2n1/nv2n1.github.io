@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claqr1/"
 description: "claqr1.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claqr1.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqr1</code> (N, H, LDH, S1, S2, V)<br />

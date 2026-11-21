@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nbd-trdump/"
 description: "nbd-trdump – translate an nbd transaction log into human readable form"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nbd-trdump &#8211; translate an nbd transaction log into human readable form </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nbd-trdump</code> </p>
 <h2>DESCRIPTION</h2>

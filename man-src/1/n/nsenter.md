@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nsenter/"
 description: "nsenter – run program in different namespaces"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nsenter &#8211; run program in different namespaces </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nsenter</code> [options] [<i>program</i> [<i>arguments</i>]]</p>
 <h2>DESCRIPTION</h2>

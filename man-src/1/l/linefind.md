@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-linefind/"
 description: "linefind – Detect vertical features in images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> linefind &#8211; Detect vertical features in images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>linefind</code> [options] -o <i>output.pto</i> <i>input.pto</i></p>
 <h2>DESCRIPTION</h2>

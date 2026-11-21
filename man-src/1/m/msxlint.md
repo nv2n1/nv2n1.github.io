@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-msxlint/"
 description: "msxlint – detects incorrectly formatted notes lines in a MusiXTeX source file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> msxlint &#8211; detects incorrectly formatted notes lines in a MusiXTeX source file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>msxlint</code> [<code>-v | &#8211;version | -h | &#8211;help</code>] </p>
 <p> <code>msxlint</code> [<code>-d&nbsp;</code>|<code>&nbsp;&#8211;debug</code>]&#8230; [<i>infile</i>[<i></i><code>.tex</code>]&#8230;] </p>

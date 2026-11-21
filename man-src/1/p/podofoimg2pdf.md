@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-podofoimg2pdf/"
 description: "podofoimg2pdf – Convert images to PDF files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> podofoimg2pdf &#8211; Convert images to PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofoimg2pdf</code> [output.pdf] [-useimgsize] [image1 image2 image3 &#8230;] </p>
 <h2>DESCRIPTION</h2>

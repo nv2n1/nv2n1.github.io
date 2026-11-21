@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pcsc_scan/"
 description: "pcsc_scan – regularly scans every PC/SC readers connected to the host"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pcsc_scan &#8211; regularly scans every PC/SC readers connected to the host </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcsc_scan [</code><i>options</i><code>]</code></p>
 <h2>DESCRIPTION</h2>

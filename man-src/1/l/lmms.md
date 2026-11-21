@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lmms/"
 description: "lmms – software for easy music production"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lmms &#8211; software for easy music production </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lmms</code> [ &#8212;<code>render</code> <i>file</i> ] [options]<br />
  <code>lmms</code> [ &#8212;<code>upgrade</code> <i>in</i> <i>out</i> ]<br />

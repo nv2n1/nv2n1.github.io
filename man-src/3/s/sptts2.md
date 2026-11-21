@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sptts2/"
 description: "sptts2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sptts2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sptts2</code> (N, NRHS, D, E, B, LDB)<br />

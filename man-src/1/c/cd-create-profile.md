@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cd-create-profile/"
 description: "cd-create-profile – Color Manager Profile Creation Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cd-create-profile &#8211; Color Manager Profile Creation Tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cd-create-profile</code> [<code>&#8211;verbose</code>]</dt></dl>

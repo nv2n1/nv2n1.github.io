@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_create_qp_ex/"
 description: "ibv_create_qp_ex, ibv_destroy_qp – create or destroy a queue pair (QP)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_create_qp_ex, ibv_destroy_qp &#8211; create or destroy a queue pair (QP) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

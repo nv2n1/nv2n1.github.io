@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fwupdmgr/"
 description: "fwupdmgr – firmware update manager client utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fwupdmgr &#8211; firmware update manager client utility </p>
 <h2>SYNOPSIS</h2>
 <p> fwupdmgr [CMD]</p>
 <h2>DESCRIPTION</h2>

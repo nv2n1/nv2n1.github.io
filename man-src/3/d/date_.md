@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-date_/"
 description: "QuantLib::Dividend – Predetermined cash flow."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::Dividend &#8211; Predetermined cash flow. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/dividend.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CashFlow</code>. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guestfs-recipes/"
 description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guestfs-recipes &#8211; libguestfs, guestfish and virt tools recipes </p>
 <h2>DESCRIPTION</h2>
 <p> This page contains recipes for and links to things you can do using libguestfs, <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) and the virt tools.</p>
 <h2>Access a remote disk image using guestfish</h2>

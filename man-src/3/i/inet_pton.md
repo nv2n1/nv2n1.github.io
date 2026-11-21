@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-inet_pton/"
 description: "inet_pton – convert IPv4 and IPv6 addresses from text to binary form"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inet_pton &#8211; convert IPv4 and IPv6 addresses from text to binary form </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/inet.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnuplot-qt/"
 description: "gnuplot – an interactive plotting program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnuplot &#8211; an interactive plotting program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnuplot</code> [X11 options] [options] [file &#8230;] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cpg_iteration_initialize/"
 description: "cpg_iteration_initialize – Initialize iterator for members of CPG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpg_iteration_initialize &#8211; Initialize iterator for members of CPG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>cs_error_t cpg_iteration_initialize (cpg_handle_t </code><i>handle</i><code>, cpg_iteration_type_t </code><i>iteration_type</i><code>, const struct cpg_name *</code><i>group</i><code>, cpg_iteration_handle_t *</code><i>cpg_iteration_handle</i><code>);</code> </p>

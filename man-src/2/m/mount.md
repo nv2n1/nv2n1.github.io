@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-mount/"
 description: "mount – mount filesystem"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mount &#8211; mount filesystem </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/mount.h&gt;

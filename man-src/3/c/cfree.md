@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cfree/"
 description: "cfree – free allocated memory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cfree &#8211; free allocated memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;

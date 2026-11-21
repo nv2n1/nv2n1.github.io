@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sleep/"
 description: "sleep – delay for a specified amount of time"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sleep &#8211; delay for a specified amount of time </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sleep</code> <i>,NUMBER/</i>[<i>,SUFFIX/</i>]&#8230;<br />
  <code>sleep</code> <i>,OPTION/</i></p>

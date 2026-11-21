@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-realpath/"
 description: "realpath – print the resolved path"
 ---
 
-<h2 class="name">NAME</h2>
-<p> realpath &#8211; print the resolved path </p>
 <h2>SYNOPSIS</h2>
 <p> <code>realpath</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tzxlist/"
 description: "tzxlist – Sinclair ZX Spectrum \"real\" tape file lister"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tzxlist &#8211; Sinclair ZX Spectrum &quot;real&quot; tape file lister </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tzxlist</code> <i>tapefile</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

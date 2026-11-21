@@ -8,8 +8,6 @@ description: "pamstereogram – create a single-image stereogram from a PAM dept
 ---
 
 <p>Updated:30 December 2012 </p>
-<h2 class="name">NAME</h2>
-<p> pamstereogram &#8211; create a single-image stereogram from a PAM depth map</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamstereogram</code> [<code>-help</code>] [<code>-verbose</code>] [<code>-blackandwhite</code> | <code>-grayscale</code> | <code>-color</code>] [<code>-maxval=</code><i>value</i>] [<code>-patfile=</code><i>pamfile</i>] [<code>-texfile=</code><i>pamfile</i>] [<code>-bgcolor=</code><i>color</i>] [<code>-smoothing=</code><i>pixels</i>] [<code>-xshift=</code><i>pixels</i>] [<code>-yshift=</code><i>pixels</i>] [<code>-magnifypat=</code><i>scale</i>] [<code>-guidetop</code>] [<code>-guidebottom</code>] [<code>-guidesize=</code><i>pixels</i>] [<code>-dpi=</code><i>resolution</i>] [<code>-crosseyed</code>] [<code>-makemask</code>] [<code>-eyesep=</code><i>inches</i>] [<code>-depth=</code><i>fraction</i>] [<code>-planes=</code><i>near_pixels</i>,<i>far_pixels</i>] [<code>-randomseed=</code><i>integer</i>] [<i>infile</i>] </p>
 <h2>DESCRIPTION</h2>

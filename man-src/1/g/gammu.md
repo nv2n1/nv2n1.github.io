@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gammu/"
 description: "Gammu – Does some neat things with your cellular phone or modem."
 ---
 
-<h2 class="name">NAME</h2>
-<p> Gammu &#8211; Does some neat things with your cellular phone or modem.</p>
 <h2>SYNOPSIS</h2>
 <p> Usage: gammu [<i>parameters</i>] &lt;command&gt; [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

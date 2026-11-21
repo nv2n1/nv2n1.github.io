@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-remote-fd/"
 description: "git-remote-fd – Reflect smart transport stream back to caller"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-remote-fd &#8211; Reflect smart transport stream back to caller </p>
 <h2>SYNOPSIS</h2>
 <p> &quot;fd::&lt;infd&gt;[,&lt;outfd&gt;][/&lt;anything&gt;]&quot; (as URL)</p>
 <h2>DESCRIPTION</h2>

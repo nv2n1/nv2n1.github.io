@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamdice/"
 description: "pamdice – slice a Netpbm image into many horizontally and/or vertically"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamdice &#8211; slice a Netpbm image into many horizontally and/or vertically</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamslice</code> <code>-outstem=</code><i>filenamestem</i> [<code>-width=</code><i>width</i>] [<code>-height=</code><i>height</i>] [<code>-verbose</code>] [<i>filename</i>] </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>

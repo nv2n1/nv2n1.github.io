@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-makeindex/"
 description: "makeindex – a general purpose, formatter-independent index processor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> makeindex &#8211; a general purpose, formatter-independent index processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makeindex</code> [<code>-c</code>] [<code>-g</code>] [<code>-i</code>] [<code>-l</code>] [<code>-o</code> <i>ind</i>] [<code>-p</code> <i>num</i>] [<code>-q</code>] [<code>-r</code>] [<code>-s</code> <i>sfile</i>] [<code>-t</code> <i>log</i>] [<code>-L</code>] [<code>-T</code>] [<i>idx0</i> <i>idx1</i> <i>idx2</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

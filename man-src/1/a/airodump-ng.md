@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airodump-ng/"
 description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airodump-ng &#8211; a wireless packet capture tool for aircrack-ng </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airodump-ng</code> [options] &lt;interface name&gt;</p>
 <h2>DESCRIPTION</h2>

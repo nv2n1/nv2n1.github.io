@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-syslog-ng-ctl/"
 description: "syslog-ng-ctl – Display message statistics and enable verbose, debug and trace modes in syslog-ng Open Source Edition"
 ---
 
-<h2 class="name">NAME</h2>
-<p> syslog-ng-ctl &#8211; Display message statistics and enable verbose, debug and trace modes in syslog-ng Open Source Edition </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>syslog-ng-ctl</code> [command] [options]</dt></dl>

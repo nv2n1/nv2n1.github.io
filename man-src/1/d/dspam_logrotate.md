@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dspam_logrotate/"
 description: "dspam_logrotate – Rotate DSPAM logfiles"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dspam_logrotate &#8211; Rotate DSPAM logfiles</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dspam_logrotate</code> <code>-a age </code>[-v]&nbsp;<wbr>[[<code>-l </code>[<i>logfile</i>]]|[<code>-d </code>[<i>dir</i>]]] </p>
 <h2>DESCRIPTION</h2>

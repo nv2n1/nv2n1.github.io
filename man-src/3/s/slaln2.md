@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaln2/"
 description: "slaln2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaln2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaln2</code> (LTRANS, NA, NW, SMIN, CA, A, LDA, D1, D2, B, LDB, WR, WI, X, LDX, SCALE, XNORM, INFO)<br />

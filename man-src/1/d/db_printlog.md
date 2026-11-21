@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-db_printlog/"
 description: "db5.3_printlog – Dumps Berkeley DB log files in a human-readable format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> db5.3_printlog &#8211; Dumps Berkeley DB log files in a human-readable format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_printlog</code> [-NrV] [-b start-LSN] [-e stop-LSN] [-h home] [-P password]</p>
 <h2>DESCRIPTION</h2>

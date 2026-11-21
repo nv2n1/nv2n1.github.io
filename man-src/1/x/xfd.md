@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfd/"
 description: "xfd – display all the characters in an X font"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfd &#8211; display all the characters in an X font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfd</code> [-options &#8230;] <code>-fn</code> <i>fontname</i> </p>
 <p> <code>xfd</code> [-options &#8230;] <code>-fa</code> <i>fontname</i></p>

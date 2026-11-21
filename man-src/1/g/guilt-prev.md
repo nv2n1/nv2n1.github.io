@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-prev/"
 description: "guilt-prev – Output name of second topmost applied patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-prev &#8211; Output name of second topmost applied patch </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-prev</i> [-p|&#8211;path]</p>
 <h2>DESCRIPTION</h2>

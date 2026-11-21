@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-help/"
 description: "perf-help – display help information about perf"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-help &#8211; display help information about perf </p>
 <h2>SYNOPSIS</h2>
 <p> <i>perf help</i> [-a|&#8211;all] [COMMAND]</p>
 <h2>DESCRIPTION</h2>

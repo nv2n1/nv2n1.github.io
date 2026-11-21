@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-spftrf/"
 description: "spftrf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spftrf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spftrf</code> (TRANSR, UPLO, N, A, INFO)<br />

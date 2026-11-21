@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-memfrob/"
 description: "memfrob – frobnicate (encrypt) a memory area"
 ---
 
-<h2 class="name">NAME</h2>
-<p> memfrob &#8211; frobnicate (encrypt) a memory area </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

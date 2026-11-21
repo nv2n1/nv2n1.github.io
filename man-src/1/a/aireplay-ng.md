@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-aireplay-ng/"
 description: "aireplay-ng – inject packets into a wireless network to generate traffic"
 ---
 
-<h2 class="name">NAME</h2>
-<p> aireplay-ng &#8211; inject packets into a wireless network to generate traffic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aireplay-ng</code> [options] &lt;replay interface&gt;</p>
 <h2>DESCRIPTION</h2>

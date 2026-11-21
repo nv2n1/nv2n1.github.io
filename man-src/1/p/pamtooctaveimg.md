@@ -8,8 +8,6 @@ description: "pamtooctaveimg – convert a Netpbm image to a GNU Octave image"
 ---
 
 <p>&quot; &quot;netpbm documentation&quot; </p>
-<h2 class="name">NAME</h2>
-<p> pamtooctaveimg &#8211; convert a Netpbm image to a GNU Octave image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtooctaveimg</code> [<i>netpbmfile</i>] </p>
 <h2>DESCRIPTION</h2>

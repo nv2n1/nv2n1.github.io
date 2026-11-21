@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-env/"
 description: "env – run a program in a modified environment"
 ---
 
-<h2 class="name">NAME</h2>
-<p> env &#8211; run a program in a modified environment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>env</code> [<i>,OPTION/</i>]&#8230; [<i>,-/</i>] [<i>,NAME=VALUE/</i>]&#8230; [<i>,COMMAND /</i>[<i>,ARG/</i>]&#8230;]</p>
 <h2>DESCRIPTION</h2>

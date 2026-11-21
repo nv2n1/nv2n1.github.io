@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dtrsm/"
 description: "dtrsm.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dtrsm.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />

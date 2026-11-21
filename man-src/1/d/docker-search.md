@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-search/"
 description: "docker-search – Search the Docker Hub for images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-search &#8211; Search the Docker Hub for images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker search [OPTIONS] TERM</code> </p>
 <h2>DESCRIPTION</h2>

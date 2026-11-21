@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-io_getevents/"
 description: "io_getevents – read asynchronous I/O events from the completion queue"
 ---
 
-<h2 class="name">NAME</h2>
-<p> io_getevents &#8211; read asynchronous I/O events from the completion queue </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */

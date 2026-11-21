@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getegid/"
 description: "getgid, getegid – get group identity"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getgid, getegid &#8211; get group identity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />
  <code>#include &lt;sys/types.h&gt;</code> </p>

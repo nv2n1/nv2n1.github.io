@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-srp_daemon/"
 description: "srp_daemon – Discovers SRP targets in an InfiniBand Fabric"
 ---
 
-<h2 class="name">NAME</h2>
-<p> srp_daemon &#8211; Discovers SRP targets in an InfiniBand Fabric</p>
 <h2>SYNOPSIS</h2>
 <p> <code>srp_daemon [-vVcaeon] [-d </code><i>umad-device</i> | -i <i>infiniband-device</i> [-p <i>port-num</i>]] [-t <i>timeout(ms)</i>] [-r <i>retries</i>] [-R <i>Rescan-time</i>] [-f <i>rules-File</i>] </p>
 <h2>DESCRIPTION</h2>

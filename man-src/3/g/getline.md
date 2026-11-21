@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getline/"
 description: "getline, getdelim – delimited string input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getline, getdelim &#8211; delimited string input </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

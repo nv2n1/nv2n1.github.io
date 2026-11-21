@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-editdiff/"
 description: "rediff, editdiff – fix offsets and counts of a hand-edited diff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rediff, editdiff &#8211; fix offsets and counts of a hand-edited diff </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rediff</code> <i>ORIGINAL</i> <i>EDITED</i></dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer/"
 description: "GASS Transfer API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GASS Transfer API &#8211; </p>
 <p> GASS Transfer API.</p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>

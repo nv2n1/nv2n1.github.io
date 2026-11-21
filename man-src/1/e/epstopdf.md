@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-epstopdf/"
 description: "epstopdf, repstopdf – convert an EPS file to PDF"
 ---
 
-<h2 class="name">NAME</h2>
-<p> epstopdf, repstopdf &#8211; convert an EPS file to PDF </p>
 <h2>SYNOPSIS</h2>
 <p> <code>epstopdf</code> [<i>options</i>] [<i>epsfile</i> [<i>pdffile</i>.pdf]]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-over/"
 description: "over – pretty print and scroll source code on terminal"
 ---
 
-<h2 class="name">NAME</h2>
-<p> over &#8211; pretty print and scroll source code on terminal</p>
 <h2>SYNOPSIS</h2>
 <p> over [FILE]&#8230; </p>
 <h2>DECRIPTION</h2>

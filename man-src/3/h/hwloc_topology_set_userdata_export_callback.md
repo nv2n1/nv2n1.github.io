@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_topology_set_userdata_export_callback/"
 description: "hwlocality_xmlexport – Exporting Topologies to XML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_xmlexport &#8211; Exporting Topologies to XML </p>
 <h3>Functions</h3>
 <p> int <code>hwloc_topology_export_xml</code> (<code>hwloc_topology_t</code> topology, const char *xmlpath) </p>
 <p> int <code>hwloc_topology_export_xmlbuffer</code> (<code>hwloc_topology_t</code> topology, char **xmlbuffer, int *buflen) </p>

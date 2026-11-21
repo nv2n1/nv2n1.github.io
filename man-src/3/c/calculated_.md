@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-calculated_/"
 description: "QuantLib::LazyObject – Framework for calculation on demand and result caching."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::LazyObject &#8211; Framework for calculation on demand and result caching. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/patterns/lazyobject.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Observable</code>, and <code>QuantLib::Observer</code>. </p>

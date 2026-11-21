@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hasmntopt/"
 description: "getmntent, setmntent, addmntent, endmntent, hasmntopt, getmntent_r – get filesystem descriptor file entry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getmntent, setmntent, addmntent, endmntent, hasmntopt, getmntent_r &#8211; get filesystem descriptor file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mntent.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airdecloak-ng/"
 description: "airuncloak-ng – Removes wep cloaked framed from a pcap file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> airuncloak-ng &#8211; Removes wep cloaked framed from a pcap file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airuncloak-ng</code> &lt;options&gt;</p>
 <h2>DESCRIPTION</h2>

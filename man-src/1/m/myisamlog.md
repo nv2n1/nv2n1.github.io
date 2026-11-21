@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-myisamlog/"
 description: "myisamlog – display MyISAM log file contents"
 ---
 
-<h2 class="name">NAME</h2>
-<p> myisamlog &#8211; display MyISAM log file contents </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>myisamlog [</code><i>options</i><code>] [</code><i>log_file</i><code> [</code><i>tbl_name</i><code>] &#8230;]</code></dt></dl>

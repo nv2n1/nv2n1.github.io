@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kjscmd/"
 description: "kjscmd – KDE KJSEmbed interpreter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kjscmd &#8211; KDE KJSEmbed interpreter </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kjscmd</code> [&#8211;help] [[-e] | [&#8211;exec]] [[-i] | [-interactive]] [[-n] | [-no-kde]] [file]</dt></dl>

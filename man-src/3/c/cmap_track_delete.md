@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cmap_track_delete/"
 description: "cmap_track_delete – Remove tracking of values in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmap_track_delete &#8211; Remove tracking of values in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_track_delete (cmap_handle_t </code><i>handle</i><code>, cmap_track_handle_t </code><i>track_handle</i><code>);</code> </p>

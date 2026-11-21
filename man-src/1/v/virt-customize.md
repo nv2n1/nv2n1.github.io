@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-customize/"
 description: "virt-customize – Customize a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-customize &#8211; Customize a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - customize[-a disk.img[-a disk.img...] | -d domname][--attach ISOFILE][--attach - format FORMAT][-c URI | --connect URI][-n | --dry - run][--format FORMAT][-m MB | --memsize MB][--network | --no - network][-q | --quiet][--smp N][-v | --verbose][-x] [--chmod PERMISSIONS:FILE][--commands - from - file FILENAME] [--copy SOURCE:DEST] [--copy - in LOCALPATH:REMOTEDIR][--delete PATH] [--edit FILE:EXPR][--firstboot SCRIPT][--firstboot - command 'CMD+ARGS'][--firstboot - install PKG, PKG..][--hostname HOSTNAME][--install PKG, PKG..] [--link TARGET:LINK

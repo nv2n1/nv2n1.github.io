@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest/"
 description: "docker – Docker image and container command line interface"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker &#8211; Docker image and container command line interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker</code> [OPTIONS] COMMAND [arg&#8230;] </p>
 <p> <code>docker</code> daemon [&#8211;help|&#8230;] </p>

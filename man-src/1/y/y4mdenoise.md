@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-y4mdenoise/"
 description: "y4mdenoise – Motion-compensating YUV4MPEG-frame denoiser"
 ---
 
-<h2 class="name">NAME</h2>
-<p> y4mdenoise &#8211; Motion-compensating YUV4MPEG-frame denoiser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>y4mdenoise</code> [<code>-v</code> <i>verbosity</i>] [<code>-p</code> <i>parallelism</i>] [<code>-r</code> <i>motion-search_radius</i>] [<code>-R</code> <i>color_motion-search_radius</i>] [<code>-t</code> <i>error_tolerance</i>] [<code>-T</code> <i>color_error_tolerance</i>] [<code>-z</code> <i>zero_motion_error_tolerance</i>] [<code>-Z</code> <i>color_zero_motion_error_tolerance</i>] [<code>-m</code> <i>match-count_throttle</i>] [<code>-M</code> <i>match-size_throttle</i>] [<code>-f</code> <i>reference_frames</i>] [<code>-B</code>] [<code>-I</code> <i>interlacing_type</i>] &lt; /dev/stdin &gt; /dev/stdout </p>
 <h2>DESCRIPTION</h2>

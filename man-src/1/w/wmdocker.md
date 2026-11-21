@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wmdocker/"
 description: "wmdocker – System tray for KDE3/GNOME2 docklet applications"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wmdocker &#8211; System tray for KDE3/GNOME2 docklet applications </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wmdocker</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

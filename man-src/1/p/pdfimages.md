@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdfimages/"
 description: "pdfimages – Portable Document Format (PDF) image extractor (version 3.03)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdfimages &#8211; Portable Document Format (PDF) image extractor (version 3.03) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfimages</code> [options] <i>PDF-file image-root</i></p>
 <h2>DESCRIPTION</h2>

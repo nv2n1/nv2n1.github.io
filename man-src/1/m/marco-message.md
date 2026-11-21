@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-marco-message/"
 description: "marco-message – A command to send messages to Marco."
 ---
 
-<h2 class="name">NAME</h2>
-<p> marco-message &#8211; A command to send messages to Marco. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>marco-message [OPTIONS]</code></p>
 <h2>DESCRIPTION</h2>

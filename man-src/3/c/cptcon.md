@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cptcon/"
 description: "cptcon.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cptcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cptcon</code> (N, D, E, ANORM, RCOND, RWORK, INFO)<br />

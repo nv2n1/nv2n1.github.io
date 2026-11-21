@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dirsplit/"
 description: "dirsplit – splits directory into multiple with equal size"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dirsplit &#8211; splits directory into multiple with equal size </p>
 <h2>SYNOPSIS</h2>
 <p> dirsplit <code>[options]</code> &lt; directory | content-list-file &gt;</p>
 <h2>DESCRIPTION</h2>

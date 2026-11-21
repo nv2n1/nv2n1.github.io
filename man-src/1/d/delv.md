@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-delv/"
 description: "delv – DNS lookup and validation utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> delv &#8211; DNS lookup and validation utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>delv</code> [@server] [ [<code>-4</code>] | [<code>-6</code>] ] [<code>-a</code> anchor-file] [<code>-b</code> address] [<code>-c</code> class] [<code>-d</code> level] [<code>-i</code>] [<code>-m</code>] [<code>-p</code> port#] [<code>-q</code> name] [<code>-t</code> type] [<code>-x</code> addr] [name] [type] [class] [queryopt&#8230;] </p>
 <p> <code>delv</code> [<code>-h</code>] </p>

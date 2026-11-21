@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-timer_getoverrun/"
 description: "timer_getoverrun – get overrun count for a POSIX per-process timer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> timer_getoverrun &#8211; get overrun count for a POSIX per-process timer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;

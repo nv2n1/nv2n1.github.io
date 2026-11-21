@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_ssl_api/"
 description: "Globus GSI Proxy SSL API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Globus GSI Proxy SSL API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>ProxyCertInfo</code> </p>
 <p> <code>ProxyPolicy</code> </p>

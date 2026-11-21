@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-filesystems/"
 description: "virt-filesystems – List filesystems, partitions, block devices, LVM in a virtual machine or disk image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-filesystems &#8211; List filesystems, partitions, block devices, LVM in a virtual machine or disk image </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - filesystems[--options] - d domname virt - filesystems[--options] - a disk.img[-a disk.img...]

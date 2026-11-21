@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamrgbatopng/"
 description: "pamrgbatopng – convert PAM color/transparency image to PNG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamrgbatopng &#8211; convert PAM color/transparency image to PNG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamrgbatopng</code> [<i>pamfile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>

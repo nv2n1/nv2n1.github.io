@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slagv2/"
 description: "slagv2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slagv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slagv2</code> (A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, CSL, SNL, CSR, SNR)<br />

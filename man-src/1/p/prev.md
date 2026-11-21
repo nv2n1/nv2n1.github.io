@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-prev/"
 description: "prev – show the previous message"
 ---
 
-<h2 class="name">NAME</h2>
-<p> prev &#8211; show the previous message </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>prev </code> [<i>+folder</i>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></dt>

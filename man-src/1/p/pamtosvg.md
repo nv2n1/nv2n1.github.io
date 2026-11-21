@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtosvg/"
 description: "pamtosvg – convert a Netpbm image to a SVG (Scalable Vector Graphics) image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtosvg &#8211; convert a Netpbm image to a SVG (Scalable Vector Graphics) image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtosvg</code> </p>
 <p> [<code>-background-color=</code><i>colorname</i>] [<code>-centerline</code>] [<code>-corner-threshold=</code><i>angle</i>] [<code>-corner-always-threshold=</code><i>angle</i>] [<code>-corner-surround=</code><i>integer</i>] [<code>-tangent-surround=</code><i>integer</i>] [<code>-error-threshold=</code><i>float</i>] [<code>-filter-iterations=</code><i>count</i>] [<code>-line-reversion-threshold=</code><i>float</i>] [<code>-line-threshold=</code><i>float</i>] [<code>-width-weight-factor=</code><i>float</i>] [<code>-preserve-width</code>] [<code>-remove-adjacent-corners</code>] [<code>-log</code>] [<code>-report-progress</code>] [<i>pnmfile</i>] </p>

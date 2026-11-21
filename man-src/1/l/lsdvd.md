@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lsdvd/"
 description: "lsdvd – read the content info of a DVD"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lsdvd &#8211; read the content info of a DVD </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsdvd</code> [ <code>options</code> ] [-t track_number] [dvd path] </p>
 <h2>DESCRIPTION</h2>

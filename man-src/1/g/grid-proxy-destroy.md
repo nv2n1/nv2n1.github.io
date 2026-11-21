@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grid-proxy-destroy/"
 description: "grid-proxy-destroy – Destroy the default proxy certificate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grid-proxy-destroy &#8211; Destroy the default proxy certificate </p>
 <h2>SYNOPSIS</h2>
 <p> grid-proxy-destroy -help | -usage | -version </p>
 <p> grid-proxy-destroy [-debug] [-dryrun] [-default] [&#8211; FILENAME &#8230;]</p>

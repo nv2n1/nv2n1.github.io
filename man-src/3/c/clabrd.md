@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clabrd/"
 description: "clabrd.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clabrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br />

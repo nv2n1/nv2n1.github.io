@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-observations2map/"
 description: "observations2map – Transforms a set of pairs <pose,observation> into metric maps."
 ---
 
-<h2 class="name">NAME</h2>
-<p> observations2map &#8211; Transforms a set of pairs &lt;pose,observation&gt; into metric maps. </p>
 <h2>SYNOPSIS</h2>
 <p> observations2map <i>config_file.ini</i> <i>observations.simplemap</i> <i>output_maps_prefix</i></p>
 <h2>DESCRIPTION</h2>

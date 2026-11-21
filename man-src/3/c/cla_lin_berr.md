@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cla_lin_berr/"
 description: "cla_lin_berr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cla_lin_berr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cla_lin_berr</code> (N, NZ, NRHS, RES, AYB, BERR)<br />

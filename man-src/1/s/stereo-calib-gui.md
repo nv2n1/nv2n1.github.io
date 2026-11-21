@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stereo-calib-gui/"
 description: "stereo-calib-gui – GUI program to calibrate stereo pairs with a checker-board"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stereo-calib-gui &#8211; GUI program to calibrate stereo pairs with a checker-board </p>
 <h2>SYNOPSIS</h2>
 <p> stereo-calib-gui</p>
 <h2>DESCRIPTION</h2>

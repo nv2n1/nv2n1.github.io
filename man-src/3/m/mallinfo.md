@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-mallinfo/"
 description: "mallinfo – obtain memory allocation information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mallinfo &#8211; obtain memory allocation information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>struct mallinfo mallinfo(void);</code></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbrowaccumulate/"
 description: "dbrowaccumulate – compute a running sum of a column"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbrowaccumulate &#8211; compute a running sum of a column </p>
 <h2>SYNOPSIS</h2>
 <p> dbrowaccumulate [-C increment_constant] [-I initial_value] [-c increment_column] [-N new_column_name]</p>
 <h2>DESCRIPTION</h2>

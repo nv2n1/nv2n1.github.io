@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ndbd_redo_log_reader/"
 description: "ndbd_redo_log_reader – check and print content of cluster redo log"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ndbd_redo_log_reader &#8211; check and print content of cluster redo log </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndbd_redo_log_reader </code><i>file_name</i><code> [</code><i>options</i><code>]</code></dt></dl>

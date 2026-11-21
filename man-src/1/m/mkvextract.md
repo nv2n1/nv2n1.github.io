@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkvextract/"
 description: "mkvextract – extract tracks from Matroska(TM) files into other files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkvextract &#8211; extract tracks from Matroska(TM) files into other files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mkvextract</code> {mode} {source-filename} [options] [extraction-spec]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dconf-editor/"
 description: "dconf-editor – Graphical editor for gsettings and dconf"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dconf-editor &#8211; Graphical editor for gsettings and dconf </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dconf-editor [OPTIONS&#8230;]</code> <code>dconf-editor [OPTIONS&#8230;] [PATH]</code> <code>dconf-editor [OPTIONS&#8230;] [FIXED_SCHEMA | RELOCATABLE_SCHEMA:PATH] [KEY]</code></p>
 <h2>DESCRIPTION</h2>

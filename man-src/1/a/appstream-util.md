@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-appstream-util/"
 description: "appstream-util – Manipulate AppStream, AppData and MetaInfo metadata"
 ---
 
-<h2 class="name">NAME</h2>
-<p> appstream-util &#8211; Manipulate AppStream, AppData and MetaInfo metadata </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>appstream-util</code> [OPTION&#8230;]</dt></dl>

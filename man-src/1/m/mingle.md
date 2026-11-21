@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mingle/"
 description: "mingle – fast edge bundling"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mingle &#8211; fast edge bundling </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mingle</code> [ <i>options</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>files</i> ]</p>
 <h2>DESCRIPTION</h2>

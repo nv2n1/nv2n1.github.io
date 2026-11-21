@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fluxbox/"
 description: "fluxbox – A lightweight window manager for the X Windowing System"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fluxbox &#8211; A lightweight window manager for the X Windowing System </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fluxbox</code> [-rc <i>rcfile</i>] [-log <i>logfile</i>] [-display <i>display</i>] [-screen all|<i>scr</i>,<i>scr</i>&#8230;] [-verbose] [-sync] </p>
 <p> <code>fluxbox</code> [-v | -version] | [-h | -help] | [-i | -info] | [-list-commands]</p>

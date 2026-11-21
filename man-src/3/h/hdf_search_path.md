@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_search_path/"
 description: "hdf_search_path – Find a file given a search path in HDF"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_search_path &#8211; Find a file given a search path in HDF </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtxrun/"
 description: "mtxrun – ConTeXt TDS Runner Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtxrun &#8211; ConTeXt TDS Runner Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

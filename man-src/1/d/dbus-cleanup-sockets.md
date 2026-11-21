@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbus-cleanup-sockets/"
 description: "dbus-cleanup-sockets – clean up leftover sockets in a directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbus-cleanup-sockets &#8211; clean up leftover sockets in a directory </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-cleanup-sockets</code> [<i>DIRECTORY</i>]</dt>

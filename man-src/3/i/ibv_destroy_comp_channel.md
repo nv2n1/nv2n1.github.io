@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_destroy_comp_channel/"
 description: "ibv_create_comp_channel, ibv_destroy_comp_channel – create or destroy a completion event channel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_create_comp_channel, ibv_destroy_comp_channel &#8211; create or destroy a completion event channel </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

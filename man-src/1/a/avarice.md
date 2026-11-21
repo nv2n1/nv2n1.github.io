@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-avarice/"
 description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGICE box."
 ---
 
-<h2 class="name">NAME</h2>
-<p> avarice &#8211; Provides an interface from avr-gdb to Atmel&#8217;s JTAGICE box. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>avarice</code> [<i>OPTIONS</i>]&#8230; [[<i>HOST_NAME</i>]:<i>PORT</i>]</p>
 <h2>DESCRIPTION</h2>

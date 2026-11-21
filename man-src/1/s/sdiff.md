@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sdiff/"
 description: "sdiff – side-by-side merge of file differences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sdiff &#8211; side-by-side merge of file differences </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sdiff</code> [<i>OPTION</i>]&#8230; <i>FILE1 FILE2</i></p>
 <h2>DESCRIPTION</h2>

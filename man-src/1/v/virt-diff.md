@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-diff/"
 description: "virt-diff – Differences between files in two virtual machines"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-diff &#8211; Differences between files in two virtual machines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - diff[--options] - d domain1 - D domain2 virt - diff[--options] - a disk1.img[-a...] - A disk2.img[-A...]

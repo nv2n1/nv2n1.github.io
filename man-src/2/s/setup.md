@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setup/"
 description: "setup – setup devices and filesystems, mount root filesystem"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setup &#8211; setup devices and filesystems, mount root filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setup(void);</code></p>

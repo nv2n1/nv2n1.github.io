@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-elog/"
 description: "elog – utility program for Electronic Logbook ELOG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> elog &#8211; utility program for Electronic Logbook ELOG </p>
 <h2>SYNOPSIS</h2>
 <p> <code>elog</code> <code>-a </code><i>attribute=value</i> [ <code>-e </code><i>id</i> ] [ <code>-f </code><i>file&#8230;</i> ] <code>-h </code><i>host</i> [ <code>-l </code><i>logbook</i> ] [ <code>-m </code><i>textfile</i> ] [ <code>-p </code><i>port</i> ] [ <code>-r </code><i>id</i> ] [ <code>-s </code><i>subdir</i> ] [ <code>-u </code><i>username</i><i>password</i> ] [ <code>-v</code> ] [ <code>-w </code><i>password</i> ] <i>message</i> [ <code>-x</code> ]</p>
 <h2>DESCRIPTION</h2>

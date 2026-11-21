@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lit/"
 description: "lit – LLVM Integrated Tester"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lit &#8211; LLVM Integrated Tester </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lit</code> [<i>options</i>] [<i>tests</i>]</p>
 <h2>DESCRIPTION</h2>

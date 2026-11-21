@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmqvga/"
 description: "ppmqvga – 8 plane quantization"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmqvga &#8211; 8 plane quantization </p>
 <h2>SYNOPSIS</h2>
 <p> ppmqvga [ options ] [ input file ]</p>
 <h2>DESCRIPTION</h2>

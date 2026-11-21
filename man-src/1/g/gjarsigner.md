@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gjarsigner/"
 description: "gjarsigner – Java ARchive (JAR) file signing and verification tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gjarsigner &#8211; Java ARchive (JAR) file signing and verification tool </p>
 <h2>SYNOPSIS</h2>
 <p> jarsigner [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>FILE</i></font><i></i> <i></i><font SIZE="-1"><i>ALIAS</i></font><i></i> </p>
 <p> jarsigner <code>-verify</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>FILE</i></font><i></i></p>

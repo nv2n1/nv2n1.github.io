@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fixpspps/"
 description: "fixpspps – filter to fix PSPrint PostScript so PSUtils work"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fixpspps &#8211; filter to fix PSPrint PostScript so PSUtils work </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixpspps </code> &lt; <i>PSPrint.ps</i> &gt; <i>Fixed.ps</i></p>
 <h2>DESCRIPTION</h2>

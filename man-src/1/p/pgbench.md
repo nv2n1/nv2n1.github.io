@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgbench/"
 description: "pgbench – run a benchmark test on PostgreSQL"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgbench &#8211; run a benchmark test on PostgreSQL </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pgbench</code> <code>-i</code> [<i>option</i>&#8230;] [<i>dbname</i>]</dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-barcode/"
 description: "barcode – a library to create and print bar codes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> barcode &#8211; a library to create and print bar codes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;barcode.h&gt;</code> </p>
 <p> <code>struct Barcode_Item *Barcode_Create(char *</code><i>text</i><code>);</code><br />

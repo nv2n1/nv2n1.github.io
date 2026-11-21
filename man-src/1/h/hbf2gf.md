@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hbf2gf/"
 description: "hbf2gf – convert a CJK bitmap font into subfonts usable by TeX and Omega."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hbf2gf &#8211; convert a CJK bitmap font into subfonts usable by TeX and Omega. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hbf2gf</code> [<code>-q</code>] <i>configuration-file</i>[<i>.cfg</i>]<br />
  <code>hbf2gf</code> [<code>-q</code>] [<code>-p</code>] [<code>-g</code>] [<code>-n</code>] <i>subfont-name x-resolution</i> [<i>y-scale</i>&nbsp;|<i>&nbsp;y-resolution</i>]<br />

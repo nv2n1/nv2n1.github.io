@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-documents/"
 description: "flatpak-documents – List exported files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-documents &#8211; List exported files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak documents</code> [OPTION&#8230;] [APPID]</dt></dl>

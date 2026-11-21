@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_strip/"
 description: "dh_strip – strip executables, shared libraries, and some static libraries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_strip &#8211; strip executables, shared libraries, and some static libraries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_strip</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>&#8211;dbg-package=</code><i>package</i>] [<code>&#8211;keep-debug</code>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ctrsna/"
 description: "ctrsna.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctrsna.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrsna</code> (JOB, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, S, SEP, MM, M, WORK, LDWORK, RWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcolmerge/"
 description: "dbcolmerge – merge multiple columns into one"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcolmerge &#8211; merge multiple columns into one </p>
 <h2>SYNOPSIS</h2>
 <p> dbcolmerge [-C ElementSeparator] [columns&#8230;]</p>
 <h2>DESCRIPTION</h2>

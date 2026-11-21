@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-mktag/"
 description: "git-mktag – Creates a tag object with extra validation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-mktag &#8211; Creates a tag object with extra validation </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git mktag</i>

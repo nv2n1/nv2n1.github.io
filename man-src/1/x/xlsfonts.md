@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xlsfonts/"
 description: "xlsfonts – server font list displayer for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xlsfonts &#8211; server font list displayer for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xlsfonts</code> [<code>-display host:dpy</code>] [<code>-l</code>] [<code>-ll</code>] [<code>-lll</code>] [<code>-m</code>] [<code>-C</code>] [<code>-1</code>] [<code>-w width</code>] [<code>-n columns</code>] [<code>-u</code>] [<code>-o</code>] [<code>-fn pattern</code>] [<code>-v</code>]</p>
 <h2>DESCRIPTION</h2>

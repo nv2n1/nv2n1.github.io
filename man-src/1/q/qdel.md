@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qdel/"
 description: "qdel – delete xxQS_NAMExx jobs from queues"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qdel &#8211; delete xxQS_NAMExx jobs from queues </p>
 <h2>SYNTAX</h2>
 <p> <code>qdel</code> [<code>-f</code>] [<code>-help</code>] [<code>-u</code> <i>wc_user_list</i>] [<i>wc_job_range_list</i>] [<code>-t</code> <i>task_id_range</i>]</p>
 <h2>DESCRIPTION</h2>

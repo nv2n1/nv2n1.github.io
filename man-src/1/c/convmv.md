@@ -6,8 +6,6 @@ letter: "c"
 url: "/docs/linux/man/1-convmv/"
 description: "convmv – converts filenames from one encoding to another"
 ---
-<h2 class="name">NAME</h2>
-<p> convmv - converts filenames from one encoding to another </p>
 <h2>SYNOPSIS</h2>
 <p> <code>convmv</code> [<code>options</code>] <font SIZE="-1">FILE</font>(S) ... <font SIZE="-1">DIRECTORY</font>(S)  </p>
 <h2>OPTIONS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-glob/"
 description: "glob, globfree – find pathnames matching a pattern, free memory from glob()"
 ---
 
-<h2 class="name">NAME</h2>
-<p> glob, globfree &#8211; find pathnames matching a pattern, free memory from glob() </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;glob.h&gt;

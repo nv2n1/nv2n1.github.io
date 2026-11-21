@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-askmara/"
 description: "askmara – do simple dns queries"
 ---
 
-<h2 class="name">NAME</h2>
-<p> askmara &#8211; do simple dns queries </p>
 <h2>DESCRIPTION</h2>
 <p> <code>askmara</code> queries the user-specified dns server for records, and outputs the reply in a csv2-compatible format (csv2 is the format of zone files that <code>maradns</code> uses).</p>
 <h2>USAGE</h2>

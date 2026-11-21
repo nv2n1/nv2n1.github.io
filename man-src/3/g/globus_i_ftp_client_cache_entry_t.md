@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_i_ftp_client_cache_entry_t/"
 description: "globus_i_ftp_client_cache_entry_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_i_ftp_client_cache_entry_t &#8211; </p>
 <p> URL caching support structure.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;globus_i_ftp_client.h&gt;</p>

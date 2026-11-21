@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-krb5_cksumtype_to_enctype/"
 description: "Heimdal Kerberos 5 cryptography functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Heimdal Kerberos 5 cryptography functions &#8211; </p>
 <h3>Functions</h3>
 <p> HEIMDAL_WARN_UNUSED_RESULT_ATTRIBUTE<br />
  KRB5_LIB_FUNCTION<br />

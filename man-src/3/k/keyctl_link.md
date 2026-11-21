@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_link/"
 description: "keyctl_link – Link a key to a keyring keyctl_unlink – Unlink a key from a keyring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_link &#8211; Link a key to a keyring keyctl_unlink &#8211; Unlink a key from a keyring </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

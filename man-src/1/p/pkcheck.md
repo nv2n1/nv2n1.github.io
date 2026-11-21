@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pkcheck/"
 description: "pkcheck – Check whether a process is authorized"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pkcheck &#8211; Check whether a process is authorized </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkcheck</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt>

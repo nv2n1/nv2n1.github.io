@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cxxtestgen/"
 description: "cxxtestgen – performs test discovery to create a CxxTest test runner"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cxxtestgen &#8211; performs test discovery to create a CxxTest test runner </p>
 <h2>SYNOPSIS</h2>
 <p> cxxtestgen [options] [&lt;filename&gt; &#8230;]</p>
 <h2>DESCRIPTION</h2>

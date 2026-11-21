@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tinyca2/"
 description: "tinyca2 – Very simple Certification Authority"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tinyca2 &#8211; Very simple Certification Authority </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tinyca2</code></p>
 <h2>DESCRIPTION</h2>

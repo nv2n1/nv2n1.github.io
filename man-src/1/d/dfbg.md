@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dfbg/"
 description: "dfbg – DirectFB background configuration tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dfbg &#8211; DirectFB background configuration tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dfbg</code> [<i>options</i>] &lt;<i>filename</i>&gt;|&lt;color&gt; </p>
 <h2>DESCRIPTION</h2>

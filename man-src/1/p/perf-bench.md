@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-bench/"
 description: "perf-bench – General framework for benchmark suites"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-bench &#8211; General framework for benchmark suites </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf bench[&lt;common options&gt;]&lt;subsystem&gt;&lt;suite&gt;[&lt;options&gt;]

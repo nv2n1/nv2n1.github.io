@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nitrocli/"
 description: "nitrocli – access Nitrokey devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nitrocli &#8211; access Nitrokey devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nitrocli</code> <i>command</i> [<i>arguments</i>]</p>
 <h2>DESCRIPTION</h2>

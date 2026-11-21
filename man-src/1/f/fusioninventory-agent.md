@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fusioninventory-agent/"
 description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Windows and MacOSX"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fusioninventory-agent &#8211; FusionInventory agent For Linux/UNIX, Windows and MacOSX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fusioninventory-agent</code> [options] [&#8211;server server|&#8211;local path] </p>
 <pre><code>

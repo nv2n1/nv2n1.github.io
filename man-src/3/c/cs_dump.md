@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cs_dump/"
 description: "cs_dump – dump the cs parse tree"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cs_dump &#8211; dump the cs parse tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;

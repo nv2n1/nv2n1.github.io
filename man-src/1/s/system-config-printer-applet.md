@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-system-config-printer-applet/"
 description: "system-config-printer-applet – print job manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> system-config-printer-applet &#8211; print job manager </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>system-config-printer-applet</code> [&#8211;help] [&#8211;version] [&#8211;debug]</dt></dl>

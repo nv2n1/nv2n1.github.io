@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pedigree/"
 description: "pedigree – create a TeX file for pedigree from a csv file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pedigree &#8211; create a TeX file for pedigree from a csv file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pedigree</code> [-c <i>configuration_file</i>] [-d] [-o <i>output_file</i>] [-s <i>start_id</i>] <i>input_file</i> </p>
 <p> <code>pedigree</code> -v</p>

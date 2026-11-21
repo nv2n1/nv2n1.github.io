@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gorbd/"
 description: "gorbd – – An object request broker daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gorbd &#8211; &#8211; An object request broker daemon </p>
 <h2>SYNOPSIS</h2>
 <p> gorbd &#8230;</p>
 <h2>DESCRIPTION</h2>

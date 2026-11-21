@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-daala_comment/"
 description: "daala_comment –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> daala_comment &#8211; </p>
 <p> The comment information.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>

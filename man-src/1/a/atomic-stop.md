@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-atomic-stop/"
 description: "atomic-stop – Execute container image stop method"
 ---
 
-<h2 class="name">NAME</h2>
-<p> atomic-stop &#8211; Execute container image stop method </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic stop</code> [<code>-h</code>|<code>&#8211;help</code>] container [ARG&#8230;] </p>
 <h2>DESCRIPTION</h2>

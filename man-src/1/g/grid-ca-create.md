@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grid-ca-create/"
 description: "grid-ca-create – Create a CA to sign certificates for use on a grid"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grid-ca-create &#8211; Create a CA to sign certificates for use on a grid </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-ca-create</code> [ -h | -help | -usage | -version | -versions ] [ -openssl-help] </p>
 <p> <code>grid-ca-create</code> [ OPTIONS ] [ OPENSSL-OPTIONS ]</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grmiregistry/"
 description: "grmiregistry – – Remote object registry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grmiregistry &#8211; &#8211; Remote object registry </p>
 <h2>SYNOPSIS</h2>
 <p> grmiregistry [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>PORT</i></font><i></i></p>
 <h2>DESCRIPTION</h2>

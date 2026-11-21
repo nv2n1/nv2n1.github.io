@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtoyuvsplit/"
 description: "ppmtoyuvsplit – convert a portable pixmap into 3 subsampled raw YUV files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtoyuvsplit &#8211; convert a portable pixmap into 3 subsampled raw YUV files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoyuvsplit</code> <i>basename</i> [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

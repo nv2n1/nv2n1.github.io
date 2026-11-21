@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-htmerge/"
 description: "htmerge – create document index and word database for the ht://Dig search engine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> htmerge &#8211; create document index and word database for the ht://Dig search engine </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htmerge</code> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>

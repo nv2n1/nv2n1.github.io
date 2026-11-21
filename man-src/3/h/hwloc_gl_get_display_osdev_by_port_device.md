@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_gl_get_display_osdev_by_port_device/"
 description: "hwlocality_gl – Interoperability with OpenGL displays"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_gl &#8211; Interoperability with OpenGL displays </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_gl_get_display_osdev_by_port_device</code> (<code>hwloc_topology_t</code> topology, unsigned port, unsigned device) </p>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_gl_get_display_osdev_by_name</code> (<code>hwloc_topology_t</code> topology, const char *name) </p>

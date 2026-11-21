@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-container-update/"
 description: "docker-container-update – Update configuration of one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-container-update &#8211; Update configuration of one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container update [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

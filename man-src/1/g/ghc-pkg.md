@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ghc-pkg/"
 description: "ghc-pkg – GHC Haskell Cabal package manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ghc-pkg &#8211; GHC Haskell Cabal package manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ghc-pkg</code> <i>action</i> [<i>OPTION</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

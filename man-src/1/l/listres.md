@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-listres/"
 description: "listres – list resources in widgets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> listres &#8211; list resources in widgets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>listres</code> [-option &#8230;]</p>
 <h2>DESCRIPTION</h2>

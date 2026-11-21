@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-signver/"
 description: "signver – Verify a detached PKCS#7 signature for a file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> signver &#8211; Verify a detached PKCS#7 signature for a file. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>signtool</code> -A | -V -d&nbsp;<wbr><i>directory</i> [-a] [-i&nbsp;<wbr><i>input_file</i>] [-o&nbsp;<wbr><i>output_file</i>] [-s&nbsp;<wbr><i>signature_file</i>] [-v]</dt></dl>

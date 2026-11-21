@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slaqtr/"
 description: "slaqtr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slaqtr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqtr</code> (LTRAN, LREAL, N, T, LDT, B, W, SCALE, X, WORK, INFO)<br />

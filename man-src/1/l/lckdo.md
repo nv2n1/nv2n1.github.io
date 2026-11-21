@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lckdo/"
 description: "lckdo – run a program with a lock held"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lckdo &#8211; run a program with a lock held </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lckdo</code> [options] {lockfile} {program} [arguments]</dt></dl>

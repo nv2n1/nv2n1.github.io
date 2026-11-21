@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoptx/"
 description: "pbmtoptx – convert a portable bitmap into Printronix printer graphics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoptx &#8211; convert a portable bitmap into Printronix printer graphics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoptx</code> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

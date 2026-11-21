@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ambiguous_words/"
 description: "ambiguous_words – generate sets of words Tesseract is likely to find ambiguous"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ambiguous_words &#8211; generate sets of words Tesseract is likely to find ambiguous </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ambiguous_words</code> [-l lang] <i>TESSDATADIR</i> <i>WORDLIST</i> <i>AMBIGUOUSFILE</i></p>
 <h2>DESCRIPTION</h2>

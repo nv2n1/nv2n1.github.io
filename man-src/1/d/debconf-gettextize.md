@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-debconf-gettextize/"
 description: "debconf-gettextize – extract translations of debconf templates into PO files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> debconf-gettextize &#8211; extract translations of debconf templates into PO files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>debconf-gettextize</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>&#8211;choices</code>] [<code>&#8211;merge</code>] <i>master</i> [<i>master</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

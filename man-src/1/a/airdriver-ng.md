@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airdriver-ng/"
 description: "airdriver-ng – automatically install/uninstall and patch drivers and 802.11 stacks"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airdriver-ng &#8211; automatically install/uninstall and patch drivers and 802.11 stacks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>airdriver-ng</code> &lt;command&gt; [drivernumber]</p>
 <h2>DESCRIPTION</h2>

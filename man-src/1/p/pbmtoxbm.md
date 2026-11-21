@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtoxbm/"
 description: "pbmtoxbm – convert a portable bitmap into an X11 bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtoxbm &#8211; convert a portable bitmap into an X11 bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtoxbm</code> [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

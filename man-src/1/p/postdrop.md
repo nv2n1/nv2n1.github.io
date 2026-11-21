@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-postdrop/"
 description: "postdrop – Postfix mail posting utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> postdrop &#8211; Postfix mail posting utility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 postdrop[-rv][-c config_dir]

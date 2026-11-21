@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vstp/"
 description: "vstpg, vstpp – VisioBraille file transferring"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vstpg, vstpp &#8211; VisioBraille file transferring </p>
 <h2>SYNOPSIS</h2>
 <p> vstpg [-ifbnd] [-s <i>socketport</i>] [-k <i>keyname</i>] [-o <i>configname</i>] file &#8230;</p>
 <h2>DESCRIPTION</h2>

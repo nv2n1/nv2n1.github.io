@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_proto_request_ready/"
 description: "Protocol Modules –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Protocol Modules &#8211; </p>
 <p> Protocol Implementation API.</p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_gass_transfer_request_proto_s</code><br />

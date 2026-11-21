@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getw/"
 description: "getw, putw – input and output of words (ints)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getw, putw &#8211; input and output of words (ints) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;

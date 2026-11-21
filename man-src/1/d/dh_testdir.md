@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_testdir/"
 description: "dh_testdir – test directory before building Debian package"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_testdir &#8211; test directory before building Debian package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_testdir</code> [<i>debhelper options</i>] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

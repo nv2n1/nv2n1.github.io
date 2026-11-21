@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-clangd-14/"
 description: "clangd – manual page for clangd 14"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clangd &#8211; manual page for clangd 14 </p>
 <h2>DESCRIPTION</h2>
 <p> OVERVIEW: clangd is a language server that provides IDE-like features to editors.</p>
 <h3>It should be used via an editor plugin rather than invoked directly. For more information, see:</h3>

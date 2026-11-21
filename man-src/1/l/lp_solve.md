@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lp_solve/"
 description: "lp_solve – a mixed integer linear programming (MILP) solver"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lp_solve &#8211; a mixed integer linear programming (MILP) solver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lp_solve</code> [<i>options</i>] [<i>input file</i>]</p>
 <h2>DESCRIPTION</h2>

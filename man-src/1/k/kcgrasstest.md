@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kcgrasstest/"
 description: "kcgrasstest – command line interface to test the cache tree database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kcgrasstest &#8211; command line interface to test the cache tree database</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>kcgrasstest</code>&#8216; is a utility for facility test and performance test of the cache tree database. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>

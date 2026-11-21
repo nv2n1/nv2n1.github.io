@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-sync/"
 description: "stg-sync – Synchronise patches with a branch or a series"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-sync &#8211; Synchronise patches with a branch or a series </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg sync[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]

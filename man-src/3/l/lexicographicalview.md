@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lexicographicalview/"
 description: "ql/math/lexicographicalview.hpp – Lexicographical 2-D view of a contiguous set of data."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/lexicographicalview.hpp &#8211; Lexicographical 2-D view of a contiguous set of data. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/utilities/steppingiterator.hpp&gt;<br />
  #include &lt;boost/iterator/reverse_iterator.hpp&gt; </p>

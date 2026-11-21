@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlebcdic/"
 description: "perlebcdic – Considerations for running Perl on EBCDIC platforms"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlebcdic &#8211; Considerations for running Perl on EBCDIC platforms </p>
 <h2>DESCRIPTION</h2>
 <p> An exploration of some of the issues facing Perl programmers on <font SIZE="-1">EBCDIC</font> based computers. </p>
 <p> Portions of this document that are still incomplete are marked with <font SIZE="-1">XXX.</font> </p>

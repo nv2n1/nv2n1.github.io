@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtvtoppm/"
 description: "mtvtoppm – convert output from the MTV or PRT ray tracers into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mtvtoppm &#8211; convert output from the MTV or PRT ray tracers into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtvtoppm</code> [<i>mtvfile</i>]</p>
 <h2>DESCRIPTION</h2>

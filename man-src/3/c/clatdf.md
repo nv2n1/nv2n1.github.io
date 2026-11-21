@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-clatdf/"
 description: "clatdf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clatdf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clatdf</code> (IJOB, N, Z, LDZ, RHS, RDSUM, RDSCAL, IPIV, JPIV)<br />

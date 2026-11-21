@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtoterm/"
 description: "ppmtoterm – convert a PPM image to a ANSI ISO 6429 ascii image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtoterm &#8211; convert a PPM image to a ANSI ISO 6429 ascii image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoterm</code> </p>
 <p> [<i>ppmfile</i>] </p>

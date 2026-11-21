@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cxpm/"
 description: "cxpm – Check an XPM (X PixMap) file, versions XPM 1, 2, or 3."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cxpm &#8211; Check an XPM (X PixMap) file, versions XPM 1, 2, or 3. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cxpm</code> [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

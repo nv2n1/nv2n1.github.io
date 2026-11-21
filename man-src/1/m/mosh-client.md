@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mosh-client/"
 description: "mosh-client – client-side helper for mosh"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mosh-client &#8211; client-side helper for mosh </p>
 <h2>SYNOPSIS</h2>
 <p> MOSH_KEY=KEY <code>mosh-client </code> IP PORT<br />
  <code>mosh-client </code> -c </p>

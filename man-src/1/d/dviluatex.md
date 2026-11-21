@@ -6,8 +6,6 @@ letter: "d"
 url: "/docs/linux/man/1-dviluatex/"
 description: "luatex, dviluatex, luahbtex, luajittex, texlua, texluac – An extended version of TeX using Lua as an embedded scripting language"
 ---
-<h2 class="name">NAME</h2>
-<p> luatex, dviluatex, luahbtex, luajittex, texlua, texluac - An extended version of TeX using Lua as an embedded scripting language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... [<i>TEXNAME</i>[<i></i><code>.tex</code>]] [<i>COMMANDS</i>] <br />
  <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... <code>\</code><i>FIRST-LINE</i> <br />

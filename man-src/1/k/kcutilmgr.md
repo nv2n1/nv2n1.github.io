@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-kcutilmgr/"
 description: "kcutilmgr – command line interface of miscellaneous utilities"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kcutilmgr &#8211; command line interface of miscellaneous utilities</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>kcutilmgr</code>&#8216; is a tool of miscellaneous utilities, and to show the configuration. This command is used in the following format. `<i>file</i>&#8216; specifies a input file. If it is omitted, the standard input is read. If it begins with &quot;@&quot;, the trailing substring is treated as the input. `<i>pattern</i>&#8216; specifies an matching pattern. </p>
 <dl>

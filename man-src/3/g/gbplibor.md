@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gbplibor/"
 description: "ql/indexes/ibor/gbplibor.hpp – GBP LIBOR rate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/indexes/ibor/gbplibor.hpp &#8211; GBP LIBOR rate </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br />
  #include &lt;ql/time/calendars/unitedkingdom.hpp&gt;<br />

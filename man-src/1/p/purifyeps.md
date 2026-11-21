@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-purifyeps/"
 description: "purifyeps – make an Encapsulated PostScript file work with both dvips and pdflatex"
 ---
 
-<h2 class="name">NAME</h2>
-<p> purifyeps &#8211; make an Encapsulated PostScript file work with both dvips and pdflatex </p>
 <h2>SYNOPSIS</h2>
 <p> purifyeps <code>&#8211;help</code> </p>
 <p> purifyeps <code>&#8211;version</code> </p>

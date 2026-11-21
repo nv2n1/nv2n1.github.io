@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sgeqp3/"
 description: "sgeqp3.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgeqp3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgeqp3</code> (M, N, A, LDA, JPVT, TAU, WORK, LWORK, INFO)<br />

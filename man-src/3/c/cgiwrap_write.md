@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgiwrap_write/"
 description: "cgiwrap_write – wrapper for the fwrite(stdout)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgiwrap_write &#8211; wrapper for the fwrite(stdout) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgiwrap.h&gt;

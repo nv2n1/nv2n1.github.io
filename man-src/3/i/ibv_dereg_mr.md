@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ibv_dereg_mr/"
 description: "ibv_reg_mr, ibv_reg_mr_iova, ibv_dereg_mr – register or deregister a memory region (MR)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_reg_mr, ibv_reg_mr_iova, ibv_dereg_mr &#8211; register or deregister a memory region (MR) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;

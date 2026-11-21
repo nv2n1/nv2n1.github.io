@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-appres/"
 description: "appres – list X application resource database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> appres &#8211; list X application resource database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>appres</code> [class [instance]] [-1] [-V] [toolkitoptions]</p>
 <h2>DESCRIPTION</h2>

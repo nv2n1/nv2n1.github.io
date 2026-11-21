@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arp-fingerprint/"
 description: "arp-fingerprint – Fingerprint a system using ARP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arp-fingerprint &#8211; Fingerprint a system using ARP </p>
 <h2>SYNOPSIS</h2>
 <p> <code>arp-fingerprint</code> [<i>options</i>] <i>target</i> </p>
 <p> The target should be specified as a single IP address or hostname. You cannot specify multiple targets, IP networks or ranges. </p>

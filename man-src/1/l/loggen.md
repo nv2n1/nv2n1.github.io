@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-loggen/"
 description: "loggen – Generate syslog messages at a specified rate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> loggen &#8211; Generate syslog messages at a specified rate </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>loggen</code> [options]<code>target</code> [port]</dt></dl>

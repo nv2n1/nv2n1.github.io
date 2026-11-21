@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtx-babel/"
 description: "mtx-babel – Babel Input To UTF Conversion"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtx-babel &#8211; Babel Input To UTF Conversion </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script babel [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>

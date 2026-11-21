@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libmaketmpfilefd/"
 description: "pm_make_tmpfile_fd() – create a temporary named file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pm_make_tmpfile_fd() &#8211; create a temporary named file</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netpbm/pm.h&gt;

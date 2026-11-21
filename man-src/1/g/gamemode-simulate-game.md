@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gamemode-simulate-game/"
 description: "gamemode-simulate-game – simulate a game using gamemode"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gamemode-simulate-game &#8211; simulate a game using gamemode </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gamemode-simulate-game</code></p>
 <h2>DESCRIPTION</h2>

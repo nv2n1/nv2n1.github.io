@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtstemplate/"
 description: "gtstemplate – generates of a template used to create new object classes."
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtstemplate &#8211; generates of a template used to create new object classes.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtstemplate</code> [<i>OPTIONS</i>]&nbsp;[<i>LIBRARIES</i>] </p>
 <h2>DESCRIPTION</h2>

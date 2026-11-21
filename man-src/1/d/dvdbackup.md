@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvdbackup/"
 description: "dvdbackup – Tool to backup DVDs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvdbackup &#8211; Tool to backup DVDs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvdbackup</code> [<i>OPTION</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

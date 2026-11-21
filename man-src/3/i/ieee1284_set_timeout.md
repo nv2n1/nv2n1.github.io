@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ieee1284_set_timeout/"
 description: "ieee1284_set_timeout – modify inactivity timeout"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ieee1284_set_timeout &#8211; modify inactivity timeout </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;

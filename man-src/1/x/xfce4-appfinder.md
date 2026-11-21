@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfce4-appfinder/"
 description: "xfce4-appfinder – Xfce 4 Appfinder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfce4-appfinder &#8211; Xfce 4 Appfinder </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-appfinder [OPTION&#8230;]</code></p>
 <h2>DESCRIPTION</h2>

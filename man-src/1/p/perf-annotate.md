@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-annotate/"
 description: "perf-annotate – Read perf.data (created by perf record) and display annotated code"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-annotate &#8211; Read perf.data (created by perf record) and display annotated code </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf annotate[-i&lt;file&gt; | --input = file][symbol_name]

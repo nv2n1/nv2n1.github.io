@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqldbcompare/"
 description: "mysqldbcompare – Compare Two Databases and Identify Differences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqldbcompare &#8211; Compare Two Databases and Identify Differences </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldbcompare [</code><i>options</i><code>] </code><i>db1</i><code> [</code><i>:db2</i><code>] &#8230;</code></dt></dl>

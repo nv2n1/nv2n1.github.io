@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ffmpeg-bitstream-filters/"
 description: "ffmpeg-bitstream-filters – FFmpeg bitstream filters"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ffmpeg-bitstream-filters &#8211; FFmpeg bitstream filters </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes the bitstream filters provided by the libavcodec library. </p>
 <p> A bitstream filter operates on the encoded stream data, and performs bitstream level modifications without performing decoding.</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cadlibor/"
 description: "ql/indexes/ibor/cadlibor.hpp – CAD LIBOR rate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/indexes/ibor/cadlibor.hpp &#8211; CAD LIBOR rate </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br />
  #include &lt;ql/time/calendars/canada.hpp&gt;<br />

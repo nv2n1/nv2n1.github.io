@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-read/"
 description: "read – read from a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> read &#8211; read from a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

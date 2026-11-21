@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmrainbow/"
 description: "ppmrainbow – Generate a rainbow"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmrainbow &#8211; Generate a rainbow</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmrainbow</code> [<code>-width=</code><i>number</i>] [<code>-height=</code><i>number</i>]<br />
  [<code>-tmpdir=</code><i>directory</i>] [<code>-verbose</code>] <i>color</i> &#8230; </p>

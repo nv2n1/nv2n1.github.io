@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-spix/"
 description: "spix – Compile a .tex file, executing commands that are set inside the file itself."
 ---
 
-<h2 class="name">NAME</h2>
-<p> spix &#8211; Compile a .tex file, executing commands that are set inside the file itself. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spix</code> [<code>&#8211;version</code>] [<code>-h</code>] [<code>-n</code>] <i>file</i></p>
 <h2>DESCRIPTION</h2>

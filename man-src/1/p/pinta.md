@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pinta/"
 description: "Pinta – simple image editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Pinta &#8211; simple image editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pinta</code> <i>[&lt;file_name&gt;]</i></p>
 <h2>DESCRIPTION</h2>

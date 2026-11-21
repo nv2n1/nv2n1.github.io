@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installdocs/"
 description: "dh_installdocs – install documentation into package build directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installdocs &#8211; install documentation into package build directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installdocs</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-X</code><i>item</i>] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

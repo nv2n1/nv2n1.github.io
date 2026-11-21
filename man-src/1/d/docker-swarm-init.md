@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-swarm-init/"
 description: "docker-swarm-init – Initialize a swarm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-swarm-init &#8211; Initialize a swarm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker swarm init [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

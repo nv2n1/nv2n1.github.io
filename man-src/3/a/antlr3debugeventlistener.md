@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3debugeventlistener/"
 description: "include/antlr3debugeventlistener.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3debugeventlistener.h &#8211; </p>
 <p> The definition of all debugging events that a recognizer can trigger.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />

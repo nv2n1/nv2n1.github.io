@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qpdfview/"
 description: "qpdfview – tabbed document viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qpdfview &#8211; tabbed document viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qpdfview</code> <i>[options] [&#8211;] [file[#page]] [file[#src:name:line:column]] &#8230;</i></p>
 <h2>DESCRIPTION</h2>

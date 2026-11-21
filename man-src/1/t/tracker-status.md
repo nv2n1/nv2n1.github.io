@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-status/"
 description: "tracker-status – Provide status and statistics on the data indexed"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-status &#8211; Provide status and statistics on the data indexed</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 tracker status

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_ftp_control_send_command/"
 description: "GridFTP Control Client –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GridFTP Control Client &#8211; </p>
 <p> Control Client.</p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_ftp_control_handle_init</code> (globus_ftp_control_handle_t *handle)<br />

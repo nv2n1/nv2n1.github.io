@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-dagent/"
 description: "zarafa-dagent – Deliver mails to Zarafa."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-dagent &#8211; Deliver mails to Zarafa. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-dagent</code> [<i>OPTION</i>&#8230;] <i>RECIPIENT</i></dt></dl>

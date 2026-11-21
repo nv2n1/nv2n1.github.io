@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hugin/"
 description: "hugin – Hugin panorama creator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hugin &#8211; Hugin panorama creator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hugin</code> <i>project_file|image files &#8230;</i></p>
 <h2>DESCRIPTION</h2>

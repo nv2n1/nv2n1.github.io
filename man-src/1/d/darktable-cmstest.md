@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-darktable-cmstest/"
 description: "darktable-cmstest – test if the color management subsystem of your computer is correctly configured"
 ---
 
-<h2 class="name">NAME</h2>
-<p> darktable-cmstest &#8211; test if the color management subsystem of your computer is correctly configured </p>
 <h2>SYNOPSIS</h2>
 <pre>
     darktable-cmstest

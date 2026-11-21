@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatbat/"
 description: "flatbat – CCD flat-frame correction"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatbat &#8211; CCD flat-frame correction</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flatbat </code><i>[options] </i><code>flat=</code><i>file source_file &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

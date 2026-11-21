@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-imap-send/"
 description: "git-imap-send – Send a collection of patches from stdin to an IMAP folder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-imap-send &#8211; Send a collection of patches from stdin to an IMAP folder </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git imap - send[-v][-q][--[no - ] curl]

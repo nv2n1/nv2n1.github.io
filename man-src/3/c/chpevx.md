@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chpevx/"
 description: "chpevx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chpevx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpevx</code> (JOBZ, RANGE, UPLO, N, AP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo/"
 description: "cargo – The Rust package manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo &#8211; The Rust package manager </p>
 <h2>SYNOPSIS</h2>
 <p> cargo &lt;COMMAND&gt; [&lt;ARGS&gt;&#8230;]</p>
 <h2>DESCRIPTION</h2>

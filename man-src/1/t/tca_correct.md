@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tca_correct/"
 description: "tca_correct – Calculate transverse chromatic aberration"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tca_correct &#8211; Calculate transverse chromatic aberration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tca_correct</code> [options] <i>inputfile</i> </p>
 <p> &lt;inputfile&gt; is the base name of 4 image files:</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pgmtopgm/"
 description: "pgmtopgm – copy PGM image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pgmtopgm &#8211; copy PGM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmtopgm</code> </p>
 <h2>DESCRIPTION</h2>

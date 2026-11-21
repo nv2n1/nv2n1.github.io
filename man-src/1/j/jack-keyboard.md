@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jack-keyboard/"
 description: "jack-keyboard – A virtual keyboard for JACK MIDI"
 ---
 
-<h2 class="name">NAME</h2>
-<p> jack-keyboard &#8211; A virtual keyboard for JACK MIDI </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack-keyboard</code> [ <code>-C</code> ] [ <code>-G</code> ] [ <code>-K</code> ] [ <code>-T</code> ] [ <code>-V</code> ] [ <code>-a </code><i>input port</i> ] [ <code>-k</code> ] [ <code>-r </code><i>rate</i> ] [ <code>-t</code> ] [ <code>-u</code> ] [ <code>-c </code><i>channel</i> ] [ <code>-b </code><i>bank</i> ] [ <code>-p </code><i>program</i> ] [ <code>-l </code><i>layout</i> ] </p>
 <h2>OPTIONS</h2>

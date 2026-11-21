@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-crtsv/"
 description: "crtsv – mutual converter between TSV and QDBM Curia database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> crtsv &#8211; mutual converter between TSV and QDBM Curia database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>crtsv import</code> [-bnum <i>num</i>] [-dnum <i>num</i>] [-bin] <i>name</i><br />
  <code>crtsv export</code> [-bin] <i>name</i></p>

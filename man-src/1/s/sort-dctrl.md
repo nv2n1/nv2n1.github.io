@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sort-dctrl/"
 description: "sort-dctrl – sort Debian control files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sort-dctrl &#8211; sort Debian control files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sort-dctrl</code> [options] [ <i>file</i> &#8230; ] </p>
 <p> <code>sort-dctrl</code> &#8211;copying | &#8211;help | &#8211;version | -ChV</p>

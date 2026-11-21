@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-glacier2router/"
 description: "glacier2router – The Glacier2 router daemon."
 ---
 
-<h2 class="name">NAME</h2>
-<p> glacier2router &#8211; The Glacier2 router daemon.</p>
 <h2>SYNOPSIS</h2>
 <p> glacier2router [options] </p>
 <h2>DESCRIPTION</h2>

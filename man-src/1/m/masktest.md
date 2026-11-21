@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-masktest/"
 description: "masktest – Find differences in wildcard matching between Samba’s implementation and that of a remote server."
 ---
 
-<h2 class="name">NAME</h2>
-<p> masktest &#8211; Find differences in wildcard matching between Samba&#8217;s implementation and that of a remote server. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>masktest</code> {//server/share} [-U user%pass] [-d debuglevel] [-W workgroup] [-n numloops] [-s seed] [-a] [-E] [-M max protocol] [-f filechars] [-m maskchars] [-v]</dt></dl>

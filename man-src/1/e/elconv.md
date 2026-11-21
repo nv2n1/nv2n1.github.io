@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-elconv/"
 description: "elconv – conversion program for ELOG messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> elconv &#8211; conversion program for ELOG messages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>elconv</code> [ <code>-v</code> ]</p>
 <h2>DESCRIPTION</h2>

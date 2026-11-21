@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cla_porfsx_extended/"
 description: "cla_porfsx_extended.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cla_porfsx_extended.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cla_porfsx_extended</code> (PREC_TYPE, UPLO, N, NRHS, A, LDA, AF, LDAF, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />

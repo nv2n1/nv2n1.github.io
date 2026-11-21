@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-branchings_/"
 description: "QuantLib::TrinomialTree – Recombining trinomial tree class."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::TrinomialTree &#8211; Recombining trinomial tree class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/lattices/trinomialtree.hpp&gt; </p>
 <p> Inherits <code>Tree&lt; TrinomialTree &gt;</code>. </p>

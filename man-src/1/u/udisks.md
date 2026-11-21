@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-udisks/"
 description: "udisks – udisks command line tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> udisks &#8211; udisks command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>udisks</code> [<code>OPTIONS</code>]</dt></dl>

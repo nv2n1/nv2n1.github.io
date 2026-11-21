@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tor-gencert/"
 description: "tor-gencert – Generate certs and keys for Tor directory authorities"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tor-gencert &#8211; Generate certs and keys for Tor directory authorities </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tor-gencert</code> [-h|&#8211;help] [-v] [-r|&#8211;reuse] [&#8211;create-identity-key] [-i <i>id_file</i>] [-c <i>cert_file</i>] [-m <i>num</i>] [-a <i>address</i>:<i>port</i>]</p>
 <h2>DESCRIPTION</h2>

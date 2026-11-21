@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vptovf/"
 description: "vptovf – convert virtual property lists to virtual font metrics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vptovf &#8211; convert virtual property lists to virtual font metrics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vptovf</code> [<code>-verbose</code>] <i>vpl_name</i>[<i></i><code>.vpl</code>] [<i>vfm_name</i>[<i></i><code>.vf</code>] [<i>tfm_name</i>[<i></i><code>.tfm</code>]]]</p>
 <h2>DESCRIPTION</h2>

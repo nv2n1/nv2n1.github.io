@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-owner/"
 description: "cargo-owner – Manage the owners of a crate of the registry"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-owner &#8211; Manage the owners of a crate of the registry </p>
 <h2>SYNOPSIS</h2>
 <p> cargo owner [OPTIONS] [&lt;CRATE&gt;]</p>
 <h2>DESCRIPTION</h2>

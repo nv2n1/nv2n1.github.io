@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lsetfilecon_raw/"
 description: "setfilecon, fsetfilecon, lsetfilecon – set SELinux security context of a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setfilecon, fsetfilecon, lsetfilecon &#8211; set SELinux security context of a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int setfilecon(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfconf-query/"
 description: "xfconf-query – Command line utility for xfconf system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfconf-query &#8211; Command line utility for xfconf system </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>

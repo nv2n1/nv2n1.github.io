@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mrtg-ipv6/"
 description: "mrtg-ipv6 – IPv6 support in MRTG"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mrtg-ipv6 &#8211; IPv6 support in MRTG </p>
 <h2>OVERVIEW</h2>
 <p> <font SIZE="-1">MRTG</font> and cfgmaker support <font SIZE="-1">SNMP</font> over IPv6. IPv6 targets can be specified by hostname or IPv6 address, and if the required libraries are present (see below), queries will use IPv6.</p>
 <h2>USAGE</h2>

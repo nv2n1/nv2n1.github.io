@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wminput/"
 description: "wminput – an event driver for the wiimote"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wminput &#8211; an event driver for the wiimote </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wminput</code> [<i>options</i>] </p>
 <h2>DESCRIPTION</h2>

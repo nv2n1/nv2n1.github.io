@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-movemail/"
 description: "movemail.mailutils – move messages across mailboxes."
 ---
 
-<h2 class="name">NAME</h2>
-<p> movemail.mailutils &#8211; move messages across mailboxes. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>movemail.mailutils</code> [<i>,OPTION/</i>&#8230;] <i>,inbox-url destfile /</i>[<i>,POP-password/</i>]</p>
 <h2>DESCRIPTION</h2>

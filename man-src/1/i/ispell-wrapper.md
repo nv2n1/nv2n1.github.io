@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ispell-wrapper/"
 description: "ispell-wrapper – smart wrapper for ispell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ispell-wrapper &#8211; smart wrapper for ispell </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 ispell - wrapper[--emacs = name][--language = regexp][--dry - run][ispell options] file

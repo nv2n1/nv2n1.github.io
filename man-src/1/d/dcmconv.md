@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmconv/"
 description: "dcmconv – Convert DICOM file encoding"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmconv &#8211; Convert DICOM file encoding </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmconv [options] dcmfile-in dcmfile-out

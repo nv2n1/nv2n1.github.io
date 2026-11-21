@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rst2xml/"
 description: "rst2xml – convert reST documents to XML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rst2xml &#8211; convert reST documents to XML </p>
 <h2>SYNOPSIS</h2>
 <p> rst2xml [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
 <h2>DESCRIPTION</h2>

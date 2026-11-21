@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mkimage/"
 description: "mkimage – Generate image for U-Boot"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkimage &#8211; Generate image for U-Boot </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkimage</code> -l [<code>uimage file name</code>] </p>
 <p> <code>mkimage</code> [<i>options</i>]<code> -f [</code>image tree source file<code>]</code> [<code>uimage file name</code>] </p>

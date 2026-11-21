@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtobbnbg/"
 description: "pbmtobbnbg – convert a portable bitmap into BitGraph graphics"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtobbnbg &#8211; convert a portable bitmap into BitGraph graphics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtobbnbg</code> [<i>rasterop</i>] [<i>x</i> <i>y</i>] &lt; <i>pbmfile</i></p>
 <h2>DESCRIPTION</h2>

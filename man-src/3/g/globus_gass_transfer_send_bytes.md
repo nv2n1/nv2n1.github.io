@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_send_bytes/"
 description: "Sending and Receiving Data –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Sending and Receiving Data &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_gass_transfer_bytes_callback_t</code> )(void *arg, <code>globus_gass_transfer_request_t</code> request, globus_byte_t *bytes, globus_size_t length, globus_bool_t last_data) </p>
 <h3>Functions</h3>

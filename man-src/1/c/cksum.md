@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cksum/"
 description: "cksum – checksum and count the bytes in a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cksum &#8211; checksum and count the bytes in a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cksum</code> [<i>,FILE/</i>]&#8230;<br />
  <code>cksum</code> [<i>,OPTION/</i>]</p>

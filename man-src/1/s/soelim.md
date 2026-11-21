@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-soelim/"
 description: "soelim – interpret .so requests in groff input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> soelim &#8211; interpret .so requests in groff input </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-Crtv</code> ] [ <code>-I </code><i>dir</i> ] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

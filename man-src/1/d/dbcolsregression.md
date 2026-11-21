@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbcolsregression/"
 description: "dbcolsregression – compute linear regression between two columns"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbcolsregression &#8211; compute linear regression between two columns </p>
 <h2>SYNOPSIS</h2>
 <pre>
     dbcolsregression  [-a] column1 column2

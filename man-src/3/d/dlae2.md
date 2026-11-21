@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlae2/"
 description: "dlae2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlae2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlae2</code> (A, B, C, RT1, RT2)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pic2tpic/"
 description: "pic2tpic – Convert pic files to tpic format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pic2tpic &#8211; Convert pic files to tpic format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pic2tpic</code> [ files ] </p>
 <h2>DESCRIPTION</h2>

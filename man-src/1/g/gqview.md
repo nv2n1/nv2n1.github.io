@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gqview/"
 description: "GQview – GTK based multiformat image viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> GQview &#8211; GTK based multiformat image viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gqview</code> [<i>options</i>] [<i>path</i>] </p>
 <h2>DESCRIPTION</h2>

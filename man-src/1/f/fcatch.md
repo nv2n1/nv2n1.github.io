@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fcatch/"
 description: "fcatch – print a stack back-trace of a program as it crashes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fcatch &#8211; print a stack back-trace of a program as it crashes </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fcatch</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; }</dt></dl>

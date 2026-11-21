@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ninja/"
 description: "ninja – small build system closest in spirit to Make"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ninja &#8211; small build system closest in spirit to Make </p>
 <h2>DESCRIPTION</h2>
 <p> usage: ninja [options] [targets&#8230;] </p>
 <p> if targets are unspecified, builds the &#8216;default&#8217; target (see manual).</p>

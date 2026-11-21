@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-unix2dos/"
 description: "dos2unix – DOS/Mac to Unix and vice versa text file format converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dos2unix &#8211; DOS/Mac to Unix and vice versa text file format converter </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 dos2unix[options][FILE...][-n INFILE OUTFILE...] unix2dos[options][FILE...][-n INFILE OUTFILE...]

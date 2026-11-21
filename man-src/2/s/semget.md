@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-semget/"
 description: "semget – get a System V semaphore set identifier"
 ---
 
-<h2 class="name">NAME</h2>
-<p> semget &#8211; get a System V semaphore set identifier </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;

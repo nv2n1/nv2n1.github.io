@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xkbcomp/"
 description: "xkbcomp – compile XKB keyboard description"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xkbcomp &#8211; compile XKB keyboard description </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xkbcomp</code> [option] source [ destination ]</p>
 <h2>DESCRIPTION</h2>

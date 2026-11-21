@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fix-qdf/"
 description: "fix-qdf – repair PDF files in QDF form after editing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fix-qdf &#8211; repair PDF files in QDF form after editing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fix-qdf</code> &lt; <i>infilename</i> &gt; <i>outfilename</i></p>
 <h2>DESCRIPTION</h2>

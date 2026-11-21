@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-osage/"
 description: "osage – filter for drawing clustered graphs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> osage &#8211; filter for drawing clustered graphs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>osage</code> [<code>&#8211;</code>(<code>G</code>|<code>N</code>|<code>E</code>)<i>name=value</i>] [<code>-T</code><i>lang</i>] [<code>-l</code><i>libfile</i>] [<code>-o</code><i>outfile</i>] [<code>-O</code>] [<code>-P</code>] [<code>-v</code>] [<code>-V</code>] [files]</p>
 <h2>DESCRIPTION</h2>

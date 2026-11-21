@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dvisvgm/"
 description: "dvisvgm – converts DVI and EPS files to the XML-based SVG format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dvisvgm &#8211; converts DVI and EPS files to the XML-based SVG format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvisvgm</code> [<i>options</i>] <i>file</i>[.dvi] </p>
 <p> <code>dvisvgm</code> &#8211;eps [<i>options</i>] <i>file1</i>[.eps] <i>file2</i>[.eps] &#8230; </p>

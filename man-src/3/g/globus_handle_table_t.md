@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_handle_table_t/"
 description: "globus_handle_table.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_handle_table.h &#8211; </p>
 <p> Handle Table for Reference Counting Data.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_types.h&#8217; </p>

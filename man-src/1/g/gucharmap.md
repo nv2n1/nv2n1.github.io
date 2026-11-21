@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gucharmap/"
 description: "gucharmap – Unicode character picker and font browser"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gucharmap &#8211; Unicode character picker and font browser </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gucharmap</code> [<i>OPTION&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

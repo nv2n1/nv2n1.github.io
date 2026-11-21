@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cfgmaker/"
 description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cfgmaker &#8211; Creates mrtg.cfg files (for mrtg-2.17.4) </p>
 <h2>SYNOPSIS</h2>
 <p> cfgmaker [options] [community@]router [[options] [community@]router &#8230;]</p>
 <h2>OPTIONS</h2>

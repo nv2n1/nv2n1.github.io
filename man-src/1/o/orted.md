@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-orted/"
 description: "orted – Start an Open RTE User-Level Daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> orted &#8211; Start an Open RTE User-Level Daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>orted [options]</code></p>
 <h2>DESCRIPTION</h2>

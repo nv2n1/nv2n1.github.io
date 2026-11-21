@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-simfqt-config/"
 description: "simfqt-config –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> simfqt-config &#8211; </p>
 <pre>
     Configuration Script for the C++ Simulated Fare Quote System Library
 </pre>

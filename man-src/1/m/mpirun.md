@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mpirun/"
 description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in Open MPI. oshrun, shmemrun – Execute serial and parallel jobs in Open SHMEM."
 ---
 
-<h2 class="name">NAME</h2>
-<p> orterun, mpirun, mpiexec &#8211; Execute serial and parallel jobs in Open MPI. oshrun, shmemrun &#8211; Execute serial and parallel jobs in Open SHMEM. </p>
 <p> <code>Note:</code> <i>mpirun</i>, <i>mpiexec</i>, and <i>orterun</i> are all synonyms for each other as well as <i>oshrun</i>, <i>shmemrun</i> in case Open SHMEM is installed. Using any of the names will produce the same behavior. </p>
 <h2>SYNOPSIS</h2>
 <p> Single Process Multiple Data (SPMD) Model: </p>

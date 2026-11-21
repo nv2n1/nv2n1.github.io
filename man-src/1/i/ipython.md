@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ipython/"
 description: "ipython – Tools for Interactive Computing in Python."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ipython &#8211; Tools for Interactive Computing in Python. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipython</code> [<i>options</i>]<i> files</i>&#8230; </p>
 <p> <code>ipython subcommand</code> [<i>options</i>]<i>&#8230;</i> </p>

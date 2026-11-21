@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmdcfont/"
 description: "ppmdcfont – Turn a Ppmdfont file into C source for a builtin font"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmdcfont &#8211; Turn a Ppmdfont file into C source for a builtin font</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmdcfont</code> </p>
 <h2>DESCRIPTION</h2>

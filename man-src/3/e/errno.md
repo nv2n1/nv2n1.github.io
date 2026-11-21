@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-errno/"
 description: "errno – number of last error"
 ---
 
-<h2 class="name">NAME</h2>
-<p> errno &#8211; number of last error </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;errno.h&gt;</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-port/"
 description: "docker-port – List port mappings for the CONTAINER, or lookup the public-facing port that is NAT-ed to the PRIVATE_PORT"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-port &#8211; List port mappings for the CONTAINER, or lookup the public-facing port that is NAT-ed to the PRIVATE_PORT </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker port</code> [<code>&#8211;help</code>] CONTAINER [PRIVATE_PORT[/PROTO]] </p>
 <h2>DESCRIPTION</h2>

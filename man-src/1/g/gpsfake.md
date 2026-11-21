@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpsfake/"
 description: "gpsfake – test harness for gpsd, simulating a GPS"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpsfake &#8211; test harness for gpsd, simulating a GPS </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsfake</code> [-1] [-h] [-b] [-f] [-c&nbsp;<wbr><i>interval</i>] [-i] [-D&nbsp;<wbr><i>debuglevel</i>] [-l] [-m&nbsp;<wbr><i>monitor</i>] [-g] [-n] [-o&nbsp;<wbr><i>options</i>] [-p] [-P&nbsp;<wbr><i>port</i>] [-r&nbsp;<wbr><i>initcmd</i>] [-s&nbsp;<wbr><i>speed</i>] [-u] [-t] [-v] [<i>logfile</i>&#8230;]</dt></dl>

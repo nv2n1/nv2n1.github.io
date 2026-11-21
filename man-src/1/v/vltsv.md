@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vltsv/"
 description: "vltsv – mutual converter between TSV and Villa database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vltsv &#8211; mutual converter between TSV and Villa database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vltsv import</code> [-bin] <i>name</i><br />
  <code>vltsv export</code> [-bin] <i>name</i></p>

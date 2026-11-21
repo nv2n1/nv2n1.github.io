@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-var/"
 description: "git-var – Show a Git logical variable"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-var &#8211; Show a Git logical variable </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git var</i> ( -l | &lt;variable&gt; )

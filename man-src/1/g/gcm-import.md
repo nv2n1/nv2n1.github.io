@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gcm-import/"
 description: "gcm-import – GNOME Color Manager Import Tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gcm-import &#8211; GNOME Color Manager Import Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcm-import</code> [ <code>&#8211;verbose</code> ] </p>
 <h2>DESCRIPTION</h2>

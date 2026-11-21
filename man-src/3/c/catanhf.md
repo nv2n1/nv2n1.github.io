@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-catanhf/"
 description: "catanh, catanhf, catanhl – complex arc tangents hyperbolic"
 ---
 
-<h2 class="name">NAME</h2>
-<p> catanh, catanhf, catanhl &#8211; complex arc tangents hyperbolic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex catanh(double complex </code><i>z</i><code>);</code><br />

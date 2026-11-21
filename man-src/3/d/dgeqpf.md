@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgeqpf/"
 description: "dgeqpf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgeqpf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, INFO)<br />

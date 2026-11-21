@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lzmainfo/"
 description: "lzmainfo – show information stored in the .lzma file header"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lzmainfo &#8211; show information stored in the .lzma file header </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lzmainfo</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<i>file&#8230;</i>]</p>
 <h2>DESCRIPTION</h2>

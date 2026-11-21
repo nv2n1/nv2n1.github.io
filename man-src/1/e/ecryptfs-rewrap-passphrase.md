@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ecryptfs-rewrap-passphrase/"
 description: "ecryptfs-rewrap-passphrase – unwrap an eCryptfs wrapped passphrase, rewrap it with a new passphrase, and write it back to file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecryptfs-rewrap-passphrase &#8211; unwrap an eCryptfs wrapped passphrase, rewrap it with a new passphrase, and write it back to file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-rewrap-passphrase [file]</code> </p>
 <p> printf &quot;%s

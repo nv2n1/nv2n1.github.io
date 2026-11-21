@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flumotion-admin/"
 description: "flumotion-admin – streaming media server administration GUI"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flumotion-admin &#8211; streaming media server administration GUI</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flumotion-admin</code> [ <code>-h</code> ] [ <code>&#8211;debug</code> <i>debug configuration</i> ] [ <code>-m</code> <i>manager</i> ] [ <code>&#8211;no-ssl</code> ] </p>
 <h2>DESCRIPTION</h2>

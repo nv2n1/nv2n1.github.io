@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installwm/"
 description: "dh_installwm – register a window manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installwm &#8211; register a window manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installwm</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;priority=</code><i>n</i>] [<i>wm</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-isc-config/"
 description: "isc-config.sh – Get information about the installed version of ISC BIND"
 ---
 
-<h2 class="name">NAME</h2>
-<p> isc-config.sh &#8211; Get information about the installed version of ISC BIND </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>isc-config.sh</code> [<code>&#8211;cflags</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;libs</code>] [<code>&#8211;prefix</code>] [<code>&#8211;version</code>] [libraries&#8230;]</dt></dl>

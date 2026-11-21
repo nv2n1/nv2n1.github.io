@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tkiptun-ng/"
 description: "tkiptun-ng – inject a few frames into a WPA TKIP network with QoS"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tkiptun-ng &#8211; inject a few frames into a WPA TKIP network with QoS </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tkiptun-ng</code> [options] &lt;replay interface&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-edgepaint/"
 description: "edgepaint – edge coloring to disambiguate crossing edges"
 ---
 
-<h2 class="name">NAME</h2>
-<p> edgepaint &#8211; edge coloring to disambiguate crossing edges </p>
 <h2>SYNOPSIS</h2>
 <p> <code>[</code> <i>options</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>files</i> ]</p>
 <h2>DESCRIPTION</h2>

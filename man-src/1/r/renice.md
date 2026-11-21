@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-renice/"
 description: "renice – alter priority of running processes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> renice &#8211; alter priority of running processes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>renice</code> [<code>-n</code>] <i>priority</i> [<code>-g</code>|<code>-p</code>|<code>-u</code>] <i>identifier</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

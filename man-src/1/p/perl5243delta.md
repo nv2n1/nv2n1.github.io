@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl5243delta/"
 description: "perl5243delta – what is new for perl v5.24.3"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl5243delta &#8211; what is new for perl v5.24.3 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.24.2 release and the 5.24.3 release. </p>
 <p> If you are upgrading from an earlier release such as 5.24.1, first read perl5242delta, which describes differences between 5.24.1 and 5.24.2.</p>

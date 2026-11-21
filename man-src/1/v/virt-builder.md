@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-builder/"
 description: "virt-builder – Build virtual machine images quickly"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-builder &#8211; Build virtual machine images quickly </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - builder os - version[-o | --output DISKIMAGE][--size SIZE][--format raw | qcow2][--arch ARCHITECTURE][--attach ISOFILE] [--chmod PERMISSIONS:FILE][--commands - from - file FILENAME] [--copy SOURCE:DEST] [--copy - in LOCALPATH:REMOTEDIR][--delete PATH] [--edit FILE:EXPR][--firstboot SCRIPT][--firstboot - command 'CMD+ARGS'][--firstboot - install PKG, PKG..][--hostname HOSTNAME][--install PKG, PKG..] [--link TARGET:LINK

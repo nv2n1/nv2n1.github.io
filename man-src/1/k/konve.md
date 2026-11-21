@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-konve/"
 description: "konve – CCD image conversion"
 ---
 
-<h2 class="name">NAME</h2>
-<p> konve &#8211; CCD image conversion</p>
 <h2>SYNOPSIS</h2>
 <p> <code>konve </code><i>[options] source_file &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

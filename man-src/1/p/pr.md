@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pr/"
 description: "pr – convert text files for printing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pr &#8211; convert text files for printing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pr</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

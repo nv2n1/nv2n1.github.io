@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-lsetxattr/"
 description: "setxattr, lsetxattr, fsetxattr – set an extended attribute value"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setxattr, lsetxattr, fsetxattr &#8211; set an extended attribute value </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;

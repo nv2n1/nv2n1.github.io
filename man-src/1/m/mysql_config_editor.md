@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysql_config_editor/"
 description: "mysql_config_editor – configure authentication information for connecting to MySQL server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysql_config_editor &#8211; configure authentication information for connecting to MySQL server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_config_editor </code><i>options command</i></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpi_shell/"
 description: "hpi_shell – An openhpi sample application that allows a user to interactively perform a number of HPI operations."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpi_shell &#8211; An openhpi sample application that allows a user to interactively perform a number of HPI operations. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpi_shell[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-e][-f&lt;file&gt;][-X][-h] hpi_shell[--domain = nn][--host = host[:port]][--cfgfile = file][--events][--cmdfile = filename][--debug][--help]

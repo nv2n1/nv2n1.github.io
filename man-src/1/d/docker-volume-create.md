@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-volume-create/"
 description: "docker-volume-create – Create a volume"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-volume-create &#8211; Create a volume </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker volume create [OPTIONS] [VOLUME]</code> </p>
 <h2>DESCRIPTION</h2>

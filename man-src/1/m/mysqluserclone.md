@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqluserclone/"
 description: "mysqluserclone – Clone Existing User to Create New User"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqluserclone &#8211; Clone Existing User to Create New User </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqluserclone [</code><i>options</i><code>] </code><i>base_user</i><i>new_user</i><code>[</code><i>:password</i><code>][</code><i>@host_name</i><code>] &#8230;</code></dt></dl>

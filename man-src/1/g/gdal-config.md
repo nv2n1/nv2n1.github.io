@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdal-config/"
 description: "gdal-config – gdal-config determines various information about a GDAL installation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdal-config &#8211; gdal-config determines various information about a GDAL installation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gdal - config[OPTIONS] Options : [--prefix[= DIR]]

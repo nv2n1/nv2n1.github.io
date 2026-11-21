@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perldebguts/"
 description: "perldebguts – Guts of Perl debugging"
 ---
-<h2 class="name">NAME</h2>
-<p> perldebguts - Guts of Perl debugging </p>
 <h2>DESCRIPTION</h2>
 <p> This is not perldebug, which tells you how to use the debugger. This manpage describes low-level details concerning the debugger&#8217;s internals, which range from difficult to impossible to understand for anyone who isn&#8217;t incredibly intimate with Perl&#8217;s guts. Caveat lector.  </p>
 <h2>Debugger Internals</h2>

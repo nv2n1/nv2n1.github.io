@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-pkcs12-cert/"
 description: "pki-pkcs12-cert – Command-Line Interface for managing individual certificates in PKCS #12 file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-pkcs12-cert &#8211; Command-Line Interface for managing individual certificates in PKCS #12 file.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] pkcs12 - cert pki[CLI options] pkcs12 - cert - find[command options] pki[CLI options] pkcs12 - cert - export&lt;nickname&gt;[command options] pki[CLI options] pkcs12 - cert - add&lt;nickanme&gt;[command options] pki[CLI options] pkcs12 - cert - mod&lt;nickname&gt;[command options] pki[CLI options] pkcs12 - cert - del&lt;nickname&gt;[command options]

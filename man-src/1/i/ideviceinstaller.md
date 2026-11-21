@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ideviceinstaller/"
 description: "ideviceinstaller – Manage iDevice apps"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ideviceinstaller &#8211; Manage iDevice apps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ideviceinstaller</code> [OPTIONS] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_revoke/"
 description: "keyctl_revoke – Revoke a key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_revoke &#8211; Revoke a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

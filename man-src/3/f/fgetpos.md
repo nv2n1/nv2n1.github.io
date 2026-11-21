@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fgetpos/"
 description: "fgetpos, fseek, fsetpos, ftell, rewind – reposition a stream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fgetpos, fseek, fsetpos, ftell, rewind &#8211; reposition a stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>
 <p> <code>int fseek(FILE *</code><i>stream</i><code>, long </code><i>offset</i><code>, int </code><i>whence</i><code>);</code> </p>

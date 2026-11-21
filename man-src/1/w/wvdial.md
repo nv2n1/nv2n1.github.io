@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wvdial/"
 description: "wvdial – PPP dialer with built-in intelligence."
 ---
 
-<h2 class="name">NAME</h2>
-<p> wvdial &#8211; PPP dialer with built-in intelligence. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wvdial</code> [ <i>OPTIONS</i> ] [ <i>SECTION</i> ] &#8230;</p>
 <h2>DESCRIPTION</h2>

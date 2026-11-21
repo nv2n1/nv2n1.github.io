@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-groff/"
 description: "groff – front-end for the groff document formatting system"
 ---
 
-<h2 class="name">NAME</h2>
-<p> groff &#8211; front-end for the groff document formatting system </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-abcegijklpstzCEGNRSUVXZ</code> ] [ <code>-d </code><i>cs</i> ] [ <code>-D </code><i>arg</i> ] [ <code>-f </code><i>fam</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-K </code><i>arg</i> ] [ <code>-L </code><i>arg</i> ] [ <code>-m </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-n </code><i>num</i> ] [ <code>-o </code><i>list</i> ] [ <code>-P </code><i>arg</i> ] [ <code>-r </code><i>cn</i> ] [ <code>-T </code><i>dev</i> ] [ <code>-w </code><i>name</i> ] [ <code>-W </code><i>name</i> ] [<i>file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> [<i>option</i> &#8230;] <code>&#8211;version</code> [<i>option</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

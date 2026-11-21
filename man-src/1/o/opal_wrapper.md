@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-opal_wrapper/"
 description: "opal_wrapper – Back-end Open MPI wrapper command"
 ---
 
-<h2 class="name">NAME</h2>
-<p> opal_wrapper &#8211; Back-end Open MPI wrapper command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opal_wrapper [options]</code></p>
 <h2>DESCRIPTION</h2>

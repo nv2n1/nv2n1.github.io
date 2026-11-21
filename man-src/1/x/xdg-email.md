@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-email/"
 description: "xdg-email – command line tool for sending mail using the user’s preferred e-mail composer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-email &#8211; command line tool for sending mail using the user&#8217;s preferred e-mail composer </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-email</code> [<code>&#8211;utf8</code>] [<code>&#8211;cc</code>&nbsp;<i>address</i>] [<code>&#8211;bcc</code>&nbsp;<i>address</i>] [<code>&#8211;subject</code>&nbsp;<i>text</i>] [<code>&#8211;body</code>&nbsp;<i>text</i>] [<code>&#8211;attach</code>&nbsp;<i>file</i>] [<i>mailto-uri</i> | <i>address(es)</i>]</dt>

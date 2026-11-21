@@ -6,8 +6,6 @@ letter: "n"
 url: "/docs/linux/man/1-nping/"
 description: "nping – Network packet generation tool / ping utility"
 ---
-<h2 class="name">NAME</h2>
-<p> nping - Network packet generation tool / ping utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>nping</code> [<i>Options</i>] {<i>targets</i>} </dt>

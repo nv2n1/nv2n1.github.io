@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-claqps/"
 description: "claqps.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> claqps.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqps</code> (M, N, OFFSET, NB, KB, A, LDA, JPVT, TAU, VN1, VN2, AUXV, F, LDF)<br />

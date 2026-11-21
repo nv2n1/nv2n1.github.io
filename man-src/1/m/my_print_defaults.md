@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-my_print_defaults/"
 description: "my_print_defaults – display options from option files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> my_print_defaults &#8211; display options from option files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>my_print_defaults [</code><i>options</i><code>] </code><i>option_group</i><code> &#8230;</code></dt></dl>

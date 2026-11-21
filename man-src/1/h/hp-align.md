@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hp-align/"
 description: "hp-align – Printer Cartridge Alignment Utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hp-align &#8211; Printer Cartridge Alignment Utility </p>
 <h2>DESCRIPTION</h2>
 <p> Cartridge alignment utility for HPLIP supported inkjet printers. (Note: Not all printers require the use of this utility).</p>
 <h2>SYNOPSIS</h2>

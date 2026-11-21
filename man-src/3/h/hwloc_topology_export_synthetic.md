@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_topology_export_synthetic/"
 description: "hwlocality_syntheticexport – Exporting Topologies to Synthetic"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_syntheticexport &#8211; Exporting Topologies to Synthetic </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_topology_export_synthetic_flags_e</code> { <code>HWLOC_TOPOLOGY_EXPORT_SYNTHETIC_FLAG_NO_EXTENDED_TYPES</code>, <code>HWLOC_TOPOLOGY_EXPORT_SYNTHETIC_FLAG_NO_ATTRS</code> } </p>
 <h3>Functions</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nytprofcsv/"
 description: "nytprofcsv – (DEPRECATED) Devel::NYTProf::Reader CSV format implementation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nytprofcsv &#8211; (DEPRECATED) Devel::NYTProf::Reader CSV format implementation </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 $ nytprofcsv[-h][-d][-o&lt;output directory&gt;][-f&lt;input file&gt;] perl - d : NYTProf some_perl_app.pl

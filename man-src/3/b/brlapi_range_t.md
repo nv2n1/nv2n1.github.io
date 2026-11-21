@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-brlapi_range_t/"
 description: "brlapi_range_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> brlapi_range_t &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;brlapi.h&gt;</p>
 <h3>Data Fields</h3>

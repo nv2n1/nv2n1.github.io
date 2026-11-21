@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-killpg/"
 description: "killpg – send signal to a process group"
 ---
 
-<h2 class="name">NAME</h2>
-<p> killpg &#8211; send signal to a process group </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>int killpg(int </code><i>pgrp</i><code>, int </code><i>sig</i><code>);</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gmake/"
 description: "make – GNU make utility to maintain groups of programs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> make &#8211; GNU make utility to maintain groups of programs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>make</code> [<i>OPTION</i>]&#8230; [<i>TARGET</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

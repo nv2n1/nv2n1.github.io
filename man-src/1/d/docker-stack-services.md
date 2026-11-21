@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-stack-services/"
 description: "docker-stack-services – List the services in the stack"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-stack-services &#8211; List the services in the stack </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stack services [OPTIONS] STACK</code> </p>
 <h2>DESCRIPTION</h2>

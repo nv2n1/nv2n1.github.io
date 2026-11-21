@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gwaei/"
 description: "gwaei – Japanese-English dictionary"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gwaei &#8211; Japanese-English dictionary </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gwaei</code> [<i>options</i>]</p>
 <h2>DESCRIPTION</h2>

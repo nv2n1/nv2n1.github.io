@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-spellintian/"
 description: "spellintian – simple spellchecker based on Lintian’s data files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> spellintian &#8211; simple spellchecker based on Lintian&#8217;s data files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spellintian</code> [<code>&#8211;picky</code>] [<i>text-file</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

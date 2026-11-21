@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-asy/"
 description: "asy – Asymptote: a script-based vector graphics language"
 ---
 
-<h2 class="name">NAME</h2>
-<p> asy &#8211; Asymptote: a script-based vector graphics language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>asy</code> [<i>options</i>] [<i>file</i>&nbsp;&#8230;]</p>
 <h2>DESCRIPTION</h2>

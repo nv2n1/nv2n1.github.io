@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shred/"
 description: "shred – overwrite a file to hide its contents, and optionally delete it"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shred &#8211; overwrite a file to hide its contents, and optionally delete it </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shred</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

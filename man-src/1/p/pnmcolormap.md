@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmcolormap/"
 description: "pnmcolormap – create quantization color map for a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmcolormap &#8211; create quantization color map for a portable anymap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmcolormap</code> [<code>-center</code>|<code>-meancolor</code>|<code>-meanpixel</code>] [<code>-spreadbrightness</code>|<code>-spreadluminosity</code>] [<code>-sort</code>] [<code>-square</code>] <i>ncolors</i>|<i></i><code>all</code> [<i>pnmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>

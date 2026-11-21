@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdtune/"
 description: "rrdtune – Modify some basic properties of a Round Robin Database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdtune &#8211; Modify some basic properties of a Round Robin Database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>tune</code> <i>filename</i> [<code>&#8211;heartbeat</code>|<code>-h</code>&nbsp;<wbr><i>ds-name</i>:<i>heartbeat</i>] [<code>&#8211;minimum</code>|<code>-i</code>&nbsp;<wbr><i>ds-name</i>:<i>min</i>] [<code>&#8211;maximum</code>|<code>-a</code>&nbsp;<wbr><i>ds-name</i>:<i>max</i>] [<code>&#8211;data-source-type</code>|<code>-d</code>&nbsp;<wbr><i>ds-name</i>:<i></i><font SIZE="-1"><i>DST</i></font><i></i>] [<code>&#8211;data-source-rename</code>|<code>-r</code>&nbsp;<wbr><i>old-name</i>:<i>new-name</i>] [<code>&#8211;deltapos</code>&nbsp;<wbr><i>scale-value</i>] [<code>&#8211;deltaneg</code>&nbsp;<wbr><i>scale-value</i>] [<code>&#8211;failure-threshold</code>&nbsp;<wbr><i>failure-threshold</i>] [<code>&#8211;window-length</code>&nbsp;<wbr><i>window-length</i>] [<code>&#8211;alpha</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;beta</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;gamma</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;gamma-deviation</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;smoothing-window</code>&nbsp;<wbr><i>fraction-of-season</i>] [<code>&#8211;smoothing-window-deviation</code>&nbsp;<wbr><i>fraction-of-season</i>] [<code>&#8211;aberrant-reset</code>&nbsp;<wbr><i>ds-name</i>]</p>
 <h2>DESCRIPTION</h2>

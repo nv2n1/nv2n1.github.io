@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hwloc_topology_restrict/"
 description: "hwlocality_tinker – Modifying a loaded Topology"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hwlocality_tinker &#8211; Modifying a loaded Topology </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_restrict_flags_e</code> { <code>HWLOC_RESTRICT_FLAG_ADAPT_DISTANCES</code>, <code>HWLOC_RESTRICT_FLAG_ADAPT_MISC</code>, <code>HWLOC_RESTRICT_FLAG_ADAPT_IO</code> } </p>
 <h3>Functions</h3>

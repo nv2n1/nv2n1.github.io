@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gsettings/"
 description: "gsettings – GSettings configuration tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gsettings &#8211; GSettings configuration tool </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gsettings</code> get <i>SCHEMA</i>&nbsp;[:<i>PATH</i>] <i>KEY</i></dt>

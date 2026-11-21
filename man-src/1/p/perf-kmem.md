@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-kmem/"
 description: "perf-kmem – Tool to trace/measure kernel memory(slab) properties"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-kmem &#8211; Tool to trace/measure kernel memory(slab) properties </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 perf kmem{record | stat}[&lt;options&gt;]

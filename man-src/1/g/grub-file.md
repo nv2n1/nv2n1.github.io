@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grub-file/"
 description: "grub-file – check file type"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grub-file &#8211; check file type </p>
 <h2>SYNOPSIS</h2>
 <p> <code>file</code> <i>,OPTIONS FILE/</i></p>
 <h2>DESCRIPTION</h2>

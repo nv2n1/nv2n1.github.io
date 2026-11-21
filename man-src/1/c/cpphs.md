@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cpphs/"
 description: "cpphs – liberalised cpp-a-like preprocessor for Haskell"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpphs &#8211; liberalised cpp-a-like preprocessor for Haskell</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpphs</code> [<i>FILENAME</i>|<i>OPTION</i>]&#8230; </p>
 <h2>DESCRIPTION</h2>

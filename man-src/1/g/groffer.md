@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-groffer/"
 description: "groffer – display groff files and man pages on X and tty"
 ---
 
-<h2 class="name">NAME</h2>
-<p> groffer &#8211; display groff files and man pages on X and tty </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>mode-option</i> &#8230; ] [<i>groff-option</i> &#8230; ] [<i>man-option</i> &#8230; ] [<i>X-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

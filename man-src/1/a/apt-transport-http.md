@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-apt-transport-http/"
 description: "apt-transport-http – APT transport for downloading via the Hypertext Transfer Protocol (HTTP)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> apt-transport-http &#8211; APT transport for downloading via the Hypertext Transfer Protocol (HTTP) </p>
 <h2>DESCRIPTION</h2>
 <p> This APT transport allows the use of repositories accessed via the Hypertext Transfer Protocol (HTTP). It is available by default and probably the most used of all transports. Note that a transport is never called directly by a user but used by APT tools based on user configuration. </p>
 <p> HTTP is an unencrypted transport protocol meaning that the whole communication with the remote server (or proxy) can be observed by a sufficiently capable attacker commonly referred to as a &quot;man in the middle&quot; (MITM). However, such an attacker can <i>not</i> modify the communication to compromise the security of your system, as APT&#8217;s data security model is independent of the chosen transport method. This is explained in detail in <code><a href="/docs/linux/man/8-apt-secure/">apt-secure</a></code>(8). An overview of available transport methods is given in <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5).</p>

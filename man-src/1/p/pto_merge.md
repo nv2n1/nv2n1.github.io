@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pto_merge/"
 description: "pto_merge – Merges two or more Hugin project files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pto_merge &#8211; Merges two or more Hugin project files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pto_merge</code> [options] <i>input1.pto</i> <i>input2.pto</i> [&#8230;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdf2dsc/"
 description: "pdf2dsc – generate a PostScript page list of a PDF document"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdf2dsc &#8211; generate a PostScript page list of a PDF document </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdf2dsc</code> <i>input.pdf</i> [ <i>output.dsc</i> ]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpsprof/"
 description: "gpsprof – profile a GPS and gpsd, plotting latency information"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpsprof &#8211; profile a GPS and gpsd, plotting latency information </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsprof</code> [-f&nbsp;<wbr><i>plot_type</i>] [-m&nbsp;<wbr><i>threshold</i>] [-n&nbsp;<wbr><i>packetcount</i>] [-t&nbsp;<wbr><i>title</i>] [-T&nbsp;<wbr><i>terminal</i>] [-d&nbsp;<wbr><i>dumpfile</i>] [-l&nbsp;<wbr><i>logfile</i>] [-r] [-D&nbsp;<wbr><i>debuglevel</i>] [-h] [[server[:port[:device]]]]</dt></dl>

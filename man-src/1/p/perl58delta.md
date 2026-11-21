@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perl58delta/"
 description: "perl58delta – what is new for perl v5.8.0"
 ---
-<h2 class="name">NAME</h2>
-<p> perl58delta - what is new for perl v5.8.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.6.0 release and the 5.8.0 release. </p>
 <p> Many of the bug fixes in 5.8.0 were already seen in the 5.6.1 maintenance release since the two releases were kept closely coordinated (while 5.8.0 was still called 5.7.something). </p>

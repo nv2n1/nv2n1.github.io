@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-libextractor-extract/"
 description: "extract – determine meta-information about a file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> extract &#8211; determine meta-information about a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>extract</code> [ <code>-abdfghLnrsvV</code> ] [ <code>-B</code> <i>language</i> ] [ <code>-H</code> <i>hash-algorithm</i> ] [ <code>-l</code> <i>library</i> ] [ <code>-p</code> <i>type</i> ] [ <code>-x</code> <i>type</i> ] <i>file</i> &#8230; </p>
 <h2>DESCRIPTION</h2>

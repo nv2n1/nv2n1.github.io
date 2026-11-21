@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-recvmmsg/"
 description: "recvmmsg – receive multiple messages on a socket"
 ---
 
-<h2 class="name">NAME</h2>
-<p> recvmmsg &#8211; receive multiple messages on a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */

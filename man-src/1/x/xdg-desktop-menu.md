@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xdg-desktop-menu/"
 description: "xdg-desktop-menu – command line tool for (un)installing desktop menu items"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xdg-desktop-menu &#8211; command line tool for (un)installing desktop menu items </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-desktop-menu</code> install [<code>&#8211;noupdate</code>] [<code>&#8211;novendor</code>] [<code>&#8211;mode&nbsp;</code><i>mode</i>] <i>directory-file(s)</i> <i>desktop-file(s)</i></dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pva-dbschema-update/"
 description: "pva-dbschema-update – PHP VOMS-Admin(PVA) tool to update database schema to the latest version"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pva-dbschema-update &#8211; PHP VOMS-Admin(PVA) tool to update database schema to the latest version</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>pva-dbschema-update</code> command update database schema to the latest version required for PHP VOMS-Admin operation. </p>
 <h2>SYNOPSIS</h2>

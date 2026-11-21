@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pumount/"
 description: "pumount – umount arbitrary hotpluggable devices as normal user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pumount &#8211; umount arbitrary hotpluggable devices as normal user</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pumount</code> [ <i>options</i> ] <i>device</i> </p>
 <h2>DESCRIPTION</h2>

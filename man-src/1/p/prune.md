@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-prune/"
 description: "prune – Prune directed graphs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> prune &#8211; Prune directed graphs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prune</code> [ <code>-n</code><i> node</i> ] [ <code>-N</code><i> attrspec</i> ] [ <code>-v</code> ] [ <code>&#8211;</code>(<code>h</code>|<code>?</code>) ] [ <i>files &#8230;</i> ]</p>
 <h2>DESCRIPTION</h2>

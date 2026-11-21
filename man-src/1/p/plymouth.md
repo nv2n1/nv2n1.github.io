@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-plymouth/"
 description: "plymouth – Send commands to plymouthd"
 ---
 
-<h2 class="name">NAME</h2>
-<p> plymouth &#8211; Send commands to plymouthd </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>plymouth </code><code>[OPTION&#8230;]</code></dt>

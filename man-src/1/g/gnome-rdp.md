@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnome-rdp/"
 description: "gnome-rdp – Remote Desktop Client for the GNOME Desktop"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnome-rdp &#8211; Remote Desktop Client for the GNOME Desktop </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-rdp</code> [<code>&#8211;start-hidden</code>|<code>-m</code>] [<code>&#8211;version</code>|<code>-v</code>] [<code>&#8211;help</code>|<code>-h</code>] <i></i></p>
 <h2>DESCRIPTION</h2>

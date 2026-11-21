@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-keyctl_describe/"
 description: "keyctl_describe – Describe a key"
 ---
 
-<h2 class="name">NAME</h2>
-<p> keyctl_describe &#8211; Describe a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;

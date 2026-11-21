@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bindtextdomain/"
 description: "bindtextdomain – set directory containing message catalogs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bindtextdomain &#8211; set directory containing message catalogs </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libintl.h&gt;

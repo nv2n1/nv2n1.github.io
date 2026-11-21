@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlrpladmin/"
 description: "mysqlrpladmin – Administration utility for MySQL replication"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlrpladmin &#8211; Administration utility for MySQL replication </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlrpladmin [</code><i>options</i><code>]</code></dt></dl>

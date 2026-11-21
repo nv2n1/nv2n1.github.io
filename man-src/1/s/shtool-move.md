@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-move/"
 description: "shtool move – GNU shtool enhanced"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool move &#8211; GNU shtool enhanced </p>
 <p><a href="/docs/linux/man/1-mv/">mv</a>(1) replacement</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool move</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-e</code>|<code>&#8211;expand</code>] [<code>-p</code>|<code>&#8211;preserve</code>] <i>src-file</i> <i>dst-file</i></p>

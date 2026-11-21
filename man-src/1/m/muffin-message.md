@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-muffin-message/"
 description: "MUFFIN-MESSAGE – a command to send a message to Muffin"
 ---
 
-<h2 class="name">NAME</h2>
-<p> MUFFIN-MESSAGE &#8211; a command to send a message to Muffin </p>
 <h2>SYNOPSIS</h2>
 <p> <code>MUFFIN-MESSAGE</code> [restart|reload-theme|enable-keybindings|disable-keybindings]</p>
 <h2>DESCRIPTION</h2>

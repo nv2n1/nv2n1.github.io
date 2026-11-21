@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ncftool/"
 description: "ncftool – Network configuration tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ncftool &#8211; Network configuration tool </p>
 <h2>SYNOPSIS</h2>
 <p> ncftool [command [options]]</p>
 <h2>DESCRIPTION</h2>

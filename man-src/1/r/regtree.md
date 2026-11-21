@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-regtree/"
 description: "regtree – Text-mode registry viewer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> regtree &#8211; Text-mode registry viewer </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>regtree</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;fullpath] [&#8211;no-values] [&#8211;credentials=CREDENTIALS] [location]</dt></dl>

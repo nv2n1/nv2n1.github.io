@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ftpquota/"
 description: "ftpquota – Perl script for managing limit/tally files for mod_quotatab"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ftpquota &#8211; Perl script for managing limit/tally files for mod_quotatab </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ftpquota</code> [ <code>options</code> ]</p>
 <h2>DESCRIPTION</h2>

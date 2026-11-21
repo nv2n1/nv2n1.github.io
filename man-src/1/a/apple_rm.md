@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-apple_rm/"
 description: "apple_rm – Do an apple remove, remove metadata and resource fork as well"
 ---
 
-<h2 class="name">NAME</h2>
-<p> apple_rm &#8211; Do an apple remove, remove metadata and resource fork as well </p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/apple_rm</code> <i>FILE</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

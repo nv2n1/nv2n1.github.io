@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zsync/"
 description: "zsync – Partial/differential file download client over HTTP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zsync &#8211; Partial/differential file download client over HTTP </p>
 <h2>SYNTAX</h2>
 <p> zsync [ -u <i>url</i> ] [ -i <i>inputfile</i> ] [ -o <i>outputfile</i> ] [ { -s | -q } ] [ -k <i>file</i>.zsync ] [ -A <i>hostname</i>=<i>username</i>:<i>password</i> ] { <i>filename</i> | <i>url</i> } </p>
 <p> zsync -V</p>

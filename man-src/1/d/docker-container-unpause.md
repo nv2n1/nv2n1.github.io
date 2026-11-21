@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-container-unpause/"
 description: "docker-container-unpause – Unpause all processes within one or more containers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-container-unpause &#8211; Unpause all processes within one or more containers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container unpause CONTAINER [CONTAINER&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

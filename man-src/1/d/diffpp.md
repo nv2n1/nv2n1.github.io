@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-diffpp/"
 description: "diffpp – pretty-print diff outputs with GNU enscript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> diffpp &#8211; pretty-print diff outputs with GNU enscript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>diffpp </code><i>currentfile</i> &lt; <i>diff-file</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sgitopnm/"
 description: "sgitopnm – convert a SGI image file to a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgitopnm &#8211; convert a SGI image file to a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgitopnm</code> [<code>-verbose</code>] [<code>-channel</code> <i>c</i>] [<i>SGIfile</i>]</p>
 <h2>DESCRIPTION</h2>

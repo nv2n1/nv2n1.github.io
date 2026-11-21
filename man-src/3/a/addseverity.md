@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-addseverity/"
 description: "addseverity – introduce new severity classes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> addseverity &#8211; introduce new severity classes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fmtmsg.h&gt;

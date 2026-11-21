@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nasm/"
 description: "nasm – the Netwide Assembler, a portable 80×86 assembler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nasm &#8211; the Netwide Assembler, a portable 80&#215;86 assembler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nasm</code> [<code>-@</code> response file] [<code>-f</code> format] [<code>-o</code> outfile] [<code>-l</code> listfile] [<i>options</i>&#8230;] filename</p>
 <h2>DESCRIPTION</h2>

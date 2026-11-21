@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-free_hugepages/"
 description: "alloc_hugepages, free_hugepages – allocate or free huge pages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> alloc_hugepages, free_hugepages &#8211; allocate or free huge pages </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 void *alloc_hugepages(int key, void *addr, size_t len,

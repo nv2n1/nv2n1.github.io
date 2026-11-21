@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rifle/"
 description: "rifle – ranger’s file opener"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rifle &#8211; ranger&#8217;s file opener </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rifle</code> [<code>&#8211;help</code>] [<code>-f</code> <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i>] [<code>-l</code>] [<code>-p</code> <i></i><font SIZE="-1"><i>KEYWORD</i></font><i></i>] [<code>-w</code> <i></i><font SIZE="-1"><i>PROGRAM</i></font><i></i>] [<code>-c</code> <i></i><font SIZE="-1"><i>CONFIG_FILE</i></font><i></i>] <i>files</i></p>
 <h2>DESCRIPTION</h2>

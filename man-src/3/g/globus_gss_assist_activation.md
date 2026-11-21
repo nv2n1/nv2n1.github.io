@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gss_assist_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Activation &#8211; </p>
 <p> Module Activation.</p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GSI_GSS_ASSIST_MODULE</code> </p>

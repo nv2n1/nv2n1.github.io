@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-diff-tree/"
 description: "git-diff-tree – Compares the content and mode of blobs found via two tree objects"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-diff-tree &#8211; Compares the content and mode of blobs found via two tree objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git diff - tree[--stdin][-m][-s][-v][--no - commit - id][--pretty]

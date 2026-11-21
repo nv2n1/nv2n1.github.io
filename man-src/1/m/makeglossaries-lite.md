@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-makeglossaries-lite/"
 description: "makeglossaries-lite – Calls makeindex/xindy for LaTeX documents using glossaries package"
 ---
 
-<h2 class="name">NAME</h2>
-<p> makeglossaries-lite &#8211; Calls makeindex/xindy for LaTeX documents using glossaries package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makeglossaries</code> [<code>-o</code> <i>file</i>] [<code>-q</code>] [<code>-n</code>] [<code>-s</code> <i>file</i>] [<code>-t</code> <i>file</i>] [<code>-L</code> <i>language</i>] [<code>-c</code>] [<code>-g</code>] [<code>-l</code>] [<code>-p</code> <i>num</i>] [<code>-r</code>] [<code>-m</code> <i>file</i>] [<code>-x</code> <i>file</i>] [<code>&#8211;version</code>] [<code>&#8211;help</code>] <i>basename</i></p>
 <h2>DESCRIPTION</h2>

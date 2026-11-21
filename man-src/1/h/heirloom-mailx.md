@@ -6,8 +6,6 @@ letter: "h"
 url: "/docs/linux/man/1-heirloom-mailx/"
 description: "mailx – send and receive Internet mail"
 ---
-<h2 class="name">NAME</h2>
-<p> mailx - send and receive Internet mail </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>mailx</code> [<code>-BDdEFintv~</code>] [<code>-s</code><i>&nbsp;<wbr>subject</i>] [<code>-a</code><i>&nbsp;<wbr>attachment</i> ] [<code>-c</code><i>&nbsp;<wbr>cc-addr</i>] [<code>-b</code><i>&nbsp;<wbr>bcc-addr</i>] [<code>-r</code><i>&nbsp;<wbr>from-addr</i>] [<code>-h</code><i>&nbsp;<wbr>hops</i>] [<code>-A</code><i>&nbsp;<wbr>account</i>] [<code>-S</code><i>&nbsp;<wbr>variable</i>[<code>=</code><i>value</i>]] <i>to-addr</i> . . . </dt>

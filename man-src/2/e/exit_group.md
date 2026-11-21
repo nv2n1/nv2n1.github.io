@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-exit_group/"
 description: "exit_group – exit all threads in a process"
 ---
 
-<h2 class="name">NAME</h2>
-<p> exit_group &#8211; exit all threads in a process </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/unistd.h&gt;

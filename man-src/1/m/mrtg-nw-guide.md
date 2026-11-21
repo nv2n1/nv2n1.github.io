@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mrtg-nw-guide/"
 description: "mrtg-nw-guide – MRTG for NetWare"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mrtg-nw-guide &#8211; MRTG for NetWare </p>
 <h2>SYNOPSIS</h2>
 <p> This guide is intended to aid in the installation and configuration of <font SIZE="-1">MRTG</font> on a NetWare server.</p>
 <h2>OVERVIEW</h2>

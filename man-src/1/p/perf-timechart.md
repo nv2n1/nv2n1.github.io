@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perf-timechart/"
 description: "perf-timechart – Tool to visualize total system behavior during a workload"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perf-timechart &#8211; Tool to visualize total system behavior during a workload </p>
 <h2>SYNOPSIS</h2>
 <h2>DESCRIPTION</h2>
 <p> There are two variants of perf timechart: </p>

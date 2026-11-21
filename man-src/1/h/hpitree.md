@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpitree/"
 description: "hpitree – A openhpi sample application that shows in details the resources (rpt’s) and resources’ manamegement instruments (rdr’s) data structures of the managed openHPI complex."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpitree &#8211; A openhpi sample application that shows in details the resources (rpt&#8217;s) and resources&#8217; manamegement instruments (rdr&#8217;s) data structures of the managed openHPI complex. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpitree[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-acdiorsw][-n nn][-X][-h] hpitree[--domain = nn][--host = host[:port]][--cfgfile = file][--all][--controls][--rdrs][--inventories][--rpts]

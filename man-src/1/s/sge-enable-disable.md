@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sge-enable-disable/"
 description: "sge-disable-submits, sge-enable-submits – Prevent/allow xxQS_NAMExx job submission by non-privileged users"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sge-disable-submits, sge-enable-submits &#8211; Prevent/allow xxQS_NAMExx job submission by non-privileged users </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sge-disable-submits</code> [<code>-h</code>|<code>&#8211;help</code>] </p>
 <p> <code>sge-enable-submits</code> [<code>-h</code>|<code>&#8211;help</code>]</p>

@@ -9,8 +9,6 @@ description: "tpmtoken_setpasswd – change the password(s) associated with the 
 
 <p>TPM Management &#8211; tpmtoken_setpasswd<br />
  </center></p>
-<h2 class="name">NAME</h2>
-<p> tpmtoken_setpasswd &#8211; change the password(s) associated with the user&#8217;s TPM PKCS#11 data store </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tpmtoken_setpasswd</code> [ OPTION ] </p>
 <h2>DESCRIPTION</h2>

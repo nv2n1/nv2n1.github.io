@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ds-logpipe/"
 description: "ds-logpipe.py – Create and read from a named pipe instead of a log file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ds-logpipe.py &#8211; Create and read from a named pipe instead of a log file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ds-logpipe.py</code> /full/path/to/namedpipe<br />
 &nbsp;<wbr>[<i>-m maxlinestobuffer</i>]&nbsp;<wbr>[<i>-u userid</i>]&nbsp;<wbr>[<i>-s serverpidfile</i>]&nbsp;<wbr>[<i>-t servertimeout</i>]&nbsp;<wbr>[<i>&#8211;plugin=/path/to/pluginfile.py</i>]&nbsp;<wbr>[<i>pluginfile.arg=value</i>] </p>

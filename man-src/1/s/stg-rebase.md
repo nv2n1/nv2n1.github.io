@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-rebase/"
 description: "stg-rebase – Move the stack base to another point in history"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-rebase &#8211; Move the stack base to another point in history </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg rebase[options][--]&lt;new - base - id&gt;

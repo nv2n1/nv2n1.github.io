@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cubicinterpolation/"
 description: "ql/math/interpolations/cubicinterpolation.hpp – cubic interpolation between discrete points"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/math/interpolations/cubicinterpolation.hpp &#8211; cubic interpolation between discrete points </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-jpegtran/"
 description: "jpegtran – lossless transformation of JPEG files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> jpegtran &#8211; lossless transformation of JPEG files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpegtran</code> [ <i>options</i> ] [ <i>filename</i> ] </p>
 <h2>DESCRIPTION</h2>

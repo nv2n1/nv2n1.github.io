@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cppsv/"
 description: "cppsv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cppsv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cppsv</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br />

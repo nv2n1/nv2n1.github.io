@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ldap-agent/"
 description: "ldap-agent – SNMP agent for Directory Server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap-agent &#8211; SNMP agent for Directory Server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldap-agent</code> [<i>-D</i>]<i>&lt;configuration-file&gt;</i></p>
 <h2>DESCRIPTION</h2>

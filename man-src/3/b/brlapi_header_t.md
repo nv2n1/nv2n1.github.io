@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-brlapi_header_t/"
 description: "brlapi_header_t –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> brlapi_header_t &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;brlapi_protocol.h&gt;</p>
 <h3>Data Fields</h3>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sa-update/"
 description: "sa-update – automate SpamAssassin rule updates"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sa-update &#8211; automate SpamAssassin rule updates </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sa-update</code> [options] </p>
 <p> Options: </p>

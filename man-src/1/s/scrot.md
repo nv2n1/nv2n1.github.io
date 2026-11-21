@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-scrot/"
 description: "scrot – capture a screenshot using imlib2"
 ---
 
-<h2 class="name">NAME</h2>
-<p> scrot &#8211; capture a screenshot using imlib2 </p>
 <h2>SYNOPSIS</h2>
 <p> scrot [options] [file]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-plymouth-set-default-theme/"
 description: "plymouth-set-default-theme – Set the plymouth theme"
 ---
 
-<h2 class="name">NAME</h2>
-<p> plymouth-set-default-theme &#8211; Set the plymouth theme </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>plymouth-set-default-theme </code><code>[OPTION&#8230;]</code><code>[THEME]</code></dt></dl>

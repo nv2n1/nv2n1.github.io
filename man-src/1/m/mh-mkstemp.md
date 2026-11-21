@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mh-mkstemp/"
 description: "mkstemp – create a temporary file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkstemp &#8211; create a temporary file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/mkstemp</code> [<code>-directory</code> <i>directory</i>] [<code>-prefix</code> <i>prefix</i>] [<code>-suffix</code> <i>suffix</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk4-builder-tool/"
 description: "gtk4-builder-tool – GtkBuilder File Utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk4-builder-tool &#8211; GtkBuilder File Utility </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gtk4 - builder - tool&lt;COMMAND&gt;[OPTIONS...]&lt;FILE&gt; gtk4 - builder - tool validate&lt;FILE&gt; gtk4 - builder - tool enumerate&lt;FILE&gt; gtk4 - builder - tool simplify[OPTIONS...]&lt;FILE&gt; gtk4 - builder - tool preview[OPTIONS...]&lt;FILE&gt;

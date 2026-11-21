@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmclean/"
 description: "pbmclean – flip isolated pixels in portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmclean &#8211; flip isolated pixels in portable bitmap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmclean </code> [<code>-minneighbors=</code><i>N</i>] [<code>-black</code>|<code>-white</code>] [<i>pbmfile</i>] </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>

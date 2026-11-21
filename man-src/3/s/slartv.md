@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slartv/"
 description: "slartv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slartv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br />

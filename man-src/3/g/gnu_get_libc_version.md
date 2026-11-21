@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-gnu_get_libc_version/"
 description: "gnu_get_libc_version, gnu_get_libc_release – get glibc version and release"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnu_get_libc_version, gnu_get_libc_release &#8211; get glibc version and release </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;gnu/libc-version.h&gt;

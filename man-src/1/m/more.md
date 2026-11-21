@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-more/"
 description: "more – file perusal filter for crt viewing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> more &#8211; file perusal filter for crt viewing </p>
 <h2>SYNOPSIS</h2>
 <p> <code>more</code> [options] <i>file</i> &#8230;</p>
 <h2>DESCRIPTION</h2>

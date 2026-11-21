@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_callback_space_register_oneshot/"
 description: "Globus Callback API –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Globus Callback API &#8211; </p>
 <h3>Convenience Macros</h3>
 <p> #define <code>globus_callback_poll</code>(a)<br />
  <i>Poll the global callback space. </i><br />

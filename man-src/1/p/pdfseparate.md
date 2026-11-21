@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdfseparate/"
 description: "pdfseparate – Portable Document Format (PDF) page extractor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdfseparate &#8211; Portable Document Format (PDF) page extractor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfseparate</code> [options] <i>PDF-file PDF-page-pattern</i></p>
 <h2>DESCRIPTION</h2>

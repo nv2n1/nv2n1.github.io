@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grub-fstest/"
 description: "grub-fstest – debug tool for GRUB filesystem drivers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grub-fstest &#8211; debug tool for GRUB filesystem drivers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-fstest</code> [<i>,OPTION/</i>&#8230;] <i>,IMAGE_PATH COMMANDS/</i></p>
 <h2>DESCRIPTION</h2>

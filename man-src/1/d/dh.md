@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh/"
 description: "dh – debhelper command sequencer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh &#8211; debhelper command sequencer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh</code> <i>sequence</i> [<code>&#8211;with</code> <i>addon</i>[<code>,</code><i>addon</i> &#8230;]] [<code>&#8211;list</code>] [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

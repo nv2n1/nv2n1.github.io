@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-top/"
 description: "top – display Linux processes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> top &#8211; display Linux processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>top</code> &#8211;<code>hv</code>|-<code>bcEeHiOSs1</code> &#8211;<code>d</code> secs &#8211;<code>n</code> max &#8211;<code>u</code>|<code>U</code> user &#8211;<code>p</code> pids &#8211;<code>o</code> field &#8211;<code>w</code> [cols] </p>
 <p> The traditional switches `-&#8216; and whitespace are optional. </p>

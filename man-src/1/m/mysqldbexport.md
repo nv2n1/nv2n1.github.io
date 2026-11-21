@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqldbexport/"
 description: "mysqldbexport – Export Object Definitions or Data from a Database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqldbexport &#8211; Export Object Definitions or Data from a Database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldbexport [</code><i>options</i><code>] </code><i>db_name</i><code> &#8230;</code></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ireminder/"
 description: "ireminder – Prayer time reminder"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ireminder &#8211; Prayer time reminder </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ireminder</code> [<code>-ipraytime</code> path] [<code>-skip</code> event_name] [<code>-reminder</code> minutes] [<code>-inplace]</code> [<code>-execr</code> cmd] [<code>-execs</code> cmd] [<code>-help]</code></p>
 <h2>DESCRIPTION</h2>

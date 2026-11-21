@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-mkshadow/"
 description: "shtool mkshadow – GNU shtool create shadow tree using symlinks"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool mkshadow &#8211; GNU shtool create shadow tree using symlinks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool mkshadow</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-a</code>|<code>&#8211;all</code>] <i>src-dir</i> <i>dst-dir</i></p>
 <h2>DESCRIPTION</h2>

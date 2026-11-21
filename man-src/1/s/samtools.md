@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-samtools/"
 description: "samtools – Utilities for the Sequence Alignment/Map (SAM) format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> samtools &#8211; Utilities for the Sequence Alignment/Map (SAM) format </p>
 <h2>SYNOPSIS</h2>
 <p> samtools addreplacerg -r &#8216;ID:fish&#8217; -r &#8216;LB:1334&#8217; -r &#8216;SM:alpha&#8217; -o output.bam input.bam </p>
 <p> samtools ampliconclip -b bed.file input.bam </p>

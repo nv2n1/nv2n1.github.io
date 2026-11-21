@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-info/"
 description: "tracker-info – Retrieve all information available for a certain file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-info &#8211; Retrieve all information available for a certain file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker info</code> [<i>options</i>&#8230;] &lt;<i>file1</i>&gt; [[<i>file2</i>] &#8230;] </p>
 <h2>DESCRIPTION</h2>

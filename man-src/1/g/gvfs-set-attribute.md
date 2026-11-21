@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvfs-set-attribute/"
 description: "gvfs-set-attribute"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gvfs-set-attribute </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-set-attribute</code> has been deprecated and it is redirected to <code>gio set</code>.</p>
 <h2>SEE ALSO</h2>

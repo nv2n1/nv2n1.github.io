@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-megals/"
 description: "megals – List files stored in the cloud"
 ---
 
-<h2 class="name">NAME</h2>
-<p> megals &#8211; List files stored in the cloud </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 megals[-e][-h][--header][-l][-R][-n][&lt;remotepaths&gt;...]

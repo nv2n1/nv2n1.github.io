@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgeql2/"
 description: "dgeql2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgeql2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />

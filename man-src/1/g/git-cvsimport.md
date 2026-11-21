@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-cvsimport/"
 description: "git-cvsimport – Salvage your data out of another SCM people love to hate"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-cvsimport &#8211; Salvage your data out of another SCM people love to hate </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git cvsimport [-o &lt;branch-for-HEAD&gt;] [-h] [-v] [-d &lt;CVSROOT&gt;]

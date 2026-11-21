@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wordlist2dawg/"
 description: "wordlist2dawg – convert a wordlist to a DAWG for Tesseract"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wordlist2dawg &#8211; convert a wordlist to a DAWG for Tesseract </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wordlist2dawg</code> <i>WORDLIST</i> <i>DAWG</i> <i>lang.unicharset</i> </p>
 <p> <code>wordlist2dawg</code> -t <i>WORDLIST</i> <i>DAWG</i> <i>lang.unicharset</i> </p>

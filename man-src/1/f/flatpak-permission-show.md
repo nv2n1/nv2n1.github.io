@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-permission-show/"
 description: "flatpak-permission-show – Show permissions"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-permission-show &#8211; Show permissions </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak permission-show</code> [OPTION&#8230;] APP_ID</dt></dl>

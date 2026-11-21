@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-hdf_get_node/"
 description: "hdf_get_node – Similar to hdf_get_obj except all the nodes are created if the don’t exist."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hdf_get_node &#8211; Similar to hdf_get_obj except all the nodes are created if the don&#8217;t exist. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;

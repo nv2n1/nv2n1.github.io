@@ -6,8 +6,6 @@ letter: "v"
 url: "/docs/linux/man/1-vorbiscomment/"
 description: "vorbiscomment – List or edit comments in Ogg Vorbis files"
 ---
-<h2 class="name">NAME</h2>
-<p> vorbiscomment - List or edit comments in Ogg Vorbis files  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vorbiscomment</code> <code>[-l]</code> [<code>-R</code>] [<code>-e</code>] <i>file.ogg</i> <br />
  <code>vorbiscomment</code> <code>-a</code> <code>[ -c commentfile | -t ``name=value&#8217;&#8216; ]</code> [<code>-q</code>] [<code>-R</code>] [<code>-e</code>] <i>in.ogg</i> <i>[out.ogg]</i> <br />

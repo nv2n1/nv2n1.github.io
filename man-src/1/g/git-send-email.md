@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-send-email/"
 description: "git-send-email – Send a collection of patches as emails"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-send-email &#8211; Send a collection of patches as emails </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>git send-email</i> [options] &lt;file|directory|rev-list options&gt;...

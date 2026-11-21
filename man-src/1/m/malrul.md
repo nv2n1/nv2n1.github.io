@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-malrul/"
 description: "malrul – compile a Malaga rule file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> malrul &#8211; compile a Malaga rule file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>malrul</code> <i>symbol-file</i> <i>rule-file</i> </p>
 <h2>DESCRIPTION</h2>

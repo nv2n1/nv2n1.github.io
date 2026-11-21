@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdebi/"
 description: "gdebi – Simple tool to install deb files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdebi &#8211; Simple tool to install deb files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdebi</code> [<i>package.deb</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

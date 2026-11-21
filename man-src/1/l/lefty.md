@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lefty/"
 description: "lefty – A Programmable Graphics Editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lefty &#8211; A Programmable Graphics Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lefty</code> [ <i>options</i> ] [ <i>file</i> ]</p>
 <h2>DESCRIPTION</h2>

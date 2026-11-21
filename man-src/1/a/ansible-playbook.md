@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ansible-playbook/"
 description: "ansible-playbook – run an ansible playbook"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ansible-playbook &#8211; run an ansible playbook </p>
 <h2>SYNOPSIS</h2>
 <p> ansible-playbook &lt;filename.yml&gt; &#8230; [options]</p>
 <h2>DESCRIPTION</h2>

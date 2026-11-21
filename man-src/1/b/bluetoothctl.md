@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bluetoothctl/"
 description: "bluetoothctl: – interactive bluetooth control tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bluetoothctl: &#8211; interactive bluetooth control tool </p>
 <h2>DESCRIPTION</h2>
 <p>&nbsp;bluetoothctl ver 5.49 Usage:</p>
 <dl>

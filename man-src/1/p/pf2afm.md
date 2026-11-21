@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pf2afm/"
 description: "pf2afm – Make an AFM file from Postscript (PFB/PFA/PFM) font files using ghostscript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pf2afm &#8211; Make an AFM file from Postscript (PFB/PFA/PFM) font files using ghostscript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pf2afm</code> <i>fontfilename</i></p>
 <h2>DESCRIPTION</h2>

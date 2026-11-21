@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-file2brl/"
 description: "file2brl – Translate an xml or a text file into an embosser-ready braille file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> file2brl &#8211; Translate an xml or a text file into an embosser-ready braille file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>file2brl</code> [<i>,OPTION/</i>] [<i>,inputFile/</i>] [<i>,outputFile/</i>]</p>
 <h2>DESCRIPTION</h2>

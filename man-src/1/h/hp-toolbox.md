@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hp-toolbox/"
 description: "hp-toolbox – HP Device Manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hp-toolbox &#8211; HP Device Manager </p>
 <h2>DESCRIPTION</h2>
 <p> The HP Device Manager (aka &quot;Toolbox&quot;) for HPLIP supported devices. Provides access to status, tools, and supplies levels.</p>
 <h2>SYNOPSIS</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3string/"
 description: "include/antlr3string.h –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> include/antlr3string.h &#8211; </p>
 <p> Simple string interface allows indiscriminate allocation of strings such that they can be allocated all over the place and released in one chunk via a string factory &#8211; saves lots of hassle in remembering what strings were allocated where.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />

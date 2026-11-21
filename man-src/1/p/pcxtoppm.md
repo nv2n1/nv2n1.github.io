@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pcxtoppm/"
 description: "pcxtoppm – convert a PCX file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pcxtoppm &#8211; convert a PCX file into a portable pixmap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcxtoppm</code> [<code>-stdpalette</code>] [<code>-verbose</code>] [<i>pcxfile</i>] </p>
 <h2>DESCRIPTION</h2>

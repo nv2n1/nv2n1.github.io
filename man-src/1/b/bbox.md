@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bbox/"
 description: "bbox – prints out the bounding box of a rawppm or rawpbm image"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bbox &#8211; prints out the bounding box of a rawppm or rawpbm image </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bbox</code> [<code>-l</code>] [<code>-r</code>] [<code>-h</code>] [<code>-V</code>] [<i>rawpbmfile</i>]</dt></dl>

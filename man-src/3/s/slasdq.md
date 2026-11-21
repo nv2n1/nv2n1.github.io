@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slasdq/"
 description: "slasdq.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slasdq.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasdq</code> (UPLO, SQRE, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />

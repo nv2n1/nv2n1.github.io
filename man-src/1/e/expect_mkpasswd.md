@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-expect_mkpasswd/"
 description: "mkpasswd – generate new password, optionally apply it to a user"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mkpasswd &#8211; generate new password, optionally apply it to a user </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkpasswd</code> <i>[</i> <i>args</i> ] [ <i>user</i> ]</p>
 <h2>INTRODUCTION</h2>

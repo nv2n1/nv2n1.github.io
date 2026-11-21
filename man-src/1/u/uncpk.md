@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-uncpk/"
 description: "uncpk – manage c64 cpk archives"
 ---
 
-<h2 class="name">NAME</h2>
-<p> uncpk &#8211; manage c64 cpk archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uncpk</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230; </p>
 <h2>DESCRIPTION</h2>

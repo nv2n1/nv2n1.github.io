@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-esc-m/"
 description: "esc-m – ease viewing output of driver data"
 ---
 
-<h2 class="name">NAME</h2>
-<p> esc-m &#8211; ease viewing output of driver data </p>
 <h2>SYNOPSIS</h2>
 <p> esc-m </p>
 <h2>DESCRIPTION</h2>

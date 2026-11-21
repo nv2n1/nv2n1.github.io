@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtowinicon/"
 description: "ppmtowinicon – convert 1 or more portable pixmaps into a Windows .ico file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtowinicon &#8211; convert 1 or more portable pixmaps into a Windows .ico file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtowinicon</code> [<i>-andpgms</i>] [<i>-output output.ico</i>] [<i>ppmfiles</i>&#8230;<i>]</i> </p>
 <h2>DESCRIPTION</h2>

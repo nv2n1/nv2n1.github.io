@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-parse-remote/"
 description: "git-parse-remote – Routines to help parsing remote repository access parameters"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-parse-remote &#8211; Routines to help parsing remote repository access parameters </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>. &quot;$(git --exec-path)/git-parse-remote&quot;</i>

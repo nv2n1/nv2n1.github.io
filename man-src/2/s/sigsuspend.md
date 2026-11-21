@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-sigsuspend/"
 description: "sigsuspend, rt_sigsuspend – wait for a signal"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sigsuspend, rt_sigsuspend &#8211; wait for a signal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>int sigsuspend(const sigset_t *</code><i>mask</i><code>);</code> </p>

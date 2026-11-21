@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgelqf/"
 description: "dgelqf.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgelqf.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgelqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />

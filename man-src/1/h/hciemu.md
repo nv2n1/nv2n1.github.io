@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hciemu/"
 description: "hciemu – HCI emulator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> hciemu &#8211; HCI emulator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hciemu</code> [<i>options</i>] <i>local_address</i> </p>
 <h2>DESCRIPTION</h2>

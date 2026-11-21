@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qrerun/"
 description: "qrerun – rerun a pbs batch job"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qrerun &#8211; rerun a pbs batch job </p>
 <h2>SYNOPSIS</h2>
 <p> qrerun [-f] job_identifier &#8230;</p>
 <h2>DESCRIPTION</h2>

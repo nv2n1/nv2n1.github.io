@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk-encode-symbolic-svg/"
 description: "gtk-encode-symbolic-svg – Symbolic icon conversion utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk-encode-symbolic-svg &#8211; Symbolic icon conversion utility </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-encode-symbolic-svg</code> [OPTION&#8230;] <i>PATH</i> <i>WIDTH</i>x<i>HEIGHT</i></dt></dl>

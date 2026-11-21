@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-caja-connect-server/"
 description: "Caja-connect-server – Connect to Server dialog for Caja"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Caja-connect-server &#8211; Connect to Server dialog for Caja </p>
 <h2>SYNOPSIS</h2>
 <p> <code>caja-connect-server [OPTIONS]</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mysqlserverinfo/"
 description: "mysqlserverinfo – Display Common Diagnostic Information from a Server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mysqlserverinfo &#8211; Display Common Diagnostic Information from a Server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlserverinfo [</code><i>options</i><code>] </code><i>db1</i><code> [</code><i>:db2</i><code>] &#8230;</code></dt></dl>

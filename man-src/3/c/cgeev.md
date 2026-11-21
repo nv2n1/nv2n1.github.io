@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgeev/"
 description: "cgeev.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgeev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeev</code> (JOBVL, JOBVR, N, A, LDA, W, VL, LDVL, VR, LDVR, WORK, LWORK, RWORK, INFO)<br />

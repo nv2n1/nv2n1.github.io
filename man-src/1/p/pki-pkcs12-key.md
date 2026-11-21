@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-pkcs12-key/"
 description: "pki-pkcs12-key – Command-Line Interface for managing individual keys in PKCS #12 file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-pkcs12-key &#8211; Command-Line Interface for managing individual keys in PKCS #12 file.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] pkcs12 - key pki[CLI options] pkcs12 - key - find[command options] pki[CLI options] pkcs12 - key - del&lt;key ID&gt;[command options]

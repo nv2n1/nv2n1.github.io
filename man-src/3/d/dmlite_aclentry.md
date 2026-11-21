@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dmlite_aclentry/"
 description: "dmlite_aclentry –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dmlite_aclentry &#8211; </p>
 <p> Handles ACL entries.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;utils.h&gt;</p>

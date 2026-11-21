@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grops/"
 description: "grops – PostScript driver for groff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grops &#8211; PostScript driver for groff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-glmv</code> ] [ <code>-b </code><i>n</i> ] [ <code>-c </code><i>n</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-p </code><i>papersize</i> ] [ <code>-P </code><i>prologue</i> ] [ <code>-w </code><i>n</i> ] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

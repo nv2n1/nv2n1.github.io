@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtoxvmini/"
 description: "pamtoxvmini – convert Netpbm image to an XV ‘thumbnail’ picture"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtoxvmini &#8211; convert Netpbm image to an XV &#8216;thumbnail&#8217; picture</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtoxvmini</code> </p>
 <p> [<i>pamfile</i>] </p>

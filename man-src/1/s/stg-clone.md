@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-clone/"
 description: "stg-clone – Make a local clone of a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-clone &#8211; Make a local clone of a remote repository </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> clone &lt;repository&gt; &lt;dir&gt;

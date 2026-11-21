@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-globusrun/"
 description: "globusrun – Execute and manage jobs via GRAM"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globusrun &#8211; Execute and manage jobs via GRAM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globusrun</code> [-help | -usage | -version -versions ] </p>
 <p> <code>globusrun</code> [-p | -parse] { -f <i>FILENAME</i> | -file <i>FILENAME</i> | <i>RSL</i> } </p>

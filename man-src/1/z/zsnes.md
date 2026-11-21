@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zsnes/"
 description: "ZSNES – Super Nintendo console emulator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ZSNES &#8211; Super Nintendo console emulator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ZSNES</code> [-?] [-1 #] [-2 #] [-dd] [-dh] [-f #] [-g #] [-h | -l] [-j] [-js #] [-k #] [-m] [-mc] [-md] [-ml #] [-n #] [-o] [-p #] [-r #] [-s] [-sa] [-t | -u] [-v #] [-y] [-z] [-zm #] [-zs #] [romname] </p>
 <h2>DESCRIPTION</h2>

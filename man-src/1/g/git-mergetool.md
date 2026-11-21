@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-mergetool/"
 description: "git-mergetool – Run merge conflict resolution tools to resolve merge conflicts"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-mergetool &#8211; Run merge conflict resolution tools to resolve merge conflicts </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git mergetool[--tool = &lt;tool&gt;][-y | --[no - ] prompt][&lt;file&gt;...]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-readelf-14/"
 description: "llvm-readelf – GNU-style LLVM Object Reader"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-readelf &#8211; GNU-style LLVM Object Reader </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-readelf</code> [<i>options</i>] [<i>input…</i>]</p>
 <h2>DESCRIPTION</h2>

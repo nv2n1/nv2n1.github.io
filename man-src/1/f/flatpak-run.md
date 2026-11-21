@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-run/"
 description: "flatpak-run – Run an application or open a shell in a runtime"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-run &#8211; Run an application or open a shell in a runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak run</code> [OPTION&#8230;] REF [ARG&#8230;]</dt></dl>

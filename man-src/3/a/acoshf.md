@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-acoshf/"
 description: "acosh, acoshf, acoshl – inverse hyperbolic cosine function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> acosh, acoshf, acoshl &#8211; inverse hyperbolic cosine function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

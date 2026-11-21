@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-getopt/"
 description: "getopt – parse command options (enhanced)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getopt &#8211; parse command options (enhanced) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getopt</code> <i>optstring</i> <i>parameters</i> <code>getopt</code> [options] [<code>&#8212;</code>] <i>optstring</i> <i>parameters</i> <code>getopt</code> [options] <code>-o</code>|<code>&#8211;options</code> <i>optstring</i> [options] [<code>&#8212;</code>] <i>parameters</i></p>
 <h2>DESCRIPTION</h2>

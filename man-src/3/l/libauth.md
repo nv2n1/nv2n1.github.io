@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libauth/"
 description: "libauth – routines for writing nnrpd resolvers and authenticators"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libauth &#8211; routines for writing nnrpd resolvers and authenticators </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include "libauth.h"

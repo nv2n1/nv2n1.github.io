@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtomacp/"
 description: "pbmtomacp – convert a portable bitmap into a MacPaint file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtomacp &#8211; convert a portable bitmap into a MacPaint file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtomacp</code> [<code>-l</code> <i>left</i>] [<code>-r</code> <i>right</i>] [<code>-b</code> <i>bottom</i>] [<code>-t</code> <i>top</i>] [<i>pbmfile</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rm/"
 description: "rm – remove files or directories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rm &#8211; remove files or directories </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rm</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

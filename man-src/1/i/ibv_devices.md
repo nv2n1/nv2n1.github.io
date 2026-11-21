@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ibv_devices/"
 description: "ibv_devices – list RDMA devices"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ibv_devices &#8211; list RDMA devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ibv_devices</code> </p>
 <h2>DESCRIPTION</h2>

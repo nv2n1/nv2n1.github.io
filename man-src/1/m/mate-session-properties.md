@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mate-session-properties/"
 description: "mate-session-properties – Configure applications to start on login."
 ---
 
-<h2 class="name">NAME</h2>
-<p> mate-session-properties &#8211; Configure applications to start on login. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-session-properties</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-shtool-arx/"
 description: "shtool arx – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> shtool arx &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-ar/">ar</a>(1) extensional command</p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool arx</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-C</code>|<code>&#8211;command</code> <i>cmd</i>] <i>op</i> <i>archive</i> <i>file</i> [<i>file</i> &#8230;]</p>

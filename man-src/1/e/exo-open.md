@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-exo-open/"
 description: "exo-open – Open URLs and launch preferred applications"
 ---
 
-<h2 class="name">NAME</h2>
-<p> exo-open &#8211; Open URLs and launch preferred applications </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>exo-open</code> [[url]&#8230;]</dt>

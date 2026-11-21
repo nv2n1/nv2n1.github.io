@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perldbmfilter/"
 description: "perldbmfilter – Perl DBM Filters"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perldbmfilter &#8211; Perl DBM Filters </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 $db = tie % hash, 'DBM', ... $old_filter = $db-&gt;filter_store_key(sub{...});

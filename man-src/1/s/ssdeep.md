@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ssdeep/"
 description: "ssdeep – Computes context triggered piecewise hashes (fuzzy hashes)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssdeep &#8211; Computes context triggered piecewise hashes (fuzzy hashes)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssdeep [-m &lt;file&gt;] [-k &lt;file&gt;] [-vdprgsblcxa] [-t val] [FILES]</code><br />
  <code>ssdeep [-V|h]</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ctest/"
 description: "ctest – CTest Command-Line Reference"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ctest &#8211; CTest Command-Line Reference </p>
 <h3>Contents</h3>
 <dl>
 <dt>&bull;</dt>

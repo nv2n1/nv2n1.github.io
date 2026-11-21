@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdcgi/"
 description: "rrdcgi – Create web pages containing RRD graphs based on templates"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdcgi &#8211; Create web pages containing RRD graphs based on templates </p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&quot;#!/path/to/&quot;</tt><code>rrdcgi</code> [<code>&#8211;filter</code>]</p>
 <h2>DESCRIPTION</h2>

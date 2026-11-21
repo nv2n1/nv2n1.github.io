@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rasttopnm/"
 description: "rasttopnm – convert a Sun rasterfile into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rasttopnm &#8211; convert a Sun rasterfile into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasttopnm</code> [<i>rastfile</i>]</p>
 <h2>DESCRIPTION</h2>

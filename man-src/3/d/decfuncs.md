@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-decfuncs/"
 description: "Functions for Decoding –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Functions for Decoding &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Configuration keys for the decoder ctl interface.</code><br />
  <i>Decoder CTL settings. </i></p>

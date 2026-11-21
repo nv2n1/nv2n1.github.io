@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-simul-beacons/"
 description: "simul-beacons – Robot dataset simulator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> simul-beacons &#8211; Robot dataset simulator </p>
 <h2>SYNOPSIS</h2>
 <p> simul-beacons <i>config_file.ini</i></p>
 <h2>DESCRIPTION</h2>

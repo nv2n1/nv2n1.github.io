@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_job_manager_configuration/"
 description: "globus_gram_job_manager_configuration – Job Manager Configuration The Job Manager is generally configured using the setup-globus-gram-job-manager setup script."
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus_gram_job_manager_configuration &#8211; Job Manager Configuration The Job Manager is generally configured using the setup-globus-gram-job-manager setup script. </p>
 <p> This section of the Job Manager manual describes all options which may be passed to the GRAM Job Manager in the configuration file $GLOBUS_LOCATION/etc/globus-job-manager.conf. </p>
 <h2>Configuration File Options</h2>
 <p> <code>-save-logfile always|on-error|never</code></p>

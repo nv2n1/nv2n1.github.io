@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wsdl2h/"
 description: "wsdl2h – the gSOAP WSDL parser for C and C++"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wsdl2h &#8211; the gSOAP WSDL parser for C and C++ </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wsdl2h</code> [<i>OPTIONS</i>] <i>SOURCE</i> &#8230;</p>
 <h2>DESCRIPTION</h2>

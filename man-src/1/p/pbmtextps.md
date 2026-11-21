@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pbmtextps/"
 description: "pbmtextps – render text into a bitmap via postscript"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pbmtextps &#8211; render text into a bitmap via postscript </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtextps</code> [<code>-font</code> <i>fontfile</i>] [<code>-fontsize</code> <i>fontsize</i>] [<code>-resolution</code> <i>resolution</i>] [<code>-stroke</code> <i>strokesize</i>] [<code>-verbose</code> [<i>text</i>] </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mdmflexiserver/"
 description: "mdmflexiserver – start a MDM session using the MDM flexible server mechanism"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mdmflexiserver &#8211; start a MDM session using the MDM flexible server mechanism </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdmflexiserver</code> <font SIZE="-1">GNOME</font> options mdmflexiserver options</p>
 <h2>DESCRIPTION</h2>

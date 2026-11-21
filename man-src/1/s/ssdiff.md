@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ssdiff/"
 description: "ssdiff – compare two spreadsheets"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ssdiff &#8211; compare two spreadsheets</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssdiff </code> [<i>OPTIONS</i>] <i>OLDFILE</i> <i>NEWFILE</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gvimdiff/"
 description: "vimdiff – edit two, three or four versions of a file with Vim and show differences"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vimdiff &#8211; edit two, three or four versions of a file with Vim and show differences </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vimdiff</code> [options] file1 file2 [file3 [file4]] </p>
 <p> <code>gvimdiff</code></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-chpsvx/"
 description: "chpsvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chpsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpsvx</code> (FACT, UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br />

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-arch_prctl/"
 description: "arch_prctl – set architecture-specific thread state"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arch_prctl &#8211; set architecture-specific thread state </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/prctl.h&gt;

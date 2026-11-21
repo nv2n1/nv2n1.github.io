@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-afm2afm/"
 description: "afm2afm – reencode an afm file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> afm2afm &#8211; reencode an afm file </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>afm2afm</code></dt>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-service-ls/"
 description: "docker-service-ls – List services"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-service-ls &#8211; List services </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service ls [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

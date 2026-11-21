@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lexgrog/"
 description: "lexgrog – parse header information in man pages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lexgrog &#8211; parse header information in man pages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lexgrog</code> [<code>-m</code>|<code>-c</code>] [<code>-dfw?V</code>] [<code>-E</code> <i>encoding</i>] <i>file</i> &#8230;</p>
 <h2>DESCRIPTION</h2>

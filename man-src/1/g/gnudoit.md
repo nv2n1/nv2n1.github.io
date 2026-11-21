@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gnudoit/"
 description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gnuserv, gnuclient &#8211; Server and Clients for XEmacs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnuclient</code> [-nw] [-display display] [-q] [-v] [-l library] [-batch] [-f function] [-eval form] [-h hostname] [-p port] [-r remote-pathname] [[+line] file] &#8230;<br />
  <code>gnudoit [-q] </code> form<br />

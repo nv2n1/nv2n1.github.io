@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-bench/"
 description: "cargo-bench – Execute benchmarks of a package"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-bench &#8211; Execute benchmarks of a package </p>
 <h2>SYNOPSIS</h2>
 <p> cargo bench [OPTIONS] [&#8211;] [&lt;ARGS&gt;&#8230;]</p>
 <h2>DESCRIPTION</h2>

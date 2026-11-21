@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zsoelim/"
 description: "zsoelim – satisfy .so requests in roff input"
 ---
 
-<h2 class="name">NAME</h2>
-<p> zsoelim &#8211; satisfy .so requests in roff input </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zsoelim</code> [<code>-CVh</code>] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

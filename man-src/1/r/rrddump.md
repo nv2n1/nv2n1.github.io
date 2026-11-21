@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrddump/"
 description: "rrddump – dump the contents of an RRD to XML format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrddump &#8211; dump the contents of an RRD to XML format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>dump</code> <i>filename.rrd</i> [<i>filename.xml</i>] [<code>&#8211;header</code>|<code>-h</code>&nbsp;<wbr>{none,xsd,dtd}] [<code>&#8211;no-header</code>] [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>] &gt;&nbsp;<wbr><i>filename.xml</i></p>
 <h2>DESCRIPTION</h2>

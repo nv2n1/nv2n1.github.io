@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bluetooth-sendto/"
 description: "bluetooth-sendto – GTK application for transferring files over Bluetooth"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bluetooth-sendto &#8211; GTK application for transferring files over Bluetooth </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bluetooth-sendto</code> [&#8211;device=XX:XX:XX:XX:XX:XX [&#8211;name=NAME]] [file&#8230;]</p>
 <h2>DESCRIPTION</h2>

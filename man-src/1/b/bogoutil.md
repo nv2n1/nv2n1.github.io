@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bogoutil/"
 description: "bogoutil – Dumps, loads, and maintains bogofilter database files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bogoutil &#8211; Dumps, loads, and maintains bogofilter database files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogoutil</code> {-h | -V}</dt>

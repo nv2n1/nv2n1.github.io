@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xmlcopyeditor/"
 description: "xmlcopyeditor – fast, free, validating XML editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xmlcopyeditor &#8211; fast, free, validating XML editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmlcopyeditor</code> <code>[</code> <code>&#8211;version</code> <code>|</code> <code>&#8211;help</code> <code>|</code> <code>FILE&#8230;</code> <code>]</code> </p>
 <h2>DESCRIPTION</h2>

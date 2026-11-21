@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-exchange/"
 description: "QuantLib::ExchangeRate – exchange rate between two currencies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::ExchangeRate &#8211; exchange rate between two currencies </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/exchangerate.hpp&gt; </p>
 <h3>Public Types</h3>

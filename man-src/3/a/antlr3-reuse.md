@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-reuse/"
 description: "src/antlr3commontree.c –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> src/antlr3commontree.c &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt; </p>
 <h3>Functions</h3>

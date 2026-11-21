@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-x11perf/"
 description: "x11perf – X11 server performance test program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> x11perf &#8211; X11 server performance test program </p>
 <h2>SYNTAX</h2>
 <p> <code>x11perf</code> [ -option &#8230; ]</p>
 <h2>DESCRIPTION</h2>

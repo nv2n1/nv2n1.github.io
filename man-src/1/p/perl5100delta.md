@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perl5100delta/"
 description: "perl5100delta – what is new for perl 5.10.0"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perl5100delta &#8211; what is new for perl 5.10.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes the differences between the 5.8.8 release and the 5.10.0 release. </p>
 <p> Many of the bug fixes in 5.10.0 were already seen in the 5.8.X maintenance releases; they are not duplicated here and are documented in the set of man pages named perl58[1-8]?delta.</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnuke/"
 description: "pnuke — parallel process kill program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnuke &#8212; parallel process kill program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnuke</code> [<code>-vA</code>] [<code>-h</code> <i>hosts_file</i>] [<code>-H</code> [<i>user</i>@]<i>host</i>[:<i>port</i>]] [<code>-l</code> <i>user</i>] [<code>-p</code> <i>par</i>] [<code>-o</code> <i>outdir</i>] [<code>-e</code> <i>errdir</i>] [<code>-t</code> <i>timeout</i>] [<code>-O</code> <i>options</i>] [<code>-x</code> <i>args</i>] [<code>-X</code> <i>arg</i>] <i>pattern</i> </p>
 <h2>DESCRIPTION</h2>

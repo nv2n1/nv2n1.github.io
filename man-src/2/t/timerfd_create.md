@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-timerfd_create/"
 description: "timerfd_create, timerfd_settime, timerfd_gettime – timers that notify via file descriptors"
 ---
 
-<h2 class="name">NAME</h2>
-<p> timerfd_create, timerfd_settime, timerfd_gettime &#8211; timers that notify via file descriptors </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/timerfd.h&gt;

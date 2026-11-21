@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pki-group-member/"
 description: "pki-group-member – Command-Line Interface for managing Certificate System group members."
 ---
 
-<h2 class="name">NAME</h2>
-<p> pki-group-member &#8211; Command-Line Interface for managing Certificate System group members.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - group - member pki[CLI options]&lt;subsystem&gt; - group - member - find&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - member - show&lt;group ID&gt;&lt;member ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - member - add&lt;group ID&gt;&lt;member ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - member - del&lt;group ID&gt;&lt;member ID&gt;[command options]

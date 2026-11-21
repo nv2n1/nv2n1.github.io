@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-iswctype/"
 description: "iswctype – wide-character classification"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iswctype &#8211; wide-character classification </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;

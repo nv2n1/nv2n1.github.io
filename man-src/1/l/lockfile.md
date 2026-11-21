@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lockfile/"
 description: "lockfile – conditional semaphore-file creator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lockfile &#8211; conditional semaphore-file creator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lockfile</code> <i></i><code>&#8211;</code>sleeptime | <i></i><code>-r </code>retries |<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i></i><code>-l </code>locktimeout | <i></i><code>-s </code>suspend | <code>-!</code> | <code>-ml</code> | <code>-mu</code> | <i>filename</i> &#8230; </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-manifest-annotate/"
 description: "docker-manifest-annotate – Add additional information to a local image manifest"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-manifest-annotate &#8211; Add additional information to a local image manifest </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker manifest annotate [OPTIONS] MANIFEST_LIST MANIFEST</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ttf2pt1_convert/"
 description: "ttf2pt1_convert – convenience font conversion script"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ttf2pt1_convert &#8211; convenience font conversion script </p>
 <h2>SYNOPSIS</h2>
 <p> ttf2pt1_convert <code>[config-file]</code></p>
 <h2>DESCRIPTION</h2>

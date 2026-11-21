@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-size-14/"
 description: "llvm-size – manual page for llvm-size 14"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-size &#8211; manual page for llvm-size 14 </p>
 <h2>DESCRIPTION</h2>
 <p> OVERVIEW: LLVM object size dumper </p>
 <p> USAGE: build-llvm/tools/clang/stage2-bins/bin/llvm-size [options] &lt;input object files&gt;</p>

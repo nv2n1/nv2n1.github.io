@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-umask/"
 description: "umask – set file mode creation mask"
 ---
 
-<h2 class="name">NAME</h2>
-<p> umask &#8211; set file mode creation mask </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;sys/stat.h&gt;</code> </p>

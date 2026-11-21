@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-megaput/"
 description: "megaput – upload files to your Mega.co.nz account"
 ---
 
-<h2 class="name">NAME</h2>
-<p> megaput &#8211; upload files to your Mega.co.nz account </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 megaput[--no - progress][--path&lt;remotepath&gt;]&lt;paths&gt;...

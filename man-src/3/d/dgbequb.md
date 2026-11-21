@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dgbequb/"
 description: "dgbequb.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dgbequb.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbequb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br />

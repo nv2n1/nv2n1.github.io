@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-mca-14/"
 description: "llvm-mca – LLVM Machine Code Analyzer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-mca &#8211; LLVM Machine Code Analyzer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-mca</code> [<i>options</i>] [input]</p>
 <h2>DESCRIPTION</h2>

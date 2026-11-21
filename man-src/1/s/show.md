@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-show/"
 description: "show – show (display) messages"
 ---
 
-<h2 class="name">NAME</h2>
-<p> show &#8211; show (display) messages </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>show</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-draft</code>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></dt>

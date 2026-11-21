@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-appstream-compose/"
 description: "appstream-compose – Generate AppStream metadata"
 ---
 
-<h2 class="name">NAME</h2>
-<p> appstream-compose &#8211; Generate AppStream metadata </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>appstream-compose</code> [OPTION&#8230;]</dt></dl>

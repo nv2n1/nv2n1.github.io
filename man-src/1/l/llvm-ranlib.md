@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-ranlib/"
 description: "llvm-ranlib – Generate index for LLVM archive"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-ranlib &#8211; Generate index for LLVM archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-ranlib</code> [&#8211;version] [-help] &lt;archive-file&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cstedc/"
 description: "cstedc.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cstedc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />

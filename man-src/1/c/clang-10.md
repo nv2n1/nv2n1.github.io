@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-clang-10/"
 description: "clang – the Clang C, C++, and Objective-C compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> clang &#8211; the Clang C, C++, and Objective-C compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>clang</code> [<i>options</i>] <i>filename …</i></p>
 <h2>DESCRIPTION</h2>

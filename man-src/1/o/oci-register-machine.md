@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-oci-register-machine/"
 description: "oci-register-machine – Register OCI containers with systemd-machined"
 ---
 
-<h2 class="name">NAME</h2>
-<p> oci-register-machine &#8211; Register OCI containers with systemd-machined</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oci-register-machine</code> </p>
 <h2>DESCRIPTION</h2>

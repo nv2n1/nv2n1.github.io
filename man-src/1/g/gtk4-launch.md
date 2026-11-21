@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk4-launch/"
 description: "gtk4-launch – Launch an application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk4-launch &#8211; Launch an application </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 gtk4 - launch[OPTIONS...]&lt;APPLICATION&gt;[URI...]

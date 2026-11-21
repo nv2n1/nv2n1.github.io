@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasda/"
 description: "dlasda.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasda.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasda</code> (ICOMPQ, SMLSIZ, N, SQRE, D, E, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br />

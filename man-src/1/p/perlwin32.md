@@ -6,8 +6,6 @@ letter: "p"
 url: "/docs/linux/man/1-perlwin32/"
 description: "perlwin32 – Perl under Windows"
 ---
-<h2 class="name">NAME</h2>
-<p> perlwin32 - Perl under Windows </p>
 <h2>SYNOPSIS</h2>
 <p> These are instructions for building Perl under Windows 2000 and later.  </p>
 <h2>DESCRIPTION</h2>

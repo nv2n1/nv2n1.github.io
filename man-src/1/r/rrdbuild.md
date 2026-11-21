@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rrdbuild/"
 description: "rrdbuild – Instructions for building RRDtool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rrdbuild &#8211; Instructions for building RRDtool </p>
 <h2>OVERVIEW</h2>
 <p> If you downloaded the source of RRDtool you have to compile it. This document will give some information on how this is done. </p>
 <p> RRDtool relies on services of third part libraries. Some of these libraries may already be installed on your system. You have to compile copies of the other ones before you can build RRDtool. </p>

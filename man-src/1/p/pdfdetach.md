@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdfdetach/"
 description: "pdfdetach – Portable Document Format (PDF) document embedded file extractor (version 3.03)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdfdetach &#8211; Portable Document Format (PDF) document embedded file extractor (version 3.03) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfdetach</code> [options] [<i>PDF-file</i>]</p>
 <h2>DESCRIPTION</h2>

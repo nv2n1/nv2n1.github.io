@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-chown/"
 description: "chown – change file owner and group"
 ---
 
-<h2 class="name">NAME</h2>
-<p> chown &#8211; change file owner and group </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chown</code> [<i>,OPTION/</i>]&#8230; [<i>,OWNER/</i>][<i>,:/</i>[<i>,GROUP/</i>]] <i>,FILE/</i>&#8230;<br />
  <code>chown</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;reference=RFILE FILE/</i>&#8230;</p>

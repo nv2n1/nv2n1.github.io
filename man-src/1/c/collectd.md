@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-collectd/"
 description: "collectd – System statistics collection daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> collectd &#8211; System statistics collection daemon </p>
 <h2>SYNOPSIS</h2>
 <p> collectd <i>[options]</i></p>
 <h2>DESCRIPTION</h2>

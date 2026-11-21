@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-coredumpctl/"
 description: "coredumpctl – Retrieve coredumps from the journal"
 ---
 
-<h2 class="name">NAME</h2>
-<p> coredumpctl &#8211; Retrieve coredumps from the journal </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>coredumpctl</code> [OPTIONS&#8230;] {COMMAND} [PID|COMM|EXE|MATCH&#8230;]</dt></dl>

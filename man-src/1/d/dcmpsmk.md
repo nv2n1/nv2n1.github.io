@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmpsmk/"
 description: "dcmpsmk – Create DICOM grayscale softcopy presentation state"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmpsmk &#8211; Create DICOM grayscale softcopy presentation state </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmpsmk [options] dcmfile-in dcmfile-out

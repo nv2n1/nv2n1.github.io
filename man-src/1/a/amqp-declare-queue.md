@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-amqp-declare-queue/"
 description: "amqp-declare-queue – Declare (create or assert the existence of) a queue on an AMQP server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> amqp-declare-queue &#8211; Declare (create or assert the existence of) a queue on an AMQP server </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-declare-queue</code> [<i>OPTION</i>&#8230;] [-d] {-q&nbsp;<wbr><i>queue name</i>}</dt></dl>

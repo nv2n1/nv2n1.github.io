@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-document-export/"
 description: "flatpak-document-export – Export a file to a sandboxed application"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-document-export &#8211; Export a file to a sandboxed application </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak document-export</code> [OPTION&#8230;] FILE</dt></dl>

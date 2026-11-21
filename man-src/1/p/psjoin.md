@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-psjoin/"
 description: "psjoin – psjoin"
 ---
 
-<h2 class="name">NAME</h2>
-<p> psjoin &#8211; psjoin </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psjoin</code> [ <i>options</i>&#8230; ] <i>filenames</i>&#8230;</p>
 <h2>DESCRIPTION</h2>

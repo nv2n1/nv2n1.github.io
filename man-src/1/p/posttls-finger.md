@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-posttls-finger/"
 description: "posttls-finger – Probe the TLS properties of an ESMTP or LMTP server."
 ---
 
-<h2 class="name">NAME</h2>
-<p> posttls-finger &#8211; Probe the TLS properties of an ESMTP or LMTP server. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 posttls - finger[options] [inet:] domain[:port][match...]

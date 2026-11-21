@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-blaze-init/"
 description: "blaze-init – create or recover a BlazeBlogger repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> blaze-init &#8211; create or recover a BlazeBlogger repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blaze-init</code> [<code>-fqV</code>] [<code>-b</code> <i>directory</i>] </p>
 <p> <code>blaze-init</code> <code>-h</code> | <code>-v</code></p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_installdeb/"
 description: "dh_installdeb – install files into the DEBIAN directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_installdeb &#8211; install files into the DEBIAN directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installdeb</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

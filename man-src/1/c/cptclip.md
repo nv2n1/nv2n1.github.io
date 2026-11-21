@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cptclip/"
 description: "cptclip – extract a sub-table from a GMT colour palette table (cpt)."
 ---
 
-<h2 class="name">NAME</h2>
-<p> cptclip &#8211; extract a sub-table from a GMT colour palette table (cpt). </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptclip</code> -R&nbsp;<wbr><i>min</i>/<i>max</i> [-h] [-o&nbsp;<wbr><i>file</i>] [-s] [-v] [-V] [<i>file</i>]</dt></dl>

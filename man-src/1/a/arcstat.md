@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-arcstat/"
 description: "arcstat – ARC Status"
 ---
 
-<h2 class="name">NAME</h2>
-<p> arcstat &#8211; ARC Status</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcstat</code> command is used for obtaining the status of jobs that have been submitted to grid enabled resources. </p>
 <h2>SYNOPSIS</h2>

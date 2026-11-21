@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmindex/"
 description: "pnmindex – build a visual index of a bunch of anymaps"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmindex &#8211; build a visual index of a bunch of anymaps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmindex</code> [<code>-size</code> <i>N</i>] [<code>-across</code> <i>N</i>] [<code>-colors</code> <i>N</i>] [<code>-black</code>] [<code>-title</code> <i>T</i>] [<code>-quant</code>|<code>-noquant</code>] <i>pnmfile</i> &#8230; </p>
 <h2>DESCRIPTION</h2>

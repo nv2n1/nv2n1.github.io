@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-log2/"
 description: "log2, log2f, log2l – base-2 logarithmic function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> log2, log2f, log2l &#8211; base-2 logarithmic function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

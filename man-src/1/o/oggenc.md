@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-oggenc/"
 description: "oggenc – encode audio into the Ogg Vorbis format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> oggenc &#8211; encode audio into the Ogg Vorbis format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>oggenc</code> [ <code>-hrQ</code> ] [ <code>-B</code> <i>raw input sample size</i> ] [ <code>-C</code> <i>raw input number of channels</i> ] [ <code>-R</code> <i>raw input samplerate</i> ] [ <code>-b</code> <i>nominal bitrate</i> ] [ <code>-m</code> <i>minimum bitrate</i> ] [ <code>-M</code> <i>maximum bitrate</i> ] [ <code>-q</code> <i>quality</i> ] [ <code>&#8211;resample </code> <i>frequency</i> ] [ <code>&#8211;downmix </code> ] [ <code>&#8211;scale</code> ] [ <code>-s</code> <i>serial</i> ] [ <code>-o</code> <i>output_file</i> ] [ <code>-n</code> <i>pattern</i> ] [ <code>-c</code> <i>extra_comment</i> ] [ <code>-a</code> <i>artist</i> ] [ <code>-t</code> <i>title</i> ] [ <code>-l</code> <i>album</i> ] [ <code>-G</code> <i>genre</i> ] [ <code>-L</code> <i>lyrics file</i> ] [ <code>-Y</code> <i>language-string</i> ] <i>input_files </i>&#8230; </p>
 <h2>DESCRIPTION</h2>

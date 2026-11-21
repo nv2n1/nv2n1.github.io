@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_debug_init/"
 description: "cgi_debug_init – initialize standalone debugging"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_debug_init &#8211; initialize standalone debugging </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

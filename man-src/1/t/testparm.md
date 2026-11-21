@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-testparm/"
 description: "testparm – check an smb.conf configuration file for internal correctness"
 ---
 
-<h2 class="name">NAME</h2>
-<p> testparm &#8211; check an smb.conf configuration file for internal correctness </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>

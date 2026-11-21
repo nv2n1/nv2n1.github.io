@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-antlr3-emit/"
 description: "src/antlr3lexer.c –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> src/antlr3lexer.c &#8211; </p>
 <p> Base implementation of an antlr 3 lexer.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3lexer.h">antlr3lexer.h</a>&gt; </p>

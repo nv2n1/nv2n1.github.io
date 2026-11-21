@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-refer/"
 description: "refer – preprocess bibliographic references for groff"
 ---
 
-<h2 class="name">NAME</h2>
-<p> refer &#8211; preprocess bibliographic references for groff </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-benCPRS</code> ] [ <code>-a </code><i>n</i> ] [ <code>-c </code><i>fields</i> ] [ <code>-f </code><i>n</i> ] [ <code>-i </code><i>fields</i> ] [ <code>-k </code><i>field</i> ] [ <code>-l </code><i>m,n</i> ] [ <code>-p </code><i>filename</i> ] [ <code>-s </code><i>fields</i> ] [ <code>-t </code><i>n</i> ] <code>-B </code><i>field</i><code>.</code><i>macro</i> [<i>file</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

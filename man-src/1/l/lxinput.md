@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-lxinput/"
 description: "lxinput – a light-weight program to configure keyboard and mouse"
 ---
 
-<h2 class="name">NAME</h2>
-<p> lxinput &#8211; a light-weight program to configure keyboard and mouse </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lxinput</code></dt></dl>

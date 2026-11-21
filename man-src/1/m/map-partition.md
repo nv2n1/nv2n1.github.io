@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-map-partition/"
 description: "map-partition – Spectral bisection of observation graphs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> map-partition &#8211; Spectral bisection of observation graphs </p>
 <h2>SYNOPSIS</h2>
 <p> map-partition <i>input_map.simplemap</i> [<i>nCut threshold</i>]</p>
 <h2>DESCRIPTION</h2>

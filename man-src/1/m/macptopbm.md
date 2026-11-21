@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-macptopbm/"
 description: "macptopbm – convert a MacPaint file into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
-<p> macptopbm &#8211; convert a MacPaint file into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>macptopbm</code> [<code>-extraskip</code> <i>N</i>] [<i>macpfile</i>]</p>
 <h2>DESCRIPTION</h2>

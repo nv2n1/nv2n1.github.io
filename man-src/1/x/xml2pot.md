@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xml2pot/"
 description: "xml2pot – Creates a PO template file from a DocBook XML file."
 ---
 
-<h2 class="name">NAME</h2>
-<p> xml2pot &#8211; Creates a PO template file from a DocBook XML file. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xml2pot</code> [<i>original-XML</i>]</dt></dl>

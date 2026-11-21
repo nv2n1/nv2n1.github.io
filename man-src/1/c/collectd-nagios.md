@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-collectd-nagios/"
 description: "collectd-nagios – Nagios plugin for querying collectd"
 ---
 
-<h2 class="name">NAME</h2>
-<p> collectd-nagios &#8211; Nagios plugin for querying collectd </p>
 <h2>SYNOPSIS</h2>
 <p> collectd-nagios <code>-s</code> <i>socket</i> <code>-n</code> <i>value_spec</i> <code>-H</code> <i>hostname</i> <i>[options]</i></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-repodiffer/"
 description: "repodiffer – report differences between repository histories"
 ---
 
-<h2 class="name">NAME</h2>
-<p> repodiffer &#8211; report differences between repository histories </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repodiffer</code> [&#8211;ignore&nbsp;<wbr><i>parts</i>] [&#8211;quiet] [&#8211;verbose&nbsp;<wbr><i>level</i>] [&#8211;show-equal] [&#8211;changes-only] [&#8211;full-hash] [&#8211;tree-diff] [&#8211;legacy-map&nbsp;<wbr><i>mapfile</i>] [&#8211;single&nbsp;<wbr><i>id1=id2</i>] <i>repo-or-stream1</i> <i>repo-or-stream2</i></dt></dl>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-unhide/"
 description: "stg-unhide – Unhide a hidden patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-unhide &#8211; Unhide a hidden patch </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 stg unhide[options][--]&lt;patch - range&gt;

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ocamloptp/"
 description: "ocamlcp, ocamloptp – The OCaml profiling compilers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ocamlcp, ocamloptp &#8211; The OCaml profiling compilers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlcp</code> [ <i>ocamlc options</i> ] [ <code>-P</code><i>&nbsp;<wbr>flags</i> ] <i>filename &#8230;</i> </p>
 <p> <code>ocamloptp</code> [ <i>ocamlopt options</i> ] [ <code>-P</code><i>&nbsp;<wbr>flags</i> ] <i>filename &#8230;</i> </p>

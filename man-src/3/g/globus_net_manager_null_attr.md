@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_net_manager_null_attr/"
 description: "Attributes –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Attributes &#8211; </p>
 <p> Net Manager Attribute Management Functions.</p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_net_manager_attr_s</code><br />

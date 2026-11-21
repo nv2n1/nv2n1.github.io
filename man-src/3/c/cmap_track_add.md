@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cmap_track_add/"
 description: "cmap_track_add – Set tracking function for values in CMAP"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cmap_track_add &#8211; Set tracking function for values in CMAP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_track_add (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>, int32_t </code><i>track_type</i><code>, cmap_notify_fn_t </code><i>notify_fn</i><code>, void *</code><i>user_data</i><code>, cmap_track_handle_t *</code><i>cmap_track_handle</i><code>);</code> </p>

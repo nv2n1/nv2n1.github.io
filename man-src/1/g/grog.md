@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-grog/"
 description: "grog – guess options for a following groff command"
 ---
 
-<h2 class="name">NAME</h2>
-<p> grog &#8211; guess options for a following groff command </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-C</code> ] [ <code>-T </code><i>device</i> ] [ <code>&#8211;run</code> ] [ <code>&#8211;warnings</code> ] [ <code>&#8211;ligatures</code> ] [<i>groff-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-test/"
 description: "test – check file types and compare values"
 ---
 
-<h2 class="name">NAME</h2>
-<p> test &#8211; check file types and compare values </p>
 <h2>SYNOPSIS</h2>
 <p> <code>test</code> <i>EXPRESSION</i><br />
  <code>test</code><br />

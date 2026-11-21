@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-qsig/"
 description: "qsig – signal pbs batch job"
 ---
 
-<h2 class="name">NAME</h2>
-<p> qsig &#8211; signal pbs batch job </p>
 <h2>SYNOPSIS</h2>
 <p> qsig [-s signal] job_identifier &#8230;</p>
 <h2>DESCRIPTION</h2>

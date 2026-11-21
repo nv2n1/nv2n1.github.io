@@ -6,8 +6,6 @@ letter: "f"
 url: "/docs/linux/man/3-fscanf/"
 description: "scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf – input format conversion"
 ---
-<h2 class="name">NAME</h2>
-<p> scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf - input format conversion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;stdio.h&gt; 

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-iowatcher/"
 description: "iowatcher – Create visualizations from blktrace results"
 ---
 
-<h2 class="name">NAME</h2>
-<p> iowatcher &#8211; Create visualizations from blktrace results</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iowatcher</code> <i>OPTIONS&#8230;</i> </p>
 <h2>DESCRIPTION</h2>

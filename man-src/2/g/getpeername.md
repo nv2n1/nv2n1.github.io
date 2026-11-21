@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-getpeername/"
 description: "getpeername – get name of connected peer socket"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getpeername &#8211; get name of connected peer socket </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/socket.h&gt;</code> </p>
 <p> <code>int getpeername(int </code><i>sockfd</i><code>, struct sockaddr *</code><i>addr</i><code>, socklen_t *</code><i>addrlen</i><code>);</code></p>

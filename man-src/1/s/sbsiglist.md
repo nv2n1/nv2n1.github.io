@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-sbsiglist/"
 description: "sbsiglist – Create EFI_SIGNATURE_LIST signature databases"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sbsiglist &#8211; Create EFI_SIGNATURE_LIST signature databases </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sbsiglist</code> [<i>,options/</i>] <i>,&#8211;owner &lt;guid&gt; &#8211;type &lt;type&gt; &lt;sig-file&gt;/</i></p>
 <h2>DESCRIPTION</h2>

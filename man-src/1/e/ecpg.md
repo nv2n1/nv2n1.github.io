@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ecpg/"
 description: "ecpg – embedded SQL C preprocessor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ecpg &#8211; embedded SQL C preprocessor </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ecpg</code> [<i>option</i>&#8230;] <i>file</i>&#8230;</dt></dl>

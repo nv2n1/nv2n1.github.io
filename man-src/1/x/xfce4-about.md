@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfce4-about/"
 description: "xfce4-about – About and Credits dialog for Xfce"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfce4-about &#8211; About and Credits dialog for Xfce </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>

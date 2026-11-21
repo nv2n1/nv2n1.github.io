@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fvwm-menu-xlock/"
 description: "fvwm-menu-xlock – builds xlock menu definition for fvwm"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fvwm-menu-xlock &#8211; builds xlock menu definition for fvwm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fvwm-menu-xlock</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-V</code> ] [ <code>&#8211;name</code>|<code>-n</code> name ] [ <code>&#8211;title</code>|<code>-t</code> title ] [ <code>&#8211;item</code> format ] [ <code>&#8211;icon-title</code> icon ] [ <code>&#8211;icon-item</code> icon ] [ <code>&#8211;special-first</code>|<code>-s</code> ] [ &#8212; xlock params ]</p>
 <h2>DESCRIPTION</h2>

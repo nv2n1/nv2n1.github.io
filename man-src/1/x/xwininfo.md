@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xwininfo/"
 description: "xwininfo – window information utility for X"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xwininfo &#8211; window information utility for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xwininfo</code> [-help] [-id <i>wdid</i>] [-root] [-name <i>wdname</i>] [-int] [-children] [-tree] [-stats] [-bits] [-events] [-size] [-wm] [-shape] [-frame] [-all] [-english] [-metric] [-display <i>host:dpy</i>] [-version]</p>
 <h2>DESCRIPTION</h2>

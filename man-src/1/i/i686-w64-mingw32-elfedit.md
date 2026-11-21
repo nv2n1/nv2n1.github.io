@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-i686-w64-mingw32-elfedit/"
 description: "elfedit – Update the ELF header of ELF files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> elfedit &#8211; Update the ELF header of ELF files. </p>
 <h2>SYNOPSIS</h2>
 <p> elfedit [<code>&#8211;input-mach=</code><i>machine</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;input-type=</code><i>type</i>]<br />

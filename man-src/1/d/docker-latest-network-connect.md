@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-latest-network-connect/"
 description: "docker-network-connect – connect a container to a network"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-network-connect &#8211; connect a container to a network </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker network connect</code> [<code>&#8211;help</code>] NETWORK CONTAINER </p>
 <h2>DESCRIPTION</h2>

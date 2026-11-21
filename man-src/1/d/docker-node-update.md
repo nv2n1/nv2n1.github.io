@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-node-update/"
 description: "docker-node-update – Update a node"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-node-update &#8211; Update a node </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker node update [OPTIONS] NODE</code> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ppmtouil/"
 description: "ppmtouil – convert a portable pixmap into a Motif UIL icon file"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ppmtouil &#8211; convert a portable pixmap into a Motif UIL icon file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtouil</code> [<code>-name</code> <i>uilname</i>] [<i>ppmfile</i>]</p>
 <h2>DESCRIPTION</h2>

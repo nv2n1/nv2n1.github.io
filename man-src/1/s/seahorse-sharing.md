@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-seahorse-sharing/"
 description: "seahorse-sharing – public pgp key sharing"
 ---
 
-<h2 class="name">NAME</h2>
-<p> seahorse-sharing &#8211; public pgp key sharing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>seahorse-sharing</code> [ <i>OPTION</i>&#8230; ] </p>
 <h2>DESCRIPTION</h2>

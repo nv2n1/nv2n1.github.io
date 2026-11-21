@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dsysvx/"
 description: "dsysvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dsysvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsysvx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, LWORK, IWORK, INFO)<br />

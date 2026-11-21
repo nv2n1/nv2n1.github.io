@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-diffindex-rred/"
 description: "diffindex-rred – Restricted restricted ed"
 ---
 
-<h2 class="name">NAME</h2>
-<p> diffindex-rred &#8211; Restricted restricted ed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>diffindex-rred</code> <code>diff1</code><i> &#8230;</i> </p>
 <h2>DESCRIPTION</h2>

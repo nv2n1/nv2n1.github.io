@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtk4-update-icon-cache/"
 description: "gtk4-update-icon-cache – Icon theme caching utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtk4-update-icon-cache &#8211; Icon theme caching utility </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <code>gtk4-update-icon-cache</code> [OPTIONS...] &lt;PATH&gt;

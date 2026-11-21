@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlcompile/"
 description: "perlcompile – Introduction to the Perl Compiler-Translator"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlcompile &#8211; Introduction to the Perl Compiler-Translator </p>
 <h2>DESCRIPTION</h2>
 <p> Perl has always had a compiler: your source is compiled into an internal form (a parse tree) which is then optimized before being run. Since version 5.005, Perl has shipped with a module capable of inspecting the optimized parse tree (<tt>&quot;B&quot;</tt>), and this has been used to write many useful utilities, including a module that lets you turn your Perl into C source code that can be compiled into a native executable. </p>
 <p> The <tt>&quot;B&quot;</tt> module provides access to the parse tree, and other modules (&#8220;back ends&#8221;) do things with the tree. Some write it out as semi-human-readable text. Another traverses the parse tree to build a cross-reference of which subroutines, formats, and variables are used where. Another checks your code for dubious constructs. Yet another back end dumps the parse tree back out as Perl source, acting as a source code beautifier or deobfuscator. </p>

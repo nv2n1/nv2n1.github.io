@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pnmarith/"
 description: "pnmarith – perform arithmetic on two portable anymaps"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pnmarith &#8211; perform arithmetic on two portable anymaps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmarith</code> <code>-add</code>|<code>-subtract</code>|<code>-multiply</code>|<code>-difference</code>|<code>-minimum</code>|<code>-maximum.</code> <i>pnmfile1 pnmfile2</i></p>
 <h2>DESCRIPTION</h2>

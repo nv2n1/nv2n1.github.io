@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xkill/"
 description: "xkill – kill a client by its X resource"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xkill &#8211; kill a client by its X resource </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xkill</code> [-display <i>displayname</i>] [-id <i>resource</i>] [-button number] [-frame] [-all] [-version]</p>
 <h2>DESCRIPTION</h2>

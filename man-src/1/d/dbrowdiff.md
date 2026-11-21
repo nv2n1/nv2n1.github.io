@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dbrowdiff/"
 description: "dbrowdiff – compute row-by-row differences of some column"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dbrowdiff &#8211; compute row-by-row differences of some column </p>
 <h2>SYNOPSIS</h2>
 <p> dbrowdiff [-B|-I] column</p>
 <h2>DESCRIPTION</h2>

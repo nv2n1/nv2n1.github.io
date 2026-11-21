@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-show-branch/"
 description: "git-show-branch – Show branches and their commits"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-show-branch &#8211; Show branches and their commits </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git show - branch[-a | --all][-r | --remotes][--topo - order | --date - order][--current][--color[=&lt;when&gt;] | --no - color][--sparse][--more = &lt;n&gt; | --list | --independent | --merge - base][--no - name | --sha1 - name][--topics][(&lt;rev&gt; | &lt;glob&gt;)...] git show - branch(-g | --reflog)[=&lt;n&gt;[, &lt;base&gt;]][--list][&lt;ref&gt;]

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-slahr2/"
 description: "slahr2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> slahr2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slahr2</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />

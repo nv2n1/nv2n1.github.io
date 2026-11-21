@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stdbuf/"
 description: "stdbuf – Run COMMAND, with modified buffering operations for its standard streams."
 ---
 
-<h2 class="name">NAME</h2>
-<p> stdbuf &#8211; Run COMMAND, with modified buffering operations for its standard streams. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stdbuf</code> <i>,OPTION/</i>&#8230; <i>,COMMAND/</i></p>
 <h2>DESCRIPTION</h2>

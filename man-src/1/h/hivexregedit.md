@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hivexregedit/"
 description: "hivexregedit – Merge and export Registry changes from regedit-format files."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hivexregedit &#8211; Merge and export Registry changes from regedit-format files. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hivexregedit-- merge[--prefix prefix][--encoding enc] hivefile[regfile] hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile

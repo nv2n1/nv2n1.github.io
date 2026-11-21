@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rst2html4/"
 description: "rst2html4 – convert reST documents to XHTML"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rst2html4 &#8211; convert reST documents to XHTML </p>
 <h2>SYNOPSIS</h2>
 <p> rst2html4 [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cargo-fetch/"
 description: "cargo-fetch – Fetch dependencies of a package from the network"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cargo-fetch &#8211; Fetch dependencies of a package from the network </p>
 <h2>SYNOPSIS</h2>
 <p> cargo fetch [OPTIONS]</p>
 <h2>DESCRIPTION</h2>

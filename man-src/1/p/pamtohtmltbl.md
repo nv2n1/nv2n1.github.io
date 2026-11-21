@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamtohtmltbl/"
 description: "pamtohtmltbl – convert pnm/pam visual image to an HTML table"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamtohtmltbl &#8211; convert pnm/pam visual image to an HTML table</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtohtmltbl</code> [<code>-transparent=</code><i>color</i>] [<code>-verbose</code>] [<i>file</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>

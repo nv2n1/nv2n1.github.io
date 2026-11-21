@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-evtest/"
 description: "evtest – Input device event monitor and query tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> evtest &#8211; Input device event monitor and query tool </p>
 <h2>SYNOPSIS</h2>
 <pre>
 evtest [--grab] /dev/input/eventX

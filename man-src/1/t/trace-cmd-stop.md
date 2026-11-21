@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-trace-cmd-stop/"
 description: "trace-cmd-stop – stop the Ftrace Linux kernel tracer from writing to the ring buffer."
 ---
 
-<h2 class="name">NAME</h2>
-<p> trace-cmd-stop &#8211; stop the Ftrace Linux kernel tracer from writing to the ring buffer. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd stop</code> [<i>OPTIONS</i>]</p>
 <h2>DESCRIPTION</h2>

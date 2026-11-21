@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-init/"
 description: "stg-init – Initialise the current branch for use with StGIT"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-init &#8211; Initialise the current branch for use with StGIT </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> init

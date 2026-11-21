@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-libblkid/"
 description: "libblkid – block device identification library"
 ---
 
-<h2 class="name">NAME</h2>
-<p> libblkid &#8211; block device identification library </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;blkid.h&gt;</code> </p>
 <p> <code>cc</code> <i>file.c</i> <code>-lblkid</code></p>

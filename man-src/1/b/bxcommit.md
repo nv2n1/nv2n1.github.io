@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-bxcommit/"
 description: "bxcommit – Interactive Tool to Commit Redologs into flat Disk Images for Bochs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bxcommit &#8211; Interactive Tool to Commit Redologs into flat Disk Images for Bochs </p>
 <h2>USAGE</h2>
 <p> <code>bxcommit</code></p>
 <h2>DESCRIPTION</h2>

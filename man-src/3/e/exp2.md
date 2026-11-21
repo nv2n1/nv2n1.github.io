@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-exp2/"
 description: "exp2, exp2f, exp2l – base-2 exponential function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> exp2, exp2f, exp2l &#8211; base-2 exponential function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;

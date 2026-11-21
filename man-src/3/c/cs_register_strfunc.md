@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cs_register_strfunc/"
 description: "cs_register_strfunc – register a string handling function"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cs_register_strfunc &#8211; register a string handling function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;

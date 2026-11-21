@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-manconv/"
 description: "manconv – convert manual page from one encoding to another"
 ---
 
-<h2 class="name">NAME</h2>
-<p> manconv &#8211; convert manual page from one encoding to another </p>
 <h2>SYNOPSIS</h2>
 <p> <code>manconv</code> <code>-f</code> [<i>from-code</i>[:<i>from-code</i>&#8230;]] <code>-t</code> <i>to-code</i> [<code>-dqhV</code>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

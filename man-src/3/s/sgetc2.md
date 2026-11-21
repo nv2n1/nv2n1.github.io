@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-sgetc2/"
 description: "sgetc2.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> sgetc2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br />

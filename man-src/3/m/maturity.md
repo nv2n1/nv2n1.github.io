@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-maturity/"
 description: "QuantLib::HestonModelHelper – calibration helper for Heston model"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::HestonModelHelper &#8211; calibration helper for Heston model </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/equity/hestonmodelhelper.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CalibrationHelper</code>. </p>

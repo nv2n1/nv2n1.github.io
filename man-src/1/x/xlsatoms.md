@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xlsatoms/"
 description: "xlsatoms – list interned atoms defined on server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xlsatoms &#8211; list interned atoms defined on server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xlsatoms</code> [-options &#8230;]</p>
 <h2>DESCRIPTION</h2>

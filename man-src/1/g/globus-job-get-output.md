@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-globus-job-get-output/"
 description: "globus-job-get-output – Retrieve the output and error streams from a GRAM job"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus-job-get-output &#8211; Retrieve the output and error streams from a GRAM job </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-job-get-output</code> [ -r <i>RESOURCE</i> | -resource <i>RESOURCE</i> ] [OPTIONS] <i>JOBID</i> </p>
 <p> <code>globus-job-get-output</code> [-help | -usage | -version | -versions ]</p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gtscheck/"
 description: "gtscheck – checks that a surface defines a closed, orientable non self-intersecting manifold."
 ---
 
-<h2 class="name">NAME</h2>
-<p> gtscheck &#8211; checks that a surface defines a closed, orientable non self-intersecting manifold.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtscheck</code> [<i>OPTION</i>]&nbsp;&lt;&nbsp;<i>FILE</i></p>
 <h2>DESCRIPTION</h2>

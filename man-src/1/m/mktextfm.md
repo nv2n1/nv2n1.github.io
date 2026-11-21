@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mktextfm/"
 description: "mktextfm – create a TFM file for a font"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mktextfm &#8211; create a TFM file for a font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mktextfm</code> [<i>options</i>] <i>font</i></p>
 <h2>DESCRIPTION</h2>

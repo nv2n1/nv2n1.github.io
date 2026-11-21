@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-globus-personal-gatekeeper/"
 description: "globus-personal-gatekeeper – Manage a user’s personal gatekeeper daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> globus-personal-gatekeeper &#8211; Manage a user&#8217;s personal gatekeeper daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-personal-gatekeeper</code> [-help ] [-usage ] [-version ] [-versions ] [-list ] [-directory <i>CONTACT</i>]</p>
 <h2>DESCRIPTION</h2>

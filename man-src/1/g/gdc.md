@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gdc/"
 description: "gdc – Client utility for GoodData on-demand Business Intelligence platform"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gdc &#8211; Client utility for GoodData on-demand Business Intelligence platform </p>
 <h2>SYNOPSIS</h2>
 <p> gdc [global options] &lt;command&gt; [command options]</p>
 <h2>DESCRIPTION</h2>

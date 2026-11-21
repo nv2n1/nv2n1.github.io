@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-readlinkat/"
 description: "readlink, readlinkat – read value of a symbolic link"
 ---
 
-<h2 class="name">NAME</h2>
-<p> readlink, readlinkat &#8211; read value of a symbolic link </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;

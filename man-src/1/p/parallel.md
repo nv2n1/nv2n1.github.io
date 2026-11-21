@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-parallel/"
 description: "parallel – run programs in parallel"
 ---
 
-<h2 class="name">NAME</h2>
-<p> parallel &#8211; run programs in parallel </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>parallel</code> [options] [command]<code>&#8212;</code> [argument &#8230;]</dt>

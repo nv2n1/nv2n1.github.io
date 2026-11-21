@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pdf2djvu/"
 description: "pdf2djvu – creates DjVu files from PDF files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pdf2djvu &#8211; creates DjVu files from PDF files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pdf2djvu</code> [{<code>-o</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;output</code>}&nbsp;<wbr><i>output-djvu-file</i>] [<i>option</i>&#8230;] <i>pdf-file</i>&#8230;</dt>

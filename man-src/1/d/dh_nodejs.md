@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dh_nodejs/"
 description: "dh_nodejs – set nodejs dependencies"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dh_nodejs &#8211; set nodejs dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_nodejs</code> [<i>debhelper options</i>]</p>
 <h2>DESCRIPTION</h2>

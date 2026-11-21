@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fbsetbg/"
 description: "fbsetbg – Set a background wallpaper or pattern"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fbsetbg &#8211; Set a background wallpaper or pattern </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbsetbg</code> [<code>-uU</code> <i>wallpapersetter</i>] [<code>-fFcCtTaA</code>] <i>wallpaper</i> </p>
 <p> <code>fbsetbg</code> [<code>-uU</code> <i>wallpapersetter</i>] <code>-rR</code> <i>path</i> </p>

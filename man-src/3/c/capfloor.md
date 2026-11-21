@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-capfloor/"
 description: "ql/instruments/capfloor.hpp – cap and floor class"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/instruments/capfloor.hpp &#8211; cap and floor class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt;<br />
  #include &lt;ql/cashflows/iborcoupon.hpp&gt;<br />

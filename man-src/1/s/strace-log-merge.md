@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-strace-log-merge/"
 description: "strace-log-merge – merge strace -ff -tt output"
 ---
 
-<h2 class="name">NAME</h2>
-<p> strace-log-merge &#8211; merge strace -ff -tt output </p>
 <h2>SYNOPSIS</h2>
 <p> <i>STRACE_LOG</i> <code>&#8211;help</code><i>&nbsp;</i></p>
 <h2>DESCRIPTION</h2>

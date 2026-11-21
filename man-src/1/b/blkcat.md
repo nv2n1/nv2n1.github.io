@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-blkcat/"
 description: "blkcat – Display the contents of file system data unit in a disk image."
 ---
 
-<h2 class="name">NAME</h2>
-<p> blkcat &#8211; Display the contents of file system data unit in a disk image. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blkcat [-ahswvV] [-f fstype] [-u unit_size] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images] unit_addr [num]</i> </p>
 <h2>DESCRIPTION</h2>

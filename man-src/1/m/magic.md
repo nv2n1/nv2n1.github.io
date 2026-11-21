@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-magic/"
 description: "magic – VLSI layout editor"
 ---
 
-<h2 class="name">NAME</h2>
-<p> magic &#8211; VLSI layout editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>magic</code> [ <code>-T&nbsp;<wbr></code> <i>technology</i> ] [ <code>-d&nbsp;<wbr></code> <i>device_type</i> ] [ <code>-g&nbsp;<wbr></code> <i>graphics_port</i> ] [ <code>-m&nbsp;<wbr></code> <i>monitor_type</i> ] [ <code>-D</code> ] [ <i>file</i> ] </p>
 <h2>DESCRIPTION</h2>

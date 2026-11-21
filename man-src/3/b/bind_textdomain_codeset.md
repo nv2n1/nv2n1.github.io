@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bind_textdomain_codeset/"
 description: "bind_textdomain_codeset – set encoding of message translations"
 ---
 
-<h2 class="name">NAME</h2>
-<p> bind_textdomain_codeset &#8211; set encoding of message translations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libintl.h&gt;

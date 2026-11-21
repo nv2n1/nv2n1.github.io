@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-top/"
 description: "guilt-top – Output name of topmost applied patch"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-top &#8211; Output name of topmost applied patch </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-top</i> [-p|&#8211;path]</p>
 <h2>OPTIONS</h2>

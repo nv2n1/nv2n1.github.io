@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-csc/"
 description: "csc – driver program for the CHICKEN Scheme compiler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> csc &#8211; driver program for the CHICKEN Scheme compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>csc</code> [ <i>filename</i> | <i>option &#8230;</i> ] </p>
 <h2>DESCRIPTION</h2>

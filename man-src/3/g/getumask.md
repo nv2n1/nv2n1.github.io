@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-getumask/"
 description: "getumask – get file creation mask"
 ---
 
-<h2 class="name">NAME</h2>
-<p> getumask &#8211; get file creation mask </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
  <code>#include &lt;sys/types.h&gt;</code><br />

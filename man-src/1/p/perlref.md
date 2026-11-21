@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-perlref/"
 description: "perlref – Perl references and nested data structures"
 ---
 
-<h2 class="name">NAME</h2>
-<p> perlref &#8211; Perl references and nested data structures </p>
 <h2>NOTE</h2>
 <p> This is complete documentation about all aspects of references. For a shorter, tutorial introduction to just the essential features, see perlreftut.</p>
 <h2>DESCRIPTION</h2>

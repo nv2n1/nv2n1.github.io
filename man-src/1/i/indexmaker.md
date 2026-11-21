@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-indexmaker/"
 description: "indexmaker – Creates index files for mrtg web sites (mrtg-2.17.4)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> indexmaker &#8211; Creates index files for mrtg web sites (mrtg-2.17.4) </p>
 <h2>SYNOPSIS</h2>
 <p> indexmaker [options] mrtg.cfg [other.cfg &#8230;]</p>
 <h2>OPTIONS</h2>

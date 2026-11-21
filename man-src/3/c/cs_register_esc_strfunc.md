@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cs_register_esc_strfunc/"
 description: "cs_register_esc_strfunc – cs_register_strfunc with escaping context"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cs_register_esc_strfunc &#8211; cs_register_strfunc with escaping context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;

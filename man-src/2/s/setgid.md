@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-setgid/"
 description: "setgid – set group identity"
 ---
 
-<h2 class="name">NAME</h2>
-<p> setgid &#8211; set group identity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>

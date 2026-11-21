@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fluidsynth/"
 description: "FluidSynth – a SoundFont synthesizer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> FluidSynth &#8211; a SoundFont synthesizer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fluidsynth</code> [<i>options</i>] [ SoundFonts ] [ midifiles ]</p>
 <h2>DESCRIPTION</h2>

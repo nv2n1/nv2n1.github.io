@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-apt-transport-https/"
 description: "apt-transport-https – APT transport for downloading via the HTTP Secure protocol (HTTPS)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> apt-transport-https &#8211; APT transport for downloading via the HTTP Secure protocol (HTTPS) </p>
 <h2>DESCRIPTION</h2>
 <p> This APT transport allows the use of repositories accessed via the HTTP Secure protocol (HTTPS), also referred to as HTTP over TLS. It is available by default since apt 1.5 and was available before that in the package apt-transport-https. Note that a transport is never called directly by a user but used by APT tools based on user configuration. </p>
 <p> HTTP is by itself an unencrypted transport protocol (compare <code><a href="/docs/linux/man/1-apt-transport-http/">apt-transport-http</a></code>(1)), which, as indicated by the appended S, is wrapped in an encrypted layer known as Transport Layer Security (TLS) to provide end-to-end encryption. A sufficiently capable attacker can still observe the communication partners and deeper analysis of the encrypted communication might still reveal important details. An overview over available alternative transport methods is given in <code><a href="/docs/linux/man/5-sources-list/">sources.list</a></code>(5).</p>

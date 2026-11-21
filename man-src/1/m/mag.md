@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mag/"
 description: "mag – computes TeX fontsizes and magsteps"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mag &#8211; computes TeX fontsizes and magsteps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mag</code> [-<code>R</code><i>dpi</i>] magstep . . . </p>
 <p> <code>mag</code> [-<code>r</code>] [-<code>R</code><i>dpi</i>] fontsize . . . </p>

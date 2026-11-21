@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-fixincludes/"
 description: "fixincludes – Reduce the number of #includes in KDE source files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fixincludes &#8211; Reduce the number of #includes in KDE source files </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fixincludes</code> [<code>-v, &#8211;verbose</code>] [<code>-e, &#8211;experimental</code>] [<code>-m, &#8211;modify</code>] [<i>file</i>] [<code>&#8211;help</code>]</dt></dl>

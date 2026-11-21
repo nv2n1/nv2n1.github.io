@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ldap_modrdn2_s/"
 description: "ldap_modrdn, ldap_modrdn_s, ldap_modrdn2, ldap_modrdn2_s – Perform an LDAP modify RDN operation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ldap_modrdn, ldap_modrdn_s, ldap_modrdn2, ldap_modrdn2_s &#8211; Perform an LDAP modify RDN operation </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
 <h2>SYNOPSIS</h2>

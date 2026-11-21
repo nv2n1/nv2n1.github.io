@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-git-archive/"
 description: "git-archive – Create an archive of files from a named tree"
 ---
 
-<h2 class="name">NAME</h2>
-<p> git-archive &#8211; Create an archive of files from a named tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 git archive[--format = &lt;fmt&gt;][--list][--prefix = &lt;prefix&gt; / ][&lt;extra&gt;]

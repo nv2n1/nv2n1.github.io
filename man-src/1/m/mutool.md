@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mutool/"
 description: "mutool – all purpose tool for dealing with PDF files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> mutool &#8211; all purpose tool for dealing with PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> mutool &lt;sub-command&gt; [options] </p>
 <h2>DESCRIPTION</h2>

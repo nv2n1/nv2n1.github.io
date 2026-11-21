@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-usb_modeswitch_dispatcher/"
 description: "usb_modeswitch_dispatcher – Linux wrapper for usb_modeswitch (not intended for direct invocation)"
 ---
 
-<h2 class="name">NAME</h2>
-<p> usb_modeswitch_dispatcher &#8211; Linux wrapper for usb_modeswitch (not intended for direct invocation) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>usb_modeswitch_dispatcher</code></p>
 <h2>DESCRIPTION</h2>

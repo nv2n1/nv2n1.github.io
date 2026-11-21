@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-log/"
 description: "virt-log – Display log files from a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-log &#8211; Display log files from a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img...]

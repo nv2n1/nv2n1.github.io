@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-hpisettime/"
 description: "hpisettime – This sample openhpi application excercises Event Log clock APIs."
 ---
 
-<h2 class="name">NAME</h2>
-<p> hpisettime &#8211; This sample openhpi application excercises Event Log clock APIs. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 hpisettime[-D nn][-N host[:port]][-C&lt;cfgfile&gt;] - d mm / dd / yyyy - t HH : MM : SS[-X][-h] hpisettime[--domain = nn][--host = host[:port]][--cfgfile = file]-- date = mm / dd / yyyy-- time = HH : MM : SS[--debug][--help]

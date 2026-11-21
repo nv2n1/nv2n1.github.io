@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-ilaenv/"
 description: "ilaenv.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ilaenv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilaenv</code> (ISPEC, NAME, OPTS, N1, N2, N3, N4)<br />

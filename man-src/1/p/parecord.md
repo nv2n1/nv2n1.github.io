@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-parecord/"
 description: "pacat – Play back or record raw or encoded audio streams on a PulseAudio sound server"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pacat &#8211; Play back or record raw or encoded audio streams on a PulseAudio sound server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>paplay [</code><i>options</i><code>] [</code><i>FILE</i><code>] </p>
 <p> parecord [</code><i>options</i><code>] [</code><i>FILE</i><code>] </p>

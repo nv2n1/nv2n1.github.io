@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-nsdejavu/"
 description: "nsdejavu – DjVu browser plugin"
 ---
 
-<h2 class="name">NAME</h2>
-<p> nsdejavu &#8211; DjVu browser plugin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/lib/mozilla/plugins/nsdejavu.so</code> or<br />
  <code>/usr/lib64/mozilla/plugins/nsdejavu.so</code> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-instant-showcache/"
 description: "instant-showcache – prints modules found in Instant cache"
 ---
 
-<h2 class="name">NAME</h2>
-<p> instant-showcache &#8211; prints modules found in Instant cache</p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt><code>instant-showcache</code></dt>

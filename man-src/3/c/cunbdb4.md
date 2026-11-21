@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cunbdb4/"
 description: "cunbdb4.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cunbdb4.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunbdb4</code> (M, P, Q, X11, LDX11, X21, LDX21, THETA, PHI, TAUP1, TAUP2, TAUQ1, PHANTOM, WORK, LWORK, INFO)<br />

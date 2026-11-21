@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-find-jar/"
 description: "find-jar – find extension JAR or directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> find-jar &#8211; find extension JAR or directory </p>
 <h2>SYNOPSIS</h2>
 <p> <code>find-jar</code> element</p>
 <h2>DESCRIPTION</h2>

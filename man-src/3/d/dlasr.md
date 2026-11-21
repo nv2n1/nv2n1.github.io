@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlasr/"
 description: "dlasr.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlasr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br />

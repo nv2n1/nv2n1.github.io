@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-column/"
 description: "column – columnate lists"
 ---
 
-<h2 class="name">NAME</h2>
-<p> column &#8211; columnate lists </p>
 <h2>SYNOPSIS</h2>
 <p> <code>column</code> [options] [<i>file</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

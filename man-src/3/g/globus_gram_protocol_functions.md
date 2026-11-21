@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_functions/"
 description: "Functions –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Functions &#8211; </p>
 <p> GRAM Functions.</p>
 <h3>Modules</h3>
 <p> <code>Error Messages</code><br />

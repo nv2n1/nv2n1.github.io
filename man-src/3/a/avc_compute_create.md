@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-avc_compute_create/"
 description: "avc_compute_create, avc_compute_member – obtain SELinux label for new object"
 ---
 
-<h2 class="name">NAME</h2>
-<p> avc_compute_create, avc_compute_member &#8211; obtain SELinux label for new object </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>

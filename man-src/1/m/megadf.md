@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-megadf/"
 description: "megadf – Show total available, used, or free space in the cloud"
 ---
 
-<h2 class="name">NAME</h2>
-<p> megadf &#8211; Show total available, used, or free space in the cloud </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 megadf[--free | --total | --used][--mb | --gb | -h]

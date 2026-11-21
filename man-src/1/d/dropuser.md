@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dropuser/"
 description: "dropuser – remove a PostgreSQL user account"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dropuser &#8211; remove a PostgreSQL user account </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dropuser</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>username</i>]</dt></dl>

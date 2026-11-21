@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pw-mididump/"
 description: "pw-mididump – The PipeWire MIDI dump"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pw-mididump &#8211; The PipeWire MIDI dump </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 pw - mididump[options][FILE]

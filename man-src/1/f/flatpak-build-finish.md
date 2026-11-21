@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-flatpak-build-finish/"
 description: "flatpak-build-finish – Finalize a build directory"
 ---
 
-<h2 class="name">NAME</h2>
-<p> flatpak-build-finish &#8211; Finalize a build directory </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-finish</code> [OPTION&#8230;] DIRECTORY</dt></dl>

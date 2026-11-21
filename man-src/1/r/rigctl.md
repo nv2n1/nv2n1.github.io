@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rigctl/"
 description: "rigctl – control radio transceivers and receivers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rigctl &#8211; control radio transceivers and receivers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rigctl</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>
 <h2>DESCRIPTION</h2>

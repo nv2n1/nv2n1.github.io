@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-biburl2doi/"
 description: "biburl2doi.pl – convert URLs pointing to doi.org to DOIs"
 ---
 
-<h2 class="name">NAME</h2>
-<p> biburl2doi.pl &#8211; convert URLs pointing to doi.org to DOIs </p>
 <h2>SYNOPSIS</h2>
 <p> biburl2doi [<code>-D</code>] [<code>-o</code> <i>output</i>] <i>bib_file</i></p>
 <h2>OPTIONS</h2>

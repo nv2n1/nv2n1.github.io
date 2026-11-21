@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_cookie_clear/"
 description: "cgi_cookie_clear – clear browser cookie"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_cookie_clear &#8211; clear browser cookie </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

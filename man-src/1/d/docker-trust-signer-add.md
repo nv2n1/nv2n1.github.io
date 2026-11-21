@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-trust-signer-add/"
 description: "docker-trust-signer-add – Add a signer"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-trust-signer-add &#8211; Add a signer </p>
 <h2>SYNOPSIS</h2>
 <p> **docker trust signer add OPTIONS NAME REPOSITORY [REPOSITORY&#8230;] ** </p>
 <h2>DESCRIPTION</h2>

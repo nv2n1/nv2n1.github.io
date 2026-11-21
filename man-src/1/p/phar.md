@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-phar/"
 description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> phar, phar.phar &#8211; PHAR (PHP archive) command line tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>phar</code> &lt;command&gt; [options] &#8230; </p>
 <h2>DESCRIPTION</h2>

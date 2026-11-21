@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-wpaclean/"
 description: "wpaclean – clean wpa capture files"
 ---
 
-<h2 class="name">NAME</h2>
-<p> wpaclean &#8211; clean wpa capture files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wpaclean &lt;out.cap&gt; &lt;in.cap&gt; [in2.cap] [&#8230;]</code> </p>
 <h2>DESCRIPTION</h2>

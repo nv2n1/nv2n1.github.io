@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_ftp_client_restart_marker_destroy/"
 description: "Restart Markers –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Restart Markers &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_ftp_client_restart_marker_t</code><br />
  <i>Restart marker.</i> </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vboxwebsrv/"
 description: "vboxwebsrv – x86 virtualization solution"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vboxwebsrv &#8211; x86 virtualization solution </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vboxwebsrv</code> [<i>,options/</i>]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-ioctl_fslabel/"
 description: "ioctl_fslabel – get or set a filesystem label"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ioctl_fslabel &#8211; get or set a filesystem label </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code><br />
  <code>#include &lt;linux/fs.h&gt;</code> </p>

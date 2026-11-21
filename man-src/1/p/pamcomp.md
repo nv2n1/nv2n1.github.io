@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pamcomp/"
 description: "pamcomp – composite (overlay) two Netpbm images together"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pamcomp &#8211; composite (overlay) two Netpbm images together</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamcomp</code> </p>
 <p> [<code>-align=</code>{<code>left</code>|<code>center</code>|<code>right</code>| <code>beyondleft</code>|<code>beyondright</code>}] [<code>-valign=</code>{<code>top</code>|<code>middle</code>|<code>bottom</code>| <code>above</code>|<code>below</code>}] [<code>-xoff=</code><i>X</i>] [<code>-yoff=</code><i>Y</i>] [<code>-alpha=</code><i>alpha-pgmfile</i>] [<code>-invert</code>] [<code>-opacity=</code><i>opacity</i>] [<code>-mixtransparency</code>] [<code>-linear</code>] <i>overlay_file</i> [<i>underlying_file</i> [<i>output_file</i>]] </p>

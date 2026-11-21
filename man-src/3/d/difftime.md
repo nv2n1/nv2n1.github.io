@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-difftime/"
 description: "difftime – calculate time difference"
 ---
 
-<h2 class="name">NAME</h2>
-<p> difftime &#8211; calculate time difference </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;

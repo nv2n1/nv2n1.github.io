@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-deallocvt/"
 description: "deallocvt – deallocate unused virtual consoles"
 ---
 
-<h2 class="name">NAME</h2>
-<p> deallocvt &#8211; deallocate unused virtual consoles </p>
 <h2>SYNOPSIS</h2>
 <p> <code>deallocvt</code> [<i>,option/</i>&#8230;] [<i>N</i> &#8230;]</p>
 <h2>DESCRIPTION</h2>

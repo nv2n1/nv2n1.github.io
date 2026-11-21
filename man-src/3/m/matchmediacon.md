@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-matchmediacon/"
 description: "matchmediacon – get the default SELinux security context for the specified mediatype from the policy"
 ---
 
-<h2 class="name">NAME</h2>
-<p> matchmediacon &#8211; get the default SELinux security context for the specified mediatype from the policy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int matchmediacon(const char *</code><i>media</i><code>, char **</code><i>con</i><code>);</code></p>

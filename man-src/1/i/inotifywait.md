@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-inotifywait/"
 description: "inotifywait – wait for changes to files using inotify"
 ---
 
-<h2 class="name">NAME</h2>
-<p> inotifywait &#8211; wait for changes to files using inotify</p>
 <h2>SYNOPSIS</h2>
 <p> <code>inotifywait</code> [<code>-hcmrq</code>] [<code>-e</code> &lt;event&gt; ] [<code>-t</code> &lt;seconds&gt; ] [<code>&#8211;format</code> &lt;fmt&gt; ] [<code>&#8211;timefmt</code> &lt;fmt&gt; ] &lt;file&gt; [ &#8230; ] </p>
 <h2>DESCRIPTION</h2>

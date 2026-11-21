@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cclive/"
 description: "cclive – command line video download tool"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cclive &#8211; command line video download tool </p>
 <h2>SYNOPSIS</h2>
 <p> cclive [options] [url&#8230;]</p>
 <h2>DESCRIPTION</h2>

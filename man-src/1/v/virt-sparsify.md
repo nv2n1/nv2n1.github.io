@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-virt-sparsify/"
 description: "virt-sparsify – Make a virtual machine disk sparse"
 ---
 
-<h2 class="name">NAME</h2>
-<p> virt-sparsify &#8211; Make a virtual machine disk sparse </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - place disk

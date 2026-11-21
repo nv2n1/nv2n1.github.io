@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-gpm-root/"
 description: "gpm-root – a default handler for gpm, used to draw menus on the root window"
 ---
 
-<h2 class="name">NAME</h2>
-<p> gpm-root &#8211; a default handler for gpm, used to draw menus on the root window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpm-root</code> [ <i>options</i> ] </p>
 <h2>DESCRIPTION</h2>

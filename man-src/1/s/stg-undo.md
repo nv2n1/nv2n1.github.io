@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-stg-undo/"
 description: "stg-undo – Undo the last operation"
 ---
 
-<h2 class="name">NAME</h2>
-<p> stg-undo &#8211; Undo the last operation </p>
 <h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> undo

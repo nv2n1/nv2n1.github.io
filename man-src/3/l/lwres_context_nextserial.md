@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lwres_context_nextserial/"
 description: "lwres_context_create, lwres_context_destroy, lwres_context_nextserial, lwres_context_initserial, lwres_context_freemem, lwres_context_allocmem, lwres_context_sendrecv – lightweight resolver context..."
 ---
 
-<h2 class="name">NAME</h2>
-<p> lwres_context_create, lwres_context_destroy, lwres_context_nextserial, lwres_context_initserial, lwres_context_freemem, lwres_context_allocmem, lwres_context_sendrecv &#8211; lightweight resolver context management </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;

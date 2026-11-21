@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cgi_register_parse_cb/"
 description: "cgi_register_parse_cb – Register a parse callback"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cgi_register_parse_cb &#8211; Register a parse callback </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;

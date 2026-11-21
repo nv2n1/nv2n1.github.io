@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-cggev/"
 description: "cggev.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cggev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cggev</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHA, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, RWORK, INFO)<br />

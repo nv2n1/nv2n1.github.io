@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-llvm-dis-14/"
 description: "llvm-dis – LLVM disassembler"
 ---
 
-<h2 class="name">NAME</h2>
-<p> llvm-dis &#8211; LLVM disassembler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-dis</code> [<i>options</i>] [<i>filename</i>]</p>
 <h2>DESCRIPTION</h2>

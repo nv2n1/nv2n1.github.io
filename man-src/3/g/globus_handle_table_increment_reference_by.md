@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-globus_handle_table_increment_reference_by/"
 description: "Handle Table for Reference Counting Data –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> Handle Table for Reference Counting Data &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_NULL_HANDLE</code> </p>
 <h3>Typedefs</h3>

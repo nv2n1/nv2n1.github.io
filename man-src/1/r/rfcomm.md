@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-rfcomm/"
 description: "rfcomm – RFCOMM configuration utility"
 ---
 
-<h2 class="name">NAME</h2>
-<p> rfcomm &#8211; RFCOMM configuration utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rfcomm</code> [<i>OPTIONS</i>] &lt;<i>COMMAND</i>&gt; &lt;<i>dev</i>&gt;</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dzasum/"
 description: "dzasum.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dzasum.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dzasum</code> (N, ZX, INCX)<br />

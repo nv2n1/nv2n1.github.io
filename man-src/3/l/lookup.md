@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-lookup/"
 description: "QuantLib::ExchangeRateManager – exchange-rate repository"
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::ExchangeRateManager &#8211; exchange-rate repository </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/currencies/exchangeratemanager.hpp&gt; </p>
 <p> Inherits <code>Singleton&lt; ExchangeRateManager &gt;</code>. </p>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-pst2dii/"
 description: "pst2dii – extract email messages from a MS Outlook .pst file in DII load format"
 ---
 
-<h2 class="name">NAME</h2>
-<p> pst2dii &#8211; extract email messages from a MS Outlook .pst file in DII load format </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pst2dii</code> [<code>-B&nbsp;<wbr></code><i>bates-prefix</i>] [<code>-O&nbsp;<wbr></code><i>dii-output-file</i>] [<code>-V</code>] [<code>-b&nbsp;<wbr></code><i>bates-number</i>] [<code>-c&nbsp;<wbr></code><i>bates-color</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] -f&nbsp;<wbr><i>ttf-font-file</i> [<code>-h</code>] [<code>-o&nbsp;<wbr></code><i>output-directory</i>] pstfilename</dt></dl>

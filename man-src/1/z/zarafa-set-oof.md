@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-zarafa-set-oof/"
 description: "zarafa-set-oof – Control a user’s out of office settings."
 ---
 
-<h2 class="name">NAME</h2>
-<p> zarafa-set-oof &#8211; Control a user&#8217;s out of office settings. </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-set-oof</code> <i>USERNAME</i> <i>MODE</i> [<i>SUBJECT</i>] [<i>MESSAGE FILE</i>]</dt></dl>

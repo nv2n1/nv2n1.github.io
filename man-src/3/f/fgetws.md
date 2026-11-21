@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fgetws/"
 description: "fgetws – read a wide-character string from a FILE stream"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fgetws &#8211; read a wide-character string from a FILE stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;

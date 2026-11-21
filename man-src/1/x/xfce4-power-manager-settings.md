@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-xfce4-power-manager-settings/"
 description: "xfce4-power-manager-settings – Settings dialog for the Xfce 4 Power manager"
 ---
 
-<h2 class="name">NAME</h2>
-<p> xfce4-power-manager-settings &#8211; Settings dialog for the Xfce 4 Power manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-power-manager-settings</code> <i>[options]</i> </p>
 <h2>DESCRIPTION</h2>

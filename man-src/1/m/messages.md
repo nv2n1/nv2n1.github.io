@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-messages/"
 description: "messages.mailutils – count the number of messages in a mailbox"
 ---
 
-<h2 class="name">NAME</h2>
-<p> messages.mailutils &#8211; count the number of messages in a mailbox </p>
 <h2>SYNOPSIS</h2>
 <p> <code>messages.mailutils</code> [<i>,OPTION/</i>&#8230;] [<i>,mailbox/</i>&#8230;]</p>
 <h2>DESCRIPTION</h2>

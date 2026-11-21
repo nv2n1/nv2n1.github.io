@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-side/"
 description: "QuantLib::NthToDefault – N-th to default swap."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::NthToDefault &#8211; N-th to default swap. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/nthtodefault.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>

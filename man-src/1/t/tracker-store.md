@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker-store/"
 description: "tracker-store – database indexer and query daemon"
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker-store &#8211; database indexer and query daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker-store</code> [<i>OPTION</i>&#8230;] </p>
 <h2>DESCRIPTION</h2>

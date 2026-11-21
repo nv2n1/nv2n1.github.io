@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-dcmscale/"
 description: "dcmscale – Scale DICOM images"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dcmscale &#8211; Scale DICOM images </p>
 <h2>SYNOPSIS</h2>
 <pre>
 dcmscale [options] dcmfile-in dcmfile-out

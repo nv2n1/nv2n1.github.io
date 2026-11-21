@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-ippeveprinter/"
 description: "ippeveprinter – an ipp everywhere printer application for cups"
 ---
 
-<h2 class="name">NAME</h2>
-<p> ippeveprinter &#8211; an ipp everywhere printer application for cups </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ippeveprinter</code> [ <code>&#8211;help</code> ] [ <code>&#8211;no-web-forms</code> ] [ <code>&#8211;pam-service</code> <i>service</i> ] [ <code>&#8211;version</code> ] [ <code>-2</code> ] [ <code>-A</code> ] [ <code>-D</code> <i>device-uri</i> ] [ <code>-F</code> <i>output-type/subtype</i> ] [ <code>-K</code> <i>keypath</i> ] [ <code>-M</code> <i>manufacturer</i> ] [ <code>-P</code> <i>filename.ppd</i> ] [ <code>-V</code> <i>ipp-version</i> ] [ <code>-a</code> <i>filename.conf</i> ] [ <code>-c</code> <i>command</i> ] [ <code>-d</code> <i>spool-directory</i> ] [ <code>-f</code> <i>type/subtype[,&#8230;]</i> ] [ <code>-i</code> <i>iconfile.png</i> ] [ <code>-k</code> ] [ <code>-l</code> <i>location</i> ] [ <code>-m</code> <i>model</i> ] [ <code>-n</code> <i>hostname</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-r</code> <i>subtype[,subtype]</i> ] [ <code>-s</code> <i>speed[,color-speed]</i> ] [ <code>-v[vvv]</code> ] <i>service-name</i></p>
 <h2>DESCRIPTION</h2>

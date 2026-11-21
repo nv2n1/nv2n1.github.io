@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-cpanp/"
 description: "cpanp – The CPANPLUS launcher"
 ---
 
-<h2 class="name">NAME</h2>
-<p> cpanp &#8211; The CPANPLUS launcher </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpanp</code> </p>
 <p> <code>cpanp</code> [-]<code>a</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] &nbsp;<wbr><i>author</i>&#8230;&nbsp;<wbr> </p>

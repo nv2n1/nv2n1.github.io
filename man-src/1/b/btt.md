@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-btt/"
 description: "btt – analyse block i/o traces produces by blktrace"
 ---
 
-<h2 class="name">NAME</h2>
-<p> btt &#8211; analyse block i/o traces produces by blktrace </p>
 <h2>SYNOPSIS</h2>
 <p> <code>btt </code><br />
  [ -a | &#8211;seek-absolute ]<br />

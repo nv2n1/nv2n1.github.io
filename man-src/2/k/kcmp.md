@@ -7,8 +7,6 @@ url: "/docs/linux/man/2-kcmp/"
 description: "kcmp – compare two processes to determine if they share a kernel resource"
 ---
 
-<h2 class="name">NAME</h2>
-<p> kcmp &#8211; compare two processes to determine if they share a kernel resource </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/kcmp.h&gt;

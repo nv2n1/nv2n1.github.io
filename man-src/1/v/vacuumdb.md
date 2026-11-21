@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-vacuumdb/"
 description: "vacuumdb – garbage-collect and analyze a PostgreSQL database"
 ---
 
-<h2 class="name">NAME</h2>
-<p> vacuumdb &#8211; garbage-collect and analyze a PostgreSQL database </p>
 <h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>vacuumdb</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<code>&#8211;table</code>&nbsp;<wbr>|&nbsp;<wbr><code>-t</code>&nbsp;<wbr><i>table</i>&nbsp;<wbr>[(&nbsp;<wbr><i>column</i>&nbsp;<wbr>[,&#8230;]&nbsp;<wbr>)]] [<i>dbname</i>]</dt>

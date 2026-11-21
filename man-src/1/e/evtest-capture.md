@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-evtest-capture/"
 description: "evtest-capture – Input device event capture program"
 ---
 
-<h2 class="name">NAME</h2>
-<p> evtest-capture &#8211; Input device event capture program </p>
 <h2>SYNOPSIS</h2>
 <pre>
 evtest-capture &quot;/dev/input/eventX&quot; [evtest-capture.xml]

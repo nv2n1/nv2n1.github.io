@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-kappa/"
 description: "QuantLib::HestonModel – Heston model for the stochastic volatility of an asset."
 ---
 
-<h2 class="name">NAME</h2>
-<p> QuantLib::HestonModel &#8211; Heston model for the stochastic volatility of an asset. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/equity/hestonmodel.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CalibratedModel</code>. </p>

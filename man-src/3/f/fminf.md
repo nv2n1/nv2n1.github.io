@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-fminf/"
 description: "fmin, fminf, fminl – determine minimum of two floating-point numbers"
 ---
 
-<h2 class="name">NAME</h2>
-<p> fmin, fminf, fminl &#8211; determine minimum of two floating-point numbers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double fmin(double </code><i>x</i><code>, double </code><i>y</i><code>);</code><br />

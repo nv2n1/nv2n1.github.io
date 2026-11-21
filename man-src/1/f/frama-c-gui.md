@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-frama-c-gui/"
 description: "frama-c[.byte] – a static analyzer for C programs frama-c-gui[.byte] – the graphical interface of frama-c"
 ---
 
-<h2 class="name">NAME</h2>
-<p> frama-c[.byte] &#8211; a static analyzer for C programs frama-c-gui[.byte] &#8211; the graphical interface of frama-c</p>
 <h2>SYNOPSIS</h2>
 <p> <code>frama-c</code> [ <i>options</i> ] <i>files</i> </p>
 <h2>DESCRIPTION</h2>

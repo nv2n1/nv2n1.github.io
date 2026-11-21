@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-run-with-aspell/"
 description: "run-with-aspell – script to help use GNU Aspell as an ispell replacement"
 ---
 
-<h2 class="name">NAME</h2>
-<p> run-with-aspell &#8211; script to help use GNU Aspell as an ispell replacement </p>
 <h2>SYNOPSIS</h2>
 <p> <code>run-with-aspell</code> <i>&lt;command&gt;</i> </p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-siege/"
 description: "siege is a HTTP/FTP load tester and benchmarking utility."
 ---
 
-<h2 class="name">NAME</h2>
-<p> siege is a HTTP/FTP load tester and benchmarking utility. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 siege[options] siege[options]&lt;URL&gt;

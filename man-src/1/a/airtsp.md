@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-airtsp/"
 description: "airtsp –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> airtsp &#8211; </p>
 <pre>
   Binary executable for the C++ Simulated Airline Schedule Manager Library
 </pre>

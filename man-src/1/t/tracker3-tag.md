@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-tracker3-tag/"
 description: "tracker3-tag – Add, remove and list tags."
 ---
 
-<h2 class="name">NAME</h2>
-<p> tracker3-tag &#8211; Add, remove and list tags. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 tag FILE1[FILE2...][-l&lt;limit&gt;][-o&lt;offset&gt;][-r] tracker3 tag - t [[TAG1] [TAG2]...][-s][-r] tracker3 tag - a&lt;TAG&gt;[-e&lt;description&gt;] tracker3 tag - d&lt;TAG&gt;

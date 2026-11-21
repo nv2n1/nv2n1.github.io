@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-dlantp/"
 description: "dlantp.f –"
 ---
 
-<h2 class="name">NAME</h2>
-<p> dlantp.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlantp</code> (NORM, UPLO, DIAG, N, AP, WORK)<br />

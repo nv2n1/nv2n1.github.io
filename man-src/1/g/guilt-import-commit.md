@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-guilt-import-commit/"
 description: "guilt-import-commit – Import one or more commits as patches"
 ---
 
-<h2 class="name">NAME</h2>
-<p> guilt-import-commit &#8211; Import one or more commits as patches </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-import-commit</i> [&lt;hash&gt; | &lt;since&gt;..[&lt;until&gt;] | ..&lt;until&gt;]</p>
 <h2>DESCRIPTION</h2>

@@ -7,8 +7,6 @@ url: "/docs/linux/man/3-bjerksundstenslandengine/"
 description: "ql/pricingengines/vanilla/bjerksundstenslandengine.hpp – Bjerksund and Stensland approximation engine."
 ---
 
-<h2 class="name">NAME</h2>
-<p> ql/pricingengines/vanilla/bjerksundstenslandengine.hpp &#8211; Bjerksund and Stensland approximation engine. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>

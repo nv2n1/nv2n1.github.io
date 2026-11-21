@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-html2text/"
 description: "html2text – an advanced HTML-to-text converter"
 ---
 
-<h2 class="name">NAME</h2>
-<p> html2text &#8211; an advanced HTML-to-text converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>html2text -help</code><br />
  <code>html2text -version</code><br />

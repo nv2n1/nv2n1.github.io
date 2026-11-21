@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-plxload/"
 description: "plxload – show what files a perl program loads at compile time"
 ---
 
-<h2 class="name">NAME</h2>
-<p> plxload &#8211; show what files a perl program loads at compile time </p>
 <h2>SYNOPSYS</h2>
 <pre>
     $ plxload

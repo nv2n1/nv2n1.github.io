@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-docker-volume-prune/"
 description: "docker-volume-prune – Remove all unused local volumes"
 ---
 
-<h2 class="name">NAME</h2>
-<p> docker-volume-prune &#8211; Remove all unused local volumes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker volume prune [OPTIONS]</code> </p>
 <h2>DESCRIPTION</h2>

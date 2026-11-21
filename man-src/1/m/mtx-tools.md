@@ -7,8 +7,6 @@ url: "/docs/linux/man/1-mtx-tools/"
 description: "mtx-tools – Some File Related Goodies"
 ---
 
-<h2 class="name">NAME</h2>
-<p>&nbsp;mtx-tools &#8211; Some File Related Goodies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script tools [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
 <h2>DESCRIPTION</h2>
