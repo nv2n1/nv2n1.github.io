@@ -1343,7 +1343,7 @@ description: "perlfaq4 – Data Manipulation"
     my @uniq = keys %seen;
 </code></pre>
 <p> Or more succinctly: </p>
-<pre><code>    my @uniq = keys %{{%foo,%bar}};
+<pre><code>    my @uniq = keys %{{&#37;foo,%bar}};
 </code></pre>
 <p> Or if you really want to save space: </p>
 <pre><code>    my %seen = ();
