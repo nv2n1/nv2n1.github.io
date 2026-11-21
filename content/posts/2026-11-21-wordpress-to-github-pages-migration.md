@@ -14,6 +14,8 @@ tags:
   - static-site
 ---
 
+**We migrated SysTutorials — 1,346 blog posts plus 56,253 Linux man pages — from WordPress to a Hugo static site on GitHub Pages. The result: a single binary, single config, single CI job that builds in ~8 seconds (down from 12 minutes), zero URL drift, free hosting, and a completely static attack surface with no PHP, no database, and no plugin stack to maintain.**
+
 ## Why migrate from WordPress to a static site on GitHub Pages
 
 ### Maintenance burden eliminated
