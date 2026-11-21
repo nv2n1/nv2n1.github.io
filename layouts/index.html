@@ -1,6 +1,10 @@
 {{ define "main" }}
 {{ .Content }}
 
+<!-- Google Programmable Search - Homepage -->
+<script async src="https://cse.google.com/cse.js?cx=006269913418990200821:vlnmyz00msq"></script>
+<div class="gcse-search"></div>
+
 <h2 id="posts">Recent Posts</h2>
 
 {{ $posts := where site.RegularPages "Section" "posts" }}
