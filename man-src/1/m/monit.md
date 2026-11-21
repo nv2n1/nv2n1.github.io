@@ -1283,5 +1283,460 @@ from:<br />
 <pre>
  set expectbuffer 10 kb
 </pre>
-<p> You can use non-printable characters in a <font SIZE="-1">SEND</font> string if needed. Use the hex notation, 
-</p>
+<p> You can use non-printable characters in a <font SIZE="-1">SEND</font> string if needed. Use the hex notation, \0xHEXHEX to send any char in the range \0x00-\0xFF, that is, 0-255 in decimal. For example, to test a Quake 3 server: </p>
+<pre><code> send &quot;\0xFF\0xFF\0xFF\0xFFgetstatus&quot;
+ expect &quot;sv_floodProtect|sv_maxPing&quot;
+</code></pre>
+<p> If your system supports <font SIZE="-1">POSIX</font> regular expressions, you can use regular expressions in the <font SIZE="-1">EXPECT</font> string, see <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7) to learn more about the types of regular expressions you can use in an expect string. </p>
+<p> Since both regex and string compare operates on a zero terminated string, you cannot test for &#8216;\0&#8217; in an <font SIZE="-1">EXPECT</font> buffer since this character marks the end of the buffer. However, we escape &#8216;\0&#8217; in the expect buffer as ``\0&#8217;&#8216; which you can test for. That is, &#8216;\&#8216; followed by the ascii value for 0. For instance, here is how to test for an expect string that starts with zero followed by any number of characters. </p>
+<pre><code> expect &quot;^[\\]0.*&quot;
+</code></pre>
+<p> Here is a simple <font SIZE="-1">SMTP</font> protocol example: </p>
+<pre><code> if failed
+    port 25 and
+    expect &quot;^220.*&quot;
+    send &quot;HELO localhost.localdomain\r\n&quot;
+    expect &quot;^250.*&quot;
+    send &quot;QUIT\r\n&quot;
+ then alert
+</code></pre>
+<p> <font SIZE="-1">SEND/EXPECT</font> can be used with any socket type, such as <font SIZE="-1">TCP</font> sockets, <font SIZE="-1">UNIX</font> sockets and <font SIZE="-1">UDP</font> sockets. </p>
+<p> <font SIZE="-1">HTTP</font> </p>
+<p> Syntax: </p>
+<pre><code> PROTO(COL) HTTP
+     [REQUEST &quot;string&quot;]
+     [STATUS operator number]
+     [CHECKSUM checksum]
+     [HTTP HEADERS list of headers]
+     [CONTENT {= | != } STRING]
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>REQUEST</i></font><i></i> option can set an <font SIZE="-1">URL</font> string specifying a document on the <font SIZE="-1">HTTP</font> server. If the request statement isn&#8217;t specified, the default ``/&#8216;&#8216; page will be requested. </p>
+<p> For example: </p>
+<pre><code> if failed
+    port 80
+    protocol http
+    request &quot;/data/show?a=b&amp;c=d&quot;
+ then restart
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>STATUS</i></font><i></i> option can be used to explicitly test the <font SIZE="-1">HTTP</font> status code returned by the <font SIZE="-1">HTTP</font> server. If not used, the http protocol test will fail if the status code returned is greater than or equal to 400. You can override this behaviour by using the <i>status</i> qualifier. </p>
+<p> For example to test that a page does <code>not</code> exist (the <font SIZE="-1">HTTP</font> server should return 404 in this case): </p>
+<pre><code>  if failed
+     port 80
+     protocol http
+     request &quot;/non/existent.php&quot;
+     status = 404
+  then alert
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>CHECKSUM</i></font><i></i> You can test the checksum of documents returned by a <font SIZE="-1">HTTP</font> server. Either <font SIZE="-1">MD5</font> or <font SIZE="-1">SHA1</font> hash can be used. Monit will <code>not</code> test the checksum for a document if the server does not set the <font SIZE="-1">HTTP </font><i>Content-Length</i> header. A <font SIZE="-1">HTTP</font> server should set this header when it server a static document (i.e. a file). There are no limitation on the document size, but keep in mind that Monit will use time to download the document over the network to compute the checksum. </p>
+<p> Example: </p>
+<pre><code> if failed
+    port 80
+    protocol http
+    request &quot;/page.html&quot;
+    checksum 8f7f419955cefa0b33a2ba316cba3659
+ then alert
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>HTTP HEADERS</i></font><i></i> can be used to send a list of any <font SIZE="-1">HTTP</font> headers with a http protocol test. For instance, the host header. If the host header is not set, Monit will use the hostname or IP-address of the host as specified in the check host statement. Specifying a host header is useful if you want to connect to and test a name-based virtual host. The syntax for setting <font SIZE="-1">HTTP</font> headers is </p>
+<pre><code>  http headers [name:value, name:value,..]
+</code></pre>
+<p> where each name:value pair is separated with &#8216;,&#8216;. If you need to use &#8216;:&#8216; in the value string, for instance to set port number for a host header, you must enclose the value in quotes. For example, </p>
+<pre><code>  http headers [Host: &quot;mmonit.com:443&quot;]
+</code></pre>
+<p> In a check host context, using this statement might look like </p>
+<pre><code>  check host mmonit.com with address mmonit.com
+    if failed
+       port 80 protocol http
+       with http headers [Host: mmonit.com, Cache-Control: no-cache,
+         Cookie: csrftoken=nj1bI3CnMCaiNv4beqo8ZaCfAQQvpgLH]
+       and request /monit/ with content = &quot;Monit [0-9.]+&quot;
+    then alert
+</code></pre>
+<p> Setting http headers is associated with the http protocol test and must come before <i>request</i> as in the example above. </p>
+<p> <i></i><font SIZE="-1"><i>CONTENT</i></font><i></i> option sets the pattern which is expected in the data returned by the server. If the pattern doesn&#8217;t match, event is triggered. </p>
+<p> For example: </p>
+<pre><code>  if failed
+     port 80
+     protocol http
+     content = &quot;foobar [0-9.]+&quot;
+  then alert
+</code></pre>
+<p> APACHE-STATUS </p>
+<p> The <i>APACHE-STATUS</i> test allows to check server performance by examination of the status page generated by Apache&#8217;s mod_status, which is expected to be at its default address of <a rel="nofollow" href="http://www.example.com/server-status.">http://www.example.com/server-status.</a> </p>
+<p> Syntax: </p>
+<pre><code> PROTOCOL APACHE-STATUS &lt;limit operator number&gt;+
+</code></pre>
+<p> <i>limit</i> is acronym for child status: </p>
+<pre><code> (1) logging (loglimit)
+ (2) closing connections (closelimit)
+ (3) performing DNS lookups (dnslimit)
+ (4) in keepalive with a client (keepalivelimit)
+ (5) replying to a client (replylimit)
+ (6) receiving a request (requestlimit)
+ (7) initialising (startlimit)
+ (8) waiting for incoming connections (waitlimit)
+ (9) gracefully closing down (gracefullimit)
+ (10) performing cleanup procedures (cleanuplimit)
+</code></pre>
+<p> <i>operator</i> is one of ``&lt;&#8216;&#8216;, ``=&#8216;&#8216;, ``&gt;&#8216;&#8216;. </p>
+<p> <i>number</i> is percentile numeric limit. </p>
+<p> Each of these limits can be compared against a value relative to the total number of active Apache child processes. </p>
+<p> You can combine all of these tests into one expression or you can choose to test a certain limit only. If you combine the limits you must connect them together using the <font SIZE="-1">OR</font> keyword. </p>
+<p> Example: </p>
+<pre><code> if failed port 80 protocol apache-status
+        loglimit &gt; 10% or
+        dnslimit &gt; 50% or
+        waitlimit &lt; 20%
+ then alert
+</code></pre>
+<p> <font SIZE="-1">SIP</font> </p>
+<p> The <font SIZE="-1">SIP</font> protocol is used by communication platform servers such as Asterisk and FreeSWITCH. </p>
+<p> Syntax: </p>
+<pre><code> PROTOCOL SIP [TARGET valid@uri] [MAXFORWARD n]
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>TARGET</i></font><i></i> you may specify an alternative recipient for the message, by adding a valid sip uri after this keyword. </p>
+<p> <i></i><font SIZE="-1"><i>MAXFORWARD</i></font><i></i> Limit the number of proxies or gateways that can forward the request to the next server. It&#8217;s value is an integer in the range 0-255, set by default to 70. If max-forward = 0, the next server may respond 200 <font SIZE="-1">OK </font>(test succeeded) or send a 483 Too Many Hops (test failed) </p>
+<p> For example: </p>
+<pre><code> check host openser_all with address 127.0.0.1
+   if failed
+      port 5060 type udp protocol sip
+      with target &quot;localhost:5060&quot; and maxforward 6
+   then alert
+</code></pre>
+<p> <font SIZE="-1">RADIUS</font> </p>
+<p> Syntax: </p>
+<pre><code> PROTOCOL RADIUS [SECRET string]
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>SECRET</i></font><i></i> you may specify an alternative secret, default is ``testing123&#8217;&#8216;. </p>
+<p> For example: </p>
+<pre><code> check process radiusd with pidfile /var/run/radiusd.pid
+       start program = &quot;/etc/init.d/freeradius start&quot;
+       stop program = &quot;/etc/init.d/freeradius stop&quot;
+       if failed
+          host 127.0.0.1 port 1812 type udp protocol radius
+          secret pingpong
+       then alert
+</code></pre>
+<p> <font SIZE="-1">MYSQL</font> </p>
+<p> Syntax: </p>
+<pre><code> PROTOCOL MYSQL [USERNAME string PASSWORD string]
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>USERNAME</i></font><i></i> MySQL username (maximum 16 characters). </p>
+<p> <i></i><font SIZE="-1"><i>PASSWORD</i></font><i></i> MySQL password. </p>
+<p> The credentials are <code>optional</code>. If no credentials are set, Monit will perform the test using anonymous login. That may cause authentication error to be logged in your MySQL log for higher MySQL log levels. </p>
+<p> If credentials are set, Monit will login and perform MySQL ping. Monit doesn&#8217;t require any database privileges, it needs just database user, we recommend to create standalone user for Monit testing, for example: </p>
+<pre><code> CREATE USER 'monit'@'host_from_which_monit_performs_testing' IDENTIFIED BY 'mysecretpassword';
+ FLUSH PRIVILEGES;
+</code></pre>
+<p> For example: </p>
+<pre><code> check process mysql with pidfile /var/run/mysqld/mysqld.pid
+     start program = &quot;/sbin/start mysql&quot;
+     stop program = &quot;/sbin/stop mysql&quot;
+     if failed
+        port 3306
+        protocol mysql username foo password bar
+     then alert
+</code></pre>
+<p> or with unix-socket and <font SIZE="-1">OS X</font> start/stop commands </p>
+<pre><code> check process mysql with pidfile /var/run/mysqld/mysqld.pid
+     start program = &quot;/usr/local/mysql/support-files/mysql.server start&quot;
+     stop program = &quot;/usr/local/mysql/support-files/mysql.server stop&quot;
+     if failed
+        unixsocket /tmp/mysql.sock
+        protocol mysql username foo password bar
+     then alert
+</code></pre>
+<p> <font SIZE="-1">WEBSOCKET</font> </p>
+<p> Syntax: </p>
+<pre><code> PROTOCOL WEBSOCKET
+         [REQUEST string]
+         [HOST string]
+         [ORIGIN string]
+         [VERSION number]
+</code></pre>
+<p> <i></i><font SIZE="-1"><i>HOST</i></font><i></i> you may specify an alternative Host header </p>
+<p> <i></i><font SIZE="-1"><i>REQUEST</i></font><i></i> you may specify an alternative request, default is ``/&#8216;&#8216; </p>
+<p> <i></i><font SIZE="-1"><i>ORIGIN</i></font><i></i> you may specify an alternative origin, default is ``<a rel="nofollow" href="http://www.mmonit.com''">http://www.mmonit.com&#8217;&#8216;</a> </p>
+<p> <i></i><font SIZE="-1"><i>VERSION</i></font><i></i> you may specify an alternative version, default is ``0&#8217;&#8216; </p>
+<p> For example: </p>
+<pre><code> check host websocket.org with address &quot;echo.websocket.org&quot;
+       if failed
+          port 80 protocol websocket
+          host &quot;echo.websocket.org&quot;
+          request &quot;/&quot;
+          origin 'http://websocket.com'          version 13
+       then alert
+</code></pre>
+<h2>CONFIGURATION EXAMPLES</h2>
+<p> The simplest form is just the check statement. In this example we check to see if our web server is running and log a message if not: </p>
+<pre><code> check process nginx with pidfile /var/run/nginx.pid
+</code></pre>
+<p> To have Monit start the server if it&#8217;s not running, add a start statement: </p>
+<pre><code> check process nginx with pidfile /var/run/nginx.pid
+       start program = &quot;/etc/init.d/nginx start&quot;
+</code></pre>
+<p> Here&#8217;s a more advanced example for monitoring an apache web-server listening on the default port number for <font SIZE="-1">HTTP</font> and <font SIZE="-1">HTTPS.</font> In this example Monit will restart apache if it&#8217;s not accepting connections at the port numbers. The method Monit use for restart is to first execute the stop-program, then wait (up to 30s) for the process to stop and then execute the start-program and wait (30s) for it to start. The length of start or stop wait can be overridden using the &#8216;timeout&#8217; option. If Monit was unable to stop or start the service a failed alert message will be sent if you have requested alert messages to be sent. </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+       start program = &quot;/etc/init.d/httpd start&quot; with timeout 60 seconds
+       stop program = &quot;/etc/init.d/httpd stop&quot;
+       if failed port 80 for 2 cycles then restart
+       if failed port 443 for 2 cycles then restart
+</code></pre>
+<p> This example demonstrate how you can run a program as a specified user (uid) and with a specified group (gid). Many daemon programs can do the uid and gid switch by themselves, but for those programs that does not (e.g. Java programs), monit&#8217;s ability to start a program as a certain user can be very useful. In this example we start the Tomcat Java Servlet Engine as the standard <i>nobody</i> user and group. Please note that Monit can only switch uid and gid for the program if the super-user is running Monit, otherwise Monit will simply ignore the request to change uid and gid. </p>
+<pre><code> check process tomcat with pidfile /var/run/tomcat.pid
+       start program = &quot;/etc/init.d/tomcat start&quot;
+             as uid nobody and gid nobody
+       stop program = &quot;/etc/init.d/tomcat stop&quot;
+             # You can also use id numbers instead and write:
+             as uid 99 and with gid 99
+       if failed port 8080 then alert
+</code></pre>
+<p> In this example we use udp for connection testing to check if the name-server is running: </p>
+<pre><code> check process named with pidfile /var/run/named.pid
+       start program = &quot;/etc/init.d/named start&quot;
+       stop program = &quot;/etc/init.d/named stop&quot;
+       if failed port 53 use type udp protocol dns then restart
+</code></pre>
+<p> The following example illustrates how to check if the service &#8216;sophie&#8217; is answering connections on its Unix domain socket: </p>
+<pre><code> check process sophie with pidfile /var/run/sophie.pid
+       start program = &quot;/etc/init.d/sophie start&quot;
+       stop program = &quot;/etc/init.d/sophie stop&quot;
+       if failed unix /var/run/sophie then restart
+</code></pre>
+<p> In this example we check an apache web-server running on localhost which answers for several IP-based virtual hosts or vhosts, hence the host statement before port: </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+       start &quot;/etc/init.d/httpd start&quot;
+       stop &quot;/etc/init.d/httpd stop&quot;
+       if failed hostwww.sol.no port 80 then alert
+       if failed host shop.sol.no port 443 then alert
+       if failed host chat.sol.no port 80 then alert
+</code></pre>
+<p> To make sure that Monit is communicating with a http server a protocol test can be added: </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+       start &quot;/etc/init.d/httpd start&quot;
+       stop &quot;/etc/init.d/httpd stop&quot;
+       if failed
+          hostwww.sol.no port 80 protocol http
+       then alert
+</code></pre>
+<p> This example demonstrate a different way to check a web-server using the send/expect mechanism: </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+       start &quot;/etc/init.d/httpd start&quot;
+       stop &quot;/etc/init.d/httpd stop&quot;
+       if failed
+          hostwww.sol.no port 80 and
+          send &quot;GET / HTTP/1.1\r\nHost:www.sol.no\r\n\r\n&quot;
+          expect &quot;HTTP/[0-9\.]{3} 200.*&quot;
+       then alert
+</code></pre>
+<p> Here we ping a remote host to check if it is up and if not, send an alert: </p>
+<pre><code> check hostwww.tildeslash.com with addresswww.tildeslash.com       if failed ping then alert
+</code></pre>
+<p> In the following example we ask Monit to compute and verify the checksum for the underlying apache binary used by the start and stop programs. If the the checksum test should fail, monitoring will be disabled to prevent possibly restarting a compromised binary: </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+       start program = &quot;/etc/init.d/httpd start&quot;
+       stop program = &quot;/etc/init.d/httpd stop&quot;
+       if failed hostwww.tildeslash.com port 80 then restart
+       depends on apache_bin
+ check file apache_bin with path /usr/local/apache/bin/httpd
+       if failed checksum then unmonitor
+</code></pre>
+<p> In this example we ask Monit to test a document&#8217;s checksum on a remote server. If the checksum was changed we send an alert: </p>
+<pre><code> check host mmonit.com with address mmonit.com
+       if failed
+          port 80 protocol http and
+          request &quot;/monit/dist/monit-5.7.tar.gz&quot;
+          with checksum f9d26b8393736b5dfad837bb13780786
+       then alert
+</code></pre>
+<p> Here are a couple of tests for some popular communication servers, using the <font SIZE="-1">SIP</font> protocol. First we test a FreeSWITCH server and then an Asterisk server </p>
+<pre><code> check process freeswitch
+    with pidfile /usr/local/freeswitch/log/freeswitch.pid
+  start program = &quot;/usr/local/freeswitch/bin/freeswitch -nc -hp&quot;
+  stop program = &quot;/usr/local/freeswitch/bin/freeswitch -stop&quot;
+  if total memory &gt; 1000.0 MB for 5 cycles then alert
+  if total memory &gt; 1500.0 MB for 5 cycles then alert
+  if total memory &gt; 2000.0 MB for 5 cycles then restart
+  if cpu &gt; 60% for 5 cycles then alert
+  if failed
+     port 5060 type udp protocol SIP
+     target me [at] foo.bar and maxforward 10
+  then restart
+ check process asterisk
+   with pidfile /var/run/asterisk/asterisk.pid
+   start program = &quot;/usr/sbin/asterisk&quot;
+   stop program = &quot;/usr/sbin/asterisk -r -x 'shutdown now'&quot;
+   if total memory &gt; 1000.0 MB for 5 cycles then alert
+   if total memory &gt; 1500.0 MB for 5 cycles then alert
+   if total memory &gt; 2000.0 MB for 5 cycles then restart
+   if cpu &gt; 60% for 5 cycles then alert
+   if failed
+      port 5060 type udp protocol SIP
+      and target me [at] foo.bar maxforward 10
+   then restart
+</code></pre>
+<p> Some servers are slow starters, like for example Java based Application Servers. If we want to keep the poll-cycle low (i.e. &lt; 60 seconds) but allow some services to take its time to start, the <code>every</code> statement is handy: </p>
+<pre><code> check process dynamo with pidfile /etc/dynamo.pid every 2 cycles
+       start program = &quot;/etc/init.d/dynamo start&quot;
+       stop program = &quot;/etc/init.d/dynamo stop&quot;
+       if failed port 8840 then alert
+</code></pre>
+<p> Here is an example where we group together two database entries so you can manage them together, e.g.; &#8216;Monit -g database start all&#8217;. The mode statement is also illustrated in the first entry and have the effect that Monit will not try to (re)start this service if it is not running: </p>
+<pre><code> check process sybase with pidfile /var/run/sybase.pid
+       start = &quot;/etc/init.d/sybase start&quot;
+       stop = &quot;/etc/init.d/sybase stop&quot;
+       mode passive
+       group database
+ check process oracle with pidfile /var/run/oracle.pid
+       start program = &quot;/etc/init.d/oracle start&quot;
+       stop program = &quot;/etc/init.d/oracle stop&quot;
+       if failed
+          port 9001 protocol tns
+       then restart
+       group database
+</code></pre>
+<p> This resource checks example will send an alert if <font SIZE="-1">CPU</font> usage of the Apache&#8217;s http daemon and its child processes goes beyond 60% for two cycles. Apache is restarted if the <font SIZE="-1">CPU</font> usage is over 80% for five cycles or the memory usage is over 100Mb for five cycles or if the machines load average is more than 10 for 8 cycles: </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+       start program = &quot;/etc/init.d/httpd start&quot;
+       stop program = &quot;/etc/init.d/httpd stop&quot;
+       if cpu &gt; 40% for 2 cycles then alert
+       if total cpu &gt; 60% for 2 cycles then alert
+       if total cpu &gt; 80% for 5 cycles then restart
+       if mem &gt; 100 MB for 5 cycles then stop
+       ifloadavg(5min) greater than 10.0 for 8 cycles then stop
+</code></pre>
+<p> This examples demonstrate the timestamp statement with exec and how you may restart apache if its configuration file was changed. </p>
+<pre><code> check file httpd.conf with path /etc/httpd/httpd.conf
+       if changed timestamp
+          then exec &quot;/etc/init.d/httpd graceful&quot;
+</code></pre>
+<p> In this example we demonstrate usage of the extended alert statement and a file check dependency: </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+      start = &quot;/etc/init.d/httpd start&quot;
+      stop = &quot;/etc/init.d/httpd stop&quot;
+      alert admin@bar on {nonexist, timeout}
+        with mail-format {
+              from: bofh@$HOST
+              subject: apache $EVENT - $ACTION
+              message: This event occurred on $HOST at $DATE.
+              Your faithful employee,
+              monit
+      }
+      if failed hostwww.tildeslash.com  port 80 then restart
+      depend httpd_bin
+      group apache
+ check file httpd_bin with path /usr/local/apache/bin/httpd
+       alert security@bar on {checksum, timestamp,
+                  permission, uid, gid}
+             with mail-format {subject: Alaaarrm! on $HOST}
+       if failed checksum
+          and expect 8f7f419955cefa0b33a2ba316cba3659
+              then unmonitor
+       if failed permission 755 then unmonitor
+       if failed uid root then unmonitor
+       if failed gid root then unmonitor
+       if changed timestamp then alert
+       group apache
+</code></pre>
+<p> In this example, we demonstrate usage of the depend statement. In this case, we want to start oracle and apache. However, we&#8217;ve set up apache to use oracle as a back end, and if oracle is restarted, apache must be restarted as well. </p>
+<pre><code> check process apache with pidfile /var/run/httpd.pid
+       start = &quot;/etc/init.d/httpd start&quot;
+       stop = &quot;/etc/init.d/httpd stop&quot;
+       depends on oracle
+ check process oracle with pidfile /var/run/oracle.pid
+       start = &quot;/etc/init.d/oracle start&quot;
+       stop = &quot;/etc/init.d/oracle stop&quot;
+       if failed port 9001 for 5 cycles then restart
+</code></pre>
+<p> Next, we have 2 services, oracle-import and oracle-export that need to be restarted if oracle is restarted, but are independent of each other. </p>
+<pre><code> check process oracle with pidfile /var/run/oracle.pid
+       start = &quot;/etc/init.d/oracle start&quot;
+       stop = &quot;/etc/init.d/oracle stop&quot;
+       if failed port 9001 for 3 cycles then restart
+ check process oracle-import
+      with pidfile /var/run/oracle-import.pid
+       start = &quot;/etc/init.d/oracle-import start&quot;
+       stop = &quot;/etc/init.d/oracle-import stop&quot;
+       depends on oracle
+ check process oracle-export
+      with pidfile /var/run/oracle-export.pid
+       start = &quot;/etc/init.d/oracle-export start&quot;
+       stop = &quot;/etc/init.d/oracle-export stop&quot;
+       depends on oracle
+</code></pre>
+<h2>FILES</h2>
+<p> <i>~/.monitrc</i> <br />
+Default run control file </p>
+<p> <i>/etc/monitrc</i> <br />
+If the control file is not found in the default <br />
+location and&nbsp;<wbr>/etc contains a&nbsp;<wbr><i>monitrc</i>&nbsp;<wbr>file, this <br />
+file will be used instead. </p>
+<p> <i>./monitrc</i> <br />
+If the control file is not found in either of the <br />
+previous two locations, and the current working <br />
+directory contains a&nbsp;<wbr><i>monitrc</i>&nbsp;<wbr>file, this file is <br />
+used instead. </p>
+<p> <i>~/.monit.pid</i> <br />
+Lock file to help prevent concurrent runs&nbsp;<wbr>(non-root <br />
+mode). </p>
+<p> <i>/run/monit.pid</i> <br />
+Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br />
+Linux systems, if&nbsp;<wbr>/run directory is available). </p>
+<p> <i>/var/run/monit.pid</i> <br />
+Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br />
+Linux systems). </p>
+<p> <i>/etc/monit.pid</i> <br />
+Lock file to help prevent concurrent runs&nbsp;<wbr>(root mode, <br />
+systems without&nbsp;<wbr>/var/run). </p>
+<p> <i>~/.monit.state</i> <br />
+Monit saves its state to this file and utilizes <br />
+information found in this file to recover from <br />
+a crash. This is a binary file and its content is <br />
+only of interest to monit. You may set the location <br />
+of this file in the Monit control file or by using <br />
+the -s switch when Monit is started. </p>
+<p> <i>~/.monit.id</i> <br />
+&nbsp;<wbr>Monit save its unique id to this file.  </p>
+<h2>ENVIRONMENT</h2>
+<p> No environment variables are used by Monit. However, when Monit execute a script or a program Monit will set several environment variables which can be utilized by the executable. The following and <i>only</i> the following environment variables are available: </p>
+<dl>
+<dt><font SIZE="-1">MONIT_EVENT</font></dt>
+<dd> <p> The event that occurred on the service </p>
+ </dd>
+<dt><font SIZE="-1">MONIT_DESCRIPTION</font></dt>
+<dd> <p> A description of the error condition </p>
+ </dd>
+<dt><font SIZE="-1">MONIT_SERVICE</font></dt>
+<dd> <p> The name of the service (from monitrc) on which the event occurred. </p>
+ </dd>
+<dt><font SIZE="-1">MONIT_DATE</font></dt>
+<dd> <p> The time and date (<font SIZE="-1">RFC 822</font> style) the event occurred </p>
+ </dd>
+<dt><font SIZE="-1">MONIT_HOST</font></dt>
+<dd> <p> The host the event occurred on </p>
+ </dd></dl>
+<p> The following environment variables are only available for process service entries: </p>
+<dl>
+<dt><font SIZE="-1">MONIT_PROCESS_PID</font></dt>
+<dd> <p> The process pid. This may be 0 if the process was (re)started, </p>
+ </dd>
+<dt><font SIZE="-1">MONIT_PROCESS_MEMORY</font></dt>
+<dd> <p> Process memory. This may be 0 if the process was (re)started, </p>
+ </dd>
+<dt><font SIZE="-1">MONIT_PROCESS_CHILDREN</font></dt>
+<dd> <p> Process children. This may be 0 if the process was (re)started, </p>
+ </dd>
+<dt><font SIZE="-1">MONIT_PROCESS_CPU_PERCENT</font></dt>
+<dd> <p> Process cpu%. This may be 0 if the process was (re)started, </p>
+ </dd></dl>
+<h2>SIGNALS</h2>
+<p> If a Monit daemon is running, <font SIZE="-1">SIGUSR1</font> wakes it up from its sleep phase and forces a poll of all services. <font SIZE="-1">SIGTERM</font> and <font SIZE="-1">SIGINT</font> will gracefully terminate a Monit daemon. The <font SIZE="-1">SIGTERM</font> signal is sent to a Monit daemon if Monit is started with the <i>quit</i> action argument. </p>
+<p> Sending a <font SIZE="-1">SIGHUP</font> signal to a running Monit daemon will force the daemon to reinitialize itself, specifically it will reread configuration, close and reopen log files. </p>
+<p> Running Monit in foreground while a background Monit daemon is running will wake up the daemon.  </p>
+<h2>NOTES</h2>
+<p> This is a very silent program. Use the -v switch if you want to see what Monit is doing, and tail -f the logfile. Optionally for testing purposes; you can start Monit with the -Iv switch. Monit will then print debug information to the console, to stop monit in this mode, simply press CTRL^C (i.e. <font SIZE="-1">SIGINT</font>) in the same console. </p>
+<p> The syntax (and parser) of the control file was inspired by Eric S. Raymond et al. excellent fetchmail program. Some portions of this man page also receive inspiration from the same authors.  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2001-2015 by Tildeslash Ltd. All Rights Reserved. This product is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> any warranty; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> for a particular purpose.  </p>
+<h2>SEE ALSO</h2>
+<p> <font SIZE="-1">GNU</font> text utilities; <i><a href="/docs/linux/man/1-md5sum/">md5sum</a></i>(1); <i><a href="/docs/linux/man/1-sha1sum/">sha1sum</a></i>(1); <i><a href="/docs/linux/man/1-openssl/">openssl</a></i>(1); <i><a href="/docs/linux/man/7-glob/">glob</a></i>(7); <i><a href="/docs/linux/man/7-regex/">regex</a></i>(7); <i><a rel="nofollow" href="http://www.mmonit.com/">http://www.mmonit.com/</a></i> </p>
+<h2>Index</h2>

@@ -229,5 +229,30 @@ if (cdb_find(&amp;cdb, key, keylen) &gt; 0) {<br />
     datalen = cdb_datalen(&amp;cdb);<br />
     data = malloc(datalen + 1);<br />
     cdb_read(&amp;cdb, data, datalen, cdb_datapos(&amp;cdb));<br />
-    data[datalen] = &#8216;
-</p>
+    data[datalen] = &#8216;\0&#8217;; printf(&quot;key=%s data=%s\n&quot;, key, data); free(data); } else printf(&quot;key=%s not found\n&quot;, key); /* multiple record search */ struct cdb_find cdbf; int n; cdb_findinit(&amp;cdbf, &amp;cdb, key, keylen); n = 0; while(cdb_findnext(&amp;cdbf) &gt; 0) { datalen = cdb_datalen(&amp;cdb); data = malloc(datalen + 1); cdb_read(&amp;cdb, data, datalen, cdb_datapos(&amp;cdb)); data[datalen] = &#8216;\0&#8217;; printf(&quot;key=%s data=%s\n&quot;, key, data); free(data); ++n; } printf(&quot;key=%s %d records found\n&quot;, n); /* sequential database access */ unsigned pos; int n; cdb_seqinit(&amp;pos, &amp;cdb); n = 0; while(cdb_seqnext(&amp;pos, &amp;cdb) &gt; 0) { keylen = cdb_keylen(&amp;cdb); key = malloc(keylen + 1); cdb_read(&amp;cdb, key, keylen, cdb_keypos(&amp;cdb)); key[keylen] = &#8216;\0&#8217;; datalen = cdb_datalen(&amp;cdb); data = malloc(datalen + 1); cdb_read(&amp;cdb, data, datalen, cdb_datapos(&amp;cdb)); data[datalen] = &#8216;\0&#8217;; ++n; printf(&quot;record %n: key=%s data=%s\n&quot;, n, key, data); free(data); free(key); } printf(&quot;total records found: %d\n&quot;, n); /* close the database */ cdb_free(&amp;cdb); close(fd); /* simplistic query mode */ fd = open(filename, O_RDONLY); if (cdb_seek(fd, key, keylen, &amp;datalen) &gt; 0) { data = malloc(datalen + 1); cdb_bread(fd, data, datalen); data[datalen] = &#8216;\0&#8217;; printf(&quot;key=%s data=%s\n&quot;, key, data); } else printf(&quot;key=%s not found\n&quot;, key); close(fd); </code></pre>
+ </p>
+<h3>Create Mode</h3>
+<pre><code> int fd;
+ struct cdb_make cdbm;
+ char *key, *data;
+ unsigned keylen, datalen;
+ /* initialize the database */
+ fd = open(filename, O_RDWR|O_CREAT|O_TRUNC, 0644);
+ cdb_make_start(&amp;cdbm, fd);
+ while(have_more_data()) {
+   /* initialize key and data */
+   if (cdb_make_exists(&amp;cdbm, key, keylen) == 0)
+     cdb_make_add(&amp;cdbm, key, keylen, data, datalen);
+   /* or use cdb_make_put() with appropriate flags */
+ }
+ /* finalize and close the database */
+ cdb_make_finish(&amp;cdbm);
+ close(fd);
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/5-cdb/">cdb</a>(5), <a href="/docs/linux/man/1-cdb/">cdb</a>(1), <a href="/docs/linux/man/3-dbm/">dbm</a>(3), <a href="/docs/linux/man/3-db/">db</a>(3), <a href="/docs/linux/man/2-open/">open</a>(2). </p>
+<h2>AUTHOR</h2>
+<p> The <code>tinycdb</code> package written by Michael Tokarev &lt;mjt [at] corpit.ru&gt;, based on ideas and shares file format with original cdb library by Dan Bernstein. </p>
+<h2>LICENSE</h2>
+<p> Public domain. </p>
+<h2>Index</h2>

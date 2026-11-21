@@ -458,5 +458,484 @@ ALIGN_UP(note-&gt;n_descsz, 4); typedef struct {<br />
 <dt><i>.text</i></dt>
 <dd>This section holds the &quot;text&quot;, or executable instructions, of a program. This section is of type <code>SHT_PROGBITS</code>. The attributes used are <code>SHF_ALLOC</code> and <code>SHF_EXECINSTR</code>.</dd></dl>
 <h3>String and symbol tables</h3>
-<p>String table sections hold null-terminated character sequences, commonly called strings. The object file uses these strings to represent symbol and section names. One references a string as an index into the string table section. The first byte, which is index zero, is defined to hold a null byte (&#8216;
-</p>
+<p>String table sections hold null-terminated character sequences, commonly called strings. The object file uses these strings to represent symbol and section names. One references a string as an index into the string table section. The first byte, which is index zero, is defined to hold a null byte (&#8216;\0&#8217;). Similarly, a string table&#8217;s last byte is defined to hold a null byte, ensuring null termination for all strings. </p>
+<p> An object file&#8217;s symbol table holds information needed to locate and relocate a program&#8217;s symbolic definitions and references. A symbol table index is a subscript into this array. </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_name; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Addr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_value; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_size; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char st_info; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char st_other; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint16_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_shndx; } Elf32_Sym; </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_name; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char st_info; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char st_other; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint16_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_shndx; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Addr&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_value; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;st_size; } Elf64_Sym; </p>
+<p> The 32-bit and 64-bit versions have the same members, just in a different order. </p>
+<dl>
+<dt><i>st_name</i></dt>
+<dd> <p> This member holds an index into the object file&#8217;s symbol string table, which holds character representations of the symbol names. If the value is nonzero, it represents a string table index that gives the symbol name. Otherwise, the symbol has no name. </p>
+ </dd>
+<dt><i>st_value</i></dt>
+<dd> <p> This member gives the value of the associated symbol. </p>
+ </dd>
+<dt><i>st_size</i></dt>
+<dd> <p> Many symbols have associated sizes. This member holds zero if the symbol has no size or an unknown size. </p>
+ </dd>
+<dt><i>st_info</i></dt>
+<dd> <p> This member specifies the symbol&#8217;s type and binding attributes: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>STT_NOTYPE</code></dt>
+<dd> <p> The symbol&#8217;s type is not defined. </p>
+ </dd>
+<dt><code>STT_OBJECT</code></dt>
+<dd> <p> The symbol is associated with a data object. </p>
+ </dd>
+<dt><code>STT_FUNC</code></dt>
+<dd> <p> The symbol is associated with a function or other executable code. </p>
+ </dd>
+<dt><code>STT_SECTION</code></dt>
+<dd> <p> The symbol is associated with a section. Symbol table entries of this type exist primarily for relocation and normally have <code>STB_LOCAL</code> bindings. </p>
+ </dd>
+<dt><code>STT_FILE</code></dt>
+<dd> <p> By convention, the symbol&#8217;s name gives the name of the source file associated with the object file. A file symbol has <code>STB_LOCAL</code> bindings, its section index is <code>SHN_ABS</code>, and it precedes the other <code>STB_LOCAL</code> symbols of the file, if it is present. </p>
+ </dd>
+<dt><code>STT_LOPROC</code>, <code>STT_HIPROC</code></dt>
+<dd> <p> Values in the inclusive range [<code>STT_LOPROC</code>, <code>STT_HIPROC</code>] are reserved for processor-specific semantics. </p>
+ </dd>
+<dt><code>STB_LOCAL</code></dt>
+<dd> <p> Local symbols are not visible outside the object file containing their definition. Local symbols of the same name may exist in multiple files without interfering with each other. </p>
+ </dd>
+<dt><code>STB_GLOBAL</code></dt>
+<dd> <p> Global symbols are visible to all object files being combined. One file&#8217;s definition of a global symbol will satisfy another file&#8217;s undefined reference to the same symbol. </p>
+ </dd>
+<dt><code>STB_WEAK</code></dt>
+<dd> <p> Weak symbols resemble global symbols, but their definitions have lower precedence. </p>
+ </dd>
+<dt><code>STB_LOPROC</code>, <code>STB_HIPROC</code></dt>
+<dd> <p> Values in the inclusive range [<code>STB_LOPROC</code>, <code>STB_HIPROC</code>] are reserved for processor-specific semantics. </p>
+ </dd></dl>
+</dl>
+<dd> <p> There are macros for packing and unpacking the binding and type fields: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>ELF32_ST_BIND(</code><i>info</i><code>)</code>, <code>ELF64_ST_BIND(</code><i>info</i><code>)</code></dt>
+<dd> <p> Extract a binding from an <i>st_info</i> value. </p>
+ </dd>
+<dt><code>ELF32_ST_TYPE(</code><i>info</i><code>)</code>, <code>ELF64_ST_TYPE(</code><i>info</i><code>)</code></dt>
+<dd> <p> Extract a type from an <i>st_info</i> value. </p>
+ </dd>
+<dt><code>ELF32_ST_INFO(</code><i>bind</i><code>, </code><i>type</i><code>)</code>, <code>ELF64_ST_INFO(</code><i>bind</i><code>, </code><i>type</i><code>)</code></dt>
+<dd> <p> Convert a binding and a type into an <i>st_info</i> value. </p>
+ </dd></dl>
+</dl>
+<dt><i>st_other</i></dt>
+<dd> <p> This member defines the symbol visibility. </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>STV_DEFAULT</code></dt>
+<dd> <p> Default symbol visibility rules. Global and weak symbols are available to other modules; references in the local module can be interposed by definitions in other modules. </p>
+ </dd>
+<dt><code>STV_INTERNAL</code></dt>
+<dd> <p> Processor-specific hidden class. </p>
+ </dd>
+<dt><code>STV_HIDDEN</code></dt>
+<dd> <p> Symbol is unavailable to other modules; references in the local module always resolve to the local symbol (i.e., the symbol can&#8217;t be interposed by definitions in other modules). </p>
+ </dd>
+<dt><code>STV_PROTECTED</code></dt>
+<dd> <p> Symbol is available to other modules, but references in the local module always resolve to the local symbol. </p>
+ </dd></dl>
+<p> There are macros for extracting the visibility type: </p>
+<p> <code>ELF32_ST_VISIBILITY</code>(other) or <code>ELF64_ST_VISIBILITY</code>(other) </dl>
+ </p>
+<dt><i>st_shndx</i></dt>
+<dd> <p> Every symbol table entry is &quot;defined&quot; in relation to some section. This member holds the relevant section header table index. </p>
+ </dd></dl>
+<h3>Relocation entries (Rel & Rela)</h3>
+<p> Relocation is the process of connecting symbolic references with symbolic definitions. Relocatable files must have information that describes how to modify their section contents, thus allowing executable and shared object files to hold the right information for a process&#8217;s program image. Relocation entries are these data. </p>
+<p> Relocation structures that do not need an addend: </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Addr r_offset; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_info; } Elf32_Rel; </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Addr r_offset; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_info; } Elf64_Rel; </p>
+<p> Relocation structures that need an addend: </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Addr r_offset; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_info; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int32_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_addend; } Elf32_Rela; </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Addr r_offset; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;uint64_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_info; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int64_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;r_addend; } Elf64_Rela; </p>
+<dl>
+<dt><i>r_offset</i></dt>
+<dd> <p> This member gives the location at which to apply the relocation action. For a relocatable file, the value is the byte offset from the beginning of the section to the storage unit affected by the relocation. For an executable file or shared object, the value is the virtual address of the storage unit affected by the relocation. </p>
+ </dd>
+<dt><i>r_info</i></dt>
+<dd> <p> This member gives both the symbol table index with respect to which the relocation must be made and the type of relocation to apply. Relocation types are processor-specific. When the text refers to a relocation entry&#8217;s relocation type or symbol table index, it means the result of applying <code>ELF[32|64]_R_TYPE</code> or <code>ELF[32|64]_R_SYM</code>, respectively, to the entry&#8217;s <i>r_info</i> member. </p>
+ </dd>
+<dt><i>r_addend</i></dt>
+<dd> <p> This member specifies a constant addend used to compute the value to be stored into the relocatable field. </p>
+ </dd></dl>
+<h3>Dynamic tags (Dyn)</h3>
+<p> The <i>.dynamic</i> section contains a series of structures that hold relevant dynamic linking information. The <i>d_tag</i> member controls the interpretation of <i>d_un</i>. </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Sword&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;d_tag; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;union&nbsp;{ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Word d_val; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Addr d_ptr; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}&nbsp;d_un; } Elf32_Dyn; extern Elf32_Dyn _DYNAMIC[]; </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Sxword&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;d_tag; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;union&nbsp;{ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Xword d_val; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Addr&nbsp;<wbr>&nbsp;d_ptr; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}&nbsp;d_un; } Elf64_Dyn; extern Elf64_Dyn _DYNAMIC[]; </p>
+<dl>
+<dt><i>d_tag</i></dt>
+<dd> <p> This member may have any of the following values: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>DT_NULL</code></dt>
+<dd> <p> Marks end of dynamic section </p>
+ </dd>
+<dt><code>DT_NEEDED</code></dt>
+<dd> <p> String table offset to name of a needed library </p>
+ </dd>
+<dt><code>DT_PLTRELSZ</code></dt>
+<dd> <p> Size in bytes of PLT relocation entries </p>
+ </dd>
+<dt><code>DT_PLTGOT</code></dt>
+<dd> <p> Address of PLT and/or GOT </p>
+ </dd>
+<dt><code>DT_HASH</code></dt>
+<dd> <p> Address of symbol hash table </p>
+ </dd>
+<dt><code>DT_STRTAB</code></dt>
+<dd> <p> Address of string table </p>
+ </dd>
+<dt><code>DT_SYMTAB</code></dt>
+<dd> <p> Address of symbol table </p>
+ </dd>
+<dt><code>DT_RELA</code></dt>
+<dd> <p> Address of Rela relocation table </p>
+ </dd>
+<dt><code>DT_RELASZ</code></dt>
+<dd> <p> Size in bytes of the Rela relocation table </p>
+ </dd>
+<dt><code>DT_RELAENT</code></dt>
+<dd> <p> Size in bytes of a Rela relocation table entry </p>
+ </dd>
+<dt><code>DT_STRSZ</code></dt>
+<dd> <p> Size in bytes of string table </p>
+ </dd>
+<dt><code>DT_SYMENT</code></dt>
+<dd> <p> Size in bytes of a symbol table entry </p>
+ </dd>
+<dt><code>DT_INIT</code></dt>
+<dd> <p> Address of the initialization function </p>
+ </dd>
+<dt><code>DT_FINI</code></dt>
+<dd> <p> Address of the termination function </p>
+ </dd>
+<dt><code>DT_SONAME</code></dt>
+<dd> <p> String table offset to name of shared object </p>
+ </dd>
+<dt><code>DT_RPATH</code></dt>
+<dd> <p> String table offset to library search path (deprecated) </p>
+ </dd>
+<dt><code>DT_SYMBOLIC</code></dt>
+<dd> <p> Alert linker to search this shared object before the executable for symbols </p>
+ </dd>
+<dt><code>DT_REL</code></dt>
+<dd> <p> Address of Rel relocation table </p>
+ </dd>
+<dt><code>DT_RELSZ</code></dt>
+<dd> <p> Size in bytes of Rel relocation table </p>
+ </dd>
+<dt><code>DT_RELENT</code></dt>
+<dd> <p> Size in bytes of a Rel table entry </p>
+ </dd>
+<dt><code>DT_PLTREL</code></dt>
+<dd> <p> Type of relocation entry to which the PLT refers (Rela or Rel) </p>
+ </dd>
+<dt><code>DT_DEBUG</code></dt>
+<dd> <p> Undefined use for debugging </p>
+ </dd>
+<dt><code>DT_TEXTREL</code></dt>
+<dd> <p> Absence of this entry indicates that no relocation entries should apply to a nonwritable segment </p>
+ </dd>
+<dt><code>DT_JMPREL</code></dt>
+<dd> <p> Address of relocation entries associated solely with the PLT </p>
+ </dd>
+<dt><code>DT_BIND_NOW</code></dt>
+<dd> <p> Instruct dynamic linker to process all relocations before transferring control to the executable </p>
+ </dd>
+<dt><code>DT_RUNPATH</code></dt>
+<dd> <p> String table offset to library search path </p>
+ </dd>
+<dt><code>DT_LOPROC</code>, <code>DT_HIPROC</code></dt>
+<dd> <p> Values in the inclusive range [<code>DT_LOPROC</code>, <code>DT_HIPROC</code>] are reserved for processor-specific semantics </p>
+ </dd></dl>
+</dl>
+<dt><i>d_val</i></dt>
+<dd> <p> This member represents integer values with various interpretations. </p>
+ </dd>
+<dt><i>d_ptr</i></dt>
+<dd> <p> This member represents program virtual addresses. When interpreting these addresses, the actual address should be computed based on the original file value and memory base address. Files do not contain relocation entries to fixup these addresses. </p>
+ </dd>
+<dt><i>_DYNAMIC</i></dt>
+<dd> <p> Array containing all the dynamic structures in the <i>.dynamic</i> section. This is automatically populated by the linker. </p>
+ </dd></dl>
+<h3>Notes (Nhdr)</h3>
+<p> ELF notes allow for appending arbitrary information for the system to use. They are largely used by core files (<i>e_type</i> of <code>ET_CORE</code>), but many projects define their own set of extensions. For example, the GNU tool chain uses ELF notes to pass information from the linker to the C library. </p>
+<p> Note sections contain a series of notes (see the <i>struct</i> definitions below). Each note is followed by the name field (whose length is defined in <i>n_namesz</i>) and then by the descriptor field (whose length is defined in <i>n_descsz</i>) and whose starting address has a 4 byte alignment. Neither field is defined in the note struct due to their arbitrary lengths. </p>
+<p> An example for parsing out two consecutive notes should clarify their layout in memory: </p>
+<p> void *memory, *name, *desc; Elf64_Nhdr *note, *next_note; </p>
+<p> /* The buffer is pointing to the start of the section/segment */ note = memory; </p>
+<p> /* If the name is defined, it follows the note */ name = note-&gt;n_namesz == 0 ? NULL : memory + sizeof(*note); </p>
+<p> /* If the descriptor is defined, it follows the name <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;(with alignment)&nbsp;*/ </p>
+<p> desc = note-&gt;n_descsz == 0 ? NULL : <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memory&nbsp;+&nbsp;sizeof(*note)&nbsp;+&nbsp;ALIGN_UP(note-&gt;n_namesz, 4); </p>
+<p> /* The next note follows both (with alignment) */ next_note = memory + sizeof(*note) + <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ALIGN_UP(note-&gt;n_namesz, 4)&nbsp;+ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ALIGN_UP(note-&gt;n_descsz, 4); </p>
+<p> Keep in mind that the interpretation of <i>n_type</i> depends on the namespace defined by the <i>n_namesz</i> field. If the <i>n_namesz</i> field is not set (e.g., is 0), then there are two sets of notes: one for core files and one for all other ELF types. If the namespace is unknown, then tools will usually fallback to these sets of notes as well. </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Word n_namesz; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Word n_descsz; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf32_Word n_type; } Elf32_Nhdr; </p>
+<p> typedef struct { <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Word n_namesz; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Word n_descsz; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Elf64_Word n_type; } Elf64_Nhdr; </p>
+<dl>
+<dt><i>n_namesz</i></dt>
+<dd> <p> The length of the name field in bytes. The contents will immediately follow this note in memory. The name is null terminated. For example, if the name is &quot;GNU&quot;, then <i>n_namesz</i> will be set to 4. </p>
+ </dd>
+<dt><i>n_descsz</i></dt>
+<dd> <p> The length of the descriptor field in bytes. The contents will immediately follow the name field in memory. </p>
+ </dd>
+<dt><i>n_type</i></dt>
+<dd> <p> Depending on the value of the name field, this member may have any of the following values: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>Core files (e_type = ET_CORE)</code></dt>
+<dd> <p> Notes used by all core files. These are highly operating system or architecture specific and often require close coordination with kernels, C libraries, and debuggers. These are used when the namespace is the default (i.e., <i>n_namesz</i> will be set to 0), or a fallback when the namespace is unknown. </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>NT_PRSTATUS</code></dt>
+<dd> <p> prstatus struct </p>
+ </dd>
+<dt><code>NT_FPREGSET</code></dt>
+<dd> <p> fpregset struct </p>
+ </dd>
+<dt><code>NT_PRPSINFO</code></dt>
+<dd> <p> prpsinfo struct </p>
+ </dd>
+<dt><code>NT_PRXREG</code></dt>
+<dd> <p> prxregset struct </p>
+ </dd>
+<dt><code>NT_TASKSTRUCT</code></dt>
+<dd> <p> task structure </p>
+ </dd>
+<dt><code>NT_PLATFORM</code></dt>
+<dd> <p> String from sysinfo(SI_PLATFORM) </p>
+ </dd>
+<dt><code>NT_AUXV</code></dt>
+<dd> <p> auxv array </p>
+ </dd>
+<dt><code>NT_GWINDOWS</code></dt>
+<dd> <p> gwindows struct </p>
+ </dd>
+<dt><code>NT_ASRS</code></dt>
+<dd> <p> asrset struct </p>
+ </dd>
+<dt><code>NT_PSTATUS</code></dt>
+<dd> <p> pstatus struct </p>
+ </dd>
+<dt><code>NT_PSINFO</code></dt>
+<dd> <p> psinfo struct </p>
+ </dd>
+<dt><code>NT_PRCRED</code></dt>
+<dd> <p> prcred struct </p>
+ </dd>
+<dt><code>NT_UTSNAME</code></dt>
+<dd> <p> utsname struct </p>
+ </dd>
+<dt><code>NT_LWPSTATUS</code></dt>
+<dd> <p> lwpstatus struct </p>
+ </dd>
+<dt><code>NT_LWPSINFO</code></dt>
+<dd> <p> lwpinfo struct </p>
+ </dd>
+<dt><code>NT_PRFPXREG</code></dt>
+<dd> <p> fprxregset struct </p>
+ </dd>
+<dt><code>NT_SIGINFO</code></dt>
+<dd> <p> siginfo_t (size might increase over time) </p>
+ </dd>
+<dt><code>NT_FILE</code></dt>
+<dd> <p> Contains information about mapped files </p>
+ </dd>
+<dt><code>NT_PRXFPREG</code></dt>
+<dd> <p> user_fxsr_struct </p>
+ </dd>
+<dt><code>NT_PPC_VMX</code></dt>
+<dd> <p> PowerPC Altivec/VMX registers </p>
+ </dd>
+<dt><code>NT_PPC_SPE</code></dt>
+<dd> <p> PowerPC SPE/EVR registers </p>
+ </dd>
+<dt><code>NT_PPC_VSX</code></dt>
+<dd> <p> PowerPC VSX registers </p>
+ </dd>
+<dt><code>NT_386_TLS</code></dt>
+<dd> <p> i386 TLS slots (struct user_desc) </p>
+ </dd>
+<dt><code>NT_386_IOPERM</code></dt>
+<dd> <p> x86 io permission bitmap (1=deny) </p>
+ </dd>
+<dt><code>NT_X86_XSTATE</code></dt>
+<dd> <p> x86 extended state using xsave </p>
+ </dd>
+<dt><code>NT_S390_HIGH_GPRS</code></dt>
+<dd> <p> s390 upper register halves </p>
+ </dd>
+<dt><code>NT_S390_TIMER</code></dt>
+<dd> <p> s390 timer register </p>
+ </dd>
+<dt><code>NT_S390_TODCMP</code></dt>
+<dd> <p> s390 time-of-day (TOD) clock comparator register </p>
+ </dd>
+<dt><code>NT_S390_TODPREG</code></dt>
+<dd> <p> s390 time-of-day (TOD) programmable register </p>
+ </dd>
+<dt><code>NT_S390_CTRS</code></dt>
+<dd> <p> s390 control registers </p>
+ </dd>
+<dt><code>NT_S390_PREFIX</code></dt>
+<dd> <p> s390 prefix register </p>
+ </dd>
+<dt><code>NT_S390_LAST_BREAK</code></dt>
+<dd> <p> s390 breaking event address </p>
+ </dd>
+<dt><code>NT_S390_SYSTEM_CALL</code></dt>
+<dd> <p> s390 system call restart data </p>
+ </dd>
+<dt><code>NT_S390_TDB</code></dt>
+<dd> <p> s390 transaction diagnostic block </p>
+ </dd>
+<dt><code>NT_ARM_VFP</code></dt>
+<dd> <p> ARM VFP/NEON registers </p>
+ </dd>
+<dt><code>NT_ARM_TLS</code></dt>
+<dd> <p> ARM TLS register </p>
+ </dd>
+<dt><code>NT_ARM_HW_BREAK</code></dt>
+<dd> <p> ARM hardware breakpoint registers </p>
+ </dd>
+<dt><code>NT_ARM_HW_WATCH</code></dt>
+<dd> <p> ARM hardware watchpoint registers </p>
+ </dd>
+<dt><code>NT_ARM_SYSTEM_CALL</code></dt>
+<dd> <p> ARM system call number </p>
+ </dd></dl>
+</dl>
+<dt><code>n_name = GNU</code></dt>
+<dd> <p> Extensions used by the GNU tool chain. </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>NT_GNU_ABI_TAG</code></dt>
+<dd> <p> Operating system (OS) ABI information. The desc field will be 4 words: </p>
+ </dd>
+<dd>  </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> word 0: OS descriptor (<code>ELF_NOTE_OS_LINUX</code>, <code>ELF_NOTE_OS_GNU</code>, and so on)` </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> word 1: major version of the ABI </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> word 2: minor version of the ABI </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> word 3: subminor version of the ABI </p>
+ </dd></dl>
+</dl>
+<dt><code>NT_GNU_HWCAP</code></dt>
+<dd> <p> Synthetic hwcap information. The desc field begins with two words: </p>
+ </dd>
+<dd>  </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> word 0: number of entries </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> word 1: bit mask of enabled entries </p>
+ </dd></dl>
+</dl>
+<dd> <p> Then follow variable-length entries, one byte followed by a null-terminated hwcap name string. The byte gives the bit number to test if enabled, (1U &lt;&lt; bit) &amp; bit mask. </p>
+ </dd>
+<dt><code>NT_GNU_BUILD_ID</code></dt>
+<dd> <p> Unique build ID as generated by the GNU <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) <code>--build-id</code> option. The desc consists of any nonzero number of bytes. </p>
+ </dd>
+<dt><code>NT_GNU_GOLD_VERSION</code></dt>
+<dd> <p> The desc contains the GNU Gold linker version used. </p>
+ </dd></dl>
+</dl>
+<dt><code>Default/unknown namespace (e_type != ET_CORE)</code></dt>
+<dd> <p> These are used when the namespace is the default (i.e., <i>n_namesz</i> will be set to 0), or a fallback when the namespace is unknown. </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>NT_VERSION</code></dt>
+<dd> <p> A version string of some sort. </p>
+ </dd>
+<dt><code>NT_ARCH</code></dt>
+<dd> <p> Architecture information. </p>
+ </dd></dl>
+</dl>
+</dl>
+</dl>
+</dl>
+<h2>NOTES</h2>
+<p> ELF first appeared in System V. The ELF format is an adopted standard. </p>
+<p> The extensions for <i>e_phnum</i>, <i>e_shnum</i>, and <i>e_shstrndx</i> respectively are Linux extensions. Sun, BSD and AMD64 also support them; for further information, look under SEE ALSO.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-as/">as</a></code>(1), <code><a href="/docs/linux/man/1-elfedit/">elfedit</a></code>(1), <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1), <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1), <code><a href="/docs/linux/man/1-nm/">nm</a></code>(1), <code><a href="/docs/linux/man/1-objcopy/">objcopy</a></code>(1), <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1), <code><a href="/docs/linux/man/1-patchelf/">patchelf</a></code>(1), <code><a href="/docs/linux/man/1-readelf/">readelf</a></code>(1), <code><a href="/docs/linux/man/1-size/">size</a></code>(1), <code><a href="/docs/linux/man/1-strings/">strings</a></code>(1), <code><a href="/docs/linux/man/1-strip/">strip</a></code>(1), <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), <code><a href="/docs/linux/man/3-dl_iterate_phdr/">dl_iterate_phdr</a></code>(3), <code><a href="/docs/linux/man/5-core/">core</a></code>(5), <code><a href="/docs/linux/man/8-ld.so/">ld.so</a></code>(8) </p>
+<p> Hewlett-Packard, <i>Elf-64 Object File Format</i>. </p>
+<p> Santa Cruz Operation, <i>System V Application Binary Interface</i>. </p>
+<p> UNIX System Laboratories, &quot;Object Files&quot;, <i>Executable and Linking Format (ELF)</i>. </p>
+<p> Sun Microsystems, <i>Linker and Libraries Guide</i>. </p>
+<p> AMD64 ABI Draft, <i>System V Application Binary Interface AMD64 Architecture Processor Supplement</i>.  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

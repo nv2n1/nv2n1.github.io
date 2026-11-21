@@ -16,5 +16,68 @@ description: "vlna – adds tilde after each non-syllabic preposition"
 <h2>DESCRIPTION</h2>
 <p> The program <code>vlna</code> processes one or more files, searches the non-syllabic prepositions followed by space(s) in these files and converts this/these space(s) to asciitilde for each such occurrence. </p>
 <p> In the processed file, the activity of the program can be blocked by <code>%~-</code> sequence and the activity can be restored again by the <code>%~+</code> sequence. These sequences can include spaces, it means that <code>% ~-</code> is a correct sequence too. </p>
-<p> The rule to recognize a preposition follows: The arbitrary number of opening parentheses can be written before the preposition and before these (optional) parentheses must be the space, tabelator or new-line. The preposition itself is one-letter word, the letters have to be from this set: {KkSsVvZzOoUuAI}. See the <code>-v</code> option if you want to change this set of letters. From version 1.2, the TeX sequence can be written before preposition and before the brace. Example: &quot;&lt;new-line&gt;([V lese&quot; is converted to &quot;&lt;new-line&gt;([V~lese&quot;. Another example: &quot;
-</p>
+<p> The rule to recognize a preposition follows: The arbitrary number of opening parentheses can be written before the preposition and before these (optional) parentheses must be the space, tabelator or new-line. The preposition itself is one-letter word, the letters have to be from this set: {KkSsVvZzOoUuAI}. See the <code>-v</code> option if you want to change this set of letters. From version 1.2, the TeX sequence can be written before preposition and before the brace. Example: &quot;&lt;new-line&gt;([V lese&quot; is converted to &quot;&lt;new-line&gt;([V~lese&quot;. Another example: &quot;\uv{V lese}&quot; is converted to &quot;\uv{V~lese}&quot;. </p>
+<p> One or more blank-spaces have to be included after preposition before next word. The blank-space means space or tabelator. One &lt;new-line&gt; can be here too. All these characters are removed and replaced by asciitilde (or by another string, see <code>-x</code> option). If &lt;new-line&gt; is deleted, another &lt;new-line&gt; is created before preposition (and before optional parentheses) in order to the number of lines is kept unchanged. Example: &quot;... V&lt;new-line&gt;&lt;tabelator&gt;lese&quot; is converted to &quot;...&lt;new-line&gt;V~lese&quot;. </p>
+<p> The program checks the consintence of TeX&#8217;s math environments (if <code>-m</code> option isn&#8217;t used). For example the &quot;$...$$...$&quot; sequence (it means the display mode switch inside the text-math mode) generates a warning. Empty line inside display mode generates a warning too and the program processes next text like in normal (non-math) mode. The existence of the &quot;$&quot; inside display mode are accepted because the constructions like $$..\hbox{..$..$}..$$ are allowed and common. </p>
+<p> The consistence of verbatim mode is checked on the end of the file. If the file ends but the verbatim mode does not end the warning is printed. This behavior can be switched off by <code>-n</code> or <code>-w</code> options. </p>
+<p> The program suppresses the tilde changing after letters like prepositions but they are not prepositions because the <code>\TeX</code> or <code>\LaTeX</code> sequence precedes. Example: &quot;vlastnosti \TeX u jsou&quot; is not converted to &quot;vlastnosti \TeX u~jsou&quot;, because this text is printed (after TeX processing) like &quot;vlastnosti TeXu jsou&quot;. The letter &quot;u&quot; is a suffix here, no preposition.  </p>
+<h2>OPTIONS</h2>
+<p> The options are optional and can be written in arbitrarty order separated by space. </p>
+<dl>
+<dt><code>-f</code></dt>
+<dd> <p> Filter. The [<i>filenames</i>] are treated as follows: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>vlna -f </code><i>filename1 filename2</i></dt>
+<dd> <p> Input is <i>filename1</i>, output is <i>filename2</i>. </p>
+ </dd>
+<dt><code>vlna -f </code><i>filename1</i></dt>
+<dd> <p> Input is <i>filename1</i>, output is <i>stdout</i>. </p>
+ </dd>
+<dt><code>vlna -f</code></dt>
+<dd> <p> Input is <i>stdin</i>, output is <i>stdout</i>. </p>
+ </dd>
+<dt><code>vlna</code><i>filename1</i> [<i>filename2</i> [<i>filename3</i> ...]]</dt>
+<dd> <p> If the <code>-f</code> option is omitted then each file is processed independently and it is re-written. </p>
+ </dd></dl>
+</dl>
+<dt><code>-s</code></dt>
+<dd> <p> The silent mode. No messages, warnings, statistics are printed. Only errors which terminates the program untimely are printed. If this parameter is omitted then banner, warnings and statistics are printed to <i>stderr</i>. </p>
+ </dd>
+<dt><code>-r</code></dt>
+<dd> <p> Do not create the backups. The option <code>-r</code> is irrelevant if the <code>-f</code> option is used. If the <code>-f</code> and <code>-r</code> options aren&#8217;t used then each re-written file is stored with its original contents to a backup file (the name of backup file is the same as filename, only the tilde is used instead of the last character). </p>
+ </dd>
+<dt><code>-v </code><i>characters</i></dt>
+<dd> <p> The set of characters treated as non-syllabic prepositions is declared by this option. Default: <code>-v KkSsVvZzOoUuAI</code>. The space between <code>-v</code> and <i>characters</i> is required. </p>
+ </dd>
+<dt><code>-x </code><i>code</i></dt>
+<dd> <p> The <i>code</i> is a string written in hexadecimal notation (even hexa digits is required). This string will be saved after prepositions instead asciitilde which is default. The example: <code>-x C2A0</code> two bytes are stored after each non-syllabic preposition, first byte has C2 code and second byte has A0 code. This example means that NO-BREAK SPACE in UTF8 encoding will be used after prepositions. Another example: <code>-x 00A0</code> the NO-BREAK SPACE in UTF16 encoding. Another example: <code>-x 48454C4C4F</code> the string HELLO will be used. The space between <code>-x</code> and <i>code</i> is required. </p>
+ </dd>
+<dt><code>-m</code></dt>
+<dd> <p> The math-modes (<code>$</code>...<code>$</code> and <code>$$</code>...<code>$$</code>) are ignored. It means that non-syllabic prepositions is searched in math-mode too. Default (without <code>-m</code> option): no changes in math modes are done because (for example) &quot;v&quot; is variable in math-mode, no preposition. </p>
+ </dd>
+<dt><code>-n</code></dt>
+<dd> <p> The verbatim mode (<code>\verb</code><i>&lt;char&gt;</i>...<i>&lt;char&gt;</i>, <code>\begtt</code>...<code>\endtt</code>) is ignored, it means the program can do a changes in verbatim environment. Default (without <code>-n</code> option): no changes in verbatim mode are done. </p>
+ </dd>
+<dt><code>-l</code></dt>
+<dd> <p> The LaTeX mode. The following environments are treated as display mode: <code>\begin{display}</code>...<code>\end{display}</code> and <code>\begin{equation}</code>...<code>\end{equation}</code> and the following environment is treated as verbatim mode: <code>\begin{verbatim}</code>...<code>\end{verbatim}</code>. </p>
+ </dd>
+<dt><code>-w</code></dt>
+<dd> <p> The web mode (Knuth&#8217;s web, no www:-). The following sequences are treated as verbatim: <code>@&lt;</code>, <code>@d</code>...<code>@*</code>, <code>@</code><i>space</i> or <code>@&gt;|</code>. It means program code is unchanged in *.w or *.web files, only web-comments are processed. </p>
+ </dd></dl>
+<h2>EXAMPLES</h2>
+<dl>
+<dt><code>vlna -m -n -s -r </code><i>file</i></dt>
+<dd> <p> The program has a behavior similar to the old <code>vlnka</code> program. </p>
+ </dd>
+<dt><code>vlna *.tex</code></dt>
+<dd> <p> All files with .tex suffix in current directory will be processed (and possibly changed). (The &quot;*&quot; is UNIX-shell feautre). </p>
+ </dd>
+<dt><code>vlna -f file &gt; /dev/null</code></dt>
+<dd> <p> Only the consistence checking of math and verbatim modes is processed. No changes are done. </p>
+ </dd></dl>
+<h2>AUTHORS</h2>
+<p> Petr Olsak &lt;olsak [at] math.feld.cvut.cz&gt;. Man page (Czech original) and Makefile is created by Rulolf Cejka </p>
+<h2>Index</h2>

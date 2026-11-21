@@ -473,5 +473,1168 @@ description: "XmDrawnButton — The DrawnButton widget class"
 <td>XmNlabelString</td>
 <td>XmCXmString</td>
 <td>XmString</td>
-<td>&quot;
-</table></table>
+<td>&quot;\0&quot;</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNlabelType</td>
+<td>XmCLabelType</td>
+<td>unsigned char</td>
+<td>XmSTRING</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmarginBottom</td>
+<td>XmCMarginBottom</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmarginHeight</td>
+<td>XmCMarginHeight</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmarginLeft</td>
+<td>XmCMarginLeft</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmarginRight</td>
+<td>XmCMarginRight</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmarginTop</td>
+<td>XmCMarginTop</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmarginWidth</td>
+<td>XmCMarginWidth</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmnemonic</td>
+<td>XmCMnemonic</td>
+<td>KeySym</td>
+<td>NULL</td>
+<td>N/A
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmnemonicCharSet</td>
+<td>XmCMnemonicCharSet</td>
+<td>String</td>
+<td>XmFONTLIST_DEFAULT_TAG</td>
+<td>N/A
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNrecomputeSize</td>
+<td>XmCRecomputeSize</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNrenderTable</td>
+<td>XmCRenderTable</td>
+<td>XmRenderTable</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNstringDirection</td>
+<td>XmCStringDirection</td>
+<td>XmStringDirection</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+</table>
+</table>
+<table BORDER>
+<tr>
+<td><table>
+ <tr VALIGN=top>
+<td><code>XmPrimitive Resource Set</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>Name</code></td>
+<td><code>Class</code></td>
+<td><code>Type</code></td>
+<td><code>Default</code></td>
+<td><code>Access</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNbottomShadowColor</td>
+<td>XmCBottomShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNbottomShadowPixmap</td>
+<td>XmCBottomShadowPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNconvertCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNforeground</td>
+<td>XmCForeground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNhelpCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNhighlightColor</td>
+<td>XmCHighlightColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNhighlightOnEnter</td>
+<td>XmCHighlightOnEnter</td>
+<td>Boolean</td>
+<td>False</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNhighlightPixmap</td>
+<td>XmCHighlightPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNhighlightThickness</td>
+<td>XmCHighlightThickness</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNlayoutDirection</td>
+<td>XmCLayoutDirection</td>
+<td>XmDirection</td>
+<td>dynamic</td>
+<td>CG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNnavigationType</td>
+<td>XmCNavigationType</td>
+<td>XmNavigationType</td>
+<td>XmNONE</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNpopupHandlerCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNshadowThickness</td>
+<td>XmCShadowThickness</td>
+<td>Dimension</td>
+<td>2</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNtopShadowColor</td>
+<td>XmCTopShadowColor</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNtopShadowPixmap</td>
+<td>XmCTopShadowPixmap</td>
+<td>Pixmap</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNtraversalOn</td>
+<td>XmCTraversalOn</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNunitType</td>
+<td>XmCUnitType</td>
+<td>unsigned char</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNuserData</td>
+<td>XmCUserData</td>
+<td>XtPointer</td>
+<td>NULL</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+</table>
+</table>
+<table BORDER>
+<tr>
+<td><table>
+ <tr VALIGN=top>
+<td><code>Core Resource Set</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>Name</code></td>
+<td><code>Class</code></td>
+<td><code>Type</code></td>
+<td><code>Default</code></td>
+<td><code>Access</code>
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNaccelerators</td>
+<td>XmCAccelerators</td>
+<td>XtAccelerators</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNancestorSensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>dynamic</td>
+<td>G
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNbackground</td>
+<td>XmCBackground</td>
+<td>Pixel</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNbackgroundPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNborderColor</td>
+<td>XmCBorderColor</td>
+<td>Pixel</td>
+<td>XtDefaultForeground</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNborderPixmap</td>
+<td>XmCPixmap</td>
+<td>Pixmap</td>
+<td>XmUNSPECIFIED_PIXMAP</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNborderWidth</td>
+<td>XmCBorderWidth</td>
+<td>Dimension</td>
+<td>0</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNcolormap</td>
+<td>XmCColormap</td>
+<td>Colormap</td>
+<td>dynamic</td>
+<td>CG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNdepth</td>
+<td>XmCDepth</td>
+<td>int</td>
+<td>dynamic</td>
+<td>CG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNdestroyCallback</td>
+<td>XmCCallback</td>
+<td>XtCallbackList</td>
+<td>NULL</td>
+<td>C
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNheight</td>
+<td>XmCHeight</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNinitialResourcesPersistent</td>
+<td>XmCInitialResourcesPersistent</td>
+<td>Boolean</td>
+<td>True</td>
+<td>C
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNmappedWhenManaged</td>
+<td>XmCMappedWhenManaged</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNscreen</td>
+<td>XmCScreen</td>
+<td>Screen *</td>
+<td>dynamic</td>
+<td>CG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNsensitive</td>
+<td>XmCSensitive</td>
+<td>Boolean</td>
+<td>True</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNtranslations</td>
+<td>XmCTranslations</td>
+<td>XtTranslations</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNwidth</td>
+<td>XmCWidth</td>
+<td>Dimension</td>
+<td>dynamic</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNx</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td>XmNy</td>
+<td>XmCPosition</td>
+<td>Position</td>
+<td>0</td>
+<td>CSG
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+<td><hr />
+</td>
+</tr>
+</table>
+</table>
+<h3>Callback Information</h3>
+<p> A pointer to the following structure is passed to each callback: </p>
+<pre><code>typedef struct
+{
+        int reason ;
+        XEvent * event ;
+        Window window ;
+        int click_count ;
+} XmDrawnButtonCallbackStruct;
+</code></pre>
+<dl>
+<dt><i>reason</i></dt>
+<dd> <p> Indicates why the callback was invoked. </p>
+ </dd>
+<dt><i>event</i></dt>
+<dd> <p> Points to the <code>XEvent</code> that triggered the callback. This is NULL for <code>XmNresizeCallback</code>. </p>
+ </dd>
+<dt><i>window</i></dt>
+<dd> <p> Is set to the window ID in which the event occurred. </p>
+ </dd>
+<dt><i>click_count</i></dt>
+<dd> <p> Contains the number of clicks in the last multiclick sequence if the <code>XmNmultiClick</code> resource is set to <code>XmMULTICLICK_KEEP</code>, otherwise it contains 1. The activate callback is invoked for each click if <code>XmNmultiClick</code> is set to <code>XmMULTICLICK_KEEP</code>. </p>
+ </dd></dl>
+<h3>Translations</h3>
+<p> XmDrawnButton includes translations from Primitive. Additional XmDrawnButton translations are described in the following list. The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-VirtualBindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation. </p>
+<dl>
+<dt><code>c&lt;Btn1Down&gt;</code>:</dt>
+<dd> <p> ButtonTakeFocus() </p>
+ </dd>
+<dt><code>&asymp;c</code><code>&lt;Btn1Down&gt;</code>:</dt>
+<dd> <p> Arm() </p>
+ </dd>
+<dt><code>&asymp;c</code><code>&lt;Btn1Down&gt;</code><code>,&asymp;c</code><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd> <p> Activate() Disarm() </p>
+ </dd>
+<dt><code>&asymp;c</code><code>&lt;Btn1Down&gt;</code><code>(2+)</code>:</dt>
+<dd> <p> MultiArm() </p>
+ </dd>
+<dt><code>&asymp;c</code><code>&lt;Btn1Up&gt;</code><code>(2+)</code>:</dt>
+<dd> <p> MultiActivate() </p>
+ </dd>
+<dt><code>&asymp;c</code><code>&lt;Btn1Up&gt;</code>:</dt>
+<dd> <p> Activate() Disarm() </p>
+ </dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd> <p> PrimitiveParentActivate() </p>
+ </dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd> <p> PrimitiveParentCancel() </p>
+ </dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfSelect&gt;</code>:</dt>
+<dd> <p> ArmAndActivate() </p>
+ </dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd> <p> Help() </p>
+ </dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code><code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd> <p> PrimitiveParentActivate() </p>
+ </dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code><code>&lt;Key&gt;</code><code>space</code>:</dt>
+<dd> <p> ArmAndActivate() </p>
+ </dd></dl>
+<h3>Action Routines</h3>
+<p> The <code>XmDrawnButton</code> action routines are </p>
+<dl>
+<dt>Activate():</dt>
+<dd> <p> If <code>XmNpushButtonEnabled</code> is True, redraws the shadow in the unselected state; otherwise, redraws the shadow according to <code>XmNshadowType</code>. If the pointer is within the DrawnButton, calls the <code>XmNactivateCallback</code> callbacks. </p>
+ </dd>
+<dt>Arm():</dt>
+<dd> <p> If <code>XmNpushButtonEnabled</code> is True, redraws the shadow in the selected state; otherwise, redraws the shadow according to <code>XmNshadowType</code>. Calls the callbacks for <code>XmNarmCallback</code>. </p>
+ </dd>
+<dt>ArmAndActivate():</dt>
+<dd> <p> If <code>XmNpushButtonEnabled</code> is True, redraws the shadow in the selected state; otherwise, redraws the shadow according to <code>XmNshadowType</code>. Calls the callbacks for <code>XmNarmCallback</code>. </p>
+ </dd>
+<dd> <p> If <code>XmNpushButtonEnabled</code> is True, the shadow is redrawn in the unselected state; otherwise, the shadow is redrawn according to <code>XmNshadowType</code>. The callbacks for <code>XmNactivateCallback</code> and <code>XmNdisarmCallback</code> are called. These actions happen either immediately or at a later time. </p>
+ </dd>
+<dt>ButtonTakeFocus():</dt>
+<dd> <p> Causes the PushButton to take keyboard focus when <code>Ctrl&lt;Btn1Down&gt;</code> is pressed, without activating the widget. </p>
+ </dd>
+<dt>Disarm():</dt>
+<dd> <p> Marks the DrawnButton as unselected and calls the callbacks for <code>XmNdisarmCallback</code>. </p>
+ </dd>
+<dt>Help():</dt>
+<dd> <p> Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them. </p>
+ </dd>
+<dt>MultiActivate():</dt>
+<dd> <p> If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing. </p>
+ </dd>
+<dd> <p> If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code>, this action increments <i>click_count</i> in the callback structure. If <code>XmNpushButtonEnabled</code> is True, this action redraws the shadow in the unselected state; otherwise, it redraws the shadow according to <code>XmNshadowType</code>. If the pointer is within the DrawnButton, this action calls the <code>XmNactivateCallback</code> callbacks and calls the callbacks for <code>XmNdisarmCallback</code>. </p>
+ </dd>
+<dt>MultiArm():</dt>
+<dd> <p> If <code>XmNmultiClick</code> is <code>XmMULTICLICK_DISCARD</code>, this action does nothing. </p>
+ </dd>
+<dd> <p> If <code>XmNmultiClick</code> is <code>XmMULTICLICK_KEEP</code> and if <code>XmNpushButtonEnabled</code> is True, this action redraws the shadow in the selected state; otherwise, it redraws the shadow according to <code>XmNshadowType</code> and calls the callbacks for <code>XmNarmCallback</code>. </p>
+ </dd></dl>
+<h3>Additional Behavior</h3>
+<p> This widget has the following additional behavior: </p>
+<dl>
+<dt><code>&lt;EnterWindow&gt;</code>:</dt>
+<dd> <p> Draws the shadow in its selected state if <code>XmNpushButtonEnabled</code> is True and if the cursor leaves and re-enters the window while <code>BSelect</code> is pressed. </p>
+ </dd>
+<dt><code>&lt;LeaveWindow&gt;</code>:</dt>
+<dd> <p> Draws the shadow in its unselected state if <code>XmNpushButtonEnabled</code> is True and if the cursor leaves the window while <code>BSelect</code> is pressed. </p>
+ </dd></dl>
+<h3>Virtual Bindings</h3>
+<p> The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-VirtualBindings/">VirtualBindings</a></code>(3).  </p>
+<h2>RELATED</h2>
+<p> <code><a href="/docs/linux/man/3-Core/">Core</a></code>(3), <code>XmCreateDrawnButton</code>, <code><a href="/docs/linux/man/3-XmLabel/">XmLabel</a></code>(3), <code><a href="/docs/linux/man/3-XmPrimitive/">XmPrimitive</a></code>(3), <code>XmPushButton</code>, <code><a href="/docs/linux/man/3-XmSeparator/">XmSeparator</a></code>(3), <code>XmVaCreateDrawnButton</code>, <code>XmVaCreateManagedDrawnButton</code>. </p>
+<h2>Index</h2>

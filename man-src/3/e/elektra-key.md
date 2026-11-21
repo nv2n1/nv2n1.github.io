@@ -216,5 +216,129 @@ keyDel(emptyNamedKey);</p>
 <p>&nbsp;<wbr>Define a maximum length of the value. This is especially useful for setting a binary key. So make sure you use that before you KEY_VALUE for binary keys.</p>
 <dt>*</dt>
 <dd> keyswitch_t::KEY_VALUE </dd>
-<p>&nbsp;<wbr>Next parameter is a pointer to the value that will be set to the key If no keyswitch_t::KEY_TYPE was used before, keyswitch_t::KEY_TYPE_STRING is assumed. If KEY_TYPE was previously passed with a KEY_TYPE_BINARY, you should have passed KEY_SIZE before!&nbsp;<wbr>Otherwise it will be cut of with first&nbsp;<wbr>
-</p></dl>
+<p>&nbsp;<wbr>Next parameter is a pointer to the value that will be set to the key If no keyswitch_t::KEY_TYPE was used before, keyswitch_t::KEY_TYPE_STRING is assumed. If KEY_TYPE was previously passed with a KEY_TYPE_BINARY, you should have passed KEY_SIZE before!&nbsp;<wbr>Otherwise it will be cut of with first&nbsp;<wbr>&nbsp;<wbr>\0 in string! </p>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_UID, keyswitch_t::KEY_GID <br />
+ <br />
+&nbsp;<wbr>Next parameter is taken as the UID&nbsp;<wbr>(uid_t)&nbsp;<wbr>or GID&nbsp;<wbr>(gid_t)&nbsp;<wbr>that will be defined on the key. See&nbsp;<wbr><code>keySetUID()</code>&nbsp;<wbr>and&nbsp;<wbr><code>keySetGID()</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_MODE <br />
+ <br />
+&nbsp;<wbr>Next parameter is taken as mode permissions&nbsp;<wbr>(mode_t)&nbsp;<wbr>to the key. See&nbsp;<wbr><code>keySetMode()</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_DIR <br />
+ <br />
+&nbsp;<wbr>Define that the key is a directory rather than a ordinary key. This means its executable bits in its mode are set. This option allows the key to have subkeys. See&nbsp;<wbr><code>keySetDir()</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_OWNER <br />
+ <br />
+&nbsp;<wbr>Next parameter is the owner. See&nbsp;<wbr><code>keySetOwner()</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_COMMENT <br />
+ <br />
+&nbsp;<wbr>Next parameter is a comment. See&nbsp;<wbr><code>keySetComment()</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_REMOVE <br />
+ <br />
+&nbsp;<wbr>Mark the key to be removed instead of set it. See&nbsp;<wbr><code>keyRemove()</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_STAT <br />
+ <br />
+&nbsp;<wbr>Mark the key to be stated instead of get it. See&nbsp;<wbr><code>keyStat()</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> keyswitch_t::KEY_END <br />
+ <br />
+&nbsp;<wbr>Must be the last parameter passed to&nbsp;<wbr><code>keyNew()</code>. It is always required, unless the keyName is 0. </p>
+ </dd></dl>
+<p> <code>Example:</code>.RS 4 </p>
+<pre><code>KeySet *ks=ksNew(0);
+ksAppendKey(ks,keyNew(0)); // an empty key
+ksAppendKey(ks,keyNew('user/sw', // the name of the key
+        KEY_END)); // no more args
+ksAppendKey(ks,keyNew('user/tmp/ex1',
+        KEY_VALUE,'some data', // set a string value
+        KEY_END)); // end of args
+ksAppendKey(ks,keyNew('user/tmp/ex2',
+        KEY_VALUE,'some data', // with a simple value
+        KEY_MODE,0777, // permissions
+        KEY_END)); // end of args
+ksAppendKey(ks,keyNew('user/tmp/ex4',
+        KEY_TYPE,KEY_TYPE_BINARY, // key type
+        KEY_SIZE,7, // assume binary length 7
+        KEY_VALUE,'some data', // value that will be truncated in 7 bytes
+        KEY_COMMENT,'value is truncated',
+        KEY_OWNER,'root', // owner (not uid) is root
+        KEY_UID,0, // root uid
+        KEY_END)); // end of args
+ksAppendKey(ks,keyNew('user/tmp/ex5',
+        KEY_TYPE,
+                KEY_TYPE_DIR | KEY_TYPE_BINARY,// dir key with a binary value
+        KEY_SIZE,7,
+        KEY_VALUE,'some data', // value that will be truncated in 7 bytes
+        KEY_COMMENT,'value is truncated',
+        KEY_OWNER,'root', // owner (not uid) is root
+        KEY_UID,0, // root uid
+        KEY_END)); // end of args
+ksDel(ks);
+</code></pre>
+<p> The reference counter (see <code>keyGetRef()</code>) will be initialized with 0, that means a subsequent call of <code>keyDel()</code> will delete the key. If you append the key to a keyset the reference counter will be incremented by one (see keyInc()) and the key can&#8217;t be be deleted by a <code>keyDel()</code>. </p>
+<pre><code>Key *k = keyNew(0); // ref counter 0
+ksAppendKey(ks, k); // ref counter of key 1
+ksDel(ks); // key will be deleted with keyset
+ *
+</code></pre>
+<p> If you increment only by one with keyInc() the same as said above is valid: </p>
+<pre><code>Key *k = keyNew(0); // ref counter 0
+keyIncRef(k); // ref counter of key 1
+keyDel(k); // has no effect
+keyDecRef(k); // ref counter back to 0
+keyDel(k); // key is now deleted
+ *
+</code></pre>
+<p> If you add the key to more keySets: </p>
+<pre><code>Key *k = keyNew(0); // ref counter 0
+ksAppendKey(ks1, k); // ref counter of key 1
+ksAppendKey(ks2, k); // ref counter of key 2
+ksDel(ks1); // ref counter of key 1
+ksDel(ks2); // k is now deleted
+ *
+</code></pre>
+<p> or use keyInc() more than once: </p>
+<pre><code>Key *k = keyNew(0); // ref counter 0
+keyIncRef(k); // ref counter of key 1
+keyDel (k); // has no effect
+keyIncRef(k); // ref counter of key 2
+keyDel (k); // has no effect
+keyDecRef(k); // ref counter of key 1
+keyDel (k); // has no effect
+keyDecRef(k); // ref counter is now 0
+keyDel (k); // k is now deleted
+ *
+</code></pre>
+<p> they key won&#8217;t be deleted by a <code>keyDel()</code> as long refcounter is not 0. </p>
+<p> The key&#8217;s sync bit will always be set for any call, except: </p>
+<pre><code>Key *k = keyNew(0);
+// keyNeedSync() will be false
+</code></pre>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>keyName</i> a valid name to the key, or NULL to get a simple initialized, but really empty, object </p>
+ </dd></dl>
+<p> <code>See also:</code> </p>
+<dl>
+<dd> <p> <code>keyDel()</code> </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> a pointer to a new allocated and initialized Key object, or NULL if an invalid keyName was passed (see <code>keySetName()</code>). </p>
+ </dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
+<h2>Index</h2>

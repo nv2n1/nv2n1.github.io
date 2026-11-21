@@ -608,6 +608,365 @@ unsetopt localtraps
 </dt><dd>
 <p> When this option is not set, null characters embedded within strings of the form <code>$&#8217;</code><i>&#8230;</i><code>&#8216;</code> are treated as ordinary characters. The entire string is maintained within the shell and output to files where necessary, although owing to restrictions of the library interface the string is truncated at the null character in file names, environment variables, or in arguments to external programs. </p>
 <p> When this option is set, the <code>$&#8217;</code><i>&#8230;</i><code>&#8216;</code> expression is truncated at the null character. Note that remaining parts of the same string beyond the termination of the quotes are not truncated. </p>
-<p> For example, the command line argument <code>a$&#8217;b
-</p></dd></dl></dl>
-</code>
+<p> For example, the command line argument <code>a$&#8217;b</code>\0c&#8217;d</code> is treated with the option off as the characters <code>a</code>, <code>b</code>, null, <code>c</code>, <code>d</code>, and with the option on as the characters <code>a</code>, <code>b</code>, <code>d</code>. </dl>
+ </p>
+<dt><code>POSIX_TRAPS</code> &lt;K&gt; &lt;S&gt;</dt>
+<dd> <p> When this option is set, the usual zsh behaviour of executing traps for <code>EXIT</code> on exit from shell functions is suppressed. In that case, manipulating <code>EXIT</code> traps always alters the global trap for exiting the shell; the <code>LOCAL_TRAPS</code> option is ignored for the <code>EXIT</code> trap. Furthermore, a <code>return</code> statement executed in a trap with no argument passes back from the function the value from the surrounding context, not from code executed within the trap. </p>
+ </dd>
+<dt><code>SH_FILE_EXPANSION</code> &lt;K&gt; &lt;S&gt;</dt>
+<dd> <p> Perform filename expansion (e.g., <code>~</code> expansion) <i>before</i> parameter expansion, command substitution, arithmetic expansion and brace expansion. If this option is unset, it is performed <i>after</i> brace expansion, so things like `<code>~$USERNAME</code>&#8216; and `<code>~{pfalstad,rc}</code>&#8216; will work. </p>
+ </dd>
+<dt><code>SH_NULLCMD</code> &lt;K&gt; &lt;S&gt;</dt>
+<dd> <p> Do not use the values of <code>NULLCMD</code> and <code>READNULLCMD</code> when doing redirections, use `<code>:</code>&#8216; instead (see the section `Redirection&#8217;). </p>
+ </dd>
+<dt><code>SH_OPTION_LETTERS</code> &lt;K&gt; &lt;S&gt;</dt>
+<dd> <p> If this option is set the shell tries to interpret single letter options (which are used with <code>set</code> and <code>setopt</code>) like <code>ksh</code> does. This also affects the value of the <code>-</code> special parameter. </p>
+ </dd>
+<dt><code>SH_WORD_SPLIT</code> (<code>-y</code>) &lt;K&gt; &lt;S&gt;</dt>
+<dd> <p> Causes field splitting to be performed on unquoted parameter expansions. Note that this option has nothing to do with word splitting. (See <i><a href="/docs/linux/man/1-zshexpn/">zshexpn</a></i>(1).) </p>
+ </dd>
+<dt><code>TRAPS_ASYNC</code></dt>
+<dd> <p> While waiting for a program to exit, handle signals and run traps immediately. Otherwise the trap is run after a child process has exited. Note this does not affect the point at which traps are run for any case other than when the shell is waiting for a child process. </p>
+ </dd></dl>
+<h3>Shell State</h3>
+<dl>
+<dd> <p> <code>INTERACTIVE</code> (<code>-i</code>, ksh: <code>-i</code>) This is an interactive shell. This option is set upon initialisation if the standard input is a tty and commands are being read from standard input. (See the discussion of <code>SHIN_STDIN</code>.) This heuristic may be overridden by specifying a state for this option on the command line. The value of this option can only be changed via flags supplied at invocation of the shell. It cannot be changed once zsh is running. </p>
+ </dd>
+<dt><code>LOGIN</code> (<code>-l</code>, ksh: <code>-l</code>)</dt>
+<dd> <p> This is a login shell. If this option is not explicitly set, the shell becomes a login shell if the first character of the <code>argv[0]</code> passed to the shell is a `<code>-</code>&#8216;. </p>
+ </dd>
+<dt><code>PRIVILEGED</code> (<code>-p</code>, ksh: <code>-p</code>)</dt>
+<dd> <p> Turn on privileged mode. Typically this is used when script is to be run with elevated privileges. This should be done as follows directly with the <code>-p</code> option to zsh so that it takes effect during startup. </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <pre><code>
+ #!/bin/zsh -p 
+</code></pre>
+ </dd></dl>
+<p> The option is enabled automatically on startup if the effective user (group) ID is not equal to the real user (group) ID. In this case, turning the option off causes the effective user and group IDs to be set to the real user and group IDs. Be aware that if that fails the shell may be running with different IDs than was intended so a script should check for failure and act accordingly, for example: </p>
+<dl>
+<dd> <pre><code>
+ unsetopt privileged || exit 
+</code></pre>
+ </dd></dl>
+<p> The <code>PRIVILEGED</code> option disables sourcing user startup files. If zsh is invoked as `<code>sh</code>&#8216; or `<code>ksh</code>&#8216; with this option set, <code>/etc/suid_profile</code> is sourced (after <code>/etc/profile</code> on interactive shells). Sourcing <code>~/.profile</code> is disabled and the contents of the <code>ENV</code> variable is ignored. This option cannot be changed using the <code>-m</code> option of <code>setopt</code> and <code>unsetopt</code>, and changing it inside a function always changes it globally regardless of the <code>LOCAL_OPTIONS</code> option. </dl>
+ </p>
+<dt><code>RESTRICTED</code> (<code>-r</code>)</dt>
+<dd> <p> Enables restricted mode. This option cannot be changed using <code>unsetopt</code>, and setting it inside a function always changes it globally regardless of the <code>LOCAL_OPTIONS</code> option. See the section `Restricted Shell&#8217;. </p>
+ </dd>
+<dt><code>SHIN_STDIN</code> (<code>-s</code>, ksh: <code>-s</code>)</dt>
+<dd> <p> Commands are being read from the standard input. Commands are read from standard input if no command is specified with <code>-c</code> and no file of commands is specified. If <code>SHIN_STDIN</code> is set explicitly on the command line, any argument that would otherwise have been taken as a file to run will instead be treated as a normal positional parameter. Note that setting or unsetting this option on the command line does not necessarily affect the state the option will have while the shell is running &#8211; that is purely an indicator of whether or not commands are <i>actually</i> being read from standard input. The value of this option can only be changed via flags supplied at invocation of the shell. It cannot be changed once zsh is running. </p>
+ </dd>
+<dt><code>SINGLE_COMMAND</code> (<code>-t</code>, ksh: <code>-t</code>)</dt>
+<dd> <p> If the shell is reading from standard input, it exits after a single command has been executed. This also makes the shell non-interactive, unless the <code>INTERACTIVE</code> option is explicitly set on the command line. The value of this option can only be changed via flags supplied at invocation of the shell. It cannot be changed once zsh is running. </p>
+ </dd></dl>
+<h3>Zle</h3>
+<dl>
+<dd> <p> <code>BEEP</code> (<code>+B</code>) &lt;D&gt; Beep on error in ZLE. </p>
+ </dd>
+<dt><code>COMBINING_CHARS</code></dt>
+<dd> <p> Assume that the terminal displays combining characters correctly. Specifically, if a base alphanumeric character is followed by one or more zero-width punctuation characters, assume that the zero-width characters will be displayed as modifications to the base character within the same width. Not all terminals handle this. If this option is not set, zero-width characters are displayed separately with special mark-up. </p>
+ </dd>
+<dl>
+<dd> <p> If this option is set, the pattern test <code>[[:WORD:]]</code> matches a zero-width punctuation character on the assumption that it will be used as part of a word in combination with a word character. Otherwise the base shell does not handle combining characters specially. </p>
+ </dd></dl>
+<dt><code>EMACS</code></dt>
+<dd> <p> If ZLE is loaded, turning on this option has the equivalent effect of `<code>bindkey -e</code>&#8216;. In addition, the VI option is unset. Turning it off has no effect. The option setting is not guaranteed to reflect the current keymap. This option is provided for compatibility; <code>bindkey</code> is the recommended interface. </p>
+ </dd>
+<dt><code>OVERSTRIKE</code></dt>
+<dd> <p> Start up the line editor in overstrike mode. </p>
+ </dd>
+<dt><code>SINGLE_LINE_ZLE</code> (<code>-M</code>) &lt;K&gt;</dt>
+<dd> <p> Use single-line command line editing instead of multi-line. </p>
+ </dd>
+<dl>
+<dd> <p> Note that although this is on by default in ksh emulation it only provides superficial compatibility with the ksh line editor and reduces the effectiveness of the zsh line editor. As it has no effect on shell syntax, many users may wish to disable this option when using ksh emulation interactively. </p>
+ </dd></dl>
+<dt><code>VI</code></dt>
+<dd> <p> If ZLE is loaded, turning on this option has the equivalent effect of `<code>bindkey -v</code>&#8216;. In addition, the EMACS option is unset. Turning it off has no effect. The option setting is not guaranteed to reflect the current keymap. This option is provided for compatibility; <code>bindkey</code> is the recommended interface. </p>
+ </dd>
+<dt><code>ZLE</code> (<code>-Z</code>)</dt>
+<dd> <p> Use the zsh line editor. Set by default in interactive shells connected to a terminal. </p>
+ </dd></dl>
+<h2>OPTION ALIASES</h2>
+<p> Some options have alternative names. These aliases are never used for output, but can be used just like normal option names when specifying options to the shell. </p>
+<dl>
+<dd> <p> <code>BRACE_EXPAND</code> <i>NO_</i><code>IGNORE_BRACES</code> (ksh and bash compatibility) </p>
+ </dd>
+<dt><code>DOT_GLOB</code></dt>
+<dd> <p> <code>GLOB_DOTS</code> (bash compatibility) </p>
+ </dd>
+<dt><code>HASH_ALL</code></dt>
+<dd> <p> <code>HASH_CMDS</code> (bash compatibility) </p>
+ </dd>
+<dt><code>HIST_APPEND</code></dt>
+<dd> <p> <code>APPEND_HISTORY</code> (bash compatibility) </p>
+ </dd>
+<dt><code>HIST_EXPAND</code></dt>
+<dd> <p> <code>BANG_HIST</code> (bash compatibility) </p>
+ </dd>
+<dt><code>LOG</code></dt>
+<dd> <p> <i>NO_</i><code>HIST_NO_FUNCTIONS</code> (ksh compatibility) </p>
+ </dd>
+<dt><code>MAIL_WARN</code></dt>
+<dd> <p> <code>MAIL_WARNING</code> (bash compatibility) </p>
+ </dd>
+<dt><code>ONE_CMD</code></dt>
+<dd> <p> <code>SINGLE_COMMAND</code> (bash compatibility) </p>
+ </dd>
+<dt><code>PHYSICAL</code></dt>
+<dd> <p> <code>CHASE_LINKS</code> (ksh and bash compatibility) </p>
+ </dd>
+<dt><code>PROMPT_VARS</code></dt>
+<dd> <p> <code>PROMPT_SUBST</code> (bash compatibility) </p>
+ </dd>
+<dt><code>STDIN</code></dt>
+<dd> <p> <code>SHIN_STDIN</code> (ksh compatibility) </p>
+ </dd>
+<dt><code>TRACK_ALL</code></dt>
+<dd> <p> <code>HASH_CMDS</code> (ksh compatibility) </p>
+ </dd></dl>
+<h2>SINGLE LETTER OPTIONS</h2>
+<h3>Default set</h3>
+<dl>
+<dt><code>-0</code></dt>
+<dd> <p> CORRECT </p>
+ </dd>
+<dt><code>-1</code></dt>
+<dd> <p> PRINT_EXIT_VALUE </p>
+ </dd>
+<dt><code>-2</code></dt>
+<dd> <p> <i>NO_</i>BAD_PATTERN </p>
+ </dd>
+<dt><code>-3</code></dt>
+<dd> <p> <i>NO_</i>NOMATCH </p>
+ </dd>
+<dt><code>-4</code></dt>
+<dd> <p> GLOB_DOTS </p>
+ </dd>
+<dt><code>-5</code></dt>
+<dd> <p> NOTIFY </p>
+ </dd>
+<dt><code>-6</code></dt>
+<dd> <p> BG_NICE </p>
+ </dd>
+<dt><code>-7</code></dt>
+<dd> <p> IGNORE_EOF </p>
+ </dd>
+<dt><code>-8</code></dt>
+<dd> <p> MARK_DIRS </p>
+ </dd>
+<dt><code>-9</code></dt>
+<dd> <p> AUTO_LIST </p>
+ </dd>
+<dt><code>-B</code></dt>
+<dd> <p> <i>NO_</i>BEEP </p>
+ </dd>
+<dt><code>-C</code></dt>
+<dd> <p> <i>NO_</i>CLOBBER </p>
+ </dd>
+<dt><code>-D</code></dt>
+<dd> <p> PUSHD_TO_HOME </p>
+ </dd>
+<dt><code>-E</code></dt>
+<dd> <p> PUSHD_SILENT </p>
+ </dd>
+<dt><code>-F</code></dt>
+<dd> <p> <i>NO_</i>GLOB </p>
+ </dd>
+<dt><code>-G</code></dt>
+<dd> <p> NULL_GLOB </p>
+ </dd>
+<dt><code>-H</code></dt>
+<dd> <p> RM_STAR_SILENT </p>
+ </dd>
+<dt><code>-I</code></dt>
+<dd> <p> IGNORE_BRACES </p>
+ </dd>
+<dt><code>-J</code></dt>
+<dd> <p> AUTO_CD </p>
+ </dd>
+<dt><code>-K</code></dt>
+<dd> <p> <i>NO_</i>BANG_HIST </p>
+ </dd>
+<dt><code>-L</code></dt>
+<dd> <p> SUN_KEYBOARD_HACK </p>
+ </dd>
+<dt><code>-M</code></dt>
+<dd> <p> SINGLE_LINE_ZLE </p>
+ </dd>
+<dt><code>-N</code></dt>
+<dd> <p> AUTO_PUSHD </p>
+ </dd>
+<dt><code>-O</code></dt>
+<dd> <p> CORRECT_ALL </p>
+ </dd>
+<dt><code>-P</code></dt>
+<dd> <p> RC_EXPAND_PARAM </p>
+ </dd>
+<dt><code>-Q</code></dt>
+<dd> <p> PATH_DIRS </p>
+ </dd>
+<dt><code>-R</code></dt>
+<dd> <p> LONG_LIST_JOBS </p>
+ </dd>
+<dt><code>-S</code></dt>
+<dd> <p> REC_EXACT </p>
+ </dd>
+<dt><code>-T</code></dt>
+<dd> <p> CDABLE_VARS </p>
+ </dd>
+<dt><code>-U</code></dt>
+<dd> <p> MAIL_WARNING </p>
+ </dd>
+<dt><code>-V</code></dt>
+<dd> <p> <i>NO_</i>PROMPT_CR </p>
+ </dd>
+<dt><code>-W</code></dt>
+<dd> <p> AUTO_RESUME </p>
+ </dd>
+<dt><code>-X</code></dt>
+<dd> <p> LIST_TYPES </p>
+ </dd>
+<dt><code>-Y</code></dt>
+<dd> <p> MENU_COMPLETE </p>
+ </dd>
+<dt><code>-Z</code></dt>
+<dd> <p> ZLE </p>
+ </dd>
+<dt><code>-a</code></dt>
+<dd> <p> ALL_EXPORT </p>
+ </dd>
+<dt><code>-e</code></dt>
+<dd> <p> ERR_EXIT </p>
+ </dd>
+<dt><code>-f</code></dt>
+<dd> <p> <i>NO_</i>RCS </p>
+ </dd>
+<dt><code>-g</code></dt>
+<dd> <p> HIST_IGNORE_SPACE </p>
+ </dd>
+<dt><code>-h</code></dt>
+<dd> <p> HIST_IGNORE_DUPS </p>
+ </dd>
+<dt><code>-i</code></dt>
+<dd> <p> INTERACTIVE </p>
+ </dd>
+<dt><code>-k</code></dt>
+<dd> <p> INTERACTIVE_COMMENTS </p>
+ </dd>
+<dt><code>-l</code></dt>
+<dd> <p> LOGIN </p>
+ </dd>
+<dt><code>-m</code></dt>
+<dd> <p> MONITOR </p>
+ </dd>
+<dt><code>-n</code></dt>
+<dd> <p> <i>NO_</i>EXEC </p>
+ </dd>
+<dt><code>-p</code></dt>
+<dd> <p> PRIVILEGED </p>
+ </dd>
+<dt><code>-r</code></dt>
+<dd> <p> RESTRICTED </p>
+ </dd>
+<dt><code>-s</code></dt>
+<dd> <p> SHIN_STDIN </p>
+ </dd>
+<dt><code>-t</code></dt>
+<dd> <p> SINGLE_COMMAND </p>
+ </dd>
+<dt><code>-u</code></dt>
+<dd> <p> <i>NO_</i>UNSET </p>
+ </dd>
+<dt><code>-v</code></dt>
+<dd> <p> VERBOSE </p>
+ </dd>
+<dt><code>-w</code></dt>
+<dd> <p> CHASE_LINKS </p>
+ </dd>
+<dt><code>-x</code></dt>
+<dd> <p> XTRACE </p>
+ </dd>
+<dt><code>-y</code></dt>
+<dd> <p> SH_WORD_SPLIT </p>
+ </dd></dl>
+<h3>sh/ksh emulation set</h3>
+<dl>
+<dt><code>-C</code></dt>
+<dd> <p> <i>NO_</i>CLOBBER </p>
+ </dd>
+<dt><code>-T</code></dt>
+<dd> <p> TRAPS_ASYNC </p>
+ </dd>
+<dt><code>-X</code></dt>
+<dd> <p> MARK_DIRS </p>
+ </dd>
+<dt><code>-a</code></dt>
+<dd> <p> ALL_EXPORT </p>
+ </dd>
+<dt><code>-b</code></dt>
+<dd> <p> NOTIFY </p>
+ </dd>
+<dt><code>-e</code></dt>
+<dd> <p> ERR_EXIT </p>
+ </dd>
+<dt><code>-f</code></dt>
+<dd> <p> <i>NO_</i>GLOB </p>
+ </dd>
+<dt><code>-i</code></dt>
+<dd> <p> INTERACTIVE </p>
+ </dd>
+<dt><code>-l</code></dt>
+<dd> <p> LOGIN </p>
+ </dd>
+<dt><code>-m</code></dt>
+<dd> <p> MONITOR </p>
+ </dd>
+<dt><code>-n</code></dt>
+<dd> <p> <i>NO_</i>EXEC </p>
+ </dd>
+<dt><code>-p</code></dt>
+<dd> <p> PRIVILEGED </p>
+ </dd>
+<dt><code>-r</code></dt>
+<dd> <p> RESTRICTED </p>
+ </dd>
+<dt><code>-s</code></dt>
+<dd> <p> SHIN_STDIN </p>
+ </dd>
+<dt><code>-t</code></dt>
+<dd> <p> SINGLE_COMMAND </p>
+ </dd>
+<dt><code>-u</code></dt>
+<dd> <p> <i>NO_</i>UNSET </p>
+ </dd>
+<dt><code>-v</code></dt>
+<dd> <p> VERBOSE </p>
+ </dd>
+<dt><code>-x</code></dt>
+<dd> <p> XTRACE </p>
+ </dd></dl>
+<h3>Also note</h3>
+<dl>
+<dt><code>-A</code></dt>
+<dd> <p> Used by <code>set</code> for setting arrays </p>
+ </dd>
+<dt><code>-b</code></dt>
+<dd> <p> Used on the command line to specify end of option processing </p>
+ </dd>
+<dt><code>-c</code></dt>
+<dd> <p> Used on the command line to specify a single command </p>
+ </dd>
+<dt><code>-m</code></dt>
+<dd> <p> Used by <code>setopt</code> for pattern-matching option setting </p>
+ </dd>
+<dt><code>-o</code></dt>
+<dd> <p> Used in all places to allow use of long option names </p>
+ </dd>
+<dt><code>-s</code></dt>
+<dd> <p> Used by <code>set</code> to sort positional parameters </p>
+ </dd></dl>
+<h2>Index</h2>

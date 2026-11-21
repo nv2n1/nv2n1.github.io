@@ -262,5 +262,34 @@ truncate - s 30G newdisk.img virt - filesystems - a / path / to / olddisk.img-- 
 <p> Does the output match running <tt>&quot;regedit&quot;</tt> inside the guest? </p>
 <p> A recent feature is the ability to dump user registries, so try this, replacing <i>username</i> with the name of a local user in the guest: </p>
 <pre>
- virt-win-reg --unsafe-printable-strings WindowsGuest 'HKEY_USERS
-</pre>
+ virt-win-reg --unsafe-printable-strings WindowsGuest 'HKEY_USERS\username' |
+   less
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-guestfs/">guestfs</a></code>(3), <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1), <code><a href="/docs/linux/man/3-guestfs-examples/">guestfs-examples</a></code>(3), <a rel="nofollow" href="http://libguestfs.org/.">http://libguestfs.org/.</a>  </p>
+<h2>AUTHORS</h2>
+<p> Richard W.M. Jones (<code>&quot;rjones at redhat dot com&quot;</code>)  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2011-2012 Red Hat Inc.  </p>
+<h2>LICENSE</h2>
+<p> This library is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> Lesser General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This library is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> See the <font SIZE="-1">GNU</font> Lesser General Public License for more details. </p>
+<p> You should have received a copy of the <font SIZE="-1">GNU</font> Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA</font>  </p>
+<h2>BUGS</h2>
+<p> To get a list of bugs against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/buglist.cgi?component=libguestfs">https://bugzilla.redhat.com/buglist.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
+<p> When reporting a bug, please supply: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> The version of libguestfs. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> Where you got libguestfs (eg. which Linux distro, compiled from source, etc) </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> Describe the bug accurately and give a way to reproduce it. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> Run <code><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></code>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+ </dd></dl>
+<h2>Index</h2>

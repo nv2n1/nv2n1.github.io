@@ -129,5 +129,33 @@ hivexsh[-options][hivefile]
 <h2>EXAMPLE</h2>
 <pre>
  $ guestfish --ro -i Windows7
- &gt;&lt;fs&gt; download win:c:\windows\system32
-</pre>
+ &gt;&lt;fs&gt; download win:c:\windows\system32\config\software software
+ &gt;&lt;fs&gt; quit
+ $ hivexsh software
+ Welcome to hivexsh, the hivex interactive shell for examining
+ Windows Registry binary hive files.
+ Type: 'help' for help with commands
+       'quit' to quit the shell
+ software\&gt; ls
+ ATI Technologies
+ Classes
+ Clients
+ Intel
+ Microsoft
+ ODBC
+ Policies
+ RegisteredApplications
+ Sonic
+ Wow6432Node
+ software\&gt; quit
+</code></pre>
+<h2>SEE ALSO</h2>
+<p> <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3), <i><a href="/docs/linux/man/1-hivexget/">hivexget</a></i>(1), <i><a href="/docs/linux/man/1-hivexml/">hivexml</a></i>(1), <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i><a href="/docs/linux/man/3-guestfs/">guestfs</a></i>(3), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;, <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1), <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1).  </p>
+<h2>AUTHORS</h2>
+<p> Richard W.M. Jones (<code>&quot;rjones at redhat dot com&quot;</code>)  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2009-2010 Red Hat Inc. </p>
+<p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
+<p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, <font SIZE="-1">MA 02110-1301 USA.</font> </p>
+<h2>Index</h2>

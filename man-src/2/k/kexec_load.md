@@ -46,5 +46,71 @@ long kexec_file_load(int kernel_fd, int initrd_fd,
 <p> In case of kexec on panic (i.e., the <code>KEXEC_ON_CRASH</code> flag is set), the segment data is loaded to reserved memory at the time of the call, and, after a crash, the kexec mechanism simply passes control to that kernel. </p>
 <p> The <code>kexec_load</code>() system call is available only if the kernel was configured with <code>CONFIG_KEXEC</code>.</p>
 <h3>kexec_file_load()</h3>
-<p> The <code>kexec_file_load</code>() system call is similar to <code>kexec_load</code>(), but it takes a different set of arguments. It reads the kernel to be loaded from the file referred to by the file descriptor <i>kernel_fd</i>, and the initrd (initial RAM disk) to be loaded from file referred to by the file descriptor <i>initrd_fd</i>. The <i>cmdline</i> argument is a pointer to a buffer containing the command line for the new kernel. The <i>cmdline_len</i> argument specifies size of the buffer. The last byte in the buffer must be a null byte (&#8216;
-</p>
+<p> The <code>kexec_file_load</code>() system call is similar to <code>kexec_load</code>(), but it takes a different set of arguments. It reads the kernel to be loaded from the file referred to by the file descriptor <i>kernel_fd</i>, and the initrd (initial RAM disk) to be loaded from file referred to by the file descriptor <i>initrd_fd</i>. The <i>cmdline</i> argument is a pointer to a buffer containing the command line for the new kernel. The <i>cmdline_len</i> argument specifies size of the buffer. The last byte in the buffer must be a null byte (&#8216;\0&#8217;). </p>
+<p> The <i>flags</i> argument is a bit mask which modifies the behavior of the call. The following values can be specified in <i>flags</i>: </p>
+<dl>
+<dt><code>KEXEC_FILE_UNLOAD</code></dt>
+<dd> <p> Unload the currently loaded kernel. </p>
+ </dd>
+<dt><code>KEXEC_FILE_ON_CRASH</code></dt>
+<dd> <p> Load the new kernel in the memory region reserved for the crash kernel (as for <code>KEXEC_ON_CRASH</code>). This kernel is booted if the currently running kernel crashes. </p>
+ </dd>
+<dt><code>KEXEC_FILE_NO_INITRAMFS</code></dt>
+<dd> <p> Loading initrd/initramfs is optional. Specify this flag if no initramfs is being loaded. If this flag is set, the value passed in <i>initrd_fd</i> is ignored. </p>
+ </dd></dl>
+<p> The <code>kexec_file_load</code>() system call was added to provide support for systems where &quot;kexec&quot; loading should be restricted to only kernels that are signed. This system call is available only if the kernel was configured with <code>CONFIG_KEXEC_FILE</code>.  </p>
+<h2>RETURN VALUE</h2>
+<p> On success, these system calls returns 0. On error, -1 is returned and <i>errno</i> is set to indicate the error.  </p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EADDRNOTAVAIL</code></dt>
+<dd> <p> The <code>KEXEC_ON_CRASH</code> flags was specified, but the region specified by the <i>mem</i> and <i>memsz</i> fields of one of the <i>segments</i> entries lies outside the range of memory reserved for the crash kernel. </p>
+ </dd>
+<dt><code>EADDRNOTAVAIL</code></dt>
+<dd> <p> The value in a <i>mem</i> or <i>memsz</i> field in one of the <i>segments</i> entries is not a multiple of the system page size. </p>
+ </dd>
+<dt><code>EBADF</code></dt>
+<dd> <p> <i>kernel_fd</i> or <i>initrd_fd</i> is not a valid file descriptor. </p>
+ </dd>
+<dt><code>EBUSY</code></dt>
+<dd> <p> Another crash kernel is already being loaded or a crash kernel is already in use. </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> <i>flags</i> is invalid. </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> The value of a <i>bufsz</i> field in one of the <i>segments</i> entries exceeds the value in the corresponding <i>memsz</i> field. </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> <i>nr_segments</i> exceeds <code>KEXEC_SEGMENT_MAX</code> (16). </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> Two or more of the kernel target buffers overlap. </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> The value in <i>cmdline[cmdline_len-1]</i> is not &#8216;\0&#8217;. </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> The file referred to by <i>kernel_fd</i> or <i>initrd_fd</i> is empty (length zero). </p>
+ </dd>
+<dt><code>ENOEXEC</code></dt>
+<dd> <p> <i>kernel_fd</i> does not refer to an open file, or the kernel can&#8217;t load this file. Currently, the file must be a bzImage and contain an x86 kernel that is loadable above 4 GiB in memory (see the kernel source file <i>Documentation/x86/boot.txt</i>). </p>
+ </dd>
+<dt><code>ENOMEM</code></dt>
+<dd> <p> Could not allocate memory. </p>
+ </dd>
+<dt><code>EPERM</code></dt>
+<dd> <p> The caller does not have the <code>CAP_SYS_BOOT</code> capability. </p>
+ </dd></dl>
+<h2>VERSIONS</h2>
+<p> The <code>kexec_load</code>() system call first appeared in Linux 2.6.13. The <code>kexec_file_load</code>() system call first appeared in Linux 3.17.  </p>
+<h2>CONFORMING TO</h2>
+<p> These system calls are Linux-specific.  </p>
+<h2>NOTES</h2>
+<p> Currently, there is no glibc support for these system calls. Call them using <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2).  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-reboot/">reboot</a></code>(2), <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2), <code><a href="/docs/linux/man/8-kexec/">kexec</a></code>(8) </p>
+<p> The kernel source files <i>Documentation/kdump/kdump.txt</i> and <i>Documentation/admin-guide/kernel-parameters.txt</i>  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

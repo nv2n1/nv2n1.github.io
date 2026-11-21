@@ -87,5 +87,29 @@ description: "Writing on the braille display –"
 <dt>
 </dt><dd> 0 on success, -1 on error.</dd></dl>
 <h3>int <code>BRLAPI_STDCALL</code> brlapi_writeText (intcursor, const char *text)</h3>
-<p> Write the given 
-</p>
+<p> Write the given \0-terminated string to the braille display </p>
+<p> If the string is too long, it is truncated. If it&#8217;s too short, it is padded with spaces. The text is assumed to be in the current locale charset, or latin1 if locales have not been initialized. To initialize locales, use <a href="/docs/linux/man/3-setlocale/">setlocale</a>(3). </p>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>cursor</i> gives the cursor position; if equal to <code>BRLAPI_CURSOR_OFF</code>, no cursor is shown at all; if cursor==<code>BRLAPI_CURSOR_LEAVE</code>, the cursor is left where it is <br />
+ <i>text</i> points to the string to be displayed. </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> 0 on success, -1 on error. </p>
+ </dd></dl>
+<code></code><h3>int BRLAPI_STDCALL brlapi_writeWText (intcursor, const wchar_t *text)</h3>
+<p> Write the given \0-terminated unicode string to the braille display </p>
+<p> If the string is too long, it is truncated. If it&#8217;s too short, it is padded with spaces. </p>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>cursor</i> gives the cursor position; if equal to <code>BRLAPI_CURSOR_OFF</code>, no cursor is shown at all; if cursor==<code>BRLAPI_CURSOR_LEAVE</code>, the cursor is left where it is <br />
+ <i>text</i> points to the string to be displayed. </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> 0 on success, -1 on error. </p>
+ </dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
+<h2>Index</h2>

@@ -109,6 +109,140 @@ description: "githooks – Hooks used by Git"
 <dl>
 <dd>
 <pre># Version and features negotiation.
-S: PKT-LINE(version=1
-</dd></dl>
-</pre>
+S: PKT-LINE(version=1\0push-options atomic...)
+S: flush-pkt
+H: PKT-LINE(version=1\0push-options...)
+H: flush-pkt
+</code></pre>
+</dl>
+<dl>
+<dd> <pre><code># Send commands from server to the hook.
+S: PKT-LINE(&lt;old-oid&gt; &lt;new-oid&gt; &lt;ref&gt;)
+S: ... ...
+S: flush-pkt
+# Send push-options only if the 'push-options' feature is enabled.
+S: PKT-LINE(push-option)
+S: ... ...
+S: flush-pkt
+</code></pre>
+ </dd></dl>
+<dl>
+<dd> <pre><code># Receive result from the hook.
+# OK, run this command successfully.
+H: PKT-LINE(ok &lt;ref&gt;)
+# NO, I reject it.
+H: PKT-LINE(ng &lt;ref&gt; &lt;reason&gt;)
+# Fall through, let 'receive-pack' to execute it.
+H: PKT-LINE(ok &lt;ref&gt;)
+H: PKT-LINE(option fall-through)
+# OK, but has an alternate reference. The alternate reference name
+# and other status can be given in option directives.
+H: PKT-LINE(ok &lt;ref&gt;)
+H: PKT-LINE(option refname &lt;refname&gt;)
+H: PKT-LINE(option old-oid &lt;old-oid&gt;)
+H: PKT-LINE(option new-oid &lt;new-oid&gt;)
+H: PKT-LINE(option forced-update)
+H: ... ...
+H: flush-pkt
+</code></pre>
+ </dd></dl>
+<p> Each command for the <i>proc-receive</i> hook may point to a pseudo-reference and always has a zero-old as its old-oid, while the <i>proc-receive</i> hook may update an alternate reference and the alternate reference may exist already with a non-zero old-oid. For this case, this hook will use &quot;option&quot; directives to report extended attributes for the reference given by the leading &quot;ok&quot; directive. </p>
+<p> The report of the commands of this hook should have the same order as the input. The exit status of the <i>proc-receive</i> hook only determines the success or failure of the group of commands sent to it, unless atomic push is in use.  </p>
+<h3>post-receive</h3>
+<p> This hook is invoked by <code><a href="/docs/linux/man/1-git-receive-pack/">git-receive-pack</a></code>(1) when it reacts to <code>git push</code> and updates reference(s) in its repository. It executes on the remote repository once after all the refs have been updated. </p>
+<p> This hook executes once for the receive operation. It takes no arguments, but gets the same information as the <i>pre-receive</i> hook does on its standard input. </p>
+<p> This hook does not affect the outcome of <code>git receive-pack</code>, as it is called after the real work is done. </p>
+<p> This supersedes the <i>post-update</i> hook in that it gets both old and new values of all the refs in addition to their names. </p>
+<p> Both standard output and standard error output are forwarded to <code>git send-pack</code> on the other end, so you can simply <code>echo</code> messages for the user. </p>
+<p> The default <i>post-receive</i> hook is empty, but there is a sample script <code>post-receive-email</code> provided in the <code>contrib/hooks</code> directory in Git distribution, which implements sending commit emails. </p>
+<p> The number of push options given on the command line of <code>git push --push-option=...</code> can be read from the environment variable <code>GIT_PUSH_OPTION_COUNT</code>, and the options themselves are found in <code>GIT_PUSH_OPTION_0</code>, <code>GIT_PUSH_OPTION_1</code>,... If it is negotiated to not use the push options phase, the environment variables will not be set. If the client selects to use push options, but doesn&#8217;t transmit any, the count variable will be set to zero, <code>GIT_PUSH_OPTION_COUNT=0</code>.  </p>
+<h3>post-update</h3>
+<p> This hook is invoked by <code><a href="/docs/linux/man/1-git-receive-pack/">git-receive-pack</a></code>(1) when it reacts to <code>git push</code> and updates reference(s) in its repository. It executes on the remote repository once after all the refs have been updated. </p>
+<p> It takes a variable number of parameters, each of which is the name of ref that was actually updated. </p>
+<p> This hook is meant primarily for notification, and cannot affect the outcome of <code>git receive-pack</code>. </p>
+<p> The <i>post-update</i> hook can tell what are the heads that were pushed, but it does not know what their original and updated values are, so it is a poor place to do log old..new. The <i>post-receive</i> hook does get both original and updated values of the refs. You might consider it instead if you need them. </p>
+<p> When enabled, the default <i>post-update</i> hook runs <code>git update-server-info</code> to keep the information used by dumb transports (e.g., HTTP) up to date. If you are publishing a Git repository that is accessible via HTTP, you should probably enable this hook. </p>
+<p> Both standard output and standard error output are forwarded to <code>git send-pack</code> on the other end, so you can simply <code>echo</code> messages for the user.  </p>
+<h3>reference-transaction</h3>
+<p> This hook is invoked by any Git command that performs reference updates. It executes whenever a reference transaction is prepared, committed or aborted and may thus get called multiple times. The hook does not cover symbolic references (but that may change in the future). </p>
+<p> The hook takes exactly one argument, which is the current state the given reference transaction is in: </p>
+<dl>
+<dd> <p> &bull; &quot;prepared&quot;: All reference updates have been queued to the transaction and references were locked on disk. </p>
+ </dd></dl>
+<dl>
+<dd> <p> &bull; &quot;committed&quot;: The reference transaction was committed and all references now have their respective new value. </p>
+ </dd></dl>
+<dl>
+<dd> <p> &bull; &quot;aborted&quot;: The reference transaction was aborted, no changes were performed and the locks have been released. </p>
+ </dd></dl>
+<p> For each reference update that was added to the transaction, the hook receives on standard input a line of the format: </p>
+<dl>
+<dd> <pre><code>&lt;old-value&gt; SP &lt;new-value&gt; SP &lt;ref-name&gt; LF
+</code></pre>
+ </dd></dl>
+<p> where <code>&lt;old-value&gt;</code> is the old object name passed into the reference transaction, <code>&lt;new-value&gt;</code> is the new object name to be stored in the ref and <code>&lt;ref-name&gt;</code> is the full name of the ref. When force updating the reference regardless of its current value or when the reference is to be created anew, <code>&lt;old-value&gt;</code> is the all-zeroes object name. To distinguish these cases, you can inspect the current value of <code>&lt;ref-name&gt;</code> via <code>git rev-parse</code>. </p>
+<p> The exit status of the hook is ignored for any state except for the &quot;prepared&quot; state. In the &quot;prepared&quot; state, a non-zero exit status will cause the transaction to be aborted. The hook will not be called with &quot;aborted&quot; state in that case.  </p>
+<h3>push-to-checkout</h3>
+<p> This hook is invoked by <code><a href="/docs/linux/man/1-git-receive-pack/">git-receive-pack</a></code>(1) when it reacts to <code>git push</code> and updates reference(s) in its repository, and when the push tries to update the branch that is currently checked out and the <code>receive.denyCurrentBranch</code> configuration variable is set to <code>updateInstead</code>. Such a push by default is refused if the working tree and the index of the remote repository has any difference from the currently checked out commit; when both the working tree and the index match the current commit, they are updated to match the newly pushed tip of the branch. This hook is to be used to override the default behaviour. </p>
+<p> The hook receives the commit with which the tip of the current branch is going to be updated. It can exit with a non-zero status to refuse the push (when it does so, it must not modify the index or the working tree). Or it can make any necessary changes to the working tree and to the index to bring them to the desired state when the tip of the current branch is updated to the new commit, and exit with a zero status. </p>
+<p> For example, the hook can simply run <code>git read-tree -u -m HEAD &quot;$1&quot;</code> in order to emulate <code>git fetch</code> that is run in the reverse direction with <code>git push</code>, as the two-tree form of <code>git read-tree -u -m</code> is essentially the same as <code>git switch</code> or <code>git checkout</code> that switches branches while keeping the local changes in the working tree that do not interfere with the difference between the branches.  </p>
+<h3>pre-auto-gc</h3>
+<p> This hook is invoked by <code>git gc --auto</code> (see <code><a href="/docs/linux/man/1-git-gc/">git-gc</a></code>(1)). It takes no parameter, and exiting with non-zero status from this script causes the <code>git gc --auto</code> to abort.  </p>
+<h3>post-rewrite</h3>
+<p> This hook is invoked by commands that rewrite commits (<code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) when called with <code>--amend</code> and <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1); however, full-history (re)writing tools like <code><a href="/docs/linux/man/1-git-fast-import/">git-fast-import</a></code>(1) or m[blue]<code>git-filter-repo</code>m[]<font SIZE="-2">[1]</font> typically do not call it!). Its first argument denotes the command it was invoked by: currently one of <code>amend</code> or <code>rebase</code>. Further command-dependent arguments may be passed in the future. </p>
+<p> The hook receives a list of the rewritten commits on stdin, in the format </p>
+<dl>
+<dd> <pre><code>&lt;old-object-name&gt; SP &lt;new-object-name&gt; [ SP &lt;extra-info&gt; ] LF
+</code></pre>
+ </dd></dl>
+<p> The <i>extra-info</i> is again command-dependent. If it is empty, the preceding SP is also omitted. Currently, no commands pass any <i>extra-info</i>. </p>
+<p> The hook always runs after the automatic note copying (see &quot;notes.rewrite.&lt;command&gt;&quot; in <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)) has happened, and thus has access to these notes. </p>
+<p> The following command-specific comments apply: </p>
+<p> rebase </p>
+<dl>
+<dd> <p> For the <i>squash</i> and <i>fixup</i> operation, all commits that were squashed are listed as being rewritten to the squashed commit. This means that there will be several lines sharing the same <i>new-object-name</i>. </p>
+<p> The commits are guaranteed to be listed in the order that they were processed by rebase. </p>
+ </dd></dl>
+<h3>sendemail-validate</h3>
+<p> This hook is invoked by <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1). It takes a single parameter, the name of the file that holds the e-mail to be sent. Exiting with a non-zero status causes <code>git send-email</code> to abort before sending any e-mails.  </p>
+<h3>fsmonitor-watchman</h3>
+<p> This hook is invoked when the configuration option <code>core.fsmonitor</code> is set to <code>.git/hooks/fsmonitor-watchman</code> or <code>.git/hooks/fsmonitor-watchmanv2</code> depending on the version of the hook to use. </p>
+<p> Version 1 takes two arguments, a version (1) and the time in elapsed nanoseconds since midnight, January 1, 1970. </p>
+<p> Version 2 takes two arguments, a version (2) and a token that is used for identifying changes since the token. For watchman this would be a clock id. This version must output to stdout the new token followed by a NUL before the list of files. </p>
+<p> The hook should output to stdout the list of all files in the working directory that may have changed since the requested time. The logic should be inclusive so that it does not miss any potential changes. The paths should be relative to the root of the working directory and be separated by a single NUL. </p>
+<p> It is OK to include files which have not actually changed. All changes including newly-created and deleted files should be included. When files are renamed, both the old and the new name should be included. </p>
+<p> Git will limit what files it checks for changes as well as which directories are checked for untracked files based on the path names given. </p>
+<p> An optimized way to tell git &quot;all files have changed&quot; is to return the filename <code>/</code>. </p>
+<p> The exit status determines whether git will use the data from the hook to limit its search. On error, it will fall back to verifying all files and folders.  </p>
+<h3>p4-changelist</h3>
+<p> This hook is invoked by <code>git-p4 submit</code>. </p>
+<p> The <code>p4-changelist</code> hook is executed after the changelist message has been edited by the user. It can be bypassed with the <code>--no-verify</code> option. It takes a single parameter, the name of the file that holds the proposed changelist text. Exiting with a non-zero status causes the command to abort. </p>
+<p> The hook is allowed to edit the changelist file and can be used to normalize the text into some project standard format. It can also be used to refuse the Submit after inspect the message file. </p>
+<p> Run <code>git-p4 submit --help</code> for details.  </p>
+<h3>p4-prepare-changelist</h3>
+<p> This hook is invoked by <code>git-p4 submit</code>. </p>
+<p> The <code>p4-prepare-changelist</code> hook is executed right after preparing the default changelist message and before the editor is started. It takes one parameter, the name of the file that contains the changelist text. Exiting with a non-zero status from the script will abort the process. </p>
+<p> The purpose of the hook is to edit the message file in place, and it is not suppressed by the <code>--no-verify</code> option. This hook is called even if <code>--prepare-p4-only</code> is set. </p>
+<p> Run <code>git-p4 submit --help</code> for details.  </p>
+<h3>p4-post-changelist</h3>
+<p> This hook is invoked by <code>git-p4 submit</code>. </p>
+<p> The <code>p4-post-changelist</code> hook is invoked after the submit has successfully occurred in P4. It takes no parameters and is meant primarily for notification and cannot affect the outcome of the git p4 submit action. </p>
+<p> Run <code>git-p4 submit --help</code> for details.  </p>
+<h3>p4-pre-submit</h3>
+<p> This hook is invoked by <code>git-p4 submit</code>. It takes no parameters and nothing from standard input. Exiting with non-zero status from this script prevent <code>git-p4 submit</code> from launching. It can be bypassed with the <code>--no-verify</code> command line option. Run <code>git-p4 submit --help</code> for details.  </p>
+<h3>post-index-change</h3>
+<p> This hook is invoked when the index is written in read-cache.c do_write_locked_index. </p>
+<p> The first parameter passed to the hook is the indicator for the working directory being updated. &quot;1&quot; meaning working directory was updated or &quot;0&quot; when the working directory was not updated. </p>
+<p> The second parameter passed to the hook is the indicator for whether or not the index was updated and the skip-worktree bit could have changed. &quot;1&quot; meaning skip-worktree bits could have been updated and &quot;0&quot; meaning they were not. </p>
+<p> Only one parameter should be set to &quot;1&quot; when the hook runs. The hook running passing &quot;1&quot;, &quot;1&quot; should not be possible.  </p>
+<h2>GIT</h2>
+<p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite  </p>
+<h2>NOTES</h2>
+<dl>
+<dt> 1.</dt>
+<dd> <p> git-filter-repo </p>
+ </dd>
+<dl>
+<dd> <p> <a rel="nofollow" href="https://github.com/newren/git-filter-repo">https://github.com/newren/git-filter-repo</a> </p>
+ </dd></dl>
+<h2>Index</h2>

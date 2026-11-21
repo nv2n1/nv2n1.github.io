@@ -510,3 +510,128 @@ fsvs checkout[path] URL[URLs...]
 <h3>Currently only known entries are handled.</h3>
 <p> If you need a switch (like &#8211;delete in <a href="/docs/linux/man/1-rsync/">rsync</a>(1) ) to remove unknown (new, not yet versioned) entries, to get the directory in the exact state it is in the repository, say so. </p>
 <h3>If a path is specified whose parent is missing, 
+ \c</h3>
+<p> fsvs complains. We plan to provide a switch (probably -p), which would create (a sparse) tree up to this entry. </p>
+<h3>Recursive behaviour</h3>
+<p> When the user specifies a non-directory entry (file, device, symlink), this entry is reverted to the old state. This is the easy case. </p>
+<p> If the user specifies a directory entry, see this table for the restoration results: command line switchresult -N this directory only (meta-data), none this directory, and direct children of the directory, -R this directory, and the complete tree below. </p>
+<h3>Working with copied entries</h3>
+<p> If an entry is marked as copied from another entry (and not committed!), a revert will fetch the original copyfrom source. To undo the copy setting use the <code>uncp</code> command. </p>
+<h2>status</h2>
+<pre><code> fsvs status [-C [-C]] [-v] [PATHs...]
+</code></pre>
+<p> This command shows the entries that have changed since the last commit. </p>
+<p> The output is formatted as follows: </p>
+<dl>
+<dt>*</dt>
+<dd> <p> A status columns of four (or, with -v , five) characters. There are either flags or a &#8216;.&#8216; printed, so that it&#8217;s easily parsed by scripts -- the number of columns is only changed by <code>-q, -v -- verbose/quiet</code>. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> The size of the entry, in bytes, or &#8216;dir&#8217; for a directory, or &#8216;dev&#8217; for a device. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> The path and name of the entry, formatted by the option <code>Displaying paths</code>. </p>
+ </dd></dl>
+<p> The status column can show the following flags: </p>
+<dl>
+<dt>*</dt>
+<dd> <p> Normally only changed entries are printed; with -v all are printed. The command line option -v additionally causes the &#8216;m&#8217; -flag to be split into two, see below. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> &#8216;D&#8217; and &#8216;N&#8217; are used for <i>deleted</i> and <i>new</i> entries. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> &#8216;d&#8217; and &#8216;n&#8217; are used for entries which are to be unversioned or added on the next commit; the characters were chosen as <i>little delete</i> (only in the repository, not removed locally) and <i>little new</i> (although <code>ignored</code>). See <code>add</code> and <code>unversion</code>. <br />
+ <br />
+&nbsp;<wbr>If such an entry does not exist, it is marked with an&nbsp;<wbr>&#8216;!&#8216;&nbsp;<wbr>-- because it has been manually marked, and for both types removing the entry makes no sense. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> A changed type (character device to symlink, file to directory etc.) is given as &#8216;R&#8217; (replaced), ie. as removed and newly added. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> <br />
+&nbsp;<wbr>If the entry has been modified, the change is shown as&nbsp;<wbr>&#8216;C&#8217;.&nbsp;<wbr> <br />
+ <br />
+&nbsp;<wbr>If the modification or status change timestamps&nbsp;<wbr>(mtime, ctime)&nbsp;<wbr>are changed, but the size is still the same, the entry is marked as possibly changed&nbsp;<wbr>(a question mark&nbsp;<wbr>&#8216;?&#8216;&nbsp;<wbr>is printed)&nbsp;<wbr>- but see&nbsp;<wbr><code>change detection</code>&nbsp;<wbr>for details. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> <br />
+&nbsp;<wbr>The meta-data flag&nbsp;<wbr>&#8216;m&#8217;&nbsp;<wbr>shows meta-data changes like properties, modification timestamp and/or the rights&nbsp;<wbr>(owner, group, mode);&nbsp;<wbr>depending on the&nbsp;<wbr><code>-v/-q</code>&nbsp;<wbr>command line parameters, it may be splitted into&nbsp;<wbr>&#8216;P&#8217;&nbsp;<wbr>(properties),&nbsp;<wbr>&#8216;t&#8217;&nbsp;<wbr>(time)&nbsp;<wbr>and&nbsp;<wbr>&#8216;p&#8217;&nbsp;<wbr>(permissions).&nbsp;<wbr> <br />
+ <br />
+&nbsp;<wbr>If&nbsp;<wbr>&#8216;P&#8217;&nbsp;<wbr>is shown for the non-verbose case, it means&nbsp;<wbr><code>only</code>&nbsp;<wbr>property changes, ie. the entries filesystem meta-data is unchanged. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> A &#8216;+&#8216; is printed for files with a copy-from history; to see the URL of the copyfrom source, use -v twice. </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> A &#8216;x&#8217; signifies a conflict. </p>
+ </dd></dl>
+<p> Here&#8217;s a table with the characters and their positions: </p>
+<pre><code> * Without -v With -v
+ * .... ......
+ * NmC? NtpPC?
+ * DPx! D x!
+ * R + R +
+ * d d
+ * n n
+ *
+</code></pre>
+<p> Furthermore please take a look at <code>Status output coloring</code>. </p>
+<h2>sync-repos</h2>
+<pre><code> fsvs sync-repos [-r rev] [working copy base]
+</code></pre>
+<p> This command loads the file list from the repository. A following commit will send all differences and make the repository data identical to the local. </p>
+<p> This is normally not needed; the use cases are </p>
+<dl>
+<dt>*</dt>
+<dd> <p> debugging and </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> recovering from data loss in <code>$FSVS_WAA</code>. </p>
+ </dd></dl>
+<p> It is (currently) important if you want to backup two similar machines. Then you can commit one machine into a subdirectory of your repository, make a copy of that directory for another machine, and sync this other directory on the other machine. </p>
+<p> A commit then will transfer only _changed_ files; so if the two machines share 2GB of binaries (/usr , /bin , /lib , ...) then these 2GB are still shared in the repository, although over time they will deviate (as both committing machines know nothing of the other path with identical files). </p>
+<p> This kind of backup could be substituted by several levels of repository paths, which get &#8216;overlayed&#8217; in a defined priority. So the base directory, which all machines derive from, will be committed from one machine, and it&#8217;s no longer necessary for all machines to send identical files into the repository. </p>
+<p> The revision argument should only ever be used for debugging; if you fetch a filelist for a revision, and then commit against later revisions, problems are bound to occur. </p>
+<p> <code>Note:</code> </p>
+<dl>
+<dd> <p> There&#8217;s an issue in subversion, to collapse identical files in the repository into a single storage. That would ease the simple backup example, in that there&#8217;s not so much storage needed over time; but the network transfers would still be much more than needed. </p>
+ </dd></dl>
+<h2>update</h2>
+<pre><code> fsvs update [-r rev] [working copy base]
+ fsvs update [-u url@rev ...] [working copy base]
+</code></pre>
+<p> This command does an update on all specified URLs for the current working copy, or, if none is given via <code>-u</code>, <code>all</code> URLs. </p>
+<p> It first reads all changes in the repositories, overlays them (so that only the highest-priority entries are used), and fetches all necessary changes. </p>
+<h2>urls</h2>
+<pre><code> fsvs urls URL [URLs...]
+ fsvs urls dump
+ fsvs urls load
+</code></pre>
+<p> Initializes a working copy administrative area and connects the current working directory to REPOS_URL. All commits and updates will be done to this directory and against the given URL. </p>
+<p> Example: </p>
+<pre><code> fsvs urlshttp://svn/repos/installation/machine-1/trunk
+</code></pre>
+<p> For a format definition of the URLs please see the chapter <code>Format of URLs</code>. </p>
+<p> <code>Note:</code> </p>
+<dl>
+<dd> <p> If there are already URLs defined, and use that command later again, please note that as of 1.0.18 <code>the older URLs are not overwritten</code> as before, but that the new URLs are <code>appended</code> to the given list! If you want to start afresh, use something like </p>
+<pre><code> echo '' | fsvs urls load
+</code></pre>
+ </dd></dl>
+<h3>Loading URLs</h3>
+<p> You can load a list of URLs from STDIN; use the load subcommand for that. </p>
+<p> Example: </p>
+<pre><code> ( echo 'N:local,prio:10,http://svn/repos/install/machine-1/trunk' ;
+     echo 'P:50,name:common,http://svn/repos/install/common/trunk' ) |
+   fsvs urls load
+</code></pre>
+<p> Empty lines are ignored. </p>
+<h3>Dumping the defined URLs</h3>
+<p> To see which URLs are in use for the current WC, you can use dump. </p>
+<p> As an optional parameter you can give a format statement; p , n , r, t and u are substituted by the priority, name, current revision, target revision and URL. Note: That&#8217;s not a real printf()-format; only these and a few \ sequences are recognized. </p>
+<p> Example: </p>
+<pre><code> fsvs urls dump ' %u %n:%p\n'http://svn/repos/installation/machine-1/trunk local:10http://svn/repos/installation/common/trunk common:50
+</code></pre>
+<p> The default format is &#8216;N:%n,P:%p,D:%t,%u\\n&#8217;; for a more readable version you can use <code>-v</code>. </p>
+<h2>Index</h2>

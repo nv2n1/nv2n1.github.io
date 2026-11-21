@@ -184,5 +184,148 @@ description: "editres – a dynamic resource editor for X Toolkit applications"
 <dd> This next area allows you to enter the resource value. This value should be entered exactly as you would type a line into your resource file. Thus it should contain no unescaped new-lines. There are a few special character sequences for this file: </dd>
 <p> 
  &#8211; This will be replaced with a newline. </p>
-<p> \### &#8211; Where # is any octal digit. This will be replaced with a single byte that contains this sequence interpreted as an octal number. For example, a value containing a NULL byte can be stored by specifying 
-</p></dl>
+<p> \### &#8211; Where # is any octal digit. This will be replaced with a single byte that contains this sequence interpreted as an octal number. For example, a value containing a NULL byte can be stored by specifying \000. </p>
+<p> \&lt;new-line&gt; &#8211; This will compress to nothing. </p>
+<p> \\ &#8211; This will compress to a single backslash. </p>
+<dt>Command Area</dt>
+<dd> <p> This area contains several command buttons, described in this section. </p>
+ </dd>
+<dt>Set Save File</dt>
+<dd> <p> This button allows the user to modify file that the resources will be saved to. This button will bring up a dialog box that will ask you for a filename; once the filename has been entered, either hit carriage-return or click on the <i>okay</i> button. To pop down the dialog box without changing the save file, click the <i>cancel</i> button. </p>
+ </dd>
+<dt>Save</dt>
+<dd> <p> This button will append the <code>resource line</code> described above to the end of the current save file. If no save file has been set the <code>Set Save File</code> dialog box will be popped up to prompt the user for a filename. </p>
+ </dd>
+<dt>Apply</dt>
+<dd> <p> This button attempts to perform a XtSetValues call on all widgets that match the <code>resource line</code> described above. The value specified is applied directly to all matching widgets. This behavior is an attempt to give a dynamic feel to the resource editor. Since this feature allows users to put an application in states it may not be willing to handle, a hook has been provided to allow specific applications to block these SetValues requests (see <code>Blocking Editres Requests</code> below). </p>
+<p> Unfortunately due to design constraints imposed on the widgets by the X Toolkit and the Resource Manager, trying to coerce an inherently static system into dynamic behavior can cause strange results. There is no guarantee that the results of an apply will be the same as what will happen when you save the value and restart the application. This functionality is provided to try to give you a rough feel for what your changes will accomplish, and the results obtained should be considered suspect at best. Having said that, this is one of the neatest features of editres, and I strongly suggest that you play with it, and see what it can do. </p>
+ </dd>
+<dt>Save and Apply</dt>
+<dd> <p> This button combines the Save and Apply actions described above into one button. </p>
+ </dd>
+<dt>Popdown Resource Box</dt>
+<dd> <p> This button will remove the resource box from the display. </p>
+ </dd></dl>
+<h2>BLOCKING EDITRES REQUESTS</h2>
+<p> The editres protocol has been built into the Athena Widget set. This allows all applications that are linked against Xaw to be able to speak to the resource editor. While this provides great flexibility, and is a useful tool, it can quite easily be abused. It is therefore possible for any Xaw application to specify a value for the <code>editresBlock</code> resource described below, to keep editres from divulging information about its internals, or to disable the <code>SetValues</code> part of the protocol. </p>
+<dl>
+<dt><code>editresBlock (</code>Class <code> EditresBlock)</code></dt>
+<dd> <p> Specifies which type of blocking this application wishes to impose on the editres protocol. </p>
+ </dd></dl>
+<p> The accepted values are: </p>
+<dl>
+<dt>all</dt>
+<dd> <p> Block all requests. </p>
+ </dd>
+<dt>setValues</dt>
+<dd> <p> Block all SetValues requests. As this is the only editres request that actually modifies the application, this is in effect stating that the application is read-only. </p>
+ </dd>
+<dt>none</dt>
+<dd> <p> Allow all editres requests. </p>
+ </dd></dl>
+<p> Remember that these resources are set on any Xaw application, <code>not editres</code>. They allow individual applications to keep all or some of the requests editres makes from ever succeeding. Of course, editres is also an Xaw application, so it may also be viewed and modified by editres (rather recursive, I know), these commands can be blocked by setting the <code>editresBlock</code> resource on editres itself.  </p>
+<h2>RESOURCES</h2>
+<p> For <i>editres</i> the available application resources are: </p>
+<dl>
+<dt><code>numFlashes (</code>Class <code> NumFlashes)</code></dt>
+<dd> <p> Specifies the number of times the widgets in the application will be flashed when the <code>Show Active Widgets</code> command in invoked. </p>
+ </dd>
+<dt><code>flashTime (</code>Class <code> FlashTime)</code></dt>
+<dd> <p> Amount of time between the flashes described above. </p>
+ </dd>
+<dt><code>flashColor (</code>Class <code> flashColor)</code></dt>
+<dd> <p> Specifies the color used to flash application widgets. A bright color should be used that will immediately draw your attention to the area being flashed, such as red or yellow. </p>
+ </dd>
+<dt><code>saveResourcesFile (</code>Class <code> SaveResourcesFile)</code></dt>
+<dd> <p> This is the file the resource line will be append to when the <code>Save</code> button activated in the resource box. </p>
+ </dd></dl>
+<h2>WIDGETS</h2>
+<p> In order to specify resources, it is useful to know the hierarchy of the widgets which compose <i>editres</i>. In the notation below, indentation indicates hierarchical structure. The widget class name is given first, followed by the widget instance name. </p>
+<pre><code>Editres editres
+        Paned paned
+                Box box
+                        MenuButton commands
+                                SimpleMenu menu
+                                        SmeBSB sendTree
+                                        SmeBSB refreshTree
+                                        SmeBSB dumpTreeToFile
+                                        SmeLine line
+                                        SmeBSB getResourceList
+                                        SmeLine line
+                                        SmeBSB quit
+                        MenuButton treeCommands
+                                SimpleMenu menu
+                                        SmeBSB showClientWidget
+                                        SmeBSB selectAll
+                                        SmeBSB unselectAll
+                                        SmeBSB invertAll
+                                        SmeLine line
+                                        SmeBSB selectChildren
+                                        SmeBSB selectParent
+                                        SmeBSB selectDescendants
+                                        SmeBSB selectAncestors
+                                        SmeLine line
+                                        SmeBSB showWidgetNames
+                                        SmeBSB showClassNames
+                                        SmeBSB showWidgetIDs
+                                        SmeBSB showWidgetWindows
+                                        SmeLine line
+                                        SmeBSB flashActiveWidgets
+                Paned hPane
+                        Panner panner
+                        Label userMessage
+                        Grip grip
+                Porthole porthole
+                        Tree tree
+                                Toggle &lt;name of widget in application&gt;
+                                        .
+                                        .
+                                        .
+                                        TransientShell resourceBox
+                                                Paned pane
+                                                        Label resourceLabel
+                                                        Form namesAndClasses
+                                                                Toggle dot
+                                                                Toggle star
+                                                                Toggle any
+                                                                Toggle name
+                                                                Toggle class
+                                                                     .
+                                                                     .
+                                                                     .
+                                                        Label namesLabel
+                                                        List namesList
+                                                        Label constraintLabel
+                                                        List constraintList
+                                                        Form valueForm
+                                                                Label valueLabel
+                                                                Text valueText
+                                                        Box commandBox
+                                                                Command setFile
+                                                                Command save
+                                                                Command apply
+                                                                Command saveAndApply
+                                                                Command cancel
+                                                        Grip grip
+                Grip grip
+</code></pre>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>DISPLAY</code></dt>
+<dd> <p> to get the default host and display number. </p>
+ </dd>
+<dt><code>XENVIRONMENT</code></dt>
+<dd> <p> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property. </p>
+ </dd></dl>
+<h2>FILES</h2>
+<dl>
+<dt><i>/etc/X11/app-defaults/Editres</i></dt>
+<dd> <p> specifies required resources </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/7-X/">X</a>(7), <a href="/docs/linux/man/1-xrdb/">xrdb</a>(1), Athena Widget Set  </p>
+<h2>RESTRICTIONS</h2>
+<p> This is a prototype, there are lots of nifty features I would love to add, but I hope this will give you some ideas about what a resource editor can do.  </p>
+<h2>AUTHOR</h2>
+<p> Chris D. Peterson, formerly MIT X Consortium </p>
+<h2>Index</h2>

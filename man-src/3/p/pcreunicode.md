@@ -34,5 +34,22 @@ description: "PCRE – Perl-compatible regular expressions"
 <p> If an invalid UTF-32 string is passed to PCRE, an error return is given. At compile time, the only additional information is the offset to the first data unit of the failing character. The run-time functions <code>pcre32_exec()</code> and <code>pcre32_dfa_exec()</code> also pass back this information, as well as a more detailed reason code if the caller has provided memory in which to do this. </p>
 <p> In some situations, you may already know that your strings are valid, and therefore want to skip these checks in order to improve performance. If you set the PCRE_NO_UTF32_CHECK flag at compile time or at run time, PCRE assumes that the pattern or subject it is given (respectively) contains only valid UTF-32 sequences. In this case, it does not diagnose an invalid UTF-32 string. However, if an invalid string is passed, the result is undefined.</p>
 <h3>General comments about UTF modes</h3>
-<p>1. Codepoints less than 256 can be specified in patterns by either braced or unbraced hexadecimal escape sequences (for example, 
-</p>
+<p>1. Codepoints less than 256 can be specified in patterns by either braced or unbraced hexadecimal escape sequences (for example, \x{b3} or \xb3). Larger values have to use braced sequences. </p>
+<p> 2. Octal numbers up to \777 are recognized, and in UTF-8 mode they match two-byte characters for values greater than \177. </p>
+<p> 3. Repeat quantifiers apply to complete UTF characters, not to individual data units, for example: \x{100}{3}. </p>
+<p> 4. The dot metacharacter matches one UTF character instead of a single data unit. </p>
+<p> 5. The escape sequence \C can be used to match a single byte in UTF-8 mode, or a single 16-bit data unit in UTF-16 mode, or a single 32-bit data unit in UTF-32 mode, but its use can lead to some strange effects because it breaks up multi-unit characters (see the description of \C in the <code>pcrepattern</code> documentation). The use of \C is not supported in the alternative matching function <code>pcre[16|32]_dfa_exec()</code>, nor is it supported in UTF mode by the JIT optimization of <code>pcre[16|32]_exec()</code>. If JIT optimization is requested for a UTF pattern that contains \C, it will not succeed, and so the matching will be carried out by the normal interpretive function. </p>
+<p> 6. The character escapes \b, \B, \d, \D, \s, \S, \w, and \W correctly test characters of any code value, but, by default, the characters that PCRE recognizes as digits, spaces, or word characters remain the same set as in non-UTF mode, all with values less than 256. This remains true even when PCRE is built to include Unicode property support, because to do otherwise would slow down PCRE in many common cases. Note in particular that this applies to \b and \B, because they are defined in terms of \w and \W. If you really want to test for a wider sense of, say, &quot;digit&quot;, you can use explicit Unicode property tests such as \p{Nd}. Alternatively, if you set the PCRE_UCP option, the way that the character escapes work is changed so that Unicode properties are used to determine which characters match. There are more details in the section on generic character types in the <code>pcrepattern</code> documentation. </p>
+<p> 7. Similarly, characters that match the POSIX named character classes are all low-valued characters, unless the PCRE_UCP option is set. </p>
+<p> 8. However, the horizontal and vertical white space matching escapes (\h, \H, \v, and \V) do match all the appropriate Unicode characters, whether or not PCRE_UCP is set. </p>
+<p> 9. Case-insensitive matching applies only to characters whose values are less than 128, unless PCRE is built with Unicode property support. A few Unicode characters such as Greek sigma have more than two codepoints that are case-equivalent. Up to and including PCRE release 8.31, only one-to-one case mappings were supported, but later releases (with Unicode property support) do treat as case-equivalent all versions of characters such as Greek sigma.  </p>
+<h2>AUTHOR</h2>
+<pre><code>Philip Hazel
+University Computing Service
+Cambridge CB2 3QH, England.
+</code></pre>
+<h2>REVISION</h2>
+<pre><code>Last updated: 27 February 2013
+Copyright (c) 1997-2013 University of Cambridge.
+</code></pre>
+<h2>Index</h2>

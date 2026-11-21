@@ -123,5 +123,269 @@ description: "readelf – display information about ELF files"
 <dd>
 </dd><dt><code>&#8211;unicode=[default|invalid|locale|escape|hex|highlight]</code></dt>
 <dd> Controls the display of non-ASCII characters in identifier names. The default (<code>&#8211;unicode=locale</code> or <code>&#8211;unicode=default</code>) is to treat them as multibyte characters and display them in the current locale. All other versions of this option treat the bytes as <font SIZE="-1">UTF-8</font> encoded values and attempt to interpret them. If they cannot be interpreted or if the <code>&#8211;unicode=invalid</code> option is used then they are displayed as a sequence of hex bytes, encloses in curly parethesis characters. </dd>
-<p> Using the <code>&#8211;unicode=escape</code> option will display the characters as as unicode escape sequences (<i>
-</p></dl>
+<p> Using the <code>&#8211;unicode=escape</code> option will display the characters as as unicode escape sequences (<i></i><i>\uxxxx</i>). Using the <code>--unicode=hex</code> will display the characters as hex byte sequences enclosed between angle brackets. </p>
+<p> Using the <code>--unicode=highlight</code> will display the characters as unicode escape sequences but it will also highlighted them in red, assuming that colouring is supported by the output device. The colouring is intended to draw attention to the presence of unicode sequences when they might not be expected. </p>
+<dt><code>-e</code></dt>
+<dd>  </dd>
+<dt><code>--headers</code></dt>
+<dd> <p> Display all the headers in the file. Equivalent to <code>-h -l -S</code>. </p>
+ </dd>
+<dt><code>-n</code></dt>
+<dd>  </dd>
+<dt><code>--notes</code></dt>
+<dd> <p> Displays the contents of the <font SIZE="-1">NOTE</font> segments and/or sections, if any. </p>
+ </dd>
+<dt><code>-r</code></dt>
+<dd>  </dd>
+<dt><code>--relocs</code></dt>
+<dd> <p> Displays the contents of the file&#8217;s relocation section, if it has one. </p>
+ </dd>
+<dt><code>-u</code></dt>
+<dd>  </dd>
+<dt><code>--unwind</code></dt>
+<dd> <p> Displays the contents of the file&#8217;s unwind section, if it has one. Only the unwind sections for <font SIZE="-1">IA64 ELF</font> files, as well as <font SIZE="-1">ARM</font> unwind tables (<code>&quot;.ARM.exidx&quot;</code> / <code>&quot;.ARM.extab&quot;</code>) are currently supported. If support is not yet implemented for your architecture you could try dumping the contents of the <i>.eh_frames</i> section using the <code>--debug-dump=frames</code> or <code>--debug-dump=frames-interp</code> options. </p>
+ </dd>
+<dt><code>-d</code></dt>
+<dd>  </dd>
+<dt><code>--dynamic</code></dt>
+<dd> <p> Displays the contents of the file&#8217;s dynamic section, if it has one. </p>
+ </dd>
+<dt><code>-V</code></dt>
+<dd>  </dd>
+<dt><code>--version-info</code></dt>
+<dd> <p> Displays the contents of the version sections in the file, it they exist. </p>
+ </dd>
+<dt><code>-A</code></dt>
+<dd>  </dd>
+<dt><code>--arch-specific</code></dt>
+<dd> <p> Displays architecture-specific information in the file, if there is any. </p>
+ </dd>
+<dt><code>-D</code></dt>
+<dd>  </dd>
+<dt><code>--use-dynamic</code></dt>
+<dd> <p> When displaying symbols, this option makes <code>readelf</code> use the symbol hash tables in the file&#8217;s dynamic section, rather than the symbol table sections. </p>
+<p> When displaying relocations, this option makes <code>readelf</code> display the dynamic relocations rather than the static relocations. </p>
+ </dd>
+<dt><code>-L</code></dt>
+<dd>  </dd>
+<dt><code>--lint</code></dt>
+<dd>  </dd>
+<dt><code>--enable-checks</code></dt>
+<dd> <p> Displays warning messages about possible problems with the file(s) being examined. If used on its own then all of the contents of the file(s) will be examined. If used with one of the dumping options then the warning messages will only be produced for the things being displayed. </p>
+ </dd>
+<dt><code>-x &lt;number or name&gt;</code></dt>
+<dd>  </dd>
+<dt><code>--hex-dump=&lt;number or name&gt;</code></dt>
+<dd> <p> Displays the contents of the indicated section as a hexadecimal bytes. A number identifies a particular section by index in the section table; any other string identifies all sections with that name in the object file. </p>
+ </dd>
+<dt><code>-R &lt;number or name&gt;</code></dt>
+<dd>  </dd>
+<dt><code>--relocated-dump=&lt;number or name&gt;</code></dt>
+<dd> <p> Displays the contents of the indicated section as a hexadecimal bytes. A number identifies a particular section by index in the section table; any other string identifies all sections with that name in the object file. The contents of the section will be relocated before they are displayed. </p>
+ </dd>
+<dt><code>-p &lt;number or name&gt;</code></dt>
+<dd>  </dd>
+<dt><code>--string-dump=&lt;number or name&gt;</code></dt>
+<dd> <p> Displays the contents of the indicated section as printable strings. A number identifies a particular section by index in the section table; any other string identifies all sections with that name in the object file. </p>
+ </dd>
+<dt><code>-z</code></dt>
+<dd>  </dd>
+<dt><code>--decompress</code></dt>
+<dd> <p> Requests that the section(s) being dumped by <code>x</code>, <code>R</code> or <code>p</code> options are decompressed before being displayed. If the section(s) are not compressed then they are displayed as is. </p>
+ </dd>
+<dt><code>-c</code></dt>
+<dd>  </dd>
+<dt><code>--archive-index</code></dt>
+<dd> <p> Displays the file symbol index information contained in the header part of binary archives. Performs the same function as the <code>t</code> command to <code>ar</code>, but without using the <font SIZE="-1">BFD</font> library. </p>
+ </dd>
+<dt><code>-w[lLiaprmfFsOoRtUuTgAckK]</code></dt>
+<dd>  </dd>
+<dt><code>--debug-dump[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=str-offsets,=loc,=Ranges,=pubtypes,=trace_info,=trace_abbrev,=trace_aranges,=gdb_index,=addr,=cu_index,=links,=follow-links]</code></dt>
+<dd> <p> Displays the contents of the <font SIZE="-1">DWARF</font> debug sections in the file, if any are present. Compressed debug sections are automatically decompressed (temporarily) before they are displayed. If one or more of the optional letters or words follows the switch then only those type(s) of data will be dumped. The letters and words refer to the following information: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>&quot;a&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=abbrev&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_abbrev</code> section. </p>
+ </dd>
+<dt>&quot;A&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=addr&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_addr</code> section. </p>
+ </dd>
+<dt>&quot;c&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=cu_index&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_cu_index</code> and/or <code>.debug_tu_index</code> sections. </p>
+ </dd>
+<dt>&quot;f&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=frames&quot;</dt>
+<dd> <p> Display the raw contents of a <code>.debug_frame</code> section. </p>
+ </dd>
+<dt>&quot;F&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=frames-interp&quot;</dt>
+<dd> <p> Display the interpreted contents of a <code>.debug_frame</code> section. </p>
+ </dd>
+<dt>&quot;g&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=gdb_index&quot;</dt>
+<dd> <p> Displays the contents of the <code>.gdb_index</code> and/or <code>.debug_names</code> sections. </p>
+ </dd>
+<dt>&quot;i&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=info&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_info</code> section. Note: the output from this option can also be restricted by the use of the <code>--dwarf-depth</code> and <code>--dwarf-start</code> options. </p>
+ </dd>
+<dt>&quot;k&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=links&quot;</dt>
+<dd> <p> Displays the contents of the <code>.gnu_debuglink</code>, <code>.gnu_debugaltlink</code> and <code>.debug_sup</code> sections, if any of them are present. Also displays any links to separate dwarf object files (dwo), if they are specified by the DW_AT_GNU_dwo_name or DW_AT_dwo_name attributes in the <code>.debug_info</code> section. </p>
+ </dd>
+<dt>&quot;K&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=follow-links&quot;</dt>
+<dd> <p> Display the contents of any selected debug sections that are found in linked, separate debug info file(s). This can result in multiple versions of the same debug section being displayed if it exists in more than one file. </p>
+<p> In addition, when displaying <font SIZE="-1">DWARF</font> attributes, if a form is found that references the separate debug info file, then the referenced contents will also be displayed. </p>
+<p> Note &#8211; in some distributions this option is enabled by default. It can be disabled via the <code>N</code> debug option. The default can be chosen when configuring the binutils via the <code>--enable-follow-debug-links=yes</code> or <code>--enable-follow-debug-links=no</code> options. If these are not used then the default is to enable the following of debug links. </p>
+ </dd>
+<dt>&quot;N&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=no-follow-links&quot;</dt>
+<dd> <p> Disables the following of links to separate debug info files. </p>
+ </dd>
+<dt>&quot;l&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=rawline&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_line</code> section in a raw format. </p>
+ </dd>
+<dt>&quot;L&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=decodedline&quot;</dt>
+<dd> <p> Displays the interpreted contents of the <code>.debug_line</code> section. </p>
+ </dd>
+<dt>&quot;m&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=macro&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_macro</code> and/or <code>.debug_macinfo</code> sections. </p>
+ </dd>
+<dt>&quot;o&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=loc&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_loc</code> and/or <code>.debug_loclists</code> sections. </p>
+ </dd>
+<dt>&quot;O&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=str-offsets&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_str_offsets</code> section. </p>
+ </dd>
+<dt>&quot;p&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=pubnames&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_pubnames</code> and/or <code>.debug_gnu_pubnames</code> sections. </p>
+ </dd>
+<dt>&quot;r&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=aranges&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_aranges</code> section. </p>
+ </dd>
+<dt>&quot;R&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=Ranges&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_ranges</code> and/or <code>.debug_rnglists</code> sections. </p>
+ </dd>
+<dt>&quot;s&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=str&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_str</code>, <code>.debug_line_str</code> and/or <code>.debug_str_offsets</code> sections. </p>
+ </dd>
+<dt>&quot;t&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=pubtype&quot;</dt>
+<dd> <p> Displays the contents of the <code>.debug_pubtypes</code> and/or <code>.debug_gnu_pubtypes</code> sections. </p>
+ </dd>
+<dt>&quot;T&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=trace_aranges&quot;</dt>
+<dd> <p> Displays the contents of the <code>.trace_aranges</code> section. </p>
+ </dd>
+<dt>&quot;u&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=trace_abbrev&quot;</dt>
+<dd> <p> Displays the contents of the <code>.trace_abbrev</code> section. </p>
+ </dd>
+<dt>&quot;U&quot;</dt>
+<dd>  </dd>
+<dt>&quot;=trace_info&quot;</dt>
+<dd> <p> Displays the contents of the <code>.trace_info</code> section. </p>
+ </dd></dl>
+</dl>
+<dl>
+<dd> <p> Note: displaying the contents of <code>.debug_static_funcs</code>, <code>.debug_static_vars</code> and <code>debug_weaknames</code> sections is not currently supported. </p>
+ </dd></dl>
+<dt><code>--dwarf-depth=</code><i>n</i></dt>
+<dd> <p> Limit the dump of the <code>&quot;.debug_info&quot;</code> section to <i>n</i> children. This is only useful with <code>--debug-dump=info</code>. The default is to print all DIEs; the special value 0 for <i>n</i> will also have this effect. </p>
+<p> With a non-zero value for <i>n</i>, DIEs at or deeper than <i>n</i> levels will not be printed. The range for <i>n</i> is zero-based. </p>
+ </dd>
+<dt><code>--dwarf-start=</code><i>n</i></dt>
+<dd> <p> Print only DIEs beginning with the <font SIZE="-1">DIE</font> numbered <i>n</i>. This is only useful with <code>--debug-dump=info</code>. </p>
+<p> If specified, this option will suppress printing of any header information and all DIEs before the <font SIZE="-1">DIE</font> numbered <i>n</i>. Only siblings and children of the specified <font SIZE="-1">DIE</font> will be printed. </p>
+<p> This can be used in conjunction with <code>--dwarf-depth</code>. </p>
+ </dd>
+<dt><code>-P</code></dt>
+<dd>  </dd>
+<dt><code>--process-links</code></dt>
+<dd> <p> Display the contents of non-debug sections found in separate debuginfo files that are linked to the main file. This option automatically implies the <code>-wK</code> option, and only sections requested by other command line options will be displayed. </p>
+ </dd>
+<dt><code>--ctf[=</code><i>section</i><code>]</code></dt>
+<dd> <p> Display the contents of the specified <font SIZE="-1">CTF</font> section. <font SIZE="-1">CTF</font> sections themselves contain many subsections, all of which are displayed in order. </p>
+<p> By default, display the name of the section named <i>.ctf</i>, which is the name emitted by <code>ld</code>. </p>
+ </dd>
+<dt><code>--ctf-parent=</code><i>member</i></dt>
+<dd> <p> If the <font SIZE="-1">CTF</font> section contains ambiguously-defined types, it will consist of an archive of many <font SIZE="-1">CTF</font> dictionaries, all inheriting from one dictionary containing unambiguous types. This member is by default named <i>.ctf</i>, like the section containing it, but it is possible to change this name using the <code>&quot;ctf_link_set_memb_name_changer&quot;</code> function at link time. When looking at <font SIZE="-1">CTF</font> archives that have been created by a linker that uses the name changer to rename the parent archive member, <code>--ctf-parent</code> can be used to specify the name used for the parent. </p>
+ </dd>
+<dt><code>--ctf-symbols=</code><i>section</i></dt>
+<dd>  </dd>
+<dt><code>--ctf-strings=</code><i>section</i></dt>
+<dd> <p> Specify the name of another section from which the <font SIZE="-1">CTF</font> file can inherit strings and symbols. By default, the <code>&quot;.symtab&quot;</code> and its linked string table are used. </p>
+<p> If either of <code>--ctf-symbols</code> or <code>--ctf-strings</code> is specified, the other must be specified as well. </p>
+ </dd>
+<dt><code>-I</code></dt>
+<dd>  </dd>
+<dt><code>--histogram</code></dt>
+<dd> <p> Display a histogram of bucket list lengths when displaying the contents of the symbol tables. </p>
+ </dd>
+<dt><code>-v</code></dt>
+<dd>  </dd>
+<dt><code>--version</code></dt>
+<dd> <p> Display the version number of readelf. </p>
+ </dd>
+<dt><code>-W</code></dt>
+<dd>  </dd>
+<dt><code>--wide</code></dt>
+<dd> <p> Don&#8217;t break output lines to fit into 80 columns. By default <code>readelf</code> breaks section header and segment listing lines for 64-bit <font SIZE="-1">ELF</font> files, so that they fit into 80 columns. This option causes <code>readelf</code> to print each section header resp. each segment one a single line, which is far more readable on terminals wider than 80 columns. </p>
+ </dd>
+<dt><code>-T</code></dt>
+<dd>  </dd>
+<dt><code>--silent-truncation</code></dt>
+<dd> <p> Normally when readelf is displaying a symbol name, and it has to truncate the name to fit into an 80 column display, it will add a suffix of <code>&quot;[...]&quot;</code> to the name. This command line option disables this behaviour, allowing 5 more characters of the name to be displayed and restoring the old behaviour of readelf (prior to release 2.35). </p>
+ </dd>
+<dt><code>-H</code></dt>
+<dd>  </dd>
+<dt><code>--help</code></dt>
+<dd> <p> Display the command-line options understood by <code>readelf</code>. </p>
+ </dd>
+<dt><code>@</code><i>file</i></dt>
+<dd> <p> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </p>
+<p> Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself contain additional @<i>file</i> options; any such options will be processed recursively. </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-objdump/">objdump</a></code>(1), and the Info entries for <i>binutils</i>.  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 1991-2022 Free Software Foundation, Inc. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled ``<font SIZE="-1">GNU</font> Free Documentation License&#8217;&#8216;. </p>
+<h2>Index</h2>

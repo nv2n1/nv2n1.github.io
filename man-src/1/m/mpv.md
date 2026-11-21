@@ -7974,6 +7974,14 @@ mp.observe_property(&quot;pause&quot;, &quot;bool&quot;, on_pause_change);</pre>
 <dd>This is loaded by the OSC script. See the <i>ON SCREEN CONTROLLER</i> docs for details. </dd>
 <p> Other files in this directory are specific to the corresponding scripts as well, and the mpv core doesn&#8217;t touch them.</dl>
 <h2>Files On Windows</h2>
-<p>On win32 (if compiled with MinGW, but not Cygwin), the default config file locations are different. They are generally located under <code>%APPDATA%/mpv/</code>. For example, the path to mpv.conf is <code>%APPDATA%/mpv/mpv.conf</code>, which maps to a system and user-specific path, for example <code>C:
-</p></p>
-</code>
+<p>On win32 (if compiled with MinGW, but not Cygwin), the default config file locations are different. They are generally located under <code>%APPDATA%/mpv/</code>. For example, the path to mpv.conf is <code>%APPDATA%/mpv/mpv.conf</code>, which maps to a system and user-specific path, for example <code>C:</code>\users\USERNAME\AppData\Roaming\mpv\mpv.conf</code> </p>
+<p> You can find the exact path by running <code>echo %APPDATA%\mpv\mpv.conf</code> in cmd.exe. </p>
+<p> Other config files (such as <code>input.conf</code>) are in the same directory. See the <i>FILES</i> section above. </p>
+<p> The environment variable <code>$MPV_HOME</code> completely overrides these, like on UNIX. </p>
+<p> If a directory named <code>portable_config</code> next to the mpv.exe exists, all config will be loaded from this directory only. Watch later config files are written to this directory as well. (This exists on Windows only and is redundant with <code>$MPV_HOME</code>. However, since Windows is very scripting unfriendly, a wrapper script just setting <code>$MPV_HOME</code>, like you could do it on other systems, won&#8217;t work. <code>portable_config</code> is provided for convenience to get around this restriction.) </p>
+<p> Config files located in the same directory as <code>mpv.exe</code> are loaded with lower priority. Some config files are loaded only once, which means that e.g. of 2 <code>input.conf</code> files located in two config directories, only the one from the directory with higher priority will be loaded. </p>
+<p> A third config directory with the lowest priority is the directory named <code>mpv</code> in the same directory as <code>mpv.exe</code>. This used to be the directory with the highest priority, but is now discouraged to use and might be removed in the future. </p>
+<p> Note that mpv likes to mix <code>/</code> and <code>\</code> path separators for simplicity. kernel32.dll accepts this, but cmd.exe does not.  </p>
+<h2>COPYRIGHT</h2>
+<p> GPLv2+ </p>
+<h2>Index</h2>

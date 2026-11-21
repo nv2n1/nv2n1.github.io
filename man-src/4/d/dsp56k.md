@@ -29,5 +29,13 @@ int ioctl(int fd, DSP56K_HOST_CMD, int cmd);</code></pre>
 <dt><code>DSP56K_SET_TX_WSIZE</code></dt>
 <dd>sets the transmit word size. Allowed values are in the range 1 to 4, and is the number of bytes that will be sent at a time to the DSP56001. These data quantities will either be padded with bytes containing zero, or truncated to fit the native 24-bit data format of the DSP56001.</dd>
 <dt><code>DSP56K_SET_RX_WSIZE</code></dt>
-<dd>sets the receive word size. Allowed values are in the range 1 to 4, and is the number of bytes that will be received at a time from the DSP56001. These data quantities will either truncated, or padded with a null byte (&#8216;
-</dd></dl>
+<dd>sets the receive word size. Allowed values are in the range 1 to 4, and is the number of bytes that will be received at a time from the DSP56001. These data quantities will either truncated, or padded with a null byte (&#8216;\0&#8217;) to fit the native 24-bit data format of the DSP56001.  </dd>
+<dt><code>DSP56K_HOST_FLAGS</code></dt>
+<dd>  read and write the host flags. The host flags are four general-purpose bits that can be read by both the hosting computer and the DSP56001. Bits 0 and 1 can be written by the host, and bits 2 and 3 can be written by the DSP56001.  </dd>
+<dd>  To access the host flags, the third <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) argument must be a pointer to a <i>struct dsp56k_host_flags</i>. If bit 0 or 1 is set in the <i>dir</i> member, the corresponding bit in <i>out</i> will be written to the host flags. The state of all host flags will be returned in the lower four bits of the <i>status</i> member.  </dd>
+<dt><code>DSP56K_HOST_CMD</code></dt>
+<dd>  sends a host command. Allowed values are in the range 0 to 31, and is a user-defined command handled by the program running in the DSP56001.  </dd></dl>
+  <h2>FILES</h2>
+ <i>/dev/dsp56k</i>  <h2>SEE ALSO</h2>
+ <i>linux/include/asm-m68k/dsp56k.h</i>, <i>linux/drivers/char/dsp56k.c</i>, DSP56000/DSP56001 Digital Signal Processor User&#8217;s Manual  <h2>COLOPHON</h2>
+ This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> <h2>Index</h2>

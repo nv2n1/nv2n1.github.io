@@ -25,6 +25,11 @@ description: "winepath – Tool to convert Unix paths to/from Win32 paths"
 <dt>-s</code>,<code>&nbsp;&#8211;short</dt>
 <dd> converts the long Windows path of an existing file or directory to the short format.</dd>
 <dt>-0</dt>
-<dd> separate output with 
-</dd></dl>
-</code>
+<dd> separate output with \0 character, instead of a newline.  </dd>
+<dt>-h</code>,<code>&nbsp;--help</dt>
+<dd>  shows winepath help message and exit.  </dd></dl>
+ </code> <h2>BUGS</h2>
+ Bugs can be reported on the <code>Wine bug tracker</code>  <h2>AVAILABILITY</h2>
+ <code>winepath</code> is part of the Wine distribution, which is available through WineHQ, the <code>Wine development headquarters</code>  <h2>SEE ALSO</h2>
+ <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1), <br />
+ <code>Wine documentation and support</code> <h2>Index</h2>

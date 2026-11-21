@@ -331,5 +331,227 @@ description: "perlhack – How to hack on Perl"
 <p> When you say &#8220;make test&#8221;, Perl uses the <i>t/TEST</i> program to run the test suite (except under Win32 where it uses <i>t/harness</i> instead). All tests are run from the <i>t/</i> directory, <code>not</code> the directory which contains the test. This causes some problems with the tests in <i>lib/</i>, so here&#8217;s some opportunity for some patching. </p>
 <p> You must be triply conscious of cross-platform concerns. This usually boils down to using File::Spec, avoiding things like <tt>&quot;fork()&quot;</tt> and <tt>&quot;system()&quot;</tt> unless absolutely necessary, and not assuming that a given character has a particular ordinal value (code point) or that its <font SIZE="-1">UTF-8</font> representation is composed of particular bytes. </p>
 <p> There are several functions available to specify characters and code points portably in tests. The always-preloaded functions <tt>&quot;utf8::unicode_to_native()&quot;</tt> and its inverse <tt>&quot;utf8::native_to_unicode()&quot;</tt> take code points and translate appropriately. The file <i>t/charset_tools.pl</i> has several functions that can be useful. It has versions of the previous two functions that take strings as inputs &#8212; not single numeric code points: <tt>&quot;uni_to_native()&quot;</tt> and <tt>&quot;native_to_uni()&quot;</tt>. If you must look at the individual bytes comprising a <font SIZE="-1">UTF-8</font> encoded string, <tt>&quot;byte_utf8a_to_utf8n()&quot;</tt> takes as input a string of those bytes encoded for an <font SIZE="-1">ASCII</font> platform, and returns the equivalent string in the native platform. For example, <tt>&quot;byte_utf8a_to_utf8n(&quot; &quot;)&quot;</tt> returns the byte sequence on the current platform that form the <font SIZE="-1">UTF-8</font> for <tt>&quot;U+00A0&quot;</tt>, since <tt>&quot; &quot;</tt> are the <font SIZE="-1">UTF-8</font> bytes on an <font SIZE="-1">ASCII</font> platform for that code point. This function returns <tt>&quot; &quot;</tt> on an <font SIZE="-1">ASCII</font> platform, and <tt>&quot;�A&quot;</tt> on an <font SIZE="-1">EBCDIC 1047</font> one. </p>
-<p> But easiest is, if the character is specifiable as a literal, like <tt>&quot;A&quot;</tt> or <tt>&quot;%&quot;</tt>, to use that; if not so specificable, you can use use <tt>&quot;\N{}&quot;</tt> , if the side effects aren&#8217;t troublesome. Simply specify all your characters in hex, using <tt>&quot;\N{U+ZZ}&quot;</tt> instead of <tt>&quot;
-</p></p>
+<p> But easiest is, if the character is specifiable as a literal, like <tt>&quot;A&quot;</tt> or <tt>&quot;%&quot;</tt>, to use that; if not so specificable, you can use use <tt>&quot;\N{}&quot;</tt> , if the side effects aren&#8217;t troublesome. Simply specify all your characters in hex, using <tt>&quot;\N{U+ZZ}&quot;</tt> instead of <tt>&quot;</tt>\xZZ&quot;</code>. <code>&quot;\N{}&quot;</code> is the Unicode name, and so it always gives you the Unicode character. <code>&quot;\N{U+41}&quot;</code> is the character whose Unicode code point is <code>0x41</code>, hence is <code>&#8216;A&#8217;</code> on all platforms. The side effects are: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> These select Unicode rules. That means that in double-quotish strings, the string is always converted to <font SIZE="-1">UTF-8</font> to force a Unicode interpretation (you can <code>&quot;utf8::downgrade()&quot;</code> afterwards to convert back to non-UTF8, if possible). In regular expression patterns, the conversion isn&#8217;t done, but if the character set modifier would otherwise be <code>&quot;/d&quot;</code>, it is changed to <code>&quot;/u&quot;</code>. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> If you use the form <code>&quot;\N{</code>character name <code>}&quot;</code>, the charnames module gets automatically loaded. This may not be suitable for the test level you are doing. </p>
+ </dd></dl>
+<p> If you are testing locales (see perllocale), there are helper functions in <i>t/loc_tools.pl</i> to enable you to see what locales there are on the current platform.  </p>
+<h3>Special make test targets</h3>
+<p> There are various special make targets that can be used to test Perl slightly differently than the standard ``test&#8217;&#8216; target. Not all them are expected to give a 100% success rate. Many of them have several aliases, and many of them are not available on certain operating systems. </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> test_porting </p>
+<p> This runs some basic sanity tests on the source tree and helps catch basic errors before you submit a patch. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> minitest </p>
+<p> Run <i>miniperl</i> on <i>t/base</i>, <i>t/comp</i>, <i>t/cmd</i>, <i>t/run</i>, <i>t/io</i>, <i>t/op</i>, <i>t/uni</i> and <i>t/mro</i> tests. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> test.valgrind check.valgrind </p>
+<p> (Only in Linux) Run all the tests using the memory leak + naughty memory access tool ``valgrind&#8217;&#8216;. The log files will be named <i>testname.valgrind</i>. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> test_harness </p>
+<p> Run the test suite with the <i>t/harness</i> controlling program, instead of <i>t/TEST</i>. <i>t/harness</i> is more sophisticated, and uses the Test::Harness module, thus using this test target supposes that perl mostly works. The main advantage for our purposes is that it prints a detailed summary of failed tests at the end. Also, unlike <i>t/TEST</i>, it doesn&#8217;t redirect stderr to stdout. </p>
+<p> Note that under Win32 <i>t/harness</i> is always used instead of <i>t/TEST</i>, so there is no special ``test_harness&#8217;&#8216; target. </p>
+<p> Under Win32&#8217;s ``test&#8217;&#8216; target you may use the <font SIZE="-1">TEST_SWITCHES</font> and <font SIZE="-1">TEST_FILES</font> environment variables to control the behaviour of <i>t/harness</i>. This means you can say </p>
+<pre><code>    nmake test TEST_FILES=&quot;op/*.t&quot;
+    nmake test TEST_SWITCHES=&quot;-torture&quot; TEST_FILES=&quot;op/*.t&quot;
+</code></pre>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> test-notty test_notty </p>
+<p> Sets <font SIZE="-1">PERL_SKIP_TTY_TEST</font> to true before running normal test. </p>
+ </dd></dl>
+<h3>Parallel tests</h3>
+<p> The core distribution can now run its regression tests in parallel on Unix-like platforms. Instead of running <code>&quot;make test&quot;</code>, set <code>&quot;TEST_JOBS&quot;</code> in your environment to the number of tests to run in parallel, and run <code>&quot;make test_harness&quot;</code>. On a Bourne-like shell, this can be done as </p>
+<pre><code>    TEST_JOBS=3 make test_harness # Run 3 tests in parallel
+</code></pre>
+<p> An environment variable is used, rather than parallel make itself, because TAP::Harness needs to be able to schedule individual non-conflicting test scripts itself, and there is no standard interface to <code>&quot;make&quot;</code> utilities to interact with their job schedulers. </p>
+<p> Note that currently some test scripts may fail when run in parallel (most notably <i>dist/IO/t/io_dir.t</i>). If necessary, run just the failing scripts again sequentially and see if the failures go away.  </p>
+<h3>Running tests by hand</h3>
+<p> You can run part of the test suite by hand by using one of the following commands from the <i>t/</i> directory: </p>
+<pre><code>    ./perl -I../lib TEST list-of-.t-files
+</code></pre>
+<p> or </p>
+<pre><code>    ./perl -I../lib harness list-of-.t-files
+</code></pre>
+<p> (If you don&#8217;t specify test scripts, the whole test suite will be run.)  </p>
+<i></i><h3>Using t/harness for testing</h3>
+<p> If you use <code>&quot;harness&quot;</code> for testing, you have several command line options available to you. The arguments are as follows, and are in the order that they must appear if used together. </p>
+<pre><code>    harness -v -torture -re=pattern LIST OF FILES TO TEST
+    harness -v -torture -re LIST OF PATTERNS TO MATCH
+</code></pre>
+<p> If <code>&quot;LIST OF FILES TO TEST&quot;</code> is omitted, the file list is obtained from the manifest. The file list may include shell wildcards which will be expanded out. </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> -v </p>
+<p> Run the tests under verbose mode so you can see what tests were run, and debug output. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> -torture </p>
+<p> Run the torture tests as well as the normal set. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> -re=PATTERN </p>
+<p> Filter the file list so that all the test files run match <font SIZE="-1">PATTERN.</font> Note that this form is distinct from the <code>-re </code><font SIZE="-1"><code>LIST OF PATTERNS</code></font> form below in that it allows the file list to be provided as well. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> -re <font SIZE="-1">LIST OF PATTERNS</font> </p>
+<p> Filter the file list so that all the test files run match /(LIST|OF|PATTERNS)/. Note that with this form the patterns are joined by &#8216;|&#8216; and you cannot supply a list of files, instead the test files are obtained from the <font SIZE="-1">MANIFEST.</font> </p>
+ </dd></dl>
+<p> You can run an individual test by a command similar to </p>
+<pre><code>    ./perl -I../lib path/to/foo.t
+</code></pre>
+<p> except that the harnesses set up some environment variables that may affect the execution of the test: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> PERL_CORE=1 </p>
+<p> indicates that we&#8217;re running this test as part of the perl core test suite. This is useful for modules that have a dual life on <font SIZE="-1">CPAN.</font> </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> PERL_DESTRUCT_LEVEL=2 </p>
+<p> is set to 2 if it isn&#8217;t set already (see ``<font SIZE="-1">PERL_DESTRUCT_LEVEL&#8217;&#8216;</font> in perlhacktips). </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <font SIZE="-1">PERL</font> </p>
+<p> (used only by <i>t/TEST</i>) if set, overrides the path to the perl executable that should be used to run the tests (the default being <i>./perl</i>). </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <font SIZE="-1">PERL_SKIP_TTY_TEST</font> </p>
+<p> if set, tells to skip the tests that need a terminal. It&#8217;s actually set automatically by the Makefile, but can also be forced artificially by running &#8216;make test_notty&#8217;. </p>
+ </dd></dl>
+<p> <i>Other environment variables that may influence tests</i> </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> PERL_TEST_Net_Ping </p>
+<p> Setting this variable runs all the Net::Ping modules tests, otherwise some tests that interact with the outside world are skipped. See perl58delta. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <font SIZE="-1">PERL_TEST_NOVREXX</font> </p>
+<p> Setting this variable skips the vrexx.t tests for <font SIZE="-1">OS2::REXX.</font> </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <font SIZE="-1">PERL_TEST_NUMCONVERTS</font> </p>
+<p> This sets a variable in op/numconvert.t. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <font SIZE="-1">PERL_TEST_MEMORY</font> </p>
+<p> Setting this variable includes the tests in <i>t/bigmem/</i>. This should be set to the number of gigabytes of memory available for testing, eg. <code>&quot;PERL_TEST_MEMORY=4&quot;</code> indicates that tests that require 4GiB of available memory can be run safely. </p>
+ </dd></dl>
+<p> See also the documentation for the Test and Test::Harness modules, for more environment variables that affect testing.  </p>
+<h3>Performance testing</h3>
+<p> The file <i>t/perf/benchmarks</i> contains snippets of perl code which are intended to be benchmarked across a range of perls by the <i>Porting/bench.pl</i> tool. If you fix or enhance a performance issue, you may want to add a representative code sample to the file, then run <i>bench.pl</i> against the previous and current perls to see what difference it has made, and whether anything else has slowed down as a consequence. </p>
+<p> The file <i>t/perf/opcount.t</i> is designed to test whether a particular code snippet has been compiled into an optree containing specified numbers of particular op types. This is good for testing whether optimisations which alter ops, such as converting an <code>&quot;aelem&quot;</code> op into an <code>&quot;aelemfast&quot;</code> op, are really doing that. </p>
+<p> The files <i>t/perf/speed.t</i> and <i>t/re/speed.t</i> are designed to test things that run thousands of times slower if a particular optimisation is broken (for example, the utf8 length cache on long utf8 strings). Add a test that will take a fraction of a second normally, and minutes otherwise, causing the test file to time out on failure.  </p>
+<h3>Building perl at older commits</h3>
+<p> In the course of hacking on the Perl core distribution, you may have occasion to configure, build and test perl at an old commit. Sometimes <code>&quot;make&quot;</code> will fail during this process. If that happens, you may be able to salvage the situation by using the Devel::PatchPerl library from <font SIZE="-1">CPAN</font> (not included in the core) to bring the source code at that commit to a buildable state. </p>
+<p> Here&#8217;s a real world example, taken from work done to resolve perl #72414 &lt;<a rel="nofollow" href="https://rt.perl.org/Ticket/Display.html?id=72414">https://rt.perl.org/Ticket/Display.html?id=72414</a>&gt;. Use of <i>Porting/bisect.pl</i> had identified commit <code>&quot;ba77e4cc9d1ceebf472c9c5c18b2377ee47062e6&quot;</code> as the commit in which a bug was corrected. To confirm, a P5P developer wanted to configure and build perl at commit <code>&quot;ba77e4c^&quot;</code> (presumably ``bad&#8217;&#8216;) and then at <code>&quot;ba77e4c&quot;</code> (presumably ``good&#8217;&#8216;). Normal configuration and build was attempted: </p>
+<pre><code>    $ sh ./Configure -des -Dusedevel
+    $ make test_prep
+</code></pre>
+<p> <code>&quot;make&quot;</code>, however, failed with output (excerpted) like this: </p>
+<pre><code>    cc -fstack-protector -L/usr/local/lib -o miniperl \
+      gv.o toke.o perly.o pad.o regcomp.o dump.o util.o \
+      mg.o reentr.o mro.o hv.o av.o run.o pp_hot.o sv.o \
+      pp.o scope.o pp_ctl.o pp_sys.o doop.o doio.o regexec.o \
+      utf8.o taint.o deb.o universal.o globals.o perlio.o \
+      perlapi.o numeric.o mathoms.o locale.o pp_pack.o pp_sort.o \
+      miniperlmain.o opmini.o perlmini.o
+    pp.o: In function `Perl_pp_pow':
+    pp.c:(.text+0x2db9): undefined reference to `pow'
+    ...
+    collect2: error: ld returned 1 exit status
+    makefile:348: recipe for target 'miniperl' failed
+    make: *** [miniperl] Error 1
+</code></pre>
+<p> Another P5P contributor recommended installation and use of Devel::PatchPerl for this situation, first to determine the version of perl at the commit in question, then to patch the source code at that point to facilitate a build. </p>
+<pre><code>    $ perl -MDevel::PatchPerl -e \
+        'print Devel::PatchPerl-&gt;determine_version(&quot;/path/to/sourcecode&quot;), &quot;\n&quot;;'
+    5.11.1
+    $ perl -MDevel::PatchPerl -e \
+        'Devel::PatchPerl-&gt;patch_source(&quot;5.11.1&quot;, &quot;/path/to/sourcecode&quot;);'
+</code></pre>
+<p> Once the source was patched, <code>&quot;./Configure&quot;</code> and <code>&quot;make test_prep&quot;</code> were called and completed successfully, enabling confirmation of the findings in <font SIZE="-1">RT</font> #72414.  </p>
+<h2>MORE READING FOR GUTS HACKERS</h2>
+<p> To hack on the Perl guts, you&#8217;ll need to read the following things: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> perlsource </p>
+<p> An overview of the Perl source tree. This will help you find the files you&#8217;re looking for. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> perlinterp </p>
+<p> An overview of the Perl interpreter source code and some details on how Perl does what it does. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> perlhacktut </p>
+<p> This document walks through the creation of a small patch to Perl&#8217;s C code. If you&#8217;re just getting started with Perl core hacking, this will help you understand how it works. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> perlhacktips </p>
+<p> More details on hacking the Perl core. This document focuses on lower level details such as how to write tests, compilation issues, portability, debugging, etc. </p>
+<p> If you plan on doing serious C hacking, make sure to read this. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> perlguts </p>
+<p> This is of paramount importance, since it&#8217;s the documentation of what goes where in the Perl source. Read it over a couple of times and it might start to make sense &#8211; don&#8217;t worry if it doesn&#8217;t yet, because the best way to study it is to read it in conjunction with poking at Perl source, and we&#8217;ll do that later on. </p>
+<p> Gisle Aas&#8217;s ``illustrated perlguts&#8217;&#8216;, also known as <i>illguts</i>, has very helpful pictures: </p>
+<p> &lt;<a rel="nofollow" href="http://search.cpan.org/dist/illguts/">http://search.cpan.org/dist/illguts/</a>&gt; </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> perlxstut and perlxs </p>
+<p> A working knowledge of <font SIZE="-1">XSUB</font> programming is incredibly useful for core hacking; XSUBs use techniques drawn from the <font SIZE="-1">PP</font> code, the portion of the guts that actually executes a Perl program. It&#8217;s a lot gentler to learn those techniques from simple examples and explanation than from the core itself. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> perlapi </p>
+<p> The documentation for the Perl <font SIZE="-1">API</font> explains what some of the internal functions do, as well as the many macros used in the source. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <i>Porting/pumpkin.pod</i> </p>
+<p> This is a collection of words of wisdom for a Perl porter; some of it is only useful to the pumpkin holder, but most of it applies to anyone wanting to go about Perl development. </p>
+ </dd></dl>
+<h2>CPAN TESTERS AND PERL SMOKERS</h2>
+<p> The <font SIZE="-1">CPAN</font> testers ( &lt;<a rel="nofollow" href="http://testers.cpan.org/">http://testers.cpan.org/</a>&gt; ) are a group of volunteers who test <font SIZE="-1">CPAN</font> modules on a variety of platforms. </p>
+<p> Perl Smokers ( &lt;<a rel="nofollow" href="http://www.nntp.perl.org/group/perl.daily-build/">http://www.nntp.perl.org/group/perl.daily-build/</a>&gt; and &lt;<a rel="nofollow" href="http://www.nntp.perl.org/group/perl.daily-build.reports/">http://www.nntp.perl.org/group/perl.daily-build.reports/</a>&gt; ) automatically test Perl source releases on platforms with various configurations. </p>
+<p> Both efforts welcome volunteers. In order to get involved in smoke testing of the perl itself visit &lt;<a rel="nofollow" href="http://search.cpan.org/dist/Test-Smoke/">http://search.cpan.org/dist/Test-Smoke/</a>&gt;. In order to start smoke testing <font SIZE="-1">CPAN</font> modules visit &lt;<a rel="nofollow" href="http://search.cpan.org/dist/CPANPLUS-YACSmoke/">http://search.cpan.org/dist/CPANPLUS-YACSmoke/</a>&gt; or &lt;<a rel="nofollow" href="http://search.cpan.org/dist/minismokebox/">http://search.cpan.org/dist/minismokebox/</a>&gt; or &lt;<a rel="nofollow" href="http://search.cpan.org/dist/CPAN-Reporter/">http://search.cpan.org/dist/CPAN-Reporter/</a>&gt;.  </p>
+<h2>WHAT NEXT?</h2>
+<p> If you&#8217;ve read all the documentation in the document and the ones listed above, you&#8217;re more than ready to hack on Perl. </p>
+<p> Here&#8217;s some more recommendations </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> Subscribe to perl5-porters, follow the patches and try and understand them; don&#8217;t be afraid to ask if there&#8217;s a portion you&#8217;re not clear on &#8211; who knows, you may unearth a bug in the patch... </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> Do read the <font SIZE="-1">README</font> associated with your operating system, e.g. <font SIZE="-1">README</font>.aix on the <font SIZE="-1">IBM AIX OS.</font> Don&#8217;t hesitate to supply patches to that <font SIZE="-1">README</font> if you find anything missing or changed over a new <font SIZE="-1">OS</font> release. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> Find an area of Perl that seems interesting to you, and see if you can work out how it works. Scan through the source, and step over it in the debugger. Play, poke, investigate, fiddle! You&#8217;ll probably get to understand not just your chosen area but a much wider range of <i>perl</i>&#8216;s activity as well, and probably sooner than you&#8217;d think. </p>
+ </dd></dl>
+<h3>The Road goes ever on and on, down from the door where it began.</h3>
+<p> If you can do these things, you&#8217;ve started on the long road to Perl porting. Thanks for wanting to help make Perl better &#8211; and happy hacking!  </p>
+<h3>Metaphoric Quotations</h3>
+<p> If you recognized the quote about the Road above, you&#8217;re in luck. </p>
+<p> Most software projects begin each file with a literal description of each file&#8217;s purpose. Perl instead begins each with a literary allusion to that file&#8217;s purpose. </p>
+<p> Like chapters in many books, all top-level Perl source files (along with a few others here and there) begin with an epigrammatic inscription that alludes, indirectly and metaphorically, to the material you&#8217;re about to read. </p>
+<p> Quotations are taken from writings of J.R.R. Tolkien pertaining to his Legendarium, almost always from <i>The Lord of the Rings</i>. Chapters and page numbers are given using the following editions: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> <i>The Hobbit</i>, by J.R.R. Tolkien. The hardcover, 70th-anniversary edition of 2007 was used, published in the <font SIZE="-1">UK</font> by Harper Collins Publishers and in the <font SIZE="-1">US</font> by the Houghton Mifflin Company. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <i>The Lord of the Rings</i>, by J.R.R. Tolkien. The hardcover, 50th-anniversary edition of 2004 was used, published in the <font SIZE="-1">UK</font> by Harper Collins Publishers and in the <font SIZE="-1">US</font> by the Houghton Mifflin Company. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <i>The Lays of Beleriand</i>, by J.R.R. Tolkien and published posthumously by his son and literary executor, C.J.R. Tolkien, being the 3rd of the 12 volumes in Christopher&#8217;s mammoth <i>History of Middle Earth</i>. Page numbers derive from the hardcover edition, first published in 1983 by George Allen &amp; Unwin; no page numbers changed for the special 3-volume omnibus edition of 2002 or the various trade-paper editions, all again now by Harper Collins or Houghton Mifflin. </p>
+ </dd></dl>
+<p> Other <font SIZE="-1">JRRT</font> books fair game for quotes would thus include <i>The Adventures of Tom Bombadil</i>, <i>The Silmarillion</i>, <i>Unfinished Tales</i>, and <i>The Tale of the Children of Hurin</i>, all but the first posthumously assembled by <font SIZE="-1">CJRT.</font> But <i>The Lord of the Rings</i> itself is perfectly fine and probably best to quote from, provided you can find a suitable quote there. </p>
+<p> So if you were to supply a new, complete, top-level source file to add to Perl, you should conform to this peculiar practice by yourself selecting an appropriate quotation from Tolkien, retaining the original spelling and punctuation and using the same format the rest of the quotes are in. Indirect and oblique is just fine; remember, it&#8217;s a metaphor, so being meta is, after all, what it&#8217;s for.  </p>
+<h2>AUTHOR</h2>
+<p> This document was originally written by Nathan Torkington, and is maintained by the perl5-porters mailing list. </p>
+<h2>Index</h2>

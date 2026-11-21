@@ -226,5 +226,155 @@ and retrying may be necessary.</p>
 <p>The security context string may include a terminating null character<br />
 in the returned length, but is not guaranteed to do so: a security<br />
 context &quot;foo&quot; might be represented as either {&#8216;f&#8217;,&#8217;o&#8217;,&#8217;o&#8217;} of length 3<br />
-or {&#8216;f&#8217;,&#8217;o&#8217;,&#8217;o&#8217;,&#8217;
-</p>
+or {&#8216;f&#8217;,&#8217;o&#8217;,&#8217;o&#8217;,&#8217;\0&#8217;} of length 4, which are considered to be interchangeable. The string is printable, does not contain non-terminating null characters, and is in an unspecified encoding (in particular, it is not guaranteed to be ASCII or UTF-8). </p>
+<dd> <p> The use of this option for sockets in the <code>AF_INET</code> address family is supported since Linux 2.6.17 for TCP sockets, and since Linux 4.17 for SCTP sockets. </p>
+ </dd>
+<dd> <p> For SELinux, NetLabel conveys only the MLS portion of the security context of the peer across the wire, defaulting the rest of the security context to the values defined in the policy for the netmsg initial security identifier (SID). However, NetLabel can be configured to pass full security contexts over loopback. Labeled IPSEC always passes full security contexts as part of establishing the security association (SA) and looks them up based on the association for each packet. </p>
+ </dd></dl>
+<h3>/proc interfaces</h3>
+<p> The IP protocol supports a set of <i>/proc</i> interfaces to configure some global parameters. The parameters can be accessed by reading or writing files in the directory <i>/proc/sys/net/ipv4/</i>. Interfaces described as <i>Boolean</i> take an integer value, with a nonzero value (&quot;true&quot;) meaning that the corresponding option is enabled, and a zero value (&quot;false&quot;) meaning that the option is disabled. </p>
+<dl>
+<dt><i>ip_always_defrag</i> (Boolean; since Linux 2.2.13) </dt>
+<dd> <p> [New with kernel 2.2.13; in earlier kernel versions this feature was controlled at compile time by the <code>CONFIG_IP_ALWAYS_DEFRAG</code> option; this option is not present in 2.4.x and later] </p>
+ </dd>
+<dd> <p> When this boolean flag is enabled (not equal 0), incoming fragments (parts of IP packets that arose when some host between origin and destination decided that the packets were too large and cut them into pieces) will be reassembled (defragmented) before being processed, even if they are about to be forwarded. </p>
+ </dd>
+<dd> <p> Enable only if running either a firewall that is the sole link to your network or a transparent proxy; never ever use it for a normal router or host. Otherwise, fragmented communication can be disturbed if the fragments travel over different links. Defragmentation also has a large memory and CPU time cost. </p>
+ </dd>
+<dd> <p> This is automagically turned on when masquerading or transparent proxying are configured. </p>
+ </dd>
+<dt><i>ip_autoconfig</i> (since Linux 2.2 to 2.6.17) </dt>
+<dd> <p> Not documented. </p>
+ </dd>
+<dt><i>ip_default_ttl</i> (integer; default: 64; since Linux 2.2) </dt>
+<dd> <p> Set the default time-to-live value of outgoing packets. This can be changed per socket with the <code>IP_TTL</code> option. </p>
+ </dd>
+<dt><i>ip_dynaddr</i> (Boolean; default: disabled; since Linux 2.0.31) </dt>
+<dd> <p> Enable dynamic socket address and masquerading entry rewriting on interface address change. This is useful for dialup interface with changing IP addresses. 0 means no rewriting, 1 turns it on and 2 enables verbose mode. </p>
+ </dd>
+<dt><i>ip_forward</i> (Boolean; default: disabled; since Linux 1.2) </dt>
+<dd> <p> Enable IP forwarding with a boolean flag. IP forwarding can be also set on a per-interface basis. </p>
+ </dd>
+<dt><i>ip_local_port_range</i> (since Linux 2.2) </dt>
+<dd> <p> This file contains two integers that define the default local port range allocated to sockets that are not explicitly bound to a port number---that is, the range used for <i>ephemeral ports</i>. An ephemeral port is allocated to a socket in the following circumstances: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>*</dt>
+<dd> <p> the port number in a socket address is specified as 0 when calling <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2); </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2) is called on a stream socket that was not previously bound; </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) was called on a socket that was not previously bound; </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2) is called on a datagram socket that was not previously bound. </p>
+ </dd></dl>
+</dl>
+<dd> <p> Allocation of ephemeral ports starts with the first number in <i>ip_local_port_range</i> and ends with the second number. If the range of ephemeral ports is exhausted, then the relevant system call returns an error (but see BUGS). </p>
+ </dd>
+<dd> <p> Note that the port range in <i>ip_local_port_range</i> should not conflict with the ports used by masquerading (although the case is handled). Also, arbitrary choices may cause problems with some firewall packet filters that make assumptions about the local ports in use. The first number should be at least greater than 1024, or better, greater than 4096, to avoid clashes with well known ports and to minimize firewall problems. </p>
+ </dd>
+<dt><i>ip_no_pmtu_disc</i> (Boolean; default: disabled; since Linux 2.2) </dt>
+<dd> <p> If enabled, don&#8217;t do Path MTU Discovery for TCP sockets by default. Path MTU discovery may fail if misconfigured firewalls (that drop all ICMP packets) or misconfigured interfaces (e.g., a point-to-point link where the both ends don&#8217;t agree on the MTU) are on the path. It is better to fix the broken routers on the path than to turn off Path MTU Discovery globally, because not doing it incurs a high cost to the network. </p>
+ </dd>
+<dt><i>ip_nonlocal_bind</i> (Boolean; default: disabled; since Linux 2.4) </dt>
+<dd> <p> If set, allows processes to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) to nonlocal IP addresses, which can be quite useful, but may break some applications. </p>
+ </dd>
+<dt><i>ip6frag_time</i> (integer; default: 30) </dt>
+<dd> <p> Time in seconds to keep an IPv6 fragment in memory. </p>
+ </dd>
+<dt><i>ip6frag_secret_interval</i> (integer; default: 600) </dt>
+<dd> <p> Regeneration interval (in seconds) of the hash secret (or lifetime for the hash secret) for IPv6 fragments. </p>
+ </dd>
+<dt><i>ipfrag_high_thresh</i> (integer), <i>ipfrag_low_thresh</i> (integer) </dt>
+<dd> <p> If the amount of queued IP fragments reaches <i>ipfrag_high_thresh</i>, the queue is pruned down to <i>ipfrag_low_thresh</i>. Contains an integer with the number of bytes. </p>
+ </dd>
+<dt><i>neigh/*</i></dt>
+<dd> <p> See <code><a href="/docs/linux/man/7-arp/">arp</a></code>(7). </p>
+ </dd></dl>
+<h3>Ioctls</h3>
+<p> All ioctls described in <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7) apply to <code>ip</code>. </p>
+<p> Ioctls to configure generic device parameters are described in <code><a href="/docs/linux/man/7-netdevice/">netdevice</a></code>(7).  </p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EACCES</code></dt>
+<dd> <p> The user tried to execute an operation without the necessary permissions. These include: sending a packet to a broadcast address without having the <code>SO_BROADCAST</code> flag set; sending a packet via a <i>prohibit</i> route; modifying firewall settings without superuser privileges (the <code>CAP_NET_ADMIN</code> capability); binding to a privileged port without superuser privileges (the <code>CAP_NET_BIND_SERVICE</code> capability). </p>
+ </dd>
+<dt><code>EADDRINUSE</code></dt>
+<dd> <p> Tried to bind to an address already in use. </p>
+ </dd>
+<dt><code>EADDRNOTAVAIL</code></dt>
+<dd> <p> A nonexistent interface was requested or the requested source address was not local. </p>
+ </dd>
+<dt><code>EAGAIN</code></dt>
+<dd> <p> Operation on a nonblocking socket would block. </p>
+ </dd>
+<dt><code>EALREADY</code></dt>
+<dd> <p> A connection operation on a nonblocking socket is already in progress. </p>
+ </dd>
+<dt><code>ECONNABORTED</code></dt>
+<dd> <p> A connection was closed during an <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2). </p>
+ </dd>
+<dt><code>EHOSTUNREACH</code></dt>
+<dd> <p> No valid routing table entry matches the destination address. This error can be caused by an ICMP message from a remote router or for the local routing table. </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> Invalid argument passed. For send operations this can be caused by sending to a <i>blackhole</i> route. </p>
+ </dd>
+<dt><code>EISCONN</code></dt>
+<dd> <p> <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) was called on an already connected socket. </p>
+ </dd>
+<dt><code>EMSGSIZE</code></dt>
+<dd> <p> Datagram is bigger than an MTU on the path and it cannot be fragmented. </p>
+ </dd>
+<dt><code>ENOBUFS</code>, <code>ENOMEM</code></dt>
+<dd> <p> Not enough free memory. This often means that the memory allocation is limited by the socket buffer limits, not by the system memory, but this is not 100% consistent. </p>
+ </dd>
+<dt><code>ENOENT</code></dt>
+<dd> <p> <code>SIOCGSTAMP</code> was called on a socket where no packet arrived. </p>
+ </dd>
+<dt><code>ENOPKG</code></dt>
+<dd> <p> A kernel subsystem was not configured. </p>
+ </dd>
+<dt><code>ENOPROTOOPT</code> and <code>EOPNOTSUPP</code></dt>
+<dd> <p> Invalid socket option passed. </p>
+ </dd>
+<dt><code>ENOTCONN</code></dt>
+<dd> <p> The operation is defined only on a connected socket, but the socket wasn&#8217;t connected. </p>
+ </dd>
+<dt><code>EPERM</code></dt>
+<dd> <p> User doesn&#8217;t have permission to set high priority, change configuration, or send signals to the requested process or group. </p>
+ </dd>
+<dt><code>EPIPE</code></dt>
+<dd> <p> The connection was unexpectedly closed or shut down by the other end. </p>
+ </dd>
+<dt><code>ESOCKTNOSUPPORT</code></dt>
+<dd> <p> The socket is not configured or an unknown socket type was requested. </p>
+ </dd></dl>
+<p> Other errors may be generated by the overlaying protocols; see <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7), <code><a href="/docs/linux/man/7-raw/">raw</a></code>(7), <code><a href="/docs/linux/man/7-udp/">udp</a></code>(7), and <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7).  </p>
+<h2>NOTES</h2>
+<p> <code>IP_FREEBIND</code>, <code>IP_MSFILTER</code>, <code>IP_MTU</code>, <code>IP_MTU_DISCOVER</code>, <code>IP_RECVORIGDSTADDR</code>, <code>IP_PASSSEC</code>, <code>IP_PKTINFO</code>, <code>IP_RECVERR</code>, <code>IP_ROUTER_ALERT</code>, and <code>IP_TRANSPARENT</code> are Linux-specific. </p>
+<p> Be very careful with the <code>SO_BROADCAST</code> option &#8211; it is not privileged in Linux. It is easy to overload the network with careless broadcasts. For new application protocols it is better to use a multicast group instead of broadcasting. Broadcasting is discouraged. </p>
+<p> Some other BSD sockets implementations provide <code>IP_RCVDSTADDR</code> and <code>IP_RECVIF</code> socket options to get the destination address and the interface of received datagrams. Linux has the more general <code>IP_PKTINFO</code> for the same task. </p>
+<p> Some BSD sockets implementations also provide an <code>IP_RECVTTL</code> option, but an ancillary message with type <code>IP_RECVTTL</code> is passed with the incoming packet. This is different from the <code>IP_TTL</code> option used in Linux. </p>
+<p> Using the <code>SOL_IP</code> socket options level isn&#8217;t portable; BSD-based stacks use the <code>IPPROTO_IP</code> level. </p>
+<p> <code>INADDR_ANY</code> (0.0.0.0) and <code>INADDR_BROADCAST</code> (255.255.255.255) are byte-order-neutral. <br />
+&nbsp;This means <code><a href="/docs/linux/man/3-htonl/">htonl</a></code>(3) has no effect on them.  </p>
+<h3>Compatibility</h3>
+<p> For compatibility with Linux 2.0, the obsolete <code>socket(AF_INET, SOCK_PACKET, </code><i>protocol</i><code>)</code> syntax is still supported to open a <code><a href="/docs/linux/man/7-packet/">packet</a></code>(7) socket. This is deprecated and should be replaced by <code>socket(AF_PACKET, SOCK_RAW, </code><i>protocol</i><code>)</code> instead. The main difference is the new <i>sockaddr_ll</i> address structure for generic link layer information instead of the old <code>sockaddr_pkt</code>.  </p>
+<h2>BUGS</h2>
+<p> There are too many inconsistent error values. </p>
+<p> The error used to diagnose exhaustion of the ephemeral port range differs across the various system calls (<code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2)) that can assign ephemeral ports. </p>
+<p> The ioctls to configure IP-specific interface options and ARP tables are not described. </p>
+<p> Receiving the original destination address with <code>MSG_ERRQUEUE</code> in <i>msg_name</i> by <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2) does not work in some 2.2 kernels.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2), <code><a href="/docs/linux/man/3-byteorder/">byteorder</a></code>(3), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7), <code><a href="/docs/linux/man/7-icmp/">icmp</a></code>(7), <code><a href="/docs/linux/man/7-ipv6/">ipv6</a></code>(7), <code><a href="/docs/linux/man/7-netdevice/">netdevice</a></code>(7), <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7), <code><a href="/docs/linux/man/7-raw/">raw</a></code>(7), <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7), <code><a href="/docs/linux/man/7-tcp/">tcp</a></code>(7), <code><a href="/docs/linux/man/7-udp/">udp</a></code>(7), <code><a href="/docs/linux/man/8-ip/">ip</a></code>(8) </p>
+<p> The kernel source file <i>Documentation/networking/ip-sysctl.txt</i>. </p>
+<p> RFC 791 for the original IP specification. RFC 1122 for the IPv4 host requirements. RFC 1812 for the IPv4 router requirements.  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

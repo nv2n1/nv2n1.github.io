@@ -28,5 +28,12 @@ description: "mdb_load – LMDB environment import tool"
 <dd> Don&#8217;t overwrite existing records when loading into an already existing database; just skip them.</dd>
 <dt><code>-T</code></dt>
 <dd> Load data from simple text files. The input must be paired lines of text, where the first line of the pair is the key item, and the second line of the pair is its corresponding data item. </dd>
-<p> A simple escape mechanism, where newline and backslash (\) characters are special, is applied to the text input. Newline characters are interpreted as record separators. Backslash characters in the text will be interpreted in one of two ways: If the backslash character precedes another backslash character, the pair will be interpreted as a literal backslash. If the backslash character precedes any other character, the two characters following the backslash will be interpreted as a hexadecimal specification of a single character; for example, 
-</p></dl>
+<p> A simple escape mechanism, where newline and backslash (\) characters are special, is applied to the text input. Newline characters are interpreted as record separators. Backslash characters in the text will be interpreted in one of two ways: If the backslash character precedes another backslash character, the pair will be interpreted as a literal backslash. If the backslash character precedes any other character, the two characters following the backslash will be interpreted as a hexadecimal specification of a single character; for example, \0a is a newline character in the ASCII character set. </p>
+<p> For this reason, any backslash or newline characters that naturally occur in the text input must be escaped to avoid misinterpretation by <code>mdb_load</code>. </p>
+<h2>DIAGNOSTICS</h2>
+<p> Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mdb_dump/">mdb_dump</a></code>(1)  </p>
+<h2>AUTHOR</h2>
+<p> Howard Chu of Symas Corporation &lt;<a rel="nofollow" href="http://www.symas.com">http://www.symas.com</a>&gt; </p>
+<h2>Index</h2>
