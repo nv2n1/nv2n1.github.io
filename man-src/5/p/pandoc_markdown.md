@@ -906,6 +906,364 @@ gladtex -d myfile-images myfile.htex
 <p> In addition to raw HTML, pandoc allows raw LaTeX, TeX, and ConTeXt to be included in a document. Inline TeX commands will be preserved and passed unchanged to the LaTeX and ConTeXt writers. Thus, for example, you can use LaTeX to include BibTeX citations:</p>
 <dl>
 <dd>
-<pre>This result was proved in&nbsp;<wbr>
-</dd></dl>
-</pre>
+<pre>This result was proved in&nbsp;<wbr>&nbsp;<wbr>\cite{jones.1967}.
+</code></pre>
+</dl>
+<p> Note that in LaTeX environments, like </p>
+<dl>
+<dd> <pre><code>\begin{tabular}{|l|l|}\hline
+Age&nbsp;<wbr>&amp;&nbsp;<wbr>Frequency&nbsp;<wbr>\\&nbsp;<wbr>\hline
+18--25&nbsp;<wbr>&nbsp;<wbr>&amp;&nbsp;<wbr>15&nbsp;<wbr>\\
+26--35&nbsp;<wbr>&nbsp;<wbr>&amp;&nbsp;<wbr>33&nbsp;<wbr>\\
+36--45&nbsp;<wbr>&nbsp;<wbr>&amp;&nbsp;<wbr>22&nbsp;<wbr>\\&nbsp;<wbr>\hline
+\end{tabular}
+</code></pre>
+ </dd></dl>
+<p> the material between the begin and end tags will be interpreted as raw LaTeX, not as markdown. </p>
+<p> Inline LaTeX is ignored in output formats other than Markdown, LaTeX, and ConTeXt.  </p>
+<h2>LATEX MACROS</h2>
+<p> Extension: latex_macros </p>
+<p> For output formats other than LaTeX, pandoc will parse LaTeX \newcommand and \renewcommand definitions and apply the resulting macros to all LaTeX math. So, for example, the following will work in all output formats, not just LaTeX: </p>
+<dl>
+<dd> <pre><code>\newcommand{\tuple}[1]{\langle&nbsp;<wbr>#1&nbsp;<wbr>\rangle}
+$\tuple{a, b, c}$
+</code></pre>
+ </dd></dl>
+<p> In LaTeX output, the \newcommand definition will simply be passed unchanged to the output.  </p>
+<h2>LINKS</h2>
+<p> Markdown allows links to be specified in several ways.  </p>
+<h3>Automatic links</h3>
+<p> If you enclose a URL or email address in pointy brackets, it will become a link: </p>
+<dl>
+<dd> <pre><code>&lt;http://google.com&gt;
+&lt;sam [at] green.eggs.ham&gt;
+</code></pre>
+ </dd></dl>
+<h3>Inline links</h3>
+<p> An inline link consists of the link text in square brackets, followed by the URL in parentheses. (Optionally, the URL can be followed by a link title, in quotes.) </p>
+<dl>
+<dd> <pre><code>This is an&nbsp;<wbr>[inline link](/url), and here's&nbsp;<wbr>[one with
+a title](http://fsf.org&nbsp;<wbr>&quot;click here for a good time!&quot;).
+</code></pre>
+ </dd></dl>
+<p> There can be no space between the bracketed part and the parenthesized part. The link text can contain formatting (such as emphasis), but the title cannot.  </p>
+<h3>Reference links</h3>
+<p> An explicit reference link has two parts, the link itself and the link definition, which may occur elsewhere in the document (either before or after the link). </p>
+<p> The link consists of link text in square brackets, followed by a label in square brackets. (There can be space between the two.) The link definition consists of the bracketed label, followed by a colon and a space, followed by the URL, and optionally (after a space) a link title either in quotes or in parentheses. </p>
+<p> Here are some examples: </p>
+<dl>
+<dd> <pre><code>[my label 1]:&nbsp;<wbr>/foo/bar.html&nbsp;<wbr>&nbsp;<wbr>&quot;My title, optional&quot;
+[my label 2]:&nbsp;<wbr>/foo
+[my label 3]:&nbsp;<wbr>http://fsf.org&nbsp;<wbr>(The free software foundation)
+[my label 4]:&nbsp;<wbr>/bar#special&nbsp;<wbr>&nbsp;<wbr>'A title in single quotes'
+</code></pre>
+ </dd></dl>
+<p> The URL may optionally be surrounded by angle brackets: </p>
+<dl>
+<dd> <pre><code>[my label 5]:&nbsp;<wbr>&lt;http://foo.bar.baz&gt;
+</code></pre>
+ </dd></dl>
+<p> The title may go on the next line: </p>
+<dl>
+<dd> <pre><code>[my label 3]:&nbsp;<wbr>http://fsf.org&nbsp;<wbr>&nbsp;<wbr>&quot;The free software foundation&quot;
+</code></pre>
+ </dd></dl>
+<p> Note that link labels are not case sensitive. So, this will work: </p>
+<dl>
+<dd> <pre><code>Here is&nbsp;<wbr>[my link][FOO]
+[Foo]:&nbsp;<wbr>/bar/baz
+</code></pre>
+ </dd></dl>
+<p> In an implicit reference link, the second pair of brackets is empty, or omitted entirely: </p>
+<dl>
+<dd> <pre><code>See&nbsp;<wbr>[my website][], or&nbsp;<wbr>[my website].
+[my website]:&nbsp;<wbr>http://foo.bar.baz
+</code></pre>
+ </dd></dl>
+<p> Note: In Markdown.pl and most other markdown implementations, reference link definitions cannot occur in nested constructions such as list items or block quotes. Pandoc lifts this arbitrary seeming restriction. So the following is fine in pandoc, though not in most other implementations: </p>
+<dl>
+<dd> <pre><code>&gt;&nbsp;<wbr>My block&nbsp;<wbr>[quote].
+&gt;
+&gt;&nbsp;<wbr>[quote]:&nbsp;<wbr>/foo
+</code></pre>
+ </dd></dl>
+<h3>Internal links</h3>
+<p> To link to another section of the same document, use the automatically generated identifier (see Header identifiers in HTML, LaTeX, and ConTeXt, below). For example: </p>
+<dl>
+<dd> <pre><code>See the&nbsp;<wbr>[Introduction](#introduction).
+</code></pre>
+ </dd></dl>
+<p> or </p>
+<dl>
+<dd> <pre><code>See the&nbsp;<wbr>[Introduction].
+[Introduction]:&nbsp;<wbr>#introduction
+</code></pre>
+ </dd></dl>
+<p> Internal links are currently supported for HTML formats (including HTML slide shows and EPUB), LaTeX, and ConTeXt.  </p>
+<h2>IMAGES</h2>
+<p> A link immediately preceded by a ! will be treated as an image. The link text will be used as the image&#8217;s alt text: </p>
+<dl>
+<dd> <pre><code>![la lune](lalune.jpg&nbsp;<wbr>&quot;Voyage to the moon&quot;)
+![movie reel]
+[movie reel]: movie.gif
+</code></pre>
+ </dd></dl>
+<h3>Pictures with captions</h3>
+<p> Extension: implicit_figures </p>
+<p> An image occurring by itself in a paragraph will be rendered as a figure with a caption.[4] (In LaTeX, a figure environment will be used; in HTML, the image will be placed in a div with class figure, together with a caption in a p with class caption.) The image&#8217;s alt text will be used as the caption. </p>
+<dl>
+<dd> <pre><code>![This is the caption](/url/of/image.png)
+</code></pre>
+ </dd></dl>
+<p> If you just want a regular inline image, just make sure it is not the only thing in the paragraph. One way to do this is to insert a nonbreaking space after the image: </p>
+<dl>
+<dd> <pre><code>![This image won't be a figure](/url/of/image.png)\
+</code></pre>
+ </dd></dl>
+<h2>FOOTNOTES</h2>
+<p> Extension: footnotes </p>
+<p> Pandoc&#8217;s markdown allows footnotes, using the following syntax: </p>
+<dl>
+<dd> <pre><code>Here is a footnote reference,[^1]&nbsp;<wbr>and another.[^longnote]
+[^1]: Here is the footnote.
+[^longnote]: Here's one with multiple blocks.
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>{&nbsp;<wbr>some.code&nbsp;<wbr>}
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>The whole paragraph can be indented, or just the first
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>line.&nbsp;<wbr>&nbsp;<wbr>In this way, multi-paragraph footnotes work like
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>multi-paragraph list items.
+This paragraph won't be part of the note, because it
+isn't indented.
+</code></pre>
+ </dd></dl>
+<p> The identifiers in footnote references may not contain spaces, tabs, or newlines. These identifiers are used only to correlate the footnote reference with the note itself; in the output, footnotes will be numbered sequentially. </p>
+<p> The footnotes themselves need not be placed at the end of the document. They may appear anywhere except inside other block elements (lists, block quotes, tables, etc.). </p>
+<p> Extension: inline_notes </p>
+<p> Inline footnotes are also allowed (though, unlike regular notes, they cannot contain multiple paragraphs). The syntax is as follows: </p>
+<dl>
+<dd> <pre><code>Here is an inline note.^[Inlines notes are easier to write, since
+you don't have to pick an identifier and move down to type the
+note.]
+</code></pre>
+ </dd></dl>
+<p> Inline and regular footnotes may be mixed freely.  </p>
+<h2>CITATIONS</h2>
+<p> Extension: citations </p>
+<p> Using an external filter, pandoc-citeproc, pandoc can automatically generate citations and a bibliography in a number of styles. Basic usage is </p>
+<dl>
+<dd> <pre><code>pandoc --filter pandoc-citeproc myinput.txt
+</code></pre>
+ </dd></dl>
+<p> In order to use this feature, you will need to specify a bibliography file using the bibliography metadata field in a YAML metadata section. The bibliography may have any of these formats: </p>
+<table>
+<tr VALIGN=top>
+<td> Format </td>
+<td> File extension 
+</td>
+</tr>
+<tr VALIGN=top>
+<td><hr />
+</td>
+</tr>
+<tr VALIGN=top>
+<td> MODS </td>
+<td> .mods 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> BibLaTeX </td>
+<td> .bib 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> BibTeX </td>
+<td> .bibtex 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> RIS </td>
+<td> .ris 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> EndNote </td>
+<td> .enl 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> EndNote XML </td>
+<td> .xml 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> ISI </td>
+<td> .wos 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> MEDLINE </td>
+<td> .medline 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> Copac </td>
+<td> .copac 
+</td>
+</tr>
+<tr VALIGN=top>
+<td> JSON citeproc </td>
+<td> .json 
+</td>
+</tr>
+</table>
+<p> Note that .bib can generally be used with both BibTeX and BibLaTeX files, but you can use .bibtex to force BibTeX. </p>
+<p> Alternatively you can use a references field in the document&#8217;s YAML metadata. This should include an array of YAML-encoded references, for example: </p>
+<dl>
+<dd> <pre><code>---
+references:
+- id: fenner2012a
+&nbsp;<wbr>&nbsp;<wbr>title: One-click science marketing
+&nbsp;<wbr>&nbsp;<wbr>author:
+&nbsp;<wbr>&nbsp;<wbr>- family: Fenner
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>given: Martin
+&nbsp;<wbr>&nbsp;<wbr>container-title: Nature Materials
+&nbsp;<wbr>&nbsp;<wbr>volume: 11
+&nbsp;<wbr>&nbsp;<wbr>URL:&nbsp;<wbr>'http://dx.doi.org/10.1038/nmat3283'&nbsp;<wbr>&nbsp;<wbr>DOI: 10.1038/nmat3283
+&nbsp;<wbr>&nbsp;<wbr>issue: 4
+&nbsp;<wbr>&nbsp;<wbr>publisher: Nature Publishing Group
+&nbsp;<wbr>&nbsp;<wbr>page: 261-263
+&nbsp;<wbr>&nbsp;<wbr>type: article-journal
+&nbsp;<wbr>&nbsp;<wbr>issued:
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>year: 2012
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>month: 3
+...
+</code></pre>
+ </dd></dl>
+<p> (The program mods2yaml, which comes with pandoc-citeproc, can help produce these from a MODS reference collection.) </p>
+<p> By default, pandoc-citeproc will use a Chicago author-date format for citations and references. To use another style, you will need to specify a CSL 1.0 style file in the csl metadata field. A primer on creating and modifying CSL styles can be found at <a rel="nofollow" href="http://citationstyles.org/downloads/primer.html.">http://citationstyles.org/downloads/primer.html.</a> A repository of CSL styles can be found at <a rel="nofollow" href="https://github.com/citation-style-language/styles.">https://github.com/citation-style-language/styles.</a> See also <a rel="nofollow" href="http://zotero.org/styles">http://zotero.org/styles</a> for easy browsing. </p>
+<p> Citations go inside square brackets and are separated by semicolons. Each citation must have a key, composed of &#8216;@&#8216; + the citation identifier from the database, and may optionally have a prefix, a locator, and a suffix. Here are some examples: </p>
+<dl>
+<dd> <pre><code>Blah blah&nbsp;<wbr>[see&nbsp;<wbr>@doe99, pp. 33-35;&nbsp;<wbr>also&nbsp;<wbr>@smith04, ch. 1].
+Blah blah&nbsp;<wbr>[@doe99, pp. 33-35, 38-39 and&nbsp;<wbr>*passim*].
+Blah blah&nbsp;<wbr>[@smith04;&nbsp;<wbr>@doe99].
+</code></pre>
+ </dd></dl>
+<p> A minus sign (-) before the @ will suppress mention of the author in the citation. This can be useful when the author is already mentioned in the text: </p>
+<dl>
+<dd> <pre><code>Smith says blah&nbsp;<wbr>[-@smith04].
+</code></pre>
+ </dd></dl>
+<p> You can also write an in-text citation, as follows: </p>
+<dl>
+<dd> <pre><code>@smith04 says blah.
+@smith04&nbsp;<wbr>[p. 33]&nbsp;<wbr>says blah.
+</code></pre>
+ </dd></dl>
+<p> If the style calls for a list of works cited, it will be placed at the end of the document. Normally, you will want to end your document with an appropriate header: </p>
+<dl>
+<dd> <pre><code>last paragraph...
+#&nbsp;<wbr>References
+</code></pre>
+ </dd></dl>
+<p> The bibliography will be inserted after this header.  </p>
+<h2>NON-PANDOC EXTENSIONS</h2>
+<p> The following markdown syntax extensions are not enabled by default in pandoc, but may be enabled by adding +EXTENSION to the format name, where EXTENSION is the name of the extension. Thus, for example, markdown+hard_line_breaks is markdown with hard line breaks. </p>
+<p> Extension: lists_without_preceding_blankline </p>
+<p> Allow a list to occur right after a paragraph, with no intervening blank space. </p>
+<p> Extension: hard_line_breaks </p>
+<p> Causes all newlines within a paragraph to be interpreted as hard line breaks instead of spaces. </p>
+<p> Extension: ignore_line_breaks </p>
+<p> Causes newlines within a paragraph to be ignored, rather than being treated as spaces or as hard line breaks. This option is intended for use with East Asian languages where spaces are not used between words, but text is divided into lines for readability. </p>
+<p> Extension: tex_math_single_backslash </p>
+<p> Causes anything between \( and \) to be interpreted as inline TeX math, and anything between \[ and \] to be interpreted as display TeX math. Note: a drawback of this extension is that it precludes escaping ( and [. </p>
+<p> Extension: tex_math_double_backslash </p>
+<p> Causes anything between \\( and \\) to be interpreted as inline TeX math, and anything between \\[ and \\] to be interpreted as display TeX math. </p>
+<p> Extension: markdown_attribute </p>
+<p> By default, pandoc interprets material inside block-level tags as markdown. This extension changes the behavior so that markdown is only parsed inside block-level tags if the tags have the attribute markdown=1. </p>
+<p> Extension: mmd_title_block </p>
+<p> Enables a MultiMarkdown style title block at the top of the document, for example: </p>
+<dl>
+<dd> <pre><code>Title:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>My title
+Author:&nbsp;<wbr>&nbsp;<wbr>John Doe
+Date:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>September 1, 2008
+Comment: This is a sample mmd title block, with
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>a field spanning multiple lines.
+</code></pre>
+ </dd></dl>
+<p> See the MultiMarkdown documentation for details. If pandoc_title_block or yaml_metadata_block is enabled, it will take precedence over mmd_title_block. </p>
+<p> Extension: abbreviations </p>
+<p> Parses PHP Markdown Extra abbreviation keys, like </p>
+<dl>
+<dd> <pre><code>*[HTML]: Hyper Text Markup Language
+</code></pre>
+ </dd></dl>
+<p> Note that the pandoc document model does not support abbreviations, so if this extension is enabled, abbreviation keys are simply skipped (as opposed to being parsed as paragraphs). </p>
+<p> Extension: autolink_bare_uris </p>
+<p> Makes all absolute URIs into links, even when not surrounded by pointy braces &lt;...&gt;. </p>
+<p> Extension: ascii_identifiers </p>
+<p> Causes the identifiers produced by auto_identifiers to be pure ASCII. Accents are stripped off of accented latin letters, and non-latin letters are omitted. </p>
+<p> Extension: link_attributes </p>
+<p> Parses multimarkdown style key-value attributes on link and image references. Note that pandoc&#8217;s internal document model provides nowhere to put these, so they are presently just ignored. </p>
+<p> Extension: mmd_header_identifiers </p>
+<p> Parses multimarkdown style header identifiers (in square brackets, after the header but before any trailing #s in an ATX header).  </p>
+<h2>MARKDOWN VARIANTS</h2>
+<p> In addition to pandoc&#8217;s extended markdown, the following markdown variants are supported: </p>
+<dl>
+<dt>markdown_phpextra (PHP Markdown Extra) </dt>
+<dd> <p> footnotes, pipe_tables, raw_html, markdown_attribute, fenced_code_blocks, definition_lists, intraword_underscores, header_attributes, abbreviations. </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+<dt>markdown_github (Github-flavored Markdown) </dt>
+<dd> <p> pipe_tables, raw_html, tex_math_single_backslash, fenced_code_blocks, fenced_code_attributes, auto_identifiers, ascii_identifiers, backtick_code_blocks, autolink_bare_uris, intraword_underscores, strikeout, hard_line_breaks </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+<dt>markdown_mmd (MultiMarkdown) </dt>
+<dd> <p> pipe_tables raw_html, markdown_attribute, link_attributes, raw_tex, tex_math_double_backslash, intraword_underscores, mmd_title_block, footnotes, definition_lists, all_symbols_escapable, implicit_header_references, auto_identifiers, mmd_header_identifiers </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+<dt>markdown_strict (Markdown.pl) </dt>
+<dd> <p> raw_html </p>
+ </dd>
+<dl>
+<dd>  </dd></dl>
+</dl>
+<h2>EXTENSIONS WITH FORMATS OTHER THAN MARKDOWN</h2>
+<p> Some of the extensions discussed above can be used with formats other than markdown: </p>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> auto_identifiers can be used with latex, rst, mediawiki, and textile input (and is used by default). </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> tex_math_dollars, tex_math_single_backslash, and tex_math_double_backslash can be used with html input. (This is handy for reading web pages formatted using MathJax, for example.) </p>
+ </dd></dl>
+<h2>NOTES</h2>
+<h3>[1]</h3>
+<p> The point of this rule is to ensure that normal paragraphs starting with people&#8217;s initials, like </p>
+<dl>
+<dd> <pre><code>B. Russell was an English philosopher.
+</code></pre>
+ </dd></dl>
+<p> do not get treated as list items. </p>
+<p> This rule will not prevent </p>
+<dl>
+<dd> <pre><code>(C)&nbsp;<wbr>2007 Joe Smith
+</code></pre>
+ </dd></dl>
+<p> from being interpreted as a list item. In this case, a backslash escape can be used: </p>
+<dl>
+<dd> <pre><code>(C\)&nbsp;<wbr>2007 Joe Smith
+</code></pre>
+ </dd></dl>
+<h3>[2]</h3>
+<p> I have also been influenced by the suggestions of David Wheeler.  </p>
+<h3>[3]</h3>
+<p> This scheme is due to Michel Fortin, who proposed it on the Markdown discussion list.  </p>
+<h3>[4]</h3>
+<p> This feature is not yet implemented for RTF, OpenDocument, or ODT. In those formats, you&#8217;ll just get an image in a paragraph by itself, with no caption.  </p>
+<h2>SEE ALSO</h2>
+<p> pandoc (1). </p>
+<h2>Index</h2>

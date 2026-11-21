@@ -20,5 +20,48 @@ description: "rlm_mschap – FreeRADIUS Module"
 <dt>require_strong</dt>
 <dd>If MPPE is enabled, setting this attribute to &#8216;yes&#8217; will cause the MS-MPPE-Encryption-Types attribute to be set to require a 128 bit key. The default is &#8216;no&#8217;.</dd>
 <dt>with_ntdomain_hack</dt>
-<dd>Windows clients send User-Name in the form of &quot;DOMAIN
-</dd></dl>
+<dd>Windows clients send User-Name in the form of &quot;DOMAIN\User&quot;, but send the challenge/response based only on the User portion. Setting this value to yes, enables a work-around for this error. The default is &#8216;no&#8217;.  </dd></dl>
+ <h2>CONFIGURATION</h2>
+ <dl>
+<dd>  <pre><code>modules {
+  ...
+
+  mschap {
+
+        authtype = MS-CHAP
+
+        use_mppe = yes
+
+  }
+
+  ...
+
+}
+
+ ...
+
+authorize {
+  ...
+
+  mschap
+
+  ...
+
+}
+ ...
+
+authenticate {
+  ...
+
+  mschap
+
+  ...
+
+}
+</code></pre>
+  </dd></dl>
+ <h2>SECTIONS</h2>
+ <code>authorization,</code> <code>authentication</code> <h2>FILES</h2>
+ <i>/etc/raddb/radiusd.conf</i> <h2>SEE ALSO</h2>
+ <code><a href="/docs/linux/man/8-radiusd/">radiusd</a></code>(8), <code><a href="/docs/linux/man/5-radiusd.conf/">radiusd.conf</a></code>(5)  <h2>AUTHOR</h2>
+ Chris Parker, cparker [at] segv.org <h2>Index</h2>

@@ -210,6 +210,100 @@ description: "odb – object-relational mapping (ORM) compiler for C++"
 <dd> Add <i>regex</i> to the list of regular expressions used to transform data member names to function names when searching for a suitable accessor function. The argument to this option is a Perl-like regular expression in the form <code>/</code><i>pattern</i><code>/</code><i>replacement</i><code>/</code>. Any character can be used as a delimiter instead of <code>/</code> and the delimiter can be escaped inside <i>pattern</i> and <i>replacement</i> with a backslash (<code>\</code>). You can specify multiple regular expressions by repeating this option. </dd>
 <p> All the regular expressions are tried in the order specified and the first expression that produces a suitable accessor function is used. Each expression is tried twice: first with the actual member name and then with the member&#8217;s <i>public name</i> which is obtained by removing the common member name decorations, such as leading and trailing underscores, the <code>m_</code> prefix, etc. The ODB compiler also includes a number of built-in expressions for commonly used accessor names, such as <code>get_foo</code>, <code>getFoo</code>, <code>getfoo</code>, and just <code>foo</code>. The built-in expressions are tried last. </p>
 <p> As an example, the following expression transforms data members with public names in the form <code>foo</code> to accessor names in the form <code>GetFoo</code>: </p>
-<p> <code>/(.+)/Get
-</p></dl>
-</code>
+<p> <code>/(.+)/Get</code>\u$1/</code> </p>
+<p> See also the REGEX AND SHELL QUOTING section below. </p>
+<dt><code>--accessor-regex-trace</code></dt>
+<dd> <p> Trace the process of applying regular expressions specified with the <code>--accessor-regex</code> option. Use this option to find out why your regular expressions don&#8217;t do what you expected them to do. </p>
+ </dd>
+<dt><code>--modifier-regex</code><i>regex</i></dt>
+<dd> <p> Add <i>regex</i> to the list of regular expressions used to transform data member names to function names when searching for a suitable modifier function. The argument to this option is a Perl-like regular expression in the form <code>/</code><i>pattern</i><code>/</code><i>replacement</i><code>/</code>. Any character can be used as a delimiter instead of <code>/</code> and the delimiter can be escaped inside <i>pattern</i> and <i>replacement</i> with a backslash (<code>\</code>). You can specify multiple regular expressions by repeating this option. </p>
+<p> All the regular expressions are tried in the order specified and the first expression that produces a suitable modifier function is used. Each expression is tried twice: first with the actual member name and then with the member&#8217;s <i>public name</i> which is obtained by removing the common member name decorations, such as leading and trailing underscores, the <code>m_</code> prefix, etc. The ODB compiler also includes a number of built-in expressions for commonly used modifier names, such as <code>set_foo</code>, <code>setFoo</code>, <code>setfoo</code>, and just <code>foo</code>. The built-in expressions are tried last. </p>
+<p> As an example, the following expression transforms data members with public names in the form <code>foo</code> to modifier names in the form <code>SetFoo</code>: </p>
+<p> <code>/(.+)/Set\u$1/</code> </p>
+<p> See also the REGEX AND SHELL QUOTING section below. </p>
+ </dd>
+<dt><code>--modifier-regex-trace</code></dt>
+<dd> <p> Trace the process of applying regular expressions specified with the <code>--modifier-regex</code> option. Use this option to find out why your regular expressions don&#8217;t do what you expected them to do. </p>
+ </dd>
+<dt><code>--include-with-brackets</code></dt>
+<dd> <p> Use angle brackets (&lt;&gt;) instead of quotes (&quot;&quot;) in the generated <code>#include</code> directives. </p>
+ </dd>
+<dt><code>--include-prefix</code><i>prefix</i></dt>
+<dd> <p> Add <i>prefix</i> to the generated <code>#include</code> directive paths. </p>
+ </dd>
+<dt><code>--include-regex</code><i>regex</i></dt>
+<dd> <p> Add <i>regex</i> to the list of regular expressions used to transform generated <code>#include</code> directive paths. The argument to this option is a Perl-like regular expression in the form <code>/</code><i>pattern</i><code>/</code><i>replacement</i><code>/</code>. Any character can be used as a delimiter instead of <code>/</code> and the delimiter can be escaped inside <i>pattern</i> and <i>replacement</i> with a backslash (<code>\</code>). You can specify multiple regular expressions by repeating this option. All the regular expressions are tried in the order specified and the first expression that matches is used. </p>
+<p> As an example, the following expression transforms include paths in the form <code>foo/bar-odb.h</code> to paths in the form <code>foo/generated/bar-odb.h</code>: </p>
+<p> <code>%foo/(.+)-odb.h%foo/generated/$1-odb.h%</code> </p>
+<p> See also the REGEX AND SHELL QUOTING section below. </p>
+ </dd>
+<dt><code>--include-regex-trace</code></dt>
+<dd> <p> Trace the process of applying regular expressions specified with the <code>--include-regex</code> option. Use this option to find out why your regular expressions don&#8217;t do what you expected them to do. </p>
+ </dd>
+<dt><code>--guard-prefix</code><i>prefix</i></dt>
+<dd> <p> Add <i>prefix</i> to the generated header inclusion guards. The prefix is transformed to upper case and characters that are illegal in a preprocessor macro name are replaced with underscores. </p>
+ </dd>
+<dt><code>--show-sloc</code></dt>
+<dd> <p> Print the number of generated physical source lines of code (SLOC). </p>
+ </dd>
+<dt><code>--sloc-limit</code><i>num</i></dt>
+<dd> <p> Check that the number of generated physical source lines of code (SLOC) does not exceed <i>num</i>. </p>
+ </dd>
+<dt><code>--options-file</code><i>file</i></dt>
+<dd> <p> Read additional options from <i>file</i> with each option appearing on a separate line optionally followed by space and an option value. Empty lines and lines starting with <code>#</code> are ignored. Option values can be enclosed in double (<code>&quot;</code>) or single (<code>&#8216;</code>) quotes to preserve leading and trailing whitespaces as well as to specify empty values. If the value itself contains trailing or leading quotes, enclose it with an extra pair of quotes, for example <code>&#8216;&quot;x&quot;&#8216;</code>. Non-leading and non-trailing quotes are interpreted as being part of the option value. </p>
+<p> The semantics of providing options in a file is equivalent to providing the same set of options in the same order on the command line at the point where the <code>--options-file</code> option is specified except that the shell escaping and quoting is not required. You can repeat this option to specify more than one options file. </p>
+ </dd>
+<dt><code>-x</code><i>option</i></dt>
+<dd> <p> Pass <i>option</i> to the underlying C++ compiler (<code>g++</code>). The <i>option</i> value that doesn&#8217;t start with <code>-</code> is considered the <code>g++</code> executable name. </p>
+ </dd>
+<dt><code>-v</code></dt>
+<dd> <p> Print the commands executed to run the stages of compilation. </p>
+ </dd>
+<dt><code>--trace</code></dt>
+<dd> <p> Trace the compilation process. </p>
+ </dd>
+<dt><code>--mysql-engine</code><i>engine</i></dt>
+<dd> <p> Use <i>engine</i> instead of the default <code>InnoDB</code> in the generated database schema file. For more information on the storage engine options see the MySQL documentation. If you would like to use the database-default engine, pass <code>default</code> as the value for this option. </p>
+ </dd>
+<dt><code>--sqlite-override-null</code></dt>
+<dd> <p> Make all columns in the generated database schema allow <code>NULL</code> values. This is primarily useful in schema migration since SQLite does not support dropping of columns. By making all columns <code>NULL</code> we can later &quot;delete&quot; them by setting their values to <code>NULL</code>. Note that this option overrides even the <code>not_null</code> pragma. </p>
+ </dd>
+<dt><code>--sqlite-lax-auto-id</code></dt>
+<dd> <p> Do not force monotonically increasing automatically-assigned object ids. In this mode the generated database schema omits the <code>AUTOINCREMENT</code> keyword which results in faster object persistence but may lead to automatically-assigned ids not being in a strictly ascending order. Refer to the SQLite documentation for details. </p>
+ </dd>
+<dt><code>--pgsql-server-version</code><i>ver</i></dt>
+<dd> <p> Specify the minimum PostgreSQL server version with which the generated C++ code and schema will be used. This information is used to enable version-specific optimizations and workarounds in the generated C++ code and schema. The version must be in the <i>major</i><code>.</code><i>minor</i> form, for example, <code>9.1</code>. If this option is not specified, then <code>7.4</code> or later is assumed. </p>
+ </dd>
+<dt><code>--oracle-client-version</code><i>ver</i></dt>
+<dd> <p> Specify the minimum Oracle client library (OCI) version with which the generated C++ code will be linked. This information is used to enable version-specific optimizations and workarounds in the generated C++ code. The version must be in the <i>major</i><code>.</code><i>minor</i> form, for example, <code>11.2</code>. If this option is not specified, then <code>10.1</code> or later is assumed. </p>
+ </dd>
+<dt><code>--mssql-server-version</code><i>ver</i></dt>
+<dd> <p> Specify the minimum SQL Server server version with which the generated C++ code and schema will be used. This information is used to enable version-specific optimizations and workarounds in the generated C++ code and schema. The version must be in the <i>major</i><code>.</code><i>minor</i> form, for example, <code>9.0</code> (SQL Server 2005), <code>10.5</code> (2008R2), or <code>11.0</code> (2012). If this option is not specified, then <code>10.0</code> (SQL Server 2008) or later is assumed. </p>
+ </dd>
+<dt><code>--mssql-short-limit</code><i>size</i></dt>
+<dd> <p> Specify the short data size limit. If a character, national character, or binary data type has a maximum length (in bytes) less than or equal to this limit, then it is treated as <i>short data</i>, otherwise it is <i>long data</i>. For short data ODB pre-allocates an intermediate buffer of the maximum size and binds it directly to a parameter or result column. This way the underlying API (ODBC) can read/write directly from/to this buffer. In the case of long data, the data is read/written in chunks using the <code>SQLGetData()</code>/<code>SQLPutData()</code> ODBC functions. While the long data approach reduces the amount of memory used by the application, it may require greater CPU resources. The default short data limit is 1024 bytes. When setting a custom short data limit, make sure that it is sufficiently large so that no object id in the application is treated as long data. </p>
+ </dd></dl>
+<h2>SQL NAME TRANSFORMATIONS</h2>
+<p> The ODB compiler provides a number of mechanisms for transforming automatically-derived SQL names, such as tables, columns, etc., to match a specific naming convention. At the higher level, we can add a prefix to global names (tables and, for some databases, indexes and/or foreign keys) with the <code>--table-prefix</code> option. Similarly, we can specify custom suffixes for automatically-derived index (<code>--index-suffix</code>; default is <code>_i</code>), foreign key (<code>--fkey-suffix</code>; default is <code>_fk</code>), and sequence (<code>--sequence-suffix</code>; default is <code>_seq</code>) names. Finally, we can also convert all the names to upper or lower case with the <code>--sql-name-case</code> option (valid values are <code>upper</code> and <code>lower</code>). </p>
+<p> At the lower level we can specify a set of regular expressions to implement arbitrary transformations of the automatically-derived SQL names. If we want a particular regular expression only to apply to a specific name, for example, table or column, then we use one of the <code>--</code><i>kind</i><code>-regex</code> options, where <i>kind</i> can be <code>table</code>, <code>column</code>, <code>index</code>, <code>fkey</code>, or <code>sequence</code>. On the other hand, if we want our regular expressions to apply to all SQL names, then we use the <code>--sql-name-regex</code> option. </p>
+<p> The interaction between the higher and lower level transformations is as follows. Prefixes and suffixes are added first. Then the regular expression transformations are applied. Finally, if requested, the name is converted to upper or lower case. Note also that all of these transformations except for <code>--table-prefix</code> only apply to automatically-derived names. In other words, if a table, column, etc., name was explicitly specified with a pragma, then it is used as is, without applying any (except for the table prefix) transformations. </p>
+<p> The value for the <code>--*-regex</code> options is a Perl-like regular expression in the form <code>/</code><i>pattern</i><code>/</code><i>replacement</i><code>/</code>. Any character can be used as a delimiter instead of <code>/</code> and the delimiter can be escaped inside <i>pattern</i> and <i>replacement</i> with a backslash (<code>\</code>). You can also specify multiple regular expressions by repeating these options. </p>
+<p> All the regular expressions are tried in the order specified with the name-specific expressions (for example, <code>--table-regex)</code> tried first followed by the generic expressions (<code>--sql-name-regex</code>). The first expression that matches is used. </p>
+<p> As an example, consider a regular expression that transforms a class name in the form <code>CFoo</code> to a table name in the form <code>FOO:</code> </p>
+<p> <code>--table-regex &#8216;/C(.+)/\U$1/&#8216;</code> </p>
+<p> As a more interesting example, consider the transformation of class names that follow the upper camel case convention (for example, <code>FooBar</code>) to table names that follow the underscore-separated, all upper case convention (for example, <code>FOO_BAR</code>). For this case we have to use separate expressions to handle one-word, two-word, etc., names: </p>
+<p> <code>--table-regex &#8216;/([A-z][a-z]+)/\U$1/&#8216;</code> </p>
+<p> <code>--table-regex &#8216;/([A-z][a-z]+)([A-z][a-z]+)/\U$1_$2/&#8216;</code> </p>
+<p> See also the REGEX AND SHELL QUOTING section below.  </p>
+<h2>REGEX AND SHELL QUOTING</h2>
+<p> When entering a regular expression argument in the shell command line it is often necessary to use quoting (enclosing the argument in &quot; &quot; or &#8216; &#8216;) in order to prevent the shell from interpreting certain characters, for example, spaces as argument separators and $ as variable expansions. </p>
+<p> Unfortunately it is hard to achieve this in a manner that is portable across POSIX shells, such as those found on GNU/Linux and UNIX, and Windows shell. For example, if you use &quot; &quot; for quoting you will get a wrong result with POSIX shells if your expression contains $. The standard way of dealing with this on POSIX systems is to use &#8216; &#8216; instead. Unfortunately, Windows shell does not remove &#8216; &#8216; from arguments when they are passed to applications. As a result you may have to use &#8216; &#8216; for POSIX and &quot; &quot; for Windows ($ is not treated as a special character on Windows). </p>
+<p> Alternatively, you can save regular expression options into a file, one option per line, and use this file with the <code>--options-file</code> option. With this approach you don&#8217;t need to worry about shell quoting.  </p>
+<h2>DIAGNOSTICS</h2>
+<p> If the input file is not valid C++, <code>odb</code> will issue diagnostic messages to STDERR and exit with non-zero exit code.  </p>
+<h2>BUGS</h2>
+<p> Send bug reports to the odb-users [at] codesynthesis.com mailing list.  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2009-2013 Code Synthesis Tools CC. </p>
+<p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, version 1.2; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. Copy of the license can be obtained from <a rel="nofollow" href="http://www.codesynthesis.com/licenses/fdl-1.3.txt">http://www.codesynthesis.com/licenses/fdl-1.3.txt</a> </p>
+<h2>Index</h2>

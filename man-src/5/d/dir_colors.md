@@ -327,6 +327,65 @@ description: "dir_colors – configuration file for"
 </td>
 </tr>
 <tr VALIGN=top>
-<td><code>
-</dd></dl>
-</code></table>
+<td><code></code><br />
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>\x <i>nnn</i></code></td>
+<td>Any character (hexadecimal notation)
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>\_</code></td>
+<td>Space
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>\\</code></td>
+<td>Backslash (\)
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>\ha</code></td>
+<td>Caret (ha)
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>\#</code></td>
+<td>Hash mark (#)
+</td>
+</tr>
+</table>
+</dl>
+<p> Note that escapes are necessary to enter a space, backslash, caret, or any control character anywhere in the string, as well as a hash mark as the first character.  </p>
+<h2>FILES</h2>
+<dl>
+<dt><i>/etc/DIR_COLORS</i></dt>
+<dd> <p> (Slackware, SuSE and RedHat only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1) and thus Debian.) System-wide configuration file. </p>
+ </dd>
+<dt><i>~/.dir_colors</i></dt>
+<dd> <p> (Slackware, SuSE and RedHat only; ignored by GNU <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1) and thus Debian.) Per-user configuration file. </p>
+ </dd></dl>
+<p> This page describes the <code>dir_colors</code> file format as used in the fileutils-4.1 package; other versions may differ slightly.  </p>
+<h2>NOTES</h2>
+<p> The default <code>LEFTCODE</code> and <code>RIGHTCODE</code> definitions, which are used by ISO 6429 terminals are: </p>
+<dl>
+<dd> <table>
+<tr VALIGN=top>
+<td><code>LEFTCODE</code></td>
+<td>\e[
+</td>
+</tr>
+<tr VALIGN=top>
+<td><code>RIGHTCODE</code></td>
+<td>m
+</td>
+</tr>
+</table>
+ </dd></dl>
+<p> The default <code>ENDCODE</code> is undefined.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1), <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-stty/">stty</a></code>(1), <code><a href="/docs/linux/man/1-xterm/">xterm</a></code>(1)  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

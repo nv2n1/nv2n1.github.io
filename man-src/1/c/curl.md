@@ -2407,5 +2407,634 @@ curl - T file https : // example.com
 <p> On systems where it works, curl will hide the given option argument from process listings. This is not enough to protect credentials from possibly getting seen by other users on the same system as they will still be visible for a moment before cleared. Such sensitive data should be retrieved from a file instead or similar and never used in clear text in a command line. </p>
 <p> When using Kerberos V5 with a Windows based server you should include the Windows domain name in the user name, in order for the server to successfully obtain a Kerberos Ticket. If you do not, then the initial authentication handshake may fail. </p>
 <p> When using NTLM, the user name can be specified simply as the user name, without the domain, if there is a single domain and forest in your setup for example. </p>
-<p> To specify the domain name use either Down-Level Logon Name or UPN (User Principal Name) formats. For example, EXAMPLE
-</p></dl>
+<p> To specify the domain name use either Down-Level Logon Name or UPN (User Principal Name) formats. For example, EXAMPLE\user and user [at] example.com respectively. </p>
+<p> If you use a Windows SSPI-enabled curl binary and perform Kerberos V5, Negotiate, NTLM or Digest authentication then you can tell curl to select the user name and password from your environment by specifying a single colon with this option: &quot;-u :&quot;. </p>
+<p> If this option is used several times, the last one will be used. </p>
+<p> Example: </p>
+<pre><code> curl -u user:secrethttps://example.com
+</code></pre>
+<p> See also <i>-n, --netrc</i> and <i>-K, --config</i>. </p>
+<dt>-v, --verbose</dt>
+<dd> <p> Makes curl verbose during the operation. Useful for debugging and seeing what&#8217;s going on &quot;under the hood&quot;. A line starting with &#8216;&gt;&#8216; means &quot;header data&quot; sent by curl, &#8216;&lt;&#8216; means &quot;header data&quot; received by curl that is hidden in normal cases, and a line starting with &#8216;*&#8216; means additional info provided by curl. </p>
+<p> If you only want HTTP headers in the output, <i>-i, --include</i> might be the option you are looking for. </p>
+<p> If you think this option still does not give you enough details, consider using <i>--trace</i> or <i>--trace-ascii</i> instead. </p>
+<p> This option is global and does not need to be specified for each use of <i>-:, --next</i>. </p>
+<p> Use <i>-s, --silent</i> to make curl really quiet. </p>
+<p> Example: </p>
+<pre><code> curl --verbosehttps://example.com
+</code></pre>
+<p> See also <i>-i, --include</i>. This option overrides <i>--trace</i> and <i>--trace-ascii</i>. </p>
+ </dd>
+<dt>-V, --version</dt>
+<dd> <p> Displays information about curl and the libcurl version it uses. </p>
+<p> The first line includes the full version of curl, libcurl and other 3rd party libraries linked with the executable. </p>
+<p> The second line (starts with &quot;Protocols:&quot;) shows all protocols that libcurl reports to support. </p>
+<p> The third line (starts with &quot;Features:&quot;) shows specific features libcurl reports to offer. Available features include: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>alt-svc</dt>
+<dd> <p> Support for the Alt-Svc: header is provided. </p>
+ </dd>
+<dt>AsynchDNS</dt>
+<dd> <p> This curl uses asynchronous name resolves. Asynchronous name resolves can be done using either the c-ares or the threaded resolver backends. </p>
+ </dd>
+<dt>brotli</dt>
+<dd> <p> Support for automatic brotli compression over HTTP(S). </p>
+ </dd>
+<dt>CharConv</dt>
+<dd> <p> curl was built with support for character set conversions (like EBCDIC) </p>
+ </dd>
+<dt>Debug</dt>
+<dd> <p> This curl uses a libcurl built with Debug. This enables more error-tracking and memory debugging etc. For curl-developers only! </p>
+ </dd>
+<dt>gsasl</dt>
+<dd> <p> The built-in SASL authentication includes extensions to support SCRAM because libcurl was built with libgsasl. </p>
+ </dd>
+<dt>GSS-API</dt>
+<dd> <p> GSS-API is supported. </p>
+ </dd>
+<dt>HSTS</dt>
+<dd> <p> HSTS support is present. </p>
+ </dd>
+<dt>HTTP2</dt>
+<dd> <p> HTTP/2 support has been built-in. </p>
+ </dd>
+<dt>HTTP3</dt>
+<dd> <p> HTTP/3 support has been built-in. </p>
+ </dd>
+<dt>HTTPS-proxy</dt>
+<dd> <p> This curl is built to support HTTPS proxy. </p>
+ </dd>
+<dt>IDN</dt>
+<dd> <p> This curl supports IDN &#8211; international domain names. </p>
+ </dd>
+<dt>IPv6</dt>
+<dd> <p> You can use IPv6 with this. </p>
+ </dd>
+<dt>Kerberos</dt>
+<dd> <p> Kerberos V5 authentication is supported. </p>
+ </dd>
+<dt>Largefile</dt>
+<dd> <p> This curl supports transfers of large files, files larger than 2GB. </p>
+ </dd>
+<dt>libz</dt>
+<dd> <p> Automatic decompression (via gzip, deflate) of compressed files over HTTP is supported. </p>
+ </dd>
+<dt>MultiSSL</dt>
+<dd> <p> This curl supports multiple TLS backends. </p>
+ </dd>
+<dt>NTLM</dt>
+<dd> <p> NTLM authentication is supported. </p>
+ </dd>
+<dt>NTLM_WB</dt>
+<dd> <p> NTLM delegation to winbind helper is supported. </p>
+ </dd>
+<dt>PSL</dt>
+<dd> <p> PSL is short for Public Suffix List and means that this curl has been built with knowledge about &quot;public suffixes&quot;. </p>
+ </dd>
+<dt>SPNEGO</dt>
+<dd> <p> SPNEGO authentication is supported. </p>
+ </dd>
+<dt>SSL</dt>
+<dd> <p> SSL versions of various protocols are supported, such as HTTPS, FTPS, POP3S and so on. </p>
+ </dd>
+<dt>SSPI</dt>
+<dd> <p> SSPI is supported. </p>
+ </dd>
+<dt>TLS-SRP</dt>
+<dd> <p> SRP (Secure Remote Password) authentication is supported for TLS. </p>
+ </dd>
+<dt>TrackMemory</dt>
+<dd> <p> Debug memory tracking is supported. </p>
+ </dd>
+<dt>Unicode</dt>
+<dd> <p> Unicode support on Windows. </p>
+ </dd>
+<dt>UnixSockets</dt>
+<dd> <p> Unix sockets support is provided. </p>
+ </dd>
+<dt>zstd</dt>
+<dd> <p> Automatic decompression (via zstd) of compressed files over HTTP is supported. </p>
+ </dd></dl>
+</dl>
+<p> Example: </p>
+<pre><code> curl --version
+</code></pre>
+<p> See also <i>-h, --help</i> and <i>-M, --manual</i>. </p>
+<dt>-w, --write-out &lt;format&gt;</dt>
+<dd> <p> Make curl display information on stdout after a completed transfer. The format is a string that may contain plain text mixed with any number of variables. The format can be specified as a literal &quot;string&quot;, or you can have curl read the format from a file with &quot;@filename&quot; and to tell curl to read the format from stdin you write &quot;@-&quot;. </p>
+<p> The variables present in the output format will be substituted by the value or text that curl thinks fit, as described below. All variables are specified as %{variable_name} and to output a normal % you just write them as %%. You can output a newline by using \n, a carriage return with \r and a tab space with \t. </p>
+<p> The output will be written to standard output, but this can be switched to standard error by using %{stderr}. </p>
+<p> <code>NOTE:</code> The %-symbol is a special symbol in the win32-environment, where all occurrences of % must be doubled when using this option. </p>
+<p> The variables available are: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt><code>content_type</code></dt>
+<dd> <p> The Content-Type of the requested document, if there was any. </p>
+ </dd>
+<dt><code>errormsg</code></dt>
+<dd> <p> The error message. (Added in 7.75.0) </p>
+ </dd>
+<dt><code>exitcode</code></dt>
+<dd> <p> The numerical exitcode of the transfer. (Added in 7.75.0) </p>
+ </dd>
+<dt><code>filename_effective</code></dt>
+<dd> <p> The ultimate filename that curl writes out to. This is only meaningful if curl is told to write to a file with the <i>-O, --remote-name</i> or <i>-o, --output</i> option. It&#8217;s most useful in combination with the <i>-J, --remote-header-name</i> option. </p>
+ </dd>
+<dt><code>ftp_entry_path</code></dt>
+<dd> <p> The initial path curl ended up in when logging on to the remote FTP server. </p>
+ </dd>
+<dt><code>http_code</code></dt>
+<dd> <p> The numerical response code that was found in the last retrieved HTTP(S) or FTP(s) transfer. </p>
+ </dd>
+<dt><code>http_connect</code></dt>
+<dd> <p> The numerical code that was found in the last response (from a proxy) to a curl CONNECT request. </p>
+ </dd>
+<dt><code>http_version</code></dt>
+<dd> <p> The http version that was effectively used. (Added in 7.50.0) </p>
+ </dd>
+<dt><code>json</code></dt>
+<dd> <p> A JSON object with all available keys. </p>
+ </dd>
+<dt><code>local_ip</code></dt>
+<dd> <p> The IP address of the local end of the most recently done connection &#8211; can be either IPv4 or IPv6. </p>
+ </dd>
+<dt><code>local_port</code></dt>
+<dd> <p> The local port number of the most recently done connection. </p>
+ </dd>
+<dt><code>method</code></dt>
+<dd> <p> The http method used in the most recent HTTP request. (Added in 7.72.0) </p>
+ </dd>
+<dt><code>num_connects</code></dt>
+<dd> <p> Number of new connects made in the recent transfer. </p>
+ </dd>
+<dt><code>num_headers</code></dt>
+<dd> <p> The number of response headers in the most recent request (restarted at each </p>
+<pre><code> redirect). Note that the status line IS NOT a header. (Added in 7.73.0)
+</code></pre>
+ </dd>
+<dt><code>num_redirects</code></dt>
+<dd> <p> Number of redirects that were followed in the request. </p>
+ </dd>
+<dt><code>onerror</code></dt>
+<dd> <p> The rest of the output is only shown if the transfer returned a non-zero error (Added in 7.75.0) </p>
+ </dd>
+<dt><code>proxy_ssl_verify_result</code></dt>
+<dd> <p> The result of the HTTPS proxy&#8217;s SSL peer certificate verification that was requested. 0 means the verification was successful. (Added in 7.52.0) </p>
+ </dd>
+<dt><code>redirect_url</code></dt>
+<dd> <p> When an HTTP request was made without <i>-L, --location</i> to follow redirects (or when <i>--max-redirs</i> is met), this variable will show the actual URL a redirect <i>would</i> have gone to. </p>
+ </dd>
+<dt><code>referer</code></dt>
+<dd> <p> The Referer: header, if there was any. (Added in 7.76.0) </p>
+ </dd>
+<dt><code>remote_ip</code></dt>
+<dd> <p> The remote IP address of the most recently done connection &#8211; can be either IPv4 or IPv6. </p>
+ </dd>
+<dt><code>remote_port</code></dt>
+<dd> <p> The remote port number of the most recently done connection. </p>
+ </dd>
+<dt><code>response_code</code></dt>
+<dd> <p> The numerical response code that was found in the last transfer (formerly known as &quot;http_code&quot;). </p>
+ </dd>
+<dt><code>scheme</code></dt>
+<dd> <p> The URL scheme (sometimes called protocol) that was effectively used. (Added in 7.52.0) </p>
+ </dd>
+<dt><code>size_download</code></dt>
+<dd> <p> The total amount of bytes that were downloaded. This is the size of the body/data that was transferred, excluding headers. </p>
+ </dd>
+<dt><code>size_header</code></dt>
+<dd> <p> The total amount of bytes of the downloaded headers. </p>
+ </dd>
+<dt><code>size_request</code></dt>
+<dd> <p> The total amount of bytes that were sent in the HTTP request. </p>
+ </dd>
+<dt><code>size_upload</code></dt>
+<dd> <p> The total amount of bytes that were uploaded. This is the size of the body/data that was transferred, excluding headers. </p>
+ </dd>
+<dt><code>speed_download</code></dt>
+<dd> <p> The average download speed that curl measured for the complete download. Bytes per second. </p>
+ </dd>
+<dt><code>speed_upload</code></dt>
+<dd> <p> The average upload speed that curl measured for the complete upload. Bytes per second. </p>
+ </dd>
+<dt><code>ssl_verify_result</code></dt>
+<dd> <p> The result of the SSL peer certificate verification that was requested. 0 means the verification was successful. </p>
+ </dd>
+<dt><code>stderr</code></dt>
+<dd> <p> From this point on, the <i>-w, --write-out</i> output will be written to standard error. (Added in 7.63.0) </p>
+ </dd>
+<dt><code>stdout</code></dt>
+<dd> <p> From this point on, the <i>-w, --write-out</i> output will be written to standard output. This is the default, but can be used to switch back after switching to stderr. (Added in 7.63.0) </p>
+ </dd>
+<dt><code>time_appconnect</code></dt>
+<dd> <p> The time, in seconds, it took from the start until the SSL/SSH/etc connect/handshake to the remote host was completed. </p>
+ </dd>
+<dt><code>time_connect</code></dt>
+<dd> <p> The time, in seconds, it took from the start until the TCP connect to the remote host (or proxy) was completed. </p>
+ </dd>
+<dt><code>time_namelookup</code></dt>
+<dd> <p> The time, in seconds, it took from the start until the name resolving was completed. </p>
+ </dd>
+<dt><code>time_pretransfer</code></dt>
+<dd> <p> The time, in seconds, it took from the start until the file transfer was just about to begin. This includes all pre-transfer commands and negotiations that are specific to the particular protocol(s) involved. </p>
+ </dd>
+<dt><code>time_redirect</code></dt>
+<dd> <p> The time, in seconds, it took for all redirection steps including name lookup, connect, pretransfer and transfer before the final transaction was started. time_redirect shows the complete execution time for multiple redirections. </p>
+ </dd>
+<dt><code>time_starttransfer</code></dt>
+<dd> <p> The time, in seconds, it took from the start until the first byte was just about to be transferred. This includes time_pretransfer and also the time the server needed to calculate the result. </p>
+ </dd>
+<dt><code>time_total</code></dt>
+<dd> <p> The total time, in seconds, that the full operation lasted. </p>
+ </dd>
+<dt><code>url</code></dt>
+<dd> <p> The URL that was fetched. (Added in 7.75.0) </p>
+ </dd>
+<dt><code>urlnum</code></dt>
+<dd> <p> The URL index number of this transfer, 0-indexed. De-globbed URLs share the same index number as the origin globbed URL. (Added in 7.75.0) </p>
+ </dd>
+<dt><code>url_effective</code></dt>
+<dd> <p> The URL that was fetched last. This is most meaningful if you have told curl to follow location: headers. </p>
+ </dd></dl>
+</dl>
+<dd> <p> If this option is used several times, the last one will be used. </p>
+<p> Example: </p>
+<pre><code> curl -w '%{http_code}\n'https://example.com
+</code></pre>
+<p> See also <i>-v, --verbose</i> and <i>-I, --head</i>. </p>
+ </dd>
+<dt>--xattr</dt>
+<dd> <p> When saving output to a file, this option tells curl to store certain file metadata in extended file attributes. Currently, the URL is stored in the xdg.origin.url attribute and, for HTTP, the content type is stored in the mime_type attribute. If the file system does not support extended attributes, a warning is issued. </p>
+<p> Example: </p>
+<pre><code> curl --xattr -o storagehttps://example.com
+</code></pre>
+<p> See also <i>-R, --remote-time</i>, <i>-w, --write-out</i> and <i>-v, --verbose</i>. </p>
+ </dd></dl>
+<h2>FILES</h2>
+<p> <i>~/.curlrc</i> </p>
+<dl>
+<dd> <p> Default config file, see <i>-K, --config</i> for details. </p>
+ </dd></dl>
+<h2>ENVIRONMENT</h2>
+<p> The environment variables can be specified in lower case or upper case. The lower case version has precedence. http_proxy is an exception as it is only available in lower case. </p>
+<p> Using an environment variable to set the proxy has the same effect as using the <i>-x, --proxy</i> option. </p>
+<dl>
+<dt>http_proxy [protocol://]&lt;host&gt;[:port]</dt>
+<dd> <p> Sets the proxy server to use for HTTP. </p>
+ </dd>
+<dt>HTTPS_PROXY [protocol://]&lt;host&gt;[:port]</dt>
+<dd> <p> Sets the proxy server to use for HTTPS. </p>
+ </dd>
+<dt>[url-protocol]_PROXY [protocol://]&lt;host&gt;[:port]</dt>
+<dd> <p> Sets the proxy server to use for [url-protocol], where the protocol is a protocol that curl supports and as specified in a URL. FTP, FTPS, POP3, IMAP, SMTP, LDAP, etc. </p>
+ </dd>
+<dt>ALL_PROXY [protocol://]&lt;host&gt;[:port]</dt>
+<dd> <p> Sets the proxy server to use if no protocol-specific proxy is set. </p>
+ </dd>
+<dt>NO_PROXY &lt;comma-separated list of hosts/domains&gt;</dt>
+<dd> <p> list of host names that should not go through any proxy. If set to an asterisk &#8216;*&#8216; only, it matches all hosts. Each name in this list is matched as either a domain name which contains the hostname, or the hostname itself. </p>
+<p> This environment variable disables use of the proxy even when specified with the <i>-x, --proxy</i> option. That is <code>NO_PROXY=direct.example.com curl -x <a rel="nofollow" href="http://proxy.example.com">http://proxy.example.com</a></code> <code><a rel="nofollow" href="http://direct.example.com">http://direct.example.com</a></code> accesses the target URL directly, and <code>NO_PROXY=direct.example.com curl -x <a rel="nofollow" href="http://proxy.example.com">http://proxy.example.com</a></code> <code><a rel="nofollow" href="http://somewhere.example.com">http://somewhere.example.com</a></code> accesses the target URL through the proxy. </p>
+<p> The list of host names can also be include numerical IP addresses, and IPv6 versions should then be given without enclosing brackets. </p>
+<p> IPv6 numerical addresses are compared as strings, so they will only match if the representations are the same: &quot;::1&quot; is the same as &quot;::0:1&quot; but they do not match. </p>
+ </dd>
+<dt>APPDATA &lt;dir&gt;</dt>
+<dd> <p> On Windows, this variable is used when trying to find the home directory. If the primary home variable are all unset. </p>
+ </dd>
+<dt>COLUMNS &lt;terminal width&gt;</dt>
+<dd> <p> If set, the specified number of characters will be used as the terminal width when the alternative progress-bar is shown. If not set, curl will try to figure it out using other ways. </p>
+ </dd>
+<dt>CURL_CA_BUNDLE &lt;file&gt;</dt>
+<dd> <p> If set, will be used as the <i>--cacert</i> value. </p>
+ </dd>
+<dt>CURL_HOME &lt;dir&gt;</dt>
+<dd> <p> If set, is the first variable curl checks when trying to find its home directory. If not set, it continues to check <code>XDG_CONFIG_HOME</code>. </p>
+ </dd>
+<dt>CURL_SSL_BACKEND &lt;TLS backend&gt;</dt>
+<dd> <p> If curl was built with support for &quot;MultiSSL&quot;, meaning that it has built-in support for more than one TLS backend, this environment variable can be set to the case insensitive name of the particular backend to use when curl is invoked. Setting a name that is not a built-in alternative will make curl stay with the default. </p>
+<p> SSL backend names (case-insensitive): bearssl, gnutls, gskit, mbedtls, mesalink, nss, openssl, rustls, schannel, secure-transport, wolfssl </p>
+ </dd>
+<dt>HOME &lt;dir&gt;</dt>
+<dd> <p> If set, this is used to find the home directory when that is needed. Like when looking for the default .curlrc. <code>CURL_HOME</code> and <code>XDG_CONFIG_HOME</code> have preference. </p>
+ </dd>
+<dt>QLOGDIR &lt;directory name&gt;</dt>
+<dd> <p> If curl was built with HTTP/3 support, setting this environment variable to a local directory will make curl produce qlogs in that directory, using file names named after the destination connection id (in hex). Do note that these files can become rather large. Works with both QUIC backends. </p>
+ </dd>
+<dt>SHELL</dt>
+<dd> <p> Used on VMS when trying to detect if using a DCL or a &quot;unix&quot; shell. </p>
+ </dd>
+<dt>SSL_CERT_DIR &lt;dir&gt;</dt>
+<dd> <p> If set, will be used as the <i>--capath</i> value. </p>
+ </dd>
+<dt>SSL_CERT_FILE &lt;path&gt;</dt>
+<dd> <p> If set, will be used as the <i>--cacert</i> value. </p>
+ </dd>
+<dt>SSLKEYLOGFILE &lt;file name&gt;</dt>
+<dd> <p> If you set this environment variable to a file name, curl will store TLS secrets from its connections in that file when invoked to enable you to analyze the TLS traffic in real time using network analyzing tools such as Wireshark. This works with the following TLS backends: OpenSSL, libressl, BoringSSL, GnuTLS, NSS and wolfSSL. </p>
+ </dd>
+<dt>USERPROFILE &lt;dir&gt;</dt>
+<dd> <p> On Windows, this variable is used when trying to find the home directory. If the other, primary, variable are all unset. If set, curl will use the path &quot;$USERPROFILE\Application Data&quot;. </p>
+ </dd>
+<dt>XDG_CONFIG_HOME &lt;dir&gt;</dt>
+<dd> <p> If <code>CURL_HOME</code> is not set, this variable is checked when looking for a default .curlrc file. </p>
+ </dd></dl>
+<h2>PROXY PROTOCOL PREFIXES</h2>
+<p> The proxy string may be specified with a protocol:// prefix to specify alternative proxy protocols. </p>
+<p> If no protocol is specified in the proxy string or if the string does not match a supported one, the proxy will be treated as an HTTP proxy. </p>
+<p> The supported proxy protocol prefixes are as follows: </p>
+<dl>
+<dt>http://</dt>
+<dd> <p> Makes it use it as an HTTP proxy. The default if no scheme prefix is used. </p>
+ </dd>
+<dt>https://</dt>
+<dd> <p> Makes it treated as an <code>HTTPS</code> proxy. </p>
+ </dd>
+<dt>socks4://</dt>
+<dd> <p> Makes it the equivalent of <i>--socks4</i> </p>
+ </dd>
+<dt>socks4a://</dt>
+<dd> <p> Makes it the equivalent of <i>--socks4a</i> </p>
+ </dd>
+<dt>socks5://</dt>
+<dd> <p> Makes it the equivalent of <i>--socks5</i> </p>
+ </dd>
+<dt>socks5h://</dt>
+<dd> <p> Makes it the equivalent of <i>--socks5-hostname</i> </p>
+ </dd></dl>
+<h2>EXIT CODES</h2>
+<p> There are a bunch of different error codes and their corresponding error messages that may appear under error conditions. At the time of this writing, the exit codes are: </p>
+<dl>
+<dt>1</dt>
+<dd> <p> Unsupported protocol. This build of curl has no support for this protocol. </p>
+ </dd>
+<dt>2</dt>
+<dd> <p> Failed to initialize. </p>
+ </dd>
+<dt>3</dt>
+<dd> <p> URL malformed. The syntax was not correct. </p>
+ </dd>
+<dt>4</dt>
+<dd> <p> A feature or option that was needed to perform the desired request was not enabled or was explicitly disabled at build-time. To make curl able to do this, you probably need another build of libcurl. </p>
+ </dd>
+<dt>5</dt>
+<dd> <p> Could not resolve proxy. The given proxy host could not be resolved. </p>
+ </dd>
+<dt>6</dt>
+<dd> <p> Could not resolve host. The given remote host could not be resolved. </p>
+ </dd>
+<dt>7</dt>
+<dd> <p> Failed to connect to host. </p>
+ </dd>
+<dt>8</dt>
+<dd> <p> Weird server reply. The server sent data curl could not parse. </p>
+ </dd>
+<dt>9</dt>
+<dd> <p> FTP access denied. The server denied login or denied access to the particular resource or directory you wanted to reach. Most often you tried to change to a directory that does not exist on the server. </p>
+ </dd>
+<dt>10</dt>
+<dd> <p> FTP accept failed. While waiting for the server to connect back when an active FTP session is used, an error code was sent over the control connection or similar. </p>
+ </dd>
+<dt>11</dt>
+<dd> <p> FTP weird PASS reply. Curl could not parse the reply sent to the PASS request. </p>
+ </dd>
+<dt>12</dt>
+<dd> <p> During an active FTP session while waiting for the server to connect back to curl, the timeout expired. </p>
+ </dd>
+<dt>13</dt>
+<dd> <p> FTP weird PASV reply, Curl could not parse the reply sent to the PASV request. </p>
+ </dd>
+<dt>14</dt>
+<dd> <p> FTP weird 227 format. Curl could not parse the 227-line the server sent. </p>
+ </dd>
+<dt>15</dt>
+<dd> <p> FTP cannot use host. Could not resolve the host IP we got in the 227-line. </p>
+ </dd>
+<dt>16</dt>
+<dd> <p> HTTP/2 error. A problem was detected in the HTTP2 framing layer. This is somewhat generic and can be one out of several problems, see the error message for details. </p>
+ </dd>
+<dt>17</dt>
+<dd> <p> FTP could not set binary. Could not change transfer method to binary. </p>
+ </dd>
+<dt>18</dt>
+<dd> <p> Partial file. Only a part of the file was transferred. </p>
+ </dd>
+<dt>19</dt>
+<dd> <p> FTP could not download/access the given file, the RETR (or similar) command failed. </p>
+ </dd>
+<dt>21</dt>
+<dd> <p> FTP quote error. A quote command returned error from the server. </p>
+ </dd>
+<dt>22</dt>
+<dd> <p> HTTP page not retrieved. The requested url was not found or returned another error with the HTTP error code being 400 or above. This return code only appears if <i>-f, --fail</i> is used. </p>
+ </dd>
+<dt>23</dt>
+<dd> <p> Write error. Curl could not write data to a local filesystem or similar. </p>
+ </dd>
+<dt>25</dt>
+<dd> <p> FTP could not STOR file. The server denied the STOR operation, used for FTP uploading. </p>
+ </dd>
+<dt>26</dt>
+<dd> <p> Read error. Various reading problems. </p>
+ </dd>
+<dt>27</dt>
+<dd> <p> Out of memory. A memory allocation request failed. </p>
+ </dd>
+<dt>28</dt>
+<dd> <p> Operation timeout. The specified time-out period was reached according to the conditions. </p>
+ </dd>
+<dt>30</dt>
+<dd> <p> FTP PORT failed. The PORT command failed. Not all FTP servers support the PORT command, try doing a transfer using PASV instead! </p>
+ </dd>
+<dt>31</dt>
+<dd> <p> FTP could not use REST. The REST command failed. This command is used for resumed FTP transfers. </p>
+ </dd>
+<dt>33</dt>
+<dd> <p> HTTP range error. The range &quot;command&quot; did not work. </p>
+ </dd>
+<dt>34</dt>
+<dd> <p> HTTP post error. Internal post-request generation error. </p>
+ </dd>
+<dt>35</dt>
+<dd> <p> SSL connect error. The SSL handshaking failed. </p>
+ </dd>
+<dt>36</dt>
+<dd> <p> Bad download resume. Could not continue an earlier aborted download. </p>
+ </dd>
+<dt>37</dt>
+<dd> <p> FILE could not read file. Failed to open the file. Permissions? </p>
+ </dd>
+<dt>38</dt>
+<dd> <p> LDAP cannot bind. LDAP bind operation failed. </p>
+ </dd>
+<dt>39</dt>
+<dd> <p> LDAP search failed. </p>
+ </dd>
+<dt>41</dt>
+<dd> <p> Function not found. A required LDAP function was not found. </p>
+ </dd>
+<dt>42</dt>
+<dd> <p> Aborted by callback. An application told curl to abort the operation. </p>
+ </dd>
+<dt>43</dt>
+<dd> <p> Internal error. A function was called with a bad parameter. </p>
+ </dd>
+<dt>45</dt>
+<dd> <p> Interface error. A specified outgoing interface could not be used. </p>
+ </dd>
+<dt>47</dt>
+<dd> <p> Too many redirects. When following redirects, curl hit the maximum amount. </p>
+ </dd>
+<dt>48</dt>
+<dd> <p> Unknown option specified to libcurl. This indicates that you passed a weird option to curl that was passed on to libcurl and rejected. Read up in the manual! </p>
+ </dd>
+<dt>49</dt>
+<dd> <p> Malformed telnet option. </p>
+ </dd>
+<dt>51</dt>
+<dd> <p> The peer&#8217;s SSL certificate or SSH MD5 fingerprint was not OK. </p>
+ </dd>
+<dt>52</dt>
+<dd> <p> The server did not reply anything, which here is considered an error. </p>
+ </dd>
+<dt>53</dt>
+<dd> <p> SSL crypto engine not found. </p>
+ </dd>
+<dt>54</dt>
+<dd> <p> Cannot set SSL crypto engine as default. </p>
+ </dd>
+<dt>55</dt>
+<dd> <p> Failed sending network data. </p>
+ </dd>
+<dt>56</dt>
+<dd> <p> Failure in receiving network data. </p>
+ </dd>
+<dt>58</dt>
+<dd> <p> Problem with the local certificate. </p>
+ </dd>
+<dt>59</dt>
+<dd> <p> Could not use specified SSL cipher. </p>
+ </dd>
+<dt>60</dt>
+<dd> <p> Peer certificate cannot be authenticated with known CA certificates. </p>
+ </dd>
+<dt>61</dt>
+<dd> <p> Unrecognized transfer encoding. </p>
+ </dd>
+<dt>62</dt>
+<dd> <p> Invalid LDAP URL. </p>
+ </dd>
+<dt>63</dt>
+<dd> <p> Maximum file size exceeded. </p>
+ </dd>
+<dt>64</dt>
+<dd> <p> Requested FTP SSL level failed. </p>
+ </dd>
+<dt>65</dt>
+<dd> <p> Sending the data requires a rewind that failed. </p>
+ </dd>
+<dt>66</dt>
+<dd> <p> Failed to initialise SSL Engine. </p>
+ </dd>
+<dt>67</dt>
+<dd> <p> The user name, password, or similar was not accepted and curl failed to log in. </p>
+ </dd>
+<dt>68</dt>
+<dd> <p> File not found on TFTP server. </p>
+ </dd>
+<dt>69</dt>
+<dd> <p> Permission problem on TFTP server. </p>
+ </dd>
+<dt>70</dt>
+<dd> <p> Out of disk space on TFTP server. </p>
+ </dd>
+<dt>71</dt>
+<dd> <p> Illegal TFTP operation. </p>
+ </dd>
+<dt>72</dt>
+<dd> <p> Unknown TFTP transfer ID. </p>
+ </dd>
+<dt>73</dt>
+<dd> <p> File already exists (TFTP). </p>
+ </dd>
+<dt>74</dt>
+<dd> <p> No such user (TFTP). </p>
+ </dd>
+<dt>75</dt>
+<dd> <p> Character conversion failed. </p>
+ </dd>
+<dt>76</dt>
+<dd> <p> Character conversion functions required. </p>
+ </dd>
+<dt>77</dt>
+<dd> <p> Problem reading the SSL CA cert (path? access rights?). </p>
+ </dd>
+<dt>78</dt>
+<dd> <p> The resource referenced in the URL does not exist. </p>
+ </dd>
+<dt>79</dt>
+<dd> <p> An unspecified error occurred during the SSH session. </p>
+ </dd>
+<dt>80</dt>
+<dd> <p> Failed to shut down the SSL connection. </p>
+ </dd>
+<dt>82</dt>
+<dd> <p> Could not load CRL file, missing or wrong format. </p>
+ </dd>
+<dt>83</dt>
+<dd> <p> Issuer check failed. </p>
+ </dd>
+<dt>84</dt>
+<dd> <p> The FTP PRET command failed. </p>
+ </dd>
+<dt>85</dt>
+<dd> <p> Mismatch of RTSP CSeq numbers. </p>
+ </dd>
+<dt>86</dt>
+<dd> <p> Mismatch of RTSP Session Identifiers. </p>
+ </dd>
+<dt>87</dt>
+<dd> <p> Unable to parse FTP file list. </p>
+ </dd>
+<dt>88</dt>
+<dd> <p> FTP chunk callback reported error. </p>
+ </dd>
+<dt>89</dt>
+<dd> <p> No connection available, the session will be queued. </p>
+ </dd>
+<dt>90</dt>
+<dd> <p> SSL public key does not matched pinned public key. </p>
+ </dd>
+<dt>91</dt>
+<dd> <p> Invalid SSL certificate status. </p>
+ </dd>
+<dt>92</dt>
+<dd> <p> Stream error in HTTP/2 framing layer. </p>
+ </dd>
+<dt>93</dt>
+<dd> <p> An API function was called from inside a callback. </p>
+ </dd>
+<dt>94</dt>
+<dd> <p> An authentication function returned an error. </p>
+ </dd>
+<dt>95</dt>
+<dd> <p> A problem was detected in the HTTP/3 layer. This is somewhat generic and can be one out of several problems, see the error message for details. </p>
+ </dd>
+<dt>96</dt>
+<dd> <p> QUIC connection error. This error may be caused by an SSL library error. QUIC is the protocol used for HTTP/3 transfers. </p>
+ </dd>
+<dt>XX</dt>
+<dd> <p> More error codes will appear here in future releases. The existing ones are meant to never change. </p>
+ </dd></dl>
+<h2>BUGS</h2>
+<p> If you experience any problems with curl, submit an issue in the project&#8217;s bug tracker on GitHub: <a rel="nofollow" href="https://github.com/curl/curl/issues">https://github.com/curl/curl/issues</a>  </p>
+<h2>AUTHORS / CONTRIBUTORS</h2>
+<p> Daniel Stenberg is the main author, but the whole list of contributors is found in the separate THANKS file.  </p>
+<h2>WWW</h2>
+<p> <a rel="nofollow" href="https://curl.se">https://curl.se</a>  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) </p>
+<h2>Index</h2>

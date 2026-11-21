@@ -284,5 +284,475 @@ $is_ebcdic = $Config{&#8216;ebcdic&#8217;} eq &#8216;define&#8217;;</p>
 <p> For example, to convert ASCII/Latin1 to code page 037 take the output of the second numbers column from the output of recipe 2 (modified to add <tt>&quot;\&quot;</tt> characters), and use it in <tt>&quot;tr///&quot;</tt> like so: </p>
 <pre>
     $cp_037 =
-    '
-</pre>
+    '\x00\x01\x02\x03\x37\x2D\x2E\x2F\x16\x05\x25\x0B\x0C\x0D\x0E\x0F' .
+    '\x10\x11\x12\x13\x3C\x3D\x32\x26\x18\x19\x3F\x27\x1C\x1D\x1E\x1F' .
+    '\x40\x5A\x7F\x7B\x5B\x6C\x50\x7D\x4D\x5D\x5C\x4E\x6B\x60\x4B\x61' .
+    '\xF0\xF1\xF2\xF3\xF4\xF5\xF6\xF7\xF8\xF9\x7A\x5E\x4C\x7E\x6E\x6F' .
+    '\x7C\xC1\xC2\xC3\xC4\xC5\xC6\xC7\xC8\xC9\xD1\xD2\xD3\xD4\xD5\xD6' .
+    '\xD7\xD8\xD9\xE2\xE3\xE4\xE5\xE6\xE7\xE8\xE9\xBA\xE0\xBB\xB0\x6D' .
+    '\x79\x81\x82\x83\x84\x85\x86\x87\x88\x89\x91\x92\x93\x94\x95\x96' .
+    '\x97\x98\x99\xA2\xA3\xA4\xA5\xA6\xA7\xA8\xA9\xC0\x4F\xD0\xA1\x07' .
+    '\x20\x21\x22\x23\x24\x15\x06\x17\x28\x29\x2A\x2B\x2C\x09\x0A\x1B' .
+    '\x30\x31\x1A\x33\x34\x35\x36\x08\x38\x39\x3A\x3B\x04\x14\x3E\xFF' .
+    '\x41\xAA\x4A\xB1\x9F\xB2\x6A\xB5\xBD\xB4\x9A\x8A\x5F\xCA\xAF\xBC' .
+    '\x90\x8F\xEA\xFA\xBE\xA0\xB6\xB3\x9D\xDA\x9B\x8B\xB7\xB8\xB9\xAB' .
+    '\x64\x65\x62\x66\x63\x67\x9E\x68\x74\x71\x72\x73\x78\x75\x76\x77' .
+    '\xAC\x69\xED\xEE\xEB\xEF\xEC\xBF\x80\xFD\xFE\xFB\xFC\xAD\xAE\x59' .
+    '\x44\x45\x42\x46\x43\x47\x9C\x48\x54\x51\x52\x53\x58\x55\x56\x57' .
+    '\x8C\x49\xCD\xCE\xCB\xCF\xCC\xE1\x70\xDD\xDE\xDB\xDC\x8D\x8E\xDF';
+    my $ebcdic_string = $ascii_string;
+    eval '$ebcdic_string =~ tr/\000-\377/' . $cp_037 . '/';
+</code></pre>
+<p> To convert from <font SIZE="-1">EBCDIC 037</font> to <font SIZE="-1">ASCII</font> just reverse the order of the tr/// arguments like so: </p>
+<pre><code>    my $ascii_string = $ebcdic_string;
+    eval '$ascii_string =~ tr/' . $cp_037 . '/\000-\377/';
+</code></pre>
+<p> Similarly one could take the output of the third numbers column from recipe 2 to obtain a <code>$cp_1047</code> table. The fourth numbers column of the output from recipe 2 could provide a <code>$cp_posix_bc</code> table suitable for transcoding as well. </p>
+<p> If you wanted to see the inverse tables, you would first have to sort on the desired numbers column as in recipes 4, 5 or 6, then take the output of the first numbers column.  </p>
+<h3>iconv</h3>
+<p> <font SIZE="-1">XPG</font> operability often implies the presence of an <i>iconv</i> utility available from the shell or from the C library. Consult your system&#8217;s documentation for information on iconv. </p>
+<p> On <font SIZE="-1">OS/390</font> or z/OS see the <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) manpage. One way to invoke the <code>&quot;iconv&quot;</code> shell utility from within perl would be to: </p>
+<pre><code>    # OS/390 or z/OS example
+    $ascii_data = `echo '$ebcdic_data'| iconv -f IBM-1047 -t ISO8859-1`
+</code></pre>
+<p> or the inverse map: </p>
+<pre><code>    # OS/390 or z/OS example
+    $ebcdic_data = `echo '$ascii_data'| iconv -f ISO8859-1 -t IBM-1047`
+</code></pre>
+<p> For other Perl-based conversion options see the <code>&quot;Convert::*&quot;</code> modules on <font SIZE="-1">CPAN.</font>  </p>
+<font SIZE="-1"></font><h3>C RTL</h3>
+<p> The <font SIZE="-1">OS/390</font> and z/OS C run-time libraries provide <code>&quot;_atoe()&quot;</code> and <code>&quot;_etoa()&quot;</code> functions.  </p>
+<h2>OPERATOR DIFFERENCES</h2>
+<p> The <code>&quot;..&quot;</code> range operator treats certain character ranges with care on <font SIZE="-1">EBCDIC</font> platforms. For example the following array will have twenty six elements on either an <font SIZE="-1">EBCDIC</font> platform or an <font SIZE="-1">ASCII</font> platform: </p>
+<pre><code>    @alphabet = ('A'..'Z'); # $#alphabet == 25
+</code></pre>
+<p> The bitwise operators such as &amp; ^ | may return different results when operating on string or character data in a Perl program running on an <font SIZE="-1">EBCDIC</font> platform than when run on an <font SIZE="-1">ASCII</font> platform. Here is an example adapted from the one in perlop: </p>
+<pre><code>    # EBCDIC-based examples
+    print &quot;j p \n&quot; ^ &quot; a h&quot;; # prints &quot;JAPH\n&quot;
+    print &quot;JA&quot; | &quot; ph\n&quot;; # prints &quot;japh\n&quot;
+    print &quot;JAPH\nJunk&quot; &amp; &quot;\277\277\277\277\277&quot;; # prints &quot;japh\n&quot;;
+    print 'p N$' ^ &quot; E&lt;H\n&quot;; # prints &quot;Perl\n&quot;;
+</code></pre>
+<p> An interesting property of the 32 C0 control characters in the <font SIZE="-1">ASCII</font> table is that they can ``literally&#8217;&#8216; be constructed as control characters in Perl, e.g. <code>&quot;(chr(0)&quot;</code> eq <code>&quot;\c@&quot;</code>)&gt; <code>&quot;(<a href="/docs/linux/man/1-chr/">chr</a>(1)&quot;</code> eq <code>&quot;\cA&quot;</code>)&gt;, and so on. Perl on <font SIZE="-1">EBCDIC</font> platforms has been ported to take <code>&quot;\c@&quot;</code> to <code>chr(0)</code> and <code>&quot;\cA&quot;</code> to <code><a href="/docs/linux/man/1-chr/">chr</a>(1)</code>, etc. as well, but the characters that result depend on which code page you are using. The table below uses the standard acronyms for the controls. The POSIX-BC and 1047 sets are identical throughout this range and differ from the 0037 set at only one spot (21 decimal). Note that the line terminator character may be generated by <code>&quot;\cJ&quot;</code> on <font SIZE="-1">ASCII</font> platforms but by <code>&quot;\cU&quot;</code> on 1047 or POSIX-BC platforms and cannot be generated as a <code>&quot;\c.letter.&quot;</code> control character on 0037 platforms. Note also that <code>&quot;\c\&quot;</code> cannot be the final element in a string or regex, as it will absorb the terminator. But <code>&quot;\c\</code>X <code>&quot;</code> is a <code>&quot;FILE SEPARATOR&quot;</code> concatenated with <i>X</i> for all <i>X</i>. The outlier <code>&quot;\c?&quot;</code> on <font SIZE="-1">ASCII,</font> which yields a non-C0 control <code>&quot;DEL&quot;</code>, yields the outlier control <code>&quot;APC&quot;</code> on <font SIZE="-1">EBCDIC,</font> the one that isn&#8217;t in the block of contiguous controls. Note that a subtlety of this is that <code>&quot;\c?&quot;</code> on <font SIZE="-1">ASCII</font> platforms is an <font SIZE="-1">ASCII</font> character, while it isn&#8217;t equivalent to any <font SIZE="-1">ASCII</font> character in <font SIZE="-1">EBCDIC</font> platforms. </p>
+<pre><code> chr ord 8859-1 0037 1047 &amp;&amp; POSIX-BC
+ -----------------------------------------------------------------------
+ \c@ 0 &lt;NUL&gt; &lt;NUL&gt; &lt;NUL&gt;
+ \cA 1 &lt;SOH&gt; &lt;SOH&gt; &lt;SOH&gt;
+ \cB 2 &lt;STX&gt; &lt;STX&gt; &lt;STX&gt;
+ \cC 3 &lt;ETX&gt; &lt;ETX&gt; &lt;ETX&gt;
+ \cD 4 &lt;EOT&gt; &lt;ST&gt; &lt;ST&gt;
+ \cE 5 &lt;ENQ&gt; &lt;HT&gt; &lt;HT&gt;
+ \cF 6 &lt;ACK&gt; &lt;SSA&gt; &lt;SSA&gt;
+ \cG 7 &lt;BEL&gt; &lt;DEL&gt; &lt;DEL&gt;
+ \cH 8 &lt;BS&gt; &lt;EPA&gt; &lt;EPA&gt;
+ \cI 9 &lt;HT&gt; &lt;RI&gt; &lt;RI&gt;
+ \cJ 10 &lt;LF&gt; &lt;SS2&gt; &lt;SS2&gt;
+ \cK 11 &lt;VT&gt; &lt;VT&gt; &lt;VT&gt;
+ \cL 12 &lt;FF&gt; &lt;FF&gt; &lt;FF&gt;
+ \cM 13 &lt;CR&gt; &lt;CR&gt; &lt;CR&gt;
+ \cN 14 &lt;SO&gt; &lt;SO&gt; &lt;SO&gt;
+ \cO 15 &lt;SI&gt; &lt;SI&gt; &lt;SI&gt;
+ \cP 16 &lt;DLE&gt; &lt;DLE&gt; &lt;DLE&gt;
+ \cQ 17 &lt;DC1&gt; &lt;DC1&gt; &lt;DC1&gt;
+ \cR 18 &lt;DC2&gt; &lt;DC2&gt; &lt;DC2&gt;
+ \cS 19 &lt;DC3&gt; &lt;DC3&gt; &lt;DC3&gt;
+ \cT 20 &lt;DC4&gt; &lt;OSC&gt; &lt;OSC&gt;
+ \cU 21 &lt;NAK&gt; &lt;NEL&gt; &lt;LF&gt; **
+ \cV 22 &lt;SYN&gt; &lt;BS&gt; &lt;BS&gt;
+ \cW 23 &lt;ETB&gt; &lt;ESA&gt; &lt;ESA&gt;
+ \cX 24 &lt;CAN&gt; &lt;CAN&gt; &lt;CAN&gt;
+ \cY 25 &lt;EOM&gt; &lt;EOM&gt; &lt;EOM&gt;
+ \cZ 26 &lt;SUB&gt; &lt;PU2&gt; &lt;PU2&gt;
+ \c[ 27 &lt;ESC&gt; &lt;SS3&gt; &lt;SS3&gt;
+ \c\X 28 &lt;FS&gt;X &lt;FS&gt;X &lt;FS&gt;X
+ \c] 29 &lt;GS&gt; &lt;GS&gt; &lt;GS&gt;
+ \c^ 30 &lt;RS&gt; &lt;RS&gt; &lt;RS&gt;
+ \c_ 31 &lt;US&gt; &lt;US&gt; &lt;US&gt;
+ \c? * &lt;DEL&gt; &lt;APC&gt; &lt;APC&gt;
+</code></pre>
+<p> <code>&quot;*&quot;</code> Note: <code>&quot;\c?&quot;</code> maps to ordinal 127 (<code>&quot;DEL&quot;</code>) on <font SIZE="-1">ASCII</font> platforms, but since ordinal 127 is a not a control character on <font SIZE="-1">EBCDIC</font> machines, <code>&quot;\c?&quot;</code> instead maps on them to <code>&quot;APC&quot;</code>, which is 255 in 0037 and 1047, and 95 in POSIX-BC.  </p>
+<h2>FUNCTION DIFFERENCES</h2>
+<dl>
+<dt>&quot;chr()&quot;</dt>
+<dd> <p> <code>&quot;chr()&quot;</code> must be given an <font SIZE="-1">EBCDIC</font> code number argument to yield a desired character return value on an <font SIZE="-1">EBCDIC</font> platform. For example: </p>
+<pre><code>    $CAPITAL_LETTER_A = chr(193);
+</code></pre>
+ </dd>
+<dt>&quot;ord()&quot;</dt>
+<dd> <p> <code>&quot;ord()&quot;</code> will return <font SIZE="-1">EBCDIC</font> code number values on an <font SIZE="-1">EBCDIC</font> platform. For example: </p>
+<pre><code>    $the_number_193 = ord(&quot;A&quot;);
+</code></pre>
+ </dd>
+<dt>&quot;pack()&quot;</dt>
+<dd> <p> The <code>&quot;c&quot;</code> and <code>&quot;C&quot;</code> templates for <code>&quot;pack()&quot;</code> are dependent upon character set encoding. Examples of usage on <font SIZE="-1">EBCDIC</font> include: </p>
+<pre><code>    $foo = pack(&quot;CCCC&quot;,193,194,195,196);
+    # $foo eq &quot;ABCD&quot;
+    $foo = pack(&quot;C4&quot;,193,194,195,196);
+    # same thing
+    $foo = pack(&quot;ccxxcc&quot;,193,194,195,196);
+    # $foo eq &quot;AB\0\0CD&quot;
+</code></pre>
+<p> The <code>&quot;U&quot;</code> template has been ported to mean ``Unicode&#8217;&#8216; on all platforms so that </p>
+<pre><code>    pack(&quot;U&quot;, 65) eq 'A'
+</code></pre>
+<p> is true on all platforms. If you want native code points for the low 256, use the <code>&quot;W&quot;</code> template. This means that the equivalences </p>
+<pre><code>    pack(&quot;W&quot;, ord($character)) eq $character
+    unpack(&quot;W&quot;, $character) == ord $character
+</code></pre>
+<p> will hold. </p>
+ </dd>
+<dt>&quot;print()&quot;</dt>
+<dd> <p> One must be careful with scalars and strings that are passed to print that contain <font SIZE="-1">ASCII</font> encodings. One common place for this to occur is in the output of the <font SIZE="-1">MIME</font> type header for <font SIZE="-1">CGI</font> script writing. For example, many Perl programming guides recommend something similar to: </p>
+<pre><code>    print &quot;Content-type:\ttext/html\015\012\015\012&quot;;
+    # this may be wrong on EBCDIC
+</code></pre>
+<p> You can instead write </p>
+<pre><code>    print &quot;Content-type:\ttext/html\r\n\r\n&quot;; # OK for DGW et al
+</code></pre>
+<p> and have it work portably. </p>
+<p> That is because the translation from <font SIZE="-1">EBCDIC</font> to <font SIZE="-1">ASCII</font> is done by the web server in this case. Consult your web server&#8217;s documentation for further details. </p>
+ </dd>
+<dt>&quot;printf()&quot;</dt>
+<dd> <p> The formats that can convert characters to numbers and vice versa will be different from their <font SIZE="-1">ASCII</font> counterparts when executed on an <font SIZE="-1">EBCDIC</font> platform. Examples include: </p>
+<pre><code>    printf(&quot;%c%c%c&quot;,193,194,195); # prints ABC
+</code></pre>
+ </dd>
+<dt>&quot;sort()&quot;</dt>
+<dd> <p> <font SIZE="-1">EBCDIC</font> sort results may differ from <font SIZE="-1">ASCII</font> sort results especially for mixed case strings. This is discussed in more detail below. </p>
+ </dd>
+<dt>&quot;sprintf()&quot;</dt>
+<dd> <p> See the discussion of <code>&quot;printf()&quot;</code> above. An example of the use of sprintf would be: </p>
+<pre><code>    $CAPITAL_LETTER_A = sprintf(&quot;%c&quot;,193);
+</code></pre>
+ </dd>
+<dt>&quot;unpack()&quot;</dt>
+<dd> <p> See the discussion of <code>&quot;pack()&quot;</code> above. </p>
+ </dd></dl>
+<p> Note that it is possible to write portable code for these by specifying things in Unicode numbers, and using a conversion function: </p>
+<pre><code>    printf(&quot;%c&quot;,utf8::unicode_to_native(65)); # prints A on all
+                                               # platforms
+    print utf8::native_to_unicode(ord(&quot;A&quot;)); # Likewise, prints 65
+</code></pre>
+<p> See ``Unicode and <font SIZE="-1">EBCDIC&#8217;&#8216;</font> in perluniintro and ``<font SIZE="-1">CONVERSIONS&#8217;&#8216;</font> for other options.  </p>
+<h2>REGULAR EXPRESSION DIFFERENCES</h2>
+<p> You can write your regular expressions just like someone on an <font SIZE="-1">ASCII</font> platform would do. But keep in mind that using octal or hex notation to specify a particular code point will give you the character that the <font SIZE="-1">EBCDIC</font> code page natively maps to it. (This is also true of all double-quoted strings.) If you want to write portably, just use the <code>&quot;\N{U+...}&quot;</code> notation everywhere where you would have used <code>&quot;\x{...}&quot;</code>, and don&#8217;t use octal notation at all. </p>
+<p> Starting in Perl v5.22, this applies to ranges in bracketed character classes. If you say, for example, <code>&quot;qr/[\N{U+20}-\N{U+7F}]/&quot;</code>, it means the characters <code>&quot;\N{U+20}&quot;</code>, <code>&quot;\N{U+21}&quot;</code>, ..., <code>&quot;\N{U+7F}&quot;</code>. This range is all the printable characters that the <font SIZE="-1">ASCII</font> character set contains. </p>
+<p> Prior to v5.22, you couldn&#8217;t specify any ranges portably, except (starting in Perl v5.5.3) all subsets of the <code>&quot;[A-Z]&quot;</code> and <code>&quot;[a-z]&quot;</code> ranges are specially coded to not pick up gap characters. For example, characters such as ``ô&#8217;&#8216; (<code>&quot;o WITH CIRCUMFLEX&quot;</code>) that lie between ``I&#8217;&#8216; and ``J&#8217;&#8216; would not be matched by the regular expression range <code>&quot;/[H-K]/&quot;</code>. But if either of the range end points is explicitly numeric (and neither is specified by <code>&quot;\N{U+...}&quot;</code>), the gap characters are matched: </p>
+<pre><code>    /[\x89-\x91]/
+</code></pre>
+<p> will match <code>&quot;\x8e&quot;</code>, even though <code>&quot;\x89&quot;</code> is ``i&#8217;&#8216; and <code>&quot;\x91 &quot;</code> is ``j&#8217;&#8216;, and <code>&quot;\x8e&quot;</code> is a gap character, from the alphabetic viewpoint. </p>
+<p> Another construct to be wary of is the inappropriate use of hex (unless you use <code>&quot;\N{U+...}&quot;</code>) or octal constants in regular expressions. Consider the following set of subs: </p>
+<pre><code>    sub is_c0 {
+        my $char = substr(shift,0,1);
+        $char =~ /[\000-\037]/;
+    }
+    sub is_print_ascii {
+        my $char = substr(shift,0,1);
+        $char =~ /[\040-\176]/;
+    }
+    sub is_delete {
+        my $char = substr(shift,0,1);
+        $char eq &quot;\177&quot;;
+    }
+    sub is_c1 {
+        my $char = substr(shift,0,1);
+        $char =~ /[\200-\237]/;
+    }
+    sub is_latin_1 { # But not ASCII; not C1
+        my $char = substr(shift,0,1);
+        $char =~ /[\240-\377]/;
+    }
+</code></pre>
+<p> These are valid only on <font SIZE="-1">ASCII</font> platforms. Starting in Perl v5.22, simply changing the octal constants to equivalent <code>&quot;\N{U+...}&quot;</code> values makes them portable: </p>
+<pre><code>    sub is_c0 {
+        my $char = substr(shift,0,1);
+        $char =~ /[\N{U+00}-\N{U+1F}]/;
+    }
+    sub is_print_ascii {
+        my $char = substr(shift,0,1);
+        $char =~ /[\N{U+20}-\N{U+7E}]/;
+    }
+    sub is_delete {
+        my $char = substr(shift,0,1);
+        $char eq &quot;\N{U+7F}&quot;;
+    }
+    sub is_c1 {
+        my $char = substr(shift,0,1);
+        $char =~ /[\N{U+80}-\N{U+9F}]/;
+    }
+    sub is_latin_1 { # But not ASCII; not C1
+        my $char = substr(shift,0,1);
+        $char =~ /[\N{U+A0}-\N{U+FF}]/;
+    }
+</code></pre>
+<p> And here are some alternative portable ways to write them: </p>
+<pre><code>    sub Is_c0 {
+        my $char = substr(shift,0,1);
+        return $char =~ /[[:cntrl:]]/a &amp;&amp; ! Is_delete($char);
+        # Alternatively:
+        # return $char =~ /[[:cntrl:]]/
+        # &amp;&amp; $char =~ /[[:ascii:]]/
+        # &amp;&amp; ! Is_delete($char);
+    }
+    sub Is_print_ascii {
+        my $char = substr(shift,0,1);
+        return $char =~ /[[:print:]]/a;
+        # Alternatively:
+        # return $char =~ /[[:print:]]/ &amp;&amp; $char =~ /[[:ascii:]]/;
+        # Or
+        # return $char
+        # =~ /[ !&quot;\#\$%&amp;'()*+,\-.\/0-9:;&lt;=&gt;?\@A-Z[\\\]^_`a-z{|}~]/;
+    }
+    sub Is_delete {
+        my $char = substr(shift,0,1);
+        return utf8::native_to_unicode(ord $char) == 0x7F;
+    }
+    sub Is_c1 {
+        use feature 'unicode_strings';
+        my $char = substr(shift,0,1);
+        return $char =~ /[[:cntrl:]]/ &amp;&amp; $char !~ /[[:ascii:]]/;
+    }
+    sub Is_latin_1 { # But not ASCII; not C1
+        use feature 'unicode_strings';
+        my $char = substr(shift,0,1);
+        return ord($char) &lt; 256
+               &amp;&amp; $char !~ /[[:ascii:]]/
+               &amp;&amp; $char !~ /[[:cntrl:]]/;
+    }
+</code></pre>
+<p> Another way to write <code>&quot;Is_latin_1()&quot;</code> would be to use the characters in the range explicitly: </p>
+<pre><code>    sub Is_latin_1 {
+        my $char = substr(shift,0,1);
+        $char =~ /[ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ]
+                  [ÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ]/x;
+    }
+</code></pre>
+<p> Although that form may run into trouble in network transit (due to the presence of 8 bit characters) or on non ISO-Latin character sets. But it does allow <code>&quot;Is_c1&quot;</code> to be rewritten so it works on Perls that don&#8217;t have <code>&#8216;unicode_strings&#8217;</code> (earlier than v5.14): </p>
+<pre><code>    sub Is_latin_1 { # But not ASCII; not C1
+        my $char = substr(shift,0,1);
+        return ord($char) &lt; 256
+               &amp;&amp; $char !~ /[[:ascii:]]/
+               &amp;&amp; ! Is_latin1($char);
+    }
+</code></pre>
+<h2>SOCKETS</h2>
+<p> Most socket programming assumes <font SIZE="-1">ASCII</font> character encodings in network byte order. Exceptions can include <font SIZE="-1">CGI</font> script writing under a host web server where the server may take care of translation for you. Most host web servers convert <font SIZE="-1">EBCDIC</font> data to <font SIZE="-1">ISO-8859-1</font> or Unicode on output.  </p>
+<h2>SORTING</h2>
+<p> One big difference between ASCII-based character sets and <font SIZE="-1">EBCDIC</font> ones are the relative positions of the characters when sorted in native order. Of most concern are the upper- and lowercase letters, the digits, and the underscore (<code>&quot;_&quot;</code>). On <font SIZE="-1">ASCII</font> platforms the native sort order has the digits come before the uppercase letters which come before the underscore which comes before the lowercase letters. On <font SIZE="-1">EBCDIC,</font> the underscore comes first, then the lowercase letters, then the uppercase ones, and the digits last. If sorted on an ASCII-based platform, the two-letter abbreviation for a physician comes before the two letter abbreviation for drive; that is: </p>
+<pre><code> @sorted = sort(qw(Dr. dr.)); # @sorted holds ('Dr.','dr.') on ASCII,
+                                  # but ('dr.','Dr.') on EBCDIC
+</code></pre>
+<p> The property of lowercase before uppercase letters in <font SIZE="-1">EBCDIC</font> is even carried to the Latin 1 <font SIZE="-1">EBCDIC</font> pages such as 0037 and 1047. An example would be that ``Ë&#8217;&#8216; (<code>&quot;E WITH DIAERESIS&quot;</code>, 203) comes before ``ë&#8217;&#8216; (<code>&quot;e WITH DIAERESIS&quot;</code>, 235) on an <font SIZE="-1">ASCII</font> platform, but the latter (83) comes before the former (115) on an <font SIZE="-1">EBCDIC</font> platform. (Astute readers will note that the uppercase version of ``ß&#8217;&#8216; <code>&quot;SMALL LETTER SHARP S&quot;</code> is simply ``<font SIZE="-1">SS&#8217;&#8216;</font> and that the upper case versions of ``ÿ&#8217;&#8216; (small <code>&quot;y WITH DIAERESIS&quot;</code>) and ``µ&#8217;&#8216; (<code>&quot;MICRO SIGN&quot;</code>) are not in the 0..255 range but are in Unicode, in a Unicode enabled Perl). </p>
+<p> The sort order will cause differences between results obtained on <font SIZE="-1">ASCII</font> platforms versus <font SIZE="-1">EBCDIC</font> platforms. What follows are some suggestions on how to deal with these differences.  </p>
+<font SIZE="-1"></font><font SIZE="-1"></font><h3>Ignore ASCII vs. EBCDIC sort differences.</h3>
+<p> This is the least computationally expensive strategy. It may require some user education.  </p>
+<h3>Use a sort helper function</h3>
+<p> This is completely general, but the most computationally expensive strategy. Choose one or the other character set and transform to that for every sort comparison. Here&#8217;s a complete example that transforms to <font SIZE="-1">ASCII</font> sort order: </p>
+<pre><code> sub native_to_uni($) {
+    my $string = shift;
+    # Saves time on an ASCII platform
+    return $string if ord 'A' == 65;
+    my $output = &quot;&quot;;
+    for my $i (0 .. length($string) - 1) {
+        $output
+           .= chr(utf8::native_to_unicode(ord(substr($string, $i, 1))));
+    }
+    # Preserve utf8ness of input onto the output, even if it didn't need
+    # to be utf8
+    utf8::upgrade($output) if utf8::is_utf8($string);
+    return $output;
+ }
+ sub ascii_order { # Sort helper
+    return native_to_uni($a) cmp native_to_uni($b);
+ }
+ sort ascii_order @list;
+</code></pre>
+<font SIZE="-1"></font><h3>MONO CASE then sort data (for non-digits, non-underscore)</h3>
+<p> If you don&#8217;t care about where digits and underscore sort to, you can do something like this </p>
+<pre><code> sub case_insensitive_order { # Sort helper
+    return lc($a) cmp lc($b)
+ }
+ sort case_insensitive_order @list;
+</code></pre>
+<p> If performance is an issue, and you don&#8217;t care if the output is in the same case as the input, Use <code>&quot;tr///&quot;</code> to transform to the case most employed within the data. If the data are primarily <font SIZE="-1">UPPERCASE</font> non-Latin1, then apply <code>&quot;tr/[a-z]/[A-Z]/&quot;</code>, and then <code>&quot;sort()&quot;</code>. If the data are primarily lowercase non Latin1 then apply <code>&quot;tr/[A-Z]/[a-z]/&quot;</code> before sorting. If the data are primarily <font SIZE="-1">UPPERCASE</font> and include Latin-1 characters then apply: </p>
+<pre><code>   tr/[a-z]/[A-Z]/;
+   tr/[àáâãäåæçèéêëìíîïðñòóôõöøùúûüýþ]/[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞ/;
+   s/ß/SS/g;
+</code></pre>
+<p> then <code>&quot;sort()&quot;</code>. If you have a choice, it&#8217;s better to lowercase things to avoid the problems of the two Latin-1 characters whose uppercase is outside Latin-1: ``ÿ&#8217;&#8216; (small <code>&quot;y WITH DIAERESIS&quot;</code>) and ``µ&#8217;&#8216; (<code>&quot;MICRO SIGN&quot;</code>). If you do need to upppercase, you can; with a Unicode-enabled Perl, do: </p>
+<pre><code>    tr/ÿ/\x{178}/;
+    tr/µ/\x{39C}/;
+</code></pre>
+<h3>Perform sorting on one type of platform only.</h3>
+<p> This strategy can employ a network connection. As such it would be computationally expensive.  </p>
+<h2>TRANSFORMATION FORMATS</h2>
+<p> There are a variety of ways of transforming data with an intra character set mapping that serve a variety of purposes. Sorting was discussed in the previous section and a few of the other more popular mapping techniques are discussed next.  </p>
+<font SIZE="-1"></font><h3>URL decoding and encoding</h3>
+<p> Note that some URLs have hexadecimal <font SIZE="-1">ASCII</font> code points in them in an attempt to overcome character or protocol limitation issues. For example the tilde character is not on every keyboard hence a <font SIZE="-1">URL</font> of the form: </p>
+<pre><code>http://www.pvhp.com/~pvhp/
+</code></pre>
+<p> may also be expressed as either of: </p>
+<pre><code>http://www.pvhp.com/%7Epvhp/http://www.pvhp.com/%7epvhp/
+</code></pre>
+<p> where 7E is the hexadecimal <font SIZE="-1">ASCII</font> code point for ``~&#8216;&#8216;. Here is an example of decoding such a <font SIZE="-1">URL</font> in any <font SIZE="-1">EBCDIC</font> code page: </p>
+<pre><code>    $url = 'http://www.pvhp.com/%7Epvhp/';    $url =~ s/%([0-9a-fA-F]{2})/
+              pack(&quot;c&quot;,utf8::unicode_to_native(hex($1)))/xge;
+</code></pre>
+<p> Conversely, here is a partial solution for the task of encoding such a <font SIZE="-1">URL</font> in any <font SIZE="-1">EBCDIC</font> code page: </p>
+<pre><code>    $url = 'http://www.pvhp.com/~pvhp/';    # The following regular expression does not address the
+    # mappings for: ('.' =&gt; '%2E', '/' =&gt; '%2F', ':' =&gt; '%3A')
+    $url =~ s/([\t &quot;#%&amp;\(\),;&lt;=&gt;\?\@\[\\\]^`{|}~])/
+               sprintf(&quot;%%%02X&quot;,utf8::native_to_unicode(ord($1)))/xge;
+</code></pre>
+<p> where a more complete solution would split the <font SIZE="-1">URL</font> into components and apply a full s/// substitution only to the appropriate parts.  </p>
+<h3>uu encoding and decoding</h3>
+<p> The <code>&quot;u&quot;</code> template to <code>&quot;pack()&quot;</code> or <code>&quot;unpack()&quot;</code> will render <font SIZE="-1">EBCDIC</font> data in <font SIZE="-1">EBCDIC</font> characters equivalent to their <font SIZE="-1">ASCII</font> counterparts. For example, the following will print ``Yes indeed\n&#8217;&#8216; on either an <font SIZE="-1">ASCII</font> or <font SIZE="-1">EBCDIC</font> computer: </p>
+<pre><code>    $all_byte_chrs = '';
+    for (0..255) { $all_byte_chrs .= chr($_); }
+    $uuencode_byte_chrs = pack('u', $all_byte_chrs);
+    ($uu = &lt;&lt;'ENDOFHEREDOC') =~ s/^\s*//gm;
+    M``$&quot;`P0%!@&lt;(&quot;0H+#`T.#Q`1$A,4%187&amp;!D:&amp;QP='A\@(2(C)&quot;4F)R@I*BLL
+    M+2XO,#$R,S0U-C&lt;X.3H[/#T^/T!!0D-$149'2$E*2TQ-3D]045)35%565UA9
+    M6EM&lt;75Y?8&amp;%B8V1E9F=H:6IK;&amp;UN;W!Q&lt;G-T=79W&gt;'EZ&gt;WQ]?G^`@8*#A(6&amp;
+    MAXB)BHN,C8Z/D)&amp;2DY25EI&gt;8F9J;G)V&gt;GZ&quot;AHJ.DI::GJ*FJJZRMKJ^PL;*S
+    MM+6VM[BYNKN\O;Z_P,'&quot;P\3%QL?(R&lt;K+S,W.S]#1TM/4U=;7V-G:V]S=WM_@
+    ?X&gt;+CY.7FY^CIZNOL[&gt;[O\/'R\_3U]O?X^?K[_/W^_P``
+    ENDOFHEREDOC
+    if ($uuencode_byte_chrs eq $uu) {
+        print &quot;Yes &quot;;
+    }
+    $uudecode_byte_chrs = unpack('u', $uuencode_byte_chrs);
+    if ($uudecode_byte_chrs eq $all_byte_chrs) {
+        print &quot;indeed\n&quot;;
+    }
+</code></pre>
+<p> Here is a very spartan uudecoder that will work on <font SIZE="-1">EBCDIC:</font> </p>
+<pre><code>    #!/usr/local/bin/perl
+    $_ = &lt;&gt; until ($mode,$file) = /^begin\s*(\d*)\s*(\S*)/;
+    open(OUT, &quot;&gt; $file&quot;) if $file ne &quot;&quot;;
+    while(&lt;&gt;) {
+        last if /^end/;
+        next if /[a-z]/;
+        next unless int((((utf8::native_to_unicode(ord()) - 32 ) &amp; 077)
+                                                               + 2) / 3)
+                    == int(length() / 4);
+        print OUT unpack(&quot;u&quot;, $_);
+    }
+    close(OUT);
+    chmod oct($mode), $file;
+</code></pre>
+<h3>Quoted-Printable encoding and decoding</h3>
+<p> On ASCII-encoded platforms it is possible to strip characters outside of the printable set using: </p>
+<pre><code>    # This QP encoder works on ASCII only
+    $qp_string =~ s/([=\x00-\x1F\x80-\xFF])/
+                    sprintf(&quot;=%02X&quot;,ord($1))/xge;
+</code></pre>
+<p> Starting in Perl v5.22, this is trivially changeable to work portably on both <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms. </p>
+<pre><code>    # This QP encoder works on both ASCII and EBCDIC
+    $qp_string =~ s/([=\N{U+00}-\N{U+1F}\N{U+80}-\N{U+FF}])/
+                    sprintf(&quot;=%02X&quot;,ord($1))/xge;
+</code></pre>
+<p> For earlier Perls, a <font SIZE="-1">QP</font> encoder that works on both <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms would look somewhat like the following: </p>
+<pre><code>    $delete = utf8::unicode_to_native(ord(&quot;\x7F&quot;));
+    $qp_string =~
+      s/([^[:print:]$delete])/
+         sprintf(&quot;=%02X&quot;,utf8::native_to_unicode(ord($1)))/xage;
+</code></pre>
+<p> (although in production code the substitutions might be done in the <font SIZE="-1">EBCDIC</font> branch with the function call and separately in the <font SIZE="-1">ASCII</font> branch without the expense of the identity map; in Perl v5.22, the identity map is optimized out so there is no expense, but the alternative above is simpler and is also available in v5.22). </p>
+<p> Such <font SIZE="-1">QP</font> strings can be decoded with: </p>
+<pre><code>    # This QP decoder is limited to ASCII only
+    $string =~ s/=([[:xdigit:][[:xdigit:])/chr hex $1/ge;
+    $string =~ s/=[\n\r]+$//;
+</code></pre>
+<p> Whereas a <font SIZE="-1">QP</font> decoder that works on both <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms would look somewhat like the following: </p>
+<pre><code>    $string =~ s/=([[:xdigit:][:xdigit:]])/
+                                chr utf8::native_to_unicode(hex $1)/xge;
+    $string =~ s/=[\n\r]+$//;
+</code></pre>
+<h3>Caesarean ciphers</h3>
+<p> The practice of shifting an alphabet one or more characters for encipherment dates back thousands of years and was explicitly detailed by Gaius Julius Caesar in his <code>Gallic Wars</code> text. A single alphabet shift is sometimes referred to as a rotation and the shift amount is given as a number <code>$n</code> after the string &#8216;rot&#8217; or ``rot$n&#8217;&#8216;. Rot0 and rot26 would designate identity maps on the 26-letter English version of the Latin alphabet. Rot13 has the interesting property that alternate subsequent invocations are identity maps (thus rot13 is its own non-trivial inverse in the group of 26 alphabet rotations). Hence the following is a rot13 encoder and decoder that will work on <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms: </p>
+<pre><code>    #!/usr/local/bin/perl
+    while(&lt;&gt;){
+        tr/n-za-mN-ZA-M/a-zA-Z/;
+        print;
+    }
+</code></pre>
+<p> In one-liner form: </p>
+<pre><code>    perl -ne 'tr/n-za-mN-ZA-M/a-zA-Z/;print'
+</code></pre>
+<h2>Hashing order and checksums</h2>
+<p> Perl deliberately randomizes hash order for security purposes on both <font SIZE="-1">ASCII</font> and <font SIZE="-1">EBCDIC</font> platforms. </p>
+<p> <font SIZE="-1">EBCDIC</font> checksums will differ for the same file translated into <font SIZE="-1">ASCII</font> and vice versa.  </p>
+<h2>I18N AND L10N</h2>
+<p> Internationalization (I18N) and localization (L10N) are supported at least in principle even on <font SIZE="-1">EBCDIC</font> platforms. The details are system-dependent and discussed under the ``<font SIZE="-1">OS ISSUES&#8217;&#8216;</font> section below.  </p>
+<h2>MULTI-OCTET CHARACTER SETS</h2>
+<p> Perl works with UTF-EBCDIC, a multi-byte encoding. In Perls earlier than v5.22, there may be various bugs in this regard. </p>
+<p> Legacy multi byte <font SIZE="-1">EBCDIC</font> code pages <font SIZE="-1">XXX.</font>  </p>
+<h2>OS ISSUES</h2>
+<p> There may be a few system-dependent issues of concern to <font SIZE="-1">EBCDIC</font> Perl programmers.  </p>
+<font SIZE="-1"></font><h3>OS/400</h3>
+<dl>
+<dt><font SIZE="-1">PASE</font></dt>
+<dd> <p> The <font SIZE="-1">PASE</font> environment is a runtime environment for <font SIZE="-1">OS/400</font> that can run executables built for PowerPC <font SIZE="-1">AIX</font> in <font SIZE="-1">OS/400</font>; see perlos400. <font SIZE="-1">PASE</font> is ASCII-based, not EBCDIC-based as the <font SIZE="-1">ILE.</font> </p>
+ </dd>
+<dt><font SIZE="-1">IFS</font> access</dt>
+<dd> <p> <font SIZE="-1">XXX.</font> </p>
+ </dd></dl>
+<font SIZE="-1"></font><h3>OS/390, z/OS</h3>
+<p> Perl runs under Unix Systems Services or <font SIZE="-1">USS.</font> </p>
+<dl>
+<dt>&quot;sigaction&quot;</dt>
+<dd> <p> <code>&quot;SA_SIGINFO&quot;</code> can have segmentation faults. </p>
+ </dd>
+<dt>&quot;chcp&quot;</dt>
+<dd> <p> <code>chcp</code> is supported as a shell utility for displaying and changing one&#8217;s code page. See also <code><a href="/docs/linux/man/1-chcp/">chcp</a></code>(1). </p>
+ </dd>
+<dt>dataset access</dt>
+<dd> <p> For sequential data set access try: </p>
+<pre><code>    my @ds_records = `cat //DSNAME`;
+</code></pre>
+<p> or: </p>
+<pre><code>    my @ds_records = `cat //'HLQ.DSNAME'`;
+</code></pre>
+<p> See also the OS390::Stdio module on <font SIZE="-1">CPAN.</font> </p>
+ </dd>
+<dt>&quot;iconv&quot;</dt>
+<dd> <p> <code>iconv</code> is supported as both a shell utility and a C <font SIZE="-1">RTL</font> routine. See also the <code><a href="/docs/linux/man/1-iconv/">iconv</a></code>(1) and <code><a href="/docs/linux/man/3-iconv/">iconv</a></code>(3) manual pages. </p>
+ </dd>
+<dt>locales</dt>
+<dd> <p> Locales are supported. There may be glitches when a locale is another <font SIZE="-1">EBCDIC</font> code page which has some of the code-page variant characters in other positions. </p>
+<p> There aren&#8217;t currently any real <font SIZE="-1">UTF-8</font> locales, even though some locale names contain the string ``<font SIZE="-1">UTF-8&#8217;&#8216;.</font> </p>
+<p> See perllocale for information on locales. The L10N files are in <i>/usr/nls/locale</i>. <code>$Config{d_setlocale}</code> is <code>&#8216;define&#8217;</code> on <font SIZE="-1">OS/390</font> or z/OS. </p>
+ </dd></dl>
+<h3>POSIX-BC?</h3>
+<p> <font SIZE="-1">XXX.</font>  </p>
+<h2>BUGS</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> Not all shells will allow multiple <code>&quot;-e&quot;</code> string arguments to perl to be concatenated together properly as recipes in this document 0, 2, 4, 5, and 6 might seem to imply. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> There are a significant number of test failures in the <font SIZE="-1">CPAN</font> modules shipped with Perl v5.22 and 5.24. These are only in modules not primarily maintained by Perl 5 porters. Some of these are failures in the tests only: they don&#8217;t realize that it is proper to get different results on <font SIZE="-1">EBCDIC</font> platforms. And some of the failures are real bugs. If you compile and do a <code>&quot;make test&quot;</code> on Perl, all tests on the <code>&quot;/cpan&quot;</code> directory are skipped. </p>
+<p> Encode partially works. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> In earlier Perl versions, when byte and character data were concatenated, the new string was sometimes created by decoding the byte strings as <i></i><font SIZE="-1"><i>ISO 8859-1</i></font><i> (Latin-1)</i>, even if the old Unicode string used <font SIZE="-1">EBCDIC.</font> </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> perllocale, perlfunc, perlunicode, utf8.  </p>
+<h2>REFERENCES</h2>
+<p> &lt;<a rel="nofollow" href="http://anubis.dkuug.dk/i18n/charmaps">http://anubis.dkuug.dk/i18n/charmaps</a>&gt; </p>
+<p> &lt;<a rel="nofollow" href="http://www.unicode.org/">http://www.unicode.org/</a>&gt; </p>
+<p> &lt;<a rel="nofollow" href="http://www.unicode.org/unicode/reports/tr16/">http://www.unicode.org/unicode/reports/tr16/</a>&gt; </p>
+<p> &lt;<a rel="nofollow" href="http://www.wps.com/projects/codes/">http://www.wps.com/projects/codes/</a>&gt; <font SIZE="-1"><code>ASCII:</code></font><code> American Standard Code for Information Infiltration</code> Tom Jennings, September 1999. </p>
+<p> <code>The Unicode Standard, Version 3.0</code> The Unicode Consortium, Lisa Moore ed., <font SIZE="-1">ISBN 0-201-61633-5,</font> Addison Wesley Developers Press, February 2000. </p>
+<p> <font SIZE="-1"><code>CDRA: IBM</code></font><code> &#8211; Character Data Representation Architecture &#8211; Reference and Registry</code>, <font SIZE="-1">IBM SC09-2190-00,</font> December 1996. </p>
+<p> ``Demystifying Character Sets&#8217;&#8216;, Andrea Vine, Multilingual Computing &amp; Technology, <code>#26 Vol. 10 Issue 4</code>, August/September 1999; <font SIZE="-1">ISSN 1523-0309</font>; Multilingual Computing Inc. Sandpoint <font SIZE="-1">ID, USA.</font> </p>
+<p> <code>Codes, Ciphers, and Other Cryptic and Clandestine Communication</code> Fred B. Wrixon, <font SIZE="-1">ISBN 1-57912-040-7,</font> Black Dog &amp; Leventhal Publishers, 1998. </p>
+<p> &lt;<a rel="nofollow" href="http://www.bobbemer.com/P-BIT.HTM">http://www.bobbemer.com/P-BIT.HTM</a>&gt; <font SIZE="-1"><code>IBM</code></font><code> &#8211; </code><font SIZE="-1"><code>EBCDIC</code></font><code> and the P-bit; The biggest Computer Goof Ever</code> Robert Bemer.  </p>
+<h2>HISTORY</h2>
+<p> 15 April 2001: added <font SIZE="-1">UTF-8</font> and UTF-EBCDIC to main table, pvhp.  </p>
+<h2>AUTHOR</h2>
+<p> Peter Prymmer pvhp [at] best.com wrote this in 1999 and 2000 with <font SIZE="-1">CCSID 0819</font> and 0037 help from Chris Leach and André Pirard A.Pirard [at] ulg.ac.be as well as POSIX-BC help from Thomas Dorner Thomas.Dorner [at] start.de. Thanks also to Vickie Cooper, Philip Newton, William Raffloer, and Joe Smith. Trademarks, registered trademarks, service marks and registered service marks used in this document are the property of their respective owners. </p>
+<p> Now maintained by Perl5 Porters. </p>
+<h2>Index</h2>

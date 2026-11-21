@@ -108,5 +108,53 @@ XML structure : +Xd-- add - dtd - reference add reference to document type defin
       &lt;item card=&quot;3&quot;&gt;
         &lt;element tag=&quot;0028,3002&quot; vr=&quot;xs&quot; vm=&quot;3&quot; len=&quot;6&quot;
                  name=&quot;LUTDescriptor&quot;&gt;
-          256
-</pre>
+          256\0\8
+        &lt;/element&gt;
+        ...
+      &lt;/item&gt;
+      ...
+    &lt;/sequence&gt;
+    ...
+    &lt;element tag=&quot;7fe0,0010&quot; vr=&quot;OW&quot; vm=&quot;1&quot; len=&quot;262144&quot;
+             name=&quot;PixelData&quot; loaded=&quot;no&quot; binary=&quot;hidden&quot;&gt;
+    &lt;/element&gt;
+  &lt;/data-set&gt;
+&lt;/file-format&gt;
+</code></pre>
+<p> The &#8216;file-format&#8217; and &#8216;meta-header&#8217; tags are absent for DICOM data sets.  </p>
+<h3>Character Encoding</h3>
+<p> The XML encoding is determined automatically from the DICOM attribute (0008,0005) &#8216;Specific Character Set&#8217; (if present) using the following mapping: </p>
+<pre><code>ASCII &quot;ISO_IR 6&quot; =&gt; &quot;UTF-8&quot;
+UTF-8 &quot;ISO_IR 192&quot; =&gt; &quot;UTF-8&quot;
+ISO Latin 1 &quot;ISO_IR 100&quot; =&gt; &quot;ISO-8859-1&quot;
+ISO Latin 2 &quot;ISO_IR 101&quot; =&gt; &quot;ISO-8859-2&quot;
+ISO Latin 3 &quot;ISO_IR 109&quot; =&gt; &quot;ISO-8859-3&quot;
+ISO Latin 4 &quot;ISO_IR 110&quot; =&gt; &quot;ISO-8859-4&quot;
+ISO Latin 5 &quot;ISO_IR 148&quot; =&gt; &quot;ISO-8859-9&quot;
+Cyrillic &quot;ISO_IR 144&quot; =&gt; &quot;ISO-8859-5&quot;
+Arabic &quot;ISO_IR 127&quot; =&gt; &quot;ISO-8859-6&quot;
+Greek &quot;ISO_IR 126&quot; =&gt; &quot;ISO-8859-7&quot;
+Hebrew &quot;ISO_IR 138&quot; =&gt; &quot;ISO-8859-8&quot;
+</code></pre>
+<p> Multiple character sets are not supported (only the first attribute value is mapped in case of value multiplicity).  </p>
+<h3>XML Encoding</h3>
+<p> Attributes with very large value fields (e.g. pixel data) are not loaded by default. They can be identified by the additional attribute &#8216;loaded&#8217; with a value of &#8216;no&#8217; (see example above). The command line option <i>--load-all</i> forces to load all value fields including the very long ones. </p>
+<p> Furthermore, binary information of OB and OW attributes are not written to the XML output file by default. These elements can be identified by the additional attribute &#8216;binary&#8217; with a value of &#8216;hidden&#8217; (default is &#8216;no&#8217;). The command line option <i>--write-binary-data</i> causes also binary value fields to be printed (attribute value is &#8216;yes&#8217; or &#8216;base64&#8217;). But, be careful when using this option together with <i>--load-all</i> because of the large amounts of pixel data that might be printed to the output. </p>
+<p> Multiple values (i.e. where the DICOM value multiplicity is greater than 1) are separated by a backslash &#8216;\&#8216; (except for Base64 encoded data). The &#8216;len&#8217; attribute indicates the number of bytes for the particular value field as stored in the DICOM data set, i.e. it might deviate from the XML encoded value length e.g. because of non-significant padding that has been removed. If this attribute is missing in &#8216;sequence&#8217; or &#8216;item&#8217; start tags, the corresponding DICOM element has been stored with undefined length.  </p>
+<h2>LOGGING</h2>
+<p> The level of logging output of the various command line tools and underlying libraries can be specified by the user. By default, only errors and warnings are written to the standard error stream. Using option <i>--verbose</i> also informational messages like processing details are reported. Option <i>--debug</i> can be used to get more details on the internal activity, e.g. for debugging purposes. Other logging levels can be selected using option <i>--log-level</i>. In <i>--quiet</i> mode only fatal errors are reported. In such very severe error events, the application will usually terminate. For more details on the different logging levels, see documentation of module &#8216;oflog&#8217;. </p>
+<p> In case the logging output should be written to file (optionally with logfile rotation), to syslog (Unix) or the event log (Windows) option <i>--log-config</i> can be used. This configuration file also allows for directing only certain messages to a particular output stream and for filtering certain messages based on the module or application where they are generated. An example configuration file is provided in <i>&lt;etcdir&gt;/logger.cfg</i>).  </p>
+<h2>COMMAND LINE</h2>
+<p> All command line tools use the following notation for parameters: square brackets enclose optional values (0-1), three trailing dots indicate that multiple values are allowed (1-n), a combination of both means 0 to n values. </p>
+<p> Command line options are distinguished from parameters by a leading &#8216;+&#8216; or &#8216;-&#8216; sign, respectively. Usually, order and position of command line options are arbitrary (i.e. they can appear anywhere). However, if options are mutually exclusive the rightmost appearance is used. This behaviour conforms to the standard evaluation rules of common Unix shells. </p>
+<p> In addition, one or more command files can be specified using an &#8216;@&#8216; sign as a prefix to the filename (e.g. <i>@command.txt</i>). Such a command argument is replaced by the content of the corresponding text file (multiple whitespaces are treated as a single separator unless they appear between two quotation marks) prior to any further evaluation. Please note that a command file cannot contain another command file. This simple but effective approach allows to summarize common combinations of options/parameters and avoids longish and confusing command lines (an example is provided in file <i>&lt;datadir&gt;/dumppat.txt</i>).  </p>
+<h2>ENVIRONMENT</h2>
+<p> The <code>dcm2xml</code> utility will attempt to load DICOM data dictionaries specified in the <i>DCMDICTPATH</i> environment variable. By default, i.e. if the <i>DCMDICTPATH</i> environment variable is not set, the file <i>&lt;datadir&gt;/dicom.dic</i> will be loaded unless the dictionary is built into the application (default for Windows). </p>
+<p> The default behaviour should be preferred and the <i>DCMDICTPATH</i> environment variable only used when alternative data dictionaries are required. The <i>DCMDICTPATH</i> environment variable has the same format as the Unix shell <i>PATH</i> variable in that a colon (&#8216;:&#8216;) separates entries. On Windows systems, a semicolon (&#8216;;&#8216;) is used as a separator. The data dictionary code will attempt to load each file specified in the <i>DCMDICTPATH</i> environment variable. It is an error if no data dictionary can be loaded.  </p>
+<h2>FILES</h2>
+<p> <i>&lt;datadir&gt;/dcm2xml.dtd</i> &#8211; Document Type Definition (DTD) file  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-xml2dcm/">xml2dcm</a></code>(1), <code><a href="/docs/linux/man/1-dcmconv/">dcmconv</a></code>(1)  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 2002-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
+<h2>Index</h2>

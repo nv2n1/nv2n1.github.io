@@ -161,5 +161,164 @@ if (keyGetString(key, buffer, sizeof(buffer)) == -1) {<br />
 </dt><dd> <code>keyValue()</code>, <code>keyGetValueSize()</code>, <code>keySetString()</code> </dd>
 <p> <code>keyGetBinary()</code> for working with binary data</dl>
 <h3>ssize_t keyGetValueSize (const Key * key)Returns the number of bytes needed to store the key value, including the NULL terminator.</h3>
-<p> It returns the correct size, independent of the Key Type. If it is a binary there might be &#8216;
-</p></p>
+<p> It returns the correct size, independent of the Key Type. If it is a binary there might be &#8216;\0&#8217; values in it. </p>
+<p> For an empty string you need one byte to store the ending NULL. For that reason 1 is returned. This is not true for binary data, so there might be returned 0 too. </p>
+<p> A binary key has no &#8216;\0&#8217; termination. String types have it, so to there length will be added 1 to have enough space to store it. </p>
+<p> This method can be used with malloc() before <code>keyGetString()</code> or <code>keyGetBinary()</code> is called. </p>
+<pre><code>char *buffer;
+buffer = malloc (keyGetValueSize (key));
+// use this buffer to store the value (binary or string)
+// pass keyGetValueSize (key) for maxSize
+</code></pre>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>key</i> the key object to work with </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> the number of bytes needed to store the key value </p>
+<p> 1 when there is no data and type is not binary </p>
+<p> 0 when there is no data and type is binary </p>
+<p> -1 on null pointer </p>
+ </dd></dl>
+<p> <code>See also:</code> </p>
+<dl>
+<dd> <p> <code>keyGetString()</code>, <code>keyGetBinary()</code>, <code>keyValue()</code> </p>
+ </dd></dl>
+<h3>ssize_t keySetBinary (Key * key, const void * newBinary, size_t dataSize)Set the value of a key as a binary.</h3>
+<p> A private copy of newBinary will allocated and saved inside key, so the parameter can be deallocated after the call. </p>
+<p> The filesys backend, when used through a <code>kdbSetKey()</code>, will make the value be kdbbEncoded into a human readable hex-digit text format. </p>
+<p> Consider using a string key instead. </p>
+<p> When newBinary is a NULL pointer the binary will be freed and 0 will be returned. </p>
+<p> <code>Note:</code> </p>
+<dl>
+<dd> <p> When the type of the key is already a binary type it won&#8217;t be changed. </p>
+ </dd></dl>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>key</i> the object on which to set the value <br />
+ <i>newBinary</i> is a pointer to any binary data or NULL to free the previous set data <br />
+ <i>dataSize</i> number of bytes to copy from newBinary </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> the number of bytes actually copied to internal struct storage </p>
+<p> 0 when the internal binary was freed </p>
+<p> -1 on NULL pointer </p>
+<p> -1 when dataSize is 0 (but newBinary not NULL) or larger than SSIZE_MAX </p>
+ </dd></dl>
+<p> <code>See also:</code> </p>
+<dl>
+<dd> <p> <code>keyGetBinary()</code> </p>
+<p> <code>keyIsBinary()</code> to check if the type is binary </p>
+<p> <code>keyGetString()</code> and <code>keySetString()</code> as preferred alternative to binary </p>
+ </dd></dl>
+<h3>ssize_t keySetComment (Key * key, const char * newComment)Set a comment for a key.</h3>
+<p> A key comment is like a configuration file comment. See <code>keySetComment()</code> for more information. </p>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>key</i> the key object to work with <br />
+ <i>newComment</i> the comment, that can be freed after this call. </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> the number of bytes actually saved including final NULL </p>
+<p> 1 when the comment was freed </p>
+<p> -1 on NULL pointer or memory problems </p>
+ </dd></dl>
+<p> <code>See also:</code> </p>
+<dl>
+<dd> <p> <code>keyGetComment()</code> </p>
+ </dd></dl>
+<h3>ssize_t keySetString (Key * key, const char * newStringValue)Set the value for key as newStringValue.</h3>
+<p> The function will allocate and save a private copy of newStringValue, so the parameter can be freed after the call. </p>
+<p> String values will be saved in backend storage, when <code>kdbSetKey()</code> will be called, in UTF-8 universal encoding, regardless of the program&#8217;s current encoding, when compiled with --enable-iconv. </p>
+<p> The type will be set to KEY_TYPE_STRING. When the type of the key is already a string type it won&#8217;t be changed. </p>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>key</i> the key to set the string value <br />
+ <i>newStringValue</i> NULL-terminated text string to be set as key&#8217;s value </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> the number of bytes actually saved in private struct including final NULL </p>
+<p> -1 on NULL pointer </p>
+ </dd></dl>
+<p> <code>See also:</code> </p>
+<dl>
+<dd> <p> <code>keyGetString()</code>, <code>keyValue()</code> </p>
+ </dd></dl>
+<h3>const void* keyValue (const Key * key)Return a pointer to the real internal key value.</h3>
+<p> This is a much more efficient version of <code>keyGetString()</code> <code>keyGetBinary()</code>, and you should use it if you are responsible enough to not mess up things. You are not allowed to modify anything in the returned string. If you need a copy of the Value, consider to use <code>keyGetString()</code> or <code>keyGetBinary()</code> instead.  </p>
+<h2>String Handling</h2>
+<p> If key is string (<code>keyIsString()</code>), you may cast the returned as a &#8216;char *&#8216; because you&#8217;ll get a NULL terminated regular string. </p>
+<p> <code>keyValue()</code> returns &#8216;&#8216; in string mode when there is no value. The reason is </p>
+<pre><code>key=keyNew(0);
+keySetString(key,'');
+keyValue(key); // you would expect '' here
+keyDel(key);
+</code></pre>
+<h2>Binary Data Handling</h2>
+<p> If the data is binary, the size of the value must be determined by <code>keyGetValueSize()</code>, any strlen() operations are not suitable to determine the size. </p>
+<p> <code>keyValue()</code> returns 0 in binary mode when there is no value. The reason is </p>
+<pre><code>int i=23;
+key=keyNew(0);
+keySetBinary(key, 0, 0);
+keyValue(key); // you would expect 0 here
+keySetBinary(key,'', 1);
+keyValue(key); // you would expect '' (a pointer to '&nbsp;<wbr>') here
+keySetBinary(key, (void*)&amp;i, 4);
+(int*)keyValue(key); // you would expect a pointer to (int)23 here
+keyDel(key);
+</code></pre>
+<p> <code>Note:</code> </p>
+<dl>
+<dd> <p> Note that the Key structure keeps its own size field that is calculated by library internal calls, so to avoid inconsistencies, you must never use the pointer returned by <code>keyValue()</code> method to set a new value. Use <code>keySetString()</code> or <code>keySetBinary()</code> instead. </p>
+ </dd></dl>
+<p> <code>Warning:</code> </p>
+<dl>
+<dd> <p> Binary keys will return a NULL pointer when there is no data in contrast to <code>keyName()</code>, <code>keyBaseName()</code>, <code>keyOwner()</code> and <code>keyComment()</code>. For string value the behaviour is the same. </p>
+ </dd></dl>
+<p> <code>Example:</code>.RS 4 </p>
+<pre><code>KDB *handle = kdbOpen();
+KeySet *ks=ksNew(0);
+Key *current=0;
+kdbGetByName(handle,ks,'system/sw/my',KDB_O_SORT|KDB_O_RECURSIVE);
+ksRewind(ks);
+while(current=ksNext(ks)) {
+        size_t size=0;
+        if (keyIsBin(current)) {
+                size=keyGetValueSize(current);
+                printf('Key %s has a value of size %d bytes. Value: &lt;BINARY&gt;omment: %s',
+                        keyName(current),
+                        size,
+                        keyComment(current));
+        } else {
+                size=kdbiStrLen((char *)keyValue(current));
+                printf('Key %s has a value of size %d bytes. Value: %somment: %s',
+                        keyName(current),
+                        size,
+                        (char *)keyValue(current),
+                        keyComment(current));
+        }
+}
+ksDel (ks);
+kdbClose (handle);
+</code></pre>
+<p> <code>Parameters:</code> </p>
+<dl>
+<dd> <p> <i>key</i> the key object to work with </p>
+ </dd></dl>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> a pointer to internal value </p>
+<p> 0 where there is no data and key is binary </p>
+<p> 0 on NULL pointer </p>
+ </dd></dl>
+<p> <code>See also:</code> </p>
+<dl>
+<dd> <p> <code>keyGetValueSize()</code>, <code>keyGetString()</code>, <code>keyGetBinary()</code> </p>
+ </dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
+<h2>Index</h2>

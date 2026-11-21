@@ -53,5 +53,23 @@ description: "DVIasm – a TeX utility program for editing DVI files directly"
 <dt>Typical usages are as follows:</dt>
 <dd>
 </dd><dt>
-</dt><dd> 1) By default, the contents of \special are dumped/compiled as byte-to-byte escape sequences in `
-</dd></dl></dl></dl>
+</dt><dd> 1) By default, the contents of \special are dumped/compiled as byte-to-byte escape sequences in `\x..&#8216; format. This would suffice when you don&#8217;t need to read/edit the contents of \special.  </dd>
+<dd>  3) For XeTeX and upTeX users, `<code>-x utf8</code>&#8216; would be useful since these engines use UTF-8 to encode strings inside \special commands.  </dd>
+<dd>  2) For pTeX users with ISO-2022-JP-encoded DVI, it would be helpful to select the appropriate option `<code>-x eucjp</code>&#8216; (for Unix) or `<code>-x sjis</code>&#8216; (for Windows) to be consistent with the internal Kanji encoding used by pTeX engine.  </dd></dl>
+ </dl>
+ <dt><code>-t</code> &lt;<i>INT</i>&gt;, <code>--tabsize=</code>&lt;<i>INT</i>&gt;</dt>
+<dd>  Set tab size for push/pop [default: 2].  </dd>
+<dt><code>-p</code>, <code>--ptex</code></dt>
+<dd>  Dump and compile ISO-2022-JP-encoded DVI for Japanese pTeX. This option is required to decode or encode Japanese characters being typeset (using `set2&#8217; or `put2&#8217;) properly.  </dd>
+<dt><code>-s</code> &lt;<i>STR</i>&gt;, <code>--subfont=</code>&lt;<i>STR</i>&gt;</dt>
+<dd>  Specify the list of fonts with UCS2 subfont scheme in the comma-separated format. If &lt;<i>STR</i>&gt; is empty, the pre-defined internal subfont list is disabled.  </dd>
+<dl>
+<dd>  This option would be useful for example when using CJK package.  </dd></dl>
+ </dl>
+  <h2>EXAMPLE</h2>
+ Documentation of <code>DVIasm</code> by the original author Jin-Hwan Cho is published as: <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a rel="nofollow" href="http://tug.org/TUGboat/Articles/tb28-2/tb89cho.pdf">http://tug.org/TUGboat/Articles/tb28-2/tb89cho.pdf</a>&nbsp;(TUGboat) <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<a rel="nofollow" href="http://ajt.ktug.kr/assets/2008/5/1/0201cho.pdf">http://ajt.ktug.kr/assets/2008/5/1/0201cho.pdf</a>&nbsp;(Asian Journal of TeX)  <h2>AUTHORS</h2>
+ The first version was written in Python 2 by Jin-Hwan Cho in 2007. Khaled Hosny started to support dumping/compiling XeTeX XDV format in 2014. Arthur Reutenauer ported the script to Python 3 in 2019. Current maintainer of <code>DVIasm</code> is Hironobu Yamashita, since 2020.  <h2>BUG REPORT</h2>
+ Please visit the GitHub repository &lt;<a rel="nofollow" href="https://github.com/aminophen/dviasm">https://github.com/aminophen/dviasm</a>&gt;.  <h2>SEE ALSO</h2>
+ <code><a href="/docs/linux/man/1-dvitype/">dvitype</a></code>(1), <code><a href="/docs/linux/man/1-dv2dt/">dv2dt</a></code>(1), <code><a href="/docs/linux/man/1-dt2dv/">dt2dv</a></code>(1), <code><a href="/docs/linux/man/1-dvispc/">dvispc</a></code>(1). <h2>Index</h2>

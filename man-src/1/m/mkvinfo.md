@@ -131,5 +131,36 @@ info.txt
 </dt><dd> &bull; <code>2</code> &#8212; This exit code is used after an error occurred. <code><a href="/docs/linux/man/1-mkvinfo/">mkvinfo</a></code>(1) aborts right after outputting the error message. Error messages range from wrong command line arguments over read/write errors to broken files.</dd></dl>
 <h2>ESCAPING SPECIAL CHARS IN TEXT</h2>
 <p> There are a few places in which special characters in text must or should be escaped. The rules for escaping are simple: each character that needs escaping is replaced with a backslash followed by another character. </p>
-<p> The rules are: &#8216; &#8216; (a space) becomes &#8216;\s&#8217;, &#8216;&quot;&#8217; (double quotes) becomes &#8216;\2&#8217;, &#8216;:&#8217; becomes &#8216;
-</p>
+<p> The rules are: &#8216; &#8216; (a space) becomes &#8216;\s&#8217;, &#8216;&quot;&#8217; (double quotes) becomes &#8216;\2&#8217;, &#8216;:&#8217; becomes &#8216;\c&#8217;, &#8216;#&#8216; becomes &#8216;\h&#8217; and &#8216;\&#8216; (a single backslash) itself becomes &#8216;\\&#8216;.  </p>
+<h2>ENVIRONMENT VARIABLES</h2>
+<p> <code><a href="/docs/linux/man/1-mkvinfo/">mkvinfo</a></code>(1) uses the default variables that determine the system&#8217;s locale (e.g. <i>LANG</i> and the <i>LC_*</i> family). Additional variables: </p>
+<p> <i>MKVTOOLNIX_DEBUG</i> and its short form <i>MTX_DEBUG</i> </p>
+<dl>
+<dd> <p> The content is treated as if it had been passed via the <code>--debug</code> option. </p>
+ </dd></dl>
+<p> <i>MKVTOOLNIX_ENGAGE</i> and its short form <i>MTX_ENGAGE</i> </p>
+<dl>
+<dd> <p> The content is treated as if it had been passed via the <code>--engage</code> option. </p>
+ </dd></dl>
+<p> <i>MKVTOOLNIX_OPTIONS</i> and its short form <i>MTX_OPTIONS</i> </p>
+<dl>
+<dd> <p> The content is split on white space. The resulting partial strings are treated as if it had been passed as command line options. If you need to pass special characters (e.g. spaces) then you have to escape them (see the section about escaping special characters in text). </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1), <code><a href="/docs/linux/man/1-mkvextract/">mkvextract</a></code>(1), <code><a href="/docs/linux/man/1-mkvpropedit/">mkvpropedit</a></code>(1), <code><a href="/docs/linux/man/1-mmg/">mmg</a></code>(1)  </p>
+<h2>WWW</h2>
+<p> The latest version can always be found at m[blue]<code>the MKVToolNix homepage</code>m[]<font SIZE="-2">[1]</font>.  </p>
+<h2>AUTHOR</h2>
+<p> <code>Moritz Bunkus</code> &lt;moritz [at] bunkus.org&gt; </p>
+<dl>
+<dd> <p> Developer </p>
+ </dd></dl>
+<h2>NOTES</h2>
+<dl>
+<dt> 1.</dt>
+<dd> <p> the MKVToolNix homepage </p>
+ </dd>
+<dl>
+<dd> <p> <a rel="nofollow" href="http://www.bunkus.org/videotools/mkvtoolnix/">http://www.bunkus.org/videotools/mkvtoolnix/</a> </p>
+ </dd></dl>
+<h2>Index</h2>

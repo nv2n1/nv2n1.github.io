@@ -39,6 +39,41 @@ file1.but &amp;nbsp;
 <dl>
 <dt>
 </dt><dd>
-<p> By default, unless configured otherwise using the <code>
-</p></dd></dl></dl>
-</code>
+<p> By default, unless configured otherwise using the <code></code> <code>\cfg{info-max-file-size}{0}</code> directive, the <code>info</code> output will be split into multiple files. The main file will have the name you specify; the subsidiary files will have suffixes <code>-1</code>, <code>-2</code> etc. </dl>
+ </p>
+<dt><code>--pdf</code>[<code>=</code><i>filename</i>]</dt>
+<dd> <p> Makes Halibut generate an output file in PDF format. If the optional <i>filename</i> parameter is supplied, the PDF output file will be given that name. Otherwise, the name of the output PDF file will be as specified in the input files, or <code>output.pdf</code> if none is specified at all. </p>
+ </dd>
+<dt><code>--ps</code>[<code>=</code><i>filename</i>]</dt>
+<dd> <p> Makes Halibut generate an output file in PostScript format. If the optional <i>filename</i> parameter is supplied, the PostScript output file will be given that name. Otherwise, the name of the output PostScript file will be as specified in the input files, or <code>output.ps</code> if none is specified at all. </p>
+ </dd>
+<dt><code>-C</code><i>word</i><code>:</code><i>word</i>[<code>:</code><i>word</i>...]</dt>
+<dd> <p> Adds a configuration directive to the input processed by Halibut. Using this directive is exactly equivalent to appending an extra input file to the command line which contains the directive <code>\cfg{</code><i>word</i><code>}{</code><i>word</i><code>}{</code><i>word</i>...<code>}</code>. </p>
+ </dd>
+<dt><code>--input-charset=</code><i>charset</i></dt>
+<dd> <p> Changes the assumed character set for input files from the default of ASCII. </p>
+ </dd>
+<dt><code>--list-charsets</code></dt>
+<dd> <p> Makes Halibut list character sets known to it. </p>
+ </dd>
+<dt><code>--list-fonts</code></dt>
+<dd> <p> Makes Halibut list fonts known to it, either intrinsically or by being passed as input files. </p>
+ </dd>
+<dt><code>--precise</code></dt>
+<dd> <p> Makes Halibut report the column number as well as the line number when it encounters an error in an input file. </p>
+ </dd>
+<dt><code>--help</code></dt>
+<dd> <p> Makes Halibut display a brief summary of its command-line options. </p>
+ </dd>
+<dt><code>--version</code></dt>
+<dd> <p> Makes Halibut report its version number. </p>
+ </dd>
+<dt><code>--licence</code></dt>
+<dd> <p> Makes Halibut display its licence (MIT). </p>
+ </dd></dl>
+<h2>MORE INFORMATION</h2>
+<p> For more information on Halibut, including full details of the input file format, look in the full manual. If this is not installed locally on your system, you can also find it at the Halibut web site: </p>
+<p> <code><a rel="nofollow" href="http://www.chiark.greenend.org.uk/~sgtatham/halibut/">http://www.chiark.greenend.org.uk/~sgtatham/halibut/</a></code>  </p>
+<h2>BUGS</h2>
+<p> This man page isn&#8217;t terribly complete. </p>
+<h2>Index</h2>

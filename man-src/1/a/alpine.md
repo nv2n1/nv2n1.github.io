@@ -131,5 +131,37 @@ description: "alpine – an Alternatively Licensed Program for Internet News and
 <p> /usr/local/lib/pine.info<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Local pointer to system administrator.</p>
 <p> /usr/local/lib/pine.conf<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>System-wide configuration file.</p>
 <p> /usr/local/lib/pine.conf.fixed Non-overridable configuration file.</p>
-<p> /tmp/.
-</p>
+<p> /tmp/.\usr\spool\mail\xxxx <code>&nbsp;<wbr></code>Per-folder mailbox lock files.<br />
+ <br />
+ ~/.pine-interrupted-mail <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>Message which was interrupted.<br />
+ <br />
+ ~/mail/postponed-msgs <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>For postponed messages.<br />
+ <br />
+ ~/mail/sent-mail <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>Outgoing message archive (FCC).<br />
+ <br />
+ ~/mail/saved-messages <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>Default destination for Saving messages.<br />
+  </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-pico/">pico</a>(1), <a href="/docs/linux/man/1-binmail/">binmail</a>(1), <a href="/docs/linux/man/5-aliases/">aliases</a>(5), <a href="/docs/linux/man/7-mailaddr/">mailaddr</a>(7), <a href="/docs/linux/man/8-sendmail/">sendmail</a>(8), <a href="/docs/linux/man/1-spell/">spell</a>(1), <a href="/docs/linux/man/8-imapd/">imapd</a>(8) </p>
+<p> <br />
+ Newsgroup: comp.mail.pine </p>
+<p> <br />
+ Mailing List: <br />
+ Alpine-info, at <a rel="nofollow" href="https://www.washington.edu/alpine/alpine-info/">https://www.washington.edu/alpine/alpine-info/</a> </p>
+<p> <br />
+ Main Alpine distribution site: <br />
+ <a rel="nofollow" href="http://patches.freeiz.com/alpine/release/">http://patches.freeiz.com/alpine/release/</a> </p>
+<p> <br />
+ Alpine Technical Notes, included in the source distribution. </p>
+<p> <br />
+ C-Client messaging API library, included in the source distribution.  </p>
+<h2>ACKNOWLEDGMENTS</h2>
+<pre><code>This software is the result of the contribution of many individuals
+who have dedicated their time to support, improve and suggest ways
+to improve Alpine through the years. This software would not be
+possible without the support of the University of Washington in
+Seattle, Washington. The Alpine community extends its most sincere
+thanks to all contributors and invites everyone to join in and
+contribute to this project.
+</code></pre>
+<h2>Index</h2>

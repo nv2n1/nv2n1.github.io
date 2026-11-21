@@ -2138,6 +2138,39 @@ static void main(String[] args)
 <dl>
 <dt>CLASSPATH</dt>
 <dd> <code>CLASSPATH</code> is the environment variable that provides the path that the <code>javadoc</code> command uses to find user class files. This environment variable is overridden by the <code>-classpath</code> option. Separate directories with a semicolon for Windows or a colon for Oracle Solaris. </dd>
-<p> <i>Windows example</i>: <code>.;C:
-</p></dl>
-</code>
+<p> <i>Windows example</i>: <code>.;C:</code>\classes;C:\home\java\classes</code> </p>
+<p> <i>Oracle Solaris example</i>: <code>.:/home/classes:/usr/local/java/classes</code>. </dl>
+  </p>
+<h2>SEE ALSO</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> <a href="/docs/linux/man/1-javac/">javac</a>(1) </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <a href="/docs/linux/man/1-java/">java</a>(1) </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <a href="/docs/linux/man/1-jdb/">jdb</a>(1) </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> <a href="/docs/linux/man/1-javap/">javap</a>(1) </p>
+ </dd></dl>
+<h2>RELATED DOCUMENTS</h2>
+<dl>
+<dt>&bull;</dt>
+<dd> <p> Javadoc Technology at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html">http://docs.oracle.com/javase/8/docs/technotes/guides/javadoc/index.html</a> </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> How Classes Are Found <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/tools/findingclasses.html">http://docs.oracle.com/javase/8/docs/technotes/tools/findingclasses.html</a> </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> How to Write Doc Comments for the Javadoc Tool <a rel="nofollow" href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html</a> </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> URL Memo, Uniform Resource Locators <a rel="nofollow" href="http://www.ietf.org/rfc/rfc1738.txt">http://www.ietf.org/rfc/rfc1738.txt</a> </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> HTML standard, HTML Document Representation (4197265 and 4137321) <a rel="nofollow" href="http://www.w3.org/TR/REC-html40/charset.html#h-5.2.2">http://www.w3.org/TR/REC-html40/charset.html#h-5.2.2</a> <br />
+ </p>
+ </dd></dl>
+<h2>Index</h2>

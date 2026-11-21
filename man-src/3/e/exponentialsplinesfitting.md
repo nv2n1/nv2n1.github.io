@@ -17,5 +17,13 @@ description: "QuantLib::ExponentialSplinesFitting – Exponential-splines fittin
  <i>clone of the current object </i></p>
 <h2>Detailed Description</h2>
 <p>Exponential-splines fitting method. </p>
-<p> Fits a discount function to the exponential form [ d(t) = um_{i=1}^9 c_i 
-</p>
+<p> Fits a discount function to the exponential form [ d(t) = um_{i=1}^9 c_i \xp^{-kappa i t} ] where the constants $ c_i $ and $ ppa $ are to be determined. See:Li, B., E. DeWetering, G. Lucas, R. Brenner and A. Shapiro (2001): &#8216;Merrill Lynch Exponential Spline Model.&#8216; Merrill Lynch Working Paper </p>
+<p> <code>Warning</code> </p>
+<dl>
+<dd> <p> convergence may be slow </p>
+ </dd></dl>
+<p> <code>Examples: </code> </p>
+<p> <code>FittedBondCurve.cpp</code>. </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>

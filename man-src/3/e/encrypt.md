@@ -98,5 +98,24 @@ void encrypt_r(char *block, int edflag, struct crypt_data *data);
 &quot;, orig); </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;encrypt(buf, 0);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;8;&nbsp;i++)&nbsp;{<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0, txt[i]&nbsp;=&nbsp;&#8216;
-</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0, txt[i]&nbsp;=&nbsp;&#8216;\0&#8217;;&nbsp;j&nbsp;&lt;&nbsp;8;&nbsp;j++)&nbsp;{ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[i]&nbsp;|=&nbsp;buf[i&nbsp;*&nbsp;8&nbsp;+&nbsp;j]&nbsp;&lt;&lt;&nbsp;j; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[8]&nbsp;=&nbsp;&#8216;\0&#8217;; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;After encrypting:&nbsp;<wbr>&nbsp;%s\n&quot;, txt); </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;encrypt(buf, 1); <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;8;&nbsp;i++)&nbsp;{ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0, txt[i]&nbsp;=&nbsp;&#8216;\0&#8217;;&nbsp;j&nbsp;&lt;&nbsp;8;&nbsp;j++)&nbsp;{ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[i]&nbsp;|=&nbsp;buf[i&nbsp;*&nbsp;8&nbsp;+&nbsp;j]&nbsp;&lt;&lt;&nbsp;j; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[8]&nbsp;=&nbsp;&#8216;\0&#8217;; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;After decrypting:&nbsp;<wbr>&nbsp;%s\n&quot;, txt); <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-cbc_crypt/">cbc_crypt</a></code>(3), <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3), <code><a href="/docs/linux/man/3-ecb_crypt/">ecb_crypt</a></code>(3),  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

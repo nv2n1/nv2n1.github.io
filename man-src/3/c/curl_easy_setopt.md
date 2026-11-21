@@ -346,5 +346,786 @@ return socket(addr-&gt;family, addr-&gt;socktype, addr-&gt;protocol);
 <dd> Pass a char * as parameter, pointing to a zero terminated string containing the full path name to the file you want libcurl to use as .netrc file. If this option is omitted, and <i>CURLOPT_NETRC</i> is set, libcurl will attempt to find a .netrc file in the current user&#8217;s home directory. (Added in 7.10.9)</dd>
 <dt>CURLOPT_USERPWD</dt>
 <dd> Pass a char * as parameter, which should be [user name]:[password] to use for the connection. Use <i>CURLOPT_HTTPAUTH</i> to decide the authentication method. </dd>
-<p> When using NTLM, you can set the domain by prepending it to the user name and separating the domain and name with a forward (/) or backward slash (\). Like this: &quot;domain/user:password&quot; or &quot;domain
-</p></dl>
+<p> When using NTLM, you can set the domain by prepending it to the user name and separating the domain and name with a forward (/) or backward slash (\). Like this: &quot;domain/user:password&quot; or &quot;domain\user:password&quot;. Some HTTP servers (on Windows) support this style even for Basic authentication. </p>
+<p> When using HTTP and <i>CURLOPT_FOLLOWLOCATION</i>, libcurl might perform several requests to possibly different hosts. libcurl will only send this user and password information to hosts using the initial host name (unless <i>CURLOPT_UNRESTRICTED_AUTH</i> is set), so if libcurl follows locations to other hosts it will not send the user and password to those. This is enforced to prevent accidental information leakage. </p>
+<dt>CURLOPT_PROXYUSERPWD</dt>
+<dd> <p> Pass a char * as parameter, which should be [user name]:[password] to use for the connection to the HTTP proxy. Use <i>CURLOPT_PROXYAUTH</i> to decide the authentication method. </p>
+ </dd>
+<dt>CURLOPT_USERNAME</dt>
+<dd> <p> Pass a char * as parameter, which should be pointing to the zero terminated user name to use for the transfer. </p>
+<p> <code>CURLOPT_USERNAME</code> sets the user name to be used in protocol authentication. You should not use this option together with the (older) CURLOPT_USERPWD option. </p>
+<p> In order to specify the password to be used in conjunction with the user name use the <i>CURLOPT_PASSWORD</i> option. (Added in 7.19.1) </p>
+ </dd>
+<dt>CURLOPT_PASSWORD</dt>
+<dd> <p> Pass a char * as parameter, which should be pointing to the zero terminated password to use for the transfer. </p>
+<p> The CURLOPT_PASSWORD option should be used in conjunction with the <i>CURLOPT_USERNAME</i> option. (Added in 7.19.1) </p>
+ </dd>
+<dt>CURLOPT_PROXYUSERNAME</dt>
+<dd> <p> Pass a char * as parameter, which should be pointing to the zero terminated user name to use for the transfer while connecting to Proxy. </p>
+<p> The CURLOPT_PROXYUSERNAME option should be used in same way as the <i>CURLOPT_PROXYUSERPWD</i> is used. In comparison to <i>CURLOPT_PROXYUSERPWD</i> the CURLOPT_PROXYUSERNAME allows the username to contain a colon, like in the following example: &quot;sip:user [at] example.com&quot;. The CURLOPT_PROXYUSERNAME option is an alternative way to set the user name while connecting to Proxy. There is no meaning to use it together with the <i>CURLOPT_PROXYUSERPWD</i> option. </p>
+<p> In order to specify the password to be used in conjunction with the user name use the <i>CURLOPT_PROXYPASSWORD</i> option. (Added in 7.19.1) </p>
+ </dd>
+<dt>CURLOPT_PROXYPASSWORD</dt>
+<dd> <p> Pass a char * as parameter, which should be pointing to the zero terminated password to use for the transfer while connecting to Proxy. </p>
+<p> The CURLOPT_PROXYPASSWORD option should be used in conjunction with the <i>CURLOPT_PROXYUSERNAME</i> option. (Added in 7.19.1) </p>
+ </dd>
+<dt>CURLOPT_HTTPAUTH</dt>
+<dd> <p> Pass a long as parameter, which is set to a bitmask, to tell libcurl which authentication method(s) you want it to use. The available bits are listed below. If more than one bit is set, libcurl will first query the site to see which authentication methods it supports and then pick the best one you allow it to use. For some methods, this will induce an extra network round-trip. Set the actual name and password with the <i>CURLOPT_USERPWD</i> option or with the <i>CURLOPT_USERNAME</i> and the <i>CURLOPT_PASSWORD</i> options. (Added in 7.10.6) </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURLAUTH_BASIC</dt>
+<dd> <p> HTTP Basic authentication. This is the default choice, and the only method that is in wide-spread use and supported virtually everywhere. This sends the user name and password over the network in plain text, easily captured by others. </p>
+ </dd>
+<dt>CURLAUTH_DIGEST</dt>
+<dd> <p> HTTP Digest authentication. Digest authentication is defined in RFC2617 and is a more secure way to do authentication over public networks than the regular old-fashioned Basic method. </p>
+ </dd>
+<dt>CURLAUTH_DIGEST_IE</dt>
+<dd> <p> HTTP Digest authentication with an IE flavor. Digest authentication is defined in RFC2617 and is a more secure way to do authentication over public networks than the regular old-fashioned Basic method. The IE flavor is simply that libcurl will use a special &quot;quirk&quot; that IE is known to have used before version 7 and that some servers require the client to use. (This define was added in 7.19.3) </p>
+ </dd>
+<dt>CURLAUTH_GSSNEGOTIATE</dt>
+<dd> <p> HTTP GSS-Negotiate authentication. The GSS-Negotiate (also known as plain &quot;Negotiate&quot;) method was designed by Microsoft and is used in their web applications. It is primarily meant as a support for Kerberos5 authentication but may also be used along with other authentication methods. For more information see IETF draft draft-brezak-spnego-http-04.txt. </p>
+<p> You need to build libcurl with a suitable GSS-API library for this to work. </p>
+ </dd>
+<dt>CURLAUTH_NTLM</dt>
+<dd> <p> HTTP NTLM authentication. A proprietary protocol invented and used by Microsoft. It uses a challenge-response and hash concept similar to Digest, to prevent the password from being eavesdropped. </p>
+<p> You need to build libcurl with either OpenSSL, GnuTLS or NSS support for this option to work, or build libcurl on Windows. </p>
+ </dd>
+<dt>CURLAUTH_NTLM_WB</dt>
+<dd> <p> NTLM delegating to winbind helper. Authentication is performed by a separate binary application that is executed when needed. The name of the application is specified at compile time but is typically /usr/bin/ntlm_auth (Added in 7.22.0) </p>
+<p> Note that libcurl will fork when necessary to run the winbind application and kill it when complete, calling waitpid() to await its exit when done. On POSIX operating systems, killing the process will cause a SIGCHLD signal to be raised (regardless of whether <i>CURLOPT_NOSIGNAL</i> is set), which must be handled intelligently by the application. In particular, the application must not unconditionally call wait() in its SIGCHLD signal handler to avoid being subject to a race condition. This behavior is subject to change in future versions of libcurl. </p>
+ </dd>
+<dt>CURLAUTH_ANY</dt>
+<dd> <p> This is a convenience macro that sets all bits and thus makes libcurl pick any it finds suitable. libcurl will automatically select the one it finds most secure. </p>
+ </dd>
+<dt>CURLAUTH_ANYSAFE</dt>
+<dd> <p> This is a convenience macro that sets all bits except Basic and thus makes libcurl pick any it finds suitable. libcurl will automatically select the one it finds most secure. </p>
+ </dd>
+<dt>CURLAUTH_ONLY</dt>
+<dd> <p> This is a meta symbol. Or this value together with a single specific auth value to force libcurl to probe for un-restricted auth and if not, only that single auth algorithm is acceptable. (Added in 7.21.3) </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_TLSAUTH_TYPE</dt>
+<dd> <p> Pass a long as parameter, which is set to a bitmask, to tell libcurl which authentication method(s) you want it to use for TLS authentication. </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURLOPT_TLSAUTH_SRP</dt>
+<dd> <p> TLS-SRP authentication. Secure Remote Password authentication for TLS is defined in RFC5054 and provides mutual authentication if both sides have a shared secret. To use TLS-SRP, you must also set the <i>CURLOPT_TLSAUTH_USERNAME</i> and <i>CURLOPT_TLSAUTH_PASSWORD</i> options. </p>
+<p> You need to build libcurl with GnuTLS or OpenSSL with TLS-SRP support for this to work. (Added in 7.21.4) </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_TLSAUTH_USERNAME</dt>
+<dd> <p> Pass a char * as parameter, which should point to the zero terminated username to use for the TLS authentication method specified with the <i>CURLOPT_TLSAUTH_TYPE</i> option. Requires that the <i>CURLOPT_TLS_PASSWORD</i> option also be set. (Added in 7.21.4) </p>
+ </dd>
+<dt>CURLOPT_TLSAUTH_PASSWORD</dt>
+<dd> <p> Pass a char * as parameter, which should point to the zero terminated password to use for the TLS authentication method specified with the <i>CURLOPT_TLSAUTH_TYPE</i> option. Requires that the <i>CURLOPT_TLS_USERNAME</i> option also be set. (Added in 7.21.4) </p>
+ </dd>
+<dt>CURLOPT_PROXYAUTH</dt>
+<dd> <p> Pass a long as parameter, which is set to a bitmask, to tell libcurl which authentication method(s) you want it to use for your proxy authentication. If more than one bit is set, libcurl will first query the site to see what authentication methods it supports and then pick the best one you allow it to use. For some methods, this will induce an extra network round-trip. Set the actual name and password with the <i>CURLOPT_PROXYUSERPWD</i> option. The bitmask can be constructed by or&#8217;ing together the bits listed above for the <i>CURLOPT_HTTPAUTH</i> option. As of this writing, only Basic, Digest and NTLM work. (Added in 7.10.7) </p>
+ </dd></dl>
+<h2>HTTP OPTIONS</h2>
+<dl>
+<dt>CURLOPT_AUTOREFERER</dt>
+<dd> <p> Pass a parameter set to 1 to enable this. When enabled, libcurl will automatically set the Referer: field in requests where it follows a Location: redirect. </p>
+ </dd>
+<dt>CURLOPT_ACCEPT_ENCODING</dt>
+<dd> <p> Sets the contents of the Accept-Encoding: header sent in a HTTP request, and enables decoding of a response when a Content-Encoding: header is received. Three encodings are supported: <i>identity</i>, which does nothing, <i>deflate</i> which requests the server to compress its response using the zlib algorithm, and <i>gzip</i> which requests the gzip algorithm. If a zero-length string is set, then an Accept-Encoding: header containing all supported encodings is sent. </p>
+<p> This is a request, not an order; the server may or may not do it. This option must be set (to any non-NULL value) or else any unsolicited encoding done by the server is ignored. See the special file lib/README.encoding for details. </p>
+<p> (This option was called CURLOPT_ENCODING before 7.21.6) </p>
+ </dd>
+<dt>CURLOPT_TRANSFER_ENCODING</dt>
+<dd> <p> Adds a request for compressed Transfer Encoding in the outgoing HTTP request. If the server supports this and so desires, it can respond with the HTTP response sent using a compressed Transfer-Encoding that will be automatically uncompressed by libcurl on reception. </p>
+<p> Transfer-Encoding differs slightly from the Content-Encoding you ask for with <code>CURLOPT_ACCEPT_ENCODING</code> in that a Transfer-Encoding is strictly meant to be for the transfer and thus MUST be decoded before the data arrives in the client. Traditionally, Transfer-Encoding has been much less used and supported by both HTTP clients and HTTP servers. </p>
+<p> (Added in 7.21.6) </p>
+ </dd>
+<dt>CURLOPT_FOLLOWLOCATION</dt>
+<dd> <p> A parameter set to 1 tells the library to follow any Location: header that the server sends as part of a HTTP header. </p>
+<p> This means that the library will re-send the same request on the new location and follow new Location: headers all the way until no more such headers are returned. <i>CURLOPT_MAXREDIRS</i> can be used to limit the number of redirects libcurl will follow. </p>
+<p> Since 7.19.4, libcurl can limit what protocols it will automatically follow. The accepted protocols are set with <i>CURLOPT_REDIR_PROTOCOLS</i> and it excludes the FILE protocol by default. </p>
+ </dd>
+<dt>CURLOPT_UNRESTRICTED_AUTH</dt>
+<dd> <p> A parameter set to 1 tells the library it can continue to send authentication (user+password) when following locations, even when hostname changed. This option is meaningful only when setting <i>CURLOPT_FOLLOWLOCATION</i>. </p>
+ </dd>
+<dt>CURLOPT_MAXREDIRS</dt>
+<dd> <p> Pass a long. The set number will be the redirection limit. If that many redirections have been followed, the next redirect will cause an error (<i>CURLE_TOO_MANY_REDIRECTS</i>). This option only makes sense if the <i>CURLOPT_FOLLOWLOCATION</i> is used at the same time. Added in 7.15.1: Setting the limit to 0 will make libcurl refuse any redirect. Set it to -1 for an infinite number of redirects (which is the default) </p>
+ </dd>
+<dt>CURLOPT_POSTREDIR</dt>
+<dd> <p> Pass a bitmask to control how libcurl acts on redirects after POSTs that get a 301, 302 or 303 response back. A parameter with bit 0 set (value <code>CURL_REDIR_POST_301</code>) tells the library to respect RFC2616/10.3.2 and not convert POST requests into GET requests when following a 301 redirection. Setting bit 1 (value <code>CURL_REDIR_POST_302</code>) makes libcurl maintain the request method after a 302 redirect whilst setting bit 2 (value <code>CURL_REDIR_POST_303</code>) makes libcurl maintain the request method after a 303 redirect. The value <code>CURL_REDIR_POST_ALL</code> is a convenience define that sets all three bits. </p>
+<p> The non-RFC behaviour is ubiquitous in web browsers, so the library does the conversion by default to maintain consistency. However, a server may require a POST to remain a POST after such a redirection. This option is meaningful only when setting <i>CURLOPT_FOLLOWLOCATION</i>. (Added in 7.17.1) (This option was known as CURLOPT_POST301 up to 7.19.0 as it only supported the 301 then) </p>
+ </dd>
+<dt>CURLOPT_PUT</dt>
+<dd> <p> A parameter set to 1 tells the library to use HTTP PUT to transfer data. The data should be set with <i>CURLOPT_READDATA</i> and <i>CURLOPT_INFILESIZE</i>. </p>
+<p> This option is deprecated and starting with version 7.12.1 you should instead use <i>CURLOPT_UPLOAD</i>. </p>
+ </dd>
+<dt>CURLOPT_POST</dt>
+<dd> <p> A parameter set to 1 tells the library to do a regular HTTP post. This will also make the library use a &quot;Content-Type: application/x-www-form-urlencoded&quot; header. (This is by far the most commonly used POST method). </p>
+<p> Use one of <i>CURLOPT_POSTFIELDS</i> or <i>CURLOPT_COPYPOSTFIELDS</i> options to specify what data to post and <i>CURLOPT_POSTFIELDSIZE</i> or <i>CURLOPT_POSTFIELDSIZE_LARGE</i> to set the data size. </p>
+<p> Optionally, you can provide data to POST using the <i>CURLOPT_READFUNCTION</i> and <i>CURLOPT_READDATA</i> options but then you must make sure to not set <i>CURLOPT_POSTFIELDS</i> to anything but NULL. When providing data with a callback, you must transmit it using chunked transfer-encoding or you must set the size of the data with the <i>CURLOPT_POSTFIELDSIZE</i> or <i>CURLOPT_POSTFIELDSIZE_LARGE</i> option. To enable chunked encoding, you simply pass in the appropriate Transfer-Encoding header, see the post-callback.c example. </p>
+<p> You can override the default POST Content-Type: header by setting your own with <i>CURLOPT_HTTPHEADER</i>. </p>
+<p> Using POST with HTTP 1.1 implies the use of a &quot;Expect: 100-continue&quot; header. You can disable this header with <i>CURLOPT_HTTPHEADER</i> as usual. </p>
+<p> If you use POST to a HTTP 1.1 server, you can send data without knowing the size before starting the POST if you use chunked encoding. You enable this by adding a header like &quot;Transfer-Encoding: chunked&quot; with <i>CURLOPT_HTTPHEADER</i>. With HTTP 1.0 or without chunked transfer, you must specify the size in the request. </p>
+<p> When setting <i>CURLOPT_POST</i> to 1, it will automatically set <i>CURLOPT_NOBODY</i> to 0 (since 7.14.1). </p>
+<p> If you issue a POST request and then want to make a HEAD or GET using the same re-used handle, you must explicitly set the new request type using <i>CURLOPT_NOBODY</i> or <i>CURLOPT_HTTPGET</i> or similar. </p>
+ </dd>
+<dt>CURLOPT_POSTFIELDS</dt>
+<dd> <p> Pass a void * as parameter, which should be the full data to post in a HTTP POST operation. You must make sure that the data is formatted the way you want the server to receive it. libcurl will not convert or encode it for you. Most web servers will assume this data to be url-encoded. </p>
+<p> The pointed data are NOT copied by the library: as a consequence, they must be preserved by the calling application until the transfer finishes. </p>
+<p> This POST is a normal application/x-www-form-urlencoded kind (and libcurl will set that Content-Type by default when this option is used), which is the most commonly used one by HTML forms. See also the <i>CURLOPT_POST</i>. Using <i>CURLOPT_POSTFIELDS</i> implies <i>CURLOPT_POST</i>. </p>
+<p> If you want to do a zero-byte POST, you need to set <i>CURLOPT_POSTFIELDSIZE</i> explicitly to zero, as simply setting <i>CURLOPT_POSTFIELDS</i> to NULL or &quot;&quot; just effectively disables the sending of the specified string. libcurl will instead assume that you&#8217;ll send the POST data using the read callback! </p>
+<p> Using POST with HTTP 1.1 implies the use of a &quot;Expect: 100-continue&quot; header. You can disable this header with <i>CURLOPT_HTTPHEADER</i> as usual. </p>
+<p> To make multipart/formdata posts (aka RFC2388-posts), check out the <i>CURLOPT_HTTPPOST</i> option. </p>
+ </dd>
+<dt>CURLOPT_POSTFIELDSIZE</dt>
+<dd> <p> If you want to post data to the server without letting libcurl do a strlen() to measure the data size, this option must be used. When this option is used you can post fully binary data, which otherwise is likely to fail. If this size is set to -1, the library will use strlen() to get the size. </p>
+ </dd>
+<dt>CURLOPT_POSTFIELDSIZE_LARGE</dt>
+<dd> <p> Pass a curl_off_t as parameter. Use this to set the size of the <i>CURLOPT_POSTFIELDS</i> data to prevent libcurl from doing strlen() on the data to figure out the size. This is the large file version of the <i>CURLOPT_POSTFIELDSIZE</i> option. (Added in 7.11.1) </p>
+ </dd>
+<dt>CURLOPT_COPYPOSTFIELDS</dt>
+<dd> <p> Pass a char * as parameter, which should be the full data to post in a HTTP POST operation. It behaves as the <i>CURLOPT_POSTFIELDS</i> option, but the original data are copied by the library, allowing the application to overwrite the original data after setting this option. </p>
+<p> Because data are copied, care must be taken when using this option in conjunction with <i>CURLOPT_POSTFIELDSIZE</i> or <i>CURLOPT_POSTFIELDSIZE_LARGE</i>: If the size has not been set prior to <i>CURLOPT_COPYPOSTFIELDS</i>, the data are assumed to be a NUL-terminated string; else the stored size informs the library about the data byte count to copy. In any case, the size must not be changed after <i>CURLOPT_COPYPOSTFIELDS</i>, unless another <i>CURLOPT_POSTFIELDS</i> or <i>CURLOPT_COPYPOSTFIELDS</i> option is issued. (Added in 7.17.1) </p>
+ </dd>
+<dt>CURLOPT_HTTPPOST</dt>
+<dd> <p> Tells libcurl you want a multipart/formdata HTTP POST to be made and you instruct what data to pass on to the server. Pass a pointer to a linked list of curl_httppost structs as parameter. The easiest way to create such a list, is to use <i><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a>(3)</i> as documented. The data in this list must remain intact until you close this curl handle again with <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i>. </p>
+<p> Using POST with HTTP 1.1 implies the use of a &quot;Expect: 100-continue&quot; header. You can disable this header with <i>CURLOPT_HTTPHEADER</i> as usual. </p>
+<p> When setting <i>CURLOPT_HTTPPOST</i>, it will automatically set <i>CURLOPT_NOBODY</i> to 0 (since 7.14.1). </p>
+ </dd>
+<dt>CURLOPT_REFERER</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It will be used to set the Referer: header in the http request sent to the remote server. This can be used to fool servers or scripts. You can also set any custom header with <i>CURLOPT_HTTPHEADER</i>. </p>
+ </dd>
+<dt>CURLOPT_USERAGENT</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It will be used to set the User-Agent: header in the http request sent to the remote server. This can be used to fool servers or scripts. You can also set any custom header with <i>CURLOPT_HTTPHEADER</i>. </p>
+ </dd>
+<dt>CURLOPT_HTTPHEADER</dt>
+<dd> <p> Pass a pointer to a linked list of HTTP headers to pass to the server in your HTTP request. The linked list should be a fully valid list of <code>struct curl_slist</code> structs properly filled in. Use <i><a href="/docs/linux/man/3-curl_slist_append/">curl_slist_append</a>(3)</i> to create the list and <i><a href="/docs/linux/man/3-curl_slist_free_all/">curl_slist_free_all</a>(3)</i> to clean up an entire list. If you add a header that is otherwise generated and used by libcurl internally, your added one will be used instead. If you add a header with no content as in &#8216;Accept:&#8216; (no data on the right side of the colon), the internally used header will get disabled. Thus, using this option you can add new headers, replace internal headers and remove internal headers. To add a header with no content, make the content be two quotes: &quot;&quot;. The headers included in the linked list must not be CRLF-terminated, because curl adds CRLF after each header item. Failure to comply with this will result in strange bugs because the server will most likely ignore part of the headers you specified. </p>
+<p> The first line in a request (containing the method, usually a GET or POST) is not a header and cannot be replaced using this option. Only the lines following the request-line are headers. Adding this method line in this list of headers will only cause your request to send an invalid header. </p>
+<p> Pass a NULL to this to reset back to no custom headers. </p>
+<p> The most commonly replaced headers have &quot;shortcuts&quot; in the options <i>CURLOPT_COOKIE</i>, <i>CURLOPT_USERAGENT</i> and <i>CURLOPT_REFERER</i>. </p>
+ </dd>
+<dt>CURLOPT_HTTP200ALIASES</dt>
+<dd> <p> Pass a pointer to a linked list of aliases to be treated as valid HTTP 200 responses. Some servers respond with a custom header response line. For example, IceCast servers respond with &quot;ICY 200 OK&quot;. By including this string in your list of aliases, the response will be treated as a valid HTTP header line such as &quot;HTTP/1.0 200 OK&quot;. (Added in 7.10.3) </p>
+<p> The linked list should be a fully valid list of struct curl_slist structs, and be properly filled in. Use <i><a href="/docs/linux/man/3-curl_slist_append/">curl_slist_append</a>(3)</i> to create the list and <i><a href="/docs/linux/man/3-curl_slist_free_all/">curl_slist_free_all</a>(3)</i> to clean up an entire list. </p>
+<p> The alias itself is not parsed for any version strings. Before libcurl 7.16.3, Libcurl used the value set by option <i>CURLOPT_HTTP_VERSION</i>, but starting with 7.16.3 the protocol is assumed to match HTTP 1.0 when an alias matched. </p>
+ </dd>
+<dt>CURLOPT_COOKIE</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It will be used to set a cookie in the http request. The format of the string should be NAME=CONTENTS, where NAME is the cookie name and CONTENTS is what the cookie should contain. </p>
+<p> If you need to set multiple cookies, you need to set them all using a single option and thus you need to concatenate them all in one single string. Set multiple cookies in one string like this: &quot;name1=content1; name2=content2;&quot; etc. </p>
+<p> This option sets the cookie header explicitly in the outgoing request(s). If multiple requests are done due to authentication, followed redirections or similar, they will all get this cookie passed on. </p>
+<p> Using this option multiple times will only make the latest string override the previous ones. </p>
+ </dd>
+<dt>CURLOPT_COOKIEFILE</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It should contain the name of your file holding cookie data to read. The cookie data may be in Netscape / Mozilla cookie data format or just regular HTTP-style headers dumped to a file. </p>
+<p> Given an empty or non-existing file or by passing the empty string (&quot;&quot;), this option will enable cookies for this curl handle, making it understand and parse received cookies and then use matching cookies in future requests. </p>
+<p> If you use this option multiple times, you just add more files to read. Subsequent files will add more cookies. </p>
+ </dd>
+<dt>CURLOPT_COOKIEJAR</dt>
+<dd> <p> Pass a file name as char *, zero terminated. This will make libcurl write all internally known cookies to the specified file when <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i> is called. If no cookies are known, no file will be created. Specify &quot;-&quot; to instead have the cookies written to stdout. Using this option also enables cookies for this session, so if you for example follow a location it will make matching cookies get sent accordingly. </p>
+<p> If the cookie jar file can&#8217;t be created or written to (when the <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i> is called), libcurl will not and cannot report an error for this. Using <i>CURLOPT_VERBOSE</i> or <i>CURLOPT_DEBUGFUNCTION</i> will get a warning to display, but that is the only visible feedback you get about this possibly lethal situation. </p>
+ </dd>
+<dt>CURLOPT_COOKIESESSION</dt>
+<dd> <p> Pass a long set to 1 to mark this as a new cookie &quot;session&quot;. It will force libcurl to ignore all cookies it is about to load that are &quot;session cookies&quot; from the previous session. By default, libcurl always stores and loads all cookies, independent if they are session cookies or not. Session cookies are cookies without expiry date and they are meant to be alive and existing for this &quot;session&quot; only. </p>
+ </dd>
+<dt>CURLOPT_COOKIELIST</dt>
+<dd> <p> Pass a char * to a cookie string. Cookie can be either in Netscape / Mozilla format or just regular HTTP-style header (Set-Cookie: ...) format. If cURL cookie engine was not enabled it will enable its cookie engine. Passing a magic string &quot;ALL&quot; will erase all cookies known by cURL. (Added in 7.14.1) Passing the special string &quot;SESS&quot; will only erase all session cookies known by cURL. (Added in 7.15.4) Passing the special string &quot;FLUSH&quot; will write all cookies known by cURL to the file specified by <i>CURLOPT_COOKIEJAR</i>. (Added in 7.17.1) </p>
+ </dd>
+<dt>CURLOPT_HTTPGET</dt>
+<dd> <p> Pass a long. If the long is 1, this forces the HTTP request to get back to GET. Usable if a POST, HEAD, PUT, or a custom request has been used previously using the same curl handle. </p>
+<p> When setting <i>CURLOPT_HTTPGET</i> to 1, it will automatically set <i>CURLOPT_NOBODY</i> to 0 (since 7.14.1). </p>
+ </dd>
+<dt>CURLOPT_HTTP_VERSION</dt>
+<dd> <p> Pass a long, set to one of the values described below. They force libcurl to use the specific HTTP versions. This is not sensible to do unless you have a good reason. </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURL_HTTP_VERSION_NONE</dt>
+<dd> <p> We don&#8217;t care about what version the library uses. libcurl will use whatever it thinks fit. </p>
+ </dd>
+<dt>CURL_HTTP_VERSION_1_0</dt>
+<dd> <p> Enforce HTTP 1.0 requests. </p>
+ </dd>
+<dt>CURL_HTTP_VERSION_1_1</dt>
+<dd> <p> Enforce HTTP 1.1 requests. </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_IGNORE_CONTENT_LENGTH</dt>
+<dd> <p> Ignore the Content-Length header. This is useful for Apache 1.x (and similar servers) which will report incorrect content length for files over 2 gigabytes. If this option is used, curl will not be able to accurately report progress, and will simply stop the download when the server ends the connection. (added in 7.14.1) </p>
+ </dd>
+<dt>CURLOPT_HTTP_CONTENT_DECODING</dt>
+<dd> <p> Pass a long to tell libcurl how to act on content decoding. If set to zero, content decoding will be disabled. If set to 1 it is enabled. Libcurl has no default content decoding but requires you to use <i>CURLOPT_ENCODING</i> for that. (added in 7.16.2) </p>
+ </dd>
+<dt>CURLOPT_HTTP_TRANSFER_DECODING</dt>
+<dd> <p> Pass a long to tell libcurl how to act on transfer decoding. If set to zero, transfer decoding will be disabled, if set to 1 it is enabled (default). libcurl does chunked transfer decoding by default unless this option is set to zero. (added in 7.16.2) </p>
+ </dd></dl>
+<h2>SMTP OPTIONS</h2>
+<dl>
+<dt>CURLOPT_MAIL_FROM</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. This should be used to specify the sender&#8217;s email address when sending SMTP mail with libcurl. </p>
+<p> An originator email address should be specified with angled brackets (&lt;&gt;) around it, which if not specified, will be added by libcurl from version 7.21.4 onwards. Failing to provide such brackets may cause the server to reject the email. </p>
+<p> If this parameter is not specified then an empty address will be sent to the mail server which may or may not cause the email to be rejected. </p>
+<p> (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_MAIL_RCPT</dt>
+<dd> <p> Pass a pointer to a linked list of recipients to pass to the server in your SMTP mail request. The linked list should be a fully valid list of <code>struct curl_slist</code> structs properly filled in. Use <i><a href="/docs/linux/man/3-curl_slist_append/">curl_slist_append</a>(3)</i> to create the list and <i><a href="/docs/linux/man/3-curl_slist_free_all/">curl_slist_free_all</a>(3)</i> to clean up an entire list. </p>
+<p> Each recipient should be specified within a pair of angled brackets (&lt;&gt;), however, should you not use an angled bracket as the first character libcurl will assume you provided a single email address and enclose that address within brackets for you. </p>
+<p> (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_MAIL_AUTH</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. This will be used to specify the authentication address (identity) of a submitted message that is being relayed to another server. </p>
+<p> This optional parameter allows co-operating agents in a trusted environment to communicate the authentication of individual messages and should only be used by the application program, using libcurl, if the application is itself a mail server acting in such an environment. If the application is operating as such and the AUTH address is not known or is invalid, then an empty string should be used for this parameter. </p>
+<p> Unlike CURLOPT_MAIL_FROM and CURLOPT_MAIL_RCPT, the address should not be specified within a pair of angled brackets (&lt;&gt;). However, if an empty string is used then a pair of brackets will be sent by libcurl as required by RFC2554. </p>
+<p> (Added in 7.25.0) </p>
+ </dd></dl>
+<h2>TFTP OPTIONS</h2>
+<dl>
+<dt>CURLOPT_TFTP_BLKSIZE</dt>
+<dd> <p> Specify block size to use for TFTP data transmission. Valid range as per RFC2348 is 8-65464 bytes. The default of 512 bytes will be used if this option is not specified. The specified block size will only be used pending support by the remote server. If the server does not return an option acknowledgement or returns an option acknowledgement with no blksize, the default of 512 bytes will be used. (added in 7.19.4) </p>
+ </dd></dl>
+<h2>FTP OPTIONS</h2>
+<dl>
+<dt>CURLOPT_FTPPORT</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It will be used to get the IP address to use for the FTP PORT instruction. The PORT instruction tells the remote server to connect to our specified IP address. The string may be a plain IP address, a host name, a network interface name (under Unix) or just a &#8216;-&#8216; symbol to let the library use your system&#8217;s default IP address. Default FTP operations are passive, and thus won&#8217;t use PORT. </p>
+<p> The address can be followed by a &#8216;:&#8216; to specify a port, optionally followed by a &#8216;-&#8216; to specify a port range. If the port specified is 0, the operating system will pick a free port. If a range is provided and all ports in the range are not available, libcurl will report CURLE_FTP_PORT_FAILED for the handle. Invalid port/range settings are ignored. IPv6 addresses followed by a port or portrange have to be in brackets. IPv6 addresses without port/range specifier can be in brackets. (added in 7.19.5) </p>
+<p> Examples with specified ports: </p>
+<pre><code>  eth0:0
+  192.168.1.2:32000-33000
+  curl.se:32123
+  [::1]:1234-4567
+</code></pre>
+<p> You disable PORT again and go back to using the passive version by setting this option to NULL. </p>
+ </dd>
+<dt>CURLOPT_QUOTE</dt>
+<dd> <p> Pass a pointer to a linked list of FTP or SFTP commands to pass to the server prior to your FTP request. This will be done before any other commands are issued (even before the CWD command for FTP). The linked list should be a fully valid list of &#8216;struct curl_slist&#8217; structs properly filled in with text strings. Use <i><a href="/docs/linux/man/3-curl_slist_append/">curl_slist_append</a>(3)</i> to append strings (commands) to the list, and clear the entire list afterwards with <i><a href="/docs/linux/man/3-curl_slist_free_all/">curl_slist_free_all</a>(3)</i>. Disable this operation again by setting a NULL to this option. When speaking to a FTP (or SFTP since 7.24.0) server, prefix the command with an asterisk (*) to make libcurl continue even if the command fails as by default libcurl will stop at first failure. </p>
+<p> The set of valid FTP commands depends on the server (see RFC959 for a list of mandatory commands). </p>
+<p> The valid SFTP commands are: chgrp, chmod, chown, ln, mkdir, pwd, rename, rm, rmdir, symlink (see <code><a href="/docs/linux/man/1-curl/">curl</a></code>(1)) (SFTP support added in 7.16.3) </p>
+ </dd>
+<dt>CURLOPT_POSTQUOTE</dt>
+<dd> <p> Pass a pointer to a linked list of FTP or SFTP commands to pass to the server after your FTP transfer request. The commands will only be run if no error occurred. The linked list should be a fully valid list of struct curl_slist structs properly filled in as described for <i>CURLOPT_QUOTE</i>. Disable this operation again by setting a NULL to this option. </p>
+ </dd>
+<dt>CURLOPT_PREQUOTE</dt>
+<dd> <p> Pass a pointer to a linked list of FTP commands to pass to the server after the transfer type is set. The linked list should be a fully valid list of struct curl_slist structs properly filled in as described for <i>CURLOPT_QUOTE</i>. Disable this operation again by setting a NULL to this option. Before version 7.16.0, if you also set <i>CURLOPT_NOBODY</i> to 1, this option didn&#8217;t work. </p>
+ </dd>
+<dt>CURLOPT_DIRLISTONLY</dt>
+<dd> <p> A parameter set to 1 tells the library to just list the names of files in a directory, instead of doing a full directory listing that would include file sizes, dates etc. This works for FTP and SFTP URLs. </p>
+<p> This causes an FTP NLST command to be sent on an FTP server. Beware that some FTP servers list only files in their response to NLST; they might not include subdirectories and symbolic links. </p>
+<p> Setting this option to 1 also implies a directory listing even if the URL doesn&#8217;t end with a slash, which otherwise is necessary. </p>
+<p> Do NOT use this option if you also use <i>CURLOPT_WILDCARDMATCH</i> as it will effectively break that feature then. </p>
+<p> (This option was known as CURLOPT_FTPLISTONLY up to 7.16.4) </p>
+ </dd>
+<dt>CURLOPT_APPEND</dt>
+<dd> <p> A parameter set to 1 tells the library to append to the remote file instead of overwrite it. This is only useful when uploading to an FTP site. </p>
+<p> (This option was known as CURLOPT_FTPAPPEND up to 7.16.4) </p>
+ </dd>
+<dt>CURLOPT_FTP_USE_EPRT</dt>
+<dd> <p> Pass a long. If the value is 1, it tells curl to use the EPRT (and LPRT) command when doing active FTP downloads (which is enabled by <i>CURLOPT_FTPPORT</i>). Using EPRT means that it will first attempt to use EPRT and then LPRT before using PORT, but if you pass zero to this option, it will not try using EPRT or LPRT, only plain PORT. (Added in 7.10.5) </p>
+<p> If the server is an IPv6 host, this option will have no effect as of 7.12.3. </p>
+ </dd>
+<dt>CURLOPT_FTP_USE_EPSV</dt>
+<dd> <p> Pass a long. If the value is 1, it tells curl to use the EPSV command when doing passive FTP downloads (which it always does by default). Using EPSV means that it will first attempt to use EPSV before using PASV, but if you pass zero to this option, it will not try using EPSV, only plain PASV. </p>
+<p> If the server is an IPv6 host, this option will have no effect as of 7.12.3. </p>
+ </dd>
+<dt>CURLOPT_FTP_USE_PRET</dt>
+<dd> <p> Pass a long. If the value is 1, it tells curl to send a PRET command before PASV (and EPSV). Certain FTP servers, mainly drftpd, require this non-standard command for directory listings as well as up and downloads in PASV mode. Has no effect when using the active FTP transfers mode. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_FTP_CREATE_MISSING_DIRS</dt>
+<dd> <p> Pass a long. If the value is 1, curl will attempt to create any remote directory that it fails to CWD into. CWD is the command that changes working directory. (Added in 7.10.7) </p>
+<p> This setting also applies to SFTP-connections. curl will attempt to create the remote directory if it can&#8217;t obtain a handle to the target-location. The creation will fail if a file of the same name as the directory to create already exists or lack of permissions prevents creation. (Added in 7.16.3) </p>
+<p> Starting with 7.19.4, you can also set this value to 2, which will make libcurl retry the CWD command again if the subsequent MKD command fails. This is especially useful if you&#8217;re doing many simultaneous connections against the same server and they all have this option enabled, as then CWD may first fail but then another connection does MKD before this connection and thus MKD fails but trying CWD works! 7.19.4 also introduced the <i>CURLFTP_CREATE_DIR</i> and <i>CURLFTP_CREATE_DIR_RETRY</i> enum names for these arguments. </p>
+<p> Before version 7.19.4, libcurl will simply ignore arguments set to 2 and act as if 1 was selected. </p>
+ </dd>
+<dt>CURLOPT_FTP_RESPONSE_TIMEOUT</dt>
+<dd> <p> Pass a long. Causes curl to set a timeout period (in seconds) on the amount of time that the server is allowed to take in order to generate a response message for a command before the session is considered hung. While curl is waiting for a response, this value overrides <i>CURLOPT_TIMEOUT</i>. It is recommended that if used in conjunction with <i>CURLOPT_TIMEOUT</i>, you set <i>CURLOPT_FTP_RESPONSE_TIMEOUT</i> to a value smaller than <i>CURLOPT_TIMEOUT</i>. (Added in 7.10.8) </p>
+ </dd>
+<dt>CURLOPT_FTP_ALTERNATIVE_TO_USER</dt>
+<dd> <p> Pass a char * as parameter, pointing to a string which will be used to authenticate if the usual FTP &quot;USER user&quot; and &quot;PASS password&quot; negotiation fails. This is currently only known to be required when connecting to Tumbleweed&#8217;s Secure Transport FTPS server using client certificates for authentication. (Added in 7.15.5) </p>
+ </dd>
+<dt>CURLOPT_FTP_SKIP_PASV_IP</dt>
+<dd> <p> Pass a long. If set to 1, it instructs libcurl to not use the IP address the server suggests in its 227-response to libcurl&#8217;s PASV command when libcurl connects the data connection. Instead libcurl will re-use the same IP address it already uses for the control connection. But it will use the port number from the 227-response. (Added in 7.14.2) </p>
+<p> This option has no effect if PORT, EPRT or EPSV is used instead of PASV. </p>
+ </dd>
+<dt>CURLOPT_FTPSSLAUTH</dt>
+<dd> <p> Pass a long using one of the values from below, to alter how libcurl issues &quot;AUTH TLS&quot; or &quot;AUTH SSL&quot; when FTP over SSL is activated (see <i>CURLOPT_USE_SSL</i>). (Added in 7.12.2) </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURLFTPAUTH_DEFAULT</dt>
+<dd> <p> Allow libcurl to decide. </p>
+ </dd>
+<dt>CURLFTPAUTH_SSL</dt>
+<dd> <p> Try &quot;AUTH SSL&quot; first, and only if that fails try &quot;AUTH TLS&quot;. </p>
+ </dd>
+<dt>CURLFTPAUTH_TLS</dt>
+<dd> <p> Try &quot;AUTH TLS&quot; first, and only if that fails try &quot;AUTH SSL&quot;. </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_FTP_SSL_CCC</dt>
+<dd> <p> If enabled, this option makes libcurl use CCC (Clear Command Channel). It shuts down the SSL/TLS layer after authenticating. The rest of the control channel communication will be unencrypted. This allows NAT routers to follow the FTP transaction. Pass a long using one of the values below. (Added in 7.16.1) </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURLFTPSSL_CCC_NONE</dt>
+<dd> <p> Don&#8217;t attempt to use CCC. </p>
+ </dd>
+<dt>CURLFTPSSL_CCC_PASSIVE</dt>
+<dd> <p> Do not initiate the shutdown, but wait for the server to do it. Do not send a reply. </p>
+ </dd>
+<dt>CURLFTPSSL_CCC_ACTIVE</dt>
+<dd> <p> Initiate the shutdown and wait for a reply. </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_FTP_ACCOUNT</dt>
+<dd> <p> Pass a pointer to a zero terminated string (or NULL to disable). When an FTP server asks for &quot;account data&quot; after user name and password has been provided, this data is sent off using the ACCT command. (Added in 7.13.0) </p>
+ </dd>
+<dt>CURLOPT_FTP_FILEMETHOD</dt>
+<dd> <p> Pass a long that should have one of the following values. This option controls what method libcurl should use to reach a file on a FTP(S) server. The argument should be one of the following alternatives: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURLFTPMETHOD_MULTICWD</dt>
+<dd> <p> libcurl does a single CWD operation for each path part in the given URL. For deep hierarchies this means many commands. This is how RFC1738 says it should be done. This is the default but the slowest behavior. </p>
+ </dd>
+<dt>CURLFTPMETHOD_NOCWD</dt>
+<dd> <p> libcurl does no CWD at all. libcurl will do SIZE, RETR, STOR etc and give a full path to the server for all these commands. This is the fastest behavior. </p>
+ </dd>
+<dt>CURLFTPMETHOD_SINGLECWD</dt>
+<dd> <p> libcurl does one CWD with the full target directory and then operates on the file &quot;normally&quot; (like in the multicwd case). This is somewhat more standards compliant than &#8216;nocwd&#8217; but without the full penalty of &#8216;multicwd&#8217;. </p>
+ </dd></dl>
+</dl>
+<p> (Added in 7.15.1) </dl>
+  </p>
+<h2>RTSP OPTIONS</h2>
+<dl>
+<dt>CURLOPT_RTSP_REQUEST</dt>
+<dd> <p> Tell libcurl what kind of RTSP request to make. Pass one of the following RTSP enum values. Unless noted otherwise, commands require the Session ID to be initialized. (Added in 7.20.0) </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURL_RTSPREQ_OPTIONS</dt>
+<dd> <p> Used to retrieve the available methods of the server. The application is responsible for parsing and obeying the response. <code>(The session ID is not needed for this method.)</code> (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_DESCRIBE</dt>
+<dd> <p> Used to get the low level description of a stream. The application should note what formats it understands in the <i>&#8216;Accept:&#8216;</i> header. Unless set manually, libcurl will automatically fill in <i>&#8216;Accept: application/sdp&#8217;</i>. Time-condition headers will be added to Describe requests if the <i>CURLOPT_TIMECONDITION</i> option is active. <code>(The session ID is not needed for this method)</code> (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_ANNOUNCE</dt>
+<dd> <p> When sent by a client, this method changes the description of the session. For example, if a client is using the server to record a meeting, the client can use Announce to inform the server of all the meta-information about the session. ANNOUNCE acts like a HTTP PUT or POST just like <i>CURL_RTSPREQ_SET_PARAMETER</i> (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_SETUP</dt>
+<dd> <p> Setup is used to initialize the transport layer for the session. The application must set the desired Transport options for a session by using the <i>CURLOPT_RTSP_TRANSPORT</i> option prior to calling setup. If no session ID is currently set with <i>CURLOPT_RTSP_SESSION_ID</i>, libcurl will extract and use the session ID in the response to this request. <code>(The session ID is not needed for this method).</code> (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_PLAY</dt>
+<dd> <p> Send a Play command to the server. Use the <i>CURLOPT_RANGE</i> option to modify the playback time (e.g. &#8216;npt=10-15&#8217;). (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_PAUSE</dt>
+<dd> <p> Send a Pause command to the server. Use the <i>CURLOPT_RANGE</i> option with a single value to indicate when the stream should be halted. (e.g. npt=&#8216;25&#8217;) (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_TEARDOWN</dt>
+<dd> <p> This command terminates an RTSP session. Simply closing a connection does not terminate the RTSP session since it is valid to control an RTSP session over different connections. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_GET_PARAMETER</dt>
+<dd> <p> Retrieve a parameter from the server. By default, libcurl will automatically include a <i>Content-Type: text/parameters</i> header on all non-empty requests unless a custom one is set. GET_PARAMETER acts just like a HTTP PUT or POST (see <i>CURL_RTSPREQ_SET_PARAMETER</i>). Applications wishing to send a heartbeat message (e.g. in the presence of a server-specified timeout) should send use an empty GET_PARAMETER request. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_SET_PARAMETER</dt>
+<dd> <p> Set a parameter on the server. By default, libcurl will automatically include a <i>Content-Type: text/parameters</i> header unless a custom one is set. The interaction with SET_PARAMTER is much like a HTTP PUT or POST. An application may either use <i>CURLOPT_UPLOAD</i> with <i>CURLOPT_READDATA</i> like a HTTP PUT, or it may use <i>CURLOPT_POSTFIELDS</i> like a HTTP POST. No chunked transfers are allowed, so the application must set the <i>CURLOPT_INFILESIZE</i> in the former and <i>CURLOPT_POSTFIELDSIZE</i> in the latter. Also, there is no use of multi-part POSTs within RTSP. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_RECORD</dt>
+<dd> <p> Used to tell the server to record a session. Use the <i>CURLOPT_RANGE</i> option to modify the record time. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURL_RTSPREQ_RECEIVE</dt>
+<dd> <p> This is a special request because it does not send any data to the server. The application may call this function in order to receive interleaved RTP data. It will return after processing one read buffer of data in order to give the application a chance to run. (Added in 7.20.0) </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_RTSP_SESSION_ID</dt>
+<dd> <p> Pass a char * as a parameter to set the value of the current RTSP Session ID for the handle. Useful for resuming an in-progress session. Once this value is set to any non-NULL value, libcurl will return <i>CURLE_RTSP_SESSION_ERROR</i> if ID received from the server does not match. If unset (or set to NULL), libcurl will automatically set the ID the first time the server sets it in a response. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_RTSP_STREAM_URI</dt>
+<dd> <p> Set the stream URI to operate on by passing a char * . For example, a single session may be controlling <i><a href="rtsp://foo/twister/audio">rtsp://foo/twister/audio</a></i> and <i><a href="rtsp://foo/twister/video">rtsp://foo/twister/video</a></i> and the application can switch to the appropriate stream using this option. If unset, libcurl will default to operating on generic server options by passing &#8216;*&#8216; in the place of the RTSP Stream URI. This option is distinct from <i>CURLOPT_URL</i>. When working with RTSP, the <i>CURLOPT_STREAM_URI</i> indicates what URL to send to the server in the request header while the <i>CURLOPT_URL</i> indicates where to make the connection to. (e.g. the <i>CURLOPT_URL</i> for the above examples might be set to <i><a href="rtsp://foo/twister">rtsp://foo/twister</a></i> (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_RTSP_TRANSPORT</dt>
+<dd> <p> Pass a char * to tell libcurl what to pass for the Transport: header for this RTSP session. This is mainly a convenience method to avoid needing to set a custom Transport: header for every SETUP request. The application must set a Transport: header before issuing a SETUP request. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_RTSP_HEADER</dt>
+<dd> <p> This option is simply an alias for <i>CURLOPT_HTTP_HEADER</i>. Use this to replace the standard headers that RTSP and HTTP share. It is also valid to use the shortcuts such as <i>CURLOPT_USERAGENT</i>. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_RTSP_CLIENT_CSEQ</dt>
+<dd> <p> Manually set the the CSEQ number to issue for the next RTSP request. Useful if the application is resuming a previously broken connection. The CSEQ will increment from this new number henceforth. (Added in 7.20.0) </p>
+ </dd>
+<dt>CURLOPT_RTSP_SERVER_CSEQ</dt>
+<dd> <p> Manually set the CSEQ number to expect for the next RTSP Server-&gt;Client request. At the moment, this feature (listening for Server requests) is unimplemented. (Added in 7.20.0) </p>
+ </dd></dl>
+<h2>PROTOCOL OPTIONS</h2>
+<dl>
+<dt>CURLOPT_TRANSFERTEXT</dt>
+<dd> <p> A parameter set to 1 tells the library to use ASCII mode for FTP transfers, instead of the default binary transfer. For win32 systems it does not set the stdout to binary mode. This option can be usable when transferring text data between systems with different views on certain characters, such as newlines or similar. </p>
+<p> libcurl does not do a complete ASCII conversion when doing ASCII transfers over FTP. This is a known limitation/flaw that nobody has rectified. libcurl simply sets the mode to ASCII and performs a standard transfer. </p>
+ </dd>
+<dt>CURLOPT_PROXY_TRANSFER_MODE</dt>
+<dd> <p> Pass a long. If the value is set to 1 (one), it tells libcurl to set the transfer mode (binary or ASCII) for FTP transfers done via a HTTP proxy, by appending ;type=a or ;type=i to the URL. Without this setting, or it being set to 0 (zero, the default), <i>CURLOPT_TRANSFERTEXT</i> has no effect when doing FTP via a proxy. Beware that not all proxies support this feature. (Added in 7.18.0) </p>
+ </dd>
+<dt>CURLOPT_CRLF</dt>
+<dd> <p> Pass a long. If the value is set to 1 (one), libcurl converts Unix newlines to CRLF newlines on transfers. Disable this option again by setting the value to 0 (zero). </p>
+ </dd>
+<dt>CURLOPT_RANGE</dt>
+<dd> <p> Pass a char * as parameter, which should contain the specified range you want. It should be in the format &quot;X-Y&quot;, where X or Y may be left out. HTTP transfers also support several intervals, separated with commas as in <i>&quot;X-Y,N-M&quot;</i>. Using this kind of multiple intervals will cause the HTTP server to send the response document in pieces (using standard MIME separation techniques). For RTSP, the formatting of a range should follow RFC2326 Section 12.29. For RTSP, byte ranges are <code>not</code> permitted. Instead, ranges should be given in npt, utc, or smpte formats. </p>
+<p> Pass a NULL to this option to disable the use of ranges. </p>
+<p> Ranges work on HTTP, FTP, FILE (since 7.18.0), and RTSP (since 7.20.0) transfers only. </p>
+ </dd>
+<dt>CURLOPT_RESUME_FROM</dt>
+<dd> <p> Pass a long as parameter. It contains the offset in number of bytes that you want the transfer to start from. Set this option to 0 to make the transfer start from the beginning (effectively disabling resume). For FTP, set this option to -1 to make the transfer start from the end of the target file (useful to continue an interrupted upload). </p>
+<p> When doing uploads with FTP, the resume position is where in the local/source file libcurl should try to resume the upload from and it will then append the source file to the remote target file. </p>
+ </dd>
+<dt>CURLOPT_RESUME_FROM_LARGE</dt>
+<dd> <p> Pass a curl_off_t as parameter. It contains the offset in number of bytes that you want the transfer to start from. (Added in 7.11.0) </p>
+ </dd>
+<dt>CURLOPT_CUSTOMREQUEST</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It can be used to specify the request instead of GET or HEAD when performing HTTP based requests, instead of LIST and NLST when performing FTP directory listings and instead of LIST and RETR when issuing POP3 based commands. This is particularly useful, for example, for performing a HTTP DELETE request or a POP3 DELE command. </p>
+<p> Please don&#8217;t perform this at will, on HTTP based requests, by making sure your server supports the command you are sending first. <br />
+&nbsp;<wbr> When you change the request method by setting <code>CURLOPT_CUSTOMREQUEST</code> to something, you don&#8217;t actually change how libcurl behaves or acts in regards to the particular request method, it will only change the actual string sent in the request. </p>
+<p> For example: </p>
+<p> With the HTTP protocol when you tell libcurl to do a HEAD request, but then specify a GET though a custom request libcurl will still act as if it sent a HEAD. To switch to a proper HEAD use <i>CURLOPT_NOBODY</i>, to switch to a proper POST use <i>CURLOPT_POST</i> or <i>CURLOPT_POSTFIELDS</i> and to switch to a proper GET use CURLOPT_HTTPGET. </p>
+<p> With the POP3 protocol when you tell libcurl to use a custom request it will behave like a LIST or RETR command was sent where it expects data to be returned by the server. As such <i>CURLOPT_NOBODY</i> should be used when specifying commands such as DELE and NOOP for example. </p>
+<p> Restore to the internal default by setting this to NULL. </p>
+<p> Many people have wrongly used this option to replace the entire request with their own, including multiple headers and POST contents. While that might work in many cases, it will cause libcurl to send invalid requests and it could possibly confuse the remote server badly. Use <i>CURLOPT_POST</i> and <i>CURLOPT_POSTFIELDS</i> to set POST data. Use <i>CURLOPT_HTTPHEADER</i> to replace or extend the set of headers sent by libcurl. Use <i>CURLOPT_HTTP_VERSION</i> to change HTTP version. </p>
+<p> (Support for POP3 added in 7.26.0) </p>
+ </dd>
+<dt>CURLOPT_FILETIME</dt>
+<dd> <p> Pass a long. If it is 1, libcurl will attempt to get the modification date of the remote document in this operation. This requires that the remote server sends the time or replies to a time querying command. The <i><a href="/docs/linux/man/3-curl_easy_getinfo/">curl_easy_getinfo</a>(3)</i> function with the <i>CURLINFO_FILETIME</i> argument can be used after a transfer to extract the received time (if any). </p>
+ </dd>
+<dt>CURLOPT_NOBODY</dt>
+<dd> <p> A parameter set to 1 tells the library to not include the body-part in the output. This is only relevant for protocols that have separate header and body parts. On HTTP(S) servers, this will make libcurl do a HEAD request. </p>
+<p> To change request to GET, you should use <i>CURLOPT_HTTPGET</i>. Change request to POST with <i>CURLOPT_POST</i> etc. </p>
+ </dd>
+<dt>CURLOPT_INFILESIZE</dt>
+<dd> <p> When uploading a file to a remote site, this option should be used to tell libcurl what the expected size of the infile is. This value should be passed as a long. See also <i>CURLOPT_INFILESIZE_LARGE</i>. </p>
+<p> For uploading using SCP, this option or <i>CURLOPT_INFILESIZE_LARGE</i> is mandatory. </p>
+<p> When sending emails using SMTP, this command can be used to specify the optional SIZE parameter for the MAIL FROM command. (Added in 7.23.0) </p>
+<p> This option does not limit how much data libcurl will actually send, as that is controlled entirely by what the read callback returns. </p>
+ </dd>
+<dt>CURLOPT_INFILESIZE_LARGE</dt>
+<dd> <p> When uploading a file to a remote site, this option should be used to tell libcurl what the expected size of the infile is. This value should be passed as a curl_off_t. (Added in 7.11.0) </p>
+<p> For uploading using SCP, this option or <i>CURLOPT_INFILESIZE</i> is mandatory. </p>
+<p> This option does not limit how much data libcurl will actually send, as that is controlled entirely by what the read callback returns. </p>
+ </dd>
+<dt>CURLOPT_UPLOAD</dt>
+<dd> <p> A parameter set to 1 tells the library to prepare for an upload. The <i>CURLOPT_READDATA</i> and <i>CURLOPT_INFILESIZE</i> or <i>CURLOPT_INFILESIZE_LARGE</i> options are also interesting for uploads. If the protocol is HTTP, uploading means using the PUT request unless you tell libcurl otherwise. </p>
+<p> Using PUT with HTTP 1.1 implies the use of a &quot;Expect: 100-continue&quot; header. You can disable this header with <i>CURLOPT_HTTPHEADER</i> as usual. </p>
+<p> If you use PUT to a HTTP 1.1 server, you can upload data without knowing the size before starting the transfer if you use chunked encoding. You enable this by adding a header like &quot;Transfer-Encoding: chunked&quot; with <i>CURLOPT_HTTPHEADER</i>. With HTTP 1.0 or without chunked transfer, you must specify the size. </p>
+ </dd>
+<dt>CURLOPT_MAXFILESIZE</dt>
+<dd> <p> Pass a long as parameter. This allows you to specify the maximum size (in bytes) of a file to download. If the file requested is larger than this value, the transfer will not start and CURLE_FILESIZE_EXCEEDED will be returned. </p>
+<p> The file size is not always known prior to download, and for such files this option has no effect even if the file transfer ends up being larger than this given limit. This concerns both FTP and HTTP transfers. </p>
+ </dd>
+<dt>CURLOPT_MAXFILESIZE_LARGE</dt>
+<dd> <p> Pass a curl_off_t as parameter. This allows you to specify the maximum size (in bytes) of a file to download. If the file requested is larger than this value, the transfer will not start and <i>CURLE_FILESIZE_EXCEEDED</i> will be returned. (Added in 7.11.0) </p>
+<p> The file size is not always known prior to download, and for such files this option has no effect even if the file transfer ends up being larger than this given limit. This concerns both FTP and HTTP transfers. </p>
+ </dd>
+<dt>CURLOPT_TIMECONDITION</dt>
+<dd> <p> Pass a long as parameter. This defines how the <i>CURLOPT_TIMEVALUE</i> time value is treated. You can set this parameter to <i>CURL_TIMECOND_IFMODSINCE</i> or <i>CURL_TIMECOND_IFUNMODSINCE</i>. This feature applies to HTTP, FTP, RTSP, and FILE. </p>
+<p> The last modification time of a file is not always known and in such instances this feature will have no effect even if the given time condition would not have been met. <i><a href="/docs/linux/man/3-curl_easy_getinfo/">curl_easy_getinfo</a>(3)</i> with the <i>CURLINFO_CONDITION_UNMET</i> option can be used after a transfer to learn if a zero-byte successful &quot;transfer&quot; was due to this condition not matching. </p>
+ </dd>
+<dt>CURLOPT_TIMEVALUE</dt>
+<dd> <p> Pass a long as parameter. This should be the time in seconds since 1 Jan 1970, and the time will be used in a condition as specified with <i>CURLOPT_TIMECONDITION</i>. </p>
+ </dd></dl>
+<h2>CONNECTION OPTIONS</h2>
+<dl>
+<dt>CURLOPT_TIMEOUT</dt>
+<dd> <p> Pass a long as parameter containing the maximum time in seconds that you allow the libcurl transfer operation to take. Normally, name lookups can take a considerable time and limiting operations to less than a few minutes risk aborting perfectly normal operations. This option will cause curl to use the SIGALRM to enable time-outing system calls. </p>
+<p> In unix-like systems, this might cause signals to be used unless <i>CURLOPT_NOSIGNAL</i> is set. </p>
+<p> Default timeout is 0 (zero) which means it never times out. </p>
+ </dd>
+<dt>CURLOPT_TIMEOUT_MS</dt>
+<dd> <p> Like <i>CURLOPT_TIMEOUT</i> but takes number of milliseconds instead. If libcurl is built to use the standard system name resolver, that portion of the transfer will still use full-second resolution for timeouts with a minimum timeout allowed of one second. (Added in 7.16.2) </p>
+ </dd>
+<dt>CURLOPT_LOW_SPEED_LIMIT</dt>
+<dd> <p> Pass a long as parameter. It contains the transfer speed in bytes per second that the transfer should be below during <i>CURLOPT_LOW_SPEED_TIME</i> seconds for the library to consider it too slow and abort. </p>
+ </dd>
+<dt>CURLOPT_LOW_SPEED_TIME</dt>
+<dd> <p> Pass a long as parameter. It contains the time in seconds that the transfer should be below the <i>CURLOPT_LOW_SPEED_LIMIT</i> for the library to consider it too slow and abort. </p>
+ </dd>
+<dt>CURLOPT_MAX_SEND_SPEED_LARGE</dt>
+<dd> <p> Pass a curl_off_t as parameter. If an upload exceeds this speed (counted in bytes per second) on cumulative average during the transfer, the transfer will pause to keep the average rate less than or equal to the parameter value. Defaults to unlimited speed. (Added in 7.15.5) </p>
+ </dd>
+<dt>CURLOPT_MAX_RECV_SPEED_LARGE</dt>
+<dd> <p> Pass a curl_off_t as parameter. If a download exceeds this speed (counted in bytes per second) on cumulative average during the transfer, the transfer will pause to keep the average rate less than or equal to the parameter value. Defaults to unlimited speed. (Added in 7.15.5) </p>
+ </dd>
+<dt>CURLOPT_MAXCONNECTS</dt>
+<dd> <p> Pass a long. The set number will be the persistent connection cache size. The set amount will be the maximum amount of simultaneously open connections that libcurl may cache in this easy handle. Default is 5, and there isn&#8217;t much point in changing this value unless you are perfectly aware of how this works and changes libcurl&#8217;s behaviour. This concerns connections using any of the protocols that support persistent connections. </p>
+<p> When reaching the maximum limit, curl closes the oldest one in the cache to prevent increasing the number of open connections. </p>
+<p> If you already have performed transfers with this curl handle, setting a smaller MAXCONNECTS than before may cause open connections to get closed unnecessarily. </p>
+<p> If you add this easy handle to a multi handle, this setting is not acknowledged, and you must instead use <i><a href="/docs/linux/man/3-curl_multi_setopt/">curl_multi_setopt</a>(3)</i> and the <i>CURLMOPT_MAXCONNECTS</i> option. </p>
+ </dd>
+<dt>CURLOPT_CLOSEPOLICY</dt>
+<dd> <p> (Obsolete) This option does nothing. </p>
+ </dd>
+<dt>CURLOPT_FRESH_CONNECT</dt>
+<dd> <p> Pass a long. Set to 1 to make the next transfer use a new (fresh) connection by force. If the connection cache is full before this connection, one of the existing connections will be closed as according to the selected or default policy. This option should be used with caution and only if you understand what it does. Set this to 0 to have libcurl attempt re-using an existing connection (default behavior). </p>
+ </dd>
+<dt>CURLOPT_FORBID_REUSE</dt>
+<dd> <p> Pass a long. Set to 1 to make the next transfer explicitly close the connection when done. Normally, libcurl keeps all connections alive when done with one transfer in case a succeeding one follows that can re-use them. This option should be used with caution and only if you understand what it does. Set to 0 to have libcurl keep the connection open for possible later re-use (default behavior). </p>
+ </dd>
+<dt>CURLOPT_CONNECTTIMEOUT</dt>
+<dd> <p> Pass a long. It should contain the maximum time in seconds that you allow the connection to the server to take. This only limits the connection phase, once it has connected, this option is of no more use. Set to zero to switch to the default built-in connection timeout &#8211; 300 seconds. See also the <i>CURLOPT_TIMEOUT</i> option. </p>
+<p> In unix-like systems, this might cause signals to be used unless <i>CURLOPT_NOSIGNAL</i> is set. </p>
+ </dd>
+<dt>CURLOPT_CONNECTTIMEOUT_MS</dt>
+<dd> <p> Like <i>CURLOPT_CONNECTTIMEOUT</i> but takes the number of milliseconds instead. If libcurl is built to use the standard system name resolver, that portion of the connect will still use full-second resolution for timeouts with a minimum timeout allowed of one second. (Added in 7.16.2) </p>
+ </dd>
+<dt>CURLOPT_IPRESOLVE</dt>
+<dd> <p> Allows an application to select what kind of IP addresses to use when resolving host names. This is only interesting when using host names that resolve addresses using more than one version of IP. The allowed values are: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURL_IPRESOLVE_WHATEVER</dt>
+<dd> <p> Default, resolves addresses to all IP versions that your system allows. </p>
+ </dd>
+<dt>CURL_IPRESOLVE_V4</dt>
+<dd> <p> Resolve to IPv4 addresses. </p>
+ </dd>
+<dt>CURL_IPRESOLVE_V6</dt>
+<dd> <p> Resolve to IPv6 addresses. </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_CONNECT_ONLY</dt>
+<dd> <p> Pass a long. If the parameter equals 1, it tells the library to perform all the required proxy authentication and connection setup, but no data transfer. This option is implemented for HTTP, SMTP and POP3. </p>
+<p> The option can be used to simply test a connection to a server, but is more useful when used with the <i>CURLINFO_LASTSOCKET</i> option to <i><a href="/docs/linux/man/3-curl_easy_getinfo/">curl_easy_getinfo</a>(3)</i> as the library can set up the connection and then the application can obtain the most recently used socket for special data transfers. (Added in 7.15.2) </p>
+ </dd>
+<dt>CURLOPT_USE_SSL</dt>
+<dd> <p> Pass a long using one of the values from below, to make libcurl use your desired level of SSL for the transfer. (Added in 7.11.0) </p>
+<p> This is for enabling SSL/TLS when you use FTP, SMTP, POP3, IMAP etc. </p>
+<p> (This option was known as CURLOPT_FTP_SSL up to 7.16.4, and the constants were known as CURLFTPSSL_*) </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURLUSESSL_NONE</dt>
+<dd> <p> Don&#8217;t attempt to use SSL. </p>
+ </dd>
+<dt>CURLUSESSL_TRY</dt>
+<dd> <p> Try using SSL, proceed as normal otherwise. </p>
+ </dd>
+<dt>CURLUSESSL_CONTROL</dt>
+<dd> <p> Require SSL for the control connection or fail with <i>CURLE_USE_SSL_FAILED</i>. </p>
+ </dd>
+<dt>CURLUSESSL_ALL</dt>
+<dd> <p> Require SSL for all communication or fail with <i>CURLE_USE_SSL_FAILED</i>. </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_RESOLVE</dt>
+<dd> <p> Pass a pointer to a linked list of strings with host name resolve information to use for requests with this handle. The linked list should be a fully valid list of <code>struct curl_slist</code> structs properly filled in. Use <i><a href="/docs/linux/man/3-curl_slist_append/">curl_slist_append</a>(3)</i> to create the list and <i><a href="/docs/linux/man/3-curl_slist_free_all/">curl_slist_free_all</a>(3)</i> to clean up an entire list. </p>
+<p> Each single name resolve string should be written using the format HOST:PORT:ADDRESS where HOST is the name libcurl will try to resolve, PORT is the port number of the service where libcurl wants to connect to the HOST and ADDRESS is the numerical IP address. If libcurl is built to support IPv6, ADDRESS can of course be either IPv4 or IPv6 style addressing. </p>
+<p> This option effectively pre-populates the DNS cache with entries for the host+port pair so redirects and everything that operations against the HOST+PORT will instead use your provided ADDRESS. </p>
+<p> You can remove names from the DNS cache again, to stop providing these fake resolves, by including a string in the linked list that uses the format &quot;-HOST:PORT&quot;. The host name must be prefixed with a dash, and the host name and port number must exactly match what was already added previously. </p>
+<p> (Added in 7.21.3) </p>
+ </dd>
+<dt>CURLOPT_DNS_SERVERS</dt>
+<dd> <p> Set the list of DNS servers to be used instead of the system default. The format of the dns servers option is: </p>
+<p> host[:port][,host[:port]]... </p>
+<p> For example: </p>
+<p> 192.168.1.100,192.168.1.101,3.4.5.6 </p>
+<p> This option requires that libcurl was built with a resolver backend that supports this operation. The c-ares backend is the only such one. </p>
+<p> (Added in 7.24.0) </p>
+ </dd>
+<dt>CURLOPT_ACCEPTTIMEOUT_MS</dt>
+<dd> <p> Pass a long telling libcurl the maximum number of milliseconds to wait for a server to connect back to libcurl when an active FTP connection is used. If no timeout is set, the internal default of 60000 will be used. (Added in 7.24.0) </p>
+ </dd></dl>
+<h2>SSL and SECURITY OPTIONS</h2>
+<dl>
+<dt>CURLOPT_SSLCERT</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. The string should be the file name of your certificate. The default format is &quot;PEM&quot; and can be changed with <i>CURLOPT_SSLCERTTYPE</i>. </p>
+<p> With NSS this can also be the nickname of the certificate you wish to authenticate with. If you want to use a file from the current directory, please precede it with &quot;./&quot; prefix, in order to avoid confusion with a nickname. </p>
+ </dd>
+<dt>CURLOPT_SSLCERTTYPE</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. The string should be the format of your certificate. Supported formats are &quot;PEM&quot; and &quot;DER&quot;. (Added in 7.9.3) </p>
+ </dd>
+<dt>CURLOPT_SSLKEY</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. The string should be the file name of your private key. The default format is &quot;PEM&quot; and can be changed with <i>CURLOPT_SSLKEYTYPE</i>. </p>
+ </dd>
+<dt>CURLOPT_SSLKEYTYPE</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. The string should be the format of your private key. Supported formats are &quot;PEM&quot;, &quot;DER&quot; and &quot;ENG&quot;. </p>
+<p> The format &quot;ENG&quot; enables you to load the private key from a crypto engine. In this case <i>CURLOPT_SSLKEY</i> is used as an identifier passed to the engine. You have to set the crypto engine with <i>CURLOPT_SSLENGINE</i>. &quot;DER&quot; format key file currently does not work because of a bug in OpenSSL. </p>
+ </dd>
+<dt>CURLOPT_KEYPASSWD</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It will be used as the password required to use the <i>CURLOPT_SSLKEY</i> or <i>CURLOPT_SSH_PRIVATE_KEYFILE</i> private key. You never needed a pass phrase to load a certificate but you need one to load your private key. </p>
+<p> (This option was known as CURLOPT_SSLKEYPASSWD up to 7.16.4 and CURLOPT_SSLCERTPASSWD up to 7.9.2) </p>
+ </dd>
+<dt>CURLOPT_SSLENGINE</dt>
+<dd> <p> Pass a pointer to a zero terminated string as parameter. It will be used as the identifier for the crypto engine you want to use for your private key. </p>
+<p> If the crypto device cannot be loaded, <i>CURLE_SSL_ENGINE_NOTFOUND</i> is returned. </p>
+ </dd>
+<dt>CURLOPT_SSLENGINE_DEFAULT</dt>
+<dd> <p> Sets the actual crypto engine as the default for (asymmetric) crypto operations. </p>
+<p> If the crypto device cannot be set, <i>CURLE_SSL_ENGINE_SETFAILED</i> is returned. </p>
+<p> Even though this option doesn&#8217;t need any parameter, in some configurations <i>curl_easy_setopt</i> might be defined as a macro taking exactly three arguments. Therefore, it&#8217;s recommended to pass 1 as parameter to this option. </p>
+ </dd>
+<dt>CURLOPT_SSLVERSION</dt>
+<dd> <p> Pass a long as parameter to control what version of SSL/TLS to attempt to use. (Added in 7.9.2) </p>
+<p> The available options are: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURL_SSLVERSION_DEFAULT</dt>
+<dd> <p> The default action. This will attempt to figure out the remote SSL protocol version, i.e. either SSLv3 or TLSv1 (but not SSLv2, which became disabled by default with 7.18.1). </p>
+ </dd>
+<dt>CURL_SSLVERSION_TLSv1</dt>
+<dd> <p> Force TLSv1.x </p>
+ </dd>
+<dt>CURL_SSLVERSION_SSLv2</dt>
+<dd> <p> Force SSLv2 </p>
+ </dd>
+<dt>CURL_SSLVERSION_SSLv3</dt>
+<dd> <p> Force SSLv3 </p>
+ </dd>
+<dt>CURL_SSLVERSION_TLSv1_0</dt>
+<dd> <p> Force TLSv1.0 (Added in 7.34.0) </p>
+ </dd>
+<dt>CURL_SSLVERSION_TLSv1_1</dt>
+<dd> <p> Force TLSv1.1 (Added in 7.34.0) </p>
+ </dd>
+<dt>CURL_SSLVERSION_TLSv1_2</dt>
+<dd> <p> Force TLSv1.2 (Added in 7.34.0) </p>
+ </dd></dl>
+</dl>
+<dt>CURLOPT_SSL_VERIFYPEER</dt>
+<dd> <p> Pass a long as parameter. By default, curl assumes a value of 1. </p>
+<p> This option determines whether curl verifies the authenticity of the peer&#8217;s certificate. A value of 1 means curl verifies; 0 (zero) means it doesn&#8217;t. </p>
+<p> When negotiating a SSL connection, the server sends a certificate indicating its identity. Curl verifies whether the certificate is authentic, i.e. that you can trust that the server is who the certificate says it is. This trust is based on a chain of digital signatures, rooted in certification authority (CA) certificates you supply. curl uses a default bundle of CA certificates (the path for that is determined at build time) and you can specify alternate certificates with the <i>CURLOPT_CAINFO</i> option or the <i>CURLOPT_CAPATH</i> option. </p>
+<p> When <i>CURLOPT_SSL_VERIFYPEER</i> is nonzero, and the verification fails to prove that the certificate is authentic, the connection fails. When the option is zero, the peer certificate verification succeeds regardless. </p>
+<p> Authenticating the certificate is not by itself very useful. You typically want to ensure that the server, as authentically identified by its certificate, is the server you mean to be talking to. Use <i>CURLOPT_SSL_VERIFYHOST</i> to control that. The check that the host name in the certificate is valid for the host name you&#8217;re connecting to is done independently of the <i>CURLOPT_SSL_VERIFYPEER</i> option. </p>
+ </dd>
+<dt>CURLOPT_CAINFO</dt>
+<dd> <p> Pass a char * to a zero terminated string naming a file holding one or more certificates to verify the peer with. This makes sense only when used in combination with the <i>CURLOPT_SSL_VERIFYPEER</i> option. If <i>CURLOPT_SSL_VERIFYPEER</i> is zero, <i>CURLOPT_CAINFO</i> need not even indicate an accessible file. </p>
+<p> This option is by default set to the system path where libcurl&#8217;s cacert bundle is assumed to be stored, as established at build time. </p>
+<p> If curl is built against the NSS SSL library, the NSS PEM PKCS#11 module (libnsspem.so) needs to be available for this option to work properly. </p>
+ </dd>
+<dt>CURLOPT_ISSUERCERT</dt>
+<dd> <p> Pass a char * to a zero terminated string naming a file holding a CA certificate in PEM format. If the option is set, an additional check against the peer certificate is performed to verify the issuer is indeed the one associated with the certificate provided by the option. This additional check is useful in multi-level PKI where one needs to enforce that the peer certificate is from a specific branch of the tree. </p>
+<p> This option makes sense only when used in combination with the <i>CURLOPT_SSL_VERIFYPEER</i> option. Otherwise, the result of the check is not considered as failure. </p>
+<p> A specific error code (CURLE_SSL_ISSUER_ERROR) is defined with the option, which is returned if the setup of the SSL/TLS session has failed due to a mismatch with the issuer of peer certificate (<i>CURLOPT_SSL_VERIFYPEER</i> has to be set too for the check to fail). (Added in 7.19.0) </p>
+ </dd>
+<dt>CURLOPT_CAPATH</dt>
+<dd> <p> Pass a char * to a zero terminated string naming a directory holding multiple CA certificates to verify the peer with. If libcurl is built against OpenSSL, the certificate directory must be prepared using the openssl c_rehash utility. This makes sense only when used in combination with the <i>CURLOPT_SSL_VERIFYPEER</i> option. If <i>CURLOPT_SSL_VERIFYPEER</i> is zero, <i>CURLOPT_CAPATH</i> need not even indicate an accessible path. The <i>CURLOPT_CAPATH</i> function apparently does not work in Windows due to some limitation in openssl. This option is OpenSSL-specific and does nothing if libcurl is built to use GnuTLS. NSS-powered libcurl provides the option only for backward compatibility. </p>
+ </dd>
+<dt>CURLOPT_CRLFILE</dt>
+<dd> <p> Pass a char * to a zero terminated string naming a file with the concatenation of CRL (in PEM format) to use in the certificate validation that occurs during the SSL exchange. </p>
+<p> When curl is built to use NSS or GnuTLS, there is no way to influence the use of CRL passed to help in the verification process. When libcurl is built with OpenSSL support, X509_V_FLAG_CRL_CHECK and X509_V_FLAG_CRL_CHECK_ALL are both set, requiring CRL check against all the elements of the certificate chain if a CRL file is passed. </p>
+<p> This option makes sense only when used in combination with the <i>CURLOPT_SSL_VERIFYPEER</i> option. </p>
+<p> A specific error code (CURLE_SSL_CRL_BADFILE) is defined with the option. It is returned when the SSL exchange fails because the CRL file cannot be loaded. A failure in certificate verification due to a revocation information found in the CRL does not trigger this specific error. (Added in 7.19.0) </p>
+ </dd>
+<dt>CURLOPT_SSL_VERIFYHOST</dt>
+<dd> <p> Pass a long as parameter. </p>
+<p> This option determines whether libcurl verifies that the server cert is for the server it is known as. </p>
+<p> When negotiating a SSL connection, the server sends a certificate indicating its identity. </p>
+<p> When <i>CURLOPT_SSL_VERIFYHOST</i> is 2, that certificate must indicate that the server is the server to which you meant to connect, or the connection fails. </p>
+<p> Curl considers the server the intended one when the Common Name field or a Subject Alternate Name field in the certificate matches the host name in the URL to which you told Curl to connect. </p>
+<p> When the value is 1, libcurl will return a failure. It was previously (in 7.28.0 and earlier) a debug option of some sorts, but it is no longer supported due to frequently leading to programmer mistakes. </p>
+<p> When the value is 0, the connection succeeds regardless of the names in the certificate. </p>
+<p> The default value for this option is 2. </p>
+<p> This option controls checking the server&#8217;s certificate&#8217;s claimed identity. The server could be lying. To control lying, see <i>CURLOPT_SSL_VERIFYPEER</i>. If libcurl is built against NSS and <i>CURLOPT_SSL_VERIFYPEER</i> is zero, <i>CURLOPT_SSL_VERIFYHOST</i> is ignored. </p>
+ </dd>
+<dt>CURLOPT_CERTINFO</dt>
+<dd> <p> Pass a long set to 1 to enable libcurl&#8217;s certificate chain info gatherer. With this enabled, libcurl (if built with OpenSSL) will extract lots of information and data about the certificates in the certificate chain used in the SSL connection. This data is then possible to extract after a transfer using <i><a href="/docs/linux/man/3-curl_easy_getinfo/">curl_easy_getinfo</a>(3)</i> and its option <i>CURLINFO_CERTINFO</i>. (Added in 7.19.1) </p>
+ </dd>
+<dt>CURLOPT_RANDOM_FILE</dt>
+<dd> <p> Pass a char * to a zero terminated file name. The file will be used to read from to seed the random engine for SSL. The more random the specified file is, the more secure the SSL connection will become. </p>
+ </dd>
+<dt>CURLOPT_EGDSOCKET</dt>
+<dd> <p> Pass a char * to the zero terminated path name to the Entropy Gathering Daemon socket. It will be used to seed the random engine for SSL. </p>
+ </dd>
+<dt>CURLOPT_SSL_CIPHER_LIST</dt>
+<dd> <p> Pass a char *, pointing to a zero terminated string holding the list of ciphers to use for the SSL connection. The list must be syntactically correct, it consists of one or more cipher strings separated by colons. Commas or spaces are also acceptable separators but colons are normally used, !, &#8211; and + can be used as operators. </p>
+<p> For OpenSSL and GnuTLS valid examples of cipher lists include &#8216;RC4-SHA&#8217;, &#8216;SHA1+DES&#8217;, &#8216;TLSv1&#8217; and &#8216;DEFAULT&#8217;. The default list is normally set when you compile OpenSSL. </p>
+<p> You&#8217;ll find more details about cipher lists on this URL: <i><a rel="nofollow" href="http://www.openssl.org/docs/apps/ciphers.html">http://www.openssl.org/docs/apps/ciphers.html</a></i> </p>
+<p> For NSS, valid examples of cipher lists include &#8216;rsa_rc4_128_md5&#8217;, &#8216;rsa_aes_128_sha&#8217;, etc. With NSS you don&#8217;t add/remove ciphers. If one uses this option then all known ciphers are disabled and only those passed in are enabled. </p>
+<p> You&#8217;ll find more details about the NSS cipher lists on this URL: <i><a rel="nofollow" href="http://git.fedorahosted.org/cgit/mod_nss.git/plain/docs/mod_nss.html#Directives">http://git.fedorahosted.org/cgit/mod_nss.git/plain/docs/mod_nss.html#Directives</a></i> </p>
+ </dd>
+<dt>CURLOPT_SSL_SESSIONID_CACHE</dt>
+<dd> <p> Pass a long set to 0 to disable libcurl&#8217;s use of SSL session-ID caching. Set this to 1 to enable it. By default all transfers are done using the cache. While nothing ever should get hurt by attempting to reuse SSL session-IDs, there seem to be broken SSL implementations in the wild that may require you to disable this in order for you to succeed. (Added in 7.16.0) </p>
+ </dd>
+<dt>CURLOPT_SSL_OPTIONS</dt>
+<dd> <p> Pass a long with a bitmask to tell libcurl about specific SSL behaviors. </p>
+<p> CURLSSLOPT_ALLOW_BEAST is the only supported bit and by setting this the user will tell libcurl to not attempt to use any workarounds for a security flaw in the SSL3 and TLS1.0 protocols. If this option isn&#8217;t used or this bit is set to 0, the SSL layer libcurl uses may use a work-around for this flaw although it might cause interoperability problems with some (older) SSL implementations. WARNING: avoiding this work-around loosens the security, and by setting this option to 1 you ask for exactly that. (Added in 7.25.0) </p>
+ </dd>
+<dt>CURLOPT_KRBLEVEL</dt>
+<dd> <p> Pass a char * as parameter. Set the kerberos security level for FTP; this also enables kerberos awareness. This is a string, &#8216;clear&#8217;, &#8216;safe&#8217;, &#8216;confidential&#8217; or &#8216;private&#8217;. If the string is set but doesn&#8217;t match one of these, &#8216;private&#8217; will be used. Set the string to NULL to disable kerberos support for FTP. </p>
+<p> (This option was known as CURLOPT_KRB4LEVEL up to 7.16.3) </p>
+ </dd>
+<dt>CURLOPT_GSSAPI_DELEGATION</dt>
+<dd> <p> Set the parameter to CURLGSSAPI_DELEGATION_FLAG to allow unconditional GSSAPI credential delegation. The delegation is disabled by default since 7.21.7. Set the parameter to CURLGSSAPI_DELEGATION_POLICY_FLAG to delegate only if the OK-AS-DELEGATE flag is set in the service ticket in case this feature is supported by the GSSAPI implementation and the definition of GSS_C_DELEG_POLICY_FLAG was available at compile-time. (Added in 7.22.0) </p>
+ </dd></dl>
+<h2>SSH OPTIONS</h2>
+<dl>
+<dt>CURLOPT_SSH_AUTH_TYPES</dt>
+<dd> <p> Pass a long set to a bitmask consisting of one or more of CURLSSH_AUTH_PUBLICKEY, CURLSSH_AUTH_PASSWORD, CURLSSH_AUTH_HOST, CURLSSH_AUTH_KEYBOARD and CURLSSH_AUTH_AGENT. Set CURLSSH_AUTH_ANY to let libcurl pick a suitable one. Currently CURLSSH_AUTH_HOST has no effect. (Added in 7.16.1) If CURLSSH_AUTH_AGENT is used, libcurl attempts to connect to ssh-agent or pageant and let the agent attempt the authentication. (Added in 7.28.0) </p>
+ </dd>
+<dt>CURLOPT_SSH_HOST_PUBLIC_KEY_MD5</dt>
+<dd> <p> Pass a char * pointing to a string containing 32 hexadecimal digits. The string should be the 128 bit MD5 checksum of the remote host&#8217;s public key, and libcurl will reject the connection to the host unless the md5sums match. This option is only for SCP and SFTP transfers. (Added in 7.17.1) </p>
+ </dd>
+<dt>CURLOPT_SSH_PUBLIC_KEYFILE</dt>
+<dd> <p> Pass a char * pointing to a file name for your public key. If not used, libcurl defaults to <code>$HOME/.ssh/id_dsa.pub</code> if the HOME environment variable is set, and just &quot;id_dsa.pub&quot; in the current directory if HOME is not set. (Added in 7.16.1) If NULL (or an empty string) is passed, libcurl will pass no public key to libssh2, which then tries to compute it from the private key. This is known to work with libssh2 1.4.0+ linked against OpenSSL. (Added in 7.26.0) </p>
+ </dd>
+<dt>CURLOPT_SSH_PRIVATE_KEYFILE</dt>
+<dd> <p> Pass a char * pointing to a file name for your private key. If not used, libcurl defaults to <code>$HOME/.ssh/id_dsa</code> if the HOME environment variable is set, and just &quot;id_dsa&quot; in the current directory if HOME is not set. If the file is password-protected, set the password with <i>CURLOPT_KEYPASSWD</i>. (Added in 7.16.1) </p>
+ </dd>
+<dt>CURLOPT_SSH_KNOWNHOSTS</dt>
+<dd> <p> Pass a pointer to a zero terminated string holding the file name of the known_host file to use. The known_hosts file should use the OpenSSH file format as supported by libssh2. If this file is specified, libcurl will only accept connections with hosts that are known and present in that file, with a matching public key. Use <i>CURLOPT_SSH_KEYFUNCTION</i> to alter the default behavior on host and key (mis)matching. (Added in 7.19.6) </p>
+ </dd>
+<dt>CURLOPT_SSH_KEYFUNCTION</dt>
+<dd> <p> Pass a pointer to a curl_sshkeycallback function. It gets called when the known_host matching has been done, to allow the application to act and decide for libcurl how to proceed. The callback will only be called if <i>CURLOPT_SSH_KNOWNHOSTS</i> is also set. </p>
+<p> The curl_sshkeycallback function gets passed the CURL handle, the key from the known_hosts file, the key from the remote site, info from libcurl on the matching status and a custom pointer (set with <i>CURLOPT_SSH_KEYDATA</i>). It MUST return one of the following return codes to tell libcurl how to act: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>CURLKHSTAT_FINE_ADD_TO_FILE</dt>
+<dd> <p> The host+key is accepted and libcurl will append it to the known_hosts file before continuing with the connection. This will also add the host+key combo to the known_host pool kept in memory if it wasn&#8217;t already present there. The adding of data to the file is done by completely replacing the file with a new copy, so the permissions of the file must allow this. </p>
+ </dd>
+<dt>CURLKHSTAT_FINE</dt>
+<dd> <p> The host+key is accepted libcurl will continue with the connection. This will also add the host+key combo to the known_host pool kept in memory if it wasn&#8217;t already present there. </p>
+ </dd>
+<dt>CURLKHSTAT_REJECT</dt>
+<dd> <p> The host+key is rejected. libcurl will deny the connection to continue and it will be closed. </p>
+ </dd>
+<dt>CURLKHSTAT_DEFER</dt>
+<dd> <p> The host+key is rejected, but the SSH connection is asked to be kept alive. This feature could be used when the app wants to somehow return back and act on the host+key situation and then retry without needing the overhead of setting it up from scratch again. </p>
+ </dd></dl>
+</dl>
+<p> <br />
+&nbsp;<wbr>(Added in 7.19.6) </p>
+<dt>CURLOPT_SSH_KEYDATA</dt>
+<dd> <p> Pass a void * as parameter. This pointer will be passed along verbatim to the callback set with <i>CURLOPT_SSH_KEYFUNCTION</i>. (Added in 7.19.6) </p>
+ </dd></dl>
+<h2>OTHER OPTIONS</h2>
+<dl>
+<dt>CURLOPT_PRIVATE</dt>
+<dd> <p> Pass a void * as parameter, pointing to data that should be associated with this curl handle. The pointer can subsequently be retrieved using <i><a href="/docs/linux/man/3-curl_easy_getinfo/">curl_easy_getinfo</a>(3)</i> with the CURLINFO_PRIVATE option. libcurl itself does nothing with this data. (Added in 7.10.3) </p>
+ </dd>
+<dt>CURLOPT_SHARE</dt>
+<dd> <p> Pass a share handle as a parameter. The share handle must have been created by a previous call to <i><a href="/docs/linux/man/3-curl_share_init/">curl_share_init</a>(3)</i>. Setting this option, will make this curl handle use the data from the shared handle instead of keeping the data to itself. This enables several curl handles to share data. If the curl handles are used simultaneously in multiple threads, you <code>MUST</code> use the locking methods in the share handle. See <i><a href="/docs/linux/man/3-curl_share_setopt/">curl_share_setopt</a>(3)</i> for details. </p>
+<p> If you add a share that is set to share cookies, your easy handle will use that cookie cache and get the cookie engine enabled. If you unshare an object that was using cookies (or change to another object that doesn&#8217;t share cookies), the easy handle will get its cookie engine disabled. </p>
+<p> Data that the share object is not set to share will be dealt with the usual way, as if no share was used. </p>
+ </dd>
+<dt>CURLOPT_NEW_FILE_PERMS</dt>
+<dd> <p> Pass a long as a parameter, containing the value of the permissions that will be assigned to newly created files on the remote server. The default value is <i>0644</i>, but any valid value can be used. The only protocols that can use this are <i>sftp://</i>, <i>scp://</i>, and <i>file://</i>. (Added in 7.16.4) </p>
+ </dd>
+<dt>CURLOPT_NEW_DIRECTORY_PERMS</dt>
+<dd> <p> Pass a long as a parameter, containing the value of the permissions that will be assigned to newly created directories on the remote server. The default value is <i>0755</i>, but any valid value can be used. The only protocols that can use this are <i>sftp://</i>, <i>scp://</i>, and <i>file://</i>. (Added in 7.16.4) </p>
+ </dd></dl>
+<h2>TELNET OPTIONS</h2>
+<dl>
+<dt>CURLOPT_TELNETOPTIONS</dt>
+<dd> <p> Provide a pointer to a curl_slist with variables to pass to the telnet negotiations. The variables should be in the format &lt;option=value&gt;. libcurl supports the options &#8216;TTYPE&#8217;, &#8216;XDISPLOC&#8217; and &#8216;NEW_ENV&#8217;. See the TELNET standard for details. </p>
+ </dd></dl>
+<h2>RETURN VALUE</h2>
+<p> CURLE_OK (zero) means that the option was set properly, non-zero means an error occurred as <i>&lt;curl/curl.h&gt;</i> defines. See the <i><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</i> man page for the full list with descriptions. </p>
+<p> If you try to set an option that libcurl doesn&#8217;t know about, perhaps because the library is too old to support it or the option was removed in a recent version, this function will return <i>CURLE_FAILED_INIT</i>.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_reset/">curl_easy_reset</a></code>(3) </p>
+<h2>Index</h2>

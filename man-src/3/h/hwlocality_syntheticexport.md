@@ -25,5 +25,18 @@ description: "hwlocality_syntheticexport – Exporting Topologies to Synthetic"
 <dd> Do not export level attributes. Ignore level attributes such as memory/cache sizes or PU indexes. This is required if loading the synthetic description with hwloc &lt; 1.10.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>int hwloc_topology_export_synthetic (<code>hwloc_topology_t</code> topology, char * buffer, size_t buflen, unsigned long flags)</h3>
-<p> Export the topology as a synthetic string. At most buflen characters will be written in buffer, including the terminating 
-</p>
+<p> Export the topology as a synthetic string. At most buflen characters will be written in buffer, including the terminating \0. </p>
+<p> This exported string may be given back to <code>hwloc_topology_set_synthetic()</code>. </p>
+<p> flags is a OR&#8217;ed set of hwloc_topology_export_synthetic_flags_e. </p>
+<p> <code>Returns:</code> </p>
+<dl>
+<dd> <p> The number of characters that were written, not including the terminating \0. </p>
+<p> -1 if the topology could not be exported, for instance if it is not symmetric. </p>
+ </dd></dl>
+<p> <code>Note:</code> </p>
+<dl>
+<dd> <p> A 1024-byte buffer should be large enough for exporting topologies in the vast majority of cases. </p>
+ </dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
+<h2>Index</h2>

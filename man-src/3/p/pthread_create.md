@@ -149,5 +149,194 @@ thread_start(void *arg)
     uargv = strdup(tinfo-&gt;argv_string);
     if (uargv == NULL)
         handle_error(&quot;strdup&quot;);
-    for (char *p = uargv; *p != '
-</code></pre>
+    for (char *p = uargv; *p != '</code>\0';&nbsp;p++)
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*p&nbsp;=&nbsp;toupper(*p);
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;return uargv;
+}
+ </p>
+int
+main(int argc, char *argv[])
+{
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int s, opt, num_threads;
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pthread_attr_t attr;
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t stack_size;
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;void&nbsp;*res;
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;The&nbsp;&quot;-s&quot;&nbsp;option specifies a stack size for our threads&nbsp;*/
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stack_size&nbsp;=&nbsp;-1;
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;while&nbsp;((opt&nbsp;=&nbsp;getopt(argc, argv,&nbsp;&quot;s:&quot;))&nbsp;!=&nbsp;-1)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;switch&nbsp;(opt)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;case&nbsp;'s':
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;stack_size&nbsp;=&nbsp;strtoul(optarg, NULL, 0);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;break;
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;default:
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;Usage:&nbsp;%s&nbsp;[-s stack-size]&nbsp;arg...\n&quot;,
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;argv[0]);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;num_threads&nbsp;=&nbsp;argc - optind;
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Initialize thread creation attributes&nbsp;*/
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s&nbsp;=&nbsp;pthread_attr_init(&amp;attr);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(s&nbsp;!=&nbsp;0)
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error_en(s,&nbsp;&quot;pthread_attr_init&quot;);
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(stack_size&nbsp;&gt;&nbsp;0)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s&nbsp;=&nbsp;pthread_attr_setstacksize(&amp;attr, stack_size);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(s&nbsp;!=&nbsp;0)
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error_en(s,&nbsp;&quot;pthread_attr_setstacksize&quot;);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Allocate memory for pthread_create()&nbsp;arguments&nbsp;*/
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct thread_info&nbsp;*tinfo&nbsp;=&nbsp;calloc(num_threads, sizeof(*tinfo));
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(tinfo&nbsp;==&nbsp;NULL)
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error(&quot;calloc&quot;);
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Create one thread for each command-line argument&nbsp;*/
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int tnum&nbsp;=&nbsp;0;&nbsp;tnum&nbsp;&lt;&nbsp;num_threads;&nbsp;tnum++)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tinfo[tnum].thread_num&nbsp;=&nbsp;tnum&nbsp;+&nbsp;1;
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tinfo[tnum].argv_string&nbsp;=&nbsp;argv[optind&nbsp;+&nbsp;tnum];
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;The pthread_create()&nbsp;call stores the thread ID into
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;corresponding element of tinfo[]&nbsp;*/
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s&nbsp;=&nbsp;pthread_create(&amp;tinfo[tnum].thread_id,&nbsp;&amp;attr,
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&amp;thread_start,&nbsp;&amp;tinfo[tnum]);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(s&nbsp;!=&nbsp;0)
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error_en(s,&nbsp;&quot;pthread_create&quot;);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Destroy the thread attributes object, since it is no
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;longer needed&nbsp;*/
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s&nbsp;=&nbsp;pthread_attr_destroy(&amp;attr);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(s&nbsp;!=&nbsp;0)
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error_en(s,&nbsp;&quot;pthread_attr_destroy&quot;);
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Now join with each thread, and display its returned value&nbsp;*/
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int tnum&nbsp;=&nbsp;0;&nbsp;tnum&nbsp;&lt;&nbsp;num_threads;&nbsp;tnum++)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;s&nbsp;=&nbsp;pthread_join(tinfo[tnum].thread_id,&nbsp;&amp;res);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(s&nbsp;!=&nbsp;0)
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;handle_error_en(s,&nbsp;&quot;pthread_join&quot;);
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;Joined with thread&nbsp;%d;&nbsp;returned value was&nbsp;%s\n&quot;,
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tinfo[tnum].thread_num,&nbsp;(char&nbsp;*)&nbsp;res);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(res);&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Free memory allocated by thread&nbsp;*/
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+ </p>
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;free(tinfo);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS);
+}
+
+ </p>
+<h2>SEE ALSO</h2>
+
+ getrlimit (2),
+ pthread_attr_init (3),
+ pthread_cancel (3),
+ pthread_detach (3),
+ pthread_equal (3),
+ pthread_exit (3),
+ pthread_getattr_np (3),
+ pthread_join (3),
+ pthread_self (3),
+ pthread_setattr_default_np (3),
+ pthreads (7)
+
+<h2>COLOPHON</h2>
+This page is part of release 5.10 of the Linux
+ man-pages project.
+A description of the project,
+information about reporting bugs,
+and the latest version of this page,
+can be found at
+https://www.kernel.org/doc/man-pages/.
+<h2>Index</h2>

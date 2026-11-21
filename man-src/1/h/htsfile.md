@@ -23,5 +23,14 @@ description: "htsfile – identify high-throughput sequencing data files"
 <dt><code>-c</code>, <code>&#8211;view</code></dt>
 <dd> Instead of identifying the specified files, display a textual representation of their contents on standard output.</dd>
 <dt>
-</dt><dd> By default, <code>&#8211;view</code> refuses to display files in unknown formats. When <code>&#8211;verbose</code> is also given, the raw contents of such files are displayed, with non-printable characters shown via C-style &quot;
-</dd></dl>
+</dt><dd> By default, <code>&#8211;view</code> refuses to display files in unknown formats. When <code>&#8211;verbose</code> is also given, the raw contents of such files are displayed, with non-printable characters shown via C-style &quot;\x&quot; hexadecimal escape sequences.  </dd>
+<dt><code>-C</code>, <code>--copy</code> </dt>
+<dd>  Instead of identifying or displaying the specified files, copy the source <i>FILE</i> to the destination <i>DESTFILE</i>. Only <code>--verbose</code> may be used in conjunction with <code>--copy</code>.  </dd>
+<dt><code>-h</code>, <code>--header-only</code> </dt>
+<dd>  Display data file headers only. Implies <code>--view</code>.  </dd>
+<dt><code>-H</code>, <code>--no-header</code> </dt>
+<dd>  When viewing files, display data records only.  </dd>
+<dt><code>-v</code>, <code>--verbose</code> </dt>
+<dd>  Display additional warnings and diagnostic messages. Using <code>--verbose</code> repeatedly further raises the verbosity.  </dd></dl>
+ <h2>SEE ALSO</h2>
+ <i><a href="/docs/linux/man/1-bcftools/">bcftools</a></i>(1), <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-samtools/">samtools</a></i>(1) <h2>Index</h2>
