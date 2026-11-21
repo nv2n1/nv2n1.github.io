@@ -40,6 +40,18 @@ Running WordPress means running a full **PHP stack** — and that stack has been
 
 **Static sites eliminate the entire PHP+WordPress+plugin+database stack.** The only remaining surface is the CDN (GitHub Pages) serving static HTML/CSS/JS — no interpreter, no database, no plugin architecture, no dynamic code execution.
 
+## Why Hugo over Jekyll
+
+We originally ran Jekyll on GitHub Pages. Hugo won for three reasons:
+
+1. **Build speed** — ~8 seconds vs 12 minutes for 57k pages. Hugo's parallel rendering and single-binary architecture scale linearly; Jekyll's Ruby pipeline does not.
+
+2. **No Ruby dependency** — GitHub Pages' Jekyll version is pinned and lags. Hugo is a single binary we control; upgrades are a one-line CI change.
+
+3. **Module mounts** — Merging the separate man-site (56k pages) into the main repo required Hugo's `[module.mounts]`. Jekyll has no equivalent; we'd need artifact merging across repos.
+
+4. **Taxonomy & permalink parity** — Hugo's `[permalinks]` and `[taxonomies]` config mirrors WordPress's `/category/slug/` and `/author/slug/` exactly. Jekyll needs plugins for the same.
+
 ## How to migrate: step-by-step
 
 This is the exact process we used for **SysTutorials** (1,346 posts, ~56k Linux man pages).
