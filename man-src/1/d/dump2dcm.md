@@ -6,147 +6,215 @@ letter: "d"
 url: "/docs/linux/man/1-dump2dcm/"
 description: "dump2dcm – Convert ASCII dump to DICOM file"
 ---
-
 <h2 class="name">NAME</h2>
-<p> dump2dcm &#8211; Convert ASCII dump to DICOM file </p>
+<p> dump2dcm - Convert ASCII dump to DICOM file </p>
 <h2>SYNOPSIS</h2>
-<pre>
-dump2dcm [options] dumpfile-in dcmfile-out
-</pre>
+<pre><code>dump2dcm [options] dumpfile-in dcmfile-out
+</code></pre>
 <h2>DESCRIPTION</h2>
-<p> The <code>dump2dcm</code> utility converts an ASCII dump file to a DICOM file. The dump file has the same format as the output of <code>dcmdump</code>. Thus it is possible to capture the output of <code>dcmdump</code> into a file, modify some attributes and create a new DICOM file.</p>
+<p> The <code>dump2dcm</code> utility converts an ASCII dump file to a DICOM file. The dump file has the same format as the output of <code>dcmdump</code>. Thus it is possible to capture the output of <code>dcmdump</code> into a file, modify some attributes and create a new DICOM file.  </p>
 <h2>PARAMETERS</h2>
-<pre>
-dumpfile-in  dump input filename
-dcmfile-out  DICOM output filename
-</pre>
+<pre><code>dumpfile-in dump input filename
+dcmfile-out DICOM output filename
+</code></pre>
 <h2>OPTIONS</h2>
 <h3>general options</h3>
-<pre><code>
-- h-- help
-        print this help text and exit-- version
-            print version information and exit-- arguments
-                print expanded command line arguments -
-    q-- quiet
-        quiet mode,
-    print no warnings and errors - v-- verbose
-                                       verbose mode,
-    print processing details - d-- debug
-                                   debug mode,
-    print debug information - ll-- log - level[l] evel:string
-                                                       constant(fatal, error, warn, info, debug, trace)
+<pre><code>  -h --help
+         print this help text and exit
+       --version
+         print version information and exit
+       --arguments
+         print expanded command line arguments
+  -q --quiet
+         quiet mode, print no warnings and errors
+  -v --verbose
+         verbose mode, print processing details
+  -d --debug
+         debug mode, print debug information
+  -ll --log-level [l]evel: string constant
+         (fatal, error, warn, info, debug, trace)
          use level l for the logger
-  -lc  --log-config  [f]ilename: string
+  -lc --log-config [f]ilename: string
          use config file f for the logger
 </code></pre>
 <h3>input options</h3>
-<p>input file format : +f&#8211; read &#8211; meta &#8211; info read meta information if present (default) &#8211; f&#8211; ignore &#8211; meta &#8211; info ignore file meta information other input options : +l&#8211; line[m] ax &#8211; length : integer maximum line length m(default : 4096)</p>
+<pre><code>input file format:
+  +f --read-meta-info
+         read meta information if present (default)
+  -f --ignore-meta-info
+         ignore file meta information
+other input options:
+  +l --line [m]ax-length: integer
+         maximum line length m (default: 4096)
+</code></pre>
 <h3>processing options</h3>
-<pre>
-unique identifiers:
-  +Ug  --generate-new-uids
+<pre><code>unique identifiers:
+  +Ug --generate-new-uids
          generate new Study/Series/SOP Instance UID
-  -Uo  --dont-overwrite-uids
+  -Uo --dont-overwrite-uids
          do not overwrite existing UIDs (default)
-  +Uo  --overwrite-uids
+  +Uo --overwrite-uids
          overwrite existing UIDs
-</pre>
+</code></pre>
 <h3>output options</h3>
-<p>output file format:<br />
-  +F   &#8211;write-file<br />
-         write file format (default)<br />
-  -F   &#8211;write-dataset<br />
-         write data set without file meta information<br />
-  +Fu  &#8211;update-meta-info<br />
-         update particular file meta information<br />
-output transfer syntax:<br />
-  +t=  &#8211;write-xfer-same<br />
-         write with same TS as input (default)<br />
-  +te  &#8211;write-xfer-little<br />
-         write with explicit VR little endian<br />
-  +tb  &#8211;write-xfer-big<br />
-         write with explicit VR big endian TS<br />
-  +ti  &#8211;write-xfer-implicit<br />
-         write with implicit VR little endian TS<br />
-  +td  &#8211;write-xfer-deflated<br />
-         write with deflated explicit VR little endian TS<br />
-error handling:<br />
-  -E   &#8211;stop-on-error<br />
-         do not write if dump is damaged (default)<br />
-  +E   &#8211;ignore-errors<br />
-         attempt to write even if dump is damaged<br />
-post-1993 value representations:<br />
-  +u   &#8211;enable-new-vr<br />
-         enable support for new VRs (UN/UT) (default)<br />
-  -u   &#8211;disable-new-vr<br />
-         disable support for new VRs, convert to OB<br />
-group length encoding:<br />
-  +g=  &#8211;group-length-recalc<br />
-         recalculate group lengths if present (default)<br />
-  +g   &#8211;group-length-create<br />
-         always write with group length elements<br />
-  -g   &#8211;group-length-remove<br />
-         always write without group length elements<br />
-length encoding in sequences and items:<br />
-  +e   &#8211;length-explicit<br />
-         write with explicit lengths (default)<br />
-  -e   &#8211;length-undefined<br />
-         write with undefined lengths<br />
-data set trailing padding (not with &#8211;write-dataset):<br />
-  -p=  &#8211;padding-retain<br />
-         do not change padding (default if not &#8211;write-dataset)<br />
-  -p   &#8211;padding-off<br />
-         no padding (implicit if &#8211;write-dataset)<br />
-  +p   &#8211;padding-create  [f]ile-pad [i]tem-pad: integer<br />
-         align file on multiple of f bytes<br />
-         and items on multiple of i bytes<br />
-deflate compression level (only with &#8211;write-xfer-deflated):<br />
-  +cl  &#8211;compression-level  [l]evel: integer (default: 6)<br />
-         0=uncompressed, 1=fastest, 9=best compression</p>
+<pre><code>output file format:
+  +F --write-file
+         write file format (default)
+  -F --write-dataset
+         write data set without file meta information
+  +Fu --update-meta-info
+         update particular file meta information
+output transfer syntax:
+  +t= --write-xfer-same
+         write with same TS as input (default)
+  +te --write-xfer-little
+         write with explicit VR little endian
+  +tb --write-xfer-big
+         write with explicit VR big endian TS
+  +ti --write-xfer-implicit
+         write with implicit VR little endian TS
+  +td --write-xfer-deflated
+         write with deflated explicit VR little endian TS
+error handling:
+  -E --stop-on-error
+         do not write if dump is damaged (default)
+  +E --ignore-errors
+         attempt to write even if dump is damaged
+post-1993 value representations:
+  +u --enable-new-vr
+         enable support for new VRs (UN/UT) (default)
+  -u --disable-new-vr
+         disable support for new VRs, convert to OB
+group length encoding:
+  +g= --group-length-recalc
+         recalculate group lengths if present (default)
+  +g --group-length-create
+         always write with group length elements
+  -g --group-length-remove
+         always write without group length elements
+length encoding in sequences and items:
+  +e --length-explicit
+         write with explicit lengths (default)
+  -e --length-undefined
+         write with undefined lengths
+data set trailing padding (not with --write-dataset):
+  -p= --padding-retain
+         do not change padding (default if not --write-dataset)
+  -p --padding-off
+         no padding (implicit if --write-dataset)
+  +p --padding-create [f]ile-pad [i]tem-pad: integer
+         align file on multiple of f bytes
+         and items on multiple of i bytes
+deflate compression level (only with --write-xfer-deflated):
+  +cl --compression-level [l]evel: integer (default: 6)
+         0=uncompressed, 1=fastest, 9=best compression
+</code></pre>
 <h2>NOTES</h2>
 <h3>Dump File Description</h3>
-<p> The input file can be an output of <code>dcmdump</code> (default indented format only). One element (tag, VR, value) must be written into one line separated by arbitrary spaces or tab characters. A &#8216;#&#8217; begins a comment that ends at the line end. Empty lines are allowed. </p>
+<p> The input file can be an output of <code>dcmdump</code> (default indented format only). One element (tag, VR, value) must be written into one line separated by arbitrary spaces or tab characters. A &#8216;#&#8216; begins a comment that ends at the line end. Empty lines are allowed. </p>
 <p> The individual parts of a line have the following syntax: </p>
-<p>Tag:   (gggg,eeee)<br />
-       with gggg and eeee are 4 character hexadecimal values<br />
-       representing group and element tag.  Spaces and tabs can be<br />
-       anywhere in a tag specification.<br />
-VR:    Value Representation must be written as 2 characters as in<br />
-       Part 6 of the DICOM standard.  No spaces or tabs are allowed<br />
-       between the two characters.  If the VR can be determined from<br />
-       the tag, this part of a line is optional.<br />
-Value: There are several rules for writing values:<br />
-       1. US, SS, SL, UL, FD, FL are written as decimal strings that<br />
-          can be read by scanf().<br />
-       2. AT is written as &#8216;(gggg,eeee)&#8217; with additional spaces<br />
-          stripped off automatically and gggg and eeee being decimal<br />
-          strings that can be read by scanf().<br />
-       3. OB and OW values are written as byte or word hexadecimal<br />
-          values separated by &#8216;\&#8217; character.  Alternatively, OB or OW<br />
-          values can be read from a separate file by writing the<br />
-          filename prefixed by a &#8216;=&#8217; character (e.g. &#8216;=largepix.dat&#8217;).<br />
-          The contents of the file will be read as is.  OW data is<br />
-          expected to be little endian ordered and will be swapped if<br />
-          necessary.  No checks will be made to ensure that the amount<br />
-          of data is reasonable in terms of other attributes such as<br />
-          Rows or Columns.<br />
-          In case of compressed pixel data, the line should start with<br />
-          &#8216;(7fe0,0010) OB (PixelSequence&#8217; in order to distinguish from<br />
-          uncompressed pixel data.<br />
-       4. UI is written as &#8216;=Name&#8217; in data dictionary or as unique<br />
-          identifier string (see 6.), e.g. &#8216;[1.2.840&#8230;..]&#8217;.<br />
-       5. Strings without () &lt;&gt; [] spaces, tabs and # can be written<br />
-          directly.<br />
-       6. Other strings must be surrounded by &#8216;[&#8216; and &#8216;]&#8217;.  No bracket<br />
-          structure is passed.  The value ends at the last &#8216;]&#8217; in the<br />
-          line.  Anything after the &#8216;]&#8217; is interpreted as comment.<br />
-       7. &#8216;(&#8216; and &#8216;&lt;&#8216; are interpreted special and may not be used when<br />
-          writing an input file by hand as beginning characters of a<br />
-          string.  Multiple Value are separated by &#8216;\&#8217;.  The lines<br />
-          need not be sorted into ascending tag order.  References in<br />
-          DICOM Directories are not supported.  Semantic errors are<br />
-          not detected.</p>
-<h3>Example</h3>
-<pre><code>
-(0008, 0020) DA[19921012] #8, 1 StudyDate(0008, 0016) UI = MRImageStorage #26, 1 SOPClassUID(0002, 0012) UI[1.2.276.0.7230010.100.1.1](0020, 0032) DS[0.0
+<pre><code>Tag: (gggg,eeee)
+       with gggg and eeee are 4 character hexadecimal values
+       representing group and element tag. Spaces and tabs can be
+       anywhere in a tag specification.
+VR: Value Representation must be written as 2 characters as in
+       Part 6 of the DICOM standard. No spaces or tabs are allowed
+       between the two characters. If the VR can be determined from
+       the tag, this part of a line is optional.
+Value: There are several rules for writing values:
+       1. US, SS, SL, UL, FD, FL are written as decimal strings that
+          can be read by scanf().
+       2. AT is written as '(gggg,eeee)' with additional spaces
+          stripped off automatically and gggg and eeee being decimal
+          strings that can be read by scanf().
+       3. OB and OW values are written as byte or word hexadecimal
+          values separated by '\' character. Alternatively, OB or OW
+          values can be read from a separate file by writing the
+          filename prefixed by a '=' character (e.g. '=largepix.dat').
+          The contents of the file will be read as is. OW data is
+          expected to be little endian ordered and will be swapped if
+          necessary. No checks will be made to ensure that the amount
+          of data is reasonable in terms of other attributes such as
+          Rows or Columns.
+          In case of compressed pixel data, the line should start with
+          '(7fe0,0010) OB (PixelSequence' in order to distinguish from
+          uncompressed pixel data.
+       4. UI is written as '=Name' in data dictionary or as unique
+          identifier string (see 6.), e.g. '[1.2.840.....]'.
+       5. Strings without () &lt;&gt; [] spaces, tabs and # can be written
+          directly.
+       6. Other strings must be surrounded by '[' and ']'. No bracket
+          structure is passed. The value ends at the last ']' in the
+          line. Anything after the ']' is interpreted as comment.
+       7. '(' and '&lt;' are interpreted special and may not be used when
+          writing an input file by hand as beginning characters of a
+          string. Multiple Value are separated by '\'. The lines
+          need not be sorted into ascending tag order. References in
+          DICOM Directories are not supported. Semantic errors are
+          not detected.
 </code></pre>
+<h3>Example</h3>
+<pre><code> (0008,0020) DA [19921012] # 8, 1 StudyDate
+ (0008,0016) UI =MRImageStorage # 26, 1 SOPClassUID
+ (0002,0012) UI [1.2.276.0.7230010.100.1.1]
+ (0020,0032) DS [0.0\0.0] # 8, 2 ImagePositionPatient
+ (0028,0009) AT (3004,000c) # 4, 1 FrameIncrementPointer
+ (0028,0010) US 256 # 4, 1 Rows
+ (0002,0001) OB 01\00
+</code></pre>
+<h3>Limitations</h3>
+<p> Please note that <code>dump2dcm</code> currently does not fully support DICOMDIR files. Specifically, the value of the various offset data elements is not updated automatically by this tool.  </p>
+<h2>LOGGING</h2>
+<p> The level of logging output of the various command line tools and underlying libraries can be specified by the user. By default, only errors and warnings are written to the standard error stream. Using option <i>--verbose</i> also informational messages like processing details are reported. Option <i>--debug</i> can be used to get more details on the internal activity, e.g. for debugging purposes. Other logging levels can be selected using option <i>--log-level</i>. In <i>--quiet</i> mode only fatal errors are reported. In such very severe error events, the application will usually terminate. For more details on the different logging levels, see documentation of module &#8216;oflog&#8217;. </p>
+<p> In case the logging output should be written to file (optionally with logfile rotation), to syslog (Unix) or the event log (Windows) option <i>--log-config</i> can be used. This configuration file also allows for directing only certain messages to a particular output stream and for filtering certain messages based on the module or application where they are generated. An example configuration file is provided in <i>&lt;etcdir&gt;/logger.cfg</i>).  </p>
+<h2>COMMAND LINE</h2>
+<p> All command line tools use the following notation for parameters: square brackets enclose optional values (0-1), three trailing dots indicate that multiple values are allowed (1-n), a combination of both means 0 to n values. </p>
+<p> Command line options are distinguished from parameters by a leading &#8216;+&#8216; or &#8216;-&#8216; sign, respectively. Usually, order and position of command line options are arbitrary (i.e. they can appear anywhere). However, if options are mutually exclusive the rightmost appearance is used. This behaviour conforms to the standard evaluation rules of common Unix shells. </p>
+<p> In addition, one or more command files can be specified using an &#8216;@&#8216; sign as a prefix to the filename (e.g. <i>@command.txt</i>). Such a command argument is replaced by the content of the corresponding text file (multiple whitespaces are treated as a single separator unless they appear between two quotation marks) prior to any further evaluation. Please note that a command file cannot contain another command file. This simple but effective approach allows to summarize common combinations of options/parameters and avoids longish and confusing command lines (an example is provided in file <i>&lt;datadir&gt;/dumppat.txt</i>).  </p>
+<h2>ENVIRONMENT</h2>
+<p> The <code>dump2dcm</code> utility will attempt to load DICOM data dictionaries specified in the <i>DCMDICTPATH</i> environment variable. By default, i.e. if the <i>DCMDICTPATH</i> environment variable is not set, the file <i>&lt;datadir&gt;/dicom.dic</i> will be loaded unless the dictionary is built into the application (default for Windows). </p>
+<p> The default behaviour should be preferred and the <i>DCMDICTPATH</i> environment variable only used when alternative data dictionaries are required. The <i>DCMDICTPATH</i> environment variable has the same format as the Unix shell <i>PATH</i> variable in that a colon (&#8216;:&#8216;) separates entries. On Windows systems, a semicolon (&#8216;;&#8216;) is used as a separator. The data dictionary code will attempt to load each file specified in the <i>DCMDICTPATH</i> environment variable. It is an error if no data dictionary can be loaded.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-dcmdump/">dcmdump</a></code>(1)  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) 1996-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">PARAMETERS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">OPTIONS</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAG">general options</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">input options</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAI">processing options</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAJ">output options</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAK">NOTES</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAL">Dump File Description</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAM">Example</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAN">Limitations</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAO">LOGGING</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAP">COMMAND LINE</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAQ">ENVIRONMENT</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAR">SEE ALSO</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAS">COPYRIGHT</a></dt>
+<dd>  </dd></dl>

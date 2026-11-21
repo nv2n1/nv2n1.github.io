@@ -5,46 +5,219 @@ section: "1"
 letter: "b"
 url: "/docs/linux/man/1-bib2gls/"
 ---
-
 <h2>SYNOPSIS</h2>
-<p> <code>bib2gls</code> [<i>option</i>]+ <i>auxfile</i></p>
+<p> <code>bib2gls</code> [<i>option</i>]+ <i>auxfile</i>  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>bib2gls</code> is designed to work with the <code>glossaries-extra</code> LaTeX package. (The <code>record</code> package option is required.) The application performs two functions in one: (1) selects entries from .bib files according to information found in the <i>auxfile</i> (similar to <code>bibtex</code>); (2) hierarchically sorts entries and collates location lists (similar to <code>makeindex</code> and <code>xindy</code>). The .aux extension may be omitted from <i>auxfile</i>. </p>
-<p> The <i>auxfile</i> (and corresponding .log file) should either be in the current directory or in the directory specified by <code>&#8211;dir</code>. Bib files can either be relative to the directory the <i>auxfile</i> is in or in a location that can be found by kpsewhich.</p>
+<p>The <i>auxfile</i> (and corresponding .log file) should either be in the current directory or in the directory specified by <code>--dir</code>. Bib files can either be relative to the directory the <i>auxfile</i> is in or in a location that can be found by kpsewhich.  </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code> or <code>-h</code></dt>
-<dd> Display help message and exit.</dd>
-<dt><code>&#8211;version</code> or <code>-v</code></dt>
-<dd> Display version information and exit.</dd>
-<dt><code>&#8211;debug</code> [<i>level</i>]</dt>
-<dd> Switch on the debug mode (optionally at the given <i>level</i>, which should be a non-negative integer). If <i>level</i> is <code>0</code> then the debug mode is switched off.</dd>
-<dt><code>&#8211;no-debug</code> (or <code>&#8211;nodebug</code>)</dt>
-<dd> Switch off debug mode. (Equivalent to <code>&#8211;debug</code> <code>0</code>)</dd>
-<dt><code>&#8211;verbose</code></dt>
-<dd> Switch on verbose mode.</dd>
-<dt><code>&#8211;no-verbose</code> (or <code>&#8211;noverbose</code>)</dt>
-<dd> Switch off verbose mode. (Some messages will still be written to <font SIZE="-1">STDOUT.</font>)</dd>
-<dt><code>&#8211;silent</code></dt>
-<dd> Only display error messages. All other messages are just written to the transcript file.</dd>
-<dt><code>&#8211;locale</code> <i>lang</i> (or <code>-l</code> <i>lang</i>)</dt>
-<dd> Use language resource file for <i>lang</i> (which should be an <font SIZE="-1">IETF</font> locale tag).</dd>
-<dt><code>&#8211;log-file</code> <i>file</i> (or <code>-t</code> &lt;file&gt;)</dt>
-<dd> Set the transcript file.</dd>
-<dt><code>&#8211;dir</code> <i>directory</i> (or <code>-d</code> &lt;directory&gt;)</dt>
-<dd> Files are relative to <i>directory</i>. (This doesn&#8217;t change the current working directory.)</dd>
-<dt><code>&#8211;tex-encoding</code> <i>name</i></dt>
-<dd> Set the character encoding for the output files. This overrides the setting given in <i>auxfile</i>.</dd>
-<dt><code>&#8211;interpret</code></dt>
-<dd> Use the TeX parser library to interpret known (La)TeX commands (default).</dd>
-<dt><code>&#8211;no-interpret</code></dt>
-<dd> Don&#8217;t try interpreting (La)TeX commands.</dd>
-<dt><code>&#8211;break-space</code></dt>
-<dd> Interpret <tt>&quot;~&quot;</tt> (tilde) character and <tt>&quot;
-obreakspace&quot;</tt> as a normal space.</dd>
-<dt><code>&#8211;no-break-space</code></dt>
-<dd> Interpret <tt>&quot;~&quot;</tt> (tilde) and <tt>&quot;
-obreakspace&quot;</tt> as a non-breaking space (default).</dd>
-<dt><code>&#8211;cite-as-record</code></dt>
-<dd> Treat <tt>&quot;
-</dd></dl>
+<dt><code>--help</code> or <code>-h</code></dt>
+<dd> <p> Display help message and exit. </p>
+ </dd>
+<dt><code>--version</code> or <code>-v</code></dt>
+<dd> <p> Display version information and exit. </p>
+ </dd>
+<dt><code>--debug</code> [<i>level</i>]</dt>
+<dd> <p> Switch on the debug mode (optionally at the given <i>level</i>, which should be a non-negative integer). If <i>level</i> is <code>0</code> then the debug mode is switched off. </p>
+ </dd>
+<dt><code>--no-debug</code> (or <code>--nodebug</code>)</dt>
+<dd> <p> Switch off debug mode. (Equivalent to <code>--debug</code> <code>0</code>) </p>
+ </dd>
+<dt><code>--verbose</code></dt>
+<dd> <p> Switch on verbose mode. </p>
+ </dd>
+<dt><code>--no-verbose</code> (or <code>--noverbose</code>)</dt>
+<dd> <p> Switch off verbose mode. (Some messages will still be written to <font SIZE="-1">STDOUT.</font>) </p>
+ </dd>
+<dt><code>--silent</code></dt>
+<dd> <p> Only display error messages. All other messages are just written to the transcript file. </p>
+ </dd>
+<dt><code>--locale</code><i>lang</i> (or <code>-l</code><i>lang</i>)</dt>
+<dd> <p> Use language resource file for <i>lang</i> (which should be an <font SIZE="-1">IETF</font> locale tag). </p>
+ </dd>
+<dt><code>--log-file</code><i>file</i> (or <code>-t</code> &lt;file&gt;)</dt>
+<dd> <p> Set the transcript file. </p>
+ </dd>
+<dt><code>--dir</code><i>directory</i> (or <code>-d</code> &lt;directory&gt;)</dt>
+<dd> <p> Files are relative to <i>directory</i>. (This doesn&#8217;t change the current working directory.) </p>
+ </dd>
+<dt><code>--tex-encoding</code><i>name</i></dt>
+<dd> <p> Set the character encoding for the output files. This overrides the setting given in <i>auxfile</i>. </p>
+ </dd>
+<dt><code>--interpret</code></dt>
+<dd> <p> Use the TeX parser library to interpret known (La)TeX commands (default). </p>
+ </dd>
+<dt><code>--no-interpret</code></dt>
+<dd> <p> Don&#8217;t try interpreting (La)TeX commands. </p>
+ </dd>
+<dt><code>--break-space</code></dt>
+<dd> <p> Interpret <code>&quot;~&quot;</code> (tilde) character and <code>&quot;\nobreakspace&quot;</code> as a normal space. </p>
+ </dd>
+<dt><code>--no-break-space</code></dt>
+<dd> <p> Interpret <code>&quot;~&quot;</code> (tilde) and <code>&quot;\nobreakspace&quot;</code> as a non-breaking space (default). </p>
+ </dd>
+<dt><code>--cite-as-record</code></dt>
+<dd> <p> Treat <code>&quot;\citation&quot;</code> as an ignored record. </p>
+ </dd>
+<dt><code>--no-cite-as-record</code></dt>
+<dd> <p> Don&#8217;t check for instances of <code>&quot;\citation&quot;</code> in the <i>.aux</i> file (default). </p>
+ </dd>
+<dt><code>--warn-non-bib-fields</code></dt>
+<dd> <p> Warn if internal non-bib fields are found in the <i>.bib</i> file. </p>
+ </dd>
+<dt><code>--no-warn-non-bib-fields</code></dt>
+<dd> <p> Don&#8217;t warn if internal non-bib fields are found in the <i>.bib</i> file. The use of these internal fields can cause unexpected results, so only use this option if you have taken appropriate precautions. </p>
+ </dd>
+<dt><code>--warn-unknown-entry-types</code></dt>
+<dd> <p> Warn if any unknown entry types are found in the <i>.bib</i> file. </p>
+ </dd>
+<dt><code>--no-warn-unknown-entry-types</code></dt>
+<dd> <p> Don&#8217;t warn if any unknown entry types are found in the <i>.bib</i> file. </p>
+ </dd>
+<dt><code>--merge-wrglossary-records</code></dt>
+<dd> <p> Merge an entry&#8217;s <code>wrglossary</code> records for the same page locations. (For use with the <code>indexcounter</code> package option.) </p>
+ </dd>
+<dt><code>--no-merge-wrglossary-records</code></dt>
+<dd> <p> Don&#8217;t merge an entry&#8217;s <code>wrglossary</code> records. </p>
+ </dd>
+<dt><code>--collapse-same-location-range</code></dt>
+<dd> <p> Collapse an explicit range that has a duplicate start and end location into a normal record (default). </p>
+ </dd>
+<dt><code>--no-collapse-same-location-range</code></dt>
+<dd> <p> Don&#8217;t collapse an explicit range that has a duplicate start and end location into a normal record. </p>
+ </dd>
+<dt><code>--retain-formats</code><i>list</i></dt>
+<dd> <p> Indicates which location formats should always be retained even if it causes a partial duplicate. Only exact duplicates will be merged. </p>
+ </dd>
+<dt><code>--no-retain-formats</code></dt>
+<dd> <p> Normal location merging rules apply (default). </p>
+ </dd>
+<dt><code>--merge-nameref-on</code><i>rule</i></dt>
+<dd> <p> Rule for merging locations created with the <code>record=nameref</code> package option (requires <i>glossaries-extra.sty</i> version 1.37+). The <i>rule</i> may be one of: <code>hcounter</code>, <code>href</code>, <code>title</code> or <code>location</code>. </p>
+ </dd>
+<dt><code>--force-cross-resource-refs</code> or <code>-x</code></dt>
+<dd> <p> Force cross-resource referencing mode on. </p>
+ </dd>
+<dt><code>--no-force-cross-resource-refs</code></dt>
+<dd> <p> Don&#8217;t force cross-resource referencing mode on (default). </p>
+ </dd>
+<dt><code>--support-unicode-script</code></dt>
+<dd> <p> Text superscript (<code>&quot;\textsuperscript&quot;</code>) or subscripts (<code>&quot;\textsubscript&quot;</code>) will use Unicode superscript/subscript characters if available. For example, <code>&quot;\textsuperscript{2}&quot;</code> will be converted to U+00B2 (superscript two). </p>
+ </dd>
+<dt><code>--no-support-unicode-script</code></dt>
+<dd> <p> Text superscript (<code>&quot;\textsuperscript&quot;</code>) or subscripts (<code>&quot;\textsubscript&quot;</code>) won&#8217;t be converted to Unicode superscript/subscript characters. For example, <code>&quot;\textsuperscript{2}&quot;</code> will be converted to <code>&quot;&lt;sup&gt;2&lt;/sup&gt;&quot;</code> and the markup will be stripped leaving just the character 2. </p>
+ </dd>
+<dt><code>--packages</code><i>list</i> (or <code>-p</code><i>list</i>)</dt>
+<dd> <p> Instruct the TeX parser library to pretend the packages listed in <i>list</i> have been used by the document. Note that there&#8217;s only a limited number of packages supported by the TeX parser library. This option has a cumulative action so <code>--packages wasysym,pifont</code> is the same as <code>--packages wasysym --packages pifont</code>. </p>
+<p>You can find out the list of supported packages with <code>--list-known-packages</code>. </p>
+ </dd>
+<dt><code>--custom-packages</code><i>list</i></dt>
+<dd> <p> Instruct the TeX parser library to attempt to parse the packages listed in <i>list</i>. This is intended for simple custom packages that don&#8217;t contain complex code. </p>
+ </dd>
+<dt><code>--ignore-packages</code><i>list</i> (or <code>-k</code><i>list</i>)</dt>
+<dd> <p> Don&#8217;t parse the log file for the packages listed in <i>list</i>. Note that <code>--packages</code> overrides this option, so if the same package is listed in both <code>--ignore-packages</code> and <code>--packages</code> then the interpreter will check if it&#8217;s supported. This option has a cumulative action. Only known packages may be included in <i>list</i>. </p>
+ </dd>
+<dt><code>--list-known-packages</code></dt>
+<dd> <p> Lists all the packages that have are known to the TeX parser library and then exits (with exit code 0). Any of the listed packages may be used in <code>--packages</code> or <code>--ignore-packages</code>. </p>
+ </dd>
+<dt><code>--mfirstuc-protection</code><i>fields</i>|<code>all</code> (or <code>-u</code><i>fields</i>|<code>all</code>)</dt>
+<dd> <p> Insert an empty group if fields start with certain problematic commands to protect against case-changing commands like <code>&quot;\Gls&quot;</code>. </p>
+<p>The default is to do this for all fields. To do this for only a subset of fields, set <i>fields</i> to a comma-separated list of fields (e.g. <code>name,short,long</code>). The keyword <code>all</code> indicates all fields. </p>
+ </dd>
+<dt><code>--no-mfirstuc-protection</code></dt>
+<dd> <p> Switch off the auto-insertion of an empty group for all fields. </p>
+ </dd>
+<dt><code>--mfirstuc-math-protection</code></dt>
+<dd> <p> Switch on the auto-insertion of an empty group for math-shift (<code>&quot;$&quot;</code>). This option will be overridden by <code>--no-mfirstuc-protection</code>. </p>
+ </dd>
+<dt><code>--no-mfirstuc-math-protection</code></dt>
+<dd> <p> Switch off the auto-insertion of an empty group for math-shift (<code>&quot;$&quot;</code>). </p>
+ </dd>
+<dt><code>--nested-link-check</code><i>list</i>|<code>none</code></dt>
+<dd> <p> Check each field listed in <i>list</i> for potentially problematic nested link text. (Default list: name, text, plural, first, firstplural, short, shortplural, long, longplural, symbol). </p>
+<p>If <code>none</code>, disable check. </p>
+ </dd>
+<dt><code>--no-nested-link-check</code></dt>
+<dd> <p> Don&#8217;t check for potentially problematic nested link text. (Equivalent to <code>--nested-link-check</code> <code>none</code>) </p>
+ </dd>
+<dt><code>--shortcuts</code><i>option</i></dt>
+<dd> <p> Check for the shortcut commands when searching for dependencies. Permitted values of <i>option</i>: <code>acronyms</code> (or <code>acro</code>), <code>ac</code>, <code>abbreviations</code> (or <code>abbr</code>), <code>all</code> (or <code>true</code>), <code>none</code> (or <code>false</code>). This overrides the setting given in <i>auxfile</i>. </p>
+ </dd>
+<dt><code>--map-format</code><i>key</i><code>:</code><i>value</i>[<code>,</code><i>key</i><code>:</code><i>value</i>]* (or <code>-m</code><i>key</i><code>:</code><i>value</i>[<code>,</code><i>key</i><code>:</code><i>value</i>]*)</dt>
+<dd> <p> Set location format mappings. </p>
+ </dd>
+<dt><code>--group</code> or <code>-g</code></dt>
+<dd> <p> Add <code>group</code> field to entries. </p>
+ </dd>
+<dt><code>--no-group</code></dt>
+<dd> <p> Don&#8217;t add <code>group</code> field to entries (default). </p>
+ </dd>
+<dt><code>--record-count</code> or <code>-c</code></dt>
+<dd> <p> Add record count fields to entries. </p>
+ </dd>
+<dt><code>--no-record-count</code></dt>
+<dd> <p> Don&#8217;t add record count field to entries (default). This option automatically implements <code>--no-record-count-unit</code>. </p>
+ </dd>
+<dt><code>--record-count-unit</code> or <code>-n</code></dt>
+<dd> <p> Add unit record count fields to entries. This option automatically implements <code>--record-count</code>. </p>
+ </dd>
+<dt><code>--no-record-count-unit</code></dt>
+<dd> <p> Don&#8217;t add unit record count field to entries (default). </p>
+ </dd>
+<dt><code>--trim-fields</code></dt>
+<dd> <p> Trim leading and trailing spaces from all fields. This option cancels <code>--trim-only-fields</code> and <code>--no-trim-fields</code>. </p>
+ </dd>
+<dt><code>--trim-only-fields</code><i>list</i></dt>
+<dd> <p> Trim leading and trailing spaces from only the listed fields. This option is cumulative but is cancelled by <code>--trim-fields</code> and <code>--no-trim-fields</code>. This option may not be used with <code>--trim-except-fields</code>. </p>
+ </dd>
+<dt><code>--trim-except-fields</code><i>list</i></dt>
+<dd> <p> Trim leading and trailing spaces from all fields except those listed. This option is cumulative but is cancelled by <code>--trim-fields</code> and <code>--no-trim-fields</code>. This option may not be used with <code>--trim-only-fields</code>. </p>
+ </dd>
+<dt><code>--no-trim-fields</code></dt>
+<dd> <p> Don&#8217;t trim leading and trailing spaces from fields (default). This option cancels <code>--trim-only-fields</code> and <code>--trim-fields</code>. </p>
+ </dd>
+<dt><code>--expand-fields</code></dt>
+<dd> <p> Don&#8217;t write <code>&quot;\glsnoexpandfields&quot;</code> to the <i>.glstex</i> file. </p>
+ </dd>
+<dt><code>--no-expand-fields</code></dt>
+<dd> <p> Write <code>&quot;\glsnoexpandfields&quot;</code> to the <i>.glstex</i> file (default). </p>
+ </dd>
+<dt><code>--provide-glossaries</code></dt>
+<dd> <p> Write <code>&quot;\provideignoredglossary*&quot;</code> to the <i>.glstex</i> file to provide unknown glossaries. </p>
+ </dd>
+<dt><code>--no-provide-glossaries</code></dt>
+<dd> <p> Don&#8217;t write <code>&quot;\provideignoredglossary*&quot;</code> to the <i>.glstex</i> file to provide unknown glossaries except in documented situations (<code>master</code>, <code>secondary</code> and <code>trigger-type</code> resource options). This setting is the default. </p>
+ </dd></dl>
+<h2>REQUIRES</h2>
+<p> Java 7 or later and a TeX distribution.  </p>
+<h2>LICENSE</h2>
+<p> License GPLv3+: <font SIZE="-1">GNU GPL</font> version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; This is free software: you are free to change and redistribute it. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.  </p>
+<h2>RECOMMENDED READING</h2>
+<p> The bib2gls manual: </p>
+<pre><code>        texdoc bib2gls
+</code></pre>
+<p>The glossaries-extra manual: </p>
+<pre><code>        texdoc glossaries-extra
+</code></pre>
+<p>The glossaries manual: </p>
+<pre><code>        texdoc glossaries
+</code></pre>
+<h2>AUTHOR</h2>
+<p> Nicola L. C. Talbot, &lt;<a rel="nofollow" href="https://www.dickimaw-books.com/">https://www.dickimaw-books.com/</a>&gt; </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">OPTIONS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">REQUIRES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">LICENSE</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">RECOMMENDED READING</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">AUTHOR</a></dt>
+<dd>  </dd></dl>

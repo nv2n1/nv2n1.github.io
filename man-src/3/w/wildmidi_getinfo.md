@@ -6,30 +6,92 @@ letter: "w"
 url: "/docs/linux/man/3-wildmidi_getinfo/"
 description: "WildMidi_GetInfo – get information on a midi"
 ---
-
-<p>WildMidi_GetInfo &#8211; get information on a midi</p>
-<h2>Library</h2>
-<p><code>libWildMidi</code></p>
-<h2>Synopsis</h2>
-<p><code>#include &lt;wildmidi_lib.h&gt;</code> </p>
+<p> WildMidi_GetInfo - get information on a midi  </p>
+<h2>LIBRARY</h2>
+<p> <code>libWildMidi</code>  </p>
+<h2>SYNOPSIS</h2>
+<p> <code>#include &lt;wildmidi_lib.h&gt;</code> </p>
 <p> <code>struct _WM_Info *WildMidi_GetInfo (midi *</code><i>handle</i>); </p>
-<h2>Description</h2>
-<p>Obtains information allowing you to determine song position, current options, and any copyright information. </p>
-<dl COMPACT>
+<h2>DESCRIPTION</h2>
+<p> Obtains information allowing you to determine song position, current options, and any copyright information. </p>
+<dl>
 <dt><i>handle</i></dt>
-<dd>The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-wildmidi_open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-wildmidi_openbuffer/">WildMidi_OpenBuffer</a></code>(3)</dd></dl>
-<h2>Return Value</h2>
-<p>On error returns NULL with an error message displayed to stderr. </p>
-<p> Otherwise returns a pointer to a struct containing the information. </p>
-<pre>struct _WM_Info {
- char *<i>copyright</i>;
- unsigned long int <i>current_sample</i>;
- unsigned long int <i>approx_total_samples</i>;
- unsigned long int <i>total_midi_time</i>;
- unsigned short int <i>mixer_options</i>;
- unsigned long int <i>total_midi_time</i>;
-};</pre>
-<dl COMPACT>
+<dd> <p> The identifier obtained from opening a midi file with <code><a href="/docs/linux/man/3-WildMidi_Open/">WildMidi_Open</a></code>(3) or <code><a href="/docs/linux/man/3-WildMidi_OpenBuffer/">WildMidi_OpenBuffer</a></code>(3) </p>
+ </dd></dl>
+<h2>RETURN VALUE</h2>
+<p> On error returns NULL with an error message displayed to stderr. </p>
+<p>Otherwise returns a pointer to a struct containing the information. </p>
+<pre><code>struct _WM_Info {
+   char * copyright ;
+   unsigned long int current_sample ;
+   unsigned long int approx_total_samples ;
+   unsigned long int total_midi_time ;
+   unsigned short int mixer_options ;
+   unsigned long int total_midi_time ;
+};
+</code></pre>
+<dl>
 <dt><i>copyright</i></dt>
-<dd>A pointer to a 
-</dd></dl>
+<dd> <p> A pointer to a \0 terminated string containing any copyright MIDI events found while processing the MIDI file <i>handle</i> refers to. If more than one copyright event was found then each one is separated by \n </p>
+ </dd></dl>
+<p>If <i>copyright</i> is NULL then no copyright MIDI events were found. </p>
+<dl>
+<dt><i>current_sample</i></dt>
+<dd> <p> This is the number of stereo samples libWildMidi has processed for the MIDI file referred to by <i>handle</i>. You can use this value to determine the current playing time by dividing this value by the <i>rate</i> given when libWildMidi was initialized by <code><a href="/docs/linux/man/3-WildMidi_Init/">WildMidi_Init</a></code>(3). </p>
+ </dd></dl>
+<dl>
+<dt><i>approx_total_samples</i></dt>
+<dd> <p> This is the total number of stereo samples libWildMidi expects to process. This can be used to obtain the total playing time by dividing this value by the <i>rate</i> given when libWildMidi was initialized by <code><a href="/docs/linux/man/3-WildMidi_Init/">WildMidi_Init</a></code>(3). Also when you divide <i>current_sample</i> by this value and multiplying by 100, you have the percentage currently processed. </p>
+ </dd></dl>
+<dl>
+<dt><i>total_midi_time</i></dt>
+<dd> <p> This is the total time of MIDI events in 1/1000&#8217;s of a second. It differs from <i>approx_total_samples</i> in that it only states the total time within the MIDI file and does not take into account the extra bit of time to finish playing sampling smoothly. </p>
+ </dd></dl>
+<dl>
+<dt><i>mixer_options</i></dt>
+<dd>  </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>WM_MO_LOG_VOLUME</dt>
+<dd> <p> Using curved volume settings instead of linear ones. </p>
+ </dd></dl>
+<dl>
+<dt>WM_MO_ENHANCED_RESAMPLING</dt>
+<dd> <p> The enhanced resampler is active </p>
+ </dd></dl>
+<dl>
+<dt>WM_MO_REVERB</dt>
+<dd> <p> Reverb is being added to the final output. </p>
+ </dd></dl>
+</dl>
+</dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-WildMidi_GetString/">WildMidi_GetString</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_Init/">WildMidi_Init</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_MasterVolume/">WildMidi_MasterVolume</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_Open/">WildMidi_Open</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_OpenBuffer/">WildMidi_OpenBuffer</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_SetOption/">WildMidi_SetOption</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_GetOutput/">WildMidi_GetOutput</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_FastSeek/">WildMidi_FastSeek</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_Close/">WildMidi_Close</a></code>(3)<code>,</code> <code><a href="/docs/linux/man/3-WildMidi_Shutdown/">WildMidi_Shutdown</a></code>(3)<code>,</code> <code>wildmidi.cfg</code>(5) </p>
+<h2>AUTHOR</h2>
+<p> Chris Ison &lt;wildcode [at] users.sf.net&gt; Bret Curtis &lt;psi29a [at] gmail.com&gt; </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (C) Chris Ison 2001-2010 Copyright (C) Bret Curtis 2013-2014 </p>
+<p>This file is part of WildMIDI. </p>
+<p>WildMIDI is free software: you can redistribute and/or modify the player under the terms of the GNU General Public License and you can redistribute and/or modify the library under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the licenses, or(at your option) any later version. </p>
+<p>WildMIDI is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License and the GNU Lesser General Public License for more details. </p>
+<p>You should have received a copy of the GNU General Public License and the GNU Lesser General Public License along with WildMIDI. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;. </p>
+<p>This manpage is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported License. To view a copy of this license, visit <a rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a> or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">LIBRARY</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">RETURN VALUE</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">SEE ALSO</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">AUTHOR</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAI">COPYRIGHT</a></dt>
+<dd>  </dd></dl>

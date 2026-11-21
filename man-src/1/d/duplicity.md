@@ -6,212 +6,1094 @@ letter: "d"
 url: "/docs/linux/man/1-duplicity/"
 description: "duplicity – Encrypted incremental backup to local or remote storage."
 ---
-
 <h2 class="name">NAME</h2>
-<p> duplicity &#8211; Encrypted incremental backup to local or remote storage.</p>
+<p> duplicity - Encrypted incremental backup to local or remote storage.  </p>
 <h2>SYNOPSIS</h2>
 <p> For detailed descriptions for each command see chapter <code>ACTIONS</code>. </p>
 <p> <code>duplicity [full|incremental]</code> <i>[options]</i> source_directory target_url </p>
-<p> <code>duplicity verify</code> <i>[options] [&#8211;compare-data] [&#8211;file-to-restore &lt;relpath&gt;] [&#8211;time time]</i> source_url target_directory </p>
-<p> <code>duplicity collection-status</code> <i>[options] [&#8211;file-changed &lt;relpath&gt;]</i> target_url </p>
-<p> <code>duplicity list-current-files</code> <i>[options] [&#8211;time time]</i> target_url </p>
-<p> <code>duplicity [restore]</code> <i>[options] [&#8211;file-to-restore &lt;relpath&gt;] [&#8211;time time]</i> source_url target_directory </p>
-<p> <code>duplicity remove-older-than &lt;time&gt;</code> <i>[options] [&#8211;force]</i> target_url </p>
-<p> <code>duplicity remove-all-but-n-full &lt;count&gt;</code> <i>[options] [&#8211;force]</i> target_url </p>
-<p> <code>duplicity remove-all-inc-of-but-n-full &lt;count&gt;</code> <i>[options] [&#8211;force]</i> target_url </p>
-<p> <code>duplicity cleanup</code> <i>[options] [&#8211;force]</i> target_url </p>
-<p> <code>duplicity replicate</code> <i>[options] [&#8211;time time]</i> source_url target_url </p>
+<p> <code>duplicity verify</code> <i>[options] [--compare-data] [--file-to-restore &lt;relpath&gt;] [--time time]</i> source_url target_directory </p>
+<p> <code>duplicity collection-status</code> <i>[options] [--file-changed &lt;relpath&gt;]</i> target_url </p>
+<p> <code>duplicity list-current-files</code> <i>[options] [--time time]</i> target_url </p>
+<p> <code>duplicity [restore]</code> <i>[options] [--file-to-restore &lt;relpath&gt;] [--time time]</i> source_url target_directory </p>
+<p> <code>duplicity remove-older-than &lt;time&gt;</code> <i>[options] [--force]</i> target_url </p>
+<p> <code>duplicity remove-all-but-n-full &lt;count&gt;</code> <i>[options] [--force]</i> target_url </p>
+<p> <code>duplicity remove-all-inc-of-but-n-full &lt;count&gt;</code> <i>[options] [--force]</i> target_url </p>
+<p> <code>duplicity cleanup</code> <i>[options] [--force]</i> target_url </p>
+<p> <code>duplicity replicate</code> <i>[options] [--time time]</i> source_url target_url </p>
 <h2>DESCRIPTION</h2>
 <p> Duplicity incrementally backs up files and folders into tar-format volumes encrypted with GnuPG and places them to a remote (or local) storage backend. See chapter <code>URL FORMAT</code> for a list of all supported backends and how to address them. Because duplicity uses librsync, incremental backups are space efficient and only record the parts of files that have changed since the last backup. Currently duplicity supports deleted files, full Unix permissions, uid/gid, directories, symbolic links, fifos, etc., but not hard links. </p>
-<p> If you are backing up the root directory /, remember to &#8211;exclude /proc, or else duplicity will probably crash on the weird stuff in there. </p>
+<p> If you are backing up the root directory /, remember to --exclude /proc, or else duplicity will probably crash on the weird stuff in there. </p>
 <h2>EXAMPLES</h2>
 <p> Here is an example of a backup, using sftp to back up /home/me to some_dir on the other.host machine: </p>
 <dl>
-<dt>
-</dt><dd> duplicity /home/me <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> </dd>
-</dl>
+<dd> <p> duplicity /home/me <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> </p>
+ </dd></dl>
 <p> If the above is run repeatedly, the first will be a full backup, and subsequent ones will be incremental. To force a full backup, use the <i>full</i> action: </p>
 <dl>
-<dt>
-</dt><dd> duplicity full /home/me <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> </dd>
-</dl>
-<p> or enforcing a full every other time via <i>&#8211;full-if-older-than &lt;time&gt;</i> , e.g. a full every month: </p>
+<dd> <p> duplicity full /home/me <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> </p>
+ </dd></dl>
+<p> or enforcing a full every other time via <i>--full-if-older-than &lt;time&gt;</i> , e.g. a full every month: </p>
 <dl>
-<dt>
-</dt><dd> duplicity &#8211;full-if-older-than 1M /home/me <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> </dd>
-</dl>
+<dd> <p> duplicity --full-if-older-than 1M /home/me <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> </p>
+ </dd></dl>
 <p> Now suppose we accidentally delete /home/me and want to restore it the way it was at the time of last backup: </p>
 <dl>
-<dt>
-</dt><dd> duplicity <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> /home/me </dd>
-</dl>
+<dd> <p> duplicity <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> /home/me </p>
+ </dd></dl>
 <p> Duplicity enters restore mode because the URL comes before the local directory. If we wanted to restore just the file &quot;Mail/article&quot; in /home/me as it was three days ago into /home/me/restored_file: </p>
 <dl>
-<dt>
-</dt><dd> duplicity -t 3D &#8211;file-to-restore Mail/article <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> /home/me/restored_file </dd>
-</dl>
+<dd> <p> duplicity -t 3D --file-to-restore Mail/article <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> /home/me/restored_file </p>
+ </dd></dl>
 <p> The following command compares the latest backup with the current files: </p>
 <dl>
-<dt>
-</dt><dd> duplicity verify <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> /home/me </dd>
-</dl>
+<dd> <p> duplicity verify <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> /home/me </p>
+ </dd></dl>
 <p> Finally, duplicity recognizes several include/exclude options. For instance, the following will backup the root directory, but exclude /mnt, /tmp, and /proc: </p>
 <dl>
-<dt>
-</dt><dd> duplicity &#8211;exclude /mnt &#8211;exclude /tmp &#8211;exclude /proc / file:///usr/local/backup </dd>
-</dl>
+<dd> <p> duplicity --exclude /mnt --exclude /tmp --exclude /proc / file:///usr/local/backup </p>
+ </dd></dl>
 <p> Note that in this case the destination is the local directory /usr/local/backup. The following will backup only the /home and /etc directories under root: </p>
 <dl>
-<dt>
-</dt><dd> duplicity &#8211;include /home &#8211;include /etc &#8211;exclude &#8216;**&#8217; / file:///usr/local/backup </dd>
-</dl>
+<dd> <p> duplicity --include /home --include /etc --exclude &#8216;**&#8216; / file:///usr/local/backup </p>
+ </dd></dl>
 <p> Duplicity can also access a repository via ftp. If a user name is given, the environment variable FTP_PASSWORD is read to determine the password: </p>
 <dl>
-<dt>
-</dt><dd> FTP_PASSWORD=mypassword duplicity /local/dir <a href="ftp://user@other.host/some_dir">ftp://user@other.host/some_dir</a> </dd>
-</dl>
+<dd> <p> FTP_PASSWORD=mypassword duplicity /local/dir <a href="ftp://user@other.host/some_dir">ftp://user@other.host/some_dir</a> </p>
+ </dd></dl>
 <h2>ACTIONS</h2>
-<p> Duplicity knows action commands, which can be finetuned with options.<br />
- The actions for backup (full,incr) and restoration (restore) can as well be left out as duplicity detects in what mode it should switch to by the order of target URL and local folder. If the target URL comes before the local folder a restore is in order, is the local folder before target URL then this folder is about to be backed up to the target URL.<br />
+<p> Duplicity knows action commands, which can be finetuned with options. <br />
+ The actions for backup (full,incr) and restoration (restore) can as well be left out as duplicity detects in what mode it should switch to by the order of target URL and local folder. If the target URL comes before the local folder a restore is in order, is the local folder before target URL then this folder is about to be backed up to the target URL. <br />
  If a backup is in order and old signatures can be found duplicity automatically performs an incremental backup. </p>
 <p> <code>Note:</code> The following explanations explain some but <code>not</code> all options that can be used in connection with that action command. Consult the OPTIONS section for more detailed informations. </p>
 <dl>
 <dt><code>full </code><i>&lt;folder&gt; &lt;url&gt;</i></dt>
-<dd> Perform a full backup. A new backup chain is started even if signatures are available for an incremental backup. </dd>
+<dd> <p> Perform a full backup. A new backup chain is started even if signatures are available for an incremental backup. </p>
+ </dd>
 <dt><code>incr </code><i>&lt;folder&gt; &lt;url&gt;</i></dt>
-<dd> If this is requested an incremental backup will be performed. Duplicity will abort if no old signatures can be found. </dd>
-<dt><code>verify </code><i>[&#8211;compare-data] [&#8211;time &lt;time&gt;] [&#8211;file-to-restore &lt;rel_path&gt;] &lt;url&gt; &lt;local_path&gt;</i></dt>
-<dd> Verify tests the integrity of the backup archives at the remote location by downloading each file and checking both that it can restore the archive and that the restored file matches the signature of that file stored in the backup, i.e. compares the archived file with its hash value from archival time. Verify does not actually restore and will not overwrite any local files. Duplicity will exit with a non-zero error level if any files do not match the signature stored in the archive for that file. On verbosity level 4 or higher, it will log a message for each file that differs from the stored signature. Files must be downloaded to the local machine in order to compare them. Verify does not compare the backed-up version of the file to the current local copy of the files unless the &#8211;compare-data option is used (see below).<br />
- The <i>&#8211;file-to-restore</i> option restricts verify to that file or folder. The <i>&#8211;time</i> option allows to select a backup to verify. The <i>&#8211;compare-data</i> option enables data comparison (see below). </dd>
-<dt><code>collection-status </code><i>[&#8211;file-changed &lt;relpath&gt;]</i><code>&lt;url&gt;</code></dt>
-<dd> Summarize the status of the backup repository by printing the chains and sets found, and the number of volumes in each. </dd>
-<dt><code>list-current-files </code><i>[&#8211;time &lt;time&gt;] &lt;url&gt;</i></dt>
-<dd> Lists the files contained in the most current backup or backup at time. The information will be extracted from the signature files, not the archive data itself. Thus the whole archive does not have to be downloaded, but on the other hand if the archive has been deleted or corrupted, this command will not detect it. </dd>
-<dt><code>restore </code><i>[&#8211;file-to-restore &lt;relpath&gt;] [&#8211;time &lt;time&gt;] &lt;url&gt; &lt;target_folder&gt;</i></dt>
-<dd> You can restore the full monty or selected folders/files from a specific time. Use the relative path as it is printed by <code>list-current-files</code>. Usually not needed as duplicity enters restore mode when it detects that the URL comes before the local folder. </dd>
-<dt><code>remove-older-than </code><i>&lt;time&gt; [&#8211;force] &lt;url&gt;</i></dt>
-<dd> Delete all backup sets older than the given time. Old backup sets will not be deleted if backup sets newer than <i>time</i> depend on them. See the <code>TIME FORMATS</code> section for more information. Note, this action cannot be combined with backup or other actions, such as cleanup. Note also that <i>&#8211;force</i> will be needed to delete the files instead of just listing them. </dd>
-<dt><code>remove-all-but-n-full </code><i>&lt;count&gt; [&#8211;force] &lt;url&gt;</i></dt>
-<dd> Delete all backups sets that are older than the count:th last full backup (in other words, keep the last <i>count</i> full backups and associated incremental sets). <i>count</i> must be larger than zero. A value of 1 means that only the single most recent backup chain will be kept. Note that <i>&#8211;force</i> will be needed to delete the files instead of just listing them. </dd>
-<dt><code>remove-all-inc-of-but-n-full </code><i>&lt;count&gt; [&#8211;force] &lt;url&gt;</i></dt>
-<dd> Delete incremental sets of all backups sets that are older than the count:th last full backup (in other words, keep only old full backups and not their increments). <i>count</i> must be larger than zero. A value of 1 means that only the single most recent backup chain will be kept intact. Note that <i>&#8211;force</i> will be needed to delete the files instead of just listing them. </dd>
-<dt><code>cleanup </code><i>[&#8211;force] &lt;url&gt;</i></dt>
-<dd> Delete the extraneous duplicity files on the given backend. Non-duplicity files, or files in complete data sets will not be deleted. This should only be necessary after a duplicity session fails or is aborted prematurely. Note that <i>&#8211;force</i> will be needed to delete the files instead of just listing them. </dd>
-<dt><code>replicate </code><i>[&#8211;time time] &lt;source_url&gt; &lt;target_url&gt;</i></dt>
-<dd> Replicate backup sets from source to target backend. Files will be (re)-encrypted and (re)-compressed depending on normal backend options. Signatures and volumes will not get recomputed, thus options like <code>&#8211;volsize</code> or <code>&#8211;max-blocksize</code> have no effect. When <i>&#8211;time time</i> is given, only backup sets older than time will be replicated. </dd>
-</dl>
+<dd> <p> If this is requested an incremental backup will be performed. Duplicity will abort if no old signatures can be found. </p>
+ </dd>
+<dt><code>verify </code><i>[--compare-data] [--time &lt;time&gt;] [--file-to-restore &lt;rel_path&gt;] &lt;url&gt; &lt;local_path&gt;</i></dt>
+<dd> <p> Verify tests the integrity of the backup archives at the remote location by downloading each file and checking both that it can restore the archive and that the restored file matches the signature of that file stored in the backup, i.e. compares the archived file with its hash value from archival time. Verify does not actually restore and will not overwrite any local files. Duplicity will exit with a non-zero error level if any files do not match the signature stored in the archive for that file. On verbosity level 4 or higher, it will log a message for each file that differs from the stored signature. Files must be downloaded to the local machine in order to compare them. Verify does not compare the backed-up version of the file to the current local copy of the files unless the --compare-data option is used (see below). <br />
+ The <i>--file-to-restore</i> option restricts verify to that file or folder. The <i>--time</i> option allows to select a backup to verify. The <i>--compare-data</i> option enables data comparison (see below). </p>
+ </dd>
+<dt><code>collection-status </code><i>[--file-changed &lt;relpath&gt;]</i><code>&lt;url&gt;</code></dt>
+<dd> <p> Summarize the status of the backup repository by printing the chains and sets found, and the number of volumes in each. </p>
+ </dd>
+<dt><code>list-current-files </code><i>[--time &lt;time&gt;] &lt;url&gt;</i></dt>
+<dd> <p> Lists the files contained in the most current backup or backup at time. The information will be extracted from the signature files, not the archive data itself. Thus the whole archive does not have to be downloaded, but on the other hand if the archive has been deleted or corrupted, this command will not detect it. </p>
+ </dd>
+<dt><code>restore </code><i>[--file-to-restore &lt;relpath&gt;] [--time &lt;time&gt;] &lt;url&gt; &lt;target_folder&gt;</i></dt>
+<dd> <p> You can restore the full monty or selected folders/files from a specific time. Use the relative path as it is printed by <code>list-current-files</code>. Usually not needed as duplicity enters restore mode when it detects that the URL comes before the local folder. </p>
+ </dd>
+<dt><code>remove-older-than </code><i>&lt;time&gt; [--force] &lt;url&gt;</i></dt>
+<dd> <p> Delete all backup sets older than the given time. Old backup sets will not be deleted if backup sets newer than <i>time</i> depend on them. See the <code>TIME FORMATS</code> section for more information. Note, this action cannot be combined with backup or other actions, such as cleanup. Note also that <i>--force</i> will be needed to delete the files instead of just listing them. </p>
+ </dd>
+<dt><code>remove-all-but-n-full </code><i>&lt;count&gt; [--force] &lt;url&gt;</i></dt>
+<dd> <p> Delete all backups sets that are older than the count:th last full backup (in other words, keep the last <i>count</i> full backups and associated incremental sets). <i>count</i> must be larger than zero. A value of 1 means that only the single most recent backup chain will be kept. Note that <i>--force</i> will be needed to delete the files instead of just listing them. </p>
+ </dd>
+<dt><code>remove-all-inc-of-but-n-full </code><i>&lt;count&gt; [--force] &lt;url&gt;</i></dt>
+<dd> <p> Delete incremental sets of all backups sets that are older than the count:th last full backup (in other words, keep only old full backups and not their increments). <i>count</i> must be larger than zero. A value of 1 means that only the single most recent backup chain will be kept intact. Note that <i>--force</i> will be needed to delete the files instead of just listing them. </p>
+ </dd>
+<dt><code>cleanup </code><i>[--force] &lt;url&gt;</i></dt>
+<dd> <p> Delete the extraneous duplicity files on the given backend. Non-duplicity files, or files in complete data sets will not be deleted. This should only be necessary after a duplicity session fails or is aborted prematurely. Note that <i>--force</i> will be needed to delete the files instead of just listing them. </p>
+ </dd>
+<dt><code>replicate </code><i>[--time time] &lt;source_url&gt; &lt;target_url&gt;</i></dt>
+<dd> <p> Replicate backup sets from source to target backend. Files will be (re)-encrypted and (re)-compressed depending on normal backend options. Signatures and volumes will not get recomputed, thus options like <code>--volsize</code> or <code>--max-blocksize</code> have no effect. When <i>--time time</i> is given, only backup sets older than time will be replicated. </p>
+ </dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;allow-source-mismatch</code></dt>
-<dd> Do not abort on attempts to use the same archive dir or remote backend to back up different directories. duplicity will tell you if you need this switch. </dd>
-<dt><code>&#8211;archive-dir </code><i>path</i></dt>
-<dd> The archive directory. <code>NOTE:</code> This option changed in 0.6.0. The archive directory is now necessary in order to manage persistence for current and future enhancements. As such, this option is now used only to change the location of the archive directory. The archive directory should <code>not</code> be deleted, or duplicity will have to recreate it from the remote repository (which may require decrypting the backup contents). </dd>
+<dt><code>--allow-source-mismatch</code></dt>
+<dd> <p> Do not abort on attempts to use the same archive dir or remote backend to back up different directories. duplicity will tell you if you need this switch. </p>
+ </dd>
+<dt><code>--archive-dir </code><i>path</i></dt>
+<dd> <p> The archive directory. <code>NOTE:</code> This option changed in 0.6.0. The archive directory is now necessary in order to manage persistence for current and future enhancements. As such, this option is now used only to change the location of the archive directory. The archive directory should <code>not</code> be deleted, or duplicity will have to recreate it from the remote repository (which may require decrypting the backup contents). </p>
 <p> When backing up or restoring, this option specifies that the local archive directory is to be created in <i>path</i>. If the archive directory is not specified, the default will be to create the archive directory in <i>~/.cache/duplicity/</i>. </p>
-<p> The archive directory can be shared between backups to multiple targets, because a subdirectory of the archive dir is used for individual backups (see <code>&#8211;name</code> ). </p>
+<p> The archive directory can be shared between backups to multiple targets, because a subdirectory of the archive dir is used for individual backups (see <code>--name</code> ). </p>
 <p> The combination of archive directory and backup name must be unique in order to separate the data of different backups. </p>
-<p> The interaction between the <code>&#8211;archive-dir</code> and the <code>&#8211;name</code> options allows for four possible combinations for the location of the archive dir: </p>
+<p> The interaction between the <code>--archive-dir</code> and the <code>--name</code> options allows for four possible combinations for the location of the archive dir: </p>
+ </dd>
 <dl>
+<dd>  </dd>
 <dl>
 <dt>1.</dt>
-<dd> neither specified (default)<br />
-&nbsp;~/.cache/duplicity/<i>hash-of-url</i></dd>
+<dd> <p> neither specified (default) <br />
+&nbsp;~/.cache/duplicity/<i>hash-of-url</i> </p>
+ </dd>
 <dt>2.</dt>
-<dd> &#8211;archive-dir=/arch, no &#8211;name<br />
-&nbsp;/arch/<i>hash-of-url</i></dd>
+<dd> <p> --archive-dir=/arch, no --name <br />
+&nbsp;/arch/<i>hash-of-url</i> </p>
+ </dd>
 <dt>3.</dt>
-<dd> no &#8211;archive-dir, &#8211;name=foo<br />
-&nbsp;~/.cache/duplicity/foo</dd>
+<dd> <p> no --archive-dir, --name=foo <br />
+&nbsp;~/.cache/duplicity/foo </p>
+ </dd>
 <dt>4.</dt>
-<dd> &#8211;archive-dir=/arch, &#8211;name=foo<br />
-&nbsp;/arch/foo</dd></dl>
+<dd> <p> --archive-dir=/arch, --name=foo <br />
+&nbsp;/arch/foo </p>
+ </dd></dl>
 </dl>
-<dt><code>&#8211;asynchronous-upload </code></dt>
-<dd> (EXPERIMENTAL) Perform file uploads asynchronously in the background, with respect to volume creation. This means that duplicity can upload a volume while, at the same time, preparing the next volume for upload. The intended end-result is a faster backup, because the local CPU and your bandwidth can be more consistently utilized. Use of this option implies additional need for disk space in the temporary storage location; rather than needing to store only one volume at a time, enough storage space is required to store two volumes. </dd>
-<dt><code>&#8211;backend-retry-delay </code><i>number</i></dt>
-<dd> Specifies the number of seconds that duplicity waits after an error has occured before attempting to repeat the operation. </dd>
-<dt><code>&#8211;cf-backend </code><i>backend</i></dt>
-<dd> Allows the explicit selection of a cloudfiles backend. Defaults to <code>pyrax</code>. Alternatively you might choose <code>cloudfiles</code>. </dd>
-<dt><code>&#8211;compare-data</code></dt>
-<dd> Enable data comparison of regular files on action verify. This conducts a verify as described above to verify the integrity of the backup archives, but additionally compares restored files to those in target_directory. Duplicity will not replace any files in target_directory. Duplicity will exit with a non-zero error level if the files do not correctly verify or if any files from the archive differ from those in target_directory. On verbosity level 4 or higher, it will log a message for each file that differs from its equivalent in target_directory. </dd>
-<dt><code>&#8211;copy-links</code></dt>
-<dd> Resolve symlinks during backup. Enabling this will resolve &amp; back up the symlink&#8217;s file/folder data instead of the symlink itself, potentially increasing the size of the backup. </dd>
-<dt><code>&#8211;dry-run </code></dt>
-<dd> Calculate what would be done, but do not perform any backend actions </dd>
-<dt><code>&#8211;encrypt-key </code><i>key-id</i></dt>
-<dd> When backing up, encrypt to the given public key, instead of using symmetric (traditional) encryption. Can be specified multiple times. The key-id can be given in any of the formats supported by GnuPG; see <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), section &quot;HOW TO SPECIFY A USER ID&quot; for details. </dd>
-<dt><code>&#8211;encrypt-secret-keyring </code><i>filename</i></dt>
-<dd> This option can only be used with <code>&#8211;encrypt-key</code>, and changes the path to the secret keyring for the encrypt key to <i>filename</i> This keyring is not used when creating a backup. If not specified, the default secret keyring is used which is usually located at .gnupg/secring.gpg </dd>
-<dt><code>&#8211;encrypt-sign-key </code><i>key-id</i></dt>
-<dd> Convenience parameter. Same as <code>&#8211;encrypt-key</code> <i>key-id</i> <code>&#8211;sign-key</code> <i>key-id</i>. </dd>
-<dt><code>&#8211;exclude </code><i>shell_pattern</i></dt>
-<dd> Exclude the file or files matched by <i>shell_pattern</i>. If a directory is matched, then files under that directory will also be matched. See the <code>FILE SELECTION</code> section for more information. </dd>
-<dt><code>&#8211;exclude-device-files</code></dt>
-<dd> Exclude all device files. This can be useful for security/permissions reasons or if duplicity is not handling device files correctly. </dd>
-<dt><code>&#8211;exclude-filelist </code><i>filename</i></dt>
-<dd> Excludes the files listed in <i>filename,</i> with each line of the filelist interpreted according to the same rules as <code>&#8211;include</code> and <code>&#8211;exclude.</code> See the <code>FILE SELECTION</code> section for more information. </dd>
-<dt><code>&#8211;exclude-if-present </code>filename</dt>
-<dd> Exclude directories if filename is present. Allows the user to specify folders that they do not wish to backup by adding a specified file (e.g. &quot;.nobackup&quot;) instead of maintaining a comprehensive exclude/include list. </dd>
-<dt><code>&#8211;exclude-older-than </code>time</dt>
-<dd> Exclude any files whose modification date is earlier than the specified <i>time</i>. This can be used to produce a partial backup that contains only recently changed files. See the <code>TIME FORMATS</code> section for more information. </dd>
-<dt><code>&#8211;exclude-other-filesystems</code></dt>
-<dd> Exclude files on file systems (identified by device number) other than the file system the root of the source directory is on. </dd>
-<dt><code>&#8211;exclude-regexp </code><i>regexp</i></dt>
-<dd> Exclude files matching the given regexp. Unlike the <code>&#8211;exclude</code> option, this option does not match files in a directory it matches. See the <code>FILE SELECTION</code> section for more information. </dd>
-<dt><code>&#8211;file-prefix, &#8211;file-prefix-manifest, &#8211;file-prefix-archive, &#8211;file-prefix-signature</code></dt>
-<dd> Adds a prefix to all files, manifest files, archive files, and/or signature files. </dd>
+<dt><code>--asynchronous-upload </code></dt>
+<dd> <p> (EXPERIMENTAL) Perform file uploads asynchronously in the background, with respect to volume creation. This means that duplicity can upload a volume while, at the same time, preparing the next volume for upload. The intended end-result is a faster backup, because the local CPU and your bandwidth can be more consistently utilized. Use of this option implies additional need for disk space in the temporary storage location; rather than needing to store only one volume at a time, enough storage space is required to store two volumes. </p>
+ </dd>
+<dt><code>--backend-retry-delay </code><i>number</i></dt>
+<dd> <p> Specifies the number of seconds that duplicity waits after an error has occured before attempting to repeat the operation. </p>
+ </dd>
+<dt><code>--cf-backend </code><i>backend</i></dt>
+<dd> <p> Allows the explicit selection of a cloudfiles backend. Defaults to <code>pyrax</code>. Alternatively you might choose <code>cloudfiles</code>. </p>
+ </dd>
+<dt><code>--compare-data</code></dt>
+<dd> <p> Enable data comparison of regular files on action verify. This conducts a verify as described above to verify the integrity of the backup archives, but additionally compares restored files to those in target_directory. Duplicity will not replace any files in target_directory. Duplicity will exit with a non-zero error level if the files do not correctly verify or if any files from the archive differ from those in target_directory. On verbosity level 4 or higher, it will log a message for each file that differs from its equivalent in target_directory. </p>
+ </dd>
+<dt><code>--copy-links</code></dt>
+<dd> <p> Resolve symlinks during backup. Enabling this will resolve &amp; back up the symlink&#8217;s file/folder data instead of the symlink itself, potentially increasing the size of the backup. </p>
+ </dd>
+<dt><code>--dry-run </code></dt>
+<dd> <p> Calculate what would be done, but do not perform any backend actions </p>
+ </dd>
+<dt><code>--encrypt-key </code><i>key-id</i></dt>
+<dd> <p> When backing up, encrypt to the given public key, instead of using symmetric (traditional) encryption. Can be specified multiple times. The key-id can be given in any of the formats supported by GnuPG; see <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), section &quot;HOW TO SPECIFY A USER ID&quot; for details. </p>
+ </dd>
+<dt><code>--encrypt-secret-keyring </code><i>filename</i></dt>
+<dd> <p> This option can only be used with <code>--encrypt-key</code>, and changes the path to the secret keyring for the encrypt key to <i>filename</i> This keyring is not used when creating a backup. If not specified, the default secret keyring is used which is usually located at .gnupg/secring.gpg </p>
+ </dd>
+<dt><code>--encrypt-sign-key </code><i>key-id</i></dt>
+<dd> <p> Convenience parameter. Same as <code>--encrypt-key</code> <i>key-id</i> <code>--sign-key</code> <i>key-id</i>. </p>
+ </dd>
+<dt><code>--exclude </code><i>shell_pattern</i></dt>
+<dd> <p> Exclude the file or files matched by <i>shell_pattern</i>. If a directory is matched, then files under that directory will also be matched. See the <code>FILE SELECTION</code> section for more information. </p>
+ </dd>
+<dt><code>--exclude-device-files</code></dt>
+<dd> <p> Exclude all device files. This can be useful for security/permissions reasons or if duplicity is not handling device files correctly. </p>
+ </dd>
+<dt><code>--exclude-filelist </code><i>filename</i></dt>
+<dd> <p> Excludes the files listed in <i>filename,</i> with each line of the filelist interpreted according to the same rules as <code>--include</code> and <code>--exclude.</code> See the <code>FILE SELECTION</code> section for more information. </p>
+ </dd>
+<dt><code>--exclude-if-present </code>filename </dt>
+<dd> <p> Exclude directories if filename is present. Allows the user to specify folders that they do not wish to backup by adding a specified file (e.g. &quot;.nobackup&quot;) instead of maintaining a comprehensive exclude/include list. </p>
+ </dd>
+<dt><code>--exclude-older-than </code>time </dt>
+<dd> <p> Exclude any files whose modification date is earlier than the specified <i>time</i>. This can be used to produce a partial backup that contains only recently changed files. See the <code>TIME FORMATS</code> section for more information. </p>
+ </dd>
+<dt><code>--exclude-other-filesystems</code></dt>
+<dd> <p> Exclude files on file systems (identified by device number) other than the file system the root of the source directory is on. </p>
+ </dd>
+<dt><code>--exclude-regexp </code><i>regexp</i></dt>
+<dd> <p> Exclude files matching the given regexp. Unlike the <code>--exclude</code> option, this option does not match files in a directory it matches. See the <code>FILE SELECTION</code> section for more information. </p>
+ </dd>
+<dt><code>--file-prefix, --file-prefix-manifest, --file-prefix-archive, --file-prefix-signature</code></dt>
+<dd> <p> Adds a prefix to all files, manifest files, archive files, and/or signature files. </p>
 <p> The same set of prefixes must be passed in on backup and restore. </p>
 <p> If both global and type-specific prefixes are set, global prefix will go before type-specific prefixes. </p>
 <p> See also <code>A NOTE ON FILENAME PREFIXES</code> </p>
-<dt><code>&#8211;file-to-restore </code><i>path</i></dt>
-<dd> This option may be given in restore mode, causing only <i>path</i> to be restored instead of the entire contents of the backup archive. <i>path</i> should be given relative to the root of the directory backed up. </dd>
-<dt><code>&#8211;full-if-older-than </code><i>time</i></dt>
-<dd> Perform a full backup if an incremental backup is requested, but the latest full backup in the collection is older than the given <i>time</i>. See the <code>TIME FORMATS</code> section for more information. </dd>
-<dt><code>&#8211;force</code></dt>
-<dd> Proceed even if data loss might result. Duplicity will let the user know when this option is required. </dd>
-<dt><code>&#8211;ftp-passive</code></dt>
-<dd> Use passive (PASV) data connections. The default is to use passive, but to fallback to regular if the passive connection fails or times out. </dd>
-<dt><code>&#8211;ftp-regular</code></dt>
-<dd> Use regular (PORT) data connections. </dd>
-<dt><code>&#8211;gio</code></dt>
-<dd> Use the GIO backend and interpret any URLs as GIO would. </dd>
-<dt><code>&#8211;hidden-encrypt-key </code><i>key-id</i></dt>
-<dd> Same as <code>&#8211;encrypt-key</code>, but it hides user&#8217;s key id from encrypted file. It uses the gpg&#8217;s <code>&#8211;hidden-recipient</code> command to obfuscate the owner of the backup. On restore, gpg will automatically try all available secret keys in order to decrypt the backup. See <a href="/docs/linux/man/1-gpg/">gpg</a>(1) for more details. </dd>
-<dt><code>&#8211;ignore-errors</code></dt>
-<dd> Try to ignore certain errors if they happen. This option is only intended to allow the restoration of a backup in the face of certain problems that would otherwise cause the backup to fail. It is not ever recommended to use this option unless you have a situation where you are trying to restore from backup and it is failing because of an issue which you want duplicity to ignore. Even then, depending on the issue, this option may not have an effect. </dd>
+ </dd>
+<dt><code>--file-to-restore </code><i>path</i></dt>
+<dd> <p> This option may be given in restore mode, causing only <i>path</i> to be restored instead of the entire contents of the backup archive. <i>path</i> should be given relative to the root of the directory backed up. </p>
+ </dd>
+<dt><code>--full-if-older-than </code><i>time</i></dt>
+<dd> <p> Perform a full backup if an incremental backup is requested, but the latest full backup in the collection is older than the given <i>time</i>. See the <code>TIME FORMATS</code> section for more information. </p>
+ </dd>
+<dt><code>--force</code></dt>
+<dd> <p> Proceed even if data loss might result. Duplicity will let the user know when this option is required. </p>
+ </dd>
+<dt><code>--ftp-passive</code></dt>
+<dd> <p> Use passive (PASV) data connections. The default is to use passive, but to fallback to regular if the passive connection fails or times out. </p>
+ </dd>
+<dt><code>--ftp-regular</code></dt>
+<dd> <p> Use regular (PORT) data connections. </p>
+ </dd>
+<dt><code>--gio</code></dt>
+<dd> <p> Use the GIO backend and interpret any URLs as GIO would. </p>
+ </dd>
+<dt><code>--hidden-encrypt-key </code><i>key-id</i></dt>
+<dd> <p> Same as <code>--encrypt-key</code>, but it hides user&#8217;s key id from encrypted file. It uses the gpg&#8217;s <code>--hidden-recipient</code> command to obfuscate the owner of the backup. On restore, gpg will automatically try all available secret keys in order to decrypt the backup. See <a href="/docs/linux/man/1-gpg/">gpg</a>(1) for more details. </p>
+ </dd>
+<dt><code>--ignore-errors</code></dt>
+<dd> <p> Try to ignore certain errors if they happen. This option is only intended to allow the restoration of a backup in the face of certain problems that would otherwise cause the backup to fail. It is not ever recommended to use this option unless you have a situation where you are trying to restore from backup and it is failing because of an issue which you want duplicity to ignore. Even then, depending on the issue, this option may not have an effect. </p>
 <p> Please note that while ignored errors will be logged, there will be no summary at the end of the operation to tell you what was ignored, if anything. If this is used for emergency restoration of data, it is recommended that you run the backup in such a way that you can revisit the backup log (look for lines containing the string IGNORED_ERROR). </p>
 <p> If you ever have to use this option for reasons that are not understood or understood but not your own responsibility, please contact duplicity maintainers. The need to use this option under production circumstances would normally be considered a bug. </p>
-<dt><code>&#8211;imap-full-address </code><i>email_address</i></dt>
-<dd> The full email address of the user name when logging into an imap server. If not supplied just the user name part of the email address is used. </dd>
-<dt><code>&#8211;imap-mailbox </code><i>option</i></dt>
-<dd> Allows you to specify a different mailbox. The default is &quot;INBOX&quot;. Other languages may require a different mailbox than the default. </dd>
-<dt><code>&#8211;gpg-binary </code><i>file_path</i></dt>
-<dd> Allows you to force duplicity to use <i>file_path</i> as gpg command line binary. Can be an absolute or relative file path or a file name. Default value is &#8216;gpg&#8217;. The binary will be localized via the PATH environment variable. </dd>
-<dt><code>&#8211;gpg-options </code><i>options</i></dt>
-<dd> Allows you to pass options to gpg encryption. The <i>options</i> list should be of the form &quot;&#8211;opt1 &#8211;opt2=parm&quot; where the string is quoted and the only spaces allowed are between options. </dd>
-<dt><code>&#8211;include </code><i>shell_pattern</i></dt>
-<dd> Similar to <code>&#8211;exclude</code> but include matched files instead. Unlike <code>&#8211;exclude</code>, this option will also match parent directories of matched files (although not necessarily their contents). See the <code>FILE SELECTION</code> section for more information. </dd>
-<dt><code>&#8211;include-filelist </code><i>filename</i></dt>
-<dd> Like <code>&#8211;exclude-filelist</code>, but include the listed files instead. See the <code>FILE SELECTION</code> section for more information. </dd>
-<dt><code>&#8211;include-regexp </code><i>regexp</i></dt>
-<dd> Include files matching the regular expression <i>regexp</i>. Only files explicitly matched by <i>regexp</i> will be included by this option. See the <code>FILE SELECTION</code> section for more information. </dd>
-<dt><code>&#8211;log-fd </code><i>number</i></dt>
-<dd> Write specially-formatted versions of output messages to the specified file descriptor. The format used is designed to be easily consumable by other programs. </dd>
-<dt><code>&#8211;log-file </code><i>filename</i></dt>
-<dd> Write specially-formatted versions of output messages to the specified file. The format used is designed to be easily consumable by other programs. </dd>
-<dt><code>&#8211;max-blocksize </code><i>number</i></dt>
-<dd> determines the number of the blocks examined for changes during the diff process. For files &lt; 1MB the blocksize is a constant of 512. For files over 1MB the size is given by: </dd>
-<p> file_blocksize = int((file_len / (2000 * 512)) * 512)<br />
+ </dd>
+<dt><code>--imap-full-address </code><i>email_address</i></dt>
+<dd> <p> The full email address of the user name when logging into an imap server. If not supplied just the user name part of the email address is used. </p>
+ </dd>
+<dt><code>--imap-mailbox </code><i>option</i></dt>
+<dd> <p> Allows you to specify a different mailbox. The default is &quot;INBOX&quot;. Other languages may require a different mailbox than the default. </p>
+ </dd>
+<dt><code>--gpg-binary </code><i>file_path</i></dt>
+<dd> <p> Allows you to force duplicity to use <i>file_path</i> as gpg command line binary. Can be an absolute or relative file path or a file name. Default value is &#8216;gpg&#8217;. The binary will be localized via the PATH environment variable. </p>
+ </dd>
+<dt><code>--gpg-options </code><i>options</i></dt>
+<dd> <p> Allows you to pass options to gpg encryption. The <i>options</i> list should be of the form &quot;--opt1 --opt2=parm&quot; where the string is quoted and the only spaces allowed are between options. </p>
+ </dd>
+<dt><code>--include </code><i>shell_pattern</i></dt>
+<dd> <p> Similar to <code>--exclude</code> but include matched files instead. Unlike <code>--exclude</code>, this option will also match parent directories of matched files (although not necessarily their contents). See the <code>FILE SELECTION</code> section for more information. </p>
+ </dd>
+<dt><code>--include-filelist </code><i>filename</i></dt>
+<dd> <p> Like <code>--exclude-filelist</code>, but include the listed files instead. See the <code>FILE SELECTION</code> section for more information. </p>
+ </dd>
+<dt><code>--include-regexp </code><i>regexp</i></dt>
+<dd> <p> Include files matching the regular expression <i>regexp</i>. Only files explicitly matched by <i>regexp</i> will be included by this option. See the <code>FILE SELECTION</code> section for more information. </p>
+ </dd>
+<dt><code>--log-fd </code><i>number</i></dt>
+<dd> <p> Write specially-formatted versions of output messages to the specified file descriptor. The format used is designed to be easily consumable by other programs. </p>
+ </dd>
+<dt><code>--log-file </code><i>filename</i></dt>
+<dd> <p> Write specially-formatted versions of output messages to the specified file. The format used is designed to be easily consumable by other programs. </p>
+ </dd>
+<dt><code>--max-blocksize </code><i>number</i></dt>
+<dd> <p> determines the number of the blocks examined for changes during the diff process. For files &lt; 1MB the blocksize is a constant of 512. For files over 1MB the size is given by: </p>
+<p> file_blocksize = int((file_len / (2000 * 512)) * 512) <br />
  return min(file_blocksize, globals.max_blocksize) </p>
-<p> where globals.max_blocksize defaults to 2048. If you specify a larger max_blocksize, your difftar files will be larger, but your sigtar files will be smaller. If you specify a smaller max_blocksize, the reverse occurs. The &#8211;max-blocksize option should be in multiples of 512. </p>
-<dt><code>&#8211;name </code><i>symbolicname</i></dt>
-<dd> Set the symbolic name of the backup being operated on. The intent is to use a separate name for each logically distinct backup. For example, someone may use &quot;home_daily_s3&quot; for the daily backup of a home directory to Amazon S3. The structure of the name is up to the user, it is only important that the names be distinct. The symbolic name is currently only used to affect the expansion of <code>&#8211;archive-dir</code> , but may be used for additional features in the future. Users running more than one distinct backup are encouraged to use this option. </dd>
+<p> where globals.max_blocksize defaults to 2048. If you specify a larger max_blocksize, your difftar files will be larger, but your sigtar files will be smaller. If you specify a smaller max_blocksize, the reverse occurs. The --max-blocksize option should be in multiples of 512. </p>
+ </dd>
+<dt><code>--name </code><i>symbolicname</i></dt>
+<dd> <p> Set the symbolic name of the backup being operated on. The intent is to use a separate name for each logically distinct backup. For example, someone may use &quot;home_daily_s3&quot; for the daily backup of a home directory to Amazon S3. The structure of the name is up to the user, it is only important that the names be distinct. The symbolic name is currently only used to affect the expansion of <code>--archive-dir</code> , but may be used for additional features in the future. Users running more than one distinct backup are encouraged to use this option. </p>
 <p> If not specified, the default value is a hash of the backend URL. </p>
-<dt><code>&#8211;no-compression</code></dt>
-<dd> Do not use GZip to compress files on remote system. </dd>
-<dt><code>&#8211;no-encryption</code></dt>
-<dd> Do not use GnuPG to encrypt files on remote system. </dd>
-<dt><code>&#8211;no-print-statistics</code></dt>
-<dd> By default duplicity will print statistics about the current session after a successful backup. This switch disables that behavior. </dd>
-<dt><code>&#8211;null-separator</code></dt>
-<dd> Use nulls (
-</dd></dl>
+ </dd>
+<dt><code>--no-compression</code></dt>
+<dd> <p> Do not use GZip to compress files on remote system. </p>
+ </dd>
+<dt><code>--no-encryption</code></dt>
+<dd> <p> Do not use GnuPG to encrypt files on remote system. </p>
+ </dd>
+<dt><code>--no-print-statistics</code></dt>
+<dd> <p> By default duplicity will print statistics about the current session after a successful backup. This switch disables that behavior. </p>
+ </dd>
+<dt><code>--null-separator</code></dt>
+<dd> <p> Use nulls (\0) instead of newlines (\n) as line separators, which may help when dealing with filenames containing newlines. This affects the expected format of the files specified by the --{include|exclude}-filelist switches as well as the format of the directory statistics file. </p>
+ </dd>
+<dt><code>--numeric-owner</code></dt>
+<dd> <p> On restore always use the numeric uid/gid from the archive and not the archived user/group names, which is the default behaviour. Recommended for restoring from live cds which might have the users with identical names but different uids/gids. </p>
+ </dd>
+<dt><code>--num-retries </code><i>number</i></dt>
+<dd> <p> Number of retries to make on errors before giving up. </p>
+ </dd>
+<dt><code>--old-filenames</code></dt>
+<dd> <p> Use the old filename format (incompatible with Windows/Samba) rather than the new filename format. </p>
+ </dd>
+<dt><code>--par2-options </code><i>options</i></dt>
+<dd> <p> Verbatim options to pass to par2. </p>
+ </dd>
+<dt><code>--par2-redundancy </code><i>percent</i></dt>
+<dd> <p> Adjust the level of redundancy in <i>percent</i> for Par2 recovery files (default 10%). </p>
+ </dd>
+<dt><code>--progress</code></dt>
+<dd> <p> When selected, duplicity will output the current upload progress and estimated upload time. To annotate changes, it will perform a first dry-run before a full or incremental, and then runs the real operation estimating the real upload progress. </p>
+ </dd>
+<dt><code>--progress-rate </code><i>number</i></dt>
+<dd> <p> Sets the update rate at which duplicity will output the upload progress messages (requires <code>--progress</code> option). Default is to print the status each 3 seconds. </p>
+ </dd>
+<dt><code>--rename </code><i>&lt;original path&gt; &lt;new path&gt;</i></dt>
+<dd> <p> Treats the path <i>orig</i> in the backup as if it were the path <i>new.</i> Can be passed multiple times. An example: </p>
+<p> duplicity restore --rename Documents/metal Music/metal <a href="sftp://uid@other.host/some_dir">sftp://uid@other.host/some_dir</a> /home/me </p>
+ </dd>
+<dt><code>--rsync-options </code><i>options</i></dt>
+<dd> <p> Allows you to pass options to the rsync backend. The <i>options</i> list should be of the form &quot;opt1=parm1 opt2=parm2&quot; where the option string is quoted and the only spaces allowed are between options. The option string will be passed verbatim to rsync, after any internally generated option designating the remote port to use. Here is a possibly useful example: </p>
+<p> duplicity --rsync-options=&quot;--partial-dir=.rsync-partial&quot; /home/me <a href="rsync://uid@other.host/some_dir">rsync://uid@other.host/some_dir</a> </p>
+ </dd>
+<dt><code>--s3-european-buckets</code></dt>
+<dd> <p> When using the Amazon S3 backend, create buckets in Europe instead of the default (requires <code>--s3-use-new-style</code> ). Also see the <code>EUROPEAN S3 BUCKETS</code> section. </p>
+<p> This option does not apply when using the newer boto3 backend, which does not create buckets. </p>
+<p> See also <code>A NOTE ON AMAZON S3</code> below. </p>
+ </dd>
+<dt><code>--s3-unencrypted-connection</code></dt>
+<dd> <p> Don&#8217;t use SSL for connections to S3. </p>
+<p> This may be much faster, at some cost to confidentiality. </p>
+<p> With this option, anyone who can observe traffic between your computer and S3 will be able to tell: that you are using Duplicity, the name of the bucket, your AWS Access Key ID, the increment dates and the amount of data in each increment. </p>
+<p> This option affects only the connection, not the GPG encryption of the backup increment files. Unless that is disabled, an observer will not be able to see the file names or contents. </p>
+<p> This option is not available when using the newer boto3 backend. </p>
+<p> See also <code>A NOTE ON AMAZON S3</code> below. </p>
+ </dd>
+<dt><code>--s3-use-new-style</code></dt>
+<dd> <p> When operating on Amazon S3 buckets, use new-style subdomain bucket addressing. This is now the preferred method to access Amazon S3, but is not backwards compatible if your bucket name contains upper-case characters or other characters that are not valid in a hostname. </p>
+<p> This option has no effect when using the newer boto3 backend, which will always use new style subdomain bucket naming. </p>
+<p> See also <code>A NOTE ON AMAZON S3</code> below. </p>
+ </dd>
+<dt><code>--s3-use-rrs</code></dt>
+<dd> <p> Store volumes using Reduced Redundancy Storage when uploading to Amazon S3. This will lower the cost of storage but also lower the durability of stored volumes to 99.99% instead the 99.999999999% durability offered by Standard Storage on S3. </p>
+ </dd>
+<dt><code>--s3-use-ia</code></dt>
+<dd> <p> Store volumes using Standard - Infrequent Access when uploading to Amazon S3. This storage class has a lower storage cost but a higher per-request cost, and the storage cost is calculated against a 30-day storage minimum. According to Amazon, this storage is ideal for long-term file storage, backups, and disaster recovery. </p>
+ </dd>
+<dt><code>--s3-use-onezone-ia</code></dt>
+<dd> <p> Store volumes using One Zone - Infrequent Access when uploading to Amazon S3. This storage is similar to Standard - Infrequent Access, but only stores object data in one Availability Zone. </p>
+ </dd>
+<dt><code>--s3-use-glacier</code></dt>
+<dd> <p> Store volumes using Glacier S3 when uploading to Amazon S3. This storage class has a lower cost of storage but a higher per-request cost along with delays of up to 12 hours from the time of retrieval request. This storage cost is calculated against a 90-day storage minimum. According to Amazon this storage is ideal for data archiving and long-term backup offering 99.999999999% durability. To restore a backup you will have to manually migrate all data stored on AWS Glacier back to Standard S3 and wait for AWS to complete the migration. <code>Notice:</code> Duplicity will store the manifest.gpg files from full and incremental backups on AWS S3 standard storage to allow quick retrieval for later incremental backups, all other data is stored in S3 Glacier. </p>
+ </dd>
+<dt><code>--s3-use-deep-archive</code></dt>
+<dd> <p> Store volumes using Glacier Deep Archive S3 when uploading to Amazon S3. This storage class has a lower cost of storage but a higher per-request cost along with delays of up to 48 hours from the time of retrieval request. This storage cost is calculated against a 180-day storage minimum. According to Amazon this storage is ideal for data archiving and long-term backup offering 99.999999999% durability. To restore a backup you will have to manually migrate all data stored on AWS Glacier Deep Archive back to Standard S3 and wait for AWS to complete the migration. <code>Notice:</code> Duplicity will store the manifest.gpg files from full and incremental backups on AWS S3 standard storage to allow quick retrieval for later incremental backups, all other data is stored in S3 Glacier Deep Archive. </p>
+<p> Glacier Deep Archive is only available when using the newer boto3 backend. </p>
+ </dd>
+<dt><code>--s3-use-multiprocessing</code></dt>
+<dd> <p> Allow multipart volumne uploads to S3 through multiprocessing. This option requires Python 2.6 and can be used to make uploads to S3 more efficient. If enabled, files duplicity uploads to S3 will be split into chunks and uploaded in parallel. Useful if you want to saturate your bandwidth or if large files are failing during upload. </p>
+<p> This has no effect when using the newer boto3 backend. Boto3 always attempts to multiprocessing when it is believed it will be more efficient. </p>
+<p> See also <code>A NOTE ON AMAZON S3</code> below. </p>
+ </dd>
+<dt><code>--s3-use-server-side-encryption</code></dt>
+<dd> <p> Allow use of server side encryption in S3 </p>
+ </dd>
+<dt><code>--s3-multipart-chunk-size</code></dt>
+<dd> <p> Chunk size (in MB) used for S3 multipart uploads. Make this smaller than <code>--volsize</code> to maximize the use of your bandwidth. For example, a chunk size of 10MB with a volsize of 30MB will result in 3 chunks per volume upload. </p>
+<p> This has no effect when using the newer boto3 backend. </p>
+<p> See also <code>A NOTE ON AMAZON S3</code> below. </p>
+ </dd>
+<dt><code>--s3-multipart-max-procs</code></dt>
+<dd> <p> Specify the maximum number of processes to spawn when performing a multipart upload to S3. By default, this will choose the number of processors detected on your system (e.g. 4 for a 4-core system). You can adjust this number as required to ensure you don&#8217;t overload your system while maximizing the use of your bandwidth. </p>
+<p> This has no effect when using the newer boto3 backend. </p>
+<p> See also <code>A NOTE ON AMAZON S3</code> below. </p>
+ </dd>
+<dt><code>--s3-multipart-max-timeout</code></dt>
+<dd> <p> You can control the maximum time (in seconds) a multipart upload can spend on uploading a single chunk to S3. This may be useful if you find your system hanging on multipart uploads or if you&#8217;d like to control the time variance when uploading to S3 to ensure you kill connections to slow S3 endpoints. </p>
+<p> This has no effect when using the newer boto3 backend. </p>
+<p> See also <code>A NOTE ON AMAZON S3</code> below. </p>
+ </dd>
+<dt><code>--azure-blob-tier</code></dt>
+<dd> <p> Standard storage tier used for backup files (Hot|Cool|Archive). </p>
+ </dd>
+<dt><code>--azure-max-single-put-size</code></dt>
+<dd> <p> Specify the number of the largest supported upload size where the Azure library makes only one put call. If the content size is known and below this value the Azure library will only perform one put request to upload one block. The number is expected to be in bytes. </p>
+ </dd>
+<dt><code>--azure-max-block-size</code></dt>
+<dd> <p> Specify the number for the block size used by the Azure library to upload blobs if it is split into multiple blocks. The maximum block size the service supports is 104857600 (100MiB) and the default is 4194304 (4MiB) </p>
+ </dd>
+<dt><code>--azure-max-connections</code></dt>
+<dd> <p> Specify the number of maximum connections to transfer one blob to Azure blob size exceeds 64MB. The default values is 2. </p>
+ </dd>
+<dt><code>--scp-command </code><i>command</i></dt>
+<dd> <p> <code>(only ssh pexpect backend with --use-scp enabled)</code> The <i>command</i> will be used instead of &quot;scp&quot; to send or receive files. To list and delete existing files, the sftp command is used. <br />
+ See also <code>A NOTE ON SSH BACKENDS</code> section <code>SSH pexpect backend</code>. </p>
+ </dd>
+<dt><code>--sftp-command </code><i>command</i></dt>
+<dd> <p> <code>(only ssh pexpect backend)</code> The <i>command</i> will be used instead of &quot;sftp&quot;. <br />
+ See also <code>A NOTE ON SSH BACKENDS</code> section <code>SSH pexpect backend</code>. </p>
+ </dd>
+<dt><code>--short-filenames</code></dt>
+<dd> <p> If this option is specified, the names of the files duplicity writes will be shorter (about 30 chars) but less understandable. This may be useful when backing up to MacOS or another OS or FS that doesn&#8217;t support long filenames. </p>
+ </dd>
+<dt><code>--sign-key </code><i>key-id</i></dt>
+<dd> <p> This option can be used when backing up, restoring or verifying. When backing up, all backup files will be signed with keyid <i>key</i>. When restoring, duplicity will signal an error if any remote file is not signed with the given key-id. The key-id can be given in any of the formats supported by GnuPG; see <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1), section &quot;HOW TO SPECIFY A USER ID&quot; for details. Should be specified only once because currently only <code>one</code> signing key is supported. Last entry overrides all other entries. <br />
+ See also <code>A NOTE ON SYMMETRIC ENCRYPTION AND SIGNING</code> </p>
+ </dd>
+<dt><code>--ssh-askpass</code></dt>
+<dd> <p> Tells the ssh backend to prompt the user for the remote system password, if it was not defined in target url and no FTP_PASSWORD env var is set. This password is also used for passphrase-protected ssh keys. </p>
+ </dd>
+<dt><code>--ssh-options </code><i>options</i></dt>
+<dd> <p> Allows you to pass options to the ssh backend. Can be specified multiple times or as a space separated options list. The <i>options</i> list should be of the form &quot;-oOpt1=&#8216;parm1&#8217; -oOpt2=&#8216;parm2&#8217;&quot; where the option string is quoted and the only spaces allowed are between options. The option string will be passed verbatim to both scp and sftp, whose command line syntax differs slightly hence the options should therefore be given in the long option format described in <code><a href="/docs/linux/man/5-ssh_config/">ssh_config</a>(5).</code> </p>
+<p> example of a list: </p>
+<p> duplicity --ssh-options=&quot;-oProtocol=2 -oIdentityFile=&#8216;/my/backup/id&#8217;&quot; /home/me <a href="scp://user@host/some_dir">scp://user@host/some_dir</a> </p>
+<p> example with multiple parameters: </p>
+<p> duplicity --ssh-options=&quot;-oProtocol=2&quot; --ssh-options=&quot;-oIdentityFile=&#8216;/my/backup/id&#8217;&quot; /home/me <a href="scp://user@host/some_dir">scp://user@host/some_dir</a> </p>
+<p> <code>NOTE:</code> The <i>ssh paramiko backend</i> currently supports only the <code>-i</code> or <code>-oIdentityFile</code> setting. If needed provide more host specific options via ssh_config file. </p>
+ </dd>
+<dt><code>--ssl-cacert-file </code><i>file</i></dt>
+<dd> <p> <code>(only webdav &amp; lftp backend)</code> Provide a cacert file for ssl certificate verification. <br />
+ See also <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>. </p>
+ </dd>
+<dt><code>--ssl-cacert-path </code><i>path/to/certs/</i></dt>
+<dd> <p> <code>(only webdav backend and python 2.7.9+ OR lftp+webdavs and a recent lftp)</code> Provide a path to a folder containing cacert files for ssl certificate verification. <br />
+ See also <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>. </p>
+ </dd>
+<dt><code>--ssl-no-check-certificate</code></dt>
+<dd> <p> <code>(only webdav &amp; lftp backend)</code> Disable ssl certificate verification. <br />
+ See also <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>. </p>
+ </dd>
+<dt><code>--swift-storage-policy</code></dt>
+<dd> <p> Use this storage policy when operating on Swift containers. <br />
+ See also <code>A NOTE ON SWIFT (OPENSTACK OBJECT STORAGE) ACCESS</code>. </p>
+ </dd>
+<dt><code>--metadata-sync-mode </code><i>mode</i></dt>
+<dd> <p> This option defaults to &#8216;partial&#8217;, but you can set it to &#8216;full&#8217; <br />
+ Use &#8216;partial&#8217; to avoid syncing metadata for backup chains that you are not going to use. This saves time when restoring for the first time, and lets you restore an old backup that was encrypted with a different passphrase by supplying only the target passphrase. <br />
+ Use &#8216;full&#8217; to sync metadata for all backup chains on the remote. </p>
+ </dd>
+<dt><code>--tempdir </code><i>directory</i></dt>
+<dd> <p> Use this existing directory for duplicity temporary files instead of the system default, which is usually the /tmp directory. This option supersedes any environment variable. <br />
+ See also <code>ENVIRONMENT VARIABLES</code>. </p>
+ </dd>
+<dt><code>-t</code><i>time</i><code>, --time </code><i>time</i><code>, --restore-time </code><i>time</i></dt>
+<dd> <p> Specify the time from which to restore or list files. </p>
+ </dd>
+<dt><code>--time-separator </code><i>char</i></dt>
+<dd> <p> Use <i>char</i> as the time separator in filenames instead of colon (&quot;:&quot;). </p>
+ </dd>
+<dt><code>--timeout </code><i>seconds</i></dt>
+<dd> <p> Use <i>seconds</i> as the socket timeout value if duplicity begins to timeout during network operations. The default is 30 seconds. </p>
+ </dd>
+<dt><code>--use-agent</code></dt>
+<dd> <p> If this option is specified, then <i>--use-agent</i> is passed to the GnuPG encryption process and it will try to connect to <code>gpg-agent</code> before it asks for a passphrase for <i>--encrypt-key</i> or <i>--sign-key</i> if needed. <br />
+ <code>Note:</code> Contrary to previous versions of duplicity, this option will also be honored by GnuPG 2 and newer versions. If GnuPG 2 is in use, duplicity passes the option <i>--pinentry-mode=loopback</i> to the the gpg process unless <i>--use-agent</i> is specified on the duplicity command line. This has the effect that GnuPG 2 uses the agent only if <i>--use-agent</i> is given, just like GnuPG 1. </p>
+ </dd>
+<dt><code>--verbosity </code><i>level</i><code>, -v</code><i>level</i></dt>
+<dd> <p> Specify output verbosity level (log level). Named levels and corresponding values are 0 Error, 2 Warning, 4 Notice (default), 8 Info, 9 Debug (noisiest). <br />
+ <i>level</i> may also be <br />
+ <code>a character:</code> e, w, n, i, d <br />
+ <code>a word:</code> error, warning, notice, info, debug </p>
+<p> The options -v4, -vn and -vnotice are functionally equivalent, as are the mixed/upper-case versions -vN, -vNotice and -vNOTICE. </p>
+ </dd>
+<dt><code>--version</code></dt>
+<dd> <p> Print duplicity&#8217;s version and quit. </p>
+ </dd>
+<dt><code>--volsize </code><i>number</i></dt>
+<dd> <p> Change the volume size to <i>number</i> MB. Default is 200MB. </p>
+ </dd></dl>
+<h2>ENVIRONMENT VARIABLES</h2>
+<dl>
+<dt><code>TMPDIR, TEMP, TMP</code></dt>
+<dd> <p> In decreasing order of importance, specifies the directory to use for temporary files (inherited from Python&#8217;s tempfile module). Eventually the option <code>--tempdir</code> supercedes any of these. </p>
+ </dd>
+<dt><code>FTP_PASSWORD</code></dt>
+<dd> <p> Supported by most backends which are password capable. More secure than setting it in the backend url (which might be readable in the operating systems process listing to other users on the same machine). </p>
+ </dd>
+<dt><code>PASSPHRASE</code></dt>
+<dd> <p> This passphrase is passed to GnuPG. If this is not set, the user will be prompted for the passphrase. </p>
+ </dd>
+<dt><code>SIGN_PASSPHRASE</code></dt>
+<dd> <p> The passphrase to be used for <code>--sign-key</code>. If ommitted <code>and</code> sign key is also one of the keys to encrypt against <code>PASSPHRASE</code> will be reused instead. Otherwise, if passphrase is needed but not set the user will be prompted for it. </p>
+ </dd></dl>
+<h2>URL FORMAT</h2>
+<p> Duplicity uses the URL format (as standard as possible) to define data locations. The generic format for a URL is: </p>
+<dl>
+<dd> <p> <a href="scheme://[user[:password]@]host[:port]/[/]path">scheme://[user[:password]@]host[:port]/[/]path</a> </p>
+ </dd></dl>
+<p> It is not recommended to expose the password on the command line since it could be revealed to anyone with permissions to do process listings, it is permitted however. Consider setting the environment variable <code>FTP_PASSWORD</code> instead, which is used by most, if not all backends, regardless of it&#8217;s name. </p>
+<p> In protocols that support it, the path may be preceded by a single slash, &#8216;/path&#8217;, to represent a relative path to the target home directory, or preceded by a double slash, &#8216;//path&#8217;, to represent an absolute filesystem path. </p>
+<p> <code>Note:</code> </p>
+<dl>
+<dd> <p> Scheme (protocol) access may be provided by more than one backend. In case the default backend is buggy or simply not working in a specific case it might be worth trying an alternative implementation. Alternative backends can be selected by prefixing the scheme with the name of the alternative backend e.g. <code>ncftp+ftp://</code> and are mentioned below the scheme&#8217;s syntax summary. </p>
+ </dd></dl>
+<p> Formats of each of the URL schemes follow: </p>
+<p> <code>Amazon Drive Backend</code> </p>
+<dl>
+<dd> <p> ad://some_dir </p>
+<p> See also <code>A NOTE ON AMAZON DRIVE</code> </p>
+ </dd></dl>
+<p> <code>Azure</code> </p>
+<dl>
+<dd> <p> <a href="azure://container-name">azure://container-name</a> </p>
+<p> See also <code>A NOTE ON AZURE ACCESS</code> </p>
+ </dd></dl>
+<p> <code>B2</code> </p>
+<dl>
+<dd> <p> b2://account_id[:application_key]@bucket_name/[folder/] </p>
+ </dd></dl>
+<p> <code>Cloud Files</code> (Rackspace) </p>
+<dl>
+<dd> <p> cf+<a rel="nofollow" href="http://container_name">http://container_name</a> </p>
+<p> See also <code>A NOTE ON CLOUD FILES ACCESS</code> </p>
+ </dd></dl>
+<p> <code>Dropbox</code> </p>
+<dl>
+<dd> <p> <a href="dpbx:///some_dir">dpbx:///some_dir</a> </p>
+<p> Make sure to read <code>A NOTE ON DROPBOX ACCESS</code> first! </p>
+ </dd></dl>
+<p> <code>Local file path</code> </p>
+<dl>
+<dd> <p> file://[relative|/absolute]/local/path </p>
+ </dd></dl>
+<p> <code>FISH</code> (Files transferred over Shell protocol) over ssh </p>
+<dl>
+<dd> <p> <a href="fish://user[:pwd]@other.host[:port]/[relative|/absolute]_path">fish://user[:pwd]@other.host[:port]/[relative|/absolute]_path</a> </p>
+ </dd></dl>
+<p> <code>FTP</code> </p>
+<dl>
+<dd> <p> ftp[s]://user[:password]@other.host[:port]/some_dir </p>
+<p> <code>NOTE:</code> use lftp+, ncftp+ prefixes to enforce a specific backend, default is lftp+<a href="ftp://...">ftp://...</a> </p>
+ </dd></dl>
+<p> <code>Google Docs</code> </p>
+<dl>
+<dd> <p> <a href="gdocs://user[:password]@other.host/some_dir">gdocs://user[:password]@other.host/some_dir</a> </p>
+<p> <code>NOTE:</code> use pydrive+, gdata+ prefixes to enforce a specific backend, default is pydrive+<a href="gdocs://...">gdocs://...</a> </p>
+ </dd></dl>
+<p> <code>Google Cloud Storage</code> </p>
+<dl>
+<dd> <p> gs://bucket[/prefix] </p>
+ </dd></dl>
+<p> <code>HSI</code> </p>
+<dl>
+<dd> <p> <a href="hsi://user[:password]@other.host/some_dir">hsi://user[:password]@other.host/some_dir</a> </p>
+ </dd></dl>
+<p> <code>hubiC</code> </p>
+<dl>
+<dd> <p> cf+<a href="hubic://container_name">hubic://container_name</a> </p>
+<p> See also <code>A NOTE ON HUBIC</code> </p>
+ </dd></dl>
+<p> <code>IMAP email storage</code> </p>
+<dl>
+<dd> <p> imap[s]://user[:password]@host.com[/from_address_prefix] </p>
+<p> See also <code>A NOTE ON IMAP</code> </p>
+ </dd></dl>
+<p> <code>Mega cloud storage</code> </p>
+<dl>
+<dd> <p> <a href="mega://user[:password]@mega.co.nz/some_dir">mega://user[:password]@mega.co.nz/some_dir</a> </p>
+ </dd></dl>
+<p> <code>OneDrive Backend</code> </p>
+<dl>
+<dd> <p> onedrive://some_dir </p>
+ </dd></dl>
+<p> <code>Par2 Wrapper Backend</code> </p>
+<dl>
+<dd> <p> par2+<a href="scheme://[user[:password]@]host[:port]/[/]path">scheme://[user[:password]@]host[:port]/[/]path</a> </p>
+<p> See also <code>A NOTE ON PAR2 WRAPPER BACKEND</code> </p>
+ </dd></dl>
+<p> <code>Rclone Backend</code> </p>
+<dl>
+<dd> <p> <a href="rclone://remote:/some_dir">rclone://remote:/some_dir</a> </p>
+ </dd></dl>
+<p> See also <code>A NOTE ON RCLONE BACKEND</code> </p>
+<p> <code>Rsync via daemon</code> </p>
+<dl>
+<dd> <p> <a href="rsync://user[:password]@host.com[:port]::[/]module/some_dir">rsync://user[:password]@host.com[:port]::[/]module/some_dir</a> </p>
+ </dd></dl>
+<p> <code>Rsync over ssh (only key auth)</code> </p>
+<dl>
+<dd> <p> <a href="rsync://user@host.com[:port]/[relative|/absolute]_path">rsync://user@host.com[:port]/[relative|/absolute]_path</a> </p>
+ </dd></dl>
+<p> <code>S3 storage</code> (Amazon) </p>
+<dl>
+<dd> <p> s3://host[:port]/bucket_name[/prefix] <br />
+ s3+<a rel="nofollow" href="http://bucket_name[/prefix]">http://bucket_name[/prefix]</a> <br />
+ <code>defaults</code> to the legacy boto backend based on boto v2 (last update 2018/07) <br />
+ <code>alternatively</code> try the newer boto3+s3://bucket_name[/prefix] </p>
+<p> For details see <code>A NOTE ON AMAZON S3</code> and see also <code>A NOTE ON EUROPEAN S3 BUCKETS</code> below. </p>
+ </dd></dl>
+<p> <code>SCP/SFTP access</code> </p>
+<dl>
+<dd> <p> <a href="scp://..">scp://..</a> or <br />
+ <a href="sftp://user[:pwd]@other.host[:port]/[relative|/absolute]_path">sftp://user[:pwd]@other.host[:port]/[relative|/absolute]_path</a> </p>
+<p> <code>defaults</code> are paramiko+scp:// and paramiko+sftp:// <br />
+ <code>alternatively</code> try pexpect+<a href="scp://,">scp://,</a> pexpect+<a href="sftp://,">sftp://,</a> lftp+sftp:// <br />
+ See also <code>--ssh-askpass</code>, <code>--ssh-options</code> and <code>A NOTE ON SSH BACKENDS</code>. </p>
+ </dd></dl>
+<p> <code>Swift</code> (Openstack) </p>
+<dl>
+<dd> <p> <a href="swift://container_name[/prefix]">swift://container_name[/prefix]</a> </p>
+<p> See also <code>A NOTE ON SWIFT (OPENSTACK OBJECT STORAGE) ACCESS</code> </p>
+ </dd></dl>
+<p> <code>Public Cloud Archive</code> (OVH) </p>
+<dl>
+<dd> <p> <a href="pca://container_name[/prefix]">pca://container_name[/prefix]</a> </p>
+<p> See also <code>A NOTE ON PCA ACCESS</code> </p>
+ </dd></dl>
+<p> <code>Tahoe-LAFS</code> </p>
+<dl>
+<dd> <p> <a href="tahoe://alias/directory">tahoe://alias/directory</a> </p>
+ </dd></dl>
+<p> <code>WebDAV</code> </p>
+<dl>
+<dd> <p> webdav[s]://user[:password]@other.host[:port]/some_dir </p>
+<p> <code>alternatively</code> try lftp+webdav[s]:// </p>
+ </dd></dl>
+<p> <code>pydrive</code> </p>
+<dl>
+<dd> <p> pydrive://&lt;service account&#8217; email address&gt;@developer.gserviceaccount.com/some_dir </p>
+<p> See also <code>A NOTE ON PYDRIVE BACKEND</code> below. </p>
+ </dd></dl>
+<p> <code>multi</code> </p>
+<dl>
+<dd> <p> <a href="multi:///path/to/config.json">multi:///path/to/config.json</a> </p>
+<p> See also <code>A NOTE ON MULTI BACKEND</code> below. </p>
+ </dd></dl>
+<p> <code>MediaFire</code> </p>
+<dl>
+<dd> <p> mf://user[:password]@mediafire.com/some_dir </p>
+<p> See also <code>A NOTE ON MEDIAFIRE BACKEND</code> below. </p>
+ </dd></dl>
+<h2>TIME FORMATS</h2>
+<p> duplicity uses time strings in two places. Firstly, many of the files duplicity creates will have the time in their filenames in the w3 datetime format as described in a w3 note at <a rel="nofollow" href="http://www.w3.org/TR/NOTE-datetime.">http://www.w3.org/TR/NOTE-datetime.</a> Basically they look like &quot;2001-07-15T04:09:38-07:00&quot;, which means what it looks like. The &quot;-07:00&quot; section means the time zone is 7 hours behind UTC. </p>
+<p> Secondly, the <code>-t</code>, <code>--time</code>, and <code>--restore-time</code> options take a time string, which can be given in any of several formats: </p>
+<dl>
+<dt>1.</dt>
+<dd> <p> the string &quot;now&quot; (refers to the current time) </p>
+ </dd>
+<dt>2.</dt>
+<dd> <p> a sequences of digits, like &quot;123456890&quot; (indicating the time in seconds after the epoch) </p>
+ </dd>
+<dt>3.</dt>
+<dd> <p> A string like &quot;2002-01-25T07:00:00+02:00&quot; in datetime format </p>
+ </dd>
+<dt>4.</dt>
+<dd> <p> An interval, which is a number followed by one of the characters s, m, h, D, W, M, or Y (indicating seconds, minutes, hours, days, weeks, months, or years respectively), or a series of such pairs. In this case the string refers to the time that preceded the current time by the length of the interval. For instance, &quot;1h78m&quot; indicates the time that was one hour and 78 minutes ago. The calendar here is unsophisticated: a month is always 30 days, a year is always 365 days, and a day is always 86400 seconds. </p>
+ </dd>
+<dt>5.</dt>
+<dd> <p> A date format of the form YYYY/MM/DD, YYYY-MM-DD, MM/DD/YYYY, or MM-DD-YYYY, which indicates midnight on the day in question, relative to the current time zone settings. For instance, &quot;2002/3/5&quot;, &quot;03-05-2002&quot;, and &quot;2002-3-05&quot; all mean March 5th, 2002. </p>
+ </dd></dl>
+<h2>FILE SELECTION</h2>
+<p> When duplicity is run, it searches through the given source directory and backs up all the files specified by the file selection system. The file selection system comprises a number of file selection conditions, which are set using one of the following command line options: </p>
+<dl>
+<dd> <p> --exclude <br />
+ --exclude-device-files <br />
+ --exclude-if-present <br />
+ --exclude-filelist <br />
+ --exclude-regexp <br />
+ --include <br />
+ --include-filelist <br />
+ --include-regexp </p>
+ </dd></dl>
+<p> Each file selection condition either matches or doesn&#8217;t match a given file. A given file is excluded by the file selection system exactly when the first matching file selection condition specifies that the file be excluded; otherwise the file is included. </p>
+<p> For instance, </p>
+<dl>
+<dd> <p> duplicity --include /usr --exclude /usr /usr <a href="scp://user@host/backup">scp://user@host/backup</a> </p>
+ </dd></dl>
+<p> is exactly the same as </p>
+<dl>
+<dd> <p> duplicity /usr <a href="scp://user@host/backup">scp://user@host/backup</a> </p>
+ </dd></dl>
+<p> because the include and exclude directives match exactly the same files, and the <code>--include</code> comes first, giving it precedence. Similarly, </p>
+<dl>
+<dd> <p> duplicity --include /usr/local/bin --exclude /usr/local /usr <a href="scp://user@host/backup">scp://user@host/backup</a> </p>
+ </dd></dl>
+<p> would backup the /usr/local/bin directory (and its contents), but not /usr/local/doc. </p>
+<p> The <code>include</code>, <code>exclude</code>, <code>include-filelist</code>, and <code>exclude-filelist</code> options accept some <i>extended shell globbing patterns</i>. These patterns can contain <code>*</code>, <code>**</code>, <code>?</code>, and <code>[...]</code> (character ranges). As in a normal shell, <code>*</code> can be expanded to any string of characters not containing &quot;/&quot;, <code>?</code> expands to any character except &quot;/&quot;, and <code>[...]</code> expands to a single character of those characters specified (ranges are acceptable). The new special pattern, <code>**</code>, expands to any string of characters whether or not it contains &quot;/&quot;. Furthermore, if the pattern starts with &quot;ignorecase:&quot; (case insensitive), then this prefix will be removed and any character in the string can be replaced with an upper- or lowercase version of itself. </p>
+<p> Remember that you may need to quote these characters when typing them into a shell, so the shell does not interpret the globbing patterns before duplicity sees them. </p>
+<p> The <code>--exclude</code> pattern option matches a file if: </p>
+<p> <code>1.</code> <i>pattern</i> can be expanded into the file&#8217;s filename, or <br />
+ <code>2.</code> the file is inside a directory matched by the option. </p>
+<p> Conversely, the <code>--include </code> pattern matches a file if: </p>
+<p> <code>1.</code> <i>pattern</i> can be expanded into the file&#8217;s filename, or <br />
+ <code>2.</code> the file is inside a directory matched by the option, or <br />
+ <code>3.</code> the file is a directory which contains a file matched by the option. </p>
+<p> For example, </p>
+<dl>
+<dd> <p> <code>--exclude</code> /usr/local </p>
+ </dd></dl>
+<p> matches e.g. /usr/local, /usr/local/lib, and /usr/local/lib/netscape. It is the same as --exclude /usr/local --exclude &#8216;/usr/local/**&#8216;. </p>
+<p> On the other hand </p>
+<dl>
+<dd> <p> <code>--include</code> /usr/local </p>
+ </dd></dl>
+<p> specifies that /usr, /usr/local, /usr/local/lib, and /usr/local/lib/netscape (but not /usr/doc) all be backed up. Thus you don&#8217;t have to worry about including parent directories to make sure that included subdirectories have somewhere to go. </p>
+<p> Finally, </p>
+<dl>
+<dd> <p> <code>--include</code> ignorecase:&#8216;/usr/[a-z0-9]foo/*/**.py&#8217; </p>
+ </dd></dl>
+<p> would match a file like /usR/5fOO/hello/there/world.py. If it did match anything, it would also match /usr. If there is no existing file that the given pattern can be expanded into, the option will not match /usr alone. </p>
+<p> The <code>--include-filelist</code>, and <code>--exclude-filelist</code><i>,</i> options also introduce file selection conditions. They direct duplicity to read in a text file (either ASCII or UTF-8), each line of which is a file specification, and to include or exclude the matching files. Lines are separated by newlines or nulls, depending on whether the --null-separator switch was given. Each line in the filelist will be interpreted as a globbing pattern the way <code>--include</code> and <code>--exclude</code> options are interpreted, except that lines starting with &quot;+ &quot; are interpreted as include directives, even if found in a filelist referenced by <code>--exclude-filelist</code>. Similarly, lines starting with &quot;- &quot; exclude files even if they are found within an include filelist. </p>
+<p> For example, if file &quot;list.txt&quot; contains the lines: </p>
+<dl>
+<dd> <p> /usr/local <br />
+ - /usr/local/doc <br />
+ /usr/local/bin <br />
+ + /var <br />
+ - /var </p>
+ </dd></dl>
+<p> then <code>--include-filelist list.txt</code> would include /usr, /usr/local, and /usr/local/bin. It would exclude /usr/local/doc, /usr/local/doc/python, etc. It would also include /usr/local/man, as this is included within /user/local. Finally, it is undefined what happens with /var. A single file list should not contain conflicting file specifications. </p>
+<p> Each line in the filelist will also be interpreted as a globbing pattern the way <code>--include</code> and <code>--exclude</code> options are interpreted. For instance, if the file &quot;list.txt&quot; contains the lines: </p>
+<dl>
+<dd> <p> dir/foo <br />
+ + dir/bar <br />
+ - ** </p>
+ </dd></dl>
+<p> Then <code>--include-filelist list.txt</code> would be exactly the same as specifying <code>--include dir/foo --include dir/bar --exclude **</code> on the command line. </p>
+<p> Finally, the <code>--include-regexp</code> and <code>--exclude-regexp</code> options allow files to be included and excluded if their filenames match a python regular expression. Regular expression syntax is too complicated to explain here, but is covered in Python&#8217;s library reference. Unlike the <code>--include</code> and <code>--exclude</code> options, the regular expression options don&#8217;t match files containing or contained in matched files. So for instance </p>
+<dl>
+<dd> <p> --include &#8216;[0-9]{7}(?!foo)&#8216; </p>
+ </dd></dl>
+<p> matches any files whose full pathnames contain 7 consecutive digits which aren&#8217;t followed by &#8216;foo&#8217;. However, it wouldn&#8217;t match /home even if /home/ben/1234567 existed. </p>
+<h2>A NOTE ON AMAZON DRIVE</h2>
+<dl>
+<dt>1.</dt>
+<dd> <p> The API Keys used for Amazon Drive have not been granted production limits. Amazon do not say what the development limits are and are not replying to to requests to whitelist duplicity. A related tool, acd_cli, was demoted to development limits, but continues to work fine except for cases of excessive usage. If you experience throttling and similar issues with Amazon Drive using this backend, please report them to the mailing list. </p>
+ </dd>
+<dt>2.</dt>
+<dd> <p> If you previously used the <code>acd+acdcli</code> backend, it is strongly recommended to update to the <code>ad</code> backend instead, since it interfaces directly with Amazon Drive. You will need to setup the OAuth once again, but can otherwise keep your backups and config. </p>
+ </dd></dl>
+<h2>A NOTE ON AMAZON S3</h2>
+<p> When backing up to Amazon S3, two backend implementations are available. The schemes &quot;s3&quot; and &quot;s3+http&quot; are implemented using the older boto library, which has been deprecated and is no longer supported. The &quot;boto3+s3&quot; scheme is based on the newer boto3 library. This new backend fixes several known limitations in the older backend, which have crept in as Amazon S3 has evolved while the deprecated boto library has not kept up. </p>
+<p> The boto3 backend should behave largely the same as the older S3 backend, but there are some differences in the handling of some of the &quot;S3&quot; options. Additionally, there are some compatibility differences with the new backed. Because of these reasons, both backends have been retained for the time being. See the documentation for specific options regarding differences related to each backend. </p>
+<p> The boto3 backend does not support bucket creation. This is a deliberate choice which simplifies the code, and side steps problems related to region selection. Additionally, it is probably not a good practice to give your backup role bucket creation rights. In most cases the role used for backups should probably be limited to specific buckets. </p>
+<p> The boto3 backend only supports newer domain style buckets. Amazon is moving to deprecate the older bucket style, so migration is recommended. Use the older s3 backend for compatibility with backups stored in buckets using older naming conventions. </p>
+<p> The boto3 backend does not currently support initiating restores from the glacier storage class. When restoring a backup from glacier or glacier deep archive, the backup files must first be restored out of band. There are multiple options when restoring backups from cold storage, which vary in both cost and speed. See Amazon&#8217;s documentation for details. </p>
+<h2>A NOTE ON AZURE ACCESS</h2>
+<p> The Azure backend requires the Microsoft Azure Storage SDK for Python to be installed on the system. See <code>REQUIREMENTS</code> above. </p>
+<p> It uses environment variables for authentification: <code>AZURE_ACCOUNT_NAME</code> (required), <code>AZURE_ACCOUNT_KEY</code> (optional), <code>AZURE_SHARED_ACCESS_SIGNATURE</code> (optional). One of <code>AZURE_ACCOUNT_KEY</code> or <code>AZURE_SHARED_ACCESS_SIGNATURE</code> is required. </p>
+<p> A container name must be a valid DNS name, conforming to the following naming rules: </p>
+<dl>
+<dd>  </dd>
+<dl>
+<dt>1.</dt>
+<dd> <p> Container names must start with a letter or number, and can contain only letters, numbers, and the dash (-) character. </p>
+ </dd>
+<dt>2.</dt>
+<dd> <p> Every dash (-) character must be immediately preceded and followed by a letter or number; consecutive dashes are not permitted in container names. </p>
+ </dd>
+<dt>3.</dt>
+<dd> <p> All letters in a container name must be lowercase. </p>
+ </dd>
+<dt>4.</dt>
+<dd> <p> Container names must be from 3 through 63 characters long. </p>
+ </dd></dl>
+</dl>
+<h2>A NOTE ON CLOUD FILES ACCESS</h2>
+<p> Pyrax is Rackspace&#8217;s next-generation Cloud management API, including Cloud Files access. The cfpyrax backend requires the pyrax library to be installed on the system. See <code>REQUIREMENTS</code> above. </p>
+<p> Cloudfiles is Rackspace&#8217;s now deprecated implementation of OpenStack Object Storage protocol. Users wishing to use Duplicity with Rackspace Cloud Files should migrate to the new Pyrax plugin to ensure support. </p>
+<p> The backend requires python-cloudfiles to be installed on the system. See <code>REQUIREMENTS</code> above. </p>
+<p> It uses three environment variables for authentification: <code>CLOUDFILES_USERNAME</code> (required), <code>CLOUDFILES_APIKEY</code> (required), <code>CLOUDFILES_AUTHURL</code> (optional) </p>
+<p> If <code>CLOUDFILES_AUTHURL</code> is unspecified it will default to the value provided by python-cloudfiles, which points to rackspace, hence this value <i>must</i> be set in order to use other cloud files providers. </p>
+<h2>A NOTE ON DROPBOX ACCESS</h2>
+<dl>
+<dt>1.</dt>
+<dd> <p> First of all Dropbox backend requires valid authentication token. It should be passed via <code>DPBX_ACCESS_TOKEN</code> environment variable. <br />
+ To obtain it please create &#8216;Dropbox API&#8217; application at: <a rel="nofollow" href="https://www.dropbox.com/developers/apps/create">https://www.dropbox.com/developers/apps/create</a> <br />
+ Then visit app settings and just use &#8216;Generated access token&#8217; under OAuth2 section. <br />
+ Alternatively you can let duplicity generate access token itself. In such case temporary export <code>DPBX_APP_KEY ,</code> <code>DPBX_APP_SECRET</code> using values from app settings page and run duplicity interactively. <br />
+ It will print the URL that you need to open in the browser to obtain OAuth2 token for the application. Just follow on-screen instructions and then put generated token to <code>DPBX_ACCESS_TOKEN</code> variable. Once done, feel free to unset <code>DPBX_APP_KEY and</code> <code>DPBX_APP_SECRET</code> </p>
+ </dd>
+<dt>2.</dt>
+<dd> <p> &quot;some_dir&quot; must already exist in the Dropbox folder. Depending on access token kind it may be: </p>
+ </dd>
+<dl>
+<dd>  </dd>
+<dl>
+<dd> <p> <code>Full Dropbox:</code> path is absolute and starts from &#8216;Dropbox&#8217; root folder. <br />
+ <code>App Folder:</code> path is related to application folder. Dropbox client will show it in <code>~/Dropbox/Apps/&lt;app-name&gt;</code> </p>
+ </dd></dl>
+</dl>
+<dt>3.</dt>
+<dd> <p> When using Dropbox for storage, be aware that all files, including the ones in the Apps folder, will be synced to all connected computers. You may prefer to use a separate Dropbox account specially for the backups, and not connect any computers to that account. Alternatively you can configure selective sync on all computers to avoid syncing of backup files </p>
+ </dd></dl>
+<h2>A NOTE ON EUROPEAN S3 BUCKETS</h2>
+<p> Amazon S3 provides the ability to choose the location of a bucket upon its creation. The purpose is to enable the user to choose a location which is better located network topologically relative to the user, because it may allow for faster data transfers. </p>
+<p> duplicity will create a new bucket the first time a bucket access is attempted. At this point, the bucket will be created in Europe if <code>--s3-european-buckets</code> was given. For reasons having to do with how the Amazon S3 service works, this also requires the use of the <code>--s3-use-new-style</code> option. This option turns on subdomain based bucket addressing in S3. The details are beyond the scope of this man page, but it is important to know that your bucket must not contain upper case letters or any other characters that are not valid parts of a hostname. Consequently, for reasons of backwards compatibility, use of subdomain based bucket addressing is not enabled by default. </p>
+<p> Note that you will need to use <code>--s3-use-new-style</code> for all operations on European buckets; not just upon initial creation. </p>
+<p> You only need to use <code>--s3-european-buckets</code> upon initial creation, but you may may use it at all times for consistency. </p>
+<p> Further note that when creating a new European bucket, it can take a while before the bucket is fully accessible. At the time of this writing it is unclear to what extent this is an expected feature of Amazon S3, but in practice you may experience timeouts, socket errors or HTTP errors when trying to upload files to your newly created bucket. Give it a few minutes and the bucket should function normally. </p>
+<h2>A NOTE ON FILENAME PREFIXES</h2>
+<p> Filename prefixes can be used in <code>multi backend </code> with <code>mirror </code> mode to define affinity rules. They can also be used in conjunction with S3 lifecycle rules to transition archive files to Glacier, while keeping metadata (signature and manifest files) on S3. </p>
+<p> Duplicity does not require access to archive files except when restoring from backup. </p>
+<h2>A NOTE ON GOOGLE CLOUD STORAGE</h2>
+<p> Support for Google Cloud Storage relies on its Interoperable Access, which must be enabled for your account. Once enabled, you can generate Interoperable Storage Access Keys and pass them to duplicity via the <code>GS_ACCESS_KEY_ID</code> and <code>GS_SECRET_ACCESS_KEY</code> environment variables. Alternatively, you can run <code>gsutil config -a</code> to have the Google Cloud Storage utility populate the <code>~/.boto</code> configuration file. </p>
+<p> Enable Interoperable Access: <a rel="nofollow" href="https://code.google.com/apis/console#:storage">https://code.google.com/apis/console#:storage</a> <br />
+ Create Access Keys: <a rel="nofollow" href="https://code.google.com/apis/console#:storage:legacy">https://code.google.com/apis/console#:storage:legacy</a> </p>
+<h2>A NOTE ON HUBIC</h2>
+<p> The hubic backend requires the pyrax library to be installed on the system. See REQUIREMENTS above. You will need to set your credentials for hubiC in a file called ~/.hubic_credentials, following this pattern: </p>
+<dl>
+<dd> <p> [hubic] <br />
+ email = your_email <br />
+ password = your_password <br />
+ client_id = api_client_id <br />
+ client_secret = api_secret_key <br />
+ redirect_uri = <a rel="nofollow" href="http://localhost/">http://localhost/</a> </p>
+ </dd></dl>
+<h2>A NOTE ON IMAP</h2>
+<p> An IMAP account can be used as a target for the upload. The userid may be specified and the password will be requested. </p>
+<p> The <code>from_address_prefix</code> may be specified (and probably should be). The text will be used as the &quot;From&quot; address in the IMAP server. Then on a restore (or list) command the <code>from_address_prefix</code> will distinguish between different backups. </p>
+<h2>A NOTE ON MULTI BACKEND</h2>
+<p> The multi backend allows duplicity to combine the storage available in more than one backend store (e.g., you can store across a google drive account and a onedrive account to get effectively the combined storage available in both). The URL path specifies a JSON formated config file containing a list of the backends it will use. The URL may also specify &quot;query&quot; parameters to configure overall behavior. Each element of the list must have a &quot;url&quot; element, and may also contain an optional &quot;description&quot; and an optional &quot;env&quot; list of environment variables used to configure that backend.  </p>
+<h3>Query Parameters</h3>
+<p> Query parameters come after the file URL in standard HTTP format for example: </p>
+<dl>
+<dd> <pre><code>
+multi:///path/to/config.json?mode=mirror&amp;onfail=abort
+multi:///path/to/config.json?mode=stripe&amp;onfail=continue
+multi:///path/to/config.json?onfail=abort&amp;mode=stripe
+multi:///path/to/config.json?onfail=abort
+</code></pre>
+ </dd></dl>
+<p> Order does not matter, however unrecognized parameters are considered an error. </p>
+<dl>
+<dt><code>mode=</code><i>stripe</i></dt>
+<dd> <p> This mode (the default) performs round-robin access to the list of backends. In this mode, all backends must be reliable as a loss of one means a loss of one of the archive files. </p>
+ </dd>
+<dt><code>mode=</code><i>mirror</i></dt>
+<dd> <p> This mode accesses backends as a RAID1-store, storing every file in every backend and reading files from the first-successful backend. A loss of any backend should result in no failure. Note that backends added later will only get new files and may require a manual sync with one of the other operating ones. </p>
+ </dd>
+<dt><code>onfail=</code><i>continue</i></dt>
+<dd> <p> This setting (the default) continues all write operations in as best-effort. Any failure results in the next backend tried. Failure is reported only when all backends fail a given operation with the error result from the last failure. </p>
+ </dd>
+<dt><code>onfail=</code><i>abort</i></dt>
+<dd> <p> This setting considers any backend write failure as a terminating condition and reports the error. Data reading and listing operations are independent of this and will try with the next backend on failure. </p>
+ </dd></dl>
+<h3>JSON File Example</h3>
+<dl>
+<dd> <pre><code>[
+ {
+  &quot;description&quot;: &quot;a comment about the backend&quot;
+  &quot;url&quot;: &quot;abackend://myuser [at] domain.com/backup&quot;,
+  &quot;env&quot;: [
+    {
+     &quot;name&quot; : &quot;MYENV&quot;,
+     &quot;value&quot; : &quot;xyz&quot;
+    },
+    {
+     &quot;name&quot; : &quot;FOO&quot;,
+     &quot;value&quot; : &quot;bar&quot;
+    }
+   ],
+   &quot;prefixes&quot;: [&quot;prefix1_&quot;, &quot;prefix2_&quot;]
+ },
+ {
+  &quot;url&quot;: &quot;file:///path/to/dir&quot;
+ }
+]
+</code></pre>
+ </dd></dl>
+<h2>A NOTE ON PAR2 WRAPPER BACKEND</h2>
+<p> Par2 Wrapper Backend can be used in combination with all other backends to create recovery files. Just add <code>par2+</code> before a regular scheme (e.g. <i>par2+<a href="ftp://user@host/dir">ftp://user@host/dir</a></i> or <i>par2+s3+<a rel="nofollow" href="http://bucket_name">http://bucket_name</a></i> ). This will create par2 recovery files for each archive and upload them all to the wrapped backend. </p>
+<p> Before restoring, archives will be verified. Corrupt archives will be repaired on the fly if there are enough recovery blocks available. </p>
+<p> Use <code>--par2-redundancy </code><i>percent</i> to adjust the size (and redundancy) of recovery files in <i>percent.</i> </p>
+<h2>A NOTE ON PYDRIVE BACKEND</h2>
+<p> The pydrive backend requires Python PyDrive package to be installed on the system. See <code>REQUIREMENTS</code> above. </p>
+<p> There are two ways to use PyDrive: with a regular account or with a &quot;service account&quot;. With a service account, a separate account is created, that is only accessible with Google APIs and not a web login. With a regular account, you can store backups in your normal Google Drive. </p>
+<p> To use a service account, go to the Google developers console at <a rel="nofollow" href="https://console.developers.google.com.">https://console.developers.google.com.</a> Create a project, and make sure Drive API is enabled for the project. Under &quot;APIs and auth&quot;, click Create New Client ID, then select Service Account with P12 key. </p>
+<p> Download the .p12 key file of the account and convert it to the .pem format: <br />
+ openssl pkcs12 -in XXX.p12 -nodes -nocerts &gt; pydriveprivatekey.pem </p>
+<p> The content of .pem file should be passed to <code>GOOGLE_DRIVE_ACCOUNT_KEY</code> environment variable for authentification. </p>
+<p> The email address of the account will be used as part of URL. See <code>URL FORMAT</code> above. </p>
+<p> The alternative is to use a regular account. To do this, start as above, but when creating a new Client ID, select &quot;Installed application&quot; of type &quot;Other&quot;. Create a file with the following content, and pass its filename in the <code>GOOGLE_DRIVE_SETTINGS</code> environment variable: </p>
+<pre><code>
+<dl>
+<dd> client_config_backend: settings
+client_config:
+    client_id: &lt;Client ID from developers' console&gt;
+    client_secret: &lt;Client secret from developers' console&gt;
+save_credentials: True
+save_credentials_backend: file
+save_credentials_file: &lt;filename to cache credentials&gt;
+get_refresh_token: True
+ </dd></dl>
+
+</code></pre>
+<p> In this scenario, the username and host parts of the URL play no role; only the path matters. During the first run, you will be prompted to visit an URL in your browser to grant access to your drive. Once granted, you will receive a verification code to paste back into Duplicity. The credentials are then cached in the file references above for future use. </p>
+<h2>A NOTE ON RCLONE BACKEND</h2>
+<p> Rclone is a powerful command line program to sync files and directories to and from various cloud storage providers. </p>
+<p> Once you have configured an rclone remote via </p>
+<dl>
+<dd> <p> rclone config </p>
+ </dd></dl>
+<p> and successfully set up a remote (e.g. gdrive for Google Drive), assuming you can list your remote files with </p>
+<dl>
+<dd> <p> rclone ls gdrive:mydocuments </p>
+ </dd></dl>
+<p> you can start your backup with </p>
+<dl>
+<dd> <p> duplicity /mydocuments <a href="rclone://gdrive:/mydocuments">rclone://gdrive:/mydocuments</a> </p>
+ </dd></dl>
+<p> Please note the slash after the second colon. Some storage provider will work with or without slash after colon, but some other will not. Since duplicity will complain about malformed URL if a slash is not present, always put it after the colon, and the backend will handle it for you. </p>
+<h2>A NOTE ON SSH BACKENDS</h2>
+<p> The <i>ssh backends</i> support <i>sftp</i> and <i>scp/ssh</i> transport protocols. This is a known user-confusing issue as these are fundamentally different. If you plan to access your backend via one of those please inform yourself about the requirements for a server to support <i>sftp</i> or <i>scp/ssh</i> access. To make it even more confusing the user can choose between several ssh backends via a scheme prefix: paramiko+ (default), pexpect+, lftp+... . <br />
+ paramiko &amp; pexpect support <code>--use-scp</code>, <code>--ssh-askpass</code> and <code>--ssh-options</code>. Only the <code>pexpect</code> backend allows to define <code>--scp-command</code> and <code>--sftp-command</code>. </p>
+<p> <code>SSH paramiko backend </code>(default) is a complete reimplementation of ssh protocols natively in python. Advantages are speed and maintainability. Minor disadvantage is that extra packages are needed as listed in <code>REQUIREMENTS</code> above. In <i>sftp</i> (default) mode all operations are done via the according sftp commands. In <i>scp</i> mode ( <i>--use-scp</i> ) though scp access is used for put/get operations but listing is done via ssh remote shell. </p>
+<p> <code>SSH pexpect backend</code> is the legacy ssh backend using the command line ssh binaries via pexpect. Older versions used <i>scp</i> for get and put operations and <i>sftp</i> for list and delete operations. The current version uses <i>sftp</i> for all four supported operations, unless the <i>--use-scp</i> option is used to revert to old behavior. </p>
+<p> <code>SSH lftp backend</code> is simply there because lftp can interact with the ssh cmd line binaries. It is meant as a last resort in case the above options fail for some reason. </p>
+<p> <code>Why use sftp instead of scp?</code> The change to sftp was made in order to allow the remote system to chroot the backup, thus providing better security and because it does not suffer from shell quoting issues like scp. Scp also does not support any kind of file listing, so sftp or ssh access will always be needed in addition for this backend mode to work properly. Sftp does not have these limitations but needs an sftp service running on the backend server, which is sometimes not an option. </p>
+<h2>A NOTE ON SSL CERTIFICATE VERIFICATION</h2>
+<p> Certificate verification as implemented right now [02.2016] only in the webdav and lftp backends. older pythons 2.7.8- and older lftp binaries need a file based database of certification authority certificates (cacert file). <br />
+ Newer python 2.7.9+ and recent lftp versions however support the system default certificates (usually in /etc/ssl/certs) and also giving an alternative ca cert folder via <code>--ssl-cacert-path</code>. </p>
+<p> The cacert file has to be a <code>PEM</code> formatted text file as currently provided by the <code>CURL</code> project. See </p>
+<dl>
+<dd> <p> <a rel="nofollow" href="http://curl.haxx.se/docs/caextract.html">http://curl.haxx.se/docs/caextract.html</a> </p>
+ </dd></dl>
+<p> After creating/retrieving a valid cacert file you should copy it to either </p>
+<dl>
+<dd> <p> ~/.duplicity/cacert.pem <br />
+ ~/duplicity_cacert.pem <br />
+ /etc/duplicity/cacert.pem </p>
+ </dd></dl>
+<p> Duplicity searches it there in the same order and will fail if it can&#8217;t find it. You can however specify the option <code>--ssl-cacert-file</code><i> &lt;file&gt;</i> to point duplicity to a copy in a different location. </p>
+<p> Finally there is the <code>--ssl-no-check-certificate</code> option to disable certificate verification alltogether, in case some ssl library is missing or verification is not wanted. Use it with care, as even with self signed servers manually providing the private ca certificate is definitely the safer option. </p>
+<h2>A NOTE ON SWIFT (OPENSTACK OBJECT STORAGE) ACCESS</h2>
+<p> Swift is the OpenStack Object Storage service. <br />
+ The backend requires python-switclient to be installed on the system. python-keystoneclient is also needed to use OpenStack&#8217;s Keystone Identity service. See <code>REQUIREMENTS</code> above. </p>
+<p> It uses following environment variables for authentification: <code>SWIFT_USERNAME</code> (required), <code>SWIFT_PASSWORD</code> (required), <code>SWIFT_AUTHURL</code> (required), <code>SWIFT_USERID</code> (required, only for IBM Bluemix ObjectStorage), <code>SWIFT_TENANTID</code> (required, only for IBM Bluemix ObjectStorage), <code>SWIFT_REGIONNAME</code> (required, only for IBM Bluemix ObjectStorage), <code>SWIFT_TENANTNAME</code> (optional, the tenant can be included in the username) </p>
+<p> If the user was previously authenticated, the following environment variables can be used instead: <code>SWIFT_PREAUTHURL</code> (required), <code>SWIFT_PREAUTHTOKEN</code> (required) </p>
+<p> If <code>SWIFT_AUTHVERSION</code> is unspecified, it will default to version 1. </p>
+<h2>A NOTE ON PCA ACCESS</h2>
+<p> PCA is a long-term data archival solution by OVH. It runs a slightly modified version of Openstack Swift introducing latency in the data retrieval process. It is a good pick for a <code>multi backend </code> configuration where receiving volumes while an other backend is used to store manifests and signatures. </p>
+<p> <br />
+ The backend requires python-switclient to be installed on the system. python-keystoneclient is also needed to interact with OpenStack&#8217;s Keystone Identity service. See <code>REQUIREMENTS</code> above. </p>
+<p> It uses following environment variables for authentification: <code>PCA_USERNAME</code> (required), <code>PCA_PASSWORD</code> (required), <code>PCA_AUTHURL</code> (required), <code>PCA_USERID</code> (optional), <code>PCA_TENANTID</code> (optional, but either the tenant name or tenant id must be supplied) <code>PCA_REGIONNAME</code> (optional), <code>PCA_TENANTNAME</code> (optional, but either the tenant name or tenant id must be supplied) </p>
+<p> If the user was previously authenticated, the following environment variables can be used instead: <code>PCA_PREAUTHURL</code> (required), <code>PCA_PREAUTHTOKEN</code> (required) </p>
+<p> If <code>PCA_AUTHVERSION</code> is unspecified, it will default to version 2. </p>
+<h2>A NOTE ON MEDIAFIRE BACKEND</h2>
+<p> This backend requires <code>mediafire</code> python library to be installed on the system. See <code>REQUIREMENTS</code>. </p>
+<p> Use URL escaping for username (and password, if provided via command line): </p>
+<dl>
+<dd> <p> mf://duplicity%40example.com [at] mediafire.com/some_folder </p>
+ </dd></dl>
+<p> The destination folder will be created for you if it does not exist. </p>
+<h2>A NOTE ON SYMMETRIC ENCRYPTION AND SIGNING</h2>
+<p> Signing and symmetrically encrypt at the same time with the gpg binary on the command line, as used within duplicity, is a specifically challenging issue. Tests showed that the following combinations proved working. </p>
+<p> 1. Setup gpg-agent properly. Use the option <code>--use-agent</code> and enter both passphrases (symmetric and sign key) in the gpg-agent&#8217;s dialog. </p>
+<p> 2. Use a <code>PASSPHRASE</code> for symmetric encryption of your choice but the signing key has an <code>empty</code> passphrase. </p>
+<p> 3. The used <code>PASSPHRASE</code> for symmetric encryption and the passphrase of the signing key are identical. </p>
+<h2>KNOWN ISSUES / BUGS</h2>
+<p> Hard links currently unsupported (they will be treated as non-linked regular files). </p>
+<p> Bad signatures will be treated as empty instead of logging appropriate error message. </p>
+<h2>OPERATION AND DATA FORMATS</h2>
+<p> This section describes duplicity&#8217;s basic operation and the format of its data files. It should not be necessary to read this section to use duplicity. </p>
+<p> The files used by duplicity to store backup data are tarfiles in GNU tar format. They can be produced independently by <code><a href="/docs/linux/man/1-rdiffdir/">rdiffdir</a></code>(1). For incremental backups, new files are saved normally in the tarfile. But when a file changes, instead of storing a complete copy of the file, only a diff is stored, as generated by <code><a href="/docs/linux/man/1-rdiff/">rdiff</a></code>(1). If a file is deleted, a 0 length file is stored in the tar. It is possible to restore a duplicity archive &quot;manually&quot; by using <code>tar</code> and then <code>cp</code>, <code>rdiff</code>, and <code>rm</code> as necessary. These duplicity archives have the extension <code>difftar</code>. </p>
+<p> Both full and incremental backup sets have the same format. In effect, a full backup set is an incremental one generated from an empty signature (see below). The files in full backup sets will start with <code>duplicity-full</code> while the incremental sets start with <code>duplicity-inc</code>. When restoring, duplicity applies patches in order, so deleting, for instance, a full backup set may make related incremental backup sets unusable. </p>
+<p> In order to determine which files have been deleted, and to calculate diffs for changed files, duplicity needs to process information about previous sessions. It stores this information in the form of tarfiles where each entry&#8217;s data contains the signature (as produced by <code>rdiff</code>) of the file instead of the file&#8217;s contents. These signature sets have the extension <code>sigtar</code>. </p>
+<p> Signature files are not required to restore a backup set, but without an up-to-date signature, duplicity cannot append an incremental backup to an existing archive. </p>
+<p> To save bandwidth, duplicity generates full signature sets and incremental signature sets. A full signature set is generated for each full backup, and an incremental one for each incremental backup. These start with <code>duplicity-full-signatures</code> and <code>duplicity-new-signatures</code> respectively. These signatures will be stored both locally and remotely. The remote signatures will be encrypted if encryption is enabled. The local signatures will not be encrypted and stored in the archive dir (see <code>--archive-dir</code> ). </p>
+<h2>REQUIREMENTS</h2>
+<p> Duplicity requires a POSIX-like operating system with a <code>python</code> interpreter version 2.6+ installed. It is best used under GNU/Linux. </p>
+<p> Some backends also require additional components (probably available as packages for your specific platform): </p>
+<dl>
+<dt><code>Amazon Drive backend</code></dt>
+<dd> <p> <code>python-requests</code> - <a rel="nofollow" href="http://python-requests.org">http://python-requests.org</a> <br />
+ <code>python-requests-oauthlib</code> - <a rel="nofollow" href="https://github.com/requests/requests-oauthlib">https://github.com/requests/requests-oauthlib</a> </p>
+ </dd>
+<dt><code>azure backend</code> (Azure Blob Storage Service) </dt>
+<dd> <p> <code>Microsoft Azure Storage SDK for Python</code> - <a rel="nofollow" href="https://pypi.python.org/pypi/azure-storage/">https://pypi.python.org/pypi/azure-storage/</a> </p>
+ </dd>
+<dt><code>boto backend</code> (S3 Amazon Web Services, Google Cloud Storage) </dt>
+<dd> <p> <code>boto version 2.0+</code> - <a rel="nofollow" href="http://github.com/boto/boto">http://github.com/boto/boto</a> </p>
+ </dd>
+<dt><code>cfpyrax backend</code> (Rackspace Cloud) and <code>hubic backend</code> (hubic.com) </dt>
+<dd> <p> <code>Rackspace CloudFiles Pyrax API</code> - <a rel="nofollow" href="http://docs.rackspace.com/sdks/guide/content/python.html">http://docs.rackspace.com/sdks/guide/content/python.html</a> </p>
+ </dd>
+<dt><code>dpbx backend</code> (Dropbox) </dt>
+<dd> <p> <code>Dropbox Python SDK</code> - <a rel="nofollow" href="https://www.dropbox.com/developers/reference/sdk">https://www.dropbox.com/developers/reference/sdk</a> </p>
+ </dd>
+<dt><code>gdocs gdata backend</code> (legacy Google Docs backend) </dt>
+<dd> <p> <code>Google Data APIs Python Client Library</code> - <a rel="nofollow" href="http://code.google.com/p/gdata-python-client/">http://code.google.com/p/gdata-python-client/</a> </p>
+ </dd>
+<dt><code>gdocs pydrive backend</code>(default) </dt>
+<dd> <p> see pydrive backend </p>
+ </dd>
+<dt><code>gio backend</code> (Gnome VFS API) </dt>
+<dd> <p> <code>PyGObject</code> - <a rel="nofollow" href="http://live.gnome.org/PyGObject">http://live.gnome.org/PyGObject</a> <br />
+ <code>D-Bus</code> (dbus)- <a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/dbus">http://www.freedesktop.org/wiki/Software/dbus</a> </p>
+ </dd>
+<dt><code>lftp backend</code> (needed for ftp, ftps, fish [over ssh] - also supports sftp, webdav[s]) </dt>
+<dd> <p> <code>LFTP Client</code> - <a rel="nofollow" href="http://lftp.yar.ru/">http://lftp.yar.ru/</a> </p>
+ </dd>
+<dt><code>mega backend</code> (mega.co.nz) </dt>
+<dd> <p> <code>megatools client</code> - <a rel="nofollow" href="https://github.com/megous/megatools">https://github.com/megous/megatools</a> </p>
+ </dd>
+<dt><code>multi backend</code></dt>
+<dd> <p> <code>Multi -- store to more than one backend</code> <br />
+ (also see <code>A NOTE ON MULTI BACKEND</code> ) below. </p>
+ </dd>
+<dt><code>ncftp backend</code> (ftp, select via ncftp+<a href="ftp://)">ftp://)</a></dt>
+<dd> <p> <code>NcFTP</code> - <a rel="nofollow" href="http://www.ncftp.com/">http://www.ncftp.com/</a> </p>
+ </dd>
+<dt><code>OneDrive backend</code> (Microsoft OneDrive) </dt>
+<dd> <p> <code>python-requests</code> - <a rel="nofollow" href="http://python-requests.org">http://python-requests.org</a> <br />
+ <code>python-requests-oauthlib</code> - <a rel="nofollow" href="https://github.com/requests/requests-oauthlib">https://github.com/requests/requests-oauthlib</a> </p>
+ </dd>
+<dt><code>Par2 Wrapper Backend</code></dt>
+<dd> <p> <code>par2cmdline</code> - <a rel="nofollow" href="http://parchive.sourceforge.net/">http://parchive.sourceforge.net/</a> </p>
+ </dd>
+<dt><code>pydrive backend</code></dt>
+<dd> <p> <code>PyDrive -- a wrapper library of google-api-python-client</code> - <a rel="nofollow" href="https://pypi.python.org/pypi/PyDrive">https://pypi.python.org/pypi/PyDrive</a> <br />
+ (also see <code>A NOTE ON PYDRIVE BACKEND</code> ) below. </p>
+ </dd>
+<dt><code>rclone backend</code></dt>
+<dd> <p> <code>rclone</code> - <a rel="nofollow" href="https://rclone.org/">https://rclone.org/</a> </p>
+ </dd>
+<dt><code>rsync backend</code></dt>
+<dd> <p> <code>rsync client binary</code> - <a rel="nofollow" href="http://rsync.samba.org/">http://rsync.samba.org/</a> </p>
+ </dd>
+<dt><code>ssh paramiko backend</code> (default) </dt>
+<dd> <p> <code>paramiko</code> (SSH2 for python) - <a rel="nofollow" href="http://pypi.python.org/pypi/paramiko">http://pypi.python.org/pypi/paramiko</a> (downloads); <a rel="nofollow" href="http://github.com/paramiko/paramiko">http://github.com/paramiko/paramiko</a> (project page) <br />
+ <code>pycrypto</code> (Python Cryptography Toolkit) - <a rel="nofollow" href="http://www.dlitz.net/software/pycrypto/">http://www.dlitz.net/software/pycrypto/</a> </p>
+ </dd>
+<dt><code>ssh pexpect backend</code></dt>
+<dd> <p> <code>sftp/scp client binaries</code> OpenSSH - <a rel="nofollow" href="http://www.openssh.com/">http://www.openssh.com/</a> <br />
+ <code>Python pexpect module</code> - <a rel="nofollow" href="http://pexpect.sourceforge.net/pexpect.html">http://pexpect.sourceforge.net/pexpect.html</a> </p>
+ </dd>
+<dt><code>swift backend (OpenStack Object Storage)</code></dt>
+<dd> <p> <code>Python swiftclient module</code> - <a rel="nofollow" href="https://github.com/openstack/python-swiftclient/">https://github.com/openstack/python-swiftclient/</a> <br />
+ <code>Python keystoneclient module</code> - <a rel="nofollow" href="https://github.com/openstack/python-keystoneclient/">https://github.com/openstack/python-keystoneclient/</a> </p>
+ </dd>
+<dt><code>webdav backend</code></dt>
+<dd> <p> <code>certificate authority database file</code> for ssl certificate verification of HTTPS connections - <a rel="nofollow" href="http://curl.haxx.se/docs/caextract.html">http://curl.haxx.se/docs/caextract.html</a> <br />
+ (also see <code>A NOTE ON SSL CERTIFICATE VERIFICATION</code>). <br />
+ <code>Python kerberos module</code> for kerberos authentication - <a rel="nofollow" href="https://github.com/02strich/pykerberos">https://github.com/02strich/pykerberos</a> </p>
+ </dd>
+<dt><code>MediaFire backend</code></dt>
+<dd> <p> <code>MediaFire Python Open SDK</code> - <a rel="nofollow" href="https://pypi.python.org/pypi/mediafire/">https://pypi.python.org/pypi/mediafire/</a> </p>
+ </dd></dl>
+<h2>AUTHOR</h2>
+<dl>
+<dt><code>Original Author</code> - Ben Escoto &lt;bescoto [at] stanford.edu&gt; </dt>
+<dd>  </dd>
+<dt><code>Current Maintainer</code> - Kenneth Loafman &lt;kenneth [at] loafman.com&gt; </dt>
+<dd>  </dd>
+<dt><code>Continuous Contributors</code></dt>
+<dd> <p> Edgar Soldin, Mike Terry </p>
+ </dd></dl>
+<p> Most backends were contributed individually. Information about their authorship may be found in the according file&#8217;s header. </p>
+<p> Also we&#8217;d like to thank everybody posting issues to the mailing list or on launchpad, sending in patches or contributing otherwise. Duplicity wouldn&#8217;t be as stable and useful if it weren&#8217;t for you. </p>
+<p> A special thanks goes to rsync.net, a Cloud Storage provider with explicit support for duplicity, for several monetary donations and for providing a special &quot;duplicity friends&quot; rate for their offsite backup service. Email info [at] rsync.net for details. </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-rdiffdir/">rdiffdir</a></code>(1), <code><a href="/docs/linux/man/1-python/">python</a></code>(1), <code><a href="/docs/linux/man/1-rdiff/">rdiff</a></code>(1), <code><a href="/docs/linux/man/1-rdiff-backup/">rdiff-backup</a></code>(1). </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">EXAMPLES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">ACTIONS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">OPTIONS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">ENVIRONMENT VARIABLES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAI">URL FORMAT</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAJ">TIME FORMATS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAK">FILE SELECTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAL">A NOTE ON AMAZON DRIVE</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAM">A NOTE ON AMAZON S3</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAN">A NOTE ON AZURE ACCESS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAO">A NOTE ON CLOUD FILES ACCESS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAP">A NOTE ON DROPBOX ACCESS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAQ">A NOTE ON EUROPEAN S3 BUCKETS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAR">A NOTE ON FILENAME PREFIXES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAS">A NOTE ON GOOGLE CLOUD STORAGE</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAT">A NOTE ON HUBIC</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAU">A NOTE ON IMAP</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAV">A NOTE ON MULTI BACKEND</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAW">Query Parameters</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAX">JSON File Example</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAY">A NOTE ON PAR2 WRAPPER BACKEND</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAZ">A NOTE ON PYDRIVE BACKEND</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBA">A NOTE ON RCLONE BACKEND</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBB">A NOTE ON SSH BACKENDS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBC">A NOTE ON SSL CERTIFICATE VERIFICATION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBD">A NOTE ON SWIFT (OPENSTACK OBJECT STORAGE) ACCESS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBE">A NOTE ON PCA ACCESS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBF">A NOTE ON MEDIAFIRE BACKEND</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBG">A NOTE ON SYMMETRIC ENCRYPTION AND SIGNING</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBH">KNOWN ISSUES / BUGS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBI">OPERATION AND DATA FORMATS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBJ">REQUIREMENTS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBK">AUTHOR</a></dt>
+<dd>  </dd>
+<dt><a href="#lbBL">SEE ALSO</a></dt>
+<dd>  </dd></dl>

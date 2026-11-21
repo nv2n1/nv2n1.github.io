@@ -6,40 +6,263 @@ letter: "o"
 url: "/docs/linux/man/1-opax/"
 description: "opax – read and write file archives and copy directory hierarchies (OpenBSD pax implementation)"
 ---
-
 <h2>NAME</h2>
-<p> <code>opax</code> &#8211; read and write file archives and copy directory hierarchies (OpenBSD <i>pax</i> implementation)</p>
+<p> <code>opax</code> - read and write file archives and copy directory hierarchies (OpenBSD <i>pax</i> implementation)  </p>
 <h2>SYNOPSIS</h2>
-<p> [-<code>0cdOnvz</code> ] -words [-<code>f </code><i>archive</i> ] -words [-<code>s </code><i>replstr</i> ] <i>&#8230;</i> -words [-<code>U </code><i>user</i> ] <i>&#8230;</i> -words [-<code>G </code><i>group</i> ] <i>&#8230;</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] ] <i>&#8230;</i> [<i>pattern &#8230;</i> ]<br />
- &#8211;<code>r</code> [-<code>cdiknuvzDOYZ</code> ] -words [-<code>f </code><i>archive</i> ] -words [-<code>o </code><i>options</i> ] <i>&#8230;</i> -words [-<code>p </code><i>string</i> ] <i>&#8230;</i> -words [-<code>s </code><i>replstr</i> ] <i>&#8230;</i> [-<code>E </code><i>limit</i> ] -words [-<code>U </code><i>user</i> ] <i>&#8230;</i> -words [-<code>G </code><i>group</i> ] <i>&#8230;</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] ] <i>&#8230;</i> [<i>pattern &#8230;</i> ]<br />
- &#8211;<code>w</code> [-<code>0dituvzHLOPX</code> ] -words [-<code>b </code><i>blocksize</i> ] [[-<code>a</code> ] [-<code>f </code><i>archive</i> ] ] -words [-<code>x </code><i>format</i> ] -words [-<code>s </code><i>replstr</i> ] <i>&#8230;</i> -words [-<code>o </code><i>options</i> ] <i>&#8230;</i> -words [-<code>U </code><i>user</i> ] <i>&#8230;</i> -words [-<code>G </code><i>group</i> ] <i>&#8230;</i> -words [-<code>B </code><i>bytes</i> ] -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] [<i>/[c][m]</i> ] ] <i>&#8230;</i> [<i>file &#8230;</i> ]<br />
- &#8211;<code>r</code> &#8211;<code>w</code> [-<code>0diklntuvDHLOPXYZ</code> ] -words [-<code>p </code><i>string</i> ] <i>&#8230;</i> -words [-<code>s </code><i>replstr</i> ] <i>&#8230;</i> -words [-<code>U </code><i>user</i> ] <i>&#8230;</i> -words [-<code>G </code><i>group</i> ] <i>&#8230;</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] [<i>/[c][m]</i> ] ] <i>&#8230;</i> [<i>file &#8230;</i> ] <i>directory</i></p>
+<p> [-<code>0cdOnvz</code> ] -words [-<code>f </code><i>archive</i> ] -words [-<code>s </code><i>replstr</i> ] <i>...</i> -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] ] <i>...</i> [<i>pattern ...</i> ] <br />
+ -<code>r</code> [-<code>cdiknuvzDOYZ</code> ] -words [-<code>f </code><i>archive</i> ] -words [-<code>o </code><i>options</i> ] <i>...</i> -words [-<code>p </code><i>string</i> ] <i>...</i> -words [-<code>s </code><i>replstr</i> ] <i>...</i> [-<code>E </code><i>limit</i> ] -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] ] <i>...</i> [<i>pattern ...</i> ] <br />
+ -<code>w</code> [-<code>0dituvzHLOPX</code> ] -words [-<code>b </code><i>blocksize</i> ] [[-<code>a</code> ] [-<code>f </code><i>archive</i> ] ] -words [-<code>x </code><i>format</i> ] -words [-<code>s </code><i>replstr</i> ] <i>...</i> -words [-<code>o </code><i>options</i> ] <i>...</i> -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>B </code><i>bytes</i> ] -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] [<i>/[c][m]</i> ] ] <i>...</i> [<i>file ...</i> ] <br />
+ -<code>r</code> -<code>w</code> [-<code>0diklntuvDHLOPXYZ</code> ] -words [-<code>p </code><i>string</i> ] <i>...</i> -words [-<code>s </code><i>replstr</i> ] <i>...</i> -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] [<i>/[c][m]</i> ] ] <i>...</i> [<i>file ...</i> ] <i>directory</i>  </p>
 <h2>DESCRIPTION</h2>
-<p> will read, write, and list the members of an archive file, and will copy directory hierarchies. operation is independent of the specific archive format, and supports a wide variety of different archive formats. A list of supported archive formats can be found under the description of the &#8211;<code>x</code> option. </p>
-<p> The presence of the &#8211;<code>r</code> and the &#8211;<code>w</code> options specifies which of the following functional modes will operate under: <i>list , read , write</i> and <i>copy</i></p>
+<p> will read, write, and list the members of an archive file, and will copy directory hierarchies. operation is independent of the specific archive format, and supports a wide variety of different archive formats. A list of supported archive formats can be found under the description of the -<code>x</code> option. </p>
+<p> The presence of the -<code>r</code> and the -<code>w</code> options specifies which of the following functional modes will operate under: <i>list , read , write</i> and <i>copy</i> </p>
 <dl>
 <dt><code>&lt;none&gt;</code></dt>
-<dd> <i>List</i> will write to standard output a table of contents of the members of the archive file read from standard input, whose pathnames match the specified <i>patterns</i> The table of contents contains one filename per line and is written using single line buffering.</dd>
+<dd> <p> <i>List</i> will write to standard output a table of contents of the members of the archive file read from standard input, whose pathnames match the specified <i>patterns</i> The table of contents contains one filename per line and is written using single line buffering. </p>
+ </dd>
 <dt><code>-r</code></dt>
-<dd> <i>Read</i> extracts the members of the archive file read from the standard input, with pathnames matching the specified <i>patterns</i> The archive format and blocking is automatically determined on input. When an extracted file is a directory, the entire file hierarchy rooted at that directory is extracted. All extracted files are created relative to the current file hierarchy. The setting of ownership, access and modification times, and file mode of the extracted files are discussed in more detail under the &#8211;<code>p</code> option.</dd>
+<dd> <p> <i>Read</i> extracts the members of the archive file read from the standard input, with pathnames matching the specified <i>patterns</i> The archive format and blocking is automatically determined on input. When an extracted file is a directory, the entire file hierarchy rooted at that directory is extracted. All extracted files are created relative to the current file hierarchy. The setting of ownership, access and modification times, and file mode of the extracted files are discussed in more detail under the -<code>p</code> option. </p>
+ </dd>
 <dt><code>-w</code></dt>
-<dd> <i>Write</i> writes an archive containing the <i>file</i> operands to standard output using the specified archive format. When no <i>file</i> operands are specified, a list of files to copy with one per line is read from standard input. When a <i>file</i> operand is also a directory, the entire file hierarchy rooted at that directory will be included.</dd>
+<dd> <p> <i>Write</i> writes an archive containing the <i>file</i> operands to standard output using the specified archive format. When no <i>file</i> operands are specified, a list of files to copy with one per line is read from standard input. When a <i>file</i> operand is also a directory, the entire file hierarchy rooted at that directory will be included. </p>
+ </dd>
 <dt><code>-r -w</code></dt>
-<dd> <i>Copy</i> copies the <i>file</i> operands to the destination <i>directory</i> When no <i>file</i> operands are specified, a list of files to copy with one per line is read from the standard input. When a <i>file</i> operand is also a directory the entire file hierarchy rooted at that directory will be included. The effect of the <i>copy</i> is as if the copied files were written to an archive file and then subsequently extracted, except that there may be hard links between the original and the copied files (see the &#8211;<code>l</code> option below). </dd>
-<p> <i>Warning</i> The destination <i>directory</i> must not be one of the <i>file</i> operands or a member of a file hierarchy rooted at one of the <i>file</i> operands. The result of a <i>copy</i> under these conditions is unpredictable.</dl>
-<p> While processing a damaged archive during a <i>read</i> or <i>list</i> operation, will attempt to recover from media defects and will search through the archive to locate and process the largest number of archive members possible (see the &#8211;<code>E</code> option for more details on error handling). </p>
+<dd> <p> <i>Copy</i> copies the <i>file</i> operands to the destination <i>directory</i> When no <i>file</i> operands are specified, a list of files to copy with one per line is read from the standard input. When a <i>file</i> operand is also a directory the entire file hierarchy rooted at that directory will be included. The effect of the <i>copy</i> is as if the copied files were written to an archive file and then subsequently extracted, except that there may be hard links between the original and the copied files (see the -<code>l</code> option below). </p>
+<p> <i>Warning</i> The destination <i>directory</i> must not be one of the <i>file</i> operands or a member of a file hierarchy rooted at one of the <i>file</i> operands. The result of a <i>copy</i> under these conditions is unpredictable. </p>
+ </dd></dl>
+<p> While processing a damaged archive during a <i>read</i> or <i>list</i> operation, will attempt to recover from media defects and will search through the archive to locate and process the largest number of archive members possible (see the -<code>E</code> option for more details on error handling). </p>
 <p> The <i>directory</i> operand specifies a destination directory pathname. If the <i>directory</i> operand does not exist, or it is not writable by the user, or it is not of type directory, will exit with a non-zero exit status. </p>
 <p> The <i>pattern</i> operand is used to select one or more pathnames of archive members. Archive members are selected using the pattern matching notation described by <a href="/docs/linux/man/3-fnmatch/">fnmatch</a>(3). When the <i>pattern</i> operand is not supplied, all members of the archive will be selected. When a <i>pattern</i> matches a directory, the entire file hierarchy rooted at that directory will be selected. When a <i>pattern</i> operand does not select at least one archive member, will write these <i>pattern</i> operands in a diagnostic message to standard error and then exit with a non-zero exit status. </p>
 <p> The <i>file</i> operand specifies the pathname of a file to be copied or archived. When a <i>file</i> operand does not select at least one archive member, will write these <i>file</i> operand pathnames in a diagnostic message to standard error and then exit with a non-zero exit status. </p>
-<p> The options are as follows:</p>
+<p> The options are as follows: </p>
 <dl>
 <dt><code>-r</code></dt>
-<dd> Read an archive file from standard input and extract the specified <i>files</i> If any intermediate directories are needed in order to extract an archive member, these directories will be created as if <a href="/docs/linux/man/2-mkdir/">mkdir</a>(2) was called with the bitwise inclusive <code>OR</code> of <code>S_IRWXU , S_IRWXG</code> and <code>S_IRWXO</code> as the mode argument. When the selected archive format supports the specification of linked files and these files cannot be linked while the archive is being extracted, will write a diagnostic message to standard error and exit with a non-zero exit status at the completion of operation.</dd>
+<dd> <p> Read an archive file from standard input and extract the specified <i>files</i> If any intermediate directories are needed in order to extract an archive member, these directories will be created as if <a href="/docs/linux/man/2-mkdir/">mkdir</a>(2) was called with the bitwise inclusive <code>OR</code> of <code>S_IRWXU , S_IRWXG</code> and <code>S_IRWXO</code> as the mode argument. When the selected archive format supports the specification of linked files and these files cannot be linked while the archive is being extracted, will write a diagnostic message to standard error and exit with a non-zero exit status at the completion of operation. </p>
+ </dd>
 <dt><code>-w</code></dt>
-<dd> Write files to the standard output in the specified archive format. When no <i>file</i> operands are specified, standard input is read for a list of pathnames with one per line without any leading or trailing Aq blanks .</dd>
+<dd> <p> Write files to the standard output in the specified archive format. When no <i>file</i> operands are specified, standard input is read for a list of pathnames with one per line without any leading or trailing Aq blanks . </p>
+ </dd>
 <dt><code>-a</code></dt>
-<dd> Append <i>files</i> to the end of an archive that was previously written. If an archive format is not specified with a &#8211;<code>x</code> option, the format currently being used in the archive will be selected. Any attempt to append to an archive in a format different from the format already used in the archive will cause to exit immediately with a non-zero exit status. The blocking size used in the archive volume where writing starts will continue to be used for the remainder of that archive volume. </dd>
-<p> <i>Warning</i> Many storage devices are not able to support the operations necessary to perform an append operation. Any attempt to append to an archive stored on such a device may damage the archive or have other unpredictable results. Tape drives in particular are more likely to not support an append operation. An archive stored in a regular file system file or on a disk device will usually support an append operation.</p>
+<dd> <p> Append <i>files</i> to the end of an archive that was previously written. If an archive format is not specified with a -<code>x</code> option, the format currently being used in the archive will be selected. Any attempt to append to an archive in a format different from the format already used in the archive will cause to exit immediately with a non-zero exit status. The blocking size used in the archive volume where writing starts will continue to be used for the remainder of that archive volume. </p>
+<p> <i>Warning</i> Many storage devices are not able to support the operations necessary to perform an append operation. Any attempt to append to an archive stored on such a device may damage the archive or have other unpredictable results. Tape drives in particular are more likely to not support an append operation. An archive stored in a regular file system file or on a disk device will usually support an append operation. </p>
+ </dd>
 <dt><code>-0</code></dt>
-<dd> Use the NUL (`
-</dd></dl>
+<dd> <p> Use the NUL (`\0&#8217; ) character as a pathname terminator, instead of newline (`\n&#8217; ) This applies only to the pathnames read from standard input in the write and copy modes, and to the pathnames written to standard output in list mode. This option is expected to be used in concert with the -<code>print0</code> function in <a href="/docs/linux/man/1-find/">find</a>(1) or the -<code>0</code> flag in <a href="/docs/linux/man/1-xargs/">xargs</a>(1). </p>
+ </dd>
+<dt><code>-b </code><i>blocksize</i></dt>
+<dd> <p> When <i>writing</i> an archive, block the output at a positive decimal integer number of bytes per write to the archive file. The <i>blocksize</i> must be a multiple of 512 bytes with a maximum of 64512 bytes. Archives larger than 32256 bytes violate the <code>POSIX</code> standard and will not be portable to all systems. A <i>blocksize</i> can end with `<code>k</code> &#8216; or `<code>b</code> &#8216; to specify multiplication by 1024 (1K) or 512, respectively. A pair of <i>blocksizes</i> can be separated by `<code>x</code> &#8216; to indicate a product. A specific archive device may impose additional restrictions on the size of blocking it will support. When blocking is not specified, the default <i>blocksize</i> is dependent on the specific archive format being used (see the -<code>x</code> option). </p>
+ </dd>
+<dt><code>-c</code></dt>
+<dd> <p> Match all file or archive members <i>except</i> those specified by the <i>pattern</i> and <i>file</i> operands. </p>
+ </dd>
+<dt><code>-d</code></dt>
+<dd> <p> Cause files of type directory being copied or archived, or archive members of type directory being extracted, to match only the directory file or archive member and not the file hierarchy rooted at the directory. </p>
+ </dd>
+<dt><code>-f </code><i>archive</i></dt>
+<dd> <p> Specify <i>archive</i> as the pathname of the input or output archive, overriding the default standard input (for <i>list</i> and <i>read</i> or standard output (for <i>write )</i> A single archive may span multiple files and different archive devices. When required, will prompt for the pathname of the file or device of the next volume in the archive. </p>
+ </dd>
+<dt><code>-i</code></dt>
+<dd> <p> Interactively rename files or archive members. For each archive member matching a <i>pattern</i> operand or each file matching a <i>file</i> operand, will prompt to /dev/tty giving the name of the file, its file mode, and its modification time. will then read a line from /dev/tty If this line is blank, the file or archive member is skipped. If this line consists of a single period, the file or archive member is processed with no modification to its name. Otherwise, its name is replaced with the contents of the line. will immediately exit with a non-zero exit status if <code>EOF</code> is encountered when reading a response or if /dev/tty cannot be opened for reading and writing. </p>
+ </dd>
+<dt><code>-k</code></dt>
+<dd> <p> Do not overwrite existing files. </p>
+ </dd>
+<dt><code>-l</code></dt>
+<dd> <p> (The lowercase letter ``ell.&#8216;&#8216; Link files. In the <i>copy</i> mode (-<code>r -w</code> ) hard links are made between the source and destination file hierarchies whenever possible. </p>
+ </dd>
+<dt><code>-n</code></dt>
+<dd> <p> Select the first archive member that matches each <i>pattern</i> operand. No more than one archive member is matched for each <i>pattern</i> When members of type directory are matched, the file hierarchy rooted at that directory is also matched (unless -<code>d</code> is also specified). </p>
+ </dd>
+<dt><code>-o </code><i>options</i></dt>
+<dd> <p> Information to modify the algorithm for extracting or writing archive files which is specific to the archive format specified by -<code>x</code> In general, <i>options</i> take the form: <i>name </i><code>= </code><i>value</i> </p>
+ </dd>
+<dt><code>-p </code><i>string</i></dt>
+<dd> <p> Specify one or more file characteristic options (privileges). The <i>string</i> option-argument is a string specifying file characteristics to be retained or discarded on extraction. The string consists of the specification characters <code>a , e , m , o</code> and <code>p</code> Multiple characteristics can be concatenated within the same string and multiple -<code>p</code> options can be specified. The meaning of the specification characters are as follows: </p>
+ </dd>
+<dl>
+<dt><code>a</code></dt>
+<dd> <p> Do not preserve file access times. By default, file access times are preserved whenever possible. </p>
+ </dd>
+<dt><code>e</code></dt>
+<dd> <p> `Preserve everything&#8217; the user ID, group ID, file mode bits, file access time, and file modification time. This is intended to be used by <i>root</i> someone with all the appropriate privileges, in order to preserve all aspects of the files as they are recorded in the archive. The <code>e</code> flag is the sum of the <code>o</code> and <code>p</code> flags. </p>
+ </dd>
+<dt><code>m</code></dt>
+<dd> <p> Do not preserve file modification times. By default, file modification times are preserved whenever possible. </p>
+ </dd>
+<dt><code>o</code></dt>
+<dd> <p> Preserve the user ID and group ID. </p>
+ </dd>
+<dt><code>p</code></dt>
+<dd> <p> `Preserve&#8217; the file mode bits. This is intended to be used by a <i>user</i> with regular privileges who wants to preserve all aspects of the file other than the ownership. The file times are preserved by default, but two other flags are offered to disable this and use the time of extraction instead. </p>
+ </dd></dl>
+<p> In the preceding list, `preserve&#8217; indicates that an attribute stored in the archive is given to the extracted file, subject to the permissions of the invoking process. Otherwise the attribute of the extracted file is determined as part of the normal file creation action. If neither the <code>e</code> nor the <code>o</code> specification character is specified, or the user ID and group ID are not preserved for any reason, will not set the <code>S_ISUID</code> <i>( setuid</i> and <code>S_ISGID</code> <i>( setgid</i> bits of the file mode. If the preservation of any of these items fails for any reason, will write a diagnostic message to standard error. Failure to preserve these items will affect the final exit status, but will not cause the extracted file to be deleted. If the file characteristic letters in any of the string option-arguments are duplicated or conflict with each other, the one(s) given last will take precedence. For example, if </p>
+<blockquote><p> <code>-</code><code>p </code><i>eme</i> </p>
+</blockquote>
+<p> is specified, file modification times are still preserved. </p>
+<dt><code>-s </code><i>replstr</i></dt>
+<dd> <p> Modify the file or archive member names specified by the <i>pattern</i> or <i>file</i> operands according to the substitution expression <i>replstr</i> using the syntax of the <a href="/docs/linux/man/1-ed/">ed</a>(1) utility regular expressions. The format of these regular expressions are: </p>
+<blockquote><p> <code>/old/new/[gp]</code> </p>
+</blockquote>
+<p> As in <a href="/docs/linux/man/1-ed/">ed</a>(1), <code>old</code> is a basic regular expression and <code>new</code> can contain an ampersand (`&amp;&#8216; ) `\n&#8217; (where <i>n</i> is a digit) back-references, or subexpression matching. The <code>old</code> string may also contain newline characters. Any non-null character can be used as a delimiter Po `/&#8216; is shown here Pc . Multiple -<code>s</code> expressions can be specified. The expressions are applied in the order they are specified on the command line, terminating with the first successful substitution. The optional trailing <code>g</code> continues to apply the substitution expression to the pathname substring which starts with the first character following the end of the last successful substitution. The first unsuccessful substitution stops the operation of the <code>g</code> option. The optional trailing <code>p</code> will cause the final result of a successful substitution to be written to standard error in the following format: </p>
+<blockquote><p> <code>&lt;original pathname&gt; &gt;&gt; &lt;new pathname&gt;</code> </p>
+</blockquote>
+<p> File or archive member names that substitute to the empty string are not selected and will be skipped. </p>
+ </dd>
+<dt><code>-t</code></dt>
+<dd> <p> Reset the access times of any file or directory read or accessed by to be the same as they were before being read or accessed by <code>.</code> </p>
+ </dd>
+<dt><code>-u</code></dt>
+<dd> <p> Ignore files that are older (having a less recent file modification time) than a pre-existing file or archive member with the same name. During <i>read</i> an archive member with the same name as a file in the file system will be extracted if the archive member is newer than the file. During <i>write</i> a file system member with the same name as an archive member will be written to the archive if it is newer than the archive member. During <i>copy</i> the file in the destination hierarchy is replaced by the file in the source hierarchy or by a link to the file in the source hierarchy if the file in the source hierarchy is newer. </p>
+ </dd>
+<dt><code>-v</code></dt>
+<dd> <p> During a <i>list</i> operation, produce a verbose table of contents using the format of the <a href="/docs/linux/man/1-ls/">ls</a>(1) utility with the -<code>l</code> option. For pathnames representing a hard link to a previous member of the archive, the output has the format: </p>
+<blockquote><p> <code>&lt;ls -l listing&gt; == &lt;link name&gt;</code> </p>
+</blockquote>
+<p> For pathnames representing a symbolic link, the output has the format: </p>
+<blockquote><p> <code>&lt;ls -l listing&gt; =&gt; &lt;link name&gt;</code> </p>
+</blockquote>
+<p> Where &lt;ls -l listing&gt; is the output format specified by the <a href="/docs/linux/man/1-ls/">ls</a>(1) utility when used with the -<code>l</code> option. Otherwise for all the other operational modes Po Em read , write , Li and Em copy Pc , pathnames are written and flushed to standard error without a trailing newline as soon as processing begins on that file or archive member. The trailing newline is not buffered and is written only after the file has been read or written. </p>
+ </dd>
+<dt><code>-x </code><i>format</i></dt>
+<dd> <p> Specify the output archive format, with the default format being <i>ustar</i> currently supports the following formats: </p>
+ </dd>
+<dl>
+<dt><i>cpio</i></dt>
+<dd> <p> The extended cpio interchange format specified in the St -p1003.2 standard. The default blocksize for this format is 5120 bytes. Inode and device information about a file (used for detecting file hard links by this format) which may be truncated by this format is detected by and is repaired. </p>
+ </dd>
+<dt><i>bcpio</i></dt>
+<dd> <p> The old binary cpio format. The default blocksize for this format is 5120 bytes. This format is not very portable and should not be used when other formats are available. Inode and device information about a file (used for detecting file hard links by this format) which may be truncated by this format is detected by and is repaired. </p>
+ </dd>
+<dt><i>sv4cpio</i></dt>
+<dd> <p> The System V release 4 cpio. The default blocksize for this format is 5120 bytes. Inode and device information about a file (used for detecting file hard links by this format) which may be truncated by this format is detected by and is repaired. </p>
+ </dd>
+<dt><i>sv4crc</i></dt>
+<dd> <p> The System V release 4 cpio with file crc checksums. The default blocksize for this format is 5120 bytes. Inode and device information about a file (used for detecting file hard links by this format) which may be truncated by this format is detected by and is repaired. </p>
+ </dd>
+<dt><i>tar</i></dt>
+<dd> <p> The old BSD tar format as found in BSD4.3. The default blocksize for this format is 10240 bytes. Pathnames stored by this format must be 100 characters or less in length (including the trailing &nbsp;<wbr> character, which means that filenames can have a maximum length of 99 characters). Only <i>regular</i> files, <i>hard links , soft links</i> and <i>directories</i> will be archived (other file system types are not supported). For backwards compatibility with even older tar formats, a -<code>o</code> option can be used when writing an archive to omit the storage of directories. This option takes the form: </p>
+<blockquote><p> <code>-</code><code>o write_opt=nodir</code> </p>
+</blockquote>
+ </dd>
+<dt><i>ustar</i></dt>
+<dd> <p> The extended tar interchange format specified in the St -p1003.2 standard. The default blocksize for this format is 10240 bytes. Filenames stored by this format must be 100 characters or less in length (including the trailing &nbsp;<wbr> character, which means that filenames can have a maximum length of 99 characters). Pathnames (directorynames + filenames) stored by this format must be 250 characters or less in length. </p>
+ </dd></dl>
+<p> will detect and report any file that it is unable to store or extract as the result of any specific archive format restrictions. The individual archive formats may impose additional restrictions on use. Typical archive format restrictions include (but are not limited to): file pathname length, file size, link pathname length, and the type of the file. </p>
+<dt><code>-z</code></dt>
+<dd> <p> Use <a href="/docs/linux/man/1-gzip/">gzip</a>(1) to compress (decompress) the archive while writing (reading). Incompatible with -<code>a</code> </p>
+ </dd>
+<dt><code>-B </code><i>bytes</i></dt>
+<dd> <p> Limit the number of bytes written to a single archive volume to <i>bytes</i> The <i>bytes</i> limit can end with `<code>m</code> &#8216; `<code>k</code> &#8216; or `<code>b</code> &#8216; to specify multiplication by 1048576 (1M), 1024 (1K) or 512, respectively. A pair of <i>bytes</i> limits can be separated by `<code>x</code> &#8216; to indicate a product. </p>
+<p> <i>Warning</i> Only use this option when writing an archive to a device which supports an end of file read condition based on last (or largest) write offset (such as a regular file or a tape drive). The use of this option with a floppy or hard disk is not recommended. </p>
+ </dd>
+<dt><code>-D</code></dt>
+<dd> <p> This option is the same as the -<code>u</code> option, except that the file inode change time is checked instead of the file modification time. The file inode change time can be used to select files whose inode information (e.g., UID, GID, etc.) is newer than a copy of the file in the destination <i>directory</i> </p>
+ </dd>
+<dt><code>-E </code><i>limit</i></dt>
+<dd> <p> Limit the number of consecutive read faults while trying to read a flawed archive to <i>limit</i> With a positive <i>limit</i> will attempt to recover from an archive read error and will continue processing starting with the next file stored in the archive. A <i>limit</i> of 0 will cause to stop operation after the first read error is detected on an archive volume. A <i>limit</i> of <code>NONE</code> will cause to attempt to recover from read errors forever. The default <i>limit</i> is a small positive number of retries. </p>
+<p> <i>Warning</i> Using this option with <code>NONE</code> should be used with extreme caution as may get stuck in an infinite loop on a very badly flawed archive. </p>
+ </dd>
+<dt><code>-G </code><i>group</i></dt>
+<dd> <p> Select a file based on its <i>group</i> name, or when starting with a <code>#</code> a numeric gid. A `\&#8216; can be used to escape the <code>#</code> Multiple -<code>G</code> options may be supplied and checking stops with the first match. </p>
+ </dd>
+<dt><code>-H</code></dt>
+<dd> <p> Follow only command-line symbolic links while performing a physical file system traversal. </p>
+ </dd>
+<dt><code>-L</code></dt>
+<dd> <p> Follow all symbolic links to perform a logical file system traversal. </p>
+ </dd>
+<dt><code>-O</code></dt>
+<dd> <p> Force the archive to be one volume. If a volume ends prematurely, will not prompt for a new volume. This option can be useful for automated tasks where error recovery cannot be performed by a human. </p>
+ </dd>
+<dt><code>-P</code></dt>
+<dd> <p> Do not follow symbolic links, perform a physical file system traversal. This is the default mode. </p>
+ </dd>
+<dt><code>-T </code><i>[from_date][,to_date][/[c][m]]</i></dt>
+<dd> <p> Allow files to be selected based on a file modification or inode change time falling within a specified time range of <i>from_date</i> to <i>to_date</i> (the dates are inclusive). If only a <i>from_date</i> is supplied, all files with a modification or inode change time equal to or younger are selected. If only a <i>to_date</i> is supplied, all files with a modification or inode change time equal to or older will be selected. When the <i>from_date</i> is equal to the <i>to_date</i> only files with a modification or inode change time of exactly that time will be selected. </p>
+<p> When is in the <i>write</i> or <i>copy</i> mode, the optional trailing field <i>[c][m]</i> can be used to determine which file time (inode change, file modification or both) are used in the comparison. If neither is specified, the default is to use file modification time only. The <i>m</i> specifies the comparison of file modification time (the time when the file was last written). The <i>c</i> specifies the comparison of inode change time (the time when the file inode was last changed; e.g., a change of owner, group, mode, etc). When <i>c</i> and <i>m</i> are both specified, then the modification and inode change times are both compared. The inode change time comparison is useful in selecting files whose attributes were recently changed or selecting files which were recently created and had their modification time reset to an older time (as what happens when a file is extracted from an archive and the modification time is preserved). Time comparisons using both file times is useful when is used to create a time based incremental archive (only files that were changed during a specified time range will be archived). </p>
+<p> A time range is made up of six different fields and each field must contain two digits. The format is: </p>
+<blockquote><p> <code>[[[[[cc]yy]mm]dd]HH]MM[.SS]</code> </p>
+</blockquote>
+<p> Where <code>cc</code> is the first two digits of the year (the century), <code>yy</code> is the last two digits of the year, the first <code>mm</code> is the month (from 01 to 12), <code>dd</code> is the day of the month (from 01 to 31), <code>HH</code> is the hour of the day (from 00 to 23), <code>MM</code> is the minute (from 00 to 59), and <code>SS</code> is the seconds (from 00 to 59). The minute field <code>MM</code> is required, while the other fields are optional and must be added in the following order: <br />
+ <code><code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code>HH , dd , mm</code> <br />
+ <code>yy , cc</code> <br />
+ The <code>SS</code> field may be added independently of the other fields. Time ranges are relative to the current time, so </p>
+<blockquote><p> <code>-</code><code>T </code><i>1234/cm</i> </p>
+</blockquote>
+<p> would select all files with a modification or inode change time of 12:34 PM today or later. Multiple -<code>T</code> time range can be supplied and checking stops with the first match. </p>
+ </dd>
+<dt><code>-U </code><i>user</i></dt>
+<dd> <p> Select a file based on its <i>user</i> name, or when starting with a <code>#</code> a numeric UID. A `\&#8216; can be used to escape the <code>#</code> Multiple -<code>U</code> options may be supplied and checking stops with the first match. </p>
+ </dd>
+<dt><code>-X</code></dt>
+<dd> <p> When traversing the file hierarchy specified by a pathname, do not descend into directories that have a different device ID. See the <code>st_dev</code> field as described in <a href="/docs/linux/man/2-stat/">stat</a>(2) for more information about device IDs. </p>
+ </dd>
+<dt><code>-Y</code></dt>
+<dd> <p> This option is the same as the -<code>D</code> option, except that the inode change time is checked using the pathname created after all the file name modifications have completed. </p>
+ </dd>
+<dt><code>-Z</code></dt>
+<dd> <p> This option is the same as the -<code>u</code> option, except that the modification time is checked using the pathname created after all the file name modifications have completed. </p>
+ </dd></dl>
+<p> The options that operate on the names of files or archive members Po Fl c , -<code>i</code> -<code>n</code> -<code>s</code> -<code>u</code> -<code>v</code> -<code>D</code> -<code>G</code> -<code>T</code> -<code>U</code> -<code>Y</code> and -<code>Z</code> Pc interact as follows. </p>
+<p> When extracting files during a <i>read</i> operation, archive members are `selected&#8217; based only on the user specified pattern operands as modified by the -<code>c</code> -<code>n</code> -<code>u</code> -<code>D</code> -<code>G</code> -<code>T</code> -<code>U</code> options. Then any -<code>s</code> and -<code>i</code> options will modify in that order, the names of these selected files. Then the -<code>Y</code> and -<code>Z</code> options will be applied based on the final pathname. Finally, the -<code>v</code> option will write the names resulting from these modifications. </p>
+<p> When archiving files during a <i>write</i> operation, or copying files during a <i>copy</i> operation, archive members are `selected&#8217; based only on the user specified pathnames as modified by the -<code>n</code> -<code>u</code> -<code>D</code> -<code>G</code> -<code>T</code> and -<code>U</code> options (the -<code>D</code> option only applies during a copy operation). Then any -<code>s</code> and -<code>i</code> options will modify in that order, the names of these selected files. Then during a <i>copy</i> operation the -<code>Y</code> and the -<code>Z</code> options will be applied based on the final pathname. Finally, the -<code>v</code> option will write the names resulting from these modifications. </p>
+<p> When one or both of the -<code>u</code> or -<code>D</code> options are specified along with the -<code>n</code> option, a file is not considered selected unless it is newer than the file to which it is compared.  </p>
+<h2>ENVIRONMENT</h2>
+<dl>
+<dt><code>TMPDIR</code></dt>
+<dd> <p> Path in which to store temporary files. </p>
+ </dd></dl>
+<h2>EXAMPLES</h2>
+<p> <code>$</code> -w -f /dev/rst0 . </p>
+<p> Copies the contents of the current directory to the device /dev/rst0 </p>
+<p> <code>$</code> -v -f filename </p>
+<p> Gives the verbose table of contents for an archive stored in filename </p>
+<p> <code>$ mkdir newdir</code> <code>cd olddir</code> -rw . newdir </p>
+<p> This sequence of commands will copy the entire olddir directory hierarchy to newdir </p>
+<p> <code>$</code> -r -s &#8216;,^//*usr//*,,&#8216; -f a.pax </p>
+<p> Reads the archive a.pax with all files rooted in /usr into the archive extracted relative to the current directory. </p>
+<p> <code>$</code> -rw -i . dest_dir </p>
+<p> Can be used to interactively select the files to copy from the current directory to dest_dir </p>
+<p> <code>$</code> -r -pe -U root -G bin -f a.pax </p>
+<p> Extract all files from the archive a.pax which are owned by <i>root</i> with group <i>bin</i> and preserve all file permissions. </p>
+<p> <code>$</code> -r -w -v -Y -Z home /backup&quot; </p>
+<p> Update (and list) only those files in the destination directory /backup which are older (less recent inode change or file modification times) than files with the same name found in the source file tree home  </p>
+<h2>DIAGNOSTICS</h2>
+<p> will exit with one of the following values: </p>
+<dl>
+<dt><code>0</code></dt>
+<dd> <p> All files were processed successfully. </p>
+ </dd>
+<dt><code>1</code></dt>
+<dd> <p> An error occurred. </p>
+ </dd></dl>
+<p> Whenever cannot create a file or a link when reading an archive or cannot find a file when writing an archive, or cannot preserve the user ID, group ID, or file mode when the -<code>p</code> option is specified, a diagnostic message is written to standard error and a non-zero exit status will be returned, but processing will continue. In the case where cannot create a link to a file, will not create a second copy of the file. </p>
+<p> If the extraction of a file from an archive is prematurely terminated by a signal or error, may have only partially extracted a file the user wanted. Additionally, the file modes of extracted files and directories may have incorrect file bits, and the modification and access times may be wrong. </p>
+<p> If the creation of an archive is prematurely terminated by a signal or error, may have only partially created the archive which may violate the specific archive format specification. </p>
+<p> If while doing a <i>copy</i> detects a file is about to overwrite itself, the file is not copied, a diagnostic message is written to standard error and when completes it will exit with a non-zero exit status.  </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-spax/">spax</a>(1), <a href="/docs/linux/man/1-tar/">tar</a>(1), <a href="/docs/linux/man/1-bsdtar/">bsdtar</a>(1), <a href="/docs/linux/man/1-star/">star</a>(1), <a href="/docs/linux/man/1-cpio/">cpio</a>(1), <a href="/docs/linux/man/1-bsdcpio/">bsdcpio</a>(1), scpio(1)  </p>
+<h2>STANDARDS</h2>
+<p> The utility is a superset of the St -p1003.2 standard. The options -<code>B</code> -<code>D</code> -<code>E</code> -<code>G</code> -<code>H</code> -<code>L</code> -<code>O</code> -<code>P</code> -<code>T</code> -<code>U</code> -<code>Y</code> -<code>Z</code> the archive formats <i>bcpio</i> <i>sv4cpio</i> <i>sv4crc</i> <i>tar</i> and the flawed archive handling during <i>list</i> and <i>read</i> operations are extensions to the <code>POSIX</code> standard.  </p>
+<h2>AUTHORS</h2>
+<p> Keith Muller at the University of California, San Diego. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">ENVIRONMENT</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">EXAMPLES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">DIAGNOSTICS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAH">SEE ALSO</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAI">STANDARDS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAJ">AUTHORS</a></dt>
+<dd>  </dd></dl>

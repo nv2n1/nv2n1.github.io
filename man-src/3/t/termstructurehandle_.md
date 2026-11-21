@@ -6,42 +6,87 @@ letter: "t"
 url: "/docs/linux/man/3-termstructurehandle_/"
 description: "QuantLib::FixedRateBondHelper – fixed-coupon bond helper"
 ---
-
 <p>QuantLib::FixedRateBondHelper &#8211; fixed-coupon bond helper </p>
-<h2>Synopsis</h2>
-<pre><code>void accept (AcyclicVisitor &amp;)
-Protected Attributes</code></pre>
-<p> Inherits <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>.</p>
+<h2>SYNOPSIS</h2>
+<p> <br />
+ </p>
+<p>#include &lt;ql/termstructures/yield/bondhelpers.hpp&gt; </p>
+<p>Inherits <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>. </p>
 <h3>Public Member Functions</h3>
-<p>void accept (AcyclicVisitor &amp;)</p>
-<p>Protected Attributes <code>BootstrapHelper interface</code> </p>
-<p> <code>Real</code> <code>impliedQuote</code> () const </p>
-<p> void <code>setTermStructure</code> (<code>YieldTermStructure</code> *)<br />
- <i>sets the term structure to be used for pricing </i> <code>additional inspectors</code> </p>
-<p> boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond</code> () const<br />
- <code>Visitability</code> </p>
-<pre><code>void accept (AcyclicVisitor &amp;)
-Protected Attributes</code></pre>
-<p> boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond_</code> </p>
-<p> <code>RelinkableHandle</code>&lt; <code>YieldTermStructure</code> &gt; <code>termStructureHandle_</code></p>
+<p> <br />
+ <code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;cleanPrice, <code>Natural</code> settlementDays, <code>Real</code> faceAmount, const <code>Schedule</code> &amp;schedule, const std::vector&lt; <code>Rate</code> &gt; &amp;coupons, const <code>DayCounter</code> &amp;dayCounter, <code>BusinessDayConvention</code> paymentConv=Following, <code>Real</code> redemption=100.0, const <code>Date</code> &amp;issueDate=<code>Date</code>()) <br />
+ <br />
+ <code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp;cleanPrice, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp;bond) <br />
+ </p>
+<p> <code>BootstrapHelper interface</code> <br />
+ </p>
+<p> <br />
+ <code>Real</code> <code>impliedQuote</code> () const <br />
+ <br />
+ void <code>setTermStructure</code> (<code>YieldTermStructure</code> *) <br />
+ <i>sets the term structure to be used for pricing </i> </p>
+<p> <code>additional inspectors</code> <br />
+ </p>
+<p> <br />
+ boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond</code> () const <br />
+ </p>
+<p> <code>Visitability</code> <br />
+ </p>
+<p> <br />
+ void <code>accept</code> (<code>AcyclicVisitor</code> &amp;) <br />
+  </p>
+<h3>Protected Attributes</h3>
+<p> <br />
+ boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; <code>bond_</code> <br />
+ <br />
+ <code>RelinkableHandle</code>&lt; <code>YieldTermStructure</code> &gt; <code>termStructureHandle_</code> <br />
+  </p>
 <h2>Detailed Description</h2>
 <p>fixed-coupon bond helper </p>
-<p> <code>Warning</code></p>
+<p> <code>Warning</code> </p>
 <dl>
-<dd>This class assumes that the reference date does not change between calls of <code>setTermStructure()</code>.</dd></dl>
+<dd> <p> This class assumes that the reference date does not change between calls of <code>setTermStructure()</code>. </p>
+ </dd></dl>
 <p> <code>Examples: </code> </p>
-<p> <code>Bonds.cpp</code>, and <code>FittedBondCurve.cpp</code>.</p>
+<p> <code>Bonds.cpp</code>, and <code>FittedBondCurve.cpp</code>.  </p>
 <h2>Constructor &amp; Destructor Documentation</h2>
-<h3><code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp; cleanPrice, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp; bond)</h3>
-<p><code>Warning</code></p>
+<code></code><code></code><code></code><code></code><h3>FixedRateBondHelper (const Handle &lt; Quote &gt; &amp; cleanPrice, const boost::shared_ptr&lt; FixedRateBond &gt; &amp; bond)</h3>
+<p> <code>Warning</code> </p>
 <dl>
-<dd>Setting a pricing engine to the passed bond from external code will cause the bootstrap to fail or to give wrong results. It is advised to discard the bond after creating the helper, so that the helper has sole ownership of it.</dd></dl>
+<dd> <p> Setting a pricing engine to the passed bond from external code will cause the bootstrap to fail or to give wrong results. It is advised to discard the bond after creating the helper, so that the helper has sole ownership of it. </p>
+ </dd></dl>
 <h2>Member Function Documentation</h2>
-<h3>void setTermStructure (<code>YieldTermStructure</code> *) [virtual]</h3>
+<code></code><h3>void setTermStructure ( YieldTermStructure *) [virtual]</h3>
 <p>sets the term structure to be used for pricing </p>
-<p> <code>Warning</code></p>
+<p> <code>Warning</code> </p>
 <dl>
-<dd>Being a pointer and not a shared_ptr, the term structure is not guaranteed to remain allocated for the whole life of the rate helper. It is responsibility of the programmer to ensure that the pointer remains valid. It is advised that this method is called only inside the term structure being bootstrapped, setting the pointer to <code>this</code>, i.e., the term structure itself.</dd></dl>
-<p> Reimplemented from <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>.</p>
+<dd> <p> Being a pointer and not a shared_ptr, the term structure is not guaranteed to remain allocated for the whole life of the rate helper. It is responsibility of the programmer to ensure that the pointer remains valid. It is advised that this method is called only inside the term structure being bootstrapped, setting the pointer to <code>this</code>, i.e., the term structure itself. </p>
+ </dd></dl>
+<p>Reimplemented from <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>. </p>
 <h2>Author</h2>
-<p>Generated automatically by Doxygen for QuantLib from the source code.</p>
+<p>Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAD">Public Member Functions</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">Protected Attributes</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAF">Detailed Description</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">Constructor &amp; Destructor Documentation</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAH"><code>FixedRateBondHelper</code> (const <code>Handle</code>&lt; <code>Quote</code> &gt; &amp; cleanPrice, const boost::shared_ptr&lt; <code>FixedRateBond</code> &gt; &amp; bond)</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAI">Member Function Documentation</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAJ">void setTermStructure (<code>YieldTermStructure</code> *) [virtual]</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd>  </dd></dl>

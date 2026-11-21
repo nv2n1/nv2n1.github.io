@@ -6,26 +6,1182 @@ letter: "p"
 url: "/docs/linux/man/1-psql/"
 description: "psql – PostgreSQL interactive terminal"
 ---
-
 <h2 class="name">NAME</h2>
-<p> psql &#8211; PostgreSQL interactive terminal </p>
+<p> psql - PostgreSQL interactive terminal </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>psql</code> [<i>option</i>&#8230;] [<i>dbname</i>&nbsp;<wbr>[<i>username</i>]]</dt></dl>
+<dt><code>psql</code> [<i>option</i>...] [<i>dbname</i>&nbsp;<wbr>[<i>username</i>]] </dt>
+</dl>
 <h2>DESCRIPTION</h2>
-<dd>psql is a terminal-based front-end to PostgreSQL. It enables you to type in queries interactively, issue them to PostgreSQL, and see the query results. Alternatively, input can be from a file. In addition, it provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks.</dd>
+<dd> <p> psql is a terminal-based front-end to PostgreSQL. It enables you to type in queries interactively, issue them to PostgreSQL, and see the query results. Alternatively, input can be from a file. In addition, it provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks.  </p>
 <h2>OPTIONS</h2>
-<p> <code>-a</code>, <code>&#8211;echo-all</code></p>
+<p> <code>-a</code>, <code>--echo-all</code> </p>
+ </dd>
 <dl>
-<dt>
-</dt><dd> Print all nonempty input lines to standard output as they are read. (This does not apply to lines read interactively.) This is equivalent to setting the variable <i>ECHO</i> to all.</dd></dl>
-<p> <code>-A</code>, <code>&#8211;no-align</code></p>
+<dd> <p> Print all nonempty input lines to standard output as they are read. (This does not apply to lines read interactively.) This is equivalent to setting the variable <i>ECHO</i> to all. </p>
+ </dd></dl>
+<p> <code>-A</code>, <code>--no-align</code> </p>
 <dl>
-<dt>
-</dt><dd> Switches to unaligned output mode. (The default output mode is otherwise aligned.)</dd></dl>
-<p> <code>-c </code><i>command</i>, <code>&#8211;command=</code><i>command</i></p>
+<dd> <p> Switches to unaligned output mode. (The default output mode is otherwise aligned.) </p>
+ </dd></dl>
+<p> <code>-c </code><i>command</i>, <code>--command=</code><i>command</i> </p>
 <dl>
-<dt>
-</dt><dd> Specifies that psql is to execute one command string, <i>command</i>, and then exit. This is useful in shell scripts. Start-up files (psqlrc and ~/.psqlrc) are ignored with this option. </dd>
-<p> <i>command</i> must be either a command string that is completely parsable by the server (i.e., it contains no psql-specific features), or a single backslash command. Thus you cannot mix SQL and psql meta-commands with this option. To achieve that, you could pipe the string into psql, for example: echo &#8216;
-</p></dl>
+<dd> <p> Specifies that psql is to execute one command string, <i>command</i>, and then exit. This is useful in shell scripts. Start-up files (psqlrc and ~/.psqlrc) are ignored with this option. </p>
+<p> <i>command</i> must be either a command string that is completely parsable by the server (i.e., it contains no psql-specific features), or a single backslash command. Thus you cannot mix SQL and psql meta-commands with this option. To achieve that, you could pipe the string into psql, for example: echo &#8216;\x \\ SELECT * FROM foo;&#8216; | psql. (\\ is the separator meta-command.) </p>
+<p> If the command string contains multiple SQL commands, they are processed in a single transaction, unless there are explicit <code>BEGIN</code>/<code>COMMIT</code> commands included in the string to divide it into multiple transactions. This is different from the behavior when the same string is fed to psql&#8217;s standard input. Also, only the result of the last SQL command is returned. </p>
+<p> Because of these legacy behaviors, putting more than one command in the <code>-c</code> string often has unexpected results. It&#8217;s better to feed multiple commands to psql&#8217;s standard input, either using echo as illustrated above, or via a shell here-document, for example: </p>
+ </dd>
+<dl>
+<dd> <pre><code>psql &lt;&lt;EOF
+\x
+SELECT * FROM foo;
+EOF
+</code></pre>
+ </dd></dl>
+<p> <code>-d </code><i>dbname</i>, <code>--dbname=</code><i>dbname</i> </p>
+<dl>
+<dd> <p> Specifies the name of the database to connect to. This is equivalent to specifying <i>dbname</i> as the first non-option argument on the command line. </p>
+<p> If this parameter contains an = sign or starts with a valid URI prefix (postgresql:// or postgres://), it is treated as a <i>conninfo</i> string. See Section 31.1, "Database Connection Control Functions", in the documentation for more information. </p>
+ </dd></dl>
+<p> <code>-e</code>, <code>--echo-queries</code> </p>
+<dl>
+<dd> <p> Copy all SQL commands sent to the server to standard output as well. This is equivalent to setting the variable <i>ECHO</i> to queries. </p>
+ </dd></dl>
+<p> <code>-E</code>, <code>--echo-hidden</code> </p>
+<dl>
+<dd> <p> Echo the actual queries generated by <code>\d</code> and other backslash commands. You can use this to study psql&#8217;s internal operations. This is equivalent to setting the variable <i>ECHO_HIDDEN</i> to on. </p>
+ </dd></dl>
+<p> <code>-f </code><i>filename</i>, <code>--file=</code><i>filename</i> </p>
+<dl>
+<dd> <p> Use the file <i>filename</i> as the source of commands instead of reading commands interactively. After the file is processed, psql terminates. This is in many ways equivalent to the meta-command <code>\i</code>. </p>
+<p> If <i>filename</i> is - (hyphen), then standard input is read until an EOF indication or <code>\q</code> meta-command. Note however that Readline is not used in this case (much as if <code>-n</code> had been specified). </p>
+<p> Using this option is subtly different from writing psql &lt; <i>filename</i>. In general, both will do what you expect, but using -f enables some nice features such as error messages with line numbers. There is also a slight chance that using this option will reduce the start-up overhead. On the other hand, the variant using the shell&#8217;s input redirection is (in theory) guaranteed to yield exactly the same output you would have received had you entered everything by hand. </p>
+ </dd></dl>
+<p> <code>-F </code><i>separator</i>, <code>--field-separator=</code><i>separator</i> </p>
+<dl>
+<dd> <p> Use <i>separator</i> as the field separator for unaligned output. This is equivalent to <code>\pset fieldsep</code> or <code>\f</code>. </p>
+ </dd></dl>
+<p> <code>-h </code><i>hostname</i>, <code>--host=</code><i>hostname</i> </p>
+<dl>
+<dd> <p> Specifies the host name of the machine on which the server is running. If the value begins with a slash, it is used as the directory for the Unix-domain socket. </p>
+ </dd></dl>
+<p> <code>-H</code>, <code>--html</code> </p>
+<dl>
+<dd> <p> Turn on HTML tabular output. This is equivalent to \pset format html or the <code>\H</code> command. </p>
+ </dd></dl>
+<p> <code>-l</code>, <code>--list</code> </p>
+<dl>
+<dd> <p> List all available databases, then exit. Other non-connection options are ignored. This is similar to the meta-command <code>\list</code>. </p>
+ </dd></dl>
+<p> <code>-L </code><i>filename</i>, <code>--log-file=</code><i>filename</i> </p>
+<dl>
+<dd> <p> Write all query output into file <i>filename</i>, in addition to the normal output destination. </p>
+ </dd></dl>
+<p> <code>-n</code>, <code>--no-readline</code> </p>
+<dl>
+<dd> <p> Do not use Readline for line editing and do not use the command history. This can be useful to turn off tab expansion when cutting and pasting. </p>
+ </dd></dl>
+<p> <code>-o </code><i>filename</i>, <code>--output=</code><i>filename</i> </p>
+<dl>
+<dd> <p> Put all query output into file <i>filename</i>. This is equivalent to the command <code>\o</code>. </p>
+ </dd></dl>
+<p> <code>-p </code><i>port</i>, <code>--port=</code><i>port</i> </p>
+<dl>
+<dd> <p> Specifies the TCP port or the local Unix-domain socket file extension on which the server is listening for connections. Defaults to the value of the <code>PGPORT</code> environment variable or, if not set, to the port specified at compile time, usually 5432. </p>
+ </dd></dl>
+<p> <code>-P </code><i>assignment</i>, <code>--pset=</code><i>assignment</i> </p>
+<dl>
+<dd> <p> Specifies printing options, in the style of <code>\pset</code>. Note that here you have to separate name and value with an equal sign instead of a space. For example, to set the output format to LaTeX, you could write -P format=latex. </p>
+ </dd></dl>
+<p> <code>-q</code>, <code>--quiet</code> </p>
+<dl>
+<dd> <p> Specifies that psql should do its work quietly. By default, it prints welcome messages and various informational output. If this option is used, none of this happens. This is useful with the <code>-c</code> option. This is equivalent to setting the variable <i>QUIET</i> to on. </p>
+ </dd></dl>
+<p> <code>-R </code><i>separator</i>, <code>--record-separator=</code><i>separator</i> </p>
+<dl>
+<dd> <p> Use <i>separator</i> as the record separator for unaligned output. This is equivalent to the <code>\pset recordsep</code> command. </p>
+ </dd></dl>
+<p> <code>-s</code>, <code>--single-step</code> </p>
+<dl>
+<dd> <p> Run in single-step mode. That means the user is prompted before each command is sent to the server, with the option to cancel execution as well. Use this to debug scripts. </p>
+ </dd></dl>
+<p> <code>-S</code>, <code>--single-line</code> </p>
+<dl>
+<dd> <p> Runs in single-line mode where a newline terminates an SQL command, as a semicolon does. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ This mode is provided for those who insist on it, but you are not necessarily encouraged to use it. In particular, if you mix SQL and meta-commands on a line the order of execution might not always be clear to the inexperienced user. </p>
+ </dd></dl>
+</dl>
+<p> <code>-t</code>, <code>--tuples-only</code> </p>
+<dl>
+<dd> <p> Turn off printing of column names and result row count footers, etc. This is equivalent to the <code>\t</code> command. </p>
+ </dd></dl>
+<p> <code>-T </code><i>table_options</i>, <code>--table-attr=</code><i>table_options</i> </p>
+<dl>
+<dd> <p> Specifies options to be placed within the HTMLtable tag. See <code>\pset</code> for details. </p>
+ </dd></dl>
+<p> <code>-U </code><i>username</i>, <code>--username=</code><i>username</i> </p>
+<dl>
+<dd> <p> Connect to the database as the user <i>username</i> instead of the default. (You must have permission to do so, of course.) </p>
+ </dd></dl>
+<p> <code>-v </code><i>assignment</i>, <code>--set=</code><i>assignment</i>, <code>--variable=</code><i>assignment</i> </p>
+<dl>
+<dd> <p> Perform a variable assignment, like the <code>\set</code> meta-command. Note that you must separate name and value, if any, by an equal sign on the command line. To unset a variable, leave off the equal sign. To set a variable with an empty value, use the equal sign but leave off the value. These assignments are done during a very early stage of start-up, so variables reserved for internal purposes might get overwritten later. </p>
+ </dd></dl>
+<p> <code>-V</code>, <code>--version</code> </p>
+<dl>
+<dd> <p> Print the psql version and exit. </p>
+ </dd></dl>
+<p> <code>-w</code>, <code>--no-password</code> </p>
+<dl>
+<dd> <p> Never issue a password prompt. If the server requires password authentication and a password is not available by other means such as a .pgpass file, the connection attempt will fail. This option can be useful in batch jobs and scripts where no user is present to enter a password. </p>
+<p> Note that this option will remain set for the entire session, and so it affects uses of the meta-command <code>\connect</code> as well as the initial connection attempt. </p>
+ </dd></dl>
+<p> <code>-W</code>, <code>--password</code> </p>
+<dl>
+<dd> <p> Force psql to prompt for a password before connecting to a database. </p>
+<p> This option is never essential, since psql will automatically prompt for a password if the server demands password authentication. However, psql will waste a connection attempt finding out that the server wants a password. In some cases it is worth typing <code>-W</code> to avoid the extra connection attempt. </p>
+<p> Note that this option will remain set for the entire session, and so it affects uses of the meta-command <code>\connect</code> as well as the initial connection attempt. </p>
+ </dd></dl>
+<p> <code>-x</code>, <code>--expanded</code> </p>
+<dl>
+<dd> <p> Turn on the expanded table formatting mode. This is equivalent to the <code>\x</code> command. </p>
+ </dd></dl>
+<p> <code>-X,</code>, <code>--no-psqlrc</code> </p>
+<dl>
+<dd> <p> Do not read the start-up file (neither the system-wide psqlrc file nor the user&#8217;s ~/.psqlrc file). </p>
+ </dd></dl>
+<p> <code>-z</code>, <code>--field-separator-zero</code> </p>
+<dl>
+<dd> <p> Set the field separator for unaligned output to a zero byte. </p>
+ </dd></dl>
+<p> <code>-0</code>, <code>--record-separator-zero</code> </p>
+<dl>
+<dd> <p> Set the record separator for unaligned output to a zero byte. This is useful for interfacing, for example, with xargs -0. </p>
+ </dd></dl>
+<p> <code>-1</code>, <code>--single-transaction</code> </p>
+<dl>
+<dd> <p> When psql executes a script with the <code>-f</code> option, adding this option wraps <code>BEGIN</code>/<code>COMMIT</code> around the script to execute it as a single transaction. This ensures that either all the commands complete successfully, or no changes are applied. </p>
+<p> If the script itself uses <code>BEGIN</code>, <code>COMMIT</code>, or <code>ROLLBACK</code>, this option will not have the desired effects. Also, if the script contains any command that cannot be executed inside a transaction block, specifying this option will cause that command (and hence the whole transaction) to fail. </p>
+ </dd></dl>
+<p> <code>-?</code>, <code>--help</code> </p>
+<dl>
+<dd> <p> Show help about psql command line arguments, and exit. </p>
+ </dd></dl>
+<h2>EXIT STATUS</h2>
+<p> psql returns 0 to the shell if it finished normally, 1 if a fatal error of its own occurs (e.g. out of memory, file not found), 2 if the connection to the server went bad and the session was not interactive, and 3 if an error occurred in a script and the variable <i>ON_ERROR_STOP</i> was set.  </p>
+<h2>USAGE</h2>
+<h3>Connecting to a Database</h3>
+<p> psql is a regular PostgreSQL client application. In order to connect to a database you need to know the name of your target database, the host name and port number of the server, and what user name you want to connect as. psql can be told about those parameters via command line options, namely <code>-d</code>, <code>-h</code>, <code>-p</code>, and <code>-U</code> respectively. If an argument is found that does not belong to any option it will be interpreted as the database name (or the user name, if the database name is already given). Not all of these options are required; there are useful defaults. If you omit the host name, psql will connect via a Unix-domain socket to a server on the local host, or via TCP/IP to localhost on machines that don&#8217;t have Unix-domain sockets. The default port number is determined at compile time. Since the database server uses the same default, you will not have to specify the port in most cases. The default user name is your operating-system user name, as is the default database name. Note that you cannot just connect to any database under any user name. Your database administrator should have informed you about your access rights. </p>
+<p> When the defaults aren&#8217;t quite right, you can save yourself some typing by setting the environment variables <code>PGDATABASE</code>, <code>PGHOST</code>, <code>PGPORT</code> and/or <code>PGUSER</code> to appropriate values. (For additional environment variables, see Section 31.14, "Environment Variables", in the documentation.) It is also convenient to have a ~/.pgpass file to avoid regularly having to type in passwords. See Section 31.15, "The Password File", in the documentation for more information. </p>
+<p> An alternative way to specify connection parameters is in a <i>conninfo</i> string or a URI, which is used instead of a database name. This mechanism give you very wide control over the connection. For example: </p>
+<dl>
+<dd> <pre><code>$ psql &quot;service=myservice sslmode=require&quot; $ psql postgresql://dbmaster:5433/mydb?sslmode=require 
+</code></pre>
+ </dd></dl>
+<p> This way you can also use LDAP for connection parameter lookup as described in Section 31.17, "LDAP Lookup of Connection Parameters", in the documentation. See Section 31.1, "Database Connection Control Functions", in the documentation for more information on all the available connection options. </p>
+<p> If the connection could not be made for any reason (e.g., insufficient privileges, server is not running on the targeted host, etc.), psql will return an error and terminate. </p>
+<p> If at least one of standard input or standard output are a terminal, then psql sets the client encoding to "auto", which will detect the appropriate client encoding from the locale settings (<code>LC_CTYPE</code> environment variable on Unix systems). If this doesn&#8217;t work out as expected, the client encoding can be overridden using the environment variable <code>PGCLIENTENCODING</code>.  </p>
+<h3>Entering SQL Commands</h3>
+<p> In normal operation, psql provides a prompt with the name of the database to which psql is currently connected, followed by the string =&gt;. For example: </p>
+<dl>
+<dd> <pre><code>$ psql testdb psql (9.2.18)
+Type &quot;help&quot; for help.
+testdb=&gt;
+</code></pre>
+ </dd></dl>
+<p> At the prompt, the user can type in SQL commands. Ordinarily, input lines are sent to the server when a command-terminating semicolon is reached. An end of line does not terminate a command. Thus commands can be spread over several lines for clarity. If the command was sent and executed without error, the results of the command are displayed on the screen. </p>
+<p> Whenever a command is executed, psql also polls for asynchronous notification events generated by <code><a href="/docs/linux/man/7-LISTEN/">LISTEN</a></code>(7) and <code><a href="/docs/linux/man/7-NOTIFY/">NOTIFY</a></code>(7).  </p>
+<h3>Meta-Commands</h3>
+<p> Anything you enter in psql that begins with an unquoted backslash is a psql meta-command that is processed by psql itself. These commands make psql more useful for administration or scripting. Meta-commands are often called slash or backslash commands. </p>
+<p> The format of a psql command is the backslash, followed immediately by a command verb, then any arguments. The arguments are separated from the command verb and each other by any number of whitespace characters. </p>
+<p> To include whitespace in an argument you can quote it with single quotes. To include a single quote in an argument, write two single quotes within single-quoted text. Anything contained in single quotes is furthermore subject to C-like substitutions for \n (new line), \t (tab), \b (backspace), \r (carriage return), \f (form feed), \<i>digits</i> (octal), and \x <i>digits</i> (hexadecimal). A backslash preceding any other character within single-quoted text quotes that single character, whatever it is. </p>
+<p> Within an argument, text that is enclosed in backquotes (`) is taken as a command line that is passed to the shell. The output of the command (with any trailing newline removed) replaces the backquoted text. </p>
+<p> If an unquoted colon (:) followed by a psql variable name appears within an argument, it is replaced by the variable&#8217;s value, as described in SQL Interpolation. </p>
+<p> Some commands take an SQL identifier (such as a table name) as argument. These arguments follow the syntax rules of SQL: Unquoted letters are forced to lowercase, while double quotes (&quot;) protect letters from case conversion and allow incorporation of whitespace into the identifier. Within double quotes, paired double quotes reduce to a single double quote in the resulting name. For example, FOO&quot;BAR&quot;BAZ is interpreted as fooBARbaz, and &quot;A weird&quot;&quot; name&quot; becomes A weird&quot; name. </p>
+<p> Parsing for arguments stops at the end of the line, or when another unquoted backslash is found. An unquoted backslash is taken as the beginning of a new meta-command. The special sequence \\ (two backslashes) marks the end of arguments and continues parsing SQL commands, if any. That way SQL and psql commands can be freely mixed on a line. But in any case, the arguments of a meta-command cannot continue beyond the end of the line. </p>
+<p> The following meta-commands are defined: </p>
+<p> \a </p>
+<dl>
+<dd> <p> If the current table output format is unaligned, it is switched to aligned. If it is not unaligned, it is set to unaligned. This command is kept for backwards compatibility. See <code>\pset</code> for a more general solution. </p>
+ </dd></dl>
+<p> \c or \connect [ -reuse-previous=<i>on|off</i> ] [ <i>dbname</i> [ <i>username</i> ] [ <i>host</i> ] [ <i>port</i> ] | <i>conninfo</i> ] </p>
+<dl>
+<dd> <p> Establishes a new connection to a PostgreSQL server. The connection parameters to use can be specified either using a positional syntax, or using conninfo connection strings as detailed in Section 31.1.1, "Connection Strings", in the documentation. </p>
+<p> Where the command omits database name, user, host, or port, the new connection can reuse values from the previous connection. By default, values from the previous connection are reused except when processing a conninfo string. Passing a first argument of -reuse-previous=on or -reuse-previous=off overrides that default. When the command neither specifies nor reuses a particular parameter, the libpq default is used. Specifying any of <i>dbname</i>, <i>username</i>, <i>host</i> or <i>port</i> as - is equivalent to omitting that parameter. </p>
+<p> If the new connection is successfully made, the previous connection is closed. If the connection attempt failed (wrong user name, access denied, etc.), the previous connection will only be kept if psql is in interactive mode. When executing a non-interactive script, processing will immediately stop with an error. This distinction was chosen as a user convenience against typos on the one hand, and a safety mechanism that scripts are not accidentally acting on the wrong database on the other hand. </p>
+<p> Examples: </p>
+ </dd>
+<dl>
+<dd> <pre><code>=&gt; \c mydb myuser host.dom 6432
+=&gt; \c service=foo
+=&gt; \c &quot;host=localhost port=5432 dbname=mydb connect_timeout=10 sslmode=disable&quot;
+=&gt; \c postgresql://tom [at] localhost/mydb?application_name=myapp
+</code></pre>
+ </dd></dl>
+</dl>
+<p> \C [ <i>title</i> ] </p>
+<dl>
+<dd> <p> Sets the title of any tables being printed as the result of a query or unset any such title. This command is equivalent to \pset title <i>title</i>. (The name of this command derives from "caption", as it was previously only used to set the caption in an HTML table.) </p>
+ </dd></dl>
+<p> \cd [ <i>directory</i> ] </p>
+<dl>
+<dd> <p> Changes the current working directory to <i>directory</i>. Without argument, changes to the current user&#8217;s home directory. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ To print your current working directory, use \! pwd. </p>
+ </dd></dl>
+</dl>
+<p> \conninfo </p>
+<dl>
+<dd> <p> Outputs information about the current database connection. </p>
+ </dd></dl>
+<p> \copy { <i>table</i> [ ( <i>column_list</i> ) ] | ( <i>query</i> ) } { from | to } { <i>filename</i> | stdin | stdout | pstdin | pstdout } [ with ] [ binary ] [ oids ] [ delimiter [ as ] &#8216;<i>character</i>&#8216; ] [ null [ as ] &#8216;<i>string</i>&#8216; ] [ csv [ header ] [ quote [ as ] &#8216;<i>character</i>&#8216; ] [ escape [ as ] &#8216;<i>character</i>&#8216; ] [ force quote <i>column_list</i> | * ] [ force not null <i>column_list</i> ] ] </p>
+<dl>
+<dd> <p> Performs a frontend (client) copy. This is an operation that runs an SQL <code><a href="/docs/linux/man/7-COPY/">COPY</a></code>(7) command, but instead of the server reading or writing the specified file, psql reads or writes the file and routes the data between the server and the local file system. This means that file accessibility and privileges are those of the local user, not the server, and no SQL superuser privileges are required. </p>
+<p> The syntax of the command is similar to that of the SQL <code><a href="/docs/linux/man/7-COPY/">COPY</a></code>(7) command. Note that, because of this, special parsing rules apply to the <code>\copy</code> command. In particular, the variable substitution rules and backslash escapes do not apply. </p>
+<p> \copy ... from stdin | to stdout reads/writes based on the command input and output respectively. All rows are read from the same source that issued the command, continuing until \. is read or the stream reaches EOF. Output is sent to the same place as command output. To read/write from psql&#8217;s standard input or output, use pstdin or pstdout. This option is useful for populating tables in-line within a SQL script file. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ This operation is not as efficient as the SQL <code>COPY</code> command because all data must pass through the client/server connection. For large amounts of data the SQL command might be preferable. </p>
+ </dd></dl>
+</dl>
+<p> \copyright </p>
+<dl>
+<dd> <p> Shows the copyright and distribution terms of PostgreSQL. </p>
+ </dd></dl>
+<p> \d[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> For each relation (table, view, index, sequence, or foreign table) or composite type matching the <i>pattern</i>, show all columns, their types, the tablespace (if not the default) and any special attributes such as NOT NULL or defaults. Associated indexes, constraints, rules, and triggers are also shown. For foreign tables, the associated foreign server is shown as well. ("Matching the pattern" is defined in Patterns below.) </p>
+<p> For some types of relation, \d shows additional information for each column: column values for sequences, indexed expression for indexes and foreign data wrapper options for foreign tables. </p>
+<p> The command form \d+ is identical, except that more information is displayed: any comments associated with the columns of the table are shown, as is the presence of OIDs in the table, the view definition if the relation is a view. </p>
+<p> By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ If <code>\d</code> is used without a <i>pattern</i> argument, it is equivalent to <code>\dtvsE</code> which will show a list of all visible tables, views, sequences and foreign tables. This is purely a convenience measure. </p>
+ </dd></dl>
+</dl>
+<p> \da[S] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists aggregate functions, together with their return type and the data types they operate on. If <i>pattern</i> is specified, only aggregates whose names match the pattern are shown. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
+ </dd></dl>
+<p> \db[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists tablespaces. If <i>pattern</i> is specified, only tablespaces whose names match the pattern are shown. If + is appended to the command name, each object is listed with its associated permissions. </p>
+ </dd></dl>
+<p> \dc[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists conversions between character-set encodings. If <i>pattern</i> is specified, only conversions whose names match the pattern are listed. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. If + is appended to the command name, each object is listed with its associated description. </p>
+ </dd></dl>
+<p> \dC[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists type casts. If <i>pattern</i> is specified, only casts whose source or target types match the pattern are listed. If + is appended to the command name, each object is listed with its associated description. </p>
+ </dd></dl>
+<p> \dd[S] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Shows the descriptions of objects of type constraint, operator class, operator family, rule, and trigger. All other comments may be viewed by the respective backslash commands for those object types. </p>
+<p> \dd displays descriptions for objects matching the <i>pattern</i>, or of visible objects of the appropriate type if no argument is given. But in either case, only objects that have a description are listed. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
+<p> Descriptions for objects can be created with the <code><a href="/docs/linux/man/7-COMMENT/">COMMENT</a></code>(7)SQL command. </p>
+ </dd></dl>
+<p> \ddp [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists default access privilege settings. An entry is shown for each role (and schema, if applicable) for which the default privilege settings have been changed from the built-in defaults. If <i>pattern</i> is specified, only entries whose role name or schema name matches the pattern are listed. </p>
+<p> The ALTER DEFAULT PRIVILEGES (<code><a href="/docs/linux/man/7-ALTER_DEFAULT_PRIVILEGES/">ALTER_DEFAULT_PRIVILEGES</a></code>(7)) command is used to set default access privileges. The meaning of the privilege display is explained under <code><a href="/docs/linux/man/7-GRANT/">GRANT</a></code>(7). </p>
+ </dd></dl>
+<p> \dD[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists domains. If <i>pattern</i> is specified, only domains whose names match the pattern are shown. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. If + is appended to the command name, each object is listed with its associated permissions and description. </p>
+ </dd></dl>
+<p> \dE[S+] [ <i>pattern</i> ], \di[S+] [ <i>pattern</i> ], \ds[S+] [ <i>pattern</i> ], \dt[S+] [ <i>pattern</i> ], \dv[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> In this group of commands, the letters E, i, s, t, and v stand for foreign table, index, sequence, table, and view, respectively. You can specify any or all of these letters, in any order, to obtain a listing of objects of these types. For example, \dit lists indexes and tables. If + is appended to the command name, each object is listed with its physical size on disk and its associated description, if any. If <i>pattern</i> is specified, only objects whose names match the pattern are listed. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
+ </dd></dl>
+<p> \des[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists foreign servers (mnemonic: "external servers"). If <i>pattern</i> is specified, only those servers whose name matches the pattern are listed. If the form \des+ is used, a full description of each server is shown, including the server&#8217;s ACL, type, version, options, and description. </p>
+ </dd></dl>
+<p> \det[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists foreign tables (mnemonic: "external tables"). If <i>pattern</i> is specified, only entries whose table name or schema name matches the pattern are listed. If the form \det+ is used, generic options and the foreign table description are also displayed. </p>
+ </dd></dl>
+<p> \deu[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists user mappings (mnemonic: "external users"). If <i>pattern</i> is specified, only those mappings whose user names match the pattern are listed. If the form \deu+ is used, additional information about each mapping is shown. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Caution</code> </font> <br />
+ \deu+ might also display the user name and password of the remote user, so care should be taken not to disclose them. </p>
+ </dd></dl>
+</dl>
+<p> \dew[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists foreign-data wrappers (mnemonic: "external wrappers"). If <i>pattern</i> is specified, only those foreign-data wrappers whose name matches the pattern are listed. If the form \dew+ is used, the ACL, options, and description of the foreign-data wrapper are also shown. </p>
+ </dd></dl>
+<p> \df[antwS+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists functions, together with their arguments, return types, and function types, which are classified as "agg" (aggregate), "normal", "trigger", or "window". To display only functions of specific type(s), add the corresponding letters a, n, t, or w to the command. If <i>pattern</i> is specified, only functions whose names match the pattern are shown. If the form \df+ is used, additional information about each function, including volatility, language, source code and description, is shown. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ To look up functions taking arguments or returning values of a specific type, use your pager&#8217;s search capability to scroll through the \df output. </p>
+ </dd></dl>
+</dl>
+<p> \dF[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists text search configurations. If <i>pattern</i> is specified, only configurations whose names match the pattern are shown. If the form \dF+ is used, a full description of each configuration is shown, including the underlying text search parser and the dictionary list for each parser token type. </p>
+ </dd></dl>
+<p> \dFd[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists text search dictionaries. If <i>pattern</i> is specified, only dictionaries whose names match the pattern are shown. If the form \dFd+ is used, additional information is shown about each selected dictionary, including the underlying text search template and the option values. </p>
+ </dd></dl>
+<p> \dFp[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists text search parsers. If <i>pattern</i> is specified, only parsers whose names match the pattern are shown. If the form \dFp+ is used, a full description of each parser is shown, including the underlying functions and the list of recognized token types. </p>
+ </dd></dl>
+<p> \dFt[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists text search templates. If <i>pattern</i> is specified, only templates whose names match the pattern are shown. If the form \dFt+ is used, additional information is shown about each template, including the underlying function names. </p>
+ </dd></dl>
+<p> \dg[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists database roles. (Since the concepts of "users" and "groups" have been unified into "roles", this command is now equivalent to \du.) If <i>pattern</i> is specified, only those roles whose names match the pattern are listed. If the form \dg+ is used, additional information is shown about each role; currently this adds the comment for each role. </p>
+ </dd></dl>
+<p> \dl </p>
+<dl>
+<dd> <p> This is an alias for <code>\lo_list</code>, which shows a list of large objects. </p>
+ </dd></dl>
+<p> \dL[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists procedural languages. If <i>pattern</i> is specified, only languages whose names match the pattern are listed. By default, only user-created languages are shown; supply the S modifier to include system objects. If + is appended to the command name, each language is listed with its call handler, validator, access privileges, and whether it is a system object. </p>
+ </dd></dl>
+<p> \dn[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists schemas (namespaces). If <i>pattern</i> is specified, only schemas whose names match the pattern are listed. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. If + is appended to the command name, each object is listed with its associated permissions and description, if any. </p>
+ </dd></dl>
+<p> \do[S] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists operators with their operand and return types. If <i>pattern</i> is specified, only operators whose names match the pattern are listed. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
+ </dd></dl>
+<p> \dO[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists collations. If <i>pattern</i> is specified, only collations whose names match the pattern are listed. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. If + is appended to the command name, each collation is listed with its associated description, if any. Note that only collations usable with the current database&#8217;s encoding are shown, so the results may vary in different databases of the same installation. </p>
+ </dd></dl>
+<p> \dp [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists tables, views and sequences with their associated access privileges. If <i>pattern</i> is specified, only tables, views and sequences whose names match the pattern are listed. </p>
+<p> The <code><a href="/docs/linux/man/7-GRANT/">GRANT</a></code>(7) and <code><a href="/docs/linux/man/7-REVOKE/">REVOKE</a></code>(7) commands are used to set access privileges. The meaning of the privilege display is explained under <code><a href="/docs/linux/man/7-GRANT/">GRANT</a></code>(7). </p>
+ </dd></dl>
+<p> \drds [ <i>role-pattern</i> [ <i>database-pattern</i> ] ] </p>
+<dl>
+<dd> <p> Lists defined configuration settings. These settings can be role-specific, database-specific, or both. <i>role-pattern</i> and <i>database-pattern</i> are used to select specific roles and databases to list, respectively. If omitted, or if * is specified, all settings are listed, including those not role-specific or database-specific, respectively. </p>
+<p> The ALTER ROLE (<code><a href="/docs/linux/man/7-ALTER_ROLE/">ALTER_ROLE</a></code>(7)) and ALTER DATABASE (<code><a href="/docs/linux/man/7-ALTER_DATABASE/">ALTER_DATABASE</a></code>(7)) commands are used to define per-role and per-database configuration settings. </p>
+ </dd></dl>
+<p> \dT[S+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists data types. If <i>pattern</i> is specified, only types whose names match the pattern are listed. If + is appended to the command name, each type is listed with its internal name and size, its allowed values if it is an enum type, and its associated permissions. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects. </p>
+ </dd></dl>
+<p> \du[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists database roles. (Since the concepts of "users" and "groups" have been unified into "roles", this command is now equivalent to \dg.) If <i>pattern</i> is specified, only those roles whose names match the pattern are listed. If the form \du+ is used, additional information is shown about each role; currently this adds the comment for each role. </p>
+ </dd></dl>
+<p> \dx[+] [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists installed extensions. If <i>pattern</i> is specified, only those extensions whose names match the pattern are listed. If the form \dx+ is used, all the objects belonging to each matching extension are listed. </p>
+ </dd></dl>
+<p> \e or \edit [ <i>filename</i> ] [ <i>line_number</i> ] </p>
+<dl>
+<dd> <p> If <i>filename</i> is specified, the file is edited; after the editor exits, its content is copied back to the query buffer. If no <i>filename</i> is given, the current query buffer is copied to a temporary file which is then edited in the same fashion. </p>
+<p> The new query buffer is then re-parsed according to the normal rules of psql, where the whole buffer is treated as a single line. (Thus you cannot make scripts this way. Use <code>\i</code> for that.) This means that if the query ends with (or contains) a semicolon, it is immediately executed. Otherwise it will merely wait in the query buffer; type semicolon or \g to send it, or \r to cancel. </p>
+<p> If a line number is specified, psql will position the cursor on the specified line of the file or query buffer. Note that if a single all-digits argument is given, psql assumes it is a line number, not a file name. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ See under ENVIRONMENT for how to configure and customize your editor. </p>
+ </dd></dl>
+</dl>
+<p> \echo <i>text</i> [ ... ] </p>
+<dl>
+<dd> <p> Prints the arguments to the standard output, separated by one space and followed by a newline. This can be useful to intersperse information in the output of scripts. For example: </p>
+ </dd>
+<dl>
+<dd> <pre><code>=&gt; \echo `date` Tue Oct 26 21:40:57 CEST 1999
+</code></pre>
+ </dd></dl>
+<p> If the first argument is an unquoted -n the trailing newline is not written. </p>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ If you use the <code>\o</code> command to redirect your query output you might wish to use <code>\qecho</code> instead of this command. </p>
+ </dd></dl>
+</dl>
+<p> \ef [ <i>function_description</i> [ <i>line_number</i> ] ] </p>
+<dl>
+<dd> <p> This command fetches and edits the definition of the named function, in the form of a <code>CREATE OR REPLACE FUNCTION</code> command. Editing is done in the same way as for \edit. After the editor exits, the updated command waits in the query buffer; type semicolon or \g to send it, or \r to cancel. </p>
+<p> The target function can be specified by name alone, or by name and arguments, for example foo(integer, text). The argument types must be given if there is more than one function of the same name. </p>
+<p> If no function is specified, a blank <code>CREATE FUNCTION</code> template is presented for editing. </p>
+<p> If a line number is specified, psql will position the cursor on the specified line of the function body. (Note that the function body typically does not begin on the first line of the file.) </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ See under ENVIRONMENT for how to configure and customize your editor. </p>
+ </dd></dl>
+</dl>
+<p> \encoding [ <i>encoding</i> ] </p>
+<dl>
+<dd> <p> Sets the client character set encoding. Without an argument, this command shows the current encoding. </p>
+ </dd></dl>
+<p> \f [ <i>string</i> ] </p>
+<dl>
+<dd> <p> Sets the field separator for unaligned query output. The default is the vertical bar (|). See also <code>\pset</code> for a generic way of setting output options. </p>
+ </dd></dl>
+<p> \g [ <i>filename</i> ], \g [ |<i>command</i> ] </p>
+<dl>
+<dd> <p> Sends the current query input buffer to the server, and optionally stores the query&#8217;s output in <i>filename</i> or pipes the output to the shell command <i>command</i>. A bare \g is virtually equivalent to a semicolon. A \g with argument is a "one-shot" alternative to the <code>\o</code> command. </p>
+ </dd></dl>
+<p> \h or \help [ <i>command</i> ] </p>
+<dl>
+<dd> <p> Gives syntax help on the specified SQL command. If <i>command</i> is not specified, then psql will list all the commands for which syntax help is available. If <i>command</i> is an asterisk (*), then syntax help on all SQL commands is shown. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ To simplify typing, commands that consists of several words do not have to be quoted. Thus it is fine to type <code>\help alter table</code>. </p>
+ </dd></dl>
+</dl>
+<p> \H or \html </p>
+<dl>
+<dd> <p> Turns on HTML query output format. If the HTML format is already on, it is switched back to the default aligned text format. This command is for compatibility and convenience, but see <code>\pset</code> about setting other output options. </p>
+ </dd></dl>
+<p> \i or \include <i>filename</i> </p>
+<dl>
+<dd> <p> Reads input from the file <i>filename</i> and executes it as though it had been typed on the keyboard. </p>
+<p> If <i>filename</i> is - (hyphen), then standard input is read until an EOF indication or <code>\q</code> meta-command. This can be used to intersperse interactive input with input from files. Note that Readline behavior will be used only if it is active at the outermost level. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ If you want to see the lines on the screen as they are read you must set the variable <i>ECHO</i> to all. </p>
+ </dd></dl>
+</dl>
+<p> \ir or \include_relative <i>filename</i> </p>
+<dl>
+<dd> <p> The \ir command is similar to \i, but resolves relative file names differently. When executing in interactive mode, the two commands behave identically. However, when invoked from a script, \ir interprets file names relative to the directory in which the script is located, rather than the current working directory. </p>
+ </dd></dl>
+<p> \l (or \list), \l+ (or \list+) </p>
+<dl>
+<dd> <p> List the names, owners, character set encodings, and access privileges of all the databases in the server. If + is appended to the command name, database sizes, default tablespaces, and descriptions are also displayed. (Size information is only available for databases that the current user can connect to.) </p>
+ </dd></dl>
+<p> \lo_export <i>loid</i> <i>filename</i> </p>
+<dl>
+<dd> <p> Reads the large object with OID <i>loid</i> from the database and writes it to <i>filename</i>. Note that this is subtly different from the server function <code>lo_export</code>, which acts with the permissions of the user that the database server runs as and on the server&#8217;s file system. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ Use <code>\lo_list</code> to find out the large object&#8217;s OID. </p>
+ </dd></dl>
+</dl>
+<p> \lo_import <i>filename</i> [ <i>comment</i> ] </p>
+<dl>
+<dd> <p> Stores the file into a PostgreSQL large object. Optionally, it associates the given comment with the object. Example: </p>
+ </dd>
+<dl>
+<dd> <pre><code>foo=&gt; \lo_import '/home/peter/pictures/photo.xcf' 'a picture of me' lo_import 152801
+</code></pre>
+ </dd></dl>
+<p> The response indicates that the large object received object ID 152801, which can be used to access the newly-created large object in the future. For the sake of readability, it is recommended to always associate a human-readable comment with every object. Both OIDs and comments can be viewed with the <code>\lo_list</code> command. </p>
+<p> Note that this command is subtly different from the server-side <code>lo_import</code> because it acts as the local user on the local file system, rather than the server&#8217;s user and file system. </dl>
+ </p>
+<p> \lo_list </p>
+<dl>
+<dd> <p> Shows a list of all PostgreSQL large objects currently stored in the database, along with any comments provided for them. </p>
+ </dd></dl>
+<p> \lo_unlink <i>loid</i> </p>
+<dl>
+<dd> <p> Deletes the large object with OID <i>loid</i> from the database. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ Use <code>\lo_list</code> to find out the large object&#8217;s OID. </p>
+ </dd></dl>
+</dl>
+<p> \o or \out [ <i>filename</i> ], \o or \out [ |<i>command</i> ] </p>
+<dl>
+<dd> <p> Arranges to save future query results to the file <i>filename</i> or pipe future results to the shell command <i>command</i>. If no argument is specified, the query output is reset to the standard output. </p>
+<p> "Query results" includes all tables, command responses, and notices obtained from the database server, as well as output of various backslash commands that query the database (such as <code>\d</code>), but not error messages. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ To intersperse text output in between query results, use <code>\qecho</code>. </p>
+ </dd></dl>
+</dl>
+<p> \p or \print </p>
+<dl>
+<dd> <p> Print the current query buffer to the standard output. </p>
+ </dd></dl>
+<p> \password [ <i>username</i> ] </p>
+<dl>
+<dd> <p> Changes the password of the specified user (by default, the current user). This command prompts for the new password, encrypts it, and sends it to the server as an <code>ALTER ROLE</code> command. This makes sure that the new password does not appear in cleartext in the command history, the server log, or elsewhere. </p>
+ </dd></dl>
+<p> \prompt [ <i>text</i> ] <i>name</i> </p>
+<dl>
+<dd> <p> Prompts the user to supply text, which is assigned to the variable <i>name</i>. An optional prompt string, <i>text</i>, can be specified. (For multiword prompts, surround the text with single quotes.) </p>
+<p> By default, \prompt uses the terminal for input and output. However, if the <code>-f</code> command line switch was used, \prompt uses standard input and standard output. </p>
+ </dd></dl>
+<p> \pset <i>option</i> [ <i>value</i> ] </p>
+<dl>
+<dd> <p> This command sets options affecting the output of query result tables. <i>option</i> indicates which option is to be set. The semantics of <i>value</i> vary depending on the selected option. For some options, omitting <i>value</i> causes the option to be toggled or unset, as described under the particular option. If no such behavior is mentioned, then omitting <i>value</i> just results in the current setting being displayed. </p>
+<p> Adjustable printing options are: </p>
+<p> border </p>
+ </dd>
+<dl>
+<dd> <p> The <i>value</i> must be a number. In general, the higher the number the more borders and lines the tables will have, but this depends on the particular format. In HTML format, this will translate directly into the border=... attribute; in the other formats only values 0 (no border), 1 (internal dividing lines), and 2 (table frame) make sense. </p>
+ </dd></dl>
+<p> columns </p>
+<dl>
+<dd> <p> Sets the target width for the wrapped format, and also the width limit for determining whether output is wide enough to require the pager or switch to the vertical display in expanded auto mode. Zero (the default) causes the target width to be controlled by the environment variable <code>COLUMNS</code>, or the detected screen width if <code>COLUMNS</code> is not set. In addition, if columns is zero then the wrapped format only affects screen output. If columns is nonzero then file and pipe output is wrapped to that width as well. </p>
+ </dd></dl>
+<p> expanded (or x) </p>
+<dl>
+<dd> <p> If <i>value</i> is specified it must be either on or off, which will enable or disable expanded mode, or auto. If <i>value</i> is omitted the command toggles between the on and off settings. When expanded mode is enabled, query results are displayed in two columns, with the column name on the left and the data on the right. This mode is useful if the data wouldn&#8217;t fit on the screen in the normal "horizontal" mode. In the auto setting, the expanded mode is used whenever the query output is wider than the screen, otherwise the regular mode is used. The auto setting is only effective in the aligned and wrapped formats. In other formats, it always behaves as if the expanded mode is off. </p>
+ </dd></dl>
+<p> fieldsep </p>
+<dl>
+<dd> <p> Specifies the field separator to be used in unaligned output format. That way one can create, for example, tab- or comma-separated output, which other programs might prefer. To set a tab as field separator, type \pset fieldsep &#8216;\t&#8217;. The default field separator is &#8216;|&#8216; (a vertical bar). </p>
+ </dd></dl>
+<p> fieldsep_zero </p>
+<dl>
+<dd> <p> Sets the field separator to use in unaligned output format to a zero byte. </p>
+ </dd></dl>
+<p> footer </p>
+<dl>
+<dd> <p> If <i>value</i> is specified it must be either on or off which will enable or disable display of the table footer (the (<i>n</i> rows) count). If <i>value</i> is omitted the command toggles footer display on or off. </p>
+ </dd></dl>
+<p> format </p>
+<dl>
+<dd> <p> Sets the output format to one of unaligned, aligned, wrapped, html, latex, or troff-ms. Unique abbreviations are allowed. (That would mean one letter is enough.) </p>
+<p> unaligned format writes all columns of a row on one line, separated by the currently active field separator. This is useful for creating output that might be intended to be read in by other programs (for example, tab-separated or comma-separated format). </p>
+<p> aligned format is the standard, human-readable, nicely formatted text output; this is the default. </p>
+<p> wrapped format is like aligned but wraps wide data values across lines to make the output fit in the target column width. The target width is determined as described under the columns option. Note that psql will not attempt to wrap column header titles; therefore, wrapped format behaves the same as aligned if the total width needed for column headers exceeds the target. </p>
+<p> The html, latex, and troff-ms formats put out tables that are intended to be included in documents using the respective mark-up language. They are not complete documents! (This might not be so dramatic in HTML, but in LaTeX you must have a complete document wrapper.) </p>
+ </dd></dl>
+<p> linestyle </p>
+<dl>
+<dd> <p> Sets the border line drawing style to one of ascii, old-ascii or unicode. Unique abbreviations are allowed. (That would mean one letter is enough.) The default setting is ascii. This option only affects the aligned and wrapped output formats. </p>
+<p> ascii style uses plain ASCII characters. Newlines in data are shown using a + symbol in the right-hand margin. When the wrapped format wraps data from one line to the next without a newline character, a dot (.) is shown in the right-hand margin of the first line, and again in the left-hand margin of the following line. </p>
+<p> old-ascii style uses plain ASCII characters, using the formatting style used in PostgreSQL 8.4 and earlier. Newlines in data are shown using a : symbol in place of the left-hand column separator. When the data is wrapped from one line to the next without a newline character, a ; symbol is used in place of the left-hand column separator. </p>
+<p> unicode style uses Unicode box-drawing characters. Newlines in data are shown using a carriage return symbol in the right-hand margin. When the data is wrapped from one line to the next without a newline character, an ellipsis symbol is shown in the right-hand margin of the first line, and again in the left-hand margin of the following line. </p>
+<p> When the border setting is greater than zero, this option also determines the characters with which the border lines are drawn. Plain ASCII characters work everywhere, but Unicode characters look nicer on displays that recognize them. </p>
+ </dd></dl>
+<p> null </p>
+<dl>
+<dd> <p> Sets the string to be printed in place of a null value. The default is to print nothing, which can easily be mistaken for an empty string. For example, one might prefer \pset null &#8216;(null)&#8216;. </p>
+ </dd></dl>
+<p> numericlocale </p>
+<dl>
+<dd> <p> If <i>value</i> is specified it must be either on or off which will enable or disable display of a locale-specific character to separate groups of digits to the left of the decimal marker. If <i>value</i> is omitted the command toggles between regular and locale-specific numeric output. </p>
+ </dd></dl>
+<p> pager </p>
+<dl>
+<dd> <p> Controls use of a pager program for query and psql help output. If the environment variable <code>PAGER</code> is set, the output is piped to the specified program. Otherwise a platform-dependent default (such as more) is used. </p>
+<p> When the pager option is off, the pager program is not used. When the pager option is on, the pager is used when appropriate, i.e., when the output is to a terminal and will not fit on the screen. The pager option can also be set to always, which causes the pager to be used for all terminal output regardless of whether it fits on the screen. \pset pager without a <i>value</i> toggles pager use on and off. </p>
+ </dd></dl>
+<p> recordsep </p>
+<dl>
+<dd> <p> Specifies the record (line) separator to use in unaligned output format. The default is a newline character. </p>
+ </dd></dl>
+<p> recordsep_zero </p>
+<dl>
+<dd> <p> Sets the record separator to use in unaligned output format to a zero byte. </p>
+ </dd></dl>
+<p> tableattr (or T) </p>
+<dl>
+<dd> <p> Specifies attributes to be placed inside the HTMLtable tag in html output format. This could for example be cellpadding or bgcolor. Note that you probably don&#8217;t want to specify border here, as that is already taken care of by \pset border. If no <i>value</i> is given, the table attributes are unset. </p>
+ </dd></dl>
+<p> title </p>
+<dl>
+<dd> <p> Sets the table title for any subsequently printed tables. This can be used to give your output descriptive tags. If no <i>value</i> is given, the title is unset. </p>
+ </dd></dl>
+<p> tuples_only (or t) </p>
+<dl>
+<dd> <p> If <i>value</i> is specified it must be either on or off which will enable or disable tuples-only mode. If <i>value</i> is omitted the command toggles between regular and tuples-only output. Regular output includes extra information such as column headers, titles, and various footers. In tuples-only mode, only actual table data is shown. </p>
+ </dd></dl>
+<p> Illustrations of how these different formats look can be seen in the EXAMPLES section. </p>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ There are various shortcut commands for <code>\pset</code>. See <code>\a</code>, <code>\C</code>, <code>\H</code>, <code>\t</code>, <code>\T</code>, and <code>\x</code>. </p>
+ </dd></dl>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ It is an error to call <code>\pset</code> without any arguments. In the future this case might show the current status of all printing options. </p>
+ </dd></dl>
+</dl>
+<p> \q or \quit </p>
+<dl>
+<dd> <p> Quits the psql program. In a script file, only execution of that script is terminated. </p>
+ </dd></dl>
+<p> \qecho <i>text</i> [ ... ] </p>
+<dl>
+<dd> <p> This command is identical to <code>\echo</code> except that the output will be written to the query output channel, as set by <code>\o</code>. </p>
+ </dd></dl>
+<p> \r or \reset </p>
+<dl>
+<dd> <p> Resets (clears) the query buffer. </p>
+ </dd></dl>
+<p> \s [ <i>filename</i> ] </p>
+<dl>
+<dd> <p> Print psql&#8217;s command line history to <i>filename</i>. If <i>filename</i> is omitted, the history is written to the standard output (using the pager if appropriate). This command is not available if psql was built without Readline support. </p>
+ </dd></dl>
+<p> \set [ <i>name</i> [ <i>value</i> [ ... ] ] ] </p>
+<dl>
+<dd> <p> Sets the psql variable <i>name</i> to <i>value</i>, or if more than one value is given, to the concatenation of all of them. If only one argument is given, the variable is set with an empty value. To unset a variable, use the <code>\unset</code> command. </p>
+<p> <code>\set</code> without any arguments displays the names and values of all currently-set psql variables. </p>
+<p> Valid variable names can contain letters, digits, and underscores. See the section Variables below for details. Variable names are case-sensitive. </p>
+<p> Although you are welcome to set any variable to anything you want, psql treats several variables as special. They are documented in the section about variables. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ This command is unrelated to the SQL command <code><a href="/docs/linux/man/7-SET/">SET</a></code>(7). </p>
+ </dd></dl>
+</dl>
+<p> \setenv <i>name</i> [ <i>value</i> ] </p>
+<dl>
+<dd> <p> Sets the environment variable <i>name</i> to <i>value</i>, or if the <i>value</i> is not supplied, unsets the environment variable. Example: </p>
+ </dd>
+<dl>
+<dd> <pre><code>testdb=&gt; \setenv PAGER less testdb=&gt; \setenv LESS -imx4F 
+</code></pre>
+ </dd></dl>
+</dl>
+<p> \sf[+] <i>function_description</i> </p>
+<dl>
+<dd> <p> This command fetches and shows the definition of the named function, in the form of a <code>CREATE OR REPLACE FUNCTION</code> command. The definition is printed to the current query output channel, as set by <code>\o</code>. </p>
+<p> The target function can be specified by name alone, or by name and arguments, for example foo(integer, text). The argument types must be given if there is more than one function of the same name. </p>
+<p> If + is appended to the command name, then the output lines are numbered, with the first line of the function body being line 1. </p>
+ </dd></dl>
+<p> \t </p>
+<dl>
+<dd> <p> Toggles the display of output column name headings and row count footer. This command is equivalent to \pset tuples_only and is provided for convenience. </p>
+ </dd></dl>
+<p> \T <i>table_options</i> </p>
+<dl>
+<dd> <p> Specifies attributes to be placed within the table tag in HTML output format. This command is equivalent to \pset tableattr <i>table_options</i>. </p>
+ </dd></dl>
+<p> \timing [ <i>on</i> | <i>off</i> ] </p>
+<dl>
+<dd> <p> Without parameter, toggles a display of how long each SQL statement takes, in milliseconds. With parameter, sets same. </p>
+ </dd></dl>
+<p> \unset <i>name</i> </p>
+<dl>
+<dd> <p> Unsets (deletes) the psql variable <i>name</i>. </p>
+ </dd></dl>
+<p> \w or \write <i>filename</i>, \w or \write |<i>command</i> </p>
+<dl>
+<dd> <p> Outputs the current query buffer to the file <i>filename</i> or pipes it to the shell command <i>command</i>. </p>
+ </dd></dl>
+<p> \x [ <i>on</i> | <i>off</i> | <i>auto</i> ] </p>
+<dl>
+<dd> <p> Sets or toggles expanded table formatting mode. As such it is equivalent to \pset expanded. </p>
+ </dd></dl>
+<p> \z [ <i>pattern</i> ] </p>
+<dl>
+<dd> <p> Lists tables, views and sequences with their associated access privileges. If a <i>pattern</i> is specified, only tables, views and sequences whose names match the pattern are listed. </p>
+<p> This is an alias for <code>\dp</code> ("display privileges"). </p>
+ </dd></dl>
+<p> \! [ <i>command</i> ] </p>
+<dl>
+<dd> <p> Escapes to a separate shell or executes the shell command <i>command</i>. The arguments are not further interpreted; the shell will see them as-is. </p>
+ </dd></dl>
+<p> \? </p>
+<dl>
+<dd> <p> Shows help information about the backslash commands. </p>
+ </dd></dl>
+<p> <br />
+ <font SIZE="+1"> <code>Patterns</code> </p>
+<dl>
+<dd> <p> The various \d commands accept a <i>pattern</i> parameter to specify the object name(s) to be displayed. In the simplest case, a pattern is just the exact name of the object. The characters within a pattern are normally folded to lower case, just as in SQL names; for example, \dt FOO will display the table named foo. As in SQL names, placing double quotes around a pattern stops folding to lower case. Should you need to include an actual double quote character in a pattern, write it as a pair of double quotes within a double-quote sequence; again this is in accord with the rules for SQL quoted identifiers. For example, \dt &quot;FOO&quot;&quot;BAR&quot; will display the table named FOO&quot;BAR (not foo&quot;bar). Unlike the normal rules for SQL names, you can put double quotes around just part of a pattern, for instance \dt FOO&quot;FOO&quot;BAR will display the table named fooFOObar. </p>
+<p> Whenever the <i>pattern</i> parameter is omitted completely, the \d commands display all objects that are visible in the current schema search path --- this is equivalent to using * as the pattern. (An object is said to be visible if its containing schema is in the search path and no object of the same kind and name appears earlier in the search path. This is equivalent to the statement that the object can be referenced by name without explicit schema qualification.) To see all objects in the database regardless of visibility, use *.* as the pattern. </p>
+<p> Within a pattern, * matches any sequence of characters (including no characters) and ? matches any single character. (This notation is comparable to Unix shell file name patterns.) For example, \dt int* displays tables whose names begin with int. But within double quotes, * and ? lose these special meanings and are just matched literally. </p>
+<p> A pattern that contains a dot (.) is interpreted as a schema name pattern followed by an object name pattern. For example, \dt foo*.*bar* displays all tables whose table name includes bar that are in schemas whose schema name starts with foo. When no dot appears, then the pattern matches only objects that are visible in the current schema search path. Again, a dot within double quotes loses its special meaning and is matched literally. </p>
+<p> Advanced users can use regular-expression notations such as character classes, for example [0-9] to match any digit. All regular expression special characters work as specified in Section 9.7.3, "POSIX Regular Expressions", in the documentation, except for . which is taken as a separator as mentioned above, * which is translated to the regular-expression notation .*, ? which is translated to ., and $ which is matched literally. You can emulate these pattern characters at need by writing ? for ., (<i>R</i>+|) for <i>R</i>*, or (<i>R</i>|) for <i>R</i>?. $ is not needed as a regular-expression character since the pattern must match the whole name, unlike the usual interpretation of regular expressions (in other words, $ is automatically appended to your pattern). Write * at the beginning and/or end if you don&#8217;t wish the pattern to be anchored. Note that within double quotes, all regular expression special characters lose their special meanings and are matched literally. Also, the regular expression special characters are matched literally in operator name patterns (i.e., the argument of \do). </p>
+ </dd></dl>
+<p> </font> </p>
+<h3>Advanced Features</h3>
+<p> <br />
+ <font SIZE="+1"> <code>Variables</code> </p>
+<dl>
+<dd> <p> psql provides variable substitution features similar to common Unix command shells. Variables are simply name/value pairs, where the value can be any string of any length. The name must consist of letters (including non-Latin letters), digits, and underscores. </p>
+<p> To set a variable, use the psql meta-command <code>\set</code>. For example, </p>
+ </dd>
+<dl>
+<dd> <p> </font> </p>
+<pre><code>testdb=&gt; \set foo bar 
+</code></pre>
+ </dd></dl>
+<p> sets the variable foo to the value bar. To retrieve the content of the variable, precede the name with a colon, for example: </p>
+<dl>
+<dd> <pre><code>testdb=&gt; \echo :foo bar
+</code></pre>
+ </dd></dl>
+<p> This works in both regular SQL commands and meta-commands; there is more detail in SQL Interpolation, below. </p>
+<p> If you call <code>\set</code> without a second argument, the variable is set, with an empty string as value. To unset (i.e., delete) a variable, use the command <code>\unset</code>. To show the values of all variables, call <code>\set</code> without any argument. </p>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ </p>
+<p> The arguments of <code>\set</code> are subject to the same substitution rules as with other commands. Thus you can construct interesting references such as \set :foo &#8216;something&#8217; and get "soft links" or "variable variables" of Perl or PHP fame, respectively. Unfortunately (or fortunately?), there is no way to do anything useful with these constructs. On the other hand, \set bar :foo is a perfectly valid way to copy a variable. </p>
+ </dd></dl>
+<p> A number of these variables are treated specially by psql. They represent certain option settings that can be changed at run time by altering the value of the variable, or in some cases represent changeable state of psql. Although you can use these variables for other purposes, this is not recommended, as the program behavior might grow really strange really quickly. By convention, all specially treated variables&#8217; names consist of all upper-case ASCII letters (and possibly digits and underscores). To ensure maximum compatibility in the future, avoid using such variable names for your own purposes. A list of all specially treated variables follows. </p>
+<p> <i>AUTOCOMMIT</i> </p>
+<dl>
+<dd> <p> When on (the default), each SQL command is automatically committed upon successful completion. To postpone commit in this mode, you must enter a <code>BEGIN</code> or <code>START TRANSACTION</code> SQL command. When off or unset, SQL commands are not committed until you explicitly issue <code>COMMIT</code> or <code>END</code>. The autocommit-off mode works by issuing an implicit <code>BEGIN</code> for you, just before any command that is not already in a transaction block and is not itself a <code>BEGIN</code> or other transaction-control command, nor a command that cannot be executed inside a transaction block (such as <code>VACUUM</code>). </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ In autocommit-off mode, you must explicitly abandon any failed transaction by entering <code>ABORT</code> or <code>ROLLBACK</code>. Also keep in mind that if you exit the session without committing, your work will be lost. </p>
+ </dd></dl>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ The autocommit-on mode is PostgreSQL&#8217;s traditional behavior, but autocommit-off is closer to the SQL spec. If you prefer autocommit-off, you might wish to set it in the system-wide psqlrc file or your ~/.psqlrc file. </p>
+ </dd></dl>
+</dl>
+<p> <i>COMP_KEYWORD_CASE</i> </p>
+<dl>
+<dd> <p> Determines which letter case to use when completing an SQL key word. If set to lower or upper, the completed word will be in lower or upper case, respectively. If set to preserve-lower or preserve-upper (the default), the completed word will be in the case of the word already entered, but words being completed without anything entered will be in lower or upper case, respectively. </p>
+ </dd></dl>
+<p> <i>DBNAME</i> </p>
+<dl>
+<dd> <p> The name of the database you are currently connected to. This is set every time you connect to a database (including program start-up), but can be unset. </p>
+ </dd></dl>
+<p> <i>ECHO</i> </p>
+<dl>
+<dd> <p> If set to all, all nonempty input lines are printed to standard output as they are read. (This does not apply to lines read interactively.) To select this behavior on program start-up, use the switch <code>-a</code>. If set to queries, psql prints each query to standard output as it is sent to the server. The switch for this is <code>-e</code>. </p>
+ </dd></dl>
+<p> <i>ECHO_HIDDEN</i> </p>
+<dl>
+<dd> <p> When this variable is set to on and a backslash command queries the database, the query is first shown. This feature helps you to study PostgreSQL internals and provide similar functionality in your own programs. (To select this behavior on program start-up, use the switch <code>-E</code>.) If you set the variable to the value noexec, the queries are just shown but are not actually sent to the server and executed. </p>
+ </dd></dl>
+<p> <i>ENCODING</i> </p>
+<dl>
+<dd> <p> The current client character set encoding. </p>
+ </dd></dl>
+<p> <i>FETCH_COUNT</i> </p>
+<dl>
+<dd> <p> If this variable is set to an integer value &gt; 0, the results of <code>SELECT</code> queries are fetched and displayed in groups of that many rows, rather than the default behavior of collecting the entire result set before display. Therefore only a limited amount of memory is used, regardless of the size of the result set. Settings of 100 to 1000 are commonly used when enabling this feature. Keep in mind that when using this feature, a query might fail after having already displayed some rows. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Tip</code> </font> <br />
+ Although you can use any output format with this feature, the default aligned format tends to look bad because each group of <i>FETCH_COUNT</i> rows will be formatted separately, leading to varying column widths across the row groups. The other output formats work better. </p>
+ </dd></dl>
+</dl>
+<p> <i>HISTCONTROL</i> </p>
+<dl>
+<dd> <p> If this variable is set to ignorespace, lines which begin with a space are not entered into the history list. If set to a value of ignoredups, lines matching the previous history line are not entered. A value of ignoreboth combines the two options. If unset, or if set to any other value than those above, all lines read in interactive mode are saved on the history list. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ This feature was shamelessly plagiarized from Bash. </p>
+ </dd></dl>
+</dl>
+<p> <i>HISTFILE</i> </p>
+<dl>
+<dd> <p> The file name that will be used to store the history list. The default value is ~/.psql_history. For example, putting: </p>
+ </dd>
+<dl>
+<dd> <pre><code>\set HISTFILE ~/.psql_history- :DBNAME
+</code></pre>
+ </dd></dl>
+<p> in ~/.psqlrc will cause psql to maintain a separate history for each database. </p>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ This feature was shamelessly plagiarized from Bash. </p>
+ </dd></dl>
+</dl>
+<p> <i>HISTSIZE</i> </p>
+<dl>
+<dd> <p> The number of commands to store in the command history. The default value is 500. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ This feature was shamelessly plagiarized from Bash. </p>
+ </dd></dl>
+</dl>
+<p> <i>HOST</i> </p>
+<dl>
+<dd> <p> The database server host you are currently connected to. This is set every time you connect to a database (including program start-up), but can be unset. </p>
+ </dd></dl>
+<p> <i>IGNOREEOF</i> </p>
+<dl>
+<dd> <p> If unset, sending an EOF character (usually Control+D) to an interactive session of psql will terminate the application. If set to a numeric value, that many EOF characters are ignored before the application terminates. If the variable is set but has no numeric value, the default is 10. </p>
+ </dd>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ This feature was shamelessly plagiarized from Bash. </p>
+ </dd></dl>
+</dl>
+<p> <i>LASTOID</i> </p>
+<dl>
+<dd> <p> The value of the last affected OID, as returned from an <code>INSERT</code> or <code>\lo_import</code> command. This variable is only guaranteed to be valid until after the result of the next SQL command has been displayed. </p>
+ </dd></dl>
+<p> <i>ON_ERROR_ROLLBACK</i> </p>
+<dl>
+<dd> <p> When set to on, if a statement in a transaction block generates an error, the error is ignored and the transaction continues. When set to interactive, such errors are only ignored in interactive sessions, and not when reading script files. When unset or set to off, a statement in a transaction block that generates an error aborts the entire transaction. The error rollback mode works by issuing an implicit <code>SAVEPOINT</code> for you, just before each command that is in a transaction block, and then rolling back to the savepoint if the command fails. </p>
+ </dd></dl>
+<p> <i>ON_ERROR_STOP</i> </p>
+<dl>
+<dd> <p> By default, command processing continues after an error. When this variable is set to on, processing will instead stop immediately. In interactive mode, psql will return to the command prompt; otherwise, psql will exit, returning error code 3 to distinguish this case from fatal error conditions, which are reported using error code 1. In either case, any currently running scripts (the top-level script, if any, and any other scripts which it may have in invoked) will be terminated immediately. If the top-level command string contained multiple SQL commands, processing will stop with the current command. </p>
+ </dd></dl>
+<p> <i>PORT</i> </p>
+<dl>
+<dd> <p> The database server port to which you are currently connected. This is set every time you connect to a database (including program start-up), but can be unset. </p>
+ </dd></dl>
+<p> <i>PROMPT1</i>, <i>PROMPT2</i>, <i>PROMPT3</i> </p>
+<dl>
+<dd> <p> These specify what the prompts psql issues should look like. See Prompting below. </p>
+ </dd></dl>
+<p> <i>QUIET</i> </p>
+<dl>
+<dd> <p> Setting this variable to on is equivalent to the command line option <code>-q</code>. It is probably not too useful in interactive mode. </p>
+ </dd></dl>
+<p> <i>SINGLELINE</i> </p>
+<dl>
+<dd> <p> Setting this variable to on is equivalent to the command line option <code>-S</code>. </p>
+ </dd></dl>
+<p> <i>SINGLESTEP</i> </p>
+<dl>
+<dd> <p> Setting this variable to on is equivalent to the command line option <code>-s</code>. </p>
+ </dd></dl>
+<p> <i>USER</i> </p>
+<dl>
+<dd> <p> The database user you are currently connected as. This is set every time you connect to a database (including program start-up), but can be unset. </p>
+ </dd></dl>
+<p> <i>VERBOSITY</i> </p>
+<dl>
+<dd> <p> This variable can be set to the values default, verbose, or terse to control the verbosity of error reports. </p>
+ </dd></dl>
+</dl>
+<p> <br />
+ <font SIZE="+1"> <code>SQL Interpolation</code> </p>
+<dl>
+<dd> <p> A key feature of psql variables is that you can substitute ("interpolate") them into regular SQL statements, as well as the arguments of meta-commands. Furthermore, psql provides facilities for ensuring that variable values used as SQL literals and identifiers are properly quoted. The syntax for interpolating a value without any quoting is to prepend the variable name with a colon (:). For example, </p>
+ </dd>
+<dl>
+<dd> <p> </font> </p>
+<pre><code>testdb=&gt; \set foo 'my_table' testdb=&gt; SELECT * FROM :foo; 
+</code></pre>
+ </dd></dl>
+<p> would query the table my_table. Note that this may be unsafe: the value of the variable is copied literally, so it can contain unbalanced quotes, or even backslash commands. You must make sure that it makes sense where you put it. </p>
+<p> When a value is to be used as an SQL literal or identifier, it is safest to arrange for it to be quoted. To quote the value of a variable as an SQL literal, write a colon followed by the variable name in single quotes. To quote the value as an SQL identifier, write a colon followed by the variable name in double quotes. These constructs deal correctly with quotes and other special characters embedded within the variable value. The previous example would be more safely written this way: </p>
+<dl>
+<dd> <pre><code>testdb=&gt; \set foo 'my_table' testdb=&gt; SELECT * FROM :&quot;foo&quot;; 
+</code></pre>
+ </dd></dl>
+<p> Variable interpolation will not be performed within quoted SQL literals and identifiers. Therefore, a construction such as &#8216;:foo&#8217; doesn&#8217;t work to produce a quoted literal from a variable&#8217;s value (and it would be unsafe if it did work, since it wouldn&#8217;t correctly handle quotes embedded in the value). </p>
+<p> One example use of this mechanism is to copy the contents of a file into a table column. First load the file into a variable and then interpolate the variable&#8217;s value as a quoted string: </p>
+<dl>
+<dd> <pre><code>testdb=&gt; \set content `cat my_file.txt` testdb=&gt; INSERT INTO my_table VALUES (:'content'); 
+</code></pre>
+ </dd></dl>
+<p> (Note that this still won&#8217;t work if my_file.txt contains NUL bytes. psql does not support embedded NUL bytes in variable values.) </p>
+<p> Since colons can legally appear in SQL commands, an apparent attempt at interpolation (that is, :name, :&#8216;name&#8217;, or :&quot;name&quot;) is not replaced unless the named variable is currently set. In any case, you can escape a colon with a backslash to protect it from substitution. </p>
+<p> The colon syntax for variables is standard SQL for embedded query languages, such as ECPG. The colon syntaxes for array slices and type casts are PostgreSQL extensions, which can sometimes conflict with the standard usage. The colon-quote syntax for escaping a variable&#8217;s value as an SQL literal or identifier is a psql extension. </dl>
+ </p>
+<p> <br />
+ <font SIZE="+1"> <code>Prompting</code> </p>
+<dl>
+<dd> <p> The prompts psql issues can be customized to your preference. The three variables <i>PROMPT1</i>, <i>PROMPT2</i>, and <i>PROMPT3</i> contain strings and special escape sequences that describe the appearance of the prompt. Prompt 1 is the normal prompt that is issued when psql requests a new command. Prompt 2 is issued when more input is expected during command entry, for example because the command was not terminated with a semicolon or a quote was not closed. Prompt 3 is issued when you are running an SQL <code>COPY FROM STDIN</code> command and you need to type in a row value on the terminal. </p>
+<p> The value of the selected prompt variable is printed literally, except where a percent sign (%) is encountered. Depending on the next character, certain other text is substituted instead. Defined substitutions are: </p>
+<p> %M </p>
+ </dd>
+<dl>
+<dd> <p> The full host name (with domain name) of the database server, or [local] if the connection is over a Unix domain socket, or [local:<i>/dir/name</i>], if the Unix domain socket is not at the compiled in default location. </p>
+ </dd></dl>
+<p> %m </p>
+<dl>
+<dd> <p> The host name of the database server, truncated at the first dot, or [local] if the connection is over a Unix domain socket. </p>
+ </dd></dl>
+<p> %&gt; </p>
+<dl>
+<dd> <p> The port number at which the database server is listening. </p>
+ </dd></dl>
+<p> %n </p>
+<dl>
+<dd> <p> The database session user name. (The expansion of this value might change during a database session as the result of the command <code>SET SESSION AUTHORIZATION</code>.) </p>
+ </dd></dl>
+<p> %/ </p>
+<dl>
+<dd> <p> The name of the current database. </p>
+ </dd></dl>
+<p> %~ </p>
+<dl>
+<dd> <p> Like %/, but the output is ~ (tilde) if the database is your default database. </p>
+ </dd></dl>
+<p> %# </p>
+<dl>
+<dd> <p> If the session user is a database superuser, then a #, otherwise a &gt;. (The expansion of this value might change during a database session as the result of the command <code>SET SESSION AUTHORIZATION</code>.) </p>
+ </dd></dl>
+<p> %R </p>
+<dl>
+<dd> <p> In prompt 1 normally =, but ^ if in single-line mode, or ! if the session is disconnected from the database (which can happen if <code>\connect</code> fails). In prompt 2 %R is replaced by a character that depends on why psql expects more input: - if the command simply wasn&#8217;t terminated yet, but * if there is an unfinished /* ... */ comment, a single quote if there is an unfinished quoted string, a double quote if there is an unfinished quoted identifier, a dollar sign if there is an unfinished dollar-quoted string, or ( if there is an unmatched left parenthesis. In prompt 3 %R doesn&#8217;t produce anything. </p>
+ </dd></dl>
+<p> %x </p>
+<dl>
+<dd> <p> Transaction status: an empty string when not in a transaction block, or * when in a transaction block, or ! when in a failed transaction block, or ? when the transaction state is indeterminate (for example, because there is no connection). </p>
+ </dd></dl>
+<p> %<i>digits</i> </p>
+<dl>
+<dd> <p> The character with the indicated octal code is substituted. </p>
+ </dd></dl>
+<p> %:<i>name</i>: </p>
+<dl>
+<dd> <p> The value of the psql variable <i>name</i>. See the section Variables for details. </p>
+ </dd></dl>
+<p> %`<i>command</i>` </p>
+<dl>
+<dd> <p> The output of <i>command</i>, similar to ordinary "back-tick" substitution. </p>
+ </dd></dl>
+<p> %[ ... %] </p>
+<dl>
+<dd> <p> Prompts can contain terminal control characters which, for example, change the color, background, or style of the prompt text, or change the title of the terminal window. In order for the line editing features of Readline to work properly, these non-printing control characters must be designated as invisible by surrounding them with %[ and %]. Multiple pairs of these can occur within the prompt. For example: </p>
+ </dd>
+<dl>
+<dd> <p> </font> </p>
+<pre><code>testdb=&gt; \set PROMPT1 '%[%033[1;33;40m%]%n@%/%R%[%033[0m%]%# '
+</code></pre>
+ </dd></dl>
+<p> results in a boldfaced (1;) yellow-on-black (33;40) prompt on VT100-compatible, color-capable terminals. </dl>
+ To insert a percent sign into your prompt, write %%. The default prompts are &#8216;%/%R%# &#8216; for prompts 1 and 2, and &#8216;&gt;&gt; &#8216; for prompt 3. </p>
+<dl>
+<dd> <p> <br />
+ <font SIZE="+1"> <code>Note</code> </font> <br />
+ </p>
+<p> This feature was shamelessly plagiarized from tcsh. </p>
+ </dd></dl>
+</dl>
+<p> <br />
+ <font SIZE="+1"> <code>Command-Line Editing</code> </p>
+<dl>
+<dd> <p> psql supports the Readline library for convenient line editing and retrieval. The command history is automatically saved when psql exits and is reloaded when psql starts up. Tab-completion is also supported, although the completion logic makes no claim to be an SQL parser. If for some reason you do not like the tab completion, you can turn it off by putting this in a file named .inputrc in your home directory: </p>
+ </dd>
+<dl>
+<dd> <p> </font> </p>
+<pre><code>$if psql
+set disable-completion on
+$endif
+</code></pre>
+ </dd></dl>
+<p> (This is not a psql but a Readline feature. Read its documentation for further details.) </dl>
+  </p>
+<h2>ENVIRONMENT</h2>
+<p> <code>COLUMNS</code> </p>
+<dl>
+<dd> <p> If \pset columns is zero, controls the width for the wrapped format and width for determining if wide output requires the pager or should be switched to the vertical format in expanded auto mode. </p>
+ </dd></dl>
+<p> <code>PAGER</code> </p>
+<dl>
+<dd> <p> If the query results do not fit on the screen, they are piped through this command. Typical values are more or less. The default is platform-dependent. The use of the pager can be disabled by using the <code>\pset</code> command. </p>
+ </dd></dl>
+<p> <code>PGDATABASE</code>, <code>PGHOST</code>, <code>PGPORT</code>, <code>PGUSER</code> </p>
+<dl>
+<dd> <p> Default connection parameters (see Section 31.14, "Environment Variables", in the documentation). </p>
+ </dd></dl>
+<p> <code>PSQL_EDITOR</code>, <code>EDITOR</code>, <code>VISUAL</code> </p>
+<dl>
+<dd> <p> Editor used by the <code>\e</code> and <code>\ef</code> commands. The variables are examined in the order listed; the first that is set is used. </p>
+<p> The built-in default editors are vi on Unix systems and notepad.exe on Windows systems. </p>
+ </dd></dl>
+<p> <code>PSQL_EDITOR_LINENUMBER_ARG</code> </p>
+<dl>
+<dd> <p> When <code>\e</code> or <code>\ef</code> is used with a line number argument, this variable specifies the command-line argument used to pass the starting line number to the user&#8217;s editor. For editors such as Emacs or vi, this is a plus sign. Include a trailing space in the value of the variable if there needs to be space between the option name and the line number. Examples: </p>
+ </dd>
+<dl>
+<dd> <pre><code>PSQL_EDITOR_LINENUMBER_ARG='+'
+PSQL_EDITOR_LINENUMBER_ARG='--line '
+</code></pre>
+ </dd></dl>
+<p> The default is + on Unix systems (corresponding to the default editor vi, and useful for many other common editors); but there is no default on Windows systems. </dl>
+ </p>
+<p> <code>PSQL_HISTORY</code> </p>
+<dl>
+<dd> <p> Alternative location for the command history file. Tilde (~) expansion is performed. </p>
+ </dd></dl>
+<p> <code>PSQLRC</code> </p>
+<dl>
+<dd> <p> Alternative location of the user&#8217;s .psqlrc file. Tilde (~) expansion is performed. </p>
+ </dd></dl>
+<p> <code>SHELL</code> </p>
+<dl>
+<dd> <p> Command executed by the <code>\!</code> command. </p>
+ </dd></dl>
+<p> <code>TMPDIR</code> </p>
+<dl>
+<dd> <p> Directory for storing temporary files. The default is /tmp. </p>
+ </dd></dl>
+<p> This utility, like most other PostgreSQL utilities, also uses the environment variables supported by libpq (see Section 31.14, "Environment Variables", in the documentation).  </p>
+<h2>FILES</h2>
+<p> psqlrc and ~/.psqlrc </p>
+<dl>
+<dd> <p> Unless it is passed an <code>-X</code> or <code>-c</code> option, psql attempts to read and execute commands from the system-wide startup file (psqlrc) and then the user&#8217;s personal startup file (~/.psqlrc), after connecting to the database but before accepting normal commands. These files can be used to set up the client and/or the server to taste, typically with <code>\set</code> and <code>SET</code> commands. </p>
+<p> The system-wide startup file is named psqlrc and is sought in the installation&#8217;s "system configuration" directory, which is most reliably identified by running pg_config --sysconfdir. By default this directory will be ../etc/ relative to the directory containing the PostgreSQL executables. The name of this directory can be set explicitly via the <code>PGSYSCONFDIR</code> environment variable. </p>
+<p> The user&#8217;s personal startup file is named .psqlrc and is sought in the invoking user&#8217;s home directory. On Windows, which lacks such a concept, the personal startup file is named %APPDATA%\postgresql\psqlrc.conf. The location of the user&#8217;s startup file can be set explicitly via the <code>PSQLRC</code> environment variable. </p>
+<p> Both the system-wide startup file and the user&#8217;s personal startup file can be made psql-version-specific by appending a dash and the PostgreSQL major or minor release number to the file name, for example ~/.psqlrc-9.2 or ~/.psqlrc-9.2.5. The most specific version-matching file will be read in preference to a non-version-specific file. </p>
+ </dd></dl>
+<p> .psql_history </p>
+<dl>
+<dd> <p> The command-line history is stored in the file ~/.psql_history, or %APPDATA%\postgresql\psql_history on Windows. </p>
+<p> The location of the history file can be set explicitly via the <code>PSQL_HISTORY</code> environment variable. </p>
+ </dd></dl>
+<h2>NOTES</h2>
+<dl>
+<dd> <p> &bull; In an earlier life psql allowed the first argument of a single-letter backslash command to start directly after the command, without intervening whitespace. As of PostgreSQL 8.4 this is no longer allowed. </p>
+ </dd></dl>
+<dl>
+<dd> <p> &bull; psql is only guaranteed to work smoothly with servers of the same version. That does not mean other combinations will fail outright, but subtle and not-so-subtle problems might come up. Backslash commands are particularly likely to fail if the server is of a newer version than psql itself. However, backslash commands of the \d family should work with servers of versions back to 7.4, though not necessarily with servers newer than psql itself. </p>
+ </dd></dl>
+<h2>NOTES FOR WINDOWS USERS</h2>
+<p> psql is built as a "console application". Since the Windows console windows use a different encoding than the rest of the system, you must take special care when using 8-bit characters within psql. If psql detects a problematic console code page, it will warn you at startup. To change the console code page, two things are necessary: </p>
+<dl>
+<dd> <p> &bull; Set the code page by entering <code>cmd.exe /c chcp 1252</code>. (1252 is a code page that is appropriate for German; replace it with your value.) If you are using Cygwin, you can put this command in /etc/profile. </p>
+ </dd></dl>
+<dl>
+<dd> <p> &bull; Set the console font to Lucida Console, because the raster font does not work with the ANSI code page. </p>
+ </dd></dl>
+<h2>EXAMPLES</h2>
+<p> The first example shows how to spread a command over several lines of input. Notice the changing prompt: </p>
+<dl>
+<dd> <pre><code>testdb=&gt; CREATE TABLE my_table ( testdb(&gt;  first integer not null default 0, testdb(&gt;  second text) testdb-&gt; ; CREATE TABLE
+</code></pre>
+ </dd></dl>
+<p> Now look at the table definition again: </p>
+<dl>
+<dd> <pre><code>testdb=&gt; \d my_table              Table &quot;my_table&quot;
+ Attribute | Type | Modifier
+-----------+---------+--------------------
+ first | integer | not null default 0
+ second | text |
+</code></pre>
+ </dd></dl>
+<p> Now we change the prompt to something more interesting: </p>
+<dl>
+<dd> <pre><code>testdb=&gt; \set PROMPT1 '%n@%m %~%R%# ' peter [at] localhost testdb=&gt;
+</code></pre>
+ </dd></dl>
+<p> Let&#8217;s assume you have filled the table with data and want to take a look at it: </p>
+<dl>
+<dd> <pre><code>peter [at] localhost testdb=&gt; SELECT * FROM my_table;
+ first | second
+-------+--------
+     1 | one
+     2 | two
+     3 | three
+     4 | four
+(4 rows)
+</code></pre>
+ </dd></dl>
+<p> You can display tables in different ways by using the <code>\pset</code> command: </p>
+<dl>
+<dd> <pre><code>peter [at] localhost testdb=&gt; \pset border 2 Border style is 2.
+peter [at] localhost testdb=&gt; SELECT * FROM my_table; +-------+--------+
+| first | second |
++-------+--------+
+| 1 | one |
+| 2 | two |
+| 3 | three |
+| 4 | four |
++-------+--------+
+(4 rows)
+peter [at] localhost testdb=&gt; \pset border 0 Border style is 0.
+peter [at] localhost testdb=&gt; SELECT * FROM my_table; first second
+----- ------
+    1 one
+    2 two
+    3 three
+    4 four
+(4 rows)
+peter [at] localhost testdb=&gt; \pset border 1 Border style is 1.
+peter [at] localhost testdb=&gt; \pset format unaligned Output format is unaligned.
+peter [at] localhost testdb=&gt; \pset fieldsep &quot;,&quot; Field separator is &quot;,&quot;.
+peter [at] localhost testdb=&gt; \pset tuples_only Showing only tuples.
+peter [at] localhost testdb=&gt; SELECT second, first FROM my_table; one,1
+two,2
+three,3
+four,4
+</code></pre>
+ </dd></dl>
+<p> Alternatively, use the short commands: </p>
+<dl>
+<dd> <pre><code>peter [at] localhost testdb=&gt; \a \t \x Output format is aligned.
+Tuples only is off.
+Expanded display is on.
+peter [at] localhost testdb=&gt; SELECT * FROM my_table; -[ RECORD 1 ]-
+first | 1
+second | one
+-[ RECORD 2 ]-
+first | 2
+second | two
+-[ RECORD 3 ]-
+first | 3
+second | three
+-[ RECORD 4 ]-
+first | 4
+second | four
+</code></pre>
+ </dd></dl>
+<h2>Index</h2>
+<dl>
+<dt><a href="#lbAB">NAME</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAC">SYNOPSIS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAD">DESCRIPTION</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAE">OPTIONS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAF">EXIT STATUS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAG">USAGE</a></dt>
+<dd>  </dd>
+<dl>
+<dt><a href="#lbAH">Connecting to a Database</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAI">Entering SQL Commands</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAJ">Meta-Commands</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAK">Advanced Features</a></dt>
+<dd>  </dd></dl>
+<dt><a href="#lbAL">ENVIRONMENT</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAM">FILES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAN">NOTES</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAO">NOTES FOR WINDOWS USERS</a></dt>
+<dd>  </dd>
+<dt><a href="#lbAP">EXAMPLES</a></dt>
+<dd>  </dd></dl>
