@@ -20,7 +20,7 @@
 </script>
 </div>
 {{ end }}
-{{ .Content | replaceRE `(?s)<h2 class="name">NAME</h2>\s*` "" }}
+{{ .Content | replaceRE `(?s)<h2 class="name">NAME</h2>\s*` "" | replaceRE `(?s)<h2>SYNOPSIS</h2>\s*` "" | replaceRE `(?s)<h2>DESCRIPTION</h2>\s*` "" }}
 <div class="ad-after-content">
 <!-- after-post-content-1 -->
 <ins class="adsbygoogle"
