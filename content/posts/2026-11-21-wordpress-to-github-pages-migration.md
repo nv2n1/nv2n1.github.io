@@ -1,6 +1,8 @@
 ---
 title: "How to Migrate WordPress to GitHub Pages with Hugo"
 date: 2026-11-21
+author: "Eric Ma"
+authors: [zma]
 slug: migrate-wordpress-to-github-pages
 url: /migrate-wordpress-to-github-pages/
 canonical: /migrate-wordpress-to-github-pages/
@@ -237,5 +239,3 @@ Human role: strategic decisions (URL structure, taxonomy design), final review, 
 - **Free hosting, zero server maintenance, static security**
 
 The site is live at [systutorials.com](https://www.systutorials.com) — this very post you're reading is served from the Hugo + GitHub Pages stack.
-
-To leave comments or report issues, please create a PR or report an issue at [https://github.com/nv2n1/nv2n1.github.io](https://github.com/nv2n1/nv2n1.github.io).
