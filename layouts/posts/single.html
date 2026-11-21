@@ -12,6 +12,7 @@
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:url" content="{{ with .Params.canonical }}{{ . | absURL }}{{ else }}{{ .Permalink }}{{ end }}">
   <meta property="og:description" content="{{ .Params.description | default (.Summary | plainify | truncate 160) }}">
+  <meta property="og:image" content="{{ "/logo.png" | absURL }}">
   <style>
     :root {
       color-scheme: light;
@@ -226,6 +227,16 @@
     </footer>
     <a class="back" href="/">&larr; All posts</a>
   </main>
+  <!-- Clean up gsc.tab parameter from URL if present (Google CSE fallback) -->
+  <script>
+  (function () {
+    var url = window.location.href;
+    var cleaned = url.replace(/[?&]gsc\.tab=\d+/, '').replace(/#gsc\.tab=\d+/, '');
+    if (cleaned !== url) {
+      window.history.replaceState({}, document.title, cleaned);
+    }
+  })();
+  </script>
 </body>
 </html>
 {{ end }}
