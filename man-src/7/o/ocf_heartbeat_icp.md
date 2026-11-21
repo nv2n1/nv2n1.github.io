@@ -1,4 +1,5 @@
 ---
+
 title: "ocf_heartbeat_icp(7)"
 name: "ocf_heartbeat_icp"
 section: "7"
@@ -6,9 +7,6 @@ letter: "o"
 url: "/docs/linux/man/7-ocf_heartbeat_icp/"
 ---
 
-
- </p>
-<h2 class="name">NAME</h2>
 <p> ocf_heartbeat_ICP &#8211; Manages an ICP Vortex clustered host drive </p>
 <h2>SYNOPSIS</h2>
 <dl>

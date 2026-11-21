@@ -1,4 +1,5 @@
 ---
+
 title: "user_namespaces(7)"
 name: "user_namespaces"
 section: "7"
@@ -6,9 +7,6 @@ letter: "u"
 url: "/docs/linux/man/7-user_namespaces/"
 ---
 
-
- </p>
-<h2 class="name">NAME</h2>
 <p> user_namespaces &#8211; overview of Linux user namespaces </p>
 <h2>DESCRIPTION</h2>
 <p> For an overview of namespaces, see <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7). </p>
