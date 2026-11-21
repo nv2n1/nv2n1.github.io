@@ -1,4 +1,5 @@
 ---
+
 title: "ucpp(1)"
 name: "ucpp"
 section: "1"
@@ -9,9 +10,7 @@ description: "ucpp – C preprocessor"
 
 <h2>NAME</h2>
 <p> ucpp &#8211; C preprocessor</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ucpp </code> [ <i>options</i> ] [ <i>file</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ucpp</code> is a C preprocessor mostly compatible with ISO-C99. It is rather strict and uses only a small amount of memory. It uses standard input as primary input if no file argument is given.</p>
 <h2>OPTIONS</h2>
 <p> There are several classes of options.</p>

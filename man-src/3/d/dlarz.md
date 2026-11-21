@@ -1,4 +1,5 @@
 ---
+
 title: "dlarz(3)"
 name: "dlarz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarz/"
 description: "dlarz.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarz</code> (SIDE, M, N, L, V, INCV, TAU, C, LDC, WORK)<br />
  <i></i><code>DLARZ</code> applies an elementary reflector (as returned by stzrzf) to a general matrix.</p>

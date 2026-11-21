@@ -1,4 +1,5 @@
 ---
+
 title: "spectrwm(1)"
 name: "spectrwm"
 section: "1"
@@ -9,9 +10,7 @@ description: "spectrwm – window manager for X11"
 
 <h2>NAME</h2>
 <p> <code>spectrwm</code> &#8211; window manager for X11</p>
-<h2>SYNOPSIS</h2>
 <p> <code>spectrwm</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>spectrwm</code> is a minimalistic window manager that tries to stay out of the way so that valuable screen real estate can be used for much more important stuff. It has sane defaults and does not require one to learn a language to do any configuration. It was written by hackers for hackers and it strives to be small, compact and fast. </p>
 <p> When <code>spectrwm</code> starts up, it reads settings from its configuration file, spectrwm.conf See the Sx CONFIGURATION FILES section below. </p>
 <p> The following notation is used throughout this page: </p>

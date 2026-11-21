@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_alloc_dm(3)"
 name: "mlx5dv_alloc_dm"
 section: "3"
@@ -6,14 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_alloc_dm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_alloc_dm - allocates device memory (DM) 
-
-<h2>SYNOPSIS</h2>
+mlx5dv_alloc_dm - allocates device memory (DM) 
 
 <dl>
 <dt>
@@ -24,11 +18,7 @@ struct ibv_dm *mlx5dv_alloc_dm(struct ibv_context *context,
                                struct mlx5dv_alloc_dm_attr *mlx5_dm_attr)
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- mlx5dv_alloc_dm() allocates device memory (DM) with specific driver properties.
+mlx5dv_alloc_dm() allocates device memory (DM) with specific driver properties.
 
 <h2>ARGUMENTS</h2>
 

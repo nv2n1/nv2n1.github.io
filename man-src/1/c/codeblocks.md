@@ -1,4 +1,5 @@
 ---
+
 title: "codeblocks(1)"
 name: "codeblocks"
 section: "1"
@@ -9,9 +10,7 @@ description: "Code::Blocks – The open-source, cross-platform IDE"
 
 <h2>NAME</h2>
 <p> Code::Blocks &#8211; The open-source, cross-platform IDE</p>
-<h2>SYNOPSIS</h2>
 <p> <code>codeblocks [-h] [-ns] [-d] [&#8211;prefix &lt;str&gt;] [-p &lt;str&gt;] [&#8211;profile &lt;str&gt;]</code> <code>[&#8211;rebuild] [&#8211;build] [&#8211;target &lt;str&gt;] [&#8211;no-batch-window-close]</code> <code>[&#8211;batch-build-notify]</code> <i>[filename(s)&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>codeblocks</code> launches the Code::Blocks IDE. Its various command-line arguments are listed below.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "abc2ly(1)"
 name: "abc2ly"
 section: "1"
@@ -9,9 +10,7 @@ description: "abc2ly – manual page for abc2ly (LilyPond) 2.12.2"
 
 <h2>NAME</h2>
 <p> abc2ly &#8211; manual page for abc2ly (LilyPond) 2.12.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>abc2ly</code> [<i>OPTION</i>]&#8230; <i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> abc2ly converts ABC music files (see <a rel="nofollow" href="http://www.gre.ac.uk/~c.walshaw/abc2mtex/abc.txt)">http://www.gre.ac.uk/~c.walshaw/abc2mtex/abc.txt)</a> to LilyPond input.</p>
 <h2>OPTIONS</h2>
 <dl>

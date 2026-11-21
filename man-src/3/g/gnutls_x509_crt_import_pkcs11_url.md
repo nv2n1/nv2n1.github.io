@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_import_pkcs11_url(3)"
 name: "gnutls_x509_crt_import_pkcs11_url"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_import_pkcs11_url – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_import_pkcs11_url &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_import_pkcs11_url(gnutls_x509_crt_t </code><i>crt</i><code>, const char * </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crt_import_pkcs11_url – API function"
 <dd> A PKCS 11 url</dd>
 <dt>unsigned int flags</dt>
 <dd> One of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will import a PKCS 11 certificate directly from a token without involving the <code>gnutls_pkcs11_obj_t</code> structure. This function will fail if the certificate stored is not of X.509 type.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

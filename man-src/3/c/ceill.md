@@ -1,4 +1,5 @@
 ---
+
 title: "ceill(3)"
 name: "ceill"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ceill/"
 description: "ceil, ceilf, ceill – ceiling function: smallest integral value not less than argument"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double ceil(double x);
@@ -22,7 +22,6 @@ long double ceill(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return the smallest integral value that is not less than <i>x</i>. </p>
 <p> For example, <i>ceil(0.5)</i> is 1.0, and <i>ceil(-0.5)</i> is 0.0.</p>
 <h2>RETURN VALUE</h2>

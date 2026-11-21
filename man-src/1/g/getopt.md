@@ -1,4 +1,5 @@
 ---
+
 title: "getopt(1)"
 name: "getopt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getopt/"
 description: "getopt – parse command options (enhanced)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>getopt</code> <i>optstring</i> <i>parameters</i> <code>getopt</code> [options] [<code>&#8212;</code>] <i>optstring</i> <i>parameters</i> <code>getopt</code> [options] <code>-o</code>|<code>&#8211;options</code> <i>optstring</i> [options] [<code>&#8212;</code>] <i>parameters</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>getopt</code> is used to break up (<i>parse</i>) options in command lines for easy parsing by shell procedures, and to check for valid options. It uses the GNU <code><a href="/docs/linux/man/3-getopt/">getopt</a></code>(3) routines to do this. </p>
 <p> The parameters <code>getopt</code> is called with can be divided into two parts: options which modify the way <code>getopt</code> will do the parsing (the <i>options</i> and the <i>optstring</i> in the <code>SYNOPSIS</code>), and the parameters which are to be parsed (<i>parameters</i> in the <code>SYNOPSIS</code>). The second part will start at the first non-option parameter that is not an option argument, or after the first occurrence of &#8216;<code>&#8212;</code>&#8216;. If no &#8216;<code>-o</code>&#8216; or &#8216;<code>&#8211;options</code>&#8216; option is found in the first part, the first parameter of the second part is used as the short options string. </p>
 <p> If the environment variable <code>GETOPT_COMPATIBLE</code> is set, or if the first <i>parameter</i> is not an option (does not start with a &#8216;<code>&#8211;</code>&#8216;, the first format in the <code>SYNOPSIS</code>), <code>getopt</code> will generate output that is compatible with that of other versions of <code><a href="/docs/linux/man/1-getopt/">getopt</a></code>(1). It will still do parameter shuffling and recognize optional arguments (see section <code>COMPATIBILITY</code> for more information). </p>

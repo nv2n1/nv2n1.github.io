@@ -1,4 +1,5 @@
 ---
+
 title: "iv_fd_pump_pump(3)"
 name: "iv_fd_pump_pump"
 section: "3"
@@ -9,7 +10,6 @@ description: "IV_FD_PUMP_INIT, iv_fd_pump_init, iv_fd_pump_destroy, iv_fd_pump_p
 
 <h2>NAME</h2>
 <p> IV_FD_PUMP_INIT, iv_fd_pump_init, iv_fd_pump_destroy, iv_fd_pump_pump, iv_fd_pump_is_done &#8211; pump data between file descriptors</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_fd_pump.h&gt;</code> </p>
 <pre><code>
 struct iv_fd_pump {
@@ -25,7 +25,6 @@ struct iv_fd_pump {
  <code>void iv_fd_pump_destroy(struct iv_fd_pump *</code><i>this</i><code>);</code><br />
  <code>int iv_fd_pump_pump(struct iv_fd_pump *</code><i>this</i><code>);</code><br />
  <code>int iv_fd_pump_is_done(struct iv_fd_pump *</code><i>this</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>iv_fd_pump</code> provides a way for moving data between two file descriptors. </p>
 <p> To set up <code>iv_fd_pump</code> for moving data, call <code>IV_FD_PUMP_INIT</code> on a <code>struct iv_fd_pump</code> object, fill in the <code>-&gt;from_fd, -&gt;to_fd, -&gt;cookie, -&gt;set_bands</code> and <code>-&gt;flags</code> members, and then call <code>iv_fd_pump_init</code> on the object. </p>
 <p> Conversely, to destroy a <code>struct iv_fd_pump</code> object, call <code>iv_fd_pump_destroy.</code> There are no restrictions on when this function can be called. </p>

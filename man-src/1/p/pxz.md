@@ -1,4 +1,5 @@
 ---
+
 title: "pxz(1)"
 name: "pxz"
 section: "1"
@@ -9,9 +10,7 @@ description: "pxz – Parallel LZMA compressor compatible with XZ."
 
 <h2>NAME</h2>
 <p> pxz &#8211; Parallel LZMA compressor compatible with XZ.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pxz</code> [<code>options</code>]&#8230; [<i>file</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pxz</code> is a compression utility that takes advantage of running XZ compression simultaneously on different parts of an input file on multiple cores and processors. This significantly speeds up compression time.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "zmap(1)"
 name: "zmap"
 section: "1"
@@ -9,9 +10,7 @@ description: "zmap – The Fast Internet Scanner"
 
 <h2>NAME</h2>
 <p> <code>zmap</code> &#8211; The Fast Internet Scanner</p>
-<h2>SYNOPSIS</h2>
 <p> zmap [ -p &lt;port&gt; ] [ -o &lt;outfile&gt; ] [ OPTIONS&#8230; ] [ ip/hostname/range ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>ZMap</i> is a network tool for scanning the entire Internet (or large samples). ZMap is capable of scanning the entire Internet in around 45 minutes on a gigabit network connection, reaching ~98% theoretical line speed.</p>
 <h2>OPTIONS</h2>
 <h3>BASIC OPTIONS</h3>

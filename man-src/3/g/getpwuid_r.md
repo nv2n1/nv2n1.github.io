@@ -1,4 +1,5 @@
 ---
+
 title: "getpwuid_r(3)"
 name: "getpwuid_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getpwuid_r/"
 description: "getpwnam, getpwnam_r, getpwuid, getpwuid_r – get password file entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;pwd.h&gt;
 #include &lt;sys/types.h&gt;
@@ -24,7 +24,6 @@ int getpwuid_r(uid_t uid, struct passwd *pwd,
 <dt>
 </dt><dd> _POSIX_C_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>getpwnam</code>() function returns a pointer to a structure containing the broken-out fields of the record in the password database (e.g., the local password file <i>/etc/passwd</i>, NIS, and LDAP) that matches the username <i>name</i>. </p>
 <p> The <code>getpwuid</code>() function returns a pointer to a structure containing the broken-out fields of the record in the password database that matches the user ID <i>uid</i>. </p>
 <p> The <i>passwd</i> structure is defined in <i>&lt;pwd.h&gt;</i> as follows: </p>

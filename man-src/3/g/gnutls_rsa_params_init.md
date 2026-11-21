@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rsa_params_init(3)"
 name: "gnutls_rsa_params_init"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_rsa_params_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_params_init &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_params_init(gnutls_rsa_params_t * </code><i>rsa_params</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_rsa_params_t * rsa_params</dt>
 <dd> Is a structure that will hold the parameters</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will initialize the temporary RSA parameters structure.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an negative error code.</p>

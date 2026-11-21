@@ -1,4 +1,5 @@
 ---
+
 title: "git-pack-refs(1)"
 name: "git-pack-refs"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-pack-refs/"
 description: "git-pack-refs – Pack heads and tags for efficient repository access"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git pack - refs[--all][--no - prune]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Traditionally, tips of branches and tags (collectively known as <i>refs</i>) were stored one file per ref in a (sub)directory under <code>$GIT_DIR/refs</code> directory. While many branch tips tend to be updated often, most tags and some branch tips are never updated. When a repository has hundreds or thousands of tags, this one-file-per-ref format both wastes storage and hurts performance. </p>
 <p> This command is used to solve the storage and performance problem by storing the refs in a single file, <code>$GIT_DIR/packed-refs</code>. When a ref is missing from the traditional <code>$GIT_DIR/refs</code> directory hierarchy, it is looked up in this file and used if found. </p>
 <p> Subsequent updates to branches always create new files under <code>$GIT_DIR/refs</code> directory hierarchy. </p>

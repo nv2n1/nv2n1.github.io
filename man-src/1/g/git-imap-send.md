@@ -1,4 +1,5 @@
 ---
+
 title: "git-imap-send(1)"
 name: "git-imap-send"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-imap-send/"
 description: "git-imap-send – Send a collection of patches from stdin to an IMAP folder"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git imap - send[-v][-q][--[no - ] curl]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command uploads a mailbox generated with <i>git format-patch</i> into an IMAP drafts folder. This allows patches to be sent as other email is when using mail clients that cannot read mailbox files directly. The command also works with any general mailbox in which emails have the fields &quot;From&quot;, &quot;Date&quot;, and &quot;Subject&quot; in that order. </p>
 <p> Typical usage is something like: </p>
 <p> git format-patch &#8211;signoff &#8211;stdout &#8211;attach origin | git imap-send</p>

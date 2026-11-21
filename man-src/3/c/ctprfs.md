@@ -1,4 +1,5 @@
 ---
+
 title: "ctprfs(3)"
 name: "ctprfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctprfs/"
 description: "ctprfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctprfs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code>CTPRFS</code></p>

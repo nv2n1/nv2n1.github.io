@@ -1,4 +1,5 @@
 ---
+
 title: "fdhestonbarrierengine(3)"
 name: "fdhestonbarrierengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdhestonbarrierengine/"
 description: "ql/experimental/finitedifferences/fdhestonbarrierengine.hpp – Finite-Differences Heston barrier option engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt;<br />
  #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br />
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt; </p>

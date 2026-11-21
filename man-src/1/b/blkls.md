@@ -1,4 +1,5 @@
 ---
+
 title: "blkls(1)"
 name: "blkls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-blkls/"
 description: "blkls – List or output file system data units."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blkls [-aAelsvV] [-f </code> <i>fstype</i> <code>] [-i </code> <i>imgtype</i> <code>] [-o </code> <i>imgoffset</i> <code>]</code> <i>[-b dev_sector_size] image [images] [start-stop]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>blkls</code> opens the named <i>image(s)</i> and copies file system data units (blocks). By default, <code>blkls</code> copies the contents of unallocated data blocks. <code>blkls </code> was called <code>dls</code> in TSK versions prior to 3.0.0. <code>blkls </code> was called <code>unrm</code> in TCT. </p>
 <h2>ARGUMENTS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cpthsv(1)"
 name: "cpthsv"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cpthsv/"
 description: "cpthsv – modify hue, saturation and colour value of GMT colour palette tables."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cpthsv</code> -T&nbsp;<wbr><i>transform</i> [-h] [-o&nbsp;<wbr><i>file</i>] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>cpthsv</code> utility reads the RGB colour palette in the input, converts its colours to the HSV colour-space, modifies these values in some simple ways, then converts back to RGB colour space and outputs a cpt file. So <code>cpthsv</code> can (de)saturate, brighten, darken or hue-shift. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified. </p>
 <p> The hue value is taken to be between 0 and 360, while the saturation and value components are taken to be between 0 and 1,</p>

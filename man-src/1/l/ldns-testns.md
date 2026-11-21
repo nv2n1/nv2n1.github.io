@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-testns(1)"
 name: "ldns-testns"
 section: "1"
@@ -11,7 +12,6 @@ description: "ldns-testns – simple fake nameserver tool"
 <p> ldns-testns &#8211; simple fake nameserver tool</p>
 <h2>SYNOPSYS</h2>
 <p> <code>ldns-testns</code> [ <i>OPTION</i> ] <i>datafile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldns-testns</code> can be used to provide answers to DNS queries for testing. The answers are premade, and can be tailored to testing needs. The answers can be wildly invalid or unparseable. </p>
 <p> This program is a debugging aid. It is not efficient, especially with a long config file, but it can give any reply to any query. This can help the developer pre-script replies for queries. </p>
 <p> It listens to IP4 UDP and TCP by default. You can specify a packet RR by RR with header flags to return. </p>

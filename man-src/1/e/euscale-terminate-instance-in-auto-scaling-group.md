@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-terminate-instance-in-auto-scaling-group(1)"
 name: "euscale-terminate-instance-in-auto-scaling-group"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-terminate-instance-in-auto-scaling-group – Manually term
 
 <h2>NAME</h2>
 <p> euscale-terminate-instance-in-auto-scaling-group &#8211; Manually terminate an auto-scaling instance</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-terminate-instance-in-auto-scaling-group (<code>-d</code> | <code>-D</code>)</p>
 <dl>
 <dt>[&#8211;show-long]</dt>
 <dd> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Manually terminate an auto-scaling instance</p>
 <h3>positional arguments:</h3>
 <dl>

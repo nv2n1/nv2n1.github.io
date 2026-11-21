@@ -1,4 +1,5 @@
 ---
+
 title: "ua(1)"
 name: "ua"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ua/"
 description: "pro – Manage Ubuntu Pro services from Canonical"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pro</code> &lt;command&gt; [&lt;args&gt;]<br />
  <code>ua</code> &lt;command&gt; [&lt;args&gt;]<br />
  <code>ubuntu-advantage</code> &lt;command&gt; [&lt;args&gt;] </p>
-<h2>DESCRIPTION</h2>
 <p> Ubuntu Pro is a collection of services offered by Canonical to Ubuntu users. The Ubuntu Pro command line tool is used to attach a system to an Ubuntu Pro contract to then enable and disable services from Canonical. The available commands and services are described in more detail below. </p>
 <h2>COMMANDS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_handle_t(3)"
 name: "globus_handle_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_handle_table.h –"
 ---
 
 <p> Handle Table for Reference Counting Data.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_types.h&#8217; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_NULL_HANDLE</code> </p>

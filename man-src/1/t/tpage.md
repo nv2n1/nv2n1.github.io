@@ -1,4 +1,5 @@
 ---
+
 title: "tpage(1)"
 name: "tpage"
 section: "1"
@@ -11,7 +12,6 @@ description: "Template::Tools::tpage – Process templates from command line"
 <pre><code>
 tpage[--define var = value] file(s)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>tpage</code> script is a simple wrapper around the Template Toolkit processor. Files specified by name on the command line are processed in turn by the template processor and the resulting output is sent to <font SIZE="-1">STDOUT</font> and can be redirected accordingly. e.g. </p>
 <pre>
     tpage myfile &gt; myfile.out

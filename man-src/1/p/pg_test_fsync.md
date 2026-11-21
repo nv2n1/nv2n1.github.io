@@ -1,4 +1,5 @@
 ---
+
 title: "pg_test_fsync(1)"
 name: "pg_test_fsync"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pg_test_fsync/"
 description: "pg_test_fsync – determine fastest wal_sync_method for PostgreSQL"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_test_fsync</code> [<i>option</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>pg_test_fsync is intended to give you a reasonable idea of what the fastest wal_sync_method is on your specific system, as well as supplying diagnostic information in the event of an identified I/O problem. However, differences shown by pg_test_fsync might not make any difference in real database throughput, especially since many database servers are not speed-limited by their transaction logs.</dd>
 <h2>OPTIONS</h2>
 <p> pg_test_fsync accepts the following command-line options: </p>

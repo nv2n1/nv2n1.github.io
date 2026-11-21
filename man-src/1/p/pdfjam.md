@@ -1,4 +1,5 @@
 ---
+
 title: "pdfjam(1)"
 name: "pdfjam"
 section: "1"
@@ -10,17 +11,9 @@ url: "/docs/linux/man/1-pdfjam/"
 
  pdfjam - A shell script for manipulating PDF files
 
-<h2>SYNOPSIS</h2>
+pdfjam [OPTION [OPTION] ...] [SRC [PAGESPEC] [SRC [PAGESPEC]] ...] 
 
- 
-
- pdfjam [OPTION [OPTION] ...] [SRC [PAGESPEC] [SRC [PAGESPEC]] ...] 
-
-<h2>DESCRIPTION</h2>
-
- 
-
- pdfjam provides a front end to most capabilities of the &quot;pdfpages&quot; package (by Andreas Matthias) of pdflatex. Detailed information can be found via &quot;pdfjam --help&quot;, and also in the web page mentioned below . 
+pdfjam provides a front end to most capabilities of the &quot;pdfpages&quot; package (by Andreas Matthias) of pdflatex. Detailed information can be found via &quot;pdfjam --help&quot;, and also in the web page mentioned below . 
 
  A working installation of pdflatex, with the pdfpages package, is required. 
 

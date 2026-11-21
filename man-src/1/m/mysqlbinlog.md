@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlbinlog(1)"
 name: "mysqlbinlog"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlbinlog/"
 description: "mysqlbinlog – utility for processing binary log files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlbinlog [</code><code>options</code><code>] </code><i>log_file</i><code> &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The server&#8217;s binary log consists of files containing &#8220;events&#8221; that describe modifications to database contents. The server writes these files in binary format. To display their contents in text format, use the <code>mysqlbinlog</code> utility. You can also use <code>mysqlbinlog</code> to display the contents of relay log files written by a slave server in a replication setup because relay logs have the same format as binary logs. The binary log and relay log are discussed further in Section 5.4.4, &#8220;The Binary Log&#8221;, and Section 17.2.4, &#8220;Replication Relay and Status Logs&#8221;. </dd>
 <p> Invoke <code>mysqlbinlog</code> like this: </p>
 <dl>

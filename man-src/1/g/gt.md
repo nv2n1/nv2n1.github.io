@@ -1,4 +1,5 @@
 ---
+
 title: "gt(1)"
 name: "gt"
 section: "1"
@@ -9,9 +10,7 @@ description: "gt – version of TiMidity MIDI to WAVE converter and player"
 
 <h2>NAME</h2>
 <p> gt &#8211; version of TiMidity MIDI to WAVE converter and player </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gt</code> [-options] [directoryname | filenames &#8230;] [-options] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Gt</i>&nbsp;<wbr>is a MIDI to WAVE converter using Gravis Ultrasound-compatible patch files, extended GUS patch files, or AWE-compatible SoundFonts to generate digital audio data from General MIDI files. </p>
 <p> The data can be stored in a file for processing, or played in real time through an audio device. <i>Gt</i>&nbsp;<wbr>will generate 6 and 4 channel sound output on systems with capable Alsa drivers and soundcards. Currently, there is only a single output driver, for Alsa. </p>
 <p> It&#8217;s not necessary to give any filenames on the command line; if there are midi files in the current directory, <i>gt</i>&nbsp;<wbr>will find them and play them. You can also give a single directory name, and <i>gt</i>&nbsp;<wbr>will look in that directory for midi files. (This automatic construction of play lists will not work for compressed files.) </p>

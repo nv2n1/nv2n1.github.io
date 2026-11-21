@@ -1,4 +1,5 @@
 ---
+
 title: "mingw32-crossreport(1)"
 name: "mingw32-crossreport"
 section: "1"
@@ -6,20 +7,13 @@ letter: "m"
 url: "/docs/linux/man/1-mingw32-crossreport/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+CrossReport - Analysis tool to help cross-compilation to Windows. 
 
- CrossReport - Analysis tool to help cross-compilation to Windows. 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
  mingw32-crossreport [options] /path/to/linuxbinary
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- CrossReport is a tool to help you analyze the APIs used by a compiled Linux program, in order to work out the effort required to cross-compile that program for Windows, using the Fedora MinGW cross-compiler. 
+CrossReport is a tool to help you analyze the APIs used by a compiled Linux program, in order to work out the effort required to cross-compile that program for Windows, using the Fedora MinGW cross-compiler. 
 
  The simplest way to use it is to point it at an existing Linux binary, and then read the generated report. 
 

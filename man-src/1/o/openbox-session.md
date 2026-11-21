@@ -1,4 +1,5 @@
 ---
+
 title: "openbox-session(1)"
 name: "openbox-session"
 section: "1"
@@ -10,7 +11,6 @@ description: "openbox-session — Runs an Openbox session without any session ma
 <h2>NAME</h2>
 <p> openbox-session &#8212; Runs an Openbox session without any session manager.<br />
 &nbsp;<wbr></p>
-<h2>DESCRIPTION</h2>
 <p> <code>openbox-session</code> runs an openbox session without any session manager. Without a session manager, you will not be able to save your state from one log in to the next. </p>
 <p> <code>openbox-session</code> does not take any command line arguments. </p>
 <p> On log in, <code>openbox-session</code> will run the ~/.config/openbox/autostart.sh script if it exists, and will run the system-wide script /etc/xdg/openbox/autostart.sh otherwise. You may place anything you want to run automatically in those files, for example:<br />

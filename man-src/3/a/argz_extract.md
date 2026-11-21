@@ -1,4 +1,5 @@
 ---
+
 title: "argz_extract(3)"
 name: "argz_extract"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-argz_extract/"
 description: "argz_add, argz_add_sep, argz_append, argz_count, argz_create, argz_create_sep, argz_delete, argz_extract, argz_insert, argz_next, argz_replace, argz_stringify – functions to handle an argz list"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;argz.h&gt;
 error_t argz_add(char **argz, size_t *argz_len, const char *str);
@@ -29,7 +29,6 @@ error_t argz_replace(char **argz, size_t *argz_len, const char *str,
                      const char *with, unsigned int *replace_count);
 void argz_stringify(char *argz, size_t len, int sep);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These functions are glibc-specific. </p>
 <p> An argz vector is a pointer to a character buffer together with a length. The intended interpretation of the character buffer is an array of strings, where the strings are separated by null bytes (&#8216;\0&#8217;). If the length is nonzero, the last byte of the buffer must be a null byte. </p>
 <p> These functions are for handling argz vectors. The pair (NULL,0) is an argz vector, and, conversely, argz vectors of length 0 must have null pointer. Allocation of nonempty argz vectors is done using <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), so that <code><a href="/docs/linux/man/3-free/">free</a></code>(3) can be used to dispose of them again. </p>

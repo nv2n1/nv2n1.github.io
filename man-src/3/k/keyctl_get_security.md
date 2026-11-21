@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_get_security(3)"
 name: "keyctl_get_security"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-keyctl_get_security/"
 description: "keyctl_get_security – Retrieve a key’s security context"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_get_security(key_serial_t key, char *buffer,
                          size_t buflen);
 long keyctl_get_security_alloc(key_serial_t key, char **_buffer);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_get_security</code>() retrieves the security context of a key as a NUL-terminated string. This will be rendered in a form appropriate to the LSM in force &#8211; for instance, with SELinux, it may look like</p>
 <dl>
 <dt>

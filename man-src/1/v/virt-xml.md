@@ -1,4 +1,5 @@
 ---
+
 title: "virt-xml(1)"
 name: "virt-xml"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-virt-xml/"
 description: "virt-xml – Edit libvirt XML using command line options."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>virt-xml</code> <font SIZE="-1">DOMAIN</font> XML-ACTION XML-OPTION [<font SIZE="-1">OUTPUT-OPTION</font>] [<font SIZE="-1">MISC-OPTIONS</font>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>virt-xml</code> is a command line tool for editing libvirt <font SIZE="-1">XML</font> using explicit command line options. See the <font SIZE="-1">EXAMPLES</font> section at the end of this document to jump right in. </p>
 <p> Each <code>virt-xml</code> invocation requires 3 things: name of an existing domain to alter (or <font SIZE="-1">XML</font> passed on stdin), an action to on the <font SIZE="-1">XML,</font> and an <font SIZE="-1">XML</font> change to make. actions are one of: </p>
 <p> &#8211;add-device: Append a new device definition to the <font SIZE="-1">XML</font> &#8211;remove-device: Remove an existing device definition &#8211;edit: Edit an existing <font SIZE="-1">XML</font> block &#8211;build-xml: Just build the requested <font SIZE="-1">XML</font> block and print it (no domain or input <font SIZE="-1">XML</font> are required here). </p>

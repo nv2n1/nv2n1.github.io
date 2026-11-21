@@ -1,4 +1,5 @@
 ---
+
 title: "gofmt(1)"
 name: "gofmt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gofmt/"
 description: "gofmt – format Go programs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gofmt</code> [<i>flags</i>] [<i>path &#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Gofmt formats Go programs. It uses tabs for indentation and blanks for alignment. Alignment assumes that an editor is using a fixed-width font. </p>
 <p> Without an explicit path, it processes the standard input. Given a file, it operates on that file; given a directory, it operates on all .go files in that directory, recursively. (Files starting with a period are ignored.) By default, gofmt prints the reformatted sources to standard output.</p>
 <h2>OPTIONS</h2>

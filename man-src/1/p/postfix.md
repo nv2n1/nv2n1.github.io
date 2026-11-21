@@ -1,4 +1,5 @@
 ---
+
 title: "postfix(1)"
 name: "postfix"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-postfix/"
 description: "postfix – Postfix control program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>postfix</code> [<code>-Dv</code>] [<code>-c </code><i>config_dir</i>] <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> This command is reserved for the superuser. To submit mail, use the Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command. </p>
 <p> The <code><a href="/docs/linux/man/1-postfix/">postfix</a></code>(1) command controls the operation of the Postfix mail system: start or stop the <code><a href="/docs/linux/man/8-master/">master</a></code>(8) daemon, do a health check, and other maintenance. </p>
 <p> By default, the <code><a href="/docs/linux/man/1-postfix/">postfix</a></code>(1) command sets up a standardized environment and runs the <code>postfix-script</code> shell script to do the actual work. </p>

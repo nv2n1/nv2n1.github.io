@@ -1,4 +1,5 @@
 ---
+
 title: "lit-14(1)"
 name: "lit-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lit-14/"
 description: "lit – LLVM Integrated Tester"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lit</code> [<i>options</i>] [<i>tests</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lit</code> is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and providing indication of failures. <code>lit</code> is designed to be a lightweight testing tool with as simple a user interface as possible. </p>
 <p> <code>lit</code> should be run with one or more <i>tests</i> to run specified on the command line. Tests can be either individual test files or directories to search for tests (see <i>TEST DISCOVERY</i>). </p>
 <p> Each specified test will be executed (potentially concurrently) and once all tests have been run <code>lit</code> will print summary information on the number of tests which passed or failed (see <i>TEST STATUS RESULTS</i>). The <code>lit</code> program will execute with a non-zero exit code if any tests fail. </p>

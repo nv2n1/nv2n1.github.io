@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_transport_set_int(3)"
 name: "gnutls_transport_set_int"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_transport_set_int – API function"
 
 <h2>NAME</h2>
 <p> gnutls_transport_set_int &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_transport_set_int(gnutls_session_t </code><i>session</i><code>, int </code><i>i</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_transport_set_int – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>int i</dt>
 <dd> is the value.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Used to set the first argument of the transport function (for push and pull callbacks) for berkeley style sockets.</p>
 <h2>SINCE</h2>
 <p> 3.1.9</p>

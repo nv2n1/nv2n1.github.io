@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_subject_alt_name(3)"
 name: "gnutls_x509_crt_get_subject_alt_name"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_get_subject_alt_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_subject_alt_name &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_subject_alt_name(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>san</i><code>, size_t * </code><i>san_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_x509_crt_get_subject_alt_name – API function"
 <dd> holds the size of san.</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function retrieves the Alternative Name (2.5.29.17), contained in the given certificate in the X509v3 Certificate Extensions. </p>
 <p> When the SAN type is otherName, it will extract the data in the otherName&#8217;s value field, and <code>GNUTLS_SAN_OTHERNAME</code> is returned. You may use <code>gnutls_x509_crt_get_subject_alt_othername_oid()</code> to get the corresponding OID and the &quot;virtual&quot; SAN types (e.g., <code>GNUTLS_SAN_OTHERNAME_XMPP</code>). </p>
 <p> If an otherName OID is known, the data will be decoded. Otherwise the returned data will be DER encoded, and you will have to decode it yourself. Currently, only the RFC 3920 id-on-xmppAddr SAN is recognized.</p>

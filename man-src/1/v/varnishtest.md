@@ -1,4 +1,5 @@
 ---
+
 title: "varnishtest(1)"
 name: "varnishtest"
 section: "1"
@@ -9,9 +10,7 @@ description: "varnishtest – Test program for Varnish"
 
 <h2>NAME</h2>
 <p> varnishtest &#8211; Test program for Varnish</p>
-<h2>SYNOPSIS</h2>
 <p> varnishtest [-iklLqv] [-n iter] [-D name=val] [-j jobs] [-t duration] file [file &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The varnishtest program is a script driven program used to test the Varnish Cache. </p>
 <p> The varnishtest program, when started and given one or more script files, can create a number of threads representing backends, some threads representing clients, and a varnishd process. This is then used to simulate a transaction to provoke a specific behavior. </p>
 <p> The following options are available: </p>

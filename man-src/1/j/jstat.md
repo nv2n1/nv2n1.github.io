@@ -1,4 +1,5 @@
 ---
+
 title: "jstat(1)"
 name: "jstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jstat/"
 description: "jstat – Monitors Java Virtual Machine (JVM) statistics. This command is experimental and unsupported."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -41,7 +41,6 @@ jstat [ generalOption | outputOptions vmid [ interval[s|ms] [ count ] ]
 <dl>
 <dt>
 </dt><dd> Number of samples to display. The default value is infinity which causes the <code>jstat</code> command to display statistics until the target JVM terminates or the <code>jstat</code> command is terminated. This value must be a positive integer.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jstat</code> command displays performance statistics for an instrumented Java HotSpot VM. The target JVM is identified by its virtual machine identifier, or <code>vmid</code> option.</p>
 <h2>VIRTUAL MACHINE IDENTIFIER</h2>
 <p> The syntax of the <code>vmid</code> string corresponds to the syntax of a URI: </p>

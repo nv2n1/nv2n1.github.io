@@ -1,4 +1,5 @@
 ---
+
 title: "g_densmap(1)"
 name: "g_densmap"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_densmap – calculates 2D planar or axial-radial density maps"
 <h2>NAME</h2>
 <p> g_densmap &#8211; calculates 2D planar or axial-radial density maps </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_densmap</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> densmap.xpm </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-bin</code><i> real </i> <code>-aver</code><i> enum </i> <code>-xmin</code><i> real </i> <code>-xmax</code><i> real </i> <code>-n1</code><i> int </i> <code>-n2</code><i> int </i> <code>-amax</code><i> real </i> <code>-rmax</code><i> real </i> <code>-[no]mirror</code><i></i> <code>-unit</code><i> enum </i> <code>-dmin</code><i> real </i> <code>-dmax</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_densmap computes 2D number-density maps. It can make planar and axial-radial density maps. The output <code> .xpm</code> file can be visualized with for instance xv and can be converted to postscript with xpm2ps. </p>
 <p> The default analysis is a 2-D number-density map for a selected group of atoms in the x-y plane. The averaging direction can be changed with the option <code> -aver</code>. When <code> -xmin</code> and/or <code> -xmax</code> are set only atoms that are within the limit(s) in the averaging direction are taken into account. The grid spacing is set with the option <code> -bin</code>. When <code> -n1</code> or <code> -n2</code> is non-zero, the grid size is set by this option. Box size fluctuations are properly taken into account. </p>
 <p> When options <code> -amax</code> and <code> -rmax</code> are set, an axial-radial number-density map is made. Three groups should be supplied, the centers of mass of the first two groups define the axis, the third defines the analysis group. The axial direction goes from -amax to +amax, where the center is defined as the midpoint between the centers of mass and the positive direction goes from the first to the second center of mass. The radial direction goes from 0 to rmax or from -rmax to +rmax when the <code> -mirror</code> option has been set. </p>

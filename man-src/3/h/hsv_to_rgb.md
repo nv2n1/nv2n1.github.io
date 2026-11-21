@@ -1,4 +1,5 @@
 ---
+
 title: "hsv_to_rgb(3)"
 name: "hsv_to_rgb"
 section: "3"
@@ -9,11 +10,9 @@ description: "hsv_to_rgb, rgb_to_hsv – Converts color values between the HSV a
 
 <h2>NAME</h2>
 <p> hsv_to_rgb, rgb_to_hsv &#8211; Converts color values between the HSV and RGB color spaces. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void hsv_to_rgb(float h, float s, float v, int *r, int *g, int *b);</code> </p>
 <p> <code>void rgb_to_hsv(int r, int g, int b, float *h, float *s, float *v);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Convert color values between the HSV and RGB color spaces. The RGB values range from 0 to 255, hue is from 0 to 360, and saturation and value are from 0 to 1. Example: </p>
 <pre><code>
 int r, g, b;

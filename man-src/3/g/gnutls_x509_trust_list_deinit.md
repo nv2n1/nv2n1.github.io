@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_trust_list_deinit(3)"
 name: "gnutls_x509_trust_list_deinit"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_trust_list_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>void gnutls_x509_trust_list_deinit(gnutls_x509_trust_list_t </code><i>list</i><code>, unsigned int </code><i>all</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_trust_list_deinit – API function"
 <dd> The structure to be deinitialized</dd>
 <dt>unsigned int all</dt>
 <dd> if non-zero it will deinitialize all the certificates and CRLs contained in the structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a trust list. Note that the<br />
 &nbsp;<wbr><i>all</i>&nbsp;<wbr>flag should be typically non-zero unless you have specified your certificates using <code>gnutls_x509_trust_list_add_cas()</code> and you want to prevent them from being deinitialized by this function.</p>
 <h2>SINCE</h2>

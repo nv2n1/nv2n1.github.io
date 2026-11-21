@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-cleanup-sockets(1)"
 name: "dbus-cleanup-sockets"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-dbus-cleanup-sockets/"
 description: "dbus-cleanup-sockets – clean up leftover sockets in a directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-cleanup-sockets</code> [<i>DIRECTORY</i>]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dbus-cleanup-sockets</code> command cleans up unused D-Bus connection sockets. See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about the big picture. </dd>
 <p> If given no arguments, <code>dbus-cleanup-sockets</code> cleans up sockets in the standard default socket directory for the per-user-login-session message bus; this is usually /tmp. Optionally, you can pass a different directory on the command line. </p>
 <p> On Linux, this program is essentially useless, because D-Bus defaults to using &quot;abstract sockets&quot; that exist only in memory and don&#8217;t have a corresponding file in /tmp. </p>

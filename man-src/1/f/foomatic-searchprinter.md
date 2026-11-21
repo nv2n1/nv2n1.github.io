@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-searchprinter(1)"
 name: "foomatic-searchprinter"
 section: "1"
@@ -6,15 +7,12 @@ letter: "f"
 url: "/docs/linux/man/1-foomatic-searchprinter/"
 ---
 
-
  </p>
 <h2>NAME</h2>
 <p> foomatic-searchprinter &#8211; Search Foomatic database  </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>foomatic-searchprinter</code> [-m <i>M</i>] [-dFID] <i>SEARCHTERM</i></dt>
-<dt><code>foomatic-searchprinter</code> -h <h2>DESCRIPTION</h2>
-<dd> <p> This command displays Foomatic database entries matching <i>SEARCHTERM</i>. </p>
+<dt><code>foomatic-searchprinter</code> -h <dd> <p> This command displays Foomatic database entries matching <i>SEARCHTERM</i>. </p>
 <h3>Options</h3>
 <p> <code>-m</code><i>M</i> </p>
  </dd>

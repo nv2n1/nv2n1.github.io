@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_dec(3)"
 name: "cmap_dec"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-cmap_dec/"
 description: "cmap_inc – Decrease already stored value in CMAP"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_dec (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmap_dec</code> function is used to decrease integer value of already stored key inside cmap. The <i>handle</i> argument is connection to CMAP database obtained by calling <code><a href="/docs/linux/man/3-cmap_initialize/">cmap_initialize</a>(3)</code> function. <i>key_name</i> is name of key to increase value of. </p>
 <p> Function is defined only on values where increase makes sense and is well defined, so it can be one of: </p>
 <p> <code>CMAP_VALUETYPE_INT8</code> &#8211; 8-bit signed integer </p>

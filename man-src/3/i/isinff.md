@@ -1,4 +1,5 @@
 ---
+
 title: "isinff(3)"
 name: "isinff"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isinff/"
 description: "finite, finitef, finitel, isinf, isinff, isinfl, isnan, isnanf, isnanl – BSD floating-point classification functions"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 int finite(double x);
@@ -49,7 +49,6 @@ int isnanl(long double x);
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;600<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>finite</code>(), <code>finitef</code>(), and <code>finitel</code>() functions return a nonzero value if <i>x</i> is neither infinite nor a &quot;not-a-number&quot; (NaN) value, and 0 otherwise. </p>
 <p> The <code>isnan</code>(), <code>isnanf</code>(), and <code>isnanl</code>() functions return a nonzero value if <i>x</i> is a NaN value, and 0 otherwise. </p>
 <p> The <code>isinf</code>(), <code>isinff</code>(), and <code>isinfl</code>() functions return 1 if <i>x</i> is positive infinity, -1 if <i>x</i> is negative infinity, and 0 otherwise.</p>

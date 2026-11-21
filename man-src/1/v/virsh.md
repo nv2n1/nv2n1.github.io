@@ -1,4 +1,5 @@
 ---
+
 title: "virsh(1)"
 name: "virsh"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-virsh/"
 description: "virsh – management user interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>virsh</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; [<i></i><font SIZE="-1"><i>COMMAND_STRING</i></font><i></i>] </p>
 <p> <code>virsh</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> [<i></i><font SIZE="-1"><i>ARG</i></font><i></i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>virsh</code> program is the main interface for managing virsh guest domains. The program can be used to create, pause, and shutdown domains. It can also be used to list current domains. Libvirt is a C toolkit to interact with the virtualization capabilities of recent versions of Linux (and other OSes). It is free software available under the <font SIZE="-1">GNU</font> Lesser General Public License. Virtualization of the Linux Operating System means the ability to run multiple instances of Operating Systems concurrently on a single hardware system where the basic resources are driven by a Linux instance. The library aims at providing a long term stable C <font SIZE="-1">API. </font> It currently supports Xen, <font SIZE="-1">QEMU, KVM, LXC,</font> OpenVZ, VirtualBox and VMware <font SIZE="-1">ESX.</font> </p>
 <p> The basic structure of most virsh usage is: </p>
 <pre><code>

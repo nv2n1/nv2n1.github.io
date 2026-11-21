@@ -1,4 +1,5 @@
 ---
+
 title: "bglmco(1)"
 name: "bglmco"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bglmco/"
 description: "bglmco – produces module checksum object files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bglmco</code> [ options ] [ sourcefile ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bglmco</code> reads <i>sourcefile</i> and produces a module checksum object file. This bglmco file is used to ensure modules coherence in Bigloo Makefiles. </p>
 <h2>OPTIONS</h2>
 <dl>

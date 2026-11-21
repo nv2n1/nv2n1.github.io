@@ -1,4 +1,5 @@
 ---
+
 title: "mlx4dv_query_device(3)"
 name: "mlx4dv_query_device"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-mlx4dv_query_device/"
 description: "mlx4dv_query_device – Query device capabilities specific to mlx4"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/mlx4dv.h&gt;
 int mlx4dv_query_device(struct ibv_context *ctx_in,
                         struct mlx4dv_context *attrs_out);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mlx4dv_query_device()</code> Query mlx4 specific device information that is usable via the direct verbs interface. </p>
 <p> This function returns a version and compatibility mask. The version represents the format of the internal hardware structures that mlx4dv.h exposes. Future additions of new fields to the existing structures are handled by the comp_mask field. </p>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "kill(1)"
 name: "kill"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-kill/"
 description: "kill – send a signal to a process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>kill</code> [options] &lt;pid&gt; [&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The default signal for kill is TERM. Use <code>-l</code> or <code>-L</code> to list available signals. Particularly useful signals include HUP, INT, KILL, STOP, CONT, and 0. Alternate signals may be specified in three ways: <code>-9</code>, <code>-SIGKILL</code> or <code>-KILL</code>. Negative PID values may be used to choose whole process groups; see the PGID column in ps command output. A PID of <code>-1</code> is special; it indicates all processes except the kill process itself and init.</p>
 <h2>OPTIONS</h2>
 <dl>

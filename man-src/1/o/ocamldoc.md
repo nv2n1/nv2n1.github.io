@@ -1,4 +1,5 @@
 ---
+
 title: "ocamldoc(1)"
 name: "ocamldoc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ocamldoc/"
 description: "ocamldoc – The OCaml documentation generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ocamldoc</code> [ <i>options</i> ] <i>filename</i>&nbsp;<wbr>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> The OCaml documentation generator <code><a href="/docs/linux/man/1-ocamldoc/">ocamldoc</a></code>(1) generates documentation from special comments embedded in source files. The comments used by <code>ocamldoc</code> are of the form <i>(** &#8230; *)</i> and follow the format described in the <i>The OCaml user&#8217;s manual</i>. </p>
 <p> <code>ocamldoc</code> can produce documentation in various formats: HTML, LaTeX, TeXinfo, Unix man pages, and <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1) dependency graphs. Moreover, users can add their own custom generators. </p>
 <p> In this manpage, we use the word <i>element</i> to refer to any of the following parts of an OCaml source file: a type declaration, a value, a module, an exception, a module type, a type constructor, a record field, a class, a class type, a class method, a class value or a class inheritance clause. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rrdcached(1)"
 name: "rrdcached"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdcached/"
 description: "rrdcached – Data caching daemon for rrdtool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdcached</code> [<code>-P</code>&nbsp;<wbr><i>permissions</i>] [<code>-l</code>&nbsp;<wbr><i>address</i>] [<code>-s</code>&nbsp;<wbr><i>group</i>] [<code>-w</code>&nbsp;<wbr><i>timeout</i>] [<code>-z</code>&nbsp;<wbr><i>delay</i>] [<code>-f</code>&nbsp;<wbr><i>timeout</i>] [<code>-p</code>&nbsp;<wbr><i>pid_file</i>] [<code>-t</code>&nbsp;<wbr><i>write_threads</i>] [<code>-j</code>&nbsp;<wbr><i>journal_dir</i>] [-F] [-g] [<code>-b</code>&nbsp;<wbr><i>base_dir</i>&nbsp;<wbr>[<code>-B</code>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rrdcached</code> is a daemon that receives updates to existing <font SIZE="-1">RRD</font> files, accumulates them and, if enough have been received or a defined time has passed, writes the updates to the <font SIZE="-1">RRD</font> file. A <i>flush</i> command may be used to force writing of values to disk, so that graphing facilities and similar can work with up-to-date data. </p>
 <p> The daemon was written with big setups in mind. Those setups usually run into <font SIZE="-1">IO</font>&nbsp;<wbr>related problems sooner or later for reasons that are beyond the scope of this document. Check the wiki at the RRDtool homepage for details. Also check &#8220;<font SIZE="-1">SECURITY</font> <font SIZE="-1">CONSIDERATIONS</font>&#8221; below before using this daemon! A detailed description of how the daemon operates can be found in the &#8220;<font SIZE="-1">HOW</font> <font SIZE="-1">IT</font> <font SIZE="-1">WORKS</font>&#8221; section below.</p>
 <h2>OPTIONS</h2>

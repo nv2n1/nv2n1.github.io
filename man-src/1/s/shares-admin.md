@@ -1,4 +1,5 @@
 ---
+
 title: "shares-admin(1)"
 name: "shares-admin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-shares-admin/"
 description: "shares-admin – Shared Folders Administration Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>shares-admin</code> [<i>OPTION&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>shares-admin</code> is part of the GNOME system tools, a set of tools to easily access and manage system configuration. </p>
 <p> <code>shares-admin</code> allows you to share folders to other computers in your network or in the internet.</p>
 <h2>OPTIONS</h2>

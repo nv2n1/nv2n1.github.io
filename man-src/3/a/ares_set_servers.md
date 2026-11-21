@@ -1,4 +1,5 @@
 ---
+
 title: "ares_set_servers(3)"
 name: "ares_set_servers"
 section: "3"
@@ -9,12 +10,10 @@ description: "ares_set_servers – Initialize an ares_channel name servers confi
 
 <h2>NAME</h2>
 <p> ares_set_servers &#8211; Initialize an ares_channel name servers configuration</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 int ares_set_servers(ares_channel channel, struct ares_addr_node *servers)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-ares_set_servers/">ares_set_servers</a>(3)</code> function initializes name servers configuration for the channel data identified by <i>channel</i>, from a <i>servers</i> pointer to a linked list of ares_addr_node structs holding name servers address data. </p>
 <p> The name server linked list pointer argument may be the result of a previous call to <code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a>(3)</code> or a linked list of ares_addr_node structs setup by other means. </p>
 <p> This function replaces any potentially previously configured name servers with the ones given in the linked list. So, in order to configure a channel with more than one name server all the desired ones must be specified in a single list. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "icat(1)"
 name: "icat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-icat/"
 description: "icat – Output the contents of a file based on its inode number."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>icat [-hrsvV] [-f</code> <i>fstype</i> <code>] [-i</code> <i>imgtype</i> <code>] [-o </code> <i>imgoffset</i> <code>] [-b dev_sector_size] </code> <i>image [images] inode </i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>icat</code> opens the named <i>image(s)</i> and copies the file with the specified <i>inode</i> number to standard output. </p>
 <h2>ARGUMENTS</h2>
 <dl>

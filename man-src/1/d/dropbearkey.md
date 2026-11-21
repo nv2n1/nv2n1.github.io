@@ -1,4 +1,5 @@
 ---
+
 title: "dropbearkey(1)"
 name: "dropbearkey"
 section: "1"
@@ -9,9 +10,7 @@ description: "dropbearkey – create private keys for the use with dropbear(8) o
 
 <h2>NAME</h2>
 <p> dropbearkey &#8211; create private keys for the use with <a href="/docs/linux/man/8-dropbear/">dropbear</a>(8) or <a href="/docs/linux/man/1-dbclient/">dbclient</a>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dropbearkey</code> -t <i>type</i> -f <i>file</i> [-s <i>bits</i>] [-y]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dropbearkey</code> generates a <i>RSA</i>, <i>DSS</i>, or <i>ECDSA</i> format SSH private key, and saves it to a file for the use with the Dropbear client or server. Note that some SSH implementations use the term &quot;DSA&quot; rather than &quot;DSS&quot;, they mean the same thing.</p>
 <h2>OPTIONS</h2>
 <dl>

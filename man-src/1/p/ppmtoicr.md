@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoicr(1)"
 name: "ppmtoicr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtoicr/"
 description: "ppmtoicr – convert a portable pixmap into NCSA ICR format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtoicr</code> [<code>-windowname</code> <i>name</i>] [<code>-expand</code> <i>expand</i>] [<code>-display</code> <i>display</i>] [<code>-rle</code>] [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap file as input. Produces an NCSA Telnet Interactive Color Raster graphic file as output. If <i>ppmfile</i> is not supplied, <i>ppmtoicr</i> will read from standard input. </p>
 <p> Interactive Color Raster (ICR) is a protocol for displaying raster graphics on workstation screens. The protocol is implemented in NCSA Telnet for the Macintosh version 2.3. The ICR protocol shares characteristics of the Tektronix graphics terminal emulation protocol. For example, escape sequences are used to control the display. </p>
 <p> <i>ppmtoicr</i> will output the appropriate sequences to create a window of the dimensions of the input pixmap, create a colormap of up to 256 colors on the display, then load the picture data into the window. </p>

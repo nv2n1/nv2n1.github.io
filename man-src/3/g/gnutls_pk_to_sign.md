@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pk_to_sign(3)"
 name: "gnutls_pk_to_sign"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pk_to_sign – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pk_to_sign &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>gnutls_sign_algorithm_t gnutls_pk_to_sign(gnutls_pk_algorithm_t </code><i>pk</i><code>, gnutls_digest_algorithm_t </code><i>hash</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_pk_to_sign – API function"
 <dd> is a public key algorithm</dd>
 <dt>gnutls_digest_algorithm_t hash</dt>
 <dd> a hash algorithm</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function maps public key and hash algorithms combinations to signature algorithms.</p>
 <h2>RETURNS</h2>
 <p> return a <code>gnutls_sign_algorithm_t</code> value, or <code>GNUTLS_SIGN_UNKNOWN</code> on error.</p>

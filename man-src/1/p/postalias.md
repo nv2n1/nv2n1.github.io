@@ -1,4 +1,5 @@
 ---
+
 title: "postalias(1)"
 name: "postalias"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-postalias/"
 description: "postalias – Postfix alias database maintenance"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>postalias</code> [<code>-Nfinoprsuvw</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>key</i>] [<code>-q </code><i>key</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>file_type</i>:]<i>file_name</i>&nbsp;&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postalias/">postalias</a></code>(1) command creates or queries one or more Postfix alias databases, or updates an existing one. The input and output file formats are expected to be compatible with Sendmail version 8, and are expected to be suitable for the use as NIS alias maps. </p>
 <p> If the result files do not exist they will be created with the same group and other read permissions as their source file. </p>
 <p> While a database update is in progress, signal delivery is postponed, and an exclusive, advisory, lock is placed on the entire database, in order to avoid surprises in spectator processes. </p>

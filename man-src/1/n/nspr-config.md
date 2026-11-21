@@ -1,4 +1,5 @@
 ---
+
 title: "nspr-config(1)"
 name: "nspr-config"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-nspr-config/"
 description: "nspr-config – Return meta information about nspr libraries"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nspr-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;includedir</code>] [<code>&#8211;libs</code>] [<code>&#8211;cflags</code>] [<code>&#8211;libdir</code>] [<code>&#8211;version</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nspr-config</code></p>
 <dd>is a shell script which can be used to obtain gcc options for building client pacakges of nspr.</dd>
 <h2>OPTIONS</h2>

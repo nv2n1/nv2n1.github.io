@@ -1,4 +1,5 @@
 ---
+
 title: "clamconf(1)"
 name: "clamconf"
 section: "1"
@@ -9,9 +10,7 @@ description: "clamconf – Clam AntiVirus configuration utility"
 
 <h2>NAME</h2>
 <p> clamconf &#8211; Clam AntiVirus configuration utility</p>
-<h2>SYNOPSIS</h2>
 <p> clamconf [options]</p>
-<h2>DESCRIPTION</h2>
 <p> clamconf displays the values of configuration options.</p>
 <h2>OPTIONS</h2>
 <dl>

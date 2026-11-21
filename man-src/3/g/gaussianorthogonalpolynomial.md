@@ -1,4 +1,5 @@
 ---
+
 title: "gaussianorthogonalpolynomial(3)"
 name: "gaussianorthogonalpolynomial"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gaussianorthogonalpolynomial/"
 description: "ql/math/integrals/gaussianorthogonalpolynomial.hpp – orthogonal polynomials for gaussian quadratures"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/types.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>GaussianOrthogonalPolynomial</code><br />

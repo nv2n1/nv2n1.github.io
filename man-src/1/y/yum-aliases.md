@@ -1,4 +1,5 @@
 ---
+
 title: "yum-aliases(1)"
 name: "yum-aliases"
 section: "1"
@@ -6,11 +7,10 @@ letter: "y"
 url: "/docs/linux/man/1-yum-aliases/"
 description: "yum aliases plugin"
 ---
+
 <h2>NAME</h2>
 <p> yum aliases plugin  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] alias  </p>
-<h2>DESCRIPTION</h2>
 <p> This plugin changes other commands in <code>yum</code>, much like the alias command in bash. There are a couple of notable differences from shell style aliases though. The alias command has three forms: <br />
  <i></i> * alias <br />
  <i></i> * alias command <br />

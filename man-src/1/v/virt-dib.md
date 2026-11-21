@@ -1,4 +1,5 @@
 ---
+
 title: "virt-dib(1)"
 name: "virt-dib"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-virt-dib/"
 description: "virt-dib – Run diskimage-builder elements"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  virt-dib -B DIB-LIB [options] elements...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Virt-dib is a tool for using the elements of <tt>&quot;diskimage-builder&quot;</tt> to build a new disk image, generate new ramdisks, etc. </p>
 <p> Virt-dib is intended as safe replacement for <tt>&quot;diskimage-builder&quot;</tt> and its <tt>&quot;ramdisk-image-create&quot;</tt> mode, see &#8220;<font SIZE="-1">COMPARISON WITH</font> DISKIMAGE-BUILDER&#8221; for a quick comparison with usage of <tt>&quot;diskimage-builder&quot;</tt>. </p>
 <p> <tt>&quot;diskimage-builder&quot;</tt> is part of the TripleO OpenStack project: <a rel="nofollow" href="https://wiki.openstack.org/wiki/TripleO.">https://wiki.openstack.org/wiki/TripleO.</a></p>

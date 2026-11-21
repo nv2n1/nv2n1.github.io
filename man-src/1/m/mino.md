@@ -1,4 +1,5 @@
 ---
+
 title: "mino(1)"
 name: "mino"
 section: "1"
@@ -9,9 +10,7 @@ description: "Mino – a user friendly text editor for GNU/Linux console/xterm"
 
 <h2>NAME</h2>
 <p> Mino &#8211; a user friendly text editor for GNU/Linux console/xterm</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mino [file-name] [&#8211;help, -h] [&#8211;reset-config]</code></p>
-<h2>DESCRIPTION</h2>
 <p> About The mino editor Mino is a GNU software, part of the GnuDOS package. Mino is a text file editor for use with the GNU/Linux console/xterm. The idea was to provide a text editor that is user friendly and easy to use for those who came from DOS land. Having accustomed to SHIFT selecting text, using CTRL-shortcut keys and so on makes it hard for a regular Joe to dive in head first into GNU syntax. Mino provides multi-level experience, the level of complexity can be adjusted by the user: you want to use DOS-keys with a few basic GNU ones? you want to go with the full power of the GNU system? All are options that are provided by the six levels of experience of Mino: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>1- Newbie: All DOS shortcut keys, no GNU keys yet<br />
 &nbsp;<wbr>&nbsp;<wbr>2- Novice: DOS shortcut keys, some of which are replaced with GNU&#8217;s<br />

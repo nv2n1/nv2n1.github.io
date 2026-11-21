@@ -1,4 +1,5 @@
 ---
+
 title: "libnetcfg(1)"
 name: "libnetcfg"
 section: "1"
@@ -6,14 +7,9 @@ letter: "l"
 url: "/docs/linux/man/1-libnetcfg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+libnetcfg - configure libnet 
 
- libnetcfg - configure libnet 
-
-<h2>DESCRIPTION</h2>
-
- The libnetcfg utility can be used to configure the libnet. Starting from perl 5.8 libnet is part of the standard Perl distribution, but the libnetcfg can be used for any libnet installation.
+The libnetcfg utility can be used to configure the libnet. Starting from perl 5.8 libnet is part of the standard Perl distribution, but the libnetcfg can be used for any libnet installation.
 
 <h2>USAGE</h2>
 

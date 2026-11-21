@@ -1,4 +1,5 @@
 ---
+
 title: "fgetgrent(3)"
 name: "fgetgrent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgetgrent/"
 description: "fgetgrent – get group file entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;grp.h&gt;
 #include &lt;stdio.h&gt;
@@ -20,7 +20,6 @@ struct group *fgetgrent(FILE *stream);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_SVID_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>fgetgrent</code>() function returns a pointer to a structure containing the group information from the file referred to by <i>stream</i>. The first time it is called it returns the first entry; thereafter, it returns successive entries. The file referred to by <i>stream</i> must have the same format as <i>/etc/group</i> (see <code><a href="/docs/linux/man/5-group/">group</a></code>(5)). </p>
 <p> The <i>group</i> structure is defined in <i>&lt;grp.h&gt;</i> as follows: </p>
 <p> struct group {<br />

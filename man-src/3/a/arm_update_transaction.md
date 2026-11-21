@@ -1,4 +1,5 @@
 ---
+
 title: "arm_update_transaction(3)"
 name: "arm_update_transaction"
 section: "3"
@@ -9,14 +10,12 @@ description: "arm_update_transaction – get transaction status"
 
 <h2>NAME</h2>
 <p> arm_update_transaction &#8211; get transaction status</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_update_transaction( </p>
 <p>&nbsp;<wbr>const arm_tran_start_handle_t&nbsp;<wbr></code><i>tran_handle</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_update_transaction()</code> signals that a transaction is still processing. </p>
 <p> <code>arm_update_transaction()</code> is useful as a heartbeat. It is also used to pass additional data about a transaction. It can be called from any thread in the process that executed the <code>arm_start_transaction()</code>. </p>
 <p> <i>buffer4</i> is a pointer to the user data buffer, if any. If the pointer is null (<code>ARM_BUF4_NONE</code>), there is no buffer. The sub-buffer that might be used is <code>arm_subbuffer_metric_values_t</code>. </p>

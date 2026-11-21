@@ -1,4 +1,5 @@
 ---
+
 title: "bson_visitor_t(3)"
 name: "bson_visitor_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_visitor_t – The bson_visitor_t structure provides a series 
 
 <h2>NAME</h2>
 <p> bson_visitor_t &#8211; The bson_visitor_t structure provides a series of callbacks that can be called while iterating a BSON document. This may simplify the conversion of a bson_t to a higher level language structure.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct
@@ -112,7 +112,6 @@ typedef struct
     void *padding[9];
 } bson_visitor_t;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>bson_visitor_t</code> structure provides a series of callbacks that can be called while iterating a BSON document. This may simplify the conversion of a <code>bson_t</code> to a higher level language structure. </p>
 <h2>EXAMPLE</h2>
 <pre><code>

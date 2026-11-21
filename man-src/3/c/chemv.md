@@ -1,4 +1,5 @@
 ---
+
 title: "chemv(3)"
 name: "chemv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chemv/"
 description: "chemv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chemv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>CHEMV</code></p>

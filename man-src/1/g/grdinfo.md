@@ -1,4 +1,5 @@
 ---
+
 title: "grdinfo(1)"
 name: "grdinfo"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdinfo – Extract information from grids"
 
 <h2>NAME</h2>
 <p> grdinfo &#8211; Extract information from grids</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdinfo</code> <i>grdfiles</i> [ ] [ ] [ [<i>dx</i>[/<i>dy</i>]|<code>r</code>|<code>b</code>] ] [ [<code>0</code>|<code>1</code>|<code>2</code>] ] [ ] [ <i>region</i> ] [ [<code>s</code>]<i>dz</i> ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdinfo</code> reads a 2-D binary grid file and reports metadata and various statistics for the (<i>x</i>,<i>y</i>,<i>z</i>) data in the grid file(s). The output information contains the minimum/maximum values for <i>x</i>, <i>y</i>, and <i>z</i>, where the min/max of <i>z</i> occur, the <i>x</i>&#8211; and <i>y</i>-increments, and the number of <i>x</i> and <i>y</i> nodes, and [optionally] the mean, standard deviation, and/or the median, L1 scale of <i>z</i>, and number of nodes set to NaN. We also report if the grid is pixel- or gridline-registered and if it is a Cartesian or Geographic data set (based on metadata in the file).</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

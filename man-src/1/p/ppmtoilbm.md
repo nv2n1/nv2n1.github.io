@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoilbm(1)"
 name: "ppmtoilbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtoilbm/"
 description: "ppmtoilbm – convert a portable pixmap into an ILBM file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtoilbm</code> [<code>-maxplanes</code>|<code>-mp</code> <i>N</i>] [<code>-fixplanes</code>|<code>-fp</code> <i>N</i>] [<code>-ham6</code>|<code>-ham8</code>] [<code>-dcbits</code>|<code>-dcplanes</code>r<code>g</code>b<code>]</code> [<code>-normal</code>|<code>-hamif</code>|<code>-hamforce</code>|<code>-24if</code>|<code>-24force</code>| -dcif<code>|</code>-dcforce<code>|</code>-cmaponly<code>]</code> [<code>-ecs</code>|<code>-aga</code>] [<code>-compress</code>|<code>-nocompress</code>] [<code>-cmethod</code> <i>type</i>] [<code>-map</code>ppmfile<code>]</code> [<code>-savemem</code>] [<code>ppmfile</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces an ILBM file as output. Supported ILBM types are:</p>
 <dl>
 <dt>Normal ILBMs with 1-16 planes.</dt>

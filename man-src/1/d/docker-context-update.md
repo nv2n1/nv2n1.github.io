@@ -1,4 +1,5 @@
 ---
+
 title: "docker-context-update(1)"
 name: "docker-context-update"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-context-update/"
 description: "docker-context-update – Update a context"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker context update [OPTIONS] CONTEXT</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Update a context </p>
 <p> Docker endpoint config: </p>
 <p> NAME DESCRIPTION from Copy named context&#8217;s Docker endpoint configuration host Docker endpoint on which to connect ca Trust certs signed only by this CA cert Path to TLS certificate file key Path to TLS key file skip-tls-verify Skip TLS certificate validation </p>

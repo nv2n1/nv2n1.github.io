@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_privkey_generate(3)"
 name: "gnutls_pkcs11_privkey_generate"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs11_privkey_generate – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_privkey_generate &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_privkey_generate(const char * </code><i>url</i><code>, gnutls_pk_algorithm_t </code><i>pk</i><code>, unsigned int </code><i>bits</i><code>, const char * </code><i>label</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_pkcs11_privkey_generate – API function"
 <dd> a label</dd>
 <dt>unsigned int flags</dt>
 <dd> should be zero</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will generate a private key in the specified by the <i>url</i> token. The private key will be generate within the token and will not be exportable.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

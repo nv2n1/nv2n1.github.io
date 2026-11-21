@@ -1,4 +1,5 @@
 ---
+
 title: "paste(1)"
 name: "paste"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-paste/"
 description: "paste – merge lines of files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>paste</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Write lines consisting of the sequentially corresponding lines from each FILE, separated by TABs, to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-popup-whiskermenu(1)"
 name: "xfce4-popup-whiskermenu"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-xfce4-popup-whiskermenu/"
 description: "xfce4-popup-whiskermenu – shows Whisker Menu"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xfce4-popup-whiskermenu -h</code><br />
  <code>xfce4-popup-whiskermenu &#8211;help</code><br />
  <code>xfce4-popup-whiskermenu -V</code><br />
  <code>xfce4-popup-whiskermenu &#8211;version</code><br />
  <code>xfce4-popup-whiskermenu</code> [ &#8211;<code>p</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>xfce4-popup-whiskermenu</code> shows Whisker Menu if at least one Whisker Menu applet is present on one of your panels. </p>
 <p> The default behavior is to show Whisker Menu near the applet button. If you have several Whisker Menu applets, only the first one you have set up will pop up. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "mencoder(1)"
 name: "mencoder"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mencoder/"
 description: "mplayer – movie player mencoder – movie encoder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mplayer &#8211; movie player<br />
  mencoder &#8211; movie encoder </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mplayer</code> [options] [file|URL|playlist|-]<br />
  <code>mplayer</code> [options] file1 [specific options] [file2] [specific options]<br />
  <code>mplayer</code> [options] {group of files and options} [group-specific options]<br />
@@ -31,7 +30,6 @@ description: "mplayer – movie player mencoder – movie encoder"
  <code>gmplayer</code> [options] [-skin skin]<br />
  <code>mencoder</code> [options] file [file|URL|-] [-o file | file://file | <a href="smb://[user:pass@]host/filepath]">smb://[user:pass@]host/filepath]</a><br />
  <code>mencoder</code> [options] file1 [specific options] [file2] [specific options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mplayer</code> is a movie player for Linux (runs on many other platforms and CPU architectures, see the documentation). It plays most MPEG/:VOB, AVI, ASF/:WMA/:WMV, RM, QT/:MOV/:MP4, Ogg/:OGM, MKV, VIVO, FLI, NuppelVideo, yuv4mpeg, FILM and RoQ files, supported by many native and binary codecs. You can watch VCD, SVCD, DVD, Blu-ray, 3ivx, DivX 3/4/5, WMV and even H.264 movies, too. </p>
 <p> MPlayer supports a wide range of video and audio output drivers. It works with X11, Xv, DGA, OpenGL, SVGAlib, fbdev, AAlib, libcaca, DirectFB, Quartz, Mac OS X CoreVideo, but you can also use GGI, SDL (and all their drivers), VESA (on every VESA-compatible card, even without X11), some low-level card-specific drivers (for Matrox, 3dfx and ATI) and some hardware MPEG decoder boards, such as the Siemens DVB, Hauppauge PVR (IVTV), DXR2 and DXR3/:Hollywood+. Most of them support software or hardware scaling, so you can enjoy movies in fullscreen mode. </p>
 <p> MPlayer has an onscreen display (OSD) for status information, nice big antialiased shaded subtitles and visual feedback for keyboard controls. European/:ISO8859-1,2 (Hungarian, English, Czech, etc), Cyrillic and Korean fonts are supported along with 12 subtitle formats (MicroDVD, SubRip, OGM, SubViewer, Sami, VPlayer, RT, SSA, AQTitle, JACOsub, PJS and our own: MPsub) and DVD subtitles (SPU streams, VOBsub and Closed Captions). </p>

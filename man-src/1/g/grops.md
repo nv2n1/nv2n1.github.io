@@ -1,4 +1,5 @@
 ---
+
 title: "grops(1)"
 name: "grops"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grops/"
 description: "grops – PostScript driver for groff"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-glmv</code> ] [ <code>-b </code><i>n</i> ] [ <code>-c </code><i>n</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-p </code><i>papersize</i> ] [ <code>-P </code><i>prologue</i> ] [ <code>-w </code><i>n</i> ] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grops</code> translates the output of GNU <code>troff</code> to PostScript. Normally <code>grops</code> should be invoked by using the groff command with a <code>-Tps</code> option. (Actually, this is the default for groff.) If no files are given, <code>grops</code> reads the standard input. A filename of <code>&#8211;</code> also causes <code>grops</code> to read the standard input. PostScript output is written to the standard output. When <code>grops</code> is run by <code>groff</code> options can be passed to <code>grops</code> using <code>groff</code>&#8216;s <code>-P</code> option. </p>
 <p> Note that <code>grops</code> doesn&#8217;t produce a valid document structure (conforming to the Document Structuring Convention) if called with multiple file arguments. To print such concatenated output it is necessary to deactivate DSC handling in the printing program or previewer. See section &#8220;Font Installation&#8221; below for a guide how to install fonts for <code>grops</code>.</p>
 <h2>OPTIONS</h2>

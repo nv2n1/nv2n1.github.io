@@ -1,4 +1,5 @@
 ---
+
 title: "mkaf(1)"
 name: "mkaf"
 section: "1"
@@ -9,9 +10,7 @@ description: "mkaf – create a Performance Co-Pilot archive folio"
 
 <h2>NAME</h2>
 <p> <code>mkaf</code> &#8211; create a Performance Co-Pilot archive folio</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/mkaf</code> [<i>findopts</i>] <i>filename</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> A collection of one or more Performance Co-Pilot (see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1)) archive logs may be combined with <code>mkaf</code> to produce a PCP archive folio and the associated archive folio control file. Some PCP tools use <code>mkaf</code> to create archive folios, e.g. the &#8220;record&#8221; facility in the <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1) and <code><a href="/docs/linux/man/1-pmview/">pmview</a></code>(1) tools, to facilitate playback with <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1). </p>
 <p> <code>mkaf</code> processes each <i>filename</i> argument, and if this is a component file from a PCP archive that archive is added to the folio. </p>
 <p> If <i>filename</i> is a directory, then this is searched recursively using <code><a href="/docs/linux/man/1-find/">find</a></code>(1). Any <i>filename</i> argument beginning with a &#8220;-&#8221; is assumed to be a <code><a href="/docs/linux/man/1-find/">find</a></code>(1) command line option (<i>findopts</i>); the default is <code>-follow</code> if no <i>findopts</i> are specified. </p>

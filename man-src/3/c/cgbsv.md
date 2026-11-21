@@ -1,4 +1,5 @@
 ---
+
 title: "cgbsv(3)"
 name: "cgbsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgbsv/"
 description: "cgbsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgbsv</code> (N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br />
  <i></i><code> CGBSV computes the solution to system of linear equations A * X = B for GB matrices</code> (simple driver)</p>

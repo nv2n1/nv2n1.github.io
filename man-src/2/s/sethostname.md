@@ -1,4 +1,5 @@
 ---
+
 title: "sethostname(2)"
 name: "sethostname"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sethostname/"
 description: "gethostname, sethostname – get/set hostname"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int gethostname(char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code><br />
  <code>int sethostname(const char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code> </p>
@@ -27,7 +27,6 @@ Since glibc 2.21 : _DEFAULT_SOURCE
                                          ||
                                          (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE &amp; nbsp; &lt; &amp;nbsp; 500)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These system calls are used to access or to change the system hostname. More precisely, they operate on the hostname associated with the calling process&#8217;s UTS namespace. </p>
 <p> <code>sethostname</code>() sets the hostname to the value given in the character array <i>name</i>. The <i>len</i> argument specifies the number of bytes in <i>name</i>. (Thus, <i>name</i> does not require a terminating null byte.) </p>
 <p> <code>gethostname</code>() returns the null-terminated hostname in the character array <i>name</i>, which has a length of <i>len</i> bytes. If the null-terminated hostname is too large to fit, then the name is truncated, and no error is returned (but see NOTES below). POSIX.1 says that if such truncation occurs, then it is unspecified whether the returned buffer includes a terminating null byte.</p>

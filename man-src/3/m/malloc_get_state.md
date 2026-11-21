@@ -1,4 +1,5 @@
 ---
+
 title: "malloc_get_state(3)"
 name: "malloc_get_state"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-malloc_get_state/"
 description: "malloc_get_state, malloc_set_state – record and restore state of malloc implementation"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;malloc.h&gt;
 void *malloc_get_state(void);
 int malloc_set_state(void *state);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: these function are removed in glibc version 2.25. </p>
 <p> The <code>malloc_get_state</code>() function records the current state of all <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) internal bookkeeping variables (but not the actual contents of the heap or the state of <code><a href="/docs/linux/man/3-malloc_hook/">malloc_hook</a></code>(3) functions pointers). The state is recorded in a system-dependent opaque data structure dynamically allocated via <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), and a pointer to that data structure is returned as the function result. (It is the caller&#8217;s responsibility to <code><a href="/docs/linux/man/3-free/">free</a></code>(3) this memory.) </p>
 <p> The <code>malloc_set_state</code>() function restores the state of all <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) internal bookkeeping variables to the values recorded in the opaque data structure pointed to by <i>state</i>.</p>

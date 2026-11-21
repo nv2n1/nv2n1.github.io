@@ -1,4 +1,5 @@
 ---
+
 title: "prover9-interpformat(1)"
 name: "prover9-interpformat"
 section: "1"
@@ -9,10 +10,8 @@ description: "interpformat – tool for transforming mace4(1) models"
 
 <h2>NAME</h2>
 <p> interpformat &#8211; tool for transforming <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) models</p>
-<h2>SYNOPSIS</h2>
 <p> <code>interpformat</code> [<i>options</i>] &lt;<i>transformation</i>&gt; -f <i>input-file</i> &gt; <i>output-file</i><br />
  <code>interpformat</code> [<i>options</i>] &lt;<i>transformation</i>&gt; &lt; <i>input-file</i> &gt; <i>output-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> The models (structures) in <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) output files can be transformed in various ways with the program <code>interpformat</code>.</p>
 <h2>TRANSFORMATIONS</h2>
 <p> The transformations are listed here.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xtightvncviewer(1)"
 name: "xtightvncviewer"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-xtightvncviewer/"
 description: "vncviewer – an X viewer client for VNC"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][<i>:display</i>]<br />
  <code>vncviewer</code> [<i>options</i>] [<i>host</i>][<i>::port</i>]<br />
  <code>vncviewer</code> [<i>options</i>] <i>-listen</i> [<i>display</i>]<br />
  <code>vncviewer</code> <i>-help</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>vncviewer</code> is an Xt-based client application for the VNC (Virtual Network Computing) system. It can connect to any VNC-compatible server such as <code>Xvnc</code> or WinVNC, allowing you to control desktop environment of a different machine. </p>
 <p> You can use F8 to display a pop-up utility menu. Press F8 twice to pass single F8 to the remote side.</p>
 <h2>OPTIONS</h2>

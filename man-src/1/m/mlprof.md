@@ -1,4 +1,5 @@
 ---
+
 title: "mlprof(1)"
 name: "mlprof"
 section: "1"
@@ -9,9 +10,7 @@ description: "mlprof – display profiling information for a MLton-compiled exec
 
 <h2>NAME</h2>
 <p> <code>mlprof</code> &#8211; display profiling information for a MLton-compiled executable</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mlprof </code><i>[option &#8230;] a.out [mlmon.out &#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mlprof</code> extracts information from an executable compiled by <code>MLton</code> with <code>-profile alloc</code> or <code>-profile time</code> and the resulting <code>mlmon.out</code> file produced by running the executable. </p>
 <p> The output of <code>mlprof</code> consists of an initial line indicating the total amount of CPU time or bytes allocated. After this, source functions are listed along with the percentage of this total that they used, in decreasing order. If the program was compiled with <code>-profile-stack true</code>, <code>mlprof</code> will display the time spent or bytes allocated while the function was on the stack and in GC in addition to the time or bytes that the function is directly responsible for. </p>
 <p> With multiple <code>mlmon.out</code> files, <code>mlprof</code> will sum the profiling information. </p>

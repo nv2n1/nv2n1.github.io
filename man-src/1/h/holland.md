@@ -1,4 +1,5 @@
 ---
+
 title: "holland(1)"
 name: "holland"
 section: "1"
@@ -9,9 +10,7 @@ description: "holland – pluggable database backup agent"
 
 <h2>NAME</h2>
 <p> holland &#8211; pluggable database backup agent </p>
-<h2>SYNOPSIS</h2>
 <p> holland [global-options] command [command-options] </p>
-<h2>DESCRIPTION</h2>
 <p> Holland provides a pluggable framework through which to perform database backups. </p>
 <p> This framework primarily targets MySQL, but there are plans to support other database platforms such as PostgreSQL in the future </p>
 <p> Holland supports three kinds of plugins currently: </p>

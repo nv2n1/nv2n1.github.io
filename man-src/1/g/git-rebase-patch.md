@@ -1,4 +1,5 @@
 ---
+
 title: "git-rebase-patch(1)"
 name: "git-rebase-patch"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-rebase-patch – Rebases a patch"
 
 <h2>NAME</h2>
 <p> <code>git-rebase-patch</code> &#8211; Rebases a patch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-rebase-patch</code> &lt;patch-file&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Given you have a patch that doesn&#8217;t apply to the current HEAD, but you know it applied to some commit in the past, <code>git-rebase-patch</code> will help you find that commit and do a rebase.</p>
 <h2>OPTIONS</h2>
 <dl>

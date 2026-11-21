@@ -1,4 +1,5 @@
 ---
+
 title: "dlasq2(3)"
 name: "dlasq2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasq2/"
 description: "dlasq2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasq2</code> (N, Z, INFO)<br />
  <i></i><code>DLASQ2</code> computes all the eigenvalues of the symmetric positive definite tridiagonal matrix associated with the qd Array Z to high relative accuracy. Used by sbdsqr and sstegr.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "psresize(1)"
 name: "psresize"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-psresize/"
 description: "psresize – rescales and centers a document for new output paper size"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>psresize</code> [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] [ <code>-p</code><i>paper</i> ] [ <code>-W</code><i>width</i> ] [ <code>-H</code><i>height</i> ] [ <code>-P</code><i>paper</i> ] [ <code>-q</code> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Psresize</i> rescales and centres a document on a different size of paper. The input PostScript file should follow the Adobe Document Structuring Conventions. </p>
 <p> The <i>-w</i> option gives the output paper width, and the <i>-h</i> option gives the output paper height, normally specified in <code>cm</code> or <code>in</code> to convert PostScript&#8217;s points (1/72 of an inch) to centimeters or inches. The <i>-p</i> option can be used as an alternative, to set the output paper size to <code>a0, a1, a2, a3, a4, a5, b5, letter, legal, tabloid, statement,</code> executive, folio, quarto or <code>10&#215;14.</code> The default output paper size is <code>a4.</code> </p>
 <p> The <i>-W</i> option gives the input paper width, and the <i>-H</i> option gives the input paper height. The <i>-P</i> option can be used as an alternative, to set the input paper size. The default input paper size is <code>a4.</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rabbitmq-server(1)"
 name: "rabbitmq-server"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-rabbitmq-server/"
 description: "rabbitmq-server – start RabbitMQ AMQP server"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rabbitmq-server</code> [-detached]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>RabbitMQ is an implementation of AMQP, the emerging standard for high performance enterprise messaging. The RabbitMQ server is a robust and scalable implementation of an AMQP broker. </dd>
 <p> Running rabbitmq-server in the foreground displays a banner message, and reports on progress in the startup sequence, concluding with the message &quot;broker running&quot;, indicating that the RabbitMQ broker has been started successfully. To shut down the server, just terminate the process or use <a href="/docs/linux/man/1-rabbitmqctl/">rabbitmqctl</a>(1).</p>
 <h2>ENVIRONMENT</h2>

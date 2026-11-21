@@ -1,4 +1,5 @@
 ---
+
 title: "memcached-tool(1)"
 name: "memcached-tool"
 section: "1"
@@ -9,9 +10,7 @@ description: "memcached-tool – stats and management tool for memcached"
 
 <h2>NAME</h2>
 <p> memcached-tool &#8211; stats and management tool for memcached </p>
-<h2>SYNOPSIS</h2>
 <p> <code>memcached-tool</code> &lt;<i>host</i>[:<i>port</i>] | <i>/path/to/socket</i>&gt; [<i>mode</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>memcached-tool</code> is a Perl script used to print statistics from a running memcached instance. The first parameter specifies the address of the daemon either by a hostname, optionally followed by the port number (the default is 11211), or a path to UNIX domain socket. The second parameter specifies the mode in which the tool should run. </p>
 <h2>MODES</h2>
 <dl>

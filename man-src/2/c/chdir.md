@@ -1,4 +1,5 @@
 ---
+
 title: "chdir(2)"
 name: "chdir"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-chdir/"
 description: "chdir, fchdir – change working directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int chdir(const char *</code><i>path</i><code>);</code><br />
  <code>int fchdir(int </code><i>fd</i><code>);</code> </p>
@@ -18,7 +18,6 @@ description: "chdir, fchdir – change working directory"
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc up to and including 2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>chdir</code>() changes the current working directory of the calling process to the directory specified in <i>path</i>. </p>
 <p> <code>fchdir</code>() is identical to <code>chdir</code>(); the only difference is that the directory is given as an open file descriptor.</p>
 <h2>RETURN VALUE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pod2texi(1)"
 name: "pod2texi"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pod2texi/"
 description: "pod2texi – convert Pod to Texinfo"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
   pod2texi [OPTION]... POD...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Translate Pod file(s) to Texinfo. There are two basic modes of operation. First, by default, each pod is translated to a standalone Texinfo manual. </p>
 <p> Second, if <tt>&quot;--base-level&quot;</tt> is set higher than 0, each pod is translated to a file suitable for <tt>@include</tt>, and one more file with all the <tt>@include</tt>s is generated, intended to be <tt>@include</tt>d in turn within a hand-written top-level file.</p>
 <h2>OPTIONS</h2>

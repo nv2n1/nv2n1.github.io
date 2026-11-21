@@ -1,4 +1,5 @@
 ---
+
 title: "mdb_stat(1)"
 name: "mdb_stat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mdb_stat/"
 description: "mdb_stat – LMDB environment status tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mdb_stat</code> [<code>-V</code>] [<code>-e</code>] [<code>-f</code>[<code>f</code>[<code>f</code>]]] [<code>-n</code>] [<code>-r</code>[<code>r</code>]] [<code>-a</code>&nbsp;<wbr>| <code>-s</code><i>&nbsp;<wbr>subdb</i>] <code>&nbsp;<wbr>envpath</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mdb_stat</code> utility displays the status of an LMDB environment.</p>
 <h2>OPTIONS</h2>
 <dl>

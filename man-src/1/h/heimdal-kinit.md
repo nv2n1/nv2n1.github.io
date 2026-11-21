@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-kinit(1)"
 name: "heimdal-kinit"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-heimdal-kinit/"
 description: "kinit – acquire initial tickets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>kinit</code> &#8211; acquire initial tickets </p>
-<h2>SYNOPSIS</h2>
 <p> <code>kinit</code> [-<code>-afslog</code> ] [-<code>c </code><i>cachename | </i> &#8211;<code>-cache= </code><i>cachename</i> ] [-<code>f | &#8211;no-forwardable</code> ] [-<code>t </code><i>keytabname | </i> &#8211;<code>-keytab= </code><i>keytabname</i> ] [-<code>l </code><i>time | </i> &#8211;<code>-lifetime= </code><i>time</i> ] [-<code>p | &#8211;proxiable</code> ] [-<code>R | &#8211;renew</code> ] [-<code>-renewable</code> ] [-<code>r </code><i>time | </i> &#8211;<code>-renewable-life= </code><i>time</i> ] [-<code>S </code><i>principal | </i> &#8211;<code>-server= </code><i>principal</i> ] [-<code>s </code><i>time | </i> &#8211;<code>-start-time= </code><i>time</i> ] [-<code>k | &#8211;use-keytab</code> ] [-<code>v | &#8211;validate</code> ] [-<code>e </code><i>enctypes | </i> &#8211;<code>-enctypes= </code><i>enctypes</i> ] [-<code>a </code><i>addresses | </i> &#8211;<code>-extra-addresses= </code><i>addresses</i> ] [-<code>-password-file= </code><i>filename</i> ] [-<code>-fcache-version= </code><i>version-number</i> ] [-<code>A | &#8211;no-addresses</code> ] [-<code>-anonymous</code> ] [-<code>-enterprise</code> ] [-<code>-version</code> ] [-<code>-help</code> ] [<i>principal </i>[<i>command</i> ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>kinit</code> is used to authenticate to the Kerberos server as <i>principal</i> or if none is given, a system generated default (typically your login name at the default realm), and acquire a ticket granting ticket that can later be used to obtain tickets for other services. </p>
 <p> Supported options:</p>
 <dl>

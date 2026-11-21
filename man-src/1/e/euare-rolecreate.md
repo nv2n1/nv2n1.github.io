@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolecreate(1)"
 name: "euare-rolecreate"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-rolecreate – Create a new role"
 
 <h2>NAME</h2>
 <p> euare-rolecreate &#8211; Create a new role</p>
-<h2>SYNOPSIS</h2>
 <p> euare-rolecreate [-p PATH] (<code>-f</code> FILE | <code>-s</code> SERVICE) [-v]</p>
 <dl>
 <dt>[&#8211;as-account ACCOUNT] [-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ROLE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a new role</p>
 <h3>positional arguments:</h3>
 <dl>

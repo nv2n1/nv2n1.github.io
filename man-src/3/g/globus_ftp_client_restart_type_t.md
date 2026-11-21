@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_restart_type_t(3)"
 name: "globus_ftp_client_restart_type_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_client_restart_type_t/"
 description: "globus_ftp_client.h – GridFTP Client."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_ftp_control.h&#8217;<br />
  #include &#8216;globus_priority_q.h&#8217; </p>
 <h3>Data Structures</h3>

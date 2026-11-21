@@ -1,4 +1,5 @@
 ---
+
 title: "splitxyz(1)"
 name: "splitxyz"
 section: "1"
@@ -9,10 +10,8 @@ description: "splitxyz – Split xyz[dh] data tables into individual segments"
 
 <h2>NAME</h2>
 <p> splitxyz &#8211; Split xyz[dh] data tables into individual segments</p>
-<h2>SYNOPSIS</h2>
 <p> <code>splitxyz</code> [ <i>table</i> ] [ <i>azimuth</i>/<i>tolerance</i> ] [ <i>course_change</i>] [ <i>minimum_distance</i> ] [ <i>xy_filter</i>/<i>z_filter</i> ] [ <i>template</i> ] [ <i>flags</i> ] [ ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>splitxyz</code> reads a series of (x,y[,z]) records [or optionally (x,y,z,d,h); see <code>-S</code> option] from standard input [or <i>xyz[dh]file</i>] and splits this into separate lists of (x,y[,z]) series, such that each series has a nearly constant azimuth through the x,y plane. There are options to choose only those series which have a certain orientation, to set a minimum length for series, and to high- or low-pass filter the z values and/or the x,y values. <code>splitxyz</code> is a useful filter between data extraction and <code>pswiggle</code> plotting, and can also be used to divide a large x,y[,z] dataset into segments.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> none.</p>

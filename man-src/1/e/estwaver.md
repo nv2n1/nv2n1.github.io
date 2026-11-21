@@ -1,4 +1,5 @@
 ---
+
 title: "estwaver(1)"
 name: "estwaver"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-estwaver/"
 description: "estwaver – command line interface of web crawler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>estwaver init [-apn|-acc] [-xs|-xl|-xh] [-sv|-si|-sa] rootdir</code> </p>
 <p> <code>estwaver crawl [-restart|-revisit|-revcont] rootdir</code> </p>
 <p> <code>estwaver unittest rootdir</code> </p>
 <p> <code>estwaver fetch [-proxy hostr port] [-tout num] [-il lang] url</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>estwaver</code> is an aggregation of sub commands. The name of a sub command is specified by the first argument. Other arguments are parsed according to each sub command. The argument <i>rootdir</i> specifies the crawler root directory which contains configuration file and so on.</p>
 <dl>
 <dt><code>estwaver init [-apn|-acc] [-xs|-xl|-xh] [-sv|-si|-sa] rootdir</code></dt>

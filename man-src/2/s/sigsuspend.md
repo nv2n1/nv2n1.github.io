@@ -1,4 +1,5 @@
 ---
+
 title: "sigsuspend(2)"
 name: "sigsuspend"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-sigsuspend/"
 description: "sigsuspend, rt_sigsuspend – wait for a signal"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>int sigsuspend(const sigset_t *</code><i>mask</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>sigsuspend</code>(): _POSIX_C_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sigsuspend</code>() temporarily replaces the signal mask of the calling thread with the mask given by <i>mask</i> and then suspends the thread until delivery of a signal whose action is to invoke a signal handler or to terminate a process. </p>
 <p> If the signal terminates the process, then <code>sigsuspend</code>() does not return. If the signal is caught, then <code>sigsuspend</code>() returns after the signal handler returns, and the signal mask is restored to the state before the call to <code>sigsuspend</code>(). </p>
 <p> It is not possible to block <code>SIGKILL</code> or <code>SIGSTOP</code>; specifying these signals in <i>mask</i>, has no effect on the thread&#8217;s signal mask.</p>

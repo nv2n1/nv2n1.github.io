@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_extract_inner_secret(3)"
 name: "gnutls_ia_extract_inner_secret"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ia_extract_inner_secret – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ia_extract_inner_secret &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>void gnutls_ia_extract_inner_secret(gnutls_session_t </code><i>session</i><code>, char * </code><i>buffer</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_ia_extract_inner_secret – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>char * buffer</dt>
 <dd> pre-allocated buffer to hold 48 bytes of inner secret.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Copy the 48 bytes large inner secret into the specified buffer </p>
 <p> This function is typically used after the TLS/IA handshake has concluded. The TLS/IA inner secret can be used as input to a PRF to derive session keys. Do not use the inner secret directly as a session key, because for a resumed session that does not include an application phase, the inner secret will be identical to the inner secret in the original session. It is important to include, for example, the client and server randomness when deriving a sesssion key from the inner secret.</p>
 <h2>REPORTING BUGS</h2>

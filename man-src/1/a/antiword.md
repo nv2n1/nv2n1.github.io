@@ -1,4 +1,5 @@
 ---
+
 title: "antiword(1)"
 name: "antiword"
 section: "1"
@@ -9,9 +10,7 @@ description: "antiword – show the text and images of MS Word documents"
 
 <h2>NAME</h2>
 <p> antiword &#8211; show the text and images of MS Word documents</p>
-<h2>SYNOPSIS</h2>
 <p> <code>antiword</code> [ <i>options</i> ] <i>wordfiles</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Antiword</i> is an application that displays the text and the images of Microsoft Word documents.<br />
  A wordfile named &#8211; stands for a Word document read from the standard input.<br />
  Only documents made by MS Word version 2 and version 6 or later are supported.</p>

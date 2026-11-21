@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_output(3)"
 name: "cgi_output"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_output/"
 description: "cgi_output – display the CGI output to the user"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -17,7 +17,6 @@ NEOERR *cgi_output (CGI *cgi, STRING *output);
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; a pointer a CGI struct allocated with cgi_init<br />
  output &#8211; the data to send to output from the CGI </p>
-<h2>DESCRIPTION</h2>
 <p> Normally, this is called by cgi_display, but some people wanted it external so they could call it directly. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

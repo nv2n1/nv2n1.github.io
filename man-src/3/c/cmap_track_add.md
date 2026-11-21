@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_track_add(3)"
 name: "cmap_track_add"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-cmap_track_add/"
 description: "cmap_track_add – Set tracking function for values in CMAP"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_track_add (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>, int32_t </code><i>track_type</i><code>, cmap_notify_fn_t </code><i>notify_fn</i><code>, void *</code><i>user_data</i><code>, cmap_track_handle_t *</code><i>cmap_track_handle</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmap_track_add</code> function is used to set function which tracks changes in CMAP. One CMAP connection can track multiple keys and also it&#8217;s possible to track one key multiple times. The <i>handle</i> argument is connection to CMAP database obtained by calling <code><a href="/docs/linux/man/3-cmap_initialize/">cmap_initialize</a>(3)</code> function. <i>key_name</i> argument is ether exact key name or prefix of key name to track changes on. <i>track_type</i> is bitfield which may consist of following values: </p>
 <p> <code>CMAP_TRACK_ADD</code> &#8211; track addition of new key (or key added in callback) </p>
 <p> <code>CMAP_TRACK_DELETE</code> &#8211; track deletion of key (or key deleted in callback) </p>

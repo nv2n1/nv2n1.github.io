@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_fr(1)"
 name: "tv_grab_fr"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tv_grab_fr/"
 description: "tv_grab_fr – Grab TV listings for France."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 To configure : tv_grab_fr-- configure[--config - file FILE][--gui OPTION] To configure AUTRES CHAINES list : tv_grab_fr-- configure - more - channels To grab listings : tv_grab_fr[--config - file FILE][--output FILE][--days N][--offset N][--quiet][--debug] To list available channels : tv_grab_fr-- list - channels To show capabilities : tv_grab_fr-- capabilities To show version : tv_grab_fr-- version Help : tv_grab_fr-- help
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings for several channels available in France (Hertzian, Cable/satellite, Canal+ Sat, <font SIZE="-1">TPS</font>). The data comes from telepoche.guidetele.com. The default is to grab as many days as possible (currently 9) from the current day onwards. </p>
 <p> <code>&#8211;configure</code> Grab channels information from the website and ask for channel type and names to grab. </p>
 <p> <code>&#8211;configure-more-channels</code> Use this option to create <font SIZE="-1">AUTRES CHAINES</font> list. This allows grabbing listings for some channels that are not listed in the bouquets on the website. For more informations and a list of channels see &lt;<a rel="nofollow" href="http://www.lahiette.com/biboobox/forum/viewtopic.php?t=1842">http://www.lahiette.com/biboobox/forum/viewtopic.php?t=1842</a>&gt;. </p>

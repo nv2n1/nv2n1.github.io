@@ -1,4 +1,5 @@
 ---
+
 title: "kayac(1)"
 name: "kayac"
 section: "1"
@@ -9,10 +10,8 @@ description: "Kayac – Compiler for the kaya language"
 
 <h2>NAME</h2>
 <p> Kayac &#8211; Compiler for the kaya language</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kayac</code> <i>FILE [-L DIRECTORY [-L &#8230;]] [-libdir DIRECTORY [-libdir &#8230;]] [-force] [-nochase] [-noprelude] [-nortchecks|-fastvm] [-noopts] [-repl] [-pic] [-xmldocs] [-static] [-profile] [-T] [-seedkey STRING] [-dumptac] [-dumpraw] [-dumptree] [-dumpsimpl] [-dumpeqns] [-dumpcg] [-dumpdeps] [-keepc] [-showgcc]</i> </p>
 <p> <code>kayac</code> <i>[-version|-v|-help|-h|-?|-installdir]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>kayac</code> compiles modules, programs and web applications in the Kaya programming language. </p>
 <p> kayac will automatically compile dependencies as necessary provided that, for a dependency Foo, the source file is called Foo.k and is in the current working directory.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "devio(1)"
 name: "devio"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-devio/"
 description: "devio – program to read and write from block devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>devio</code> [<i>options</i>]<i> files</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>devio</code> command. </p>
 <p> <code>devio</code> is a command line program intended to read and write from block devices.</p>
 <h2>OPTIONS</h2>

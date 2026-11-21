@@ -1,4 +1,5 @@
 ---
+
 title: "rrdtool(1)"
 name: "rrdtool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdtool/"
 description: "rrdtool – Round Robin Database Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>&#8211;</code> [workdir]| <i>function</i></p>
-<h2>DESCRIPTION</h2>
 <h3><font SIZE="-1">OVERVIEW</font></h3>
 <p> It is pretty easy to gather status information from all sorts of things, ranging from the temperature in your office to the number of octets which have passed through the <font SIZE="-1">FDDI</font> interface of your router. But it is not so trivial to store this data in an efficient and systematic manner. This is where <code>RRDtool</code> comes in handy. It lets you <i>log and analyze</i> the data you gather from all kinds of data-sources (<font SIZE="-1"><code>DS</code></font>). The data analysis part of RRDtool is based on the ability to quickly generate graphical representations of the data values collected over a definable time period. </p>
 <p> In this man page you will find general information on the design and functionality of the Round Robin Database Tool (RRDtool). For a more detailed description of how to use the individual functions of <code>RRDtool</code> check the corresponding man page. </p>

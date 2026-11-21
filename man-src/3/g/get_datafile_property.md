@@ -1,4 +1,5 @@
 ---
+
 title: "get_datafile_property(3)"
 name: "get_datafile_property"
 section: "3"
@@ -9,10 +10,8 @@ description: "get_datafile_property – Returns the property string for the obje
 
 <h2>NAME</h2>
 <p> get_datafile_property &#8211; Returns the property string for the object. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>const char *get_datafile_property(const DATAFILE *dat, int type);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Finds the property type of a DATAFILE object. The type parameter must be a value created with the DAT_ID() macro. Example: </p>
 <pre><code>
 const char *name;

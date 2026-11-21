@@ -1,4 +1,5 @@
 ---
+
 title: "sormhr(3)"
 name: "sormhr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sormhr/"
 description: "sormhr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sormhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>SORMHR</code></p>

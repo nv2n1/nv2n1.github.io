@@ -1,4 +1,5 @@
 ---
+
 title: "srotmg(3)"
 name: "srotmg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-srotmg/"
 description: "srotmg.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>srotmg</code> (SD1, SD2, SX1, SY1, SPARAM)<br />
  <i></i><code>SROTMG</code></p>

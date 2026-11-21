@@ -1,4 +1,5 @@
 ---
+
 title: "virt-customize(1)"
 name: "virt-customize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-customize/"
 description: "virt-customize – Customize a virtual machine"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - customize[-a disk.img[-a disk.img...] | -d domname][--attach ISOFILE][--attach - format FORMAT][-c URI | --connect URI][-n | --dry - run][--format FORMAT][-m MB | --memsize MB][--network | --no - network][-q | --quiet][--smp N][-v | --verbose][-x] [--chmod PERMISSIONS:FILE][--commands - from - file FILENAME] [--copy SOURCE:DEST] [--copy - in LOCALPATH:REMOTEDIR][--delete PATH] [--edit FILE:EXPR][--firstboot SCRIPT][--firstboot - command 'CMD+ARGS'][--firstboot - install PKG, PKG..][--hostname HOSTNAME][--install PKG, PKG..] [--link TARGET:LINK
            [:LINK..]][--mkdir DIR] [--move SOURCE:DEST] [--password USER:SELECTOR][--root - password SELECTOR][--run SCRIPT][--run - command 'CMD+ARGS'][--scrub FILE][--sm - attach SELECTOR][--sm - register][--sm - remove][--sm - unregister][--ssh - inject USER[:SELECTOR]][--truncate FILE][--truncate - recursive PATH][--timezone TIMEZONE][--touch FILE][--uninstall PKG, PKG..][--update] [--upload FILE:DEST] [--write FILE:CONTENT][--no - logfile][--password - crypto md5 | sha256 | sha512][--selinux - relabel][--sm - credentials SELECTOR] virt -
@@ -15,7 +15,6 @@ virt - customize[-a disk.img[-a disk.img...] | -d domname][--attach ISOFILE][--a
 </code></pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-customize&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
-<h2>DESCRIPTION</h2>
 <p> Virt-customize can customize a virtual machine (disk image) by installing packages, editing configuration files, and so on. </p>
 <p> Virt-customize modifies the guest or disk image <i>in place</i>. The guest must be shut down. If you want to preserve the existing contents of the guest, <i>you must snapshot, copy or clone the disk first</i>. </p>
 <p> You do <i>not</i> need to run virt-customize as root. In fact we&#8217;d generally recommend that you don&#8217;t. </p>

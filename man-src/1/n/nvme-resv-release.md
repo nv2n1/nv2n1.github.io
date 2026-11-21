@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-resv-release(1)"
 name: "nvme-resv-release"
 section: "1"
@@ -6,24 +7,13 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-release/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-resv-release - Release an nvme reservation 
 
- nvme-resv-release - Release an nvme reservation 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre>
+<pre>
 <i>nvme resv-release</i> &lt;device&gt;
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The Reservation Release command is used to release or clear a reservation held on a namespace.
+The Reservation Release command is used to release or clear a reservation held on a namespace.
 
 <h2>OPTIONS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "convertiblebond(3)"
 name: "convertiblebond"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-convertiblebond/"
 description: "ql/instruments/bonds/convertiblebond.hpp – convertible bond class"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bond.hpp&gt;<br />
  #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
  #include &lt;ql/instruments/dividendschedule.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_strerror_name(3)"
 name: "gnutls_strerror_name"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_strerror_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_strerror_name &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_strerror_name(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int error</dt>
 <dd> is an error returned by a gnutls function.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Return the GnuTLS error code define as a string. For example, gnutls_strerror_name (GNUTLS_E_DH_PRIME_UNACCEPTABLE) will return the string &quot;GNUTLS_E_DH_PRIME_UNACCEPTABLE&quot;.</p>
 <h2>RETURNS</h2>
 <p> A string corresponding to the symbol name of the error code.</p>

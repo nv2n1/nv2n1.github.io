@@ -1,4 +1,5 @@
 ---
+
 title: "jcmd-java-1(1)"
 name: "jcmd-java-1"
 section: "1"
@@ -9,7 +10,6 @@ description: "jcmd – Sends diagnostic command requests to a running Java Virtu
 
 <h2>Name</h2>
 <p> jcmd &#8211; Sends diagnostic command requests to a running Java Virtual Machine </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 jcmd[options] jcmd[pid | main - class] PerfCounter.print
         jcmd[pid | main - class] command[arguments] jcmd[pid | main - class] -
@@ -30,7 +30,6 @@ jcmd[options] jcmd[pid | main - class] PerfCounter.print
 <dt>-f file</dt>
 <dd> Read commands from <i>file</i> and call them on the targeted Java processes. In <i>file</i>, each command must be written on a single line. Lines starting with # are ignored. Processing of <i>file</i> ends when all lines have been called or when a line containing the <code>stop</code> keyword is read.</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>jcmd</code> is a utility to send diagnostic command requests to a Java Virtual Machine supporting this feature. </p>
 <p> Used without arguments or with the <code>-l</code> option, <code>jcmd</code> prints the list of running Java processes with their process ID, their main class and their command-line arguments. </p>
 <p> When a process ID is specified on the command line, <code>jcmd</code> sends the diagnostic command request to the process with this ID. </p>

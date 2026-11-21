@@ -1,4 +1,5 @@
 ---
+
 title: "phpize(1)"
 name: "phpize"
 section: "1"
@@ -9,9 +10,7 @@ description: "phpize – prepare a PHP extension for compiling"
 
 <h2>NAME</h2>
 <p> phpize &#8211; prepare a PHP extension for compiling</p>
-<h2>SYNOPSIS</h2>
 <p> <code>phpize</code> [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>phpize</code> is a shell script to prepare PHP extension for compiling.</p>
 <h2>OPTIONS</h2>
 <dl>

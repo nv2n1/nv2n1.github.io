@@ -1,4 +1,5 @@
 ---
+
 title: "helpztags(1)"
 name: "helpztags"
 section: "1"
@@ -6,18 +7,11 @@ letter: "h"
 url: "/docs/linux/man/1-helpztags/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+helpztags - generate the help tags file for directory 
 
- helpztags - generate the help tags file for directory 
+helpztags <i></i><font SIZE="-1"><i>DIRS</i></font><i></i>...
 
-<h2>SYNOPSIS</h2>
-
- helpztags <i></i><font SIZE="-1"><i>DIRS</i></font><i></i>...
-
-<h2>DESCRIPTION</h2>
-
- <i>helpztags</i> scans given directories for <i>*.txt</i> and <i>*.txt.gz</i> files. Each file is scanned for tags used in <i>vim</i> help files. For each directory proper <i>tags</i> file is generated. 
+<i>helpztags</i> scans given directories for <i>*.txt</i> and <i>*.txt.gz</i> files. Each file is scanned for tags used in <i>vim</i> help files. For each directory proper <i>tags</i> file is generated. 
 
  There should be at least one directory given. In other case program exits with error.
 

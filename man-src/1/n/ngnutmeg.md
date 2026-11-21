@@ -1,4 +1,5 @@
 ---
+
 title: "ngnutmeg(1)"
 name: "ngnutmeg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ngnutmeg/"
 description: "ngnutmeg – ngspice post-processor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ngnutmeg</code> [<i>options</i>] [<i>datafile</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This man page is just a small overview. The primary documentation of ngspice is in the ngspice] User&#8217;s Manual, which is available as a pdf file.<br />
  <code>ngnutmeg</code> is a post processor for ngspice] &#8211; it takes the raw output file created by <code>ngspice -r</code> and plots the data on a graphics terminal or a workstation display. Note that the raw output file is different from the data that ngspice] writes to the standard output.</p>
 <h2>OPTIONS</h2>

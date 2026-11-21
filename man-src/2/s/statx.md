@@ -1,4 +1,5 @@
 ---
+
 title: "statx(2)"
 name: "statx"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-statx/"
 description: "statx – get file status (extended)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt; /* Definition of AT_* constants */
 #include &lt;sys/stat.h&gt;
@@ -16,7 +16,6 @@ description: "statx – get file status (extended)"
 int statx(int dirfd, const char *pathname, int flags,
           unsigned int mask, struct statx *statxbuf);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This function returns information about a file, storing it in the buffer pointed to by <i>statxbuf</i>. The returned buffer is a structure of the following type: </p>
 <p> struct statx {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__u32 stx_mask;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Mask of bits indicating<br />

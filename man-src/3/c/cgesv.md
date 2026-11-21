@@ -1,4 +1,5 @@
 ---
+
 title: "cgesv(3)"
 name: "cgesv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgesv/"
 description: "cgesv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
  <i></i><code> CGESV computes the solution to system of linear equations A * X = B for GE matrices</code> (simple driver)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-mlc(1)"
 name: "urxvt256c-mlc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-urxvt256c-mlc/"
 description: "urxvt256c-mlc – control the urxvt256c-mld daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>urxvt256c-mlc</code> [same options as for urxvt256c-ml]</p>
-<h2>DESCRIPTION</h2>
 <p> This manpage describes the <code>urxvt256c-mlc</code> client program. It connects to the <code>urxvt256c-mld</code> daemon and requests a new terminal window. It takes the same arguments as the <code>urxvt256c-ml</code> program. The environment will also be respected. Currently, it always returns immediately after contacting the daemon.</p>
 <h2>OPTIONS</h2>
 <p> If the first option is <code>-k</code>, <code>urxvt256c-mlc</code> tries to kill the daemon process and returns. </p>

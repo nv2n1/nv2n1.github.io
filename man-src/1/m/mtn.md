@@ -1,4 +1,5 @@
 ---
+
 title: "mtn(1)"
 name: "mtn"
 section: "1"
@@ -9,9 +10,7 @@ description: "monotone – a distributed version control system"
 
 <h2>NAME</h2>
 <p> monotone &#8211; a distributed version control system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mtn</code> <i>[options&#8230;] command [arguments&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> monotone is a highly reliable, very customizable distributed version control system that provides lightweight branches, history-sensitive merging and a flexible trust setup. monotone has an easy-to-learn command set and comes with a rich interface for scripting purposes and thorough documentation. </p>
 <p> For more information on monotone, visit <code><a rel="nofollow" href="http://www.monotone.ca">http://www.monotone.ca</a></code>. </p>
 <p> The complete documentation, including a tutorial for a quick start with the system, can be found online on <code><a rel="nofollow" href="http://www.monotone.ca/docs">http://www.monotone.ca/docs</a></code>.</p>

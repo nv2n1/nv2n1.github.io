@@ -1,4 +1,5 @@
 ---
+
 title: "xetex(1)"
 name: "xetex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xetex/"
 description: "xetex – extended TeX with native support for Unicode, OpenType, system fonts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xetex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]</p>
-<h2>DESCRIPTION</h2>
 <p> XeTeX (<code>xetex</code>) is a TeX engine with native support for Unicode, OpenType, and system-installed fonts, using third-party libraries (such as ICU, HarfBuzz, and Freetype). It was developed by Jonathan Kew for SIL. </p>
 <p> XeTeX includes the e-TeX extensions and many extensions from pdfTeX, sometimes with different primitive names. </p>
 <p> XeTeX is now released as part of TeX Live &lt;<a rel="nofollow" href="https://tug.org/texlive">https://tug.org/texlive</a>&gt;.</p>

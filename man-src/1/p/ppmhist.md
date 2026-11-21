@@ -1,4 +1,5 @@
 ---
+
 title: "ppmhist(1)"
 name: "ppmhist"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmhist/"
 description: "ppmhist – print a histogram of a portable pixmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmhist</code> [<code>-hexcolor</code>] [<code>-noheader</code>] [<code>-map</code>] [<code>-nomap</code>] [<code>-sort=</code>{<code>frequency</code>,<code>rgb</code>}] [<i>ppmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PPM image as input. Generates a histogram of the colors in the image, i.e. a list of all the colors and how many pixels of each color are in the image. </p>
 <h2>OPTIONS</h2>
 <dl>

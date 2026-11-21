@@ -1,4 +1,5 @@
 ---
+
 title: "xmms(1)"
 name: "xmms"
 section: "1"
@@ -9,9 +10,7 @@ description: "XMMS – an audio player for X."
 
 <h2>NAME</h2>
 <p> XMMS &#8211; an audio player for X.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xmms</code> [-h] [&#8211;help] [-n <i>&lt;session&gt;</i>] [&#8211;session=<i>&lt;session&gt;</i>] [-r] [&#8211;rew] [-p] [&#8211;play] [-u] [&#8211;pause] [-s] [&#8211;stop] [-t] [&#8211;play-pause] [-f] [&#8211;fwd] [-e] [&#8211;enqueue] [-S] [&#8211;toggle-shuffle] [-R] [&#8211;toggle-repeat] [-A] [&#8211;toggle-advance] [-m] [&#8211;show-main-window] [-q] [&#8211;quit] [-i <i>&lt;session id&gt;</i>] [&#8211;sm-client-id=<i>&lt;session id&gt;</i>] [-v] [&#8211;version] [<i>filename</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <i>XMMS</i> is the X Multimedia System. It is used to play audio and other kinds of media files. By default XMMS can play MPEG audio, Ogg Vorbis, RIFF wav, most module formats and a few other formats. XMMS can be extended through plugins to play a number of other audio and video formats.</p>
 <h2>OPTIONS</h2>
 <p> XMMS accepts the following options:</p>

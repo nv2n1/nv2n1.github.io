@@ -1,4 +1,5 @@
 ---
+
 title: "who(1)"
 name: "who"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-who/"
 description: "who – show who is logged on"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>who</code> [<i>,OPTION/</i>]&#8230; [ <i>,FILE | ARG1 ARG2 /</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Print information about users who are currently logged in.</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;all</code></dt>

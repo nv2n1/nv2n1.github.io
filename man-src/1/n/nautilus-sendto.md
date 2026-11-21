@@ -1,4 +1,5 @@
 ---
+
 title: "nautilus-sendto(1)"
 name: "nautilus-sendto"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nautilus-sendto/"
 description: "nautilus-sendto – convenience application to send a file via email"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nautilus-sendto</code> [<i>OPTIONS</i> <i>|</i> <i>FILES&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Send FILE(s) via email. </p>
 <p> This command will open the default mailer after having attached the files mentioned on the command-line. If a directory is passed instead of files, it will have been zipped up before being attached. </p>
 <p> The application is intented to integrate with nautilus and is written for the GNOME graphical desktop.</p>

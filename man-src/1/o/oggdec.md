@@ -1,4 +1,5 @@
 ---
+
 title: "oggdec(1)"
 name: "oggdec"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-oggdec/"
 description: "oggdec – simple decoder, Ogg Vorbis file to PCM audio file (Wave or RAW)."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>oggdec</code> [ <code>-QhV</code> ] [ <code>-b bits_per_sample</code> ] [ <code>-e endianness</code> ] [ <code>-R</code> ] [ <code>-s signedness</code> ] [ <code>-o outputfile</code> ] <code>file &#8230;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>oggdec</code> decodes Ogg Vorbis files into PCM-encoded (&quot;uncompressed&quot;) audio files, either Wave or RAW format. </p>
 <p> For each input file, <code>oggdec</code> writes to a filename based on the input filename, but with the extension changed to &quot;.wav&quot; or &quot;.raw&quot; as appropriate. </p>
 <p> If the input file is specified as <code>&#8211;</code> , then <code>oggdec</code> will read from stdin, and write to stdout unless an output filename is specified. Likewise, an output filename of <code>&#8211;</code> will cause output to be to stdout. </p>

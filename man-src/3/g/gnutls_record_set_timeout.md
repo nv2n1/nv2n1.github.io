@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_set_timeout(3)"
 name: "gnutls_record_set_timeout"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_record_set_timeout – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_set_timeout &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_record_set_timeout(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>ms</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_record_set_timeout – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>unsigned int ms</dt>
 <dd> is a timeout value in milliseconds</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets the receive timeout for the record layer to the provided value. Use an <i>ms</i> value of zero to disable timeout (the default).</p>
 <h2>SINCE</h2>
 <p> 3.1.7</p>

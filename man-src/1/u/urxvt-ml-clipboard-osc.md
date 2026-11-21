@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-ml-clipboard-osc(1)"
 name: "urxvt-ml-clipboard-osc"
 section: "1"
@@ -6,17 +7,10 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-clipboard-osc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+clipboard-osc - implement the clipboard operating system command sequence 
 
- clipboard-osc - implement the clipboard operating system command sequence 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
    urxvt -pe clipboard-osc
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This extension implements the clipboard;copy Perl <font SIZE="-1">OSC.</font>
+This extension implements the clipboard;copy Perl <font SIZE="-1">OSC.</font>

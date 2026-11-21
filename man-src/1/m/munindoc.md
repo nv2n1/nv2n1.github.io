@@ -1,4 +1,5 @@
 ---
+
 title: "munindoc(1)"
 name: "munindoc"
 section: "1"
@@ -6,14 +7,9 @@ letter: "m"
 url: "/docs/linux/man/1-munindoc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+munindoc - Munin documentation 
 
- munindoc - Munin documentation 
-
-<h2>DESCRIPTION</h2>
-
- This program displays Munin documentation, esp. plugin documentation. Note that not all plugins are documented yet. 
+This program displays Munin documentation, esp. plugin documentation. Note that not all plugins are documented yet. 
 
  Most Munin commands (such as munin-run, and munindoc itself) is only documented through the usual Unix man command.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ctrttf(3)"
 name: "ctrttf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctrttf/"
 description: "ctrttf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrttf</code> (TRANSR, UPLO, N, A, LDA, ARF, INFO)<br />
  <i></i><code>CTRTTF</code> copies a triangular matrix from the standard full format (TR) to the rectangular full packed format (TF).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-dir(1)"
 name: "wimlib-imagex-dir"
 section: "1"
@@ -9,9 +10,7 @@ description: "wimlib-imagex-dir – Show the files contained in a WIM archive"
 
 <h2>NAME</h2>
 <p> wimlib-imagex-dir &#8211; Show the files contained in a WIM archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex dir</code> <i>WIMFILE</i> <i>IMAGE</i> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Lists the files and directories contained in the specified image of the Windows Imaging (WIM) file <i>WIMFILE</i>. This command is also available as simply <code>wimdir</code> if the appropriate hard link or batch file has been installed. </p>
 <p> <i>IMAGE</i> specifies the image in <i>WIMFILE</i> to show the files of. It may be a 1-based index of an image in <i>WIMFILE</i>, the name of an image in <i>WIMFILE</i>, or the keyword &quot;all&quot; to indicate that files from all images in <i>WIMFILE</i> are to be shown. Use the <code>wimlib-imagex info</code> (1) command to show what images a WIM file contains.</p>
 <h2>OPTIONS</h2>

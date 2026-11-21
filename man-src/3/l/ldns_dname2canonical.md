@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname2canonical(3)"
 name: "ldns_dname2canonical"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_dname2canonical"
 
 <h2>NAME</h2>
 <p> ldns_dname2canonical </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_dname2canonical(const ldns_rdf *rdf); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dname2canonical</i>()</dt>
 <dd>Put a dname into canonical fmt &#8211; ie. lowercase it .br <code>rdf</code>: the dname to lowercase .br Returns void</dd></dl>

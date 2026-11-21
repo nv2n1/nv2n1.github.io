@@ -1,4 +1,5 @@
 ---
+
 title: "sge_share_mon(1)"
 name: "sge_share_mon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sge_share_mon/"
 description: "sge_share_mon – print xxQS_NAMExx live share tree"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sge_share_mon</code> [<code>-c</code> <i>count</i>] [<code>-d</code> <i>delimiter</i>] [<code>-f</code> <i>field</i>,<i>field</i>&#8230;] [<code>-h</code>] [<code>-i</code> <i>interval</i>] [<code>-l</code> <i>delimiter</i>] [<code>-m</code> <i>output_mode</i>] [<code>-n</code>] [<code>-o</code> <i>output_file</i>] [<code>-r</code> <i>delimiter</i>] [<code>-s</code> <i>string_format</i>] [<code>-t</code>] [<code>-u</code>] [<code>-x</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>sge_share_mon</i> prints the live state of the xxQS_NAMExx share tree (as opposed to static graphical view). It does so for a given number (default infinite) of intervals; use <code>-c 1</code> for a snapshot.</p>
 <h2>OPTIONS</h2>
 <dl>

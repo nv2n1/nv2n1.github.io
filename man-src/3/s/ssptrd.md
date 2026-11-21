@@ -1,4 +1,5 @@
 ---
+
 title: "ssptrd(3)"
 name: "ssptrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssptrd/"
 description: "ssptrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br />
  <i></i><code>SSPTRD</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qodem(1)"
 name: "qodem"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qodem/"
 description: "qodem – Qodem Terminal Emulator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>qodem</code> [ &#8211;enable-capture FILENAME ]<br />
  [ [ &#8211;connect HOST [ &#8211;connect-method method ]<br />
  [ &#8211;username name ] ] |<br />
@@ -16,7 +16,6 @@ description: "qodem – Qodem Terminal Emulator"
 <dt><code>qodem</code> [ &#8211;help | -h | -? ]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>Qodem</i> is an open-source clone implementation of the popular DOS-based Qmodem serial communications program. Qodem incorporates many features that are useful on all kinds of text-based consoles such as scrollback buffer, session capture, screen dump, dialing directory, and also includes serial port handling and modem dialing. </p>
 <p> The major features of Qodem are: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>Unicode display: translation of CP437&nbsp;<wbr>(PC VGA), VT100 DEC Special<br />

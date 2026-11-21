@@ -1,4 +1,5 @@
 ---
+
 title: "mongosniff(1)"
 name: "mongosniff"
 section: "1"
@@ -9,7 +10,6 @@ description: "mongosniff – MongoDB Protocol Introspection Utility"
 
 <h2>NAME</h2>
 <p> mongosniff &#8211; MongoDB Protocol Introspection Utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mongosniff</code> provides a low-level operation tracing/sniffing view into database activity in real time. Think of <code>mongosniff</code> as a MongoDB-specific analogue of <code>tcpdump</code> for TCP/IP network traffic. Typically, <code>mongosniff</code> is most frequently used in driver development. </p>
 <p> <code>NOTE:</code> <code>mongosniff</code> requires <code>libpcap</code> and is only available for Unix-like systems. Furthermore, the version distributed with the MongoDB binaries is dynamically linked against aversion 0.9 of <code>libpcap</code>. If your system has a different version of <code>libpcap</code>, you will need to compile <code>mongosniff</code> yourself or create a symbolic link pointing to <code>libpcap.so.0.9</code> to your local version of <code>libpcap</code>. Use an operation that resembles the following: </p>
 <pre>

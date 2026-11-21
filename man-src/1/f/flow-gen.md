@@ -1,4 +1,5 @@
 ---
+
 title: "flow-gen(1)"
 name: "flow-gen"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-gen – Generate test flows"
 
 <h2>NAME</h2>
 <p> flow-gen &#8211; Generate test flows</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-gen</code> [ <code>-h</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-n</code><i> count</i> ] [ <code>-V</code><i> version</i> ] [ <code>-z</code><i> z_level</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-gen</code> utility generates a test pattern of flows in any of the currently supported export versions typically for debugging purposes.</p>
 <h2>OPTIONS</h2>
 <dl>

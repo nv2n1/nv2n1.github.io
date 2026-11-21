@@ -1,4 +1,5 @@
 ---
+
 title: "execvp(3)"
 name: "execvp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-execvp/"
 description: "execl, execlp, execle, execv, execvp, execvpe – execute a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 extern char **environ;
@@ -24,7 +24,6 @@ int execvpe(const char *file, char *const argv[],
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>execvpe</code>(): _GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>exec</code>() family of functions replaces the current process image with a new process image. The functions described in this manual page are layered on top of <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). (See the manual page for <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) for further details about the replacement of the current process image.) </p>
 <p> The initial argument for these functions is the name of a file that is to be executed. </p>
 <p> The functions can be grouped based on the letters following the &quot;exec&quot; prefix.</p>

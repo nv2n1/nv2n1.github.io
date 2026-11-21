@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_template(3)"
 name: "cdk_template"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_template – a curses template widget."
 
 <h2>NAME</h2>
 <p> cdk_template &#8211; a curses template widget.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -110,7 +110,6 @@ char *unmixCDKTemplate(
     const char *string);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk template widget creates a template widget which allows a user to type information into an entry field with a pre-set field format. Typical uses for this widget would be a date field or a time field. The following are functions which create or manipulate the Cdk template box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "dgels(3)"
 name: "dgels"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgels/"
 description: "dgels.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgels</code> (TRANS, M, N, NRHS, A, LDA, B, LDB, WORK, LWORK, INFO)<br />
  <i></i><code> DGELS solves overdetermined or underdetermined systems for GE matrices</code></p>

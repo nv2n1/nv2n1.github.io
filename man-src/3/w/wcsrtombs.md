@@ -1,4 +1,5 @@
 ---
+
 title: "wcsrtombs(3)"
 name: "wcsrtombs"
 section: "3"
@@ -6,14 +7,13 @@ letter: "w"
 url: "/docs/linux/man/3-wcsrtombs/"
 description: "wcsrtombs – convert a wide-character string to a multibyte string"
 ---
+
 <p>wcsrtombs &#8211; convert a wide-character string to a multibyte string </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;wchar.h&gt; 
  size_t wcsrtombs(char *  dest  , const wchar_t **  src  , 
                   size_t  len  , mbstate_t *  ps  ); 
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> If <i>dest</i> is not NULL, the <code>wcsrtombs</code>() function converts the wide-character string <i>*src</i> to a multibyte string starting at <i>dest</i>. At most <i>len</i> bytes are written to <i>dest</i>. The shift state <i>*ps</i> is updated. The conversion is effectively performed by repeatedly calling <i>wcrtomb(dest, *src, ps)</i>, as long as this call succeeds, and then incrementing <i>dest</i> by the number of bytes written and <i>*src</i> by one. The conversion can stop for three reasons: </p>
 <dl>
 <dt>1.</dt>

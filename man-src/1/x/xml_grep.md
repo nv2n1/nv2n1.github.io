@@ -1,4 +1,5 @@
 ---
+
 title: "xml_grep(1)"
 name: "xml_grep"
 section: "1"
@@ -85,7 +86,6 @@ description: "xml_grep – grep XML files looking for specific elements"
 &nbsp;<wbr>&nbsp;<wbr>&#8216;para[<i>string()</i>=&#8220;<font SIZE="-1">WARNING&#8221;</font>]&#8217; </p>
 <p> see XML::Twig for a more complete description of the &lt;cond&gt; syntax </p>
 <p> options are processedby Getopt::Long so they can start with &#8216;-&#8216; or &#8216;&#8211;&#8216; and can be abbreviated (<tt>&quot;-r&quot;</tt> instead of <tt>&quot;--root&quot;</tt> for example)</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xml_grep</code> does a grep on <font SIZE="-1">XML</font> files. Instead of using regular expressions it uses XPath expressions (in fact the subset of XPath supported by XML::Twig) </p>
 <p> the results can be the names of the files or <font SIZE="-1">XML</font> elements containing matching elements.</p>
 <h2>SEE ALSO</h2>

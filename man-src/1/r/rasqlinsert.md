@@ -1,4 +1,5 @@
 ---
+
 title: "rasqlinsert(1)"
 name: "rasqlinsert"
 section: "1"
@@ -9,9 +10,7 @@ description: "rasqlinsert – write argus(8) data into mysql database tables."
 
 <h2>NAME</h2>
 <p> <code>rasqlinsert</code> &#8211; write <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data into mysql database tables.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rasqlinsert</code> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Rasqlinsert</code> writes <code>argus</code> data into a mysql database. </p>
 <p> The principal function of <code>rasqlinsert</code> is to insert and update flow data attributes, into a MySQL database table. Using the same syntax and strategies for all other ra* programs, <code>rasqlinsert</code> creates databases and database tables, based on the print specification on the either the command-line or the .rarc file. </p>
 <p> The concept is that where a ra* program would print fields to standard out in ascii, <code>rasqlinsert</code> will insert those fields into the database as attributes. The flow key, as defined by the &quot;-m fields&quot; option, provides the definition of any keys that would be used in the schema. A &quot;-m none&quot; option, will remove the use of any DBMS keys for inserted data, and is the method to use when inserting streaming, unprocessed, primitive argus data into a database table. </p>

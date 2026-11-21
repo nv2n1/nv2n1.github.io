@@ -1,4 +1,5 @@
 ---
+
 title: "ranlib(1)"
 name: "ranlib"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ranlib/"
 description: "ranlib – generate an index to an archive"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ranlib [<code>&#8211;plugin</code> <i>name</i>] [<code>-DhHvVt</code>] <i>archive</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ranlib</code> generates an index to the contents of an archive and stores it in the archive. The index lists each symbol defined by a member of an archive that is a relocatable object file. </p>
 <p> You may use <code>nm -s</code> or <code>nm &#8211;print-armap</code> to list this index. </p>
 <p> An archive with such an index speeds up linking to the library and allows routines in the library to call each other without regard to their placement in the archive. </p>

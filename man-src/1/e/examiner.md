@@ -1,4 +1,5 @@
 ---
+
 title: "examiner(1)"
 name: "examiner"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-examiner/"
 description: "examiner – A ELF binary executable analyzer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>examiner</code> [ <code>-hvVsHRLq</code> ] [ <code>-d directory</code> ] [ <code>-C coroner.conf</code> ] [ <code>-o outfile</code> ] [ <code>-c &#8216;comment char&#8217;</code> ] -x executable</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>examiner</i> is a program used to analyze and comment on <font SIZE="-1">ELF</font> executables. Its purpose is mainly intended for forensic analysis but can be used for general reverse engineering. The goal is to take a foreign executable and analyze it without running it. The <i>examiner</i> relies on objdump to do its disassembly and then it parses the assembly output and attempts to put human readable comments to help facilitate analysis of the binary. </p>
 <p> The commented file will be created with the name of the target binary with the extension of .commented. By default the Examiner creates <i></i>$HOME<i>/examiner-data</i> directory to store its output. This can be overridden with the <code>-d</code> option. Also if The Coroners Toolkit (<font SIZE="-1">TCT</font>) is installed the <i>examiner</i> will use the directory specified by <font SIZE="-1">TCT. </font> See below for more information for using the Examiner with <font SIZE="-1">TCT. </font> You may use the <code>-o</code> option to specify a seperate file for the commented source. If you use <code>-o &#8211;</code> Then Examiner will print the commented source to <font SIZE="-1">STDOUT.</font> </p>
 <p> The <i>examiner</i> requires that you use the <code>-x</code> option to specify an executable to analyze. By default the <i>examiner</i> only reports what Phase of analysis it is currently working on. The <i>examiner</i> analyzes binaries in four phases.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libmosquitto(3)"
 name: "libmosquitto"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmosquitto/"
 description: "libmosquitto – MQTT version 3.1 client library"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This is an overview of how to use libmosquitto to create MQTT aware client programs. There may be separate man pages on each of the functions described here in the future. There is also a binding for libmosquitto for C++ and a Python implementation. They are not documented here but operate in a similar way. </p>
 <p> This is fairly incomplete, please see mosquitto.h for a better description of the functions.</p>
 <h2>LIBMOSQUITTO SYMBOL NAMES</h2>

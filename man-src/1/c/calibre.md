@@ -1,4 +1,5 @@
 ---
+
 title: "calibre(1)"
 name: "calibre"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-calibre/"
 description: "calibre – launch Calibre Graphical User Interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code> calibre </code>&#8211; launch Calibre Graphical User Interface </p>
 <h2>USAGE</h2>
 <p> calibre [opts] [path_to_ebook]</p>
-<h2>DESCRIPTION</h2>
 <p> Launch the main calibre Graphical User Interface and optionally add the ebook at path_to_ebook to the database. </p>
 <p> Whenever you pass arguments to calibre that have spaces in them, enclose the arguments in quotation marks.</p>
 <h2>MAIN OPTIONS</h2>

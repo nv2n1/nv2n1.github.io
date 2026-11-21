@@ -1,4 +1,5 @@
 ---
+
 title: "xsltproc(1)"
 name: "xsltproc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xsltproc/"
 description: "xsltproc – command line XSLT processor"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xsltproc</code> [[<code>-V</code> | <code>&#8211;version</code>] [<code>-v</code> | <code>&#8211;verbose</code>] [{<code>-o</code> | <code>&#8211;output</code>} {<i>FILE</i> | <i>DIRECTORY</i>}] | <code>&#8211;timing</code> | <code>&#8211;repeat</code> | <code>&#8211;debug</code> | <code>&#8211;novalid</code> | <code>&#8211;noout</code> | <code>&#8211;maxdepth&nbsp;<wbr></code><i>VALUE</i> | <code>&#8211;html</code> | <code>&#8211;encoding&nbsp;<wbr></code><i>ENCODING</i><code>&nbsp;<wbr></code> | <code>&#8211;param&nbsp;<wbr></code><i>PARAMNAME</i><code>&nbsp;<wbr></code><i>PARAMVALUE</i><code>&nbsp;<wbr></code> | <code>&#8211;stringparam&nbsp;<wbr></code><i>PARAMNAME</i><code>&nbsp;<wbr></code><i>PARAMVALUE</i><code>&nbsp;<wbr></code> | <code>&#8211;nonet</code> | <code>&#8211;path&nbsp;<wbr>&quot;</code><i>PATH(S)</i><code>&quot;</code> | <code>&#8211;load-trace</code> | <code>&#8211;catalogs</code> | <code>&#8211;xinclude</code> | [<code>&#8211;profile</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;norman</code>] | <code>&#8211;dumpextensions</code> | <code>&#8211;nowrite</code> | <code>&#8211;nomkdir</code> | <code>&#8211;writesubtree&nbsp;<wbr></code><i>PATH</i> | <code>&#8211;nodtdattr</code>] [<i>STYLESHEET</i>] {<i>XML-FILE</i> | -}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>xsltproc</code></p>
 <dd>is a command line tool for applying XSLT stylesheets to XML documents. It is part of <code><a href="/docs/linux/man/3-libxslt/">libxslt</a></code>(3), the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop. </dd>
 <p> <code>xsltproc</code> is invoked from the command line with the name of the stylesheet to be used followed by the name of the file or files to which the stylesheet is to be applied. It will use the standard input if a filename provided is <code>&#8211;</code> . </p>

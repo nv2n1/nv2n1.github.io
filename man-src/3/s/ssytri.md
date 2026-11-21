@@ -1,4 +1,5 @@
 ---
+
 title: "ssytri(3)"
 name: "ssytri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssytri/"
 description: "ssytri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
  <i></i><code>SSYTRI</code></p>

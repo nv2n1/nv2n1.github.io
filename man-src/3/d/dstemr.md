@@ -1,4 +1,5 @@
 ---
+
 title: "dstemr(3)"
 name: "dstemr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dstemr/"
 description: "dstemr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstemr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, M, W, Z, LDZ, NZC, ISUPPZ, TRYRAC, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>DSTEMR</code></p>

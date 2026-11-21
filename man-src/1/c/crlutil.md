@@ -1,4 +1,5 @@
 ---
+
 title: "crlutil(1)"
 name: "crlutil"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-crlutil/"
 description: "crlutil – List, generate, modify, or delete CRLs within the NSS security database file(s) and list, create, modify or delete certificates entries in a particular CRL."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>crlutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
-<h2>DESCRIPTION</h2>
 <p> The Certificate Revocation List (CRL) Management Tool, <code>crlutil</code>, is a command-line utility that can list, generate, modify, or delete CRLs within the NSS security database file(s) and list, create, modify or delete certificates entries in a particular CRL. </p>
 <p> The key and certificate management process generally begins with creating keys in the key database, then generating and managing certificates in the certificate database(see certutil tool) and continues with certificates expiration or revocation. </p>
 <p> This document discusses certificate revocation list management. For information on security module database management, see Using the Security Module Database Tool. For information on certificate and key database management, see Using the Certificate Database Tool. </p>

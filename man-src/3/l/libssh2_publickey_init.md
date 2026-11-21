@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_publickey_init(3)"
 name: "libssh2_publickey_init"
 section: "3"
@@ -9,14 +10,6 @@ url: "/docs/linux/man/3-libssh2_publickey_init/"
 <h2>NAME</h2>
 
  libssh2_publickey_init - TODO
-
-<h2>SYNOPSIS</h2>
-
- 
-
-<h2>DESCRIPTION</h2>
-
- 
 
 <h2>RETURN VALUE</h2>
 

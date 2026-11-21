@@ -1,4 +1,5 @@
 ---
+
 title: "acl_init(3)"
 name: "acl_init"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_init/"
 description: "acl_init – initialize ACL working storage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_init</code> &#8211; initialize ACL working storage </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft acl_t Fn acl_init int count</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_init function allocates and initializes the working storage for an ACL of at least <i>count</i> ACL entries. The ACL created initially contains no ACL entries. A pointer to the working storage is returned. </p>
 <p> This function may cause memory to be allocated. The caller should free any releasable memory, when the new ACL is no longer required, by calling acl_free3 with the <i>(void*)acl_t</i> returned by Fn acl_init as an argument.</p>
 <h2>RETURN VALUE</h2>

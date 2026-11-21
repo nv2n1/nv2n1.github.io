@@ -1,4 +1,5 @@
 ---
+
 title: "source-highlight-settings(1)"
 name: "source-highlight-settings"
 section: "1"
@@ -9,9 +10,7 @@ description: "Source-highlight-settings – utility that can be used to write a 
 
 <h2>NAME</h2>
 <p> Source-highlight-settings &#8211; utility that can be used to write a configuration file for GNU Source-highlight (and its library)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>source-highlight-settings</code></p>
-<h2>DESCRIPTION</h2>
 <p> Since version 3.0, GNU Source-highlight includes also the utility source-highlight-settings, which can be used to check whether source-highlight will be able to find its language definition files, and other configuration files, and in case, to store the correct settings in a configuration file, in the user home directory. </p>
 <p> In particular, the stored configuration file will be called source-highlight.conf and will be stored in $HOME/.source-highlight/. </p>
 <p> For the moment, this file only stores the default value for the &#8211;data-dir option. </p>

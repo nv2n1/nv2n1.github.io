@@ -1,4 +1,5 @@
 ---
+
 title: "gifsicle(1)"
 name: "gifsicle"
 section: "1"
@@ -9,9 +10,7 @@ description: "gifsicle – manipulates GIF images and animations"
 
 <h2>NAME</h2>
 <p> gifsicle &#8211; manipulates GIF images and animations</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gifsicle</code> [options, frames, and filenames]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gifsicle</code> is a powerful command-line program for creating, editing, manipulating, and getting information about GIF images and animations. </p>
 <p> <code>Gifsicle</code> normally processes input GIF files according to its command line options and writes the result to the standard output. The <code>-i</code> option, for example, tells <code>gifsicle</code> to interlace its inputs: </p>
 <dl>

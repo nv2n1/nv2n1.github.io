@@ -1,4 +1,5 @@
 ---
+
 title: "mate-panel-test-applets(1)"
 name: "mate-panel-test-applets"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mate-panel-test-applets/"
 description: "mate-panel-test-applets – display and test installed applets"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mate-panel-test-applets [OPTIONS] </code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mate-panel-test-applets</code> display installed applets in a dialog box and allow you to test them.</p>
 <h2>OPTIONS</h2>
 <dl>

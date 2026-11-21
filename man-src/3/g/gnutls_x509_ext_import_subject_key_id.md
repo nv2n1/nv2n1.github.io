@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_ext_import_subject_key_id(3)"
 name: "gnutls_x509_ext_import_subject_key_id"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_ext_import_subject_key_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_import_subject_key_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_import_subject_key_id(const gnutls_datum_t * </code><i>ext</i><code>, gnutls_datum_t * </code><i>id</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_ext_import_subject_key_id – API function"
 <dd> a DER encoded extension</dd>
 <dt>gnutls_datum_t * id</dt>
 <dd> will contain the subject key ID</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the subject key ID stored in the provided SubjectKeyIdentifier extension. The ID will be allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if the extension is not present, otherwise a negative error value.</p>

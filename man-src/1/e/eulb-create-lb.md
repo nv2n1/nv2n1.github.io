@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-lb(1)"
 name: "eulb-create-lb"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-create-lb – Create a load balancer"
 
 <h2>NAME</h2>
 <p> eulb-create-lb &#8211; Create a load balancer</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-create-lb (<code>-s</code> SUBNET1,SUBNET2,&#8230; | <code>-z</code> ZONE1,ZONE2,&#8230;) <code>-l</code></p>
 <dl>
 <dt>&quot;lb-port=PORT, protocol={HTTP,HTTPS,SSL,TCP},</dt>
 <dd> instance-port=PORT, instance-protocol={HTTP,HTTPS,SSL,TCP}, cert-id=ARN&quot; [-i internal] [-g GROUP1,GROUP2,&#8230;] [-t KEY=VALUE] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a load balancer</p>
 <h2>DESCRIPTION</h2>
 <p> After the load balancer is created, instances must be registered with it separately.</p>

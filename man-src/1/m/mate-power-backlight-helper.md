@@ -1,4 +1,5 @@
 ---
+
 title: "mate-power-backlight-helper(1)"
 name: "mate-power-backlight-helper"
 section: "1"
@@ -9,9 +10,7 @@ description: "mate-power-backlight-helper – helper application for MATE’s po
 
 <h2>NAME</h2>
 <p> mate-power-backlight-helper &#8211; helper application for MATE&#8217;s power management backlight control</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-power-backlight-helper</code> [ <code>&#8211;help</code> ] [ <code>&#8211;set-brightness</code> ] [ <code>&#8211;get-brightness</code> ] [ <code>&#8211;get-max-brightness</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mate-power-backlight-helper</code> command. </p>
 <p> <code>mate-power-backlight-helper</code> is a helper utility for controlling the backlight of TFT displays via the MATE power manager userspace daemon. </p>
 <p> The <code>mate-power-backlight-helper</code> requires to be run with root privileges.</p>

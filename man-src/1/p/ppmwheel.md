@@ -1,4 +1,5 @@
 ---
+
 title: "ppmwheel(1)"
 name: "ppmwheel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmwheel/"
 description: "ppmwheel – make a PPM image of a color wheel"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmwheel</code> <i>diameter</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmwheel</code> produces a PPM image of a color wheel of the specified diameter inside a white square just large enough to hold it. </p>
 <p> The color wheel is based on the HSV color model. Hues are distributed angularly around the circle and the values are distributed radially and the saturation is zero everywhere. The values are zero at the center, increasing linearly to maximum at the edge. The maximum value corresponds to the maxval of the PPM image. </p>

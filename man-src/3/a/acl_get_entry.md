@@ -1,4 +1,5 @@
 ---
+
 title: "acl_get_entry(3)"
 name: "acl_get_entry"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_get_entry/"
 description: "acl_get_entry – get an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_get_entry</code> &#8211; get an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_get_entry acl_t acl int entry_id acl_entry_t *entry_p</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_get_entry function obtains a descriptor for an ACL entry as specified by <i>entry_id</i> within the ACL indicated by the argument <i>acl</i> If the value of <i>entry_id</i> is ACL_FIRST_ENTRY, then the function returns in <i>entry_p</i> a descriptor for the first ACL entry within <i>acl</i> If the value of <i>entry_id </i> is ACL_NEXT_ENTRY, then the function returns in <i>entry_p </i> a descriptor for the next ACL entry within <i>acl</i> </p>
 <p> If a call is made to Fn acl_get_entry with <i>entry_id</i> set to ACL_NEXT_ENTRY when there has not been either an initial successful call to Fn acl_get_entry , or a previous successful call to Fn acl_get_entry following a call to Fn acl_calc_mask , Fn acl_copy_int , Fn acl_create_entry , Fn acl_delete_entry , Fn acl_dup , Fn acl_from_text , Fn acl_get_fd , Fn acl_get_file , Fn acl_set_fd , Fn acl_set_file , or Fn acl_valid , then the effect is unspecified. </p>
 <p> Calls to Fn acl_get_entry do not modify any ACL entries. Subsequent operations using the returned ACL entry descriptor operate on the ACL entry within the ACL in working storage. The order of all existing entries in the ACL remains unchanged. Any existing ACL entry descriptors that refer to entries within the ACL continue to refer to those entries. Any existing ACL pointers that refer to the ACL referred to by <i>acl</i> continue to refer to the ACL.</p>

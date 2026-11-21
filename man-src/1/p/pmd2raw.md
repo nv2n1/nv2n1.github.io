@@ -1,4 +1,5 @@
 ---
+
 title: "pmd2raw(1)"
 name: "pmd2raw"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmd2raw – manual page for pmd2raw 0.0.3"
 
 <h2>NAME</h2>
 <p> pmd2raw &#8211; manual page for pmd2raw 0.0.3</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmd2raw</code> [<i>OPTION</i>] <i>INPUT</i></p>
-<h2>DESCRIPTION</h2>
 <p> `pmd2raw&#8217; is used to test libpagemaker.</p>
 <h2>OPTIONS</h2>
 <dl>

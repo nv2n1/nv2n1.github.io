@@ -1,4 +1,5 @@
 ---
+
 title: "freopen(3)"
 name: "freopen"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-freopen/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fopen, fdopen, freopen - stream open functions 
 
- fopen, fdopen, freopen - stream open functions 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 #include &lt;stdio.h&gt;
 FILE *fopen(const char *pathname, const char *mode);
 FILE *fdopen(int fd, const char *mode);
@@ -24,9 +20,7 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
 
  <b>fdopen</b>(): _POSIX_C_SOURCE
 
-<h2>DESCRIPTION</h2>
-
- The <b>fopen</b>() function opens the file whose name is the string pointed to by <i>pathname</i> and associates a stream with it. 
+The <b>fopen</b>() function opens the file whose name is the string pointed to by <i>pathname</i> and associates a stream with it. 
 
  The argument <i>mode</i> points to a string beginning with one of the following sequences (possibly followed by additional characters, as described below):
 <dl>

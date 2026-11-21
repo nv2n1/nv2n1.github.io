@@ -1,4 +1,5 @@
 ---
+
 title: "getwc(3)"
 name: "getwc"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-getwc/"
 description: "fgetwc, getwc – read a wide character from a FILE stream"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 #include &lt;wchar.h&gt;
 wint_t fgetwc(FILE *stream);
 wint_t getwc(FILE *stream);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>fgetwc</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-fgetc/">fgetc</a></code>(3) function. It reads a wide character from <i>stream</i> and returns it. If the end of stream is reached, or if <i>ferror(stream)</i> becomes true, it returns <code>WEOF</code>. If a wide-character conversion error occurs, it sets <i>errno</i> to <code>EILSEQ</code> and returns <code>WEOF</code>. </p>
 <p> The <code>getwc</code>() function or macro functions identically to <code>fgetwc</code>(). It may be implemented as a macro, and may evaluate its argument more than once. There is no reason ever to use it. </p>
 <p> For nonlocking counterparts, see <code><a href="/docs/linux/man/3-unlocked_stdio/">unlocked_stdio</a></code>(3).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "netkey-tool(1)"
 name: "netkey-tool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-netkey-tool/"
 description: "netkey-tool – administrative utility for Netkey E4 cards"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>netkey-tool</code> [OPTIONS] [COMMAND]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>netkey-tool</code> utility can be used from the command line to perform some smart card operations with NetKey E4 cards that cannot be done easily with other OpenSC-tools, such as changing local PINs, storing certificates into empty NetKey E4 cert-files or displaying the initial PUK-value.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code>, <code>-h</code></p>

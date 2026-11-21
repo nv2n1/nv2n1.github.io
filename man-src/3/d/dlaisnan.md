@@ -1,4 +1,5 @@
 ---
+
 title: "dlaisnan(3)"
 name: "dlaisnan"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaisnan/"
 description: "dlaisnan.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> LOGICAL function <code>dlaisnan</code> (DIN1, DIN2)<br />
  <i></i><code>DLAISNAN</code> tests input for NaN by comparing two arguments for inequality.</p>

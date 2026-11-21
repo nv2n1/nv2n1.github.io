@@ -1,4 +1,5 @@
 ---
+
 title: "csi(1)"
 name: "csi"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-csi/"
 description: "The CHICKEN Scheme interpreter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> The <i>CHICKEN</i> Scheme interpreter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>csi</code> [ <i>pathname</i> | <i>option &#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>csi</i> is an interpreter for the programming language <i>Scheme</i> supporting most of the features as described in the <i>Revised^5 Report on</i> <i>the Algorithmic Language Scheme</i> . <i>csi</i> is implemented as a program compiled with the <code>chicken</code> compiler. </p>
 <h2>OPTIONS</h2>
 <p> Enter <code>csi -help</code> for a list of supported command-line options. </p>

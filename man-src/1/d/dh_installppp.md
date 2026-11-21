@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installppp(1)"
 name: "dh_installppp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installppp/"
 description: "dh_installppp – install ppp ip-up and ip-down files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installppp</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installppp</code> is a debhelper program that is responsible for installing ppp ip-up and ip-down scripts into package build directories.</p>
 <h2>FILES</h2>
 <dl>

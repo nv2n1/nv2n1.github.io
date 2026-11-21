@@ -1,4 +1,5 @@
 ---
+
 title: "rdma_xserver(1)"
 name: "rdma_xserver"
 section: "1"
@@ -10,17 +11,11 @@ url: "/docs/linux/man/1-rdma_xserver/"
 
  rdma_xserver - RDMA CM communication server test program
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 rdma_xserver[-p port][-c comm_type]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Uses the librdmacm to establish various forms of communication and exchange data.
+Uses the librdmacm to establish various forms of communication and exchange data.
 
 <h2>OPTIONS</h2>
 

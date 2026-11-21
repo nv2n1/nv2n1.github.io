@@ -1,4 +1,5 @@
 ---
+
 title: "expiry(3)"
 name: "expiry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-expiry/"
 description: "QuantLib::SABRInterpolation – SABR smile interpolation between discrete volatility points."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/sabrinterpolation.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Interpolation</code>. </p>
 <h3>Public Member Functions</h3>

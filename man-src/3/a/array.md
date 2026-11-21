@@ -1,4 +1,5 @@
 ---
+
 title: "array(3)"
 name: "array"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-array/"
 description: "ql/math/array.hpp – 1-D array used in linear algebra."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/types.hpp&gt;<br />
  #include &lt;ql/errors.hpp&gt;<br />
  #include &lt;ql/utilities/disposable.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "fwupdtool(1)"
 name: "fwupdtool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fwupdtool/"
 description: "fwupdtool – standalone firmware update utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> fwupdtool [CMD]</p>
-<h2>DESCRIPTION</h2>
 <p> This tool allows an administrator to use the fwupd plugins without being installed on the host system. </p>
 <p> Additionally <code>dfu-tool</code> can be used to convert firmware from various different formats, or to modify the images contained inside the container firmware file. For example, you can convert DFU or Intel HEX firmware into the vendor-specific format.</p>
 <h2>OPTIONS</h2>

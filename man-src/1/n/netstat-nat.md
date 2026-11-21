@@ -1,4 +1,5 @@
 ---
+
 title: "netstat-nat(1)"
 name: "netstat-nat"
 section: "1"
@@ -9,9 +10,7 @@ description: "netstat-nat – Show the natted connections on a linux iptable fir
 
 <h2>NAME</h2>
 <p> netstat-nat &#8211; Show the natted connections on a linux iptable firewall</p>
-<h2>SYNOPSIS</h2>
 <p> <code>netstat-nat [options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>netstat-nat</i> Displays NAT connections managed by netfilter/iptables which comes with the &gt; 2.4.x linux kernels. </p>
 <p> The program reads its information from &#8216;/proc/net/ip_conntrack&#8217; or &#8216;/proc/net/nf_conntrack&#8217;, which is the temporary conntrack-storage of netfilter.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "mkxmlrpc(1)"
 name: "mkxmlrpc"
 section: "1"
@@ -9,9 +10,7 @@ description: "mkxmlrpc – The Free Pascal XML-RPC program."
 
 <h2>NAME</h2>
 <p> mkxmlrpc &#8211; The Free Pascal XML-RPC program. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mkxmlrpc [options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Creates an XML-RPC wrapper for a pascal interface. </p>
 <p> <code>mkxmlrpc</code> TO BE FILLED. </p>
 <h2>USAGE</h2>

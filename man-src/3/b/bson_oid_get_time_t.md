@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_get_time_t(3)"
 name: "bson_oid_get_time_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_oid_get_time_t() – Fetches the generation time in seconds s
 
 <h2>NAME</h2>
 <p> bson_oid_get_time_t() &#8211; Fetches the generation time in seconds since the UNIX Epoch of oid.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 time_t
 bson_oid_get_time_t(const bson_oid_t *oid);
@@ -18,7 +18,6 @@ bson_oid_get_time_t(const bson_oid_t *oid);
 <dl>
 <dt><code>oid</code></dt>
 <dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Fetches the generation time in seconds since the UNIX Epoch of <code>oid</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> A time_t containing the seconds since the UNIX epoch of <code>oid</code> \&amp;. </p>

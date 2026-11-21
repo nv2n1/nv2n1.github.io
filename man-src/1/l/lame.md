@@ -1,4 +1,5 @@
 ---
+
 title: "lame(1)"
 name: "lame"
 section: "1"
@@ -9,9 +10,7 @@ description: "lame – create mp3 audio files"
 
 <h2>NAME</h2>
 <p> lame &#8211; create mp3 audio files</p>
-<h2>SYNOPSIS</h2>
 <p> lame [options] &lt;infile&gt; &lt;outfile&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> LAME is a program which can be used to create compressed audio files. (Lame ain&#8217;t an MP3 encoder). These audio files can be played back by popular MP3 players such as mpg123 or madplay. To read from stdin, use &quot;-&quot; for &lt;infile&gt;. To write to stdout, use &quot;-&quot; for &lt;outfile&gt;.</p>
 <h2>OPTIONS</h2>
 <p> Input options:</p>

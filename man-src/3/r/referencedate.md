@@ -1,4 +1,5 @@
 ---
+
 title: "referencedate(3)"
 name: "referencedate"
 section: "3"
@@ -6,8 +7,8 @@ letter: "r"
 url: "/docs/linux/man/3-referencedate/"
 description: "QuantLib::SabrVolSurface – SABR volatility (smile) surface."
 ---
+
 <p>QuantLib::SabrVolSurface &#8211; <code>SABR</code> volatility (smile) surface. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/experimental/volatility/sabrvolsurface.hpp&gt; </p>

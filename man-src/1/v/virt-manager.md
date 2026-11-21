@@ -1,4 +1,5 @@
 ---
+
 title: "virt-manager(1)"
 name: "virt-manager"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-virt-manager/"
 description: "virt-manager – display the virtual machine desktop management tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>virt-manager</code> [<font SIZE="-1">OPTIONS</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>virt-manager</code> is a desktop tool for managing virtual machines. It provides the ability to control the lifecycle of existing machines (bootup/shutdown,pause/resume,suspend/restore), provision new virtual machines and various types of store, manage virtual networks, access the graphical console of virtual machines, and view performance statistics, all done locally or remotely.</p>
 <h2>OPTIONS</h2>
 <p> The following options are accepted when running <tt>&quot;virt-manager&quot;</tt>:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "checon(3)"
 name: "checon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-checon/"
 description: "checon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>checon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>CHECON</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "genctd(1)"
 name: "genctd"
 section: "1"
@@ -9,9 +10,7 @@ description: "genctd – Compiles word list into ICU compact trie dictionary"
 
 <h2>NAME</h2>
 <p> <code>genctd</code> &#8211; Compiles word list into ICU compact trie dictionary</p>
-<h2>SYNOPSIS</h2>
 <p> <code>genctd</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i> ] <code>-o</code>, <code>&#8211;out</code><i> output-file</i> <i> dictionary-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>genctd</code> reads the word list from <i>dictionary-file</i> and creates a compact trie dictionary file. Normally this data file has the <code>.ctd</code> extension. </p>
 <p> Words begin at the beginning of a line and are terminated by the first whitespace. Lines that begin with whitespace are ignored.</p>
 <h2>OPTIONS</h2>

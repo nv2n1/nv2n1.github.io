@@ -1,4 +1,5 @@
 ---
+
 title: "putlefteps_(3)"
 name: "putlefteps_"
 section: "3"
@@ -6,8 +7,8 @@ letter: "p"
 url: "/docs/linux/man/3-putlefteps_/"
 description: "QuantLib::DigitalCoupon – Digital-payoff coupon."
 ---
+
 <p>QuantLib::DigitalCoupon &#8211; Digital-payoff coupon. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/cashflows/digitalcoupon.hpp&gt; </p>

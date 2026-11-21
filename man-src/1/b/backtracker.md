@@ -1,4 +1,5 @@
 ---
+
 title: "backtracker(1)"
 name: "backtracker"
 section: "1"
@@ -9,10 +10,8 @@ description: "backtracker – Generate forward and backward flowlines and hotspo
 
 <h2>NAME</h2>
 <p> backtracker &#8211; Generate forward and backward flowlines and hotspot tracks</p>
-<h2>SYNOPSIS</h2>
 <p> <code>backtracker</code> [ <i>table</i> ] <i>rot_file</i>|<i>lon</i>/<i>lat</i>/<i>angle</i> [ [<i>young</i>/<i>old</i>] ] [ <code>f</code>|<code>b</code> ] [ <i>drift.txt</i> ] [ <code>f</code>|<code>b</code><i>step</i> ] [ <i>upper_age</i> ] [ <i>fixed_age</i> ] [ <i>filestem</i> ] [ <i>zero_age</i> ] [ [<i>level</i>] ] [ [<code>a</code>|<code>t</code>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>backtracker</code> reads (longitude, latitude, age) positions from <i>infiles</i> [or standard input] and computes rotated (x,y,t) coordinates using the specified rotation parameters. It can either calculate final positions [Default] or create a sampled track (flowline or hotspot track) between the initial and final positions. The former mode allows additional data fields after the first 3 columns which must have (longitude,latitude,age). See option <code>-:</code> on how to read (latitude,longitude,age) files.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "lsetfilecon(3)"
 name: "lsetfilecon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lsetfilecon/"
 description: "setfilecon, fsetfilecon, lsetfilecon – set SELinux security context of a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int setfilecon(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>
 <p> <code>int setfilecon_raw(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>
@@ -15,7 +15,6 @@ description: "setfilecon, fsetfilecon, lsetfilecon – set SELinux security cont
 <p> <code>int lsetfilecon_raw(const char *</code><i>path</i><code>, char *</code><i>con</i><code>);</code> </p>
 <p> <code>int fsetfilecon(int fd</code><i>, char *</i><code>con</code><i>);</i> </p>
 <p> <code>int fsetfilecon_raw(int fd</code><i>, char *</i><code>con</code><i>);</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>setfilecon</code>() sets the security context of the file system object. </p>
 <p> <code>lsetfilecon</code>() is identical to setfilecon, except in the case of a symbolic link, where the link itself has it&#8217;s context set, not the file that it refers to. </p>
 <p> <code>fsetfilecon</code>() is identical to setfilecon, only the open file pointed to by filedes (as returned by <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) has it&#8217;s context set in place of path. </p>

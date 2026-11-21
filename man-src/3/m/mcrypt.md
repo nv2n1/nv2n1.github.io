@@ -1,4 +1,5 @@
 ---
+
 title: "mcrypt(3)"
 name: "mcrypt"
 section: "3"
@@ -9,9 +10,7 @@ description: "libmcrypt – encryption/decryption library"
 
 <h2>NAME</h2>
 <p> libmcrypt &#8211; encryption/decryption library</p>
-<h2>SYNOPSIS</h2>
 <p> [see also <i>mcrypt.h</i> for more information]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>libmcrypt</i> is a data encryption library. The library is thread safe and provides encryption and decryption functions. This version of the library supports many encryption algorithms and encryption modes. Some algorithms which are supported: SERPENT, RIJNDAEL, 3DES, GOST, SAFER+, CAST-256, RC2, XTEA, 3WAY, TWOFISH, BLOWFISH, ARCFOUR, WAKE and more. </p>
 <p> OFB, CBC, ECB, nOFB, nCFB and CFB are the modes that all algorithms may function. ECB, CBC, encrypt in blocks but CTR, nCFB, nOFB, CFB and OFB in bytes (streams). Note that CFB and OFB in the rest of the document represent the &quot;8bit CFB or OFB&quot; mode. nOFB and nCFB modes represents a n-bit OFB/CFB mode, n is used to represent the algorithm&#8217;s block size. The library supports an extra STREAM mode to include some stream algorithms like WAKE or ARCFOUR. </p>
 <p> In this version of the library all modes and algorithms are modular, which means that the algorithm and the mode is loaded at run-time. This way you can add algorithms and modes faster, and much easier. </p>

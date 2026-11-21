@@ -1,4 +1,5 @@
 ---
+
 title: "dcmftest(1)"
 name: "dcmftest"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmftest/"
 description: "dcmftest – Test if file uses DICOM part 10 format"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmftest file...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmftest</code> utility checks whether the files specified on the command line are DICOM files in part 10 format (with meta-header).</p>
 <h2>PARAMETERS</h2>
 <pre>

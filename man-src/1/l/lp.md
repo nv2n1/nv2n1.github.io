@@ -1,4 +1,5 @@
 ---
+
 title: "lp(1)"
 name: "lp"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lp/"
 description: "lp – print files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lp</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-c</code> ] [ <code>-d </code><i>destination</i>[<code>/</code><i>instance</i>] ] [ <code>-h </code><i>hostname</i>[<code>:</code><i>port</i>] ] [ <code>-m</code> ] [ <code>-n</code> <i>num-copies</i> ] [ <code>-o </code><i>option</i>[<code>=</code><i>value</i>] ] [ <code>-q</code> <i>priority</i> ] [ <code>-s</code> ] [ <code>-t</code> <i>title</i> ] [ <code>-H</code> <i>handling</i> ] [ <code>-P</code> <i>page-list</i> ] [ <code>&#8212;</code> ] [ <i>file(s)</i> ]<br />
  <code>lp</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-c</code> ] [ <code>-h </code><i>hostname</i>[<code>:</code><i>port</i>] ] [ <code>-i</code> <i>job-id</i> ] [ <code>-n</code> <i>num-copies</i> ] [ <code>-o </code><i>option</i>[<code>=</code><i>value</i>] ] [ <code>-q</code> <i>priority</i> ] [ <code>-t</code> <i>title</i> ] [ <code>-H</code> <i>handling</i> ] [ <code>-P</code> <i>page-list</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lp</code> submits files for printing or alters a pending job. Use a filename of &quot;-&quot; to force printing from the standard input.</p>
 <h3>THE DEFAULT DESTINATION</h3>
 <p> CUPS provides many ways to set the default destination. The <code>LPDEST</code> and <code>PRINTER</code> environment variables are consulted first. If neither are set, the current default set using the <code><a href="/docs/linux/man/1-lpoptions/">lpoptions</a></code>(1) command is used, followed by the default set using the <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8) command.</p>

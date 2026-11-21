@@ -1,4 +1,5 @@
 ---
+
 title: "translate(1)"
 name: "translate"
 section: "1"
@@ -9,14 +10,12 @@ description: "translate – translate a text or web page"
 
 <h2>NAME</h2>
 <p> translate &#8211; translate a text or web page</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>translate</code> {<code>-?</code> | <code>-v</code> | <code>&#8211;list-services</code>}</dt>
 <dt> <code>translate</code> [-s&nbsp;<wbr><i>services</i>] [-f&nbsp;<wbr><i>lang</i>] [-t&nbsp;<wbr><i>lang</i>] {-l}</dt>
 <dt> <code>translate</code> [-s&nbsp;<wbr><i>services</i>] [-f&nbsp;<wbr><i>lang</i>] [-t&nbsp;<wbr><i>lang</i>] {<i>http_url</i> | <i>https_url</i>}</dt>
 <dt> <code>translate</code> [-s&nbsp;<wbr><i>services</i>] [-f&nbsp;<wbr><i>lang</i>] [-t&nbsp;<wbr><i>lang</i>] [&#8211;max-threads=<i>n</i>] [&#8211;max-retries=<i>n</i>] [<i>file</i>] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>translate</code> translates a text or web page. </p>
 <dd>If the first synopsis form is used, <code>translate</code> prints a quick help, the version information or the list of available translation services to standard output. </dd>
 <p> If the second synopsis form is used, <code>translate</code> prints the list of available language pairs to standard output. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_agent_free(3)"
 name: "libssh2_agent_free"
 section: "3"
@@ -9,10 +10,8 @@ description: "libssh2_agent_free – free an ssh-agent handle"
 
 <h2>NAME</h2>
 <p> libssh2_agent_free &#8211; free an ssh-agent handle</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> void libssh2_agent_free(LIBSSH2_AGENT *agent);</p>
-<h2>DESCRIPTION</h2>
 <p> Free an ssh-agent handle. This function also frees the internal collection of public keys.</p>
 <h2>RETURN VALUE</h2>
 <p> None.</p>

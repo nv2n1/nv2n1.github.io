@@ -1,4 +1,5 @@
 ---
+
 title: "xml2po(1)"
 name: "xml2po"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xml2po/"
 description: "xml2po – program to create a PO-template file from a DocBook XML file and merge it back into a (translated) XML file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xml2po</code> [<code>OPTIONS</code>] [<i>XMLFILE</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>xml2po</code> command. </dd>
 <p> <code>xml2po</code> is a simple Python program which extracts translatable content from free-form XML documents and outputs gettext compatible POT files. Translated PO files can be turned into XML output again. </p>
 <p> It can work it&#8217;s magic with most &quot;simple&quot; tags, and for complicated tags one has to provide a list of all tags which are &quot;final&quot; (that will be put into one &quot;message&quot; in PO file), &quot;ignored&quot; (skipped over) and &quot;space preserving&quot;.</p>

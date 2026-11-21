@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_read_string_ignore(3)"
 name: "hdf_read_string_ignore"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_read_string_ignore/"
 description: "hdf_read_string_ignore – Read an HDF string and ignore errors Description: Input: Output:"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>

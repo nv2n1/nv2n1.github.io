@@ -1,4 +1,5 @@
 ---
+
 title: "combined_log_format_to_db(1)"
 name: "combined_log_format_to_db"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-combined_log_format_to_db/"
 description: "combined_log_format_to_db – convert Apache Combined Log Format to Fsdb"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     combined_log_format_to_db &lt; access_log &gt; access_log.fsdb
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Converts logs in Apache Combined-Log-Format into Fsdb format.</p>
 <h2>OPTIONS</h2>
 <p> No program-specific options. </p>

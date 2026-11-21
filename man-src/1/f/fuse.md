@@ -1,4 +1,5 @@
 ---
+
 title: "fuse(1)"
 name: "fuse"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fuse/"
 description: "fuse – Sinclair ZX Spectrum emulator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fuse</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Fuse is a Sinclair ZX Spectrum emulator. It supports several models (including the 128), with quite faithful emulation of the display and sound. </p>
 <p> The emulator can load any of the formats supported by <i><a href="/docs/linux/man/3-libspectrum/">libspectrum</a></i>(3) &#8211; this includes Z80, SNA and SZX snapshots, and TAP and TZX virtual-tape files. Saving to SZX, Z80 and SNA snapshots and TZX and TAP tape files is supported. The SLT extension to the Z80 format is partly supported (enough for multi-load games); however, loading of the old DAT-file variant is not. DSK disk images are supported when emulating a +3, TRD and SCL disk images are supported when emulating a Pentagon or Scorpion and DCK cartridge images are supported when emulating a Timex 2068 variant. Interface II ROM cartridges are also supported. </p>
 <p> Finally, there is also support for reading and writing the RZX input recording format. </p>

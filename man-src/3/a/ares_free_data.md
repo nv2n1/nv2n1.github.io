@@ -1,4 +1,5 @@
 ---
+
 title: "ares_free_data(3)"
 name: "ares_free_data"
 section: "3"
@@ -9,14 +10,12 @@ description: "ares_free_data – Free data allocated by several c-ares functions
 
 <h2>NAME</h2>
 <p> ares_free_data &#8211; Free data allocated by several c-ares functions</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 void ares_free_data(void *dataptr)
         cc file.c
     - lcares
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-ares_free_data/">ares_free_data</a>(3)</code> function frees one or more data structures allocated and returned by several c-ares functions. Specifically the data returned by the following list of functions must be deallocated using this function.</p>
 <dl>
 <dt><code><a href="/docs/linux/man/3-ares_get_servers/">ares_get_servers</a>(3)</code></dt>

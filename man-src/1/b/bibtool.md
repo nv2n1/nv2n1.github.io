@@ -1,4 +1,5 @@
 ---
+
 title: "bibtool(1)"
 name: "bibtool"
 section: "1"
@@ -9,9 +10,7 @@ description: "BibTool – BibTeX file manipulation tool"
 
 <h2>NAME</h2>
 <p> BibTool &#8211; BibTeX file manipulation tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bibtool</code> [options] [files]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual is not meant to be exhaustive. The complete documentation for <code>BibTool</code> can be found in the <i>BibTool Manual</i>. BibTeX provides an easy to use means to integrate citations and bibliographies into LaTeX documents. But the user is left alone with the management of the BibTeX files. <code>BibTool</code> is intended to fill this gap. <code>BibTool</code> allows the manipulation of BibTeX files which goes beyond the possibilities &#8211; and intentions &#8211; of BibTeX. </p>
 <p> <code>BibTool</code> manipulates BibTeX database files through the command line front-end <code>bibtool</code> which accepts numerous options. Modifications are performed through resource instructions that allow the modification of the various internal parameters determining the behavior of <code>BibTool</code>; resource instructions can be grouped in resource files. The original <code>BibTool</code> distribution contains a sufficient set of resource file samples to perform basic, relevant manipulations.</p>
 <h2>OPTIONS</h2>

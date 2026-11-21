@@ -1,4 +1,5 @@
 ---
+
 title: "acl_extended_fd(3)"
 name: "acl_extended_fd"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_extended_fd/"
 description: "acl_extended_fd – test for information in the ACL by file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_extended_fd</code> &#8211; test for information in the ACL by file descriptor </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft int Fn acl_extended_fd int fd</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_extended_fd function returns <code>1</code> if the file identified by the argument <i>fd</i> is associated with an extended access ACL. The function returns <code>0</code> if the file does not have an extended access ACL. </p>
 <p> An extended ACL is an ACL that contains entries other than the three required entries of tag types ACL_USER_OBJ, ACL_GROUP_OBJ and ACL_OTHER. If the result of the Fn acl_extended_fd function for a file object is <code>0</code> then the ACL defines no discretionary access rights other than those already defined by the traditional file permission bits. </p>
 <p> Access to the file object may be further restricted by other mechanisms, such as Mandatory Access Control schemes. The <a href="/docs/linux/man/2-access/">access</a>(2) system call can be used to check whether a given type of access to a file object would be granted.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmanon(1)"
 name: "gdcmanon"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcmanon – .TH \"gdcmanon\" 1 \"Fri Oct 29 2010\" \"Version 2.0.
 <pre><code>
 gdcmanon[options] file - in file - out gdcmanon[options] dir - in dir - out
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcmanon</code> tool is an implementation of PS 3.15 / E.1 / Basic Application Level Confidentiality Profile (Implementation of E.1.1 De-identify &amp; E.1.2 Re-identify) </p>
 <p> This tool is split into two very different operating mode: </p>
 <dl>

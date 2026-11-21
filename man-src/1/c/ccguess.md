@@ -1,4 +1,5 @@
 ---
+
 title: "ccguess(1)"
 name: "ccguess"
 section: "1"
@@ -9,11 +10,9 @@ description: "ccguess – search for ccrypt encryption keys"
 
 <h2>NAME</h2>
 <p> ccguess &#8211; search for ccrypt encryption keys</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>ccguess [</code><i>options</i>] <i>file</i>...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ccguess</code> program attempts to guess <code><a href="/docs/linux/man/1-ccrypt/">ccrypt</a></code>(1) encryption keys by searching the relevant part of the key space. This is done by prompting the user for an <i>approximate key</i> and then trying many variations of this key. This is intended to assist <code>ccrypt</code> users in recovering mistyped or forgotten keys, provided that they remember at least part of the key. </p>
 <p> Note that <code>ccrypt</code> provides strong cryptographic security: there are no special back doors or shortcuts to recovering forgotten keys. Therefore, the <code>ccguess</code> program does not have any special powers. It simply works by trying different keys until a possible match is found. </p>
 <p> A search of the entire key space is not usually a practical option. <code>ccguess</code> therefore works by prompting the user for an approximate key. It then tries all variations that can be obtained by applying a small number of changes. Here, each change is either a deletion of one letter, an insertion of one letter, a replacement of one letter by another, or a transposition of two adjacent letters. By default, <code>ccguess</code> searches all keys that differ from the approximate key by up to 5 changes. The number of changes searched can be adjusted with the <code>&#8211;depth</code> option. </p>

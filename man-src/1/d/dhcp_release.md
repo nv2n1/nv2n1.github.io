@@ -1,4 +1,5 @@
 ---
+
 title: "dhcp_release(1)"
 name: "dhcp_release"
 section: "1"
@@ -9,9 +10,7 @@ description: "dhcp_release – Release a DHCP lease on a the local dnsmasq DHCP 
 
 <h2>NAME</h2>
 <p> dhcp_release &#8211; Release a DHCP lease on a the local dnsmasq DHCP server.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dhcp_release &lt;interface&gt; &lt;address&gt; &lt;MAC address&gt; &lt;client_id&gt;</code></p>
-<h2>DESCRIPTION</h2>
 <p> A utility which forces the DHCP server running on this machine to release a DHCP lease. </p>
 <p> Send a DHCPRELEASE message via the specified interface to tell the local DHCP server to delete a particular lease. </p>
 <p> The interface argument is the interface in which a DHCP request _would_ be received if it was coming from the client, rather than being faked up here.<br />

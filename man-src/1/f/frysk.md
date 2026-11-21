@@ -1,4 +1,5 @@
 ---
+
 title: "frysk(1)"
 name: "frysk"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-frysk/"
 description: "frysk – launches the Frysk Execution Analysis Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>frysk</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>frysk</code></p>
 <dd>launches the Frysk Execution Analsys Tool. </dd>
 <p> The goal of the frysk project is to create an intelligent, distributed, always-on system monitoring and debugging tool that allows developers and system administrators to monitor running processes and threads (including creation and destruction events), monitor the use of locking primitives, expose deadlocks, gather data and debug any given process by either choosing it from a list or by accepting frysk&#8217;s offer to open a source code or other window on a process that is in the process of crashing or that has been misbehaving in certain user-definable ways.</p>

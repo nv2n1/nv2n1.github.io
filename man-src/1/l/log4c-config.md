@@ -1,4 +1,5 @@
 ---
+
 title: "log4c-config(1)"
 name: "log4c-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "log4c-config – script to get information about the installed ver
 
 <h2>NAME</h2>
 <p> log4c-config &#8211; script to get information about the installed version of log4c</p>
-<h2>SYNOPSIS</h2>
 <p> <code>log4c-config</code> [&#8211;prefix] [&#8211;libs] [&#8211;cflags] [&#8211;version] [&#8211;help]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>log4c-config</i> is a tool that is used to determine the compile and linker flags that should be used to compile and link programs that use <i>log4c</i>.</p>
 <h2>OPTIONS</h2>
 <p> <i>log4c-config</i> accepts the following options:</p>

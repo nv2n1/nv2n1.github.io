@@ -1,4 +1,5 @@
 ---
+
 title: "texmfstart(1)"
 name: "texmfstart"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-texmfstart/"
 description: "mtxrun – ConTeXt TDS Runner Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mtxrun [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt TDS Runner Tool</code></p>
 <h2>OPTIONS</h2>
 <dl>

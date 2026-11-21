@@ -1,4 +1,5 @@
 ---
+
 title: "lilypond(1)"
 name: "lilypond"
 section: "1"
@@ -9,9 +10,7 @@ description: "LilyPond – manual page for LilyPond 2.12.2"
 
 <h2>NAME</h2>
 <p> LilyPond &#8211; manual page for LilyPond 2.12.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lilypond</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Typeset music and/or produce MIDI from FILE. </p>
 <p> LilyPond produces beautiful music notation. For more information, see <a rel="nofollow" href="http://lilypond.org">http://lilypond.org</a></p>
 <h2>OPTIONS</h2>

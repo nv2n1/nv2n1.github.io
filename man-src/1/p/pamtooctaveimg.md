@@ -1,4 +1,5 @@
 ---
+
 title: "pamtooctaveimg(1)"
 name: "pamtooctaveimg"
 section: "1"
@@ -8,9 +9,7 @@ description: "pamtooctaveimg – convert a Netpbm image to a GNU Octave image"
 ---
 
 <p>&quot; &quot;netpbm documentation&quot; </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pamtooctaveimg</code> [<i>netpbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtooctaveimg</code> reads a Netpbm image as input and produces a GNU Octave image file as output. </p>
 <p> An Octave image file (called &#8216;Octave&#8217;s image format&#8217; in Octave documentation) is a particular kind of Octave data file. It describes two matrices: </p>

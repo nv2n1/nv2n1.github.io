@@ -1,4 +1,5 @@
 ---
+
 title: "testdisk(1)"
 name: "testdisk"
 section: "1"
@@ -9,11 +10,9 @@ description: "testdisk – Scan and repair disk partitions"
 
 <h2>NAME</h2>
 <p> testdisk &#8211; Scan and repair disk partitions</p>
-<h2>SYNOPSIS</h2>
 <p> <code>testdisk [/log] [/debug] [/dump] [device|image.dd|image.e01]</code> </p>
 <p> <code>testdisk /version</code> </p>
 <p> <code>testdisk /list [/log]</code></p>
-<h2>DESCRIPTION</h2>
 <p><code>TestDisk</code>&nbsp;<wbr>checks and recovers lost partitions<br />
 It works with :<br />
 &#8211; BeFS&nbsp;<wbr>(BeOS)<br />

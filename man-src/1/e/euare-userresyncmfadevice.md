@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userresyncmfadevice(1)"
 name: "euare-userresyncmfadevice"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-userresyncmfadevice – Re-synchronize an MFA device with th
 
 <h2>NAME</h2>
 <p> euare-userresyncmfadevice &#8211; Re-synchronize an MFA device with the server</p>
-<h2>SYNOPSIS</h2>
 <p> euare-userresyncmfadevice <code>-s</code> SERIAL <code>-c1</code> CODE <code>-c2</code> CODE</p>
 <dl>
 <dt>[&#8211;as-account ACCOUNT] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Re-synchronize an MFA device with the server</p>
 <h3>positional arguments:</h3>
 <dl>

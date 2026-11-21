@@ -1,4 +1,5 @@
 ---
+
 title: "fishpoke(1)"
 name: "fishpoke"
 section: "1"
@@ -9,11 +10,9 @@ description: "fishpoke – trigger a poll immediately instead of waiting for the
 
 <h2>NAME</h2>
 <p> fishpoke &#8211; trigger a poll immediately instead of waiting for the configured polling interval.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 fishpoke HOST[:PORT] TOPIC[SUBJECT...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The fishpoke program is used to trigger a poll immediately instead of waiting for the configured polling interval. This man page refers to the client for the Fishpolld server.</p>
 <h2>OPTIONS</h2>
 <dl>

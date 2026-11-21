@@ -1,4 +1,5 @@
 ---
+
 title: "funcolumnlookup(3)"
 name: "funcolumnlookup"
 section: "3"
@@ -9,14 +10,12 @@ description: "FunColumnLookup – lookup a Funtools column"
 
 <h2>NAME</h2>
 <p> <code>FunColumnLookup &#8211; lookup a Funtools column</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
 <p>int FunColumnLookup(Fun fun, char *s, int which,<br />
                     char **name, int *type, int *mode,<br />
                     int *offset, int *n, int *width)</p>
-<h2>DESCRIPTION</h2>
 <p> The FunColumnLookup() routine returns information about a named (or indexed) column. The first argument is the Fun handle associated with this set of columns. The second argument is the name of the column to look up. If the name argument is <font SIZE="-1">NULL</font>, the argument that follows is the zero-based index into the column array of the column for which information should be returned. The next argument is a pointer to a char *, which will contain the name of the column. The arguments that follow are the addresses of int values into which the following information will be returned:</p>
 <dl>
 <dt>*</dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "sphdistance(1)"
 name: "sphdistance"
 section: "1"
@@ -9,10 +10,8 @@ description: "sphdistance – Make Voronoi distance, node, or nearest-neighbor g
 
 <h2>NAME</h2>
 <p> sphdistance &#8211; Make Voronoi distance, node, or nearest-neighbor grid on a sphere</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sphdistance</code> [ <i>table</i> ] <i>grdfile</i> [ ] [ <code>d</code>|<code>n</code>|<code>z</code>[<i>dist</i>] ] [ <i>increment</i> ] [ <i>unit</i> ] [ <i>nodetable</i> ] [ <i>voronoi.txt</i> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sphdistance</code> reads one or more ASCII [or binary] files (or standard input) containing lon, lat and performs the construction of Voronoi polygons. These polygons are then processed to calculate the nearest distance to each node of the lattice and written to the specified grid. The Voronoi algorithm used is STRIPACK. As an option, you may provide pre-calculated Voronoi polygon file in the format written by <code>sphtriangulate</code>, thus bypassing the memory- and time-consuming triangularization.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

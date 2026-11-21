@@ -1,4 +1,5 @@
 ---
+
 title: "nget(1)"
 name: "nget"
 section: "1"
@@ -9,9 +10,7 @@ description: "nget – retrieve files from NNTP (usenet news) hosts"
 
 <h2>NAME</h2>
 <p> nget &#8211; retrieve files from NNTP (usenet news) hosts</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nget [&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>nget</code> retrieves messages matching a regular expression, and decodes any files contained within. Multipart messages are automatically pieced together. Parts from multiple servers will be combined if needed.</p>
 <h2>OPTIONS</h2>
 <p> The order options are specified is significant. In general, an option will only affect options that come after it on the command line. </p>

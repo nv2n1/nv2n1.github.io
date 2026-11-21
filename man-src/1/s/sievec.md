@@ -1,4 +1,5 @@
 ---
+
 title: "sievec(1)"
 name: "sievec"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sievec/"
 description: "sievec – Pigeonhole’s Sieve script compiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sievec</code> [<i>options</i>] <i>script-file</i> [<i>out-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>sievec</code> command is part of the Pigeonhole Project (<code><a href="/docs/linux/man/7-pigeonhole/">pigeonhole</a></code>(7)), which adds Sieve (RFC 5228) support to the Dovecot secure IMAP and POP3 server (<code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1)). </p>
 <p> Using the <code>sievec</code> command, Sieve scripts can be compiled into a binary representation. The resulting binary can be used directly to process e-mail messages during the delivery process. The delivery of mail messages and &#8211; by means of the LDA Sieve plugin &#8211; also the execution of Sieve scripts is performed by Dovecot&#8217;s local delivery agent (LDA) called <code><a href="/docs/linux/man/1-dovecot-lda/">dovecot-lda</a></code>(1). Usually, it is not necessary to compile the Sieve script manually using <code>sievec</code>, because <code>dovecot-lda</code> will do this automatically if the binary is missing. However, in some cases <code>dovecot-lda</code> does not have permission to write the compiled binary to disk, forcing it to recompile the script every time it is executed. Using the <code>sievec</code> tool, this can be performed manually by an authorized user to increase performance. </p>
 <p> The Pigeonhole Sieve implementation recognizes files with a <code>.sieve</code> extension as Sieve scripts and corresponding files with a <code>.svbin</code> extension as the associated compiled binary. This means for example that Dovecot&#8217;s LDA process will first look for a binary file &quot;dovecot.svbin&quot; when it needs to execute &quot;dovecot.sieve&quot;. It will compile a new binary when it is missing or outdated. </p>

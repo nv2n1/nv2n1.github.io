@@ -1,4 +1,5 @@
 ---
+
 title: "gcaps(1)"
 name: "gcaps"
 section: "1"
@@ -9,9 +10,7 @@ description: "gcaps – report available graphcaps"
 
 <h2>NAME</h2>
 <p> gcaps &#8211; report available graphcaps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gcaps</code> [ <code>-V</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gcaps</code> is a simple script that reports all the available graphcaps for use in metafile translation by the metafile translator <code>ctrans(1NCARG)</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

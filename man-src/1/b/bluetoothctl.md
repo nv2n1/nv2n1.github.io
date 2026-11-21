@@ -1,4 +1,5 @@
 ---
+
 title: "bluetoothctl(1)"
 name: "bluetoothctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bluetoothctl/"
 description: "bluetoothctl: – interactive bluetooth control tool"
 ---
 
-<h2>DESCRIPTION</h2>
 <p>&nbsp;bluetoothctl ver 5.49 Usage:</p>
 <dl>
 <dt>

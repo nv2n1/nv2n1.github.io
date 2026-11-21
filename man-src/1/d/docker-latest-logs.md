@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-logs(1)"
 name: "docker-latest-logs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-logs/"
 description: "docker-logs – Fetch the logs of a container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker logs</code> [<code>-f</code>|<code>&#8211;follow</code>] [<code>&#8211;help</code>] [<code>&#8211;since</code>[=<i>SINCE</i>]] [<code>-t</code>|<code>&#8211;timestamps</code>] [<code>&#8211;tail</code>[=<i>&quot;all&quot;</i>]] CONTAINER </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>docker logs</code> command batch-retrieves whatever logs are present for a container at the time of execution. This does not guarantee execution order when combined with a docker run (i.e., your run may not have generated any logs at the time you execute docker logs). </p>
 <p> The <code>docker logs &#8211;follow</code> command combines commands <code>docker logs</code> and <code>docker attach</code>. It will first return all logs from the beginning and then continue streaming new output from the container&#8217;s stdout and stderr. </p>
 <p> <code>Warning</code>: This command works only for the <code>json-file</code> or <code>journald</code> logging drivers. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bbkeys(1)"
 name: "bbkeys"
 section: "1"
@@ -9,9 +10,7 @@ description: "bbkeys – a general XWindow keygrabber"
 
 <h2>NAME</h2>
 <p> bbkeys &#8211; a general XWindow keygrabber </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bbkeys</code> [<i>OPTION</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bbkeys</code> is the keygrabber for the blackbox window manager. <code>bbkeys</code> handles all keybindings and keyboard shortcuts for blackbox. It uses blackbox&#8217;s Image classes for rendering its look and feel so that <code>bbkeys</code> will render itself to match whatever blackbox style is used. It is highly configurable either via the <i>bbconf</i> GUI utility or the (now deprecated) <i>bbkeysconf</i> GUI utility or by hand-editting bbkeys&#8217;s config file. </p>
 <h2>USAGE</h2>
 <p> On startup, <code>bbkeys</code> reads <i>$HOME/.bbkeysrc</i>, which you can edit by hand or through <i>bbconf</i> or <i>bbkeysconf</i>. This is now configurable through a command-line switch as show in OPTIONS. </p>

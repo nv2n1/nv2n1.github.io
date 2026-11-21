@@ -1,4 +1,5 @@
 ---
+
 title: "pvf(1)"
 name: "pvf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pvf/"
 description: "pvf tools – utilities to convert various sound formats"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <code>pvf tools</code> are a collection of tools to convert vgetty modem data to and from the &#8216;raw modem data&#8217; format, and from that to and from various audio file formats (like .au or .wav). In addition, there are some tools to manipulate pvf files, like speed up files or cut off trailing noise. </p>
 <p> A list of commands is below in the &quot;see also&quot; section. </p>
 <p> You can run those commands with the -h switch for available options. Please also look at the individual contributed man pages.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ndctl-zero-labels(1)"
 name: "ndctl-zero-labels"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ndctl-zero-labels/"
 description: "ndctl-zero-labels – zero out the label area on a dimm or set of dimms"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 ndctl zero - labels&lt;nmem0&gt;[&lt;nmem1&gt;..&lt;nmemN&gt;][&lt;options&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The namespace label area is a small persistent partition of capacity available on some NVDIMM devices. The label area is used to resolve aliasing between <i>pmem</i> and <i>blk</i> capacity by lineating namespace boundaries. This command resets the device to its default state by deleting all labels.</p>
 <h2>OPTIONS</h2>
 <p> &lt;memory device(s)&gt;&#8230;</p>

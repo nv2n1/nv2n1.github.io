@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_fi_sv(1)"
 name: "tv_grab_fi_sv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_fi_sv/"
 description: "tv_grab_fi_sv – Grab TV listings for Finland in Swedish."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_fi_sv &#8211;help </p>
 <p> tv_grab_fi_sv &#8211;version </p>
 <p> tv_grab_fi_sv &#8211;capabilities </p>
@@ -20,7 +20,6 @@ description: "tv_grab_fi_sv – Grab TV listings for Finland in Swedish."
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;config-file&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>] </p>
 <p> tv_grab_fi_sv &#8211;list-channels [&#8211;config-file <font SIZE="-1">FILE</font>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug]</p>
-<h2>DESCRIPTION</h2>
 <p> Retrieves and displays <font SIZE="-1">TV</font> listings for the Finnish <font SIZE="-1">YLE</font> channels plus some of the most popular commercial channels. The data comes from <a rel="nofollow" href="http://www.yle.fi">www.yle.fi</a> and the Swedish listings are retrieved rather than the Finnish. Just like tv_grab_fi, this grabber relies on parsing <font SIZE="-1">HTML</font> so it could very well stop working at any time. You have been warned.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> Print a help message and exit. </p>

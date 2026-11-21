@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_context_set_timeout(3)"
 name: "getdns_context_set_timeout"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-getdns_context_set_timeout/"
 description: "getdns_context_set_append_name, getdns_context_set_context_update_callback, getdns_context_set_dns_root_servers, getdns_context_set_dns_transport, getdns_context_set_dnssec_trust_anchors, getdns_co..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getdns_context_set_append_name, </code> <code>getdns_context_set_context_update_callback, </code> <code>getdns_context_set_dns_root_servers, </code> <code>getdns_context_set_dns_transport, </code> <code>getdns_context_set_dnssec_trust_anchors, </code> <code>getdns_context_set_dnssec_allowed_skew,</code> <code>getdns_context_set_follow_redirects, </code> <code>getdns_context_set_limit_outstanding_queries, </code> <code>getdns_context_set_namespaces, </code> <code>getdns_context_set_resolution_type, </code> <code>getdns_context_set_suffix, </code> <code>getdns_context_set_timeout, </code> &#8212; getdns context manipulation routines</p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_context_set_append_name</code> (getdns_context_t context,</p>
@@ -81,7 +80,6 @@ description: "getdns_context_set_append_name, getdns_context_set_context_update_
 <dl>
 <dt>
 </dt><dd> uint16_t timeout)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions are used to manipulate a previously allocated and initialized context, see getdns_context (3) for more details on the functions used to allocate, initialized and destroy contexts and for a more detailed discussion of the getdns_context in general. </p>
 <p> <code>getdns_context_set_append_name</code> Specifies whether to append a suffix supplied via getdns_context_set_suffix (3) to the query string before the API starts resolving a name. </p>
 <p> <code>getdns_context_set_context_update_callback</code> sets a function that will be called if changes to the system files (for example /etc/resolv.conf and /etc/hosts). </p>

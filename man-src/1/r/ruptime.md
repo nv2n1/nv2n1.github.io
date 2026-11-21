@@ -1,4 +1,5 @@
 ---
+
 title: "ruptime(1)"
 name: "ruptime"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-ruptime/"
 description: "ruptime – show host status of local machines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ruptime</code> &#8211; show host status of local machines </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ruptime</code> [-<code>alrtu</code> ] [-<code>n=length</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ruptime</code> gives a status line like <i>uptime</i> for each machine on the local network; these are formed from packets broadcast by each host on the network once a minute. </p>
 <p> Machines for which no status report has been received for 11 minutes are shown as being down. </p>
 <p> Options:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xkbcomp(1)"
 name: "xkbcomp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xkbcomp/"
 description: "xkbcomp – compile XKB keyboard description"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xkbcomp</code> [option] source [ destination ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xkbcomp</i> keymap compiler converts a description of an XKB keymap into one of several output formats. The most common use for xkbcomp is to create a compiled keymap file (.xkm extension) which can be read directly by XKB-capable X servers or utilities. The keymap compiler can also produce C header files or XKB source files. The C header files produced by xkbcomp can be included by X servers or utilities that need a built-in default keymap. The XKB source files produced by <i>xkbcomp</i> are fully resolved and can be used to verify that the files which typically make up an XKB keymap are merged correctly or to create a single file which contains a complete description of the keymap. </p>
 <p> The <i>source</i> may specify an X display, or an <i>.xkb</i> or <i>.xkm</i> file; unless explicitly specified, the format of <i>destination</i> depends on the format of the source. Compiling a <i>.xkb</i> (keymap source) file generates a <i>.xkm</i> (compiled keymap file) by default. If the source is a <i>.xkm</i> file or an X display, <i>xkbcomp</i> generates a keymap source file by default. </p>
 <p> If the <i>destination</i> is an X display, the keymap for the display is updated with the compiled keymap. </p>

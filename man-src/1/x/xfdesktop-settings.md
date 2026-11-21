@@ -1,4 +1,5 @@
 ---
+
 title: "xfdesktop-settings(1)"
 name: "xfdesktop-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfdesktop-settings/"
 description: "xfdesktop-settings – Desktop settings for Xfce"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

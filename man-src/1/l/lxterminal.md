@@ -1,4 +1,5 @@
 ---
+
 title: "lxterminal(1)"
 name: "lxterminal"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lxterminal/"
 description: "lxterminal – a lightweight terminal emulator based on GTK+ for the LXDE desktop."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lxterminal</code> [<code>options</code>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>lxterminal</code> command. </dd>
 <p> <code>lxterminal</code> is a program that provides a terminal emulator for the desktop, usually for LXDE. It is a lightweight GTK+ 2.x based desktop panel.</p>
 <h2>OPTIONS</h2>

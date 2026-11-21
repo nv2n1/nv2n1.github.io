@@ -1,4 +1,5 @@
 ---
+
 title: "perlpolicy(1)"
 name: "perlpolicy"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlpolicy/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlpolicy - Various and sundry policies and commitments related to the Perl core 
 
- perlpolicy - Various and sundry policies and commitments related to the Perl core 
-
-<h2>DESCRIPTION</h2>
-
- This document is the master document which records all written policies about how the Perl 5 Porters collectively develop and maintain the Perl core.
+This document is the master document which records all written policies about how the Perl 5 Porters collectively develop and maintain the Perl core.
 
 <h2>GOVERNANCE</h2>
 

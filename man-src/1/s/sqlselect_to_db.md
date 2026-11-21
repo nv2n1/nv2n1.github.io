@@ -1,4 +1,5 @@
 ---
+
 title: "sqlselect_to_db(1)"
 name: "sqlselect_to_db"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-sqlselect_to_db/"
 description: "sqlselect_to_db – convert MySQL or MariaDB selected tables to fsdb"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     sqlselect_to_db &lt;source.sqlselect_table &gt;dest.fsdb
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Converts a MySQL or MariaDB tables to Fsdb format. </p>
 <p> The input is <i>not</i> fsdb. The first non-box row is taken to be the names of the columns. </p>
 <p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) </p>

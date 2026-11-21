@@ -1,4 +1,5 @@
 ---
+
 title: "mathspic(1)"
 name: "mathspic"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-mathspic/"
 description: "mathsPIC"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mathsPIC</code> </p>
 <h2>AUTHORS</h2>
 <p> A. Syropoulos and R.W.D. Nickalls (April 26, 2010) </p>
 <p>&nbsp;asyropoulos[at]&lt;yahoo&gt;&lt;com&gt;&nbsp;<br />
 &nbsp;dick[at]&lt;nickalls&gt;&lt;org&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>mathsPIC</code> is a Perl filter program for PiCTeX. mathsPIC has its own macro and macro library capability, and allows use of mathsPIC, PiCTeX, TeX and LaTeX commands. A significant feature of mathsPIC is that it allows access to the command-line, and so allows the user to extend mathsPIC commands by calling Perl and other programs written to perform particular drawing actions. See the package manual for full details and examples. The latest version can be downloaded from </p>
 <p> CTAN: tex-archive/graphics/pictex/mathspic/perl </p>
 <p> Commands which can be used in the mathsPIC script file fall into four main groups (a) mathsPIC macro commands (prefixed with %def), (b) regular mathsPIC commands (do not have a backslash), (c) regular PiCTeX commands (all have a backslash), and (d) regular TeX and LaTeX commands (all have a backslash). </p>

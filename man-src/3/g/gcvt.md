@@ -1,4 +1,5 @@
 ---
+
 title: "gcvt(3)"
 name: "gcvt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gcvt/"
 description: "gcvt – convert a floating-point number to a string"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 char *gcvt(double number, int ndigit, char *buf);
@@ -25,7 +25,6 @@ char *gcvt(double number, int ndigit, char *buf);
 </dd><dt>Before glibc 2.12:</dt>
 <dd> _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>gcvt</code>() function converts <i>number</i> to a minimal length null-terminated ASCII string and stores the result in <i>buf</i>. It produces <i>ndigit</i> significant digits in either <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) F format or E format.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>gcvt</code>() function returns <i>buf</i>.</p>

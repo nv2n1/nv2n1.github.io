@@ -1,4 +1,5 @@
 ---
+
 title: "usbguard-applet-qt(1)"
 name: "usbguard-applet-qt"
 section: "1"
@@ -12,17 +13,9 @@ url: "/docs/linux/man/1-usbguard-applet-qt/"
 
  usbguard-applet-qt -- USBGuard Qt applet
 
-<h2>SYNOPSIS</h2>
+usbguard-applet-qt
 
- 
-
- usbguard-applet-qt
-
-<h2>DESCRIPTION</h2>
-
- 
-
- USBGuard Qt applet for interaction with the USBGuard daemon.
+USBGuard Qt applet for interaction with the USBGuard daemon.
 
 <h2>OPTIONS</h2>
 

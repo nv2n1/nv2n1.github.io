@@ -1,4 +1,5 @@
 ---
+
 title: "mupdisp(1)"
 name: "mupdisp"
 section: "1"
@@ -9,9 +10,7 @@ description: "mupdisp – display output from Mup music publisher program"
 
 <h2>NAME</h2>
 <p> mupdisp &#8211; display output from Mup music publisher program</p>
-<h2>SYNOPSIS</h2>
 <p> mupdisp <i>[mup_options] file</i></p>
-<h2>DESCRIPTION</h2>
 <p> Mupdisp provides a way to view Mup output on your screen. The <i>file</i> is Mup input. Any other Mup options can be given, except -C, -E, -f, -F, -l, -m, -M, or -v, which don&#8217;t produce print output. </p>
 <p> Mupdisp will run under MS-DOS or will run under UNIX with a TERM of AT386, linux, or xterm (under X windows). </p>
 <p> When running under X windows, several standard X options are available:</p>

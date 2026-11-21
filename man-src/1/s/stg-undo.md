@@ -1,4 +1,5 @@
 ---
+
 title: "stg-undo(1)"
 name: "stg-undo"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-undo/"
 description: "stg-undo – Undo the last operation"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> undo
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Reset the patch stack to the previous state. Consecutive invocations of &quot;stg undo&quot; will take you ever further into the past.</p>
 <h2>OPTIONS</h2>
 <p> -n N, &#8211;number N</p>

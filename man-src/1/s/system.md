@@ -1,4 +1,5 @@
 ---
+
 title: "system(1)"
 name: "system"
 section: "1"
@@ -12,7 +13,6 @@ description: "system.rootdaemonrc, .rootdaemonrc – access control directives f
 <code>ROOTDAEMORC, $HOME/.rootdaemonrc</code>
 <code>/etc/root/system.rootdaemonrc, $ROOTSYS/etc/system.rootdaemonrc</code>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the format of directives specifying access control directives for ROOT daemons. These directives are read from a text file whose full path is taken from the environment variable <code>ROOTDAEMONRC</code>. If such a variable in undefined, the daemon looks for a file named <code>.rootdaemonrc</code> in the $HOME directory of the user starting the daemon; if this file does not exists either, the file <code>system.rootdaemonrc</code>, located under <code>/etc/root</code> or <code>$ROOTSYS/etc</code>, is used. If none of these file exists (or is readable), the daemon makes use of a default built-in directive derived from the configuration options of the installation. </p>
 <h2>FORMAT</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_init_ex(3)"
 name: "libssh2_session_init_ex"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_session_init_ex – initializes an SSH session object"
 
 <h2>NAME</h2>
 <p> libssh2_session_init_ex &#8211; initializes an SSH session object</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> LIBSSH2_SESSION * libssh2_session_init_ex(LIBSSH2_ALLOC_FUNC((*myalloc)), LIBSSH2_FREE_FUNC((*myfree)), LIBSSH2_REALLOC_FUNC((*myrealloc)), void *abstract); </p>
 <p> LIBSSH2_SESSION * libssh2_session_init(void); </p>
-<h2>DESCRIPTION</h2>
 <p> <i>myalloc</i> &#8211; Custom allocator function. Refer to the section on Callbacks for implementing an allocator callback. Pass a value of NULL to use the default system allocator. </p>
 <p> <i>myfree</i> &#8211; Custom de-allocator function. Refer to the section on Callbacks for implementing a deallocator callback. Pass a value of NULL to use the default system deallocator. </p>
 <p> <i>myrealloc</i> &#8211; Custom re-allocator function. Refer to the section on Callbacks for implementing a reallocator callback. Pass a value of NULL to use the default system reallocator. </p>

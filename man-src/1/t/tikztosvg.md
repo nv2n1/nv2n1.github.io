@@ -1,4 +1,5 @@
 ---
+
 title: "tikztosvg(1)"
 name: "tikztosvg"
 section: "1"
@@ -6,9 +7,8 @@ letter: "t"
 url: "/docs/linux/man/1-tikztosvg/"
 description: "tikztosvg – Render TikZ diagrams to SVG."
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>tikztosvg</code> [<i>OPTION</i>]... <i>INPUT_PATH</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-tikztosvg/">tikztosvg</a>(1) command renders TikZ diagrams to SVG. </p>
 <p> If <i>INPUT_PATH</i> is set to <i>-</i> the input will be read from stdin.  </p>
 <h2>OPTIONS</h2>

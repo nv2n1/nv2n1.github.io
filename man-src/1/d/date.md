@@ -1,4 +1,5 @@
 ---
+
 title: "date(1)"
 name: "date"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-date/"
 description: "date – print or set the system date and time"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>date</code> [<i>,OPTION/</i>]&#8230; [<i>,+FORMAT/</i>]<br />
  <code>date</code> [<i>,-u|&#8211;utc|&#8211;universal/</i>] [<i>,MMDDhhmm/</i>[[<i>,CC/</i>]<i>,YY/</i>][<i>,.ss/</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> Display the current time in the given FORMAT, or set the system date. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_unicode_to_charset(3)"
 name: "fribidi_unicode_to_charset"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_unicode_to_charset/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_unicode_to_charset - convert string from Unicode 
 
- fribidi_unicode_to_charset - convert string from Unicode 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiStrIndex fribidi_unicode_to_charset 
  ( 
@@ -56,9 +52,7 @@ url: "/docs/linux/man/3-fribidi_unicode_to_charset/"
 </dd><dt><b>char *s</b>
 </dt><dd> Output string encoded in char_set.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function converts a Unicode string to an string in another character set. It also null-terminates the output string.
+This function converts a Unicode string to an string in another character set. It also null-terminates the output string.
 
 <h2>RETURNS</h2>
 

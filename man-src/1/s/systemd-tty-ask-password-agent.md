@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-tty-ask-password-agent(1)"
 name: "systemd-tty-ask-password-agent"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-systemd-tty-ask-password-agent/"
 description: "systemd-tty-ask-password-agent – List or process pending systemd password requests"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-tty-ask-password-agent</code> [OPTIONS&#8230;] [VARIABLE=VALUE&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-tty-ask-password-agent</code></p>
 <dd>is a password agent that handles password requests of the system, for example for hard disk encryption passwords or SSL certificate passwords that need to be queried at boot-time or during runtime. </dd>
 <p> <code>systemd-tty-ask-password-agent</code> implements the m[blue]<code>Password Agents Specification</code>m[]<font SIZE="-2">[1]</font>, and is one of many possible response agents which answer to queries formulated with <code><a href="/docs/linux/man/1-systemd-ask-password/">systemd-ask-password</a></code>(1).</p>

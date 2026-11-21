@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_attr_s(3)"
 name: "globus_net_manager_attr_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_net_manager_attr_s –"
 ---
 
 <p> Net Manager Attributes.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_net_manager_attr.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>scope</code> </p>

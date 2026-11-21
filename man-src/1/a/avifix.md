@@ -1,4 +1,5 @@
 ---
+
 title: "avifix(1)"
 name: "avifix"
 section: "1"
@@ -9,11 +10,9 @@ description: "avifix – fix header of AVI-file"
 
 <h2>NAME</h2>
 <p> avifix &#8211; fix header of AVI-file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>avifix</code> [ <code>-i</code> <i>name</i> [ <code>-F</code> <i>string</i> ] [ <code>-f</code> <i>val1</i><code>,</code><i>val2</i> ] [ <code>-N 0x</code> <i>NN</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-e</code> <i>rate</i><code>[,</code><i>bits</i><code>[,</code><i>channels</i><code>]]</code> ] [ <code>-a</code> <i>num</i> ] [ <code>-v</code> ] ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>avifix</code> is Copyright (C) by Thomas Oestreich.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>avifix</code> fixes the header of an AVI-file with the supplied parameters.</p>
 <h2>OPTIONS</h2>
 <dl>

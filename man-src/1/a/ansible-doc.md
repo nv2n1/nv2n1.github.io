@@ -1,4 +1,5 @@
 ---
+
 title: "ansible-doc(1)"
 name: "ansible-doc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ansible-doc/"
 description: "ansible-doc – show documentation on Ansible modules"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ansible-doc [-M module_path] [-l] [-s] [module&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ansible-doc</code> displays information on modules installed in Ansible libraries. It displays a terse listing of modules and their short descriptions, provides a printout of their DOCUMENTATION strings, and it can create a short &quot;snippet&quot; which can be pasted into a playbook.</p>
 <h2>OPTIONS</h2>
 <p> <code>-M</code> <i>DIRECTORY</i>, <code>&#8211;module-path=</code><i>DIRECTORY</i></p>

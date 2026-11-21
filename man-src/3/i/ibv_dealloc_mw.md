@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_dealloc_mw(3)"
 name: "ibv_dealloc_mw"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_dealloc_mw/"
 description: "ibv_alloc_mw, ibv_dealloc_mw – allocate or deallocate a memory window (MW)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_mw *ibv_alloc_mw(struct ibv_pd *pd,
                             enum ibv_mw_type type);
 int ibv_dealloc_mw(struct ibv_mw *mw);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_alloc_mw()</code> allocates a memory window (MW) associated with the protection domain <i>pd</i>. The MW&#8217;s type (1 or 2A/2B) is <i>type</i>. </p>
 <p> The MW is created not bound. For it to be useful, the MW must be bound, through either ibv_bind_mw (type 1) or a special WR (type 2). Once bound, the memory window allows RDMA (remote) access to a subset of the MR to which it was bound, until invalidated by: ibv_bind_mw verb with zero length for type 1, IBV_WR_LOCAL_INV/IBV_WR_SEND_WITH_INV WR opcode for type 2, deallocation. </p>
 <p> <code>ibv_dealloc_mw()</code> Unbinds in case was previously bound and deallocates the MW <i>mw</i>.</p>

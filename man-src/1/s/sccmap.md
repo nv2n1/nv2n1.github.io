@@ -1,4 +1,5 @@
 ---
+
 title: "sccmap(1)"
 name: "sccmap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sccmap/"
 description: "sccmap – extract strongly connected components of directed graphs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sccmap</code> [<code>-dsv</code>] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>sccmap</i> decomposes digraphs into strongly connected components and an auxiliary map of the relationship between components. In this map, each component is collapsed into a node. The resulting graphs are printed to standard out. The number of nodes, edges and strongly connected components are printed to standard error. <code>sccmap</code> is a way of partitioning large graphs into more manageable pieces.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

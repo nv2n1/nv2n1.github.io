@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-ppd-options(1)"
 name: "foomatic-ppd-options"
 section: "1"
@@ -9,9 +10,7 @@ description: "foomatic-ppd-options – show the PPD options"
 
 <h2>NAME</h2>
 <p> foomatic-ppd-options &#8211; show the PPD options</p>
-<h2>SYNOPSIS</h2>
 <p> <code>foomatic-ppd-options [-d=debuglevel] [ ppdfiles ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>foomatic-ppd-options</code> program reads the specified PPD files or stdin and decodes the PPD file to produce a list of options. This is really just a text based version of other print configuration tools. </p>
 <p> The output format consists of a set of lines, each starting with a keyword, followed by a set of options and the default value. For example:</p>
 <dl>

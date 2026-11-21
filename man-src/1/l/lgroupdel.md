@@ -1,4 +1,5 @@
 ---
+
 title: "lgroupdel(1)"
 name: "lgroupdel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lgroupdel/"
 description: "lgroupdel – Delete an user group"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> lgroupdel [<i>OPTION</i>]&#8230; <i>group</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Deletes the user group with name <i>group</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

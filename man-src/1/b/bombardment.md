@@ -1,4 +1,5 @@
 ---
+
 title: "bombardment(1)"
 name: "bombardment"
 section: "1"
@@ -6,18 +7,13 @@ letter: "b"
 url: "/docs/linux/man/1-bombardment/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- bombardment - Run siege with an ever-increasing number of users 
+bombardment - Run siege with an ever-increasing number of users 
 
 <h3><font SIZE="-1">SYNOPSIS</font></h3>
 
  bombardment [urlfile] [clients] [increment] [trials] [delay] bombardment urls.txt 5 10 20 1
 
-<h2>DESCRIPTION</h2>
-
- bombardment is part of the <tt>siege</tt> distribution. It calls <tt>siege</tt> with an initial number of clients. When that run finishes, it immediately calls siege again with that number of clients plus the increment. It does this the number of times specified in the fourth argument.
+bombardment is part of the <tt>siege</tt> distribution. It calls <tt>siege</tt> with an initial number of clients. When that run finishes, it immediately calls siege again with that number of clients plus the increment. It does this the number of times specified in the fourth argument.
 
 <h2>OPTIONS</h2>
 

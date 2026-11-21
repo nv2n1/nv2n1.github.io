@@ -1,4 +1,5 @@
 ---
+
 title: "git-lock(1)"
 name: "git-lock"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-lock – Lock a file excluded from version control"
 
 <h2>NAME</h2>
 <p> <code>git-lock</code> &#8211; Lock a file excluded from version control</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-lock</code> &lt;filename&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Lock local files from version control.</p>
 <h2>OPTIONS</h2>
 <p> &lt;filename&gt; </p>

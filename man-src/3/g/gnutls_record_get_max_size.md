@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_get_max_size(3)"
 name: "gnutls_record_get_max_size"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_record_get_max_size – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_get_max_size &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>size_t gnutls_record_get_max_size(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get the record size. The maximum record size is negotiated by the client after the first handshake message.</p>
 <h2>RETURNS</h2>
 <p> The maximum record packet size in this connection.</p>

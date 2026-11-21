@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmpdf(1)"
 name: "gdcmpdf"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcmpdf – .TH \"gdcmpdf\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16
 <pre>
 gdcmpdf [options] file-in file-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcmpdf</code> tool convert a PDF file (any PDF version) into an encapsulated PDF/DICOM file. By default it will try to read the PDF meta information stored in the PDF and convert this information to some specific DICOM fields (see below). However it may fails (eg. wrong password on encrypted PDF file) in which case empty value are used.</p>
 <h2>PARAMETERS</h2>
 <pre>

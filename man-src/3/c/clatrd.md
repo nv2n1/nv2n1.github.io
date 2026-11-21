@@ -1,4 +1,5 @@
 ---
+
 title: "clatrd(3)"
 name: "clatrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clatrd/"
 description: "clatrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clatrd</code> (UPLO, N, NB, A, LDA, E, TAU, W, LDW)<br />
  <i></i><code>CLATRD</code> reduces the first nb rows and columns of a symmetric/Hermitian matrix A to real tridiagonal form by an unitary similarity transformation.</p>

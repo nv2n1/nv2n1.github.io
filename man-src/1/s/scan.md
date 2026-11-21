@@ -1,4 +1,5 @@
 ---
+
 title: "scan(1)"
 name: "scan"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-scan/"
 description: "scan – produce a one line per message scan listing"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>scan</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-clear</code> | <code>-noclear</code>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-width</code> <i>columns</i>] [<code>-reverse</code> | <code>-noreverse</code>] [<code>-file</code> <i>filename</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Scan</code></p>
 <dd>produces a one-line-per-message listing of the specified folder or messages. Each <code>scan</code> line contains the message number (name), the date, the &#8220;From:&#8221; field, the &#8220;Subject&#8221; field, and, if room allows, some of the body of the message. For example: </dd>
 <dl>

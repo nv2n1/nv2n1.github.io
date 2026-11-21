@@ -1,4 +1,5 @@
 ---
+
 title: "logcheck-test(1)"
 name: "logcheck-test"
 section: "1"
@@ -9,10 +10,8 @@ description: "logcheck-test – test new logcheck rules easily"
 
 <h2>NAME</h2>
 <p> logcheck-test &#8211; test new logcheck rules easily</p>
-<h2>SYNOPSIS</h2>
 <p> <code>logcheck-test</code> [<code>-q</code>|<code>-i</code>] [<code>-a</code>|<code>-s</code>|<code>-l</code> <i>FILE</i>] [<code>-e</code>] [<code>-P</code> <i>PREFIX</i>] [<code>-S</code> <i>SUFFIX</i>] <i>RULE</i><br />
  <code>logcheck-test</code> [<code>-q</code>|<code>-i</code>] [<code>-a</code>|<code>-s</code>|<code>-l</code> <i>FILE</i>] <code>-r</code> <i>RULEFILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>logcheck-test</code> parses a log file for matching lines specified by a single rule or a rule file. If using a single <i>RULE</i> you can set a <i>PREFIX</i> and a <i>SUFFIX</i> to write new rules easily. </p>
 <h2>OPTIONS</h2>
 <dl>

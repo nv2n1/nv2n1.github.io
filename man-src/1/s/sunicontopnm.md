@@ -1,4 +1,5 @@
 ---
+
 title: "sunicontopnm(1)"
 name: "sunicontopnm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sunicontopnm/"
 description: "sunicontopnm – convert a Sun icon into a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sunicontopnm</code> [<i>iconfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>sunicontopnm</code> reads a Sun icon as input and produces a PBM or PGM image as output. </p>
 <p> If the input is of the Depth=8 variety, the output is PGM. Otherwise, it is PBM. Before Netpbm 10.53 (December 2010), the program would not work on a Depth=8 icon. </p>

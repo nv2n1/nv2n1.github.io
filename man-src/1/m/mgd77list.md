@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77list(1)"
 name: "mgd77list"
 section: "1"
@@ -9,10 +10,8 @@ description: "mgd77list – Extract data from MGD77 files"
 
 <h2>NAME</h2>
 <p> mgd77list &#8211; Extract data from MGD77 files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mgd77list</code> <i>NGDC-ids</i> <i>columns</i>[,<i>logic</i>][:<i>bittests</i>] [ [<code>+</code>]<code>c</code>|<code>d</code>|<code>f</code>|<code>m</code>|<code>t</code><i>code</i> ] [ <code>f</code>|<code>g</code>|<code>e</code> ] [ <code>A</code>|<code>a</code><i>startdate</i> ] [ <code>B</code>|<code>b</code><i>stopdate</i> ] [ ] [ <code>a</code><i>startrec</i> ] [ <code>b</code><i>stoprec</i> ] [ <i>ignore</i> ] [ [<i>corrtable</i>] ] [ <code>d</code>|<code>s</code><i>unit</i> ] [ <code>a</code>|<code>c</code>|<code>v</code><i>min</i>/<i>max</i> ] [ <i>region</i> ] [ <code>a</code><i>startdist</i>[unit] ] [ <code>b</code><i>stopdist</i>[unit] ] [ [<code>m</code>|<code>e</code>] ] [ [<i>level</i>] ] [ <i>weight</i> ] [ <i>+</i>|<code>&#8211;</code> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mgd77list</code> reads &lt;NGDC-id&gt;.[mgd77|nc] files and produces an ASCII [or binary] table. The &lt;NGDC-id&gt;.[mgd77|nc] files contain track information such as leg-id, time and position, geophysical observables such as gravity, magnetics, and bathymetry, and control codes and corrections such as Eotvos and diurnal corrections. The MGD77+ extended netCDF files may also contain additional user columns (for a listing of available columns, use <code>mgd77info</code> <code>-C</code>, and to learn how to add your own custom columns, see <code>mgd77manage</code>). The user may extract any combination of these parameters, any of 8 computed quantities (distance, heading, course-change, velocity, Carter correction, Eotvos correction and gravity and magnetic global reference fields), calendar sub-units of time (year, month, day, hour, min, sec), the NGDC id, and finally a preset weight (see <code>-W</code>). A sub-section can be specified by passing time- or distance-intervals along track or by selecting a geographical region. Finally, each output record may be required to pass any number of logical tests involving data values or bit flags. If multiple cruises are requested then they are separated by segment headers.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "tcumttest(1)"
 name: "tcumttest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcumttest/"
 description: "tcutest – test cases of the on-memory database API"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The command `<code>tcumttest</code>&#8216; is a utility for facility test under multi-thread situation. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>bnum</i>&#8216; specifies the number of buckets. </p>
 <dl>
 <dt>

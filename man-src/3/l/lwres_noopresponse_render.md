@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_noopresponse_render(3)"
 name: "lwres_noopresponse_render"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_noopresponse_render/"
 description: "lwres_nooprequest_render, lwres_noopresponse_render, lwres_nooprequest_parse, lwres_noopresponse_parse, lwres_noopresponse_free, lwres_nooprequest_free – lightweight resolver no-op message handling"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ description: "lwres_nooprequest_render, lwres_noopresponse_render, lwres_noopreq
 <dt> <code>lwres_result_t lwres_noopresponse_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_noopresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
 <dt> <code>void lwres_noopresponse_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_noopresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
 <dt> <code>void lwres_nooprequest_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_nooprequest_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>These are low-level routines for creating and parsing lightweight resolver no-op request and response messages. </dd>
 <p> The no-op message is analogous to a <code>ping</code> packet: a packet is sent to the resolver daemon and is simply echoed back. The opcode is intended to allow a client to determine if the server is operational or not. </p>
 <p> There are four main functions for the no-op opcode. One render function converts a no-op request structure &#8212; <code>lwres_nooprequest_t</code> &#8212; to the lighweight resolver&#8217;s canonical format. It is complemented by a parse function that converts a packet in this canonical format to a no-op request structure. Another render function converts the no-op response structure &#8212; <code>lwres_noopresponse_t</code> to the canonical format. This is complemented by a parse function which converts a packet in canonical format to a no-op response structure. </p>

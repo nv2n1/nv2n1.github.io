@@ -1,4 +1,5 @@
 ---
+
 title: "dpmgr(1)"
 name: "dpmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpmgr/"
 description: "dpmgr – administration utility for QDBM Depot"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpmgr create</code> [-s] [-bnum <i>num</i>] <i>name</i><br />
  <code>dpmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat] [-na] <i>name</i> <i>key</i> <i>val</i><br />
  <code>dpmgr out</code> [-kx|-ki] <i>name</i> <i>key</i><br />
@@ -21,7 +21,6 @@ description: "dpmgr – administration utility for QDBM Depot"
  <code>dpmgr importdb</code> <i>name file</i><br />
  <code>dpmgr snaffle</code> [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br />
  <code>dpmgr version</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>dpmgr</code> commands. </p>
 <p> <code>dpmgr</code> is a utility for debugging Depot and its applications. It features editing and checking of a database. It can be used for database applications with shell scripts. This command is used in the above format. <i>name</i> specifies a database name. <i>key</i> specifies the key of a record. <i>val</i> specifies the value of a record.</p>
 <h2>OPTIONS</h2>

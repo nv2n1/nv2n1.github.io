@@ -1,4 +1,5 @@
 ---
+
 title: "evemu-device(1)"
 name: "evemu-device"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-evemu-device/"
 description: "evemu-device, evemu-play, evemu-event – create a virtual input device and replay an event sequence"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 evemu-device [description-file]
 </pre>
@@ -18,7 +18,6 @@ evemu-play event-sequence.txt
 <pre><code>
 evemu - event / dev / input / eventX[--sync]-- type&lt;type&gt; --code&lt;code&gt; --value&lt;value&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> evemu-device creates a virtual input device based on the description-file. This description is usually created by <a href="/docs/linux/man/1-evemu-describe/">evemu-describe</a>(1). evemu-device then creates a new input device with uinput and prints the name and the device file to stdout. </p>
 <p> evemu-play replays the event sequence given on stdin through the input device. The event sequence must be in the form created by <a href="/docs/linux/man/1-evemu-record/">evemu-record</a>(1). If the argument is a file containing a recording, evemu-play creates the device and prompts the user for an interactive replay of the events. </p>
 <p> evemu-event plays exactly one event with the current time. If <code>&#8211;sync</code> is given, evemu-event generates an <code>EV_SYN</code> event after the event. The event type and code may be specified as the numerical value or the symbolic name from linux/input.h. </p>

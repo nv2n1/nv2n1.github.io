@@ -1,4 +1,5 @@
 ---
+
 title: "ksu(1)"
 name: "ksu"
 section: "1"
@@ -9,11 +10,9 @@ description: "ksu – Kerberized super-user"
 
 <h2>NAME</h2>
 <p> ksu &#8211; Kerberized super-user</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ksu</code> [ <i>target_user</i> ] [ <code>-n</code> <i>target_principal_name</i> ] [ <code>-c</code> <i>source_cache_name</i> ] [ <code>-k</code> ] [ <code>-r</code> time ] [ <code>-pf</code> ] [ <code>-l</code> <i>lifetime</i> ] [ <code>-z | Z</code> ] [ <code>-q</code> ] [ <code>-e</code> <i>command</i> [ args &#8230; ] ] [ <code>-a</code> [ args &#8230; ] ]</p>
 <h2>REQUIREMENTS</h2>
 <p> Must have Kerberos version 5 installed to compile ksu. Must have a Kerberos version 5 server running to use ksu.</p>
-<h2>DESCRIPTION</h2>
 <p> ksu is a Kerberized version of the su program that has two missions: one is to securely change the real and effective user ID to that of the target user, and the other is to create a new security context. </p>
 <p> <code>NOTE:</code> For the sake of clarity, all references to and attributes of the user invoking the program will start with &quot;source&quot; (e.g., &quot;source user&quot;, &quot;source cache&quot;, etc.). </p>
 <p> Likewise, all references to and attributes of the target account will start with &quot;target&quot;.</p>

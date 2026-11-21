@@ -1,4 +1,5 @@
 ---
+
 title: "slar2v(3)"
 name: "slar2v"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slar2v/"
 description: "slar2v.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br />
  <i></i><code>SLAR2V</code> applies a vector of plane rotations with real cosines and real sines from both sides to a sequence of 2-by-2 symmetric/Hermitian matrices.</p>

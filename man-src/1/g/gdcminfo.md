@@ -1,4 +1,5 @@
 ---
+
 title: "gdcminfo(1)"
 name: "gdcminfo"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcminfo – .TH \"gdcminfo\" 1 \"Fri Oct 29 2010\" \"Version 2.0.
 <pre>
 gdcminfo [options] file-in
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcminfo</code> command line program takes as input a DICOM file, or a directory and process it to extract meta- information about the DICOM file processed.</p>
 <h2>PARAMETERS</h2>
 <pre>

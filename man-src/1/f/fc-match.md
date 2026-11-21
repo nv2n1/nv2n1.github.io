@@ -1,4 +1,5 @@
 ---
+
 title: "fc-match(1)"
 name: "fc-match"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fc-match/"
 description: "fc-match – match available fonts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fc-match</code> [ <code>-asvVh</code> ] [ <code>&#8211;all</code> ] [ <code>&#8211;sort</code> ] [ <code>&#8211;verbose</code> ] [ <code> [ -f </code><i>format</i><code> ] [ &#8211;format </code><i>format</i><code> ] </code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>
 <p>&nbsp;[&nbsp;<i>pattern</i><code>&nbsp;<wbr>&nbsp;[&nbsp;</code><i>element</i><i>&#8230;</i><code>&nbsp;]&nbsp;<wbr>&nbsp;</code>&nbsp;]&nbsp;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fc-match</code> matches <i>pattern</i> (empty pattern by default) using the normal fontconfig matching rules to find the best font available. If <code>&#8211;sort</code> is given, the sorted list of best matching fonts is displayed. The <code>&#8211;all</code> option works like <code>&#8211;sort</code> except that no pruning is done on the list of fonts. </p>
 <p> If any elements are specified, only those are printed. Otherwise short file name, family, and style are printed, unless verbose output is requested.</p>
 <h2>OPTIONS</h2>

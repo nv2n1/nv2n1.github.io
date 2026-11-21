@@ -1,4 +1,5 @@
 ---
+
 title: "ghc-pkg(1)"
 name: "ghc-pkg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ghc-pkg/"
 description: "ghc-pkg – GHC Haskell Cabal package manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ghc-pkg</code> <i>action</i> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> A package is a library of Haskell modules known to the compiler. The <code>ghc-pkg</code> tool allows adding or removing them from a package database. By default, the system-wide package database is modified, but alternatively the user&#8217;s local package database or another specified file can be used. </p>
 <p> To make a package available for <code>ghc</code>, <code>ghc-pkg</code> can be used to register it. Unregistering it removes it from the database. Also, packages can be hidden, to make <code>ghc</code> ignore the package by default, without uninstalling it. Exposing a package makes a hidden package available. Additionally, <code>ghc-pkg</code> has various commands to query the package database. </p>
 <p> Where a package name is required, the package can be named in full including the version number (e.g. <code>network-1.0</code>), or without the version number. Naming a package without the version number matches all versions of the package; the specified action will be applied to all the matching packages. A package specifier that matches all version of the package can also be written <code>pkg-*</code>, to make it clearer that multiple packages are being matched.</p>

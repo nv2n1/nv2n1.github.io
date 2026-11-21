@@ -1,4 +1,5 @@
 ---
+
 title: "texconfig-sys(1)"
 name: "texconfig-sys"
 section: "1"
@@ -10,11 +11,9 @@ description: "texconfig – configures teTeX or TeX Live"
 <h2>NAME</h2>
 <p> texconfig &#8211; configures teTeX or TeX Live </p>
 <p> texconfig-sys &#8211; configures teTeX or TeX Live system-wide</p>
-<h2>SYNOPSIS</h2>
 <p> <code>texconfig</code> </p>
 <p> <code>texconfig</code> [<code> commands</code> &#8230;] </p>
 <p> <code>texconfig-sys</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>texconfig</i> allows one to configure and maintain TeX in an easy and convenient manner, offering a series of dialog boxes to the user. </p>
 <p> The <i>tlmgr</i> program has subsumed this function for TeX Live. This program is still supported, but the tlmgr interface is much more actively developed and tested. </p>
 <p> After choosing settings or options, the appropriate files are changed automatically and the new settings are applied for the user. If needed, copies of files in <i>TEXMFDIST</i> or <i>TEXMFMAIN</i> will be made in the user&#8217;s <i>TEXMFCONFIG</i> tree. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tvheadend(1)"
 name: "tvheadend"
 section: "1"
@@ -9,9 +10,7 @@ description: "tvheadend – Advanced TV streaming server/relay"
 
 <h2>NAME</h2>
 <p> tvheadend &nbsp;<wbr>&#8211; Advanced TV streaming server/relay</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tvheadend</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Tvheadend</code> is a streaming server/relay supporing a variety of sources and multiple output formats. It is primarily inteded to be used in together with the <code>Showtime</code> Media player.</p>
 <h2>OPTIONS</h2>
 <p> All arguments are optional.</p>

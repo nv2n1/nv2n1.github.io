@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_url_escape_more(3)"
 name: "cgi_url_escape_more"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_url_escape_more/"
 description: "cgi_url_escape_more – url escape a string"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -17,7 +17,6 @@ NEOERR *cgi_url_escape_more(const char *buf, char **esc, const char *other);
 <h2>ARGUMENTS</h2>
 <p> buf &#8211; a 0 terminated string<br />
  other &#8211; a 0 terminated string of characters to escape </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_url_escape_more will do URL escaping on the passed in string, and return a newly allocated string that is escaped. Characters which are escaped include control characters, %, ?, +, space, =, &amp;, /, and &quot; and any characters in other </p>
 <h2>RETURN VALUE</h2>
 <p> esc &#8211; a newly allocated string </p>

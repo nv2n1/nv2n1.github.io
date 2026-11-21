@@ -1,4 +1,5 @@
 ---
+
 title: "qrsub(1)"
 name: "qrsub"
 section: "1"
@@ -9,7 +10,6 @@ description: "qrsub – Submit an Advance Reservation (AR) to xxQS_NAMExx."
 
 <h2>SYNTAX</h2>
 <p> <code>qrsub</code> [<code>-a</code> <i>date_time</i>] [<code>-A</code> <i>account_string</i>] [<code>-ckpt</code> <i>ckpt_name</i>] [<code>-d</code> <i>time</i>] [<code>-e</code> <i>date_time</i>] [<code>-he</code> <i>yes</i>|<i>no</i>] [<code>-help</code>] [<code>-l</code> <i>resource_list</i>] [<code>-now</code>] [<code>-M</code> <i>user</i>[@<i>host</i>],&#8230;] [<code>-N</code> <i>ar_name</i>] [<code>-w</code> <i>e|v</i>] [<code>-pe</code> <i>pe_name slot_range</i>] [<code>-q</code> <i>wc_queue_list</i>] [<code>-u</code> <i>wc_user_list</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Qrsub</i> provides a means for operators, managers or users referenced in the ACL (see &quot;<code>arusers</code>&quot; to create an Advance Reservation (AR) in the xxQS_NAMExx queuing system. ARs allow reserving particular consumable resources for future use. These reserved resources are only available for jobs requesting the AR, and the scheduler ensures the availability of the resources when the start time is reached. Jobs requesting the AR can only use the reserved consumable resources. </p>
 <p> During AR submit time the xxQS_NAMExx queuing system selects the best suited queues for the AR request and then reserves the desired amount of resources. For a reservation, all queues that are not in orphaned state are considered as suited. Only if the AR request can be fulfilled will the AR be granted. </p>
 <p> ARs will be deleted either automatically when the end time is reached, or manually using In both cases, first all jobs requesting the AR will be removed and then the AR itself. Already granted ARs can be shown with </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "yum-verify(1)"
 name: "yum-verify"
 section: "1"
@@ -9,9 +10,7 @@ description: "yum verify plugin"
 
 <h2>NAME</h2>
 <p> yum verify plugin</p>
-<h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] verify [package &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This plugin extends <code>yum</code> with some commands that give verification information on the installed system, much like rpm -V. You can change how the verification is done and which files it applies to. </p>
 <p> added yum <i>command</i>s are:<br />
  <i></i> * verify<br />

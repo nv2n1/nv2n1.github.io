@@ -1,4 +1,5 @@
 ---
+
 title: "lockf(3)"
 name: "lockf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lockf/"
 description: "lockf – apply, test or remove a POSIX lock on an open file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int lockf(int </code><i>fd</i><code>, int </code><i>cmd</i><code>, off_t </code><i>len</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -17,7 +17,6 @@ description: "lockf – apply, test or remove a POSIX lock on an open file"
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Apply, test or remove a POSIX lock on a section of an open file. The file is specified by <i>fd</i>, a file descriptor open for writing, the action by <i>cmd</i>, and the section consists of byte positions <i>pos</i>..<i>pos</i>+<i>len</i>-1 if <i>len</i> is positive, and <i>pos</i>&#8211;<i>len</i>..<i>pos</i>-1 if <i>len</i> is negative, where <i>pos</i> is the current file position, and if <i>len</i> is zero, the section extends from the current file position to infinity, encompassing the present and future end-of-file positions. In all cases, the section may extend past current end-of-file. </p>
 <p> On Linux, <code>lockf</code>() is just an interface on top of <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) locking. Many other systems implement <code>lockf</code>() in this way, but note that POSIX.1 leaves the relationship between <code>lockf</code>() and <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) locks unspecified. A portable application should probably avoid mixing calls to these interfaces. </p>
 <p> Valid operations are given below:</p>

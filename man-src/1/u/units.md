@@ -1,4 +1,5 @@
 ---
+
 title: "units(1)"
 name: "units"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-units/"
 description: "units — unit conversion and calculation program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> &#8216;units&#8217; [<i>options</i>] [<i>from-unit</i> [<i>to-unit</i>]] </p>
-<h2>DESCRIPTION</h2>
 <p> The &#8216;units&#8217; program converts quantities expressed in various systems of measurement to their equivalents in other systems of measurement. Like many similar programs, it can handle multiplicative scale changes. It can also handle nonlinear conversions such as Fahrenheit to Celsius. See the examples below. The program can also perform conversions from and to sums of units, such as converting between meters and feet plus inches. </p>
 <p> Beyond simple unit conversions, &#8216;units&#8217; can be used as a general-purpose scientific calculator that keeps track of units in its calculations. You can form arbitrary complex mathematical expressions of dimensions including sums, products, quotients, powers, and even roots of dimensions. Thus you can ensure accuracy and dimensional consistency when working with long expressions that involve many different units that may combine in complex ways. </p>
 <p> The units are defined in an external data file. You can use the extensive data file that comes with this program, or you can provide your own data file to suit your needs. You can also use your own data file to supplement the standard data file. </p>

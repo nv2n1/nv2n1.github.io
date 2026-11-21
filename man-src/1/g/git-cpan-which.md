@@ -1,4 +1,5 @@
 ---
+
 title: "git-cpan-which(1)"
 name: "git-cpan-which"
 section: "1"
@@ -6,20 +7,13 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-which/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+git-cpan-last-version - Report the managed module 
 
- git-cpan-last-version - Report the managed module 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     % git cpan-which
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This command prints the name of the module tracked in <tt>&quot;cpan/master&quot;</tt>.
+This command prints the name of the module tracked in <tt>&quot;cpan/master&quot;</tt>.
 
 <h2>VERSION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_sign_callback_get(3)"
 name: "gnutls_sign_callback_get"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_sign_callback_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_sign_callback_get &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>gnutls_sign_func gnutls_sign_callback_get(gnutls_session_t </code><i>session</i><code>, void ** </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_sign_callback_get – API function"
 <dd> is a gnutls session</dd>
 <dt>void ** userdata</dt>
 <dd> if non-<code>NULL</code>, will be set to abstract callback pointer.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Retrieve the callback function, and its userdata pointer.</p>
 <h2>RETURNS</h2>
 <p> The function pointer set by <code>gnutls_sign_callback_set()</code>, or if not set, <code>NULL</code>.</p>

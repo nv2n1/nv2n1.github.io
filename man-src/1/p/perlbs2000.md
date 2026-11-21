@@ -1,4 +1,5 @@
 ---
+
 title: "perlbs2000(1)"
 name: "perlbs2000"
 section: "1"
@@ -8,9 +9,7 @@ description: "perlbs2000 – building and installing Perl for BS2000."
 ---
 
 <p> This document needs to be updated, but we don&#8217;t know what it should say. Please email comments to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt;. </p>
-<h2>SYNOPSIS</h2>
 <p> This document will help you Configure, build, test and install Perl on <font SIZE="-1">BS2000</font> in the <font SIZE="-1">POSIX</font> subsystem.</p>
-<h2>DESCRIPTION</h2>
 <p> This is a ported perl for the <font SIZE="-1">POSIX</font> subsystem in <font SIZE="-1">BS2000 VERSION OSD V3.1A</font> or later. It may work on other versions, but we started porting and testing it with 3.1A and are currently using Version V4.0A. </p>
 <p> You may need the following <font SIZE="-1">GNU</font> programs in order to install perl:</p>
 <h3>gzip on <font SIZE="-1">BS2000</font></h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "exiftool(1)"
 name: "exiftool"
 section: "1"
@@ -6,7 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-exiftool/"
 description: "exiftool – Read and write meta information in files"
 ---
-<h2>SYNOPSIS</h2>
+
 <h3>Reading</h3>
 <p> <code>exiftool</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] [-<i></i><font SIZE="-1"><i>TAG</i></font><i></i>...] [--<i></i><font SIZE="-1"><i>TAG</i></font><i></i>...] <i></i><font SIZE="-1"><i>FILE</i></font><i></i>...  </p>
 <h3>Writing</h3>
@@ -17,7 +18,6 @@ description: "exiftool – Read and write meta information in files"
 <p> <code>exiftool</code> [ <code>-ver</code> | <code>-list</code>[<code>w</code>|<code>f</code>|<code>r</code>|<code>wf</code>|<code>g</code>[<i></i><font SIZE="-1"><i>NUM</i></font><i></i>]|<code>d</code>|<code>x</code>] ] </p>
 <p> For specific examples, see the <font SIZE="-1">EXAMPLES</font> sections below. </p>
 <p> This documentation is displayed if exiftool is run without an input <i></i><font SIZE="-1"><i>FILE</i></font><i></i> when one is expected.  </p>
-<h2>DESCRIPTION</h2>
 <p> A command-line interface to Image::ExifTool, used for reading and writing meta information in a variety of file types. <i></i><font SIZE="-1"><i>FILE</i></font><i></i> is one or more source file names, directory names, or <code>&quot;-&quot;</code> for the standard input. Metadata is read from source files and printed in readable form to the console (or written to output text files with <code>-w</code>). </p>
 <p> To write or delete metadata, tag values are assigned using the -<i></i><font SIZE="-1"><i>TAG</i></font><i></i>=[<i></i><font SIZE="-1"><i>VALUE</i></font><i></i>] syntax, or the <code>-geotag</code> option. To copy or move metadata, the <code>-tagsFromFile</code> feature is used. By default the original files are preserved with <code>&quot;_original&quot;</code> appended to their names --- be sure to verify that the new files are <font SIZE="-1">OK</font> before erasing the originals. Once in write mode, exiftool will ignore any read-specific options. </p>
 <p> Note: If <i></i><font SIZE="-1"><i>FILE</i></font><i></i> is a directory name then only supported file types in the directory are processed (in write mode only writable types are processed). However, files may be specified by name, or the <code>-ext</code> option may be used to force processing of files with any extension. Hidden files in the directory are also processed. Adding the <code>-r</code> option causes subdirectories to be processed recursively, but those with names beginning with ``.&#8216;&#8216; are skipped unless <code>-r.</code> is used. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clacpy(3)"
 name: "clacpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clacpy/"
 description: "clacpy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br />
  <i></i><code>CLACPY</code> copies all or part of one two-dimensional array to another.</p>

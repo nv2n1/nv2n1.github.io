@@ -1,4 +1,5 @@
 ---
+
 title: "printafm(1)"
 name: "printafm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-printafm/"
 description: "printafm – Print the metrics from a Postscript font in AFM format using ghostscript"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>printafm</code> <i>fontname</i></p>
-<h2>DESCRIPTION</h2>
 <p> This script invokes <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to print the metrics from a font in AFM format. Output goes to stdout.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gs/">gs</a>(1)</p>

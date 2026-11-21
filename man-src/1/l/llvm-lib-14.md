@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-lib-14(1)"
 name: "llvm-lib-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-lib-14/"
 description: "llvm-lib – LLVM lib.exe compatible library tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-lib</code> [/libpath:&lt;path&gt;] [/out:&lt;output&gt;] [/llvmlibthin] [/ignore] [/machine] [/nologo] [files…]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-lib</code> command is intended to be a <code>lib.exe</code> compatible tool. See <i><a rel="nofollow" href="https://msdn.microsoft.com/en-us/library/7ykb2k5f">https://msdn.microsoft.com/en-us/library/7ykb2k5f</a></i> for the general description. </p>
 <p> <code>llvm-lib</code> has the following extensions:</p>
 <dl>

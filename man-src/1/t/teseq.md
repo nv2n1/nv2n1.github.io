@@ -1,4 +1,5 @@
 ---
+
 title: "teseq(1)"
 name: "teseq"
 section: "1"
@@ -9,11 +10,9 @@ description: "teseq – manual page for teseq 1.0.0"
 
 <h2>NAME</h2>
 <p> teseq &#8211; manual page for teseq 1.0.0</p>
-<h2>SYNOPSIS</h2>
 <p> <code>teseq</code> [<i>-CLDEx</i>] [<i>in</i>] [<i>out</i>]<br />
  <code>teseq</code> <i>-h | &#8211;help</i><br />
  <code>teseq</code> <i>-V | &#8211;version</i></p>
-<h2>DESCRIPTION</h2>
 <p> Format text with terminal escapes and control sequences for human consumption.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

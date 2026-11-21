@@ -1,4 +1,5 @@
 ---
+
 title: "jpegexiforient(1)"
 name: "jpegexiforient"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jpegexiforient/"
 description: "jpegexiforient – reads or writes the Exif Orientation Tag"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jpegexiforient</code> [<i>switches</i>] <i>jpegfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> This is a utility program to get and set the Exif Orientation Tag. It can be used together with jpegtran in scripts for automatic orientation correction of digital camera pictures. </p>
 <p> The Exif orientation value gives the orientation of the camera relative to the scene when the image was captured. The relation of the &#8216;0th row&#8217; and &#8216;0th column&#8217; to visual position is shown as below.</p>
 <dl>

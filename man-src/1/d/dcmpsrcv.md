@@ -1,4 +1,5 @@
 ---
+
 title: "dcmpsrcv(1)"
 name: "dcmpsrcv"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmpsrcv/"
 description: "dcmpsrcv – Network receive for presentation state viewer"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmpsrcv [options] config-file
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmpsrcv</code> application is invoked by the Grayscale Softcopy Presentation State Viewer and is not intended to be invoked manually. The application reads the common configuration file which is shared between the different components of the viewer and opens a TCP/IP socket on which incoming association requests are accepted. The application sparks a separate process for each DICOM connection. It supports the same storage SOP classes as the <code>storescp</code> utility as SCP, but does not support encapsulated transfer syntaxes. Incoming images are stored in the common viewer database. See the full conformance statement for further details.</p>
 <h2>PARAMETERS</h2>
 <pre>

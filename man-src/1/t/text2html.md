@@ -1,4 +1,5 @@
 ---
+
 title: "text2html(1)"
 name: "text2html"
 section: "1"
@@ -9,9 +10,7 @@ description: "text2html – convert plain text to HTML"
 
 <h2>VERSION</h2>
 <p> version 2.07</p>
-<h2>SYNOPSIS</h2>
 <p> <code>text2html [options&#8230;]</code> [file &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <tt>&quot;text2html&quot;</tt> utility converts text to <font SIZE="-1">HTML.</font> Text can come from standard input or files listed on the command line. </p>
 <p> The available options are outlined in HTML::FromText. The option syntax is slightly different. Options are prefixed with two dashes (<tt>&quot;--&quot;</tt>) and may have an option value following an equals sign (<tt>&quot;=&quot;</tt>). The default value is on (&lt;1&gt;).</p>
 <h2>EXAMPLES</h2>

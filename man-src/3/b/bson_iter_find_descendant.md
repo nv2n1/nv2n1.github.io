@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_find_descendant(3)"
 name: "bson_iter_find_descendant"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_find_descendant() – The bson_iter_find_descendant() fu
 
 <h2>NAME</h2>
 <p> bson_iter_find_descendant() &#8211; The bson_iter_find_descendant() function shall follow standard MongoDB dot notation to recurse into subdocuments. descendant will be initialized and advanced to the descendant. If false is returned, both iter and descendant should be considered invalid.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_iter_find_descendant(bson_iter_t *iter,
                                const char *dotkey,
@@ -25,7 +25,6 @@ bool bson_iter_find_descendant(bson_iter_t *iter,
 <dl>
 <dt><code>descendant</code></dt>
 <dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_find_descendant/">bson_iter_find_descendant</a>(3)</code> function shall follow standard MongoDB dot notation to recurse into subdocuments. <code>descendant</code> will be initialized and advanced to the descendant. If false is returned, both <code>iter</code> and <code>descendant</code> should be considered invalid. </p>
 <h2>RETURNS</h2>
 <p> true is returned if the requested key was found. If not, false is returned and <code>iter</code> was exhausted and should now be considered invalid. </p>

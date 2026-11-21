@@ -1,4 +1,5 @@
 ---
+
 title: "fread(3)"
 name: "fread"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-fread/"
 description: "fread, fwrite – binary stream input/output"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
 size_t fwrite(const void *ptr, size_t size, size_t nmemb,
               FILE *stream);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The function <code>fread</code>() reads <i>nmemb</i> items of data, each <i>size</i> bytes long, from the stream pointed to by <i>stream</i>, storing them at the location given by <i>ptr</i>. </p>
 <p> The function <code>fwrite</code>() writes <i>nmemb</i> items of data, each <i>size</i> bytes long, to the stream pointed to by <i>stream</i>, obtaining them from the location given by <i>ptr</i>. </p>
 <p> For nonlocking counterparts, see <code><a href="/docs/linux/man/3-unlocked_stdio/">unlocked_stdio</a></code>(3).</p>

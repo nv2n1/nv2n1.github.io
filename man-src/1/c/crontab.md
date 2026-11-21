@@ -1,4 +1,5 @@
 ---
+
 title: "crontab(1)"
 name: "crontab"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-crontab/"
 description: "crontab – maintain crontab files for individual users (Vixie Cron)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> crontab [ -u user ] file<br />
  crontab [ -u user ] [ -i ] { -e | -l | -r }</p>
-<h2>DESCRIPTION</h2>
 <p> <i>crontab</i> is the program used to install, deinstall or list the tables used to drive the <i><a href="/docs/linux/man/8-cron/">cron</a></i>(8) daemon in Vixie Cron. Each user can have their own crontab, and though these are files in /var/spool/cron/crontabs, they are not intended to be edited directly. </p>
 <p> If the <i>/etc/cron.allow</i> file exists, then you must be listed (one user per line) therein in order to be allowed to use this command. If the <i>/etc/cron.allow</i> file does not exist but the <i>/etc/cron.deny</i> file does exist, then you must <code>not</code> be listed in the <i>/etc/cron.deny</i> file in order to use this command. </p>
 <p> If neither of these files exists, then depending on site-dependent configuration parameters, only the super user will be allowed to use this command, or all users will be able to use this command. </p>

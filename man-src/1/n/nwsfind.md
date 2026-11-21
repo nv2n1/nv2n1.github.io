@@ -1,4 +1,5 @@
 ---
+
 title: "nwsfind(1)"
 name: "nwsfind"
 section: "1"
@@ -9,9 +10,7 @@ description: "nwsfind – Find a NetWare Server"
 
 <h2>NAME</h2>
 <p> nwsfind &#8211; Find a NetWare Server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nwsfind</code> [ <code>-t</code> <i>type</i> ] [ <i>name</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nwsfind</code> searches for a NetWare server and finds a route to this server. nwsfind was written to be setuid root. It is called from within the ncp library, so that it is possible that normal users use the utilities. </p>
 <h2>OPTIONS</h2>
 <p> <code>name</code></p>

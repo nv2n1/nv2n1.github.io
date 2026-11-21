@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_secure_installation(1)"
 name: "mysql_secure_installation"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysql_secure_installation/"
 description: "mysql_secure_installation – improve MySQL installation security"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_secure_installation</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This program enables you to improve the security of your MySQL installation in the following ways: </dd>
 <dl>
 <dt>

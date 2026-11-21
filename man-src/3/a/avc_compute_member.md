@@ -1,4 +1,5 @@
 ---
+
 title: "avc_compute_member(3)"
 name: "avc_compute_member"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-avc_compute_member/"
 description: "avc_compute_create, avc_compute_member – obtain SELinux label for new object"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_compute_create(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, security_id_t *</code><i>newsid</i><code>);</code> </p>
 <p> <code>int avc_compute_member(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, security_id_t *</code><i>newsid</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>avc_compute_create</code>() is used to compute a SID to use for labeling a new object in a particular class based on a SID pair. This call is identical to <code>security_compute_create</code>(), but does not require converting from userspace SID&#8217;s to contexts and back again. </p>
 <p> <code>avc_compute_member</code>() is used to compute a SID to use for labeling a polyinstantiated object instance of a particular class based on a SID pair. This call is identical to <code>security_compute_member</code>(), but does not require converting from userspace SID&#8217;s to contexts and back again. </p>
 <p> These functions return a SID for the computed context in the memory referenced by <i>sid</i>.</p>

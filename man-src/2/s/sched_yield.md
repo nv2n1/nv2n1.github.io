@@ -1,4 +1,5 @@
 ---
+
 title: "sched_yield(2)"
 name: "sched_yield"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-sched_yield/"
 description: "sched_yield – yield the processor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sched.h&gt;</code> </p>
 <p> <code>int sched_yield(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>sched_yield</code>() causes the calling thread to relinquish the CPU. The thread is moved to the end of the queue for its static priority and a new thread gets to run.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>sched_yield</code>() returns 0. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pwdhash(1)"
 name: "pwdhash"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pwdhash/"
 description: "pwdhash – Generator of password hashes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pwdhash</code> [<i>-D config-dir</i>] [<i>-H</i>] [<i>-s scheme | -c comparepwd</i>] password </p>
-<h2>DESCRIPTION</h2>
 <p> Generates password hashes which can also be used in LDIF password fields. This uses the Directory Server password generator. </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>

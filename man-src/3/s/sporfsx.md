@@ -1,4 +1,5 @@
 ---
+
 title: "sporfsx(3)"
 name: "sporfsx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sporfsx/"
 description: "sporfsx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sporfsx</code> (UPLO, EQUED, N, NRHS, A, LDA, AF, LDAF, S, B, LDB, X, LDX, RCOND, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />
  <i></i><code>SPORFSX</code></p>

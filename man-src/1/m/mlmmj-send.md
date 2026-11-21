@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-send(1)"
 name: "mlmmj-send"
 section: "1"
@@ -9,7 +10,6 @@ description: "mlmmj-send – send mail to a mailinglist or similar"
 
 <h2>NAME</h2>
 <p> mlmmj-send &#8211; send mail to a mailinglist or similar</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mlmmj-send</code> [<i>-L</i> /path/to/list | <i>-l</i> listctrl] <i>-m</i> /path/to/mail [<i>-a</i>] [<i>-D</i>] [<i>-F</i>] [<i>-h</i>] [<i>-o</i>] [<i>-r</i>] [<i>-R</i>] [<i>-s</i>] [<i>-T</i>] [<i>-V</i>]</p>
 <dl>
 <dt> <code>-a</code>: Don&#8217;t archive the mail</dt>
@@ -25,7 +25,6 @@ description: "mlmmj-send – send mail to a mailinglist or similar"
 <dt> <code>-s</code>: Subscribers file name</dt>
 <dt> <code>-T</code>: What to use as RCPT TO:</dt>
 <dt> <code>-V</code>: Print version</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This binary is used to send all kinds of mail to mlmmj managed mailinglists, but can potentially be used standalone for sending mails. </dd>
 <p> The only option that is not self explanatory is the <code>-l</code> list control option:</p>
 <dl>

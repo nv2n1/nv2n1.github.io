@@ -1,4 +1,5 @@
 ---
+
 title: "exit(2)"
 name: "exit"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-exit/"
 description: "_exit, _Exit – terminate the calling process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>void _exit(int </code><i>status</i><code>);</code> </p>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>
@@ -17,7 +17,6 @@ description: "_exit, _Exit – terminate the calling process"
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>_exit</code>() terminates the calling process &quot;immediately&quot;. Any open file descriptors belonging to the process are closed. Any children of the process are inherited by <code><a href="/docs/linux/man/1-init/">init</a></code>(1) (or by the nearest &quot;subreaper&quot; process as defined through the use of the <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_CHILD_SUBREAPER</code> operation). The process&#8217;s parent is sent a <code>SIGCHLD</code> signal. </p>
 <p> The value <i>status &amp; 0xFF</i> is returned to the parent process as the process&#8217;s exit status, and can be collected by the parent using one of the <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2) family of calls. </p>
 <p> The function <code>_Exit</code>() is equivalent to <code>_exit</code>().</p>

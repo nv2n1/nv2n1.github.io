@@ -1,4 +1,5 @@
 ---
+
 title: "mtbatch(1)"
 name: "mtbatch"
 section: "1"
@@ -9,9 +10,7 @@ description: "mtbatch – Sends SMS in batch mode"
 
 <h2>NAME</h2>
 <p> mtbatch &#8211; Sends SMS in batch mode</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mtbatch</code> <i></i>[options]<i>content-file</i>receivers-file<i>&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mtbatch</code> -v number<br />
 &nbsp;<wbr>set log level for stderr logging -b host<br />
 &nbsp;<wbr>defines the host of bearerbox&nbsp;<wbr>(default: localhost) -p port<br />

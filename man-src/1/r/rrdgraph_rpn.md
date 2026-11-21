@@ -1,4 +1,5 @@
 ---
+
 title: "rrdgraph_rpn(1)"
 name: "rrdgraph_rpn"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdgraph_rpn/"
 description: "rrdgraph_rpn – About RPN Math in rrdtool graph"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i></i><font SIZE="-1"><i>RPN</i></font><i> expression</i>:=<i>vname</i>|<i>operator</i>|<i>value</i>[,<i></i><font SIZE="-1"><i>RPN</i></font><i> expression</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> If you have ever used a traditional <font SIZE="-1">HP</font> calculator you already know <font SIZE="-1"><code>RPN</code></font> (Reverse Polish Notation). The idea behind <font SIZE="-1"><code>RPN</code></font> is that you have a stack and push your data onto this stack. Whenever you execute an operation, it takes as many elements from the stack as needed. Pushing is done implicitly, so whenever you specify a number or a variable, it gets pushed onto the stack automatically. </p>
 <p> At the end of the calculation there should be one and only one value left on the stack. This is the outcome of the function and this is what is put into the <i>vname</i>. For <font SIZE="-1"><code>CDEF</code></font> instructions, the stack is processed for each data point on the graph. <font SIZE="-1"><code>VDEF</code></font> instructions work on an entire data set in one run. Note, that currently <font SIZE="-1"><code>VDEF</code></font> instructions only support a limited list of functions. </p>
 <p> Example: <tt>&quot;VDEF:maximum=mydata,MAXIMUM&quot;</tt> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "acl_set_file(3)"
 name: "acl_set_file"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_set_file/"
 description: "acl_set_file – set an ACL by filename"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_set_file</code> &#8211; set an ACL by filename </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_set_file const char *path_p acl_type_t type acl_t acl</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_set_file function associates an access ACL with a file or directory, or associates a default ACL with a directory. The pathname for the file or directory is pointed to by the argument <i>path_p</i> </p>
 <p> The effective user ID of the process must match the owner of the file or directory or the process must have the CAP_FOWNER capability for the request to succeed. </p>
 <p> The value of the argument <i>type</i> is used to indicate whether the access ACL or the default ACL associated with <i>path_p</i> is being set. If the <i>type</i> parameter is ACL_TYPE_ACCESS, the access ACL of <i>path_p</i> shall be set. If the <i>type</i> parameter is ACL_TYPE_DEFAULT, the default ACL of <i>path_p</i> shall be set. If the argument <i>type</i> specifies a type of ACL that cannot be associated with <i>path_p</i> then the function fails. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sldtoppm(1)"
 name: "sldtoppm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sldtoppm/"
 description: "sldtoppm – convert an AutoCAD slide file into a portable pixmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sldtoppm</code> [<code>-adjust</code>] [<code>-dir</code>] [<code>-height</code>|<code>-ysize</code> <i>s</i>] [<code>-info</code>] [<code>-lib</code>|<code>-Lib</code> <i>name</i>] [<code>-scale</code> <i>s</i>] [<code>-verbose</code>] [<code>-width</code>|<code>-xsize</code> <i>s</i>] [<i>slidefile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads an AutoCAD&#174; slide file and outputs a portable pixmap. If no <i>slidefile</i> is specified, input is read from standard input. The ppmdraw library is used to convert the vector and polygon information in the slide file to a pixmap; see the file ppmdraw.h for details on this package.</p>
 <h2>OPTIONS</h2>
 <dl>

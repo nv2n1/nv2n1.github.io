@@ -1,4 +1,5 @@
 ---
+
 title: "initstate(3)"
 name: "initstate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-initstate/"
 description: "random, srandom, initstate, setstate – random number generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 long random(void);
@@ -22,7 +22,6 @@ char *setstate(char *state);
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>random</code>() function uses a nonlinear additive feedback random number generator employing a default table of size 31 long integers to return successive pseudo-random numbers in the range from 0 to 2^31 &#8211; 1. The period of this random number generator is very large, approximately <i>16&nbsp;*&nbsp;((2^31)&nbsp;&#8211; 1)</i>. </p>
 <p> The <code>srandom</code>() function sets its argument as the seed for a new sequence of pseudo-random integers to be returned by <code>random</code>(). These sequences are repeatable by calling <code>srandom</code>() with the same seed value. If no seed value is provided, the <code>random</code>() function is automatically seeded with a value of 1. </p>
 <p> The <code>initstate</code>() function allows a state array <i>state</i> to be initialized for use by <code>random</code>(). The size of the state array <i>n</i> is used by <code>initstate</code>() to decide how sophisticated a random number generator it should use&#8212;the larger the state array, the better the random numbers will be. Current &quot;optimal&quot; values for the size of the state array <i>n</i> are 8, 32, 64, 128, and 256 bytes; other amounts will be rounded down to the nearest known amount. Using less than 8 bytes results in an error. <i>seed</i> is the seed for the initialization, which specifies a starting point for the random number sequence, and provides for restarting at the same point. </p>

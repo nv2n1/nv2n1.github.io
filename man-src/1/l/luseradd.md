@@ -1,4 +1,5 @@
 ---
+
 title: "luseradd(1)"
 name: "luseradd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-luseradd/"
 description: "luseradd – Add an user"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> luseradd [<i>OPTION</i>]&#8230; <i>user</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Adds an user with name <i>user</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

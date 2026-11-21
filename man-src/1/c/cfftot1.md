@@ -1,4 +1,5 @@
 ---
+
 title: "cfftot1(1)"
 name: "cfftot1"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cfftot1/"
 description: "cfftot1 – convert PostScript font from CFF to Type 1"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cfftot1</code> [<code>-a</code>] [<i>input</i> [<i>output</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Cfftot1</code> converts PostScript font programs in the Compact Font Format (CFF) into Type 1 font programs in PFB or PFA format, preserving all hints that can be represented in Type 1. The input file should be a raw CFF file or a PostScript-flavored OpenType font. If the file <i>output</i> is not specified output goes to the standard output. If the file <i>input</i> is not specified input comes from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

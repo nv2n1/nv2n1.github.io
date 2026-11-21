@@ -1,4 +1,5 @@
 ---
+
 title: "efi_get_next_variable_name(3)"
 name: "efi_get_next_variable_name"
 section: "3"
@@ -9,7 +10,6 @@ description: "efi_variables_supported, efi_del_variable, efi_get_variable, efi_g
 
 <h2>NAME</h2>
 <p> efi_variables_supported, efi_del_variable, efi_get_variable, efi_get_variable_attributes, efi_get_variable_size, efi_set_variable &#8211; manipulate UEFI variables</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;efivar.h&gt;
 int efi_variables_supported(void);
@@ -34,7 +34,6 @@ int efi_name_to_guid(const char *name, efi_guid_t *guid);
 int efi_guid_to_name(efi_guid_t *guid, char **name);
 int efi_guid_to_symbol(efi_guid_t *guid, char **symbol);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>efi_variables_supported</code>() tests if the UEFI variable facility is supported on the current machine. </p>
 <p> <code>efi_del_variable</code>() deletes the variable specified by <i>guid</i> and <i>name</i>. </p>
 <p> <code>efi_get_variable</code>() gets the variable specified by <i>guid</i> and <i>name</i>. The value is stored in <i>data</i>, its size in <i>data_size</i>, and its attributes are stored in <i>attributes</i>. </p>

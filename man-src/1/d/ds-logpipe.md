@@ -1,4 +1,5 @@
 ---
+
 title: "ds-logpipe(1)"
 name: "ds-logpipe"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ds-logpipe/"
 description: "ds-logpipe.py – Create and read from a named pipe instead of a log file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ds-logpipe.py</code> /full/path/to/namedpipe<br />
 &nbsp;<wbr>[<i>-m maxlinestobuffer</i>]&nbsp;<wbr>[<i>-u userid</i>]&nbsp;<wbr>[<i>-s serverpidfile</i>]&nbsp;<wbr>[<i>-t servertimeout</i>]&nbsp;<wbr>[<i>&#8211;plugin=/path/to/pluginfile.py</i>]&nbsp;<wbr>[<i>pluginfile.arg=value</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> The Named Pipe Log Script allows you to replace a log file with a named pipe attached to a script. The server can then send the log output to a script instead of to a log file. This allows you to do many different things such as: </p>
 <p>&nbsp;<wbr>*&nbsp;<wbr>log only certain events e.g. failed binds, connections from certain ip addresses, etc.<br />
 &nbsp;<wbr>*&nbsp;<wbr>log only lines that match a certain pattern<br />

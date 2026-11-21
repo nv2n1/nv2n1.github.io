@@ -1,4 +1,5 @@
 ---
+
 title: "mcdiff(1)"
 name: "mcdiff"
 section: "1"
@@ -11,7 +12,6 @@ description: "mcdiff – Internal diff viewer of GNU Midnight Commander."
 <p> mcdiff &#8211; Internal diff viewer of GNU Midnight Commander.</p>
 <h2>USAGE</h2>
 <p> <code>mcdiff</code> [-bcCdfhstVx?] file1 file2</p>
-<h2>DESCRIPTION</h2>
 <p> mcdiff is a link to <code>mc</code>, the main GNU Midnight Commander executable. Executing GNU Midnight Commander under this name requests starting the internal diff viewer which compares <i>file1</i> and <i>file2</i> specified on the command line.</p>
 <h2>OPTIONS</h2>
 <dl>

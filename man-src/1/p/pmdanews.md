@@ -1,4 +1,5 @@
 ---
+
 title: "pmdanews(1)"
 name: "pmdanews"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdanews/"
 description: "pmdanews – sample Usenet news performance metrics domain agent (PMDA)"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <code>pmdanews</code> is an example Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values related to a set of newsgroups.</p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for the news performance metrics, do the following as root: </p>

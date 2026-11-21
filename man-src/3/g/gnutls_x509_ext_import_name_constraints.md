@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_ext_import_name_constraints(3)"
 name: "gnutls_x509_ext_import_name_constraints"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_ext_import_name_constraints – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_import_name_constraints &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_import_name_constraints(const gnutls_datum_t * </code><i>ext</i><code>, gnutls_x509_name_constraints_t </code><i>nc</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_ext_import_name_constraints – API function"
 <dd> The nameconstraints intermediate structure</dd>
 <dt>unsigned int flags</dt>
 <dd> zero or <code>GNUTLS_NAME_CONSTRAINTS_FLAG_APPEND</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return an intermediate structure containing the name constraints of the provided NameConstraints extension. That structure can be used in combination with <code>gnutls_x509_name_constraints_check()</code> to verify whether a server&#8217;s name is in accordance with the constraints. </p>
 <p> When the <i>flags</i> is set to <code>GNUTLS_NAME_CONSTRAINTS_FLAG_APPEND</code>, then if the <i>nc</i> structure is empty this function will behave identically as if the flag was not set. Otherwise if there are elements in the <i>nc</i> structure then only the excluded constraints will be appended to the constraints. </p>
 <p> Note that <i>nc</i> must be initialized prior to calling this function.</p>

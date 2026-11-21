@@ -1,4 +1,5 @@
 ---
+
 title: "rumakeindex(1)"
 name: "rumakeindex"
 section: "1"
@@ -9,9 +10,7 @@ description: "rumakeindex – process a LaTeX index using Russian Cyrillic chara
 
 <h2>NAME</h2>
 <p> rumakeindex &#8211; process a LaTeX index using Russian Cyrillic characters </p>
-<h2>SYNOPSIS</h2>
 <p> <code>rumakeindex</code> <i>basename</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>rumakeindex</code> is used to run <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1) on <tt>idx</tt> files that use Russian characters. It is part of the T2 package. </p>
 <p> <code>rumakeindex</code> runs <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) on the <tt>idx</tt> file to convert Cyrillic character commands to 8-bit ASCII characters; pipes the results through <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1); and then through <code><a href="/docs/linux/man/1-tr/">tr</a></code>(1) to do some final conversions. The results are placed in a KOI8-R encoded <tt>ind</tt> file. </p>
 <h2>FILES</h2>

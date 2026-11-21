@@ -1,4 +1,5 @@
 ---
+
 title: "gplcpt(1)"
 name: "gplcpt"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gplcpt/"
 description: "gplcpt – convert GIMP colour palette (gpl) to GMT colour palette table (cpt)."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gplcpt</code> [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>gplcpt</code> converts <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1) colour palette (gpl) files to the <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1) colour palette table (cpt) format. The output is a piecewise constant (step or discrete) gradient. One could use <code><a href="/docs/linux/man/1-cptcont/">cptcont</a></code>(1) program to convert the output to a continuous cpt file if so desired. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "dasum(3)"
 name: "dasum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dasum/"
 description: "dasum.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dasum</code> (N, DX, INCX)<br />
  <i></i><code>DASUM</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qmsg(1)"
 name: "qmsg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qmsg/"
 description: "qmsg – send message to pbs batch jobs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> qmsg [-E] [-O] message_string job_identifier &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> To send a message to a job is to write a message string into one or more output files of the job. Typically this is done to leave an informative message in the output of the job. </p>
 <p> The <code>qmsg</code> command writes messages into the files of jobs by sending a <i>Message Job</i> batch request to the batch server that owns the job. The qmsg command does not directly write the message into the files of the job.</p>
 <h2>OPTIONS</h2>

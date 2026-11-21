@@ -1,4 +1,5 @@
 ---
+
 title: "ambiguous_words(1)"
 name: "ambiguous_words"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ambiguous_words/"
 description: "ambiguous_words – generate sets of words Tesseract is likely to find ambiguous"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ambiguous_words</code> [-l lang] <i>TESSDATADIR</i> <i>WORDLIST</i> <i>AMBIGUOUSFILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/1-ambiguous_words/">ambiguous_words</a>(1) runs Tesseract in a special mode, and for each word in word list, produces a set of words which Tesseract thinks might be ambiguous with it. <i>TESSDATADIR</i> must be set to the absolute path of a directory containing <i>tessdata/lang.traineddata</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-tesseract/">tesseract</a>(1)</p>

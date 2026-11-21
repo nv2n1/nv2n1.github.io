@@ -1,4 +1,5 @@
 ---
+
 title: "cungql(3)"
 name: "cungql"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cungql/"
 description: "cungql.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cungql</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>CUNGQL</code></p>

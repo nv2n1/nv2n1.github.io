@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-table(1)"
 name: "shtool-table"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-shtool-table/"
 description: "shtool table – GNU shtool pretty-print a field-separated list"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>shtool table</code> [<code>-F</code>|<code>&#8211;field-sep</code> <i>sep</i>] [<code>-w</code>|<code>&#8211;width</code> <i>width</i>] [<code>-c</code>|<code>&#8211;columns</code> <i>cols</i>] [<code>-s</code>|<code>&#8211;strip</code> <i>strip</i>] <i>str</i><code>sep</code><i>str</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This pretty-prints a list of strings as a table.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

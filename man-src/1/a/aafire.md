@@ -1,4 +1,5 @@
 ---
+
 title: "aafire(1)"
 name: "aafire"
 section: "1"
@@ -9,12 +10,10 @@ description: "aafire, aainfo, aasavefont, aatest – aalib example programs"
 
 <h2>NAME</h2>
 <p> aafire, aainfo, aasavefont, aatest &#8211; aalib example programs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>aafire</code> <i>[options]</i> </p>
 <p> <code>aainfo</code> <i>[options]</i> </p>
 <p> <code>aasavefont</code> <i>[options] file_name variable_name long_name short_name</i> </p>
 <p> <code>aatest</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>aafire</code>, <code>aainfo</code>, <code>aasavefont</code>, and <code>aatest</code> programs. </p>
 <p> All of these programs exist to demonstrate the capabilities of the aalib library, an ascii art library. </p>
 <p> <code>aafire</code> displays burning ascii art flames. </p>

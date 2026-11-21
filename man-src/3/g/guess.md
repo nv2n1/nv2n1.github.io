@@ -1,4 +1,5 @@
 ---
+
 title: "guess(3)"
 name: "guess"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-guess/"
 description: "QuantLib::HazardRate – Hazard-rate-curve traits."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/credit/probabilitytraits.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> typedef <code>BootstrapHelper</code>&lt; <code>DefaultProbabilityTermStructure</code> &gt; <code>helper</code> </p>

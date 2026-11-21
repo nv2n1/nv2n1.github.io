@@ -1,4 +1,5 @@
 ---
+
 title: "linux64(1)"
 name: "linux64"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-linux64/"
 description: "setarch – change reported architecture in new program environment and/or set personality flags"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>setarch</code> [<i>arch</i>] [options] [<i>program</i> [<i>argument</i>&#8230;]] </p>
 <p> <code>setarch</code> <code>&#8211;list</code>|<code>-h</code>|<code>-V</code> </p>
 <p> <code>arch</code> [options] [<i>program</i> [<i>argument</i>&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>setarch</code> modifies execution domains and process personality flags. </p>
 <p> The execution domains currently only affects the output of <code>uname -m</code>. For example, on an AMD64 system, running <code>setarch i386 </code><i>program</i> will cause <i>program</i> to see i686 instead of x86_64 as the machine type. It also allows to set various personality options. The default <i>program</i> is <code>/bin/sh</code>. </p>
 <p> Since version 2.33 the <i>arch</i> command line argument is optional and <code>setarch</code> may be used to change personality flags (ADDR_LIMIT_*, SHORT_INODE, etc) without modification of the execution domain.</p>

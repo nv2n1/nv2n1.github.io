@@ -1,4 +1,5 @@
 ---
+
 title: "gem(1)"
 name: "gem"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gem/"
 description: "gem2.7 – frontend to RubyGems, the Ruby package manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gem2.7 command [arguments&#8230;] [options&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> gem2.7 is the frontend to RubyGems, the standard package manager for Ruby. This is a basic help message containing pointers to more information. </p>
 <p> Further help:</p>
 <dl>

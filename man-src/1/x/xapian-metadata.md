@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-metadata(1)"
 name: "xapian-metadata"
 section: "1"
@@ -9,9 +10,7 @@ description: "xapian-metadata – Read and write user metadata"
 
 <h2>NAME</h2>
 <p> xapian-metadata &#8211; Read and write user metadata</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xapian-metadata</code> <i>get PATH_TO_DATABASE KEY</i></p>
-<h2>DESCRIPTION</h2>
 <p> xapian-metadata &#8211; Read and write user metadata</p>
 <dl>
 <dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "restorefont(1)"
 name: "restorefont"
 section: "1"
@@ -9,9 +10,7 @@ description: "restorefont – save or restore the SVGA font for textmode."
 
 <h2>NAME</h2>
 <p> restorefont &#8211; save or restore the SVGA font for textmode.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>restorefont {-r|-w} </code><i>filename</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The font used by SVGA when in textmode is written to or restored from <i>filename</i> using the <code>vga_gettextfont</code>(3) and <code>vga_puttextfont</code>(3) functions. </p>
 <h2>FILE FORMAT</h2>
 <p> The VGA font file <i>filename</i> has the following format: </p>

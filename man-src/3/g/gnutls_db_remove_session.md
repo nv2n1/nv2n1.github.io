@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_db_remove_session(3)"
 name: "gnutls_db_remove_session"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_db_remove_session – API function"
 
 <h2>NAME</h2>
 <p> gnutls_db_remove_session &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_db_remove_session(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will remove the current session data from the session database. This will prevent future handshakes reusing these session data. This function should be called if a session was terminated abnormally, and before <code>gnutls_deinit()</code> is called. </p>
 <p> Normally <code>gnutls_deinit()</code> will remove abnormally terminated sessions.</p>
 <h2>REPORTING BUGS</h2>

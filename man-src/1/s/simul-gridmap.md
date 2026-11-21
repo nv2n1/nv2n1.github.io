@@ -1,4 +1,5 @@
 ---
+
 title: "simul-gridmap(1)"
 name: "simul-gridmap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-simul-gridmap/"
 description: "simul-gridmap – Robot dataset simulator from a gridmap and a predefined robot path"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> simul-gridmap <i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>simul-gridmap</code> is a command-line application which generates a synthetic rawlog of a simulated robot as it follows a path (given by the <i>poses.txt</i> file) and takes measurements from a laser scanner in a world defined through an occupancy grid map.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> produce help message </p>

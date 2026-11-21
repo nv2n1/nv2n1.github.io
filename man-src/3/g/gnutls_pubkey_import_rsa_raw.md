@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_import_rsa_raw(3)"
 name: "gnutls_pubkey_import_rsa_raw"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pubkey_import_rsa_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_import_rsa_raw &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_import_rsa_raw(gnutls_pubkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>m</i><code>, const gnutls_datum_t * </code><i>e</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pubkey_import_rsa_raw – API function"
 <dd> holds the modulus</dd>
 <dt>const gnutls_datum_t * e</dt>
 <dd> holds the public exponent</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will replace the parameters in the given structure. The new parameters should be stored in the appropriate gnutls_datum.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an negative error code.</p>

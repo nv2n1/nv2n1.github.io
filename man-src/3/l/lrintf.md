@@ -1,4 +1,5 @@
 ---
+
 title: "lrintf(3)"
 name: "lrintf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lrintf/"
 description: "lrint, lrintf, lrintl, llrint, llrintf, llrintl – round to nearest integer"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 long lrint(double x);
@@ -23,7 +23,6 @@ long long llrintl(long double x);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions round their argument to the nearest integer value, using the current rounding direction (see <code><a href="/docs/linux/man/3-fesetround/">fesetround</a></code>(3)). </p>
 <p> Note that unlike the <code><a href="/docs/linux/man/3-rint/">rint</a></code>(3) family of functions, the return type of these functions differs from that of their arguments.</p>
 <h2>RETURN VALUE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "hid-replay(1)"
 name: "hid-replay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hid-replay/"
 description: "hid-replay – HID Input device replay through uhid."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hid-replay</code> [OPTIONS] [FILENAME]</p>
 <h2>OPTIONS</h2>
 <p> <code>-i, &#8211;interactive</code></p>
@@ -27,7 +27,6 @@ Hit *Ctrl-C* to stop the replay.
 <dt>
 </dt><dd> <i>one shot</i> mode: the device is created and then the events are replayed once in real time. The process exists at the end of the replay.</dd></dl>
 <p> <code>-s, &#8211;sleep X</code>: <i>sleep</i> X seconds once the device is created before next step. Useful in conjunction with <code>&#8211;one</code>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>hid-replay</code> requires the module uhid to be loaded (present in kernels 3.6+). </p>
 <p> If this kernel module is loaded, <code>hid-replay</code> allows the user to create virtual HID devices as if they were physically plugged to the system. Then, the user has the possibility to replay the previously recorded HID events that are therefore handled by the right HID kernel module. </p>
 <p> <code>hid-replay</code> needs to be able to write to /dev/uhid; in most cases this means it must be run as root. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "m2gmetis(1)"
 name: "m2gmetis"
 section: "1"
@@ -9,9 +10,7 @@ description: "m2gmetis – Converts a mesh into a graph that is compatible with 
 
 <h2>NAME</h2>
 <p> m2gmetis &#8211; Converts a mesh into a graph that is compatible with METIS.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>m2gmetis</code> [<i>options</i>] <i>&lt;meshfile&gt; &lt;graphfile&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> Required parameters</dd>

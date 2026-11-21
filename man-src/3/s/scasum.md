@@ -1,4 +1,5 @@
 ---
+
 title: "scasum(3)"
 name: "scasum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-scasum/"
 description: "scasum.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>scasum</code> (N, CX, INCX)<br />
  <i></i><code>SCASUM</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pw-dot(1)"
 name: "pw-dot"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pw-dot/"
 description: "pw-dot – The PipeWire dot graph dump"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>pw-dot</code> [<i>options</i>]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Create a .dot file of the PipeWire graph. </p>
 <p> The .dot file can then be visualized with a tool like <code>dotty</code> or rendered to a PNG file with <code>dot -Tpng pw.dot -o pw.png</code>.</p>
 <h2>OPTIONS</h2>

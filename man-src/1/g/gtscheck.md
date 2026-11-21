@@ -1,4 +1,5 @@
 ---
+
 title: "gtscheck(1)"
 name: "gtscheck"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gtscheck/"
 description: "gtscheck – checks that a surface defines a closed, orientable non self-intersecting manifold."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gtscheck</code> [<i>OPTION</i>]&nbsp;&lt;&nbsp;<i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gtscheck</code> command. </p>
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

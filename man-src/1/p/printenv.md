@@ -1,4 +1,5 @@
 ---
+
 title: "printenv(1)"
 name: "printenv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-printenv/"
 description: "printenv – print all or part of environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>printenv</code> [<i>,OPTION/</i>]&#8230; [<i>,VARIABLE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print the values of the specified environment VARIABLE(s). If no VARIABLE is specified, print name and value pairs for them all.</p>
 <dl>
 <dt><code>-0</code>, <code>&#8211;null</code></dt>

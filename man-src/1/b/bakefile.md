@@ -1,4 +1,5 @@
 ---
+
 title: "bakefile(1)"
 name: "bakefile"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-bakefile/"
 description: "bakefile – native makefiles generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bakefile</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>] <code>-f</code><i>FORMAT</i> <code>-o</code><i>OUTFILE</i> [<code>&#8211;eol=[format|dos|unix|mac|native]</code>] [<code>&#8211;wrap-output=[no|</code><i>LENGTH</i><code>]</code>] [<code>-D</code><i>VAR</i>=<i>VALUE</i>&#8230;] [<code>-I</code><i>PATH</i>&#8230;] [<code>-v</code>] [<code>-q</code>] [<code>&#8211;dry-run</code>] [<code>&#8211;touch</code>] [<code>&#8211;dump</code>] <i>file.bkl</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>bakefile</code></p>
 <dd>creates various types of Makefiles and project files from a single project description called a &quot;Bakefile&quot;.</dd>
 <h2>COMMAND LINE OPTIONS</h2>

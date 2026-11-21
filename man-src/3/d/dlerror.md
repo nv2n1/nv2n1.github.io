@@ -1,4 +1,5 @@
 ---
+
 title: "dlerror(3)"
 name: "dlerror"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-dlerror/"
 description: "dlerror – obtain error diagnostic for functions in the dlopen API"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>char *dlerror(void);</code> </p>
 <p> Link with <i>-ldl</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>dlerror</code>() function returns a human-readable, null-terminated string describing the most recent error that occurred from a call to one of the functions in the dlopen API since the last call to <code>dlerror</code>(). The returned string does <i>not</i> include a trailing newline. </p>
 <p> <code>dlerror</code>() returns NULL if no errors have occurred since initialization or since it was last called.</p>
 <h2>VERSIONS</h2>

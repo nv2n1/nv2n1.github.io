@@ -1,4 +1,5 @@
 ---
+
 title: "msginit(1)"
 name: "msginit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msginit/"
 description: "msginit – initialize a message catalog"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msginit</code> [<i>OPTION</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Creates a new PO file, initializing the meta information with values from the user&#8217;s environment. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

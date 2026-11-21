@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_client_get_request_status(3)"
 name: "gnutls_certificate_client_get_request_status"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_certificate_client_get_request_status – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_client_get_request_status &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_client_get_request_status(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get whether client certificate is requested or not.</p>
 <h2>RETURNS</h2>
 <p> 0 if the peer (server) did not request client authentication or 1 otherwise.</p>

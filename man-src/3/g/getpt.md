@@ -1,4 +1,5 @@
 ---
+
 title: "getpt(3)"
 name: "getpt"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-getpt/"
 description: "getpt – open a new pseudoterminal master"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;stdlib.h&gt;
 int getpt(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>getpt</code>() opens a new pseudoterminal device and returns a file descriptor that refers to that device. It is equivalent to opening the pseudoterminal multiplexor device </p>
 <p> open(&quot;/dev/ptmx&quot;, O_RDWR); </p>
 <p> on Linux systems, though the pseudoterminal multiplexor device is located elsewhere on some systems that use the GNU C library.</p>

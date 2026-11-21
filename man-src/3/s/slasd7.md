@@ -1,4 +1,5 @@
 ---
+
 title: "slasd7(3)"
 name: "slasd7"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasd7/"
 description: "slasd7.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasd7</code> (ICOMPQ, NL, NR, SQRE, K, D, Z, ZW, VF, VFW, VL, VLW, ALPHA, BETA, DSIGMA, IDX, IDXP, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, C, S, INFO)<br />
  <i></i><code>SLASD7</code> merges the two sets of singular values together into a single sorted set. Then it tries to deflate the size of the problem. Used by sbdsdc.</p>

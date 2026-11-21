@@ -1,4 +1,5 @@
 ---
+
 title: "dgehrd(3)"
 name: "dgehrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgehrd/"
 description: "dgehrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgehrd</code> (N, ILO, IHI, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>DGEHRD</code></p>

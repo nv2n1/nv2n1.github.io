@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_encrypt_data(3)"
 name: "gnutls_pubkey_encrypt_data"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pubkey_encrypt_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_encrypt_data &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_encrypt_data(gnutls_pubkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>plaintext</i><code>, gnutls_datum_t * </code><i>ciphertext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_pubkey_encrypt_data – API function"
 <dd> The data to be encrypted</dd>
 <dt>gnutls_datum_t * ciphertext</dt>
 <dd> contains the encrypted data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will encrypt the given data, using the public key.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

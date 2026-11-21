@@ -1,4 +1,5 @@
 ---
+
 title: "swaplength(3)"
 name: "swaplength"
 section: "3"
@@ -6,8 +7,8 @@ letter: "s"
 url: "/docs/linux/man/3-swaplength/"
 description: "QuantLib::SwaptionVolatilityStructure – Swaption-volatility structure"
 ---
+
 <p>QuantLib::SwaptionVolatilityStructure &#8211; Swaption-volatility structure </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructures/volatility/swaption/swaptionvolstructure.hpp&gt; </p>

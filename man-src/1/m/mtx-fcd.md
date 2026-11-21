@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-fcd(1)"
 name: "mtx-fcd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mtx-fcd/"
 description: "mtx-fcd – Fast Directory Change"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script fcd [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Fast Directory Change</code></p>
 <h2>OPTIONS</h2>
 <dl>

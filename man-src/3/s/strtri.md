@@ -1,4 +1,5 @@
 ---
+
 title: "strtri(3)"
 name: "strtri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-strtri/"
 description: "strtri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>strtri</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
  <i></i><code>STRTRI</code></p>

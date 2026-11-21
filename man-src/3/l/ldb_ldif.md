@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_ldif(3)"
 name: "ldb_ldif"
 section: "3"
@@ -8,7 +9,6 @@ description: "ldb_ldif –"
 ---
 
 <p> LDIF record.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ldb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> enum ldb_changetype <code>changetype</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pw-metadata(1)"
 name: "pw-metadata"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pw-metadata/"
 description: "pw-metadata – The PipeWire metadata"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pw - metadata[options][id[key[value[type]]]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Monitor, set and delete metadata on PipeWire objects. </p>
 <p> Metadata are key/type/value triplets attached to objects identified by <i>id</i>. The metadata is shared between all applications binding to the same metadata object. When an object is destroyed, all its metadata is automatically removed. </p>
 <p> When no <i>value</i> is given, <code>pw-metadata</code> will query and log the metadata matching the optional arguments <i>id</i> and <i>key</i>. Without any arguments, all metadata is displayed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "yapet2csv(1)"
 name: "yapet2csv"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-yapet2csv/"
 description: "yapet2csv – convert YAPET file to CSV file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>yapet2csv</code> [[<code>-c</code>] | [<code>-h</code>] | [<code>-V</code>]] [<code>-H</code>] [<code>-p</code>&nbsp;<wbr>{<i>password</i>}] [<code>-q</code>] [<code>-s</code>&nbsp;<wbr>{<i>separator</i>}] {<i>src</i>} {<i>dst</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Convert a YAPET file to a CSV file. The source file specified by <i>src</i> will not be modified. </dd>
 <p> The resulting CSV file <i>dst</i> has the format as shown in Table 1, &#8220;CSV file format&#8221;. </p>
 <p> <code>Table 1. CSV file format</code> </p>

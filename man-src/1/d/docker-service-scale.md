@@ -1,4 +1,5 @@
 ---
+
 title: "docker-service-scale(1)"
 name: "docker-service-scale"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-service-scale/"
 description: "docker-service-scale – Scale one or multiple replicated services"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker service scale SERVICE=REPLICAS [SERVICE=REPLICAS&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Scale one or multiple replicated services </p>
 <h2>OPTIONS</h2>
 <p> <code>-d</code>, <code>&#8211;detach</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Exit immediately instead of waiting for the service to converge</p>

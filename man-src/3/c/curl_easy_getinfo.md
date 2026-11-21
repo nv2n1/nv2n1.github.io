@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_getinfo(3)"
 name: "curl_easy_getinfo"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_easy_getinfo – extract information from a curl handle"
 
 <h2>NAME</h2>
 <p> curl_easy_getinfo &#8211; extract information from a curl handle</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>CURLcode curl_easy_getinfo(CURL *curl, CURLINFO info, &#8230; );</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Request internal information from the curl session with this function. The third argument <code>MUST</code> be a pointer to a long, a pointer to a char *, a pointer to a struct curl_slist * or a pointer to a double (as this documentation describes further down). The data pointed-to will be filled in accordingly and can be relied upon only if the function returns CURLE_OK. Use this function AFTER a performed transfer if you want to get transfer- oriented data. </p>
 <p> You should not free the memory returned by this function unless it is explicitly mentioned below.</p>
 <h2>AVAILABLE INFORMATION</h2>

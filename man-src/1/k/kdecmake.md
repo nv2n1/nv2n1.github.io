@@ -1,4 +1,5 @@
 ---
+
 title: "kdecmake(1)"
 name: "kdecmake"
 section: "1"
@@ -9,7 +10,6 @@ description: "kdecmake – Reference of available CMake custom modules."
 
 <h2>NAME</h2>
 <p> kdecmake &#8211; Reference of available CMake custom modules. </p>
-<h2>DESCRIPTION</h2>
 <p> The &quot;cmake&quot; executable is the CMake command-line interface. It may be used to configure projects in scripts. Project configuration settings may be specified on the command line with the -D option. The -i option will cause cmake to interactively prompt for such settings. </p>
 <p> CMake is a cross-platform build system generator. Projects specify their build process with platform-independent CMake listfiles included in each directory of a source tree with the name CMakeLists.txt. Users build a project by using CMake to generate a build system for a native tool on their platform. </p>
 <h2>CUSTOM MODULES</h2>

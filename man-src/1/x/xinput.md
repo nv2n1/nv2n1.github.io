@@ -1,4 +1,5 @@
 ---
+
 title: "xinput(1)"
 name: "xinput"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xinput/"
 description: "xinput – utility to configure and test X input devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xinput [OPTIONS] [DEVICE]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> xinput is a utility to list available input devices, query information about a device and change input device settings.</p>
 <h2>OPTIONS</h2>
 <dl>

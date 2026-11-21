@@ -1,4 +1,5 @@
 ---
+
 title: "sorg2l(3)"
 name: "sorg2l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sorg2l/"
 description: "sorg2l.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sorg2l</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>SORG2L</code> generates all or part of the orthogonal matrix Q from a QL factorization determined by sgeqlf (unblocked algorithm).</p>

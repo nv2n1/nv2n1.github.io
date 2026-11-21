@@ -1,4 +1,5 @@
 ---
+
 title: "realpath(1)"
 name: "realpath"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-realpath/"
 description: "realpath – print the resolved path"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>realpath</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print the resolved absolute file name; all but the last component must exist</p>
 <dl>
 <dt><code>-e</code>, <code>&#8211;canonicalize-existing</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "pinfo(1)"
 name: "pinfo"
 section: "1"
@@ -11,7 +12,6 @@ description: "pinfo – curses based lynx-style info browser"
 <p> <code>pinfo</code> &#8211; curses based lynx-style info browser</p>
 <h2>SYNTAX</h2>
 <p> <code>pinfo </code> [<i>options</i>] [<code>infopage</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> This is a program for viewing info files. You specify which page you want to read by passing it an <i>infopage</i> argument. This argument contains the name of an info page (i.e. &#8216;bash&#8217;). The program will then (by default) search for it in the current directory, <i>/usr/share/info,</i> <i>/usr/info,</i> <i>/usr/local/share/info,</i> <i>/usr/local/info.</i> and <i>/opt/info.</i> The search path can be adjusted by INFOPATH environment variable or in the configuration file. Pinfo will also automatically add the suffix &#8216;-info&#8217;, &#8216;-info.Z&#8217;, &#8216;-info.gz&#8217;, or &#8216;-info.bz2&#8217;. At present other suffixes are not recognized, but you can easily add them to the function <i>openinfo() </i> in <i>filehandling_functions.c.</i> </p>
 <p> When the search for info pages fails, man is called with the infopage argument, and it&#8217;s output is parsed by pinfo. This means that when you don&#8217;t have the appropriate info page, but have a man page instead; the man page will be viewed. </p>
 <p> When no <i>infopage</i> is specified, the default `dir&#8217; page is shown. </p>

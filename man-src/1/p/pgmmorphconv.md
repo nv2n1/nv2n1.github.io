@@ -1,4 +1,5 @@
 ---
+
 title: "pgmmorphconv(1)"
 name: "pgmmorphconv"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pgmmorphconv/"
 description: "pgmmorphconv – perform morphological convolutions: dilation, erosion"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmmorphconv</code> [ <code>-erode</code> | <code>-dilate</code> | <code>-open</code> | <code>-close</code> ] <i>templatefile</i> [<i>pgmfile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pgmmorphconv</code> performs morphological convolutions on a PGM image: dilation and erosion. </p>
 <p> <code>pgmmorphconv</code> performs a &quot;topological&quot; convolution. For each pixel of the input, <code>pgmmorphconv</code> generates an output pixel in the same position. To determine the intensity of the output pixel, <code>pgmmorphconv</code> lays the template image over the input image such that the middle pixel of the template is over the input pixel in question. <code>pgmmorphconv</code> looks at the input pixels underneath each white pixel in the template. For a dilation, the maximum intensity of all those pixels is the intensity of the output pixel. For an erosion, it is the minimum. </p>

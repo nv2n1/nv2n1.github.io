@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grep(1)"
 name: "tv_grep"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tv_grep/"
 description: "tv_grep – Filter programmes and channels from an XMLTV listings file."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <tt>&quot;tv_grep [--help] [--output FILE] [--ignore-case|-i] (EXPR | REGEXP) [FILE...]&quot;</tt></p>
-<h2>DESCRIPTION</h2>
 <p> Reads <font SIZE="-1">XMLTV</font> listings data and writes out data containing some of the programmes and channels from the original. Which programmes and channels are left in the output is controlled by the regexp or Boolean expression given. </p>
 <p> Simple usage is <code>tv_grep </code><font SIZE="-1"><code>REGEXP</code></font><code> [</code><font SIZE="-1"><code>FILE&#8230;</code></font><code>]</code>, where <font SIZE="-1"><code>REGEXP</code></font> is a Perl 5 regular expression (see <i><a href="/docs/linux/man/1-perlre/">perlre</a></i>(1)). This finds all &lt;programme&gt; elements containing text matching the regexp. The channels are left unchanged, that is, all the &lt;channel&gt; elements are output. </p>
 <p> For more advanced searches, you can specify a Boolean expression (which loosely follows the style of <i><a href="/docs/linux/man/1-find/">find</a></i>(1)). There are many tests for matching programme content against a regular expression, a few for matching channels and programmes on those channels, and a few special tests.</p>

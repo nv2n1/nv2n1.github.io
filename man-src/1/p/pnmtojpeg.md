@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtojpeg(1)"
 name: "pnmtojpeg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmtojpeg/"
 description: "pnmtojpeg – convert PNM image to a JFIF (\"JPEG\") image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtojpeg</code> [ <i>options</i> ] [ <i>filename</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pnmtojpeg</code> converts the named PBM, PGM, or PPM image file, or the standard input if no file is named, to a JFIF file on the standard output. </p>
 <p> <code>pnmtojpeg</code> uses the Independent JPEG Group&#8217;s JPEG library to create the output file. See <code><a rel="nofollow" href="http://www.ijg.org">http://www.ijg.org</a> </code> for information on the library. </p>
 <p> &quot;JFIF&quot; is the correct name for the image format commonly known as &quot;JPEG.&quot; Strictly speaking, JPEG is a method of compression. The image format using JPEG compression that is by far the most common is JFIF. There is also a subformat of TIFF that uses JPEG compression. </p>

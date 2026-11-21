@@ -1,4 +1,5 @@
 ---
+
 title: "grub-mount(1)"
 name: "grub-mount"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-mount/"
 description: "grub-mount – export GRUB filesystem with FUSE"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grub-mount</code> [<i>,OPTION/</i>&#8230;] <i>,IMAGE1 /</i>[<i>,IMAGE2 /</i>&#8230;] <i>,MOUNTPOINT/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Debug tool for filesystem driver.</p>
 <dl>
 <dt><code>-C</code>, <code>&#8211;crypto</code></dt>

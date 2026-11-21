@@ -1,4 +1,5 @@
 ---
+
 title: "openstack(1)"
 name: "openstack"
 section: "1"
@@ -10,11 +11,9 @@ description: "openstack – OpenStack Command Line Client"
 <h2>NAME</h2>
 <p> openstack &#8211; OpenStack Command Line Client </p>
 <p> OpenStack Command Line</p>
-<h2>SYNOPSIS</h2>
 <p> <code>openstack</code> [&lt;global-options&gt;] &lt;command&gt; [&lt;command-arguments&gt;] </p>
 <p> <code>openstack help</code> &lt;command&gt; </p>
 <p> <code>openstack</code> &#8211;help</p>
-<h2>DESCRIPTION</h2>
 <p> <code>openstack</code> provides a common command-line interface to OpenStack APIs. It is generally equivalent to the CLIs provided by the OpenStack project client libraries, but with a distinct and consistent command structure.</p>
 <h2>AUTHENTICATION METHODS</h2>
 <p> <code>openstack</code> uses a similar authentication scheme as the OpenStack project CLIs, with the credential information supplied either as environment variables or as options on the command line. The primary difference is the use of &#8216;project&#8217; in the name of the options <code>OS_PROJECT_NAME</code>/<code>OS_PROJECT_ID</code> over the old tenant-based names. </p>

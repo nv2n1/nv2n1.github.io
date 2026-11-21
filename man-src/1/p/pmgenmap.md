@@ -1,4 +1,5 @@
 ---
+
 title: "pmgenmap(1)"
 name: "pmgenmap"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmgenmap – generate C code to simplify handling of performance m
 
 <h2>NAME</h2>
 <p> <code>pmgenmap</code> &#8211; generate C code to simplify handling of performance metrics</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmgenmap</code> [<i>infile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Given one or more lists of metric names in <i>infile</i> or on standard input, <code>pmgenmap</code> generates C declarations and <code><a href="/docs/linux/man/1-cpp/">cpp</a></code>(1) macros suitable for use across the Performance Metrics Programming Interface (PMAPI) on standard output. </p>
 <p> The declarations produced by <code>pmgenmap</code> simplify the coding for client applications using the PMAPI. </p>
 <p> The input should consist of one or more lists of metric names of the form </p>

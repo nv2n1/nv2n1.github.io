@@ -1,4 +1,5 @@
 ---
+
 title: "identity(3)"
 name: "identity"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-identity/"
 description: "QuantLib::TridiagonalOperator – Base implementation for tridiagonal operator."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt; </p>
 <p> Inherited by <code>BSMOperator</code>, <code>DMinus</code>, <code>DPlus</code>, <code>DPlusDMinus</code>, <code>DZero</code>, and PdeOperator&lt; PdeClass &gt;. </p>
 <h3>Classes</h3>

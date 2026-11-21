@@ -1,4 +1,5 @@
 ---
+
 title: "getwchar(3)"
 name: "getwchar"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-getwchar/"
 description: "getwchar – read a wide character from standard input"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;
 wint_t getwchar(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getwchar</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-getchar/">getchar</a></code>(3) function. It reads a wide character from <i>stdin</i> and returns it. If the end of stream is reached, or if <i>ferror(stdin)</i> becomes true, it returns <code>WEOF</code>. If a wide-character conversion error occurs, it sets <i>errno</i> to <code>EILSEQ</code> and returns <code>WEOF</code>. </p>
 <p> For a nonlocking counterpart, see <code><a href="/docs/linux/man/3-unlocked_stdio/">unlocked_stdio</a></code>(3).</p>
 <h2>RETURN VALUE</h2>

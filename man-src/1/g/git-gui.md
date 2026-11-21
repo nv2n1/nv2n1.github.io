@@ -1,4 +1,5 @@
 ---
+
 title: "git-gui(1)"
 name: "git-gui"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-gui/"
 description: "git-gui – A portable graphical interface to Git"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git gui[&lt;command&gt;][arguments]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> A Tcl/Tk based graphical user interface to Git. <i>git gui</i> focuses on allowing users to make changes to their repository by making new commits, amending existing ones, creating branches, performing local merges, and fetching/pushing to remote repositories. </p>
 <p> Unlike <i>gitk</i>, <i>git gui</i> focuses on commit generation and single file annotation and does not show project history. It does however supply menu actions to start a <i>gitk</i> session from within <i>git gui</i>. </p>
 <p> <i>git gui</i> is known to work on all popular UNIX systems, Mac OS X, and Windows (under both Cygwin and MSYS). To the extent possible OS specific user interface guidelines are followed, making <i>git gui</i> a fairly native interface for users.</p>

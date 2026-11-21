@@ -1,4 +1,5 @@
 ---
+
 title: "attr_get(3)"
 name: "attr_get"
 section: "3"
@@ -17,7 +18,6 @@ int attr_get(const char *path, const char *attrname,
 int attr_getf(int fd, const char *attrname,
               char *attrvalue, int *valuelength, int flags);
 [</code></pre>
-<h2>DESCRIPTION</h2>
 <p> ] The <code>attr_get</code> and <code>attr_getf</code> functions provide a way to retrieve the value of an attribute. </p>
 <p> <i>Path</i> points to a path name for a filesystem object, and <i>fd</i> refers to the file descriptor associated with a file. If the attribute <i>attrname</i> exists, the value associated with it will be copied into the <i>attrvalue</i> buffer. The <i>valuelength</i> argument is an input/output argument that on the call to <code>attr_get</code> should contain the maximum size of attribute value the process is willing to accept. On return, the <i>valuelength</i> will have been modified to show the actual size of the attribute value returned. The <i>flags</i> argument can contain the following symbols bitwise OR&#8217;ed together:</p>
 <dl>

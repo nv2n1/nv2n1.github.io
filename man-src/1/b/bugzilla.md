@@ -1,4 +1,5 @@
 ---
+
 title: "bugzilla(1)"
 name: "bugzilla"
 section: "1"
@@ -9,9 +10,7 @@ description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
 
 <h2>NAME</h2>
 <p> bugzilla &#8211; command-line interface to Bugzilla over XML-RPC</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bugzilla</code> [<i>options</i>] [<i>command</i>] [<i>command-options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>bugzilla</code> is a command-line utility that allows access to the XML-RPC interface provided by Bugzilla. </p>
 <p> <i>command</i> is one of:<br />
  <i></i> * login &#8211; log into the given bugzilla instance<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "git-cvsexportcommit(1)"
 name: "git-cvsexportcommit"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-cvsexportcommit/"
 description: "git-cvsexportcommit – Export a single commit to a CVS checkout"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git cvsexportcommit[-h][-u][-v][-c][-P][-p][-a][-d cvsroot]
                    [-w cvsworkdir][-W][-f][-m msgprefix][PARENTCOMMIT] COMMITID
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Exports a commit from Git to a CVS checkout, making it easier to merge patches from a Git repository into a CVS repository. </p>
 <p> Specify the name of a CVS checkout using the -w switch or execute it from the root of the CVS working copy. In the latter case GIT_DIR must be defined. See examples below. </p>
 <p> It does its best to do the safe thing, it will check that the files are unchanged and up to date in the CVS checkout, and it will not autocommit by default. </p>

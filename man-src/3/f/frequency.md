@@ -1,4 +1,5 @@
 ---
+
 title: "frequency(3)"
 name: "frequency"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-frequency/"
 description: "ql/time/frequency.hpp – Frequency enumeration."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />
  #include &lt;ostream&gt; </p>
 <h3>Enumerations</h3>

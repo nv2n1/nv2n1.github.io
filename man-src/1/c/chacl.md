@@ -1,4 +1,5 @@
 ---
+
 title: "chacl(1)"
 name: "chacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chacl/"
 description: "chacl – change the access control list of a file or directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>chacl acl pathname&#8230;</code><br />
  <code>chacl -b acl dacl pathname&#8230;</code><br />
  <code>chacl -d dacl pathname&#8230;</code><br />
@@ -16,7 +16,6 @@ description: "chacl – change the access control list of a file or directory"
  <code>chacl -B pathname&#8230;</code><br />
  <code>chacl -l pathname&#8230;</code><br />
  <code>chacl -r pathname&#8230;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>chacl</i> is an IRIX-compatibility command, and is maintained for those users who are familiar with its use from either XFS or IRIX. Refer to the <code>SEE ALSO</code> section below for a description of tools which conform more closely to the (withdrawn draft) POSIX 1003.1e standard which describes Access Control Lists (ACLs). </p>
 <p> <i>chacl</i> changes the ACL(s) for a file or directory. The ACL(s) specified are applied to each file in the <tt>pathname</tt> arguments. </p>
 <p> Each ACL is a string which is interpreted using the <i><a href="/docs/linux/man/3-acl_from_text/">acl_from_text</a></i>(3) routine. These strings are made up of comma separated clauses each of which is of the form, tag:name:perm. Where <tt>tag</tt> can be:</p>

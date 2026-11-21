@@ -1,4 +1,5 @@
 ---
+
 title: "ctpmv(3)"
 name: "ctpmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctpmv/"
 description: "ctpmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctpmv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br />
  <i></i><code>CTPMV</code></p>

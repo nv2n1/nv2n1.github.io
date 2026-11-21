@@ -1,4 +1,5 @@
 ---
+
 title: "expectation(3)"
 name: "expectation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-expectation/"
 description: "QuantLib::G2Process – G2 stochastic process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/g2process.hpp&gt; </p>
 <p> Inherits <code>QuantLib::StochasticProcess</code>. </p>
 <h3>Public Member Functions</h3>

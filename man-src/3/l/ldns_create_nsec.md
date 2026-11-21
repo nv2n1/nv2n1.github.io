@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_create_nsec(3)"
 name: "ldns_create_nsec"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_create_nsec"
 
 <h2>NAME</h2>
 <p> ldns_create_nsec </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr * ldns_create_nsec(ldns_rdf *cur_owner, ldns_rdf *next_owner, ldns_rr_list *rrs); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_create_nsec</i>()</dt>
 <dd>Create a NSEC record .br <code>cur_owner</code>: the current owner which should be taken as the starting point .br <code>next_owner</code>: the rrlist which the nsec rr should point to .br <code>rrs</code>: all rrs from the zone, to find all RR types of cur_owner in .br Returns a ldns_rr with the nsec record in it</dd></dl>

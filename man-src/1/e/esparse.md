@@ -1,4 +1,5 @@
 ---
+
 title: "esparse(1)"
 name: "esparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-esparse/"
 description: "esparse – ECMAScript Parser using Esprima"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

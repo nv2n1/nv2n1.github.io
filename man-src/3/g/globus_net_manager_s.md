@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_s(3)"
 name: "globus_net_manager_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_net_manager_s –"
 ---
 
 <p> Net Manager Definition.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_net_manager.h&gt;</p>
 <h3>Data Fields</h3>
 <p> const char * <code>name</code> </p>

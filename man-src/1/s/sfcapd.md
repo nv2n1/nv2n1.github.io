@@ -1,4 +1,5 @@
 ---
+
 title: "sfcapd(1)"
 name: "sfcapd"
 section: "1"
@@ -9,10 +10,8 @@ description: "sfcapd – sflow capture daemon"
 
 <h2>NAME</h2>
 <p> sfcapd &#8211; sflow capture daemon</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sfcapd [options]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>sfcapd</code></p>
 <dd>is the sflow capture daemon of the nfdump tools. It reads sflow data from the network and stores it into nfcapd compatible files. The output file is automatically rotated and renamed every n minutes &#8211; typically 5 min &#8211; according the timestamp YYYYMMddhhmm of the interval e.g. nfcapd.200407110845 contains the data from July 11th 2004 08:45 onward. sfcapd supports sFlow version 4 and 5 datagrams. </dd>
 <p> Sflow is an industry standard developed by InMon Corporation. For more information see <a rel="nofollow" href="http://sflow.org.">http://sflow.org.</a></p>

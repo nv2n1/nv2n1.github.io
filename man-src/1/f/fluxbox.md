@@ -1,4 +1,5 @@
 ---
+
 title: "fluxbox(1)"
 name: "fluxbox"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fluxbox/"
 description: "fluxbox – A lightweight window manager for the X Windowing System"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fluxbox</code> [-rc <i>rcfile</i>] [-log <i>logfile</i>] [-display <i>display</i>] [-screen all|<i>scr</i>,<i>scr</i>&#8230;] [-verbose] [-sync] </p>
 <p> <code>fluxbox</code> [-v | -version] | [-h | -help] | [-i | -info] | [-list-commands]</p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</code> is a window manager. As such it provides configurable window decorations, a root menu to launch applications and a toolbar that shows the current workspace name, a set of application names and the current time. There is also a workspace menu to add or remove workspaces. </p>
 <p> Fluxbox can iconify (or minimize) windows to the toolbar One click and they reappear. A double-click on the titlebar of the window will <i>shade</i> it; i.e. the window will disappear, and only the titlebar will remain visible. </p>
 <p> There are also two areas commonly used by small applets: the &#8216;slit&#8217; can be used to dock small applications; e.g. most of the &#8220;bbtools&#8221; and &#8220;Window Maker dockapps&#8221; can use the slit, and the &#8216;systray&#8217; which lives in the toolbar supports standard system tray icons provided by some applications. </p>

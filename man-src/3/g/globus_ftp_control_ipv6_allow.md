@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_ipv6_allow(3)"
 name: "globus_ftp_control_ipv6_allow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_control_ipv6_allow/"
 description: "globus_ftp_control.h – GridFTP Control Connection API."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common.h&#8217;<br />
  #include &#8216;globus_error_string.h&#8217;<br />
  #include &#8216;globus_io.h&#8217;<br />

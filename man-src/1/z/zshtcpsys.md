@@ -1,4 +1,5 @@
 ---
+
 title: "zshtcpsys(1)"
 name: "zshtcpsys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshtcpsys/"
 description: "zshtcpsys – zsh tcp system"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> A module <code>zsh/net/tcp</code> is provided to provide network I/O over TCP/IP from within the shell; see its description in <i><a href="/docs/linux/man/1-zshmodules/">zshmodules</a></i>(1). This manual page describes a function suite based on the module. If the module is installed, the functions are usually installed at the same time, in which case they will be available for autoloading in the default function search path. In addition to the <code>zsh/net/tcp</code> module, the <code>zsh/zselect</code> module is used to implement timeouts on read operations. For troubleshooting tips, consult the corresponding advice for the <code>zftp</code> functions described in <i><a href="/docs/linux/man/1-zshzftpsys/">zshzftpsys</a></i>(1). </p>
 <p> There are functions corresponding to the basic I/O operations open, close, read and send, named <code>tcp_open</code> etc., as well as a function <code>tcp_expect</code> for pattern match analysis of data read as input. The system makes it easy to receive data from and send data to multiple named sessions at once. In addition, it can be linked with the shell&#8217;s line editor in such a way that input data is automatically shown at the terminal. Other facilities available including logging, filtering and configurable output prompts. </p>
 <p> To use the system where it is available, it should be enough to `<code>autoload -U tcp_open</code>&#8216; and run <code>tcp_open</code> as documented below to start a session. The <code>tcp_open</code> function will autoload the remaining functions. </p>

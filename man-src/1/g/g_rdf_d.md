@@ -1,4 +1,5 @@
 ---
+
 title: "g_rdf_d(1)"
 name: "g_rdf_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_rdf – calculates radial distribution functions"
 <h2>NAME</h2>
 <p> g_rdf &#8211; calculates radial distribution functions </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_rdf</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> rdf.xvg </i> <code>-sq</code><i> sq.xvg </i> <code>-cn</code><i> rdf_cn.xvg </i> <code>-hq</code><i> hq.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-bin</code><i> real </i> <code>-[no]com</code><i></i> <code>-rdf</code><i> enum </i> <code>-[no]pbc</code><i></i> <code>-[no]norm</code><i></i> <code>-[no]xy</code><i></i> <code>-cut</code><i> real </i> <code>-ng</code><i> int </i> <code>-fade</code><i> real </i> <code>-nlevel</code><i> int </i> <code>-startq</code><i> real </i> <code>-endq</code><i> real </i> <code>-energy</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> The structure of liquids can be studied by either neutron or X-ray scattering. The most common way to describe liquid structure is by a radial distribution function. However, this is not easy to obtain from a scattering experiment. </p>
 <p> g_rdf calculates radial distribution functions in different ways. The normal method is around a (set of) particle(s), the other method is around the center of mass of a set of particles. With both methods rdf&#8217;s can also be calculated around axes parallel to the z-axis with option <code> -xy</code>. </p>
 <p> The option <code> -rdf</code> sets the type of rdf to be computed. Default is for atoms or particles, but one can also select center of mass or geometry of molecules or residues. In all cases only the atoms in the index groups are taken into account. For molecules and/or the center of mass option a run input file is required. Other weighting than COM or COG can currently only be achieved by providing a run input file with different masses. Option <code> -com</code> also works in conjunction with <code> -rdf</code>. </p>

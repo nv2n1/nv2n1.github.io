@@ -1,4 +1,5 @@
 ---
+
 title: "kfind(1)"
 name: "kfind"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-kfind/"
 description: "kfind – file find utility for KDE"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kfind</code> [<code>searchpath</code>] [KDE Generic Options] [Qt Generic Options]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The Find Files tool is a useful method of searching for specific files on your computer, or for searching for files that match a pattern. An example of this could include searching for files of a particular type or with certain letters in the filename, or that contain a certain piece of text in their contents. </dd>
 <p> KFind is a graphical tool, and not normally run from the command line.</p>
 <h2>OPTIONS</h2>

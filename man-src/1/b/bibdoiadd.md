@@ -1,4 +1,5 @@
 ---
+
 title: "bibdoiadd(1)"
 name: "bibdoiadd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bibdoiadd/"
 description: "bibdoiadd.pl – add DOI numbers to papers in a given bib file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> bibdoiadd [<code>-c</code> <i>config_file</i>] [<code>-C</code> 1|0] [<code>-e</code> 1|0] [<code>-f</code>] [<code>-o</code> <i>output</i>] <i>bib_file</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -21,7 +21,6 @@ description: "bibdoiadd.pl – add DOI numbers to papers in a given bib file"
 <dd> Force checking doi number even if one is present</dd>
 <dt><code>-o</code> <i>output</i></dt>
 <dd> Output file. If this option is not used, the name for the output file is formed by adding <tt>&quot;_doi&quot;</tt> to the input file</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The script reads a BibTeX file. It checks whether the entries have DOIs. If not, it tries to contact <a rel="nofollow" href="http://www.crossref.org">http://www.crossref.org</a> to get the corresponding <font SIZE="-1">DOI.</font> The result is a BibTeX file with the fields <tt>&quot;doi=...&quot;</tt> added. </p>
 <p> The name of the output file is either set by the <code>-o</code> option or is derived by adding the suffix <tt>&quot;_doi&quot;</tt> to the output file. </p>
 <p> There are two options for making queries with Crossref: free account and paid membership. In the first case you still must register with Crossref and are limited to a small number of queries, see the agreement at <tt>&quot;<a rel="nofollow" href="http://www.crossref.org/01company/free_services_agreement.html">http://www.crossref.org/01company/free_services_agreement.html</a>&quot;</tt>. In the second case you have a username and password, and can use them for automatic queries. I am not sure whether the use of this script is allowed for the free account holders. Anyway if you try to add <font SIZE="-1">DOI</font> to a large number of entries, you should register as a paid member.</p>

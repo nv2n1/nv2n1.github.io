@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_crl_dist_points(3)"
 name: "gnutls_x509_crt_get_crl_dist_points"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_get_crl_dist_points – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_crl_dist_points &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_crl_dist_points(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>san</i><code>, size_t * </code><i>san_size</i><code>, unsigned int * </code><i>reason_flags</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_x509_crt_get_crl_dist_points – API function"
 <dd> Revocation reasons. An ORed sequence of flags from <code>gnutls_x509_crl_reason_flags_t</code>.</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function retrieves the CRL distribution points (2.5.29.31), contained in the given certificate in the X509v3 Certificate Extensions.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> and updates <i>ret_size</i> if<br />

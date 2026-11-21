@@ -1,4 +1,5 @@
 ---
+
 title: "grid-proxy-info(1)"
 name: "grid-proxy-info"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-grid-proxy-info/"
 description: "grid-proxy-info – Display information about a proxy certificate"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grid-proxy-info</code> -help | -usage | -version </p>
 <p> <code>grid-proxy-info</code> -e | -exists [-valid <i>HOURS:MINUTES</i> | -v <i>HOURS:MINUTES</i>] [-hours <i>HOURS</i> | -h <i>HOURS</i>] [-bits <i>BITS</i> | -b <i>BITS</i>] </p>
 <p> <code>grid-proxy-info</code> [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>grid-proxy-info</code> program extracts information from an X.509 proxy certificates, and optionally displays or returns an exit code based on that information. </p>
 <p> The default mode of operation is to print the following facts about the current user&#8217;s default proxy: subject, issuer, identity, type, strength, path, and time left. If the command-line option <i>-exists</i> or <i>-e</i> is included in the command-line, nothing is printed unless one of the print options is specified. Instead, <code>grid-proxy-info</code> determines if a valid proxy exists and, if so, exits with the exit code 0; if a proxy does not exist or is not valid, <code>grid-proxy-info</code> exits with the exit code 1. Additional validity criteria can be added by using the <i>-valid</i>, <i>-v</i>, <i>-hours</i>, <i>-h</i>, <i>-bits</i>, or <i>-b</i> command-line options. If used, these options must occur <code>after</code> the <i>-e</i> or <i>-exists</i> command-line options. Those options are only valid if one of the <i>-e</i> or <i>-exists</i> command-line options is used.</p>
 <h2>OPTIONS</h2>

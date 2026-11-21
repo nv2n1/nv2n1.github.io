@@ -1,4 +1,5 @@
 ---
+
 title: "itofix(3)"
 name: "itofix"
 section: "3"
@@ -9,10 +10,8 @@ description: "itofix – Converts an integer to fixed point. Allegro game progra
 
 <h2>NAME</h2>
 <p> itofix &#8211; Converts an integer to fixed point. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed itofix(int x);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Converts an integer to fixed point. This is the same thing as x&lt;&lt;16. Remember that overflows (trying to convert an integer greater than 32767) and underflows (trying to convert an integer lesser than -32768) are not detected even in debug builds! The values simply &quot;wrap around&quot;. Example: </p>
 <pre><code>
 fixed number;

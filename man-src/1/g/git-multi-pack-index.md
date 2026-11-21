@@ -1,4 +1,5 @@
 ---
+
 title: "git-multi-pack-index(1)"
 name: "git-multi-pack-index"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-multi-pack-index/"
 description: "git-multi-pack-index – Write and verify multi-pack-indexes"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git multi - pack - index[--object - dir = &lt;dir&gt;][--[no - ] bitmap]&lt;sub - command&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Write or verify a multi-pack-index (MIDX) file.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;object-dir=&lt;dir&gt;</p>

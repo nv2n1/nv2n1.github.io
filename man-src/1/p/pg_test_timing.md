@@ -1,4 +1,5 @@
 ---
+
 title: "pg_test_timing(1)"
 name: "pg_test_timing"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pg_test_timing/"
 description: "pg_test_timing – measure timing overhead"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_test_timing</code> [<i>option</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>pg_test_timing is a tool to measure the timing overhead on your system and confirm that the system time never moves backwards. Systems that are slow to collect timing data can give less accurate <code>EXPLAIN ANALYZE</code> results.</dd>
 <h2>OPTIONS</h2>
 <p> pg_test_timing accepts the following command-line options: </p>

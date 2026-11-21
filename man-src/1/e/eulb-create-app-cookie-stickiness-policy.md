@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-app-cookie-stickiness-policy(1)"
 name: "eulb-create-app-cookie-stickiness-policy"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-create-app-cookie-stickiness-policy – Create a new stickine
 
 <h2>NAME</h2>
 <p> eulb-create-app-cookie-stickiness-policy &#8211; Create a new stickiness policy for a load balancer, whereby the server application generates a cookie and adds it to its responses. The load balancer will then use this cookie to route requests from each user to the same back end instance. This type of policy can only be associated with HTTP or HTTPS listeners,</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-create-app-cookie-stickiness-policy <code>-c</code> COOKIENAME <code>-p</code> POLICY</p>
 <dl>
 <dt>[-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a new stickiness policy for a load balancer, whereby the server application generates a cookie and adds it to its responses. The load balancer will then use this cookie to route requests from each user to the same back end instance. This type of policy can only be associated with HTTP or HTTPS listeners,</p>
 <h3>positional arguments:</h3>
 <dl>

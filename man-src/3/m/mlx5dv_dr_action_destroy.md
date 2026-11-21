@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_dr_action_destroy(3)"
 name: "mlx5dv_dr_action_destroy"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_dr_action_destroy/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_dr_domain_create, mlx5dv_dr_domain_sync, mlx5dv_dr_domain_destroy - Manage flow domains 
+mlx5dv_dr_domain_create, mlx5dv_dr_domain_sync, mlx5dv_dr_domain_destroy - Manage flow domains 
 
  mlx5dv_dr_table_create, mlx5dv_dr_table_destroy - Manage flow tables 
 
@@ -34,8 +30,6 @@ url: "/docs/linux/man/3-mlx5dv_dr_action_destroy/"
  mlx5dv_dr_action_create_flow_meter, mlx5dv_dr_action_modify_flow_meter - Create and modify meter action 
 
  mlx5dv_dr_action_destroy - Destroy actions 
-
-<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -95,11 +89,7 @@ int mlx5dv_dr_action_modify_flow_meter(struct mlx5dv_dr_action *action,
 int mlx5dv_dr_action_destroy(struct mlx5dv_dr_action *action);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The Direct Rule API (mlx5dv_dr_*) allows complete access by verbs application to the device`s packet steering functionality. 
+The Direct Rule API (mlx5dv_dr_*) allows complete access by verbs application to the device`s packet steering functionality. 
 
  Steering flow rules are the combination of attributes with a match pattern and a list of actions. Rules can have several distinct actions (such as counting, encapsulating, decapsulating before redirecting packets to a particular queue or port, etc.). In order to manage the rule execution order for the packet processing matching by HW, multiple flow tables in an ordered chain and multiple flow matchers sorted by priorities are defined.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "git-daemon(1)"
 name: "git-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-daemon/"
 description: "git-daemon – A really simple server for Git repositories"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git daemon[--verbose][--syslog][--export - all]
           [--timeout = &lt;n&gt;][--init - timeout = &lt;n&gt;][--max - connections = &lt;n&gt;]
@@ -24,7 +24,6 @@ git daemon[--verbose][--syslog][--export - all]
           [--log - destination = (stderr | syslog | none)]
           [&lt;directory&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> A really simple TCP Git daemon that normally listens on port &quot;DEFAULT_GIT_PORT&quot; aka 9418. It waits for a connection asking for a service, and will serve that service if it is enabled. </p>
 <p> It verifies that the directory has the magic file &quot;git-daemon-export-ok&quot;, and it will refuse to export any Git directory that hasn&#8217;t explicitly been marked for export this way (unless the <code>&#8211;export-all</code> parameter is specified). If you pass some directory paths as <i>git daemon</i> arguments, you can further restrict the offers to a whitelist comprising of those. </p>
 <p> By default, only <code>upload-pack</code> service is enabled, which serves <i>git fetch-pack</i> and <i>git ls-remote</i> clients, which are invoked from <i>git fetch</i>, <i>git pull</i>, and <i>git clone</i>. </p>

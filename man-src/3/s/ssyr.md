@@ -1,4 +1,5 @@
 ---
+
 title: "ssyr(3)"
 name: "ssyr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssyr/"
 description: "ssyr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyr</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br />
  <i></i><code>SSYR</code></p>

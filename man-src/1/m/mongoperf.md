@@ -1,4 +1,5 @@
 ---
+
 title: "mongoperf(1)"
 name: "mongoperf"
 section: "1"
@@ -9,7 +10,6 @@ description: "mongoperf – MongoDB Performance Utility"
 
 <h2>NAME</h2>
 <p> mongoperf &#8211; MongoDB Performance Utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mongoperf</code> is a utility to check disk I/O performance independently of MongoDB. </p>
 <p> It times tests of random disk I/O and presents the results. You can use <code>mongoperf</code> for any case apart from MongoDB. The <code>mmf</code> <code>true</code> mode is completely generic. In that mode it is somewhat analogous to tools such as <i>bonnie++</i> (albeit mongoperf is simpler). </p>
 <p> Specify options to <code>mongoperf</code> using a JavaScript document. </p>

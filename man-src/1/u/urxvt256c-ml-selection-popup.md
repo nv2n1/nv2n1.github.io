@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-ml-selection-popup(1)"
 name: "urxvt256c-ml-selection-popup"
 section: "1"
@@ -6,14 +7,9 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-selection-popup/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+selection-popup (enabled by default) 
 
- selection-popup (enabled by default) 
-
-<h2>DESCRIPTION</h2>
-
- Binds a popup menu to Ctrl-Button3 that lets you paste the X selections and either modify or use the internal selection text in various ways (such as uri unescaping, perl evaluation, web-browser starting etc.), depending on content. 
+Binds a popup menu to Ctrl-Button3 that lets you paste the X selections and either modify or use the internal selection text in various ways (such as uri unescaping, perl evaluation, web-browser starting etc.), depending on content. 
 
  Other extensions can extend this popup menu by pushing a code reference onto <tt>&quot;@{ $term-&gt;{selection_popup_hook} }&quot;</tt>, which gets called whenever the popup is being displayed. 
 

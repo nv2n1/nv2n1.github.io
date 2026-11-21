@@ -1,4 +1,5 @@
 ---
+
 title: "mate-dictionary(1)"
 name: "mate-dictionary"
 section: "1"
@@ -9,14 +10,12 @@ description: "mate-dictionary – Look up words on dictionaries"
 
 <h2>NAME</h2>
 <p> mate-dictionary &#8211; Look up words on dictionaries</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>mate-dictionary</code>
 <br>
 <code>mate-dictionary</code><i> [options]</i>
 </pre>
 <p> or select <code>Dictionary</code> from the <code>Accessories</code> submenu of the Applications menu.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>MATE Dictionary</code> provides dictionary definitions of words, using a dictionary source. </p>
 <p> For full documentation see the <code>MATE Dictionary</code> online help. </p>
 <h2>OPTIONS</h2>

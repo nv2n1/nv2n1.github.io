@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_net_ntop(3)"
 name: "lwres_net_ntop"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-lwres_net_ntop/"
 description: "lwres_net_ntop – lightweight resolver IP address presentation"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/net.h&gt;
 </code></pre>
 <dl>
 <dt> <code>const char * lwres_net_ntop(int&nbsp;<wbr></code><i>af</i><code>, const void&nbsp;<wbr>*</code><i>src</i><code>, char&nbsp;<wbr>*</code><i>dst</i><code>, size_t&nbsp;<wbr></code><i>size</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lwres_net_ntop()</code></p>
 <dd>converts an IP address of protocol family <i>af</i> &#8212; IPv4 or IPv6 &#8212; at location <i>src</i> from network format to its conventional representation as a string. For IPv4 addresses, that string would be a dotted-decimal. An IPv6 address would be represented in colon notation as described in RFC1884. </dd>
 <p> The generated string is copied to <i>dst</i> provided <i>size</i> indicates it is long enough to store the ASCII representation of the address.</p>

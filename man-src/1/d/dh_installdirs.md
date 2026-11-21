@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installdirs(1)"
 name: "dh_installdirs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installdirs/"
 description: "dh_installdirs – create subdirectories in package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installdirs</code> [<i>debhelper options</i>] [<code>-A</code>] [<i>dir</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installdirs</code> is a debhelper program that is responsible for creating subdirectories in package build directories. </p>
 <p> Many packages can get away with omitting the call to <code>dh_installdirs</code> completely. Notably, other <code>dh_*</code> commands are expected to create directories as needed.</p>
 <h2>FILES</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldiv_t(3)"
 name: "ldiv_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldiv_t/"
 description: "system_data_types – overview of system data types"
 ---
 
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><i>aiocb</i></dt>
 <dd>

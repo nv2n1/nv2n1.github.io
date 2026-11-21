@@ -1,4 +1,5 @@
 ---
+
 title: "gmtlogo(1)"
 name: "gmtlogo"
 section: "1"
@@ -9,10 +10,8 @@ description: "gmtlogo – Adding a GMT graphics logo overlay to an illustration"
 
 <h2>NAME</h2>
 <p> gmtlogo &#8211; Adding a GMT graphics logo overlay to an illustration</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtlogo</code> [ [<code>g</code>|<code>j</code>|<code>J</code>|<code>n</code>|<code>x</code>]<i>refpoint</i><code>+w</code><i>width</i>[<code>+j</code><i>justify</i>][<code>+o</code><i>dx</i>[/<i>dy</i>]] ] [ [<code>+c</code><i>clearances</i>][<code>+g</code><i>fill</i>][<code>+i</code>[[<i>gap</i>/]*pen*]][<code>+p</code>[<i>pen</i>]][<code>+r</code>[<i>radius</i>]][<code>+s</code>[[<i>dx</i>/<i>dy</i>/][<i>shade</i>]]] ] [ <i>parameters</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ ] [ ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> This module plots the GMT logo on a map. By default, the GMT logo is 2 inches wide and 1 inch high and will be positioned relative to the current plot origin. Use various options to change this and to place a transparent or opaque rectangular map panel behind the GMT logo.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

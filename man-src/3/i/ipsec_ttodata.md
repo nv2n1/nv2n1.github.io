@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_ttodata(3)"
 name: "ipsec_ttodata"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_ttodata/"
 description: "ipsec_ttodata, ipsec_datatot – convert binary data bytes from and to text formats"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;freeswan.h&gt;
 </code></pre>
@@ -15,7 +15,6 @@ description: "ipsec_ttodata, ipsec_datatot – convert binary data bytes from an
 <dt> <code>const char *ttodata(const char&nbsp;<wbr>*&nbsp;<wbr></code><i>src</i><code>, size_t&nbsp;<wbr></code><i>srclen</i><code>, int&nbsp;<wbr></code><i>base</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>, size_t&nbsp;<wbr></code><i>dstlen</i><code>, size_t&nbsp;<wbr>*&nbsp;<wbr></code><i>lenp</i><code>);</code> </dt>
 <dt> <code>const char *ttodatav(const char&nbsp;<wbr>*&nbsp;<wbr></code><i>src</i><code>, size_t&nbsp;<wbr></code><i>srclen</i><code>, int&nbsp;<wbr></code><i>base</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>, size_t&nbsp;<wbr></code><i>dstlen</i><code>, size_t&nbsp;<wbr>*&nbsp;<wbr></code><i>lenp</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>errp</i><code>, size_t&nbsp;<wbr></code><i>errlen</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code> </dt>
 <dt> <code>size_t datatot(const char&nbsp;<wbr>*&nbsp;<wbr></code><i>src</i><code>, size_t&nbsp;<wbr></code><i>srclen</i><code>, int&nbsp;<wbr></code><i>format</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>, size_t&nbsp;<wbr></code><i>dstlen</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>Ttodata</i>, <code>ttodatav</code>, and <code>datatot</code></p>
 <dd>convert arbitrary binary data (e.g. encryption or authentication keys) from and to more-or-less human-readable text formats. </dd>
 <p> Currently supported formats are hexadecimal, base64, and characters. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlslap(1)"
 name: "mysqlslap"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlslap/"
 description: "mysqlslap – load emulation client"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlslap [</code><i>options</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mysqlslap</code></p>
 <dd>is a diagnostic program designed to emulate client load for a MySQL server and to report the timing of each stage. It works as if multiple clients are accessing the server. </dd>
 <p> Invoke <code>mysqlslap</code> like this: </p>

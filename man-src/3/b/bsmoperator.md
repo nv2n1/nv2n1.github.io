@@ -1,4 +1,5 @@
 ---
+
 title: "bsmoperator(3)"
 name: "bsmoperator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bsmoperator/"
 description: "ql/methods/finitedifferences/bsmoperator.hpp – differential operator for Black-Scholes-Merton equation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>

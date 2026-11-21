@@ -1,4 +1,5 @@
 ---
+
 title: "mhmail(1)"
 name: "mhmail"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-mhmail/"
 description: "mhmail – send or read mail"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhmail</code> [<code>-to</code>] addrs &#8230; [<code>-attach</code> <i>file</i>] [<code>-body</code> <i>text</i>] [<code>-cc</code> <i>addrs</i> &#8230;] [<code>-from</code> <i>addr</i>] [<code>-headerfield</code> <i>name:value</i>] [<code>-subject</code> <i>subject</i>] [<code>-resent</code>] [switches for <i>post</i> &#8230; | -profile [switches for <i>send</i> &#8230;]] [<code>-send</code> | <code>-nosend</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dl>
 <dt> <code>mhmail</code></dt>
 <dd>with no arguments is equivalent to <code>inc</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mhmail</code> is intended as a replacement for the standard Berkeley mail program (<code>mail</code> or <code>mailx</code>), which is compatible with <code>nmh</code>. This program is intended for the use of programs such as <code>cron</code>, which expect to send mail automatically to various addresses. It is also used by various <code>nmh</code> commands to mail various error notifications. Although <code>mhmail</code> can be used interactively, it is recommended that <code>comp</code> and <code>send</code> be used instead to send messages. </p>
 <p> When invoked without arguments, it simply invokes <code>inc</code> to incorporate new messages from the user&#8217;s maildrop. </p>
 <p> When one or more addresses are specified, a message is read from the standard input and spooled to a temporary file. <code>mhmail</code> then invokes <code>post</code>, by default, with the name of the temporary file as its argument to deliver the message to the specified address. </p>

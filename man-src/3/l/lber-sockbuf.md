@@ -1,4 +1,5 @@
 ---
+
 title: "lber-sockbuf(3)"
 name: "lber-sockbuf"
 section: "3"
@@ -9,7 +10,6 @@ description: "ber_sockbuf_alloc, ber_sockbuf_free, ber_sockbuf_ctrl, ber_sockbuf
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;lber.h&gt;</code> </p>
 <p> <code>Sockbuf *ber_sockbuf_alloc( void );</code> </p>
 <p> <code>void ber_sockbuf_free(Sockbuf *</code><i>sb</i><code>);</code> </p>
@@ -33,7 +33,6 @@ typedef struct sockbuf_io {
     int (*sbi_close)(Sockbuf_IO_Desc *sbiod);
 } Sockbuf_IO;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These routines are used to manage the low level I/O operations performed by the Lightweight BER library. They are called implicitly by the other libraries and usually do not need to be called directly from applications. The I/O framework is modularized and new transport layers can be supported by appropriately defining a <code>Sockbuf_IO</code> structure and installing it onto an existing <code>Sockbuf</code>. <code>Sockbuf</code> structures are allocated and freed by <code>ber_sockbuf_alloc</code>() and <code>ber_sockbuf_free</code>(), respectively. The <code>ber_sockbuf_ctrl</code>() function is used to get and set options related to a <code>Sockbuf</code> or to a specific I/O layer of the <code>Sockbuf</code>. The <code>ber_sockbuf_add_io</code>() and <code>ber_sockbuf_remove_io</code>() functions are used to add and remove specific I/O layers on a <code>Sockbuf</code>. </p>
 <p> Options for <code>ber_sockbuf_ctrl</code>() include:</p>
 <dl>

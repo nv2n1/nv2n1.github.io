@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-nodes(3)"
 name: "antlr3-nodes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-nodes/"
 description: "ANTLR3_COMMON_TREE_NODE_STREAM_struct –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreenodestream.h">antlr3commontreenodestream.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_MARKER</code> <code>absoluteNodeIndex</code><br />

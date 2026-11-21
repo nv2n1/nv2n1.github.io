@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-profile(1)"
 name: "mtx-profile"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mtx-profile/"
 description: "mtx-profile – ConTeXt MkIV LuaTeX Profiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script profile [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt MkIV LuaTeX Profiler</code></p>
 <h2>OPTIONS</h2>
 <dl>

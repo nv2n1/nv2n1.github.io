@@ -1,4 +1,5 @@
 ---
+
 title: "gps2udp(1)"
 name: "gps2udp"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gps2udp/"
 description: "gps2udp – feed the take from gpsd to one or more aggregation sites"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gps2udp</code> [-h] [-n] [-j] [-a] [-u&nbsp;<wbr><i>hostname:udpport</i>] [-c&nbsp;<wbr><i>count</i>] [-d&nbsp;<wbr><i>1|2</i>] [-v] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>gps2udp is a tool to connect to gpsd and output the received sentences to one or many UDP host:port destinations. This makes the program useful for feeding AIS information from gpsd to aishub, marinetraffic, shipfinder,&#8230; </dd>
 <p> gps2udp does not require root privileges, and can be run concurrently with other tools connecting to the local gpsd without causing problems. </p>
 <p> The output will consist of one or both of NMEA (-n option) or JSON (-j option) gpsd sentences. The output is sent to one or many destinations host through a UDP network socket (-u host:port options) . </p>

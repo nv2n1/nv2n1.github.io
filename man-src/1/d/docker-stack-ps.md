@@ -1,4 +1,5 @@
 ---
+
 title: "docker-stack-ps(1)"
 name: "docker-stack-ps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-stack-ps/"
 description: "docker-stack-ps – List the tasks in the stack"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker stack ps [OPTIONS] STACK</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List the tasks in the stack </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

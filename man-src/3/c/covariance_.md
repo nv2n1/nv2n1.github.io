@@ -1,4 +1,5 @@
 ---
+
 title: "covariance_(3)"
 name: "covariance_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-covariance_/"
 description: "QuantLib::LfmHullWhiteParameterization – Libor market model parameterization based on Hull White paper"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmhullwhiteparam.hpp&gt; </p>
 <p> Inherits <code>QuantLib::LfmCovarianceParameterization</code>. </p>
 <h3>Public Member Functions</h3>

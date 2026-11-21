@@ -1,4 +1,5 @@
 ---
+
 title: "stdbuf(1)"
 name: "stdbuf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-stdbuf/"
 description: "stdbuf – Run COMMAND, with modified buffering operations for its standard streams."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>stdbuf</code> <i>,OPTION/</i>&#8230; <i>,COMMAND/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Run COMMAND, with modified buffering operations for its standard streams. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

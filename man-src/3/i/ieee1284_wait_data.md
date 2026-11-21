@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_wait_data(3)"
 name: "ieee1284_wait_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_wait_data/"
 description: "ieee1284_read_data, ieee1284_write_data, ieee1284_data_dir, ieee1284_wait_data – control the data lines"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
@@ -16,7 +16,6 @@ description: "ieee1284_read_data, ieee1284_write_data, ieee1284_data_dir, ieee12
 <dt> <code>void ieee1284_write_data(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>dt</i><code>);</code></dt>
 <dt> <code>int ieee1284_data_dir(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>reverse</i><code>);</code></dt>
 <dt> <code>int ieee1284_wait_data(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>mask</i><code>, unsigned char&nbsp;<wbr></code><i>val</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>These functions manipulate the data lines of the parallel port associated with <i>port</i> (which must have been claimed using <code>ieee1284_claim</code>(3)). The lines are represented by an 8-bit number (one line per bit) and a direction. The data lines are driven as a group; they may be all host-driven (forward direction) or not (reverse direction). When the peripheral is driving them the host must not. </dd>
 <p> For <code>ieee1284_data_dir</code> the <i>reverse</i> parameter should be zero to turn the data line drivers on and non-zero to turn them off. Some port types may be unable to switch off the data line drivers. </p>
 <p> Setting the data lines may have side effects on some port types (for example, some Amiga ports pulse nStrobe). </p>

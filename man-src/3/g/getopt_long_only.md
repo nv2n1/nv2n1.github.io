@@ -1,4 +1,5 @@
 ---
+
 title: "getopt_long_only(3)"
 name: "getopt_long_only"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getopt_long_only/"
 description: "getopt, getopt_long, getopt_long_only, optarg, optind, opterr, optopt – Parse command-line options"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int getopt(int argc, char *const argv[],
@@ -25,7 +25,6 @@ int getopt_long_only(int argc, char *const argv[],
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>getopt</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;2 || _XOPEN_SOURCE<br />
  <code>getopt_long</code>(), <code>getopt_long_only</code>(): _GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>getopt</code>() function parses the command-line arguments. Its arguments <i>argc</i> and <i>argv</i> are the argument count and array as passed to the <i>main</i>() function on program invocation. An element of <i>argv</i> that starts with &#8216;-&#8216; (and is not exactly &quot;-&quot; or &quot;&#8211;&quot;) is an option element. The characters of this element (aside from the initial &#8216;-&#8216;) are option characters. If <code>getopt</code>() is called repeatedly, it returns successively each of the option characters from each of the option elements. </p>
 <p> The variable <i>optind</i> is the index of the next element to be processed in <i>argv</i>. The system initializes this value to 1. The caller can reset it to 1 to restart scanning of the same <i>argv</i>, or when scanning a new argument vector. </p>
 <p> If <code>getopt</code>() finds another option character, it returns that character, updating the external variable <i>optind</i> and a static variable <i>nextchar</i> so that the next call to <code>getopt</code>() can resume the scan with the following option character or <i>argv</i>-element. </p>

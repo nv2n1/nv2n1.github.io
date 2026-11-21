@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_viewer(3)"
 name: "cdk_viewer"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_viewer – curses viewer list widget."
 
 <h2>NAME</h2>
 <p> cdk_viewer &#8211; curses viewer list widget.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -109,7 +109,6 @@ void setCDKViewerVerticalChar(
     chtype character);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk viewer widget creates a file viewer widget. This widget allows a user to interact with a file. It does <i>NOT</i> allow editing, this is view only. The following are functions which create or manipulate the Cdk viewer list widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

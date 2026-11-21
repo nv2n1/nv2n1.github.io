@@ -1,4 +1,5 @@
 ---
+
 title: "yuvycsnoise(1)"
 name: "yuvycsnoise"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-yuvycsnoise/"
 description: "yuvycsnoise – Noise filter specialized for NTSC Y/C separation noise"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>yuvycsnoise</code> [<code>-t</code>] [<code>-m t</code>|<code>b</code>|<code>i</code>|<code>c</code>] [<code>-S</code> <i>MIN</i>] [<code>-T</code> <i>ERRT</i>[<code>,</code><i>MAXT</i>]] [<code>-B</code> <i>ERRB</i>[<code>,</code><i>MAXB</i>]] [<code>-I</code> <i>ERRI</i>[<code>,</code><i>MAXI</i>]] [<code>-C</code> <i>ERRC</i>[<code>,</code><i>MAXC</i>]] </p>
-<h2>DESCRIPTION</h2>
 <p> If video capture hardware has only a poor Y/C separator, at vertical stripe (especially red/blue), noises appear which seem checker flag and bright/dark invert per 1 frame. <code>yuvycsnoise</code> reduces noises of this type. </p>
 <h2>OPTIONS</h2>
 <p> <code>yuvycsnoise</code> accepts the following options:</p>

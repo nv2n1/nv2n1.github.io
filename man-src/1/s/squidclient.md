@@ -1,4 +1,5 @@
 ---
+
 title: "squidclient(1)"
 name: "squidclient"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-squidclient/"
 description: "squidclient – A simple HTTP web client tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>squidclient</code> <code>[ -aknNrsv ] </code> <code>[ &#8211;ping [ping-options] ] </code> <code>[ &#8211;https] [tls-options] [ -A</code> string <code>] [ -h | &#8211;host</code> remote host <code>] [ -H &#8216;</code> string <code>&#8216; ] [ -i</code> IMS <code>] [ -j &#8216;</code> Host header <code>&#8216; ] [ -l | &#8211;local</code> host <code>] [ -m</code> method <code>] [ -p | &#8211;port</code> port <code>] [ -P</code> file <code>] [ -t</code> count <code>] [ -T</code> timeout <code>] [ -u</code> user <code>] [ -U</code> user <code>] [ -V</code> version <code>] [ -w</code> password <code>] [ -W</code> password <code>] </code> url </p>
 <p> <code>Ping options: [ -g</code> count <code>] [ -I</code> interval <code>] </code> </p>
 <p> <code>TLS options: [ &#8211;anonymous-tls ] [ &#8211;trusted-ca</code> CA certificates file <code>&#8230;] [ &#8211;cert</code> client X.509 certificate file <code>] [ &#8211;params</code> TLS session parameters <code>] </code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>squidclient</code> is a tool providing a command line interface for retrieving URLs. Designed for testing any HTTP 0.9, 1.0, or 1.1 web server or proxy. This tool can be combined with scripts to perform any basic HTTP operation. Some additional features for access to the <code>squid</code> proxy object cache and management information are provided.</p>
 <h2>OPTIONS</h2>
 <dl>

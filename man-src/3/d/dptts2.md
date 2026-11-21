@@ -1,4 +1,5 @@
 ---
+
 title: "dptts2(3)"
 name: "dptts2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dptts2/"
 description: "dptts2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dptts2</code> (N, NRHS, D, E, B, LDB)<br />
  <i></i><code>DPTTS2</code> solves a tridiagonal system of the form AX=B using the L D LH factorization computed by spttrf.</p>

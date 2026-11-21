@@ -1,4 +1,5 @@
 ---
+
 title: "kerberos(1)"
 name: "kerberos"
 section: "1"
@@ -9,7 +10,6 @@ description: "kerberos – introduction to the Kerberos system"
 
 <h2>NAME</h2>
 <p> kerberos &#8211; introduction to the Kerberos system</p>
-<h2>DESCRIPTION</h2>
 <p> The Kerberos system authenticates individual users in a network environment. After authenticating yourself to Kerberos, you can use Kerberos-enabled programs without having to present passwords. </p>
 <p> If you enter your username and <i>kinit</i> responds with this message: </p>
 <p> kinit(v5): Client not found in Kerberos database while getting initial credentials </p>

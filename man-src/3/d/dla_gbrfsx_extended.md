@@ -1,4 +1,5 @@
 ---
+
 title: "dla_gbrfsx_extended(3)"
 name: "dla_gbrfsx_extended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_gbrfsx_extended/"
 description: "dla_gbrfsx_extended.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dla_gbrfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
  <i></i><code>DLA_GBRFSX_EXTENDED</code> improves the computed solution to a system of linear equations for general banded matrices by performing extra-precise iterative refinement and provides error bounds and backward error estimates for the solution.</p>

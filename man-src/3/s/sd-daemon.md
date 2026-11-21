@@ -1,4 +1,5 @@
 ---
+
 title: "sd-daemon(3)"
 name: "sd-daemon"
 section: "3"
@@ -6,14 +7,13 @@ letter: "s"
 url: "/docs/linux/man/3-sd-daemon/"
 description: "sd-daemon, SD_EMERG, SD_ALERT, SD_CRIT, SD_ERR, SD_WARNING, SD_NOTICE, SD_INFO, SD_DEBUG – APIs for new-style daemons"
 ---
+
 <p>sd-daemon, SD_EMERG, SD_ALERT, SD_CRIT, SD_ERR, SD_WARNING, SD_NOTICE, SD_INFO, SD_DEBUG &#8211; APIs for new-style daemons </p>
-<h2>SYNOPSIS</h2>
 <pre><code>#include &lt;systemd/sd-daemon.h&gt;
 </code></pre>
 <dl>
 <dt><code>pkg-config --cflags --libs libsystemd</code></dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd> <p> sd-daemon.h provide APIs for new-style daemons, as implemented by the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) init system. </p>
 <p>See <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3), <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3), <code><a href="/docs/linux/man/3-sd_booted/">sd_booted</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></code>(3), <code><a href="/docs/linux/man/3-sd_watchdog_enabled/">sd_watchdog_enabled</a></code>(3) for more information about the functions implemented. In addition to these functions, a couple of logging prefixes are defined as macros: </p>
  </dd>

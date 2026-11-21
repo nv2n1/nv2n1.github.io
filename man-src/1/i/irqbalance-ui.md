@@ -1,4 +1,5 @@
 ---
+
 title: "irqbalance-ui(1)"
 name: "irqbalance-ui"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-irqbalance-ui/"
 description: "irqbalance-ui – user interface for irqbalance"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>irqbalance-ui</code>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>irqbalance-ui</code> provides an ncurses-based textual user interface to <code>irqbalance</code>, a daemon responsible for IRQ distribution on Linux systems. It shows how IRQs are distributed over CPUs at given moment, and allows one to setup of the sleep interval and the IRQ and CPU banning at runtime. </p>
 <h2>HOMEPAGE</h2>
 <p> <a rel="nofollow" href="https://github.com/Irqbalance/irqbalance">https://github.com/Irqbalance/irqbalance</a> </p>

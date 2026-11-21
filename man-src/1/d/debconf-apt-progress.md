@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-apt-progress(1)"
 name: "debconf-apt-progress"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-debconf-apt-progress/"
 description: "debconf-apt-progress – install packages using debconf to display a progress bar"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 debconf - apt - progress[--] command[args...] debconf - apt - progress-- config debconf - apt - progress-- start debconf - apt - progress-- from waypoint-- to waypoint[--] command[args...] debconf - apt - progress-- stop
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>debconf-apt-progress</code> installs packages using debconf to display a progress bar. The given <i>command</i> should be any command-line apt frontend; specifically, it must send progress information to the file descriptor selected by the <tt>&quot;APT::Status-Fd&quot;</tt> configuration option, and must keep the file descriptors nominated by the <tt>&quot;APT::Keep-Fds&quot;</tt> configuration option open when invoking debconf (directly or indirectly), as those file descriptors will be used for the debconf passthrough protocol. </p>
 <p> The arguments to the command you supply should generally include <code>-y</code> (for <code>apt-get</code> or <code>aptitude</code>) or similar to avoid the apt frontend prompting for input. <code>debconf-apt-progress</code> cannot do this itself because the appropriate argument may differ between apt frontends. </p>
 <p> The <code>&#8211;start</code>, <code>&#8211;stop</code>, <code>&#8211;from</code>, and <code>&#8211;to</code> options may be used to create a progress bar with multiple segments for different stages of installation, provided that the caller is a debconf confmodule. The caller may also interact with the progress bar itself using the debconf protocol if it so desires. </p>

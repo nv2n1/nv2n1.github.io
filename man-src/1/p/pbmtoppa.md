@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtoppa(1)"
 name: "pbmtoppa"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pbmtoppa/"
 description: "pbmtoppa – convert PBM image to HP Printer Performance Architecture (PPA)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtoppa</code> </p>
 <p> [<i>pbm_file</i> [<i>ppa_file</i>]] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pbmtoppa</code> converts page images in PBM format to Hewlett Packard&#8217;s PPA (Printer Performance Architecture) format, which is the data stream format expected by some HP &quot;Windows-only&quot; printers including the HP Deskjet 820C series, the HP DeskJet 720 series, and the HP DeskJet 1000 series. </p>
 <p> <i>pbm_file</i> is the file specification of the input file or <code>&#8211;</code> for Standard Input. The default is Standard Input. </p>
 <p> The input file contains one or more PBM images, with each one being a single page. Each image must have the exact dimensions of a page (at 600 pixels per inch in both directions). Significantly, this is the format the Ghostscript produces. </p>

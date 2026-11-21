@@ -1,4 +1,5 @@
 ---
+
 title: "lbzless(1)"
 name: "lbzless"
 section: "1"
@@ -9,9 +10,7 @@ description: "lbzless – file perusal filter for crt viewing of compressed text
 
 <h2>NAME</h2>
 <p> lbzless &#8211; file perusal filter for crt viewing of compressed text</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lbzless</code> [ name &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Zless</i> is a filter which allows examination of compressed or plain text files one screenful at a time on a soft-copy terminal. It is the equivalent of setting the environment variable LESSOPEN to &#8216;|lbzip2 -cdq &#8212; %s&#8217;, and the environment variable LESSMETACHARS to &#8216;&lt;space&gt;&lt;tab&gt;&lt;newline&gt;;*?&quot;()&lt;&gt;[|&amp;^`#\$%=~&#8217;, and then running <i>less</i>. However, enough people seem to think that having the command <i>lbzless</i> available is important to be worth providing it.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-lbzmore/">lbzmore</a>(1), <a href="/docs/linux/man/1-less/">less</a>(1)</p>

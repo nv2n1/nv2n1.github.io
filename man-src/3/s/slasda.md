@@ -1,4 +1,5 @@
 ---
+
 title: "slasda(3)"
 name: "slasda"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasda/"
 description: "slasda.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasda</code> (ICOMPQ, SMLSIZ, N, SQRE, D, E, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, WORK, IWORK, INFO)<br />
  <i></i><code>SLASDA</code> computes the singular value decomposition (SVD) of a real upper bidiagonal matrix with diagonal d and off-diagonal e. Used by sbdsdc.</p>

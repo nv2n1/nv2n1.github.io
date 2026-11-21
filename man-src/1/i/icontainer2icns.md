@@ -1,4 +1,5 @@
 ---
+
 title: "icontainer2icns(1)"
 name: "icontainer2icns"
 section: "1"
@@ -9,9 +10,7 @@ description: "icontainer2icns – extract icns files from icontainers"
 
 <h2>NAME</h2>
 <p> icontainer2icns &#8211; extract icns files from icontainers</p>
-<h2>SYNOPSIS</h2>
 <p> <code>icontainer2icns</code> file.icontainer</p>
-<h2>DESCRIPTION</h2>
 <p> icontainer2icns extracts icns files from icontainers.</p>
 <h2>EXAMPLES</h2>
 <p> icontainer2icns archive.icontainer # Extract all icns found in arhive</p>

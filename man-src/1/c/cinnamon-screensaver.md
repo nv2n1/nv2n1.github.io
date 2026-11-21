@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-screensaver(1)"
 name: "cinnamon-screensaver"
 section: "1"
@@ -9,9 +10,7 @@ description: "cinnamon-screensaver – screen saver and locker"
 
 <h2>NAME</h2>
 <p> cinnamon-screensaver &#8211; screen saver and locker</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cinnamon-screensaver</code> [<i>OPTIONS&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Cinnamon Screensaver is the default screen saver and locker in a GNOME desktop. It is designed with simplicity and security in mind.</p>
 <h2>OPTIONS</h2>
 <dl>

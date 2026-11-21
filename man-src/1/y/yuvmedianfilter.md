@@ -1,4 +1,5 @@
 ---
+
 title: "yuvmedianfilter(1)"
 name: "yuvmedianfilter"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-yuvmedianfilter/"
 description: "yuvmedianfilter – A filter for yuv images produced by the mjpeg tools"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>yuvmedianfilter</code> [<code>-r</code> <i>num</i>] [<code>-R</code> <i>num</i>] [<code>-t</code> <i>num</i>] [<code>-T</code> <i>num</i>] [<code>-I</code> <i>num</i>] [<code>-f</code>] [<code>-w</code> <i>num</i>] [<code>-s</code> <i>num</i>] [<code>-v</code> <i>num</i>] [<code>-h</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>yuvmedianfilter</code> is designed to enhance/filter images. It takes the input from STDIN and writes output to STDOUT.<br />
  This filter looks around the current point for a radius and averages the values that fall inside a threshold. So the image is softened and the edges become more sharp. If the input material is noisy (it is always noisy but you do not always see it) the output images are improved and the encoder spends less bandwidth encoding noise. The more sophisticated version of image filtering is yuvdenoise. But you can use both programs in the encoding procces. It cannot process a recorded file and write the improved version to another file. </p>
 <h2>OPTIONS</h2>

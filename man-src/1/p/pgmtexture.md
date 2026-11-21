@@ -1,4 +1,5 @@
 ---
+
 title: "pgmtexture(1)"
 name: "pgmtexture"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pgmtexture/"
 description: "pgmtexture – calculate textural features on a portable graymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmtexture</code> [<code>-d</code> <i>d</i>] [<i>pgmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable graymap as input. Calculates textural features based on spatial dependence matrices at 0, 45, 90, and 135 degrees for a distance <i>d</i> (default = 1). Textural features include:</p>
 <dl>
 <dt>

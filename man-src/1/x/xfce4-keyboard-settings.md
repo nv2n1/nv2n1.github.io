@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-keyboard-settings(1)"
 name: "xfce4-keyboard-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-keyboard-settings/"
 description: "xfce4-keyboard-settings – Keyboard settings for Xfce"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

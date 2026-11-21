@@ -1,4 +1,5 @@
 ---
+
 title: "znc(1)"
 name: "znc"
 section: "1"
@@ -9,14 +10,12 @@ description: "znc – An advanced IRC bouncer"
 
 <h2>NAME</h2>
 <p> znc &#8211; An advanced IRC bouncer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>znc &#8211;help</code><br />
  <code>znc &#8211;version</code><br />
  <code>znc &#8211;makepass</code><br />
  <code>znc</code> [<code>-n</code>] [<code>-d</code> <i>datadir</i>] [<code>-D</code>] [<code>-f</code>]<br />
  <code>znc</code> [<code>-n</code>] [<code>-d</code> <i>datadir</i>] [<code>-D</code>] [<code>-f</code>] <code>&#8211;makeconf</code><br />
  <code>znc</code> [<code>-n</code>] [<code>-d</code> <i>datadir</i>] [<code>-D</code>] [<code>-f</code>] <code>&#8211;makepem</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>znc</code> is an IRC proxy. It runs as a daemon and connects to IRC server, then allows you to connect from a workstation and work as the user that is logged in to the IRC server. After you disconnect, it maintains the connection to the server. It acts like any normal IRC server, so you can use any IRC client to connect to it.</p>
 <h2>OPTIONS</h2>
 <dl>

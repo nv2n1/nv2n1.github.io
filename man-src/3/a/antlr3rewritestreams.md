@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3rewritestreams(3)"
 name: "antlr3rewritestreams"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3rewritestreams/"
 description: "include/antlr3rewritestreams.h –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3commontreeadaptor.h">antlr3commontreeadaptor.h</a>&gt;<br />

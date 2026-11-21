@@ -1,4 +1,5 @@
 ---
+
 title: "fts-transfer-cancel(1)"
 name: "fts-transfer-cancel"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-transfer-cancel/"
 
  fts-transfer-cancel
 
-<h2>SYNOPSIS</h2>
+fts-transfer-cancel [options] JOBID [JOBID...]
 
- fts-transfer-cancel [options] JOBID [JOBID...]
-
-<h2>DESCRIPTION</h2>
-
- fts-transfer-cancel is a tool that allows canceling transfer-jobs. The user has to provide respective transfer-job(s) ID.
+fts-transfer-cancel is a tool that allows canceling transfer-jobs. The user has to provide respective transfer-job(s) ID.
 
 <h2>OPTIONS</h2>
 

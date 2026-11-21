@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-selection-pastebin(1)"
 name: "urxvt256c-selection-pastebin"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-selection-pastebin/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- selection-pastebin - automatic pastebin upload 
+selection-pastebin - automatic pastebin upload 
 
 <h2>EXAMPLES</h2>
 
@@ -17,9 +15,7 @@ url: "/docs/linux/man/1-urxvt256c-selection-pastebin/"
   URxvt.keysym.C-M-e: selection-pastebin:remote-pastebin
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This is a little rarely useful extension that uploads the selection as textfile to a remote site (or does other things). (The implementation is not currently secure for use in a multiuser environment as it writes to <i>/tmp</i> directly.). 
+This is a little rarely useful extension that uploads the selection as textfile to a remote site (or does other things). (The implementation is not currently secure for use in a multiuser environment as it writes to <i>/tmp</i> directly.). 
 
  It listens to the <tt>&quot;selection-pastebin:remote-pastebin&quot;</tt> action, which, when activated, runs a command with <tt>&quot;%&quot;</tt> replaced by the name of the textfile. This command can be set via a resource: 
 

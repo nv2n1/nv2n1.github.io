@@ -1,4 +1,5 @@
 ---
+
 title: "cbrtl(3)"
 name: "cbrtl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cbrtl/"
 description: "cbrt, cbrtf, cbrtl – cube root function"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double cbrt(double x);
@@ -29,7 +29,6 @@ long double cbrtl(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return the (real) cube root of <i>x</i>. This function cannot fail; every representable real value has a representable real cube root.</p>
 <h2>RETURN VALUE</h2>
 <p> These functions return the cube root of <i>x</i>. </p>

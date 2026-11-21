@@ -1,4 +1,5 @@
 ---
+
 title: "errx(3)"
 name: "errx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-errx/"
 description: "err, verr, errx, verrx, warn, vwarn, warnx, vwarnx – formatted error messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;err.h&gt;
 void err(int eval, const char *fmt, ...);
@@ -20,7 +20,6 @@ void verrx(int eval, const char *fmt, va_list args);
 void vwarn(const char *fmt, va_list args);
 void vwarnx(const char *fmt, va_list args);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>err</code>() and <code>warn</code>() family of functions display a formatted error message on the standard error output. In all cases, the last component of the program name, a colon character, and a space are output. If the <i>fmt</i> argument is not NULL, the <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3)-like formatted error message is output. The output is terminated by a newline character. </p>
 <p> The <code>err</code>(), <code>verr</code>(), <code>warn</code>(), and <code>vwarn</code>() functions append an error message obtained from <code><a href="/docs/linux/man/3-strerror/">strerror</a></code>(3) based on the global variable <i>errno</i>, preceded by another colon and space unless the <i>fmt</i> argument is NULL. </p>
 <p> The <code>errx</code>() and <code>warnx</code>() functions do not append an error message. </p>

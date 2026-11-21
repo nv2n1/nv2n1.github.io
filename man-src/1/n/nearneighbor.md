@@ -1,4 +1,5 @@
 ---
+
 title: "nearneighbor(1)"
 name: "nearneighbor"
 section: "1"
@@ -9,10 +10,8 @@ description: "nearneighbor – \"Grid table data using a \"\"Nearest neighbor\"\
 
 <h2>NAME</h2>
 <p> nearneighbor &#8211; &quot;Grid table data using a &quot;&quot;Nearest neighbor&quot;&quot; algorithm&quot;</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nearneighbor</code> [ <i>table</i> ] <i>out_grdfile</i> <i>increment</i> <i>sectors</i>[/<i>min_sectors</i>] <i>region</i> [ <i>search_radius</i>[<i>unit</i>] [ <i>empty</i> ] [ [<i>level</i>] ] [ ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nearneighbor</code> reads arbitrarily located (x,y,z[,w]) triples [quadruplets] from standard input [or <i>table</i>] and uses a nearest neighbor algorithm to assign an average value to each node that have one or more points within a radius centered on the node. The average value is computed as a weighted mean of the nearest point from each sector inside the search radius. The weighting function used is w(r) = 1 / (1 + d ^ 2), where d = 3 * r / search_radius and r is distance from the node. This weight is modulated by the weights of the observation points [if supplied].</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cbdsqr(3)"
 name: "cbdsqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cbdsqr/"
 description: "cbdsqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, RWORK, INFO)<br />
  <i></i><code>CBDSQR</code></p>

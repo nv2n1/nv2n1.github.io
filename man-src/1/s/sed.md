@@ -1,4 +1,5 @@
 ---
+
 title: "sed(1)"
 name: "sed"
 section: "1"
@@ -6,9 +7,8 @@ letter: "s"
 url: "/docs/linux/man/1-sed/"
 description: "sed – stream editor for filtering and transforming text"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>sed</code> [<i>OPTION</i>]... <i>{script-only-if-no-other-script} </i>[<i>input-file</i>]...  </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Sed</i> is a stream editor. A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline). While in some ways similar to an editor which permits scripted edits (such as <i>ed</i>), <i>sed</i> works by making only one pass over the input(s), and is consequently more efficient. But it is <i>sed</i>&#8216;s ability to filter text in a pipeline which particularly distinguishes it from other types of editors. </p>
 <dl>
 <dt><code>-n</code>, <code>--quiet</code>, <code>--silent</code></dt>

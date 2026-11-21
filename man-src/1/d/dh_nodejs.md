@@ -1,4 +1,5 @@
 ---
+
 title: "dh_nodejs(1)"
 name: "dh_nodejs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_nodejs/"
 description: "dh_nodejs – set nodejs dependencies"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_nodejs</code> [<i>debhelper options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_nodejs</code> is a debhelper program that is responsible for generating appropriate dependencies on nodejs. </p>
 <p> The dependency on nodejs will be generated in <code>${misc:Depends}</code>.</p>
 <h2>SEE ALSO</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "postmap(1)"
 name: "postmap"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-postmap/"
 description: "postmap – Postfix lookup table management"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>postmap</code> [<code>-bfFhimnNoprsuUvw</code>] [<code>-c </code><i>config_dir</i>] [<code>-d </code><i>key</i>] [<code>-q </code><i>key</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>file_type</i>:]<i>file_name</i>&nbsp;&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command creates or queries one or more Postfix lookup tables, or updates an existing one. </p>
 <p> If the result files do not exist they will be created with the same group and other read permissions as their source file. </p>
 <p> While the table update is in progress, signal delivery is postponed, and an exclusive, advisory, lock is placed on the entire table, in order to avoid surprises in spectator processes.</p>

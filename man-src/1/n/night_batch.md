@@ -1,4 +1,5 @@
 ---
+
 title: "night_batch(1)"
 name: "night_batch"
 section: "1"
@@ -9,9 +10,7 @@ description: "night_batch – non-interactive snapshoting with CCD camera"
 
 <h2>NAME</h2>
 <p> night_batch &#8211; non-interactive snapshoting with CCD camera</p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_control&nbsp;<wbr>[options]&nbsp;<wbr>exptime1,filter1&nbsp;<wbr>[exptime2,filter2]&nbsp;<wbr>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The options are as follows:</p>
 <dl>
 <dt><code>-oo</code></dt>

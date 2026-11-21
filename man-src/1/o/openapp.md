@@ -1,4 +1,5 @@
 ---
+
 title: "openapp(1)"
 name: "openapp"
 section: "1"
@@ -9,9 +10,7 @@ description: "openapp – launch applications from the command line"
 
 <h2>NAME</h2>
 <p> openapp &#8211; launch applications from the command line </p>
-<h2>SYNOPSIS</h2>
 <p> <code>openapp</code> [<code>&#8211;find</code>] [<code>&#8211;debug</code> [<code>&#8211;gdb=</code> <i>debuger</i>]] [ <code>&#8211;library-combo=</code><i>library-combo</i> ] <i>application</i> [<i>arguments&#8230;</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>openapp</code> command allows you to launch graphical GNUstep applications from the command line. </p>
 <p> <i>application</i> is the complete or relative name of the application program with or without the .app extension, like <code>Ink.app. </code> </p>
 <p> <i>arguments</i> are the arguments passed to the application. </p>

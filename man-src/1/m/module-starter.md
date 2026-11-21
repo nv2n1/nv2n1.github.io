@@ -1,4 +1,5 @@
 ---
+
 title: "module-starter(1)"
 name: "module-starter"
 section: "1"
@@ -6,14 +7,9 @@ letter: "m"
 url: "/docs/linux/man/1-module-starter/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+module-starter - creates a skeleton module distribution 
 
- module-starter - creates a skeleton module distribution 
-
-<h2>SYNOPSIS</h2>
-
- module-starter [options] 
+module-starter [options] 
 
  Options: 
 
@@ -30,9 +26,7 @@ url: "/docs/linux/man/1-module-starter/"
 module - starter-- module = Foo::Bar, Foo::Bat-- author = "Andy Lester" --email = andy[at] petdance.com
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- <tt>&quot;module-starter&quot;</tt> is a command-line interface to Module::Starter, which it uses to perform all the work of creating distributions. An alternate backend for <tt>&quot;module-starter&quot;</tt> can be specified with the <tt>&quot;--class&quot;</tt> option. Plugins to the standard Module::Starter module can be specified with one or more <tt>&quot;--plugin&quot;</tt> options. 
+<tt>&quot;module-starter&quot;</tt> is a command-line interface to Module::Starter, which it uses to perform all the work of creating distributions. An alternate backend for <tt>&quot;module-starter&quot;</tt> can be specified with the <tt>&quot;--class&quot;</tt> option. Plugins to the standard Module::Starter module can be specified with one or more <tt>&quot;--plugin&quot;</tt> options. 
 
  If no directory name is supplied, the distribution name will be used for the directory. If no distribution name is supplied, the first listed module name will be used as the distribution name. 
 

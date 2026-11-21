@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-make(1)"
 name: "blaze-make"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-blaze-make/"
 description: "blaze-make – generate static content from the BlazeBlogger repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blaze-make</code> [<code>-cpqrtIFPV</code>] [<code>-b</code> <i>directory</i>] [<code>-d</code> <i>directory</i>] </p>
 <p> <code>blaze-make</code> <code>-h</code> | <code>-v</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>blaze-make</code> reads the BlazeBlogger repository and generates a complete directory tree of static pages, optionally including all blog posts, single pages, browsable yearly and monthly archives, tags and even a <font SIZE="-1">RSS</font> feed. This way, you can benefit from most of the features other <font SIZE="-1">CMS</font> usually have, but without any additional hosting requirements.</p>
 <h2>OPTIONS</h2>
 <dl>

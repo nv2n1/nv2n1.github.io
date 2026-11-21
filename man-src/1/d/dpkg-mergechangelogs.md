@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-mergechangelogs(1)"
 name: "dpkg-mergechangelogs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-mergechangelogs/"
 description: "dpkg-mergechangelogs – 3-way merge of debian/changelog files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-mergechangelogs</code> [<i>option</i>&#8230;] <i>old</i> <i>new-a</i> <i>new-b</i> [<i>out</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This program will use the 3 provided versions of the Debian changelog to generate a merged changelog file. The resulting changelog is stored in the file <i>out</i> or output to the standard output if that parameter is not given. </p>
 <p> Each entry is identified by its version number and they are assumed to be not conflicting, they are simply merged in the right order (by decreasing version number). When <code>&#8211;merge-prereleases</code> is used, the part of the version number after the last tilde is dropped so that 1.0-1~exp1 and 1.0-1~exp5 are considered to be the same entry. When the same version is available in both <i>new-a</i> and <i>new-b</i>, a standard line-based 3-way merge is attempted (provided that the module Algorithm::Merge is available &#8212; it&#8217;s part of the package libalgorithm-merge-perl &#8212; otherwise you get a global conflict on the content of the entry).</p>
 <h2>OPTIONS</h2>

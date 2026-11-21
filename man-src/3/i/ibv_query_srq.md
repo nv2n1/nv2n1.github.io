@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_query_srq(3)"
 name: "ibv_query_srq"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-ibv_query_srq/"
 description: "ibv_query_srq – get the attributes of a shared receive queue (SRQ)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_query_srq(struct ibv_srq *srq, struct ibv_srq_attr *srq_attr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_query_srq()</code> gets the attributes of the SRQ <i>srq</i> and returns them through the pointer <i>srq_attr</i>. The argument <i>srq_attr</i> is an ibv_srq_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_srq_attr {

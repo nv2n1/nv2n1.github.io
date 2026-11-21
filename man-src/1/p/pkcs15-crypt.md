@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs15-crypt(1)"
 name: "pkcs15-crypt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pkcs15-crypt/"
 description: "pkcs15-crypt – perform crypto operations using pkcs15 smart card"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pkcs15-crypt</code> [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pkcs15-crypt</code> utility can be used from the command line to perform cryptographic operations such as computing digital signatures or decrypting data, using keys stored on a PKCS #15 compliant smart card.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;sign, -s</code></p>

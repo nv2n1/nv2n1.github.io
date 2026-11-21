@@ -1,4 +1,5 @@
 ---
+
 title: "gmtdefaults(1)"
 name: "gmtdefaults"
 section: "1"
@@ -9,10 +10,8 @@ description: "gmtdefaults – List current GMT default parameters"
 
 <h2>NAME</h2>
 <p> gmtdefaults &#8211; List current GMT default parameters</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtdefaults</code> [ [<code>u</code>|<code>s</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmtdefaults</code> lists the GMT parameter defaults if the option <code>-D</code> is used. There are three ways to change some of the settings: (1) Use the command <code>gmtset</code>, (2) use any text editor to edit the file <code>gmt.conf</code> in your home, ~/.gmt or current directory (if you do not have this file, run <code>gmtset</code> <code>-D</code> to get one with the system default settings), or (3) override any parameter by specifying one or more <code>&#8211;</code><code>-PARAMETER</code>=<i>VALUE</i> statements on the command line of any GMT command (<code>PARAMETER</code> and <i>VALUE</i> are any combination listed below). The first two options are permanent changes until explicitly changed back, while the last option is ephemeral and only applies to the single GMT command that received the override. GMT can provide default values in US or SI units. This choice is determined at compile time.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmetad(1)"
 name: "gmetad"
 section: "1"
@@ -9,9 +10,7 @@ description: "gmetad – manual page for Ganglia Meta Daemon"
 
 <h2>NAME</h2>
 <p> gmetad &#8211; manual page for Ganglia Meta Daemon</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmetad</code> [<i>OPTIONS</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The Ganglia Meta Daemon (gmetad) collects information from multiple gmond or gmetad data sources, saves the information to local round-robin databases, and exports XML which is the concatentation of all data sources</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

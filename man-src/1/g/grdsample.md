@@ -1,4 +1,5 @@
 ---
+
 title: "grdsample(1)"
 name: "grdsample"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdsample – Resample a grid onto a new lattice"
 
 <h2>NAME</h2>
 <p> grdsample &#8211; Resample a grid onto a new lattice</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdsample</code> <i>in_grdfile</i> <i>out_grdfile</i> [ <i>increment</i> ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdsample</code> reads a grid file and interpolates it to create a new grid file with either: a different registration (<code>-r</code> or <code>-T</code>); or, a new grid-spacing or number of nodes (<code>-I</code>), and perhaps also a new sub-region (<code>-R</code>). A bicubic [Default], bilinear, B-spline or nearest-neighbor interpolation is used; see <code>-n</code> for settings. Note that using <code>-R</code> only is equivalent to <code>grdcut</code> or <code>grdedit -S</code>. <code>grdsample</code> safely creates a fine mesh from a coarse one; the converse may suffer aliasing unless the data are filtered using <code>grdfft</code> or <code>grdfilter</code>. </p>
 <p> When <code>-R</code> is omitted, the output grid will cover the same region as the input grid. When <code>-I</code> is omitted, the grid spacing of the output grid will be the same as the input grid. Either <code>-r</code> or <code>-T</code> can be used to change the grid registration. When omitted, the output grid will have the same registration as the input grid.</p>
 <h2>REQUIRED ARGUMENTS</h2>

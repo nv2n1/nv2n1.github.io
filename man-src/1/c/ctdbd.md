@@ -1,4 +1,5 @@
 ---
+
 title: "ctdbd(1)"
 name: "ctdbd"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ctdbd/"
 description: "ctdbd – The CTDB cluster daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ctdbd</code> [<i>OPTION</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>ctdbd is the main CTDB daemon. </dd>
 <p> Note that ctdbd is not usually invoked directly. It is invoked via <code><a href="/docs/linux/man/1-ctdbd_wrapper/">ctdbd_wrapper</a></code>(1) or via the initscript. </p>
 <p> See <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7) for an overview of CTDB.</p>

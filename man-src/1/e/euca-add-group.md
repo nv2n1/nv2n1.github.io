@@ -1,4 +1,5 @@
 ---
+
 title: "euca-add-group(1)"
 name: "euca-add-group"
 section: "1"
@@ -9,7 +10,6 @@ description: "euca-add-group – Eucalyptus tool: Creates a new security group."
 
 <h2>NAME</h2>
 <p> euca-add-group &#8211; Eucalyptus tool: Creates a new security group.</p>
-<h2>DESCRIPTION</h2>
 <p> Creates a new security group. </p>
 <p> euca-add-group <code>-d</code>, <code>&#8211;description</code> group_description [-h, <code>&#8211;help]</code> [&#8211;version] [&#8211;debug] group_name </p>
 <p> REQUIRED PARAMETERS </p>

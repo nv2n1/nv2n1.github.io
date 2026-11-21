@@ -1,4 +1,5 @@
 ---
+
 title: "ltdbtool(1)"
 name: "ltdbtool"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ltdbtool/"
 description: "ltdbtool – manipulate CTDB’s local TDB files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ltdbtool</code> [<i>OPTION</i>&#8230;] {<i>COMMAND</i>} [<i>COMMAND-ARGS</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>ltdbtool is a utility to manipulate CTDB&#8217;s local TDB databases (LTDBs) without connecting to a CTDB daemon. </dd>
 <p> It can be used to: </p>
 <dl>

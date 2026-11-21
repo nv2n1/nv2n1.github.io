@@ -1,4 +1,5 @@
 ---
+
 title: "strti2(3)"
 name: "strti2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-strti2/"
 description: "strti2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>strti2</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
  <i></i><code>STRTI2</code> computes the inverse of a triangular matrix (unblocked algorithm).</p>

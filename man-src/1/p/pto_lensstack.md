@@ -1,4 +1,5 @@
 ---
+
 title: "pto_lensstack(1)"
 name: "pto_lensstack"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pto_lensstack/"
 description: "pto_lensstack – modify assigned lenses and stack in pto files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pto_lensstack</code> [options] input.pto</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pto_lensstack</code> can manipulate lenses and stacks in Hugin .pto project files. This is intended for use in scripting.</p>
 <h2>USAGE</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "flatbat(1)"
 name: "flatbat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-flatbat/"
 description: "flatbat – CCD flat-frame correction"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>flatbat </code><i>[options] </i><code>flat=</code><i>file source_file &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The Flatbat program applies flat-field correction to a set of source frames. It means, that it divides the source frames by the flat frame pixel-by-pixel and the result is multiplied by median value of the flat frame. The resulting image is written to output file. </p>
 <p> The source frames and also flat frame must be in FITS format and of same dimensions. Frames of the same exposition duration and color filter should be used. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

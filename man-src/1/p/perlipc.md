@@ -1,4 +1,5 @@
 ---
+
 title: "perlipc(1)"
 name: "perlipc"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlipc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlipc - Perl interprocess communication (signals, fifos, pipes, safe subprocesses, sockets, and semaphores) 
 
- perlipc - Perl interprocess communication (signals, fifos, pipes, safe subprocesses, sockets, and semaphores) 
-
-<h2>DESCRIPTION</h2>
-
- The basic <font SIZE="-1">IPC</font> facilities of Perl are built out of the good old Unix signals, named pipes, pipe opens, the Berkeley socket routines, and SysV <font SIZE="-1">IPC</font> calls. Each is used in slightly different situations.
+The basic <font SIZE="-1">IPC</font> facilities of Perl are built out of the good old Unix signals, named pipes, pipe opens, the Berkeley socket routines, and SysV <font SIZE="-1">IPC</font> calls. Each is used in slightly different situations.
 
 <h2>Signals</h2>
 

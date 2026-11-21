@@ -1,4 +1,5 @@
 ---
+
 title: "capifaxrcvd(1)"
 name: "capifaxrcvd"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-capifaxrcvd/"
 
  capifaxrcvd — a FAX receive daemon for CAPI
 
-<h2>SYNOPSIS</h2>
+capifaxrcvd [-i stationID] [-h header] [-l listenNumber] [-n notifyCmd] rcvDirectory
 
- capifaxrcvd [-i stationID] [-h header] [-l listenNumber] [-n notifyCmd] rcvDirectory
-
-<h2>DESCRIPTION</h2>
-
- capifaxrcvd is a daemon to receive faxes via CAPI; you need a CAPI capable ISDN card with the appropriate drivers. 
+capifaxrcvd is a daemon to receive faxes via CAPI; you need a CAPI capable ISDN card with the appropriate drivers. 
 
  The final argument must be the directory in which the received faxes are to be placed. The filenames of the received faxes are of the form: f[fn]xxxtttttttt [fn] indicates the resolution (fine or normal), xxx indicated the number of pages, tttttttt is the (hexadecimal) timestamp of the fax (seconds since the Unix epoch, 00:00 on January 1st, 1970 UTC). 
 

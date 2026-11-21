@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-ps(1)"
 name: "flatpak-ps"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-ps/"
 description: "flatpak-ps – Enumerate running instances"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak ps</code> [OPTION&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Lists useful information about running Flatpak instances. </dd>
 <p> To see full details of a running instance, you can open the file /run/user/$UID/.flatpak/$INSTANCE/info, where <i>$INSTANCE</i> is the instance ID reported by flatpak ps.</p>
 <h2>OPTIONS</h2>

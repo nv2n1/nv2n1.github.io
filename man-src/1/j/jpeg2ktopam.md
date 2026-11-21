@@ -1,4 +1,5 @@
 ---
+
 title: "jpeg2ktopam(1)"
 name: "jpeg2ktopam"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-jpeg2ktopam/"
 description: "jpeg2ktopam – convert JPEG-2000 code stream to PAM/PNM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jpeg2ktopam</code> [<code>-verbose</code>] [<code>-debuglevel=</code><i>number</i>] <i>filename</i> </p>
 <h2>OPTION USAGE</h2>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>jpeg2ktopam</code> converts the named JPEG-2000 file (JP2 or JPC), or Standard Input if no file is named, to a PBM, PGM, PPM, or PAM file on Standard Output. </p>
 <p> The JPEG-2000 specification specifies two different formats: JP2 and JPEG-2000 code stream (JPC). JP2 represents a visual image quite specifically, whereas JPC is a more or less arbitrary array of codes. A JP2 image contains a JPC stream and metadata describing how that stream represents a visual image. <code>jpeg2ktopam</code> converts both. </p>

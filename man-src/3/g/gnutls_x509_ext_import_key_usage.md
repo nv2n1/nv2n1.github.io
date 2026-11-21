@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_ext_import_key_usage(3)"
 name: "gnutls_x509_ext_import_key_usage"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_ext_import_key_usage – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_import_key_usage &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_import_key_usage(const gnutls_datum_t * </code><i>ext</i><code>, unsigned int * </code><i>key_usage</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_ext_import_key_usage – API function"
 <dd> the DER encoded extension data</dd>
 <dt>unsigned int * key_usage</dt>
 <dd> where the key usage bits will be stored</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return certificate&#8217;s key usage, by reading the DER data of the keyUsage X.509 extension (2.5.29.15). The key usage value will ORed values of the: <code>GNUTLS_KEY_DIGITAL_SIGNATURE</code>, <code>GNUTLS_KEY_NON_REPUDIATION</code>, <code>GNUTLS_KEY_KEY_ENCIPHERMENT</code>, <code>GNUTLS_KEY_DATA_ENCIPHERMENT</code>, <code>GNUTLS_KEY_KEY_AGREEMENT</code>, <code>GNUTLS_KEY_KEY_CERT_SIGN</code>, <code>GNUTLS_KEY_CRL_SIGN</code>, <code>GNUTLS_KEY_ENCIPHER_ONLY</code>, <code>GNUTLS_KEY_DECIPHER_ONLY</code>.</p>
 <h2>RETURNS</h2>
 <p> the certificate key usage, or a negative error code in case of parsing error. If the certificate does not contain the keyUsage extension <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>

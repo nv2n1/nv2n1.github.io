@@ -1,4 +1,5 @@
 ---
+
 title: "fstep(1)"
 name: "fstep"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fstep/"
 description: "fstep – instruction steps a given program"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fstep</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230;}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fstep</code></p>
 <dd>instruction step a given program.</dd>
 <h3>Standard Frysk Options</h3>

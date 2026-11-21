@@ -1,4 +1,5 @@
 ---
+
 title: "deghosting_mask(1)"
 name: "deghosting_mask"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-deghosting_mask/"
 description: "deghosting_mask – Creates mask for removing ghosting in images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>deghosting_mask</code> [options] <i>&lt;image1</i>&gt; <i>&lt;image2</i>&gt; <i>&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> Takes a series of aligned photos, usually three or more, and generates masks for removal of ghosts &#8211; Data that only appears in a minority of photos.</p>
 <h2>OPTIONS</h2>
 <dl>

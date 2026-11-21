@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_filehandle(3)"
 name: "cgi_filehandle"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_filehandle/"
 description: "cgi_filehandle – return a file pointer to an uploaded file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -19,7 +19,6 @@ FILE *cgi_filehandle(CGI *cgi, const char *form_name);
  form_name &#8211; the form name that the file was uploaded as<br />
  (not the filename) (if NULL, we&#8217;re asking for the<br />
  file handle for the PUT upload) </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_filehandle will return the stdio FILE pointer associated with a file that was uploaded using multipart/form-data. The FILE pointer is positioned at the start of the file when first available. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

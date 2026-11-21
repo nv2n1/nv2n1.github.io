@@ -1,4 +1,5 @@
 ---
+
 title: "amqp-consume(1)"
 name: "amqp-consume"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-amqp-consume/"
 description: "amqp-consume – Consume messages from a queue on an AMQP server"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-consume</code> [<i>OPTION</i>&#8230;] {<i>command</i>} [<i>args</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>amqp-consume</code></p>
 <dd>consumes messages from a queue on an AMQP server. For each message that arrives, a receiving command is run, with the message body supplied to it on standard input. </dd>
 <p> <code>amqp-consume</code> can consume from an existing queue, or it can create a new queue. It can optionally bind the queue to an existing exchange. </p>

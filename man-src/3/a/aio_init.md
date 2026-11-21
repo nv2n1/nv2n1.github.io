@@ -1,4 +1,5 @@
 ---
+
 title: "aio_init(3)"
 name: "aio_init"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-aio_init/"
 description: "aio_init – asynchronous I/O initialization"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;aio.h&gt;
 void aio_init(const struct aioinit *init);
 </code></pre>
 <p> Link with <i>-lrt</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The GNU-specific <code>aio_init</code>() function allows the caller to provide tuning hints to the glibc POSIX AIO implementation. Use of this function is optional, but to be effective, it must be called before employing any other functions in the POSIX AIO API. </p>
 <p> The tuning information is provided in the buffer pointed to by the argument <i>init</i>. This buffer is a structure of the following form: </p>
 <p> struct aioinit {<br />

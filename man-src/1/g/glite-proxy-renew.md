@@ -1,4 +1,5 @@
 ---
+
 title: "glite-proxy-renew(1)"
 name: "glite-proxy-renew"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-proxy-renew/"
 description: "glite-proxy-renew – simple client for the proxy renewal daemon."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-proxy-renew</code> -j<i> &lt;jobid&gt; </i>[<i>options</i>]<i> command</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-proxy-renew</code> communicates with the proxy renewal daemon and allows administrators to check it functions correctly. It is not meant to be used regularly or by regular users. </p>
 <h2>COMMANDS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pw-profiler(1)"
 name: "pw-profiler"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pw-profiler/"
 description: "pw-profiler – The PipeWire profiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>pw-profiler</code> [<i>options</i>]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Start profiling a PipeWire instance. </p>
 <p> If the server has the profiler module loaded, this program will connect to it and log the profiler data. Profiler data contains times and durations when processing nodes and devices started and completed. </p>
 <p> When this program is stopped, a set of <code>gnuplot</code> files and a script to generate SVG files from the .plot files is generated, along with a .html file to visualize the profiling results in a browser.</p>

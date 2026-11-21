@@ -1,4 +1,5 @@
 ---
+
 title: "modhex(1)"
 name: "modhex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-modhex/"
 description: "modhex – convert data to/from modhex encoding"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>modhex</code> [-d] [-h] <i>DATA</i></p>
-<h2>DESCRIPTION</h2>
 <p> Encode/decode modhex data <i>DATA</i> to binary and hex.</p>
 <h2>OPTIONS</h2>
 <p> The string DATA is the data to convert. </p>

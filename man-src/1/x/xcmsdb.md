@@ -1,4 +1,5 @@
 ---
+
 title: "xcmsdb(1)"
 name: "xcmsdb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xcmsdb/"
 description: "xcmsdb – Device Color Characterization utility for X Color Management System"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xcmsdb</code> [ <code>-query</code> ] [ <code>-remove</code> ] [ <code>-format 32</code>|<code>16</code>|<code>8</code> ] [ <code>-help</code> ] [ <code>-version</code> ] [ <i>filename</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>xcmsdb</i> is used to load, query, or remove Device Color Characterization data stored in properties on the root window of the screen as specified in section 7, Device Color Characterization, of the ICCCM. Device Color Characterization data (also called the Device Profile) is an integral part of Xlib&#8217;s X Color Management System (Xcms), necessary for proper conversion of color specification between device-independent and device-dependent forms. Xcms uses 3&#215;3 matrices stored in the XDCCC_LINEAR_RGB_MATRICES property to convert color specifications between CIEXYZ and RGB Intensity (XcmsRGBi, also referred to as linear RGB). Xcms then uses display gamma information stored in the XDCCC_LINEAR_RGB_CORRECTION property to convert color specifications between RGBi and RGB device (XcmsRGB, also referred to as device RGB). </p>
 <p> Note that Xcms allows clients to register <i>function sets</i> in addition to its built-in function set for CRT color monitors. Additional function sets may store their device profile information in other properties in function set specific format. This utility is unaware of these non-standard properties. </p>
 <p> The ASCII readable contents of <i>filename</i> (or the standard input if no input file is given) are appropriately transformed for storage in properties, provided the <code>-query</code> or <code>-remove</code> options are not specified.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mkdir(1)"
 name: "mkdir"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mkdir/"
 description: "mkdir – make directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mkdir</code> [<i>,OPTION/</i>]&#8230; <i>,DIRECTORY/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Create the DIRECTORY(ies), if they do not already exist. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

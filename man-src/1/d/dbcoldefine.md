@@ -1,4 +1,5 @@
 ---
+
 title: "dbcoldefine(1)"
 name: "dbcoldefine"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbcoldefine/"
 description: "dbcoldefine – define the columns of a plain text file to make it an Fsdb file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbcoldefine [-F x] [column&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This program writes a new header before the data with the specified column names. It does <i>not</i> do any validation of the data contents; it is up to the user to verify that, other than the header, the input datastream is a correctly formatted Fsdb file.</p>
 <h2>OPTIONS</h2>
 <dl>

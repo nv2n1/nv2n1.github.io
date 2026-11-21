@@ -1,4 +1,5 @@
 ---
+
 title: "midi-disasm(1)"
 name: "midi-disasm"
 section: "1"
@@ -9,9 +10,7 @@ description: "midi-disasm – disassemble midi files"
 
 <h2>NAME</h2>
 <p> midi-disasm &#8211; disassemble midi files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>midi-disasm</code> [ <code>-d</code> ] [ <code>-s</code> ] [ <code>-q</code> ] [ file ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>midi-disasm</i> disassembles a standard <code>midi</code> file into readable/editable text. <i>midi-disasm</i> prefers the file suffix &quot;.mid&quot; &#8212; it will supply it if a file by the name given on the command line cannot be found. Its output is to <i>stdout</i>. </p>
 <p> There are the following options for <i>midi-disasm</i>:</p>
 <dl>

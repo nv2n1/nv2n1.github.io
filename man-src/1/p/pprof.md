@@ -1,4 +1,5 @@
 ---
+
 title: "pprof(1)"
 name: "pprof"
 section: "1"
@@ -9,9 +10,7 @@ description: "pprof – manual page for pprof (part of gperftools)"
 
 <h2>NAME</h2>
 <p> pprof &#8211; manual page for pprof (part of gperftools)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pprof</code> [<i>options</i>] <i>&lt;program&gt; &lt;profile&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> Prints specified cpu- or heap-profile</dd></dl>

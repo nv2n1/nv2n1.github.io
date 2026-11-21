@@ -1,4 +1,5 @@
 ---
+
 title: "ogmdemux(1)"
 name: "ogmdemux"
 section: "1"
@@ -9,9 +10,7 @@ description: "ogmdemux – Extract streams from OGG/OGM files into separate file
 
 <h2>NAME</h2>
 <p> ogmdemux &#8211; Extract streams from OGG/OGM files into separate files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ogmdemux</code> [<i>options</i>] <i>inname</i></p>
-<h2>DESCRIPTION</h2>
 <p> This program extracts all or only some streams from an OGM and writes them to separate files.</p>
 <dl>
 <dt><i>inname</i></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_verify_endphase(3)"
 name: "gnutls_ia_verify_endphase"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ia_verify_endphase – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ia_verify_endphase &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>int gnutls_ia_verify_endphase(gnutls_session_t </code><i>session</i><code>, const char * </code><i>checksum</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_ia_verify_endphase – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>const char * checksum</dt>
 <dd> 12-byte checksum data, received from <code>gnutls_ia_recv()</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Verify TLS/IA end phase checksum data. If verification fails, the <code>GNUTLS_A_INNER_APPLICATION_VERIFICATION</code> alert is sent to the other sie. </p>
 <p> This function is called when <code>gnutls_ia_recv()</code> return <code>GNUTLS_E_WARNING_IA_IPHF_RECEIVED</code> or <code>GNUTLS_E_WARNING_IA_FPHF_RECEIVED</code>.</p>
 <h2>RETURN VALUE</h2>

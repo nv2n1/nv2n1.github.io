@@ -1,4 +1,5 @@
 ---
+
 title: "mailq(1)"
 name: "mailq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mailq/"
 description: "sendmail – Postfix to Sendmail compatibility interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 sendmail[option...][recipient...] mailq
         sendmail -
@@ -16,7 +16,6 @@ sendmail[option...][recipient...] mailq
             sendmail -
     I
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command implements the Postfix to Sendmail compatibility interface. For the sake of compatibility with existing applications, some Sendmail command-line options are recognized but silently ignored. </p>
 <p> By default, Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) reads a message from standard input until EOF or until it reads a line with only a <code>.</code> character, and arranges for delivery. Postfix <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) relies on the <code><a href="/docs/linux/man/1-postdrop/">postdrop</a></code>(1) command to create a queue file in the <code>maildrop</code> directory. </p>
 <p> Specific command aliases are provided for other common modes of operation:</p>

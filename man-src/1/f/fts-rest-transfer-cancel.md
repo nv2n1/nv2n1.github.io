@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-cancel(1)"
 name: "fts-rest-transfer-cancel"
 section: "1"
@@ -11,7 +12,6 @@ description: "fts-rest-transfer-cancel"
 <p> fts-rest-transfer-cancel</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-cancel [options]</p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to cancel a running job. It returns the final state of the canceled job. Please, mind that if the job is already in a final state (FINISHEDDIRTY, FINISHED, FAILED), this command will return this state. You can additionally cancel only a subset appending a comma-separated list of file ids</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "func-transmit(1)"
 name: "func-transmit"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-func-transmit/"
 
  Func-transmit -- cross-language func adapter
 
-<h2>SYNOPSIS</h2>
+func-transmit [-h|--help] [-j|--json] [-y|--yaml] &lt; data_in &gt; data_out
 
- func-transmit [-h|--help] [-j|--json] [-y|--yaml] &lt; data_in &gt; data_out
-
-<h2>DESCRIPTION</h2>
-
- Func includes a powerful Python <font SIZE="-1">API</font> for addressing the overlord via software. When writing an app in a language other than Python, func-transmit can be used to operate the overlord and recieve structured results from it. 
+Func includes a powerful Python <font SIZE="-1">API</font> for addressing the overlord via software. When writing an app in a language other than Python, func-transmit can be used to operate the overlord and recieve structured results from it. 
 
  This tool, func-transmit, is intended to be called using pipes, sending formatted data into stdin and recieving return codes via stdout. It also can be invoked using the shell.
 

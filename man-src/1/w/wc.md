@@ -1,4 +1,5 @@
 ---
+
 title: "wc(1)"
 name: "wc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-wc/"
 description: "wc – print newline, word, and byte counts for each file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wc</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;<br />
  <code>wc</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;files0-from=F/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Print newline, word, and byte counts for each FILE, and a total line if more than one FILE is specified. A word is a non-zero-length sequence of characters delimited by white space. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> The options below may be used to select which counts are printed, always in the following order: newline, word, character, byte, maximum line length.</p>

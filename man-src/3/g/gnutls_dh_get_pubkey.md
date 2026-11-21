@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dh_get_pubkey(3)"
 name: "gnutls_dh_get_pubkey"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_dh_get_pubkey – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_get_pubkey &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_get_pubkey(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>raw_key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_dh_get_pubkey – API function"
 <dd> is a gnutls session</dd>
 <dt>gnutls_datum_t * raw_key</dt>
 <dd> will hold the public key.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the peer&#8217;s public key used in the last Diffie-Hellman key exchange. This function should be used for both anonymous and ephemeral Diffie-Hellman. The output parameters must be freed with <code>gnutls_free()</code>. </p>
 <p> Note, that public key is exported as non-negative integer and may include a leading zero byte.</p>
 <h2>RETURNS</h2>

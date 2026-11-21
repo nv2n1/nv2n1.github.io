@@ -1,4 +1,5 @@
 ---
+
 title: "acpinames(1)"
 name: "acpinames"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-acpinames/"
 description: "acpinames – ACPI name space dump utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>acpinames</code> &lt;option&gt;<i>&#8230;</i> &lt;aml-file&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>acpinames</code> command. The option list is taken from the acpinames interactive help. </p>
 <p> <code>acpinames</code> prints out the complete ACPI name space for an AML file. </p>
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_auth_info_s(3)"
 name: "globus_ftp_control_auth_info_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_ftp_control_auth_info_s –"
 ---
 
 <p> Authentication Values.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_ftp_control.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Authentication Values. </p>

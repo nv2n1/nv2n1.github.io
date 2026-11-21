@@ -1,4 +1,5 @@
 ---
+
 title: "ddr_lzo(1)"
 name: "ddr_lzo"
 section: "1"
@@ -9,11 +10,9 @@ description: "ddr_lzo – Data de/compression plugin for dd_rescue"
 
 <h2>NAME</h2>
 <p> ddr_lzo &#8211; Data de/compression plugin for dd_rescue</p>
-<h2>SYNOPSIS</h2>
 <p> <code>-L lzo[=option[:option[:&#8230;]]]</code><br />
  or<br />
  <code>-L /path/to/libddr_lzo.so[=option[:option[:&#8230;]]]</code></p>
-<h2>DESCRIPTION</h2>
 <h3>About</h3>
 <p> LZO is an algorithm that de/compresses data. It is tuned for speed (especially decompression speed) and trades the size of the compressed file for it to some degree. There are variants with slow compression (yet still very fast decompression) available though. See the algorithm parameter below. </p>
 <p> This plugin has been written for <code>dd_rescue</code> and uses the plugin interface from it. See the <code><a href="/docs/linux/man/1-dd_rescue/">dd_rescue</a>(1)</code> man page for more information on <code>dd_rescue.</code></p>

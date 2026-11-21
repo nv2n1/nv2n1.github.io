@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dh_get_prime_bits(3)"
 name: "gnutls_dh_get_prime_bits"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_dh_get_prime_bits – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_get_prime_bits &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_get_prime_bits(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the bits of the prime used in the last Diffie-Hellman key exchange with the peer. Should be used for both anonymous and ephemeral Diffie-Hellman. Note that some ciphers, like RSA and DSA without DHE, do not use a Diffie-Hellman key exchange, and then this function will return 0.</p>
 <h2>RETURNS</h2>
 <p> The Diffie-Hellman bit strength is returned, or 0 if no Diffie-Hellman key exchange was done, or a negative error code on failure.</p>

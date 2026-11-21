@@ -1,4 +1,5 @@
 ---
+
 title: "jpylibor(3)"
 name: "jpylibor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-jpylibor/"
 description: "ql/indexes/ibor/jpylibor.hpp – JPY LIBOR rate"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br />
  #include &lt;ql/time/calendars/unitedkingdom.hpp&gt;<br />
  #include &lt;ql/time/calendars/japan.hpp&gt;<br />

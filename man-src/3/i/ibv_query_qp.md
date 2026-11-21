@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_query_qp(3)"
 name: "ibv_query_qp"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_query_qp/"
 description: "ibv_query_qp – get the attributes of a queue pair (QP)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_query_qp(struct ibv_qp *qp, struct ibv_qp_attr *attr,
                  int attr_mask,
                  struct ibv_qp_init_attr *init_attr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_query_qp()</code> gets the attributes specified in <i>attr_mask</i> for the QP <i>qp</i> and returns them through the pointers <i>attr</i> and <i>init_attr</i>. The argument <i>attr</i> is an ibv_qp_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_qp_attr {

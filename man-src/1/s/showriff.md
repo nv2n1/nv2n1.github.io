@@ -1,4 +1,5 @@
 ---
+
 title: "showriff(1)"
 name: "showriff"
 section: "1"
@@ -9,9 +10,7 @@ description: "showriff – show structure of RIFF files (wav, avi, …)"
 
 <h2>NAME</h2>
 <p> showriff &#8211; show structure of RIFF files (wav, avi, &#8230;)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>showriff [ options ] filename</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>showriff</code> displays the structure of RIFF files. Common media files which use the RIFF format are wave-files and avi-movies.</p>
 <h2>OPTIONS</h2>
 <dl>

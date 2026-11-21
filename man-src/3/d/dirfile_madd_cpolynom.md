@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_madd_cpolynom(3)"
 name: "dirfile_madd_cpolynom"
 section: "3"
@@ -9,7 +10,6 @@ description: "dirfile_madd_bit, dirfile_madd_clincom, dirfile_madd_const, dirfil
 
 <h2>NAME</h2>
 <p> dirfile_madd_bit, dirfile_madd_clincom, dirfile_madd_const, dirfile_madd_cpolynom, dirfile_madd_lincom, dirfile_madd_linterp, dirfile_madd_multiply, dirfile_madd_phase, dirfile_madd_polynom, dirfile_madd_bit, dirfile_madd_string &#8212; add a field to a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_madd_bit(DIRFILE *</code><i>dirfile</i><code>,</code> <code>const char *</code><i>parent</i><code>, const char *</code><i>field_name</i><code>,</code> <code>const char *</code><i>in_field</i><code>, gd_bit_t </code><i>bitnum</i><code>, gd_bit_t </code><i>numbits</i><code>);</code></dt>
@@ -23,7 +23,6 @@ description: "dirfile_madd_bit, dirfile_madd_clincom, dirfile_madd_const, dirfil
 <dt> <code>int dirfile_madd_phase(DIRFILE *</code><i>dirfile</i><code>,</code> <code>const char *</code><i>parent</i><code>, const char *</code><i>field_name</i><code>,</code> <code>const char *</code><i>in_field</i><code>, gd_shift_t </code><i>shift</i><code>);</code></dt>
 <dt> <code>int dirfile_madd_sbit(DIRFILE *</code><i>dirfile</i><code>,</code> <code>const char *</code><i>parent</i><code>, const char *</code><i>field_name</i><code>,</code> <code>const char *</code><i>in_field</i><code>, gd_bit_t </code><i>bitnum</i><code>, gd_bit_t </code><i>numbits</i><code>);</code></dt>
 <dt> <code>int dirfile_madd_string(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>parent</i><code>,</code> <code>const char *</code><i>field_name</i><code>, const char *</code><i>value</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>These functions provide alternatives to using the <code>dirfile_madd</code>() function to add a new metafield of the indicated type under the parent field given by <i>parent</i> in the dirfile specified by <i>dirfile</i>. In all of these calls, <i>field_name</i> indicates the name of the field to be added. It should not be the full <i>&lt;parent-field&gt;</i><code>/</code><i>&lt;meta-field&gt;</i> field code. The meaning and valid types of other arguments may be obtained from the <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3) and <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5) manual pages. </dd>
 <p> The <code>dirfile_madd_clincom</code>() and <code>dirfile_madd_cpolynom</code>() functions are identical to <code>dirfile_madd_lincom</code>() and <code>dirfile_madd_polynom</code>(), except they take complex scalar parameters, instead of purely real values. </p>
 <p> The <code>dirfile_madd_lincom</code>() and <code>dirfile_madd_clincom</code>() functions take pointers to three arrays of length <i>n_fields</i> containing the input field names (<i>in_fields</i>), the gain factors (<i>m</i> or <i>cm</i>), and the offset terms (<i>b</i> or <i>cb</i>). Similarly, <code>dirfile_madd_polynom</code>() and <code>dirfile_madd_cpolynom</code>() take an array of length <i>poly_ord</i> + 1 containing the polynomial co-efficients (<i>a</i> or <i>ca</i>). </p>

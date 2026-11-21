@@ -1,4 +1,5 @@
 ---
+
 title: "transformdb(1)"
 name: "transformdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transformdb/"
 description: "transformdb – The Freeze database migration tool."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> transformdb -o FILE [-i] [slice-options] [type-options]</p>
 <dl>
 <dt>
@@ -28,7 +28,6 @@ description: "transformdb – The Freeze database migration tool."
 <dt>
 </dt><dd> Transform all databases from the environment DBENV into the environment NEWDBENV. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The FreezeScript tool transformdb migrates a database created by a Freeze map or evictor. It accomplishes this by comparing the &quot;old&quot; Slice definitions (i.e., the ones that describe the current contents of the database) with the &quot;new&quot; Slice definitions, and making whatever modifications are necessary to ensure that the transformed database is compatible with the new definitions. Full documentation for transformdb is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Using+transformdb">http://doc.zeroc.com/display/Ice/Using+transformdb</a>&quot;. </p>
 <h2>OPTIONS</h2>

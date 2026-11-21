@@ -1,4 +1,5 @@
 ---
+
 title: "aa_text(3)"
 name: "aa_text"
 section: "3"
@@ -9,14 +10,12 @@ description: "aa_text – returns pointer to the text output buffer used by AA-l
 
 <h2>NAME</h2>
 <p> aa_text &#8211; returns pointer to the text output buffer used by AA-lib.</p>
-<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> char *aa_text(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
 <dt><code>aa_context *a</code></dt>
 <dd> Specifies the AA-lib context to operate on.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The text output buffer is simple array of characters specifying the ascii-value of the characters. The array is organizated in the aa_scrheight (a) rows of aa_scrwidth(a) characters.</p>
 <h2>RETURNS</h2>
 <p> Pointer the text output buffer used by AA-lib.</p>

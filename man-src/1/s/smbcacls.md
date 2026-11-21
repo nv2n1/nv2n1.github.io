@@ -1,4 +1,5 @@
 ---
+
 title: "smbcacls(1)"
 name: "smbcacls"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-smbcacls/"
 description: "smbcacls – Set or get ACLs on an NT file or directory names"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbcacls {//server/share} {/filename} [-D|&#8211;delete acl] [-M|&#8211;modify acl] [-a|&#8211;add acl] [-S|&#8211;set acl] [-C|&#8211;chown name] [-G|&#8211;chgrp name] [-I allow|remove|copy] [&#8211;numeric] [-t] [-U username] [-d] [-e] [-m|&#8211;max-protocol LEVEL] [&#8211;query-security-info FLAGS] [&#8211;set-security-info FLAGS] [&#8211;sddl] [&#8211;domain-sid SID] [-x|&#8211;maximum-access]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The smbcacls program manipulates NT Access Control Lists (ACLs) on SMB file shares. An ACL is comprised zero or more Access Control Entries (ACEs), which define access restrictions for a specific user or group.</p>
 <h2>OPTIONS</h2>

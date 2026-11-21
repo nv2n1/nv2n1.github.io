@@ -1,4 +1,5 @@
 ---
+
 title: "kwalletcli_getpin(1)"
 name: "kwalletcli_getpin"
 section: "1"
@@ -9,10 +10,8 @@ description: "kwalletcli_getpin – command line interface to pinentry"
 
 <h2>NAME</h2>
 <p> <code>kwalletcli_getpin</code> &#8211; command line interface to pinentry</p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>q</code> ] [-<code>b | m | p </code><i>prompt</i> ] [-<code>E | e </code><i>errortext</i> ]<br />
  [-<code>N </code><i>NoText</i> ] [-<code>t </code><i>desctext</i> ] [-<code>Y </code><i>YesText</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The utility is a shell wrapper speaking to <code>pinentry</code> using the Assuan protocol. It will ask the user for a passphrase and print it, without any trailing newline, to standard output. There are options for asking a boolean question or displaying a message. </p>
 <p> If <code>PINENTRY</code> is not empty but points to a non-existing or failing programme, <code>pinentry</code> is not called. Instead, <a href="/docs/linux/man/1-xmessage/">xmessage</a>(1) is used for boolean queries and messages if <code>DISPLAY</code> is set; otherwise, uses simple terminal I/O on <code>GPG_TTY</code> using <a href="/docs/linux/man/1-stty/">stty</a>(1) to disable echo of terminal input for passphrase queries. </p>
 <p> The options are as follows:</p>

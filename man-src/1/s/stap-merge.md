@@ -1,4 +1,5 @@
 ---
+
 title: "stap-merge(1)"
 name: "stap-merge"
 section: "1"
@@ -9,9 +10,7 @@ description: "stap-merge – systemtap per-cpu binary merger"
 
 <h2>NAME</h2>
 <p> stap-merge &#8211; systemtap per-cpu binary merger </p>
-<h2>SYNOPSIS</h2>
 <p> <code>stap-merge</code> [ <i>OPTIONS</i> ] [ <i>INPUT FILENAMES</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The stap-merge executable applies when the -b option has been used while running a <i>stap</i> script. The -b option will generate files per-cpu, based on the timestamp field. Then stap-merge will merge and sort through the per-cpu files based on the timestamp field. </p>
 <h2>OPTIONS</h2>
 <p> The systemtap merge executable supports the following options.</p>

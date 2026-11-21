@@ -1,4 +1,5 @@
 ---
+
 title: "hal-find-by-property(1)"
 name: "hal-find-by-property"
 section: "1"
@@ -9,9 +10,7 @@ description: "hal-find-by-property – find device objects by property matching"
 
 <h2>NAME</h2>
 <p> hal-find-by-property &#8211; find device objects by property matching</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hal-find-by-property</code> [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>hal-get-property</i> finds device object in the <code>HAL </code> device database by looking at device properties. For more information about both the big picture and specific <code>HAL</code> properties, refer to the <i>HAL spec</i> which can be found in <i>/usr/share/doc/hal-0.5.13/spec/hal-spec.html</i> depending on the distribution. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

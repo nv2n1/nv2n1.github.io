@@ -1,4 +1,5 @@
 ---
+
 title: "wks2text(1)"
 name: "wks2text"
 section: "1"
@@ -9,7 +10,6 @@ description: "wks2text – convert Works spreadsheet into plain text"
 
 <h2>NAME</h2>
 <p> wks2text &#8211; convert Works spreadsheet into plain text</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wks2text</code> [<i>OPTION</i>] <i>&lt;Works Spreadsheet Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>

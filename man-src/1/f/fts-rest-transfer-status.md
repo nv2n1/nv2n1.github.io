@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-status(1)"
 name: "fts-rest-transfer-status"
 section: "1"
@@ -11,7 +12,6 @@ description: "fts-rest-transfer-status"
 <p> fts-rest-transfer-status</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-status [options] JOB_ID</p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to check the current status of a given job</p>
 <h2>OPTIONS</h2>
 <dl>

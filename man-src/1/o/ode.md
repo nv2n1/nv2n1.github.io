@@ -1,4 +1,5 @@
 ---
+
 title: "ode(1)"
 name: "ode"
 section: "1"
@@ -9,9 +10,7 @@ description: "ode – numerical solution of ordinary differential equations"
 
 <h2>NAME</h2>
 <p> ode &#8211; numerical solution of ordinary differential equations</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ode</code> [ <i>options</i> ] [ <i>file</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ode</code> is a tool that solves, by numerical integration, the initial value problem for a specified system of first-order ordinary differential equations. Three distinct numerical integration schemes are available: Runge-Kutta-Fehlberg (the default), Adams-Moulton, and Euler. The Adams-Moulton and Runge-Kutta schemes are available with adaptive step size. </p>
 <p> The operation of <code>ode</code> is specified by a program, written in its input language. The program is simply a list of expressions for the derivatives of the variables to be integrated, together with some control statements. Some examples are given in the <font SIZE="-1"><code>EXAMPLES </code></font> section. </p>
 <p> <code>ode</code> reads the program from the specified file, or from standard input if no file name is given. If reading from standard input, <code>ode</code> will stop reading and exit when it sees a single period on a line by itself. </p>

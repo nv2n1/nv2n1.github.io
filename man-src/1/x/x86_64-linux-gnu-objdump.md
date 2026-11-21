@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-objdump(1)"
 name: "x86_64-linux-gnu-objdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-objdump/"
 description: "objdump – display information from object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> objdump [<code>-a</code>|<code>&#8211;archive-headers</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-b</code>&nbsp;<i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]&nbsp;]<br />
@@ -63,7 +63,6 @@ description: "objdump – display information from object files"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-H</code>|<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>objfile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>objdump</code> displays information about one or more object files. The options control what particular information to display. This information is mostly useful to programmers who are working on the compilation tools, as opposed to programmers who just want their program to compile and work. </p>
 <p> <i>objfile</i>&#8230; are the object files to be examined. When you specify archives, <code>objdump</code> shows information on each of the member object files.</p>
 <h2>OPTIONS</h2>

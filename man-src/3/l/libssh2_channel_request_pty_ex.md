@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_request_pty_ex(3)"
 name: "libssh2_channel_request_pty_ex"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_channel_request_pty_ex – short function description"
 
 <h2>NAME</h2>
 <p> libssh2_channel_request_pty_ex &#8211; short function description</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_channel_request_pty_ex(LIBSSH2_CHANNEL *channel, const char *term, unsigned int term_len, const char *modes, unsigned int modes_len, int width, int height, int width_px, int height_px); </p>
 <p> int libssh2_channel_request_pty(LIBSSH2_CHANNEL *channel, char *term); </p>
-<h2>DESCRIPTION</h2>
 <p> <i>channel</i> &#8211; Previously opened channel instance such as returned by <code><a href="/docs/linux/man/3-libssh2_channel_open_ex/">libssh2_channel_open_ex</a>(3)</code> </p>
 <p> <i>term</i> &#8211; Terminal emulation (e.g. vt102, ansi, etc&#8230;) </p>
 <p> <i>term_len</i> &#8211; Length of term parameter </p>

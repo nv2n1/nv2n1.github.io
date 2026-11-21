@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_getrrsetbyname(3)"
 name: "lwres_getrrsetbyname"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_getrrsetbyname/"
 description: "lwres_getrrsetbyname, lwres_freerrset – retrieve DNS records"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
@@ -40,7 +40,6 @@ struct rrsetinfo {
 };
 </code></pre>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lwres_getrrsetbyname()</code> gets a set of resource records associated with a <i>hostname</i>, <i>class</i>, and <i>type</i>. <i>hostname</i> is a pointer a to null-terminated string. The <i>flags</i> field is currently unused and must be zero. </p>
 <p> After a successful call to <code>lwres_getrrsetbyname()</code>, <i>*res</i> is a pointer to an <code>rrsetinfo</code> structure, containing a list of one or more <code>rdatainfo</code> structures containing resource records and potentially another list of <code>rdatainfo</code> structures containing SIG resource records associated with those records. The members <code>rri_rdclass</code> and <code>rri_rdtype</code> are copied from the parameters. <code>rri_ttl</code> and <code>rri_name</code> are properties of the obtained rrset. The resource records contained in <code>rri_rdatas</code> and <code>rri_sigs</code> are in uncompressed DNS wire format. Properties of the rdataset are represented in the <code>rri_flags</code> bitfield. If the RRSET_VALIDATED bit is set, the data has been DNSSEC validated and the signatures verified. </p>
 <p> All of the information returned by <code>lwres_getrrsetbyname()</code> is dynamically allocated: the <code>rrsetinfo</code> and <code>rdatainfo</code> structures, and the canonical host name strings pointed to by the <code>rrsetinfo</code>structure. Memory allocated for the dynamically allocated structures created by a successful call to <code>lwres_getrrsetbyname()</code> is released by <code>lwres_freerrset()</code>. <i>rrset</i> is a pointer to a <code>struct rrset</code> created by a call to <code>lwres_getrrsetbyname()</code>. </p>

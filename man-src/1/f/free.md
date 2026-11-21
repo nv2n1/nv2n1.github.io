@@ -1,4 +1,5 @@
 ---
+
 title: "free(1)"
 name: "free"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-free/"
 description: "free – Display amount of free and used memory in the system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>free</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>free</code> displays the total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel. The information is gathered by parsing /proc/meminfo. The displayed columns are:</p>
 <dl>
 <dt><code>total</code></dt>

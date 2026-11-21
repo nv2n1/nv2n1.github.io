@@ -1,4 +1,5 @@
 ---
+
 title: "pdfinfo(1)"
 name: "pdfinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdfinfo/"
 description: "pdfinfo – Portable Document Format (PDF) document information extractor (version 3.03)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdfinfo</code> [options] [<i>PDF-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Pdfinfo</code> prints the contents of the &#8216;Info&#8217; dictionary (plus some other useful information) from a Portable Document Format (PDF) file. </p>
 <p> If <i>PDF-file</i> is &#8216;-&#8216;, it reads the PDF file from stdin. </p>
 <p> The &#8216;Info&#8217; dictionary contains the following values: </p>

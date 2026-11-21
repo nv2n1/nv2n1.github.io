@@ -1,4 +1,5 @@
 ---
+
 title: "cap_to_text(3)"
 name: "cap_to_text"
 section: "3"
@@ -9,14 +10,12 @@ description: "cap_from_text, cap_to_text, cap_to_name, cap_from_name – capabil
 
 <h2>NAME</h2>
 <p> cap_from_text, cap_to_text, cap_to_name, cap_from_name &#8211; capability state textual representation translation</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>
 <p> <code>cap_t cap_from_text(const char *</code><i>buf_p</i><code>);</code> </p>
 <p> <code>char *cap_to_text(cap_t </code><i>caps</i><code>, ssize_t *</code><i>length_p</i><code>);</code> </p>
 <p> <code>int cap_from_name(const char *</code><i>name</i><code>, cap_value_t *</code><i>cap_p</i><code>);</code> </p>
 <p> <code>char *cap_to_name(cap_value_t </code><i>cap</i><code>);</code> </p>
 <p> Link with <i>-lcap</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions translate a capability state between an internal representation and a textual one. The internal representation is managed by the capability functions in working storage. The textual representation is a structured, human-readable string suitable for display. </p>
 <p> <code>cap_from_text</code>() allocates and initializes a capability state in working storage. It then sets the contents of this newly created capability state to the state represented by a human-readable, nul-terminated character string pointed to by <i>buf_p</i>. It returns a pointer to the newly created capability state. When the capability state in working storage is no longer required, the caller should free any releasable memory by calling <code>cap_free</code>() with <i>cap_t</i> as an argument. The function returns an error if it cannot parse the contents of the string pointed to by <i>buf_p</i> or does not recognize any <i>capability_name</i> or flag character as valid. The function also returns an error if any flag is both set and cleared within a single clause. </p>
 <p> <code>cap_to_text</code>() converts the capability state in working storage identified by <i>cap_p</i> into a nul-terminated human-readable string. This function allocates any memory necessary to contain the string, and returns a pointer to the string. If the pointer <i>len_p</i> is not NULL, the function shall also return the full length of the string (not including the nul terminator) in the location pointed to by <i>len_p</i>. The capability state in working storage, identified by <i>cap_p</i>, is completely represented in the character string. When the capability state in working storage is no longer required, the caller should free any releasable memory by calling <code>cap_free</code>() with the returned string pointer as an argument. </p>

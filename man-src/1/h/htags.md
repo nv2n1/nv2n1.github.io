@@ -1,4 +1,5 @@
 ---
+
 title: "htags(1)"
 name: "htags"
 section: "1"
@@ -9,9 +10,7 @@ description: "htags – generate hypertext from source code."
 
 <h2>NAME</h2>
 <p> htags &#8211; generate hypertext from source code.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>htags</code> [-acDfFghInosTvwx][-d <i>dbpath</i>][-m <i>name</i>][-S <i>cgidir</i>][-t <i>title</i>][<i>dir</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Htags</code> makes hypertext of C, C++, Yacc, Java, PHP and Assembly source code. </p>
 <p> In advance of using this command, you must execute <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) from the root directory of the source tree. Then you can execute <code>htags</code> from the same place. <code>Htags</code> makes an directory named &#8216;HTML&#8217; and generates hypertext in it. You can start browsing from &#8216;HTML/index.html&#8217;. </p>
 <p> Since <code>htags</code> generates static hypertext as long as the <code>-D</code> or <code>-f</code> option is not specified, you can move it anywhere and browse it by any browser without web server. </p>

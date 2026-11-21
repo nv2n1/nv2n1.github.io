@@ -1,4 +1,5 @@
 ---
+
 title: "flow-nfilter(1)"
 name: "flow-nfilter"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-nfilter – Filter flows."
 
 <h2>NAME</h2>
 <p> flow-nfilter &#8211; Filter flows.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-nfilter</code> [ <code>-hk</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> filter_fname</i> ] [ <code>-F</code><i> filter_definition</i> ] [ <code>-v</code><i> variable binding</i> ] [ <code>-z</code><i> z_level</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-nfilter</code> utility will filter flows based on user selectable criteria. Filters are defined in a configuration file and are composed of primitives and a definition. Definitions contain match lines grouped to form logical AND and OR operations on the flow using the selected primitives. A definition may contain the invert command which will invert the result of the evaluation. </p>
 <p> Words in the configuration file of the form @VAR or @{VAR:default} will be expanded at run-time by setting variable names with the -v option. </p>
 <p> Filter primitives begin with the filter-primitive keyword followed by a symbolic name. Each primitive has a type defined below. A list of permit and or deny keywords followed by an argument are later evaulated to determine if the flow is permitted or denied. The default action for a primitive is to deny which may be changed with the default keyword. Symbolic substitutions are done where appropriate. </p>

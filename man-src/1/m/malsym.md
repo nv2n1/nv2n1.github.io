@@ -1,4 +1,5 @@
 ---
+
 title: "malsym(1)"
 name: "malsym"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-malsym/"
 description: "malsym – compile a Malaga symbol file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>malsym</code> <i>symbol-file</i> </p>
 <p> <code>malsym</code> <i>extended-symbol-file</i> <code>-use</code> <i>symbol-file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Malaga is a development environment for natural-language grammars based on the Left-Associative Grammar formalism. Malaga grammars can be used for automatic morphological and/or syntactic analysis. </p>
 <p> The program <code>malsym</code> compiles a Malaga symbol file. Give it the symbol file (suffix <code>.sym</code> or <code>.esym</code>) that is to be translated as argument. If an <i>extended-symbol-file</i> (suffix <code>.esym</code>) is to be compiled, you must add the option <code>-use</code>. </p>
 <p> See <code>info Malaga</code> for details. </p>

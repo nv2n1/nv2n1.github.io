@@ -1,4 +1,5 @@
 ---
+
 title: "brltty(1)"
 name: "brltty"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-brltty/"
 description: "brltty – refreshable braille display driver for Linux/Unix"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>brltty </code>[<i>option</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>brltty</code> is a background process (daemon) which provides access to the console screen (when in text mode) for a blind person using a refreshable braille display. It drives the braille display, and provides complete screen review functionality. Some speech capability has also been incorporated.</p>
 <h2>OPTIONS</h2>
 <p> Options can be passed to <code>brltty</code> in a number of ways. From most to least influential, these are:</p>

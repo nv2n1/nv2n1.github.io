@@ -1,4 +1,5 @@
 ---
+
 title: "git-submodule(1)"
 name: "git-submodule"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-git-submodule/"
 description: "git-submodule – Initialize, update or inspect submodules"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git submodule[--quiet][--cached] git submodule[--quiet] add[&lt;options&gt;][--]&lt;repository&gt;[&lt;path&gt;] git submodule[--quiet] status[--cached][--recursive][--][&lt;path&gt;...] git submodule[--quiet] init[--][&lt;path&gt;...] git submodule[--quiet] deinit[-f | --force](--all | [--]&lt;path&gt;...)
         git submodule[--quiet] update[&lt;options&gt;][--][&lt;path&gt;...] git submodule[--quiet] set
     - branch[&lt;options&gt;][--]&lt;path&gt; git submodule[--quiet] set - url[--]&lt;path&gt;&lt;newurl&gt; git submodule[--quiet] summary[&lt;options&gt;][--][&lt;path&gt;...] git submodule[--quiet] foreach[--recursive]&lt;command&gt; git submodule[--quiet] sync[--recursive][--][&lt;path&gt;...] git submodule[--quiet] absorbgitdirs[--][&lt;path&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Inspects, updates and manages submodules. </p>
 <p> For more information about submodules, see <code><a href="/docs/linux/man/7-gitsubmodules/">gitsubmodules</a></code>(7).</p>
 <h2>COMMANDS</h2>

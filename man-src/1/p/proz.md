@@ -1,4 +1,5 @@
 ---
+
 title: "proz(1)"
 name: "proz"
 section: "1"
@@ -11,7 +12,6 @@ description: "ProZilla – a download accelerator for GNU/Linux"
 <p> <code>ProZilla</code> &#8211; a download accelerator for GNU/Linux</p>
 <h2>SYNTAX</h2>
 <p> <code>proz [OPTIONS] &lt;URL&gt;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ProZilla</code> is a download program that makes multiple connections and downloads a file in multiple parts from different servers simultaneously, thus enhancing the download speed and downloading the file faster than a download with a single connection. </p>
 <p> ProZilla is able to do ftp searches for other possible sites that contain the same file, ping them for connection speeds and automatically download from the fastest sites. </p>
 <p> FTP passwords can be specified with the URL, or can be obtained automatically from <code>~/.netrc</code> if it exists.</p>

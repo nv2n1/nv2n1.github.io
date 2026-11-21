@@ -1,4 +1,5 @@
 ---
+
 title: "snmpwalk(1)"
 name: "snmpwalk"
 section: "1"
@@ -9,9 +10,7 @@ description: "snmpwalk – retrieve a subtree of management values using SNMP GE
 
 <h2>NAME</h2>
 <p> snmpwalk &#8211; retrieve a subtree of management values using SNMP GETNEXT requests</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmpwalk</code> [APPLICATION OPTIONS] [COMMON OPTIONS] AGENT [OID]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>snmpwalk</code> is an SNMP application that uses SNMP GETNEXT requests to query a network entity for a tree of information. </p>
 <p> An object identifier (OID) may be given on the command line. This OID specifies which portion of the object identifier space will be searched using GETNEXT requests. All variables in the subtree below the given OID are queried and their values presented to the user. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>. </p>
 <p> If no OID argument is present, <code>snmpwalk</code> will search the subtree rooted at SNMPv2-SMI::mib-2 (including any MIB object values from other MIB modules, that are defined as lying within this subtree). If the network entity has an error processing the request packet, an error packet will be returned and a message will be shown, helping to pinpoint why the request was malformed. </p>

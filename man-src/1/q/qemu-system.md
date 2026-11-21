@@ -1,4 +1,5 @@
 ---
+
 title: "qemu-system(1)"
 name: "qemu-system"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qemu-system/"
 description: "qemu-doc – QEMU version 4.2.0 User Documentation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>qemu-system-x86_64</code> [<i>options</i>] [<i>disk_image</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <font SIZE="-1">QEMU PC</font> System emulator simulates the following peripherals:</p>
 <dl>
 <dt>&#8211;</dt>

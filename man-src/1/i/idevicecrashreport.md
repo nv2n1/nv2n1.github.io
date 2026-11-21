@@ -1,4 +1,5 @@
 ---
+
 title: "idevicecrashreport(1)"
 name: "idevicecrashreport"
 section: "1"
@@ -9,9 +10,7 @@ description: "idevicecrashreport – Retrieve crash reports from a device."
 
 <h2>NAME</h2>
 <p> idevicecrashreport &#8211; Retrieve crash reports from a device.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>idevicecrashreport</code> [OPTIONS] DIRECTORY </p>
-<h2>DESCRIPTION</h2>
 <p> Simple utility to move crash reports from a device to a local directory. </p>
 <p> The utility outputs lines prefixed with either &quot;Link:&quot;, &quot;Copy:&quot; or &quot;Move:&quot; depending on whether a symlink was created, a file was copied or moved from the device to the target DIRECTORY. </p>
 <h2>OPTIONS</h2>

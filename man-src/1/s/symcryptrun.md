@@ -1,4 +1,5 @@
 ---
+
 title: "symcryptrun(1)"
 name: "symcryptrun"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-symcryptrun/"
 description: "symcryptrun – Call a simple symmetric encryption tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>symcryptrun</code> &#8211; Call a simple symmetric encryption tool </p>
-<h2>SYNOPSIS</h2>
 <p> <code>symcryptrun</code> <code>&#8211;class</code> <i>class</i> <code>&#8211;program</code> <i>program</i> <code>&#8211;keyfile</code> <i>keyfile</i> [<code>&#8211;decrypt</code>|<code>&#8211;encrypt</code>] [<i>inputfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Sometimes simple encryption tools are already in use for a long time and there might be a desire to integrate them into the GnuPG framework. The protocols and encryption methods might be non-standard or not even properly documented, so that a full-fledged encryption tool with an interface like <code>gpg</code> is not doable. <code>symcryptrun</code> provides a solution: It operates by calling the external encryption/decryption module and provides a passphrase for a key using the standard <code>pinentry</code> based mechanism through <code>gpg-agent</code>. </p>
 <p> Note, that <code>symcryptrun</code> is only available if GnuPG has been configured with &#8216;&#8211;enable-symcryptrun&#8217; at build time. </p>
 <p> For encryption, the plain text must be provided on STDIN or as the argument <i>inputfile</i>, and the ciphertext will be output to STDOUT. For decryption vice versa. </p>

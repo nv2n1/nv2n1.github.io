@@ -1,4 +1,5 @@
 ---
+
 title: "freight-add(1)"
 name: "freight-add"
 section: "1"
@@ -9,9 +10,7 @@ description: "freight-add – add a package to Freight"
 
 <h2>NAME</h2>
 <p> <code>freight-add</code> &#8211; add a package to Freight</p>
-<h2>SYNOPSIS</h2>
 <p> <code>freight add</code> [<code>-c</code> <i>conf</i>] [<code>-v</code>] [<code>-h</code>] <i>package</i> <i>manager</i>/<i>distro</i>[/<i>component</i>][&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>freight-add</code> registers <i>package</i> with one or more <i>manager</i>/<i>distro</i>[/<i>component</i>] pairs (or triples). Currently, <code>apt</code> is the only supported <i>manager</i> and <i>package</i> must be one of <i>*.deb</i>, <i>*.dsc *.debian.tar.gz *.orig.tar.gz</i>, <i>*.dsc *.diff.gz *.orig.tar.gz</i>, or <i>*.dsc *.tar.gz</i>. <i>distro</i> may be any arbitrary value but is best suited to naming a particular version of the target operating system (for example, &quot;wheezy&quot; or &quot;precise&quot;). <i>component</i> is optional and for <code>apt</code> defaults to <code>main</code>. </p>
 <p> The package files are organized in the Freight library so <code><a href="/docs/linux/man/1-freight-cache/">freight-cache</a></code>(1) has an easy time of creating package repositories for each <i>manager</i>/<i>distro</i>[/<i>component</i>] later.</p>
 <h2>OPTIONS</h2>

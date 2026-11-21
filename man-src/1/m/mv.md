@@ -1,4 +1,5 @@
 ---
+
 title: "mv(1)"
 name: "mv"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-mv/"
 description: "mv – move (rename) files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mv</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br />
  <code>mv</code> [<i>,OPTION/</i>]&#8230; <i>,SOURCE/</i>&#8230; <i>,DIRECTORY/</i><br />
  <code>mv</code> [<i>,OPTION/</i>]&#8230; <i>,-t DIRECTORY SOURCE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

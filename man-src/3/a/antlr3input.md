@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3input(3)"
 name: "antlr3input"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3input.h –"
 ---
 
 <p> Defines the basic structures used to manipulate character streams from any input source.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;<br />

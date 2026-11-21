@@ -1,4 +1,5 @@
 ---
+
 title: "addwords(1)"
 name: "addwords"
 section: "1"
@@ -9,9 +10,7 @@ description: "addwords – Adding words to specified dictionary collectively"
 
 <h2>NAME</h2>
 <p> addwords &#8211; Adding words to specified dictionary collectively</p>
-<h2>SYNOPSIS</h2>
 <p> <code>addwords [{-cs|-cannaserver} </code><i>cannaserver</i>][-l <i>file</i>] dicname</p>
-<h2>DESCRIPTION</h2>
 <p> <i>addwords</i> adds words to specified dictionary according to the word information from the standard input. The standard input must be in a format of &#8220;Text Dictionary format&#8221; of Canna. </p>
 <p> <i>dicname</i> must be a &#8220;Text Dictionary format&#8221; which can be rewritten.</p>
 <h2>OPTIONS</h2>

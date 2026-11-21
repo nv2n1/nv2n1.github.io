@@ -1,4 +1,5 @@
 ---
+
 title: "lhapdf-getdata(1)"
 name: "lhapdf-getdata"
 section: "1"
@@ -9,9 +10,7 @@ description: "lhapdf-getdata – Get PDF sets from the LHAPDF repository"
 
 <h2>NAME</h2>
 <p> lhapdf-getdata &#8211; Get PDF sets from the LHAPDF repository</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lhapdf-getdata</code> [<i>&#8211;main</i>] [<i>&#8211;all</i>] [<i>&#8211;repo=URL</i>] [<i>&#8211;dest=DEST</i>] [<i>&#8211;dryrun</i>] &lt;name|number&gt; [&lt;name|number&gt; &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <dl>
 </dl>
 <p> Grab PDF grid and param files from the LHAPDF repository and install them into the local LHAPDF data directory.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "airsnort(1)"
 name: "airsnort"
 section: "1"
@@ -7,10 +8,7 @@ url: "/docs/linux/man/1-airsnort/"
 description: "airsnort – WEP key cracking tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>airsnort</code> &#8211; WEP key cracking tool </p>
-<h2>SYNOPSIS</h2>
-<h2>DESCRIPTION</h2>
 <p> <code>airsnort</code> is a WEP key cracking tool designed to exploit the RC4 scheduling weakness discussed by Fluhrer, Mantin, and Shamir (FMS) and first exploited by Stubblefield et al. </p>
 <p> <code>&#8211; Running AirSnort</code> </p>
 <p> Once launched, airsnort must be configured to work with your wireless nic and to make crack attempts according to your desires. In order to properly capture packets, first indicate the name of your wireless networking device in the &quot;Network device&quot; field. This will be something like &quot;wlanX&quot; for cards that use the wlan-ng drivers and &quot;ethX&quot; for other cards. Next select the type of card that you are using in the &quot;Card type&quot; drop down box. Available choices are Prism2, Orinoco, and other. Cisco cards fall into the other category. The purpose if this field is primarily to inform airsnort how to place your nic into monitor mode. In monitor mode a wireless nic gathers all packets indiscriminately, and no association with an access point is required. For wlan-ng and orinoco_cs based nics, monitor mode is entered automatically when the &#8216;Start&#8217; button is clicked to initiate a capture session. Other card types must be put into monitor mode outside of airsnort, prior to clicking Start. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "localbootstrap(3)"
 name: "localbootstrap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-localbootstrap/"
 description: "ql/termstructures/localbootstrap.hpp – localised-term-structure bootstrapper for most curve types."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br />
  #include &lt;ql/math/optimization/costfunction.hpp&gt;<br />
  #include &lt;ql/math/optimization/constraint.hpp&gt;<br />

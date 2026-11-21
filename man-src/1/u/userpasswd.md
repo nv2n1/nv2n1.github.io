@@ -1,4 +1,5 @@
 ---
+
 title: "userpasswd(1)"
 name: "userpasswd"
 section: "1"
@@ -9,9 +10,7 @@ description: "userpasswd – A graphical tool to allow users to change their pas
 
 <h2>NAME</h2>
 <p> userpasswd &#8211; A graphical tool to allow users to change their passwords.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>userpasswd</code> [ <i>options</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>userpasswd</code> is a graphical tool to allow users to easily change their passwords. Aside from being a nice GUI frontend, this program does the right thing when the pam configuration has changed.</p>
 <h2>OPTIONS</h2>
 <p> This program has no command line options of its own, but it does take the standard X program options like <code>-display</code> and such. See the <i>X</i>(1) man page for some of the common options.</p>

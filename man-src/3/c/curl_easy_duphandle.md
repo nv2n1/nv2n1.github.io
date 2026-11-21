@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_duphandle(3)"
 name: "curl_easy_duphandle"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_easy_duphandle – Clone a libcurl session handle"
 
 <h2>NAME</h2>
 <p> curl_easy_duphandle &#8211; Clone a libcurl session handle</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>CURL *curl_easy_duphandle(CURL *handle</code><i>);</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This function will return a new curl handle, a duplicate, using all the options previously set in the input curl <i>handle</i>. Both handles can subsequently be used independently and they must both be freed with <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i>. </p>
 <p> All strings that the input handle has been told to point to (as opposed to copy) with previous calls to <i><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3)</i> using char * inputs, will be pointed to by the new handle as well. You must therefore make sure to keep the data around until both handles have been cleaned up. </p>
 <p> The new handle will <code>not</code> inherit any state information, no connections, no SSL sessions and no cookies. </p>

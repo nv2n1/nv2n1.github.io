@@ -1,4 +1,5 @@
 ---
+
 title: "creall(3)"
 name: "creall"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-creall/"
 description: "creal, crealf, creall – get real part of a complex number"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double creal(double complex </code><i>z</i><code>);</code><br />
  <code>float crealf(float complex </code><i>z</i><code>);</code><br />
  <code>long double creall(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions return the real part of the complex number <i>z</i>. </p>
 <p> One has: </p>
 <pre>

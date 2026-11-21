@@ -1,4 +1,5 @@
 ---
+
 title: "axlisten(1)"
 name: "axlisten"
 section: "1"
@@ -9,9 +10,7 @@ description: "axlisten – monitor AX.25 traffic"
 
 <h2>NAME</h2>
 <p> axlisten &#8211; monitor AX.25 traffic</p>
-<h2>SYNOPSIS</h2>
 <p> <code>axlisten [-8] [-a] [-c] [-h] [-i] [-p port] [-r] [-t] [-v]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Axlisten</code> uses SOCK_PACKET facilities to provide a network monitor of all AX.25 traffic heard by the system. Since KISS is implicitly promiscuous no special driver configurations are needed. </p>
 <p> This version displays standard AX.25, PE1CHL extended AX.25, NET/ROM, Rose, ARP, IP, ICMP, TCP and UDP. It also displays IP, TCP, ICMP, TCP and UDP encapsulated within NET/ROM frames. The program also displays AX.25 and IP encapsulated within an IP frame, but see RFC1326 for reasons not to do so. </p>
 <p> <code>Axlisten</code> makes an attempt at decoding some of the more common routing protocols. RSPF and RIP (both lqnormalrq and G8BPQs RIP98) are traced. JNOS style NET/ROM node polls are also displayed. </p>

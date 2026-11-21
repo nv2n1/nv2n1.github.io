@@ -1,4 +1,5 @@
 ---
+
 title: "oddjob_request(1)"
 name: "oddjob_request"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-oddjob_request/"
 description: "oddjob_request – send requests to oddjobd from the command line"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> oddjob_request [-s service] [-o object] [-i interface] [-S] [ [request [arg1 &#8230;]] | -I ] </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>oddjob_request</i> application is a simple <i>oddjob</i> client application which can be used to invoke a particular method provided by the <i>oddjobd</i> server. </p>
 <p> If no request is given as a command-line argument, <i>oddjob_request</i> will attempt to invoke the <i>list</i> method, which should list all methods for which the invoking user is authorized. </p>
 <h2>ARGUMENTS</h2>

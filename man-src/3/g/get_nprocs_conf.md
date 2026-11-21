@@ -1,4 +1,5 @@
 ---
+
 title: "get_nprocs_conf(3)"
 name: "get_nprocs_conf"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-get_nprocs_conf/"
 description: "get_nprocs, get_nprocs_conf – get number of processors"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sysinfo.h&gt;</code> </p>
 <p> <code>int get_nprocs(void);</code><br />
  <code>int get_nprocs_conf(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The function <code>get_nprocs_conf</code>() returns the number of processors configured by the operating system. </p>
 <p> The function <code>get_nprocs</code>() returns the number of processors currently available in the system. This may be less than the number returned by <code>get_nprocs_conf</code>() because processors may be offline (e.g., on hotpluggable systems).</p>
 <h2>RETURN VALUE</h2>

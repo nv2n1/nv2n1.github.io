@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_fd_get(3)"
 name: "cmap_fd_get"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-cmap_fd_get/"
 description: "cmap_fd_get – Dispatches callbacks from the CMAP service"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_fd_get (cmap_handle_t </code><i>handle</i><code>, int *</code><i>fd</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmap_fd_get</code> function is used to retrieve the file descriptor that may be used with the poll system call to determine when <code><a href="/docs/linux/man/3-cmap_dispatch/">cmap_dispatch</a>(3)</code> won&#8217;t block. The <i>handle</i> argument may not be used directly with <code>poll</code> because it is not the file descriptor, but instead an internal identifier used by the CMAP library. </p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>

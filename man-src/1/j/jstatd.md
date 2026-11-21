@@ -1,4 +1,5 @@
 ---
+
 title: "jstatd(1)"
 name: "jstatd"
 section: "1"
@@ -9,14 +10,12 @@ description: "jstatd – Monitors Java Virtual Machines (JVMs) and enables remot
 
 <h2>NAME</h2>
 <p> jstatd &#8211; Monitors Java Virtual Machines (JVMs) and enables remote monitoring tools to attach to JVMs. This command is experimental and unsupported.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>jstatd</code> [ <i>options</i> ]
 </pre>
 <dl>
 <dt><i>options</i></dt>
 <dd> The command-line options. See Options.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jstatd</code> command is an RMI server application that monitors for the creation and termination of instrumented Java HotSpot VMs and provides an interface to enable remote monitoring tools to attach to JVMs that are running on the local host. </p>
 <p> The <code>jstatd</code> server requires an RMI registry on the local host. The <code>jstatd</code> server attempts to attach to the RMI registry on the default port, or on the port you specify with the <code>-p</code><code>port</code> option. If an RMI registry is not found, then one is created within the <code>jstatd</code> application that is bound to the port that is indicated by the <code>-p</code><code>port</code> option or to the default RMI registry port when the <code>-p</code><code>port</code> option is omitted. You can stop the creation of an internal RMI registry by specifying the <code>-nr</code> option.</p>
 <h2>OPTIONS</h2>

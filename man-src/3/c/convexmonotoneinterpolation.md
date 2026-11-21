@@ -1,4 +1,5 @@
 ---
+
 title: "convexmonotoneinterpolation(3)"
 name: "convexmonotoneinterpolation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-convexmonotoneinterpolation/"
 description: "ql/math/interpolations/convexmonotoneinterpolation.hpp – convex monotone interpolation method"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;map&gt; </p>
 <h3>Classes</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "emacs-gtk(1)"
 name: "emacs-gtk"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-emacs-gtk/"
 description: "emacs – GNU project Emacs editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>emacs</code> [ <i>command-line switches</i> ] [ <i>files &#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>GNU Emacs</i> is a version of <i>Emacs</i>, written by the author of the original (PDP-10) <i>Emacs</i>, Richard Stallman. The user functionality of GNU Emacs encompasses everything other editors do, and it is easily extensible since its editing commands are written in Lisp. </p>
 <p> The primary documentation of GNU Emacs is in the GNU Emacs Manual, which you can read using Info, either from Emacs or as a standalone program. Please look there for complete and up-to-date documentation. This man page is updated only when someone volunteers to do so. </p>
 <p> <i>Emacs</i> has an extensive interactive help facility, but the facility assumes that you know how to manipulate <i>Emacs</i> windows and buffers. CTRL-h or F1 enters the Help facility. Help Tutorial (CTRL-h t) starts an interactive tutorial to quickly teach beginners the fundamentals of <i>Emacs.</i> Help Apropos (CTRL-h a) helps you find a command with a name matching a given pattern, Help Key (CTRL-h k) describes a given key sequence, and Help Function (CTRL-h f) describes a given Lisp function. </p>

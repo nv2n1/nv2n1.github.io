@@ -1,4 +1,5 @@
 ---
+
 title: "inflationindex(3)"
 name: "inflationindex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-inflationindex/"
 description: "ql/indexes/inflationindex.hpp – base classes for inflation indexes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/index.hpp&gt;<br />
  #include &lt;ql/indexes/region.hpp&gt;<br />
  #include &lt;ql/termstructures/inflationtermstructure.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "slice2cpp(1)"
 name: "slice2cpp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slice2cpp/"
 description: "slice2cpp – The Slice to C++ compiler."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> slice2cpp [options] [files] </p>
-<h2>DESCRIPTION</h2>
 <p> slice2cpp compiles Slice files to C++. </p>
 <p> Full documentation for slice2cpp is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/slice2cpp+Command-Line+Options">http://doc.zeroc.com/display/Ice/slice2cpp+Command-Line+Options</a>&quot;. </p>

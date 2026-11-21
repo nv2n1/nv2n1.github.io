@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_trust_list_init(3)"
 name: "gnutls_x509_trust_list_init"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_trust_list_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_init &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_init(gnutls_x509_trust_list_t * </code><i>list</i><code>, unsigned int </code><i>size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_trust_list_init – API function"
 <dd> The structure to be initialized</dd>
 <dt>unsigned int size</dt>
 <dd> The size of the internal hash table. Use (0) for default size.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will initialize an X.509 trust list structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

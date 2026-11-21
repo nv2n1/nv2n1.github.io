@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-link(1)"
 name: "llvm-link"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-link/"
 description: "llvm-link – LLVM linker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-link</code> [<i>options</i>] <i>filename &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-link</code> takes several <font SIZE="-1">LLVM</font> bitcode files and links them together into a single <font SIZE="-1">LLVM</font> bitcode file. It writes the output file to standard output, unless the <code>-o</code> option is used to specify a filename. </p>
 <p> <code>llvm-link</code> attempts to load the input files from the current directory. If that fails, it looks for each file in each of the directories specified by the <code>-L</code> options on the command line. The library search paths are global; each one is searched for every input file if necessary. The directories are searched in the order they were specified on the command line.</p>
 <h2>OPTIONS</h2>

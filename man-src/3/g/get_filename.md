@@ -1,4 +1,5 @@
 ---
+
 title: "get_filename(3)"
 name: "get_filename"
 section: "3"
@@ -9,10 +10,8 @@ description: "get_filename – Returns a pointer to the filename portion of a pa
 
 <h2>NAME</h2>
 <p> get_filename &#8211; Returns a pointer to the filename portion of a path. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>char *get_filename(const char *path);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Finds out the filename portion of a completely specified file path. Both `\&#8217; and `/&#8217; are recognized as directory separators under DOS and Windows. However, only `/&#8217; is recognized as directory separator under other platforms. Example: </p>
 <pre><code>
 get_executable_name(name, sizeof(name));

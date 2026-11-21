@@ -1,4 +1,5 @@
 ---
+
 title: "nad2nad(1)"
 name: "nad2nad"
 section: "1"
@@ -9,9 +10,7 @@ description: "nad2nad – North American Datum conversion filter"
 
 <h2>NAME</h2>
 <p> nad2nad &#8211; North American Datum conversion filter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nad2nad</code> [ <code>-eEfihortwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]</p>
-<h2>DESCRIPTION</h2>
 <p> Program <code>nad2nad</code> is a filter to convert data between North America Datum 1927 (NAD27) and North American Datum 1983. <code>nad2nad</code> can optionally process both State Plane Coordinate System (SPCS) and Universal Transverse Mercator (UTM) grid data as well as geographic data for both input and output. This can also be accomplished with the <i>cs2cs</i> program. </p>
 <p> The following control parameters can appear in any order:</p>
 <dl>

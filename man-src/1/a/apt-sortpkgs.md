@@ -1,4 +1,5 @@
 ---
+
 title: "apt-sortpkgs(1)"
 name: "apt-sortpkgs"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-apt-sortpkgs/"
 description: "apt-sortpkgs – Utility to sort package index files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>apt-sortpkgs</code> [<code>-s</code>] [<code>-o=</code><i>config_string</i>] [<code>-c=</code><i>config_file</i>] <i>filename</i>&#8230; {-v | &#8211;version} {-h | &#8211;help}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>apt-sortpkgs</code></p>
 <dd>will take an index file (source index or package index) and sort the records so that they are ordered by the package name. It will also sort the internal fields of each record according to the internal sorting rules. </dd>
 <p> All output is sent to standard output; the input must be a seekable file.</p>

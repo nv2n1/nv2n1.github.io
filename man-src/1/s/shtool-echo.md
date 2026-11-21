@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-echo(1)"
 name: "shtool-echo"
 section: "1"
@@ -8,9 +9,7 @@ description: "shtool echo – GNU shtool"
 ---
 
 <p><a href="/docs/linux/man/1-echo/">echo</a>(1) extensional command</p>
-<h2>SYNOPSIS</h2>
 <p> <code>shtool echo</code> [<code>-n</code>|<code>&#8211;newline</code>] [<code>-e</code>|<code>&#8211;expand</code>] <i>string</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>shtool echo</code> is an <i><a href="/docs/linux/man/1-echo/">echo</a></i>(1) style command which prints <i>string</i> to <i>stdout</i> and optionally provides special expansion constructs (terminal bold mode, environment details, date, etc) and newline control. The trick of this command is that it provides a portable <code>-n</code> option and hides the gory details needed to find out the environment details under option <code>-e</code>.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

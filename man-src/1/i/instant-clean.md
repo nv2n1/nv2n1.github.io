@@ -1,4 +1,5 @@
 ---
+
 title: "instant-clean(1)"
 name: "instant-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-instant-clean/"
 description: "instant-clean – Clean up the Instant cache"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>instant-clean</code> </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-instant-showcache/">instant-showcache</a></i>(1) </p>

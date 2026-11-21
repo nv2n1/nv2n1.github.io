@@ -1,4 +1,5 @@
 ---
+
 title: "esdsample(1)"
 name: "esdsample"
 section: "1"
@@ -9,9 +10,7 @@ description: "esdsample – play a sample"
 
 <h2>NAME</h2>
 <p> esdsample &#8211; play a sample</p>
-<h2>SYNOPSIS</h2>
 <p> <code>esdsample</code> [-<code>s </code><i>hostname</i>:<i>port</i>] [-<code>b</code>] [-<code>d</code>] [-<code>e</code>] [-<code>h</code>] [-<code>m</code>] [-<code>r </code><i>freq</i>] <i>samplename</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>esdsample</code> utility plays a sample using the Enlighted Sound Daemon (<code>esd</code>).</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported: </p>

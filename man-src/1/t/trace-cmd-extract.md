@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-extract(1)"
 name: "trace-cmd-extract"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-extract/"
 description: "trace-cmd-extract – extract out the data from the Ftrace Linux tracer."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd extract [</code><i>OPTIONS</i><code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) extract is usually used after <i><a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1)</i> and <i><a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1)</i>. It can be used after the Ftrace tracer has been started manually through the Ftrace pseudo file system. </p>
 <p> The extract command creates a trace.dat file that can be used by <i><a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1)</i> to read from. It reads the kernel internal ring buffer to produce the trace.dat file.</p>
 <h2>OPTIONS</h2>

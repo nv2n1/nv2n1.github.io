@@ -1,4 +1,5 @@
 ---
+
 title: "pybabelfishd(1)"
 name: "pybabelfishd"
 section: "1"
@@ -9,9 +10,7 @@ description: "pybabelfishd – convert Python objects into human-readable string
 
 <h2>NAME</h2>
 <p> pybabelfishd &#8211; convert Python objects into human-readable strings</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pybabelfishd</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> This script starts a daemon process in the background that convert Python objects into human-readable strings for the NWS web interface.</p>
 <dl>
 <dt><code>-h</code> <i>&lt;host&gt;</i></dt>

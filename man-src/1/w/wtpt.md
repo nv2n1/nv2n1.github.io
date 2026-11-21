@@ -1,4 +1,5 @@
 ---
+
 title: "wtpt(1)"
 name: "wtpt"
 section: "1"
@@ -9,9 +10,7 @@ description: "wtpt – Show media white of profiles, identifying black body locu
 
 <h2>NAME</h2>
 <p> wtpt &#8211; Show media white of profiles, identifying black body locus.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wtpt</code> [<i>profile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>wtpt </code> shows media white of profiles, identifying black body locus. </p>
 <p> If no parameters are given, then this program will ask for XYZ value of media white. If parameter given, it must be the profile to inspect.</p>
 <h2>NOTES</h2>

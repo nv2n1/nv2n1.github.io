@@ -1,4 +1,5 @@
 ---
+
 title: "ssygvx(3)"
 name: "ssygvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssygvx/"
 description: "ssygvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssygvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, A, LDA, B, LDB, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>SSYGST</code></p>

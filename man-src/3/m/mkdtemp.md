@@ -1,4 +1,5 @@
 ---
+
 title: "mkdtemp(3)"
 name: "mkdtemp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mkdtemp/"
 description: "mkdtemp – create a unique temporary directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 char *mkdtemp(char *template);
@@ -19,7 +19,6 @@ char *mkdtemp(char *template);
 </dt><dd> /* Since glibc 2.19: */ _DEFAULT_SOURCE<br />
  || /* Glibc 2.19 and earlier: */ _BSD_SOURCE<br />
  || /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>mkdtemp</code>() function generates a uniquely named temporary directory from <i>template</i>. The last six characters of <i>template</i> must be XXXXXX and these are replaced with a string that makes the directory name unique. The directory is then created with permissions 0700. Since it will be modified, <i>template</i> must not be a string constant, but should be declared as a character array.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>mkdtemp</code>() function returns a pointer to the modified template string on success, and NULL on failure, in which case <i>errno</i> is set appropriately.</p>

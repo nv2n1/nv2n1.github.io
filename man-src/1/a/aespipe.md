@@ -1,4 +1,5 @@
 ---
+
 title: "aespipe(1)"
 name: "aespipe"
 section: "1"
@@ -9,9 +10,7 @@ description: "aespipe – AES encrypting or decrypting pipe"
 
 <h2>NAME</h2>
 <p> aespipe &#8211; AES encrypting or decrypting pipe</p>
-<h2>SYNOPSIS</h2>
 <p> <code>aespipe</code> [options] &lt;inputfile &gt;outputfile</p>
-<h2>DESCRIPTION</h2>
 <p> <code>aespipe</code> reads from standard input and writes to standard output. It can be used to create and restore encrypted tar or cpio archives. It can be used to encrypt and decrypt loop-AES compatible encrypted disk images. <code>aespipe</code> encrypts and decrypts blocks of data. If you are looking for general purpose encrypting tool that preserves data size at byte granularity, then please take a look at GnuPG. </p>
 <p> The AES cipher is used in CBC (cipher block chaining) mode. Data is encrypted and decrypted in 512 byte chains. <code>aespipe</code> supports three key setup modes; single-key, multi-key-v2 and multi-key-v3 modes. Single-key mode uses simple sector IV and one AES key to encrypt and decrypt all data sectors. Multi-key-v2 mode uses cryptographically more secure MD5 IV and 64 different AES keys to encrypt and decrypt data sectors. In multi-key mode first key is used for first sector, second key for second sector, and so on. Multi-key-v3 is same as multi-key-v2 except is uses one extra 65th key as additional input to MD5 IV computation. See -K option for more information about how to enable multi-key-v3 mode. </p>
 <p> Recommended key setup mode is multi-key-v3, which is based on gpg encrypted key files. In this mode, the passphrase is protected against optimized dictionary attacks via salting and key iteration of gpg. Passphrase length should be 20 characters or more. </p>

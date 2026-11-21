@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-openshift-installer(1)"
 name: "atomic-openshift-installer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-atomic-openshift-installer/"
 description: "atomic-openshift-installer – Interactive OpenShift Container Platform (OCP) installer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> atomic-openshift-installer [OPTIONS] COMMAND [OPTS]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>atomic-openshift-installer</code> makes the process for installing OCP easier by interactively gathering the data needed to run on each host. It can also be run in unattended mode if provided with a configuration file.</p>
 <h2>OPTIONS</h2>
 <p> The following options are common to all commands. </p>

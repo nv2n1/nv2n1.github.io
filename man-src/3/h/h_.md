@@ -1,4 +1,5 @@
 ---
+
 title: "h_(3)"
 name: "h_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-h_/"
 description: "QuantLib::HullWhiteProcess – Hull-White stochastic process."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/hullwhiteprocess.hpp&gt; </p>
 <p> Inherits <code>QuantLib::StochasticProcess1D</code>. </p>
 <h3>Public Member Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "sjisconv(1)"
 name: "sjisconv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sjisconv/"
 description: "sjisconv – convert a TeX document in SJIS encoding into `preprocessed’ form."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sjisconv</code> &lt; <i>infile</i> &gt; <i>outfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> SJIS encoding for Japanese uses the characters and which have special meanings in TeX documents. </p>
 <p> After processing a LaTeX 2e document which contains SJIS characters with <code>sjisconv</code> you need not care about these special characters. </p>
 <p> This filter is part of the <code>CJK</code> macro package for LaTeX 2e.</p>

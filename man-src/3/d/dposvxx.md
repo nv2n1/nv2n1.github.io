@@ -1,4 +1,5 @@
 ---
+
 title: "dposvxx(3)"
 name: "dposvxx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dposvxx/"
 description: "dposvxx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dposvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />
  <i></i><code> DPOSVXX computes the solution to system of linear equations A * X = B for PO matrices</code></p>

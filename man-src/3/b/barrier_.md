@@ -1,4 +1,5 @@
 ---
+
 title: "barrier_(3)"
 name: "barrier_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-barrier_/"
 description: "QuantLib::BarrierOption – Barrier option on a single asset."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/barrieroption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::OneAssetOption</code>. </p>
 <p> Inherited by <code>DividendBarrierOption</code>, and <code>QuantoBarrierOption</code>. </p>

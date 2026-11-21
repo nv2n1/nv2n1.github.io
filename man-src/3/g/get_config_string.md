@@ -1,4 +1,5 @@
 ---
+
 title: "get_config_string(3)"
 name: "get_config_string"
 section: "3"
@@ -9,10 +10,8 @@ description: "get_config_string – Retrieves a string from the configuration fi
 
 <h2>NAME</h2>
 <p> get_config_string &#8211; Retrieves a string from the configuration file. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>const char *get_config_string(const char *section,</code> <code>const char *name, const char *def);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Retrieves a string variable from the current config file. The section name may be set to NULL to read variables from the root of the file, or used to control which set of parameters (eg. sound or joystick) you are interested in reading. Example: </p>
 <pre><code>
 const char *lang = get_config_string("system", "language", "EN");

@@ -1,4 +1,5 @@
 ---
+
 title: "leaftoppm(1)"
 name: "leaftoppm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-leaftoppm/"
 description: "leaftoppm – convert Interleaf image format to a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>leaftoppm</code> [<i>leaffile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap (PPM file) as input. Generates an Interleaf image file as output. </p>
 <p> Interleaf is a now-defunct (actually purchased ca. 2000 by BroadVision) technical publishing software company. </p>
 <h2>SEE ALSO</h2>

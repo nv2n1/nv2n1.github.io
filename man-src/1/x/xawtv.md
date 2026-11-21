@@ -1,4 +1,5 @@
 ---
+
 title: "xawtv(1)"
 name: "xawtv"
 section: "1"
@@ -9,9 +10,7 @@ description: "xawtv – a X11 program for watching TV"
 
 <h2>NAME</h2>
 <p> xawtv &#8211; a X11 program for watching TV</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xawtv [ options ] [ station name ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>xawtv</code> is a X11 application for watching TV with your unix box. It uses the Athena widgets.</p>
 <h2>OPTIONS</h2>
 <p> All command line options also have a Resource, so you can put them into your .Xdefaults file too.</p>

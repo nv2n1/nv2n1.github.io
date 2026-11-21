@@ -1,4 +1,5 @@
 ---
+
 title: "ex3d(3)"
 name: "ex3d"
 section: "3"
@@ -9,10 +10,8 @@ description: "ex3d – 3d ‘bouncy cubes’ demo. Allegro game programming libr
 
 <h2>NAME</h2>
 <p> ex3d &#8211; 3d &#8216;bouncy cubes&#8217; demo. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example ex3d</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program demonstrates how to use the 3d matrix functions. It isn&#8217;t a very elegant or efficient piece of code, but it does show the stuff in action. It is left to the reader as an exercise to design a proper model structure and rendering pipeline: after all, the best way to do that sort of stuff varies hugely from one game to another. </p>
 <p> The example first shows a screen resolution selection dialog. Then, a number of bouncing 3d cubes are animated. Pressing a key modifies the rendering of the cubes, which can be wireframe, the more complex transparent perspective correct texture mapped version, and many other. </p>
 <h2>SEE ALSO</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_mac_get_nonce_size(3)"
 name: "gnutls_mac_get_nonce_size"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_mac_get_nonce_size – API function"
 
 <h2>NAME</h2>
 <p> gnutls_mac_get_nonce_size &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>size_t gnutls_mac_get_nonce_size(gnutls_mac_algorithm_t </code><i>algorithm</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_mac_algorithm_t algorithm</dt>
 <dd> is an encryption algorithm</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Returns the size of the nonce used by the MAC in TLS.</p>
 <h2>RETURNS</h2>
 <p> length (in bytes) of the given MAC nonce size, or 0.</p>

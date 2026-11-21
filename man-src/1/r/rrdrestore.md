@@ -1,4 +1,5 @@
 ---
+
 title: "rrdrestore(1)"
 name: "rrdrestore"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdrestore/"
 description: "rrdrestore – Restore the contents of an RRD from its XML dump format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>restore</code> <i>filename.xml</i> <i>filename.rrd</i> [<code>&#8211;range-check</code>|<code>-r</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>restore</code> function reads the <font SIZE="-1">XML</font> representation of an <font SIZE="-1">RRD</font> and converts it to the native <font SIZE="-1"><code>RRD</code></font> format.</p>
 <dl>
 <dt><i>filename.xml</i></dt>

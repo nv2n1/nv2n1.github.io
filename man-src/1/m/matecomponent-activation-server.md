@@ -1,4 +1,5 @@
 ---
+
 title: "matecomponent-activation-server(1)"
 name: "matecomponent-activation-server"
 section: "1"
@@ -9,7 +10,6 @@ description: "matecomponent-activation-server – MATE component tracker"
 
 <h2>NAME</h2>
 <p> matecomponent-activation-server &#8211; MATE component tracker</p>
-<h2>DESCRIPTION</h2>
 <p> This application tracks information about installed components and brokers components, in conjunction with its client library; libmatecomponent-activation. </p>
 <p> It reads the component descriptions from ${prefix}/lib/matecomponent/servers/*.server. These files provide an XML description of a components capabilities which can be queried and manipulated by clients from the client library. </p>
 <p> MateComponent-activation-server also ensures that the minimum necessary number of servers for your display setup are running. </p>

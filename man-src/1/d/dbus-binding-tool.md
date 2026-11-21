@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-binding-tool(1)"
 name: "dbus-binding-tool"
 section: "1"
@@ -9,9 +10,7 @@ description: "dbus-binding-tool – C language GLib bindings generation utility.
 
 <h2>NAME</h2>
 <p> dbus-binding-tool &#8211; C language GLib bindings generation utility.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dbus-binding-tool</code> [-<code>-force</code>] [-<code>-help</code>] [-<code>-ignore-unsupported</code>] [-<code>-mode=</code><i>pretty|glib-client|glib-server</i>] [-<code>-output=</code><i>file</i>] [-<code>-prefix=</code><i>symbol-prefix</i>] [-<code>-version</code>] [<i>file</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dbus-binding-tool</code> is used to expose a GObject via D-Bus. As input, <code>dbus-binding-tool</code> uses a D-Bus Introspection XML file. As output, the client-side or server-side bindings is generated. This output is a header file which eases the use of a remote D-Bus object. Output is sent to standard out or to the filename specified with the &#8211;<code>-output</code> argument.</p>
 <h2>EXTENDED DESCRIPTION</h2>
 <h3></h3>

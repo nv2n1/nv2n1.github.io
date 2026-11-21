@@ -1,4 +1,5 @@
 ---
+
 title: "acct(2)"
 name: "acct"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-acct/"
 description: "acct – switch process accounting on or off"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int acct(const char *filename);
@@ -23,7 +23,6 @@ Since glibc 2.21 : _DEFAULT_SOURCE
                                          ||
                                          (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE &amp; nbsp; &lt; &amp;nbsp; 500)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>acct</code>() system call enables or disables process accounting. If called with the name of an existing file as its argument, accounting is turned on, and records for each terminating process are appended to <i>filename</i> as it terminates. An argument of NULL causes accounting to be turned off.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>

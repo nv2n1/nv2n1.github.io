@@ -1,4 +1,5 @@
 ---
+
 title: "derivative(3)"
 name: "derivative"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-derivative/"
 description: "QuantLib::NormalDistribution – Normal distribution function."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>
 <p> Inherits std::unary_function&lt;Real,Real&gt;. </p>
 <h3>Public Member Functions</h3>

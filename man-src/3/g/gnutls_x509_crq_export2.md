@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_export2(3)"
 name: "gnutls_x509_crq_export2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crq_export2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_export2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_export2(gnutls_x509_crq_t </code><i>crq</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crq_export2 – API function"
 <dd> the format of output params. One of PEM or DER.</dd>
 <dt>gnutls_datum_t * out</dt>
 <dd> will contain a certificate request PEM or DER encoded</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the certificate request to a PEM or DER encoded PKCS10 structure. </p>
 <p> The output buffer is allocated using <code>gnutls_malloc()</code>. </p>
 <p> If the structure is PEM encoded, it will have a header of &quot;BEGIN NEW CERTIFICATE REQUEST&quot;.</p>

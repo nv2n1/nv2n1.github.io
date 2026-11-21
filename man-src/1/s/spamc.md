@@ -1,4 +1,5 @@
 ---
+
 title: "spamc(1)"
 name: "spamc"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-spamc/"
 description: "spamc – client for spamd"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>spamc [options] &lt; message</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Spamc is the client half of the spamc/spamd pair. It should be used in place of <tt>&quot;spamassassin&quot;</tt> in scripts to process mail. It will read the mail from <font SIZE="-1">STDIN,</font> and spool it to its connection to spamd, then read the result back and print it to <font SIZE="-1">STDOUT. </font> Spamc has extremely low overhead in loading, so it should be much faster to load than the whole spamassassin program. </p>
 <p> See the <i></i><font SIZE="-1"><i>README</i></font><i></i> file in the <i>spamd</i> directory of the SpamAssassin distribution for more details.</p>
 <h2>OPTIONS</h2>

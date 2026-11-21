@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_packet_t(3)"
 name: "brlapi_packet_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_packet_t/"
 description: "brlapi_packet_t –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;brlapi_protocol.h&gt;</p>
 <h3>Data Fields</h3>
 <p> unsigned char <code>data</code> [<code>BRLAPI_MAXPACKETSIZE</code>] </p>

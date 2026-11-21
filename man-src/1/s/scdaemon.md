@@ -1,4 +1,5 @@
 ---
+
 title: "scdaemon(1)"
 name: "scdaemon"
 section: "1"
@@ -9,10 +10,8 @@ description: "scdaemon – Smartcard daemon for the GnuPG system"
 
 <h2>NAME</h2>
 <p> <code>scdaemon</code> &#8211; Smartcard daemon for the GnuPG system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>scdaemon</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;server</code><br />
  <code>scdaemon</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;daemon</code> [<i>command_line</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>scdaemon</code> is a daemon to manage smartcards. It is usually invoked by <code>gpg-agent</code> and in general not used directly. </p>
 <h2>COMMANDS</h2>
 <p> Commands are not distinguished from options except for the fact that only one command is allowed. </p>

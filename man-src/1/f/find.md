@@ -1,4 +1,5 @@
 ---
+
 title: "find(1)"
 name: "find"
 section: "1"
@@ -6,9 +7,8 @@ letter: "f"
 url: "/docs/linux/man/1-find/"
 description: "find – search for files in a directory hierarchy"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>find</code> [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]  </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>find</code>. GNU <code>find</code> searches the directory tree rooted at each given starting-point by evaluating the given expression from left to right, according to the rules of precedence (see section OPERATORS), until the outcome is known (the left hand side is false for <i>and</i> operations, true for <i>or</i>), at which point <code>find</code> moves on to the next file name. If no starting-point is specified, `.&#8216; is assumed. </p>
 <p> If you are using <code>find</code> in an environment where security is important (for example if you are using it to search directories that are writable by other users), you should read the `Security Considerations&#8217; chapter of the findutils documentation, which is called <code>Finding Files</code> and comes with findutils. That document also includes a lot more detail and discussion than this manual page, so you may find it a more useful source of information.  </p>
 <h2>OPTIONS</h2>

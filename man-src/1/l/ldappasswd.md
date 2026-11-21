@@ -1,4 +1,5 @@
 ---
+
 title: "ldappasswd(1)"
 name: "ldappasswd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ldappasswd/"
 description: "ldappasswd – change the password of an LDAP entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ldappasswd</code> [<code>-V</code>[<code>V</code>]] [<code>-d</code><i>&nbsp;<wbr>debuglevel</i>] [<code>-n</code>] [<code>-v</code>] [<code>-A</code>] [<code>-a</code><i>&nbsp;<wbr>oldPasswd</i>] [<code>-t</code><i>&nbsp;<wbr>oldpasswdfile</i>] [<code>-S</code>] [<code>-s</code><i>&nbsp;<wbr>newPasswd</i>] [<code>-T</code><i>&nbsp;<wbr>newpasswdfile</i>] [<code>-x</code>] [<code>-D</code><i>&nbsp;<wbr>binddn</i>] [<code>-W</code>] [<code>-w</code><i>&nbsp;<wbr>passwd</i>] [<code>-y</code><i>&nbsp;<wbr>passwdfile</i>] [<code>-H</code><i>&nbsp;<wbr>ldapuri</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]] [<code>-O</code><i>&nbsp;<wbr>security-properties</i>] [<code>-I</code>] [<code>-Q</code>] [<code>-N</code>] [<code>-U</code><i>&nbsp;<wbr>authcid</i>] [<code>-R</code><i>&nbsp;<wbr>realm</i>] [<code>-X</code><i>&nbsp;<wbr>authzid</i>] [<code>-Y</code><i>&nbsp;<wbr>mech</i>] [<code>-Z</code>[<code>Z</code>]] [<i>user</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldappasswd</code> is a tool to set the password of an LDAP user. <code>ldappasswd</code> uses the LDAPv3 Password Modify (RFC 3062) extended operation. </p>
 <p> <code>ldappasswd</code> sets the password of associated with the user [or an optionally specified <i>user</i>]. If the new password is not specified on the command line and the user doesn&#8217;t enable prompting, the server will be asked to generate a password for the user. </p>
 <p> <code>ldappasswd</code> is neither designed nor intended to be a replacement for <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1) and should not be installed as such.</p>

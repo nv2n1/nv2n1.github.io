@@ -1,4 +1,5 @@
 ---
+
 title: "funinfoget(3)"
 name: "funinfoget"
 section: "3"
@@ -9,14 +10,12 @@ description: "FunInfoGet – get information from Funtools struct"
 
 <h2>NAME</h2>
 <p> <code>FunInfoGet &#8211; get information from Funtools struct</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
 <pre>
   int FunInfoGet(Fun fun, int type, char *addr, ...)
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The FunInfoGet() routine returns information culled from the Funtools structure. The first argument is the Fun handle from which information is to be retrieved. This first required argument is followed by a variable length list of pairs of arguments. Each pair consists of an integer representing the type of information to retrieve and the address where the information is to be stored. The list is terminated by a 0. The routine returns the number of get actions performed. </p>
 <p> The full list of available information is described below. Please note that only a few of these will be useful to most application developers. For imaging applications, the most important types are: </p>
 <p>FUN_SECT_DIM1 int           /* dim1 for section */<br />

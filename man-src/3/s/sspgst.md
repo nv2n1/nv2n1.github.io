@@ -1,4 +1,5 @@
 ---
+
 title: "sspgst(3)"
 name: "sspgst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspgst/"
 description: "sspgst.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br />
  <i></i><code>SSPGST</code></p>

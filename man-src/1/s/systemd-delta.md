@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-delta(1)"
 name: "systemd-delta"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-systemd-delta/"
 description: "systemd-delta – Find overridden configuration files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-delta</code> [OPTIONS&#8230;] [<i>PREFIX</i>[/<i>SUFFIX</i>]|<i>SUFFIX</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-delta</code></p>
 <dd>may be used to identify and compare configuration files that override other configuration files. Files in /etc/ have highest priority, files in /run/ have the second highest priority, &#8230;, files in /usr/lib/ have lowest priority. Files in a directory with higher priority override files with the same name in directories of lower priority. In addition, certain configuration files can have &quot;.d&quot; directories which contain &quot;drop-in&quot; files with configuration snippets which augment the main configuration file. &quot;Drop-in&quot; files can be overridden in the same way by placing files with the same name in a directory of higher priority (except that, in case of &quot;drop-in&quot; files, both the &quot;drop-in&quot; file name and the name of the containing directory, which corresponds to the name of the main configuration file, must match). For a fuller explanation, see <code><a href="/docs/linux/man/5-systemd-unit/">systemd.unit</a></code>(5). </dd>
 <p> The command line argument will be split into a prefix and a suffix. Either is optional. The prefix must be one of the directories containing configuration files (/etc/, /run/, /lib/, &#8230;). If it is given, only overriding files contained in this directory will be shown. Otherwise, all overriding files will be shown. The suffix must be a name of a subdirectory containing configuration files like tmpfiles.d, sysctl.d or systemd/system. If it is given, only configuration files in this subdirectory (across all configuration paths) will be analyzed. Otherwise, all configuration files will be analyzed. If the command line argument is not given at all, all configuration files will be analyzed. See below for some examples.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qhull(1)"
 name: "qhull"
 section: "1"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/1-qhull/"
 
  qhull - convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, hull volume, facet area
 
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 qhull- compute convex hulls and related structures
     input (stdin): dimension, #points, point coordinates
     first comment (non-numeric) is listed in the summary
@@ -86,11 +85,7 @@ example:
 
  The program includes options for hull volume, facet area, partial hulls, input transformations, randomization, tracing, multiple output formats, and execution statistics. The program can be called from within your application. You can view the results in 2-d, 3-d and 4-d with Geomview. 
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The format of input is the following: first line contains the dimension, second line contains the number of input points, and point coordinates follow. The dimension and number of points can be reversed. Comments and line breaks are ignored. A comment starts with a non-numeric character and continues to the end of line. The first comment is reported in summaries and statistics. Error reporting is better if there is one point per line. 
+The format of input is the following: first line contains the dimension, second line contains the number of input points, and point coordinates follow. The dimension and number of points can be reversed. Comments and line breaks are ignored. A comment starts with a non-numeric character and continues to the end of line. The first comment is reported in summaries and statistics. Error reporting is better if there is one point per line. 
 
  The default printout option is a short summary. There are many other output formats. 
 

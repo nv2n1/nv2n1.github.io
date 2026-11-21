@@ -1,4 +1,5 @@
 ---
+
 title: "pmdate(1)"
 name: "pmdate"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdate – display an offset date"
 
 <h2>NAME</h2>
 <p> <code>pmdate</code> &#8211; display an offset date</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmdate</code> [ <i>offset</i> &#8230; ] <i>format</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdate</code> displays the current date and/or time, with an optional offset. </p>
 <p> An <i>offset</i> is specified with a leading sign (&#8220;+&#8221; or &#8220;-&#8221;), followed by an integer value, followed by one of the following &#8220;scale&#8221; specifiers;</p>
 <dl>

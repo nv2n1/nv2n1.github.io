@@ -1,4 +1,5 @@
 ---
+
 title: "dropwatch(1)"
 name: "dropwatch"
 section: "1"
@@ -9,9 +10,7 @@ description: "dropwatch – kernel dropped packet monitoring utility"
 
 <h2>NAME</h2>
 <p> dropwatch &#8211; kernel dropped packet monitoring utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dropwatch [-l &lt;method&gt; | list]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>dropwatch </i> dropwatch is an interactive utility for monitoring and recording packets that are dropped by the kernel</p>
 <h2>OPTIONS</h2>
 <dl>

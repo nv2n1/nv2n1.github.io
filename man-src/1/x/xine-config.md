@@ -1,4 +1,5 @@
 ---
+
 title: "xine-config(1)"
 name: "xine-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "xine-config – script to get information about the installed vers
 
 <h2>NAME</h2>
 <p> xine-config &#8211; script to get information about the installed version of libxine</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xine-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags] [&#8211;objcflags] [&#8211;plugindir] [&#8211;datadir] [&#8211;scriptdir] [&#8211;localedir]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>xine-config is DEPRECATED. Use pkg-config instead.</i> </p>
 <p> <i>xine-config</i> is a tool that is used to determine the compiler and linker flags that should be used to compile and link programs that use <i>libxine</i>. It can also be used to determine the directories where <i>libxine</i> expects plugins.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "kdocker(1)"
 name: "kdocker"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-kdocker/"
 description: "kdocker - dock any application in the system tray SYNOPSIS kdocker [options]"
 ---
 
-<h2 class="name">NAME</h2>
 <pre>
  kdocker - dock any application in the system tray
 </pre>
-<h2>SYNOPSIS</h2>
 <p> <code>kdocker</code> [<i>options</i>]<i></i></p>
-<h2>DESCRIPTION</h2>
 <pre>
  KDocker is a program that will dock any application to the system tray
 </pre>

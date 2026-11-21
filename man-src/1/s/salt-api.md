@@ -1,4 +1,5 @@
 ---
+
 title: "salt-api(1)"
 name: "salt-api"
 section: "1"
@@ -10,11 +11,9 @@ description: "salt-api – salt-api Command"
 <h2>NAME</h2>
 <p> salt-api &#8211; salt-api Command </p>
 <p> Start interfaces used to remotely connect to the salt master</p>
-<h2>SYNOPSIS</h2>
 <pre>
 salt-api
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The Salt API system manages network api connectors for the Salt Master</p>
 <h2>OPTIONS</h2>
 <dl>

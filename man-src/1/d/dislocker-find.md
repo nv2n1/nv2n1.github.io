@@ -1,4 +1,5 @@
 ---
+
 title: "dislocker-find(1)"
 name: "dislocker-find"
 section: "1"
@@ -9,9 +10,7 @@ description: "Dislocker find – Find BitLocker-encrypted volumes."
 
 <h2>NAME</h2>
 <p> Dislocker find &#8211; Find BitLocker-encrypted volumes.</p>
-<h2>SYNOPSIS</h2>
 <p> dislocker-find [-h] [files&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The program try to find BitLocker-encrypted volumes or check that provided files are BitLocker-encrypted. </p>
 <p> It will print every file it find to be BitLocker-encrypted, one per line. Each file/line can be passed to the dislocker suite to be decrypted (`-V&#8217; option).</p>
 <h2>OPTIONS</h2>

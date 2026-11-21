@@ -1,4 +1,5 @@
 ---
+
 title: "clarnv(3)"
 name: "clarnv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clarnv/"
 description: "clarnv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarnv</code> (IDIST, ISEED, N, X)<br />
  <i></i><code>CLARNV</code> returns a vector of random numbers from a uniform or normal distribution.</p>

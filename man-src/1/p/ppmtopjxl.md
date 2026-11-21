@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtopjxl(1)"
 name: "ppmtopjxl"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtopjxl/"
 description: "ppmtopjxl – convert a PPM image to an HP PaintJet XL PCL file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ppmtopjxl [<code>-nopack</code>] [<code>-gamma</code> <i>n</i>] [<code>-presentation</code>] [<code>-dark</code>] [<code>-diffuse</code>] [<code>-cluster</code>] [<code>-dither</code>] [<code>-xshift</code> <i>s</i>] [<code>-yshift</code> <i>s</i>] [<code>-xshift</code> <i>s</i>] [<code>-yshift</code> <i>s</i>] [{<code>-xsize</code>|<code>-width</code>|<code>-xscale</code>} <i>s</i>] [{<code>-ysize</code>|<code>-height</code>|<code>-yscale</code>} <i>s</i>] [<i>ppmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmtopjxl</code> reads a PPM image as input and produces a PCL file suitable for printing on an HP PaintJet XL printer as output. </p>
 <p> The generated file is not suitable for printing on a normal PrintJet printer. The <code>-nopack</code> option generates a file which does not use the normal TIFF 4.0 compression method. This file might be printable on a normal PaintJet printer (not an XL). </p>

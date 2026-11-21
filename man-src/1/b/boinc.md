@@ -1,4 +1,5 @@
 ---
+
 title: "boinc(1)"
 name: "boinc"
 section: "1"
@@ -9,9 +10,7 @@ description: "boinc – The BOINC client program."
 
 <h2>NAME</h2>
 <p> boinc &#8211; The BOINC client program.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>boinc</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The BOINC &quot;client&quot;, <code>boinc</code>, is the heart of BOINC. It controls which project applications are run on your computer, downloading &quot;Tasks&quot; and uploading the resulting files from completed tasks. <code>boinc</code> is usually run in the background, ideally as a daemon. It can then be controlled either by a graphical tool called the BOINC Manager, <code><a href="/docs/linux/man/1-boincmgr/">boincmgr</a></code>(1), or a command-line tool called <code><a href="/docs/linux/man/1-boinccmd/">boinccmd</a></code>(1), by means of Remote Procedure Calls (RPCs) over port 31416. </p>
 <p> The BOINC client can be controlled by command-line options, configuration files, and environment variables. Standard usage is simply to start the client running in the background.</p>
 <h2>OPTIONS</h2>

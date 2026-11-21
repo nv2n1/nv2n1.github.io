@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-keyfetcher(1)"
 name: "ldns-keyfetcher"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldns-keyfetcher – retrieve the DNSSEC DNSKEYs for a zone"
 
 <h2>NAME</h2>
 <p> ldns-keyfetcher &#8211; retrieve the DNSSEC DNSKEYs for a zone</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldns-keyfetcher</code> [ <i>OPTIONS</i> ] <i>DOMAIN</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldns-keyfetcher</code> is used to retrieve the DNSKEYs of a zone. </p>
 <p> First it finds all authoritative nameservers of the zone by tracing it from the root down. All authoritative nameservers are then queried (using TCP) for the DNSKEY RRset of the zone apex. If the results are all the same, the key resource record set is printed. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-network-interface-attribute(1)"
 name: "euca-describe-network-interface-attribute"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-network-interface-attribute – Show an attribute of
 
 <h2>NAME</h2>
 <p> euca-describe-network-interface-attribute &#8211; Show an attribute of a VPC network interface</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-network-interface-attribute</p>
 <dl>
 <dt>(<code>-d</code> | <code>&#8211;source-dest-check</code> | <code>&#8211;group-set</code> | <code>-a</code>)</dt>
 <dd> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INTERFACE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show an attribute of a VPC network interface</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "file(1)"
 name: "file"
 section: "1"
@@ -6,13 +7,11 @@ letter: "f"
 url: "/docs/linux/man/1-file/"
 description: "file – determine file type"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>file</code> - determine file type </p>
-<h2>SYNOPSIS</h2>
 <p> <code>file</code> [-<code>bcdEhiklLNnprsSvzZ0</code> ] [-<code>-apple</code> ] [-<code>-exclude-quiet</code> ] [-<code>-extension</code> ] [-<code>-mime-encoding</code> ] [-<code>-mime-type</code> ] [-<code>e </code><i>testname</i> ] [-<code>F </code><i>separator</i> ] [-<code>f </code><i>namefile</i> ] [-<code>m </code><i>magicfiles</i> ] [-<code>P </code><i>name=value</i> ] <i>file ...</i> <br />
 <code>file</code> -<code>C</code> [-<code>m </code><i>magicfiles</i> ] <br />
 <code>file</code> [-<code>-help</code> ]  </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents version 5.41 of the <code>file</code> command. </p>
 <p> <code>file</code> tests each argument in an attempt to classify it. There are three sets of tests, performed in this order: filesystem tests, magic tests, and language tests. The <i>first</i> test that succeeds causes the file type to be printed. </p>
 <p> The type printed will usually contain one of the words <i>text</i> (the file contains only printing characters and a few common control characters and is probably safe to read on an <code>ASCII</code> terminal), <i>executable</i> (the file contains the result of compiling a program in a form understandable to some <code>UNIX</code> kernel or another), or <i>data</i> meaning anything else (data is usually ``binary&#8217;&#8216; or non-printable). Exceptions are well-known file formats (core files, tar archives) that are known to contain binary data. When modifying magic files or the program itself, make sure to <i>preserve these keywords</i> Users depend on knowing that all the readable files in a directory have the word ``text&#8217;&#8216; printed. Don&#8217;t do as Berkeley did and change ``shell commands text&#8217;&#8216; to ``shell script&#8217;&#8216; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_histogram(3)"
 name: "cdk_histogram"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_histogram – curses histogram widget"
 
 <h2>NAME</h2>
 <p> cdk_histogram &#8211; curses histogram widget</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -119,7 +119,6 @@ void setCDKHistogramViewType(
     EHistogramDisplayType viewType);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk histogram widget creates a histogram widget. This widget can draw a vertical or horizontal histogram. The functions create or manipulate the Cdk histogram box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

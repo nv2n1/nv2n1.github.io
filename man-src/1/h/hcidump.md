@@ -1,4 +1,5 @@
 ---
+
 title: "hcidump(1)"
 name: "hcidump"
 section: "1"
@@ -9,10 +10,8 @@ description: "hcidump – Parse HCI data"
 
 <h2>NAME</h2>
 <p> hcidump &#8211; Parse HCI data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hcidump [-h]</code><br />
  <code>hcidump [option [option&#8230;]] [filter]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>hcidump</code> reads raw HCI data coming from and going to a Bluetooth device (which can be specified with the option <code>-i</code>, default is the first available one) and prints to screen commands, events and data in a human-readable form. Optionally, the dump can be written to a file rather than parsed, and the dump file can be parsed in a subsequent moment.</p>
 <h2>OPTIONS</h2>
 <dl>

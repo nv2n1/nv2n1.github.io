@@ -1,4 +1,5 @@
 ---
+
 title: "lwres(3)"
 name: "lwres"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-lwres/"
 description: "lwres – introduction to the lightweight resolver library"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The BIND 9 lightweight resolver library is a simple, name service independent stub resolver library. It provides hostname-to-address and address-to-hostname lookup services to applications by transmitting lookup requests to a resolver daemon <code>lwresd</code> running on the local host. The resover daemon performs the lookup using the DNS or possibly other name service protocols, and returns the results to the application through the library. The library and resolver daemon communicate using a simple UDP-based protocol.</p>
 <h2>OVERVIEW</h2>
 <p> The lwresd library implements multiple name service APIs. The standard <code>gethostbyname()</code>, <code>gethostbyaddr()</code>, <code>gethostbyname_r()</code>, <code>gethostbyaddr_r()</code>, <code>getaddrinfo()</code>, <code>getipnodebyname()</code>, and <code>getipnodebyaddr()</code> functions are all supported. To allow the lwres library to coexist with system libraries that define functions of the same name, the library defines these functions with names prefixed by lwres_. To define the standard names, applications must include the header file <i>&lt;lwres/netdb.h&gt;</i> which contains macro definitions mapping the standard function names into lwres_ prefixed ones. Operating system vendors who integrate the lwres library into their base distributions should rename the functions in the library proper so that the renaming macros are not needed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-ccpp-local(1)"
 name: "abrt-action-analyze-ccpp-local"
 section: "1"
@@ -6,22 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-ccpp-local/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-action-analyze-ccpp-local - Generates backtrace and search for duplicates 
 
- abrt-action-analyze-ccpp-local - Generates backtrace and search for duplicates 
+abrt-action-analyze-ccpp-local [--without-di][--without-bz][--without-bodhi]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- abrt-action-analyze-ccpp-local [--without-di][--without-bz][--without-bodhi]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- This tool downloads debuginfo and generates a backtrace for coredump in the problem directory, also checks for existing duplicates in bugzilla and possible updates related to the detected crash
+This tool downloads debuginfo and generates a backtrace for coredump in the problem directory, also checks for existing duplicates in bugzilla and possible updates related to the detected crash
 
 <h3>Integration with ABRT events</h3>
 

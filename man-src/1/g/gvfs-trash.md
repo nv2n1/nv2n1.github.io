@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-trash(1)"
 name: "gvfs-trash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-trash/"
 description: "gvfs-trash"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <code>gvfs-trash</code> has been deprecated and it is redirected to <code>gio trash</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gio/">gio</a></code>(1), m[blue]<code>GIO commandline tool</code>m[]<font SIZE="-2">[1]</font></p>

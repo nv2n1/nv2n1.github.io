@@ -1,4 +1,5 @@
 ---
+
 title: "unbound-streamtcp(1)"
 name: "unbound-streamtcp"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-unbound-streamtcp/"
 description: "unbound-streamtcp – unbound DNS lookup utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>unbound-streamtcp</code> &#8211; unbound DNS lookup utility </p>
-<h2>SYNOPSIS</h2>
 <p> <code>unbound-streamtcp</code> [<code>-unsh</code>] [<code>-f</code> <i>ipaddr[@port]</i>] <i>name</i> <i>type</i> <i>class</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>unbound-streamtcp</code> sends a DNS Query of the given <code>type</code> and <code>class</code> for the given <code>name</code> to the DNS server over TCP and displays the response. </p>
 <p> If the server to query is not given using the <code>-f</code> option then localhost (127.0.0.1) is used. More queries can be given on one commandline, they are resolved in sequence. </p>
 <p> The available options are:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dh_pypy(1)"
 name: "dh_pypy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_pypy/"
 description: "dh_pypy – calculates PyPy dependencies, adds maintainer scripts to byte compile files, etc."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dh_pypy -p PACKAGE [-V [X.Y][-][A.B]] DIR [-X REGEXPR]</p>
-<h2>DESCRIPTION</h2>
 <h3>QUICK GUIDE FOR MAINTAINERS</h3>
 <dl>
 <dt>&bull;</dt>

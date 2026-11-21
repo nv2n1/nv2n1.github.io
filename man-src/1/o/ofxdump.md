@@ -1,4 +1,5 @@
 ---
+
 title: "ofxdump(1)"
 name: "ofxdump"
 section: "1"
@@ -9,9 +10,7 @@ description: "ofxdump – Dump content of OFX files as human-readable text"
 
 <h2>NAME</h2>
 <p> ofxdump &#8211; Dump content of OFX files as human-readable text</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ofxdump</code> [<i>OPTIONS</i>]&#8230; [<i>FILES</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> ofxdump 0.9.9 </p>
 <p> ofxdump prints to stdout, in human readable form, everything the library understands about a particular file or response, and sends errors to stderr. To know exactly what the library understands about of a particular ofx response file, just call ofxdump on that file.</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cheswapr(3)"
 name: "cheswapr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cheswapr/"
 description: "cheswapr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cheswapr</code> (UPLO, N, A, LDA, I1, I2)<br />
  <i></i><code>CHESWAPR</code> applies an elementary permutation on the rows and columns of a Hermitian matrix.</p>

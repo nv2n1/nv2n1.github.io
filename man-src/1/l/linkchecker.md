@@ -1,4 +1,5 @@
 ---
+
 title: "linkchecker(1)"
 name: "linkchecker"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-linkchecker/"
 description: "linkchecker – command line client to check HTML documents and websites for broken links"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>linkchecker</code> [<i>options</i>] [<i>file-or-url</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> LinkChecker features</p>
 <dl>
 <dt>&bull;</dt>

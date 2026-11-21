@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installdebconf(1)"
 name: "dh_installdebconf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installdebconf/"
 description: "dh_installdebconf – install files used by debconf in package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installdebconf</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8212;</code> <i>params</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installdebconf</code> is a debhelper program that is responsible for installing files used by debconf into package build directories. </p>
 <p> It also automatically generates the <i>postrm</i> commands needed to interface with debconf. The commands are added to the maintainer scripts by <code>dh_installdeb</code>. See <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1) for an explanation of how that works. </p>
 <p> Note that if you use debconf, your package probably needs to depend on it (it will be added to <code>${misc:Depends}</code> by this program). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_convert_table_format(1)"
 name: "mysql_convert_table_format"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysql_convert_table_format/"
 description: "mysql_convert_table_format – convert tables to use a given storage engine"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_convert_table_format [</code><i>options</i><code>] </code><i>db_name</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mysql_convert_table_format</code></p>
 <dd>converts the tables in a database to use a particular storage engine (MyISAM by default). <code>mysql_convert_table_format</code> is written in Perl and requires that the DBI and DBD::mysql Perl modules be installed (see Section 2.15, &#8220;Perl Installation Notes&#8221;). </dd>
 <p> Invoke <code>mysql_convert_table_format</code> like this: </p>

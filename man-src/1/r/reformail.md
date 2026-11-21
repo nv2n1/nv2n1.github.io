@@ -1,4 +1,5 @@
 ---
+
 title: "reformail(1)"
 name: "reformail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reformail/"
 description: "reformail – E-mail reformatting tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reformail</code> -s command [option&#8230;]</dt>
 <dt> <code>reformail</code> -D len <i>filename</i></dt>
@@ -15,7 +15,6 @@ description: "reformail – E-mail reformatting tool"
 <dt> <code>reformail</code> -X&nbsp;<wbr><i>header:</i>&#8230;</dt>
 <dt> <code>reformail</code> [<i>options</i>&#8230;] </dt>
 <dd>See below for additional options</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>reformail</code> program reads a message on standard input, reformats it in some way, and writes the message to standard output:</p>
 <h3>Splitting mailboxes into individual messages</h3>
 <p> The <code>-s</code> option splits the mbox-formatted mailbox file on standard input into individual messages. An external program is executed for each message. The contents of each individual message will be provided to the external program on standard input. </p>

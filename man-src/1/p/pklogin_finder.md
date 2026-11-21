@@ -1,4 +1,5 @@
 ---
+
 title: "pklogin_finder(1)"
 name: "pklogin_finder"
 section: "1"
@@ -11,7 +12,6 @@ description: "pklogin_finder – maps certificates into a user"
 <p> pklogin_finder &#8211; maps certificates into a user</p>
 <h2>SYNTAX</h2>
 <p> <code>pklogin_finder</code> [<code>debug</code>] [<code>config_file=</code><i>&lt;filename&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pklogin_finder</code> uses the pam_pkcs11 library infrastructure to interactively map a PKCS#11 provided certificate to a user. </p>
 <p> <code>pklogin_finder</code> uses the the same configuration file and arguments than <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8) PAM module. Load defined mapper modules, and try to find a map between found certificates and a user login.</p>
 <h2>OPTIONS</h2>

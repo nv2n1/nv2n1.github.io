@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-create-auto-scaling-group(1)"
 name: "euscale-create-auto-scaling-group"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-create-auto-scaling-group – Create a new auto-scaling gr
 
 <h2>NAME</h2>
 <p> euscale-create-auto-scaling-group &#8211; Create a new auto-scaling group</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-create-auto-scaling-group <code>-l</code> LAUNCHCONFIG <code>-M</code> COUNT <code>-m</code> COUNT</p>
 <dl>
 <dt>[&#8211;default-cooldown SECONDS]</dt>
 <dd> [&#8211;desired-capacity COUNT] [&#8211;grace-period SECONDS] [&#8211;health-check-type {EC2,ELB}] [&#8211;load-balancers ELB1,ELB2,&#8230;] [&#8211;placement-group PLACEMENTGROUP] [&#8211;tag &quot;k=VALUE, id=VALUE, t=VALUE, v=VALUE, p={true,false}&quot;] [&#8211;termination-policies POLICY1,POLICY2,&#8230;] [&#8211;vpc-zone-identifier ZONE1,ZONE2,&#8230;] [-z ZONE1,ZONE2,&#8230;] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ASGROUP</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a new auto-scaling group</p>
 <h3>positional arguments:</h3>
 <dl>

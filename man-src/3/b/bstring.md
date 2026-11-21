@@ -1,4 +1,5 @@
 ---
+
 title: "bstring(3)"
 name: "bstring"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bstring/"
 description: "bcmp, bcopy, bzero, memccpy, memchr, memcmp, memcpy, memfrob, memmem, memmove, memset – byte string operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;
 int bcmp(const void *s1, const void *s2, size_t n);
@@ -23,7 +23,6 @@ void *memmem(const void *haystack, size_t haystacklen,
 void *memmove(void *dest, const void *src, size_t n);
 void *memset(void *s, int c, size_t n);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The byte string functions perform operations on strings (byte arrays) that are not necessarily null-terminated. See the individual man pages for descriptions of each function.</p>
 <h2>NOTES</h2>
 <p> The functions <code>bcmp</code>(), <code>bcopy</code>(), and <code>bzero</code>() are obsolete. Use <code>memcmp</code>(), <code>memcpy</code>(), and <code>memset</code>() instead.</p>

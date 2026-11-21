@@ -1,4 +1,5 @@
 ---
+
 title: "asciidoc(1)"
 name: "asciidoc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-asciidoc/"
 description: "asciidoc – converts an AsciiDoc text file to HTML or DocBook"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>asciidoc</code> [<i>OPTIONS</i>] <i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-asciidoc/">asciidoc</a>(1) command translates the AsciiDoc text file <i>FILE</i> to DocBook or HTML. If <i>FILE</i> is <i>&#8211;</i> then the standard input is used.</p>
 <h2>OPTIONS</h2>
 <p> <code>-a, &#8211;attribute</code>=<i>ATTRIBUTE</i></p>

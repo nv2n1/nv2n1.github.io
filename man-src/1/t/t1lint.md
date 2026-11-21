@@ -1,4 +1,5 @@
 ---
+
 title: "t1lint(1)"
 name: "t1lint"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-t1lint/"
 description: "t1lint – check a PostScript Type 1 font for correctness"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>t1lint</code> <i>font</i> [<i>font</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>T1lint</code> checks PostScript Type 1 font programs for correctness. Any errors or variances from the specification are reported to standard error. If there are no errors, the command prints nothing. It exits with status 0 if all fonts were OK, and status 1 otherwise. If no input files are supplied, t1lint reads a font from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

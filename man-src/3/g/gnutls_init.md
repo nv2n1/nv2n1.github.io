@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_init(3)"
 name: "gnutls_init"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_init &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_init(gnutls_session_t * </code><i>session</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_init – API function"
 <dd> is a pointer to a <code>gnutls_session_t</code> structure.</dd>
 <dt>unsigned int flags</dt>
 <dd> indicate if this session is to be used for server or client.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function initializes the current session to null. Every session must be initialized before use, so internal structures can be allocated. This function allocates structures which can only be free&#8217;d by calling <code>gnutls_deinit()</code>. Returns <code>GNUTLS_E_SUCCESS</code> (0) on success. </p>
 <p>&nbsp;<wbr><i>flags</i>&nbsp;<wbr>can be one of&nbsp;<wbr><code>GNUTLS_CLIENT</code>&nbsp;<wbr>and&nbsp;<wbr><code>GNUTLS_SERVER</code>. For a DTLS entity, the flags <code>GNUTLS_DATAGRAM</code> and <code>GNUTLS_NONBLOCK</code> are also available. The latter flag will enable a non-blocking operation of the DTLS timers. </p>
 <p> The flag <code>GNUTLS_NO_REPLAY_PROTECTION</code> will disable any replay protection in DTLS mode. That must only used when replay protection is achieved using other means. </p>

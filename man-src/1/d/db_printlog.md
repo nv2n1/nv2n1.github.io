@@ -1,4 +1,5 @@
 ---
+
 title: "db_printlog(1)"
 name: "db_printlog"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-db_printlog/"
 description: "db5.3_printlog – Dumps Berkeley DB log files in a human-readable format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>db5.3_printlog</code> [-NrV] [-b start-LSN] [-e stop-LSN] [-h home] [-P password]</p>
-<h2>DESCRIPTION</h2>
 <p> The db5.3_printlog utility is a debugging utility that dumps Berkeley DB log files in a human-readable format.</p>
 <h2>OPTIONS</h2>
 <dl>

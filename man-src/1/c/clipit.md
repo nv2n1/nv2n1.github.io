@@ -1,4 +1,5 @@
 ---
+
 title: "clipit(1)"
 name: "clipit"
 section: "1"
@@ -9,9 +10,7 @@ description: "ClipIt – Lightweight GTK+ Clipboard Manager"
 
 <h2>NAME</h2>
 <p> ClipIt &#8211; Lightweight GTK+ Clipboard Manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>clipit</code> [<i>OPTION</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ClipIt</code> is a lightweight GTK+ clipboard manager. </p>
 <p> <code>ClipIt</code> features a clipboard CLI. Unrecognized options and the contents of your standard input get copied to your clipboard. See <code>CLI EXAMPLES</code>.</p>
 <h2><code>OPTIONS</code></h2>

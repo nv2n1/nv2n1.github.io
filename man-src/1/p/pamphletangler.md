@@ -1,4 +1,5 @@
 ---
+
 title: "pamphletangler(1)"
 name: "pamphletangler"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pamphletangler/"
 description: "pamphletangler – Extract code bits from LaTeX pamphlet files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamphletangler</code> [<font SIZE="-1">OPTION&#8230;</font>] <i></i><font SIZE="-1"><i>FILE</i></font><i></i> <i></i><font SIZE="-1"><i>CHUNKNAME</i></font><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> The clojure pamphlet system is a system based on the clojure literate system. In the clojure&#8217;s pamphlet system you have your main LaTeX file, which can be compiled regularly. This file contains documentation and source code (just like in other forms of literate programming). This code snippets are wrapped in the &#8216;chunk&#8217; environment, hence they can be recognized by the tangler in order to extract them. Chunks can be included inside each other by the &#8216;getchunk&#8217; command (which will be typesetted acordingly). Finally, you run your LaTeX file through the tangler and get your desired chunk of code.</p>
 <h2>OPTIONS</h2>
 <dl>

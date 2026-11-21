@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-silent(1)"
 name: "byobu-silent"
 section: "1"
@@ -11,7 +12,6 @@ description: "byobu-silent- Silence all of Byobu’s status indicators, eliminat
 <p> byobu-silent- Silence all of Byobu&#8217;s status indicators, eliminate the hardstatus line, and the window list </p>
 <h2>USAGE</h2>
 <p> byobu-silent [&#8211;undo] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu-silent</code> will disable ALL of Byobu&#8217;s status indicators, eliminate the hardstatus line, and the window list. </p>
 <p> Some administrators, in some environments, at some times may prefer a very minimal, quiet Byobu, without the potentially distracting status indicators and eye candy. </p>
 <p> <code>byobu-silent</code> implies <code>byobu-quiet</code>. </p>

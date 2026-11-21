@@ -1,4 +1,5 @@
 ---
+
 title: "git-blame(1)"
 name: "git-blame"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-blame/"
 description: "git-blame – Show what revision and author last modified each line of a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git blame[-c][-b][-l][--root][-t][-f][-n][-s][-e][-p][-w][--incremental]
          [-L&lt;range&gt;][-S&lt;revs - file&gt;][-M][-C][-C][-C][--since = &lt;date&gt;]
@@ -15,7 +15,6 @@ git blame[-c][-b][-l][--root][-t][-f][-n][-s][-e][-p][-w][--incremental]
          [--color - lines][--color - by - age][--progress][--abbrev = &lt;n&gt;]
          [&lt;rev&gt; | --contents&lt;file&gt; | --reverse&lt;rev&gt;..&lt;rev&gt;][--]&lt;file&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Annotates each line in the given file with information from the revision which last modified the line. Optionally, start annotating from the given revision. </p>
 <p> When specified one or more times, <code>-L</code> restricts annotation to the requested lines. </p>
 <p> The origin of lines is automatically followed across whole-file renames (currently there is no option to turn the rename-following off). To follow lines moved from one file to another, or to follow lines that were copied and pasted from another file, etc., see the <code>-C</code> and <code>-M</code> options. </p>

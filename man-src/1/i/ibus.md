@@ -1,4 +1,5 @@
 ---
+
 title: "ibus(1)"
 name: "ibus"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-ibus/"
 description: "ibus – command line utility for ibus"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ibus</code> &#8211; command line utility for ibus</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ibus</code> <i>COMMAND</i> [<i>OPTION</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface. It also may help developers to develop input method easily. </p>
 <p> <code>ibus</code> is a command line utility which can restart or exit ibus-daemon, get or set the current ibus engine or list the ibus engines. </p>
 <p> Homepage: <a rel="nofollow" href="https://github.com/ibus/ibus/wiki">https://github.com/ibus/ibus/wiki</a> </p>

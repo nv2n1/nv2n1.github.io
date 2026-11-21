@@ -1,4 +1,5 @@
 ---
+
 title: "kgb-add-project(1)"
 name: "kgb-add-project"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-kgb-add-project/"
 description: "kgb-add-project – helper script for adding new projects to kgb-bot configuration file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>kgb-add-project</code> [&#8211;file configfile] [&#8211;dir configdir] [&#8211;net|&#8211;networks ircnetwork] [&#8211;save|&#8211;write] project-id ircchannel password</p>
-<h2>DESCRIPTION</h2>
 <p> <code>kgb-add-project</code> allows one to add new projects to <code>kgb-bot</code>&#8216;s configuration file from the command line. It writes the new config to stdout unless <i>&#8211;save|&#8211;write</i> is given.</p>
 <h2>ARGUMENTS</h2>
 <dl>

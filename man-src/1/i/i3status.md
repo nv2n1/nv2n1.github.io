@@ -1,4 +1,5 @@
 ---
+
 title: "i3status(1)"
 name: "i3status"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-i3status/"
 description: "i3status – Generates a status line for dzen2 or xmobar"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> i3status [-c configfile]</p>
 <h2>OPTIONS</h2>
 <p> -c</p>
 <dl>
 <dt>
 </dt><dd> Specifies an alternate configuration file path (default is /etc/i3status.conf or ~/.i3status.conf).</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> i3status is a small program (less than 1000 SLOC) for generating a status bar for dzen2, xmobar or similar programs. It is designed to be very efficient by issuing a very small number of systemcalls, as one generally wants to update such a status line every second. This ensures that even under high load, your status bar is updated correctly. Also, it saves a bit of energy by not hogging your CPU as much as spawning the corresponding amount of shell commands would.</p>
 <h2>CONFIGURATION</h2>
 <p> Since version 2, the configuration file for i3status will be parsed using libconfuse. This makes configuration easier in the programmercqs point of view and more flexible for the user at the same time. </p>

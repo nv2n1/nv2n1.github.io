@@ -1,4 +1,5 @@
 ---
+
 title: "rosdep(1)"
 name: "rosdep"
 section: "1"
@@ -9,9 +10,7 @@ description: "rosdep – rosdep command"
 
 <h2>NAME</h2>
 <p> rosdep &#8211; rosdep command</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rosdep</code> &lt;<i>command</i>&gt; [<i>options</i>] [<i>args</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>rosdep</code> command helps you install external dependencies in an OS-independent manner. For example, what Debian packages do you need in order to get the OpenGL headers on Ubuntu? How about OS X? Fedora? rosdep can answer this question for your platform and install the necessary package(s). </p>
 <p> For more information on rosdep, see <i><a rel="nofollow" href="http://ros.org/wiki/rosdep">http://ros.org/wiki/rosdep</a></i>. </p>
 <p> Run &quot;rosdep -h&quot; or &quot;rosdep &lt;command&gt; -h&quot; to access the built-in tool documentation.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs11-tool(1)"
 name: "pkcs11-tool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pkcs11-tool/"
 description: "pkcs11-tool – utility for managing and using PKCS #11 security tokens"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pkcs11-tool</code> [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pkcs11-tool</code> utility is used to manage the data objects on smart cards and similar PKCS #11 security tokens. Users can list and read PINs, keys and certificates stored on the token. User PIN authentication is performed for those operations that require it.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;login, -l</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "binlegs(1)"
 name: "binlegs"
 section: "1"
@@ -9,9 +10,7 @@ description: "binlegs – Maintain the GMT index files for mgg supplement"
 
 <h2>NAME</h2>
 <p> binlegs &#8211; Maintain the <code>GMT</code> index files for mgg supplement</p>
-<h2>SYNOPSIS</h2>
 <p> <code>binlegs </code><i>leglistfile</i> [ <code>-R</code> ] [ <code>-D</code> ] [ <code>-P</code><i>path</i> ] [ <code>-V</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>binlegs</code> will make changes to the <code>mgg</code> supplement data base files <i>gmt_legs.d</i> and <i>gmt_index.b</i> for the legs listed in the <i>leglistfile</i>. Normally, only the data archivist will need to be concerned with these operations.</p>
 <dl>
 <dt><i>leglistfile</i></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_set_buf(3)"
 name: "hdf_set_buf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_set_buf/"
 description: "hdf_set_buf – Set the value of a node without duplicating the value"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ NEOERR *hdf_set_buf(HDF *hdf, const char *name, char *value);
 <p> hdf -&gt; the hdf dataset node<br />
  name -&gt; the name to walk to<br />
  value -&gt; the malloc&#8217;d value </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_set_buf is similar to hdf_set_value, except the dataset takes ownership of the value instead of making a copy of it. The dataset assumes that value was malloc&#8217;d, since it will attempt to free it when hdf_destroy is called </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

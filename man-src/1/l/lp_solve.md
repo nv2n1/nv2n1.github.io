@@ -1,4 +1,5 @@
 ---
+
 title: "lp_solve(1)"
 name: "lp_solve"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lp_solve/"
 description: "lp_solve – a mixed integer linear programming (MILP) solver"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lp_solve</code> [<i>options</i>] [<i>input file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lp_solve</code> solves mixed integer linear programming problems. The program accepts models of problems in various different formats (including custom formats through XLIs) and attempts to solve them. There are a large number of different options which can be used to alter the solving process to improve performance or get more accurate results. </p>
 <h3>lp file format</h3>
 <p> The lp file format is a simple, human readable file format for linear programming models. It is the default format used by <code>lp_solve</code>. </p>

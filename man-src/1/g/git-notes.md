@@ -1,4 +1,5 @@
 ---
+
 title: "git-notes(1)"
 name: "git-notes"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-git-notes/"
 description: "git-notes – Add or inspect object notes"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git notes[list[&lt;object&gt;]] git notes add[-f][--allow - empty][-F&lt;file&gt; | -m&lt;msg&gt; | (-c | -C) &lt; object &gt; ][&lt;object&gt;] git notes copy[-f](--stdin | &lt;from - object&gt;[&lt;to - object&gt;])
         git notes append[--allow - empty][-F&lt;file&gt; | -m&lt;msg&gt; | (-c | -C) &lt; object &gt; ][&lt;object&gt;] git notes edit[--allow - empty][&lt;object&gt;] git notes show[&lt;object&gt;] git notes merge[-v | -q][-s&lt;strategy&gt;]&lt;notes - ref&gt; git notes merge-- commit[-v | -q] git notes merge-- abort[-v | -q] git notes remove[--ignore - missing][--stdin][&lt;object&gt;...] git notes prune[-n][-v] git notes get
     - ref
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Adds, removes, or reads notes attached to objects, without touching the objects themselves. </p>
 <p> By default, notes are saved to and read from <code>refs/notes/commits</code>, but this default can be overridden. See the OPTIONS, CONFIGURATION, and ENVIRONMENT sections below. If this ref does not exist, it will be quietly created when it is first needed to store a note. </p>
 <p> A typical use of notes is to supplement a commit message without changing the commit itself. Notes can be shown by <i>git log</i> along with the original commit message. To distinguish these notes from the message stored in the commit object, the notes are indented like the message, after an unindented line saying &quot;Notes (&lt;refname&gt;):&quot; (or &quot;Notes:&quot; for <code>refs/notes/commits</code>). </p>

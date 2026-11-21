@@ -1,4 +1,5 @@
 ---
+
 title: "javah-java-1(1)"
 name: "javah-java-1"
 section: "1"
@@ -10,11 +11,9 @@ description: "javah – C Header and Stub File Generator"
 <h2>Name</h2>
 <p> javah &#8211; C Header and Stub File Generator </p>
 <p> <code>javah</code> produces C header files and C source files from a Java class. These files provide the connective glue that allow your Java and C code to interact. </p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>javah [ </code><code>options</code><code> ] fully-qualified-classname. . .</code>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>javah</code> generates C header and source files that are needed to implement native methods. The generated header and source files are used by C programs to reference an object&#8217;s instance variables from native source code. The .h file contains a struct definition whose layout parallels the layout of the corresponding class. The fields in the struct correspond to instance variables in the class. </p>
 <p> The name of the header file and the structure declared within it are derived from the name of the class. If the class passed to <code>javah</code> is inside a package, the package name is prepended to both the header file name and the structure name. Underscores (_) are used as name delimiters. </p>
 <p> By default <code>javah</code> creates a header file for each class listed on the command line and puts the files in the current directory. Use the <i>-stubs</i> option to create source files. Use the <i>-o</i> option to concatenate the results for all listed classes into a single file. </p>

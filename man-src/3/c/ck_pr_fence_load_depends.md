@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_load_depends(3)"
 name: "ck_pr_fence_load_depends"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_pr_fence_load_depends – data dependency barrier"
 <p> <code>ck_pr_fence_load_depends</code> &#8211; data dependency barrier</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_load_depends void</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_fence_load_depends 3 emits necessary fences for pure data-dependent loads. It currently only serves as a compiler barrier for Concurrency Kit&#8217;s supported platforms. Unless you&#8217;re on architecture which re-orders data-dependent loads (such as the defunct Alpha), this function is unnecessary.</p>
 <h2>RETURN VALUES</h2>
 <p> This function has no return value.</p>

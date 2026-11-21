@@ -1,4 +1,5 @@
 ---
+
 title: "dtrsyl(3)"
 name: "dtrsyl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrsyl/"
 description: "dtrsyl.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />
  <i></i><code>DTRSYL</code></p>

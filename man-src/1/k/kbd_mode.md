@@ -1,4 +1,5 @@
 ---
+
 title: "kbd_mode(1)"
 name: "kbd_mode"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-kbd_mode/"
 description: "kbd_mode – report or set the keyboard mode"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>kbd_mode</code> [ <i>-a | -u | -k | -s </i> ] [ <i>-f</i> ] [ <i>-C CONSOLE</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> Without argument, <code>kbd_mode</code> prints the current keyboard mode (RAW, MEDIUMRAW or XLATE). With argument, it sets the keyboard mode as indicated: </p>
 <p> -s: scancode mode (RAW), </p>
 <p> -k: keycode mode (MEDIUMRAW), </p>

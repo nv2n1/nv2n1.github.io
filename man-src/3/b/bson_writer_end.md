@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_end(3)"
 name: "bson_writer_end"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_writer_end() – Complete writing of a bson_writer_t to the b
 
 <h2>NAME</h2>
 <p> bson_writer_end() &#8211; Complete writing of a bson_writer_t to the buffer supplied.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_writer_end(bson_writer_t *writer);
 </code></pre>
@@ -17,7 +17,6 @@ void bson_writer_end(bson_writer_t *writer);
 <dl>
 <dt><code>writer</code></dt>
 <dd> A <code>bson_writer_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Complete writing of a <code>bson_writer_t</code> to the buffer supplied. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

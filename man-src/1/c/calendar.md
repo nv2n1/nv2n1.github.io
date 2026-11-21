@@ -1,4 +1,5 @@
 ---
+
 title: "calendar(1)"
 name: "calendar"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-calendar/"
 description: "calendar – reminder service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>calendar</code> &#8211; reminder service </p>
-<h2>SYNOPSIS</h2>
 <p> <code>calendar</code> [-<code>abw</code> ] [-<code>A </code><i>num</i> ] [-<code>B </code><i>num</i> ] [-<code>l </code><i>num</i> ] [-<code>e </code><i>num</i> ] [-<code>f </code><i>calendarfile</i> ] [-<code>t </code>[[[<i>cc </i><i>yy </i><i>mm </i><i>dd</i> ] ] ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>calendar</code> utility checks the current directory or the directory specified by the <code>CALENDAR_DIR</code> environment variable for a file named calendar and displays lines that begin with either today&#8217;s date or tomorrow&#8217;s. On Fridays, events on Friday through Monday are displayed. </p>
 <p> The options are as follows:</p>
 <dl>

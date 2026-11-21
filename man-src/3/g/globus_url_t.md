@@ -1,4 +1,5 @@
 ---
+
 title: "globus_url_t(3)"
 name: "globus_url_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "globus_url_t –"
 
 <p> Parsed URLs. </p>
 <p> This structure contains the fields which were parsed from an string representation of an URL. There are no methods to access fields of this structure.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_url.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>scheme</code> </p>

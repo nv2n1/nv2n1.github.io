@@ -1,4 +1,5 @@
 ---
+
 title: "nlily(1)"
 name: "nlily"
 section: "1"
@@ -9,12 +10,10 @@ description: "naim – console mode chat client"
 
 <h2>NAME</h2>
 <p> naim &#8211; console mode chat client</p>
-<h2>SYNOPSIS</h2>
 <p> naim<br />
  nicq<br />
  nirc [<i>nickname</i> [<i>server</i>]]<br />
  nlily</p>
-<h2>DESCRIPTION</h2>
 <p> naim is the original ncurses AIM client. It uses the TOC protocol, and features many commonly-requested features found nowhere else, while still providing an intuitive chat interface. </p>
 <h2>OPTIONS</h2>
 <p> If a `<code>.naimrc</code>&#8216; file exists in your home directory, naim executes that and ignores all command line options. Otherwise&#8230; </p>

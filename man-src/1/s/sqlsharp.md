@@ -1,4 +1,5 @@
 ---
+
 title: "sqlsharp(1)"
 name: "sqlsharp"
 section: "1"
@@ -9,9 +10,7 @@ description: "sqlsharp – Mono SQL Query command-line tool"
 
 <h2>NAME</h2>
 <p> sqlsharp &#8211; Mono SQL Query command-line tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sqlsharp </code> [-f filename] [-o filename] [-s]</p>
-<h2>DESCRIPTION</h2>
 <p> sqlsharp is a Mono SQL tool used for entering SQL queries to a database using Mono data providers. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

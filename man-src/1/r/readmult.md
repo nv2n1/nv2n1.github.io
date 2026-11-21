@@ -1,4 +1,5 @@
 ---
+
 title: "readmult(1)"
 name: "readmult"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-readmult/"
 description: "readmult – a multitrack wrapper for cdda2wav"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>readmult</code> &lt;track a&gt; &lt;title a&gt; &lt;track b&gt; &lt;title b&gt; &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>readmult</code> allows simultaneous extraction and naming of multiple tracks with cdda2wav </p>
 <h2>SEE ALSO</h2>
 <p> cdda2wav(1) </p>

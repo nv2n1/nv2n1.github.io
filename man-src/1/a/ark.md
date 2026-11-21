@@ -1,4 +1,5 @@
 ---
+
 title: "ark(1)"
 name: "ark"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ark/"
 description: "ark – KDE archiving tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ark</code> [<code>-b</code>] [<code>-a</code>] [<code>-e</code>] [<code>-c</code>] [<code>-f</code><i></dt>
 <dd>suffix</i>] [<code>-p</code>] [<code>-t</code><i> file</i>] [<code>-d</code>] [<code>-o</code><i> directory</i>] [KDE Generic Options] [Qt(TM)&nbsp;<wbr>Generic Options]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Ark is a program for managing various compressed file formats within KDE. Archives can be viewed, extracted, created and modified with Ark. The program can handle various formats such as tar, gzip, bzip2, zip, rar (when the appropriate libraries or command-line programs are installed).</p>
 <h2>OPERATION MODES</h2>
 <p> Ark can be used either as a stand-alone GUI program as well as a command-line program in order to perform some specific tasks. </p>

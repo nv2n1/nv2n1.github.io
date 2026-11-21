@@ -1,4 +1,5 @@
 ---
+
 title: "wishwn(1)"
 name: "wishwn"
 section: "1"
@@ -9,9 +10,7 @@ description: "wishwn – default version of the Tcl_AppInit procedure for wnb(1)
 
 <h2>NAME</h2>
 <p> wishwn &#8211; default version of the Tcl_AppInit procedure for <a href="/docs/linux/man/1-wnb/">wnb</a>(1) </p>
-<h2>SYNOPSIS</h2>
 <p> it is intended to be run from wnb (see wnb.1) </p>
-<h2>DESCRIPTION</h2>
 <p> Provides a default version of the Tcl_AppInit procedure for use in wish and similar Tk-based applications. </p>
 <p> Acts as a gateway between Tcl and the Wordnet C library. It contains stubs for all the commands added to the default Tcl and Tk set for this Wordnet application, as well as the routine that initializes them. </p>
 <h2>SEE ALSO</h2>

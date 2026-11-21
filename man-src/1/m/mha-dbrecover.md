@@ -1,4 +1,5 @@
 ---
+
 title: "mha-dbrecover(1)"
 name: "mha-dbrecover"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mha-dbrecover/"
 description: "mha-dbrecover – rebuild a MHonArc archive database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mha-dbrecover</code>&nbsp;<wbr>[<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mha-dbrecover</code> is a utility program that is part of the <code>MHonArc</code> software package. The program allows can be used to rebuild a <code>MHonArc</code> archive database from the <font SIZE="-1">HTML</font> message files. This allows database recovery if the database gets corrupted or accidentally deleted. </p>
 <p> The documentation for <code>MHonArc</code> is distributed in <font SIZE="-1">HTML</font> format. Due to its size and organization, it is not suited for manpage format. Consult your system administrator for where the documentation has been installed, or see &#8220;<font SIZE="-1">AVAILABILITY</font>&#8221; on where you can access the documentation on the web.</p>
 <h2>OPTIONS</h2>

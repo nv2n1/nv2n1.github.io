@@ -1,4 +1,5 @@
 ---
+
 title: "rdist(1)"
 name: "rdist"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-rdist/"
 description: "rdist – remote file distribution client program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rdist</code> [ <code>-DFn</code> ] [ <code>-A </code> <i>num</i> ] [ <code>-a </code> <i>num </i> ] [ <code>-d </code> <i>var=value </i> ] [ <code>-l</code> <i>&lt;local logopts&gt;</i> ] [ <code>-L</code> <i>&lt;remote logopts&gt;</i> ] [ <code>-f </code> <i>distfile </i> ] [ <code>-M </code> <i>maxproc</i> ] [ <code>-m </code> <i>host </i> ] [ <code>-o</code> <i>distopts</i> ] [ <code>-t </code> <i>timeout </i> ] [ <code>-p</code> <i>&lt;rdistd-path&gt;</i> ] [ <code>-P</code> <i>&lt;transport-path&gt;</i> ] [ <i>name &#8230;</i> ] </p>
 <p> <code>rdist</code> <code>-DFn</code> <code>-c </code> <i>name &#8230; </i> <i>[login@]host[:dest]</i> </p>
 <p> <code>rdist</code> <code>-Server</code> </p>
 <p> <code>rdist</code> <code>-V</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Rdist</i> is a program to maintain identical copies of files over multiple hosts. It preserves the owner, group, mode, and mtime of files if possible and can update programs that are executing. <i>Rdist</i> reads commands from <i>distfile</i> to direct the updating of files and/or directories. If <i>distfile</i> is `-&#8216;, the standard input is used. If no <code>-f</code> option is present, the program looks first for `distfile&#8217;, then `Distfile&#8217; to use as the input. If no names are specified on the command line, <i>rdist</i> will update all of the files and directories listed in <i>distfile</i>. Otherwise, the argument is taken to be the name of a file to be updated or the label of a command to execute. If label and file names conflict, it is assumed to be a label. These may be used together to update specific files using specific commands. </p>
 <p> The <code>-c</code> option forces <i>rdist</i> to interpret the remaining arguments as a small <i>distfile</i>. The equivalent distfile is as follows. </p>
 <pre><code>

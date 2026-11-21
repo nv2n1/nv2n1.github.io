@@ -1,4 +1,5 @@
 ---
+
 title: "gpm-root(1)"
 name: "gpm-root"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gpm-root/"
 description: "gpm-root – a default handler for gpm, used to draw menus on the root window"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gpm-root</code> [ <i>options</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The program gpm-root is designed to handle Control-Mouse events to draw menus on the background of the current tty. The actual menus are described by a configuration file in the user&#8217;s home directory. </p>
 <p> Please note that gpm-root needs to run with Linux 1.1.73 or newer, because previous kernels lack some screen handling capabilities required by the program. </p>
 <p> The program uses the files /dev/vcs* to draw to the console screen. These are available only from kernel 1.1.81 onward. If you miss those device nodes, you should create them using create_vcs in the distribution directory. The tool won&#8217;t run with kernels older than 1.1.81, because they lacked a full screen dump/restore capability. </p>

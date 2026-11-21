@@ -1,4 +1,5 @@
 ---
+
 title: "hp-makeuri(1)"
 name: "hp-makeuri"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-makeuri/"
 description: "hp-makeuri – Device URI Creation Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Creates device URIs for local and network connected printers for use with CUPS.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-makeuri [OPTIONS] [SERIAL NO.|USB ID|IP|DEVNODE]</code></p>
 <h2>SERIAL NO.|USB ID|IP|DEVNODE</h2>
 <dl>

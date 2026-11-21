@@ -1,4 +1,5 @@
 ---
+
 title: "pwd(1)"
 name: "pwd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pwd/"
 description: "pwd – print name of current/working directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pwd</code> [<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print the full filename of the current working directory.</p>
 <dl>
 <dt><code>-L</code>, <code>&#8211;logical</code></dt>

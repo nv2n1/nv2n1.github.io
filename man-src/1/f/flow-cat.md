@@ -1,4 +1,5 @@
 ---
+
 title: "flow-cat(1)"
 name: "flow-cat"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-cat – Concatenate flow files"
 
 <h2>NAME</h2>
 <p> flow-cat &#8211; Concatenate flow files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-cat</code> [ <code>-aghmp</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-o</code><i> filename</i> ] [ <code>-t</code><i> start_time</i> ] [ <code>-T</code><i> start_time</i> ] [ <code>-z</code><i> z_level</i> ] [ <i>file</i><code>|</code><i>directory</i><i>&#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-cat</code> utility processes files and/or directories of files in the flow-tools format. The resulting concatenated data set is written to the standard output or <i>file</i> specified by <code>-o</code>. If <i>file</i> is a single dash (`-&#8216;) or absent, flow-cat will read from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

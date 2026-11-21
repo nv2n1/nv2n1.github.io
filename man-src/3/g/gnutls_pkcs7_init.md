@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs7_init(3)"
 name: "gnutls_pkcs7_init"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_pkcs7_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs7_init &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs7_init(gnutls_pkcs7_t * </code><i>pkcs7</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_pkcs7_t * pkcs7</dt>
 <dd> The structure to be initialized</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will initialize a PKCS7 structure. PKCS7 structures usually contain lists of X.509 Certificates and X.509 Certificate revocation lists.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

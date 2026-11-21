@@ -1,4 +1,5 @@
 ---
+
 title: "mkvmerge(1)"
 name: "mkvmerge"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mkvmerge/"
 description: "mkvmerge – Merge multimedia streams into a Matroska(TM) file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mkvmerge</code> [global options] {-o out} [options1] {file1} [[options2]&nbsp;<wbr>{file2}] [@optionsfile]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This program takes the input from several media files and joins their streams (all of them or just a selection) into a Matroska(TM) file; see m[blue]<code>the Matroska(TM) website</code>m[]<font SIZE="-2">[1]</font>. </dd>
 <dl>
 <dt>

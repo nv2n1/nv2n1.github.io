@@ -1,4 +1,5 @@
 ---
+
 title: "museeq(1)"
 name: "museeq"
 section: "1"
@@ -9,9 +10,7 @@ description: "Museeq – QT GUI for the Museek Daemon"
 
 <h2>NAME</h2>
 <p> <code>Museeq</code> &#8211; QT GUI for the Museek Daemon</p>
-<h2>SYNOPSIS</h2>
 <p> <code>museeq</code> [-V] [&#8211;version] [-h] [&#8211;help] [&#8211;no-tray]</p>
-<h2>DESCRIPTION</h2>
 <p> Museeq is a QT GUI for the Museek Daemon. It provides a standard set of Soulseek / Soulfind features, including Chat Rooms; Private Chat; Transferring files; Searching; Buddies, Banned, Ignored and Trusted users lists; Interests &amp; Recommendations; User info; and Browsing of users&#8217; Shared files. </p>
 <p> Before running museeq, you will need a <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1) running, and configured with <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1).</p>
 <h2>OPTIONS</h2>

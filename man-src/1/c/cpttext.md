@@ -1,4 +1,5 @@
 ---
+
 title: "cpttext(1)"
 name: "cpttext"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cpttext/"
 description: "cpttext – print text coloured by a GMT colour palette table (cpt) file."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cpttext</code> [-h] [-H] [-t&nbsp;<wbr><i>text</i>] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>cpttext</code> program prints text in the colours specified by the <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1) colour palette table (cpt) file. Currently only HTML output is supported. </dd>
 <p> The program will read the cpt file from stdin if a <i>file</i> is not specified as the final argument, and writes to stdout.</p>
 <h2>OPTIONS</h2>

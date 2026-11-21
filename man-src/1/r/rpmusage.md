@@ -1,4 +1,5 @@
 ---
+
 title: "rpmusage(1)"
 name: "rpmusage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rpmusage/"
 description: "rpmusage – display rpm packages last use"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> rpmusage will display for each package, the last date it was used (in days). It can be used to find unused packages. It use the atime field of all package&#8217;s files to do this job. Note : as it scan all files inodes, the run may be long &#8230;</p>
-<h2>SYNOPSIS</h2>
 <p> rpmusage.pl [options] [targets] </p>
 <p> options: </p>
 <pre>

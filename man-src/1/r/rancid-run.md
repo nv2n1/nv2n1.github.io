@@ -1,4 +1,5 @@
 ---
+
 title: "rancid-run(1)"
 name: "rancid-run"
 section: "1"
@@ -9,9 +10,7 @@ description: "rancid-run – run rancid for each of the groups"
 
 <h2>NAME</h2>
 <p> rancid-run &#8211; run rancid for each of the groups</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rancid-run</code> [<code>-V</code>] [<code>-f&nbsp;<wbr></code>rancid.conf]&nbsp;<wbr>[<code>-f&nbsp;<wbr></code>rancid.conf]&nbsp;<wbr>[<code>-m&nbsp;<wbr></code>mail_rcpt]&nbsp;<wbr>[<code>-r&nbsp;<wbr></code>device_name]&nbsp;<wbr>[group [group &#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rancid-run</code> is a <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1) script to run <i><a href="/docs/linux/man/1-rancid/">rancid</a></i>(1) for a set of rancid group(s). </p>
 <p> <code>rancid-run</code> reads <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5) to configure itself, then uses <i><a href="/docs/linux/man/1-control_rancid/">control_rancid</a></i>(1) to run <i><a href="/docs/linux/man/1-rancid/">rancid</a></i>(1) for each rancid group. The set of rancid groups can either be provided as command-line arguments or via the <i>LIST_OF_GROUPS</i> variable in <code><a href="/docs/linux/man/5-rancid-conf/">rancid.conf</a></code>(5), if the group argument is omitted. </p>
 <p> A lock file is maintained per-group to prevent simultaneous runs for a given group by <i><a href="/docs/linux/man/1-rancid-run/">rancid-run</a></i>(1). The lock file will be named <i>.&lt;group&gt;.run.lock</i> and will be located in <i>$TMPDIR</i> (see below). </p>

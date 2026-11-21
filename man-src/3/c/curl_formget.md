@@ -1,4 +1,5 @@
 ---
+
 title: "curl_formget(3)"
 name: "curl_formget"
 section: "3"
@@ -9,13 +10,11 @@ description: "curl_formget – serialize a previously built multipart/formdata H
 
 <h2>NAME</h2>
 <p> curl_formget &#8211; serialize a previously built multipart/formdata HTTP POST chain</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;curl/curl.h&gt;
 void curl_formget(struct curl_httppost *form, void *userp,
                   curl_formget_callback append);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> curl_formget() is used to serialize data previously built/appended with <i><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a>(3)</i>. Accepts a void pointer as second argument named <i>userp</i> which will be passed as the first argument to the curl_formget_callback function. </p>
 <p> <code>typedef size_t (*curl_formget_callback)(void *</code><i>userp,</i><code> const char *</code><i>buf,</i> <code> size_t </code><i>len</i><code>);</code> </p>
 <p> The curl_formget_callback will be executed for each part of the HTTP POST chain. The character buffer passed to the callback must not be freed. The callback should return the buffer length passed to it on success. </p>

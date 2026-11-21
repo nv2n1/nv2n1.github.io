@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-readelf(1)"
 name: "i686-pc-mingw32-readelf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-readelf/"
 description: "readelf – Displays information about ELF files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> readelf [<code>-a</code>|<code>&#8211;all</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;file-header</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-l</code>|<code>&#8211;program-headers</code>|<code>&#8211;segments</code>]<br />
@@ -34,7 +34,6 @@ description: "readelf – Displays information about ELF files."
 &nbsp;<wbr>&nbsp;<wbr>[<code>-W</code>|<code>&#8211;wide</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr><i>elffile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>readelf</code> displays information about one or more <font SIZE="-1">ELF</font> format object files. The options control what particular information to display. </p>
 <p> <i>elffile</i>&#8230; are the object files to be examined. 32-bit and 64-bit <font SIZE="-1">ELF</font> files are supported, as are archives containing <font SIZE="-1">ELF</font> files. </p>
 <p> This program performs a similar function to <code>objdump</code> but it goes into more detail and it exists independently of the <font SIZE="-1">BFD</font> library, so if there is a bug in <font SIZE="-1">BFD</font> then readelf will not be affected.</p>

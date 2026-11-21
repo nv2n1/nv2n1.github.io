@@ -1,4 +1,5 @@
 ---
+
 title: "cgeru(3)"
 name: "cgeru"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgeru/"
 description: "cgeru.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeru</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
  <i></i><code>CGERU</code></p>

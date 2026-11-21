@@ -1,4 +1,5 @@
 ---
+
 title: "h5cc(1)"
 name: "h5cc"
 section: "1"
@@ -9,9 +10,7 @@ description: "h5cc – Helper script to compile HDF5 applications."
 
 <h2>NAME</h2>
 <p> h5cc &#8211; Helper script to compile HDF5 applications.</p>
-<h2>SYNOPSIS</h2>
 <p> h5cc [OPTIONS] &lt;compile line&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> h5cc can be used in much the same way MPIch is used to compile an HDF5 program. It takes care of specifying where the HDF5 header files and libraries are on the command line. </p>
 <p> h5cc supercedes all other compiler scripts in that if you&#8217;ve used them to compile the HDF5 library, then h5cc also uses those scripts. For example, when compiling an MPIch program, you use the mpicc script. If you&#8217;ve built HDF5 using MPIch, then h5cc uses the MPIch program for compilation. </p>
 <p> Some programs use HDF5 in only a few modules. It isn&#8217;t necessary to use h5cc to compile those modules which don&#8217;t use HDF5. In fact, since h5cc is only a convenience script, you are still able to compile HDF5 modules in the normal way. In that case, you will have to specify the HDF5 libraries and include paths yourself. </p>

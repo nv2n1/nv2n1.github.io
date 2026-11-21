@@ -1,4 +1,5 @@
 ---
+
 title: "monolinker(1)"
 name: "monolinker"
 section: "1"
@@ -9,9 +10,7 @@ description: "Mono CIL Linker"
 
 <h2>NAME</h2>
 <p> Mono CIL Linker</p>
-<h2>SYNOPSIS</h2>
 <p> <code>monolinker [-o output_directory][-l i18n_assemblies][-c skip | copy | link] -x descriptor | -a assembly | -i info_file &#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>monolinker</i> is a CIL Linker. </p>
 <p> The linker is a tool one can use to only ship the minimal possible set of functions that a set of programs might require to run as opposed to the full libraries. </p>
 <p> The linker analyses the intermediate code (CIL) produced by every compiler targeting the Mono platform like mcs, gmcs, vbnc, booc or others. It will walk through all the code that it is given to it, and remove all the unused methods and classes. This is done using a mark and sweep operation on all the code that it is referenced. </p>

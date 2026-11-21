@@ -1,4 +1,5 @@
 ---
+
 title: "mmap2(2)"
 name: "mmap2"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-mmap2/"
 description: "mmap2 – map files or devices into memory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/mman.h&gt;
 void *mmap2(void *addr, size_t length, int prot,
             int flags, int fd, off_t pgoffset);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This is probably not the system call that you are interested in; instead, see <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), which describes the glibc wrapper function that invokes this system call. </p>
 <p> The <code>mmap2</code>() system call provides the same interface as <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), except that the final argument specifies the offset into the file in 4096-byte units (instead of bytes, as is done by <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)). This enables applications that use a 32-bit <i>off_t</i> to map large files (up to 2^44 bytes).</p>
 <h2>RETURN VALUE</h2>

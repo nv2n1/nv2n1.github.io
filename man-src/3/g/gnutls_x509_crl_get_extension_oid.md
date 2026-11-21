@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_get_extension_oid(3)"
 name: "gnutls_x509_crl_get_extension_oid"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crl_get_extension_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_extension_oid &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_extension_oid(gnutls_x509_crl_t </code><i>crl</i><code>, int </code><i>indx</i><code>, void * </code><i>oid</i><code>, size_t * </code><i>sizeof_oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crl_get_extension_oid – API function"
 <dd> a pointer to a structure to hold the OID (may be null)</dd>
 <dt>size_t * sizeof_oid</dt>
 <dd> initially holds the size of <i>oid</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the requested extension OID in the CRL. The extension OID will be stored as a string in the provided buffer.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code in case of an error. If your have reached the last extension available <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>

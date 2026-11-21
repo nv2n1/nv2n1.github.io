@@ -1,4 +1,5 @@
 ---
+
 title: "fdesign(1)"
 name: "fdesign"
 section: "1"
@@ -9,9 +10,7 @@ description: "fdesign – Forms Library User Interface Designer"
 
 <h2>NAME</h2>
 <p> fdesign &#8211; Forms Library User Interface Designer</p>
-<h2>SYNOPSIS</h2>
 <p> fdesign [-xformoptions] [-options] [files]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>fdesign</i> is a GUI builder that helps in the construction of graphical user interface in a WYSIWYG (&quot;what you see is what you get&quot;) way by allowing the user to directly manipulate various objects, such as buttons, sliders and menus etc. Once a satisfactory UI is constructed, the user can save the composed interface into a set of external files. Files with the extension &#8216;.fd&#8217; contain all information about the objects and can be read in again by <i>fdesign</i>. The files with C code and header files when compiled and linked against the <code>Forms Library</code>, generate code that at run-time constructs the exact same interface as the ones seen within <i>fdesign</i>. </p>
 <p> A variety of output languages is possible via external filters. As of this writing, C, perl, ada95, Fortran, pascal, and PostScript output filters are known to exist. </p>
 <h2>OPTIONS</h2>

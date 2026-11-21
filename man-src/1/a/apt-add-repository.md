@@ -1,4 +1,5 @@
 ---
+
 title: "apt-add-repository(1)"
 name: "apt-add-repository"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-apt-add-repository/"
 description: "add-apt-repository – Adds a repository into the /etc/apt/sources.list or /etc/apt/sources.list.d or removes an existing one"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>add-apt-repository </code><i>[OPTIONS]</i> <i>[LINE]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>add-apt-repository</code> is a script which adds an external APT repository to either /etc/apt/sources.list or a file in /etc/apt/sources.list.d/ or removes an already existing repository. </p>
 <h2>OPTIONS</h2>
 <p> Note that the <code>&#8211;list</code>, <code>&#8211;ppa</code>, <code>&#8211;cloud</code>, <code>&#8211;uri</code>, <code>&#8211;sourceslist</code>, and <code>LINE</code> parameters are mutually exclusive; only one (or none) of them may be specified.</p>

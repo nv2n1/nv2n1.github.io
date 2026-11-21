@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_store_atomic(3)"
 name: "ck_pr_fence_store_atomic"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_pr_fence_store_atomic – enforce ordering of store operations 
 <p> <code>ck_pr_fence_store_atomic</code> &#8211; enforce ordering of store operations to load operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_store_atomic void Ft void Fn ck_pr_fence_strict_store_atomic void</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_fence_store_atomic function enfores the ordering of any memory store, Fn ck_pr_store and atomic read-modify-write operations to atomic read-modify-write operations relative to the invocation of the function. This function always serve as an implicit compiler barrier. This functions will emit a fence for PSO and RMO targets. In order to force the emission of a fence use the Fn ck_pr_fence_strict_store_atomic function.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

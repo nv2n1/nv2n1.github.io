@@ -1,4 +1,5 @@
 ---
+
 title: "pkillall(1)"
 name: "pkillall"
 section: "1"
@@ -9,9 +10,7 @@ description: "pkillall – kill all running applications on a PDA"
 
 <h2>NAME</h2>
 <p> pkillall &#8211; kill all running applications on a PDA </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pkillall</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pkillall</code> stops all running applications on a device connected through SynCE to the time on the local computer. </p>
 <p> This tool must be run as the same user as the dccmd daemon. </p>
 <h2>OPTIONS</h2>

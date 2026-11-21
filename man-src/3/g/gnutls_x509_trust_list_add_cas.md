@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_trust_list_add_cas(3)"
 name: "gnutls_x509_trust_list_add_cas"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_trust_list_add_cas – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_add_cas &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_add_cas(gnutls_x509_trust_list_t </code><i>list</i><code>, const gnutls_x509_crt_t * </code><i>clist</i><code>, unsigned </code><i>clist_size</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_trust_list_add_cas – API function"
 <dd> The length of the CA list</dd>
 <dt>unsigned int flags</dt>
 <dd> should be 0 or an or&#8217;ed sequence of <code>GNUTLS_TL</code> options.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will add the given certificate authorities to the trusted list. The list of CAs must not be deinitialized during this structure&#8217;s lifetime. </p>
 <p> If the flag <code>GNUTLS_TL_NO_DUPLICATES</code> is specified, then the provided <i>clist</i> entries that are duplicates will not be added to the list and will be deinitialized.</p>
 <h2>RETURNS</h2>

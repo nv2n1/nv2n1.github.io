@@ -1,4 +1,5 @@
 ---
+
 title: "fixtpps(1)"
 name: "fixtpps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fixtpps/"
 description: "fixtpps – filter to fix Tpscript documents to work with PSUtils"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fixtpps </code> &lt; <i>Tpscript.ps</i> &gt; <i>Fixed.ps</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Fixtpps</i> is a <i>perl </i> filter which &quot;fixes&quot; PostScript generated from the Troff Tpscript driver so that it works correctly with Angus Duggan&#8217;s <code>psutils</code> package.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) Angus J. C. Duggan 1991-1995</p>

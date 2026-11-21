@@ -1,4 +1,5 @@
 ---
+
 title: "git-stripspace(1)"
 name: "git-stripspace"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-stripspace/"
 description: "git-stripspace – Remove unnecessary whitespace"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git stripspace[-s | --strip - comments] git stripspace[-c | --comment - lines]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Read text, such as commit messages, notes, tags and branch descriptions, from the standard input and clean it in the manner used by Git. </p>
 <p> With no arguments, this will: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "yarnpkg(1)"
 name: "yarnpkg"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-yarnpkg/"
 description: "yarnpkg – Fast, reliable and secure npm alternative"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>yarnpkg</code> &#8211; Fast, reliable and secure npm alternative </p>
-<h2>SYNOPSIS</h2>
 <p> yarnpkg command [package]@[version]</p>
-<h2>DESCRIPTION</h2>
 <p> Fast: Yarnpkg caches every package it downloads so it never needs to again. It also parallelizes operations to maximize resource utilization so install times are faster than ever. </p>
 <p> Reliable: Using a detailed, but concise, lockfile format, and a deterministic algorithm for installs, Yarnpkg is able to guarantee that an install that worked on one system will work exactly the same way on any other system. </p>
 <p> Secure: Yarnpkg uses checksums to verify the integrity of every installed package before its code is executed.</p>

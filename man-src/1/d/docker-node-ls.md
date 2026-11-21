@@ -1,4 +1,5 @@
 ---
+
 title: "docker-node-ls(1)"
 name: "docker-node-ls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-node-ls/"
 description: "docker-node-ls – List nodes in the swarm"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker node ls [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List nodes in the swarm </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

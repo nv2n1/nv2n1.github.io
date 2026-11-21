@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-wrap-passphrase(1)"
 name: "ecryptfs-wrap-passphrase"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ecryptfs-wrap-passphrase/"
 description: "ecryptfs-wrap-passphrase – wrap an eCryptfs mount passphrase."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-wrap-passphrase [file]</code> </p>
 <p> printf &quot;%s
 %s&quot; &quot;passphrase to wrap&quot; &quot;wrapping passphrase&quot; | <code>ecryptfs-wrap-passphrase [file] &#8211;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-wrap-passphrase</code> is a utility to wrap an eCryptfs mount passphrase, using a specified wrapping passphrase, and write the encrypted output to file. </p>
 <h2>SEE ALSO</h2>
 <dl>

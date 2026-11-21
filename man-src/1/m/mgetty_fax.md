@@ -1,4 +1,5 @@
 ---
+
 title: "mgetty_fax(1)"
 name: "mgetty_fax"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgetty_fax/"
 description: "fax – fax sending and receiving with mgetty+sendfax"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>faxspool</code> [options] phone-number file </p>
 <p> <code>faxrm</code> job-id </p>
 <p> <code>faxq</code> [options] </p>
@@ -18,7 +18,6 @@ description: "fax – fax sending and receiving with mgetty+sendfax"
 <p> <code>pbm2g3</code> [options] [pbm-file] </p>
 <p> <code>g32pbm</code> [options] [pbm-file] </p>
 <p> <code>g3cat</code> [options] [g3-file(s)] </p>
-<h2>DESCRIPTION</h2>
 <p> This manpage very briefly describes every program from the mgetty+sendfax fax/modem software suite. For details, see the manpages for each program. </p>
 <p> <i>faxspool</i> is used to queue jobs for later transmission by fax. <i>faxspool</i> accepts different input formats, converts them into the proper format required by <i>sendfax</i> and places the jobs into the outgoing spool directory. </p>
 <p> <i>faxq</i> displays the current FAX work queue. </p>

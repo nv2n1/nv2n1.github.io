@@ -1,4 +1,5 @@
 ---
+
 title: "iswspace(3)"
 name: "iswspace"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-iswspace/"
 description: "iswspace – test for whitespace wide character"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswspace(wint_t wc);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>iswspace</code>() function is the wide-character equivalent of the <code>isspace</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;space&quot;. </p>
 <p> The wide-character class &quot;space&quot; is disjoint from the wide-character class &quot;graph&quot; and therefore also disjoint from its subclasses &quot;alnum&quot;, &quot;alpha&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;digit&quot;, &quot;xdigit&quot;, &quot;punct&quot;. </p>
 <p> The wide-character class &quot;space&quot; contains the wide-character class &quot;blank&quot;. </p>

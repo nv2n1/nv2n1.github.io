@@ -1,4 +1,5 @@
 ---
+
 title: "nawk(1)"
 name: "nawk"
 section: "1"
@@ -6,10 +7,9 @@ letter: "n"
 url: "/docs/linux/man/1-nawk/"
 description: "gawk – pattern scanning and processing language"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />
  <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] [ <code>--</code> ] <i>program-text</i> file ...  </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Gawk</i> is the <font SIZE="-1">GNU</font> Project&#8217;s implementation of the <font SIZE="-1">AWK</font> programming language. It conforms to the definition of the language in the <font SIZE="-1">POSIX</font> 1003.1 standard. This version in turn is based on the description in <i>The AWK Programming Language</i>, by Aho, Kernighan, and Weinberger. <i>Gawk</i> provides the additional features found in the current version of Brian Kernighan&#8217;s <i>awk</i> and numerous <font SIZE="-1">GNU</font>-specific extensions. </p>
 <p> The command line consists of options to <i>gawk</i> itself, the <font SIZE="-1">AWK</font> program text (if not supplied via the <code>-f</code> or <code>--include</code> options), and values to be made available in the <code>ARGC</code> and <code>ARGV</code> pre-defined <font SIZE="-1">AWK</font> variables. </p>
 <p> When <i>gawk</i> is invoked with the <code>--profile</code> option, it starts gathering profiling statistics from the execution of the program. <i>Gawk</i> runs more slowly in this mode, and automatically produces an execution profile in the file <code>awkprof.out</code> when done. See the <code>--profile</code> option, below. </p>

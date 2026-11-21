@@ -1,4 +1,5 @@
 ---
+
 title: "cashflowvectors(3)"
 name: "cashflowvectors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cashflowvectors/"
 description: "ql/cashflows/cashflowvectors.hpp – Cash flow vector builders."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/fixedratecoupon.hpp&gt;<br />
  #include &lt;ql/cashflows/replication.hpp&gt;<br />
  #include &lt;ql/time/schedule.hpp&gt;<br />

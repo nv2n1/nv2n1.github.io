@@ -1,4 +1,5 @@
 ---
+
 title: "cross-nm(1)"
 name: "cross-nm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cross-nm/"
 description: "nm – list symbols from object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> nm [<code>-A</code>|<code>-o</code>|<code>&#8211;print-file-name</code>] [<code>-a</code>|<code>&#8211;debug-syms</code>]<br />
 [<code>-B</code>|<code>&#8211;format=bsd</code>]&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]<br />
 [<code>-D</code>|<code>&#8211;dynamic</code>]&nbsp;<wbr>[<code>-f</code><i>format</i>|<code>&#8211;format=</code><i>format</i>]<br />
@@ -21,7 +21,6 @@ description: "nm – list symbols from object files"
 [<code>&#8211;plugin</code>&nbsp;<wbr><i>name</i>]&nbsp;<wbr>[<code>&#8211;size-sort</code>]&nbsp;<wbr>[<code>&#8211;special-syms</code>]<br />
 [<code>&#8211;synthetic</code>]&nbsp;<wbr>[<code>&#8211;target=</code><i>bfdname</i>]<br />
 [<i>objfile</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">GNU </font><code>nm</code> lists the symbols from object files <i>objfile</i>&#8230;. If no object files are listed as arguments, <code>nm</code> assumes the file <i>a.out</i>. </p>
 <p> For each symbol, <code>nm</code> shows:</p>
 <dl>

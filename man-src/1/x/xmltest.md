@@ -1,4 +1,5 @@
 ---
+
 title: "xmltest(1)"
 name: "xmltest"
 section: "1"
@@ -9,9 +10,7 @@ description: "xmltest – Test script to send CIM-XML (via wbemcat) to CIMOM and
 
 <h2>NAME</h2>
 <p> xmltest &#8211; Test script to send CIM-XML (via wbemcat) to CIMOM and compare to known results</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xmltest</code> [<i>FILE</i><code>] </code></p>
-<h2>DESCRIPTION</h2>
 <p> xmltest is a script that is used to send a raw CIM-XML test file to the sfcb CIMOM (using wbemcat) and then compares the returned CIM-XML results against a previously determined &#8216;OK&#8217; result file to check whether the returned results match the expected results. If there does not yet exist an &#8216;OK&#8217; corresponding to the XML file then xmltest will save the returned results as the new OK file for later use. If the returned CIM-XML results don&#8217;t match the existing &#8216;OK&#8217; file a new &#8216;result&#8217; file will be generated containing the erroneous results. </p>
 <p> If no <i>FILE</i><code> is specified xmltest will use all files with a .xml extension in the current directory path. </code></p>
 <h2>EXAMPLE</h2>

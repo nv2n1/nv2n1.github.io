@@ -1,4 +1,5 @@
 ---
+
 title: "cfree(3)"
 name: "cfree"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cfree/"
 description: "cfree – free allocated memory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 /* In SunOS 4 */
@@ -25,7 +25,6 @@ void cfree(void *ptr, size_t nelem, size_t elsize);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> This function should never be used. Use <code><a href="/docs/linux/man/3-free/">free</a></code>(3) instead. Starting with version 2.26, it has been removed from glibc.</p>
 <h3>1-arg cfree</h3>
 <p> In glibc, the function <code>cfree</code>() is a synonym for <code><a href="/docs/linux/man/3-free/">free</a></code>(3), &quot;added for compatibility with SunOS&quot;. </p>

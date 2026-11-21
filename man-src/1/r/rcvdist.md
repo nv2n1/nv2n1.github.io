@@ -1,4 +1,5 @@
 ---
+
 title: "rcvdist(1)"
 name: "rcvdist"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-rcvdist/"
 description: "rcvdist – asynchronously redistribute new mail"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/rcvdist</code> [<code>-form</code> <i>formfile</i>] [switches for <i>postproc</i>] <i>address1</i> &#8230; [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>rcvdist</code> program will accept a message on its standard input and resend a copy of this message to all of the addresses listed on its command line. </dd>
 <p> When a message is redistributed with the <code>rcvdist</code> command, the format of the Resent-xxx header fields is controlled by the forms files &#8220;<i>rcvdistcomps</i>&#8221;. If a file named &#8220;<i>rcvdistcomps</i>&#8221; exists in the user&#8217;s nmh directory, it will be used instead of the default one. You may specify an alternate forms file with the switch <code>-form</code> <i>formfile</i>. </p>
 <p> The &#8220;<i>rcvdistcomps</i>&#8221; file uses the format string facility described in <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5). In addition to the standard format escapes, <code>rcvdist</code> also recognizes the following additional <i>component</i> escape: </p>

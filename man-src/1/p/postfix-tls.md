@@ -1,4 +1,5 @@
 ---
+
 title: "postfix-tls(1)"
 name: "postfix-tls"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-postfix-tls/"
 description: "postfix-tls – Postfix TLS management"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>postfix tls</code> <i>subcommand</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The &quot;<code>postfix tls </code><i>subcommand</i>&quot; feature enables opportunistic TLS in the Postfix SMTP client or server, and manages Postfix SMTP server private keys and certificates. </p>
 <p> The following subcommands are available:</p>
 <dl>

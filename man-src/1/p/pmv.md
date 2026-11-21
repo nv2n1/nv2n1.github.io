@@ -1,4 +1,5 @@
 ---
+
 title: "pmv(1)"
 name: "pmv"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmv – move (rename) files"
 
 <h2>NAME</h2>
 <p> pmv &#8211; move (rename) files </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmv</code> [- <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>SOURCE</i> <i>DESTINATION</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmv</code> renames or moves a file on a device connected through SynCE. </p>
 <p> Forward slashes (&#8216;/&#8217;) on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <h2>OPTIONS</h2>

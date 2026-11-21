@@ -1,4 +1,5 @@
 ---
+
 title: "git-commits-since(1)"
 name: "git-commits-since"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-commits-since – Show commit logs since some date"
 
 <h2>NAME</h2>
 <p> <code>git-commits-since</code> &#8211; Show commit logs since some date</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-commits-since</code> [&lt;date&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> List of commits since the given <i>date</i>.</p>
 <h2>OPTIONS</h2>
 <p> &lt;date&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_na_dtv(1)"
 name: "tv_grab_na_dtv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_na_dtv/"
 description: "tv_grab_na_dtv – Grab TV listings from DirecTV."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_na_dtv &#8211;help </p>
 <p> tv_grab_na_dtv &#8211;configure [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>] </p>
 <p> tv_grab_na_dtv [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>]<br />
@@ -15,7 +15,6 @@ description: "tv_grab_na_dtv – Grab TV listings from DirecTV."
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug] </p>
 <p> tv_grab_na_dtv &#8211;list-channels [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug]</p>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> and listings in <font SIZE="-1">XMLTV</font> format from directv.com. </p>
 <p> First you must run <code>tv_grab_na_dtv &#8211;configure</code> to choose which stations you want to receive. </p>
 <p> Then running <code>tv_grab_na_dtv</code> with no arguments will get listings for the stations you chose for five days including today.</p>

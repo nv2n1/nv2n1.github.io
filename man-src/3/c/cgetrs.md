@@ -1,4 +1,5 @@
 ---
+
 title: "cgetrs(3)"
 name: "cgetrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgetrs/"
 description: "cgetrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgetrs</code> (TRANS, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
  <i></i><code>CGETRS</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-search(1)"
 name: "docker-latest-search"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-search/"
 description: "docker-search – Search the Docker Hub for images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker search</code> [<code>-f</code>|<code>&#8211;filter</code>[=<i>[]</i>]] [<code>&#8211;help</code>] [<code>&#8211;limit</code>[=<i>LIMIT</i>]] [<code>&#8211;no-index</code>] [<code>&#8211;no-trunc</code>] TERM </p>
-<h2>DESCRIPTION</h2>
 <p> Search Docker Hub for images that match the specified TERM. The table of images returned displays the name, description (truncated by default), number of stars awarded, whether the image is official, and whether it is automated. </p>
 <p> <i>Note</i> &#8211; Search queries will only return up to 25 results </p>
 <h2>OPTIONS</h2>

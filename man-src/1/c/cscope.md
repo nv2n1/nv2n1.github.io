@@ -1,4 +1,5 @@
 ---
+
 title: "cscope(1)"
 name: "cscope"
 section: "1"
@@ -9,9 +10,7 @@ description: "cscope – interactively examine a C program"
 
 <h2>NAME</h2>
 <p> cscope &#8211; interactively examine a C program</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cscope</code> <code>[-bCcdehkLlqRTUuVv]</code> <code>[-F</code><i>symfile</i><code>]</code> <code>[-f</code><i>reffile</i><code>]</code> <code>[-I</code><i>incdir</i><code>]</code> <code>[-i</code><i>namefile</i><code>]</code> <code>[-0123456789</code><i>pattern</i><code>]</code> <code>[-p</code><i>n</i><code>]</code> <code>[-s</code><i>dir</i><code>]</code> <code>[</code><i>files</i><code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>cscope</i> is an interactive, screen-oriented tool that allows the user to browse through C source files for specified elements of code. </p>
 <p> By default, <i>cscope</i> examines the C (.c and .h), lex (.l), and yacc (.y) source files in the current directory. <i>cscope</i> may also be invoked for source files named on the command line. In either case, <i>cscope</i> searches the standard directories for #include files that it does not find in the current directory. <i>cscope</i> uses a symbol cross-reference, called cscope.out by default, to locate functions, function calls, macros, variables, and preprocessor symbols in the files. </p>
 <p> <i>cscope</i> builds the symbol cross-reference the first time it is used on the source files for the program being browsed. On a subsequent invocation, <i>cscope</i> rebuilds the cross-reference only if a source file has changed or the list of source files is different. When the cross-reference is rebuilt, the data for the unchanged files are copied from the old cross-reference, which makes rebuilding faster than the initial build.</p>

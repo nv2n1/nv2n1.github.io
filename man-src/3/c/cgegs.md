@@ -1,4 +1,5 @@
 ---
+
 title: "cgegs(3)"
 name: "cgegs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgegs/"
 description: "cgegs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgegs</code> (JOBVSL, JOBVSR, N, A, LDA, B, LDB, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, RWORK, INFO)<br />
  <i></i><code> CGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>

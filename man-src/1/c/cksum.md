@@ -1,4 +1,5 @@
 ---
+
 title: "cksum(1)"
 name: "cksum"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cksum/"
 description: "cksum – checksum and count the bytes in a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cksum</code> [<i>,FILE/</i>]&#8230;<br />
  <code>cksum</code> [<i>,OPTION/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Print CRC checksum and byte counts of each FILE.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

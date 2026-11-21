@@ -1,4 +1,5 @@
 ---
+
 title: "twinwave(1)"
 name: "twinwave"
 section: "1"
@@ -18,11 +19,7 @@ url: "/docs/linux/man/1-twinwave/"
 
  twinwave &lt;<i>arglist1</i>&gt; &lt;<i>separator</i>&gt; &lt;<i>arglist2</i>&gt;
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Wraps multiple GTKWave sessions with synchronized markers, horizontal scrolling, and zooming.
+Wraps multiple GTKWave sessions with synchronized markers, horizontal scrolling, and zooming.
 
 <h2>EXAMPLES</h2>
 

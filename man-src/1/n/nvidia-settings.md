@@ -1,4 +1,5 @@
 ---
+
 title: "nvidia-settings(1)"
 name: "nvidia-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvidia-settings/"
 description: "nvidia-settings – configure the NVIDIA graphics driver"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nvidia-settings [</code><i>options</i><code>]</code><br />
  <code>nvidia-settings [</code><i>options</i><code>] &#8211;no-config</code><br />
  <code>nvidia-settings [</code><i>options</i><code>] &#8211;load-config-only</code><br />
@@ -18,7 +18,6 @@ description: "nvidia-settings – configure the NVIDIA graphics driver"
  <i> </i><code>[&#8211;describe=</code>{<i>all </i>|<i> list </i>|<i> attribute_name</i>}<code>]</code> </p>
 <p> <i>attr</i> has the form:<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i>DISPLAY</i><code>/</code><i>attribute_name</i><code>[</code><i>display_devices</i><code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>nvidia-settings</code> utility is a tool for configuring the NVIDIA graphics driver. It operates by communicating with the NVIDIA X driver, querying and updating state as appropriate. This communication is done via the NV-CONTROL, GLX, XVideo, and RandR X extensions. </p>
 <p> Values such as brightness and gamma, XVideo attributes, temperature, and OpenGL settings can be queried and configured via <code>nvidia-settings.</code> </p>
 <p> When <code>nvidia-settings</code> starts, it reads the current settings from its configuration file and sends those settings to the X server. Then, it displays a graphical user interface (GUI) for configuring the current settings. When <code>nvidia-settings</code> exits, it queries the current settings from the X server and saves them to the configuration file.</p>

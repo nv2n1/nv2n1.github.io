@@ -1,4 +1,5 @@
 ---
+
 title: "fb-gnash(1)"
 name: "fb-gnash"
 section: "1"
@@ -16,9 +17,7 @@ url: "/docs/linux/man/1-fb-gnash/"
 gnash[option]...[URL]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Run the SWF movie player.
+Run the SWF movie player.
 <dl>
 <dt>-h, --help
 </dt><dd> Print usage info.

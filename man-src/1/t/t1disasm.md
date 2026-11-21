@@ -1,4 +1,5 @@
 ---
+
 title: "t1disasm(1)"
 name: "t1disasm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-t1disasm/"
 description: "t1disasm – disassemble PostScript Type 1 font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>t1disasm</code> [<i>input</i> [<i>output</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>t1disasm</code> disassembles Adobe Type 1 font programs in either PFA (hexadecimal) or PFB (binary) formats into human-readable form. If the file <i>output</i> is not specified output goes to the standard output. If the file <i>input</i> is not specified input comes from the standard input. </p>
 <p> <code>t1disasm</code> performs eexec and charstring decryption as specified in the &#8220;black book&#8221;, <i>Adobe Type 1 Font Format.</i> Additionally, the charstring binary tokens are expanded into human-readable text form, using the names given in the black book and later documents describing Type 2 opcodes.</p>
 <h2>EXAMPLES</h2>

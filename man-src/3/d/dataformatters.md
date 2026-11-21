@@ -1,4 +1,5 @@
 ---
+
 title: "dataformatters(3)"
 name: "dataformatters"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dataformatters/"
 description: "ql/utilities/dataformatters.hpp – output manipulators"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/utilities/null.hpp&gt;<br />
  #include &lt;ostream&gt; </p>
 <h3>Functions</h3>

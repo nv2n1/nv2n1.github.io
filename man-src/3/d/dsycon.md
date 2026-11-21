@@ -1,4 +1,5 @@
 ---
+
 title: "dsycon(3)"
 name: "dsycon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsycon/"
 description: "dsycon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsycon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>DSYCON</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mrf(1)"
 name: "mrf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrf/"
 description: "MRF – monochrome recursive format (compressed bitmaps)"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> MRF is a compressed format for bilevel (1-bit mono) images. It achieves better compression for some such images than either GIF or PNG. (It&#8217;s also very easy to implement (about the same difficulty as RLE, I&#8217;d say) and an MRF reader needs no tables/buffers, which may make it useful for tiny machines). </p>
 <p> In case the above hasn&#8217;t made it sufficiently clear, I&#8217;ll make this next point explicitly: <i>MRF cannot represent color at all.</i> Nor can it represent grayscale. It&#8217;s a specifically mono format. (If you want to compress a color or grayscale image, my advice is to use JPEG2000). </p>

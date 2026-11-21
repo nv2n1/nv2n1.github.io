@@ -1,4 +1,5 @@
 ---
+
 title: "su(1)"
 name: "su"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-su/"
 description: "su – run a command with substitute user and group ID"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>su</code> [options] [<code>&#8211;</code>] [<i>user</i> [<i>argument</i>&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>su</code> allows commands to be run with a substitute user and group ID. </p>
 <p> When called with no <i>user</i> specified, <code>su</code> defaults to running an interactive shell as <i>root</i>. When <i>user</i> is specified, additional <i>argument</i>s can be supplied, in which case they are passed to the shell. </p>
 <p> For backward compatibility, <code>su</code> defaults to not change the current directory and to only set the environment variables <code>HOME</code> and <code>SHELL</code> (plus <code>USER</code> and <code>LOGNAME</code> if the target <i>user</i> is not root). It is recommended to always use the <code>&#8211;login</code> option (instead of its shortcut <code>&#8211;</code>) to avoid side effects caused by mixing environments. </p>

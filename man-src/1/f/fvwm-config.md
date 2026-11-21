@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-config(1)"
 name: "fvwm-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fvwm-config/"
 description: "fvwm-config – query an existing fvwm installation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fvwm-config</code> [<i>&#8211;help</i>] [<i>&#8211;version</i>] [<i>&#8211;info</i>] [<i>&#8211;prefix</i>] [<i>&#8211;exec-prefix</i>] [<i>&#8211;bindir</i>] [<i>&#8211;datadir</i>] [<i>&#8211;libexecdir</i>] [<i>&#8211;sysconfdir</i>] [<i>&#8211;mandir</i>] [<i>&#8211;localedir</i>] [<i>&#8211;fvwm-moduledir</i>] [<i>&#8211;fvwm-datadir</i>] [<i>&#8211;fvwm-perllibdir</i>] [<i>&#8211;default-imagepath</i>] [<i>&#8211;default-userdir</i>] [<i>&#8211;fvwm-exe</i>] [<i>&#8211;supports</i>] [<i>&#8211;supports-&lt;feature&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fvwm-config</code> is a shell script that provides an information about the fvwm version, installation directories, built-in paths and supported features.</p>
 <h2>OPTIONS</h2>
 <p> <code>fvwm-config</code> prints to the standard output in all options. Both short and long GNU-like option names may be used.</p>

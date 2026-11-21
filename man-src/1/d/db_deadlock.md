@@ -1,4 +1,5 @@
 ---
+
 title: "db_deadlock(1)"
 name: "db_deadlock"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-db_deadlock/"
 description: "db5.3_deadlock – Detect and abort deadlocks"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>db5.3_deadlock</code> [-Vv] [-a e | m | n | o | W | w | y] [-h home] [-L file] [-t sec.usec]</p>
-<h2>DESCRIPTION</h2>
 <p> The db5.3_deadlock utility traverses the database environment lock region, and aborts a lock request each time it detects a deadlock or a lock request that has timed out. By default, in the case of a deadlock, a random lock request is chosen to be aborted. </p>
 <p> This utility should be run as a background daemon, or the underlying Berkeley DB deadlock detection interfaces should be called in some other way, whenever there are multiple threads or processes accessing a database and at least one of them is modifying it.</p>
 <h2>OPTIONS</h2>

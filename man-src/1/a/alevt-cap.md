@@ -1,4 +1,5 @@
 ---
+
 title: "alevt-cap(1)"
 name: "alevt-cap"
 section: "1"
@@ -9,9 +10,7 @@ description: "alevt-cap – simple capture of teletext pages"
 
 <h2>NAME</h2>
 <p> alevt-cap &#8211; simple capture of teletext pages </p>
-<h2>SYNOPSIS</h2>
 <p> <code>alevt-cap</code> [<i>options</i>] <i>ppp</i>[<i>.ss</i>] <i>&#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>alevt-cap</code> is a simple program to capture teletext pages and write them to disk. You just give it a list of pages to fetch and it will save them. Nothing fancy like time-outs, page ranges, or channel name detection is supported. Though, it supports different file formats &#8211; at the moment ascii, ansi (ascii with color escape sequences), html, png, and ppm. </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_receive_window_adjust(3)"
 name: "libssh2_channel_receive_window_adjust"
 section: "3"
@@ -9,12 +10,10 @@ description: "libssh2_channel_receive_window_adjust – adjust the channel windo
 
 <h2>NAME</h2>
 <p> libssh2_channel_receive_window_adjust &#8211; adjust the channel window</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> unsigned long libssh2_channel_receive_window_adjust(LIBSSH2_CHANNEL * channel,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unsigned long adjustment,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unsigned char force); </p>
-<h2>DESCRIPTION</h2>
 <p> This function is deprecated in 1.1. Use <i><a href="/docs/linux/man/3-libssh2_channel_receive_window_adjust2/">libssh2_channel_receive_window_adjust2</a>(3)</i>! </p>
 <p> Adjust the receive window for a channel by adjustment bytes. If the amount to be adjusted is less than LIBSSH2_CHANNEL_MINADJUST and force is 0 the adjustment amount will be queued for a later packet.</p>
 <h2>RETURN VALUE</h2>

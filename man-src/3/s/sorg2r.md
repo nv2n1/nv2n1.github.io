@@ -1,4 +1,5 @@
 ---
+
 title: "sorg2r(3)"
 name: "sorg2r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sorg2r/"
 description: "sorg2r.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sorg2r</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>SORG2R</code> generates all or part of the orthogonal matrix Q from a QR factorization determined by sgeqrf (unblocked algorithm).</p>

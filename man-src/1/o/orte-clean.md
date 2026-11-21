@@ -1,4 +1,5 @@
 ---
+
 title: "orte-clean(1)"
 name: "orte-clean"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-orte-clean/"
 description: "orte-clean – Cleans up any stale processes and files leftover from Open MPI jobs."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>orte-clean</code> &#8211; Cleans up any stale processes and files leftover from Open MPI jobs. </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 orte - clean[--verbose]
     mpirun-- pernode[--host | --hostfile file] orte -
@@ -17,7 +16,6 @@ orte - clean[--verbose]
 </code></pre>
 <h2>OPTIONS</h2>
 <p> [-v | &#8211;verbose] This argument will run the command in verbose mode and print out the universes that are getting cleaned up as well as processes that are being killed. </p>
-<h2>DESCRIPTION</h2>
 <p> <i>orte-clean</i> attempts to clean up any processes and files left over from Open MPI jobs that were run in the past as well as any currently running jobs. This includes OMPI infrastructure and helper commands, any processes that were spawned as part of the job, and any temporary files. orte-clean will only act upon processes and files that belong to the user running the orte-clean command. If run as root, it will kill off processes belonging to any users. </p>
 <p> When run from the command line, orte-clean will attempt to clean up the local node it is run from. When launched via mpirun, it will clean up the nodes selected by mpirun. </p>
 <h2>EXAMPLES</h2>

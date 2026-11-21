@@ -1,4 +1,5 @@
 ---
+
 title: "ffs(3)"
 name: "ffs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffs/"
 description: "ffs, ffsl, ffsll – find first bit set in a word"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;strings.h&gt;
 int ffs(int i);
@@ -38,7 +38,6 @@ int ffsll(long long i);
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>ffs</code>() function returns the position of the first (least significant) bit set in the word <i>i</i>. The least significant bit is position 1 and the most significant position is, for example, 32 or 64. The functions <code>ffsll</code>() and <code>ffsl</code>() do the same but take arguments of possibly different size.</p>
 <h2>RETURN VALUE</h2>
 <p> These functions return the position of the first bit set, or 0 if no bits are set in <i>i</i>.</p>

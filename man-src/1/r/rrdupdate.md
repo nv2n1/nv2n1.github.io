@@ -1,4 +1,5 @@
 ---
+
 title: "rrdupdate(1)"
 name: "rrdupdate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdupdate/"
 description: "rrdupdate – Store a new set of values into the RRD"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> {<code>update</code> | <code>updatev</code>} <i>filename</i> [<code>&#8211;template</code>|<code>-t</code>&nbsp;<wbr><i>ds-name</i>[<code>:</code><i>ds-name</i>]&#8230;] [<code>&#8211;daemon</code>|<code>-d</code>&nbsp;<wbr><i>address</i>] [<code>&#8212;</code>] <code>N</code>|<i>timestamp</i><code>:</code><i>value</i>[<code>:</code><i>value</i>&#8230;] <i>at-timestamp</i><code>@</code><i>value</i>[<code>:</code><i>value</i>&#8230;] [<i>timestamp</i><code>:</code><i>value</i>[<code>:</code><i>value</i>&#8230;]&nbsp;<wbr>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>update</code> function feeds new data values into an <font SIZE="-1"><code>RRD</code></font>. The data is time aligned (interpolated) according to the properties of the <font SIZE="-1"><code>RRD</code></font> to which the data is written.</p>
 <dl>
 <dt><code>updatev</code></dt>

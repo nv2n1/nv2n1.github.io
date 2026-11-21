@@ -1,4 +1,5 @@
 ---
+
 title: "db_upgrade(1)"
 name: "db_upgrade"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-db_upgrade/"
 description: "db5.3_upgrade – Upgrade the Berkeley DB version to the current release version."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>db5.3_upgrade</code> [-NsVv] [-h home] [-P password] file &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The db5.3_upgrade utility upgrades the Berkeley DB version of one or more files and the databases they contain to the current release version.</p>
 <h2>OPTIONS</h2>
 <dl>

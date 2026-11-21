@@ -1,4 +1,5 @@
 ---
+
 title: "globus_error_print_friendly_t(3)"
 name: "globus_error_print_friendly_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_error_generic.h –"
 ---
 
 <p> Globus Error API.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_object.h&#8217;<br />
  #include &#8216;globus_module.h&#8217;<br />
  #include &lt;stdarg.h&gt; </p>

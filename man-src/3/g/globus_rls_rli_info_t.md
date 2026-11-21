@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_rli_info_t(3)"
 name: "globus_rls_rli_info_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_rls_rli_info_t –"
 ---
 
 <p> Information about RLI server, returned by <code>globus_rls_client_lrc_rli_info()</code> and <code>globus_rls_client_lrc_rli_list()</code>.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> char <code>url</code> [256] </p>
 <p> int <code>updateinterval</code> </p>

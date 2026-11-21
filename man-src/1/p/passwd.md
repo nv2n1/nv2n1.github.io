@@ -1,4 +1,5 @@
 ---
+
 title: "passwd(1)"
 name: "passwd"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-passwd/"
 description: "passwd – change user password"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>passwd</code> [<i>options</i>] [<i>LOGIN</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>passwd</code> command changes passwords for user accounts. A normal user may only change the password for their own account, while the superuser may change the password for any account. <code>passwd</code> also changes the account or associated password validity period.</dd>
 <h3>Password Changes</h3>
 <p> The user is first prompted for their old password, if one is present. This password is then encrypted and compared against the stored password. The user has only one chance to enter the correct password. The superuser is permitted to bypass this step so that forgotten passwords may be changed. </p>

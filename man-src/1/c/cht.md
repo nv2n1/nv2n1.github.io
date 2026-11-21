@@ -1,4 +1,5 @@
 ---
+
 title: "cht(1)"
 name: "cht"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cht/"
 description: "cht – chemtool drawings analyzer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cht</code> [<code>options</code>] <i>filename.cht</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cht</code> is a commandline tool to derive the sum formula and molecular mass of the molecule depicted in a <code>chemtool </code> drawing file. It is also available from within <code>chemtool</code> to calculate these data for the current structure or a marked fragment of it. </p>
 <p> <code>cht</code> currently recognizes the element symbols C, H, O, N, P, S, Si, B, Br, Cl, F, I, Al, As, Ba, Be, Bi, Ca, Cd, Co, Cr, Cs, Cu, Fe, Ga, Ge, In, K, Li, Mg, Mn, Na, Ni, Pb, Rb, Sb, Sc, Se, Sn, Sr, Te, Ti, Tl, V, Zn (that is, all main group elements except the noble gases, and the first row of transition metals) and the abbreviations Ac, Ade, Bn, Bu, iBu, tBu, Bz, BOC, Cyt, CE, DBAM, DMAM, DMTr, Et, Gua, Me, Ms, MOC, MOM, MMTr, Ph, Pr, iPr, Tf, Thy, Tol, Tr, Ts, TBDMS, TBDPS, TMS, TMTr, Ura, Z. </p>
 <p> It can handle two levels of parentheses; e.g. P[OCH(CH_3)_2]_3. </p>

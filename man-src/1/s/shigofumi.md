@@ -1,4 +1,5 @@
 ---
+
 title: "shigofumi(1)"
 name: "shigofumi"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-shigofumi/"
 description: "shigofumi – ISDS client"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>shigofumi</code> [<code>-c</code>&nbsp;<wbr><i>FILE</i>]</dt>
 <dt> <code>shigofumi</code> [<code>-c</code>&nbsp;<wbr><i>FILE</i>] <code>-e</code>&nbsp;<wbr><i>COMMANDS</i></dt>
 <dt> <code>shigofumi</code> <code>-V</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Shigofumi is an ISDS client based on libisds library. The client can access ISDS, processes local message and delivery details, and submit file to authorized conversion. </dd>
 <p> Shigofumi is command line oriented program. Once you start it, use <code>help</code> to get list of embedded commands. Use <code>help </code><i>COMMAND</i> to get details about selected <i>COMMAND</i>. Be ware that command listing changes contextually. User can use casual readline shortcuts for line editing (like tab completing). </p>
 <p> While transmitting data over Internet, a progress-bar is updated. User can cancel current network operation by emitting SIGINT signal (Ctrl+C usually).</p>

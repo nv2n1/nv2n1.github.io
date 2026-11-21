@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-addr2line(1)"
 name: "arm-gp2x-linux-addr2line"
 section: "1"
@@ -9,14 +10,12 @@ description: "addr2line – convert addresses into file names and line numbers."
 
 <h2>NAME</h2>
 <p> addr2line &#8211; convert addresses into file names and line numbers.</p>
-<h2>SYNOPSIS</h2>
 <p> addr2line [<code>-b</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>filename</i>|<code>&#8211;exe=</code><i>filename</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;functions</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;basename</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[addr addr &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>addr2line</code> translates program addresses into file names and line numbers. Given an address and an executable, it uses the debugging information in the executable to figure out which file name and line number are associated with a given address. </p>
 <p> The executable to use is specified with the <code>-e</code> option. The default is the file <i>a.out</i>. </p>
 <p> <code>addr2line</code> has two modes of operation. </p>

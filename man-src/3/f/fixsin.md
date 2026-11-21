@@ -1,4 +1,5 @@
 ---
+
 title: "fixsin(3)"
 name: "fixsin"
 section: "3"
@@ -9,10 +10,8 @@ description: "fixsin – Fixed point sine of binary angles. Allegro game program
 
 <h2>NAME</h2>
 <p> fixsin &#8211; Fixed point sine of binary angles. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixsin(fixed x);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This function finds the sine of a value using a lookup table. The input value must be a fixed point binary angle. Example: </p>
 <pre><code>
 fixed angle;

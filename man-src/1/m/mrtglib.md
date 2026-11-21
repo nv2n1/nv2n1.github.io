@@ -1,4 +1,5 @@
 ---
+
 title: "mrtglib(1)"
 name: "mrtglib"
 section: "1"
@@ -6,14 +7,9 @@ letter: "m"
 url: "/docs/linux/man/1-mrtglib/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+MRTG_lib.pm - Library for MRTG and support scripts 
 
- MRTG_lib.pm - Library for MRTG and support scripts 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 use MRTG_lib;
 my($configfile, @target_names, % globalcfg, % targetcfg);
 readcfg($configfile, \@target_names, \% globalcfg, \% targetcfg);
@@ -21,9 +17,7 @@ my(@parsed_targets);
 cfgcheck(\@target_names, \% globalcfg, \% targetcfg, \@parsed_targets);
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- MRTG_lib is part of <font SIZE="-1">MRTG</font>, the Multi Router Traffic Grapher. It was separated from <font SIZE="-1">MRTG</font> to allow other programs to easily use the same config files. The main part of MRTG_lib is the config file parser but some other funcions are there too.
+MRTG_lib is part of <font SIZE="-1">MRTG</font>, the Multi Router Traffic Grapher. It was separated from <font SIZE="-1">MRTG</font> to allow other programs to easily use the same config files. The main part of MRTG_lib is the config file parser but some other funcions are there too.
 <dl>
 <dt>$MRTG_lib::OS
 </dt><dd> Type of <font SIZE="-1">OS:</font> <font SIZE="-1">WIN</font>, <font SIZE="-1">UNIX</font>, <font SIZE="-1">VMS</font>

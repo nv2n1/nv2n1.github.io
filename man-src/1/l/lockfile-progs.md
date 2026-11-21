@@ -1,4 +1,5 @@
 ---
+
 title: "lockfile-progs(1)"
 name: "lockfile-progs"
 section: "1"
@@ -9,11 +10,9 @@ description: "lockfile-progs – command-line programs to safely lock and unlock
 
 <h2>NAME</h2>
 <p> lockfile-progs &#8211; command-line programs to safely lock and unlock files and mailboxes (via liblockfile).</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 mail - lock[--use - pid][--retry retry - count] mail - unlock mail - touchlock[--oneshot] lockfile - create[--use - pid][--retry retry - count][--lock - name] filename lockfile - remove[--lock - name] filename lockfile - touch[--oneshot][--lock - name] filename lockfile - check[--use - pid][--lock - name] filename
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Lockfile-progs provides a set a programs that can be used to lock and unlock mailboxes and files safely (via liblockfile): </p>
 <pre>
 <dl><dt></dt><dd><code>mail-lock</code> - lock the current user's mailbox

@@ -1,4 +1,5 @@
 ---
+
 title: "puttygen(1)"
 name: "puttygen"
 section: "1"
@@ -9,7 +10,6 @@ description: "puttygen – public-key generator for the PuTTY tools"
 
 <h2>NAME</h2>
 <p> <code>puttygen</code> &#8211; public-key generator for the PuTTY tools</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 puttygen &amp;nbsp;
 (&amp;nbsp; keyfile &amp; nbsp; | &amp;nbsp; - t &amp; nbsp; keytype &amp; nbsp;[&amp;nbsp; - b &amp; nbsp; bits &amp; nbsp;] &amp; nbsp;) &amp; nbsp;
@@ -43,7 +43,6 @@ puttygen &amp;nbsp;
 &amp;nbsp;
 [&amp;nbsp; - o &amp; nbsp; output - file &amp; nbsp;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>puttygen</code> is a tool to generate and manipulate SSH public and private key pairs. It is part of the PuTTY suite, although it can also interoperate with the private key formats used by some other SSH clients. </p>
 <p> When you run <code>puttygen</code>, it does three things. Firstly, it either loads an existing key file (if you specified <i>keyfile</i>), or generates a new key (if you specified <i>keytype</i>). Then, it optionally makes modifications to the key (changing the comment and/or the passphrase); finally, it outputs the key, or some information about the key, to a file. </p>
 <p> All three of these phases are controlled by the options described in the following section.</p>

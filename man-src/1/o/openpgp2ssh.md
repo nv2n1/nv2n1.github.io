@@ -1,4 +1,5 @@
 ---
+
 title: "openpgp2ssh(1)"
 name: "openpgp2ssh"
 section: "1"
@@ -9,13 +10,11 @@ description: "openpgp2ssh – translate OpenPGP keys to SSH keys"
 
 <h2>NAME</h2>
 <p> openpgp2ssh &#8211; translate OpenPGP keys to SSH keys</p>
-<h2>SYNOPSIS</h2>
 <p> <code>openpgp2ssh &lt; mykey.gpg </code> </p>
 <p><code>gpg &#8211;export $KEYID | openpgp2ssh $KEYID</code> </p>
 <p><code>gpg &#8211;export $KEYID | openpgp2pem $KEYID</code> </p>
 <p><code>gpg &#8211;export $KEYID | openpgp2spki $KEYID</code> </p>
 <p><code>gpg &#8211;export-secret-key $KEYID | openpgp2ssh $KEYID</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>openpgp2ssh < mykey.gpg </code> takes an OpenPGP-formatted primary key and associated subkeys on standard input, and spits out the requested equivalent SSH-style (or PEM-encoded) key on standard output. </p>
 <p> If the data on standard input contains no subkeys, you can invoke <code>openpgp2ssh < mykey.gpg </code> without arguments. If the data on standard input contains multiple keys (e.g. a primary key and associated subkeys), you must specify a specific OpenPGP key identifier as the first argument to indicate which key to export. The key ID is normally the 40 hex digit OpenPGP fingerprint of the key or subkey desired, but <code>openpgp2ssh < mykey.gpg </code> will accept as few as the last 8 digits of the fingerprint as a key ID. </p>
 <p> If the input contains an OpenPGP RSA public key, it will be converted to the OpenSSH-style single-line keystring, prefixed with the key type (`ssh-rsa&#8217;). This format is suitable (with minor alterations) for insertion into known_hosts files and authorized_keys files. If invoked as `openpgp2pem&#8217;, a PEM-encoded public key will be emitted instead. </p>

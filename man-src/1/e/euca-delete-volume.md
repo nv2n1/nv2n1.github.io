@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-volume(1)"
 name: "euca-delete-volume"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-delete-volume – Delete a volume"
 
 <h2>NAME</h2>
 <p> euca-delete-volume &#8211; Delete a volume</p>
-<h2>SYNOPSIS</h2>
 <p> euca-delete-volume [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] VOLUME</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a volume</p>
 <h3>positional arguments:</h3>
 <dl>

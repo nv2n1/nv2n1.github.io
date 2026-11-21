@@ -1,4 +1,5 @@
 ---
+
 title: "dc_client(1)"
 name: "dc_client"
 section: "1"
@@ -9,9 +10,7 @@ description: "dc_client – Distributed session cache client proxy"
 
 <h2>NAME</h2>
 <p> dc_client &#8211; Distributed session cache client proxy</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dc_client</code> -server &lt;address&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dc_client</code> runs a client proxy to provide access to a remote cache server (typically over TCP/IPv4) by providing a local service (typically over unix domain sockets). It starts listening on a configurable network address for connections and establishes a persistent connection to an instance of <code>dc_server</code> for proxying cache operations to. Incoming connections are expected to communicate using the <i><a href="/docs/linux/man/8-distcache/">distcache</a></i>(8) protocol, and would typically be applications using one of the distcache APIs in <i>libdistcache</i> to encapsulate these communications. </p>
 <p> The common use of <code>dc_client</code> is to run as a local agent on each host machine that requires use of the distributed cache, as the listening address should probably use unix domain sockets which are better suited to frequent (and temporary) connections being used for individual cache operations. Likewise, the connection <code>dc_client</code> makes to the cache server (<code>dc_server</code>) for proxying cache operations is typically over a genuine network to remote machine, using TCP/IPv4.</p>
 <h2>OPTIONS</h2>

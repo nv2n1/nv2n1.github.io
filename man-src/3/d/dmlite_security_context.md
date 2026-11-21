@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_security_context(3)"
 name: "dmlite_security_context"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_security_context –"
 ---
 
 <p> Security context.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;dmlite.h&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>dmlite_credentials</code> * <code>credentials</code> </p>

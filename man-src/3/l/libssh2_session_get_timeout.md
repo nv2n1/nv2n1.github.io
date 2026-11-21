@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_get_timeout(3)"
 name: "libssh2_session_get_timeout"
 section: "3"
@@ -9,12 +10,10 @@ description: "libssh2_session_get_timeout – get the timeout for blocking funct
 
 <h2>NAME</h2>
 <p> libssh2_session_get_timeout &#8211; get the timeout for blocking functions</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <pre><code>
 long libssh2_session_get_timeout(LIBSSH2_SESSION *session);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Returns the <code>timeout</code> (in milliseconds) for how long a blocking the libssh2 function calls may wait until they consider the situation an error and return LIBSSH2_ERROR_TIMEOUT. </p>
 <p> By default libssh2 has no timeout (zero) for blocking functions.</p>
 <h2>RETURN VALUE</h2>

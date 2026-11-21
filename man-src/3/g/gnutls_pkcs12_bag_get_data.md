@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_bag_get_data(3)"
 name: "gnutls_pkcs12_bag_get_data"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs12_bag_get_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_bag_get_data &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_bag_get_data(gnutls_pkcs12_bag_t </code><i>bag</i><code>, int </code><i>indx</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pkcs12_bag_get_data – API function"
 <dd> The element of the bag to get the data from</dd>
 <dt>gnutls_datum_t * data</dt>
 <dd> where the bag&#8217;s data will be. Should be treated as constant.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the bag&#8217;s data. The data is a constant that is stored into the bag. Should not be accessed after the bag is deleted.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "funref(3)"
 name: "funref"
 section: "3"
@@ -9,9 +10,7 @@ description: "FunRef: the Funtools Reference Handle"
 
 <h2>NAME</h2>
 <p> <code>FunRef: the Funtools Reference Handle</code></p>
-<h2>SYNOPSIS</h2>
 <p> A description of how to use a Funtools reference handle to connect a Funtools input file to an output file.</p>
-<h2>DESCRIPTION</h2>
 <p> The Funtools reference handle connects a Funtools input file to a Funtools output file so that parameters (or even whole extensions) can be copied from the one to the other. To make the connection, the Funtools handle of the input file is passed to the final argument of the <i>FunOpen()</i> call for the output file: </p>
 <pre><code>
 if (!(ifun = FunOpen(argv[1], "r", NULL)))

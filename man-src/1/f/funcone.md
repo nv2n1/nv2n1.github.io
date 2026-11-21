@@ -1,4 +1,5 @@
 ---
+
 title: "funcone(1)"
 name: "funcone"
 section: "1"
@@ -9,13 +10,11 @@ description: "funcone – cone search of a binary table containing RA, Dec colum
 
 <h2>NAME</h2>
 <p> <code>funcone &#8211; cone search of a binary table containing RA, Dec columns</code></p>
-<h2>SYNOPSIS</h2>
 <p> funcone &lt;switches&gt; &lt;iname&gt; &lt;oname&gt; &lt;ra[hdr]&gt; &lt;dec[hdr]&gt; &lt;radius[dr&#8217;&quot;]&gt; [columns]</p>
 <h2>OPTIONS</h2>
 <pre><code>
 - d deccol:[hdr] #Dec column name, units(def:DEC:d) - j #join columns from list file - J #join columns from list file, output all rows - l listfile #read centers and radii from a list - L listfile #read centers and radii from a list, output list rows - n #don't use cone limits as a filter - r racol:[hdr] #RA column name, units(def:RA:h) - x #append RA_CEN, DEC_CEN, RAD_CEN, CONE_KEY cols - X #append RA_CEN, DEC_CEN, RAD_CEN, CONE_KEY cols, output all rows
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Funcone performs a cone search on the <font SIZE="-1">RA</font> and Dec columns of a <font SIZE="-1">FITS</font> binary table. The distance from the center <font SIZE="-1">RA</font>, Dec position to the <font SIZE="-1">RA</font>, Dec in each row in the table is calculated. Rows whose distance is less than the specified radius are output. </p>
 <p> The first argument to the program specifies the <font SIZE="-1">FITS</font> file, raw event file, or raw array file. If &#8220;stdin&#8221; is specified, data are read from the standard input. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions, and filters. The second argument is the output <font SIZE="-1">FITS</font> file. If &#8220;stdout&#8221; is specified, the <font SIZE="-1">FITS</font> binary table is written to the standard output. </p>
 <p> The third and fourth required arguments are the <font SIZE="-1">RA</font> and Dec center position. By default, <font SIZE="-1">RA</font> is specified in hours while Dec is specified in degrees. You can change the units of either of these by appending the character &#8220;d&#8221; (degrees), &#8220;h&#8221; (hours) or &#8220;r&#8221; (radians). Sexagesimal notation is supported, with colons or spaces separating hms and dms. (When using spaces, please ensure that the entire string is quoted.) </p>

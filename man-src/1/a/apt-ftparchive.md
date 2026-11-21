@@ -1,4 +1,5 @@
 ---
+
 title: "apt-ftparchive(1)"
 name: "apt-ftparchive"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-apt-ftparchive/"
 description: "apt-ftparchive – Utility to generate index files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>apt-ftparchive</code> [<code>-dsq</code>] [<code>&#8211;md5</code>] [<code>&#8211;delink</code>] [<code>&#8211;readonly</code>] [<code>&#8211;contents</code>] [<code>&#8211;arch&nbsp;</code><i>architecture</i>] [<code>-o=</code><i>config_string</i>] [<code>-c=</code><i>config_file</i>] {packages&nbsp;<i>path</i>&#8230;&nbsp;[<i>override-file</i>&nbsp;[<i>pathprefix</i>]] | sources&nbsp;<i>path</i>&#8230;&nbsp;[<i>override-file</i>&nbsp;[<i>pathprefix</i>]] | contents&nbsp;<i>path</i> | release&nbsp;<i>path</i> | generate&nbsp;<i>config_file</i>&nbsp;<i>section</i>&#8230; | clean&nbsp;<i>config_file</i> | {-v | &#8211;version} | {-h | &#8211;help}}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>apt-ftparchive</code></p>
 <dd>is the command line tool that generates the index files that APT uses to access a distribution source. The index files should be generated on the origin site based on the content of that site. </dd>
 <p> <code>apt-ftparchive</code> is a superset of the <code><a href="/docs/linux/man/1-dpkg-scanpackages/">dpkg-scanpackages</a></code>(1) program, incorporating its entire functionality via the packages command. It also contains a contents file generator, contents, and an elaborate means to &#8216;script&#8217; the generation process for a complete archive. </p>

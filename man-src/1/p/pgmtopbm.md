@@ -1,4 +1,5 @@
 ---
+
 title: "pgmtopbm(1)"
 name: "pgmtopbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pgmtopbm/"
 description: "pgmtopbm – convert a portable graymap into a portable bitmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmtopbm</code> [<code>-floyd</code>|<code>-fs</code>|<code>-threshold</code> |<code>-hilbert</code> |<code>-dither8</code>|<code>-d8</code>|<code>-cluster3</code> |<code>-c3</code>|<code>-cluster4</code>|<code>-c4</code> |<code>-cluster8</code>|<code>-c8</code>] [<code>-value</code> <i>val</i>] [<code>-clump</code> <i>size</i>] [<i>pgmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable graymap as input. Produces a portable bitmap as output. </p>
 <p> Note that there is no pbmtopgm converter. Any program that uses the Netpbm libraries to read PGM files, including virtually all programs in the Netpbm package, will read a PBM file automatically as if it were a PGM file. </p>
 <p> If you are using a less intelligent program that expects PGM input, use <code>pnmdepth</code> to convert the PBM file to PGM. As long as the depth is greater than 1, <code>pnmdepth</code> will generate PGM. This less intelligent program quite probably is also not intelligent enough to deal with general maxvals, so you should specify a depth of 255. </p>

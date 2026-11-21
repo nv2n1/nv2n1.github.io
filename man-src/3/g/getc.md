@@ -1,4 +1,5 @@
 ---
+
 title: "getc(3)"
 name: "getc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getc/"
 description: "fgetc, fgets, getc, getchar, ungetc – input of characters and strings"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 int fgetc(FILE *stream);
@@ -16,7 +16,6 @@ int getc(FILE *stream);
 int getchar(void);
 int ungetc(int c, FILE *stream);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>fgetc</code>() reads the next character from <i>stream</i> and returns it as an <i>unsigned char</i> cast to an <i>int</i>, or <code>EOF</code> on end of file or error. </p>
 <p> <code>getc</code>() is equivalent to <code>fgetc</code>() except that it may be implemented as a macro which evaluates <i>stream</i> more than once. </p>
 <p> <code>getchar</code>() is equivalent to <code>getc(</code><i>stdin</i><code>)</code><i></i>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lsipc(1)"
 name: "lsipc"
 section: "1"
@@ -6,9 +7,8 @@ letter: "l"
 url: "/docs/linux/man/1-lsipc/"
 description: "lsipc – show information on IPC facilities currently employed in the system"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>lsipc</code> [options]  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>lsipc</code> shows information on the System V inter-process communication facilities for which the calling process has read access.  </p>
 <h2>OPTIONS</h2>
 <p> <code>-i</code>, <code>--id</code> <i>id</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kernelshark(1)"
 name: "kernelshark"
 section: "1"
@@ -8,9 +9,7 @@ description: "kernelshark – graphical reader for"
 ---
 
 <p><a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) output</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kernelshark</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> KernelShark is a front end reader of <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) output. It reads a <a href="/docs/linux/man/5-trace-cmd-dat/">trace-cmd.dat</a>(5) formatted file and produces a graph and list view of the data.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code></p>

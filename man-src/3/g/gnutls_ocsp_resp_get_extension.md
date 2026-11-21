@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_get_extension(3)"
 name: "gnutls_ocsp_resp_get_extension"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ocsp_resp_get_extension – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_resp_get_extension &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_get_extension(gnutls_ocsp_resp_t </code><i>resp</i><code>, unsigned </code><i>indx</i><code>, gnutls_datum_t * </code><i>oid</i><code>, unsigned int * </code><i>critical</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_ocsp_resp_get_extension – API function"
 <dd> output variable with critical flag, may be NULL.</dd>
 <dt>gnutls_datum_t * data</dt>
 <dd> will hold newly allocated buffer with extension data, may be NULL</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return all information about the requested extension in the OCSP response. The information returned is the OID, the critical flag, and the data itself. The extension OID will be stored as a string. Any of <i>oid</i> , <i>critical</i> , and <i>data</i> may be NULL which means that the caller is not interested in getting that information back. </p>
 <p> The caller needs to deallocate memory by calling <code>gnutls_free()</code> on<br />
 &nbsp;<wbr><i>oid</i>&nbsp;<wbr>-&gt;data and&nbsp;<wbr>&nbsp;<wbr><i>data</i>&nbsp;<wbr>-&gt;data.</p>

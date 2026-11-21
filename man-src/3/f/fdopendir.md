@@ -1,4 +1,5 @@
 ---
+
 title: "fdopendir(3)"
 name: "fdopendir"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdopendir/"
 description: "opendir, fdopendir – open a directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;dirent.h&gt;
 #include &lt;sys/types.h&gt;
@@ -23,7 +23,6 @@ DIR *fdopendir(int fd);
 <dt>Before glibc 2.10:</dt>
 <dd> _GNU_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>opendir</code>() function opens a directory stream corresponding to the directory <i>name</i>, and returns a pointer to the directory stream. The stream is positioned at the first entry in the directory. </p>
 <p> The <code>fdopendir</code>() function is like <code>opendir</code>(), but returns a directory stream for the directory referred to by the open file descriptor <i>fd</i>. After a successful call to <code>fdopendir</code>(), <i>fd</i> is used internally by the implementation, and should not otherwise be used by the application.</p>
 <h2>RETURN VALUE</h2>

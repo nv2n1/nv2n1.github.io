@@ -1,4 +1,5 @@
 ---
+
 title: "sgetc2(3)"
 name: "sgetc2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgetc2/"
 description: "sgetc2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br />
  <i></i><code>SGETC2</code> computes the LU factorization with complete pivoting of the general n-by-n matrix.</p>

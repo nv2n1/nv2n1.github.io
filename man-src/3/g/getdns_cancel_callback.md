@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_cancel_callback(3)"
 name: "getdns_cancel_callback"
 section: "3"
@@ -11,7 +12,6 @@ description: "getdns_cancel_callback — cancel an outstanding asyn getdns reque
 <p> <code>getdns_cancel_callback</code> &#8212; cancel an outstanding asyn getdns request </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_cancel_callback</code> (getdns_context_t context,</p>
@@ -19,7 +19,6 @@ description: "getdns_cancel_callback — cancel an outstanding asyn getdns reque
 <dt>
 </dt><dd>
  getdns_transaction_t *transaction_id)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> To cancel an outstanding callback, use getdns_cancel_callback. This causes the API to call the callback with a callback_type of GETDNS_CALLBACK_CANCEL if the callback for this transaction_id has not already been called. The callback code for cancellation should clean up any memory related to the identified call, such as to deallocate the memory for the userarg. getdns_cancel_callback() may return immediately, even before the callback finishes its work and returns. </p>
 <dl>
 <dt> <i>context</i></dt>

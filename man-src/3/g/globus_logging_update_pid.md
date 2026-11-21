@@ -1,4 +1,5 @@
 ---
+
 title: "globus_logging_update_pid(3)"
 name: "globus_logging_update_pid"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_logging.h –"
 ---
 
 <p> Debug Logging.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_time.h&#8217; </p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-split(1)"
 name: "trace-cmd-split"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-split/"
 description: "trace-cmd-split – split a trace.dat file into smaller files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd split</code> [<i>OPTIONS</i>] [<i>start-time</i> [<i>end-time</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) split is used to break up a trace.dat into small files. The <i>start-time</i> specifies where the new file will start at. Using <i><a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1)</i> and copying the time stamp given at a particular event, can be used as input for either <i>start-time</i> or <i>end-time</i>. The split will stop creating files when it reaches an event after <i>end-time</i>. If only the end-time is needed, use 0.0 as the start-time. </p>
 <p> If start-time is left out, then the split will start at the beginning of the file. If end-time is left out, then split will continue to the end unless it meets one of the requirements specified by the options.</p>
 <h2>OPTIONS</h2>

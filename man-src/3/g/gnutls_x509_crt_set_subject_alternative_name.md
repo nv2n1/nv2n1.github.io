@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_subject_alternative_name(3)"
 name: "gnutls_x509_crt_set_subject_alternative_name"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_subject_alternative_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_subject_alternative_name &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_subject_alternative_name(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const char * </code><i>data_string</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crt_set_subject_alternative_name – API function"
 <dd> is one of the gnutls_x509_subject_alt_name_t enumerations</dd>
 <dt>const char * data_string</dt>
 <dd> The data to be set, a (0) terminated string</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the subject alternative name certificate extension. This function assumes that data can be expressed as a null terminated string. </p>
 <p> The name of the function is unfortunate since it is incosistent with <code>gnutls_x509_crt_get_subject_alt_name()</code>.</p>
 <h2>RETURNS</h2>

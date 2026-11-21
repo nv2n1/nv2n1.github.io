@@ -1,4 +1,5 @@
 ---
+
 title: "fdebuginfo(1)"
 name: "fdebuginfo"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fdebuginfo/"
 description: "fdebuginfo – display the debug-info paths for a process and its shared modules"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fdebuginfo</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fdebuginfo</code></p>
 <dd>lists the modules of a process and the location of their Debugging Information, if present. </dd>
 <p> The output is in the form: &quot;Module Name&quot; &quot;Debuginfo Path&quot;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "prename(1)"
 name: "prename"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-prename/"
 description: "rename – renames multiple files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rename</code> [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-f</code>&nbsp;<wbr>] <i>perlexpr</i> [&nbsp;<wbr><i>files</i>&nbsp;<wbr>]</p>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;rename&quot;</tt> renames the filenames supplied according to the rule specified as the first argument. The <i>perlexpr</i> argument is a Perl expression which is expected to modify the <tt>$_</tt> string in Perl for at least some of the filenames specified. If a given filename is not modified by the expression, it will not be renamed. If no filenames are given on the command line, filenames will be read via standard input. </p>
 <p> For example, to rename all files matching <tt>&quot;*.bak&quot;</tt> to strip the extension, you might say </p>
 <pre>

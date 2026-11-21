@@ -1,4 +1,5 @@
 ---
+
 title: "ngmultidec(1)"
 name: "ngmultidec"
 section: "1"
@@ -9,9 +10,7 @@ description: "ngmultidec – make ngpice sub-circuit for coupled transmission li
 
 <h2>NAME</h2>
 <p> ngmultidec &#8211; make ngpice sub-circuit for coupled transmission lines</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ngmultidec</code> [ <i>options</i>&#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>ngmultidec</i> writes an ngspice input file to standard output which describes a sub-circuit for coupled lines using uncoupled simple lossy lines. </p>
 <p> Each generated subcircuit models a 4-conductor transmission line with the following parameters: length <i>l</i>, line capacitance <i>c</i>, line resistance <i>r</i>, line conductance <i>g</i>, inductive_coeff_of_coupling <i>k</i>, inter-line capacitance <i>cm</i>, length <i>l</i>. Derived parameters are: <i>lm</i>, <i>ctot</i>. The values of <i>l</i>, <i>c</i>, the model name, the number of conductors and the length of the line must be specified. </p>
 <p> It is important to note that the model is a simplified one &#8211; the following assumptions are made: 1. The self-inductance l, the self-capacitance ctot (note: not c), the series resistance r and the parallel capacitance g are the same for all lines, and 2. Each line is coupled only to the two lines adjacent to it, with the same coupling parameters cm and lm. The first assumption implies that edge effects have to be neglected. The utility of these assumptions is that they make the sL+R and sC+G matrices symmetric, tridiagonal and Toeplitz, with useful consequences (see the paper referenced below). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xgamma(1)"
 name: "xgamma"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xgamma/"
 description: "xgamma – Alter a monitor’s gamma correction through the X server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xgamma</code> [-display <i>display</i>] [-screen <i>screen</i>] [-quiet] [-version] [-gamma f.f | [[-rgamma f.f] [-ggamma f.f] [-bgamma f.f]]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xgamma</code> allows X users to query and alter the gamma correction of a monitor via the X video mode extension (XFree86-VidModeExtension). </p>
 <p> Note that the <code>xgamma</code> utility is obsolete and deficient, <code>xrandr</code> should be used with drivers that support the <code>XRandr</code> extension. </p>
 <p> If no value for the gamma correction is given via the <i>-gamma</i> or <i>-rgamma</i>/<i>-ggamma</i>/<i>-bgamma</i> options, <code>xgamma</code> prints the current gamma correction of the display.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fixtoi(3)"
 name: "fixtoi"
 section: "3"
@@ -9,10 +10,8 @@ description: "fixtoi – Converts a fixed point to integer with rounding. Allegr
 
 <h2>NAME</h2>
 <p> fixtoi &#8211; Converts a fixed point to integer with rounding. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int fixtoi(fixed x);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Converts fixed point to integer, rounding as required to the nearest integer. Example: </p>
 <pre><code>
 int result;

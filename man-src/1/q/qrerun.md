@@ -1,4 +1,5 @@
 ---
+
 title: "qrerun(1)"
 name: "qrerun"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qrerun/"
 description: "qrerun – rerun a pbs batch job"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> qrerun [-f] job_identifier &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>qrerun</code> command directs that the specified jobs are to be rerun if possible. </p>
 <p> To rerun a job is to terminate the session leader of the job and return the job to the queued state in the execution queue in which the job currently resides. </p>
 <p> If a job is marked as not rerunable then the rerun request will fail for that job. If the mini-server running the job is down, or the rejects the request, the <i>Rerun Job</i> batch request will return a failure unless -f is used. </p>

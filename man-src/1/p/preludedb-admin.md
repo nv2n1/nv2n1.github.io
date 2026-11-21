@@ -1,4 +1,5 @@
 ---
+
 title: "preludedb-admin(1)"
 name: "preludedb-admin"
 section: "1"
@@ -9,9 +10,7 @@ description: "preludedb-admin – tool to copy, move, delete, save or restore a 
 
 <h2>NAME</h2>
 <p> preludedb-admin &#8211; tool to copy, move, delete, save or restore a prelude database</p>
-<h2>SYNOPSIS</h2>
 <p> <code>preludedb-admin</code> <i>copy|move|delete|load|save</i> <i>arguments</i></p>
-<h2>DESCRIPTION</h2>
 <p> preludedb-admin can be used to copy, move, delete, save or restore a prelude database, partly or in whole, while preserving IDMEF data consistency. </p>
 <p> Mandatory arguments</p>
 <dl>

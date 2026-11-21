@@ -1,4 +1,5 @@
 ---
+
 title: "mate-display-properties(1)"
 name: "mate-display-properties"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mate-display-properties/"
 description: "mate-display-properties – customize MATE display behavor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mate-display-properties</code> [<i>OPTIONS&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This executable is part of the package &#8216;mate-control-center&#8217;: The MATE Control Center. </p>
 <p> The MATE display preference tool enables you to customize the screen resolution and refresh rate for your desktop.</p>
 <h2>OPTIONS</h2>

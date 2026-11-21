@@ -1,4 +1,5 @@
 ---
+
 title: "git-cpan-last-version(1)"
 name: "git-cpan-last-version"
 section: "1"
@@ -6,20 +7,13 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-last-version/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+git-cpan-last-version - Report the last imported version 
 
- git-cpan-last-version - Report the last imported version 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     % git cpan-last-version
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This command searches through the history of the <tt>&quot;cpan/master&quot;</tt> reference for the last imported version.
+This command searches through the history of the <tt>&quot;cpan/master&quot;</tt> reference for the last imported version.
 
 <h2>VERSION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-document-info(1)"
 name: "flatpak-document-info"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-document-info/"
 description: "flatpak-document-info – Show information about exported files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak document-info</code> [OPTION&#8230;] FILE</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Shows information about an exported file, such as the document id, the fuse path, the original location in the filesystem, and the per-application permissions. </dd>
 <p> FILE can either be a file in the fuse filesystem at /run/user/$UID/doc/, or a file anywhere else.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "grephistory(1)"
 name: "grephistory"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grephistory/"
 description: "grephistory – Query the INN history database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grephistory</code> [<code>-eilnqsv</code>] [<code>-f</code> <i>db</i>] [<i>message-id</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grephistory</code> queries the <font SIZE="-1">INN</font> history database for information about the specified message-ID. If no flags are given, the program prints the storage <font SIZE="-1">API</font> token of the corresponding article, or <tt>&quot;/dev/null&quot;</tt> if the article is listed in the history database but not stored on the server. If the message-ID cannot be found in the database, <code>grephistory</code> will print <tt>&quot;grephistory: not found&quot;</tt> and exit with a non-zero status. </p>
 <p> Be sure to escape any special characters in the message <font SIZE="-1">ID</font> from the shell. Single quotes are recommended for this purpose since many message-IDs contain dollar signs.</p>
 <h2>OPTIONS</h2>

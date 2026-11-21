@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_new_from_data(3)"
 name: "bson_reader_new_from_data"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_reader_new_from_data() – The bson_reader_new_from_data() fu
 
 <h2>NAME</h2>
 <p> bson_reader_new_from_data() &#8211; The bson_reader_new_from_data() function shall create a new bson_reader_t using the buffer supplied. data is not copied and MUST be valid for the lifetime of the resulting bson_reader_t.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 bson_reader_t *
 bson_reader_new_from_data (const uint8_t *data,
@@ -22,7 +22,6 @@ bson_reader_new_from_data (const uint8_t *data,
 <dl>
 <dt><code>length</code></dt>
 <dd> A size_t.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_reader_new_from_data/">bson_reader_new_from_data</a>(3)</code> function shall create a new <code>bson_reader_t</code> using the buffer supplied. <code>data</code> is not copied and <code>MUST</code> be valid for the lifetime of the resulting <code>bson_reader_t</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated <code>bson_reader_t</code> \&amp;. </p>

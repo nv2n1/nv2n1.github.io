@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-bumpspec(1)"
 name: "rpmdev-bumpspec"
 section: "1"
@@ -9,9 +10,7 @@ description: "rpmdev-bumpspec – manual page for rpmdev-bumpspec version 1.0.11
 
 <h2>NAME</h2>
 <p> rpmdev-bumpspec &#8211; manual page for rpmdev-bumpspec version 1.0.11</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rpmdev-bumpspec</code> [<i>OPTION</i>]&#8230; <i>SPECFILE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> rpmdev-bumpspec bumps release tags in specfiles.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "iswdigit(3)"
 name: "iswdigit"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-iswdigit/"
 description: "iswdigit – test for decimal digit wide character"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswdigit(wint_t wc);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>iswdigit</code>() function is the wide-character equivalent of the <code>isdigit</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;digit&quot;. </p>
 <p> The wide-character class &quot;digit&quot; is a subclass of the wide-character class &quot;xdigit&quot;, and therefore also a subclass of the wide-character class &quot;alnum&quot;, of the wide-character class &quot;graph&quot; and of the wide-character class &quot;print&quot;. </p>
 <p> Being a subclass of the wide character class &quot;print&quot;, the wide-character class &quot;digit&quot; is disjoint from the wide-character class &quot;cntrl&quot;. </p>

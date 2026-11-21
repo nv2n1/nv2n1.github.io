@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-guard(1)"
 name: "guilt-guard"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-guard/"
 description: "guilt-guard – Assign guards to patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-guard</i> [-l | &#8211;list | -n | &#8211;none | [&lt;patchname&gt;] [(+|-)&lt;guard&gt;&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> Assign guards to the specified patch, or to the patch on top of the stack if no patch is given on the command line. </p>
 <p> An unguarded patch is always pushed. </p>
 <p> A positive guard begins with a +. A patch with a positive guard is pushed <code>only if</code> the guard is selected. </p>

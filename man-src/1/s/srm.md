@@ -1,4 +1,5 @@
 ---
+
 title: "srm(1)"
 name: "srm"
 section: "1"
@@ -9,9 +10,7 @@ description: "srm – securely remove files or directories"
 
 <h2>NAME</h2>
 <p> srm &#8211; securely remove files or directories</p>
-<h2>SYNOPSIS</h2>
 <p> <code>srm</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>srm</code> removes each specified file by overwriting, renaming, and truncating it before unlinking. This prevents other people from undeleting or recovering any information about the file from the command line. By default srm uses the simple mode to overwrite the file&#8217;s contents. You can choose a different overwrite mode with <code>&#8211;dod</code>, <code>&#8211;doe</code>, <code>&#8211;openbsd</code>, <code>&#8211;rcmp</code>, <code>&#8211;gutmann</code>. If you specify more than one mode option, the last option is used. </p>
 <p> You can use <code>srm</code> to overwrite block devices. The device node is not removed after overwriting. This feature is available on Linux. Files with multiple hard links will be unlinked but not overwritten. </p>
 <p> <code>srm</code>, like every program that uses the getopt function to parse its arguments, lets you use the &#8212; option to indicate that all following arguments are non-options. To remove a file called `-f&#8217; in the current directory, you could type either</p>

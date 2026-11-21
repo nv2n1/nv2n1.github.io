@@ -1,4 +1,5 @@
 ---
+
 title: "ionice(1)"
 name: "ionice"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-ionice/"
 description: "ionice – set or get process I/O scheduling class and priority"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ionice</code> [<code>-c</code> <i>class</i>] [<code>-n</code> <i>level</i>] [<code>-t</code>] <code>-p</code> <i>PID</i> </p>
 <p> <code>ionice</code> [<code>-c</code> <i>class</i>] [<code>-n</code> <i>level</i>] [<code>-t</code>] <code>-P</code> <i>PGID</i> </p>
 <p> <code>ionice</code> [<code>-c</code> <i>class</i>] [<code>-n</code> <i>level</i>] [<code>-t</code>] <code>-u</code> <i>UID</i> </p>
 <p> <code>ionice</code> [<code>-c</code> <i>class</i>] [<code>-n</code> <i>level</i>] [<code>-t</code>] <i>command</i> [argument] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This program sets or gets the I/O scheduling class and priority for a program. If no arguments or just <code>-p</code> is given, <code>ionice</code> will query the current I/O scheduling class and priority for that process. </p>
 <p> When <i>command</i> is given, <code>ionice</code> will run this command with the given arguments. If no <i>class</i> is specified, then <i>command</i> will be executed with the &quot;best-effort&quot; scheduling class. The default priority level is 4. </p>
 <p> As of this writing, a process can be in one of three scheduling classes: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "firewalld(1)"
 name: "firewalld"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-firewalld/"
 description: "firewalld – Dynamic Firewall Manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>firewalld </code><code>[OPTIONS&#8230;]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>firewalld provides a dynamically managed firewall with support for network/firewall zones to define the trust level of network connections or interfaces. It has support for IPv4, IPv6 firewall settings and for ethernet bridges and has a separation of runtime and permanent configuration options. It also supports an interface for services or applications to add firewall rules directly.</dd>
 <h2>OPTIONS</h2>
 <p> These are the command line options of firewalld: </p>

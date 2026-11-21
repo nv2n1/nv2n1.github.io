@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_modify_qp(3)"
 name: "ibv_modify_qp"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ibv_modify_qp/"
 description: "ibv_modify_qp – modify the attributes of a queue pair (QP)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_modify_qp(struct ibv_qp *qp, struct ibv_qp_attr *attr,
                   int attr_mask);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_modify_qp()</code> modifies the attributes of QP <i>qp</i> with the attributes in <i>attr</i> according to the mask <i>attr_mask</i>. The argument <i>attr</i> is an ibv_qp_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p>struct ibv_qp_attr {<br />
     enum ibv_qp_state qp_state;        /* Move the QP to this state */<br />

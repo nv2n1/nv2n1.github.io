@@ -1,4 +1,5 @@
 ---
+
 title: "nvme(1)"
 name: "nvme"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-nvme/"
 description: "nvme – the dumb pci-e storage utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>nvme</i> &lt;command&gt; &lt;device&gt; [&lt;args&gt;]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> NVM-Express is a fast, scalable host controller interface designed to address the needs for PCI Express based solid state drives. </p>
 <p> This <i>nvme</i> program is a user space utility to provide standards compliant tooling for NVM-Express drives. It was made specifically for Linux as it relies on the IOCTLs defined by the mainline kernel driver.</p>
 <h2>NVME COMMANDS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpscat(1)"
 name: "gpscat"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gpscat/"
 description: "gpscat – dump the output from a GPS"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpscat</code> [-s&nbsp;<wbr><i>speed</i>] [-p] [-t] [-D&nbsp;<wbr><i>debuglevel</i>] <i>file-or-serial-port</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>gpscat is a simple program for logging and packetizing GPS data streams. It takes input from a specified file or serial device (presumed to have a GPS attached) and reports to standard output. The program runs until end of input or it is interrupted by ^C or other means. It does not terminate on a bad backet; this is intentional. </dd>
 <p> In raw mode (the default) gpscat simply dumps its input to standard output. Nonprintable characters other than ASCII whitespace are rendered as hexadecimal string escapes. </p>
 <p> In packetizing mode, gpscat uses the same code as <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8)&#8217;s packet sniffer to break the input into packets. Packets are reported one per line; line breaks in the packets themselves are escaped. </p>

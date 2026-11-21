@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-archiver(1)"
 name: "zarafa-archiver"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zarafa-archiver/"
 description: "zarafa-archiver – Manages zarafa archives and performs the archive operation."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-archiver</code> [<i>OPTION</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This tool is used to attach or detach archives to a users store. An archive is defined as a special non-active store or a folder inside such a store. </dd>
 <p> On top of managing archives, this tool is used to perform the actual archive operation. Using the <i>-u</i> option, the archiver can be instructed to archive a single store or all stores.</p>
 <h2>ACTIONS</h2>

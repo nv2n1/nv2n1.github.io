@@ -1,4 +1,5 @@
 ---
+
 title: "openat2(2)"
 name: "openat2"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-openat2/"
 description: "openat2 – open and possibly create a file (extended)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt;
 #include &lt;linux/openat2.h&gt;
@@ -17,7 +17,6 @@ long openat2(int dirfd, const char *pathname,
              struct open_how *how, size_t size);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>openat2</code>() system call is an extension of <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) and provides a superset of its functionality. </p>
 <p> The <code>openat2</code>() system call opens the file specified by <i>pathname</i>. If the specified file does not exist, it may optionally (if <code>O_CREAT</code> is specified in <i>how.flags</i>) be created. </p>
 <p> As with <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2), if <i>pathname</i> is a relative pathname, then it is interpreted relative to the directory referred to by the file descriptor <i>dirfd</i> (or the current working directory of the calling process, if <i>dirfd</i> is the special value <code>AT_FDCWD</code>). If <i>pathname</i> is an absolute pathname, then <i>dirfd</i> is ignored (unless <i>how.resolve</i> contains <code>RESOLVE_IN_ROOT</code>, in which case <i>pathname</i> is resolved relative to <i>dirfd</i>). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perl582delta(1)"
 name: "perl582delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl582delta/"
 description: "perl582delta – what is new for perl v5.8.2"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.8.1 release and the 5.8.2 release. </p>
 <p> If you are upgrading from an earlier release such as 5.6.1, first read the perl58delta, which describes differences between 5.6.0 and 5.8.0, and the perl581delta, which describes differences between 5.8.0 and 5.8.1.</p>
 <h2>Incompatible Changes</h2>

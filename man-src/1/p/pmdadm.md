@@ -1,4 +1,5 @@
 ---
+
 title: "pmdadm(1)"
 name: "pmdadm"
 section: "1"
@@ -9,7 +10,6 @@ description: "pmdadm – Device Mapper PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdadm</code> &#8211; Device Mapper PMDA</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdadm</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values for Devic Mapper on the local system. </p>
 <p> This PMDA collects its data through the <code><a href="/docs/linux/man/8-dmsetup/">dmsetup</a></code>(8) utility and requires that the program is installed in order to function. </p>
 <p> Further details on device mapper can be found at <a rel="nofollow" href="http://redhat.com">http://redhat.com</a></p>

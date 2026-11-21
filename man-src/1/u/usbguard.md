@@ -1,4 +1,5 @@
 ---
+
 title: "usbguard(1)"
 name: "usbguard"
 section: "1"
@@ -12,11 +13,7 @@ url: "/docs/linux/man/1-usbguard/"
 
  usbguard -- USBGuard command-line interface
 
-<h2>SYNOPSIS</h2>
-
- 
-
- usbguard&nbsp;<wbr>[OPTIONS]&nbsp;<wbr>command&nbsp;<wbr>[COMMAND-OPTIONS]&nbsp;<wbr>... 
+usbguard&nbsp;<wbr>[OPTIONS]&nbsp;<wbr>command&nbsp;<wbr>[COMMAND-OPTIONS]&nbsp;<wbr>... 
 
  usbguard list-devices 
 
@@ -38,11 +35,7 @@ url: "/docs/linux/man/1-usbguard/"
 
  usbguard read-descriptor &lt;file&gt;
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The usbguard command provides a command-line interface (CLI) to the <a HREF="/docs/linux/man/8-usbguard-daemon/">usbguard-daemon</a>(8) instance and provides a tool for generating initial USBGuard policies.
+The usbguard command provides a command-line interface (CLI) to the <a HREF="/docs/linux/man/8-usbguard-daemon/">usbguard-daemon</a>(8) instance and provides a tool for generating initial USBGuard policies.
 
 <h2>SUBCOMMANDS</h2>
 

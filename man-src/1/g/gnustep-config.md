@@ -1,4 +1,5 @@
 ---
+
 title: "gnustep-config(1)"
 name: "gnustep-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "gnustep-config – prints information about the current gnustep in
 
 <h2>NAME</h2>
 <p> gnustep-config &#8211; prints information about the current gnustep installation.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gnustep-config</code> [ <code>&#8211;variable=</code><i>variable</i> |<code>&#8211;objc-flags</code>|<code>&#8211;objc-libs</code>|<code>&#8211;base-libs</code>|<code>&#8211;gui-libs</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gnustep-config</code> can print information about the currently installed GNUstep system. It can output dependend on the options used the different flags used for compilation, but also the different internal variables used by the make system.</p>
 <h2>OPTIONS</h2>
 <dl>

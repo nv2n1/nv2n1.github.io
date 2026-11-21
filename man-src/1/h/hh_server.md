@@ -1,4 +1,5 @@
 ---
+
 title: "hh_server(1)"
 name: "hh_server"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hh_server/"
 description: "hh_server – Hack language typechecker daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hh_server</code> [<i>&#8211;check&nbsp;</i>[<i>&#8211;json</i>]] <i>DIRECTORY</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-hh_server/">hh_server</a></code>(1) is the actual typechecker that enforces the Hack type system. It is typically accessed via <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1); see the documentation for that tool for more information on the Hack type system and how to interface with <code><a href="/docs/linux/man/1-hh_server/">hh_server</a></code>(1). </p>
 <p> Directly invoking <code><a href="/docs/linux/man/1-hh_server/">hh_server</a></code>(1) is of minimal use, since <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1) will start and stop it as needed. The only widely useful manual invocation is <i>&#8211;check</i> mode. </p>
 <p> With no options, <code><a href="/docs/linux/man/1-hh_server/">hh_server</a></code>(1) will start up, do an initial typecheck of <i>DIRECTORY</i>, and continue running, waiting for connections from <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1). Again, this is not the normal way the server should be invoked &#8212; just running <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1) and ignoring the existence of this server binary is sufficient for common use. </p>

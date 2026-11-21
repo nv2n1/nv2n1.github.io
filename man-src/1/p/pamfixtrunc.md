@@ -1,4 +1,5 @@
 ---
+
 title: "pamfixtrunc(1)"
 name: "pamfixtrunc"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pamfixtrunc/"
 description: "pamfixtrunc – repair a Netpbm image whose file is truncated"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamfixtrunc</code> </p>
 <p> [<code>-verbose</code>] </p>
 <p> [<i>netpbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamfixtrunc</code> reads as much as it can of a Netpbm image that may be truncated (i.e. the file may not contain the last part of the image) and writes out a valid Netpbm image that is just missing the bottom rows of the original (pre-truncation) image. </p>
 <p> The header of a Netpbm image implies how large the image must be (how many bytes the file must contain). If the file is actually smaller than that, a Netpbm program that tries to read the image fails, with an error message telling you that it couldn&#8217;t read the whole file. The data in the file is arranged in row order, from top to bottom, and the most common reason for the file being smaller than its header says it should be is because the bottommost rows are simply missing. So <code>pamfixtrunc</code> assumes that is the case and generates a new image with just the rows that are readable. (technically, that means the output&#8217;s header indicates a smaller number of rows and omits any partial last row). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ptardiff(1)"
 name: "ptardiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ptardiff/"
 description: "ptardiff – program that diffs an extracted archive against an unextracted one"
 ---
 
-<h2>DESCRIPTION</h2>
 <pre>
     ptardiff is a small program that diffs an extracted archive
     against an unextracted one, using the perl module Archive::Tar.
@@ -17,7 +17,6 @@ description: "ptardiff – program that diffs an extracted archive against an un
     for a file with the name and diff it against the contents of the
     archive.
 </pre>
-<h2>SYNOPSIS</h2>
 <pre>
     ptardiff ARCHIVE_FILE
     ptardiff -h

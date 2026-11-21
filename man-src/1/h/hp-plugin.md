@@ -1,4 +1,5 @@
 ---
+
 title: "hp-plugin(1)"
 name: "hp-plugin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-plugin/"
 description: "hp-plugin – Plugin Download and Install Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> HP Proprietary Plugin Download and Install Utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-plugin [MODE] [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>

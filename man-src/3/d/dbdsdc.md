@@ -1,4 +1,5 @@
 ---
+
 title: "dbdsdc(3)"
 name: "dbdsdc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dbdsdc/"
 description: "dbdsdc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dbdsdc</code> (UPLO, COMPQ, N, D, E, U, LDU, VT, LDVT, Q, IQ, WORK, IWORK, INFO)<br />
  <i></i><code>DBDSDC</code></p>

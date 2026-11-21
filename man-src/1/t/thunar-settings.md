@@ -1,4 +1,5 @@
 ---
+
 title: "thunar-settings(1)"
 name: "thunar-settings"
 section: "1"
@@ -9,9 +10,7 @@ description: "thunar-settings – display thunar(1) preferences dialog"
 
 <h2>NAME</h2>
 <p> thunar-settings &#8211; display <a href="/docs/linux/man/1-thunar/">thunar</a>(1) preferences dialog</p>
-<h2>SYNOPSIS</h2>
 <p> <code>thunar-settings </code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>thunar-settings</code> command. </p>
 <p> <code>thunar-settings </code> shows the <code><a href="/docs/linux/man/1-thunar/">thunar</a></code>(1) preferences dialog, and accept no options.</p>
 <h2>SEE ALSO</h2>

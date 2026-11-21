@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-ptr(3)"
 name: "antlr3-ptr"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_TRIE_ENTRY_struct –"
 ---
 
 <p> Structure that holds the payload entry in an ANTLR3_INT_TRIE or ANTLR3_STRING_TRIE.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Public Member Functions</h3>
 <p> <code>void</code> (ANTLR3_CDECL *freeptr)(void *) </p>

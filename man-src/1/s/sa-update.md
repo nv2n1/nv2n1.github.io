@@ -1,4 +1,5 @@
 ---
+
 title: "sa-update(1)"
 name: "sa-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sa-update/"
 description: "sa-update – automate SpamAssassin rule updates"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sa-update</code> [options] </p>
 <p> Options: </p>
 <pre><code>
@@ -35,7 +35,6 @@ description: "sa-update – automate SpamAssassin rule updates"
   -v, --verbose           Be verbose, like print updated channel names;
   For more verbosity specify multiple times - V, --version Print version - h, --help Print usage message - 4 Force using the inet protocol(IPv4), not inet6 - 6 Force using the inet6 protocol(IPv6), not inet
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> sa-update automates the process of downloading and installing new rules and configuration, based on channels. The default channel is <i>updates.spamassassin.org</i>, which has updated rules since the previous release. </p>
 <p> Update archives are verified using <font SIZE="-1">SHA1</font> hashes and <font SIZE="-1">GPG</font> signatures, by default. </p>
 <p> Note that <tt>&quot;sa-update&quot;</tt> will not restart <tt>&quot;spamd&quot;</tt> or otherwise cause a scanner to reload the now-updated ruleset automatically. Instead, <tt>&quot;sa-update&quot;</tt> is typically used in something like the following manner: </p>

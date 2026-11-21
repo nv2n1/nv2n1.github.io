@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-destroy3(1)"
 name: "voms-proxy-destroy3"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-voms-proxy-destroy3/"
 description: "voms-proxy-destroy – destroys a VOMS proxy"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> voms-proxy-destroy</p>
-<h2>DESCRIPTION</h2>
 <p> The voms-proxy-destroy command is intended to be used after a proxy is no longer useful, to destroy it.</p>
 <h2>OPTIONS</h2>
 <p> Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. </p>

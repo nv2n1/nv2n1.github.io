@@ -1,4 +1,5 @@
 ---
+
 title: "pdns-zone2ldap(1)"
 name: "pdns-zone2ldap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdns-zone2ldap/"
 description: "zone2ldap – convert zonefiles to ldif"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>zone2ldap</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>zone2ldap</code> command. </p>
 <p> <code>zone2ldap</code> is a program that converts bind zonefiles to ldif format which can inserted to an LDAP server</p>
 <h2>OPTIONS</h2>

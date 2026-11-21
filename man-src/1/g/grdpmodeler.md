@@ -1,4 +1,5 @@
 ---
+
 title: "grdpmodeler(1)"
 name: "grdpmodeler"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdpmodeler – Evaluate a plate model on a geographic grid"
 
 <h2>NAME</h2>
 <p> grdpmodeler &#8211; Evaluate a plate model on a geographic grid</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdpmodeler</code> <i>agegrdfile</i> <i>rot_file</i> <code>-S</code><i>flags</i> [ <i>polygonfile</i> ] [ <i>outgrdfile</i> ] [ <i>age</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdpmodeler</code> reads a geographical age grid and a plate motion model and evaluates one of several model predictions. Optionally, the user may supply a clipping polygon in multiple-segment format; then, only the part of the grid inside the polygon is used to determine the model prediction; the remainder of the grid is set to NaN.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

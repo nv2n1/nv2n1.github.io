@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-keygen(1)"
 name: "ssh-keygen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ssh-keygen/"
 description: "ssh-keygen – OpenSSH authentication key utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-keygen</code> &#8211; OpenSSH authentication key utility </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ssh-keygen</code> [-<code>q</code> ] [-<code>a </code><i>rounds</i> ] [-<code>b </code><i>bits</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ] [-<code>m </code><i>format</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>O </code><i>option</i> ] [-<code>t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa</code> ] [-<code>w </code><i>provider</i> ] [-<code>Z </code><i>cipher</i> ]<br />
 <code>ssh-keygen</code> &#8211;<code>p</code> [-<code>a </code><i>rounds</i> ] [-<code>f </code><i>keyfile</i> ] [-<code>m </code><i>format</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>P </code><i>old_passphrase</i> ] [-<code>Z </code><i>cipher</i> ]<br />
 <code>ssh-keygen</code> &#8211;<code>i</code> [-<code>f </code><i>input_keyfile</i> ] [-<code>m </code><i>key_format</i> ]<br />
@@ -36,7 +35,6 @@ description: "ssh-keygen – OpenSSH authentication key utility"
 <code>ssh-keygen</code> &#8211;<code>Y check-novalidate</code> [-<code>O </code><i>option</i> ] &#8211;<code>n </code><i>namespace</i> &#8211;<code>s </code><i>signature_file</i><br />
 <code>ssh-keygen</code> &#8211;<code>Y sign</code> [-<code>O </code><i>option</i> ] &#8211;<code>f </code><i>key_file</i> &#8211;<code>n </code><i>namespace</i> <i>file &#8230;</i><br />
 <code>ssh-keygen</code> &#8211;<code>Y verify</code> [-<code>O </code><i>option</i> ] &#8211;<code>f </code><i>allowed_signers_file</i> &#8211;<code>I </code><i>signer_identity</i> &#8211;<code>n </code><i>namespace</i> &#8211;<code>s </code><i>signature_file</i> [-<code>r </code><i>revocation_file</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ssh-keygen</code> generates, manages and converts authentication keys for <a href="/docs/linux/man/1-ssh/">ssh</a>(1). <code>ssh-keygen</code> can create keys for use by SSH protocol version 2. </p>
 <p> The type of key to be generated is specified with the &#8211;<code>t</code> option. If invoked without any arguments, <code>ssh-keygen</code> will generate an RSA key. </p>
 <p> <code>ssh-keygen</code> is also used to generate groups for use in Diffie-Hellman group exchange (DH-GEX). See the Sx MODULI GENERATION section for details. </p>

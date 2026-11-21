@@ -1,4 +1,5 @@
 ---
+
 title: "pki(1)"
 name: "pki"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pki/"
 description: "pki – Command-Line Interface for accessing Certificate System services."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pki</code> [CLI options] &lt;command&gt; [command arguments] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki</code> command provides a command-line interface allowing clients to access various services on the Certificate System server. These services include certificates, groups, keys, security domains, and users.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
 <h2>CLI OPTIONS</h2>

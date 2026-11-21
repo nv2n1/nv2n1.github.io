@@ -1,4 +1,5 @@
 ---
+
 title: "mbrowse(1)"
 name: "mbrowse"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mbrowse/"
 description: "mbrowse – SNMP MIB browser and query tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mbrowse</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mbrowse</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>mbrowse</code> is a SNMP MIB browser tool. It relies on GTK+ and net-snmp. It is able to display as a tree view the content of a MIB, and to query MIB objects on any machine through get, set and walk methods. </p>
 <p> It includes a search function, bookmarking of MIB entries, ability to support additional MIBs, &#8230; </p>

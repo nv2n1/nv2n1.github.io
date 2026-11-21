@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_policy_release(3)"
 name: "gnutls_x509_policy_release"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_policy_release – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_policy_release &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>void gnutls_x509_policy_release(struct gnutls_x509_policy_st * </code><i>policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>struct gnutls_x509_policy_st * policy</dt>
 <dd> a certificate policy</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize all memory associated with the provided<br />
 &nbsp;<wbr><i>policy</i>&nbsp;<wbr>. The policy is allocated using&nbsp;<wbr><code>gnutls_x509_crt_get_policy()</code>.</p>
 <h2>SINCE</h2>

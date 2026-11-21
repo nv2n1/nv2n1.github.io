@@ -1,4 +1,5 @@
 ---
+
 title: "dormqr(3)"
 name: "dormqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dormqr/"
 description: "dormqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dormqr</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>DORMQR</code></p>

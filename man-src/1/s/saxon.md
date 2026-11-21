@@ -1,4 +1,5 @@
 ---
+
 title: "saxon(1)"
 name: "saxon"
 section: "1"
@@ -9,9 +10,7 @@ description: "saxon8 – manual page for saxon8"
 
 <h2>NAME</h2>
 <p> saxon8 &#8211; manual page for saxon8</p>
-<h2>SYNOPSIS</h2>
 <p> <code>saxon8</code> [<i>options</i>] <i>source-document stylesheet </i>[ <i>params</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> saxon8 applies a given stylesheet to a given source XML document. </p>
 <h2>OPTIONS</h2>
 <p> For a schema-aware transformation, specify the option <code>-sa</code>, or (on the Java platform only) use the alternate entry point com.saxonica.Transform. For more details see Schema-Aware Transformations.</p>

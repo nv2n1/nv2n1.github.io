@@ -1,4 +1,5 @@
 ---
+
 title: "dbmultistats(1)"
 name: "dbmultistats"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbmultistats/"
 description: "dbmultistats – run dbcolstats over each group of inputs identified by some key"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <tt>$0</tt> [-dm] [-c ConfidencePercent] [-f FormatForm] [-q NumberOfQuartiles] -k KeyField ValueField</p>
-<h2>DESCRIPTION</h2>
 <p> The input table is grouped by KeyField, then we compute a separate set of column statistics on ValueField for each group with a unique key. </p>
 <p> Assumptions and requirements are the same as dbmapreduce (this program is just a wrapper around that program): </p>
 <p> By default, data can be provided in arbitrary order and the program consumes O(number of unique tags) memory, and O(size of data) disk space. </p>

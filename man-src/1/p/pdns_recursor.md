@@ -1,4 +1,5 @@
 ---
+
 title: "pdns_recursor(1)"
 name: "pdns_recursor"
 section: "1"
@@ -9,9 +10,7 @@ description: "pdns_recursor – high-performance, simple and secure recursing na
 
 <h2>NAME</h2>
 <p> pdns_recursor &#8211; high-performance, simple and secure recursing nameserver</p>
-<h2>SYNOPSIS</h2>
 <p> pdns_recursor [OPTION]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/1-pdns_recursor/">pdns_recursor</a>(1) is a high performance, simple and secure recursing nameserver. It currently powers over two million internet connections. </p>
 <p> The recursor is configured via a configuration file, but each item in that file can be overridden on the command line. </p>
 <p> This manpage lists the core set of features needed to get the PowerDNS recursor working, for full and up to date details head to <a rel="nofollow" href="http://doc.powerdns.com/built-in-recursor.html">http://doc.powerdns.com/built-in-recursor.html</a></p>

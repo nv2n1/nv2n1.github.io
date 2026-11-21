@@ -1,4 +1,5 @@
 ---
+
 title: "unpack200-java-1(1)"
 name: "unpack200-java-1"
 section: "1"
@@ -9,7 +10,6 @@ description: "unpack200 – Transforms a packed file produced by pack200(1) into
 
 <h2>NAME</h2>
 <p> unpack200 &#8211; Transforms a packed file produced by <a href="/docs/linux/man/1-pack200/">pack200</a>(1) into a JAR file for web deployment.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>unpack200</code> [ <i>options</i> ] input-file <i>JAR-file</i>
 </pre>
@@ -20,7 +20,6 @@ description: "unpack200 – Transforms a packed file produced by pack200(1) into
 <dd> Name of the input file, which can be a pack200 gzip file or a pack200 file. The input can also be JAR file produced by <code><a href="/docs/linux/man/1-pack200/">pack200</a></code>(1) with an effort of <code>0</code>, in which case the contents of the input file are copied to the output JAR file with the Pack200 marker.</dd>
 <dt><i>JAR-file</i></dt>
 <dd> Name of the output JAR file.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>unpack200</code> command is a native implementation that transforms a packed file produced by <code><a href="/docs/linux/man/1-pack200/">pack200</a></code><code>(1)</code> into a JAR file. A typical usage follows. In the following example, the <code>myarchive.jar</code> file is produced from <code>myarchive.pack.gz</code> with the default <code>unpack200</code> command settings. </p>
 <pre>
 <code>unpack200 myarchive.pack.gz myarchive.jar</code>

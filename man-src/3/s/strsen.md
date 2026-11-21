@@ -1,4 +1,5 @@
 ---
+
 title: "strsen(3)"
 name: "strsen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-strsen/"
 description: "strsen.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>strsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>STRSEN</code></p>

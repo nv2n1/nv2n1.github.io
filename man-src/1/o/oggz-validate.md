@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-validate(1)"
 name: "oggz-validate"
 section: "1"
@@ -10,7 +11,6 @@ description: "oggz-validate — Validate the Ogg framing of one or more files"
 <h2>NAME</h2>
 <p> oggz-validate &#8212; Validate the Ogg framing of one or more files<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>oggz-validate </code> [-M <code>num</code> | &#8211;max-errors <code>num</code> ] [-p | &#8211;prefix ] [-s | &#8211;suffix ] [-P | &#8211;partial ] filename &#8230; </p>
 <p> <code>oggz-validate</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

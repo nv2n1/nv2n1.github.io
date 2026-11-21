@@ -1,4 +1,5 @@
 ---
+
 title: "hp-wificonfig(1)"
 name: "hp-wificonfig"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-wificonfig/"
 description: "hp-wificonfig – Wifi Configuration Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Wifi/Wireless/802.11 configuration utility for HPLIP supported printers. (Note: Only select wireless capable printers are supported by this utility).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-wificonfig [DEVICE_URI|PRINTER_NAME] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

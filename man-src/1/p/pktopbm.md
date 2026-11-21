@@ -1,4 +1,5 @@
 ---
+
 title: "pktopbm(1)"
 name: "pktopbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pktopbm/"
 description: "pktopbm – convert packed (PK) format font into PBM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> pktopbm pkfile[.pk] [ -x width ] [ -y height ] [-c num] pbmfile &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pktopbm</code> reads a packed (PK) font file as input, and produces PBM images as output. If the filename &#8216;-&#8216; is used for any of the filenames, the standard input stream (or standard output where appropriate) will be used. If either the width or height is specified, this value will be used for all bitmaps produced. Also if one or both values are specified, the bitmap will be relocated with the hoffset and voffset given in the pkfile. The basepoint will be placed in the lower left corner of the bitmap if the bitmap is bigger than the specified size it will be truncated at the top or right. </p>
 <h2>OPTIONS</h2>

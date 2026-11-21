@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_key_purpose_get(3)"
 name: "gnutls_x509_key_purpose_get"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_key_purpose_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_key_purpose_get &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_key_purpose_get(gnutls_x509_key_purposes_t </code><i>p</i><code>, unsigned </code><i>idx</i><code>, gnutls_datum_t * </code><i>oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_key_purpose_get – API function"
 <dd> The index of the key purpose to retrieve</dd>
 <dt>gnutls_datum_t * oid</dt>
 <dd> Will hold the object identifier of the key purpose (to be treated as constant)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will retrieve the specified by the index key purpose in the purposes structure. The object identifier will be a null terminated string.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if the index is out of bounds, otherwise a negative error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_srtp_set_profile(3)"
 name: "gnutls_srtp_set_profile"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_srtp_set_profile – API function"
 
 <h2>NAME</h2>
 <p> gnutls_srtp_set_profile &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_srtp_set_profile(gnutls_session_t </code><i>session</i><code>, gnutls_srtp_profile_t </code><i>profile</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_srtp_set_profile – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_srtp_profile_t profile</dt>
 <dd> is the profile id to add.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function is to be used by both clients and servers, to declare what SRTP profiles they support, to negotiate with the peer.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned. </p>

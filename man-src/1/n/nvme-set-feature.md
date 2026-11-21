@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-set-feature(1)"
 name: "nvme-set-feature"
 section: "1"
@@ -6,16 +7,9 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-set-feature/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-set-feature - Sets an NVMe feature, returns applicable results 
 
- nvme-set-feature - Sets an NVMe feature, returns applicable results 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme set - feature&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                           [--feature - id = &lt;fid&gt; | -f&lt;fid&gt;][--value = &lt;value&gt;]
                           [--data - len = &lt;data - len&gt; | -l&lt;data - len&gt;]
@@ -23,11 +17,7 @@ nvme set - feature&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt
                           [--raw - binary | -b]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Submits an NVMe Get Feature admin command and returns the applicable results. This may be the feature's value, or may also include a feature structure if the feature requires it (ex: LBA Range Type). 
+Submits an NVMe Get Feature admin command and returns the applicable results. This may be the feature's value, or may also include a feature structure if the feature requires it (ex: LBA Range Type). 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). 
 

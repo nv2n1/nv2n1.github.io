@@ -1,4 +1,5 @@
 ---
+
 title: "upmendex(1)"
 name: "upmendex"
 section: "1"
@@ -6,10 +7,9 @@ letter: "u"
 url: "/docs/linux/man/1-upmendex/"
 description: "upmendex – Multilingual index processor"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>upmendex</code> [-ilqrcgf] [<code>-s</code><i> sty</i>] [<code>-d</code><i> dic</i>] [<code>-o</code><i> ind</i>] [<code>-t</code><i> log</i>] [<code>-p</code><i> no</i>] [<code>--</code>] [<i> idx0 idx1 idx2 ...</i>] <br />
  <code>upmendex</code> <code>--help</code>  </p>
-<h2>DESCRIPTION</h2>
 <p> The program <i>upmendex</i> is a general purpose multilingual hierarchical index generator working with upLaTeX, XeLaTeX and LuaLaTeX; it accepts one or more input files (<i>.idx</i>; often produced by a text formatter such as LaTeX families), sorts the entries, and produces an output file which can be formatted. It supports Latin (including non-English), Greek, Cyrillic, Korean Hangul and Han (Hanzi ideographs) scripts, as well as Japanese Kana. It is almost compatible with <i>makeindex</i> and <i>mendex</i>, and additional feature for handling readings of kanji words is also available. The formats of the input and output files are specified in a style file. The readings of kanji words can be specified in a dictionary file. The index can have up to three levels (0, 1, and 2) of subitem nesting.  </p>
 <h2>OPTIONS</h2>
 <dl>

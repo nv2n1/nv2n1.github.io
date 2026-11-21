@@ -1,4 +1,5 @@
 ---
+
 title: "smaclient(1)"
 name: "smaclient"
 section: "1"
@@ -9,11 +10,9 @@ description: "smaclient – tool for accessing z/VM System Management functions"
 
 <h2>NAME</h2>
 <p> smaclient &#8211; tool for accessing z/VM System Management functions</p>
-<h2>SYNOPSIS</h2>
 <p> <code>smaclient</code> [FUNCTION] [OPTION] [PARAMETER]<br />
  <code>smaclient</code> [-?|&#8211;help]<br />
  <code>smaclient</code> [-T <i>target</i>] [-H <i>host</i>] [-U <i>user</i>] [-P <i>pass</i>] &lt;function&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>smaclient</code> is a tool which provides a line-mode interface to the z/VM System Management API (SMAPI) for most Unix-compatible systems such as Linux. Smaclient can exercise all the VM management interfaces to create, modify and destroy virtual machines without ever logging into z/VM.</p>
 <dl>
 <dt>Executing smaclient without any arguments will print a list of available arguments and options.</dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "simple-mtpfs(1)"
 name: "simple-mtpfs"
 section: "1"
@@ -9,7 +10,6 @@ description: "SIMPLE-MTPFS – filesystem driver for MTP based devices"
 
 <h2>NAME</h2>
 <p> SIMPLE-MTPFS &#8211; filesystem driver for MTP based devices</p>
-<h2>SYNOPSIS</h2>
 <h3>mounting</h3>
 <dl>
 <dt><code>simple-mtpfs &lt;device&gt;</code> <code>mountpoint</code> [<i>options</i>]</dt>
@@ -18,7 +18,6 @@ description: "SIMPLE-MTPFS – filesystem driver for MTP based devices"
 <dl>
 <dt><code>fusermount -u mountpoint</code></dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> SIMPLE-MTPFS (Simple Media Transfer Protocol FileSystem) is a file system for Linux (and other operating systems with a FUSE implementation, such as Mac OS X or FreeBSD) capable of operating on files on MTP devices attached via USB to local machine. On the local computer where the SIMPLE-MTPFS is mounted, the implementation makes use of the FUSE (Filesystem in Userspace) kernel module. The practical effect of this is that the end user can seamlessly interact with MTP device files.</p>
 <h2>OPTIONS</h2>
 <h3>general options:</h3>

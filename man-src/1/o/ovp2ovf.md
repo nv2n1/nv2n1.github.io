@@ -1,4 +1,5 @@
 ---
+
 title: "ovp2ovf(1)"
 name: "ovp2ovf"
 section: "1"
@@ -9,9 +10,7 @@ description: "ovp2ovf – convert a virtual property-list file into a virtual fo
 
 <h2>NAME</h2>
 <p> ovp2ovf &#8211; convert a virtual property-list file into a virtual font file and its associated font metric file </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ovp2ovf</code> [<i>OPTIONS</i>] <i>OVPFILE</i>[<i></i><code>.ovp</code>] [<i>OVFFILE</i>[<i></i><code>.ovf</code>] [<i>OFMFILE</i>[<i></i><code>.ofm</code>]]] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ovp2ovf</code> translates a human-readable virtual property list (OVP) file, <i>OVPFILE</i>, into a virtual font (OVF) file, <i>OVFFILE</i> and its companion font metric (OFM) file, <i>OFMFILE</i>. </p>
 <p> The program also works with TeX VP files, producing VF and TFM files. (<code>ovp2ovf</code> is based on the WEB source code for <code><a href="/docs/linux/man/1-vptovf/">vptovf</a></code>(1).) </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "showchar(1)"
 name: "showchar"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-showchar/"
 description: "showchar – show character with information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>showchar</code> [ <code>fontname</code> ] [ <code>charname</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
 <p> <code>showchar</code> outputs PostScript to draw a character with metric info.</p>
 <h2>AUTHOR</h2>

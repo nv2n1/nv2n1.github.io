@@ -1,4 +1,5 @@
 ---
+
 title: "lxrandr(1)"
 name: "lxrandr"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lxrandr/"
 description: "lxrandr – a GTK+2 interface to XRandR for LXDE desktop."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lxrandr</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>lxrandr</code> command. </dd>
 <p> <code>lxrandr</code> is a program that change the resolution and frequency of the monitor using a simple interface.</p>
 <h2>AUTHOR</h2>

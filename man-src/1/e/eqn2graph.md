@@ -1,4 +1,5 @@
 ---
+
 title: "eqn2graph(1)"
 name: "eqn2graph"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-eqn2graph/"
 description: "eqn2graph – convert an EQN equation into a cropped image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-format </code><i>output-format</i> ] [<i>convert-arguments</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>eqn2graph</i> reads a one-line <i><a href="/docs/linux/man/1-eqn/">eqn</a></i>(1) equation from the standard input and writes an image file, by default in Portable Network Graphics (PNG) format, to the standard output. </p>
 <p> The input EQN code should <i>not</i> be preceded by the <code>.EQ</code> macro that normally precedes it within <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1) macros; nor do you need to have dollar-sign or other delimiters around the equation. </p>
 <p> Arguments not recognized by <i>eqn2graph</i> are passed to the ImageMagick or GraphicsMagick program <i><a href="/docs/linux/man/1-convert/">convert</a></i>(1). By specifying these, you can give your image a border, set the image&#8217;s pixel density, or perform other useful transformations. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qstat-ge(1)"
 name: "qstat-ge"
 section: "1"
@@ -11,7 +12,6 @@ description: "qstat – show the status of Grid Engine jobs and queues"
 <p> qstat &#8211; show the status of Grid Engine jobs and queues</p>
 <h2>SYNTAX</h2>
 <p> <code>qstat</code> [ <code>-ext</code> ] [ <code>-f</code> ] [ <code>-F</code> [<code>resource_name,&#8230;</code>] ] [ <code>-g {c|d|t}[+]</code> ] [ <code>-help</code> ] [ <code>-j [job_list]</code> ] [ <code>-l resource=val,&#8230;</code> ] [ <code>-ne</code> ] [ <code>-pe pe_name,&#8230;</code> ] [ <code>-pri </code> ] [ <code>-q wc_queue_list</code> ] [ <code>-qs {a|c|d|o|s|u|A|C|D|E|S}</code> ] [ <code>-r</code> ] [ <code>-s {r|p|s|z|hu|ho|hs|hd|hj|ha|h|a}[+]</code> ] [ <code>-t</code> ] [ <code>-U user,&#8230;</code> ] [ <code>-u user,&#8230;</code> ] [ <code>-urg</code> ] [ <code>-xml</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>qstat</i> shows the current status of the available Grid Engine queues and the jobs associated with the queues. Selection options allow you to get information about specific jobs, queues or users. If multiple selections are done a queue is only displayed if all selection criteria for a queue instance are met. Without any option <i>qstat</i> will display only a list of jobs with no queue status information. </p>
 <p> The administrator and the user may define files (see which can contain any of the options described below. A cluster-wide sge_qstat file may be placed under $GE_ROOT/$GE_CELL/common/sge_qstat The user private file is searched at the location $HOME/.sge_qstat. The home directory request file has the highest precedence over the cluster global file. Command line can be used to override the flags contained in the files.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdamemcache(1)"
 name: "pmdamemcache"
 section: "1"
@@ -9,7 +10,6 @@ description: "pmdamemcache – memcached performance metrics domain agent (PMDA)
 
 <h2>NAME</h2>
 <p> <code>pmdamemcache</code> &#8211; memcached performance metrics domain agent (PMDA)</p>
-<h2>DESCRIPTION</h2>
 <p> This <font SIZE="-1">PMDA</font> extracts performance data from memcached, a distributed memory caching daemon commonly used to improve web serving performance. A farm of memcached processes over multiple servers can be utilised by a single web application, increasing the total available object cache size, and decreasing the database load associated with smaller cache sizes. This system is described in detail at <a rel="nofollow" href="http://www.danga.com/memcached.">http://www.danga.com/memcached.</a></p>
 <h2>INSTALLATION</h2>
 <p> Configure <code>pmdamemcache</code> to extract the values from set of hosts used in the memcache farm. These hosts can be listed in the <tt>$PCP_PMDAS_DIR</tt>/memcache/memcache.conf file, in the format (i.e. Perl array) described at the top of pmdamemcache.pl. A custom refresh rate can also be configured using this mechanism. </p>

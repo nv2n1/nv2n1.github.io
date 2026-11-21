@@ -1,4 +1,5 @@
 ---
+
 title: "cue2toc(1)"
 name: "cue2toc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cue2toc/"
 description: "cue2toc – convert CUE to TOC format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cue2toc</code> [<code>-hnqv</code>] [<code>-o</code> <i>tocfile</i>] [<code>-w</code> <i>wavefile</i>] [<i>cuefile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Cue2toc</code> converts <i>cuefile</i> from CUE to TOC format and writes the result to <i>tocfile</i>. If either <i>cuefile</i> or <i>tocfile</i> is omitted or a single dash &quot;-&quot; <code>cue2toc</code> reads from standard input and writes to standard ouput respectively. </p>
 <p> CUE files are text files describing the layout of a CD-Rom and typically carry the extension &quot;.cue&quot;. </p>
 <p> Cdrdao is a CD-burning application which has its own native TOC format to describe the disc layout. Although cdrdao has direct support for reading CUE files, it is currently limited to data tracks only. So <code>cue2toc</code>&#8216;s main usefulness lies in converting CUE files containing audio tracks. </p>

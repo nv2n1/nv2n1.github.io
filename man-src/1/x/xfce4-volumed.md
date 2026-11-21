@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-volumed(1)"
 name: "xfce4-volumed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-volumed/"
 description: "xfce4-volumed – Pulseaudio volume keys daemon for the Xfce desktop environment"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

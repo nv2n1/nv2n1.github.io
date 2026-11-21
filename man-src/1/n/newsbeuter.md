@@ -1,4 +1,5 @@
 ---
+
 title: "newsbeuter(1)"
 name: "newsbeuter"
 section: "1"
@@ -6,18 +7,11 @@ letter: "n"
 url: "/docs/linux/man/1-newsbeuter/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+newsbeuter - an RSS feed reader for text terminals 
 
- newsbeuter - an RSS feed reader for text terminals 
+<i>newsbeuter</i> [-r] [-e] [-i opmlfile] [-u urlfile] [-c cachefile] [-C configfile] [-X] [-o] [-x &lt;command&gt; ...] [-h] 
 
-<h2>SYNOPSIS</h2>
-
- <i>newsbeuter</i> [-r] [-e] [-i opmlfile] [-u urlfile] [-c cachefile] [-C configfile] [-X] [-o] [-x &lt;command&gt; ...] [-h] 
-
-<h2>DESCRIPTION</h2>
-
- <i>newsbeuter</i> is an RSS feed reader for text terminals. RSS is a number of widely-used XML formats to transmit, publish and syndicate articles, for example news or blog articles. Newsbeuter is designed to be used on text terminals on Unix or Unix-like systems such as Linux, BSD or Mac OS X. 
+<i>newsbeuter</i> is an RSS feed reader for text terminals. RSS is a number of widely-used XML formats to transmit, publish and syndicate articles, for example news or blog articles. Newsbeuter is designed to be used on text terminals on Unix or Unix-like systems such as Linux, BSD or Mac OS X. 
 
 <h2>OPTIONS</h2>
 

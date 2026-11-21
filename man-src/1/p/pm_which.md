@@ -1,4 +1,5 @@
 ---
+
 title: "pm_which(1)"
 name: "pm_which"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pm_which/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pm_which - find installed modules 
 
- pm_which - find installed modules 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     pm_which [ options ] module(s)
     Returns the path to the given module(s)
 </pre>
@@ -24,9 +20,7 @@ url: "/docs/linux/man/1-pm_which/"
 - q, --quiet Just print paths - p, --paths Just convert the module name into a relative path - a, --all Print all paths, not just the first one found - n, --namespace Print all modules in the given namespace - m Only print module names, not paths - V Show module version - I libpath Add a path to search(like perl - I) - d, --dump Dump paths that would be searched(@INC by default) - h, --help Print this message - v, --version Print version information - Read modules from stdin, one per line
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This tool reports the locations of installed perl modules. 
+This tool reports the locations of installed perl modules. 
 
  By default it lists the location of each specified module that would be loaded by require.
 

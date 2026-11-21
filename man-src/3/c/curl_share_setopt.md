@@ -1,4 +1,5 @@
 ---
+
 title: "curl_share_setopt(3)"
 name: "curl_share_setopt"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_share_setopt – Set options for a shared object"
 
 <h2>NAME</h2>
 <p> curl_share_setopt &#8211; Set options for a shared object</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> CURLSHcode curl_share_setopt(CURLSH *share, CURLSHoption option, parameter);</p>
-<h2>DESCRIPTION</h2>
 <p> Set the <i>option</i> to <i>parameter</i> for the given <i>share</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

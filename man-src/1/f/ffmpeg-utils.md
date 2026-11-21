@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg-utils(1)"
 name: "ffmpeg-utils"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmpeg-utils/"
 description: "ffmpeg-utils – FFmpeg utilities"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes some generic features and utilities provided by the libavutil library.</p>
 <h2>SYNTAX</h2>
 <p> This section documents the syntax and formats employed by the FFmpeg libraries and tools.</p>

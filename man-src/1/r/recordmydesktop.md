@@ -1,4 +1,5 @@
 ---
+
 title: "recordmydesktop(1)"
 name: "recordmydesktop"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-recordmydesktop/"
 description: "recordMyDesktop – record desktop sessions to an Ogg-Theora-Vorbis file."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>recordmydesktop</code> [ <code>Options</code> ]^ <code>filename</code> </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>recordMyDesktop produces a file(default out.ogv)&nbsp;<wbr>that contains a video and audio recording<br />
  of a linux desktop session. The default behavior of recording is to mark areas that have changed(through libxdamage)<br />
  and update the frame. This behavior can be changed (option <code>&#8211;full-shots</code> ) to produce a more accurate result<br />

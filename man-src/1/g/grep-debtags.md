@@ -1,4 +1,5 @@
 ---
+
 title: "grep-debtags(1)"
 name: "grep-debtags"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-grep-debtags/"
 description: "grep-dctrl, grep-status, grep-available, grep-aptavail, grep-debtags – grep Debian control files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>command</i> <code>&#8211;copying</code>|<code>-C</code> | <code>&#8211;help</code>|<code>-h</code> | <code>&#8211;version</code>|<code>-V</code> </p>
 <p> <i>command</i> [<i>options</i>] <i>filter</i> [ <i>file</i>&#8230; ] </p>
 <p> where <i>command</i> is one of <code>grep-dctrl</code>, <code>grep-status</code>, <code>grep-available</code>, <code>grep-aptavail </code> and <code>grep-debtags</code>.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>grep-dctrl</code> program can answer such questions as <i>What is the Debian package foo?</i>, <i>Which version of the Debian package bar is now current?</i>, <i>Which Debian packages does John Doe maintain?</i>, <i>Which Debian packages are somehow related to the Scheme</i> <i>programming language?</i>, and with some help, <i>Who maintain the essential packages of a Debian system?</i>, given a useful input file. </p>
 <p> The programs <code>grep-available</code>, <code>grep-status</code>, <code>grep-aptavail</code> and <code>grep-debtags</code> are aliases of (actually, symbolic links to) <code>grep-dctrl</code>. These aliases use as their default input the <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1) <i>available</i> and <i>status</i> files, the <code>apt-cache dumpavail</code> output and the <code>debtags dumpavail</code> output, respectively. </p>
 <p> <code>grep-dctrl</code> is a specialised <code>grep</code> program that is meant for processing any file which has the general format of a Debian package <i>control</i> file, as described in the Debian Policy. These include the <code>dpkg</code> <i>available</i> file, the <code>dpkg</code> <i>status</i> file, and the <i>Packages</i> files on a distribution medium (such as a Debian CD-ROM or an FTP site carrying Debian). </p>

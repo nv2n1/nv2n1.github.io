@@ -1,4 +1,5 @@
 ---
+
 title: "tcfmgr(1)"
 name: "tcfmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcfmgr/"
 description: "tcfmgr – the command line utility of the fixed-length database API"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The command `<code>tcfmgr</code>&#8216; is a utility for test and debugging of the fixed-length database API and its applications. `<i>path</i>&#8216; specifies the path of a database file. `<i>width</i>&#8216; specifies the width of the value of each record. `<i>limsiz</i>&#8216; specifies the limit size of the database file. `<i>key</i>&#8216; specifies the key of a record. `<i>value</i>&#8216; specifies the value of a record. `<i>file</i>&#8216; specifies the input file. </p>
 <dl>
 <dt>

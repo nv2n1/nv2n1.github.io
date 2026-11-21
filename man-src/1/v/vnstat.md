@@ -1,4 +1,5 @@
 ---
+
 title: "vnstat(1)"
 name: "vnstat"
 section: "1"
@@ -9,9 +10,7 @@ description: "vnstat – a console-based network traffic monitor"
 
 <h2>NAME</h2>
 <p> vnstat &#8211; a console-based network traffic monitor </p>
-<h2>SYNOPSIS</h2>
 <p> <code>vnstat</code> [ <code>-Ddhlmqrstuvw?</code> ] [ <code>&#8211;cleartop</code> ] [ <code>&#8211;config</code> <i>file</i> ] [ <code>&#8211;create</code> ] [ <code>&#8211;days</code> ] [ <code>&#8211;delete</code> ] [ <code>&#8211;dbdir</code> <i>directory</i> ] [ <code>&#8211;debug</code> ] [ <code>&#8211;disable</code> ] [ <code>&#8211;enable</code> ] [ <code>&#8211;exportdb</code> ] [ <code>&#8211;help</code> ] [ <code>&#8211;hours</code> ] [ <code>&#8211;importdb</code> <i>file</i> ] [ <code>-i</code> <i>interface</i> ] [ <code>&#8211;iface</code> <i>interface</i> ] [ <code>&#8211;iflist</code> ] [ <code>&#8211;json</code> <i>mode</i> ] [ <code>&#8211;live</code> <i>mode</i> ] [ <code>&#8211;locale</code> <i>locale</i> ] [ <code>&#8211;longhelp</code> ] [ <code>&#8211;months</code> ] [ <code>&#8211;nick</code> <i>nickname</i> ] [ <code>&#8211;oneline</code> ] [ <code>&#8211;query</code> ] [ <code>&#8211;rateunit</code> ] [ <code>&#8211;rebuildtotal</code> ] [ <code>&#8211;reset</code> ] [ <code>-ru</code> ] [ <code>&#8211;savemerged</code> ] [ <code>&#8211;short</code> ] [ <code>&#8211;showconfig</code> ] [ <code>&#8211;style</code> <i>number</i> ] [ <code>&#8211;sync</code> ] [ <code>&#8211;testkernel</code> ] [ <code>&#8211;top10</code> ] [ <code>-tr</code> <i>time</i> ] [ <code>&#8211;traffic</code> <i>time</i> ] [ <code>&#8211;update</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;weeks</code> ] [ <code>&#8211;xml</code> <i>mode</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>vnStat</code> is a console-based network traffic monitor. It keeps a log of hourly, daily and monthly network traffic for the selected interface(s). However, it isn&#8217;t a packet sniffer. The traffic information is read from the <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5) or <code>sys</code> filesystems depending on availability. That way vnStat can be used even without root permissions on most systems. </p>
 <p> The implementation is divided into two commands. The purpose of the <code>vnstat</code> command is to provide an interface for querying the traffic information stored in network interface specific databases where as the daemon <code><a href="/docs/linux/man/1-vnstatd/">vnstatd</a></code>(1) is responsible for data retrieval and storage. Although the daemon process is constantly running as a service, it is actually spending most of the time sleeping between data updates. </p>
 <h2>OPTIONS</h2>

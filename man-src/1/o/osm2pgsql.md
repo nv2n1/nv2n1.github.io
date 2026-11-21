@@ -1,4 +1,5 @@
 ---
+
 title: "osm2pgsql(1)"
 name: "osm2pgsql"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-osm2pgsql/"
 description: "osm2pgsql – Openstreetmap data to PostgreSQL converter."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>osm2pgsql</code> [<i>options</i>]<i> planet.osm</i><br />
  <code>osm2pgsql</code> [<i>options</i>]<i> planet.osm.{gz,bz2,pbf}</i><br />
  <code>osm2pgsql</code> [<i>options</i>]<i> file1.osm file2.osm file3.osm</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>osm2pgsql</code> command. </p>
 <p> <code>osm2pgsql</code> imports data from OSM file(s) into a PostgreSQL database suitable for use by the Mapnik renderer or the Nominatim geocoder.<br />
  OSM planet snapshots can be downloaded from <a rel="nofollow" href="http://planet.openstreetmap.org/.">http://planet.openstreetmap.org/.</a> Partial planet files (&quot;extracts&quot;) for various countries are available, see <a rel="nofollow" href="http://wiki.openstreetmap.org/wiki/Planet.osm.">http://wiki.openstreetmap.org/wiki/Planet.osm.</a> </p>

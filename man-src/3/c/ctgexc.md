@@ -1,4 +1,5 @@
 ---
+
 title: "ctgexc(3)"
 name: "ctgexc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctgexc/"
 description: "ctgexc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, INFO)<br />
  <i></i><code>CTGEXC</code></p>

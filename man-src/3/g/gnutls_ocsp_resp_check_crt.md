@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_check_crt(3)"
 name: "gnutls_ocsp_resp_check_crt"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ocsp_resp_check_crt – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_resp_check_crt &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_check_crt(gnutls_ocsp_resp_t </code><i>resp</i><code>, unsigned int </code><i>indx</i><code>, gnutls_x509_crt_t </code><i>crt</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_ocsp_resp_check_crt – API function"
 <dd> Specifies response number to get. Use (0) to get the first one.</dd>
 <dt>gnutls_x509_crt_t crt</dt>
 <dd> The certificate to check</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will check whether the OCSP response is about the provided certificate.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned.</p>

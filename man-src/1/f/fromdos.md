@@ -1,4 +1,5 @@
 ---
+
 title: "fromdos(1)"
 name: "fromdos"
 section: "1"
@@ -9,10 +10,8 @@ description: "tofrodos – Converts text files between DOS and Unix formats."
 
 <h2>NAME</h2>
 <p> tofrodos &#8211; Converts text files between DOS and Unix formats.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fromdos</code> [ <i>options</i> ] [file&#8230;]<br />
  <code>todos</code> [ <i>options</i> ] [file&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> DOS text files traditionally have carriage return and line feed pairs as their newline characters while Unix text files have the line feed as their newline character. <i>fromdos</i> converts ASCII and Unicode UTF-8 text files from the DOS format to the Unix format, while <i>todos</i> converts them from the Unix format to the DOS format. </p>
 <p> The programs accept multiple filenames and wildcards as their arguments. You may also use them in a pipe. If either program finds its input redirected, it will process stdin and place the output on stdout.</p>
 <h2>OPTIONS</h2>

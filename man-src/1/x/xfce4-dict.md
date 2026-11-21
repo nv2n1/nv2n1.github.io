@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-dict(1)"
 name: "xfce4-dict"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xfce4-dict/"
 description: "xfce4-dict — a client program to query different dictionaries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xfce4-dict</code> [<code>option</code>] [<code>text &#8230;</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> xfce4-dict allows you to search different kinds of dictionary services for words or phrases and shows you the result. Currently you can query a &quot;Dict&quot; server(RFC 2229), any online dictionary service by opening a web browser or search for words using a spell check program like aspell, ispell or enchant. </p>
 <p> Homepage: <a rel="nofollow" href="http://goodies.xfce.org/projects/applications/xfce4-dict">http://goodies.xfce.org/projects/applications/xfce4-dict</a></p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-ana-dist(1)"
 name: "pq2-ana-dist"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pq2-ana-dist/"
 description: "pq2-ana-dist – Analyse the file distribution of a dataset (or a set of datasets) from a dataset meta-repository based on ROOT files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pq2-ana-dist</code> [options] datasets</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pq2-ana-dist</code> program. </p>
 <p> <code>pq2-ana-dist</code> is a script invoking the <code>pq2</code> ROOT application to analyse the file distribution of a dataset (or a set of datasets) over the file servers, eiher in terms of files or of file sizes. The output is a text file with the the file movements needed to make the file distribution even in the chosen metrics to be used, for example, as in input to <i><a href="/docs/linux/man/1-pq2-redistribute/">pq2-redistribute</a></i>(1). Optionally the internal objects can be saved so that they can be used as starting point for a subsequent run. An histogram and a plot can also be saved to visualize the file distribution. The repository with the dataset information can be accessed via the local file system or a remote file server daemon or a PROOF facility. </p>
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>

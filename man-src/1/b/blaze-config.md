@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-config(1)"
 name: "blaze-config"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-blaze-config/"
 description: "blaze-config – display or set the BlazeBlogger repository options"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blaze-config</code> [<code>-qV</code>] [<code>-b</code> <i>directory</i>] <i>name</i> [<i>value&#8230;</i>] </p>
 <p> <code>blaze-config</code> <code>-e</code> [<code>-b</code> <i>directory</i>] </p>
 <p> <code>blaze-config</code> <code>-h</code> | <code>-v</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>blaze-config</code> is a simple configuration tool for the BlazeBlogger. Depending on the number of given command-line arguments, it either displays the current value of the specified option, or sets/replaces it with the new one. </p>
 <p> The accepted option <i>name</i> is in the form of dot separated section and key (e.g. user.name). For the complete list of available options along with the explanation of their meaning, see the appropriate section below.</p>
 <h2>OPTIONS</h2>

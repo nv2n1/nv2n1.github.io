@@ -1,4 +1,5 @@
 ---
+
 title: "marco-theme-viewer(1)"
 name: "marco-theme-viewer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-marco-theme-viewer/"
 description: "marco-theme-viewer – Marco Theme Previewer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>marco-theme-viewer [THEME]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>marco-theme-viewer</code> allows you to preview any installed Marco theme. </p>
 <p> When designing a new Marco theme, you can use <code>marco-theme-viewer</code> to benchmark the performance of a window frame, and to preview it around different types of windows in various mock scenarios.</p>
 <h2>USAGE</h2>

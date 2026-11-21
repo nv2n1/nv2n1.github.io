@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_reorder_line(3)"
 name: "fribidi_reorder_line"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_reorder_line/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_reorder_line - reorder a line of logical string to visual 
 
- fribidi_reorder_line - reorder a line of logical string to visual 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiLevel fribidi_reorder_line 
  ( 
@@ -71,9 +67,7 @@ url: "/docs/linux/man/3-fribidi_reorder_line/"
 </dd><dt><b>FriBidiStrIndex *map</b>
 </dt><dd> A map of string indices which is reordered to reflect where each glyph ends up.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function reorders the characters in a line of text from logical to final visual order. This function implements part 4 of rule L1, and rules L2 and L3 of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#Reordering_Resolved_Levels.">http://www.unicode.org/reports/tr9/#Reordering_Resolved_Levels.</a> 
+This function reorders the characters in a line of text from logical to final visual order. This function implements part 4 of rule L1, and rules L2 and L3 of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#Reordering_Resolved_Levels.">http://www.unicode.org/reports/tr9/#Reordering_Resolved_Levels.</a> 
 
  As a side effect it also sets position maps if not NULL. 
 

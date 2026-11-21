@@ -1,4 +1,5 @@
 ---
+
 title: "regtree(1)"
 name: "regtree"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-regtree/"
 description: "regtree – Text-mode registry viewer"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>regtree</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;fullpath] [&#8211;no-values] [&#8211;credentials=CREDENTIALS] [location]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The regtree utility prints out all the contents of a Windows registry file. Subkeys are printed with one level more indentation than their parents.</dd>
 <h2>OPTIONS</h2>
 <p> &#8211;help</p>

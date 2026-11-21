@@ -1,4 +1,5 @@
 ---
+
 title: "psbook(1)"
 name: "psbook"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-psbook/"
 description: "psbook – rearrange pages in PostScript file into signatures"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>psbook</code> [ <code>-q</code> ] [ <code>-s</code><i>signature</i> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Psbook</i> rearranges pages from a PostScript document into &#8220;signatures&#8221; for printing books or booklets, creating a new PostScript file. The input PostScript file should follow the Adobe Document Structuring Conventions. </p>
 <p> The <i>-s</i> option selects the size of signature which will be used. The signature size is the number of sides which will be folded and bound together; the number given should be a multiple of four. The default is to use one signature for the whole file. Extra blank sides will be added if the file does not contain a multiple of four pages. </p>
 <p> Psbook normally prints the page numbers of the pages rearranged; the <i>-q</i> option suppresses this.</p>

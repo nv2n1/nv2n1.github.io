@@ -1,4 +1,5 @@
 ---
+
 title: "dlasd1(3)"
 name: "dlasd1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasd1/"
 description: "dlasd1.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd1</code> (NL, NR, SQRE, D, ALPHA, BETA, U, LDU, VT, LDVT, IDXQ, IWORK, WORK, INFO)<br />
  <i></i><code>DLASD1</code> computes the SVD of an upper bidiagonal matrix B of the specified size. Used by sbdsdc.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "taskset(1)"
 name: "taskset"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-taskset/"
 description: "taskset – set or retrieve a process’s CPU affinity"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>taskset</code> [options] <i>mask command</i> [<i>argument</i>&#8230;] </p>
 <p> <code>taskset</code> [options] <code>-p</code> [<i>mask</i>] <i>pid</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>taskset</code> command is used to set or retrieve the CPU affinity of a running process given its <i>pid</i>, or to launch a new <i>command</i> with a given CPU affinity. CPU affinity is a scheduler property that &quot;bonds&quot; a process to a given set of CPUs on the system. The Linux scheduler will honor the given CPU affinity and the process will not run on any other CPUs. Note that the Linux scheduler also supports natural CPU affinity: the scheduler attempts to keep processes on the same CPU as long as practical for performance reasons. Therefore, forcing a specific CPU affinity is useful only in certain applications. </p>
 <p> The CPU affinity is represented as a bitmask, with the lowest order bit corresponding to the first logical CPU and the highest order bit corresponding to the last logical CPU. Not all CPUs may exist on a given system but a mask may specify more CPUs than are present. A retrieved mask will reflect only the bits that correspond to CPUs physically on the system. If an invalid mask is given (i.e., one that corresponds to no valid CPUs on the current system) an error is returned. The masks may be specified in hexadecimal (with or without a leading &quot;0x&quot;), or as a CPU list with the <code>&#8211;cpu-list</code> option. For example, </p>
 <p> <code>0x00000001</code></p>

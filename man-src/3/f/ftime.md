@@ -1,4 +1,5 @@
 ---
+
 title: "ftime(3)"
 name: "ftime"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-ftime/"
 description: "ftime – return date and time"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/timeb.h&gt;</code> </p>
 <p> <code>int ftime(struct timeb *</code><i>tp</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>NOTE</code>: This function is deprecated, and will be removed in a future version of the GNU C library. Use <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2) instead. </p>
 <p> This function returns the current time as seconds and milliseconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). The time is returned in <i>tp</i>, which is declared as follows: </p>
 <p> struct timeb {<br />

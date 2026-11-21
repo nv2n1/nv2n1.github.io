@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_global_set_mem_functions(3)"
 name: "gnutls_global_set_mem_functions"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_global_set_mem_functions – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_set_mem_functions &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>void gnutls_global_set_mem_functions(gnutls_alloc_function </code><i>alloc_func</i><code>, gnutls_alloc_function </code><i>secure_alloc_func</i><code>, gnutls_is_secure_function </code><i>is_secure_func</i><code>, gnutls_realloc_function </code><i>realloc_func</i><code>, gnutls_free_function </code><i>free_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_entry_type(3)"
 name: "get_entry_type"
 section: "3"
@@ -9,11 +10,9 @@ description: "get_entry_type — retrieve the type of a dirfile field"
 
 <h2>NAME</h2>
 <p> get_entry_type &#8212; retrieve the type of a dirfile field</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>gd_entype_t get_entry_type(const DIRFILE *</code><i>dirfile</i><code>, const char</code> <code>*</code><i>field_code</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>get_entry_type</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the field type of the field specified by <i>field_code</i>. If <i>field_code</i> contains a valid representation suffix, it will be ignored. </dd>
 <p> The <code>gd_entype_t</code> type is an enumerated type which may take any of the following values:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ansible-vault(1)"
 name: "ansible-vault"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ansible-vault/"
 description: "ansible-vault – manage encrypted ansible vars files (YAML)."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ansible-vault [create|decrypt|edit|encrypt|rekey] [&#8211;help] [options] file_name</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ansible-vault</code> can encrypt any structured data file used by Ansible. This can include <code>group_vars/</code> or <code>host_vars/</code> inventory variables, variables loaded by <code>include_vars</code> or <code>vars_files</code>, or variable files passed on the ansible-playbook command line with <code>-e @file.yml</code> or <code>-e @file.json</code>. Role variables and defaults are also included! </p>
 <p> Because Ansible tasks, handlers, and so on are also data, these can also be encrypted with vault. If you&#8217;d like to not betray what variables you are even using, you can go as far to keep an individual task file entirely encrypted. </p>
 <p> The password used with vault currently must be the same for all files you wish to use together at the same time.</p>

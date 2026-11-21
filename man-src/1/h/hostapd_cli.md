@@ -1,4 +1,5 @@
 ---
+
 title: "hostapd_cli(1)"
 name: "hostapd_cli"
 section: "1"
@@ -9,9 +10,7 @@ description: "hostapd_cli – hostapd command-line interface"
 
 <h2>NAME</h2>
 <p> hostapd_cli &#8211; hostapd command-line interface</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hostapd_cli</code> [-p&lt;path&gt;] [-i&lt;ifname&gt;] [-a&lt;path&gt;] [-hvB] [command..]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>hostapd_cli</code> utility. </p>
 <p> <code>hostapd_cli</code> is a command-line interface for the <code>hostapd</code> daemon. </p>
 <p> <code>hostapd</code> is a user space daemon for access point and authentication servers. It implements IEEE 802.11 access point management, IEEE 802.1X/WPA/WPA2/EAP Authenticators and RADIUS authentication server. For more information about <code>hostapd</code> refer to the <code><a href="/docs/linux/man/8-hostapd/">hostapd</a></code>(8) man page.</p>

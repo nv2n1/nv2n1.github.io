@@ -1,4 +1,5 @@
 ---
+
 title: "nss-config(1)"
 name: "nss-config"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-nss-config/"
 description: "nss-config – Return meta information about nss libraries"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nss-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;includedir</code>] [<code>&#8211;libs</code>] [<code>&#8211;cflags</code>] [<code>&#8211;libdir</code>] [<code>&#8211;version</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nss-config</code></p>
 <dd>is a shell scrip tool which can be used to obtain gcc options for building client pacakges of nspt.</dd>
 <h2>OPTIONS</h2>

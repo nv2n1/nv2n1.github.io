@@ -1,4 +1,5 @@
 ---
+
 title: "grdgravmag3d(1)"
 name: "grdgravmag3d"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdgravmag3d – Compute the gravity effect of a grid by the metho
 
 <h2>NAME</h2>
 <p> grdgravmag3d &#8211; Compute the gravity effect of a grid by the method of Okabe</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdgravmag3d</code> <i>grdfile_top</i> [<i>grdfile_bot</i>] [ <i>density</i> ] [ <i>thick</i> ] [ <i>xy_file</i> ] [ <i>outgrid</i> ] [ <i>&lt;&#8230;&gt;</i> ] [ <i>increment</i> ] [ <i>z_obs</i> ] [ [<code>n</code><i>n_pad</i>]|[<i>pad_dist</i>]|[&lt;w/e/s/n&gt;] ] [ <i>region</i> ] [ <i>radius</i> ] [ [<i>level</i>] ] [ <i>level</i>[<code>b</code>|<code>t</code>] ] [ <code>-fg</code> ] [ <code>-x</code><i>+a|n|-n</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdgravmag3d</code> will compute the gravity anomaly of a body described by one or (optionally) two grids The output can either be along a given set of xy locations or on a grid. This method is not particularly fast but allows computing the anomaly of arbitrarily complex shapes.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

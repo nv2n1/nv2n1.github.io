@@ -1,4 +1,5 @@
 ---
+
 title: "pkttyagent(1)"
 name: "pkttyagent"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pkttyagent/"
 description: "pkttyagent – Textual authentication helper"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkttyagent</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt>
 <dt> <code>pkttyagent</code> [<code>&#8211;process</code>&nbsp;{&nbsp;<i>pid</i>&nbsp;|&nbsp;<i>pid,pid-start-time</i>&nbsp;} | <code>&#8211;system-bus-name</code>&nbsp;<i>busname</i>] [<code>&#8211;notify-fd</code>&nbsp;<i>fd</i>] [<code>&#8211;fallback</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>pkttyagent</code></p>
 <dd>is used to start a textual authentication agent for the subject specified by either <code>&#8211;process</code> or <code>&#8211;system-bus-name</code>. If neither of these options are given, the parent process is used. </dd>
 <p> To get notified when the authentication agent has been registered either listen to the Changed D-Bus signal or use <code>&#8211;notify-fd</code> to pass the number of a file descriptor that has been passed to the program. This file descriptor will then be closed when the authentication agent has been successfully registered. </p>

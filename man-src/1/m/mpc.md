@@ -1,4 +1,5 @@
 ---
+
 title: "mpc(1)"
 name: "mpc"
 section: "1"
@@ -9,9 +10,7 @@ description: "mpc – Program for controlling Music Player Daemon (MPD)"
 
 <h2>NAME</h2>
 <p> mpc &#8211; Program for controlling Music Player Daemon (MPD)</p>
-<h2>SYNOPSIS</h2>
 <p> mpc [&lt;command&gt; &lt;arguments&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> mpc is a client for MPD, the Music Player Daemon. mpc connects to a MPD and controls it according to commands and arguments passed to it. If no arguments are passed, current status is given.</p>
 <h2>OPTIONS</h2>
 <dl>

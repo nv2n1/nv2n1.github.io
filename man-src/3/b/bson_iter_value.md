@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_value(3)"
 name: "bson_iter_value"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_value() – Fetches the value for the currently observed
 
 <h2>NAME</h2>
 <p> bson_iter_value() &#8211; Fetches the value for the currently observed type as a boxed type. This allows passing around the value without knowing the type at runtime.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 const bson_value_t *
 bson_iter_value(bson_iter_t *iter);
@@ -18,7 +18,6 @@ bson_iter_value(bson_iter_t *iter);
 <dl>
 <dt><code>iter</code></dt>
 <dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Fetches the value for the currently observed type as a boxed type. This allows passing around the value without knowing the type at runtime. </p>
 <h2>RETURNS</h2>
 <p> A <code>bson_value_t</code> that should not be modified or freed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dsysvxx(3)"
 name: "dsysvxx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsysvxx/"
 description: "dsysvxx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsysvxx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, S, B, LDB, X, LDX, RCOND, RPVGRW, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, IWORK, INFO)<br />
  <i></i><code>DSYSVXX</code></p>

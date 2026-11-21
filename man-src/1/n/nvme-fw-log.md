@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-fw-log(1)"
 name: "nvme-fw-log"
 section: "1"
@@ -6,24 +7,13 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-fw-log/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-fw-log - Send NVMe Firmware log page request, returns result and log 
 
- nvme-fw-log - Send NVMe Firmware log page request, returns result and log 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre>
+<pre>
 <i>nvme fw-log</i> &lt;device&gt; [--raw-binary | -b]
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Retrieves the NVMe Firmware log page from an NVMe device and provides the retuned structure. 
+Retrieves the NVMe Firmware log page from an NVMe device and provides the retuned structure. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). 
 

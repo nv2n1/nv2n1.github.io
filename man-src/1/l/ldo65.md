@@ -1,4 +1,5 @@
 ---
+
 title: "ldo65(1)"
 name: "ldo65"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ldo65/"
 description: "ldo65 – linker for o65 object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ldo65</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldo65</code> is a linker for files in the `o65&#8242; object format, formerly <code>ld65</code> but renamed to avoid conflicts with the <code>cc65</code> package (a separate product). </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "h52gif(1)"
 name: "h52gif"
 section: "1"
@@ -9,9 +10,7 @@ description: "h52gif – Converts an HDF5 file to a GIF file."
 
 <h2>NAME</h2>
 <p> h52gif &#8211; Converts an HDF5 file to a GIF file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>h52gif </code> h5_file gif_file <code>-i </code> h5_image [ <code>-p </code> h5_palette ]</p>
-<h2>DESCRIPTION</h2>
 <p> h52gif accepts as input the HDF5 file h5_file and the names of images and associated palettes within that file as input and produces the GIF file gif_file, containing those images, as output. </p>
 <p> h52gif expects at least one h5_image. You may repeat</p>
 <dl>

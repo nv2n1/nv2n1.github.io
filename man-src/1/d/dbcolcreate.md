@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolcreate(1)"
 name: "dbcolcreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolcreate/"
 description: "dbcolcreate – create new columns"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     dbcolcreate NewColumn1 [NewColumn2]
 </pre>
@@ -15,7 +15,6 @@ description: "dbcolcreate – create new columns"
 <pre>
     dbcolcreate -e DefaultValue NewColumnWithDefault
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Create columns <tt>&quot;NewColumn1&quot;</tt>, etc. with an optional <tt>&quot;DefaultValue&quot;</tt>.</p>
 <h2>OPTIONS</h2>
 <dl>

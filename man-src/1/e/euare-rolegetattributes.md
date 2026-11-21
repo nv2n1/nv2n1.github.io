@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolegetattributes(1)"
 name: "euare-rolegetattributes"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-rolegetattributes – Display a role’s ARN, GUID, and trus
 
 <h2>NAME</h2>
 <p> euare-rolegetattributes &#8211; Display a role&#8217;s ARN, GUID, and trust policy</p>
-<h2>SYNOPSIS</h2>
 <p> euare-rolegetattributes [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ROLE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Display a role&#8217;s ARN, GUID, and trust policy</p>
 <h3>positional arguments:</h3>
 <dl>

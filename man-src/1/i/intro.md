@@ -1,4 +1,5 @@
 ---
+
 title: "intro(1)"
 name: "intro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intro/"
 description: "intro – introduction to user commands"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Section 1 of the manual describes user commands and tools, for example, file manipulation tools, shells, compilers, web browsers, file and image viewers and editors, and so on.</p>
 <h2>NOTES</h2>
 <p> Linux is a flavor of UNIX, and as a first approximation all user commands under UNIX work precisely the same under Linux (and FreeBSD and lots of other UNIX-like systems). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-replace-route(1)"
 name: "euca-replace-route"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-replace-route – Replace a route in a VPC route table"
 
 <h2>NAME</h2>
 <p> euca-replace-route &#8211; Replace a route in a VPC route table</p>
-<h2>SYNOPSIS</h2>
 <p> euca-replace-route <code>-r</code> CIDR</p>
 <dl>
 <dt>(<code>-g</code> GATEWAY | <code>-i</code> INSTANCE | <code>-n</code> NETWORKINTERFACEID | <code>-p</code> PEERCON)</dt>
 <dd> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] RTABLE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Replace a route in a VPC route table</p>
 <h3>positional arguments:</h3>
 <dl>

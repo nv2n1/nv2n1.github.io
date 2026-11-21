@@ -1,4 +1,5 @@
 ---
+
 title: "make_method(1)"
 name: "make_method"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-make_method/"
 description: "make_method – Turn Perl code into an XML description for RPC::XML::Server"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 make_method-- name = system.identification-- helptext = 'System ID string' --signature = string-- code = ident.pl-- output = ident.xpl
                                                                                                                                  make_method-- base = methods / identification
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This is a simple tool to create the <font SIZE="-1">XML</font> descriptive files for specifying methods to be published by an <code>RPC::XML::Server</code>-based server. </p>
 <p> If a server is written such that the methods it exports (or <i>publishes</i>) are a part of the running code, then there is no need for this tool. However, in cases where the server may be separate and distinct from the code (such as an Apache-based <font SIZE="-1">RPC</font> server), specifying the routines and filling in the supporting information can be cumbersome. </p>
 <p> One solution that the <code>RPC::XML::Server</code> package offers is the means to load publishable code from an external file. The file is in a simple <font SIZE="-1">XML</font> dialect that clearly delinates the externally-visible name, the method signatures, the help text and the code itself. These files may be created manually, or this tool may be used as an aide.</p>

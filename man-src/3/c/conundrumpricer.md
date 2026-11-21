@@ -1,4 +1,5 @@
 ---
+
 title: "conundrumpricer(3)"
 name: "conundrumpricer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-conundrumpricer/"
 description: "ql/cashflows/conundrumpricer.hpp – CMS-coupon pricer."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/couponpricer.hpp&gt;<br />
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>
 <h3>Classes</h3>

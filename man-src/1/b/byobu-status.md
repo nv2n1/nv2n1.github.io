@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-status(1)"
 name: "byobu-status"
 section: "1"
@@ -9,7 +10,6 @@ description: "byobu-status – displays status suitable for printing by the BYOB
 
 <h2>NAME</h2>
 <p> byobu-status &#8211; displays status suitable for printing by the BYOBU_BACKEND </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu-status</code> is a program periodically called by the BYOBU_BACKEND to gather the formatted status strings displayed in to lower status bar(s). </p>
 <dl>
 <dt><i><a rel="nofollow" href="http://byobu.co">http://byobu.co</a></i></dt>

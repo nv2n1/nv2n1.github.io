@@ -1,4 +1,5 @@
 ---
+
 title: "jpyliborswap(3)"
 name: "jpyliborswap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-jpyliborswap/"
 description: "ql/indexes/swap/jpyliborswap.hpp – JPY Libor Swap indexes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/swapindex.hpp&gt;<br />
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>
 <h3>Classes</h3>

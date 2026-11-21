@@ -1,4 +1,5 @@
 ---
+
 title: "bjdwp(1)"
 name: "bjdwp"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-bjdwp/"
 description: "bjdwp – Command line USB Blackberry Java Debug Wire Protocol"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bjdwp</code> &#8211; Command line USB Blackberry Java Debug Wire Protocol </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bjdwp</code> [-h][-p pin][-P password][-v] address port </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bjdwp</code> is a program that supports the Java Debug Wire Protocol over USB, which enables debugging of Java programs directly on your Blackberry. </p>
 <p> Support is experimental, and development is focused primarily on the BlackBerry Storm. </p>
 <h2>OPTIONS</h2>

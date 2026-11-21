@@ -1,4 +1,5 @@
 ---
+
 title: "perf-diff(1)"
 name: "perf-diff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-perf-diff/"
 description: "perf-diff – Read perf.data files and display the differential profile"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perf diff[baseline file][data file1][[data file2]...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command displays the performance difference amongst two or more perf.data files captured via perf record. </p>
 <p> If no parameters are passed it will assume perf.data.old and perf.data. </p>
 <p> The differential profile is displayed only for events matching both specified perf.data files.</p>

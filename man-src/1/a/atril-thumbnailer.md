@@ -1,4 +1,5 @@
 ---
+
 title: "atril-thumbnailer(1)"
 name: "atril-thumbnailer"
 section: "1"
@@ -9,9 +10,7 @@ description: "atril-thumbnailer – create png thumbnails from atril supported d
 
 <h2>NAME</h2>
 <p> atril-thumbnailer &#8211; create png thumbnails from atril supported documents</p>
-<h2>SYNOPSIS</h2>
 <p> <code>atril-thumbnailer</code> [-s <code>size</code>] <code>input</code> <code>output</code></p>
-<h2>DESCRIPTION</h2>
 <p> atril-thumbnailer is a MATE program to create thumbnails from files supported by atril.</p>
 <h2>OPTIONS</h2>
 <p> atril-thumbnailer obeys all normal GTK+ command line options. The only option -s <i>size </i>makes it possible to choose the vertical size of the created thumbnail.</p>

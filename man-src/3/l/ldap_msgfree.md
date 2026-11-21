@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_msgfree(3)"
 name: "ldap_msgfree"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldap_result – Wait for the result of an LDAP operation"
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_result(LDAP *ld, int msgid, int all,
@@ -18,7 +18,6 @@ int ldap_msgfree(LDAPMessage *msg);
 int ldap_msgtype(LDAPMessage *msg);
 int ldap_msgid(LDAPMessage *msg);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ldap_result()</code> routine is used to wait for and return the result of an operation previously initiated by one of the LDAP asynchronous operation routines (e.g., <code><a href="/docs/linux/man/3-ldap_search_ext/">ldap_search_ext</a></code>(3), <code><a href="/docs/linux/man/3-ldap_modify_ext/">ldap_modify_ext</a></code>(3), etc.). Those routines all return -1 in case of error, and an invocation identifier upon successful initiation of the operation. The invocation identifier is picked by the library and is guaranteed to be unique across the LDAP session. It can be used to request the result of a specific operation from <code>ldap_result()</code> through the <i>msgid</i> parameter. </p>
 <p> The <code>ldap_result()</code> routine will block or not, depending upon the setting of the <i>timeout</i> parameter. If timeout is not a NULL pointer, it specifies a maximum interval to wait for the selection to complete. If timeout is a NULL pointer, the LDAP_OPT_TIMEOUT value set by <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3) is used. With the default setting, the select blocks indefinitely. To effect a poll, the timeout argument should be a non-NULL pointer, pointing to a zero-valued timeval structure. To obtain the behavior of the default setting, bypassing any value set by <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3), set to -1 the <i>tv_sec</i> field of the <i>timeout</i> parameter. See <code><a href="/docs/linux/man/2-select/">select</a></code>(2) for further details. </p>
 <p> If the result of a specific operation is required, <i>msgid</i> should be set to the invocation identifier returned when the operation was initiated, otherwise LDAP_RES_ANY or LDAP_RES_UNSOLICITED should be supplied to wait for any or unsolicited response. </p>

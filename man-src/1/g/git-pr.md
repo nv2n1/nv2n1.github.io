@@ -1,4 +1,5 @@
 ---
+
 title: "git-pr(1)"
 name: "git-pr"
 section: "1"
@@ -9,11 +10,9 @@ description: "git-pr – Checks out a pull request locally"
 
 <h2>NAME</h2>
 <p> <code>git-pr</code> &#8211; Checks out a pull request locally</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-pr</code> &lt;number&gt; [&lt;remote&gt;]<br />
  <code>git-pr</code> &lt;url&gt;<br />
  <code>git-pr clean</code></p>
-<h2>DESCRIPTION</h2>
 <p> Creates a local branch based on a GitHub pull request number or URL, and switch to that branch afterwards.</p>
 <h2>OPTIONS</h2>
 <p> &lt;remote&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "restoretextmode(1)"
 name: "restoretextmode"
 section: "1"
@@ -9,9 +10,7 @@ description: "restoretextmode – save or restore the SVGA registers for textmod
 
 <h2>NAME</h2>
 <p> restoretextmode &#8211; save or restore the SVGA registers for textmode.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>restoretextmode {-r|-w} </code><i>filename</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The state of the SVGA is written to or restored from <i>filename</i> using the <code>vga_gettextmoderegs</code>(3) and <code>vga_settextmoderegs</code>(3) functions. </p>
 <p> As of this writing this file is 385 bytes long but this might change with future versions. </p>
 <p> Please do not fiddle with the contents of the file except when you know what you do. It might even result in hardware damage. Because of that, you should think twice to make this command available to all users on your system. </p>

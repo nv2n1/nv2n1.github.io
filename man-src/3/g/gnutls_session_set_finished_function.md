@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_set_finished_function(3)"
 name: "gnutls_session_set_finished_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_session_set_finished_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_set_finished_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void gnutls_session_set_finished_function(gnutls_session_t </code><i>session</i><code>, gnutls_finished_callback_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_session_set_finished_function – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_finished_callback_func func</dt>
 <dd> a <code>gnutls_finished_callback_func</code> callback.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Register a callback function for the session that will be called when a TLS Finished message has been generated. The function is typically used to copy away the TLS finished message for later use as a channel binding or similar purpose.</p>
 <h2>THE CALLBACK SHOULD FOLLOW THIS PROTOTYPE</h2>
 <p> void callback (gnutls_session_t <i>session</i>, const void *<i>finished</i>, size_t <i>len</i>); </p>

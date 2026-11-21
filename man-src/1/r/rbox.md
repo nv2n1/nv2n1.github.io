@@ -1,4 +1,5 @@
 ---
+
 title: "rbox(1)"
 name: "rbox"
 section: "1"
@@ -10,15 +11,9 @@ url: "/docs/linux/man/1-rbox/"
 
  rbox - generate point distributions for qhull
 
-<h2>SYNOPSIS</h2>
+Command &quot;rbox&quot; (w/o arguments) lists the options.
 
- Command &quot;rbox&quot; (w/o arguments) lists the options.
-
-<h2>DESCRIPTION</h2>
-
- 
-
- rbox generates random or regular points according to the options given, and outputs the points to stdout. The points are generated in a cube, unless 's' or given. The format of the output is the following: first line contains the dimension and a comment, second line contains the number of points, and the following lines contain the points, one point per line. Points are represented by their coordinate values.
+rbox generates random or regular points according to the options given, and outputs the points to stdout. The points are generated in a cube, unless 's' or given. The format of the output is the following: first line contains the dimension and a comment, second line contains the number of points, and the following lines contain the points, one point per line. Points are represented by their coordinate values.
 
 <h2>EXAMPLES</h2>
 

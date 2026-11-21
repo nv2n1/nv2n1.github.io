@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_job_iter_s(3)"
 name: "drmaa_job_iter_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "drmaa_job_iter_s –"
 ---
 
 <p> Iterates over submitted jobs set.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;jobs.h&gt;</p>
 <h3>Data Fields</h3>
 <p> unsigned <code>hash</code><br />

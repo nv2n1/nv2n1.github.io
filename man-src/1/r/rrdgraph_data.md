@@ -1,4 +1,5 @@
 ---
+
 title: "rrdgraph_data(1)"
 name: "rrdgraph_data"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-rrdgraph_data/"
 description: "rrdgraph_data – preparing data for graphing in rrdtool graph"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <font SIZE="-1"><code>DEF:</code></font><i>&lt;vname&gt;</i>=<i>&lt;rrdfile&gt;</i>:<i>&lt;ds-name&gt;</i>:<i>&lt;</i><font SIZE="-1"><i>CF</i></font><i>&gt;</i>[:step=<i>&lt;step&gt;</i>][:start=<i>&lt;time&gt;</i>][:end=<i>&lt;time&gt;</i>][:reduce=<i>&lt;</i><font SIZE="-1">CF</font><i>&gt;</i>] </p>
 <p> <font SIZE="-1"><code>VDEF</code></font>:<i>vname</i>=<i></i><font SIZE="-1"><i>RPN</i></font><i> expression</i> </p>
 <p> <font SIZE="-1"><code>CDEF</code></font>:<i>vname</i>=<i></i><font SIZE="-1"><i>RPN</i></font><i> expression</i></p>
-<h2>DESCRIPTION</h2>
 <p> These three instructions extract data values out of the <font SIZE="-1"><code>RRD</code></font> files, optionally altering them (think, for example, of a bytes to bits conversion). If so desired, you can also define variables containing useful information such as maximum, minimum etcetera. Two of the instructions use a language called <font SIZE="-1"><code>RPN</code></font> which is described in its own manual page. </p>
 <p> Variable names (<i>vname</i>) must be made up strings of the following characters <tt>&quot;A-Z, a-z, 0-9, -,_&quot;</tt> and a maximum length of 255 characters. </p>
 <p> When picking variable names, make sure you do not choose a name that is already taken by an <font SIZE="-1">RPN</font> operator. A safe bet it to use lowercase or mixed case names for variables since operators will always be in uppercase.</p>

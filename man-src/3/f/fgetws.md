@@ -1,4 +1,5 @@
 ---
+
 title: "fgetws(3)"
 name: "fgetws"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-fgetws/"
 description: "fgetws – read a wide-character string from a FILE stream"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;
 wchar_t *fgetws(wchar_t *ws, int n, FILE *stream);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>fgetws</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-fgets/">fgets</a></code>(3) function. It reads a string of at most <i>n-1</i> wide characters into the wide-character array pointed to by <i>ws</i>, and adds a terminating null wide character (L&#8217;\0&#8217;). It stops reading wide characters after it has encountered and stored a newline wide character. It also stops when end of stream is reached. </p>
 <p> The programmer must ensure that there is room for at least <i>n</i> wide characters at <i>ws</i>. </p>
 <p> For a nonlocking counterpart, see <code><a href="/docs/linux/man/3-unlocked_stdio/">unlocked_stdio</a></code>(3).  </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dotty(1)"
 name: "dotty"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dotty/"
 description: "dotty – A Customizable Graph Editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dotty</code> [ <code>-V</code> ] [ <code>-lm</code><i>mode</i> ] [ <code>-el</code><i>lev</i> ] [ <i>file</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dotty</code> is a graph editor for the X Window System. It may be run as a standalone editor, or as a front end for applications that use graphs. It can control multiple windows viewing different graphs. </p>
 <p> <code>dotty</code> is written on top of <code>dot</code> and <code>lefty</code>. <code>lefty</code> is a general-purpose programmable editor for technical pictures. It has an interpretive programming language similar to AWK and C. The user interface and graph editing operations of <code>dotty</code> are written as <code>lefty</code> functions. Programmer-defined graph operations may be loaded as well. Graph layouts are made by <code>dot</code>, which runs as a separate process that communicates with <code>lefty</code> through pipes. </p>
 <p> If the input graph contains xdot attributes, <code>dotty</code> will use that to display the graph. Otherwise, it runs <code>dot</code> to obtain layout information.</p>

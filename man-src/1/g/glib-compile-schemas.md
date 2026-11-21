@@ -1,4 +1,5 @@
 ---
+
 title: "glib-compile-schemas(1)"
 name: "glib-compile-schemas"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-glib-compile-schemas/"
 description: "glib-compile-schemas – GSettings schema compiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glib-compile-schemas</code> [OPTION&#8230;] {DIRECTORY}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>glib-compile-schemas</code></p>
 <dd>compiles all the GSettings XML schema files in <i>DIRECTORY</i> into a binary file with the name gschemas.compiled that can be used by <code>GSettings</code>. The XML schema files must have the filename extension .gschema.xml. For a detailed description of the XML file format, see the <code>GSettings</code> documentation. </dd>
 <p> At runtime, GSettings looks for schemas in the glib-2.0/schemas subdirectories of all directories specified in the <code>XDG_DATA_DIRS</code> environment variable. The usual location to install schema files is /usr/share/glib-2.0/schemas. </p>

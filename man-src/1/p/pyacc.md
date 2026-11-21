@@ -1,4 +1,5 @@
 ---
+
 title: "pyacc(1)"
 name: "pyacc"
 section: "1"
@@ -18,7 +19,6 @@ description: "pyacc – Pascal Yacc compiler compiler."
 <dt><code>-d</code></dt>
 <dd> <i>Debug:</i> TP Yacc generates a parser with debugging output. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>TP Yacc</code> is a program that lets you prepare parsers from the description of input languages by BNF-like grammars. You simply specify the grammar for your target language, augmented with the Turbo Pascal code necessary to process the syntactic constructs, and TP Yacc translates your grammar into the Turbo Pascal code for a corresponding parser subroutine named yyparse. </p>
 <p> TP Yacc parses the source grammar contained in yacc-file (with default suffix .y) and writes the constructed parser subroutine to the specified output-file (with default suffix .pas); if no output file is specified, output goes to yacc-file with new suffix .pas. If any errors are found during compilation, error messages are written to the list file (yacc-file with new suffix .lst). </p>
 <p> The generated parser routine, yyparse, is declared as: </p>

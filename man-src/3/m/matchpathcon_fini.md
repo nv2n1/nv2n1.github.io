@@ -1,4 +1,5 @@
 ---
+
 title: "matchpathcon_fini(3)"
 name: "matchpathcon_fini"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-matchpathcon_fini/"
 description: "matchpathcon, matchpathcon_index – get the default SELinux security context for the specified path from the file contexts configuration"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int matchpathcon_init(const char *</code><i>path</i><code>);</code> </p>
 <p> <code>int matchpathcon_init_prefix(const char *</code><i>path</i><code>, const char *</code><i>prefix</i><code>);</code> </p>
 <p> <code>int matchpathcon_fini(void);</code> </p>
 <p> <code>int matchpathcon(const char *</code><i>path</i><code>, mode_t </code><i>mode</i><code>, char **</code><i>con</i><code>);</code> </p>
 <p> <code>int matchpathcon_index(const char *</code><i>name</i><code>, mode_t </code><i>mode</i><code>, char **</code><i>con</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This family of functions is deprecated. For new code, please use <code><a href="/docs/linux/man/3-selabel_open/">selabel_open</a></code>(3) with the <code>SELABEL_CTX_FILE</code> backend in place of <code>matchpathcon_init</code>(), use <code><a href="/docs/linux/man/3-selabel_close/">selabel_close</a></code>(3) in place of <code>matchpathcon_fini</code>(), and use <code><a href="/docs/linux/man/3-selabel_lookup/">selabel_lookup</a></code>(3) in place of <code>matchpathcon</code>(). </p>
 <p> The remaining description below is for the legacy interface. </p>
 <p> <code>matchpathcon_init</code>() loads the file contexts configuration specified by <i>path</i> into memory for use by subsequent <code>matchpathcon</code>() calls. If <i>path</i> is NULL, then the active file contexts configuration is loaded by default, i.e. the path returned by <code><a href="/docs/linux/man/3-selinux_file_context_path/">selinux_file_context_path</a></code>(3). Unless the <code>MATCHPATHCON_BASEONLY </code> flag has been set via <code><a href="/docs/linux/man/3-set_matchpathcon_flags/">set_matchpathcon_flags</a></code>(3), files with the same path prefix but a <code>.homedirs</code> and <code>.local</code> suffix are also looked up and loaded if present. These files provide dynamically generated entries for user home directories and for local customizations. </p>

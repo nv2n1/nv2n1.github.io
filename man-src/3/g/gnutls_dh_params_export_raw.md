@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dh_params_export_raw(3)"
 name: "gnutls_dh_params_export_raw"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_dh_params_export_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_params_export_raw &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_params_export_raw(gnutls_dh_params_t </code><i>params</i><code>, gnutls_datum_t * </code><i>prime</i><code>, gnutls_datum_t * </code><i>generator</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_dh_params_export_raw – API function"
 <dd> will hold the new generator</dd>
 <dt>unsigned int * bits</dt>
 <dd> if non null will hold the secret key&#8217;s number of bits</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the pair of prime and generator for use in the Diffie-Hellman key exchange. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned.</p>

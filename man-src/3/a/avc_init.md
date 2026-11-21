@@ -1,4 +1,5 @@
 ---
+
 title: "avc_init(3)"
 name: "avc_init"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-avc_init/"
 description: "avc_init – legacy userspace SELinux AVC setup"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_init(const char *</code><i>msgprefix</i><code>,</code> <code>const struct avc_memory_callback *</code><i>mem_callbacks</i><code>,</code><br />
  <code>const struct avc_log_callback *</code><i>log_callbacks</i><code>,</code><br />
  <code>const struct avc_thread_callback *</code><i>thread_callbacks</i><code>,</code><br />
  <code>const struct avc_lock_callback *</code><i>lock_callbacks</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>avc_init</code>() is deprecated; please use <code><a href="/docs/linux/man/3-avc_open/">avc_open</a></code>(3) in conjunction with <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3) in all new code. </p>
 <p> <code>avc_init</code>() initializes the userspace AVC and must be called before any other AVC operation can be performed. A non-NULL <i>msgprefix</i> will be prepended to all audit messages produced by the userspace AVC. The default is `uavc&#8217;. The remaining arguments, if non-NULL, specify callbacks to be used by the userspace AVC.</p>
 <h2>CALLBACKS</h2>

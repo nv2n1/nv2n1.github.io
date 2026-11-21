@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_aclentry(3)"
 name: "dmlite_aclentry"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_aclentry –"
 ---
 
 <p> Handles ACL entries.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;utils.h&gt;</p>
 <h3>Data Fields</h3>
 <p> uint8_t <code>type</code> </p>

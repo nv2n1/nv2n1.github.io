@@ -1,4 +1,5 @@
 ---
+
 title: "perfalloc(1)"
 name: "perfalloc"
 section: "1"
@@ -9,9 +10,7 @@ description: "perfalloc – notify pmdaperfevent(1) to disable hardware counter 
 
 <h2>NAME</h2>
 <p> <code>perfalloc</code> &#8211; notify <code><a href="/docs/linux/man/1-pmdaperfevent/">pmdaperfevent</a></code>(1) to disable hardware counter allocation.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/perfevent/perfalloc</code> [<code>-D</code>] [<code>-d</code>] [<code>-f</code> <i>lockfile</i>] [<code>-h</code>] [<code>-v</code>] [<code>COMMAND</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>perfalloc</code> is a command that notifies the <code><a href="/docs/linux/man/1-pmdaperfevent/">pmdaperfevent</a></code>(1) to disable hardware counter event collection. This allow unprivileged processes to use the hardware counters. </p>
 <p> If the reservation request fails, then perfalloc exits immediately with exit code EXIT_FAILURE. If successful, the perfalloc will run until a kill signal is received. The reservation request persists while perfalloc is running. </p>
 <p> Note that <code>pmdaperfevent</code> is affected by the value of the <i>kernel.perf_event_paranoid</i> setting, which can be adjusted by <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8). </p>

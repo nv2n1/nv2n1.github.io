@@ -1,4 +1,5 @@
 ---
+
 title: "tee(1)"
 name: "tee"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tee/"
 description: "tee – read from standard input and write to standard output and files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tee</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Copy standard input to each FILE, and also to standard output.</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;append</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "flow-dscan(1)"
 name: "flow-dscan"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-dscan – Detect scanning and other suspicious network activi
 
 <h2>NAME</h2>
 <p> flow-dscan &#8211; Detect scanning and other suspicious network activity.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-dscan</code> [ <code>-bBhlmpwW</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-D</code><i> iplist_depth</i> ] [ <code>-s</code><i> state_file</i> ] [ <code>-i</code><i> input_filter</i> ] [ <code>-L</code><i> suppress_list</i> ] [ <code>-o</code><i> output_filter</i> ] [ <code>-O</code><i> excessive_octets</i> ] [ <code>-P</code><i> excessive_flows</i> ] [ <code>-S</code><i> port_scan_trigger</i> ] [ <code>-t</code><i> ager_timeout</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-dscan</code> utility is used to detect suspicious activity such as port scanning, host scanning, and flows with unusually high octets or packets. A source and destination suppress list is supported to help prevent false alarms due to hosts such as nameservers or popular web servers that exchange traffic with a large number of hosts. Alarms are logged to syslog or stderr. The internal state of flow-dscan can be saved and loaded to allow for interrupted operation. </p>
 <p> <code>flow-dscan</code> will work best if configured to only watch only inbound or outbound traffic by using the input or output interface filter option. </p>
 <p> The host scanner works by counting the length of the destination IP hash chain. If it goes above 64, then the src is considered to be scanning. </p>

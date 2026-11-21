@@ -1,4 +1,5 @@
 ---
+
 title: "docker-system-info(1)"
 name: "docker-system-info"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-system-info/"
 description: "docker-system-info – Display system-wide information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker system info [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This command displays system wide information regarding the Docker installation. Information displayed includes the kernel version, number of containers and images. The number of images shown is the number of unique images. The same image tagged under different names is counted only once. </p>
 <p> If a format is specified, the given template will be executed instead of the default format. Go&#8217;s <code>text/template</code> package describes all the details of the format. </p>
 <p> Depending on the storage driver in use, additional information can be shown, such as pool name, data file, metadata file, data space used, total data space, metadata space used, and total metadata space. </p>

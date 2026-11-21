@@ -1,4 +1,5 @@
 ---
+
 title: "riostream(1)"
 name: "riostream"
 section: "1"
@@ -10,19 +11,13 @@ url: "/docs/linux/man/1-riostream/"
 
  riostream - zero-copy streaming over RDMA ping-pong test.
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 riostream[-s server_address][-b bind_address][-B buffer_size]
          [-I iterations][-C transfer_count]
          [-S transfer_size][-p server_port][-T test_option]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Uses the streaming over RDMA protocol (rsocket) to connect and exchange data between a client and server application.
+Uses the streaming over RDMA protocol (rsocket) to connect and exchange data between a client and server application.
 
 <h2>OPTIONS</h2>
 

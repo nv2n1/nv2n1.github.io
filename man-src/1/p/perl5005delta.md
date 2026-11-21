@@ -1,4 +1,5 @@
 ---
+
 title: "perl5005delta(1)"
 name: "perl5005delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5005delta/"
 description: "perl5005delta – what’s new for perl5.005"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.004 release and this one.</p>
 <h2>About the new versioning system</h2>
 <p> Perl is now developed on two tracks: a maintenance track that makes small, safe updates to released production versions with emphasis on compatibility; and a development track that pursues more aggressive evolution. Maintenance releases (which should be considered production quality) have subversion numbers that run from <tt>1</tt> to <tt>49</tt>, and development releases (which should be considered &#8220;alpha&#8221; quality) run from <tt>50</tt> to <tt>99</tt>. </p>

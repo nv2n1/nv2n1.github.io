@@ -1,4 +1,5 @@
 ---
+
 title: "serialver-java-1(1)"
 name: "serialver-java-1"
 section: "1"
@@ -10,7 +11,6 @@ description: "serialver – The Serial Version Command"
 <h2>Name</h2>
 <p> serialver &#8211; The Serial Version Command </p>
 <p> The <code>serialver</code> command returns the <i>serialVersionUID</i>. </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 serialver[options][classnames]
 </code></pre>
@@ -21,7 +21,6 @@ serialver[options][classnames]
 <dt>classnames</dt>
 <dd> One or more class names</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>serialver</code> returns the <i>serialVersionUID</i> for one or more classes in a form suitable for copying into an evolving class. When invoked with no arguments it prints a usage line. </p>
 <h2>OPTIONS</h2>
 <dl>

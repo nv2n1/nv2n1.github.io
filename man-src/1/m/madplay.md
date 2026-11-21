@@ -1,4 +1,5 @@
 ---
+
 title: "madplay(1)"
 name: "madplay"
 section: "1"
@@ -9,10 +10,8 @@ description: "madplay – decode and play MPEG audio stream(s)"
 
 <h2>NAME</h2>
 <p> madplay &#8211; decode and play MPEG audio stream(s)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>madplay</code> [<i>options</i>] <i>file</i> &#8230;<br />
  <code>madplay</code> [<i>options</i>] <code>-o</code> [<i>type</i><code>:</code>]<i>path</i> <i>file</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>madplay</code> is a command-line MPEG audio decoder and player based on the MAD library (<i>libmad</i>). </p>
 <p> MAD is a high-quality MPEG audio decoder. It currently supports MPEG-1 and the MPEG-2 extension to Lower Sampling Frequencies, as well as the so-called MPEG 2.5 format. All three audio layers (Layer I, Layer II, and Layer III a.k.a. MP3) are fully implemented. </p>
 <p> Among the special features of MAD are 24-bit PCM resolution and 100% fixed-point (integer) computation. Since MAD is implemented entirely without the use of floating point arithmetic, it performs especially well on architectures without an FPU. </p>

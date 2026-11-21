@@ -1,4 +1,5 @@
 ---
+
 title: "inotail(1)"
 name: "inotail"
 section: "1"
@@ -9,9 +10,7 @@ description: "inotail – A fast and lightweight version of tail using inotify"
 
 <h2>NAME</h2>
 <p> inotail &#8211; A fast and lightweight version of tail using inotify</p>
-<h2>SYNOPSIS</h2>
 <p> <code>inotail</code> [OPTION]&#8230; [FILE]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>inotail</code> is a replacement for the &#8216;tail&#8217; program found in the base installation of every Linux/UNIX system. It makes use of the inotify infrastructure in recent versions of the Linux kernel to speed up tailing files in the follow mode (the &#8216;-f&#8217; option). Standard tail polls the file every second by default while inotail listens to special events sent by the kernel through the inotify API to determine whether a file needs to be reread. <i>Note:</i> inotail will not work on systems running a kernel without inotify. To enable inotify, please set CONFIG_INOTIFY=y in your Linux kernel configuration and recompile it. </p>
 <p> Currently inotail is not fully compatible to neither POSIX or GNU tail but might be in the future.</p>
 <h2>OPTIONS</h2>

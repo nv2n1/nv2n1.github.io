@@ -1,4 +1,5 @@
 ---
+
 title: "interpolator_type(3)"
 name: "interpolator_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolator_type/"
 description: "QuantLib::PiecewiseDefaultCurve – Piecewise default-probability term structure."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/credit/piecewisedefaultcurve.hpp&gt; </p>
 <p> Inherits Traits::template curve::type&lt;Interpolator&gt;, and <code>QuantLib::LazyObject</code>. </p>
 <h3>Public Types</h3>

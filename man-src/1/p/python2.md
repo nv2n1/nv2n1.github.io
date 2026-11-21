@@ -1,4 +1,5 @@
 ---
+
 title: "python2(1)"
 name: "python2"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-python2/"
 description: "python – an interpreted, interactive, object-oriented programming language"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>python</code> [ <code>-B</code> ] [ <code>-d</code> ] [ <code>-E</code> ] [ <code>-h</code> ] [ <code>-i</code> ] [ <code>-m </code> <i>module-name</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[ <code>-O</code> ] [ <code>-OO</code> ] [ <code>-R</code> ] [ <code>-Q</code> <i>argument</i> ] [ <code>-s</code> ] [ <code>-S</code> ] [ <code>-t</code> ] [ <code>-u</code> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[ <code>-v</code> ] [ <code>-V</code> ] [ <code>-W</code> <i>argument</i> ] [ <code>-x</code> ] [ <code>-3</code> ] [ <code>-?</code> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[ <code>-c</code> <i>command</i> | <i>script</i> | &#8211; ] [ <i>arguments</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> Python is an interpreted, interactive, object-oriented programming language that combines remarkable power with very clear syntax. For an introduction to programming in Python, see the Python Tutorial. The Python Library Reference documents built-in and standard types, constants, functions and modules. Finally, the Python Reference Manual describes the syntax and semantics of the core language in (perhaps too) much detail. (These documents may be located via the <code>INTERNET RESOURCES</code> below; they may be installed on your system as well.) </p>
 <p> Python&#8217;s basic power can be extended with your own modules written in C or C++. On most systems such modules may be dynamically loaded. Python is also adaptable as an extension language for existing applications. See the internal documentation for hints. </p>
 <p> Documentation for installed Python modules and packages can be viewed by running the <code>pydoc</code> program.</p>

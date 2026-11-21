@@ -1,4 +1,5 @@
 ---
+
 title: "lilypond-book(1)"
 name: "lilypond-book"
 section: "1"
@@ -9,9 +10,7 @@ description: "lilypond-book – manual page for lilypond-book 2.12.2"
 
 <h2>NAME</h2>
 <p> lilypond-book &#8211; manual page for lilypond-book 2.12.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lilypond-book</code> [<i>OPTION</i>]&#8230; <i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Process LilyPond snippets in hybrid HTML, LaTeX, texinfo or DocBook document.</p>
 <h2>OPTIONS</h2>
 <dl>

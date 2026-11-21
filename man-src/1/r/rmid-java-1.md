@@ -1,4 +1,5 @@
 ---
+
 title: "rmid-java-1(1)"
 name: "rmid-java-1"
 section: "1"
@@ -9,14 +10,12 @@ description: "rmid – Starts the activation system daemon that enables objects 
 
 <h2>NAME</h2>
 <p> rmid &#8211; Starts the activation system daemon that enables objects to be registered and activated in a Java Virtual Machine (JVM).</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>rmid</code> [<i>options</i>]
 </pre>
 <dl>
 <dt><i>options</i></dt>
 <dd> The command-line options. See Options.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>rmid</code> command starts the activation system daemon. The activation system daemon must be started before activatable objects can be either registered with the activation system or activated in a JVM. For details on how to write programs that use activatable objects, the <i>Using Activation</i> tutorial at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/rmi/activation/overview.html">http://docs.oracle.com/javase/8/docs/technotes/guides/rmi/activation/overview.html</a> </p>
 <p> Start the daemon by executing the <code>rmid</code> command and specifying a security policy file, as follows: </p>
 <pre>

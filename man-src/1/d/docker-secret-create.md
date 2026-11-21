@@ -1,4 +1,5 @@
 ---
+
 title: "docker-secret-create(1)"
 name: "docker-secret-create"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-secret-create/"
 description: "docker-secret-create – Create a secret from a file or STDIN as content"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker secret create [OPTIONS] SECRET [file|-]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Create a secret from a file or STDIN as content </p>
 <h2>OPTIONS</h2>
 <p> <code>-d</code>, <code>&#8211;driver</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Secret driver</p>

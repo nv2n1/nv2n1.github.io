@@ -1,4 +1,5 @@
 ---
+
 title: "acpiexec(1)"
 name: "acpiexec"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-acpiexec/"
 description: "acpiexec – ACPI AML execution and debug utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>acpiexec</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> &lt;aml-file&gt; <code>&#8230;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>acpiexec</code> command. The option list is taken from the acpiexec interactive help. </p>
 <p> <code>acpiexec</code> provides a simulated execution environment for AML code so that it can be more easily tested and debugged. </p>
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>

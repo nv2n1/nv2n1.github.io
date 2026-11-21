@@ -1,4 +1,5 @@
 ---
+
 title: "close(3)"
 name: "close"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-close/"
 description: "ql/math/comparison.hpp – floating-point comparisons"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/types.hpp&gt;<br />
  #include &lt;boost/shared_ptr.hpp&gt; </p>
 <h3>Functions</h3>

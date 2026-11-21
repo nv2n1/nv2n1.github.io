@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_init_emu(3)"
 name: "cgiwrap_init_emu"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_init_emu/"
 description: "cgiwrap_init_emu – initialize cgiwrap for emulated use"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgiwrap.h&gt;
 </code></pre>
@@ -25,7 +25,6 @@ void cgiwrap_init_emu(void *data, READ_FUNC read_cb,
  putenv_cb &#8211; a cb to replace putenv<br />
  iterenv_cb &#8211; a cb to replace the default environment iteration<br />
  function (which just wraps walking the envp array) </p>
-<h2>DESCRIPTION</h2>
 <p> cgiwrap_init_emu sets up the cgiwrap subsystem for use in an emulated environment where you are providing routines to use in place of the standard routines, ie when used to interface with a server or scripting language. See cgi/cgiwrap.h for the exact definitions of the callback functions. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

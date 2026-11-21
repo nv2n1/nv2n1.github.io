@@ -1,4 +1,5 @@
 ---
+
 title: "pgmtoppm(1)"
 name: "pgmtoppm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pgmtoppm/"
 description: "pgmtoppm – colorize a portable graymap into a portable pixmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmtoppm</code> <i>colorspec</i> [<i>pgmfile</i>]<br />
  <code>pgmtoppm</code> <i>colorspec1</i><code>&#8211;</code><i>colorspec2</i> [<i>pgmfile</i>]<br />
  <code>pgmtoppm -map</code> <i>mapfile</i> [<i>pgmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PGM as input. Produces a PPM file as output with a specific color assigned to each gray value in the input. </p>
 <p> If you specify one color argument, black in the pgm file stays black and white in the pgm file turns into the specified color in the ppm file. Gray values in between are linearly mapped to differing intensities of the specified color. </p>
 <p> If you specify two color arguments (separated by a dash), then black gets mapped to the first color and white gets mapped to the second and gray values in between get mapped linearly (across a three dimensional space) to colors in between. </p>

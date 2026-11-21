@@ -1,4 +1,5 @@
 ---
+
 title: "dex(1)"
 name: "dex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dex/"
 description: "dex"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dex [-c command] [-t tag] [-r rcfile] [-V] [file]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> A small and flexible text editor.</p>
 <h2>COMMAND LINE OPTIONS</h2>
 <p> -c command</p>

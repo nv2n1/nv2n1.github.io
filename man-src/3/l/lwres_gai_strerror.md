@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_gai_strerror(3)"
 name: "lwres_gai_strerror"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-lwres_gai_strerror/"
 description: "lwres_gai_strerror – print suitable error string"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
 <dl>
 <dt> <code>char * gai_strerror(int&nbsp;<wbr></code><i>ecode</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lwres_gai_strerror()</code></p>
 <dd>returns an error message corresponding to an error code returned by <code>getaddrinfo()</code>. The following error codes and their meaning are defined in <i>include/lwres/netdb.h</i>. </dd>
 <p> <code>EAI_ADDRFAMILY</code></p>

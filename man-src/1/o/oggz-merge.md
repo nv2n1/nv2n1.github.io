@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-merge(1)"
 name: "oggz-merge"
 section: "1"
@@ -10,7 +11,6 @@ description: "oggz-merge — Merge Ogg files together, interleaving pages in ord
 <h2>NAME</h2>
 <p> oggz-merge &#8212; Merge Ogg files together, interleaving pages in order of presentation time.<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>oggz-merge</code> [-o <code>filename</code> | &#8211;output <code>filename</code> ] filename &#8230; </p>
 <p> <code>oggz-merge</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

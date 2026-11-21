@@ -1,4 +1,5 @@
 ---
+
 title: "bfuse(1)"
 name: "bfuse"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-bfuse/"
 description: "bfuse – Create a FUSE filesystem out of BlackBerry databases."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bfuse</code> &#8211; Create a FUSE filesystem out of BlackBerry databases. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bfuse</code> mountpoint [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>bfuse</code> connects to your BlackBerry and turns its databases into a mounted filesystem using the FUSE filesystem library. As such, it has a few basic arguments, and a list of common options supported by FUSE. </p>
 <p> The device will remain in Desktop mode for as long as bfuse runs. </p>
 <p> For more information on FUSE options, see <a rel="nofollow" href="http://fuse.sourceforge.net/">http://fuse.sourceforge.net/</a> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3parsetree(3)"
 name: "antlr3parsetree"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3parsetree.h –"
 ---
 
 <p> Abstraction of Common tree to provide payload and string representation of node.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3basetree.h">antlr3basetree.h</a>&gt; </p>
 <h3>Data Structures</h3>
 <p> struct <code>ANTLR3_PARSE_TREE_struct</code> </p>

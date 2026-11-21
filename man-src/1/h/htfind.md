@@ -1,4 +1,5 @@
 ---
+
 title: "htfind(1)"
 name: "htfind"
 section: "1"
@@ -9,11 +10,9 @@ description: "htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping – file tra
 
 <h2>NAME</h2>
 <p> <code>htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping</code> &#8211; file transfers and queries via HTTP/HTTPS/SiteCast</p>
-<h2>SYNOPSIS</h2>
 <p> <code>htcp, htmv</code> [options] Source-URL[s] Destination-URL </p>
 <p> <code>htrm, htls, htll, htmkir, htfind</code> [options] Target-URL[s] </p>
 <p> <code>htping</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>htcp</code> is a client to fetch files or directory listings from remote servers using HTTP or HTTPS, or to put or delete files or directories onto remote servers using HTTPS. htcp is similar to <a href="/docs/linux/man/1-scp/">scp</a>(1), but uses HTTP/HTTPS rather than ssh as its transfer protocol. htcp can also use the HTCP protocol to query HTTP(S) fileservers via SiteCast. </p>
 <p> When talking to a fileserver with HTTPS, htcp can run &quot;anonymously&quot;, with a standard X.509 user certificate and key, or with a GSI Proxy. This makes htcp very useful in Grid environments where many users have certificates and where jobs and users have access to GSI proxies. </p>
 <h2>URLs</h2>

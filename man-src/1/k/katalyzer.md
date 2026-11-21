@@ -1,4 +1,5 @@
 ---
+
 title: "katalyzer(1)"
 name: "katalyzer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-katalyzer/"
 description: "katalyzer – analyzes Kate streams and displays various information about them."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>katalyzer</code> <code>[-hV]</code> <code>[-l </code><i>types</i><code>]</code> <code>[-l!]</code> [ infile ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>katalyzer</code> analyzes Kate streams and displays information about them. The type of information to select is selectable on the command line. Several multiplexed Kate streams may be analyzed at the same time. </p>
 <h2>OPTIONS</h2>
 <dl>

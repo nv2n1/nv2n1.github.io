@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-loginctl(1)"
 name: "systemd-loginctl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-systemd-loginctl/"
 description: "loginctl, systemd-loginctl – Control the systemd login manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>loginctl </code><code>[OPTIONS&#8230;]</code><code>{COMMAND}</code><code>[NAME&#8230;]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>loginctl</code></p>
 <dd>may be used to introspect and control the state of the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) login manager <code><a href="/docs/linux/man/8-systemd-logind-service/">systemd-logind.service</a></code>(8).</dd>
 <h2>OPTIONS</h2>

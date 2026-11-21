@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_check_issuer(3)"
 name: "gnutls_x509_crt_check_issuer"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_check_issuer – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_check_issuer &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_check_issuer(gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_x509_crt_t </code><i>issuer</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_crt_check_issuer – API function"
 <dd> is the certificate to be checked</dd>
 <dt>gnutls_x509_crt_t issuer</dt>
 <dd> is the certificate of a possible issuer</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will check if the given certificate was issued by the given issuer. It checks the DN fields and the authority key identifier and subject key identifier fields match. </p>
 <p> If the same certificate is provided at the <i>cert</i> and <i>issuer</i> fields, it will check whether the certificate is self-signed.</p>
 <h2>RETURNS</h2>

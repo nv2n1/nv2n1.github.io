@@ -1,4 +1,5 @@
 ---
+
 title: "palmtopnm(1)"
 name: "palmtopnm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-palmtopnm/"
 description: "palmtopnm – convert a Palm pixmap into a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>palmtopnm</code> [<code>-verbose</code>] [<code>-rendition</code> <i>N</i>] [<code>-showhist</code>]<br />
  [<code>-forceplain</code>] [<i>pnmfile</i>]<br />
  <code>palmtopnm</code> <code>-transparent </code> [<code>-verbose</code>] [<i>pnmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Palm pixmap as input, from stdin or <i>pnmfile</i>. Produces either a portable pixmap as output, or writes the value of the transparent color in the Palm pixmap to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>

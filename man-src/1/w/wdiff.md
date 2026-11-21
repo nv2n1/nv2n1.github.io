@@ -1,4 +1,5 @@
 ---
+
 title: "wdiff(1)"
 name: "wdiff"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-wdiff/"
 description: "wdiff – display word differences between text files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wdiff</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i><br />
  <code>wdiff</code> <i>,-d /</i>[<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> wdiff &#8211; Compares words in two files and report differences. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

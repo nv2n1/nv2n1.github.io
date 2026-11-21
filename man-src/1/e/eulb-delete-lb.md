@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-delete-lb(1)"
 name: "eulb-delete-lb"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-delete-lb – Delete a load balancer"
 
 <h2>NAME</h2>
 <p> eulb-delete-lb &#8211; Delete a load balancer</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-delete-lb [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</p>
 <dl>
 <dt>[&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger]</dt>
 <dd> [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a load balancer</p>
 <h2>DESCRIPTION</h2>
 <p> If the load balancer does not exist, this command still succeeds.</p>

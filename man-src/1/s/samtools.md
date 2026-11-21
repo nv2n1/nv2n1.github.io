@@ -1,4 +1,5 @@
 ---
+
 title: "samtools(1)"
 name: "samtools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-samtools/"
 description: "samtools – Utilities for the Sequence Alignment/Map (SAM) format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> samtools addreplacerg -r &#8216;ID:fish&#8217; -r &#8216;LB:1334&#8217; -r &#8216;SM:alpha&#8217; -o output.bam input.bam </p>
 <p> samtools ampliconclip -b bed.file input.bam </p>
 <p> samtools ampliconstats primers.bed in.bam </p>
@@ -47,7 +47,6 @@ description: "samtools – Utilities for the Sequence Alignment/Map (SAM) format
 <p> samtools targetcut input.bam </p>
 <p> samtools tview aln.sorted.bam ref.fasta </p>
 <p> samtools view -bt ref_list.txt -o aln.bam aln.sam.gz </p>
-<h2>DESCRIPTION</h2>
 <p> Samtools is a set of utilities that manipulate alignments in the SAM (Sequence Alignment/Map), BAM, and CRAM formats. It converts between the formats, does sorting, merging and indexing, and can retrieve reads in any regions swiftly. </p>
 <p> Samtools is designed to work on a stream. It regards an input file `-&#8216; as the standard input (stdin) and an output file `-&#8216; as the standard output (stdout). Several commands can thus be combined with Unix pipes. Samtools always output warning and error messages to the standard error output (stderr). </p>
 <p> Samtools is also able to open files on remote FTP or HTTP(S) servers if the file name starts with `<a href="ftp://',">ftp://&#8217;,</a> `<a rel="nofollow" href="http://',">http://&#8217;,</a> etc. Samtools checks the current working directory for the index file and will download the index upon absence. Samtools does not retrieve the entire alignment file unless it is asked to do so. </p>

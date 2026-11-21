@@ -1,4 +1,5 @@
 ---
+
 title: "pango-querymodules-64(1)"
 name: "pango-querymodules-64"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pango-querymodules-64/"
 description: "pango-querymodules – Module registration utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pango-querymodules</code> [OPTION&#8230;] [MODULE&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>pango-querymodules</code></p>
 <dd>collects information about loadable modules for Pango and writes it to stdout. </dd>
 <p> If called without MODULE arguments, it looks for modules in the Pango module path, which is specified by the key Pango/ModulesPath in the Pango configuration database. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dicar(1)"
 name: "dicar"
 section: "1"
@@ -14,7 +15,6 @@ description: "dicar – Archive Binary Dictionary"
  <code>dicar</code> <code>-x</code> <i>bindic1</i> [ <code>bindic2</code> ]<br />
  <code>dicar</code> <code>-r</code> <i>bindic1</i> <i>bindic2</i><br />
  <code>dicar</code> <code>-d </code> <i>bindic1</i> <i>bindic2</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>dicar</i> archives binary dictionary <i>bindic1.</i> The hyphen of each option may be omitted. [ <code>TIONS</code> ]</p>
 <dl>
 <dt><code>-t</code></dt>

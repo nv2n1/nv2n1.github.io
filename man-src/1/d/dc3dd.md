@@ -1,4 +1,5 @@
 ---
+
 title: "dc3dd(1)"
 name: "dc3dd"
 section: "1"
@@ -9,7 +10,6 @@ description: "dc3dd – convert and copy a file"
 
 <h2>NAME</h2>
 <p> dc3dd &#8211; convert and copy a file</p>
-<h2>DESCRIPTION</h2>
 <h2>AUTHOR</h2>
 <p> Written by Paul Rubin, David MacKenzie, Stuart Kemp, Jesse Kornblum, Andrew Medico, and Richard Cordovano.</p>
 <h2>REPORTING BUGS</h2>

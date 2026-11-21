@@ -1,4 +1,5 @@
 ---
+
 title: "codepage(1)"
 name: "codepage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-codepage/"
 description: "codepage – extract a codepage from an MSDOS codepage file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>codepage </code> [ <i>-c </i> | <i>-l</i> | <i>-L </i> | <i>-a </i> | <i>nnn</i> ] <i>file.cpi</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>codepage</code> command extracts codepages from an MSDOS codepage file. </p>
 <h2>OPTIONS</h2>
 <dl>

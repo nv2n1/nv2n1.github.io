@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installman(1)"
 name: "dh_installman"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installman/"
 description: "dh_installman – install man pages into package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installman</code> [<i>debhelper options</i>] [<i>manpage</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installman</code> is a debhelper program that handles installing man pages into the correct locations in package build directories. </p>
 <p> In compat 10 and earlier, this program was primarily for when upstream&#8217;s build system does not properly install them as a part of its install step (or it does not have an install step). In compat 11 and later, it supports the same features of <i><a href="/docs/linux/man/1-dh_install/">dh_install</a></i>(1) and has the advantage that it respects the <code>nodoc</code> build profile (unlike <i><a href="/docs/linux/man/1-dh_install/">dh_install</a></i>(1)). </p>
 <p> Even if you prefer to use <i><a href="/docs/linux/man/1-dh_install/">dh_install</a></i>(1) for installing the manpages, <code>dh_installman</code> can still be useful for converting the manpage encoding to <font SIZE="-1">UTF-8</font> and for converting <i>.so</i> links (as described below). However, that part happens automatically without any explicit configuration. </p>

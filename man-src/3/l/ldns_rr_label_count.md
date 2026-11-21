@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_label_count(3)"
 name: "ldns_rr_label_count"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_rr_label_count"
 
 <h2>NAME</h2>
 <p> ldns_rr_label_count </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> uint8_t ldns_rr_label_count(ldns_rr *rr); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_label_count</i>()</dt>
 <dd>counts the number of labels of the ownername. .br <code>rr</code>: count the labels of this rr .br Returns the number of labels</dd></dl>

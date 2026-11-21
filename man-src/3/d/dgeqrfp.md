@@ -1,4 +1,5 @@
 ---
+
 title: "dgeqrfp(3)"
 name: "dgeqrfp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgeqrfp/"
 description: "dgeqrfp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeqrfp</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>DGEQRFP</code></p>

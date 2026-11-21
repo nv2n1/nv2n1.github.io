@@ -1,4 +1,5 @@
 ---
+
 title: "cpotrs(3)"
 name: "cpotrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpotrs/"
 description: "cpotrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpotrs</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
  <i></i><code>CPOTRS</code></p>

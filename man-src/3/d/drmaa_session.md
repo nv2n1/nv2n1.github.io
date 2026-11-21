@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_session(3)"
 name: "drmaa_session"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa_session/"
 description: "drmaa_init, drmaa_exit – Start/finish xxQS_NAMExx DRMAA session"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>
 int drmaa_init(
@@ -23,7 +23,6 @@ size_t&amp;nbsp;error_diag_len
 </dd></dl>
 </pre>
 <p> <code>);</code></p>
-<h2>DESCRIPTION</h2>
 <h3>drmaa_init()</h3>
 <p> The drmaa_init() function initializes the xxQS_NAMExx DRMAA API library for all threads of the process and creates a new DRMAA session. This routine must be called once before any other DRMAA call, except for and Except for the above listed functions, no DRMAA functions may be called before the drmaa_init() function <i>completes</i>. Any DRMAA function which is called before the drmaa_init() function completes will return a DRMAA_ERRNO_NO_ACTIVE_SESSION error. <i>Contact</i> is an implementation dependent string which may be used to specify which xxQS_NAMExx cell to use. If <i>contact</i> is NULL, the default xxQS_NAMExx cell will be used. In the 1.0 implementation <i>contact</i> may have the following value: <code>session=</code><i>session_id</i>. To determine the session_id, the function should be called after the session has already been initialized. By passing the <code>session=</code><i>session_id</i> string to the drmaa_init() function, instead of creating a new session, DRMAA will attempt to reconnect to the session indicated by the <i>session_id</i>. The result of reconnecting to a previous session is that all jobs previously submitted in that session <code>that are still running</code> will be available in the DRMAA session. Note, however, that jobs which ended before the call to drmaa_init() may not be available or may have no associated exit information or resource usage data. </p>
 <h3>drmaa_exit()</h3>

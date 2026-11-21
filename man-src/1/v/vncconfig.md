@@ -1,4 +1,5 @@
 ---
+
 title: "vncconfig(1)"
 name: "vncconfig"
 section: "1"
@@ -9,7 +10,6 @@ description: "vncconfig – configure and control a VNC server"
 
 <h2>NAME</h2>
 <p> vncconfig &#8211; configure and control a VNC server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vncconfig</code> [<i>parameters</i>]<br />
  <code>vncconfig</code> [<i>parameters</i>] <code>-connect</code> <i>host</i>[:<i>port</i>]<br />
  <code>vncconfig</code> [<i>parameters</i>] <code>-disconnect</code><br />
@@ -17,7 +17,6 @@ description: "vncconfig – configure and control a VNC server"
  <code>vncconfig</code> [<i>parameters</i>] <code>-list</code><br />
  <code>vncconfig</code> [<i>parameters</i>] <code>-get</code> <i>Xvnc-param</i><br />
  <code>vncconfig</code> [<i>parameters</i>] <code>-desc</code> <i>Xvnc-param</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>vncconfig</code> is used to configure and control a running instance of Xvnc, or any other X server with the VNC extension. Note that it cannot be used to control VNC servers prior to version 4. </p>
 <p> When run with no options, it runs as a kind of &quot;helper&quot; application for Xvnc. Its main purpose when run in this mode is to query the user how new connections should be handled (provided this feature is enabled). The <code>-nowin</code> flag can be used if you always want the query support but don&#8217;t wish to clutter the desktop with the settings window &#8211; alternatively the <code>-iconic</code> option can be used to make it iconified by default. </p>
 <p> When run in any other mode, <code>vncconfig</code> is a one-shot program used to configure or control Xvnc as appropriate. It can be used to tell Xvnc to connect or disconnect from listening viewers, and to set and retrieve Xvnc&#8217;s parameters. </p>

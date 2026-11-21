@@ -1,4 +1,5 @@
 ---
+
 title: "barrybackup(1)"
 name: "barrybackup"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-barrybackup/"
 description: "barrybackup – Barry Project’s backup program for the BlackBerry handheld"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>barrybackup</code> &#8211; Barry Project&#8217;s backup program for the BlackBerry handheld </p>
-<h2>SYNOPSIS</h2>
 <p> <code>barrybackup</code> [-?][-d]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>barrybackup</code> is a GUI application for backing up and restoring Blackberry handheld databases. </p>
 <p> The application allows for filtering of databases for both backup and restore, so not all databases need to be backed up at once, nor all restored. </p>
 <p> Backups and configuration files are stored by default in the user&#8217;s home directory, under ~/.barry/backup/PIN. This destination can be changed in the config dialogs, per device. </p>

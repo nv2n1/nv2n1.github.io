@@ -1,4 +1,5 @@
 ---
+
 title: "opreport(1)"
 name: "opreport"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-opreport/"
 description: "opreport – produce symbol or binary image summaries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>opreport</code> [ <i>options</i> ] [profile specification]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>opreport</code> outputs binary image summaries, or per-symbol data, from OProfile profiling sessions. See <a href="/docs/linux/man/1-oprofile/">oprofile</a>(1) for how to write profile specifications. </p>
 <h2>OPTIONS</h2>
 <dl>

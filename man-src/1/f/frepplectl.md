@@ -1,4 +1,5 @@
 ---
+
 title: "frepplectl(1)"
 name: "frepplectl"
 section: "1"
@@ -9,9 +10,7 @@ description: "frepplectl – open source production planning and scheduling"
 
 <h2>NAME</h2>
 <p> frepplectl &#8211; open source production planning and scheduling </p>
-<h2>SYNOPSIS</h2>
 <p> <code>frepplectl subcommand [options] [arguments]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> FrePPLe is an open source production planning and scheduling application. </p>
 <p> This program is a wrapper for the administrative actions of the application. </p>
 <h2>OPTIONS</h2>

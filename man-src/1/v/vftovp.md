@@ -1,4 +1,5 @@
 ---
+
 title: "vftovp(1)"
 name: "vftovp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-vftovp/"
 description: "vftovp – convert virtual font (vf) files to virtual property lists (vpl)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vftovp</code> [<i>OPTIONS</i>] <i>vf_name</i>[<i></i><code>.vf</code>] [<i>tfm_name</i>[<i></i><code>.tfm</code>] [<i>vpl_name</i>[<i></i><code>.vpl</code>]]]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>vftovp</code> program translates a (program-oriented) virtual font file and its accompanying TeX font metric file to a (human-oriented) property list file. Thus, the virtual font can be edited, and its exact contents can be displayed mnemonically. It also serves as a VF-file validating program; if no error messages are given, the input files are correct. </p>
 <p> The filenames are extended with the appropriate extension if necessary.</p>

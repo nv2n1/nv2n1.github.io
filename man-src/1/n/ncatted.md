@@ -1,4 +1,5 @@
 ---
+
 title: "ncatted(1)"
 name: "ncatted"
 section: "1"
@@ -11,7 +12,6 @@ description: "ncatted – netCDF Attribute Editor"
 <p> ncatted &#8211; netCDF Attribute Editor</p>
 <h2>SYNTAX</h2>
 <p> ncatted [-a <i>att_dsc</i>] [-a &#8230;] [&#8211;bfr <i>sz</i>]<i>[-D</i> <i>dbg_lvl]</i> [-h] [&#8211;hdr_pad <i>sz</i>] [-l path] [-O] [-p path] [-R] [-r] [&#8211;ram_all] <i>input-file</i> [ <i>output-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ncatted</code> edits attributes in a netCDF file. If you are editing attributes then you are spending too much time in the world of metadata, and <code>ncatted</code> was written to get you back out as quickly and painlessly as possible. <code>ncatted</code> can <i>append</i>, <i>create</i>, <i>delete</i>, <i>modify</i>, and <i>overwrite</i> attributes (all explained below). Furthermore, <code>ncatted</code> allows each editing operation to be applied to every variable in a file, thus saving you time when you want to change attribute conventions throughout a file. <code>ncatted</code> interprets character attributes as strings. </p>
 <p> Because repeated use of <code>ncatted</code> can considerably increase the size of the <code>history</code> global attribute, the <code>-h</code> switch is provided to override automatically appending the command to the <code>history</code> global attribute in the <i>output-file</i>. </p>
 <p> When <code>ncatted</code> is used to change the <code>_FillValue</code> attribute, it changes the associated missing data self-consistently. If the internal floating point representation of a missing value, e.g., 1.0e36, differs between two machines then netCDF files produced on those machines will have incompatible missing values. This allows <code>ncatted</code> to change the missing values in files from different machines to a single value so that the files may then be concatenated together, e.g., by <code>ncrcat</code>, without losing any information. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fastautils(1)"
 name: "fastautils"
 section: "1"
@@ -9,7 +10,6 @@ description: "fastautils – FASTA format file manipulation utilities"
 
 <h2>NAME</h2>
 <p> fastautils &#8211; FASTA format file manipulation utilities </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fastachecksum [ options ] &lt;input file&gt;</code> </p>
 <p> <code>fastaclean</code> </p>
 <p> <code>fastaclip</code> </p>
@@ -31,7 +31,6 @@ description: "fastautils – FASTA format file manipulation utilities"
 <p> <code>fastasubseq</code> </p>
 <p> <code>fastatranslate</code> </p>
 <p> <code>fastavalidcds</code> </p>
-<h2>DESCRIPTION</h2>
 <p> These are utilities for the manipulation of FASTA format sequence databases which are distributed with the exonerate sequence alignment program. </p>
 <h2>ENVIRONMENT</h2>
 <p> Not documented yet.</p>

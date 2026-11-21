@@ -1,4 +1,5 @@
 ---
+
 title: "fmscan(1)"
 name: "fmscan"
 section: "1"
@@ -9,9 +10,7 @@ description: "fmscan – scan FM band for radio stations"
 
 <h2>NAME</h2>
 <p> fmscan &#8211; scan FM band for radio stations</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fm</code> [ <code>-h</code> ] [ <code>-d</code> <i>device</i> ] [ <code>-t</code> <i>tuner</i> ] [ <code>-s</code> <i>freq</i> ] [ <code>-e</code> <i>freq</i> ] [ <i>-i</i> <i>freq</i> ] [ <i>-q</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fmscan</code> is a program to scan a frequency band for radio stations, using the video4linux interface introduced in 2.1.x series Linux kernels. It shows which ones have a accumulated signal strength of 50% or higher.</p>
 <h3>OPTIONS</h3>
 <dl>

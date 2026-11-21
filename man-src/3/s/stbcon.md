@@ -1,4 +1,5 @@
 ---
+
 title: "stbcon(3)"
 name: "stbcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stbcon/"
 description: "stbcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>STBCON</code></p>

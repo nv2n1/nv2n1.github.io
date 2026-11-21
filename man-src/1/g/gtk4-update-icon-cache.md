@@ -1,4 +1,5 @@
 ---
+
 title: "gtk4-update-icon-cache(1)"
 name: "gtk4-update-icon-cache"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-gtk4-update-icon-cache/"
 description: "gtk4-update-icon-cache – Icon theme caching utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>gtk4-update-icon-cache</code> [OPTIONS...] &lt;PATH&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>gtk4-update-icon-cache</code> creates <code><a href="/docs/linux/man/2-mmap/">mmap</a>(2)</code>-able cache files for icon themes. </p>
 <p> It expects to be given the <code>PATH</code> to an icon theme directory containing an <code>index.theme</code>, e.g. <code>/usr/share/icons/hicolor</code>, and writes a <code>icon-theme.cache</code> containing cached information about the icons in the directory tree below the given directory. </p>
 <p> GTK can use the cache files created by <code>gtk4-update-icon-cache</code> to avoid a lot of system call and disk seek overhead when the application starts. Since the format of the cache files allows them to be shared across multiple processes, for instance using the POSIX <code><a href="/docs/linux/man/2-mmap/">mmap</a>(2)</code> system call, the overall memory consumption is reduced as well.</p>

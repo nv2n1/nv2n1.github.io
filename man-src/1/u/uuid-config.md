@@ -1,4 +1,5 @@
 ---
+
 title: "uuid-config(1)"
 name: "uuid-config"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-uuid-config/"
 description: "uuid-config – OSSP uuid API build utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>uuid-config</code> &#8211; <font SIZE="-1"><code>OSSP</code></font><code> uuid </code><font SIZE="-1"><code>API</code></font><code> build utility</code> </p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">OSSP</font> uuid <font SIZE="-1">1.6.2 (04-Jul-2008)</font></p>
-<h2>SYNOPSIS</h2>
 <p> <code>uuid-config</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;all</code>] [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;bindir</code>] [<code>&#8211;libdir</code>] [<code>&#8211;includedir</code>] [<code>&#8211;mandir</code>] [<code>&#8211;datadir</code>] [<code>&#8211;acdir</code>] [<code>&#8211;cflags</code>] [<code>&#8211;ldflags</code>] [<code>&#8211;libs</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>uuid-config</code> program is a little helper utility for easy configuring and building applications based on the <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3) library. It can be used to query the C compiler and linker flags which are required to correctly compile and link the application against the <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3) library.</p>
 <h2>OPTIONS</h2>
 <p> <code>uuid-config</code> accepts the following options:</p>

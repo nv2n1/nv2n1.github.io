@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-info(1)"
 name: "pmempool-info"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmempool-info – Print basic information about Persistent Memory 
 
 <h2>NAME</h2>
 <p> pmempool-info &#8211; Print basic information about Persistent Memory Pool file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmempool info</code> [&lt;options&gt;] &lt;file&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pmempool</code> invoked with <code>info</code> command analyzes an existing pool created by <code>NVML</code> libraries. The main task of this command is to print all usable information from pool headers and user data in human readable format. It automatically recognizes pool type by parsing and analyzing pool header. The recognition is done by checking the signature in pool header. The main job of <code>info</code> command is to present internal data structures as they are stored in file but <i>not</i> for checking consistency. For this purpose there is the <code><a href="/docs/linux/man/1-pmempool-check/">pmempool-check</a>(1)</code> command available. </p>
 <p> The <code>pmempool</code> with <code>info</code> command analyzes pool file as long as it is possible regarding <i>correctness</i> of internal meta-data (correct offsets, sizes etc.). If it is <i>not</i> possible to analyze the rest of the file, <code>pmempool</code> exits with error code and prints appropriate error message. </p>
 <p> Currently there is lack of interprocess synchronization for pool files, so the <code>info</code> command should be invoked off-line. Using <code>pmempool</code> on pool file which may be modified by another process may lead to unexpected errors in pool file. </p>

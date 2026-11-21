@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_xor(3)"
 name: "ck_pr_xor"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_pr_xor_ptr ck_pr_xor_char ck_pr_xor_uint ck_pr_xor_int ck_pr_xo
 <p> <code>ck_pr_xor_ptr</code> <code>ck_pr_xor_char</code> <code>ck_pr_xor_uint</code> <code>ck_pr_xor_int</code> <code>ck_pr_xor_64</code> <code>ck_pr_xor_32</code> <code>ck_pr_xor_16</code> <code>ck_pr_xor_8</code> &#8211; atomic bitwise-xor operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_xor_ptr void *target uintptr_t delta Ft void Fn ck_pr_xor_char char *target char delta Ft void Fn ck_pr_xor_uint unsigned int *target unsigned int delta Ft void Fn ck_pr_xor_int int *target int delta Ft void Fn ck_pr_xor_64 uint64_t *target uint64_t delta Ft void Fn ck_pr_xor_32 uint32_t *target uint32_t delta Ft void Fn ck_pr_xor_16 uint16_t *target uint16_t delta Ft void Fn ck_pr_xor_8 uint8_t *target uint8_t delta</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_xor 3 family of functions atomically compute and store the result of a bitwise-xor of the value pointed to by Fa target and Fa delta into the value pointed to by Fa target .</p>
 <h2>RETURN VALUES</h2>
 <p> This family of functions does not have a return value.</p>

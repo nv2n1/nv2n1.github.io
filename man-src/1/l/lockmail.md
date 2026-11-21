@@ -1,4 +1,5 @@
 ---
+
 title: "lockmail(1)"
 name: "lockmail"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lockmail/"
 description: "lockmail – create mail lock files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lockmail</code> [-r] [-t&nbsp;<wbr><i>timeout</i>] {<i>lockfile</i>} {<i>program</i>} [argument&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lockmail</code></p>
 <dd>is a helper utility for working with mailbox files. Mailbox files must be locked to prevent other applications from modifying the mailbox at the same time. Different system use different locking conventions. <code>lockmail</code> uses two of the most common locking mechanisms in use, which should work reliably on most systems. </dd>
 <p> <i>lockfile</i> is the pathname to an existing mailbox file. By default, <code>lockmail</code> tries to lock the mailbox every five seconds (if the mailbox is already locked), and will give up after three minutes. After the mailbox is successfully locked, <code>lockmail</code> runs <i>program</i> as a child process, with any optional <i>argument</i>s. When <i>program</i> terminates, <code>lockmail</code> removes the mailbox lock, and terminates itself.</p>

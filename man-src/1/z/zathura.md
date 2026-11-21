@@ -1,4 +1,5 @@
 ---
+
 title: "zathura(1)"
 name: "zathura"
 section: "1"
@@ -13,7 +14,6 @@ description: "zathura – a document viewer"
 <pre><code>
 zathura[OPTION]... zathura[OPTION]... FILE[FILE...] zathura-- syntex - forward INPUT FILE
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> zathura is a highly customizable and functional document viewer. It provides a minimalistic and space saving interface as well as an easy usage that mainly focuses on keyboard interaction.</p>
 <h2>OPTIONS</h2>
 <dl>

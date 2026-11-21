@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-groups(1)"
 name: "euca-describe-groups"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-groups – Show information about security groups"
 
 <h2>NAME</h2>
 <p> euca-describe-groups &#8211; Show information about security groups</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-groups [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [GROUP [GROUP &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about security groups</p>
 <h2>DESCRIPTION</h2>
 <p> Note that filters are matched on literal strings only, so &quot;&#8211;filter ip-permission.from-port=22&quot; will *not* match a group with a port range of 20 to 30.</p>

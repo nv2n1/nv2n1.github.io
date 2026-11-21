@@ -1,4 +1,5 @@
 ---
+
 title: "ghwdump(1)"
 name: "ghwdump"
 section: "1"
@@ -11,7 +12,6 @@ description: "ghwdump – Dumps info contained in GHW files"
 <p> ghwdump &#8211; Dumps info contained in GHW files</p>
 <h2>SYNTAX</h2>
 <p> ghwdump [<i>option</i>]&#8230; <i>GHWFILE</i> [[<i>GHWFILE</i>]&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> Dumps information contained in GHW files for debugging purposes.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "dspmv(3)"
 name: "dspmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dspmv/"
 description: "dspmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>DSPMV</code></p>

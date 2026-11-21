@@ -1,4 +1,5 @@
 ---
+
 title: "rename(1)"
 name: "rename"
 section: "1"
@@ -9,9 +10,7 @@ description: "rename – rename files"
 
 <h2>NAME</h2>
 <p> rename &#8211; rename files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rename</code> [<i>options</i>]<i> expression replacement file</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rename</code> will rename the specified files by replacing the first occurrence of <i>expression</i> in their name by <i>replacement</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

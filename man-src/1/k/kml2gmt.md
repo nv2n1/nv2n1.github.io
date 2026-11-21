@@ -1,4 +1,5 @@
 ---
+
 title: "kml2gmt(1)"
 name: "kml2gmt"
 section: "1"
@@ -9,10 +10,8 @@ description: "kml2gmt – Extract GMT table data from Google Earth KML files"
 
 <h2>NAME</h2>
 <p> kml2gmt &#8211; Extract GMT table data from Google Earth KML files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kml2gmt</code> [ <i>kmlfiles</i> ] [ <code>s</code>|<code>l</code>|<code>p</code> ] [ [<i>level</i>] ] [ ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>kml2gmt</code> reads a Google Earth KML file and outputs a GMT table file. Only KML files that contain points, lines, or polygons can be processed. This is a bare-bones operation that aims to extract coordinates and possibly the name and description tags of each feature. The main use intended is to capture coordinates modified in Google Earth and then reinsert the modified data into the original GMT data file. For a more complete reformatting, consider using <code>ogr2ogr -f</code> &quot;GMT&quot; somefile.gmt somefile.kml.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

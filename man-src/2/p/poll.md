@@ -1,4 +1,5 @@
 ---
+
 title: "poll(2)"
 name: "poll"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-poll/"
 description: "poll, ppoll – wait for some event on a file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;poll.h&gt;
 int poll(struct pollfd *fds, nfds_t nfds, int timeout);
@@ -17,7 +17,6 @@ int poll(struct pollfd *fds, nfds_t nfds, int timeout);
 int ppoll(struct pollfd *fds, nfds_t nfds,
           const struct timespec *tmo_p, const sigset_t *sigmask);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>poll</code>() performs a similar task to <code><a href="/docs/linux/man/2-select/">select</a></code>(2): it waits for one of a set of file descriptors to become ready to perform I/O. The Linux-specific <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) API performs a similar task, but offers features beyond those found in <code>poll</code>(). </p>
 <p> The set of file descriptors to be monitored is specified in the <i>fds</i> argument, which is an array of structures of the following form: </p>
 <p> struct pollfd {<br />

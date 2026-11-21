@@ -1,4 +1,5 @@
 ---
+
 title: "glib-mkenums(1)"
 name: "glib-mkenums"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-glib-mkenums/"
 description: "glib-mkenums – C language enum description generation utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glib-mkenums</code> [OPTION&#8230;] [FILE&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>glib-mkenums</code></p>
 <dd>is a small utility that parses C code to extract enum definitions and produces enum descriptions based on text templates specified by the user. Typically, you can use this tool to generate enumeration types for the GType type system, for GObject properties and signal marshalling; additionally, you can use it to generate enumeration values of GSettings schemas. </dd>
 <p> <code>glib-mkenums</code> takes a list of valid C code files as input. The options specified control the text that generated, substituting various keywords enclosed in @ characters in the templates.</p>

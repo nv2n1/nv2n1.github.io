@@ -1,4 +1,5 @@
 ---
+
 title: "rt_tgsigqueueinfo(2)"
 name: "rt_tgsigqueueinfo"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-rt_tgsigqueueinfo/"
 description: "rt_sigqueueinfo, rt_tgsigqueueinfo – queue a signal and data"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 int rt_sigqueueinfo(pid_t tgid, int sig, siginfo_t *info);
 int rt_tgsigqueueinfo(pid_t tgid, pid_t tid, int sig,
                       siginfo_t *info);
 </code></pre>
 <p> <i>Note</i>: There are no glibc wrappers for these system calls; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>rt_sigqueueinfo</code>() and <code>rt_tgsigqueueinfo</code>() system calls are the low-level interfaces used to send a signal plus data to a process or thread. The receiver of the signal can obtain the accompanying data by establishing a signal handler with the <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2) <code>SA_SIGINFO</code> flag. </p>
 <p> These system calls are not intended for direct application use; they are provided to allow the implementation of <code><a href="/docs/linux/man/3-sigqueue/">sigqueue</a></code>(3) and <code><a href="/docs/linux/man/3-pthread_sigqueue/">pthread_sigqueue</a></code>(3). </p>
 <p> The <code>rt_sigqueueinfo</code>() system call sends the signal <i>sig</i> to the thread group with the ID <i>tgid</i>. (The term &quot;thread group&quot; is synonymous with &quot;process&quot;, and <i>tid</i> corresponds to the traditional UNIX process ID.) The signal will be delivered to an arbitrary member of the thread group (i.e., one of the threads that is not currently blocking the signal). </p>

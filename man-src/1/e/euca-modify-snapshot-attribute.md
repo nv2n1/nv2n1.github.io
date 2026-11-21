@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-snapshot-attribute(1)"
 name: "euca-modify-snapshot-attribute"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-modify-snapshot-attribute – Modify an attribute of a snapsh
 
 <h2>NAME</h2>
 <p> euca-modify-snapshot-attribute &#8211; Modify an attribute of a snapshot</p>
-<h2>SYNOPSIS</h2>
 <p> euca-modify-snapshot-attribute <code>-c</code> [-a ENTITY] [-r ENTITY]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] SNAPSHOT</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Modify an attribute of a snapshot</p>
 <h3>positional arguments:</h3>
 <dl>

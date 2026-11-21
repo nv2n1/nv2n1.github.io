@@ -1,4 +1,5 @@
 ---
+
 title: "cdk(3)"
 name: "cdk"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk – Curses Development Kit"
 
 <h2>NAME</h2>
 <p> cdk &#8211; <code>Curses Development Kit</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <p> Cdk provides functions to use a large number of predefined curses widgets. To use the Cdk widgets the header file <i>cdk.h</i> must be included in the source. </p>
@@ -215,7 +215,6 @@ description: "cdk – Curses Development Kit"
 </tr>
 </table>
 <p></center></p>
-<h2>DESCRIPTION</h2>
 <p> Cdk is a library of functions which allow a programmer to quickly create a full screen interactive program with ease. The Cdk widgets support the following features: </p>
 <dl>
 <dt>&bull; Ncurses library.</dt>

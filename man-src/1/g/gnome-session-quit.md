@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-session-quit(1)"
 name: "gnome-session-quit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gnome-session-quit/"
 description: "gnome-session-quit – End the current GNOME session"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-session-quit [&#8211;logout|&#8211;power-off|&#8211;reboot] [&#8211;force] [&#8211;no-prompt]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>gnome-session-quit</i> program can be used to end a GNOME session.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

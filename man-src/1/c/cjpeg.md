@@ -1,4 +1,5 @@
 ---
+
 title: "cjpeg(1)"
 name: "cjpeg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cjpeg/"
 description: "cjpeg – compress an image file to a JPEG file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cjpeg</code> [ <i>options</i> ] [ <i>filename</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cjpeg</code> compresses the named image file, or the standard input if no file is named, and produces a JPEG/JFIF file on the standard output. The currently supported input file formats are: PPM (PBMPLUS color format), PGM (PBMPLUS grayscale format), BMP, Targa, and RLE (Utah Raster Toolkit format). (RLE is supported only if the URT library is available.)</p>
 <h2>OPTIONS</h2>
 <p> All switch names may be abbreviated; for example, <code>-grayscale</code> may be written <code>-gray</code> or <code>-gr</code>. Most of the &quot;basic&quot; switches can be abbreviated to as little as one letter. Upper and lower case are equivalent (thus <code>-BMP</code> is the same as <code>-bmp</code>). British spellings are also accepted (e.g., <code>-greyscale</code>), though for brevity these are not mentioned below. </p>

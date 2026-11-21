@@ -1,4 +1,5 @@
 ---
+
 title: "caja(1)"
 name: "caja"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-caja/"
 description: "Caja – The MATE File Manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>caja [OPTIONS&#8230;] [URI&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Caja is the default file manager for the MATE Desktop Environment. It makes it easy to manage, manipulate, and customize files and directories. Caja can access local and remote filesystems such as SSH, FTP, and WebDav (HTTP/HTTPS). </p>
 <p> Caja also provides the desktop background and the icons it uses for launching links and applications, as well as accessing files, directories, the trash, and removable media like CD/DVD/BD and USB drives. </p>
 <p> This manual page briefly documents the <code>caja</code> command.</p>

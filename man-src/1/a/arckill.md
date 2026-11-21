@@ -1,4 +1,5 @@
 ---
+
 title: "arckill(1)"
 name: "arckill"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arckill/"
 description: "arckill – ARC Kill"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <code>arckill</code> command is used to kill running jobs. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>arckill [options] [job &#8230;]</code> </p>
 <h2>OPTIONS</h2>
 <dl>

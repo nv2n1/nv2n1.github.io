@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm(1)"
 name: "fvwm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fvwm/"
 description: "Fvwm – F? Virtual Window Manager for X11"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fvwm</code> [<code>-c</code>&nbsp;<wbr><i>config-command</i>] [<code>-d</code>&nbsp;<wbr><i>displayname</i>] [<code>-f</code>&nbsp;<wbr><i>config-file</i>] [<code>-r</code>] [<code>-s</code>&nbsp;<wbr>[<i>screen_num</i>]] [<code>-V</code>] [<code>-C</code>&nbsp;<wbr><i>visual-class</i> | <code>-I</code>&nbsp;<wbr><i>visual-id</i>] [<code>-l</code>&nbsp;<wbr><i>colors</i>&nbsp;<wbr>[<code>-L</code>]&nbsp;<wbr>[<code>-A</code>]&nbsp;<wbr>[<code>-S</code>]&nbsp;<wbr>[<code>-P</code>]] [<code>-D</code>] [<code>-h</code>] [<code>-i</code>&nbsp;<wbr><i>client-id</i>] [<code>-F</code>&nbsp;<wbr><i>state-file</i>] [<code>&#8211;debug-stack-ring</code>] [<code>-blackout</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Fvwm is a window manager for X11. It is designed to minimize memory consumption, provide a 3D look to window frames, and a virtual desktop. </dd>
 <p> Note that there are several window managers around that have &quot;fvwm&quot; in their name. In the past, version 2.x of fvwm was commonly called fvwm2 to distinguish it from the former version 1.x (fvwm or even fvwm1). Since version 1.x has been replaced by version 2.x a long time ago we simply call version 2.x and all versions to come, fvwm, throughout this document, and the executable program is named fvwm. There is an fvwm offspring called fvwm95, it is mostly a patched version of fvwm-2.0.43. The main goal of fvwm95 was to supply a Windows 95 like look and feel. Since then, fvwm has been greatly enhanced and practically all fvwm95 features can be achieved by fvwm. </p>
 <p> Fvwm provides both a large <i>virtual desktop</i> and <i>multiple disjoint desktops</i> which can be used separately or together. The virtual desktop allows you to pretend that your video screen is really quite large, and you can scroll around within the desktop. The multiple disjoint desktops allow you to pretend that you really have several screens to work at, but each screen is completely unrelated to the others. </p>

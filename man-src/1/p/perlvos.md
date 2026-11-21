@@ -1,4 +1,5 @@
 ---
+
 title: "perlvos(1)"
 name: "perlvos"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlvos/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlvos - Perl for Stratus OpenVOS 
 
- perlvos - Perl for Stratus OpenVOS 
-
-<h2>SYNOPSIS</h2>
-
- This file contains notes for building perl on the Stratus OpenVOS operating system. Perl is a scripting or macro language that is popular on many systems. See perlbook for a number of good books on Perl. 
+This file contains notes for building perl on the Stratus OpenVOS operating system. Perl is a scripting or macro language that is popular on many systems. See perlbook for a number of good books on Perl. 
 
  These are instructions for building Perl from source. This version of Perl requires the dynamic linking support that is found in OpenVOS Release 17.1 and thus is not supported on OpenVOS Release 17.0 or earlier releases. 
 

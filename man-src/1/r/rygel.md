@@ -1,4 +1,5 @@
 ---
+
 title: "rygel(1)"
 name: "rygel"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-rygel/"
 description: "rygel – a collection of DLNA/UPnP AV services"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rygel</code> [<code>options</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>rygel</code></p>
 <dd>is a home media solution that allows you to easily share audio, video and pictures, and control of media player on your home network. In technical terms it is both a UPnP AV MediaServer and MediaRenderer implemented through a plug-in mechanism. Interoperability with other devices in the market is achieved by conformance to very strict requirements of DLNA and on the fly conversion of media to format that client devices are capable of handling.</dd>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "retrace-server-cleanup(1)"
 name: "retrace-server-cleanup"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-retrace-server-cleanup/"
 description: "retrace-server-cleanup – Collects garbage from Retrace server."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>retrace-server-cleanup</i></p>
-<h2>DESCRIPTION</h2>
 <p> The tool collects different kinds of garbage created by Retrace server: </p>
 <dl>
 <dt>

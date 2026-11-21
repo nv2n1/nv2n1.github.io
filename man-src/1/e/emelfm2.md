@@ -1,4 +1,5 @@
 ---
+
 title: "emelfm2(1)"
 name: "emelfm2"
 section: "1"
@@ -9,9 +10,7 @@ description: "emelFM2 – a GTK+2 file manager"
 
 <h2>NAME</h2>
 <p> emelFM2 &#8211; a GTK+2 file manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>emelfm2</code> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> emelFM2 is a file manager for UNIX-like operating systems. It uses a simple and efficient interface pioneered by Norton Commander in the 1980&#8217;s. The main window is divided into three &quot;panes&quot; or &quot;panels&quot;. Two of them show information about the contents of selected filesystem directories. That information is presented as text. The third pane shows the output of commands executed within the program. </p>
 <p> A built-in command-line, toolbar buttons or assigned keys can be used to initiate commands. A flexible filetyping mechanism provides user-determined actions for desired filetypes.</p>
 <h2>COMMAND LINE OPTIONS</h2>

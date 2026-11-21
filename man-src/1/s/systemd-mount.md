@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-mount(1)"
 name: "systemd-mount"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-systemd-mount/"
 description: "systemd-mount, systemd-umount – Establish and destroy transient mount or auto-mount points"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-mount</code> [<i>OPTIONS</i>&#8230;] <i>WHAT</i> [<i>WHERE</i>]</dt>
 <dt> <code>systemd-mount</code> [<i>OPTIONS</i>&#8230;] <code>&#8211;list</code></dt>
 <dt> <code>systemd-mount</code> [<i>OPTIONS</i>&#8230;] <code>&#8211;umount</code> <i>WHAT|WHERE</i>&#8230;</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-mount</code></p>
 <dd>may be used to create and start a transient .mount or .automount unit of the file system <i>WHAT</i> on the mount point <i>WHERE</i>. </dd>
 <p> In many ways, <code>systemd-mount</code> is similar to the lower-level <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) command, however instead of executing the mount operation directly and immediately, <code>systemd-mount</code> schedules it through the service manager job queue, so that it may pull in further dependencies (such as parent mounts, or a file system checker to execute a priori), and may make use of the auto-mounting logic. </p>

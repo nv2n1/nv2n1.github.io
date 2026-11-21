@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_channel_binding(3)"
 name: "gnutls_session_channel_binding"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_session_channel_binding – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_channel_binding &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_channel_binding(gnutls_session_t </code><i>session</i><code>, gnutls_channel_binding_t </code><i>cbtype</i><code>, gnutls_datum_t * </code><i>cb</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_session_channel_binding – API function"
 <dd> an <code>gnutls_channel_binding_t</code> enumeration type</dd>
 <dt>gnutls_datum_t * cb</dt>
 <dd> output buffer array with data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Extract given channel binding data of the <i>cbtype</i> (e.g., <code>GNUTLS_CB_TLS_UNIQUE</code>) type.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, <code>GNUTLS_E_UNIMPLEMENTED_FEATURE</code> if the <i>cbtype</i> is unsupported, <code>GNUTLS_E_CHANNEL_BINDING_NOT_AVAILABLE</code> if the data is not currently available, or an error code.</p>

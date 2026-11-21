@@ -1,4 +1,5 @@
 ---
+
 title: "clapmt(3)"
 name: "clapmt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clapmt/"
 description: "clapmt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clapmt</code> (FORWRD, M, N, X, LDX, K)<br />
  <i></i><code>CLAPMT</code> performs a forward or backward permutation of the columns of a matrix.</p>

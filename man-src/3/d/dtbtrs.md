@@ -1,4 +1,5 @@
 ---
+
 title: "dtbtrs(3)"
 name: "dtbtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtbtrs/"
 description: "dtbtrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtbtrs</code> (UPLO, TRANS, DIAG, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
  <i></i><code>DTBTRS</code></p>

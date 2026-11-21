@@ -1,4 +1,5 @@
 ---
+
 title: "i3-wsbar(1)"
 name: "i3-wsbar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i3-wsbar/"
 description: "i3-wsbar – sample implementation of a standalone workspace bar"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> i3-wsbar -c &lt;dzen2-commandline&gt; [options]</p>
 <h2>OPTIONS</h2>
 <dl>

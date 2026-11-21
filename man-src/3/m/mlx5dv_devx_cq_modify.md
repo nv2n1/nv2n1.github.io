@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_cq_modify(3)"
 name: "mlx5dv_devx_cq_modify"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_cq_modify/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_qp_modify - Modifies a verbs QP via DEVX 
+mlx5dv_devx_qp_modify - Modifies a verbs QP via DEVX 
 
  mlx5dv_devx_qp_query - Queries a verbs QP via DEVX 
 
@@ -30,8 +26,6 @@ url: "/docs/linux/man/3-mlx5dv_devx_cq_modify/"
  mlx5dv_devx_ind_tbl_modify - Modifies a verbs indirection table via DEVX 
 
  mlx5dv_devx_ind_tbl_query - Queries a verbs indirection table via DEVX 
-
-<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -61,11 +55,7 @@ int mlx5dv_devx_ind_tbl_query(struct ibv_rwq_ind_table *ind_tbl,
                               void *out, size_t outlen);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Modify / query a verb object over the DEVX interface. 
+Modify / query a verb object over the DEVX interface. 
 
  The DEVX API enables direct access from the user space area to the mlx5 device driver by using the KABI mechanism. The main purpose is to make the user space driver as independent as possible from the kernel so that future device functionality and commands can be activated with minimal to none kernel changes. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ideviceinstaller(1)"
 name: "ideviceinstaller"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ideviceinstaller/"
 description: "ideviceinstaller – Manage iDevice apps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ideviceinstaller</code> [OPTIONS] </p>
-<h2>DESCRIPTION</h2>
 <p> Allows to install, upgrade, uninstall, archive, restore and enumerate installed or archived apps on iDevices. </p>
 <h2>OPTIONS</h2>
 <h3>General options:</h3>

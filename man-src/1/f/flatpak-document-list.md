@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-document-list(1)"
 name: "flatpak-document-list"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-document-list/"
 description: "flatpak-document-list – List exported files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak document-list</code> [OPTION&#8230;] [APPID]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Lists exported files, with their document id and the full path to their origin. If an APPID is specified, only the files exported to this app are listed.</dd>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>

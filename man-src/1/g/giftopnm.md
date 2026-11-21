@@ -1,4 +1,5 @@
 ---
+
 title: "giftopnm(1)"
 name: "giftopnm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-giftopnm/"
 description: "giftopnm – convert a GIF file into a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>giftopnm</code> [<code>&#8211;alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<code>-verbose</code>] [<code>-comments</code>] [<code>-image</code> <i>N</i>] [<i>GIFfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This is a graphics format converter from the GIF format to the PNM (i.e. PBM, PGM, or PPM) format. </p>
 <p> If the image contains only black and maximally bright white, the output is PBM. If the image contains more than those two colors, but only grays, the output is PGM. If the image contains other colors, the output is PPM. </p>
 <p> If you have an animated GIF file, you can extract individual frames from it with <code>gifsicle</code> and then convert those using <code>giftopnm</code>. </p>

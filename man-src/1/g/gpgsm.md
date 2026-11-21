@@ -1,4 +1,5 @@
 ---
+
 title: "gpgsm(1)"
 name: "gpgsm"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-gpgsm/"
 description: "gpgsm – CMS encryption and signing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpgsm</code> &#8211; CMS encryption and signing tool </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpgsm</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <i>command</i> [<i>args</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gpgsm</code> is a tool similar to <code>gpg</code> to provide digital encryption and signing services on X.509 certificates and the CMS protocol. It is mainly used as a backend for S/MIME mail processing. <code>gpgsm</code> includes a full featured certificate management and complies with all rules defined for the German Sphinx project. </p>
 <h2>COMMANDS</h2>
 <p> Commands are not distinguished from options except for the fact that only one command is allowed. </p>

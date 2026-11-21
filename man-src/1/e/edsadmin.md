@@ -1,4 +1,5 @@
 ---
+
 title: "edsadmin(1)"
 name: "edsadmin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-edsadmin/"
 description: "EDSAdmin – the Erudite Directory Service Admin tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>edsadmin</code> [<i>&#8211;raw_mode</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>edsadmin</code> command. </p>
 <h2>OPTIONS</h2>
 <dl>

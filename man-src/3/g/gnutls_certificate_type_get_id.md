@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_type_get_id(3)"
 name: "gnutls_certificate_type_get_id"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_certificate_type_get_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_type_get_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>gnutls_certificate_type_t gnutls_certificate_type_get_id(const char * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>const char * name</dt>
 <dd> is a certificate type name</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The names are compared in a case insensitive way.</p>
 <h2>RETURNS</h2>
 <p> a <code>gnutls_certificate_type_t</code> for the specified in a string certificate type, or <code>GNUTLS_CRT_UNKNOWN</code> on error.</p>

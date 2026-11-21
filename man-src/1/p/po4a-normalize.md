@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-normalize(1)"
 name: "po4a-normalize"
 section: "1"
@@ -6,18 +7,11 @@ letter: "p"
 url: "/docs/linux/man/1-po4a-normalize/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+po4a-normalize - normalize a documentation file by parsing it in po4a, and writing it back 
 
- po4a-normalize - normalize a documentation file by parsing it in po4a, and writing it back 
+po4a-normalize -f &lt;fmt&gt; &lt;master.doc&gt;
 
-<h2>SYNOPSIS</h2>
-
- po4a-normalize -f &lt;fmt&gt; &lt;master.doc&gt;
-
-<h2>DESCRIPTION</h2>
-
- The po4a (po for anything) project goal is to ease translations (and more interestingly, the maintenance of translations) using gettext tools on areas where they were not expected like documentation. 
+The po4a (po for anything) project goal is to ease translations (and more interestingly, the maintenance of translations) using gettext tools on areas where they were not expected like documentation. 
 
  The <tt>&quot;po4a-normalize&quot;</tt> script is a debugging tool used to make sure that po4a don't change the document when it's not supposed to. Only use it if you're developing a new module, or if you doubt the sanity of the tools. 
 

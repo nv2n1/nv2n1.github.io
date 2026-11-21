@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-collectl(1)"
 name: "pcp-collectl"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmcollectl, pcp-collectl – collect data that describes the curre
 
 <h2>NAME</h2>
 <p> <code>pmcollectl</code>, <code>pcp-collectl</code> &#8211; collect data that describes the current system status</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pcp collectl</code> [<code>-f</code> <i>file</i> | <code>-p</code> <i>file</i> &#8230;] <i>[options</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcp-collectl</code> is a system-level performance monitoring utility that records or displays specific operating system data for one or more sets of subsystems. Any of the subsystems (such as CPU, Disks, Memory or Sockets) can be included or excluded from data collection. Data can either be displayed immediately to a terminal, or stored in files for retrospective analysis. </p>
 <p> <code>pcp-collectl</code> is a <code><a href="/docs/linux/man/1-python/">python</a></code>(1) script providing much of the functionality available from the <code><a href="/docs/linux/man/1-collectl/">collectl</a></code>(1) Linux utility (which happens to be written in <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1)). </p>
 <p> It makes use of the Performance Co-Pilot (PCP) toolkit to simplify its implementation, as well as provide more of the <code>collectl</code> functionality on platforms other than Linux. </p>

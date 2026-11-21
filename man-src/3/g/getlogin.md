@@ -1,4 +1,5 @@
 ---
+
 title: "getlogin(3)"
 name: "getlogin"
 section: "3"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-getlogin/"
 description: "getlogin, getlogin_r, cuserid – get username"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>char *getlogin(void);</code> <br />
  <code>int getlogin_r(char *</code><i>buf</i><code>, size_t </code><i>bufsize</i><code>);</code> </p>
@@ -21,7 +22,6 @@ description: "getlogin, getlogin_r, cuserid – get username"
     Up to and including glibc 2.23:
         _XOPEN_SOURCE
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>getlogin</code>() returns a pointer to a string containing the name of the user logged in on the controlling terminal of the process, or a null pointer if this information cannot be determined. The string is statically allocated and might be overwritten on subsequent calls to this function or to <code>cuserid</code>(). </p>
 <p> <code>getlogin_r</code>() returns this same username in the array <i>buf</i> of size <i>bufsize</i>. </p>
 <p> <code>cuserid</code>() returns a pointer to a string containing a username associated with the effective user ID of the process. If <i>string</i> is not a null pointer, it should be an array that can hold at least <code>L_cuserid</code> characters; the string is returned in this array. Otherwise, a pointer to a string in a static area is returned. This string is statically allocated and might be overwritten on subsequent calls to this function or to <code>getlogin</code>(). </p>

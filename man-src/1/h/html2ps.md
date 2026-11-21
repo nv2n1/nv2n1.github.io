@@ -1,4 +1,5 @@
 ---
+
 title: "html2ps(1)"
 name: "html2ps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-html2ps/"
 description: "html2ps – convert HTML to PostScript"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>html2ps</code> [ <code>-2cdDFghHLnORtTuUv</code> ] [ <code>-b</code><i> URL</i> ] [ <code>-C</code><i> string</i> ] [ <code>-e</code><i> encoding</i> ] [ <code>-f</code><i> file[:file[:&#8230;]]</i> ] [ <code>-i</code><i> num</i> ] [ <code>-k</code><i> file</i> ] [ <code>-l</code><i> lang</i> ] [ <code>-m</code><i> num</i> ] [ <code>-M</code><i> num</i> ] [ <code>-N</code><i> num</i> ] [ <code>-o</code><i> file</i> ] [ <code>-r</code><i> path</i> ] [ <code>-s</code><i> num</i> ] [ <code>-S</code><i> string</i> ] [ <code>-W</code><i> string</i> ] [ <code>-x</code><i> num</i> ] [ <i>URL|file</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The program <code>html2ps</code> converts HTML to PostScript. The HTML code can be retrieved from one or more URL:s or local files, specified as parameters on the command line. If no parameter is given, html2ps reads from standard input. </p>
 <p> Note: To avoid unnecessary network traffic, one can rebuild an already generated PostScript file with new options. This is done by running html2ps with the new options, and with the old PostScript file as input (not applicable for all options).</p>
 <h2>OPTIONS</h2>

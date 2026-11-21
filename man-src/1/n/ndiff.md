@@ -1,4 +1,5 @@
 ---
+
 title: "ndiff(1)"
 name: "ndiff"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ndiff/"
 description: "ndiff – Utility to compare the results of Nmap scans"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndiff</code> [<i>options</i>] {<i>a.xml</i>} {<i>b.xml</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Ndiff is a tool to aid in the comparison of Nmap scans. It takes two Nmap XML output files and prints the differences between them. The differences observed are: </dd>
 <dl>
 <dt>

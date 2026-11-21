@@ -1,4 +1,5 @@
 ---
+
 title: "copr-cli(1)"
 name: "copr-cli"
 section: "1"
@@ -6,22 +7,11 @@ letter: "c"
 url: "/docs/linux/man/1-copr-cli/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+copr-cli - command line interface for the Copr service 
 
- copr-cli - command line interface for the Copr service 
+copr-cli [-h] [--version] [--config CONFIG] {list,create,build} ...
 
-<h2>SYNOPSIS</h2>
-
- 
-
- copr-cli [-h] [--version] [--config CONFIG] {list,create,build} ...
-
-<h2>DESCRIPTION</h2>
-
- 
-
- This command allows you to interact with the Copr service from the command line. 
+This command allows you to interact with the Copr service from the command line. 
 
  You need to generate an API key first (see the API KEY section below).
 

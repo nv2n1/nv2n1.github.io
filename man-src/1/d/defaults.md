@@ -1,4 +1,5 @@
 ---
+
 title: "defaults(1)"
 name: "defaults"
 section: "1"
@@ -9,9 +10,7 @@ description: "defaults – read or modify GNUstep user defaults"
 
 <h2>NAME</h2>
 <p> defaults &#8211; read or modify GNUstep user defaults </p>
-<h2>SYNOPSIS</h2>
 <p> <code>defaults [ action ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The &#8216;defaults&#8217; command lets you to read and modify a user&#8217;s defaults. </p>
 <p> This program replaces the old NeXTstep style dread, dwrite, and dremove programs. </p>
 <p> If you have access to another user&#8217;s defaults database, you may include &#8216;-u username&#8217; before any other options to use that user&#8217;s database rather than your own. </p>

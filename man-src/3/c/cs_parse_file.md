@@ -1,4 +1,5 @@
 ---
+
 title: "cs_parse_file(3)"
 name: "cs_parse_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cs_parse_file/"
 description: "cs_parse_file – parse a CS template file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;
 </code></pre>
@@ -17,7 +17,6 @@ NEOERR *cs_parse_file(CSPARSE *parse, const char *path);
 <h2>ARGUMENTS</h2>
 <p> parse &#8211; a CSPARSE structure created with cs_init<br />
  path &#8211; the path to the file to parse </p>
-<h2>DESCRIPTION</h2>
 <p> cs_parse_file will parse the CS template located at path. It will use hdf_search_path() if path does not begin with a &#8216;/&#8217;. The parsed CS template will be appended to the current parse tree stored in the CSPARSE structure. The entire file is loaded into memory and parsed in place. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

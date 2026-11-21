@@ -1,4 +1,5 @@
 ---
+
 title: "lzcat(1)"
 name: "lzcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lzcat/"
 description: "xz, unxz, xzcat, lzma, unlzma, lzcat – Compress or decompress .xz and .lzma files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xz</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]</p>
 <h2>COMMAND ALIASES</h2>
 <p> <code>unxz</code> is equivalent to <code>xz &#8211;decompress</code>.<br />
@@ -16,7 +16,6 @@ description: "xz, unxz, xzcat, lzma, unlzma, lzcat – Compress or decompress .x
  <code>unlzma</code> is equivalent to <code>xz &#8211;format=lzma &#8211;decompress</code>.<br />
  <code>lzcat</code> is equivalent to <code>xz &#8211;format=lzma &#8211;decompress &#8211;stdout</code>. </p>
 <p> When writing scripts that need to decompress files, it is recommended to always use the name <code>xz</code> with appropriate arguments (<code>xz -d</code> or <code>xz -dc</code>) instead of the names <code>unxz</code> and <code>xzcat</code>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xz</code> is a general-purpose data compression tool with command line syntax similar to <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) and <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1). The native file format is the <code>.xz</code> format, but the legacy <code>.lzma</code> format used by LZMA Utils and raw compressed streams with no container format headers are also supported. </p>
 <p> <code>xz</code> compresses or decompresses each <i>file</i> according to the selected operation mode. If no <i>files</i> are given or <i>file</i> is <code>&#8211;</code>, <code>xz</code> reads from standard input and writes the processed data to standard output. <code>xz</code> will refuse (display an error and skip the <i>file</i>) to write compressed data to standard output if it is a terminal. Similarly, <code>xz</code> will refuse to read compressed data from standard input if it is a terminal. </p>
 <p> Unless <code>&#8211;stdout</code> is specified, <i>files</i> other than <code>&#8211;</code> are written to a new file whose name is derived from the source <i>file</i> name:</p>

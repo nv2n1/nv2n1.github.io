@@ -1,4 +1,5 @@
 ---
+
 title: "mbchk(1)"
 name: "mbchk"
 section: "1"
@@ -9,9 +10,7 @@ description: "mbchk – check the format of a Multiboot kernel"
 
 <h2>NAME</h2>
 <p> mbchk &#8211; check the format of a Multiboot kernel</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mbchk</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Check if the format of FILE complies with the Multiboot Specification. </p>
 <p> <code>-q</code>, <code>&#8211;quiet</code> suppress all normal output <code>-h</code>, <code>&#8211;help</code> display this help and exit <code>-v</code>, <code>&#8211;version</code> output version information and exit.</p>
 <h2>REPORTING BUGS</h2>

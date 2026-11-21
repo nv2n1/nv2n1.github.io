@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_add(3)"
 name: "dirfile_add"
 section: "3"
@@ -9,12 +10,10 @@ description: "dirfile_add, dirfile_madd — add a field to a dirfile"
 
 <h2>NAME</h2>
 <p> dirfile_add, dirfile_madd &#8212; add a field to a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_add(DIRFILE *</code><i>dirfile</i><code>, const gd_entry_t *</code><i>entry</i><code>);</code></dt>
 <dt> <code>int dirfile_madd(DIRFILE *</code><i>dirfile</i><code>, const gd_entry_t *</code><i>entry</i><code>,</code> <code>const char *</code><i>parent</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_add</code>() function adds the field described by <i>entry</i> to the dirfile specified by <i>dirfile</i>. The <code>dirfile_madd</code>() function behaves similarly, but adds the field as a metafield under the field indicated by the field code <i>parent</i>. </dd>
 <p> The form of <i>entry</i> is described in detail on the <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3) man page. All relevant members of <i>entry</i> for the field type specified must be properly initialised. </p>
 <p> When adding a metafield, the <i>entry</i>-&gt;<i>field</i> member should contain just the metafield&#8217;s name, not the fully formed <i>&lt;parent-field&gt;</i><code>/</code><i>&lt;meta-field&gt;</i> field code. Also, <code>dirfile_madd</code>() ignores the value of <i>entry</i>-&gt;<i>fragment_index</i>, and instead adds the new meta field to the same format file fragment in which the parent field is defined. </p>

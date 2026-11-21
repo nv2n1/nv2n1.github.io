@@ -1,4 +1,5 @@
 ---
+
 title: "fcitx-remote(1)"
 name: "fcitx-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fcitx-remote/"
 description: "fcitx-remote – Tool for control fcitx state via console"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fcitx-remote</code> [<i>OPTION</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

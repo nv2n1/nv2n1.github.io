@@ -1,4 +1,5 @@
 ---
+
 title: "cpprfs(3)"
 name: "cpprfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpprfs/"
 description: "cpprfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code>CPPRFS</code></p>

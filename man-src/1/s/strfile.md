@@ -1,4 +1,5 @@
 ---
+
 title: "strfile(1)"
 name: "strfile"
 section: "1"
@@ -10,10 +11,8 @@ description: "strfile – create a random access file for storing strings unstr 
 <h2>NAME</h2>
 <p> strfile &#8211; create a random access file for storing strings<br />
  unstr &#8211; dump strings in pointer order</p>
-<h2>SYNOPSIS</h2>
 <p> <code>strfile</code> [<code>-iorsx</code>] [<code>-c</code> <i>char</i>] <i>sourcefile</i> [<i>outputfile</i>]<br />
  <code>unstr</code> [<code>-c</code> <i>char</i>] <i>datafile</i>[<i>.ext</i>] [<i>outputfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>strfile</code> reads a file containing groups of lines separated by a line containing a single percent `%&#8217; sign (or other specified delimiter character) and creates a data file which contains a header structure and a table of file offsets for each group of lines. This allows random access of the strings. </p>
 <p> The output file, if not specified on the command line, is named <i>sourcefile.dat</i>. </p>
 <p> The purpose of <code>unstr </code> is to undo the work of <code>strfile</code>. It prints out the strings contained in the sourcefile, which is <i>datafile.ext</i> without its extension, or <i>datafile</i> if no extension is specified (in this case, the extension <i>.dat</i> is added to the name of the datafile) in the order that they are listed in the header file <i>datafile</i>. If no <i>outputfile </i> is specified, it prints to standard output; otherwise it prints to the file specified. <code>unstr</code> can also universally change the delimiter character in a strings file. It is possible to create sorted versions of input files by using <code>strfile -o </code> and then using <code>unstr </code> to dump them out in the table order.</p>

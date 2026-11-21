@@ -1,4 +1,5 @@
 ---
+
 title: "muffin-theme-viewer(1)"
 name: "muffin-theme-viewer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-muffin-theme-viewer/"
 description: "muffin-theme-viewer – view muffin themes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>muffin-theme-viewer</code> [ <i>THEMENAME</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>muffin-theme-viewer</code> allows you to preview any installed Muffin theme. </p>
 <p> When designing a new Muffin theme, you can use <code>muffin-theme-viewer</code> to measure the performance of a window frame option, and to preview the option.</p>
 <h2>OPTIONS</h2>

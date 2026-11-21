@@ -1,4 +1,5 @@
 ---
+
 title: "admesh(1)"
 name: "admesh"
 section: "1"
@@ -9,9 +10,7 @@ description: "ADMesh – a program for processing triangulated solid meshes"
 
 <h2>NAME</h2>
 <p> ADMesh &#8211; a program for processing triangulated solid meshes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>admesh</code> [<i>OPTION</i>]&#8230; <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> ADMesh is a program for processing triangulated solid meshes. Currently, ADMesh only reads the STL file format that is used for rapid prototyping applications, although it can write STL, VRML, OFF, and DXF files. </p>
 <p> By default, ADMesh performs all of the mesh checking and repairing options on the input file. This means that is checks exact, nearby, remove-unconnected, fill-holes, normal-directions, and normal-values. The file type (ASCII or binary) is automatically detected. The input file is not modified unless it is specified by the <code>&#8211;write</code> option. If the following command line was input: </p>
 <p> <code>admesh sphere.stl</code> </p>

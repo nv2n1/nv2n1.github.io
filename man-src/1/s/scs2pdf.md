@@ -1,4 +1,5 @@
 ---
+
 title: "scs2pdf(1)"
 name: "scs2pdf"
 section: "1"
@@ -9,9 +10,7 @@ description: "scs2pdf – convert IBM SCS printer data into PDF"
 
 <h2>NAME</h2>
 <p> scs2pdf &#8211; convert IBM SCS printer data into PDF</p>
-<h2>SYNOPSIS</h2>
 <p> <code>scs2pdf</code></p>
-<h2>DESCRIPTION</h2>
 <p> The program converts from an SCS print stream on the standard input, to a Portable Document Format file on the standard output. It is only intended for use with <code>lp5250d</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lp5250d/">lp5250d</a></code>(1), <code><a rel="nofollow" href="http://tn5250.sourceforge.net/">http://tn5250.sourceforge.net/</a></code></p>

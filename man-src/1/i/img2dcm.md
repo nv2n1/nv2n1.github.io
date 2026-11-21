@@ -1,4 +1,5 @@
 ---
+
 title: "img2dcm(1)"
 name: "img2dcm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-img2dcm/"
 description: "img2dcm – Convert standard image formats into DICOM format"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 img2dcm [options] imgfile-in dcmfile-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>img2dcm</code> tool serves as a conversion tool from a standard image format like JPEG or BMP to DICOM. Different output SOP Classes can be selected. The additional information (regarding patients, series, etc.) stored in the DICOM output file can be extracted from other DICOM files which serve as a &#8216;template&#8217; for the resulting DICOM object. <code>img2dcm</code> can also be configured to invent missing DICOM type 1 and type 2 attributes to work even without any template dataset.</p>
 <h2>PARAMETERS</h2>
 <pre>

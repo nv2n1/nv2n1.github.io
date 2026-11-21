@@ -1,4 +1,5 @@
 ---
+
 title: "lsmcli(1)"
 name: "lsmcli"
 section: "1"
@@ -9,9 +10,7 @@ description: "lsmcli – libStorageMgmt command line interface"
 
 <h2>NAME</h2>
 <p> lsmcli &#8211; libStorageMgmt command line interface </p>
-<h2>SYNOPSIS</h2>
 <p> <code>lsmcli </code><i>command</i> [<i>GLOBAL OPTIONS</i>]&#8230;[<i>COMMAND OPTIONS</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> lsmcli is the command line tool for the libStorageMgmt library. This tool allows users to do one off storage related management operations or to script management of their storage. </p>
 <h2>PREREQUISITES</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "dpprfs(3)"
 name: "dpprfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpprfs/"
 description: "dpprfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>DPPRFS</code></p>

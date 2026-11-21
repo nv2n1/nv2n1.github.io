@@ -1,4 +1,5 @@
 ---
+
 title: "csptri(3)"
 name: "csptri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csptri/"
 description: "csptri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br />
  <i></i><code>CSPTRI</code></p>

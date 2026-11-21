@@ -1,4 +1,5 @@
 ---
+
 title: "slapmt(3)"
 name: "slapmt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slapmt/"
 description: "slapmt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slapmt</code> (FORWRD, M, N, X, LDX, K)<br />
  <i></i><code>SLAPMT</code> performs a forward or backward permutation of the columns of a matrix.</p>

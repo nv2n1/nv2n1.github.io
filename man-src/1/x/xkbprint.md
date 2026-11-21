@@ -1,4 +1,5 @@
 ---
+
 title: "xkbprint(1)"
 name: "xkbprint"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xkbprint/"
 description: "xkbprint – print an XKB keyboard description"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xkbprint</code> [options] source [ output_file ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xkbprint</i> command generates a printable or encapsulated PostScript description of the XKB keyboard description specified by <i>source</i>. The <i>source</i> can be any compiled keymap (.xkm) file that includes a geometry description or an X display specification. If an <i>output_file</i> is specified, xkbprint writes to it. If no output file is specified, xkbprint creates replaces the extension of the source file with <i>.ps</i> or <i>.eps</i> depending on the requested format. If the source is a non-local X display (e.g.:0), xkbprint appends the appropriate prefix to the display specification, replacing the colon with a dash. For a local display, xkprint uses server-<i>n</i> where <i>n</i> is the number of the display.</p>
 <h2>OPTIONS</h2>
 <dl>

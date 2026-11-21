@@ -1,4 +1,5 @@
 ---
+
 title: "clanhb(3)"
 name: "clanhb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clanhb/"
 description: "clanhb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clanhb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br />
  <i></i><code>CLANHB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a Hermitian band matrix.</p>

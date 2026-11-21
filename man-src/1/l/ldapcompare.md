@@ -1,4 +1,5 @@
 ---
+
 title: "ldapcompare(1)"
 name: "ldapcompare"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ldapcompare/"
 description: "ldapcompare – LDAP compare tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ldapcompare</code> [<code>-V</code>[<code>V</code>]] [<code>-d</code><i>&nbsp;<wbr>debuglevel</i>] [<code>-n</code>] [<code>-v</code>] [<code>-z</code>] [<code>-M</code>[<code>M</code>]] [<code>-x</code>] [<code>-D</code><i>&nbsp;<wbr>binddn</i>] [<code>-W</code>] [<code>-w</code><i>&nbsp;<wbr>passwd</i>] [<code>-y</code><i>&nbsp;<wbr>passwdfile</i>] [<code>-H</code><i>&nbsp;<wbr>ldapuri</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]] [<code>-O</code><i>&nbsp;<wbr>security-properties</i>] [<code>-I</code>] [<code>-Q</code>] [<code>-N</code>] [<code>-U</code><i>&nbsp;<wbr>authcid</i>] [<code>-R</code><i>&nbsp;<wbr>realm</i>] [<code>-X</code><i>&nbsp;<wbr>authzid</i>] [<code>-Y</code><i>&nbsp;<wbr>mech</i>] [<code>-Z</code>[<code>Z</code>]] <i>DN</i> {<code>attr:</code><i>value</i> | <code>attr::</code><i>b64value</i>}</p>
-<h2>DESCRIPTION</h2>
 <p> <i>ldapcompare</i> is a shell-accessible interface to the <code><a href="/docs/linux/man/3-ldap_compare_ext/">ldap_compare_ext</a></code>(3) library call. </p>
 <p> <code>ldapcompare</code> opens a connection to an LDAP server, binds, and performs a compare using specified parameters. The <i>DN</i> should be a distinguished name in the directory. <i>Attr</i> should be a known attribute. If followed by one colon, the assertion <i>value</i> should be provided as a string. If followed by two colons, the base64 encoding of the value is provided. The result code of the compare is provided as the exit code and, unless ran with <code>-z</code>, the program prints TRUE, FALSE, or UNDEFINED on standard output. </p>
 <h2>OPTIONS</h2>

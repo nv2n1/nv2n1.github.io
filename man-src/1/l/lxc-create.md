@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-create(1)"
 name: "lxc-create"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-create – creates a container"
 
 <h2>NAME</h2>
 <p> lxc-create &#8211; creates a container</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-create</code> {-n <i>name</i>} [-f <i>config_file</i>] {-t <i>template</i>} [-B <i>backingstore</i>] [&#8211; <i>template-options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-create</code> creates a system object where is stored the configuration information and where can be stored user information. The identifier <i>name</i> is used to specify the container to be used with the different lxc commands. </p>
 <p> The object is a directory created in <i>/var/lib/lxc</i> and identified by its name. </p>
 <p> The object is the definition of the different resources an application can use or can see. The more the configuration file contains information, the more the container is isolated and the more the application is jailed. </p>

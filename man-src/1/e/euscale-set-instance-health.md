@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-set-instance-health(1)"
 name: "euscale-set-instance-health"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-set-instance-health – Manually set an auto-scaling insta
 
 <h2>NAME</h2>
 <p> euscale-set-instance-health &#8211; Manually set an auto-scaling instance&#8217;s health status</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-set-instance-health <code>-s</code> {Healthy,Unhealthy}</p>
 <dl>
 <dt>[&#8211;respect-grace-period]</dt>
 <dd> [&#8211;no-respect-grace-period] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Manually set an auto-scaling instance&#8217;s health status</p>
 <h3>positional arguments:</h3>
 <dl>

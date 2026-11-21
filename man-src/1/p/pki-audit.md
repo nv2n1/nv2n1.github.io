@@ -1,4 +1,5 @@
 ---
+
 title: "pki-audit(1)"
 name: "pki-audit"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pki-audit/"
 description: "pki-audit – Command-Line Interface for managing Certificate System audit configuration."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - audit pki[CLI options]&lt;subsystem&gt; - audit - show[command options] pki[CLI options]&lt;subsystem&gt; - audit - mod-- action&lt;action&gt;[command options] pki[CLI options]&lt;subsystem&gt; - audit - mod-- input&lt;input file&gt;[command options]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki-audit</code> commands provide command-line interfaces to manage audit configuration in the specified subsystem. Currently the only supported subsystem is <code>tps</code>. </p>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-audit</code></p>
 <dl>

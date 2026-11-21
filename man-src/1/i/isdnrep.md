@@ -1,4 +1,5 @@
 ---
+
 title: "isdnrep(1)"
 name: "isdnrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isdnrep/"
 description: "isdnrep – report ISDN activity"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Isdnrep reads the isdnlog log files, generates reports, does statistics, and other things. It can also generate HTML output for use with a web server. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "snmpconf(1)"
 name: "snmpconf"
 section: "1"
@@ -9,14 +10,12 @@ description: "snmpconf – creates and modifies SNMP configuration files"
 
 <h2>NAME</h2>
 <p> snmpconf &#8211; creates and modifies SNMP configuration files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmpconf</code> [OPTIONS] [fileToCreate]</p>
 <dl>
 <dt>Start with:</dt>
 <dd> <code>snmpconf</code> -g basic_setup</dd>
 <dt>Or even just:</dt>
 <dd> <code>snmpconf</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>snmpconf</code> is a simple Perl script that walks you through setting up a configuration file step by step. It should be fairly straight forward to use. Merely run it and answer its questions. </p>
 <p> In its default mode of operation, it prompts the user with menus showing sections of the various configuration files it knows about. When the user selects a section, a sub-menu is shown listing of the descriptions of the tokens that can be created in that section. When a description is selected, the user is prompted with questions that construct the configuration line in question. </p>
 <p> Finally, when the user quits the program any configuration files that have been edited by the user are saved to the local directory, fully commented. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pomerge(1)"
 name: "pomerge"
 section: "1"
@@ -9,9 +10,7 @@ description: "pomerge – Merges XLIFF and Gettext PO localization files."
 
 <h2>NAME</h2>
 <p> pomerge &#8211; Merges XLIFF and Gettext PO localization files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pomerge </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-t|&#8211;template <i>TEMPLATE</i>] [-S|&#8211;timestamp] [&#8211;mergeblanks] [&#8211;mergefuzzy] [&#8211;mergecomments]</p>
-<h2>DESCRIPTION</h2>
 <p> Snippet file produced by e.g. :doc:`pogrep &lt;/commands/pogrep&gt;` and updated by a translator can be merged back into the original files. </p>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pomerge.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pomerge.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>

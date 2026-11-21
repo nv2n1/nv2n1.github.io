@@ -1,4 +1,5 @@
 ---
+
 title: "redis-cli(1)"
 name: "redis-cli"
 section: "1"
@@ -9,9 +10,7 @@ description: "redis-cli – Redis client"
 
 <h2>NAME</h2>
 <p> redis-cli &#8211; Redis client </p>
-<h2>SYNOPSIS</h2>
 <p> <code>redis-cli</code> [ options ] [cmd [arg [arg &#8230;]]] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Redis</code> is an open source (BSD licensed), in-memory data structure store, used as database, cache and message broker, found at <code><a rel="nofollow" href="http://redis.io/">http://redis.io/</a></code> </p>
 <p> The <code>redis-cli</code> command is a command line client to redis-server. </p>
 <h2>OPTIONS</h2>

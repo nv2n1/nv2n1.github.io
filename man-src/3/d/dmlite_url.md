@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_url(3)"
 name: "dmlite_url"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_url –"
 ---
 
 <p> Handles URL.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;utils.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char <code>scheme</code> [<code>SCHEME_MAX</code>] </p>

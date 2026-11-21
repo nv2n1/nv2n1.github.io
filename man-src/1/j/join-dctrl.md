@@ -1,4 +1,5 @@
 ---
+
 title: "join-dctrl(1)"
 name: "join-dctrl"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-join-dctrl/"
 description: "join-dctrl – perform relational join on data in dctrl format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>join-dctrl</code> [ <i>options</i> ] <i>filename</i> <i>filename</i> </p>
 <p> <code>join-dctrl</code> <code>&#8211;version</code> </p>
 <p> <code>join-dctrl</code> <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>join-dctrl</code> performs a relational join operation on data given to it in Debian control file format. </p>
 <p> A <i>join field</i> must be specified using either the switches <code>-1</code> and <code>-2</code> or the switch <code>-j</code>. Conceptually, the program creates all ordered pairs of records that can be formed by having a record from the first file as the first member of the pair and having a record from the second file as the second member of the pair; and then it deletes all such pairs where the join fields are not equal. Effectively, each of the input files is treated as a relational database table. </p>
 <p> Every input file must be in ascending order on its join field; this allows the program to work fast. The <code><a href="/docs/linux/man/1-sort-dctrl/">sort-dctrl</a></code>(1) program can be used to make it so.</p>

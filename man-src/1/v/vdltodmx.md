@@ -1,4 +1,5 @@
 ---
+
 title: "vdltodmx(1)"
 name: "vdltodmx"
 section: "1"
@@ -9,9 +10,7 @@ description: "vdltodmx – dmx configuration file parser and printer"
 
 <h2>NAME</h2>
 <p> vdltodmx &#8211; dmx configuration file parser and printer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vdltodmx</code> <i>infile</i> <i>outfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>vdltodmx</i> reads the input file, which should be in VDL configuration file format. After a successful parse, a file in Xdmx configuration file format is written to the output file. </p>
 <p> The VDL file format is used with <i>xmovie</i>, which is available from <a rel="nofollow" href="http://www.llnl.gov/icc/lc/img/xmovie/xmovie.html">http://www.llnl.gov/icc/lc/img/xmovie/xmovie.html</a></p>
 <h2>EXAMPLE</h2>

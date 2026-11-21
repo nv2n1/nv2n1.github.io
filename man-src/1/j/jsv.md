@@ -1,4 +1,5 @@
 ---
+
 title: "jsv(1)"
 name: "jsv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jsv/"
 description: "JSV – xxQS_NAMExx Job Submission Verifier"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> JSV is an abbreviation for Job Submission Verifier. A JSV is a script or binary that can be used to verify, modify or reject a job during job submission. </p>
 <p> JSVs will be triggered by submit clients like <i>qsub</i>, <i>qrsh</i>, <i>qsh</i> and <i>qmon</i> on submit hosts (Client JSV), or they verify incoming jobs on the master host (Server JSV), or both.</p>
 <h2>CONFIGURATION</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-exegesis-14(1)"
 name: "llvm-exegesis-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-exegesis-14/"
 description: "llvm-exegesis – LLVM Machine Instruction Benchmark"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-exegesis</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-exegesis</code> is a benchmarking tool that uses information available in LLVM to measure host machine instruction characteristics like latency, throughput, or port decomposition. </p>
 <p> Given an LLVM opcode name and a benchmarking mode, <code>llvm-exegesis</code> generates a code snippet that makes execution as serial (resp. as parallel) as possible so that we can measure the latency (resp. inverse throughput/uop decomposition) of the instruction. The code snippet is jitted and executed on the host subtarget. The time taken (resp. resource usage) is measured using hardware performance counters. The result is printed out as YAML to the standard output. </p>
 <p> The main goal of this tool is to automatically (in)validate the LLVM’s TableDef scheduling models. To that end, we also provide analysis of the results. </p>

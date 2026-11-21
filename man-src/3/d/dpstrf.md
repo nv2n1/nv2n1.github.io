@@ -1,4 +1,5 @@
 ---
+
 title: "dpstrf(3)"
 name: "dpstrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpstrf/"
 description: "dpstrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
  <i></i><code>DPSTRF</code></p>

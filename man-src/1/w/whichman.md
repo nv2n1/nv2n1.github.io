@@ -1,4 +1,5 @@
 ---
+
 title: "whichman(1)"
 name: "whichman"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-whichman/"
 description: "whichman – show the location of a man page using a fault tolerant approximate matching algorithm"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>whichman</code> [-#ehIp][-t#] man-page-name</p>
-<h2>DESCRIPTION</h2>
 <p> <code>whichman </code> is a &quot;which&quot; alike search command for man pages. <code>whichman </code> searches the <code>MANPATH </code> environment variable. If this variable is not defined, then it uses <i>/usr/share/man:/usr/man:/usr/X11R6/man:</i> <i>/usr/local/share/man:/usr/local/man</i> by default. </p>
 <p> Unlike &quot;which&quot; this program does not stop on the first match. The name should probably have been something like whereman as this is not a &quot;which&quot; at all. whichman shows all man-pages that match and allows you to identify the different sections to which the pages belong. </p>
 <p> <code>whichman </code> can handle international manpage path names for different languages. Man pages in different languages may be stored in &#8230;/man/&lt;country_code&gt;/man[1-9]/&#8230; </p>

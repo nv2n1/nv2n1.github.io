@@ -1,4 +1,5 @@
 ---
+
 title: "dpotf2(3)"
 name: "dpotf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpotf2/"
 description: "dpotf2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpotf2</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>DPOTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite matrix (unblocked algorithm).</p>

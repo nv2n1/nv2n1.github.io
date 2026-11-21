@@ -1,4 +1,5 @@
 ---
+
 title: "lzip(1)"
 name: "lzip"
 section: "1"
@@ -9,9 +10,7 @@ description: "lzip – reduces the size of files"
 
 <h2>NAME</h2>
 <p> lzip &#8211; reduces the size of files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lzip</code> [<i>,options/</i>] [<i>,files/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Lzip &#8211; LZMA lossless data compressor.</p>
 <h2>OPTIONS</h2>
 <dl>

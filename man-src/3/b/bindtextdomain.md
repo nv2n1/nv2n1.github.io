@@ -1,4 +1,5 @@
 ---
+
 title: "bindtextdomain(3)"
 name: "bindtextdomain"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-bindtextdomain/"
 description: "bindtextdomain – set directory containing message catalogs"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libintl.h&gt;
 char *bindtextdomain(const char *domainname, const char *dirname);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>bindtextdomain</code> function sets the base directory of the hierarchy containing message catalogs for a given message domain. </p>
 <p> A message domain is a set of translatable <i>msgid</i> messages. Usually, every software package has its own message domain. The need for calling <code>bindtextdomain</code> arises because packages are not always installed with the same prefix as the &lt;libintl.h&gt; header and the libc/libintl libraries. </p>
 <p> Message catalogs will be expected at the pathnames <i>dirname</i>/<i>locale</i>/<i>category</i>/<i>domainname</i>.mo, where <i>locale</i> is a locale name and <i>category</i> is a locale facet such as <code>LC_MESSAGES</code>. </p>

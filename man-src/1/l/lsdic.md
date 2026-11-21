@@ -1,4 +1,5 @@
 ---
+
 title: "lsdic(1)"
 name: "lsdic"
 section: "1"
@@ -9,9 +10,7 @@ description: "lsdic – Display the user dictionary list"
 
 <h2>NAME</h2>
 <p> lsdic &#8211; Display the user dictionary list</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lsdic [{-cs|-cannaserver} </code><i>canna-server</i>] [-i|-u <i>user-name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> lsdic displays the list of the user&#8217;s dictionaries. </p>
 <p> To display the list of another user, specify the user name by -u option. To display the system dictionary list, specify the -i option.</p>
 <h2>OPTIONS</h2>

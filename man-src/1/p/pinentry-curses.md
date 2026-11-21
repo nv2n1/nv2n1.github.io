@@ -1,4 +1,5 @@
 ---
+
 title: "pinentry-curses(1)"
 name: "pinentry-curses"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pinentry-curses/"
 description: "pinentry-curses – PIN or pass-phrase entry dialog for GnuPG"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pinentry-curses [</code><i>OPTION</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pinentry-curses</code> is a program that allows for secure entry of PINs or pass phrases. That means it tries to take care that the entered information is not swapped to disk or temporarily stored anywhere. This functionality is particularly useful for entering pass phrases when using encryption software such as GnuPG or e-mail clients using the same. It uses an open protocol and is therefore not tied to particular software. </p>
 <p> <code>pinentry-curses</code> implements a PIN entry dialog using the curses tool kit, meaning that it is useful for users working in text mode without the X Window System. There are other flavors that implement PIN entry dialogs that use an X tool kit. If you have installed any of the latter programs then this program is not necessary because the X flavors automatically fall back to text mode if X is not active. </p>
 <p> <code>pinentry-curses</code> is typically used internally by <code>gpg-agent</code>. Users don&#8217;t normally have a reason to call it directly.</p>

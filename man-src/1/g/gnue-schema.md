@@ -1,4 +1,5 @@
 ---
+
 title: "gnue-schema(1)"
 name: "gnue-schema"
 section: "1"
@@ -9,9 +10,7 @@ description: "gnue-schema – gnue-schema"
 
 <h2>NAME</h2>
 <p> gnue-schema &#8211; gnue-schema</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gnue-schema</code> [ <i>options</i> ] <i>file</i> <i>[,</i> <i>file,</i> <i>&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Import GNUe Schema Definition files into a given connection </p>
 <h2>OPTIONS</h2>
 <dl>

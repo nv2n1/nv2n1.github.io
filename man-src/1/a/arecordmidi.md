@@ -1,4 +1,5 @@
 ---
+
 title: "arecordmidi(1)"
 name: "arecordmidi"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arecordmidi/"
 description: "arecordmidi – record Standard MIDI Files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>arecordmidi</code> -p client:port[,&#8230;] [options] midifile </p>
-<h2>DESCRIPTION</h2>
 <p> <code>arecordmidi</code> is a command-line utility that records a Standard MIDI File from one or more ALSA sequencer ports. </p>
 <p> To stop recording, press Ctrl+C. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "signcode(1)"
 name: "signcode"
 section: "1"
@@ -9,9 +10,7 @@ description: "signcode – Digitally sign an PE executable using an X.509 certif
 
 <h2>NAME</h2>
 <p> signcode &#8211; Digitally sign an PE executable using an X.509 certificate.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>signcode [options] filename</code></p>
-<h2>DESCRIPTION</h2>
 <p> Digitally sign an PE executable (CLR assembly, Win32 EXE or DLL) using an X.509 certificate and it&#8217;s associated private key. The signature is compatible with Authenticode(r) and can be validated with chktrust (either on Windows or on any platform supported by Mono).</p>
 <h2>OPTIONS</h2>
 <dl>

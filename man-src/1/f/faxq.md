@@ -1,4 +1,5 @@
 ---
+
 title: "faxq(1)"
 name: "faxq"
 section: "1"
@@ -8,9 +9,7 @@ description: "faxq – display fax jobs queued by"
 ---
 
 <p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>faxq</code> [<code>&lt;command&gt;</code>] [<code>-osa</code>] [<code>-v</code>] [<code>-r</code>] [<code>-P</code>&lt;job&gt;<code>&lt;prio&gt;</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> Display the fax queue set up by <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1). </p>
 <p> <i>faxq </i> looks for all the jobs queued by <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) to /var/spool/fax/outgoing/*. For each job in the queue, <i>faxq</i> displays some status informations about it. If no options are specified, one line per queued fax job is printed, displaying the job number, sender, number of pages and target fax number. </p>
 <h2>COMMANDS</h2>

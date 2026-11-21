@@ -1,4 +1,5 @@
 ---
+
 title: "emesene(1)"
 name: "emesene"
 section: "1"
@@ -9,9 +10,7 @@ description: "Emesene – MSN Messenger Client."
 
 <h2>NAME</h2>
 <p> Emesene &#8211; MSN Messenger Client. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>emesene</code> [<i>OPTIONS</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Emesene</code> is a multiplattform MSN messenger client written in Python and PyGTK.</p>
 <h2>OPTIONS</h2>
 <p> Emesene options:</p>

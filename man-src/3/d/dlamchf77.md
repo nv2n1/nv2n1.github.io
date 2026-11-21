@@ -1,4 +1,5 @@
 ---
+
 title: "dlamchf77(3)"
 name: "dlamchf77"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlamchf77/"
 description: "dlamchf77.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlamch</code> (CMACH)<br />
  <i></i><code>DLAMCHF77</code> deprecated<br />

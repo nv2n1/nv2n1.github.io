@@ -1,4 +1,5 @@
 ---
+
 title: "getcontext(2)"
 name: "getcontext"
 section: "2"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/2-getcontext/"
 description: "getcontext, setcontext – get or set the user context"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ucontext.h&gt;</code> </p>
 <p> <code>int getcontext(ucontext_t *</code><i>ucp</i><code>);</code><br />
  <code>int setcontext(const ucontext_t *</code><i>ucp</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> In a System V-like environment, one has the two types <i>mcontext_t</i> and <i>ucontext_t</i> defined in <i>&lt;ucontext.h&gt;</i> and the four functions <code>getcontext</code>(), <code>setcontext</code>(), <code><a href="/docs/linux/man/3-makecontext/">makecontext</a></code>(3), and <code><a href="/docs/linux/man/3-swapcontext/">swapcontext</a></code>(3) that allow user-level context switching between multiple threads of control within a process. </p>
 <p> The <i>mcontext_t</i> type is machine-dependent and opaque. The <i>ucontext_t</i> type is a structure that has at least the following fields: </p>
 <p> typedef struct ucontext_t {<br />

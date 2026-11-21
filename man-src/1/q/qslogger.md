@@ -1,4 +1,5 @@
 ---
+
 title: "qslogger(1)"
 name: "qslogger"
 section: "1"
@@ -6,18 +7,11 @@ letter: "q"
 url: "/docs/linux/man/1-qslogger/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+qslogger - another shell command interface to the system log module (syslog). 
 
- qslogger - another shell command interface to the system log module (syslog). 
+qslogger [-r &lt;expression&gt;] [-t &lt;tag&gt;] [-f &lt;facility&gt;] [-l &lt;level&gt;] [-d &lt;level&gt;] [-p]
 
-<h2>SYNOPSIS</h2>
-
- qslogger [-r &lt;expression&gt;] [-t &lt;tag&gt;] [-f &lt;facility&gt;] [-l &lt;level&gt;] [-d &lt;level&gt;] [-p]
-
-<h2>DESCRIPTION</h2>
-
- Use this utility to forward log messages to the systems syslog facility, e.g., to forward the messages to a remote host. It reads data from stdin.
+Use this utility to forward log messages to the systems syslog facility, e.g., to forward the messages to a remote host. It reads data from stdin.
 
 <h2>OPTIONS</h2>
 

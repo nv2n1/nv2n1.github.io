@@ -1,4 +1,5 @@
 ---
+
 title: "obex_push(1)"
 name: "obex_push"
 section: "1"
@@ -9,9 +10,7 @@ description: "obex_push – Push and Receive Files over the Bluetooth OBEX Push 
 
 <h2>NAME</h2>
 <p> obex_push &#8211; Push and Receive Files over the Bluetooth OBEX Push Channel</p>
-<h2>SYNOPSIS</h2>
 <p> obex_push <i>[</i><code>&lt;channel&gt;</code><i>] [</i><code>&lt;bdaddr&gt; &lt;filename&gt;</code><i>] </i></p>
-<h2>DESCRIPTION</h2>
 <p> obex_push can send and receive files over the Bluetooth OBEX Push Channel. </p>
 <p> Link your bluetooth device with your computer. </p>
 <p> You can see the SDP services with: </p>

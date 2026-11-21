@@ -1,4 +1,5 @@
 ---
+
 title: "virt-rescue(1)"
 name: "virt-rescue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-rescue/"
 description: "virt-rescue – Run a rescue shell on a virtual machine"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a disk.img...] virt - rescue-- suggest(-d domname | -a disk.img...)
 </code></pre>
@@ -16,7 +16,6 @@ virt - rescue[--options] - d domname virt - rescue[--options] - a disk.img[-a di
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-rescue&quot;</tt> in write mode on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently. </p>
 <p> Use the <i>&#8211;ro</i> (read-only) option to use <tt>&quot;virt-rescue&quot;</tt> safely if the disk image or virtual machine might be live. You may see strange or inconsistent results if running concurrently with other changes, but with this option you won&#8217;t risk disk corruption.</p>
-<h2>DESCRIPTION</h2>
 <p> virt-rescue is like a Rescue <font SIZE="-1">CD,</font> but for virtual machines, and without the need for a <font SIZE="-1">CD. </font> virt-rescue gives you a rescue shell and some simple recovery tools which you can use to examine or rescue a virtual machine or disk image. </p>
 <p> You can run virt-rescue on any virtual machine known to libvirt, or directly on disk image(s): </p>
 <pre>

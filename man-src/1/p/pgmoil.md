@@ -1,4 +1,5 @@
 ---
+
 title: "pgmoil(1)"
 name: "pgmoil"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pgmoil/"
 description: "pamoil – turn a PAM image into an oil painting"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamoil</code> [<code>-n</code> <i>N</i>] [<i>pamfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Netpbm image as input. Does an &quot;oil transfer&quot;, and writes the same type of Netpbm image as output. </p>
 <p> The oil transfer is described in &quot;Beyond Photography&quot; by Holzmann, chapter 4, photo 7. It&#8217;s a sort of localized smearing. </p>
 <p> The smearing works like this: First, assume a grayscale image. For each pixel in the image, <code>pamoil</code> looks at a square neighborhood around it. <code>pamoil</code> determines what is the most common pixel intensity in the neighborhood, and puts a pixel of that intensity into the output in the same position as the input pixel. </p>

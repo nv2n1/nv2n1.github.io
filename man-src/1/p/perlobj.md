@@ -1,4 +1,5 @@
 ---
+
 title: "perlobj(1)"
 name: "perlobj"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlobj/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlobj - Perl object reference 
 
- perlobj - Perl object reference 
-
-<h2>DESCRIPTION</h2>
-
- This document provides a reference for Perl's object orientation features. If you're looking for an introduction to object-oriented programming in Perl, please see perlootut. 
+This document provides a reference for Perl's object orientation features. If you're looking for an introduction to object-oriented programming in Perl, please see perlootut. 
 
  In order to understand Perl objects, you first need to understand references in Perl. See perlreftut for details. 
 

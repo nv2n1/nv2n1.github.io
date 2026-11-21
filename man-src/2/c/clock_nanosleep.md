@@ -1,4 +1,5 @@
 ---
+
 title: "clock_nanosleep(2)"
 name: "clock_nanosleep"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-clock_nanosleep/"
 description: "clock_nanosleep – high-resolution sleep with specifiable clock"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <pre><code>
 int clock_nanosleep(clockid_t clockid, int flags,
@@ -20,7 +20,6 @@ int clock_nanosleep(clockid_t clockid, int flags,
 <dl>
 <dt>
 </dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Like <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2), <code>clock_nanosleep</code>() allows the calling thread to sleep for an interval specified with nanosecond precision. It differs in allowing the caller to select the clock against which the sleep interval is to be measured, and in allowing the sleep interval to be specified as either an absolute or a relative value. </p>
 <p> The time values passed to and returned by this call are specified using <i>timespec</i> structures, defined as follows: </p>
 <p> struct timespec {<br />

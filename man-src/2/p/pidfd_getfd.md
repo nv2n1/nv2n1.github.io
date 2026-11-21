@@ -1,4 +1,5 @@
 ---
+
 title: "pidfd_getfd(2)"
 name: "pidfd_getfd"
 section: "2"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/2-pidfd_getfd/"
 description: "pidfd_getfd – obtain a duplicate of another process’s file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 int pidfd_getfd(int pidfd, int targetfd, unsigned int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pidfd_getfd</code>() system call allocates a new file descriptor in the calling process. This new file descriptor is a duplicate of an existing file descriptor, <i>targetfd</i>, in the process referred to by the PID file descriptor <i>pidfd</i>. </p>
 <p> The duplicate file descriptor refers to the same open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) as the original file descriptor in the process referred to by <i>pidfd</i>. The two file descriptors thus share file status flags and file offset. Furthermore, operations on the underlying file object (for example, assigning an address to a socket object using <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2)) can equally be performed via the duplicate file descriptor. </p>
 <p> The close-on-exec flag (<code>FD_CLOEXEC</code>; see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)) is set on the file descriptor returned by <code>pidfd_getfd</code>(). </p>

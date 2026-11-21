@@ -1,4 +1,5 @@
 ---
+
 title: "ftnchek(1)"
 name: "ftnchek"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ftnchek/"
 description: "ftnchek – Fortran 77 program checker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ftnchek</code> [ <code>-arguments</code>[=<i>list</i>] ] [ <code>-array</code>[=<i>list</i>] ]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>&#8211;</code>[<code>no</code>]<code>brief</code> ] [ <code>-calltree</code>[=<i>list</i>] ] [ <code>&#8211;</code>[<code>no</code>]<code>check</code> ]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-columns</code>[=<i>num</i>] ] [ <code>-common</code>[=<i>list</i>] ]<br />
@@ -27,7 +27,6 @@ description: "ftnchek – Fortran 77 program checker"
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>&#8211;</code>[<code>no</code>]<code>truncation</code>[<code>=</code><i>list</i>] ] [ <code>-usage</code>[=<i>list</i>] ]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>&#8211;</code>[<code>no</code>]<code>vcg</code> ] [ <code>&#8211;</code>[<code>no</code>]<code>version</code> ] [ <code>&#8211;</code>[<code>no</code>]<code>volatile</code> ]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-wordsize</code>[=<i>num</i>] ] [ <code>-wrap</code>[=<i>num</i>] ] [ <i>files &#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ftnchek</code> (short for Fortran checker) is designed to detect certain errors in a Fortran program that a compiler usually does not. <code>ftnchek</code> is not primarily intended to detect syntax errors. Its purpose is to assist the user in finding semantic errors. Semantic errors are legal in the Fortran language but are wasteful or may cause incorrect operation. For example, variables which are never used may indicate some omission in the program; uninitialized variables contain garbage which may cause incorrect results to be calculated; and variables which are not declared may not have the intended type. <code>ftnchek</code> is intended to assist users in the debugging of their Fortran program. It is not intended to catch all syntax errors. This is the function of the compiler. Prior to using <code>ftnchek</code>, the user should verify that the program compiles correctly. </p>
 <p> This document first summarizes how to invoke <code>ftnchek</code>. That section should be read before beginning to use <code>ftnchek</code>. Later sections describe <code>ftnchek</code>&#8216;s options in more detail, give an example of its use, and explain how to interpret the output. The final sections mention the limitations and known bugs in <code>ftnchek</code>.</p>
 <h2>INVOKING FTNCHEK</h2>

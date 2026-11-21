@@ -1,4 +1,5 @@
 ---
+
 title: "get_compiled_sprite(3)"
 name: "get_compiled_sprite"
 section: "3"
@@ -9,10 +10,8 @@ description: "get_compiled_sprite – Creates a compiled sprite using a bitmap a
 
 <h2>NAME</h2>
 <p> get_compiled_sprite &#8211; Creates a compiled sprite using a bitmap as source. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>COMPILED_SPRITE *get_compiled_sprite(BITMAP *bitmap, int planar);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Creates a compiled sprite based on the specified bitmap (which must be a memory bitmap). Compiled sprites are device-dependent, so you have to specify whether to compile it into a linear or planar format. Pass FALSE as the second parameter if you are going to be drawing it onto memory bitmaps or mode 13h and SVGA screen bitmaps, and pass TRUE if you are going to draw it onto mode-X or Xtended mode screen bitmaps. Example: </p>
 <pre><code>
 COMPILED_SPRITE *cspr;

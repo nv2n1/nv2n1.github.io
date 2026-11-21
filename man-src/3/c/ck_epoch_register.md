@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_register(3)"
 name: "ck_epoch_register"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_epoch_register – register a thread for epoch reclamation"
 <p> <code>ck_epoch_register</code> &#8211; register a thread for epoch reclamation</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_epoch.h Ft void Fn ck_epoch_register ck_epoch_t *epoch ck_epoch_record_t *record</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_epoch_register 3 function associates a record object specified by the Fa record pointer with the epoch object pointed to by Fa epoch . Any thread or processor that will require safe memory reclamation guarantees must register a unique record object. After registration, the object pointed to by the Fa record argument will have lifetime managed by the underlying epoch sub-system. The record object must not be destroyed after it is associated with a Fn ck_epoch_register 3 call.</p>
 <h2>RETURN VALUES</h2>
 <p> This function has no return value.</p>

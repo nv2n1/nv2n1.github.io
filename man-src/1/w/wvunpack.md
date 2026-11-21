@@ -1,4 +1,5 @@
 ---
+
 title: "wvunpack(1)"
 name: "wvunpack"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-wvunpack/"
 description: "wvunpack – decodes wavpack encoded files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>wvunpack</code> [<i>-options</i>] <i>INFILE</i>&#8230; [<code>-o&nbsp;<wbr></code><i>OUTFILE</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>wvunpack</code></p>
 <dd>decodes WavPack files back to their uncompressed wav or raw form using the options provided. Unless overridden with the <code>-o</code> switch, the resulting filename will be <i>source-name.wav</i> (or <i>source-name.raw</i> when <code>-r</code> used). Multiple WavPack input files may be specified resulting in multiple output files, and in that case <code>-o</code> may be used to specify an alternate target directory. <i>Stdin</i> and <i>stdout</i> may be specified with &#8220;-&#8220;. WavPack files are generally created with the <code>wavpack</code> program.</dd>
 <h2>OPTIONS</h2>

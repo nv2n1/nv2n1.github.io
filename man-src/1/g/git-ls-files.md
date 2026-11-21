@@ -1,4 +1,5 @@
 ---
+
 title: "git-ls-files(1)"
 name: "git-ls-files"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-ls-files/"
 description: "git-ls-files – Show information about files in the index and the working tree"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git ls - files[-z][-t][-v][-f](--[cached | deleted | others | ignored | stage | unmerged | killed | modified]) *
              (-[c | d | o | i | s | u | k | m]) *
@@ -21,7 +21,6 @@ git ls - files[-z][-t][-v][-f](--[cached | deleted | others | ignored | stage | 
                  [--full - name][--recurse - submodules]
                  [--abbrev[=&lt;n&gt;]][--][&lt;file&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This merges the file listing in the index with the actual working directory list, and shows different combinations of the two. </p>
 <p> One or more of the options below may be used to determine the files shown:</p>
 <h2>OPTIONS</h2>

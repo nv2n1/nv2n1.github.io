@@ -1,4 +1,5 @@
 ---
+
 title: "stprfb(3)"
 name: "stprfb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stprfb/"
 description: "stprfb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br />
  <i></i><code>STPRFB</code> applies a real or complex &#8216;triangular-pentagonal&#8217; blocked reflector to a real or complex matrix, which is composed of two blocks.</p>

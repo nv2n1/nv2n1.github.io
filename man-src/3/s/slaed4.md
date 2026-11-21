@@ -1,4 +1,5 @@
 ---
+
 title: "slaed4(3)"
 name: "slaed4"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaed4/"
 description: "slaed4.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed4</code> (N, I, D, Z, DELTA, RHO, DLAM, INFO)<br />
  <i></i><code>SLAED4</code> used by sstedc. Finds a single root of the secular equation.</p>

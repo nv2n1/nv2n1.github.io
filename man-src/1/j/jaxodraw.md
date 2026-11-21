@@ -1,4 +1,5 @@
 ---
+
 title: "jaxodraw(1)"
 name: "jaxodraw"
 section: "1"
@@ -11,7 +12,6 @@ description: "JaxoDraw – A Program for the Interactive Generation of Feynman D
 <p> <code>JaxoDraw</code> &#8211; A Program for the Interactive Generation of Feynman Diagrams</p>
 <h2>SYNTAX</h2>
 <p> jaxodraw [<i>options</i>] [&lt;<i>file</i>&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>JaxoDraw</code> is a Feynman graph plotting tool written in Java. It has a complete graphical user interface that allows all actions to be carried out via mouse click-and-drag operations in a WYSIWYG fashion. Graphs may be exported to postscript / EPS format and can be saved in XML files to be used for later sessions. With JaxoDraw it becomes possible to draw even complicated Feynman diagrams with just a few mouse clicks, without the knowledge of any programming language. </p>
 <p> <code>Note</code>: You need an installed and configured Java Runtime Environment (version 1.4.1 or greater) in order to run <code>JaxoDraw</code>. This may be downloaded free of charge from Sun&#8217;s web pages: <i><a rel="nofollow" href="http://java.sun.com/downloads/">http://java.sun.com/downloads/</a></i> </p>
 <p> <code>Note</code>: You need to install the axodraw4j.sty LaTeX style file in order to use the LaTeX features of <code>JaxoDraw</code>. You may download it from <i><a rel="nofollow" href="http://jaxodraw.sourceforge.net/download/">http://jaxodraw.sourceforge.net/download/</a></i>. Please refer to the <code>JaxoDraw</code> User Guide for information on how to install axodraw4j. </p>

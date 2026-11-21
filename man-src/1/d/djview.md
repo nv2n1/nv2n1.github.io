@@ -1,4 +1,5 @@
 ---
+
 title: "djview(1)"
 name: "djview"
 section: "1"
@@ -9,9 +10,7 @@ description: "djview3 – Standalone DjVu viewer"
 
 <h2>NAME</h2>
 <p> djview3 &#8211; Standalone DjVu viewer </p>
-<h2>SYNOPSIS</h2>
 <p> <code>djview3 [</code><i>options</i><code>] [</code><i>djvufile</i><code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Standalone viewer for DjVu files. Features include navigating documents, zooming and panning page images, producing and displaying thumbnails, searching documents for particular words in the hidden text layer, copying hidden text to the clipboard, exporting page images as <font SIZE="-1">PNM</font> files, saving pages and documents as bundled or indirect multi-page files, and printing page and documents to Postscript printers. </p>
 <h2>OPTIONS</h2>
 <dl>

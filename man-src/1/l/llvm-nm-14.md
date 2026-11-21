@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-nm-14(1)"
 name: "llvm-nm-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-nm-14/"
 description: "llvm-nm – list LLVM bitcode and object file’s symbol table"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-nm</code> [<i>options</i>] [<i>filenames…</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-nm</code> utility lists the names of symbols from LLVM bitcode files, object files, and archives. Each symbol is listed along with some simple information about its provenance. If no filename is specified, <i>a.out</i> is used as the input. If <i>&#8211;</i> is used as a filename, <code>llvm-nm</code> will read a file from its standard input stream. </p>
 <p> <code>llvm-nm</code>’s default output format is the traditional BSD <code>nm</code> output format. Each such output record consists of an (optional) 8-digit hexadecimal address, followed by a type code character, followed by a name, for each symbol. One record is printed per line; fields are separated by spaces. When the address is omitted, it is replaced by 8 spaces. </p>
 <p> The supported type code characters are as follows. Where both lower and upper-case characters are listed for the same meaning, a lower-case character represents a local symbol, whilst an upper-case character represents a global (external) symbol: </p>

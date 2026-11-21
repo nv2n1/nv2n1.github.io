@@ -1,4 +1,5 @@
 ---
+
 title: "jpegtran(1)"
 name: "jpegtran"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jpegtran/"
 description: "jpegtran – lossless transformation of JPEG files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jpegtran</code> [ <i>options</i> ] [ <i>filename</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>jpegtran</code> performs various useful transformations of JPEG files. It can translate the coded representation from one variant of JPEG to another, for example from baseline JPEG to progressive JPEG or vice versa. It can also perform some rearrangements of the image data, for example turning an image from landscape to portrait format by rotation. </p>
 <p> For EXIF files and JPEG files containing Exif data, you may prefer to use <code>exiftran</code> instead. </p>
 <p> <code>jpegtran</code> works by rearranging the compressed data (DCT coefficients), without ever fully decoding the image. Therefore, its transformations are lossless: there is no image degradation at all, which would not be true if you used <code>djpeg</code> followed by <code>cjpeg</code> to accomplish the same conversion. But by the same token, <code>jpegtran</code> cannot perform lossy operations such as changing the image quality. However, while the image data is losslessly transformed, metadata can be removed. See the <code>-copy</code> option for specifics. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_init(3)"
 name: "ck_bitmap_init"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_bitmap_init – initialize a bitmap"
 <p> <code>ck_bitmap_init</code> &#8211; initialize a bitmap</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_bitmap.h Ft void Fn ck_bitmap_init ck_bitmap_t *bitmap unsigned int n_bits bool set</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_bitmap_init function initializes the bitmap pointed to by the Fa bitmap pointer. The argument Fa n_bits specifies the number of bits that are to be stored in the bitmap. The argument Fa set determines whether the values of the bits in Fa bitmap are to be initialized to <code>1</code> or <code>0</code> </p>
 <p> It is expected that Fa bitmap points to a contiguous region of memory containing at least the number of bytes specified by ck_bitmap_size3.</p>
 <h2>RETURN VALUES</h2>

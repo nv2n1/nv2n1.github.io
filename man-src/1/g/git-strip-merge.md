@@ -1,4 +1,5 @@
 ---
+
 title: "git-strip-merge(1)"
 name: "git-strip-merge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-git-strip-merge/"
 description: "git-strip-merge – A git-merge wrapper that deletes files on a \"foreign\" branch before merging"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>git-strip-merge</code> [<i>git-merge options</i>] [<code>-M</code> <i>&lt;commitmsg&gt;</i>] <i>&lt;branch&gt;</i> <i>FILE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> git-merge that deletes files on &quot;foreign&quot; &lt;branch&gt; before merging. </p>
 <p> Useful for ignoring a folder in &lt;branch&gt; before merging it with current branch. Works by deleting FILE(S) in a detached commit based on &lt;branch&gt;, and then performing the merge of this new commit in the current branch. Note that &lt;branch&gt; is not changed by this procedure. Also note that &lt;branch&gt; may actually be any reference, like a tag, or a remote branch, or even a commit SHA. </p>
 <p> For more information, see &lt;<a rel="nofollow" href="http://stackoverflow.com/questions/3111515">http://stackoverflow.com/questions/3111515</a>&gt;</p>

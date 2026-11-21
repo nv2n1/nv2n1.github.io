@@ -1,4 +1,5 @@
 ---
+
 title: "sfconv(1)"
 name: "sfconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfconv/"
 description: "sfconv – A tool for converting the encoding of Standard Format (SF) files"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>8-bit to Unicode:</h3>
 <dl>
 <dt>sfconv <code>-8u</code> [-utf8|-be|-le] [-bom] <code>-c</code> ControlFile [-d MappingDirectory] <code>-i</code> InFile <code>-o</code> OutFile</dt>
@@ -16,7 +16,6 @@ description: "sfconv – A tool for converting the encoding of Standard Format (
 <dl>
 <dt>sfconv <code>-u8</code> [-utf8|-be|-le] <code>-c</code> ControlFile [-d MappingDirectory] <code>-i</code> InFile <code>-o</code> OutFile</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> A tool for converting Standard Format (SF) files is included in the current TECkit package. This is <code>sfconv</code> , a command-line tool that uses an XML “control file” to specify the mappings associated with the various markers in an SF file. Note that the current SFconv tool should be considered a prototype rather than a full solution to the issue of SF conversions. A more complete tool with an improved user interface would be desirable.</p>
 <h2>OPTIONS</h2>
 <p> The SFconv utility uses command-line options to specify the conversion direction, control file, and input and output files. The required arguments are:</p>

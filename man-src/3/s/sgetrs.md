@@ -1,4 +1,5 @@
 ---
+
 title: "sgetrs(3)"
 name: "sgetrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgetrs/"
 description: "sgetrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgetrs</code> (TRANS, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
  <i></i><code>SGETRS</code></p>

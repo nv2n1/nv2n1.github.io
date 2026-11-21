@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg-scaler(1)"
 name: "ffmpeg-scaler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmpeg-scaler/"
 description: "ffmpeg-scaler – FFmpeg video scaling and pixel format converter"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion.</p>
 <h2>SCALER OPTIONS</h2>
 <p> The video scaler supports the following named options. </p>

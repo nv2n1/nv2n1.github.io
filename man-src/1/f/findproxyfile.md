@@ -1,4 +1,5 @@
 ---
+
 title: "findproxyfile(1)"
 name: "findproxyfile"
 section: "1"
@@ -9,9 +10,7 @@ description: "findproxyfile – returns full path to GSI Proxy file"
 
 <h2>NAME</h2>
 <p> <code>findproxyfile</code> &#8211; returns full path to GSI Proxy file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>findproxyfile </code> [&#8211;proxycache=PATH] [&#8211;delegation-id=ID] [&#8211;user-dn=DN] [&#8211;outsidecache]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>findproxyfile</code> returns full path to a GSI Proxy file, either in the proxy cache maintained by the GridSite G-HTTPS and delegation portType functions, or in other standard places. </p>
 <p> If a User DN is given <code>findproxyfile </code> uses the value of the <code>&#8211;proxycache</code> argument, the GRST_PROXY_PATH or the compile time default to determine the location of the proxy cache directory. The directory is searched for a proxy having the given User DN and Delegation ID. (If no Delegation ID is specificed, then the default value is used.) </p>
 <p> If <code>findproxyfile</code> does not find a proxy or if a User DN is not given, but <code>&#8211;outsidecache</code> was given, then the environment variable X509_USER_PROXY and the standard location /tmp/x509up_uUID are searched as well. </p>

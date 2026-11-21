@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_get_pk_algorithm(3)"
 name: "gnutls_openpgp_crt_get_pk_algorithm"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_openpgp_crt_get_pk_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_pk_algorithm &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>gnutls_pk_algorithm_t gnutls_openpgp_crt_get_pk_algorithm(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_openpgp_crt_get_pk_algorithm – API function"
 <dd> is an OpenPGP key</dd>
 <dt>unsigned int * bits</dt>
 <dd> if bits is non null it will hold the size of the parameters&#8217; in bits</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the public key algorithm of an OpenPGP certificate. </p>
 <p> If bits is non null, it should have enough size to hold the parameters size in bits. For RSA the bits returned is the modulus. For DSA the bits returned are of the public exponent.</p>
 <h2>RETURNS</h2>

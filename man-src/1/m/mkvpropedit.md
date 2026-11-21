@@ -1,4 +1,5 @@
 ---
+
 title: "mkvpropedit(1)"
 name: "mkvpropedit"
 section: "1"
@@ -6,11 +7,10 @@ letter: "m"
 url: "/docs/linux/man/1-mkvpropedit/"
 description: "mkvpropedit – Modify properties of existing Matroska(TM) files without a complete remux"
 ---
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>mkvpropedit</code> [options] {source-filename} {actions} </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd> <p> This program analyses an existing Matroska(TM) file and modifies some of its properties. Then it writes those modifications to the existing file. Among the properties that can be changed are the segment information elements (e.g. the title) and the track headers (e.g. the language code, &#8216;default track&#8217; flag or the name). </p>
 <p> Options: </p>
 <p> <code>-l</code>, <code>--list-property-names</code> </p>

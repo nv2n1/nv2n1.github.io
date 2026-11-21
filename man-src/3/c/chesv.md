@@ -1,4 +1,5 @@
 ---
+
 title: "chesv(3)"
 name: "chesv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chesv/"
 description: "chesv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chesv</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br />
  <i></i><code> CHESV computes the solution to system of linear equations A * X = B for HE matrices</code></p>

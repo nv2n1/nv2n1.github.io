@@ -1,4 +1,5 @@
 ---
+
 title: "ispunct(3)"
 name: "ispunct"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ispunct/"
 description: "isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit, isalnum_l, isalpha_l, isascii_l, isblank_l, iscntrl_l, isdigit_l, isgraph_l, is..."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ctype.h&gt;
 int isalnum(int c);
@@ -64,7 +64,6 @@ int isascii_l(int c, locale_t locale);
 <dt>Before glibc 2.10:</dt>
 <dd> _GNU_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> These functions check whether <i>c</i>, which must have the value of an <i>unsigned char</i> or <code>EOF</code>, falls into a certain character class according to the specified locale. The functions without the &quot;_l&quot; suffix perform the check based on the current locale. </p>
 <p> The functions with the &quot;_l&quot; suffix perform the check based on the locale specified by the locale object <i>locale</i>. The behavior of these functions is undefined if <i>locale</i> is the special locale object <code>LC_GLOBAL_LOCALE</code> (see <code><a href="/docs/linux/man/3-duplocale/">duplocale</a></code>(3)) or is not a valid locale object handle. </p>
 <p> The list below explains the operation of the functions without the &quot;_l&quot; suffix; the functions with the &quot;_l&quot; suffix differ only in using the locale object <i>locale</i> instead of the current locale.</p>

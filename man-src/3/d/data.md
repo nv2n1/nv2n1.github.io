@@ -1,4 +1,5 @@
 ---
+
 title: "data(3)"
 name: "data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-data/"
 description: "ntlm_buf –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;heimntlm.h&gt;</p>
 <h3>Data Fields</h3>
 <p> size_t <code>length</code> </p>

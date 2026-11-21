@@ -1,4 +1,5 @@
 ---
+
 title: "memmove(3)"
 name: "memmove"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-memmove/"
 description: "memmove – copy memory area"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;
 void *memmove(void *dest, const void *src, size_t n);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>memmove</code>() function copies <i>n</i> bytes from memory area <i>src</i> to memory area <i>dest</i>. The memory areas may overlap: copying takes place as though the bytes in <i>src</i> are first copied into a temporary array that does not overlap <i>src</i> or <i>dest</i>, and the bytes are then copied from the temporary array to <i>dest</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>memmove</code>() function returns a pointer to <i>dest</i>.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "symlink(2)"
 name: "symlink"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-symlink/"
 description: "symlink, symlinkat – make a new name for a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int symlink(const char *target, const char *linkpath);
@@ -29,7 +29,6 @@ int symlinkat(const char *target, int newdirfd, const char *linkpath);
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>symlink</code>() creates a symbolic link named <i>linkpath</i> which contains the string <i>target</i>. </p>
 <p> Symbolic links are interpreted at run time as if the contents of the link had been substituted into the path being followed to find a file or directory. </p>
 <p> Symbolic links may contain <i>..</i> path components, which (if used at the start of the link) refer to the parent directories of that in which the link resides. </p>

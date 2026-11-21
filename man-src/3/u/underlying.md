@@ -1,4 +1,5 @@
 ---
+
 title: "underlying(3)"
 name: "underlying"
 section: "3"
@@ -6,8 +7,8 @@ letter: "u"
 url: "/docs/linux/man/3-underlying/"
 description: "QuantLib::DigitalCoupon – Digital-payoff coupon."
 ---
+
 <p>QuantLib::DigitalCoupon &#8211; Digital-payoff coupon. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/cashflows/digitalcoupon.hpp&gt; </p>

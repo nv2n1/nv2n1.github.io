@@ -1,4 +1,5 @@
 ---
+
 title: "perf-annotate(1)"
 name: "perf-annotate"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-perf-annotate/"
 description: "perf-annotate – Read perf.data (created by perf record) and display annotated code"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perf annotate[-i&lt;file&gt; | --input = file][symbol_name]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command reads the input file and displays an annotated version of the code. If the object file has debug symbols then the source code will be displayed alongside assembly code. </p>
 <p> If there is no debug info in the object, then annotated assembly is displayed.</p>
 <h2>OPTIONS</h2>

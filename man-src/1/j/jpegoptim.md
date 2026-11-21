@@ -1,4 +1,5 @@
 ---
+
 title: "jpegoptim(1)"
 name: "jpegoptim"
 section: "1"
@@ -9,9 +10,7 @@ description: "jpegoptim – utility to optimize/compress JPEG/JFIF files."
 
 <h2>NAME</h2>
 <p> jpegoptim &#8211; utility to optimize/compress JPEG/JFIF files. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>jpegoptim</code> [ <code>options </code> ] [ <code>filenames </code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>jpegoptim</i> is used to optimize/compress jpeg files. Program supports lossless optimization, which is based on optimizing the Huffman tables. And so called &quot;lossy&quot; optimization where in addition to optimizing Huffman tables user can specify upperlimit for image quality. </p>
 <p> NOTE! By default jpegoptim modifies the input files (if they are optimized), to preserve original files use option <code>-d</code> to specify alternate directory for saving the optimized files to. </p>
 <p> Only normal files are optimized (symbolic links and special files are skipped). Also, any other hard links to the file being optimized (as created using <code><a href="/docs/linux/man/2-link/">link</a></code>(2)) are unaffected. </p>

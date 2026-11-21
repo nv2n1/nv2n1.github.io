@@ -1,4 +1,5 @@
 ---
+
 title: "spectrum1d(1)"
 name: "spectrum1d"
 section: "1"
@@ -9,10 +10,8 @@ description: "spectrum1d – Compute auto- [and cross- ] spectra from one [or tw
 
 <h2>NAME</h2>
 <p> spectrum1d &#8211; Compute auto- [and cross- ] spectra from one [or two] time-series</p>
-<h2>SYNOPSIS</h2>
 <p> <code>spectrum1d</code> [ <i>table</i> ] <i>segment_size</i>] [ [<code>xycnpago</code>] ] [ <i>dt</i> ] [ [<code>h</code>|<code>m</code>] ] [ [<i>name_stem</i> ] ] [ ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>spectrum1d</code> reads X [and Y] values from the first [and second] columns on standard input [or <i>x[y]file</i>]. These values are treated as timeseries X(t) [Y(t)] sampled at equal intervals spaced <i>dt</i> units apart. There may be any number of lines of input. <code>spectrum1d</code> will create file[s] containing auto- [and cross- ] spectral density estimates by Welch&#8217;s method of ensemble averaging of multiple overlapped windows, using standard error estimates from Bendat and Piersol. </p>
 <p> The output files have 3 columns: f or w, p, and e. f or w is the frequency or wavelength, p is the spectral density estimate, and e is the one standard deviation error bar size. These files are named based on <i>name_stem</i>. If the <code>-C</code> option is used, up to eight files are created; otherwise only one (xpower) is written. The files (which are ASCII unless <code>-bo</code> is set) are as follows:</p>
 <dl>

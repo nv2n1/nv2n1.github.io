@@ -1,4 +1,5 @@
 ---
+
 title: "sgecon(3)"
 name: "sgecon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgecon/"
 description: "sgecon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgecon</code> (NORM, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>SGECON</code></p>

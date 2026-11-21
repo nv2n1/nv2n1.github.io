@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_connect(3)"
 name: "dblink_connect"
 section: "3"
@@ -6,11 +7,10 @@ letter: "d"
 url: "/docs/linux/man/3-dblink_connect/"
 description: "dblink_connect – opens a persistent connection to a remote database"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>dblink_connect(text connstr) returns text
 dblink_connect(text connname, text connstr) returns text
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>dblink_connect()</code> establishes a connection to a remote PostgreSQL database. The server and database to be contacted are identified through a standard libpq connection string. Optionally, a name can be assigned to the connection. Multiple named connections can be open at once, but only one unnamed connection is permitted at a time. The connection will persist until closed or until the database session is ended. </p>
 <p> The connection string may also be the name of an existing foreign server. It is recommended to use the <code>postgresql_fdw_validator</code> when defining the corresponding foreign-data wrapper. See the example below, as well as the following: CREATE FOREIGN DATA WRAPPER (<code><a href="/docs/linux/man/7-CREATE_FOREIGN_DATA_WRAPPER/">CREATE_FOREIGN_DATA_WRAPPER</a></code>(7)), CREATE SERVER (<code><a href="/docs/linux/man/7-CREATE_SERVER/">CREATE_SERVER</a></code>(7)), CREATE USER MAPPING (<code><a href="/docs/linux/man/7-CREATE_USER_MAPPING/">CREATE_USER_MAPPING</a></code>(7))  </p>
 <h2>ARGUMENTS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "acpixtract-acpica(1)"
 name: "acpixtract-acpica"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-acpixtract-acpica/"
 description: "acpixtract – ACPICA source code conversion utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>acpixtract</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> &lt;acpidump-file&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>acpixtract</code> command. The option list is taken from the acpixtract interactive help. </p>
 <p> <code>acpixtract</code> extracts binary ACPI tables from the output of the <code>acpidump</code> command (see the <code>pm-tools</code> package). A default invocation will extract the DSDT and all SSDTs. </p>
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>

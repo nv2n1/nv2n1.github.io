@@ -1,4 +1,5 @@
 ---
+
 title: "grmiregistry(1)"
 name: "grmiregistry"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grmiregistry/"
 description: "grmiregistry – – Remote object registry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> grmiregistry [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>PORT</i></font><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>grmiregistry</code> starts a remote object registry on the current host. If no port number is specified, then port 1099 is used.</p>
 <h2>OPTIONS</h2>
 <p> Registry process control:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "otter-browser(1)"
 name: "otter-browser"
 section: "1"
@@ -9,9 +10,7 @@ description: "otter-browser – the web browser controlled by the user, not vice
 
 <h2>NAME</h2>
 <p> otter-browser &#8211; the web browser controlled by the user, not vice-versa</p>
-<h2>SYNOPSIS</h2>
 <p> <code>otter-browser</code> [<i>OPTIONS</i>] [<i>PATH</i>|<i>URL</i>|<i>TERM</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> See the Otter Browser wiki for help on using the browser:</p>
 <dl>
 <dt>

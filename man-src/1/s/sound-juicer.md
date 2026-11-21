@@ -1,4 +1,5 @@
 ---
+
 title: "sound-juicer(1)"
 name: "sound-juicer"
 section: "1"
@@ -9,9 +10,7 @@ description: "sound-juicer – GNOME-desktop CD ripper and player using GStreame
 
 <h2>NAME</h2>
 <p> sound-juicer &#8211; GNOME-desktop CD ripper and player using GStreamer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sound-juicer</code> [<i>option&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sound-juicer</code> is a CD ripper and player for GNOME which aims to have a simple, clean, easy to use interface. <code>sound-juicer </code> supports encoding to several popular audio formats such as Ogg Vorbis and FLAC, additional formats can be added through GStreamer plugins. </p>
 <p> For additional documentation on interactive use of <code>sound-juicer</code> select the <i>Help</i> menu option. The menus allow access to features not available through command-line options.</p>
 <h2>OPTIONS</h2>

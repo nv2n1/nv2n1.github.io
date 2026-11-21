@@ -1,4 +1,5 @@
 ---
+
 title: "streamer(1)"
 name: "streamer"
 section: "1"
@@ -9,9 +10,7 @@ description: "streamer – record audio and/or video"
 
 <h2>NAME</h2>
 <p> streamer &#8211; record audio and/or video</p>
-<h2>SYNOPSIS</h2>
 <p> <code>streamer [ options ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>streamer</code> reads audio and/or video data from /dev/video0 and /dev/dsp and writes the data to the disk. Various output formats are supported. Start streamer with &#8216;-h&#8217; for a list of options and supported output formats. </p>
 <p> streamer will use the file extention of the output file name to figure which format to use. You need the -f/-F options only if the extention allows more than one format. If you get the &quot;neither audio nor video format specified/found&quot; message and don&#8217;t know why, you can enable the debug output (-d switch) to see what is going on. </p>
 <p> You can safely stop the recording at any time with Ctrl+C. streamer will catch the signal and stop recording correctly (i.e. write movie file headers) before exiting.</p>

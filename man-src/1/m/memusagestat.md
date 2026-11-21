@@ -1,4 +1,5 @@
 ---
+
 title: "memusagestat(1)"
 name: "memusagestat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-memusagestat/"
 description: "memusagestat – generate graphic from memory profiling data"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>memusagestat</code> [<i>option</i>]&#8230; <i>datafile</i> [<i>outfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>memusagestat</code> creates a PNG file containing a graphical representation of the memory profiling data in the file <i>datafile</i>; that file is generated via the <i>-d</i> (or <i>&#8211;data</i>) option of <code><a href="/docs/linux/man/1-memusage/">memusage</a></code>(1). </p>
 <p> The red line in the graph shows the heap usage (allocated memory) and the green line shows the stack usage. The x-scale is either the number of memory-handling function calls or (if the <i>-t</i> option is specified) time.</p>
 <h2>OPTIONS</h2>

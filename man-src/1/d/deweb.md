@@ -1,4 +1,5 @@
 ---
+
 title: "deweb(1)"
 name: "deweb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-deweb/"
 description: "deweb – strips away C & CWEB commands from CWEB sources"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>deweb</code> [ <code>file1 file2 &#8230;</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>deweb</i> filters away all C &amp; CWEB commands from a CWEB source code. This leaves only the <i>LaTeX</i> code. This stripped code, in turn, may then be passed to a suitable syntax checker for LaTeX, like <i>ChkTeX</i> and <i>lacheck,</i> or spell-checkers like <i>ispell.</i> </p>
 <p> The <i>chkweb</i> tool, included in the <i>ChkTeX</i> distribution will do just this; writing similar scripts should be trivial. </p>
 <p> When <i>deweb</i> strips away the C code from your CWEB source, it tries to preserve line breaks. This means that the error reports from <i>&lt;your favorite tool&gt;</i> will be correct regarding to line numbers. In most cases, the column position will also be correct. This significantly simplifies finding the errors in the <i>LaTeX</i> source (in contrast to the output from <i>cweave,</i> which output is truly difficult to figure anything out from). </p>

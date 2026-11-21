@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_alert_send_appropriate(3)"
 name: "gnutls_alert_send_appropriate"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_alert_send_appropriate – API function"
 
 <h2>NAME</h2>
 <p> gnutls_alert_send_appropriate &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_alert_send_appropriate(gnutls_session_t </code><i>session</i><code>, int </code><i>err</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_alert_send_appropriate – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>int err</dt>
 <dd> is an integer</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Sends an alert to the peer depending on the error code returned by a gnutls function. This function will call <code>gnutls_error_to_alert()</code> to determine the appropriate alert to send. </p>
 <p> This function may also return <code>GNUTLS_E_AGAIN</code>, or <code>GNUTLS_E_INTERRUPTED</code>. </p>
 <p> If the return value is <code>GNUTLS_E_INVALID_REQUEST</code>, then no alert has been sent to the peer.</p>

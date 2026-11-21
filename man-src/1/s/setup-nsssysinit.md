@@ -1,4 +1,5 @@
 ---
+
 title: "setup-nsssysinit(1)"
 name: "setup-nsssysinit"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-setup-nsssysinit/"
 description: "setup-nsssysinit – Query or enable the nss-sysinit module"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>setup-nsssysinit</code> [<code>on</code>] [<code>off</code>] [<code>status</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>setup-nsssysinit</code></p>
 <dd>is a shell script to query the status of the nss-sysinit module and when run with root priviledge it can enable or disable it. </dd>
 <p> Turns on or off the nss-sysinit module db by editing the global PKCS #11 configuration file. Displays the status. This script can be invoked by the user as super user. It is invoked at nss-sysinit post install time with argument on.</p>

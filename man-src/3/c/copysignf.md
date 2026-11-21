@@ -1,4 +1,5 @@
 ---
+
 title: "copysignf(3)"
 name: "copysignf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-copysignf/"
 description: "copysign, copysignf, copysignl – copy sign of a number"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double copysign(double x, double y);
@@ -22,7 +22,6 @@ long double copysignl(long double x, long double y);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return a value whose absolute value matches that of <i>x</i>, but whose sign bit matches that of <i>y</i>. </p>
 <p> For example, <i>copysign(42.0, -1.0)</i> and <i>copysign(-42.0, -1.0)</i> both return -42.0.</p>
 <h2>RETURN VALUE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "linux-version(1)"
 name: "linux-version"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-linux-version/"
 description: "linux-version – operate on Linux kernel version strings"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>linux-version compare</code><i>&nbsp;VERSION1 OP VERSION2</i></dt>
 <dt> <code>linux-version sort</code>&nbsp;[<code>&#8211;reverse</code>] [<i>VERSION1 VERSION2</i>&nbsp;&#8230;]</dt>
 <dt> <code>linux-version list</code>&nbsp;[<code>&#8211;paths</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>linux-version</code> operates on Linux kernel version strings as</p>
 <dd>reported by <code>uname -r</code> and used in file and directory names. These version strings do not follow the same rules as Debian package version strings and should not be compared as such or as arbitrary strings.</dd>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "qmqp-source(1)"
 name: "qmqp-source"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-qmqp-source/"
 description: "qmqp-source – parallelized QMQP test generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>qmqp-source</code> [<i>options</i>] [<code>inet:</code>]<i>host</i>[:<i>port</i>] </p>
 <p> <code>qmqp-source</code> [<i>options</i>] <code>unix:</code><i>pathname</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>qmqp-source</code> connects to the named host and TCP port (default 628) and sends one or more messages to it, either sequentially or in parallel. The program speaks the QMQP protocol. Connections can be made to UNIX-domain and IPv4 or IPv6 servers. IPv4 and IPv6 are the default. </p>
 <p> Note: this is an unsupported test program. No attempt is made to maintain compatibility between successive versions. </p>
 <p> Arguments:</p>

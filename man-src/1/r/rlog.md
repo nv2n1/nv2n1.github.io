@@ -1,4 +1,5 @@
 ---
+
 title: "rlog(1)"
 name: "rlog"
 section: "1"
@@ -9,9 +10,7 @@ description: "rlog – print log messages and other information about RCS files"
 
 <h2>NAME</h2>
 <p> rlog &#8211; print log messages and other information about <font SIZE="-1">RCS</font> files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rlog</code> [<i> options </i>]<i> file </i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rlog</code> prints information about <font SIZE="-1">RCS</font> files. </p>
 <p> Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
 <p> <code>rlog</code> prints the following information for each <font SIZE="-1">RCS</font> file: <font SIZE="-1">RCS</font> file name, working file name, head (i.e., the number of the latest revision on the trunk), default branch, access list, locks, symbolic names, suffix, total number of revisions, number of revisions selected for printing, and descriptive text. This is followed by entries for the selected revisions in reverse chronological order for each branch. For each revision, <code>rlog</code> prints revision number, author, date/time, state, number of lines added/deleted (with respect to the previous revision), locker of the revision (if any), and log message. All times are displayed in Coordinated Universal Time (<font SIZE="-1">UTC</font>) by default; this can be overridden with <code>-z</code>. Without options, <code>rlog</code> prints complete information. The options below restrict this output.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "discount-theme(1)"
 name: "discount-theme"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-discount-theme/"
 description: "theme – create a web page from a template file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>theme</code> &#8211; create a web page from a template file </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>C option-flags </code> ] [-<code>c options </code> ] [-<code>d root </code> ] [-<code>E</code> ] [-<code>f</code> ] [-<code>o file </code> ] [-<code>p pagename </code> ] [-<code>t template </code> ] [-<code>V</code> ] [textfile ]</p>
-<h2>DESCRIPTION</h2>
 <p> The utility takes a <a href="/docs/linux/man/7-markdown/">markdown</a>(7)Ns-formatted textfile (or stdin if not specified,) compiles it, and combines it with a <i>template</i> Po page.theme by default Pc to produce a web page. If a path to the template is not specified, looks for page.theme in the current directory, then each parent directory up to the document root Po set with &#8211;<code>d</code> or, if unset, the <i>root directory</i> of the system. Pc If page.theme is found, copies it to the output, looking for <i>&lt;?theme action?&gt;</i> html tags and processing the embedded <i>action </i> as appropriate. </p>
 <p> processes the following actions:</p>
 <dl>

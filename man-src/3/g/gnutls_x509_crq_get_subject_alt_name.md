@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_get_subject_alt_name(3)"
 name: "gnutls_x509_crq_get_subject_alt_name"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crq_get_subject_alt_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_get_subject_alt_name &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_get_subject_alt_name(gnutls_x509_crq_t </code><i>crq</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>ret</i><code>, size_t * </code><i>ret_size</i><code>, unsigned int * </code><i>ret_type</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_x509_crq_get_subject_alt_name – API function"
 <dd> holds the <code>gnutls_x509_subject_alt_name_t</code> name type</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the alternative names, contained in the given certificate. It is the same as <code>gnutls_x509_crq_get_subject_alt_name()</code> except for the fact that it will return the type of the alternative name in <i>ret_type</i> even if the function fails for some reason (i.e. the buffer provided is not enough).</p>
 <h2>RETURNS</h2>
 <p> the alternative subject name type on success, one of the enumerated <code>gnutls_x509_subject_alt_name_t</code>. It will return <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> if <i>ret_size</i> is not large enough to hold the value. In that case <i>ret_size</i> will be updated with the required size. If the certificate request does not have an Alternative name with the specified sequence number then <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.</p>

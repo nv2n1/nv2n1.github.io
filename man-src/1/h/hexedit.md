@@ -1,4 +1,5 @@
 ---
+
 title: "hexedit(1)"
 name: "hexedit"
 section: "1"
@@ -10,15 +11,9 @@ url: "/docs/linux/man/1-hexedit/"
 
  hexedit - view and edit files in hexadecimal or in ASCII
 
-<h2>SYNOPSIS</h2>
+<i>hexedit</i> [-s | --sector] [-m | --maximize] [-h | --help] [filename]
 
- <i>hexedit</i> [-s | --sector] [-m | --maximize] [-h | --help] [filename]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- <i>hexedit</i> shows a file both in ASCII and in hexadecimal. The file can be a device as the file is read a piece at a time. You can modify the file and search through it.
+<i>hexedit</i> shows a file both in ASCII and in hexadecimal. The file can be a device as the file is read a piece at a time. You can modify the file and search through it.
 
 <h2>OPTIONS</h2>
 

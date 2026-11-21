@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_verify_rrsig_rsamd5(3)"
 name: "ldns_verify_rrsig_rsamd5"
 section: "3"
@@ -9,14 +10,12 @@ description: "ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsi
 
 <h2>NAME</h2>
 <p> ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsig_rsamd5 </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_verify_rrsig_dsa(ldns_buffer *sig, ldns_buffer *rrset, ldns_buffer *key); </p>
 <p> ldns_status ldns_verify_rrsig_rsasha1(ldns_buffer *sig, ldns_buffer *rrset, ldns_buffer *key); </p>
 <p> ldns_status ldns_verify_rrsig_rsamd5(ldns_buffer *sig, ldns_buffer *rrset, ldns_buffer *key); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_verify_rrsig_dsa</i>()</dt>
 <dd>verifies a buffer with signature data (DSA) for a buffer with rrset data with a buffer with key data. </dd>

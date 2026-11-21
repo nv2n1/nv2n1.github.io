@@ -1,4 +1,5 @@
 ---
+
 title: "gdalwarp(1)"
 name: "gdalwarp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdalwarp/"
 description: "gdalwarp – gdalwarp image reprojection and warping utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdalwarp[--help - general][--formats]
         [-s_srs srs_def][-t_srs srs_def][-to "NAME=VALUE"]
@@ -24,7 +24,6 @@ gdalwarp[--help - general][--formats]
         [-overwrite]
             [-nomd][-cvmd meta_conflict_value][-setci] srcfile *dstfile
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is &#8216;raw&#8217; with control information. </p>
 <dl>
 <dt><code>-s_srs</code> <i>srs def</i>:</dt>

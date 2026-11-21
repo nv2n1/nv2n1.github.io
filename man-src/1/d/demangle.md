@@ -1,4 +1,5 @@
 ---
+
 title: "demangle(1)"
 name: "demangle"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-demangle/"
 description: "demangle – Undo C++ name mangling for symbols"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>demangle</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>demangle</code></p>
 <dd>reads a list of C++ mangled symbol names from standard input and converts these names to human-readable form on standard output. </dd>
 <p> This utility is part of the KDE Software Development Kit.</p>

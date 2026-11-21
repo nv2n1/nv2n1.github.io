@@ -1,4 +1,5 @@
 ---
+
 title: "get_phys_pages(3)"
 name: "get_phys_pages"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-get_phys_pages/"
 description: "get_phys_pages, get_avphys_pages – get total and available physical page counts"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/sysinfo.h&gt;
 long get_phys_pages(void);
 long get_avphys_pages(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The function <code>get_phys_pages</code>() returns the total number of physical pages of memory available on the system. </p>
 <p> The function <code>get_avphys_pages</code>() returns the number of currently available physical pages of memory on the system.</p>
 <h2>RETURN VALUE</h2>

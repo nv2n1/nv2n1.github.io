@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_set_reorder_nsm(3)"
 name: "fribidi_set_reorder_nsm"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_set_reorder_nsm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_set_reorder_nsm - set marks reordering on or off 
 
- fribidi_set_reorder_nsm - set marks reordering on or off 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern fribidi_boolean fribidi_set_reorder_nsm(fribidi_boolean state); </b>
 
@@ -23,9 +19,7 @@ url: "/docs/linux/man/3-fribidi_set_reorder_nsm/"
 <dt><b>fribidi_boolean state</b>
 </dt><dd> New state to set.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function is used to turn non-spacing marks reordering on or off. Reordering non-spacing marks is the act of placing non-spacing marks (bidi class NSM) after their base character in a right-to-left resolved context. If your rendering engine expects non-spacing marks always after the base character in the memory representation of the visual string, you need this option on. An example of where people may need it off is when rendering in the console when non-spacing marks cannot be applied on top of the base character. 
+This function is used to turn non-spacing marks reordering on or off. Reordering non-spacing marks is the act of placing non-spacing marks (bidi class NSM) after their base character in a right-to-left resolved context. If your rendering engine expects non-spacing marks always after the base character in the memory representation of the visual string, you need this option on. An example of where people may need it off is when rendering in the console when non-spacing marks cannot be applied on top of the base character. 
 
  This flag is on by default. This function is deprecated and only used with other deprecated functions.
 

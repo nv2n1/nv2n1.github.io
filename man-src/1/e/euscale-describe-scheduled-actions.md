@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-scheduled-actions(1)"
 name: "euscale-describe-scheduled-actions"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-describe-scheduled-actions – Describe scheduled auto-sca
 
 <h2>NAME</h2>
 <p> euscale-describe-scheduled-actions &#8211; Describe scheduled auto-scaling group actions</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-describe-scheduled-actions [-g ASGROUP]</p>
 <dl>
 <dt>[&#8211;start-time YYYY-MM-DDThh:mm:ssZ]</dt>
 <dd> [&#8211;end-time YYYY-MM-DDThh:mm:ssZ] [&#8211;show-long] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [ACTION [ACTION &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Describe scheduled auto-scaling group actions</p>
 <h3>positional arguments:</h3>
 <dl>

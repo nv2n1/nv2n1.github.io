@@ -1,4 +1,5 @@
 ---
+
 title: "nx_server_selinux(8)"
 name: "nx_server_selinux"
 section: "8"
@@ -6,11 +7,9 @@ letter: "n"
 url: "/docs/linux/man/8-nx_server_selinux/"
 ---
 
-
  </p>
 <h2>NAME</h2>
 <p> nx_server_r &#8211; <code>nx_server user role</code> &#8211; Security Enhanced Linux Policy </p>
-<h2>DESCRIPTION</h2>
 <p> SELinux supports Roles Based Access Control (RBAC), some Linux roles are login roles, while other roles need to be transition into. </p>
 <p> <i>Note:</i> Examples in this man page will use the <code>staff_u</code> SELinux user. </p>
 <p> Non login roles are usually used for administrative tasks. For example, tasks that require root privileges. Roles control which types a user can run processes with. Roles often have default types assigned to them. </p>

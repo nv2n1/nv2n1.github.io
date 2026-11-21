@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-spooler(1)"
 name: "zarafa-spooler"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zarafa-spooler/"
 description: "zarafa-spooler – Start the Zarafa spooler."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-spooler</code> [<i>OPTION</i>&#8230;] [<i>SERVERNAME</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The spooler sends all pending Zarafa e-mail to the recipients. When started, the program will keep running and sending messages whenever needed. </dd>
 <p> The outgoing mailserver can be overwritten from the config file by specifying this on the commandline. </p>
 <p> The default settings of the spooler program are defined in <code><a href="/docs/linux/man/5-zarafa-spooler-cfg/">zarafa-spooler.cfg</a></code>(5).</p>

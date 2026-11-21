@@ -1,4 +1,5 @@
 ---
+
 title: "e2rm(1)"
 name: "e2rm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-e2rm/"
 description: "e2rm – removes files and directories on an ext2 filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>e2rm</code> [<i>options</i>]<i> files&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>e2rm</code> command removes files and directories on an ext2 filesystem.</p>
 <h2>OPTIONS</h2>
 <dl>

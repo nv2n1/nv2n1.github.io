@@ -1,4 +1,5 @@
 ---
+
 title: "xmessage(1)"
 name: "xmessage"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xmessage/"
 description: "xmessage – display a message or query in a window (X-based /bin/echo)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xmessage</code> [ <code>-buttons</code> <i>label1</i>[<code>:</code>value1]<code>,</code>label2[<code>:</code>value2]<code>,</code> &#8230; ] [ <i>options</i> ] <code>-file</code> <i>filename</i><br />
  <code>xmessage</code> [ <code>-buttons</code> <i>label1</i>[<code>:</code>value1]<code>,</code>label2[<code>:</code>value2]<code>,</code> &#8230; ] [ <i>options</i> ] <i>message</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xmessage</i> program displays a window containing a message from the command line, a file, or standard input. Along the lower edge of the message is row of buttons; clicking the left mouse button on any of these buttons will cause <i>xmessage</i> to exit. Which button was pressed is returned in the exit status and, optionally, by writing the label of the button to standard output. </p>
 <p> The program is typically used by shell scripts to display information to the user or to ask the user to make a choice. </p>
 <p> Unless a size is specified, <i>xmessage</i> sizes itself to fit the message, up to a maximum size. If the message is too big for the window, <i>xmessage</i> will display scroll bars.</p>

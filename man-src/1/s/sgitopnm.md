@@ -1,4 +1,5 @@
 ---
+
 title: "sgitopnm(1)"
 name: "sgitopnm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sgitopnm/"
 description: "sgitopnm – convert a SGI image file to a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sgitopnm</code> [<code>-verbose</code>] [<code>-channel</code> <i>c</i>] [<i>SGIfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads an SGI image file as input. Produces a PGM image for a 2-dimensional (1 channel) input file, and a PPM image for a 3-dimensional (3 or more channels) input file. </p>
 <p> Alternatively, produces a PGM image of any one of the channels in the input file. </p>
 <h2>OPTIONS</h2>

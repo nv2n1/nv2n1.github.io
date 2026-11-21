@@ -1,4 +1,5 @@
 ---
+
 title: "cpteqr(3)"
 name: "cpteqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpteqr/"
 description: "cpteqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
  <i></i><code>CPTEQR</code></p>

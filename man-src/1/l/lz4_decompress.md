@@ -1,4 +1,5 @@
 ---
+
 title: "lz4_decompress(1)"
 name: "lz4_decompress"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lz4_decompress/"
 description: "lz4_decompress – decompress mysqlpump LZ4-compressed output"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lz4_decompress </code><i>input_file</i><i>output_file</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>lz4_decompress</code> utility decompresses <code>mysqlpump</code> output that was created using LZ4 compression. <code>lz4_decompress</code> was added in MySQL 5.7.10. </dd>
 <p> Invoke <code>lz4_decompress</code> like this: </p>
 <dl>

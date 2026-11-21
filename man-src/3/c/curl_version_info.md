@@ -1,4 +1,5 @@
 ---
+
 title: "curl_version_info(3)"
 name: "curl_version_info"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_version_info – returns run-time libcurl version info"
 
 <h2>NAME</h2>
 <p> curl_version_info &#8211; returns run-time libcurl version info</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>curl_version_info_data *curl_version_info( CURLversion type</code><i>);</i></p>
-<h2>DESCRIPTION</h2>
 <p> Returns a pointer to a filled in struct with information about various run-time features in libcurl. <i>type</i> should be set to the version of this functionality by the time you write your program. This way, libcurl will always return a proper struct that your program understands, while programs in the future might get a different struct. CURLVERSION_NOW will be the most recent one for the library you have installed: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>data&nbsp;<wbr>=&nbsp;<wbr>curl_version_info(CURLVERSION_NOW); </p>
 <p> Applications should use this information to judge if things are possible to do or not, instead of using compile-time checks, as dynamic/DLL libraries can be changed independent of applications. </p>

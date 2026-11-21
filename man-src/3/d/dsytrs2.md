@@ -1,4 +1,5 @@
 ---
+
 title: "dsytrs2(3)"
 name: "dsytrs2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsytrs2/"
 description: "dsytrs2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsytrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br />
  <i></i><code>DSYTRS2</code></p>

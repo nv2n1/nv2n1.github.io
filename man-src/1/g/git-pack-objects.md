@@ -1,4 +1,5 @@
 ---
+
 title: "git-pack-objects(1)"
 name: "git-pack-objects"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-pack-objects/"
 description: "git-pack-objects – Create a packed archive of objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git pack - objects[-q | --progress | --all - progress][--all - progress - implied]
                   [--no - reuse - delta][--delta - base - offset][--non - empty]
@@ -17,7 +17,6 @@ git pack - objects[-q | --progress | --all - progress][--all - progress - implie
                   [--shallow][--keep - true - parents][--[no - ] sparse] &lt;
     object - list
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Reads list of objects from the standard input, and writes either one or more packed archives with the specified base-name to disk, or a packed archive to the standard output. </p>
 <p> A packed archive is an efficient way to transfer a set of objects between two repositories as well as an access efficient archival format. In a packed archive, an object is either stored as a compressed whole or as a difference from some other object. The latter is often called a delta. </p>
 <p> The packed archive format (.pack) is designed to be self-contained so that it can be unpacked without any further information. Therefore, each object that a delta depends upon must be present within the pack. </p>

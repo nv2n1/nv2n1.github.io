@@ -1,4 +1,5 @@
 ---
+
 title: "gmtget(1)"
 name: "gmtget"
 section: "1"
@@ -9,10 +10,8 @@ description: "gmtget – Get individual GMT default parameters"
 
 <h2>NAME</h2>
 <p> gmtget &#8211; Get individual GMT default parameters</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtget</code> [ <i>defaultsfile</i> ] [ ] <i>PARAMETER1</i> [ <i>PARAMETER2</i> <i>PARAMETER3</i> &#8230; ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmtget</code> will list the value of one or more GMT default parameters.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

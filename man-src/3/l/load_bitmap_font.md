@@ -1,4 +1,5 @@
 ---
+
 title: "load_bitmap_font(3)"
 name: "load_bitmap_font"
 section: "3"
@@ -9,10 +10,8 @@ description: "load_bitmap_font – Grabs a font from a bitmap file. Allegro game
 
 <h2>NAME</h2>
 <p> load_bitmap_font &#8211; Grabs a font from a bitmap file. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>FONT *load_bitmap_font(const char *filename, RGB *pal, void *param)</code></p>
-<h2>DESCRIPTION</h2>
 <p> Tries to grab a font from a bitmap. The bitmap can be in any format that load_bitmap understands. </p>
 <p> The size of each character is determined by the layout of the image, which should be a rectangular grid containing all the ASCII characters from space (32) up to the tilde (126). The way the characters are separated depends on the color depth of the image file: </p>
 <p> paletted (8 bit) image file Use color 0 for the transparent portions of the characters and fill the spaces between each letter with color 255. </p>

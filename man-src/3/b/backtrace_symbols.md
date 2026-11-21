@@ -1,4 +1,5 @@
 ---
+
 title: "backtrace_symbols(3)"
 name: "backtrace_symbols"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-backtrace_symbols/"
 description: "backtrace, backtrace_symbols, backtrace_symbols_fd – support for application self-debugging"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;execinfo.h&gt;</code> </p>
 <p> <code>int backtrace(void</code> <code>**</code><i>buffer</i><code>,</code> <code>int</code> <i>size</i><code>);</code> </p>
 <p> <code>char **backtrace_symbols(void *const</code> <code>*</code><i>buffer</i><code>,</code> <code>int</code> <i>size</i><code>);</code> </p>
 <p> <code>void backtrace_symbols_fd(void *const</code> <code>*</code><i>buffer</i><code>,</code> <code>int</code> <i>size</i><code>,</code> <code>int</code> <i>fd</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>backtrace</code>() returns a backtrace for the calling program, in the array pointed to by <i>buffer</i>. A backtrace is the series of currently active function calls for the program. Each item in the array pointed to by <i>buffer</i> is of type <i>void&nbsp;*</i>, and is the return address from the corresponding stack frame. The <i>size</i> argument specifies the maximum number of addresses that can be stored in <i>buffer</i>. If the backtrace is larger than <i>size</i>, then the addresses corresponding to the <i>size</i> most recent function calls are returned; to obtain the complete backtrace, make sure that <i>buffer</i> and <i>size</i> are large enough. </p>
 <p> Given the set of addresses returned by <code>backtrace</code>() in <i>buffer</i>, <code>backtrace_symbols</code>() translates the addresses into an array of strings that describe the addresses symbolically. The <i>size</i> argument specifies the number of addresses in <i>buffer</i>. The symbolic representation of each address consists of the function name (if this can be determined), a hexadecimal offset into the function, and the actual return address (in hexadecimal). The address of the array of string pointers is returned as the function result of <code>backtrace_symbols</code>(). This array is <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3)ed by <code>backtrace_symbols</code>(), and must be freed by the caller. (The strings pointed to by the array of pointers need not and should not be freed.) </p>
 <p> <code>backtrace_symbols_fd</code>() takes the same <i>buffer</i> and <i>size</i> arguments as <code>backtrace_symbols</code>(), but instead of returning an array of strings to the caller, it writes the strings, one per line, to the file descriptor <i>fd</i>. <code>backtrace_symbols_fd</code>() does not call <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), and so can be employed in situations where the latter function might fail, but see NOTES.</p>

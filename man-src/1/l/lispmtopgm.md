@@ -1,4 +1,5 @@
 ---
+
 title: "lispmtopgm(1)"
 name: "lispmtopgm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lispmtopgm/"
 description: "lispmtopgm – convert a Lisp Machine bitmap file into pgm format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lispmtopgm</code> [<i>lispmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Lisp Machine bitmap as input. Produces a portable graymap as output. </p>
 <p> This is the file format written by the tv:write-bit-array-file function on TI Explorer and Symbolics lisp machines. </p>
 <p> Multi-plane bitmaps on lisp machines are color; but the lispm image file format does not include a color map, so we must treat it as a graymap instead. This is unfortunate.</p>

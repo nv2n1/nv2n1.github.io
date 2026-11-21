@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-copy(1)"
 name: "gfal-copy"
 section: "1"
@@ -9,9 +10,7 @@ description: "gfal-copy – Copy files"
 
 <h2>NAME</h2>
 <p> gfal-copy &#8211; Copy files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gfal-copy</code> [ <i>OPTION</i> ]&#8230; <i>SOURCE</i> <i>DEST1 [ DEST2 &#8230; ]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gfal-copy</code> Copies files from source to destination(s). If several destinations are specified, the file will be copy in a chain: src -&gt; dst1, dst1 -&gt; dst2, &#8230; If used in an interactive console, transfer information will be giving during the copy, which varies depending on the available information. This command can be used to upload local files to remote file systems and to register files in the file catalog (see examples). </p>
 <h2>OPTIONS</h2>
 <dl>

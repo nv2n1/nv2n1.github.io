@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-changelog(1)"
 name: "git-merge-changelog"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-merge-changelog – manual page for git-merge-changelog /build
 
 <h2>NAME</h2>
 <p> git-merge-changelog &#8211; manual page for git-merge-changelog /builddir/build/BUILDROOT/gnulib-0-14.20150325git.el7.x86_64/usr/bin/git-merge-changelog</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-merge-changelog</code> [<i>OPTION</i>] <i>O-FILE-NAME A-FILE-NAME B-FILE-NAME</i></p>
-<h2>DESCRIPTION</h2>
 <p> Merges independent modifications of a ChangeLog style file. O-FILE-NAME names the original file, the ancestor of the two others. A-FILE-NAME names the publicly modified file. B-FILE-NAME names the user-modified file. Writes the merged file into A-FILE-NAME.</p>
 <h3>Informative output:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "grub-menulst2cfg(1)"
 name: "grub-menulst2cfg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-menulst2cfg/"
 description: "grub-menulst2cfg – transform legacy menu.lst into grub.cfg"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grub-menulst2cfg</code> [<i>,INFILE /</i>[<i>,OUTFILE/</i>]]</p>
-<h2>DESCRIPTION</h2>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-grub-mkconfig/">grub-mkconfig</a></code>(8) </p>
 <p> The full documentation for <code>grub-menulst2cfg</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-menulst2cfg</code> programs are properly installed at your site, the command</p>

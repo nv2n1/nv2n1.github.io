@@ -1,4 +1,5 @@
 ---
+
 title: "autopoint(1)"
 name: "autopoint"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autopoint/"
 description: "autopoint – copies standard gettext infrastructure"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autopoint</code> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Copies standard gettext infrastructure files into a source package.</p>
 <h2>OPTIONS</h2>
 <dl>

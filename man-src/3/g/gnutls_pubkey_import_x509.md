@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_import_x509(3)"
 name: "gnutls_pubkey_import_x509"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pubkey_import_x509 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_import_x509 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_import_x509(gnutls_pubkey_t </code><i>key</i><code>, gnutls_x509_crt_t </code><i>crt</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pubkey_import_x509 – API function"
 <dd> The certificate to be imported</dd>
 <dt>unsigned int flags</dt>
 <dd> should be zero</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will import the given public key to the abstract <code>gnutls_pubkey_t</code> structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

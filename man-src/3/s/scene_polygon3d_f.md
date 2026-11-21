@@ -1,4 +1,5 @@
 ---
+
 title: "scene_polygon3d_f(3)"
 name: "scene_polygon3d_f"
 section: "3"
@@ -6,15 +7,12 @@ letter: "s"
 url: "/docs/linux/man/3-scene_polygon3d_f/"
 ---
 
-
  </p>
 <h2>NAME</h2>
 <p> scene_polygon3d, scene_polygon3d_f &#8211; Puts a polygon in the scene rendering list. Allegro game programming library.  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int scene_polygon3d(int type, BITMAP *texture, int vc, V3D *vtx[]);</code> </p>
 <p> <code>int scene_polygon3d_f(int type, BITMAP *texture, int vc, V3D_f *vtx[]);</code>  </p>
-<h2>DESCRIPTION</h2>
 <p> Puts a polygon in the rendering list. Nothing is really rendered at this moment. Should be called between clear_scene() and render_scene(). </p>
 <p> Arguments are the same as for polygon3d(), except the bitmap is missing. The one passed to clear_scene() will be used. </p>
 <p> Unlike polygon3d(), the polygon may be concave or self-intersecting. Shapes that penetrate one another may look OK, but they are not really handled by this code. </p>

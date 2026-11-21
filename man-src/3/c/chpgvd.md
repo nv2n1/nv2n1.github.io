@@ -1,4 +1,5 @@
 ---
+
 title: "chpgvd(3)"
 name: "chpgvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chpgvd/"
 description: "chpgvd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>CHPGST</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fdtypedefs(3)"
 name: "fdtypedefs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdtypedefs/"
 description: "ql/methods/finitedifferences/fdtypedefs.hpp – default choices for template instantiations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/cranknicolson.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/parallelevolver.hpp&gt; </p>
 <h3>Typedefs</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_method_pref(3)"
 name: "libssh2_session_method_pref"
 section: "3"
@@ -9,10 +10,8 @@ description: "libssh2_session_method_pref – set preferred key exchange method"
 
 <h2>NAME</h2>
 <p> libssh2_session_method_pref &#8211; set preferred key exchange method</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_session_method_pref(LIBSSH2_SESSION *session, int method_type, const char *prefs); </p>
-<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>method_type</i> &#8211; One of the Method Type constants. </p>
 <p> <i>prefs</i> &#8211; Coma delimited list of preferred methods to use with the most preferred listed first and the least preferred listed last. If a method is listed which is not supported by libssh2 it will be ignored and not sent to the remote host during protocol negotiation. </p>

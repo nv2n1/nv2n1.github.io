@@ -1,4 +1,5 @@
 ---
+
 title: "ssyrk(3)"
 name: "ssyrk"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssyrk/"
 description: "ssyrk.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
  <i></i><code>SSYRK</code></p>

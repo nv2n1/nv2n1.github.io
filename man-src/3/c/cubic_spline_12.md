@@ -1,4 +1,5 @@
 ---
+
 title: "cubic_spline_12(3)"
 name: "cubic_spline_12"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cubic_spline_12/"
 description: "ql/math/interpolations/multicubicspline.hpp – N-dimensional cubic spline interpolation between discrete points."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/errors.hpp&gt;<br />
  #include &lt;ql/types.hpp&gt;<br />
  #include &lt;functional&gt;<br />

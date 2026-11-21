@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-repair(1)"
 name: "flatpak-repair"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-repair/"
 description: "flatpak-repair – Repair a flatpak installation"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak repair</code> [OPTION&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Repair a flatpak installation by pruning and reinstalling invalid objects. The repair command does all of the following: </dd>
 <dl>
 <dt>

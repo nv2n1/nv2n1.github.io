@@ -1,4 +1,5 @@
 ---
+
 title: "manedit(1)"
 name: "manedit"
 section: "1"
@@ -11,7 +12,6 @@ description: "manedit – UNIX Manual Page IDE"
 <p> manedit &#8211; UNIX Manual Page IDE</p>
 <h2>SYNTAX</h2>
 <p> <code>manedit</code> [<i>section</i>] [<i>manual_page</i>] [<i>options</i>] [<i>GUI_options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> ManEdit is an integrated UNIX manual page development environment (IDE) using the GIMP Tool Kit (GTK). </p>
 <p> Editing of UNIX manual pages is done using ManEdit&#8217;s Editor, which edits UNIX manual pages using a simplified version of the XML format, eliminating the need for the user to use the more complex GROFF/TROFF format (native UNIX manual page format). </p>
 <p> The UNIX manual page that you are editing can then be viewed at any time using ManEdit&#8217;s Viewer by going to View-&gt;Preview. </p>

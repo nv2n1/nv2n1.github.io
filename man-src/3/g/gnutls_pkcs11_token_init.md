@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_token_init(3)"
 name: "gnutls_pkcs11_token_init"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs11_token_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_token_init &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_token_init(const char * </code><i>token_url</i><code>, const char * </code><i>so_pin</i><code>, const char * </code><i>label</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pkcs11_token_init – API function"
 <dd> Security Officer&#8217;s PIN</dd>
 <dt>const char * label</dt>
 <dd> A name to be used for the token</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will initialize (format) a token. If the token is at a factory defaults state the security officer&#8217;s PIN given will be set to be the default. Otherwise it should match the officer&#8217;s PIN.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

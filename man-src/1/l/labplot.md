@@ -1,4 +1,5 @@
 ---
+
 title: "labplot(1)"
 name: "labplot"
 section: "1"
@@ -9,10 +10,8 @@ description: "LabPlot – data plotting and function analysis tool for KDE"
 
 <h2>NAME</h2>
 <p> LabPlot &#8211; data plotting and function analysis tool for KDE</p>
-<h2>SYNOPSIS</h2>
 <p> <code>LabPlot</code> [ <i>generic-options</i> ] [ <i>file</i> &#8230; ]<br />
  <code>labplot</code> [ <i>generic-options</i> ] [ <i>file</i> &#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>LabPlot</code> is a data plotting and analysis tool for the KDE desktop. </p>
 <p> Its features include 2D and 3D data and function, plotting, easy editing of plots, analysis of data and functions, support for different worksheets using MDI and LabPlot project files. </p>
 <p> Note that LabPlot can be called using either LabPlot or labplot. The same program is invoked in either case.</p>

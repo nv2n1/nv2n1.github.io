@@ -1,4 +1,5 @@
 ---
+
 title: "xdm(1)"
 name: "xdm"
 section: "1"
@@ -9,9 +10,7 @@ description: "xdm – X Display Manager with support for XDMCP, host chooser"
 
 <h2>NAME</h2>
 <p> xdm &#8211; X Display Manager with support for XDMCP, host chooser</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xdm</code> [ <code>-config</code> <i>configuration_file</i> ] [ <code>-nodaemon</code> ] [ <code>-debug</code> <i>debug_level</i> ] [ <code>-error</code> <i>error_log_file</i> ] [ <code>-resources</code> <i>resource_file</i> ] [ <code>-server</code> <i>server_entry</i> ] [ <code>-session</code> <i>session_program</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xdm</i> manages a collection of X displays, which may be on the local host or remote servers. The design of <i>xdm</i> was guided by the needs of X terminals as well as The Open Group standard XDMCP, the <i>X Display Manager Control Protocol</i>. <i>Xdm</i> provides services similar to those provided by <i>init</i>, <i>getty</i> and <i>login</i> on character terminals: prompting for login name and password, authenticating the user, and running a &#8220;session.&#8221; </p>
 <p> A &#8220;session&#8221; is defined by the lifetime of a particular process; in the traditional character-based terminal world, it is the user&#8217;s login shell. In the <i>xdm</i> context, it is an arbitrary session manager. This is because in a windowing environment, a user&#8217;s login shell process does not necessarily have any terminal-like interface with which to connect. When a real session manager is not available, a window manager or terminal emulator is typically used as the &#8220;session manager,&#8221; meaning that termination of this process terminates the user&#8217;s session. </p>
 <p> When the session is terminated, <i>xdm</i> resets the X server and (optionally) restarts the whole process. </p>

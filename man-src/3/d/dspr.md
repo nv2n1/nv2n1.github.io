@@ -1,4 +1,5 @@
 ---
+
 title: "dspr(3)"
 name: "dspr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dspr/"
 description: "dspr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspr</code> (UPLO, N, ALPHA, X, INCX, AP)<br />
  <i></i><code>DSPR</code></p>

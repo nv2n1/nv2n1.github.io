@@ -1,4 +1,5 @@
 ---
+
 title: "thrift(1)"
 name: "thrift"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-thrift/"
 description: "thrift – program to do something"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>thrift</code> [<i>options</i>]<i> files</i>&#8230;<br />
  <code>bar</code> [<i>options</i>]<i> files</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>thrift</code> and <code>bar</code> commands. </p>
 <p> <code>thrift</code> is a program that&#8230;</p>
 <h2>OPTIONS</h2>

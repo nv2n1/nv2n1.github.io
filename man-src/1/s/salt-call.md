@@ -1,4 +1,5 @@
 ---
+
 title: "salt-call(1)"
 name: "salt-call"
 section: "1"
@@ -9,11 +10,9 @@ description: "salt-call – salt-call Documentation"
 
 <h2>NAME</h2>
 <p> salt-call &#8211; salt-call Documentation</p>
-<h2>SYNOPSIS</h2>
 <pre>
 salt-call [options]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The salt-call command is used to run module functions locally on a minion instead of executing them from the master. Salt-call is used to run a Standalone Minion, and was originally created for troubleshooting. </p>
 <p> The Salt Master is contacted to retrieve state files and other resources during execution unless the <code>&#8211;local</code> option is specified. </p>
 <p> <code>NOTE:</code> <code>salt-call</code> commands execute from the current user&#8217;s shell context, while <code>salt</code> commands execute from the system&#8217;s default context.</p>

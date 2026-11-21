@@ -1,4 +1,5 @@
 ---
+
 title: "perllocale(1)"
 name: "perllocale"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perllocale/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perllocale - Perl locale handling (internationalization and localization) 
 
- perllocale - Perl locale handling (internationalization and localization) 
-
-<h2>DESCRIPTION</h2>
-
- In the beginning there was <font SIZE="-1">ASCII,</font> the ``American Standard Code for Information Interchange'', which works quite well for Americans with their English alphabet and dollar-denominated currency. But it doesn't work so well even for other English speakers, who may use different currencies, such as the pound sterling (as the symbol for that currency is not in <font SIZE="-1">ASCII</font>); and it's hopelessly inadequate for many of the thousands of the world's other languages. 
+In the beginning there was <font SIZE="-1">ASCII,</font> the ``American Standard Code for Information Interchange'', which works quite well for Americans with their English alphabet and dollar-denominated currency. But it doesn't work so well even for other English speakers, who may use different currencies, such as the pound sterling (as the symbol for that currency is not in <font SIZE="-1">ASCII</font>); and it's hopelessly inadequate for many of the thousands of the world's other languages. 
 
  To address these deficiencies, the concept of locales was invented (formally the <font SIZE="-1">ISO C, XPG4, POSIX 1</font>.c ``locale system''). And applications were and are being written that use the locale mechanism. The process of making such an application take account of its users' preferences in these kinds of matters is called <b>internationalization</b> (often abbreviated as <b>i18n</b>); telling such an application about a particular set of preferences is known as <b>localization</b> (<b>l10n</b>). 
 

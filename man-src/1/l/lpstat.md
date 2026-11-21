@@ -1,4 +1,5 @@
 ---
+
 title: "lpstat(1)"
 name: "lpstat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lpstat/"
 description: "lpstat – print cups status information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lpstat</code> [ <code>-E</code> ] [ <code>-H</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h </code><i>hostname</i>[<code>:</code><i>port</i>] ] [ <code>-l</code> ] [ <code>-W</code> <i>which-jobs</i> ] [ <code>-a</code> [ <i>destination(s)</i> ] ] [ <code>-c</code> [ <i>class(es)</i> ] ] [ <code>-d</code> ] [ <code>-e</code> ] [ <code>-o</code> [ <i>destination(s)</i> ] ] [ <code>-p</code> [ <i>printer(s)</i> ] ] [ <code>-r</code> ] [ <code>-R</code> ] [ <code>-s</code> ] [ <code>-t</code> ] [ <code>-u</code> [ <i>user(s)</i> ] ] [ <code>-v</code> [ <i>printer(s)</i> ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lpstat</code> displays status information about the current classes, jobs, and printers. When run with no arguments, <code>lpstat</code> will list active jobs queued by the current user.</p>
 <h2>OPTIONS</h2>
 <p> The <code>lpstat</code> command supports the following options:</p>

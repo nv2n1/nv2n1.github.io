@@ -1,4 +1,5 @@
 ---
+
 title: "bson_md5_t(3)"
 name: "bson_md5_t"
 section: "3"
@@ -10,11 +11,7 @@ url: "/docs/linux/man/3-bson_md5_t/"
 
  bson_md5_t - BSON MD5 Abstraction
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 typedef struct
 {
     uint32_t count[2]; /* message length in bits, lsw first */
@@ -23,11 +20,7 @@ typedef struct
 } bson_md5_t;
 </code></pre> 
 
-<h2>DESCRIPTION</h2>
-
- 
-
- bson_md5_t encapsulates an implementation of the MD5 algorithm. This is used in OID generation for the MD5(hostname) bytes. It is also used by some libraries such as the MongoDB C driver. 
+bson_md5_t encapsulates an implementation of the MD5 algorithm. This is used in OID generation for the MD5(hostname) bytes. It is also used by some libraries such as the MongoDB C driver. 
 
  
 

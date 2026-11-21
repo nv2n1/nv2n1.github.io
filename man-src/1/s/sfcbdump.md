@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbdump(1)"
 name: "sfcbdump"
 section: "1"
@@ -9,7 +10,6 @@ description: "sfcbdump – sfcBroker repository dumper"
 
 <h2>NAME</h2>
 <p> sfcbdump &#8211; sfcBroker repository dumper</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sfcbdump</code> [<i>-hsapqm</i>] <i>schemafile</i></p>
 <h2>OPTIONS</h2>
 <p> Allowed options:</p>

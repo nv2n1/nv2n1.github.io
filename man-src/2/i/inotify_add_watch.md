@@ -1,4 +1,5 @@
 ---
+
 title: "inotify_add_watch(2)"
 name: "inotify_add_watch"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-inotify_add_watch/"
 description: "inotify_add_watch – add a watch to an initialized inotify instance"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/inotify.h&gt;</code> </p>
 <p> <code>int inotify_add_watch(int </code><i>fd</i><code>, const char *</code><i>pathname</i><code>, uint32_t </code><i>mask</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>inotify_add_watch</code>() adds a new watch, or modifies an existing watch, for the file whose location is specified in <i>pathname</i>; the caller must have read permission for this file. The <i>fd</i> argument is a file descriptor referring to the inotify instance whose watch list is to be modified. The events to be monitored for <i>pathname</i> are specified in the <i>mask</i> bit-mask argument. See <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) for a description of the bits that can be set in <i>mask</i>. </p>
 <p> A successful call to <code>inotify_add_watch</code>() returns a unique watch descriptor for this inotify instance, for the filesystem object (inode) that corresponds to <i>pathname</i>. If the filesystem object was not previously being watched by this inotify instance, then the watch descriptor is newly allocated. If the filesystem object was already being watched (perhaps via a different link to the same object), then the descriptor for the existing watch is returned. </p>
 <p> The watch descriptor is returned by later <code><a href="/docs/linux/man/2-read/">read</a></code>(2)s from the inotify file descriptor. These reads fetch <i>inotify_event</i> structures (see <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7)) indicating filesystem events; the watch descriptor inside this structure identifies the object for which the event occurred.</p>

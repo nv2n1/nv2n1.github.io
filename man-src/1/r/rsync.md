@@ -1,4 +1,5 @@
 ---
+
 title: "rsync(1)"
 name: "rsync"
 section: "1"
@@ -6,7 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rsync/"
 description: "rsync – a fast, versatile, remote (and local) file-copying tool"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>Local:
     rsync [OPTION...] SRC... [DEST]
 Access via remote shell:
@@ -24,7 +25,6 @@ Access via rsync daemon:
 </code></pre>
 <p> Usages with just one SRC arg and no DEST arg will list the source files instead of copying. </p>
 <p> The online version of this manpage (that includes cross-linking of topics) is available at <a rel="nofollow" href="https://download.samba.org/pub/rsync/rsync.1.">https://download.samba.org/pub/rsync/rsync.1.</a> </p>
-<h2>DESCRIPTION</h2>
 <p> Rsync is a fast and extraordinarily versatile file copying tool. It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon. It offers a large number of options that control every aspect of its behavior and permit very flexible specification of the set of files to be copied. It is famous for its delta-transfer algorithm, which reduces the amount of data sent over the network by sending only the differences between the source files and the existing files in the destination. Rsync is widely used for backups and mirroring and as an improved copy command for everyday use. </p>
 <p> Rsync finds files that need to be transferred using a &quot;quick check&quot; algorithm (by default) that looks for files that have changed in size or in last-modified time. Any changes in the other preserved attributes (as requested by options) are made on the destination file directly when the quick check indicates that the file&#8217;s data does not need to be updated. </p>
 <p> Some of the additional features of rsync are: </p>

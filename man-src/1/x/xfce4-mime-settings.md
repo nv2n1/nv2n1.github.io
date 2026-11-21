@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-mime-settings(1)"
 name: "xfce4-mime-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-mime-settings/"
 description: "xfce4-mime-settings – MIME settings for Xfce"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

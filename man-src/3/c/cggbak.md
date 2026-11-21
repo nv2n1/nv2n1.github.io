@@ -1,4 +1,5 @@
 ---
+
 title: "cggbak(3)"
 name: "cggbak"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cggbak/"
 description: "cggbak.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cggbak</code> (JOB, SIDE, N, ILO, IHI, LSCALE, RSCALE, M, V, LDV, INFO)<br />
  <i></i><code>CGGBAK</code></p>

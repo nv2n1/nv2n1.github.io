@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-put-notification-configuration(1)"
 name: "euscale-put-notification-configuration"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-put-notification-configuration – Create or replace an au
 
 <h2>NAME</h2>
 <p> euscale-put-notification-configuration &#8211; Create or replace an auto-scaling group&#8217;s notification configuration</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-put-notification-configuration <code>-n</code> TYPE1,TYPE2,&#8230; <code>-t</code> TOPIC</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ASGROUP</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create or replace an auto-scaling group&#8217;s notification configuration</p>
 <h3>positional arguments:</h3>
 <dl>

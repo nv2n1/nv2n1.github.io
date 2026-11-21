@@ -1,4 +1,5 @@
 ---
+
 title: "perldebtut(1)"
 name: "perldebtut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldebtut/"
 description: "perldebtut – Perl debugging tutorial"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> A (very) lightweight introduction in the use of the perl debugger, and a pointer to existing, deeper sources of information on the subject of debugging perl programs. </p>
 <p> There&#8217;s an extraordinary number of people out there who don&#8217;t appear to know anything about using the perl debugger, though they use the language every day. This is for them.</p>
 <h2>use strict</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "csyrfs(3)"
 name: "csyrfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csyrfs/"
 description: "csyrfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csyrfs</code> (UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code>CSYRFS</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "uname(1)"
 name: "uname"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-uname/"
 description: "uname – print system information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>uname</code> [<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print certain system information. With no OPTION, same as <code>-s</code>.</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;all</code></dt>

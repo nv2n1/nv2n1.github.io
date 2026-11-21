@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_is_resumed(3)"
 name: "gnutls_session_is_resumed"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_session_is_resumed – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_is_resumed &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_is_resumed(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Check whether session is resumed or not.</p>
 <h2>RETURNS</h2>
 <p> non zero if this session is resumed, or a zero if this is a new session.</p>

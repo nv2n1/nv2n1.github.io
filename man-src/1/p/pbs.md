@@ -1,4 +1,5 @@
 ---
+
 title: "pbs(1)"
 name: "pbs"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pbs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pbs - general information on pbs 
 
- pbs - general information on pbs 
-
-<h2>DESCRIPTION</h2>
-
- PBS stands for <i>Portable Batch System.</i> It is a networked subsystem for submitting, monitoring, and controlling a work load of batch jobs on one or more systems. More information about PBS is available in the PBS Users Guide. 
+PBS stands for <i>Portable Batch System.</i> It is a networked subsystem for submitting, monitoring, and controlling a work load of batch jobs on one or more systems. More information about PBS is available in the PBS Users Guide. 
 
  <i>Batch</i> means that the job will be scheduled for execution at a time chosen by the subsystem according to a defined policy and the availability of resources. For a normal batch job, the standard output and standard error of the job will be returned to files available to the user when the job is complete. This differs from an interactive session where commands are executed when entered via the terminal and output is returned directly to the terminal. PBS also supports an <i>interactive batch</i> mode where the input and output is connected to the user's terminal, but the scheduling of the job is still under control of the batch system. 
 

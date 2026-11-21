@@ -1,4 +1,5 @@
 ---
+
 title: "zvbi-atsc-cc(1)"
 name: "zvbi-atsc-cc"
 section: "1"
@@ -9,9 +10,7 @@ description: "zvbi-atsc-cc – ATSC Closed Caption decoder"
 
 <h2>NAME</h2>
 <p> zvbi-atsc-cc &#8211; ATSC Closed Caption decoder</p>
-<h2>SYNOPSIS</h2>
 <p> <code>zvbi-atsc-cc [ options ] [-n] station name</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>zvbi-atsc-cc</code> captures ATSC TV transmissions using a Linux DVB device and decodes the enclosed Closed Caption data. It can record both NTSC caption (EIA 608-B) and DTVCC caption (CEA 708-C).</p>
 <h2>OPTIONS</h2>
 <dl>

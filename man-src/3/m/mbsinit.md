@@ -1,4 +1,5 @@
 ---
+
 title: "mbsinit(3)"
 name: "mbsinit"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-mbsinit/"
 description: "mbsinit – test for initial shift state"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;
 int mbsinit(const mbstate_t *ps);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Character conversion between the multibyte representation and the wide character representation uses conversion state, of type <i>mbstate_t</i>. Conversion of a string uses a finite-state machine; when it is interrupted after the complete conversion of a number of characters, it may need to save a state for processing the remaining characters. Such a conversion state is needed for the sake of encodings such as ISO-2022 and UTF-7. </p>
 <p> The initial state is the state at the beginning of conversion of a string. There are two kinds of state: the one used by multibyte to wide character conversion functions, such as <code><a href="/docs/linux/man/3-mbsrtowcs/">mbsrtowcs</a></code>(3), and the one used by wide character to multibyte conversion functions, such as <code><a href="/docs/linux/man/3-wcsrtombs/">wcsrtombs</a></code>(3), but they both fit in a <i>mbstate_t</i>, and they both have the same representation for an initial state. </p>
 <p> For 8-bit encodings, all states are equivalent to the initial state. For multibyte encodings like UTF-8, EUC-*, BIG5 or SJIS, the wide character to multibyte conversion functions never produce non-initial states, but the multibyte to wide-character conversion functions like <code><a href="/docs/linux/man/3-mbrtowc/">mbrtowc</a></code>(3) do produce non-initial states when interrupted in the middle of a character. </p>

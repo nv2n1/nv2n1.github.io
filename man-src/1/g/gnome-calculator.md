@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-calculator(1)"
 name: "gnome-calculator"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gnome-calculator/"
 description: "gnome-calculator – a desktop calculator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-calculator</code> [ <i>OPTION</i> ] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gnome-calculator</code> is the official calculator of the GNOME desktop environment.</p>
 <h2>OPTIONS</h2>
 <dl>

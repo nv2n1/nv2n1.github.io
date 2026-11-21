@@ -1,4 +1,5 @@
 ---
+
 title: "fpcmkcfg(1)"
 name: "fpcmkcfg"
 section: "1"
@@ -9,9 +10,7 @@ description: "fpcmkcfg – The Free Pascal configuration program."
 
 <h2>NAME</h2>
 <p> fpcmkcfg &#8211; The Free Pascal configuration program. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fpcmkcfg [options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> makes a configuration file for the compiler. </p>
 <p> <code>fpcmkcfg</code> TO BE FILLED. </p>
 <h2>USAGE</h2>

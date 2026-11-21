@@ -1,4 +1,5 @@
 ---
+
 title: "sendmsg(2)"
 name: "sendmsg"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sendmsg/"
 description: "send, sendto, sendmsg – send a message on a socket"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
@@ -16,7 +16,6 @@ ssize_t sendto(int sockfd, const void *buf, size_t len, int flags,
                const struct sockaddr *dest_addr, socklen_t addrlen);
 ssize_t sendmsg(int sockfd, const struct msghdr *msg, int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The system calls <code>send</code>(), <code>sendto</code>(), and <code>sendmsg</code>() are used to transmit a message to another socket. </p>
 <p> The <code>send</code>() call may be used only when the socket is in a <i>connected</i> state (so that the intended recipient is known). The only difference between <code>send</code>() and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) is the presence of <i>flags</i>. With a zero <i>flags</i> argument, <code>send</code>() is equivalent to <code><a href="/docs/linux/man/2-write/">write</a></code>(2). Also, the following call </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;send(sockfd, buf, len, flags); </p>

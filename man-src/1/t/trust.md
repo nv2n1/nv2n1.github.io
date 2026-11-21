@@ -1,4 +1,5 @@
 ---
+
 title: "trust(1)"
 name: "trust"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-trust/"
 description: "trust – Tool for operating on the trust policy store"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>trust list</code></dt>
 <dt> <code>trust extract</code> &#8211;filter=&lt;what&gt; &#8211;format=&lt;type&gt; /path/to/destination <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></dt>
 <dt> <code>trust anchor</code> /path/to/certificate.crt <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt></dt>
 <dt> <code>trust dump</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>trust</code></p>
 <dd>is a command line tool to examine and modify the shared trust policy store. </dd>
 <p> See the various sub commands below. The following global options can be used: </p>

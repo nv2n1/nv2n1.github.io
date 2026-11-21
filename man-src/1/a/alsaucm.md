@@ -1,4 +1,5 @@
 ---
+
 title: "alsaucm(1)"
 name: "alsaucm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-alsaucm/"
 description: "alsaucm – ALSA Use Case Manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>alsaucm</i> &lt;options&gt; [command]</p>
-<h2>DESCRIPTION</h2>
 <p> alsaucm (ALSA Use Case Manager) is a program to use the ALSA <i>Use Case Interface</i> from the command line. </p>
 <p> On complex sound cards, setting up audio routes is not trivial and mixer settings can conflict one another preventing the audio card to work at all. </p>
 <p> The ALSA Use Case Manager is a mechanism for controlling complex audio hardware establishing a relationship between hardware configurations and meaningful use cases that the end-user can relate with. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "utf-8(7)"
 name: "utf-8"
 section: "7"
@@ -6,8 +7,8 @@ letter: "u"
 url: "/docs/linux/man/7-utf-8/"
 description: "UTF-8 – an ASCII compatible multibyte Unicode encoding"
 ---
+
 <p>UTF-8 &#8211; an ASCII compatible multibyte Unicode encoding </p>
-<h2>DESCRIPTION</h2>
 <p> The Unicode 3.0 character set occupies a 16-bit code space. The most obvious Unicode encoding (known as UCS-2) consists of a sequence of 16-bit words. Such strings can contain---as part of many 16-bit characters---bytes such as &#8216;\0&#8217; or &#8216;/&#8216;, which have a special meaning in filenames and other C library function arguments. In addition, the majority of UNIX tools expect ASCII files and can&#8217;t read 16-bit words as characters without major modifications. For these reasons, UCS-2 is not a suitable external encoding of Unicode in filenames, text files, environment variables, and so on. The ISO 10646 Universal Character Set (UCS), a superset of Unicode, occupies an even larger code space---31 bits---and the obvious UCS-4 encoding for it (a sequence of 32-bit words) has the same problems. </p>
 <p>The UTF-8 encoding of Unicode and UCS does not have these problems and is the common way in which Unicode is used on UNIX-style operating systems.  </p>
 <h3>Properties</h3>

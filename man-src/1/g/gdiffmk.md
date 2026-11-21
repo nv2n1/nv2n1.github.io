@@ -1,4 +1,5 @@
 ---
+
 title: "gdiffmk(1)"
 name: "gdiffmk"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gdiffmk/"
 description: "gdiffmk – mark differences between groff/nroff/troff files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-a </code><i>addmark</i> ] [ <code>-c </code><i>changemark</i> ] [ <code>-d </code><i>deletemark</i> ] [<code>-D</code> [<code>-B</code>] [<code>-M</code> <i>mark1 mark2</i>]] [ <code>-x </code><i>diffcmd</i> ] [ <code>&#8212;</code> ] <i>file1</i> <i>file2</i> [<i>output</i>] <code>&#8211;help</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gdiffmk</code> compares two <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1), <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1), or <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) documents, <i>file1</i> and <i>file2</i>, and creates an output which is <i>file2</i> with added &#8220;margin character&#8221; (.mc) commands that indicate the differences. </p>
 <p> If the <i>output</i> filename is present, the output is written there. If it is <code>&#8211;</code> or absent the output is written to the standard output. </p>
 <p> If the <i>file1</i> or <i>file2</i> argument is <code>&#8211;</code> the standard input is read for that input. Clearly both cannot be <code>&#8211;</code>. </p>

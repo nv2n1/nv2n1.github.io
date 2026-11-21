@@ -1,4 +1,5 @@
 ---
+
 title: "pidstat(1)"
 name: "pidstat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pidstat/"
 description: "pidstat – Report statistics for Linux tasks."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pidstat [ -d ] [ -H ] [ -h ] [ -I ] [ -l ] [ -R ] [ -r ] [ -s ] [ -t ] [ -U [</code> <i>username </i><code>] ] [ -u ] [ -V ] [ -v ] [ -w ] [ -C </code><i>comm </i><code>] [ -G </code><i>process_name</i> <code>] [ &#8211;dec={ 0 | 1 | 2 } ] [ &#8211;human ] [ -p { </code><i>pid</i><code>[,&#8230;]</code> <code>| SELF | ALL } ] [ -T { TASK | CHILD | ALL } ] [</code> <i>interval </i><code>[ </code><i>count </i><code>] ] [ -e </code><i>program</i> <i>args </i><code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pidstat</code> command is used for monitoring individual tasks currently being managed by the Linux kernel. It writes to standard output activities for every task selected with option <code>-p</code> or for every task managed by the Linux kernel if option <code>-p ALL</code> has been used. Not selecting any tasks is equivalent to specifying <code>-p ALL</code> but only active tasks (tasks with non-zero statistics values) will appear in the report. </p>
 <p> The <code>pidstat</code> command can also be used for monitoring the child processes of selected tasks. Read about option <code>-T </code>below. </p>
 <p> The <i>interval</i> parameter specifies the amount of time in seconds between each report. A value of 0 (or no parameters at all) indicates that tasks statistics are to be reported for the time since system startup (boot). The <i>count </i>parameter can be specified in conjunction with the <i>interval </i>parameter if this one is not set to zero. The value of <i>count </i>determines the number of reports generated at <i>interval </i>seconds apart. If the <i>interval </i>parameter is specified without the <i>count</i> parameter, the <code>pidstat</code> command generates reports continuously. </p>

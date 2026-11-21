@@ -1,4 +1,5 @@
 ---
+
 title: "qsgeo(1)"
 name: "qsgeo"
 section: "1"
@@ -6,18 +7,11 @@ letter: "q"
 url: "/docs/linux/man/1-qsgeo/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+qsgeo - an utility to lookup a client's country code. 
 
- qsgeo - an utility to lookup a client's country code. 
+qsgeo -d &lt;path&gt; [-l] [-s] [-ip &lt;ip&gt;]
 
-<h2>SYNOPSIS</h2>
-
- qsgeo -d &lt;path&gt; [-l] [-s] [-ip &lt;ip&gt;]
-
-<h2>DESCRIPTION</h2>
-
- Use this utility to resolve the country codes of IP addresses within existing log files. The utility reads the log file data from stdin and writes them, with the injected country code, to stdout.
+Use this utility to resolve the country codes of IP addresses within existing log files. The utility reads the log file data from stdin and writes them, with the injected country code, to stdout.
 
 <h2>OPTIONS</h2>
 

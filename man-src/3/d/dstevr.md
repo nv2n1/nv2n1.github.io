@@ -1,4 +1,5 @@
 ---
+
 title: "dstevr(3)"
 name: "dstevr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dstevr/"
 description: "dstevr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstevr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code> DSTEVR computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

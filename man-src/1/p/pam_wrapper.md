@@ -1,4 +1,5 @@
 ---
+
 title: "pam_wrapper(1)"
 name: "pam_wrapper"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pam_wrapper/"
 description: "pam_wrapper – A preloadable wrapper to test PAM applications and PAM Modules"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> LD_PRELOAD=libpam_wrapper.so PAM_WRAPPER=1 PAM_WRAPPER_SERVICE_DIR=/path_to_config <code>./myapplication</code></p>
-<h2>DESCRIPTION</h2>
 <p> This tool allows you to either test your PAM application or module. For testing PAM applications we have written a simple PAM module called pam_matrix (see below). If you plan to test a PAM module you can use the pamtest library we have implemented. It simplifies testing of modules. You can be combine it with the cmocka unit testing framework or you can use the provided Python bindings to write tests for your module in Python.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> pam_wrapper is activated and controlled by environment variables. You can set the following variables: </p>

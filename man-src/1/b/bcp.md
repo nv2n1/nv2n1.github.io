@@ -1,4 +1,5 @@
 ---
+
 title: "bcp(1)"
 name: "bcp"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-bcp/"
 description: "bcp – extract subsets of Boost"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bcp</code> <code>&#8211;list</code> [<i>options</i>] <i>module-list</i><br />
  <code>bcp</code> [<i>options</i>] <i>module-list output-path</i><br />
  <code>bcp</code> <code>&#8211;report</code> [<i>options</i>] <i>module-list html-file</i><br />
  <code>bcp</code> <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> Copies all the files, including dependencies, found in <i>module-list</i> to <i>output-path</i>. <i>output-path</i> must be an existing path. </p>
 <p> With <code>&#8211;list</code>, prints the list of all the files in <i>module-list</i>, including dependencies. </p>
 <p> With <code>&#8211;report</code>, writes the HTML report to <i>html-file</i>. </p>

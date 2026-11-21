@@ -1,4 +1,5 @@
 ---
+
 title: "7za(1)"
 name: "7za"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-7za/"
 description: "7za – A file archiver with high compression ratio format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>7za</code> <code>&lt;command&gt;</code> [<code>&lt;switches&gt;</code>&#8230; ] <code>&lt;archive_name&gt;</code> [<code>&lt;file_names&gt;</code>&#8230; ] [<code>&lt;@listfiles&gt;</code>&#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> 7-Zip is a file archiver supporting 7z (that implements LZMA compression algorithm featuring very high compression ratio), LZMA2, XZ, ZIP, Zip64, CAB, RAR (if the non-free p7zip-rar package is installed), ARJ, GZIP, BZIP2, TAR, CPIO, RPM, ISO, most filesystem images and DEB formats. Compression ratio in the new 7z format is 30-50% better than ratio in ZIP format. </p>
 <p> <code>7za</code> is a stand-alone executable. <code>7za</code> handles fewer archive formats than <code><a href="/docs/linux/man/1-7z/">7z</a></code>(1).</p>
 <h2>COMMANDS</h2>

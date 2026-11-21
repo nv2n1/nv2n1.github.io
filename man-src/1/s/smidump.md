@@ -1,4 +1,5 @@
 ---
+
 title: "smidump(1)"
 name: "smidump"
 section: "1"
@@ -9,9 +10,7 @@ description: "smidump – dump SMI or SPPI modules in various formats"
 
 <h2>NAME</h2>
 <p> smidump &#8211; dump SMI or SPPI modules in various formats</p>
-<h2>SYNOPSIS</h2>
 <p> <code>smidump</code> [ <code>-Vhqusmk</code> ] [ <code>-c </code><i>file</i> ] [ <code>-o </code><i>name</i> ] [ <code>-p </code><i>module</i> ] [ <code>-l </code><i>level</i> ] [ <code>-f </code><i>format</i> ] <i>module(s)</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>smidump</code> program is used to dump the contents of a single MIB or PIB module or a collection of modules to stdout in a selectable output format. This format may be a simple tree of nodes, types or imported modules, but also a format fully compliant to SMIv1, SMIv2, SPPI or SMIng or CORBA IDL or C source code. Smidump can thus be used to convert modules from SMIv2 to SMIng and from SMIng to SMIv2, or to develop template based agent code.</p>
 <h2>OPTIONS</h2>
 <dl>

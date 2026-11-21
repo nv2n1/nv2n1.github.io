@@ -1,4 +1,5 @@
 ---
+
 title: "dvipost(1)"
 name: "dvipost"
 section: "1"
@@ -6,13 +7,12 @@ letter: "d"
 url: "/docs/linux/man/1-dvipost/"
 description: "dvipost, pptex, pplatex – post processing of dvi files"
 ---
+
 <h2>NAME</h2>
 <p> dvipost, pptex, pplatex - post processing of dvi files </p>
-<h2>SYNOPSIS</h2>
 <p> <code>dvipost</code> [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>] <i>in</i> <i>out</i> </p>
 <p> <code>pplatex</code> [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>] [LaTeX-Arguments] </p>
 <p> <code>pptex</code> [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>] [TeX-Arguments] </p>
-<h2>DESCRIPTION</h2>
 <p> The command <code>dvipost</code> is a post procesor for dvi files, created by <code>latex</code> or <code>tex</code>. It is used for special modes, which normally needs the support of dvi drivers (such as <code>dvips</code>). With <code>dvipost</code>, this features could be implemented independent of the prefered driver. Currently, the post processor supports layout raster, change bars and overstrike mode. </p>
 <p> This version of <code>dvipost</code> does not seek the dvi file, so it could be used as a filter. If <code>-</code> is given as file name, the command uses standard input or standard output respective. The command does not substitute a missing <code>.dvi</code> extension to the filename. </p>
 <p> Because the command works with a temporary file and creates the ouput file only after successfull processing the input file, it is possible to use the same name for input and output. </p>

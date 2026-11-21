@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-todos(1)"
 name: "pilot-read-todos"
 section: "1"
@@ -11,11 +12,9 @@ description: "pilot-read-todos – Syncronize your Palm ToDo application’s dat
 <p> pilot-read-todos &#8211; Syncronize your Palm ToDo application&#8217;s database with your desktop machine.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-read-todos</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-A</code>|<code>&#8211;archived</code>]&nbsp;<wbr>[<code>-w</code>|<code>&#8211;write</code>] </p>
 <p>&nbsp;<wbr><i>pilot-read-todos</i>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file</code>&nbsp;<wbr>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-A</code>|<code>&#8211;archived</code>]&nbsp;<wbr>[<code>-w</code>|<code>&#8211;write</code>] </p>
 <p>&nbsp;<wbr><i>pilot-read-todos</i>&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-read-todos</i>&nbsp;<wbr>will read the ToDo database on the Palm handheld, or read the ToDoDB.pdb file directly from disk on your desktop machine, and print the contents to STDOUT&nbsp;<wbr>(generally the screen). </p>
 <p> Use only one of <code>&#8211;port</code> or <code>&#8211;file</code>. </p>
 <h2>OPTIONS</h2>

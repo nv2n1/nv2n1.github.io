@@ -1,4 +1,5 @@
 ---
+
 title: "bson_as_json(3)"
 name: "bson_as_json"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_as_json() – The bson_as_json() function shall encode bson a
 
 <h2>NAME</h2>
 <p> bson_as_json() &#8211; The bson_as_json() function shall encode bson as a JSON encoded UTF-8 string.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 char *
 bson_as_json(const bson_t *bson,
@@ -22,7 +22,6 @@ bson_as_json(const bson_t *bson,
 <dl>
 <dt><code>length</code></dt>
 <dd> An optional location for the length of the resulting string.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_as_json/">bson_as_json</a>(3)</code> function shall encode <code>bson</code> as a JSON encoded UTF-8 string. </p>
 <p> The caller is responsible for freeing the resulting UTF-8 encoded string by calling <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> with the result. </p>
 <p> If non-NULL, <code>length</code> will be set to the length of the result in bytes. </p>

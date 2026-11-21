@@ -1,4 +1,5 @@
 ---
+
 title: "scan-build(1)"
 name: "scan-build"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-scan-build/"
 description: "scan-build – Clang static analyzer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>scan-build</code> &#8211; Clang static analyzer </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>ohkvV</code> ] [-<code>analyze-headers</code> ] [-<code>enable-checker </code>[<i>checker_name</i> ] ] [-<code>disable-checker </code>[<i>checker_name</i> ] ] [-<code>-help</code> ] [-<code>-help-checkers</code> ] [-<code>-html-title </code>[<i>=title</i> ] ] [-<code>-keep-going</code> ] [-<code>plist</code> ] [-<code>plist-html</code> ] [-<code>-status-bugs</code> ] [-<code>-use-c++ </code>[<i>=compiler_path</i> ] ] [-<code>-use-cc </code>[<i>=compiler_path</i> ] ] [-<code>-view</code> ] [-<code>constraints </code>[<i>model</i> ] ] [-<code>maxloop </code><i>N</i> ] [-<code>no-failure-reports</code> ] [-<code>stats</code> ] [-<code>store </code>[<i>model</i> ] ] <i>build_command</i> [build_options]</p>
-<h2>DESCRIPTION</h2>
 <p> is a Perl script that invokes the Clang static analyzer. Options used by or by the analyzer appear first, followed by the <i>build_command</i> and any <i>build_options</i> normally used to build the target system. </p>
 <p> The static analyzer employs a long list of checking algorithms, see Sx CHECKERS . Output can be written in standard <code>.plist</code> and/or HTML format. </p>
 <p> The following options are supported:</p>

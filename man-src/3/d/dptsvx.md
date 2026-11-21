@@ -1,4 +1,5 @@
 ---
+
 title: "dptsvx(3)"
 name: "dptsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dptsvx/"
 description: "dptsvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dptsvx</code> (FACT, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, INFO)<br />
  <i></i><code> DPTSVX computes the solution to system of linear equations A * X = B for PT matrices</code></p>

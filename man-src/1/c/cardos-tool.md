@@ -1,4 +1,5 @@
 ---
+
 title: "cardos-tool(1)"
 name: "cardos-tool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cardos-tool/"
 description: "cardos-tool – displays information about Card OS-based security tokens or format them"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cardos-tool</code> [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cardos-tool</code> utility is used to display information about smart cards and similar security tokens based on Siemens Card/OS M4.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;info</code>, <code>-i</code></p>

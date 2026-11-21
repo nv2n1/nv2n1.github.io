@@ -1,4 +1,5 @@
 ---
+
 title: "mksh(1)"
 name: "mksh"
 section: "1"
@@ -6,12 +7,10 @@ letter: "m"
 url: "/docs/linux/man/1-mksh/"
 description: "mksh sh – MirBSD Korn shell"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>mksh</code> <code>sh</code> - MirBSD Korn shell </p>
-<h2>SYNOPSIS</h2>
 <p> -words [-<code>+abCefhiklmnprUuvXx </code>[-<code>T </code><i>/dev/ttyCn </i>| - ] ] [-<code>+o </code><i>option</i> ] [-<code>c </code><i>string |</i> -<code>s |</code> <i>file</i> [<i>argument ...</i> ] ] <br />
 <code>builtin-name</code> [<i>argument ...</i> ]  </p>
-<h2>DESCRIPTION</h2>
 <p> is a command interpreter intended for both interactive and shell script use. Its command language is a superset of the shC shell language and largely compatible to the original Korn shell.  </p>
 <h3>I'm an Android user, so what's mksh?</h3>
 <p> <code>mksh</code> is a UNIX shell / command interpreter, similar to <code>COMMAND.COM</code> or <code>CMD.EXE</code> which has been included with <code>Android Open Source Project</code> for a while now. Basically, it&#8217;s a program that runs in a terminal (console window), takes user input and runs commands or scripts, which it can also be asked to do by other programs, even in the background. Any privilege pop-ups you might be encountering are thus not <code>mksh</code> issues but questions by some other program utilising it.  </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "assert_perror(3)"
 name: "assert_perror"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-assert_perror/"
 description: "assert_perror – test errnum and abort"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;assert.h&gt;
 void assert_perror(int errnum);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> If the macro <code>NDEBUG</code> was defined at the moment <i>&lt;assert.h&gt;</i> was last included, the macro <code>assert_perror</code>() generates no code, and hence does nothing at all. Otherwise, the macro <code>assert_perror</code>() prints an error message to standard error and terminates the program by calling <code><a href="/docs/linux/man/3-abort/">abort</a></code>(3) if <i>errnum</i> is nonzero. The message contains the filename, function name and line number of the macro call, and the output of <i>strerror(errnum)</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> No value is returned.</p>

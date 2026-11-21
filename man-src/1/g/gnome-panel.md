@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-panel(1)"
 name: "gnome-panel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gnome-panel/"
 description: "gnome-panel – Display the GNOME panel"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-about [&#8211;replace]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>gnome-panel</i> program provides the panels of the the GNOME desktop. </p>
 <p> The panels are the areas on the desktop that contain, among other items, the applications menu, application launchers, the notification area and the window list. </p>
 <p> Small applications called <code>applets</code> can also be embedded in the panels. The applets usually provide quick access to specific features.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ms-sys(1)"
 name: "ms-sys"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ms-sys/"
 description: "ms-sys – write Microsoft boot block"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ms-sys</code> [options] [device]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ms-sys</code> is for writing Microsoft compatible boot records.</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pango-view(1)"
 name: "pango-view"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pango-view/"
 description: "pango-view (pango) – Pango text viewer"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

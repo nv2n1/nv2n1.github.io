@@ -1,4 +1,5 @@
 ---
+
 title: "xgfmerge(1)"
 name: "xgfmerge"
 section: "1"
@@ -9,9 +10,7 @@ description: "xgfmerge – merges two Xgridfit program files"
 
 <h2>NAME</h2>
 <p> <code>xgfmerge</code> &#8211; merges two Xgridfit program files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xgfmerge</code> [options] <i>file-a</i> <i>file-b</i> <i>[&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Xgfmerge</code> merges two or more Xgridfit program files, where file-a is a program generated automatically from an existing font using TTX and ttx2xgf, and file-b and any other files in the list contain other programming for the font. <code>Xgfmerge</code> outputs the merged programming to stdout. To capture the output in a file, use this syntax: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>$xgfmerge -o merged-file.xgf file-a.xgf file-b.xgf </p>
 <p> If xmlstarlet is found in the system, xgfmerge uses it to format the output. Otherwise, the output file will be messy but valid.</p>

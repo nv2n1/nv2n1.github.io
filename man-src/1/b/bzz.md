@@ -1,4 +1,5 @@
 ---
+
 title: "bzz(1)"
 name: "bzz"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-bzz/"
 description: "bzz – DjVu general purpose compression utility."
 ---
 
-<h2>SYNOPSIS</h2>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Encoding:</h2>
 <p> <code>bzz -e</code><i>[blocksize]</i><i>inputfile</i><i>outputfile</i></p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Decoding:</h2>
 <p> <code>bzz -d </code><i>inputfile</i><i>outputfile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The first form of the command line (option <code>-e</code>) compresses the data from file <i>inputfile </i> and writes the compressed data into <i>outputfile</i>. The second form of the command line (option <code>-d</code>) decompressed file <i>inputfile</i> and writes the output to <i>outputfile</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

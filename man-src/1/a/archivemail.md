@@ -1,4 +1,5 @@
 ---
+
 title: "archivemail(1)"
 name: "archivemail"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-archivemail/"
 description: "archivemail – archive and compress your old email"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>archivemail</code> [ <code>options</code> ] <i>MAILBOX</i><i> &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> archivemail is a tool for archiving and compressing old email in mailboxes. By default it will read the mailbox <i>MAILBOX</i>, moving messages that are older that the specified number of days (180 by default) to a <code><a href="/docs/linux/man/5-mbox/">mbox</a></code>(5)-format mailbox in the same directory that is compressed with <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1). It can also just delete old email rather than archive it. </p>
 <p> <code>archivemail</code> supports reading <code>IMAP</code>, <code>Maildir</code>, <code>MH</code> and <code>mbox</code>-format mailboxes, but always writes <code>mbox</code>-format archives. </p>
 <p> Messages that are flagged important are not archived or deleted unless explicitely requested with the <code>&#8211;include-flagged</code> option. Also, <code>archivemail</code> can be configured not to archive unread mail, or to only archive messages larger than a specified size. </p>

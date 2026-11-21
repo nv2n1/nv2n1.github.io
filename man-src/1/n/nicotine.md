@@ -1,4 +1,5 @@
 ---
+
 title: "nicotine(1)"
 name: "nicotine"
 section: "1"
@@ -9,9 +10,7 @@ description: "nicotine is a graphical client for the SoulSeek peer-to-peer netwo
 
 <h2>NAME</h2>
 <p> <code>nicotine</code> is a graphical client for the SoulSeek peer-to-peer network.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nicotine</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nicotine</code> is a GTK-based client for the SoulSeek peer-to-peer network written in Python.</p>
 <h2>OPTIONS</h2>
 <dl>

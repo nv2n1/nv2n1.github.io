@@ -1,4 +1,5 @@
 ---
+
 title: "cpclean(1)"
 name: "cpclean"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cpclean/"
 description: "cpclean – Remove wrong control points by statistical methods"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cpclean</code> [options] <i>input.pto</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>cpclean</code> uses statistical methods to remove wrong control points. </p>
 <p> Step 1 optimises all images pairs, calculates for each pair mean and standard deviation and removes all control points with error bigger than mean+n*sigma. </p>
 <p> Step 2 optimises the whole panorama, calculates mean and standard deviation for all control points and removes all control points with error bigger than mean+n*sigma.</p>

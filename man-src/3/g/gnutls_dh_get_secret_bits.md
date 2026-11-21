@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dh_get_secret_bits(3)"
 name: "gnutls_dh_get_secret_bits"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_dh_get_secret_bits – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_get_secret_bits &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_get_secret_bits(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the bits used in the last Diffie-Hellman key exchange with the peer. Should be used for both anonymous and ephemeral Diffie-Hellman.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

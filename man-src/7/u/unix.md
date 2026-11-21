@@ -1,4 +1,5 @@
 ---
+
 title: "unix(7)"
 name: "unix"
 section: "7"
@@ -6,13 +7,12 @@ letter: "u"
 url: "/docs/linux/man/7-unix/"
 description: "unix – sockets for local interprocess communication"
 ---
+
 <p>unix &#8211; sockets for local interprocess communication </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/socket.h&gt;</code> <br />
  <code>#include &lt;sys/un.h&gt;</code> </p>
 <p> <i>unix_socket</i><code> = socket(AF_UNIX, type, 0);</code> <br />
  <i>error</i><code> = socketpair(AF_UNIX, type, 0, int *</code><i>sv</i><code>);</code>  </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>AF_UNIX</code> (also known as <code>AF_LOCAL</code>) socket family is used to communicate between processes on the same machine efficiently. Traditionally, UNIX domain sockets can be either unnamed, or bound to a filesystem pathname (marked as being of type socket). Linux also supports an abstract namespace which is independent of the filesystem. </p>
 <p>Valid socket types in the UNIX domain are: <code>SOCK_STREAM</code>, for a stream-oriented socket; <code>SOCK_DGRAM</code>, for a datagram-oriented socket that preserves message boundaries (as on most UNIX implementations, UNIX domain datagram sockets are always reliable and don&#8217;t reorder datagrams); and (since Linux 2.6.4) <code>SOCK_SEQPACKET</code>, for a sequenced-packet socket that is connection-oriented, preserves message boundaries, and delivers messages in the order that they were sent. </p>
 <p>UNIX domain sockets support passing file descriptors or process credentials to other processes using ancillary data.  </p>

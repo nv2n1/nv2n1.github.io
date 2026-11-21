@@ -1,4 +1,5 @@
 ---
+
 title: "op-check-perfevents(1)"
 name: "op-check-perfevents"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-op-check-perfevents/"
 description: "op-check-perfevents – checks for kernel perf pmu support"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>op-check-perfevents</code> [ <i>options</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The small helper program <code>op-check-perfevents</code> determines whether the kernel supports the perf interface and returns a zero exit status if the perf pmu support is available.</p>
 <h2>OPTIONS</h2>
 <dl>

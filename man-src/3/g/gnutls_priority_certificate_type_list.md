@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_priority_certificate_type_list(3)"
 name: "gnutls_priority_certificate_type_list"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_priority_certificate_type_list – API function"
 
 <h2>NAME</h2>
 <p> gnutls_priority_certificate_type_list &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_priority_certificate_type_list(gnutls_priority_t </code><i>pcache</i><code>, const unsigned int ** </code><i>list</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_priority_certificate_type_list – API function"
 <dd> is a <code>gnutls_prioritity_t</code> structure.</dd>
 <dt>const unsigned int ** list</dt>
 <dd> will point to an integer list</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get a list of available certificate types in the priority structure.</p>
 <h2>RETURNS</h2>
 <p> the number of certificate types, or an error code.</p>

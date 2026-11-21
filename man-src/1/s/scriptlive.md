@@ -1,4 +1,5 @@
 ---
+
 title: "scriptlive(1)"
 name: "scriptlive"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-scriptlive/"
 description: "scriptlive – re-run session typescripts, using timing information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>scriptlive</code> [options] [<code>-t</code>] <i>timingfile</i> [<code>-I</code>|<code>-B</code>] <i>typescript</i></p>
-<h2>DESCRIPTION</h2>
 <p> This program re-runs a typescript, using stdin typescript and timing information to ensure that input happens in the same rhythm as it originally appeared when the script was recorded. </p>
 <p> The <code>session is executed</code> in a newly created pseudoterminal with the user&#8217;s $SHELL (or defaults to <i>/bin/bash</i>). </p>
 <p> <code>Be careful!</code> Do not forget that the typescript may contains arbitrary commands. It is recommended to use <code>&quot;scriptreplay &#8211;stream in &#8211;log-in typescript&quot;</code> (or with <code>&#8211;log-io</code> instead of <code>&#8211;log-in</code>) to verify the typescript before it is executed by <code>scriptlive</code>. </p>

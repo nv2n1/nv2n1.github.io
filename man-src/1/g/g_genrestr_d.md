@@ -1,4 +1,5 @@
 ---
+
 title: "g_genrestr_d(1)"
 name: "g_genrestr_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "genrestr – generates position restraints or distance restraints 
 <h2>NAME</h2>
 <p> genrestr &#8211; generates position restraints or distance restraints for index groups </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>genrestr</code> <code>-f</code><i> conf.gro </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> posre.itp </i> <code>-of</code><i> freeze.ndx </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-fc</code><i> vector </i> <code>-freeze</code><i> real </i> <code>-[no]disre</code><i></i> <code>-disre_dist</code><i> real </i> <code>-disre_frac</code><i> real </i> <code>-disre_up2</code><i> real </i> <code>-[no]constr</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> genrestr produces an include file for a topology containing a list of atom numbers and three force constants for the X, Y and Z direction. A single isotropic force constant may be given on the command line instead of three components. </p>
 <p> WARNING: position restraints only work for the one molecule at a time. Position restraints are interactions within molecules, therefore they should be included within the correct <code> [ moleculetype ]</code> block in the topology. Since the atom numbers in every moleculetype in the topology start at 1 and the numbers in the input file for genpr number consecutively from 1, genpr will only produce a useful file for the first molecule. </p>
 <p> The -of option produces an index file that can be used for freezing atoms. In this case the input file must be a pdb file. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fd2ps(1)"
 name: "fd2ps"
 section: "1"
@@ -9,9 +10,7 @@ description: "fd2ps – Translates fdesign output to PostScript"
 
 <h2>NAME</h2>
 <p> fd2ps &#8211; Translates fdesign output to PostScript</p>
-<h2>SYNOPSIS</h2>
 <p> fd2ps [-options] input.[fd] [output]</p>
-<h2>DESCRIPTION</h2>
 <p> The program <i>fd2ps</i> translates the <i>fd</i> file produced by the interface builder program <i>fdesign</i> of the <code>Forms Library</code> into PostScript (ps), or optionally Encapsulated PostScript (eps) for printing or inclusion into other documents. The input file can be given with or without the .fd extension. If output file name is not specified, used is a filename derived from the input file name by replacing the .fd extension with ps or eps. If output filename is specified as -, stdout is used. </p>
 <h2>OPTIONS</h2>
 <p> <i>fd2ps</i> accepts the following command line options</p>

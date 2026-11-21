@@ -1,4 +1,5 @@
 ---
+
 title: "bson_value_t(3)"
 name: "bson_value_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_value_t – BSON Boxed Container Type"
 
 <h2>NAME</h2>
 <p> bson_value_t &#8211; BSON Boxed Container Type</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct _bson_value_t {
@@ -65,7 +65,6 @@ typedef struct _bson_value_t {
     } value;
 } bson_value_t;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>bson_value_t</code> structure is a boxed type for encapsulating a runtime determined type. </p>
 <h2>EXAMPLE</h2>
 <pre><code>

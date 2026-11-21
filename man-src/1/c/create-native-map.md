@@ -1,4 +1,5 @@
 ---
+
 title: "create-native-map(1)"
 name: "create-native-map"
 section: "1"
@@ -9,7 +10,6 @@ description: "create-native-map – C/C# Mapping Creator"
 
 <h2>NAME</h2>
 <p> create-native-map &#8211; C/C# Mapping Creator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>create-native-map</code> [OPTIONS]* ASSEMBLY-FILE-NAME OUPUT-PREFIX</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -74,7 +74,6 @@ ToStat(struct stat *from, struct Stat *to)<br />
 }</p>
 <dt><i>&#8211;rename-namespace=FROM=TO</i></dt>
 <dd> By default, the C &quot;namespace&quot; (symbol prefix) is the C# namespace; types within the C# namespace <i>Mono.Unix.Native</i> would be in the C &quot;namespace&quot; <i>Mono_Unix_Native</i> . Use <i>&#8211;rename-namespace</i> to modify the default, e.g. <i>&#8211;rename-namespace=Mono.Unix.Native=Mono_Posix</i> .</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>create-native-map</i> is a program for a specific scenario: keeping code which is tightly coupled between C and C# in sync with each other, based upon the C# types. </p>
 <p> Platform Invoke is only useful if the managed code knows the exact types and layout of all unmanaged structures it uses. This is usually the case on Windows, but it is <i>not</i> the case on Unix. For example, <i>struct stat</i> makes use of types with sizes that will vary from platform to platform (or even based on the compiler macros defined!). For example, <i>off_t</i> is usually a signed 32-bit integer on ILP32 platforms, but may be a signed 64-bit integer on LP64 platforms, but may also be a 64-bit signed integer on ILP32 platforms if the <i>_FILE_OFFSET_BITS</i> macro has the value 64. In short, everything is flexible within Unix, and managed code can&#8217;t deal with such flexibility. </p>
 <p> Thus, the niche for <i>create-native-map</i> : assume a fixed ABI that managed code can target, and generate code to &quot;thunk&quot; the managed representations to the corresponding native representations. This needs to be done for <i>everything</i> that can vary between platforms and compiler flags, from enumeration values ( <i>SIGBUS</i> has the value 10 on FreeBSD but 7 on Linux) to structure members (how big is <i>off_t</i> ?). </p>

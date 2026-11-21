@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-annotate(1)"
 name: "hwloc-annotate"
 section: "1"
@@ -9,7 +10,6 @@ description: "hwloc-annotate – Add info attributes to a XML topology"
 
 <h2>NAME</h2>
 <p> hwloc-annotate &#8211; Add info attributes to a XML topology</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hwloc-annotate</code> [<i>options</i>] <i>&lt;input.xml&gt;</i> <i>&lt;output.xml&gt;</i> <i>&lt;location&gt;</i> <i>&lt;mode&gt;</i> <i>&lt;annotation&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -17,7 +17,6 @@ description: "hwloc-annotate – Add info attributes to a XML topology"
 <dd> Remove all info attributes that exist with the same name before adding the new one. This option is only accepted in &quot;info&quot; mode. If the info value is omitted, existing infos are replaced with nothing.</dd>
 <dt><code>&#8211;ci</code></dt>
 <dd> Clear the existing info attributes in the target objects before annotating. If no new annotation has to be added after clearing, <i>mode</i> should be set to <i>none</i>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> hwloc-annotate loads a topology from a XML file, adds some annotations, and export the resulting topology to another XML file. The input and output files may be the same. </p>
 <p> The annotation may be string info attributes. This is specified by the <i>mode</i>:</p>
 <dl>

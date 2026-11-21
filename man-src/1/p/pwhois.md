@@ -1,4 +1,5 @@
 ---
+
 title: "pwhois(1)"
 name: "pwhois"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwhois/"
 description: "pwhois – Perl written whois client"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
         pwhois perl.com
         pwhois gnu.org
@@ -17,7 +17,6 @@ description: "pwhois – Perl written whois client"
         pwhois -T 10 funet.fi
 </pre>
 <p> etc etc&#8230;..</p>
-<h2>DESCRIPTION</h2>
 <p> Just invoke with a domain name, optionally with a whois server name. Switches:<br />
 &nbsp;<wbr><code>-s</code>&nbsp;<wbr>attempt to strip the copyright message or disclaimer.<br />
 &nbsp;<wbr><code>-c</code>&nbsp;<wbr>attempts to return an empty answer for failed searches.<br />

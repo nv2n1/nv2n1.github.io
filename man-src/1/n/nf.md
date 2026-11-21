@@ -1,4 +1,5 @@
 ---
+
 title: "nf(1)"
 name: "nf"
 section: "1"
@@ -9,7 +10,6 @@ description: "fmt-ptrn – A simple template system"
 
 <h2>NAME</h2>
 <p> fmt-ptrn &#8211; A simple template system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fmt-ptrn [options] filename [template]</code></p>
 <h2>OVERVIEW</h2>
 <p> New is a template system, especially useful in conjunction with a simple text editor such as vi. The user maintains templates which may contain format strings. At run time, nf replaces the format strings in a template with appropriate values to create a new file. </p>

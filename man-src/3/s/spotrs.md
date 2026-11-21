@@ -1,4 +1,5 @@
 ---
+
 title: "spotrs(3)"
 name: "spotrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spotrs/"
 description: "spotrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spotrs</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
  <i></i><code>SPOTRS</code></p>

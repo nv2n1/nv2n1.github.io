@@ -1,4 +1,5 @@
 ---
+
 title: "supybot-test(1)"
 name: "supybot-test"
 section: "1"
@@ -9,9 +10,7 @@ description: "supybot-test – Runs the test suite for a Supybot plugin"
 
 <h2>NAME</h2>
 <p> supybot-test &#8211; Runs the test suite for a Supybot plugin</p>
-<h2>SYNOPSIS</h2>
 <p> <code>supybot-test</code> [<i>options</i>]<i> plugins</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>supybot-test</code> Runs the test suite for a Supybot plugin</p>
 <h2>OPTIONS</h2>
 <dl>

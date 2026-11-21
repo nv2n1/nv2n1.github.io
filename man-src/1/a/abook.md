@@ -1,4 +1,5 @@
 ---
+
 title: "abook(1)"
 name: "abook"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-abook/"
 description: "abook – text-based address book program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>abook</code> [ <i>OPTION</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>abook</code> program. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
 <p> <code>abook </code> is a text-based address book program. It contains Name, Email, Address and various Phone fields. It is designed for use with mutt, but can be equally useful on its own.</p>
 <h2>OPTIONS</h2>

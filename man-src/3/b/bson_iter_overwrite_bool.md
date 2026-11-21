@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_overwrite_bool(3)"
 name: "bson_iter_overwrite_bool"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_overwrite_bool() – The bson_iter_overwrite_bool() func
 
 <h2>NAME</h2>
 <p> bson_iter_overwrite_bool() &#8211; The bson_iter_overwrite_bool() function shall overwrite the contents of a BSON_TYPE_BOOL element in place.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 void
 bson_iter_overwrite_bool (bson_iter_t *iter,
@@ -22,7 +22,6 @@ bson_iter_overwrite_bool (bson_iter_t *iter,
 <dl>
 <dt><code>value</code></dt>
 <dd> A bool containing the new value.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_overwrite_bool/">bson_iter_overwrite_bool</a>(3)</code> function shall overwrite the contents of a BSON_TYPE_BOOL element in place. </p>
 <p> This may only be done when the underlying bson document allows mutation. </p>
 <p> It is a programming error to call this function when <code>iter</code> is not obvserving an element of type BSON_TYPE_BOOL. </p>

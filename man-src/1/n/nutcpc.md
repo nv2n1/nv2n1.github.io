@@ -1,4 +1,5 @@
 ---
+
 title: "nutcpc(1)"
 name: "nutcpc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nutcpc/"
 description: "nutcpc – NuFW console-mode client for GNU/Linux and BSD systems"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nutcpc</code> [ <code>-d </code> ] [ <code>-l </code> ] [ <code>-k </code> ] [ <code>-c </code> ] [ <code>-V </code> ] [ <code>-h </code> ] [ <code>-q </code> ] [ <code>-Q </code> ] [ <code>-N </code> ] [ <code>-H </code><i>Nuauth IP</i> ] [ <code>-p </code><i>Nuauth port </i> ] [ <code>-U </code><i>UserID</i> ] [ <code>-P </code><i>UserPassword</i> ] [ <code>-I </code><i>Interval</i> ] [ <code>-Z </code><i>Service</i> ] [ <code>-C </code><i>CertFile</i> ] [ <code>-A </code><i>AuthorityFile</i> ] [ <code>-K </code><i>KeyFile</i> ] [ <code>-W </code><i>CertPass</i> ] [ <code>-R </code><i>CrlFile</i> ] [ <code>-a </code><i>NuauthDN</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>nutcpc</code> command. </p>
 <p> nutcpc is a console-mode client for the NuFW authenticating firewall. It sends authentication packets to the nuauth server. All parameters can be set on commandline but nutcpc can also be configured via the file nuclient.conf(5). </p>
 <p> Original packaging and informations and help can be found from <a rel="nofollow" href="http://www.nufw.org/">http://www.nufw.org/</a></p>

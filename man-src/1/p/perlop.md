@@ -1,4 +1,5 @@
 ---
+
 title: "perlop(1)"
 name: "perlop"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlop/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlop - Perl operators and precedence 
 
- perlop - Perl operators and precedence 
-
-<h2>DESCRIPTION</h2>
-
- In Perl, the operator determines what operation is performed, independent of the type of the operands. For example <tt>&quot;$x + $y&quot;</tt> is always a numeric addition, and if <tt>$x</tt> or <tt>$y</tt> do not contain numbers, an attempt is made to convert them to numbers first. 
+In Perl, the operator determines what operation is performed, independent of the type of the operands. For example <tt>&quot;$x + $y&quot;</tt> is always a numeric addition, and if <tt>$x</tt> or <tt>$y</tt> do not contain numbers, an attempt is made to convert them to numbers first. 
 
  This is in contrast to many other dynamic languages, where the operation is determined by the type of the first argument. It also means that Perl has two versions of some operators, one for numeric and one for string comparison. For example <tt>&quot;$x == $y&quot;</tt> compares two numbers for equality, and <tt>&quot;$x eq $y&quot;</tt> compares two strings. 
 

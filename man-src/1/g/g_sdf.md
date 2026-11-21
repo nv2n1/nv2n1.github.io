@@ -1,4 +1,5 @@
 ---
+
 title: "g_sdf(1)"
 name: "g_sdf"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_sdf – calculates the spatial distribution function (faster tha
 <h2>NAME</h2>
 <p> g_sdf &#8211; calculates the spatial distribution function (faster than g_spatial) </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_sdf</code> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-s</code><i> topol.tpr </i> <code>-o</code><i> gom_plt.dat </i> <code>-r</code><i> refmol.gro </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-mode</code><i> int </i> <code>-triangle</code><i> vector </i> <code>-dtri</code><i> vector </i> <code>-bin</code><i> real </i> <code>-grid</code><i> vector </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_sdf calculates the spatial distribution function (SDF) of a set of atoms within a coordinate system defined by three atoms. There is single body, two body and three body SDF implemented (select with option -mode). In the single body case the local coordinate system is defined by using a triple of atoms from one single molecule, for the two and three body case the configurations are dynamically searched complexes of two or three molecules (or residues) meeting certain distance consitions (see below). </p>
 <p> The program needs a trajectory, a GROMACS run input file and an index file to work. You have to setup 4 groups in the index file before using g_sdf: </p>
 <p> The first three groups are used to define the SDF coordinate system. The programm will dynamically generate the atom tripels according to the selected -mode: In -mode 1 the triples will be just the 1st, 2nd, 3rd, &#8230; atoms from groups 1, 2 and 3. Hence the nth entries in groups 1, 2 and 3 must be from the same residue. In -mode 2 the triples will be 1st, 2nd, 3rd, &#8230; atoms from groups 1 and 2 (with the nth entries in groups 1 and 2 having the same res-id). For each pair from groups 1 and 2 group 3 is searched for an atom meeting the distance conditions set with -triangle and -dtri relative to atoms 1 and 2. In -mode 3 for each atom in group 1 group 2 is searched for an atom meeting the distance condition and if a pair is found group 3 is searched for an atom meeting the further conditions. The triple will only be used if all three atoms have different res-id&#8217;s. </p>

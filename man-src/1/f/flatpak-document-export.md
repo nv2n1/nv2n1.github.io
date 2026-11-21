@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-document-export(1)"
 name: "flatpak-document-export"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-document-export/"
 description: "flatpak-document-export – Export a file to a sandboxed application"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak document-export</code> [OPTION&#8230;] FILE</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Creates a document id for a local file that can be exposed to sandboxed applications, allowing them access to files that they would not otherwise see. The exported files are exposed in a fuse filesystem at /run/user/$UID/doc/. </dd>
 <p> This command also lets you modify the per-application permissions of the documents, granting or revoking access to the file on a per-application basis.</p>
 <h2>OPTIONS</h2>

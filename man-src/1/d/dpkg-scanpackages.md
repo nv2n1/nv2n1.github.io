@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-scanpackages(1)"
 name: "dpkg-scanpackages"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-scanpackages/"
 description: "dpkg-scanpackages – create Packages index files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-scanpackages</code> [<i>option</i>&#8230;] <i>binary-path</i> [<i>override-file</i> [<i>path-prefix</i>]] <code>&gt;</code> <i>Packages</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-scanpackages</code> sorts through a tree of Debian binary packages and creates a Packages file, used by <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8), <code><a href="/docs/linux/man/1-dselect/">dselect</a></code>(1), etc, to tell the user what packages are available for installation. These Packages files are the same as those found on Debian archive sites and CD-ROMs. You might use <code>dpkg-scanpackages</code> yourself if making a directory of local packages to install on a cluster of machines. </p>
 <p> <code>Note:</code> If you want to access the generated Packages file with <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8) you will probably need to compress the file with <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) (generating a Packages.xz file), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) (generating a Packages.bz2 file) or <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) (generating a Packages.gz file). <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8) ignores uncompressed Packages files except on local access (i.e. <code>file://</code> sources). </p>
 <p> <i>binary-path</i> is the name of the tree of the binary packages to process (for example, <code>contrib/binary-i386</code>). It is best to make this relative to the root of the Debian archive, because every Filename field in the new Packages file will start with this string. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ikiwiki-transition(1)"
 name: "ikiwiki-transition"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-ikiwiki-transition/"
 
  ikiwiki-transition - transition ikiwiki pages to new syntaxes, etc 
 
-<h2>SYNOPSIS</h2>
+ikiwiki-transition type ... 
 
- ikiwiki-transition type ... 
-
-<h2>DESCRIPTION</h2>
-
- ikiwiki-transition aids in converting wiki pages when there's a major change in ikiwiki syntax. It also handles other transitions not involving wiki pages. 
+ikiwiki-transition aids in converting wiki pages when there's a major change in ikiwiki syntax. It also handles other transitions not involving wiki pages. 
 
 <h2>prefix_directives your.setup</h2>
 

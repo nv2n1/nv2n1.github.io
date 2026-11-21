@@ -1,12 +1,13 @@
 ---
+
 title: "gnutls_ocsp_resp_get_signature(3)"
 name: "gnutls_ocsp_resp_get_signature"
 section: "3"
 letter: "g"
 url: "/docs/linux/man/3-gnutls_ocsp_resp_get_signature/"
 ---
+
 <p> gnutls_ocsp_resp_get_signature - API function  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_get_signature(gnutls_ocsp_resp_t </code><i>resp</i><code>, gnutls_datum_t * </code><i>sig</i><code>);</code>  </p>
 <h2>ARGUMENTS</h2>
@@ -17,7 +18,6 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_signature/"
 <dt>gnutls_datum_t * sig</dt>
 <dd> <p> newly allocated output buffer with signature data </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will extract the signature field of a OCSP response.  </p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.  </p>

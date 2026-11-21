@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-export(1)"
 name: "guilt-export"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-export/"
 description: "guilt-export – Export a patch series (to be used by quilt)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-export</i> [&lt;target_dir&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> Export a guilt series to be used by quilt.</p>
 <h2>OPTIONS</h2>
 <p> &lt;target_dir&gt;</p>

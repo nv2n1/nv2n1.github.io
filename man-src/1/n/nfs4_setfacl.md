@@ -1,4 +1,5 @@
 ---
+
 title: "nfs4_setfacl(1)"
 name: "nfs4_setfacl"
 section: "1"
@@ -9,10 +10,8 @@ description: "nfs4_setfacl, nfs4_editfacl – manipulate NFSv4 file/directory ac
 
 <h2>NAME</h2>
 <p> nfs4_setfacl, nfs4_editfacl &#8211; manipulate NFSv4 file/directory access control lists</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nfs4_setfacl</code> [OPTIONS] COMMAND <i>file</i>&#8230;<br />
  <code>nfs4_editfacl</code> [OPTIONS] <i>file</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nfs4_setfacl </code> manipulates the NFSv4 Access Control List (ACL) of one or more <i>files </i> (or directories), provided they are on a mounted NFSv4 filesystem which supports ACLs. </p>
 <p> <code>nfs4_editfacl </code> is equivalent to <code>nfs4_setfacl -e</code>. </p>
 <p> Refer to the <code><a href="/docs/linux/man/5-nfs4_acl/">nfs4_acl</a></code>(5) manpage for information about NFSv4 ACL terminology and syntax.</p>

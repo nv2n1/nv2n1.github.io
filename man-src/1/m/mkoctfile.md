@@ -1,4 +1,5 @@
 ---
+
 title: "mkoctfile(1)"
 name: "mkoctfile"
 section: "1"
@@ -9,9 +10,7 @@ description: "mkoctfile – Compile dynamic-load modules for GNU Octave"
 
 <h2>NAME</h2>
 <p> mkoctfile &#8211; Compile dynamic-load modules for GNU Octave</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mkoctfile</code> [<i>OPTION</i>]&#8230; file&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mkoctfile</code> is used to compile C, C++, or Fortran source code in to a dynamically loadable <i>.oct</i> file for <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <dl>

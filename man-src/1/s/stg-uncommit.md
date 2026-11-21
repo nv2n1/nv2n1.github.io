@@ -1,4 +1,5 @@
 ---
+
 title: "stg-uncommit(1)"
 name: "stg-uncommit"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-uncommit/"
 description: "stg-uncommit – Turn regular git commits into StGit patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg uncommit[--]&lt;patch - name - 1&gt;[&lt;patch - name - 2&gt;...] stg uncommit - n NUM[--][&lt;prefix&gt;] stg uncommit - t&lt;committish&gt;[-x]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Take one or more git commits at the base of the current stack and turn them into StGIT patches. The new patches are created as applied patches at the bottom of the stack. This is the opposite of <i>stg commit</i>. </p>
 <p> By default, the number of patches to uncommit is determined by the number of patch names provided on the command line. First name is used for the first patch to uncommit, i.e. for the newest patch. </p>
 <p> The -n/&#8211;number option specifies the number of patches to uncommit. In this case, at most one patch name may be specified. It is used as prefix to which the patch number is appended. If no patch names are provided on the command line, StGIT automatically generates them based on the first line of the patch description. </p>

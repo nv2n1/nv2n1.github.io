@@ -1,4 +1,5 @@
 ---
+
 title: "fpaste(1)"
 name: "fpaste"
 section: "1"
@@ -9,9 +10,7 @@ description: "fpaste – A cli frontend for the fpaste.org pastebin"
 
 <h2>NAME</h2>
 <p> fpaste &#8211; A cli frontend for the fpaste.org pastebin</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fpaste</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> It is often useful to be able to easily paste text to the Fedora Pastebin at <a rel="nofollow" href="http://fpaste.org">http://fpaste.org</a> and this simple utility will do that and return the resulting URL so that people may examine the output. This can hopefully help folks who are for some reason stuck without X, working remotely, or any other reason they may be unable to paste something into the pastebin using a web browser.</p>
 <h2>OPTIONS</h2>
 <dl>

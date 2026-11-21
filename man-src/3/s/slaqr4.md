@@ -1,4 +1,5 @@
 ---
+
 title: "slaqr4(3)"
 name: "slaqr4"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaqr4/"
 description: "slaqr4.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqr4</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, WORK, LWORK, INFO)<br />
  <i></i><code>SLAQR4</code> computes the eigenvalues of a Hessenberg matrix, and optionally the matrices from the Schur decomposition.</p>

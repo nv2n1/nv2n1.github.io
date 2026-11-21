@@ -1,4 +1,5 @@
 ---
+
 title: "kdesvnaskpass(1)"
 name: "kdesvnaskpass"
 section: "1"
@@ -9,9 +10,7 @@ description: "kdesvnaskpass – ssh-askpass for kdesvn"
 
 <h2>NAME</h2>
 <p> kdesvnaskpass &#8211; ssh-askpass for kdesvn</p>
-<h2>SYNOPSIS</h2>
 <p> kdesvnaskpass [Qt-options] [KDE-options] [prompt]</p>
-<h2>DESCRIPTION</h2>
 <p> ssh-askpass for kdesvn</p>
 <h2>OPTIONS</h2>
 <h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "makedefs(1)"
 name: "makedefs"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-makedefs/"
 description: "makedefs – Postfix makefile configuration utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>make makefiles </code><i>name=value...</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>makedefs</code> command identifies the compilation environment, and emits macro definitions on the standard output stream that can be prepended to template Makefiles. These macros implement an internal interface and are subject to change without notice.</p>
 <h2>NAME=VALUE OVERRIDES</h2>
 <p> Default settings can be overruled by specifying them as environment variables (or as name=value pairs on the &quot;make&quot; command line). Use quotes if variables contain whitespace or shell meta characters. </p>

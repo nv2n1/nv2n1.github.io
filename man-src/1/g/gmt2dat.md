@@ -1,4 +1,5 @@
 ---
+
 title: "gmt2dat(1)"
 name: "gmt2dat"
 section: "1"
@@ -9,9 +10,7 @@ description: "gmt2dat – Convert a binary gmt file to an ASCII file"
 
 <h2>NAME</h2>
 <p> gmt2dat &#8211; Convert a binary gmt file to an ASCII file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmt2dat</code> <i>gmtfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmt2dat</code> reads a &lt;legid&gt;.gmt file and converts it to a regular ASCII text file that can be edited using the text editor. The ASCII text is sent to standard output and can be redirected to a file/program/printer, etc.</p>
 <h2>EXAMPLES</h2>
 <p> To convert c2104.gmt to ASCII: </p>

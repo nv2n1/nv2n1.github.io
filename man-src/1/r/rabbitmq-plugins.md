@@ -1,4 +1,5 @@
 ---
+
 title: "rabbitmq-plugins(1)"
 name: "rabbitmq-plugins"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-rabbitmq-plugins/"
 description: "rabbitmq-plugins – command line tool for managing RabbitMQ broker plugins"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rabbitmq-plugins</code> [-n&nbsp;<wbr><i>node</i>] {<i>command</i>} [<i>command options</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>rabbitmq-plugins</code></p>
 <dd>is a command line tool for managing RabbitMQ broker plugins. It allows one to enable, disable and browse plugins. It must be run by a user with write permissions to the RabbitMQ configuration directory. </dd>
 <p> Some plugins depend on others to work correctly. <code>rabbitmq-plugins</code> traverses these dependencies and enables all required plugins. Plugins listed on the <code>rabbitmq-plugins</code> command line are marked as explicitly enabled; dependent plugins are marked as implicitly enabled. Implicitly enabled plugins are automatically disabled again when they are no longer required. </p>

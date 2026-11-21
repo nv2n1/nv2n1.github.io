@@ -1,4 +1,5 @@
 ---
+
 title: "splitword(1)"
 name: "splitword"
 section: "1"
@@ -11,7 +12,6 @@ description: "splitwd – Collect several text-form dictionary files into a sing
 <p> splitwd &#8211; Collect several text-form dictionary files into a single file to make a &lt;1 line / 1 word type / 1 candidate&gt; format.</p>
 <h2>SYNOPSISS</h2>
 <p> <code>splitwd </code><i>textjisho</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> If the file in which you registered words consists of several subfiles, it must be converted into a proper format before the word dictionary is created. splitword converts such text-form dictionaries <i>textjisho</i> to make a &lt;1 line / 1 word type / 1 candidate&gt; format. The result is output to the standard output.</p>
 <h2>EXAMPLE</h2>
 <pre>

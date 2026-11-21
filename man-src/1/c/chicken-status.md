@@ -1,4 +1,5 @@
 ---
+
 title: "chicken-status(1)"
 name: "chicken-status"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-chicken-status/"
 description: "chicken-status – list installed extension libraries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> chicken-status [OPTION | PATTERN] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <i>chicken-status</i> lists installed extensions for the CHICKEN Scheme system matching the regular expression(s) <code>PATTERN</code> or all, if no pattern has been given. </p>
 <h2>OPTIONS</h2>
 <p> Enter <code>chicken-status -help</code> for a list of supported command-line options. </p>

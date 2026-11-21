@@ -1,4 +1,5 @@
 ---
+
 title: "rsvg(1)"
 name: "rsvg"
 section: "1"
@@ -9,9 +10,7 @@ description: "rsvg – Turn SVG files into raster images."
 
 <h2>NAME</h2>
 <p> rsvg &#8211; Turn SVG files into raster images.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rsvg</code> [options] in.svg out.png <i></i></p>
-<h2>DESCRIPTION</h2>
 <p> RSVG coverts SVG images into PNG, JPEG, and ICO raster images.</p>
 <h3>OPTIONS</h3>
 <dl>

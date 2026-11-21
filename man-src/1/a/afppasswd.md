@@ -1,4 +1,5 @@
 ---
+
 title: "afppasswd(1)"
 name: "afppasswd"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-afppasswd/"
 description: "afppasswd – netatalk password maintenance utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>afppasswd</code> [-acfn] [-p&nbsp;<wbr><i>passwd</i>&nbsp;<wbr><i>file</i>] [-u&nbsp;<wbr><i>minimum</i>&nbsp;<wbr><i>uid</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>afppasswd</code></p>
 <dd>allows the maintenance of afppasswd files created by netatalk for use by the uams_randnum.so UAM (providing the &quot;Randnum exchange&quot; and &quot;2-Way Randnum exchange&quot; User Authentication Modules). </dd>
 <p> <code>afppasswd</code> can either be called by root with parameters, or can be called by local system users with no parameters to change their AFP passwords. </p>

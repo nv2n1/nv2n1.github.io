@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_alter_spec(3)"
 name: "dirfile_alter_spec"
 section: "3"
@@ -9,12 +10,10 @@ description: "dirfile_alter_spec, dirfile_malter_spec — modify a field in a di
 
 <h2>NAME</h2>
 <p> dirfile_alter_spec, dirfile_malter_spec &#8212; modify a field in a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_alter_spec(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>line</i><code>,</code> <code>int </code><i>recode</i><code>);</code></dt>
 <dt> <code>int dirfile_malter_spec(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>line</i><code>,</code> <code>const char *</code><i>parent</i><code>, int </code><i>recode</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_alter_spec</code>() function modifies the field described by the field specification line in <i>line</i> to the dirfile specified by <i>dirfile</i>. The <code>dirfile_malter_spec</code>() function behaves similarly, but modifies the metafield under the field indicated by the field code <i>parent</i>. Field specification lines are described in detail in <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5). </dd>
 <p> The name of the field to be modified, which must already exist, will be obtained from the field specification line. When adding a metafield, <i>line</i> should only contain a field specification, and not a <code>/META</code> directive. </p>
 <p> If the modified field is of type <code>RAW</code> and the <i>recode</i> argument is non-zero, the binary file associated with the field will be converted for changes in data type and samples-per-frame. If <i>recode</i> is zero, no binary file conversion will take place. </p>

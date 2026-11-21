@@ -1,4 +1,5 @@
 ---
+
 title: "lpoptions(1)"
 name: "lpoptions"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-lpoptions/"
 description: "lpoptions – display or set printer options and defaults"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-d </code><i>destination</i>[<code>/</code><i>instance</i>] [ <code>-l</code> ]<br />
  <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-p </code><i>destination</i>[<code>/</code><i>instance</i>] ] <code>-o </code><i>option</i>[<code>=</code><i>value</i>] &#8230;<br />
  <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-p </code><i>destination</i>[<code>/</code><i>instance</i>] ] <code>-r</code> <i>option</i><br />
  <code>lpoptions</code> [ <code>-E</code> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] <code>-x </code><i>destination</i>[<code>/</code><i>instance</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lpoptions</code> displays or sets printer options and defaults. If no printer is specified using the <i>-p</i> option, the default printer is used as described in <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1). </p>
 <p> If no <i>-l</i>, <i>-o</i>, or <i>-r</i> options are specified, the current options are reported on the standard output. </p>
 <p> Options set with the <code>lpoptions</code> command are used by the <code><a href="/docs/linux/man/1-lp/">lp</a></code>(1) and <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1) commands when submitting jobs. </p>

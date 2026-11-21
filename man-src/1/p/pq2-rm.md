@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-rm(1)"
 name: "pq2-rm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pq2-rm/"
 description: "pq2-rm – Remove one or more datasets from a dataset meta-repository based on ROOT files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pq2-rm</code> [options] dataset</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pq2-rm</code> program. </p>
 <p> <code>pq2-rm</code> is a script invoking the <code>pq2</code> ROOT application to remove one or more datasets from a dataset meta-repository based on ROOT files; the repository can be accessed via the local file system or a remote file server daemon or a PROOF facility. </p>
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>

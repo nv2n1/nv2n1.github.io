@@ -1,4 +1,5 @@
 ---
+
 title: "xpbs(1)"
 name: "xpbs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xpbs/"
 description: "xpbs – GUI front end to PBS commands"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> xpbs [-admin]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>xpbs</code> command provides a user-friendly point-and-click interface to PBS commands. Please see the sections below for a tour and tutorials. Also, within every dialog box, a <code>Help</code> button can be found for assistance.</p>
 <h2>OPTIONS</h2>
 <dl>

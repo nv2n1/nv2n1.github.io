@@ -1,4 +1,5 @@
 ---
+
 title: "xvile(1)"
 name: "xvile"
 section: "1"
@@ -9,9 +10,7 @@ description: "vile, xvile, uxvile, lxvile – VI Like Emacs"
 
 <h2>NAME</h2>
 <p> vile, xvile, uxvile, lxvile &#8211; <code>VI L</code>ike <code>E</code>macs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vile [@</code><i>cmdfile</i><code>] [+</code><i>command</i><code>] [-FhIiRVv] [-g</code><i>NNN</i><code>] [-k</code><i>cryptkey</i><code>] [-s</code><i>pattern</i><code>] [-t</code><i>tag</i><code>] [</code><i>filename</i><code>]&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>vile</i> is a text editor. This man page is fairly terse. More information can be obtained from the internal help, available with the <code>-h</code> option or by using the &quot;:help&quot; command from within <i>vile</i>. </p>
 <p> <i>xvile</i> is the same text editor, built as an X-windows application, with fully integrated mouse support, scrollbars, etc. </p>
 <p> <i>uxvile</i> is a wrapper around <i>xvile</i> which invokes the latter program with the correct locale environment required to use a unicode character set and the &quot;UXVile&quot; X resource class set. </p>

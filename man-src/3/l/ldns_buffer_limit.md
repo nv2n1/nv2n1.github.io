@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_limit(3)"
 name: "ldns_buffer_limit"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_buffer_limit, ldns_buffer_set_limit, ldns_buffer_capacity, ld
 
 <h2>NAME</h2>
 <p> ldns_buffer_limit, ldns_buffer_set_limit, ldns_buffer_capacity, ldns_buffer_set_capacity, ldns_buffer_reserve, ldns_buffer_at, ldns_buffer_begin, ldns_buffer_end, ldns_buffer_current </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -22,7 +22,6 @@ description: "ldns_buffer_limit, ldns_buffer_set_limit, ldns_buffer_capacity, ld
 <p> uint8_t * ldns_buffer_begin(const ldns_buffer *buffer); </p>
 <p> uint8_t * ldns_buffer_end(ldns_buffer *buffer); </p>
 <p> uint8_t * ldns_buffer_current(ldns_buffer *buffer); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_buffer_limit</i>()</dt>
 <dd>returns the maximum size of the buffer \param[in] buffer .br Returns the size</dd></dl>

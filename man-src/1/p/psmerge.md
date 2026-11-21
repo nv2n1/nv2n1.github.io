@@ -1,4 +1,5 @@
 ---
+
 title: "psmerge(1)"
 name: "psmerge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-psmerge/"
 description: "psmerge – filter to merge several PostScript files into one"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>psmerge </code> [ <code>-o</code><i>out.ps</i> ] <i>file.ps &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Psmerge</i> merges PostScript documents into a single document. It only works in the specific case the the files were created using the same application, with the same device setup and resources (fonts, procsets, patterns, files, etc) loaded. </p>
 <p> If the <code>-o</code> option is used, output will be sent to the file named, otherwise it will go to standard output. </p>
 <p> <i>Psmerge</i> will merge multiple files concatenated into a single file as if they were in separate files.</p>

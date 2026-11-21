@@ -1,4 +1,5 @@
 ---
+
 title: "spline(1)"
 name: "spline"
 section: "1"
@@ -9,9 +10,7 @@ description: "spline – interpolate datasets using splines under tension"
 
 <h2>NAME</h2>
 <p> spline &#8211; interpolate datasets using splines under tension</p>
-<h2>SYNOPSIS</h2>
 <p> <code>spline</code> [ <i>options </i> ] [ <i>files </i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>spline</code> reads datasets from standard input or from one or more files, and fits a smooth curve (a &quot;spline&quot;) through each dataset. An interpolated version of each dataset, consisting of points from the smooth curve, is written to standard output. </p>
 <p> Unless the <code>-a</code> or <code>-A</code> options are used (see below), each dataset should be a sequence of values for a vector-valued function of a single scalar variable. That is, each dataset should be a sequence of data points, given as alternating <i>t</i> and <i>y</i> values. <i>t</i> is a scalar independent variable, and <i>y</i> is a vector-valued dependent variable. The dimensionality of <i>y</i> is specified with the <code>-d </code> option (the default dimensionality is 1). Between each data point and the next, <i>t</i> should increase. </p>
 <p> An input file may contain more than a single dataset. If an input file is in <font SIZE="-1">ASCII </font> format (the default), its datasets should be separated by blank lines. The <i>t</i> and <i>y</i> values of the data points in each dataset may be arranged arbitrarily, so long as they are separated by white space. Besides datasets, an input file may contain any number of comment lines, which should begin with the comment character `#&#8217;. Comment lines are ignored. They are not treated as blank, i.e., they do not interrupt a dataset in progress. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "monop(1)"
 name: "monop"
 section: "1"
@@ -9,7 +10,6 @@ description: "monop, monop2 – Mono Class Outline Viewer"
 
 <h2>NAME</h2>
 <p> monop, monop2 &#8211; Mono Class Outline Viewer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>monop</code> [-r:assembly] [&#8211;search] class</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -33,7 +33,6 @@ description: "monop, monop2 – Mono Class Outline Viewer"
 <dd> Sets the lookup path to the Xamarin.Android directory. This will load both the mscorlib from there, and search assemblies in that directory.</dd>
 <dt><i>-xi</i></dt>
 <dd> Sets the lookup path to the Xamarin.iOS directory. This will load both the mscorlib from there, and search assemblies in that directory.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Monop is a tool that allows you to view the outline of a class. You can see the signature of each member of the class. Use <i>monop</i> to explore 1.0 assemblies, use <i>monop2</i> to explore 2.0 assemblies. </p>
 <p> The tool takes one option, the class to view. You must specify the full name of the class, including namespace. </p>
 <p> For generic classes, you must specify the generic arguments, for example: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "slassq(3)"
 name: "slassq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slassq/"
 description: "slassq.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slassq</code> (N, X, INCX, SCALE, SUMSQ)<br />
  <i></i><code>SLASSQ</code> updates a sum of squares represented in scaled form.</p>

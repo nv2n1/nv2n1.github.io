@@ -1,4 +1,5 @@
 ---
+
 title: "stapgraph(1)"
 name: "stapgraph"
 section: "1"
@@ -9,11 +10,9 @@ description: "stapgraph – systemtap grapher"
 
 <h2>NAME</h2>
 <p> stapgraph &#8211; systemtap grapher </p>
-<h2>SYNOPSIS</h2>
 <p> <code>stapgraph</code> [ <i>OPTIONS</i> ] <i>FILENAME</i> [ <i>ARGUMENTS</i> ]<br />
  <code>stapgraph</code> [ <i>OPTIONS</i> ] <code>&#8211;</code> [ <i>ARGUMENTS</i> ]<br />
  <code>stapgraph</code> [ <i>OPTIONS</i> ] <code>-e</code><i> SCRIPT</i> [ <i>ARGUMENTS</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>stapgraph</i> program is a simple frontend to <i>stap</i> that produces graphs from the output of <i>stap</i> scripts. </p>
 <p> This manual corresponds to version 1.3. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "inet_pton(3)"
 name: "inet_pton"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-inet_pton/"
 description: "inet_pton – convert IPv4 and IPv6 addresses from text to binary form"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/inet.h&gt;
 int inet_pton(int af, const char *src, void *dst);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This function converts the character string <i>src</i> into a network address structure in the <i>af</i> address family, then copies the network address structure to <i>dst</i>. The <i>af</i> argument must be either <code>AF_INET</code> or <code>AF_INET6</code>. <i>dst</i> is written in network byte order. </p>
 <p> The following address families are currently supported:</p>
 <dl>

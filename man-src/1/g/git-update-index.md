@@ -1,4 +1,5 @@
 ---
+
 title: "git-update-index(1)"
 name: "git-update-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-update-index/"
 description: "git-update-index – Register file contents in the working tree to the index"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git update - index
                  [--add][--remove | --force - remove][--replace]
@@ -28,7 +28,6 @@ git update - index
                  [--verbose]
                  [--][&lt;file&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Modifies the index. Each file mentioned is updated into the index and any <i>unmerged</i> or <i>needs updating</i> state is cleared. </p>
 <p> See also <code><a href="/docs/linux/man/1-git-add/">git-add</a></code>(1) for a more user-friendly way to do some of the most common operations on the index. </p>
 <p> The way <i>git update-index</i> handles files it is told about can be modified using the various options:</p>

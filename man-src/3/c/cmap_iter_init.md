@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_iter_init(3)"
 name: "cmap_iter_init"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-cmap_iter_init/"
 description: "cmap_iter_init – Initialize iterator for keys stored in CMAP"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_iter_init (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>prefix</i><code>, cmap_iter_handle_t *</code><i>cmap_iter_handle</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmap_iter_init</code> function is used to initialize iteration of all keys with given <i>prefix.</i> The <i>handle</i> argument is connection to CMAP database obtained by calling <code><a href="/docs/linux/man/3-cmap_initialize/">cmap_initialize</a>(3)</code> function. <i>prefix</i> is string, and every returned key must have name with given prefix. This variable can also be NULL (or empty string) and then all keys are iterated. </p>
 <p> <code>cmap_iter_init</code> is used only for initialize context for future <code><a href="/docs/linux/man/3-cmap_iter_next/">cmap_iter_next</a>(3)</code> calls and handle needed for that function is returned in <i>cmap_iter_handle</i> variable. When you have finished iteration over objects, call <code><a href="/docs/linux/man/3-cmap_iter_finalize/">cmap_iter_finalize</a>(3)</code> function to free up memory associated with iteration. </p>
 <h2>RETURN VALUE</h2>

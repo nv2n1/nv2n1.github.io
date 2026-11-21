@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_verify_flags(3)"
 name: "gnutls_certificate_set_verify_flags"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_verify_flags – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_verify_flags &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_set_verify_flags(gnutls_certificate_credentials_t </code><i>res</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_certificate_set_verify_flags – API function"
 <dd> is a gnutls_certificate_credentials_t structure</dd>
 <dt>unsigned int flags</dt>
 <dd> are the flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the flags to be used for verification of certificates and override any defaults. The provided flags must be an OR of the <code>gnutls_certificate_verify_flags</code> enumerations.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

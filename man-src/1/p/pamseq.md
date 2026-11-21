@@ -1,4 +1,5 @@
 ---
+
 title: "pamseq(1)"
 name: "pamseq"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pamseq/"
 description: "pamseq – generate PAM image of all possible tuple values, in sequence"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamseq</code> [<code>-tupletype=</code><i>tupletype</i>] <i>depth</i> <i>maxval</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamseq</code> generates a PAM image of a specified depth and specified maxval that consists of a single row. The row consists of one tuple of every possible value, in order. </p>
 <p> For a depth of one, the order is simple: From 0 to maxval, going from left to right. For higher depths, the highest numbered plane goes from 0 to maxval (going left to right) while all the other planes have value 0. Then the sequence repeats except with the next highest plane set to a value of 1, then 2, etc. </p>

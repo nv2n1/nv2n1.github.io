@@ -1,4 +1,5 @@
 ---
+
 title: "ldap2zone(1)"
 name: "ldap2zone"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldap2zone – Creates zone file from LDAP dnszone information"
 
 <h2>NAME</h2>
 <p> ldap2zone &#8211; Creates zone file from LDAP dnszone information</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldap2zone zone-name LDAP-URL default-ttl [serial]</code></p>
-<h2>DESCRIPTION</h2>
 <p> ldap2zone is a tool that reads info for a zone from LDAP and constructs a standard plain ascii zone file that is written to the standard output. The LDAP information has to be stored using the dnszone schema. The schema is used by BIND with LDAP back-end. </p>
 <p> <code>zone-name</code></p>
 <dl>

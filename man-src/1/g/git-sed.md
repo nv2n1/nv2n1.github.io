@@ -1,4 +1,5 @@
 ---
+
 title: "git-sed(1)"
 name: "git-sed"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-sed – replace patterns in git-controlled files"
 
 <h2>NAME</h2>
 <p> <code>git-sed</code> &#8211; replace patterns in git-controlled files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-sed</code> [ -c ] [ -f <i>flags</i> ] <i>search</i> <i>replacement</i></p>
-<h2>DESCRIPTION</h2>
 <p> Run git grep and then send results to sed for replacement with the given flags, if -f is provided. </p>
 <p> Also runs git commit if -c is provided.</p>
 <h2>OPTIONS</h2>

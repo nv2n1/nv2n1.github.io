@@ -1,4 +1,5 @@
 ---
+
 title: "git-replace(1)"
 name: "git-replace"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-git-replace/"
 description: "git-replace – Create, list, delete refs to replace objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git replace[-f]&lt;object&gt;&lt;replacement&gt;
         git replace[-f]-- edit&lt;object&gt;
             git replace[-f]-- graft&lt;commit&gt;[&lt;parent&gt;...] git replace[-f]-- convert - graft - file git replace - d&lt;object&gt;... git replace[--format = &lt;format&gt;][-l[&lt;pattern&gt;]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Adds a <i>replace</i> reference in <code>refs/replace/</code> namespace. </p>
 <p> The name of the <i>replace</i> reference is the SHA-1 of the object that is replaced. The content of the <i>replace</i> reference is the SHA-1 of the replacement object. </p>
 <p> The replaced object and the replacement object must be of the same type. This restriction can be bypassed using <code>-f</code>. </p>

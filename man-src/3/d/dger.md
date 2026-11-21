@@ -1,4 +1,5 @@
 ---
+
 title: "dger(3)"
 name: "dger"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dger/"
 description: "dger.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dger</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
  <i></i><code>DGER</code></p>

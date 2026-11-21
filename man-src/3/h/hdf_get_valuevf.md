@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_get_valuevf(3)"
 name: "hdf_get_valuevf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_get_valuevf/"
 description: "hdf_get_valuevf – Return the value of a node in the data set"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ char *hdf_get_valuevf(HDF *hdf, const char *namefmt, va_list ap);
 <p> hdf -&gt; the dataset node to start from<br />
  namefmt -&gt; the format string<br />
  ap -&gt; va_list of varargs </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_get_valuevf walks the data set pointed to by hdf via namefmt printf expanded with varargs ap, and returns the string value located there, or NULL if it doesn&#8217;t exist. This differs from hdf_get_value in that there is no default value possible. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

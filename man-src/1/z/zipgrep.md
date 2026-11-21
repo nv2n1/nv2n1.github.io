@@ -1,4 +1,5 @@
 ---
+
 title: "zipgrep(1)"
 name: "zipgrep"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-zipgrep/"
 description: "zipgrep – search files in a ZIP archive for lines matching a pattern"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>zipgrep</code> [<code>egrep_options</code>] <i>pattern</i> <i>file</i>[<i>.zip</i>] [<i>file(s)</i>&nbsp;&#8230;] [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>zipgrep</i> will search files within a ZIP archive for lines matching the given string or pattern. <i>zipgrep</i> is a shell script and requires <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1) and <i><a href="/docs/linux/man/1-unzip/">unzip</a></i>(1) to function. Its output is identical to that of <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1).</p>
 <h2>ARGUMENTS</h2>
 <dl>

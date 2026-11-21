@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_init(3)"
 name: "libssh2_init"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_init – global library initialization"
 
 <h2>NAME</h2>
 <p> libssh2_init &#8211; global library initialization</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> #define LIBSSH2_INIT_NO_CRYPTO 0x0001 </p>
 <p> int libssh2_init(int flags);</p>
-<h2>DESCRIPTION</h2>
 <p> Initialize the libssh2 functions. This typically initialize the crypto library. It uses a global state, and is not thread safe &#8212; you must make sure this function is not called concurrently.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns 0 if succeeded, or a negative value for error.</p>

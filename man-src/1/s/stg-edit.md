@@ -1,4 +1,5 @@
 ---
+
 title: "stg-edit(1)"
 name: "stg-edit"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-edit/"
 description: "stg-edit – Edit a patch description or diff"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg edit[options][--][&lt;patch&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Edit the description and author information of the given patch (or the current patch if no patch name was given). With &#8211;diff, also edit the diff. </p>
 <p> The editor is invoked with the following contents: </p>
 <dl>

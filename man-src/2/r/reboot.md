@@ -1,4 +1,5 @@
 ---
+
 title: "reboot(2)"
 name: "reboot"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-reboot/"
 description: "reboot – reboot or enable/disable Ctrl-Alt-Del"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> /* Since kernel version 2.1.30 there are symbolic names LINUX_REBOOT_*<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;for the constants and a fourth argument to the call:&nbsp;*/ </p>
 <p> <code>#include &lt;unistd.h&gt;</code><br />
@@ -20,7 +20,6 @@ description: "reboot – reboot or enable/disable Ctrl-Alt-Del"
 <p> <code>#include &lt;unistd.h&gt;</code><br />
  <code>#include &lt;sys/reboot.h&gt;</code> </p>
 <p> <code>int reboot(int </code><i>cmd</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>reboot</code>() call reboots the system, or enables/disables the reboot keystroke (abbreviated CAD, since the default is Ctrl-Alt-Delete; it can be changed using <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1)). </p>
 <p> This system call fails (with the error <code>EINVAL</code>) unless <i>magic</i> equals <code>LINUX_REBOOT_MAGIC1</code> (that is, 0xfee1dead) and <i>magic2</i> equals <code>LINUX_REBOOT_MAGIC2</code> (that is, 672274793). However, since 2.1.17 also <code>LINUX_REBOOT_MAGIC2A</code> (that is, 85072278) and since 2.1.97 also <code>LINUX_REBOOT_MAGIC2B</code> (that is, 369367448) and since 2.5.71 also <code>LINUX_REBOOT_MAGIC2C</code> (that is, 537993216) are permitted as values for <i>magic2</i>. (The hexadecimal values of these constants are meaningful.) </p>
 <p> The <i>cmd</i> argument can have the following values:</p>

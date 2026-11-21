@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installlogcheck(1)"
 name: "dh_installlogcheck"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installlogcheck/"
 description: "dh_installlogcheck – install logcheck rulefiles into etc/logcheck/"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installlogcheck</code> [<i>debhelper options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installlogcheck</code> is a debhelper program that is responsible for installing logcheck rule files.</p>
 <h2>FILES</h2>
 <dl>

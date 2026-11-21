@@ -1,4 +1,5 @@
 ---
+
 title: "exquat(3)"
 name: "exquat"
 section: "3"
@@ -9,10 +10,8 @@ description: "exquat – A comparison between Euler angles and quaternions. Alle
 
 <h2>NAME</h2>
 <p> exquat &#8211; A comparison between Euler angles and quaternions. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exquat</code></p>
-<h2>DESCRIPTION</h2>
 <p> Euler angles are convenient for storing and creating 3D orientations. However, this program demonstrates that they are not good when interpolating between two different orientations. The problem is solved by using Allegro&#8217;s quaternion operations. </p>
 <p> In this program, two cubes are rotated between random orientations. Notice that although they have the same beginning and ending orientations, they do not follow the same path between orientations. </p>
 <p> One cube is being rotated by directly incrementing or decrementing the Euler angles from the starting point to the ending point. This is an intuitive notion, but it is incorrect because it does not cause the object to turn around a single unchanging axis of rotation. The axis of rotation wobbles resulting in the object spinning in strange ways. The object will eventually end up in the orientation that the user intended, but it gets there in a way that is unattractive. Imagine if this method was used to update the position of a camera in a game! Sometimes it would swing wildly and disorient the player. </p>

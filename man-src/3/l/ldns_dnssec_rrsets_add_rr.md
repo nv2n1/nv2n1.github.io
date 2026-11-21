@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_rrsets_add_rr(3)"
 name: "ldns_dnssec_rrsets_add_rr"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrset
 
 <h2>NAME</h2>
 <p> ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrsets_type, ldns_dnssec_rrsets_set_type, ldns_dnssec_rrsets_add_rr, ldns_dnssec_rrsets_print </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -19,7 +19,6 @@ description: "ldns_dnssec_rrsets_new, ldns_dnssec_rrsets_free, ldns_dnssec_rrset
 <p> ldns_status ldns_dnssec_rrsets_set_type(ldns_dnssec_rrsets *rrsets, ldns_rr_type type); </p>
 <p> ldns_status ldns_dnssec_rrsets_add_rr(ldns_dnssec_rrsets *rrsets, ldns_rr *rr); </p>
 <p> void ldns_dnssec_rrsets_print(FILE *out, ldns_dnssec_rrsets *rrsets, bool follow); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_rrsets_new</i>()</dt>
 <dd>Creates a new list (entry) of RRsets .br Returns the newly allocated structure</dd></dl>

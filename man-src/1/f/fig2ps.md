@@ -1,4 +1,5 @@
 ---
+
 title: "fig2ps(1)"
 name: "fig2ps"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-fig2ps/"
 description: "fig2ps, fig2eps,fig2pdf – Convert xfig files in ps|pdf, processing all the text marked as special with LaTeX."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fig2ps </code>[<code>-h</code>|<code>&#8211;help</code>] </p>
 <p> <code>fig2ps </code> [<i> options </i>] <i>file1.fig </i>[<i>file2.fig &#8230;</i>] </p>
 <p> <code>fig2pdf</code> [<i> options </i>] <i>file1.fig </i>[<i>file2.fig &#8230;</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fig2ps </code> converts figures produced by XFig into postscript or PDF, processing the text with LaTeX. It takes advantage of the <i>pstex</i> and <i>pstext_t</i> export formats of <code>fig2dev</code>. </p>
 <p> <code>fig2ps</code> converts successively all the files given as arguments. It&#8217;s behaviour is governed by quite a few options. In all the options, the <code>=</code> sign is optional, so that </p>
 <p> <i>fig2ps &#8211;bbox=dvips file.fig</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libavutil(3)"
 name: "libavutil"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libavutil/"
 description: "libavutil – multimedia-biased utility library"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The libavutil library is a utility library to aid portable multimedia programming. It contains safe portable string functions, random number generators, data structures, additional mathematics functions, cryptography and multimedia related functionality (like enumerations for pixel and sample formats). It is not a library for code needed by both libavcodec and libavformat. </p>
 <p> The goals for this library is to be:</p>
 <dl>

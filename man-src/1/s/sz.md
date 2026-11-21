@@ -1,4 +1,5 @@
 ---
+
 title: "sz(1)"
 name: "sz"
 section: "1"
@@ -9,14 +10,12 @@ description: "sx, sb, sz – XMODEM, YMODEM, ZMODEM file send"
 
 <h2>NAME</h2>
 <p> sx, sb, sz &#8211; XMODEM, YMODEM, ZMODEM file send</p>
-<h2>SYNOPSIS</h2>
 <p> sz [-<code>+8abdefkLlNnopqTtuvyY</code>] <i>file &#8230;</i><br />
  sb [-<code>adfkqtuv</code>] <i>file &#8230;</i><br />
  sx [-<code>akqtuv</code>] <i>file</i><br />
  sz [-<code>oqtv</code>] <code>-c COMMAND</code><br />
  sz [-<code>oqtv</code>] <code>-i COMMAND</code><br />
  sz -TT</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Sz</code> uses the ZMODEM, YMODEM or XMODEM error correcting protocol to send one or more files over a dial-in serial port to a variety of programs running under PC-DOS, CP/M, Unix, VMS, and other operating systems. </p>
 <p> While <i>rz</i> is smart enough to be called from <i><a href="/docs/linux/man/1-cu/">cu</a>(1),</i> very few versions of <i><a href="/docs/linux/man/1-cu/">cu</a>(1)</i> are smart enough to allow <i>sz</i> to work properly. Unix flavors of Professional-YAM are available for such dial-out application. </p>
 <p> <code>Sz</code> sends one or more files with ZMODEM protocol. </p>

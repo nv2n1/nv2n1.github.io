@@ -1,4 +1,5 @@
 ---
+
 title: "git-check-ignore(1)"
 name: "git-check-ignore"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-check-ignore/"
 description: "git-check-ignore – Debug gitignore / exclude files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git check - ignore[&lt;options&gt;]&lt;pathname&gt;... git check - ignore[&lt;options&gt;]-- stdin
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> For each pathname given via the command-line or from a file via <code>&#8211;stdin</code>, check whether the file is excluded by .gitignore (or other input files to the exclude mechanism) and output the path if it is excluded. </p>
 <p> By default, tracked files are not shown at all since they are not subject to exclude rules; but see &#8216;&#8211;no-index&#8217;.</p>
 <h2>OPTIONS</h2>

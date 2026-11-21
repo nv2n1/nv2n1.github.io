@@ -1,4 +1,5 @@
 ---
+
 title: "fattch(2)"
 name: "fattch"
 section: "2"
@@ -9,9 +10,7 @@ description: "afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty
 
 <h2>NAME</h2>
 <p> afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty, isastream, lock, madvise1, mpx, multiplexer, prof, profil, putmsg, putpmsg, security, stty, tuxcall, ulimit, vserver &#8211; unimplemented system calls</p>
-<h2>SYNOPSIS</h2>
 <p> Unimplemented system calls.</p>
-<h2>DESCRIPTION</h2>
 <p> These system calls are not implemented in the Linux 2.6.22 kernel.</p>
 <h2>RETURN VALUE</h2>
 <p> These system calls always return -1 and set <i>errno</i> to <code>ENOSYS</code>.</p>

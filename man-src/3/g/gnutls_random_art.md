@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_random_art(3)"
 name: "gnutls_random_art"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_random_art – API function"
 
 <h2>NAME</h2>
 <p> gnutls_random_art &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_random_art(gnutls_random_art_t </code><i>type</i><code>, const char * </code><i>key_type</i><code>, unsigned int </code><i>key_size</i><code>, void * </code><i>fpr</i><code>, size_t </code><i>fpr_size</i><code>, gnutls_datum_t * </code><i>art</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_random_art – API function"
 <dd> The size of the fingerprint</dd>
 <dt>gnutls_datum_t * art</dt>
 <dd> The returned random art</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will convert a given fingerprint to an &quot;artistic&quot; image. The returned image is allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

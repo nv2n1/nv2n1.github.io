@@ -1,4 +1,5 @@
 ---
+
 title: "docker-context(1)"
 name: "docker-context"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-context/"
 description: "docker-context – Manage contexts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker context</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Manage contexts </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for context</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "stg-rebase(1)"
 name: "stg-rebase"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-rebase/"
 description: "stg-rebase – Move the stack base to another point in history"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg rebase[options][--]&lt;new - base - id&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Pop all patches from current stack, move the stack base to the given &lt;new-base-id&gt; and push the patches back. </p>
 <p> If you experience merge conflicts, resolve the problem and continue the rebase by executing the following sequence: </p>
 <dl>

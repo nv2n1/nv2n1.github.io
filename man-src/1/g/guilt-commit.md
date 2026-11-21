@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-commit(1)"
 name: "guilt-commit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-commit/"
 description: "guilt-commit – Commit specified number of patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-commit</i> -n &lt;num&gt; | -a | &#8211;all </p>
 <p> Turn specified number of bottom most patches into Git commits. This removes the the patches from the series, and status file.</p>
 <h2>OPTIONS</h2>

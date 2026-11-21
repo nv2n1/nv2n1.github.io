@@ -1,4 +1,5 @@
 ---
+
 title: "fltk-config(1)"
 name: "fltk-config"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fltk-config/"
 
  fltk-config - script to get information about the installed version of fltk. 
 
-<h2>SYNOPSIS</h2>
+fltk-config [ --prefix <i>[=DIR]</i> ] [ --exec-prefix <i>[=DIR]</i> ] [ --version ] [ --api-version ] [ --use-gl ] [ --use-images ] [ --use-glut ] [ --cc ] [ --cxx ] [ --cflags ] [ --cxxflags ] [ --ldflags ] [ --ldstaticflags ] [ --libs ] [ -D<i>name[=value]</i> ] [ -g ] [ --compile <i>program.cxx</i> ]
 
- fltk-config [ --prefix <i>[=DIR]</i> ] [ --exec-prefix <i>[=DIR]</i> ] [ --version ] [ --api-version ] [ --use-gl ] [ --use-images ] [ --use-glut ] [ --cc ] [ --cxx ] [ --cflags ] [ --cxxflags ] [ --ldflags ] [ --ldstaticflags ] [ --libs ] [ -D<i>name[=value]</i> ] [ -g ] [ --compile <i>program.cxx</i> ]
-
-<h2>DESCRIPTION</h2>
-
- <i>fltk-config</i> is a utility script that can be used to get information about the current version of FLTK that is installed on the system, what compiler and linker options to use when building FLTK-based applications, and to build simple FLTK applications. 
+<i>fltk-config</i> is a utility script that can be used to get information about the current version of FLTK that is installed on the system, what compiler and linker options to use when building FLTK-based applications, and to build simple FLTK applications. 
 
  The following options are supported:
 <dl>

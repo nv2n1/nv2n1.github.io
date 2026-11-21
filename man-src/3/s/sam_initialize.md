@@ -1,4 +1,5 @@
 ---
+
 title: "sam_initialize(3)"
 name: "sam_initialize"
 section: "3"
@@ -6,11 +7,10 @@ letter: "s"
 url: "/docs/linux/man/3-sam_initialize/"
 description: "sam_initialize – Initialize health checking"
 ---
+
 <p>sam_initialize &#8211; Initialize health checking  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/sam.h&gt;</code> </p>
 <p> <code>cs_error_t sam_initialize (int</code> <i>time_interval</i><code>, sam_recovery_policy_t </code><i>recovery_policy</i>); </p>
-<h2>DESCRIPTION</h2>
 <p>The <code>sam_initialize</code> function is used to initialize health checking of a process. </p>
 <p>Application can have only one instance of SAM. This function must be called before any other of SAM functions. It is recommended to initialize before the process begins any process initialization. </p>
 <p>The <i>time_interval</i> parameter is a timeout in milliseconds before taking recovery action after having not received a healthcheck. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tv_find_grabbers(1)"
 name: "tv_find_grabbers"
 section: "1"
@@ -6,20 +7,13 @@ letter: "t"
 url: "/docs/linux/man/1-tv_find_grabbers/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+tv_find_grabbers - Find all XMLTV grabbers that are installed on the system. 
 
- tv_find_grabbers - Find all XMLTV grabbers that are installed on the system. 
-
-<h2>SYNOPSIS</h2>
-
- tv_find_grabbers --help 
+tv_find_grabbers --help 
 
  tv_find_grabbers [-I &lt;dir&gt;] [--slow] [capability] ...
 
-<h2>DESCRIPTION</h2>
-
- tv_find_grabbers searches the <font SIZE="-1">PATH</font> for <font SIZE="-1">XMLTV</font> grabbers and returns a list of all grabbers that it finds. The list contains one entry per line in the format 
+tv_find_grabbers searches the <font SIZE="-1">PATH</font> for <font SIZE="-1">XMLTV</font> grabbers and returns a list of all grabbers that it finds. The list contains one entry per line in the format 
 
  /usr/bin/tv_grab_fr|France 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "dlys(5)"
 name: "dlys"
 section: "5"
@@ -6,8 +7,8 @@ letter: "d"
 url: "/docs/linux/man/5-dlys/"
 description: "dlys – format of .dlys files read by the SCALD simulator and timing verifier"
 ---
+
 <p> dlys - format of .dlys files read by the SCALD simulator and timing verifier </p>
-<h2>DESCRIPTION</h2>
 <p> The SCALD simulator and timing verifier can accept information about the actual delays of wires in a circuit. This delay information is described in a <code>.dlys</code> file, which consists of a sequence of records, one for each electrical net. Each record begins with the signal name for the net (note that this is the SCALD signal name, i.e, the name given by the user to the entire net, and not usually the name of one of the pins in the net), followed by an <code>=</code>, then a comma-separated list of the terminals in the net and their associated delay, with the list terminated by a semicolon. The end of the file is marked with a second semicolon. </p>
 <p>The elements of the comma-separated list for each net take the form </p>
 <p> <br />

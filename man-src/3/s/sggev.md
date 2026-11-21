@@ -1,4 +1,5 @@
 ---
+
 title: "sggev(3)"
 name: "sggev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sggev/"
 description: "sggev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggev</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, INFO)<br />
  <i></i><code> SGGEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gtypist(1)"
 name: "gtypist"
 section: "1"
@@ -9,9 +10,7 @@ description: "gtypist – manual page for gtypist 2.8.1"
 
 <h2>NAME</h2>
 <p> gtypist &#8211; manual page for gtypist 2.8.1</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gtypist</code> [ <i>Options</i>&#8230; ] [ <i>script-file </i>]</p>
-<h2>DESCRIPTION</h2>
 <p> `gtypist&#8217; is a typing tutor with several lessons for different keyboards and languages. New lessons can be written by the user easily.</p>
 <h2>OPTIONS</h2>
 <dl>

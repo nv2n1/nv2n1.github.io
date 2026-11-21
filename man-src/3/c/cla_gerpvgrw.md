@@ -1,4 +1,5 @@
 ---
+
 title: "cla_gerpvgrw(3)"
 name: "cla_gerpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_gerpvgrw/"
 description: "cla_gerpvgrw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>cla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
  <i></i><code>CLA_GERPVGRW</code> multiplies a square real matrix by a complex matrix.</p>

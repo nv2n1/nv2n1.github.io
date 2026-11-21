@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_rsa_key(3)"
 name: "ldns_key_rsa_key"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_h
 
 <h2>NAME</h2>
 <p> ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_hmac_key </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,7 +17,6 @@ description: "ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_h
 <p> DSA* ldns_key_dsa_key(const ldns_key *k); </p>
 <p> ldns_signing_algorithm ldns_key_algorithm(const ldns_key *k); </p>
 <p> unsigned char* ldns_key_hmac_key(const ldns_key *k); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_rsa_key</i>()</dt>
 <dd>returns the (openssl) RSA struct contained in the key .br <code>k</code>: the key to look in .br Returns the RSA * structure in the key</dd></dl>

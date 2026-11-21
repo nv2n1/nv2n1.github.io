@@ -1,4 +1,5 @@
 ---
+
 title: "cla_gbrcond_x(3)"
 name: "cla_gbrcond_x"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_gbrcond_x/"
 description: "cla_gbrcond_x.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>cla_gbrcond_x</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, X, INFO, WORK, RWORK)<br />
  <i></i><code>CLA_GBRCOND_X</code> computes the infinity norm condition number of op(A)*diag(x) for general banded matrices.</p>

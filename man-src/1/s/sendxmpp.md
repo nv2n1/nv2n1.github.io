@@ -1,4 +1,5 @@
 ---
+
 title: "sendxmpp(1)"
 name: "sendxmpp"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-sendxmpp/"
 description: "sendxmpp – send xmpp messages from the commandline."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> sendxmpp [options] &lt;recipient1&gt; [&lt;recipient2&gt; &#8230;] </p>
 <p> sendxmpp &#8211;raw [options]</p>
-<h2>DESCRIPTION</h2>
 <p> sendxmpp is a program to send <font SIZE="-1">XMPP </font>(Jabber) messages from the commandline, not unlike <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1). Messages can be sent both to individual recipients and chatrooms.</p>
 <h2>OPTIONS</h2>
 <dl>

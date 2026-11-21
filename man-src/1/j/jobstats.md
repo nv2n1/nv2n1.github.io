@@ -1,4 +1,5 @@
 ---
+
 title: "jobstats(1)"
 name: "jobstats"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jobstats/"
 description: "jobstats – print historic job information or timeline view"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jobstats</code> [<code>-html</code>]<code>&nbsp;</code>[<code>-timeline</code>]<code>&nbsp;</code>[<code>-ntw</code>]<code>&nbsp;</code>[<code>-usage</code>] [<code>-available_slots</code> <i>s</i>] [<code>-start_jid</code> <i>jid</i>] [<code>-end_jid</code> <i>jid</i>] [<code>-owner</code> <i>opattern</i>] [<code>-name</code> <i>npatterm</i>] [<code>table_width</code> <i>w</i>] [<code>-nw</code> <i>w</i>] [<code>-nojoblist</code>]<code>&nbsp;</code>[<code>-tsort</code> <i>method</i>] [<i>file</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>jobstats</i> can show both a table of historic job information and a timeline view of job execution depending on output format (text or HTML). For the timeline view, the job is placed as a colour block on a timeline, and with one line per job. The colour of the job encodes a failed job, a qrsh login, a serial job and a parallel job. The job name is displayed and optionally followed by the number of slots used in braces in the case where a parallel job was run. </p>
 <p> Note that some information may not be valid if the job failed with certain error codes. If only a certain job range is chosen, then the text output will be sized for the longest job name encountered. Use the <code>-nw</code> option to get around this if the field is very wide.</p>
 <h2>OPTIONS</h2>

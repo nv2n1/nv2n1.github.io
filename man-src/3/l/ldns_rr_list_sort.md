@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_list_sort(3)"
 name: "ldns_rr_list_sort"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_rr_list_sort"
 
 <h2>NAME</h2>
 <p> ldns_rr_list_sort </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_rr_list_sort(ldns_rr_list *unsorted); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_list_sort</i>()</dt>
 <dd>sorts an rr_list (canonical wire format). the sorting is done inband. .br <code>unsorted</code>: the rr_list to be sorted .br Returns void</dd></dl>

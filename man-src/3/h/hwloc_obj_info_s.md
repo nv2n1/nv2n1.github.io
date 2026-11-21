@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_obj_info_s(3)"
 name: "hwloc_obj_info_s"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_obj_info_s/"
 description: "hwloc_obj_info_s –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hwloc.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>name</code> </p>

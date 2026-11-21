@@ -1,4 +1,5 @@
 ---
+
 title: "ibp(1)"
 name: "ibp"
 section: "1"
@@ -9,9 +10,7 @@ description: "ibp – show which of the International Beacon Project beacons is 
 
 <h2>NAME</h2>
 <p> ibp &#8211; show which of the International Beacon Project beacons is transmitting</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ibp</code> <i>[arguments]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>IBP</code> shows which of the beacons of the International Beacon Project is transmitting now. </p>
 <p> The following arguments can be used: </p>
 <p> a <code>band</code> expressed either in MHz (14, 18, 21, 24 or 28) or in meters (20, 17, 15, 12 or 10); if no band is specified, the program starts in multi-band mode. </p>

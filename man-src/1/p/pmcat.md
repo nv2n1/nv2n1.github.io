@@ -1,4 +1,5 @@
 ---
+
 title: "pmcat(1)"
 name: "pmcat"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pmcat/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pmcat - page through a module file 
 
- pmcat - page through a module file 
-
-<h2>DESCRIPTION</h2>
-
- Given a module name, figure out the path name and send that to the user's pager. 
+Given a module name, figure out the path name and send that to the user's pager. 
 
  <pre>
     $ pmcat CGI

@@ -1,4 +1,5 @@
 ---
+
 title: "exchange(3)"
 name: "exchange"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exchange/"
 description: "QuantLib::ExchangeRate – exchange rate between two currencies"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/exchangerate.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> enum <code>Type</code> { <code>Direct</code>, <code>Derived</code> } </p>

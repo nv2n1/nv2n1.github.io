@@ -1,4 +1,5 @@
 ---
+
 title: "rasdaemon(1)"
 name: "rasdaemon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rasdaemon/"
 description: "rasdaemon – RAS daemon to log the RAS events."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rasdaemon</code> [<i>OPTION</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>rasdaemon</code> program is a daemon which monitors the platform Reliablity, Availability and Serviceability (RAS) reports from the Linux kernel trace events. These trace events are logged in /sys/kernel/debug/tracing, reporting them via syslog/journald. </p>
 <h2>OPTIONS</h2>
 <dl>

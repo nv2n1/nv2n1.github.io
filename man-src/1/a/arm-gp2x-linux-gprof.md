@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-gprof(1)"
 name: "arm-gp2x-linux-gprof"
 section: "1"
@@ -9,7 +10,6 @@ description: "gprof – display call graph profile data"
 
 <h2>NAME</h2>
 <p> gprof &#8211; display call graph profile data</p>
-<h2>SYNOPSIS</h2>
 <p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQZ][<i>name</i>] ]<br />
 &nbsp;<wbr>[&nbsp;<wbr>-I&nbsp;<wbr><i>dirs</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-d[<i>num</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-k&nbsp;<wbr><i>from/to</i>&nbsp;<wbr>]<br />
 &nbsp;<wbr>[&nbsp;<wbr>-m&nbsp;<wbr><i>min-count</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-R&nbsp;<wbr><i>map_file</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-t&nbsp;<wbr><i>table-length</i>&nbsp;<wbr>]<br />
@@ -26,7 +26,6 @@ description: "gprof – display call graph profile data"
 &nbsp;<wbr>[&nbsp;<wbr>&#8211;traditional&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;version&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;width=<i>n</i>&nbsp;<wbr>]<br />
 &nbsp;<wbr>[&nbsp;<wbr>&#8211;ignore-non-functions&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;demangle[=<i></i><font SIZE="-1"><i>STYLE</i></font><i></i>]&nbsp;<wbr>]<br />
 &nbsp;<wbr>[&nbsp;<wbr>&#8211;no-demangle&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><i>image-file</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><i>profile-file</i>&nbsp;<wbr>&#8230;&nbsp;<wbr>]</p>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;gprof&quot;</tt> produces an execution profile of C, Pascal, or Fortran77 programs. The effect of called routines is incorporated in the profile of each caller. The profile data is taken from the call graph profile file (<i>gmon.out</i> default) which is created by programs that are compiled with the <code>-pg</code> option of <tt>&quot;cc&quot;</tt>, <tt>&quot;pc&quot;</tt>, and <tt>&quot;f77&quot;</tt>. The <code>-pg</code> option also links in versions of the library routines that are compiled for profiling. <tt>&quot;Gprof&quot;</tt> reads the given object file (the default is <tt>&quot;a.out&quot;</tt>) and establishes the relation between its symbol table and the call graph profile from <i>gmon.out</i>. If more than one profile file is specified, the <tt>&quot;gprof&quot;</tt> output shows the sum of the profile information in the given profile files. </p>
 <p> <tt>&quot;Gprof&quot;</tt> calculates the amount of time spent in each routine. Next, these times are propagated along the edges of the call graph. Cycles are discovered, and calls into a cycle are made to share the time of the cycle. </p>
 <p> Several forms of output are available from the analysis. </p>

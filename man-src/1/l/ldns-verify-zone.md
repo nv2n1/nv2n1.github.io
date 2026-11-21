@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-verify-zone(1)"
 name: "ldns-verify-zone"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldns-verify-zone – read a DNSSEC signed zone and verify it."
 
 <h2>NAME</h2>
 <p> ldns-verify-zone &#8211; read a DNSSEC signed zone and verify it.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldns-verify-zone </code> <i>ZONEFILE</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldns-verify-zone</code> reads a DNS zone file and verifies it. </p>
 <p> RRSIG resource records are checked against the DNSKEY set at the zone apex. </p>
 <p> Each name is checked for an NSEC(3), if appropriate. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-update(1)"
 name: "docker-latest-update"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-update/"
 description: "docker-update – Update configuration of one or more containers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker update</code> [<code>&#8211;blkio-weight</code>[=<i>[BLKIO-WEIGHT]</i>]] [<code>&#8211;cpu-shares</code>[=<i>0</i>]] [<code>&#8211;cpu-period</code>[=<i>0</i>]] [<code>&#8211;cpu-quota</code>[=<i>0</i>]] [<code>&#8211;cpuset-cpus</code>[=<i>CPUSET-CPUS</i>]] [<code>&#8211;cpuset-mems</code>[=<i>CPUSET-MEMS</i>]] [<code>&#8211;help</code>] [<code>&#8211;kernel-memory</code>[=<i>KERNEL-MEMORY</i>]] [<code>-m</code>|<code>&#8211;memory</code>[=<i>MEMORY</i>]] [<code>&#8211;memory-reservation</code>[=<i>MEMORY-RESERVATION</i>]] [<code>&#8211;memory-swap</code>[=<i>MEMORY-SWAP</i>]] [<code>&#8211;restart</code>[=<i>&quot;&quot;</i>]] CONTAINER [CONTAINER&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> The docker update command dynamically updates container configuration. you can Use this command to prevent containers from consuming too many resources from their Docker host. With a single command, you can place limits on a single container or on many. To specify more than one container, provide space-separated list of container names or IDs. </p>
 <p> With the exception of the &#8211;kernel-memory value, you can specify these options on a running or a stopped container. You can only update &#8211;kernel-memory on a stopped container. When you run docker update on stopped container, the next time you restart it, the container uses those values. </p>
 <p> Another configuration you can change with this command is restart policy, new restart policy will take effect instantly after you run docker update on a container. </p>

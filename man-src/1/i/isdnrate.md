@@ -1,4 +1,5 @@
 ---
+
 title: "isdnrate(1)"
 name: "isdnrate"
 section: "1"
@@ -9,10 +10,8 @@ description: "isdnrate – Print telephone rates and various info from rate-file
 
 <h2>NAME</h2>
 <p> isdnrate &#8211; Print telephone rates and various info from <a href="/docs/linux/man/5-rate-files/">rate-files</a>(5).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>isdnrate -a -b</code><i>best</i><code> -d</code><i>day</i><code> -f</code><i>from</i><code> -h</code><i>hour</i><code> -l</code><i>len</i> <code>-o</code> <code>-p</code><i>provs</i><code> -r</code> <i></i>v<i>NN</i> <code>-s</code> <code>-t</code><i>takt</i><code> -v</code><i>verbose</i><code> -x</code><i>exclude</i> <code> -C -D</code><i>det</i><code> -G</code><i>data</i><code> -H -L -N -O</code><i>socketfile</i><code> -P</code><i>piddir</i> <code> -S</code><i>sort</i><code> -T -U -V -X</code><i>explain</i> <code>-Z</code> <code>NUMBER &#8230;</code> </p>
 <p> All options are optional.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>isdnrate</code> program prints various information from <a href="/docs/linux/man/5-rate-files/">rate-files</a>(5). Its main purpose is the calculation of telephone rates from your location to an arbitrary destination at a certain time and of a certain length for all the providers in a rate-file. </p>
 <h3><code>NUMBER</code></h3>
 <p> A telephone number may be</p>

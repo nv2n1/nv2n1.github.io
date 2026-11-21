@@ -1,4 +1,5 @@
 ---
+
 title: "sslscan(1)"
 name: "sslscan"
 section: "1"
@@ -9,9 +10,7 @@ description: "sslscan – Fast SSL/TLS scanner"
 
 <h2>NAME</h2>
 <p> sslscan &#8211; Fast SSL/TLS scanner</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sslscan</code> [<i>options</i>]<i> [host:port | host]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>sslscan</code> command </p>
 <p> <code>sslscan</code> queries SSL/TLS services, such as HTTPS, in order to determine the ciphers that are supported.<br />
  SSLScan is designed to be easy, lean and fast. The output includes preferred ciphers of the SSL/TLS service,<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "cswrap(1)"
 name: "cswrap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cswrap/"
 description: "cswrap – generic compiler wrapper"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cswrap</code> [<i>&#8211;help</i> | <i>&#8211;print-path-to-wrap</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> cswrap is a generic compiler wrapper that translates relative paths to absolute paths in diagnostic messages. Create a symbolic link to cswrap named as your compiler (gcc, g++, &#8230;) and put it to your $PATH. </p>
 <p> Translated diagnostic messages are decorated by suffix <code>&lt;&#8211;[TOOL]</code> if they are produced by a tool named <code>TOOL</code> (given by cswrap invokation via symlink named <code>TOOL</code>). This only applies to translated diagnostic messages, which does not include code snippets, for instance. </p>
 <p> If cswrap is installed on system, the following command activates the wrapper: </p>

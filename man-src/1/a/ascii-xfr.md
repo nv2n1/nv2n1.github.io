@@ -1,4 +1,5 @@
 ---
+
 title: "ascii-xfr(1)"
 name: "ascii-xfr"
 section: "1"
@@ -9,9 +10,7 @@ description: "ascii-xfr – upload/download files using the ASCII protocol"
 
 <h2>NAME</h2>
 <p> ascii-xfr &#8211; upload/download files using the ASCII protocol</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ascii-xfr</code> <code>-s|-r</code> [<code>-ednv</code>] [<code>-l</code> <i>linedelay</i>] [<code>-c</code> <i>characterdelay</i>] <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ascii-xfr</code> Transfers files in ASCII mode. This means no flow control, no checksumming and no file-name negotiation. It should <i>only</i> be used if the remote system doesn&#8217;t understand anything else. </p>
 <p> The ASCII protocol transfers files line-by-line. The EOL (End-Of-Line) character is transmitted as CRLF. When receiving, the CR character is stripped from the incoming file. The Control-Z (ASCII 26) character signals End-Of-File, if option -e is specified (unless you change it to Control-D (ASCII 4) with -d). </p>
 <p> <code>Ascii-xfr</code> reads from <i>stdin</i> when receiving, and sends data on <i>stdout</i> when sending. Some form of input or output redirection to the modem device is thus needed when downloading or uploading, respectively.</p>

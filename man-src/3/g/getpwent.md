@@ -1,4 +1,5 @@
 ---
+
 title: "getpwent(3)"
 name: "getpwent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getpwent/"
 description: "getpwent, setpwent, endpwent – get password file entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;pwd.h&gt;
 #include &lt;sys/types.h&gt;
@@ -22,7 +22,6 @@ void endpwent(void);
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>getpwent</code>() function returns a pointer to a structure containing the broken-out fields of a record from the password database (e.g., the local password file <i>/etc/passwd</i>, NIS, and LDAP). The first time <code>getpwent</code>() is called, it returns the first entry; thereafter, it returns successive entries. </p>
 <p> The <code>setpwent</code>() function rewinds to the beginning of the password database. </p>
 <p> The <code>endpwent</code>() function is used to close the password database after all processing has been performed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dsbev(3)"
 name: "dsbev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsbev/"
 description: "dsbev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, INFO)<br />
  <i></i><code> DSBEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

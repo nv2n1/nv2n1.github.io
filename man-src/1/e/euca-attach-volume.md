@@ -1,4 +1,5 @@
 ---
+
 title: "euca-attach-volume(1)"
 name: "euca-attach-volume"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-attach-volume – Attach an EBS volume to an instance"
 
 <h2>NAME</h2>
 <p> euca-attach-volume &#8211; Attach an EBS volume to an instance</p>
-<h2>SYNOPSIS</h2>
 <p> euca-attach-volume <code>-i</code> INSTANCE <code>-d</code> DEVICE [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] VOLUME</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Attach an EBS volume to an instance</p>
 <h3>positional arguments:</h3>
 <dl>

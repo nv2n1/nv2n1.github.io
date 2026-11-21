@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-create(1)"
 name: "docker-container-create"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-container-create/"
 description: "docker-container-create – Create a new container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker container create [OPTIONS] IMAGE [COMMAND] [ARG&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Creates a writeable container layer over the specified image and prepares it for running the specified command. The container ID is then printed to STDOUT. This is similar to <code>docker run -d</code> except the container is never started. You can then use the <code>docker start </code> command to start the container at any point. </p>
 <p> The initial status of the container created with <code>docker create</code> is &#8216;created&#8217;. </p>
 <h3>OPTIONS</h3>

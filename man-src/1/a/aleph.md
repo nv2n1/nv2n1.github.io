@@ -1,4 +1,5 @@
 ---
+
 title: "aleph(1)"
 name: "aleph"
 section: "1"
@@ -6,9 +7,8 @@ letter: "a"
 url: "/docs/linux/man/1-aleph/"
 description: "aleph – extended Unicode TeX"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>aleph</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]  </p>
-<h2>DESCRIPTION</h2>
 <p> Run the Aleph typesetter on <i>file</i>, usually creating <i>file.dvi</i>. If the file argument has no extension, &quot;.tex&quot; will be appended to it. Instead of a filename, a set of Aleph commands can be given, the first of which must start with a backslash. With a <code>&amp;</code><i>format</i> argument Aleph uses a different set of precompiled commands, contained in <i>format</i><code>.fmt</code>; it is usually better to use the <code>-fmt</code> <i>format</i> option instead. </p>
 <p> Aleph is a version of the TeX program modified for multilingual typesetting. It uses Unicode, and has additional primitives for (among other things) bidirectional typesetting. </p>
 <p> Aleph&#8217;s command line options are similar to those of TeX. </p>

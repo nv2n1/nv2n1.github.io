@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-mkimage(1)"
 name: "grub2-mkimage"
 section: "1"
@@ -9,7 +10,6 @@ description: "grub-mkimage — Make a bootable GRUB image."
 
 <h2>NAME</h2>
 <p> <code>grub-mkimage</code> &#8212; Make a bootable GRUB image. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>grub-mkimage</code> [-c | &#8211;config=FILE<i>] [-C | &#8211;compression=(xz</i>,<i>none</i>,<i>auto</i>)]</p>
 <dl>
 <dt>
@@ -24,7 +24,6 @@ description: "grub-mkimage — Make a bootable GRUB image."
 <dt>
 </dt><dd> [-v | &#8211;verbose] <i>MODULES</i> </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>grub-mkimage</code> builds a bootable image of GRUB. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-resize(1)"
 name: "whisper-resize"
 section: "1"
@@ -13,7 +14,6 @@ description: "whisper-resize – resize a whisper database"
 <pre>
 whisper-resize path secondsPerPoint:pointsToStore [secondsPerPoint:pointsToStore]*
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command resizes a whisper fixed-size database. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

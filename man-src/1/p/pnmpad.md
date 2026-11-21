@@ -1,4 +1,5 @@
 ---
+
 title: "pnmpad(1)"
 name: "pnmpad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmpad/"
 description: "pnmpad – add borders to portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmpad </code> [<code>-verbose</code>] [<code>-white</code>|<code>-black</code>]<br />
  [[[<code>-width=</code><i>width</i> [<code>-halign=</code><i>ratio</i>]] |<br />
  [<code>-left=</code><i>leftpad</i>] [<code>-right=</code><i>rightpad</i>]]]<br />
@@ -15,7 +15,6 @@ description: "pnmpad – add borders to portable anymap"
  [<code>-top=</code><i>toppad</i>] [<code>-bottom=</code><i>botpad</i>]]]<br />
  [<i>pnmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PNM image as input. Outputs a PNM image that is the input image plus black or white borders of the sizes specified. </p>
 <p> If you just need to convert an image to a certain size regardless of the original dimensions, <code>pnmcut</code> with the <code>-pad</code> option may be a better choice. </p>
 <h2>OPTIONS</h2>

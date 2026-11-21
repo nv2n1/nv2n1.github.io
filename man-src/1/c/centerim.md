@@ -1,4 +1,5 @@
 ---
+
 title: "centerim(1)"
 name: "centerim"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-centerim/"
 description: "centerim – a text mode based IM client for Linux, *BSD, Sun Solaris, MacOS X and possibly, other Unices. ICQ2000, Yahoo!, AIM TOC, IRC, MSN, Gadu-Gadu and Jabber protocols are now supported. Intern..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>centerim</code> &#8211; a text mode based IM client for Linux, *BSD, Sun Solaris, MacOS X and possibly, other Unices. ICQ2000, Yahoo!, AIM TOC, IRC, MSN, Gadu-Gadu and Jabber protocols are now supported. Internal LiveJournal client and RSS reader are also provided.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>centerim </code> [ <code>option</code> ] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>centerim</code> command. </p>
 <p> <code>centerim</code> is a text mode menu- and window-driven IM interface. Currently ICQ2000, Yahoo!, AIM, IRC, MSN, Gadu-Gadu and Jabber protocols are supported. It allows you to send, receive, and forward messages, URLs, SMSes and, contacts, mass message send, search for users (including extended &quot;whitepages search&quot;), view users&#8217; details, maintain your contact list directly from the program (including non-icq contacts), view the messages history, register a new UIN and update your details, be informed on receiving email messages, automatically set away after the defined period of inactivity (on any console), and have your own ignore, visible and invisible lists. It can also associate events with sounds, add events to the outgoing queue from command line, define external event processing actions (like events auto-forwarding or elizatalk), has support for Hebrew and Arabic languages and allows to arrange contacts into groups. </p>
 <h2>OPTIONS</h2>

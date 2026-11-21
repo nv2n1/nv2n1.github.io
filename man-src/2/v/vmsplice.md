@@ -1,4 +1,5 @@
 ---
+
 title: "vmsplice(2)"
 name: "vmsplice"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-vmsplice/"
 description: "vmsplice – splice user pages to/from a pipe"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;fcntl.h&gt;
@@ -15,7 +15,6 @@ description: "vmsplice – splice user pages to/from a pipe"
 ssize_t vmsplice(int fd, const struct iovec *iov,
                  unsigned long nr_segs, unsigned int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> If <i>fd</i> is opened for writing, the <code>vmsplice</code>() system call maps <i>nr_segs</i> ranges of user memory described by <i>iov</i> into a pipe. If <i>fd</i> is opened for reading, the <code>vmsplice</code>() system call fills <i>nr_segs</i> ranges of user memory described by <i>iov</i> from a pipe. The file descriptor <i>fd</i> must refer to a pipe. </p>
 <p> The pointer <i>iov</i> points to an array of <i>iovec</i> structures as defined in <i>&lt;sys/uio.h&gt;</i>: </p>
 <p> struct iovec {<br />

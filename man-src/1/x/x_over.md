@@ -1,4 +1,5 @@
 ---
+
 title: "x_over(1)"
 name: "x_over"
 section: "1"
@@ -9,9 +10,7 @@ description: "x_over – Find and compute Cross-Over Errors"
 
 <h2>NAME</h2>
 <p> <code>x_over</code> &#8211; Find and compute Cross-Over Errors</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x_over</code> <i>leg_1</i> [ <i>leg_2</i> ] [ <code>-A</code> ] [ <code>-C</code> ] [ <code>-L</code> ] [ <code>-V</code> ] [ <code>-W</code><i>timegap</i> ] [ <code>-G</code><i>fact</i> ] [ <code>-M</code><i>fact</i> ] [ <code>-T</code><i>fact</i> ] [ <code>-N</code><i>np_int</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>x_over</code> is used to inspect two cruises to see if they intersect, and if so report the time, position, discrepancies in gravity/magnetics/bathymetry, heading for each track segment, and the average values of the geophysical observables at the cross-over point. The names of the legs are passed on the command line. If they are identical or only one name is passed, then <code>x_over</code> looks for internal cross-overs. The optional parameters are:</p>
 <dl>
 <dt><code>-A</code></dt>

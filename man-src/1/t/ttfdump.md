@@ -1,4 +1,5 @@
 ---
+
 title: "ttfdump(1)"
 name: "ttfdump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ttfdump/"
 description: "ttfdump – Dumping the contents of a TrueType Font file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ttfdump</code> [<code>-h</code>] [<code>-t</code> <i>tablename</i>] [<code>-g</code> <i>glyphnumber</i>] [<code>-c</code> <i>collection</i>] [<code>-o</code> <i>dumpfile</i>] [<code>-i</code>] <i>ttfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ttfdump</code> dumps the contents of a TrueType font file in ASCII form. A TrueType font file is consist of various tables. Those table are divided into two categories &#8211; <i>Required Tables</i> and <i>Optional Tables</i>. Mulitiple TrueType fonts can be merged to a TrueType Collection.</p>
 <h3>Options</h3>
 <dl>

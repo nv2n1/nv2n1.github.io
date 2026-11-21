@@ -1,4 +1,5 @@
 ---
+
 title: "clahr2(3)"
 name: "clahr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clahr2/"
 description: "clahr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clahr2</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
  <i></i><code>CLAHR2</code> reduces the specified number of first columns of a general rectangular matrix A so that elements below the specified subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>

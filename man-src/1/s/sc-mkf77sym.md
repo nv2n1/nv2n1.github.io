@@ -1,4 +1,5 @@
 ---
+
 title: "sc-mkf77sym(1)"
 name: "sc-mkf77sym"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-sc-mkf77sym/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sc-mkf77sym - The sc-mkf77sym program is used to generate symbols for linking FORTRAN subroutines into MPQC.
+sc-mkf77sym - The sc-mkf77sym program is used to generate symbols for linking FORTRAN subroutines into MPQC.
 
 <h2>Synopsis</h2>
 

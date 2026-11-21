@@ -1,4 +1,5 @@
 ---
+
 title: "portrelease(1)"
 name: "portrelease"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-portrelease/"
 description: "portrelease – release previously-reserved ports"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>portrelease</code> [<i>SVC</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>portrelease</code> program instructs the <code>portreserve</code> daemon to release the port associated with the given service configuration file. </dd>
 <p> It is intended that <code>portrelease</code> is run by the initscript of the service wanting the port. For example, the cups initscript might run <code>portrelease cups</code>.</p>
 <h2>EXIT CODE</h2>

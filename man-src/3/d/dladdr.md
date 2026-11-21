@@ -1,4 +1,5 @@
 ---
+
 title: "dladdr(3)"
 name: "dladdr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dladdr/"
 description: "dladdr, dladdr1 – translate address to symbolic information"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE
 #include &lt;dlfcn.h&gt;
@@ -15,7 +15,6 @@ int dladdr(void *addr, Dl_info *info);
 int dladdr1(void *addr, Dl_info *info, void **extra_info, int flags);
 Link with - ldl.
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The function <code>dladdr</code>() determines whether the address specified in <i>addr</i> is located in one of the shared objects loaded by the calling application. If it is, then <code>dladdr</code>() returns information about the shared object and symbol that overlaps <i>addr</i>. This information is returned in a <i>Dl_info</i> structure: </p>
 <p> typedef struct {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;const char&nbsp;*dli_fname;&nbsp;<wbr>&nbsp;/*&nbsp;Pathname of shared object that<br />

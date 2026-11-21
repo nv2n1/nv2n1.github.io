@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-load(1)"
 name: "docker-latest-load"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-load/"
 description: "docker-load – Load an image from a tar archive or STDIN"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker load</code> [<code>&#8211;help</code>] [<code>-i</code>|<code>&#8211;input</code>[=<i>INPUT</i>]] [<code>-q</code>|<code>&#8211;quiet</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> Loads a tarred repository from a file or the standard input stream. Restores both images and tags. Write image names or IDs imported it standard output stream. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code><br />

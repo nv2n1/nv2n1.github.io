@@ -1,4 +1,5 @@
 ---
+
 title: "qsub-torque(1)"
 name: "qsub-torque"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qsub-torque/"
 description: "qsub – submit pbs job"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> qsub [-a date_time] [-A account_string] [-b secs] [-c checkpoint_options] [-C directive_prefix] [-d path] [-D path] [-e path] [-f] [-h] [-I] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-M user_list] [-n node exclusive] [-N name] [-o path] [-p priority] [-P proxy_username[:group]] [-q destination] [-r c] [-S path_list] [-t array_request] [-T prologue/epilogue script_name] [-u user_list] [-v variable_list] [-V] [-w] path [-W additional_attributes] [-x] [-X] [-z] [script]</p>
-<h2>DESCRIPTION</h2>
 <p> To create a job is to submit an executable script to a batch server. The batch server will be the default server unless the <i> option is specified. See discussion of PBS_DEFAULT under Environment Variables below. Typically, the script is a shell script which will be executed by a command shell such as sh or csh. </p>
 <p> Options on the </i><code>qsub</code> command allow the specification of attributes which affect the behavior of the job. </p>
 <p> The qsub command will pass certain environment variables in the <i> </i><font SIZE="-1"><i> attribute of the job. These variables will be available to the job. The value for the following variables will be taken from the environment of the qsub command: </i><code>HOME</code>, <code>LANG</code>, <code>LOGNAME</code>, <code>PATH</code>, <code>MAIL</code>, <code>SHELL</code>, and <code>TZ</code>. These values will be assigned to a new name which is the current name prefixed with the string &quot;PBS_O_&quot;. For example, the job will have access to an environment variable named <code>PBS_O_HOME</code> which have the value of the variable <code>HOME</code> in the qsub command environment. </p>

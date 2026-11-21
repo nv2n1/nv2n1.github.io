@@ -1,4 +1,5 @@
 ---
+
 title: "markdown_py(1)"
 name: "markdown_py"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-markdown_py/"
 description: "markdown_py – a Python implementation of John Gruber’s Markdown."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>markdown_py [</code><i>options</i>] [<i>INPUT_FILE</i>]</p>
 <dl>
 <dt>
 </dt><dd> (STDIN is assumed if no INPUT_FILE is given) </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> Command-line Markdown compiler based on python-markdown module, with extensions support. </p>
 <h2>OPTIONS</h2>
 <dl>

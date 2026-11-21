@@ -1,4 +1,5 @@
 ---
+
 title: "arcrename(1)"
 name: "arcrename"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arcrename/"
 description: "arcrename – rename file or directory"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <code>arcrename</code> renames files or directories on grid storage elements and indexing services. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>arcrename [options] oldurl newurl</code> </p>
 <h2>OPTIONS</h2>
 <dl>

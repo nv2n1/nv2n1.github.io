@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-rustdoc(1)"
 name: "cargo-rustdoc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-rustdoc/"
 description: "cargo-rustdoc – Build a package’s documentation, using specified custom flags."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo rustdoc [OPTIONS] [&#8211;] [&lt;OPTS&gt;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The specified target for the current package (or package specified by SPEC if provided) will be documented with the specified &lt;OPTS&gt;&#8230; being passed to the final rustdoc invocation. Dependencies will not be documented as part of this command. Note that rustdoc will still unconditionally receive arguments such as -L, &#8211;extern, and &#8211;crate-type, and the specified &lt;OPTS&gt;&#8230; will simply be added to the rustdoc invocation. </p>
 <p> If the &#8211;package argument is given, then SPEC is a package id specification which indicates which package should be documented. If it is not given, then the current package is documented. For more information on SPEC and its format, see the cargo help pkgid command. </p>
 <h2>OPTIONS</h2>

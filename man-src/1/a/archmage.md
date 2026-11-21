@@ -1,4 +1,5 @@
 ---
+
 title: "archmage(1)"
 name: "archmage"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-archmage/"
 description: "archmage – CHM(Compiled HTML) Decompressor."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>archmage</code> <i>chmfile directory</i><br />
  <code>archmage</code> -p port <i>chmfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>archmage</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>arCHMage</code> is an extensible reader and decompiler for files in the CHM format. This is the format used by Microsoft HTML Help, and is also known as Compiled HTML. arCHMage is based on python-chm binding to chmlib from GnoCHM project.</p>
 <h2>USAGE</h2>

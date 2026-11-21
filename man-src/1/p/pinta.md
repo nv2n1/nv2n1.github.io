@@ -1,4 +1,5 @@
 ---
+
 title: "pinta(1)"
 name: "pinta"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pinta/"
 description: "Pinta – simple image editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pinta</code> <i>[&lt;file_name&gt;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Pinta is a drawing/editing program modeled on Paint.NET. Its goal is to provide a simplified alternative to the GIMP for casual users. </p>
 <p> Features include: </p>
 <p>&nbsp;&#8211; Adjustments&nbsp;(Auto level, Black and White, Sepia,&nbsp;…)<br />

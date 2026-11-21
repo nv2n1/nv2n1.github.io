@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-ical(1)"
 name: "pilot-read-ical"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-read-ical – Exports the DatebookDB and/or ToDo application
 <p> pilot-read-ical &#8211; Exports the DatebookDB and/or ToDo applications to ical format.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-read-ical</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;datebook</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;pubtext</code>&nbsp;<wbr>&nbsp;<wbr><code>pubtext</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file</code>&nbsp;<wbr>&nbsp;<wbr><i>file</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Note, this is not the same as the iCal calendar format. </p>
 <p>&nbsp;<wbr><i>pilot-read-ical</i>&nbsp;<wbr>allows the user to retrieve the contents of the ToDo and Datebook databases on a Palm handheld, and convert their contents to an Ical calendar. </p>
 <p> Note that the calendar file named by <i>filename</i> will be deleted, so do not use your main calendar. Instead, use a separate one for this purpose, and include it in your main calendar. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pg_receivexlog(1)"
 name: "pg_receivexlog"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pg_receivexlog/"
 description: "pg_receivexlog – streams transaction logs from a PostgreSQL cluster"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_receivexlog</code> [<i>option</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>pg_receivexlog is used to stream transaction log from a running PostgreSQL cluster. The transaction log is streamed using the streaming replication protocol, and is written to a local directory of files. This directory can be used as the archive location for doing a restore using point-in-time recovery (see Section 24.3, &#8220;Continuous Archiving and Point-in-Time Recovery (PITR)&#8221;, in the documentation). </dd>
 <p> pg_receivexlog streams the transaction log in real time as it&#8217;s being generated on the server, and does not wait for segments to complete like archive_command does. For this reason, it is not necessary to set archive_timeout when using pg_receivexlog. </p>
 <p> The transaction log is streamed over a regular PostgreSQL connection, and uses the replication protocol. The connection must be made with a superuser or a user having REPLICATION permissions (see Section 20.2, &#8220;Role Attributes&#8221;, in the documentation), and pg_hba.conf must explicitly permit the replication connection. The server must also be configured with max_wal_senders set high enough to leave at least one session available for the stream. </p>

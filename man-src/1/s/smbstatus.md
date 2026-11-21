@@ -1,4 +1,5 @@
 ---
+
 title: "smbstatus(1)"
 name: "smbstatus"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-smbstatus/"
 description: "smbstatus – report on current Samba connections"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbstatus [-P] [-b] [-d&nbsp;<wbr>&lt;debug level&gt;] [-v] [-L] [-B] [-p] [-S] [-N] [-f] [-s&nbsp;<wbr>&lt;configuration file&gt;] [-u&nbsp;<wbr>&lt;username&gt;] [-n|&#8211;numeric] [-R|&#8211;profile-rates]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbstatus is a very simple program to list the current Samba connections.</p>
 <h2>OPTIONS</h2>

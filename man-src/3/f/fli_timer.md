@@ -1,4 +1,5 @@
 ---
+
 title: "fli_timer(3)"
 name: "fli_timer"
 section: "3"
@@ -9,10 +10,8 @@ description: "fli_timer – Global variable for timing FLI playback. Allegro gam
 
 <h2>NAME</h2>
 <p> fli_timer &#8211; Global variable for timing FLI playback. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern volatile int fli_timer;</code></p>
-<h2>DESCRIPTION</h2>
 <p> Global variable for timing FLI playback. When you open an FLI file, a timer interrupt is installed which increments this variable every time a new frame should be displayed. Calling next_fli_frame() decrements it, so you can test it and know that it is time to display a new frame if it is greater than zero. Example: </p>
 <pre><code>
 while (next_fli_frame(0) == FLI_OK) {

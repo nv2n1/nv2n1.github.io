@@ -1,4 +1,5 @@
 ---
+
 title: "gif2png(1)"
 name: "gif2png"
 section: "1"
@@ -9,11 +10,9 @@ description: "gif2png – convert GIFs to PNGs"
 
 <h2>NAME</h2>
 <p> gif2png &#8211; convert GIFs to PNGs</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 gif2png[-bdfghinprsvwO][file.[gif]...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gif2png</code> program converts files in the obsolescent and patent-encumbered Graphic Interchange Format (GIF) to Portable Network Graphics (PNG) format, an open W3C standard. </p>
 <p> Normally <code>gif2png</code> converts each file named on the command line, leaving the original in place. If a name does not have a .gif extension, the unmodified name will be tried first, followed by the name with .gif appended. For each file named `foo.gif&#8217;, a foo.png will be created. </p>
 <p> When a multi-image GIF file named foo.gif is converted, gif2png creates multiple PNG files, each containing one frame; their names will be foo.png, foo.p01, foo.p02 etc. </p>

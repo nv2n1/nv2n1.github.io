@@ -1,4 +1,5 @@
 ---
+
 title: "infotocap(1)"
 name: "infotocap"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-infotocap/"
 description: "infotocap – convert a terminfo description into a termcap description"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>infotocap</code> &#8211; convert a <i>terminfo</i> description into a <i>termcap</i> description </p>
-<h2>SYNOPSIS</h2>
 <p> <code>infotocap</code> [<code>-v</code><i>n</i> <i>width</i>] [<code>-V</code>] [<code>-1</code>] [<code>-w</code> <i>width</i>] <i>file</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>infotocap</code> looks in each given text <i>file</i> for <code>terminfo</code> descriptions. For each terminfo description found, an equivalent <code>termcap</code> description is written to standard output. Terminfo <code>use</code> capabilities are translated directly to termcap <code>tc</code> capabilities.</p>
 <dl>
 <dt><code>-v</code></dt>

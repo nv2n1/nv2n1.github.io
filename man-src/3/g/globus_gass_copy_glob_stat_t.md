@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_glob_stat_t(3)"
 name: "globus_gass_copy_glob_stat_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_gass_copy_glob_stat_t –"
 ---
 
 <p> Glob expanded entry information.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_copy.h&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>globus_gass_copy_glob_entry_t</code> <code>type</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "potrace(1)"
 name: "potrace"
 section: "1"
@@ -9,11 +10,9 @@ description: "potrace – transform bitmaps into vector graphics."
 
 <h2>NAME</h2>
 <p> potrace &#8211; transform bitmaps into vector graphics.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 potrace[options][filename...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>potrace</code> is a tool for tracing a bitmap, which means, transforming a bitmap into a smooth, scalable image. The input is a bitmap, which means, a pixel-based image composed of the two colors black and white only. The output is EPS, PDF, SVG, or one of a number of other vector formats. A typical use is to create vector graphics from scanned data, such as company or university logos, handwritten notes, etc. The resulting image is not &quot;jaggy&quot; like a bitmap, but smooth. It can then be rendered at any resolution. </p>
 <p> <code>potrace</code> can read bitmaps in the following formats: PBM, PGM, PPM (collectively known as PNM, see <a href="/docs/linux/man/5-pnm/">pnm</a>(5)), as well as BMP (Windows and OS/2 bitmap formats). The input image should only use the two colors black and white. If other pixel values appear in the input, they will be converted to black and white using a simple threshold method. </p>
 <p> <code>potrace</code> can currently produce the following output formats: EPS, PostScript, PDF, SVG, DXF, GeoJSON, PGM, Gimppath, and XFig. Additional backends might be added in the future.</p>

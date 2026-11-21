@@ -1,4 +1,5 @@
 ---
+
 title: "anjuta(1)"
 name: "anjuta"
 section: "1"
@@ -11,7 +12,6 @@ description: "anjuta – GNOME Integrated Development Environment"
 <p> anjuta &#8211; GNOME Integrated Development Environment</p>
 <h2>SYNTAX</h2>
 <p> anjuta [<i>option</i>] [<i>files &#8230; </i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Anjuta is a GNOME IDE and can be used to create either GNOME/GTK+ applications with glade or glade-gnome, or can be used for creating generic applications. It is primarily designed for use with C/C++ and features an easy to use debugger and compilation environment.</p>
 <h2>OPTIONS</h2>
 <dl>

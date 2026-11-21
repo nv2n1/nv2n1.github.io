@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-objcopy-14(1)"
 name: "llvm-objcopy-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-objcopy-14/"
 description: "llvm-objcopy – object copying and editing tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-objcopy</code> [<i>options</i>] <i>input</i> [<i>output</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-objcopy</code> is a tool to copy and manipulate objects. In basic usage, it makes a semantic copy of the input to the output. If any options are specified, the output may be modified along the way, e.g. by removing sections. </p>
 <p> If no output file is specified, the input file is modified in-place. If “-” is specified for the input file, the input is read from the program’s standard input stream. If “-” is specified for the output file, the output is written to the standard output stream of the program. </p>
 <p> If the input is an archive, any requested operations will be applied to each archive member individually. </p>

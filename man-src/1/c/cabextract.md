@@ -1,4 +1,5 @@
 ---
+
 title: "cabextract(1)"
 name: "cabextract"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cabextract/"
 description: "cabextract – program to extract files from Microsoft cabinet (.cab) archives"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cabextract</code> [<code>-d</code><i>dir</i><code>]</code> [<code>-f</code>] [<code>-F</code><i>pattern</i><code>]</code> [<code>-h</code>] [<code>-l</code>] [<code>-L</code>] [<code>-p</code>] [<code>-q</code>] [<code>-s</code>] [<code>-t</code>] [<code>-v</code>] <i> cabinet files &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>cabextract</code> is a program that un-archives files in the Microsoft cabinet file format (.cab) or any binary file which contains an embedded cabinet file (frequently found in .exe files). </p>
 <p> <code>cabextract</code> will extract all files from all cabinet files specified on the command line. </p>
 <p> To extract a multi-part cabinet consisting of several files, only the <i>first</i> cabinet file needs to be given as an argument to <code>cabextract</code> as it will automatically look for the remaining files. To prevent <code>cabextract</code> from extracting cabinet files you did not specify, use the <code>-s</code> option.</p>

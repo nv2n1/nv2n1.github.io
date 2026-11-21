@@ -1,4 +1,5 @@
 ---
+
 title: "xplanet(1)"
 name: "xplanet"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xplanet/"
 description: "xplanet – render an image of a planet into an X window or file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xplanet</code> <i>[options]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Xplanet </code> is similar to Xearth, where an image of the earth is rendered into an X window. All of the major planets and most satellites can be drawn. A number of different map projections are also supported, including azimuthal, Mercator, Mollweide, orthographic, and rectangular. The latest version can always be found at <a rel="nofollow" href="http://xplanet.sourceforge.net.">http://xplanet.sourceforge.net.</a> </p>
 <h2>OPTIONS</h2>
 <p> Options need only be specified with enough characters to be unambiguous. Valid options to Xplanet are: </p>

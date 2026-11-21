@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-synchronisation(1)"
 name: "beakerlib-synchronisation"
 section: "1"
@@ -6,14 +7,9 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-synchronisation/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+BeakerLib - synchronisation - Process synchronisation routines 
 
- BeakerLib - synchronisation - Process synchronisation routines 
-
-<h2>DESCRIPTION</h2>
-
- This is a library of helpers for process synchronisation of applications. 
+This is a library of helpers for process synchronisation of applications. 
 
  <font SIZE="-1">NOTE:</font> none of this commands will cause the test proper to fail, even in case of critical errors during their invocation. If you want your test to fail if those test fail, use their return codes and <i>rlFail()</i>.
 

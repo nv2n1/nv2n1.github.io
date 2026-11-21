@@ -1,4 +1,5 @@
 ---
+
 title: "cgeqpf(3)"
 name: "cgeqpf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgeqpf/"
 description: "cgeqpf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeqpf</code> (M, N, A, LDA, JPVT, TAU, WORK, RWORK, INFO)<br />
  <i></i><code>CGEQPF</code></p>

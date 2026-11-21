@@ -1,4 +1,5 @@
 ---
+
 title: "clarfgp(3)"
 name: "clarfgp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clarfgp/"
 description: "clarfgp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarfgp</code> (N, ALPHA, X, INCX, TAU)<br />
  <i></i><code>CLARFGP</code> generates an elementary reflector (Householder matrix) with non-negatibe beta.</p>

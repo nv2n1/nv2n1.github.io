@@ -1,4 +1,5 @@
 ---
+
 title: "besside-ng-crawler(1)"
 name: "besside-ng-crawler"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-besside-ng-crawler/"
 description: "besside-ng-crawler – filter EAPOL frames from a directory of capture files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>besside-ng-crawler</code> &lt;Input Directory&gt; &lt;Output File&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>besside-ng-crawler</code> </p>
 <p> Scans recursively on input directory looking for pcap dumpfiles and filters out one beacon and all EAPOL frames for the WPA networks if finds in them. </p>
 <p> This tool is intended to crawl capfiles to upload them to sorbo&#8217;s WPA statistic server at <a rel="nofollow" href="http://www.darkircop.org">http://www.darkircop.org</a> </p>

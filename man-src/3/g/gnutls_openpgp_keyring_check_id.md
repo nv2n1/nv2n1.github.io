@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_keyring_check_id(3)"
 name: "gnutls_openpgp_keyring_check_id"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_openpgp_keyring_check_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_keyring_check_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_keyring_check_id(gnutls_openpgp_keyring_t </code><i>ring</i><code>, const gnutls_openpgp_keyid_t </code><i>keyid</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_openpgp_keyring_check_id – API function"
 <dd> will hold the keyid to check for.</dd>
 <dt>unsigned int flags</dt>
 <dd> unused (should be 0)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Check if a given key ID exists in the keyring.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success (if keyid exists) and a negative error code on failure.</p>

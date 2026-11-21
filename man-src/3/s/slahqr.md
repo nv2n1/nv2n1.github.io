@@ -1,4 +1,5 @@
 ---
+
 title: "slahqr(3)"
 name: "slahqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slahqr/"
 description: "slahqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slahqr</code> (WANTT, WANTZ, N, ILO, IHI, H, LDH, WR, WI, ILOZ, IHIZ, Z, LDZ, INFO)<br />
  <i></i><code>SLAHQR</code> computes the eigenvalues and Schur factorization of an upper Hessenberg matrix, using the double-shift/single-shift QR algorithm.</p>

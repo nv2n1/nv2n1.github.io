@@ -1,4 +1,5 @@
 ---
+
 title: "dvdxchap(1)"
 name: "dvdxchap"
 section: "1"
@@ -9,9 +10,7 @@ description: "dvdxchap – Extract chapter information from DVDs"
 
 <h2>NAME</h2>
 <p> dvdxchap &#8211; Extract chapter information from DVDs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dvdxchap</code> [<i>options</i>] <i>DVD-SOURCE</i></p>
-<h2>DESCRIPTION</h2>
 <p> This program extracts chapter information from a DVD and displays it in a form usable by <code><a href="/docs/linux/man/1-ogmmerge/">ogmmerge</a>(1)</code>.</p>
 <dl>
 <dt><code>-t</code>, <code>&#8211;title</code> <i>num</i></dt>

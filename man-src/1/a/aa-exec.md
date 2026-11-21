@@ -1,4 +1,5 @@
 ---
+
 title: "aa-exec(1)"
 name: "aa-exec"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aa-exec/"
 description: "aa-exec – confine a program with the specified AppArmor profile"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aa-exec</code> [options] [&#8211;] [<i>&lt;command&gt;</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>aa-exec</code> is used to launch a program confined by the specified profile and or namespace. If both a profile and namespace are specified command will be confined by profile in the new policy namespace. If only a namespace is specified, the profile name of the current confinement will be used. If neither a profile or namespace is specified command will be run using standard profile attachment (ie. as if run without the aa-exec command). </p>
 <p> If the arguments are to be pasted to the <i>&lt;command&gt;</i> being invoked by aa-exec then &#8212; should be used to separate aa-exec arguments from the command.<br />
 &nbsp;<wbr>&nbsp;aa-exec -p profile1 &#8212; ls -l</p>

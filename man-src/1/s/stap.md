@@ -1,4 +1,5 @@
 ---
+
 title: "stap(1)"
 name: "stap"
 section: "1"
@@ -6,9 +7,9 @@ letter: "s"
 url: "/docs/linux/man/1-stap/"
 description: "stap – systemtap script translator/driver"
 ---
+
 <h2>NAME</h2>
 <p> stap - systemtap script translator/driver </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  <code>stap</code> [ <i>OPTIONS</i> ] <i>FILENAME</i> [ <i>ARGUMENTS</i> ] <br />
  <code>stap</code> [ <i>OPTIONS</i> ] <code>-</code> [ <i>ARGUMENTS</i> ] <br />
@@ -18,7 +19,6 @@ description: "stap – systemtap script translator/driver"
  <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-probe-types</code> <br />
  <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-probe-aliases</code> <br />
  <code>stap</code> [ <i>OPTIONS</i> ] <code>--dump-functions</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>stap</i> program is the front-end to the Systemtap tool. It accepts probing instructions written in a simple domain-specific language, translates those instructions into C code, compiles this C code, and loads the resulting module into a running Linux kernel or a DynInst user-space mutator, to perform the requested system trace/probe functions. You can supply the script in a named file (FILENAME), from standard input (use - instead of FILENAME), or from the command line (using -e SCRIPT). The program runs until it is interrupted by the user, or if the script voluntarily invokes the <i>exit()</i> function, or by sufficient number of soft errors. </p>
 <p> The language, which is described the <i>SCRIPT LANGUAGE</i> section below, is strictly typed, expressive, declaration free, procedural, prototyping-friendly, and inspired by <i>awk</i> and <i>C</i>. It allows source code points or events in the system to be associated with handlers, which are subroutines that are executed synchronously. It is somewhat similar conceptually to &quot;breakpoint command lists&quot; in the <i>gdb</i> debugger. </p>
 <h2>DOCUMENTATION OVERVIEW</h2>

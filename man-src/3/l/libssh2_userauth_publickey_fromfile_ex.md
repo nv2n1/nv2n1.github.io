@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_publickey_fromfile_ex(3)"
 name: "libssh2_userauth_publickey_fromfile_ex"
 section: "3"
@@ -9,7 +10,6 @@ description: "libssh2_userauth_publickey_fromfile – authenticate a session wit
 
 <h2>NAME</h2>
 <p> libssh2_userauth_publickey_fromfile &#8211; authenticate a session with a public key, read from a file</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <pre><code>
 int libssh2_userauth_publickey_fromfile_ex(LIBSSH2_SESSION *session,
@@ -18,7 +18,6 @@ int libssh2_userauth_publickey_fromfile_ex(LIBSSH2_SESSION *session,
                                            const char *privatekey,
                                            const char *passphrase);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>username</i> &#8211; Pointer to user name to authenticate as. </p>
 <p> <i>username_len</i> &#8211; Length of <i>username</i>. </p>

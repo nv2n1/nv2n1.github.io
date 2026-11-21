@@ -1,4 +1,5 @@
 ---
+
 title: "euare-assumerole(1)"
 name: "euare-assumerole"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-assumerole – Assume an IAM role"
 
 <h2>NAME</h2>
 <p> euare-assumerole &#8211; Assume an IAM role</p>
-<h2>SYNOPSIS</h2>
 <p> euare-assumerole [-d SECONDS] [&#8211;session-name PATH] [-c | <code>-s]</code></p>
 <dl>
 <dt>[&#8211;policy-content POLICY_CONTENT | <code>&#8211;policy-document</code> FILE]</dt>
 <dd> [&#8211;external-id STR] [&#8211;mfa-serial MFA] [&#8211;mfa-code CODE] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ROLE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Assume an IAM role</p>
 <h2>DESCRIPTION</h2>
 <p> The euare-assumerole utility obtains credentials for an IAM role and outputs them in the form of shellcode that sets environment variables that allow euca2ools commands to use them. Use it inside an eval command to make this process seamless:</p>

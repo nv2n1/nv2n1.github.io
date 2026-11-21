@@ -1,4 +1,5 @@
 ---
+
 title: "dlacpy(3)"
 name: "dlacpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlacpy/"
 description: "dlacpy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlacpy</code> (UPLO, M, N, A, LDA, B, LDB)<br />
  <i></i><code>DLACPY</code> copies all or part of one two-dimensional array to another.</p>

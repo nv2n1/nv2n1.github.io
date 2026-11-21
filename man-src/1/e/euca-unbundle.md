@@ -1,4 +1,5 @@
 ---
+
 title: "euca-unbundle(1)"
 name: "euca-unbundle"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-unbundle – Recreate an image from its bundled parts"
 
 <h2>NAME</h2>
 <p> euca-unbundle &#8211; Recreate an image from its bundled parts</p>
-<h2>SYNOPSIS</h2>
 <p> euca-unbundle <code>-m</code> FILE [-s DIR] [-d DIR] [-k FILE]</p>
 <dl>
 <dt>[&#8211;progress | <code>&#8211;no-progress]</code> [&#8211;region USER [at] REGION]</dt>
 <dd> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Recreate an image from its bundled parts</p>
 <h2>DESCRIPTION</h2>
 <p> The key used to unbundle the image must match a certificate that was used to bundle it.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmtstitch(1)"
 name: "gmtstitch"
 section: "1"
@@ -9,9 +10,7 @@ description: "gmtstitch – Join line segments whose end points match within tol
 
 <h2>NAME</h2>
 <p> gmtstitch &#8211; Join line segments whose end points match within tolerance</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtstitch</code> [ <i>infiles</i> ] [ <code>-C</code>[<i>closed</i>] ] [ <code>-D</code>[<i>template</i>] ] [ <code>-H</code>[<code>i</code>][<i>nrec</i>] ] [ <code>-L</code>[<i>linkfile</i>] ] [ <code>-Q</code>[<i>template</i>] ] [ <code>-T</code><i>cutoff</i>[<code>m</code>|<code>c</code>|<code>e</code>|<code>E</code>|<code>k</code>|<code>K</code>][/<i>nn_dist</i>] ] [ <code>-V</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] [ <code>-b</code>[<code>i</code>|<code>o</code>][<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-bo</code>[<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-m</code>[<code>i</code>|<code>o</code>][<i>flag</i>] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmtstitch</code> reads one or more data files (which may be multisegment files; see <code>-m</code>) and examines the coordinates of the end points of all line segments. If a pair of end points are identical or closer to each other than the specified separation tolerance then the two line segments are joined into a single segment. The process repeats until all the remaining endpoints no longer pass the tolerance test; the resulting segments are then written out to standard output. It it is not clear what the separation tolerance should be then use <code>-L</code> to get a list of all separation distances and analyze them to determine a suitable cutoff.</p>
 <dl>
 <dt><i>file(s)</i></dt>

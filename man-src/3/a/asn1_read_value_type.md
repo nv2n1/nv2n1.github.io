@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_read_value_type(3)"
 name: "asn1_read_value_type"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_read_value_type – API function"
 
 <h2>NAME</h2>
 <p> asn1_read_value_type &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_read_value_type(asn1_node </code><i>root</i><code>, const char * </code><i>name</i><code>, void * </code><i>ivalue</i><code>, int * </code><i>len</i><code>, unsigned int * </code><i>etype</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "asn1_read_value_type – API function"
 <dd> number of bytes of *value: value[0]..value[len-1]. Initialy holds the sizeof value.</dd>
 <dt>unsigned int * etype</dt>
 <dd> The type of the value read (ASN1_ETYPE)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Returns the type and value of one element inside a structure. If an element is OPTIONAL and this returns <code>ASN1_ELEMENT_NOT_FOUND</code>, it means that this element wasn&#8217;t present in the der encoding that created the structure. The first element of a SEQUENCE_OF or SET_OF is named &quot;?1&quot;. The second one &quot;?2&quot; and so on. If the <i>root</i> provided is a node to specific sequence element, then the keyword &quot;?CURRENT&quot; is also acceptable and indicates the current sequence element of this node. </p>
 <p> Note that there can be valid values with length zero. In these case this function will succeed and <i>len</i> will be zero.</p>
 <h2>INTEGER</h2>

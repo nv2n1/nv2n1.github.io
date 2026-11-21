@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_remove_tree(3)"
 name: "hdf_remove_tree"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_remove_tree/"
 description: "hdf_remove_tree – delete a subtree of an HDF dataset Description: Input: Output: Returns:"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "atasm(1)"
 name: "atasm"
 section: "1"
@@ -9,9 +10,7 @@ description: "atasm – assembler targeted for the 6502 CPU with Atari-specific 
 
 <h2>NAME</h2>
 <p> atasm &#8211; assembler targeted for the 6502 CPU with Atari-specific features</p>
-<h2>SYNOPSIS</h2>
 <p> <code>atasm [</code><i>options</i><code>] </code><i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>atasm</code> assembles 6502 code to an Atari DOS executable, an Atari XFD disk image, or a raw binary file. </p>
 <p> The syntax used is compatible with the Atari 8-bit assembler MAC/65, with a few extensions (notably 6502 illegal opcode support)</p>
 <h2>OPTIONS</h2>

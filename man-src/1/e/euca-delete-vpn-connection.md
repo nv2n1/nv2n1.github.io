@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-vpn-connection(1)"
 name: "euca-delete-vpn-connection"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-delete-vpn-connection – Delete a VPN connection"
 
 <h2>NAME</h2>
 <p> euca-delete-vpn-connection &#8211; Delete a VPN connection</p>
-<h2>SYNOPSIS</h2>
 <p> euca-delete-vpn-connection [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] VPNCONN</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a VPN connection</p>
 <h3>positional arguments:</h3>
 <dl>

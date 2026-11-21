@@ -1,4 +1,5 @@
 ---
+
 title: "jhead(1)"
 name: "jhead"
 section: "1"
@@ -9,9 +10,7 @@ description: "jhead – Digicam JPEG Exif header manipulation tool"
 
 <h2>NAME</h2>
 <p> jhead &#8211; Digicam JPEG Exif header manipulation tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jhead</code> [ <i>options</i> ] [ <i>file&#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>jhead</code> is used to display and manipulate data contained in the Exif header of JPEG images from digital cameras. By default, jhead displays the more useful camera settings from the file in a user-friendly format. </p>
 <p> <code>jhead</code> can also be used to manipulate some aspects of the image relating to JPEG and Exif headers, such as changing the internal timestamps, removing the thumbnail, or transferring Exif headers back into edited images after graphical editors deleted the Exif header. <code>jhead</code> can also be used to launch other programs, similar in style to the UNIX <code>find</code> command, but much simpler. </p>
 <h2>GENERAL METADATA OPTIONS</h2>

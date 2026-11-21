@@ -1,4 +1,5 @@
 ---
+
 title: "tcdemux(1)"
 name: "tcdemux"
 section: "1"
@@ -9,13 +10,11 @@ description: "tcdemux – demultiplex a program stream"
 
 <h2>NAME</h2>
 <p> tcdemux &#8211; demultiplex a program stream</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tcdemux</code></dt>
 <dd> <code>-i</code> <i>name</i> [ <code>-t</code> <i>magic</i> ] [ <code>-x</code> <i>codec</i> ] [ <code>-S</code> <i>unit,[s1-s2]</i> ] [ <code>-a</code> <i>ach,[vch]</i> ] [ <code>-s</code> <i>0xnn</i> ] [ <code>-M</code> <i>mode</i> ] [ <code>-f</code> <i>fps</i> ] [ <code>-W</code> ] [ <code>-O</code> ] [ <code>-P</code> <i>name</i> ] [ <code>-A</code> <i>n[,m[,&#8230;]]</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcdemux</code> is Copyright (C) by Thomas Oestreich.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcdemux</code> is part of and usually called by <code>transcode</code>.<br />
  However, it can also be used independently.<br />
  <code>tcdemux</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>

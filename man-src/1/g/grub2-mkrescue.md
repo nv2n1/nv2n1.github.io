@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-mkrescue(1)"
 name: "grub2-mkrescue"
 section: "1"
@@ -9,7 +10,6 @@ description: "grub-mkrescue — Generate a GRUB rescue image using GNU Xorriso."
 
 <h2>NAME</h2>
 <p> grub-mkrescue &#8212; Generate a GRUB rescue image using GNU Xorriso. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>grub-mkrescue</code> [-o | &#8211;output=<i>FILE</i>] [&#8211;modules=<i>MODULES</i>]</p>
 <dl>
 <dt>
@@ -39,7 +39,6 @@ description: "grub-mkrescue — Generate a GRUB rescue image using GNU Xorriso."
 <dt>
 </dt><dd> [&#8211;sparc-boot] [&#8211;arcs-boot] </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>grub-mkrescue</code> can be used to generate a rescue image with the GRUB bootloader. </p>
 <h2>OPTIONS</h2>
 <dl>

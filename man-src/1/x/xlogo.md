@@ -1,4 +1,5 @@
 ---
+
 title: "xlogo(1)"
 name: "xlogo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xlogo/"
 description: "xlogo – X Window System logo"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xlogo</code> [-<i>toolkitoption</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xlogo</i> program displays the X Window System logo.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xlogo</i> accepts all of the standard X Toolkit command line options, as well as the following:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fmaf(3)"
 name: "fmaf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fmaf/"
 description: "fma, fmaf, fmal – floating-point multiply and add"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double fma(double x, double y, double z);
@@ -20,7 +20,6 @@ long double fmal(long double x, long double y, long double z);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions compute <i>x</i> * <i>y</i> + <i>z</i>. The result is rounded as one ternary operation according to the current rounding mode (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)).</p>
 <h2>RETURN VALUE</h2>
 <p> These functions return the value of <i>x</i> * <i>y</i> + <i>z</i>, rounded as one ternary operation. </p>

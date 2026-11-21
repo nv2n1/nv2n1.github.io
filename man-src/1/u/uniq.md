@@ -1,4 +1,5 @@
 ---
+
 title: "uniq(1)"
 name: "uniq"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-uniq/"
 description: "uniq – report or omit repeated lines"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>uniq</code> [<i>,OPTION/</i>]&#8230; [<i>,INPUT /</i>[<i>,OUTPUT/</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> Filter adjacent matching lines from INPUT (or standard input), writing to OUTPUT (or standard output). </p>
 <p> With no options, matching lines are merged to the first occurrence. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

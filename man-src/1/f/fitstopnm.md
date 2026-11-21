@@ -1,4 +1,5 @@
 ---
+
 title: "fitstopnm(1)"
 name: "fitstopnm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fitstopnm/"
 description: "fitstopnm – convert a FITS file into a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fitstopnm</code> [<code>-image</code> <i>N</i>] [<code>-noraw</code>] [<code>-scanmax</code>] [<code>-printmax</code>] [<code>-min</code> <i>f</i>] [<code>-max</code> <i>f</i>] [<i>FITSfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a FITS file as input. Produces a portable pixmap if the FITS file consists of 3 image planes (NAXIS = 3 and NAXIS3 = 3), a portable graymap if the FITS file consists of 2 image planes (NAXIS = 2), or whenever the <code>-image </code> flag is specified. The results may need to be flipped top for bottom; if so, just pipe the output through <code>pnmflip -tb.</code></p>
 <h2>OPTIONS</h2>
 <p> The <code>-image</code> option is for FITS files with three axes. The assumption is that the third axis is for multiple images, and this option lets you select which one you want. </p>

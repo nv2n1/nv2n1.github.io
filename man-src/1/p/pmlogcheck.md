@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogcheck(1)"
 name: "pmlogcheck"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmlogcheck – checks for invalid data in a PCP archive"
 
 <h2>NAME</h2>
 <p> <code>pmlogcheck</code> &#8211; checks for invalid data in a PCP archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmlogcheck</code> [<code>-lz</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-S</code> <i>start</i>] [<code>-T</code> <i>finish</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmlogcheck</code> prints information about the nature of any invalid data which it detects in the files of a PCP archive. </p>
 <p> The archive has the base name <i>archive</i> and must have been previously created using <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
 <p> Normally <code>pmlogcheck</code> operates on the default Performance Metrics Name Space (<code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)), however if the <code>-n</code> option is specified an alternative namespace is loaded from the file <i>pmnsfile</i>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rsa_params_export_pkcs1(3)"
 name: "gnutls_rsa_params_export_pkcs1"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_rsa_params_export_pkcs1 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_params_export_pkcs1 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_params_export_pkcs1(gnutls_rsa_params_t </code><i>params</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, unsigned char * </code><i>params_data</i><code>, size_t * </code><i>params_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_rsa_params_export_pkcs1 – API function"
 <dd> will contain a PKCS1 RSAPrivateKey structure PEM or DER encoded</dd>
 <dt>size_t * params_data_size</dt>
 <dd> holds the size of params_data (and will be replaced by the actual size of parameters)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the given RSA parameters to a PKCS1 RSAPrivateKey structure. If the buffer provided is not long enough to hold the output, then GNUTLS_E_SHORT_MEMORY_BUFFER will be returned. </p>
 <p> If the structure is PEM encoded, it will have a header of &quot;BEGIN RSA PRIVATE KEY&quot;.</p>
 <h2>RETURNS</h2>

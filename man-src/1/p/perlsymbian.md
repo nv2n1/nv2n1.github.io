@@ -1,4 +1,5 @@
 ---
+
 title: "perlsymbian(1)"
 name: "perlsymbian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlsymbian/"
 description: "perlsymbian – Perl version 5 on Symbian OS"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes various features of the Symbian operating system that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs. </p>
 <p> <font SIZE="-1"><code>NOTE:</code></font><code> this port (as of 0.4.1) does not compile into a Symbian </code><font SIZE="-1"><code>OS GUI</code></font><code> application, but instead it results in a Symbian </code><font SIZE="-1"><code>DLL.</code></font> The <font SIZE="-1">DLL</font> includes a C<font SIZE="-2">++</font> class called CPerlBase, which one can then (derive from and) use to embed Perl into applications, see <i>symbian/README</i>. </p>
 <p> The base port of Perl to Symbian only implements the basic POSIX-like functionality; it does not implement any further Symbian or Series 60, Series 80, or <font SIZE="-1">UIQ</font> bindings for Perl. </p>

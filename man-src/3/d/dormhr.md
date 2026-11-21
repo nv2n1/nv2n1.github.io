@@ -1,4 +1,5 @@
 ---
+
 title: "dormhr(3)"
 name: "dormhr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dormhr/"
 description: "dormhr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dormhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>DORMHR</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jdeps(1)"
 name: "jdeps"
 section: "1"
@@ -9,7 +10,6 @@ description: "jdeps – Java class dependency analyzer."
 
 <h2>NAME</h2>
 <p> jdeps &#8211; Java class dependency analyzer.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>jdeps</code> [<i>options</i>] <i>classes</i> ...
 </pre>
@@ -18,7 +18,6 @@ description: "jdeps – Java class dependency analyzer."
 <dd> Command-line options. See Options.</dd>
 <dt><i>classes</i></dt>
 <dd> Name of the classes to analyze. You can specify a class that can be found in the class path, by its file name, a directory, or a JAR file.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <i></i><code>jdeps</code> command shows the package-level or class-level dependencies of Java class files. The input class can be a path name to a <code>.class</code> file, a directory, a JAR file, or it can be a fully qualified class name to analyze all class files. The options determine the output. By default, <code>jdeps</code> outputs the dependencies to the system output. It can generate the dependencies in DOT language (see the <code>-dotoutput</code> option).</p>
 <h2>OPTIONS</h2>
 <dl>

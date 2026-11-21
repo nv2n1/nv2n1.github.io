@@ -1,4 +1,5 @@
 ---
+
 title: "rdfind(1)"
 name: "rdfind"
 section: "1"
@@ -9,9 +10,7 @@ description: "rdfind – finds duplicate files"
 
 <h2>NAME</h2>
 <p> rdfind &#8211; finds duplicate files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rdfind [ options ] </code> <i>directory1 | file1</i> <code>[</code> <i>directory2 | file2</i> <code>] &#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>rdfind</code> finds duplicate files across and/or within several directories. It calculates checksum only if necessary. rdfind runs in O(Nlog(N)) time with N being the number of files. </p>
 <p> If two (or more) equal files are found, the program decides which of them is the original and the rest are considered duplicates. This is done by ranking the files to each other and deciding which has the highest rank. See section RANKING for details. </p>
 <p> If you need better control over the ranking than given, you can use some preprocessor which sorts the file names in desired order and then run the program using xargs. See examples below for how to use find and xargs in conjunction with rdfind. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "loggen(1)"
 name: "loggen"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-loggen/"
 description: "loggen – Generate syslog messages at a specified rate"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>loggen</code> [options]<code>target</code> [port]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>NOTE: The loggen application is distributed with the syslog-ng system logging application, and is usually part of the syslog-ng package. The latest version of the syslog-ng application is available at m[blue]<code>the official syslog-ng website</code>m[]<font SIZE="-2">[1]</font>. </dd>
 <p> This manual page is only an abstract; for the complete documentation of syslog-ng, see m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[2]</font>. </p>
 <p> The <code>loggen</code> application is tool to test and stress-test your syslog server and the connection to the server. It can send syslog messages to the server at a specified rate, using a number of connection types and protocols, including TCP, UDP, and unix domain sockets. The messages can be generated automatically (repeating the <i>PADD</i>string over and over), or read from a file or the standard input. </p>

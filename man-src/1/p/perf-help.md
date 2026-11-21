@@ -1,4 +1,5 @@
 ---
+
 title: "perf-help(1)"
 name: "perf-help"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-perf-help/"
 description: "perf-help – display help information about perf"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>perf help</i> [-a|&#8211;all] [COMMAND]</p>
-<h2>DESCRIPTION</h2>
 <p> With no options and no COMMAND given, the synopsis of the <i>perf</i> command and a list of the most commonly used perf commands are printed on the standard output. </p>
 <p> If the option <i>&#8211;all</i> or <i>-a</i> is given, then all available commands are printed on the standard output. </p>
 <p> If a perf command is named, a manual page for that command is brought up. The <i>man</i> program is used by default for this purpose, but this can be overridden by other options or configuration variables. </p>

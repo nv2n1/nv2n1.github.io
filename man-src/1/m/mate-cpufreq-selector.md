@@ -1,4 +1,5 @@
 ---
+
 title: "mate-cpufreq-selector(1)"
 name: "mate-cpufreq-selector"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mate-cpufreq-selector/"
 description: "mate-cpufreq-selector – A generic command line tool to change the cpu frequency."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mate-cpufreq-selector [OPTIONS]</code></p>
-<h2>DESCRIPTION</h2>
 <p> This tool is a part of the CPU Frequency Scaling Monitor Applet for the MATE Panel. It can be called from the command line when installed. <code>mate-cpufreq-selector</code> is used to adjust the CPU Frequency settings if the system supports scaling. </p>
 <p> This manual page briefly documents the <code>mate-cpufreq-selector</code> command. </p>
 <h2>OPTIONS</h2>

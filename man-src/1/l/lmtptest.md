@@ -1,4 +1,5 @@
 ---
+
 title: "lmtptest(1)"
 name: "lmtptest"
 section: "1"
@@ -8,12 +9,10 @@ description: "lmtptest – interactive LMTP test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lmtptest</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-a</code> <i>userid</i> ] [ <code>-u</code> <i>userid</i> ] [ <code>-k</code> <i>num</i> ] [ <code>-l</code> <i>num</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-r</code> <i>realm</i> ] [ <code>-f</code> <i>file</i> ] [ <code>-n</code> <i>num</i> ] [ <code>-c</code> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-i</code> ] [ <code>-o</code> <i>option</i><code>=</code><i>value</i> ] [ <code>-v</code> ] <i>hostname</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>lmtptest</i> is a utility that allows you to authenticate to a LMTP server and interactively issue commands to it. Once authenticated you may issue any LMTP command by simply typing it in. It is capable of multiple SASL authentication mechanisms and handles encryption layers transparently. This utility is often used for testing the operation of a lmtp server. Also those developing LMTP clients find it useful. </p>
 <h2>OPTIONS</h2>
 <dl>

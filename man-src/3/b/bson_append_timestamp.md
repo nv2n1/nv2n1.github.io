@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_timestamp(3)"
 name: "bson_append_timestamp"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_timestamp() – This function is not similar in functi
 
 <h2>NAME</h2>
 <p> bson_append_timestamp() &#8211; This function is not similar in functionality to bson_append_date_time(). Timestamp elements are different in that they include only second precision and an increment field.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_timestamp(bson_t *bson,
                            const char *key,
@@ -33,7 +33,6 @@ bool bson_append_timestamp(bson_t *bson,
 <dl>
 <dt><code>increment</code></dt>
 <dd> A uint32_t.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function is not similar in functionality to <code><a href="/docs/linux/man/3-bson_append_date_time/">bson_append_date_time</a>(3)</code> \&amp;. Timestamp elements are different in that they include only second precision and an increment field. </p>
 <p> They are primarily used for intra-MongoDB server communication. </p>
 <p> The <code><a href="/docs/linux/man/3-bson_append_timestamp/">bson_append_timestamp</a>(3)</code> function shall append a new element of type BSON_TYPE_TIMESTAMP. </p>

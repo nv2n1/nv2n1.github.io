@@ -1,4 +1,5 @@
 ---
+
 title: "spd-conf(1)"
 name: "spd-conf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spd-conf/"
 description: "spd-conf – configure Speech Dispatcher and diagnose problems"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> usage: spd-conf [-h] [-u] [-c] [-C] [-d] [-s] [&#8211;test-festival]</p>
 <dl>
 <dt>

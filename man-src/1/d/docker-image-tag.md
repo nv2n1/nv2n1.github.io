@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-tag(1)"
 name: "docker-image-tag"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-image-tag/"
 description: "docker-image-tag – Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Assigns a new alias to an image in a registry. An alias refers to the entire image name including the optional TAG after the &#8216;:&#8217;. </p>
 <h2>OPTIONS</h2>
 <p> <code>NAME</code><br />

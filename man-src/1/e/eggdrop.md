@@ -1,4 +1,5 @@
 ---
+
 title: "eggdrop(1)"
 name: "eggdrop"
 section: "1"
@@ -9,9 +10,7 @@ description: "eggdrop – an IRC bot"
 
 <h2>NAME</h2>
 <p> eggdrop &#8211; an IRC bot</p>
-<h2>SYNOPSIS</h2>
 <p> <code>eggdrop</code> [<code>options</code>] [<code>config-file</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Eggdrop</code> is the World&#8217;s most popular Internet Relay Chat (IRC) bot; it is freely distributable under the GNU General Public License (GPL). Eggdrop is a feature rich program designed to be easily used and expanded upon by both novice and advanced IRC users on a variety of hardware and software platforms. </p>
 <p> An IRC bot is a program that sits on an IRC channel and performs automated tasks while looking just like a normal user on the channel. Some of these functions include protecting the channel from abuse, allowing privileged users to gain op or voice status, logging channel events, providing information, hosting games, etc. </p>
 <p> One of the features that makes Eggdrop stand out from other bots is module and Tcl scripting support. With scripts and modules, you can make the bot perform almost any task you want. They can do anything from preventing floods to greeting users and banning advertisers from channels. </p>

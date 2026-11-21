@@ -1,4 +1,5 @@
 ---
+
 title: "genhash(1)"
 name: "genhash"
 section: "1"
@@ -9,9 +10,7 @@ description: "genhash – md5 hash generation tool for remote web pages"
 
 <h2>NAME</h2>
 <p> genhash &#8211; md5 hash generation tool for remote web pages</p>
-<h2>SYNOPSIS</h2>
 <p> <code>genhash [options] [-s server-address] [-p port] [-u url]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>genhash</code> is a tool used for generating md5sum hashes of remote web pages. <code>genhash</code> can use HTTP or HTTPS to connect to the web page. The output by this utility includes the HTTP header, page data, and the md5sum of the data. This md5sum can then be used within the <code><a href="/docs/linux/man/8-keepalived/">keepalived</a>(8)</code> program, for monitoring HTTP and HTTPS services.</p>
 <h2>OPTIONS</h2>
 <dl>

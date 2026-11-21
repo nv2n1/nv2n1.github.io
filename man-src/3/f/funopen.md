@@ -1,4 +1,5 @@
 ---
+
 title: "funopen(3)"
 name: "funopen"
 section: "3"
@@ -9,12 +10,10 @@ description: "FunOpen – open a Funtools data file"
 
 <h2>NAME</h2>
 <p> <code>FunOpen &#8211; open a Funtools data file</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
 <p>Fun FunOpen(char *name, char *mode, Fun ref);</p>
-<h2>DESCRIPTION</h2>
 <p> The FunOpen() routine opens a Funtools data file for reading or appending, or creates a new <font SIZE="-1">FITS</font> file for writing. The <code>name</code> argument specifies the name of the Funtools data file to open. You can use IRAF-style bracket notation to specify Funtools Files, Extensions, and Filters. A separate call should be made each time a different <font SIZE="-1">FITS</font> extension is accessed: </p>
 <p>Fun fun;<br />
 char *iname;<br />

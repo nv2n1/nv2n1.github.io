@@ -1,4 +1,5 @@
 ---
+
 title: "euimage-describe-pack(1)"
 name: "euimage-describe-pack"
 section: "1"
@@ -9,12 +10,10 @@ description: "euimage-describe-pack – ***TECH PREVIEW***"
 
 <h2>NAME</h2>
 <p> euimage-describe-pack &#8211; ***TECH PREVIEW***</p>
-<h2>SYNOPSIS</h2>
 <p> euimage-describe-pack [&#8211;show-empty-fields] [&#8211;debug] [&#8211;debugger]</p>
 <dl>
 <dt>[&#8211;version] [-h]</dt>
 <dd> FILE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> ***TECH PREVIEW***</p>
 <h2>DESCRIPTION</h2>
 <p> Show info about an image pack</p>

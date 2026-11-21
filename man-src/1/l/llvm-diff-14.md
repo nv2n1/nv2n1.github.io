@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-diff-14(1)"
 name: "llvm-diff-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-diff-14/"
 description: "llvm-diff – LLVM structural ‘diff’"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-diff</code> [<i>options</i>] <i>module 1</i> <i>module 2</i> [<i>global name …</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-diff</code> compares the structure of two LLVM modules, primarily focusing on differences in function definitions. Insignificant differences, such as changes in the ordering of globals or in the names of local values, are ignored. </p>
 <p> An input module will be interpreted as an assembly file if its name ends in ‘.ll’; otherwise it will be read in as a bitcode file. </p>
 <p> If a list of global names is given, just the values with those names are compared; otherwise, all global values are compared, and diagnostics are produced for globals which only appear in one module or the other. </p>

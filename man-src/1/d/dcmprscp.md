@@ -1,4 +1,5 @@
 ---
+
 title: "dcmprscp(1)"
 name: "dcmprscp"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmprscp/"
 description: "dcmprscp – DICOM basic grayscale print management SCP"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmprscp [options]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmprscp</code> utility implements the DICOM Basic Grayscale Print Management Service Class as SCP. It also supports the optional Presentation LUT SOP Class. The utility is intended for use within the DICOMscope viewer. </p>
 <p> The <code>dcmprscp</code> utility accepts print jobs from a remote Print SCU. It does not create real hardcopies but stores print jobs in the local DICOMscope database as a set of Stored Print objects (one per page) and Hardcopy Grayscale images (one per film box N-SET). The DICOMscope application allows to load a Stored Print object created by <code>dcmprscp</code> and to render a screen preview of the hardcopy. The <code>dcmprscp</code> utility reads the characteristics of the printer to be emulated from the configuration file.</p>
 <h2>OPTIONS</h2>

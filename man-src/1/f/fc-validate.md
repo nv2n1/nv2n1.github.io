@@ -1,4 +1,5 @@
 ---
+
 title: "fc-validate(1)"
 name: "fc-validate"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fc-validate/"
 description: "fc-validate – validate font files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fc-validate</code> [ <code>-Vhv</code> ] </p>
 <p>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-i&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;&#8211;index&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-l&nbsp;</code><i>lang</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;&#8211;lang&nbsp;</code><i>lang</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&#8211;verbose</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&#8211;version</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&#8211;help</code>&nbsp;]&nbsp;<wbr>&nbsp;<i>font-file</i><i>&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fc-validate</code> validates <i>font-file</i>(s) if each fonts satisfies the language coverage according to the orthography files in fontconfig. If <code>&#8211;index</code> is given, only one face of each file is validated, otherwise all faces are validated.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

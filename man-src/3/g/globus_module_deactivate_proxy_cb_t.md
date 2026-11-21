@@ -1,4 +1,5 @@
 ---
+
 title: "globus_module_deactivate_proxy_cb_t(3)"
 name: "globus_module_deactivate_proxy_cb_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_module.h –"
 ---
 
 <p> Reference Counting Module Activation and Deactivation.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_error_generic.h&#8217;<br />
  #include &lt;stdio.h&gt; </p>
 <h3>Data Structures</h3>

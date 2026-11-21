@@ -1,4 +1,5 @@
 ---
+
 title: "libcurl-multi(3)"
 name: "libcurl-multi"
 section: "3"
@@ -9,7 +10,6 @@ description: "libcurl-multi – how to use the multi interface"
 
 <h2>NAME</h2>
 <p> libcurl-multi &#8211; how to use the multi interface</p>
-<h2>DESCRIPTION</h2>
 <p> This is an overview on how to use the libcurl multi interface in your C programs. There are specific man pages for each function mentioned in here. There&#8217;s also the <i><a href="/docs/linux/man/3-libcurl-tutorial/">libcurl-tutorial</a>(3)</i> man page for a complete tutorial to programming with libcurl and the <i><a href="/docs/linux/man/3-libcurl-easy/">libcurl-easy</a>(3)</i> man page for an overview of the libcurl easy interface. </p>
 <p> All functions in the multi interface are prefixed with curl_multi.</p>
 <h2>OBJECTIVES</h2>

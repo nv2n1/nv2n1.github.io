@@ -1,4 +1,5 @@
 ---
+
 title: "tuxpaint(1)"
 name: "tuxpaint"
 section: "1"
@@ -118,7 +119,6 @@ description: "tuxpaint — \"Tux Paint\", a drawing program for young children."
 <dd> [&#8211;nosysconfig]<br />
  [&#8211;nolockfile] </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <i>Tux Paint</i> is a drawing program for young children. It is meant to be easy and fun to use. It provides a simple interface and fixed canvas size, and provides access to previous images using a thumbnail browser (i.e., no access to the underlying filesystem). </p>
 <p> Unlike popular drawing programs like &quot;<i>The GIMP</i>,&quot; it has a very limited toolset. However, it provides a much simpler interface, and has entertaining, child-oriented additions such as sound effects. </p>
 <h2>OPTIONS &#8211; INFORMATIONAL</h2>

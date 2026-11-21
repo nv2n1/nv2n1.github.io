@@ -1,4 +1,5 @@
 ---
+
 title: "libcurl-errors(3)"
 name: "libcurl-errors"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-libcurl-errors/"
 
  libcurl-errors - error codes in libcurl
 
-<h2>DESCRIPTION</h2>
-
- This man page includes most, if not all, available error codes in libcurl. Why they occur and possibly what you can do to fix the problem are also included.
+This man page includes most, if not all, available error codes in libcurl. Why they occur and possibly what you can do to fix the problem are also included.
 
 <h2>CURLcode</h2>
 

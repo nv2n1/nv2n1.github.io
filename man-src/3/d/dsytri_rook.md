@@ -1,4 +1,5 @@
 ---
+
 title: "dsytri_rook(3)"
 name: "dsytri_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsytri_rook/"
 description: "dsytri_rook.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsytri_rook</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
  <i></i><code>DSYTRI_ROOK</code></p>

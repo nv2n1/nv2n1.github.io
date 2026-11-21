@@ -1,4 +1,5 @@
 ---
+
 title: "clangd-10(1)"
 name: "clangd-10"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clangd-10/"
 description: "clangd – manual page for clangd 10"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> OVERVIEW: clangd is a language server that provides IDE-like features to editors.</p>
 <h3>It should be used via an editor plugin rather than invoked directly. For more information, see:</h3>
 <dl>

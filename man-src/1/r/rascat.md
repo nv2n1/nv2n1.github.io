@@ -1,4 +1,5 @@
 ---
+
 title: "rascat(1)"
 name: "rascat"
 section: "1"
@@ -9,9 +10,7 @@ description: "Rascat – concatenate, convert raster files"
 
 <h2>NAME</h2>
 <p> Rascat &#8211; concatenate, convert raster files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rascat</code> [ <code>-help </code> ] [ <code>-ifmt</code><i> format</i> ] [ <code>-ira</code><i> algorithm</i> ] [ <code>-ofmt</code><i> format</i> ] [ <code>-output</code><i> file</i> ] [ <code>-resolution</code><i> resolution</i> ] [ <code>-rgbscale</code><i> scale-factor</i> ] [ <code>-scale</code><i> scale-factor</i> ] [ <code>-verbose</code> ] [ <code>-Version</code> ] [ <code>-window</code><i> nx ny x y</i> ] [ <code>-pal</code><i> palette_file</i> ] [ <code>&#8211;</code><i>|</i><code>file&#8230;</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rascat</code> reads each <i>file</i> in sequence and copies its contents to the standard output performing any format conversion and data massaging necessary as specified by the command line options. By default, <code>rascat</code> determines the format of a file by looking at the file name extension. If there are multiple files input into rascat with varying file formats <code>rascat </code> will perform format conversion such that the resulting concatenated file will be in the format of the first file processed. </p>
 <p> Input files must all have the same spatial resolution and have the same depth; 8-bit and 24-bit files may not be intermixed. Furthermore, if an input file contains multiple images each image in that file must have the same spatial resolution and be of the same depth. </p>
 <p> Currently, only 8-bit-indexed and 24-bit-direct color encodings are supported. </p>

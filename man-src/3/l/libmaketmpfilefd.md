@@ -1,4 +1,5 @@
 ---
+
 title: "libmaketmpfilefd(3)"
 name: "libmaketmpfilefd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmaketmpfilefd/"
 description: "pm_make_tmpfile_fd() – create a temporary named file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netpbm/pm.h&gt;
 pm_make_tmpfile(int *fdP,
@@ -31,7 +31,6 @@ strfree(grepCommand);
 unlink(myfilename);
 strfree(myfilename);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This library function is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pm_make_tmpfile_fd()</code> is analogous to <code>pm_make_tmpfile()</code>(1) difference is that it opens the file as a low level file, as <code>open()</code> would, rather than as a stream, as <code>fopen()</code> would. </p>
 <p> If you don&#8217;t need to access the file by name, use <code>pm_tmpfile_fd()</code> instead, because it&#8217;s cleaner. With <code>pm_tmpfile_fd()</code>, the operating system always deletes the temporary file when your program exits, if the program failed to clean up after itself. </p>

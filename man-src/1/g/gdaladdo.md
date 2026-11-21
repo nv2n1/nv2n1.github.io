@@ -1,4 +1,5 @@
 ---
+
 title: "gdaladdo(1)"
 name: "gdaladdo"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-gdaladdo/"
 description: "gdaladdo – gdaladdo builds or rebuilds overview images"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdaladdo[-r{nearest, average, gauss, cubic, average_mp, average_magphase, mode}]
         [-b band]
         [-ro][-clean][--help - general] filename levels
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The gdaladdo utility can be used to build or rebuild overview images for most supported file formats with one of several downsampling algorithms. </p>
 <dl>
 <dt><code>-r</code> <i>{nearest (default),average,gauss,cubic,average_mp,average_magphase,mode}</i>:</dt>

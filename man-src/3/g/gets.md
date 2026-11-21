@@ -1,4 +1,5 @@
 ---
+
 title: "gets(3)"
 name: "gets"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-gets/"
 description: "gets – get a string from standard input (DEPRECATED)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 char *gets(char *s);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>Never use this function</i>. </p>
 <p> <code>gets</code>() reads a line from <i>stdin</i> into the buffer pointed to by <i>s</i> until either a terminating newline or <code>EOF</code>, which it replaces with a null byte (&#8216;\0&#8217;). No check for buffer overrun is performed (see BUGS below).  </p>
 <h2>RETURN VALUE</h2>

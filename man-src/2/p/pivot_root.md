@@ -1,4 +1,5 @@
 ---
+
 title: "pivot_root(2)"
 name: "pivot_root"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-pivot_root/"
 description: "pivot_root – change the root mount"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>int pivot_root(const char *</code><i>new_root</i><code>, const char *</code><i>put_old</i><code>);</code> </p>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pivot_root</code>() changes the root mount in the mount namespace of the calling process. More precisely, it moves the root mount to the directory <i>put_old</i> and makes <i>new_root</i> the new root mount. The calling process must have the <code>CAP_SYS_ADMIN</code> capability in the user namespace that owns the caller&#8217;s mount namespace. </p>
 <p> <code>pivot_root</code>() changes the root directory and the current working directory of each process or thread in the same mount namespace to <i>new_root</i> if they point to the old root directory. (See also NOTES.) On the other hand, <code>pivot_root</code>() does not change the caller&#8217;s current working directory (unless it is on the old root directory), and thus it should be followed by a <code>chdir(&quot;/&quot;)</code> call. </p>
 <p> The following restrictions apply:</p>

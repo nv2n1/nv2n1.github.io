@@ -1,4 +1,5 @@
 ---
+
 title: "gitg(1)"
 name: "gitg"
 section: "1"
@@ -9,9 +10,7 @@ description: "gitg – Git repository viewer"
 
 <h2>NAME</h2>
 <p> gitg &#8211; Git repository viewer </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gitg</code> [options]&nbsp;<wbr>[repository]&nbsp;<wbr>[&lt;refspec&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gitg</code> is a graphical user interface for git. It aims at being a small, fast and convenient tool to visualize the history of git repositories. Besides visualization, gitg also provides several utilities to manage your repository and commit your work.</p>
 <h2>OPTIONS</h2>
 <p> <code>-c,&#8211;commit</code> Open <code>gitg </code> in commit view </p>

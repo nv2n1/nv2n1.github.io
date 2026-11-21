@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3commontoken(3)"
 name: "antlr3commontoken"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3commontoken.h –"
 ---
 
 <p> Defines the interface for a common token.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>
 <h3>Data Structures</h3>
 <p> struct <code>ANTLR3_COMMON_TOKEN_struct</code><br />

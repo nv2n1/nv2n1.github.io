@@ -1,4 +1,5 @@
 ---
+
 title: "inkview(1)"
 name: "inkview"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-inkview/"
 description: "Inkview – an SVG viewer and slideshow program."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <tt>&quot;inkview [options] [filename ...]&quot;</tt> </p>
 <p> options: </p>
 <pre><code>
 - h, --help - V, --version - f, --fullscreen - r, --recursive - t, --timer = NUMBER - s, --scale = NUMBER - p, --preload
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>Inkview</code> is an <code>Scalable Vector Graphics (</code><font SIZE="-1"><code>SVG</code></font><code>)</code> viewer that can also be used for slideshows or presentations. One or more <font SIZE="-1"><code>FILES</code></font> or <font SIZE="-1"><code>FOLDERS</code></font> can be specified on the command-line for opening. Inkview will display all <font SIZE="-1">SVG</font> files in the given order. Folders will be expanded to a list of contained <font SIZE="-1">SVG</font> files. </p>
 <p> You can also launch Inkview without any command-line arguments, which will bring up a file chooser that allows to select files and folders via a graphical user interface.</p>
 <h2>OPTIONS</h2>

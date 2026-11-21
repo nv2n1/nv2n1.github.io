@@ -1,4 +1,5 @@
 ---
+
 title: "airmass(1)"
 name: "airmass"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-airmass/"
 description: "airmass – Computing airmass coefficient"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>airmass </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br />
  <code>airmass </code><i>[options]</i> &#8211; terminal mode </p>
-<h2>DESCRIPTION</h2>
 <p> The Airmass program computes value of the airmass coefficient (X) from given julian date, object&#8217;s coordinates and observer&#8217;s coordinates. It works either in batch mode, where the table stored in file is converted and saved to another file, or in terminal mode, where the user enters simple commands and queries by keyboard. </p>
 <p> When running the batch mode, the program reads the source file line by line, and expects the JD value in the first column, which must be divided at least one of common used dividers (semicolon, comma, space, tab char, &#8230;). The JD value can be in full (2453xxx.x) or short (53xxx.x) form. Decimal places must be separated by point, not comma. The lines, which doesn&#8217;t consist of valid julian date, are copied into output without any change. In other cases the heliocentric correction is computed, its value is added to or subtracted from read julian date and the old JD value is replaced by the new one in the same form (full or short form, number of decimal places). The rest of the line is unchanged. </p>
 <p> In terminal mode, the opening informations is displayed and the program prompts the user to enter object&#8217;s coordinates. First, specify right ascension (<i>R.A.</i>) a confirm by the Enter key. By the same way, the declination (<i>DEC.</i>) is set up. The value is printed out as response to the command. Then, by the same way again, the observer&#8217;s geographical longitude (<i>LON.</i>) and latitude (<i>LAT.</i>) is entered. Use positive values of latitude to the north of equator. Positive values of longitude means, that the location is to the east of zero meridian. After setting up coordinates, entering of a julian date is expected (<i>JD</i>). The user enters the julian date and the program computes and prints out the values of azimuth, altitude and value of airmass coefficient. All commands are descibed below. Entering the <i>q</i> command exits the program. </p>

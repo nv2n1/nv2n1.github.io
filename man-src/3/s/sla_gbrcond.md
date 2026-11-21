@@ -1,4 +1,5 @@
 ---
+
 title: "sla_gbrcond(3)"
 name: "sla_gbrcond"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_gbrcond/"
 description: "sla_gbrcond.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>sla_gbrcond</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, CMODE, C, INFO, WORK, IWORK)<br />
  <i></i><code>SLA_GBRCOND</code> estimates the Skeel condition number for a general banded matrix.</p>

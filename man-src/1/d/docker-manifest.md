@@ -1,4 +1,5 @@
 ---
+
 title: "docker-manifest(1)"
 name: "docker-manifest"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-manifest/"
 description: "docker-manifest – Manage Docker image manifests and manifest lists"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker manifest COMMAND</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>docker manifest</code> command has subcommands for managing image manifests and manifest lists. A manifest list allows you to use one name to refer to the same image built for multiple architectures. </p>
 <p> To see help for a subcommand, use: </p>
 <dl>

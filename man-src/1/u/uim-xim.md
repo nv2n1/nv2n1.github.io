@@ -1,4 +1,5 @@
 ---
+
 title: "uim-xim(1)"
 name: "uim-xim"
 section: "1"
@@ -9,11 +10,9 @@ description: "uim-xim – XIM interface to UIM"
 
 <h2>NAME</h2>
 <p> <code>uim-xim </code>&#8211; XIM interface to UIM</p>
-<h2>SYNOPSIS</h2>
 <pre>
 uim-xim [<i>options</i>] 
 </pre>
-<h2>DESCRIPTION</h2>
 <p> uim-xim is a XIM interface to UIM that allows programs that can only interface with XIM input methods to work with UIM.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-agent(1)"
 name: "gpg-agent"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-gpg-agent/"
 description: "gpg-agent – Secret key management for GnuPG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg-agent</code> &#8211; Secret key management for GnuPG </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>]<br />
  <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;server</code><br />
  <code>gpg-agent</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <code>&#8211;daemon</code> [<i>command_line</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gpg-agent</code> is a daemon to manage secret (private) keys independently from any protocol. It is used as a backend for <code>gpg</code> and <code>gpgsm</code> as well as for a couple of other utilities. </p>
 <p> The agent is automatically started on demand by <code>gpg</code>, <code>gpgsm</code>, <code>gpgconf</code>, or <code>gpg-connect-agent</code>. Thus there is no reason to start it manually. In case you want to use the included Secure Shell Agent you may start the agent using: </p>
 <dl>

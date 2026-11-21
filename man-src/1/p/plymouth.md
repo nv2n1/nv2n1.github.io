@@ -1,4 +1,5 @@
 ---
+
 title: "plymouth(1)"
 name: "plymouth"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-plymouth/"
 description: "plymouth – Send commands to plymouthd"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>plymouth </code><code>[OPTION&#8230;]</code></dt>
 <dt> <code>plymouth </code><code>COMMAND&nbsp;[OPTION&#8230;] </code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>plymouth</code> sends commands to a running <code>plymouthd</code>. This is used during the boot process to control the display of the graphical boot splash.</dd>
 <h2>OPTIONS</h2>
 <p> The following options are understood. These options are supported for compatibility with the old <code>rhgb-client</code> interface, and have been replaced by the commands that are described in the next section. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "agraph(3)"
 name: "agraph"
 section: "3"
@@ -9,7 +10,6 @@ description: "Agraph – abstract graph library"
 
 <h2>NAME</h2>
 <p> <code>Agraph</code> &#8211; abstract graph library</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;graphviz/agraph.h&gt;
 </code></pre>
@@ -80,7 +80,6 @@ int agisarootobj(void *);<br />
 Agrec_t *AGDATA(void *obj);<br />
 ulong AGID(void *obj);<br />
 int AGTYPE(void *obj);</p>
-<h2>DESCRIPTION</h2>
 <p> Libagraph supports graph programming by maintaining graphs in memory and reading and writing graph files. Graphs, nodes and edges may be attributed with programmer-defined records and string name-value pairs. Graphs are composed of nodes, edges, and nested subgraphs. Internally, Libagraph depends extensively on Libcdt (formerly Libdict) for set representation. </p>
 <p> All of Libagraph&#8217;s global symbols have the prefix <code>ag</code> (case varying).</p>
 <h2>GRAPHS</h2>

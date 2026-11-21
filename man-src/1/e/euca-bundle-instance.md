@@ -1,4 +1,5 @@
 ---
+
 title: "euca-bundle-instance(1)"
 name: "euca-bundle-instance"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-bundle-instance – Bundle an S3-backed Windows instance"
 
 <h2>NAME</h2>
 <p> euca-bundle-instance &#8211; Bundle an S3-backed Windows instance</p>
-<h2>SYNOPSIS</h2>
 <p> euca-bundle-instance <code>-b</code> BUCKET <code>-p</code> PREFIX [-o KEY-ID] [-c POLICY]</p>
 <dl>
 <dt>[-s SIGNATURE] [-w KEY] [-x HOURS]</dt>
 <dd> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Bundle an S3-backed Windows instance</p>
 <h3>positional arguments:</h3>
 <dl>

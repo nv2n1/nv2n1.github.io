@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_flush_buffers(3)"
 name: "memcached_flush_buffers"
 section: "3"
@@ -10,13 +11,11 @@ description: "memcached_flush_buffers – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memcached_flush_buffers &#8211; libmemcached Documentation </p>
 <p> Flush and senf buffered commands</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_return_t memcached_flush_buffers(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>memcached_flush_buffers()</i> is used in conjunction with <code>MEMCACHED_BEHAVIOR_BUFFER_REQUESTS</code> (see memcached_behavior(3)) to flush all buffers by sending the buffered commands to the server for processing.</p>
 <h2>RETURN</h2>
 <p> A value of type <code>memcached_return_t</code> is returned On success that value will be <code>MEMCACHED_SUCCESS</code>. Use <code>memcached_strerror()</code> to translate this value to a printable string.</p>

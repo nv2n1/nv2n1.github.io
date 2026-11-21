@@ -1,4 +1,5 @@
 ---
+
 title: "dar(1)"
 name: "dar"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dar/"
 description: "dar – creates, tests, lists, extracts, compares, merges, isolates dar archives"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dar [-c | -t | -l | -x | -d | -+ | -C] [&lt;path&gt;/]&lt;basename&gt; [&lt;options&gt;] [&lt;user targets&gt;] </p>
 <p> dar -h </p>
 <p> dar -V</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dar</code> is a full featured backup tool, aimed for disks (floppy, CD-R(W), DVD-R(W), zip, jazz, hard-disks, usb keys, etc.) and since release 2.4.0 also adapted to tapes. </p>
 <p> <code>dar</code> can store a backup in several files (called &quot;slices&quot; in the following) of a given size, eventually pausing or running a user command/script before starting the next slice. This can allow for example, the burning of the last generated slice on a DVD-R(W), Blue-ray Disk, or changing of usb key before continuing on the next one. Like its grand-brother, the great &quot;tar&quot; command, <code>dar</code> may also use compression, at the difference that compression is used inside the archive to be able to have compressed slices of the defined size. </p>
 <p> But the most important feature of <code>dar</code> is its ability to make differential and decremental backups. In other words, backups that contain only new files or files that have changed from a backup of reference. Moreover with differential backup, <code>dar</code> also stores files that have been deleted since the backup of reference. Thus, when restoring, first a full backup, then additional differential backups, at each restoration you get the exact state of the filesystem at the time the differential backup was made. And of course, the reference backup may be a full or a differential backup itself, so you can make the same way incremental backups. </p>

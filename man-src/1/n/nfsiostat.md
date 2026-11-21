@@ -1,4 +1,5 @@
 ---
+
 title: "nfsiostat(1)"
 name: "nfsiostat"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfsiostat – Report input/output statistics for network filesyste
 
 <h2>NAME</h2>
 <p> nfsiostat &#8211; Report input/output statistics for network filesystems (NFS).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nfsiostat [ -h ] [ -k | -m ] [ -t ] [ -V ] [</code> <i>interval</i> <code>[</code> <i>count</i> <code>] ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>nfsiostat</code> command displays statistics about read and write operations on NFS filesystems. </p>
 <p> The <i>interval</i> parameter specifies the amount of time in seconds between each report. The first report contains statistics for the time since system startup (boot). Each subsequent report contains statistics collected during the interval since the previous report. A report consists of an NFS header row followed by a line of statistics for each network filesystem that is mounted. The <i>count</i> parameter can be specified in conjunction with the <i>interval</i> parameter. If the <i>count</i> parameter is specified, the value of <i>count</i> determines the number of reports generated at <i>interval</i> seconds apart. If the <i>interval</i> parameter is specified without the <i>count</i> parameter, the <code>nfsiostat</code> command generates reports continuously. </p>
 <h2>REPORT</h2>

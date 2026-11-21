@@ -1,4 +1,5 @@
 ---
+
 title: "dlantb(3)"
 name: "dlantb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlantb/"
 description: "dlantb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlantb</code> (NORM, UPLO, DIAG, N, K, AB, LDAB, WORK)<br />
  <i></i><code>DLANTB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a triangular band matrix.</p>

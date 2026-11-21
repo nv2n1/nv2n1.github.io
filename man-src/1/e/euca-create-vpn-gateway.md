@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-vpn-gateway(1)"
 name: "euca-create-vpn-gateway"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-create-vpn-gateway – Create a virtual private gateway"
 
 <h2>NAME</h2>
 <p> euca-create-vpn-gateway &#8211; Create a virtual private gateway</p>
-<h2>SYNOPSIS</h2>
 <p> euca-create-vpn-gateway <code>-t</code> ipsec.1 [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a virtual private gateway</p>
 <h2>DESCRIPTION</h2>
 <p> This is the VPC side of a VPN connection. You will also need to create a VPN customer gateway with <a href="/docs/linux/man/1-euca-create-customer-gateway/">euca-create-customer-gateway</a>(1).</p>

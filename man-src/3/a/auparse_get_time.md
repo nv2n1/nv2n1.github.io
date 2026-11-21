@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_time(3)"
 name: "auparse_get_time"
 section: "3"
@@ -9,10 +10,8 @@ description: "auparse_get_time – get event’s time"
 
 <h2>NAME</h2>
 <p> auparse_get_time &#8211; get event&#8217;s time</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> time_t auparse_get_time(auparse_state_t *au); </p>
-<h2>DESCRIPTION</h2>
 <p> auparse_get_time will access just the time portion of the timestamp data structure for the current event. </p>
 <h2>RETURN VALUE</h2>
 <p> Returns 0 if an error occurs; otherwise, the valid time value in time_t format. </p>

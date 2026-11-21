@@ -1,4 +1,5 @@
 ---
+
 title: "sensors(1)"
 name: "sensors"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-sensors/"
 description: "sensors – print sensors information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sensors [</code> <i>options</i> <code>] [</code> <i>chips</i> <code>]</code><br />
  <code>sensors -s [</code> <i>chips</i> <code>]</code><br />
  <code>sensors &#8211;bus-list</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sensors</code> is used to show the current readings of all sensor chips.<br />
  <code>sensors -s</code> is used to set all limits as specified in the configuration file.<br />
  <code>sensors &#8211;bus-list</code> is used to generate bus statements suitable for the configuration file. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ddisna(3)"
 name: "ddisna"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ddisna/"
 description: "ddisna.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ddisna</code> (JOB, M, N, D, SEP, INFO)<br />
  <i></i><code>DDISNA</code></p>

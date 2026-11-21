@@ -1,4 +1,5 @@
 ---
+
 title: "mplex(1)"
 name: "mplex"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mplex/"
 description: "mplex – MPEG 1/2 program/system stream multiplexer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mplex</code> [<code>-f|&#8211;format</code> <i>format_code</i>] [<code>-i|&#8211;vdr-index]</code> <i>index_pathname</i> [<code>-v|&#8211;verbose</code> <i>num</i>] [<code>-b|&#8211;video-buffer</code> <i>video_buffer_size_kB</i>[, <i>video_buffer_size_kB</i>&#8230;]<i>]</i> [<code>-L|&#8211;lpcm-params</code> <i>params</i>[, <i>params</i>&#8230;<i>]</i>] [<code>-r|&#8211;mux-bitrate</code> <i>muxed_bitrate_kbps</i>] [<code>-l|&#8211;mux-limit</code> <i>num</i>] [<code>-O|&#8211;sync-offset</code> <i>num[</i><code>ms</code>|<code>s</code>|<code>mpt</code>]] [<code>-d|&#8211;subpicture-delay</code> <i>[</i><code>ms</code>|<code>s</code>|<code>mpt|c</code>][:stream-id]<i>[,</i>delay[:stream-id]<i>]</i> [<code>-R|&#8211;run-in</code> <i>num</i>] [<code>-V|&#8211;vbr]</code> [<code>-C|&#8211;cbr]</code> [<code>-s|&#8211;sector-size</code> <i>sector_size_B</i>] [<code>-p|&#8211;packets-per-pack</code> <i>num</i>] [<code>-h|&#8211;system-headers</code>] [<code>-S|&#8211;max-segment-size</code> <i>output_filesize_limit_MB</i>] [<code>-M|&#8211;split-segment]</code> </p>
 <p> [<code>-?|&#8211;help</code>] <code>-o|&#8211;output</code><i>&nbsp;<wbr>output_pathname_pattern</i><code>&nbsp;<wbr>input_file&#8230;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Mplex is a general-purpose audio/video multiplexer for MPEG-1/MPEG-2. It accepts one or more MPEG-1/2 video stream, MPEG layer I/II/III, DTS, AC3 and LPCM audio streams and multiplexes them into a combined program/system stream according to the constraints specified. Many different types of output structure are supported along with presets for standard VCD and SVCD streams. These latter can be burned to CD using tools such as <code><a href="/docs/linux/man/1-vcdimager/">vcdimager</a></code>(1) and played in stand-alone players. </p>
 <p> It is also capable of automatically splitting the output stream into chunks of a specified size either independently or at sequence end/start points in the input video stream.</p>
 <h2>GENERAL FUNCTION LETTERS</h2>

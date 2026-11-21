@@ -1,4 +1,5 @@
 ---
+
 title: "cpancover(1)"
 name: "cpancover"
 section: "1"
@@ -6,22 +7,15 @@ letter: "c"
 url: "/docs/linux/man/1-cpancover/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cpancover - report coverage statistics on CPAN modules 
+cpancover - report coverage statistics on CPAN modules 
 
 <h2>VERSION</h2>
 
  version 1.03
 
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
  cpancover -help -info -version
 </pre>
-
-<h2>DESCRIPTION</h2>
 
 <h2>OPTIONS</h2>
 

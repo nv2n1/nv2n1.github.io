@@ -1,4 +1,5 @@
 ---
+
 title: "glance(1)"
 name: "glance"
 section: "1"
@@ -9,11 +10,9 @@ description: "glance – Client for OpenStack Images API"
 
 <h2>NAME</h2>
 <p> glance &#8211; Client for OpenStack Images API</p>
-<h2>SYNOPSIS</h2>
 <p> <code>glance</code> [options] &lt;command&gt; [command-options] </p>
 <p> <code>glance help</code> </p>
 <p> <code>glance help</code> &lt;command&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>glance</code> command line utility interacts with OpenStack Images Service (Glance). </p>
 <p> In order to use the CLI, you must provide your OpenStack username, password, project (historically called tenant), and auth endpoint. You can use configuration options <i>&#8211;os-username</i>, <i>&#8211;os-password</i>, <i>&#8211;os-tenant-id</i>, and <i>&#8211;os-auth-url</i> or set corresponding environment variables: </p>
 <pre>

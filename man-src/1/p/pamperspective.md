@@ -1,4 +1,5 @@
 ---
+
 title: "pamperspective(1)"
 name: "pamperspective"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamperspective/"
 description: "pamperspective – a reverse scanline renderer for Netpbm images"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pamperspective
     [--bottom_margin = num]
@@ -34,7 +34,6 @@ pamperspective
 </code></pre>
 <h2>OPTION USAGE</h2>
 <p> Minimum unique abbreviation of option is acceptable. (But note that shortest unique prefixes might be longer in future versions of the program.) You may use single hyphens instead of double hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. All options starting with hyphens may be given in any order. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamperspective</code> reads a Netpbm image as input and produces a Netpbm image of the same format as output. </p>
 <p> <code>pamperspective</code> interprets the input image as a perspective projection of another image which is in a plane oblique to that of the input image. For example, a photograph of a painting, taken at an angle. The arguments <i>upper_left_x</i> &#8230; <i>lower_right_y</i> specify a quadrilateral in the photograph that <code>pamperspective</code> assumes corresponds to a parallelogram in the painting. The output image consists of this parallelogram, sheared to a rectangle. In this way <code>pamperspective</code> undoes the effect of a raytracer or scanline renderer. </p>

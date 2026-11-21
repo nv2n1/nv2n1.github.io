@@ -1,4 +1,5 @@
 ---
+
 title: "bogoutil(1)"
 name: "bogoutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bogoutil/"
 description: "bogoutil – Dumps, loads, and maintains bogofilter database files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogoutil</code> {-h | -V}</dt>
 <dt> <code>bogoutil</code> [options] {-d&nbsp;<wbr><i>file</i> | -H&nbsp;<wbr><i>file</i> | -l&nbsp;<wbr><i>file</i> | -m&nbsp;<wbr><i>file</i> | -w&nbsp;<wbr><i>file</i> | -p&nbsp;<wbr><i>file</i>}</dt>
@@ -16,7 +16,6 @@ description: "bogoutil – Dumps, loads, and maintains bogofilter database files
 <dd>where <code>options</code> is</dd>
 <dl>
 <dt> <code>bogoutil</code> [-v] [-n] [-C] [-D] [-a&nbsp;<wbr><i>age</i>] [-c&nbsp;<wbr><i>count</i>] [-s&nbsp;<wbr><i>min,max</i>] [-y&nbsp;<wbr><i>date</i>] [-I&nbsp;<wbr><i>file</i>] [-O&nbsp;<wbr><i>file</i>] [-x&nbsp;<wbr><i>flags</i>] [&#8211;config-file&nbsp;<wbr><i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Bogoutil is part of the bogofilter Bayesian spam filter package. </dd>
 <p> It is used to dump and load bogofilter&#8217;s Berkeley DB databases to and from text files, perform database maintenance functions, and to display the values for specific words.</p>
 <h2>OPTIONS</h2>

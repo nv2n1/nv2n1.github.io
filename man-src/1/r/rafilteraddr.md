@@ -1,4 +1,5 @@
 ---
+
 title: "rafilteraddr(1)"
 name: "rafilteraddr"
 section: "1"
@@ -9,9 +10,7 @@ description: "rafilteraddr – select argus(8) data based on an IANA IP address 
 
 <h2>NAME</h2>
 <p> <code>rafilteraddr</code> &#8211; select <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data based on an IANA IP address file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rafilteraddr</code> <code>[-f</code> <i>address.file</i> [<code> [-v] [raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Rafilteraddr</code> reads <code>argus</code> data from an <i>argus-data</i> source, and selects records that include IP addresses specified by the <code>address.spec</code> file. This program provides high performance address matching for any number of addresses. </p>
 <h2>RAFILTERADDR ADDRESS SPECIFICATION</h2>
 <p> Rafilteraddr, reads a number of standard IANA IP address file formats that specify IPv4, CIDR and IPV4 prefix addresses. Examples of these file types are provided in ./support/Config. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cunmql(3)"
 name: "cunmql"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunmql/"
 description: "cunmql.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunmql</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>CUNMQL</code></p>

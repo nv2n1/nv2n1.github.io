@@ -1,4 +1,5 @@
 ---
+
 title: "fstminer(1)"
 name: "fstminer"
 section: "1"
@@ -11,7 +12,6 @@ description: "fst2miner – Data mining of FST files"
 <p> fst2miner &#8211; Data mining of FST files</p>
 <h2>SYNTAX</h2>
 <p> fstminer [<i>option</i>]&#8230; [<i>FSTFILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Mines FST files for specific data values and generates gtkwave save files to stdout for future reload.</p>
 <h2>OPTIONS</h2>
 <dl>

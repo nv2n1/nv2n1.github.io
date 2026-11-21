@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-daemon(1)"
 name: "dbus-daemon"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-dbus-daemon/"
 description: "dbus-daemon – Message bus daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-daemon</code></dt>
 <dt> <code>dbus-daemon</code> [&#8211;version] [&#8211;session] [&#8211;system] [&#8211;config-file=<i>FILE</i>] [&#8211;print-address&nbsp;[<i>=DESCRIPTOR</i>]] [&#8211;print-pid&nbsp;[<i>=DESCRIPTOR</i>]] [&#8211;fork] [&#8211;nosyslog] [&#8211;syslog] [&#8211;syslog-only]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>dbus-daemon</code></p>
 <dd>is the D-Bus message bus daemon. See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about the big picture. D-Bus is first a library that provides one-to-one communication between any two applications; <code>dbus-daemon</code> is an application that uses this library to implement a message bus daemon. Multiple programs connect to the message bus daemon and can exchange messages with one another. </dd>
 <p> There are two standard message bus instances: the systemwide message bus (installed on many systems as the &quot;messagebus&quot; init service) and the per-user-login-session message bus (started each time a user logs in). <code>dbus-daemon</code> is used for both of these instances, but with a different configuration file. </p>

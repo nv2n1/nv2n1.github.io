@@ -1,4 +1,5 @@
 ---
+
 title: "mate-panel(1)"
 name: "mate-panel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mate-panel/"
 description: "mate-panel – The Panel for the MATE Desktop Environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mate-panel [OPTIONS]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mate-panel</code> program provides the panels for the the MATE Desktop Environment. It is the area on your desktop from which you can run applications and applets, and perform other tasks. New applets may also be installed ,added to, or removed from the panels. </p>
 <p> By default, <code>mate-panel</code> typically creates a panel on the top of the screen with applets such as a Menu Bar, Notification Area, and Clock; While creating a second panel on the bottom of the screen with a Window List and a Workspace Switcher. Panels can be created, deleted, moved around the desktop, and to other monitors. </p>
 <p> This manual page documents the <code>mate-panel</code> command.</p>

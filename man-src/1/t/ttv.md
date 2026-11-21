@@ -1,4 +1,5 @@
 ---
+
 title: "ttv(1)"
 name: "ttv"
 section: "1"
@@ -9,9 +10,7 @@ description: "ttv – display TV/video on a tty"
 
 <h2>NAME</h2>
 <p> ttv &#8211; display TV/video on a tty</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ttv [ options ] [ station name ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ttv</code> displays TV/video on a terminal, rendering the images using aalib.</p>
 <h2>OPTIONS</h2>
 <dl>

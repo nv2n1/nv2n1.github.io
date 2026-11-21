@@ -1,4 +1,5 @@
 ---
+
 title: "createlang(1)"
 name: "createlang"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-createlang/"
 description: "createlang – install a PostgreSQL procedural language"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>createlang</code> [<i>connection-option</i>&#8230;] <i>langname</i> [<i>dbname</i>]</dt>
 <dt> <code>createlang</code> [<i>connection-option</i>&#8230;] <code>&#8211;list</code> | <code>-l</code> [<i>dbname</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>createlang is a utility for adding a procedural language to a PostgreSQL database. </dd>
 <p> createlang is just a wrapper around the CREATE EXTENSION (<code><a href="/docs/linux/man/7-create_extension/">CREATE_EXTENSION</a></code>(7)) SQL command. </p>
 <dl>

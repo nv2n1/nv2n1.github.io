@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-ccs-disable-rg(1)"
 name: "clufter-ccs-disable-rg"
 section: "1"
@@ -9,9 +10,7 @@ description: "clufter – ccs-disable-rg"
 
 <h2>NAME</h2>
 <p> clufter &#8211; ccs-disable-rg</p>
-<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs-disable-rg </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Make config. prevent RGManager from (accidentally) starting</p>
 <h2>OPTIONS</h2>
 <dl>

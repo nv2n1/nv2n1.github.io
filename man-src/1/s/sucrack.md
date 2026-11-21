@@ -1,4 +1,5 @@
 ---
+
 title: "sucrack(1)"
 name: "sucrack"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-sucrack/"
 description: "sucrack is a multithreaded Linux/UNIX tool for brute-force cracking of local user accounts via su."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>sucrack</code> is a multithreaded Linux/UNIX tool for brute-force cracking of local user accounts via su.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sucrack </code> [options] wordlist </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sucrack</code> is a multithreaded Linux/UNIX tool brute-force cracking tool that drives <a href="/docs/linux/man/1-su/">su</a>(1) with referencing a specific user and uses words from a wordlist as passwords. Running <code>sucrack</code> does not require high privileges on the target system. </p>
 <h2>OPTIONS</h2>
 <p> <code>sucrack</code> allows reading passwords from stdin. In that case, use &#8216;-&#8216; instead of a filename as wordlist parameter.</p>

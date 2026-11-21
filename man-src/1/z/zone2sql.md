@@ -1,4 +1,5 @@
 ---
+
 title: "zone2sql(1)"
 name: "zone2sql"
 section: "1"
@@ -9,9 +10,7 @@ description: "zone2sql – Convert ISC Bind zones to SQL"
 
 <h2>NAME</h2>
 <p> zone2sql &#8211; Convert ISC Bind zones to SQL</p>
-<h2>SYNOPSIS</h2>
 <p> <code>zone2sql [OPTIONS]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Zone2sql</code> parses Bind <i>named.conf</i> files and zonefiles and outputs SQL on standard out, which can then be fed to your database. </p>
 <p> <code>zone2sql</code> understands the Bind master file extension &#8216;$GENERATE&#8217; and will also honour &#8216;$ORIGIN&#8217; and &#8216;$TTL&#8217;. </p>
 <p> For backends supporting slave operation there is also an option to keep slave zones as slaves, and not convert them to native operation. </p>

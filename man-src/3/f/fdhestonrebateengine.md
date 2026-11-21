@@ -1,4 +1,5 @@
 ---
+
 title: "fdhestonrebateengine(3)"
 name: "fdhestonrebateengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdhestonrebateengine/"
 description: "ql/experimental/finitedifferences/fdhestonrebateengine.hpp – Finite-Differences Heston barrier option rebate helper engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt;<br />
  #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br />
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt; </p>

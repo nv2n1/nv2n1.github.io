@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-start(1)"
 name: "docker-latest-start"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-start/"
 description: "docker-start – Start one or more containers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker start</code> [<code>-a</code>|<code>&#8211;attach</code>] [<code>&#8211;detach-keys</code>[=<i>[]</i>]] [<code>&#8211;help</code>] [<code>-i</code>|<code>&#8211;interactive</code>] CONTAINER [CONTAINER&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> Start one or more containers. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;attach</code>=<i>true</i>|<i>false</i><br />

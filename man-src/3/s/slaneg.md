@@ -1,4 +1,5 @@
 ---
+
 title: "slaneg(3)"
 name: "slaneg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaneg/"
 description: "slaneg.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>slaneg</code> (N, D, LLD, SIGMA, PIVMIN, R)<br />
  <i></i><code>SLANEG</code> computes the Sturm count.</p>

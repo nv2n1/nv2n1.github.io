@@ -1,4 +1,5 @@
 ---
+
 title: "whom(1)"
 name: "whom"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-whom/"
 description: "whom – report to whom a message would go"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>whom</code> [<code>-alias</code> <i>aliasfile</i>] [<code>-check</code> | <code>-nocheck</code>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-mts</code> <i>smtp</i> | <i>sendmail/smtp</i> | <i>sendmail/pipe</i>] [<code>-server</code> <i>servername</i>] [<code>-port</code> <i>port-name/number</i>] [<code>-sasl</code>] [<code>-saslmech</code> <i>mechanism</i>] [<code>-snoop</code>] [<code>-user</code> <i>username</i>] [<code>-tls</code>] [<code>-notls</code>] [<i>file</i>] [<code>-draft</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Whom</code></p>
 <dd>is used to expand the headers of a message into a set of addresses and optionally verify that those addresses are deliverable at that time (if <code>-check</code> is given). </dd>
 <p> The <code>-draftfolder</code> <i>+folder</i> and <code>-draftmessage</code> <i>msg</i> switches invoke the <code>nmh</code> draft folder facility. This is an advanced (and highly useful) feature. Consult the <i><a href="/docs/linux/man/5-mh-draft/">mh-draft</a></i>(5) man page for more information. </p>

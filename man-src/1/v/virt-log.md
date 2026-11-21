@@ -1,4 +1,5 @@
 ---
+
 title: "virt-log(1)"
 name: "virt-log"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-virt-log/"
 description: "virt-log – Display log files from a virtual machine"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - log[--options] - d domname virt - log[--options] - a disk.img[-a disk.img...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-log&quot;</tt> is a command line tool to display the log files from the named virtual machine (or disk image). </p>
 <p> This tool understands and displays both plain text log files (eg. <i>/var/log/messages</i>) and binary formats such as the systemd journal. </p>
 <p> To display other types of files, use <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1). To copy files out of a virtual machine, use <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1). To display the contents of the Windows Registry, use <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1).</p>

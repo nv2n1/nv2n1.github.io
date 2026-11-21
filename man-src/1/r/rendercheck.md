@@ -1,4 +1,5 @@
 ---
+
 title: "rendercheck(1)"
 name: "rendercheck"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-rendercheck/"
 description: "rendercheck – simple tests of the X Render extension."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 rendercheck[-d | --display display][-i | --iter][--sync][-t | --tests test1, test2, test3, ...][-o | --ops op1, op2, op3, ...]
            [-v | --verbose][--minimalrendering]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>rendercheck</code> is a set of simple tests of the X Render extension. It is designed for authors of Render implementations in X Servers.</p>
 <h2>OPTIONS</h2>
 <dl>

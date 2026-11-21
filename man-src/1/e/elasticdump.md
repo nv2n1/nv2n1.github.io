@@ -1,4 +1,5 @@
 ---
+
 title: "elasticdump(1)"
 name: "elasticdump"
 section: "1"
@@ -9,9 +10,7 @@ description: "elasticdump – Import and export tools for elasticsearch"
 
 <h2>NAME</h2>
 <p> elasticdump &#8211; Import and export tools for elasticsearch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>elasticdump</code> <i>,&#8211;input SOURCE &#8211;output DESTINATION /</i>[<i>,OPTIONS/</i>]</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>&#8211;input</code></dt>
 <dd> Source location (required)</dd>

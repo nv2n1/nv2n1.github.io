@@ -1,4 +1,5 @@
 ---
+
 title: "otl2html(1)"
 name: "otl2html"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-otl2html/"
 description: "otl2html – converts vimoutliner outline to HTML"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>otl2html</code> [<i>filename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>otl2html</code> Python script. </p>
 <p> <code>otl2html</code> is a is a <code><a href="/docs/linux/man/1-python/">python</a></code>(1) script that converts a <code>vimoutliner</code>(1) outline to HTML. </p>
 <p> <code>otl2html</code> script called just with filename of the processed outline will produce HTML document on standard output.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "stg-squash(1)"
 name: "stg-squash"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-squash/"
 description: "stg-squash – Squash two or more patches into one"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg squash[options][--]&lt;patches&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Squash two or more patches, creating one big patch that contains all their changes. In more detail: </p>
 <dl>
 <dt>

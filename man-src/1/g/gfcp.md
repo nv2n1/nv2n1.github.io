@@ -1,4 +1,5 @@
 ---
+
 title: "gfcp(1)"
 name: "gfcp"
 section: "1"
@@ -9,9 +10,7 @@ description: "gfcp – manual page for gfcp (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfcp &#8211; manual page for gfcp (glusterfs-coreutils) 0.2.0</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gfcp</code> [<i>OPTION</i>]&#8230; <i>SOURCE DEST</i></p>
-<h2>DESCRIPTION</h2>
 <p> Copy SOURCE to DEST; one of local to remote, remote to local, or remote to remote.</p>
 <dl>
 <dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>

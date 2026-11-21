@@ -1,4 +1,5 @@
 ---
+
 title: "cung2l(3)"
 name: "cung2l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cung2l/"
 description: "cung2l.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cung2l</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>CUNG2L</code> generates all or part of the unitary matrix Q from a QL factorization determined by cgeqlf (unblocked algorithm).</p>

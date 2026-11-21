@@ -1,4 +1,5 @@
 ---
+
 title: "permview(1)"
 name: "permview"
 section: "1"
@@ -9,9 +10,7 @@ description: "permview – Viewer for declarative security permission sets insid
 
 <h2>NAME</h2>
 <p> permview &#8211; Viewer for declarative security permission sets inside assemblies.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>permview [options] assembly</code></p>
-<h2>DESCRIPTION</h2>
 <p> This tools allow to list the declarative security attributes present in an assembly. The security attributes are either found on the assembly level, on the classes and the methods. This tool is useful to diagnose why an assembly won&#8217;t load or why some class/method throws SecurityException.</p>
 <h2>OPTIONS</h2>
 <dl>

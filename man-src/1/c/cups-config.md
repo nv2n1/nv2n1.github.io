@@ -1,4 +1,5 @@
 ---
+
 title: "cups-config(1)"
 name: "cups-config"
 section: "1"
@@ -9,7 +10,6 @@ description: "cups-config – get cups api, compiler, directory, and link inform
 
 <h2>NAME</h2>
 <p> cups-config &#8211; get cups api, compiler, directory, and link information.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cups-config</code> &#8211;api-version<br />
  <code>cups-config</code> &#8211;build<br />
  <code>cups-config</code> &#8211;cflags<br />
@@ -20,7 +20,6 @@ description: "cups-config – get cups api, compiler, directory, and link inform
  <code>cups-config</code> &#8211;serverbin<br />
  <code>cups-config</code> &#8211;serverroot<br />
  <code>cups-config</code> &#8211;version </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cups-config</code> is the CUPS program configuration utility. It should be used by application developers to determine the necessary command-line options for the compiler and linker, as well as determining installation directories for filters, configuration files, and drivers.</p>
 <h2>OPTIONS</h2>
 <dl>

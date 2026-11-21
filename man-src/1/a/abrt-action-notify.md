@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-notify(1)"
 name: "abrt-action-notify"
 section: "1"
@@ -6,22 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-notify/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-action-notify - Announces a new occurrence of problem via all accessible channels 
 
- abrt-action-notify - Announces a new occurrence of problem via all accessible channels 
+<i>abrt-action-notify</i> [-h] -d PROBLEM_DIR [-v] [-a] [-e AUTOREPORTING_EVENT]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-action-notify</i> [-h] -d PROBLEM_DIR [-v] [-a] [-e AUTOREPORTING_EVENT]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- The current implementation emits a D-Bus signal on System bus in path /org/freedesktop/problems of org.freedesktop.problems interface for Crash member.
+The current implementation emits a D-Bus signal on System bus in path /org/freedesktop/problems of org.freedesktop.problems interface for Crash member.
 
 <h3>Integration with ABRT events</h3>
 

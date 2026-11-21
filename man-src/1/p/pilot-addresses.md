@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-addresses(1)"
 name: "pilot-addresses"
 section: "1"
@@ -13,9 +14,7 @@ description: "pilot-addresses – Read and write address book databases to and f
 <p> pilot-link: Userland conduits </p>
 <h2>LOCATION</h2>
 <p> ./src </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-addresses</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;delete-all</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;delimiter</code>&nbsp;<wbr>&nbsp;<wbr><code>INT</code>]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;delete-category</code>&nbsp;<wbr>&nbsp;<wbr><code>&nbsp;<wbr>category&nbsp;<wbr></code>&nbsp;<wbr>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;category</code>&nbsp;<wbr>&nbsp;<wbr><code>category</code>]&nbsp;<wbr>[<code>-a</code>|<code>&#8211;augment</code>]&nbsp;<wbr>[<code>-r</code>|<code>&#8211;read</code>&nbsp;<wbr>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-w</code>|<code>&#8211;write</code>&nbsp;<wbr>&nbsp;<wbr><i>&nbsp;<wbr>file&nbsp;<wbr></i>&nbsp;<wbr>]&nbsp;<wbr>[<code>-C</code>|<code>&#8211;human-readable</code>] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-addresses</i>&nbsp;<wbr>allows the user to read all entries from a Palm handheld such as those made by&nbsp;<wbr><i>Palm</i>,&nbsp;<wbr><i>Handspring</i>,&nbsp;<wbr><i>Handera</i>,&nbsp;<wbr><i>TRGPro</i>,&nbsp;<wbr><i>Sony</i>&nbsp;<wbr>or other Palm handheld in the Palm Address Book application, write new entries into the database, and delete a category or delete all entries in the database. </p>
 <h2>COMMANDS</h2>
 <p> Provide exactly one of &#8211;read or &#8211;write. </p>

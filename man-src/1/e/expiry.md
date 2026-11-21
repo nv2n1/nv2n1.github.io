@@ -1,4 +1,5 @@
 ---
+
 title: "expiry(1)"
 name: "expiry"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-expiry/"
 description: "expiry – check and enforce password expiration policy"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>expiry</code> <i>option</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>expiry</code> command checks (<code>-c</code>) the current password expiration and forces (<code>-f</code>) changes when required. It is callable as a normal user command.</dd>
 <h2>OPTIONS</h2>
 <p> The options which apply to the <code>expiry</code> command are: </p>

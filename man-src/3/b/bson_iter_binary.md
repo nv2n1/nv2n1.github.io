@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_binary(3)"
 name: "bson_iter_binary"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_binary() – This function shall return the binary data 
 
 <h2>NAME</h2>
 <p> bson_iter_binary() &#8211; This function shall return the binary data of a BSON_TYPE_BINARY element. It is a programming error to call this function on a field that is not of type BSON_TYPE_BINARY. You can check this with the BSON_ITER_HOLDS_BINARY() macro or bson_iter_type().</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define BSON_ITER_HOLDS_BINARY(iter) \
     (bson_iter_type((iter)) == BSON_TYPE_BINARY)
@@ -31,7 +31,6 @@ void bson_iter_binary(const bson_iter_t *iter,
 <dl>
 <dt><code>binary</code></dt>
 <dd> A location for a pointer to the immutable buffer.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function shall return the binary data of a BSON_TYPE_BINARY element. It is a programming error to call this function on a field that is not of type BSON_TYPE_BINARY. You can check this with the BSON_ITER_HOLDS_BINARY() macro or <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "scs2ascii(1)"
 name: "scs2ascii"
 section: "1"
@@ -9,9 +10,7 @@ description: "scs2ascii – convert IBM SCS printer data into ASCII"
 
 <h2>NAME</h2>
 <p> scs2ascii &#8211; convert IBM SCS printer data into ASCII</p>
-<h2>SYNOPSIS</h2>
 <p> <code>scs2ascii</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program handles the conversion from an SCS print stream from an AS/400 printer emulation to something suitable for sending to lpr. It is only intended for use with <code>lp5250d</code>. </p>
 <p> When using host print transform with <code>lp5250d</code>, <code>scs2ascii</code> will remove the remaining characters from the SCS print stream to leave only the data intended for the printer.</p>
 <h2>SEE ALSO</h2>

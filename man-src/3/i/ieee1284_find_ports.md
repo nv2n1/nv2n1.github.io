@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_find_ports(3)"
 name: "ieee1284_find_ports"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ieee1284_find_ports/"
 description: "ieee1284_find_ports – find ports on the system"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int ieee1284_find_ports(struct parport_list&nbsp;<wbr>*</code><i>list</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This function should be called before the other libieee1284 functions. This gives the library a chance to look around and see what&#8217;s available, and gives the program a chance to choose a port to use. </dd>
 <p> The <i>list</i> is a pointer to a parport_list structure that will be filled in on success. </p>
 <p> There are no <i>flags</i> defined; use zero for this parameter.</p>

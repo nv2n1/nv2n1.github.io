@@ -1,4 +1,5 @@
 ---
+
 title: "h2root(1)"
 name: "h2root"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-h2root/"
 description: "h2root – convert PAW HBOOK files to ROOT files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>h2root</code> <i>file.hbook file.root [compress] [tolower] [lrecl]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>h2root</code> you can use to convert your <code>HBOOK/PAW</code> histograms or ntuples files into <code>ROOT</code> files. To use this program, you type the shell script command: </p>
 <dl>
 <dt>

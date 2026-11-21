@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pflock(3)"
 name: "ck_pflock"
 section: "3"
@@ -11,11 +12,9 @@ description: "ck_pflock_init ck_pflock_write_lock ck_pflock_write_unlock ck_pflo
 <p> <code>ck_pflock_init</code> <code>ck_pflock_write_lock</code> <code>ck_pflock_write_unlock</code> <code>ck_pflock_read_lock</code> <code>ck_pflock_read_unlock</code> &#8211; centralized phase-fair reader-writer locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_pflock.h </p>
 <p> <code>ck_pflock_t lock = CK_PFLOCK_INITIALIZER;</code> </p>
 <p> Ft void Fn ck_pflock_init ck_pflock_t *lock Ft void Fn ck_pflock_write_lock ck_pflock_t *lock Ft void Fn ck_pflock_write_unlock ck_pflock_t *lock Ft void Fn ck_pflock_read_lock ck_pflock_t *lock Ft void Fn ck_pflock_read_unlock ck_pflock_t *lock</p>
-<h2>DESCRIPTION</h2>
 <p> This is a centralized phase-fair reader-writer lock. It requires little space overhead and has a low latency fast path.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

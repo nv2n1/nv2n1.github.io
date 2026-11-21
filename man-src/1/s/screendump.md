@@ -1,4 +1,5 @@
 ---
+
 title: "screendump(1)"
 name: "screendump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-screendump/"
 description: "screendump – dump the contents of a virtual console to stdout"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>screendump </code> [ <i>N</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>screendump</code> command dumps the contents of virtual console <code>N</code> , (or the current console if N is omitted) to standard out. </p>
 <p> Just saying</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gethostid(2)"
 name: "gethostid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-gethostid/"
 description: "gethostid, sethostid – get or set the unique identifier of the current host"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>long gethostid(void);</code><br />
  <code>int sethostid(long </code><i>hostid</i><code>);</code> </p>
@@ -26,7 +26,6 @@ Since glibc 2.21 : _DEFAULT_SOURCE
                                          ||
                                          (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE &amp; nbsp; &lt; &amp;nbsp; 500)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>gethostid</code>() and <code>sethostid</code>() respectively get or set a unique 32-bit identifier for the current machine. The 32-bit identifier is intended to be unique among all UNIX systems in existence. This normally resembles the Internet address for the local machine, as returned by <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), and thus usually never needs to be set. </p>
 <p> The <code>sethostid</code>() call is restricted to the superuser.</p>
 <h2>RETURN VALUE</h2>

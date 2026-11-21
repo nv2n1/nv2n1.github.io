@@ -1,4 +1,5 @@
 ---
+
 title: "lttng-gen-tp(1)"
 name: "lttng-gen-tp"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-lttng-gen-tp/"
 description: "lttng-gen-tp — LTTng UST 2.x tracepoint code generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 lttng-gen-tp [OPTIONS] TEMPLATE_FILE
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The LTTng project aims at providing highly efficient tracing tools for Linux. Its tracers help in tracking down performance issues and debugging problems involving multiple concurrent processes and threads. Tracing across multiple systems is also possible. </p>
 <p> The <code>lttng-gen-tp</code> tool simplifies the generation of the UST tracepoint files. It takes a simple template file and generates the necessary code to use the defined tracepoints in your application. The section TEMPLATE FILE FORMAT describes the content of the template file. </p>
 <p> Currently, the tool can generate the .h, .c and .o associated with your tracepoint. The generated .h can be directly included in your application. You can let the tool generate the .o or compile the .c yourself. You can compile the .c into a .o, .a or .so at your choice and link it with your application. Refer to the UST documentation for the advantages and disadvantage of each form. To compile the resulting .c file, you need to add the options &quot;-llttng-ust -I.&quot;. </p>

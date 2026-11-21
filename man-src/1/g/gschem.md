@@ -1,4 +1,5 @@
 ---
+
 title: "gschem(1)"
 name: "gschem"
 section: "1"
@@ -9,9 +10,7 @@ description: "gschem – gEDA/gaf Schematic Capture"
 
 <h2>NAME</h2>
 <p> gschem &#8211; gEDA/gaf Schematic Capture</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gschem</code> [-q] [-v] [-t] [-r rcfilename] [-s scriptfilename] [-o outputfilename] [-p] [-h] [schematic1 &#8230; schematicN]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>gschem</i> is the schematic capture program which is part gEDA (GPL Electronic Design Automation) toolset. This program is used to draw electronic schematics. Schematics consist of standard symbols (which are either part of a standard library or created by the user) which represent the various gates and components. These components are then interconnected by nets (wires). Schematics may be printed to a PostScript file for printing or further conversion to other output formats. Output to various image formats is also supported. </p>
 <p> <i>gschem</i> is also the symbol creation editor. All the standard methods of creating schematics are used in the creation of symbols. There are a few special rules when creating symbols, so please refer to the (non-existant as of now) symbol creation document. </p>
 <p> Please read the official documentation (very minimal at this point) on how to use <i>gschem</i>, since this man page just describes the command line arguments and a few examples on how to run <i>gschem</i>. </p>

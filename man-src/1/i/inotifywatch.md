@@ -1,4 +1,5 @@
 ---
+
 title: "inotifywatch(1)"
 name: "inotifywatch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-inotifywatch/"
 description: "inotifywatch – gather filesystem access statistics using inotify"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>inotifywatch</code> [<code>-hvzrqf</code>] [<code>-e</code> &lt;event&gt; ] [<code>-t</code> &lt;seconds&gt; ] [<code>-a</code> &lt;event&gt; ] [<code>-d</code> &lt;event&gt; ] &lt;file&gt; [ &#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>inotifywatch</code> listens for filesystem events using Linux&#8217;s <code><a href="/docs/linux/man/7-inotify/">inotify</a>(7)</code> interface, then outputs a summary count of the events received on each file or directory. </p>
 <h2>OUTPUT</h2>
 <p> <code>inotifywatch</code> will output a table on standard out with one column for each type of event and one row for each watched file or directory. The table will show the amount of times each event occurred for each watched file or directory. Output can be sorted by a particular event using the <code>-a</code> or <code>-d</code> options. </p>

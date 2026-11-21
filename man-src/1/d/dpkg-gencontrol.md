@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-gencontrol(1)"
 name: "dpkg-gencontrol"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-gencontrol/"
 description: "dpkg-gencontrol – generate Debian control files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-gencontrol</code> [<i>option</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-gencontrol</code> reads information from an unpacked Debian source tree and generates a binary package control file (which defaults to debian/tmp/DEBIAN/control); during this process it will simplify the relation fields. </p>
 <p> Thus <code>Pre-Depends</code>, <code>Depends</code>, <code>Recommends</code> and <code>Suggests</code> are simplified in this order by removing dependencies which are known to be true according to the stronger dependencies already parsed. It will also remove any self-dependency (in fact it will remove any dependency which evaluates to true given the current version of the package as installed). Logically it keeps the intersection of multiple dependencies on the same package. The order of dependencies is preserved as best as possible: if any dependency must be discarded due to another dependency appearing further in the field, the superseding dependency will take the place of the discarded one. </p>
 <p> The other relation fields (<code>Enhances</code>, <code>Conflicts</code>, <code>Breaks</code>, <code>Replaces</code> and <code>Provides</code>) are also simplified individually by computing the union of the various dependencies when a package is listed multiple times in the field. </p>

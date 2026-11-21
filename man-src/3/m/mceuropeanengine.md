@@ -1,4 +1,5 @@
 ---
+
 title: "mceuropeanengine(3)"
 name: "mceuropeanengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mceuropeanengine/"
 description: "ql/pricingengines/vanilla/mceuropeanengine.hpp – Monte Carlo European option engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/mcvanillaengine.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br />

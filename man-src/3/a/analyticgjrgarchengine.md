@@ -1,4 +1,5 @@
 ---
+
 title: "analyticgjrgarchengine(3)"
 name: "analyticgjrgarchengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-analyticgjrgarchengine/"
 description: "ql/pricingengines/vanilla/analyticgjrgarchengine.hpp – analytic GJR-GARCH-model engine"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br />
  #include &lt;ql/models/equity/gjrgarchmodel.hpp&gt;<br />
  #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />

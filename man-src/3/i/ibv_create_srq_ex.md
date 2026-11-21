@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_srq_ex(3)"
 name: "ibv_create_srq_ex"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_create_srq_ex/"
 description: "ibv_create_srq_ex, ibv_destroy_srq – create or destroy a shared receive queue (SRQ)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_srq *ibv_create_srq_ex(struct ibv_context *context, struct
                                   ibv_srq_init_attr_ex *srq_init_attr_ex);
 int ibv_destroy_srq(struct ibv_srq *srq);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_srq_ex()</code> creates a shared receive queue (SRQ) supporting both basic and xrc modes. The argument <i>srq_init_attr_ex</i> is an ibv_srq_init_attr_ex struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_srq_init_attr_ex {

@@ -1,4 +1,5 @@
 ---
+
 title: "ptrash(1)"
 name: "ptrash"
 section: "1"
@@ -6,11 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-ptrash/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ptrash</code> [<i>Option</i>] file-name-1 [file-name-2 &#8230;]</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ptrash</code> is a console based simple application. <code>ptrash</code> moves the named file(s) to trash directory located under the home directory of a user. In case if ~/.trash is non-existent, <code>ptrash</code> creates it for you and then moves the file(s) to this directory. By default, ptrash runs in non-interactive mode, which means it does not ask user if she is sure to move the file to ~/.trash even when the named file already exists in trash and proceeds with overwriting that file.</p>
 <h2>OPTIONS</h2>
 <p> <code>ptrash</code> supports the following options</p>

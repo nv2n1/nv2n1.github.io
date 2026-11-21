@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_prf(3)"
 name: "gnutls_prf"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_prf – API function"
 
 <h2>NAME</h2>
 <p> gnutls_prf &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_prf(gnutls_session_t </code><i>session</i><code>, size_t </code><i>label_size</i><code>, const char * </code><i>label</i><code>, int </code><i>server_random_first</i><code>, size_t </code><i>extra_size</i><code>, const char * </code><i>extra</i><code>, size_t </code><i>outsize</i><code>, char * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,7 +30,6 @@ description: "gnutls_prf – API function"
 <dd> size of pre-allocated output buffer to hold the output.</dd>
 <dt>char * out</dt>
 <dd> pre-allocated buffer to hold the generated data.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Applies the TLS Pseudo-Random-Function (PRF) on the master secret and the provided data, seeded with the client and server random fields. </p>
 <p> The output of this function is identical to RFC5705 extractor if <i>extra</i> and <i>extra_size</i> are set to zero. Otherwise, <i>extra</i> should contain the context value prefixed by a two-byte length. </p>
 <p> The <i>label</i> variable usually contains a string denoting the purpose for the generated data. The <i>server_random_first</i> indicates whether the client random field or the server random field should be first in the seed. Non-zero indicates that the server random field is first, 0 that the client random field is first. </p>

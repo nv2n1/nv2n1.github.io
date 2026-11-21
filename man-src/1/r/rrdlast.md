@@ -1,4 +1,5 @@
 ---
+
 title: "rrdlast(1)"
 name: "rrdlast"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdlast/"
 description: "rrdlast – Return the date of the last data sample in an RRD"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>last</code> <i>filename</i> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>last</code> function returns the <font SIZE="-1">UNIX</font> timestamp of the most recent update of the <font SIZE="-1">RRD</font>.</p>
 <dl>
 <dt><i>filename</i></dt>

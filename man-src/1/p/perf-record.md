@@ -1,4 +1,5 @@
 ---
+
 title: "perf-record(1)"
 name: "perf-record"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-perf-record/"
 description: "perf-record – Run a command and record its profile into perf.data"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perf record[-e&lt;EVENT&gt; | --event = EVENT][-l][-a]&lt;command&gt;
         perf record[-e&lt;EVENT&gt; | --event = EVENT][-l][-a]-- - &lt;command&gt;[&lt;options&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command runs a command and gathers a performance counter profile from it, into perf.data &#8211; without displaying anything. </p>
 <p> This file can then be inspected later on, using <i>perf report</i>.</p>
 <h2>OPTIONS</h2>

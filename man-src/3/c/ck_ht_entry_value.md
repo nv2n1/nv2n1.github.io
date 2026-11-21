@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_entry_value(3)"
 name: "ck_ht_entry_value"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_ht_entry_value – return pointer to value as specified in hash
 <p> <code>ck_ht_entry_value</code> &#8211; return pointer to value as specified in hash table entry</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft void * Fn ck_ht_entry_value ck_ht_entry_t *entry</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_entry_value function will return the value pointer as specified in the object pointed to by the Fa entry argument. </p>
 <p> It is expected that the entry is associated with a hash table initialized with <code>CK_HT_MODE_BYTESTRING</code> (see ck_ht_init3 for more information).</p>
 <h2>RETURN VALUES</h2>

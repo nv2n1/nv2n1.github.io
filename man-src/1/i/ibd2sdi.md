@@ -1,4 +1,5 @@
 ---
+
 title: "ibd2sdi(1)"
 name: "ibd2sdi"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ibd2sdi/"
 description: "ibd2sdi – InnoDB utility for extracting serialized dictionary information (SDI) from an InnoDB tablespace"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ibd2sdi [</code><i>options</i><code>] </code><i>file_name1</i><code> [</code><i>file_name2 file_name3 &#8230;]</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ibd2sdi</code></p>
 <dd>is a utility for extracting serialized dictionary information (SDI) from InnoDB tablespace files. SDI data is present all persistent InnoDB tablespace files. </dd>
 <p> <code>ibd2sdi</code> can be run on file-per-table tablespace files (*.ibd files), general tablespace files (*.ibd files), system tablespace files (ibdata* files), and the data dictionary tablespace (mysql.ibd). It is not supported for use with temporary tablespaces or undo tablespaces. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dspam_logrotate(1)"
 name: "dspam_logrotate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dspam_logrotate/"
 description: "dspam_logrotate – Rotate DSPAM logfiles"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dspam_logrotate</code> <code>-a age </code>[-v]&nbsp;<wbr>[[<code>-l </code>[<i>logfile</i>]]|[<code>-d </code>[<i>dir</i>]]] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>dspam_logrotate</code> can be used to rotate DSPAM system log and/or the user logs. </p>
 <h2>OPTIONS</h2>
 <dl>

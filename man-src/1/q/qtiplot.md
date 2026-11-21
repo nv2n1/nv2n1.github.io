@@ -1,4 +1,5 @@
 ---
+
 title: "qtiplot(1)"
 name: "qtiplot"
 section: "1"
@@ -9,9 +10,7 @@ description: "QtiPlot – Data Analysis and Scientific Plotting"
 
 <h2>NAME</h2>
 <p> QtiPlot &#8211; Data Analysis and Scientific Plotting</p>
-<h2>SYNOPSIS</h2>
 <p> <code>qtiplot</code> [<i>options</i>]<i>[file(s)]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>qtiplot</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>qtiplot</code> is a powerful data analysis and scientific plotting program. It has an easy to use graphical user interface and a spreadsheet calculator, a good fitting wizard and more. It can import project files from the Origin program. </p>
 <h2>OPTIONS</h2>

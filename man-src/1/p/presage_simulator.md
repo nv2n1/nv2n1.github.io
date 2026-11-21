@@ -1,4 +1,5 @@
 ---
+
 title: "presage_simulator(1)"
 name: "presage_simulator"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-presage_simulator/"
 description: "presage_simulator – presage simulator program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>presage_simulator</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-c</code>, <code>&#8211;config</code> CONFIG</dt>
 <dd> use config file CONFIG</dd>

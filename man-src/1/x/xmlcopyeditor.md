@@ -1,4 +1,5 @@
 ---
+
 title: "xmlcopyeditor(1)"
 name: "xmlcopyeditor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xmlcopyeditor/"
 description: "xmlcopyeditor – fast, free, validating XML editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xmlcopyeditor</code> <code>[</code> <code>&#8211;version</code> <code>|</code> <code>&#8211;help</code> <code>|</code> <code>FILE&#8230;</code> <code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>XML Copy Editor</i> is an XML editor focusing on editing document markup languages like DITA, DocBook, WordprocessingML. Features: DTD/XML Schema/RELAX NG validation, XSLT, XPath, Pretty-printing, Syntax highlighting, Folding, Tag completion, Tag locking, Tag-free editing, Built-in support for XHTML, XSL, DocBook and TEI, Generating XML Schema, Spelling and style check with built-in spell/style checker. </p>
 <p> <i>XML Copy Editor</i> is free software released under the GNU General Public License. </p>
 <h2>OPTIONS</h2>

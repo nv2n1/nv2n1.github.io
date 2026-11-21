@@ -1,4 +1,5 @@
 ---
+
 title: "colormgr(1)"
 name: "colormgr"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-colormgr/"
 description: "colormgr – Color Manager Testing Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>colormgr</code> [<code>&#8211;verbose</code>] [<code>&#8211;version</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>colormgr</code> command. </dd>
 <p> <code>colormgr</code> allows an administrator to view and change color profile to device mappings.</p>
 <h2>OPTIONS</h2>

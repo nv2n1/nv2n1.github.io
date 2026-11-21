@@ -1,4 +1,5 @@
 ---
+
 title: "cheevx(3)"
 name: "cheevx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cheevx/"
 description: "cheevx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cheevx</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, RWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code> CHEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for HE matrices</code></p>

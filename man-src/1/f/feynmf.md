@@ -1,4 +1,5 @@
 ---
+
 title: "feynmf(1)"
 name: "feynmf"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-feynmf/"
 description: "feynmf – Process LaTeX files using FeynMF"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>feynmf</code> [<code>-hvqncfT</code>] [<code>-t</code> <i>tfm</i> [<code>-t</code> <i>tfm</i> &#8230;]] [<code>-m</code> <i>mode</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>file</i>&nbsp;[<i>file</i>&nbsp;&#8230;] </p>
 <p> <code>feynmf</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;quiet</code>] [<code>&#8211;noexec</code>] [<code>&#8211;clean</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;force</code>]&nbsp;[<code>&#8211;notfm</code>]&nbsp;[<code>&#8211;tfm</code>&nbsp;<i>tfm</i>&nbsp;[<code>&#8211;tfm</code>&nbsp;<i>tfm</i>&nbsp;&#8230;]]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;mode</code>&nbsp;<i>mode</i>]&nbsp;<i>file</i>&nbsp;[<i>file</i>&nbsp;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The most complicated part of using the <code>FeynMF</code> style appears to be the proper invocation of <code>Metafont</code>. The <code>feynmf</code> script provides a convenient front end and will automagically invoke <code>Metafont</code> with the proper mode and magnification. It will also avoid cluttering system font directories and offers an option to clean them.</p>
 <h2>OPTIONS</h2>
 <dl>

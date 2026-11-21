@@ -1,4 +1,5 @@
 ---
+
 title: "zbarimg(1)"
 name: "zbarimg"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-zbarimg/"
 description: "zbarimg – scan and decode bar codes from image file(s)"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zbarimg</code> [<code>-qv</code>] [<code>&#8211;quiet</code>] [<code>&#8211;verbose</code><code>[=</code><i>n</i>]]</dt>
 <dd> {<code>-dD</code> | <code>&#8211;display</code> | <code>&#8211;nodisplay</code> | <code>&#8211;xml</code> | <code>&#8211;noxml</code> | <code>-S</code><code>[</code><i>symbology</i>.]<i>config</i><code>[=</code><i>value</i>] | <code>&#8211;set&nbsp;<wbr></code><code>[</code><i>symbology</i>.]<i>config</i><code>[=</code><i>value</i>] | <i>image</i>&#8230;}</dd>
 <dt> <code>zbarimg</code> {<code>-h</code> | <code>&#8211;help</code> | <code>&#8211;version</code>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>For each specified <i>image</i> file <code>zbarimg</code> scans the image for bar codes and prints any decoded data to stdout. Images may optionally be displayed to the screen. </dd>
 <p> The underlying library currently supports EAN-13 (including UPC and ISBN subsets), EAN-8, DataBar, DataBar Expanded, Code 128, Code 93, Code 39, Codabar, Interleaved 2 of 5 and QR Code symbologies. The specific type of each detected symbol is printed with the decoded data. </p>
 <p> Note that &quot;<i>image</i>&quot; in this context refers to any format supported by ImageMagick, including many vector formats such as PDF and PostScript. Keep in mind that vector formats are rasterized before scanning; manually rasterize vector images before scanning to avoid unintentionally corrupting embedded barcode bitmaps.</p>

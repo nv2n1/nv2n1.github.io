@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_renewed_creds(3)"
 name: "krb5_get_renewed_creds"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-krb5_get_renewed_creds/"
 description: "krb5_get_credentials krb5_get_credentials_with_flags krb5_get_kdc_cred krb5_get_renewed_creds – get credentials from the KDC using krbtgt"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_credentials</code> <code>krb5_get_credentials_with_flags</code> <code>krb5_get_kdc_cred</code> <code>krb5_get_renewed_creds</code> &#8211; get credentials from the KDC using krbtgt </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
-<h2>SYNOPSIS</h2>
 <p> In krb5.h Ft krb5_error_code Fo krb5_get_credentials Fa krb5_context context Fa krb5_flags options Fa krb5_ccache ccache Fa krb5_creds *in_creds Fa krb5_creds **out_creds Fc Ft krb5_error_code Fo krb5_get_credentials_with_flags Fa krb5_context context Fa krb5_flags options Fa krb5_kdc_flags flags Fa krb5_ccache ccache Fa krb5_creds *in_creds Fa krb5_creds **out_creds Fc Ft krb5_error_code Fo krb5_get_kdc_cred Fa krb5_context context Fa krb5_ccache id Fa krb5_kdc_flags flags Fa krb5_addresses *addresses Fa Ticket *second_ticket Fa krb5_creds *in_creds Fa krb5_creds **out_creds Fc Ft krb5_error_code Fo krb5_get_renewed_creds Fa krb5_context context Fa krb5_creds *creds Fa krb5_const_principal client Fa krb5_ccache ccache Fa const char *in_tkt_service Fc</p>
-<h2>DESCRIPTION</h2>
 <p> Fn krb5_get_credentials_with_flags get credentials specified by Fa in_creds-&gt;server and Fa in_creds-&gt;client (the rest of the Fa in_creds structure is ignored) by first looking in the Fa ccache and if doesn&#8217;t exists or is expired, fetch the credential from the KDC using the krbtgt in Fa ccache . The credential is returned in Fa out_creds and should be freed using the function Fn krb5_free_creds . </p>
 <p> Valid flags to pass into Fa options argument are: </p>
 <dl>

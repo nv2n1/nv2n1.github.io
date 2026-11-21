@@ -1,4 +1,5 @@
 ---
+
 title: "mtx(1)"
 name: "mtx"
 section: "1"
@@ -9,9 +10,7 @@ description: "mtx – control SCSI media changer devices"
 
 <h2>NAME</h2>
 <p> mtx &#8211; control SCSI media changer devices</p>
-<h2>SYNOPSIS</h2>
 <p> mtx [-f &lt;scsi-generic-device&gt;] [nobarcode] [invert] [noattach] command [ command &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mtx</code> command controls single or multi-drive SCSI media changers such as tape changers, autoloaders, tape libraries, or optical media jukeboxes. It can also be used with media changers that use the &#8216;ATTACHED&#8217; API, presuming that they properly report the MChanger bit as required by the SCSI T-10 SMC specification.</p>
 <h2>OPTIONS</h2>
 <p> The first argument, given following <code>-f</code> , is the SCSI generic device corresponding to your media changer. Consult your operating system&#8217;s documentation for more information (for example, under Linux these are generally /dev/sg0 through /dev/sg15, under FreeBSD these are /dev/pass0 through /dev/passX, under SunOS it may be a file under /dev/rdsk). </p>

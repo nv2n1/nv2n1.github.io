@@ -1,4 +1,5 @@
 ---
+
 title: "compositequote(3)"
 name: "compositequote"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-compositequote/"
 description: "ql/quotes/compositequote.hpp – purely virtual base class for market observables"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/quote.hpp&gt;<br />
  #include &lt;ql/types.hpp&gt;<br />
  #include &lt;ql/handle.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_tpm_privkey_delete(3)"
 name: "gnutls_tpm_privkey_delete"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_tpm_privkey_delete – API function"
 
 <h2>NAME</h2>
 <p> gnutls_tpm_privkey_delete &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/tpm.h&gt;</code> </p>
 <p> <code>int gnutls_tpm_privkey_delete(const char * </code><i>url</i><code>, const char * </code><i>srk_password</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_tpm_privkey_delete – API function"
 <dd> the URL describing the key</dd>
 <dt>const char * srk_password</dt>
 <dd> a password for the SRK key</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will unregister the private key from the TPM chip.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

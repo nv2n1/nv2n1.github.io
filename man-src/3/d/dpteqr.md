@@ -1,4 +1,5 @@
 ---
+
 title: "dpteqr(3)"
 name: "dpteqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpteqr/"
 description: "dpteqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
  <i></i><code>DPTEQR</code></p>

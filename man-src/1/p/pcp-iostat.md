@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-iostat(1)"
 name: "pcp-iostat"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmiostat, pcp-iostat – performance metrics i/o statistics tool"
 
 <h2>NAME</h2>
 <p> <code>pmiostat</code>, <code>pcp-iostat</code> &#8211; performance metrics i/o statistics tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pcp iostat</code> [<code>-A</code> <i>align</i> <code>&#8211;align=</code><i>TIME</i>] [<code>-a</code> <i>archive</i> <code>&#8211;archive=</code><i>FILE</i>] [<code>-G</code> <i>method</i> <code>&#8211;aggregate=</code><i>method</i>] [<code>-h</code> <i>host</i> <code>&#8211;host=</code><i>HOST</i>] [<code>-O</code> <i>offset</i> <code>&#8211;origin=</code><i>TIME</i>] [<code>-S</code> <i>starttime</i> <code>&#8211;start=</code><i>TIME</i>] [<code>-s</code> <i>samples</i> <code>&#8211;samples=</code><i>N</i>] [<code>-T</code> <i>endtime</i> <code>&#8211;finish=</code><i>TIME</i>] [<code>-t</code> <i>interval</i> <code>&#8211;interval=</code><i>DELTA</i>] [<code>-P</code> <i>precision</i> <code>&#8211;precision=</code><i>N</i>] [<code>-R</code> <i>pattern</i> <code>&#8211;regex=</code><i>pattern</i>] [<code>-u</code> <code>&#8211;no-interpolate</code>] [<code>-Z</code> <i>timezone</i> <code>&#8211;timezone=</code><i>TZ</i>] [<code>-z</code> <code>&#8211;hostzone</code>] [<code>-?</code> <code>&#8211;help</code>] [<code>-x</code> [dm][,t][,h][,noidle]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcp-iostat</code> reports I/O statistics for scsi devices (by default) or device-mapper devices (if the <code>-x dm</code> option is specified). By default <code>pcp-iostat</code> reports live data for the local host but can also report for a remote host (<code>-h</code>) or from a previously captured PCP archive (<code>-a</code>). </p>
 <p> The <code>-S</code>, <code>-T</code>, <code>-O</code> and <code>-A</code> options may be used to define a time window to restrict the samples retrieved, set an initial origin within the time window, or specify a &#8220;natural&#8221; alignment of the sample times; refer to <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for a complete description of these options. </p>
 <p> The other options which control the source, timing and layout of the information reported by <code>pcp-iostat</code> are as follows:</p>

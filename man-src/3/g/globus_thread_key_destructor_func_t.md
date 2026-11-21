@@ -1,4 +1,5 @@
 ---
+
 title: "globus_thread_key_destructor_func_t(3)"
 name: "globus_thread_key_destructor_func_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_thread.h –"
 ---
 
 <p> Globus Threading Abstraction.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_module.h&#8217;<br />
  #include &#8216;globus_time.h&#8217;<br />
  #include &lt;unistd.h&gt; </p>

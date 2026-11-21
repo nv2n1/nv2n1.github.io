@@ -1,4 +1,5 @@
 ---
+
 title: "mlocate(5)"
 name: "mlocate"
 section: "5"
@@ -6,8 +7,8 @@ letter: "m"
 url: "/docs/linux/man/5-mlocate/"
 description: "mlocate.db – a mlocate database"
 ---
+
 <p>mlocate.db &#8211; a mlocate database  </p>
-<h2>DESCRIPTION</h2>
 <p> A mlocate database starts with a file header: 8 bytes for a magic number (<code>&quot;\0mlocate&quot;</code> like a C literal), 4 bytes for the <i>configuration block</i> size in big endian, 1 byte for file format version (<code>0</code>), 1 byte for the ``require visibility&#8217;&#8216; flag (<code>0</code> or <code>1</code>), 2 bytes padding, and a NUL-terminated path name of the root of the database. </p>
 <p>The header is followed by a <i>configuration block</i>, included to ensure databases are not reused if some configuration changes could affect their contents. The size of the configuration block in bytes is stored in the file header. The configuration block is a sequence of <i>variable assignments</i>, ordered by variable name. Each <i>variable assignment</i> consists of a NUL-terminated variable name and an ordered list of NUL-terminated values. The value list is terminated by one more <font SIZE="-1">NUL</font> character. The ordering used is defined by the <code>strcmp ()</code> function. </p>
 <p>Currently defined variables are: </p>

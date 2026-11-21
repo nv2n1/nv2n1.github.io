@@ -1,4 +1,5 @@
 ---
+
 title: "gsftopk(1)"
 name: "gsftopk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsftopk/"
 description: "gsftopk – render a ghostscript font in TeX pk form"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gsftopk</code> [-i <i>path</i>] [-q] [-t] [&#8211;debug=<i>n</i>] [&#8211;dosnames] [&#8211;interpreter=<i>path</i>] [&#8211;mapline=<i>line</i>] [&#8211;mapfile=<i>file</i>] [&#8211;quiet] [&#8211;test] [&#8211;help] [&#8211;version] <i>font</i> <i>dpi</i></p>
 <h2>ARGUMENTS</h2>
 <dl>
@@ -15,7 +15,6 @@ description: "gsftopk – render a ghostscript font in TeX pk form"
 <dd> Name of the font to be created.</dd>
 <dt><i>dpi</i></dt>
 <dd> Desired resolution of the font to be created, in dots per inch. This may be a real number.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gsftopk</code> is a program which calls up the ghostscript program <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to render a given font at a given resolution. It packs the resulting characters into the <code>pk</code> file format and writes them to a file whose name is formed from the font name and the resolution (rounded to the nearest integer). The font may be in any format acceptable to Ghostscript, including .<i>pfa</i>, .<i>pfb</i>, .<i>gsf</i>, and .<i>ttf</i> files. </p>
 <p> This program should normally be called by a script, such as <code>mktexpk</code>, to create fonts on demand. </p>
 <p> <code>gsftopk</code> obtains the character widths from the .<i>tfm</i> file, which must exist in the standard search path. It also must be able to find the font in a map file (such as <code>psfonts.map</code>), formatted as in <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1)), unless the <code>&#8211;mapline</code> option is used. The set of map files is given by the <code>&#8211;mapfile</code> option, or in the files <code>config.ps</code>, <code>$HOME/.dvipsrc</code>, and <code>config.gsftopk</code> (as would be used by <code>dvips -Pgsftopk</code>). </p>

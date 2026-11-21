@@ -1,4 +1,5 @@
 ---
+
 title: "bcomps(1)"
 name: "bcomps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bcomps/"
 description: "bcomps – biconnected components filter for graphs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bcomps</code> [ <code>-stvx?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>bcomps</code> decomposes graphs into their biconnected components, printing the components to standard output.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

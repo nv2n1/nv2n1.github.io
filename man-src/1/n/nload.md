@@ -1,4 +1,5 @@
 ---
+
 title: "nload(1)"
 name: "nload"
 section: "1"
@@ -9,10 +10,8 @@ description: "nload – displays the current network usage"
 
 <h2>NAME</h2>
 <p> nload &#8211; displays the current network usage </p>
-<h2>SYNOPSIS</h2>
 <p> <code>nload</code> [<code>-a</code> <i>period</i>] [<code>-i</code> <i>max_scaling</i>] [<code>-m</code>] [<code>-o</code> <i>max_scaling</i>] [<code>-t</code> <i>interval</i>] [<code>-u</code> <i>h|H|b|B|k|K|m|M|g|G</i>] [<code>-U</code> <i>h|H|b|B|k|K|m|M|g|G</i>] [<i>devices</i>] </p>
 <p> <code>nload &#8211;help|-h</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nload</code> is a console application which monitors network traffic and bandwidth usage in real time. It visualizes the in- and outgoing traffic using two graphs and provides additional info like the total amount of transfered data and min/max network usage. </p>
 <h2>USAGE</h2>
 <p> When running <code>nload,</code> you can switch between the devices (which you gave <code>nload</code> either on the command line or which were auto-detected) by pressing the left and right arrow keys. If the <code>-m</code> command line parameter is given, the arrow keys switch as many devices back and forth as there are shown on the screen. If you want to quit, do so by pressing &#8216;q&#8217; or &#8216;Ctrl+C&#8217;. </p>

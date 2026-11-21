@@ -1,4 +1,5 @@
 ---
+
 title: "grotty(1)"
 name: "grotty"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grotty/"
 description: "grotty – groff driver for typewriter-like devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-bBcdfhioruUv</code> ] [ <code>-F </code><i>dir</i> ] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grotty</code> translates the output of GNU <code>troff</code> into a form suitable for typewriter-like devices. Normally <code>grotty</code> should be invoked by using the <code>groff</code> command with a <code>-Tascii</code>, <code>-Tlatin1</code> or <code>-Tutf8</code> option on ASCII based systems, and with <code>-Tcp1047</code> and <code>-Tutf8</code> on EBCDIC based hosts. If no files are given, <code>grotty</code> reads the standard input. A filename of <code>&#8211;</code> also causes <code>grotty</code> to read the standard input. Output is written to the standard output. </p>
 <p> By default, <code>grotty</code> emits SGR escape sequences (from ISO 6429, also called ANSI color escapes) to change text attributes (bold, italic, colors). This makes it possible to have eight different background and foreground colors; additionally, bold and italic attributes can be used at the same time (by using the BI font). </p>
 <p> The following colors are defined in <code>tty.tmac</code>: black, white, red, green, blue, yellow, magenta, cyan. Unknown colors are mapped to the default color (which is dependent on the settings of the terminal; in most cases, this is black for the foreground and white for the background). </p>

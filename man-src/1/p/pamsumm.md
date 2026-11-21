@@ -1,4 +1,5 @@
 ---
+
 title: "pamsumm(1)"
 name: "pamsumm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pamsumm/"
 description: "pamsumm – Summarize the samples in a Netpbm image arithmetically"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamsumm</code> { <code>-sum</code> | <code>-mean</code> | <code>-min</code> | <code>-max</code> } [<code>-normalize</code>] [<code>-brief</code>] [<i>imagefile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamsumm</code> reads a Netpbm image (PNM or PAM) and performs a summary function over all the samples in all the rows, columns, and planes and prints the result to Standard Output. </p>
 <p> <code>pamsumm</code> performs the operation on the actual sample values. In the case of a PGM or PPM or PAM equivalent (i.e. a visual image), this is not the same as the light intensities represented by those samples. See the format specifications of <code>PGM</code>(1) , <code>PPM</code>(1) , and <code>PAM</code>(1) , for the precise meanings of samples in these formats. If you want to do arithmetic on light intensities of such a visual image, you can use <code>pnmgamma</code> to convert it to one with samples proportional to light intensity, and then use <code>pamsumm</code> on the result. </p>

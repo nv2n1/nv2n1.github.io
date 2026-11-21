@@ -1,4 +1,5 @@
 ---
+
 title: "bashbug(1)"
 name: "bashbug"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-bashbug/"
 description: "bashbug – report a bug in bash"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bashbug</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<i>bug-report-email-addresses</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>bashbug</code></p>
 <dd>is a utility for reporting bugs in Bash to the maintainers. </dd>
 <p> <code>bashbug</code> will start up your preferred editor with a preformatted bug report template for you to fill in. Save the file and quit the editor once you have completed the missing fields. <code>bashbug</code> will notify you of any problems with the report and ask for confirmation before sending it. By default the bug report is mailed to both the GNU developers and the Debian Bash maintainers. The recipients can be changed by giving a comma separated list of <i>bug-report-email-addresses</i>. </p>

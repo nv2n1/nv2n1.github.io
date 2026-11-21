@@ -1,4 +1,5 @@
 ---
+
 title: "pause(2)"
 name: "pause"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-pause/"
 description: "pause – wait for signal"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int pause(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pause</code>() causes the calling process (or thread) to sleep until a signal is delivered that either terminates the process or causes the invocation of a signal-catching function.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>pause</code>() returns only when a signal was caught and the signal-catching function returned. In this case, <code>pause</code>() returns -1, and <i>errno</i> is set to <code>EINTR</code>.</p>

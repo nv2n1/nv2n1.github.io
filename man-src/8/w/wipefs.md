@@ -1,4 +1,5 @@
 ---
+
 title: "wipefs(8)"
 name: "wipefs"
 section: "8"
@@ -6,12 +7,11 @@ letter: "w"
 url: "/docs/linux/man/8-wipefs/"
 description: "wipefs – wipe a signature from a device"
 ---
+
 <p>wipefs &#8211; wipe a signature from a device </p>
-<h2>SYNOPSIS</h2>
 <p> <code>wipefs</code> [options] <i>device</i>... </p>
 <p> <code>wipefs</code> [<code>--backup</code>] <code>-o</code> <i>offset device</i>... </p>
 <p> <code>wipefs</code> [<code>--backup</code>] <code>-a</code> <i>device</i>...  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>wipefs</code> can erase filesystem, raid or partition-table signatures (magic strings) from the specified <i>device</i> to make the signatures invisible for libblkid. <code>wipefs</code> does not erase the filesystem itself nor any other data from the device. </p>
 <p>When used without any options, <code>wipefs</code> lists all visible filesystems and the offsets of their basic signatures. The default output is subject to change. So whenever possible, you should avoid using default outputs in your scripts. Always explicitly define expected columns by using <code>--output</code> <i>columns-list</i> in environments where a stable output is required. </p>
 <p> <code>wipefs</code> calls the BLKRRPART ioctl when it has erased a partition-table signature to inform the kernel about the change. The ioctl is called as the last step and when all specified signatures from all specified devices are already erased. This feature can be used to wipe content on partitions devices as well as partition table on a disk device, for example by <code>wipefs -a /dev/sdc1 /dev/sdc2 /dev/sdc</code>. </p>

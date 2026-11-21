@@ -1,4 +1,5 @@
 ---
+
 title: "libswscale(3)"
 name: "libswscale"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libswscale/"
 description: "libswscale – video scaling and pixel format conversion library"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The libswscale library performs highly optimized image scaling and colorspace and pixel format conversion operations. </p>
 <p> Specifically, this library performs the following conversions:</p>
 <dl>

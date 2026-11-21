@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-ml-option-popup(1)"
 name: "urxvt-ml-option-popup"
 section: "1"
@@ -6,14 +7,9 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-option-popup/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+option-popup - option menu (enabled by default) 
 
- option-popup - option menu (enabled by default) 
-
-<h2>DESCRIPTION</h2>
-
- Binds a popup menu to Ctrl-Button2 that lets you toggle (some) options at runtime. 
+Binds a popup menu to Ctrl-Button2 that lets you toggle (some) options at runtime. 
 
  Other extensions can extend this popup menu by pushing a code reference onto <tt>&quot;@{ $term-&gt;{option_popup_hook} }&quot;</tt>, which gets called whenever the popup is being displayed. 
 

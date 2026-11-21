@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_readdir(3)"
 name: "libssh2_sftp_readdir"
 section: "3"
@@ -9,10 +10,8 @@ description: "libssh2_sftp_readdir – convenience macro for libssh2_sftp_readdi
 
 <h2>NAME</h2>
 <p> libssh2_sftp_readdir &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_sftp_readdir_ex/">libssh2_sftp_readdir_ex</a>(3)</i> calls</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_sftp_readdir(LIBSSH2_SFTP_HANDLE *handle, char *buffer, size_t buffer_maxlen, LIBSSH2_SFTP_ATTRIBUTES *attrs); </p>
-<h2>DESCRIPTION</h2>
 <p> This is a macro defined in a public libssh2 header file that is using the underlying function <i><a href="/docs/linux/man/3-libssh2_sftp_readdir_ex/">libssh2_sftp_readdir_ex</a>(3)</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> See <i><a href="/docs/linux/man/3-libssh2_sftp_readdir_ex/">libssh2_sftp_readdir_ex</a>(3)</i></p>

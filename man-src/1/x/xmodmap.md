@@ -1,4 +1,5 @@
 ---
+
 title: "xmodmap(1)"
 name: "xmodmap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xmodmap/"
 description: "xmodmap – utility for modifying keymaps and pointer button mappings in X"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xmodmap</code> [-options &#8230;] [filename]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xmodmap</i> program is used to edit and display the keyboard <i>modifier map</i> and <i>keymap table</i> that are used by client applications to convert event keycodes into keysyms. It is usually run from the user&#8217;s session startup script to configure the keyboard according to personal tastes.</p>
 <h2>OPTIONS</h2>
 <p> The following options may be used with <i>xmodmap</i>:</p>

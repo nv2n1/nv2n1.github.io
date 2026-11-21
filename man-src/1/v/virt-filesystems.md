@@ -1,4 +1,5 @@
 ---
+
 title: "virt-filesystems(1)"
 name: "virt-filesystems"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-virt-filesystems/"
 description: "virt-filesystems – List filesystems, partitions, block devices, LVM in a virtual machine or disk image"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - filesystems[--options] - d domname virt - filesystems[--options] - a disk.img[-a disk.img...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This tool allows you to discover filesystems, partitions, logical volumes, and their sizes in a disk image or virtual machine. It is a replacement for <i><a href="/docs/linux/man/1-virt-list-filesystems/">virt-list-filesystems</a></i>(1) and <i><a href="/docs/linux/man/1-virt-list-partitions/">virt-list-partitions</a></i>(1). </p>
 <p> One use for this tool is from shell scripts to iterate over all filesystems from a disk image: </p>
 <pre>

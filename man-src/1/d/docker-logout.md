@@ -1,4 +1,5 @@
 ---
+
 title: "docker-logout(1)"
 name: "docker-logout"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-logout/"
 description: "docker-logout – Log out from a Docker registry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker logout [SERVER]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Log out of a Docker Registry located on the specified SERVER. You can specify a URL or a hostname for the SERVER value. If you do not specify a SERVER, the command attempts to log you out of Docker&#8217;s public registry located at <a rel="nofollow" href="https://registry-1.docker.io/">https://registry-1.docker.io/</a> by default. </p>
 <h2>EXAMPLES</h2>
 <h2>Log out from a registry on your localhost</h2>

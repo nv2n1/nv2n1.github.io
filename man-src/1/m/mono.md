@@ -1,4 +1,5 @@
 ---
+
 title: "mono(1)"
 name: "mono"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mono/"
 description: "mono – Mono’s ECMA-CLI native code generator (Just-in-Time and Ahead-of-Time)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mono [options] file [arguments&#8230;]</code> </p>
 <p> <code>mono-sgen [options] file [arguments&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>mono</i> is a runtime implementation of the ECMA Common Language Infrastructure. This can be used to run ECMA and .NET applications. </p>
 <p> The runtime loads the specified <i>file</i> and optionally passes the <i>arguments</i> to it. The <i>file</i> is an ECMA assembly. They typically have a .exe or .dll extension. </p>
 <p> These executables can reference additional functionality in the form of assembly references. By default those assembly references are resolved as follows: the <code>mscorlib.dll</code> is resolved from the system profile that is configured by Mono, and other assemblies are loaded from the Global Assembly Cache (GAC). </p>

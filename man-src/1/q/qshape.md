@@ -1,4 +1,5 @@
 ---
+
 title: "qshape(1)"
 name: "qshape"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-qshape/"
 description: "qshape – Print Postfix queue domain and age distribution"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>qshape</code> [<code>-s</code>] [<code>-p</code>] [<code>-m </code><i>min_subdomains</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-b&nbsp;</code><i>bucket_count</i>]&nbsp;[<code>-t&nbsp;</code><i>bucket_time</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-l</code>]&nbsp;[<code>-w&nbsp;</code><i>terminal_width</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-N&nbsp;</code><i>batch_msg_count</i>]&nbsp;[<code>-n&nbsp;</code><i>batch_top_domains</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-c&nbsp;</code><i>config_directory</i>]&nbsp;[<i>queue_name</i>&nbsp;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>qshape</code> program helps the administrator understand the Postfix queue message distribution in time and by sender domain or recipient domain. The program needs read access to the queue directories and queue files, so it must run as the superuser or the <code>mail_owner</code> specified in <code>main.cf</code> (typically <code>postfix</code>). </p>
 <p> Options:</p>
 <dl>

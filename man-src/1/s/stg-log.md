@@ -1,4 +1,5 @@
 ---
+
 title: "stg-log(1)"
 name: "stg-log"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-log/"
 description: "stg-log – Display the patch changelog"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg log[options][--][&lt;patches&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> List the history of the patch stack: the stack log. If one or more patch names are given, limit the list to the log entries that touch the named patches. </p>
 <p> &quot;stg undo&quot; and &quot;stg redo&quot; let you step back and forth in the patch stack. &quot;stg reset&quot; lets you go directly to any state.</p>
 <h2>OPTIONS</h2>

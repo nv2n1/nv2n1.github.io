@@ -1,4 +1,5 @@
 ---
+
 title: "otp(1)"
 name: "otp"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-otp/"
 description: "otp – manages one-time passwords"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>otp</code> &#8211; manages one-time passwords </p>
-<h2>SYNOPSIS</h2>
 <p> <code>otp</code> [-<code>dhlor</code> ] [-<code>f </code><i>algorithm</i> ] [-<code>u </code><i>user</i> ] <i>sequence-number</i> <i>seed</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>otp</code> program initializes and updates your current series of one-time passwords (OTPs). </p>
 <p> Use this to set a new series of one-time passwords. Only perform this on the console or over an encrypted link as you will have to supply your pass-phrase. The other two parameters are <i>sequence-number</i> and <i>seed</i> </p>
 <p> Options are:</p>

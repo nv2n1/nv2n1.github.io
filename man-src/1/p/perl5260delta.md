@@ -1,4 +1,5 @@
 ---
+
 title: "perl5260delta(1)"
 name: "perl5260delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5260delta/"
 description: "perl5260delta – what is new for perl v5.26.0"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes the differences between the 5.24.0 release and the 5.26.0 release.</p>
 <h2>Notice</h2>
 <p> This release includes three updates with widespread effects:</p>

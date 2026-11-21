@@ -1,4 +1,5 @@
 ---
+
 title: "kcforestmgr(1)"
 name: "kcforestmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kcforestmgr/"
 description: "kcforestmgr – command line interface to manage the directory tree database"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The command `<code>kcforestmgr</code>&#8216; is a utility for test and debugging of the file tree database and its applications. `<i>path</i>&#8216; specifies the path of a database file. `<i>key</i>&#8216; specifies the key of a record. `<i>value</i>&#8216; specifies the value of a record. `<i>file</i>&#8216; specifies the input/output file. </p>
 <dl>
 <dt>

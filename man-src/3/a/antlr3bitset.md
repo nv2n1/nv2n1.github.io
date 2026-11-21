@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3bitset(3)"
 name: "antlr3bitset"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3bitset.h –"
 ---
 
 <p> Defines the basic structures of an ANTLR3 bitset.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt; </p>
 <h3>Data Structures</h3>

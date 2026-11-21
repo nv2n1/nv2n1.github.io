@@ -1,4 +1,5 @@
 ---
+
 title: "cpoequ(3)"
 name: "cpoequ"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpoequ/"
 description: "cpoequ.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpoequ</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br />
  <i></i><code>CPOEQU</code></p>

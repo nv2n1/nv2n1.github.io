@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-ranlib(1)"
 name: "arm-gp2x-linux-ranlib"
 section: "1"
@@ -9,9 +10,7 @@ description: "ranlib – generate index to archive."
 
 <h2>NAME</h2>
 <p> ranlib &#8211; generate index to archive.</p>
-<h2>SYNOPSIS</h2>
 <p> ranlib [<code>-vV</code>] <i>archive</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ranlib</code> generates an index to the contents of an archive and stores it in the archive. The index lists each symbol defined by a member of an archive that is a relocatable object file. </p>
 <p> You may use <code>nm -s</code> or <code>nm &#8211;print-armap</code> to list this index. </p>
 <p> An archive with such an index speeds up linking to the library and allows routines in the library to call each other without regard to their placement in the archive. </p>

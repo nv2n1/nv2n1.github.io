@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-profdata-14(1)"
 name: "llvm-profdata-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-profdata-14/"
 description: "llvm-profdata – Profile data tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-profdata</code> <i>command</i> [<i>args…</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-profdata</code> tool is a small utility for working with profile data files.</p>
 <h2>COMMANDS</h2>
 <dl>

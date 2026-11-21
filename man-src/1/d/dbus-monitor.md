@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-monitor(1)"
 name: "dbus-monitor"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-dbus-monitor/"
 description: "dbus-monitor – debug probe to print message bus messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-monitor</code> [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>ADDRESS</i>] [&#8211;profile | &#8211;monitor | &#8211;pcap | &#8211;binary] [<i>watch</i>&nbsp;<i>expressions</i>]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dbus-monitor</code> command is used to monitor messages going through a D-Bus message bus. See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about the big picture. </dd>
 <p> There are two well-known message buses: the systemwide message bus (installed on many systems as the &quot;messagebus&quot; service) and the per-user-login-session message bus (started each time a user logs in). The &#8211;system and &#8211;session options direct <code>dbus-monitor</code> to monitor the system or session buses respectively. If neither is specified, <code>dbus-monitor</code> monitors the session bus. </p>
 <p> <code>dbus-monitor</code> has two different text output modes: the &#8216;classic&#8217;-style monitoring mode, and profiling mode. The profiling format is a compact format with a single line per message and microsecond-resolution timing information. The &#8211;profile and &#8211;monitor options select the profiling and monitoring output format respectively. </p>

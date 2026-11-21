@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_in_cred(3)"
 name: "krb5_get_in_cred"
 section: "3"
@@ -7,14 +8,11 @@ url: "/docs/linux/man/3-krb5_get_in_cred/"
 description: "krb5_get_in_tkt krb5_get_in_cred krb5_get_in_tkt_with_password krb5_get_in_tkt_with_keytab krb5_get_in_tkt_with_skey krb5_free_kdc_rep krb5_password_key_proc – deprecated initial authentication fun..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_in_tkt</code> <code>krb5_get_in_cred</code> <code>krb5_get_in_tkt_with_password</code> <code>krb5_get_in_tkt_with_keytab</code> <code>krb5_get_in_tkt_with_skey</code> <code>krb5_free_kdc_rep</code> <code>krb5_password_key_proc</code> &#8211; deprecated initial authentication functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
-<h2>SYNOPSIS</h2>
 <p> In krb5.h </p>
 <p> Ft krb5_error_code Fo krb5_get_in_tkt Fa krb5_context context Fa krb5_flags options Fa const krb5_addresses *addrs Fa const krb5_enctype *etypes Fa const krb5_preauthtype *ptypes Fa krb5_key_proc key_proc Fa krb5_const_pointer keyseed Fa krb5_decrypt_proc decrypt_proc Fa krb5_const_pointer decryptarg Fa krb5_creds *creds Fa krb5_ccache ccache Fa krb5_kdc_rep *ret_as_reply Fc Ft krb5_error_code Fo krb5_get_in_cred Fa krb5_context context Fa krb5_flags options Fa const krb5_addresses *addrs Fa const krb5_enctype *etypes Fa const krb5_preauthtype *ptypes Fa const krb5_preauthdata *preauth Fa krb5_key_proc key_proc Fa krb5_const_pointer keyseed Fa krb5_decrypt_proc decrypt_proc Fa krb5_const_pointer decryptarg Fa krb5_creds *creds Fa krb5_kdc_rep *ret_as_reply Fc Ft krb5_error_code Fo krb5_get_in_tkt_with_password Fa krb5_context context Fa krb5_flags options Fa krb5_addresses *addrs Fa const krb5_enctype *etypes Fa const krb5_preauthtype *pre_auth_types Fa const char *password Fa krb5_ccache ccache Fa krb5_creds *creds Fa krb5_kdc_rep *ret_as_reply Fc Ft krb5_error_code Fo krb5_get_in_tkt_with_keytab Fa krb5_context context Fa krb5_flags options Fa krb5_addresses *addrs Fa const krb5_enctype *etypes Fa const krb5_preauthtype *pre_auth_types Fa krb5_keytab keytab Fa krb5_ccache ccache Fa krb5_creds *creds Fa krb5_kdc_rep *ret_as_reply Fc Ft krb5_error_code Fo krb5_get_in_tkt_with_skey Fa krb5_context context Fa krb5_flags options Fa krb5_addresses *addrs Fa const krb5_enctype *etypes Fa const krb5_preauthtype *pre_auth_types Fa const krb5_keyblock *key Fa krb5_ccache ccache Fa krb5_creds *creds Fa krb5_kdc_rep *ret_as_reply Fc Ft krb5_error_code Fo krb5_free_kdc_rep Fa krb5_context context Fa krb5_kdc_rep *rep Fc Ft krb5_error_code Fo krb5_password_key_proc Fa krb5_context context Fa krb5_enctype type Fa krb5_salt salt Fa krb5_const_pointer keyseed Fa krb5_keyblock **key Fc</p>
-<h2>DESCRIPTION</h2>
 <p> Bf Em All the functions in this manual page are deprecated in the MIT implementation, and will soon be deprecated in Heimdal too, don&#8217;t use them. Ef </p>
 <p> Getting initial credential ticket for a principal. <code>krb5_get_in_cred</code> is the function all other krb5_get_in function uses to fetch tickets. The other krb5_get_in function are more specialized and therefor somewhat easier to use. </p>
 <p> If your need is only to verify a user and password, consider using krb5_verify_user3 instead, it have a much simpler interface. </p>

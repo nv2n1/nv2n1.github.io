@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-reset(1)"
 name: "trace-cmd-reset"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-reset/"
 description: "trace-cmd-reset – turn off all Ftrace tracing to bring back full performance"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd reset</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) reset command turns off all tracing of Ftrace. This will bring back the performance of the system before tracing was enabled. This is necessary since <i><a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1)</i>, <i><a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1)</i> and <i><a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1)</i> do not disable the tracer, event after the data has been pulled from the buffers. The rational is that the user may want to manually enable the tracer with the Ftrace pseudo file system, or examine other parts of Ftrace to see what trace-cmd did. After the reset command happens, the data in the ring buffer, and the options that were used are all lost.</p>
 <h2>OPTIONS</h2>
 <p> Please note that the order that options are specified on the command line is significant. See EXAMPLES. </p>

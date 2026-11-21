@@ -1,4 +1,5 @@
 ---
+
 title: "night_keylist(1)"
 name: "night_keylist"
 section: "1"
@@ -10,16 +11,9 @@ url: "/docs/linux/man/1-night_keylist/"
 
  night_keylist - print value of the FITS header keyword
 
-<h2>SYNOPSIS</h2>
-
- 
 &nbsp;<wbr>night_keylist&nbsp;<wbr>[image keyword]
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The options are as follows: 
+The options are as follows: 
 
  This routine is internal part of the nightview package and 
 

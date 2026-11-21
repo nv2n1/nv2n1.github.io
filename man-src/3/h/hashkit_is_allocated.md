@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_is_allocated(3)"
 name: "hashkit_is_allocated"
 section: "3"
@@ -9,7 +10,6 @@ description: "hashkit_is_allocated – libhashkit Documentation"
 
 <h2>NAME</h2>
 <p> hashkit_is_allocated &#8211; libhashkit Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libhashkit/hashkit.h&gt;</p>
 <dl>
 <dt><code>hashkit_st</code></dt>
@@ -23,7 +23,6 @@ description: "hashkit_is_allocated – libhashkit Documentation"
 </dd><dt><code>bool hashkit_is_allocated(const </code><i>hashkit_st</i><i>&nbsp;<wbr>*hash</i>)</dt>
 <dd>
 <p> Compile and link with -lhashkit</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <i>hashkit_create()</i> function initializes a hashkit object for use. If you pass a NULL argument for hash, then the memory for the object is allocated. If you specify a pre-allocated piece of memory, that is initialized for use. </p>
 <p> The <i>hashkit_clone()</i> function initializes a hashkit object much like <i>hashkit_create()</i>, but instead of using default settings it will use the settings of the ptr hashkit object. </p>
 <p> The <i>hashkit_free()</i> frees any resources being consumed by the hashkit objects that were initialized with <i>hashkit_create()</i> or <i>hashkit_clone()</i>. </p>

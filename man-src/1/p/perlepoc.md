@@ -1,4 +1,5 @@
 ---
+
 title: "perlepoc(1)"
 name: "perlepoc"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlepoc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlepoc - Perl for EPOC 
 
- perlepoc - Perl for EPOC 
-
-<h2>SYNOPSIS</h2>
-
- Perl 5 <font SIZE="-1">README</font> file for the <font SIZE="-1">EPOC</font> Release 5 operating system.
+Perl 5 <font SIZE="-1">README</font> file for the <font SIZE="-1">EPOC</font> Release 5 operating system.
 
 <h2>INTRODUCTION</h2>
 

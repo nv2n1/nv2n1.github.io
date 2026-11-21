@@ -1,4 +1,5 @@
 ---
+
 title: "euca-disassociate-route-table(1)"
 name: "euca-disassociate-route-table"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-disassociate-route-table – Disassociate a VPC subnet from a
 
 <h2>NAME</h2>
 <p> euca-disassociate-route-table &#8211; Disassociate a VPC subnet from a route table</p>
-<h2>SYNOPSIS</h2>
 <p> euca-disassociate-route-table [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] RTBASSOC</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Disassociate a VPC subnet from a route table</p>
 <h3>positional arguments:</h3>
 <dl>

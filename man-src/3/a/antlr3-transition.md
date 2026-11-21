@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-transition(3)"
 name: "antlr3-transition"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_CYCLIC_DFA_struct –"
 ---
 
 <p> Definition of a cyclic dfa structure such that it can be initialized at compile time and have only a single runtime function that can deal with all cyclic dfa structures and show Java how it is done ;-).</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3cyclicdfa.h">antlr3cyclicdfa.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> const <code>ANTLR3_INT32</code> *const <code>accept</code> </p>

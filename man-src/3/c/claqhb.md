@@ -1,4 +1,5 @@
 ---
+
 title: "claqhb(3)"
 name: "claqhb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqhb/"
 description: "claqhb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqhb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br />
  <i></i><code>CLAQHB</code> scales a Hermitian band matrix, using scaling factors computed by cpbequ.</p>

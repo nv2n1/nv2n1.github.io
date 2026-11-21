@@ -1,4 +1,5 @@
 ---
+
 title: "cfgmaint(1)"
 name: "cfgmaint"
 section: "1"
@@ -6,18 +7,13 @@ letter: "c"
 url: "/docs/linux/man/1-cfgmaint/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cfgmaint - configuration tool for Visual Builder 
+cfgmaint - configuration tool for Visual Builder 
 
 <h2>SYNTAX</h2>
 
  cfgmaint [ -rbxop ] command object [ parameters ]
 
-<h2>DESCRIPTION</h2>
-
- Maintains widget palette configuration for the Visual Builder. It can be stored in the system-wide and the local user config files. <tt>&quot;cfgmaint&quot;</tt> allows adding, renaming, moving, and deleting the classes and pages in the Visual Builder widget palette.
+Maintains widget palette configuration for the Visual Builder. It can be stored in the system-wide and the local user config files. <tt>&quot;cfgmaint&quot;</tt> allows adding, renaming, moving, and deleting the classes and pages in the Visual Builder widget palette.
 
 <h2>USAGE</h2>
 

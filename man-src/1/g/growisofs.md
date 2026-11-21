@@ -1,4 +1,5 @@
 ---
+
 title: "growisofs(1)"
 name: "growisofs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-growisofs/"
 description: "growisofs – combined genisoimage frontend/DVD recording program."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>growisofs</code> [<code>-dry-run</code>] [<code>-dvd-compat</code>] [<code>-overburn</code>] [<code>-speed=1</code>] -[<code>Z|M</code>] <i>/dev/dvd</i> <i>&lt;genisoimage-options&gt;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>growisofs</code> was originally designed as a frontend to <code>genisoimage</code> to facilitate appending of data to ISO9660 volumes residing on random-access media such as DVD+RW, DVD-RAM, plain files, hard disk partitions. In the course of development general purpose DVD recording support was implemented, and as of now <code>growisofs</code> supports not only random-access media, but even mastering of multisession DVD media such as DVD+R and DVD-R/-RW, as well as Blu-ray Disc. In addition <code>growisofs</code> supports first-/single-session recording of <i>arbitrary pre-mastered image</i> (formatted as UDF, ISO9660 or any other file system, if formatted at all) to all supported DVD media types. </p>
 <h2>OPTIONS</h2>
 <dl>

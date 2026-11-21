@@ -1,4 +1,5 @@
 ---
+
 title: "msggrep(1)"
 name: "msggrep"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msggrep/"
 description: "msggrep – pattern matching on message catalog"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msggrep</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Extracts all messages of a translation catalog that match a given pattern or belong to some given source files. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

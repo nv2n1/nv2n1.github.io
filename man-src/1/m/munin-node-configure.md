@@ -1,4 +1,5 @@
 ---
+
 title: "munin-node-configure(1)"
 name: "munin-node-configure"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-munin-node-configure/"
 description: "munin-node-configure – View and modify which plugins are enabled."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
   munin-node-configure [options]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>munin-node-configure</code> reports which plugins are enabled on the current node, and suggest changes to this list. </p>
 <p> By default this program shows which plugins are activated on the system. </p>
 <p> If you specify <tt>&quot;--suggest&quot;</tt>, it will present a table of plugins that will probably work (according to the plugins&#8217; autoconf command). </p>

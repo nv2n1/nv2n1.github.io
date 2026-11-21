@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_shape_arabic(3)"
 name: "fribidi_shape_arabic"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_shape_arabic/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_shape_arabic - do Arabic shaping 
 
- fribidi_shape_arabic - do Arabic shaping 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern void fribidi_shape_arabic 
  ( 
@@ -43,9 +39,7 @@ url: "/docs/linux/man/3-fribidi_shape_arabic/"
 </dd><dt><b>FriBidiChar *str</b>
 </dt><dd> String to shape.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- The actual shaping that is done depends on the flags set. Only flags starting with FRIBIDI_FLAG_SHAPE_ARAB_ affect this function. Currently these are: 
+The actual shaping that is done depends on the flags set. Only flags starting with FRIBIDI_FLAG_SHAPE_ARAB_ affect this function. Currently these are: 
 
  
  * FRIBIDI_FLAG_SHAPE_MIRRORING: Do mirroring. 

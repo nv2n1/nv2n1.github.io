@@ -1,4 +1,5 @@
 ---
+
 title: "podofoincrementalupdates(1)"
 name: "podofoincrementalupdates"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-podofoincrementalupdates/"
 description: "podofoincrementalupdates – Provides information about incremental updates in PDF files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>podofoincrementalupdates</code> [-e N out.pdf] file.pdf </p>
-<h2>DESCRIPTION</h2>
 <p> <code>podofoincrementalupdates</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can print information of incremental updates to file.pdf. By default the number of incremental updates will be printed. </p>
 <h2>OPTIONS</h2>
 <p> <code>-e N</code></p>

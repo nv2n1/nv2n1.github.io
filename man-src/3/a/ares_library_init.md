@@ -1,4 +1,5 @@
 ---
+
 title: "ares_library_init(3)"
 name: "ares_library_init"
 section: "3"
@@ -9,14 +10,12 @@ description: "ares_library_init – c-ares library initialization"
 
 <h2>NAME</h2>
 <p> ares_library_init &#8211; c-ares library initialization</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 int ares_library_init(int flags)
         cc file.c
     - lcares
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ares_library_init</code> function performs initializations internally required by the c-ares library that must take place before any other function provided by c-ares can be used in a program. </p>
 <p> This function must be called at least once within the life of a program, before the program actually executes any other c-ares library function. Initializations done by this function remain effective until a number of calls to <i><a href="/docs/linux/man/3-ares_library_cleanup/">ares_library_cleanup</a>(3)</i> equal to the number of calls to this function are performed. </p>
 <p> Successive calls to this function do nothing further, only the first call done when c-ares is in an uninitialized state is actually effective. </p>

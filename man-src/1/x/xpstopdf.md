@@ -1,4 +1,5 @@
 ---
+
 title: "xpstopdf(1)"
 name: "xpstopdf"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xpstopdf/"
 description: "xpstopdf – XPS to PDF converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xpstopdf</code> [<i>OPTION</i>&#8230;] FILE [<i>OUTPUT FILE</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>xpstopdf</code></p>
 <dd>converts XPS documents to PDF format. <code>xpstopdf</code> reads the XPS file, <i>FILE</i>, and writes a PDF file, <i>OUTPUT FILE</i>. If <i>OUTPUT FILE</i> is not specified the output filename will be derived from the <i>OUTPUT FILE</i> filename.</dd>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_openpgp_key_file2(3)"
 name: "gnutls_certificate_set_openpgp_key_file2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_openpgp_key_file2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_openpgp_key_file2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_openpgp_key_file2(gnutls_certificate_credentials_t </code><i>res</i><code>, const char * </code><i>certfile</i><code>, const char * </code><i>keyfile</i><code>, const char * </code><i>subkey_id</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_certificate_set_openpgp_key_file2 – API function"
 <dd> a hex encoded subkey id</dd>
 <dt>gnutls_openpgp_crt_fmt_t format</dt>
 <dd> the format of the keys</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This funtion is used to load OpenPGP keys into the GnuTLS credential structure. The file should contain at least one valid non encrypted subkey. </p>
 <p> The special keyword &quot;auto&quot; is also accepted as <i>subkey_id</i> . In that case the <code>gnutls_openpgp_crt_get_auth_subkey()</code> will be used to retrieve the subkey.</p>
 <h2>RETURNS</h2>

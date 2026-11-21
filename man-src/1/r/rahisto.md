@@ -1,4 +1,5 @@
 ---
+
 title: "rahisto(1)"
 name: "rahisto"
 section: "1"
@@ -9,9 +10,7 @@ description: "rahisto – print histogram of metrics from argus(8) data."
 
 <h2>NAME</h2>
 <p> <code>rahisto</code> &#8211; print histogram of metrics from <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rahisto</code> [<code>-M</code> <i>histomode</i>] <code>-H</code> <i>bin[L]:range|size</i> &#8230; [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Rahisto</code> reads <code>argus</code> data from an <i>argus-data</i> source, sorts the records based on the criteria specified on the command line, and outputs a valid <i>argus-stream</i>.</p>
 <h2>OPTIONS</h2>
 <p> Rahisto, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-rahisto/">rahisto</a>(1)</code> specific options are: </p>

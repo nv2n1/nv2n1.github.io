@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-cmd-wrap(1)"
 name: "clufter-cmd-wrap"
 section: "1"
@@ -9,9 +10,7 @@ description: "clufter – cmd-wrap"
 
 <h2>NAME</h2>
 <p> clufter &#8211; cmd-wrap</p>
-<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>cmd-wrap </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Wrap long lines carrying (fairly) convoluted shell commands</p>
 <h2>OPTIONS</h2>
 <dl>

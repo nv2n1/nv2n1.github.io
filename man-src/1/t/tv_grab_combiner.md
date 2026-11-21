@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_combiner(1)"
 name: "tv_grab_combiner"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-tv_grab_combiner/"
 description: "tv_grab_combiner – Grab listings by combining data from several grabbers."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_combiner &#8211;help </p>
 <p> tv_grab_combiner &#8211;configure [&#8211;config-file <font SIZE="-1">FILE</font>] </p>
 <p> tv_grab_combiner [&#8211;config-file <font SIZE="-1">FILE</font>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;days N]&nbsp;<wbr>[&#8211;offset N]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]</p>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> and listings in <font SIZE="-1">XMLTV</font> format by combining data from several other grabbers. </p>
 <p> First you must run <code>tv_grab_combiner &#8211;configure</code> to choose which grabbers you want to grab data with and how these grabbers should be configured. </p>
 <p> Then you can run <code>tv_grab_combiner</code> with the &#8211;days and &#8211;offset options to grab data. Omitting these options will use the default values for these parameters for each grabber. Since these defaults differs between grabbers, you might end up with data for different periods of time for different channels.</p>

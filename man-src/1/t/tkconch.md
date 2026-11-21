@@ -1,4 +1,5 @@
 ---
+
 title: "tkconch(1)"
 name: "tkconch"
 section: "1"
@@ -9,10 +10,8 @@ description: "tkconch – connect to SSH servers graphically"
 
 <h2>NAME</h2>
 <p> tkconch &#8211; connect to SSH servers graphically</p>
-<h2>SYNOPSIS</h2>
 <p> <code>conch [-l </code><i>user</i>] [-i <i>identity</i> [ -i <i>identity</i> &#8230; ]] [-c <i>cipher</i>] [-m <i>MAC</i>] [-p <i>port</i>] [-n] [-t] [-T] [-V] [-C] [-N] [-s] [arg [&#8230;]] </p>
 <p> <code>conch &#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>&#8211;help</code> prints out a usage message to standard output.</p>
 <dl>
 <dt><code>-l</code>, <code>&#8211;user</code> &lt;user&gt;</dt>

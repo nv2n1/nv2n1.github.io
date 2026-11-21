@@ -1,4 +1,5 @@
 ---
+
 title: "perlglossary(1)"
 name: "perlglossary"
 section: "1"
@@ -9,7 +10,6 @@ description: "perlglossary – Perl Glossary"
 
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
-<h2>DESCRIPTION</h2>
 <p> A glossary of terms (technical and otherwise) used in the Perl documentation, derived from the Glossary of <i>Programming Perl</i>, Fourth Edition. Words or phrases in bold are defined elsewhere in this glossary. </p>
 <p> Other useful sources include the Unicode Glossary &lt;<a rel="nofollow" href="http://unicode.org/glossary/">http://unicode.org/glossary/</a>&gt;, the Free On-Line Dictionary of Computing &lt;<a rel="nofollow" href="http://foldoc.org/">http://foldoc.org/</a>&gt;, the Jargon File &lt;<a rel="nofollow" href="http://catb.org/~esr/jargon/">http://catb.org/~esr/jargon/</a>&gt;, and Wikipedia &lt;<a rel="nofollow" href="http://www.wikipedia.org/">http://www.wikipedia.org/</a>&gt;.</p>
 <h3>A</h3>

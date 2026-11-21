@@ -1,4 +1,5 @@
 ---
+
 title: "pw-cli(1)"
 name: "pw-cli"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pw-cli/"
 description: "pw-cli – The PipeWire Command Line Interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>pw-cli</code> [<i>command</i>]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Interact with a PipeWire instance. </p>
 <p> When a command is given, <code>pw-cli</code> will execute the command and exit </p>
 <p> When no command is given, <code>pw-cli</code> starts an interactive session with the default PipeWire instance <i>pipewire-0</i>. </p>

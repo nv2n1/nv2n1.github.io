@@ -1,4 +1,5 @@
 ---
+
 title: "lz4cat(1)"
 name: "lz4cat"
 section: "1"
@@ -7,14 +8,11 @@ url: "/docs/linux/man/1-lz4cat/"
 description: "lz4 – lz4, unlz4, lz4cat – Compress or decompress .lz4 files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>lz4</code> &#8211; lz4, unlz4, lz4cat &#8211; Compress or decompress .lz4 files </p>
-<h2>SYNOPSIS</h2>
 <p> <code>lz4</code> [<i>OPTIONS</i>] [-|INPUT-FILE] <i>OUTPUT-FILE</i> </p>
 <p> <code>unlz4</code> is equivalent to <code>lz4 -d</code> </p>
 <p> <code>lz4cat</code> is equivalent to <code>lz4 -dcfm</code> </p>
 <p> When writing scripts that need to decompress files, it is recommended to always use the name <code>lz4</code> with appropriate arguments (<code>lz4 -d</code> or <code>lz4 -dc</code>) instead of the names <code>unlz4</code> and <code>lz4cat</code>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lz4</code> is an extremely fast lossless compression algorithm, based on <code>byte-aligned LZ77</code> family of compression scheme. <code>lz4</code> offers compression speeds of 400 MB/s per core, linearly scalable with multi-core CPUs. It features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limit on multi-core systems. The native file format is the <code>.lz4</code> format.</p>
 <h3>Difference between lz4 and gzip</h3>
 <p> <code>lz4</code> supports a command line syntax similar <i>but not identical</i> to <code><a href="/docs/linux/man/1-gzip/">gzip</a>(1)</code>. Differences are :</p>

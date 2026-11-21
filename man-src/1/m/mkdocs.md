@@ -1,4 +1,5 @@
 ---
+
 title: "mkdocs(1)"
 name: "mkdocs"
 section: "1"
@@ -9,9 +10,7 @@ description: "mkdocs – Create HTML documentation from markdown sources"
 
 <h2>NAME</h2>
 <p> mkdocs &#8211; Create HTML documentation from markdown sources</p>
-<h2>SYNOPSIS</h2>
 <p> mkdocs [build|gh-deploy|new|serve] {options}</p>
-<h2>DESCRIPTION</h2>
 <p> MkDocs is a fast and simple way to create a website from source files written in Markdown, and configured with a YAML configuration file, the documentation can be hosted anywhere, even in free hosting services like Read the Docs and GitHub Pages.</p>
 <h2>OPTIONS</h2>
 <dl>

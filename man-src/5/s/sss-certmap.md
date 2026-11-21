@@ -1,4 +1,5 @@
 ---
+
 title: "sss-certmap(5)"
 name: "sss-certmap"
 section: "5"
@@ -6,8 +7,8 @@ letter: "s"
 url: "/docs/linux/man/5-sss-certmap/"
 description: "sss-certmap – SSSD Certificate Matching and Mapping Rules"
 ---
+
 <p>sss-certmap &#8211; SSSD Certificate Matching and Mapping Rules </p>
-<h2>DESCRIPTION</h2>
 <p>The manual page describes the rules which can be used by SSSD and other components to match X.509 certificates and map them to accounts. </p>
 <p>Each rule has four components, a "priority", a "matching rule", a "mapping rule" and a "domain list". All components are optional. A missing "priority" will add the rule with the lowest priority. The default "matching rule" will match certificates with the digitalSignature key usage and clientAuth extended key usage. If the "mapping rule" is empty the certificates will be searched in the userCertificate attribute as DER encoded binary. If no domains are given only the local domain will be searched.  </p>
 <h2>RULE COMPONENTS</h2>

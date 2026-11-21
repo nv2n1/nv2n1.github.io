@@ -1,4 +1,5 @@
 ---
+
 title: "obprop(1)"
 name: "obprop"
 section: "1"
@@ -9,9 +10,7 @@ description: "obprop – print standard molecular properties"
 
 <h2>NAME</h2>
 <p> <code>obprop</code> &#8211; print standard molecular properties</p>
-<h2>SYNOPSIS</h2>
 <p> <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> The obprop program is a tool to print a set of standard molecular properties for all molecules in a file. It also serves as example code for using the Open Babel library (libopenbabel). </p>
 <p> Output format includes:<br />
  name [<i>Name</i> ]<br />

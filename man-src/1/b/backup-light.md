@@ -1,4 +1,5 @@
 ---
+
 title: "backup-light(1)"
 name: "backup-light"
 section: "1"
@@ -9,9 +10,7 @@ description: "Backup-light – backups up the active users $HOME directory"
 
 <h2>NAME</h2>
 <p> Backup-light &#8211; backups up the active users $HOME directory</p>
-<h2>SYNOPSIS</h2>
 <p> <code>backup-light [option(s)]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Backup-light backups up the active users $HOME directory in eather .tar.bz2 or .tar.gz. It is able to backup to not only the internal hard drive, but any external hard drives, and removable mediums such as a CD or DVD or USB device. Backup-light also creates a md5sum of the backup archive and will only restore from a archive with a valid md5sum.</p>
 <h2>OPTIONS</h2>
 <dl>

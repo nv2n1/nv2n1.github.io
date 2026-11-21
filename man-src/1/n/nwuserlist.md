@@ -1,4 +1,5 @@
 ---
+
 title: "nwuserlist(1)"
 name: "nwuserlist"
 section: "1"
@@ -9,9 +10,7 @@ description: "nwuserlist – List Users logged in at a NetWare server"
 
 <h2>NAME</h2>
 <p> nwuserlist &#8211; List Users logged in at a NetWare server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nwuserlist</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-a</code> ] [ <code>-q</code> ] [ <code>-f</code> [ <code>-d</code> ] [ <code>-D</code> ] [ <code>-t</code> ]] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nwuserlist</code> lists the users logged in at a NetWare server, together with their connection number and their login time. </p>
 <p> <code>nwuserlist</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <code><a href="/docs/linux/man/5-nwclient/">nwclient</a></code>(5) for more information. Please note that the access permissions of <i>$HOME/.nwclient</i> MUST be 600 for security reasons. </p>
 <h2>OPTIONS</h2>

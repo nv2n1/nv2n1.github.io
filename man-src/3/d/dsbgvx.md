@@ -1,4 +1,5 @@
 ---
+
 title: "dsbgvx(3)"
 name: "dsbgvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsbgvx/"
 description: "dsbgvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>DSBGST</code></p>

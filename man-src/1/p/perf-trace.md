@@ -1,4 +1,5 @@
 ---
+
 title: "perf-trace(1)"
 name: "perf-trace"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-perf-trace/"
 description: "perf-trace – strace inspired tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>perf trace</i>
 <i>perf trace record</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command will show the events associated with the target, initially syscalls, but other system events like pagefaults, task lifetime events, scheduling events, etc. </p>
 <p> This is a live mode tool in addition to working with perf.data files like the other perf tools. Files can be generated using the <i>perf record</i> command but the session needs to include the raw_syscalls events (-e <i>raw_syscalls:*</i>). Alternatively, <i>perf trace record</i> can be used as a shortcut to automatically include the raw_syscalls events when writing events to a file. </p>
 <p> The following options apply to perf trace; options to perf trace record are found in the perf record man page.</p>

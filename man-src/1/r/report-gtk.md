@@ -1,4 +1,5 @@
 ---
+
 title: "report-gtk(1)"
 name: "report-gtk"
 section: "1"
@@ -6,22 +7,11 @@ letter: "r"
 url: "/docs/linux/man/1-report-gtk/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+report-gtk - GUI tool to analyze and report ABRT problems 
 
- report-gtk - GUI tool to analyze and report ABRT problems 
+<i>report-gtk</i> [-vpdx] [-e EVENT] [-g GUI_FILE] PROBLEM_DIR
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>report-gtk</i> [-vpdx] [-e EVENT] [-g GUI_FILE] PROBLEM_DIR
-
-<h2>DESCRIPTION</h2>
-
- 
-
- <i>report-gtk</i> is a graphical tool that reports application crashes and other problems caught by abrtd daemon, or created by other programs using libreport. report-gtk works with a single problem saved in specified PROBLEM_DIR. In the expert mode it enables access to and manipulation of problem data.
+<i>report-gtk</i> is a graphical tool that reports application crashes and other problems caught by abrtd daemon, or created by other programs using libreport. report-gtk works with a single problem saved in specified PROBLEM_DIR. In the expert mode it enables access to and manipulation of problem data.
 
 <h2>OPTIONS</h2>
 

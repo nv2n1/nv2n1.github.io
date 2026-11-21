@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-ocaml(3)"
 name: "guestfs-ocaml"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-guestfs-ocaml/"
 description: "guestfs-ocaml – How to use libguestfs from OCaml"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> Module style: </p>
 <pre>
  let g = Guestfs.create () in
@@ -21,7 +21,6 @@ let g = new Guestfs.guestfs() in
 g #launch();
 ocamlfind opt prog.ml - package guestfs - linkpkg - o prog or : ocamlopt - I + guestfs mlguestfs.cmxa prog.ml - o prog
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents how to call libguestfs from the OCaml programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
 <h3><font SIZE="-1">PROGRAMMING STYLES</font></h3>
 <p> There are two different programming styles supported by the OCaml bindings. You can use a module style, with each C function mapped to an OCaml function: </p>

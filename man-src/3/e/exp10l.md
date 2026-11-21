@@ -1,4 +1,5 @@
 ---
+
 title: "exp10l(3)"
 name: "exp10l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exp10l/"
 description: "exp10, exp10f, exp10l – base-10 exponential function"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;math.h&gt;
@@ -16,7 +16,6 @@ float exp10f(float x);
 long double exp10l(long double x);
 </code></pre>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions return the value of 10 raised to the power of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the base-10 exponential value of <i>x</i>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "vfyserv(1)"
 name: "vfyserv"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-vfyserv/"
 description: "vfyserv_ – TBD"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>vfyserv</code></dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
-<h2>DESCRIPTION</h2>
 <p> The <code>vfyserv </code> tool verifies a certificate chain</p>
 <h2>OPTIONS</h2>
 <dl>

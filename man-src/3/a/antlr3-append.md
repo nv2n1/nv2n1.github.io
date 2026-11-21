@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-append(3)"
 name: "antlr3-append"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_STRING_struct –"
 ---
 
 <p> Base string class tracks the allocations and provides simple string tracking functions.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>pANTLR3_UINT8</code>(* <code>addc</code> )(struct <code>ANTLR3_STRING_struct</code> *string, <code>ANTLR3_UINT32</code> c)<br />

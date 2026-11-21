@@ -1,4 +1,5 @@
 ---
+
 title: "lckdo(1)"
 name: "lckdo"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lckdo/"
 description: "lckdo – run a program with a lock held"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lckdo</code> [options] {lockfile} {program} [arguments]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lckdo</code></p>
 <dd>runs a program with a lock held, in order to prevent multiple processes from running in parallel. Use just like <code>nice</code> or <code>nohup</code>. </dd>
 <p> Now that util-linux contains a similar command named <code>flock</code>, lckdo is deprecated, and will be removed from some future version of moreutils.</p>

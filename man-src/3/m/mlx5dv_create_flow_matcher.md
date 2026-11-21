@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_create_flow_matcher(3)"
 name: "mlx5dv_create_flow_matcher"
 section: "3"
@@ -6,16 +7,9 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_flow_matcher/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_create_flow_matcher - creates a matcher to be used with 
+mlx5dv_create_flow_matcher - creates a matcher to be used with 
 
  <a HREF="/docs/linux/man/3-mlx5dv_create_flow/">mlx5dv_create_flow</a>(3)
-
-<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -26,11 +20,7 @@ mlx5dv_create_flow_matcher(struct ibv_context *context,
                            struct mlx5dv_flow_matcher_attr *attr)
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- mlx5dv_create_flow_matcher() creates a flow matcher (mask) to be used with <a HREF="/docs/linux/man/3-mlx5dv_create_flow/">mlx5dv_create_flow</a>(3).
+mlx5dv_create_flow_matcher() creates a flow matcher (mask) to be used with <a HREF="/docs/linux/man/3-mlx5dv_create_flow/">mlx5dv_create_flow</a>(3).
 
 <h2>ARGUMENTS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "sediff(1)"
 name: "sediff"
 section: "1"
@@ -9,9 +10,7 @@ description: "sediff – SELinux policy difference tool"
 
 <h2>NAME</h2>
 <p> sediff &#8211; SELinux policy difference tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sediff</code> [OPTIONS] [EXPRESSION] ORIGINAL_POLICY ; MODIFIED_POLICY</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sediff</code> allows the user to inspect the semantic differences between two SELinux policies.</p>
 <h2>POLICY</h2>
 <p> <code>sediff</code> supports loading SELinux policies in one of four formats.</p>

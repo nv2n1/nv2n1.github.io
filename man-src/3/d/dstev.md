@@ -1,4 +1,5 @@
 ---
+
 title: "dstev(3)"
 name: "dstev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dstev/"
 description: "dstev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstev</code> (JOBZ, N, D, E, Z, LDZ, WORK, INFO)<br />
  <i></i><code> DSTEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

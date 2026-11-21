@@ -1,4 +1,5 @@
 ---
+
 title: "xcfview(1)"
 name: "xcfview"
 section: "1"
@@ -9,9 +10,7 @@ description: "xcfview – display GIMP xcf files"
 
 <h2>NAME</h2>
 <p> xcfview &#8211; display GIMP xcf files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xcfview</code> [ <i>options</i> ] <i>filename</i> [ <i>layer names</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xcfview</code> is a wrapper script that uses <code><a href="/docs/linux/man/1-xcf2png/">xcf2png</a></code>(1) or <code><a href="/docs/linux/man/1-xcf2pnm/">xcf2pnm</a></code>(1) (q.v.) to flatten an XCF image and then displays the flattened image using a PNG or PPM viewer found using the <code><a href="/docs/linux/man/5-mailcap/">mailcap</a></code>(5) database.</p>
 <h2>OPTIONS</h2>
 <p> Every command-line parameter to <code>xcfview</code> will be passed through to the underlying <code>xcf2png</code> or <code>xcf2pnm</code> command. Because it is not certain which converter will be used, the options given should be ones that make sense for both of these:</p>

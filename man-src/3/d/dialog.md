@@ -1,4 +1,5 @@
 ---
+
 title: "dialog(3)"
 name: "dialog"
 section: "3"
@@ -9,13 +10,11 @@ description: "dialog – widgets and utilities for the dialog program"
 
 <h2>NAME</h2>
 <p> dialog &#8211; widgets and utilities for the dialog program</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc [ flag &#8230; ] file &#8230; -ldialog [ library &#8230; ]</code><br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>or<br />
  <code>cc `dialog-config &#8211;cflags` file &#8230; `dialog-config &#8211;libs` ]</code> </p>
 <p> <code>#include &lt;dialog.h&gt;</code> </p>
 <p> <code>Dialog</code> is a program that will let you to present a variety of questions or display messages using dialog boxes from a shell script. It is built from the <code>dialog</code> library, which consists of several widgets as well as utility functions that are used by the widgets or the main program.</p>
-<h2>DESCRIPTION</h2>
 <p> This manpage documents the features from <i>&lt;dialog.h&gt;</i> which are likely to be important to developers using the widgets directly. Some hints are also given for developing new widgets.</p>
 <h2>DEFINITIONS</h2>
 <p> Exit codes (passed back to the main program for its use) are defined with a &quot;<i>DLG_EXIT_</i> prefix. The defined constants can be mapped using environment variables as described in <code><a href="/docs/linux/man/1-dialog/">dialog</a></code>(1), e.g., <i>DLG_EXIT_OK</i> corresponds to <i>$DIALOG_OK</i>. </p>

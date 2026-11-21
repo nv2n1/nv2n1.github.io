@@ -1,4 +1,5 @@
 ---
+
 title: "rngtest(1)"
 name: "rngtest"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rngtest/"
 description: "rngtest – Check the randomness of data using FIPS 140-2 tests"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rngtest</code> [<code>-c</code> <i>n</i> | <code>&#8211;blockcount=</code><i>n</i>] [<code>-b</code> <i>n</i> | <code>&#8211;blockstats=</code><i>n</i>] [<code>-t</code> <i>n</i> | <code>&#8211;timedstats=</code><i>n</i>] [<code>-p</code> | <code>&#8211;pipe</code>] [<code>-?</code>] [<code>&#8211;help</code>] [<code>-V</code>] [<code>&#8211;version</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>rngtest</i> works on blocks of 20000 bits at a time, using the FIPS 140-2 (errata of 2001-10-10) tests to verify the randomness of the block of data. </p>
 <p> It takes input from <i>stdin</i>, and outputs statistics to <i>stderr</i>, optionally echoing blocks that passed the FIPS tests to <i>stdout</i> (when operating in <i>pipe mode</i>). Errors are sent to <i>stderr</i>. </p>
 <p> At startup, <i>rngtest</i> will trow away the first 32 bits of data when operating in <i>pipe mode</i>. It will use the next 32 bits of data to bootstrap the FIPS tests (even when not operating in <i>pipe mode</i>). These bits are not tested for randomness. </p>

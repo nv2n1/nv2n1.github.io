@@ -1,4 +1,5 @@
 ---
+
 title: "cernlib-static(1)"
 name: "cernlib-static"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cernlib-static/"
 description: "cernlib-static – get libraries needed to link with CERN Program Library"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cernlib-static</code> [options] <i>library[/version]</i> <i>&#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cernlib-static</code> writes to standard output a list of object libraries needed to link a program with the given <i>library(s)</i> of CERNlib; other libraries needed implicitely, both CERNlib and system libraries, are added automatically. <i>library</i> may be any of the CERNlib libraries using a short name like packlib, mathlib, graflib, phtools&#8230; </p>
 <p> <i>version</i> allows to specify which version to use for this library, see usage notes. </p>
 <h3>Options</h3>

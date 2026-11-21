@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-calc(1)"
 name: "hwloc-calc"
 section: "1"
@@ -9,7 +10,6 @@ description: "hwloc-calc – Operate on cpu mask strings and objects"
 
 <h2>NAME</h2>
 <p> hwloc-calc &#8211; Operate on cpu mask strings and objects</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hwloc-calc</code> [<i>options</i>] <i>&lt;location1&gt; [&lt;location2&gt; [&#8230;] ] </p>
 <p> Note that <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) provides a detailed explanation of the hwloc system and of valid &lt;location&gt; formats; it should be read before reading this man page. </i></p>
 <h2>OPTIONS</h2>
@@ -58,7 +58,6 @@ description: "hwloc-calc – Operate on cpu mask strings and objects"
 <dd> Verbose output.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> hwloc-calc generates and manipulates CPU mask strings or objects. Both input and output may be either objects (with physical or logical indexes), CPU lists (with physical or logical indexes), or CPU mask strings (always physically indexed). </p>
 <p> If objects or CPU mask strings are given on the command-line, they are combined and a single output is printed. If no object or CPU mask strings are given on the command-line, the program will read the standard input. It will combine multiple objects or CPU mask strings that are given on the same line of the standard input line with spaces as separators. Different input lines will be processed separately. </p>
 <p> Command-line arguments and options are processed in order. For instance, it means that changing the type of input indexes with <code>&#8211;li</code> or changing the input topology with <code>-i</code> only affects the processing the following arguments. </p>

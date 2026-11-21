@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_anon_set_server_params_function(3)"
 name: "gnutls_anon_set_server_params_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_anon_set_server_params_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_anon_set_server_params_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_anon_set_server_params_function(gnutls_anon_server_credentials_t </code><i>res</i><code>, gnutls_params_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_anon_set_server_params_function – API function"
 <dd> is a gnutls_certificate_credentials_t structure</dd>
 <dt>gnutls_params_function * func</dt>
 <dd> is the function to be called</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set a callback in order for the server to get the Diffie-Hellman parameters for anonymous authentication. The callback should return <code>GNUTLS_E_SUCCESS</code> (0) on success.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

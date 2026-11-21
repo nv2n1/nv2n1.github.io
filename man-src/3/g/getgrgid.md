@@ -1,4 +1,5 @@
 ---
+
 title: "getgrgid(3)"
 name: "getgrgid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getgrgid/"
 description: "getgrnam, getgrnam_r, getgrgid, getgrgid_r – get group file entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;grp.h&gt;
 #include &lt;sys/types.h&gt;
@@ -24,7 +24,6 @@ int getgrgid_r(gid_t gid, struct group *grp,
 <dt>
 </dt><dd> _POSIX_C_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>getgrnam</code>() function returns a pointer to a structure containing the broken-out fields of the record in the group database (e.g., the local group file <i>/etc/group</i>, NIS, and LDAP) that matches the group name <i>name</i>. </p>
 <p> The <code>getgrgid</code>() function returns a pointer to a structure containing the broken-out fields of the record in the group database that matches the group ID <i>gid</i>. </p>
 <p> The <i>group</i> structure is defined in <i>&lt;grp.h&gt;</i> as follows: </p>

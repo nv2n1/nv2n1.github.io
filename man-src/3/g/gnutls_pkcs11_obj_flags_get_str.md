@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_obj_flags_get_str(3)"
 name: "gnutls_pkcs11_obj_flags_get_str"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_pkcs11_obj_flags_get_str – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_flags_get_str &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>char * gnutls_pkcs11_obj_flags_get_str(unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>unsigned int flags</dt>
 <dd> holds the flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function given an or-sequence of <code>GNUTLS_PKCS11_OBJ_FLAG_MARK</code>, will return an allocated string with its description. The string needs to be deallocated using <code>gnutls_free()</code>.</p>
 <h2>RETURNS</h2>
 <p> If flags is zero <code>NULL</code> is returned, otherwise an allocated string.</p>

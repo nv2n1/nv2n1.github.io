@@ -1,4 +1,5 @@
 ---
+
 title: "expf(3)"
 name: "expf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-expf/"
 description: "exp, expf, expl – base-e exponential function"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double exp(double x);
@@ -22,7 +22,6 @@ long double expl(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return the value of e (the base of natural logarithms) raised to the power of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the exponential value of <i>x</i>. </p>

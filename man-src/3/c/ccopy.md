@@ -1,4 +1,5 @@
 ---
+
 title: "ccopy(3)"
 name: "ccopy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ccopy/"
 description: "ccopy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ccopy</code> (N, CX, INCX, CY, INCY)<br />
  <i></i><code>CCOPY</code></p>

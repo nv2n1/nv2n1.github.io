@@ -1,4 +1,5 @@
 ---
+
 title: "mysqld_safe(1)"
 name: "mysqld_safe"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqld_safe/"
 description: "mysqld_safe – MySQL server startup script"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqld_safe </code><i>options</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mysqld_safe</code></p>
 <dd>is the recommended way to start a <code>mysqld</code> server on Unix. <code>mysqld_safe</code> adds some safety features such as restarting the server when an error occurs and logging runtime information to an error log. A description of error logging is given later in this section. </dd>
 <dl>

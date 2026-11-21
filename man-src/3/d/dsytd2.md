@@ -1,4 +1,5 @@
 ---
+
 title: "dsytd2(3)"
 name: "dsytd2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsytd2/"
 description: "dsytd2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsytd2</code> (UPLO, N, A, LDA, D, E, TAU, INFO)<br />
  <i></i><code>DSYTD2</code> reduces a symmetric matrix to real symmetric tridiagonal form by an orthogonal similarity transformation (unblocked algorithm).</p>

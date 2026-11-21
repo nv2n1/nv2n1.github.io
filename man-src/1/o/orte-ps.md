@@ -1,4 +1,5 @@
 ---
+
 title: "orte-ps(1)"
 name: "orte-ps"
 section: "1"
@@ -8,7 +9,6 @@ description: "ompi-ps, orte-ps – Displays information about the active jobs an
 ---
 
 <p> <code>NOTE:</code> <i>ompi-ps</i>, and <i>orte-ps</i> are exact synonyms for each other. Using any of the names will result in exactly identical behavior. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ompi-ps</code> <code>[ options ]</code></p>
 <h2>Options</h2>
 <p> <i>ompi-ps</i> will display information about running job(s) in the current universe.</p>
@@ -29,7 +29,6 @@ description: "ompi-ps, orte-ps – Displays information about the active jobs an
 <dd> Pass global MCA parameters that are applicable to all contexts. <i>&lt;key&gt;</i> is the parameter name; <i>&lt;value&gt;</i> is the parameter value.</dd>
 <dt><code>-mca | &#8211;mca &lt;key&gt; &lt;value&gt;</code></dt>
 <dd> Send arguments to various MCA modules.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>ompi-ps</i> displays the state of jobs running inside an Open RTE universe.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-orterun/">orterun</a>(1), <a href="/docs/linux/man/1-orte-clean/">orte-clean</a>(1) </p>

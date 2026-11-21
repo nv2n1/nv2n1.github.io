@@ -1,4 +1,5 @@
 ---
+
 title: "docker-volume(1)"
 name: "docker-volume"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-volume/"
 description: "docker-volume – Manage volumes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker volume COMMAND</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The docker volume command has subcommands for managing data volumes. A data volume is a specially-designated directory that by-passes storage driver management. </p>
 <p> Data volumes persist data independent of a container&#8217;s life cycle. When you delete a container, the Docker daemon does not delete any data volumes. You can share volumes across multiple containers. Moreover, you can share data volumes with other computing resources in your system. </p>
 <p> To see help for a subcommand, use: </p>

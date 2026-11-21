@@ -1,4 +1,5 @@
 ---
+
 title: "libavfilter(3)"
 name: "libavfilter"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libavfilter/"
 description: "libavfilter – multimedia filtering library"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The libavfilter library provides a generic audio/video filtering framework containing several filters, sources and sinks.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-ffmpeg/">ffmpeg</a></i>(1), <i><a href="/docs/linux/man/1-ffplay/">ffplay</a></i>(1), <i><a href="/docs/linux/man/1-ffprobe/">ffprobe</a></i>(1), <i><a href="/docs/linux/man/1-ffserver/">ffserver</a></i>(1), <i><a href="/docs/linux/man/1-ffmpeg-filters/">ffmpeg-filters</a></i>(1), <i><a href="/docs/linux/man/3-libavutil/">libavutil</a></i>(3), <i><a href="/docs/linux/man/3-libswscale/">libswscale</a></i>(3), <i><a href="/docs/linux/man/3-libswresample/">libswresample</a></i>(3), <i><a href="/docs/linux/man/3-libavcodec/">libavcodec</a></i>(3), <i><a href="/docs/linux/man/3-libavformat/">libavformat</a></i>(3), <i><a href="/docs/linux/man/3-libavdevice/">libavdevice</a></i>(3)</p>

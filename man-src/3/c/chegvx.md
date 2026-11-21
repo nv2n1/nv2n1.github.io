@@ -1,4 +1,5 @@
 ---
+
 title: "chegvx(3)"
 name: "chegvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chegvx/"
 description: "chegvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chegvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, A, LDA, B, LDB, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, RWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>CHEGST</code></p>

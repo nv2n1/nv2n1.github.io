@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-cxxmap-14(1)"
 name: "llvm-cxxmap-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-cxxmap-14/"
 description: "llvm-cxxmap – Mangled name remapping tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-cxxmap</code> [<i>options</i>] <i>symbol-file-1</i> <i>symbol-file-2</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-cxxmap</code> tool performs fuzzy matching of C++ mangled names, based on a file describing name components that should be considered equivalent. </p>
 <p> The symbol files should contain a list of C++ mangled names (one per line). Blank lines and lines starting with <code>#</code> are ignored. The output is a list of pairs of equivalent symbols, one per line, of the form </p>
 <pre>

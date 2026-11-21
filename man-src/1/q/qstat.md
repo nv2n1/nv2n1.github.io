@@ -1,4 +1,5 @@
 ---
+
 title: "qstat(1)"
 name: "qstat"
 section: "1"
@@ -9,7 +10,6 @@ description: "qstat – show the status of xxQS_NAMExx jobs and queues"
 
 <h2>SYNTAX</h2>
 <p> <code>qstat</code> [<code>-ext</code>] [<code>-f</code>] [<code>-F</code> [<i>resource_name</i>,&#8230;]] [<code>-g</code> <code>c</code>|<code>d</code>|<code>t</code>[<code>+</code>]] [<code>-help</code>] [<code>-j</code> [<i>job_list</i>]] [<code>-l</code> <i>resource</i>=<i>val</i>,&#8230;<i>]</i> [<code>-ne</code>] [<code>-pe</code> <i>pe_name</i>,&#8230;] [<code>-ncb</code>] [<code>-pri</code>] [<code>-q</code> <i>wc_queue_list</i>] [<code>-qs</code> <code>a</code>|<code>c</code>|<code>d</code>|<code>o</code>|<code>s</code>|<code>u</code>|<code>A</code>|<code>C</code>|<code>D</code>|<code>E</code>|<code>S</code>] [<code>-r</code>] [<code>-s</code> {<code>r</code>|<code>p</code>|<code>s</code>|<code>z</code>|<code>hu</code>|<code>ho</code>|<code>hs</code>|<code>hd</code>|<code>hj</code>|<code>ha</code>|<code>h</code>|<code>a</code>}[+]] [<code>-t</code>] [<code>-U</code> <i>user</i>,&#8230;] [<code>-u</code> <i>user</i>,&#8230;] [<code>-urg</code>] [<code>-xml</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>qstat</i> shows the current status of the available xxQS_NAMExx queues and the jobs associated with the queues. Selection options allow you to get information about specific jobs, queues or users. If multiple selections are done, a queue is only displayed if all selection criteria for a queue instance are met. Without any option <i>qstat</i> will display only a list of jobs, with no queue status information. </p>
 <p> The administrator and the user may define files (see which can contain any of the options described below. A cluster-wide sge_qstat file may be placed under $xxQS_NAME_Sxx_ROOT/$xxQS_NAME_Sxx_CELL/common/sge_qstat. The user private file is searched for at the location $HOME/.sge_qstat. The home directory request file has higher precedence than the cluster global file. The command line can be used to override the flags contained in the files.</p>
 <h2>OPTIONS</h2>

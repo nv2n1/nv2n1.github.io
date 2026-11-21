@@ -1,4 +1,5 @@
 ---
+
 title: "mate-power-manager(1)"
 name: "mate-power-manager"
 section: "1"
@@ -9,9 +10,7 @@ description: "mate-power-manager – mate power manager userspace daemon"
 
 <h2>NAME</h2>
 <p> mate-power-manager &#8211; mate power manager userspace daemon</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-power-manager</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;debug</code> ] [ <code>&#8211;help</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mate-power-manager</code> command. </p>
 <p> <code>mate-power-manager</code> is the backend program of the MATE power management infrastructure providing a complete and integrated solution to power management under the MATE desktop environment. </p>
 <p> It supports features such as suspending, hibernating, screen blanking, cpu frequency switching and more in one small neat package.</p>

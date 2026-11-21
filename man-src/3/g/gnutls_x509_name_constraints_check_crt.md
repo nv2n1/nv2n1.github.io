@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_name_constraints_check_crt(3)"
 name: "gnutls_x509_name_constraints_check_crt"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_name_constraints_check_crt – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_name_constraints_check_crt &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>unsigned gnutls_x509_name_constraints_check_crt(gnutls_x509_name_constraints_t </code><i>nc</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, gnutls_x509_crt_t </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_name_constraints_check_crt – API function"
 <dd> the type of the constraint to check (of type gnutls_x509_subject_alt_name_t)</dd>
 <dt>gnutls_x509_crt_t cert</dt>
 <dd> the certificate to be checked</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will check the provided certificate names against the constraints in<br />
 &nbsp;<wbr><i>nc</i>&nbsp;<wbr>using the RFC5280 rules. It will traverse all the certificate&#8217;s names and alternative names. </p>
 <p> Currently this function is limited to DNS names and emails (of type <code>GNUTLS_SAN_DNSNAME</code> and <code>GNUTLS_SAN_RFC822NAME</code>).</p>

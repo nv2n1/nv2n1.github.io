@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolneaten(1)"
 name: "dbcolneaten"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbcolneaten/"
 description: "dbcolneaten – pretty-print columns of Fsdb data (assuming a monospaced font)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbcolneaten [-E] [field_settings]</p>
-<h2>DESCRIPTION</h2>
 <p> dbcolneaten arranges that the Fsdb data appears in neat columns if you view it with a monospaced font. To do this, it pads out each field with spaces to line up the next field. </p>
 <p> Field settings are of the form </p>
 <pre>

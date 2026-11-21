@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-load(1)"
 name: "docker-image-load"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-image-load/"
 description: "docker-image-load – Load an image from a tar archive or STDIN"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker image load [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Loads a tarred repository from a file or the standard input stream. Restores both images and tags. Write image names or IDs imported it standard output stream. </p>
 <h2>EXAMPLES</h2>
 <dl>

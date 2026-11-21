@@ -1,4 +1,5 @@
 ---
+
 title: "slaein(3)"
 name: "slaein"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaein/"
 description: "slaein.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaein</code> (RIGHTV, NOINIT, N, H, LDH, WR, WI, VR, VI, B, LDB, WORK, EPS3, SMLNUM, BIGNUM, INFO)<br />
  <i></i><code>SLAEIN</code> computes a specified right or left eigenvector of an upper Hessenberg matrix by inverse iteration.</p>

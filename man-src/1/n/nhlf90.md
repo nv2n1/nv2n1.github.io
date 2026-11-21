@@ -1,4 +1,5 @@
 ---
+
 title: "nhlf90(1)"
 name: "nhlf90"
 section: "1"
@@ -9,9 +10,7 @@ description: "nhlf90 – Command for compiling Fortran code that uses the NCAR G
 
 <h2>NAME</h2>
 <p> nhlf90 &#8211; Command for compiling Fortran code that uses the NCAR Graphics high-level utilities.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nhlf90</code> [<code>-ngmath</code>] [<code>-ncarbd</code>] [<code>-ngmathbd</code>] [<code>-netcdf</code>] [<code>-hdf</code>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <i>nhlf90</i> is a script that invokes the FORTRAN 90 compiler/linker with the proper NCAR Graphics LLU (low-level utility) and HLU (high-level utility) libraries. Arguments presented above are associated with NCAR Graphics. All other arguments and options are identical to the f90 command on your particular machine; arguments that include quoted strings may have to be enclosed in single quotes. </p>
 <p> In order to run <i>nhlf90</i>, you must have your NCARG_ROOT environment variable set to the directory pathname where the NCAR Graphics libraries, binaries, and include files were installed. If you are not sure what NCARG_ROOT should be set to, please check with your system administrator or the site representative for NCAR Graphics. If the NCAR Graphics libraries, binaries, and include files were not installed under one root directory, then you will need to set the environment variables NCARG_LIB, NCARG_BIN, and NCARG_INCLUDE instead. Please see &quot;man ncargintro&quot; for more information. </p>
 <p> Note that, on some systems, if you supply your own binary libraries in addition to the ones automatically referenced by <i>nhlf90</i>, all the libraries must have been created in a similar fashion. </p>

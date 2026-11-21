@@ -1,4 +1,5 @@
 ---
+
 title: "dlaed7(3)"
 name: "dlaed7"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaed7/"
 description: "dlaed7.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaed7</code> (ICOMPQ, N, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, INDXQ, RHO, CUTPNT, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, IWORK, INFO)<br />
  <i></i><code>DLAED7</code> used by sstedc. Computes the updated eigensystem of a diagonal matrix after modification by a rank-one symmetric matrix. Used when the original matrix is dense.</p>

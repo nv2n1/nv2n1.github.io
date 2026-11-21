@@ -1,4 +1,5 @@
 ---
+
 title: "sphinx-quickstart(1)"
 name: "sphinx-quickstart"
 section: "1"
@@ -9,9 +10,7 @@ description: "sphinx-quickstart – Sphinx documentation template generator"
 
 <h2>NAME</h2>
 <p> sphinx-quickstart &#8211; Sphinx documentation template generator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sphinx-quickstart</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>sphinx-quickstart</code> is an interactive tool that asks some questions about your project and then generates a complete documentation directory and sample Makefile to be used with <i><a href="/docs/linux/man/1-sphinx-build/">sphinx-build</a>(1)</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-sphinx-build/">sphinx-build</a>(1)</i></p>

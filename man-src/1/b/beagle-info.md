@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-info(1)"
 name: "beagle-info"
 section: "1"
@@ -9,9 +10,7 @@ description: "beagle-info"
 
 <h2>NAME</h2>
 <p> beagle-info</p>
-<h2>SYNOPSIS</h2>
 <p> <code>beagle-info</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>beagle-info</code> displays information about Beagle</p>
 <h2>OPTIONS</h2>
 <h3>Information about the currently running Beagle daemon.</h3>

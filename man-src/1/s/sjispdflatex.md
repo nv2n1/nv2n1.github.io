@@ -1,4 +1,5 @@
 ---
+
 title: "sjispdflatex(1)"
 name: "sjispdflatex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sjispdflatex/"
 description: "bg5latex – Use LaTeX directly on a Big5 encoded .tex file bg5pdflatex – Use pdfLaTeX directly on a Big5 encoded .tex file bg5+latex – Use LaTeX directly on a Big5+ encoded .tex file bg5+pdflatex – ..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> bg5latex &#8211; Use LaTeX directly on a Big5 encoded .tex file<br />
  bg5pdflatex &#8211; Use pdfLaTeX directly on a Big5 encoded .tex file<br />
  bg5+latex &#8211; Use LaTeX directly on a Big5+ encoded .tex file<br />
@@ -28,11 +28,9 @@ description: "bg5latex – Use LaTeX directly on a Big5 encoded .tex file bg5pdf
  gbkpdflatex &#8211; Use pdfLaTeX directly on a GBK encoded .tex file<br />
  sjislatex &#8211; Use LaTeX directly on an SJIS encoded .tex file<br />
  sjispdflatex &#8211; Use pdfLaTeX directly on an SJIS encoded .tex file </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bg5latex</code> file.tex<br />
  <code>bg5pdflatex</code> file.tex<br />
  etc.</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the different <code>*latex</code> batch files that come with the CJK LaTeX macro. </p>
 <p> The <code>*latex</code> commands are shell scripts that will convert a (Big5(+), GBK or SJIS encoded) .tex file in a .cjk file using the respective <code>*conv</code> command resulting in a .cjk file, and will then run (<code>pdf</code>)<code>latex</code> on the .cjk file. </p>
 <p> If you use Big5+ encoding, then use <code>bg5+latex</code> or <code>bg5+pdflatex</code>. </p>

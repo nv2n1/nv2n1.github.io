@@ -1,4 +1,5 @@
 ---
+
 title: "airbase-ng(1)"
 name: "airbase-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-airbase-ng/"
 description: "airbase-ng – multi-purpose tool aimed at attacking clients as opposed to the Access Point (AP) itself"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>airbase-ng</code> [options] &lt;interface name&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>airbase-ng</code> is multi-purpose tool aimed at attacking clients as opposed to the Access Point (AP) itself. Since it is so versatile and flexible, summarizing it is a challenge. Here are some of the feature highlights:<br />
  &#8211; Implements the Caffe Latte WEP client attack<br />
  &#8211; Implements the Hirte WEP client attack<br />

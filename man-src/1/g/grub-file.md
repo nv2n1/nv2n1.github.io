@@ -1,4 +1,5 @@
 ---
+
 title: "grub-file(1)"
 name: "grub-file"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-file/"
 description: "grub-file – check file type"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>file</code> <i>,OPTIONS FILE/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Check if FILE is of specified type.</p>
 <dl>
 <dt><code>&#8211;is-i386-xen-pae-domu</code></dt>

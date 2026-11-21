@@ -1,4 +1,5 @@
 ---
+
 title: "comp(1)"
 name: "comp"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-comp/"
 description: "comp – compose a message"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>comp </code> [<i>+folder</i>] [<i>msg</i>] [<code>-form</code> <i>formfile</i>] [<code>-use</code> | <code>-nouse</code>] [<code>-file</code> <i>file</i>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-width</code> <i>columns</i>] [<code>-from</code> <i>address</i>] [<code>-to</code> <i>address</i>] [<code>-cc</code> <i>address</i>] [<code>-fcc</code> <i>+folder</i>] [<code>-subject</code> <i>text</i>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-build</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Comp</code></p>
 <dd>is used to create a new message to be mailed. It copies a message form to the draft being composed and then invokes an editor on the draft (unless <code>-noedit</code> is given, in which case the initial edit is suppressed). </dd>
 <p> The default message template &#8220;components&#8221; will direct <code>comp</code> to construct the message draft as follows: </p>

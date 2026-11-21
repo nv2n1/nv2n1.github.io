@@ -1,4 +1,5 @@
 ---
+
 title: "obrotamer(1)"
 name: "obrotamer"
 section: "1"
@@ -9,9 +10,7 @@ description: "obrotamer – generate conformer/rotamer coordinates"
 
 <h2>NAME</h2>
 <p> <code>obrotamer</code> &#8211; generate conformer/rotamer coordinates</p>
-<h2>SYNOPSIS</h2>
 <p> <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> The obrotamer tool can be used as part of a conformational search by generating random isomers based on rotating dihedral angles. These rotamers are not conformers &#8212; that is, obrotamer does not perform geometry optimization after generating the rotamer structure. The obminimize tool can do geometry optimization using molecular mechanics.</p>
 <h2>EXAMPLES</h2>
 <blockquote><p><tt>&quot;obrotamer baseconformer.sdf &gt;rotamer1.sdf&quot;</tt></p></blockquote>

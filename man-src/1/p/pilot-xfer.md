@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-xfer(1)"
 name: "pilot-xfer"
 section: "1"
@@ -11,12 +12,10 @@ description: "pilot-xfer – Backup, sync, and restore databases from a Palm han
 <p> pilot-xfer &#8211; Backup, sync, and restore databases from a Palm handheld device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-xfer</i>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr>&lt;<i>file</i>&gt;]&nbsp;<wbr>[<code>-b</code>]&nbsp;<wbr>[<code>-u</code>]&nbsp;<wbr>[<code>-s</code>]&nbsp;<wbr>&lt;<i>directory</i>&gt; </p>
 <p> or </p>
 <p>&nbsp;<wbr><i>pilot-xfer</i>&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-r</code>&nbsp;<wbr>&lt;<code>directory</code>&gt;]&nbsp;<wbr>[<code>-l</code>]&nbsp;<wbr>[<code>-L</code>]&nbsp;<wbr>[<code>-P</code>]&nbsp;<wbr>[<code>-f</code>&nbsp;<wbr>&lt;<code>dbname</code>&gt;]&nbsp;<wbr>[<code>-d</code>&nbsp;<wbr>&lt;<code>dbname</code>&gt;]&nbsp;<wbr>[<code>-i</code>&nbsp;<wbr>&lt;<code>dbname</code>&gt;]&nbsp;<wbr>[<code>-m</code>&nbsp;<wbr>&lt;<i>file</i>&gt;]&nbsp;<wbr>&#8230; </p>
 <p> Use exactly one of -brsudfimlI; mix in -aexDPv, &#8211;rom and with-os. </p>
-<h2>DESCRIPTION</h2>
 <p> This is the swiss-army-knife of the entire pilot-link suite. </p>
 <p>&nbsp;<wbr><i>pilot-xfer</i>&nbsp;<wbr>allows the user to install databases contained in the standard .prc&nbsp;<wbr>(Palm Resource Database), .pdb&nbsp;<wbr>(Palm Record Database), and .pqa&nbsp;<wbr>(Palm Query Application)&nbsp;<wbr>formats onto a Palm, retrieve databases from the Palm, list the databases contained in a Palm, backup or restore all of the databases at once as well as many other powerful operations performed on a Palm handheld device. </p>
 <h2>OPTIONS</h2>

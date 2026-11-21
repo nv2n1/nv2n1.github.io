@@ -1,4 +1,5 @@
 ---
+
 title: "ipa(1)"
 name: "ipa"
 section: "1"
@@ -9,11 +10,9 @@ description: "ipa – IPA command-line interface"
 
 <h2>NAME</h2>
 <p> ipa &#8211; IPA command-line interface</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 ipa[options][-c FILE][-e KEY = VAL] COMMAND[parameters]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> IPA is an integrated security information management solution based on 389 Directory Server (formerly know as Fedora Directory Server), MIT Kerberos, Dogtag Certificate System, NTP and DNS. It includes a web interface and command-line administration tools for managing identity data. </p>
 <p> This manual page focuses on the <i>ipa</i> script that serves as the main command-line interface (CLI) for IPA administration. </p>
 <p> More information about the project is available on its homepage located at <a rel="nofollow" href="http://www.freeipa.org.">http://www.freeipa.org.</a></p>

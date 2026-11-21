@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_get_pkey_index(3)"
 name: "ibv_get_pkey_index"
 section: "3"
@@ -6,14 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_get_pkey_index/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_get_pkey_index - obtain the index in the P_Key table of a P_Key 
-
-<h2>SYNOPSIS</h2>
+ibv_get_pkey_index - obtain the index in the P_Key table of a P_Key 
 
 <dl>
 <dt>
@@ -24,11 +18,7 @@ int ibv_get_pkey_index(struct ibv_context *context,
                        __be16 pkey);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Every InfiniBand HCA maintains a P_Key table for each of its ports that is indexed by an integer and with a P_Key in each element. Certain InfiniBand data structures that work with P_Keys expect a P_Key index, e.g. struct ibv_qp_attr and struct ib_mad_addr. Hence the function ibv_get_pkey_index() that accepts a P_Key in network byte order and that returns an index in the P_Key table as result.
+Every InfiniBand HCA maintains a P_Key table for each of its ports that is indexed by an integer and with a P_Key in each element. Certain InfiniBand data structures that work with P_Keys expect a P_Key index, e.g. struct ibv_qp_attr and struct ib_mad_addr. Hence the function ibv_get_pkey_index() that accepts a P_Key in network byte order and that returns an index in the P_Key table as result.
 
 <h2>RETURN VALUE</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "dsync(1)"
 name: "dsync"
 section: "1"
@@ -9,10 +10,8 @@ description: "dsync – Dovecot’s mailbox synchronization utility"
 
 <h2>NAME</h2>
 <p> dsync &#8211; Dovecot&#8217;s mailbox synchronization utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dsync</code> [<i>options</i>] <code>mirror&nbsp;<wbr></code><i>location2</i><br />
  <code>dsync</code> [<i>options</i>] <code>backup&nbsp;<wbr></code><i>location2</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dsync</code> is Dovecot&#8217;s mailbox synchronization utility. It can be used for several different use cases: Two-way synchronization of mailboxes in different servers (via <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1)), creating backups of mails to a remote server, and convert mailboxes from/to different mailbox formats. </p>
 <p> The syncing is done as perfectly as possible: an IMAP or a POP3 client shouldn&#8217;t be able to notice any differences between the two mailboxes. Two-way syncing means that it&#8217;s safe to do any kind of modifications in both sides, and <code>dsync</code> will merge the changes without losing any changes done on either side. This is possible because <code>dsync</code> can access Dovecot&#8217;s index logs that keep track of changes. It&#8217;s of course possible to have conflicts during merging, these are resolved in a safe way. See the <code>dsync</code> design document for more information. </p>
 <p> <code>dsync</code> uses the same configuration files as the rest of Dovecot (via doveconf binary). The entire configuration can be changed by giving -c parameter to another configuration file, or using -o parameter to override specific settings. When executing a remote <code>dsync</code> program it works the same way: it uses its own local configuration. </p>

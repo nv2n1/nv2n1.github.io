@@ -1,4 +1,5 @@
 ---
+
 title: "cladiv(3)"
 name: "cladiv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cladiv/"
 description: "cladiv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> COMPLEX function <code>cladiv</code> (X, Y)<br />
  <i></i><code>CLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.</p>

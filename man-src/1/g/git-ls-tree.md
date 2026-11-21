@@ -1,4 +1,5 @@
 ---
+
 title: "git-ls-tree(1)"
 name: "git-ls-tree"
 section: "1"
@@ -6,13 +7,12 @@ letter: "g"
 url: "/docs/linux/man/1-git-ls-tree/"
 description: "git-ls-tree – List the contents of a tree object"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  git ls-tree  [-d] [-r] [-t] [-l] [-z]
             [--name-only] [--name-status] [--full-name] [--full-tree] [--abbrev[=&lt;n&gt;]]
             &lt;tree-ish&gt; [&lt;path&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Lists the contents of a given tree object, like what &quot;/bin/ls -a&quot; does in the current working directory. Note that: </p>
 <dl>
 <dd> <p> &bull; the behaviour is slightly different from that of &quot;/bin/ls&quot; in that the <i>&lt;path&gt;</i> denotes just a list of patterns to match, e.g. so specifying directory name (without <code>-r</code>) will behave differently, and order of the arguments does not matter. </p>

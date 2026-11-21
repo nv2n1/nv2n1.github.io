@@ -1,4 +1,5 @@
 ---
+
 title: "sgeqrt(3)"
 name: "sgeqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgeqrt/"
 description: "sgeqrt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br />
  <i></i><code>SGEQRT</code></p>

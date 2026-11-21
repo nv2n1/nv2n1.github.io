@@ -1,4 +1,5 @@
 ---
+
 title: "smbtree(1)"
 name: "smbtree"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-smbtree/"
 description: "smbtree – A text based smb network browser"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbtree [-b] [-D] [-S]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbtree is a smb browser program in text mode. It is similar to the &quot;Network Neighborhood&quot; found on Windows computers. It prints a tree with all the known domains, the servers in those domains and the shares on the servers.</p>
 <h2>OPTIONS</h2>

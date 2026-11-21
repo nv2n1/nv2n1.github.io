@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_ttoaddr(3)"
 name: "ipsec_ttoaddr"
 section: "3"
@@ -9,7 +10,6 @@ description: "ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ip
 
 <h2>NAME</h2>
 <p> ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ipsec_subnettot &#8211; convert Internet addresses and Subnet masks to and from text</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>const char *ttoaddr(const char *src, size_t srclen,</code><br />
  &nbsp;<wbr> <code>int af, ip_address *addr);</code><br />
@@ -21,7 +21,6 @@ description: "ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ip
  &nbsp;<wbr> <code>int af, ip_subnet *dst);</code><br />
  <code>size_t subnettot(const ip_subnet *sub, int format,</code><br />
  &nbsp;<wbr> <code>char *dst, size_t dstlen);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Ttoaddr</i> converts a text-string name or numeric address into a binary address (in network byte order). <i>Tnatoaddr</i> does the same conversion, but the only text forms it accepts are the &#8220;official&#8221; forms of numeric address (dotted-decimal for IPv4, colon-hex for IPv6). <i>Addrtot</i> does the reverse conversion, from binary address back to a text form. <i>Ttosubnet</i> and <i>subnettot</i> do likewise for the &#8220;address/mask&#8221; form used to write a specification of a subnet. </p>
 <p> An IPv4 address is specified in text as a dotted-decimal address (e.g. <code>1.2.3.4</code>), an eight-digit network-order hexadecimal number with the usual C prefix (e.g. <code>0x01020304</code>, which is synonymous with <code>1.2.3.4</code>), an eight-digit host-order hexadecimal number with a <code>0h</code> prefix (e.g. <code>0h01020304</code>, which is synonymous with <code>1.2.3.4</code> on a big-endian host and <code>4.3.2.1</code> on a little-endian host), a DNS name to be looked up via <i><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></i>(3), or an old-style network name to be looked up via <i><a href="/docs/linux/man/3-getnetbyname/">getnetbyname</a></i>(3). </p>
 <p> A dotted-decimal address may be incomplete, in which case text-to-binary conversion implicitly appends as many instances of <code>.0</code> as necessary to bring it up to four components. The components of a dotted-decimal address are always taken as decimal, and leading zeros are ignored. For example, <code>10</code> is synonymous with <code>10.0.0.0</code>, and <code>128.009.000.032</code> is synonymous with <code>128.9.0.32</code> (the latter example is verbatim from RFC 1166). The result of applying <i>addrtot</i> to an IPv4 address is always complete and does not contain leading zeros. </p>

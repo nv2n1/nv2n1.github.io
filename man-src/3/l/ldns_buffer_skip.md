@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_skip(3)"
 name: "ldns_buffer_skip"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_b
 
 <h2>NAME</h2>
 <p> ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_buffer_set_position, ldns_buffer_skip </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -18,7 +18,6 @@ description: "ldns_buffer_flip, ldns_buffer_rewind, ldns_buffer_position, ldns_b
 <p> size_t ldns_buffer_position(ldns_buffer *buffer); </p>
 <p> void ldns_buffer_set_position(ldns_buffer *buffer, size_t mark); </p>
 <p> void ldns_buffer_skip(ldns_buffer *buffer, ssize_t count); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_buffer_flip</i>()</dt>
 <dd>makes the buffer ready for reading the data that has been written to the buffer. The buffer&#8217;s limit is set to the current position and the position is set to 0. </dd>

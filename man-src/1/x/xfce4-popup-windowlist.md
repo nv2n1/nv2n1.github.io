@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-popup-windowlist(1)"
 name: "xfce4-popup-windowlist"
 section: "1"
@@ -9,9 +10,7 @@ description: "xfce4-popup-windowlist – shows the Xfce window list applet popup
 
 <h2>NAME</h2>
 <p> xfce4-popup-windowlist &#8211; shows the Xfce window list applet popup </p>
-<h2>SYNOPSIS</h2>
 <p> <code>xfce4-popup-windowlist </code> [ -pointer ] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>xfce4-popup-windowlist</code> command. </p>
 <p> <code>xfce4-popup-windowlist</code> shows the Xfce window list if at least one Xfce window list applet is present on one of your panel(s). </p>
 <p> The default behaviour is to show the window list near the applet button. If you have several Xfce window list applets, only the first one you have set up will pop up. </p>

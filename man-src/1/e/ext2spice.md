@@ -1,4 +1,5 @@
 ---
+
 title: "ext2spice(1)"
 name: "ext2spice"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-ext2spice/"
 description: "ext2spice – convert hierarchical"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ext2spice &#8211; convert hierarchical <i></p>
 <p><a href="/docs/linux/man/5-ext/">ext</a></i>(5) extracted-circuit files to flat <i>spice</i> files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ext2spice</code> [ <code>-B</code> ] [ <i>extcheck-options</i> ] [ <i>-M|m</i> ] [ <i>-y num</i> ] [ <i>-f hspice|spice3|spice2</i> ] [ <i>-J hier|flat</i> ] [ <i>-j device:sdRclass[/subRclass]/defaultSubstrate</i> ] <i>root</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Ext2spice will convert an extracted circuit from the hierarchical <i><a href="/docs/linux/man/5-ext/">ext</a></i>(5) representation produced by Magic to a flat spice file which can be accepted by spice2, spice3, hspice and other simulation tools. The root of the tree to be extracted is the file <i>root</i><code>.ext</code>; it and all the files it references are recursively flattened. The result is a single, flat representation of the circuit that is written to the file <i>root</i><code>.spice</code> . </p>
 <p> The following options are recognized:</p>
 <dl>

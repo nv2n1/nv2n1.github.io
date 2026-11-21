@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_init_sequence(3)"
 name: "bson_oid_init_sequence"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_oid_init_sequence() – Generates a new ObjectID using the 64
 
 <h2>NAME</h2>
 <p> bson_oid_init_sequence() &#8211; Generates a new ObjectID using the 64-bit sequence.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 void
 bson_oid_init_sequence (bson_oid_t     *oid,
@@ -22,7 +22,6 @@ bson_oid_init_sequence (bson_oid_t     *oid,
 <dl>
 <dt><code>context</code></dt>
 <dd> An optional <code>bson_context_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Generates a new ObjectID using the 64-bit sequence. </p>
 <p> <code>NOTE</code></p>
 <dl>

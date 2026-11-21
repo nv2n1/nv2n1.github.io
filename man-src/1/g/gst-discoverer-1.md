@@ -1,4 +1,5 @@
 ---
+
 title: "gst-discoverer-1(1)"
 name: "gst-discoverer-1"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gst-discoverer-1/"
 description: "gst-discoverer-1.0 – Display file metadata and stream information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gst-discoverer-1.0</code> <i>FILE|DIRECTORY|URI [FILE2|DIRECTORY2|URI2]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>gst-discoverer-1.0</i> is a tool that can be used to print basic metadata and stream information about a media file. It can be run on individual files or whole directories. It will recurse into sub-directories in that case. </p>
 <h2>OPTIONS</h2>
 <p> <i>gst-discoverer-1.0</i> accepts the following options:</p>

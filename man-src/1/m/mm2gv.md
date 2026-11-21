@@ -1,4 +1,5 @@
 ---
+
 title: "mm2gv(1)"
 name: "mm2gv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mm2gv/"
 description: "mm2gv – Matrix Market-DOT converters"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mm2gv</code> [ <code>-cluv?</code> ] [ <code>-U</code><i>i</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>file</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>mm2gv</code> converts a sparse matrix of the Matrix Market format to a graph in the GV (formerly DOT) format. If the matrix <i>M</i> is not square, the graph is considered bipartite and the matrix is viewed as a bipartite graph adjacency matrix, with the rows and columns of the matrix specifying the two sets of vertices. Equivalently, the matrix is converted into a symmetric square matrix </p>
 <table>
 <tr VALIGN=top>

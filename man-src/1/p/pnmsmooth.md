@@ -1,4 +1,5 @@
 ---
+
 title: "pnmsmooth(1)"
 name: "pnmsmooth"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmsmooth/"
 description: "pnmsmooth – smooth out an image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmsmooth</code> [<code>-size</code> <i>width</i> <i>height</i>] [<code>-dump</code> <i>dumpfile</i>] [<i>pnmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Smooths out an image by replacing each pixel with the average of its width X height neighbors. It is implemented as a C progam that generates a PGM convolution matrix and then invokes <i>pnmconvol</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

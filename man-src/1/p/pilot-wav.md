@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-wav(1)"
 name: "pilot-wav"
 section: "1"
@@ -11,7 +12,6 @@ description: "pilot-wav – Decodes Palm Voice Memo files to wav files you can r
 <p> pilot-wav &#8211; Decodes Palm Voice Memo files to wav files you can read on your desktop</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-wav</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;fetch</code>&nbsp;<wbr>[<i>file</i>|<code>all</code>]]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;convert</code>&nbsp;<wbr>&nbsp;<wbr><i>file</i>] </p>
 <h2>OPTIONS</h2>
 <h3>pilot-wav options</h3>

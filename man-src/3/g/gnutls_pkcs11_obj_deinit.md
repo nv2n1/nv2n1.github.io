@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_obj_deinit(3)"
 name: "gnutls_pkcs11_obj_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_pkcs11_obj_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>void gnutls_pkcs11_obj_deinit(gnutls_pkcs11_obj_t </code><i>obj</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_pkcs11_obj_t obj</dt>
 <dd> The structure to be initialized</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a certificate structure.</p>
 <h2>SINCE</h2>
 <p> 2.12.0</p>

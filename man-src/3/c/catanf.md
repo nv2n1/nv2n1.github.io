@@ -1,4 +1,5 @@
 ---
+
 title: "catanf(3)"
 name: "catanf"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-catanf/"
 description: "catan, catanf, catanl – complex arc tangents"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex catan(double complex </code><i>z</i><code>);</code><br />
  <code>float complex catanf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex catanl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex arc tangent of <i>z</i>. If <i>y&nbsp;=&nbsp;catan(z)</i>, then <i>z&nbsp;=&nbsp;ctan(y)</i>. The real part of y is chosen in the interval [-pi/2,pi/2]. </p>
 <p> One has: </p>
 <pre>

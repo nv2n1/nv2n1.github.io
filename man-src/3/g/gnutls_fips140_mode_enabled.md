@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_fips140_mode_enabled(3)"
 name: "gnutls_fips140_mode_enabled"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_fips140_mode_enabled – API function"
 
 <h2>NAME</h2>
 <p> gnutls_fips140_mode_enabled &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_fips140_mode_enabled( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Checks whether this library is in FIPS140 mode.</p>
 <h2>RETURNS</h2>
 <p> return non-zero if true or zero if false.</p>

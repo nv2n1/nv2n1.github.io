@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_document_end(3)"
 name: "bson_append_document_end"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_document_end() – The bson_append_document_end() func
 
 <h2>NAME</h2>
 <p> bson_append_document_end() &#8211; The bson_append_document_end() function shall complete the appending of a document with bson_append_document_begin(). child is invalid after calling this function.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 bool
 bson_append_document_end (bson_t *bson,
@@ -22,7 +22,6 @@ bson_append_document_end (bson_t *bson,
 <dl>
 <dt><code>child</code></dt>
 <dd> The child <code>bson_t</code> initialized in a call to <code><a href="/docs/linux/man/3-bson_append_document_begin/">bson_append_document_begin</a>(3)</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_document_end/">bson_append_document_end</a>(3)</code> function shall complete the appending of a document with <code><a href="/docs/linux/man/3-bson_append_document_begin/">bson_append_document_begin</a>(3)</code> \&amp;. <code>child</code> is invalid after calling this function. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

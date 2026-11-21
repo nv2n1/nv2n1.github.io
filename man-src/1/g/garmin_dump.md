@@ -1,4 +1,5 @@
 ---
+
 title: "garmin_dump(1)"
 name: "garmin_dump"
 section: "1"
@@ -9,7 +10,6 @@ description: "garmin_dump – convert .gmn files into xml data"
 
 <h2>NAME</h2>
 <p> garmin_dump &#8211; convert .gmn files into xml data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>garmin_dump</code> <i>file</i> </p>
 <p> <code>garmin_dump</code> reads a .gmp file as produced by <code>garmin_save_runs</code>, and writes its translation into XML to standard output.</p>
 <h2>SEE ALSO</h2>

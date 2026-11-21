@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-failed(3)"
 name: "antlr3-failed"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_RECOGNIZER_SHARED_STATE_struct –"
 ---
 
 <p> All the data elements required to track the current state of any recognizer (lexer, parser, tree parser).</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3recognizersharedstate.h">antlr3recognizersharedstate.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_INT32</code> <code>backtracking</code><br />

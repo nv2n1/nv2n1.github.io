@@ -1,4 +1,5 @@
 ---
+
 title: "csscombine_py2(1)"
 name: "csscombine_py2"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-csscombine_py2/"
 description: "csscombine – Utility to combine several stylesheets into one."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>csscombine</code> &#8211; Utility to combine several stylesheets into one. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>csscombine</code> [<i>options</i>&#8230;] <i>path</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>csscombine</code> may be used to combine several sheets loaded from a main sheet via <code>@import</code> rules. Nested <code>@import</code> rules are resolved since cssutils 0.9.6a1. </p>
 <p> The resulting combined sheet (optionally minified) is sent to stdout, info and error messages are handled by the normal cssutils log. </p>
 <p> <code>csscombine</code> may also be used to change the encoding of the stylesheet if a target encoding is given.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "interpolatedyoyinflationcurve(3)"
 name: "interpolatedyoyinflationcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolatedyoyinflationcurve/"
 description: "ql/termstructures/inflation/interpolatedyoyinflationcurve.hpp – Inflation term structure based on the interpolation of year-on-year rates."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/inflationtermstructure.hpp&gt;<br />
  #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br />
  #include &lt;ql/math/comparison.hpp&gt;<br />

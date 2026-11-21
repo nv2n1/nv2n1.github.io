@@ -1,4 +1,5 @@
 ---
+
 title: "grid-cert-diagnostics(1)"
 name: "grid-cert-diagnostics"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-grid-cert-diagnostics/"
 description: "grid-cert-diagnostics – Print diagnostic information about certificates and keys"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grid-cert-diagnostics</code> [ -h | -help ] </p>
 <p> <code>grid-cert-diagnostics</code> [ -p ] [ -n ] [ -c CERTIFICATE [-H HOSTNAME] [-m { STRICT_GT2 | HYBRID | STRICT_RFC2818 }]] </p>
 <p> <code>grid-cert-diagnostics</code> [ -s HOST[:PORT] | -g HOST[:PORT] ] [-m { STRICT_GT2 | HYBRID | STRICT_RFC2818 }]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>grid-cert-diagnostics</code> program displays information about the current user&#8217;s security environment, including information about security-related environment variables, security directory search path, personal key and certificates, and trusted certificates. It is intended to provide information to help diagnose problems using GSIC. </p>
 <p> By default, <code>grid-cert-diagnostics</code> prints out information regarding the environment and trusted certificate directory. If the <i>-p</i> command-line option is used, then additional information about the current user&#8217;s default certificate and key will be printed. </p>
 <p> The <code>grid-cert-diagnostics</code> program can also attempt do diagnose problems connecting to remote GridFTP or SSL-based services.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "arcget(1)"
 name: "arcget"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arcget/"
 description: "arcget – ARC Get"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <code>arcget</code> command is used for retrieving the results from a job. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>arcget [options] [job &#8230;]</code> </p>
 <h2>OPTIONS</h2>
 <dl>

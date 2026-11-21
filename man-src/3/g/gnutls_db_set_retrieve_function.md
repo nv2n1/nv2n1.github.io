@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_db_set_retrieve_function(3)"
 name: "gnutls_db_set_retrieve_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_db_set_retrieve_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_db_set_retrieve_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_db_set_retrieve_function(gnutls_session_t </code><i>session</i><code>, gnutls_db_retr_func </code><i>retr_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_db_set_retrieve_function – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_db_retr_func retr_func</dt>
 <dd> is the function.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Sets the function that will be used to retrieve data from the resumed sessions database. This function must return a gnutls_datum_t containing the data on success, or a gnutls_datum_t containing null and 0 on failure. </p>
 <p> The datum&#8217;s data must be allocated using the function <code>gnutls_malloc()</code>. </p>
 <p> The first argument to <i>retr_func</i> will be null unless <code>gnutls_db_set_ptr()</code> has been called.</p>

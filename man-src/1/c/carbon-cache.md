@@ -1,4 +1,5 @@
 ---
+
 title: "carbon-cache(1)"
 name: "carbon-cache"
 section: "1"
@@ -13,7 +14,6 @@ description: "carbon-cache – accepts metrics over various protocols and writes
 <pre>
 carbon-cache [options] start
 </pre>
-<h2>DESCRIPTION</h2>
 <p> carbon-cache accepts metrics over various protocols and writes them to disk as efficiently as possible. This requires caching metric values in RAM as they are received, and flushing them to disk on an interval using the underlying whisper library. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

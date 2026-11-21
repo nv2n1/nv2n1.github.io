@@ -1,4 +1,5 @@
 ---
+
 title: "pminfo(1)"
 name: "pminfo"
 section: "1"
@@ -9,9 +10,7 @@ description: "pminfo – display information about performance metrics"
 
 <h2>NAME</h2>
 <p> <code>pminfo</code> &#8211; display information about performance metrics</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pminfo</code> [<code>-dfFLmMtTvxz</code>] [<code>-a</code> <i>archive</i>] [<code>-b</code> <i>batchsize</i>] [<code>-c</code> <i>dmfile</i>] [<code>-h</code> <i>hostname</i>] [<code>-K</code> <i>spec</i>] [<code>&#8211;</code>[<code>n</code>|<code>N</code>] <i>pmnsfile</i>] [<code>-O</code> <i>time</i>] [<code>-Z</code> <i>timezone</i>] [<i>metricname</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pminfo</code> displays various types of information about performance metrics available through the facilities of the Performance Co-Pilot (PCP). </p>
 <p> Normally <code>pminfo</code> operates on the distributed Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative local PMNS is loaded from the file <i>pmnsfile.</i> The <code>-N</code> option supports the same function as <code>-n</code>, except for the handling of duplicate names for the same Performance Metric Identifier (PMID) in <i>pmnsfile</i> &#8211; duplicate names are allowed with <code>-n</code> they are not allowed with <code>-N</code>. </p>
 <p> The metrics of interest are named in the <i>metricname</i> arguments. If <i>metricname</i> is a non-leaf node in the PMNS, then <code>pminfo</code> will recursively descend the PMNS and report on all leaf nodes. If no <i>metricname</i> argument is given, the root of the PMNS is used. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ptop(1)"
 name: "ptop"
 section: "1"
@@ -10,7 +11,6 @@ description: "ptop – The FPC Pascal configurable source beautifier."
 <h2>NAME</h2>
 <p> ptop &#8211; The FPC Pascal configurable source beautifier. </p>
 <p> Origin probably Pascal-TO-Pascal. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ptop</code><i>[-v] [-i indent] [-b bufsize ][-c optsfile] infile outfile</i> </p>
 <h2>Description</h2>
 <p> <code>ptop</code> is a more or less configurable <i>source beautifier</i> for pascal sources, and specially the ones supported by FPC (which are more or less Turbo Pascal or Delphi 2.0 compatible). </p>

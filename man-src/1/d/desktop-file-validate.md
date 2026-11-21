@@ -1,4 +1,5 @@
 ---
+
 title: "desktop-file-validate(1)"
 name: "desktop-file-validate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-desktop-file-validate/"
 description: "desktop-file-validate – Validate desktop entry files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>desktop-file-validate [&#8211;no-hints] [&#8211;no-warn-deprecated] [&#8211;warn-kde] FILE&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>desktop-file-validate</i> program is a tool to validate desktop entry files according to the Desktop Entry specification 1.4. </p>
 <p> The specification describes a file format to provide information such as name, icon and description for an application. Such a file can then be used as an application launcher and to display the application in the applications menu. </p>
 <p> For information about the Desktop Entry specification, see <i><a rel="nofollow" href="http://freedesktop.org/wiki/Specifications/desktop-entry-spec">http://freedesktop.org/wiki/Specifications/desktop-entry-spec</a></i>. </p>

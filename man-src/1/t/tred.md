@@ -1,4 +1,5 @@
 ---
+
 title: "tred(1)"
 name: "tred"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tred/"
 description: "tred – transitive reduction filter for directed graphs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tred</code> [ <code>-v?</code> ] [ <i>files </i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tred</code> computes the transitive reduction of directed graphs, and prints the resulting graphs to standard output. This removes edges implied by transitivity. Nodes and subgraphs are not otherwise affected. The &#8220;meaning&#8221; and validity of the reduced graphs is application dependent. <code>tred </code> is particularly useful as a preprocessor to <i>dot</i> to reduce clutter in dense layouts. </p>
 <p> Undirected graphs are silently ignored.</p>
 <h2>OPTIONS</h2>

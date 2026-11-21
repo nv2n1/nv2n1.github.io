@@ -1,4 +1,5 @@
 ---
+
 title: "nitrate(1)"
 name: "nitrate"
 section: "1"
@@ -10,17 +11,9 @@ url: "/docs/linux/man/1-nitrate/"
 
  nitrate - Command line interpreter for the Nitrate Python API
 
-<h2>SYNOPSIS</h2>
+nitrate
 
- 
-
- nitrate
-
-<h2>DESCRIPTION</h2>
-
- 
-
- python-nitrate provides a high-level Python interface to the Nitrate test case management system. The package also provides standalone script 'nitrate' which allows easy experimenting with the interface directly from the Python interpreter by importing all available objects and enabling the readline support. 
+python-nitrate provides a high-level Python interface to the Nitrate test case management system. The package also provides standalone script 'nitrate' which allows easy experimenting with the interface directly from the Python interpreter by importing all available objects and enabling the readline support. 
 
  In short, after setting your configuration you can easily manipulate all Nitrate objects from the command line, for example: 
 

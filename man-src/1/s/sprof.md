@@ -1,4 +1,5 @@
 ---
+
 title: "sprof(1)"
 name: "sprof"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-sprof/"
 description: "sprof – read and display shared object profiling data"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 sprof[option]... shared - object - path[profile - data - path]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>sprof</code> command displays a profiling summary for the shared object (shared library) specified as its first command-line argument. The profiling summary is created using previously generated profiling data in the (optional) second command-line argument. If the profiling data pathname is omitted, then <code>sprof</code> will attempt to deduce it using the soname of the shared object, looking for a file with the name <i>&lt;soname&gt;.profile</i> in the current directory.</p>
 <h2>OPTIONS</h2>
 <p> The following command-line options specify the profile output to be produced:</p>

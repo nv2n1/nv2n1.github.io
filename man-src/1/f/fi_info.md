@@ -1,4 +1,5 @@
 ---
+
 title: "fi_info(1)"
 name: "fi_info"
 section: "1"
@@ -6,14 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fi_info/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- fi_info - Simple utility to query for fabric interfaces 
-
-<h2>SYNOPSIS</h2>
+fi_info - Simple utility to query for fabric interfaces 
 
 <dl>
 <dt>
@@ -23,11 +17,7 @@ fi_info &amp;nbsp;
 [OPTIONS]
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The fi_info utility can be used to query for available fabric interfaces. The utility supports filtering based on a number of options such as endpoint type, provider name, or supported modes. Additionally, fi_info can also be used to discover the environment variables that can be used to tune provider specific parameters. If no filters are specified, then all available fabric interfaces for all providers and endpoint types will be returned.
+The fi_info utility can be used to query for available fabric interfaces. The utility supports filtering based on a number of options such as endpoint type, provider name, or supported modes. Additionally, fi_info can also be used to discover the environment variables that can be used to tune provider specific parameters. If no filters are specified, then all available fabric interfaces for all providers and endpoint types will be returned.
 
 <h2>OPTIONS</h2>
 

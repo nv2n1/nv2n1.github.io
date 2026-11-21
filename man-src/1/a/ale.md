@@ -1,4 +1,5 @@
 ---
+
 title: "ale(1)"
 name: "ale"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ale/"
 description: "ale – a synthetic capture engine and renderer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ale</code> [<i>OPTIONS</i>] <i>original-frame</i> [<i>supplemental-frames</i> &#8230;] <i>output-file</i> </p>
 <p> <code>ale</code> [<i>HELP OPTIONS</i>] </p>
 <p> <code>ale &#8211;version</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ALE</code> is a free software synthetic capture engine and renderer accepting, as input, a sequence of image frames, and producing, as output, rendered images, registration data, and 3D models (currently experimental). </p>
 <h2>EXAMPLES</h2>
 <p> <code>ale &#8211;hu</code></p>

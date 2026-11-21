@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_descriptor_minimum(3)"
 name: "ldns_rr_descriptor_minimum"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 
 <h2>NAME</h2>
 <p> ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, ldns_rr_descriptor_maximum, ldns_rr_descriptor_field_type </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,7 +17,6 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 <p> size_t ldns_rr_descriptor_minimum(const ldns_rr_descriptor *descriptor); </p>
 <p> size_t ldns_rr_descriptor_maximum(const ldns_rr_descriptor *descriptor); </p>
 <p> ldns_rdf_type ldns_rr_descriptor_field_type(const ldns_rr_descriptor *descriptor, size_t field); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_descriptor</i></dt>
 <dd>

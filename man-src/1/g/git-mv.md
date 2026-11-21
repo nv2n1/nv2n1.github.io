@@ -1,4 +1,5 @@
 ---
+
 title: "git-mv(1)"
 name: "git-mv"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-mv/"
 description: "git-mv – Move or rename a file, a directory, or a symlink"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>git mv</i> &lt;options&gt;... &lt;args&gt;...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Move or rename a file, directory or symlink. </p>
 <dl>
 <dt>

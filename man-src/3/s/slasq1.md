@@ -1,4 +1,5 @@
 ---
+
 title: "slasq1(3)"
 name: "slasq1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasq1/"
 description: "slasq1.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasq1</code> (N, D, E, WORK, INFO)<br />
  <i></i><code>SLASQ1</code> computes the singular values of a real square bidiagonal matrix. Used by sbdsqr.</p>

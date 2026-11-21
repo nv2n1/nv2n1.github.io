@@ -1,4 +1,5 @@
 ---
+
 title: "ireminder(1)"
 name: "ireminder"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ireminder/"
 description: "ireminder – Prayer time reminder"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ireminder</code> [<code>-ipraytime</code> path] [<code>-skip</code> event_name] [<code>-reminder</code> minutes] [<code>-inplace]</code> [<code>-execr</code> cmd] [<code>-execs</code> cmd] [<code>-help]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ireminder</code> script is written in perl and is meant to be a simplistic wrapper to call and process the &#8216;ipraytime&#8217; application. <code>ireminder</code> is used to remind the user via audio indicators of an impending Islamic prayer event.</p>
 <h2>OPTIONS</h2>
 <p> Some of the options within <code>ireminder</code> allow for list inputs, those are meant to be a quoted series of text/numbers.</p>

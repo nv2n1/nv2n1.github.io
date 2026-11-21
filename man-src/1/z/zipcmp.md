@@ -1,4 +1,5 @@
 ---
+
 title: "zipcmp(1)"
 name: "zipcmp"
 section: "1"
@@ -9,9 +10,7 @@ description: "zipcmp – compare contents of zip archives"
 
 <h2>NAME</h2>
 <p> zipcmp &#8211; compare contents of zip archives</p>
-<h2>SYNOPSIS</h2>
 <p> <code>zipcmp</code> [<code>-hiqVv</code>] <code>zip1 zip2</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>zipcmp</code> compares the zip archives <code>zip1</code> and <code>zip2</code> and checks if they contain the same files, comparing their names, uncompressed sizes, and CRCs. File order and compressed size differences are ignored. </p>
 <p> Supported options:</p>
 <dl>

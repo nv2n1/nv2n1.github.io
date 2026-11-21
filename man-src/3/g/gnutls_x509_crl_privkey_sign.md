@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_privkey_sign(3)"
 name: "gnutls_x509_crl_privkey_sign"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-gnutls_x509_crl_privkey_sign/"
 
  gnutls_x509_crl_privkey_sign - API function
 
-<h2>SYNOPSIS</h2>
-
- <b>#include &lt;gnutls/abstract.h&gt;</b> 
+<b>#include &lt;gnutls/abstract.h&gt;</b> 
 
  <b>int gnutls_x509_crl_privkey_sign(gnutls_x509_crl_t </b><i>crl</i><b>, gnutls_x509_crt_t </b><i>issuer</i><b>, gnutls_privkey_t </b><i>issuer_key</i><b>, gnutls_digest_algorithm_t </b><i>dig</i><b>, unsigned int </b><i>flags</i><b>);</b>
 
@@ -30,9 +29,7 @@ url: "/docs/linux/man/3-gnutls_x509_crl_privkey_sign/"
 </dd><dt>unsigned int flags
 </dt><dd> must be 0</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function will sign the CRL with the issuer's private key, and will copy the issuer's information into the CRL. 
+This function will sign the CRL with the issuer's private key, and will copy the issuer's information into the CRL. 
 
  This must be the last step in a certificate CRL since all the previously set parameters are now signed.
 

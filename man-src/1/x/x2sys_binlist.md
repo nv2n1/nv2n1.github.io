@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_binlist(1)"
 name: "x2sys_binlist"
 section: "1"
@@ -9,10 +10,8 @@ description: "x2sys_binlist – Create bin index listing from track data files"
 
 <h2>NAME</h2>
 <p> x2sys_binlist &#8211; Create bin index listing from track data files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x2sys_binlist</code> <i>track(s)</i> <i>TAG</i> [ ] [ ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>x2sys_binlist</code> reads one or more track data files and produces a multisegment ASCII track bin-index file (tbf) with the track name in the header and one data record per bin crossed; these records contain <i>lon</i>, <i>lat</i>, <i>index</i>, <i>flags</i>[, <i>dist</i>], where <i>lon</i>, <i>lat</i> are the coordinates of the center of the bin, the <i>index</i> is the 1-D number of the bin, and <i>flags</i> is a bitflag that describes which data fields were available in this bin. The optional <i>dist</i> requires . The input files can be of any format, which must be described and passed with the<br />
 &nbsp;<wbr>option. The bin-index listing is a crude representation of where the track goes and is used by the data archivist to build an x2sys track data base for miscellaneous track queries, such as when needing to determine which tracks should be compared in a crossover analysis. You must run <code>x2sys_init</code> to initialize the tag before you can run the indexing.</p>
 <h2>REQUIRED ARGUMENTS</h2>

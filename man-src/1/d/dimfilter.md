@@ -1,4 +1,5 @@
 ---
+
 title: "dimfilter(1)"
 name: "dimfilter"
 section: "1"
@@ -9,10 +10,8 @@ description: "dimfilter – Directional filtering of 2-D gridded files in the sp
 
 <h2>NAME</h2>
 <p> dimfilter &#8211; Directional filtering of 2-D gridded files in the space (or time) domain</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dimfilter</code> <i>input_file.nc</i> <i>distance_flag</i> <i>&lt;filtertype&gt;&lt;width&gt;</i>[<i>mode</i>] <i>output_file.nc</i> <i>&lt;filtertype&gt;&lt;n_sectors&gt;</i> [ <i>cols</i> ] [ <i>increment</i> ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dimfilter</code> will filter a <i>.nc</i> file in the space (or time) domain by dividing the given filter circle into <i>n_sectors</i>, applying one of the selected primary convolution or non-convolution filters to each sector, and choosing the final outcome according to the selected secondary filter. It computes distances using Cartesian or Spherical geometries. The output <i>.nc</i> file can optionally be generated as a subregion of the input and/or with a new <code>-I</code>ncrement. In this way, one may have &quot;extra space&quot; in the input data so that there will be no edge effects for the output grid. If the filter is low-pass, then the output may be less frequently sampled than the input. <code>-Q</code> is for the error analysis mode and only requires the total number of columns in the input file, which contains the filtered depths. Finally, one should know that <code>dimfilter</code> will not produce a smooth output as other spatial filters do because it returns a minimum median out of <i>N</i> medians of <i>N</i> sectors. The output can be rough unless the input data is noise-free. Thus, an additional filtering (e.g., Gaussian via <code>grdfilter</code>) of the DiM-filtered data is generally recommended.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

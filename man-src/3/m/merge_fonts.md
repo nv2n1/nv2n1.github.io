@@ -1,4 +1,5 @@
 ---
+
 title: "merge_fonts(3)"
 name: "merge_fonts"
 section: "3"
@@ -9,10 +10,8 @@ description: "merge_fonts – Merges two fonts into one font. Allegro game progr
 
 <h2>NAME</h2>
 <p> merge_fonts &#8211; Merges two fonts into one font. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>FONT *merge_fonts(FONT *f1, FONT *f2)</code></p>
-<h2>DESCRIPTION</h2>
 <p> This function merges the character ranges from two fonts and returns a new font containing all characters in the old fonts. In general, you cannot merge fonts of different types (eg, TrueType fonts and bitmapped fonts), but as a special case, this function can promote a monochrome bitmapped font to a color font and merge those. Example: </p>
 <pre><code>
 FONT *myfont;

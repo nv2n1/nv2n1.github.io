@@ -1,4 +1,5 @@
 ---
+
 title: "gtk4-builder-tool(1)"
 name: "gtk4-builder-tool"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-gtk4-builder-tool/"
 description: "gtk4-builder-tool – GtkBuilder File Utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gtk4 - builder - tool&lt;COMMAND&gt;[OPTIONS...]&lt;FILE&gt; gtk4 - builder - tool validate&lt;FILE&gt; gtk4 - builder - tool enumerate&lt;FILE&gt; gtk4 - builder - tool simplify[OPTIONS...]&lt;FILE&gt; gtk4 - builder - tool preview[OPTIONS...]&lt;FILE&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>gtk4-builder-tool</code> can perform various operations on GtkBuilder UI definition files.</p>
 <h2>COMMANDS</h2>
 <h3>Validation</h3>

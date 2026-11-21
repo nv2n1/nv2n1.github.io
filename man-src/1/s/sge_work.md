@@ -1,4 +1,5 @@
 ---
+
 title: "sge_work(1)"
 name: "sge_work"
 section: "1"
@@ -9,7 +10,6 @@ description: "work – do some work for testing purposes"
 
 <h2>SYNTAX</h2>
 <p> <code>$SGE_ROOT/utilbin/$ARCH/work</code> [<code>-f</code> <i>n</i>] [<code>-w</code> <i>n</i>] [<code>-in</code> <i>fname</i>] [<code>-out</code> <i>fname</i>] [<code>-stackK</code> <i>n</i>] [<code>-stackM</code> <i>n</i>] [<code>-mallocK</code> <i>n</i>] [<code>-mallocM</code> <i>n</i>] [<code>-block_sigxcpu</code>] [<code>-block_sigxfsz</code>] [<code>-change_pgrp</code>] [<code>-daemonize</code>] <code>-daemonize</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> This is a utility program intended to be run under xxQS_NAMExx for testing purposes. It can, for instance, run for a certain amount of time, allocate a certain amount of memory, fork, and daemonize.</p>
 <h2>OPTIONS</h2>
 <dl>

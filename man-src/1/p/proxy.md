@@ -1,4 +1,5 @@
 ---
+
 title: "proxy(1)"
 name: "proxy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-proxy/"
 description: "proxy – Display the proxy server that should be used to reach a given a network resource"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> proxy</p>
-<h2>DESCRIPTION</h2>
 <p> Display the proxy server that should be used to reach a given a network resource. </p>
 <p> libproxy is a library that provides automatic proxy configuration management using different backends.</p>
 <h2>EXAMPLE</h2>

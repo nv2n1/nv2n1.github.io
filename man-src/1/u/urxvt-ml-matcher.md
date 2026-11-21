@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-ml-matcher(1)"
 name: "urxvt-ml-matcher"
 section: "1"
@@ -6,14 +7,9 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-matcher/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+matcher - match strings in terminal output and change their rendition 
 
- matcher - match strings in terminal output and change their rendition 
-
-<h2>DESCRIPTION</h2>
-
- Uses per-line display filtering (<tt>&quot;on_line_update&quot;</tt>) to underline text matching a certain pattern and make it clickable. When clicked with the mouse button specified in the <tt>&quot;matcher.button&quot;</tt> resource (default 2, or middle), the program specified in the <tt>&quot;matcher.launcher&quot;</tt> resource (default, the <tt>&quot;url-launcher&quot;</tt> resource, <tt>&quot;sensible-browser&quot;</tt>) will be started with the matched text as first argument. The default configuration is suitable for matching URLs and launching a web browser, like the former ``mark-urls'' extension. 
+Uses per-line display filtering (<tt>&quot;on_line_update&quot;</tt>) to underline text matching a certain pattern and make it clickable. When clicked with the mouse button specified in the <tt>&quot;matcher.button&quot;</tt> resource (default 2, or middle), the program specified in the <tt>&quot;matcher.launcher&quot;</tt> resource (default, the <tt>&quot;url-launcher&quot;</tt> resource, <tt>&quot;sensible-browser&quot;</tt>) will be started with the matched text as first argument. The default configuration is suitable for matching URLs and launching a web browser, like the former ``mark-urls'' extension. 
 
  The default pattern to match URLs can be overridden with the <tt>&quot;matcher.pattern.0&quot;</tt> resource, and additional patterns can be specified with numbered patterns, in a manner similar to the ``selection'' extension. The launcher can also be overridden on a per-pattern basis. 
 

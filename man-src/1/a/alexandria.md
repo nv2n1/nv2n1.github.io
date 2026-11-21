@@ -1,4 +1,5 @@
 ---
+
 title: "alexandria(1)"
 name: "alexandria"
 section: "1"
@@ -9,9 +10,7 @@ description: "alexandria – a book collection manager"
 
 <h2>NAME</h2>
 <p> alexandria &#8211; a book collection manager </p>
-<h2>SYNOPSIS</h2>
 <p> <code>alexandria</code> <i>[OPTIONS]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Alexandria</i> is a GNOME desktop application for managing book collections. It has a simple user interface which makes it easy to enter the details of your library, generally using Internet sources to find catalogue information for your books. It also enables you to create filtered views of your book collection based on details such as author, publisher etc. </p>
 <p> When launched without any options the <i>Alexandria</i> main window opens and presents a view of your libraries, or if run for the first time creates a new library ready for you to add books either manually or with the help of providers of book information on the Internet. </p>
 <h2>OPTIONS</h2>

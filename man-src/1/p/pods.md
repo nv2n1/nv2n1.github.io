@@ -1,4 +1,5 @@
 ---
+
 title: "pods(1)"
 name: "pods"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pods/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pods - print out all pod paths 
 
- pods - print out all pod paths 
-
-<h2>DESCRIPTION</h2>
-
- This program is a front end to print out the paths of all the standard podpages and the modules.
+This program is a front end to print out the paths of all the standard podpages and the modules.
 
 <h2>SEE ALSO</h2>
 

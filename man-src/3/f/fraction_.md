@@ -1,4 +1,5 @@
 ---
+
 title: "fraction_(3)"
 name: "fraction_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fraction_/"
 description: "QuantLib::PagodaOption – Roofed Asian option on a number of assets."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/pagodaoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::MultiAssetOption</code>. </p>
 <h3>Classes</h3>

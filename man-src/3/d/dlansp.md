@@ -1,4 +1,5 @@
 ---
+
 title: "dlansp(3)"
 name: "dlansp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlansp/"
 description: "dlansp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlansp</code> (NORM, UPLO, N, AP, WORK)<br />
  <i></i><code>DLANSP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a symmetric matrix supplied in packed form.</p>

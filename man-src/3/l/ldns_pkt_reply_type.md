@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_reply_type(3)"
 name: "ldns_pkt_reply_type"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, l
 
 <h2>NAME</h2>
 <p> ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, ldns_pkt_query_new_frm_str, ldns_pkt_reply_type </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -19,7 +19,6 @@ description: "ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, l
 <p> ldns_pkt* ldns_pkt_query_new(ldns_rdf *rr_name, ldns_rr_type rr_type, ldns_rr_class rr_class, uint16_t flags); </p>
 <p> ldns_status ldns_pkt_query_new_frm_str(ldns_pkt **p, const char *rr_name, ldns_rr_type rr_type, ldns_rr_class rr_class , uint16_t flags); </p>
 <p> ldns_pkt_type ldns_pkt_reply_type(ldns_pkt *p); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_pkt_new</i>()</dt>
 <dd>allocates and initializes a ldns_pkt structure. .br Returns pointer to the new packet</dd></dl>

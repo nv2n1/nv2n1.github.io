@@ -1,4 +1,5 @@
 ---
+
 title: "vm86old(2)"
 name: "vm86old"
 section: "2"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/2-vm86old/"
 description: "vm86old, vm86 – enter virtual 8086 mode"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/vm86.h&gt;</code> </p>
 <p> <code>int vm86old(struct vm86_struct *</code><i>info</i><code>);</code> </p>
 <p> <code>int vm86(unsigned long </code><i>fn</i><code>, struct vm86plus_struct *</code><i>v86</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The system call <code>vm86</code>() was introduced in Linux 0.97p2. In Linux 2.1.15 and 2.0.28, it was renamed to <code>vm86old</code>(), and a new <code>vm86</code>() was introduced. The definition of <i>struct vm86_struct</i> was changed in 1.1.8 and 1.1.9. </p>
 <p> These calls cause the process to enter VM86 mode (virtual-8086 in Intel literature), and are used by <code>dosemu</code>. </p>
 <p> VM86 mode is an emulation of real mode within a protected mode task.</p>

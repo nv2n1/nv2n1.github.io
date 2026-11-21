@@ -1,4 +1,5 @@
 ---
+
 title: "chsh(1)"
 name: "chsh"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-chsh/"
 description: "chsh – change login shell"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chsh</code> [<i>options</i>] [<i>LOGIN</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>chsh</code> command changes the user login shell. This determines the name of the user&#8217;s initial login command. A normal user may only change the login shell for her own account; the superuser may change the login shell for any account.</dd>
 <h2>OPTIONS</h2>
 <p> The options which apply to the <code>chsh</code> command are: </p>

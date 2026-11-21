@@ -1,4 +1,5 @@
 ---
+
 title: "dovecot(1)"
 name: "dovecot"
 section: "1"
@@ -9,7 +10,6 @@ description: "dovecot – a secure and highly configurable IMAP and POP3 server"
 
 <h2>NAME</h2>
 <p> dovecot &#8211; a secure and highly configurable IMAP and POP3 server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dovecot</code> [<code>-Fp</code>] [<code>-c</code> <i>config-file</i>]<br />
  <code>dovecot -a</code> [<code>-c</code> <i>config-file</i>]<br />
  <code>dovecot -n</code> [<code>-c</code> <i>config-file</i>]<br />
@@ -19,7 +19,6 @@ description: "dovecot – a secure and highly configurable IMAP and POP3 server"
  <code>dovecot &#8211;version</code><br />
  <code>dovecot reload</code><br />
  <code>dovecot stop</code></p>
-<h2>DESCRIPTION</h2>
 <p> Dovecot is an open source IMAP and POP3 server for Linux/UNIX-like systems, written with security primarily in mind. Dovecot is an excellent choice for both small and large installations. It&#8217;s fast, simple to set up, requires no special administration and it uses very little memory.</p>
 <h2>OPTIONS</h2>
 <dl>

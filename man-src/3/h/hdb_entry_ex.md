@@ -1,4 +1,5 @@
 ---
+
 title: "hdb_entry_ex(3)"
 name: "hdb_entry_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdb_entry_ex/"
 description: "hdb_entry_ex –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> <code>hdb_entry_ex</code> is a wrapper structure around the hdb_entry structure that allows backends to keep a pointer to the backing store, ie in -&gt;hdb_fetch_kvno(), so that we the kadmin/kpasswd backend gets around to -&gt;hdb_store(), the backend doesn&#8217;t need to lookup the entry again. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "scsitape(1)"
 name: "scsitape"
 section: "1"
@@ -9,9 +10,7 @@ description: "scsitape – control SCSI tape devices"
 
 <h2>NAME</h2>
 <p> scsitape &#8211; control SCSI tape devices</p>
-<h2>SYNOPSIS</h2>
 <p> scsitape [-f &lt;scsi-generic-device&gt;] commands</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>scsitape</code> command controls SCSI tape drives in a platform-independent manner. As long as &#8216;mtx&#8217; works on the platform, so does &#8216;scsitape&#8217;. </p>
 <p> Note that &#8216;scsitape&#8217; and your OS&#8217;s native tape driver may stomp on each other. In particular, if you use &#8216;setblk&#8217; and your OS&#8217;s native tape driver has a different notion of the block size, you may get evil results. It is recommended to use &#8216;scsitape&#8217; only for software where you&#8217;ve written your own low-level READ and WRITE routines that use the SCSI command set to directly talk to tape drives (i.e., you do not use the OS&#8217;s native tape driver at all).</p>
 <h2>OPTIONS</h2>

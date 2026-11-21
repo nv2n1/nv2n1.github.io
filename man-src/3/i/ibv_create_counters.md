@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_counters(3)"
 name: "ibv_create_counters"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_create_counters/"
 description: "ibv_create_counters, ibv_destroy_counters – Create or destroy a counters handle"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -19,7 +19,6 @@ ibv_create_counters(struct ibv_context *context,
 int ibv_destroy_counters(struct ibv_counters *counters);
 </code></pre>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> ibv_create_counters() creates a new counters handle for the RDMA device context. </p>
 <p> An ibv_counters handle can be attached to a verbs resource (e.g.: QP, WQ, Flow) statically when these are created. </p>
 <p> For example attach an ibv_counters statically to a Flow (struct ibv_flow) during creation of a new Flow by calling ibv_create_flow(). </p>

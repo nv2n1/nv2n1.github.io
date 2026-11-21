@@ -1,4 +1,5 @@
 ---
+
 title: "patch(1)"
 name: "patch"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-patch/"
 description: "patch – apply a diff file to an original"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>patch</code> [<i>options</i>] [<i>originalfile</i> [<i>patchfile</i>]] </p>
 <p> but usually just </p>
 <p> <code>patch -p</code><i>num</i> <code>&lt;</code><i>patchfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>patch</code> takes a patch file <i>patchfile</i> containing a difference listing produced by the <code>diff</code> program and applies those differences to one or more original files, producing patched versions. Normally the patched versions are put in place of the originals. Backups can be made; see the <code>-b</code> or <code>&#8211;backup</code> option. The names of the files to be patched are usually taken from the patch file, but if there&#8217;s just one file to be patched it can be specified on the command line as <i>originalfile</i>. </p>
 <p> Upon startup, patch attempts to determine the type of the diff listing, unless overruled by a <code>-c</code> (<code>&#8211;context</code>), <code>-e</code> (<code>&#8211;ed</code>), <code>-n</code> (<code>&#8211;normal</code>), or <code>-u</code> (<code>&#8211;unified</code>) option. Context diffs (old-style, new-style, and unified) and normal diffs are applied by the <code>patch</code> program itself, while <code>ed</code> diffs are simply fed to the <code><a href="/docs/linux/man/1-ed/">ed</a></code>(1) editor via a pipe. </p>
 <p> <code>patch</code> tries to skip any leading garbage, apply the diff, and then skip any trailing garbage. Thus you could feed an article or message containing a diff listing to <code>patch</code>, and it should work. If the entire diff is indented by a consistent amount, if lines end in <font SIZE="-1">CRLF</font>, or if a diff is encapsulated one or more times by prepending &quot;<code>&#8211; </code>&quot; to lines starting with &quot;<code>&#8211;</code>&quot; as specified by Internet RFC 934, this is taken into account. After removing indenting or encapsulation, lines beginning with <code>#</code> are ignored, as they are considered to be comments. </p>

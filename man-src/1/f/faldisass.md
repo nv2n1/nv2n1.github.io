@@ -1,4 +1,5 @@
 ---
+
 title: "faldisass(1)"
 name: "faldisass"
 section: "1"
@@ -9,9 +10,7 @@ description: "faldissass – The Falcon disassembler"
 
 <h2>NAME</h2>
 <p> faldissass &#8211; The Falcon disassembler </p>
-<h2>SYNOPSIS</h2>
 <p> <code>faldissass [options]</code> <i>module_file.fam</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>faldissass</code> command line tool disassembles a compiled .fam Falcon module. The output human-readable Falcon Virtual Machine assembly is sent to the standard output. </p>
 <p> The tool has mainly two working modes. The standard mode procues an assembly dump containing the PC counter address that will be associated with each instruction in the VM. This allows to see exactly on which VM instruction an error was raised (as the PC at error raisal is always shown in error dumps), or to debug the VM by following the PC register in step-by-step mode. </p>
 <p> The isomorphic mode creates a compilable assembly source that can the be feed into the falcon assembler to obtain a compiled module. In example, this can be used for VM level hand-made finetuning optimizations. </p>

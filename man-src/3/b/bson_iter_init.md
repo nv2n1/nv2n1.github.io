@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_init(3)"
 name: "bson_iter_init"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_init() – The bson_iter_init() function shall initializ
 
 <h2>NAME</h2>
 <p> bson_iter_init() &#8211; The bson_iter_init() function shall initialize iter to iterate upon the BSON document bson. Upon initialization, iter is placed before the first element. Callers must call bson_iter_next(), bson_iter_find(), or bson_iter_find_case() to advance to an element.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 bool
 bson_iter_init (bson_iter_t  *iter,
@@ -22,7 +22,6 @@ bson_iter_init (bson_iter_t  *iter,
 <dl>
 <dt><code>bson</code></dt>
 <dd> A <code>bson_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_init/">bson_iter_init</a>(3)</code> function shall initialize <code>iter</code> to iterate upon the BSON document <code>bson</code> \&amp;. Upon initialization, <code>iter</code> is placed before the first element. Callers must call <code><a href="/docs/linux/man/3-bson_iter_next/">bson_iter_next</a>(3)</code> , <code><a href="/docs/linux/man/3-bson_iter_find/">bson_iter_find</a>(3)</code> , or <code><a href="/docs/linux/man/3-bson_iter_find_case/">bson_iter_find_case</a>(3)</code> to advance to an element. </p>
 <h2>RETURNS</h2>
 <p> Returns true if the iter was successfuly initialized. </p>

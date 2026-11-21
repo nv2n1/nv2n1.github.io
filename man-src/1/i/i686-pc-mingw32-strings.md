@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-strings(1)"
 name: "i686-pc-mingw32-strings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-strings/"
 description: "strings – print the strings of printable characters in files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> strings [<code>-afovV</code>] [<code>&#8211;</code><i>min-len</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-n</code>&nbsp;<wbr><i>min-len</i>]&nbsp;<wbr>[<code>&#8211;bytes=</code><i>min-len</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>&nbsp;<wbr><i>radix</i>]&nbsp;<wbr>[<code>&#8211;radix=</code><i>radix</i>]<br />
@@ -15,7 +15,6 @@ description: "strings – print the strings of printable characters in files."
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;</code>]&nbsp;<wbr>[<code>&#8211;all</code>]&nbsp;<wbr>[<code>&#8211;print-file-name</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>&nbsp;<wbr><i>bfdname</i>]&nbsp;<wbr>[<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr><i>file</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> For each <i>file</i> given, <font SIZE="-1">GNU</font> <code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. By default, it only prints the strings from the initialized and loaded sections of object files; for other types of files, it prints the strings from the whole file. </p>
 <p> <code>strings</code> is mainly useful for determining the contents of non-text files.</p>
 <h2>OPTIONS</h2>

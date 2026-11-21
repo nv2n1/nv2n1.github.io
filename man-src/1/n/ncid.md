@@ -1,4 +1,5 @@
 ---
+
 title: "ncid(1)"
 name: "ncid"
 section: "1"
@@ -9,7 +10,6 @@ description: "ncid – Network Caller ID Client"
 
 <h2>NAME</h2>
 <p> <code>ncid</code> &#8211; Network Caller ID Client</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ncid</code> [options] [arguments] </p>
 <p> <code>tivocid</code> [options] [arguments] </p>
 <p> <code>tivoncid</code> [options] [arguments] </p>
@@ -31,7 +31,6 @@ description: "ncid – Network Caller ID Client"
 <p> <i>Arguments:</i> </p>
 <p>[IP_ADDRESS | HOSTNAME]<br />
     [PORT_NUMBER]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ncid</code> displays Caller ID information sent to it by the Caller ID server. In the default GUI mode, if the server is configured to send the CID Call Log, it will load the call log in the CID log window at startup. The call log is updated by <i>ncid</i> whenever a call is received. </p>
 <p> <code>Ncid</code> can also display <i>Phone Call</i><code> if the modem used by the server does not send the Caller ID information to it. This is useful if a visual indication is wanted for ringing. </p>
 <p> Ncid</code> also has a message window that will send a single line message to the server which, in turn, will send it to all connected clients. </p>

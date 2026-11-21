@@ -1,4 +1,5 @@
 ---
+
 title: "expresso(1)"
 name: "expresso"
 section: "1"
@@ -9,9 +10,7 @@ description: "expresso – A JavaScript TDD framework written for Node.js"
 
 <h2>NAME</h2>
 <p> expresso &#8211; A JavaScript TDD framework written for Node.js</p>
-<h2>SYNOPSIS</h2>
 <p> Usage: expresso [options] &lt;file &#8230;&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Expresso is a JavaScript test-driven development (TDD) framework written for Node.js. Expresso is extremely fast, and is packed with features including additional assertion methods and code coverage reporting.</p>
 <h2>OPTIONS</h2>
 <dl>

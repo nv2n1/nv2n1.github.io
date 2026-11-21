@@ -1,4 +1,5 @@
 ---
+
 title: "vimdiff(1)"
 name: "vimdiff"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-vimdiff/"
 description: "vimdiff – edit between two and eight versions of a file with Vim and show differences"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vimdiff</code> [options] file1 file2 [file3 [file4 [file5 [file6 [file7 [file8]]]]]] </p>
 <p> <code>gvimdiff</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Vimdiff</code> starts <code>Vim</code> on two up to eight files. Each file gets its own window. The differences between the files are highlighted. This is a nice way to inspect changes and to move changes from one version to another version of the same file. </p>
 <p> See <a href="/docs/linux/man/1-vim/">vim</a>(1) for details about Vim itself. </p>
 <p> When started as <code>gvimdiff</code> the GUI will be started, if available. </p>

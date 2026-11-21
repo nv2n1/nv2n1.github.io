@@ -1,4 +1,5 @@
 ---
+
 title: "alloca(3)"
 name: "alloca"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-alloca/"
 description: "alloca – allocate memory that is automatically freed"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;alloca.h&gt;</code> </p>
 <p> <code>void *alloca(size_t </code><i>size</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>alloca</code>() function allocates <i>size</i> bytes of space in the stack frame of the caller. This temporary space is automatically freed when the function that called <code>alloca</code>() returns to its caller.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>alloca</code>() function returns a pointer to the beginning of the allocated space. If the allocation causes stack overflow, program behavior is undefined.</p>

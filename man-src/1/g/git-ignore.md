@@ -1,4 +1,5 @@
 ---
+
 title: "git-ignore(1)"
 name: "git-ignore"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-ignore – Add .gitignore patterns"
 
 <h2>NAME</h2>
 <p> <code>git-ignore</code> &#8211; Add .gitignore patterns</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-ignore</code> [&lt;context&gt;] [&lt;pattern&gt; [&lt;pattern&gt;]&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Adds the given _pattern_s to a .gitignore file if it doesn&#8217;t already exist.</p>
 <h2>OPTIONS</h2>
 <p> &lt;context&gt; </p>

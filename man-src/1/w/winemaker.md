@@ -1,4 +1,5 @@
 ---
+
 title: "winemaker(1)"
 name: "winemaker"
 section: "1"
@@ -9,7 +10,6 @@ description: "winemaker – generate a build infrastructure for compiling Window
 
 <h2>NAME</h2>
 <p> winemaker &#8211; generate a build infrastructure for compiling Windows programs on Unix</p>
-<h2>SYNOPSIS</h2>
 <p> <code>winemaker </code> [ <code>&#8211;nobanner </code>] [ <code>&#8211;backup </code>| <code>&#8211;nobackup </code>] [ &#8211;nosource-fix ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;lower-none </code>| <code>&#8211;lower-all </code>| <code>&#8211;lower-uppercase </code> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;lower-include </code>| <code>&#8211;nolower-include </code>]&nbsp;<wbr>[<code> &#8211;mfc </code>| <code>&#8211;nomfc </code> ] </p>
@@ -19,7 +19,6 @@ description: "winemaker – generate a build infrastructure for compiling Window
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;generated-files </code>] [ <code>&#8211;nogenerated-files </code>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[ <code>&#8211;wine32 </code>]<br />
  <i> work_directory</i> | <i>project_file</i> | <i>workspace_file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>winemaker</code> is a perl script designed to help you bootstrap the process of converting your Windows sources to Winelib programs. </p>
 <p> In order to do this <code>winemaker</code> can perform the following operations: </p>
 <p> &#8211; rename your source files and directories to lowercase in the event they got all uppercased during the transfer. </p>

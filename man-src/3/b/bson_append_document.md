@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_document(3)"
 name: "bson_append_document"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_document() – The bson_append_document() function sha
 
 <h2>NAME</h2>
 <p> bson_append_document() &#8211; The bson_append_document() function shall append child to bson using the specified key. The type of the field will be a document.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_document(bson_t *bson,
                           const char *key,
@@ -29,7 +29,6 @@ bool bson_append_document(bson_t *bson,
 <dl>
 <dt><code>value</code></dt>
 <dd> A <code>bson_t</code> containing the sub-document to append.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_document/">bson_append_document</a>(3)</code> function shall append <code>child</code> to <code>bson</code> using the specified key. The type of the field will be a document. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

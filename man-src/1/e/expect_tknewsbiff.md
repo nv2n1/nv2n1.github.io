@@ -1,4 +1,5 @@
 ---
+
 title: "expect_tknewsbiff(1)"
 name: "expect_tknewsbiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expect_tknewsbiff/"
 description: "tknewsbiff – pop up a window when news appears"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tknewsbiff</code> [ <i>server or config-file</i> ] </p>
 <h2>INTRODUCTION</h2>
 <p> <code>tknewsbiff</code> pops up a window when there is unread news in your favorite newsgroups and removes the window after you&#8217;ve read the news. tknewsbiff can optionally play a sound, start your newsreader, etc. </p>

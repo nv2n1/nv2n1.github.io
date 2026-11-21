@@ -1,4 +1,5 @@
 ---
+
 title: "docker-service-ps(1)"
 name: "docker-service-ps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-service-ps/"
 description: "docker-service-ps – List the tasks of one or more services"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker service ps [OPTIONS] SERVICE [SERVICE&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List the tasks of one or more services </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dsecndtst(3)"
 name: "dsecndtst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsecndtst/"
 description: "dsecndtst.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> program <code>__dsecndtst.f__</code><br />
  <i></i><code>DSECNDTST</code><br />

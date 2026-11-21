@@ -1,4 +1,5 @@
 ---
+
 title: "movemail(1)"
 name: "movemail"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-movemail/"
 description: "movemail.mailutils – move messages across mailboxes."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>movemail.mailutils</code> [<i>,OPTION/</i>&#8230;] <i>,inbox-url destfile /</i>[<i>,POP-password/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> GNU movemail <code>&#8212;</code> move messages across mailboxes.</p>
 <dl>
 <dt><code>&#8211;[no-]emacs</code></dt>

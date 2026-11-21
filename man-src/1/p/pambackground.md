@@ -1,4 +1,5 @@
 ---
+
 title: "pambackground(1)"
 name: "pambackground"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-pambackground/"
 description: "pambackground – create a mask of the background area of an image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pambackground</code> </p>
 <p> [<i>netpbmfile</i>] </p>
 <p> [<code>-verbose=</code>] </p>
 <p> Minimum unique abbreviations of options are acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pambackground</code> reads a PNM or PAM image as input. It generates as output a PAM image that identifies the background area of the image (a mask). </p>
 <p> To identify the background, <code>pambackground</code> assumes the image is a foreground image, smaller than the total image size, placed over a single-color background. It assumes that foreground image is solid &#8212; it does not have holes through which the background can be seen. So in specific, <code>pambackground</code> first identifies the background color, then finds all contiguous pixels of that color in regions touching any edge of the image. Think of it as starting at each of the four edges and moving inward as far as possible until it hits pixels of another color (the foreground image). </p>

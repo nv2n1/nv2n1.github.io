@@ -1,4 +1,5 @@
 ---
+
 title: "perl589delta(1)"
 name: "perl589delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl589delta/"
 description: "perl589delta – what is new for perl v5.8.9"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.8.8 release and the 5.8.9 release.</p>
 <h2>Notice</h2>
 <p> The 5.8.9 release will be the last significant release of the 5.8.x series. Any future releases of 5.8.x will likely only be to deal with security issues, and platform build failures. Hence you should look to migrating to 5.10.x, if you have not started already. See &#8220;Known Problems&#8221; for more information.</p>

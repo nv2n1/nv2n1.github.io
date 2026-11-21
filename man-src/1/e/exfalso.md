@@ -1,4 +1,5 @@
 ---
+
 title: "exfalso(1)"
 name: "exfalso"
 section: "1"
@@ -9,9 +10,7 @@ description: "exfalso – audio tag editor"
 
 <h2>NAME</h2>
 <p> exfalso &#8211; audio tag editor</p>
-<h2>SYNOPSIS</h2>
 <p> <code>exfalso</code> [ <i>directory</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> Ex Falso displays and edits audio metadata tags. Supported formats include MP3, Ogg Vorbis, FLAC, Musepack (MPC), WavPack, and MOD/XM/IT. </p>
 <p> This manual page is only a short reference for Ex Falso. Complete documentation is available at <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide">http://code.google.com/p/quodlibet/wiki/Guide</a></i>.</p>
 <h2>OPTIONS</h2>

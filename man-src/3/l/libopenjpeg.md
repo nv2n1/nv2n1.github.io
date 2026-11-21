@@ -1,4 +1,5 @@
 ---
+
 title: "libopenjpeg(3)"
 name: "libopenjpeg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libopenjpeg/"
 description: "libopenjpeg – a library for reading and writing JPEG2000 image files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;openjpeg.h&gt;</code> </p>
 <h3>CONVERSION FORMATS</h3>
 <p> <code>PGX: imagetopgx() </code>/<code> pgxtoimage()</code> </p>

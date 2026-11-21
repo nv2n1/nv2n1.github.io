@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-import(1)"
 name: "tracker-import"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tracker-import/"
 description: "tracker-import – Imports Turtle file data into the database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tracker-import</code> <i>FILE</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tracker-import</code> allows data to be imported to the database by providing files with Turtle content. </p>
 <p> Multiple <i>FILE</i> arguments can be provided to import data from multiple files. </p>
 <p> The <i>FILE</i> argument can be either a local path or a URI. It also does not have to be an absolute path. </p>

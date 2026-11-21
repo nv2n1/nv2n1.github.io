@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_obj_child(3)"
 name: "hdf_obj_child"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_obj_child/"
 description: "hdf_obj_child – Return the first child of a dataset node"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -16,7 +16,6 @@ HDF* hdf_obj_child (HDF *hdf);
 </pre>
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the hdf dataset node </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_obj_child and the other hdf_obj_ functions are accessors to the HDF dataset. Although we do not currently &quot;hide&quot; the HDF struct implementation, we recommend you use the accessor functions instead of accessing the values directly. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dswap(3)"
 name: "dswap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dswap/"
 description: "dswap.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dswap</code> (N, DX, INCX, DY, INCY)<br />
  <i></i><code>DSWAP</code></p>

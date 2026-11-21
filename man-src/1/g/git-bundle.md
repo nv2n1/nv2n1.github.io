@@ -1,4 +1,5 @@
 ---
+
 title: "git-bundle(1)"
 name: "git-bundle"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-git-bundle/"
 description: "git-bundle – Move objects and refs by archive"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git bundle create[-q | --quiet | --progress | --all - progress][--all - progress - implied]
                  [--version = &lt;version&gt;]&lt;file&gt;&lt;git - rev - list - args&gt;
                      git bundle verify[-q | --quiet]&lt;file&gt;
                          git bundle list - heads&lt;file&gt;[&lt;refname&gt;...] git bundle unbundle[--progress]&lt;file&gt;[&lt;refname&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Create, unpack, and manipulate &quot;bundle&quot; files. Bundles are used for the &quot;offline&quot; transfer of Git objects without an active &quot;server&quot; sitting on the other side of the network connection. </p>
 <p> They can be used to create both incremental and full backups of a repository, and to relay the state of the references in one repository to another. </p>
 <p> Git commands that fetch or otherwise &quot;read&quot; via protocols such as <code>ssh://</code> and <code>https://</code> can also operate on bundle files. It is possible <code><a href="/docs/linux/man/1-git-clone/">git-clone</a></code>(1) a new repository from a bundle, to use <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1) to fetch from one, and to list the references contained within it with <code><a href="/docs/linux/man/1-git-ls-remote/">git-ls-remote</a></code>(1). There&#8217;s no corresponding &quot;write&quot; support, i.e.a <i>git push</i> into a bundle is not supported. </p>

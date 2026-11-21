@@ -1,4 +1,5 @@
 ---
+
 title: "dlaed1(3)"
 name: "dlaed1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaed1/"
 description: "dlaed1.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaed1</code> (N, D, Q, LDQ, INDXQ, RHO, CUTPNT, WORK, IWORK, INFO)<br />
  <i></i><code>DLAED1</code> used by sstedc. Computes the updated eigensystem of a diagonal matrix after modification by a rank-one symmetric matrix. Used when the original matrix is tridiagonal.</p>

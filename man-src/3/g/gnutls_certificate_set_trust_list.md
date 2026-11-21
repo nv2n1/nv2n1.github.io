@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_trust_list(3)"
 name: "gnutls_certificate_set_trust_list"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_trust_list – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_trust_list &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_set_trust_list(gnutls_certificate_credentials_t </code><i>res</i><code>, gnutls_x509_trust_list_t </code><i>tlist</i><code>, unsigned </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_certificate_set_trust_list – API function"
 <dd> is a <code>gnutls_x509_trust_list_t</code> structure</dd>
 <dt>unsigned flags</dt>
 <dd> must be zero</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets a trust list in the gnutls_certificate_credentials_t structure. </p>
 <p> Note that the <i>tlist</i> will become part of the credentials structure and must not be deallocated. It will be automatically deallocated when the <i>res</i> structure is deinitialized.</p>
 <h2>RETURNS</h2>

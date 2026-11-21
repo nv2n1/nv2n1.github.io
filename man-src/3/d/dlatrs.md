@@ -1,4 +1,5 @@
 ---
+
 title: "dlatrs(3)"
 name: "dlatrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlatrs/"
 description: "dlatrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br />
  <i></i><code>DLATRS</code> solves a triangular system of equations with the scale factor set to prevent overflow.</p>

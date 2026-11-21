@@ -1,4 +1,5 @@
 ---
+
 title: "remap_file_pages(2)"
 name: "remap_file_pages"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-remap_file_pages/"
 description: "remap_file_pages – create a nonlinear file mapping"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sys/mman.h&gt;
 int remap_file_pages(void *addr, size_t size, int prot,
                      size_t pgoff, int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>Note</code>: this system call was marked as deprecated starting with Linux 3.16. In Linux 4.0, the implementation was replaced by a slower in-kernel emulation. Those few applications that use this system call should consider migrating to alternatives. This change was made because the kernel code for this system call was complex, and it is believed to be little used or perhaps even completely unused. While it had some use cases in database applications on 32-bit systems, those use cases don&#8217;t exist on 64-bit systems. </p>
 <p> The <code>remap_file_pages</code>() system call is used to create a nonlinear mapping, that is, a mapping in which the pages of the file are mapped into a nonsequential order in memory. The advantage of using <code>remap_file_pages</code>() over using repeated calls to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) is that the former approach does not require the kernel to create additional VMA (Virtual Memory Area) data structures. </p>
 <p> To create a nonlinear mapping we perform the following steps:</p>

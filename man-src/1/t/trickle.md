@@ -1,4 +1,5 @@
 ---
+
 title: "trickle(1)"
 name: "trickle"
 section: "1"
@@ -9,9 +10,7 @@ description: "trickle – a lightweight userspace bandwidth shaper"
 
 <h2>NAME</h2>
 <p> <code>trickle</code> &#8211; a lightweight userspace bandwidth shaper</p>
-<h2>SYNOPSIS</h2>
 <p> <code>trickle</code> [-<code>h </code> ] [-<code>v</code> ] [-<code>V</code> ] [-<code>s</code> ] [-<code>d </code><i>rate</i> ] [-<code>u </code><i>rate</i> ] [-<code>w </code><i>length</i> ] [-<code>t </code><i>time</i> ] [-<code>l </code><i>length</i> ] [-<code>n </code><i>path</i> ] <i>command &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>trickle</code> is a userspace bandwidth manager. Currently, <code>trickle</code> supports the shaping of any SOCK_STREAM (see <a href="/docs/linux/man/2-socket/">socket</a>(2)) connection established via the <a href="/docs/linux/man/2-socket/">socket</a>(2) interface. Furthermore, <code>trickle</code> will not work with statically linked executables, nor with <a href="/docs/linux/man/2-setuid/">setuid</a>(2) executables. <code>trickle</code> is highly configurable; download and upload rates can be set separately, or in an aggregate fashion. </p>
 <p> The options are as follows:</p>
 <dl>

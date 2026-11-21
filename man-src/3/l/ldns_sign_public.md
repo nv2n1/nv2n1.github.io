@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_sign_public(3)"
 name: "ldns_sign_public"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_sign_public"
 
 <h2>NAME</h2>
 <p> ldns_sign_public </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_sign_public(ldns_rr_list *rrset, ldns_key_list *keys); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_sign_public</i>()</dt>
 <dd>Sign an rrset .br <code>rrset</code>: the rrset .br <code>keys</code>: the keys to use .br Returns a rr_list with the signatures</dd></dl>

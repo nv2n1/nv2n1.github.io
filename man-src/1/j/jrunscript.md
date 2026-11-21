@@ -1,4 +1,5 @@
 ---
+
 title: "jrunscript(1)"
 name: "jrunscript"
 section: "1"
@@ -9,7 +10,6 @@ description: "jrunscript – Runs a command-line script shell that supports inte
 
 <h2>NAME</h2>
 <p> jrunscript &#8211; Runs a command-line script shell that supports interactive and batch modes. This command is experimental and unsupported.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 jrunscript[options][arguments]
 </code></pre>
@@ -18,7 +18,6 @@ jrunscript[options][arguments]
 <dd> The command-line options. See Options.</dd>
 <dt><i>arguments</i></dt>
 <dd> Arguments, when used, follow immediately after options or the command name. See Arguments.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jrunscript</code> command is a language-independent command-line script shell. The <code>jrunscript</code> command supports both an interactive (read-eval-print) mode and a batch (<code>-f</code> option) mode of script execution. By default, JavaScript is the language used, but the <code>-l</code> option can be used to specify a different language. By using Java to scripting language communication, the <code>jrunscript</code> command supports an exploratory programming style.</p>
 <h2>OPTIONS</h2>
 <dl>

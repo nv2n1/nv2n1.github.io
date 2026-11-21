@@ -1,4 +1,5 @@
 ---
+
 title: "avarice(1)"
 name: "avarice"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-avarice/"
 description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGICE box."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>avarice</code> [<i>OPTIONS</i>]&#8230; [[<i>HOST_NAME</i>]:<i>PORT</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> AVaRICE runs on a POSIX machine and connects to gdb via a TCP socket and communicates via gdb&#8217;s &quot;serial debug protocol&quot;. This protocol allows gdb to send commands like &quot;set/remove breakpoint&quot; and &quot;read/write memory&quot;. </p>
 <p> AVaRICE translates these commands into the Atmel protocol used to control the AVR JTAG ICE. Connection to the AVR JTAG ICE is via a serial port on the POSIX machine. </p>
 <p> Because the GDB &lt;&#8212;&gt; AVaRICE connection is via a TCP socket, the two programs do not need to run on the same machine. In an office environment, this allows a developer to debug a target in the lab from the comfort of their cube (or even better, their home!)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlaqr3(3)"
 name: "dlaqr3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaqr3/"
 description: "dlaqr3.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqr3</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SR, SI, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br />
  <i></i><code>DLAQR3</code> performs the orthogonal similarity transformation of a Hessenberg matrix to detect and deflate fully converged eigenvalues from a trailing principal submatrix (aggressive early deflation).</p>

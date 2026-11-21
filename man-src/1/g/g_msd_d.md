@@ -1,4 +1,5 @@
 ---
+
 title: "g_msd_d(1)"
 name: "g_msd_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_msd – calculates mean square displacements"
 <h2>NAME</h2>
 <p> g_msd &#8211; calculates mean square displacements </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_msd</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> msd.xvg </i> <code>-mol</code><i> diff_mol.xvg </i> <code>-pdb</code><i> diff_mol.pdb </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-type</code><i> enum </i> <code>-lateral</code><i> enum </i> <code>-[no]ten</code><i></i> <code>-ngroup</code><i> int </i> <code>-[no]mw</code><i></i> <code>-[no]rmcomm</code><i></i> <code>-tpdb</code><i> time </i> <code>-trestart</code><i> time </i> <code>-beginfit</code><i> time </i> <code>-endfit</code><i> time </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_msd computes the mean square displacement (MSD) of atoms from their initial positions. This provides an easy way to compute the diffusion constant using the Einstein relation. The time between additional starting points for the MSD calculation is set with <code> -trestart</code>. The diffusion constant is calculated by least squares fitting a straight line through the MSD from <code> -beginfit</code> to <code> -endfit</code>. An error estimate given, which is the difference of the diffusion coefficients obtained from fits over the two halfs of the fit interval. </p>
 <p> There are three, mutually exclusive, options to determine different types of mean square displacement: <code> -type</code>, <code> -lateral</code> and <code> -ten</code>. Option <code> -ten</code> writes the full MSD tensor for each group, the order in the output is: trace xx yy zz yx zx zy. </p>
 <p> Option <code> -mol</code> plots the MSD for molecules, this implies With option <code> -rmcomm</code> center of mass motion can be removed. For trajectories produced with GROMACS this is usually not necessary as mdrun usually already removes the center of mass motion. When you use this option be sure that the whole system is stored in the trajectory file. </p>

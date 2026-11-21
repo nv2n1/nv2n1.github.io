@@ -1,4 +1,5 @@
 ---
+
 title: "ssymm(3)"
 name: "ssymm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssymm/"
 description: "ssymm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssymm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
  <i></i><code>SSYMM</code></p>

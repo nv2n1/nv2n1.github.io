@@ -1,4 +1,5 @@
 ---
+
 title: "fcitx(1)"
 name: "fcitx"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fcitx/"
 description: "fcitx – Free Chinese Input Toy of X – a Chinese IME for XIM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fcitx</code> [<i>OPTION</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>fcitx</code> command. </p>
 <p> <code>fcitx</code> is a Chinese IME for XIM intentionally designed not to depend on any Desktop Environment. It includes Pinyin and Table for input by default, but it can also support other Input Method.</p>
 <h2>OPTIONS</h2>

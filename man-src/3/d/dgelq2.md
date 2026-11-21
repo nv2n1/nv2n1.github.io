@@ -1,4 +1,5 @@
 ---
+
 title: "dgelq2(3)"
 name: "dgelq2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgelq2/"
 description: "dgelq2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>DGELQ2</code> computes the LQ factorization of a general rectangular matrix using an unblocked algorithm.</p>

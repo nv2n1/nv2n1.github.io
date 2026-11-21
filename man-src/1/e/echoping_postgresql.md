@@ -1,4 +1,5 @@
 ---
+
 title: "echoping_postgresql(1)"
 name: "echoping_postgresql"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-echoping_postgresql/"
 description: "echoping_postgresql – echoping plugin which connects to a PostgreSQL RDBMS server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [echoping options] -m postgresql <code>hostname</code> [-c<i>conninfo]</i> [-e] [-r] [SQL-request]</p>
-<h2>DESCRIPTION</h2>
 <p> postgresql is an echoping plugin to connect to PostgreSQL RDBMS servers.</p>
 <h2>ARGUMENTS</h2>
 <p> <code>[SQL-request]</code> The request to the PostgreSQL server (in SQL). Only SELECT are supported. The default is &#8216;SELECT now()&#8217;.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "zenmap(1)"
 name: "zenmap"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zenmap/"
 description: "zenmap – Graphical Nmap frontend and results viewer"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zenmap</code> [<i>options</i>] [<i>results file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Zenmap is a multi-platform graphical Nmap frontend and results viewer. Zenmap aims to make Nmap easy for beginners to use while giving experienced Nmap users advanced features. Frequently used scans can be saved as profiles to make them easy to run repeatedly. A command creator allows interactive creation of Nmap command lines. Scan results can be saved and viewed later. Saved scan results can be compared with one another to see how they differ. The results of recent scans are stored in a searchable database. </dd>
 <p> This man page only describes the few Zenmap command-line options and some critical notes. A much more detailed Zenmap User&#8217;s Guide is available at m[blue]<code><a rel="nofollow" href="http://nmap.org/book/zenmap.html">http://nmap.org/book/zenmap.html</a></code>m[]. Other documentation and information is available from the Zenmap web page at m[blue]<code><a rel="nofollow" href="http://nmap.org/zenmap/">http://nmap.org/zenmap/</a></code>m[].</p>
 <h2>OPTIONS SUMMARY</h2>

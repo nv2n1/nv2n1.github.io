@@ -1,4 +1,5 @@
 ---
+
 title: "globus_i_ftp_client_target_s(3)"
 name: "globus_i_ftp_client_target_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_i_ftp_client_target_s –"
 ---
 
 <p> FTP Connection State.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_i_ftp_client.h&gt;</p>
 <h3>Data Fields</h3>
 <p> globus_ftp_client_target_state_t <code>state</code> </p>

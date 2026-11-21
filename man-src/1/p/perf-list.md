@@ -1,4 +1,5 @@
 ---
+
 title: "perf-list(1)"
 name: "perf-list"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-perf-list/"
 description: "perf-list – List all symbolic event types"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>perf list</i> [hw|sw|cache|tracepoint|pmu|event_glob]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command displays the symbolic event types which can be selected in the various perf commands with the -e option.</p>
 <h2>EVENT MODIFIERS</h2>
 <p> Events can optionally have a modifier by appending a colon and one or more modifiers. Modifiers allow the user to restrict the events to be counted. The following modifiers exist: </p>

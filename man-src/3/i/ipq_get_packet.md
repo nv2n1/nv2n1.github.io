@@ -1,4 +1,5 @@
 ---
+
 title: "ipq_get_packet(3)"
 name: "ipq_get_packet"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ipq_get_packet/"
 description: "ipq_message_type, ipq_get_packet, ipq_getmsgerr — query queue messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
 <p> <code>int ipq_message_type(const unsigned char *</code><i>buf</i><code>);</code><br />
  <code>ipq_packet_msg_t *ipq_get_packet(const unsigned char *</code><i>buf</i><code>);</code><br />
  <code>int ipq_get_msgerr(const unsigned char *</code><i>buf</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ipq_message_type</code> function returns the type of queue message returned to userspace via <code>ipq_read</code>. </p>
 <p> <code>ipq_message_type</code> should always be called following a successful call to <code>ipq_read</code> to determine whether the message is a packet message or an error message. The <i>buf</i> parameter should be the same data obtained from the previous call to <code>ipq_read</code>. </p>
 <p> <code>ipq_message_type</code> will return one of the following values:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "readom(1)"
 name: "readom"
 section: "1"
@@ -9,9 +10,7 @@ description: "readom – read or write data Compact Discs"
 
 <h2>NAME</h2>
 <p> readom &#8211; read or write data Compact Discs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>readom</code> <code>dev=</code><i>device</i> [ <i>options</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Readom</code> is used to read or write Compact Discs. </p>
 <p> The <i>device</i> refers to a device location similar to the one used in the wodim command. Refer to its manpage for details. </p>
 <p> Also note that this version of readom uses a modified libusal library which has a different behaviour compared to the one distributed by its original author. </p>

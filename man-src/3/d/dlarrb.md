@@ -1,4 +1,5 @@
 ---
+
 title: "dlarrb(3)"
 name: "dlarrb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarrb/"
 description: "dlarrb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarrb</code> (N, D, LLD, IFIRST, ILAST, RTOL1, RTOL2, OFFSET, W, WGAP, WERR, WORK, IWORK, PIVMIN, SPDIAM, TWIST, INFO)<br />
  <i></i><code>DLARRB</code> provides limited bisection to locate eigenvalues for more accuracy.</p>

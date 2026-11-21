@@ -1,4 +1,5 @@
 ---
+
 title: "perf-probe(1)"
 name: "perf-probe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-probe/"
 description: "perf-probe – Define new dynamic tracepoints"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perf probe[options]-- add = PROBE[...] or
                             perf probe[options] PROBE or
@@ -16,7 +16,6 @@ perf probe[options]-- add = PROBE[...] or
                                                         perf probe[options]-- line = LINE or
                                                                                      perf probe[options]-- vars = PROBEPOINT
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command defines dynamic tracepoint events, by symbol and registers without debuginfo, or by C expressions (C line numbers, C function names, and C local variables) with debuginfo.</p>
 <h2>OPTIONS</h2>
 <p> -k, &#8211;vmlinux=PATH</p>

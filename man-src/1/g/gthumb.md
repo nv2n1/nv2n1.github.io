@@ -1,4 +1,5 @@
 ---
+
 title: "gthumb(1)"
 name: "gthumb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gthumb/"
 description: "gThumb – an image viewer and browser for GNOME"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gthumb </code> [&#8211;help] [&#8211;version] [-f] [&#8211;fullscreen] [-s] [&#8211;slideshow] [&#8211;import-photos] [<i>directory</i>] [<i>filename</i>] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> With <i>gThumb</i> you can browse your hard disk viewing thumbnails of image files. It also lets you view single files (including GIF animations), add comments to images, organize images in catalogs, print images, view slideshows, set your desktop background, and more. </p>
 <h2>OPTIONS</h2>
 <dl>

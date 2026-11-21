@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-nm(1)"
 name: "i686-pc-mingw32-nm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-nm/"
 description: "nm – list symbols from object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> nm [<code>-a</code>|<code>&#8211;debug-syms</code>]<br />
 [<code>-g</code>|<code>&#8211;extern-only</code>][<code>&#8211;plugin</code>&nbsp;<wbr><i>name</i>]<br />
 [<code>-B</code>]&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]&nbsp;<wbr>[<code>-D</code>|<code>&#8211;dynamic</code>]<br />
@@ -19,7 +19,6 @@ description: "nm – list symbols from object files"
 [<code>&#8211;target=</code><i>bfdname</i>]&nbsp;<wbr>[<code>-f</code><i>format</i>|<code>&#8211;format=</code><i>format</i>]<br />
 [<code>&#8211;defined-only</code>]&nbsp;<wbr>[<code>-l</code>|<code>&#8211;line-numbers</code>]&nbsp;<wbr>[<code>&#8211;no-demangle</code>]<br />
 [<code>-V</code>|<code>&#8211;version</code>]&nbsp;<wbr>[<code>-X 32_64</code>]&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>&nbsp;<wbr>[<i>objfile</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">GNU</font> <code>nm</code> lists the symbols from object files <i>objfile</i>&#8230;. If no object files are listed as arguments, <code>nm</code> assumes the file <i>a.out</i>. </p>
 <p> For each symbol, <code>nm</code> shows:</p>
 <dl>

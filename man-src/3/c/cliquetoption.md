@@ -1,4 +1,5 @@
 ---
+
 title: "cliquetoption(3)"
 name: "cliquetoption"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cliquetoption/"
 description: "ql/instruments/cliquetoption.hpp – Cliquet option."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
  #include &lt;ql/instruments/payoffs.hpp&gt;<br />
  #include &lt;ql/time/date.hpp&gt;<br />

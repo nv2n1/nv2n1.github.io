@@ -1,4 +1,5 @@
 ---
+
 title: "slice2java(1)"
 name: "slice2java"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slice2java/"
 description: "slice2java – The Slice to Java compiler."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> slice2java [options] [files] </p>
-<h2>DESCRIPTION</h2>
 <p> slice2java compiles Slice files to Java. Full documentation for slice2java is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Using+the+Slice+Compiler+for+Java">http://doc.zeroc.com/display/Ice/Using+the+Slice+Compiler+for+Java</a>&quot;. </p>
 <h2>OPTIONS</h2>

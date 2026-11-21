@@ -1,4 +1,5 @@
 ---
+
 title: "dlarzb(3)"
 name: "dlarzb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarzb/"
 description: "dlarzb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
  <i></i><code>DLARZB</code> applies a block reflector or its transpose to a general matrix.</p>

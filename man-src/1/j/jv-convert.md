@@ -1,4 +1,5 @@
 ---
+
 title: "jv-convert(1)"
 name: "jv-convert"
 section: "1"
@@ -6,9 +7,8 @@ letter: "j"
 url: "/docs/linux/man/1-jv-convert/"
 description: "jv-convert – Convert file from one encoding to another"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>jv-convert</code> [<font SIZE="-1"><code>OPTION</code></font>] ... [<i></i><font SIZE="-1"><i>INPUTFILE</i></font><i></i> [<i></i><font SIZE="-1"><i>OUTPUTFILE</i></font><i></i>]]  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>jv-convert</code> is a utility included with <code>&quot;libgcj&quot;</code> which converts a file from one encoding to another. It is similar to the Unix <code>iconv</code> utility. </p>
 <p> The encodings supported by <code>jv-convert</code> are platform-dependent. Currently there is no way to get a list of all supported encodings.  </p>
 <h2>OPTIONS</h2>

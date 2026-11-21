@@ -1,4 +1,5 @@
 ---
+
 title: "dtrttp(3)"
 name: "dtrttp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrttp/"
 description: "dtrttp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrttp</code> (UPLO, N, A, LDA, AP, INFO)<br />
  <i></i><code>DTRTTP</code> copies a triangular matrix from the standard full format (TR) to the standard packed format (TP).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-tag(1)"
 name: "tracker-tag"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tracker-tag/"
 description: "tracker-tag – Add, remove and list tags."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 tracker tag FILE1[FILE2...][-l&lt;limit&gt;][-o&lt;offset&gt;][-r] tracker tag - t [[TAG1] [TAG2]...][-s][-r] tracker tag - a&lt;TAG&gt;[-e&lt;description&gt;] tracker tag - d&lt;TAG&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> List tags for local files or by the tag labels themselves if -t is used. </p>
 <p> It&#8217;s also possible to manage tags with the -a and and -d options. </p>
 <p> The <i>FILE</i> argument can be either a local path or a URI. It also does not have to be an absolute path. </p>

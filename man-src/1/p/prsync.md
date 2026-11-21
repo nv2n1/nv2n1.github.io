@@ -1,4 +1,5 @@
 ---
+
 title: "prsync(1)"
 name: "prsync"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-prsync/"
 description: "prsync — parallel process kill program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>prsync</code> [<code>-vAraz</code>] [<code>-h</code> <i>hosts_file</i>] [<code>-H</code> [<i>user</i>@]<i>host</i>[:<i>port</i>]] [<code>-l</code> <i>user</i>] [<code>-p</code> <i>par</i>] [<code>-o</code> <i>outdir</i>] [<code>-e</code> <i>errdir</i>] [<code>-t</code> <i>timeout</i>] [<code>-O</code> <i>options</i>] [<code>-x</code> <i>args</i>] [<code>-X</code> <i>arg</i>] [<code>-S</code> <i>args</i>] <i>local</i> <i>remote</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>prsync</code> is a program for copying files in parallel to a number of hosts. It provides features such as passing a password to ssh, saving output to files, and timing out. </p>
 <h2>OPTIONS</h2>
 <dl>

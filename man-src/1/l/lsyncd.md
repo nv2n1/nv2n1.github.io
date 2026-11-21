@@ -1,4 +1,5 @@
 ---
+
 title: "lsyncd(1)"
 name: "lsyncd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lsyncd/"
 description: "lsyncd – a daemon to continuously synchronize directory trees"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> config file</p>
 <dl>
 <dt>
@@ -24,7 +24,6 @@ description: "lsyncd – a daemon to continuously synchronize directory trees"
 <dl>
 <dt>
 </dt><dd> &nbsp;<wbr> <code>lsyncd</code> [<i>OPTIONS</i>] -direct <i>SOURCEDIR</i> <i>TARGETDIR</i> &#8230;</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/1-lsyncd/">Lsyncd</a>(1) watches local directory trees through an event monitor interface (inotify, fsevents). It aggregates and combines events for a few seconds and then spawns one or more processes to synchronize the changes. By default this is <a href="/docs/linux/man/1-rsync/">rsync</a>(1). Lsyncd is thus a light-weight asynchronous live mirror solution that is comparatively easy to install not requiring new filesystems or block devices and does not hamper local filesystem performance. </p>
 <p> Rsync+ssh is an advanced action configuration that uses a <a href="/docs/linux/man/1-ssh/">SSH</a>(1) to act file and directory moves directly on the target instead of re-transmitting the move destination over the wire. </p>
 <p> Fine-grained customization can be achieved through the CONFIG-FILE. Custom action configs can even be written from scratch in cascading layers ranging from shell scripts to code written in the <a href="/docs/linux/man/1-lua/">LUA</a>(1) language. This way simplicity can be balanced with powerfulness. See the online manual for details on the CONFIG-FILE <a rel="nofollow" href="https://github.com/axkibe/lsyncd/wiki/Manual-to-Lsyncd-2.0.x">https://github.com/axkibe/lsyncd/wiki/Manual-to-Lsyncd-2.0.x</a> . </p>

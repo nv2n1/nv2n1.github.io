@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_error(3)"
 name: "cgi_error"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_error/"
 description: "cgi_error – display an error string to the user"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ void cgi_error(CGI *cgi, const char *fmt, ...)
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; a pointer to a CGI struct<br />
  fmt &#8211; printf style format string and arguments </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_error will output a 500 error containing the specified error message. This function is likely to be removed from future versions in favor of a user error mechanism. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

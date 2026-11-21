@@ -1,4 +1,5 @@
 ---
+
 title: "fail2ban-client(1)"
 name: "fail2ban-client"
 section: "1"
@@ -9,9 +10,7 @@ description: "fail2ban-client – configure and control the server"
 
 <h2>NAME</h2>
 <p> fail2ban-client &#8211; configure and control the server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fail2ban-client</code> [<i>,OPTIONS/</i>] <i>,&lt;COMMAND&gt;/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Fail2Ban v0.9.6 reads log file that contains password failure report and bans the corresponding IP addresses using firewall rules.</p>
 <h2>OPTIONS</h2>
 <dl>

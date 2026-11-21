@@ -1,4 +1,5 @@
 ---
+
 title: "maildrop(1)"
 name: "maildrop"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-maildrop/"
 description: "maildrop – mail delivery filter/agent"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>maildrop</code> [option&#8230;] [-d&nbsp;<wbr><i>user</i>] [<i>arg</i>&#8230;]</dt>
 <dt> <code>maildrop</code> [option&#8230;] [<i>filename</i>] [<i>arg</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>maildrop</code></p>
 <dd>is a replacement local mail delivery agent that includes a mail filtering language. The system administrator can either replace the existing mail delivery agent with <code>maildrop</code>, or users may run <code>maildrop</code> using the &#8216;forward to program&#8217; mechanism of the existing mail delivery agent. </dd>
 <p> <code>maildrop</code> first reads the E-mail message on standard input. Trailing carriage return characters are automatically stripped. An E-mail message consists of header lines, followed by a blank line, followed by the contents of the message. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "freehdl-config(1)"
 name: "freehdl-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "FreeHDL-CONFIG – The FreeHDL configuration script."
 
 <h2>NAME</h2>
 <p> FreeHDL-CONFIG &#8211; The FreeHDL configuration script.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>freehdl-config</code> [<i>OPTION</i>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>FreeHDL</code> is a parser/compiler/simulator suite for the hardware description language VHDL. VHDL&#8217;93 as well as VHDL&#8217;87 files are supported. </p>
 <p> <code>FreeHDL-CONFIG</code> can be used to obtain the installation (path) configuration of the FreeHDL package.</p>
 <h2>OPTIONS</h2>

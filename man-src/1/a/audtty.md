@@ -1,4 +1,5 @@
 ---
+
 title: "audtty(1)"
 name: "audtty"
 section: "1"
@@ -9,9 +10,7 @@ description: "audtty – Control Audacious from the command line with a friendly
 
 <h2>NAME</h2>
 <p> audtty &#8211; Control Audacious from the command line with a friendly ncurses interface</p>
-<h2>SYNOPSIS</h2>
 <p> <code>audtty</code> [&lt;<code>&#8211;</code>|<code>+</code>&gt;ahlntV<code>]</code> [ <i>options</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> audtty is a simple application for controlling Audacious from the command line. It is designed to make common, simple tasks fast and easy to do. It is operated using arrow keys and standard Audacious keys, to make it easy and intuitive to learn.</p>
 <h2>OPTIONS</h2>
 <p> To negate a short option, use &#8216;<code>+</code>&#8216; instead of &#8216;<code>&#8211;</code>&#8216; (e.g. <code>+a</code>).<br />

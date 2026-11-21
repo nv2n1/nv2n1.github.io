@@ -1,4 +1,5 @@
 ---
+
 title: "pmwebd(1)"
 name: "pmwebd"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmwebd – web access to PCP"
 
 <h2>NAME</h2>
 <p> <code>pmwebd</code> &#8211; web access to PCP</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmwebd</code> [<code>-p</code> <i>port</i>] [<code>-4</code>] [<code>-6</code>] [<code>-t</code> <i>timeout</i>] [<code>-R</code> <i>resdir</i>] [<code>-c</code> <i>number</i>] [<code>-h</code> <i>hostname</i>] [<code>-a</code> <i>archive</i>] [<code>-P</code>] [<code>-L</code>] [<code>-N</code>] [<code>-G</code>] [<code>-X</code>] [<code>-i</code> <i>min-interval</i>] [<code>-I</code> [<code>-K</code> <i>spec</i>] [<code>-A</code> <i>archivesdir</i>] [<code>-S</code>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-x</code> <i>file</i>] [<code>-v</code>] [<code>-?</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmwebd</code> is a network daemon that binds a subset of the Performance Co-Pilot (PCP) client API (<code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3)) to RESTful web applications using the HTTP (<code><a href="/docs/linux/man/3-pmwebapi/">PMWEBAPI</a></code>(3)) protocol. Web clients request a URI with the prefix <code>/pmapi</code> to access the bindings. <code>pmwebd</code> creates PCP contexts as requested by a dynamic pool of remote clients, and maintains them as long as the clients regularly reconnect to request PMAPI operations. Otherwise, PCP contexts are closed after a timeout. Permanent contexts may be requested on the command line. </p>
 <p> In addition to the API binding, <code>pmwebd</code> may be optionally configured as a simple HTTP file server, in order to feed the web application itself to a web browser. URIs not matching the <code>/pmapi</code> prefix are mapped to files under the configured resource directory, if the <code>-R</code> option was given. </p>
 <p> In addition, <code>pmwebd</code> may be optionally configured as a server of a subset of the graphite 0.9.12 web API, for URLs with the <code>/graphite</code> prefix, in order to expose PCP archives to interactive data-graphing web applications. </p>

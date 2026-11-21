@@ -1,4 +1,5 @@
 ---
+
 title: "uptime(1)"
 name: "uptime"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-uptime/"
 description: "uptime – Tell how long the system has been running."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>uptime</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>uptime</code> gives a one line display of the following information. The current time, how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5, and 15 minutes. </p>
 <p> This is the same information contained in the header line displayed by <code><a href="/docs/linux/man/1-w/">w</a></code>(1). </p>
 <p> System load averages is the average number of processes that are either in a runnable or uninterruptable state. A process in a runnable state is either using the CPU or waiting to use the CPU. A process in uninterruptable state is waiting for some I/O access, eg waiting for disk. The averages are taken over the three time intervals. Load averages are not normalized for the number of CPUs in a system, so a load average of 1 means a single CPU system is loaded all the time while on a 4 CPU system it means it was idle 75% of the time.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cheevd(3)"
 name: "cheevd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cheevd/"
 description: "cheevd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cheevd</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code> CHEEVD computes the eigenvalues and, optionally, the left and/or right eigenvectors for HE matrices</code></p>

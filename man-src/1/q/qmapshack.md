@@ -1,4 +1,5 @@
 ---
+
 title: "qmapshack(1)"
 name: "qmapshack"
 section: "1"
@@ -9,9 +10,7 @@ description: "QMapShack – GPS mapping (GeoTiff and vector) and GPSr management
 
 <h2>NAME</h2>
 <p> QMapShack &#8211; GPS mapping (GeoTiff and vector) and GPSr management</p>
-<h2>SYNOPSIS</h2>
 <p> <code>qmapshack</code> [ ] [ <code>-n</code> | <code>&#8211;no-splash</code> ] [ <i>files</i>&#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> GPS mapping (GeoTiff and vector) and GPSr management. QMapShack provides a versatile tool for GPS maps in GeoTiff format as well as Garmin&#8217;s img vector map format. You can also view and edit your GPX tracks. QMapShack is the successor of QLandkarteGT.</p>
 <dl>
 <dt>Main features:</dt>

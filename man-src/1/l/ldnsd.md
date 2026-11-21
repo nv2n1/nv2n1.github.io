@@ -1,4 +1,5 @@
 ---
+
 title: "ldnsd(1)"
 name: "ldnsd"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldnsd – simple daemon example code"
 
 <h2>NAME</h2>
 <p> ldnsd &#8211; simple daemon example code</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldnsd</code> <i>port</i> <i>zone</i> <i>zonefile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldnsd</code> is a simple daemon that answers queries for a zone. This is NOT a full-fledged authoritative nameserver! </p>
 <h2>OPTIONS</h2>
 <p> <code>ldnsd</code> takes a port, zone and zonefile as arguments. </p>

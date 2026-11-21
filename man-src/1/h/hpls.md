@@ -1,4 +1,5 @@
 ---
+
 title: "hpls(1)"
 name: "hpls"
 section: "1"
@@ -9,7 +10,6 @@ description: "hpls — list the contents of a directory on an HFS+ volume"
 
 <h2>NAME</h2>
 <p> hpls &#8212; list the contents of a directory on an HFS+ volume</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hpls</code> [<code>options</code>] [<i>hfs-path &#8230;</i>]</p>
 <h2>Description</h2>
 <p> <code>hpls</code> is used to list files and directories on an HFS+ volume. If one or more arguments are given, each file or directory is shown; otherwise, the contents of the current working directory are displayed.<br />

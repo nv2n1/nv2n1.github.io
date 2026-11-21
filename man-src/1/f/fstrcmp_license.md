@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcmp_license(1)"
 name: "fstrcmp_license"
 section: "1"
@@ -10,11 +11,7 @@ url: "/docs/linux/man/1-fstrcmp_license/"
 
  GPL - GNU General Public License
 
-<h2>DESCRIPTION</h2>
-
- 
-
- <center> GNU GENERAL PUBLIC LICENSE
+<center> GNU GENERAL PUBLIC LICENSE
  Version 3, 29 June 2007
  </center> 
 

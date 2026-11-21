@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_flush_url_state(3)"
 name: "globus_gass_copy_flush_url_state"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_copy_flush_url_state/"
 description: "globus_gass_copy.h – GASS Copy Library."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_gass_transfer.h&#8217;<br />
  #include &#8216;globus_ftp_client.h&#8217;<br />
  #include &#8216;globus_io.h&#8217; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-distances(1)"
 name: "hwloc-distances"
 section: "1"
@@ -9,7 +10,6 @@ description: "hwloc-distances – Displays distance matrices"
 
 <h2>NAME</h2>
 <p> hwloc-distances &#8211; Displays distance matrices</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hwloc-distances</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -33,7 +33,6 @@ description: "hwloc-distances – Displays distance matrices"
 <dd> Verbose messages.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> hwloc-distances displays also distance matrices attached to the topology. The value in the i-th row and j-th column is the distance from object #i to object #j. </p>
 <p> Unless defined by the user, matrices currently always contain relative latencies between NUMA nodes (which may or may not be accurate). See the definition of <i>struct hwloc_distances_s</i> in <i>include/hwloc.h</i> or the documentation for details. </p>
 <p> These latencies are normalized to the latency of a local (non-NUMA) access. Hence 3.5 in row #i column #j means that the latency from cores in NUMA node #i to memory in NUMA node #j is 3.5 higher than the latency from cores to their local memory. A breadth-first traversal of the topology is performed starting from the root to find all distance matrices. </p>

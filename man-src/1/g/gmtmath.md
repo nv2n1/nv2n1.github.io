@@ -1,4 +1,5 @@
 ---
+
 title: "gmtmath(1)"
 name: "gmtmath"
 section: "1"
@@ -9,10 +10,8 @@ description: "gmtmath – Reverse Polish Notation (RPN) calculator for data tabl
 
 <h2>NAME</h2>
 <p> gmtmath &#8211; Reverse Polish Notation (RPN) calculator for data tables</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtmath</code> [ <i>t_f(t).d</i>[<code>+e</code>][<code>+s</code>|<code>w</code>] ] [ <i>cols</i> ] [ <i>eigen</i> ] [ ] [ <i>n_col</i>[/<i>t_col</i>] ] [ ] [ [<code>f</code>|<code>l</code>] ] [ <i>t_min</i>/<i>t_max</i>/<i>t_inc</i>[<code>+</code>]|<i>tfile</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] <i>operand</i> [ <i>operand</i> ] <code>OPERATOR</code> [ <i>operand</i> ] <code>OPERATOR</code> &#8230; <code>=</code> [ <i>outfile</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmtmath</code> will perform operations like add, subtract, multiply, and divide on one or more table data files or constants using Reverse Polish Notation (RPN) syntax (e.g., Hewlett-Packard calculator-style). Arbitrarily complicated expressions may therefore be evaluated; the final result is written to an output file [or standard output]. Data operations are element-by-element, not matrix manipulations (except where noted). Some operators only require one operand (see below). If no data tables are used in the expression then options <code>-T</code>, <code>-N</code> can be set (and optionally <code>-bo</code> to indicate the data type for binary tables). If STDIN is given, the standard input will be read and placed on the stack as if a file with that content had been given on the command line. By default, all columns except the &quot;time&quot; column are operated on, but this can be changed (see <code>-C</code>). Complicated or frequently occurring expressions may be coded as a macro for future use or stored and recalled via named memory locations.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

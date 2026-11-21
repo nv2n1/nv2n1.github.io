@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_name_constraints_deinit(3)"
 name: "gnutls_x509_name_constraints_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_name_constraints_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_name_constraints_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>void gnutls_x509_name_constraints_deinit(gnutls_x509_name_constraints_t </code><i>nc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_name_constraints_t nc</dt>
 <dd> The nameconstraints structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a name constraints structure.</p>
 <h2>SINCE</h2>
 <p> 3.3.0</p>

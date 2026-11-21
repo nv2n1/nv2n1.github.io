@@ -1,4 +1,5 @@
 ---
+
 title: "qcatool2(1)"
 name: "qcatool2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qcatool2/"
 description: "qcatool – command line tool for the Qt Cryptographic Architecture"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> qcatool is a command line tool for performing various cryptographic operations with the Qt Cryptographic Architecture (QCA). qcatool can also be used for testing and debugging QCA. </p>
 <h2>USAGE</h2>
 <p> qcatool has a range of options and commands. You only ever get to use one command, but you may use several, one or no options. </p>

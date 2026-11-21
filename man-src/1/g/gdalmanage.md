@@ -1,4 +1,5 @@
 ---
+
 title: "gdalmanage(1)"
 name: "gdalmanage"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-gdalmanage/"
 description: "gdalmanage – gdalmanage Identify, delete, rename and copy raster data files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 Usage : gdalmanage mode[-r][-u][-f format] datasetname[newdatasetname]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The gdalmanage program can perform various operations on raster data files, depending on the chosen <i>mode</i>. This includes identifying raster data types and deleting, renaming or copying the files. </p>
 <dl>
 <dt><i>mode</i>:</dt>

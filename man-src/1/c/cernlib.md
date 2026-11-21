@@ -1,4 +1,5 @@
 ---
+
 title: "cernlib(1)"
 name: "cernlib"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cernlib/"
 description: "cernlib – print CERN library dependencies"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cernlib</code> [<i>options</i>]<i> libraries</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>cernlib</code> is a tool to list the compiler and linker options necessary to compile a CERNLIB program that has the given library dependencies. It is generally used within a command substitution, as in the following example: </p>
 <p> gfortran -o myprogram myprogram.F `cernlib -G Motif pawlib` </p>
 <p> This version of cernlib has been completely rewritten from the original script provided by CERN. It now does recursive library dependency checking and removes duplicate entries. </p>

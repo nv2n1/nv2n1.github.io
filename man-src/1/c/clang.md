@@ -1,4 +1,5 @@
 ---
+
 title: "clang(1)"
 name: "clang"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-clang/"
 description: "clang – the Clang C, C++, and Objective-C compiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>clang</code> [<i>options</i>] <i>filename …</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>clang</code> is a C, C++, and Objective-C compiler which encompasses preprocessing, parsing, optimization, code generation, assembly, and linking. Depending on which high-level mode setting is passed, Clang will stop before doing a full link. While Clang is highly integrated, it is important to understand the stages of compilation, to understand how to invoke it. These stages are:</p>
 <dl>
 <dt><code>Driver</code></dt>

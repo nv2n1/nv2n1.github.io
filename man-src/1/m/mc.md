@@ -1,4 +1,5 @@
 ---
+
 title: "mc(1)"
 name: "mc"
 section: "1"
@@ -9,7 +10,6 @@ description: "mc – Visual shell for Unix-like systems."
 
 <h2>USAGE</h2>
 <p> <code>mc</code> [-abcCdfhPstuUVx] [-l log] [dir1 [dir2]] [-e [file] &#8230;] [-v file]</p>
-<h2>DESCRIPTION</h2>
 <p> GNU Midnight Commander is a directory browser/file manager for Unix-like operating systems.</p>
 <h2>OPTIONS</h2>
 <dl>

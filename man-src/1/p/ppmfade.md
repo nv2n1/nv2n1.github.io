@@ -1,4 +1,5 @@
 ---
+
 title: "ppmfade(1)"
 name: "ppmfade"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmfade/"
 description: "ppmfade – generate a transition between two image files using special effects."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmfade</code> [ <code>-f </code> <i>first.ppm</i> ] [ <code>-l </code> <i>last.ppm</i> ] [ <code>-mix</code>|<code>-spread</code>|<code>-shift</code>|<code>-relief</code>|<code>-oil</code>|<code>-edge</code>|<code>-bentley</code>|<code>-block</code> ] [ <code>-base </code> <i>name</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> This program generates a transition between either two input images or between one input image and black. You can use the 30 intermediate images generated to show a smooth transition between segments of a movie. The input and output images are in the Portable Pixmap (PPM) format. If you specify both input images, they should both be the same size. If you want to fade from black to an image, specify only the last image. If you want to fade from an image to black, specify only the first image. <code>ppmfade </code> names the resulting image files <i>base</i><code>.</code><i>nnnn</i> <code>.ppm</code>, where <i>nnnn </i> is a number varying between 0001 and 0030 and <i>base</i> is what you specify with via the <code>-base</code> option (default <code>fade</code>). </p>
 <p> Another way to convert by steps from one image to another is morphing. You can use <code>xmorph</code> to do that. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_set_key_usage(3)"
 name: "gnutls_x509_crq_set_key_usage"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crq_set_key_usage – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_set_key_usage &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_set_key_usage(gnutls_x509_crq_t </code><i>crq</i><code>, unsigned int </code><i>usage</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_crq_set_key_usage – API function"
 <dd> a certificate request of type <code>gnutls_x509_crq_t</code></dd>
 <dt>unsigned int usage</dt>
 <dd> an ORed sequence of the GNUTLS_KEY_* elements.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the keyUsage certificate extension.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

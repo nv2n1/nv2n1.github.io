@@ -1,4 +1,5 @@
 ---
+
 title: "frama-c(1)"
 name: "frama-c"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-frama-c/"
 description: "frama-c[.byte] – a static analyzer for C programs frama-c-gui[.byte] – the graphical interface of frama-c"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>frama-c</code> [ <i>options</i> ] <i>files</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>frama-c</code> is a suite of tools dedicated to the analysis of source code written in C. It gathers several static analysis techniques in a single collaborative framework. This framework can be extended by additional plugins placed in the <code>$FRAMAC_PLUGIN</code> directory. The command</p>
 <dl>
 <dt>

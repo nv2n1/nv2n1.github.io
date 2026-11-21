@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg-all(1)"
 name: "ffmpeg-all"
 section: "1"
@@ -6,18 +7,11 @@ letter: "f"
 url: "/docs/linux/man/1-ffmpeg-all/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+ffmpeg - ffmpeg video converter 
 
- ffmpeg - ffmpeg video converter 
+ffmpeg [<i>global_options</i>] {[<i>input_file_options</i>] -i <i>input_url</i>} ... {[<i>output_file_options</i>] <i>output_url</i>} ...
 
-<h2>SYNOPSIS</h2>
-
- ffmpeg [<i>global_options</i>] {[<i>input_file_options</i>] -i <i>input_url</i>} ... {[<i>output_file_options</i>] <i>output_url</i>} ...
-
-<h2>DESCRIPTION</h2>
-
- <b>ffmpeg</b> is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter. 
+<b>ffmpeg</b> is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter. 
 
  <b>ffmpeg</b> reads from an arbitrary number of input ``files'' (which can be regular files, pipes, network streams, grabbing devices, etc.), specified by the <tt>&quot;-i&quot;</tt> option, and writes to an arbitrary number of output ``files'', which are specified by a plain output url. Anything found on the command line which cannot be interpreted as an option is considered to be an output url. 
 

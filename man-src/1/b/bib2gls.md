@@ -1,13 +1,13 @@
 ---
+
 title: "bib2gls(1)"
 name: "bib2gls"
 section: "1"
 letter: "b"
 url: "/docs/linux/man/1-bib2gls/"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>bib2gls</code> [<i>option</i>]+ <i>auxfile</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bib2gls</code> is designed to work with the <code>glossaries-extra</code> LaTeX package. (The <code>record</code> package option is required.) The application performs two functions in one: (1) selects entries from .bib files according to information found in the <i>auxfile</i> (similar to <code>bibtex</code>); (2) hierarchically sorts entries and collates location lists (similar to <code>makeindex</code> and <code>xindy</code>). The .aux extension may be omitted from <i>auxfile</i>. </p>
 <p>The <i>auxfile</i> (and corresponding .log file) should either be in the current directory or in the directory specified by <code>--dir</code>. Bib files can either be relative to the directory the <i>auxfile</i> is in or in a location that can be found by kpsewhich.  </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_symlink_ex(3)"
 name: "libssh2_sftp_symlink_ex"
 section: "3"
@@ -9,7 +10,6 @@ description: "libssh2_sftp_symlink_ex – read or set a symbolic link"
 
 <h2>NAME</h2>
 <p> libssh2_sftp_symlink_ex &#8211; read or set a symbolic link</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
@@ -17,7 +17,6 @@ int libssh2_sftp_symlink_ex(LIBSSH2_SFTP *sftp, const char *path,
                             unsigned int path_len, char *target,
                             unsigned int target_len, int link_type);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Create a symlink or read out symlink information from the remote side. </p>
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
 <p> <i>path</i> &#8211; Remote filesystem object to create a symlink from or resolve. </p>

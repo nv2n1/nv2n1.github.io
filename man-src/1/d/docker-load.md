@@ -1,4 +1,5 @@
 ---
+
 title: "docker-load(1)"
 name: "docker-load"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-load/"
 description: "docker-load – Load an image from a tar archive or STDIN"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker load [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker image load. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for load</p>

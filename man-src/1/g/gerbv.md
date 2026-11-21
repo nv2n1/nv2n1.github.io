@@ -1,4 +1,5 @@
 ---
+
 title: "gerbv(1)"
 name: "gerbv"
 section: "1"
@@ -9,9 +10,7 @@ description: "gerbv – Gerber Viewer"
 
 <h2>NAME</h2>
 <p> gerbv &#8211; Gerber Viewer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gerbv [OPTIONS] [gerberfile[s]]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>gerbv</i> is a viewer for RS274-X, commonly known as Gerber, files. RS274-X files are generated from different PCB CAD programs and are used in the printed circuit board manufacturing process. <i>gerbv</i> also supports Excellon/NC drill files as well as XY (centroid) files produced by the program PCB (<a rel="nofollow" href="http://pcb.sf.net">http://pcb.sf.net</a>). </p>
 <h2>OPTIONS</h2>
 <p> <code>Warning! </code> On some platforms, which hasn&#8217;t long option available, only short options are available. </p>

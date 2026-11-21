@@ -1,4 +1,5 @@
 ---
+
 title: "ssyr2k(3)"
 name: "ssyr2k"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssyr2k/"
 description: "ssyr2k.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyr2k</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
  <i></i><code>SSYR2K</code></p>

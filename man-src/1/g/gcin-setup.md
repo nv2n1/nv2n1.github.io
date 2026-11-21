@@ -1,4 +1,5 @@
 ---
+
 title: "gcin-setup(1)"
 name: "gcin-setup"
 section: "1"
@@ -9,9 +10,7 @@ description: "gcin-setup – configuration tools of gcin"
 
 <h2>NAME</h2>
 <p> gcin-setup &#8211; configuration tools of gcin</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gcin-setup</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gcin-setup</code> is the default configuration tool of gcin. Another configuring method is writing conffiles in $HOME/.gcin/config. See CONFFILES section for further information.</p>
 <h2>CONFFILES</h2>
 <p> Those conffiles below will be created automatically by gcin-setup, except gcin-bell-volume and gcin-sound-play-overlap. </p>

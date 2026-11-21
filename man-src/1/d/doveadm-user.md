@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-user(1)"
 name: "doveadm-user"
 section: "1"
@@ -9,9 +10,7 @@ description: "doveadm-user – Perform a user lookup in Dovecot’s userdbs"
 
 <h2>NAME</h2>
 <p> doveadm-user &#8211; Perform a user lookup in Dovecot&#8217;s userdbs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>user</code> [<code>-a</code> <i>userdb_socket_path</i>] [<code>-f</code> <i>field</i>] [<code>-u</code>] [<code>-x</code> <i>auth_info</i>] <i>user&nbsp;<wbr></i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>user</code> command is used to perform a user lookup &#8211; to show what information Dovecot sees about the <i>user</i>(s), or if it exists at all in the configured <i>userdb</i>(s). </p>
 <p> The <i>auth_info</i> may be useful when the userdb is for example a SQL database and you are using %variables, like <code>%s</code> or <code>%l</code>, in the <i>user_query</i> setting. Or when you have configured the userdb in a way like this: </p>
 <pre>

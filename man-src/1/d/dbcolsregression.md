@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolsregression(1)"
 name: "dbcolsregression"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dbcolsregression/"
 description: "dbcolsregression – compute linear regression between two columns"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     dbcolsregression  [-a] column1 column2
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Compute linear regression over <tt>&quot;column1&quot;</tt> and <tt>&quot;column2&quot;</tt>. Outputs slope, intercept, and correlation coefficient.</p>
 <h2>OPTIONS</h2>
 <dl>

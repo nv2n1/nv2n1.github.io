@@ -1,4 +1,5 @@
 ---
+
 title: "git-log(1)"
 name: "git-log"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-log/"
 description: "git-log – Show commit logs"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git log[&lt;options&gt;][&lt;revision range&gt;][[--]&lt;path&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Shows the commit logs. </p>
 <p> List commits that are reachable by following the <code>parent</code> links from the given commit(s), but exclude commits that are reachable from the one(s) given with a <i>^</i> in front of them. The output is given in reverse chronological order by default. </p>
 <p> You can think of this as a set operation. Commits reachable from any of the commits given on the command line form a set, and then commits reachable from any of the ones given with <i>^</i> in front are subtracted from that set. The remaining commits are what comes out in the command&#8217;s output. Various other options and paths parameters can be used to further limit the result. </p>

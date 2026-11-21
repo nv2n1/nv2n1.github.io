@@ -1,4 +1,5 @@
 ---
+
 title: "gputils(1)"
 name: "gputils"
 section: "1"
@@ -9,7 +10,6 @@ description: "gputils – GNU PIC utilities"
 
 <h2>NAME</h2>
 <p> gputils &#8211; GNU PIC utilities</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gputils</code> is a collection of development tools for Microchip (TM) PIC (TM) microcontrollers. It&#8217;s intended to be compatible with the manufacturer&#8217;s tools, MPASM, MPLINK and MPLIB.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gpasm/">gpasm</a></code>(1), <code><a href="/docs/linux/man/1-gpdasm/">gpdasm</a></code>(1), <code><a href="/docs/linux/man/1-gplib/">gplib</a></code>(1), <code><a href="/docs/linux/man/1-gplink/">gplink</a></code>(1), <code><a href="/docs/linux/man/1-gpstrip/">gpstrip</a></code>(1), <code><a href="/docs/linux/man/1-gpvc/">gpvc</a></code>(1), <code><a href="/docs/linux/man/1-gpvo/">gpvo</a></code>(1)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gxint(1)"
 name: "gxint"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gxint/"
 description: "gxint – load and run an interactive GEANT application"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gxint</code> [<i>options</i>]<i> file(s)</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gxint</code> is a script to load and run a GEANT application, which is usually in the form of Fortran source code. The desired routines are given in <i>file(s)</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

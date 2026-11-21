@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_methods(3)"
 name: "libssh2_session_methods"
 section: "3"
@@ -9,10 +10,8 @@ description: "libssh2_session_methods – return the currently active algorithms
 
 <h2>NAME</h2>
 <p> libssh2_session_methods &#8211; return the currently active algorithms</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> const char * libssh2_session_methods(LIBSSH2_SESSION *session, int method_type); </p>
-<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>method_type</i> &#8211; one of the method type constants: LIBSSH2_METHOD_KEX, LIBSSH2_METHOD_HOSTKEY, LIBSSH2_METHOD_CRYPT_CS, LIBSSH2_METHOD_CRYPT_SC, LIBSSH2_METHOD_MAC_CS, LIBSSH2_METHOD_MAC_SC, LIBSSH2_METHOD_COMP_CS, LIBSSH2_METHOD_COMP_SC, LIBSSH2_METHOD_LANG_CS, LIBSSH2_METHOD_LANG_SC. </p>
 <p> Returns the actual method negotiated for a particular transport parameter.</p>

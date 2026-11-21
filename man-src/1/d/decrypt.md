@@ -1,4 +1,5 @@
 ---
+
 title: "decrypt(1)"
 name: "decrypt"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-decrypt/"
 description: "decrypt – 802.11b packet decryption tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>decrypt</code> &#8211; 802.11b packet decryption tool </p>
-<h2>SYNOPSIS</h2>
 <p> <code>decrypt (-p </code><i>key | </i><code>-f </code><i>dictfile ) </i><code>-m </code><i>bssid </i><code>-e </code><i>infile </i> <code>-d </code><i>outfile </i> [-b ] [-o <i>offset</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>decrypt</code> is a command line tool that takes 3 pieces of input, a pcap format input file, a WEP key, and a bssid (access point MAC address). If the provided WEP key is found to be the key for the indicated bssid, associated packets are decrypted and copied to the output file. If the key is not a valid key, all input packets are written unchanged to the output file. The output is a pcap compatible dump file and can be examined with tools such as tcpdump or ethereal to view the decrypted data. </p>
 <p> This tool understands two link types, LINKTYPE_IEEE802_11 and LINKTYPE_PRISM_HEADER. Other 802.11b capture formats can be decrypted by specifying an optional offset command line argument with the -o switch to indicate the number of header bytes that precede the actual 802.11b packet. That is, the number of bytes that precede the first frame control byte of each 802.11b packet. </p>
 <p> An alternate dictionary mode utilizes an input word list of potential WEP keys to attempt to find a valid key for the specified bssid. If a valid key is found packets are decrypted and copied to the specified output file.</p>

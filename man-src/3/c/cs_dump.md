@@ -1,4 +1,5 @@
 ---
+
 title: "cs_dump(3)"
 name: "cs_dump"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cs_dump/"
 description: "cs_dump – dump the cs parse tree"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ NEOERR *cs_dump(CSPARSE *parse, void *ctx, CSOUTFUNC cb);
 <p> parse &#8211; the CSPARSE structure created with cs_init<br />
  ctx &#8211; user data to be passed to the CSOUTFUNC<br />
  cb &#8211; a CSOUTFUNC callback </p>
-<h2>DESCRIPTION</h2>
 <p> cs_dump will dump the CS parse tree in the parse struct. This can be useful for debugging your templates. This function also uses the CSOUTFUNC callback to display the parse tree. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

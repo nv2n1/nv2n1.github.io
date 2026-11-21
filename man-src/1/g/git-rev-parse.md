@@ -1,4 +1,5 @@
 ---
+
 title: "git-rev-parse(1)"
 name: "git-rev-parse"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-rev-parse/"
 description: "git-rev-parse – Pick out and massage parameters"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>git rev-parse</i> [&lt;options&gt;] &lt;args&gt;...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Many Git porcelainish commands take mixture of flags (i.e. parameters that begin with a dash <i>&#8211;</i>) and parameters meant for the underlying <i>git rev-list</i> command they use internally and flags and parameters for the other commands they use downstream of <i>git rev-list</i>. This command is used to distinguish between them.</p>
 <h2>OPTIONS</h2>
 <h3>Operation Modes</h3>

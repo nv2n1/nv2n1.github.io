@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtoy4m(1)"
 name: "pnmtoy4m"
 section: "1"
@@ -9,9 +10,7 @@ description: "pnmtoy4m – Convert PNM/PAM images to YUV4MPEG2 stream"
 
 <h2>NAME</h2>
 <p> pnmtoy4m &#8211; Convert PNM/PAM images to YUV4MPEG2 stream </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtoy4m</code> [<i>options</i>] <i>[ filename ]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pnmtoy4m</code> converts one or more raw PPM, PGM, PBM, or PAM images into a YUV4MPEG2 stream ready for further processing by other video tools. These three (or four) image formats are collectively referred to as &quot;PNM images&quot;. </p>
 <p> Output is to stdout to facilitate piping to other MJPEG tools. The size of the output frame(s) is determined from the (first) input image. </p>
 <p> Input is a &#8216;raw&#8217; format PNM image, read from stdin or from the optional filename. The input may contain multiple PNM images concatenated together; <code>pnmtoy4m</code> will read and process them sequentially. All images must have identical size and format. Input images can be interpreted as whole progressive frames, pairs of interleaved fields, or as sequential fields (read in pairs of images) to be output as either interlaced or progressive frames. PPM and PGM images must have 8 bits per channel (i.e. &#8216;maxval&#8217; must be 255). </p>

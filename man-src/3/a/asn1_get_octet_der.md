@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_get_octet_der(3)"
 name: "asn1_get_octet_der"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_get_octet_der – API function"
 
 <h2>NAME</h2>
 <p> asn1_get_octet_der &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_get_octet_der(const unsigned char * </code><i>der</i><code>, int </code><i>der_len</i><code>, int * </code><i>ret_len</i><code>, unsigned char * </code><i>str</i><code>, int </code><i>str_size</i><code>, int * </code><i>str_len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "asn1_get_octet_der – API function"
 <dd> Length of pre-allocated output buffer.</dd>
 <dt>int * str_len</dt>
 <dd> Output variable containing the length of the contents of the OCTET SEQUENCE.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Extract an OCTET SEQUENCE from DER data. Note that this function expects the DER data past the tag field, i.e., the length and content octets.</p>
 <h2>RETURNS</h2>
 <p> Returns <code>ASN1_SUCCESS</code> on success, or an error.</p>

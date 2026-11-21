@@ -1,4 +1,5 @@
 ---
+
 title: "jcmd(1)"
 name: "jcmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jcmd/"
 description: "jcmd – Sends diagnostic command requests to a running Java Virtual Machine (JVM)."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -36,7 +36,6 @@ description: "jcmd – Sends diagnostic command requests to a running Java Virtu
 <code>jcmd</code> <i>pid</i>|<i>main-class</i> <i>command</i>[ <i>arguments</i>]
 </pre>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jcmd</code> utility is used to send diagnostic command requests to the JVM. It must be used on the same machine on which the JVM is running, and have the same effective user and group identifiers that were used to launch the JVM. </p>
 <dl>
 <dt>

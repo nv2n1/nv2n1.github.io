@@ -1,4 +1,5 @@
 ---
+
 title: "rebuild-jar-repository(1)"
 name: "rebuild-jar-repository"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rebuild-jar-repository/"
 description: "rebuild-jar-repository – rebuild a JAR repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rebuild-jar-repository</code> [OPTION]&#8230; DIRECTORY</p>
-<h2>DESCRIPTION</h2>
 <p> Rebuild a jar repository (built by <code>build-jar-repository</code>) based on the current JVM settings</p>
 <h2>OPTIONS</h2>
 <p> If no option is specified the default action will be to rebuild with symbolic links </p>

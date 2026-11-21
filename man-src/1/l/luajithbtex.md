@@ -1,4 +1,5 @@
 ---
+
 title: "luajithbtex(1)"
 name: "luajithbtex"
 section: "1"
@@ -6,11 +7,10 @@ letter: "l"
 url: "/docs/linux/man/1-luajithbtex/"
 description: "luatex, dviluatex, luahbtex, luajittex, texlua, texluac – An extended version of TeX using Lua as an embedded scripting language"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... [<i>TEXNAME</i>[<i></i><code>.tex</code>]] [<i>COMMANDS</i>] <br />
  <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... <code>\</code><i>FIRST-LINE</i> <br />
  <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... <code>&amp;</code><i>FMT</i> [<i>ARGS</i>]  </p>
-<h2>DESCRIPTION</h2>
 <p> Run the luaTeX typesetter on <i>TEXNAME</i>, usually creating <i>TEXNAME</i><code>.pdf</code>. Any remaining <i>COMMANDS</i> are processed as luaTeX input, after <i>TEXNAME</i> is read. </p>
 <p> Alternatively, if the first non-option argument begins with a backslash, interpret all non-option arguments as a line of luaTeX input. </p>
 <p> Alternatively, if the first non-option argument begins with a <code>&amp;</code>, the next word is taken as the <i>FMT</i> to read, overriding all else. Any remaining arguments are processed as above. </p>

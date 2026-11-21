@@ -1,4 +1,5 @@
 ---
+
 title: "nqc(1)"
 name: "nqc"
 section: "1"
@@ -9,9 +10,7 @@ description: "nqc – A simple C-like language for Lego’s RCX programmable bri
 
 <h2>NAME</h2>
 <p> nqc &#8211; A simple C-like language for Lego&#8217;s RCX programmable brick</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nqc</code> [ <i>options</i> ] [ <i>actions</i> ] [ <code>&#8211;</code> | <i>filename</i> ] [ <i>actions</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> NQC stands for Not Quite C, and is a simple language for programming the LEGO RCX. The preprocessor and control structures of NQC are very similar to C. NQC is not a general purpose language &#8212; there are many restrictions that stem from limitations of the standard RCX firmware. </p>
 <p> This man page does not attempt to describe the NQC programming language or the RCX API, merely the options of the nqc command-line program. References to more complete documentation are given at the end of this man page. </p>
 <p> nqc is normally used to process a single source file given as <i>filename</i>. You can also read from stdin by using <code>&#8211;</code> instead. If the filename ends in <i>.rcx</i>, it is assumed to be a RCX image file from a previous compile, and will be used as is (for downloading or listing). </p>

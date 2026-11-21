@@ -1,4 +1,5 @@
 ---
+
 title: "droplang(1)"
 name: "droplang"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-droplang/"
 description: "droplang – remove a PostgreSQL procedural language"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>droplang</code> [<i>connection-option</i>&#8230;] <i>langname</i> [<i>dbname</i>]</dt>
 <dt> <code>droplang</code> [<i>connection-option</i>&#8230;] <code>&#8211;list</code> | <code>-l</code> [<i>dbname</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>droplang is a utility for removing an existing procedural language from a PostgreSQL database. </dd>
 <p> droplang is just a wrapper around the DROP EXTENSION (<code><a href="/docs/linux/man/7-drop_extension/">DROP_EXTENSION</a></code>(7)) SQL command. </p>
 <dl>

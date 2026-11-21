@@ -1,4 +1,5 @@
 ---
+
 title: "mchullwhiteengine(3)"
 name: "mchullwhiteengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mchullwhiteengine/"
 description: "ql/pricingengines/capfloor/mchullwhiteengine.hpp – Monte Carlo Hull-White engine for cap/floors."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/capfloor.hpp&gt;<br />
  #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
  #include &lt;ql/processes/hullwhiteprocess.hpp&gt;<br />

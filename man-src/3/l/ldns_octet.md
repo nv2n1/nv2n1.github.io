@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_octet(3)"
 name: "ldns_octet"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_octet"
 
 <h2>NAME</h2>
 <p> ldns_octet </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_octet(char *word, size_t *length); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_octet</i>()</dt>
 <dd>removes \DDD, \[space] and other escapes from the input. See RFC 1035, section 5.1. .br <code>word</code>: what to check .br <code>length</code>: the string .br Returns ldns_status mesg</dd></dl>

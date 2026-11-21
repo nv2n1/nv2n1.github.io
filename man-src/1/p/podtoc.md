@@ -1,4 +1,5 @@
 ---
+
 title: "podtoc(1)"
 name: "podtoc"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-podtoc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+podtoc - show outline of pods 
 
- podtoc - show outline of pods 
-
-<h2>DESCRIPTION</h2>
-
- This program shows the structure of one or more pod documents.
+This program shows the structure of one or more pod documents.
 
 <h2>EXAMPLES</h2>
 

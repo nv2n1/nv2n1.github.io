@@ -1,4 +1,5 @@
 ---
+
 title: "xdriver(1)"
 name: "xdriver"
 section: "1"
@@ -10,7 +11,6 @@ description: "XDRIVER – GRASS Monitor – driver to display GRASS maps in X11 
 <h2>NAME</h2>
 <p> <i></i><code>XDRIVER &#8211; GRASS Monitor</code> &#8211; driver to display GRASS maps in X11 environment </p>
 <p>&nbsp;<wbr> <i>(drivers)</i></p>
-<h2>DESCRIPTION</h2>
 <p> The GRASS XDRIVER can be used to display GRASS maps in X11 environment.</p>
 <h2>Usage in details</h2>
 <p> Variables:</p>

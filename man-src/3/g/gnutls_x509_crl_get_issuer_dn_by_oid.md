@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_get_issuer_dn_by_oid(3)"
 name: "gnutls_x509_crl_get_issuer_dn_by_oid"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crl_get_issuer_dn_by_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_issuer_dn_by_oid &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_issuer_dn_by_oid(gnutls_x509_crl_t </code><i>crl</i><code>, const char * </code><i>oid</i><code>, int </code><i>indx</i><code>, unsigned int </code><i>raw_flag</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>sizeof_buf</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_x509_crl_get_issuer_dn_by_oid – API function"
 <dd> a pointer to a structure to hold the peer&#8217;s name (may be null)</dd>
 <dt>size_t * sizeof_buf</dt>
 <dd> initially holds the size of <i>buf</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will extract the part of the name of the CRL issuer specified by the given OID. The output will be encoded as described in RFC4514. The output string will be ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> Some helper macros with popular OIDs can be found in gnutls/x509.h If raw flag is (0), this function will only return known OIDs as text. Other OIDs will be DER encoded, as described in RFC4514 &#8212; in hex format with a &#8216;#&#8217; prefix. You can check about known OIDs using <code>gnutls_x509_dn_oid_known()</code>. </p>
 <p> If buf is null then only the size will be filled.</p>

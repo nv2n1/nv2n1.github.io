@@ -1,4 +1,5 @@
 ---
+
 title: "kmymoney2(1)"
 name: "kmymoney2"
 section: "1"
@@ -9,9 +10,7 @@ description: "KMyMoney – the personal finances manager for KDE"
 
 <h2>NAME</h2>
 <p> KMyMoney &#8211; the personal finances manager for KDE</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kmymoney2</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>File</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>KMyMoney</code> KDE Application. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
 <p> <code>KMyMoney</code> is the Personal Finance Manager for the KDE environment. It provides the functions required to balance your checkbooks, manage your personal loans and categorise your incomes and expenses using a checkbook style graphical user interface.</p>
 <h2>OPTIONS</h2>

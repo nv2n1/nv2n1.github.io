@@ -1,4 +1,5 @@
 ---
+
 title: "virt-index-validate(1)"
 name: "virt-index-validate"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-virt-index-validate/"
 description: "virt-index-validate – Validate virt-builder index file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  virt-index-validate index
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) uses an index file to store metadata about templates that it knows how to use. This index file has a specific format which virt-index-validate knows how to validate. </p>
 <p> Note that virt-index-validate can validate either the signed or unsigned index file (ie. either <i>index</i> or <i>index.asc</i>). It can only validate a local file, not a <font SIZE="-1">URL.</font></p>
 <h2>OPTIONS</h2>

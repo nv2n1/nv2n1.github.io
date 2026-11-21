@@ -1,4 +1,5 @@
 ---
+
 title: "wavpack(1)"
 name: "wavpack"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-wavpack/"
 description: "wavpack – encode wav files to wavpack"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>wavpack</code> [<i>-options</i>] <i>INFILE</i>&#8230; [<code>-o&nbsp;<wbr></code><i>OUTFILE</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>wavpack</code></p>
 <dd>encodes wav files containing uncompressed audio (or raw PCM data) into WavPack files using the options provided. The resulting filename will be <i>source-name.wv</i> unless overridden with the <code>-o</code> switch. Multiple input files may be specified resulting in multiple WavPack files, and in that case <code>-o</code> may be used to specify an alternate target directory. <i>Stdin</i> and <i>stdout</i> may be specified with &#8220;-&#8220;. To decode WavPack files back to wav or raw PCM use the <code>wvunpack</code> program.</dd>
 <h2>OPTIONS</h2>

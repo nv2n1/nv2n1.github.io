@@ -1,4 +1,5 @@
 ---
+
 title: "distccd(1)"
 name: "distccd"
 section: "1"
@@ -9,9 +10,7 @@ description: "distccd – distributed C/C++ compiler server"
 
 <h2>NAME</h2>
 <p> distccd &#8211; distributed C/C++ compiler server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>distccd &#8211;daemon </code> <i>[OPTIONS]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>distccd </i> is the server for the <a href="/docs/linux/man/1-distcc/">distcc</a>(1) distributed compiler. It accepts and runs compilation jobs for network clients. </p>
 <p> distcc can run over either TCP or a connection command such as <a href="/docs/linux/man/1-ssh/">ssh</a>(1). TCP connections are fast but relatively insecure. SSH connections are secure but slower. </p>
 <p> For SSH connections, distccd must be installed on the volunteer but should not run as a daemon &#8212; it will be started over SSH as needed. SSH connections have several advantages: neither the client nor server listens on any new ports; compilations run with the privileges of the user that requested them; unauthorized users cannot access the server; and source and output is protected in transit. </p>

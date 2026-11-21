@@ -1,4 +1,5 @@
 ---
+
 title: "echoping(1)"
 name: "echoping"
 section: "1"
@@ -9,9 +10,7 @@ description: "echoping – tests a remote host with TCP or UDP"
 
 <h2>NAME</h2>
 <p> echoping &#8211; tests a remote host with TCP or UDP </p>
-<h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [-4] [-6] [-v] [-V] [-f<i>fill]</i> [-t<i>timeout]</i> [-c] [-d] [-u] [-s<i>size]</i> [-n<i>number]</i> [-w<i>delay]</i> [-h<i>url-or-path]</i> [-R] [-i<i>url]</i> [-p<i>priority]</i> [-P<i>tos]</i> [-C] [-S] [-A] [-a] [-m<i>plugin]</i> <code>hostname</code> [:port] [plugin options&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>echoping</code> is a small program to test (approximatively) performances of a remote Internet host by sending it TCP &quot;echo&quot; packets. It can use other protocols as well (HTTP &#8211; which makes it a good tool to test Web servers, UDP &quot;echo&quot;, etc). </p>
 <p> <code>echoping </code> simply shows the elapsed time, including the time to set up the TCP connection and to transfer the data. Therefore, it is unsuitable to physical line raw throughput measures (unlike bing or treno). On the other end, the action it performs are close from, for instance, a HTTP request and it is meaningful to use it (carefully) to measure Web performances. </p>
 <h2>ARGUMENT</h2>

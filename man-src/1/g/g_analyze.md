@@ -1,4 +1,5 @@
 ---
+
 title: "g_analyze(1)"
 name: "g_analyze"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_analyze – analyzes data sets"
 <h2>NAME</h2>
 <p> g_analyze &#8211; analyzes data sets </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_analyze</code> <code>-f</code><i> graph.xvg </i> <code>-ac</code><i> autocorr.xvg </i> <code>-msd</code><i> msd.xvg </i> <code>-cc</code><i> coscont.xvg </i> <code>-dist</code><i> distr.xvg </i> <code>-av</code><i> average.xvg </i> <code>-ee</code><i> errest.xvg </i> <code>-g</code><i> fitlog.log </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]time</code><i></i> <code>-b</code><i> real </i> <code>-e</code><i> real </i> <code>-n</code><i> int </i> <code>-[no]d</code><i></i> <code>-bw</code><i> real </i> <code>-errbar</code><i> enum </i> <code>-[no]integrate</code><i></i> <code>-aver_start</code><i> real </i> <code>-[no]xydy</code><i></i> <code>-[no]regression</code><i></i> <code>-[no]luzar</code><i></i> <code>-temp</code><i> real </i> <code>-fitstart</code><i> real </i> <code>-smooth</code><i> real </i> <code>-filter</code><i> real </i> <code>-[no]power</code><i></i> <code>-[no]subav</code><i></i> <code>-[no]oneacf</code><i></i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_analyze reads an ascii file and analyzes data sets. A line in the input file may start with a time (see option <code> -time</code>) and any number of y values may follow. Multiple sets can also be read when they are seperated by &amp; (option <code> -n</code>), in this case only one y value is read from each line. All lines starting with and @ are skipped. All analyses can also be done for the derivative of a set (option <code> -d</code>). </p>
 <p> All options, except for <code> -av</code> and <code> -power</code> assume that the points are equidistant in time. </p>
 <p> g_analyze always shows the average and standard deviation of each set. For each set it also shows the relative deviation of the third and forth cumulant from those of a Gaussian distribution with the same standard deviation. </p>

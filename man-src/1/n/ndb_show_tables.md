@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_show_tables(1)"
 name: "ndb_show_tables"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ndb_show_tables/"
 description: "ndb_show_tables – display list of NDB tables"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_show_tables [</code><i>options</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ndb_show_tables</code></p>
 <dd>displays a list of all NDB database objects in the cluster. By default, this includes not only both user-created tables and NDB system tables, but NDB-specific indexes, internal triggers, and MySQL Cluster Disk Data objects as well. </dd>
 <p> The following table includes options that are specific to the MySQL Cluster program <code>ndb_show_tables</code>. Additional descriptions follow the table. For options common to all MySQL Cluster programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq. </p>

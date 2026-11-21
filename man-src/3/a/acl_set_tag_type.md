@@ -1,4 +1,5 @@
 ---
+
 title: "acl_set_tag_type(3)"
 name: "acl_set_tag_type"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_set_tag_type/"
 description: "acl_set_tag_type – set the tag type of an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_set_tag_type</code> &#8211; set the tag type of an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_set_tag_type acl_entry_t entry_d acl_tag_t tag_type</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_set_tag_type function sets the tag type of the ACL entry indicated by the argument <i>entry_d</i> to the value of the argument <i>tag_type</i> </p>
 <p> Any ACL entry descriptors that refer to the entry referred to by <i>entry_d</i> continue to refer to that entry.</p>
 <h2>RETURN VALUE</h2>

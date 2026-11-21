@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg-devices(1)"
 name: "ffmpeg-devices"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmpeg-devices/"
 description: "ffmpeg-devices – FFmpeg devices"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes the input and output devices provided by the libavdevice library.</p>
 <h2>DEVICE OPTIONS</h2>
 <p> The libavdevice library provides the same interface as libavformat. Namely, an input device is considered like a demuxer, and an output device like a muxer, and the interface and generic device options are the same provided by libavformat (see the ffmpeg-formats manual). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jsv_script_interface(3)"
 name: "jsv_script_interface"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-jsv_script_interface/"
 description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_sub_get_param, jsv_sub_add_param, jsv_sub_del_param, jsv_is_env, jsv_get_env, jsv_add_env, jsv_mod_env, jsv_del_env, jsv_accept, js..."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>jsv_clear_params</code>();
 </pre>
@@ -92,7 +92,6 @@ description: "jsv_is_param, jsv_get_param, jsv_del_param, jsv_sub_is_param, jsv_
 <pre>
 <code>jsv_on_verify</code>();
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The functions documented here implement the server side of the JSV protocol as described in (where &quot;server&quot; applies to both client- and server-side JSVs). These functions are available in Bourne shell (preferably using <i><a href="/docs/linux/man/1-bash/">bash</a></i>(1) for greater efficiency), TCL, Perl, or Python scripts after sourcing/including the files jsv_inlcude.sh, jsv_include.tcl, JSV.pm, or JSV.py. The files and corresponding JSV script templates are located in the directory <i>$SGE_ROOT/util/resources/jsv</i>. There is also a Java implementation which has a different structure, with Javadoc documentation normally in <i>$SGE_ROOT/doc/javadocs/jjsv</i>, and example files <i>SimpleJsv.java</i> and <i>jjsv.sh</i> in <i>$SGE_ROOT/util/resources/jsv</i>. </p>
 <p> Note that Bourne shell server JSVs are discouraged because any problems with unintended expansion of job parameters represent a security hazard (with the qmaster running as the sgeadmin user). Also they may be relatively slow, and constitute a bottleneck in high-throughput clusters. However, shell JSVs may be faster using even compared with a generally faster shell, since fewer external commands are invoked. </p>
 <p> In the descriptions of routines here, a calling sequence like</p>

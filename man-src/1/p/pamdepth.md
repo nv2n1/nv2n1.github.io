@@ -1,4 +1,5 @@
 ---
+
 title: "pamdepth(1)"
 name: "pamdepth"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pamdepth/"
 description: "pamdepth – change the maxval in a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamdepth</code> <i>newmaxval</i> [<i>netpbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamdepth</code> reads a Netpbm image as input, scales all the pixel values, and writes out the image with the new maxval. Scaling the colors down to a smaller maxval will result in some loss of information. </p>
 <p> This program works on multi-image streams. </p>

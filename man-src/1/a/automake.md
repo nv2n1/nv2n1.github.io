@@ -1,4 +1,5 @@
 ---
+
 title: "automake(1)"
 name: "automake"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-automake/"
 description: "automake – manual page for automake 1.16.5"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>automake-1.16</code> [<i>,OPTION/</i>]&#8230; [<i>,Makefile/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Generate Makefile.in for configure from Makefile.am.</p>
 <h3>Operation modes:</h3>
 <dl>

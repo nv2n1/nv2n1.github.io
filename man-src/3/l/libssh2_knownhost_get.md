@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_get(3)"
 name: "libssh2_knownhost_get"
 section: "3"
@@ -9,12 +10,10 @@ description: "libssh2_knownhost_get – get a known host off the collection of k
 
 <h2>NAME</h2>
 <p> libssh2_knownhost_get &#8211; get a known host off the collection of known hosts</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_knownhost_get(LIBSSH2_KNOWNHOSTS *hosts,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>struct libssh2_knownhost&nbsp;<wbr>**store,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>struct libssh2_knownhost&nbsp;<wbr>*prev):</p>
-<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/3-libssh2_knownhost_get/">libssh2_knownhost_get</a>(3)</i> allows an application to iterate over all known hosts in the collection. </p>
 <p> <i>store</i> should point to a pointer that gets filled in to point to the known host data. </p>
 <p> <i>prev</i> is a pointer to a previous &#8216;struct libssh2_knownhost&#8217; as returned by a previous invoke of this function, or NULL to get the first entry in the internal collection.</p>

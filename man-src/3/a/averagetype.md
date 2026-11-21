@@ -1,4 +1,5 @@
 ---
+
 title: "averagetype(3)"
 name: "averagetype"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-averagetype/"
 description: "ql/instruments/averagetype.hpp – Averaging algorithm enumeration."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />
  #include &lt;ostream&gt; </p>
 <h3>Classes</h3>

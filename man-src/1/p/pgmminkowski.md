@@ -1,4 +1,5 @@
 ---
+
 title: "pgmminkowski(1)"
 name: "pgmminkowski"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pgmminkowski/"
 description: "pgmminkowski – compute Minkowski integral"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmminkowski</code> <i>pgmfile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pgmminkowski</code> computes the 3 Minkowski integrals of a PGM image. </p>
 <p> The Minkowski integrals mathematically characterize the shapes in the image and hence are the basis of &quot;morphological image analysis.&quot; </p>

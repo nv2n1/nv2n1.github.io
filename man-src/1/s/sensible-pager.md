@@ -1,4 +1,5 @@
 ---
+
 title: "sensible-pager(1)"
 name: "sensible-pager"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sensible-pager/"
 description: "sensible-pager – sensible paging"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sensible-pager</code> [OPTIONS&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sensible-pager</code> makes sensible decisions on which pager to call. Programs in Debian can use this script as their default pager, or emulate their behavior.</p>
 <h2>SEE ALSO</h2>
 <p> Documentation of the PAGER variable in <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7)</p>

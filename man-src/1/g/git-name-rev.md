@@ -1,4 +1,5 @@
 ---
+
 title: "git-name-rev(1)"
 name: "git-name-rev"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-name-rev/"
 description: "git-name-rev – Find symbolic names for given revs"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git name - rev[--tags][--refs = &lt;pattern&gt;](--all | --stdin | &lt;commit - ish&gt;...)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Finds symbolic names suitable for human digestion for revisions given in any format parsable by <i>git rev-parse</i>.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;tags</p>

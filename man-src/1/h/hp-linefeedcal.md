@@ -1,4 +1,5 @@
 ---
+
 title: "hp-linefeedcal(1)"
 name: "hp-linefeedcal"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-linefeedcal/"
 description: "hp-linefeedcal – Printer Line Feed Calibration Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Line feed calibration utility for HPLIP supported inkjet printers. (Note: Most printers do not require the use of this utility).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-linefeedcal [DEVICE_URI|PRINTER_NAME] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

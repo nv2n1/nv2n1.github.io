@@ -1,4 +1,5 @@
 ---
+
 title: "nccopy(1)"
 name: "nccopy"
 section: "1"
@@ -9,12 +10,10 @@ description: "nccopy – Copy a netCDF file, optionally changing format, compres
 
 <h2>NAME</h2>
 <p> nccopy &#8211; Copy a netCDF file, optionally changing format, compression, or chunking in the output.</p>
-<h2>SYNOPSIS</h2>
 <p> <code></p>
 <dl>
 <dt>
 </dt><dd>nccopy [-k </code><i> kind_name </i>] [-<i>kind_code</i>] [-d <i> n </i>] [-s] [-c <i> chunkspec </i>] [-u] [-w] [-[v|V] var1,&#8230;] [-[g|G] grp1,&#8230;] [-m <i> bufsize </i>] [-h <i> chunk_cache </i>] [-e <i> cache_elems </i>] [-r] <i> infile </i> <i> outfile </i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>nccopy</code> utility copies an input netCDF file in any supported format variant to an output netCDF file, optionally converting the output to any compatible netCDF format variant, compressing the data, or rechunking the data. For example, if built with the netCDF-3 library, a netCDF classic file may be copied to a netCDF 64-bit offset file, permitting larger variables. If built with the netCDF-4 library, a netCDF classic file may be copied to a netCDF-4 file or to a netCDF-4 classic model file as well, permitting data compression, efficient schema changes, larger variable sizes, and use of other netCDF-4 features. </p>
 <p> If no output format is specified, with either -k <i>kind_name</i> or <i>-kind_code</i>, then the output will use the same format as the input, unless the input is classic or 64-bit offset and either chunking or compression is specified, in which case the output will be netCDF-4 classic model format. Attempting some kinds of format conversion will result in an error, if the conversion is not possible. For example, an attempt to copy a netCDF-4 file that uses features of the enhanced model, such as groups or variable-length strings, to any of the other kinds of netCDF formats that use the classic model will result in an error. </p>
 <p> <code>nccopy</code> also serves as an example of a generic netCDF-4 program, with its ability to read any valid netCDF file and handle nested groups, strings, and user-defined types, including arbitrarily nested compound types, variable-length types, and data of any valid netCDF-4 type. </p>

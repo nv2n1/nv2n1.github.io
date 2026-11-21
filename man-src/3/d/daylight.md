@@ -1,4 +1,5 @@
 ---
+
 title: "daylight(3)"
 name: "daylight"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-daylight/"
 description: "tzset, tzname, timezone, daylight – initialize time conversion information"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;
 void tzset(void);
@@ -21,7 +21,6 @@ extern int daylight;
  <i>timezone</i>, <i>daylight</i>: _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>tzset</code>() function initializes the <i>tzname</i> variable from the <code>TZ</code> environment variable. This function is automatically called by the other time conversion functions that depend on the timezone. In a System-V-like environment, it will also set the variables <i>timezone</i> (seconds West of UTC) and <i>daylight</i> (to 0 if this timezone does not have any daylight saving time rules, or to nonzero if there is a time, past, present or future when daylight saving time applies). </p>
 <p> If the <code>TZ</code> variable does not appear in the environment, the system timezone is used. The system timezone is configured by copying, or linking, a file in the <code><a href="/docs/linux/man/5-tzfile/">tzfile</a></code>(5) format to <i>/etc/localtime</i>. A timezone database of these files may be located in the system timezone directory (see the <code>FILES</code> section below). </p>
 <p> If the <code>TZ</code> variable does appear in the environment, but its value is empty, or its value cannot be interpreted using any of the formats specified below, then Coordinated Universal Time (UTC) is used. </p>

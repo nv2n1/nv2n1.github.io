@@ -1,4 +1,5 @@
 ---
+
 title: "pod2test(1)"
 name: "pod2test"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pod2test/"
 description: "pod2test – Convert embedded tests and code examples to .t files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pod2test[-Mmodule][input[output]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>pod2test</code> is a front-end for Pod::Tests (formerly Test::Inline 1). It generates TAP-compatible .t testing scripts from embedded tests and code examples. </p>
 <p> If output is not specified, the resulting .t file will go to <font SIZE="-1">STDOUT.</font> Otherwise, it will go to the given output file. If input is not given, it will draw from <font SIZE="-1">STDIN.</font> </p>
 <p> If the given file contains no tests or code examples, no output will be given, no output file will be created and pod2test will exit with 1. </p>

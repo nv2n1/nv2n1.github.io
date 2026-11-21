@@ -1,4 +1,5 @@
 ---
+
 title: "perlutil(1)"
 name: "perlutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlutil/"
 description: "perlutil – utilities packaged with the Perl distribution"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Along with the Perl interpreter itself, the Perl distribution installs a range of utilities on your system. There are also several utilities which are used by the Perl distribution itself as part of the install process. This document exists to list all of these utilities, explain what they are for and provide pointers to each module&#8217;s documentation, if appropriate.</p>
 <h2>LIST OF UTILITIES</h2>
 <h3>Documentation</h3>

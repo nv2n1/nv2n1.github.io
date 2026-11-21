@@ -1,4 +1,5 @@
 ---
+
 title: "beep-media-player-2(1)"
 name: "beep-media-player-2"
 section: "1"
@@ -9,9 +10,7 @@ description: "BMP – Media Player"
 
 <h2>NAME</h2>
 <p> BMP &#8211; Media Player</p>
-<h2>SYNOPSIS</h2>
 <p> <code>beep-media-player-2 [OPTIONS]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>BMP</i> is a media player</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_cork(3)"
 name: "gnutls_record_cork"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_record_cork – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_cork &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_record_cork(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> If called, <code>gnutls_record_send()</code> will no longer send any records. Any sent records will be cached until <code>gnutls_record_uncork()</code> is called. </p>
 <p> This function is safe to use with DTLS after GnuTLS 3.3.0.</p>
 <h2>SINCE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "xzdec(1)"
 name: "xzdec"
 section: "1"
@@ -9,10 +10,8 @@ description: "xzdec, lzmadec – Small .xz and .lzma decompressors"
 
 <h2>NAME</h2>
 <p> xzdec, lzmadec &#8211; Small .xz and .lzma decompressors</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xzdec</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]<br />
  <code>lzmadec</code> [<i>option&#8230;</i>] [<i>file&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xzdec</code> is a liblzma-based decompression-only tool for <code>.xz</code> (and only <code>.xz</code>) files. <code>xzdec</code> is intended to work as a drop-in replacement for <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) in the most common situations where a script has been written to use <code>xz &#8211;decompress &#8211;stdout</code> (and possibly a few other commonly used options) to decompress <code>.xz</code> files. <code>lzmadec</code> is identical to <code>xzdec</code> except that <code>lzmadec</code> supports <code>.lzma</code> files instead of <code>.xz</code> files. </p>
 <p> To reduce the size of the executable, <code>xzdec</code> doesn&#8217;t support multithreading or localization, and doesn&#8217;t read options from <code>XZ_DEFAULTS</code> and <code>XZ_OPT</code> environment variables. <code>xzdec</code> doesn&#8217;t support displaying intermediate progress information: sending <code>SIGINFO</code> to <code>xzdec</code> does nothing, but sending <code>SIGUSR1</code> terminates the process instead of displaying progress information.</p>
 <h2>OPTIONS</h2>

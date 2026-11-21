@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_handle_extended_data(3)"
 name: "libssh2_channel_handle_extended_data"
 section: "3"
@@ -9,10 +10,8 @@ description: "libssh2_channel_handle_extended_data – set extended data handlin
 
 <h2>NAME</h2>
 <p> libssh2_channel_handle_extended_data &#8211; set extended data handling mode</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> void libssh2_channel_handle_extended_data(LIBSSH2_CHANNEL *channel, int ignore_mode); </p>
-<h2>DESCRIPTION</h2>
 <p> This function is deprecated. Use the <i><a href="/docs/linux/man/3-libssh2_channel_handle_extended_data2/">libssh2_channel_handle_extended_data2</a>(3)</i> function instead! </p>
 <p> <i>channel</i> &#8211; Active channel stream to change extended data handling on. </p>
 <p> <i>ignore_mode</i> &#8211; One of the three LIBSSH2_CHANNEL_EXTENDED_DATA_* Constants.<br />

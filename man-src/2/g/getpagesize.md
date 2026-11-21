@@ -1,4 +1,5 @@
 ---
+
 title: "getpagesize(2)"
 name: "getpagesize"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getpagesize/"
 description: "getpagesize – get memory page size"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int getpagesize(void);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -27,7 +27,6 @@ _BSD_SOURCE || !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L)
 </dd><dt>Before glibc 2.12:</dt>
 <dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The function <code>getpagesize</code>() returns the number of bytes in a memory page, where &quot;page&quot; is a fixed-length block, the unit for memory allocation and file mapping performed by <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</p>
 <h2>CONFORMING TO</h2>
 <p> SVr4, 4.4BSD, SUSv2. In SUSv2 the <code>getpagesize</code>() call is labeled LEGACY, and in POSIX.1-2001 it has been dropped; HP-UX does not have this call.</p>

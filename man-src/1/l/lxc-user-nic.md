@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-user-nic(1)"
 name: "lxc-user-nic"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-user-nic – Create and attach a nic to another network namesp
 
 <h2>NAME</h2>
 <p> lxc-user-nic &#8211; Create and attach a nic to another network namespace.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-user-nic</code> {<i>pid</i>} {<i>type</i>} {<i>bridge</i>} [<i>nicname</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-user-nic</code> is a setuid-root program with which unprivileged users may create network interfaces for use by a lxc container. </p>
 <p> It will consult the configuration file <i>/etc/lxc/lxc-usernet</i> to determine the number of interfaces which the calling user is allowed to create, and which bridge he may attach them to. It tracks the number of interfaces each user has created using the file <i>/run/lxc/nics</i>. It ensures that the calling user is privileged over the network namespace to which the interface will be attached.</p>
 <h2>OPTIONS</h2>

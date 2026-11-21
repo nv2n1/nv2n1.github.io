@@ -1,4 +1,5 @@
 ---
+
 title: "pal2rgb(1)"
 name: "pal2rgb"
 section: "1"
@@ -9,9 +10,7 @@ description: "pal2rgb – convert a palette color TIFF image to a full color ima
 
 <h2>NAME</h2>
 <p> pal2rgb &#8211; convert a palette color <font SIZE="-1">TIFF</font> image to a full color image</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pal2rgb</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Pal2rgb</i> converts a palette color <font SIZE="-1">TIFF</font> image to a full color image by applying the colormap of the palette image to each sample to generate a full color <font SIZE="-1">RGB</font> image.</p>
 <h2>OPTIONS</h2>
 <p> Options that affect the interpretation of input data are:</p>

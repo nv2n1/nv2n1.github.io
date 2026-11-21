@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-escape(1)"
 name: "systemd-escape"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-systemd-escape/"
 description: "systemd-escape – Escape strings for usage in systemd unit names"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-escape</code> [OPTIONS&#8230;] [STRING&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-escape</code></p>
 <dd>may be used to escape strings for inclusion in systemd unit names. The command may be used to escape and to undo escaping of strings. </dd>
 <p> The command takes any number of strings on the command line, and will process them individually, one after another. It will output them separated by spaces to stdout. </p>

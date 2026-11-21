@@ -1,4 +1,5 @@
 ---
+
 title: "sggbak(3)"
 name: "sggbak"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sggbak/"
 description: "sggbak.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggbak</code> (JOB, SIDE, N, ILO, IHI, LSCALE, RSCALE, M, V, LDV, INFO)<br />
  <i></i><code>SGGBAK</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "claqsb(3)"
 name: "claqsb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqsb/"
 description: "claqsb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqsb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br />
  <i></i><code>CLAQSB</code> scales a symmetric/Hermitian band matrix, using scaling factors computed by spbequ.</p>

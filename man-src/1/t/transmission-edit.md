@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-edit(1)"
 name: "transmission-edit"
 section: "1"
@@ -9,9 +10,7 @@ description: "transmission-edit – command-line utility to modify .torrent file
 
 <h2>NAME</h2>
 <p> <code>transmission-edit</code> &#8211; command-line utility to modify .torrent files&#8217; announce URLs</p>
-<h2>SYNOPSIS</h2>
 <p> -words [-<code>h </code> ] [-<code>a </code><i>url</i> ] [-<code>d </code><i>url</i> ] [-<code>r </code><i>search replace</i> ] <i>torrentfile(s)</i></p>
-<h2>DESCRIPTION</h2>
 <p> command-line utility to modify .torrent files&#8217; announce URLs</p>
 <h2>OPTIONS</h2>
 <dl>

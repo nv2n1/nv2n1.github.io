@@ -1,4 +1,5 @@
 ---
+
 title: "gen_table(1)"
 name: "gen_table"
 section: "1"
@@ -10,9 +11,7 @@ description: "gen_table – generate tables for use by mdrun"
 <h2>NAME</h2>
 <p> gen_table &#8211; generate tables for use by mdrun </p>
 <p> <code>VERSION 4.0_rc1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>gen_table</code> <code>-o</code><i> table.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-el</code><i> enum </i> <code>-rc</code><i> real </i> <code>-rtol</code><i> real </i> <code>-xi</code><i> real </i> <code>-xir</code><i> real </i> <code>-z1</code><i> real </i> <code>-z2</code><i> real </i> <code>-nrow1</code><i> int </i> <code>-nrow2</code><i> int </i> <code>-m</code><i> enum </i> <code>-resol</code><i> int </i> <code>-delta</code><i> real </i> <code>-efac</code><i> real </i> <code>-nrep</code><i> int </i> <code>-ndisp</code><i> int </i></p>
-<h2>DESCRIPTION</h2>
 <p> gen_table generates tables for mdrun for use with the USER defined potentials. Note that the format has been update for higher accuracy in the forces starting with version 4.0. Using older tables with 4.0 will silently crash your simulations, as will using new tables with an older GROMACS version. This is because in the old version the second derevative of the potential was specified whereas in the new version the first derivative of the potential is used instead. </p>
 <p> For Slater interactions four parameters must be passed: the 1/Width and the row number of the element. The interactions are computed analytically which may be slow due to the fact that arbitraray precision arithmetic is needed. If the width of one of the Slater is zero a Nucleus-Slater interaction will be generated.</p>
 <h2>FILES</h2>

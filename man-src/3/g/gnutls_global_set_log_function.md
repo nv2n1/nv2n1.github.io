@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_global_set_log_function(3)"
 name: "gnutls_global_set_log_function"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_global_set_log_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_set_log_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_global_set_log_function(gnutls_log_func </code><i>log_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_log_func log_func</dt>
 <dd> it&#8217;s a log function</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This is the function where you set the logging function gnutls is going to use. This function only accepts a character array. Normally you may not use this function since it is only used for debugging purposes. </p>
 <p>&nbsp;<wbr><i>gnutls_log_func</i>&nbsp;<wbr>is of the form, void (*gnutls_log_func)( int level, const char*);</p>
 <h2>REPORTING BUGS</h2>

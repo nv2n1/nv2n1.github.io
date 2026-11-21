@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_ext_export_proxy(3)"
 name: "gnutls_x509_ext_export_proxy"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_ext_export_proxy – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_export_proxy &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_export_proxy(int </code><i>pathLenConstraint</i><code>, const char * </code><i>policyLanguage</i><code>, const char * </code><i>policy</i><code>, size_t </code><i>sizeof_policy</i><code>, gnutls_datum_t * </code><i>ext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_x509_ext_export_proxy – API function"
 <dd> size of <i>policy</i> .</dd>
 <dt>gnutls_datum_t * ext</dt>
 <dd> The DER-encoded extension data; must be freed using <code>gnutls_free()</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will convert the parameters provided to a proxyCertInfo extension. </p>
 <p> The <i>ext</i> data will be allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>

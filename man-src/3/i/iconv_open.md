@@ -1,4 +1,5 @@
 ---
+
 title: "iconv_open(3)"
 name: "iconv_open"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-iconv_open/"
 description: "iconv_open – allocate descriptor for character set conversion"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;iconv.h&gt;
 iconv_t iconv_open(const char *tocode, const char *fromcode);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>iconv_open</code>() function allocates a conversion descriptor suitable for converting byte sequences from character encoding <i>fromcode</i> to character encoding <i>tocode</i>. </p>
 <p> The values permitted for <i>fromcode</i> and <i>tocode</i> and the supported combinations are system-dependent. For the GNU C library, the permitted values are listed by the <i>iconv &#8211;list</i> command, and all combinations of the listed values are supported. Furthermore the GNU C library and the GNU libiconv library support the following two suffixes:</p>
 <dl>

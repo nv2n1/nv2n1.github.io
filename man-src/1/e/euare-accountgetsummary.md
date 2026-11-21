@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountgetsummary(1)"
 name: "euare-accountgetsummary"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-accountgetsummary – Display account-level information abou
 
 <h2>NAME</h2>
 <p> euare-accountgetsummary &#8211; Display account-level information about account entity usage and IAM quotas</p>
-<h2>SYNOPSIS</h2>
 <p> euare-accountgetsummary [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Display account-level information about account entity usage and IAM quotas</p>
 <h3>optional arguments:</h3>
 <dl>

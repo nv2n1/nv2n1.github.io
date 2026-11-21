@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-ban(1)"
 name: "fts-rest-ban"
 section: "1"
@@ -11,7 +12,6 @@ description: "fts-rest-ban"
 <p> fts-rest-ban</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-ban [options]</p>
-<h2>DESCRIPTION</h2>
 <p> Ban and unban storage elements and users</p>
 <h2>OPTIONS</h2>
 <dl>

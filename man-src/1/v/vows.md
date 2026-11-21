@@ -1,4 +1,5 @@
 ---
+
 title: "vows(1)"
 name: "vows"
 section: "1"
@@ -9,9 +10,7 @@ description: "vows – Asynchronous behavior-driven development (BDD) framework"
 
 <h2>NAME</h2>
 <p> vows &#8211; Asynchronous behavior-driven development (BDD) framework</p>
-<h2>SYNOPSIS</h2>
 <p> Usage: vows [FILE, &#8230;] [options]</p>
-<h2>DESCRIPTION</h2>
 <p> Vows is an asynchronous behavior-driven development (BDD) framework for Node.js. </p>
 <p> Vows was built from the ground up to test asynchronous code. It executes your tests in parallel when it makes sense, and sequentially when there are dependencies. Emphasis was put on speed of execution, clarity and user experience.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-session-logout(1)"
 name: "xfce4-session-logout"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xfce4-session-logout/"
 description: "xfce4-session-logout – Logs out from Xfce"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xfce4-session-logout</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>xfce4-session-logout</code> command. </p>
 <p> The <code>xfce4-session-logout</code> command allows you to programmatically logout from your Xfce session. It requests the session manager to display the logout confirmation screen, or, if given one of the command-line options below, causes the session manager to take the requested action immediately. </p>
 <h2>OPTIONS</h2>

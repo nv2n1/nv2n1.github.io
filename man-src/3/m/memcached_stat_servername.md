@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_stat_servername(3)"
 name: "memcached_stat_servername"
 section: "3"
@@ -10,7 +11,6 @@ description: "memcached_stat_servername – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memcached_stat_servername &#8211; libmemcached Documentation </p>
 <p> Get memcached statistics</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_stat_st</code></dt>
@@ -28,7 +28,6 @@ description: "memcached_stat_servername – libmemcached Documentation"
 </dd><dt><code>memcached_return_t memcached_stat_execute(memcached_st</code><i>&nbsp;<wbr>*memc</i>, const char<i>&nbsp;<wbr>*args</i>, <i>memcached_stat_fn</i><i>&nbsp;<wbr>func</i>, void<i>&nbsp;<wbr>*context</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) has the ability to query a memcached server (or collection of servers) for their current state. Queries to find state return a <i>memcached_stat_st</i> structure. You are responsible for freeing this structure. While it is possible to access the structure directly it is not advisable. <i>memcached_stat_get_value()</i> has been provided to query the structure. </p>
 <p> <i>memcached_stat_execute()</i> uses the servers found in <i>memcached_stat_st</i> and executes a &quot;stat&quot; command on each server. args is an optional argument that can be passed in to modify the behavior of &quot;stats&quot;. You will need to supply a callback function that will be supplied each pair of values returned by the memcached server. </p>
 <p> <i>memcached_stat()</i> fetches an array of <i>memcached_stat_st</i> structures containing the state of all available memcached servers. The return value must be freed by the calling application. If called with the <code>MEMCACHED_BEHAVIOR_USE_UDP</code> behavior set, a NULL value is returned and the error parameter is set to <code>MEMCACHED_NOT_SUPPORTED</code>. </p>

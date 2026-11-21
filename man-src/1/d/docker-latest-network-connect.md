@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-network-connect(1)"
 name: "docker-latest-network-connect"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-network-connect/"
 description: "docker-network-connect – connect a container to a network"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker network connect</code> [<code>&#8211;help</code>] NETWORK CONTAINER </p>
-<h2>DESCRIPTION</h2>
 <p> Connects a container to a network. You can connect a container by name or by ID. Once connected, the container can communicate with other containers in the same network. </p>
 <dl>
 <dt>

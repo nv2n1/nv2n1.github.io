@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_goodmask(3)"
 name: "ipsec_goodmask"
 section: "3"
@@ -9,12 +10,10 @@ description: "ipsec_goodmask, ipsec_masktobits, ipsec_bitstomask – check if In
 
 <h2>NAME</h2>
 <p> ipsec_goodmask, ipsec_masktobits, ipsec_bitstomask &#8211; check if Internet subnet mask is valid, convert Internet subnet mask to bit count, convert bit count to Internet subnet mask</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>int goodmask(struct in_addr mask);</code><br />
  <code>int masktobits(struct in_addr mask);</code><br />
  <code>struct in_addr bitstomask(int n);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These functions are obsolete; see <i>ipsec_masktocount</i>(3) for a partial replacement. </p>
 <p> <i>Goodmask</i> reports whether the subnet <i>mask</i> is a valid one, i.e. consists of a (possibly empty) sequence of <code>1</code>s followed by a (possibly empty) sequence of <code>0</code>s. <i>Masktobits</i> takes a (valid) subnet mask and returns the number of <code>1</code> bits in it. <i>Bitstomask</i> reverses this, returning the subnet mask corresponding to bit count <i>n</i>. </p>
 <p> All masks are in network byte order.</p>

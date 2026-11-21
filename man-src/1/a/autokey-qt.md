@@ -1,4 +1,5 @@
 ---
+
 title: "autokey-qt(1)"
 name: "autokey-qt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autokey-qt/"
 description: "autokey-qt – keyboard automation utility for KDE and QT"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autokey-qt</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>autokey-qt</code> command. </p>
 <p> <code>autokey-qt</code> AutoKey is a desktop automation utility for Linux and X11. It allows the automation of virtually any task by responding to typed abbreviations and hotkeys. It offers a full-featured GUI that makes it highly accessible for novices, as well as a scripting interface offering the full flexibility and power of the Python language.<br />
  For more information refer to the online wiki at:<br />

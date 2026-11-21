@@ -1,4 +1,5 @@
 ---
+
 title: "dspam_stats(1)"
 name: "dspam_stats"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dspam_stats/"
 description: "dspam_stats – display spam statistics"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dspam_stats</code> [<code>&#8211;profile</code>=PROFILE][<code>-HhrSst</code>] [<i>username</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>dspam_stats</code> displays the spam filtering statistics for one or all users on the system. Displays TP (True Positives (Spam)), TN (True Negatives (Innocent)), FP (False Positives), FN (False Negatives), SC (Spam Corpusfed) and NC (Nonspam Corpusfed). </p>
 <h2>OPTIONS</h2>
 <dl>

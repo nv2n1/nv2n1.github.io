@@ -1,4 +1,5 @@
 ---
+
 title: "tor(1)"
 name: "tor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tor/"
 description: "tor – The second-generation onion router"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tor</code> [<i>OPTION</i> <i>value</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Tor is a connection-oriented anonymizing communication service. Users choose a source-routed path through a set of nodes, and negotiate a &quot;virtual circuit&quot; through the network, in which each node knows its predecessor and successor, but no others. Traffic flowing down the circuit is unwrapped by a symmetric key at each node, which reveals the downstream node. </p>
 <p> Basically, Tor provides a distributed network of servers or relays (&quot;onion routers&quot;). Users bounce their TCP streams &#8212; web traffic, ftp, ssh, etc. &#8212; around the network, and recipients, observers, and even the relays themselves have difficulty tracking the source of the stream. </p>
 <p> By default, <code>tor</code> will act as a client only. To help the network by providing bandwidth as a relay, change the <code>ORPort</code> configuration option &#8212; see below. Please also consult the documentation on the Tor Project&#8217;s website.</p>

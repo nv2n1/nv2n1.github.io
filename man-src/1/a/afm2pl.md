@@ -1,4 +1,5 @@
 ---
+
 title: "afm2pl(1)"
 name: "afm2pl"
 section: "1"
@@ -6,12 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-afm2pl/"
 description: "afm2pl – convert AFM font metrics to TeX pl font metrics"
 ---
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>afm2pl</code> [<code>-p</code>&nbsp;<i>encoding_file</i>] [<code>-o</code>] [<code>-e</code>&nbsp;<i>extension_factor</i>] [<code>-s</code>&nbsp;<i>slant_factor</i>] [<code>-f</code>&nbsp;<i>font_dimensions</i>] [<code>-k</code>] [<code>-m</code>&nbsp;<i>letter_spacing</i>] [<code>-l</code>&nbsp;<i>ligkern_spec</i>] [<code>-L</code>&nbsp;<i>ligkern_spec</i>] [<code>-n</code>] <i>input_file[.afm]</i> [<i>output_file[.pl]</i>] </dt>
 <dt><code>afm2pl</code> [--help] | [--version] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd> <p> afm2pl converts an afm (Adobe Font Metric) file into a pl (Property List) file, which in its turn can be converted to a tfm (TeX Font Metric) file. It normally preserves kerns and ligatures, but also offers additional control over them. </p>
 <p> afm2pl is meant to be a partial replacement for afm2tfm, on which it is based. With afm2tfm, preserving kerns and ligatures is possible only in a roundabout way, and handling of them is hard-wired. </p>
 <p> For text fonts, Y&amp;Y&#8217;s texnansi is a good encoding to be used with afm2pl. Its character set includes all the accented characters likely to be needed for Western languages, plus many typographic symbols, without a need for either virtual fonts or a separate text companion font. </p>

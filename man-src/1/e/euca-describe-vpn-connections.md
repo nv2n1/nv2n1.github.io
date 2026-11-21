@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-vpn-connections(1)"
 name: "euca-describe-vpn-connections"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-vpn-connections – Show information about VPN conne
 
 <h2>NAME</h2>
 <p> euca-describe-vpn-connections &#8211; Show information about VPN connections</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-vpn-connections [&#8211;format FORMAT]</p>
 <dl>
 <dt>[&#8211;stylesheet STYLESHEET]</dt>
 <dd> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [VPNCONN [VPNCONN &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about VPN connections</p>
 <h3>positional arguments:</h3>
 <dl>

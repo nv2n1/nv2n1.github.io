@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_sign_data(3)"
 name: "gnutls_x509_privkey_sign_data"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_privkey_sign_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_sign_data &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_sign_data(gnutls_x509_privkey_t </code><i>key</i><code>, gnutls_digest_algorithm_t </code><i>digest</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, void * </code><i>signature</i><code>, size_t * </code><i>signature_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_x509_privkey_sign_data – API function"
 <dd> will contain the signature</dd>
 <dt>size_t * signature_size</dt>
 <dd> holds the size of signature (and will be replaced by the new size)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will sign the given data using a signature algorithm supported by the private key. Signature algorithms are always used together with a hash functions. Different hash functions may be used for the RSA algorithm, but only SHA-1 for the DSA keys. </p>
 <p> If the buffer provided is not long enough to hold the output, then * <i>signature_size</i> is updated and <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> will be returned. </p>
 <p> Use <code>gnutls_x509_crt_get_preferred_hash_algorithm()</code> to determine the hash algorithm.</p>

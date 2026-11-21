@@ -1,4 +1,5 @@
 ---
+
 title: "debian-distro-info(1)"
 name: "debian-distro-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-debian-distro-info/"
 description: "debian-distro-info – provides information about Debian’s distributions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>debian-distro-info</code> [<i>OPTIONS</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

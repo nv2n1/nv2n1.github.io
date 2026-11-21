@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_context_initserial(3)"
 name: "lwres_context_initserial"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_context_initserial/"
 description: "lwres_context_create, lwres_context_destroy, lwres_context_nextserial, lwres_context_initserial, lwres_context_freemem, lwres_context_allocmem, lwres_context_sendrecv – lightweight resolver context..."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
@@ -19,7 +19,6 @@ description: "lwres_context_create, lwres_context_destroy, lwres_context_nextser
 <dt> <code>void lwres_context_freemem(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, void&nbsp;<wbr>*</code><i>mem</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dt>
 <dt> <code>void lwres_context_allocmem(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dt>
 <dt> <code>void * lwres_context_sendrecv(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, void&nbsp;<wbr>*</code><i>sendbase</i><code>, int&nbsp;<wbr></code><i>sendlen</i><code>, void&nbsp;<wbr>*</code><i>recvbase</i><code>, int&nbsp;<wbr></code><i>recvlen</i><code>, int&nbsp;<wbr>*</code><i>recvd_len</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lwres_context_create()</code></p>
 <dd>creates a <code>lwres_context_t</code> structure for use in lightweight resolver operations. It holds a socket and other data needed for communicating with a resolver daemon. The new <code>lwres_context_t</code> is returned through <i>contextp</i>, a pointer to a <code>lwres_context_t</code> pointer. This <code>lwres_context_t</code> pointer must initially be NULL, and is modified to point to the newly created <code>lwres_context_t</code>. </dd>
 <p> When the lightweight resolver needs to perform dynamic memory allocation, it will call <i>malloc_function</i> to allocate memory and <i>free_function</i> to free it. If <i>malloc_function</i> and <i>free_function</i> are NULL, memory is allocated using <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3). and <code><a href="/docs/linux/man/3-free/">free</a></code>(3). It is not permitted to have a NULL <i>malloc_function</i> and a non-NULL <i>free_function</i> or vice versa. <i>arg</i> is passed as the first parameter to the memory allocation functions. If <i>malloc_function</i> and <i>free_function</i> are NULL, <i>arg</i> is unused and should be passed as NULL. </p>

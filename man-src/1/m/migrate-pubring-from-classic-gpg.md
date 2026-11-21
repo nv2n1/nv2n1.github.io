@@ -1,4 +1,5 @@
 ---
+
 title: "migrate-pubring-from-classic-gpg(1)"
 name: "migrate-pubring-from-classic-gpg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-migrate-pubring-from-classic-gpg/"
 description: "migrate-pubring-from-classic-gpg – Migrate a public keyring from \"classic\" to \"modern\" GnuPG"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>migrate-pubring-from-classic-gpg</code> [ <code>GPGHOMEDIR</code> | <i>&#8211;default</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>migrate-pubring-from-classic-gpg</code> migrates the public keyring in GnuPG home directory GPGHOMEDIR from the &quot;classic&quot; keyring format (pubring.gpg) to the &quot;modern&quot; keybox format using GnuPG versions 2.1 or 2.2 (pubring.kbx). </p>
 <p> Specifying <code>&#8211;default</code> selects the standard GnuPG home directory (looking at $GNUPGHOME first, and falling back to ~/.gnupg if unset. </p>
 <h2>OPTIONS</h2>

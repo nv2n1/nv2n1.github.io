@@ -1,4 +1,5 @@
 ---
+
 title: "mate-calc(1)"
 name: "mate-calc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mate-calc/"
 description: "mate-calc – (mate-calculator) – The MATE Desktop Environment Calculator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mate-calc [OPTIONS&#8230;] [FILES&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mate-calc</code> is the official calculator for the MATE Desktop Environment. It has been designed to be used with either the mouse or the keyboard. It is visually similar to a lot of hand-held calculators. </p>
 <p> This manual page briefly documents the <code>mate-calc</code> command.</p>
 <h2>OPTIONS</h2>

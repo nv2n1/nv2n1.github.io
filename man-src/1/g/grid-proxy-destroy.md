@@ -1,4 +1,5 @@
 ---
+
 title: "grid-proxy-destroy(1)"
 name: "grid-proxy-destroy"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-grid-proxy-destroy/"
 description: "grid-proxy-destroy – Destroy the default proxy certificate"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> grid-proxy-destroy -help | -usage | -version </p>
 <p> grid-proxy-destroy [-debug] [-dryrun] [-default] [&#8211; FILENAME &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The grid-proxy-destroy program removes X.509 proxy files from the local filesystem. It overwrites the data in the files and removes the files from the filesystem. By default, it removes the current user&#8217;s default proxy (either /tmp/x509up_u&#8217;UID&#8217; where <i>UID</i> is the current POSIX user id, or the file pointed to by the X509_USER_PROXY environment variable) unless a list of proxy file paths are included as part of the command line. </p>
 <p> Use the <code>&#8212;</code> command-line option to separate a list of proxy paths from command line options if the proxy file begins with the <code>&#8211;</code> character.</p>
 <h2>OPTIONS</h2>

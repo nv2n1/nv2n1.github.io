@@ -1,4 +1,5 @@
 ---
+
 title: "f2py(1)"
 name: "f2py"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-f2py/"
 description: "f2py – Fortran to Python interface generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> (1) To construct extension module sources: </p>
 <p> <code>f2py</code> [&lt;options&gt;] &lt;fortran files&gt; [[[only:]||[skip:]] &lt;fortran functions&gt; ] [: &lt;fortran files&gt; &#8230;] </p>
 <p> (2) To compile fortran files and build extension modules: </p>
 <p> <code>f2py</code> -c [&lt;options&gt;, &lt;config_fc options&gt;, &lt;extra options&gt;] &lt;fortran files&gt; </p>
 <p> (3) To generate signature files: </p>
 <p> <code>f2py</code> -h &lt;filename.pyf&gt; &#8230;&lt; same options as in (1) &gt;</p>
-<h2>DESCRIPTION</h2>
 <p> This program generates a Python C/API file (&lt;modulename&gt;module.c) that contains wrappers for given Fortran or C functions so that they can be called from Python. With the -c option the corresponding extension modules are built.</p>
 <h2>OPTIONS</h2>
 <dl>

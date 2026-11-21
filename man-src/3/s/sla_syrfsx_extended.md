@@ -1,4 +1,5 @@
 ---
+
 title: "sla_syrfsx_extended(3)"
 name: "sla_syrfsx_extended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_syrfsx_extended/"
 description: "sla_syrfsx_extended.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sla_syrfsx_extended</code> (PREC_TYPE, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
  <i></i><code>SLA_SYRFSX_EXTENDED</code> improves the computed solution to a system of linear equations for symmetric indefinite matrices by performing extra-precise iterative refinement and provides error bounds and backward error estimates for the solution.</p>

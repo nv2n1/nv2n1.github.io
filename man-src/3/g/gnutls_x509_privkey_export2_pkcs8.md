@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_export2_pkcs8(3)"
 name: "gnutls_x509_privkey_export2_pkcs8"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_privkey_export2_pkcs8 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_export2_pkcs8 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_export2_pkcs8(gnutls_x509_privkey_t </code><i>key</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_x509_privkey_export2_pkcs8 – API function"
 <dd> an ORed sequence of gnutls_pkcs_encrypt_flags_t</dd>
 <dt>gnutls_datum_t * out</dt>
 <dd> will contain a private key PEM or DER encoded</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the private key to a PKCS8 structure. Both RSA and DSA keys can be exported. For DSA keys we use PKCS <code>11</code> definitions. If the flags do not specify the encryption cipher, then the default 3DES (PBES2) will be used. </p>
 <p> The <i>password</i> can be either ASCII or UTF-8 in the default PBES2 encryption schemas, or ASCII for the PKCS12 schemas. </p>
 <p> The output buffer is allocated using <code>gnutls_malloc()</code>. </p>

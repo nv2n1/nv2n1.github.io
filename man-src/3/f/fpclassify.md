@@ -1,4 +1,5 @@
 ---
+
 title: "fpclassify(3)"
 name: "fpclassify"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fpclassify/"
 description: "fpclassify, isfinite, isnormal, isnan, isinf – floating-point classification macros"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 int fpclassify(x);
@@ -35,7 +35,6 @@ int isinf(x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Floating point numbers can have special values, such as infinite or NaN. With the macro <code>fpclassify(</code><i>x</i><code>)</code> you can find out what type <i>x</i> is. The macro takes any floating-point expression as argument. The result is one of the following values:</p>
 <dl>
 <dt><code>FP_NAN</code></dt>

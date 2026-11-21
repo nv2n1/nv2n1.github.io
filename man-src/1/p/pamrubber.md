@@ -1,4 +1,5 @@
 ---
+
 title: "pamrubber(1)"
 name: "pamrubber"
 section: "1"
@@ -9,10 +10,8 @@ description: "pamrubber – a rubber-sheeting utility that stretches an image ba
 
 <h2>NAME</h2>
 <p> pamrubber &#8211; a rubber-sheeting utility that stretches an image based on control points </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pamrubber</code> {<code>-tri | -quad</code>} [<code>-linear</code>] [<code>-frame</code>] [<code>-randomseed=</code><i>N</i>] <i>cp1x cp1y</i> [<i>cp2x cp2y</i> [<i>cp3x cp3y</i> [<i>cp4x cp4y</i>]]] <i>cp1x cp1y</i> [<i>cp2x cp2y</i> [<i>cp3x cp3y</i> [<i>cp4x cp4y</i>]]] [<i>filename</i>] </p>
 <p> Minimum unique abbreviation of options is acceptable. You may use double hyphens instead of single hyphen to denote options. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> The <code>pamrubber</code> utility converts a pam image into a new image with the contents moved around. The transformation is often called &#8216;rubber sheeting&#8217;: you identify control points (CP) on the source image and specify new positions for those points in the new image. <code>pamrubber</code> moves all the pixels around, stretching and compressing as necessary, as if the original image were on a sheet of rubber and you pulled on the sheet to make the control points move to their new locations. </p>
 <p> The new image has the same dimensions and format as the original. </p>

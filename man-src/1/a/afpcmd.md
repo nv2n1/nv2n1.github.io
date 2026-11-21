@@ -1,4 +1,5 @@
 ---
+
 title: "afpcmd(1)"
 name: "afpcmd"
 section: "1"
@@ -9,9 +10,7 @@ description: "afpcmd – Transfer files over the networking using the Apple Fili
 
 <h2>NAME</h2>
 <p> afpcmd &#8211; Transfer files over the networking using the Apple Filing Protocol (AFP)</p>
-<h2>SYNOPSIS</h2>
 <p> <i>afpcmd</i> [<code>-r</code> [<code>afp url</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> afpcmd is a command-line tool to help transfer files to and from a server using AFP. This is typically either Netatalk or Mac OS or Mac OS X. </p>
 <p> This can be done as a non-root user. It offers either an interactive command-line (like a traditional FTP client) or for batch retrievals. </p>
 <p> Do not confuse this with the FUSE mounting tools (mount_afp, afpfsd, afp_client), which offer the ability to mount an entire filesystem. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cyradm(1)"
 name: "cyradm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cyradm/"
 description: "cyradm – Cyrus administration shell, alter ego of Cyrus::IMAP::Shell"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 $ cyradm[--user user][--[no] rc][--systemrc file][--userrc file] &gt; [--port n][--auth mechanism][--tlskey keyfile][--notls] &gt; [--server] server
 </code></pre>
@@ -20,7 +20,6 @@ $ cyradm[--user user][--[no] rc][--systemrc file][--userrc file] &gt; [--port n]
 use Cyrus::IMAP::Admin::Shell;
 run('myscriptname');
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This module implements <code>cyradm</code> in Perl. It is a shell around Cyrus::IMAP::Admin. Commands are provided in both Tcl-compatible forms and GNU-style long option forms.</p>
 <h2>COMMANDS</h2>
 <dl>

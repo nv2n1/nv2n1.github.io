@@ -1,4 +1,5 @@
 ---
+
 title: "msguniq(1)"
 name: "msguniq"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msguniq/"
 description: "msguniq – unify duplicate translations in message catalog"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msguniq</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Unifies duplicate translations in a translation catalog. Finds duplicate translations of the same message ID. Such duplicates are invalid input for other programs like msgfmt, msgmerge or msgcat. By default, duplicates are merged together. When using the <code>&#8211;repeated</code> option, only duplicates are output, and all other messages are discarded. Comments and extracted comments will be cumulated, except that if <code>&#8211;use-first</code> is specified, they will be taken from the first translation. File positions will be cumulated. When using the <code>&#8211;unique</code> option, duplicates are discarded. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

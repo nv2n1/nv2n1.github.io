@@ -1,4 +1,5 @@
 ---
+
 title: "aa_createedit(3)"
 name: "aa_createedit"
 section: "3"
@@ -9,7 +10,6 @@ description: "aa_createedit – Simple interactive line editor provided as helpe
 
 <h2>NAME</h2>
 <p> aa_createedit &#8211; Simple interactive line editor provided as helper function.</p>
-<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> struct aa_edit *aa_createedit<br />
  (<br />
@@ -34,7 +34,6 @@ description: "aa_createedit – Simple interactive line editor provided as helpe
 <dd> Buffer to edit (containing default value).</dd>
 <dt><code>int maxsize</code></dt>
 <dd> Size of the buffer.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> You might use this function to input strings in AA-lib programs. This function initializes the aa_edit structure used by event-based editor. You might then call the aa_editkey function when key is pressed.</p>
 <h2>RETURNS</h2>
 <p> Pointer to edit context when succesfull and NULL on failure.</p>

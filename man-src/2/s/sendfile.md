@@ -1,4 +1,5 @@
 ---
+
 title: "sendfile(2)"
 name: "sendfile"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-sendfile/"
 description: "sendfile – transfer data between file descriptors"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sendfile.h&gt;</code> </p>
 <p> <code>ssize_t sendfile(int</code><i> out_fd</i><code>, int</code><i> in_fd</i><code>, off_t *</code><i></i><code>offset</code><i>, size_t</i><code> count</code><i>);</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>sendfile</code>() copies data between one file descriptor and another. Because this copying is done within the kernel, <code>sendfile</code>() is more efficient than the combination of <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2), which would require transferring data to and from user space. </p>
 <p> <i>in_fd</i> should be a file descriptor opened for reading and <i>out_fd</i> should be a descriptor opened for writing. </p>
 <p> If <i>offset</i> is not NULL, then it points to a variable holding the file offset from which <code>sendfile</code>() will start reading data from <i>in_fd</i>. When <code>sendfile</code>() returns, this variable will be set to the offset of the byte following the last byte that was read. If <i>offset</i> is not NULL, then <code>sendfile</code>() does not modify the file offset of <i>in_fd</i>; otherwise the file offset is adjusted to reflect the number of bytes read from <i>in_fd</i>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-join(1)"
 name: "ipa-join"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-join – Join a machine to an IPA realm and get a keytab for t
 
 <h2>NAME</h2>
 <p> ipa-join &#8211; Join a machine to an IPA realm and get a keytab for the host service principal</p>
-<h2>SYNOPSIS</h2>
 <p> ipa-join [<code>-d</code>|<code>&#8211;debug</code>] [<code>-q</code>|<code>&#8211;quiet</code>] [<code>-u</code>|<code>&#8211;unenroll</code>] [<code>-h</code>|<code>&#8211;hostname</code> hostname] [<code>-s</code>|<code>&#8211;server</code> hostname] [<code>-k</code>|<code>&#8211;keytab</code> filename] [<code>-w</code>|<code>&#8211;bindpw</code> password] [<code>-b</code>|&#8211;<code>basedn basedn</code>] [<code>-?</code>|<code>&#8211;help</code>] [<code>&#8211;usage</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> Joins a host to an IPA realm and retrieves a kerberos <i>keytab</i> for the host service principal, or unenrolls an enrolled host from an IPA server. </p>
 <p> Kerberos keytabs are used for services (like sshd) to perform kerberos authentication. A keytab is a file with one or more secrets (or keys) for a kerberos principal. </p>
 <p> The ipa-join command will create and retrieve a service principal for host/foo.example.com [at] EXAMPLE.COM and place it by default into /etc/krb5.keytab. The location can be overridden with the -k option. </p>

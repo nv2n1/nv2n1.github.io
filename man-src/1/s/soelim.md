@@ -1,4 +1,5 @@
 ---
+
 title: "soelim(1)"
 name: "soelim"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-soelim/"
 description: "soelim – interpret .so requests in groff input"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-Crtv</code> ] [ <code>-I </code><i>dir</i> ] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>soelim</code> reads <i>files</i> and replaces lines of the form</p>
 <dl>
 <dt>

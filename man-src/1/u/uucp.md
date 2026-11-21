@@ -1,4 +1,5 @@
 ---
+
 title: "uucp(1)"
 name: "uucp"
 section: "1"
@@ -9,10 +10,8 @@ description: "uucp – Unix to Unix copy"
 
 <h2>NAME</h2>
 <p> uucp &#8211; Unix to Unix copy</p>
-<h2>SYNOPSIS</h2>
 <p> <code>uucp</code> [ options ] source-file destination-file </p>
 <p> <code>uucp</code> [ options ] source-file&#8230; destination-directory</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>uucp</i> command copies files between systems. Each <i>file</i> argument is either a pathname on the local machine or is of the form</p>
 <dl>
 <dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "perf-top(1)"
 name: "perf-top"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-perf-top/"
 description: "perf-top – System profiling tool."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perf top[-e&lt;EVENT&gt; | --event = EVENT][&lt;options&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command generates and displays a performance counter profile in real time.</p>
 <h2>OPTIONS</h2>
 <p> -a, &#8211;all-cpus</p>

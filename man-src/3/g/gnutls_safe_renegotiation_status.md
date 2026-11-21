@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_safe_renegotiation_status(3)"
 name: "gnutls_safe_renegotiation_status"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_safe_renegotiation_status – API function"
 
 <h2>NAME</h2>
 <p> gnutls_safe_renegotiation_status &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_safe_renegotiation_status(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Can be used to check whether safe renegotiation is being used in the current session.</p>
 <h2>RETURNS</h2>
 <p> 0 when safe renegotiation is not used and non (0) when safe renegotiation is used.</p>

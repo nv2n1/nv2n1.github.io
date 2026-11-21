@@ -1,4 +1,5 @@
 ---
+
 title: "multitail(1)"
 name: "multitail"
 section: "1"
@@ -9,10 +10,8 @@ description: "MultiTail – browse through several files at once"
 
 <h2>NAME</h2>
 <p> MultiTail &#8211; browse through several files at once</p>
-<h2>SYNOPSIS</h2>
 <p> <code>MultiTail [</code><i>options</i><code>]</code> </p>
 <p> options: <code>[-cs|-Cs|-c-] [-s] [-i] inputfile [-i anotherinputfile] [&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The program <code>MultiTail</code> lets you view one or multiple files like the original tail program. The difference is that it creates multiple windows on your console (with ncurses). It can also monitor wildcards: if another file matching the wildcard has a more recent modification date, it will automatically switch to that file. That way you can, for example, monitor a complete directory of files. Merging of 2 or even more logfiles is possible. It can also use colors while displaying the logfiles (through regular expressions), for faster recognition of what is important and what not. It can also filter lines (again with regular expressions). It has interactive menus for editing given regular expressions and deleting and adding windows. One can also have windows with the output of shell scripts and other software. When viewing the output of external software, MultiTail can mimic the functionality of tools like &#8216;watch&#8217; and such. When new mail arrives for the current user, the statuslines will become green. To reset this &quot;mail has arrived&quot;-state, press &#8216; &#8216; (a space). For help at any time, press F1. </p>
 <h2>OPTIONS</h2>
 <dl>

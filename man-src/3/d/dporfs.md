@@ -1,4 +1,5 @@
 ---
+
 title: "dporfs(3)"
 name: "dporfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dporfs/"
 description: "dporfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dporfs</code> (UPLO, N, NRHS, A, LDA, AF, LDAF, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>DPORFS</code></p>

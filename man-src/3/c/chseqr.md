@@ -1,4 +1,5 @@
 ---
+
 title: "chseqr(3)"
 name: "chseqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chseqr/"
 description: "chseqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, W, Z, LDZ, WORK, LWORK, INFO)<br />
  <i></i><code>CHSEQR</code></p>

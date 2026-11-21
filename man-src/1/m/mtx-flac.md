@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-flac(1)"
 name: "mtx-flac"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mtx-flac/"
 description: "mtx-flac – ConTeXt Flac Helpers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script flac [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt Flac Helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>

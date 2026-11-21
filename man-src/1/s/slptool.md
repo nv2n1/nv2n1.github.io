@@ -1,4 +1,5 @@
 ---
+
 title: "slptool(1)"
 name: "slptool"
 section: "1"
@@ -9,7 +10,6 @@ description: "slptool – SLP command line tool"
 
 <h2>NAME</h2>
 <p> slptool &#8211; SLP command line tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>slptool</code> [<i>options</i>] <i>command-and-arguments</i></p>
 <h2>OPTIONS</h2>
 <dl>

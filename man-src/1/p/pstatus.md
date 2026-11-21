@@ -1,4 +1,5 @@
 ---
+
 title: "pstatus(1)"
 name: "pstatus"
 section: "1"
@@ -9,9 +10,7 @@ description: "pstatus – show device status"
 
 <h2>NAME</h2>
 <p> pstatus &#8211; show device status </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pstatus</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pstatus</code> displays information about a device connected through SynCE. </p>
 <h2>OPTIONS</h2>
 <dl>

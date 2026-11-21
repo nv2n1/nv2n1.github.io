@@ -1,4 +1,5 @@
 ---
+
 title: "bzip2(1)"
 name: "bzip2"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-bzip2/"
 description: "bzip2, bunzip2 – a block-sorting file compressor, v1.0.8 bzcat – decompresses files to stdout bzip2recover – recovers data from damaged bzip2 files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bzip2, bunzip2 &#8211; a block-sorting file compressor, v1.0.8<br />
  bzcat &#8211; decompresses files to stdout<br />
  bzip2recover &#8211; recovers data from damaged bzip2 files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bzip2</code> [<code> -cdfkqstvzVL123456789 </code>] [ <i>filenames &#8230;</i> ]<br />
  <code>bzip2</code> [<code> -h|&#8211;help </code>]<br />
  <code>bunzip2</code> [<code> -fkvsVL </code>] [ <i>filenames &#8230;</i> ]<br />
@@ -19,7 +18,6 @@ description: "bzip2, bunzip2 – a block-sorting file compressor, v1.0.8 bzcat �
  <code>bzcat</code> [<code> -s </code>] [ <i>filenames &#8230;</i> ]<br />
  <code>bzcat</code> [<code> -h|&#8211;help </code>]<br />
  <code>bzip2recover</code> <i>filename</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>bzip2</i> compresses files using the Burrows-Wheeler block sorting text compression algorithm, and Huffman coding. Compression is generally considerably better than that achieved by more conventional LZ77/LZ78-based compressors, and approaches the performance of the PPM family of statistical compressors. </p>
 <p> The command-line options are deliberately very similar to those of <i>GNU gzip,</i> but they are not identical. </p>
 <p> <i>bzip2</i> expects a list of file names to accompany the command-line flags. Each file is replaced by a compressed version of itself, with the name &quot;original_name.bz2&quot;. Each compressed file has the same modification date, permissions, and, when possible, ownership as the corresponding original, so that these properties can be correctly restored at decompression time. File name handling is naive in the sense that there is no mechanism for preserving original file names, permissions, ownerships or dates in filesystems which lack these concepts, or have serious file name length restrictions, such as MS-DOS. </p>

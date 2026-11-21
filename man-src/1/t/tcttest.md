@@ -1,4 +1,5 @@
 ---
+
 title: "tcttest(1)"
 name: "tcttest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcttest/"
 description: "tcttest – test cases of the table database API"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The command `<code>tcttest</code>&#8216; is a utility for facility test and performance test. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>bnum</i>&#8216; specifies the number of buckets. `<i>apow</i>&#8216; specifies the power of the alignment. `<i>fpow</i>&#8216; specifies the power of the free block pool. </p>
 <dl>
 <dt>

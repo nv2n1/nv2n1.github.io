@@ -1,4 +1,5 @@
 ---
+
 title: "zvbi-ntsc-cc(1)"
 name: "zvbi-ntsc-cc"
 section: "1"
@@ -9,9 +10,7 @@ description: "zvbi-ntsc-cc – closed caption decoder"
 
 <h2>NAME</h2>
 <p> zvbi-ntsc-cc &#8211; closed caption decoder</p>
-<h2>SYNOPSIS</h2>
 <p> <code>zvbi-ntsc-cc [ options ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>zvbi-ntsc-cc</code> reads vbi data from /dev/vbi and decodes the enclosed cc data. Start it with &#8216;-h&#8217; to get a list of cmd line options.</p>
 <h2>AUTHORS</h2>
 <p> timecop [at] japan.co.jp<br />

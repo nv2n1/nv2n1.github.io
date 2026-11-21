@@ -1,4 +1,5 @@
 ---
+
 title: "ldapdiff(1)"
 name: "ldapdiff"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ldapdiff/"
 description: "ldapdiff – Tool to synchronize ldap servers using ldif formatted input files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ldapdiff</code> [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldapdiff</code> combines classical &quot;diff&quot; and &quot;patch&quot; functionality in one application. the difference is, that <code>ldapdiff</code> is not designed for use on flat ascii files, it is designed for &quot;patching&quot; ldap directories using ldif files. </p>
 <p> This manual page was written for the Debian distribution because the original program does not have a manual page.</p>
 <h2>OPTIONS</h2>

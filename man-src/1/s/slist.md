@@ -1,4 +1,5 @@
 ---
+
 title: "slist(1)"
 name: "slist"
 section: "1"
@@ -9,9 +10,7 @@ description: "slist – Lists available NetWare Servers"
 
 <h2>NAME</h2>
 <p> slist &#8211; Lists available NetWare Servers</p>
-<h2>SYNOPSIS</h2>
 <p> <code>slist</code> [ <i>pattern</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>slist</code> lists all NetWare Servers available in your network. </p>
 <p> If slist does not print to a tty, the decorative header line is not printed, so that you can count the servers on your network by doing </p>
 <p> slist | wc -l </p>

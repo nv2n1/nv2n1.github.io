@@ -1,4 +1,5 @@
 ---
+
 title: "center_(3)"
 name: "center_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-center_/"
 description: "QuantLib::FDVanillaEngine – Finite-differences pricing engine for BSM one asset options."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt; </p>
 <p> Inherited by <code>FDEuropeanEngine</code>, FDMultiPeriodEngine, and <code>FDStepConditionEngine</code>. </p>
 <h3>Public Member Functions</h3>

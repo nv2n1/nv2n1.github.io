@@ -1,4 +1,5 @@
 ---
+
 title: "ncrename(1)"
 name: "ncrename"
 section: "1"
@@ -11,7 +12,6 @@ description: "ncrename – netCDF Renamer"
 <p> ncrename &#8211; netCDF Renamer</p>
 <h2>SYNTAX</h2>
 <p> ncrename [-a <i>old_name,new_name</i>] [-a &nbsp;<wbr>&#8230;&nbsp;<wbr>] [-D] [-d <i>old_name,new_name</i>] [-d &nbsp;<wbr>&#8230;&nbsp;<wbr>] [-g <i>old_name,new_name</i>] [-g &nbsp;<wbr>&#8230;&nbsp;<wbr>] [-h] [&#8211;hdr_pad <i>sz</i>] [-l path] [-O] [-p path] [-R] [-r] [&#8211;ram_all] [-v <i>old_name,new_name</i>] [-v &nbsp;<wbr>&#8230;&nbsp;<wbr>] <i>input-file</i> [ <i>output-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ncrename</code> renames dimensions, variables, and attributes in a netCDF file. Each object that has a name in the list of old names is renamed using the corresponding name in the list of new names. All the new names must be unique. Every old name must exist in the input file, unless the name is preceded by the character <code>.</code>. The validity of the old names is not checked prior to the renaming. Thus, if an old name is specified without the the <code>.</code> prefix and is not present in <i>input-file</i>, <code>ncrename</code> will abort. </p>
 <p> <code>ncrename</code> is the exception to the normal rules that the user will be interactively prompted before an existing file is changed, and that a temporary copy of an output file is constructed during the operation. If only <i>input-file</i> is specified, then <code>ncrename</code> will change the names of the <i>input-file</i> in place without prompting and without creating a temporary copy of <code>input-file</code>. This is because the renaming operation is considered reversible if the user makes a mistake. The <i>new_name</i> can easily be changed back to <i>old_name</i> by using <code>ncrename</code> one more time. </p>
 <p> Note that renaming a dimension to the name of a dependent variable can be used to invert the relationship between an independent coordinate variable and a dependent variable. In this case, the named dependent variable must be one-dimensional and should have no missing values. Such a variable will become a coordinate variable. </p>

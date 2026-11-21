@@ -1,4 +1,5 @@
 ---
+
 title: "update-inetd(1)"
 name: "update-inetd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-update-inetd/"
 description: "update-inetd – create, remove, enable or disable entry /etc/inetd.conf"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>update-inetd</code> [<i>option</i>&#8230;] <i>command</i> <i>argument</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>update-inetd</code> can be used to add, remove, enable or disable entries in the <i>/etc/inetd.conf</i> file (you can specify a different file by using the <code>&#8211;file</code> option). After the <i>/etc/inetd.conf</i> file has been changed, <code>update-inetd</code> will send a <font SIZE="-1"><code>SIGHUP</code></font> signal to the inetd process to make sure that inetd will use the new <i>/etc/inetd.conf</i> file. For Perl scripts you can also use the Perl module <code>DebianNet</code>. See <code>DebianNet</code>(3pm) for further information. <code>update-inetd</code> can also be used to add entries that are commented out by default. They will be treated like normal entries. That also means that if you already have an entry that is commented out you cannot add an entry for the same service without removing the old one first. </p>
 <p> In accordance with the Debian Policy, <code>update-inetd</code> treats entries that are prefixed with a single &#8216;<code>#</code>&#8216; character as commented out by a user. This means that for a user to disable a service using <code>update-inetd</code>, and for the service to remain disabled after upgrades, the user must run <code>update-inetd</code> with <code>&#8211;comment-chars &#8216;#&#8217;</code> (see relevant option below). Conversely, package maintainer scripts should not override the default comment chars (and when they do, they must not use &#8216;<code>#</code>&#8216;). </p>
 <p> Also note that <code>&#8211;enable</code> and <code>&#8211;remove</code> will not be acted upon for service entries that are commented out using anything but the value specified with <code>&#8211;comment-chars</code> (or the default value if none is specified).</p>

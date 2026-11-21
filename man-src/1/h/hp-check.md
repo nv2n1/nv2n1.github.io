@@ -1,4 +1,5 @@
 ---
+
 title: "hp-check(1)"
 name: "hp-check"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-check/"
 description: "hp-check – Dependency/Version Check Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Checks dependency versions,permissions of HPLIP. (Run as &#8216;python ./check.py&#8217; from the HPLIP tarball before installation.)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-check [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>

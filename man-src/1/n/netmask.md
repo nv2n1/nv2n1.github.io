@@ -1,4 +1,5 @@
 ---
+
 title: "netmask(1)"
 name: "netmask"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-netmask/"
 description: "netmask – a netmask generation and conversion program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>netmask</code> [ <i>options</i> ] <i>spec</i> [ <i>spec</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> This program accepts and produces a variety of common network address and netmask formats. Not only can it convert address and netmask notations, but it will optimize the masks to generate the smallest list of rules. This is very handy if you&#8217;ve ever configured a firewall or router and some nasty network administrator before you decided that base 10 numbers were good places to start and end groups of machines.</p>
 <h2>OPTIONS</h2>
 <dl>

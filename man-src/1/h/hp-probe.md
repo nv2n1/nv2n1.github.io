@@ -1,4 +1,5 @@
 ---
+
 title: "hp-probe(1)"
 name: "hp-probe"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-probe/"
 description: "hp-probe – Printer Discovery Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Discover HPLIP supported USB, parallel, and network attached printers.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-probe [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>

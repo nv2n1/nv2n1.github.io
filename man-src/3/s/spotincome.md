@@ -1,4 +1,5 @@
 ---
+
 title: "spotincome(3)"
 name: "spotincome"
 section: "3"
@@ -6,8 +7,8 @@ letter: "s"
 url: "/docs/linux/man/3-spotincome/"
 description: "QuantLib::FixedRateBondForward – Forward contract on a fixed-rate bond"
 ---
+
 <p>QuantLib::FixedRateBondForward &#8211; Forward contract on a fixed-rate bond </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/instruments/fixedratebondforward.hpp&gt; </p>

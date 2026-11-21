@@ -1,4 +1,5 @@
 ---
+
 title: "wvgain(1)"
 name: "wvgain"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-wvgain/"
 description: "wvgain – adds ReplayGain information to wavpack files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>wvgain</code> [<i>-options</i>] <i>INFILE</i>&#8230;</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>wvgain</code></p>
 <dd>perceptually analyzes WavPack audio files for volume, calculates ReplayGain information based on this, and adds the appropriate APEv2 tag fields. ReplayGain-enabled players will use this information to produce the same perceived loudness on all tracks. Both individual track and whole album ReplayGain information can be calculated.</dd>
 <h2>OPTIONS</h2>

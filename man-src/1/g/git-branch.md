@@ -1,4 +1,5 @@
 ---
+
 title: "git-branch(1)"
 name: "git-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-branch/"
 description: "git-branch – List, create, or delete branches"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git branch[--color[=&lt;when&gt;] | --no - color][--show - current]
           [-v[--abbrev = &lt;n&gt; | --no - abbrev]]
@@ -19,7 +19,6 @@ git branch[--color[=&lt;when&gt;] | --no - color][--show - current]
           [--list][&lt;pattern&gt;...] git branch[--track | --no - track][-f]&lt;branchname&gt;[&lt;start - point&gt;] git branch(--set - upstream - to = &lt;upstream&gt; | -u&lt;upstream&gt;)[&lt;branchname&gt;] git branch-- unset
     - upstream[&lt;branchname&gt;] git branch(-m | -M)[&lt;oldbranch&gt;]&lt;newbranch&gt; git branch(-c | -C)[&lt;oldbranch&gt;]&lt;newbranch&gt; git branch(-d | -D)[-r]&lt;branchname&gt;... git branch-- edit - description[&lt;branchname&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> If <code>&#8211;list</code> is given, or if there are no non-option arguments, existing branches are listed; the current branch will be highlighted in green and marked with an asterisk. Any branches checked out in linked worktrees will be highlighted in cyan and marked with a plus sign. Option <code>-r</code> causes the remote-tracking branches to be listed, and option <code>-a</code> shows both local and remote branches. </p>
 <p> If a <code>&lt;pattern&gt;</code> is given, it is used as a shell wildcard to restrict the output to matching branches. If multiple patterns are given, a branch is shown if it matches any of the patterns. </p>
 <p> Note that when providing a <code>&lt;pattern&gt;</code>, you must use <code>&#8211;list</code>; otherwise the command may be interpreted as branch creation. </p>

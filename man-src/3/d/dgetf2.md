@@ -1,4 +1,5 @@
 ---
+
 title: "dgetf2(3)"
 name: "dgetf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgetf2/"
 description: "dgetf2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgetf2</code> (M, N, A, LDA, IPIV, INFO)<br />
  <i></i><code>DGETF2</code> computes the LU factorization of a general m-by-n matrix using partial pivoting with row interchanges (unblocked algorithm).</p>

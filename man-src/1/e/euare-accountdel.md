@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountdel(1)"
 name: "euare-accountdel"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-accountdel – [Eucalyptus cloud admin only] Delete an accou
 
 <h2>NAME</h2>
 <p> euare-accountdel &#8211; [Eucalyptus cloud admin only] Delete an account</p>
-<h2>SYNOPSIS</h2>
 <p> euare-accountdel [-r] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</p>
 <dl>
 <dt>[-S KEY] [&#8211;security-token TOKEN] [&#8211;debug]</dt>
 <dd> [&#8211;debugger] [&#8211;version] [-h] ACCOUNT</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> [Eucalyptus cloud admin only] Delete an account</p>
 <h3>positional arguments:</h3>
 <dl>

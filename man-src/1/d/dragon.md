@@ -1,4 +1,5 @@
 ---
+
 title: "dragon(1)"
 name: "dragon"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-dragon/"
 description: "dragon – a video player that has a usability focus"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dragon</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>URL</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>dragon</code></p>
 <dd>player plays audio and video in different formats.</dd>
 <h2>GENERIC OPTIONS</h2>

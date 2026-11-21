@@ -1,4 +1,5 @@
 ---
+
 title: "qbittorrent-nox(1)"
 name: "qbittorrent-nox"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-qbittorrent-nox/"
 description: "qBittorrent-nox – a command line Bittorrent client written in C++ / Qt"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>qbittorrent-nox</code> [&#8211;d|&#8211;daemon] [&#8211;webui-port=x] [TORRENT_FILE | URL]&#8230; </p>
 <p> <code>qbittorrent-nox</code> &#8211;help </p>
 <p> <code>qbittorrent-nox</code> &#8211;version </p>
-<h2>DESCRIPTION</h2>
 <p> <code>qBittorrent-nox</code> is an advanced command-line Bittorrent client written in C++ / Qt using the <code>libtorrent-rasterbar</code> library by Arvid Norberg. qBittorrent-nox aims to be a good alternative to other command line bittorrent clients and provides features similar to popular graphical clients. </p>
 <p> qBittorrent-nox is fast, stable, light and it supports unicode. It also comes with UPnP port forwarding / NAT-PMP, encryption (Vuze compatible), FAST extension (mainline) and PeX support (utorrent compatible). </p>
 <p> qBittorrent-nox is meant to be controlled via its feature-rich Web UI which is accessible as a default on <a rel="nofollow" href="http://localhost:8080.">http://localhost:8080.</a> The Web UI access is secured and the default account user name is &quot;admin&quot; with &quot;adminadmin&quot; as a password. </p>

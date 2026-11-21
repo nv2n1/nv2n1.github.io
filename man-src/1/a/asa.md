@@ -1,4 +1,5 @@
 ---
+
 title: "asa(1)"
 name: "asa"
 section: "1"
@@ -9,9 +10,7 @@ description: "asa – convert ASA (Fortran) carriage control charachters"
 
 <h2>NAME</h2>
 <p> asa &#8211; convert ASA (Fortran) carriage control charachters</p>
-<h2>SYNOPSIS</h2>
 <p> <code>asa</code> [<i>file</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>asa</code> reads text with ASA cariage control characters from the files specified as its command arguments, or standard input if none are specified, and converts them into line printer control sequences. </p>
 <p> These control characters are traditionally used in Fortran programs. </p>
 <p> The first character of every line is removed from input, and the following actions are performed: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "asia(3)"
 name: "asia"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asia/"
 description: "ql/currencies/asia.hpp – Asian currencies."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/currency.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>BDTCurrency</code><br />

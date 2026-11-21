@@ -1,4 +1,5 @@
 ---
+
 title: "pedigree(1)"
 name: "pedigree"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pedigree/"
 description: "pedigree – create a TeX file for pedigree from a csv file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pedigree</code> [-c <i>configuration_file</i>] [-d] [-o <i>output_file</i>] [-s <i>start_id</i>] <i>input_file</i> </p>
 <p> <code>pedigree</code> -v</p>
-<h2>DESCRIPTION</h2>
 <p> The program converts a comma separated <i>input_file</i> into a TeX file with pst-pdgr macros.</p>
 <h2>OPTIONS</h2>
 <dl>

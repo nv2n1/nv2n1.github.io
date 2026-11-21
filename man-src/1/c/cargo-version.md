@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-version(1)"
 name: "cargo-version"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-version/"
 description: "cargo-version – Show version information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo version [OPTIONS]</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "t1dotlessj(1)"
 name: "t1dotlessj"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-t1dotlessj/"
 description: "t1dotlessj – create a dotless-j PostScript Type 1 font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>t1dotlessj</code> [OPTIONS&#8230;] <i>font</i> [<i>outputfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>T1dotlessj</code> creates a PostScript Type~1 font whose only character is a dotless &#8216;j&#8217; matching the input font&#8217;s design. It works simply by removing the dot from the input font&#8217;s &#8216;j&#8217;. The output font has three characters: &#8216;.notdef&#8217;, &#8216;space&#8217;, and &#8216;uni0237&#8217;, where &#8216;uni0237&#8217; is the dotless &#8216;j&#8217;. The command fails if the input font already has a dotless &#8216;j&#8217; character, or if there seems to be no dot to remove. T1dotlessj writes the created PFA or PFB font to the standard output (but see the <code>&#8211;output</code> option); if no input file is supplied, it reads a PFA or PFB font from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

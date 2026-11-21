@@ -1,4 +1,5 @@
 ---
+
 title: "encfsctl(1)"
 name: "encfsctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-encfsctl/"
 description: "encfsctl – administrative tool for working with EncFS filesystems"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>encfsctl</code> [<i>command</i> <i>command_args</i>] </p>
 <p> <code>encfsctl</code> [info] <i>rootdir</i> </p>
 <p> <code>encfsctl</code> passwd <i>rootdir</i> </p>
@@ -15,7 +15,6 @@ description: "encfsctl – administrative tool for working with EncFS filesystem
 <p> <code>encfsctl</code> decode [&#8211;extpass=prog] <i>rootdir</i> [encoded name &#8230;] </p>
 <p> <code>encfsctl</code> encode [&#8211;extpass=prog] <i>rootdir</i> [plaintext name &#8230;] </p>
 <p> <code>encfsctl</code> cat [&#8211;extpass=prog] [&#8211;reverse] <i>rootdir</i> &lt;(cipher|plain) filename&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>encfsctl</code> is an administrative tool for working with EncFS filesystems. It is capable of changing the user supplied password, displaying basic information about an encrypted volume, and other related operations.</p>
 <h2>COMMANDS</h2>
 <dl>

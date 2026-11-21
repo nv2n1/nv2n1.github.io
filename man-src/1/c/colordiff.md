@@ -1,4 +1,5 @@
 ---
+
 title: "colordiff(1)"
 name: "colordiff"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-colordiff/"
 description: "colordiff – a tool to colorize diff output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> colordiff &#8211; a tool to colorize <code>diff</code> output </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>colordiff</code> [<i>diff options</i>] [<i>colordiff options</i>] {<i>file1</i>} {<i>file2</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>colordiff is a wrapper for <code>diff</code> and produces the same output as <code>diff</code> but with coloured syntax highlighting at the command line to improve readability. The output is similar to how a <code>diff</code>-generated patch might appear in Vim or Emacs with the appropriate syntax highlighting options enabled. The colour schemes can be read from a central configuration file or from a local user ~/.colordiffrc file. </dd>
 <p> colordiff makes use of ANSI colours and as such will only work when ANSI colours can be used &#8211; typical examples are xterms and Eterms, as well as console sessions. </p>
 <p> colordiff has been tested on various flavours of Linux and under OpenBSD, but should be broadly portable to other systems.</p>

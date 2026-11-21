@@ -1,4 +1,5 @@
 ---
+
 title: "virt-install(1)"
 name: "virt-install"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-virt-install/"
 description: "virt-install – provision new virtual machines"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>virt-install</code> [<font SIZE="-1">OPTION</font>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>virt-install</code> is a command line tool for creating new <font SIZE="-1">KVM,</font> Xen, or Linux container guests using the <tt>&quot;libvirt&quot;</tt> hypervisor management library. See the <font SIZE="-1">EXAMPLES</font> section at the end of this document to quickly get started. </p>
 <p> <code>virt-install</code> tool supports graphical installations using (for example) <font SIZE="-1">VNC</font> or <font SIZE="-1">SPICE,</font> as well as text mode installs over serial console. The guest can be configured to use one or more virtual disks, network interfaces, audio devices, physical <font SIZE="-1">USB</font> or <font SIZE="-1">PCI</font> devices, among others. </p>
 <p> The installation media can be held locally or remotely on <font SIZE="-1">NFS, HTTP, FTP</font> servers. In the latter case <tt>&quot;virt-install&quot;</tt> will fetch the minimal files necessary to kick off the installation process, allowing the guest to fetch the rest of the <font SIZE="-1">OS</font> distribution as needed. <font SIZE="-1">PXE</font> booting, and importing an existing disk image (thus skipping the install phase) are also supported. </p>

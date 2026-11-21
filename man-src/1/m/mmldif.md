@@ -1,4 +1,5 @@
 ---
+
 title: "mmldif(1)"
 name: "mmldif"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mmldif/"
 description: "mmldif – mmldif util"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mmldif</code> [-c] [-D] [-o out.ldif] in1.ldif in2.ldif &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mmldif</code> command. </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "drotm(3)"
 name: "drotm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drotm/"
 description: "drotm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>drotm</code> (N, DX, INCX, DY, INCY, DPARAM)<br />
  <i></i><code>DROTM</code></p>

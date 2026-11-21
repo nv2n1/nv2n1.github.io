@@ -1,4 +1,5 @@
 ---
+
 title: "rrdcreate(1)"
 name: "rrdcreate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdcreate/"
 description: "rrdcreate – Set up a new Round Robin Database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>create</code> <i>filename</i> [<code>&#8211;start</code>|<code>-b</code>&nbsp;<wbr><i>start time</i>] [<code>&#8211;step</code>|<code>-s</code>&nbsp;<wbr><i>step</i>] [<code>&#8211;no-overwrite</code>] [<font SIZE="-1"><code>DS:</code></font><i>ds-name</i><code>:</code><i></i><font SIZE="-1"><i>DST</i></font><i></i><code>:</code><i>dst arguments</i>] [<font SIZE="-1"><code>RRA:</code></font><i></i><font SIZE="-1"><i>CF</i></font><i></i><code>:</code><i>cf arguments</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The create function of RRDtool lets you set up new Round Robin Database (<font SIZE="-1"><code>RRD</code></font>) files. The file is created at its final, full size and filled with <i>*UNKNOWN*</i> data.</p>
 <h3><i>filename</i></h3>
 <p> The name of the <font SIZE="-1"><code>RRD</code></font> you want to create. <font SIZE="-1"><code>RRD</code></font> files should end with the extension <i>.rrd</i>. However, <code>RRDtool</code> will accept any filename.</p>

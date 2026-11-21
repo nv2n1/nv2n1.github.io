@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_address(3)"
 name: "getdns_address"
 section: "3"
@@ -11,7 +12,6 @@ description: "getdns_address, getdns_address_sync — get ip address(es) for a n
 <p> <code>getdns_address, </code> <code>getdns_address_sync</code> &#8212; get ip address(es) for a name </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_address</code> (getdns_context *context,</p>
@@ -29,7 +29,6 @@ description: "getdns_address, getdns_address_sync — get ip address(es) for a n
 </dt><dd> const char *name,<br />
  getdns_dict *extensions,<br />
  getdns_dict **response)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/3-getdns_address/">getdns_address</a>(3) and getdns_address_sync functions provide public entry points into the getdns API library to retrieve the address given a host name. They always returns both IPv4 and IPv6 addresses. This function will use all of the namespaces from the context (to better emulate getaddrinfo (3)). </p>
 <dl>
 <dt> <i>context</i></dt>

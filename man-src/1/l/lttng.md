@@ -1,4 +1,5 @@
 ---
+
 title: "lttng(1)"
 name: "lttng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lttng/"
 description: "lttng — LTTng 2.x tracer control command line tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> lttng [OPTIONS] &lt;COMMAND&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> The LTTng project aims at providing highly efficient tracing tools for Linux. Its tracers help track down performance issues and debug problems involving multiple concurrent processes and threads. Tracing across multiple systems is also possible. </p>
 <p> The <code>lttng</code> command line tool from the lttng-tools package is used to control both kernel and user-space tracing. Every interaction with the tracer should be done by this tool or by the liblttng-ctl library provided by the lttng-tools package. </p>
 <p> LTTng uses a session daemon (<a href="/docs/linux/man/8-lttng-sessiond/">lttng-sessiond</a>(8)), acting as a tracing registry, which allows you to interact with multiple tracers (kernel and user-space) inside the same container, a tracing session. Traces can be gathered from the kernel and/or instrumented applications (<a href="/docs/linux/man/3-lttng-ust/">lttng-ust</a>(3)). Aggregating and reading those traces is done using the <a href="/docs/linux/man/1-babeltrace/">babeltrace</a>(1) text viewer. </p>

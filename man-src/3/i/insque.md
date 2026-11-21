@@ -1,4 +1,5 @@
 ---
+
 title: "insque(3)"
 name: "insque"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-insque/"
 description: "insque, remque – insert/remove an item from a queue"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;search.h&gt;
 void insque(void *elem, void *prev);
@@ -20,7 +20,6 @@ void remque(void *elem);
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>insque</code>() and <code>remque</code>() functions manipulate doubly linked lists. Each element in the list is a structure of which the first two elements are a forward and a backward pointer. The linked list may be linear (i.e., NULL forward pointer at the end of the list and NULL backward pointer at the start of the list) or circular. </p>
 <p> The <code>insque</code>() function inserts the element pointed to by <i>elem</i> immediately after the element pointed to by <i>prev</i>. </p>
 <p> If the list is linear, then the call <i>insque(elem, NULL)</i> can be used to insert the initial list element, and the call sets the forward and backward pointers of <i>elem</i> to NULL. </p>

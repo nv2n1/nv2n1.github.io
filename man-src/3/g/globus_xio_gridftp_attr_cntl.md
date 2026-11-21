@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_gridftp_attr_cntl(3)"
 name: "globus_xio_gridftp_attr_cntl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_gridftp_attr_cntl/"
 description: "globus_xio_gridftp_driver.h – XIO GRIDFTP Client Driver."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_xio_system.h&#8217;<br />
  #include &#8216;globus_common.h&#8217; </p>
 <h3>Typedefs</h3>

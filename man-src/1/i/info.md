@@ -1,4 +1,5 @@
 ---
+
 title: "info(1)"
 name: "info"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-info/"
 description: "info – read Info documents"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>info</code> [<i>,OPTION/</i>]&#8230; [<i>,MENU-ITEM/</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Read documentation in Info format.</p>
 <h3>Frequently-used options:</h3>
 <dl>

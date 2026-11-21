@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_server_name_set(3)"
 name: "gnutls_server_name_set"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_server_name_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_server_name_set &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_server_name_set(gnutls_session_t </code><i>session</i><code>, gnutls_server_name_type_t </code><i>type</i><code>, const void * </code><i>name</i><code>, size_t </code><i>name_length</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_server_name_set – API function"
 <dd> is a string that contains the server name.</dd>
 <dt>size_t name_length</dt>
 <dd> holds the length of name</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function is to be used by clients that want to inform (via a TLS extension mechanism) the server of the name they connected to. This should be used by clients that connect to servers that do virtual hosting. </p>
 <p> The value of <i>name</i> depends on the <i>type</i> type. In case of <code>GNUTLS_NAME_DNS</code>, an ASCII (0)-terminated domain name string, without the trailing dot, is expected. IPv4 or IPv6 addresses are not permitted.</p>
 <h2>RETURNS</h2>

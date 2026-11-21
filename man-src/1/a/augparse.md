@@ -1,4 +1,5 @@
 ---
+
 title: "augparse(1)"
 name: "augparse"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-augparse/"
 description: "augparse – execute an Augeas module"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> augparse [<font SIZE="-1">OPTIONS</font>] <font SIZE="-1">MODULE</font></p>
-<h2>DESCRIPTION</h2>
 <p> Execute an Augeas module, most commonly to evaluate the tests it contains.</p>
 <h2>OPTIONS</h2>
 <dl>

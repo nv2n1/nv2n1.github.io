@@ -1,4 +1,5 @@
 ---
+
 title: "docker-plugin-install(1)"
 name: "docker-plugin-install"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-plugin-install/"
 description: "docker-plugin-install – Install a plugin"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker plugin install [OPTIONS] PLUGIN [KEY=VALUE&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Install a plugin </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;alias</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Local name for plugin</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_reg_dm_mr(3)"
 name: "ibv_reg_dm_mr"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_reg_dm_mr/"
 description: "ibv_alloc_dm, ibv_free_dm, ibv_memcpy_to/from_dm – allocate or free a device memory buffer (DMs) and perform memory copy to or from it"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_dm *ibv_alloc_dm(struct ibv_context *context,
                             struct ibv_alloc_dm_attr *attr);
 int ibv_free_dm(struct ibv_dm *dm);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_alloc_dm()</code> allocates a device memory buffer for the RDMA device context <i>context</i>. The argument <i>attr</i> is a pointer to an ibv_alloc_dm_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p> <code>ibv_free_dm()</code> free the device memory buffer <i>dm</i>. </p>
 <p>struct ibv_alloc_dm_attr {<br />

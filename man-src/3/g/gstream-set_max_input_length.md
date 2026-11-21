@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-set_max_input_length(3)"
 name: "gstream-set_max_input_length"
 section: "3"
@@ -9,10 +10,8 @@ description: "set_max_input_length"
 
 <h2>NAME</h2>
 <p> set_max_input_length</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>void set_max_input_length(int)</code></p>
-<h2>DESCRIPTION</h2>
 <p> This sets the maximum number of characters that the inputter will accept from the user at the next, and only the next, input, i.e. if you call this function with 5 </p>
 <pre>
    set_max_input_length(5);

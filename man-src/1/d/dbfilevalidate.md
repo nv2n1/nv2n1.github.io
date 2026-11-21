@@ -1,4 +1,5 @@
 ---
+
 title: "dbfilevalidate(1)"
 name: "dbfilevalidate"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dbfilevalidate/"
 description: "dbfilevalidate – insure the source input is a well-formed Fsdb file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     dbfilevalidate [-vc]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Validates the input file to make sure it is a well-formed fsdb file. If the file is well-formed, it outputs the whole file and exits with a good exit code. For invalid files, it exits with an error exit code and embedded error messages in the stream as comments with &#8220;***&#8221; in them. </p>
 <p> Currently this program checks for rows with missing or extra columns.</p>
 <h2>OPTIONS</h2>

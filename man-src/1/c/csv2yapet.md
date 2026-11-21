@@ -1,4 +1,5 @@
 ---
+
 title: "csv2yapet(1)"
 name: "csv2yapet"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-csv2yapet/"
 description: "csv2yapet – convert CSV file to YAPET file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>csv2yapet</code> [[<code>-c</code>] | [<code>-h</code>] | [<code>-V</code>]] [<code>-p</code>&nbsp;<wbr>{<i>password</i>}] [<code>-q</code>] [<code>-s</code>&nbsp;<wbr>{<i>separator</i>}] {<i>src</i>} {<i>dst</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Convert a CSV file <i>src</i> to an YAPET file <i>dst</i>. The default character for delimiting the fields is &#8216;,&#8217; (comma) unless specified otherwise on the command line by providing the <code>-s</code> option (refer to the section called &#8220;OPTIONS&#8221;). </dd>
 <p> Fields containing the field separator character have to be enclosed in double quotes (&quot;). </p>
 <p> In order to convert a double quote character it has to be preceded by another double quote character (see the section called &#8220;EXAMPLES&#8221;). </p>

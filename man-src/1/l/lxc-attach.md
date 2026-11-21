@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-attach(1)"
 name: "lxc-attach"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-attach – start a process inside a running container."
 
 <h2>NAME</h2>
 <p> lxc-attach &#8211; start a process inside a running container.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-attach</code> {-n <i>name</i>} [-a <i>arch</i>] [-e] [-s <i>namespaces</i>] [-R] [&#8211;keep-env] [&#8211;clear-env] [&#8211; <i>command</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-attach</code> runs the specified <i>command</i> inside the container specified by <i>name</i>. The container has to be running already. </p>
 <p> If no <i>command</i> is specified, the current default shell of the user running <code>lxc-attach</code> will be looked up inside the container and executed. This will fail if no such user exists inside the container or the container does not have a working nsswitch mechanism.</p>
 <h2>OPTIONS</h2>

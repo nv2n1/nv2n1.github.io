@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-publish(1)"
 name: "cargo-publish"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-publish/"
 description: "cargo-publish – Upload a package to the registry."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo publish [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> Upload a package to the registry.</p>
 <h2>OPTIONS</h2>
 <dl>

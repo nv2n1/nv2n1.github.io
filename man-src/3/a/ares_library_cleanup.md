@@ -1,4 +1,5 @@
 ---
+
 title: "ares_library_cleanup(3)"
 name: "ares_library_cleanup"
 section: "3"
@@ -9,14 +10,12 @@ description: "ares_library_cleanup – c-ares library deinitialization"
 
 <h2>NAME</h2>
 <p> ares_library_cleanup &#8211; c-ares library deinitialization</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 void ares_library_cleanup(void)
         cc file.c
     - lcares
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ares_library_cleanup</code> function uninitializes the c-ares library, freeing all resources previously acquired by <i><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3)</i> when the library was initialized, provided there was only one single previous call to <i><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3)</i>. If there was more than one previous call to <i><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3)</i>, this function uninitializes the c-ares library only if it is the call matching the call to <i><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3)</i> which initialized the library (usually the very first call to <i><a href="/docs/linux/man/3-ares_library_init/">ares_library_init</a>(3)</i>). Other calls to <i><a href="/docs/linux/man/3-ares_library_cleanup/">ares_library_cleanup</a>(3)</i> have no effect other than decrementing an internal counter. </p>
 <p> This function must be called when the program using c-ares will no longer need any c-ares function. Once the program has called <i><a href="/docs/linux/man/3-ares_library_cleanup/">ares_library_cleanup</a>(3)</i> sufficiently often such that the library is uninitialised, it shall not make any further call to any c-ares function. </p>
 <p> This function does not cancel any pending c-ares lookups or requests previously done. Program must use <i><a href="/docs/linux/man/3-ares_cancel/">ares_cancel</a>(3)</i> for this purpose. </p>

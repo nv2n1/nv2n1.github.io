@@ -1,4 +1,5 @@
 ---
+
 title: "system-config-printer(1)"
 name: "system-config-printer"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-system-config-printer/"
 description: "system-config-printer – configure a CUPS server"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>system-config-printer</code> [[&#8211;show-jobs&nbsp;<i>printer</i>] | [&#8211;debug] | [&#8211;help]]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>system-config-printer</code></p>
 <dd>configures a CUPS server. It uses the CUPS API (bound to Python with pycups) to do this. The communication with the server is performed using IPP. As a result, it is equally able to configure a remote CUPS server as a local one.</dd>
 <h2>OPTIONS</h2>

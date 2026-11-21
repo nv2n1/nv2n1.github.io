@@ -1,4 +1,5 @@
 ---
+
 title: "scopy(3)"
 name: "scopy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-scopy/"
 description: "scopy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>scopy</code> (N, SX, INCX, SY, INCY)<br />
  <i></i><code>SCOPY</code></p>

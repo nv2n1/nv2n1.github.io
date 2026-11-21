@@ -1,4 +1,5 @@
 ---
+
 title: "ddrescuelog(1)"
 name: "ddrescuelog"
 section: "1"
@@ -9,9 +10,7 @@ description: "ddrescuelog – tool for ddrescue mapfiles"
 
 <h2>NAME</h2>
 <p> ddrescuelog &#8211; tool for ddrescue mapfiles</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ddrescuelog</code> [<i>,options/</i>] <i>,mapfile/</i></p>
-<h2>DESCRIPTION</h2>
 <p> GNU ddrescuelog &#8211; Tool for ddrescue mapfiles. Manipulates ddrescue mapfiles, shows their contents, converts them to/from other formats, compares them, and tests rescue status. </p>
 <p> NOTE: In versions of ddrescue prior to 1.20 the mapfile was called &#8216;logfile&#8217;. The format is the same; only the name has changed.</p>
 <h2>OPTIONS</h2>

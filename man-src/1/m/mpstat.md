@@ -1,4 +1,5 @@
 ---
+
 title: "mpstat(1)"
 name: "mpstat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mpstat/"
 description: "mpstat – Report processors related statistics."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mpstat [ -A ] [ &#8211;dec={ 0 | 1 | 2 } ] [ -n ] [ -u ] [ -T ] [ -V ] [ -I {</code> <i>keyword</i><code>[,&#8230;] | ALL } ] [ -N { </code><i>node_list </i><code>| ALL } ] [ -o JSON ] [ -P {</code> <i>cpu_list </i><code>| ALL } ] [ </code><i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mpstat</code> command writes to standard output activities for each available processor, processor 0 being the first one. Global average activities among all processors are also reported. The <code>mpstat</code> command can be used on both SMP and UP machines, but in the latter, only global average activities will be printed. If no activity has been selected, then the default report is the CPU utilization report. </p>
 <p> The <i>interval</i> parameter specifies the amount of time in seconds between each report. A value of 0 (or no parameters at all) indicates that processors statistics are to be reported for the time since system startup (boot). The <i>count </i>parameter can be specified in conjunction with the <i>interval</i> parameter if this one is not set to zero. The value of <i>count</i> determines the number of reports generated at <i>interval </i>seconds apart. If the <i>interval</i> parameter is specified without the <i>count </i>parameter, the <code>mpstat</code> command generates reports continuously. </p>
 <h2>OPTIONS</h2>

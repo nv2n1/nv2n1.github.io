@@ -1,4 +1,5 @@
 ---
+
 title: "gammu-smsd-inject(1)"
 name: "gammu-smsd-inject"
 section: "1"
@@ -9,9 +10,7 @@ description: "gammu-smsd-inject – Inject messages into queue of SMS daemon for
 
 <h2>NAME</h2>
 <p> gammu-smsd-inject &#8211; Inject messages into queue of SMS daemon for Gammu</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gammu-smsd-inject</code> [<i>OPTION</i>]&#8230; MESSAGETYPE RECIPIENT [<i>MESSAGE_PARAMETER</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gammu-smsd-inject</code> command. </p>
 <p> <code>gammu-smsd-inject</code> is a program that enqueues message in Gammu SMS daemon, which will be later sent by the deamon using connected GSM modem. </p>
 <p> Support for this program depends on features available in currently used SMSD service backend, currently only files (<a href="/docs/linux/man/7-gammu-smsd-files/">gammu-smsd-files</a>(7)) does not support this feature. </p>

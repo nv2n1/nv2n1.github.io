@@ -1,4 +1,5 @@
 ---
+
 title: "mimeview(1)"
 name: "mimeview"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mimeview/"
 description: "mimeview – display files, using mailcap mechanism."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mimeview</code> [<i>,OPTION/</i>&#8230;] <i>,FILE /</i>[<i>,FILE /</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> GNU mimeview <code>&#8212;</code> display files, using mailcap mechanism.</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;no-ask</code>[=<i>,TYPE-LIST/</i>]</dt>

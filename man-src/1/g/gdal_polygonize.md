@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_polygonize(1)"
 name: "gdal_polygonize"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-gdal_polygonize/"
 description: "gdal_polygonize – gdal_polygonize.py produces a polygon feature layer from a raster"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_polygonize.py[-8][-nomask][-mask filename] raster_file[-b band]
                                                            [-q][-f ogr_format] out_file[layer][fieldname]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This utility creates vector polygons for all connected regions of pixels in the raster sharing a common pixel value. Each polygon is created with an attribute indicating the pixel value of that polygon. A raster mask may also be provided to determine which pixels are eligible for processing. </p>
 <p> The utility will create the output vector datasource if it does not already exist, defaulting to GML format. </p>
 <p> The utility is based on the GDALPolygonize() function which has additional details on the algorithm. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-resv-report(1)"
 name: "nvme-resv-report"
 section: "1"
@@ -6,26 +7,15 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-report/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-resv-report - Send NVMe Reservation Report, parse the result 
 
- nvme-resv-report - Send NVMe Reservation Report, parse the result 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme resv - report&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                           [--numd = &lt;num - dwords&gt; | -d&lt;num - dwords&gt;]
                           [-b | --raw - binary]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The Reservation Report command returns a Reservation Status data structure to host memory that describes the registration and reservation status of a namespace. 
+The Reservation Report command returns a Reservation Status data structure to host memory that describes the registration and reservation status of a namespace. 
 
  The size of the Reservation Status data structure is a function of the number of controllers in the NVM Subsystem that are associated with hosts that are registrants of the namespace (i.e., there is a Registered Controller data structure for each such controller).
 

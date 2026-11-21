@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-getrom(1)"
 name: "pilot-getrom"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-getrom – Retrieves the ROM image from your Palm device for
 <p> pilot-getrom &#8211; Retrieves the ROM image from your Palm device for use in debugging.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-getrom</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;token</code>&nbsp;<wbr>&nbsp;<wbr><code>token</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;sysinfo</code>]&nbsp;<wbr>[<code>&#8211;ram</code>]&nbsp;<wbr>[<code>&#8211;rom</code>]&nbsp;<wbr>[<i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-getrom</i>&nbsp;<wbr>is used to fetch the ROM from your Palm handheld for use in debugging Palm applications through the use of POSE, the&nbsp;<wbr><i>Palm OS Emulator application</i>. </p>
 <p> Note, because <i>pilot-getrom</i> uses the low-level RPC protocol to fetch the ROM image, and the new OS5 devices do not use this protocol, you currently cannot fetch an OS5 ROM image using this utility. This will be updated in a future release to handle fetching OS5 ROM images, using the debugger protocol. </p>
 <h2>OPTIONS</h2>

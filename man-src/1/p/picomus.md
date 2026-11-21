@@ -1,4 +1,5 @@
 ---
+
 title: "picomus(1)"
 name: "picomus"
 section: "1"
@@ -9,9 +10,7 @@ description: "picomus – Minimal Unsatisfiable Core (MUS) generator"
 
 <h2>NAME</h2>
 <p> picomus &#8211; Minimal Unsatisfiable Core (MUS) generator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>picomus</code> [<i>OPTION</i>]&#8230; [<i>INPUT</i> [<i>OUTPUT</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> PicoMUS is a satisfiability (SAT) solver that generates a minimal unsatisfiable core, using the PicoSAT library. </p>
 <h2>OPTIONS</h2>
 <dl>

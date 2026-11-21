@@ -1,4 +1,5 @@
 ---
+
 title: "git-switch(1)"
 name: "git-switch"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-switch/"
 description: "git-switch – Switch branches"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git switch[&lt;options&gt;][--no - guess]&lt;branch&gt;
     git switch[&lt;options&gt;]-- detach[&lt;start - point&gt;] git switch[&lt;options&gt;](-c | -C)&lt;new - branch&gt;[&lt;start - point&gt;] git switch[&lt;options&gt;]-- orphan&lt;new - branch&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Switch to a specified branch. The working tree and the index are updated to match the branch. All new commits will be added to the tip of this branch. </p>
 <p> Optionally a new branch could be created with either <code>-c</code>, <code>-C</code>, automatically from a remote branch of same name (see <code>&#8211;guess</code>), or detach the working tree from any branch with <code>&#8211;detach</code>, along with switching. </p>
 <p> Switching branches does not require a clean index and working tree (i.e. no differences compared to <code>HEAD</code>). The operation is aborted however if the operation leads to loss of local changes, unless told otherwise with <code>&#8211;discard-changes</code> or <code>&#8211;merge</code>. </p>

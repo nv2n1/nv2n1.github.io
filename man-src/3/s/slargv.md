@@ -1,4 +1,5 @@
 ---
+
 title: "slargv(3)"
 name: "slargv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slargv/"
 description: "slargv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slargv</code> (N, X, INCX, Y, INCY, C, INCC)<br />
  <i></i><code>SLARGV</code> generates a vector of plane rotations with real cosines and real sines.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-schema(1)"
 name: "mdb-schema"
 section: "1"
@@ -9,11 +10,9 @@ description: "mdb-schema – Generate schema creation DDL"
 
 <h2>NAME</h2>
 <p> <code>mdb-schema </code>&#8211; Generate schema creation DDL</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 mdb - schema[options] database[backend]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mdb-schema</code> is a utility program distributed with MDB Tools. </p>
 <p> It produces DDL (data definition language) output for the given <i>database</i>. This can be passed to another <i>database</i> to create a replica of the original access table format.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "btparser(1)"
 name: "btparser"
 section: "1"
@@ -9,9 +10,7 @@ description: "btparser – a backtrace analyzer"
 
 <h2>NAME</h2>
 <p> btparser &#8211; a backtrace analyzer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>btparser</code> [option]&#8230; [FILE]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <i>btparser</i> is a command line tool that analyzes backtraces produced by GDB and provides their textual representation useful for crash duplication detection. </p>
 <p> By default, btparser prints the backtrace tree created by parsing the input file. </p>
 <h2>OPTIONS</h2>

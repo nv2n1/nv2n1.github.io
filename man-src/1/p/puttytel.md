@@ -1,4 +1,5 @@
 ---
+
 title: "puttytel(1)"
 name: "puttytel"
 section: "1"
@@ -9,13 +10,11 @@ description: "puttytel – GUI Telnet and Rlogin client for X"
 
 <h2>NAME</h2>
 <p> <code>puttytel</code> &#8211; GUI Telnet and Rlogin client for X</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 puttytel &amp;nbsp;
 [&amp;nbsp; options &amp; nbsp;] &amp; nbsp;
 [&amp;nbsp; host &amp; nbsp;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>puttytel</code> is a graphical Telnet and Rlogin client for X. It is a direct port of the Windows Telnet and Rlogin client of the same name, and a cut-down cryptography-free version of PuTTY.</p>
 <h2>OPTIONS</h2>
 <p> The command-line options supported by <code>puttytel</code> are:</p>

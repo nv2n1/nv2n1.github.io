@@ -1,4 +1,5 @@
 ---
+
 title: "xsdcxx(1)"
 name: "xsdcxx"
 section: "1"
@@ -9,9 +10,7 @@ description: "xsdcxx – W3C XML Schema to C++ Compiler"
 
 <h2>NAME</h2>
 <p> xsdcxx &#8211; W3C XML Schema to C++ Compiler</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xsdcxx</code> <i>command</i> <code>[</code> <i>options</i> <code>]</code> <i>file</i> <code>[</code> <i>file</i> <code>&#8230;]</code> <code>xsdcxx help</code> <code>[</code> <i>command</i> <code>]</code> <code>xsdcxx version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>xsdcxx</code> generates vocabulary-specific, statically-typed C++ mapping from W3C XML Schema definitions. Particular mapping to produce is selected by a <i>command</i>. Each mapping has a number of mapping-specific <i>options</i> that should appear, if any, after the <i>command</i>. Input files should be W3C XML Schema definitions. The exact set of the generated files depends on the selected mapping and options.</p>
 <h2>COMMANDS</h2>
 <dl>

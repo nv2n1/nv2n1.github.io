@@ -1,4 +1,5 @@
 ---
+
 title: "g_genconf_d(1)"
 name: "g_genconf_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "genconf – multiplies a conformation in ‘random’ orientations
 <h2>NAME</h2>
 <p> genconf &#8211; multiplies a conformation in &#8216;random&#8217; orientations </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>genconf</code> <code>-f</code><i> conf.gro </i> <code>-o</code><i> out.gro </i> <code>-trj</code><i> traj.xtc </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-nbox</code><i> vector </i> <code>-dist</code><i> vector </i> <code>-seed</code><i> int </i> <code>-[no]rot</code><i></i> <code>-[no]shuffle</code><i></i> <code>-[no]sort</code><i></i> <code>-block</code><i> int </i> <code>-nmolat</code><i> int </i> <code>-maxrot</code><i> vector </i> <code>-[no]renumber</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> genconf multiplies a given coordinate file by simply stacking them on top of each other, like a small child playing with wooden blocks. The program makes a grid of <i> user defined</i> proportions (<code> -nbox</code>), and interspaces the grid point with an extra space <code> -dist</code>. </p>
 <p> When option <code> -rot</code> is used the program does not check for overlap between molecules on grid points. It is recommended to make the box in the input file at least as big as the coordinates + Van der Waals radius. </p>
 <p> If the optional trajectory file is given, conformations are not generated, but read from this file and translated appropriately to build the grid.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dc_(3)"
 name: "dc_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dc_/"
 description: "QuantLib::FuturesConvAdjustmentQuote – quote for the futures-convexity adjustment of an index"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/quotes/futuresconvadjustmentquote.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Quote</code>, and <code>QuantLib::Observer</code>. </p>
 <h3>Public Member Functions</h3>

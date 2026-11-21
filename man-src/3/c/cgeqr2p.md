@@ -1,4 +1,5 @@
 ---
+
 title: "cgeqr2p(3)"
 name: "cgeqr2p"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgeqr2p/"
 description: "cgeqr2p.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeqr2p</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>CGEQR2P</code> computes the QR factorization of a general rectangular matrix with non-negative diagonal elements using an unblocked algorithm.</p>

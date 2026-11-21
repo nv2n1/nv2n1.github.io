@@ -1,4 +1,5 @@
 ---
+
 title: "alcc(1)"
 name: "alcc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-alcc/"
 description: "alcc – text based eD2k links calculator for aMule"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> _untranslated<code>[</code>-p<code>]</code> _untranslated<code>[</code>-v<code>]</code> <i>&lt;inputfiles_list&gt;</i> </p>
 <p> _untranslated<code>[</code>-h<code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Compute the eD2k links of all the input files given in the <i>&lt;inputfiles_list&gt;</i> (There can be one or more files).</p>
 <dl>
 <dt>

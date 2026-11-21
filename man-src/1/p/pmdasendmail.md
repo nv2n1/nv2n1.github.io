@@ -1,4 +1,5 @@
 ---
+
 title: "pmdasendmail(1)"
 name: "pmdasendmail"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdasendmail – sendmail performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdasendmail</code> &#8211; sendmail performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/sendmail/pmdasendmail</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdasendmail</code> is a sendmail Performance Metrics Domain Agent (PMDA) which exports mail traffic statistics as collected by <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1). </p>
 <p> Before the sendmail PMDA can export any metrics, <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) must have statistics collection enabled. This involves checking the name of the statistics file, as given by the <code>OS</code> or <code>O StatusFile</code> control lines in <code>/etc/sendmail.cf</code>, and then creating this file if it does not already exist. Removing the file will terminate statistics collection by <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) and hence the sendmail PMDA. </p>
 <p> A brief description of the <code>pmdasendmail</code> command line options follows:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nessus-config(1)"
 name: "nessus-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "nessus-config – displays compiler/linker flags for the Nessus li
 
 <h2>NAME</h2>
 <p> nessus-config &#8211; displays compiler/linker flags for the Nessus libraries</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nessus-config</code> <i>&lt;[&#8211;cflags] [&#8211;ldflags] [&#8211;libs]&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>nessus-config</code> script displays the compiler/linker flags other program sources can use to link to the Nessus libraries.</p>
 <h2>OPTIONS</h2>
 <dl>

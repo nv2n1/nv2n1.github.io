@@ -1,4 +1,5 @@
 ---
+
 title: "prev(1)"
 name: "prev"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-prev/"
 description: "prev – show the previous message"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>prev </code> [<i>+folder</i>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></dt>
 <dd>or <i>showmimeproc</i>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Prev</code> performs a <code>show</code> on the previous message in the specified (or current) folder. Like <code>show</code>, it passes any switches on to the program named by <i>showproc</i> or <i>showmimeproc</i>, which is called to list the message. This command is almost exactly equivalent to &#8220;<code>show prev</code>&#8221;. Consult the manual entry for <i><a href="/docs/linux/man/1-show/">show</a></i>(1) for all the details.</p>
 <h2>FILES</h2>
 <pre>

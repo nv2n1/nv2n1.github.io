@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_get_response(3)"
 name: "gnutls_ocsp_resp_get_response"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_response/"
 
  gnutls_ocsp_resp_get_response - API function
 
-<h2>SYNOPSIS</h2>
-
- <b>#include &lt;gnutls/ocsp.h&gt;</b> 
+<b>#include &lt;gnutls/ocsp.h&gt;</b> 
 
  <b>int gnutls_ocsp_resp_get_response(gnutls_ocsp_resp_t </b><i>resp</i><b>, gnutls_datum_t * </b><i>response_type_oid</i><b>, gnutls_datum_t * </b><i>response</i><b>);</b>
 
@@ -26,9 +25,7 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_response/"
 </dd><dt>gnutls_datum_t * response
 </dt><dd> newly allocated output buffer with DER encoded response</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function will extract the response type OID in and the response data from an OCSP response. Normally the 
+This function will extract the response type OID in and the response data from an OCSP response. Normally the 
 &nbsp;<wbr><i>response_type_oid</i>&nbsp;<wbr>is always&nbsp;<wbr>&quot;1.3.6.1.5.5.7.48.1.1&quot;&nbsp;<wbr>which means the 
 &nbsp;<wbr><i>response</i>&nbsp;<wbr>should be decoded as a Basic OCSP Response, but technically other response types could be used. 
 

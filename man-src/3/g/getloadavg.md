@@ -1,4 +1,5 @@
 ---
+
 title: "getloadavg(3)"
 name: "getloadavg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getloadavg/"
 description: "getloadavg – get system load averages"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int getloadavg(double loadavg[], int nelem);
@@ -20,7 +20,6 @@ int getloadavg(double loadavg[], int nelem);
     In glibc up to and including 2.19:
         _BSD_SOURCE
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getloadavg</code>() function returns the number of processes in the system run queue averaged over various periods of time. Up to <i>nelem</i> samples are retrieved and assigned to successive elements of <i>loadavg[]</i>. The system imposes a maximum of 3 samples, representing averages over the last 1, 5, and 15 minutes, respectively.</p>
 <h2>RETURN VALUE</h2>
 <p> If the load average was unobtainable, -1 is returned; otherwise, the number of samples actually retrieved is returned.</p>

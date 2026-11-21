@@ -1,4 +1,5 @@
 ---
+
 title: "setleds(1)"
 name: "setleds"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-setleds/"
 description: "setleds – set the keyboard leds"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>setleds</code> [<i>-v</i>] [<i>-L</i>] [<i>-D</i>] [<i>-F</i>] [<i>{+|-}num</i>] [<i>{+|-}caps</i>] [<i>{+|-}scroll</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Setleds</code> reports and changes the led flag settings of a VT (namely NumLock, CapsLock and ScrollLock). Without arguments, <code>setleds</code> prints the current settings. With arguments, it sets or clears the indicated flags (and leaves the others unchanged). The settings before and after the change are reported if the -v flag is given. </p>
 <p> The led flag settings are specific for each VT (and the VT corresponding to stdin is used). </p>
 <p> By default (or with option -F), <code>setleds</code> will only change the VT flags (and their setting may be reflected by the keyboard leds). </p>

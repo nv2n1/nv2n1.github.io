@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-checkbuilddeps(1)"
 name: "dpkg-checkbuilddeps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-checkbuilddeps/"
 description: "dpkg-checkbuilddeps – check build dependencies and conflicts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-checkbuilddeps</code> [<i>option</i>&#8230;] [<i>control-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This program checks the installed packages in the system against the build dependencies and build conflicts listed in the control file. If any are not met, it displays them and exits with a nonzero return code. </p>
 <p> By default, <code>debian/control</code> is read, but an alternate control filename may be specified on the command line.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "libipmiconsole(3)"
 name: "libipmiconsole"
 section: "3"
@@ -9,7 +10,6 @@ description: "libipmiconsole – IPMI SOL library"
 
 <h2>NAME</h2>
 <p> libipmiconsole &#8211; IPMI SOL library</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ipmiconsole.h&gt;</code> </p>
 <p> <code>int ipmiconsole_engine_init(unsigned int thread_count, unsigned int debug_flags);</code> </p>
 <p> <code>int ipmiconsole_engine_submit(ipmiconsole_ctx_t c, Ipmiconsole_callback callback, void *callback_arg);</code> </p>
@@ -22,7 +22,6 @@ description: "libipmiconsole – IPMI SOL library"
 <p> <code>int ipmiconsole_ctx_fd(ipmiconsole_ctx_t c);</code> </p>
 <p> <code>int ipmiconsole_ctx_generate_break(ipmiconsole_ctx_t c);</code> </p>
 <p> <code>int ipmiconsole_ctx_destroy(ipmiconsole_ctx_t c);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Libipmiconsole</code> implements a high level serial-over-lan (SOL) API for remote console access. It can be used to establish and manage multiple IPMI 2.0 SOL sessions. The goal of this library is to abstract away all of the underlying IPMI/SOL details away from the user into a relatively simple file descriptor interface.</p>
 <h2>FILES</h2>
 <p> /usr/include/ipmiconsole.h</p>

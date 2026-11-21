@@ -1,4 +1,5 @@
 ---
+
 title: "khost(1)"
 name: "khost"
 section: "1"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/1-khost/"
 <dl>
 <dt><code>khost</code></dt>
 <dd> &#8211; Simple DNS lookup utility (libknot equivalent of ISC host)</dd></dl>
-<h2>SYNOPSIS</h2>
 <p> <code>khost</code> [<i>options</i>] <i>name</i> [<i>server</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This utility sends a DNS query for the <i>name</i> to the <i>server</i> and prints a reply in more user-readable form. For more advanced DNS queries use <code>kdig</code> instead.</p>
 <dl>
 <dt><i>name</i></dt>

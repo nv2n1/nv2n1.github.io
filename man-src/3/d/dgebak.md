@@ -1,4 +1,5 @@
 ---
+
 title: "dgebak(3)"
 name: "dgebak"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgebak/"
 description: "dgebak.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgebak</code> (JOB, SIDE, N, ILO, IHI, SCALE, M, V, LDV, INFO)<br />
  <i></i><code>DGEBAK</code></p>

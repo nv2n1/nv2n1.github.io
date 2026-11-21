@@ -1,4 +1,5 @@
 ---
+
 title: "dtgsen(3)"
 name: "dtgsen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtgsen/"
 description: "dtgsen.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>DTGSEN</code></p>

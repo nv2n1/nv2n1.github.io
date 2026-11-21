@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-extract(1)"
 name: "rpmdev-extract"
 section: "1"
@@ -9,9 +10,7 @@ description: "rpmdev-extract – manual page for rpmdev-extract version 1.10"
 
 <h2>NAME</h2>
 <p> rpmdev-extract &#8211; manual page for rpmdev-extract version 1.10</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rpmdev-extract</code> [<i>OPTION</i>]&#8230; <i>ARCHIVE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> rpmdev-extract extracts various archives in &quot;tar xvf&quot; style. </p>
 <p> Depending on availability of external (un)archiver programs, the following archive types are supported: ace, ar/deb, arj, cab/exe, cpio, lha, rar, rpm, tar, zip/jar, zoo.</p>
 <h2>OPTIONS</h2>

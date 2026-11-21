@@ -1,4 +1,5 @@
 ---
+
 title: "pamcomp(1)"
 name: "pamcomp"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pamcomp/"
 description: "pamcomp – composite (overlay) two Netpbm images together"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamcomp</code> </p>
 <p> [<code>-align=</code>{<code>left</code>|<code>center</code>|<code>right</code>| <code>beyondleft</code>|<code>beyondright</code>}] [<code>-valign=</code>{<code>top</code>|<code>middle</code>|<code>bottom</code>| <code>above</code>|<code>below</code>}] [<code>-xoff=</code><i>X</i>] [<code>-yoff=</code><i>Y</i>] [<code>-alpha=</code><i>alpha-pgmfile</i>] [<code>-invert</code>] [<code>-opacity=</code><i>opacity</i>] [<code>-mixtransparency</code>] [<code>-linear</code>] <i>overlay_file</i> [<i>underlying_file</i> [<i>output_file</i>]] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamcomp</code> reads two images and produces a composite image with one of the images overlayed on top of the other, possible translucently. The images need not be the same size. The input and outputs are Netpbm format image files. </p>
 <p> In its simplest use, <code>pamcomp</code> simply places the image in the file <i>overlay_file</i> on top of the image in the file <i>underlying_file</i>, blocking out the part of <i>underlying_file</i> beneath it. </p>

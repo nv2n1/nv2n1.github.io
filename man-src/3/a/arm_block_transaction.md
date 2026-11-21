@@ -1,4 +1,5 @@
 ---
+
 title: "arm_block_transaction(3)"
 name: "arm_block_transaction"
 section: "3"
@@ -9,7 +10,6 @@ description: "arm_block_transaction – mark a transaction as blocked"
 
 <h2>NAME</h2>
 <p> arm_block_transaction &#8211; mark a transaction as blocked</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_block_transaction( </p>
@@ -17,7 +17,6 @@ description: "arm_block_transaction – mark a transaction as blocked"
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>, </p>
 <p>&nbsp;<wbr>arm_tran_block_handle_t&nbsp;<wbr>*</code><i>block_handle</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_block_transaction()</code> is used to indicate that the transaction instance is blocked waiting on an external transaction (which may or may not be instrumented with ARM) or some other event to complete. It has been found useful to separate out this &quot;blocked&quot; time from the elapsed time between the <code>arm_start_transaction()</code> and <code>arm_stop_transaction()</code>. </p>
 <p> A transaction remains blocked until <code>arm_unblock_transaction()</code> is executed passing the same <i>block_handle</i>, or either an <code>arm_discard_transaction()</code> or <code>arm_stop_transaction()</code> is executed passing the same <i>tran_handle</i>. </p>
 <p> The blocking conditions of most interest are those that could result in a significant and/or variable length delay relative to the response time of the transaction. For example, a remote procedure call would be a good situation to indicate with <code>arm_block_transaction()</code> or <code>arm_unblock_transaction()</code>, whereas a disk I/O would not. </p>

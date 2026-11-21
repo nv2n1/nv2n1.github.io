@@ -1,4 +1,5 @@
 ---
+
 title: "pdfcrack(1)"
 name: "pdfcrack"
 section: "1"
@@ -9,9 +10,7 @@ description: "pdfcrack – Password recovery tool for PDF-files"
 
 <h2>NAME</h2>
 <p> pdfcrack &#8211; Password recovery tool for PDF-files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pdfcrack </code> [ <code>-f</code> ] FILE [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>PDFCrack </code> is a tool for recovering passwords and content from PDF-files. </p>
 <p> If aborted with Ctrl-C or by receiving a SIGINT signal, <code>pdfcrack</code> will automatically save current position. The position will be saved in a file called <code>savedstate.sav</code> in current working directory. </p>
 <p> Mandatory arguments for long options are mandatory for short options too.</p>

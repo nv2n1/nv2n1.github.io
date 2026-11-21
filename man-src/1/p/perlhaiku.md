@@ -1,4 +1,5 @@
 ---
+
 title: "perlhaiku(1)"
 name: "perlhaiku"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlhaiku/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlhaiku - Perl version 5.10+ on Haiku 
 
- perlhaiku - Perl version 5.10+ on Haiku 
-
-<h2>DESCRIPTION</h2>
-
- This file contains instructions how to build Perl for Haiku and lists known problems.
+This file contains instructions how to build Perl for Haiku and lists known problems.
 
 <h2>BUILD AND INSTALL</h2>
 

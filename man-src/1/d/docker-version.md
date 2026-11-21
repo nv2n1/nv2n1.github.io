@@ -1,4 +1,5 @@
 ---
+
 title: "docker-version(1)"
 name: "docker-version"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-version/"
 description: "docker-version – Show the Docker version information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker version [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This command displays version information for both the Docker client and daemon. </p>
 <h2>EXAMPLES</h2>
 <h2>Display Docker version information</h2>

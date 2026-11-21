@@ -1,4 +1,5 @@
 ---
+
 title: "gdk-pixbuf-pixdata(1)"
 name: "gdk-pixbuf-pixdata"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gdk-pixbuf-pixdata/"
 description: "gdk-pixbuf-pixdata – GDK Pixbuf library"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gdk-pixbuf-pixdata</code> [<i>options</i>] [<i>input-file</i>] [<i>output-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message</dd>

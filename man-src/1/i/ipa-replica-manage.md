@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-replica-manage(1)"
 name: "ipa-replica-manage"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-replica-manage – Manage an IPA replica"
 
 <h2>NAME</h2>
 <p> ipa-replica-manage &#8211; Manage an IPA replica</p>
-<h2>SYNOPSIS</h2>
 <p> ipa-replica-manage [<i>OPTION</i>]&#8230; [COMMAND]</p>
-<h2>DESCRIPTION</h2>
 <p> Manages the replication agreements of an IPA server. </p>
 <p> To manage IPA replication agreements in a domain at domain level 1, use IPA CLI or Web UI, see `ipa help topology` for additional information. </p>
 <p> The available commands are:</p>

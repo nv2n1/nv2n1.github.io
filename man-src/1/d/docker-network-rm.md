@@ -1,4 +1,5 @@
 ---
+
 title: "docker-network-rm(1)"
 name: "docker-network-rm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-network-rm/"
 description: "docker-network-rm – Remove one or more networks"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker network rm NETWORK [NETWORK&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Removes one or more networks by name or identifier. To remove a network, you must first disconnect any containers connected to it. To remove the network named &#8216;my-network&#8217;: </p>
 <dl>
 <dt>

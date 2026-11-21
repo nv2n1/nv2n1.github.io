@@ -1,4 +1,5 @@
 ---
+
 title: "tar(1)"
 name: "tar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tar/"
 description: "tar – an archiving utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Traditional usage</h3>
 <p> <code>tar</code> {<code>A</code>|<code>c</code>|<code>d</code>|<code>r</code>|<code>t</code>|<code>u</code>|<code>x</code>}[<code>GnSkUWOmpsMBiajJzZhPlRvwo</code>] [<i>ARG</i>&#8230;]</p>
 <h3>UNIX-style usage</h3>
@@ -40,7 +40,6 @@ description: "tar – an archiving utility"
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/tar/manual">http://www.gnu.org/software/tar/manual</a></code></dd></dl>
 <p> If any discrepancies occur between this manpage and the <code>GNU Tar Manual</code>, the later shall be considered the authoritative source.</p>
-<h2>DESCRIPTION</h2>
 <p> GNU <code>tar</code> is an archiving program designed to store multiple files in a single file (an <code>archive</code>), and to manipulate such archives. The archive can be either a regular file or a device (e.g. a tape drive, hence the name of the program, which stands for <code>t</code>ape <code>ar</code>chiver), which can be located either on the local or on a remote machine. </p>
 <h3>Option styles</h3>
 <p> Options to GNU <code>tar</code> can be given in three different styles. In <code>traditional style</code>, the first argument is a cluster of option letters and all subsequent arguments supply arguments to those options that require them. The arguments are read in the same order as the option letters. Any command line words that remain after all options has been processed are treated as non-optional arguments: file or archive member names. </p>

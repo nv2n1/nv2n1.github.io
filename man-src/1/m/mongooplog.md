@@ -1,4 +1,5 @@
 ---
+
 title: "mongooplog(1)"
 name: "mongooplog"
 section: "1"
@@ -10,7 +11,6 @@ description: "mongooplog – MongoDB Oplog Utility"
 <h2>NAME</h2>
 <p> mongooplog &#8211; MongoDB Oplog Utility </p>
 <p> New in version 2.2. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mongooplog</code> is a simple tool that polls operations from the <i>replication</i> <i>oplog</i> of a remote server, and applies them to the local server. This capability supports certain classes of real-time migrations that require that the source server remain online and in operation throughout the migration process. </p>
 <p> Typically this command will take the following form: </p>
 <pre>

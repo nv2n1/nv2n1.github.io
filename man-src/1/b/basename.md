@@ -1,4 +1,5 @@
 ---
+
 title: "basename(1)"
 name: "basename"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-basename/"
 description: "basename – strip directory and suffix from filenames"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>basename</code> <i>,NAME /</i>[<i>,SUFFIX/</i>]<br />
  <code>basename</code> <i>,OPTION/</i>&#8230; <i>,NAME/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print NAME with any leading directory components removed. If specified, also remove a trailing SUFFIX. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

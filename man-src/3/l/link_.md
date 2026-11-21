@@ -1,4 +1,5 @@
 ---
+
 title: "link_(3)"
 name: "link_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-link_/"
 description: "QuantLib::Handle – Shared handle to an observable."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/handle.hpp&gt; </p>
 <h3>Public Member Functions</h3>
 <p> <code>Handle</code> (const boost::shared_ptr&lt; T &gt; &amp;h=boost::shared_ptr&lt; T &gt;(), bool registerAsObserver=true) </p>

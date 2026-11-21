@@ -1,4 +1,5 @@
 ---
+
 title: "pnmmargin(1)"
 name: "pnmmargin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmmargin/"
 description: "pnmmargin – add a border to a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmmargin</code> [<code>-white</code>|<code>-black</code>|<code>-color</code> <i>colorspec</i>] <i>size</i> [<i>pnmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable anymap as input. Adds a border of the specified number of pixels, and produces a portable anymap as output.</p>
 <h2>OPTIONS</h2>
 <p> You can specify the border color with the <code>-white</code>, <code>-black</code>, and <code>-color</code> flags. If no color is specified, the program makes a guess. </p>

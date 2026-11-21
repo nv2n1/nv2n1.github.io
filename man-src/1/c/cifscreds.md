@@ -1,4 +1,5 @@
 ---
+
 title: "cifscreds(1)"
 name: "cifscreds"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cifscreds/"
 description: "cifscreds – manage NTLM credentials in kernel keyring"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cifscreds add|clear|clearall|update [-u username] [-d] host|domain</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cifscreds</code> program is a tool for managing credentials (username and password) for the purpose of establishing sessions in multiuser mounts. </p>
 <p> When a cifs filesystem is mounted with the &#8220;multiuser&#8221; option, and does not use krb5 authentication, it needs to be able to get the credentials for each user from somewhere. The <code>cifscreds</code> program is the tool used to provide these credentials to the kernel. </p>
 <p> The first non-option argument to cifscreds is a command (see the <font SIZE="-1"><code>COMMANDS</code></font> section below). The second non-option argument is a hostname or address, or an <font SIZE="-1">NT</font> domain name.</p>

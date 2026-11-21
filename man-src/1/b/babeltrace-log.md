@@ -1,4 +1,5 @@
 ---
+
 title: "babeltrace-log(1)"
 name: "babeltrace-log"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-babeltrace-log/"
 description: "babeltrace-log — Babeltrace Log Converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 babeltrace-log [OPTIONS] OUTPUT
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Convert for a text log (read from standard input) to CTF. </p>
 <p> This program follow the usual GNU command line syntax with long options starting with two dashes. Below is a summary of the available options. </p>
 <dl>

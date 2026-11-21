@@ -1,4 +1,5 @@
 ---
+
 title: "img2txt(1)"
 name: "img2txt"
 section: "1"
@@ -9,7 +10,6 @@ description: "img2txt – convert images to various text-based coloured files"
 
 <h2>NAME</h2>
 <p> img2txt &#8211; convert images to various text-based coloured files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>img2txt </code> [ <code>-W</code> <i>width</i> ] [ <code>-H</code> <i>height</i> ] [ <code>-x</code> <i>font-width</i> ] [ <code>-y</code> <i>font-height</i> ]</p>
 <dl>
 <dt>
@@ -18,7 +18,6 @@ description: "img2txt – convert images to various text-based coloured files"
 <dt>
 </dt><dd>
 &nbsp;<wbr>[ <code>-d</code> <i>dither</i> ] [ <code>-f</code> <i>format</i> ] <i>FILE</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>img2txt</code> converts images to colour ASCII characters and outputs them to text-based coloured files. </p>
 <p> <code>img2txt</code> can load the most widespread image formats: PNG, JPEG, GIF, PNG, BMP etc (see <code>NOTES</code> for details). By default the output text is 60 columns wide, and the line count is computed accordingly to respect aspect ratio of original file. The default output format is standard ANSI coloured text. </p>
 <h2>OPTIONS</h2>

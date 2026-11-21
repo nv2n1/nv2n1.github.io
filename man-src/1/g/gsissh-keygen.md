@@ -1,4 +1,5 @@
 ---
+
 title: "gsissh-keygen(1)"
 name: "gsissh-keygen"
 section: "1"
@@ -9,7 +10,6 @@ description: "ssh-keygen – authentication key generation, management and conve
 
 <h2>NAME</h2>
 <p> <code>ssh-keygen</code> &#8211; authentication key generation, management and conversion</p>
-<h2>SYNOPSIS</h2>
 <p> -words <code>ssh-keygen</code> [-<code>q</code> ] [-<code>b </code><i>bits</i> ] [-<code>t </code><i>type</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ]<br />
 <code>ssh-keygen</code> &#8211;<code>p</code> [-<code>P </code><i>old_passphrase</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>f </code><i>keyfile</i> ]<br />
 <code>ssh-keygen</code> &#8211;<code>i</code> [-<code>m </code><i>key_format</i> ] [-<code>f </code><i>input_keyfile</i> ]<br />
@@ -30,7 +30,6 @@ description: "ssh-keygen – authentication key generation, management and conve
 <code>ssh-keygen</code> &#8211;<code>A</code><br />
 <code>ssh-keygen</code> &#8211;<code>k</code> &#8211;<code>f </code><i>krl_file</i> [-<code>u</code> ] [-<code>s </code><i>ca_public</i> ] [-<code>z </code><i>version_number</i> ] <i>file &#8230;</i><br />
 <code>ssh-keygen</code> &#8211;<code>Q</code> &#8211;<code>f </code><i>krl_file</i> <i>file &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ssh-keygen</code> generates, manages and converts authentication keys for <a href="/docs/linux/man/1-ssh/">ssh</a>(1). <code>ssh-keygen</code> can create RSA keys for use by SSH protocol version 1 and DSA, ECDSA, ED25519 or RSA keys for use by SSH protocol version 2. The type of key to be generated is specified with the &#8211;<code>t</code> option. If invoked without any arguments, <code>ssh-keygen</code> will generate an RSA key for use in SSH protocol 2 connections. </p>
 <p> <code>ssh-keygen</code> is also used to generate groups for use in Diffie-Hellman group exchange (DH-GEX). See the Sx MODULI GENERATION section for details. </p>
 <p> Finally, <code>ssh-keygen</code> can be used to generate and update Key Revocation Lists, and to test whether given keys have been revoked by one. See the Sx KEY REVOCATION LISTS section for details. </p>

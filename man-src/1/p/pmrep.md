@@ -1,4 +1,5 @@
 ---
+
 title: "pmrep(1)"
 name: "pmrep"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmrep – performance metrics reporter"
 
 <h2>NAME</h2>
 <p> <code>pmrep</code> &#8211; performance metrics reporter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmrep</code> [<code>-CdGHLpruUVxz?</code>] [<code>-a</code> <i>archive</i>] [<code>-A</code> <i>align</i>] [<code>-b</code> <i>space-scale</i>] [<code>-c</code> <i>config</i>] [<code>-e</code> <i>derived</i>] [<code>-E</code> <i>lines</i>] [<code>-f</code> <i>format</i>] [<code>-F</code> <i>outfile</i>] [<code>-h</code> <i>host</i>] [<code>-K</code> <i>spec</i>] [<code>-l</code> <i>delimiter</i>] [<code>-o</code> <i>output</i>] [<code>-O</code> <i>origin</i>] [<code>-P</code> <i>precision</i>] [<code>-q</code> <i>count-scale</i>] [<code>-s</code> <i>samples</i>] [<code>-S</code> <i>starttime</i>] [<code>-t</code> <i>interval</i>] [<code>-T</code> <i>endtime</i>] [<code>-w</code> <i>width</i>] [<code>-y</code> <i>time-scale</i>] [<code>-Z</code> <i>timezone</i>] <i>metricspec [&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmrep</code> is a customizable performance metrics reporting tool. Any available performance metric, live or archived, system and/or application, can be selected for reporting using one of the output alternatives listed below together with applicable formatting options. </p>
 <p> <code>pmrep</code> collects the selected metric values through the facilities of the Performance Co-Pilot (PCP), see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1). The metrics to be reported are specified on the command line, in a configuration file, or both. Metrics can be automatically converted and scaled using the PCP facilities, either by default or by per-metric scaling specifications. In addition to the existing metrics, derived metrics can be defined using the arithmetic expressions described in <code><a href="/docs/linux/man/3-pmregisterderived/">pmRegisterDerived</a></code>(3). </p>
 <p> Unless directed to another host by the <code>-h</code> option, <code>pmrep</code> will contact the Performance Metrics Collector Daemon (PMCD, see <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1)) on the local host. </p>

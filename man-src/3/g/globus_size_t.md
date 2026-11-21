@@ -1,4 +1,5 @@
 ---
+
 title: "globus_size_t(3)"
 name: "globus_size_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_types.h –"
 ---
 
 <p> Common Primitive Types.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_config.h&#8217;<br />
  #include &lt;stdlib.h&gt;<br />
  #include &lt;stdint.h&gt;<br />

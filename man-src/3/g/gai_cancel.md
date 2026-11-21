@@ -1,4 +1,5 @@
 ---
+
 title: "gai_cancel(3)"
 name: "gai_cancel"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gai_cancel/"
 description: "getaddrinfo_a, gai_suspend, gai_error, gai_cancel – asynchronous network address and service translation"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;netdb.h&gt;
@@ -19,7 +19,6 @@ int gai_error(struct gaicb *req);
 int gai_cancel(struct gaicb *req);
 Link with - lanl.
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getaddrinfo_a</code>() function performs the same task as <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), but allows multiple name look-ups to be performed asynchronously, with optional notification on completion of look-up operations. </p>
 <p> The <i>mode</i> argument has one of the following values:</p>
 <dl>

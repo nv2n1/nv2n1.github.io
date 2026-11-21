@@ -1,4 +1,5 @@
 ---
+
 title: "db_codegen(1)"
 name: "db_codegen"
 section: "1"
@@ -8,11 +9,8 @@ description: "db5.3_codegen – generate application code for Berkeley DB"
 ---
 
 <p>Berkeley DB</p>
-<h2 class="name">NAME</h2>
 <p> <code>db5.3_codegen</code> &#8211; generate application code for Berkeley DB </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>Vv </code>[-<code>a </code><i>api</i> ] ] [-<code>i </code><i>file</i> ] [-<code>o </code><i>prefix</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The utility generates application code to create and configure Berkeley DB database environments and databases based on a simple description language and writes it to one or more output files. The generated code may need modification, in the case of complicated applications, but will usually significantly reduce the time required to create Berkeley DB applications. </p>
 <p> The options are as follows:</p>
 <dl>

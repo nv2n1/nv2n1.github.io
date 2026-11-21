@@ -1,4 +1,5 @@
 ---
+
 title: "jbigtopnm(1)"
 name: "jbigtopnm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jbigtopnm/"
 description: "jbigtopnm – JBIG to PNM image file converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jbigtopnm</code> [<i>options</i>] [<i>input-file</i> [<i>output-file</i>]] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>jbigtopnm</code> reads a JBIG bi-level image entity (BIE) from a file or standard input, decompresses it, and outputs a PBM or PGM file. If the input has one plane, or you choose just one plane of it, the output is PBM. Otherwise, the output is PGM. </p>
 <p> JBIG is a highly effective lossless compression algorithm for bi-level images (one bit per pixel), which is particularly suitable for scanned document pages. </p>

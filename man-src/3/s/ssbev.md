@@ -1,4 +1,5 @@
 ---
+
 title: "ssbev(3)"
 name: "ssbev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssbev/"
 description: "ssbev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, INFO)<br />
  <i></i><code> SSBEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

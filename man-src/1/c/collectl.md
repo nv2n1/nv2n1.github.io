@@ -1,4 +1,5 @@
 ---
+
 title: "collectl(1)"
 name: "collectl"
 section: "1"
@@ -9,7 +10,6 @@ description: "collectl – Collects data that describes the current system statu
 
 <h2>NAME</h2>
 <p> collectl &#8211; Collects data that describes the current system status. </p>
-<h2>SYNOPSIS</h2>
 <p> Record Mode &#8211; read data from live system and write to file or display on terminal </p>
 <p> <code>collectl [-f file] [options]</code> </p>
 <p> Playback Mode &#8211; read data from one or more raw data files and display on terminal </p>
@@ -578,7 +578,6 @@ description: "collectl – Collects data that describes the current system statu
 <dl>
 <dt>
 </dt><dd> i &#8211; include i/o sizes in brief mode</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>collectl</code> utility is a system monitoring tool that records or displays specific operating system data for one or more sets of subsystems. Any set of the subsystems, such as CPU, Disks, Memory or Sockets can be included in or excluded from data collection. Data can either be displayed back to the terminal, or stored in either a compressed or uncompressed data file. The data files themselves can either be in <code>raw</code> format (essentially a direct copy from the associated /proc structures) or in a space separated <code>plottable</code> format such that it can be easily plotted using tools such as gnuplot or excel. Data files can be read and manipulated from the command line, or through use of command scripts. </p>
 <p> Upon startup, <code>collectl.conf</code> is read, which sets a number of default parameters and switch values. Collectl searches for this file first in /etc, then in the directory the collectl execuable lives in (typically /usr/sbin) and finally the current directory. These locations can be overriden with the <code>-C</code> switch. Unless you&#8217;re doing something really special, this file need never be touched, the only exception perhaps being when choosing to run collectl as a service and you wish to change it&#8217;s default behavior which is set by the DaemonCommand entry. </p>
 <h2>RESTRICTIONS/PROBLEMS</h2>

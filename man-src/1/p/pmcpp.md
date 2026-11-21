@@ -1,4 +1,5 @@
 ---
+
 title: "pmcpp(1)"
 name: "pmcpp"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmcpp – simple preprocessor for the Performance Co-Pilot"
 
 <h2>NAME</h2>
 <p> <code>pmcpp</code> &#8211; simple preprocessor for the Performance Co-Pilot</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmcpp</code> [<code>-Prs</code>] [<code>-D</code> <i>name</i>[=<i>value</i>] &#8230;] [<code>-I</code> <i>dir</i> &#8230;] [<i>infile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmcpp</code> provides a very simple pre-processor originally designed for manipulating Performance Metric Name Space (PMNS) files for the Performance Co-Pilot (PCP), but later generalized to provide conditional blocks, include file processing, in-line shell command execution and macro substitution for arbitrary files. It is most commonly used internally to process the PMNS file(s) after <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3) or <code><a href="/docs/linux/man/3-pmloadasciinamespace/">pmLoadASCIINameSpace</a></code>(3) is called and to pre-process the configuration files for <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
 <p> Input lines are read from <i>infile</i> (or standard input if <i>infile</i> is not specified), processed and written to standard output. </p>
 <p> All C-style comments of the form /* &#8230; */ are stripped from the input stream. </p>

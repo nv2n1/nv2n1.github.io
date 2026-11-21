@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlman(1)"
 name: "mysqlman"
 section: "1"
@@ -6,14 +7,9 @@ letter: "m"
 url: "/docs/linux/man/1-mysqlman/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+mysqlman - default man page for mysql 
 
- mysqlman - default man page for mysql 
-
-<h2>DESCRIPTION</h2>
-
- Certain executables distributed with the MySQL database management system do not have specific man pages.
+Certain executables distributed with the MySQL database management system do not have specific man pages.
 
 <h2>SEE ALSO</h2>
 

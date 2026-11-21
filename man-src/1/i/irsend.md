@@ -1,4 +1,5 @@
 ---
+
 title: "irsend(1)"
 name: "irsend"
 section: "1"
@@ -9,9 +10,7 @@ description: "irsend – basic LIRC program to send infra-red commands"
 
 <h2>NAME</h2>
 <p> irsend &#8211; basic LIRC program to send infra-red commands</p>
-<h2>SYNOPSIS</h2>
 <p> <code>irsend</code> [<i>options</i>] <i>DIRECTIVE REMOTE CODE </i>[<i>CODE</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Asks the <code>lircd</code> daemon to send one or more CIR (Consumer Infra-Red) commands. This is intended for remote control of electronic devices such as TV boxes, HiFi sets, etc. </p>
 <p> <i>DIRECTIVE</i> can be: </p>
 <pre><code>

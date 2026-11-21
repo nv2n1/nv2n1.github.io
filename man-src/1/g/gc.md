@@ -1,4 +1,5 @@
 ---
+
 title: "gc(1)"
 name: "gc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gc/"
 description: "gc – count graph components"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gc</code> [ <code>-necCaDUrsv?</code> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gc</code> is a graph analogue to <code>wc </code> in that it prints to standard output the number of nodes, edges, connected components or clusters contained in the input files. It also prints a total count for all graphs if more than one graph is given.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

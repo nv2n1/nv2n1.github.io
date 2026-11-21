@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_tty(2)"
 name: "ioctl_tty"
 section: "2"
@@ -6,10 +7,9 @@ letter: "i"
 url: "/docs/linux/man/2-ioctl_tty/"
 description: "ioctl_tty – ioctls for terminals and serial lines"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;termios.h&gt;</code> </p>
 <p> <code>int ioctl(int </code><i>fd</i><code>, int </code><i>cmd</i><code>, ...);</code>  </p>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) call for terminals and serial ports accepts many possible command arguments. Most require a third argument, of varying type, here called <i>argp</i> or <i>arg</i>. </p>
 <p> Use of <i>ioctl</i> makes for nonportable programs. Use the POSIX interface described in <code><a href="/docs/linux/man/3-termios/">termios</a></code>(3) whenever possible.  </p>
 <h3>Get and set terminal attributes</h3>

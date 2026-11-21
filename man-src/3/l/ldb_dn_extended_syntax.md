@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_dn_extended_syntax(3)"
 name: "ldb_dn_extended_syntax"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_dn_extended_syntax/"
 description: "ldb_dn_extended_syntax –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> const char * <code>name</code> </p>
 <p> ldb_attr_handler_t <code>read_fn</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ictrans(1)"
 name: "ictrans"
 section: "1"
@@ -9,9 +10,7 @@ description: "ictrans – interactive NCAR CGM translator ctrans"
 
 <h2>NAME</h2>
 <p> ictrans &#8211; interactive NCAR CGM translator <code>ctrans</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>ictrans</code> [ <code>-d</code><i> device</i> ] [ <code>-font</code><i> font</i> ] [ <code>-e</code><i> script</i> ]* [ <code>-soft</code> ] [ <code>-bell</code> ] [ <code>-lmin</code><i> min</i> ] [ <code>-lmax</code><i> max</i> ] [ <code>-lscale</code><i> scale</i> ] [ <code>-pal</code><i> pal_fname</i> ] [ <code>-Version</code> ] [ <code>-wid</code><i> window_id</i> ] [ <i>device-specific options</i> ] <i>metafile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ictrans</code> is the user interface to the Computer Graphics Metafile (<font SIZE="-1">CGM</font>) translator <code>ctrans.</code> <code>ictrans </code> will enter command interpreter mode upon invocation and await instructions from the user. When waiting for commands from the user, <code>ictrans</code> displays the prompt `<code>ictrans&gt;</code>&#8216;. </p>
 <p> Upon invocation <code>ictrans </code> performs a configuration of its spooled device table. The table is configured by processing several sources. <code>ictrans </code> first searches for the file <code>ncarv_spool</code> in the $NCARG_ROOT/lib/ncarg directory. If the file exists <code>ictrans</code> will load it into the spooled device table. Next, ictrans searches for the file <code>.ncarv_spool</code> in the user&#8217;s home directory. If found, its contents are merged into the spooler table. Finally, the NCARV_SPOOL environment variable may contain the definition for a single spooler. If this variable is set, its contents also are merged into the table. Each entry in the above set of sources is identified by a name. If a conflict in names exists then the last entry encountered takes precedence. i.e. the previous entry of the same name is overridden.</p>
 <h2>OPTIONS</h2>

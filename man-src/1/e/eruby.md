@@ -1,4 +1,5 @@
 ---
+
 title: "eruby(1)"
 name: "eruby"
 section: "1"
@@ -9,9 +10,7 @@ description: "eruby – Embedded Ruby Language"
 
 <h2>NAME</h2>
 <p> eruby &#8211; Embedded Ruby Language</p>
-<h2>SYNOPSIS</h2>
 <p> eruby [options] [inputfile]</p>
-<h2>DESCRIPTION</h2>
 <p> eruby interprets a Ruby code embedded text file. For example, eruby enables you to embed a Ruby code to a HTML file. A Ruby block starts with `&lt;%&#8217; and ends with `%&gt;&#8217;. eRuby replaces the block with its output. If `&lt;%&#8217; is followed by `=&#8217;, eRuby replaces the block with a value of the block. If `&lt;%&#8217; is followed by `#&#8217;, the block is ignored as a comment.</p>
 <h2>OPTIONS</h2>
 <dl>

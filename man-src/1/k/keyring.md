@@ -1,4 +1,5 @@
 ---
+
 title: "keyring(1)"
 name: "keyring"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-keyring/"
 description: "keyring – Python-Keyring command-line utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>keyring</code> [<i>,get|set|del/</i>] <i>,SERVICE USERNAME/</i> </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -22,7 +22,6 @@ description: "keyring – Python-Keyring command-line utility"
 <dt><code>&#8211;disable</code></dt>
 <dd> Create a configuration file disabling keyring and exit. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>keyring</code> provides a way to store, lookup and delete passwords in various backends supported by Python-Keyring. </p>
 <p> Usage example: </p>
 <pre>

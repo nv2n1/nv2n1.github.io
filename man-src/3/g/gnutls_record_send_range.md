@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_send_range(3)"
 name: "gnutls_record_send_range"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_record_send_range – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_send_range &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>ssize_t gnutls_record_send_range(gnutls_session_t </code><i>session</i><code>, const void * </code><i>data</i><code>, size_t </code><i>data_size</i><code>, const gnutls_range_st * </code><i>range</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_record_send_range – API function"
 <dd> is the length of the data.</dd>
 <dt>const gnutls_range_st * range</dt>
 <dd> is the range of lengths in which the real data length must be hidden.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function operates like <code>gnutls_record_send()</code> but, while <code>gnutls_record_send()</code> adds minimal padding to each TLS record, this function uses the TLS extra-padding feature to conceal the real data size within the range of lengths provided. Some TLS sessions do not support extra padding (e.g. stream ciphers in standard TLS or SSL3 sessions). To know whether the current session supports extra padding, and hence length hiding, use the <code>gnutls_record_can_use_length_hiding()</code> function.</p>
 <h2>NOTE</h2>
 <p> This function currently is only limited to blocking sockets.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "virt-format(1)"
 name: "virt-format"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-virt-format/"
 description: "virt-format – Erase and make a blank disk"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - format[--options] - a disk.img[-a disk.img...]
 </code></pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-format&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
-<h2>DESCRIPTION</h2>
 <p> Virt-format takes an existing disk file (or it can be a host partition, <font SIZE="-1">LV</font> etc), <code>erases all data on it</code>, and formats it as a blank disk. It can optionally create partition tables, empty filesystems, logical volumes and more. </p>
 <p> To create a disk containing data, you may be better to use <i><a href="/docs/linux/man/1-virt-make-fs/">virt-make-fs</a></i>(1). If you are creating a blank disk to use in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1), you should instead use the guestfish <i>-N</i> option. </p>
 <p> Normal usage would be something like this: </p>

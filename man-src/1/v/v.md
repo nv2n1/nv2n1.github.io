@@ -1,4 +1,5 @@
 ---
+
 title: "v(1)"
 name: "v"
 section: "1"
@@ -11,7 +12,6 @@ description: "v.what.vect – Uploads vector values at positions of vector point
 <p> <i></i><code>v.what.vect</code> &#8211; Uploads vector values at positions of vector points to the table.</p>
 <h2>KEYWORDS</h2>
 <p> vector, database, attribute table</p>
-<h2>SYNOPSIS</h2>
 <p> <code>v.what.vect</code><br />
  <code>v.what.vect help</code><br />
  <code>v.what.vect vector</code>=<i>name</i> [<code>layer</code>=<i>integer</i>] <code>column</code>=<i>string</i> <code>qvector</code>=<i>name</i> [<code>qlayer</code>=<i>integer</i>] <code>qcolumn</code>=<i>string</i> [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
@@ -37,7 +37,6 @@ description: "v.what.vect – Uploads vector values at positions of vector point
 <dt><code>qcolumn</code>=<i>string</i></dt>
 <dd>
  Column to be queried</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>v.what.vect</i> transfers attributes from the <code>qvector</code>&#8216;s map attribute table into the attribute table of points present in the <code>vector</code> map. The script is based on <i>v.distance</i>.</p>
 <h2>NOTES</h2>
 <p> The upload <code>column</code>, into which the query results are stored, must be present in the <code>vector</code> map. Use <i>v.db.addcol</i> to add one if needed. </p>

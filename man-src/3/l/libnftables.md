@@ -1,4 +1,5 @@
 ---
+
 title: "libnftables(3)"
 name: "libnftables"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnftables/"
 description: "libnftables – nftables frontend library"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nftables/libnftables.h&gt;
 struct nft_ctx *nft_ctx_new(uint32_t flags);
@@ -33,7 +33,6 @@ int nft_run_cmd_from_filename(struct nft_ctx *nft,
                               const char *filename);
 Link with - lnftables.
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This library was designed with nftables integration into applications in mind. Its API is therefore kept as simple as possible, which somewhat limits its flexibility. Due to support for JSON markup of input and output though, convenience in constructing and parsing of input and output data may be achieved by using a third-party library such as <code>libjansson</code>. </p>
 <p> At the very basic level, one has to allocate a new object of type <code>struct nft_ctx</code> using <code>nft_ctx_new</code>() function, then pass commands via <code>nft_run_cmd_from_buffer</code>() or <code>nft_run_cmd_from_filename</code>() functions. By default, any output is written to <code>stdout</code> (or <code>stderr</code> for error messages). These file pointers may be changed using <code>nft_ctx_set_output</code>() and <code>nft_ctx_set_error</code>() functions. On top of that, it is possible to have any output buffered by the library for later retrieval as a static buffer. See <code>nft_ctx_buffer_output</code>() and <code>nft_ctx_buffer_error</code>() functions for details.</p>
 <h3>nft_ctx_new() and nft_ctx_free()</h3>

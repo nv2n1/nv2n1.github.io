@@ -1,4 +1,5 @@
 ---
+
 title: "rcs(1)"
 name: "rcs"
 section: "1"
@@ -9,9 +10,7 @@ description: "rcs – change RCS file attributes"
 
 <h2>NAME</h2>
 <p> rcs &#8211; change <font SIZE="-1">RCS</font> file attributes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rcs</code> <i>options file </i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rcs</code> creates new <font SIZE="-1">RCS</font> files or changes attributes of existing ones. An <font SIZE="-1">RCS</font> file contains multiple revisions of text, an access list, a change log, descriptive text, and some control attributes. For <code>rcs</code> to work, the caller&#8217;s login name must be on the access list, except if the access list is empty, the caller is the owner of the file or the superuser, or the <code>-i</code> option is present. </p>
 <p> Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). Revision numbers use the syntax described in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1).</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "nan(3)"
 name: "nan"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-nan/"
 description: "nan, nanf, nanl – return ‘Not a Number’"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double nan(const char *</code><i>tagp</i><code>);</code><br />
  <code>float nanf(const char *</code><i>tagp</i><code>);</code><br />
@@ -18,7 +18,6 @@ description: "nan, nanf, nanl – return ‘Not a Number’"
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return a representation (determined by <i>tagp</i>) of a quiet NaN. If the implementation does not support quiet NaNs, these functions return zero. </p>
 <p> The call <i>nan(char-sequence)</i> is equivalent to: </p>
 <p> strtod(&quot;NAN(char-sequence)&quot;, NULL); </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ftwhich(1)"
 name: "ftwhich"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ftwhich/"
 description: "ftwhich – fault tolerant search for a command name"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ftwhich</code> [-#hIp][-t#] program_name</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ftwhich </code> is a fault tolerant version of the <a href="/docs/linux/man/1-which/">which</a>(1) command. <code>ftwhich</code> searches for a given program in all directories included in your PATH environment variable and reports all files with a name that approximately matches the given <i>program_name.</i> </p>
 <p> <code>ftwhich</code> achieves fault tolerance by calculating the so called Weighted Levenshtein Distance. The Levenshtein Distance is defined as the minimum number of character insertions, deletions and replacements that transform a string <i>A </i> into a string <i>B.</i> </p>
 <p> <code>ftwhich</code> is similar to the <code>which</code> command with the following differences:</p>

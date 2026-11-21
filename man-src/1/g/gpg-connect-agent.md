@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-connect-agent(1)"
 name: "gpg-connect-agent"
 section: "1"
@@ -6,11 +7,9 @@ letter: "g"
 url: "/docs/linux/man/1-gpg-connect-agent/"
 description: "gpg-connect-agent – Communicate with a running agent"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>gpg-connect-agent</code> - Communicate with a running agent </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpg-connect-agent</code> [<i>options</i>]<i>[commands]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>gpg-connect-agent</code> is a utility to communicate with a running <code>gpg-agent</code>. It is useful to check out the commands <code>gpg-agent</code> provides using the Assuan interface. It might also be useful for scripting simple applications. Input is expected at stdin and output gets printed to stdout. </p>
 <p> It is very similar to running <code>gpg-agent</code> in server mode; but here we connect to a running instance. </p>
 <p> The following options may be used: </p>

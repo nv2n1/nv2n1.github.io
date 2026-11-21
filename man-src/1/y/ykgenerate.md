@@ -1,4 +1,5 @@
 ---
+
 title: "ykgenerate(1)"
 name: "ykgenerate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ykgenerate/"
 description: "ykgenerate – construct and encrypt an OTP from given data"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ykgenerate</code> <i>AESKEY</i> <i>YK_INTERNALNAME</i> <i>YK_COUNTER</i> <i>YK_LOW</i> <i>YK_HIGH</i> <i>YK_USE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Generate OTPs by encrypting given values under the given encryption key.</p>
 <h2>OPTIONS</h2>
 <p> <code>AESKEY</code></p>

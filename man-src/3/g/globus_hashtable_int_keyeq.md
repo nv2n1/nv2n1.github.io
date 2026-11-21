@@ -1,4 +1,5 @@
 ---
+
 title: "globus_hashtable_int_keyeq(3)"
 name: "globus_hashtable_int_keyeq"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_hashtable.h –"
 ---
 
 <p> Hash Table.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_types.h&#8217;<br />
  #include &#8216;globus_list.h&#8217; </p>
 <h3>Typedefs</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "xwininfo(1)"
 name: "xwininfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xwininfo/"
 description: "xwininfo – window information utility for X"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xwininfo</code> [-help] [-id <i>wdid</i>] [-root] [-name <i>wdname</i>] [-int] [-children] [-tree] [-stats] [-bits] [-events] [-size] [-wm] [-shape] [-frame] [-all] [-english] [-metric] [-display <i>host:dpy</i>] [-version]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xwininfo</i> is a utility for displaying information about windows. Various information is displayed depending on which options are selected. If no options are chosen, <code>-stats</code> is assumed. </p>
 <p> The user has the option of selecting the target window with the mouse (by clicking any mouse button in the desired window) or by specifying its window id on the command line with the <code>-id</code> option. Or instead of specifying the window by its id number, the <code>-name</code> option may be used to specify which window is desired by name. There is also a special <code>-root</code> option to quickly obtain information on the screen&#8217;s root window.</p>
 <h2>OPTIONS</h2>

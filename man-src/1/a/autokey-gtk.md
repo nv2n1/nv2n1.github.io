@@ -1,4 +1,5 @@
 ---
+
 title: "autokey-gtk(1)"
 name: "autokey-gtk"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autokey-gtk/"
 description: "autokey-gtk – keyboard automation utility for GNOME and GTK"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autokey-gtk</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>autokey-gtk</code> command. </p>
 <p> <code>autokey-gtk</code> AutoKey is a desktop automation utility for Linux and X11. It allows the automation of virtually any task by responding to typed abbreviations and hotkeys. It offers a full-featured GUI that makes it highly accessible for novices, as well as a scripting interface offering the full flexibility and power of the Python language.<br />
  For more information refer to the online wiki at:<br />

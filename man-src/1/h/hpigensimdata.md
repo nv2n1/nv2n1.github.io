@@ -1,4 +1,5 @@
 ---
+
 title: "hpigensimdata(1)"
 name: "hpigensimdata"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-hpigensimdata/"
 description: "hpigensimdata – A openhpi client application supplementing the dynamic simulator plugin."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpigensimdata[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-r res_id][-f filename][-m UPD | INIT][-h] hpigensimdata[--domain = nn][--host = host[:port]][--cfgfile = file]
                                                                                                           [--resource = res_id][--file = filename][--mode = UPD | INIT][--help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpigensimdata generates data for the dynamic simulator plugin by reading the current configuration. It will print all <font SIZE="-1">HPI</font> information in a format that can be parsed by Dynamic Simulator plugin. To spare some encoding/decoding function, values of enums are printed as int values instead of encode them to <font SIZE="-1">ASCII</font> values and decode them afterwards. Since this client is primarily for the Dynamic Simulator, the output functions don&#8217;t depend on the oh_.. &#8211; output function. Therefore they can be easily changed without influence on other clients. </p>
 <p> Please refer to <font SIZE="-1">README</font> and detailed documentation with the plugin. </p>
 <p> If no domain or host is selected, ohparam uses the default domain as specified in the openhpiclient.conf file. </p>

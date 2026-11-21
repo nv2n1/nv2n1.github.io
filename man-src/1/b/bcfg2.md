@@ -1,4 +1,5 @@
 ---
+
 title: "bcfg2(1)"
 name: "bcfg2"
 section: "1"
@@ -9,9 +10,7 @@ description: "bcfg2 – reconfigure machine based on settings in BCFG2"
 
 <h2>NAME</h2>
 <p> bcfg2 &#8211; reconfigure machine based on settings in BCFG2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bcfg2</code> <i>[-d] [-v] [-p] [-c cache file] [-e] [-f config file] [-I] [-q] [-b bundle]</i> [-r removal mode]</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>bcfg2</code></dt>
 <dd> Runs the bcfg2 configuration process on the current host. This process consists of first fetching and executing probes, uploading probe results, fetching the client configuration, checking the current client state, attempting to install the desired configuration, and finally uploading statistics about the bcfg2 execution and client state.</dd></dl>

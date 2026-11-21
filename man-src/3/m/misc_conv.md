@@ -1,4 +1,5 @@
 ---
+
 title: "misc_conv(3)"
 name: "misc_conv"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-misc_conv/"
 description: "misc_conv – text based conversation function"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;security/pam_misc.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int misc_conv(int&nbsp;<wbr></code><i>num_msg</i><code>, const struct pam_message&nbsp;<wbr>**</code><i>msgm</i><code>, struct pam_response&nbsp;<wbr>**</code><i>response</i><code>, void&nbsp;<wbr>*</code><i>appdata_ptr</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>misc_conv</code> function is part of <code>libpam_misc</code> and not of the standard <code>libpam</code> library. This function will prompt the user with the appropriate comments and obtain the appropriate inputs as directed by authentication modules. </dd>
 <p> In addition to simply slotting into the appropriate <code><a href="/docs/linux/man/3-pam_conv/">pam_conv</a></code>(3), this function provides some time-out facilities. The function exports five variables that can be used by an application programmer to limit the amount of time this conversation function will spend waiting for the user to type something. The five variabls are as follows: </p>
 <p> <code>time_t</code> <i>pam_misc_conv_warn_time</i>;</p>

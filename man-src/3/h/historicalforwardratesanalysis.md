@@ -1,4 +1,5 @@
 ---
+
 title: "historicalforwardratesanalysis(3)"
 name: "historicalforwardratesanalysis"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-historicalforwardratesanalysis/"
 description: "ql/models/marketmodels/historicalforwardratesanalysis.hpp – Statistical analysis of historical forward rates."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt;<br />
  #include &lt;ql/time/calendar.hpp&gt;<br />
  #include &lt;ql/indexes/iborindex.hpp&gt;<br />

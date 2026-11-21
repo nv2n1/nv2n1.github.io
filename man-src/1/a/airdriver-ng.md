@@ -1,4 +1,5 @@
 ---
+
 title: "airdriver-ng(1)"
 name: "airdriver-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-airdriver-ng/"
 description: "airdriver-ng – automatically install/uninstall and patch drivers and 802.11 stacks"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>airdriver-ng</code> &lt;command&gt; [drivernumber]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>airdriver-ng</code> is a script that provides status information about the wireless drivers on your system plus the ability to load and unload the drivers. Additionally, airdriver-ng allows you to install and uninstall drivers complete with the patches required for monitor and injection modes. Plus a number of other functions.</p>
 <h2>COMMAND</h2>
 <dl>

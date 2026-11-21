@@ -1,4 +1,5 @@
 ---
+
 title: "xprep(1)"
 name: "xprep"
 section: "1"
@@ -9,11 +10,9 @@ description: "xprep – prepare one or more files for access"
 
 <h2>NAME</h2>
 <p> xprep &#8211; prepare one or more files for access</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 xprep[options] target[paths] options : [-d n][-f fn][-p prty][-s][-S][-w] target : host[:port][, target] paths : path[paths]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>xprep</code> utility prepares one or more files for subsequent access by an application. Usage synopsis can be displayed by typing &quot;<code>xprep</code>&quot;. Currently, only the usage synopsis is available as documentation.</p>
 <h2>OPTIONS</h2>
 <p> <code>-d</code> <i>lvl</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sort(1)"
 name: "sort"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-sort/"
 description: "sort – sort lines of text files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sort</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;<br />
  <code>sort</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;files0-from=F/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Write sorted concatenation of all FILE(s) to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too. Ordering options:</p>

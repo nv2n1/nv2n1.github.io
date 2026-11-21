@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ecc_curve_list(3)"
 name: "gnutls_ecc_curve_list"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_ecc_curve_list – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ecc_curve_list &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const gnutls_ecc_curve_t * gnutls_ecc_curve_list( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get the list of supported elliptic curves. </p>
 <p> This function is not thread safe.</p>
 <h2>RETURNS</h2>

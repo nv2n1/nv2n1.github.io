@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_zone_sign(3)"
 name: "ldns_dnssec_zone_sign"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_dnssec_zone_sign, ldns_dnssec_zone_sign_nsec3, ldns_dnssec_zo
 
 <h2>NAME</h2>
 <p> ldns_dnssec_zone_sign, ldns_dnssec_zone_sign_nsec3, ldns_dnssec_zone_mark_glue, ldns_dnssec_name_node_next_nonglue, ldns_dnssec_zone_create_nsecs, ldns_dnssec_remove_signatures, ldns_dnssec_zone_create_rrsigs </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -20,7 +20,6 @@ description: "ldns_dnssec_zone_sign, ldns_dnssec_zone_sign_nsec3, ldns_dnssec_zo
 <p> ldns_status ldns_dnssec_zone_create_nsecs(ldns_dnssec_zone *zone, ldns_rr_list *new_rrs); </p>
 <p> ldns_dnssec_rrs* ldns_dnssec_remove_signatures(ldns_dnssec_rrs *signatures, ldns_key_list *key_list, int (*func)(ldns_rr *, void *), void *arg); </p>
 <p> ldns_status ldns_dnssec_zone_create_rrsigs(ldns_dnssec_zone *zone, ldns_rr_list *new_rrs, ldns_key_list *key_list, int (*func)(ldns_rr *, void*), void *arg); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_zone_sign</i>()</dt>
 <dd>signs the given zone with the given keys </dd>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_saltbr(1)"
 name: "g_saltbr"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_saltbr – computes salt bridges"
 <h2>NAME</h2>
 <p> g_saltbr &#8211; computes salt bridges </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_saltbr</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-t</code><i> real </i> <code>-[no]sep</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> g_saltbr plots the distance between all combination of charged groups as a function of time. The groups are combined in different ways.A minimum distance can be given, (eg. the cut-off), then groups that are never closer than that distance will not be plotted. </p>
 <p> Output will be in a number of fixed filenames, min-min.xvg, plus-min.xvg and plus-plus.xvg, or files for every individual ion-pair if selected</p>
 <h2>FILES</h2>

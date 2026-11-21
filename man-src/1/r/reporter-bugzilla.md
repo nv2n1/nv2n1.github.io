@@ -1,4 +1,5 @@
 ---
+
 title: "reporter-bugzilla(1)"
 name: "reporter-bugzilla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reporter-bugzilla/"
 description: "reporter-bugzilla – Reports problem to Bugzilla."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>reporter-bugzilla</i> [-vbf] [-g GROUP]&#8230; [-c CONFFILE]&#8230; [-F FMTFILE] [-A FMTFILE2] -d DIR </p>
 <p> Or: </p>
 <p> <i>reporter-bugzilla</i> [-v] [-c CONFFILE]&#8230; [-d DIR] -t[ID] FILE&#8230; </p>
@@ -15,7 +15,6 @@ description: "reporter-bugzilla – Reports problem to Bugzilla."
 <p> <i>reporter-bugzilla</i> [-v] [-c CONFFILE]&#8230; [-d DIR] -t[ID] -w </p>
 <p> Or: </p>
 <p> <i>reporter-bugzilla</i> [-v] [-c CONFFILE]&#8230; -h DUPHASH</p>
-<h2>DESCRIPTION</h2>
 <p> The tool reads problem directory DIR. Then it logs in to Bugzilla and tries to find a bug with the same abrt_hash:HEXSTRING in <i>Whiteboard</i>. </p>
 <p> If such bug is not found, then a new bug is created. Elements of DIR are stored in the bug as part of bug description or as attachments, depending on their type and size. </p>
 <p> Otherwise, if such bug is found and it is marked as CLOSED DUPLICATE, the tool follows the chain of duplicates until it finds a non-DUPLICATE bug. The tool adds a new comment to found bug. </p>

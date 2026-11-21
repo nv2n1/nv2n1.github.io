@@ -1,4 +1,5 @@
 ---
+
 title: "metalink_resource_t(3)"
 name: "metalink_resource_t"
 section: "3"
@@ -9,9 +10,7 @@ description: "metalink_resource_t – The structure that holds an URL of a resou
 
 <h2>NAME</h2>
 <p> metalink_resource_t &#8211; The structure that holds an URL of a resource and its metadata. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_types.h">metalink/metalink_types.h</a>&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>metalink_resource_t</code> is a structure that holds an URL of a resource and its metadata. </p>
 <h2>STRUCTURE MEMBERS</h2>
 <p> char *url;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-cgtop(1)"
 name: "systemd-cgtop"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-systemd-cgtop/"
 description: "systemd-cgtop – Show top control groups by their resource usage"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-cgtop</code> [OPTIONS&#8230;] [GROUP]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-cgtop</code></p>
 <dd>shows the top control groups of the local Linux control group hierarchy, ordered by their CPU, memory, or disk I/O load. The display is refreshed in regular intervals (by default every 1s), similar in style to <code><a href="/docs/linux/man/1-top/">top</a></code>(1). If a control group path is specified, shows only the services of the specified control group. </dd>
 <p> If <code>systemd-cgtop</code> is not connected to a tty, no column headers are printed and the default is to only run one iteration. The <code>&#8211;iterations=</code> argument, if given, is honored. This mode is suitable for scripting. </p>

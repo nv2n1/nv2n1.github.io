@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_get_signature(3)"
 name: "gnutls_x509_crl_get_signature"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crl_get_signature – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_signature &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_signature(gnutls_x509_crl_t </code><i>crl</i><code>, char * </code><i>sig</i><code>, size_t * </code><i>sizeof_sig</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crl_get_signature – API function"
 <dd> a pointer where the signature part will be copied (may be null).</dd>
 <dt>size_t * sizeof_sig</dt>
 <dd> initially holds the size of <i>sig</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will extract the signature field of a CRL.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

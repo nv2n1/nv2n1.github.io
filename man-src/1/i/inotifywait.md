@@ -1,4 +1,5 @@
 ---
+
 title: "inotifywait(1)"
 name: "inotifywait"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-inotifywait/"
 description: "inotifywait – wait for changes to files using inotify"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>inotifywait</code> [<code>-hcmrq</code>] [<code>-e</code> &lt;event&gt; ] [<code>-t</code> &lt;seconds&gt; ] [<code>&#8211;format</code> &lt;fmt&gt; ] [<code>&#8211;timefmt</code> &lt;fmt&gt; ] &lt;file&gt; [ &#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>inotifywait</code> efficiently waits for changes to files using Linux&#8217;s <code><a href="/docs/linux/man/7-inotify/">inotify</a>(7)</code> interface. It is suitable for waiting for changes to files from shell scripts. It can either exit once an event occurs, or continually execute and output events as they occur. </p>
 <h2>OUTPUT</h2>
 <p> <code>inotifywait</code> will output diagnostic information on standard error and event information on standard output. The event output can be configured, but by default it consists of lines of the following form: </p>

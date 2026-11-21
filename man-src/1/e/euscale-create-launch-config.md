@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-create-launch-config(1)"
 name: "euscale-create-launch-config"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-create-launch-config – Create a new auto-scaling instanc
 
 <h2>NAME</h2>
 <p> euscale-create-launch-config &#8211; Create a new auto-scaling instance launch configuration</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-create-launch-config <code>-i</code> IMAGE <code>-t</code> TYPE</p>
 <dl>
 <dt>[&#8211;associate-public-ip-address {true,false}]</dt>
 <dd> [&#8211;block-device-mapping DEVICE1=MAPPED1,DEVICE2=MAPPED2,&#8230;] [&#8211;ebs-optimized] [&#8211;group GROUP1,GROUP2,&#8230;] [&#8211;iam-instance-profile PROFILE] [&#8211;kernel KERNEL] [&#8211;key KEYPAIR] [&#8211;monitoring-enabled] [&#8211;monitoring-disabled] [&#8211;ramdisk RAMDISK] [&#8211;spot-price PRICE] [-d DATA | <code>&#8211;user-data-force</code> DATA | <code>-f</code> FILE] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] LAUNCHCONFIG</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a new auto-scaling instance launch configuration</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "slsh(1)"
 name: "slsh"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slsh/"
 description: "slsh – Interpreter for S-Lang scripts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>slsh</code> [ <code>&#8211;help</code> ] [ <code>&#8211;version</code> ] [ <code>-g</code> ] [ <code>-n</code> ] [ <code>&#8211;init </code><i>file</i> ] [ <code>&#8211;no-readline</code> ] [ <code>-e </code><i>string</i> ] [ <code>-i</code> ] [ <code>-q, &#8211;quiet</code> ] [ <code>-t</code> ] [ <code>-v</code> ] [ <code>-|</code><i>script-file args&#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>slsh</code> is a simple program for interpreting S-Lang scripts. It supports dynamic loading of S-Lang modules and includes a readline interface for interactive use.</p>
 <h2>OPTIONS</h2>
 <dl>

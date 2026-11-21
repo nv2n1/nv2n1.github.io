@@ -1,4 +1,5 @@
 ---
+
 title: "al_findfirst(3)"
 name: "al_findfirst"
 section: "3"
@@ -9,10 +10,8 @@ description: "al_findfirst – Low-level function for searching files. Allegro g
 
 <h2>NAME</h2>
 <p> al_findfirst &#8211; Low-level function for searching files. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int al_findfirst(const char *pattern, struct al_ffblk *info, int attrib);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Low-level function for searching files. This function finds the first file which matches the given wildcard specification and file attributes (see above). The information about the file (if any) will be put in the al_ffblk structure which you have to provide. The al_ffblk structure looks like: </p>
 <pre><code>
 struct al_ffblk {

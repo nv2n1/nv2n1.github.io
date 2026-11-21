@@ -1,4 +1,5 @@
 ---
+
 title: "dates(3)"
 name: "dates"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dates/"
 description: "QuantLib::Exercise – Base exercise class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/exercise.hpp&gt; </p>
 <p> Inherited by <code>EarlyExercise</code>, and <code>EuropeanExercise</code>. </p>
 <h3>Public Types</h3>

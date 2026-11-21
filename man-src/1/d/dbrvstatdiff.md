@@ -1,4 +1,5 @@
 ---
+
 title: "dbrvstatdiff(1)"
 name: "dbrvstatdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbrvstatdiff/"
 description: "dbrvstatdiff – evaluate statistical differences between two random variables"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dbrvstatdiff[-f format][-c ConfRating]
             [-h HypothesizedDifference] m1c sd1c n1c m2c sd2c n2c
@@ -16,7 +16,6 @@ dbrvstatdiff[-f format][-c ConfRating]
 <pre><code>
 dbrvstatdiff[-f format][-c ConfRating] m1c n1c m2c n2c
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Produce statistics on the difference of sets of random variables. If a hypothesized difference is given (with <tt>&quot;-h&quot;</tt>), to does a Student&#8217;s t-test. </p>
 <p> Random variables are specified by:</p>
 <dl>

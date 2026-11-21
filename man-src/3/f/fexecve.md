@@ -1,4 +1,5 @@
 ---
+
 title: "fexecve(3)"
 name: "fexecve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fexecve/"
 description: "fexecve – execute program specified via file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int fexecve(int fd, char *const argv[], char *const envp[]);
@@ -21,7 +21,6 @@ int fexecve(int fd, char *const argv[], char *const envp[]);
 <dt>Before glibc 2.10:</dt>
 <dd> _GNU_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fexecve</code>() performs the same task as <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), with the difference that the file to be executed is specified via a file descriptor, <i>fd</i>, rather than via a pathname. The file descriptor <i>fd</i> must be opened read-only (<code>O_RDONLY</code>) or with the <code>O_PATH</code> flag and the caller must have permission to execute the file that it refers to.</p>
 <h2>RETURN VALUE</h2>
 <p> A successful call to <code>fexecve</code>() never returns. On error, the function does return, with a result value of -1, and <i>errno</i> is set appropriately.</p>

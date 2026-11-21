@@ -1,4 +1,5 @@
 ---
+
 title: "pmchart(1)"
 name: "pmchart"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmchart – strip chart tool for Performance Co-Pilot"
 
 <h2>NAME</h2>
 <p> <code>pmchart</code> &#8211; strip chart tool for Performance Co-Pilot</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmchart</code> [<code>-CVWz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>] [<code>-c</code> <i>configfile</i>] [<code>-f</code> <i>fontfamily</i>] [<code>-F</code> <i>fontsize</i>] [<code>-g</code> <i>geometry</i>] [<code>-h</code> <i>host</i>] [<code>-o</code> <i>outfile</i>] [<code>-O</code> <i>offset</i>] [<code>-p</code> <i>port</i>] [<code>-s</code> <i>samples</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-v</code> <i>visible</i>] [<code>-Z</code> <i>timezone</i>] [<code>-geometry</code> <i>geometry</i>] [<i>sources</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmchart</code> is a graphical utility that plots performance metrics values available through the facilities of the Performance Co-Pilot (PCP). Multiple charts can be displayed simultaneously, either aligned on the unified time axis (X-axis), and through the use of multiple interface Tabs. </p>
 <p> Metric values can be sourced from one or more live hosts (simultaneously). Alternatively, one or more sets of PCP archives can be used as a source of historical data. See <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for an in-depth discussion of the capabilities of the PCP framework, many of which are used by <code>pmchart.</code> </p>
 <p> Many aspects of the behaviour of <code>pmchart</code> can be customised through the interface. In particular, the use of &quot;views&quot; (refer to the section describing VIEWS later in this document) allows predefined sets of metrics and charting parameters like colors, scaling, titles, legends, and so on to be stored for later use, or use with different hosts and sets of archives. In addition, the Preferences dialog allows customisations to the rest of the <code>pmchart</code> user interface to be saved and restored between different invocations of the tool. This allows the default background color, highlight color, contents and location of the toolbar, and many other aspects to be configured. </p>

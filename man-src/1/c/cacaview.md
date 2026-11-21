@@ -1,4 +1,5 @@
 ---
+
 title: "cacaview(1)"
 name: "cacaview"
 section: "1"
@@ -9,9 +10,7 @@ description: "cacaview – ASCII image browser"
 
 <h2>NAME</h2>
 <p> cacaview &#8211; ASCII image browser</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cacaview [FILE&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>cacaview</code> is a lightweight text mode image viewer. It renders images using colour ASCII characters. It is a powerful add-on to famous console programs such as the mutt email client, the slrn newsreader and the links or w3m web browsers. </p>
 <p> <code>cacaview</code> can load the most widespread image formats: PNG, JPEG, GIF, PNG, BMP etc. </p>
 <p> You can zoom and scroll the image around for more details, and choose four different dithering modes. All commands are accessible through a single key press.</p>

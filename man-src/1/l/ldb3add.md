@@ -1,4 +1,5 @@
 ---
+
 title: "ldb3add(1)"
 name: "ldb3add"
 section: "1"
@@ -12,10 +13,6 @@ ldbadd - Command-line utility for adding records to an LDB
 
 <dl>
 <dt> FCldbaddF[] [-h] [-H LDB-URL] [ldif-file1] [ldif-file2] [...]</dt></dl>
-
-<h2>DESCRIPTION</h2>
-
- 
 
 <dd>ldbadd adds records to an ldb(7) database. It reads the <a HREF="/docs/linux/man/5-ldif/">ldif</a>(5) files specified on the command line and adds the records from these files to the LDB database, which is specified by the -H option or the LDB_URL environment variable. 
 

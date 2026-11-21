@@ -1,4 +1,5 @@
 ---
+
 title: "cvsrevertlast(1)"
 name: "cvsrevertlast"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cvsrevertlast/"
 description: "cvsrevertlast – Revert files in CVS by one version"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cvsrevertlast</code> [<i>filename</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>cvsrevertlast is used to revert all the files on the command line by one version in CVS. The files will not be committed. </dd>
 <p> This utility is part of the KDE Software Development Kit.</p>
 <h2>SEE ALSO</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77sniffer(1)"
 name: "mgd77sniffer"
 section: "1"
@@ -9,10 +10,8 @@ description: "mgd77sniffer – Along-track quality control of MGD77 cruises"
 
 <h2>NAME</h2>
 <p> mgd77sniffer &#8211; Along-track quality control of MGD77 cruises</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mgd77sniffer</code> <i>NGDC-ids</i> [ <i>fieldabbrev</i>,<i>scale</i>,<i>offset</i> ] [ <i>maxspd</i> ] [ <code>d</code>|<code>e</code>|<code>E</code>|<code>f</code>|<code>l</code>|<code>m</code>|<code>s</code>|<code>v</code>[<i>r</i>] ] [ <i>fieldabbrev</i>,<i>imggrid</i>,<i>scale</i>,<i>mode</i> or <i>fieldabbrev</i>,<i>grid</i> ] [ ] [ <i>fieldabbrev</i>,<i>rec1</i>,<i>recN</i> ] [ ] [ <i>custom-limits-file</i> ] [ ] [ <i>region</i> ] [ <code>d</code>|<code>s</code>|<code>t</code> ] [ <i>gap</i> ] [ [<i>level</i>] ] [ <code>c</code>|<code>g</code>|<code>o</code>|<code>s</code>|<code>t</code>|<code>v</code>|<code>x</code> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mgd77sniffer</code> scans old (pre-Y2K) and new format ASCII MGD77 files for errors using point-by-point sanity checking, along-track detection of excessive slopes, and optional comparison of cruise data with global gravity and predicted bathymetry grids. Detected data problems are output by default as verbose descriptions of each detected error, often resulting in multiple messages per scanned record. Data problems are optionally output (<code>-De</code> option) using a computer-parseable format (see E77 ERROR FORMAT description below). Default error thresholds are derived from histograms of all MGD77 geophysical data collected between 1952 and January, 2006. Thresholds are adjustable with the <code>-L</code> option.</p>
 <h2>REQUIREMENTS</h2>
 <p> The mgd77sniffer links with Generic Mapping Tools 4.0 or later along with the supplemental GMT packages x2sys and mgd77. See <i><a rel="nofollow" href="http://gmt.soest.hawaii.edu">http://gmt.soest.hawaii.edu</a></i> for GMT details. Grids for comparison with cruise data may be downloaded via the web.</p>

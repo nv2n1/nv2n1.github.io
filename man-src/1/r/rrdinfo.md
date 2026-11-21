@@ -1,4 +1,5 @@
 ---
+
 title: "rrdinfo(1)"
 name: "rrdinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdinfo/"
 description: "rrdinfo – extract header information from an RRD"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>info</code> <i>filename</i> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>info</code> function prints the header information from an <font SIZE="-1">RRD</font> in a parsing friendly format. </p>
 <p> Check rrdcreate if you are uncertain about the meaning of the individual keys.</p>
 <dl>

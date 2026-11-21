@@ -1,4 +1,5 @@
 ---
+
 title: "daala_image(3)"
 name: "daala_image"
 section: "3"
@@ -8,7 +9,6 @@ description: "daala_image –"
 ---
 
 <p> Representation of an image or video frame.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>daala_image_plane</code> <code>planes</code> [<code>OD_NPLANES_MAX</code>]<br />

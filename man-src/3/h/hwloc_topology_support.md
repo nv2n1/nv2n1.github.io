@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_topology_support(3)"
 name: "hwloc_topology_support"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_topology_support/"
 description: "hwloc_topology_support –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hwloc.h&gt;</p>
 <h3>Data Fields</h3>
 <p> struct <code>hwloc_topology_discovery_support</code> * <code>discovery</code> </p>

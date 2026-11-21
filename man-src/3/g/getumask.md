@@ -1,4 +1,5 @@
 ---
+
 title: "getumask(3)"
 name: "getumask"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-getumask/"
 description: "getumask – get file creation mask"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
  <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;sys/stat.h&gt;</code> </p>
 <p> <code>mode_t getumask(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This function returns the current file creation mask. It is equivalent to </p>
 <p> mode_t getumask(void) {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;mode_t mask&nbsp;=&nbsp;umask(&nbsp;0&nbsp;);<br />

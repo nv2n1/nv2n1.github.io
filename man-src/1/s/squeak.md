@@ -1,4 +1,5 @@
 ---
+
 title: "squeak(1)"
 name: "squeak"
 section: "1"
@@ -9,10 +10,8 @@ description: "squeak, inisqueak – Unix Squeak virtual machine and installer"
 
 <h2>NAME</h2>
 <p> squeak, inisqueak &#8211; Unix Squeak virtual machine and installer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>inisqueak</code><br />
  <code>squeak</code> [ <i>option</i>&#8230; ] [ <i>image</i> ] [ <i>script</i> [ <i>argument</i>&#8230; ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>squeak</code> is the virtual machine for the Squeak Smalltalk system. It requires three files to operate correctly: an <code>image</code> file containing a `snapshot&#8217; of a live Squeak session, a <code>changes</code> file containing the source code for modified methods in the image, and a copy of (or a link to) a shared system <code>sources</code> file containing the source code for methods that have not been modified since the last major version increment. </p>
 <p> The image and changes files contain the state of a user&#8217;s Squeak session, which is persistent between consecutive sessions. Private copies of these files are therefore normally required. The <code>inisqueak</code> script checks that the local Squeak installation appears sane, and then copies the required files to the current working directory. If <code>inisqueak</code> encounters no problems, it will finish by running <code>squeak</code> to start a Squeak session using the newly copied image and changes files. </p>
 <p> <code>inisqueak</code> should be run <i>once</i>, when using Squeak for the first time, to create a new &#8216;personal&#8217; Squeak session. Afterwards, <code>squeak</code> should be run each time that session is to be resumed. </p>

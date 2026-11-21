@@ -1,4 +1,5 @@
 ---
+
 title: "rcs-checkin(1)"
 name: "rcs-checkin"
 section: "1"
@@ -9,9 +10,7 @@ description: "rcs-checkin – check files into RCS"
 
 <h2>NAME</h2>
 <p> rcs-checkin &#8211; check files into RCS</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rcs-checkin</code> [<i>FILE</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rcs-checkin</code> is a helper script for checking files into RCS. This program is distributed with <code>GNU Emacs</code>. </p>
 <p> This program converts files with an old <code>Emacs</code>-style version history for use with the <code>Emacs 19</code> version control interface <code>VC</code>, which likes to use RCS as its back end. </p>
 <p> For each file to be processed, the script looks for <code>Emacs</code> version files related to it. These files are checked in as deltas, oldest first, so that the contents of the file itself becomes the latest revision in the master. </p>

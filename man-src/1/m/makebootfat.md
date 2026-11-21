@@ -1,4 +1,5 @@
 ---
+
 title: "makebootfat(1)"
 name: "makebootfat"
 section: "1"
@@ -9,9 +10,7 @@ description: "makebootfat – Makebootfat Bootable FAT Disk Creation"
 
 <h2>NAME</h2>
 <p> makebootfat &#8211; Makebootfat Bootable FAT Disk Creation</p>
-<h2>SYNOPSIS</h2>
 <p> makebootfat [options] IMAGE </p>
-<h2>DESCRIPTION</h2>
 <p> This utility creates a bootable FAT filesystem and populates it with files and boot tools. </p>
 <p> It is mainly designed to create bootable USB and Fixed disk for the AdvanceCD project. </p>
 <p> The official site of AdvanceCD and makebootfat is: </p>

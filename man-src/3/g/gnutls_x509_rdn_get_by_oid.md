@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_rdn_get_by_oid(3)"
 name: "gnutls_x509_rdn_get_by_oid"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_rdn_get_by_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_rdn_get_by_oid &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_rdn_get_by_oid(const gnutls_datum_t * </code><i>idn</i><code>, const char * </code><i>oid</i><code>, int </code><i>indx</i><code>, unsigned int </code><i>raw_flag</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_x509_rdn_get_by_oid – API function"
 <dd> a pointer to a structure to hold the peer&#8217;s name</dd>
 <dt>size_t * buf_size</dt>
 <dd> holds the size of <i>buf</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the name of the given Object identifier, of the RDN sequence. The name will be encoded using the rules from RFC4514.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, or <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> is returned and * <i>buf_size</i> is updated if the provided buffer is not long enough, otherwise a negative error value.</p>

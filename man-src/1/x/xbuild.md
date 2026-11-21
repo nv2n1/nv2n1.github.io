@@ -1,4 +1,5 @@
 ---
+
 title: "xbuild(1)"
 name: "xbuild"
 section: "1"
@@ -9,9 +10,7 @@ description: "xbuild – Mono’s tool to build MSBuild project files"
 
 <h2>NAME</h2>
 <p> xbuild &#8211; Mono&#8217;s tool to build MSBuild project files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xbuild</code> [option] [project-file]</p>
-<h2>DESCRIPTION</h2>
 <p> xbuild can be used to build MSBuild project files. Integrated Development Environments like MonoDevelop and &quot;Microsoft Visual Studio .NET&quot; use msbuild project file format. </p>
 <p> xbuild takes the path of the project or solution file to build, as the main argument. If no file is specified then it tries to build any solution file or project file in the current directory, that has a *proj extension.</p>
 <h2>OPTIONS</h2>

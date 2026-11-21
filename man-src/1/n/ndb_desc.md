@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_desc(1)"
 name: "ndb_desc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ndb_desc/"
 description: "ndb_desc – describe NDB tables"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_desc </code><i>options</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ndb_desc</code></p>
 <dd>provides a detailed description of one or more NDB tables. </dd>
 <p> <code>Usage</code>: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_gfx_mode_list(3)"
 name: "get_gfx_mode_list"
 section: "3"
@@ -9,10 +10,8 @@ description: "get_gfx_mode_list – Obtains a list of available video modes. All
 
 <h2>NAME</h2>
 <p> get_gfx_mode_list &#8211; Obtains a list of available video modes. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>GFX_MODE_LIST *get_gfx_mode_list(int card);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Attempts to create a list of all the supported video modes for a certain graphics driver, made up from the GFX_MODE_LIST structure, which has the following definition: </p>
 <pre><code>
 typedef struct GFX_MODE_LIST {

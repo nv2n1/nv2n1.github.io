@@ -1,4 +1,5 @@
 ---
+
 title: "fixfloor(3)"
 name: "fixfloor"
 section: "3"
@@ -9,10 +10,8 @@ description: "fixfloor – Returns the greatest integer not greater than x. Alle
 
 <h2>NAME</h2>
 <p> fixfloor &#8211; Returns the greatest integer not greater than x. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int fixfloor(fixed x);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Returns the greatest integer not greater than x. That is, it rounds towards negative infinity. Example: </p>
 <pre><code>
 int result;

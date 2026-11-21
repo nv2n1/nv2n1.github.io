@@ -1,4 +1,5 @@
 ---
+
 title: "euca-release-address(1)"
 name: "euca-release-address"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-release-address – Release an elastic IP address"
 
 <h2>NAME</h2>
 <p> euca-release-address &#8211; Release an elastic IP address</p>
-<h2>SYNOPSIS</h2>
 <p> euca-release-address [-a ALLOC] [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [ADDRESS]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Release an elastic IP address</p>
 <h3>positional arguments:</h3>
 <dl>

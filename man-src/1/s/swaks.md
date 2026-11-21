@@ -1,4 +1,5 @@
 ---
+
 title: "swaks(1)"
 name: "swaks"
 section: "1"
@@ -6,14 +7,9 @@ letter: "s"
 url: "/docs/linux/man/1-swaks/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+swaks - Swiss Army Knife SMTP, the all-purpose smtp transaction tester 
 
- swaks - Swiss Army Knife SMTP, the all-purpose smtp transaction tester 
-
-<h2>DESCRIPTION</h2>
-
- swaks' primary design goal is to be a flexible, scriptable, transaction-oriented <font SIZE="-1">SMTP</font> test tool. It handles <font SIZE="-1">SMTP</font> features and extensions such as <font SIZE="-1">TLS,</font> authentication, and pipelining; multiple version of the <font SIZE="-1">SMTP</font> protocol including <font SIZE="-1">SMTP, ESMTP,</font> and <font SIZE="-1">LMTP</font>; and multiple transport methods including unix-domain sockets, internet-domain sockets, and pipes to spawned processes. Options can be specified in environment variables, configuration files, and the command line allowing maximum configurability and ease of use for operators and scripters.
+swaks' primary design goal is to be a flexible, scriptable, transaction-oriented <font SIZE="-1">SMTP</font> test tool. It handles <font SIZE="-1">SMTP</font> features and extensions such as <font SIZE="-1">TLS,</font> authentication, and pipelining; multiple version of the <font SIZE="-1">SMTP</font> protocol including <font SIZE="-1">SMTP, ESMTP,</font> and <font SIZE="-1">LMTP</font>; and multiple transport methods including unix-domain sockets, internet-domain sockets, and pipes to spawned processes. Options can be specified in environment variables, configuration files, and the command line allowing maximum configurability and ease of use for operators and scripters.
 
 <h2>QUICK START</h2>
 

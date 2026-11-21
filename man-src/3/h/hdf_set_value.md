@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_set_value(3)"
 name: "hdf_set_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_set_value/"
 description: "hdf_set_value – Set the value of a named node"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ NEOERR *hdf_set_value(HDF *hdf, const char *name, const char *value);
 <p> hdf -&gt; the pointer to the hdf dataset<br />
  name -&gt; the named node to walk to<br />
  value -&gt; the value to set the node to </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_set_value will set the value of a named node. All of the interstitial nodes which don&#8217;t exist will be created with a value of NULL. Existing nodes are not modified. New nodes are created at the end of the list. If a list of nodes exceeds FORCE_HASH_AT, then a HASH will be created at that level and all of the nodes will be added to the hash for faster lookup times. The copy of the value will be made which the dataset will own. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

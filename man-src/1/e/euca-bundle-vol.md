@@ -1,4 +1,5 @@
 ---
+
 title: "euca-bundle-vol(1)"
 name: "euca-bundle-vol"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-bundle-vol – Prepare this machine’s filesystem for use in
 
 <h2>NAME</h2>
 <p> euca-bundle-vol &#8211; Prepare this machine&#8217;s filesystem for use in the cloud</p>
-<h2>SYNOPSIS</h2>
 <p> euca-bundle-vol [-p PREFIX] [-d DIR]</p>
 <dl>
 <dt>[-r {i386,x86_64,armhf,ppc,ppc64,ppc64le}]</dt>
 <dd> [-e PATH,&#8230;] [-i PATH,&#8230;] [-s MiB] [&#8211;no-filter] [&#8211;all] [&#8211;inherit | <code>&#8211;no-inherit]</code> [-v DIR] [-P {mbr,gpt,none}] [-S FILE] [&#8211;fstab FILE | <code>&#8211;generate-fstab]</code> [&#8211;grub-config FILE] [-k FILE] [-c FILE] [&#8211;ec2cert FILE] [-u ACCOUNT] [&#8211;kernel IMAGE] [&#8211;ramdisk IMAGE] [-B VIRTUAL1=DEVICE1,VIRTUAL2=DEVICE2,&#8230;] [&#8211;productcodes CODE1,CODE2,&#8230;] [&#8211;progress | <code>&#8211;no-progress]</code> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Prepare this machine&#8217;s filesystem for use in the cloud</p>
 <h2>DESCRIPTION</h2>
 <p> This command must be run as the superuser.</p>

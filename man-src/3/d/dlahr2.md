@@ -1,4 +1,5 @@
 ---
+
 title: "dlahr2(3)"
 name: "dlahr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlahr2/"
 description: "dlahr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlahr2</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
  <i></i><code>DLAHR2</code> reduces the specified number of first columns of a general rectangular matrix A so that elements below the specified subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>

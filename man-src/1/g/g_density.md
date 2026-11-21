@@ -1,4 +1,5 @@
 ---
+
 title: "g_density(1)"
 name: "g_density"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_density – calculates the density of the system"
 <h2>NAME</h2>
 <p> g_density &#8211; calculates the density of the system </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_density</code> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-s</code><i> topol.tpr </i> <code>-ei</code><i> electrons.dat </i> <code>-o</code><i> density.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-d</code><i> string </i> <code>-sl</code><i> int </i> <code>-dens</code><i> enum </i> <code>-ng</code><i> int </i> <code>-[no]symm</code><i></i> <code>-[no]center</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> Compute partial densities across the box, using an index file. Densities in kg/m3, number densities or electron densities can be calculated. For electron densities, a file describing the number of electrons for each type of atom should be provided using <code> -ei</code>. It should look like: </p>
 <p> 2 </p>
 <p> atomname = nrelectrons </p>

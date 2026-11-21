@@ -1,4 +1,5 @@
 ---
+
 title: "lwp-dump(1)"
 name: "lwp-dump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lwp-dump/"
 description: "lwp-dump – See what headers and content is returned for a URL"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lwp-dump</code> [ <i>options</i> ] <i></i><font SIZE="-1"><i>URL</i></font><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>lwp-dump</code> program will get the resource indentified by the <font SIZE="-1">URL</font> and then dump the response object to <font SIZE="-1">STDOUT. </font> This will display the headers returned and the initial part of the content, escaped so that it&#8217;s safe to display even binary content. The escapes syntax used is the same as for Perl&#8217;s double quoted strings. If there is no content the string &#8220;(no content)&#8221; is shown in its place. </p>
 <p> The following options are recognized:</p>
 <dl>

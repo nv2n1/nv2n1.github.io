@@ -1,4 +1,5 @@
 ---
+
 title: "grmic(1)"
 name: "grmic"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grmic/"
 description: "grmic – Generate stubs for Remote Method Invocation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grmic</code> [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i>class</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grmic</code> is a utility included with <tt>&quot;libgcj&quot;</tt> which generates stubs for remote objects. </p>
 <p> Note that this program isn&#8217;t yet fully compatible with the <font SIZE="-1">JDK</font> <code>grmic</code>. Some options, such as <code>-classpath</code>, are recognized but currently ignored. We have left these options undocumented for now. </p>
 <p> Long options can also be given with a GNU-style leading <code>&#8212;</code>. For instance, <code>&#8211;help</code> is accepted.</p>

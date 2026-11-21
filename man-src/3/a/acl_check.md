@@ -1,4 +1,5 @@
 ---
+
 title: "acl_check(3)"
 name: "acl_check"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_check/"
 description: "acl_check – check an ACL for validity"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_check</code> &#8211; check an ACL for validity </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft int Fn acl_check acl_t acl int *last</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_check function checks the ACL referred to by the argument <i>acl</i> for validity. </p>
 <p> The three required entries ACL_USER_OBJ, ACL_GROUP_OBJ, and ACL_OTHER must exist exactly once in the ACL. If the ACL contains any ACL_USER or ACL_GROUP entries, then an ACL_MASK entry is also required. The ACL may contain at most one ACL_MASK entry. </p>
 <p> The user identifiers must be unique among all entries of type ACL_USER. The group identifiers must be unique among all entries of type ACL_GROUP. </p>

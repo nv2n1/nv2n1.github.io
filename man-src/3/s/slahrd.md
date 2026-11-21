@@ -1,4 +1,5 @@
 ---
+
 title: "slahrd(3)"
 name: "slahrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slahrd/"
 description: "slahrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
  <i></i><code>SLAHRD</code> reduces the first nb columns of a general rectangular matrix A so that elements below the k-th subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>

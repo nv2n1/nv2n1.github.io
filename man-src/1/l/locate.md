@@ -1,4 +1,5 @@
 ---
+
 title: "locate(1)"
 name: "locate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-locate/"
 description: "locate – find files by name"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>locate</code> [<i>OPTION</i>]&#8230; <i>PATTERN</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>locate</code> reads one or more databases prepared by <code><a href="/docs/linux/man/8-updatedb/">updatedb</a></code>(8) and writes file names matching at least one of the <i>PATTERN</i>s to standard output, one per line. </p>
 <p> If <code>&#8211;regex</code> is not specified, <i>PATTERN</i>s can contain globbing characters. If any <i>PATTERN</i> contains no globbing characters, <code>locate</code> behaves as if the pattern were <code>*</code><i>PATTERN</i><code>*</code>. </p>
 <p> By default, <code>locate</code> does not check whether files found in database still exist (but it does require all parent directories to exist if the database was built with <code>&#8211;require-visibility no</code>). <code>locate</code> can never report files created after the most recent update of the relevant database. </p>

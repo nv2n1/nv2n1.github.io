@@ -1,4 +1,5 @@
 ---
+
 title: "gsl-config(1)"
 name: "gsl-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "gsl-config – script to get version number and compiler flags of 
 
 <h2>NAME</h2>
 <p> gsl-config &#8211; script to get version number and compiler flags of the installed GSL library</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gsl-config</code> [&#8211;prefix] [&#8211;version] [&#8211;libs] [&#8211;libs-without-cblas] [&#8211;cflags]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>gsl-config</i> is a tool that is used to configure to determine the compiler and linker flags that should be used to compile and link programs that use <i>GSL</i>. It is also used internally to the .m4 macros for GNU autoconf that are included with <i>GSL</i>.</p>
 <h2>OPTIONS</h2>
 <p> <i>gsl-config</i> accepts the following options:</p>

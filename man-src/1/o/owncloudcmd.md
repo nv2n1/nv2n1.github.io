@@ -1,4 +1,5 @@
 ---
+
 title: "owncloudcmd(1)"
 name: "owncloudcmd"
 section: "1"
@@ -9,9 +10,7 @@ description: "owncloudcmd – Command line ownCloud client tool."
 
 <h2>NAME</h2>
 <p> owncloudcmd &#8211; Command line ownCloud client tool.</p>
-<h2>SYNOPSIS</h2>
 <p> <i>owncloudcmd</i> [<i>OPTIONS</i>&#8230;] sourcedir owncloudurl</p>
-<h2>DESCRIPTION</h2>
 <p> owncloudcmd is the command line tool used for the ownCloud file synchronization desktop utility. </p>
 <p> Contrary to the <i><a href="/docs/linux/man/1-owncloud/">owncloud</a>(1)</i> GUI client, <i>owncloudcmd</i> only performs a single sync run and then exits. In so doing, <i>owncloudcmd</i> replaces the <i>ocsync</i> binary used for the same purpose in earlier releases. </p>
 <p> A <i>sync run</i> synchronizes a single local directory using a WebDAV share on a remote ownCloud server. </p>

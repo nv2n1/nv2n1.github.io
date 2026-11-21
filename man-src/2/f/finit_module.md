@@ -1,4 +1,5 @@
 ---
+
 title: "finit_module(2)"
 name: "finit_module"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-finit_module/"
 description: "init_module, finit_module – load a kernel module"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 int init_module(void *module_image, unsigned long len,
                 const char *param_values);
@@ -15,7 +15,6 @@ int finit_module(int fd, const char *param_values,
                  int flags);
 </code></pre>
 <p> <i>Note</i>: glibc provides no header file declaration of <code>init_module</code>() and no wrapper function for <code>finit_module</code>(); see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>init_module</code>() loads an ELF image into kernel space, performs any necessary symbol relocations, initializes module parameters to values provided by the caller, and then runs the module&#8217;s <i>init</i> function. This system call requires privilege. </p>
 <p> The <i>module_image</i> argument points to a buffer containing the binary image to be loaded; <i>len</i> specifies the size of that buffer. The module image should be a valid ELF image, built for the running kernel. </p>
 <p> The <i>param_values</i> argument is a string containing space-delimited specifications of the values for module parameters (defined inside the module using <code>module_param</code>() and <code>module_param_array</code>()). The kernel parses this string and initializes the specified parameters. Each of the parameter specifications has the form: </p>

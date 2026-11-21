@@ -1,4 +1,5 @@
 ---
+
 title: "ffplay(1)"
 name: "ffplay"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ffplay/"
 description: "ffplay – FFplay media player"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ffplay [<i>options</i>] [<i>input_url</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> FFplay is a very simple and portable media player using the FFmpeg libraries and the <font SIZE="-1">SDL</font> library. It is mostly used as a testbed for the various FFmpeg APIs.</p>
 <h2>OPTIONS</h2>
 <p> All the numerical options, if not specified otherwise, accept a string representing a number as input, which may be followed by one of the <font SIZE="-1">SI</font> unit prefixes, for example: &#8216;K&#8217;, &#8216;M&#8217;, or &#8216;G&#8217;. </p>

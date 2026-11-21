@@ -1,4 +1,5 @@
 ---
+
 title: "nmh(1)"
 name: "nmh"
 section: "1"
@@ -9,9 +10,7 @@ description: "nmh – new MH message system"
 
 <h2>NAME</h2>
 <p> nmh &#8211; new MH message system</p>
-<h2>SYNOPSIS</h2>
 <p> any <code>nmh</code> command</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nmh</code> is the name of a powerful message handling system. Rather than being a single comprehensive program, <code>nmh</code> consists of a collection of fairly simple single-purpose programs to send, retrieve, save, and manipulate messages. </p>
 <p> Unlike most mail clients in UNIX, <code>nmh</code> is not a closed system which must be explicitly run, then exited when you wish to return to the shell. You may freely intersperse <code>nmh</code> commands with other shell commands, allowing you to read and answer your mail while you have (for example) a compilation running, or search for a file or run programs as needed to find the answer to someone&#8217;s question before answering their mail. </p>
 <p> The rest of this manual entry is a quick tutorial which will teach you the basics of <code>nmh</code>. You should read the manual entries for the individual programs for complete documentation. </p>

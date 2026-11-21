@@ -1,4 +1,5 @@
 ---
+
 title: "umount(1)"
 name: "umount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-umount/"
 description: "umount.ecryptfs_private – eCryptfs private unmount helper."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>umount.ecryptfs_private</code> [-f] </p>
 <p> <code>NOTE:</code> This program will <code>not</code> clear the relevant keys from the user&#8217;s keyring. For this reason, it is recommended that users use <code><a href="/docs/linux/man/1-ecryptfs-umount-private/">ecryptfs-umount-private</a></code>(1) instead! </p>
 <h2>OPTIONS</h2>
@@ -16,7 +16,6 @@ description: "umount.ecryptfs_private – eCryptfs private unmount helper."
 <dt><code>-f</code></dt>
 <dd> Force the unmount, ignoring the value of the mount counter in <i>/tmp/ecryptfs-USERNAME-Private</i> </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>umount.ecryptfs_private</code> is a mount helper utility for non-root users to unmount a cryptographically mounted private directory, ~/Private. </p>
 <p> If, and only if:<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211; the private mount passphrase is in their kernel keyring, and<br />

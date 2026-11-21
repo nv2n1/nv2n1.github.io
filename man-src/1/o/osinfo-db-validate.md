@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo-db-validate(1)"
 name: "osinfo-db-validate"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-osinfo-db-validate/"
 description: "osinfo-db-validate – Validate libosinfo XML data files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] </p>
 <p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">LOCAL-PATH1</font> [<font SIZE="-1">LOCAL-PATH2&#8230;</font>] </p>
 <p> osinfo-db-validate [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">URI1</font> [<font SIZE="-1">URI2&#8230;</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>osinfo-db-validate</code> tool is able to validate <font SIZE="-1">XML</font> files in one of the osinfo database locations for compliance with the <font SIZE="-1">RNG</font> schema.</p>
 <dl>
 <dt><code>system</code></dt>

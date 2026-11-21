@@ -1,4 +1,5 @@
 ---
+
 title: "pr(1)"
 name: "pr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pr/"
 description: "pr – convert text files for printing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pr</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Paginate or columnate FILE(s) for printing. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

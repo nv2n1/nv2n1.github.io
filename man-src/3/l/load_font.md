@@ -1,4 +1,5 @@
 ---
+
 title: "load_font(3)"
 name: "load_font"
 section: "3"
@@ -9,10 +10,8 @@ description: "load_font – Loads a font from a file. Allegro game programming l
 
 <h2>NAME</h2>
 <p> load_font &#8211; Loads a font from a file. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>FONT *load_font(const char *filename, RGB *pal, void *param);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Loads a font from a file. At present, this supports loading fonts from a GRX format .fnt file, a 8&#215;8 or 8&#215;16 BIOS format .fnt file, a datafile or any bitmap format that can be loaded by load_bitmap(). </p>
 <p> If the font contains palette information, then the palette is returned in the second parameter, which should be an array of 256 RGB structures (a PALETTE). The pal argument may be NULL. In this case, the palette data, if present, is simply not returned. </p>
 <p> The third parameter can be used to pass specific information to a custom loader routine. Normally, you can just leave this as NULL. Note that another way of loading fonts is embedding them into a datafile and using the datafile related functions. </p>

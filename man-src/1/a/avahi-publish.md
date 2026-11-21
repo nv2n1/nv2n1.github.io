@@ -1,4 +1,5 @@
 ---
+
 title: "avahi-publish(1)"
 name: "avahi-publish"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-avahi-publish/"
 description: "avahi-publish-service – Register an mDNS/DNS-SD service or host name or address mapping using the Avahi daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>avahi-publish -s [</code><i>options</i><code>] </code><i>name</i><i>service-type</i><i>port</i><code> [</code><i>TXT data</i><code> &#8230;] </p>
 <p> avahi-publish-service [</code><i>options</i><code>] </code><i>name</i><i>service-type</i><i>port</i><code> [</code><i>TXT data</i><code> &#8230;] </p>
 <p> avahi-publish -a [</code><i>options</i><code>] </code><i>host name</i><i>address</i><code> </p>
 <p> avahi-publish-address [</code><i>options</i><code>] </code><i>host name</i><i>address</i></p>
-<h2>DESCRIPTION</h2>
 <p> Register an mDNS/DNS-SD service or host name/address mapping using the Avahi daemon.</p>
 <h2>OPTIONS</h2>
 <p> When calling in service registration mode, specify a DNS-SD service name (e.g. &quot;Lennart&#8217;s Files&quot;), a service type (e.g. _http._tcp) and an IP port number for the service, optionally followed by any number of TXT record strings on the command line. When calling in address/host name registration mode specify a fully qualified host name and an address (IPv4 or IPv6).</p>

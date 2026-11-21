@@ -1,4 +1,5 @@
 ---
+
 title: "tree(1)"
 name: "tree"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tree/"
 description: "tree – list contents of directories in a tree-like format."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tree</code> [<code>-acdfghilnpqrstuvxACDFJQNSUX</code>] [<code>-L</code> <i>level</i> [<code>-R</code>]] [<code>-H</code> <i>basehref</i>] [<code>-T</code> <i>title</i>] [<code>-o</code> <i>filename</i>] [<code>-P</code> <i>pattern</i>] [<code>-I</code> <i>pattern</i>] [<code>&#8211;gitignore</code>] [<code>&#8211;matchdirs</code>] [<code>&#8211;metafirst</code>] [<code>&#8211;ignore-case</code>] [<code>&#8211;nolinks</code>] [<code>&#8211;inodes</code>] [<code>&#8211;device</code>] [<code>&#8211;sort</code>[<code>=</code>]<i>name</i>] [<code>&#8211;dirsfirst</code>] [<code>&#8211;filesfirst</code>] [<code>&#8211;filelimit</code> <i>#</i>] [<code>&#8211;si</code>] [<code>&#8211;du</code>] [<code>&#8211;prune</code>] [<code>&#8211;timefmt</code>[<code>=</code>]<i>format</i>] [<code>&#8211;fromfile</code>] [<code>&#8211;info</code>] [<code>&#8211;noreport</code>] [<code>&#8211;version</code>] [<code>&#8211;help</code>] [<code>&#8212;</code>] [<i>directory</i> &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Tree</i> is a recursive directory listing program that produces a depth indented listing of files, which is colorized ala <i>dircolors</i> if the <code>LS_COLORS</code> environment variable is set and output is to tty. With no arguments, <i>tree</i> lists the files in the current directory. When directory arguments are given, <i>tree</i> lists all the files and/or directories found in the given directories each in turn. Upon completion of listing all files/directories found, <i>tree</i> returns the total number of files and/or directories listed. </p>
 <p> By default, when a symbolic link is encountered, the path that the symbolic link refers to is printed after the name of the link in the format: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;name -&gt;&nbsp;real-path </p>

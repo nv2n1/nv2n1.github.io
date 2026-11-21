@@ -1,4 +1,5 @@
 ---
+
 title: "exo-preferred-applications(1)"
 name: "exo-preferred-applications"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-exo-preferred-applications/"
 description: "exo-preferred-applications – Select preferred applications for Xfce desktop environment"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

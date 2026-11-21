@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-base(1)"
 name: "git-merge-base"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-merge-base/"
 description: "git-merge-base – Find as good common ancestors as possible for a merge"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git merge - base[-a | --all]&lt;commit&gt;&lt;commit&gt;... git merge - base[-a | --all]-- octopus&lt;commit&gt;... git merge - base-- is - ancestor&lt;commit&gt;&lt;commit&gt; git merge - base-- independent&lt;commit&gt;... git merge - base-- fork - point&lt;ref&gt;[&lt;commit&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>git merge-base</i> finds best common ancestor(s) between two commits to use in a three-way merge. One common ancestor is <i>better</i> than another common ancestor if the latter is an ancestor of the former. A common ancestor that does not have any better common ancestor is a <i>best common ancestor</i>, i.e. a <i>merge base</i>. Note that there can be more than one merge base for a pair of commits.</p>
 <h2>OPERATION MODES</h2>
 <p> As the most common special case, specifying only two commits on the command line means computing the merge base between the given two commits. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-windmc(1)"
 name: "i686-pc-mingw32-windmc"
 section: "1"
@@ -7,8 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-windmc/"
 description: "windmc – generates Windows message resources."
 ---
 
-<h2>SYNOPSIS</h2>
-<h2>DESCRIPTION</h2>
 <p> <code>windmc</code> reads message definitions from an input file (.mc) and translate them into a set of output files. The output files may be of four kinds:</p>
 <dl>
 <dt>h</dt>

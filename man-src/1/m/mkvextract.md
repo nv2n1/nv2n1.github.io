@@ -1,4 +1,5 @@
 ---
+
 title: "mkvextract(1)"
 name: "mkvextract"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mkvextract/"
 description: "mkvextract – extract tracks from Matroska(TM) files into other files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mkvextract</code> {mode} {source-filename} [options] [extraction-spec]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This program extracts specific parts from a Matroska(TM) file to other useful formats. The first argument, <code>mode</code>, tells <code><a href="/docs/linux/man/1-mkvextract/">mkvextract</a></code>(1) what to extract. Currently supported is the extraction of tracks, tags, attachments, chapters, CUE sheets and timecodes. The second argument is the name of the source file. It must be a Matroska(TM) file. All following arguments are options and extraction specifications; both of which depend on the selected mode.</dd>
 <h3>Common options</h3>
 <p> The following options are available in all modes and only described once in this section. </p>

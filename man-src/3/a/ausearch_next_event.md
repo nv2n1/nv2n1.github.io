@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_next_event(3)"
 name: "ausearch_next_event"
 section: "3"
@@ -9,10 +10,8 @@ description: "ausearch_next_event – find the next event that meets search crit
 
 <h2>NAME</h2>
 <p> ausearch_next_event &#8211; find the next event that meets search criteria</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> int ausearch_next_event(auparse_state_t *au); </p>
-<h2>DESCRIPTION</h2>
 <p> ausearch_next_event will scan the input source and evaluate whether any record in an event contains the data being searched for. Evaluation is done at the record level. </p>
 <h2>RETURN VALUE</h2>
 <p> Returns -1 if an error occurs, 0 if no matches, and 1 for success. </p>

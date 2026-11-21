@@ -1,4 +1,5 @@
 ---
+
 title: "gdal2tiles(1)"
 name: "gdal2tiles"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-gdal2tiles/"
 description: "gdal2tiles – gdal2tiles.py generates directory with TMS tiles, KMLs and simple web viewers"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdal2tiles.py[-p profile][-r resampling][-s srs][-z zoom]
              [-e][-a nodata][-v][-h][-k][-n][-u url]
              [-w webviewer][-t title][-c copyright]
              [-g googlekey][-b bingkey] input_file[output_dir]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This utility generates a directory with small tiles and metadata, following the OSGeo Tile Map Service Specification. Simple web pages with viewers based on Google Maps and OpenLayers are generated as well &#8211; so anybody can comfortably explore your maps on-line and you do not need to install or configure any special software (like MapServer) and the map displays very fast in the web browser. You only need to upload the generated directory onto a web server. </p>
 <p> GDAL2Tiles also creates the necessary metadata for Google Earth (KML SuperOverlay), in case the supplied map uses EPSG:4326 projection. </p>
 <p> World files and embedded georeferencing is used during tile generation, but you can publish a picture without proper georeferencing too. </p>

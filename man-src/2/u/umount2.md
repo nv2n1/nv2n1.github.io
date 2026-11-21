@@ -1,4 +1,5 @@
 ---
+
 title: "umount2(2)"
 name: "umount2"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-umount2/"
 description: "umount, umount2 – unmount filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/mount.h&gt;
 int umount(const char *target);
 int umount2(const char *target, int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>umount</code>() and <code>umount2</code>() remove the attachment of the (topmost) filesystem mounted on <i>target</i>. </p>
 <p> Appropriate privilege (Linux: the <code>CAP_SYS_ADMIN</code> capability) is required to unmount filesystems. </p>
 <p> Linux 2.1.116 added the <code>umount2</code>() system call, which, like <code>umount</code>(), unmounts a target, but allows additional <i>flags</i> controlling the behavior of the operation:</p>

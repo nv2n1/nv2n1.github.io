@@ -1,4 +1,5 @@
 ---
+
 title: "hunspell(1)"
 name: "hunspell"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hunspell/"
 description: "hunspell – spell checker, stemmer and morphological analyzer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> hunspell [-1aDGHhLlmnrstvw] [&#8211;check-url] [-d dict[,dict2,&#8230;]] [&#8211;help] [-i enc] [-p dict] [-vv] [&#8211;version] [file(s)]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Hunspell</i> is fashioned after the <i>Ispell</i> program. The most common usage is &quot;hunspell&quot; or &quot;hunspell filename&quot;. Without filename parameter, hunspell checks the standard input. Typing &quot;cat&quot; and &quot;exsample&quot; in two input lines, we got an asterisk (it means &quot;cat&quot; is a correct word) and a line with corrections: </p>
 <dl>
 <dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "dumpet(1)"
 name: "dumpet"
 section: "1"
@@ -9,9 +10,7 @@ description: "dumpet – dump information about bootable CDs and other similar f
 
 <h2>NAME</h2>
 <p> <code>dumpet</code> &#8211; dump information about bootable CDs and other similar formats</p>
-<h2>SYNOPSIS</h2>
 <p> &#8211;<code>-iso </code><i>image</i> [-<code>-dumpdisks</code> ] [-<code>-dumphex | &#8211;xml</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> is a tool for debugging El Torito boot images. </p>
 <p> The following options are available:</p>
 <dl>

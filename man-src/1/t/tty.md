@@ -1,4 +1,5 @@
 ---
+
 title: "tty(1)"
 name: "tty"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tty/"
 description: "tty – print the file name of the terminal connected to standard input"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tty</code> [<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print the file name of the terminal connected to standard input.</p>
 <dl>
 <dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>

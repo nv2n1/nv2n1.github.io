@@ -1,4 +1,5 @@
 ---
+
 title: "update-desktop-database(1)"
 name: "update-desktop-database"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-update-desktop-database/"
 description: "update-desktop-database – Build cache database of MIME types handled by desktop files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>update-desktop-database [-q|&#8211;quiet] [-v|&#8211;verbose] [DIRECTORY&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>update-desktop-database</i> program is a tool to build a cache database of the MIME types handled by desktop files. </p>
 <p> The cache database contains the list of MIME types that can be handled by desktop files, as well as, for each MIME type, a list of desktop files that can handle this MIME type. This cache database ease the work of applications that need to find an application that can open a document of a specific MIME type: those applications will not have to parse all the desktop files existing on the system, and can instead parse this cache database. </p>
 <p> If no <i>DIRECTORY</i> is specified as argument, the desktop files that will be processed are the ones installed in <code>$XDG_DATA_DIRS/applications</code>. </p>

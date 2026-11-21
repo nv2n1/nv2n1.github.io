@@ -1,4 +1,5 @@
 ---
+
 title: "tcsetattr(3)"
 name: "tcsetattr"
 section: "3"
@@ -6,8 +7,8 @@ letter: "t"
 url: "/docs/linux/man/3-tcsetattr/"
 description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw, cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, cfsetspeed – get and set terminal attributes, line control, get ..."
 ---
+
 <p>termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw, cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, cfsetspeed &#8211; get and set terminal attributes, line control, get and set baud rate </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;termios.h&gt; 
  #include &lt;unistd.h&gt; 
@@ -31,7 +32,6 @@ description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcfl
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier: <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE  </p>
-<h2>DESCRIPTION</h2>
 <p> The termios functions describe a general terminal interface that is provided to control asynchronous communications ports.  </p>
 <h3>The termios structure</h3>
 <p> Many of the functions described here have a <i>termios_p</i> argument that is a pointer to a <i>termios</i> structure. This structure contains at least the following members: </p>

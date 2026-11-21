@@ -1,4 +1,5 @@
 ---
+
 title: "pbmmask(1)"
 name: "pbmmask"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pbmmask/"
 description: "pbmmask – create a mask bitmap from a regular bitmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmmask</code> [<code>-expand</code>] [<i>pbmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as input. Creates a corresponding mask bitmap and writes it out. </p>
 <p> The color to be interpreted as &quot;background&quot; is determined automatically. Regardless of which color is background, the mask will be white where the background is and black where the figure is. </p>
 <p> This lets you do a masked paste like this, for objects with a black background: </p>

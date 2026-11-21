@@ -1,4 +1,5 @@
 ---
+
 title: "cmis-client(1)"
 name: "cmis-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmis-client/"
 description: "______cmis-client ____ – command line CMIS client tool."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cmis-client</code> help</dt>
 <dt> <code>cmis-client</code> [-v] &#8211;url&nbsp;<wbr><i><a href="url://to/binding">url://to/binding</a></i> list-repos</dt>
@@ -21,7 +21,6 @@ description: "______cmis-client ____ – command line CMIS client tool."
 <dt> <code>cmis-client</code> [-v] [-u&nbsp;<wbr><i>login</i>] [-p&nbsp;<wbr><i>secret</i>] &#8211;url&nbsp;<wbr><i><a href="url://to/binding">url://to/binding</a></i> -r&nbsp;<wbr><i>repo-id</i> [type-by-id] | [show-by-id] | [show-by-path] | [delete] <i>arg</i>&#8230;</dt>
 <dt> <code>cmis-client</code> [-v] [-u&nbsp;<wbr><i>login</i>] [-p&nbsp;<wbr><i>secret</i>] &#8211;url&nbsp;<wbr><i><a href="url://to/binding">url://to/binding</a></i> -r&nbsp;<wbr><i>repo-id</i> [checkout] | [cancel-checkout] | [get-versions] <i>arg</i></dt>
 <dt> <code>cmis-client</code> [-v] [-u&nbsp;<wbr><i>login</i>] [-p&nbsp;<wbr><i>secret</i>] &#8211;url&nbsp;<wbr><i><a href="url://to/binding">url://to/binding</a></i> -r&nbsp;<wbr><i>repo-id</i> [&#8211;input-file&nbsp;<wbr><i>path/to/file</i>] [&#8211;input-type&nbsp;<wbr><i>mime/type</i>] [&#8211;input-name&nbsp;<wbr><i>name.ext</i>] [&#8211;object-property&nbsp;<wbr><i>prop-id=prop-value</i>&#8230;] [&#8211;major] [&#8211;message] checkin&nbsp;<wbr><i>pwc id</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>cmis-client</code> tool sends queries over the net to a CMIS-enabled server to access or modify its content. It is originally demonstrating what libcmis is capable of.</dd>
 <h2>OPTIONS</h2>
 <h3>GLOBAL OPTIONS</h3>

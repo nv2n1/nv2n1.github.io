@@ -1,4 +1,5 @@
 ---
+
 title: "toast(1)"
 name: "toast"
 section: "1"
@@ -9,11 +10,9 @@ description: "toast — GSM 06.10 lossy sound compression"
 
 <h2>NAME</h2>
 <p> toast &#8212; GSM 06.10 lossy sound compression</p>
-<h2>SYNOPSIS</h2>
 <p> <code>toast</code> [ <code>-cdfpvhualsFC</code> ] [ <i>filename&#8230;</i> ] </p>
 <p> <code>untoast</code> [ <code>-cfpvhuaslF</code> ] [ <i>filename&#8230;</i> ] </p>
 <p> <code>tcat</code> [ <code>-vhuaslF</code> ] [ <i>filename&#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> Toast compresses the sound files given on its command line. Each file is replaced by a file with the extension <i>.gsm .</i> If no files are specified, the compression is applied to the standard input, and its result is written to standard output. </p>
 <p> Toasted files can be restored to something not quite unlike their original form by running toast <i>-d</i> , or <i>untoast</i> , on the .gsm-files or standard input. </p>
 <p> The program <i>tcat</i> (the same as running <i>untoast -c</i> ) uncompresses its input on standard output, but leaves the compressed .gsm-files alone. </p>

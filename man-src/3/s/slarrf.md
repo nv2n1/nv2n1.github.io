@@ -1,4 +1,5 @@
 ---
+
 title: "slarrf(3)"
 name: "slarrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarrf/"
 description: "slarrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrf</code> (N, D, L, LD, CLSTRT, CLEND, W, WGAP, WERR, SPDIAM, CLGAPL, CLGAPR, PIVMIN, SIGMA, DPLUS, LPLUS, WORK, INFO)<br />
  <i></i><code>SLARRF</code> finds a new relatively robust representation such that at least one of the eigenvalues is relatively isolated.</p>

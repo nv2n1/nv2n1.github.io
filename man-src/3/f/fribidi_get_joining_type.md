@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_joining_type(3)"
 name: "fribidi_get_joining_type"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_joining_type/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_get_joining_type - get character joining type 
 
- fribidi_get_joining_type - get character joining type 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiJoiningType fribidi_get_joining_type(FriBidiChar ch); </b>
 
@@ -23,9 +19,7 @@ url: "/docs/linux/man/3-fribidi_get_joining_type/"
 <dt><b>FriBidiChar ch</b>
 </dt><dd> Input character.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function returns the joining type of a character as defined in Table 8-2 Primary Arabic Joining Classes of the Unicode standard available at <a rel="nofollow" HREF="http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462,">http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462,</a> using data provided in file ArabicShaping.txt and UnicodeData.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/ArabicShaping.txt">http://www.unicode.org/Public/UNIDATA/ArabicShaping.txt</a> and <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.">http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.</a> 
+This function returns the joining type of a character as defined in Table 8-2 Primary Arabic Joining Classes of the Unicode standard available at <a rel="nofollow" HREF="http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462,">http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462,</a> using data provided in file ArabicShaping.txt and UnicodeData.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/ArabicShaping.txt">http://www.unicode.org/Public/UNIDATA/ArabicShaping.txt</a> and <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.">http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.</a> 
 
  There are a few macros defined in fribidi-joining-types.h for querying a joining type.
 

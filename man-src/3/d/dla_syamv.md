@@ -1,4 +1,5 @@
 ---
+
 title: "dla_syamv(3)"
 name: "dla_syamv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_syamv/"
 description: "dla_syamv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dla_syamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>DLA_SYAMV</code> computes a matrix-vector product using a symmetric indefinite matrix to calculate error bounds.</p>

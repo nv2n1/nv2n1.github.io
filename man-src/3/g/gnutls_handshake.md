@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_handshake(3)"
 name: "gnutls_handshake"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_handshake – API function"
 
 <h2>NAME</h2>
 <p> gnutls_handshake &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_handshake(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function does the handshake of the TLS/SSL protocol, and initializes the TLS connection. </p>
 <p> This function will fail if any problem is encountered, and will return a negative error code. In case of a client, if the client has asked to resume a session, but the server couldn&#8217;t, then a full handshake will be performed. </p>
 <p> The non-fatal errors expected by this function are: <code>GNUTLS_E_INTERRUPTED</code>, <code>GNUTLS_E_AGAIN</code>, <code>GNUTLS_E_WARNING_ALERT_RECEIVED</code>, and <code>GNUTLS_E_GOT_APPLICATION_DATA</code>, the latter only in a case of rehandshake. </p>

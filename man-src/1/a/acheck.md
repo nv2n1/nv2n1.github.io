@@ -1,4 +1,5 @@
 ---
+
 title: "acheck(1)"
 name: "acheck"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-acheck/"
 description: "acheck – Check common localization mistakes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> acheck [<font SIZE="-1">OPTIONS</font>] [<font SIZE="-1">INPUT_FILE</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> This program parses a file checking for syntax rules and optionally asking Aspell for checking word spelling. It makes fix suggestions and outputs a corrected file accordingly adding review comments if requested. </p>
 <p> It tries to find the file type according to the extension or the first lines and loads rules accordingly. </p>
 <p> It displays lines when they are parse. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "module(1)"
 name: "module"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-module/"
 description: "module – command interface to the Modules package"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>module</code> [ <i>switches</i> ] [ <i>sub-command</i> ] <i>[ sub-command-args ]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>module</code> is a user interface to the Modules package. The Modules package provides for the dynamic modification of the user&#8217;s environment via <i>modulefiles.</i> </p>
 <p> Each <i>modulefile</i> contains the information needed to configure the shell for an application. Once the Modules package is initialized, the environment can be modified on a per-module basis using the <code>module</code> command which interprets <i>modulefiles.</i> Typically <i>modulefiles</i> instruct the <code>module</code> command to alter or set shell environment variables such as PATH, MANPATH, etc. <i>modulefiles</i> may be shared by many users on a system and users may have their own collection to supplement or replace the shared <i>modulefiles.</i> </p>
 <p> The <i>modulefiles</i> are added to and removed from the current environment by the user. The environment changes contained in a <i>modulefile</i> can be summarized through the <code>module</code> command as well. If no arguments are given, a summary of the <code>module</code> usage and <i>sub-commands</i> are shown. </p>

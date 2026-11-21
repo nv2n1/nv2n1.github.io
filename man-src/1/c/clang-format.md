@@ -1,4 +1,5 @@
 ---
+
 title: "clang-format(1)"
 name: "clang-format"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clang-format/"
 description: "clang-format – manual page for clang-format 10"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> OVERVIEW: A tool to format C/C++/Java/JavaScript/Objective-C/Protobuf/C# code. </p>
 <p> If no arguments are specified, it formats the code from standard input and writes the result to the standard output. If &lt;file&gt;s are given, it reformats the files. If <code>-i</code> is specified together with &lt;file&gt;s, the files are edited in-place. Otherwise, the result is written to the standard output. </p>
 <p> USAGE: clang-format [options] [&lt;file&gt; &#8230;] </p>

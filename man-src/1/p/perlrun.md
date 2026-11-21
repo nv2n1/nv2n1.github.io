@@ -1,4 +1,5 @@
 ---
+
 title: "perlrun(1)"
 name: "perlrun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlrun/"
 description: "perlrun – how to execute the Perl interpreter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-sTtuUWX</code> ]<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-hv</code> ] [ <code>-V</code>[:<i>configvar</i>] ]<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-cw</code> ] [ <code>-d</code>[<code>t</code>][:<i>debugger</i>] ] [ <code>-D</code>[<i>number/list</i>] ]<br />
@@ -18,7 +18,6 @@ description: "perlrun – how to execute the Perl interpreter"
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-x</code>[<i>dir</i>] ]<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ <code>-i</code>[<i>extension</i>] ]<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>[ [<code>-e</code>|<code>-E</code>] <i>&#8216;command&#8217;</i> ] [ <code>&#8212;</code> ] [ <i>programfile</i> ] [ <i>argument</i> ]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The normal way to run a Perl program is by making it directly executable, or else by passing the name of the source file as an argument on the command line. (An interactive Perl environment is also possible&#8212;see perldebug for details on how to do that.) Upon startup, Perl looks for your program in one of the following places:</p>
 <dl>
 <dt>1.</dt>

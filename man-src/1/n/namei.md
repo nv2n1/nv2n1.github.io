@@ -1,4 +1,5 @@
 ---
+
 title: "namei(1)"
 name: "namei"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-namei/"
 description: "namei – follow a pathname until a terminal point is found"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>namei</code> [options] <i>pathname</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>namei</code> interprets its arguments as pathnames to any type of Unix file (symlinks, files, directories, and so forth). <code>namei</code> then follows each pathname until an endpoint is found (a file, a directory, a device node, etc). If it finds a symbolic link, it shows the link, and starts following it, indenting the output to show the context. </p>
 <p> This program is useful for finding &quot;too many levels of symbolic links&quot; problems. </p>
 <p> For each line of output, <code>namei</code> uses the following characters to identify the file type found: </p>

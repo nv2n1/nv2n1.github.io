@@ -1,4 +1,5 @@
 ---
+
 title: "omshell(1)"
 name: "omshell"
 section: "1"
@@ -9,9 +10,7 @@ description: "omshell – OMAPI Command Shell"
 
 <h2>NAME</h2>
 <p> omshell &#8211; OMAPI Command Shell</p>
-<h2>SYNOPSIS</h2>
 <p> <code>omshell</code></p>
-<h2>DESCRIPTION</h2>
 <p> The OMAPI Command Shell, omshell, provides an interactive way to connect to, query, and possibly change, the ISC DHCP Server&#8217;s state via OMAPI, the Object Management API. By using OMAPI and omshell, you do not have to stop, make changes, and then restart the DHCP server, but can make the changes while the server is running. Omshell provides a way of accessing OMAPI. </p>
 <p> OMAPI is simply a communications mechanism that allows you to manipulate objects. In order to actually <i>use</i> omshell, you <i>must</i> understand what objects are available and how to use them. Documentation for OMAPI objects can be found in the documentation for the server that provides them &#8211; for example, in the <code>dhcpd(1)</code> manual page and the <code>dhclient(1)</code> manual page.</p>
 <h2>CONTRIBUTIONS</h2>

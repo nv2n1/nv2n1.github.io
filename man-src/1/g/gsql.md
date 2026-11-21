@@ -1,4 +1,5 @@
 ---
+
 title: "gsql(1)"
 name: "gsql"
 section: "1"
@@ -11,12 +12,10 @@ description: "GSQL – an integrated database development environment for GNOME"
 <p> GSQL &#8211; an integrated database development environment for <code>GNOME</code></p>
 <h2>VERSION</h2>
 <p> Current version is 0.2.1</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>gsql </code><i>[options]</i></dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>GSQL</code> is a gtk2-based modular development tool for various RDBMS, such as Oracle, MySQL, PostgreSQL and others </p>
 <h2>OPTIONS</h2>
 <p> The following options are provided by <code>GSQL</code> using the standard GNU command line syntax:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-fsck(1)"
 name: "zarafa-fsck"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zarafa-fsck/"
 description: "zarafa-fsck – Start the Zarafa fsck calendar check program."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-fsck</code> [<i>OPTION</i>&#8230;] [<i>FILTER</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The program finds all items in the default calendar folder of the given user, and checks if all items are compatible with Microsoft Outlook. It specifically tests for known issues with reminders and recurrcences.</dd>
 <h2>OPTIONS</h2>
 <p> Various options are possible. Only the &#8211;user options is required. </p>

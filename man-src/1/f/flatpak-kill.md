@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-kill(1)"
 name: "flatpak-kill"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-kill/"
 description: "flatpak-kill – Stop a running application"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak kill</code> INSTANCE</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Stop a running Flatpak instance. </dd>
 <p> INSTANCE can be either the numeric instance ID or the application ID of a running Flatpak. You can use <code>flatpak ps</code> to find the instance IDs of running flatpaks.</p>
 <h2>OPTIONS</h2>

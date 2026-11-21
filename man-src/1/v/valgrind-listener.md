@@ -1,4 +1,5 @@
 ---
+
 title: "valgrind-listener(1)"
 name: "valgrind-listener"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-valgrind-listener/"
 description: "valgrind-listener – listens on a socket for Valgrind commentary"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>valgrind-listener</code> [<i>options</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>valgrind-listener</code></p>
 <dd>accepts (multiple) connections from <code>valgrind</code> processes that use the <code>&#8211;log-socket</code> option on the specified port and copies the commentary it is sent to stdout.</dd>
 <h2>OPTIONS</h2>

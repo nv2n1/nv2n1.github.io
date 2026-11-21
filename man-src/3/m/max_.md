@@ -1,4 +1,5 @@
 ---
+
 title: "max_(3)"
 name: "max_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-max_/"
 description: "QuantLib::OneFactorCopula – Abstract base class for one-factor copula models."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt; </p>
 <p> Inherits <code>QuantLib::LazyObject</code>. </p>
 <p> Inherited by <code>OneFactorGaussianCopula</code>, <code>OneFactorGaussianStudentCopula</code>, <code>OneFactorStudentCopula</code>, and <code>OneFactorStudentGaussianCopula</code>. </p>

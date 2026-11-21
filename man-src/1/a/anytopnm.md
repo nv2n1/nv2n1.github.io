@@ -1,4 +1,5 @@
 ---
+
 title: "anytopnm(1)"
 name: "anytopnm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-anytopnm/"
 description: "anytopnm – attempt to convert an unknown type of image file to a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>anytopnm</code> [<i>file</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>anytopnm</code> converts the input image, which may be in any of dozens of graphics formats, to PBM, PGM, or PPM format, depending on that nature of the input image, and outputs it to Standard Output. </p>
 <p> To determine the format of the input, <code>anytopnm</code> uses the <code>file</code> program (possibly assisted by the magic numbers file fragment included with Netpbm). If that fails (very few image formats have magic numbers), <code>anytopnm</code> looks at the filename extension. If that fails, <code>anytopnm</code> punts. </p>
 <p> The type of the output file depends on the input image. </p>

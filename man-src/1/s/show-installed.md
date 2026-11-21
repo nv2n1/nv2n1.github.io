@@ -1,4 +1,5 @@
 ---
+
 title: "show-installed(1)"
 name: "show-installed"
 section: "1"
@@ -9,9 +10,7 @@ description: "show-installed – show installed RPM packages and descriptions"
 
 <h2>NAME</h2>
 <p> show-installed &#8211; show installed RPM packages and descriptions</p>
-<h2>SYNOPSIS</h2>
 <p> <code>show-installed</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>show-installed</code> gives a compact description of the packages installed (or given) making use of the comps groups found in the repositories.</p>
 <h2>OPTIONS</h2>
 <dl>

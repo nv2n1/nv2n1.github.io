@@ -1,4 +1,5 @@
 ---
+
 title: "reporter-mailx(1)"
 name: "reporter-mailx"
 section: "1"
@@ -6,22 +7,11 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-mailx/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+reporter-mailx - Sends contents of a problem directory via email. 
 
- reporter-mailx - Sends contents of a problem directory via email. 
+<i>reporter-mailx</i> [-v] -d DIR [-c CONFFILE] [-F FMTFILE]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>reporter-mailx</i> [-v] -d DIR [-c CONFFILE] [-F FMTFILE]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- The tool reads a problem directory, composes an email message from the directory contents, and uses mailx to send the message to specified recipient. 
+The tool reads a problem directory, composes an email message from the directory contents, and uses mailx to send the message to specified recipient. 
 
  Properties of email messages can be specified in a configuration file, and via environment variables.
 

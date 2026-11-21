@@ -1,4 +1,5 @@
 ---
+
 title: "czmq_makecert(1)"
 name: "czmq_makecert"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-czmq_makecert/"
 description: "makecert – no title found"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 Please add @interface section in ../src/makecert.c.
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Please add @header section in ../src/makecert.c. </p>
 <p> Please add @discuss section in ../src/makecert.c.</p>
 <h2>EXAMPLE</h2>

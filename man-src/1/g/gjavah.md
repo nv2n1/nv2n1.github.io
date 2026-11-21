@@ -1,4 +1,5 @@
 ---
+
 title: "gjavah(1)"
 name: "gjavah"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gjavah/"
 description: "gjavah – – generate header files from Java class files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gjavah &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>gjavah</code> program is used to generate header files from class files. It can generate both <font SIZE="-1">CNI</font> and <font SIZE="-1">JNI</font> header files, as well as stub implementation files which can be used as a basis for implementing the required native methods.</p>
 <h2>OPTIONS</h2>
 <dl>

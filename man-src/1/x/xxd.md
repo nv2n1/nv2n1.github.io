@@ -1,4 +1,5 @@
 ---
+
 title: "xxd(1)"
 name: "xxd"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-xxd/"
 description: "xxd – make a hexdump or do the reverse."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <i>xxd</i> &#8211; make a hexdump or do the reverse. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>xxd</code> -h[elp]<br />
  <code>xxd</code> [options] [infile [outfile]]<br />
  <code>xxd</code> -r[evert] [options] [infile [outfile]]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>xxd</i> creates a hex dump of a given file or standard input. It can also convert a hex dump back to its original binary form. Like <code>uuencode</code>(1) and <code>uudecode</code>(1) it allows the transmission of binary data in a `mail-safe&#8217; ASCII representation, but has the advantage of decoding to standard output. Moreover, it can be used to perform binary file patching.</p>
 <h2>OPTIONS</h2>
 <p> If no <i>infile</i> is given, standard input is read. If <i>infile</i> is specified as a `<code>&#8211;</code>&#8216; character, then input is taken from standard input. If no <i>outfile</i> is given (or a `<code>&#8211;</code>&#8216; character is in its place), results are sent to standard output. </p>

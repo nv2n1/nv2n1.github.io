@@ -1,4 +1,5 @@
 ---
+
 title: "networkctl(1)"
 name: "networkctl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-networkctl/"
 description: "networkctl – Query the status of network links"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>networkctl</code> [OPTIONS&#8230;] COMMAND [LINK&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>networkctl</code></p>
 <dd>may be used to introspect the state of the network links as seen by <code>systemd-networkd</code>. Please refer to <code><a href="/docs/linux/man/8-systemd-networkd-service/">systemd-networkd.service</a></code>(8) for an introduction to the basic concepts, functionality, and configuration syntax.</dd>
 <h2>COMMANDS</h2>

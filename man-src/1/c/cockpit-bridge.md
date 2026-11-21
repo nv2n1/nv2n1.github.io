@@ -1,4 +1,5 @@
 ---
+
 title: "cockpit-bridge(1)"
 name: "cockpit-bridge"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cockpit-bridge/"
 description: "cockpit-bridge – Cockpit Host Bridge"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cockpit-bridge</code> [<code>&#8211;help</code>] [<code>&#8211;packages</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>cockpit-bridge</code> program is used by Cockpit to relay messages and commands from the Web front end to the server. Among other things it relays DBus, and spawns processes on behalf of the Web user interface. </dd>
 <p> This program is not routinely run by users or administrators. It is in the $PATH so that Cockpit can find it when connecting between hosts. However there are some diagnostics available when running from the command line.</p>
 <h2>OPTIONS</h2>

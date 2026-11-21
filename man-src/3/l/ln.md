@@ -1,4 +1,5 @@
 ---
+
 title: "ln(3)"
 name: "ln"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ln/"
 description: "QuantLib::Factorial – Factorial numbers calculator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/factorial.hpp&gt; </p>
 <h3>Static Public Member Functions</h3>
 <p> static <code>Real</code> <code>get</code> (<code>Natural</code> n) </p>

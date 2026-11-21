@@ -1,4 +1,5 @@
 ---
+
 title: "wine64(1)"
 name: "wine64"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-wine64/"
 description: "wine – run Windows programs on Unix"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wine</code> <i>program </i>[<i>arguments</i>]<br />
  <code>wine &#8211;help</code><br />
  <code>wine &#8211;version</code> </p>
 <p> For instructions on passing arguments to Windows programs, please see the <code>PROGRAM/ARGUMENTS</code> section of the man page.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>wine</code> loads and runs the given program, which can be a DOS, Windows 3.x, Win32 or Win64 executable (on 64-bit systems). </p>
 <p> For debugging wine, use <code>winedbg</code> instead. </p>
 <p> For running CUI executables (Windows console programs), use <code>wineconsole</code> instead of <code>wine</code>. This will display the output in a separate window. Not using <code>wineconsole</code> for CUI programs will only provide very limited console support, and your program might not function properly. </p>

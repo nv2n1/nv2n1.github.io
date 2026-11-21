@@ -1,4 +1,5 @@
 ---
+
 title: "dpotrs(3)"
 name: "dpotrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpotrs/"
 description: "dpotrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpotrs</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
  <i></i><code>DPOTRS</code></p>

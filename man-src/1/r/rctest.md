@@ -1,4 +1,5 @@
 ---
+
 title: "rctest(1)"
 name: "rctest"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rctest/"
 description: "rctest – RFCOMM testing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rctest</code> &lt;<i>MODE</i>&gt; [<i>OPTIONS</i>] [<i>bdaddr</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-rctest/">rctest</a>(1)</code> is used to test RFCOMM communications on the BlueZ stack</p>
 <h2>MODES</h2>
 <dl>

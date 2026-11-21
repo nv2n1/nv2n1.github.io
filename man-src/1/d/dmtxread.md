@@ -1,4 +1,5 @@
 ---
+
 title: "dmtxread(1)"
 name: "dmtxread"
 section: "1"
@@ -9,9 +10,7 @@ description: "dmtxread – scan Data Matrix barcodes"
 
 <h2>NAME</h2>
 <p> dmtxread &#8211; scan Data Matrix barcodes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dmtxread</code> [<i>options</i>] [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dmtxread</code> searches the named input FILEs (or standard input if no files are named or the filename &quot;-&quot; is given) for ECC200 Data Matrix barcodes, reads their contents, and writes the decoded messages to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>

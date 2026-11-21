@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-managed-entries(1)"
 name: "ipa-managed-entries"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-managed-entries – Enables or disables the schema Managed Ent
 
 <h2>NAME</h2>
 <p> ipa-managed-entries &#8211; Enables or disables the schema Managed Entry plugins</p>
-<h2>SYNOPSIS</h2>
 <p> ipa-managed-entries [options] &lt;enable|disable|status&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Run the command with the <code>enable</code> option to enable the Managed Entry plugin. </p>
 <p> Run the command with the <code>disable</code> option to disable the Managed Entry plugin. </p>
 <p> Run the command with the <code>status</code> to determine the current status of the Managed Entry plugin. </p>

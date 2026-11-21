@@ -1,4 +1,5 @@
 ---
+
 title: "w3mman(1)"
 name: "w3mman"
 section: "1"
@@ -8,11 +9,9 @@ description: "w3mman – an interface to the on-line reference manuals via"
 ---
 
 <p> <a href="/docs/linux/man/1-w3m/">w3m</a>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>w3mman</code> [ <code>-M</code><i> path</i> ] [ [ <i>section</i> ] <i>page</i> ]<br />
  <code>w3mman</code> [ <code>-M</code><i> path</i> ] [ <i>section</i> ] <code>-k</code><i> keyword</i><br />
  <code>w3mman</code> <code>-l</code><i> file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>w3mman</code> is a Perl script that uses <code><a href="/docs/linux/man/1-w3m/">w3m</a></code>(1) to serve as a pager for on-line reference manuals.</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

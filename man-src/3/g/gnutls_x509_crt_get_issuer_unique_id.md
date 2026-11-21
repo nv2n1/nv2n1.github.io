@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_issuer_unique_id(3)"
 name: "gnutls_x509_crt_get_issuer_unique_id"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_get_issuer_unique_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_issuer_unique_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_issuer_unique_id(gnutls_x509_crt_t </code><i>crt</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crt_get_issuer_unique_id – API function"
 <dd> user allocated memory buffer, will hold the unique id</dd>
 <dt>size_t * buf_size</dt>
 <dd> size of user allocated memory buffer (on input), will hold actual size of the unique ID on return.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will extract the issuerUniqueID value (if present) for the given certificate. </p>
 <p> If the user allocated memory buffer is not large enough to hold the full subjectUniqueID, then a GNUTLS_E_SHORT_MEMORY_BUFFER error will be returned, and buf_size will be set to the actual length.</p>
 <h2>RETURNS</h2>

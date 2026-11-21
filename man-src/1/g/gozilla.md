@@ -1,4 +1,5 @@
 ---
+
 title: "gozilla(1)"
 name: "gozilla"
 section: "1"
@@ -9,10 +10,8 @@ description: "gozilla – force mozilla to display specified source file."
 
 <h2>NAME</h2>
 <p> gozilla &#8211; force mozilla to display specified source file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gozilla</code> [-b browser][-p][+no] file<br />
  <code>gozilla</code> [-b browser][-p] -d name </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Gozilla</code> force mozilla to display specified source file as a hypertext. <code>Gozilla</code> can be used with other browsers like firefox and epiphany. </p>
 <p> In advance of using this command, you must execute <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) and <code><a href="/docs/linux/man/1-htags/">htags</a></code>(1) at the root directory of the source tree to make tag files. Then you can execute gozilla at anywhere in the source tree. </p>
 <p> First form:<br />

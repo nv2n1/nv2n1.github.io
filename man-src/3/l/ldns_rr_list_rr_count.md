@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_list_rr_count(3)"
 name: "ldns_rr_list_rr_count"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_rr_list_rr_count, ldns_rr_list_set_rr_count"
 
 <h2>NAME</h2>
 <p> ldns_rr_list_rr_count, ldns_rr_list_set_rr_count </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_rr_list_rr_count(const ldns_rr_list *rr_list); </p>
 <p> void ldns_rr_list_set_rr_count(ldns_rr_list *rr_list, size_t count); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_list_rr_count</i>()</dt>
 <dd>returns the number of rr&#8217;s in an rr_list. .br <code>rr_list</code>: the rr_list to read from .br Returns the number of rr&#8217;s</dd></dl>

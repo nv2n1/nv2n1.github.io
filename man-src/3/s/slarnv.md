@@ -1,4 +1,5 @@
 ---
+
 title: "slarnv(3)"
 name: "slarnv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarnv/"
 description: "slarnv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarnv</code> (IDIST, ISEED, N, X)<br />
  <i></i><code>SLARNV</code> returns a vector of random numbers from a uniform or normal distribution.</p>

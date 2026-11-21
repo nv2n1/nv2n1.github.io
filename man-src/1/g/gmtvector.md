@@ -1,4 +1,5 @@
 ---
+
 title: "gmtvector(1)"
 name: "gmtvector"
 section: "1"
@@ -9,10 +10,8 @@ description: "gmtvector – Basic manipulation of Cartesian vectors"
 
 <h2>NAME</h2>
 <p> gmtvector &#8211; Basic manipulation of Cartesian vectors</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtvector</code> [ <i>tables</i> ] [ <code>m</code>[<i>conf</i>]|<i>vector</i> ] [ [<code>i</code>|<code>o</code>] ] [ ] [ ] [ <i>vector</i> ] [ <code>a</code>|<code>d</code>|<code>D</code>|<code>p</code><i>az</i>|<code>r</code>[<i>arg</i>|<code>R</code>|<code>s</code>|<code>x</code>] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmtvector</code> reads either (x, y), (x, y, z), (r, theta) or (lon, lat) [or (lat,lon); see <code>-:</code>] coordinates from the first 2-3 columns on standard input [or one or more <i>tables</i>]. If <code>-fg</code> is selected and only two items are read (i.e., lon, lat) then these coordinates are converted to Cartesian three-vectors on the unit sphere. Otherwise we expect (r, theta) unless <code>-Ci</code> is in effect. If no file is found we expect a single vector to be given as argument to <code>-A</code>; this argument will also be interpreted as an x/y[/z], lon/lat, or r/theta vector. The input vectors (or the one provided via <code>-A</code>) are denoted the prime vector(s). Several standard vector operations (angle between vectors, cross products, vector sums, and vector rotations) can be selected; most require a single second vector, provided via <code>-S</code>. The output vectors will be converted back to (lon, lat) or (r, theta) unless <code>-Co</code> is set which requests (x, y[, z]) Cartesian coordinates.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

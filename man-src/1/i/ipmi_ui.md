@@ -1,4 +1,5 @@
 ---
+
 title: "ipmi_ui(1)"
 name: "ipmi_ui"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-ipmi_ui/"
 description: "ipmi_ui – Crude interface to an IPMI system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ipmi_ui</code> [<code>-dmsg</code>] [<code>-dmem</code>] [<code>-c</code>] <i>connection-1</i>[<i>connection-2</i>] </p>
 <p> The connections are specified as either: </p>
 <p> <code>smi&nbsp;<wbr></code><i>smi-num</i> </p>
 <p> or </p>
 <p> <code>lan&nbsp;<wbr></code><i>IP-addr</i> <i>port&nbsp;<wbr></i>[<i>IP-addr-2</i> <i>port-2</i>] <i>auth privilege username password</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ipmi_ui</code> program connects to an IPMI system, and allows access to IPMI entities and sensors and OpenIPMI controls. It&#8217;s rather crude, and primarily for testing OpenIPMI, but it has some use beyond that so it is provided. </p>
 <p> Normally, <code>ipmi_ui</code> starts up in a full-screen format. The left window shows the output of commands, the right window shows the logs from OpenIPMI. Both windows are scrollable with page up and page down keys, press the &quot;<code>F1</code>&quot; key to choose the left window to scroll, the &quot;<code>F2</code>&quot; key to choose the right window to scroll. </p>
 <p> Note that you must set your environment <code>TERM</code> variable properly for your terminal, or <code>ipmi_ui</code> will display garbage on the screen. </p>

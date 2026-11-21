@@ -1,4 +1,5 @@
 ---
+
 title: "hp-scan(1)"
 name: "hp-scan"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-scan/"
 description: "hp-scan – Scan Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> SANE-based scan utility for HPLIP supported all-in-one/mfp devices.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-scan [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

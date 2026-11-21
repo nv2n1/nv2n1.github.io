@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-add-ca(1)"
 name: "getcert-add-ca"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-add-ca/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert add-ca [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Adds a CA configuration to <i>certmonger</i>, which can subsequently be used to enroll certificates. </p>
 <h2>OPTIONS</h2>
 <dl>

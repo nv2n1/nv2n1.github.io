@@ -1,4 +1,5 @@
 ---
+
 title: "pamtopnm(1)"
 name: "pamtopnm"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-pamtopnm/"
 description: "pamtopnm – convert PAM image to PBM, PGM, or PPM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamtopnm</code> </p>
 <p> [<code>-assume</code>] </p>
 <p> [<i>pnmfile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtopnm</code> reads a PAM image as input and produces an equivalent PBM, PGM, or PPM (i.e. PNM) image, whichever is most appropriate, as output. </p>
 <p> <code>pamtopnm</code> assumes the PAM image represents the information required for a PBM, PGM, or PPM image if its tuple type is &#8216;BLACKANDWHITE&#8217;, &#8216;GRAYSCALE&#8217;, or &#8216;RGB&#8217; and its depth and maxval are appropriate. If this is not the case, <code>pamtopnm</code> fails. </p>

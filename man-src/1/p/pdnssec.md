@@ -1,4 +1,5 @@
 ---
+
 title: "pdnssec(1)"
 name: "pdnssec"
 section: "1"
@@ -9,9 +10,7 @@ description: "pdnssec – PowerDNSSEC command and control"
 
 <h2>NAME</h2>
 <p> pdnssec &#8211; PowerDNSSEC command and control</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pdnssec </code><i>[options]</i> command</p>
-<h2>DESCRIPTION</h2>
 <p> <i>pdnssec</i> is a powerful command that is the operator-friendly gateway into PowerDNSSEC configuration. Behind the scenes, <i>pdnssec</i> manipulates a PowerDNS backend database, which also means that for many databases, <i>pdnssec</i> can be run remotely, and can configure key material on different servers.</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

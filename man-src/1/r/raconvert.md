@@ -1,4 +1,5 @@
 ---
+
 title: "raconvert(1)"
 name: "raconvert"
 section: "1"
@@ -9,9 +10,7 @@ description: "raconvert – convert comma-separated ASCII argus(8) data, to bina
 
 <h2>NAME</h2>
 <p> <code>raconvert</code> &#8211; convert comma-separated ASCII <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data, to binary <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>raconvert</code> <code>-r</code> <i>input</i> <code>-w</code> <i>output</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Raconvert</code> reads comman separated ASCII <code>argus</code> data from a file or stdin, and converts the ASCII representation to binary format. In order for <code>raconver</code> to process the delimited data correctly, the file should be created by <code>ra.1</code> like programs, using the &quot;-c &lt;char&gt;&quot; option to specify a field separator. Column delimiters can be any non-ambiguous character, and are automatically discovered from the files title string. </p>
 <p> Because <code>raconvert.1</code> expects the first valid string in the file to be a <code>ra.1</code> column title line, the <code>ra.1</code> program must use the equivalent of the &quot;-L 0&quot; option. </p>
 <p> The file can present its column oriented data in any order, and <code>raconvert</code> will accomodate. Duplicate columns on the same line are allowed, but the final value in the resulting argus record with be the last value encountered. </p>

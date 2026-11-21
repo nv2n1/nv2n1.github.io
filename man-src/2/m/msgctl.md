@@ -1,4 +1,5 @@
 ---
+
 title: "msgctl(2)"
 name: "msgctl"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-msgctl/"
 description: "msgctl – System V message control operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;
 #include &lt;sys/msg.h&gt;
 #include &lt;sys/types.h&gt;
 int msgctl(int msqid, int cmd, struct msqid_ds *buf);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>msgctl</code>() performs the control operation specified by <i>cmd</i> on the System V message queue with identifier <i>msqid</i>. </p>
 <p> The <i>msqid_ds</i> data structure is defined in <i>&lt;sys/msg.h&gt;</i> as follows: </p>
 <p> struct msqid_ds {<br />

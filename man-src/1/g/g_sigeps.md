@@ -1,4 +1,5 @@
 ---
+
 title: "g_sigeps(1)"
 name: "g_sigeps"
 section: "1"
@@ -10,9 +11,7 @@ description: "sigeps – convert c6/12 or c6/cn combinations to and from sigma/e
 <h2>NAME</h2>
 <p> sigeps &#8211; convert c6/12 or c6/cn combinations to and from sigma/epsilon </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>sigeps</code> <code>-o</code><i> potje.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-c6</code><i> real </i> <code>-cn</code><i> real </i> <code>-pow</code><i> int </i> <code>-sig</code><i> real </i> <code>-eps</code><i> real </i> <code>-A</code><i> real </i> <code>-B</code><i> real </i> <code>-C</code><i> real </i> <code>-qi</code><i> real </i> <code>-qj</code><i> real </i> <code>-sigfac</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> Sigeps is a simple utility that converts c6/c12 or c6/cn combinations to sigma and epsilon, or vice versa. It can also plot the potential in file. In addition it makes an approximation of a Buckingham potential to a Lennard Jones potential.</p>
 <h2>FILES</h2>
 <p> <code>-o</code><i> potje.xvg</i> <code>Output</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_rebuild(3)"
 name: "ck_rhs_rebuild"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_rhs_rebuild – rebuild a hash set"
 <p> <code>ck_rhs_rebuild</code> &#8211; rebuild a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_rhs.h Ft bool Fn ck_rhs_rebuild ck_rhs_t *hs</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_rhs_rebuild 3 function will regenerate the hash set pointed to by Fa hs . This has the side-effect of pruning degradatory side-effects of workloads that are delete heavy. The regenerated hash set should have shorter probe sequences on average. This operation will require a significant amount of memory and is free to allocate a duplicate hash set in the rebuild process.</p>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, Fn ck_rhs_rebuild 3 returns true and otherwise returns false on failure.</p>

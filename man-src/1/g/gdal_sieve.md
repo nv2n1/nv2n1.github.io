@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_sieve(1)"
 name: "gdal_sieve"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-gdal_sieve/"
 description: "gdal_sieve – gdal_sieve.py removes small raster polygons"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_sieve.py[-q][-st threshold][-4][-8][-o name = value] srcfile[-nomask][-mask filename][-of format][dstfile]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The gdal_sieve.py script removes raster polygons smaller than a provided threshold size (in pixels) and replaces replaces them with the pixel value of the largest neighbour polygon. The result can be written back to the existing raster band, or copied into a new file. </p>
 <p> Additional details on the algorithm are available in the GDALSieveFilter() docs. </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "macchanger(1)"
 name: "macchanger"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-macchanger/"
 description: "macchanger – MAC Changer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>macchanger </code> [<i>options</i>] device</p>
-<h2>DESCRIPTION</h2>
 <p> <code>macchanger</code> is a Linux utility for viewing/manipulating the MAC address for network interfaces.</p>
 <h2>OPTIONS</h2>
 <p> <code>macchanger</code> accepts the following options:</p>

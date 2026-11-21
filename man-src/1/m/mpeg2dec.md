@@ -1,4 +1,5 @@
 ---
+
 title: "mpeg2dec(1)"
 name: "mpeg2dec"
 section: "1"
@@ -9,9 +10,7 @@ description: "mpeg2dec – decode MPEG and MPEG2 video streams"
 
 <h2>NAME</h2>
 <p> mpeg2dec &#8211; decode MPEG and MPEG2 video streams</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mpeg2dec</code> [<i>-h</i>] [<i>-s [track]</i>] [<i>-t pid</i>] [<i>-c</i>] [<i>-o mode</i>] [<i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> `mpeg2dec&#8217; displays MPEG1 and MPEG2 video stream. Input is from stdin if no file is given.</p>
 <dl>
 <dt><code>-h</code></dt>

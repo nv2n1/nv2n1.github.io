@@ -1,4 +1,5 @@
 ---
+
 title: "cameratopam(1)"
 name: "cameratopam"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-cameratopam/"
 description: "cameratopam – convert raw camera image to PAM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cameratopam</code> </p>
 <p> [<i>input_file_name</i>] </p>
 <p> [<code>-identify_only</code>] [<code>-quick_interpolate</code>] [<code>-half_size</code>] [<code>-four_color_rgb</code>] [<code>-document_mode</code>] [<code>-balance_auto</code>] [<code>-balance_camera</code>] [<code>-red_scale=</code><i>float</i>] [<code>-blue_scale=</code><i>float</i>] [<code>-bright=</code><i>fraction</i>] [<code>-no_clip_color</code>] [<code>-rgb</code>] [<code>-use_secondary</code>] [<code>-linear</code>] [<code>-verbose</code>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>cameratopam</code> converts from any of dozens of raw camera image formats to PAM. </p>
 <p> Digital still cameras often can produce images in a special raw format in addition to something more standard such as TIFF or JFIF (JPEG). Software supplied with the camera allows you to manipulate the image using information which is lost when the camera converts to the common format. A particular camera model often has a unique raw format. </p>

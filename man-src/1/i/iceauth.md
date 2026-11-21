@@ -1,4 +1,5 @@
 ---
+
 title: "iceauth(1)"
 name: "iceauth"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-iceauth/"
 description: "iceauth – ICE authority file utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>iceauth</code> [ <code>-f</code> <i>authfile</i> ] [ <code>-vqibuV</code> ] [ <i>command arg &#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>iceauth</i> program is used to edit and display the authorization information used in connecting with ICE. This program is usually used to extract authorization records from one machine and merge them in on another (as is the case when using remote logins or granting access to other users). Commands (described below) may be entered interactively, on the <i>iceauth</i> command line, or in scripts.</p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code> <i>authfile</i> Name of the authority file to use. Will default to<br />

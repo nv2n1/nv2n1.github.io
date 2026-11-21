@@ -1,4 +1,5 @@
 ---
+
 title: "calloc(3)"
 name: "calloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-calloc/"
 description: "malloc, free, calloc, realloc, reallocarray – allocate and free dynamic memory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 void *malloc(size_t size);
@@ -22,7 +22,6 @@ void *reallocarray(void *ptr, size_t nmemb, size_t size);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.28 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>malloc</code>() function allocates <i>size</i> bytes and returns a pointer to the allocated memory. <i>The memory is not initialized</i>. If <i>size</i> is 0, then <code>malloc</code>() returns either NULL, or a unique pointer value that can later be successfully passed to <code>free</code>(). </p>
 <p> The <code>free</code>() function frees the memory space pointed to by <i>ptr</i>, which must have been returned by a previous call to <code>malloc</code>(), <code>calloc</code>(), or <code>realloc</code>(). Otherwise, or if <i>free(ptr)</i> has already been called before, undefined behavior occurs. If <i>ptr</i> is NULL, no operation is performed. </p>
 <p> The <code>calloc</code>() function allocates memory for an array of <i>nmemb</i> elements of <i>size</i> bytes each and returns a pointer to the allocated memory. The memory is set to zero. If <i>nmemb</i> or <i>size</i> is 0, then <code>calloc</code>() returns either NULL, or a unique pointer value that can later be successfully passed to <code>free</code>(). If the multiplication of <i>nmemb</i> and <i>size</i> would result in integer overflow, then <code>calloc</code>() returns an error. By contrast, an integer overflow would not be detected in the following call to <code>malloc</code>(), with the result that an incorrectly sized block of memory would be allocated: </p>

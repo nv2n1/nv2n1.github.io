@@ -1,4 +1,5 @@
 ---
+
 title: "mou2gmn(1)"
 name: "mou2gmn"
 section: "1"
@@ -9,9 +10,7 @@ description: "mb2gmn – convert MapBlast files into GPSManager files"
 
 <h2>NAME</h2>
 <p> mb2gmn &#8211; convert MapBlast files into GPSManager files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mb2gmn</code> <i>[port]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mb2gmn</code> command. </p>
 <p> This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. Instead, it has documentation in /usr/share/doc/gpsman. </p>
 <p> <code>gpsman</code> GPS Manager (GPSMan) is a graphical manager of GPS data that makes possible the preparation, inspection and edition of GPS data in a friendly environment. GPSMan supports communication and real-time logging with both Garmin and Lowrance receivers and accepts real-time logging information in NMEA0183 from any GPS receiver. </p>

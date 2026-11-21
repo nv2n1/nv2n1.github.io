@@ -1,4 +1,5 @@
 ---
+
 title: "gjots2docbook(1)"
 name: "gjots2docbook"
 section: "1"
@@ -9,9 +10,7 @@ description: "gjots2docbook – Convert a gjotsfile to DOCBOOK (on stdout)"
 
 <h2>NAME</h2>
 <p> gjots2docbook &#8211; Convert a gjotsfile to DOCBOOK (on <code>stdout</code>)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gjots2docbook</code> <code>-a</code>|<code>-b</code> [ <code>-e</code> ] [ <code>-P</code> ] [ <code>-p</code> ] [ <i>gjotsfile</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gjots2docbook</code> converts a gjotsfile into DOCBOOK XML. <code>gjots2docbook</code> uses <code><a href="/docs/linux/man/1-awk/">awk</a></code>(1) to perform the conversion. <code>gjots2docbook</code> does not create them so the first element in the file should contain any &lt;bookinfo&gt; or &lt;artheader&gt; element. Similarly, &lt;bibliographic&gt; elements are not created. In fact the output is very simplistic with item titles in the <code>gjotsfile</code> being converted to chapter or section headings in DOCBOOK. There is no reason why your gjotsfile should not contain valid DOCBOOK XML &#8211; and that is why the -e and -p options are provided. If the file does not start with &lt;?xml &#8230;&gt; then appropriate lines will be added as follows:</p>
 <dl>
 <dt>

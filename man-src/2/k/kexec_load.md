@@ -1,4 +1,5 @@
 ---
+
 title: "kexec_load(2)"
 name: "kexec_load"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-kexec_load/"
 description: "kexec_load, kexec_file_load – load a new kernel for later execution"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/kexec.h&gt;
 long kexec_load(unsigned long entry, unsigned long nr_segments,
@@ -17,7 +17,6 @@ long kexec_file_load(int kernel_fd, int initrd_fd,
                      unsigned long flags);
 </code></pre>
 <p> <i>Note</i>: There are no glibc wrappers for these system calls; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>kexec_load</code>() system call loads a new kernel that can be executed later by <code><a href="/docs/linux/man/2-reboot/">reboot</a></code>(2). </p>
 <p> The <i>flags</i> argument is a bit mask that controls the operation of the call. The following values can be specified in <i>flags</i>:</p>
 <dl>

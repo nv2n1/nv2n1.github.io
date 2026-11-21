@@ -1,4 +1,5 @@
 ---
+
 title: "anytermd(1)"
 name: "anytermd"
 section: "1"
@@ -9,10 +10,8 @@ description: "anytermd – A terminal-emulating HTTP daemon"
 
 <h2>NAME</h2>
 <p> anytermd &#8211; A terminal-emulating HTTP daemon</p>
-<h2>SYNOPSIS</h2>
 <p> anytermd [<code>&#8211;command</code> <i>arg</i>] [<code>&#8211;device</code> <i>arg</i>] [<code>&#8211;port</code> <i>arg</i>] [<code>&#8211;user</code> <i>arg</i>] [<code>&#8211;auth</code> <i>arg</i>] [<code>&#8211;charset</code> <i>arg</i>] [<code>&#8211;foreground</code>] [<code>&#8211;diff</code>] [<code>&#8211;nodiff</code>] [<code>&#8211;max-sessions</code> <i>arg</i>] [<code>&#8211;max-http-connections</code> <i>arg</i>] [<code>&#8211;local-only</code>] [<code>&#8211;name</code> <i>arg</i>] </p>
 <p> anytermd &#8211;help</p>
-<h2>DESCRIPTION</h2>
 <p> Anyterm provides a terminal window on a web page, so you can run command-line programs on a machine even when the only access to it is over HTTP. </p>
 <p> Anyterm consists of some Javascript on a web page, an XmlHttpRequest channel on standard ports back to the server, an HTTP proxy such as Apache&#8217;s mod_proxy and the Anyterm daemon. The daemon, anytermd, uses a pseudo-terminal to communicate with a shell or other application, and includes terminal emulation. Key presses are picked up by the Javscript which sends them to the daemon; changes to the emulated screen are sent from the daemon to the Javascript which updates its display. Performance is quite reasonable and SSL can be used to secure the connection. <i>For security reasons, it is highly recommended that anytermd NOT be exposed directly to the Internet!</i> See the section <code>SECURITY</code> below.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "xmlif(1)"
 name: "xmlif"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xmlif/"
 description: "xmlif – conditional processing instructions for XML"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xmlif</code> [attrib=value&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>xmlif filters XML according to conditionalizing markup. This can be useful for formatting one of several versions of an XML document depending on conditions passed to the command. </dd>
 <p> Attribute/value pairs from the command line are matched against the attributes associated with certain processing instructions in the document. The instructions are &lt;?xmlif if?&gt; and its inverse &lt;?xmlif if not?&gt;, &lt;?xmlif elif?&gt; and its inverse &lt;?xmlif elif not?&gt;, &lt;?xmlif else?&gt;, and &lt;?xmlif fi?&gt;. </p>
 <p> Argument/value pairs given on the command line are checked against the value of corresponding attributes in the conditional processing instructions. An `attribute match&#8217; happens if an attribute occurs in both the command-line arguments and the tag, and the values match. An `attribute mismatch&#8217; happens if an attribute occurs in both the command-line arguments and the tag, but the values do not match. </p>

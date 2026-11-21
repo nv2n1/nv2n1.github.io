@@ -1,4 +1,5 @@
 ---
+
 title: "chprfs(3)"
 name: "chprfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chprfs/"
 description: "chprfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code>CHPRFS</code></p>

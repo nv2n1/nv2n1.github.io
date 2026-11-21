@@ -1,4 +1,5 @@
 ---
+
 title: "dpoequb(3)"
 name: "dpoequb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpoequb/"
 description: "dpoequb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpoequb</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br />
  <i></i><code>DPOEQUB</code></p>

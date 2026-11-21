@@ -1,4 +1,5 @@
 ---
+
 title: "most(1)"
 name: "most"
 section: "1"
@@ -9,9 +10,7 @@ description: "most – browse or page through a text file"
 
 <h2>NAME</h2>
 <p> most &#8211; browse or page through a text file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>most</code> [<code>-1bCcdMstuvwz</code>] [<code>+</code><i>lineno</i>] [<code>+c</code>] [<code>+d</code>] [<code>+s</code>] [<code>+u</code>] [<code>+/</code><i>string</i>] [<i>filename</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>most</i> is a paging program that displays, one windowful at a time, the contents of a file on a terminal. It pauses after each windowful and prints on the window status line the screen the file name, current line number, and the percentage of the file so far displayed. </p>
 <p> Unlike other paging programs, <i>most</i> is capable of displaying an arbitrary number of windows as long as each window occupies at least two screen lines. Each window may contain the same file or a different file. In addition, each window has its own mode. For example, one window may display a file with its lines wrapped while another may be truncating the lines. Windows may be `locked&#8217; together in the sense that if one of the locked windows scrolls, all locked windows will scroll. <i>most</i> is also capable of ignoring lines that are indented beyond a user specified value. This is useful when viewing computer programs to pick out gross features of the code. See the `<code>:o</code>&#8216; command for a description of this feature. </p>
 <p> In addition to displaying ordinary text files, <i>most</i> can also display binary files as well as files with arbitrary ascii characters. When a file is read into a buffer, <i>most</i> examines the first 32 bytes of the file to determine if the file is a binary file and then switches to the appropriate mode. However, this feature may be disabled with the <code>-k</code> option. See the description of the <code>-b</code>, <code>-k</code>, <code>-v</code>, and <code>-t</code> options for further details. </p>

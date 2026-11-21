@@ -1,4 +1,5 @@
 ---
+
 title: "gausslaguerreintegration(3)"
 name: "gausslaguerreintegration"
 section: "3"
@@ -6,8 +7,8 @@ letter: "g"
 url: "/docs/linux/man/3-gausslaguerreintegration/"
 description: "QuantLib::GaussLaguerreIntegration – generalized Gauss-Laguerre integration"
 ---
+
 <p>QuantLib::GaussLaguerreIntegration &#8211; generalized Gauss-Laguerre integration </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/math/integrals/gaussianquadratures.hpp&gt; </p>

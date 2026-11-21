@@ -1,4 +1,5 @@
 ---
+
 title: "salt-cloud(1)"
 name: "salt-cloud"
 section: "1"
@@ -10,7 +11,6 @@ description: "salt-cloud – Salt Cloud Command"
 <h2>NAME</h2>
 <p> salt-cloud &#8211; Salt Cloud Command </p>
 <p> Provision virtual machines in the cloud with Salt</p>
-<h2>SYNOPSIS</h2>
 <pre>
 salt-cloud -m /etc/salt/cloud.map
 salt-cloud -m /etc/salt/cloud.map NAME
@@ -18,7 +18,6 @@ salt-cloud -m /etc/salt/cloud.map NAME1 NAME2
 salt-cloud -p PROFILE NAME
 salt-cloud -p PROFILE NAME1 NAME2 NAME3 NAME4 NAME5 NAME6
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Salt Cloud is the system used to provision virtual machines on various public clouds via a cleanly controlled profile and mapping system.</p>
 <h2>OPTIONS</h2>
 <dl>

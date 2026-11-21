@@ -1,4 +1,5 @@
 ---
+
 title: "xrdadler32(1)"
 name: "xrdadler32"
 section: "1"
@@ -9,11 +10,9 @@ description: "xrdadler32 – compute and display an adler32 checksum"
 
 <h2>NAME</h2>
 <p> xrdadler32 &#8211; compute and display an adler32 checksum</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>xrdadler32</code> [<i>file</i>]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>xrdadler32</code> utiliity computes and displays an adler32 checksum value for a file. Usage synopsis can be displayed by typing &quot;<code>xrdadler32 -h</code>&quot;. Currently, only the usage synopsis is available as documentation.</p>
 <h2>NOTES</h2>
 <p> Documentation for all components associated with <code>xrdadler32</code> can be found at <a rel="nofollow" href="http://xrootd.org/docs.html">http://xrootd.org/docs.html</a></p>

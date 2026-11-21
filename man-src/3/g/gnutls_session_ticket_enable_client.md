@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_ticket_enable_client(3)"
 name: "gnutls_session_ticket_enable_client"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_session_ticket_enable_client – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_ticket_enable_client &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_ticket_enable_client(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Request that the client should attempt session resumption using SessionTicket.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, or an error code.</p>

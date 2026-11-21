@@ -1,4 +1,5 @@
 ---
+
 title: "ischroot(1)"
 name: "ischroot"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ischroot/"
 description: "ischroot – detect if running in a chroot"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ischroot</code> [&#8211;default-false] [&#8211;default-true] [&#8211;help] [&#8211;version]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ischroot</code> detects if it is currently running in a chroot. The exit status is:</p>
 <dl>
 <dt>0</dt>

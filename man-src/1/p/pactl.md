@@ -1,4 +1,5 @@
 ---
+
 title: "pactl(1)"
 name: "pactl"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pactl/"
 description: "pactl – Control a running PulseAudio sound server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pactl [</code><i>options</i><code>] </code><i>COMMAND</i><code> [</code><i>ARGS &#8230;</i><code>] </p>
 <p> pactl &#8211;help </p>
 <p> pactl &#8211;version </code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>pactl</i> can be used to issue control commands to the PulseAudio sound server. </p>
 <p> <i>pactl</i> only exposes a subset of the available operations. For the full set use the <code><a href="/docs/linux/man/1-pacmd/">pacmd</a>(1)</code>.</p>
 <h2>OPTIONS</h2>

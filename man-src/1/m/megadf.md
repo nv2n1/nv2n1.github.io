@@ -1,4 +1,5 @@
 ---
+
 title: "megadf(1)"
 name: "megadf"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-megadf/"
 description: "megadf – Show total available, used, or free space in the cloud"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 megadf[--free | --total | --used][--mb | --gb | -h]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Shows available, used and free space in the cloud in machine or human readable formats.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;total</p>

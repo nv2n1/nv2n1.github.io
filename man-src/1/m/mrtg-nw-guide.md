@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-nw-guide(1)"
 name: "mrtg-nw-guide"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-nw-guide/"
 description: "mrtg-nw-guide – MRTG for NetWare"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> This guide is intended to aid in the installation and configuration of <font SIZE="-1">MRTG</font> on a NetWare server.</p>
 <h2>OVERVIEW</h2>
 <p> <font SIZE="-1">MRTG</font> is a relative newcomer to the NetWare platform. Earlier versions of NetWare could not run <font SIZE="-1">MRTG</font> natively for several reasons:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "unexpand(1)"
 name: "unexpand"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-unexpand/"
 description: "unexpand – convert spaces to tabs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>unexpand</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Convert blanks in each FILE to tabs, writing to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppdpo(1)"
 name: "ppdpo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppdpo/"
 description: "ppdpo – ppd message catalog generator (deprecated)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppdpo</code> [ <code>-D </code><i>name</i>[<code>=</code><i>value</i>] ] [ <code>-I</code> <i>include-directory</i> ] [ <code>-o</code> <i>output-file</i> ] <i>source-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ppdpo</code> extracts UI strings from PPDC source files and updates either a GNU gettext or macOS strings format message catalog source file for translation. <code>This program is deprecated and will be removed in a future release of CUPS.</code></p>
 <h2>OPTIONS</h2>
 <p> <code>ppdpo</code> supports the following options:</p>

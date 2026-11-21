@@ -1,4 +1,5 @@
 ---
+
 title: "configsnap(1)"
 name: "configsnap"
 section: "1"
@@ -9,9 +10,7 @@ description: "configsnap – manual page for configsnap 0.11"
 
 <h2>NAME</h2>
 <p> configsnap &#8211; manual page for configsnap 0.11</p>
-<h2>SYNOPSIS</h2>
 <p> <code>configsnap</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Record useful system state information, and compare to previous state if run with PHASE containing &quot;post&quot; or &quot;rollback&quot;.</p>
 <h2>OPTIONS</h2>
 <dl>

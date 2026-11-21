@@ -1,4 +1,5 @@
 ---
+
 title: "grok-dumb-pull(1)"
 name: "grok-dumb-pull"
 section: "1"
@@ -9,9 +10,7 @@ description: "GROK-DUMB-PULL – Update git repositories not managed by grokmirr
 
 <h2>NAME</h2>
 <p> GROK-DUMB-PULL &#8211; Update git repositories not managed by grokmirror</p>
-<h2>SYNOPSIS</h2>
 <p> grok-dumb-pull [options] /path/to/repos</p>
-<h2>DESCRIPTION</h2>
 <p> This is a satellite utility that updates repositories not exported via grokmirror manifest. You will need to manually clone these repositories using &quot;git clone &#8211;mirror&quot; and then define a cronjob to update them as frequently as you require. Grok-dumb-pull will bluntly execute &quot;git remote update&quot; in each of them.</p>
 <h2>OPTIONS</h2>
 <dl>

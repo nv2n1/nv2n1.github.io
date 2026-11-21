@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_cross(1)"
 name: "x2sys_cross"
 section: "1"
@@ -9,10 +10,8 @@ description: "x2sys_cross – Calculate crossovers between track data files"
 
 <h2>NAME</h2>
 <p> x2sys_cross &#8211; Calculate crossovers between track data files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x2sys_cross</code> <i>track(s)</i> <i>TAG</i> [ <i>combi.lis</i> ] [ [<i>runtimes</i>] ] [ <code>l</code>|<code>a</code>|<code>c</code> ] [ <i>parameters</i> ] [ <code>e</code>|<code>i</code> ] [ <code>l</code>|<code>u</code>|<code>h</code><i>speed</i> ] [ [<i>level</i>] ] [ <i>size</i> ] [ ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>x2sys_cross</code> is used to determine all intersections between (&quot;external cross-overs&quot;) or within (&quot;internal cross-overs&quot;) tracks (Cartesian or geographic), and report the time, position, distance along track, heading and speed along each track segment, and the crossover error (COE) and mean values for all observables. The names of the tracks are passed on the command line. By default, <code>x2sys_cross</code> will look for both external and internal COEs. As an option, you may choose to project all data using one of the map-projections prior to calculating the COE.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

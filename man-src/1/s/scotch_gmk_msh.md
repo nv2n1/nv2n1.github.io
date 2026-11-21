@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gmk_msh(1)"
 name: "scotch_gmk_msh"
 section: "1"
@@ -9,11 +10,9 @@ description: "gmk_msh – create source graph from source mesh"
 
 <h2>NAME</h2>
 <p> <code>gmk_msh </code>&#8211; create source graph from source mesh</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 gmk_msh[options][mfile][gfile]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gmk_msh</code> program creates a source graph from a source mesh. The vertices of the graph are the nodes of the mesh, and all mesh elements are turned into cliques, that is, there exists an edge between two vertices in the graph if there exists at least an element in the mesh which comprises the two associated nodes.</p>
 <h2>OPTIONS</h2>
 <dl>

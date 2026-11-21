@@ -1,4 +1,5 @@
 ---
+
 title: "exercise_(3)"
 name: "exercise_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exercise_/"
 description: "QuantLib::Option – base option class"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/option.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>MultiAssetOption</code>, <code>OneAssetOption</code>, and <code>Swaption</code>. </p>

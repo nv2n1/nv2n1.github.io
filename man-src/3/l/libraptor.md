@@ -1,4 +1,5 @@
 ---
+
 title: "libraptor(3)"
 name: "libraptor"
 section: "3"
@@ -6,7 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libraptor/"
 description: "libraptor – Raptor RDF parser and serializer library"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;raptor.h&gt; 
 
@@ -44,7 +45,6 @@ description: "libraptor – Raptor RDF parser and serializer library"
 
 
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <i>Raptor</i> library provides a high-level interface to a set of parsers and serializers that generate Resource Description Framework (RDF) triples by parsing syntaxes or serialize the triples into syntaxes. </p>
 <p> The supported parsing syntaxes are RDF/XML, N-Triples, Turtle, RSS tag soup including Atom 0.3 and the serializing syntaxes are RDF/XML, N-Triples and RSS 1.0. The RDF/XML parser can use either <i>expat</i> or <i>libxml</i> XML parsers for providing the SAX event stream. The library functions are arranged in an object-oriented style with constructors, destructors and method calls. The statements and error messages are delivered via callback functions. </p>
 <p> Raptor contains a URI-reference parsing and resolving (not retrieval) class (raptor_uri) sufficient for dealing with URI-references inside RDF. This functionality is modular and can be transparently replaced with another existing and compatible URI implementation. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "h2pas(1)"
 name: "h2pas"
 section: "1"
@@ -9,9 +10,7 @@ description: "h2pas – The C header to pascal unit conversion program."
 
 <h2>NAME</h2>
 <p> h2pas &#8211; The C header to pascal unit conversion program. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>h2pas</code> <i>[options] filename</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>h2pas</code> attempts to convert a C header file to a pascal unit. it can handle most C constructs that one finds in a C header file, and attempts to translate them to their pascal counterparts. see the <code>CONSTRUCTS</code> section for a full description of what the translator can handle. </p>
 <h2>USAGE</h2>
 <p> H2pas is a command-line tool that translates a C header file to a spascal unit. It reads the C header file and translates the C declarations to equivalent pascal declarations that can be used to access code written in C. </p>

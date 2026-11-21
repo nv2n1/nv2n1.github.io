@@ -1,4 +1,5 @@
 ---
+
 title: "neqn(1)"
 name: "neqn"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-neqn/"
 description: "neqn – format equations for ASCII output"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [<i>eqn-options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>neqn</i> invokes the <i><a href="/docs/linux/man/1-eqn/">eqn</a></i>(1) command with the <code>ascii</code> output device. </p>
 <p> Note that <i>eqn</i> does not support low-resolution, typewriter-like devices (although it may work adequately for very simple input).</p>
 <h2>SEE ALSO</h2>

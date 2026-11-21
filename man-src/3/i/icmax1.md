@@ -1,4 +1,5 @@
 ---
+
 title: "icmax1(3)"
 name: "icmax1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-icmax1/"
 description: "icmax1.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>icmax1</code> (N, CX, INCX)<br />
  <i></i><code>ICMAX1</code> finds the index of the vector element whose real part has maximum absolute value.</p>

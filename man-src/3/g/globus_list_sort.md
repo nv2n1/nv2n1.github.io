@@ -1,4 +1,5 @@
 ---
+
 title: "globus_list_sort(3)"
 name: "globus_list_sort"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_list –"
 ---
 
 <p> List data type.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_list.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> List data type. </p>

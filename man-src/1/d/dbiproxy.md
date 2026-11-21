@@ -1,4 +1,5 @@
 ---
+
 title: "dbiproxy(1)"
 name: "dbiproxy"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dbiproxy/"
 description: "dbiproxy – A proxy server for the DBD::Proxy driver"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     dbiproxy &lt;options&gt; --localport=&lt;port&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This tool is just a front end for the DBI::ProxyServer package. All it does is picking options from the command line and calling <i>DBI::ProxyServer::main()</i>. See DBI::ProxyServer for details. </p>
 <p> Available options include:</p>
 <dl>

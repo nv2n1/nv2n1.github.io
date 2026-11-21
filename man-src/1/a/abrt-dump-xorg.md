@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-dump-xorg(1)"
 name: "abrt-dump-xorg"
 section: "1"
@@ -6,22 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-dump-xorg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-dump-xorg - Extract Xorg crash from FILE (or standard input) 
 
- abrt-dump-xorg - Extract Xorg crash from FILE (or standard input) 
+<i>abrt-dump-xorg</i> [-vsoxm] [-d DIR]/[-D] [FILE]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-dump-xorg</i> [-vsoxm] [-d DIR]/[-D] [FILE]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- This tool creates problem directory from or prints Xorg crash extracted from FILE or standard input.
+This tool creates problem directory from or prints Xorg crash extracted from FILE or standard input.
 
 <h2>OPTIONS</h2>
 

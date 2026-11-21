@@ -1,4 +1,5 @@
 ---
+
 title: "rcapid(1)"
 name: "rcapid"
 section: "1"
@@ -10,15 +11,9 @@ url: "/docs/linux/man/1-rcapid/"
 
  rcapid - remote CAPI server
 
-<h2>SYNOPSIS</h2>
+rcapid [-l loglevel]
 
- rcapid [-l loglevel]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- rcapid is a server to communicate with CAPI clients. It is designed to run from inetd. add the following line to /etc/services: 
+rcapid is a server to communicate with CAPI clients. It is designed to run from inetd. add the following line to /etc/services: 
 
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>capi 6000/tcp
  

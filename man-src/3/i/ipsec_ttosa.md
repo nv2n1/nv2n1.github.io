@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_ttosa(3)"
 name: "ipsec_ttosa"
 section: "3"
@@ -9,7 +10,6 @@ description: "ipsec_ttosa, ipsec_satot, ipsec_initsaid – convert IPsec Securit
 
 <h2>NAME</h2>
 <p> ipsec_ttosa, ipsec_satot, ipsec_initsaid &#8211; convert IPsec Security Association IDs to and from text, initialize an SA ID</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>typedef struct {</code><br />
  &nbsp;<wbr> <code>ip_address dst;</code><br />
@@ -22,7 +22,6 @@ description: "ipsec_ttosa, ipsec_satot, ipsec_initsaid – convert IPsec Securit
  &nbsp;<wbr> <code>char *dst, size_t dstlen);</code><br />
  <code>void initsaid(const ip_address *addr, ipsec_spi_t spi,</code><br />
  &nbsp;<wbr> <code>int proto, ip_said *dst);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Ttosa</i> converts an ASCII Security Association (SA) specifier into an <code>ip_said</code> structure (containing a destination-host address in network byte order, an SPI number in network byte order, and a protocol code). <i>Satot</i> does the reverse conversion, back to a text SA specifier. <i>Initsaid</i> initializes an <code>ip_said</code> from separate items of information. </p>
 <p> An SA is specified in text with a mail-like syntax, e.g. <code>esp.5a7 [at] 1.2.3.4</code>. An SA specifier contains a protocol prefix (currently <code>ah</code>, <code>esp</code>, <code>tun</code>, <code>comp</code>, or <code>int</code>), a single character indicating the address family (<code>.</code> for IPv4, <code>:</code> for IPv6), an unsigned integer SPI number in hexadecimal (with no <code>0x</code> prefix), and an IP address. The IP address can be any form accepted by <i>ipsec_ttoaddr</i>(3), e.g. dotted-decimal IPv4 address, colon-hex IPv6 address, or DNS name. </p>
 <p> As a special case, the SA specifier <code>%passthrough4</code> or <code>%passthrough6</code> signifies the special SA used to indicate that packets should be passed through unaltered. (At present, these are synonyms for <code>tun.0 [at] 0.0.0.0</code> and <code>tun:0@::</code> respectively, but that is subject to change without notice.) <code>%passthrough</code> is a historical synonym for <code>%passthrough4</code>. These forms are known to both <i>ttosa</i> and <i>satot</i>, so the internal representation is never visible. </p>

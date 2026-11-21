@@ -1,4 +1,5 @@
 ---
+
 title: "easytag(1)"
 name: "easytag"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-easytag/"
 description: "easytag – tag editor for MP3, Ogg Vorbis files and more"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>easytag</code> [OPTION]</dt>
 <dt> <code>easytag</code> [<i>PATH</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>easytag</code></p>
 <dd>is a utility for viewing and editing tags for MP3, MP2, MP4/AAC, FLAC, Ogg Speex, Ogg Opus, Ogg Vorbis, MusePack, Monkey&#8217;s Audio and WavPack files. Its simple and nice GTK+ interface makes tagging easier under Linux or Windows.</dd>
 <h2>INVOCATION</h2>

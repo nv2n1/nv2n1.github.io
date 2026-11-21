@@ -1,4 +1,5 @@
 ---
+
 title: "getppid(2)"
 name: "getppid"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-getppid/"
 description: "getpid, getppid – get process identification"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t getpid(void);</code><br />
  <code>pid_t getppid(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>getpid</code>() returns the process ID (PID) of the calling process. (This is often used by routines that generate unique temporary filenames.) </p>
 <p> <code>getppid</code>() returns the process ID of the parent of the calling process. This will be either the ID of the process that created this process using <code>fork</code>(), or, if that process has already terminated, the ID of the process to which this process has been reparented (either <code><a href="/docs/linux/man/1-init/">init</a></code>(1) or a &quot;subreaper&quot; process defined via the <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2) <code>PR_SET_CHILD_SUBREAPER</code> operation).</p>
 <h2>ERRORS</h2>

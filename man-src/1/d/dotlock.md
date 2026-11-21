@@ -1,4 +1,5 @@
 ---
+
 title: "dotlock(1)"
 name: "dotlock"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dotlock/"
 description: "dotlock.mailutils – lock mail spool files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dotlock.mailutils</code> [<i>,OPTION/</i>&#8230;] <i>,FILE/</i></p>
-<h2>DESCRIPTION</h2>
 <p> GNU dotlock <code>&#8212;</code> lock mail spool files.</p>
 <dl>
 <dt><code>-d</code>, <code>&#8211;[no-]debug</code></dt>

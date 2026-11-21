@@ -1,4 +1,5 @@
 ---
+
 title: "pnmcut(1)"
 name: "pnmcut"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pnmcut/"
 description: "pnmcut – cut a rectangle out of a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmcut</code> [<code>-left </code><i>leftcol</i>] [<code>-right </code><i>rightcol</i>] [<code>-top </code><i>toprow</i>] [<code>-bottom </code><i>bottomrow</i>] [<code>-width </code><i>width</i>] [<code>-height </code><i>height</i>] [<code>-pad</code>] [<code>-verbose</code>] [ <i>left top width height</i> ] [<i>pnmfile</i>] </p>
 <p> All options may be abbreviated to the shortest unique prefix. </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PBM, PGM, or PPM image as input. Extracts the specified rectangle, and produces the same kind of image as output. </p>
 <p> There are two ways to specify the rectangle to cut: arguments and options. Options are easier to remember and read, more expressive, and allow you to use defaults. Arguments were the only way available before July 2000. </p>
 <p> If you use both options and arguments, the two specifications get mixed in an unspecified way. </p>

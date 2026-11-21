@@ -1,4 +1,5 @@
 ---
+
 title: "dgeql2(3)"
 name: "dgeql2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgeql2/"
 description: "dgeql2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>DGEQL2</code> computes the QL factorization of a general rectangular matrix using an unblocked algorithm.</p>

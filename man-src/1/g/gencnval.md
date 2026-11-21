@@ -1,4 +1,5 @@
 ---
+
 title: "gencnval(1)"
 name: "gencnval"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-gencnval/"
 description: "gencnval – compile the converters aliases file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gencnval</code> &#8211; compile the converters aliases file </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gencnval</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <i>converterfile</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gencnval</code> converts the ICU aliases file <i>converterfile</i> into the binary file <code>cnvalias.icu</code>. This binary file can then be read directly by ICU, or used by <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) for incorporation into a larger archive or library. </p>
 <p> If <i>converterfile</i> is not provided, the default ICU <code>convrtrs.txt</code> file is used.</p>
 <h2>OPTIONS</h2>

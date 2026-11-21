@@ -1,4 +1,5 @@
 ---
+
 title: "hpievents(1)"
 name: "hpievents"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-hpievents/"
 description: "hpievents – An openhpi sample application that polls for events."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpievents[-D&lt;value&gt;][-N host[:port]][-C&lt;cfgfile&gt;][-t BLOCK | SAHPI_TIMEOUT_BLOCK | n][-d - X - h] hpievents[--domain = nn][--host = host[:port]][--cfgfile = file]
                                                                                                            [--timeout = BLOCK | SAHPI_TIMEOUT_BLOCK | n][--discover][--debug][--help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpievents polls for events in an opened <font SIZE="-1">HPI</font> session. User can specify wait time for the event. User can also select the order between hpi resource (resource event) discovery and hpi event subscription. </p>
 <p> If no domain or host is selected, hpievents polls for events in the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "selfsign-getcert(1)"
 name: "selfsign-getcert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-selfsign-getcert/"
 description: "selfsign-getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>selfsign-getcert request&nbsp;<wbr>[options]<br />
 &nbsp;<wbr>selfsign-getcert resubmit&nbsp;<wbr>[options]<br />
 &nbsp;<wbr>selfsign-getcert start-tracking&nbsp;<wbr>[options]<br />
@@ -16,7 +16,6 @@ description: "selfsign-getcert"
 &nbsp;<wbr>selfsign-getcert list&nbsp;<wbr>[options]<br />
 &nbsp;<wbr>selfsign-getcert list-cas&nbsp;<wbr>[options]<br />
 &nbsp;<wbr>selfsign-getcert refresh-cas&nbsp;<wbr>[options] </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>selfsign-getcert</i> tool issues requests to a org.fedorahosted.certmonger service on behalf of the invoking user. It can ask the service to begin enrollment, optionally generating a key pair to use, it can ask the service to begin monitoring a certificate in a specified location for expiration, and optionally to refresh it when expiration nears, it can list the set of certificates that the service is already monitoring, or it can list the set of CAs that the service is capable of using. </p>
 <p> If no command is given as the first command-line argument, <i>selfsign-getcert</i> will print short usage information for each of its functions. </p>
 <p> The <i>selfsign-getcert</i> tool behaves identically to the generic <i>getcert</i> tool when it is used with the <code>-c </code><i>SelfSign</i> option. </p>

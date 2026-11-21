@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_constants(3)"
 name: "brlapi_constants"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_constants/"
 description: "brlapi_constants.h –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Defines</h3>
 <p> #define <code>BRLAPI_KEY_CMD_NOOP</code> (BRLAPI_KEY_CMD(0) + 0) </p>
 <p> #define <code>BRLAPI_KEY_CMD_LNUP</code> (BRLAPI_KEY_CMD(0) + 1) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_psk_set_server_dh_params(3)"
 name: "gnutls_psk_set_server_dh_params"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_psk_set_server_dh_params – API function"
 
 <h2>NAME</h2>
 <p> gnutls_psk_set_server_dh_params &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_psk_set_server_dh_params(gnutls_psk_server_credentials_t </code><i>res</i><code>, gnutls_dh_params_t </code><i>dh_params</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_psk_set_server_dh_params – API function"
 <dd> is a gnutls_psk_server_credentials_t structure</dd>
 <dt>gnutls_dh_params_t dh_params</dt>
 <dd> is a structure that holds Diffie-Hellman parameters.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the Diffie-Hellman parameters for an anonymous server to use. These parameters will be used in Diffie-Hellman exchange with PSK cipher suites.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3inputstream(3)"
 name: "antlr3inputstream"
 section: "3"
@@ -8,7 +9,6 @@ description: "src/antlr3inputstream.c –"
 ---
 
 <p> Base functions to initialize and manipulate any input stream.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> static void <code>antlr3AsciiConsume</code> (<code>pANTLR3_INT_STREAM</code> is)<br />

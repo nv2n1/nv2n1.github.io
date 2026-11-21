@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_statvfs(3)"
 name: "libssh2_sftp_statvfs"
 section: "3"
@@ -9,7 +10,6 @@ description: "libssh2_sftp_statvfs, libssh2_sftp_fstatvfs – get file system st
 
 <h2>NAME</h2>
 <p> libssh2_sftp_statvfs, libssh2_sftp_fstatvfs &#8211; get file system statistics</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
@@ -18,7 +18,6 @@ int libssh2_sftp_statvfs(LIBSSH2_SFTP *sftp, const char *path,
 int libssh2_sftp_fstatvfs(LIBSSH2_SFTP_HANDLE *handle,
                           LIBSSH2_SFTP_STATVFS *st)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These functions provide <a href="/docs/linux/man/2-statvfs/">statvfs</a>(2)-like operations and require statvfs [at] openssh.com and fstatvfs [at] openssh.com extension support on the server. </p>
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
 <p> <i>handle</i> &#8211; SFTP File Handle as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>

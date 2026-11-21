@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-repack(1)"
 name: "dpkg-repack"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-repack/"
 description: "dpkg-repack – put an unpacked .deb file back together"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-repack</code> [<code>&#8211;root=dir</code>] [<code>&#8211;arch=architecture</code>] [<code>&#8211;generate</code>] <code>packagename</code> [<code>packagename &#8230;</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>dpkg-repack</i> creates a .deb file out of a Debian package that has already been installed on your system. </p>
 <p> If any changes have been made to the package while it was unpacked (ie, conffiles files in /etc modified), the new package will inherit the changes. (There are exceptions to this, including changes to configuration files that are not conffiles, including those managed by ucf.) </p>
 <p> This utility can make it easy to copy packages from one computer to another, or to recreate packages that are installed on your system, but no longer available elsewhere. </p>

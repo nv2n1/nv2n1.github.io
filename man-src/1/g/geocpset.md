@@ -1,4 +1,5 @@
 ---
+
 title: "geocpset(1)"
 name: "geocpset"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-geocpset/"
 description: "geocpset – adds control points based on geometric position"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>geocpset</code> [<i>-o output.pto</i>] <i>input.pto</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>geocpset</code> is a tool for panoramas which contains featureless images, e.g. sky images. In this images a control point detector does not find control points. <code>geocpset</code> analyses the positions of the images in project files. Then it adds control points to these images which are not connected by control points. The control points are set only be the geometric positions of the images and not by the image content. So <code>geocpset</code> should only used with projects which have assigned rough image positions.</p>
 <h2>USAGE</h2>
 <dl>

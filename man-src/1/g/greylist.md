@@ -1,4 +1,5 @@
 ---
+
 title: "greylist(1)"
 name: "greylist"
 section: "1"
@@ -9,10 +10,8 @@ description: "greylist – command line interface to greylistd(8)"
 
 <h2>NAME</h2>
 <p> greylist &#8211; command line interface to <code><a href="/docs/linux/man/8-greylistd/">greylistd</a>(8)</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>greylist </code>{<code> -h </code>|<code> &#8211;help </code>|<code> help </code>}<br />
  <code>greylist </code> <i>operation &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> This program provides a command line interface to <code><a href="/docs/linux/man/8-greylistd/">greylistd</a></code>(8); please refer to that manual page for more information on the purpose and functionality of this program. </p>
 <h2>USAGE</h2>
 <p> In the following discussion, <i>data&#8230;</i> typically refers to the following <i>triplet</i> of information: </p>

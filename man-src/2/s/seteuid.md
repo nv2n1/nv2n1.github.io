@@ -1,4 +1,5 @@
 ---
+
 title: "seteuid(2)"
 name: "seteuid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-seteuid/"
 description: "seteuid, setegid – set effective user or group ID"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int seteuid(uid_t </code><i>euid</i><code>);</code><br />
@@ -18,7 +18,6 @@ description: "seteuid, setegid – set effective user or group ID"
 <dt>
 </dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>seteuid</code>() sets the effective user ID of the calling process. Unprivileged processes may only set the effective user ID to the real user ID, the effective user ID or the saved set-user-ID. </p>
 <p> Precisely the same holds for <code>setegid</code>() with &quot;group&quot; instead of &quot;user&quot;.</p>
 <h2>RETURN VALUE</h2>

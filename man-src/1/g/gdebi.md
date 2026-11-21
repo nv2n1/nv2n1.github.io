@@ -1,4 +1,5 @@
 ---
+
 title: "gdebi(1)"
 name: "gdebi"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gdebi/"
 description: "gdebi – Simple tool to install deb files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gdebi</code> [<i>package.deb</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> gdebi lets you install local deb packages resolving and installing its dependencies. apt does the same, but only for remote (http, ftp) located packages.</p>
 <h2>OPTIONS</h2>
 <dl>

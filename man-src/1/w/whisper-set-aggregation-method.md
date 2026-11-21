@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-set-aggregation-method(1)"
 name: "whisper-set-aggregation-method"
 section: "1"
@@ -13,7 +14,6 @@ description: "whisper-set-aggregation-method – set aggregationType field"
 <pre>
 whisper-set-aggregation-method path &lt;average|sum|last|max|min&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command sets the aggregationType field in an whisper database. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "mount_afp(1)"
 name: "mount_afp"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-mount_afp/"
 description: "mount_afp – mount an afp (AppleShare) filesystem using FUSE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mount_afp</code> &#8211; mount an afp (AppleShare) filesystem using FUSE </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>o </code><i>options</i> ] <i>afp_url</i> <i>node</i></p>
-<h2>DESCRIPTION</h2>
 <p> The command mounts the AFP volume denoted by the afp_url <i><a href="afp://[user[;AUTH=uamname][:password]@]host[:port]/volumename">afp://[user[;AUTH=uamname][:password]@]host[:port]/volumename</a></i> at the mount point indicated by <i>node.</i> </p>
 <p> This is normally a symlink to the afp_client1 executable, which is a full implementation to mount AFP volumes using the FUSE infrastructure. It communicates with afpfsd, a daemon that manages AFP sessions. Fp The arguments and options are:</p>
 <dl>

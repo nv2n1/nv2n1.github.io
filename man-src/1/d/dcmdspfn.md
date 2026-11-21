@@ -1,4 +1,5 @@
 ---
+
 title: "dcmdspfn(1)"
 name: "dcmdspfn"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmdspfn/"
 description: "dcmdspfn – Export standard display curves to a text file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmdspfn [options]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Command line program converts a DCMTK monitor / camera / printer / scanner characteristics file to tabbed text file describing the characteristic curve (CC), the display function and the post-standardized curve (PSC) for an 8 bit display. The 256 values of each curve can be visualized by a common spread sheet program. Above that the display curve (without CC and PSC) can also be computed for a specified luminance/OD range (min/max) and a certain number of Device Driving Levels (DDL).</p>
 <h2>PARAMETERS</h2>
 <pre>

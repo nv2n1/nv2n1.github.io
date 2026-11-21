@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_session_s(3)"
 name: "drmaa_session_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "drmaa_session_s –"
 ---
 
 <p> DRMAA session data.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;drmaa_impl.h&gt;</p>
 <h3>Data Fields</h3>
 <p> int <code>pbs_conn</code><br />

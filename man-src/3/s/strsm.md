@@ -1,4 +1,5 @@
 ---
+
 title: "strsm(3)"
 name: "strsm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-strsm/"
 description: "strsm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>strsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
  <i></i><code>STRSM</code></p>

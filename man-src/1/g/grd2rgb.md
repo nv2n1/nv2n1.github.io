@@ -1,4 +1,5 @@
 ---
+
 title: "grd2rgb(1)"
 name: "grd2rgb"
 section: "1"
@@ -9,10 +10,8 @@ description: "grd2rgb – Write r/g/b grid files from a grid file, a raw RGB fil
 
 <h2>NAME</h2>
 <p> grd2rgb &#8211; Write r/g/b grid files from a grid file, a raw RGB file, or SUN rasterfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grd2rgb</code> <i>infile</i> <i>template</i> [ <i>cpt</i> ] [ <i>xinc</i>[<code>m</code>|<code>s</code>][/<i>yinc</i>[<code>m</code>|<code>s</code>]] ] [ <i>layer</i> ] <i>region</i> [<i>level</i>] [ <i>width</i>/<i>height</i>[/<i>n_bytes</i>] ] [ <code>-r</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grd2rgb</code> reads one of three types of input files: (1) A Sun 8-, 24-, or 32-bit raster file; we the write out the red, green, and blue components (0-255 range) to separate grid files. Since the raster file header is limited you may use the <code>-R</code>, <code>-I</code>, <code>-r</code> options to set a complete header record [Default is simply based on the number of rows and columns]. (2) A binary 2-D grid file; we then convert the z-values to red, green, blue via the provided CPT file. Optionally, only write out one of the r, g, b, layers. (3) A RGB or RGBA raw raster file. Since raw rasterfiles have no header, you have to give the image dimensions via the <code>-W</code> option.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

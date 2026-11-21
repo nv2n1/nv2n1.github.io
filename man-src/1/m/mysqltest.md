@@ -1,4 +1,5 @@
 ---
+
 title: "mysqltest(1)"
 name: "mysqltest"
 section: "1"
@@ -7,14 +8,11 @@ url: "/docs/linux/man/1-mysqltest/"
 description: "mysqltest – program to run test cases mysqltest_embedded – program to run embedded test cases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqltest &#8211; program to run test cases<br />
  mysqltest_embedded &#8211; program to run embedded test cases </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqltest [</code><i>options</i><code>] [</code><i>db_name</i><code>]</code></dt>
 <dt> <code>mysqltest_embedded [</code><i>options</i><code>] [</code><i>db_name</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>mysqltest</code> program runs a test case against a MariaDB server and optionally compares the output with a result file. This program reads input written in a special test language. Typically, you invoke <code>mysqltest</code> via <code>mysql-test-run.pl</code> rather than invoking it directly. </dd>
 <p> <code>mysqltest_embedded</code> is similar but is built with support for the libmysqld embedded server. </p>
 <p> Features of <code>mysqltest</code>: </p>

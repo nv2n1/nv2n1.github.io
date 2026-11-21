@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_get_pk_algorithm2(3)"
 name: "gnutls_x509_privkey_get_pk_algorithm2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_privkey_get_pk_algorithm2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_get_pk_algorithm2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_get_pk_algorithm2(gnutls_x509_privkey_t </code><i>key</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_privkey_get_pk_algorithm2 – API function"
 <dd> should contain a <code>gnutls_x509_privkey_t</code> structure</dd>
 <dt>unsigned int * bits</dt>
 <dd> The number of bits in the public key algorithm</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the public key algorithm of a private key.</p>
 <h2>RETURNS</h2>
 <p> a member of the <code>gnutls_pk_algorithm_t</code> enumeration on success, or a negative error code on error.</p>

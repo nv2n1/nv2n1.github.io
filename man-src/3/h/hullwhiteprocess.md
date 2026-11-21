@@ -1,4 +1,5 @@
 ---
+
 title: "hullwhiteprocess(3)"
 name: "hullwhiteprocess"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hullwhiteprocess/"
 description: "ql/processes/hullwhiteprocess.hpp – Hull-White stochastic processes."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/forwardmeasureprocess.hpp&gt;<br />
  #include &lt;ql/processes/ornsteinuhlenbeckprocess.hpp&gt;<br />
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>

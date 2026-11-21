@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_alphalist(3)"
 name: "cdk_alphalist"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_alphalist – curses sorted list widget."
 
 <h2>NAME</h2>
 <p> cdk_alphalist &#8211; curses sorted list widget.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -118,7 +118,6 @@ void setCDKAlphalistVerticalChar(
     CDKALPHALIST *alphalist,
     chtype character);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The Cdk alphalist allows a user to select from a list of alphabetically sorted words. The user can use the arrow keys to traverse through the list or type in the beginning of the word and the list will automatically adjust itself in the correct place in the scrolling list. This widget, like the file selector widget, is a compound widget of both the entry field widget and the scrolling list widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

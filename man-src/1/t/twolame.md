@@ -1,4 +1,5 @@
 ---
+
 title: "twolame(1)"
 name: "twolame"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-twolame/"
 description: "twolame – an optimised MPEG Audio Layer 2 (MP2) encoder"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>twolame</i> [options] &lt;infile&gt; [outfile]</p>
-<h2>DESCRIPTION</h2>
 <p> TwoLAME is an optimised MPEG Audio Layer 2 (MP2) encoder based on tooLAME by Mike Cheng, which in turn is based upon the ISO dist10 code and portions of LAME. Encoding is performed by the libtwolame library backend.</p>
 <h2>OPTIONS</h2>
 <h3>Input File</h3>

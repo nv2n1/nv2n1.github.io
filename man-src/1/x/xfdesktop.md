@@ -1,4 +1,5 @@
 ---
+
 title: "xfdesktop(1)"
 name: "xfdesktop"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xfdesktop/"
 description: "xfdesktop – The Xfce 4 Desktop Environment’s desktop manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xfdesktop</code><br />
  <code>xfdesktop</code> <i>[options]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>xfdesktop</code> manages the desktop itself in the Xfce 4 Desktop Environment. This includes drawing the desktop backdrop and providing a right-click applications menu and middle-click window list menu, as well as drawing icons on the desktop. Only one instance of xfdesktop can be running at a time, and should be started by running <code>xfdesktop</code> without any arguments. </p>
 <h2>OPTIONS</h2>
 <h3>HELP OPTIONS:</h3>

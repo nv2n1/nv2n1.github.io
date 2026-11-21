@@ -1,4 +1,5 @@
 ---
+
 title: "perlapio(1)"
 name: "perlapio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlapio/"
 description: "perlapio – perl’s IO abstraction interface."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define PERLIO_NOT_STDIO 0 /* For co-existence with stdio only */
 #include &lt;perlio.h&gt;        /* Usually via #include &lt;perl.h&gt; */
@@ -58,7 +58,6 @@ int PerlIO_binmode(PerlIO *f, int ptype, int imode,
                    const char *layers);
 void PerlIO_debug(const char *fmt, ...)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Perl&#8217;s source code, and extensions that want maximum portability, should use the above functions instead of those defined in <font SIZE="-1">ANSI C</font>&#8216;s <i>stdio.h</i>. The perl headers (in particular &#8220;perlio.h&#8221;) will <tt>&quot;#define&quot;</tt> them to the I/O mechanism selected at Configure time. </p>
 <p> The functions are modeled on those in <i>stdio.h</i>, but parameter order has been &#8220;tidied up a little&#8221;. </p>
 <p> <tt>&quot;PerlIO *&quot;</tt> takes the place of <font SIZE="-1">FILE</font> *. Like <font SIZE="-1">FILE</font> * it should be treated as opaque (it is probably safe to assume it is a pointer to something). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-status-detail(1)"
 name: "byobu-status-detail"
 section: "1"
@@ -9,7 +10,6 @@ description: "byobu-status-detail – Wrapper that uses a sensible pager"
 
 <h2>NAME</h2>
 <p> byobu-status-detail &#8211; Wrapper that uses a sensible pager </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu-status-detail</code> is a simple script that uses a sensible pager for displaying the detailed status of all byobu status scripts. </p>
 <dl>
 <dt><i><a rel="nofollow" href="http://byobu.co">http://byobu.co</a></i></dt>

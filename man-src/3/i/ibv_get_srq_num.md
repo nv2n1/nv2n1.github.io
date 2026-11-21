@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_get_srq_num(3)"
 name: "ibv_get_srq_num"
 section: "3"
@@ -6,14 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_get_srq_num/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_get_srq_num - return srq number associated with the given shared receive queue (SRQ) 
-
-<h2>SYNOPSIS</h2>
+ibv_get_srq_num - return srq number associated with the given shared receive queue (SRQ) 
 
 <dl>
 <dt>
@@ -22,11 +16,7 @@ url: "/docs/linux/man/3-ibv_get_srq_num/"
 int ibv_get_srq_num(struct ibv_srq *srq, uint32_t *srq_num);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- ibv_get_srq_num() return srq number associated with the given shared receive queue The argument srq is an ibv_srq struct, as defined in &lt;infiniband/verbs.h&gt;. srq_num is an output parameter that holds the returned srq number.
+ibv_get_srq_num() return srq number associated with the given shared receive queue The argument srq is an ibv_srq struct, as defined in &lt;infiniband/verbs.h&gt;. srq_num is an output parameter that holds the returned srq number.
 
 <h2>RETURN VALUE</h2>
 

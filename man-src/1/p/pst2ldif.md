@@ -1,4 +1,5 @@
 ---
+
 title: "pst2ldif(1)"
 name: "pst2ldif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pst2ldif/"
 description: "pst2ldif – extract contacts from a MS Outlook .pst file in .ldif format"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pst2ldif</code> [<code>-V</code>] [<code>-b&nbsp;<wbr></code><i>ldap-base</i>] [<code>-c&nbsp;<wbr></code><i>class</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-l&nbsp;<wbr></code><i>extra-line</i>] [<code>-o</code>] [<code>-h</code>] pstfilename</dt></dl>
 <h2>OPTIONS</h2>
@@ -38,7 +38,6 @@ description: "pst2ldif – extract contacts from a MS Outlook .pst file in .ldif
 <dl>
 <dt>
 </dt><dd> Show summary of options. Subsequent options are then ignored.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>pst2ldif</code> reads the contact information from a MS Outlook .pst file and produces a .ldif file that may be used to import those contacts into an LDAP database. The following ldap attributes are generated for the old ldap schema:</p>
 <dl>
 <dt>

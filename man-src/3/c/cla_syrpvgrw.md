@@ -1,4 +1,5 @@
 ---
+
 title: "cla_syrpvgrw(3)"
 name: "cla_syrpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_syrpvgrw/"
 description: "cla_syrpvgrw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>cla_syrpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br />
  <i></i><code>CLA_SYRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric indefinite matrix.</p>

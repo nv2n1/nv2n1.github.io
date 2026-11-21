@@ -1,4 +1,5 @@
 ---
+
 title: "afslog(1)"
 name: "afslog"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-afslog/"
 description: "afslog – obtain AFS tokens"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>afslog</code> &#8211; obtain AFS tokens </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>h | &#8211;help</code> ] [-<code>-no-v4</code> ] [-<code>-no-v5</code> ] [-<code>u | &#8211;unlog</code> ] [-<code>v | &#8211;verbose</code> ] [-<code>-version</code> ] [-<code>c </code><i>cell | </i> &#8211;<code>-cell= </code><i>cell</i> ] [-<code>k </code><i>realm | </i> &#8211;<code>-realm= </code><i>realm</i> ] [-<code>P </code><i>principal | </i> &#8211;<code>-principal= </code><i>principal</i> ] -words [-<code>p </code><i>path | </i> &#8211;<code>-file= </code><i>path</i> ] [<i>cell | path &#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> obtains AFS tokens for a number of cells. What cells to get tokens for can either be specified as an explicit list, as file paths to get tokens for, or be left unspecified, in which case will use whatever magic krb_afslog3 decides upon. </p>
 <p> Supported options:</p>
 <dl>

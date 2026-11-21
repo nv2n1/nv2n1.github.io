@@ -1,4 +1,5 @@
 ---
+
 title: "smokeping(1)"
 name: "smokeping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smokeping/"
 description: "smokeping – Commandline tool for SmokePing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>smokeping</code> [ <code>&#8211;email</code> | <code>&#8211;makepod</code> | <code>&#8211;version</code> | <code>&#8211;restart</code> ] </p>
 <pre><code>
  Options:
@@ -41,7 +41,6 @@ description: "smokeping – Commandline tool for SmokePing"
  --pid-dir=s Directory for the PID file when running in slave mode.
              (optional, defaults to --cache-dir)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>smokeping</code> tool is the commandline part of the SmokePing system. Its main function is to run as a daemon and send Pings to all the Targets you have specified in the Config file. When you call <code>smokeping</code> without arguments it will start as a daemon and do its work. </p>
 <p> If called with an argument, then further functions can be activated, as seen in the Synopsis above. The <code>&#8211;email</code> function is explained in the documentation on the config file. </p>
 <p> The <code>&#8211;filter</code> option allows you to run the daemon on a big config file, but have the config file filtered and only measure the entries that pass the filter. This is useful for remote measurement. Run Smokeping with two exclusive filters in two locations and rsync the rrds back to the webserver host where you run the cgi. Filters act on the section names in the config file. Multiple section names are concatenated with <code>/</code> like path names: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-prune(1)"
 name: "git-prune"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-prune/"
 description: "git-prune – Prune all unreachable objects from the object database"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git prune[-n][-v][--progress][--expire&lt;time&gt;][--][&lt;head&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd>

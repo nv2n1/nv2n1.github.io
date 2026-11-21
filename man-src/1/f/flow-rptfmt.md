@@ -1,4 +1,5 @@
 ---
+
 title: "flow-rptfmt(1)"
 name: "flow-rptfmt"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-rptfmt – Format the output of flow-report in ASCII or HTML"
 
 <h2>NAME</h2>
 <p> flow-rptfmt &#8211; Format the output of flow-report in ASCII or HTML</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-rptfmt</code> [ <code>-hHnp</code> ] [ <code>-a</code><i> alarm_time</i> ] [ <code>-f</code><i> format</i> ] [ <code>-F</code><i> fields</i> ] [ <code>-m</code><i> max_lines</i> ] [ <code>-s</code><i> sort_field</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-rptfmt</code> utility processes the CSV output of flow-report into formatted ASCII or HTML. Sorting, maximum display lines, field filter, header display, and name substitution are supported during post processing. Additionally an alarm can be set for use in CGI scripts to limit the CPU time of formatting.</p>
 <h2>OPTIONS</h2>
 <dl>

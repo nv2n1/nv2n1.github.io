@@ -1,4 +1,5 @@
 ---
+
 title: "pcre2_set_newline(3)"
 name: "pcre2_set_newline"
 section: "3"
@@ -6,14 +7,13 @@ letter: "p"
 url: "/docs/linux/man/3-pcre2_set_newline/"
 description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 ---
+
 <p>PCRE2 &#8211; Perl-compatible regular expressions (revised API) </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;pcre2.h&gt;</code> </p>
 <pre><code>
  int pcre2_set_newline(pcre2_compile_context *  ccontext ,
    uint32_t  value );
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p>This function sets the newline convention within a compile context. This specifies which character(s) are recognized as newlines when compiling and matching patterns. The second argument must be one of: </p>
 <p> <br />
 &nbsp;<wbr>&nbsp;PCRE2_NEWLINE_CR&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Carriage return only <br />

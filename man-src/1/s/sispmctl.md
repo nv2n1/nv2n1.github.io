@@ -1,4 +1,5 @@
 ---
+
 title: "sispmctl(1)"
 name: "sispmctl"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-sispmctl/"
 description: "sispmctl – Gembird Silver Shield PM ConTroL program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sispmctl</code> <i>-s</i> </p>
 <p> <code>sispmctl [</code> <i>-q</i> <code>] [</code> <i>-n</i> <code>] [</code> <i>-d</i> <code>0&#8230; ]</code> <code>[</code> <i>-D</i> <code>&#8230; ]</code> <i>-b</i> <code>&lt;on|off&gt;</code> </p>
 <p> <code>sispmctl [</code> <i>-q</i> <code>] [</code> <i>-n</i> <code>] [</code> <i>-d</i> <code>0&#8230; ]</code> <code>[</code> <i>-D</i> <code>&#8230; ] &lt;</code> <i>-o</i> <code>|</code> <i>-f</i> <code>|</code> <i>-t</i> <code>|</code> <i>-g</i> <code>|</code> <i>-m</i> <code>&gt; &lt;1..4|all&gt;</code> </p>
 <p> <code>sispmctl [</code> <i>-q</i> <code>] [</code> <i>-n</i> <code>] [</code> <i>-d</i> <code>0&#8230; ]</code> <code>[</code> <i>-D</i> <code>&#8230; ] &lt;</code> <i>-a</i> <code>|</code> <i>-A</i> <code>&gt; &lt;1..4|all&gt;</code> <code>[</code> <i>&#8211;Aat</i> <code>&#8216;&#8230;&#8217; ] [</code> <i>&#8211;Aafter</i> <code>&#8230; ] [</code> <i>&#8211;Ado</i> <code>&lt;on|off&gt; ] &#8230; [</code> <i>&#8211;Aloop</i> <code>&#8230; ]</code> </p>
 <p> <code>sispmctl [</code> <i>-d</i> <code>0&#8230; ]</code> <code>[</code> <i>-D</i> <code>&#8230; ] [</code> <i>-i &lt;ip&gt;</i> <code>] [</code> <i>-p &lt;#port&gt;</i> <code>] [</code> <i>-u &lt;path&gt;</i> <code>]</code> <i>-l</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sispmctl</code> is a tool to switch the USB controlled outlets of Gembird Silver Shield PM. It is known by many names, e.g. Revolt Power Switch. </p>
 <p> It is coded in C and uses the usb specific library (LibUSB). This allows you a portable and fast solution. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_get_object_id_der(3)"
 name: "asn1_get_object_id_der"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_get_object_id_der – API function"
 
 <h2>NAME</h2>
 <p> asn1_get_object_id_der &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_get_object_id_der(const unsigned char * </code><i>der</i><code>, int </code><i>der_len</i><code>, int * </code><i>ret_len</i><code>, char * </code><i>str</i><code>, int </code><i>str_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "asn1_get_object_id_der – API function"
 <dd> Pre-allocated output buffer to put the textual object id in.</dd>
 <dt>int str_size</dt>
 <dd> Length of pre-allocated output buffer.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Converts a DER encoded object identifier to its textual form.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> on success, or an error.</p>

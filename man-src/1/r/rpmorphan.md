@@ -1,4 +1,5 @@
 ---
+
 title: "rpmorphan(1)"
 name: "rpmorphan"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-rpmorphan/"
 description: "rpmorphan – find orphaned packages"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> rpmorphan finds &#8220;orphaned&#8221; packages on your system. It determines which packages have no other packages depending on their installation, and shows you a list of these packages. It is clone of deborphan debian software for rpm packages. </p>
 <p> It will try to help you to remove unused packages, for exemple : </p>
 <p> &#8211; after a distribution upgrade </p>
 <p> &#8211; when you want to suppress packages after some tests</p>
-<h2>SYNOPSIS</h2>
 <p> rpmorphan [options] [targets] </p>
 <p> or </p>
 <p> grpmorphan [options] [targets] </p>

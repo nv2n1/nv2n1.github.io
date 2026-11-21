@@ -1,4 +1,5 @@
 ---
+
 title: "sosreport(1)"
 name: "sosreport"
 section: "1"
@@ -9,7 +10,6 @@ description: "sosreport – Collect and package diagnostic and support data"
 
 <h2>NAME</h2>
 <p> sosreport &#8211; Collect and package diagnostic and support data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sosreport</code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-l|&#8211;list-plugins]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-n|&#8211;skip-plugins plugin-names]<br />
@@ -31,7 +31,6 @@ description: "sosreport – Collect and package diagnostic and support data"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-z|&#8211;compression-type method]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;experimental]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-h|&#8211;help] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sosreport</code> generates an archive of configuration and diagnostic information from the running system. The archive may be stored locally or centrally for recording or tracking purposes or may be sent to technical support representatives, developers or system administrators to assist with technical fault-finding and debugging. </p>
 <p> Sos is modular in design and is able to collect data from a wide range of subsystems and packages that may be installed. An XML or HTML report summarizing the collected information is optionally generated and stored within the archive.</p>
 <h2>OPTIONS</h2>

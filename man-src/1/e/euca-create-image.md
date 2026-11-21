@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-image(1)"
 name: "euca-create-image"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-create-image – Create an EBS image from a running or stoppe
 
 <h2>NAME</h2>
 <p> euca-create-image &#8211; Create an EBS image from a running or stopped EBS instance</p>
-<h2>SYNOPSIS</h2>
 <p> euca-create-image <code>-n</code> NAME [-d DESC] [&#8211;no-reboot] [-b DEVICE=MAPPED]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create an EBS image from a running or stopped EBS instance</p>
 <h3>positional arguments:</h3>
 <dl>

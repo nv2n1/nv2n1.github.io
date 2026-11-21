@@ -1,4 +1,5 @@
 ---
+
 title: "faxrm(1)"
 name: "faxrm"
 section: "1"
@@ -8,9 +9,7 @@ description: "faxrm – remove fax jobs queued by"
 ---
 
 <p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>faxrm</code> [<code>-i</code>] [job-ids<i>&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Remove job(s) from the fax queue set up by <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1). </p>
 <p> <i>faxrm </i> removes queued fax jobs. Call with a list of job-IDs to remove specific jobs. Call with no job IDs to be asked interactively about all jobs you own (if run by root, all jobs). For job-id, use the strings returned by <a href="/docs/linux/man/1-faxq/">faxq</a>(1) (e.g. F000015), without the &#8220;/JOB&#8221; extention. </p>
 <p> If you are not the owner of the fax job (as per the &#8216;user xyz&#8217; statement inside the JOB file), you are not allowed to remove the fax job. Only root is permitted to remove another user&#8217;s faxes. </p>

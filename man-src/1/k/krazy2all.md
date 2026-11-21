@@ -1,4 +1,5 @@
 ---
+
 title: "krazy2all(1)"
 name: "krazy2all"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-krazy2all/"
 description: "krazy2all – Sanity checks KDE source code."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> krazy2all [options]</p>
-<h2>DESCRIPTION</h2>
 <p> krazy2all finds all supported files within the current directory tree and runs the krazy2 checker on all of them, producing 1 concise report in the specified export format.</p>
 <h2>OPTIONS</h2>
 <dl>

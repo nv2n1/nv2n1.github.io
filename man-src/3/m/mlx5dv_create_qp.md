@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_create_qp(3)"
 name: "mlx5dv_create_qp"
 section: "3"
@@ -6,14 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_qp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_create_qp - creates a queue pair (QP) 
-
-<h2>SYNOPSIS</h2>
+mlx5dv_create_qp - creates a queue pair (QP) 
 
 <dl>
 <dt>
@@ -24,11 +18,7 @@ struct ibv_qp *mlx5dv_create_qp(struct ibv_context *context,
                                 struct mlx5dv_qp_init_attr *mlx5_qp_attr)
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- mlx5dv_create_qp() creates a queue pair (QP) with specific driver properties.
+mlx5dv_create_qp() creates a queue pair (QP) with specific driver properties.
 
 <h2>ARGUMENTS</h2>
 

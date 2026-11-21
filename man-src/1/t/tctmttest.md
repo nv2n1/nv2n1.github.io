@@ -1,4 +1,5 @@
 ---
+
 title: "tctmttest(1)"
 name: "tctmttest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tctmttest/"
 description: "tctmttest – test cases of the table database API"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The command `<code>tctmttest</code>&#8216; is a utility for facility test under multi-thread situation. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>tnum</i>&#8216; specifies the number of running threads. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>bnum</i>&#8216; specifies the number of buckets. `<i>apow</i>&#8216; specifies the power of the alignment. `<i>fpow</i>&#8216; specifies the power of the free block pool. </p>
 <dl>
 <dt>

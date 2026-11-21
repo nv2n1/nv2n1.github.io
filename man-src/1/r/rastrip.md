@@ -1,4 +1,5 @@
 ---
+
 title: "rastrip(1)"
 name: "rastrip"
 section: "1"
@@ -9,9 +10,7 @@ description: "rastrip – strip argus(8) data file."
 
 <h2>NAME</h2>
 <p> <code>rastrip</code> &#8211; strip <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rastrip</code> [<code>-M</code> [replace] [+|-]<i>dsr</i> [-M &#8230;]] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Rastrip</code> reads <code>argus</code> data from an <i>argus-data</i> source, strips the records based on the criteria specified on the command line, and outputs a valid <i>argus-stream</i>. This is useful to reduce the size of argus data files. Rastrip always removes argus management transactions, thus having the same effect as a &#8216;not man&#8217; filter expression.</p>
 <h2>OPTIONS</h2>
 <p> Rastrip, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-rastrip/">rastrip</a>(1)</code> specific options are: </p>

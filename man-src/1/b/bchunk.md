@@ -1,4 +1,5 @@
 ---
+
 title: "bchunk(1)"
 name: "bchunk"
 section: "1"
@@ -9,9 +10,7 @@ description: "bchunk – CD image format conversion from bin/cue to iso/cdr"
 
 <h2>NAME</h2>
 <p> bchunk &#8211; CD image format conversion from bin/cue to iso/cdr</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bchunk [-v] [-p] [-r] [-w] [-s] &lt;image.bin&gt; &lt;image.cue&gt; &lt;basename&gt;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>bchunk </code> converts a CD image in a &quot;.bin / .cue&quot; format (sometimes &quot;.raw / .cue&quot;) to a set of .iso and .cdr tracks. </p>
 <p> The bin/cue format is used by some non-Unix cd-writing software, but is not supported on most other cd-writing programs. </p>
 <p> image.bin is the raw cd image file. image.cue is the track index file containing track types and offsets. basename is used for the beginning part of the created track files. </p>

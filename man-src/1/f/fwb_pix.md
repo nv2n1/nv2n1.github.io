@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_pix(1)"
 name: "fwb_pix"
 section: "1"
@@ -9,9 +10,7 @@ description: "fwb_ipt – Policy compiler for Cisco PIX"
 
 <h2>NAME</h2>
 <p> fwb_ipt &#8211; Policy compiler for Cisco PIX</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fwb_pix</code> <code>[-vVi]</code> <code>[-d wdir]</code> <code>-f data_file.xml</code> object_name </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fwb_pix</code> is firewall policy compiler component of Firewall Builder (see <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1)). Compiler reads objects definitions and firewall description from the data file specified with &quot;-f&quot; option and generates resultant Cisco PIX configuration file. The configuration is written to the file with the name the same as the name of the firewall object, plus extension &quot;.fw&quot;. </p>
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>
 <h2>OPTIONS</h2>

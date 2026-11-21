@@ -1,4 +1,5 @@
 ---
+
 title: "vdr(1)"
 name: "vdr"
 section: "1"
@@ -9,9 +10,7 @@ description: "vdr – the Video Disk Recorder"
 
 <h2>NAME</h2>
 <p> vdr &#8211; the Video Disk Recorder</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vdr</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>vdr</code> implements a complete digital Set-Top Box and Video Recorder. It can work with signals received from satellites (DVB-S) as well as cable (DVB-C) and terrestrial (DVB-T) signals. </p>
 <p> At least one DVB card is required to run <code>vdr</code>. With it you can watch live TV while recording one or more other broadcasts from the same transponder. It is also possible to start watching a recorded programme before the live broadcast has ended (<code>time shifting</code>). In order to record from different transponders simultaneously two or more DVB cards are necessary. By default <code>vdr</code> can support up to eight DVB cards. The primary DVB card (the one your TV set is connected to) can either be a &quot;full featured&quot; card, which means it contains an MPEG decoder and provides audio and video signal outputs, or you can use some third party plugin that implements software decoding of the MPEG data and displays it via the system&#8217;s graphics adapter. </p>
 <p> <code>vdr</code> uses an On Screen Display (OSD) to display its menus. It can be controlled by the PC keyboard, the &quot;Linux Infrared Remote Control&quot; (LIRC), or any other means of remote control, implemented by a third party plugin. </p>

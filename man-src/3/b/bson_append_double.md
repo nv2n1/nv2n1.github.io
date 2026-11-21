@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_double(3)"
 name: "bson_append_double"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_double() – The bson_append_double() function shall a
 
 <h2>NAME</h2>
 <p> bson_append_double() &#8211; The bson_append_double() function shall append a new element to a bson document of type double.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_double(bson_t *bson,
                         const char *key,
@@ -29,7 +29,6 @@ bool bson_append_double(bson_t *bson,
 <dl>
 <dt><code>value</code></dt>
 <dd> A double value to append.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_double/">bson_append_double</a>(3)</code> function shall append a new element to a bson document of type <code>double</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

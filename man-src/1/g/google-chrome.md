@@ -1,4 +1,5 @@
 ---
+
 title: "google-chrome(1)"
 name: "google-chrome"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-google-chrome/"
 description: "google-chrome – the web browser from Google"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>google-chrome</code> [<i>OPTION</i>] [<i>PATH</i>|<i>URL</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> See the Google Chrome help center for help on using the browser.</p>
 <dl>
 <dt>

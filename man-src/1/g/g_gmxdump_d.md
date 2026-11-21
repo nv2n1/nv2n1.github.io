@@ -1,4 +1,5 @@
 ---
+
 title: "g_gmxdump_d(1)"
 name: "g_gmxdump_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "gmxdump – makes binary files human readable"
 <h2>NAME</h2>
 <p> gmxdump &#8211; makes binary files human readable </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmxdump</code> <code>-s</code><i> topol.tpr </i> <code>-f</code><i> traj.xtc </i> <code>-e</code><i> ener.edr </i> <code>-cp</code><i> state.cpt </i> <code>-om</code><i> grompp.mdp </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]nr</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> gmxdump reads a run input file (<code> .tpa</code>/<code> .tpr</code>/<code> .tpb</code>), a trajectory (<code> .trj</code>/<code> .trr</code>/<code> .xtc</code>) or an energy file (<code> .ene</code>/<code> .edr</code>) and prints that to standard output in a readable format. This program is essential for checking your run input file in case of problems. </p>
 <p> When requesting to dump a topology file the program will dump the processed topology, since not all original information is maintained in tpr files.</p>
 <h2>FILES</h2>

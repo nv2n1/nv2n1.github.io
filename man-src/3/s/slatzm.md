@@ -1,4 +1,5 @@
 ---
+
 title: "slatzm(3)"
 name: "slatzm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slatzm/"
 description: "slatzm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slatzm</code> (SIDE, M, N, V, INCV, TAU, C1, C2, LDC, WORK)<br />
  <i></i><code>SLATZM</code></p>

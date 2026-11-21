@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-top(3)"
 name: "antlr3-top"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_STACK_struct –"
 ---
 
 <p> Structure that represents a Stack collection.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>free</code> )(struct <code>ANTLR3_STACK_struct</code> *stack) </p>

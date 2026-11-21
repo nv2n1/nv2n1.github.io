@@ -1,4 +1,5 @@
 ---
+
 title: "pmnsmerge(1)"
 name: "pmnsmerge"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmnsmerge – merge multiple versions of a Performance Co-Pilot PM
 
 <h2>NAME</h2>
 <p> <code>pmnsmerge</code> &#8211; merge multiple versions of a Performance Co-Pilot PMNS</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnsmerge</code> [<code>-adfxv</code>] <i>infile</i> [&#8230;] <i>outfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmnsmerge</code> merges multiple instances of a Performance Metrics Name Space (PMNS), as used by the components of the Performance Co-Pilot (PCP). </p>
 <p> Each <i>infile</i> argument names a file that includes the root of a PMNS, of the form </p>
 <pre>

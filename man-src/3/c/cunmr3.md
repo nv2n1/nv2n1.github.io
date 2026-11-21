@@ -1,4 +1,5 @@
 ---
+
 title: "cunmr3(3)"
 name: "cunmr3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunmr3/"
 description: "cunmr3.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunmr3</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>CUNMR3</code> multiplies a general matrix by the unitary matrix from a RZ factorization determined by ctzrzf (unblocked algorithm).</p>

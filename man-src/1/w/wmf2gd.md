@@ -1,4 +1,5 @@
 ---
+
 title: "wmf2gd(1)"
 name: "wmf2gd"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-wmf2gd/"
 description: "wmf2gd – Convert metafile image to one of: png,jpg"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wmf2gd</code> [<i>OPTION</i>] &#8230; [<code>-o</code><i> &lt;file.png</i>&gt;] &lt;<i>file.wmf</i>&gt; </p>
 <p> <code>wmf2gd</code> [<i>OPTION</i>] &#8230; [<code>-t</code><i> jpeg] [</i><code>-o</code><i> &lt;file.jpg</i>&gt;] &lt;<i>file.wmf</i>&gt; </p>
 <p> <code>wmf2gd</code> [<i>OPTION</i>] &#8230; <code>&#8211;auto</code><i> &lt;file1.wmf</i>&gt; [&lt;<i>file2.wmf</i>&gt; &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> Convert metafile image to one of: png,jpg. </p>
 <h2>OPTIONS</h2>
 <dl>

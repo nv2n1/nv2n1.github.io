@@ -1,4 +1,5 @@
 ---
+
 title: "sshfp(1)"
 name: "sshfp"
 section: "1"
@@ -10,7 +11,6 @@ description: "sshfp – Generate SSHFP DNS records from knownhosts files or ssh-
 <h2>SYNTAX</h2>
 <p> sshfp [<code>-k</code> &lt;<i>knownhosts_file</i>&gt;] [<code>-d</code>] [<code>-a</code>] [<code>&#8211;type</code> &lt;algo&gt;] [<code>&#8211;digest</code> &lt;digest&gt;] [&lt;<i>host1</i>&gt; [<i>host2 &#8230;]</i>] </p>
 <p> sshfp <code>-s</code> [<code>-p</code> &lt;<i>port</i>&gt;] [<code>-d</code>] [<code>-a</code>] [<code>&#8211;type</code> &lt;algo&gt;] [<code>&#8211;digest</code> &lt;digest&gt;] [<code>-n &lt;nameserver</code>&gt;<i>] &lt;domain1</i>&gt; [<i>domain2</i>] &lt;<i>host1</i>&gt; [<i>host2 &#8230;</i>] &gt;</p>
-<h2>DESCRIPTION</h2>
 <p> sshfp generates RFC-4255 SSHFP DNS records based on the public keys stored in a known_hosts file, which implies the user has previously trusted this key, or public keys can be obtained by using ssh-keyscan (1). Using ssh-keyscan (1) implies a secure path to connect to the hosts being scanned. It also implies a trust in the DNS to obtain the IP address of the hostname to be scanned. If the nameserver of the domain allows zone tranfers (AXFR), an entire domain can be processed for all its A records.</p>
 <h2>OPTIONS</h2>
 <p> <code>-s / &#8211;scan</code> &lt;<i>hostname1</i>&gt; [hostname2 &#8230;]</p>

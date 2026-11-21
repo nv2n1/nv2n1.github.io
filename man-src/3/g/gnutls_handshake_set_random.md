@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_handshake_set_random(3)"
 name: "gnutls_handshake_set_random"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_handshake_set_random – API function"
 
 <h2>NAME</h2>
 <p> gnutls_handshake_set_random &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_handshake_set_random(gnutls_session_t </code><i>session</i><code>, const gnutls_datum_t * </code><i>random</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_handshake_set_random – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>const gnutls_datum_t * random</dt>
 <dd> a random value of 32-bytes</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will explicitly set the server or client hello random value in the subsequent TLS handshake. The random value should be a 32-byte value. </p>
 <p> Note that this function should not normally be used as gnutls will select automatically a random value for the handshake. </p>
 <p> This function should not be used when resuming a session.</p>

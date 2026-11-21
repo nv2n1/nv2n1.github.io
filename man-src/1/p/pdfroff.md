@@ -1,4 +1,5 @@
 ---
+
 title: "pdfroff(1)"
 name: "pdfroff"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdfroff/"
 description: "pdfroff – create PDF documents using groff"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-abcegilpstzCEGNRSUVXZ</code> ] [ <code>-d </code><i>cs</i> ] [ <code>-f </code><i>fam</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-L </code><i>arg</i> ] [ <code>-m </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-n </code><i>num</i> ] [ <code>-o </code><i>list</i> ] [ <code>-P </code><i>arg</i> ] [ <code>-r </code><i>cn</i> ] [ <code>-T </code><i>dev</i> ] [ <code>-w </code><i>name</i> ] [ <code>-W </code><i>name</i> ] [ <code>&#8211;emit-ps</code> ] [ <code>&#8211;no-toc-relocation</code> ] [ <code>&#8211;no-kill-null-pages</code> ] [<code>&#8211;stylesheet=</code><i>name</i>] [ <code>&#8211;no-pdf-output</code> ] [<code>&#8211;pdf-output=</code><i>name</i>] [ <code>&#8211;no-reference-dictionary</code> ] [<code>&#8211;reference-dictionary=</code><i>name</i>] [ <code>&#8211;report-progress</code> ] [ <code>&#8211;keep-temporary-files</code> ] [<i>file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> [<i>groff-option</i> &#8230;] <code>&#8211;version</code> [<i>groff-option</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pdfroff</code> is a wrapper program for the GNU text processing system, <code>groff</code>. It transparently handles the mechanics of multiple pass <code>groff</code> processing, when applied to suitably marked up <code>groff</code> source files, such that tables of contents and body text are formatted separately, and are subsequently combined in the correct order, for final publication as a single PDF document. A further optional &#8220;style sheet&#8221; capability is provided; this allows for the definition of content which is required to precede the table of contents, in the published document. </p>
 <p> For each invocation of <code>pdfroff</code>, the ultimate <code>groff</code> output stream is post-processed by the GhostScript interpreter, to produce a finished PDF document. </p>
 <p> <code>pdfroff</code> makes no assumptions about, and imposes no restrictions on, the use of any <code>groff</code> macro packages which the user may choose to employ, in order to achieve a desired document format; however, it <i>does</i> include specific built in support for the <code>pdfmark</code> macro package, should the user choose to employ it. Specifically, if the <i>pdfhref</i> macro, defined in the <i>pdfmark.tmac</i> package, is used to define public reference marks, or dynamic links to such reference marks, then <code>pdfroff</code> performs as many preformatting <code>groff</code> passes as required, up to a maximum limit of <i>four</i>, in order to compile a document reference dictionary, to resolve references, and to expand the dynamically defined content of links.</p>

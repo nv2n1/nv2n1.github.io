@@ -1,4 +1,5 @@
 ---
+
 title: "plowdown(1)"
 name: "plowdown"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-plowdown/"
 description: "plowdown – Simple download manager for file sharing websites"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>plowdown</code> [<i>OPTIONS</i>]&#8230; [<i>MODULE_OPTIONS</i>]&#8230; <i>URL</i>|<i>FILE</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>plowdown</code> is a command-line tool designed for automatic download on file-sharing websites. It acts like a web browser, retrieving pages and filling HTML forms (including captchas). </p>
 <p> Currently supported hosting sites list is available in README file. </p>
 <h2>OPTIONS</h2>

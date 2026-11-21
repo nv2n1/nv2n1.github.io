@@ -1,4 +1,5 @@
 ---
+
 title: "install_mouse(3)"
 name: "install_mouse"
 section: "3"
@@ -9,10 +10,8 @@ description: "install_mouse – Installs the Allegro mouse handler."
 
 <h2>NAME</h2>
 <p> install_mouse &#8211; Installs the Allegro mouse handler.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int install_mouse();</code></p>
-<h2>DESCRIPTION</h2>
 <p> Installs the Allegro mouse handler. You must do this before using any other mouse functions.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns -1 on failure, zero if the mouse handler is already installed (in which case this function does nothing) and the number of buttons on the mouse if the mouse handler has successfully been installed (ie. this is the first time a handler is installed or you have removed the previous one). </p>

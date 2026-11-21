@@ -1,4 +1,5 @@
 ---
+
 title: "gzexe(1)"
 name: "gzexe"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gzexe/"
 description: "gzexe – compress executable files in place"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gzexe</code> <i>name &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>gzexe</i> utility allows you to compress executables in place and have them automatically uncompress and execute when you run them (at a penalty in performance). For example if you execute &#8220;gzexe /usr/bin/gdb&#8221; it will create the following two files: </p>
 <pre>
 <br>

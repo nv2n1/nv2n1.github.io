@@ -1,4 +1,5 @@
 ---
+
 title: "wmdocker(1)"
 name: "wmdocker"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wmdocker/"
 description: "wmdocker – System tray for KDE3/GNOME2 docklet applications"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wmdocker</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>wmdocker</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>wmdocker</code> is a docking application (WindowMaker dock app) which acts as a system tray for KDE3 and GNOME2. It can be used to replace the panel in either environment, allowing you to have a system tray without running the KDE/GNOME panel. </p>
 <p> Docker was written and designed to work with Openbox 2, but it should work fine in any window manager that supports WindowMaker dock apps. </p>

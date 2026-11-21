@@ -1,4 +1,5 @@
 ---
+
 title: "gribdump(1)"
 name: "gribdump"
 section: "1"
@@ -9,11 +10,9 @@ description: "gribdump – Decode GRIB products and display as text"
 
 <h2>NAME</h2>
 <p> gribdump &#8211; Decode GRIB products and display as text</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code></dt>
 <dd>gribdump [-h] [-b] [-p&nbsp;<wbr></code><i>precision</i>] [-e&nbsp;<wbr><i>errpath</i>] [-g&nbsp;<wbr><i>tabfile</i>] [-q&nbsp;<wbr><i>qspecs</i>] [<i>files &#8230;</i>]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This program decodes GRIB products (embedded in WMO product envelopes) on the NWS High-Resolution Data Service (HRS) feed, writing textual representations of the products or summaries of the products to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>

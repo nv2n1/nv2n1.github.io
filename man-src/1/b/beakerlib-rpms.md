@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-rpms(1)"
 name: "beakerlib-rpms"
 section: "1"
@@ -6,14 +7,9 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-rpms/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+BeakerLib - rpms - Package manipulation helpers 
 
- BeakerLib - rpms - Package manipulation helpers 
-
-<h2>DESCRIPTION</h2>
-
- Functions in this BeakerLib script are used for <font SIZE="-1">RPM</font> manipulation.
+Functions in this BeakerLib script are used for <font SIZE="-1">RPM</font> manipulation.
 
 <h2>FUNCTIONS</h2>
 

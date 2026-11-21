@@ -1,4 +1,5 @@
 ---
+
 title: "runuser(1)"
 name: "runuser"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-runuser/"
 description: "runuser – run a command with substitute user and group ID"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>runuser</code> [options] <code>-u</code> <i>user</i> [[&#8211;] <i>command</i> [<i>argument</i>&#8230;]] </p>
 <p> <code>runuser</code> [options] [<code>&#8211;</code>] [<i>user</i> [<i>argument</i>&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>runuser</code> can be used to run commands with a substitute user and group ID. If the option <code>-u</code> is not given, <code>runuser</code> falls back to <code>su</code>-compatible semantics and a shell is executed. The difference between the commands <code>runuser</code> and <code>su</code> is that <code>runuser</code> does not ask for a password (because it may be executed by the root user only) and it uses a different PAM configuration. The command <code>runuser</code> does not have to be installed with set-user-ID permissions. </p>
 <p> If the PAM session is not required, then the recommended solution is to use the <code><a href="/docs/linux/man/1-setpriv/">setpriv</a></code>(1) command. </p>
 <p> When called without arguments, <code>runuser</code> defaults to running an interactive shell as <i>root</i>. </p>

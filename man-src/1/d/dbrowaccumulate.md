@@ -1,4 +1,5 @@
 ---
+
 title: "dbrowaccumulate(1)"
 name: "dbrowaccumulate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbrowaccumulate/"
 description: "dbrowaccumulate – compute a running sum of a column"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbrowaccumulate [-C increment_constant] [-I initial_value] [-c increment_column] [-N new_column_name]</p>
-<h2>DESCRIPTION</h2>
 <p> Compute a running sum over a column of data, or of a constant incremented per row, perhaps to generate a cumulative distribution. </p>
 <p> What to accumulate is specified by <tt>&quot;-c&quot;</tt> or <tt>&quot;-C&quot;</tt>. </p>
 <p> The new column is named by the <tt>&quot;-N&quot;</tt> argument, defaulting to <tt>&quot;accum&quot;</tt>.</p>

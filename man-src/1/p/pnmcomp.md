@@ -1,4 +1,5 @@
 ---
+
 title: "pnmcomp(1)"
 name: "pnmcomp"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pnmcomp/"
 description: "pnmcomp – composite (overlay) two portable anymap files together"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmcomp</code> [<code>-xoff=</code><i>X</i> | <code>-align=</code>{<code>left</code>,<code>center</code>,<code>right</code>}]<br />
  [<code>-yoff=</code><i>Y</i> | <code>-valign=</code>{<code>top</code>,<code>middle</code>,<code>bottom</code>}]<br />
  [<code>-alpha=</code><i>alpha-pgmfile</i>] [<code>-invert</code>]<br />
  <i>overlay</i> [<i>pnm-input</i>] [<i>pnm-output</i>] </p>
 <p> Minimum unique abbreviations are acceptable. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pnmcomp</code> reads two images and produces a composite image with one of the images overlayed on top of the other. The images need not be the same size. The input and outputs are PNM format image files. </p>
 <p> In its simplest use, <code>pnmcomp</code> simply places the <i>overlay</i> file on top of the <i>pnm-input</i> file, blocking out the part of the <i>pnm-input</i> file beneath it. If you specify the <i>alpha-pgmfile</i>, <code>pnmcomp</code> uses it as an alpha mask, which means it determines the level of transparency of each point in the overlay image. The alpha mask must have the same dimensions as the overlay image. In places where the alpha mask defines the overlay image to be opaque, the composite output contains only the contents of the overlay image; the underlying image is totally blocked out. In places where the alpha mask defines the overlay image to be transparent, the composite output contains none of the overlay image; the underlying image shows through completely. In places where the alpha mask shows a value in between opaque and transparent (translucence), the composite image contains a mixture of the overlay image and the underlying image and the level of translucence determines how much of each. </p>
 <p> The alpha mask is a PGM file in which a white pixel represents opaqueness and a black pixel transparency. Anything in between is translucent. </p>

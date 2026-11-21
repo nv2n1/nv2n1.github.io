@@ -1,4 +1,5 @@
 ---
+
 title: "tcpvmexportd(1)"
 name: "tcpvmexportd"
 section: "1"
@@ -9,11 +10,9 @@ description: "tcpvmexportd – transcode PVM3 export interface"
 
 <h2>NAME</h2>
 <p> tcpvmexportd &#8211; transcode PVM3 export interface</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tcpvmexportd</code> <code>-s|-m</code> [ <code>options</code> ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>tcpvmexportd</code> is Copyright (C) by Malanchini Marzio</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcpvmexportd</code> This is the frontend for all the activity of export_pvm module: the program is spawned on all cluster hosts and wait to do the encode work.</p>
 <h2>OPTIONS</h2>
 <dl>

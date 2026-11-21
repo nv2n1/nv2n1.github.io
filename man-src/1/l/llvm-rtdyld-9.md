@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-rtdyld-9(1)"
 name: "llvm-rtdyld-9"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-rtdyld-9/"
 description: "llvm-rtdyld – manual page for llvm-rtdyld 9"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> OVERVIEW: llvm MC-JIT tool </p>
 <p> USAGE: llvm-rtdyld [options] &lt;input files&gt; <code>&#8211;args</code> &lt;program arguments&gt;&#8230; </p>
 <p> OPTIONS: </p>

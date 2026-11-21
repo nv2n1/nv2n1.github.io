@@ -1,4 +1,5 @@
 ---
+
 title: "slae2(3)"
 name: "slae2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slae2/"
 description: "slae2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slae2</code> (A, B, C, RT1, RT2)<br />
  <i></i><code>SLAE2</code> computes the eigenvalues of a 2-by-2 symmetric matrix.</p>

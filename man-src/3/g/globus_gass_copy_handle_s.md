@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_handle_s(3)"
 name: "globus_gass_copy_handle_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_gass_copy_handle_s –"
 ---
 
 <p> Copy Handle.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_copy.h&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>globus_gass_copy_status_t</code> <code>status</code> </p>

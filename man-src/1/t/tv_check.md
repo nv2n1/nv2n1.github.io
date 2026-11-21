@@ -1,4 +1,5 @@
 ---
+
 title: "tv_check(1)"
 name: "tv_check"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_check/"
 description: "tv_check – Check TV guide listings"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_check &#8211;configure|&#8211;scan [other options]</p>
 <h2>DESCRIPTIONS</h2>
 <p> tv_check is a Perl script that reads in a file with show information and checks it against a <font SIZE="-1">TV</font> guide listing, reporting on upcoming episodes and alerting you to unexpected episodes or schedule changes.</p>

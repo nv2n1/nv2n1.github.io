@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installlogrotate(1)"
 name: "dh_installlogrotate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installlogrotate/"
 description: "dh_installlogrotate – install logrotate config files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installlogrotate</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installlogrotate</code> is a debhelper program that is responsible for installing logrotate config files into <i>etc/logrotate.d</i> in package build directories. Files named <i>debian/package.logrotate</i> are installed.</p>
 <h2>OPTIONS</h2>
 <dl>

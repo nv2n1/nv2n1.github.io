@@ -1,4 +1,5 @@
 ---
+
 title: "blkstat(1)"
 name: "blkstat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-blkstat/"
 description: "blkstat – Display details of a file system data unit (i.e. block or sector)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blkstat [-f</code> <i>fstype </i> <code>] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-vV] </code> <i>image [images] addr</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>blkstat</code> displays the allocation status of the given data unit. <code>blkstat</code> was called <code>dstat</code> in TSK versions prior to 3.0.0. </p>
 <h2>ARGUMENTS</h2>
 <dl>

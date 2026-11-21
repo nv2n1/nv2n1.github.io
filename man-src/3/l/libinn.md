@@ -1,4 +1,5 @@
 ---
+
 title: "libinn(3)"
 name: "libinn"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-libinn/"
 
  libinn - InterNetNews library routines
 
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 #include "inn/libinn.h"
 char *
 GenerateMessageID(domain)
@@ -107,9 +106,7 @@ HASH
         const char *MessageID;
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- <i>Libinn</i> is a library of utility routines for manipulating Usenet articles and related data. 
+<i>Libinn</i> is a library of utility routines for manipulating Usenet articles and related data. 
 
  <i>GenerateMessageID</i> uses the current time, process-ID, and fully-qualified domain name, which is passed as an argument and used if local host can not be resolved or it is different from ``domain'' set in <i>inn.conf</i>, to create a Message-ID header that is highly likely to be unique. The returned value points to static space that is reused on subsequent calls. 
 

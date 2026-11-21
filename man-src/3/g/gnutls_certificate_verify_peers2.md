@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_verify_peers2(3)"
 name: "gnutls_certificate_verify_peers2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_verify_peers2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_verify_peers2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_verify_peers2(gnutls_session_t </code><i>session</i><code>, unsigned int * </code><i>status</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_certificate_verify_peers2 – API function"
 <dd> is a gnutls session</dd>
 <dt>unsigned int * status</dt>
 <dd> is the output of the verification</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will verify the peer&#8217;s certificate and store the status in the <i>status</i> variable as a bitwise or&#8217;d gnutls_certificate_status_t values or zero if the certificate is trusted. Note that value in <i>status</i> is set only when the return value of this function is success (i.e, failure to trust a certificate does not imply a negative return value). The default verification flags used by this function can be overridden using <code>gnutls_certificate_set_verify_flags()</code>. </p>
 <p> This function will take into account the OCSP Certificate Status TLS extension, as well as the following X.509 certificate extensions: Name Constraints, Key Usage, and Basic Constraints (pathlen). </p>
 <p> To avoid denial of service attacks some default upper limits regarding the certificate key size and chain size are set. To override them use <code>gnutls_certificate_set_verify_limits()</code>. </p>

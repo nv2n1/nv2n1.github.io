@@ -1,4 +1,5 @@
 ---
+
 title: "mha-decode(1)"
 name: "mha-decode"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mha-decode/"
 description: "mha-decode – Decode MIME messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mha-decode</code>&nbsp;<wbr>[<i>options</i>]&nbsp;<wbr><i>mailfolder</i>&nbsp;<wbr>&#8230; </p>
 <p> <code>mha-decode</code>&nbsp;<wbr>[<i>options</i>]&nbsp;<wbr>-single&nbsp;<wbr><i>msg.822</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mha-decode</code> is a utility program that is part of the <code>MHonArc</code> software package. <code>mha-decode</code> provides basic <font SIZE="-1">MIME</font> decoding for mail messages. </p>
 <p> If given mail folders as input, all messages within in the mail folders will be decoded. All message parts are written to files. If a filename is specified for a message part, that filename will be used when writing the part to a file. If no filename is specified in the message, a unique name will be used based upon the content-type of the message part. </p>
 <p> A single message can be decoded by using the <tt>&quot;-single&quot;</tt> option.</p>

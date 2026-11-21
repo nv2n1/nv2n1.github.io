@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-transmit(3)"
 name: "antlr3-transmit"
 section: "3"
@@ -8,7 +9,6 @@ description: "src/antlr3debughandlers.c –"
 ---
 
 <p> Provides the debugging functions invoked by a recognizer built using the debug generator mode of the antlr tool.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3.h">antlr3.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> static void <code>ack</code> (<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy) </p>

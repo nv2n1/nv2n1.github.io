@@ -1,4 +1,5 @@
 ---
+
 title: "pngtopnm(1)"
 name: "pngtopnm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pngtopnm/"
 description: "pngtopnm – convert a Portable Network Graphics file into portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pngtopnm</code> [-verbose] [-alpha | -mix] [-background color]<br />
  [-gamma value] [-text file] [-time] [<i>pngfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Portable Network Graphics as input. Produces a portable anymap as output. The type of the output file depends on the input file &#8211; if it&#8217;s black &amp; white, a <i>pbm</i> file is written, else if it&#8217;s grayscale a <i>pgm</i> file, else a <i>ppm</i> file.</p>
 <h2>OPTIONS</h2>
 <dl>

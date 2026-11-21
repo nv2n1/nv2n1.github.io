@@ -1,4 +1,5 @@
 ---
+
 title: "docker-node-rm(1)"
 name: "docker-node-rm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-node-rm/"
 description: "docker-node-rm – Remove one or more nodes from the swarm"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker node rm [OPTIONS] NODE [NODE&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Remove one or more nodes from the swarm </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;force</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Force remove a node from the swarm</p>

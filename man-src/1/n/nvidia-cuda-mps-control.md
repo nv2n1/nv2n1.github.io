@@ -1,4 +1,5 @@
 ---
+
 title: "nvidia-cuda-mps-control(1)"
 name: "nvidia-cuda-mps-control"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nvidia-cuda-mps-control/"
 description: "nvidia-cuda-mps-control – NVIDIA CUDA Multi Process Service management program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nvidia-cuda-mps-control</code> [<code>-d | -f</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> MPS is a runtime service designed to let multiple MPI processes using CUDA to run concurrently in a way that&#8217;s transparent to the MPI program. A CUDA program runs in MPS mode if the MPS control daemon is running on the system. </p>
 <p> When CUDA is first initialized in a program, the CUDA driver attempts to connect to the MPS control daemon. If the connection attempt fails, the program continues to run as it normally would without MPS. If however, the connection attempt to the control daemon succeeds, the CUDA driver then requests the daemon to start an MPS server on its behalf. If there&#8217;s an MPS server already running, and the user id of that server process matches that of the requesting client process, the control daemon simply notifies the client process of it, which then proceeds to connect to the server. If there&#8217;s no MPS server already running on the system, the control daemon launches an MPS server with the same user id (UID) as that of the requesting client process. If there&#8217;s an MPS server already running, but with a different user id than that of the client process, the control daemon requests the existing server to shutdown as soon as all its clients are done. Once the existing server has terminated, the control daemon launches a new server with the user id same as that of the queued client process. </p>
 <p> The MPS server creates the shared GPU context, and manages its clients. An MPS server can support a finite amount of CUDA contexts determined by the hardware architecture it is running on. For compute capability SM 3.5 through SM 6.0 the limit is 16 clients per GPU at a time. Compute capability SM 7.0 has a limit of 48. MPS is transparent to CUDA programs, with all the complexity of communication between the client process, the server and the control daemon hidden within the driver binaries. </p>

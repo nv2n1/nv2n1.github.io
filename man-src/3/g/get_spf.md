@@ -1,4 +1,5 @@
 ---
+
 title: "get_spf(3)"
 name: "get_spf"
 section: "3"
@@ -9,11 +10,9 @@ description: "get_spf — returns the samples per frame for a field in a dirfile
 
 <h2>NAME</h2>
 <p> get_spf &#8212; returns the samples per frame for a field in a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>gd_spf_t get_spf(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>get_spf</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the number of samples per frame for the field <i>field_code</i>. If <i>field_code</i> contains a valid representation suffix, it will be ignored. The <i>gd_spf_t</i> type is an unsigned 16-bit integer type. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <h2>RETURN VALUE</h2>

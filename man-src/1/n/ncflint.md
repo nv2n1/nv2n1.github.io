@@ -1,4 +1,5 @@
 ---
+
 title: "ncflint(1)"
 name: "ncflint"
 section: "1"
@@ -11,7 +12,6 @@ description: "ncflint – netCDF File Interpolator"
 <p> ncflint &#8211; netCDF File Interpolator</p>
 <h2>SYNTAX</h2>
 <p> ncflint [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]]] [-F] [&#8211;fix_rec_crd] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-h] [&#8211;hdf] [&#8211;hdr_pad <i>sz</i>] [-i <i>var,</i>val3<i>]</i>[-L <i>dfl_lvl</i>]<i>[-l</i> <i>path</i>] [&#8211;msa] [&#8211;no_tmp_fl] [-O] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [-t <i>thr_nbr</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-w <i>wgt[,</i> <i>wgt2</i>]] [-X <i>box</i>] [-x] <i>file1 file2 file3</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ncflint</code> creates an output file that is a linear combination of the input files. This linear combination can be a weighted average, a normalized weighted average, or an interpolation of the input files. Coordinate variables are not acted upon in any case, they are simply copied from <i>file_1.</i><br />
 &nbsp;<wbr>There are two conceptually distinct methods of using&nbsp;<wbr> <code>ncflint.</code> The first method is to specify the weight each input file is to have in the output file. In this method, the value <i>val3</i> of a variable in the output file <i>file_3</i> is determined from its values <i>val1</i> and <i>val2</i> in the two input files according to <i>wgt1*val1</i>+<i>wgt2*val2</i> </p>
 <p> Here at least <i>wgt1,</i> and, optionally, <i>wgt2,</i> are specified on the command line with the <code>-w</code> (or <code>&#8211;weight</code> or <code>&#8211;wgt_var</code> ) switch. If only IR wgt1 is specified then <i>wgt2</i> is automatically computed as <i>wgt2</i>=<i>1</i>&#8211;<i>wgt1.</i> Note that weights larger than 1 are allowed. Thus it is possible to specify <i>wgt1</i>=<i>2</i> and <i>wgt2</i>=<i>-3.</i> One can use this functionality to multiply all the values in a given file by a constant. </p>

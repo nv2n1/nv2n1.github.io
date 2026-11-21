@@ -1,4 +1,5 @@
 ---
+
 title: "gdb-add-index(1)"
 name: "gdb-add-index"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gdb-add-index/"
 description: "gdb-add-index – Add index files to speed up GDB"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gdb-add-index <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> When <font SIZE="-1">GDB</font> finds a symbol file, it scans the symbols in the file in order to construct an internal symbol table. This lets most <font SIZE="-1">GDB</font> operations work quickly&#8212;at the cost of a delay early on. For large programs, this delay can be quite lengthy, so <font SIZE="-1">GDB</font> provides a way to build an index, which speeds up startup. </p>
 <p> To determine whether a file contains such an index, use the command <tt>&quot;readelf -S filename&quot;</tt>: the index is stored in a section named <tt>&quot;.gdb_index&quot;</tt>. The index file can only be produced on systems which use <font SIZE="-1">ELF</font> binaries and <font SIZE="-1">DWARF</font> debug information (i.e., sections named <tt>&quot;.debug_*&quot;</tt>). </p>
 <p> <code>gdb-add-index</code> uses <font SIZE="-1">GDB</font> and <code>objdump</code> found in the <font SIZE="-1"><code>PATH</code></font> environment variable. If you want to use different versions of these programs, you can specify them through the <font SIZE="-1"><code>GDB</code></font> and <font SIZE="-1"><code>OBJDUMP</code></font> environment variables. </p>

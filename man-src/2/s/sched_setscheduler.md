@@ -1,4 +1,5 @@
 ---
+
 title: "sched_setscheduler(2)"
 name: "sched_setscheduler"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-sched_setscheduler/"
 description: "sched_setscheduler, sched_getscheduler – set and get scheduling policy/parameters"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sched.h&gt;
 int sched_setscheduler(pid_t pid, int policy,
                        const struct sched_param *param);
 int sched_getscheduler(pid_t pid);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>sched_setscheduler</code>() system call sets both the scheduling policy and parameters for the thread whose ID is specified in <i>pid</i>. If <i>pid</i> equals zero, the scheduling policy and parameters of the calling thread will be set. </p>
 <p> The scheduling parameters are specified in the <i>param</i> argument, which is a pointer to a structure of the following form: </p>
 <p> struct sched_param {<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "nautilus-connect-server(1)"
 name: "nautilus-connect-server"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nautilus-connect-server/"
 description: "nautilus-connect-server – To Access a remote server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nautilus-connect-server</code> [<i>options</i>] [<i>URI</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>nautilus-connect-server</code> command. </p>
 <p> Nautilus Connect Server is the connection manager for the GNOME desktop. </p>
 <p> You can use the file manager to access a remote server, be it an FTP site, a Windows share, a WebDav server or an SSH server.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlarfg(3)"
 name: "dlarfg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarfg/"
 description: "dlarfg.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarfg</code> (N, ALPHA, X, INCX, TAU)<br />
  <i></i><code>DLARFG</code> generates an elementary reflector (Householder matrix).</p>

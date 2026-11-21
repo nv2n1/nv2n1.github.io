@@ -1,4 +1,5 @@
 ---
+
 title: "plank(1)"
 name: "plank"
 section: "1"
@@ -9,7 +10,6 @@ description: "Plank – Stupidly simple."
 
 <h2>NAME</h2>
 <p> Plank &#8211; Stupidly simple.</p>
-<h2>SYNOPSIS</h2>
 <p> plank [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

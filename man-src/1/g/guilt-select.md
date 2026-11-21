@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-select(1)"
 name: "guilt-select"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-select/"
 description: "guilt-select – Select guards to apply when pushing patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-select</i> [ -n | &#8211;none | -s | &#8211;series | [&#8211;pop|&#8211;reapply] &lt;guards&#8230;&gt; ]</p>
-<h2>DESCRIPTION</h2>
 <p> Select guards to apply when pushing patches. </p>
 <p> Guards are selected without the + or &#8211; prefix. Patches are applied in the following way: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-reset-snapshot-attribute(1)"
 name: "euca-reset-snapshot-attribute"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-reset-snapshot-attribute – Reset an attribute of a snapshot
 
 <h2>NAME</h2>
 <p> euca-reset-snapshot-attribute &#8211; Reset an attribute of a snapshot to its default value</p>
-<h2>SYNOPSIS</h2>
 <p> euca-reset-snapshot-attribute <code>-c</code> [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] SNAPSHOT</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Reset an attribute of a snapshot to its default value</p>
 <h3>positional arguments:</h3>
 <dl>

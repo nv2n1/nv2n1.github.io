@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-dump(1)"
 name: "glite-lb-dump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-dump/"
 description: "glite-lb-dump – utility for dumping job events from L&B database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-dump</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-dump </code> is utility for dumping job events from L&amp;B database. It is primarilly used for statistical purposes. By default, it dumps events from the time when the last dum ended upto now. </p>
 <p> <code>glite-lb-dump </code> may be run periodically, however the periodic dumps are done by server itself, so check the configuration of the server first. </p>
 <h2>OPTIONS</h2>

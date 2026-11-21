@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_openpgp_keyring_file(3)"
 name: "gnutls_certificate_set_openpgp_keyring_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_openpgp_keyring_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_openpgp_keyring_file &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_openpgp_keyring_file(gnutls_certificate_credentials_t </code><i>c</i><code>, const char * </code><i>file</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_certificate_set_openpgp_keyring_file – API function"
 <dd> filename of the keyring.</dd>
 <dt>gnutls_openpgp_crt_fmt_t format</dt>
 <dd> format of keyring.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The function is used to set keyrings that will be used internally by various OpenPGP functions. For example to find a key when it is needed for an operations. The keyring will also be used at the verification functions.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

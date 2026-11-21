@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcolli(3)"
 name: "fstrcolli"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-fstrcolli/"
 
  fstrcolli - fuzzy comparison of two strings using the current locale
 
-<h2>SYNOPSIS</h2>
-
- #include &lt;fstrcmp.h&gt; 
+#include &lt;fstrcmp.h&gt; 
 
  #define FSTRCMP_IDENTICAL 
  #define FSTRCMP_THRESHOLD 
@@ -20,9 +19,7 @@ url: "/docs/linux/man/3-fstrcolli/"
 
  int fstrcolli(const char *string1, const char *string2);
 
-<h2>DESCRIPTION</h2>
-
- The strcolli() function compares the two strings sting1 and string2. The comparison is based on strings interpreted as appropriate for the program's current locale for category LC_CTYPE.
+The strcolli() function compares the two strings sting1 and string2. The comparison is based on strings interpreted as appropriate for the program's current locale for category LC_CTYPE.
 
 <h2>RETURN VALUE</h2>
 

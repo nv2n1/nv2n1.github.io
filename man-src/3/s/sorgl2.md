@@ -1,4 +1,5 @@
 ---
+
 title: "sorgl2(3)"
 name: "sorgl2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sorgl2/"
 description: "sorgl2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sorgl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>SORGL2</code></p>

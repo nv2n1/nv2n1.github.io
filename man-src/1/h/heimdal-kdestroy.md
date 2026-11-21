@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-kdestroy(1)"
 name: "heimdal-kdestroy"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-heimdal-kdestroy/"
 description: "kdestroy – remove one credential or destroy the current ticket file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>kdestroy</code> &#8211; remove one credential or destroy the current ticket file </p>
-<h2>SYNOPSIS</h2>
 <p> -words [-<code>c </code><i>cachefile</i> ] [-<code>-credential= </code><i>principal</i> ] [-<code>-cache= </code><i>cachefile</i> ] [-<code>A | &#8211;all</code> ] [-<code>-no-unlog</code> ] [-<code>-no-delete-v4</code> ] [-<code>-version</code> ] [-<code>-help</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> removes one credential or the current set of tickets. </p>
 <p> Supported options:</p>
 <dl>

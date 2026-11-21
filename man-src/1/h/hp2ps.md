@@ -1,4 +1,5 @@
 ---
+
 title: "hp2ps(1)"
 name: "hp2ps"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-hp2ps/"
 description: "hp2ps – convert a heap profile to a POSTSCRIPT graph"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp2ps &#8211; convert a heap profile to a P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph </p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp2ps</code> [flags] [file][.hp]</p>
-<h2>DESCRIPTION</h2>
 <p> The program <code>hp2ps</code> converts a heap profile stored in <i>file</i> into a P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> graph, sending the result to <i>file.ps.</i> By convention, files to be processed by <code>hp2ps</code> have a <i>.hp</i> extension. However, for compatibility with older versions of <code>hp2ps, </code> this extension can be omitted. If <i>file</i> is omitted entirely, then the program behaves as a filter.</p>
 <h2>OPTIONS</h2>
 <p> The flags are:</p>

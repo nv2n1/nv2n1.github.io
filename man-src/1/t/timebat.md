@@ -1,4 +1,5 @@
 ---
+
 title: "timebat(1)"
 name: "timebat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-timebat/"
 description: "timebat – CCD time correction"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>timebat </code><i>[options] </i><code>tcor=</code><i>seconds source_file &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The Timebat program applies time correction to the source frames. It means, that it adds given amount of time to the times of observation. The program does not touch neither the image data nor other parameters in header. </p>
 <p> The source frames and also dark frame must be in FITS format. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "fstack(1)"
 name: "fstack"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fstack/"
 description: "fstack – print a stack back-trace"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fstack</code> [<i>options</i>] {<i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fstack</code></p>
 <dd>prints a stack back-trace of all threads of the specified process or core-file.</dd>
 <h3>Stack Print Options</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-settings(1)"
 name: "xdg-settings"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-xdg-settings/"
 description: "xdg-settings – get various settings from the desktop environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-settings</code> {<i>get</i> | <i>check</i> | <i>set</i>} {<code>property</code>} [<code>subproperty</code>] [<code>value</code>]</dt>
 <dt> <code>xdg-settings</code> {<code>&#8211;help</code> | <code>&#8211;list</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>xdg-settings gets various settings from the desktop environment. For instance, desktop environments often provide proxy configuration and default web browser settings. Using xdg-settings these parameters can be extracted for use by applications that do not use the desktop environment&#8217;s libraries (which would use the settings natively). </dd>
 <p> xdg-settings is for use inside a desktop session only. It is not recommended to use xdg-settings as root.</p>
 <h2>OPTIONS</h2>

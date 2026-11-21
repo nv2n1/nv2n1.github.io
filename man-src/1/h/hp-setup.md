@@ -1,4 +1,5 @@
 ---
+
 title: "hp-setup(1)"
 name: "hp-setup"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-setup/"
 description: "hp-setup – Printer/Fax Setup Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Installs HPLIP printers and faxes in the CUPS spooler. Tries to automatically determine the correct PPD file to use. Allows the printing of a testpage. Performs basic fax parameter setup.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-setup [MODE] [OPTIONS] [SERIAL NO.|USB bus:device|IP|DEVNODE]</code></p>
 <h2>MODE</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "urxvtc(1)"
 name: "urxvtc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-urxvtc/"
 description: "urxvtc – control the urxvtd daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>urxvtc</code> [same options as for urxvt]</p>
-<h2>DESCRIPTION</h2>
 <p> This manpage describes the <code>urxvtc</code> client program. It connects to the <code>urxvtd</code> daemon and requests a new terminal window. It takes the same arguments as the <code>urxvt</code> program. The environment will also be respected. Currently, it always returns immediately after contacting the daemon.</p>
 <h2>OPTIONS</h2>
 <p> If the first option is <code>-k</code>, <code>urxvtc</code> tries to kill the daemon process and returns. </p>

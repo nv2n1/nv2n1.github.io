@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-entries(3)"
 name: "antlr3-entries"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_HASH_BUCKET_struct –"
 ---
 
 <p> Internal structure of a hash table bucket, which tracks all keys that hash to the same bucket.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>pANTLR3_HASH_ENTRY</code> <code>entries</code><br />

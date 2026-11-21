@@ -1,4 +1,5 @@
 ---
+
 title: "rcsdiff(1)"
 name: "rcsdiff"
 section: "1"
@@ -9,9 +10,7 @@ description: "rcsdiff – compare RCS revisions"
 
 <h2>NAME</h2>
 <p> rcsdiff &#8211; compare RCS revisions</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rcsdiff</code> [ <code>-k</code><i>subst</i> ] [ <code>-q</code> ] [ <code>-r</code><i>rev1</i> [ <code>-r</code><i>rev2</i> ] ] [ <code>-T</code> ] [ <code>-V</code>[<i>n</i>] ] [ <code>-x</code><i>suffixes</i> ] [ <code>-z</code><i>zone</i> ] [ <i>diff options</i> ] <i>file &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>rcsdiff</code> runs <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) to compare two revisions of each <font SIZE="-1">RCS</font> file given. </p>
 <p> Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
 <p> The option <code>-q</code> suppresses diagnostic output. Zero, one, or two revisions may be specified with <code>-r</code>. The option <code>-k</code><i>subst</i> affects keyword substitution when extracting revisions, as described in <code><a href="/docs/linux/man/1-co/">co</a></code>(1); for example, <code>-kk -r1.1 -r1.2</code> ignores differences in keyword values when comparing revisions <code>1.1</code> and <code>1.2</code>. To avoid excess output from locker name substitution, <code>-kkvl</code> is assumed if (1) at most one revision option is given, (2) no <code>-k</code> option is given, (3) <code>-kkv</code> is the default keyword substitution, and (4) the working file&#8217;s mode would be produced by <code>co -l.</code> See <code><a href="/docs/linux/man/1-co/">co</a></code>(1) for details about <code>-T</code>, <code>-V</code>, <code>-x</code> and <code>-z</code>. Otherwise, all options of <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) that apply to regular files are accepted, with the same meaning as for <code>diff</code>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kateenc(1)"
 name: "kateenc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-kateenc/"
 description: "kateenc – create Kate streams from text input"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>kateenc</code> <code>[-hVM]</code> <code>[-o </code><i>outfile</i><code>]</code> <code>[-l </code><i>language</i><code>]</code> <code>[-c </code><i>category</i><code>]</code> <code>[-s </code><i>serial</i><code>]</code> <code>[-C </code><i>tag=value</i><code>]</code> <code>[-R </code><i>threshold</i><code>]</code> <code>[-K </code><i>threshold</i><code>]</code> <code>-t </code><i>filetype</i> [ infile ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>kateenc</code> creates Kate streams from input files (SubRip SRT subtitles, LRC lyrics, and libkate&#8217;s custom description language). When saved to an Ogg stream (the default behavior), a Kate stream may then be merged with other Ogg streams (eg, a Theora video) using the oggz tools. </p>
 <h2>OPTIONS</h2>
 <dl>

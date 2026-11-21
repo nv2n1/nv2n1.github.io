@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_lock(1)"
 name: "nfstest_lock"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfstest_lock – Locking tests"
 
 <h2>NAME</h2>
 <p> nfstest_lock &#8211; Locking tests</p>
-<h2>SYNOPSIS</h2>
 <p> nfstest_lock &#8211;server &lt;server&gt; [&#8211;client &lt;client&gt;] [options]</p>
-<h2>DESCRIPTION</h2>
 <p> Basic locking tests verify that a lock is granted using various arguments to fcntl. These include blocking and non-blocking locks, read or write locks, where the file is opened either for reading, writing or both. It also checks different ranges including limit conditions. </p>
 <p> Non-overlapping tests verity that locks are granted on both the client under test and a second process or a remote client when locking the same file. </p>
 <p> Overlapping tests verity that a lock is granted on the client under test and a second process or a remote client trying to lock the same file will be denied if a non-blocking lock is issue or will be blocked if a blocking lock is issue on the second process or remote client. </p>

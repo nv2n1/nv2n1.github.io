@@ -1,4 +1,5 @@
 ---
+
 title: "getenv(3)"
 name: "getenv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getenv/"
 description: "getenv, secure_getenv – get an environment variable"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 char *getenv(const char *name);
@@ -15,7 +15,6 @@ char *secure_getenv(const char *name);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>secure_getenv</code>(): _GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>getenv</code>() function searches the environment list to find the environment variable <i>name</i>, and returns a pointer to the corresponding <i>value</i> string. </p>
 <p> The GNU-specific <code>secure_getenv</code>() function is just like <code>getenv</code>() except that it returns NULL in cases where &quot;secure execution&quot; is required. Secure execution is required if one of the following conditions was true when the program run by the calling process was loaded:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cpufreq-info(1)"
 name: "cpufreq-info"
 section: "1"
@@ -9,7 +10,6 @@ description: "cpufreq-info – Utility to retrieve cpufreq kernel information"
 
 <h2>SYNTAX</h2>
 <p> cpufreq-info [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> A small tool which prints out cpufreq information helpful to developers and interested users.</p>
 <h2>OPTIONS</h2>
 <dl>

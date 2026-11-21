@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dtls_set_timeouts(3)"
 name: "gnutls_dtls_set_timeouts"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_dtls_set_timeouts – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dtls_set_timeouts &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/dtls.h&gt;</code> </p>
 <p> <code>void gnutls_dtls_set_timeouts(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>retrans_timeout</i><code>, unsigned int </code><i>total_timeout</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_dtls_set_timeouts – API function"
 <dd> The time at which a retransmission will occur in milliseconds</dd>
 <dt>unsigned int total_timeout</dt>
 <dd> The time at which the connection will be aborted, in milliseconds.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the timeouts required for the DTLS handshake protocol. The retransmission timeout is the time after which a message from the peer is not received, the previous messages will be retransmitted. The total timeout is the time after which the handshake will be aborted with <code>GNUTLS_E_TIMEDOUT</code>. </p>
 <p> The DTLS protocol recommends the values of 1 sec and 60 seconds respectively. </p>
 <p> To disable retransmissions set a <i>retrans_timeout</i> larger than the <i>total_timeout</i> .</p>

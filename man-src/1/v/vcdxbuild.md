@@ -1,4 +1,5 @@
 ---
+
 title: "vcdxbuild(1)"
 name: "vcdxbuild"
 section: "1"
@@ -9,9 +10,7 @@ description: "vcdxbuild – manual page for vcdxbuild 0.7.24"
 
 <h2>NAME</h2>
 <p> vcdxbuild &#8211; manual page for vcdxbuild 0.7.24</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vcdxbuild</code> [<i>OPTION</i>&#8230;] <i>&lt;xml-control-file&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-i</code>, <code>&#8211;image-type</code>=<i>TYPE</i></dt>
 <dd> specify image type for output (default: &#8216;bincue&#8217;)</dd>

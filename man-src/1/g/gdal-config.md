@@ -1,4 +1,5 @@
 ---
+
 title: "gdal-config(1)"
 name: "gdal-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal-config/"
 description: "gdal-config – gdal-config determines various information about a GDAL installation"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdal - config[OPTIONS] Options : [--prefix[= DIR]]
                                      [--libs]
@@ -16,7 +16,6 @@ gdal - config[OPTIONS] Options : [--prefix[= DIR]]
                                      [--ogr - enabled]
                                      [--formats]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This utility script (available on Unix systems) can be used to determine various information about a GDAL installation. It is normally just used by configure scripts for applications using GDAL but can be queried by an end user. </p>
 <dl>
 <dt><code>&#8211;prefix</code>:</dt>

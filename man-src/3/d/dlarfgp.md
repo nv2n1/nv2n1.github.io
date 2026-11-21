@@ -1,4 +1,5 @@
 ---
+
 title: "dlarfgp(3)"
 name: "dlarfgp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarfgp/"
 description: "dlarfgp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarfgp</code> (N, ALPHA, X, INCX, TAU)<br />
  <i></i><code>DLARFGP</code> generates an elementary reflector (Householder matrix) with non-negatibe beta.</p>

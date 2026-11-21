@@ -1,4 +1,5 @@
 ---
+
 title: "flam3-render(1)"
 name: "flam3-render"
 section: "1"
@@ -9,9 +10,7 @@ description: "flam3-animate flam3-render flam3-genome flam3-convert – render a
 
 <h2>NAME</h2>
 <p> flam3-animate flam3-render flam3-genome flam3-convert &#8211; render and animate FLAM3s and manipulate their genomes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flam3-render &lt; input</code> </p>
-<h2>DESCRIPTION</h2>
 <p> FLAM3 implements a visual language based on a recursive set equation. </p>
 <p> Flam3-genome creates and manipulates genomes (xml parameter sets) in this language. Flam3-render turns genomes into still images, and Flam3-animate renders motion-blurred frames of animation. </p>
 <p> Flam3-convert reads from stdin files in the old format used by the flame GIMP plugin, and writes the new format to stdout. </p>

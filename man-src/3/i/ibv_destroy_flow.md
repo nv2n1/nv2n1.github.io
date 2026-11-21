@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_destroy_flow(3)"
 name: "ibv_destroy_flow"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_destroy_flow/"
 description: "ibv_create_flow, ibv_destroy_flow – create or destroy flow steering rules"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_flow *ibv_create_flow(struct ibv_qp *qp,
                                  struct ibv_flow_attr *flow_attr);
 int ibv_destroy_flow(struct ibv_flow *flow_id);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <h3>ibv_create_flow()</h3>
 <p> allows a user application QP <i>qp</i> to be attached into a specified flow <i>flow</i> which is defined in <i>&lt;infiniband/verbs.h&gt;</i> </p>
 <p>struct ibv_flow_attr {<br />

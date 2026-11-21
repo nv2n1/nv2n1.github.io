@@ -1,4 +1,5 @@
 ---
+
 title: "memtouch(1)"
 name: "memtouch"
 section: "1"
@@ -9,9 +10,7 @@ description: "memtouch – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memtouch &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> memtouch [options] key</p>
-<h2>DESCRIPTION</h2>
 <p> <code>memtouch</code> does a &quot;touch&quot; on the specified key.</p>
 <h2>OPTIONS</h2>
 <p> You can specify servers via the option:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-import(1)"
 name: "docker-latest-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-import/"
 description: "docker-import – Create an empty filesystem image and import the contents of the tarball (.tar, .tar.gz, .tgz, .bzip, .tar.xz, .txz) into it, then optionally tag it."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker import</code> [<code>-c</code>|<code>&#8211;change</code>[=<i>[]</i>]] [<code>-m</code>|<code>&#8211;message</code>[=<i>MESSAGE</i>]] [<code>&#8211;help</code>] file|URL|<code>&#8211;</code>[REPOSITORY[:TAG]] </p>
 <h2>OPTIONS</h2>
 <p> <code>-c</code>, <code>&#8211;change</code>=[]<br />
@@ -17,7 +17,6 @@ Supported Dockerfile instructions: CMD|ENTRYPOINT|ENV|EXPOSE|ONBUILD|USER|VOLUME
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <p> <code>-m</code>, <code>&#8211;message</code>=&quot;&quot;<br />
 Set commit message for imported image </p>
-<h2>DESCRIPTION</h2>
 <p> Create a new filesystem image from the contents of a tarball (.tar, .tar.gz, .tgz, .bzip, .tar.xz, .txz) into it, then optionally tag it. </p>
 <h2>EXAMPLES</h2>
 <h2>Import from a remote location</h2>

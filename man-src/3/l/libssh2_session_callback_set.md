@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_callback_set(3)"
 name: "libssh2_session_callback_set"
 section: "3"
@@ -9,13 +10,11 @@ description: "libssh2_session_callback_set – set a callback function"
 
 <h2>NAME</h2>
 <p> libssh2_session_callback_set &#8211; set a callback function</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 void *libssh2_session_callback_set(LIBSSH2_SESSION *session,
                                    int cbtype, void *callback);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Sets a custom callback handler for a previously initialized session object. Callbacks are triggered by the receipt of special packets at the Transport layer. To disable a callback, set it to NULL. </p>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>cbtype</i> &#8211; Callback type. One of the types listed in Callback Types. </p>

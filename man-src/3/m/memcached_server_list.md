@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_server_list(3)"
 name: "memcached_server_list"
 section: "3"
@@ -9,7 +10,6 @@ description: "memcached_server_list – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_server_list &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_server_fn</code></dt>
@@ -31,7 +31,6 @@ description: "memcached_server_list – libmemcached Documentation"
 </dd><dt><code>memcached_return_t memcached_server_cursor(const memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const <i>memcached_server_fn</i><i>&nbsp;<wbr>*callback</i>, void<i>&nbsp;<wbr>*context</i>, uint32_t<i>&nbsp;<wbr>number_of_callbacks</i>)</dt>
 <dd>
 <p> compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>libmemcached</code> performs operations on a list of hosts. The order of these hosts determine routing to keys. Functions are provided to add keys to memcached_st structures. To manipulate lists of servers see memcached_server_st(3). </p>
 <p> <i>memcached_server_count()</i> provides you a count of the current number of servers being used by a <code>memcached_st</code> structure.</p>
 <dl>

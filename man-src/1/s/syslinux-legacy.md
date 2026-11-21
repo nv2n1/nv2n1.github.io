@@ -1,4 +1,5 @@
 ---
+
 title: "syslinux-legacy(1)"
 name: "syslinux-legacy"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-syslinux-legacy/"
 description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> syslinux &#8211; install the <font SIZE="-1">SYSLINUX</font> bootloader on a FAT filesystem </p>
-<h2>SYNOPSIS</h2>
 <p> <code>syslinux</code> [<code>-sfr</code>] [<code>-d</code> <i>directory</i>] [<code>-o</code> <i>offset</i>] <i>device</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Syslinux</code> is a boot loader for the Linux operating system which operates off an MS-DOS/Windows FAT filesystem. It is intended to simplify first-time installation of Linux, and for creation of rescue and other special-purpose boot disks. </p>
 <p> In order to create a bootable Linux floppy using <code>Syslinux</code>, prepare a normal MS-DOS formatted floppy. Copy one or more Linux kernel files to it, then execute the command:</p>
 <dl>

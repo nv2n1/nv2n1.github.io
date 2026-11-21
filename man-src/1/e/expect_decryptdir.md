@@ -1,4 +1,5 @@
 ---
+
 title: "expect_decryptdir(1)"
 name: "expect_decryptdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expect_decryptdir/"
 description: "cryptdir – encrypt/decrypt all files in a directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cryptdir</code> [ <i>dir</i> ]<br />
  <code>decryptdir</code> [ <i>dir</i> ]</p>
 <h2>INTRODUCTION</h2>

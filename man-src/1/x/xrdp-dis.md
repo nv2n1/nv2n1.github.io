@@ -1,4 +1,5 @@
 ---
+
 title: "xrdp-dis(1)"
 name: "xrdp-dis"
 section: "1"
@@ -9,9 +10,7 @@ description: "xrdp-dis – xrdp disconnect utility"
 
 <h2>NAME</h2>
 <p> xrdp-dis &#8211; xrdp disconnect utility </p>
-<h2>SYNOPSIS</h2>
 <p> <code>xrdp-dis</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>xrdp-dis</code> is run with no parameters to disconnect your xrdp session. </p>
 <h2>ENVIRONMENT</h2>
 <dl>

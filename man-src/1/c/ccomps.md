@@ -1,4 +1,5 @@
 ---
+
 title: "ccomps(1)"
 name: "ccomps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ccomps/"
 description: "ccomps – connected components filter for graphs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ccomps</code> [ <code>-sxvenzC?</code> ] [ <code>-X</code><i>[#%]s[-f]</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ccomps</code> decomposes graphs into their connected components, printing the components to standard output.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

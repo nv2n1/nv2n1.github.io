@@ -1,4 +1,5 @@
 ---
+
 title: "reindexdb(1)"
 name: "reindexdb"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-reindexdb/"
 description: "reindexdb – reindex a PostgreSQL database"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reindexdb</code> [<i>connection-option</i>&#8230;] [<code>&#8211;table</code> | <code>-t</code> <i>table</i>] [<code>&#8211;index</code> | <code>-i</code> <i>index</i>] [<i>dbname</i>]</dt>
 <dt> <code>reindexdb</code> [<i>connection-option</i>&#8230;] <code>&#8211;all</code> | <code>-a</code></dt>
 <dt> <code>reindexdb</code> [<i>connection-option</i>&#8230;] <code>&#8211;system</code> | <code>-s</code> [<i>dbname</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>reindexdb is a utility for rebuilding indexes in a PostgreSQL database. </dd>
 <p> reindexdb is a wrapper around the SQL command <code><a href="/docs/linux/man/7-reindex/">REINDEX</a></code>(7). There is no effective difference between reindexing databases via this utility and via other methods for accessing the server.</p>
 <h2>OPTIONS</h2>

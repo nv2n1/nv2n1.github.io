@@ -1,4 +1,5 @@
 ---
+
 title: "docker-pull(1)"
 name: "docker-pull"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-pull/"
 description: "docker-pull – Pull an image or a repository from a registry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker pull [OPTIONS] NAME[:TAG|@DIGEST]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker image pull. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all-tags</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Download all tagged images in the repository</p>

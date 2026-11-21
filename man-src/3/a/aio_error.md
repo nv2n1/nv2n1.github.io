@@ -1,4 +1,5 @@
 ---
+
 title: "aio_error(3)"
 name: "aio_error"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-aio_error/"
 description: "aio_error – get error status of asynchronous I/O operation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>int aio_error(const struct aiocb *</code><i>aiocbp</i><code>);</code> </p>
 <p> Link with <i>-lrt</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>aio_error</code>() function returns the error status for the asynchronous I/O request with control block pointed to by <i>aiocbp</i>. (See <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) for a description of the <i>aiocb</i> structure.)</p>
 <h2>RETURN VALUE</h2>
 <p> This function returns one of the following:</p>

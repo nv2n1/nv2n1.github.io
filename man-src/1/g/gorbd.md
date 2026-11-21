@@ -1,4 +1,5 @@
 ---
+
 title: "gorbd(1)"
 name: "gorbd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gorbd/"
 description: "gorbd – – An object request broker daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gorbd &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> To be written &#8230;</p>
 <h2>OPTIONS</h2>
 <dl>

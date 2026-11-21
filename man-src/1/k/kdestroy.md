@@ -1,4 +1,5 @@
 ---
+
 title: "kdestroy(1)"
 name: "kdestroy"
 section: "1"
@@ -9,9 +10,7 @@ description: "kdestroy – destroy Kerberos tickets"
 
 <h2>NAME</h2>
 <p> kdestroy &#8211; destroy Kerberos tickets</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kdestroy</code> [<code>-A</code>] [<code>-q</code>] [<code>-c</code> <i>cache_name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The kdestroy utility destroys the user&#8217;s active Kerberos authorization tickets by overwriting and deleting the credentials cache that contains them. If the credentials cache is not specified, the default credentials cache is destroyed.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoppm(1)"
 name: "ppmtoppm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtoppm/"
 description: "ppmtoppm – copy PPM image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtoppm</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmtoppm</code> simply copies a PPM image from Standard Input to Standard Output. This may seem an unnecessary duplication of <code>cat</code>, but remember that a PPM program can read a PBM or PGM image, and the right kind of PAM, as if it were PPM. So <code>ppmtoppm</code> can read either a PBM, PGM, or PPM image and produce a PPM image as output. </p>
 <p> Even that is of limited usefulness because of the fact that almost any program to which you would feed the resulting PPM image could also just take the original image directly. However, sometimes you really need a true PPM image. </p>

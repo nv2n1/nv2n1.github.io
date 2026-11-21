@@ -1,4 +1,5 @@
 ---
+
 title: "pakiti-client(1)"
 name: "pakiti-client"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pakiti-client/"
 description: "pakiti-client – report the list of installed packages to a collecting server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pakiti-client</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pakiti-client</code> finds the list of installed packages (i.e. <tt>&quot;rpm -qa&quot;</tt> on an RPM-based system) and formats it in a report that it sends (using a <font SIZE="-1">POST</font> request) to a collecting server (see the <code>&#8211;url</code> option) and/or writes to a file (see the <code>&#8211;output</code> option). </p>
 <p> In addition to the list of installed packages, the report also contains information about the submitting machine:</p>
 <dl>

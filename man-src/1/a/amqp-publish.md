@@ -1,4 +1,5 @@
 ---
+
 title: "amqp-publish(1)"
 name: "amqp-publish"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-amqp-publish/"
 description: "amqp-publish – Publish a message on an AMQP server"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-publish</code> [<i>OPTION</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Publishes a message to an exchange on an AMQP server. Options allow the various properties of the message and parameters of the AMQP <code>basic.publish</code> method to be specified. </dd>
 <p> By default, the message body is read from standard input. Alternatively, the <code>-b</code> option allows the message body to be provided as part of the command.</p>
 <h2>OPTIONS</h2>

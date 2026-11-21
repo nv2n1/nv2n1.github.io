@@ -1,4 +1,5 @@
 ---
+
 title: "latrace(1)"
 name: "latrace"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-latrace/"
 description: "latrace – LD_AUDIT 2.4+ libc frontend"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> latrace [-snltfvhiBdISbcCyYLpoaNADVTFERq] command [arg &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> The latrace tracer is able to run a command and display its dynamic library calls using a LD_AUDIT libc feature, available from libc version 2.4 onward. It is also capable to measure and display various statistics of dynamic calls. See the section called &#8220;DISCUSSION&#8221; for more details. </p>
 <p> If the header file with functions&#8217; declarations is provided, latrace will display functions&#8217;s arguments. The header file file syntax is similar to the C language, with several exceptions See the section called &#8220;HEADERS&#8221; for more details. </p>
 <p> The latrace by default fully operates inside of the traced program. However another &quot;pipe mode&quot; is available to move the main work to the tracer &#8211; the latrace binary. See the section called &#8220;PIPE mode&#8221; for more details. </p>

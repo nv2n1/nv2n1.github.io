@@ -1,4 +1,5 @@
 ---
+
 title: "semctl(2)"
 name: "semctl"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-semctl/"
 description: "semctl – System V semaphore control operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;
 #include &lt;sys/sem.h&gt;
 #include &lt;sys/types.h&gt;
 int semctl(int semid, int semnum, int cmd, ...);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>semctl</code>() performs the control operation specified by <i>cmd</i> on the System V semaphore set identified by <i>semid</i>, or on the <i>semnum</i>-th semaphore of that set. (The semaphores in a set are numbered starting at 0.) </p>
 <p> This function has three or four arguments, depending on <i>cmd</i>. When there are four, the fourth has the type <i>union semun</i>. The <i>calling program</i> must define this union as follows: </p>
 <p> union semun {<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "nettee(1)"
 name: "nettee"
 section: "1"
@@ -6,14 +7,11 @@ letter: "n"
 url: "/docs/linux/man/1-nettee/"
 ---
 
-<h2 class="name">NAME</h2>
 <dl>
 <dt>nettee &#8211; a network &quot;tee&quot; program</dt>
 <dd>
 </dd></dl>
-<h2>SYNOPSIS</h2>
 <p> <code>nettee</code> <i>[options]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nettee</code> passes a data stream to one or more child nodes using a daisychain method. On each node <code>nettee</code> may also direct the stream to a file or pipe. <code>nettee</code> allows large amounts of data to be quickly distributed to multiple nodes on a network at a rate limited only by the network bandwidth. The distribution chain is typically linear for each network switch but may branch when nodes utilize multiple switches. For maximum throughput only one instance of <code>nettee</code> should utilize each network interface. </p>
 <p> When <code>nettee</code> starts it waits for a connection from the upstream node before attempting to connect to its downstream nodes. Consequently <code>nettee</code> may be started on the nodes in any order (by a script, rsh, ssh, and so forth.) Typically only the node that reads the data stream for stdin or a file will be set to log messages, so that the progress of the transfer may be monitored. Transmission errors are detected by comparing the total number of bytes read by each child node with the number of bytes transmitted to that child. </p>
 <h3>Error Handling</h3>

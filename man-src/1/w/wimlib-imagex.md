@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex(1)"
 name: "wimlib-imagex"
 section: "1"
@@ -9,7 +10,6 @@ description: "wimlib-imagex – Extract, create, modify, or mount a WIM (Windows
 
 <h2>NAME</h2>
 <p> wimlib-imagex &#8211; Extract, create, modify, or mount a WIM (Windows Imaging Format) archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex append</code> <i>arguments&#8230;</i><br />
  <code>wimlib-imagex apply</code> <i>arguments&#8230;</i><br />
  <code>wimlib-imagex capture</code> <i>arguments&#8230;</i><br />
@@ -26,7 +26,6 @@ description: "wimlib-imagex – Extract, create, modify, or mount a WIM (Windows
  <code>wimlib-imagex unmount</code> <i>arguments&#8230;</i><br />
  <code>wimlib-imagex update</code> <i>arguments&#8230;</i><br />
  <code>wimlib-imagex verify</code> <i>arguments&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex</code> deals with archives in the Windows Imaging Format (WIM). Its interface is similar to Microsoft&#8217;s ImageX, but <code>wimlib-imagex</code> is cross-platform and has useful improvements and extensions. </p>
 <p> To do its work, <code>wimlib-imagex</code> uses <code>wimlib</code>, an open source C library that provides interfaces for manipulating WIM archives. wimlib is completely independent from the equivalent Microsoft implementation (WIMGAPI, or wimgapi.dll). You can use wimlib in your own programs, although for command-line use <code>wimlib-imagex</code> already provides access to most of wimlib&#8217;s functionality.</p>
 <h2>BACKGROUND INFORMATION</h2>

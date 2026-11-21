@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-fold(1)"
 name: "guilt-fold"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-fold/"
 description: "guilt-fold – Fold a specified patch into the topmost applied patch"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-fold</i> [-k] &lt;patchname&gt;</p>
 <h2>OPTIONS</h2>
 <p> -k</p>

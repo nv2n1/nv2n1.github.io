@@ -1,4 +1,5 @@
 ---
+
 title: "htpurge(1)"
 name: "htpurge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-htpurge/"
 description: "htpurge – remove unused odocuments from the database (general maintenance script)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>htpurge</code> <i>[-][-a][-c configfile][-u][-v]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Htpurge functions to remove specified URLs from the databases as well as bad URLs, unretrieved URLs, obsolete documents, etc. It is recommended that htpurge be run after htdig to clean out any documents of this sort.</p>
 <dl>
 <dt></dt></dl>

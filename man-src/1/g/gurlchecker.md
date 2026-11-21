@@ -1,4 +1,5 @@
 ---
+
 title: "gurlchecker(1)"
 name: "gurlchecker"
 section: "1"
@@ -9,9 +10,7 @@ description: "gurlchecker – A graphical web link checker that works on a whole
 
 <h2>NAME</h2>
 <p> gurlchecker &#8211; A graphical web link checker that works on a whole site, a single local page or a browser bookmarks file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gurlchecker</code> [ <code>-h|&#8211;help</code> ] [ <code>-v|&#8211;version</code> ] [ <code>-u|&#8211;http-user </code><i>user</i> ] [ <code>-p|&#8211;http-passwd </code><i>password</i> ] [ <code>-A|&#8211;no-urls-args</code> ] [ <code>Done. </code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>gurlchecker</code> command. </p>
 <p> <code>gurlchecker</code> is a graphical web link checker. It searches URLs in a whole site, a single local page or a browser bookmarks page, checking them, one by one, in order to know their validity. Furthermore, it can manage entire projects.</p>
 <h2>OPTIONS</h2>

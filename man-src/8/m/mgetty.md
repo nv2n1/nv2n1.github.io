@@ -1,4 +1,5 @@
 ---
+
 title: "mgetty(8)"
 name: "mgetty"
 section: "8"
@@ -6,10 +7,9 @@ letter: "m"
 url: "/docs/linux/man/8-mgetty/"
 description: "mgetty – smart modem getty"
 ---
+
 <p>mgetty &#8211; smart modem getty </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mgetty</code> [<code>options</code>] ttydevice [<i>gettydefs</i>]  </p>
-<h2>DESCRIPTION</h2>
 <p> Mgetty is a ``smart&#8217;&#8216; getty replacement, designed for use with Hayes compatible data and data/fax modems. Mgetty knows about modem initialization, manual modem answering (so your modem doesn&#8217;t answer if the machine isn&#8217;t ready), UUCP locking (so you can use the same device for dial-in and dial-out). Mgetty provides very extensive logging facilities. </p>
 <p>This manpage doesn&#8217;t try to detail mgetty setup in detail, it just lists the most important options. For detailed instructions, see the info file mgetty.info (mgetty.texi). </p>
 <h2>OPTIONS</h2>

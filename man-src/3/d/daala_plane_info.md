@@ -1,4 +1,5 @@
 ---
+
 title: "daala_plane_info(3)"
 name: "daala_plane_info"
 section: "3"
@@ -8,7 +9,6 @@ description: "daala_plane_info –"
 ---
 
 <p> Subsampling factors for a plane as a power of 2.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
 <p> unsigned char <code>xdec</code> </p>

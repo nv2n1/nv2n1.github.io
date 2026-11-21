@@ -1,4 +1,5 @@
 ---
+
 title: "chem(1)"
 name: "chem"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-chem/"
 description: "chem – groff preprocessor for producing chemical structure diagrams"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>chem</i> produces chemical structure diagrams. Today&#8217;s version is best suited for organic chemistry (bonds, rings). The <code>chem</code> program is a <code>groff</code> preprocessor like <code>eqn</code>, <code>pic</code>, <code>tbl</code>, etc. It generates <i>pic</i> output such that all <i>chem</i> parts are translated into diagrams of the <i>pic</i> language. </p>
 <p> A <i>filespec</i> argument is either a file name of an existing file or a minus character <code>&#8211;</code>, meaning standard input. If no argument is specified then standard input is taken automatically. <code>-h</code> and <code>&#8211;help</code> display a usage message, whereas <code>-v</code> and <code>&#8211;version</code> display version information; all exit. </p>
 <p> The program <code>chem</code> originates from the Perl source file <i>chem.pl</i>. It tells <code>pic</code> to include a copy of the macro file <i>chem.pic</i>. Moreover the <i>groff</i> source file <i>pic.tmac</i> is loaded. </p>

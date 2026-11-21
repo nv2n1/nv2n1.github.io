@@ -1,4 +1,5 @@
 ---
+
 title: "pnuke(1)"
 name: "pnuke"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnuke/"
 description: "pnuke — parallel process kill program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnuke</code> [<code>-vA</code>] [<code>-h</code> <i>hosts_file</i>] [<code>-H</code> [<i>user</i>@]<i>host</i>[:<i>port</i>]] [<code>-l</code> <i>user</i>] [<code>-p</code> <i>par</i>] [<code>-o</code> <i>outdir</i>] [<code>-e</code> <i>errdir</i>] [<code>-t</code> <i>timeout</i>] [<code>-O</code> <i>options</i>] [<code>-x</code> <i>args</i>] [<code>-X</code> <i>arg</i>] <i>pattern</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pnuke</code> is a program for killing processes in parallel on a number of hosts. It provides features such as passing a password to ssh, saving output to files, and timing out. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "qperf(1)"
 name: "qperf"
 section: "1"
@@ -9,10 +10,8 @@ description: "qperf – Measure RDMA and IP performance"
 
 <h2>NAME</h2>
 <p> qperf &#8211; Measure RDMA and IP performance</p>
-<h2>SYNOPSIS</h2>
 <p> <code>qperf</code><br />
  <code>qperf</code> <i>SERVERNODE</i> [<i>OPTIONS</i>] <i>TESTS</i> </p>
-<h2>DESCRIPTION</h2>
 <p> qperf measures bandwidth and latency between two nodes. It can work over TCP/IP as well as the RDMA transports. On one of the nodes, qperf is typically run with no arguments designating it the server node. One may then run qperf on a client node to obtain measurements such as bandwidth, latency and cpu utilization. </p>
 <p> In its most basic form, qperf is run on one node in server mode by invoking it with no arguments. On the other node, it is run with two arguments: the name of the server node followed by the name of the test. A list of tests can be found in the section, TESTS. A variety of options may also be specified. </p>
 <p> One can get more detailed information on qperf by using the &#8211;help option. Below are examples of using the &#8211;help option: </p>

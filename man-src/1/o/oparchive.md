@@ -1,4 +1,5 @@
 ---
+
 title: "oparchive(1)"
 name: "oparchive"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-oparchive/"
 description: "oparchive – produce archive of oprofile data for offline analysis"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>oparchive</code> [ <i>options</i> ] [profile specification] <code>-o</code> [directory]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>oparchive</code> generates a directory populated with executable, debug, and oprofile sample files. This directory can be move to another machine via tar and analyzed without further use of the data collection machine. See <a href="/docs/linux/man/1-oprofile/">oprofile</a>(1) for how to write profile specifications. </p>
 <h2>OPTIONS</h2>
 <dl>

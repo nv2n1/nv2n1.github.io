@@ -1,4 +1,5 @@
 ---
+
 title: "dvdbackup(1)"
 name: "dvdbackup"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dvdbackup/"
 description: "dvdbackup – Tool to backup DVDs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvdbackup</code> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>dvdbackup</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. <code>dvdbackup</code> is a tool to extract data from video DVDs. It has the advantages of being small, fast, and easy to use.</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

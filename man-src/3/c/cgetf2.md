@@ -1,4 +1,5 @@
 ---
+
 title: "cgetf2(3)"
 name: "cgetf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgetf2/"
 description: "cgetf2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgetf2</code> (M, N, A, LDA, IPIV, INFO)<br />
  <i></i><code>CGETF2</code> computes the LU factorization of a general m-by-n matrix using partial pivoting with row interchanges (unblocked algorithm).</p>

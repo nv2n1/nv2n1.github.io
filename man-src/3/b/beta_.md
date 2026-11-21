@@ -1,4 +1,5 @@
 ---
+
 title: "beta_(3)"
 name: "beta_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-beta_/"
 description: "QuantLib::GaussLobattoIntegral – Integral of a one-dimensional function."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/integrals/gausslobattointegral.hpp&gt; </p>
 <p> Inherits QuantLib::Integrator. </p>
 <h3>Public Member Functions</h3>

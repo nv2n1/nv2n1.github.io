@@ -1,4 +1,5 @@
 ---
+
 title: "lsdiff(1)"
 name: "lsdiff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-lsdiff/"
 description: "lsdiff – show which files are modified by a patch"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lsdiff</code> [[-n] | [&#8211;line-number]] [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [&#8211;strip=<i>n</i>] [&#8211;addprefix=<i>PREFIX</i>] [[-s] | [&#8211;status]] [[-E] | [&#8211;empty-files-as-removed]] [[-i&nbsp;<i>PATTERN</i>] | [&#8211;include=<i>PATTERN</i>]] [[-x&nbsp;<i>PATTERN</i>] | [&#8211;exclude=<i>PATTERN</i>]] [[-z] | [&#8211;decompress]] [[-#&nbsp;<i>RANGE</i>] | [&#8211;hunks=<i>RANGE</i>]] [&#8211;lines=<i>RANGE</i>] [[-F<i>RANGE</i>] | [&#8211;files=<i>RANGE</i>]] [[-H] | [&#8211;with-filename]] [[-h] | [&#8211;no-filename]] [[-v] | [&#8211;verbose]&#8230;] [<i>file</i>&#8230;]</dt>
 <dt> <code>lsdiff</code> {[&#8211;help] | [&#8211;version] | [&#8211;filter &#8230;] | [&#8211;grep &#8230;]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>List the files modified by a patch. </dd>
 <p> You can use both unified and context format diffs with this program.</p>
 <h2>OPTIONS</h2>

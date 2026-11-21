@@ -1,4 +1,5 @@
 ---
+
 title: "javadoc-java-1(1)"
 name: "javadoc-java-1"
 section: "1"
@@ -10,7 +11,6 @@ description: "javadoc – The Java API Documentation Generator"
 <h2>Name</h2>
 <p> javadoc &#8211; The Java API Documentation Generator </p>
 <p> Generates HTML pages of API documentation from Java source files. This document contains Javadoc examples for Solaris.</p>
-<h2>SYNOPSIS</h2>
 <p> <tt>javadoc</tt><i>&nbsp;<wbr>[&nbsp;<wbr></i><i>options</i><i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>packagenames&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>sourcefilenames&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-subpackages</i>&nbsp;<wbr><i>pkg1:pkg2:&#8230;</i><i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr></i><i>@argfiles</i><i>&nbsp;<wbr>]</i> </p>
 <p> Arguments can be in any order. See processing of Source Files for details on how the Javadoc tool determines which &quot;<i>.java</i>&quot; files to process.</p>
 <dl>
@@ -26,7 +26,6 @@ description: "javadoc – The Java API Documentation Generator"
 <dt>@argfiles</dt>
 <dd> One or more files that contain a list of Javadoc options, packagenames and sourcefilenames in any order. Wildcards (*) and <i>-J</i> options are not allowed in these files.</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>Javadoc</code> tool parses the declarations and documentation comments in a set of Java source files and produces a corresponding set of HTML pages describing (by default) the public and protected classes, nested classes (but not anonymous inner classes), interfaces, constructors, methods, and fields. You can use it to generate the API (Application Programming Interface) documentation or the implementation documentation for a set of source files. </p>
 <p> You can run the Javadoc tool on entire packages, individual source files, or both. When documenting entire packages, you can either use <i>-subpackages</i> for traversing recursively down from a top-level directory, or pass in an explicit list of package names. When documenting individual source files, you pass in a list of source (<i>.java</i>) filenames. Examples are given at the end of this document. How Javadoc processes source files is covered next.</p>
 <h3>Processing of source files</h3>

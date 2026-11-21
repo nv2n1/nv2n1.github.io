@@ -1,4 +1,5 @@
 ---
+
 title: "surface(1)"
 name: "surface"
 section: "1"
@@ -9,10 +10,8 @@ description: "surface – Grid table data using adjustable tension continuous cu
 
 <h2>NAME</h2>
 <p> surface &#8211; Grid table data using adjustable tension continuous curvature splines</p>
-<h2>SYNOPSIS</h2>
 <p> <code>surface</code> [ <i>table</i> ] <i>outputfile.nc</i> <i>increment</i> <i>region</i> [ <i>aspect_ratio</i> ] [ <i>convergence_limit</i> ] [ <code>l</code><i>lower</i> ] [ <code>-Lu</code><i>upper</i> ] [ <i>max_iterations</i> ] [ ] [ <i>search_radius</i>[<code>m</code>|<code>s</code>] ] [ [<code>i</code>|<code>b</code>]<i>tension_factor</i> ] [ [<i>level</i>] ] [ <i>over-relaxation_factor</i> ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>surface</code> reads randomly-spaced (x,y,z) triples from standard input [or <i>table</i>] and produces a binary grid file of gridded values z(x,y) by solving: (1 &#8211; T) * L (L (z)) + T * L (z) = 0 </p>
 <p> where T is a tension factor between 0 and 1, and L indicates the Laplacian operator. T = 0 gives the &quot;minimum curvature&quot; solution which is equivalent to SuperMISP and the ISM packages. Minimum curvature can cause undesired oscillations and false local maxima or minima (See Smith and Wessel, 1990), and you may wish to use T &gt; 0 to suppress these effects. Experience suggests T ~ 0.25 usually looks good for potential field data and T should be larger (T ~ 0.35) for steep topography data. T = 1 gives a harmonic surface (no maxima or minima are possible except at control data points). It is recommended that the user pre-process the data with <code>blockmean</code>, <code>blockmedian</code>, or <code>blockmode</code> to avoid spatial aliasing and eliminate redundant data. You may impose lower and/or upper bounds on the solution. These may be entered in the form of a fixed value, a grid with values, or simply be the minimum/maximum input data values. Natural boundary conditions are applied at the edges, except for geographic data with 360-degree range where we apply periodic boundary conditions in the longitude direction.</p>
 <h2>REQUIRED ARGUMENTS</h2>

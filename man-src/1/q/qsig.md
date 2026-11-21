@@ -1,4 +1,5 @@
 ---
+
 title: "qsig(1)"
 name: "qsig"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qsig/"
 description: "qsig – signal pbs batch job"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> qsig [-s signal] job_identifier &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>qsig</code> command requests that a signal be sent to executing batch jobs. The signal is sent to the session leader of the job. </p>
 <p> If the <i> option is not specified, </i><code>`SIGTERM&#8217; </code> is sent. The request to signal a batch job will be rejected if:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-create-branch(1)"
 name: "git-create-branch"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-create-branch – Create branches"
 
 <h2>NAME</h2>
 <p> <code>git-create-branch</code> &#8211; Create branches</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-create-branch</code> &lt;branchname&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Creates local and remote branch named &lt;branchname&gt;.</p>
 <h2>OPTIONS</h2>
 <p> &lt;branchname&gt; </p>

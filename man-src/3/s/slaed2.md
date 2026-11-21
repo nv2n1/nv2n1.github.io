@@ -1,4 +1,5 @@
 ---
+
 title: "slaed2(3)"
 name: "slaed2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaed2/"
 description: "slaed2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed2</code> (K, N, N1, D, Q, LDQ, INDXQ, RHO, Z, DLAMDA, W, Q2, INDX, INDXC, INDXP, COLTYP, INFO)<br />
  <i></i><code>SLAED2</code> used by sstedc. Merges eigenvalues and deflates secular equation. Used when the original matrix is tridiagonal.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rrdresize(1)"
 name: "rrdresize"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdresize/"
 description: "rrdresize – alters the size of an RRA and creates a new .rrd file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>resize</code> <i>filename</i> <i>rra-num</i> <font SIZE="-1"><code>GROW</code></font><i>|</i><font SIZE="-1"><code>SHRINK</code></font> <i>rows</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>resize</code> function is used to modify the number of rows in an <font SIZE="-1"><code>RRA</code></font>.</p>
 <dl>
 <dt><i>filename</i></dt>

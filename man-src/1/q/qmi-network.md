@@ -1,4 +1,5 @@
 ---
+
 title: "qmi-network(1)"
 name: "qmi-network"
 section: "1"
@@ -9,9 +10,7 @@ description: "qmi-network – Simple network management of QMI devices"
 
 <h2>NAME</h2>
 <p> qmi-network &#8211; Simple network management of QMI devices</p>
-<h2>SYNOPSIS</h2>
 <p> <code>qmi-network</code> [<i>,OPTIONS/</i>] [<i>,DEVICE/</i>] [<i>,COMMAND/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Simple network management of QMI devices</p>
 <h3>Commands:</h3>
 <dl>

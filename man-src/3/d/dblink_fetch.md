@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_fetch(3)"
 name: "dblink_fetch"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-dblink_fetch/"
 description: "dblink_fetch – returns rows from an open cursor in a remote database"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dblink_fetch(text cursorname, int howmany[, bool fail_on_error]) returns setof record
     dblink_fetch(text connname, text cursorname, int howmany[, bool fail_on_error]) returns setof record
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>dblink_fetch</code> fetches rows from a cursor previously established by <code>dblink_open</code>.</p>
 <h2>ARGUMENTS</h2>
 <p> <i>connname</i></p>

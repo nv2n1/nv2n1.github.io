@@ -1,4 +1,5 @@
 ---
+
 title: "spatch(1)"
 name: "spatch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-spatch/"
 description: "spatch – apply a semantic patch file to a set of C files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>spatch</code> <code>-sp_file</code> <i>&lt;SP&gt;</i> <i>&lt;files&gt;</i> <code>[-o </code> <i>&lt;outfile&gt;</i> <code>] </code> <code>[-iso_file </code> <i>&lt;iso&gt;</i> <code>] </code> <code>[</code> <i>options</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>spatch</code> is a program matching and transformation tool for C. The programmer describes the code to match and the transformation to perform as a semantic patch, which looks like a standard patch, but can transform multiple files at any number of code sites. </p>
 <p> Further information about spatch is available at <code><a rel="nofollow" href="http://www.emn.fr/x-info/coccinelle">http://www.emn.fr/x-info/coccinelle</a></code>. </p>
 <h2>OPTIONS</h2>

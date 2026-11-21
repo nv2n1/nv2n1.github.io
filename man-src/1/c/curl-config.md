@@ -1,4 +1,5 @@
 ---
+
 title: "curl-config(1)"
 name: "curl-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-curl-config/"
 description: "curl-config – Get information about a libcurl installation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>curl-config [options]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>curl-config</code> displays information about the curl and libcurl installation.</p>
 <h2>OPTIONS</h2>
 <dl>

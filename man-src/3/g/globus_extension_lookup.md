@@ -1,4 +1,5 @@
 ---
+
 title: "globus_extension_lookup(3)"
 name: "globus_extension_lookup"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_extension.h –"
 ---
 
 <p> Globus Extension Modules.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_module.h&#8217;<br />
  #include &#8216;globus_hashtable.h&#8217; </p>

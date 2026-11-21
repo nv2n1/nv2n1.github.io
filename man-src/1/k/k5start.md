@@ -1,4 +1,5 @@
 ---
+
 title: "k5start(1)"
 name: "k5start"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-k5start/"
 description: "k5start – Obtain and optionally keep active a Kerberos ticket"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>k5start</code> [<code>-bFhLnPqstvx</code>] [<code>-c</code> <i>child pid file</i>] [<code>-f</code> <i>keytab</i>]<br />
 &nbsp;<wbr>[<code>-g</code>&nbsp;<wbr><i>group</i>]&nbsp;<wbr>[<code>-H</code>&nbsp;<wbr><i>minutes</i>]&nbsp;<wbr>[<code>-I</code>&nbsp;<wbr><i>service instance</i>]<br />
 &nbsp;<wbr>[<code>-i</code>&nbsp;<wbr><i>client instance</i>]&nbsp;<wbr>[<code>-K</code>&nbsp;<wbr><i>minutes</i>]&nbsp;<wbr>[<code>-k</code>&nbsp;<wbr><i>ticket cache</i>]<br />
@@ -19,7 +19,6 @@ description: "k5start – Obtain and optionally keep active a Kerberos ticket"
 &nbsp;<wbr>[<code>-K</code>&nbsp;<wbr><i>minutes</i>]&nbsp;<wbr>[<code>-k</code>&nbsp;<wbr><i>ticket cache</i>]&nbsp;<wbr>[<code>-l</code>&nbsp;<wbr><i>time string</i>]<br />
 &nbsp;<wbr>[<code>-m</code>&nbsp;<wbr><i>mode</i>]&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>owner</i>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>pid file</i>]<br />
 &nbsp;<wbr>[<code>-r</code>&nbsp;<wbr><i>service realm</i>]&nbsp;<wbr>[<code>-S</code>&nbsp;<wbr><i>service name</i>]&nbsp;<wbr>[<i>command</i>&nbsp;<wbr>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>k5start</code> obtains and caches an initial Kerberos ticket-granting ticket for a principal. <code>k5start</code> can be used as an alternative to <code>kinit</code>, but it is primarily intended to be used by programs that want to use a keytab to obtain Kerberos credentials, such as a web server that needs to authenticate to another service such as an <font SIZE="-1">LDAP</font> server. </p>
 <p> Normally, the principal for which to give tickets should be specified as the first argument. <i>username</i> may be either just a principal name (including the optional instance) or a full principal and realm string. The <code>-u</code> and <code>-i</code> options can be used as an alternative mechanism for specifying the principal, but generally aren&#8217;t as convenient. If no username is given as either the first argument or the argument to the <code>-u</code> option, the client principal defaults to the Unix username of the user running <code>k5start</code> in the default local realm. </p>
 <p> Optionally, a command may be given on the command line of <code>k5start</code>. If so, that command is run after Kerberos authentication (and running <code>aklog</code> if desired), with the appropriate environment variables set to point it to the right ticket cache. <code>k5start</code> will then continue running, waking up periodically to refresh credentials slightly before they would expire, until the command completes. (The frequency with which it wakes up to refresh credentials can still be controlled with the <code>-K</code> option.) To run in this mode, the principal must either be specified as a regular command-line argument or via the <code>-U</code> option; the <code>-u</code> and <code>-i</code> options may not be used. Also, a keytab must be specified with <code>-f</code> to run a specific command. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clamdtop(1)"
 name: "clamdtop"
 section: "1"
@@ -9,9 +10,7 @@ description: "clamdtop – monitor the Clam AntiVirus Daemon"
 
 <h2>NAME</h2>
 <p> clamdtop &#8211; monitor the Clam AntiVirus Daemon</p>
-<h2>SYNOPSIS</h2>
 <p> clamdtop [options] [clamdspec &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> clamdtop is a tool to monitor one or multiple clamd(s). It has a (color) ncurses interface, that shows the jobs in clamd&#8217;s queue, memory usage, and information about the loaded signature database. You can specify on the command-line to which clamd(s) it should connect to. By default it will attempt to connect to the local clamd as defined in clamd.conf. </p>
 <h2>OPTIONS</h2>
 <dl>

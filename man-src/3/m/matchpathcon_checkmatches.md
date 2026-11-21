@@ -1,4 +1,5 @@
 ---
+
 title: "matchpathcon_checkmatches(3)"
 name: "matchpathcon_checkmatches"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-matchpathcon_checkmatches/"
 description: "matchpathcon_checkmatches, matchpathcon_filespec_add, matchpathcon_filespec_destroy, matchpathcon_filespec_eval – check and report whether any specification index has no matches with any inode. Mai..."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>void matchpathcon_checkmatches(char *</code><i>str</i><code>);</code> </p>
 <p> <code>int matchpathcon_filespec_add(ino_t </code><i>ino</i><code>, int </code><i>specind</i><code>, const char *</code><i>file</i><code>);</code> </p>
 <p> <code>void matchpathcon_filespec_destroy(void);</code> </p>
 <p> <code>void matchpathcon_filespec_eval(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>matchpathcon_checkmatches</code>() checks whether any specification has no matches and reports them. The <i>str</i> argument is used as a prefix for any warning messages. </p>
 <p> <code>matchpathcon_filespec_add</code>() maintains an association between an inode <i>ino</i> and a specification index <i>specind</i>, and checks whether a conflicting specification is already associated with the same inode (e.g. due to multiple hard links). If so, then it uses the latter of the two specifications based on their order in the <i>file</i> context configuration. Returns the specification index used or -1 on error. </p>
 <p> <code>matchpathcon_filespec_destroy</code>() destroys any inode associations that have been added, e.g. to restart for a new filesystem. </p>

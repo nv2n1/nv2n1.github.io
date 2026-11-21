@@ -1,4 +1,5 @@
 ---
+
 title: "libmemcached_examples(3)"
 name: "libmemcached_examples"
 section: "3"
@@ -10,7 +11,6 @@ description: "libmemcached_examples – libmemcached Documentation"
 <h2>NAME</h2>
 <p> libmemcached_examples &#8211; libmemcached Documentation </p>
 <p> Examples for libmemcached</p>
-<h2>DESCRIPTION</h2>
 <p> For full examples, test cases are found in tests/*.c in the main distribution. These are always up to date, and are used for each test run of the library.</p>
 <h2>CONNECTING TO SERVERS</h2>
 <pre><code>

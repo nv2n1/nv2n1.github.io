@@ -1,4 +1,5 @@
 ---
+
 title: "ocsinventory-agent(1)"
 name: "ocsinventory-agent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocsinventory-agent/"
 description: "ocsinventory-agent – Unified client for OCS-Inventory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ocsinventory-agent</code> [&nbsp;<wbr><code>-fhilpruw</code>&nbsp;<wbr>] [&nbsp;<wbr><i>&#8211;server server</i>&nbsp;<wbr>|&nbsp;<wbr><i>&#8211;local&nbsp;<wbr>/tmp</i>&nbsp;<wbr>]&#8230;</p>
 <h2>EXAMPLES</h2>
 <pre><code>
@@ -35,7 +35,6 @@ description: "ocsinventory-agent – Unified client for OCS-Inventory"
                                                                      agent-- delaytime 60 - d
 #If NO PROLOG_FREQ has been preset, pick a time between execution and --delaytime for the agent to contact the server[default is 3600 seconds]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>ocsinventory-agent</i> creates inventory and send or write them. This agent is the successor of the former linux_agent which was released with <font SIZE="-1">OCS</font> 1.01 and prior. It also replaces the Solaris/AIX/BSD unofficial agents. The detailed list of supported Operating System is available in the Wiki.</p>
 <dl>
 <dt><i>GNU/Linux</i></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "acquire_bitmap(3)"
 name: "acquire_bitmap"
 section: "3"
@@ -9,10 +10,8 @@ description: "acquire_bitmap – Locks the bitmap before drawing onto it. Allegr
 
 <h2>NAME</h2>
 <p> acquire_bitmap &#8211; Locks the bitmap before drawing onto it. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void acquire_bitmap(BITMAP *bmp);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Acquires the specified video bitmap prior to drawing onto it. You never need to call the function explicitly as it is low level, and will only give you a speed up if you know what you are doing. Using it wrongly may cause slowdown, or even lock up your program. </p>
 <p> Note: You do never need to use acquire_bitmap on a memory bitmap, i.e. a normal bitmap created with create_bitmap. It will simply do nothing in that case. </p>
 <p> It still can be useful, because e.g. under the current DirectDraw driver of Allegro, most drawing functions need to lock a video bitmap before drawing to it. But doing this is very slow, so you will get much better performance if you acquire the screen just once at the start of your main redraw function, then call multiple drawing operations which need the bitmap locked, and only release it when done. </p>

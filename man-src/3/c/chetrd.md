@@ -1,4 +1,5 @@
 ---
+
 title: "chetrd(3)"
 name: "chetrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chetrd/"
 description: "chetrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetrd</code> (UPLO, N, A, LDA, D, E, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>CHETRD</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gdalsrsinfo(1)"
 name: "gdalsrsinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdalsrsinfo/"
 description: "gdalsrsinfo – gdalsrsinfo lists info about a given SRS in number of formats (WKT, PROJ.4, etc.)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 Usage: gdalsrsinfo [options] srs_def
 srs_def may be the filename of a dataset supported by GDAL/OGR from which to extract SRS information
@@ -20,7 +20,6 @@ Options:
                                         wkt, wkt_simple, wkt_noct, wkt_esri,
                                         mapinfo, xml }.fi
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The gdalsrsinfo utility reports information about a given SRS from one of the following: </p>
 <dl>
 <dt>&bull;</dt>

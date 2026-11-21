@@ -1,4 +1,5 @@
 ---
+
 title: "aecho(1)"
 name: "aecho"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aecho/"
 description: "aecho – send AppleTalk Echo Protocol packets to network hosts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aecho</code> [ <code>-c</code><i> count</i> ] ( <code>address</code> | <code>nbpname</code> )</p>
-<h2>DESCRIPTION</h2>
 <p> <code>aecho</code> repeatedly sends an Apple Echo Protocol (AEP) packet to the host specified by the given AppleTalk <code>address</code> or <code>nbpname</code> and reports whether a reply was received. Requests are sent at the rate of one per second. </p>
 <p> <code>address</code> is parsed by <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3). <code>nbpname</code> is parsed by <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3). The nbp type defaults to `<code>Workstation</code>&#8216;. </p>
 <p> When <code>aecho</code> is terminated, it reports the number of packets sent, the number of responses received, and the percentage of packets lost. If any responses were received, the minimum, average, and maximum round trip times are reported.</p>

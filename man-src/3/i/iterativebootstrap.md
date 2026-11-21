@@ -1,4 +1,5 @@
 ---
+
 title: "iterativebootstrap(3)"
 name: "iterativebootstrap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iterativebootstrap/"
 description: "ql/termstructures/iterativebootstrap.hpp – universal piecewise-term-structure boostrapper."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br />
  #include &lt;ql/termstructures/bootstraperror.hpp&gt;<br />
  #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br />

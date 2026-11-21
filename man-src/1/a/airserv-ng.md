@@ -1,4 +1,5 @@
 ---
+
 title: "airserv-ng(1)"
 name: "airserv-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-airserv-ng/"
 description: "airserv-ng – a wireless card server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>airserv-ng</code> &lt;options&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>airserv-ng</code> is a wireless card server which allows multiple wireless application programs to independently use a wireless card via a client-server TCP network connection. All operating system and wireless card driver specific code is incorporated into the server. This eliminates the need for each wireless application to contain the complex wireless card and driver logic. It is also supports multiple operating systems.</p>
 <h2>OPTIONS</h2>
 <dl>

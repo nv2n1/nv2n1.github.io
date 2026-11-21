@@ -1,4 +1,5 @@
 ---
+
 title: "ilaprec(3)"
 name: "ilaprec"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ilaprec/"
 description: "ilaprec.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilaprec</code> (PREC)<br />
  <i></i><code>ILAPREC</code></p>

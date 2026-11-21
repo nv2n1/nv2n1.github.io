@@ -1,4 +1,5 @@
 ---
+
 title: "cgemm(3)"
 name: "cgemm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgemm/"
 description: "cgemm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
  <i></i><code>CGEMM</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtospu(1)"
 name: "ppmtospu"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ppmtospu/"
 description: "ppmtospu – convert a PPM image to an Atari Spectrum 512 image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtospu</code> </p>
 <p> [<code>-d0</code>|<code>-d2</code>|<code>-d4</code>] [<i>ppmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> This program converts from the PPM format to the uncompressed Spectrum 512 image format used on Atari ST computers. </p>
 <p> Input comes from the file you name with the <i>ppmfile</i> argument, or Standard Input by default. Output goes to Standard Output. </p>

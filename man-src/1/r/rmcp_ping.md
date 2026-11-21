@@ -1,4 +1,5 @@
 ---
+
 title: "rmcp_ping(1)"
 name: "rmcp_ping"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rmcp_ping/"
 description: "rmcp_ping – IPMI RMCP Ping program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rmcp_ping</code> [<code>-p</code> <i>port</i>] [<code>-t</code> <i>waittime</i>] [<code>-s</code> <i>starttag</i>] [<code>-d</code>] <i>destination</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>rmcp_ping</code> program sends an RMCP ping packet onces a second to the destination, printing unique responses it receives. </p>
 <h2>OPTIONS</h2>
 <dl>

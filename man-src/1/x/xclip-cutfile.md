@@ -1,4 +1,5 @@
 ---
+
 title: "xclip-cutfile(1)"
 name: "xclip-cutfile"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-xclip-cutfile/"
 description: "xclip-copyfile, xclip-cutfile, xclip-pastefile – copy and move files via the X clipboard"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xclip-copyfile</code> [-p] FILES&#8230; </p>
 <p> <code>xclip-cutfile</code> [-p] FILES&#8230; </p>
 <p> <code>xclip-pastefile</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>xclip-copyfile</code> copies files into the X clipboard, recursing into directories. </p>
 <p> <code>xclip-cutfile</code> copies the files, but also deletes them afterwards.</p>
 <dl>

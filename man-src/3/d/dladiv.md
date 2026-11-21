@@ -1,4 +1,5 @@
 ---
+
 title: "dladiv(3)"
 name: "dladiv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dladiv/"
 description: "dladiv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dladiv</code> (A, B, C, D, P, Q)<br />
  <i></i><code>DLADIV</code> performs complex division in real arithmetic, avoiding unnecessary overflow.<br />

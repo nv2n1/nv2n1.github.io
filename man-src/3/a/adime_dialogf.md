@@ -1,4 +1,5 @@
 ---
+
 title: "adime_dialogf(3)"
 name: "adime_dialogf"
 section: "3"
@@ -9,10 +10,8 @@ description: "adime_dialogf"
 
 <h2>NAME</h2>
 <p> adime_dialogf</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>
 <p> <code>int adime_dialogf(const char *title, int x, y, w, const char *format, &#8230;);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Displays a dialog letting the user edit several different kinds of data. `title&#8217; specifies the caption of the dialog while `x&#8217; and `y&#8217; specify the top left corner of the dialog. Alternatively, either `x&#8217; or `y&#8217; or both can be set to `ADIME_ALIGN_CENTRE&#8217; or `ADIME_ALIGN_RIGHT&#8217;, in which case the dialog will be centred respectively right aligned. `w&#8217; specifies the width of the input field. The total width of the dialog depends on this number, and on the length of the strings given to the dialog. </p>
 <p> The format string consists of one or more field descriptions, each followed be exactly one format specifier. The field description is a hint text used to help the user know what the field should contain. The format specifier is a percent sign, followed by an identifier, followed by a pair of square brackets (possibly with some extra options between (which I will refer to as &quot;format modifier&quot;)) and can be any of the following: </p>
 <p> %bool[] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gimp(1)"
 name: "gimp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gimp/"
 description: "gimp – an image manipulation and paint program."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gimp</code> [-h] [&#8211;help] [&#8211;help-all] [&#8211;help-gtk] [-v] [&#8211;version] [&#8211;license] [&#8211;verbose] [-n] [&#8211;new-instance] [-a] [&#8211;as-new] [-i] [&#8211;no-interface] [-d] [&#8211;no-data] [-f] [&#8211;no-fonts] [-s] [&#8211;no-splash] [&#8211;no-shm] [&#8211;no-cpu-accel] [&#8211;display <i>display</i>] [&#8211;session <i>&lt;name&gt;</i>] [-g] [&#8211;gimprc <i>&lt;gimprc&gt;</i>] [&#8211;system-gimprc <i>&lt;gimprc&gt;</i>] [&#8211;dump-gimprc] [&#8211;console-messages] [&#8211;debug-handlers] [&#8211;stack-trace-mode <i>&lt;mode&gt;</i>] [&#8211;pdb-compat-mode <i>&lt;mode&gt;</i>] [&#8211;batch-interpreter <i>&lt;procedure&gt;</i>] [-b] [&#8211;batch <i>&lt;command&gt;</i>] [<i>filename</i>] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> GIMP is the <i>GNU Image Manipulation Program</i>. It is used to edit and manipulate images. It can load and save a variety of image formats and can be used to convert between formats. </p>
 <p> GIMP can also be used as a paint program. It features a set of drawing and painting tools such as airbrush, clone, pencil, and paint brush. Painting and drawing tools can be applied to an image with a variety of paint modes. It also offers an extensive array of selection tools like rectangle, ellipse, fuzzy select, bezier select, intelligent scissors, and select by color. </p>
 <p> GIMP offers a variety of plug-ins that perform a variety of image manipulations. Examples include bumpmap, edge detect, gaussian blur, and many others. In addition, GIMP has several scripting extension which allow for advanced non-interactive processing and creation of images. </p>

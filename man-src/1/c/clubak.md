@@ -1,4 +1,5 @@
 ---
+
 title: "clubak(1)"
 name: "clubak"
 section: "1"
@@ -9,9 +10,7 @@ description: "clubak – format output from clush/pdsh-like output and more"
 
 <h2>NAME</h2>
 <p> clubak &#8211; format output from clush/pdsh-like output and more</p>
-<h2>SYNOPSIS</h2>
 <p> <code>clubak</code> [ OPTIONS ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>clubak</code> formats text from standard input containing lines of the form &quot;<i>node:output</i>&quot;. It is fully backward compatible with <code><a href="/docs/linux/man/1-dshbak/">dshbak</a></code>(1) but provides additional features. For instance, <code>clubak</code> always displays its results sorted by node/nodeset. </p>
 <p> You do not need to use <code>clubak</code> when using <code><a href="/docs/linux/man/1-clush/">clush</a></code>(1) as all output formatting features are already included in. It is provided for other usages, like post-processing results of the form &quot;<i>node:output</i>&quot;. </p>
 <p> Like <code><a href="/docs/linux/man/1-clush/">clush</a></code>(1), <code>clubak</code> uses the <i>ClusterShell.MsgTree</i> module of the ClusterShell library (see <code>pydoc ClusterShell.MsgTree</code>).</p>

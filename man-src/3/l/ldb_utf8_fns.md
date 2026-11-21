@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_utf8_fns(3)"
 name: "ldb_utf8_fns"
 section: "3"
@@ -8,7 +9,6 @@ description: "ldb_utf8_fns –"
 ---
 
 <p> The user can optionally supply a custom utf8 functions, to handle comparisons and casefolding.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ldb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> void * <code>context</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_subject_alt_names_deinit(3)"
 name: "gnutls_subject_alt_names_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_subject_alt_names_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_subject_alt_names_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>void gnutls_subject_alt_names_deinit(gnutls_subject_alt_names_t </code><i>sans</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_subject_alt_names_t sans</dt>
 <dd> The alternative names structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize an alternative names structure.</p>
 <h2>SINCE</h2>
 <p> 3.3.0</p>

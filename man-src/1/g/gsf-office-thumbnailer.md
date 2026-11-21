@@ -1,4 +1,5 @@
 ---
+
 title: "gsf-office-thumbnailer(1)"
 name: "gsf-office-thumbnailer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gsf-office-thumbnailer/"
 description: "gsf-office-thumbnailer – office files thumbnailer for the GNOME desktop"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gsf-office-thumbnailer</code> [<i>OPTIONS</i>] <i>infile</i> <i>outfile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>gsf-office-thumbnailer</code> command. </p>
 <p> <code>gsf-office-thumbnailer</code> is used internally by GNOME applications such as <code>nautilus</code> to generate thumbnails of several types of office application files. While it is possible to invoke it manually, it is usually invoked automatically by <code>nautilus</code>. </p>
 <h2>OPTIONS</h2>

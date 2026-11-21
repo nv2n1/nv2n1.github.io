@@ -1,4 +1,5 @@
 ---
+
 title: "irunner(1)"
 name: "irunner"
 section: "1"
@@ -9,11 +10,9 @@ description: "irunner – interactive runner interface"
 
 <h2>NAME</h2>
 <p> <code>irunner &#8211; interactive runner interface </code></p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>irunner</code> [<i>options</i>] <i>file_to_run</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> irunner is an interface to the various interactive runners available in IPython&#8217;s <code>irunner</code> module. </p>
 <p> The already implemented runners are listed below; adding one for a new program is a trivial task, see the source for examples.</p>
 <h2>OPTIONS</h2>

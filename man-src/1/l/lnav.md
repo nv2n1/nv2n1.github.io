@@ -1,4 +1,5 @@
 ---
+
 title: "lnav(1)"
 name: "lnav"
 section: "1"
@@ -9,9 +10,7 @@ description: "lnav – ncurses-based log file viewer"
 
 <h2>NAME</h2>
 <p> lnav &#8211; ncurses-based log file viewer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lnav </code> [-hVsar] [logfile1 logfile2 &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The log file navigator, lnav, is an enhanced log file viewer that takes advantage of any semantic information that can be gleaned from the files being viewed, such as timestamps and log levels. Using this extra semantic information, lnav can do things like interleaving messages from different files, generate histograms of messages over time, and providing hotkeys for navigating through the file. It is hoped that these features will allow the user to quickly and efficiently zero in on problems.</p>
 <h2>KEY BINDINGS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mutt_dotlock(1)"
 name: "mutt_dotlock"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mutt_dotlock/"
 description: "mutt_dotlock – Lock mail spool files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mutt_dotlock </code> [-t|-f|-u|-d] [-p] [-r <i>retries</i>] <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mutt_dotlock</code> implements the traditional mail spool file locking method: To lock <i>file</i>, a file named <i>file</i>.lock is created. The program operates with group mail privileges if necessary.</p>
 <h2>OPTIONS</h2>
 <dl>

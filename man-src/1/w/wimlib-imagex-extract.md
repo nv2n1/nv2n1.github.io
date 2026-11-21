@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-extract(1)"
 name: "wimlib-imagex-extract"
 section: "1"
@@ -9,9 +10,7 @@ description: "wimlib-imagex-extract – Extract files or directories from a WIM 
 
 <h2>NAME</h2>
 <p> wimlib-imagex-extract &#8211; Extract files or directories from a WIM image</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex extract</code> <i>WIMFILE</i> <i>IMAGE</i> [(<i>PATH</i> | @<i>LISTFILE</i>)&#8230;] [<i>OPTION</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex extract</code> extracts one or more files or directory trees from the specified <i>IMAGE</i> contained in the Windows Imaging (WIM) file <i>WIMFILE</i>. This command is also available as simply <code>wimextract</code> if the appropriate hard link or batch file has been installed. </p>
 <p> <code>wimlib-imagex extract</code> is intended for extracting only a subset of a WIM image. If you want to extract or &quot;apply&quot; a full WIM image to a directory or NTFS volume, use <code>wimlib-imagex apply</code> (1) instead. </p>
 <p> <i>IMAGE</i> specifies the image in <i>WIMFILE</i> that contains the files or directory trees to extract. It may be a 1-based index of an image in the WIM or the name of an image in the WIM. Use the <code>wimlib-imagex info</code> (1) command to show what images a WIM file contains. </p>

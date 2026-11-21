@@ -1,4 +1,5 @@
 ---
+
 title: "webpmux(1)"
 name: "webpmux"
 section: "1"
@@ -9,7 +10,6 @@ description: "webpmux – command line tool to create WebP Mux/container file."
 
 <h2>NAME</h2>
 <p> webpmux &#8211; command line tool to create WebP Mux/container file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>webpmux -get</code> <i>GET_OPTIONS</i> <i>INPUT</i> <code>-o</code> <i>OUTPUT</i><br />
  <code>webpmux -set</code> <i>SET_OPTIONS</i> <i>INPUT</i> <code>-o</code> <i>OUTPUT</i><br />
  <code>webpmux -strip</code> <i>STRIP_OPTIONS</i> <i>INPUT</i> <code>-o</code> <i>OUTPUT</i><br />
@@ -20,7 +20,6 @@ description: "webpmux – command line tool to create WebP Mux/container file."
 <p> <code>webpmux -info</code> <i>INPUT</i><br />
  <code>webpmux [-h|-help]</code><br />
  <code>webpmux -version</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>webpmux</code> command. </p>
 <p> <code>webpmux</code> can be used to create a WebP container file and extract/strip relevant data from the container file.</p>
 <h2>OPTIONS</h2>

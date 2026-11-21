@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-dump(1)"
 name: "whisper-dump"
 section: "1"
@@ -13,7 +14,6 @@ description: "whisper-dump – dump whisper database files"
 <pre>
 whisper-dump path
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command dumps an whisper database file. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

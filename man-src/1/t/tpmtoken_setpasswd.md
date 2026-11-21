@@ -1,4 +1,5 @@
 ---
+
 title: "tpmtoken_setpasswd(1)"
 name: "tpmtoken_setpasswd"
 section: "1"
@@ -9,9 +10,7 @@ description: "tpmtoken_setpasswd – change the password(s) associated with the 
 
 <p>TPM Management &#8211; tpmtoken_setpasswd<br />
  </center></p>
-<h2>SYNOPSIS</h2>
 <p> <code>tpmtoken_setpasswd</code> [ OPTION ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tpmtoken_setpasswd</code> is used to change the password(s) associated with the user&#8217;s data store. </p>
 <p> PKCS#11 requires a password (or PIN) for the Security Officer (SO) and the User. The SO and User password are set when the data store is initialized. This command will allow the user change either password. </p>
 <dl>

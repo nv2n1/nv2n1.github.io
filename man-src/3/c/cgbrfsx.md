@@ -1,4 +1,5 @@
 ---
+
 title: "cgbrfsx(3)"
 name: "cgbrfsx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgbrfsx/"
 description: "cgbrfsx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgbrfsx</code> (TRANS, EQUED, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, R, C, B, LDB, X, LDX, RCOND, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, RWORK, INFO)<br />
  <i></i><code>CGBRFSX</code></p>

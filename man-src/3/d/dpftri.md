@@ -1,4 +1,5 @@
 ---
+
 title: "dpftri(3)"
 name: "dpftri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpftri/"
 description: "dpftri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpftri</code> (TRANSR, UPLO, N, A, INFO)<br />
  <i></i><code>DPFTRI</code></p>

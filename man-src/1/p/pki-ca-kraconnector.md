@@ -1,4 +1,5 @@
 ---
+
 title: "pki-ca-kraconnector(1)"
 name: "pki-ca-kraconnector"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pki-ca-kraconnector/"
 description: "pki-ca-kraconnector – Command-Line Interface for managing CA-KRA connectors."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] ca - kraconnector pki[CLI options] ca - kraconnector - show pki[CLI options] ca - kraconnector - add-- input - file&lt;input file&gt; | --host&lt;KRA host&gt; --port&lt;KRA port&gt;
                                                                                                                                                            pki[CLI options] ca -
                                                                                                                                                        kraconnector - del-- host&lt;KRA host&gt; --port&lt;KRA port&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki-ca-kraconnector</code> commands provide command-line interfaces to manage CA-KRA connectors. This command should be applied against CAs only. </p>
 <p> When keys are archived, the CA communicates with the KRA through authenticated persistent connections called Connectors. Because the CA initiates the communication, the connector configuration is performed on the CA only. A Connector is automatically configured on the issuing CA whenever a KRA is set up by <code>pkispawn</code>. </p>
 <p> A CA may have only one KRA connector. This connector can be configured to talk to multiple KRAs (for high availability) only if the KRAs are clones. </p>

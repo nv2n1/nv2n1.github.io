@@ -1,4 +1,5 @@
 ---
+
 title: "ln(1)"
 name: "ln"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-ln/"
 description: "ln – make links between files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ln</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,TARGET LINK_NAME/</i><br />
  <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,TARGET/</i><br />
  <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,TARGET/</i>&#8230; <i>,DIRECTORY/</i><br />
  <code>ln</code> [<i>,OPTION/</i>]&#8230; <i>,-t DIRECTORY TARGET/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> In the 1st form, create a link to TARGET with the name LINK_NAME. In the 2nd form, create a link to TARGET in the current directory. In the 3rd and 4th forms, create links to each TARGET in DIRECTORY. Create hard links by default, symbolic links with <code>&#8211;symbolic</code>. By default, each destination (name of new link) should not already exist. When creating hard links, each TARGET must exist. Symbolic links can hold arbitrary text; if later resolved, a relative link is interpreted in relation to its parent directory. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

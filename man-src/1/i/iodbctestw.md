@@ -1,4 +1,5 @@
 ---
+
 title: "iodbctestw(1)"
 name: "iodbctestw"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-iodbctestw/"
 description: "iodbctest, iodbctestw – iODBC Demonstration programs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>iodbctest</code> [<code>&quot;DSN=xxxx[;UID=xxxx][;PWD=xxxx][;OPT=value]&quot;</code>]<br />
  <code>iodbctestw</code> [<code>&quot;DSN=xxxx[;UID=xxxx][;PWD=xxxx][;OPT=value]&quot;</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>iodbctest</code> program and <code>iodbtestw</code> programs are simple ODBC sample programs, showing the strength of the ODBC API to connect to any ODBC enabled database, issue SQL commands and retrieve the query results. </p>
 <p> The <code>iodbctest</code> program uses the standard ODBC API calls to connect using any DSN, but retrieves all results in ASCII mode. </p>
 <p> The <code>iodbctestw</code> program uses the ODBC Unicode API calls to connect using any DSN, and retrieves all results in Unicode mode. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tail(1)"
 name: "tail"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tail/"
 description: "tail – output the last part of files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tail</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print the last 10 lines of each FILE to standard output. With more than one FILE, precede each with a header giving the file name. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

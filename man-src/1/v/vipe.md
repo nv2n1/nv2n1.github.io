@@ -1,4 +1,5 @@
 ---
+
 title: "vipe(1)"
 name: "vipe"
 section: "1"
@@ -6,18 +7,11 @@ letter: "v"
 url: "/docs/linux/man/1-vipe/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+vipe - edit pipe 
 
- vipe - edit pipe 
+command1 | vipe | command2
 
-<h2>SYNOPSIS</h2>
-
- command1 | vipe | command2
-
-<h2>DESCRIPTION</h2>
-
- vipe allows you to run your editor in the middle of a unix pipeline and edit the data that is being piped between programs. Your editor will have the full data being piped from command1 loaded into it, and when you close it, that data will be piped into command2.
+vipe allows you to run your editor in the middle of a unix pipeline and edit the data that is being piped between programs. Your editor will have the full data being piped from command1 loaded into it, and when you close it, that data will be piped into command2.
 
 <h2>ARGUMENTS</h2>
 

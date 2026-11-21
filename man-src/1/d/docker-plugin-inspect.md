@@ -1,4 +1,5 @@
 ---
+
 title: "docker-plugin-inspect(1)"
 name: "docker-plugin-inspect"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-plugin-inspect/"
 description: "docker-plugin-inspect – Display detailed information on one or more plugins"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker plugin inspect [OPTIONS] PLUGIN [PLUGIN&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Display detailed information on one or more plugins </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Format the output using the given Go template</p>

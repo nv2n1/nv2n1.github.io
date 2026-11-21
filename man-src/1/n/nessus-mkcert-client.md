@@ -1,4 +1,5 @@
 ---
+
 title: "nessus-mkcert-client(1)"
 name: "nessus-mkcert-client"
 section: "1"
@@ -9,9 +10,7 @@ description: "nessus-mkcert-client – Creates a client certificate"
 
 <h2>NAME</h2>
 <p> nessus-mkcert-client &#8211; Creates a client certificate </p>
-<h2>SYNOPSIS</h2>
 <p> <code>nessus-mkcert-client</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>Nessus Security Scanner</code> protects the communication between the client and the server by using SSL. SSL requires the server to present a certificate to the client, and the client can optionally present a certificate to the server. </p>
 <p> This script <code>nessus-mkcert-client</code> generates a client certificate. </p>
 <h2>SEE ALSO</h2>

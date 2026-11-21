@@ -1,4 +1,5 @@
 ---
+
 title: "opensc-explorer(1)"
 name: "opensc-explorer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-opensc-explorer/"
 description: "opensc-explorer – generic interactive utility for accessing smart card and similar security token functions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>opensc-explorer</code> [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>opensc-explorer</code> utility can be used interactively to perform miscellaneous operations such as exploring the contents of or sending arbitrary APDU commands to a smart card or similar security token.</p>
 <h2>OPTIONS</h2>
 <p> The following are the command-line options for <code>opensc-explorer</code>. There are additional interactive commands available once it is running. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_alloc_pd(3)"
 name: "ibv_alloc_pd"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ibv_alloc_pd/"
 description: "ibv_alloc_pd, ibv_dealloc_pd – allocate or deallocate a protection domain (PDs)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_pd *ibv_alloc_pd(struct ibv_context *context);
 int ibv_dealloc_pd(struct ibv_pd *pd);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_alloc_pd()</code> allocates a PD for the RDMA device context <i>context</i>. </p>
 <p> <code>ibv_dealloc_pd()</code> deallocates the PD <i>pd</i>.</p>
 <h2>RETURN VALUE</h2>

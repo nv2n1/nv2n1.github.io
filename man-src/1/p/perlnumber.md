@@ -1,4 +1,5 @@
 ---
+
 title: "perlnumber(1)"
 name: "perlnumber"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlnumber/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlnumber - semantics of numbers and numeric operations in Perl 
 
- perlnumber - semantics of numbers and numeric operations in Perl 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 $n = 1234;
 #decimal integer
     $n = 0b1110011;
@@ -30,9 +26,7 @@ $n = 1234;
 #number specified as a string
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This document describes how Perl internally handles numeric values. 
+This document describes how Perl internally handles numeric values. 
 
  Perl's operator overloading facility is completely ignored here. Operator overloading allows user-defined behaviors for numbers, such as operations over arbitrarily large integers, floating points numbers with arbitrary precision, operations over ``exotic'' numbers such as modular arithmetic or p-adic arithmetic, and so on. See overload for details.
 

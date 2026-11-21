@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_search(3)"
 name: "ldb_search"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_search/"
 description: "ldb_search –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> struct ldb_dn * <code>base</code> </p>
 <p> enum ldb_scope <code>scope</code> </p>

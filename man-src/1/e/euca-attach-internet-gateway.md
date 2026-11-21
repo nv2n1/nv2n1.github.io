@@ -1,4 +1,5 @@
 ---
+
 title: "euca-attach-internet-gateway(1)"
 name: "euca-attach-internet-gateway"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-attach-internet-gateway – Attach an Internet gateway to a V
 
 <h2>NAME</h2>
 <p> euca-attach-internet-gateway &#8211; Attach an Internet gateway to a VPC</p>
-<h2>SYNOPSIS</h2>
 <p> euca-attach-internet-gateway <code>-c</code> VPC [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] IGATEWAY</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Attach an Internet gateway to a VPC</p>
 <h3>positional arguments:</h3>
 <dl>

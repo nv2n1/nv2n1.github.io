@@ -1,4 +1,5 @@
 ---
+
 title: "kill(2)"
 name: "kill"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-kill/"
 description: "kill – send signal to a process"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;
 #include &lt;sys/types.h&gt;
@@ -15,7 +15,6 @@ int kill(pid_t pid, int sig);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>kill</code>(): _POSIX_C_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>kill</code>() system call can be used to send any signal to any process group or process. </p>
 <p> If <i>pid</i> is positive, then signal <i>sig</i> is sent to the process with the ID specified by <i>pid</i>. </p>
 <p> If <i>pid</i> equals 0, then <i>sig</i> is sent to every process in the process group of the calling process. </p>

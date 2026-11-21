@@ -1,4 +1,5 @@
 ---
+
 title: "bitmap_mask_color(3)"
 name: "bitmap_mask_color"
 section: "3"
@@ -9,10 +10,8 @@ description: "bitmap_mask_color – Returns the mask color of the specified bitm
 
 <h2>NAME</h2>
 <p> bitmap_mask_color &#8211; Returns the mask color of the specified bitmap. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int bitmap_mask_color(BITMAP *bmp);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Returns the mask color for the specified bitmap (the value which is skipped when drawing sprites). For 256-color bitmaps this is zero, and for truecolor bitmaps it is bright pink (maximum red and blue, zero green). A frequent use of this function is to clear a bitmap with the mask color so you can later use this bitmap with masked_blit() or draw_sprite() after drawing other stuff on it. Example: </p>
 <pre><code>
 /* Replace mask color with another color. */

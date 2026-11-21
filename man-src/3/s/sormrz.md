@@ -1,4 +1,5 @@
 ---
+
 title: "sormrz(3)"
 name: "sormrz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sormrz/"
 description: "sormrz.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sormrz</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>SORMRZ</code></p>

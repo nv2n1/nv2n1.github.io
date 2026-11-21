@@ -1,4 +1,5 @@
 ---
+
 title: "ck_hs_count(3)"
 name: "ck_hs_count"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_hs_count – returns number of entries in hash set"
 <p> <code>ck_hs_count</code> &#8211; returns number of entries in hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft unsigned long Fn ck_hs_count ck_hs_t *hs</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_count 3 function returns the number of keys currently stored in Fa hs .</p>
 <h2>ERRORS</h2>
 <p> Behavior is undefined if Fa hs is uninitialized. Behavior is undefined if this function is called by a non-writer thread.</p>

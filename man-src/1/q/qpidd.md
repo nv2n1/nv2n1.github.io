@@ -1,4 +1,5 @@
 ---
+
 title: "qpidd(1)"
 name: "qpidd"
 section: "1"
@@ -9,9 +10,7 @@ description: "qpidd – the Qpid AMQP Message Broker Daemon"
 
 <h2>NAME</h2>
 <p> qpidd &#8211; the Qpid AMQP Message Broker Daemon</p>
-<h2>SYNOPSIS</h2>
 <p> qpidd [-p port] [&#8211;config config_file] [&#8211;data-dir directory]</p>
-<h2>DESCRIPTION</h2>
 <p> An AMQP message broker daemon that stores, routes and forwards messages using the Advanced Message Queueing Protocol (AMQP).</p>
 <h2>OPTIONS</h2>
 <p> The options below are built-in to qpidd. Installing add-on modules provides additional options. To see the full set of options available type &quot;qpidd &#8211;help&quot; </p>

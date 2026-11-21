@@ -1,4 +1,5 @@
 ---
+
 title: "ber_bvarray_add(3)"
 name: "ber_bvarray_add"
 section: "3"
@@ -9,7 +10,6 @@ description: "ber_int_t, ber_uint_t, ber_len_t, ber_slen_t, ber_tag_t, struct be
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;lber.h&gt;</code> </p>
 <pre><code>
 typedef impl_tag_t ber_tag_t;
@@ -37,7 +37,6 @@ typedef struct berelement BerElement;
 <p> <code>BerElement *ber_init(struct berval *</code><i>bv</i><code>);</code> </p>
 <p> <code>void ber_init2(BerElement *</code><i>ber</i><code>, struct berval *</code><i>bv</i><code>, int </code><i>options</i><code>);</code> </p>
 <p> <code>void ber_free(BerElement *</code><i>ber</i><code>, int </code><i>freebuf</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The following are the basic types and structures defined for use with the Lightweight BER library. </p>
 <p> <code>ber_int_t</code> is a signed integer of at least 32 bits. It is commonly equivalent to <code>int</code>. <code>ber_uint_t</code> is the unsigned variant of <code>ber_int_t</code>. </p>
 <p> <code>ber_len_t</code> is an unsigned integer of at least 32 bits used to represent a length. It is commonly equivalent to a <code>size_t</code>. <code>ber_slen_t</code> is the signed variant to <code>ber_len_t</code>. </p>

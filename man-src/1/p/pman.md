@@ -1,4 +1,5 @@
 ---
+
 title: "pman(1)"
 name: "pman"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pman/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pman - show a module's man page 
 
- pman - show a module's man page 
-
-<h2>DESCRIPTION</h2>
-
- Send a module's pod through pod2text and your pager. 
+Send a module's pod through pod2text and your pager. 
 
  This is mostly here for people too lazy to type 
 

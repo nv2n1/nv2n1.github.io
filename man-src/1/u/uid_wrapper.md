@@ -1,4 +1,5 @@
 ---
+
 title: "uid_wrapper(1)"
 name: "uid_wrapper"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-uid_wrapper/"
 description: "uid_wrapper – A wrapper to fake privilege separation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> LD_PRELOAD=libuid_wrapper.so UID_WRAPPER=1 UID_WRAPPER_ROOT=1 <code>./myapplication</code></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> &bull; Allows uid switching as a normal user.</dd></dl>

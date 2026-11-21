@@ -1,4 +1,5 @@
 ---
+
 title: "futimesat(2)"
 name: "futimesat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-futimesat/"
 description: "futimesat – change timestamps of a file relative to a directory file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt; /* Definition of AT_* constants */
 #include &lt;sys/time.h&gt;
@@ -16,7 +16,6 @@ int futimesat(int dirfd, const char *pathname,
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>futimesat</code>(): _GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> This system call is obsolete. Use <code><a href="/docs/linux/man/2-utimensat/">utimensat</a></code>(2) instead. </p>
 <p> The <code>futimesat</code>() system call operates in exactly the same way as <code><a href="/docs/linux/man/2-utimes/">utimes</a></code>(2), except for the differences described in this manual page. </p>
 <p> If the pathname given in <i>pathname</i> is relative, then it is interpreted relative to the directory referred to by the file descriptor <i>dirfd</i> (rather than relative to the current working directory of the calling process, as is done by <code><a href="/docs/linux/man/2-utimes/">utimes</a></code>(2) for a relative pathname). </p>

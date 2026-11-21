@@ -1,4 +1,5 @@
 ---
+
 title: "dbmapreduce(1)"
 name: "dbmapreduce"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dbmapreduce/"
 description: "dbmapreduce – reduce all input rows with the same key"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dbmapreduce[-dMS][-k KeyField][-f CodeFile][-C Filtercode][--][ReduceCommand[ReduceArguments...]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Group input data by KeyField, then apply a function (the &#8220;reducer&#8221;) to each group. The reduce function can be an external program given by ReduceCommand and ReduceArguments, or an Perl subroutine given in CodeFile or FilterCode. </p>
 <p> If a &#8220;&#8211;&#8221; appears before reduce command, arguments after the &#8212; passed the the command.</p>
 <h3>Grouping (The Mapper)</h3>

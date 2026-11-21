@@ -1,4 +1,5 @@
 ---
+
 title: "startx(1)"
 name: "startx"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-startx/"
 description: "startx – initialize an X session"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>startx</code> [ [ <i>client</i> ] <i>options</i> &#8230; ] [ <code>&#8212;</code> [ <i>server</i> ] [ <i>display</i> ] <i>options</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>startx</code> script is a front end to <code><a href="/docs/linux/man/1-xinit/">xinit</a></code>(1) that provides a somewhat nicer user interface for running a single session of the X Window System. It is often run with no arguments. </p>
 <p> Arguments immediately following the <i>startx</i> command are used to start a client in the same manner as <code><a href="/docs/linux/man/1-xinit/">xinit</a></code>(1). The special argument &#8216;&#8211;&#8216; marks the end of client arguments and the beginning of server options. It may be convenient to specify server options with startx to change them on a per-session basis. Some examples of specifying server arguments follow; consult the manual page for your X server to determine which arguments are legal.</p>
 <dl>

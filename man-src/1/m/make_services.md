@@ -1,4 +1,5 @@
 ---
+
 title: "make_services(1)"
 name: "make_services"
 section: "1"
@@ -9,9 +10,7 @@ description: "make_services – generate GNUstep services info"
 
 <h2>NAME</h2>
 <p> make_services &#8211; generate GNUstep services info </p>
-<h2>SYNOPSIS</h2>
 <p> <code>make_services</code> [<code>&#8211;test</code> <i>filename</i> ] [<code>&#8211;verbose</code>|<code>&#8211;quiet</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>make_services</code> builds a validated cache of service information for use by programs that want to access the GNUstep services facility. Additionally, it builds a list of applications and service bundles found in the standard directories. This cache is usually stored in the file named <i>.GNUstepServices</i> in the user&#8217;s GNUstep directory. Most commonly, <i>make_services</i> is called from within the GNUstep.sh or GNUstep.csh script to update the service information everytime the GNUstep environmet is set up, i.e. in a login script. But of course it is possible to run <i>make_services</i> from the command line whenever you wish, for example after having installed a new application or service. </p>
 <p> The <i>Services</i> menu in an application&#8217;s mainmenu is usually updated automatically. However, it may be neccessary to close an open or torn off menu for the changes to appear. Also, the workspace manager may have to be closed and restarted for file association changes to take effect.</p>
 <h2>OPTIONS</h2>

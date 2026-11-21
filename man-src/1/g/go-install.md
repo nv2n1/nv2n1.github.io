@@ -1,4 +1,5 @@
 ---
+
 title: "go-install(1)"
 name: "go-install"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-go-install/"
 description: "go – tool for managing Go source code"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>go install</code> [<i>build flags</i>] [<i>packages</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Install compiles and installs the packages named by the import paths. </p>
 <p> Executables are installed in the directory named by the GOBIN environment variable, which defaults to $GOPATH/bin or $HOME/go/bin if the GOPATH environment variable is not set. Executables in $GOROOT are installed in $GOROOT/bin or $GOTOOLDIR instead of $GOBIN. </p>
 <p> If the arguments have version suffixes (like @latest or @v1.0.0), &quot;go install&quot; builds packages in module-aware mode, ignoring the go.mod file in the current directory or any parent directory, if there is one. This is useful for installing executables without affecting the dependencies of the main module. To eliminate ambiguity about which module versions are used in the build, the arguments must satisfy the following constraints:</p>

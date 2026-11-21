@@ -1,4 +1,5 @@
 ---
+
 title: "gconf-editor(1)"
 name: "gconf-editor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gconf-editor/"
 description: "gconf-editor – an editor for the GConf configuration system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gconf-editor</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>GConf-Editor</code> is a tool used for editing the GConf configuration database. It might be useful when the proper configuration utility for some software provides no way of changing some option.</p>
 <h2>USAGE</h2>
 <p> The main window consists of a tree showing the GConf configuration database hierarchy, a list of the keys available, and documentation for the selected key. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hexchat(1)"
 name: "hexchat"
 section: "1"
@@ -9,7 +10,6 @@ description: "HexChat – IRC Client"
 
 <h2>NAME</h2>
 <p> HexChat &#8211; IRC Client</p>
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

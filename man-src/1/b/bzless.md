@@ -1,4 +1,5 @@
 ---
+
 title: "bzless(1)"
 name: "bzless"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-bzless/"
 description: "bzmore, bzless – file perusal filter for crt viewing of bzip2 compressed text"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bzmore</code> [ name &#8230; ]<br />
  <code>bzless</code> [ name &#8230; ]</p>
 <h2>NOTE</h2>
 <p> In the following description, <i>bzless</i> and <i>less</i> can be used interchangeably with <i>bzmore</i> and <i>more.</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Bzmore</i> is a filter which allows examination of compressed or plain text files one screenful at a time on a soft-copy terminal. <i>bzmore</i> works on files compressed with <i>bzip2</i> and also on uncompressed files. If a file does not exist, <i>bzmore</i> looks for a file of the same name with the addition of a .bz2 suffix. </p>
 <p> <i>Bzmore</i> normally pauses after each screenful, printing &#8211;More&#8211; at the bottom of the screen. If the user then types a carriage return, one more line is displayed. If the user hits a space, another screenful is displayed. Other possibilities are enumerated later. </p>
 <p> <i>Bzmore</i> looks in the file <i>/etc/termcap</i> to determine terminal characteristics, and to determine the default window size. On a terminal capable of displaying 24 lines, the default window size is 22 lines. Other sequences which may be typed when <i>bzmore</i> pauses, and their effects, are as follows (<i>i</i> is an optional integer argument, defaulting to 1) : </p>

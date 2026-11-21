@@ -1,4 +1,5 @@
 ---
+
 title: "getmail_maildir(1)"
 name: "getmail_maildir"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getmail_maildir/"
 description: "getmail_maildir – read a message from stdin and deliver to a named maildir"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>getmail_maildir</code> [<i>OPTION</i>] <i>PATH</i></p>
-<h2>DESCRIPTION</h2>
 <p> Deliver a mail message from standard input, to the maildir named PATH. PATH must start with a dot or a slash and end with a slash. </p>
 <p> <code>getmail_maildir</code> uses the SENDER environment variable to construct a <code>Return-Path:</code> header field and the contents of the RECIPIENT environment variable to construct a <code>Delivered-To:</code> header field at the top of the message.</p>
 <dl>

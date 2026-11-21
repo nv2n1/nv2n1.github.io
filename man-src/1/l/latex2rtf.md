@@ -1,4 +1,5 @@
 ---
+
 title: "latex2rtf(1)"
 name: "latex2rtf"
 section: "1"
@@ -6,11 +7,11 @@ letter: "l"
 url: "/docs/linux/man/1-latex2rtf/"
 description: "latex2rtf – Convert a LaTeX file to an RTF file"
 ---
+
 <h2>NAME</h2>
 <p> latex2rtf - Convert a LaTeX file to an RTF file  </p>
 <h2>SYNTAX</h2>
 <p> latex2rtf [-hlpFSVW] [ -d# ] [ -D# ] [ -M# ] [ -se#] [ -sf#] [ -t# ] [ -Z# ] [ -a <i>auxfile</i> ] [ -b <i>bblfile</i> ] [ -C <i>codepage</i> ] [ -i <i>language</i> ] [ -o <i>outputfile</i> ] [ -P <i>/path/to/cfg</i> ] [ -T <i>/path/to/tmp</i> ] [ <i>inputfile</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>latex2rtf</i> command converts a LaTeX file into RTF text format. The text and much of the formatting information is translated to RTF. </p>
 <dl>
 <dt><code>-a auxfile</code></dt>

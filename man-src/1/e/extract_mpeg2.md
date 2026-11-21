@@ -1,4 +1,5 @@
 ---
+
 title: "extract_mpeg2(1)"
 name: "extract_mpeg2"
 section: "1"
@@ -9,9 +10,7 @@ description: "extract_mpeg2 – extract MPEG video streams from a multiplexed st
 
 <h2>NAME</h2>
 <p> extract_mpeg2 &#8211; extract MPEG video streams from a multiplexed stream.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>extract_mpeg2</code> [<i>-h</i>] [<i>-s [track]</i>] [<i>-t pid</i>] [<i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> `extract_mpeg2&#8242; extracts MPEG video streams from a multiplexed stream. Input is from stdin if no file is given.</p>
 <dl>
 <dt><code>-h</code></dt>

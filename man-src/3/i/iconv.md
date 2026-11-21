@@ -1,4 +1,5 @@
 ---
+
 title: "iconv(3)"
 name: "iconv"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-iconv/"
 description: "iconv – perform character set conversion"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;iconv.h&gt;
 size_t iconv(iconv_t cd,
              char **inbuf, size_t *inbytesleft,
              char **outbuf, size_t *outbytesleft);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>iconv</code>() function converts a sequence of characters in one character encoding to a sequence of characters in another character encoding. The <i>cd</i> argument is a conversion descriptor, previously created by a call to <code>iconv_open</code>(3); the conversion descriptor defines the character encodings that <code>iconv</code>() uses for the conversion. The <i>inbuf</i> argument is the address of a variable that points to the first character of the input sequence; <i>inbytesleft</i> indicates the number of bytes in that buffer. The <i>outbuf</i> argument is the address of a variable that points to the first byte available in the output buffer; <i>outbytesleft</i> indicates the number of bytes available in the output buffer. </p>
 <p> The main case is when <i>inbuf</i> is not NULL and <i>*inbuf</i> is not NULL. In this case, the <code>iconv</code>() function converts the multibyte sequence starting at <i>*inbuf</i> to a multibyte sequence starting at <i>*outbuf</i>. At most <i>*inbytesleft</i> bytes, starting at <i>*inbuf</i>, will be read. At most <i>*outbytesleft</i> bytes, starting at <i>*outbuf</i>, will be written. </p>
 <p> The <code>iconv</code>() function converts one multibyte character at a time, and for each character conversion it increments <i>*inbuf</i> and decrements <i>*inbytesleft</i> by the number of converted input bytes, it increments <i>*outbuf</i> and decrements <i>*outbytesleft</i> by the number of converted output bytes, and it updates the conversion state contained in <i>cd</i>. If the character encoding of the input is stateful, the <code>iconv</code>() function can also convert a sequence of input bytes to an update to the conversion state without producing any output bytes; such input is called a <i>shift sequence</i>. The conversion can stop for four reasons:</p>

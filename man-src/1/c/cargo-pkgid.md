@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-pkgid(1)"
 name: "cargo-pkgid"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-pkgid/"
 description: "cargo-pkgid – Print a fully qualified package specification"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo pkgid [OPTIONS] [&lt;SPEC&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> Given a &lt;SPEC&gt; argument, print out the fully qualified package id specifier. This command will generate an error if &lt;SPEC&gt; is ambiguous as to which package it refers to in the dependency graph. If no &lt;SPEC&gt; is given, then the pkgid for the local package is printed. </p>
 <p> This command requires that a lockfile is available and dependencies have been fetched.</p>
 <h2>OPTIONS</h2>

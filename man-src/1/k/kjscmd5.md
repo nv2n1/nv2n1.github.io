@@ -1,4 +1,5 @@
 ---
+
 title: "kjscmd5(1)"
 name: "kjscmd5"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-kjscmd5/"
 description: "kjscmd5 – Frameworks KJSEmbed interpreter"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kjscmd5</code> [&#8211;help] [[-e] | [&#8211;exec]] [[-i] | [-interactive]] [file]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>kjscmd5</code></p>
 <dd>is a tool for launching KJSEmbed scripts from the command line. It will run the scripts contained in the named <i>file</i> using KJSEmbed. It does not accept &#8211; (stdin) as a <i>file</i>.</dd>
 <h2>APPLICATION OPTIONS</h2>

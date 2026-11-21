@@ -1,4 +1,5 @@
 ---
+
 title: "capgetp(3)"
 name: "capgetp"
 section: "3"
@@ -9,7 +10,6 @@ description: "cap_get_proc, cap_set_proc, capgetp, cap_get_bound, cap_drop_bound
 
 <h2>NAME</h2>
 <p> cap_get_proc, cap_set_proc, capgetp, cap_get_bound, cap_drop_bound &#8211; capability manipulation on processes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>
 <p> <code>cap_t cap_get_proc(void);</code> </p>
 <p> <code>int cap_set_proc(cap_t </code><i>cap_p</i><code>);</code> </p>
@@ -19,7 +19,6 @@ description: "cap_get_proc, cap_set_proc, capgetp, cap_get_bound, cap_drop_bound
 <p> <code>#include &lt;sys/types.h&gt;</code> </p>
 <p> <code>cap_t cap_get_pid(pid_t </code><i>pid</i><code>);</code> </p>
 <p> Link with <i>-lcap</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>cap_get_proc</code>() allocates a capability state in working storage, sets its state to that of the calling process, and returns a pointer to this newly created capability state. The caller should free any releasable memory, when the capability state in working storage is no longer required, by calling <code>cap_free</code>() with the <i>cap_t</i> as an argument. </p>
 <p> <code>cap_set_proc</code>() sets the values for all capability flags for all capabilities to the capability state identified by <i>cap_p</i>. The new capability state of the process will be completely determined by the contents of <i>cap_p</i> upon successful return from this function. If any flag in <i>cap_p</i> is set for any capability not currently permitted for the calling process, the function will fail, and the capability state of the process will remain unchanged. </p>
 <p> <code>cap_get_pid</code>() returns <i>cap_d</i>, see <code><a href="/docs/linux/man/3-cap_init/">cap_init</a></code>(3), with the process capabilities of the process indicated by <i>pid</i>. This information can also be obtained from the <i>/proc/&lt;pid&gt;/status</i> file. </p>

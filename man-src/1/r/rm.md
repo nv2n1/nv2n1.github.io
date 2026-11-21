@@ -1,4 +1,5 @@
 ---
+
 title: "rm(1)"
 name: "rm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rm/"
 description: "rm – remove files or directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rm</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>rm</code>. <code>rm</code> removes each specified file. By default, it does not remove directories. </p>
 <p> If the <i>-I</i> or <i>&#8211;interactive=once</i> option is given, and there are more than three files or the <i>-r</i>, <i>-R</i>, or <i>&#8211;recursive</i> are given, then <code>rm</code> prompts the user for whether to proceed with the entire operation. If the response is not affirmative, the entire command is aborted. </p>
 <p> Otherwise, if a file is unwritable, standard input is a terminal, and the <i>-f</i> or <i>&#8211;force</i> option is not given, or the <i>-i</i> or <i>&#8211;interactive=always</i> option is given, <code>rm</code> prompts the user for whether to remove the file. If the response is not affirmative, the file is skipped.</p>

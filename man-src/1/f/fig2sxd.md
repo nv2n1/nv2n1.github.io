@@ -1,4 +1,5 @@
 ---
+
 title: "fig2sxd(1)"
 name: "fig2sxd"
 section: "1"
@@ -9,9 +10,7 @@ description: "fig2sxd – utility to convert .fig to .sxd"
 
 <h2>NAME</h2>
 <p> fig2sxd &#8211; utility to convert .fig to .sxd</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fig2sxd</code> <i>[-w] [-l(ine)w(idth)1 l] figfile sxdfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> The program tries to convert the given file in xfig format into a sxd file for OpenOffice.org Draw. If figfile ends with <code>.fig</code> or <code>.xfig</code> and sxdfile is omitted, the output file will be named like figfile ending with <code>.sxd</code> instead of <code>.(x)fig</code>. Using <code>&#8211;</code> for <i>figfile</i> makes the program read from stdin so that it is possible to use</p>
 <dl>
 <dt>

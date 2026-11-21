@@ -1,4 +1,5 @@
 ---
+
 title: "nm(1)"
 name: "nm"
 section: "1"
@@ -6,7 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nm/"
 description: "nm – list symbols from object files"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> nm [<code>-A</code>|<code>-o</code>|<code>--print-file-name</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-a</code>|<code>--debug-syms</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-B</code>|<code>--format=bsd</code>] <br />
@@ -40,7 +41,6 @@ description: "nm – list symbols from object files"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--with-symbol-versions</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--without-symbol-versions</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>objfile</i>...]  </p>
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">GNU</font> <code>nm</code> lists the symbols from object files <i>objfile</i>.... If no object files are listed as arguments, <code>nm</code> assumes the file <i>a.out</i>. </p>
 <p> For each symbol, <code>nm</code> shows: </p>
 <dl>

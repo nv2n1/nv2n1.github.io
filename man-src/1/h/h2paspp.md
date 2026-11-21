@@ -1,4 +1,5 @@
 ---
+
 title: "h2paspp(1)"
 name: "h2paspp"
 section: "1"
@@ -9,9 +10,7 @@ description: "h2paspp – Free Pascal h2pas preprocessor program."
 
 <h2>NAME</h2>
 <p> h2paspp &#8211; Free Pascal h2pas preprocessor program. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>h2paspp [-doih] file1 &#8230; filen</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>h2paspp</code> reads one or more C header files and preprocesses them, writing the result to files with the same name as the originals as it goes along. It does not accept all preprocesser tokens of C, but takes care of the following preprocessor directives:</p>
 <dl>
 <dt><i>#define symbol</i></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "gtranslator(1)"
 name: "gtranslator"
 section: "1"
@@ -9,9 +10,7 @@ description: "gtranslator — a comfortable gettext po file editor with many bel
 
 <h2>NAME</h2>
 <p> gtranslator &#8212; a comfortable gettext po file editor with many bells and whistles. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gtranslator [ &#8211;help ] [ &#8211;version ] [ -a filename ] [ -e po-file ] [ -g geometry-string ] [ -l po-file-to-learn ] [ -b ] [ -s ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> gtranslator is a comfortable gettext po file editor with many features like special char featured editing, plural forms view, div. charset support, comfortable prefs, list view of messages, regular expression based search function, compile/update possiblities and much much more. </p>
 <dl>
 <dt>Of course all standard features of a good application like DnD, session support, supplement files for mime types and menu items are present.</dt>

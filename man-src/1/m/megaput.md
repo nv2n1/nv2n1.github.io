@@ -1,4 +1,5 @@
 ---
+
 title: "megaput(1)"
 name: "megaput"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-megaput/"
 description: "megaput – upload files to your Mega.co.nz account"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 megaput[--no - progress][--path&lt;remotepath&gt;]&lt;paths&gt;...
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Uploads files to your Mega.co.nz account. </p>
 <p> <code>NOTE</code>: If you want to upload entire directories, use <code><a href="/docs/linux/man/1-megasync/">megasync</a></code>(1).</p>
 <h2>OPTIONS</h2>

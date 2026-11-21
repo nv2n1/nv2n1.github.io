@@ -1,4 +1,5 @@
 ---
+
 title: "pgpverify(1)"
 name: "pgpverify"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pgpverify/"
 description: "pgpverify – Cryptographically verify Usenet control messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgpverify</code> [<code>&#8211;findid</code>=<i>string</i>] [<code>&#8211;test</code>] &lt; <i>message</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pgpverify</code> program reads (on standard input) a Usenet control message that has been cryptographically signed using the <code>signcontrol</code> program (or some other program that produces a compatible format). <code>pgpverify</code> then uses a <font SIZE="-1">PGP</font> implementation to determine who signed the control message. If the control message has a valid signature, <code>pgpverify</code> prints (to stdout) the user <font SIZE="-1">ID</font> of the key that signed the message. Otherwise, it exits with a non-zero exit status. </p>
 <p> If <code>pgpverify</code> is installed as part of <font SIZE="-1">INN</font>, it uses <font SIZE="-1">INN</font>&#8216;s configuration to determine what signature verification program to use, how to log errors, what temporary directory to use, and what keyring to use. Otherwise, all of those parameters can be set by editing the beginning of this script. </p>
 <p> By default, when running as part of <font SIZE="-1">INN</font>, <code>pgpverify</code> expects the <font SIZE="-1">PGP</font> key ring to be found in <i>pathetc</i>/pgp (as either <i>pubring.pgp</i> or <i>pubring.gpg</i> depending on whether <font SIZE="-1">PGP</font> or GnuPG is used to verify signatures). If that directory doesn&#8217;t exist, it will fall back on using the default key ring, which is in a <i>.pgp</i> or <i>.gnupg</i> subdirectory of the running user&#8217;s home directory. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ocount(1)"
 name: "ocount"
 section: "1"
@@ -9,9 +10,7 @@ description: "ocount – Event counting tool for Linux"
 
 <h2>NAME</h2>
 <p> ocount &#8211; Event counting tool for Linux </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ocount</code> [ <i>options</i> ] [ &#8211;system-wide | &#8211;process-list &lt;pids&gt; | &#8211;thread-list &lt;tids&gt; | &#8211;cpu-list &lt;cpus&gt; [ command [ args ] ] ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ocount</code> is an OProfile tool that can be used to count native hardware events occurring in either a given application, a set of processes or threads, a subset of active system processors, or the entire system. The data collected during a counting session is displayed to stdout by default or, optionally, to a file. </p>
 <p> When counting multiple events, the kernel may not be able to count all events simultaneously and, thus, may need to multiplex the counting of the events. If this happens, the &quot;Percent time enabled&quot; column in the <code>ocount</code> output will be less than 100, but counts are scaled up to a 100% estimated value. </p>
 <h2>RUN MODES</h2>

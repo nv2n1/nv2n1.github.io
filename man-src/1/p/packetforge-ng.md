@@ -1,4 +1,5 @@
 ---
+
 title: "packetforge-ng(1)"
 name: "packetforge-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-packetforge-ng/"
 description: "packetforge-ng – forge packets: ARP, UDP, ICMP or custom packets."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>packetforge-ng</code> &lt;mode&gt; &lt;options&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>packetforge-ng</code> is a tool to create encrypted packets that can subsequently be used for injection. You may create various types of packets such as arp requests, UDP, ICMP and custom packets. The most common use is to create ARP requests for subsequent injection.<br />
  To create an encrypted packet, you must have a PRGA (pseudo random genration algorithm) file. This is used to encrypt the packet you create. This is typically obtained from aireplay-ng chopchop or fragmentation attacks.</p>
 <h2>OPTIONS</h2>

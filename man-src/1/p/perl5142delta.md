@@ -1,4 +1,5 @@
 ---
+
 title: "perl5142delta(1)"
 name: "perl5142delta"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perl5142delta/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perl5142delta - what is new for perl v5.14.2 
 
- perl5142delta - what is new for perl v5.14.2 
-
-<h2>DESCRIPTION</h2>
-
- This document describes differences between the 5.14.1 release and the 5.14.2 release. 
+This document describes differences between the 5.14.1 release and the 5.14.2 release. 
 
  If you are upgrading from an earlier release such as 5.14.0, first read perl5141delta, which describes differences between 5.14.0 and 5.14.1.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "select_tut(2)"
 name: "select_tut"
 section: "2"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/2-select_tut/"
 description: "select, pselect – synchronous I/O multiplexing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> See <code><a href="/docs/linux/man/2-select/">select</a></code>(2)</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>select</code>() and <code>pselect</code>() system calls are used to efficiently monitor multiple file descriptors, to see if any of them is, or becomes, &quot;ready&quot;; that is, to see whether I/O becomes possible, or an &quot;exceptional condition&quot; has occurred on any of the file descriptors. </p>
 <p> This page provides background and tutorial information on the use of these system calls. For details of the arguments and semantics of <code>select</code>() and <code>pselect</code>(), see <code><a href="/docs/linux/man/2-select/">select</a></code>(2).</p>
 <h3>Combining signal and data events</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "dspgst(3)"
 name: "dspgst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dspgst/"
 description: "dspgst.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br />
  <i></i><code>DSPGST</code></p>

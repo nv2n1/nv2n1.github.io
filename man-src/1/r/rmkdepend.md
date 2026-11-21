@@ -1,4 +1,5 @@
 ---
+
 title: "rmkdepend(1)"
 name: "rmkdepend"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rmkdepend/"
 description: "rmkdepend – create dependencies in makefiles (ROOT Version)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rmkdepend</code> [ <code>-D</code><i>name</i><code>=</code>def ] [ <code>-D</code><i>name</i> ] [ <code>-I</code><i>includedir</i> ] [ <code>-Y</code><i>includedir</i> ] [ <code>-a</code> ] [ <code>-f</code><i>makefile</i> ] [ <code>-o</code><i>objsuffix</i> ] [ <code>-p</code><i>objprefix</i> ] [ <code>-s</code><i>string</i> ] [ <code>-w</code><i>width</i> ] [ <code>-v</code> ] [ <code>-m</code> ] [ &#8212; <i>otheroptions</i> &#8212; ] <i>sourcefile</i> [ <code>-t</code><i>targetfilename</i> ] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>rmkdepend</code> program reads each <i>sourcefile</i> in sequence and parses it like a C-preprocessor, processing all <i>#include,</i> <i>#define,</i> <i>#undef,</i> <i>#ifdef,</i> <i>#ifndef,</i> <i>#endif,</i> <i>#if,</i> <i>#elif</i> and <i>#else</i> directives so that it can correctly tell which <i>#include,</i> directives would be used in a compilation. Any <i>#include,</i> directives can reference files having other <i>#include</i> directives, and parsing will occur in these files as well. </p>
 <p> Every file that a <i>sourcefile</i> includes, directly or indirectly, is what <code>rmkdepend</code> calls a <i>dependency.</i> These dependencies are then written to a <i>makefile</i> in such a way that <code><a href="/docs/linux/man/1-make/">make</a>(1)</code> will know which object files must be recompiled when a dependency has changed. </p>
 <p> By default, <code>rmkdepend</code> places its output in the file named <i>makefile</i> if it exists, otherwise <i>Makefile.</i> An alternate makefile may be specified with the <code>-f</code> option. It first searches the makefile for the line </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sspevx(3)"
 name: "sspevx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspevx/"
 description: "sspevx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspevx</code> (JOBZ, RANGE, UPLO, N, AP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
  <i></i><code> SSPEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

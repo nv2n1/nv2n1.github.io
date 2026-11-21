@@ -1,4 +1,5 @@
 ---
+
 title: "gammu-smsd-monitor(1)"
 name: "gammu-smsd-monitor"
 section: "1"
@@ -9,9 +10,7 @@ description: "gammu-smsd-monitor – Monitor state of SMS daemon for Gammu"
 
 <h2>NAME</h2>
 <p> gammu-smsd-monitor &#8211; Monitor state of SMS daemon for Gammu</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gammu-smsd-monitor</code> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gammu-smsd-monitor</code> command. </p>
 <p> <code>gammu-smsd-monitor</code> is a program that monitors state of Gammu SMS daemon. It periodically displays information about phone and number of processed messages. </p>
 <p> Program accepts following options (please note that long options might be not accepted on some platforms):</p>

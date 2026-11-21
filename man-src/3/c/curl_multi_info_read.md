@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_info_read(3)"
 name: "curl_multi_info_read"
 section: "3"
@@ -9,11 +10,9 @@ description: "curl_multi_info_read – read multi stack informationals"
 
 <h2>NAME</h2>
 <p> curl_multi_info_read &#8211; read multi stack informationals</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>
 <p> CURLMsg *curl_multi_info_read( CURLM *multi_handle,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>int&nbsp;<wbr>*msgs_in_queue);</p>
-<h2>DESCRIPTION</h2>
 <p> Ask the multi handle if there are any messages/informationals from the individual transfers. Messages may include informationals such as an error code from the transfer or just the fact that a transfer is completed. More details on these should be written down as well. </p>
 <p> Repeated calls to this function will return a new struct each time, until a NULL is returned as a signal that there is no more to get at this point. The integer pointed to with <i>msgs_in_queue</i> will contain the number of remaining messages after this function was called. </p>
 <p> When you fetch a message using this function, it is removed from the internal queue so calling this function again will not return the same message again. It will instead return new messages at each new invoke until the queue is emptied. </p>

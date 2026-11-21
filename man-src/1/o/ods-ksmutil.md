@@ -1,4 +1,5 @@
 ---
+
 title: "ods-ksmutil(1)"
 name: "ods-ksmutil"
 section: "1"
@@ -9,7 +10,6 @@ description: "ods-ksmutil – OpenDNSSEC zone and key management"
 
 <h2>NAME</h2>
 <p> <code>ods-ksmutil</code> &#8211; OpenDNSSEC zone and key management</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ods-ksmutil setup</code><br />
  <code>ods-ksmutil start|stop|notify</code><br />
  <code>ods-ksmutil update kasp|zonelist|conf|all</code><br />
@@ -21,7 +21,6 @@ description: "ods-ksmutil – OpenDNSSEC zone and key management"
  <code>ods-ksmutil repository list</code> &#8230;<br />
  <code>ods-ksmutil backup list|prepare|commit|rollback|done</code><br />
  <code>ods-ksmutil database backup</code> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <i>ods-ksmutil</i> manages the operation of the KASP Enforcer, which is the part of OpenDNSSEC that triggers key generation and signing operations on domains based on policies with user-defined timing and security requirements. Since everything beyond this management utility is usually automatic, <i>ods-ksmutil</i> is the primary tool for managing OpenDNSSEC. Among the functions of <i>ods-ksmutil</i> are key management, updates to the zone list and manually rolling keys to recover from exceptional situations like key loss. </p>
 <p> To get started, a first invocation of <i>ods-ksmutil setup</i> is needed; see SETUP AND UPDATE COMMANDS below for details. After this is done, the rest of the functionality of <i>ods-ksmutil</i> becomes available. </p>
 <p> The following sections discuss the subcommands in logical groups, detailing any options that they support.</p>

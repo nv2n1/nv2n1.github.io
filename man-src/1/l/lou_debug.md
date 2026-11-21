@@ -1,4 +1,5 @@
 ---
+
 title: "lou_debug(1)"
 name: "lou_debug"
 section: "1"
@@ -9,9 +10,7 @@ description: "lou_debug – A debugger for liblouis Braille translation tables"
 
 <h2>NAME</h2>
 <p> lou_debug &#8211; A debugger for liblouis Braille translation tables</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lou_debug</code> [<i>OPTION</i>] <i>TABLE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Examine and debug Braille translation tables. This program allows you to inspect liblouis translation tables and gather information about them, such as forward and backward rules, characters and dot patterns, specific opcodes, the size of a table, whether a hyphenation table is used, how many passes the translation takes and much more.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

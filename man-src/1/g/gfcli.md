@@ -1,4 +1,5 @@
 ---
+
 title: "gfcli(1)"
 name: "gfcli"
 section: "1"
@@ -9,9 +10,7 @@ description: "gfcli – manual page for gfcli (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfcli &#8211; manual page for gfcli (glusterfs-coreutils) 0.2.0</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gfcli</code> [<i>OPTION</i>]&#8230; [<i>URL</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Start a Gluster shell to execute commands on a remote Gluster volume.</p>
 <dl>
 <dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>

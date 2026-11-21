@@ -1,4 +1,5 @@
 ---
+
 title: "git-show(1)"
 name: "git-show"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-show/"
 description: "git-show – Show various types of objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git show[&lt;options&gt;][&lt;object&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Shows one or more objects (blobs, trees, tags and commits). </p>
 <p> For commits it shows the log message and textual diff. It also presents the merge commit in a special format as produced by <i>git diff-tree &#8211;cc</i>. </p>
 <p> For tags, it shows the tag message and the referenced objects. </p>

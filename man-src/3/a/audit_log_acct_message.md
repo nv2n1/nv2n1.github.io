@@ -1,4 +1,5 @@
 ---
+
 title: "audit_log_acct_message(3)"
 name: "audit_log_acct_message"
 section: "3"
@@ -9,10 +10,8 @@ description: "audit_log_acct_message – log a user account message"
 
 <h2>NAME</h2>
 <p> audit_log_acct_message &#8211; log a user account message</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> int audit_log_acct_message(int audit_fd, int type, const char *pgname, const char *op, const char *name, unsigned int id, const char *host, const char *addr, const char *tty, int result) </p>
-<h2>DESCRIPTION</h2>
 <p> This function will log a message to the audit system using a predefined message format. It should be used for all account manipulation operations. The function parameters are as follows: </p>
 <dl>
 <dl>

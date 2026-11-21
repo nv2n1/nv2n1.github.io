@@ -1,4 +1,5 @@
 ---
+
 title: "perlfaq3(1)"
 name: "perlfaq3"
 section: "1"
@@ -9,7 +10,6 @@ description: "perlfaq3 – Programming Tools"
 
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
-<h2>DESCRIPTION</h2>
 <p> This section of the <font SIZE="-1">FAQ</font> answers questions related to programmer tools and programming support.</p>
 <h3>How do I do (anything)?</h3>
 <p> Have you looked at <font SIZE="-1">CPAN</font> (see perlfaq2)? The chances are that someone has already written a module that can solve your problem. Have you read the appropriate manpages? Here&#8217;s a brief index:</p>

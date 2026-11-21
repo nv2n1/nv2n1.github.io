@@ -1,4 +1,5 @@
 ---
+
 title: "esdrec(1)"
 name: "esdrec"
 section: "1"
@@ -9,9 +10,7 @@ description: "esdrec – record a sound file"
 
 <h2>NAME</h2>
 <p> esdrec &#8211; record a sound file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>esdrec</code> [-<code>s </code><i>hostname</i>:<i>port</i>] [-<code>b</code>] [-<code>h</code>] [-<code>m</code>] [-<code>r </code><i>freq</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>esdrec</code> application pipes data from the sound device to <code>stdout</code> using the Enlightened Sound Daemon (<code>esd</code>).</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported: </p>

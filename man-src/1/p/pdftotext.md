@@ -1,4 +1,5 @@
 ---
+
 title: "pdftotext(1)"
 name: "pdftotext"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdftotext/"
 description: "pdftotext – Portable Document Format (PDF) to text converter (version 3.03)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdftotext</code> [options] [<i>PDF-file</i> [<i>text-file</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Pdftotext</code> converts Portable Document Format (PDF) files to plain text. </p>
 <p> Pdftotext reads the PDF file, <i>PDF-file</i>, and writes a text file, <i>text-file</i>. If <i>text-file</i> is not specified, pdftotext converts <i>file.pdf</i> to <i>file.txt</i>. If <i>text-file</i> is &#8216;-&#8216;, the text is sent to stdout. If <i>PDF-file</i> is &#8216;-&#8216;, it reads the PDF file from stdin.</p>
 <h2>OPTIONS</h2>

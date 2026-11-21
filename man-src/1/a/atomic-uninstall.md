@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-uninstall(1)"
 name: "atomic-uninstall"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-atomic-uninstall/"
 description: "atomic-uninstall – Remove/Uninstall container/container image from system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic uninstall</code> [<code>-f</code>][<code>&#8211;force</code>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-n</code>][<code>&#8211;name</code>[=<i>NAME</i>]] IMAGE [ARG&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>atomic uninstall</code> attempts to read the LABEL UNINSTALL field in the container IMAGE, if this field does not exist <code>atomic uninstall</code> will just uninstall the image. </p>
 <p> If the container image has a LABEL UNINSTALL instruction like the following: </p>
 <p> LABEL UNINSTALL /usr/bin/docker run -t -i &#8211;rm \${OPT1} &#8211;privileged -v /:/host &#8211;net=host &#8211;ipc=host &#8211;pid=host -e HOST=/host -e NAME=${NAME} -e IMAGE=${IMAGE} -e CONFDIR=\/etc/${NAME} -e LOGDIR=/var/log/\${NAME} -e DATADIR=/var/lib/\${NAME} ${IMAGE} \${OPT2} /bin/uninstall.sh \${OPT3} </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dtbcon(3)"
 name: "dtbcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtbcon/"
 description: "dtbcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>DTBCON</code></p>

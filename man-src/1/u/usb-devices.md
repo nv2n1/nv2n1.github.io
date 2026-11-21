@@ -1,4 +1,5 @@
 ---
+
 title: "usb-devices(1)"
 name: "usb-devices"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-usb-devices/"
 description: "usb-devices – print USB device details"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>usb-devices</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>usb-devices</code> is a shell script that can be used to display details of USB buses in the system and the devices connected to them. </p>
 <p> The output of the script is similar to the <i>usb/devices</i> file available either under <i>/proc/bus</i> (if usbfs is mounted), or under <i>/sys/kernel/debug</i> (if debugfs is mounted there). The script is primarily intended to be used if the file is not available. </p>
 <p> In contrast to the <i>usb/devices</i> file, this script only lists <i>active</i> interfaces (those marked with a &quot;*&quot; in the <i>usb/devices</i> file) and their endpoints. </p>

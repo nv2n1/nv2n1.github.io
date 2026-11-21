@@ -1,4 +1,5 @@
 ---
+
 title: "unbuffer(1)"
 name: "unbuffer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unbuffer/"
 description: "unbuffer – unbuffer output"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>unbuffer</code> <i>program</i> [ <i>args</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>unbuffer</code> disables the output buffering that occurs when program output is redirected from non-interactive programs. For example, suppose you are watching the output from a fifo by running it through od and then more. </p>

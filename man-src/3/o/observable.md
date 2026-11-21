@@ -1,4 +1,5 @@
 ---
+
 title: "observable(3)"
 name: "observable"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-observable/"
 description: "ql/patterns/observable.hpp – observer/observable pattern"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/errors.hpp&gt;<br />
  #include &lt;boost/shared_ptr.hpp&gt;<br />
  #include &lt;list&gt; </p>

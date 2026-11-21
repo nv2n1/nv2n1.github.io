@@ -1,4 +1,5 @@
 ---
+
 title: "clacrm(3)"
 name: "clacrm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clacrm/"
 description: "clacrm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clacrm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br />
  <i></i><code>CLACRM</code> multiplies a complex matrix by a square real matrix.</p>

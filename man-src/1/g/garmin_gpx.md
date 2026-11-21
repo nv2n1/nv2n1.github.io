@@ -1,4 +1,5 @@
 ---
+
 title: "garmin_gpx(1)"
 name: "garmin_gpx"
 section: "1"
@@ -9,7 +10,6 @@ description: "garmin_gpx – convert .gmn files into xml data for use with OpenS
 
 <h2>NAME</h2>
 <p> garmin_gpx &#8211; convert .gmn files into xml data for use with OpenStreetMap</p>
-<h2>SYNOPSIS</h2>
 <p> <code>garmin_gpx</code> <i>file</i> </p>
 <p> <code>garmin_gpx</code> reads a .gmp file as produced by <code>garmin_save_runs</code>, and writes to standard output the xml representation (for OpenStreetMap maps).</p>
 <h2>SEE ALSO</h2>

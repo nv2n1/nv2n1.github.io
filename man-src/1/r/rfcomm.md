@@ -1,4 +1,5 @@
 ---
+
 title: "rfcomm(1)"
 name: "rfcomm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rfcomm/"
 description: "rfcomm – RFCOMM configuration utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rfcomm</code> [<i>OPTIONS</i>] &lt;<i>COMMAND</i>&gt; &lt;<i>dev</i>&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-rfcomm/">rfcomm</a>(1)</code> is used to set up, maintain, and inspect the RFCOMM configuration of the Bluetooth subsystem in the Linux kernel. If no <code>command</code> is given, or if the option <code>-a</code> is used, <code>rfcomm</code> prints information about the configured RFCOMM devices.</p>
 <h2>OPTIONS</h2>
 <dl>

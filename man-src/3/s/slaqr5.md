@@ -1,4 +1,5 @@
 ---
+
 title: "slaqr5(3)"
 name: "slaqr5"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaqr5/"
 description: "slaqr5.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqr5</code> (WANTT, WANTZ, KACC22, N, KTOP, KBOT, NSHFTS, SR, SI, H, LDH, ILOZ, IHIZ, Z, LDZ, V, LDV, U, LDU, NV, WV, LDWV, NH, WH, LDWH)<br />
  <i></i><code>SLAQR5</code> performs a single small-bulge multi-shift QR sweep.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "chkdvifont(1)"
 name: "chkdvifont"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-chkdvifont/"
 description: "chkdvifont – CHecK DVI/tfm/font file and tell informations of FONTs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>chkdvifont</code> [<code>-s</code>] [<code>-c</code>] [<code>-{f|F}</code><i>&lt;font_data_file&gt;</i>] [<code>-d</code>] <i>dvi_file_name</i> </p>
 <p> <code>chkdvifont</code> [<code>-s</code>] [<code>-c</code>] [<code>-{f|F}</code><i>&lt;font_data_file&gt;</i>] [<code>-t</code>] <i>tfm_file_name</i> </p>
 <p> <code>chkdvifont</code> [<code>-s</code>] [<code>-c</code>] [<code>-{f|F}</code><i>&lt;font_data_file&gt;</i>] [<code>-p</code>] <i>font_file_name</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Chkdvifont</code> is a utility to check DVI and other TeX font-related formats (such as TFM, VF, GF and PK) and print information of those fonts. There are 3 modes; </p>
 <p> Option <code>-d</code>: force DVI mode </p>
 <p> Option <code>-t</code>: force TFM/OFM mode </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "audit2allow(1)"
 name: "audit2allow"
 section: "1"
@@ -10,7 +11,6 @@ description: "audit2allow – generate SELinux policy allow/dontaudit rules from
 <h2>NAME</h2>
 <p> <code>audit2allow</code> &#8211; generate SELinux policy allow/dontaudit rules from logs of denied operations </p>
 <p> <code>audit2why</code> &#8211; translates SELinux audit messages into a description of why the access was denied (audit2allow -w) </p>
-<h2>SYNOPSIS</h2>
 <p> <code>audit2allow</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -47,7 +47,6 @@ description: "audit2allow – generate SELinux policy allow/dontaudit rules from
 <dt><code>-v | &#8211;verbose</code></dt>
 <dd> Turn on verbose output </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> This utility scans the logs for messages logged when the system denied permission for operations, and generates a snippet of policy rules which, if loaded into policy, might have allowed those operations to succeed. However, this utility only generates Type Enforcement (TE) allow rules. Certain permission denials may require other kinds of policy changes, e.g. adding an attribute to a type declaration to satisfy an existing constraint, adding a role allow rule, or modifying a constraint. The <code>audit2why</code>(8) utility may be used to diagnose the reason when it is unclear. </p>
 <p> Care must be exercised while acting on the output of this utility to ensure that the operations being permitted do not pose a security threat. Often it is better to define new domains and/or types, or make other structural changes to narrowly allow an optimal set of operations to succeed, as opposed to blindly implementing the sometimes broad changes recommended by this utility. Certain permission denials are not fatal to the application, in which case it may be preferable to simply suppress logging of the denial via a &#8216;dontaudit&#8217; rule rather than an &#8216;allow&#8217; rule. </p>
 <h2>EXAMPLE</h2>

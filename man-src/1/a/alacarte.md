@@ -1,4 +1,5 @@
 ---
+
 title: "alacarte(1)"
 name: "alacarte"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-alacarte/"
 description: "alacarte – Edit freedesktop.org menus"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>alacarte</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>alacarte is a graphical editor for the freedesktop.org menus that are used by many desktop environments. It can also edit and create application desktop files.</dd>
 <h2>OPTIONS</h2>
 <p> <code>alacarte</code> does not accept any commandline options.</p>

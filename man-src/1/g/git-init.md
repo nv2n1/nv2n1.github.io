@@ -1,4 +1,5 @@
 ---
+
 title: "git-init(1)"
 name: "git-init"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-git-init/"
 description: "git-init – Create an empty Git repository or reinitialize an existing one"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git init[-q | --quiet][--bare][--template = &lt;template_directory&gt;]
         [--separate - git - dir&lt;git dir&gt;][--object - format = &lt;format&gt;]
         [-b&lt;branch - name&gt; | --initial - branch = &lt;branch - name&gt;]
         [--shared[=&lt;permissions&gt;]][directory]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command creates an empty Git repository &#8211; basically a <code>.git</code> directory with subdirectories for <code>objects</code>, <code>refs/heads</code>, <code>refs/tags</code>, and template files. An initial branch without any commits will be created (see the <code>&#8211;initial-branch</code> option below for its name). </p>
 <p> If the <code>$GIT_DIR</code> environment variable is set then it specifies a path to use instead of <code>./.git</code> for the base of the repository. </p>
 <p> If the object storage directory is specified via the <code>$GIT_OBJECT_DIRECTORY</code> environment variable then the sha1 directories are created underneath &#8211; otherwise the default <code>$GIT_DIR/objects</code> directory is used. </p>

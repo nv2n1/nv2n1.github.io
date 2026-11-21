@@ -1,4 +1,5 @@
 ---
+
 title: "mkisofs(1)"
 name: "mkisofs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mkisofs/"
 description: "genisoimage – create ISO9660/Joliet/HFS filesystem with optional Rock Ridge attributes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>genisoimage</code> [<i>options</i>] [<code>-o</code> <i>filename</i>] <i>pathspec</i> [<i>pathspec &#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>genisoimage</code> is a pre-mastering program to generate ISO9660/Joliet/HFS hybrid filesystems. </p>
 <p> <code>genisoimage</code> is capable of generating the <code>System Use Sharing Protocol records (SUSP)</code> specified by the <code>Rock Ridge Interchange Protocol</code>. This is used to further describe the files in the ISO9660 filesystem to a Unix host, and provides information such as long filenames, UID/GID, POSIX permissions, symbolic links, and block and character device files. </p>
 <p> If Joliet or HFS hybrid command line options are specified, <code>genisoimage</code> will create the additional filesystem metadata needed for Joliet or HFS. Otherwise <code>genisoimage</code> will generate a pure ISO9660 filesystem. </p>

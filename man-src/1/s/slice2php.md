@@ -1,4 +1,5 @@
 ---
+
 title: "slice2php(1)"
 name: "slice2php"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slice2php/"
 description: "slice2php – The Slice to PHP compiler."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> slice2php [options] [files] </p>
-<h2>DESCRIPTION</h2>
 <p> slice2php compiles Slice files to PHP. </p>
 <p> Full documentation for slice2php is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/slice2php+Command-Line+Options">http://doc.zeroc.com/display/Ice/slice2php+Command-Line+Options</a>&quot;. </p>

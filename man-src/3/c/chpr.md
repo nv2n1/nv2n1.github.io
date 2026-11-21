@@ -1,4 +1,5 @@
 ---
+
 title: "chpr(3)"
 name: "chpr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chpr/"
 description: "chpr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpr</code> (UPLO, N, ALPHA, X, INCX, AP)<br />
  <i></i><code>CHPR</code></p>

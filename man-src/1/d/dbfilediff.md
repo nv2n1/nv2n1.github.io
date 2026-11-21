@@ -1,4 +1,5 @@
 ---
+
 title: "dbfilediff(1)"
 name: "dbfilediff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbfilediff/"
 description: "dbfilediff – compare two fsdb tables"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dbfilediff[-Eq][-N diff_column_name]-- input table1.fsdb-- input table2.fsdb
 </code></pre>
@@ -15,7 +15,6 @@ dbfilediff[-Eq][-N diff_column_name]-- input table1.fsdb-- input table2.fsdb
 <pre>
     cat table1.fsdb  | dbfilediff [-sq] --input table2.fsdb
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Dbfilediff compares two Fsdb tables, row by row. Unlike Unix <i><a href="/docs/linux/man/1-diff/">diff</a></i>(1), this program assumes the files are identical line-by-line and we compare fields. Thus, insertion of one extra row will result in all subsequent lines being marked different. </p>
 <p> By default, <i>all</i> columns must be unique. (At some point, support to specific specific columns may be added.) </p>
 <p> Output is a new table with a new column <tt>&quot;diff&quot;</tt> (or something else if the <tt>&quot;-N&quot;</tt> option is given), &#8220;-&#8221; and &#8220;+&#8221; for the first and second non-equal rows, &#8220;=&#8221; for matching lines, or &#8220;~&#8221; if they are equal with epsilon numerics (in which case only the second row is included). Unlike Unix <i><a href="/docs/linux/man/1-diff/">diff</a></i>(1), we output <i>all</i> rows (the &#8220;=&#8221; lines), not just diffs (the <tt>&quot;--quiet&quot;</tt> option suppresses this output). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gamma(3)"
 name: "gamma"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gamma/"
 description: "gamma, gammaf, gammal – (logarithm of the) gamma function"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double gamma(double </code><i>x</i><code>);</code><br />
  <code>float gammaf(float </code><i>x</i><code>);</code><br />
@@ -26,7 +26,6 @@ description: "gamma, gammaf, gammal – (logarithm of the) gamma function"
 </dt><dd> _XOPEN_SOURCE &gt;= 600 || (_XOPEN_SOURCE &amp;&amp; _ISOC99_SOURCE)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions are deprecated: instead, use either the <code><a href="/docs/linux/man/3-tgamma/">tgamma</a></code>(3) or the <code><a href="/docs/linux/man/3-lgamma/">lgamma</a></code>(3) functions, as appropriate. </p>
 <p> For the definition of the Gamma function, see <code><a href="/docs/linux/man/3-tgamma/">tgamma</a></code>(3).</p>
 <h3>*BSD version</h3>

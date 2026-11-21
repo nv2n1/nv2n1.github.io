@@ -1,4 +1,5 @@
 ---
+
 title: "podviewer(1)"
 name: "podviewer"
 section: "1"
@@ -6,20 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-podviewer/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+podviewer - a Gtk2-Perl POD Reading Program 
 
- podviewer - a Gtk2-Perl POD Reading Program 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
         podviewer [FILE|MODULE|FUNCTION|POD]
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- <tt>&quot;podviewer&quot;</tt> provides a simple and attractive way to read Perl's <font SIZE="-1">POD</font> documentation. You can use it to read the Perl <font SIZE="-1">POD</font> pages, module documentation and information about Perl's builtin functions.
+<tt>&quot;podviewer&quot;</tt> provides a simple and attractive way to read Perl's <font SIZE="-1">POD</font> documentation. You can use it to read the Perl <font SIZE="-1">POD</font> pages, module documentation and information about Perl's builtin functions.
 
 <h2>KEYBOARD SHORTCUTS</h2>
 

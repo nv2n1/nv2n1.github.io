@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-storage(1)"
 name: "atomic-storage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-storage/"
 description: "atomic-storage – Manage container storage."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic storage COMMAND [OPTIONS]</code> </p>
 <p> atomic storage allows the user to easily manage container storage. You can reset your container environment back to its initial state as well as migrate all images, volumes, and containers from one version of atomic to another. With this command, users can quickly save all their data from the current atomic instance, change the container&#8217;s content storage backend, and then import all their old data to the new system. </p>
 <h2>COMMANDS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-unix-guide(1)"
 name: "mrtg-unix-guide"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg-unix-guide/"
 description: "mrtg-unix-guide – The MRTG 2.17.4 Linux/Unix Installation Guide"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">MRTG</font> comes to you in Source Code. This means that you have to compile parts of it before you can use it on a Unix machine. These instructions help you to do so.</p>
 <h2>PREPARATION</h2>
 <p> In order to compile and use mrtg you need a C compiler and a copy of perl installed on your machine. In most cases this will already be available. In case it is not, here are some starting points. Below I&#8217;ll give you a detailed run through the whole compilation process.</p>

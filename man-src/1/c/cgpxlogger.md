@@ -1,4 +1,5 @@
 ---
+
 title: "cgpxlogger(1)"
 name: "cgpxlogger"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgpxlogger/"
 description: "gps, xgps, xgpsspeed, cgps, lcdgps, cgpxlogger – test clients for gpsd"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xgps</code> [<i>X-options</i>] [-h] [-V] [-j] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [-altunits&nbsp;<wbr>{[feet]&nbsp;<wbr>|&nbsp;<wbr>[meters]}] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
 <dt> <code>xgpsspeed</code> [-rv] [<i>X-options</i>] [-h] [-V] [-nc&nbsp;<wbr><i>X-color</i>] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
@@ -15,7 +15,6 @@ description: "gps, xgps, xgpsspeed, cgps, lcdgps, cgpxlogger – test clients fo
 <dt> <code>lcdgps</code> [-h] [-V] [-j] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
 <dt> <code>gpxlogger</code></dt>
 <dt> <code>gpxlogger</code> [-h] [-V] [-j] [-i&nbsp;<wbr><i>track timeout</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>These are the demonstration clients shipped with gpsd. They have some common options: </dd>
 <p> The <code>-h</code> option causes each client to emit a summary of its options and then exit. </p>
 <p> The <code>-V</code> option causes each client to dump the package version and exit. </p>

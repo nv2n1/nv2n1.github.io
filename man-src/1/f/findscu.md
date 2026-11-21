@@ -1,4 +1,5 @@
 ---
+
 title: "findscu(1)"
 name: "findscu"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-findscu/"
 description: "findscu – DICOM query (C-FIND) SCU"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 findscu[options] peer port[dcmfile - in...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>findscu</code> application implements an SCU for the Query/Retrieve Service Class and the Basic Worklist Management Service Class. <code>findscu</code> only supports query functionality using the C-FIND message. It sends query keys to an SCP and awaits responses. The application can be used to test SCPs of the Query/Retrieve and Basic Worklist Management Service Classes.</p>
 <h2>PARAMETERS</h2>
 <pre>

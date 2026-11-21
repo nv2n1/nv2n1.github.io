@@ -1,4 +1,5 @@
 ---
+
 title: "extendedbinomialtree(3)"
 name: "extendedbinomialtree"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-extendedbinomialtree/"
 description: "ql/experimental/lattices/extendedbinomialtree.hpp – Time-dependent binomial tree class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/lattices/tree.hpp&gt;<br />
  #include &lt;ql/instruments/dividendschedule.hpp&gt;<br />
  #include &lt;ql/stochasticprocess.hpp&gt; </p>

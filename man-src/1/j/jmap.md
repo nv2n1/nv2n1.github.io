@@ -1,4 +1,5 @@
 ---
+
 title: "jmap(1)"
 name: "jmap"
 section: "1"
@@ -6,9 +7,9 @@ letter: "j"
 url: "/docs/linux/man/1-jmap/"
 description: "jmap – Prints shared object memory maps or heap memory details for a process, core file, or remote debug server. This command is experimental and unsupported."
 ---
+
 <h2>NAME</h2>
 <p> jmap - Prints shared object memory maps or heap memory details for a process, core file, or remote debug server. This command is experimental and unsupported.  </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  jmap  [ options  ] pid 
 </code></pre>
@@ -37,7 +38,6 @@ description: "jmap – Prints shared object memory maps or heap memory details f
 <dt><i>server-id</i></dt>
 <dd> <p> An optional unique ID to use when multiple debug servers are running on the same remote host. </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jmap</code> command prints shared object memory maps or heap memory details of a specified process, core file, or remote debug server. If the specified process is running on a 64-bit Java Virtual Machine (JVM), then you might need to specify the <code>-J-d64</code> option, for example: <code>jmap</code><code>-J-d64 -heap pid</code>. </p>
 <p> <i>Note:</i> This utility is unsupported and might not be available in future releases of the JDK. On Windows Systems where the <code>dbgeng.dll</code> file is not present, Debugging Tools For Windows must be installed to make these tools work. The <code>PATH</code> environment variable should contain the location of the <code>jvm.dll</code> file that is used by the target process or the location from which the crash dump file was produced, for example: <code>set PATH=%JDK_HOME%\jre\bin\client;%PATH%</code>.  </p>
 <h2>OPTIONS</h2>

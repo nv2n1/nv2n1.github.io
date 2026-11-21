@@ -1,4 +1,5 @@
 ---
+
 title: "policyeditor(1)"
 name: "policyeditor"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-policyeditor/"
 description: "policyeditor – view and modify security policy settings for javaws and the browser plugin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> policyeditor &#8211; view and modify security policy settings for <code>javaws </code> and the <code>browser plugin</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>policyeditor </code><br />
  <code>policyeditor [-file] </code> policy_file <code>[-codebase] </code> url</p>
-<h2>DESCRIPTION</h2>
 <p> <code>policyeditor </code> is a GUI application with small command line support to view and edit applet security policy settings used by the IcedTea-Web implementation of <code>javaws </code> and the <code>browser plugin. </code> It is intended as a simpler, easier to use, and more accessible alternative to the standard <code>JDK Policy Tool. </code> Administrators and power users who need fine grained control over policy files should probably use Policy Tool instead of PolicyEditor. </p>
 <p> If executed without any arguments, no file is opened, and saving the file will result in a prompt on where to save it. Otherwise, if a file path is given as a command line argument, then that file path will be opened and parsed as policy file. </p>
 <h2>OPTIONS</h2>

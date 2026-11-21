@@ -1,4 +1,5 @@
 ---
+
 title: "forwardforwardmappings(3)"
 name: "forwardforwardmappings"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-forwardforwardmappings/"
 description: "ql/models/marketmodels/forwardforwardmappings.hpp – Utility functions for mapping between forward rates of varying tenor."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt; </p>
 <h3>Functions</h3>
 <p> Disposable&lt; Matrix &gt; <code>ForwardForwardJacobian</code> (const CurveState &amp;cs, Size multiplier, Size offset) </p>

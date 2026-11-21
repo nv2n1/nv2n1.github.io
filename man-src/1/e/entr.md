@@ -1,4 +1,5 @@
 ---
+
 title: "entr(1)"
 name: "entr"
 section: "1"
@@ -9,9 +10,7 @@ description: "entr – run arbitrary commands when files change"
 
 <h2>NAME</h2>
 <p> <code>entr</code> &#8211; run arbitrary commands when files change</p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>cdpr</code> ] <i>utility</i> [<i>argument &#8230;</i> ] [<i>/_</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> A list of files provided on the standard input and the <i>utility</i> is executed using the supplied arguments if any of them change. waits for the child process to finish before responding to subsequent file system events. A TTY is also opened before entering the watch loop in order to support interactive utilities. </p>
 <p> The arguments are as follows:</p>
 <dl>

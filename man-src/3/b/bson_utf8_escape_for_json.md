@@ -1,4 +1,5 @@
 ---
+
 title: "bson_utf8_escape_for_json(3)"
 name: "bson_utf8_escape_for_json"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_utf8_escape_for_json() – Escapes the string utf8 to be plac
 
 <h2>NAME</h2>
 <p> bson_utf8_escape_for_json() &#8211; Escapes the string utf8 to be placed inside of a JSON string.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 char *
 bson_utf8_escape_for_json(const char *utf8,
@@ -22,7 +22,6 @@ bson_utf8_escape_for_json(const char *utf8,
 <dl>
 <dt><code>utf8_len</code></dt>
 <dd> The length of <code>utf8</code> in bytes or -1 if it is NULL terminated.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Escapes the string <code>utf8</code> to be placed inside of a JSON string. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated string that should be freed with <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> \&amp;. </p>

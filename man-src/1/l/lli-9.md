@@ -1,4 +1,5 @@
 ---
+
 title: "lli-9(1)"
 name: "lli-9"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lli-9/"
 description: "lli – manual page for lli 9"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> OVERVIEW: llvm interpreter &amp; dynamic compiler </p>
 <p> USAGE: lli [options] &lt;input bitcode&gt; &lt;program arguments&gt;&#8230; </p>
 <p> OPTIONS: </p>

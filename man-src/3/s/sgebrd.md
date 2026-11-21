@@ -1,4 +1,5 @@
 ---
+
 title: "sgebrd(3)"
 name: "sgebrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgebrd/"
 description: "sgebrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br />
  <i></i><code>SGEBRD</code></p>

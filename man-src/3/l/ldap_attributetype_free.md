@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_attributetype_free(3)"
 name: "ldap_attributetype_free"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldap_str2syntax, ldap_syntax2str, ldap_syntax2name, ldap_syntax_fr
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 #include &lt;ldap_schema.h&gt;
@@ -60,7 +60,6 @@ ldap_objectclass_free(oc)
 char *ldap_scherr2str(code)
 int code;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These routines are used to parse schema definitions in the syntax defined in RFC 4512 into structs and handle these structs. These routines handle four kinds of definitions: syntaxes, matching rules, attribute types and object classes. For each definition kind, four routines are provided. </p>
 <p> <code>ldap_str2xxx()</code> takes a definition in RFC 4512 format in argument <i>s</i> as a NUL-terminated string and returns, if possible, a pointer to a newly allocated struct of the appropriate kind. The caller is responsible for freeing the struct by calling <code>ldap_xxx_free()</code> when not needed any longer. The routine returns NULL if some problem happened. In this case, the integer pointed at by argument <i>code</i> will receive an error code (see below the description of <code>ldap_scherr2str()</code> for an explanation of the values) and a pointer to a NUL-terminated string will be placed where requested by argument <i>errp</i> , indicating where in argument <i>s</i> the error happened, so it must not be freed by the caller. Argument <i>flags</i> is a bit mask of parsing options controlling the relaxation of the syntax recognized. The following values are defined:</p>
 <dl>

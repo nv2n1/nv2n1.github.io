@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_sign2(3)"
 name: "gnutls_x509_crq_sign2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crq_sign2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_sign2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_sign2(gnutls_x509_crq_t </code><i>crq</i><code>, gnutls_x509_privkey_t </code><i>key</i><code>, gnutls_digest_algorithm_t </code><i>dig</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crq_sign2 – API function"
 <dd> The message digest to use, i.e., <code>GNUTLS_DIG_SHA1</code></dd>
 <dt>unsigned int flags</dt>
 <dd> must be 0</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will sign the certificate request with a private key. This must be the same key as the one used in <code>gnutls_x509_crt_set_key()</code> since a certificate request is self signed. </p>
 <p> This must be the last step in a certificate request generation since all the previously set parameters are now signed.</p>
 <h2>RETURNS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "dorglq(3)"
 name: "dorglq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dorglq/"
 description: "dorglq.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorglq</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>DORGLQ</code></p>

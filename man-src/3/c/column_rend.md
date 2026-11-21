@@ -1,4 +1,5 @@
 ---
+
 title: "column_rend(3)"
 name: "column_rend"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-column_rend/"
 description: "QuantLib::Matrix – Matrix used in linear algebra."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt; </p>
 <p> Inherited by <code>Disposable&lt; Matrix &gt;</code>. </p>
 <h3>Public Types</h3>

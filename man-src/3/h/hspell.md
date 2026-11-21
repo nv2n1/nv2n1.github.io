@@ -1,4 +1,5 @@
 ---
+
 title: "hspell(3)"
 name: "hspell"
 section: "3"
@@ -9,7 +10,6 @@ description: "hspell – Hebrew spellchecker (C API)"
 
 <h2>NAME</h2>
 <p> hspell &#8211; Hebrew spellchecker (C API)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;hspell.h&gt;</code> </p>
 <p> <code>int hspell_init(struct dict_radix **</code>dictp<code>, int </code>flags<code>);</code> </p>
 <p> <code>void hspell_uninit(struct dict_radix *</code>dictp<code>);</code> </p>
@@ -24,7 +24,6 @@ description: "hspell – Hebrew spellchecker (C API)"
 <p> <code>int hspell_enum_splits(struct dict_radix *</code>dict<code>, const char *</code>word<code>, hspell_word_split_callback_func *</code>enumf<code>);</code> </p>
 <p> <code>void hspell_set_dictionary_path(const char *</code>path<code>);</code> </p>
 <p> <code>const char *hspell_get_dictionary_path(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual describes the C API of the Hspell Hebrew spellchecker. Please refer to <code><a href="/docs/linux/man/1-hspell/">hspell</a></code>(1) for a description of the Hspell project, its spelling standard, and how it works. </p>
 <p> The <code>hspell_init()</code> function must be called first to initialize the Hspell library. It sets up some global structures (see CAVEATS section) and then reads the necessary dictionary files (whose places are fixed when the library is built). The <i>&#8216;dictp&#8217;</i> parameter is a pointer to a <i>struct dict_radix*</i> object, which is modified to point to a newly allocated dictionary. A typical <code>hspell_init()</code> call therefore looks like </p>
 <p>struct dict_radix&nbsp;<wbr>*dict;<br />

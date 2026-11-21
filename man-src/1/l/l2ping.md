@@ -1,4 +1,5 @@
 ---
+
 title: "l2ping(1)"
 name: "l2ping"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-l2ping/"
 description: "l2ping – Send L2CAP echo request and receive answer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>l2ping</code> [<i>OPTIONS</i>] <i>bd_addr</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-l2ping/">l2ping</a>(1)</code> sends a L2CAP echo request to the Bluetooth MAC address bd_addr given in dotted hex notation.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "atril(1)"
 name: "atril"
 section: "1"
@@ -9,7 +10,6 @@ description: "Atril – The MATE Document Viewer"
 
 <h2>SYNTAX</h2>
 <p> <code>atril [OPTIONS&#8230;] [FILES&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Atril is the official Document Viewer of the MATE Desktop Environment, it is a simple multi-page document viewer. It can display and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI, XPS and Portable Document Format (PDF) files.</p>
 <dl>
 <dt>When supported by the document, it also allows searching for text, copying text to the clipboard, hypertext navigation, and table-of-contents bookmarks.</dt>

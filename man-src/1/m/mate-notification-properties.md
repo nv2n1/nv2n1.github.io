@@ -1,4 +1,5 @@
 ---
+
 title: "mate-notification-properties(1)"
 name: "mate-notification-properties"
 section: "1"
@@ -9,9 +10,7 @@ description: "mate-notification-properties – Set up the options for desktop no
 
 <h2>NAME</h2>
 <p> mate-notification-properties &#8211; Set up the options for desktop notifications </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-notification-properties </code> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mate-notification-properties</code> command. </p>
 <p> <code>mate-notification-properties</code> is a utility to set up various options related to desktop notifications. </p>
 <h2>AUTHOR</h2>

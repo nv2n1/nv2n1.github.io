@@ -1,4 +1,5 @@
 ---
+
 title: "mempcpy(3)"
 name: "mempcpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mempcpy/"
 description: "mempcpy, wmempcpy – copy memory area"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;string.h&gt;
@@ -16,7 +16,6 @@ void *mempcpy(void *dest, const void *src, size_t n);
 #include &lt;wchar.h&gt;
 wchar_t *wmempcpy(wchar_t *dest, const wchar_t *src, size_t n);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>mempcpy</code>() function is nearly identical to the <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3) function. It copies <i>n</i> bytes from the object beginning at <i>src</i> into the object pointed to by <i>dest</i>. But instead of returning the value of <i>dest</i> it returns a pointer to the byte following the last written byte. </p>
 <p> This function is useful in situations where a number of objects shall be copied to consecutive memory positions. </p>
 <p> The <code>wmempcpy</code>() function is identical but takes <i>wchar_t</i> type arguments and copies <i>n</i> wide characters.</p>

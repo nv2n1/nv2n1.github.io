@@ -1,4 +1,5 @@
 ---
+
 title: "par(1)"
 name: "par"
 section: "1"
@@ -9,11 +10,9 @@ description: "par – parallel command processing"
 
 <h2>NAME</h2>
 <p> par &#8211; parallel command processing</p>
-<h2>SYNOPSIS</h2>
 <p> <code>par</code> [<code>-defiqx</code>] [<code>-c&nbsp;<wbr></code> command] [<code>-l&nbsp;<wbr></code> logfile] [<code>-n</code><br />
 &nbsp;<wbr>#] [<code>-p</code><br />
 &nbsp;<wbr>#] [file [file&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>par</code> takes a list of files to run a command on. The first line of each file begins with a colon (:) or a pound-sign (#). If a colon, the remainder of the line is a command to run for each of the subsequent lines. If a pound-sign, then each subsequent line is a (self-contained) command, unless the <code>-c</code> option was specified, in which case it operates as if the argument to <code>-c</code> had followed a colon on the first line. </p>
 <p> In each of the cases where the lines of the file following the first are not commands (ie: colon or -c), instances of open-close braces ({}) in the command will be replaced by these values. </p>
 <p> For example, an inputfile whose contents is: </p>

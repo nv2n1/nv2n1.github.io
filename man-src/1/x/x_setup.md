@@ -1,4 +1,5 @@
 ---
+
 title: "x_setup(1)"
 name: "x_setup"
 section: "1"
@@ -9,9 +10,7 @@ description: "x_setup – Determine Pairs of Legs that need Cross-Over Checking"
 
 <h2>NAME</h2>
 <p> <code>x_setup</code> &#8211; Determine Pairs of Legs that need Cross-Over Checking</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x_setup</code> [ <code>-L</code><i>legfile</i> ] [ <code>-R</code><i>west/east/south/north</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>x_setup</code> scans the <i>gmtindex.b</i> file that contains information on which legs occupy each 1 by 1 degree bin and reports all the pairs of legs that may overlap. Each pair is only reported once, even if the two legs involved are found in other bins also.</p>
 <dl>
 <dt><code>-L</code></dt>

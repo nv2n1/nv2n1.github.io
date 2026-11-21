@@ -1,4 +1,5 @@
 ---
+
 title: "cfgmaker(1)"
 name: "cfgmaker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cfgmaker/"
 description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cfgmaker [options] [community@]router [[options] [community@]router &#8230;]</p>
 <h2>OPTIONS</h2>
 <pre><code>
@@ -90,7 +90,6 @@ description: "cfgmaker – Creates mrtg.cfg files (for mrtg-2.17.4)"
  --version         print the version of cfgmaker
  --output=file     output filename default is STDOUT
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>Cfgmaker</code> creates <font SIZE="-1">MRTG</font> configuration files based on information pulled from a router or another <font SIZE="-1">SNMP</font> manageable device. </p>
 <p> [<i>community</i><code>@</code>]<i>router</i> </p>
 <p> <i>Community</i> is the community name of the device you want to create a configuration for. If not specified, it defaults to &#8216;<code>public</code>&#8216;; you might want to try this first if you do not know the community name of a device. If you are using the wrong community name you will get no response from the device. </p>

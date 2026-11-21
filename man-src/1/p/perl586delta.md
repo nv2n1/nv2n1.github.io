@@ -1,4 +1,5 @@
 ---
+
 title: "perl586delta(1)"
 name: "perl586delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl586delta/"
 description: "perl586delta – what is new for perl v5.8.6"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.8.5 release and the 5.8.6 release.</p>
 <h2>Incompatible Changes</h2>
 <p> There are no changes incompatible with 5.8.5.</p>

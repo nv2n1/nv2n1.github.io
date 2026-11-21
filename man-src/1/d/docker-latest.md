@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest(1)"
 name: "docker-latest"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-docker-latest/"
 description: "docker – Docker image and container command line interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker</code> [OPTIONS] COMMAND [arg&#8230;] </p>
 <p> <code>docker</code> daemon [&#8211;help|&#8230;] </p>
 <p> <code>docker</code> [&#8211;help|-v|&#8211;version] </p>
-<h2>DESCRIPTION</h2>
 <p> is a client for interacting with the daemon (see <code><a href="/docs/linux/man/8-dockerd/">dockerd</a>(8)</code>) through the CLI. </p>
 <p> The Docker CLI has over 30 commands. The commands are listed below and each has its own man page which explain usage and arguments. </p>
 <p> To see the man page for a command run <code>man docker &lt;command&gt;</code>. </p>

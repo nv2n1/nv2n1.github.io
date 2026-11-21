@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_setopt(3)"
 name: "curl_multi_setopt"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_multi_setopt – set options for a curl multi handle"
 
 <h2>NAME</h2>
 <p> curl_multi_setopt &#8211; set options for a curl multi handle</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>
 <p> CURLMcode curl_multi_setopt(CURLM * multi_handle, CURLMoption option, param);</p>
-<h2>DESCRIPTION</h2>
 <p> curl_multi_setopt() is used to tell a libcurl multi handle how to behave. By using the appropriate options to <i><a href="/docs/linux/man/3-curl_multi_setopt/">curl_multi_setopt</a>(3)</i>, you can change libcurl&#8217;s behaviour when using that multi handle. All options are set with the <i>option</i> followed by the parameter <i>param</i>. That parameter can be a <code>long</code>, a <code>function pointer</code>, an <code>object pointer</code> or a <code>curl_off_t</code> type, depending on what the specific option expects. Read this manual carefully as bad input values may cause libcurl to behave badly! You can only set one option in each function call. </p>
 <h2>OPTIONS</h2>
 <dl>

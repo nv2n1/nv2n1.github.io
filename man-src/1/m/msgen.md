@@ -1,4 +1,5 @@
 ---
+
 title: "msgen(1)"
 name: "msgen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msgen/"
 description: "msgen – create English message catalog"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msgen</code> [<i>OPTION</i>] <i>INPUTFILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Creates an English translation catalog. The input file is the last created English PO file, or a PO Template file (generally created by xgettext). Untranslated entries are assigned a translation that is identical to the msgid. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

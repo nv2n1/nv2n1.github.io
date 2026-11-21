@@ -1,4 +1,5 @@
 ---
+
 title: "dviasm(1)"
 name: "dviasm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dviasm/"
 description: "DVIasm – a TeX utility program for editing DVI files directly"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dviasm</code> [&lt;<i>options</i>&gt;] &lt;<i>dvi_file</i>&gt;|&lt;<i>dvi_dump_file</i>&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>DVIasm</code> is a TeX utility program which is designed for editing DeVice-Independent (DVI) files directly. It consists of a single Python script, dviasm.py, in a human readable text format. It runs on any platform in which Python 3 is installed.</p>
 <dl>
 <dt>Features of <code>DVIasm</code> includes:</dt>

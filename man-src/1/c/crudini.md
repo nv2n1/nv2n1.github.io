@@ -1,4 +1,5 @@
 ---
+
 title: "crudini(1)"
 name: "crudini"
 section: "1"
@@ -9,12 +10,10 @@ description: "crudini – manipulate ini files"
 
 <h2>NAME</h2>
 <p> crudini &#8211; manipulate ini files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>crudini</code> <i>,&#8211;set /</i>[<i>,OPTION/</i>]&#8230; <i>,config_file section /</i>[<i>,param/</i>] [<i>,value/</i>]<br />
  <code>crudini</code> <i>,&#8211;get /</i>[<i>,OPTION/</i>]&#8230; <i>,config_file /</i>[<i>,section/</i>] [<i>,param/</i>]<br />
  <code>crudini</code> <i>,&#8211;del /</i>[<i>,OPTION/</i>]&#8230; <i>,config_file section /</i>[<i>,param/</i>] [<i>,list value/</i>]<br />
  <code>crudini</code> <i>,&#8211;merge /</i>[<i>,OPTION/</i>]&#8230; <i>,config_file /</i>[<i>,section/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> crudini &#8211; A utility for manipulating ini files</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtopict(1)"
 name: "ppmtopict"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtopict/"
 description: "ppmtopict – convert a portable pixmap into a Macintosh PICT file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtopict</code> [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces a Macintosh PICT file as output. </p>
 <p> The generated file is only the data fork of a picture. You will need a program such as <i>mcvert</i> to generate a Macbinary or a BinHex file that contains the necessary information to identify the file as a PICT file to MacOS. </p>
 <p> Even though PICT supports 2 and 4 bits per pixel, <i>ppmtopict</i> always generates an 8 bits per pixel file.</p>

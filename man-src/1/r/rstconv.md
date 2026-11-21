@@ -1,4 +1,5 @@
 ---
+
 title: "rstconv(1)"
 name: "rstconv"
 section: "1"
@@ -9,9 +10,7 @@ description: "rstconv – The Free Pascal resource string converter tool."
 
 <h2>NAME</h2>
 <p> rstconv &#8211; The Free Pascal resource string converter tool. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>rstconv [options] -o outfile</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>rstconv</code> reads a resource string file ( <i>.rst</i> ) that was produced by the Free Pascal compiler and outputs a file that can be used by an internationalization tool (currently only GNU <i>gettext</i> is supported) for internationalizing your application. </p>
 <h2>USAGE</h2>
 <p> <code>rstconv</code> has one required option: <code>-o</code><i> outfile</i> to specify the output file name. If no input file is specified, then standard input is assumed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ident(1)"
 name: "ident"
 section: "1"
@@ -9,9 +10,7 @@ description: "ident – identify RCS keyword strings in files"
 
 <h2>NAME</h2>
 <p> ident &#8211; identify RCS keyword strings in files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ident</code> [ <code>-q</code> ] [ <code>-V</code> ] [ <i>file</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ident</code> searches for all instances of the pattern <code>$</code><i>keyword</i><code>:</code><i>&nbsp;<wbr>text&nbsp;<wbr></i><code>$</code> in the named files or, if no files are named, the standard input. </p>
 <p> These patterns are normally inserted automatically by the <font SIZE="-1">RCS</font> command <code><a href="/docs/linux/man/1-co/">co</a></code>(1), but can also be inserted manually. The option <code>-q</code> suppresses the warning given if there are no patterns in a file. The option <code>-V</code> prints <font SIZE="-1">RCS</font>&#8216;s version number. </p>
 <p> <code>ident</code> works on text files as well as object files and dumps. For example, if the C program in <code>f.c</code> contains</p>

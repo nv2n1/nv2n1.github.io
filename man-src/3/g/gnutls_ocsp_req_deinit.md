@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_req_deinit(3)"
 name: "gnutls_ocsp_req_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_ocsp_req_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_req_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>void gnutls_ocsp_req_deinit(gnutls_ocsp_req_t </code><i>req</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ocsp_req_t req</dt>
 <dd> The structure to be deinitialized</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a OCSP request structure.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

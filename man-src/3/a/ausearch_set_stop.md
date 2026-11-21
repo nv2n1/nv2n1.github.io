@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_set_stop(3)"
 name: "ausearch_set_stop"
 section: "3"
@@ -9,10 +10,8 @@ description: "ausearch_set_stop – set the cursor position"
 
 <h2>NAME</h2>
 <p>&nbsp;<wbr>ausearch_set_stop &#8211; set the cursor position</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> int ausearch_set_stop(auparse_state_t *au, austop_t where); </p>
-<h2>DESCRIPTION</h2>
 <p> ausearch_set_stop determines where the internal cursor will stop when a search condition is met. The possible values are: </p>
 <dl>
 <dl>

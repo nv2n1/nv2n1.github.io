@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-mon(1)"
 name: "glite-lb-mon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-mon/"
 description: "glite-lb-mon – program for monitoring the number of jobs on the LB server and their several statistics"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-mon</code> <code>[-t time -h]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-mon</code> is a low-level program for monitoring the the number of jobs on the LB server and their several statistics. Values like minimum, average and maximum time spent in the system are calulated for jobs that entered the final state (Aborted, Cleared, Cancelled) in specific time (default last hour). Also number of jobs that entered the system during this time is calculated. </p>
 <h2>OPTIONS</h2>
 <dl>

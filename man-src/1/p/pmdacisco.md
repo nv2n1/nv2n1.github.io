@@ -1,4 +1,5 @@
 ---
+
 title: "pmdacisco(1)"
 name: "pmdacisco"
 section: "1"
@@ -9,11 +10,9 @@ description: "pmdacisco – Cisco router performance metrics domain agent (PMDA)
 
 <h2>NAME</h2>
 <p> <code>pmdacisco</code> &#8211; Cisco router performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/cisco/pmdacisco</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-P</code> <i>password</i>] [<code>-r</code> <i>refresh</i>] [<code>-s</code> <i>prompt</i>] [<code>-M</code> <i>username</i>] [<code>-x</code> <i>port</i>] <i>host:interface-spec</i> [&#8230;]<br />
  <code>$PCP_PMDAS_DIR/cisco/parse</code> [options] <i>host:interface-spec</i> [&#8230;]<br />
  <code>$PCP_PMDAS_DIR/cisco/probe</code> [<code>-P</code> <i>password</i>] [<code>-s</code> <i>prompt</i>] [<code>-U</code> <i>username</i>] [<code>-x</code> <i>port</i>] <i>host</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdacisco</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics from one or more Cisco routers. </p>
 <p> A brief description of the <code>pmdacisco</code> command line options follows:</p>
 <dl>

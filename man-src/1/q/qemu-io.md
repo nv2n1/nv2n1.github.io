@@ -1,4 +1,5 @@
 ---
+
 title: "qemu-io(1)"
 name: "qemu-io"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qemu-io/"
 description: "qemu-io – QEMU Disk exerciser"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>qemu-io [-h] [-V] [-rsnm] [-c cmd] &#8230; [file]</code></p>
-<h2>DESCRIPTION</h2>
 <p> qemu-io is a command line utility to exercise the QEMU I/O path.</p>
 <h2>OPTIONS</h2>
 <dl>

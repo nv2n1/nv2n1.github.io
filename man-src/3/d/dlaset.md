@@ -1,4 +1,5 @@
 ---
+
 title: "dlaset(3)"
 name: "dlaset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaset/"
 description: "dlaset.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaset</code> (UPLO, M, N, ALPHA, BETA, A, LDA)<br />
  <i></i><code>DLASET</code> initializes the off-diagonal elements and the diagonal elements of a matrix to given values.</p>

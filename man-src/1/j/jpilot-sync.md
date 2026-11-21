@@ -1,4 +1,5 @@
 ---
+
 title: "jpilot-sync(1)"
 name: "jpilot-sync"
 section: "1"
@@ -9,9 +10,7 @@ description: "jpilot-sync – A command line tool for syncing jpilot databases t
 
 <h2>NAME</h2>
 <p> jpilot-sync &#8211; A command line tool for syncing jpilot databases to a Palm OS device.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jpilot-sync [-v] [-h] [-d] [-P] [-b] [-l] [-p port] </code></p>
-<h2>DESCRIPTION</h2>
 <p> J-Pilot preferences are read to get port, rate, number of backups, etc. They are read from the directory <i>$JPILOT_HOME/.jpilot/jpilot.rc</i></p>
 <h2>OPTIONS</h2>
 <dl>

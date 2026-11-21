@@ -1,4 +1,5 @@
 ---
+
 title: "dhsein(3)"
 name: "dhsein"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dhsein/"
 description: "dhsein.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dhsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, WR, WI, VL, LDVL, VR, LDVR, MM, M, WORK, IFAILL, IFAILR, INFO)<br />
  <i></i><code>DHSEIN</code></p>

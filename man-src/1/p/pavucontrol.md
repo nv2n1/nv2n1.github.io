@@ -1,4 +1,5 @@
 ---
+
 title: "pavucontrol(1)"
 name: "pavucontrol"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pavucontrol/"
 description: "pavucontrol – A volume control for the PulseAudio sound server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>pavucontrol</i></p>
-<h2>DESCRIPTION</h2>
 <p> A simple volume control tool (mixer) for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control both the volume of hardware devices and of each playback stream separately. It also allows you to redirect a playback stream to another output device without interrupting playback.</p>
 <h2>OPTIONS</h2>
 <p> <code>-t, &#8211;tab</code> <i>NUMBER</i></p>

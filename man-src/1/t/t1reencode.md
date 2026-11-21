@@ -1,4 +1,5 @@
 ---
+
 title: "t1reencode(1)"
 name: "t1reencode"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-t1reencode/"
 description: "t1reencode – re-encode a PostScript Type 1 font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>t1reencode</code> -e ENCODING [OPTIONS&#8230;] <i>font</i> [<i>outputfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>T1reencode</code> changes a PostScript Type~1 font&#8217;s embedded encoding. The re-encoded font is written to the standard output (but see the <code>&#8211;output</code> option). If no input font file is supplied, <code>t1reencode</code> reads a PFA or PFB font from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "spptrs(3)"
 name: "spptrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spptrs/"
 description: "spptrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spptrs</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br />
  <i></i><code>SPPTRS</code></p>

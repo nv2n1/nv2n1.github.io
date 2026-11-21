@@ -1,4 +1,5 @@
 ---
+
 title: "recode(1)"
 name: "recode"
 section: "1"
@@ -9,9 +10,7 @@ description: "recode – manual page for recode 3.6"
 
 <h2>NAME</h2>
 <p> recode &#8211; manual page for recode 3.6</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lt-recode</code> [<i>OPTION</i>]&#8230; [ [<i>CHARSET</i>] <i>| REQUEST </i>[<i>FILE</i>]&#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> Free `recode&#8217; converts files between various character sets and surfaces. </p>
 <p> If a long option shows an argument as mandatory, then it is mandatory for the equivalent short option also. Similarly for optional arguments.</p>
 <h3>Listings:</h3>

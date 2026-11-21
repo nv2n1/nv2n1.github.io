@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_context_set_append_name(3)"
 name: "getdns_context_set_append_name"
 section: "3"
@@ -6,18 +7,13 @@ letter: "g"
 url: "/docs/linux/man/3-getdns_context_set_append_name/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>getdns_context_set_append_name, </b> <b>getdns_context_set_context_update_callback, </b> <b>getdns_context_set_dns_root_servers, </b> <b>getdns_context_set_dns_transport, </b> <b>getdns_context_set_dnssec_trust_anchors, </b> <b>getdns_context_set_dnssec_allowed_skew,</b> <b>getdns_context_set_follow_redirects, </b> <b>getdns_context_set_limit_outstanding_queries, </b> <b>getdns_context_set_namespaces, </b> <b>getdns_context_set_resolution_type, </b> <b>getdns_context_set_suffix, </b> <b>getdns_context_set_timeout, </b> -- getdns context manipulation routines
+<b>getdns_context_set_append_name, </b> <b>getdns_context_set_context_update_callback, </b> <b>getdns_context_set_dns_root_servers, </b> <b>getdns_context_set_dns_transport, </b> <b>getdns_context_set_dnssec_trust_anchors, </b> <b>getdns_context_set_dnssec_allowed_skew,</b> <b>getdns_context_set_follow_redirects, </b> <b>getdns_context_set_limit_outstanding_queries, </b> <b>getdns_context_set_namespaces, </b> <b>getdns_context_set_resolution_type, </b> <b>getdns_context_set_suffix, </b> <b>getdns_context_set_timeout, </b> -- getdns context manipulation routines
 
 <h2>LIBRARY</h2>
 
  DNS Resolver library (libgetdns, -lgetdns) 
 
-<h2>SYNOPSIS</h2>
-
- #include &lt;getdns.h&gt; 
+#include &lt;getdns.h&gt; 
 
  getdns_return_t 
  <b>getdns_context_set_append_name</b> (getdns_context_t context,
@@ -111,13 +107,7 @@ url: "/docs/linux/man/3-getdns_context_set_append_name/"
 </dt><dd> uint16_t timeout)</dd></dl>
  
 
-<h2>DESCRIPTION</h2>
-
- 
-
- 
-
- These functions are used to manipulate a previously allocated and initialized context, see getdns_context (3) for more details on the functions used to allocate, initialized and destroy contexts and for a more detailed discussion of the getdns_context in general. 
+These functions are used to manipulate a previously allocated and initialized context, see getdns_context (3) for more details on the functions used to allocate, initialized and destroy contexts and for a more detailed discussion of the getdns_context in general. 
 
  
 

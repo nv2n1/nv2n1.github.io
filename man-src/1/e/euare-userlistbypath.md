@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userlistbypath(1)"
 name: "euare-userlistbypath"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-userlistbypath – List your account’s users"
 
 <h2>NAME</h2>
 <p> euare-userlistbypath &#8211; List your account&#8217;s users</p>
-<h2>SYNOPSIS</h2>
 <p> euare-userlistbypath [-p PREFIX] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> List your account&#8217;s users</p>
 <h3>optional arguments:</h3>
 <dl>

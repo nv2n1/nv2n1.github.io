@@ -1,4 +1,5 @@
 ---
+
 title: "pshistogram(1)"
 name: "pshistogram"
 section: "1"
@@ -9,10 +10,8 @@ description: "pshistogram – Calculate and plot histograms"
 
 <h2>NAME</h2>
 <p> pshistogram &#8211; Calculate and plot histograms</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pshistogram</code> [ <i>table</i> ] <code>x</code>|<code>X</code><i>parameters</i> <i>bin_width</i>[<code>+l</code>|<code>h</code>|<code>b</code>] [ ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ [<code>+b</code>][<code>+f</code><i>font</i>][<code>+o</code><i>off</i>][<code>+r</code>] ] [ ] [ <i>fill</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ [<code>o</code>|<code>O</code>] ] [ ] [ <i>pen</i> ] [ [<i>mode</i>][<code>+p</code><i>pen</i>] ] [ ] [ ] [ ] [ <i>region</i> ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <i>type</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pshistogram</code> reads <i>file</i> [or standard input] and examines the first data column (or use <code>-i</code>) to calculate histogram parameters based on the bin-width provided. Using these parameters, scaling, and optional range parameters it will generate PostScript code that plots a histogram. A cumulative histogram may also be specified.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

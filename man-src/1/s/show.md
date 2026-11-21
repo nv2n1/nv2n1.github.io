@@ -1,4 +1,5 @@
 ---
+
 title: "show(1)"
 name: "show"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-show/"
 description: "show – show (display) messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>show</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-draft</code>] [-showproc <i>program</i>] [<code>-showmimeproc</code> <i>program</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-checkmime</code> | <code>-nocheckmime</code>] [switches for <i>showproc</i></dt>
 <dd>or <i>showmimeproc</i>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Show</code> lists each of the specified messages to the standard output (typically, the terminal). </p>
 <p> By default, text (non-MIME) messages are filtered and displayed by the <code>nmh</code> command <code>mhl</code>. This command will display text messages in a nice, uniform format. It also allows you to configure the format of the displayed messages and which headers fields are shown. See the <i><a href="/docs/linux/man/1-mhl/">mhl</a></i>(1) manual page for the details about this command. This default can be changed by defining the <i>showproc</i> profile component. Any switches not recognized by <code>show</code> are passed along to that program. To override the default and the <i>showproc</i> profile component, use the <code>-showproc</code> <i>program</i> switch. For example, <code>-showproc</code> <i>more</i> will cause the <code>more</code> program to list the messages with no reformatting. Normally, this program is specified as the <i>showproc</i> in the user&#8217;s <i>.mh_profile</i>, rather than using a command line switch. </p>
 <p> By default, non-text messages (MIME messages with multi-media contents) are processed and displayed by the <code>nmh</code> command <code>mhshow</code>. See the <i><a href="/docs/linux/man/1-mhshow/">mhshow</a></i>(1) manual page for details about this command. This default can changed by defining the <i>showmimeproc</i> profile component. Any switches not recognized by <code>show</code> are passed along to that program. To override this default and the <code>showmimeproc</code> profile component, use the <code>-showmimeproc</code> <i>program</i> switch. </p>

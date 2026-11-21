@@ -1,4 +1,5 @@
 ---
+
 title: "elks(1)"
 name: "elks"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-elks/"
 description: "elksemu – Embedded Linux Kernel Subset emulator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>/lib/elksemu</code> <code>program</code> [<code>arguments</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Elksemu</code> is a program that allows 8086 <code>ELKS</code> programs to be run under Linux-i386. These programs can be compiled using the <code><a href="/docs/linux/man/1-bcc/">bcc</a>(1)</code> C compiler. </p>
 <p> Yom may use the <i>binfmt-misc</i> module under Linux 2.1.43 or greater as described in the elksemu README which will cause the kernel to run <i>elksemu</i> with the correct arguments whenever the user tries to execute an ELKS executable directly. </p>
 <h2>OPTIONS</h2>

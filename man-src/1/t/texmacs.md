@@ -1,4 +1,5 @@
 ---
+
 title: "texmacs(1)"
 name: "texmacs"
 section: "1"
@@ -9,13 +10,11 @@ description: "GNU TeXmacs – a WYSIWYG mathematical text editor"
 
 <h2>NAME</h2>
 <p> GNU TeXmacs &#8211; a WYSIWYG mathematical text editor </p>
-<h2>SYNOPSIS</h2>
 <p> texmacs [<i>OPTION</i>]&#8230; [<i>SOURCE</i>]&#8230; </p>
 <h2>INTRODUCTION</h2>
 <p> GNU TeXmacs is a free scientific text editor, which was both inspired by TeX and GNU Emacs. The editor allows you to write structured documents via a wysiwyg (what-you-see-is-what-you-get) and user friendly interface. New styles may be created by the user. The program implements high-quality typesetting algorithms and TeX fonts, which help you to produce professionally looking documents. </p>
 <p> The high typesetting quality still goes through for automatically generated formulas, which makes TeXmacs suitable as an interface for computer algebra systems. TeXmacs also supports the Guile/Scheme extension language, so that you may customize the interface and write your own extensions to the editor. </p>
 <p> TeXmacs currently runs on PC&#8217;s and PPC&#8217;s under Gnu/linux (a &gt;200MHz processor and &gt;32Mb of memory are recommended) and on sun computers. Converters exist for TeX/LaTeX and they are under development for Html/Mathml/Xml. In the future, TeXmacs is planned to evoluate towards a complete scientific office suite, with spreadsheet capacities, a technical drawing editor and a presentation mode. </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-b [file]</code>, <code>&#8211;initialize-buffer [file]</code></dt>
 <dd> Uses [file] as a guile/scheme initialization file for TeXmacs buffers.</dd>

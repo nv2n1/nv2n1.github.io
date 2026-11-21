@@ -1,4 +1,5 @@
 ---
+
 title: "fallocate(1)"
 name: "fallocate"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-fallocate/"
 description: "fallocate – preallocate or deallocate space to a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fallocate</code> [<code>-c</code>|<code>-p</code>|<code>-z</code>] [<code>-o</code> <i>offset</i>] <code>-l</code> <i>length</i> [<code>-n</code>] <i>filename</i> </p>
 <p> <code>fallocate</code> <code>-d</code> [<code>-o</code> <i>offset</i>] [<code>-l</code> <i>length</i>] <i>filename</i> </p>
 <p> <code>fallocate</code> <code>-x</code> [<code>-o</code> <i>offset</i>] <code>-l</code> <i>length filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fallocate</code> is used to manipulate the allocated disk space for a file, either to deallocate or preallocate it. For filesystems which support the fallocate system call, preallocation is done quickly by allocating blocks and marking them as uninitialized, requiring no IO to the data blocks. This is much faster than creating a file by filling it with zeroes. </p>
 <p> The exit status returned by <code>fallocate</code> is 0 on success and 1 on failure.</p>
 <h2>OPTIONS</h2>

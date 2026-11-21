@@ -1,4 +1,5 @@
 ---
+
 title: "cgels(3)"
 name: "cgels"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgels/"
 description: "cgels.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgels</code> (TRANS, M, N, NRHS, A, LDA, B, LDB, WORK, LWORK, INFO)<br />
  <i></i><code> CGELS solves overdetermined or underdetermined systems for GE matrices</code></p>

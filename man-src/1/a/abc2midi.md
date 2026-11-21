@@ -1,4 +1,5 @@
 ---
+
 title: "abc2midi(1)"
 name: "abc2midi"
 section: "1"
@@ -9,9 +10,7 @@ description: "abc2midi – converts abc file to MIDI file(s)"
 
 <h2>NAME</h2>
 <p> <code>abc2midi</code> &#8211; converts abc file to MIDI file(s)</p>
-<h2>SYNOPSIS</h2>
 <p> abc2midi <i>infile</i> [<i>refnum</i>] [-c] [-v] [-ver] [-t] [-n limit] [-RS] [-quiet] [-Q tempo] [-NFNP] [-OCC] [-NCOM] [-o outfile]</p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>The default action is to write a MIDI file for each abc tune<br />
 &nbsp;<wbr>with the filename&nbsp;<wbr>&lt;stem&gt;N.mid, where&nbsp;<wbr>&lt;stem&gt;&nbsp;<wbr>is the filestem<br />
 &nbsp;<wbr>of the abc file and N is the tune reference number. If the -o<br />

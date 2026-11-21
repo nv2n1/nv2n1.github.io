@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtog3(1)"
 name: "pbmtog3"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pbmtog3/"
 description: "pbmtog3 – convert a portable bitmap into a Group 3 fax file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtog3</code> [<i>pbmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as output. Produces a Group 3 fax file as input.</p>
 <h2>REFERENCES</h2>
 <p> The standard for Group 3 fax is defined in CCITT Recommendation T.4.</p>

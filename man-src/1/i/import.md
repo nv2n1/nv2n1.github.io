@@ -1,4 +1,5 @@
 ---
+
 title: "import(1)"
 name: "import"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-import/"
 description: "import – saves any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>import-im6.q16</code> [<i>options</i>] <i>output-file</i></dt>
 <dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> The <code>import-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to capture some or all of an X server screen and save the image to a file. </p>
 <p> For more information about the import command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/import.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/import.php.">https://www.imagemagick.org/script/import.php.</a></p>
-<h2>DESCRIPTION</h2>
 <p> Image Settings:<br />
 &nbsp;<wbr>&nbsp;-adjoin&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;join images into a single multi-image file<br />
 &nbsp;<wbr>&nbsp;-border&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;include window border in the output image<br />

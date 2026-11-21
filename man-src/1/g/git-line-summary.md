@@ -1,4 +1,5 @@
 ---
+
 title: "git-line-summary(1)"
 name: "git-line-summary"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-line-summary – Show repository summary by line"
 
 <h2>NAME</h2>
 <p> <code>git-line-summary</code> &#8211; Show repository summary by line</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-line-summary</code></p>
-<h2>DESCRIPTION</h2>
 <p> Show a summary by line of the repository, rather than by commit like git-summary.</p>
 <h2>EXAMPLES</h2>
 <p> Outputs a repo summary by line.</p>

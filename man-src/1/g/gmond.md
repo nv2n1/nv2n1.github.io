@@ -1,4 +1,5 @@
 ---
+
 title: "gmond(1)"
 name: "gmond"
 section: "1"
@@ -9,9 +10,7 @@ description: "gmond – manual page for Ganglia Monitor Daemon"
 
 <h2>NAME</h2>
 <p> gmond &#8211; manual page for Ganglia Monitor Daemon</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmond</code> [<i>OPTIONS</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The Ganglia Monitoring Daemon (gmond) listens to the cluster message channel, stores the data in-memory and when requested will output an XML description of the state of the cluster</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_add_interpreted_item(3)"
 name: "ausearch_add_interpreted_item"
 section: "3"
@@ -9,10 +10,8 @@ description: "ausearch_add_interpreted_item – build up search rule"
 
 <h2>NAME</h2>
 <p> ausearch_add_interpreted_item &#8211; build up search rule</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> int ausearch_add_interpreted_item(auparse_state_t *au, const char *field, const char *op, const char *value, ausearch_rule_t how); </p>
-<h2>DESCRIPTION</h2>
 <p> ausearch_add_interpreted_item adds one search condition to the current audit search expression. The search conditions can then be used to scan logs, files, or buffers for something of interest. The field value is the field name that the value will be checked for. The op variable describes what kind of check is to be done. Legal op values are: </p>
 <dl>
 <dl>

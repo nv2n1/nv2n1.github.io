@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-python(1)"
 name: "pcp-python"
 section: "1"
@@ -9,9 +10,7 @@ description: "pcp-python – run a python script using a preferred python varian
 
 <h2>NAME</h2>
 <p> <code>pcp-python</code> &#8211; run a python script using a preferred python variant</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pcp python</code> [<i>SCRIPT</i> [<i>ARG</i>]&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcp-python</code> has been replaced by <code><a href="/docs/linux/man/1-pmpython/">pmpython</a></code>(1) which is preferred, however <code>pcp-python</code> is still installed to provided backwards compatibility. </p>
 <p> <code>pcp-python</code> provides a way to run python scripts using a customisable python binary, rather than embedding any particular version of python into each script. </p>
 <p> This can be useful as it allows version-independent python code to be run anywhere. All python modules shipped with PCP support versions 2.6 and later (in the python2 series), and 3.3 and later (in the python3 release series). </p>

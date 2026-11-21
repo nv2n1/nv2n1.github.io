@@ -1,4 +1,5 @@
 ---
+
 title: "imapfilter(1)"
 name: "imapfilter"
 section: "1"
@@ -9,9 +10,7 @@ description: "imapfilter – mail filter"
 
 <h2>NAME</h2>
 <p> <code>imapfilter</code> &#8211; mail filter</p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>iVv </code>[-<code>c </code><i>configfile</i> ] ] [-<code>d </code><i>debugfile</i> ] [-<code>e </code><i>&#8216;command&#8217;</i> ] [-<code>l </code><i>logfile</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> is a mail filtering utility. It connects to remote mail servers using the Internet Message Access Protocol (IMAP), sends searching queries to the server and processes mailboxes based on the results. It can be used to delete, copy, move, flag, etc. messages residing in mailboxes at the same or different mail servers. The 4rev1 and 4 versions of the IMAP protocol are supported. </p>
 <p> The command line options of <a href="/docs/linux/man/1-imapfilter/">imapfilter</a>(1) are as follows:</p>
 <dl>

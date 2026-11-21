@@ -1,4 +1,5 @@
 ---
+
 title: "ntlm_auth(1)"
 name: "ntlm_auth"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ntlm_auth/"
 description: "ntlm_auth – tool to allow external access to Winbind’s NTLM authentication function"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>ntlm_auth</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> ntlm_auth is a helper utility that authenticates users using NT/LM authentication. It returns 0 if the users is authenticated successfully and 1 if access was denied. ntlm_auth uses winbind to access the user and authentication data for a domain. This utility is only intended to be used by other programs (currently Squid and mod_ntlm_winbind)</p>
 <h2>OPERATIONAL REQUIREMENTS</h2>

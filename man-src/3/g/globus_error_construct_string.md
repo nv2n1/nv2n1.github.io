@@ -1,4 +1,5 @@
 ---
+
 title: "globus_error_construct_string(3)"
 name: "globus_error_construct_string"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_error_string.h –"
 ---
 
 <p> Error Object Containing a String.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_error.h&#8217; </p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "h5diff(1)"
 name: "h5diff"
 section: "1"
@@ -9,9 +10,7 @@ description: "h5diff – Compares two HDF5 files and reports the differences."
 
 <h2>NAME</h2>
 <p> h5diff &#8211; Compares two HDF5 files and reports the differences.</p>
-<h2>SYNOPSIS</h2>
 <p> h5diff file1 file2 [OPTIONS] [object1 [object2 ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> h5diff is a command line tool that compares two HDF5 files, file1 and file2, and reports the differences between them. </p>
 <p> Optionally, h5diff will compare two objects within these files. If only one object, object1, is specified, h5diff will compare object1 in file1 with object1 in file2. In two objects, object1 and object2, are specified, h5diff will compare object1 in file1 with object2 in file2. These objects must be HDF5 datasets. </p>
 <p> object1 and object2 must be expressed as absolute paths from the respective file&#8217;s root group. </p>

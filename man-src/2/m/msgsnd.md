@@ -1,4 +1,5 @@
 ---
+
 title: "msgsnd(2)"
 name: "msgsnd"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-msgsnd/"
 description: "msgrcv, msgsnd – System V message queue operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;
 #include &lt;sys/msg.h&gt;
@@ -16,7 +16,6 @@ int msgsnd(int msqid, const void *msgp, size_t msgsz, int msgflg);
 ssize_t msgrcv(int msqid, void *msgp, size_t msgsz, long msgtyp,
                int msgflg);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>msgsnd</code>() and <code>msgrcv</code>() system calls are used to send messages to, and receive messages from, a System V message queue. The calling process must have write permission on the message queue in order to send a message, and read permission to receive a message. </p>
 <p> The <i>msgp</i> argument is a pointer to a caller-defined structure of the following general form: </p>
 <p> struct msgbuf {<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "xmlsec1-config(1)"
 name: "xmlsec1-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "xmlsec1-config – detail installed version of xmlsec library"
 
 <h2>NAME</h2>
 <p> xmlsec1-config &#8211; detail installed version of xmlsec library</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xmlsec1-config</code> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Known values for OPTION are:</p>
 <dl>
 <dt><code>&#8211;prefix</code>=<i>DIR</i></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "tuxpaint-import(1)"
 name: "tuxpaint-import"
 section: "1"
@@ -16,7 +17,6 @@ description: "tuxpaint-import — Import image files into Tux Paint(1)"
 </dd><dt><code>tuxpaint-import </code><i>filename(s)</i></dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>tuxpaint-import</i> is a simple shell script which uses some <i>NetPBM</i> (<a href="/docs/linux/man/5-pnm/">pnm</a>(5)) tools (<i>anytopnm</i>, <i>pnmscale</i> and <i>pnmtopng</i>) along with <i><a href="/docs/linux/man/1-date/">date</a></i>(1) to convert an arbitrary image file (e.g., a JPEG, GIF, etc.) into a <i><a href="/docs/linux/man/5-png/">PNG</a></i>(5) file which can be used by the drawing program <i>Tux Paint</i> (<a href="/docs/linux/man/1-tuxpaint/">tuxpaint</a>(1)) and places it in the user&#8217;s Tux Paint saved-files directory (<i>$HOME/.tuxpaint/saved/</i>). </p>
 <h2>EXAMPLE</h2>
 <p> tuxpaint-import picture.jpg photo.png cartoon.gif </p>

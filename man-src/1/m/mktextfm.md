@@ -1,4 +1,5 @@
 ---
+
 title: "mktextfm(1)"
 name: "mktextfm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mktextfm/"
 description: "mktextfm – create a TFM file for a font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mktextfm</code> [<i>options</i>] <i>font</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mktextfm</code> is used to generate a tfm file from the Metafont source files for <i>font</i>, or <code><a href="/docs/linux/man/1-hbf2gf/">hbf2gf</a></code>(1), if possible. If <i>destdir</i> is given, the generated file will be installed there, otherwise a (rather complicated) heuristic is used. If the tfm file already exists in the destination location, this is reported and nothing is done. </p>
 <p> If a GF (Generic Font) bitmap file is also generated, as is typical with &Mu;F, it is converted to PK (Packed Font) and installed similarly. </p>
 <p> The full pathname of the generated file is printed on standard output. </p>

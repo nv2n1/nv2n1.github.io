@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_obj_get_exts(3)"
 name: "gnutls_pkcs11_obj_get_exts"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs11_obj_get_exts – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_get_exts &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_obj_get_exts(gnutls_pkcs11_obj_t </code><i>obj</i><code>, gnutls_x509_ext_st ** </code><i>exts</i><code>, unsigned int * </code><i>exts_size</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_pkcs11_obj_get_exts – API function"
 <dd> will be updated with the number of <i>exts</i></dd>
 <dt>unsigned int flags</dt>
 <dd> Or sequence of <code>GNUTLS_PKCS11_OBJ_</code>* flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return information about attached extensions that associate to the provided object (which should be a certificate). The extensions are the attached p11-kit trust module extensions. </p>
 <p> Each element of <i>exts</i> must be deinitialized using <code>gnutls_x509_ext_deinit()</code> while <i>exts</i> should be deallocated using <code>gnutls_free()</code>.</p>
 <h2>RETURNS</h2>

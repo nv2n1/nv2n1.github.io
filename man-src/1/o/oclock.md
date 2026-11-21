@@ -1,4 +1,5 @@
 ---
+
 title: "oclock(1)"
 name: "oclock"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-oclock/"
 description: "oclock – round X clock"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>oclock</code> [-option &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Oclock</i> simply displays the current time on an analog display.</p>
 <h2>OPTIONS</h2>
 <dl>

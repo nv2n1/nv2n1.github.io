@@ -1,4 +1,5 @@
 ---
+
 title: "groff(1)"
 name: "groff"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-groff/"
 description: "groff – front-end for the groff document formatting system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-abcegijklpstzCEGNRSUVXZ</code> ] [ <code>-d </code><i>cs</i> ] [ <code>-D </code><i>arg</i> ] [ <code>-f </code><i>fam</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-K </code><i>arg</i> ] [ <code>-L </code><i>arg</i> ] [ <code>-m </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-n </code><i>num</i> ] [ <code>-o </code><i>list</i> ] [ <code>-P </code><i>arg</i> ] [ <code>-r </code><i>cn</i> ] [ <code>-T </code><i>dev</i> ] [ <code>-w </code><i>name</i> ] [ <code>-W </code><i>name</i> ] [<i>file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> [<i>option</i> &#8230;] <code>&#8211;version</code> [<i>option</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This document describes the <code>groff</code> program, the main front-end for the <i>groff</i> document formatting system. The <i>groff</i> program and macro suite is the implementation of a <code><a href="/docs/linux/man/7-roff/">roff</a></code>(7) system within the free software collection GNU The <i>groff</i> system has all features of the classical <i>roff</i>, but adds many extensions. </p>
 <p> The <code>groff</code> program allows control of the whole <i>groff</i> system by command-line options. This is a great simplification in comparison to the classical case (which uses pipes only).</p>
 <h2>OPTIONS</h2>

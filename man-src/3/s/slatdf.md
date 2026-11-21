@@ -1,4 +1,5 @@
 ---
+
 title: "slatdf(3)"
 name: "slatdf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slatdf/"
 description: "slatdf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slatdf</code> (IJOB, N, Z, LDZ, RHS, RDSUM, RDSCAL, IPIV, JPIV)<br />
  <i></i><code>SLATDF</code> uses the LU factorization of the n-by-n matrix computed by sgetc2 and computes a contribution to the reciprocal Dif-estimate.</p>

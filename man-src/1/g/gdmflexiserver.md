@@ -1,4 +1,5 @@
 ---
+
 title: "gdmflexiserver(1)"
 name: "gdmflexiserver"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gdmflexiserver/"
 description: "gdm-screenshot – take a picture of the screen"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gdm-screenshot</code> [<font SIZE="-1">OPTION&#8230;</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gdm-screenshot</code> is a utility for taking screenshots of the entire screen and saving them as <font SIZE="-1">PNG</font> image files.</p>
 <h2>OPTIONS</h2>
 <p> <code>Help Options:</code></p>

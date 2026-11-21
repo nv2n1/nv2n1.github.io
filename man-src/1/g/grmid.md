@@ -1,4 +1,5 @@
 ---
+
 title: "grmid(1)"
 name: "grmid"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grmid/"
 description: "grmid – – RMI activation system daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> grmid [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rmiregistry</code> starts a remote object registry on the current host. If no port number is specified, then port 1099 is used.</p>
 <h2>OPTIONS</h2>
 <p> Activation process control:</p>

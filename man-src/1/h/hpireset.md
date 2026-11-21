@@ -1,4 +1,5 @@
 ---
+
 title: "hpireset(1)"
 name: "hpireset"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hpireset/"
 description: "hpireset – This sample openhpi application exercises HPI Reset Management APIs."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpireset[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-r - w - h - X] hpireset[--domain nn][--host = host[:port]][--cfgfile = file][--hard-- warm-- help-- debug]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpireset searches the Resource Presence Table (<font SIZE="-1">RPT</font>) for resources with Reset Capability. It sends the requested reset action to all resources with <font SIZE="-1">SAHPI_CAPABILITY_RESET.</font> </p>
 <p> If no domain is selected, hpireset uses a session with the default domain. The selected domain id must be configured via the openhpidclient.conf file specified in the environment.</p>
 <h2>OPTIONS</h2>

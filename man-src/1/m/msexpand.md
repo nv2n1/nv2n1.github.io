@@ -1,4 +1,5 @@
 ---
+
 title: "msexpand(1)"
 name: "msexpand"
 section: "1"
@@ -8,11 +9,9 @@ description: "msexpand – decompress data compressed using"
 ---
 
 <p> <a href="/docs/linux/man/1-mscompress/">mscompress</a>(1) or COMPRESS.EXE</p>
-<h2>SYNOPSIS</h2>
 <p> <code>msexpand</code> [ <code>-h</code> ]<br />
  <code>msexpand</code> [ <code>-V</code> ]<br />
  <code>msexpand</code> [ <i>name &#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Msexpand</i> decompress files compressed using <code><a href="/docs/linux/man/1-mscompress/">mscompress</a>(1)</code> or Microsoft <code>COMPRESS.EXE</code> utility (e.g. Windows 3.x installation files). If no files are specified, the standard input is decompressed to the standard output. </p>
 <h2>AUTHORS</h2>
 <p> This program is written by Martin Hinner, &lt;mhi [at] penguin.cz&gt;<br />

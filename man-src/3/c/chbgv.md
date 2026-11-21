@@ -1,4 +1,5 @@
 ---
+
 title: "chbgv(3)"
 name: "chbgv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chbgv/"
 description: "chbgv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chbgv</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, RWORK, INFO)<br />
  <i></i><code>CHBGST</code></p>

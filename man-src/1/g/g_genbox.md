@@ -1,4 +1,5 @@
 ---
+
 title: "g_genbox(1)"
 name: "g_genbox"
 section: "1"
@@ -10,9 +11,7 @@ description: "genbox – solvates a system"
 <h2>NAME</h2>
 <p> genbox &#8211; solvates a system </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>genbox</code> <code>-cp</code><i> protein.gro </i> <code>-cs</code><i> spc216.gro </i> <code>-ci</code><i> insert.gro </i> <code>-o</code><i> out.gro </i> <code>-p</code><i> topol.top </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-box</code><i> vector </i> <code>-nmol</code><i> int </i> <code>-try</code><i> int </i> <code>-seed</code><i> int </i> <code>-vdwd</code><i> real </i> <code>-shell</code><i> real </i> <code>-maxsol</code><i> int </i> <code>-[no]vel</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> Genbox can do one of 3 things: </p>
 <p> 1) Generate a box of solvent. Specify -cs and -box. Or specify -cs and -cp with a structure file with a box, but without atoms. </p>
 <p> 2) Solvate a solute configuration, eg. a protein, in a bath of solvent molecules. Specify <code> -cp</code> (solute) and <code> -cs</code> (solvent). The box specified in the solute coordinate file (<code> -cp</code>) is used, unless <code> -box</code> is set. If you want the solute to be centered in the box, the program <code> editconf</code> has sophisticated options to change the box dimensions and center the solute. Solvent molecules are removed from the box where the distance between any atom of the solute molecule(s) and any atom of the solvent molecule is less than the sum of the VanderWaals radii of both atoms. A database (<code> vdwradii.dat</code>) of VanderWaals radii is read by the program, atoms not in the database are assigned a default distance <code> -vdw</code>. </p>

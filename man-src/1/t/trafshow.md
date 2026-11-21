@@ -1,4 +1,5 @@
 ---
+
 title: "trafshow(1)"
 name: "trafshow"
 section: "1"
@@ -9,9 +10,7 @@ description: "trafshow – full screen show network traffic"
 
 <h2>NAME</h2>
 <p> trafshow &#8211; full screen show network traffic</p>
-<h2>SYNOPSIS</h2>
 <p> <code>trafshow</code> [<code>-vpnb</code>] [<code>-a</code> <i>len</i>] [<code>-c</code> <i>conf</i>] [<code>-i</code> <i>name</i>] [<code>-s</code> <i>str</i>] [<code>-u</code> <i>port</i>] [<code>-R</code> <i>refresh</i>] [<code>-P</code> <i>purge</i>] [<code>-F</code> <i>file</i> | <i>expr</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>TrafShow</code> is a simple interactive program that gather the <code>network traffic</code> from all libpcap-capable interfaces to accumulate it in memory cache, and then separately display it on appropriated curses window in line-narrowed manner as a list of network flows sorted by throughput. Display updates occurs nearly in real time, asynchronously from the data collecting. It look like a <code>live show</code> of traffic flows. Any kind of network traffic are mixed together in the one live-show screen, an Ethernet, IP, etc.<br />
  <code>Hint</code>: Please press `<code>H</code>&#8216; key inside a show to get brief help! </p>
 <p> The IP traffic can be <code>aggregated</code> by netmask prefix bits and service ports to reorganize a heap of trivial flows into the treelike hierarchies suitable for human perception. The user can glance over the list of resulting flows and select at their to browse detail. So you can deepen into the traffic inheritance hierarchy and inspect the packets of each trivial flow in variety of presentations: raw-hex, ascii, time-stamp.<br />

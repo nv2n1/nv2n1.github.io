@@ -1,4 +1,5 @@
 ---
+
 title: "maturity_(3)"
 name: "maturity_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-maturity_/"
 description: "QuantLib::InflationSwap – Abstract base class for inflation swaps."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/inflationswap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>YearOnYearInflationSwap</code>, and <code>ZeroCouponInflationSwap</code>. </p>

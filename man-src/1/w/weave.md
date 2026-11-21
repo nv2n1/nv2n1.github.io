@@ -1,4 +1,5 @@
 ---
+
 title: "weave(1)"
 name: "weave"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-weave/"
 description: "weave – translate WEB to TeX"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>weave</code> [<code>-x</code>] <i>webfile</i>[<i></i><code>.web</code>] [<i>changefile</i>[<i></i><code>.ch</code>]]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>weave</code> program is used to create a TeX file for viewing a Web program. It takes appropriate care of typographic details like page layout and the use of indentation, italics, boldface, etc., and it supplies extensive cross-index information that it gathers automatically. The command line arguments are the same as for <code>tangle</code> except for the option: <code>-x</code> says to omit the index, module name list, and table of contents pages. (A <i>CONTENTS.tex</i> file will still be written when the TeX file is processed, however, unless some macros in <i>webmac.tex</i> are redefined.) </p>
 <p> The output TeX file name is formed by adding <code>.tex</code> to the root of the Web file name. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_utf8_validate(3)"
 name: "bson_utf8_validate"
 section: "3"
@@ -6,9 +7,9 @@ letter: "b"
 url: "/docs/linux/man/3-bson_utf8_validate/"
 description: "bson_utf8_validate() – Validates that the content within utf8 is valid UTF-8. If allow_null is true, then embedded NULL bytes are allowed ( )."
 ---
+
 <h2>NAME</h2>
 <p> bson_utf8_validate() - Validates that the content within utf8 is valid UTF-8. If allow_null is true, then embedded NULL bytes are allowed (&nbsp;<wbr>).  </p>
-<h2>SYNOPSIS</h2>
 <pre><code>bool
 bson_utf8_validate (const char *utf8,
                     size_t utf8_len,
@@ -27,7 +28,6 @@ bson_utf8_validate (const char *utf8,
 <dt><code>allow_null</code></dt>
 <dd> <p> A bool indicating that embedded <code>\0</code> bytes are allowed. </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Validates that the content within <code>utf8</code> is valid UTF-8. If <code>allow_null</code> is <code>true</code> , then embedded NULL bytes are allowed ( <code>\0</code> ). </p>
 <h2>RETURNS</h2>
 <p> true if <code>utf8</code> contains valid UTF-8. </p>

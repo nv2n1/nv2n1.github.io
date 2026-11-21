@@ -1,4 +1,5 @@
 ---
+
 title: "readahead(2)"
 name: "readahead"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-readahead/"
 description: "readahead – initiate file readahead into page cache"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;fcntl.h&gt;
 ssize_t readahead(int fd, off64_t offset, size_t count);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>readahead</code>() initiates readahead on a file so that subsequent reads from that file will be satisfied from the cache, and not block on disk I/O (assuming the readahead was initiated early enough and that other activity on the system did not in the meantime flush pages from the cache). </p>
 <p> The <i>fd</i> argument is a file descriptor identifying the file which is to be read. The <i>offset</i> argument specifies the starting point from which data is to be read and <i>count</i> specifies the number of bytes to be read. I/O is performed in whole pages, so that <i>offset</i> is effectively rounded down to a page boundary and bytes are read up to the next page boundary greater than or equal to <i>(offset+count)</i>. <code>readahead</code>() does not read beyond the end of the file. The file offset of the open file description referred to by the file descriptor <i>fd</i> is left unchanged.</p>
 <h2>RETURN VALUE</h2>

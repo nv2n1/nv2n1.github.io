@@ -1,4 +1,5 @@
 ---
+
 title: "spent(1)"
 name: "spent"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-spent/"
 description: "ospent – Concatenates entities in an SGML/XML document"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ospent</code> [<code>-ChnrRv</code>] [<code>-b</code><i>bctf</i>] [<code>-c</code><i>sysid</i>] [<code>-f</code><i>file</i>] [<code>-D</code><i>directory</i>] [<i>sysid</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ospent</code> (OpenSP print entity) prints the concatenation of the entities with system identifiers</p>
 <dl>
 <dt>

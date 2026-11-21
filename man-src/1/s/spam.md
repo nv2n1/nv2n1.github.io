@@ -1,4 +1,5 @@
 ---
+
 title: "spam(1)"
 name: "spam"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-spam/"
 description: "ospam – An SGML/XML markup stream editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ospam</code> [<code>-CeghilprRvx</code>] [<code>-a</code><i>linktype</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>bctf</i>] [<code>-c</code><i>catalog_file</i>] [<code>-D</code><i>directory</i>] [<code>-f</code><i>file</i>] [<code>-m</code><i>markup_option</i>] [<code>-o</code><i>entity_name</i>] [<code>-w</code><i>warning_type</i>] [<i>sysid</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ospam</code> (OpenSP Add Markup) is an SGML markup stream editor implemented using the OpenSP parser. <code>ospam</code></p>
 <dd>parses the SGML document contained in <i>sysid</i> and copies to the standard output the portion of the document entity containing the document instance, adding or changing markup as specified by the <code>-m</code> options. The <code>-p</code> option can be used to include the SGML declaration and prolog in the output. The <code>-o</code> option can be used to output other entities. The <code>-x</code> option can be used to expand entity references. </dd>
 <p> Part of an SGML System Conforming to International Standard ISO 8879 &#8212; Standard Generalized Markup Language. An SGML Extended Facilities system conforming to Annex A of Internation Standard ISO/IEC 10744 &#8212; Hypermedia/Time-based Structuring Language. </p>

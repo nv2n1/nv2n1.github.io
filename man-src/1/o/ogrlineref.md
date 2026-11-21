@@ -1,4 +1,5 @@
 ---
+
 title: "ogrlineref(1)"
 name: "ogrlineref"
 section: "1"
@@ -16,7 +17,6 @@ description: "ogrlineref – ogrlineref The utility can be used for:"
 <dd> return the coordinates (point) on the path according to the &#8216;linear referenced&#8217; distance</dd>
 <dt>&bull;</dt>
 <dd> return the portion of the path according to the &#8216;linear referenced&#8217; begin and end distances</dd></dl>
-<h2>SYNOPSIS</h2>
 <pre><code>
 ogrlineref[--help - general][-progress][-quiet]
           [-f format_name][[-dsco NAME = VALUE]...][[-lco NAME = VALUE]...]
@@ -29,7 +29,6 @@ ogrlineref[--help - general][-progress][-quiet]
           [-get_coord][-m position]
           [-get_subline][-mb position][-me position]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The ogrlineref program can be used to create a linear reference &#8211; a file containing a segments of special length (e.g. 1 km in reference units) and get coordinates, linear referenced distances or sublines (subpaths) from this file. The utility not required the M or Z values in geometry. The results can be stored in any OGR supported format. Also some information writed to the stdout. </p>
 <dl>
 <dt><code>&#8211;help-general</code>:</dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "nxtvepgd(1)"
 name: "nxtvepgd"
 section: "1"
@@ -9,10 +10,8 @@ description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 
 <h2>NAME</h2>
 <p> nxtvepg &#8211; Receiving, Browsing and Analyzing Nextview EPG data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nxtvepg</code> [&nbsp;<wbr>options&nbsp;<wbr>] [&nbsp;<wbr>database&nbsp;<wbr>] </p>
 <p> <code>nxtvepgd</code> [&nbsp;<wbr>daemon options&nbsp;<wbr>] [&nbsp;<wbr>database&nbsp;<wbr>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nxtvepg</code> is an X11 and Win32 application to receive, analyze and browse <font SIZE="-1">TV</font> programme schedules transmitted on top of Teletext as defined by the European Telecommunications Standards Institute (<font SIZE="-1">ETSI</font>) in <font SIZE="-1">ETS</font> 300 707: &#8220;Protocol for a <font SIZE="-1">TV</font> Guide using electronic data transmission&#8221;. </p>
 <p> <code>nxtvepgd</code> is a stripped-down version of nxtvepg which only performs data acquisition as a background daemon process. </p>
 <p> The Nextview <font SIZE="-1">EPG</font> standard was developed for use in <font SIZE="-1">TV</font> sets, but the data can be received and used in a <font SIZE="-1">PC</font>, too &#8211; provided you have a Teletext capable <font SIZE="-1">TV</font> tuner card and are lucky enough to have a content provider in your country. </p>

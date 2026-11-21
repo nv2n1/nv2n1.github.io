@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-new(1)"
 name: "guilt-new"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-new/"
 description: "guilt-new – Create a new patch"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-new</i> [-f] [-s] [-e|-m message] &lt;patchname&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Create a new patch and push it on top of the stack. An optional patch description can be supplied either interactively on via the command line.</p>
 <h2>OPTIONS</h2>
 <p> -f</p>

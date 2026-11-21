@@ -1,4 +1,5 @@
 ---
+
 title: "docker-stack-deploy(1)"
 name: "docker-stack-deploy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-stack-deploy/"
 description: "docker-stack-deploy – Deploy a new stack or update an existing stack"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker stack deploy [OPTIONS] STACK</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Deploy a new stack or update an existing stack </p>
 <h2>OPTIONS</h2>
 <p> <code>-c</code>, <code>&#8211;compose-file</code>=[] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Path to a Compose file, or &quot;-&quot; to read from stdin</p>

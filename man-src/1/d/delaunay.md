@@ -1,4 +1,5 @@
 ---
+
 title: "delaunay(1)"
 name: "delaunay"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-delaunay/"
 description: "delaunay – constructs the constrained Delaunay triangulation of the input"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>delaunay</code> [<i>OPTIONS</i>]&nbsp;&lt;&nbsp;<i>file.gts</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>delaunay</code> command. This command constructs the constrained Delaunay triangulation of the input </p>
 <h2>OPTIONS</h2>
 <p> This program follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

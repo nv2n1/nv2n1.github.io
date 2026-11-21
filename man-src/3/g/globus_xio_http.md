@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_http(3)"
 name: "globus_xio_http"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_xio_http.h –"
 ---
 
 <p> Globus XIO HTTP Driver Header.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Structures</h3>
 <p> struct <code>globus_xio_http_header_t</code><br />
  <i>doxygen varargs filter stuff </i></p>

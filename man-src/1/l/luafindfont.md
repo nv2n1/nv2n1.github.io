@@ -1,4 +1,5 @@
 ---
+
 title: "luafindfont(1)"
 name: "luafindfont"
 section: "1"
@@ -6,18 +7,11 @@ letter: "l"
 url: "/docs/linux/man/1-luafindfont/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+luafindfont - retrieve font informations of all installed system and TeX fonts. 
 
- luafindfont - retrieve font informations of all installed system and TeX fonts. 
+luafindfont [options] &lt;fontname&gt;
 
-<h2>SYNOPSIS</h2>
-
- luafindfont [options] &lt;fontname&gt;
-
-<h2>DESCRIPTION</h2>
-
- This command lists informations about installed otf|ttf|ttc fonts, installed by the system and by the TeX distribution
+This command lists informations about installed otf|ttf|ttc fonts, installed by the system and by the TeX distribution
 
 <h2>OPTIONS</h2>
 

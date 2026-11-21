@@ -1,4 +1,5 @@
 ---
+
 title: "archivemount(1)"
 name: "archivemount"
 section: "1"
@@ -9,9 +10,7 @@ description: "archivemount – mounts an archive for access as a file system"
 
 <h2>NAME</h2>
 <p> archivemount &#8211; mounts an archive for access as a file system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>archivemount</code> [<code>-hVdfs</code>] [<code>-o</code> <i>options</i>] <i>archivepath</i> <i>mountpoint</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>archivemount</code> command mounts the file tree contained in the archive <i>archivepath</i> on the directory <i>mountpoint</i>. The archive&#8217;s contents can subsequently be accessed inside <i>mountpoint</i> as a file system. The <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) command performs the corresponding unmount operation. </p>
 <p> <code>archivemount</code> is known to work under both linux and Mac OS X (via MacFUSE). </p>
 <h2>EXAMPLE SESSION</h2>

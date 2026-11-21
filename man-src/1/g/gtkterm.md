@@ -1,4 +1,5 @@
 ---
+
 title: "gtkterm(1)"
 name: "gtkterm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gtkterm/"
 description: "gtkterm – A simple GTK+ serial port terminal"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gtkterm [ options ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gtkterm </code> is a simple GTK+ terminal used to communicate with the serial port. </p>
 <h2>OPTIONS</h2>
 <p> <code>gtkterm </code> accepts the following options: </p>

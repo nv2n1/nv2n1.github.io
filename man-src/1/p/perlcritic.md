@@ -1,4 +1,5 @@
 ---
+
 title: "perlcritic(1)"
 name: "perlcritic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlcritic/"
 description: "\"perlcritic\" – Command-line interface to critique Perl source."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perlcritic[-12345 | --brutal | --cruel | --harsh | --stern | --gentle]
           [--severity number | name][{-p | --profile} file | --noprofile]
@@ -31,7 +31,6 @@ perlcritic[-12345 | --brutal | --cruel | --harsh | --stern | --gentle]
     --help | --options | --man | --version
 }
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;perlcritic&quot;</tt> is a Perl source code analyzer. It is the executable front-end to the Perl::Critic engine, which attempts to identify awkward, hard to read, error-prone, or unconventional constructs in your code. Most of the rules are based on Damian Conway&#8217;s book <code>Perl Best Practices</code>. However, <tt>&quot;perlcritic&quot;</tt> is <code>not</code> limited to enforcing <font SIZE="-1">PBP,</font> and it will even support rules that contradict Conway. All rules can easily be configured or disabled to your liking. </p>
 <p> This documentation only covers how to drive this command. For all other information, including how to persistently configure this command so that you don&#8217;t have to say so much on the command-line, see the documentation for Perl::Critic itself.</p>
 <h2>USAGE EXAMPLES</h2>

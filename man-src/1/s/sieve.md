@@ -1,4 +1,5 @@
 ---
+
 title: "sieve(1)"
 name: "sieve"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sieve/"
 description: "sieve – a mail filtering tool."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sieve</code> [<i>,OPTION/</i>&#8230;] <i>,SCRIPT/</i></p>
-<h2>DESCRIPTION</h2>
 <p> GNU sieve <code>&#8212;</code> a mail filtering tool.</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;[no-]compile-only</code></dt>

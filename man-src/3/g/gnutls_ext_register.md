@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ext_register(3)"
 name: "gnutls_ext_register"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ext_register – Register a handler for a TLS extension"
 
 <h2>NAME</h2>
 <p> gnutls_ext_register &#8211; Register a handler for a TLS extension</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>int gnutls_ext_register(int </code><i>type</i><code>, const char * </code><i>name</i><code>, gnutls_ext_parse_type_t </code><i>parse_type</i><code>, gnutls_ext_recv_func </code><i>recv_func</i><code>, gnutls_ext_send_func </code><i>send_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_ext_register – Register a handler for a TLS extension"
 <dd> a function to receive extension data</dd>
 <dt>gnutls_ext_send_func send_func</dt>
 <dd> a function to send extension data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function is used to register a new TLS extension handler.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

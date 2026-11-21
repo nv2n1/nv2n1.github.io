@@ -1,4 +1,5 @@
 ---
+
 title: "runc-checkpoint(8)"
 name: "runc-checkpoint"
 section: "8"
@@ -6,11 +7,9 @@ letter: "r"
 url: "/docs/linux/man/8-runc-checkpoint/"
 description: "runc-checkpoint – checkpoint a running container"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>runc-checkpoint</code> - checkpoint a running container </p>
-<h2>SYNOPSIS</h2>
 <p> <code>runc checkpoint</code> [<i>option</i> ...] <i>container-id</i> </p>
-<h2>DESCRIPTION</h2>
 <p>The <code>checkpoint</code> command saves the state of the running container instance with the help of <code><a href="/docs/linux/man/8-criu/">criu</a></code>(8) tool, to be restored later. </p>
 <h2>OPTIONS</h2>
 <dl>

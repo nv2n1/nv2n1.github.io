@@ -1,4 +1,5 @@
 ---
+
 title: "cd-discid(1)"
 name: "cd-discid"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cd-discid/"
 description: "cd-discid – read CD and get CDDB discid information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cd-discid</code> [<i>option</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> In order to do CDDB queries over the Internet, you must know the DiscID of the CD you are querying. <code>cd-discid</code> provides you with that information. It outputs the discid, the number of tracks, the frame offset of all of the tracks, and the total length of the CD in seconds, on one line in a space-delimited format. <code>cd-discid</code> was designed as a backend tool for cdgrab (now <code>abcde</code>) but will work independently of it.</p>
 <h2>OPTIONS</h2>
 <dl>

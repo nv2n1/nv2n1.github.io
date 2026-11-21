@@ -1,4 +1,5 @@
 ---
+
 title: "ssindex(1)"
 name: "ssindex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ssindex/"
 description: "ssindex – generate index data for spreadsheet files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ssindex </code> [<i>OPTIONS</i>] [<i>FILES</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>ssindex</code> command. </p>
 <p> <code>ssindex</code> is a command line utility to generate index data for various spreadsheet file formats. It is primarily used by the <code>Beagle</code> indexing sub-system and search aggregator. </p>
 <h2>OPTIONS</h2>

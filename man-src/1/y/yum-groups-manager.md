@@ -1,4 +1,5 @@
 ---
+
 title: "yum-groups-manager(1)"
 name: "yum-groups-manager"
 section: "1"
@@ -9,9 +10,7 @@ description: "yum-groups-manager – create and edit yum’s group metadata"
 
 <h2>NAME</h2>
 <p> yum-groups-manager &#8211; create and edit yum&#8217;s group metadata</p>
-<h2>SYNOPSIS</h2>
 <p> <code>yum-groups-manager</code> [options] [packages]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>yum-groups-manager</code> is used to create or edit a group metadata file for a yum repository. This is often much easier than writing/editing the XML by hand. The <code>yum-groups-manager</code> can load an entire file of groups metadata and either create a new group or edit an existing group and then write all of the groups metadata back out.</p>
 <h2>OPTIONS</h2>
 <dl>

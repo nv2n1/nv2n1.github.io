@@ -1,4 +1,5 @@
 ---
+
 title: "vfork(2)"
 name: "vfork"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-vfork/"
 description: "vfork – create a child process and block parent"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t vfork(void);</code> </p>
@@ -24,7 +24,6 @@ description: "vfork – create a child process and block parent"
 </dd><dt>Before glibc 2.12:</dt>
 <dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <h3>Standard description</h3>
 <p> (From POSIX.1) The <code>vfork</code>() function has the same effect as <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), except that the behavior is undefined if the process created by <code>vfork</code>() either modifies any data other than a variable of type <i>pid_t</i> used to store the return value from <code>vfork</code>(), or returns from the function in which <code>vfork</code>() was called, or calls any other function before successfully calling <code>_exit</code>(2) or one of the <code><a href="/docs/linux/man/3-exec/">exec</a></code>(3) family of functions.</p>
 <h3>Linux description</h3>

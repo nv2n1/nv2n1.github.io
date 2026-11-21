@@ -1,4 +1,5 @@
 ---
+
 title: "avahi-bookmarks(1)"
 name: "avahi-bookmarks"
 section: "1"
@@ -9,9 +10,7 @@ description: "avahi-bookmarks – Web service showing mDNS/DNS-SD announced HTTP
 
 <h2>NAME</h2>
 <p> avahi-bookmarks &#8211; Web service showing mDNS/DNS-SD announced HTTP services using the Avahi daemon</p>
-<h2>SYNOPSIS</h2>
 <p> <code>avahi-bookmarks </code></p>
-<h2>DESCRIPTION</h2>
 <p> A web service for listing HTTP services that are announced via mDNS/DNS-SD using the Avahi daemon. avahi-bookmarks opens a TCP socket on port 8080 and waits for incoming HTTP connections returning a dynamic web site containing links to all services of type _http._tcp on the LAN. Point your browser to <a rel="nofollow" href="http://localhost:8080/">http://localhost:8080/</a> to make use of avahi-bookmarks.</p>
 <h2>OPTIONS</h2>
 <dl>

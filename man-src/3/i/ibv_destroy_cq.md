@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_destroy_cq(3)"
 name: "ibv_destroy_cq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_destroy_cq/"
 description: "ibv_create_cq, ibv_destroy_cq – create or destroy a completion queue (CQ)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_cq *ibv_create_cq(struct ibv_context *context, int cqe,
@@ -16,7 +16,6 @@ struct ibv_cq *ibv_create_cq(struct ibv_context *context, int cqe,
                              int comp_vector);
 int ibv_destroy_cq(struct ibv_cq *cq);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_cq()</code> creates a completion queue (CQ) with at least <i>cqe</i> entries for the RDMA device context <i>context</i>. The pointer <i>cq_context</i> will be used to set user context pointer of the CQ structure. The argument <i>channel</i> is optional; if not NULL, the completion channel <i>channel</i> will be used to return completion events. The CQ will use the completion vector <i>comp_vector</i> for signaling completion events; it must be at least zero and less than <i>context</i>-&gt;num_comp_vectors. </p>
 <p> <code>ibv_destroy_cq()</code> destroys the CQ <i>cq</i>.</p>
 <h2>RETURN VALUE</h2>

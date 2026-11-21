@@ -1,4 +1,5 @@
 ---
+
 title: "migrate_pages(2)"
 name: "migrate_pages"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-migrate_pages/"
 description: "migrate_pages – move all pages in a process to another set of nodes"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;numaif.h&gt;
 long migrate_pages(int pid, unsigned long maxnode,
@@ -15,7 +15,6 @@ long migrate_pages(int pid, unsigned long maxnode,
                    const unsigned long *new_nodes);
 </code></pre>
 <p> Link with <i>-lnuma</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>migrate_pages</code>() attempts to move all pages of the process <i>pid</i> that are in memory nodes <i>old_nodes</i> to the memory nodes in <i>new_nodes</i>. Pages not located in any node in <i>old_nodes</i> will not be migrated. As far as possible, the kernel maintains the relative topology relationship inside <i>old_nodes</i> during the migration to <i>new_nodes</i>. </p>
 <p> The <i>old_nodes</i> and <i>new_nodes</i> arguments are pointers to bit masks of node numbers, with up to <i>maxnode</i> bits in each mask. These masks are maintained as arrays of unsigned <i>long</i> integers (in the last <i>long</i> integer, the bits beyond those specified by <i>maxnode</i> are ignored). The <i>maxnode</i> argument is the maximum node number in the bit mask plus one (this is the same as in <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2), but different from <code><a href="/docs/linux/man/2-select/">select</a></code>(2)). </p>
 <p> The <i>pid</i> argument is the ID of the process whose pages are to be moved. To move pages in another process, the caller must be privileged (<code>CAP_SYS_NICE</code>) or the real or effective user ID of the calling process must match the real or saved-set user ID of the target process. If <i>pid</i> is 0, then <code>migrate_pages</code>() moves pages of the calling process. </p>

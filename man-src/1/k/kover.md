@@ -1,4 +1,5 @@
 ---
+
 title: "kover(1)"
 name: "kover"
 section: "1"
@@ -9,9 +10,7 @@ description: "kover – CD Cover printer"
 
 <h2>NAME</h2>
 <p> kover &#8211; CD Cover printer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kover</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>options</i>] <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> Kover is an easy to use WYSIWYG CD cover printer with CDDB support.</p>
 <h3>Generic options:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "yad(1)"
 name: "yad"
 section: "1"
@@ -9,9 +10,7 @@ description: "yad – display GTK+ dialogs in shell scripts"
 
 <h2>NAME</h2>
 <p> yad &#8211; display GTK+ dialogs in shell scripts </p>
-<h2>SYNOPSIS</h2>
 <p> <code>yad</code> [<i>OPTIONS</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>YAD</code> is a program that will display GTK+ dialogs, and return (either in the return code or on standard output) the users input. This allows you to present information, and ask for information from the user, from all manner of shell scripts. </p>
 <p> <code>YAD</code> is the fork of <code>Zenity</code> program. </p>
 <h2>OPTIONS</h2>

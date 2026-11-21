@@ -1,4 +1,5 @@
 ---
+
 title: "sqlgrey(1)"
 name: "sqlgrey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sqlgrey/"
 description: "sqlgrey – Postfix Greylisting Policy Server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sqlgrey</code> [<i>options</i>&#8230;] </p>
 <pre><code>
  -h, --help                 display this help and exit
@@ -25,7 +25,6 @@ description: "sqlgrey – Postfix Greylisting Policy Server"
                             - '#' is used for comments
 </code></pre>
 <p> See the default config file at /etc/sqlgrey/sqlgrey.conf for runtime parameters. If you got sqlgrey from sources, read the <font SIZE="-1">HOWTO</font> file in the compressed archive. If it came prepackaged, look into the documentation tree for this file: /usr/share/doc/sqlgrey-&lt;version&gt;/ on most Linux distributions for example.</p>
-<h2>DESCRIPTION</h2>
 <p> Sqlgrey is a Postfix policy server implementing greylisting. </p>
 <p> When a request for delivery of a mail is received by Postfix via <font SIZE="-1">SMTP,</font> the triplet <tt>&quot;CLIENT_IP&quot;</tt> / <tt>&quot;SENDER&quot;</tt> / <tt>&quot;RECIPIENT&quot;</tt> is built. If it is the first time that this triplet is seen, or if the triplet was first seen less than <i>reconnect-delay</i> minutes (1 is the default), then the mail gets rejected with a temporary error. Hopefully spammers or viruses will not try again later, as it is however required per <font SIZE="-1">RFC.</font> </p>
 <p> In order to alleviate the reconnect delay, sqlgrey uses a 2-level auto-white-list (<font SIZE="-1">AWL</font>) system:</p>

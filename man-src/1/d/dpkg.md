@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg(1)"
 name: "dpkg"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-dpkg/"
 description: "dpkg – package manager for Debian"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg</code> [<i>option</i>&#8230;] <i>action</i></p>
 <h2>WARNING</h2>
 <p> This manual is intended for users wishing to understand <code>dpkg</code>&#8216;s command line options and package states in more detail than that provided by <code>dpkg &#8211;help</code>. </p>
 <p> It should <i>not</i> be used by package maintainers wishing to understand how <code>dpkg</code> will install their packages. The descriptions of what <code>dpkg</code> does when installing and removing packages are particularly inadequate.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg</code> is a medium-level tool to install, build, remove and manage Debian packages. The primary and more user-friendly front-end for <code>dpkg</code> as a <font SIZE="-1">CLI</font> (command-line interface) is <code>apt</code>(8&gt; and as a <font SIZE="-1">TUI</font> (terminal user interface) is <code>aptitude</code>(8). <code>dpkg</code> itself is controlled entirely via command line parameters, which consist of exactly one action and zero or more options. The action-parameter tells <code>dpkg</code> what to do and options control the behavior of the action in some way. </p>
 <p> <code>dpkg</code> can also be used as a front-end to <code><a href="/docs/linux/man/1-dpkg-deb/">dpkg-deb</a></code>(1) and <code><a href="/docs/linux/man/1-dpkg-query/">dpkg-query</a></code>(1). The list of supported actions can be found later on in the <font SIZE="-1"><code>ACTIONS</code></font> section. If any such action is encountered <code>dpkg</code> just runs <code>dpkg-deb</code> or <code>dpkg-query</code> with the parameters given to it, but no specific options are currently passed to them, to use any such option the back-ends need to be called directly.</p>
 <h2>INFORMATION ABOUT PACKAGES</h2>

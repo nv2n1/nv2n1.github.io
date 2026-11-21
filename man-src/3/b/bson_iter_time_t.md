@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_time_t(3)"
 name: "bson_iter_time_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_time_t() – The bson_iter_time_t() function shall retur
 
 <h2>NAME</h2>
 <p> bson_iter_time_t() &#8211; The bson_iter_time_t() function shall return the number of seconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 time_t
 bson_iter_time_t(const bson_iter_t *iter);
@@ -18,7 +18,6 @@ bson_iter_time_t(const bson_iter_t *iter);
 <dl>
 <dt><code>iter</code></dt>
 <dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_time_t/">bson_iter_time_t</a>(3)</code> function shall return the number of seconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element. </p>
 <h2>RETURNS</h2>
 <p> A <code>time_t</code> containing the number of seconds since the UNIX epoch. </p>

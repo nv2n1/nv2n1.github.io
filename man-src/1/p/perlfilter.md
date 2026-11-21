@@ -1,4 +1,5 @@
 ---
+
 title: "perlfilter(1)"
 name: "perlfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlfilter/"
 description: "perlfilter – Source Filters"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This article is about a little-known feature of Perl called <i>source filters</i>. Source filters alter the program text of a module before Perl sees it, much as a C preprocessor alters the source text of a C program before the compiler sees it. This article tells you more about what source filters are, how they work, and how to write your own. </p>
 <p> The original purpose of source filters was to let you encrypt your program source to prevent casual piracy. This isn&#8217;t all they can do, as you&#8217;ll soon learn. But first, the basics.</p>
 <h2>CONCEPTS</h2>

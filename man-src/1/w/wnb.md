@@ -1,4 +1,5 @@
 ---
+
 title: "wnb(1)"
 name: "wnb"
 section: "1"
@@ -9,9 +10,7 @@ description: "wnb – WordNet window-based browser interface"
 
 <h2>NAME</h2>
 <p> wnb &#8211; WordNet window-based browser interface</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wnb</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>wnb()</code> provides a window-based interface for browsing the WordNet database, allowing synsets and relations to be displayed as formatted text. For each search word, different searches are available based on syntactic category and information available in the database. </p>
 <p> <code>wnb</code> is written in Tcl/Tk, which is available for Unix and Windows platforms. This allows the same code to work on all supported WordNet platforms without modification.</p>
 <h2>WNB WINDOWS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "grub-mklayout(1)"
 name: "grub-mklayout"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-mklayout/"
 description: "grub-mklayout – generate a GRUB keyboard layout file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grub-mklayout</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> grub-mklayout processes a keyboard layout description in <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5) format into a format that can be used by GRUB&#8217;s <code>keymap</code> command. </p>
 <p> Generate GRUB keyboard layout from Linux console one.</p>
 <dl>

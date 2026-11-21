@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_dtls_cookie_send(3)"
 name: "gnutls_dtls_cookie_send"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_dtls_cookie_send – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dtls_cookie_send &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/dtls.h&gt;</code> </p>
 <p> <code>int gnutls_dtls_cookie_send(gnutls_datum_t * </code><i>key</i><code>, void * </code><i>client_data</i><code>, size_t </code><i>client_data_size</i><code>, gnutls_dtls_prestate_st * </code><i>prestate</i><code>, gnutls_transport_ptr_t </code><i>ptr</i><code>, gnutls_push_func </code><i>push_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_dtls_cookie_send – API function"
 <dd> A transport pointer to be used by <i>push_func</i></dd>
 <dt>gnutls_push_func push_func</dt>
 <dd> A function that will be used to reply</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function can be used to prevent denial of service attacks to a DTLS server by requiring the client to reply using a cookie sent by this function. That way it can be ensured that a client we allocated resources for (i.e. <code>gnutls_session_t</code>) is the one that the original incoming packet was originated from. </p>
 <p> This function must be called at the first incoming packet, prior to allocating any resources and must be succeeded by <code>gnutls_dtls_cookie_verify()</code>.</p>
 <h2>RETURNS</h2>

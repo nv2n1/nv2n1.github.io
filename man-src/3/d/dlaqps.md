@@ -1,4 +1,5 @@
 ---
+
 title: "dlaqps(3)"
 name: "dlaqps"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaqps/"
 description: "dlaqps.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqps</code> (M, N, OFFSET, NB, KB, A, LDA, JPVT, TAU, VN1, VN2, AUXV, F, LDF)<br />
  <i></i><code>DLAQPS</code> computes a step of QR factorization with column pivoting of a real m-by-n matrix A by using BLAS level 3.</p>

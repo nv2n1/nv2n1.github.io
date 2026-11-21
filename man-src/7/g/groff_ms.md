@@ -1,4 +1,5 @@
 ---
+
 title: "groff_ms(7)"
 name: "groff_ms"
 section: "7"
@@ -6,10 +7,9 @@ letter: "g"
 url: "/docs/linux/man/7-groff_ms/"
 description: "groff_ms – GNU roff manuscript macro package for formatting documents"
 ---
+
 <p>groff_ms &#8211; GNU roff manuscript macro package for formatting documents </p>
-<h2>SYNOPSIS</h2>
 <p> [<i>option</i> ...] [<i>input-file</i> ...] [<i>option</i> ...] [<i>input-file</i> ...]  </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page describes the GNU version of the <i>ms</i> macros, part of the <i>groff</i> typesetting system. The <i>ms</i> macros are mostly compatible with the documented behavior of the 4.3 BSD Unix <i>ms</i> macros (see <i>Differences from troff ms</i> below for details). The <i>ms</i> macros are suitable for reports, letters, books, and technical documentation.  </p>
 <h2>USAGE</h2>
 <p> The <i>ms</i> macro package expects files to have a certain amount of structure. The simplest documents can begin with a paragraph macro and consist of text separated by paragraph macros or even blank lines. Longer documents have a structure as follows: </p>

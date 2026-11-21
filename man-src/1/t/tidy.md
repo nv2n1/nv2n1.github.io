@@ -1,4 +1,5 @@
 ---
+
 title: "tidy(1)"
 name: "tidy"
 section: "1"
@@ -6,20 +7,13 @@ letter: "t"
 url: "/docs/linux/man/1-tidy/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>tidy</b> - check, correct, and pretty-print 
+<b>tidy</b> - check, correct, and pretty-print 
 
 HTML(5) files
 
-<h2>SYNOPSIS</h2>
+<b>tidy</b> [<i>options</i>] [<i>file</i> ...] [<i>options</i>] [<i>file</i> ...] ...
 
- <b>tidy</b> [<i>options</i>] [<i>file</i> ...] [<i>options</i>] [<i>file</i> ...] ...
-
-<h2>DESCRIPTION</h2>
-
- Tidy reads HTML, XHTML, and XML files and writes cleaned-up markup. For HTML variants, it detects, reports, and corrects many common coding errors and strives to produce visually equivalent markup that is both conformant to the HTML specifications and that works in most browsers. 
+Tidy reads HTML, XHTML, and XML files and writes cleaned-up markup. For HTML variants, it detects, reports, and corrects many common coding errors and strives to produce visually equivalent markup that is both conformant to the HTML specifications and that works in most browsers. 
 
  A common use of Tidy is to convert plain HTML to XHTML. For generic XML files, Tidy is limited to correcting basic well-formedness errors and pretty printing. 
 

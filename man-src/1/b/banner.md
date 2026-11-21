@@ -1,4 +1,5 @@
 ---
+
 title: "banner(1)"
 name: "banner"
 section: "1"
@@ -9,9 +10,7 @@ description: "banner – prints a short string to the console in very large lett
 
 <h2>NAME</h2>
 <p> banner &#8211; prints a short string to the console in very large letters</p>
-<h2>SYNOPSIS</h2>
 <p> <code>banner</code> <i>string</i></p>
-<h2>DESCRIPTION</h2>
 <p> This is a classic-style banner program similar to the one found in Solaris or AIX in the late 1990s. It prints a short string to the console in very large letters. </p>
 <p> Banners that do not fit in the terminal will be truncated. If $COLUMNS is exported in the environment, it is taken to be the width of the terminal. If $COLUMNS is not exported, and TIOCGWINSZ is available on the platform, then its idea of the terminal size is used. Otherwise, a terminal width of 80 characters is assumed. </p>
 <p> Usage is straightforward. For instance, a single word is printed like this: </p>

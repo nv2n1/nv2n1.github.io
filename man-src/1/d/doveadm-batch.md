@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-batch(1)"
 name: "doveadm-batch"
 section: "1"
@@ -9,10 +10,8 @@ description: "doveadm-batch – Execute multiple commands for multiple users"
 
 <h2>NAME</h2>
 <p> doveadm-batch &#8211; Execute multiple commands for multiple users</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>batch</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> sep command sep command</i> [&#8230;]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>batch</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> usermask sep command sep command</i> [&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The command <code>doveadm batch</code> is used to execute multiple <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>command</i>s sequentially for multiple users. This is primarily an optimization where Dovecot can do all the mailbox operations for the same user at once, instead of having to go through the users multiple times. </p>
 <p> In the first form <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will loop over all users, defined in the configured <i>user_db</i>(s), and execute the sequence of <i>command</i>s for each of them. </p>
 <p> In the second form the <i>command</i>s will be executed for each user matching the given <i>usermask</i>.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jscal-store(1)"
 name: "jscal-store"
 section: "1"
@@ -9,9 +10,7 @@ description: "jscal-store – stores joystick calibration"
 
 <h2>NAME</h2>
 <p> jscal-store &#8211; stores joystick calibration</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jscal-store</code> &lt;<i>device-name</i>&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>jscal-store</code> stores the calibration and mapping information for the given joystick device. This information can later be restored using the <code>jscal-restore</code> command. </p>
 <p> An appropriate rule can be set up with udev so that any stored calibration settings are restored when the relevant device is connected. Some distributions (at least Debian, Ubuntu and Slackware) provide joystick packages which install such rules automatically.</p>
 <h2>FILES</h2>

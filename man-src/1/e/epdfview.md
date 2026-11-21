@@ -1,4 +1,5 @@
 ---
+
 title: "epdfview(1)"
 name: "epdfview"
 section: "1"
@@ -9,9 +10,7 @@ description: "epdfview – view PDF documents"
 
 <h2>NAME</h2>
 <p> epdfview &#8211; view PDF documents</p>
-<h2>SYNOPSIS</h2>
 <p> <code>epdfview</code> [ <i>OPTION&#8230;</i> ] [ <i>FILE</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>epdfview</code> command. </p>
 <p> The aim of <code>epdfview</code> is to make a simple PDF document viewer, in the lines of <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1) but without using the GNOME libraries.</p>
 <h2>OPTIONS</h2>

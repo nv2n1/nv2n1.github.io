@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_deinit(3)"
 name: "gnutls_x509_crt_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_crt_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>void gnutls_x509_crt_deinit(gnutls_x509_crt_t </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_crt_t cert</dt>
 <dd> The structure to be deinitialized</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a certificate structure.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "nproc(1)"
 name: "nproc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nproc/"
 description: "nproc – print the number of processing units available"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nproc</code> [<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print the number of processing units available to the current process, which may be less than the number of online processors</p>
 <dl>
 <dt><code>&#8211;all</code></dt>

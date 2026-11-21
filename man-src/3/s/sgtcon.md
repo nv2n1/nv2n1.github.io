@@ -1,4 +1,5 @@
 ---
+
 title: "sgtcon(3)"
 name: "sgtcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgtcon/"
 description: "sgtcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>SGTCON</code></p>

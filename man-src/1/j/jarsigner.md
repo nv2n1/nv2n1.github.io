@@ -1,4 +1,5 @@
 ---
+
 title: "jarsigner(1)"
 name: "jarsigner"
 section: "1"
@@ -9,7 +10,6 @@ description: "jarsigner – Signs and verifies Java Archive (JAR) files."
 
 <h2>NAME</h2>
 <p> jarsigner &#8211; Signs and verifies Java Archive (JAR) files.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>jarsigner</code> [ <i>options</i> ] <i>jar-file</i> <i>alias</i>
 </pre>
@@ -28,7 +28,6 @@ jarsigner - verify[options] jar - file[alias...]
 <p> If you also specified the <code>-strict</code> option, and the <code>jarsigner</code> command detected severe warnings, the message, &quot;jar signed, with signer errors&quot; is displayed.</p>
 <dt><i>alias</i></dt>
 <dd> The aliases are defined in the keystore specified by <code>-keystore</code> or the default keystore.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jarsigner</code> tool has two purposes:</p>
 <dl>
 <dt>&bull;</dt>

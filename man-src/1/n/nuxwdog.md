@@ -1,4 +1,5 @@
 ---
+
 title: "nuxwdog(1)"
 name: "nuxwdog"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-nuxwdog/"
 description: "nuxwdog – Provides a simple watchdog process that can be used to start, stop, monitor, or reconfigure a server process."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nuxwdog</code> -f&nbsp;<wbr><i>configuration_file</i> [-i]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nuxwdog</code></p>
 <dd>is a watchdog daemon that builds on the <code>uxwdog</code> service that is part of the Netscape Enterprise Server (NES). <code>nuxwdog</code> can start, stop, monitor, and reconfigure server programs, depending on the parameters passed to it in its configuration file. <code>nuxwdog</code> opens a Unix domain socket to accept requests from any server process it is managing. Optionally, <code>nuxwdog</code> can be configured to communicate only with clients that are descendants of the <code>nuxwdog</code> process, limiting an avenue of potential access to any servers managed by the watchdog. </dd>
 <p> Some servers require a high-level of security to protect their data or operations, which means (for example) that they cannot store plaintext passwords in a password file to allow the server to be started automatically. <code>nuxwdog</code> can be configured to prompt for server passwords when a server first starts and then caches those passwords so that <code>nuxwdog</code> can restart the server without intervention if the server crashes. </p>

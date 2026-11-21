@@ -1,4 +1,5 @@
 ---
+
 title: "tsung-recorder(1)"
 name: "tsung-recorder"
 section: "1"
@@ -9,9 +10,7 @@ description: "tsung-recorder – Proxy recorder for the tsung load testing tool.
 
 <h2>NAME</h2>
 <p> tsung-recorder &#8211; Proxy recorder for the tsung load testing tool.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tsung-recorder</code> [ <code>-l log file</code> ] [ <code>-r command</code> ] [ <code>-p plugin</code> ] [ <code>-L listen port</code> ] [ <code>-I IP</code> ] [ <code>-P port</code> ] [ <code>-u </code> ] [ <code>start|stop|restart|record_tag</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tsung</code> is a distributed load testing tool. It is protocol-independent and can currently be used to stress and benchmark HTTP, WebDAV, LDAP, PostgreSQL, MySQL and Jabber/XMPP servers. <code>tsung-recorder</code> can be used to record sessions (only for HTTP, WebDAV and Postgresql) that can be edited and replayed later by tsung </p>
 <p> tsung-recorder is a proxy that records a session in the tsung native XML format; it can be used by your favorite client (browser in the case of the http plugin).</p>
 <dl>

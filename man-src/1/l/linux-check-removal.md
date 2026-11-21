@@ -1,4 +1,5 @@
 ---
+
 title: "linux-check-removal(1)"
 name: "linux-check-removal"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-linux-check-removal/"
 description: "linux-check-removal – check whether removal of a kernel is safe"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>linux-check-removal</code><i>&nbsp;VERSION</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>linux-check-removal</code> is intended to be called from the prerm</p>
 <dd>maintainer scripts of Linux kernel packages. </dd>
 <p> The <i>VERSION</i> argument must be the kernel version string as shown by <code>uname -r</code> and used in filenames. </p>

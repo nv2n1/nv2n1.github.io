@@ -1,4 +1,5 @@
 ---
+
 title: "sgerq2(3)"
 name: "sgerq2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgerq2/"
 description: "sgerq2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgerq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>SGERQ2</code> computes the RQ factorization of a general rectangular matrix using an unblocked algorithm.</p>

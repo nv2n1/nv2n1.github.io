@@ -1,4 +1,5 @@
 ---
+
 title: "crypt_preferred_method(3)"
 name: "crypt_preferred_method"
 section: "3"
@@ -8,13 +9,10 @@ description: "crypt_preferred_method – get the prefix of the preferred hash me
 ---
 
 <p>libxcrypt</p>
-<h2 class="name">NAME</h2>
 <p> <code>crypt_preferred_method</code> &#8211; get the prefix of the preferred hash method </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>
-<h2>SYNOPSIS</h2>
 <p> In crypt.h Ft const char* Fo crypt_preferred_method Fa void Fc</p>
-<h2>DESCRIPTION</h2>
 <p> <code>crypt_preferred_method</code> is a convenience function to get the prefix of the preferred hash method. If a preferred method is available, it is the same as the one also used by the <code>crypt_gensalt functions</code> if their given <i>prefix</i> parameter is NULL.</p>
 <h2>RETURN VALUES</h2>
 <p> The string returned equals the prefix of the preferred hash method. If no preferred hash method is available it is NULL. It <i>is</i> safe to pass the string returned by <code>crypt_preferred_method</code> directly to <code>crypt_gensalt</code> without prior string-sanitizing nor NULL-pointer checks.</p>

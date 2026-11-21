@@ -1,4 +1,5 @@
 ---
+
 title: "ssytrs(3)"
 name: "ssytrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssytrs/"
 description: "ssytrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
  <i></i><code>SSYTRS</code></p>

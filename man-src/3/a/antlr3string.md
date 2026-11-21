@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3string(3)"
 name: "antlr3string"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3string.h –"
 ---
 
 <p> Simple string interface allows indiscriminate allocation of strings such that they can be allocated all over the place and released in one chunk via a string factory &#8211; saves lots of hassle in remembering what strings were allocated where.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt; </p>
 <h3>Data Structures</h3>

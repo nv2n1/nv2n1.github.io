@@ -1,4 +1,5 @@
 ---
+
 title: "ctrsyl(3)"
 name: "ctrsyl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctrsyl/"
 description: "ctrsyl.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />
  <i></i><code>CTRSYL</code></p>

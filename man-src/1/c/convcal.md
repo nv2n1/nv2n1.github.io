@@ -1,4 +1,5 @@
 ---
+
 title: "convcal(1)"
 name: "convcal"
 section: "1"
@@ -9,9 +10,7 @@ description: "convcal – convert dates to different formats"
 
 <h2>NAME</h2>
 <p> convcal &#8211; convert dates to different formats </p>
-<h2>SYNOPSIS</h2>
 <p> <code>convcal</code> [<i>OPTIONS</i>] [<i>DATE</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>convcal</code> is part of the <i>grace</i> software package, an application for two-dimensional data visualization. <code>convcal</code> converts dates from and to various formats. The following date formats are supported (hour, minutes and seconds are always optional): </p>
 <dl>
 <dt><i>iso</i></dt>

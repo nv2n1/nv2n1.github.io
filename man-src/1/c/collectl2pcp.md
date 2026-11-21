@@ -1,4 +1,5 @@
 ---
+
 title: "collectl2pcp(1)"
 name: "collectl2pcp"
 section: "1"
@@ -9,9 +10,7 @@ description: "collectl2pcp – import collectl data to a PCP archive"
 
 <h2>NAME</h2>
 <p> <code>collectl2pcp</code> &#8211; import collectl data to a PCP archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>collectl2pcp</code> [<code>-F</code>] [<code>-v</code>] [<code>-?</code>] <i>file</i> [<i>file</i> &#8230;] <i>archive</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>collectl2pcp</code> reads raw <code><a href="/docs/linux/man/1-collectl/">collectl</a></code>(1) data from each <i>file</i> and creates a new PCP archive with basename <i>archive</i>. Each input <i>file</i> may be gzipped (with <code>.gz</code> suffix). The PCP <i>archive</i> and at least one input <i>file</i> are required arguments. </p>
 <p> The options to <code>collectl2pcp</code> are as follows.</p>
 <dl>

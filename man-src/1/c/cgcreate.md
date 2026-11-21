@@ -1,4 +1,5 @@
 ---
+
 title: "cgcreate(1)"
 name: "cgcreate"
 section: "1"
@@ -9,9 +10,7 @@ description: "cgcreate – create new cgroup(s)"
 
 <h2>NAME</h2>
 <p> cgcreate &#8211; create new cgroup(s) </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cgcreate</code> [<code>-h</code>] [<code>-t</code> &lt;<i>tuid&gt;:&lt;tgid</i>&gt;] [<code>-a</code> &lt;<i>agid&gt;:&lt;auid</i>&gt;] [<code>-f</code> mode] [<code>-d</code> mode] [<code>-s</code> mode] <code>-g</code> &lt;<i>controllers&gt;:&lt;path</i>&gt; [<code>-g</code> &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> The command creates new cgroup(s) defined by the options <code>-g</code>. </p>
 <dl>
 <dt><code>-a &lt;agid&gt;:&lt;auid&gt;</code></dt>

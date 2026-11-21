@@ -1,4 +1,5 @@
 ---
+
 title: "setdividendyield(3)"
 name: "setdividendyield"
 section: "3"
@@ -6,8 +7,8 @@ letter: "s"
 url: "/docs/linux/man/3-setdividendyield/"
 description: "QuantLib::SingleAssetOption – Black-Scholes-Merton option."
 ---
+
 <p>QuantLib::SingleAssetOption &#8211; Black-Scholes-Merton option. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/legacy/pricers/singleassetoption.hpp&gt; </p>

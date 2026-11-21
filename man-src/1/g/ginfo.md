@@ -1,4 +1,5 @@
 ---
+
 title: "ginfo(1)"
 name: "ginfo"
 section: "1"
@@ -9,9 +10,7 @@ description: "ginfo – fetch service information"
 
 <h2>NAME</h2>
 <p> ginfo &#8211; fetch service information</p>
-<h2>SYNOPSIS</h2>
 <p> ginfo [options] Object [attribute_to_filter=&#8217;value of the attribute&#8217;] [attribute_to_display]</p>
-<h2>DESCRIPTION</h2>
 <p> List attributes corresponding to an object. By default, all the attributes of an object are displayed.</p>
 <h2>OPTIONS</h2>
 <dl>

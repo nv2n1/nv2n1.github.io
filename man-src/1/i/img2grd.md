@@ -1,4 +1,5 @@
 ---
+
 title: "img2grd(1)"
 name: "img2grd"
 section: "1"
@@ -9,10 +10,8 @@ description: "img2grd – Extract subset of img file in Mercator or Geographic f
 
 <h2>NAME</h2>
 <p> img2grd &#8211; Extract subset of img file in Mercator or Geographic format</p>
-<h2>SYNOPSIS</h2>
 <p> <code>img2grd</code> <i>imgfile</i> <i>grdfile</i> <i>region</i> <i>type</i> [ ] [ [<i>minlat/maxlat</i>] ] [ ] [ <i>minutes</i> ] [ ] [ <i>navg</i> ] [ [<i>scale</i>] ] [ [<i>level</i>] ] [ <i>maxlon</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>img2grd</code> reads an img format file, extracts a subset, and writes it to a grid file. The <code>-M</code> option dictates whether or not the Spherical Mercator projection of the img file is preserved or if a Geographic grid should be written by undoing the Mercator projection. If geographic grid is selected you can also request a resampling onto the exact <code>-R</code> given.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

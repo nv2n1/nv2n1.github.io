@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_ext_export_key_purposes(3)"
 name: "gnutls_x509_ext_export_key_purposes"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_ext_export_key_purposes – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_export_key_purposes &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_export_key_purposes(gnutls_x509_key_purposes_t </code><i>p</i><code>, gnutls_datum_t * </code><i>ext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_ext_export_key_purposes – API function"
 <dd> The key purposes structure</dd>
 <dt>gnutls_datum_t * ext</dt>
 <dd> The DER-encoded extension data; must be freed using <code>gnutls_free()</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will convert the key purposes structure to a DER-encoded PKIX ExtKeyUsageSyntax (2.5.29.37) extension. The output data in<br />
 &nbsp;<wbr><i>ext</i>&nbsp;<wbr>will be allocated usin&nbsp;<wbr><code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>

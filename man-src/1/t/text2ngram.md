@@ -1,4 +1,5 @@
 ---
+
 title: "text2ngram(1)"
 name: "text2ngram"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-text2ngram/"
 description: "text2ngram – generate statistical n-gram data from text"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>text2ngram</code> [<i>,OPTION/</i>]&#8230; <i>,infiles/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>&#8211;output</code>, <code>-o</code> O</dt>
 <dd> Output file name O</dd>

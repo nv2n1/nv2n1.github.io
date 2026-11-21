@@ -1,4 +1,5 @@
 ---
+
 title: "pdfbook2(1)"
 name: "pdfbook2"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdfbook2/"
 description: "pdfbook2 – transform pdf files into booklets for double-sided printing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdfbook2</code> [ <i>options</i> ] <i>INPUT</i> [ <i>INPUT</i>, &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> Create print-ready PDF files from some <i>INPUT</i> PDF files for booklet printing. The resulting files need to be printed in landscape/long edge double sided printing. The default paper format depends on the locale and is choosen by pdfjam. It can be set with the &#8211;paper option. </p>
 <p> Before the pdf is composed the <i>INPUT</i> file is cropped to the relevant area in order to discard unnecessary white spaces. In this process, all pages are cropped to the same dimensions. Extra margins can be defined at the edges of the booklet and in the middle where the binding occurs. </p>
 <p> The <i>OUTPUT</i> is written to <i>INPUT</i>-book.pdf. Existing files will be overwritten. All input files are processed seperatly. </p>

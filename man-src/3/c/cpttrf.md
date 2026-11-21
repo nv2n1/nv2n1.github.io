@@ -1,4 +1,5 @@
 ---
+
 title: "cpttrf(3)"
 name: "cpttrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpttrf/"
 description: "cpttrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpttrf</code> (N, D, E, INFO)<br />
  <i></i><code>CPTTRF</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fdhestonvanillaengine(3)"
 name: "fdhestonvanillaengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdhestonvanillaengine/"
 description: "ql/experimental/finitedifferences/fdhestonvanillaengine.hpp – Finite-Differences Heston vanilla option engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br />
  #include &lt;ql/models/equity/hestonmodel.hpp&gt;<br />
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt; </p>

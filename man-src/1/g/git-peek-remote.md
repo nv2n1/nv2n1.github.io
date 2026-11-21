@@ -1,4 +1,5 @@
 ---
+
 title: "git-peek-remote(1)"
 name: "git-peek-remote"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-peek-remote/"
 description: "git-peek-remote – List the references in a remote repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git peek - remote[--upload - pack = &lt;git - upload - pack&gt;] [&lt;host&gt;:]&lt;directory&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command is deprecated; use <i>git ls-remote</i> instead.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;upload-pack=&lt;git-upload-pack&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mptopdf(1)"
 name: "mptopdf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mptopdf/"
 description: "mptopdf – convert MetaPost figures to PDF"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mptopdf [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>convert MetaPost figures to PDF</code></p>
 <h2>OPTIONS</h2>
 <dl>

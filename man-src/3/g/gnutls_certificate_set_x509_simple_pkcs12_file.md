@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_x509_simple_pkcs12_file(3)"
 name: "gnutls_certificate_set_x509_simple_pkcs12_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_x509_simple_pkcs12_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_simple_pkcs12_file &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_simple_pkcs12_file(gnutls_certificate_credentials_t </code><i>res</i><code>, const char * </code><i>pkcs12file</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>, const char * </code><i>password</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_certificate_set_x509_simple_pkcs12_file – API function"
 <dd> is PEM or DER of the <i>pkcs12file</i> .</dd>
 <dt>const char * password</dt>
 <dd> optional password used to decrypt PKCS<code>12</code> file, bags and keys.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair and/or a CRL in the gnutls_certificate_credentials_t structure. This function may be called more than once (in case multiple keys/certificates exist for the server). </p>
 <p> PKCS<code>12</code> files with a MAC, encrypted bags and PKCS <code>8</code> private keys are supported. However, only password based security, and the same password for all operations, are supported. </p>
 <p> PKCS<code>12</code> file may contain many keys and/or certificates, and this function will try to auto-detect based on the key ID the certificate and key pair to use. If the PKCS<code>12</code> file contain the issuer of the selected certificate, it will be appended to the certificate to form a chain. </p>

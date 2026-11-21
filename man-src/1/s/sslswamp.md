@@ -1,4 +1,5 @@
 ---
+
 title: "sslswamp(1)"
 name: "sslswamp"
 section: "1"
@@ -9,9 +10,7 @@ description: "swamp – SSL/TLS load-tester based on OpenSSL"
 
 <h2>NAME</h2>
 <p> swamp &#8211; SSL/TLS load-tester based on OpenSSL</p>
-<h2>SYNOPSIS</h2>
 <p> <code>swamp</code> -connect &lt;address&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>swamp</code> is a utility that can be used to test and/or benchmark <font SIZE="-1">SSL/TLS</font> servers. It is quite configurable and allows for various different characteristics of the server&#8217;s behaviour to be tested.</p>
 <h2>OPTIONS</h2>
 <dl>

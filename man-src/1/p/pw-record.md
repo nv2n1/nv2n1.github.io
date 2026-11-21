@@ -1,4 +1,5 @@
 ---
+
 title: "pw-record(1)"
 name: "pw-record"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pw-record/"
 description: "pw-cat – Play and record media with PipeWire"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pw - cat[options][FILE] pw - play[options][FILE] pw - record[options][FILE] pw - midiplay[options][FILE] pw - midirecord[options][FILE]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>pw-cat</code> is a simple tool for playing back or capturing raw or encoded media files on a PipeWire server. It understands all audio file formats supported by <code>libsndfile</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_get_key_usage(3)"
 name: "gnutls_openpgp_crt_get_key_usage"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_openpgp_crt_get_key_usage – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_key_usage &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_key_usage(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int * </code><i>key_usage</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_openpgp_crt_get_key_usage – API function"
 <dd> should contain a gnutls_openpgp_crt_t structure</dd>
 <dt>unsigned int * key_usage</dt>
 <dd> where the key usage bits will be stored</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return certificate&#8217;s key usage, by checking the key algorithm. The key usage value will ORed values of the: <code>GNUTLS_KEY_DIGITAL_SIGNATURE</code>, <code>GNUTLS_KEY_KEY_ENCIPHERMENT</code>.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lavpipe(1)"
 name: "lavpipe"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lavpipe/"
 description: "lavpipe – creates raw YUV streams from pipe list scripts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lavpipe</code> [<code>-o</code> <i>num</i>] [<code>-n</code> <i>num</i>] <i>pipe-list</i> </p>
-<h2>DESCRIPTION</h2>
 <p> lavpipe reads a script file called &#8216;pipe list&#8217; that is of a similar structure as the edit lists that can be fed into lav2yuv. For info about the pipe list format see below. </p>
 <p> The pipe list defines several video sources and filters that are combined by lavpipe to produce a single output YUV stream on stdout (which for example can be compressed and stored to disk via <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1) or <code><a href="/docs/linux/man/1-yuv2lav/">yuv2lav</a></code>(1)). </p>
 <h2>OPTIONS</h2>

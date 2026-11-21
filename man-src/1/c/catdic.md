@@ -1,4 +1,5 @@
 ---
+
 title: "catdic(1)"
 name: "catdic"
 section: "1"
@@ -9,9 +10,7 @@ description: "catdic – Download a dictionary"
 
 <h2>NAME</h2>
 <p> catdic &#8211; Download a dictionary</p>
-<h2>SYNOPSIS</h2>
 <p> <code>catdic [{-cs|-cannaserver} </code><i>canna-server</i>] [-i|-u <i>user-name</i>] <i>remote-dic</i> [-l <i>local-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> catdic downloads a dictionary file to the current directory. The file downloaded is a dictionary file the dictionary name of which is <i>remote-dic</i>. It is in the user dictionary directory of the machine on which <i>cannaserver</i>(1M) is in operation. (Hereafter, this machine is called the remote host.)</p>
 <h2>OPTIONS</h2>
 <dl>

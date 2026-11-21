@@ -1,4 +1,5 @@
 ---
+
 title: "prlimit(1)"
 name: "prlimit"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-prlimit/"
 description: "prlimit – get and set process resource limits"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>prlimit</code> [options] [<code>&#8211;resource</code>[=<i>limits</i>]] [<code>&#8211;pid</code> <i>PID</i>] </p>
 <p> <code>prlimit</code> [options] [<code>&#8211;resource</code>[=<i>limits</i>]] <i>command</i> [<i>argument</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Given a process ID and one or more resources, <code>prlimit</code> tries to retrieve and/or modify the limits. </p>
 <p> When <i>command</i> is given, <code>prlimit</code> will run this command with the given arguments. </p>
 <p> The <i>limits</i> parameter is composed of a soft and a hard value, separated by a colon (:), in order to modify the existing values. If no <i>limits</i> are given, <code>prlimit</code> will display the current values. If one of the values is not given, then the existing one will be used. To specify the unlimited or infinity limit (<code>RLIM_INFINITY</code>), the -1 or &#8216;unlimited&#8217; string can be passed. </p>

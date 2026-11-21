@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_verify_hash2(3)"
 name: "gnutls_pubkey_verify_hash2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pubkey_verify_hash2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_verify_hash2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_verify_hash2(gnutls_pubkey_t </code><i>key</i><code>, gnutls_sign_algorithm_t </code><i>algo</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>hash</i><code>, const gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_pubkey_verify_hash2 – API function"
 <dd> holds the hash digest to be verified</dd>
 <dt>const gnutls_datum_t * signature</dt>
 <dd> contains the signature</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will verify the given signed digest, using the parameters from the public key. Note that unlike <code>gnutls_privkey_sign_hash()</code>, this function accepts a signature algorithm instead of a digest algorithm. You can use <code>gnutls_pk_to_sign()</code> to get the appropriate value.</p>
 <h2>RETURNS</h2>
 <p> In case of a verification failure <code>GNUTLS_E_PK_SIG_VERIFY_FAILED</code> is returned, and zero or positive code on success.</p>

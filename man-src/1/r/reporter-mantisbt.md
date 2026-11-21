@@ -1,4 +1,5 @@
 ---
+
 title: "reporter-mantisbt(1)"
 name: "reporter-mantisbt"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-reporter-mantisbt/"
 description: "reporter-mantisbt – Reports problem to Mantis Bug Tracker."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>reporter-mantisbt</i> [-vrf] [-c CONFFILE]&#8230; [-F FMTFILE] [-A FMTFILE2] -d DIR </p>
 <p> Or: </p>
 <p> <i>reporter-mantisbt</i> [-v] [-c CONFFILE]&#8230; [-d DIR] -t[ID] FILE&#8230; </p>
 <p> Or: </p>
 <p> <i>reporter-mantisbt</i> [-v] [-c CONFFILE]&#8230; -h DUPHASH</p>
-<h2>DESCRIPTION</h2>
 <p> The tool reads problem directory DIR. Then it logs in to MantisBT and tries to find an issue with the same duphash HEXSTRING in <i>abrt_hash</i> field. </p>
 <p> If such issue is not found, then a new issue is created. Elements of DIR are stored in the issue as part of issue description or as attachments, depending on their type and size. </p>
 <p> Otherwise, if such issue is found and it is marked as CLOSED DUPLICATE, the tool follows the chain of duplicates until it finds a non-DUPLICATE issue. The tool adds a new note to found issue. </p>

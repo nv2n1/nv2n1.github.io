@@ -1,4 +1,5 @@
 ---
+
 title: "eventfd(2)"
 name: "eventfd"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-eventfd/"
 description: "eventfd – create a file descriptor for event notification"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/eventfd.h&gt;</code> </p>
 <p> <code>int eventfd(unsigned int </code><i>initval</i><code>, int </code><i>flags</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>eventfd</code>() creates an &quot;eventfd object&quot; that can be used as an event wait/notify mechanism by user-space applications, and by the kernel to notify user-space applications of events. The object contains an unsigned 64-bit integer (<i>uint64_t</i>) counter that is maintained by the kernel. This counter is initialized with the value specified in the argument <i>initval</i>. </p>
 <p> As its return value, <code>eventfd</code>() returns a new file descriptor that can be used to refer to the eventfd object. </p>
 <p> The following values may be bitwise ORed in <i>flags</i> to change the behavior of <code>eventfd</code>():</p>

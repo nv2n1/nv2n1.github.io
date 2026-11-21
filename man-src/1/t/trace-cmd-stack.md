@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-stack(1)"
 name: "trace-cmd-stack"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-stack/"
 description: "trace-cmd-stack – read, enable or disable Ftrace Linux kernel stack tracing."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd stack</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) stack enables the Ftrace stack tracer within the kernel. The stack tracer enables the function tracer and at each function call within the kernel, the stack is checked. When a new maximum usage stack is discovered, it is recorded. </p>
 <p> When no option is used, the current stack is displayed. </p>
 <p> To enable the stack tracer, use the option <code>&#8211;start</code>, and to disable the stack tracer, use the option <code>&#8211;stop</code>. The output will be the maximum stack found since the start was enabled. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pls(1)"
 name: "pls"
 section: "1"
@@ -9,9 +10,7 @@ description: "pls – list directory contents"
 
 <h2>NAME</h2>
 <p> pls &#8211; list directory contents </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pls</code> [-a] [-R] [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] [<i>DIRECTORY</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pls</code> list the contents of a directory on a device connected through SynCE. </p>
 <p> Forward slashes (&#8216;/&#8217;) on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <dl>

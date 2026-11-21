@@ -1,4 +1,5 @@
 ---
+
 title: "gob2(1)"
 name: "gob2"
 section: "1"
@@ -9,9 +10,7 @@ description: "GOB2 – The GObject Builder"
 
 <h2>NAME</h2>
 <p> GOB2 &#8211; The GObject Builder</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gob2</code> [ option ] &#8230; file </p>
-<h2>DESCRIPTION</h2>
 <p> GObject Builder is a simple preprocessor for easily creating GObject objects. It does not parse any C code and ignores any C errors. It is in spirit similar to things like lex or yacc. In some ways it also resembles java. But it is really just a simple preprocessor for creating GObjects for use in C or C++ and it is not a programming language. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "attr(1)"
 name: "attr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-attr/"
 description: "attr – extended attributes on filesystem objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 attr[-LRSq] - s attrname[-V attrvalue] pathname attr[-LRSq] - g attrname pathname attr[-LRSq] - r attrname pathname attr[-LRSq] - l pathname
 </code></pre>
@@ -18,7 +18,6 @@ attr[-LRSq] - s attrname[-V attrvalue] pathname attr[-LRSq] - g attrname pathnam
 <p> In supported filesystems, the <i>names</i> can be up to 256 bytes in length, terminated by the first 0 byte. The intent is that they be printable ASCII (or other character set) names for the attribute. The <i>values</i> can be up to 64KB of arbitrary binary data. </p>
 <p> Attributes can be attached to all types of inodes: regular files, directories, symbolic links, device nodes, etc. </p>
 <p> Extended attributes use 2 disjoint attribute name spaces associated with every filesystem object. They are the <code>root</code> and <code>user</code> address spaces. The <code>root</code> address space is accessible only to the superuser, and then only by specifying a flag argument to the function call. Other users will not see or be able to modify attributes in the <code>root</code> address space. The <code>user</code> address space is protected by the normal file permissions mechanism, so the owner of the file can decide who is able to see and/or modify the value of attributes on any particular file.</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>attr</i> utility allows the manipulation of extended attributes associated with filesystem objects from within shell scripts. </p>
 <p> There are four main operations that <i>attr</i> can perform:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_fslabel(2)"
 name: "ioctl_fslabel"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-ioctl_fslabel/"
 description: "ioctl_fslabel – get or set a filesystem label"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code><br />
  <code>#include &lt;linux/fs.h&gt;</code> </p>
 <p> <code>int ioctl(int </code><i>fd</i><code>, FS_IOC_GETFSLABEL, char </code><i>label</i><code>[FSLABEL_MAX]);</code><br />
  <code>int ioctl(int </code><i>fd</i><code>, FS_IOC_SETFSLABEL, char </code><i>label</i><code>[FSLABEL_MAX]);</code></p>
-<h2>DESCRIPTION</h2>
 <p> If a filesystem supports online label manipulation, these <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations can be used to get or set the filesystem label for the filesystem on which <code>fd</code> resides. The <code>FS_IOC_SETFSLABEL</code> operation requires privilege (<code>CAP_SYS_ADMIN</code>).</p>
 <h2>RETURN VALUE</h2>
 <p> On success zero is returned. On error, -1 is returned, and <i>errno</i> is set to indicate the error.</p>

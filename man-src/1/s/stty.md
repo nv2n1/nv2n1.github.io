@@ -1,4 +1,5 @@
 ---
+
 title: "stty(1)"
 name: "stty"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stty/"
 description: "stty – change and print terminal line settings"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>stty</code> [<i>,-F DEVICE | &#8211;file=DEVICE/</i>] [<i>,SETTING/</i>]&#8230;<br />
  <code>stty</code> [<i>,-F DEVICE | &#8211;file=DEVICE/</i>] [<i>,-a|&#8211;all/</i>]<br />
  <code>stty</code> [<i>,-F DEVICE | &#8211;file=DEVICE/</i>] [<i>,-g|&#8211;save/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Print or change terminal characteristics. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

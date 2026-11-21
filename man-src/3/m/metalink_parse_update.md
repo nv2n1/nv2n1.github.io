@@ -1,4 +1,5 @@
 ---
+
 title: "metalink_parse_update(3)"
 name: "metalink_parse_update"
 section: "3"
@@ -9,13 +10,11 @@ description: "metalink_parse_update, metalink_parse_final, metalink_parser_conte
 
 <h2>NAME</h2>
 <p> metalink_parse_update, metalink_parse_final, metalink_parser_context_new, metalink_parse_context_delete &#8211; Parse Metalink file and create metalink_t object. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_parser.h">metalink/metalink_parser.h</a>&gt;</code> </p>
 <p> <code>metalink_error_t metalink_parse_update(metalink_parser_context_t *</code><i>ctx</i><code>,</code> <code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>const char *</code><i>buf</i><code>, size_t </code><i>len</i><code>);</code><br />
  <code>metalink_error_t metalink_parse_final(metalink_parser_context_t *</code><i>ctx</i><code>,</code> <code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>const char *</code><i>buf</i><code>, size_t </code><i>len</i><code>,</code> <code>metalink_t **</code><i>res</i><code>);</code> </p>
 <p> <code>metalink_parser_context_t* metalink_parser_context_new();</code><br />
  <code>void metalink_parser_context_delete(metalink_parser_context_t *</code><i>ctx</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> These functions privide a push interface for parsing Metalink XML files. </p>
 <p> Before calling <code>metalink_parse_update</code>() and <code>metalink_parse_final</code>(), <code>metalink_parse_context_t</code> has to be created by <code>metalink_parser_context_new</code>(). </p>
 <p> In each call of <code>metalink_parse_update</code>(), <i>len</i> bytes of <i>buf</i> are processed. At the last piece of data, call <code>metalink_parse_final</code>() to get <code><a href="/docs/linux/man/3-metalink_t/">metalink_t</a></code>(3) structure as a result. Giving 0 as <i>len</i> is permitted. </p>

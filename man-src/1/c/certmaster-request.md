@@ -1,4 +1,5 @@
 ---
+
 title: "certmaster-request(1)"
 name: "certmaster-request"
 section: "1"
@@ -6,18 +7,11 @@ letter: "c"
 url: "/docs/linux/man/1-certmaster-request/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+certmaster-request -- requests SSL certs from a certmaster Fedora Unified Network Controller. 
 
- certmaster-request -- requests SSL certs from a certmaster Fedora Unified Network Controller. 
+certmaster-request [--server certmaster.example.com] [--port port] [ --wait infinite/seconds ]
 
-<h2>SYNOPSIS</h2>
-
- certmaster-request [--server certmaster.example.com] [--port port] [ --wait infinite/seconds ]
-
-<h2>DESCRIPTION</h2>
-
- <font SIZE="-1">FIXME:</font> To be added later once we split this out from func.
+<font SIZE="-1">FIXME:</font> To be added later once we split this out from func.
 
 <h2>API</h2>
 

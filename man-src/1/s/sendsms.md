@@ -1,4 +1,5 @@
 ---
+
 title: "sendsms(1)"
 name: "sendsms"
 section: "1"
@@ -9,9 +10,7 @@ description: "sendsms – command line tool to send SMSes using gnokii"
 
 <h2>NAME</h2>
 <p> sendsms &#8211; command line tool to send SMSes using gnokii</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sendsms </code><i>[OPTIONS]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sendsms</code> allows you to send a SMS using gnokii not knowing the syntax of gnokii command. It is written using dialog and allows to send a text SMS choosing recipients from the phone address book or entering it manually. </p>
 <h3>OPTIONS</h3>
 <p> Available options:</p>

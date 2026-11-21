@@ -1,4 +1,5 @@
 ---
+
 title: "esddsp(1)"
 name: "esddsp"
 section: "1"
@@ -6,14 +7,9 @@ letter: "e"
 url: "/docs/linux/man/1-esddsp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+esddsp - attempt to reroute audio device to esd 
 
- esddsp - attempt to reroute audio device to esd 
-
-<h2>DESCRIPTION</h2>
-
- esddsp can allow non-esd applications to be routed through esd.
+esddsp can allow non-esd applications to be routed through esd.
 
 <h2>USAGE</h2>
 

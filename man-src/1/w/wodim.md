@@ -1,4 +1,5 @@
 ---
+
 title: "wodim(1)"
 name: "wodim"
 section: "1"
@@ -9,11 +10,9 @@ description: "wodim – write data to optical disk media"
 
 <h2>NAME</h2>
 <p> wodim &#8211; write data to optical disk media</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wodim</code> [<i>options</i>] <i>track1</i>&#8230;<i>trackn</i></p>
 <h2>NOTE</h2>
 <p> There may be similarities and differences between this program and other disk recording application(s). See the <code>CREDITS</code> and <code>AUTHORS</code> sections below to learn about the origin of <code>wodim.</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>wodim</code> is used to record data or audio Compact Discs on an Orange Book CD-Recorder or to write DVD media on a DVD-Recorder. </p>
 <p> The <i>device</i> is the device file or label offered by the operating system to access the recorder with SCSI GENERIC (sg) interface. Note that some operating systems may provide separate device nodes for block-oriented and sg access. For example, on older <i>Linux</i> systems, the sg access was available through <i>/dev/sg&#8230;</i> files while the block oriented access was done through associated (but not identical) <i>/dev/hd&#8230;</i> and <i>/dev/sr&#8230;</i> (or <i>/dev/scd&#8230;</i> ) files. </p>
 <p> In any case, the user running <code>wodim</code> needs read and write access to the particular device file on a Linux system. It is recommended to be root or install the application as suid-root, because certain versions of Linux (kernel) limit the set of SCSI commands allowed for non-root users. Even if usage without root identity is possible in many cases, some device drivers still may fail, show unexplainable problems and generally the problems become harder to debug. The risk for buffer-underruns is also increased. See the <i>PROCESS SCHEDULING PRIORITY</i> section below for more details. </p>

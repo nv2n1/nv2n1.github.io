@@ -1,4 +1,5 @@
 ---
+
 title: "pnmhisteq(1)"
 name: "pnmhisteq"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pnmhisteq/"
 description: "pnmhisteq – histogram equalise a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmhisteq</code><br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-gray</code>] [<code>-rmap</code> <i>pgmfile</i>] [<code>-wmap</code> <i>pgmfile</i>] [<code>-verbose</code>] [<i>pnmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pnmhisteq</code> increases the contrast of a portable graymap or pixmap through the technique of <i>histogram equalisation</i>[1]. A histogram of the luminance of pixels in the map is computed, from which a transfer function is calculated which spreads out intensity levels around histogram peaks and compresses them at troughs. This has the effect of using the available levels of intensity more efficiently and thereby increases the detail visible in the image. </p>
 <p> Mathematically, if <i>N[i]</i> is the number of pixels of luminosity <i>i</i> in the image and <i>T</i> is the total number of pixels, luminosity <i>j</i> is replaced by: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;j<br />

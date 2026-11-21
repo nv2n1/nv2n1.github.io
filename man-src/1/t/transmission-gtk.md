@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-gtk(1)"
 name: "transmission-gtk"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-transmission-gtk/"
 description: "transmission-gtk – a bittorrent client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>transmission-gtk</code> &#8211; a bittorrent client </p>
-<h2>SYNOPSIS</h2>
 <p> <code>transmission-gtk</code> &#8211;<code>?</code><br />
 <code>transmission-gtk</code> [-<code>pqm</code> ] [<i>torrent-file &#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>transmission-gtk</code> is a fast and easy BitTorrent client. </p>
 <p> BitTorrent is a peer-to-peer file transfer protocol which uses a metainfo file (usually with the .torrent file extension) and a central tracker to distribute file data amongst a group of peers. For more information on the BitTorrent protocol see <a rel="nofollow" href="http://www.bittorrent.org/">http://www.bittorrent.org/</a></p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-tags(1)"
 name: "euscale-describe-tags"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-describe-tags – Describe auto-scaling tags"
 
 <h2>NAME</h2>
 <p> euscale-describe-tags &#8211; Describe auto-scaling tags</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-describe-tags [&#8211;filter NAME=VALUE,&#8230;] [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Describe auto-scaling tags</p>
 <h3>optional arguments:</h3>
 <dl>

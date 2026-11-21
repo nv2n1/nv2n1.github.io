@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usermod(1)"
 name: "euare-usermod"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-usermod – Change the name and/or path of a user"
 
 <h2>NAME</h2>
 <p> euare-usermod &#8211; Change the name and/or path of a user</p>
-<h2>SYNOPSIS</h2>
 <p> euare-usermod [-n USER] [-p PATH] [&#8211;enabled {true,false}]</p>
 <dl>
 <dt>[&#8211;pwd-expires YYYY-MM-DDThh:mm:ssZ]</dt>
 <dd> [&#8211;reg-status {REGISTERED,APPROVED,CONFIRMED}] [&#8211;as-account ACCOUNT] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Change the name and/or path of a user</p>
 <h3>positional arguments:</h3>
 <dl>

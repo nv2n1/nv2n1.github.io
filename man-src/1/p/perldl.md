@@ -1,4 +1,5 @@
 ---
+
 title: "perldl(1)"
 name: "perldl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldl/"
 description: "perldl – Simple shell for PDL (see also pdl2)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> Use <font SIZE="-1">PDL</font> interactively: </p>
 <pre>
   bash$ perldl
@@ -24,7 +24,6 @@ description: "perldl – Simple shell for PDL (see also pdl2)"
 &quot;;
   ...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The program <code>perldl</code> is a simple shell (written in perl) for interactive use of <font SIZE="-1">PDL. </font> It consists of a command-line interface that supports immediate interpretation of perl commands and expressions. Perl expressions, including <font SIZE="-1">PDL</font> constructs, can be entered directly at the keyboard and are compiled and executed immediately. The syntax is not exactly identical to Perl, in that under most circumstances ending a line causes immediate execution of the command entered so far (no trailing &#8216;;&#8217; is required). </p>
 <p> The synonym <code>pdl</code> is a compiled executable that is useful as a script interpreter using <font SIZE="-1">UNIX</font> shebang (<tt>&quot;#!&quot;</tt>) syntax. This is useful for generating and re-executing command-journal files from <code>perldl</code>. </p>
 <p> The <code>perldl</code> shell runs an initial startup file (<tt>&quot;~/.perldlrc&quot;</tt>) that can be used to pre-load perl modules or configure the global perl environment. It features a path mechanism for autoloading perl subroutines. There is a command-history mechanism, and several other useful features such as command preprocessing, shortcuts for commonly used commands such as &#8220;print&#8221;, and the ability to execute arbitrary code whenever a prompt is printed. </p>

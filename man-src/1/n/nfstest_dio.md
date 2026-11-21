@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_dio(1)"
 name: "nfstest_dio"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfstest_dio – Direct I/O tests"
 
 <h2>NAME</h2>
 <p> nfstest_dio &#8211; Direct I/O tests</p>
-<h2>SYNOPSIS</h2>
 <p> nfstest_dio &#8211;server &lt;server&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> Functional direct I/O tests verify that every READ/WRITE is sent to the server instead of the client caching the requests. Client bypasses read ahead by sending the READ with only the requested bytes. Verify the client correctly handles eof marker when reading the whole file. Verify client ignores delegation while writing a file. </p>
 <p> Direct I/O on pNFS tests verify the client sends the READ/WRITE to the correct DS or the MDS if using a PAGESIZE aligned buffer or not, respectively. </p>
 <p> Direct I/O data correctness tests verify that a file written with buffered I/O is read correctly with direct I/O. Verify that a file written with direct I/O is read correctly with buffered I/O. </p>

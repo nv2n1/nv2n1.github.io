@@ -1,4 +1,5 @@
 ---
+
 title: "crmgr(1)"
 name: "crmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-crmgr/"
 description: "crmgr – administration utility for QDBM Curia"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>crmgr create</code> [-s] [-bnum <i>num</i> ] [-dnum <i>num</i>] <i>name</i><br />
  <code>crmgr put</code> [-kx|-ki] [-vx|-vi|-vf] [-keep|-cat] [-lob] [-na] <i>name</i> <i>key</i> <i>val</i><br />
  <code>crmgr out</code> [-kx|-ki] [-lob] <i>name</i> <i>key</i><br />
@@ -21,7 +21,6 @@ description: "crmgr – administration utility for QDBM Curia"
  <code>crmgr importdb</code> <i>name dir</i><br />
  <code>crmgr snaffle</code> [-kx|-ki] [-ox] [-n] <i>name</i> <i>key</i><br />
  <code>crmgr version</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>crmgr</code> commands. </p>
 <p> <code>crmgr</code> is a utility for debugging Curia and its applications. It features editing and checking of a database. It can be used for the database applications with shell scripts. This command is used in the above format. <i>name</i> specifies a database name. <i>key</i> specifies the key of a record. <i>val</i> specifies the value of a record.</p>
 <h2>OPTIONS</h2>

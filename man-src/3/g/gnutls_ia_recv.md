@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_recv(3)"
 name: "gnutls_ia_recv"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ia_recv – read data from the TLS/IA protocol"
 
 <h2>NAME</h2>
 <p> gnutls_ia_recv &#8211; read data from the TLS/IA protocol</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>ssize_t gnutls_ia_recv(gnutls_session_t </code><i>session</i><code>, char * </code><i>data</i><code>, size_t </code><i>sizeofdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_ia_recv – read data from the TLS/IA protocol"
 <dd> the buffer that the data will be read into, must hold &gt;= 12 bytes.</dd>
 <dt>size_t sizeofdata</dt>
 <dd> the number of requested bytes, must be &gt;= 12.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Receive TLS/IA data. This function has the similar semantics with <code>recv()</code>. The only difference is that it accepts a GnuTLS session, and uses different error codes. </p>
 <p> If the server attempt to finish an application phase, this function will return <code>GNUTLS_E_WARNING_IA_IPHF_RECEIVED</code> or <code>GNUTLS_E_WARNING_IA_FPHF_RECEIVED</code>. The caller should then invoke <code>gnutls_ia_verify_endphase()</code>, and if it runs the client side, also send an endphase message of its own using gnutls_ia_endphase_send. </p>
 <p> If EINTR is returned by the internal push function (the default is <i>code</i>{<code>recv()</code>}) then GNUTLS_E_INTERRUPTED will be returned. If GNUTLS_E_INTERRUPTED or GNUTLS_E_AGAIN is returned, you must call this function again, with the same parameters; alternatively you could provide a NULL pointer for data, and 0 for size.</p>

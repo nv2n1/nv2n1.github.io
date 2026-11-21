@@ -1,4 +1,5 @@
 ---
+
 title: "pg_basebackup(1)"
 name: "pg_basebackup"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pg_basebackup/"
 description: "pg_basebackup – take a base backup of a PostgreSQL cluster"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_basebackup</code> [<i>option</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>pg_basebackup is used to take base backups of a running PostgreSQL database cluster. These are taken without affecting other clients to the database, and can be used both for point-in-time recovery (see Section 24.3, &#8220;Continuous Archiving and Point-in-Time Recovery (PITR)&#8221;, in the documentation) and as the starting point for a log shipping or streaming replication standby servers (see Section 25.2, &#8220;Log-Shipping Standby Servers&#8221;, in the documentation). </dd>
 <p> pg_basebackup makes a binary copy of the database cluster files, while making sure the system is put in and out of backup mode automatically. Backups are always taken of the entire database cluster; it is not possible to back up individual databases or database objects. For individual database backups, a tool such as <code><a href="/docs/linux/man/1-pg_dump/">pg_dump</a></code>(1) must be used. </p>
 <p> The backup is made over a regular PostgreSQL connection, and uses the replication protocol. The connection must be made with a superuser or a user having REPLICATION permissions (see Section 20.2, &#8220;Role Attributes&#8221;, in the documentation), and pg_hba.conf must explicitly permit the replication connection. The server must also be configured with max_wal_senders set high enough to leave at least one session available for the backup. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dprofpp(1)"
 name: "dprofpp"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-dprofpp/"
 description: "dprofpp – display perl profile data"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dprofpp [<code>-a</code>|<code>-z</code>|<code>-l</code>|<code>-v</code>|<code>-U</code>] [<code>-d</code>] [<code>-s</code>|<code>-r</code>|<code>-u</code>] [<code>-q</code>] [<code>-F</code>] [<code>-I|-E</code>] [<code>-O cnt</code>] [<code>-A</code>] [<code>-R</code>] [<code>-S</code>] [<code>-g subroutine</code>] [<code>-G</code> &lt;regexp&gt; [<code>-P</code>]] [<code>-f</code> &lt;regexp&gt;] [profile] </p>
 <p> dprofpp <code>-T</code> [<code>-F</code>] [<code>-g subroutine</code>] [profile] </p>
 <p> dprofpp <code>-t</code> [<code>-F</code>] [<code>-g subroutine</code>] [profile] </p>
 <p> dprofpp <code>-G</code> &lt;regexp&gt; [<code>-P</code>] [profile] </p>
 <p> dprofpp <code>-p script</code> [<code>-Q</code>] [other opts] </p>
 <p> dprofpp <code>-V</code> [profile]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>dprofpp</i> command interprets profile data produced by a profiler, such as the Devel::DProf profiler. Dprofpp will read the file <i>tmon.out</i> and display the 15 subroutines which are using the most time. By default the times for each subroutine are given exclusive of the times of their child subroutines. </p>
 <p> To profile a Perl script run the perl interpreter with the <code>-d</code> switch. So to profile script <i>test.pl</i> with Devel::DProf use the following: </p>
 <pre>

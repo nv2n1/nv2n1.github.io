@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-rrsig(1)"
 name: "ldns-rrsig"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldns-rrsig – print out the inception and expiration dates in hum
 
 <h2>NAME</h2>
 <p> ldns-rrsig &#8211; print out the inception and expiration dates in human readable form</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldns-rrsig </code> <i>domain</i> [ <i>type</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldns-rrsig</code> is used to print the expiration and inception date of a RRSIG. The first argument is a domain name. <code>ldns-rrsig</code> will query the authoritative servers for that domain to get a list of RRSIGs. It will then print out the inception and experiration dates for the RRSIG covering the SOA record. </p>
 <p> If the second argument <code>type</code> is given the RRSIG covering that type will be shown. </p>
 <h2>AUTHOR</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtogem(1)"
 name: "pbmtogem"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pbmtogem/"
 description: "pbmtogem – convert a portable bitmap into a GEM .img file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtogem</code> [<i>pbmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as input. Produces a compressed GEM .img file as output.</p>
 <h2>BUGS</h2>
 <p> pbmtogem does not support compression of repeated lines</p>

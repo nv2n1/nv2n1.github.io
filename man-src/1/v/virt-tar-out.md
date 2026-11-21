@@ -1,4 +1,5 @@
 ---
+
 title: "virt-tar-out(1)"
 name: "virt-tar-out"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-virt-tar-out/"
 description: "virt-tar-out – Pack a virtual machine disk image directory into a tarball."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  virt-tar-out -a disk.img /dir files.tar
  virt-tar-out -d domain /dir files.tar
  virt-tar-out -d domain /dir - | gzip --best &gt; files.tar.gz
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-tar-out&quot;</tt> packs a virtual machine disk image directory into a tarball. </p>
 <p> The first parameter is the absolute path of the virtual machine directory. The second parameter is the tar file to write. Use <tt>&quot;-&quot;</tt> to write to standard output.</p>
 <h2>EXAMPLES</h2>

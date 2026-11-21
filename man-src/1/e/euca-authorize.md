@@ -1,4 +1,5 @@
 ---
+
 title: "euca-authorize(1)"
 name: "euca-authorize"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-authorize – Add a rule to a security group that allows traf
 
 <h2>NAME</h2>
 <p> euca-authorize &#8211; Add a rule to a security group that allows traffic to pass</p>
-<h2>SYNOPSIS</h2>
 <p> euca-authorize [&#8211;egress] [-P PROTOCOL] [-p RANGE] [-t TYPE:CODE]</p>
 <dl>
 <dt>[-s CIDR | <code>-o</code> GROUP] [-u ACCOUNT] [&#8211;show-empty-fields]</dt>
 <dd> [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] GROUP</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Add a rule to a security group that allows traffic to pass</p>
 <h3>positional arguments:</h3>
 <dl>

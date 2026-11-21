@@ -1,4 +1,5 @@
 ---
+
 title: "dlalsd(3)"
 name: "dlalsd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlalsd/"
 description: "dlalsd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlalsd</code> (UPLO, SMLSIZ, N, NRHS, D, E, B, LDB, RCOND, RANK, WORK, IWORK, INFO)<br />
  <i></i><code>DLALSD</code> uses the singular value decomposition of A to solve the least squares problem.</p>

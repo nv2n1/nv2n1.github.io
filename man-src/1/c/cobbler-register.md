@@ -1,4 +1,5 @@
 ---
+
 title: "cobbler-register(1)"
 name: "cobbler-register"
 section: "1"
@@ -6,18 +7,11 @@ letter: "c"
 url: "/docs/linux/man/1-cobbler-register/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+cobbler-register - create a cobbler system record 
 
- cobbler-register - create a cobbler system record 
+cobbler-register [--server=&lt;cobbler.example.org&gt;] --profile=&lt;cobbler-profile-name&gt; [--fqdn=&lt;hostname&gt;]
 
-<h2>SYNOPSIS</h2>
-
- cobbler-register [--server=&lt;cobbler.example.org&gt;] --profile=&lt;cobbler-profile-name&gt; [--fqdn=&lt;hostname&gt;]
-
-<h2>DESCRIPTION</h2>
-
- Running cobbler-register on a system will create a cobbler system record for that system on a remote cobbler server. No changes will be made on the system itself.
+Running cobbler-register on a system will create a cobbler system record for that system on a remote cobbler server. No changes will be made on the system itself.
 
 <h2>DETAILS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_crypto_single_mac_register2(3)"
 name: "gnutls_crypto_single_mac_register2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_crypto_single_mac_register2 – register a MAC algorithm"
 
 <h2>NAME</h2>
 <p> gnutls_crypto_single_mac_register2 &#8211; register a MAC algorithm</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>int gnutls_crypto_single_mac_register2(gnutls_mac_algorithm_t </code><i>algorithm</i><code>, int </code><i>priority</i><code>, int </code><i>version</i><code>, gnutls_crypto_single_mac_st * </code><i>s</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_crypto_single_mac_register2 – register a MAC algorithm"
 <dd> should be set to <code>GNUTLS_CRYPTO_API_VERSION</code></dd>
 <dt>gnutls_crypto_single_mac_st * s</dt>
 <dd> is a structure holding new algorithms&#8217;s data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will register a MAC algorithm to be used by gnutls. Any algorithm registered will override the included algorithms and by convention kernel implemented algorithms have priority of 90. The algorithm with the lowest priority will be used by gnutls. </p>
 <p> This function should be called before <code>gnutls_global_init()</code>. </p>
 <p> For simplicity you can use the convenience <code>gnutls_crypto_single_mac_register()</code> macro.</p>

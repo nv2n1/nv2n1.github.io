@@ -1,4 +1,5 @@
 ---
+
 title: "gdesklets(1)"
 name: "gdesklets"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-gdesklets/"
 description: "gDesklets – provides an advanced architecture for desktop applets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gDesklets</code> &#8211; provides an advanced architecture for desktop applets </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gdesklets open [ display ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gDesklets</code> provides an advanced architecture for desktop applets &#8212; tiny displays sitting on your desktop in a symbiotic relationship of eye candy and usefulness. </p>
 <p> Populate your desktop with status meters, icon bars, weather sensors, news tickers&#8230; whatever you can imagine! Virtually anything is possible and maybe even available some day. </p>
 <h2>FIRST START</h2>

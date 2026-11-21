@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofiledel(1)"
 name: "euare-instanceprofiledel"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-instanceprofiledel – Delete an instance profile"
 
 <h2>NAME</h2>
 <p> euare-instanceprofiledel &#8211; Delete an instance profile</p>
-<h2>SYNOPSIS</h2>
 <p> euare-instanceprofiledel [-r] [-p] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] IPROFILE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete an instance profile</p>
 <h2>DESCRIPTION</h2>
 <p> This will break any running instances that depend upon access to the deleted instance profile.</p>

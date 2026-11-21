@@ -1,4 +1,5 @@
 ---
+
 title: "docbook2man-spec(1)"
 name: "docbook2man-spec"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-docbook2man-spec/"
 description: "docbook2man-spec.pl – convert DocBook RefEntries to man pages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sgmlspl</code> <code>docbook2man-spec.pl</code> </p>
 <p> <code>nsgmls</code> [ <i>sgml document</i> ]<code>| sgmlspl</code> <code>docbook2man-spec.pl</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>docbook2man</code> is a sgmlspl spec file that produced man pages (using the -man macros) from DocBook RefEntry markup. </p>
 <p> The program reads ESIS produced by nsgmls (or other SGML parsers) from standard input. Markup not found in RefEntry is discarded. </p>
 <p> Its output, the converted man pages, are written to the current directory. If RefMeta information is not specified in a RefEntry, then the man page will be written to standard output. </p>

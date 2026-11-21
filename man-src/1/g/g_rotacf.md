@@ -1,4 +1,5 @@
 ---
+
 title: "g_rotacf(1)"
 name: "g_rotacf"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_rotacf – calculates the rotational correlation function for mo
 <h2>NAME</h2>
 <p> g_rotacf &#8211; calculates the rotational correlation function for molecules </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_rotacf</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> rotacf.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]d</code><i></i> <code>-[no]aver</code><i></i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_rotacf calculates the rotational correlation function for molecules. Three atoms (i,j,k) must be given in the index file, defining two vectors ij and jk. The rotational acf is calculated as the autocorrelation function of the vector n = ij x jk, i.e. the cross product of the two vectors. Since three atoms span a plane, the order of the three atoms does not matter. Optionally, controlled by the -d switch, you can calculate the rotational correlation function for linear molecules by specifying two atoms (i,j) in the index file. </p>
 <p> EXAMPLES </p>
 <p> g_rotacf -P 1 -nparm 2 -fft -n index -o rotacf-x-P1 -fa expfit-x-P1 -beginfit 2.5 -endfit 20.0 </p>

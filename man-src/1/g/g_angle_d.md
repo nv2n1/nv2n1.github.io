@@ -1,4 +1,5 @@
 ---
+
 title: "g_angle_d(1)"
 name: "g_angle_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_angle – calculates distributions and correlations for angles a
 <h2>NAME</h2>
 <p> g_angle &#8211; calculates distributions and correlations for angles and dihedrals </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_angle</code> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> angle.ndx </i> <code>-od</code><i> angdist.xvg </i> <code>-ov</code><i> angaver.xvg </i> <code>-of</code><i> dihfrac.xvg </i> <code>-ot</code><i> dihtrans.xvg </i> <code>-oh</code><i> trhisto.xvg </i> <code>-oc</code><i> dihcorr.xvg </i> <code>-or</code><i> traj.trr </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-type</code><i> enum </i> <code>-[no]all</code><i></i> <code>-binwidth</code><i> real </i> <code>-[no]periodic</code><i></i> <code>-[no]chandler</code><i></i> <code>-[no]avercorr</code><i></i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_angle computes the angle distribution for a number of angles or dihedrals. This way you can check whether your simulation is correct. With option -ov you can plot the average angle of a group of angles as a function of time. With the -all option the first graph is the average, the rest are the individual angles. </p>
 <p> With the -of option g_angle also calculates the fraction of trans dihedrals (only for dihedrals) as function of time, but this is probably only fun for a selected few. </p>
 <p> With option -oc a dihedral correlation function is calculated. </p>

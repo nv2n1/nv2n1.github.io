@@ -1,4 +1,5 @@
 ---
+
 title: "plxload(1)"
 name: "plxload"
 section: "1"
@@ -11,7 +12,6 @@ description: "plxload – show what files a perl program loads at compile time"
 <pre>
     $ plxload
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This program is used to show what modules a program would load at compile time via <tt>&quot;use&quot;</tt>. Because this installs an at-exit handler and then uses Perl&#8217;s <code>-c</code> flag for compile only, it will not find modules loaded at run-time. Use the Devel::Loaded module for that.</p>
 <h2>EXAMPLES</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "sassc(1)"
 name: "sassc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sassc/"
 description: "sassc: – Sass compiles CSS from SASS or SCSS files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sassc</code> [<i>,options/</i>] [<i>,INPUT/</i>] [<i>,OUTPUT/</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

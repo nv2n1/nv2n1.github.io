@@ -1,4 +1,5 @@
 ---
+
 title: "acl_copy_entry(3)"
 name: "acl_copy_entry"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_copy_entry/"
 description: "acl_copy_entry – copy an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_copy_entry</code> &#8211; copy an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_copy_entry acl_entry_t dest_d acl_entry_t src_d</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_copy_entry function copies the contents of the ACL entry indicated by the <i>src_d</i> descriptor to the existing ACL entry indicated by the <i>dest_d</i> descriptor. The <i>src_d</i> and <i>dest_d</i> descriptors may refer to entries in different ACLs.</p>
 <h2>RETURN VALUE</h2>
 <p> Rv -std acl_copy_entry</p>

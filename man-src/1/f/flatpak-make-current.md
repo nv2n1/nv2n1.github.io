@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-make-current(1)"
 name: "flatpak-make-current"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-make-current/"
 description: "flatpak-make-current – Make a specific version of an app current"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak make-current</code> [OPTION&#8230;] APP BRANCH</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Makes a particular branch of an application current. Only the current branch of an app has its exported files (such as desktop files and icons) made visible to the host. </dd>
 <p> When a new branch is installed it will automatically be made current, so this command is often not needed. </p>
 <p> Unless overridden with the <code>&#8211;user</code> or <code>&#8211;installation</code> options, this command changes the default system-wide installation.</p>

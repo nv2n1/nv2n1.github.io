@@ -1,4 +1,5 @@
 ---
+
 title: "file2brl(1)"
 name: "file2brl"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-file2brl/"
 description: "file2brl – Translate an xml or a text file into an embosser-ready braille file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>file2brl</code> [<i>,OPTION/</i>] [<i>,inputFile/</i>] [<i>,outputFile/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Translate an xml, html or a text file into an embosser-ready braille file. This includes translation into grade two, if desired, mathematical codes, etc. It also includes formatting according to a built-in style sheet which can be modified by the user. </p>
 <p> If inputFile is not specified or &#8216;-&#8216; input is taken from stdin. If outputFile is not specified the output is sent to stdout.</p>
 <dl>

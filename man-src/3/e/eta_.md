@@ -1,4 +1,5 @@
 ---
+
 title: "eta_(3)"
 name: "eta_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-eta_/"
 description: "QuantLib::G2ForwardProcess – Forward G2 stochastic process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/g2process.hpp&gt; </p>
 <p> Inherits <code>QuantLib::ForwardMeasureProcess</code>. </p>
 <h3>Public Member Functions</h3>

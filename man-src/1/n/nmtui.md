@@ -1,4 +1,5 @@
 ---
+
 title: "nmtui(1)"
 name: "nmtui"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-nmtui/"
 description: "nmtui – Text User Interface for controlling NetworkManager"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nmtui-edit | nmtui edit </code> {<i>name</i>&nbsp;|&nbsp;<i>id</i>}</dt>
 <dt> <code>nmtui-connect | nmtui connect </code> {<i>name</i>&nbsp;|&nbsp;<i>uuid</i>&nbsp;|&nbsp;<i>device</i>&nbsp;|&nbsp;<i>SSID</i>}</dt>
 <dt> <code>nmtui-hostname | nmtui hostname </code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nmtui</code></p>
 <dd>is a curses-based TUI application for interacting with NetworkManager. When starting <code>nmtui</code>, the user is prompted to choose the activity to perform unless it was specified as the first argument. </dd>
 <p> The supported activities are: </p>

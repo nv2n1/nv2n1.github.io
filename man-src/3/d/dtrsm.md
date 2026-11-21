@@ -1,4 +1,5 @@
 ---
+
 title: "dtrsm(3)"
 name: "dtrsm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrsm/"
 description: "dtrsm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
  <i></i><code>DTRSM</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlfailover(1)"
 name: "mysqlfailover"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlfailover/"
 description: "mysqlfailover – Automatic replication failover"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlfailover [</code><i>options</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility permits users to perform replication health monitoring and automatic failover on a replication topology consisting of a master and its slaves. The utility is designed to run interactively or continuously refreshing the health information at periodic intervals. Its primary mission is to monitor the master for failure and when a failure occurs, execute failover to the best slave available. The utility accepts a list of slaves to be considered the candidate slave. </dd>
 <p> This utility is designed to work exclusively for servers that support global transaction identifiers (GTIDs) and have GTID_MODE=ON. MySQL server versions 5.6.9 and higher support GTIDs. See the MySQL server online reference manual for more information about setting up replication with GTIDs enabled. </p>
 <p> The user can specify the interval in seconds to use for detecting the master status and generating the health report using the <code>&#8211;interval</code> option. At each interval, the utility will check to see if the server is alive via a ping operation followed by a check of the connector to detect if the server is still reachable. The ping operation can be controlled with the <code>&#8211;ping</code> option (see below). </p>

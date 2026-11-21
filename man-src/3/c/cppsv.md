@@ -1,4 +1,5 @@
 ---
+
 title: "cppsv(3)"
 name: "cppsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cppsv/"
 description: "cppsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cppsv</code> (UPLO, N, NRHS, AP, B, LDB, INFO)<br />
  <i></i><code> CPPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>

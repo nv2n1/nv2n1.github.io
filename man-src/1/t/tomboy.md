@@ -1,4 +1,5 @@
 ---
+
 title: "tomboy(1)"
 name: "tomboy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tomboy/"
 description: "tomboy – A simple note-taking application for Gnome"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tomboy</code> <i>[OPTION] &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tomboy</code> command. </p>
 <p> <code>Tomboy</code> is a desktop note-taking application for Linux and Unix. Simple and easy to use, but with potential to help you organize the ideas and information you deal with every day. </p>
 <p> Tomboy&#8217;s usefulness lies in the ability to relate notes and ideas together, using a WikiWiki-like linking system. </p>

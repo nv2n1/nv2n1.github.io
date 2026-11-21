@@ -1,4 +1,5 @@
 ---
+
 title: "lc(1)"
 name: "lc"
 section: "1"
@@ -9,9 +10,7 @@ description: "lc – Mono License Compiler"
 
 <h2>NAME</h2>
 <p> lc &#8211; Mono License Compiler</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lc -c filename -t targetassembly [-i reference&#8230;] [-v] [-o outputpath] [-nologo]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>lc</i> tool is a license compiler for Mono. It&#8217;s used to convert a licenses.licx file to a resource that can be embedded into an executable. </p>
 <p> When using commercial components for .NET they often require a license resource at runtime to make sure the developer was licensed to use this control. The most common way of making sure the component was properly licensed is by using license resources. At compile time the developer uses the <i>lc</i> tool to convert a licenses.licx file to a programname.exe.licenses file and embed that as a managed resource during compilation.</p>
 <h2>RUNTIME OPTIONS</h2>

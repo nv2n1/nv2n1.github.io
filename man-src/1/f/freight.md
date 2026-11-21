@@ -1,4 +1,5 @@
 ---
+
 title: "freight(1)"
 name: "freight"
 section: "1"
@@ -9,9 +10,7 @@ description: "freight – a modern take on the Debian archive"
 
 <h2>NAME</h2>
 <p> <code>freight</code> &#8211; a modern take on the Debian archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>freight</code> <i>command</i> [<i>&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>freight</code> programs create the files needed to serve a Debian archive. The actual serving is done via your favorite HTTP server.</p>
 <dl>
 <dt><code><a href="/docs/linux/man/1-freight-add/">freight-add</a></code>(1)</dt>

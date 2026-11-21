@@ -1,4 +1,5 @@
 ---
+
 title: "xinit(1)"
 name: "xinit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xinit/"
 description: "xinit – X Window System initializer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xinit</code> [ [ <i>client</i> ] <i>options</i> &#8230; ] [ <code>&#8212;</code> [ <i>server</i> ] [ <i>display</i> ] <i>options</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>xinit</code> program is used to start the X Window System server and a first client program on systems that are not using a display manager such as <code><a href="/docs/linux/man/1-xdm/">xdm</a></code>(1) or in environments that use multiple window systems. When this first client exits, <code>xinit</code> will kill the X server and then terminate. </p>
 <p> If no specific client program is given on the command line, <code>xinit</code> will look for a file in the user&#8217;s home directory called <i>.xinitrc</i> to run as a shell script to start up client programs. If no such file exists, <code>xinit</code> will use the following as a default: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>xterm -geometry +1+1 -n login -display :0</p>

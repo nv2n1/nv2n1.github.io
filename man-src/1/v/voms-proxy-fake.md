@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-fake(1)"
 name: "voms-proxy-fake"
 section: "1"
@@ -9,11 +10,9 @@ description: "voms-proxy-fake – create a proxy with VOMS extensions"
 
 <h2>NAME</h2>
 <p> voms-proxy-fake &#8211; create a proxy with VOMS extensions</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>voms-proxy-fake</code> [options] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd>The voms-proxy-fake generates a proxy containing arbitrary attributes without contacting the VOMS server. </dd>
 <h2>OPTIONS</h2>
 <p> Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. </p>

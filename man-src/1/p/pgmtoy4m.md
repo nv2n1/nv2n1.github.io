@@ -1,4 +1,5 @@
 ---
+
 title: "pgmtoy4m(1)"
 name: "pgmtoy4m"
 section: "1"
@@ -9,9 +10,7 @@ description: "pgmtoy4m – Convert mpeg2dec pgm and pgmpipe output to YUV4MPEG2"
 
 <h2>NAME</h2>
 <p> pgmtoy4m &#8211; Convert mpeg2dec pgm and pgmpipe output to YUV4MPEG2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pgmtoy4m</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pgmtoy4m</code> repacks the PGM output from <code>mpeg2dec</code> into YUV4MPEG2 4:2:0p. No actual changes to the data are made. The data is unpacked from the quasi-PGM format and placed in YUV4MPEG2 format with the specified sample aspect, frame rate and field order. Output must be either to a pipe or a file, leaving stdout as a terminal will elicit an error and the program will exit.</p>
 <h2>OPTIONS</h2>
 <p> <code>pgmtoy4m</code> accepts the following options:</p>

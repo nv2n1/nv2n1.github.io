@@ -1,4 +1,5 @@
 ---
+
 title: "settlesaccrual(3)"
 name: "settlesaccrual"
 section: "3"
@@ -6,8 +7,8 @@ letter: "s"
 url: "/docs/linux/man/3-settlesaccrual/"
 description: "QuantLib::CreditDefaultSwap – Credit default swap."
 ---
+
 <p>QuantLib::CreditDefaultSwap &#8211; Credit default swap. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/instruments/creditdefaultswap.hpp&gt; </p>

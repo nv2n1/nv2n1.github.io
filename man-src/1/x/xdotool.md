@@ -1,4 +1,5 @@
 ---
+
 title: "xdotool(1)"
 name: "xdotool"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xdotool/"
 description: "xdotool – command-line X11 automation tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xdotool</code> <i>cmd</i> <i>args&#8230;</i> </p>
 <p> Notation: Some documentation uses <i>[window]</i> to denote an optional window argument. This case means that the argument, if not present, will default to &#8220;%1&#8221;. See &#8220;<font SIZE="-1">WINDOW STACK&#8221;</font> for what &#8220;%1&#8221; means.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xdotool</code> lets you programmatically (or manually) simulate keyboard input and mouse activity, move and resize windows, etc. It does this using X11&#8217;s <font SIZE="-1">XTEST</font> extension and other Xlib functions. </p>
 <p> There is some support for Extended Window Manager Hints (aka <font SIZE="-1">EWMH</font> or NetWM). See the &#8220;<font SIZE="-1">EXTENDED WINDOW MANAGER HINTS&#8221;</font> section for more information.</p>
 <h2>KEYBOARD COMMANDS</h2>

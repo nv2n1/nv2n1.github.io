@@ -1,4 +1,5 @@
 ---
+
 title: "clanhe(3)"
 name: "clanhe"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clanhe/"
 description: "clanhe.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clanhe</code> (NORM, UPLO, N, A, LDA, WORK)<br />
  <i></i><code>CLANHE</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a complex Hermitian matrix.</p>

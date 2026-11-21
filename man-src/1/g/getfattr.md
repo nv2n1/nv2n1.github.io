@@ -1,4 +1,5 @@
 ---
+
 title: "getfattr(1)"
 name: "getfattr"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-getfattr/"
 description: "getfattr – get extended attributes of filesystem objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 getfattr[-hRLP] - n name[-e en] pathname... getfattr[-hRLP] - d[-e en][-m pattern] pathname...
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> For each file, <code>getfattr</code> displays the file name, and the set of extended attribute names (and optionally values) which are associated with that file. Per default only attributes in the user namespace are displayed, see <code>-m</code>. </p>
 <p> The output format of <code>getfattr -d</code> is as follows:</p>
 <dl>

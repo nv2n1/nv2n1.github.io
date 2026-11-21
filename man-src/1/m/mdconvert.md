@@ -1,4 +1,5 @@
 ---
+
 title: "mdconvert(1)"
 name: "mdconvert"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mdconvert/"
 description: "mdconvert – Maildir mailbox UID storage scheme converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mdconvert</code> [<i>options</i> &#8230;] <i>mailbox</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mdconvert</code> converts Maildir mailboxes between the two UID storage schemes supported by <code>mbsync</code>. See <code>mbsync</code>&#8216;s manual page for details on these schemes.</p>
 <h2>OPTIONS</h2>
 <dl>

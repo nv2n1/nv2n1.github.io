@@ -1,4 +1,5 @@
 ---
+
 title: "apxs(1)"
 name: "apxs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apxs/"
 description: "apxs – APache eXtenSion tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr> </p>
 <p> <code>apxs</code> &#8211;<code>g</code> [ &#8211;<code>S</code> <i>name</i>=<i>value</i> ] &#8211;<code>n</code> <i>modname</i><br />
 &nbsp;<wbr> </p>

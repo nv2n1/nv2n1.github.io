@@ -1,4 +1,5 @@
 ---
+
 title: "dropbox(1)"
 name: "dropbox"
 section: "1"
@@ -9,7 +10,6 @@ description: "dropbox – A command line interface to the Dropbox service"
 
 <h2>NAME</h2>
 <p> dropbox &#8211; A command line interface to the Dropbox service</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 dropbox status
     dropbox help[COMMAND] dropbox puburl FILE
@@ -17,7 +17,6 @@ dropbox status
             dropbox running
                 dropbox start[-i] dropbox filestatus[-l][-a][FILE]... dropbox ls[FILE]... dropbox autostart[y / n] dropbox exclude[list] dropbox lansync[y / n]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <i>dropbox</i> command provides a command line interface to the Dropbox, the easiest online file storage, synchronization and sharing service.</p>
 <h2>COMMANDS</h2>
 <dl>

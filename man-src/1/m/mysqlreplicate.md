@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlreplicate(1)"
 name: "mysqlreplicate"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlreplicate/"
 description: "mysqlreplicate – Set Up and Start Replication Between Two Servers"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlreplicate [</code><i>options</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility permits an administrator to start replication from one server (the master) to another (the slave). The user provides login information for the slave and connection information for connecting to the master. It is also possible to specify a database to be used to test replication. </dd>
 <p> The utility reports conditions where the storage engines on the master and the slave differ. It also reports a warning if the InnoDB storage engine differs on the master and slave. For InnoDB to be the same, both servers must be running the same &#8220;type&#8221; of InnoDB (built-in or the InnoDB Plugin), and InnoDB on both servers must have the same major and minor version numbers and enabled state. </p>
 <p> By default, the utility issues warnings for mismatches between the sets of storage engines, the default storage engine, and the InnoDB storage engine. To produce errors instead, use the <code>&#8211;pedantic</code> option, which requires storage engines to be the same on the master and slave. </p>

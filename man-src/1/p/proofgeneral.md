@@ -1,4 +1,5 @@
 ---
+
 title: "proofgeneral(1)"
 name: "proofgeneral"
 section: "1"
@@ -9,9 +10,7 @@ description: "proofgeneral – manual page for proofgeneral ()"
 
 <h2>NAME</h2>
 <p> proofgeneral &#8211; manual page for proofgeneral ()</p>
-<h2>SYNOPSIS</h2>
 <p> <code>proofgeneral</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Launches Emacs Proof General, editing the proof script FILE.</p>
 <h2>OPTIONS</h2>
 <dl>

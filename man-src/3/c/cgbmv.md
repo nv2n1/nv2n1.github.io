@@ -1,4 +1,5 @@
 ---
+
 title: "cgbmv(3)"
 name: "cgbmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgbmv/"
 description: "cgbmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>CGBMV</code></p>

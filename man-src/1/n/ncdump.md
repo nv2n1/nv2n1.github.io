@@ -1,4 +1,5 @@
 ---
+
 title: "ncdump(1)"
 name: "ncdump"
 section: "1"
@@ -9,7 +10,6 @@ description: "ncdump – Convert netCDF file to text form (CDL)"
 
 <h2>NAME</h2>
 <p> ncdump &#8211; Convert netCDF file to text form (CDL)</p>
-<h2>SYNOPSIS</h2>
 <p> <code></p>
 <dl>
 <dt>
@@ -17,7 +17,6 @@ description: "ncdump – Convert netCDF file to text form (CDL)"
  <code></dd>
 <dt>
 </dt><dd>ncdump -k </code><i>file</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>ncdump</code> utility generates a text representation of a specified netCDF file on standard output, optionally excluding some or all of the variable data in the output. The text representation is in a form called CDL (network Common Data form Language) that can be viewed, edited, or serve as input to <code>ncgen</code>, a companion program that can generate a binary netCDF file from a CDL file. Hence <code>ncgen</code> and <code>ncdump</code> can be used as inverses to transform the data representation between binary and text representations. See <code>ncgen</code> documentation for a description of CDL and netCDF representations. </p>
 <p> <code>ncdump</code> may also be used to determine what kind of netCDF file is used (which variant of the netCDF file format) with the -k option. </p>
 <p> If DAP support was enabled when <code>ncdump</code> was built, the file name may specify a DAP URL. This allows <code>ncdump</code> to access data sources from DAP servers, including data in other formats than netCDF. When used with DAP URLs, <code>ncdump</code> shows the translation from the DAP data model to the netCDF data model. </p>

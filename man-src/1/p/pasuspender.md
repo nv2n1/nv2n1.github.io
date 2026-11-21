@@ -1,4 +1,5 @@
 ---
+
 title: "pasuspender(1)"
 name: "pasuspender"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pasuspender/"
 description: "pasuspender – Temporarily suspend PulseAudio"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pasuspender [</code><i>options</i><code>] &#8212; </code><i>PROGRAM</i><code> [</code><i>ARGUMENTS &#8230;</i><code>] </p>
 <p> pasuspender &#8211;help </p>
 <p> pasuspender &#8211;version </code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>pasuspender</i> is a tool that can be used to tell a local PulseAudio sound server to temporarily suspend access to the audio devices, to allow other applications access them directly. <i>pasuspender</i> will suspend access to the audio devices, fork a child process, and when the child process terminates, resume access again. </p>
 <p> Make sure to include <code>&#8212;</code> in your <i>pasuspender</i> command line before passing the subprocess command line (as shown above). Otherwise <i>pasuspender</i> itself might end up interpreting the command line switches and options you intended to pass to the subprocess.</p>
 <h2>OPTIONS</h2>

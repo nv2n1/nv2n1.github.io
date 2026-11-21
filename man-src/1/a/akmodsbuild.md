@@ -1,4 +1,5 @@
 ---
+
 title: "akmodsbuild(1)"
 name: "akmodsbuild"
 section: "1"
@@ -9,11 +10,9 @@ description: "akmodsbuild – Rebuilds kmod SRPM(s)"
 
 <h2>NAME</h2>
 <p> <code>akmodsbuild </code>&#8211; Rebuilds kmod SRPM(s)</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>akmodsbuild</code> [<i>options</i>] &lt;<i>SRPM(s)</i>&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Rebuilds kmod-SRPMs for kernels</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdasystemd(1)"
 name: "pmdasystemd"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdasystemd – systemd performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdasystemd</code> &#8211; systemd performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/systemd/pmdasystemd</code> [<code>-f</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>memory</i>] [<code>-s</code> <i>interval</i>] [<code>-U</code> <i>username</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdasystemd</code> is a systemd log file monitoring Performance Metrics Domain Agent (PMDA). It can be seen as analagous to the <code>-f</code> option to <code><a href="/docs/linux/man/1-journalctl/">journalctl</a></code>(1) and converts each new log line into a performance event, suitable for consumption by <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) client tools like <code><a href="/docs/linux/man/1-pmevent/">pmevent</a></code>(1). </p>
 <p> The <code>systemd</code> PMDA exports both event-style metrics reflecting timestamped event records for messages logged to the system logs, as well as the more orthodox sample-style metrics such as message counts and throughput size values. </p>
 <p> A brief description of the <code>pmdasystemd</code> command line options follows:</p>

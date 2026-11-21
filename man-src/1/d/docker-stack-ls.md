@@ -1,4 +1,5 @@
 ---
+
 title: "docker-stack-ls(1)"
 name: "docker-stack-ls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-stack-ls/"
 description: "docker-stack-ls – List stacks"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker stack ls [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List stacks </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;all-namespaces</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>List stacks from all Kubernetes namespaces</p>

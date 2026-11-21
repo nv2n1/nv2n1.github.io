@@ -1,4 +1,5 @@
 ---
+
 title: "tarcat(1)"
 name: "tarcat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tarcat/"
 description: "tarcat – concatenates the pieces of a GNU tar multi-volume archive"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tarcat </code> files &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>tarcat </code> command simply concatenates the files from a GNU tar multi-volume archive into a single tar archive.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1).</p>

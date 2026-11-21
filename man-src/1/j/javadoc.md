@@ -1,4 +1,5 @@
 ---
+
 title: "javadoc(1)"
 name: "javadoc"
 section: "1"
@@ -9,7 +10,6 @@ description: "javadoc – Generates HTML pages of API documentation from Java so
 
 <h2>NAME</h2>
 <p> javadoc &#8211; Generates HTML pages of API documentation from Java source files.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 javadoc{packages | source - files}[options][@argfiles]
 </code></pre>
@@ -23,7 +23,6 @@ javadoc{packages | source - files}[options][@argfiles]
 <dd> Command-line options, separated by spaces. See Options.</dd>
 <dt><i>@argfiles</i></dt>
 <dd> Names of files that contain a list of <code>javadoc</code> command options, package names and source file names in any order.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>javadoc</code> command parses the declarations and documentation comments in a set of Java source files and produces a corresponding set of HTML pages that describe (by default) the public and protected classes, nested classes (but not anonymous inner classes), interfaces, constructors, methods, and fields. You can use the <code>javadoc</code> command to generate the API documentation or the implementation documentation for a set of source files. </p>
 <p> You can run the <code>javadoc</code> command on entire packages, individual source files, or both. When documenting entire packages, you can either use the <code>-subpackages</code> option to recursively traverse a directory and its subdirectories, or to pass in an explicit list of package names. When you document individual source files, pass in a list of Java source file names. See Simple Examples.</p>
 <h3>PROCESS SOURCE FILES</h3>

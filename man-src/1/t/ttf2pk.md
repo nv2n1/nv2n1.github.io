@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2pk(1)"
 name: "ttf2pk"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ttf2pk/"
 description: "ttf2pk – convert a TrueType font into TeX’s PK format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ttf2pk</code> [<code>-q</code>] [<code>-n</code>] <i>font-name resolution</i><br />
  <code>ttf2pk</code> <code>-t</code> [<code>-q</code>] <i>font-name</i><br />
  <code>ttf2pk &#8211;version</code> | <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program converts a TrueType font into a file; the created font can then be used with TeX or LaTeX. </p>
 <p> CJKV (Chinese/Japanese/Korean/old Vietnamese) subfonts as created by <code>ttf2tfm</code> are also supported. </p>
 <p> <code>ttf2pk</code> always assumes 10pt as the design size for the written TeX font.</p>

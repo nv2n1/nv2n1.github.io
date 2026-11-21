@@ -1,4 +1,5 @@
 ---
+
 title: "shseqr(3)"
 name: "shseqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-shseqr/"
 description: "shseqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>shseqr</code> (JOB, COMPZ, N, ILO, IHI, H, LDH, WR, WI, Z, LDZ, WORK, LWORK, INFO)<br />
  <i></i><code>SHSEQR</code></p>

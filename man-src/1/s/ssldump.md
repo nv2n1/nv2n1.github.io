@@ -1,4 +1,5 @@
 ---
+
 title: "ssldump(1)"
 name: "ssldump"
 section: "1"
@@ -9,11 +10,9 @@ description: "ssldump – dump SSL traffic on a network"
 
 <h2>NAME</h2>
 <p> ssldump &#8211; dump SSL traffic on a network</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ssldump</code> [ <code>-vTshVq</code> <code>-aAdeHnNqTxXvy</code> ] [ <code>-i</code> <i>interface</i> ] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-k</code> <i>keyfile</i> ] [ <code>-p</code> <i>password</i> ] [ <code>-r</code> <i>dumpfile</i> ] </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-S</code> [<i>crypto</i>|<i>d</i>|<i>ht</i>|<i>H</i>|<i>nroff</i>] ] [ <i>expression</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>ssldump</i> is an SSL/TLS network protocol analyzer. It identifies TCP connections on the chosen network interface and attempts to interpret them as SSL/TLS traffic. When it identifies SSL/TLS traffic, it decodes the records and displays them in a textual form to stdout. If provided with the appropriate keying material, it will also decrypt the connections and display the application data traffic. </p>
 <p> ssldump has been tested on FreeBSD, Linux, Solaris, and HP/UX. Since it&#8217;s based on PCAP, it should work on most platforms. However, unlike tcpdump, ssldump needs to be able to see both sides of the data transmission so you may have trouble using it with network taps such as SunOS nit that don&#8217;t permit you to see transmitted data. <code>Under SunOS with nit or bpf:</code> To run <i>tcpdump</i> you must have read access to <i>/dev/nit</i> or <i>/dev/bpf*</i>. <code>Under Solaris with dlpi:</code> You must have read access to the network pseudo device, e.g. <i>/dev/le</i>. <code>Under HP-UX with dlpi:</code> You must be root or it must be installed setuid to root. <code>Under IRIX with snoop:</code> You must be root or it must be installed setuid to root. <code>Under Linux:</code> You must be root or it must be installed setuid to root. <code>Under Ultrix and Digital UNIX:</code> Once the super-user has enabled promiscuous-mode operation using <i>pfconfig</i>(8), any user may run <code>ssldump</code> <code>Under BSD:</code> You must have read access to <i>/dev/bpf*</i>.</p>
 <h2>OPTIONS</h2>

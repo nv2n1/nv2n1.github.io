@@ -1,4 +1,5 @@
 ---
+
 title: "csymm(3)"
 name: "csymm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csymm/"
 description: "csymm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csymm</code> (SIDE, UPLO, M, N, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
  <i></i><code>CSYMM</code></p>

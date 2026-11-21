@@ -1,4 +1,5 @@
 ---
+
 title: "pmall(1)"
 name: "pmall"
 section: "1"
@@ -6,22 +7,15 @@ letter: "p"
 url: "/docs/linux/man/1-pmall/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pmall - show all installed versions and descs 
 
- pmall - show all installed versions and descs 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 pmall[-d][-w][-a][-s]
 </code></pre> 
 
  pmall - show all installed versions and descs
 
-<h2>DESCRIPTION</h2>
-
- This program runs through all your installed modules and tells you what they're for and what version number they are at. 
+This program runs through all your installed modules and tells you what they're for and what version number they are at. 
 
  The following options are honored:
 <dl>

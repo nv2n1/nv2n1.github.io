@@ -1,4 +1,5 @@
 ---
+
 title: "globus_module_descriptor_s(3)"
 name: "globus_module_descriptor_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_module_descriptor_s –"
 ---
 
 <p> Module Descriptor.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_module.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>module_name</code> </p>

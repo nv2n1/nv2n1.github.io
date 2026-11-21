@@ -1,4 +1,5 @@
 ---
+
 title: "git-diff-index(1)"
 name: "git-diff-index"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-diff-index/"
 description: "git-diff-index – Compare a tree to the working tree or index"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git diff - index[-m][--cached][--merge - base][&lt;common diff options&gt;]&lt;tree - ish&gt;[&lt;path&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Compares the content and mode of the blobs found in a tree object with the corresponding tracked files in the working tree, or with the corresponding paths in the index. When &lt;path&gt; arguments are present, compares only paths matching those patterns. Otherwise all tracked files are compared.</p>
 <h2>OPTIONS</h2>
 <p> -p, -u, &#8211;patch</p>

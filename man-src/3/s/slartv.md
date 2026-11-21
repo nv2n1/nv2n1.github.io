@@ -1,4 +1,5 @@
 ---
+
 title: "slartv(3)"
 name: "slartv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slartv/"
 description: "slartv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br />
  <i></i><code>SLARTV</code> applies a vector of plane rotations with real cosines and real sines to the elements of a pair of vectors.</p>

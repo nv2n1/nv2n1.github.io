@@ -1,4 +1,5 @@
 ---
+
 title: "copydatabase(1)"
 name: "copydatabase"
 section: "1"
@@ -9,9 +10,7 @@ description: "copydatabase – Perform a document-by-document copy of one or mor
 
 <h2>NAME</h2>
 <p> copydatabase &#8211; Perform a document-by-document copy of one or more Xapian databases</p>
-<h2>SYNOPSIS</h2>
 <p> <code>copydatabase</code> <i>SOURCE_DATABASE</i>&#8230; <i>DESTINATION_DATABASE</i></p>
-<h2>DESCRIPTION</h2>
 <p> copydatabase &#8211; Perform a document-by-document copy of one or more Xapian databases</p>
 <h2>OPTIONS</h2>
 <dl>

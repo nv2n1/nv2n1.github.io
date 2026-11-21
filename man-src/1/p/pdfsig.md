@@ -1,4 +1,5 @@
 ---
+
 title: "pdfsig(1)"
 name: "pdfsig"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdfsig/"
 description: "pdfsig – Portable Document Format (PDF) digital signatures tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdfsig</code> [options] [<i>PDF-file</i>] [<i>Output-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pdfsig</code> verifies the digital signatures in a PDF document. It also displays the identity of each signer (commonName field and full distinguished name of the signer certificate), the time and date of the signature, the hash algorithm used for signing, the type of the signature as stated in the PDF and the signed ranges with a statement wether the total document is signed. It can also sign PDF documents (options -add-signature or -sign). </p>
 <p> pdfsig uses the trusted certificates stored in the Network Security Services (NSS) Database. </p>
 <p> pdfsig also uses the Online Certificate Status Protocol (OCSP) (refer to <a rel="nofollow" href="http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol)">http://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol)</a> to look up the certificate online and check if it has been revoked (unless -no-ocsp has been specified). </p>

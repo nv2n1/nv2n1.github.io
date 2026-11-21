@@ -1,4 +1,5 @@
 ---
+
 title: "readlink(1)"
 name: "readlink"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-readlink/"
 description: "readlink – print resolved symbolic links or canonical file names"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>readlink</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Note <a href="/docs/linux/man/1-realpath/">realpath</a>(1) is the preferred command to use for canonicalization functionality. </p>
 <p> Print value of a symbolic link or canonical file name</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pnmshear(1)"
 name: "pnmshear"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmshear/"
 description: "pnmshear – shear a portable anymap by some angle"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmshear</code> [<code>-noantialias</code>] <i>angle</i> [<i>pnmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable anymap as input. Shears it by the specified angle and produces a portable anymap as output. If the input file is in color, the output will be too, otherwise it will be grayscale. The angle is in degrees (floating point), and measures this: </p>
 <pre><code>
 + -- -- -- -+ +-- -- -- -+ | | |\ | OLD | | \ NEW | | | an\ + -- -- -- -+ | gle + -- -- -- -+

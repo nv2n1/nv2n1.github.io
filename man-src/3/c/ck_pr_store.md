@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_store(3)"
 name: "ck_pr_store"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_pr_store_ptr ck_pr_store_double ck_pr_store_uint ck_pr_store_in
 <p> <code>ck_pr_store_ptr</code> <code>ck_pr_store_double</code> <code>ck_pr_store_uint</code> <code>ck_pr_store_int</code> <code>ck_pr_store_char</code> <code>ck_pr_store_64</code> <code>ck_pr_store_32</code> <code>ck_pr_store_16</code> <code>ck_pr_store_8</code> &#8211; atomic volatile store operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_store_ptr void *target void *value Ft void Fn ck_pr_store_double double *target double value Ft void Fn ck_pr_store_uint unsigned int *target unsigned int value Ft void Fn ck_pr_store_int int *target int value Ft void Fn ck_pr_store_char char *target char value Ft void Fn ck_pr_store_64 uint64_t *target uint64_t value Ft void Fn ck_pr_store_32 uint32_t *target uint32_t value Ft void Fn ck_pr_store_16 uint16_t *target uint16_t value Ft void Fn ck_pr_store_8 uint8_t *target uint8_t value</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_store 3 family of functions atomically stores the value specified by Fa value into the location pointed to by Fa target . This family of functions always serves as an implicit compiler barrier and is not susceptible to compiler re-ordering.</p>
 <h2>RETURN VALUES</h2>
 <p> This family of functions has no return value.</p>

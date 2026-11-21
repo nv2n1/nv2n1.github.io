@@ -1,4 +1,5 @@
 ---
+
 title: "uberftp(1)"
 name: "uberftp"
 section: "1"
@@ -9,13 +10,11 @@ description: "uberftp – GridFTP-enabled client"
 
 <h2>NAME</h2>
 <p> uberftp &#8211; GridFTP-enabled client</p>
-<h2>SYNOPSIS</h2>
 <p> <code>uberftp</code> [options] [host options] [<i>host</i>] </p>
 <p> <code>uberftp</code> [options] [host options] host &#8220;<i>cmd</i>&#8221; </p>
 <p> <code>uberftp</code> [options] <i>srcurl</i> <i>dsturl</i> </p>
 <p> <code>uberftp</code> [options] -f <i>urlfile</i> </p>
 <p> <code>uberftp</code> [options] -cmd <i>url</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>uberftp </code> is a GridFTP-enabled client that supports both interactive use and FTP commands on the <code>uberftp</code> command line to transfer files between two computers. It is intended for use with computers that have a GridFTP server installed. <code>Uberftp</code> supports GSI authentication, parallel data channels and striping. For more information about GridFTP, see the GridFTP URL in the &quot;SEE ALSO&quot; section below. </p>
 <p> Only the first usage shown above will create an interactive session. If <i>host</i> is specified, <code>uberftp</code> immediately attempts to establish a connection to the <font SIZE="-1">GridFTP</font> server on <i>host</i>, enters its command interpreter and awaits commands from the user. If <i>host</i> is not specified, <code>uberftp</code> immediately drops into the command interpreter without connecting to any <font SIZE="-1">GridFTP</font> server. </p>
 <p> The second usage option denotes a non interactive session in which &#8220;<i>cmd</i>&#8221; is a series of one or more commands as described in the <code>COMMANDS</code> section below to run once the control connection is established. These commands are run exactly as if they had been entered from the interactive prompt. This list must be enclosed in quotes. Multiple commands are semicolon or comma delimited. uberftp will execute these commands and then exit. <code>Uberftp</code> will exit upon the first error encountered. </p>

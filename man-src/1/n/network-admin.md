@@ -1,4 +1,5 @@
 ---
+
 title: "network-admin(1)"
 name: "network-admin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-network-admin/"
 description: "network-admin – Network Administration Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>network-admin</code> [<i>OPTION&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>network-admin</code> is part of the GNOME system tools, a set of tools to easily access and manage system configuration. </p>
 <p> <code>network-admin</code> allows you to specify the way your system connects to other computers and to the Internet.</p>
 <h2>OPTIONS</h2>

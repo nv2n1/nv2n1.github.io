@@ -1,4 +1,5 @@
 ---
+
 title: "pmsignal(1)"
 name: "pmsignal"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmsignal – send a signal to one or more processes"
 
 <h2>NAME</h2>
 <p> <code>pmsignal</code> &#8211; send a signal to one or more processes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmsignal</code> [<code>-alnp</code>] [<code>-s</code> <i>signal</i>] [<i>PID</i> &#8230;|<i>name</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmsignal</code> provides a cross-platform event signalling mechanism for use with tools from the Performance Co-Pilot toolkit. It can be used to send a named <i>signal</i> (only HUP, USR1, TERM, and KILL are accepted) to one or more processes. </p>
 <p> The processes are specified directly using PIDs or as program names (with either the <code>-a</code>/<code>&#8211;all</code> or <code>-p</code>/<code>&#8211;program</code> options). In the <code>all</code> case, the set of all running processes is searched for a <code><a href="/docs/linux/man/1-basename/">basename</a></code>(1) match on <i>name</i>. In the <code>program</code> case, process identifiers are extracted from files in the $PCP_RUN_DIR directrory where file names are matched on <i>name</i>.pid. </p>
 <p> The <code>-n</code>/<code>&#8211;dry-run</code> option reports the list of process identifiers that would have been signalled, but no signals are actually sent. </p>

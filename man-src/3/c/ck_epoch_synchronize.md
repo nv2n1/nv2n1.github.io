@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_synchronize(3)"
 name: "ck_epoch_synchronize"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_epoch_synchronize – block until a grace period has been detec
 <p> <code>ck_epoch_synchronize</code> &#8211; block until a grace period has been detected</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_epoch.h Ft void Fn ck_epoch_synchronize ck_epoch_record_t *record</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_epoch_synchronize 3 function will block the caller until a grace period has been detected, according to the semantics of epoch reclamation. Any objects requiring safe memory reclamation which are logically deleted are safe for physical deletion following a call to Fn ck_epoch_synchronize 3 . If you require that all callbacks be dispatched, then it is suggested that you use Fn ck_epoch_barrier 3 instead or follow a call of Fn ck_epoch_synchronize 3 with Fn ck_epoch_reclaim 3 .</p>
 <h2>EXAMPLE</h2>
 <blockquote>

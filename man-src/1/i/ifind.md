@@ -1,4 +1,5 @@
 ---
+
 title: "ifind(1)"
 name: "ifind"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ifind/"
 description: "ifind – Find the meta-data structure that has allocated a given disk unit or file name."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ifind [-avVl] [-f fstype] [-d data_unit] </code> <code>[-n file] [-p par_inode] [-z ZONE] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ifind</code> finds the meta-data structure that has <i>data_unit</i> allocated a data unit or has a given file name. In some cases any of the structures can be unallocated and this will still find the results. </p>
 <h2>ARGUMENTS</h2>
 <p> There are several required and optional arguments. The image file names must be specified each time:</p>

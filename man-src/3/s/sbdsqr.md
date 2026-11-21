@@ -1,4 +1,5 @@
 ---
+
 title: "sbdsqr(3)"
 name: "sbdsqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sbdsqr/"
 description: "sbdsqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />
  <i></i><code>SBDSQR</code></p>

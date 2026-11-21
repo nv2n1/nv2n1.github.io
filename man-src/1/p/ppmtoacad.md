@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoacad(1)"
 name: "ppmtoacad"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtoacad/"
 description: "ppmtoacad – convert portable pixmap to AutoCAD database or slide"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtoacad</code> [<code>-dxb</code>] [<code>-poly</code>] [<code>-background</code> <i>colour</i>] [<code>-white</code>] [<code>-aspect</code> <i>ratio</i>] [<code>-8</code>] [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces an AutoCAD&#174; slide file or binary database import (.dxb) file as output. If no <i>ppmfile</i> is specified, input is read from standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

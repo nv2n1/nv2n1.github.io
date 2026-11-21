@@ -1,4 +1,5 @@
 ---
+
 title: "load_sample(3)"
 name: "load_sample"
 section: "3"
@@ -9,10 +10,8 @@ description: "load_sample – Loads a sample from a file. Allegro game programmi
 
 <h2>NAME</h2>
 <p> load_sample &#8211; Loads a sample from a file. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>SAMPLE *load_sample(const char *filename);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Loads a sample from a file, supporting both mono and stereo WAV and mono VOC files, in 8 or 16-bit formats, as well as formats handled by functions registered using register_sample_file_type(). Example: </p>
 <pre><code>
 SAMPLE *sample = load_sample(user_input);

@@ -1,4 +1,5 @@
 ---
+
 title: "virt-resize(1)"
 name: "virt-resize"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-virt-resize/"
 description: "virt-resize – Resize a virtual machine disk"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - resize[--resize / dev / sdaN = [+ / -]&lt;size&gt;[%]]
              [--expand / dev / sdaN][--shrink / dev / sdaN]
              [--ignore / dev / sdaN][--delete / dev / sdaN][...] indisk outdisk
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Virt-resize is a tool which can resize a virtual machine disk, making it larger or smaller overall, and resizing or deleting any partitions contained within. </p>
 <p> Virt-resize <code>cannot</code> resize disk images in-place. Virt-resize <code>should not</code> be used on live virtual machines &#8211; for consistent results, shut the virtual machine down before resizing it. </p>
 <p> If you are not familiar with the associated tools: <i><a href="/docs/linux/man/1-virt-filesystems/">virt-filesystems</a></i>(1) and <i><a href="/docs/linux/man/1-virt-df/">virt-df</a></i>(1), we recommend you go and read those manual pages first.</p>

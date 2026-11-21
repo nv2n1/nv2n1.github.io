@@ -1,4 +1,5 @@
 ---
+
 title: "clansy(3)"
 name: "clansy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clansy/"
 description: "clansy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clansy</code> (NORM, UPLO, N, A, LDA, WORK)<br />
  <i></i><code>CLANSY</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a complex symmetric matrix.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hmac_fast(3)"
 name: "gnutls_hmac_fast"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_hmac_fast – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hmac_fast &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_hmac_fast(gnutls_mac_algorithm_t </code><i>algorithm</i><code>, const void * </code><i>key</i><code>, size_t </code><i>keylen</i><code>, const void * </code><i>text</i><code>, size_t </code><i>textlen</i><code>, void * </code><i>digest</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_hmac_fast – API function"
 <dd> The length of data to hash</dd>
 <dt>void * digest</dt>
 <dd> is the output value of the hash</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This convenience function will hash the given data and return output on a single call.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

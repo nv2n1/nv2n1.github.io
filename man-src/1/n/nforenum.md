@@ -1,4 +1,5 @@
 ---
+
 title: "nforenum(1)"
 name: "nforenum"
 section: "1"
@@ -9,7 +10,6 @@ description: "NFORenum – A tool for checking NFO code for errors, and for beau
 
 <h2>NAME</h2>
 <p> <code>NFORenum</code> &#8211; A tool for checking NFO code for errors, and for beautifying that code</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nforenum</code> [options] [file [file2 [file3 [&#8230;]]]]</p>
 <h2>OPTIONS</h2>
 <dl>

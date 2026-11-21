@@ -1,4 +1,5 @@
 ---
+
 title: "db_checkpoint(1)"
 name: "db_checkpoint"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-db_checkpoint/"
 description: "db5.3_checkpoint – Periodically checkpoint transactions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>db5.3_checkpoint</code> [-1Vv] [-h home] [-k kbytes] [-L file] [-P password] [-p min]</p>
-<h2>DESCRIPTION</h2>
 <p> The db5.3_checkpoint utility is a daemon process that monitors the database log, and periodically calls DB_ENV-&gt;txn_checkpoint to checkpoint it.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "discountcurve(3)"
 name: "discountcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-discountcurve/"
 description: "ql/termstructures/yield/discountcurve.hpp – interpolated discount factor structure"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;<br />
  #include &lt;ql/math/interpolations/loginterpolation.hpp&gt;<br />
  #include &lt;ql/math/comparison.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gdc(1)"
 name: "gdc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gdc/"
 description: "gdc – Client utility for GoodData on-demand Business Intelligence platform"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gdc [global options] &lt;command&gt; [command options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gdc</code> is the command-line and interactive client for GoodData REST-ful service <font SIZE="-1">API</font> built on top of WWW::GoodData client library.</p>
 <h2>OPTIONS</h2>
 <dl>

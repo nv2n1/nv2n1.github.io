@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_mgm(1)"
 name: "ndb_mgm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ndb_mgm/"
 description: "ndb_mgm – the MySQL Cluster management client"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_mgm </code><i>options</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>ndb_mgm</code> management client process is actually not needed to run the cluster. Its value lies in providing a set of commands for checking the cluster&#8217;s status, starting backups, and performing other administrative functions. The management client accesses the management server using a C API. Advanced users can also employ this API for programming dedicated management processes to perform tasks similar to those performed by <code>ndb_mgm</code>. </dd>
 <p> To start the management client, it is necessary to supply the host name and port number of the management server: </p>
 <dl>

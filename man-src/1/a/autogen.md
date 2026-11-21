@@ -1,4 +1,5 @@
 ---
+
 title: "autogen(1)"
 name: "autogen"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-autogen/"
 description: "autogen – The Automated Program Generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autogen</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i>[[=| ]<i>value</i>]]&#8230;[ &lt;def-file&gt; ] </p>
 <p> AutoGen creates text files from templates using external definitions.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>AutoGen</code> is designed for generating program files that contain repetitive text with varied substitutions. The goal is to simplify the maintenance of programs that contain large amounts of repetitious text. This is especially valuable if there are several blocks of such text that must be kept synchronized. </p>
 <p> One common example is the problem of maintaining the code required for processing program options. Processing options requires a minimum of four different constructs be kept in proper order in different places in your program. You need at least: The flag character in the flag string, code to process the flag when it is encountered, a global state variable or two, and a line in the usage text. You will need more things besides this if you choose to implement long option names, configuration file processing, environment variables and so on. </p>
 <p> All of this can be done mechanically; with the proper templates and this program.</p>

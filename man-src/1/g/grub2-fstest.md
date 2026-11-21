@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-fstest(1)"
 name: "grub2-fstest"
 section: "1"
@@ -9,7 +10,6 @@ description: "grub-fstest — Debug tool for GRUB’s filesystem driver."
 
 <h2>NAME</h2>
 <p> <code>grub-fstest</code> — Debug tool for GRUB&#8217;s filesystem driver. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>grub-fstest</code> [-c | &#8211;diskcount=<i>NUM</i>] [-C | &#8211;crypto]</p>
 <dl>
 <dt>
@@ -30,7 +30,6 @@ description: "grub-fstest — Debug tool for GRUB’s filesystem driver."
 <dt>
 </dt><dd> hex <i>FILE</i> | ls <i>PATH</i> | xnu_uuid <i>DEVICE</i>&gt; </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>grub-fstest</code> is a tool for testing GRUB&#8217;s filesystem drivers. You should not normally need to run this program. </p>
 <h2>OPTIONS</h2>
 <dl>

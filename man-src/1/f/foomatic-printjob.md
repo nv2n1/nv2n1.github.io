@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-printjob(1)"
 name: "foomatic-printjob"
 section: "1"
@@ -9,14 +10,12 @@ description: "foomatic-printjob – manage printer jobs in a spooler-independent
 
 <h2>NAME</h2>
 <p> foomatic-printjob &#8211; manage printer jobs in a spooler-independent fashion</p>
-<h2>SYNOPSIS</h2>
 <p> <code>foomatic-printjob [ -s spooler ] [ -P queuename ] </code> <code>[ -o option1=value1 -o option2 &#8230; ] [ -i ] </code> <code>[ file1 file2 &#8230; ]</code> </p>
 <p> <code>foomatic-printjob -Q [ -s spooler ] [ -P queuename ] [ -i ] [ -a ]</code> <code>[ user1 user2 &#8230; ]</code> </p>
 <p> <code>foomatic-printjob -R [ -s spooler ] [ -P queuename ] [ -i ] </code> <code>[ &#8211; | jobid1 jobid2 &#8230; ]</code> </p>
 <p> <code>foomatic-printjob -C [ -s spooler ] [ -i ] command [ arguments ]</code> </p>
 <p> <code>foomatic-printjob -S [ -s spooler ] [ -i ]</code> </p>
 <p> <code>foomatic-printjob -h [ -s spooler ] [ -P queuename ] [ -i ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>foomatic-printjob</code> provides a spooler-independent interface to creating and managing printer jobs and print queues. Note that the first argument changes the mode of the command, as it combines the functionality of several System V-style printing commands. </p>
 <h3>OPTIONS</h3>
 <dl>

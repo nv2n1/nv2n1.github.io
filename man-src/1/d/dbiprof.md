@@ -1,4 +1,5 @@
 ---
+
 title: "dbiprof(1)"
 name: "dbiprof"
 section: "1"
@@ -6,14 +7,9 @@ letter: "d"
 url: "/docs/linux/man/1-dbiprof/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+dbiprof - command-line client for DBI::ProfileData 
 
- dbiprof - command-line client for DBI::ProfileData 
-
-<h2>SYNOPSIS</h2>
-
- See a report of the ten queries with the longest total runtime in the profile dump file <i>prof1.out</i>: 
+See a report of the ten queries with the longest total runtime in the profile dump file <i>prof1.out</i>: 
 
  <pre>
  dbiprof prof1.out
@@ -31,9 +27,7 @@ url: "/docs/linux/man/1-dbiprof/"
   dbiprof --sort count --number 15
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This tool is a command-line client for the DBI::ProfileData. It allows you to analyze the profile data file produced by DBI::ProfileDumper and produce various useful reports.
+This tool is a command-line client for the DBI::ProfileData. It allows you to analyze the profile data file produced by DBI::ProfileDumper and produce various useful reports.
 
 <h2>OPTIONS</h2>
 

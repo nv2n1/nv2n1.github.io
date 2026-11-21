@@ -1,4 +1,5 @@
 ---
+
 title: "tcxmlcheck(1)"
 name: "tcxmlcheck"
 section: "1"
@@ -9,11 +10,9 @@ description: "tcxmlcheck – Check information in smil input file"
 
 <h2>NAME</h2>
 <p> tcxmlcheck &#8211; Check information in smil input file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tcxmlcheck</code> [ <code>options</code> ] [ <code>&#8211;</code> ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>tcxmlcheck</code> is Copyright (C) by Malanchini Marzio</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcxmlcheck</code> Check a smil input file. Most of the options are used by transcode at run time.</p>
 <h2>OPTIONS</h2>
 <dl>

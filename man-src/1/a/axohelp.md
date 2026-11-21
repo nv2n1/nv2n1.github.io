@@ -1,4 +1,5 @@
 ---
+
 title: "axohelp(1)"
 name: "axohelp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-axohelp/"
 description: "axohelp – helper program for use of LaTeX package axodraw2 with pdflatex."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>axohelp [options] [filename]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Axohelp is a program used with the axodraw2, which is a LaTeX package for drawing Feynman graphs (and some other simple graphics) in LaTeX documents. </p>
 <p> When the axodraw2 package is used with pdflatex (or lualatex or xelatex) it creates a file with extension .ax1. This contains specifications of the graphics elements. Axohelp converts this to a file with extension ax2 that contains the necessary pdf code. The .ax2 file is read by pdflatex (etc) on its next run, and the contents of the .ax2 file are used in the final .pdf output file to draw the desired graphics. </p>
 <p> The files processed are specified as follows: When the filename on the command line is of the form file.ax1, then the input file is file.ax1 and the output file is file.ax2. If the filename on the command line does not have extension .ax1, then this extension is appended. </p>

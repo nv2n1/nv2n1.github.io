@@ -1,4 +1,5 @@
 ---
+
 title: "podofotxtextract(1)"
 name: "podofotxtextract"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-podofotxtextract/"
 description: "podofotxtextract – Extract all text from a PDF file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>podofotxtextract</code> [inputfile] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>podofotxtextract</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can extract text from a PDF file. </p>
 <h2>OPTIONS</h2>
 <p> <code>[inputfile]</code></p>

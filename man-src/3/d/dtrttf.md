@@ -1,4 +1,5 @@
 ---
+
 title: "dtrttf(3)"
 name: "dtrttf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrttf/"
 description: "dtrttf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrttf</code> (TRANSR, UPLO, N, A, LDA, ARF, INFO)<br />
  <i></i><code>DTRTTF</code> copies a triangular matrix from the standard full format (TR) to the rectangular full packed format (TF).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fc-cat(1)"
 name: "fc-cat"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fc-cat/"
 description: "fc-cat – read font information cache files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fc-cat</code> [ <code>-rvVh</code> ] [ <code>&#8211;recurse</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>
 <p>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;</code><i>fonts-cache-%version%-files</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;</code><i>dirs</i><code>&nbsp;]&nbsp;</code><i>&#8230;</i>&nbsp;]&nbsp;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fc-cat</code> reads the font information from cache files or related to font directories and emits it in ASCII form.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

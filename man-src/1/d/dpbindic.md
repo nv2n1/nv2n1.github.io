@@ -1,4 +1,5 @@
 ---
+
 title: "dpbindic(1)"
 name: "dpbindic"
 section: "1"
@@ -11,7 +12,6 @@ description: "dpbindic – Convert a binary-form dictionary into a text-form dic
 <p> dpbindic &#8211; Convert a binary-form dictionary into a text-form dictionary</p>
 <h2>SYNOPSYS</h2>
 <p> <code>dpbindic</code> [ <code>-xiu</code> [ <i>frequency</i> ] ] <i>binary-file</i> [ <i>text-file</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>dpbindic</i> outputs the file information of the binary-form dictionary file specified in <i>binary-file</i>. At this time, the word information of the dictionary can be output in text form to the standard output. To do so, use <i>test-file</i> to specify the text-form dictionary used as the source of binary-form dictionary file. If this specification is omitted, the text dictionary file information in the binary dictionary file will be output. The standard grammar file name is /usr/local/canna/lib/dic/hyoujun.gram. It will be used if the grammar file name specification is omitted. The output format of word information data is specified using an option.</p>
 <h2>OPTIONS</h2>
 <dl>

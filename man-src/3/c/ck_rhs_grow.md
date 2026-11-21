@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_grow(3)"
 name: "ck_rhs_grow"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_rhs_grow – enlarge hash set capacity"
 <p> <code>ck_rhs_grow</code> &#8211; enlarge hash set capacity</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_rhs.h Ft bool Fn ck_rhs_grow ck_rhs_t *hs unsigned long capacity</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_rhs_grow 3 function will resize the hash set in order to be able to store at least the number of entries specified by Fa capacity at a load factor of one. The default hash set load factor is 0.5. If you wish to minimize the likelihood of memory allocations for a hash set meant to store n entries, then specify a Fa capacity of 2n. The default behavior of ck_rhs is to round Fa capacity to the next power of two if it is not already a power of two.</p>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, Fn ck_rhs_grow 3 returns true and otherwise returns false on failure.</p>

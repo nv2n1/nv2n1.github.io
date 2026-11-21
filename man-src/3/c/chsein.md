@@ -1,4 +1,5 @@
 ---
+
 title: "chsein(3)"
 name: "chsein"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chsein/"
 description: "chsein.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chsein</code> (SIDE, EIGSRC, INITV, SELECT, N, H, LDH, W, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, IFAILL, IFAILR, INFO)<br />
  <i></i><code>CHSEIN</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libipq(3)"
 name: "libipq"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-libipq/"
 description: "libipq — iptables userspace packet queuing library."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code></p>
-<h2>DESCRIPTION</h2>
 <p> libipq is a development library for iptables userspace packet queuing.</p>
 <h3>Userspace Packet Queuing</h3>
 <p> Netfilter provides a mechanism for passing packets out of the stack for queueing to userspace, then receiving these packets back into the kernel with a verdict specifying what to do with the packets (such as ACCEPT or DROP). These packets may also be modified in userspace prior to reinjection back into the kernel. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rcvtty(1)"
 name: "rcvtty"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-rcvtty/"
 description: "rcvtty – report new mail"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/rcvtty</code> [<i>command</i>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-width</code> <i>columns</i>] [<code>-bell</code> | <code>-nobell</code>] [<code>-newline</code> | <code>-nonewline</code>] [<code>-biff</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>rcvtty</code> can be used to report new mail. It is used primarily in conjunction with mail filtering agents such as <code>slocal</code> or <code>procmail</code>. </dd>
 <p> The <code>rcvtty</code> program executes the named command with the message as its standard input, and writes the resulting output on your terminal. </p>
 <p> Alternately, if no command is specified (or is bogus), then <code>rcvtty</code> will instead write a one-line scan listing. The default output format of this scan listing may be overridden by using either the <code>-form</code> <i>formatfile</i> or <code>-format</code> <i>string</i> option, similar to the equivalent options for <code>scan</code> and <code>inc</code>. See <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) for details. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-monitor(1)"
 name: "lxc-monitor"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-monitor – monitor the container state"
 
 <h2>NAME</h2>
 <p> lxc-monitor &#8211; monitor the container state</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-monitor</code> [-n <i>name</i>] [-Q <i>name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-monitor</code> monitors the state of containers. The <i>name</i> argument may be used to specify which containers to monitor. It is a regular expression, conforming with posix2, so it is possible to monitor all the containers, several of them or just one. If not specified, <i>name</i> will default to &#8216;.*&#8217; which will monitor all containers in <code>lxcpath</code>. </p>
 <p> The <code>-P, &#8211;lxcpath</code>=PATH option may be specified multiple times to monitor more than one container path. Note however that containers with the same name in multiple paths will be indistinguishable in the output.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_gyrate_d(1)"
 name: "g_gyrate_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_gyrate – calculates the radius of gyration"
 <h2>NAME</h2>
 <p> g_gyrate &#8211; calculates the radius of gyration </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_gyrate</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> gyrate.xvg </i> <code>-acf</code><i> moi-acf.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-nmol</code><i> int </i> <code>-[no]q</code><i></i> <code>-[no]p</code><i></i> <code>-[no]moi</code><i></i> <code>-nz</code><i> int </i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_gyrate computes the radius of gyration of a group of atoms and the radii of gyration about the x, y and z axes, as a function of time. The atoms are explicitly mass weighted. </p>
 <p> With the <code> -nmol</code> option the radius of gyration will be calculated for multiple molecules by splitting the analysis group in equally sized parts. </p>
 <p> With the option <code> -nz</code> 2D radii of gyration in the x-y plane of slices along the z-axis are calculated.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdagfs2(1)"
 name: "pmdagfs2"
 section: "1"
@@ -9,7 +10,6 @@ description: "pmdagfs2 – Global Filesystem v2 (GFS2) PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdagfs2</code> &#8211; Global Filesystem v2 (GFS2) PMDA</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdagfs2</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about mounted GFS2 filesystems from the debugfs filesystem. This PMDA requires debugfs along with at least one mounted GFS2 filesystem to be mounted in order to be able to provide metric data. </p>
 <p> This PMDA can be used with GFS2 filesystems which are both mounted as local filesystems and filesystems which are mounted as shared storage within a clustered environment. However there are some metrics which specifically require GFS2 to be setup in a clustered environment to be able to provide metric data. This is due to them expecting locking messages to be passed via the distributed lock manager (DLM) between nodes of a cluster in order to generate their output. </p>
 <p> These cluster-environment-only metrics can be distinguished by the inclusion of their corresponding control metrics so that they can be optionally enabled or disabled on systems where they are not desired to be monitored or not supported. </p>

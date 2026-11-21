@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-run(1)"
 name: "atomic-run"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-atomic-run/"
 description: "atomic-run – Execute container image run method"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic run</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>&#8211;display</code>] [<code>-n</code>][<code>&#8211;name</code>[=<i>NAME</i>]] [<code>&#8211;spc</code>] [<code>&#8211;storage</code>] [<code>&#8211;quiet</code>] IMAGE [COMMAND] [ARG&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>atomic run</code> attempts to start an existing container or run a container from an image, first reading the LABEL RUN field in the container IMAGE. </p>
 <p> If the container image has a LABEL RUN instruction like the following: </p>
 <p> LABEL RUN /usr/bin/docker run -t -i &#8211;rm \${OPT1} &#8211;cap-add=SYS_ADMIN &#8211;net=host -v \${LOGDIR}:/var/log -v \${DATADIR}:/var/lib &#8211;name \${NAME} \${IMAGE} \${OPT2} run.sh \${OPT3} </p>

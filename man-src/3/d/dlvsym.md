@@ -1,4 +1,5 @@
 ---
+
 title: "dlvsym(3)"
 name: "dlvsym"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-dlvsym/"
 description: "dlsym, dlvsym – obtain address of a symbol in a shared object or executable"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>void *dlsym(void *</code><i>handle</i><code>, const char *</code><i>symbol</i><code>);</code> </p>
 <p> <code>#define _GNU_SOURCE</code><br />
  <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>void *dlvsym(void *</code><i>handle</i><code>, char *</code><i>symbol</i><code>, char *</code><i>version</i><code>);</code> </p>
 <p> Link with <i>-ldl</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The function <code>dlsym</code>() takes a &quot;handle&quot; of a dynamic loaded shared object returned by <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3) along with a null-terminated symbol name, and returns the address where that symbol is loaded into memory. If the symbol is not found, in the specified object or any of the shared objects that were automatically loaded by <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3) when that object was loaded, <code>dlsym</code>() returns NULL. (The search performed by <code>dlsym</code>() is breadth first through the dependency tree of these shared objects.) </p>
 <p> In unusual cases (see NOTES) the value of the symbol could actually be NULL. Therefore, a NULL return from <code>dlsym</code>() need not indicate an error. The correct way to distinguish an error from a symbol whose value is NULL is to call <code><a href="/docs/linux/man/3-dlerror/">dlerror</a></code>(3) to clear any old error conditions, then call <code>dlsym</code>(), and then call <code><a href="/docs/linux/man/3-dlerror/">dlerror</a></code>(3) again, saving its return value into a variable, and check whether this saved value is not NULL. </p>
 <p> There are two special pseudo-handles that may be specified in <i>handle</i>:</p>

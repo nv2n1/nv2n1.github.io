@@ -1,4 +1,5 @@
 ---
+
 title: "ppdc(1)"
 name: "ppdc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppdc/"
 description: "ppdc – cups ppd compiler (deprecated)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppdc</code> [ <code>-D </code><i>name</i>[<code>=</code><i>value</i>] ] [ <code>-I</code> <i>include-directory</i> ] [ <code>-c</code> <i>message-catalog</i> ] [ <code>-d</code> <i>output-directory</i> ] [ <code>-l</code> <i>language(s)</i> ] [ <code>-m</code> ] [ <code>-t</code> ] [ <code>-v</code> ] [ <code>-z</code> ] [ <code>&#8211;cr</code> ] [ <code>&#8211;crlf</code> ] [ <code>&#8211;lf</code> ] <i>source-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ppdc</code> compiles PPDC source files into one or more PPD files. <code>This program is deprecated and will be removed in a future release of CUPS.</code></p>
 <h2>OPTIONS</h2>
 <p> <code>ppdc</code> supports the following options:</p>

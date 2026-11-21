@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_invalidate(3)"
 name: "keyctl_invalidate"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-keyctl_invalidate/"
 description: "keyctl_invalidate – Invalidate a key"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_invalidate(key_serial_t key);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_invalidate</code>() invalidates a <i>key</i>. The key is scheduled for immediate removal from all the keyrings that point to it, after which it will be deleted. The key will be ignored by all searches once this function is called even if it is not yet fully dealt with. </p>
 <p> The caller must have <code>search</code> permission on a key to be able to invalidate it.</p>
 <h2>RETURN VALUE</h2>

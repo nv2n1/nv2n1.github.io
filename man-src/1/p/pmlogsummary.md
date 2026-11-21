@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogsummary(1)"
 name: "pmlogsummary"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmlogsummary – calculate averages of metrics stored in a set of 
 
 <h2>NAME</h2>
 <p> <code>pmlogsummary</code> &#8211; calculate averages of metrics stored in a set of PCP archives</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmlogsummary</code> [<code>-abfFHiIlmMNsvxyz</code>] [<code>-B</code> <i>nbins</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-p</code> <i>precision</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i> [<i>metricname</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmlogsummary</code> prints statistical information about metrics of numeric type contained within the files of a set of Performance Co-Pilot (PCP) archive logs. The default output prints time averages for both counter and non-counter metrics. The set of archive logs is identified by <i>archive</i>, which is a comma-separated list of names, each of which may be the base name of an archive or the name of a directory containing one or more archives. The archive logs are typically created using <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
 <p> The metrics of interest are named in the <i>metricname</i> arguments. If <i>metricname</i> is a non-leaf node in the Performance Metrics Name Space (<code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)), then <code>pmlogsummary</code> will recursively descend the PMNS and report on all leaf nodes. If no <i>metricname</i> argument is given, the root of the namespace is used. </p>
 <p> Normally <code>pmlogsummary</code> operates on the default <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5), however if the <code>-n</code> option is specified an alternative namespace is loaded from the file <i>pmnsfile</i>. </p>

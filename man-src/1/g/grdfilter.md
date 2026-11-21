@@ -1,4 +1,5 @@
 ---
+
 title: "grdfilter(1)"
 name: "grdfilter"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdfilter – Filter a grid in the space (or time) domain"
 
 <h2>NAME</h2>
 <p> grdfilter &#8211; Filter a grid in the space (or time) domain</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdfilter</code> <i>ingrid</i> <i>distance_flag</i> <code>x</code><i>width</i>[/<i>width2</i>][<i>modifiers</i>] <i>outgrid</i> [ <i>increment</i> ] [ <code>i</code>|<code>p</code>|<code>r</code> ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdfilter</code> will filter a grid file in the time domain using one of the selected convolution or non-convolution isotropic or rectangular filters and compute distances using Cartesian or Spherical geometries. The output grid file can optionally be generated as a sub-region of the input (via <code>-R</code>) and/or with new increment (via <code>-I</code>) or registration (via <code>-T</code>). In this way, one may have &quot;extra space&quot; in the input data so that the edges will not be used and the output can be within one half-width of the input edges. If the filter is low-pass, then the output may be less frequently sampled than the input.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

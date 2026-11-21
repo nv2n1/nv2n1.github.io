@@ -1,4 +1,5 @@
 ---
+
 title: "gracebat(1)"
 name: "gracebat"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-gracebat/"
 description: "grace – command line interface xmgrace – full-featured GUI mode gracebat – batch mode – print and exit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grace &#8211; command line interface<br />
  xmgrace &#8211; full-featured GUI mode<br />
  gracebat &#8211; batch mode &#8211; print and exit</p>
-<h2>DESCRIPTION</h2>
 <p> Grace is a WYSIWYG tool to make two-dimensional plots of scientific data. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>grace</code> [ <i>option</i> | <i>filename</i> ]&#8230;<br />
  <code>xmgrace</code> [ <i>option</i> | <i>filename</i> ]&#8230;<br />
  <code>gracebat</code> [ <i>option</i> | <i>filename</i> ]&#8230; </p>

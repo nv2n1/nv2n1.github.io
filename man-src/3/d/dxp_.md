@@ -1,4 +1,5 @@
 ---
+
 title: "dxp_(3)"
 name: "dxp_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dxp_/"
 description: "QuantLib::TransformedGrid – transformed grid"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/transformedgrid.hpp&gt; </p>
 <p> Inherited by LogGrid. </p>
 <h3>Public Member Functions</h3>

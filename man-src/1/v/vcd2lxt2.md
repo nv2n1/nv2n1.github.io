@@ -1,4 +1,5 @@
 ---
+
 title: "vcd2lxt2(1)"
 name: "vcd2lxt2"
 section: "1"
@@ -11,7 +12,6 @@ description: "vcd2lxt2 – Converts VCD files to LXT2 files"
 <p> vcd2lxt2 &#8211; Converts VCD files to LXT2 files</p>
 <h2>SYNTAX</h2>
 <p> vcd2lxt2 [<i>option</i>]&#8230; [<i>VCDFILE</i>] [<i>LXTFILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Converts VCD files to LXT2 files.</p>
 <h2>OPTIONS</h2>
 <dl>

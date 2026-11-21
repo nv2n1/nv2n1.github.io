@@ -1,4 +1,5 @@
 ---
+
 title: "perldata(1)"
 name: "perldata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldata/"
 description: "perldata – Perl data types"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Variable names</h3>
 <p> Perl has three built-in data types: scalars, arrays of scalars, and associative arrays of scalars, known as &#8220;hashes&#8221;. A scalar is a single string (of any size, limited only by the available memory), number, or a reference to something (which will be discussed in perlref). Normal arrays are ordered lists of scalars indexed by number, starting with 0. Hashes are unordered collections of scalar values indexed by their associated string key. </p>
 <p> Values are usually referred to by name, or through a named reference. The first character of the name tells you to what sort of data structure it refers. The rest of the name tells you the particular value to which it refers. Usually this name is a single <i>identifier</i>, that is, a string beginning with a letter or underscore, and containing letters, underscores, and digits. In some cases, it may be a chain of identifiers, separated by <tt>&quot;::&quot;</tt> (or by the slightly archaic <tt>&quot;'&quot;</tt>); all but the last are interpreted as names of packages, to locate the namespace in which to look up the final identifier (see &#8220;Packages&#8221; in perlmod for details). For a more in-depth discussion on identifiers, see &#8220;Identifier parsing&#8221;. It&#8217;s possible to substitute for a simple identifier, an expression that produces a reference to the value at runtime. This is described in more detail below and in perlref. </p>

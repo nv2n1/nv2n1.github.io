@@ -1,4 +1,5 @@
 ---
+
 title: "nasm(1)"
 name: "nasm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nasm/"
 description: "nasm – the Netwide Assembler, a portable 80×86 assembler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nasm</code> [<code>-@</code> response file] [<code>-f</code> format] [<code>-o</code> outfile] [<code>-l</code> listfile] [<i>options</i>&#8230;] filename</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>nasm</code> command assembles the file <i>filename</i> and directs output to the file <i>outfile</i> if specified. If <i>outfile</i> is not specified, <code>nasm</code> will derive a default output file name from the name of its input file, usually by appending &#8216;.o&#8217; or &#8216;.obj&#8217;, or by removing all extensions for a raw binary file. Failing that, the output file name will be &#8216;nasm.out&#8217;.</p>
 <h2>OPTIONS</h2>
 <p> <code>-@</code> <i>filename</i></p>

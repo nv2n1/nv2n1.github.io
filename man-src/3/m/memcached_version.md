@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_version(3)"
 name: "memcached_version"
 section: "3"
@@ -9,7 +10,6 @@ description: "memcached_version – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_version &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>const char * memcached_lib_version(void)</code></dt>
@@ -17,7 +17,6 @@ description: "memcached_version – libmemcached Documentation"
 </dd><dt><code>memcached_return_t memcached_version(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>memcached_lib_version()</i> is used to return a simple version string representing the libmemcached version (client library version, not server version) </p>
 <p> <i>memcached_version()</i> is used to set the major, minor, and micro versions of each memcached server being used by the memcached_st connection structure. It returns the memcached server return code.</p>
 <h2>RETURN</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "tse3play(1)"
 name: "tse3play"
 section: "1"
@@ -9,9 +10,7 @@ description: "tse3play – play/convert music files (MIDI or TSE3MDL) using the 
 
 <h2>NAME</h2>
 <p> tse3play &#8211; play/convert music files (MIDI or TSE3MDL) using the <font SIZE="-1">TSE3</font> sequencer engine library</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tse3play [-h] [-ver] [-v] [-list] [-nv] [-np] [-l] [-omidi</code> <i>output-midi-file</i> <code>] [-omidi0] [-omidicomp] [-otse3mdl</code> <i>output-tse3mdl-file</i> <code>] [-map</code> <i>from-midi-channel to-midi-channel</i> <code>] [-m] [-r] [-gmr] [-gsr] [-xgr] [-unix] [-oss] [-alsa] [-arts] [-stream] [-s</code> <i>start-time</i> <code>] [-solo</code> <i>track</i> <code>] [-sl</code> <i>usecs</i> <code>] [ -stop ] [ -e ] [ -mute</code> <i>channel</i> <code>] [ -pd</code> <i>dir</i> <code>]</code> <i>file</i> <code>] [ -port</code> <i>port</i> <code>] [ -fast ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>tse3play</code> plays TSE3MDL files and MIDI files using the <font SIZE="-1">TSE3</font> sequencer engine. It was originally developed as a test application for the <font SIZE="-1">TSE3</font> engine, but is now a fully featured playback application. </p>
 <p> <code>tse3play</code> can also convert files between the two supported formats. Whilst playing it provides text based visual feedback, or can stream an English representation of the contents of the file to standard output. </p>
 <p> <i>MIDI files</i> are a standard file format for the storage of musical (song) data that can be found in abundance on the internet. They don&#8217;t contain the actual sounds played, but instructions on how to recreate the song (i.e. start note/stop note commands). MIDI files are most often created by a <i>sequencer</i> application (akin to a word processor for music). MIDI files often have the extension .mid or .midi </p>

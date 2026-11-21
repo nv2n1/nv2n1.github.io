@@ -1,4 +1,5 @@
 ---
+
 title: "ciptool(1)"
 name: "ciptool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ciptool/"
 description: "ciptool – Bluetooth Common ISDN Access Profile (CIP)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ciptool</code> [<i>OPTIONS</i>] <i>COMMANDS</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-ciptool/">ciptool</a>(1)</code> is used to set up, maintain, and inspect the CIP configuration of the Bluetooth subsystem in the Linux kernel.</p>
 <h2>OPTIONS</h2>
 <dl>

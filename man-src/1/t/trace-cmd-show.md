@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-show(1)"
 name: "trace-cmd-show"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-show/"
 description: "trace-cmd-show – show the contents of the Ftrace Linux kernel tracing buffer."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd show</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) show displays the contents of one of the Ftrace Linux kernel tracing files: trace, snapshot, or trace_pipe. It is basically the equivalent of doing: </p>
 <dl>
 <dt>

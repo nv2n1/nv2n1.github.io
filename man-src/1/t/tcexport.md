@@ -1,4 +1,5 @@
 ---
+
 title: "tcexport(1)"
 name: "tcexport"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tcexport/"
 description: "tcexport – Simple frontend to transcode’s encoding subsystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tcexport</code> [ <code>-i</code> <i>video_file</i> ] [ <code>-p</code> <i>audio_file</i> ] [ <code>-o</code> <i>output_file</i> ] [ <code>-c</code> <i>f1-f2[,f3-f4[,&#8230;]]</i> ] [ <code>-N</code> <i>fmt,fmt</i> ] [ <code>-R</code> <i>n[,video_log[,audio_log]]</i> ] [ <code>-P</code> <i>profile[,profile]</i> ] [ <code>-y</code> <i>video_mod,audio_mod,mplex_mod</i> ] [ <code>-w</code> <i>bitrate[,keyint[,crisp]]</i> ] [ <code>-b</code> <i>bitrate[,vbr[,quality[,mode]]]</i> ] [ <code>-D</code> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-m</code> <i>path</i> ] [ <code>-v</code> ] </p>
 <h2>COPYRIGHT</h2>
 <p> <code>tcexport</code> is Copyright (C) by Francesco Romani </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcexport</code> was designed as a debug tool for transcode&#8217;s encoding code: it fits in a very limited range of usage cases; however, it can also be used independently if you like.<br />
  tcexport encodes and multiplexes a raw YUV4MPEG2/WAV V/A stream using given parameters and transcode encoder components. tecexport provides direct and complete access to transcode&#8217;s encoding features and modules, but hasn&#8217;t any of transcode import/extracting/decoding/filtering capabilities. Use some other tc* tool if you need those facilities.<br />
  tcexport&#8217;s options are intentionally made similar, or identical if feasible, to corresponding transcode&#8217;s encoding options. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pkidaemon(1)"
 name: "pkidaemon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pkidaemon/"
 description: "pkidaemon – provides status management of PKI instances"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pkidaemon</code> &#8211; provides status management of PKI instances</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 pkidaemon{start | status}[instance - name]
 </code></pre>
@@ -17,7 +16,6 @@ pkidaemon{start | status}[instance - name]
 <dt><code>Note:</code> Although this tool currently resides in the <code>/usr/bin</code> directory, proper use of it requires it to be run with super user privileges.</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>pkidaemon</code> command with the &#8216;status&#8217; argument provides a way to display the status of all existing PKI instances on a machine. Optionally, an individual PKI instance may be specified by using an optional <code>[instance-name]</code>. </p>
 <p> The <code>pkidaemon</code> &#8216;start&#8217; argument is currently only used internally by the systemctl scripts. </p>
 <h2>OPTIONS</h2>

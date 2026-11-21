@@ -1,4 +1,5 @@
 ---
+
 title: "extcheck-java-1(1)"
 name: "extcheck-java-1"
 section: "1"
@@ -10,11 +11,9 @@ description: "extcheck – A utility to detect jar conflicts"
 <h2>Name</h2>
 <p> extcheck &#8211; A utility to detect jar conflicts </p>
 <p> <code>extcheck</code> detects version conflicts between a target jar file and currently installed extension jar files. </p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>extcheck [ -verbose ] targetfile.jar</code>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>extcheck</code> utility checks a specified Jar file for title and version conflicts with any extensions installed in the Java(TM) SDK. Before installing an extension, you can use this utility to see if the same or a more recent version of the extension is already installed. </p>
 <p> The <code>extcheck</code> utility compares the <i>Specification-title</i> and <i>Specification-version</i> headers in the manifest of the <i>targetfile.jar</i> file against the corresponding headers in all Jar files currently installed in the extension directory. (The extension directory is <i>jre/lib/ext</i> by default.) The <code>extcheck</code> utility compares version numbers in the same way as the method <i>java.lang.Package.isCompatibleWith</i>. </p>
 <p> If no conflict is detected, the return code is <i>0</i>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "compile_et(1)"
 name: "compile_et"
 section: "1"
@@ -9,9 +10,7 @@ description: "compile_et – error table compiler"
 
 <h2>NAME</h2>
 <p> compile_et &#8211; error table compiler</p>
-<h2>SYNOPSIS</h2>
 <p> <code>compile_et</code> file</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Compile_et</code> converts a table listing error-code names and associated messages into a C source file suitable for use with the <i><a href="/docs/linux/man/3-com_err/">com_err</a></i>(3) library. </p>
 <p> The source file name must end with a suffix of &#8220;.et&#8221;; the file consists of a declaration supplying the name (up to four characters long) of the error-code table: </p>
 <p> <code>error_table</code> <i>name</i> </p>

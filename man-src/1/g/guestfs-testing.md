@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-testing(1)"
 name: "guestfs-testing"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestfs-testing/"
 description: "guestfs-testing – manual testing of libguestfs, you can help!"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This page has manual tests you can try on libguestfs. Everyone has a slightly different combination of platform, hardware and guests, so this testing is very valuable. Thanks for helping out! </p>
 <p> Tests marked with a <code>*</code> (asterisk) can <code>destroy data</code> if you&#8217;re not careful. The others are safe and won&#8217;t modify anything. </p>
 <p> These tests <code>require libguestfs ≥ 1.22</code>. </p>

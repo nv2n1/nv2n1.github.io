@@ -1,4 +1,5 @@
 ---
+
 title: "mcdigitalengine(3)"
 name: "mcdigitalengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcdigitalengine/"
 description: "ql/pricingengines/vanilla/mcdigitalengine.hpp – digital option Monte Carlo engine"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/exercise.hpp&gt;<br />
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp&gt;<br />

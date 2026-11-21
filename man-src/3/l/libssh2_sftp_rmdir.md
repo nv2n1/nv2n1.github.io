@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_rmdir(3)"
 name: "libssh2_sftp_rmdir"
 section: "3"
@@ -9,13 +10,11 @@ description: "libssh2_sftp_rmdir – convenience macro for libssh2_sftp_rmdir_ex
 
 <h2>NAME</h2>
 <p> libssh2_sftp_rmdir &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_sftp_rmdir_ex/">libssh2_sftp_rmdir_ex</a>(3)</i></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #define libssh2_sftp_rmdir(sftp, path) \
     libssh2_sftp_rmdir_ex((sftp), (path), strlen(path))
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This is a macro defined in a public libssh2 header file that is using the underlying function <i><a href="/docs/linux/man/3-libssh2_sftp_rmdir_ex/">libssh2_sftp_rmdir_ex</a>(3)</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> See <i><a href="/docs/linux/man/3-libssh2_sftp_rmdir_ex/">libssh2_sftp_rmdir_ex</a>(3)</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "icegridgui(1)"
 name: "icegridgui"
 section: "1"
@@ -9,9 +10,7 @@ description: "icegrid-gui – graphical user interface to IceGrid"
 
 <h2>NAME</h2>
 <p> icegrid-gui &#8211; graphical user interface to IceGrid</p>
-<h2>SYNOPSIS</h2>
 <p> <code>icegrid-gui [OPTIONS]&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> Graphical user interface for IceGrid administration. </p>
 <p> Full documentation of this tool is available online from the help menu.</p>
 <h2>COPYRIGHT</h2>

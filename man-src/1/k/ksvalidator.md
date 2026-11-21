@@ -1,4 +1,5 @@
 ---
+
 title: "ksvalidator(1)"
 name: "ksvalidator"
 section: "1"
@@ -9,9 +10,7 @@ description: "ksvalidator — verify the syntax of a kickstart file"
 
 <h2>NAME</h2>
 <p> ksvalidator &#8212; verify the syntax of a kickstart file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ksvalidator</code> [<code>-e</code> | <code>&#8211;firsterror</code>] [<code>-i</code> | <code>&#8211;followincludes</code>] [<code>-l</code> | <code>&#8211;listversions</code>] [<code>-v</code> | <code>&#8211;version VERSION</code>] INFILE</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ksvalidator</code> is a program that takes an input kickstart file and attempts to verify that it is syntactically correct. This includes checking basics like proper quoting and making sure required options have values, and more advanced checks like verifying the file does not include deprecated or removed kickstart commands. Mutually exclusive options can also be caught, as can certain classes of partitioning errors (like using the same device name multiple times). </p>
 <p> <code>ksvalidator</code> does have its limitations. It cannot run validate the syntax of %pre, %pre-install, and %post scripts, nor does it attempt to run them. It cannot check that the %packages section is valid. Most importantly, it cannot guarantee that an input kickstart file will install properly, because it does not understand the complexities of partitioning and what potentially already exists on disk.</p>
 <h2>EXIT STATUS</h2>

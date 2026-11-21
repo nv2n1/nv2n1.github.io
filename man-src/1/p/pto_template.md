@@ -1,4 +1,5 @@
 ---
+
 title: "pto_template(1)"
 name: "pto_template"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pto_template/"
 description: "pto_template – Apply a template file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pto_template</code> [options] input.pto</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pto_template</code> adds a template file to <font SIZE="-1">PTO</font></p>
 <h2>USAGE</h2>
 <pre>

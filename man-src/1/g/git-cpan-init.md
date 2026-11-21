@@ -1,4 +1,5 @@
 ---
+
 title: "git-cpan-init(1)"
 name: "git-cpan-init"
 section: "1"
@@ -6,20 +7,13 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-init/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+git-cpan-init - Create a git repository for a CPAN module 
 
- git-cpan-init - Create a git repository for a CPAN module 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
     git cpan-init [ --help | --man ] [ --backpan ] [ Foo::Bar | Foo-Bar-0.03.tar.gz | http://... ]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This command creates a new git repository, calls <tt>&quot;git-cpan-import&quot;</tt> and then checks out the code in the <tt>&quot;master&quot;</tt> branch.
+This command creates a new git repository, calls <tt>&quot;git-cpan-import&quot;</tt> and then checks out the code in the <tt>&quot;master&quot;</tt> branch.
 
 <h2>VERSION</h2>
 

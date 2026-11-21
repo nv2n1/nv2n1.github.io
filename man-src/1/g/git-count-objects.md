@@ -1,4 +1,5 @@
 ---
+
 title: "git-count-objects(1)"
 name: "git-count-objects"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-count-objects/"
 description: "git-count-objects – Count unpacked number of objects and their disk consumption"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git count - objects[-v][-H | --human - readable]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This counts the number of unpacked object files and disk space consumed by them, to help you decide when it is a good time to repack.</p>
 <h2>OPTIONS</h2>
 <p> -v, &#8211;verbose</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clangt(3)"
 name: "clangt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clangt/"
 description: "clangt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clangt</code> (NORM, N, DL, D, DU)<br />
  <i></i><code>CLANGT</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general tridiagonal matrix.</p>

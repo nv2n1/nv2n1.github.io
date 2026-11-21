@@ -1,4 +1,5 @@
 ---
+
 title: "shuf(1)"
 name: "shuf"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-shuf/"
 description: "shuf – generate random permutations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>shuf</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]<br />
  <code>shuf</code> <i>,-e /</i>[<i>,OPTION/</i>]&#8230; [<i>,ARG/</i>]&#8230;<br />
  <code>shuf</code> <i>,-i LO-HI /</i>[<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Write a random permutation of the input lines to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

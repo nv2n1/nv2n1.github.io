@@ -1,4 +1,5 @@
 ---
+
 title: "clartg(3)"
 name: "clartg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clartg/"
 description: "clartg.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clartg</code> (F, G, CS, SN, R)<br />
  <i></i><code>CLARTG</code> generates a plane rotation with real cosine and complex sine.</p>

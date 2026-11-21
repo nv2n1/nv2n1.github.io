@@ -1,4 +1,5 @@
 ---
+
 title: "sggglm(3)"
 name: "sggglm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sggglm/"
 description: "sggglm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggglm</code> (N, M, P, A, LDA, B, LDB, D, X, Y, WORK, LWORK, INFO)<br />
  <i></i><code> SGGEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pg_ctl(1)"
 name: "pg_ctl"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pg_ctl/"
 description: "pg_ctl – initialize, start, stop, or control a PostgreSQL server"
 ---
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>pg_ctl</code><code>init[db]</code> [<code>-s</code>] [<code>-D</code>&nbsp;<wbr><i>datadir</i>] [<code>-o</code>&nbsp;<wbr><i>initdb-options</i>] </dt>
 <dt><code>pg_ctl</code><code>start</code> [<code>-w</code>] [<code>-t</code>&nbsp;<wbr><i>seconds</i>] [<code>-s</code>] [<code>-D</code>&nbsp;<wbr><i>datadir</i>] [<code>-l</code>&nbsp;<wbr><i>filename</i>] [<code>-o</code>&nbsp;<wbr><i>options</i>] [<code>-p</code>&nbsp;<wbr><i>path</i>] [<code>-c</code>] </dt>
@@ -19,7 +20,6 @@ description: "pg_ctl – initialize, start, stop, or control a PostgreSQL server
 <dt><code>pg_ctl</code><code>register</code> [<code>-N</code>&nbsp;<wbr><i>servicename</i>] [<code>-U</code>&nbsp;<wbr><i>username</i>] [<code>-P</code>&nbsp;<wbr><i>password</i>] [<code>-D</code>&nbsp;<wbr><i>datadir</i>] [<code>-S</code>&nbsp;<wbr><code>a[uto]</code>&nbsp;<wbr>|&nbsp;<wbr><code>d[emand]</code>] [<code>-w</code>] [<code>-t</code>&nbsp;<wbr><i>seconds</i>] [<code>-s</code>] [<code>-o</code>&nbsp;<wbr><i>options</i>] </dt>
 <dt><code>pg_ctl</code><code>unregister</code> [<code>-N</code>&nbsp;<wbr><i>servicename</i>] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd> <p> pg_ctl is a utility for initializing a PostgreSQL database cluster, starting, stopping, or restarting the PostgreSQL database server (<code><a href="/docs/linux/man/1-postgres/">postgres</a></code>(1)), or displaying the status of a running server. Although the server can be started manually, pg_ctl encapsulates tasks such as redirecting log output and properly detaching from the terminal and process group. It also provides convenient options for controlled shutdown. </p>
 <p> The <code>init</code> or <code>initdb</code> mode creates a new PostgreSQL database cluster. A database cluster is a collection of databases that are managed by a single server instance. This mode invokes the <code>initdb</code> command. See <code><a href="/docs/linux/man/1-initdb/">initdb</a></code>(1) for details. </p>
 <p> In <code>start</code> mode, a new server is launched. The server is started in the background, and its standard input is attached to /dev/null (or nul on Windows). On Unix-like systems, by default, the server&#8217;s standard output and standard error are sent to pg_ctl&#8217;s standard output (not standard error). The standard output of pg_ctl should then be redirected to a file or piped to another process such as a log rotating program like rotatelogs; otherwise <code>postgres</code> will write its output to the controlling terminal (from the background) and will not leave the shell&#8217;s process group. On Windows, by default the server&#8217;s standard output and standard error are sent to the terminal. These default behaviors can be changed by using <code>-l</code> to append the server&#8217;s output to a log file. Use of either <code>-l</code> or output redirection is recommended. </p>

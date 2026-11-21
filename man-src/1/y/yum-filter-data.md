@@ -1,4 +1,5 @@
 ---
+
 title: "yum-filter-data(1)"
 name: "yum-filter-data"
 section: "1"
@@ -9,9 +10,7 @@ description: "yum filter data plugin"
 
 <h2>NAME</h2>
 <p> yum filter data plugin</p>
-<h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] [command] [package &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This plugin extends <code>yum</code> with some options, currently just for &quot;update&quot; and &quot;list update&quot; type commands, to allow filters to be placed on which packages should be used based on the data in those packages. Note that due to some of the data being unknown, and thus could possibly match, all unknown data is treated as a match. </p>
 <h2>GENERAL OPTIONS</h2>
 <p> These are the options added to yum that are available in the &quot;list updates&quot;, &quot;info updates&quot;, &quot;check-update&quot; and &quot;update&quot; commands. They are: </p>

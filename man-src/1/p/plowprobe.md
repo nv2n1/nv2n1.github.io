@@ -1,4 +1,5 @@
 ---
+
 title: "plowprobe(1)"
 name: "plowprobe"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-plowprobe/"
 description: "plowprobe – Gather information from file sharing download links"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>plowprobe</code> [<i>OPTIONS</i>]&#8230; [<i>MODULE_OPTIONS</i>]&#8230; <i>URL</i>|<i>FILE</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>plowprobe</code> is a command-line tool designed for retrieving metadata from file-sharing download links. Information are printed on stdout (only alive links). Provided links can also be downloaded with <a href="/docs/linux/man/1-plowdown/">plowdown</a>(1). </p>
 <p> Currently supported hosting sites list is available in README file. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-request-pull(1)"
 name: "git-request-pull"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-request-pull/"
 description: "git-request-pull – Generates a summary of pending changes"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git request - pull[-p]&lt;start&gt;&lt;url&gt;[&lt;end&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Generate a request asking your upstream project to pull changes into their tree. The request, printed to the standard output, begins with the branch description, summarizes the changes and indicates from where they can be pulled. </p>
 <p> The upstream project is expected to have the commit named by <code>&lt;start&gt;</code> and the output asks it to integrate the changes you made since that commit, up to the commit named by <code>&lt;end&gt;</code>, by visiting the repository named by <code>&lt;url&gt;</code>.</p>
 <h2>OPTIONS</h2>

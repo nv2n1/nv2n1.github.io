@@ -1,4 +1,5 @@
 ---
+
 title: "rt_sigpending(2)"
 name: "rt_sigpending"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-rt_sigpending/"
 description: "sigpending, rt_sigpending – examine pending signals"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>int sigpending(sigset_t *</code><i>set</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>sigpending</code>(): _POSIX_C_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sigpending</code>() returns the set of signals that are pending for delivery to the calling thread (i.e., the signals which have been raised while blocked). The mask of pending signals is returned in <i>set</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>sigpending</code>() returns 0 on success and -1 on error. In the event of an error, <i>errno</i> is set to indicate the cause.</p>

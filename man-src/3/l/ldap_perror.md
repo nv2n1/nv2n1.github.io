@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_perror(3)"
 name: "ldap_perror"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldap_perror, ld_errno, ldap_result2error, ldap_errlist, ldap_err2s
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 char *ldap_err2string(int err);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ldap_err2string()</code> routine provides short description of the various codes returned by routines in this library. The returned string is a pointer to a static area that should not be modified. </p>
 <p> These codes are either negative, indicating an API error code; positive, indicating an LDAP resultCode other than &#8216;success&#8217; (0), or &#8211; zero, indicating both successful use of the API and the LDAP resultCode &#8216;success&#8217; (0). </p>
 <p> The code associated with an LDAP session is accessible using <code><a href="/docs/linux/man/3-ldap_get_option/">ldap_get_option</a></code>(3) and <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3) with the <code>LDAP_OPT_RESULT_CODE</code> option (previously called <code>LDAP_OPT_ERROR_NUMBER</code>). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_disconnect_ex(3)"
 name: "libssh2_session_disconnect_ex"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_session_disconnect_ex – terminate transport layer"
 
 <h2>NAME</h2>
 <p> libssh2_session_disconnect_ex &#8211; terminate transport layer</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_session_disconnect_ex(LIBSSH2_SESSION *session, int reason, const char *description, const char *lang); </p>
 <p> int libssh2_session_disconnect(LIBSSH2_SESSION *session, const char *description); </p>
-<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>reason</i> &#8211; One of the Disconnect Reason constants. </p>
 <p> <i>description</i> &#8211; Human readable reason for disconnection. </p>

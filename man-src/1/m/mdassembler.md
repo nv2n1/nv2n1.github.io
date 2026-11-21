@@ -1,4 +1,5 @@
 ---
+
 title: "mdassembler(1)"
 name: "mdassembler"
 section: "1"
@@ -9,9 +10,7 @@ description: "mdassembler – Compile documentation for use in monodoc browser"
 
 <h2>NAME</h2>
 <p> mdassembler &#8211; Compile documentation for use in monodoc browser</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mdassembler</code> OPTIONS* DIRS+</p>
-<h2>DESCRIPTION</h2>
 <p> <i>mdassembler</i> has been obsoleted by <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1). See the <code><a href="/docs/linux/man/1-mdoc-assemble/">mdoc-assemble</a></code>(1) man page. </p>
 <p> <i>mdassembler</i> is a program that creates <i>.tree</i> and <i>.zip</i> files for use in the <code>monodoc</code> documentation browser. </p>
 <p> The <i>.tree</i> and <i>.zip</i> files are copied into monodoc&#8217;s <i>sources</i> directory, and reside with a <i>.source</i> file which is used by <code>monodoc</code> to specify where the documentation should be displayed. The <i>.source</i> file&#8217;s <i>/monodoc/source/@basefile</i> attribute specifies the filename prefix for the documentation files. This must be the same prefix as used with the <code>&#8211;out</code> parameter. </p>

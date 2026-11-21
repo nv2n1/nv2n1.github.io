@@ -1,4 +1,5 @@
 ---
+
 title: "fros(1)"
 name: "fros"
 section: "1"
@@ -9,9 +10,7 @@ description: "fros – universal screencasting frontend with pluggable support f
 
 <h2>NAME</h2>
 <p> fros &#8211; universal screencasting frontend with pluggable support for various backends</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fros [-h] [&#8211;v] [&#8211;is-available]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fros</code> Universal screencasting frontend with pluggable support for various backends. The goal is to provide an unified access to as many screencasting backends as possible while still keeping the same user interface so the user experience while across various desktops and screencasting programs is seamless.</p>
 <h2>OPTIONS</h2>
 <dl>

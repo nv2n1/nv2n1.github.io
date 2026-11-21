@@ -1,4 +1,5 @@
 ---
+
 title: "mono-service(1)"
 name: "mono-service"
 section: "1"
@@ -9,9 +10,7 @@ description: "mono-service, mono-service2 – Mono ServiceProcess host"
 
 <h2>NAME</h2>
 <p> mono-service, mono-service2 &#8211; Mono ServiceProcess host</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mono-service [options] program.exe</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>mono-service</i> is a host to run services built with the ServiceProcess assembly. </p>
 <p> Use <i>mono-service</i> to run services that use the 1.0 assemblies and use <i>mono-service2</i> to run services that use the 2.0 assemblies. </p>
 <p> Services can be paused by sending the SIGUSR1 signal to the process, and execution can be resumed by sending the SIGUSR2 signal. The service can be cleanly shutdown by sending the SIGTERM signal to the process. </p>

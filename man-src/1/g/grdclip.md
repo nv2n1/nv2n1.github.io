@@ -1,4 +1,5 @@
 ---
+
 title: "grdclip(1)"
 name: "grdclip"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdclip – Clip the range of grids"
 
 <h2>NAME</h2>
 <p> grdclip &#8211; Clip the range of grids</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdclip</code> <i>ingrid</i> <i>outgrid</i> [ <i>region</i> ] [ <code>a</code><i>high/above</i> ] [ <code>b</code><i>low/below</i> ] [ <code>i</code><i>low/high/between</i> ] [ <code>r</code><i>old/new</i> ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdclip</code> will set values &lt; <i>low</i> to <i>below</i> and/or values &gt; <i>high</i> to <i>above</i>. You can also specify one or more intervals where all values should be set to IT(between), or replace individual values. Such operations are useful when you want all of a continent or an ocean to fall into one color or gray shade in image processing, when clipping of the range of data values is required, or for reclassification of data values. <i>above</i>, <i>below</i>, <i>between</i>, <i>old</i> and <i>new</i> can be any number or even NaN (Not a Number). You must choose at least one of the <code>-S</code> options. Use <code>-R</code> to only extract a subset of the <i>ingrid</i> file.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

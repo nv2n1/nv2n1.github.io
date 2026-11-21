@@ -1,4 +1,5 @@
 ---
+
 title: "ypwhich(1)"
 name: "ypwhich"
 section: "1"
@@ -9,11 +10,9 @@ description: "ypwhich – return name of NIS server or map master"
 
 <h2>NAME</h2>
 <p> ypwhich &#8211; return name of NIS server or map master</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ypwhich</code> [ <code>-d</code><i> domain</i> ] [ <code>-V</code>n ] [ <i>hostname</i> ]<br />
  <code>ypwhich</code> [ <code>-d</code><i> domain</i> ] [ <code>-t</code> ] <code>-m</code> [ <i>mname</i> ]<br />
  <code>ypwhich</code> <code>-x</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ypwhich</code> returns the name of the NIS server that supplies the NIS services to a NIS client, or which is the master for a map. If invoked without arguments, it gives the NIS server for the local machine. If <i>hostname</i> is specified, that machine is queried to find out which NIS master it is using.</p>
 <h2>OPTIONS</h2>
 <dl>

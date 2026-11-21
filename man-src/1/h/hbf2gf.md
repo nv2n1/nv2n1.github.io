@@ -1,4 +1,5 @@
 ---
+
 title: "hbf2gf(1)"
 name: "hbf2gf"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-hbf2gf/"
 description: "hbf2gf – convert a CJK bitmap font into subfonts usable by TeX and Omega."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hbf2gf</code> [<code>-q</code>] <i>configuration-file</i>[<i>.cfg</i>]<br />
  <code>hbf2gf</code> [<code>-q</code>] [<code>-p</code>] [<code>-g</code>] [<code>-n</code>] <i>subfont-name x-resolution</i> [<i>y-scale</i>&nbsp;|<i>&nbsp;y-resolution</i>]<br />
  <code>hbf2gf</code> <code>-t</code> [<code>-q</code>] <i>subfont-name</i><br />
  <code>hbf2gf &#8211;version</code> | <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> CJK bitmap fonts can&#8217;t be directly used with TeX because the number of characters in such fonts exceeds 256, the limit of a TeX font. Thus it is necessary to split these fonts into subfonts, and this is exactly what <code>hbf2gf</code> does. </p>
 <p> As the name says, <code>hbf2gf</code> uses CJK fonts in a certain format which is called <code>Hanzi Bitmap Font</code> (<code>HBF</code>) format. It simply consists of the CJK bitmap file(s) and a text file in a format very similar to the BDF format of the X Window System which describes the bitmap font files: the encoding, the size, etc. The produced files can then be converted with <code>gftopk</code> into standard files. </p>
 <p> <code>hbf2gf</code> can be called in three modes: </p>

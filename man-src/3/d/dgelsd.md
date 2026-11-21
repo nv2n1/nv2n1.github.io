@@ -1,4 +1,5 @@
 ---
+
 title: "dgelsd(3)"
 name: "dgelsd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgelsd/"
 description: "dgelsd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgelsd</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code> DGELSD computes the minimum-norm solution to a linear least squares problem for GE matrices</code></p>

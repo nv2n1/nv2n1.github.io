@@ -1,4 +1,5 @@
 ---
+
 title: "zipsplit(1)"
 name: "zipsplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zipsplit/"
 description: "zipsplit – split a zipfile into smaller zipfiles"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>zipsplit</i> [<code>-t</code>] [<code>-i</code>] [<code>-p</code>] [<code>-s</code>] [<code>-n size</code>] [<code>-r room</code>] [<code>-b path</code>] [<code>-h</code>] [<code>-v</code>] [<code>-L</code>] zipfile </p>
 <h2>ARGUMENTS</h2>
 <p> zipfile Zipfile to split. </p>
@@ -34,7 +34,6 @@ description: "zipsplit – split a zipfile into smaller zipfiles"
 <dt><code>-L</code></dt>
 <dd> Show software license. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <i>zipsplit</i> reads a zipfile and splits it into smaller zipfiles. </p>
 <h2>EXAMPLES</h2>
 <p> To be filled in. </p>

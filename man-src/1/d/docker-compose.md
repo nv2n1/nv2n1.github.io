@@ -1,4 +1,5 @@
 ---
+
 title: "docker-compose(1)"
 name: "docker-compose"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-compose/"
 description: "docker-compose – Define and run multi-container applications with Docker."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker-compose </code> [<i>OPTIONS</i>] [<i>COMMAND</i>] [<i>ARGS</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> docker-compose allows you to define a multi-container application with all of its dependencies in a single file, then spin the application up in a single command. The application’s structure and configuration are held in a single place, which makes spinning up applications simple and repeatable everywhere.</p>
 <h2>OPTIONS</h2>
 <dl>

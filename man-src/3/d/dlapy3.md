@@ -1,4 +1,5 @@
 ---
+
 title: "dlapy3(3)"
 name: "dlapy3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlapy3/"
 description: "dlapy3.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlapy3</code> (X, Y, Z)<br />
  <i></i><code>DLAPY3</code> returns sqrt(x2+y2+z2).</p>

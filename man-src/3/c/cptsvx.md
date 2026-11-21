@@ -1,4 +1,5 @@
 ---
+
 title: "cptsvx(3)"
 name: "cptsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cptsvx/"
 description: "cptsvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cptsvx</code> (FACT, N, NRHS, D, E, DF, EF, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code> CPTSVX computes the solution to system of linear equations A * X = B for PT matrices</code></p>

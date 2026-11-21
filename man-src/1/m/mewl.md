@@ -1,4 +1,5 @@
 ---
+
 title: "mewl(1)"
 name: "mewl"
 section: "1"
@@ -9,9 +10,7 @@ description: "mewl – Message scanner for Mew 4 or later"
 
 <h2>NAME</h2>
 <p> mewl &#8211; Message scanner for Mew 4 or later</p>
-<h2>SYNOPSIS</h2>
 <p> mewl [<i>options</i>] [<i>folder</i> [<i>range</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mewl</code> utility extracts necessary fields from messages stored in folders. This command is necessary for Mew to implement the asynchronous feature. </p>
 <p> The options are as follows:</p>
 <dl>

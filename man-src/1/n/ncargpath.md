@@ -1,4 +1,5 @@
 ---
+
 title: "ncargpath(1)"
 name: "ncargpath"
 section: "1"
@@ -9,9 +10,7 @@ description: "ncargpath – Return the full pathname to a given NCAR Graphics di
 
 <h2>NAME</h2>
 <p> ncargpath &#8211; Return the full pathname to a given NCAR Graphics directory or the default of a particular NCAR Graphics attribute.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ncargpath name</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ncargpath</code> has one argument which is the shortened name of the directory whose full pathname you want returned or the name of the attribute whose default value you want. It is used by several NCAR Graphics scripts to find the pathname to certain installables. For example, the script <code>ncargex</code> uses <code>ncargpath</code> to determine where the directory that contains all the examples is installed. The following arguments are recognized: </p>
 <dl>
 <dt>bin</dt>

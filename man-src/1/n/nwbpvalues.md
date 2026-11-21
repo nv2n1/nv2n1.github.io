@@ -1,4 +1,5 @@
 ---
+
 title: "nwbpvalues(1)"
 name: "nwbpvalues"
 section: "1"
@@ -9,9 +10,7 @@ description: "nwbpvalues – Print a NetWare Bindery Propery’s contents"
 
 <h2>NAME</h2>
 <p> nwbpvalues &#8211; Print a NetWare Bindery Propery&#8217;s contents</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nwbpvalues</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-o</code> <i>object name</i> ] [ <code>-t</code> <i>type</i> ] [ <code>-p</code> <i>property</i> ] [ <code>-v</code> ] [ <code>-c</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nwbpvalues</code> prints the contents of a SET property. </p>
 <p> <code>nwbpvalues</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of $HOME/.nwclient MUST be 600 for security reasons. </p>
 <h2>OPTIONS</h2>

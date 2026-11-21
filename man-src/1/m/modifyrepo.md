@@ -1,4 +1,5 @@
 ---
+
 title: "modifyrepo(1)"
 name: "modifyrepo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-modifyrepo/"
 description: "modifyrepo – Modify a repomd (xml-rpm-metadata) repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>modifyrepo</code> [options] &lt;input metadata&gt; &lt;output repodata&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>modifyrepo</code> is a program that allows you to insert arbitrary metadata into a repomd (xml-based rpm metadata) repository. </p>
 <h2>EXAMPLES</h2>
 <p> $ <code>modifyrepo</code> &#8211;mdtype=newmd metadata.xml /repository/repodata<br />

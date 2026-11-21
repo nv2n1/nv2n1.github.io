@@ -1,4 +1,5 @@
 ---
+
 title: "mhl(1)"
 name: "mhl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mhl/"
 description: "mhl – produce formatted listings of nmh messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/mhl</code> [<code>-bell</code> | <code>-nobell</code>] [<code>-clear</code> | <code>-noclear</code>] [<code>-folder</code> <i>+folder</i>] [<code>-form</code> <i>formfile</i>] [<code>-length</code> <i>lines</i>] [<code>-width</code> <i>columns</i>] [<code>-moreproc</code> <i>program</i>] [<code>-nomoreproc</code>] [<code>-fmtproc</code> <i>program</i>] [<code>-nofmtproc</code>] [<i>files</i> <i>&#8230;</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Mhl</code></p>
 <dd>is an <code>nmh</code> command for filtering and/or displaying text messages. It is the default method of displaying text messages for <code>nmh</code> (it is the default <i>showproc</i>). </dd>
 <p> As with <code>more</code>, each of the messages specified as arguments (or the standard input) will be output. If more than one message file is specified, the user will be prompted prior to each one, and a &lt;RETURN&gt; or &lt;EOT&gt; will begin the output, with &lt;RETURN&gt; clearing the screen (if appropriate), and &lt;EOT&gt; (usually CTRL-D) suppressing the screen clear. An &lt;INTERRUPT&gt; (usually CTRL-C) will abort the current message output, prompting for the next message (if there is one), and a &lt;QUIT&gt; (usually CTRL-\) will terminate the program (without core dump). </p>

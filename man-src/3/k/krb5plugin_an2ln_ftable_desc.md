@@ -1,4 +1,5 @@
 ---
+
 title: "krb5plugin_an2ln_ftable_desc(3)"
 name: "krb5plugin_an2ln_ftable_desc"
 section: "3"
@@ -9,7 +10,6 @@ description: "krb5plugin_an2ln_ftable_desc –"
 
 <p> Description of the </p>
 <p>krb5_aname_to_lname(3) plugin facility. </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;an2ln_plugin.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Description of the krb5_aname_to_lname(3) plugin facility. </p>

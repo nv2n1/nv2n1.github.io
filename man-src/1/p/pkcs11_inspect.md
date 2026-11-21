@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs11_inspect(1)"
 name: "pkcs11_inspect"
 section: "1"
@@ -9,9 +10,7 @@ description: "pkcs11_inspect – print certificate contents"
 
 <h2>NAME</h2>
 <p> pkcs11_inspect &#8211; print certificate contents</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pkcs11_inspect</code> [<code>debug</code>] [<code>config_file=</code><i>&lt;filename&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pkcs11_inspect</code> uses the pam_pkcs11 library infrastructure to get the content of a certificate and display it. </p>
 <p> <code>pkcs11_inspect</code> uses the same configuration file and arguments than <code><a href="/docs/linux/man/8-pam_pkcs11/">pam_pkcs11</a></code>(8) PAM module. It loads defined mapper modules, and use them to look into the certificate for required entries (ie: ms_mapper looks for ms UPN entries, and so on). </p>
 <p> When a mapper module finds a proper entry in the certificate, it converts to UTF-8 and print it to stdout.</p>

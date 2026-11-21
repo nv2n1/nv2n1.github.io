@@ -1,4 +1,5 @@
 ---
+
 title: "report-newt(1)"
 name: "report-newt"
 section: "1"
@@ -6,22 +7,11 @@ letter: "r"
 url: "/docs/linux/man/1-report-newt/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+report-newt - Reports ABRT problem to various bug tracking tools. 
 
- report-newt - Reports ABRT problem to various bug tracking tools. 
+<i>report-newt</i> [-d] PROBLEM_DIR
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>report-newt</i> [-d] PROBLEM_DIR
-
-<h2>DESCRIPTION</h2>
-
- 
-
- <i>report-newt</i> is a command line tool that reports application crashes and other problems caught by abrtd daemon, or created by other programs using libreport.
+<i>report-newt</i> is a command line tool that reports application crashes and other problems caught by abrtd daemon, or created by other programs using libreport.
 
 <h2>OPTIONS</h2>
 

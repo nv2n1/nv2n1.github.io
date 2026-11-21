@@ -1,4 +1,5 @@
 ---
+
 title: "slauum(3)"
 name: "slauum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slauum/"
 description: "slauum.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slauum</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>SLAUUM</code> computes the product UUH or LHL, where U and L are upper or lower triangular matrices (blocked algorithm).</p>

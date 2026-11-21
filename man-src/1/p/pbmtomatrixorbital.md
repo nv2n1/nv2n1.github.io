@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtomatrixorbital(1)"
 name: "pbmtomatrixorbital"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pbmtomatrixorbital/"
 description: "pbmtomatrixorbital – convert a PBM image to a Matrix Orbital LCD image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtomatrixorbital</code> </p>
 <p> [<i>pbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pbmtomatrixorbital</code> reads a PBM image as input and produces as output an image that can be uploaded to a Matrix Orbital LCD display. </p>
 <p> You can upload the image to the LCD via the serial port to which it is connected with the program <code>mo-upload.pl</code>, which you can get from the package <code>pbmtomatrixorbital</code>. Yes, the package is the same name as this Netpbm program, and it contains its own <code>pbmtomatrixorbital</code> program which is slightly different from this one because it is not part of the Netpbm package. </p>

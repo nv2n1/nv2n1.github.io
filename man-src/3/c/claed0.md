@@ -1,4 +1,5 @@
 ---
+
 title: "claed0(3)"
 name: "claed0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claed0/"
 description: "claed0.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claed0</code> (QSIZ, N, D, E, Q, LDQ, QSTORE, LDQS, RWORK, IWORK, INFO)<br />
  <i></i><code>CLAED0</code> used by sstedc. Computes all eigenvalues and corresponding eigenvectors of an unreduced symmetric tridiagonal matrix using the divide and conquer method.</p>

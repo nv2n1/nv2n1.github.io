@@ -1,4 +1,5 @@
 ---
+
 title: "dlabrd(3)"
 name: "dlabrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlabrd/"
 description: "dlabrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlabrd</code> (M, N, NB, A, LDA, D, E, TAUQ, TAUP, X, LDX, Y, LDY)<br />
  <i></i><code>DLABRD</code> reduces the first nb rows and columns of a general matrix to a bidiagonal form.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cdda2ogg(1)"
 name: "cdda2ogg"
 section: "1"
@@ -9,9 +10,7 @@ description: "cdda2ogg — extract audio CD audio tracks and encode them"
 
 <h2>NAME</h2>
 <p> cdda2ogg &#8212; extract audio CD audio tracks and encode them</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cdda2ogg</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cdda2ogg is a simple script that uses the</code> <code>icedax &lt;fileprefix&gt;</code> command to extract all audio tracks with the <code>icedax &lt;fileprefix&gt;</code> command and encode them using the <code>ogg123</code> encoder. The scripts are not intended to be full-featured music archiving programs, but only for quick storing of few audio data. It does not use databases like CDDB or have any extra features. You may look at <code>icedax</code> if you need them. </p>
 <p> <code>ogg123</code> is provided by the <code>vorbis-tools</code> which needs to be installed separately. See <code><a rel="nofollow" href="http://www.ogg.org">www.ogg.org</a></code> for more information. </p>
 <h2>CONFIGURATION</h2>

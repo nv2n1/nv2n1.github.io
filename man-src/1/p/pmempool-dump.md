@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-dump(1)"
 name: "pmempool-dump"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmempool-dump – Dump user data from specified pool"
 
 <h2>NAME</h2>
 <p> pmempool-dump &#8211; Dump user data from specified pool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmempool dump</code> [&lt;options&gt;] &lt;file&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pmempool</code> invoked with <code>dump</code> command dumps user data from specified pool file. The output format may be either binary or hexadecimal. </p>
 <p> By default the output format is hexadecimal. </p>
 <p> By default data is dumped to standard output. It is possible to dump data to other file by specifying <code>-o</code> option. In this case data will be appended to this file. </p>

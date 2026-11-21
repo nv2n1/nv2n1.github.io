@@ -1,4 +1,5 @@
 ---
+
 title: "uhd_usrp_probe(1)"
 name: "uhd_usrp_probe"
 section: "1"
@@ -9,11 +10,9 @@ description: "uhd_usrp_probe – USRP Hardware Driver Peripheral Report Utility"
 
 <h2>NAME</h2>
 <p> uhd_usrp_probe &#8211; USRP Hardware Driver Peripheral Report Utility</p>
-<h2>DESCRIPTION</h2>
 <p> Report detailed information on UHD-supported Software Radio Peripherals attached by USB, network, or embedded configuration. </p>
 <p> The UHD package is the universal hardware driver for Ettus Research products. The goal is to provide a host driver and API for current and future Ettus Research products. Users will be able to use the UHD driver standalone or with 3rd party applications. </p>
 <p> Details include unit names, revision numbers, and available sensors on all attached USRP motherboards and daughterboards.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>uhd_usrp_probe [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-delete-merged-branches(1)"
 name: "git-delete-merged-branches"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-delete-merged-branches – Delete merged branches"
 
 <h2>NAME</h2>
 <p> <code>git-delete-merged-branches</code> &#8211; Delete merged branches</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-delete-merged-branches</code></p>
-<h2>DESCRIPTION</h2>
 <p> Deletes all branches merged in to current HEAD. Does not delete <i>master</i>, even if run from a branch that is a descendant of <i>master</i>.</p>
 <h2>EXAMPLES</h2>
 <pre>

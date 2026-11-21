@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_psk_netconf_derive_key(3)"
 name: "gnutls_psk_netconf_derive_key"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_psk_netconf_derive_key – derive PSK Netconf key from pass
 
 <h2>NAME</h2>
 <p> gnutls_psk_netconf_derive_key &#8211; derive PSK Netconf key from password</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>int gnutls_psk_netconf_derive_key(const char * </code><i>password</i><code>, const char * </code><i>psk_identity</i><code>, const char * </code><i>psk_identity_hint</i><code>, gnutls_datum_t * </code><i>output_key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_psk_netconf_derive_key – derive PSK Netconf key from pass
 <dd> zero terminated string with PSK identity hint.</dd>
 <dt>gnutls_datum_t * output_key</dt>
 <dd> output variable, contains newly allocated *data pointer.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will derive a PSK key from a password, for use with the Netconf protocol.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

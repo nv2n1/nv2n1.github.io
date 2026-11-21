@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolmerge(1)"
 name: "dbcolmerge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbcolmerge/"
 description: "dbcolmerge – merge multiple columns into one"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbcolmerge [-C ElementSeparator] [columns&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> For each row, merge multiple columns down to a single column, joining elements with ElementSeparator (defaults to a single underscore).</p>
 <h2>OPTIONS</h2>
 <dl>

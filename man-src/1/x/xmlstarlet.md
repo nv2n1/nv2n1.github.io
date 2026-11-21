@@ -1,4 +1,5 @@
 ---
+
 title: "xmlstarlet(1)"
 name: "xmlstarlet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlstarlet/"
 description: "xmlstarlet – command line XML/XSLT toolkit"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xml</code> [<i>options</i>&#8230;] {<i>command</i>} [<i>cmd-options</i>&#8230;]</dt></dl>
 <h2>INTRODUCTION</h2>

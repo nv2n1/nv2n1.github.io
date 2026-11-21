@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rsa_params_export_raw(3)"
 name: "gnutls_rsa_params_export_raw"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_rsa_params_export_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_params_export_raw &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_params_export_raw(gnutls_rsa_params_t </code><i>rsa</i><code>, gnutls_datum_t * </code><i>m</i><code>, gnutls_datum_t * </code><i>e</i><code>, gnutls_datum_t * </code><i>d</i><code>, gnutls_datum_t * </code><i>p</i><code>, gnutls_datum_t * </code><i>q</i><code>, gnutls_datum_t * </code><i>u</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,7 +30,6 @@ description: "gnutls_rsa_params_export_raw – API function"
 <dd> will hold the coefficient</dd>
 <dt>unsigned int * bits</dt>
 <dd> if non null will hold the prime&#8217;s number of bits</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the RSA parameters found in the given structure. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an negative error code.</p>

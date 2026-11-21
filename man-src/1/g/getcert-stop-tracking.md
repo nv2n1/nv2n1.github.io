@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-stop-tracking(1)"
 name: "getcert-stop-tracking"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-stop-tracking/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert stop-tracking [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Tells <i>certmonger</i> to stop monitoring or attempting to obtain or refresh a certificate. </p>
 <h2>TRACKING OPTIONS</h2>
 <dl>

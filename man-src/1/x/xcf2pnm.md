@@ -1,4 +1,5 @@
 ---
+
 title: "xcf2pnm(1)"
 name: "xcf2pnm"
 section: "1"
@@ -9,9 +10,7 @@ description: "xcf2pnm – convert from GIMP xcf files to ppm/pgm/pbm format"
 
 <h2>NAME</h2>
 <p> xcf2pnm &#8211; convert from GIMP xcf files to ppm/pgm/pbm format</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xcf2pnm</code> [ <i>options</i> ] <i>filename</i> [ <i>layer names</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xcf2pnm</code> is a command-line tool that converts image files in the XCF format used by <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1) to the generic image formats <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), and <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), flattening layers if necessary. It does not need to have the Gimp engine itself available.</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

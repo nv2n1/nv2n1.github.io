@@ -1,4 +1,5 @@
 ---
+
 title: "mozo(1)"
 name: "mozo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mozo/"
 description: "Mozo – MATE Menu Editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mozo</code></p>
-<h2>DESCRIPTION</h2>
 <p> Mozo is a menu editor for MATE using the freedesktop.org menu specification. It is a fork of Alacarte.</p>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>

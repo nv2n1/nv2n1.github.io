@@ -1,4 +1,5 @@
 ---
+
 title: "chardet(1)"
 name: "chardet"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-chardet/"
 description: "chardet – universal character encoding detector"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>chardet</code> [<i>file </i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Report heuristically-detected character encoding for each file. </p>
 <p> For every specified file (defaulting to stdin if no files are specified), reads and determines the character encoding of the file content. Reports the name and confidence level for each file&#8217;s detected character encoding.</p>
 <h2>SEE ALSO</h2>

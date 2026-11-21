@@ -1,4 +1,5 @@
 ---
+
 title: "hdb_get_realms(3)"
 name: "hdb_get_realms"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdb_get_realms/"
 description: "HDB –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>hdb_name</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_servers_parse(3)"
 name: "memcached_servers_parse"
 section: "3"
@@ -9,7 +10,6 @@ description: "memcached_servers_parse – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_servers_parse &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_server_instance_st</code></dt>
@@ -35,7 +35,6 @@ description: "memcached_servers_parse – libmemcached Documentation"
 <dd>
 <p> Deprecated since version 0.39. </p>
 <p> Compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) operates on a list of hosts which are stored in <i>memcached_server_st</i> structures. You should not modify these structures directly. Functions are provided to modify these structures (and more can be added, just ask!). </p>
 <p> <i>memcached_server_list()</i> is used to provide an array of all defined hosts. This was incorrectly documented as &quot;requiring free&quot; up till version 0.39. </p>
 <p> <i>memcached_server_list_free()</i> deallocates all memory associated with the array of <i>memcached_server_st</i> that you passed to it. </p>

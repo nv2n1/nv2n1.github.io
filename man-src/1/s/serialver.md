@@ -1,4 +1,5 @@
 ---
+
 title: "serialver(1)"
 name: "serialver"
 section: "1"
@@ -9,7 +10,6 @@ description: "serialver – Returns the serial version UID for specified classes
 
 <h2>NAME</h2>
 <p> serialver &#8211; Returns the serial version UID for specified classes.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 serialver[options][classnames]
 </code></pre>
@@ -18,7 +18,6 @@ serialver[options][classnames]
 <dd> The command-line options. See Options.</dd>
 <dt><i>classnames</i></dt>
 <dd> The classes for which the <code>serialVersionUID</code> is to be returned.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>serialver</code> command returns the <code>serialVersionUID</code> for one or more classes in a form suitable for copying into an evolving class. When called with no arguments, the <code>serialver</code> command prints a usage line.</p>
 <h2>OPTIONS</h2>
 <dl>

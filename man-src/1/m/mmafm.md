@@ -1,4 +1,5 @@
 ---
+
 title: "mmafm(1)"
 name: "mmafm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mmafm/"
 description: "mmafm – creates AFM font metrics for multiple master fonts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mmafm</code> [OPTIONS&#8230;] <i>font</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Mmafm</code> creates AFM font metrics for PostScript multiple master fonts by interpolation. You pass it an AMFM file (multiple master font metrics) and options specifying the design point you want, and it writes the resulting AFM file to the standard output. </p>
 <p> Each <i>font</i> argument is either the filename of an AFM or AMFM font metrics file, or a PostScript font name. If you give a font name, <code>mmafm</code> will look up the actual font metrics file using the PSRESOURCEPATH environment variable. This colon-separated path is searched for `PSres.upr&#8217; files, an Adobe method for indexing PostScript resources. </p>
 <p> You can also give the name of a multiple master font instance, like `MinionMM_367_400_12_&#8217;. <code>Mmafm</code> will parse the font name and create that instance for you. `PSres.upr&#8217; files must be set up for this to work. </p>

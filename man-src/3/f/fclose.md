@@ -1,4 +1,5 @@
 ---
+
 title: "fclose(3)"
 name: "fclose"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-fclose/"
 description: "fclose – close a stream"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>
 <p> <code>int fclose(FILE *</code><i>stream</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>fclose</code>() function flushes the stream pointed to by <i>stream</i> (writing any buffered output data using <code><a href="/docs/linux/man/3-fflush/">fflush</a></code>(3)) and closes the underlying file descriptor. </p>
 <p> The behaviour of <code>fclose</code>() is undefined if the <i>stream</i> parameter is an illegal pointer, or is a descriptor already passed to a previous invocation of <code>fclose</code>().</p>
 <h2>RETURN VALUE</h2>

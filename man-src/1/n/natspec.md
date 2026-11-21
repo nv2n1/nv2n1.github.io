@@ -1,4 +1,5 @@
 ---
+
 title: "natspec(1)"
 name: "natspec"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-natspec/"
 description: "natspec – command line utility to access libnatspec functions"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>natspec</code> [<code>-c</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;codepage</code>] [<code>-f</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;fsenc</code>] [<code>&#8211;utf8</code>] [<code>&#8211;country-id</code>] [<code>&#8211;system-locale</code>] [<code>-i</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;info</code>] [<code>-a&nbsp;<wbr></code><i>encoding</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;transl&nbsp;<wbr></code><i>encoding</i>] [<code>-v</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;verbose</code>] [<code>-s&nbsp;<wbr></code><i>operating system</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;charset&nbsp;<wbr></code><i>operating system</i>]</dt>
 <dt> <code>natspec</code> [<code>-h</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;help</code> | <code>-V</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;version</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>natspec</code> command. </dd>
 <p> This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>natspec</code> is a command line utility to access libnatspec functions.</p>

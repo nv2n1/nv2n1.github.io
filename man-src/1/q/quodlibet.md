@@ -1,4 +1,5 @@
 ---
+
 title: "quodlibet(1)"
 name: "quodlibet"
 section: "1"
@@ -9,11 +10,9 @@ description: "quodlibet – audio library manager and player"
 
 <h2>NAME</h2>
 <p> quodlibet &#8211; audio library manager and player</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 quodlibet[--print - playing | control] exfalso[directory]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Quod Libet is a music management program. It provides several different ways to view your audio library, as well as support for Internet radio and audio feeds. It has extremely flexible metadata tag editing and searching capabilities. </p>
 <p> This manual page is only a short reference for Quod Libet. Complete documentation is available at <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide">http://code.google.com/p/quodlibet/wiki/Guide</a></i>.</p>
 <h2>OPTIONS</h2>

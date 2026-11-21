@@ -1,4 +1,5 @@
 ---
+
 title: "git-subtree(1)"
 name: "git-subtree"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-subtree/"
 description: "git-subtree – Merge subtrees together and split repository into subtrees"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git subtree[&lt;options&gt;] - P&lt;prefix&gt; add&lt;local - commit&gt; git subtree[&lt;options&gt;] - P&lt;prefix&gt; add&lt;repository&gt;&lt;remote - ref&gt; git subtree[&lt;options&gt;] - P&lt;prefix&gt; merge&lt;local - commit&gt; git subtree[&lt;options&gt;] - P&lt;prefix&gt; split[&lt;local - commit&gt;]
 </code></pre>
 <p>git subtree[&lt;options&gt;] &#8211; P&lt;prefix&gt; pull&lt;repository&gt;&lt;remote &#8211; ref&gt; git subtree[&lt;options&gt;] &#8211; P&lt;prefix&gt; push&lt;repository&gt;&lt;refspec&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Subtrees allow subprojects to be included within a subdirectory of the main project, optionally including the subproject&#8217;s entire history. </p>
 <p> For example, you could include the source code for a library as a subdirectory of your application. </p>
 <p> Subtrees are not to be confused with submodules, which are meant for the same task. Unlike submodules, subtrees do not need any special constructions (like <i>.gitmodules</i> files or gitlinks) be present in your repository, and do not force end-users of your repository to do anything special or to understand how subtrees work. A subtree is just a subdirectory that can be committed to, branched, and merged along with your project in any way you want. </p>

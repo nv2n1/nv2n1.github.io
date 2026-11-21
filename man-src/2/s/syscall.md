@@ -1,4 +1,5 @@
 ---
+
 title: "syscall(2)"
 name: "syscall"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-syscall/"
 description: "syscall – indirect system call"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/syscall.h&gt; /* For SYS_xxx definitions */
 #include &lt;unistd.h&gt;
@@ -21,7 +21,6 @@ long syscall(long number, ...);
 <dt>Before glibc 2.19:</dt>
 <dd> _BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>syscall</code>() is a small library function that invokes the system call whose assembly language interface has the specified <i>number</i> with the specified arguments. Employing <code>syscall</code>() is useful, for example, when invoking a system call that has no wrapper function in the C library. </p>
 <p> <code>syscall</code>() saves CPU registers before making the system call, restores the registers upon return from the system call, and stores any error returned by the system call in <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3). </p>
 <p> Symbolic constants for system call numbers can be found in the header file <i>&lt;sys/syscall.h&gt;</i>.</p>

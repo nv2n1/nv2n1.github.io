@@ -1,4 +1,5 @@
 ---
+
 title: "xfd(1)"
 name: "xfd"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xfd/"
 description: "xfd – display all the characters in an X font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xfd</code> [-options &#8230;] <code>-fn</code> <i>fontname</i> </p>
 <p> <code>xfd</code> [-options &#8230;] <code>-fa</code> <i>fontname</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xfd</i> utility creates a window containing the name of the font being displayed, a row of command buttons, several lines of text for displaying character metrics, and a grid containing one glyph per cell. The characters are shown in increasing order from left to right, top to bottom. The first character displayed at the top left will be character number 0 unless the <code>-start</code> option has been supplied in which case the character with the number given in the <code>-start</code> option will be used. </p>
 <p> The characters are displayed in a grid of boxes, each large enough to hold any single character in the font. Each character glyph is drawn using the PolyText16 request (used by the <i>Xlib</i> routine <code>XDrawString16</code>) or the XftDrawString32 routine, depending on whether the <code>-fn</code> or <code>-fa</code> option was given. If the <code>-box</code> option is given, a rectangle will be drawn around each character, showing where an ImageText16 request (used by the <i>Xlib</i> routine <code>XDrawImageString16</code>) would cause background color to be displayed. </p>
 <p> The origin of each glyph is normally set so that the character is drawn in the upper left hand corner of the grid cell. However, if a glyph has a negative left bearing or an unusually large ascent, descent, or right bearing (as is the case with <i>cursor</i> font), some character may not appear in their own grid cells. The <code>-center</code> option may be used to force all glyphs to be centered in their respective cells. </p>

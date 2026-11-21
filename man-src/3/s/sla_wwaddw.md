@@ -1,4 +1,5 @@
 ---
+
 title: "sla_wwaddw(3)"
 name: "sla_wwaddw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_wwaddw/"
 description: "sla_wwaddw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sla_wwaddw</code> (N, X, Y, W)<br />
  <i></i><code>SLA_WWADDW</code> adds a vector into a doubled-single vector.</p>

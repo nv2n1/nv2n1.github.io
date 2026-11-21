@@ -1,4 +1,5 @@
 ---
+
 title: "chegs2(3)"
 name: "chegs2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chegs2/"
 description: "chegs2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chegs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
  <i></i><code>CHEGS2</code> reduces a Hermitian definite generalized eigenproblem to standard form, using the factorization results obtained from cpotrf (unblocked algorithm).</p>

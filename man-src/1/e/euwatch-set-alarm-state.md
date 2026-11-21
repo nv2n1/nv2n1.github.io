@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-set-alarm-state(1)"
 name: "euwatch-set-alarm-state"
 section: "1"
@@ -9,12 +10,10 @@ description: "euwatch-set-alarm-state – Temporarily set the state of an alarm"
 
 <h2>NAME</h2>
 <p> euwatch-set-alarm-state &#8211; Temporarily set the state of an alarm</p>
-<h2>SYNOPSIS</h2>
 <p> euwatch-set-alarm-state <code>&#8211;state-value</code> {ALARM,INSUFFICIENT_DATA,OK}</p>
 <dl>
 <dt><code>&#8211;state-reason</code> REASON</dt>
 <dd> [&#8211;state-reason-data JSON] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ALARM</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Temporarily set the state of an alarm</p>
 <h3>positional arguments:</h3>
 <dl>

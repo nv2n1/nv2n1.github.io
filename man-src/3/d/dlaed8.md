@@ -1,4 +1,5 @@
 ---
+
 title: "dlaed8(3)"
 name: "dlaed8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaed8/"
 description: "dlaed8.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaed8</code> (ICOMPQ, K, N, QSIZ, D, Q, LDQ, INDXQ, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, PERM, GIVPTR, GIVCOL, GIVNUM, INDXP, INDX, INFO)<br />
  <i></i><code>DLAED8</code> used by sstedc. Merges eigenvalues and deflates secular equation. Used when the original matrix is dense.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perf-evlist(1)"
 name: "perf-evlist"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-perf-evlist/"
 description: "perf-evlist – List the event names in a perf.data file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>perf evlist &lt;options&gt;</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command displays the names of events sampled in a perf.data file.</p>
 <h2>OPTIONS</h2>
 <p> -i, &#8211;input=</p>

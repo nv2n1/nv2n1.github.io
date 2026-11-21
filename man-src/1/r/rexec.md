@@ -1,4 +1,5 @@
 ---
+
 title: "rexec(1)"
 name: "rexec"
 section: "1"
@@ -9,9 +10,7 @@ description: "rexec — remote execution client for an exec server"
 
 <h2>NAME</h2>
 <p> rexec &#8212; remote execution client for an exec server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rexec </code> [ <code>-abcdhns -l </code> username <code>-p </code> password ] host command</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Rexec</code> calls the <code><a href="/docs/linux/man/3-rexec/">rexec</a>(3)</code> routine to act as a client for the remote host&#8217;s <code>rexecd(8)</code> server. </p>
 <p> It asks that &#8220;command&#8221; be run on the host computer, using username/password authentication. See <code><a href="/docs/linux/man/3-rexec/">rexec</a>(3)</code> and <code>rexecd(8)</code> for details of the protocol.</p>
 <h2>OPTIONS</h2>

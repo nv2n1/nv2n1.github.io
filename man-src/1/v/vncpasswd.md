@@ -1,4 +1,5 @@
 ---
+
 title: "vncpasswd(1)"
 name: "vncpasswd"
 section: "1"
@@ -9,10 +10,8 @@ description: "vncpasswd – change the VNC password"
 
 <h2>NAME</h2>
 <p> vncpasswd &#8211; change the VNC password</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vncpasswd</code> [<i>passwd-file</i>]<br />
  <code>vncpasswd</code> -f</p>
-<h2>DESCRIPTION</h2>
 <p> <code>vncpasswd</code> allows you to set the password used to access VNC desktops. Its default behavior is to prompt for a VNC password and then store an obfuscated version of this password to <i>passwd-file</i> (or to $HOME/.vnc/passwd if no password file is specified.) The <code>vncserver</code> script runs <code>vncpasswd</code> the first time you start a VNC desktop, and it invokes <code>Xvnc</code> with the appropriate <code>-rfbauth</code> option. <code>vncviewer</code> can also be given a password file to use via the <code>-passwd</code> option. </p>
 <p> The password must be at least six characters long (unless the <code>-f</code> command-line option is used&#8211; see below), and only the first eight characters are significant. Note that the stored password is <code>not</code> encrypted securely &#8211; anyone who has access to this file can trivially find out the plain-text password, so <code>vncpasswd</code> always sets appropriate permissions (read and write only by the owner.) However, when accessing a VNC desktop, a challenge-response mechanism is used over the wire making it hard for anyone to crack the password simply by snooping on the network. </p>
 <h2>OPTIONS</h2>

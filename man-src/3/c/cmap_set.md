@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_set(3)"
 name: "cmap_set"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_set/"
 description: "cmap_set – Store value in CMAP"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_set (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>, const void *</code><i>value</i><code>, size_t </code><i>value_len</i><code>, cmap_value_types_t </code><i>type</i><code>);</code> </p>
 <p> Also shortcuts for different types are defined </p>
@@ -22,7 +22,6 @@ description: "cmap_set – Store value in CMAP"
 <p> <code>cs_error_t cmap_set_float(cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>, float </code><i>value</i><code>);</code> </p>
 <p> <code>cs_error_t cmap_set_double(cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>, double </code><i>value</i><code>);</code> </p>
 <p> <code>cs_error_t cmap_set_string(cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>, const char *</code><i>value</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmap_set</code> function is used to store key inside cmap. The <i>handle</i> argument is connection to CMAP database obtained by calling <code><a href="/docs/linux/man/3-cmap_initialize/">cmap_initialize</a>(3)</code> function. <i>key_name</i> is name of key to set value. Key name is limited by minimal (CMAP_KEYNAME_MINLEN, currently 3) and maximal (CMAP_KEYNAME_MAXLEN, currently 255) length. Also key can contain only limited set of characters expressed by regexp [a-zA-Z0-9._-/:]*. <i>value</i> is pointer to allocated data which will be stored inside CMAP. Length of value (number of bytes) is supplied as <i>value_len</i> parameter. Last parameter is <i>type</i> which gives type of value. It may be one of: </p>
 <p> <code>CMAP_VALUETYPE_INT8</code> &#8211; 8-bit signed integer </p>
 <p> <code>CMAP_VALUETYPE_UINT8</code> &#8211; 8-bit unsigned integer </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-compress-dir(1)"
 name: "hwloc-compress-dir"
 section: "1"
@@ -9,7 +10,6 @@ description: "hwloc-compress-dir – Compress a directory of XML topologies"
 
 <h2>NAME</h2>
 <p> hwloc-compress-dir &#8211; Compress a directory of XML topologies</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hwloc-compress-dir</code> [<i>options</i>] &lt;inputdir&gt; &lt;outputdir&gt;</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -17,7 +17,6 @@ description: "hwloc-compress-dir – Compress a directory of XML topologies"
 <dd> Uncompress a previously compressed directory.</dd>
 <dt><code>-v &#8211;verbose</code></dt>
 <dd> Display verbose messages.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> hwloc-compress-dir takes an input directory containing XML exports and tries to compress it by computing topology diffs between them (with the hwloc-diff program). Each file is copied in the output directory either as a diff if it could be compressed, or as its original entire file otherwise. </p>
 <p> hwloc-compress-dir may recompress a directory that was previously compressed. All input files that are already in the output directory, either compressed or not, are ignored. New input files are compressed as much as possible as usual. </p>
 <p> For each file of the directory, the output filename is the same as the original if not compressed, otherwise its extension is changed to <code>.diff.xml</code>. </p>

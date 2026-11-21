@@ -1,4 +1,5 @@
 ---
+
 title: "htdump(1)"
 name: "htdump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-htdump/"
 description: "htdump – write out an ASCII-text version of the document database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>htdump</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Htdump writes out an ASCII-text version of the document database in the same form as the -t option of htdig.</p>
 <h2>OPTIONS</h2>
 <dl>

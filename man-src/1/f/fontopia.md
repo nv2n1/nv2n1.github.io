@@ -1,4 +1,5 @@
 ---
+
 title: "fontopia(1)"
 name: "fontopia"
 section: "1"
@@ -6,13 +7,10 @@ letter: "f"
 url: "/docs/linux/man/1-fontopia/"
 ---
 
-
  </p>
 <h2>NAME</h2>
 <p> fontopia &#8211; the console bitmap font editor  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fontopia [OPTIONS] [file-name]</code>  </p>
-<h2>DESCRIPTION</h2>
 <p> About: <br />
  ====== <br />
  Fontopia is an easy-to-use, text-based, console font editor. What this means in simple English is that you can edit the fonts that your GNU/Linux kernel is using to display your text on text-based (vs graphical) terminals. </p>

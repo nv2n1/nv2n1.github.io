@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_subject_alt_names_set(3)"
 name: "gnutls_subject_alt_names_set"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_subject_alt_names_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_subject_alt_names_set &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_subject_alt_names_set(gnutls_subject_alt_names_t </code><i>sans</i><code>, unsigned int </code><i>san_type</i><code>, const gnutls_datum_t * </code><i>san</i><code>, const char * </code><i>othername_oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_subject_alt_names_set – API function"
 <dd> The alternative name data</dd>
 <dt>const char * othername_oid</dt>
 <dd> The object identifier if <i>san_type</i> is <code>GNUTLS_SAN_OTHERNAME</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will store the specified alternative name in the <i>sans</i> structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0), otherwise a negative error value.</p>

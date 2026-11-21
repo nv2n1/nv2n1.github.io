@@ -1,4 +1,5 @@
 ---
+
 title: "slarra(3)"
 name: "slarra"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarra/"
 description: "slarra.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarra</code> (N, D, E, E2, SPLTOL, TNRM, NSPLIT, ISPLIT, INFO)<br />
  <i></i><code>SLARRA</code> computes the splitting points with the specified threshold.</p>

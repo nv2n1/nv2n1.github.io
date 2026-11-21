@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_alloc_null_mr(3)"
 name: "ibv_alloc_null_mr"
 section: "3"
@@ -6,14 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_alloc_null_mr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_alloc_null_mr - allocate a null memory region (MR) 
-
-<h2>SYNOPSIS</h2>
+ibv_alloc_null_mr - allocate a null memory region (MR) 
 
 <dl>
 <dt>
@@ -22,11 +16,7 @@ url: "/docs/linux/man/3-ibv_alloc_null_mr/"
 struct ibv_mr *ibv_alloc_null_mr(struct ibv_pd *pd);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- ibv_alloc_null_mr() allocates a null memory region (MR) that is associated with the protection domain pd. 
+ibv_alloc_null_mr() allocates a null memory region (MR) that is associated with the protection domain pd. 
 
  A null MR discards all data written to it, and always returns 0 on read. It has the maximum length and only the lkey is valid, the MR is not exposed as an rkey. 
 

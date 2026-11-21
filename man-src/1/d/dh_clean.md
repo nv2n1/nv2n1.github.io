@@ -1,4 +1,5 @@
 ---
+
 title: "dh_clean(1)"
 name: "dh_clean"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_clean/"
 description: "dh_clean – clean up package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_clean</code> [<i>debhelper options</i>] [<code>-k</code>] [<code>-d</code>] [<code>-X</code><i>item</i>] [<i>path</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_clean</code> is a debhelper program that is responsible for cleaning up after a package is built. It removes the package build directories, and removes some other files including <i>debian/files</i>, and any detritus left behind by other debhelper commands. It also removes common files that should not appear in a Debian diff:<br />
 &nbsp;<wbr>&nbsp;#*#&nbsp;*~&nbsp;<font SIZE="-1">DEADJOE</font>&nbsp;*.orig&nbsp;*.rej&nbsp;*.SUMS&nbsp;<font SIZE="-1">TAGS</font>&nbsp;.deps/*&nbsp;*.P&nbsp;*-stamp </p>
 <p> It does not run &#8220;make clean&#8221; to clean up after the build process. Use <i><a href="/docs/linux/man/1-dh_auto_clean/">dh_auto_clean</a></i>(1) to do things like that. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fbterm(1)"
 name: "fbterm"
 section: "1"
@@ -9,9 +10,7 @@ description: "FbTerm – a fast Frame Buffer based TERMinal emulator for linux"
 
 <h2>NAME</h2>
 <p> FbTerm &#8211; a fast Frame Buffer based TERMinal emulator for linux</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fbterm</code> [<i>options</i>] [&#8211;] [<i>command</i> [<i>arguments</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> FbTerm is a fast terminal emulator for linux with frame buffer device or VESA video card. Features include:<br />
 &nbsp;<wbr>&nbsp;<wbr><br />
 &nbsp;<wbr>&nbsp;<wbr>*&nbsp;<wbr>mostly as fast as terminal of linux kernel while accelerated scrolling is enabled<br />

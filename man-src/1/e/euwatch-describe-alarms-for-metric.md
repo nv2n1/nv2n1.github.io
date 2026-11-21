@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-describe-alarms-for-metric(1)"
 name: "euwatch-describe-alarms-for-metric"
 section: "1"
@@ -9,12 +10,10 @@ description: "euwatch-describe-alarms-for-metric – Describe alarms for a singl
 
 <h2>NAME</h2>
 <p> euwatch-describe-alarms-for-metric &#8211; Describe alarms for a single metric.</p>
-<h2>SYNOPSIS</h2>
 <p> euwatch-describe-alarms-for-metric <code>&#8211;metric-name</code> METRIC <code>&#8211;namespace</code></p>
 <dl>
 <dt>NAMESPACE</dt>
 <dd> [&#8211;dimensions KEY1=VALUE1,KEY2=VALUE2,&#8230;] [&#8211;period SECONDS] [&#8211;show-long] [&#8211;statistic {Average,Maximum,Minimum,SampleCount,Sum}] [&#8211;unit UNIT] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Describe alarms for a single metric.</p>
 <h2>DESCRIPTION</h2>
 <p> Note that all of an alarm&#8217;s metrics must match exactly to obtain any results.</p>

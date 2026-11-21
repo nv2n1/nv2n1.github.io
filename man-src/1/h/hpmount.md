@@ -1,4 +1,5 @@
 ---
+
 title: "hpmount(1)"
 name: "hpmount"
 section: "1"
@@ -9,7 +10,6 @@ description: "hpmount — change directory on an HFS+ volume"
 
 <h2>NAME</h2>
 <p> hpmount &#8212; change directory on an HFS+ volume</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hpmount</code> [<code>-r</code>] [<code>-p</code><i>n</i>] <i>source-path</i></p>
 <h2>Description</h2>
 <p> <code>hpmount</code> introduces a new HFS+ volume. The source path may specify a block device or a regular file containing an HFS+ volume image. Furthermore, <code>hpmount</code> creates the file <code>.hfsplusvolume</code> in the user&#8217;s home directory, where the source path and the catalogue ID of the current working directory are stored.<br />

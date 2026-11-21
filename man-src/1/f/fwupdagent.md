@@ -1,4 +1,5 @@
 ---
+
 title: "fwupdagent(1)"
 name: "fwupdagent"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fwupdagent/"
 description: "fwupdagent – firmware updating agent"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> fwupdagent [CMD]</p>
-<h2>DESCRIPTION</h2>
 <p> fwupdagent used to be a command line fwupd client intended to be used by scripts. You should now use the 100% compatible <code>fwupdmgr &#8211;json</code> command instead. The output is JSON and guaranteed to be stable.</p>
 <h2>EXIT STATUS</h2>
 <p> Commands that successfully execute will return &quot;0&quot;.</p>

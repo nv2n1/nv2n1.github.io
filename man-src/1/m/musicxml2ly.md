@@ -1,4 +1,5 @@
 ---
+
 title: "musicxml2ly(1)"
 name: "musicxml2ly"
 section: "1"
@@ -9,9 +10,7 @@ description: "musicxml2ly – manual page for musicxml2ly (LilyPond) 2.12.2"
 
 <h2>NAME</h2>
 <p> musicxml2ly &#8211; manual page for musicxml2ly (LilyPond) 2.12.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>musicxml2ly</code> [<i>OPTION</i>]&#8230; <i>FILE.xml</i></p>
-<h2>DESCRIPTION</h2>
 <p> Convert MusicXML from FILE.xml to LilyPond input. If the given filename is -, musicxml2ly reads from the command line.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "flickcurl(1)"
 name: "flickcurl"
 section: "1"
@@ -9,10 +10,8 @@ description: "flickcurl – call Flickr API"
 
 <h2>NAME</h2>
 <p> flickcurl &#8211; call Flickr API</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flickcurl</code> <code>-a </code><i>FROB</i><br />
  <code>flickcurl</code> [<code>-d </code><i>DELAY</i>] [<code>-h</code>] [<code>-o FILE</code>] [<code>-q</code>] [<code>-v</code>] [<code>-V</code>] [<i>commands</i>] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>flickcurl</code> is a utility program to call the Flickr APIs via the flickcurl library. Run <i>flickcurl -h</i> to get a list of the supported commands and their arguments. </p>
 <p> The program requires configuring before use to work with the Flickr APIs. Run <code>flickcurl</code> without any options to get the instructions for registering the application and creating the initial configuration file <i>~/.flickcurl.conf</i> from the registration information.</p>
 <h2>OPTIONS</h2>

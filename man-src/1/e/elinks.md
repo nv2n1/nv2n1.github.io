@@ -1,4 +1,5 @@
 ---
+
 title: "elinks(1)"
 name: "elinks"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-elinks/"
 description: "elinks – lynx-like alternative character mode WWW browser"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>elinks</i> [OPTION]&#8230; [URL]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <i>ELinks</i> is a text mode WWW browser, supporting colors, table rendering, background downloading, menu driven configuration interface, tabbed browsing and slim code. </p>
 <p> Frames are supported. You can have different file formats associated with external viewers. mailto: and telnet: are supported via external clients. </p>
 <p> ELinks can handle both local files and remote URLs. The main supported remote URL protocols are <i>HTTP</i>, <i>HTTPS</i> (with SSL support compiled in) and <i>FTP</i>. Additional protocol support exists for <i>BitTorrent</i> <i>finger</i>, <i>Gopher</i>, <i>SMB</i> and <i>NNTP</i>. </p>

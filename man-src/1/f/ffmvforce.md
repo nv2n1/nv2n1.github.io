@@ -1,4 +1,5 @@
 ---
+
 title: "ffmvforce(1)"
 name: "ffmvforce"
 section: "1"
@@ -9,9 +10,7 @@ description: "ffmvforce – force orientation test for force-feedback devices"
 
 <h2>NAME</h2>
 <p> ffmvforce &#8211; force orientation test for force-feedback devices</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ffmvforce</code> &lt;<i>device</i>&gt; [<code>-u</code> &lt;<i>update rate</i>&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> ffmvforce generates a force in a given direction, indicated by the position of the mouse pointer in relation to the center of the tool&#8217;s window. </p>
 <p> <code>Beware, the stress test may damage your device!</code></p>
 <h2>OPTIONS</h2>

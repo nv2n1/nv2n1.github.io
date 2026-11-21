@@ -1,4 +1,5 @@
 ---
+
 title: "root(1)"
 name: "root"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-root/"
 description: "root – Interpretor of C++ for the ROOT framework"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>root</code> <i>[options] files &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>R</code>OOTs <code>O</code>bject-<code>O</code>riented <code>T</code>echnologies. </p>
 <p> <code>root</code> is a interactive interpretor of C++ code. It uses the <code>ROOT</code> framework. For more information on <code>ROOT</code>, please refer to <i><a rel="nofollow" href="http://root.cern.ch">http://root.cern.ch</a></i>. </p>
 <p> An extensive <i>Users Guide</i> is available from that site.</p>

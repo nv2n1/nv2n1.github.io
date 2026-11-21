@@ -1,4 +1,5 @@
 ---
+
 title: "pspolar(1)"
 name: "pspolar"
 section: "1"
@@ -9,10 +10,8 @@ description: "pspolar – Plot polarities on the inferior focal half-sphere on m
 
 <h2>NAME</h2>
 <p> pspolar &#8211; Plot polarities on the inferior focal half-sphere on maps</p>
-<h2>SYNOPSIS</h2>
 <p> pspolar [ <i>table</i> ] <i>lon/lat</i> <i>parameters</i> <i>region</i> <i>size</i> <i>&lt;symbol&gt;&lt;size&gt;</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>lon</i>/<i>lat</i>[/<i>dash_width</i>/<i>pointsize</i>] ] [ <i>color</i> ] [ <i>color</i> ] [ <i>color</i> ] [ ] [ ] [ ] [ ] [ <i>mode</i>[<i>args</i>] ] [ <i>angle</i>/<i>form</i>/<i>justify</i>/<i>fontsize</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pspolar</code> reads data values from <i>files</i> [or standard input] and generates PostScript code that will plot stations on focal mechanisms on a map. The PostScript code is written to standard output. </p>
 <p> Parameters are expected to be in the following columns:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_mdmat_d(1)"
 name: "g_mdmat_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_mdmat – calculates residue contact maps"
 <h2>NAME</h2>
 <p> g_mdmat &#8211; calculates residue contact maps </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_mdmat</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-mean</code><i> dm.xpm </i> <code>-frames</code><i> dmf.xpm </i> <code>-no</code><i> num.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]xvgr</code><i></i> <code>-t</code><i> real </i> <code>-nlevels</code><i> int </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_mdmat makes distance matrices consisting of the smallest distance between residue pairs. With -frames these distance matrices can be stored as a function of time, to be able to see differences in tertiary structure as a funcion of time. If you choose your options unwise, this may generate a large output file. Default only an averaged matrix over the whole trajectory is output. Also a count of the number of different atomic contacts between residues over the whole trajectory can be made. The output can be processed with xpm2ps to make a PostScript &#8482; plot.</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />

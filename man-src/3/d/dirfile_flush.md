@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_flush(3)"
 name: "dirfile_flush"
 section: "3"
@@ -9,11 +10,9 @@ description: "dirfile_flush — write all pending dirfile changes to disk."
 
 <h2>NAME</h2>
 <p> dirfile_flush &#8212; write all pending dirfile changes to disk.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_flush(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_flush</code>() function flushes and closes all file handles associated with <i>field_code</i>, or its input(s), in the dirfile specified by <i>dirfile</i>. If the <i>field_code</i> contains a valid representation suffix, it will be ignored. As a special case, if <i>field_code</i> is NULL, all fields in <i>dirfile</i> will be flushed and closed. In this special case, modified metadata will also be flushed to disk as if <code><a href="/docs/linux/man/3-dirfile_metaflush/">dirfile_metaflush</a></code>(3) had been called.</dd>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned and the dirfile error is set to a non-zero error value. Possible error values are:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "blenderplayer(1)"
 name: "blenderplayer"
 section: "1"
@@ -9,7 +10,6 @@ description: "blenderplayer – a utility for previewing .blend files"
 
 <h2>NAME</h2>
 <p> blenderplayer &#8211; a utility for previewing .blend files</p>
-<h2>DESCRIPTION</h2>
 <p> usage: blenderplayer [-w [w h l t]] [-f [fw fh fb ff]] [-g gamengineoptions] [-s stereomode] filename.blend</p>
 <dl>
 <dt> <code>-h</code>: Prints this command summary</dt>

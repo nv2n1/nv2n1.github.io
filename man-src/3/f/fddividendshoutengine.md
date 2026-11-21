@@ -1,4 +1,5 @@
 ---
+
 title: "fddividendshoutengine(3)"
 name: "fddividendshoutengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fddividendshoutengine/"
 description: "ql/pricingengines/vanilla/fddividendshoutengine.hpp – base class for shout engine with dividends"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br />
  #include &lt;ql/pricingengines/vanilla/fddividendengine.hpp&gt;<br />
  #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt;<br />

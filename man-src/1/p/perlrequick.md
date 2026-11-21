@@ -1,4 +1,5 @@
 ---
+
 title: "perlrequick(1)"
 name: "perlrequick"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlrequick/"
 description: "perlrequick – Perl regular expressions quick start"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This page covers the very basics of understanding, creating and using regular expressions (&#8216;regexes&#8217;) in Perl.</p>
 <h2>The Guide</h2>
 <p> This page assumes you already know things, like what a &#8220;pattern&#8221; is, and the basic syntax of using them. If you don&#8217;t, see perlretut.</p>

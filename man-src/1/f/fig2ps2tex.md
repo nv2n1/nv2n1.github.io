@@ -1,4 +1,5 @@
 ---
+
 title: "fig2ps2tex(1)"
 name: "fig2ps2tex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fig2ps2tex/"
 description: "fig2ps2tex – generate a TeX file for including a PostScript file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fig2ps2tex</code> <i>file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Fig2ps2tex</i> generates a TeX file for including a PostScript file in a TeX document. This involves calculating the bounding box from the Postscript document. The TeX inclusion file is written to stdout. </p>
 <p> There is also <i>Fig2ps2tex.csh</i> for those systems with csh and dc. </p>
 <p> Note that the <i>psfig</i> macro package provides a more sophisticated approach to including Postscript files in LaTeX documents. <i>Fig2ps2tex</i> works with plain TeX however. </p>

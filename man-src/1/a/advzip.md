@@ -1,4 +1,5 @@
 ---
+
 title: "advzip(1)"
 name: "advzip"
 section: "1"
@@ -9,14 +10,12 @@ description: "advzip – AdvanceCOMP ZIP Compression Utility"
 
 <h2>NAME</h2>
 <p> advzip &#8211; AdvanceCOMP ZIP Compression Utility</p>
-<h2>SYNOPSIS</h2>
 <p> advzip [-a, &#8211;add] [-x, &#8211;extract] [-l, &#8211;list] </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-z, &#8211;recompress] [-t, &#8211;test] [-0, &#8211;shrink-store]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-1, &#8211;shrink-fast] [-2, &#8211;shrink-normal] [-3, &#8211;shrink-extra]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-4, &#8211;shrink-insane] [-i, &#8211;iter N]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-k, &#8211;keep-file-time] [-p, &#8211;pedantic] [-q, &#8211;quiet]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-h, &#8211;help] [-V, &#8211;version] ARCHIVES&#8230; [FILES&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The main purpose of this utility is to recompress and test the zip archives to get the smallest possible size. </p>
 <p> For recompression the 7-Zip (<a rel="nofollow" href="http://www.7-zip.com">www.7-zip.com</a>) Deflate implementation is used. This implementation generally gives 5-10% more compression than the zLib Deflate implementation. </p>
 <p> For experimental purpose also the 7-Zip LZMA algorithm is available with the -N option. In this case, the generated zips WILL NOT BE USABLE by any other program. To make them usable you need to recompress them without the -N option. Generally this algorithm gives 10-20% more compression than the 7-Zip Deflate implementation.</p>

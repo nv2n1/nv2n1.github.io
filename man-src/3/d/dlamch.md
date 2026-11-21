@@ -1,4 +1,5 @@
 ---
+
 title: "dlamch(3)"
 name: "dlamch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlamch/"
 description: "dlamch.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlamch</code> (CMACH)<br />
  <i></i><code>DLAMCH</code><br />

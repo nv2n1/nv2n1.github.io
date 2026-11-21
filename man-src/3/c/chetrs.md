@@ -1,4 +1,5 @@
 ---
+
 title: "chetrs(3)"
 name: "chetrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chetrs/"
 description: "chetrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetrs</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
  <i></i><code>CHETRS</code></p>

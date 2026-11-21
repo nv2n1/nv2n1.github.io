@@ -1,4 +1,5 @@
 ---
+
 title: "gnu_get_libc_version(3)"
 name: "gnu_get_libc_version"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-gnu_get_libc_version/"
 description: "gnu_get_libc_version, gnu_get_libc_release – get glibc version and release"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;gnu/libc-version.h&gt;
 const char *gnu_get_libc_version(void);
 const char *gnu_get_libc_release(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The function <code>gnu_get_libc_version</code>() returns a string that identifies the glibc version available on the system. </p>
 <p> The function <code>gnu_get_libc_release</code>() returns a string indicates the release status of the glibc version available on the system. This will be a string such as <i>stable</i>.</p>
 <h2>VERSIONS</h2>

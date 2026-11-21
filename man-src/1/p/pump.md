@@ -1,4 +1,5 @@
 ---
+
 title: "pump(1)"
 name: "pump"
 section: "1"
@@ -9,10 +10,8 @@ description: "pump – accelerate remote compilation with distcc"
 
 <h2>NAME</h2>
 <p> pump &#8211; accelerate remote compilation with distcc</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pump</code> <i>BUILD-COMMAND [ARGS]</i> &#8230; </p>
 <p> eval ` <code>pump</code> &#8211;startup `; <i>BUILD-COMMAND [ARGS]</i> &#8230; ; <code>pump</code> &#8211;shutdown</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pump</code> is part of distcc. It is used for distcc&#8217;s pump mode. Distcc&#8217;s pump mode accelerates remote compilation with distcc by also distributing preprocessing to the servers. </p>
 <p> For a detailed description of pump mode, including most notably some <code>important restrictions,</code> see the <code><a href="/docs/linux/man/1-distcc/">distcc</a>(1)</code> man page, in particular the <code>HOW PUMP-MODE WORKS</code> section and the <code>RESTRICTIONS ON PUMP MODE</code> section. </p>
 <p> The simplest usage is the form</p>

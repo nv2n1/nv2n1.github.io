@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usermodkey(1)"
 name: "euare-usermodkey"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-usermodkey – Change the status of an access key from Activ
 
 <h2>NAME</h2>
 <p> euare-usermodkey &#8211; Change the status of an access key from Active to Inactive, or vice versa</p>
-<h2>SYNOPSIS</h2>
 <p> euare-usermodkey <code>-s</code> {Active,Inactive} [-u USER] [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] KEY_ID</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Change the status of an access key from Active to Inactive, or vice versa</p>
 <h3>positional arguments:</h3>
 <dl>

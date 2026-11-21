@@ -1,4 +1,5 @@
 ---
+
 title: "audtool2(1)"
 name: "audtool2"
 section: "1"
@@ -9,9 +10,7 @@ description: "audtool2 – a small tool to modify behavior of a running audaciou
 
 <h2>NAME</h2>
 <p> <code>audtool2</code> &#8211; a small tool to modify behavior of a running audacious2 instance.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>audtool2</code> [&#8211;[[handler [parameters]] [&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>audtool2</code> is designed to send commands to a running audacious. </p>
 <p> It can handle various things like jumping to the next track in playlist or returning the current playing track title, as well as other status information.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_set_timeout(3)"
 name: "ieee1284_set_timeout"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ieee1284_set_timeout/"
 description: "ieee1284_set_timeout – modify inactivity timeout"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>struct timeval *ieee1284_set_timeout(struct parport&nbsp;<wbr>*</code><i>port</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This function sets a new value for the inactivity timeout (used for block transfer functions), and returns the old value. </dd>
 <p> The <i>port</i> must be claimed. </p>
 <p> The <i>timeout</i> parameter may be <code>NULL</code>, in which case the old value is left unchanged.</p>

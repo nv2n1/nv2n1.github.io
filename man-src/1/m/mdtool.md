@@ -1,4 +1,5 @@
 ---
+
 title: "mdtool(1)"
 name: "mdtool"
 section: "1"
@@ -9,11 +10,9 @@ description: "mdtool – MonoDevelop Application Runner"
 
 <h2>NAME</h2>
 <p> mdtool &#8211; MonoDevelop Application Runner</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mdtool</code> &lt;applicationId&gt; &#8230; </p>
 <p> <code>mdtool</code> setup &#8230; </p>
 <p> <code>mdtool</code> -q</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mdtool</code> is a tool that can execute head-less MonoDevelop applications, this can be used for example to do batch compilations without starting up the MonoDevelop GUI.</p>
 <h2>USAGE</h2>
 <dl>

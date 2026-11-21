@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-destroy(1)"
 name: "lxc-destroy"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-destroy – destroy a container."
 
 <h2>NAME</h2>
 <p> lxc-destroy &#8211; destroy a container.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-destroy</code> {-n <i>name</i>} [-f]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-destroy</code> destroys the system object previously created by the <code>lxc-create</code> command.</p>
 <h2>OPTIONS</h2>
 <dl>

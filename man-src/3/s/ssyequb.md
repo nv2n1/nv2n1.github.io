@@ -1,4 +1,5 @@
 ---
+
 title: "ssyequb(3)"
 name: "ssyequb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssyequb/"
 description: "ssyequb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyequb</code> (UPLO, N, A, LDA, S, SCOND, AMAX, WORK, INFO)<br />
  <i></i><code>SSYEQUB</code></p>

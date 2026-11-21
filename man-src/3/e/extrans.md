@@ -1,4 +1,5 @@
 ---
+
 title: "extrans(3)"
 name: "extrans"
 section: "3"
@@ -9,10 +10,8 @@ description: "extrans – Lighting and translucency effects. Allegro game progra
 
 <h2>NAME</h2>
 <p> extrans &#8211; Lighting and translucency effects. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example extrans</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program demonstrates how to use the lighting and translucency functions. The first part of the example will show a dark screen illuminated by a spotlight you can move with your mouse. After a key press the example shows the full bitmap and the spotlight changes to be a reduced version of the background with 50% of translucency. </p>
 <p> The translucency effect is easy to do in all color depths. However, the lighting effect has to be performed in a different way depending on whether the screen is in 8bit mode or another color depth. This is because additive drawing mode uses a different set of routines for truecolor modes. </p>
 <h2>SEE ALSO</h2>

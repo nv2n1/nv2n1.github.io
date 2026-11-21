@@ -1,4 +1,5 @@
 ---
+
 title: "rpmfile(1)"
 name: "rpmfile"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rpmfile/"
 description: "rpmfile – list file modes and types in RPM packages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rpmfile</code> [<code>-h</code>] [<code>-a</code>] [<code>-p</code>] [<i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;] [<i></i><font SIZE="-1"><i>DIR</i></font><i></i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rpmfile</code> produces three-column output: file name, file mode (octal), and file type, as determined by <i><a href="/docs/linux/man/1-file/">file</a></i>(1). When processing a directory, an additional column is prepended to the output, which is typically <font SIZE="-1">RPM</font> file basename.</p>
 <h2>OPTIONS</h2>
 <dl>

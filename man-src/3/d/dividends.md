@@ -1,4 +1,5 @@
 ---
+
 title: "dividends(3)"
 name: "dividends"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dividends/"
 description: "QuantLib::ConvertibleBond – base class for convertible bonds"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bonds/convertiblebond.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Bond</code>. </p>
 <p> Inherited by <code>ConvertibleFixedCouponBond</code>, <code>ConvertibleFloatingRateBond</code>, and <code>ConvertibleZeroCouponBond</code>. </p>

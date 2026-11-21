@@ -1,4 +1,5 @@
 ---
+
 title: "inspect(1)"
 name: "inspect"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-inspect/"
 description: "inspect – Boost code inspection tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>inspect</code> [<i>-cvs</i>] [<i>-text</i>] [<i>-brief</i>] [<i>options</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> It is not uncommon for various common errors or guideline violations to creep into the Boost libraries. The <code>inspect </code> program detects and reports several common problems. It can be used to scan a proposed Boost submission to identify various failures. </p>
 <p> The program is run in the directory to be scanned for errors. Sub-directories are also included in the scan. </p>
 <p> If the first program argument is -cvs, only files and directories in the CVS tree of the current directory are scanned. Otherwise all files and sub-directories are included in the scan.</p>

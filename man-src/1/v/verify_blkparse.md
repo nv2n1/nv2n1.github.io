@@ -1,4 +1,5 @@
 ---
+
 title: "verify_blkparse(1)"
 name: "verify_blkparse"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-verify_blkparse/"
 description: "verify_blkparse – verifies an output file produced by blkparse"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>verify_blkparse &lt;</code><i>filename</i>&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> Verifies an output file from blkparse. All it does is check if the events in the file are correctly time ordered. If an entry is found that isn&#8217;t ordered, it&#8217;s dumped to stdout. </p>
 <h2>AUTHORS</h2>
 <p> <i>blkparse</i> was written by Jens Axboe, Alan D. Brunelle and Nathan Scott. This man page was created from the <i>blktrace</i> documentation by Bas Zoetekouw. </p>

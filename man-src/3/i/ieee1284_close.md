@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_close(3)"
 name: "ieee1284_close"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ieee1284_close/"
 description: "ieee1284_close – close an open port"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int ieee1284_close(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>To close an open port and free any resources associated with it, call <code>ieee1284_close</code>.</dd>
 <h2>RETURN VALUE</h2>
 <p> <code>E1284_OK</code></p>

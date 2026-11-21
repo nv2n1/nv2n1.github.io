@@ -1,4 +1,5 @@
 ---
+
 title: "snapraid(1)"
 name: "snapraid"
 section: "1"
@@ -9,7 +10,6 @@ description: "snapraid – SnapRAID Backup For Disk Arrays"
 
 <h2>NAME</h2>
 <p> snapraid &#8211; SnapRAID Backup For Disk Arrays</p>
-<h2>SYNOPSIS</h2>
 <p> snapraid [-c, &#8211;conf CONFIG] </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-f, &#8211;filter PATTERN] [-d, &#8211;filter-disk NAME]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-m, &#8211;filter-missing] [-e, &#8211;filter-error]</p>
@@ -25,7 +25,6 @@ description: "snapraid – SnapRAID Backup For Disk Arrays"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>status|smart|up|down|diff|sync|scrub|fix|check|list|dup</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>|up|down|pool|devices|touch|rehash</p>
 <p> snapraid [-V, &#8211;version] [-H, &#8211;help] [-C, &#8211;gen-conf CONTENT] </p>
-<h2>DESCRIPTION</h2>
 <p> SnapRAID is a backup program for disk arrays. It stores parity information of your data and it recovers from up to six disk failures. </p>
 <p> SnapRAID is mainly targeted for a home media center, with a lot of big files that rarely change. </p>
 <p> Beside the ability to recover from disk failures, other features of SnapRAID are:</p>

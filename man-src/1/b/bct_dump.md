@@ -1,4 +1,5 @@
 ---
+
 title: "bct_dump(1)"
 name: "bct_dump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bct_dump/"
 description: "bct_dump – tegra BCT disassembly tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bct_dump</code> <i>bctfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> This program is used to take a binary Tegra Boot Configuration Table (BCT) and disassemble it into a text format suitable to be compiled with <a href="/docs/linux/man/1-cbootimage/">cbootimage</a>(1). </p>
 <h3>Platforms supported</h3>
 <dl>

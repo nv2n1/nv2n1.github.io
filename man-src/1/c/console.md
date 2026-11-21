@@ -1,4 +1,5 @@
 ---
+
 title: "console(1)"
 name: "console"
 section: "1"
@@ -9,12 +10,10 @@ description: "console – console server client program"
 
 <h2>NAME</h2>
 <p> console &#8211; console server client program</p>
-<h2>SYNOPSIS</h2>
 <p> <code>console</code> [<i>generic-args</i>] [<code>-aAfFsS</code>] <code>[</code>-e <i>esc</i>] <i>console</i><br />
  <code>console</code> [<i>generic-args</i>] [<code>-iIuwWx</code>] [<i>console</i>]<br />
  <code>console</code> [<i>generic-args</i>] [<code>-hPqQrRV</code>] [<code>&#8211;</code>[<code>bB</code>] <i>message</i>] [<code>-d</code> [<i>user</i>][<code>@</code><i>console</i>]] [<code>-t</code> [<i>user</i>][<code>@</code><i>console</i>] <i>message</i>] [<code>&#8211;</code>[<code>zZ</code>] <i>cmd</i>] </p>
 <p> <i>generic-args</i>: [<code>-7DEnUv</code>] [<code>-c</code> <i>cred</i>] [<code>-C</code> <i>config</i>] <code>[</code>-M <i>master</i>] <code>[</code>-p <i>port</i>] <code>[</code>-l <i>user</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Console</code> is used to manipulate console terminals remotely or to poll running <code><a href="/docs/linux/man/8-conserver/">conserver</a></code>(8) daemons for status information. </p>
 <p> In the first form above, <code>console</code> asks the user&#8217;s password before granting interactive access to a console (on a non-trusted system), since such a session may provide single-user access. If the server&#8217;s autocompletion feature is enabled, only as much of the console name as is required to identify it uniquely to the server is required. </p>
 <p> For non-interactive options, <code>console</code> outputs only the requested information and exits. </p>

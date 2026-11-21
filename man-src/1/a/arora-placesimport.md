@@ -1,4 +1,5 @@
 ---
+
 title: "arora-placesimport(1)"
 name: "arora-placesimport"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arora-placesimport/"
 description: "arora-placesimport – a tool for importing browser history from Firefox 3 and up"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>arora-placesinfo ~/.mozilla/firefox/[profile-dir]/places.sqlite</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>htmlToXBel</code> is a tool for importing browser history from Firefox 3 and up. </p>
 <h2>BUGS</h2>
 <p> Please report bugs to <i><a rel="nofollow" href="http://code.google.com/p/arora/issues/list">http://code.google.com/p/arora/issues/list</a></i>. </p>

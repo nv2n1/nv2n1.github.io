@@ -1,4 +1,5 @@
 ---
+
 title: "strace-log-merge(1)"
 name: "strace-log-merge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-strace-log-merge/"
 description: "strace-log-merge – merge strace -ff -tt output"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>STRACE_LOG</i> <code>&#8211;help</code><i>&nbsp;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>strace-log-merge</code> merges the output of <code>strace -ff -tt[t]</code> command, prepending PID to each line and sorting the result using time stamp as a key.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_string2_t(3)"
 name: "globus_rls_string2_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_rls_string2_t –"
 ---
 
 <p> String pair result.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> char * <code>s1</code> </p>
 <p> char * <code>s2</code> </p>

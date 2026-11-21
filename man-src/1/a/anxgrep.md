@@ -1,4 +1,5 @@
 ---
+
 title: "anxgrep(1)"
 name: "anxgrep"
 section: "1"
@@ -10,7 +11,6 @@ description: "anxgrep — Search for PATTERN in each annodex FILE or standard in
 <h2>NAME</h2>
 <p> anxgrep &#8212; Search for PATTERN in each annodex FILE or standard input.<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>anxgrep</code> [-E | &#8211;extended-regexp ] [-G | &#8211;basic-regexp ] [-i | &#8211;ignore-case ] [-v | &#8211;invert-match ] [-o <code>filename</code> | &#8211;output <code>filename</code> ] [&#8211;label <code>LABEL</code> ] [-q | &#8211;quiet | &#8211;silent ] [-L | &#8211;files-without-match ] [-l | &#8211;files-with-matches ] [-c | &#8211;count ] [-h | &#8211;help ] [&#8211;version ] filename</p>
 <h2>Description</h2>
 <p> <code>anxgrep</code> searches the CMML tracks of Annodex FILEs (or standard input if no files are named, or the file name &#8211; is given) for elements containing a match to the given PATTERN. By default, <code>anxgrep</code> prints the matching elements.<br />

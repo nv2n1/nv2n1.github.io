@@ -1,4 +1,5 @@
 ---
+
 title: "unsf(1)"
 name: "unsf"
 section: "1"
@@ -9,9 +10,7 @@ description: "unsf – break up SoundFont .sf2 files into GUS-type instrument pa
 
 <h2>NAME</h2>
 <p> unsf &#8211; break up SoundFont .sf2 files into GUS-type instrument patches. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>unsf</code> [<i>-v|-s|-m|-d|-n|-V</i>] [<i>-M &lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i>] [<i>-D &lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i>] <code>soundfont-file</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Unsf is a tool to convert SoundFont files into GUS patches. Some reasons you might want to do such a thing are: (1) Your midi player can use GUS patches but doesn&#8217;t know how to read soundfonts, (2) You want a convenient way of substituting patches or reassigning banks of instruments by editing GUS config files, or (3) You need to modify patches by changing amplitude, stripping envelopes, or make other changes that can easily be done by attaching options in config files. Or (4), my own reason, you might need to use a version of timidity covered under the Lessor GNU Public License and find that the versions of timidity that can read soundfonts are protected by the more restrictive GNU Public License (e.g., Timidity++ or kmidi, or the Alsaplayer midi plugin). </p>
 <p> Instrument samples embedded in soundfonts have a more complicated structure, and have more features, than GUS patches. So breaking a soundfont up into GUS patches loses information and quality, unless the GUS patch format is extended. The patch files produced by unsf do contain most of the information and structure they had as part of the original soundfont, but the extensions to GUS format are tucked away in hidden places, as they must be, to be compatible with programs expecting to see ordinary GUS patches. I&#8217;ll describe the extensions below. </p>
 <p> Unsf is easy to use. If you&#8217;re using a version of timidity, just put a soundfont into the directory where you keep patches &#8212; perhaps /usr/local/lib/timidity &#8212; then cd to that directory and say &quot;unsf filename.sf2&quot;. Unsf will create directories for each bank of instruments in the soundfont and put the patch files for all the instruments into the appropriate bank directories. The names of the directories and patch files are derived from the names they were given inside the soundfont. Unsf also creates a GUS type configuration file, which will be called &quot;&lt;filename&gt;.cfg&quot;, the &lt;filename&gt; part coming from the name of the original soundfont. Edit timidity.cfg by adding the line &quot;source &lt;filename&gt;.cfg&quot; and you&#8217;re ready to use the new patches. </p>

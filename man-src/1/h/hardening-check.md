@@ -1,4 +1,5 @@
 ---
+
 title: "hardening-check(1)"
 name: "hardening-check"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-hardening-check/"
 description: "hardening-check – check binaries for security hardening features"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> hardening-check [options] [<font SIZE="-1">ELF &#8230;</font>] </p>
 <p> Examine a given set of <font SIZE="-1">ELF</font> binaries and check for several security hardening features, failing if they are not all found.</p>
-<h2>DESCRIPTION</h2>
 <p> This utility checks a given list of <font SIZE="-1">ELF</font> binaries for several security hardening features that can be compiled into an executable. These features are:</p>
 <dl>
 <dt><code>Position Independent Executable</code></dt>

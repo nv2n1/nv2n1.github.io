@@ -1,4 +1,5 @@
 ---
+
 title: "dar_xform(1)"
 name: "dar_xform"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dar_xform/"
 description: "dar_xform – disk archive \"re-slicer\""
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dar_xform [options] [&lt;path&gt;/]source [&lt;path&gt;/]destination </p>
 <p> dar_xform -h </p>
 <p> dar_xform -V</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dar_xform</code> changes the size of slices of an existing archive. </p>
 <p> Source is the basename of the existing archive, destination is the basename of the archive to be created. If source basename is &quot;-&quot;, the archive is read from standard input. If the destination basename is &quot;-&quot;, the archive is written to standard output and -s option is not available. </p>
 <h2>OPTIONS</h2>

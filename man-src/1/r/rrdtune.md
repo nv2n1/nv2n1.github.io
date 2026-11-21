@@ -1,4 +1,5 @@
 ---
+
 title: "rrdtune(1)"
 name: "rrdtune"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdtune/"
 description: "rrdtune – Modify some basic properties of a Round Robin Database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>tune</code> <i>filename</i> [<code>&#8211;heartbeat</code>|<code>-h</code>&nbsp;<wbr><i>ds-name</i>:<i>heartbeat</i>] [<code>&#8211;minimum</code>|<code>-i</code>&nbsp;<wbr><i>ds-name</i>:<i>min</i>] [<code>&#8211;maximum</code>|<code>-a</code>&nbsp;<wbr><i>ds-name</i>:<i>max</i>] [<code>&#8211;data-source-type</code>|<code>-d</code>&nbsp;<wbr><i>ds-name</i>:<i></i><font SIZE="-1"><i>DST</i></font><i></i>] [<code>&#8211;data-source-rename</code>|<code>-r</code>&nbsp;<wbr><i>old-name</i>:<i>new-name</i>] [<code>&#8211;deltapos</code>&nbsp;<wbr><i>scale-value</i>] [<code>&#8211;deltaneg</code>&nbsp;<wbr><i>scale-value</i>] [<code>&#8211;failure-threshold</code>&nbsp;<wbr><i>failure-threshold</i>] [<code>&#8211;window-length</code>&nbsp;<wbr><i>window-length</i>] [<code>&#8211;alpha</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;beta</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;gamma</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;gamma-deviation</code>&nbsp;<wbr><i>adaption-parameter</i>] [<code>&#8211;smoothing-window</code>&nbsp;<wbr><i>fraction-of-season</i>] [<code>&#8211;smoothing-window-deviation</code>&nbsp;<wbr><i>fraction-of-season</i>] [<code>&#8211;aberrant-reset</code>&nbsp;<wbr><i>ds-name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The tune option allows you to alter some of the basic configuration values stored in the header area of a Round Robin Database (<font SIZE="-1"><code>RRD</code></font>). </p>
 <p> One application of the <code>tune</code> function is to relax the validation rules on an <font SIZE="-1"><code>RRD</code></font>. This allows to fill a new <font SIZE="-1"><code>RRD</code></font> with data available in larger intervals than what you would normally want to permit. Be very careful with tune operations for <font SIZE="-1">COMPUTE</font> data sources. Setting the <i>min</i>, <i>max</i>, and <i>heartbeat</i> for a <font SIZE="-1">COMPUTE</font> data source without changing the data source type to a non-COMPUTE <font SIZE="-1"><code>DST</code></font> <font SIZE="-1">WILL</font> corrupt the data source header in the <font SIZE="-1"><code>RRD</code></font>. </p>
 <p> A second application of the <code>tune</code> function is to set or alter parameters used by the specialized function <code>RRAs</code> for aberrant behavior detection.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-ctnstream(3)"
 name: "antlr3-ctnstream"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_TREE_PARSER_struct –"
 ---
 
 <p> Internal structure representing an element in a hash bucket.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3treeparser.h">antlr3treeparser.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>pANTLR3_COMMON_TREE_NODE_STREAM</code> <code>ctnstream</code><br />

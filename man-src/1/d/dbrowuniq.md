@@ -1,4 +1,5 @@
 ---
+
 title: "dbrowuniq(1)"
 name: "dbrowuniq"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbrowuniq/"
 description: "dbrowuniq – eliminate adjacent rows with duplicate fields, maybe counting"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbrowuniq [-cFLB] [uniquifying fields&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Eliminate adjacent rows with duplicate fields, perhaps counting them. Roughly equivalent to the Unix uniq command, but optionally only operating on the specified fields. </p>
 <p> By default, <i>all</i> columns must be unique. If column names are specified, only those columns must be unique and the first row with those columns is returned. </p>
 <p> Dbrowuniq eliminates only identical rows that <i>adjacent</i>. If you want to eliminate identical rows across the entirefile, you must make them adajcent, perhaps by using dbsort on your uniquifying field. (That is, the input with three lines a/b/a will produce three lines of output with both a&#8217;s, but if you dbsort it, it will become a/a/b and dbrowuniq will output a/b. </p>

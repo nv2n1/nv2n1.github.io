@@ -1,4 +1,5 @@
 ---
+
 title: "perl592delta(1)"
 name: "perl592delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl592delta/"
 description: "perl592delta – what is new for perl v5.9.2"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.9.1 and the 5.9.2 development releases. See perl590delta and perl591delta for the differences between 5.8.0 and 5.9.1.</p>
 <h2>Incompatible Changes</h2>
 <h3>Packing and <font SIZE="-1">UTF-8</font> strings</h3>

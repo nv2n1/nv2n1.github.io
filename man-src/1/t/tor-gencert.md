@@ -1,4 +1,5 @@
 ---
+
 title: "tor-gencert(1)"
 name: "tor-gencert"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tor-gencert/"
 description: "tor-gencert – Generate certs and keys for Tor directory authorities"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tor-gencert</code> [-h|&#8211;help] [-v] [-r|&#8211;reuse] [&#8211;create-identity-key] [-i <i>id_file</i>] [-c <i>cert_file</i>] [-m <i>num</i>] [-a <i>address</i>:<i>port</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tor-gencert</code> generates certificates and private keys for use by Tor directory authorities running the v3 Tor directory protocol, as used by Tor 0.2.0 and later. If you are not running a directory authority, you don&#8217;t need to use tor-gencert. </p>
 <p> Every directory authority has a long term authority <i>identity</i> <i>key</i> (which is distinct from the identity key it uses as a Tor server); this key should be kept offline in a secure location. It is used to certify shorter-lived <i>signing</i> <i>keys</i>, which are kept online and used by the directory authority to sign votes and consensus documents. </p>
 <p> After you use this program to generate a signing key and a certificate, copy those files to the keys subdirectory of your Tor process, and send Tor a SIGHUP signal. DO NOT COPY THE IDENTITY KEY.</p>

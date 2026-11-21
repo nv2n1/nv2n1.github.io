@@ -1,4 +1,5 @@
 ---
+
 title: "cross-gcc(1)"
 name: "cross-gcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cross-gcc/"
 description: "gcc – GNU project C and C++ compiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>]<br />
 &nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>-pg</code>]&nbsp;<wbr>[<code>-O</code><i>level</i>]<br />
 &nbsp;<wbr>[<code>-W</code><i>warn</i>&#8230;]&nbsp;<wbr>[<code>-Wpedantic</code>]<br />
@@ -16,7 +16,6 @@ description: "gcc – GNU project C and C++ compiler"
 &nbsp;<wbr>[<code>-f</code><i>option</i>&#8230;]&nbsp;<wbr>[<code>-m</code><i>machine-option</i>&#8230;]<br />
 &nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>outfile</i>]&nbsp;<wbr>[@<i>file</i>]&nbsp;<wbr><i>infile</i>&#8230; </p>
 <p> Only the most useful options are listed here; see below for the remainder. <code>g++</code> accepts mostly the same options as <code>gcc</code>.</p>
-<h2>DESCRIPTION</h2>
 <p> When you invoke <font SIZE="-1">GCC,</font> it normally does preprocessing, compilation, assembly and linking. The &#8220;overall options&#8221; allow you to stop this process at an intermediate stage. For example, the <code>-c</code> option says not to run the linker. Then the output consists of object files output by the assembler. </p>
 <p> Other options are passed on to one stage of processing. Some options control the preprocessor and others the compiler itself. Yet other options control the assembler and linker; most of these are not documented here, since you rarely need to use any of them. </p>
 <p> Most of the command-line options that you can use with <font SIZE="-1">GCC</font> are useful for C programs; when an option is only useful with another language (usually C<font SIZE="-2">++</font>), the explanation says so explicitly. If the description for a particular option does not mention a source language, you can use that option with all supported languages. </p>

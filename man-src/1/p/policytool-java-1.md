@@ -1,4 +1,5 @@
 ---
+
 title: "policytool-java-1(1)"
 name: "policytool-java-1"
 section: "1"
@@ -10,7 +11,6 @@ description: "policytool – PolicyTool Administration GUI Utility"
 <h2>Name</h2>
 <p> policytool &#8211; PolicyTool Administration GUI Utility </p>
 <p> <code>policytool</code> reads and writes a plain text policy file based on user input via the utility GUI.</p>
-<h2>SYNOPSIS</h2>
 <p> Run the policytool Administrator&#8217;s utility </p>
 <p> <tt>policytool</tt> </p>
 <p> Run policytool and load the specified policy file </p>
@@ -23,7 +23,6 @@ description: "policytool – PolicyTool Administration GUI Utility"
 <dt>filename</dt>
 <dd> The file name</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>policytool</code> is a GUI that allows users to create and manage policy files. For details, see <i>the Policytool Users Guide</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/PolicyGuide.html.">http://docs.oracle.com/javase/7/docs/technotes/guides/security/PolicyGuide.html.</a> </p>
 <h2>OPTIONS</h2>
 <dl>

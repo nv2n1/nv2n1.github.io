@@ -1,4 +1,5 @@
 ---
+
 title: "dpbstf(3)"
 name: "dpbstf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpbstf/"
 description: "dpbstf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpbstf</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
  <i></i><code>DPBSTF</code></p>

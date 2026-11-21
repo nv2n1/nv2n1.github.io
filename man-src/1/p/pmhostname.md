@@ -1,4 +1,5 @@
 ---
+
 title: "pmhostname(1)"
 name: "pmhostname"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmhostname – report hostname"
 
 <h2>NAME</h2>
 <p> <code>pmhostname</code> &#8211; report hostname</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmhostname</code> [<i>hostname</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmhostname</code> reports the name of the host <i>hostname</i> as returned by <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3). </p>
 <p> If <i>hostname</i> is not specified, then the local host name is retrieved using <code><a href="/docs/linux/man/2-gethostname/">gethostname</a></code>(2) and this is than passed to <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3). </p>
 <p> <code>pmhostname</code> provides a service for shell scripts that mimics the logic formerly used by Performance Co-Pilot applications when trying to determine the official name of a host. PCP applications no longer use DNS-based heuristics, and therefore this command is <i>deprecated</i>. </p>

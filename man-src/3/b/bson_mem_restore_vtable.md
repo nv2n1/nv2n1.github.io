@@ -1,4 +1,5 @@
 ---
+
 title: "bson_mem_restore_vtable(3)"
 name: "bson_mem_restore_vtable"
 section: "3"
@@ -9,11 +10,9 @@ description: "bson_mem_restore_vtable() – This function shall restore the defa
 
 <h2>NAME</h2>
 <p> bson_mem_restore_vtable() &#8211; This function shall restore the default memory allocator to be used by Libbson.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_mem_restore_vtable(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This function shall restore the default memory allocator to be used by Libbson. </p>
 <p> <code>NOTE</code></p>
 <dl>

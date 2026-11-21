@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-diff(1)"
 name: "docker-container-diff"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-container-diff/"
 description: "docker-container-diff – Inspect changes to files or directories on a container’s filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker container diff CONTAINER</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List the changed files and directories in a container᾿s filesystem since the container was created. Three different types of change are tracked: </p>
 <table BORDER>
 <tr VALIGN=top>

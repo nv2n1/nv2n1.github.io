@@ -1,4 +1,5 @@
 ---
+
 title: "qdel(1)"
 name: "qdel"
 section: "1"
@@ -9,7 +10,6 @@ description: "qdel – delete xxQS_NAMExx jobs from queues"
 
 <h2>SYNTAX</h2>
 <p> <code>qdel</code> [<code>-f</code>] [<code>-help</code>] [<code>-u</code> <i>wc_user_list</i>] [<i>wc_job_range_list</i>] [<code>-t</code> <i>task_id_range</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Qdel</i> provides a means for a user/operator/manager to delete one or more jobs. A manager/operator can delete jobs belonging to any user, while a regular user can only delete his or her own jobs. If a manager wants to delete another user&#8217;s job, the manager can specify the job id. A manager using a job name or pattern must also specify the user&#8217;s name via &quot;-u wc_user_list&quot;. A &quot;qdel wc_job_name&quot; will delete only the jobs of the calling user by default. <i>Qdel</i> deletes jobs in the order in which their job identifiers are presented. Find additional information concerning <i>wc_user_list</i> and <i>wc_job_list</i> in</p>
 <h2>OPTIONS</h2>
 <dl>

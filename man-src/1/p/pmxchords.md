@@ -1,4 +1,5 @@
 ---
+
 title: "pmxchords(1)"
 name: "pmxchords"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmxchords/"
 description: "pmxchords – This script processes pmx files with chord symbols, allowing for key transpositions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ texlua ] <code>pmxchords</code> { <i>option</i> | <i>jobname</i> [ .pmx ] } &#8230;</p>
 <dl>
 <dt>The default effect is to preprocess each pmx file so that chords are transposed as necessary, generating a temporary pmx file which is then processed by pmxab. Finally the resulting tex file is renamed to have the original jobname. The default filename for the temporary file is &lt;jobname&gt;_chtr.pmx.</dt>

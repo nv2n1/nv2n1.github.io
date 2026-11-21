@@ -1,4 +1,5 @@
 ---
+
 title: "ckrealloc(3)"
 name: "ckrealloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ckrealloc/"
 description: "Tcl_Alloc, Tcl_Free, Tcl_Realloc, Tcl_AttemptAlloc, Tcl_AttemptRealloc, ckalloc, ckfree, ckrealloc, attemptckalloc, attemptckrealloc – allocate or free heap memory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;tcl.h&gt;
 char *
@@ -30,7 +30,6 @@ attemptckrealloc(ptr, size)
 <dt>
 </dt><dd> char <i>*ptr</i> (in) Pointer to memory block to free or realloc. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> These procedures provide a platform and compiler independent interface for memory allocation. Programs that need to transfer ownership of memory blocks between Tcl and other modules should use these routines rather than the native <code>malloc()</code> and <code>free()</code> routines provided by the C run-time library. </p>
 <p> <code>Tcl_Alloc</code> returns a pointer to a block of at least <i>size</i> bytes suitably aligned for any use. </p>
 <p> <code>Tcl_Free</code> makes the space referred to by <i>ptr</i> available for further allocation. </p>

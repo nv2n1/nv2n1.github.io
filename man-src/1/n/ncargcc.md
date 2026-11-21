@@ -1,4 +1,5 @@
 ---
+
 title: "ncargcc(1)"
 name: "ncargcc"
 section: "1"
@@ -9,9 +10,7 @@ description: "ncargcc – Command for compiling C code that uses the NCAR Graphi
 
 <h2>NAME</h2>
 <p> ncargcc &#8211; Command for compiling C code that uses the NCAR Graphics low-level utilities</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ncargcc</code> [<code>-ngmath</code>] [<code>-smooth</code>] [<code>-quick</code>] [<code>-super</code>] [<code>-agupwrtx</code>] [<code>-ncarbd</code>] &#8230; [<code>-ngmathbd</code>] &#8230; [<code>-noX11</code>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <i>ncargcc</i> is a script that invokes the C compiler/linker with the proper NCAR Graphics LLU (low-level utility) libraries. Arguments presented above are associated with NCAR Graphics. All other arguments and options are identical to the cc command on your particular machine; arguments that include quoted strings may have to be enclosed in single quotes. </p>
 <p> NOTE: <i>ncargcc</i> cannot be used to compile NCAR Graphics C programs that call the HLUs (high-level utilities). You must use <i>nhlcc</i> instead. See the <i>nhlcc</i> man page for more information. </p>
 <p> If you don&#8217;t want to use <i>ncargcc</i>, you can just type it on the command line to see what gets included in the link line, and then you can add this information to your own Makefile or script. It is important to note that you must define the macro <i>NeedFuncProto</i> in order for function prototyping to work correctly. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "stgsy2(3)"
 name: "stgsy2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stgsy2/"
 description: "stgsy2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stgsy2</code> (TRANS, IJOB, M, N, A, LDA, B, LDB, C, LDC, D, LDD, E, LDE, F, LDF, SCALE, RDSUM, RDSCAL, IWORK, PQ, INFO)<br />
  <i></i><code>STGSY2</code> solves the generalized Sylvester equation (unblocked algorithm).</p>

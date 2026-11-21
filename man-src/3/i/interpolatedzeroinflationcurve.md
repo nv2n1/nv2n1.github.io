@@ -1,4 +1,5 @@
 ---
+
 title: "interpolatedzeroinflationcurve(3)"
 name: "interpolatedzeroinflationcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolatedzeroinflationcurve/"
 description: "ql/termstructures/inflation/interpolatedzeroinflationcurve.hpp – Inflation term structure based on the interpolation of zero rates."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/inflationtermstructure.hpp&gt;<br />
  #include &lt;ql/math/interpolations/linearinterpolation.hpp&gt;<br />
  #include &lt;ql/math/comparison.hpp&gt;<br />

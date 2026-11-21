@@ -1,4 +1,5 @@
 ---
+
 title: "libinnhist(3)"
 name: "libinnhist"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libinnhist/"
 description: "his – routines for managing INN history"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;inn/history.h&gt;
 struct history;
@@ -47,7 +47,6 @@ struct histstats HISstats(struct history *history);
 const char *HISerror(struct history *history);
 bool HISctl(struct history *history, int request, void *val);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These functions provide access to the <font SIZE="-1">INN</font> history database. They maintain key/value pairs in an opaque database whilst providing for expiry of outdated information. </p>
 <p> The history structure is an opaque handle returned from HISopen. </p>
 <p> The <code>HISopen</code> function opens the history file designated by <i>path</i> using the mode <i>flags</i> using the specified <i>method</i>. <i>flags</i> may be <font SIZE="-1"><code>HIS_RDONLY</code></font> to indicate that read-only access to the history database is desired, or <font SIZE="-1"><code>HIS_RDWR</code></font> for read/write access. History methods are defined at build time; the history method currently available is &#8220;hisv6&#8221;. On success a newly initialised history handle is returned, or <font SIZE="-1"><code>NULL</code></font> on failure. </p>

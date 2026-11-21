@@ -1,4 +1,5 @@
 ---
+
 title: "postcat(1)"
 name: "postcat"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-postcat/"
 description: "postcat – show Postfix queue file contents"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 postcat[-bdehnoqv][-c config_dir][files...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postcat/">postcat</a></code>(1) command prints the contents of the named <i>files</i> in human-readable form. The files are expected to be in Postfix queue file format. If no <i>files</i> are specified on the command line, the program reads from standard input. </p>
 <p> By default, <code><a href="/docs/linux/man/1-postcat/">postcat</a></code>(1) shows the envelope and message content, as if the options <code>-beh</code> were specified. To view message content only, specify <code>-bh</code> (Postfix 2.7 and later). </p>
 <p> Options:</p>

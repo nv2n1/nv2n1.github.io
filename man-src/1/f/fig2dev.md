@@ -1,4 +1,5 @@
 ---
+
 title: "fig2dev(1)"
 name: "fig2dev"
 section: "1"
@@ -6,12 +7,11 @@ letter: "f"
 url: "/docs/linux/man/1-fig2dev/"
 description: "fig2dev – translates Fig code to various graphics languages"
 ---
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>fig2dev</code> [<code>-L</code><i>language</i>] [<code>-m</code><i>mag</i>] [<code>-s</code><i>fsize</i>] [<code>-Z</code><i>maxdimension</i>] [<code>-D</code><i>+/-rangelist</i> [<code>-K</code>]] [<i>other options</i>] [<i>fig-file</i> [<i>out-file</i>]] </dt>
 </dl>
 <p> <code>fig2dev -h</code>|<code>-V</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fig2dev</code> </p>
 <dd> <p> translates fig code in the named <i>fig-file</i> into the specified graphics <i>language</i> and puts them in <i>out-file.</i> The graphics language is inferred from the suffix of <i>out-file,</i> or it must be given with the <code>-L</code> option. The default <i>fig-file</i> and <i>out-file</i> are standard input and standard output, respectively. A minus (-) in place of <i>fig-file</i> or <i>out-file</i> also denotes either standard input or standard output. </p>
 <p> Xfig (Facility for Interactive Generation of figures) is a screen-oriented tool which runs under the X Window System, and allows the user to draw and manipulate objects interactively. This version of fig2dev is compatible with xfig versions 1.3, 1.4, 2.0, 2.1, 3.0, 3.1 and 3.2. </p>

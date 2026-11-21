@@ -1,4 +1,5 @@
 ---
+
 title: "docker-stack-services(1)"
 name: "docker-stack-services"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-stack-services/"
 description: "docker-stack-services – List the services in the stack"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker stack services [OPTIONS] STACK</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List the services in the stack </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

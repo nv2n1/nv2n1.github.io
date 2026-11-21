@@ -1,4 +1,5 @@
 ---
+
 title: "euare-releaserole(1)"
 name: "euare-releaserole"
 section: "1"
@@ -9,9 +10,7 @@ description: "euare-releaserole – Release IAM role credentials"
 
 <h2>NAME</h2>
 <p> euare-releaserole &#8211; Release IAM role credentials</p>
-<h2>SYNOPSIS</h2>
 <p> euare-releaserole [-c | <code>-s]</code> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</p>
-<h2>DESCRIPTION</h2>
 <p> Release IAM role credentials</p>
 <h2>DESCRIPTION</h2>
 <p> The euare-releaserole utility removes the credentials created by euareassumerole(1) by outputting shellcode that deletes the environment variables it creates. Use it inside an eval command to make this process seamless:</p>

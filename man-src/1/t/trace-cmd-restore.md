@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-restore(1)"
 name: "trace-cmd-restore"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-restore/"
 description: "trace-cmd-restore – restore a failed trace record"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd restore</code> [<i>OPTIONS</i>] [<i>command</i>] cpu-file [cpu-file &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) restore command will restore a crashed <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1) file. If for some reason a trace-cmd record fails, it will leave a the per-cpu data files and not create the final trace.dat file. The trace-cmd restore will append the files to create a working trace.dat file that can be read with <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1). </p>
 <p> When trace-cmd record runs, it spawns off a process per CPU and writes to a per cpu file usually called <i>trace.dat.cpuX</i>, where X represents the CPU number that it is tracing. If the -o option was used in the trace-cmd record, then the CPU data files will have that name instead of the <i>trace.dat</i> name. If a unexpected crash occurs before the tracing is finished, then the per CPU files will still exist but there will not be any trace.dat file to read from. trace-cmd restore will allow you to create a trace.dat file with the existing data files.</p>
 <h2>OPTIONS</h2>

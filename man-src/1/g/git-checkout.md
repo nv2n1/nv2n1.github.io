@@ -1,4 +1,5 @@
 ---
+
 title: "git-checkout(1)"
 name: "git-checkout"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-checkout/"
 description: "git-checkout – Switch branches or restore working tree files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git checkout[-q][-f][-m][&lt;branch&gt;] git checkout[-q][-f][-m]-- detach[&lt;branch&gt;] git checkout[-q][-f][-m][--detach]&lt;commit&gt;
         git checkout[-q][-f][-m][[-b | -B | --orphan]&lt;new_branch&gt;][&lt;start_point&gt;] git checkout[-f | --ours | --theirs | -m | --conflict = &lt;style&gt;][&lt;tree - ish&gt;][--]&lt;pathspec&gt;... git checkout[-f | --ours | --theirs | -m | --conflict = &lt;style&gt;][&lt;tree - ish&gt;]-- pathspec - from - file = &lt;file&gt;[--pathspec - file - nul] git checkout(-p | --patch)[&lt;tree - ish&gt;][--][&lt;pathspec&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Updates files in the working tree to match the version in the index or the specified tree. If no pathspec was given, <i>git checkout</i> will also update <code>HEAD</code> to set the specified branch as the current branch. </p>
 <p> <i>git checkout</i> [&lt;branch&gt;]</p>
 <dl>

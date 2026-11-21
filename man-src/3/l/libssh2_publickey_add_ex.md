@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_publickey_add_ex(3)"
 name: "libssh2_publickey_add_ex"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-libssh2_publickey_add_ex/"
 
  libssh2_publickey_add_ex - Add a public key entry
 
-<h2>SYNOPSIS</h2>
-
- #include &lt;libssh2.h&gt; 
+#include &lt;libssh2.h&gt; 
 
  int libssh2_publickey_add_ex(LIBSSH2_PUBLICKEY *pkey, const unsigned char *name, 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unsigned long name_len, const unsigned char&nbsp;<wbr>*blob, 
@@ -20,9 +19,7 @@ url: "/docs/linux/man/3-libssh2_publickey_add_ex/"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unsigned long num_attrs, 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const libssh2_publickey_attribute attrs[]) 
 
-<h2>DESCRIPTION</h2>
-
- TBD
+TBD
 
 <h2>RETURN VALUE</h2>
 

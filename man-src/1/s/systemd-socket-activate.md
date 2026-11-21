@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-socket-activate(1)"
 name: "systemd-socket-activate"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-systemd-socket-activate/"
 description: "systemd-socket-activate – Test socket activation of daemons"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-socket-activate</code> [OPTIONS&#8230;] <i>daemon</i> [OPTIONS&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-socket-activate</code></p>
 <dd>may be used to launch a socket-activated service program from the command line for testing purposes. It may also be used to launch individual instances of the service program per connection. </dd>
 <p> The daemon to launch and its options should be specified after options intended for <code>systemd-socket-activate</code>. </p>

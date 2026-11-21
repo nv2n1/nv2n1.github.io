@@ -1,4 +1,5 @@
 ---
+
 title: "qsched(1)"
 name: "qsched"
 section: "1"
@@ -10,7 +11,6 @@ description: "qsched, process-scheduler-log – show scheduling information on r
 <h2>SYNTAX</h2>
 <p> <code>qsched</code> [<code>-u&nbsp;</code><i>user</i>|<code>&#8211;user=</code><i>user</i>] [<code>-a</code>|<code>&#8211;all</code>] [<code>-j&nbsp;</code><i>jid_list</i>|<code>&#8211;jid=</code><i>jid_list</i>] [<code>-f</code>|<code>&#8211;full</code>] [<code>-s</code> <code>j</code>|<code>&#8211;sort=j</code>] [<code>-q</code>|<code>&#8211;queues</code>] [<code>-d</code>|<code>&#8211;debug</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />
  <code>process-scheduler-log</code> [<code>-v</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>qsched</code> reports resources being reserved for jobs on the basis of the <i>schedule</i> file, which is processed by <code>process-scheduler-log</code>, which runs continuously. Generating <i>schedule</i> requires setting <code>MONITOR=1</code> in the <code>params</code> parameter of the scheduler (see </p>
 <p> <code>process-scheduler-log</code> should simply be started in the background as it does not currently daemonize itself. Alternatively, it could be run under or adapted to run as a global load sensor (see It needs <i>SGE_ROOT</i> and <i>SGE_CELL</i> set in the environment when it starts. </p>
 <p> <code>qsched</code> and <code>process-scheduler-log</code> both potentially need editing to configure for the local installation, particularly the definition of <code>$trim_string</code> in <code>qsched</code>.</p>

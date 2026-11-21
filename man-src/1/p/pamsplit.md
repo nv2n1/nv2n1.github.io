@@ -1,4 +1,5 @@
 ---
+
 title: "pamsplit(1)"
 name: "pamsplit"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pamsplit/"
 description: "pamsplit – split a multi-image Netpbm file into single-image files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamsplit</code> </p>
 <p> [<i>netpbmfile</i> </p>
 <p> [<i> output_file_pattern</i>]] </p>
 <p> [<code>-padname=</code><i>n</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamsplit</code> reads a PNM or PAM stream as input. It copies each image in the input into a separate file, in the same format. </p>
 <p> <i>netpbmfile</i> is the file name of the input file, or <code>&#8211;</code> to indicate Standard Input. The default is Standard Input. </p>

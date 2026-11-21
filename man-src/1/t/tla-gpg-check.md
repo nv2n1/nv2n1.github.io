@@ -1,4 +1,5 @@
 ---
+
 title: "tla-gpg-check(1)"
 name: "tla-gpg-check"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tla-gpg-check/"
 description: "tla-gpg-check – GNU Arch revision signature checker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tla-gpg-check</code> gpg_command=&quot;<i>gpg_command</i>&quot;</p>
-<h2>DESCRIPTION</h2>
 <p> Checks whether a revision is correctly signed. This is indended to be used in tla&#8217;s signing hooks. It calls <i>gpg_command</i> on the standard input and makes sure only one signed message is given. </p>
 <p> Here is how to setup a simple automatic tla signature check: </p>
 <pre><code>

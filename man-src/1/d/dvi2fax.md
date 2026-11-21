@@ -1,4 +1,5 @@
 ---
+
 title: "dvi2fax(1)"
 name: "dvi2fax"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dvi2fax/"
 description: "dvi2fax – convert a TeX DVI file to G3 fax format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvi2fax</code> [<code>-hi</code>|<code>-lo</code>] <i>file</i>[.dvi] [<i>options for dvips</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dvi2fax</code> uses <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1) to convert a TeX DVI file to PostScript, then <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to convert the PostScript to G3 fax file format.</p>
 <h2>OPTIONS</h2>
 <p> <code>-hi</code> use high fax resolution (204&#215;196 dpi) (default). </p>

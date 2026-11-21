@@ -1,4 +1,5 @@
 ---
+
 title: "bind_textdomain_codeset(3)"
 name: "bind_textdomain_codeset"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-bind_textdomain_codeset/"
 description: "bind_textdomain_codeset – set encoding of message translations"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libintl.h&gt;
 char *bind_textdomain_codeset(const char *domainname,
                               const char *codeset);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>bind_textdomain_codeset</code> function sets the output codeset for message catalogs for domain <i>domainname</i>. </p>
 <p> A message domain is a set of translatable <i>msgid</i> messages. Usually, every software package has its own message domain. </p>
 <p> By default, the <code>gettext</code> family of functions returns translated messages in the locale&#8217;s character encoding, which can be retrieved as <code>nl_langinfo(CODESET)</code>. The need for calling <code>bind_textdomain_codeset</code> arises for programs which store strings in a locale independent way (e.g. UTF-8) and want to avoid an extra character set conversion on the returned translated messages. </p>

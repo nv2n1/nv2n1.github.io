@@ -1,4 +1,5 @@
 ---
+
 title: "mbim-network(1)"
 name: "mbim-network"
 section: "1"
@@ -9,9 +10,7 @@ description: "mbim-network – Simple network management of MBIM devices"
 
 <h2>NAME</h2>
 <p> mbim-network &#8211; Simple network management of MBIM devices</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mbim-network</code> [<i>,OPTIONS/</i>] [<i>,DEVICE/</i>] [<i>,COMMAND/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Simple network management of MBIM devices</p>
 <h3>Commands:</h3>
 <dl>

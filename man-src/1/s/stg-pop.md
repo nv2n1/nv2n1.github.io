@@ -1,4 +1,5 @@
 ---
+
 title: "stg-pop(1)"
 name: "stg-pop"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-pop/"
 description: "stg-pop – Pop one or more patches from the stack"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg pop[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Pop the topmost patch or a range of patches from the stack. The command fails if there are conflicts or local changes (and &#8211;keep was not specified). </p>
 <p> A series of pop and push operations are performed so that only the patches passed on the command line are popped from the stack. Some of the push operations may fail because of conflicts (&quot;stg undo&quot; would revert the last push operation).</p>
 <h2>OPTIONS</h2>

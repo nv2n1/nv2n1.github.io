@@ -1,4 +1,5 @@
 ---
+
 title: "esdcat(1)"
 name: "esdcat"
 section: "1"
@@ -9,9 +10,7 @@ description: "esdcat – play a sound file from stdin"
 
 <h2>NAME</h2>
 <p> esdcat &#8211; play a sound file from <code>stdin</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>esdcat</code> [-<code>s </code><i>hostname</i>:<i>port</i>] [<tt>&quot;-n&quot;</tt> name] [-<code>b</code>] [-<code>h</code>] [-<code>m</code>] [-<code>r </code><i>freq</i>] &lt; file</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>esdcat</code> application pipes data from <code>stdin </code>to the sound device, using the Enlightened Sound Daemon (<code>esd</code>). </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported: </p>

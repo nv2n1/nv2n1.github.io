@@ -1,4 +1,5 @@
 ---
+
 title: "perlfaq9(1)"
 name: "perlfaq9"
 section: "1"
@@ -9,7 +10,6 @@ description: "perlfaq9 – Web, Email and Networking"
 
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
-<h2>DESCRIPTION</h2>
 <p> This section deals with questions related to running web sites, sending and receiving email as well as general networking.</p>
 <h3>Should I use a web framework?</h3>
 <p> Yes. If you are building a web site with any level of interactivity (forms / users / databases), you will want to use a framework to make handling requests and responses easier. </p>

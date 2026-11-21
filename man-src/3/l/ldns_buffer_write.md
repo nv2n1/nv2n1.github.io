@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_write(3)"
 name: "ldns_buffer_write"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_buffer_write_at, ldns_buffer_write_at, ldns_buffer_write, ldn
 
 <h2>NAME</h2>
 <p> ldns_buffer_write_at, ldns_buffer_write_at, ldns_buffer_write, ldns_buffer_write_string_at, ldns_buffer_write_string, ldns_buffer_write_u8_at, ldns_buffer_write_u8, ldns_buffer_write_u16_at, ldns_buffer_write_u16, ldns_buffer_read_at, ldns_buffer_read, ldns_buffer_read_u8_at, ldns_buffer_read_u8, ldns_buffer_read_u16_at, ldns_buffer_read_u16, ldns_buffer_read_u32_at, ldns_buffer_read_u32 </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -30,7 +30,6 @@ description: "ldns_buffer_write_at, ldns_buffer_write_at, ldns_buffer_write, ldn
 <p> uint16_t ldns_buffer_read_u16(ldns_buffer *buffer); </p>
 <p> uint32_t ldns_buffer_read_u32_at(ldns_buffer *buffer, size_t at); </p>
 <p> uint32_t ldns_buffer_read_u32(ldns_buffer *buffer); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_buffer_write_at</i>()</dt>
 <dd>writes the given data to the buffer at the specified position .br <code>buffer</code>: the buffer .br <code>at</code>: the position (in number of bytes) to write the data at .br <code>data</code>: pointer to the data to write to the buffer .br <code>count</code>: the number of bytes of data to write</dd></dl>

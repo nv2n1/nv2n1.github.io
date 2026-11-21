@@ -1,4 +1,5 @@
 ---
+
 title: "gstack(1)"
 name: "gstack"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gstack/"
 description: "gstack – print a stack trace of a running process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gstack</code> pid </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gstack</code> attaches to the active process named by the <code>pid</code> on the command line, and prints out an execution stack trace. If ELF symbols exist in the binary (usually the case unless you have run <a href="/docs/linux/man/1-strip/">strip</a>(1)), then symbolic addresses are printed as well. </p>
 <p> If the process is part of a thread group, then <code>gstack</code> will print out a stack trace for each of the threads in the group. </p>
 <h2>SEE ALSO</h2>

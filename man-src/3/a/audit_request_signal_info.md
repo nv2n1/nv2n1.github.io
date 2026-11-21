@@ -1,4 +1,5 @@
 ---
+
 title: "audit_request_signal_info(3)"
 name: "audit_request_signal_info"
 section: "3"
@@ -9,10 +10,8 @@ description: "audit_request_signal_info – Request signal info for the audit sy
 
 <h2>NAME</h2>
 <p> audit_request_signal_info &#8211; Request signal info for the audit system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> int audit_request_signal_info(int fd); </p>
-<h2>DESCRIPTION</h2>
 <p> audit_request_signal_info requests that the kernel send information about the sender of a signal to the audit daemon. The sinal info structure is as follows: </p>
 <pre><code>
 struct audit_sig_info {

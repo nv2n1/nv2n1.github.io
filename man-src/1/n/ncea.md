@@ -1,4 +1,5 @@
 ---
+
 title: "ncea(1)"
 name: "ncea"
 section: "1"
@@ -11,7 +12,6 @@ description: "ncea – netCDF Ensemble Averager"
 <p> ncea &#8211; netCDF Ensemble Averager</p>
 <h2>SYNTAX</h2>
 <p> ncea [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[&#8211;cnk_byt</i> <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]]] [&#8211;dbl|flt] [-F] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-h] [&#8211;hdf] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [&#8211;msa] [-n <i>loop</i>] [&#8211;no_tmp_fl] [&#8211;nsm_sfx <i>grp_sfx</i>] [-O] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [-t <i>thr_nbr</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-X <i>box</i>] [-x] [-y <i>op_typ</i>] <i>input-files</i> <i>output-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ncea</code> performs gridpoint averages of variables across an arbitrary number (an <i>ensemble</i>) of input files, with each file receiving an equal weight in the average. Each variable in the <i>output-file</i> will be the same size as the same variable in any one of the in the <i>input-files</i>, and all <i>input-files</i> must be the same size. Whereas <code>ncra</code> only performs averages over the record dimension (e.g., time), and weights each record in the record dimension evenly, <code>ncea</code> averages entire files, and weights each file evenly. All dimensions, including the record dimension, are treated identically and preserved in the <i>output-file</i>. </p>
 <p> The file is the logical unit of organization for the results of many scientific studies. Often one wishes to generate a file which is the gridpoint average of many separate files. This may be to reduce statistical noise by combining the results of a large number of experiments, or it may simply be a step in a procedure whose goal is to compute anomalies from a mean state. In any case, when one desires to generate a file whose properties are the mean of all the input files, then <code>ncea</code> is the operator to use. <code>ncea</code> assumes coordinate variable are properties common to all of the experiments and so does not average them across files. Instead, <code>ncea</code> copies the values of the coordinate variables from the first input file to the output file.</p>
 <h2>EXAMPLES</h2>

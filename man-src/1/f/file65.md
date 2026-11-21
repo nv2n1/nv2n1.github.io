@@ -1,4 +1,5 @@
 ---
+
 title: "file65(1)"
 name: "file65"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-file65/"
 description: "file65 – print information for o65 object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>file65</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>file65</code> prints file information for files in the o65 object format. </p>
 <h2>OPTIONS</h2>
 <dl>

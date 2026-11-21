@@ -1,4 +1,5 @@
 ---
+
 title: "git-fetch-pack(1)"
 name: "git-fetch-pack"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-git-fetch-pack/"
 description: "git-fetch-pack – Receive missing objects from another repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git fetch - pack[--all][--quiet | -q][--keep | -k][--thin][--include - tag]
                 [--upload - pack = &lt;git - upload - pack&gt;]
                 [--depth = &lt;n&gt;][--no - progress]
                 [-v]&lt;repository&gt;[&lt;refs&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Usually you would want to use <i>git fetch</i>, which is a higher level wrapper of this command, instead. </p>
 <p> Invokes <i>git-upload-pack</i> on a possibly remote repository and asks it to send objects missing from this repository, to update the named heads. The list of commits available locally is found out by scanning the local refs/ hierarchy and sent to <i>git-upload-pack</i> running on the other end. </p>
 <p> This command degenerates to download everything to complete the asked refs from the remote side when the local side does not have a common ancestor commit.</p>

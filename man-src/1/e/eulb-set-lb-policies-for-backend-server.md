@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-set-lb-policies-for-backend-server(1)"
 name: "eulb-set-lb-policies-for-backend-server"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-set-lb-policies-for-backend-server – Change the policies as
 
 <h2>NAME</h2>
 <p> eulb-set-lb-policies-for-backend-server &#8211; Change the policies associated with a port on which load-balanced back end servers listen.</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-set-lb-policies-for-backend-server <code>-i</code> PORT <code>-p</code> POLICY1,POLICY2,&#8230;</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Change the policies associated with a port on which load-balanced back end servers listen.</p>
 <h3>positional arguments:</h3>
 <dl>

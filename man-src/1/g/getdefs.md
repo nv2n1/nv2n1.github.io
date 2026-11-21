@@ -1,4 +1,5 @@
 ---
+
 title: "getdefs(1)"
 name: "getdefs"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-getdefs/"
 description: "getdefs – AutoGen Definition Extraction Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>getdefs</code> [<i>opt-name</i>[<code>=</code><i>value</i>]]&#8230; </p>
 <p> All arguments are named options. </p>
 <p> If no <code>input</code> argument is provided or is set to simply &quot;-&quot;, and if <code>stdin</code> is not a <code>tty</code>, then the list of input files will be read from <code>stdin</code>.</p>
-<h2>DESCRIPTION</h2>
 <p> This program extracts AutoGen definitions from a list of source files. Definitions are delimited by <code>/*=&lt;entry-type&gt; &lt;entry-name&gt;fP and =*/fP. </code></p>
 <h2>OPTIONS</h2>
 <h3>Specify which definitions are of interest and what to say about them</h3>

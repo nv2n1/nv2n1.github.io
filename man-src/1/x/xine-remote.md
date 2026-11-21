@@ -1,4 +1,5 @@
 ---
+
 title: "xine-remote(1)"
 name: "xine-remote"
 section: "1"
@@ -9,9 +10,7 @@ description: "xine-remote – a small tool to connect xine remote control server
 
 <h2>NAME</h2>
 <p> xine-remote &#8211; a small tool to connect xine remote control server.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xine-remote</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>xine-remote</code> tool. </p>
 <p> <code>xine-remote</code> can replace a <i>raw</i> telnet connection to a xine remote control server. It use the <code>readline</code> facilities (completion, vi/emacs shortcuts, command history, etc&#8230;). By default, it try to connect the localhost, using the default port (see <i><a href="/docs/linux/man/1-xine/">xine</a></i>(1)).</p>
 <h2>OPTIONS</h2>

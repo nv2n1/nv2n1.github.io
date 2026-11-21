@@ -1,4 +1,5 @@
 ---
+
 title: "gkermit(1)"
 name: "gkermit"
 section: "1"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/1-gkermit/"
 
  gkermit - G-Kermit (GNU Kermit) 1.00 file transfer software.
 
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 gkermit[options] - s file(s)
 Send files
         gkermit[options] -
@@ -22,9 +21,7 @@ Get files
     r Receive files
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- G-Kermit is a UNIX program for transferring files using the Kermit protocol. G-Kermit is a product of Kermit Project at Columbia University. It is free software under the GNU Public License. See the COPYING file for details. 
+G-Kermit is a UNIX program for transferring files using the Kermit protocol. G-Kermit is a product of Kermit Project at Columbia University. It is free software under the GNU Public License. See the COPYING file for details. 
 
 <h3>INVOKING G-KERMIT</h3>
 

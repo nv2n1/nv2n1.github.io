@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-show(1)"
 name: "debconf-show"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-debconf-show/"
 description: "debconf-show – query the debconf database"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 debconf - show packagename[...][--db = dbname] debconf - show-- listowners[--db = dbname] debconf - show-- listdbs
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>debconf-show</code> lets you query the debconf database in different ways. </p>
 <p> The most common use is &#8220;debconf-show packagename&#8221;, which displays all items in the debconf database owned by a given package, and their current values. Questions that have been asked already are prefixed with an &#8216;*&#8217;. </p>
 <p> This can be useful as a debugging aid, and especially handy in bug reports involving a package&#8217;s use of debconf.</p>

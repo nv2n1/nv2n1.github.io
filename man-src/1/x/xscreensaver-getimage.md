@@ -1,4 +1,5 @@
 ---
+
 title: "xscreensaver-getimage(1)"
 name: "xscreensaver-getimage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xscreensaver-getimage/"
 description: "xscreensaver-getimage – put some randomly-selected image on the root window"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-getimage</code> [-display <i>host:display.screen</i>] [&#8211;verbose] window-id [pixmap-id]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xscreensaver-getimage</i> program is a helper program for the xscreensaver hacks that manipulate images. This is not a user-level command. </p>
 <p> This program selects a random image, and puts it on the specified window or pixmap. This image might be a snapshot of the desktop; or a frame captured from the system&#8217;s video input; or a randomly-selected image from disk. </p>
 <p> If only a window ID is specified, the image will be painted there. If both a window ID and a pixmap ID are specified, then the image will be painted on the pixmap; and the window <i>may</i> be modified as a side-effect.</p>

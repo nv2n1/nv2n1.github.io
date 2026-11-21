@@ -1,4 +1,5 @@
 ---
+
 title: "mh-mkstemp(1)"
 name: "mh-mkstemp"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mh-mkstemp/"
 description: "mkstemp – create a temporary file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/mkstemp</code> [<code>-directory</code> <i>directory</i>] [<code>-prefix</code> <i>prefix</i>] [<code>-suffix</code> <i>suffix</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mkstemp</code></p>
 <dd>creates a temporary file using <i><a href="/docs/linux/man/3-mkstemp/">mkstemp</a></i>(3), or if the <code>-suffix</code> switch is available and used, <i><a href="/docs/linux/man/3-mkstemps/">mkstemps</a></i>(3). The file name identifies a unique, newly created file, and always contains 6 characters that appear to be random. </dd>
 <p> The <code>-directory</code> switch specifies a <i>directory</i> in which to create the file. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gearman(1)"
 name: "gearman"
 section: "1"
@@ -10,7 +11,6 @@ description: "gearman – Gearmand Documentation, http://gearman.info/"
 <h2>NAME</h2>
 <p> gearman &#8211; Gearmand Documentation, <a rel="nofollow" href="http://gearman.info/">http://gearman.info/</a> </p>
 <p> Command line client for Gearmand</p>
-<h2>SYNOPSIS</h2>
 <p> <code>Common options</code></p>
 <dl>
 <dt><code>-f &lt;function&gt;</code></dt>
@@ -47,7 +47,6 @@ description: "gearman – Gearmand Documentation, http://gearman.info/"
 <dd> Number of jobs for worker to run before exiting</dd>
 <dt><code>-w</code></dt>
 <dd> Run in worker mode</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> With gearman you can run client and worker functions from the command line. </p>
 <p> The environmental variable GEARMAN_SERVER can be used to specify multiple gearmand servers. Please see the c:func:&#8217;gearman_client_add_servers&#8217; for an explanation of the required syntax.</p>
 <h2>HOME</h2>

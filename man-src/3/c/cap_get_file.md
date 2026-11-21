@@ -1,4 +1,5 @@
 ---
+
 title: "cap_get_file(3)"
 name: "cap_get_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "cap_get_file, cap_set_file, cap_get_fd, cap_set_fd – capability 
 
 <h2>NAME</h2>
 <p> cap_get_file, cap_set_file, cap_get_fd, cap_set_fd &#8211; capability manipulation on files</p>
-<h2>SYNOPSIS</h2>
 <p> <code></p>
 <p> </code> <code>#include &lt;sys/capability.h&gt;</code> </p>
 <p> <code>cap_t cap_get_file(const char *</code><i>path_p</i><code>);</code> </p>
@@ -17,7 +17,6 @@ description: "cap_get_file, cap_set_file, cap_get_fd, cap_set_fd – capability 
 <p> <code>cap_t cap_get_fd(int </code><i>fd</i><code>);</code> </p>
 <p> <code>int cap_set_fd(int </code><i>fd</i><code>, cap_t </code><i>caps</i><code>);</code> </p>
 <p> Link with <i>-lcap</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>cap_get_file</code>() and <code>cap_get_fd</code>() allocate a capability state in working storage and set it to represent the capability state of the pathname pointed to by <i>path_p</i> or the file open on descriptor <i>fd</i>. These functions return a pointer to the newly created capability state. The effects of reading the capability state from any file other than a regular file is undefined. The caller should free any releasable memory, when the capability state in working storage is no longer required, by calling <code>cap_free</code>() with the used <i>cap_t</i> as an argument. </p>
 <p> <code>cap_set_file</code>() and <code>cap_set_fd</code>() set the values for all capability flags for all capabilities for the pathname pointed to by <i>path_p</i> or the file open on descriptor <i>fd</i>, with the capability state identified by <i>cap_p</i>. The new capability state of the file is completely determined by the contents of <i>cap_p</i>. A NULL value for <i>cap_p</i> is used to indicate that capabilities for the file should be deleted. For these functions to succeed, the calling process must have the effective capability, <code>CAP_SETFCAP</code>, enabled and either the effective user ID of the process must match the file owner or the calling process must have the <code>CAP_FOWNER</code> flag in its effective capability set. The effects of writing the capability state to any file type other than a regular file are undefined.</p>
 <h2>RETURN VALUE</h2>

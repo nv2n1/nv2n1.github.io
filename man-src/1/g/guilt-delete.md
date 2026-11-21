@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-delete(1)"
 name: "guilt-delete"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-delete/"
 description: "guilt-delete – Delete a patch"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-delete</i> [-f] &lt;patchname&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Delete an unapplied patch from the series.</p>
 <h2>OPTIONS</h2>
 <p> -f</p>

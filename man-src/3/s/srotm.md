@@ -1,4 +1,5 @@
 ---
+
 title: "srotm(3)"
 name: "srotm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-srotm/"
 description: "srotm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>srotm</code> (N, SX, INCX, SY, INCY, SPARAM)<br />
  <i></i><code>SROTM</code></p>

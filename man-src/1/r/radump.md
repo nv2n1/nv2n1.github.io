@@ -1,4 +1,5 @@
 ---
+
 title: "radump(1)"
 name: "radump"
 section: "1"
@@ -9,9 +10,7 @@ description: "radump – tcpdump processing of the user data buffers from an arg
 
 <h2>NAME</h2>
 <p> <code>radump</code> &#8211; tcpdump processing of the user data buffers from an <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file/stream. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>radump</code> <code>-r</code> <i>argus-file [</i><code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Radump</code> reads <code>argus</code> data from an <i>argus</i> data stream or file, and prints out tcpdump style decoding of the user data buffers. </p>
 <h2>OPTIONS</h2>
 <p> Radump, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. </p>

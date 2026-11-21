@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-ranlib-14(1)"
 name: "llvm-ranlib-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-ranlib-14/"
 description: "llvm-ranlib – manual page for llvm-ranlib 14"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> OVERVIEW: LLVM Ranlib (llvm-ranlib)</p>
 <dl>
 <dt>

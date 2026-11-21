@@ -1,4 +1,5 @@
 ---
+
 title: "paperconf(1)"
 name: "paperconf"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-paperconf/"
 description: "paperconf – print paper configuration information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>paperconf</code> &#8211; print paper configuration information </p>
-<h2>SYNOPSIS</h2>
 <p> <code>paperconf</code> [ [ <code>-p</code> ] <i>paper</i> | <code>-d</code> | <code>-a</code> ] [ <code>-z</code> ] [ <code>-n</code> | <code>-N</code> ] [ <code>-s</code> | <code>-w</code> | <code>-h</code> ] [ <code>-c</code> | <code>-m</code> | <code>-i</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>paperconf</code> prints information about a given paper. The information that can be obtained is the name of the paper, its size and its width or height. When called without arguments, <code>paperconf</code> prints the name of the system- or user-specified paper, obtained by looking in order at the <code>PAPERSIZE</code> environment variable, at the contents of the file specified by the <code>PAPERCONF</code> environment variable, at the contents of <code>/etc/papersize</code> or by using <code>letter</code> as a fall-back value if none of the other alternatives are successful. By default, width and height of the paper are printed in PostScript points.</p>
 <h2>OPTIONS</h2>
 <dl>

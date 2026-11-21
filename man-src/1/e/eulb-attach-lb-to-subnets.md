@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-attach-lb-to-subnets(1)"
 name: "eulb-attach-lb-to-subnets"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-attach-lb-to-subnets – [VPC only] Add a load balancer to on
 
 <h2>NAME</h2>
 <p> eulb-attach-lb-to-subnets &#8211; [VPC only] Add a load balancer to one or more subnets</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-attach-lb-to-subnets <code>-s</code> SUBNET1,SUBNET2,&#8230; [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> [VPC only] Add a load balancer to one or more subnets</p>
 <h3>positional arguments:</h3>
 <dl>

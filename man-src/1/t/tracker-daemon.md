@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-daemon(1)"
 name: "tracker-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-daemon/"
 description: "tracker-daemon – Start, stop, restart and list daemons responsible for indexing content"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 tracker daemon [options...]
 tracker daemon -s | -t [daemons] | -k [daemons] | -l
@@ -15,7 +15,6 @@ tracker daemon -f | -w [ontology]
 tracker daemon --miner &lt;miner&gt; --pause[-for-process] &lt;reason&gt;
 tracker daemon --miner &lt;miner&gt; --resume &lt;cookie&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Tracker has many components to it including a &quot;store&quot; for handling data set updates and &quot;miners&quot; for handling data mining in their respective areas. </p>
 <p> The <code>tracker daemon</code> command allows for control of these components. This ranges from starting, stopping and killing processes to pausing and resuming them. </p>
 <p> In addition to all this, there are ways to change the log verbsity for all processes that generate logs and to follow or watch what is happening in real time from a top level and right down where the SPARQL commits are happening too. </p>

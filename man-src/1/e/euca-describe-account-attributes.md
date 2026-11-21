@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-account-attributes(1)"
 name: "euca-describe-account-attributes"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-account-attributes – Show information about your a
 
 <h2>NAME</h2>
 <p> euca-describe-account-attributes &#8211; Show information about your account</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-account-attributes [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [ATTRIBUTE [ATTRIBUTE &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about your account</p>
 <h3>positional arguments:</h3>
 <dl>

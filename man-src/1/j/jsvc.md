@@ -1,4 +1,5 @@
 ---
+
 title: "jsvc(1)"
 name: "jsvc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-jsvc/"
 description: "jsvc – application to launch java daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>jsvc</code> [-jvm&nbsp;<wbr><i>JVM name</i>] [-client&nbsp;<wbr><i>client JVM</i>] [-server&nbsp;<wbr><i>server JVM</i>] [-classpath&nbsp;<wbr><i>path</i>] [-cp&nbsp;<wbr><i>path</i>] [-java-home&nbsp;<wbr><i>directory</i>] [-version] [-help] [-?] [-nodetach] [-debug] [-check] [-user&nbsp;<wbr><i>user</i>] [-wait&nbsp;<wbr><i>waittime</i>] [-umask&nbsp;<wbr><i>mask</i>] [-stop] [-verbose<i>:class|gc|jni</i>] [-outfile&nbsp;<wbr><i>/full/path/to/file</i>] [-errfile&nbsp;<wbr><i>/full/path/to/file</i>] [-pidfile&nbsp;<wbr><i>/full/path/to/file</i>] [-Dproperty=<i>value</i>] [-X<i>option</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>jsvc</code></p>
 <dd>executes <i>classfile</i> that implements a Daemon interface.</dd>
 <h2>OPTIONS</h2>

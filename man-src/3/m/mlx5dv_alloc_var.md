@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_alloc_var(3)"
 name: "mlx5dv_alloc_var"
 section: "3"
@@ -6,16 +7,9 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_alloc_var/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_alloc_var - Allocates a VAR 
+mlx5dv_alloc_var - Allocates a VAR 
 
  mlx5dv_free_var - Frees a VAR 
-
-<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -26,11 +20,7 @@ mlx5dv_alloc_var(struct ibv_context *context, uint32_t flags);
 void mlx5dv_free_var(struct mlx5dv_var *dv_var);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Create / free a VAR which can be used for some device commands over the DEVX interface. 
+Create / free a VAR which can be used for some device commands over the DEVX interface. 
 
  The DEVX API enables direct access from the user space area to the mlx5 device driver, the VAR information is needed for few commands related to Virtio.
 

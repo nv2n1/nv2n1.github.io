@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_uslider(3)"
 name: "cdk_uslider"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_uslider – curses slider widget (type unsigned)"
 
 <h2>NAME</h2>
 <p> cdk_uslider &#8211; curses slider widget (type unsigned)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -110,7 +110,6 @@ void setCDKUSliderVerticalChar(
     chtype character);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk slider widget creates a visual slider box with a label and a slider field. The following are functions which create or manipulate the Cdk slider box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

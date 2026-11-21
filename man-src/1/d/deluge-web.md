@@ -1,4 +1,5 @@
 ---
+
 title: "deluge-web(1)"
 name: "deluge-web"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-deluge-web/"
 description: "deluge-web – a bittorrent client ajax web interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>deluge-web [options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Deluge utilizes a client/server model, with &#8216;deluged&#8217; being the daemon process and &#8216;deluge-web&#8217; being used to launch an ajax web based user-interface. </p>
 <p> The default password is &#8216;deluge&#8217;. </p>
 <h2>OPTIONS</h2>

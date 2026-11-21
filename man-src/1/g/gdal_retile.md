@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_retile(1)"
 name: "gdal_retile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_retile/"
 description: "gdal_retile – gdal_retile.py gdal_retile.py retiles a set of tiles and/or build tiled pyramid levels"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_retile.py[-v][-co NAME = VALUE] * [-of out_format][-ps pixelWidth pixelHeight]
                                                        [-ot{Byte / Int16 / UInt16 / UInt32 / Int32 / Float32 / Float64 /
@@ -20,7 +20,6 @@ gdal_retile.py[-v][-co NAME = VALUE] * [-of out_format][-ps pixelWidth pixelHeig
         [-useDirForEachRow] -
     targetDir TileDirectory input_files.fi
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This utility will retile a set of input tile(s). All the input tile(s) must be georeferenced in the same coordinate system and have a matching number of bands. Optionally pyramid levels are generated. It is possible to generate shape file(s) for the tiled output. </p>
 <p> If your number of input tiles exhausts the command line buffer, use the general &#8211;optfile option </p>
 <dl>

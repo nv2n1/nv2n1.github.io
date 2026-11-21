@@ -1,4 +1,5 @@
 ---
+
 title: "snmpvacm(1)"
 name: "snmpvacm"
 section: "1"
@@ -9,7 +10,6 @@ description: "snmpvacm – creates and maintains SNMPv3 View-based Access Contro
 
 <h2>NAME</h2>
 <p> snmpvacm &#8211; creates and maintains SNMPv3 View-based Access Control entries on a network entity</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createSec2Group</code> MODEL SECURITYNAME GROUPNAME<br />
  <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteSec2Group</code> MODEL SECURITYNAME<br />
  <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createView</code> [-Ce] NAME SUBTREE MASK<br />
@@ -18,7 +18,6 @@ description: "snmpvacm – creates and maintains SNMPv3 View-based Access Contro
  <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteAccess</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL<br />
  <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>createAuth</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL AUTHTYPE CONTEXTMATCH VIEW<br />
  <code>snmpvacm</code> [COMMON OPTIONS] AGENT <code>deleteAuth</code> GROUPNAME [CONTEXTPREFIX] MODEL LEVEL AUTHTYPE </p>
-<h2>DESCRIPTION</h2>
 <p> <code>snmpvacm</code> is an SNMP application that can be used to do simple maintenance on the View-based Control Module (VACM) tables of an SNMP agent. The SNMPv3 VACM specifications (see RFC2575) define assorted tables to specify groups of users, MIB views, and authorised access settings. These <code>snmpvacm</code> commands effectively create or delete rows in the appropriate one of these tables, and match the equivalent configure directives which are documented in the <i><a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5)</i> man page. </p>
 <p> A fuller explanation of how these operate can be found in the project FAQ.</p>
 <h2>SUB-COMMANDS</h2>

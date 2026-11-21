@@ -1,4 +1,5 @@
 ---
+
 title: "rrdlua(1)"
 name: "rrdlua"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrdlua/"
 description: "RRDLua – Lua binding for RRDTool"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
   require 'rrd'
   rrd.create(...)
@@ -24,7 +24,6 @@ description: "RRDLua – Lua binding for RRDTool"
   rrd.update(...)
   rrd.updatev(...)
 </pre>
-<h2>DESCRIPTION</h2>
 <h3>Calling Sequence</h3>
 <p> This module accesses RRDtool functionality directly from within Lua. The arguments to the functions listed in the <font SIZE="-1">SYNOPSIS</font> are explained in the regular RRDtool documentation. The command-line call </p>
 <pre>

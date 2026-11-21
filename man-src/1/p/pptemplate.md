@@ -1,4 +1,5 @@
 ---
+
 title: "pptemplate(1)"
 name: "pptemplate"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-pptemplate/"
 description: "pptemplate – script to generate Makefile.PL and PP file skeleton"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
         # generate Makefile.PL and mymodule.pd in CWD
         pptemplate PDL::MyModule;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pptemplate</code> script is the easiest way to start a new module for <font SIZE="-1">PDL</font> that contains <font SIZE="-1">PP</font> code (see also <font SIZE="-1">PDL::PP</font>). The usage is simply </p>
 <pre>
   pptemplate modulename;

@@ -1,4 +1,5 @@
 ---
+
 title: "git-archive(1)"
 name: "git-archive"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-git-archive/"
 description: "git-archive – Create an archive of files from a named tree"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git archive[--format = &lt;fmt&gt;][--list][--prefix = &lt;prefix&gt; / ][&lt;extra&gt;]
            [-o&lt;file&gt; | --output = &lt;file&gt;][--worktree - attributes]
            [--remote = &lt;repo&gt;[--exec = &lt;git - upload - archive&gt;]]&lt;tree - ish&gt;[&lt;path&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Creates an archive of the specified format containing the tree structure for the named tree, and writes it out to the standard output. If &lt;prefix&gt; is specified it is prepended to the filenames in the archive. </p>
 <p> <i>git archive</i> behaves differently when given a tree ID versus when given a commit ID or tag ID. In the first case the current time is used as the modification time of each file in the archive. In the latter case the commit time as recorded in the referenced commit object is used instead. Additionally the commit ID is stored in a global extended pax header if the tar format is used; it can be extracted using <i>git get-tar-commit-id</i>. In ZIP files it is stored as a file comment.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-annotate(1)"
 name: "git-annotate"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-annotate/"
 description: "git-annotate – Annotate file lines with commit information"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git annotate[&lt;options&gt;]&lt;file&gt;[&lt;revision&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Annotates each line in the given file with information from the commit which introduced the line. Optionally annotates from a given revision. </p>
 <p> The only difference between this command and <code><a href="/docs/linux/man/1-git-blame/">git-blame</a></code>(1) is that they use slightly different output formats, and this command exists only for backward compatibility to support existing scripts, and provide a more familiar command name for people coming from other SCM systems.</p>
 <h2>OPTIONS</h2>

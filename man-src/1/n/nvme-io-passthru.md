@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-io-passthru(1)"
 name: "nvme-io-passthru"
 section: "1"
@@ -6,24 +7,13 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-io-passthru/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-io-passthru - Submit an arbitrary io command, return results 
 
- nvme-io-passthru - Submit an arbitrary io command, return results 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme - io - passthru&lt;device&gt;[--opcode = &lt;opcode&gt; | -o&lt;opcode&gt;][--flags = &lt;flags&gt; | -f&lt;flags&gt;][-rsvd = &lt;rsvd&gt; | -R&lt;rsvd&gt;][--namespace - id = &lt;nsid&gt; | -nsid&lt;nsid&gt;][--cdw2 = &lt;cdw2&gt;][--cdw3 = &lt;cdw3&gt;][--cdw10 = &lt;cdw10&gt;][--cdw11 = &lt;cdw11&gt;][--cdw12 = &lt;cdw12&gt;][--cdw13 = &lt;cdw13&gt;][--cdw14 = &lt;cdw14&gt;][--cdw15 = &lt;cdw15&gt;][--data - len = &lt;data - len&gt; | -l&lt;data - len&gt;][--metadata - len = &lt;len&gt; | -m&lt;len&gt;][--read | -r][--write | -w][--input - file = &lt;file&gt; | -f&lt;file&gt;][--timeout = &lt;to&gt; | -t&lt;to&gt;][--show - command | --dry - run | -s][--raw - binary | -b][--prefill = &lt;prefill&gt; | -p&lt;prefill&gt;]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Submits an arbitrary NVMe IO command and returns the applicable results. This may be the simply the command's result and status, or may also include a buffer if the command returns one. This command does no interpretation of the opcodes or options. 
+Submits an arbitrary NVMe IO command and returns the applicable results. This may be the simply the command's result and status, or may also include a buffer if the command returns one. This command does no interpretation of the opcodes or options. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). 
 

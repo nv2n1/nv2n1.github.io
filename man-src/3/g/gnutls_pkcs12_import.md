@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_import(3)"
 name: "gnutls_pkcs12_import"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs12_import – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_import &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_import(gnutls_pkcs12_t </code><i>pkcs12</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_pkcs12_import – API function"
 <dd> One of DER or PEM</dd>
 <dt>unsigned int flags</dt>
 <dd> an ORed sequence of gnutls_privkey_pkcs8_flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will convert the given DER or PEM encoded PKCS12 to the native gnutls_pkcs12_t format. The output will be stored in &#8216;pkcs12&#8217;. </p>
 <p> If the PKCS12 is PEM encoded it should have a header of &quot;PKCS12&quot;.</p>
 <h2>RETURNS</h2>

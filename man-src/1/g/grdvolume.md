@@ -1,4 +1,5 @@
 ---
+
 title: "grdvolume(1)"
 name: "grdvolume"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdvolume – Calculate grid volume and area constrained by a cont
 
 <h2>NAME</h2>
 <p> grdvolume &#8211; Calculate grid volume and area constrained by a contour</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdvolume</code> <i>grdfile</i> [ <i>cval</i> or <i>low/high/delta</i> or <code>r</code><i>low/high</i> ] [ <i>base</i> ] [ <i>region</i> ] [ [<i>unit</i>] ] [ [<code>c</code>|<code>h</code>] ] [ [<i>level</i>] ] [ <i>fact</i>[/<i>shift</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdvolume</code> reads a 2-D binary grid file and calculates the volume contained between the surface and the plane specified by the given contour (or zero if not given) and reports the area, volume, and maximum mean height (volume/area). Alternatively, specify a range of contours to be tried and <code>grdvolume</code> will determine the volume and area inside the contour for all contour values. Using <code>-T</code>, the contour that produced the maximum mean height (or maximum curvature of heights vs contour value) is reported as well. This feature may be used with <code>grdfilter</code> in designing an Optimal Robust Separator [<i>Wessel</i>, 1998].</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

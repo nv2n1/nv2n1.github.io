@@ -1,4 +1,5 @@
 ---
+
 title: "ptftopl(1)"
 name: "ptftopl"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ptftopl/"
 description: "ptftopl, uptftopl – Convert Japanese pTeX font metric (JFM) files to propery list"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ptftopl</code> [<i>OPTIONS</i>] <i>tfm_name</i>[<i></i><code>.tfm</code>] [<i>pl_name</i>[<i></i><code>.pl</code>]]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ptftopl</code> program translates a Japanese pTeX font metric (JFM) file to a Japanese property list (JPL) file. It also serves as a TFM/JFM-file validating program. </p>
 <p> The <code>uptftopl</code> program is a Unicode-enabled version of ptftopl. </p>
 <p> In the following sections, we refer to these programs as <code>(u)ptftopl</code>. </p>

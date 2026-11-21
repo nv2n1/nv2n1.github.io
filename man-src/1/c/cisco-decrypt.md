@@ -1,4 +1,5 @@
 ---
+
 title: "cisco-decrypt(1)"
 name: "cisco-decrypt"
 section: "1"
@@ -9,9 +10,7 @@ description: "cisco-decrypt – decrypts an obfuscated Cisco vpn client pre-shar
 
 <h2>NAME</h2>
 <p> cisco-decrypt &#8211; decrypts an obfuscated Cisco vpn client pre-shared key</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cisco-decrypt</code> <i>&lt;obfuscated pre-shared key&gt; </i></p>
-<h2>DESCRIPTION</h2>
 <p> This command accompanies <code>vpnc</code>. It decrypts the obfuscated pre-shared key from *.pcf-configuration files, which must be specified on the command line. </p>
 <p> The result will be printed to STDOUT.</p>
 <h2>AUTHOR</h2>

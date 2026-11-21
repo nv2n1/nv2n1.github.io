@@ -1,4 +1,5 @@
 ---
+
 title: "gdb(1)"
 name: "gdb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gdb/"
 description: "gdb – The GNU Debugger"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gdb [<font SIZE="-1">OPTIONS</font>] [<i>prog</i>|<i>prog</i> <i>procID</i>|<i>prog</i> <i>core</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The purpose of a debugger such as <font SIZE="-1">GDB</font> is to allow you to see what is going on &#8220;inside&#8221; another program while it executes &#8212; or what another program was doing at the moment it crashed. </p>
 <p> <font SIZE="-1">GDB</font> can do four main kinds of things (plus other things in support of these) to help you catch bugs in the act:</p>
 <dl>

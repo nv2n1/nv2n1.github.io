@@ -1,4 +1,5 @@
 ---
+
 title: "outw(2)"
 name: "outw"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-outw/"
 description: "outb, outw, outl, outsb, outsw, outsl, inb, inw, inl, insb, insw, insl, outb_p, outw_p, outl_p, inb_p, inw_p, inl_p – port I/O"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/io.h&gt;
 unsigned char inb(unsigned short port);
@@ -35,7 +35,6 @@ void outsw(unsigned short port, const void *addr,
 void outsl(unsigned short port, const void *addr,
            unsigned long count);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This family of functions is used to do low-level port input and output. The out* functions do port output, the in* functions do port input; the b-suffix functions are byte-width and the w-suffix functions word-width; the _p-suffix functions pause until the I/O completes. </p>
 <p> They are primarily designed for internal kernel use, but can be used from user space. </p>
 <p> You must compile with <code>-O</code> or <code>-O2</code> or similar. The functions are defined as inline macros, and will not be substituted in without optimization enabled, causing unresolved references at link time. </p>

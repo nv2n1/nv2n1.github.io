@@ -1,4 +1,5 @@
 ---
+
 title: "genxs(1)"
 name: "genxs"
 section: "1"
@@ -9,9 +10,7 @@ description: "genxs – Mono’s Xml Serializer Generator"
 
 <h2>NAME</h2>
 <p> genxs &#8211; Mono&#8217;s Xml Serializer Generator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>genxs</code> configurationFile [destinationFolder]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>genxs</i> is a tool for generating custom XML serialization writers and readers for classes. </p>
 <p> <i>configurationFile</i> is configuration file which specifies several information, such as the class for which to generate the reader and writer, the name and namespace of the classes to generate, and a collection of hooks to apply. By using hooks it is possible to customize the behavior of the serializer without needing to modify the generated file, so you can safely regenerate it if the source class is modified. </p>
 <p> <i>destinationFolder</i> specifies the folder where the files will be generated. </p>

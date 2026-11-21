@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_mkdir_ex(3)"
 name: "libssh2_sftp_mkdir_ex"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_sftp_mkdir_ex – create a directory on the remote file sy
 
 <h2>NAME</h2>
 <p> libssh2_sftp_mkdir_ex &#8211; create a directory on the remote file system</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; #include &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>
 <p> int libssh2_sftp_mkdir_ex(LIBSSH2_SFTP *sftp, const char *path, unsigned int path_len, long mode); </p>
 <p> int libssh2_sftp_mkdir(LIBSSH2_SFTP *sftp, const char *path, long mode);</p>
-<h2>DESCRIPTION</h2>
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
 <p> <i>path</i> &#8211; full path of the new directory to create. Note that the new directory&#8217;s parents must all exist priot to making this call. </p>
 <p> <i>path_len</i> &#8211; length of the full path of the new directory to create. </p>

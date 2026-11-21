@@ -1,4 +1,5 @@
 ---
+
 title: "averagebmacoupon(3)"
 name: "averagebmacoupon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-averagebmacoupon/"
 description: "ql/cashflows/averagebmacoupon.hpp – coupon paying a weighted average of BMA-index fixings"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt;<br />
  #include &lt;ql/indexes/bmaindex.hpp&gt; </p>
 <h3>Classes</h3>

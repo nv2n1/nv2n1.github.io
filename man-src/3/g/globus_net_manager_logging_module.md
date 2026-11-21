@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_logging_module(3)"
 name: "globus_net_manager_logging_module"
 section: "3"
@@ -8,7 +9,6 @@ description: "logging/globus_net_manager_logging.c –"
 ---
 
 <p> Logging Network Manager Implementation.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common.h&#8217;<br />
  #include &#8216;globus_net_manager.h&#8217;<br />
  #include &#8216;version.h&#8217; </p>

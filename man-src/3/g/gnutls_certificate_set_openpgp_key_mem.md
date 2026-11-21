@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_openpgp_key_mem(3)"
 name: "gnutls_certificate_set_openpgp_key_mem"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_openpgp_key_mem – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_openpgp_key_mem &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_openpgp_key_mem(gnutls_certificate_credentials_t </code><i>res</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, const gnutls_datum_t * </code><i>key</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_certificate_set_openpgp_key_mem – API function"
 <dd> the datum that contains the secret key.</dd>
 <dt>gnutls_openpgp_crt_fmt_t format</dt>
 <dd> the format of the keys</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This funtion is used to load OpenPGP keys into the GnuTLS credential structure. The datum should contain at least one valid non encrypted subkey.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

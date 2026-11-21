@@ -1,4 +1,5 @@
 ---
+
 title: "gpac(1)"
 name: "gpac"
 section: "1"
@@ -9,7 +10,6 @@ description: "GPAC – MPEG-4 Systems Framework and Software Development Kit"
 
 <h2>NAME</h2>
 <p> GPAC<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211; MPEG-4 Systems Framework and Software Development Kit</p>
-<h2>DESCRIPTION</h2>
 <p> GPAC stands (does it ?) for GPAC Project on Advanced Content. It is an implementation of the MPEG-4 Systems standard written in ANSI C. GPAC provides tools for media playback, vector graphics and 3D rendering, MPEG-4 authoring and distribution. This man page is about configuration of the GPAC framework version 0.5.0.</p>
 <h2>INTRODUCTION</h2>
 <p> Some applications in the GPAC framework use a configuration file shared among modules and reloadable at run time. This file is located in the user home directory and called &quot;.gpacrc&quot;. </p>

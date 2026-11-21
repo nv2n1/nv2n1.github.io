@@ -1,4 +1,5 @@
 ---
+
 title: "bbl2bib(1)"
 name: "bbl2bib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bbl2bib/"
 description: "bbl2bib.pl – convert thebibliography environment to a bib file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> bbl2bib.pl [-d] [-u] [<code>-o</code> <i>output</i>] <i>file</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -18,7 +18,6 @@ description: "bbl2bib.pl – convert thebibliography environment to a bib file"
 <dt><code>-u</code></dt>
 <dd> Do not clean <font SIZE="-1">URL</font> fields. </dd>
 <p> Normally <tt>&quot;bbl2bib&quot;</tt> recognizes <font SIZE="-1">URL</font> fields of the kind <tt>&quot;<a rel="nofollow" href="http://dx.doi.org">http://dx.doi.org</a>&quot;</tt> and their variants and converts them to <font SIZE="-1">DOI</font> fields (see also <code><a href="/docs/linux/man/1-biburl2doi/">biburl2doi</a></code>(1) script). The switch <code>-u</code> suppresses this cleanup.</dl>
-<h2>DESCRIPTION</h2>
 <p> The script tries to reconstruct a <tt>&quot;bib&quot;</tt> file from the corresponding <tt>&quot;thebibliography&quot;</tt> environment. One can argue that this operation is akin to reconstructing a cow from the steak. The way the script does it is searching for the entry in the <font SIZE="-1">MR</font> database, and creating the corresponding BibTeX fields. </p>
 <p> The script reads a TeX or Bbl file and extracts from it the <tt>&quot;thebibliography&quot;</tt> environment. For each bibitem it creates a plain text bibliography entry, and then tries to match it in the database.</p>
 <h2>INPUT FILE</h2>

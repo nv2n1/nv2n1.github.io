@@ -1,4 +1,5 @@
 ---
+
 title: "makecert(1)"
 name: "makecert"
 section: "1"
@@ -9,9 +10,7 @@ description: "MakeCert – Create X.509 certificates for test purposes"
 
 <h2>NAME</h2>
 <p> MakeCert &#8211; Create X.509 certificates for test purposes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>makecert [options] certificate</code></p>
-<h2>DESCRIPTION</h2>
 <p> Create an X.509 certificate using the provided informations. This is useful for testing Authenticode signatures, SSL and S/MIME technologies.</p>
 <h2>PARAMETERS</h2>
 <dl>

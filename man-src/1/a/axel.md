@@ -1,4 +1,5 @@
 ---
+
 title: "axel(1)"
 name: "axel"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-axel/"
 description: "Axel – A light download accelerator for Linux."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>Axel</code> &#8211; A light download accelerator for Linux.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>axel</code> [<i>OPTIONS</i>] <i>url1</i> [<i>url2</i>] [<i>url&#8230;</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Axel is a program that downloads a file from a FTP or HTTP server through multiple connection, each connection downloads its own part of the file. </p>
 <p> Unlike most other programs, Axel downloads all the data directly to the destination file, using one single thread. It just saves some time at the end because the program doesn&#8217;t have to concatenate all the downloaded parts. </p>
 <h2>OPTIONS</h2>

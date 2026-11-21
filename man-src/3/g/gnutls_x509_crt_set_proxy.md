@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_proxy(3)"
 name: "gnutls_x509_crt_set_proxy"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_proxy – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_proxy &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_proxy(gnutls_x509_crt_t </code><i>crt</i><code>, int </code><i>pathLenConstraint</i><code>, const char * </code><i>policyLanguage</i><code>, const char * </code><i>policy</i><code>, size_t </code><i>sizeof_policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_x509_crt_set_proxy – API function"
 <dd> uint8_t byte array with policy language, can be <code>NULL</code></dd>
 <dt>size_t sizeof_policy</dt>
 <dd> size of <i>policy</i> .</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the proxyCertInfo extension.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

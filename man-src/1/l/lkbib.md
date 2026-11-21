@@ -1,4 +1,5 @@
 ---
+
 title: "lkbib(1)"
 name: "lkbib"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lkbib/"
 description: "lkbib – search bibliographic databases"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-n</code> ] [ <code>-i </code><i>fields</i> ] [ <code>-p </code><i>filename</i> ] [ <code>-t </code><i>n</i> ] <i>key</i> &#8230; <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>lkbib</i> searches bibliographic databases for references that contain the keys <i>key</i> &#8230; and prints any references found on the standard output. <i>lkbib</i> will search any databases given by <code>-p</code> options, and then a default database. The default database is taken from the <i>REFER</i> environment variable if it is set, otherwise it is <i>/usr/:dict/:papers/:Ind</i>. For each database <i>filename</i> to be searched, if an index filename<i>.i</i> created by <i><a href="/docs/linux/man/1-indxbib/">indxbib</a></i>(1) exists, then it will be searched instead; each index can cover multiple databases.</p>
 <h2>OPTIONS</h2>
 <p> Whitespace is permitted between a command-line option and its argument.</p>

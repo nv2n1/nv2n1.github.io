@@ -1,4 +1,5 @@
 ---
+
 title: "dbdsqr(3)"
 name: "dbdsqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dbdsqr/"
 description: "dbdsqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dbdsqr</code> (UPLO, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />
  <i></i><code>DBDSQR</code></p>

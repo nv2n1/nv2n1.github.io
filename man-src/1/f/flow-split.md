@@ -1,4 +1,5 @@
 ---
+
 title: "flow-split(1)"
 name: "flow-split"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-split – Split flow files into smaller files."
 
 <h2>NAME</h2>
 <p> flow-split &#8211; Split flow files into smaller files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-split</code> [ <code>-gGhn</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-N</code><i> nflows</i> ] [ <code>-o</code><i> outfile_basename</i> ] [ <code>-T</code><i> nseconds</i> ] [ <code>-z</code><i> z_level</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-split</code> utility will split a flow file into smaller files based on the the number of flows or the ammount of time that has passed.</p>
 <h2>OPTIONS</h2>
 <dl>

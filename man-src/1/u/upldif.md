@@ -1,4 +1,5 @@
 ---
+
 title: "upldif(1)"
 name: "upldif"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-upldif/"
 description: "upldif – Barry Project’s LDIF contact uploader"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>upldif</code> &#8211; Barry Project&#8217;s LDIF contact uploader </p>
-<h2>SYNOPSIS</h2>
 <p> <code>upldif</code> [-p pin][-P password][-u][-h][-v]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>upldif</code> reads a list of contacts in LDAP LDIF format from stdin, and overwrites the Blackberry&#8217;s Address Book database with those contents.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "aterm(1)"
 name: "aterm"
 section: "1"
@@ -6,11 +7,10 @@ letter: "a"
 url: "/docs/linux/man/1-aterm/"
 description: "aterm (Afterstep XVT) – a VT102 emulator for the X window system"
 ---
+
 <h2>NAME</h2>
 <p> aterm (Afterstep XVT) - a VT102 emulator for the X window system </p>
-<h2>SYNOPSIS</h2>
 <p> <code>aterm</code> [options] [-e command [ args ]] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>aterm</code>, version <code>1.0.0</code>, is a colour vt102 terminal emulator, based on <i>rxvt</i> 2.4.8 with Alfredo Kojima&#8217;s additions of fast transparency, intended as an <i><a href="/docs/linux/man/1-xterm/">xterm</a></i>(1) replacement for users who do not require features such as Tektronix 4014 emulation and toolkit-style configurability. As a result, <code>aterm</code> uses much less swap space -- a significant advantage on a machine serving many X sessions. </p>
 <p> It was created with <code>AfterStep</code> Window Manger users in mind, but is not tied to any libraries, and can be used anywhere. </p>
 <h2>OPTIONS</h2>

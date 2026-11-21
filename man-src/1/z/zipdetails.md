@@ -1,4 +1,5 @@
 ---
+
 title: "zipdetails(1)"
 name: "zipdetails"
 section: "1"
@@ -6,23 +7,16 @@ letter: "z"
 url: "/docs/linux/man/1-zipdetails/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+zipdetails - display the internal structure of zip files 
 
- zipdetails - display the internal structure of zip files 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 zipdetails[-v][--scan] zipfile.zip
         zipdetails -
     h
         zipdetails-- version
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Zipdetails displays information about the internal record structure of zip files. It is not concerned with displaying any details of the compressed data stored in the zip file. 
+Zipdetails displays information about the internal record structure of zip files. It is not concerned with displaying any details of the compressed data stored in the zip file. 
 
  The program assumes prior understanding of the internal structure of a Zip file. You should have a copy of the Zip <font SIZE="-1">APPNOTE</font> file at hand to help understand the output from this program (``<font SIZE="-1">SEE ALSO''</font> for details).
 

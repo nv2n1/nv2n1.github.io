@@ -1,4 +1,5 @@
 ---
+
 title: "google(1)"
 name: "google"
 section: "1"
@@ -9,9 +10,7 @@ description: "google – command-line access to (some) Google services"
 
 <h2>NAME</h2>
 <p> google &#8211; command-line access to (some) Google services</p>
-<h2>SYNOPSIS</h2>
 <p> <code>google</code> [<i>picasa|blogger|youtube|docs|contacts|calendar</i>] <i>TASK </i>[<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This program provides command-line access to (some) google services via their gdata APIs. Called without a service name, it starts an interactive session. </p>
 <p> Available tasks for service picasa: &#8216;get&#8217;, &#8216;create&#8217;, &#8216;list&#8217;, &#8216;list-albums&#8217;, &#8216;tag&#8217;, &#8216;post&#8217;, &#8216;delete&#8217;</p>
 <dl>

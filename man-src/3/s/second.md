@@ -1,4 +1,5 @@
 ---
+
 title: "second(3)"
 name: "second"
 section: "3"
@@ -6,15 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-second/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- second_EXT_ETIME.f - 
-
-<h2>SYNOPSIS</h2>
-
- 
- 
+second_EXT_ETIME.f - 
 
 <h3>Functions/Subroutines</h3>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "marco-window-demo(1)"
 name: "marco-window-demo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-marco-window-demo/"
 description: "marco-window-demo – demo of window features"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>marco-window-demo</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program demonstrates various kinds of windows that window managers and window manager themes should handle. </p>
 <p> Be sure to tear off the menu and toolbar, those are also a special kind of window.</p>
 <h2>BUGS</h2>

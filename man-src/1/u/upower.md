@@ -1,4 +1,5 @@
 ---
+
 title: "upower(1)"
 name: "upower"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-upower/"
 description: "upower – UPower command line tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>upower</code> [<code>&#8211;dump</code>] [<code>&#8211;enumerate</code>] [<code>&#8211;monitor-detail</code>] [<code>&#8211;monitor</code>] [<code>&#8211;show-info</code>] [<code>&#8211;version</code>] [<code>&#8211;wakeups</code>] [<code>&#8211;help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>upower</i></p>
 <dd>is a simple command line client for the <code><a href="/docs/linux/man/7-upower/">UPower</a></code>(7) daemon. TODO: not fully documented.</dd>
 <h2>OPTIONS</h2>

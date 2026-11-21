@@ -1,4 +1,5 @@
 ---
+
 title: "slasdq(3)"
 name: "slasdq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasdq/"
 description: "slasdq.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasdq</code> (UPLO, SQRE, N, NCVT, NRU, NCC, D, E, VT, LDVT, U, LDU, C, LDC, WORK, INFO)<br />
  <i></i><code>SLASDQ</code> computes the SVD of a real bidiagonal matrix with diagonal d and off-diagonal e. Used by sbdsdc.</p>

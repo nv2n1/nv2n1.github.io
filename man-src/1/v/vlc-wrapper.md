@@ -1,4 +1,5 @@
 ---
+
 title: "vlc-wrapper(1)"
 name: "vlc-wrapper"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-vlc-wrapper/"
 description: "vlc-wrapper – a wrapper to drop privileges with VLC"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vlc-wrapper</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>VLC</code> wrapper to open privileged network ports. The ports it can open are 80, 443 and 554. </p>
 <h2>OPTIONS</h2>
 <p> They will be passed to <code>VLC</code> with no modification. </p>

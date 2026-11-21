@@ -1,4 +1,5 @@
 ---
+
 title: "cubicinterpolation(3)"
 name: "cubicinterpolation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cubicinterpolation/"
 description: "ql/math/interpolations/cubicinterpolation.hpp – cubic interpolation between discrete points"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br />
  #include &lt;vector&gt; </p>

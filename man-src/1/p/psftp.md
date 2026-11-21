@@ -1,4 +1,5 @@
 ---
+
 title: "psftp(1)"
 name: "psftp"
 section: "1"
@@ -9,13 +10,11 @@ description: "psftp – interactive SFTP (secure file transfer protocol) client"
 
 <h2>NAME</h2>
 <p> <code>psftp</code> &#8211; interactive SFTP (secure file transfer protocol) client</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 psftp &amp;nbsp;
 [options] &amp; nbsp;
 [user @] host
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>psftp</code> is an interactive text-based client for the SSH-based SFTP (secure file transfer) protocol.</p>
 <h2>OPTIONS</h2>
 <p> The command-line options supported by <code>psftp</code> are:</p>

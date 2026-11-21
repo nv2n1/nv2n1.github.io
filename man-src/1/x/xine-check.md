@@ -1,4 +1,5 @@
 ---
+
 title: "xine-check(1)"
 name: "xine-check"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xine-check/"
 description: "xine-check – a checker for the xine video player"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xine-check </code> [<i>-q</i>] [<i>-v</i>] [<i>-B</i>] [<i>-b</i>]<br />
  <code>xine-bugreport</code> [<i>-q</i>] [<i>-v</i>] [<i>-B</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page explains the xine-checker program. <code>xine-check</code> is a program, which tests the xine video player installation for common problems. </p>
 <p> If you experience any problem with or while running <code>xine</code>, running <code>xine-check</code> might provide useful hints for problem tracking. </p>
 <p> <code>xine-check</code> tests the operating system settings, installation of plugins, CD/DVD drive settings and video support parameters. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nbd-trdump(1)"
 name: "nbd-trdump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nbd-trdump/"
 description: "nbd-trdump – translate an nbd transaction log into human readable form"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nbd-trdump</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nbd-trdump</code> translates a transaction log produced by <code>nbd-server</code> (specifically by the <code>transactionlog</code> configuration directive) into human readable form. </p>
 <p> The command acts as a traditional UNIX filter, i.e. the transaction log must be supplied on standard input, and the human readable output is sent to standard output.</p>
 <h2>OUTPUT</h2>

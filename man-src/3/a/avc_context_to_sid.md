@@ -1,4 +1,5 @@
 ---
+
 title: "avc_context_to_sid(3)"
 name: "avc_context_to_sid"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-avc_context_to_sid/"
 description: "avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid – obtain and manipulate SELinux security ID’s"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_context_to_sid(char *</code><i>ctx</i><code>, security_id_t *</code><i>sid</i><code>);</code> </p>
 <p> <code>int avc_sid_to_context(security_id_t </code><i>sid</i><code>, char **</code><i>ctx</i><code>);</code> </p>
 <p> <code>int avc_get_initial_sid(const char *</code><i>name</i><code>, security_id_t *</code><i>sid</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Security ID&#8217;s (SID&#8217;s) are opaque representations of security contexts, managed by the userspace AVC. </p>
 <p> <code>avc_context_to_sid</code>() returns a SID for the given <i>context</i> in the memory referenced by <i>sid</i>. </p>
 <p> <code>avc_sid_to_context</code>() returns a copy of the context represented by <i>sid</i> in the memory referenced by <i>ctx</i>. The user must free the copy with <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3). </p>

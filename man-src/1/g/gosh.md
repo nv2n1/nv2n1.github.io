@@ -1,4 +1,5 @@
 ---
+
 title: "gosh(1)"
 name: "gosh"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gosh/"
 description: "gosh – a Scheme script interpreter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gosh</code> [-biqV] [-I <i>path</i> ] [-A <i>path</i> ] [-u <i>module</i> ] [-l <i>file</i> ] [-e <i>expr</i> ] [-E <i>expr</i> ] [-f <i>flag</i> ] [&#8211;] [ <i>script argument &#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Gosh</i> is a stand-alone Scheme interpreter built on top of the <i>Gauche</i> Scheme implementation. </p>
 <p> When <i>script</i> is given, gosh loads the script, evaluating Scheme code in it. Then, if the <i>script</i> defines a procedure named <i>main,</i> gosh calls it with a single argument which is a list of the script name and subsequent arguments. When <i>main</i> returns an integer value, gosh exits with it as an exit code. If <i>main</i> returns non-integer value, or an error is signaled during evaluation, gosh exits with exit code 70 (EX_SOFTWARE). See SRFI-22 (<a rel="nofollow" href="http://srfi.schemers.org/srfi-22/srfi-22.html)">http://srfi.schemers.org/srfi-22/srfi-22.html)</a> for details. If there&#8217;s no <i>main</i> procedure defined in the script, gosh exits with code 0 after loading the script file. </p>
 <p> If no script file is given, gosh goes into an interactive mode. By default, gosh prompts the user to enter a Scheme expression, read and evaluates it, then prints the result, until EOF is read. If the standard input is not a terminal, however, gosh doesn&#8217;t print a prompt; it allows a user to use gosh as a filter program. This behavior can be controlled by -i or -b option; see below. </p>

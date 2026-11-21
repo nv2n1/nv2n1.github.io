@@ -1,4 +1,5 @@
 ---
+
 title: "perl5280delta(1)"
 name: "perl5280delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5280delta/"
 description: "perl5280delta – what is new for perl v5.28.0"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.26.0 release and the 5.28.0 release. </p>
 <p> If you are upgrading from an earlier release such as 5.24.0, first read perl5260delta, which describes differences between 5.24.0 and 5.26.0.</p>
 <h2>Core Enhancements</h2>

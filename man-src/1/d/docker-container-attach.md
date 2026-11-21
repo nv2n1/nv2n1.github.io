@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-attach(1)"
 name: "docker-container-attach"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-container-attach/"
 description: "docker-container-attach – Attach local standard input, output, and error streams to a running container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker container attach [OPTIONS] CONTAINER</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>docker attach</code> command allows you to attach to a running container using the container&#8217;s ID or name, either to view its ongoing output or to control it interactively. You can attach to the same contained process multiple times simultaneously, screen sharing style, or quickly view the progress of your detached process. </p>
 <p> To stop a container, use CTRL-c. This key sequence sends SIGKILL to the container. You can detach from the container (and leave it running) using a configurable key sequence. The default sequence is CTRL-p CTRL-q. You configure the key sequence using the <code>&#8211;detach-keys</code> option or a configuration file. See <code>config-json(5)</code> for documentation on using a configuration file. </p>
 <p> It is forbidden to redirect the standard input of a docker attach command while attaching to a tty-enabled container (i.e.: launched with -t). </p>

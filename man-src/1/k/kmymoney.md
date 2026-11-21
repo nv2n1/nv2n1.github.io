@@ -1,4 +1,5 @@
 ---
+
 title: "kmymoney(1)"
 name: "kmymoney"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-kmymoney/"
 description: "kmymoney – the personal finances manager for KDE"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kmymoney</code> [<code>Generic Options</code>] [<code>Qt Options</code>] [<code>KDE Options</code>] [<code>Options</code>] [<code>File</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>KMyMoney is the Personal Finance Manager for the KDE environment. It provides the functions required to balance your checkbooks, manage your personal loans and categories your incomes and expenses using a checkbook style graphical user interface.</dd>
 <h2>OPTIONS</h2>
 <p> <i>File</i></p>

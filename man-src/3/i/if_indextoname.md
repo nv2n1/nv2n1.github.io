@@ -1,4 +1,5 @@
 ---
+
 title: "if_indextoname(3)"
 name: "if_indextoname"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-if_indextoname/"
 description: "if_nametoindex, if_indextoname – mappings between network interface names and indexes"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;net/if.h&gt;
 unsigned int if_nametoindex(const char *ifname);
 char *if_indextoname(unsigned int ifindex, char *ifname);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>if_nametoindex</code>() function returns the index of the network interface corresponding to the name <i>ifname</i>. </p>
 <p> The <code>if_indextoname</code>() function returns the name of the network interface corresponding to the interface index <i>ifindex</i>. The name is placed in the buffer pointed to by <i>ifname</i>. The buffer must allow for the storage of at least <code>IF_NAMESIZE</code> bytes.</p>
 <h2>RETURN VALUE</h2>

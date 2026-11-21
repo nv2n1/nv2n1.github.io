@@ -1,4 +1,5 @@
 ---
+
 title: "ftw(3)"
 name: "ftw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ftw/"
 description: "ftw, nftw – file tree walk"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ftw.h&gt;
 int nftw(const char *dirpath,
@@ -22,7 +22,6 @@ int ftw(const char *dirpath,
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>nftw</code>(): _XOPEN_SOURCE &gt;= 500</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nftw</code>() walks through the directory tree that is located under the directory <i>dirpath</i>, and calls <i>fn</i>() once for each entry in the tree. By default, directories are handled before the files and subdirectories they contain (preorder traversal). </p>
 <p> To avoid using up all of the calling process&#8217;s file descriptors, <i>nopenfd</i> specifies the maximum number of directories that <code>nftw</code>() will hold open simultaneously. When the search depth exceeds this, <code>nftw</code>() will become slower because directories have to be closed and reopened. <code>nftw</code>() uses at most one file descriptor for each level in the directory tree. </p>
 <p> For each entry found in the tree, <code>nftw</code>() calls <i>fn</i>() with four arguments: <i>fpath</i>, <i>sb</i>, <i>typeflag</i>, and <i>ftwbuf</i>. <i>fpath</i> is the pathname of the entry, and is expressed either as a pathname relative to the calling process&#8217;s current working directory at the time of the call to <code>nftw</code>(), if <i>dirpath</i> was expressed as a relative pathname, or as an absolute pathname, if <i>dirpath</i> was expressed as an absolute pathname. <i>sb</i> is a pointer to the <i>stat</i> structure returned by a call to <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) for <i>fpath</i>. </p>

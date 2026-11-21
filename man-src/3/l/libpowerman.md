@@ -1,4 +1,5 @@
 ---
+
 title: "libpowerman(3)"
 name: "libpowerman"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpowerman/"
 description: "libpowerman – PowerMan Client API"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libpowerman.h&gt;
 pm_err_t pm_connect(char *server, void *arg, pm_handle_t *hp,
@@ -26,7 +26,6 @@ void pm_node_iterator_reset(pm_node_iterator_t i);
 char *pm_strerror(pm_err_t err, char *str, int len);
 cc... - lpowerman
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pm_connect</code>() function establishes a connection with <i>server</i>, a string containing <i>host[:port]</i> or NULL for defaults; and returns a handle in <i>hp</i>. The <i>arg</i> parameter is currently unused. The <i>flags</i> parameter should be zero or one or more logically-OR&#8217;ed flags:</p>
 <dl>
 <dt><code>PM_CONN_INET6</code></dt>

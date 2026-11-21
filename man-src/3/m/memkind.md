@@ -1,4 +1,5 @@
 ---
+
 title: "memkind(3)"
 name: "memkind"
 section: "3"
@@ -10,7 +11,6 @@ description: "memkind – Heap manager that enables allocations to memory with d
 <h2>NAME</h2>
 <p> memkind &#8211; Heap manager that enables allocations to memory with different properties.<br />
  This header expose EXPERIMENTAL API in except of STANDARD API placed in section LIBRARY VERSION. API Standards are described below in this man page.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;memkind.h&gt;
 Link with - lmemkind
@@ -56,7 +56,6 @@ void memkind_free_pre(memkind_t *kind, void **ptr);
 void memkind_free_post(memkind_t kind, void *ptr);
 LIBRARY VERSION : int memkind_get_version();
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>memkind_error_message</code>() converts an error number <i>err</i> returned by a member of the memkind interface to an error message <i>msg</i> where the maximium size of the message is passed by the <i>size</i> parameter. </p>
 <p> <code>HEAP MANAGMENT:</code><br />
  The functions described in this section define a heap manager with an interface modeled on the ISO C standard API&#8217;s, except that the user must specify the <i>kind</i> of memory with the first argument to each function. See the <code>KINDS</code> section below for a full description of the implemented kinds. </p>

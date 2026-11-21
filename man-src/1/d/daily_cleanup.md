@@ -1,4 +1,5 @@
 ---
+
 title: "daily_cleanup(1)"
 name: "daily_cleanup"
 section: "1"
@@ -9,9 +10,7 @@ description: "daily_cleanup.py – Database clean-up for the Django Web framewor
 
 <h2>NAME</h2>
 <p> daily_cleanup.py &#8211; Database clean-up for the Django Web framework</p>
-<h2>SYNOPSIS</h2>
 <p> <code>daily_cleanup.py</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Removes stale session data from a Django database. This means, any session data which has an expiry date prior to the date the script is run. </p>
 <p> The script can be run manually or can be scheduled to run at regular intervals as a <code>cron</code> job. </p>
 <h2>ENVIRONMENT</h2>

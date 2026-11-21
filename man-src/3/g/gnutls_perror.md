@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_perror(3)"
 name: "gnutls_perror"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_perror – API function"
 
 <h2>NAME</h2>
 <p> gnutls_perror &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_perror(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int error</dt>
 <dd> is a GnuTLS error code, a negative error code</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function is like <code>perror()</code>. The only difference is that it accepts an error number returned by a gnutls function.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "whereami(1)"
 name: "whereami"
 section: "1"
@@ -9,12 +10,10 @@ description: "whereami-1.0 – displays work location"
 
 <h2>NAME</h2>
 <p> whereami-1.0 &#8211; displays work location </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>whereamiR [OPTIONS</code>]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>whereami</code> displays information about the machine(location) you are working on. Information like terminal name, present working directory, host name, and the host IP address. This is extremely useful for those who tend to work remotely on several machines at the same time. </p>
 <h2>OPTIONS</h2>
 <dl>

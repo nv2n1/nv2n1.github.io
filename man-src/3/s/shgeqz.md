@@ -1,4 +1,5 @@
 ---
+
 title: "shgeqz(3)"
 name: "shgeqz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-shgeqz/"
 description: "shgeqz.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>shgeqz</code> (JOB, COMPQ, COMPZ, N, ILO, IHI, H, LDH, T, LDT, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, WORK, LWORK, INFO)<br />
  <i></i><code>SHGEQZ</code></p>

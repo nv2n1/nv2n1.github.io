@@ -1,4 +1,5 @@
 ---
+
 title: "msh(1)"
 name: "msh"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-msh/"
 description: "msh – nmh shell (and BBoard reader)"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>msh</code> [<code>-prompt</code> <i>string</i>] [<code>-scan</code> | <code>-noscan</code>] [<code>-topcur</code> | <code>-notopcur</code>] [<i>file</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>STATUS</h2>
 <p> <code>msh is deprecated and will be removed from the next nmh release.</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>msh</code></p>
 <dd>is an interactive program that implements a subset of the normal <code>nmh</code> commands operating on a single file in <code>mmdf</code> format. That is, <code>msh</code> is used to read a file that contains a number of messages, as opposed to the standard <code>nmh</code> style of reading a number of files, each file being a separate message in a folder. <code>msh</code>&#8216;s chief advantage is that the normal <code>nmh</code> style does not allow a file to have more than one message in it. Hence, <code>msh</code> is ideal for reading BBoards, as these files are delivered by the transport system in this format. In addition, <code>msh</code> can be used on other files, such as message archives which have been <code>pack</code>ed (see <i><a href="/docs/linux/man/1-packf/">packf</a></i>(1)). Finally, <code>msh</code> is an excellent <code>nmh</code> tutor. As the only commands available to the user are <code>nmh</code> commands, this allows <code>nmh</code> beginners to concentrate on how commands to <code>nmh</code> are formed and (more or less) what they mean. </dd>
 <p> When invoked, <code>msh</code> reads the named file, and enters a command loop. The user may type most of the normal <code>nmh</code> commands. The syntax and semantics of these commands typed to <code>msh</code> are identical to their <code>nmh</code> counterparts. In cases where the nature of <code>msh</code> would be inconsistent (e.g., specifying a <i>+folder</i> with some commands), <code>msh</code> will duly inform the user. The commands that <code>msh</code> currently supports (in some slightly modified or restricted forms) are: </p>

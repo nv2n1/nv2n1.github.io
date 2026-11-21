@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-clip(1)"
 name: "pilot-clip"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-clip – Get or Set the Palm Clipboard contents from STDOUT/
 <p> pilot-clip &#8211; Get or Set the Palm Clipboard contents from STDOUT/STDIN.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-clip</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-g</code>|<code>&#8211;get</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;set</code>] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-clip</i>&nbsp;<wbr>is used to get or set the Palm Clipboard contents from STDOUT/STDIN. You must provide one of -g or -s. </p>
 <h2>COMMANDS</h2>
 <p> You must provide one of <code>-g</code> or <code>-s</code>. </p>

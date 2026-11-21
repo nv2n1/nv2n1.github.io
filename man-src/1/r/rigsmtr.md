@@ -1,4 +1,5 @@
 ---
+
 title: "rigsmtr(1)"
 name: "rigsmtr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rigsmtr/"
 description: "rigsmtr – measure S-Meter vs azimuth using Hamlib"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rigsmtr</code> [<i>OPTION</i>]&#8230; [time_step]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rigsmtr</code> uses Hamlib to control a rig to measure S-Meter vs azimuth:<br />
  It rotates the antenna from minimum azimuth to maximum azimuth. Every second or <i>time_step</i> if specified in seconds, it retrieves the signal strength.<br />
  Azimuth in degree and corresponding S-Meter level in dB relative to S9 are then printed on stdout.<br />

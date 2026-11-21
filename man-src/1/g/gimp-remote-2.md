@@ -1,4 +1,5 @@
 ---
+
 title: "gimp-remote-2(1)"
 name: "gimp-remote-2"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gimp-remote-2/"
 description: "gimp-remote – tells a running GIMP to open a (local or remote) image file."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gimp-remote</code> [-h] [&#8211;help] [-v] [&#8211;version] [&#8211;display <i>display</i>] [-e] [&#8211;existing] [-q] [&#8211;query] [-s] [&#8211;no-splash] [-p] [&#8211;print-xid] <i>filename</i> &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <i>gimp-remote</i> is a small utility that tells a running GIMP to open one or more (local or remote) image files. It does so by searching for a GIMP toolbox on the active display. If it can find a GIMP toolbox, a synthetic drop event is created which makes GIMP think the files would have been dropped onto the toolbox. More than one filename or URL can be specified on the commandline. </p>
 <p> If no GIMP window is found, <i>gimp-remote</i> will start a new GIMP instance and ask it to load the specified images. If no filename or URL is given, <i>gimp-remote</i> will start a new GIMP. This behaviour can be altered using the command-line options described below. </p>
 <p> If you are using GIMP on Linux or another platform with the D-Bus message bus system, chances are good that this functionality is already built into the main GIMP executable and that you will not need to use <i>gimp-remote</i>. </p>

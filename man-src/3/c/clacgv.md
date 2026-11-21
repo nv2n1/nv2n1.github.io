@@ -1,4 +1,5 @@
 ---
+
 title: "clacgv(3)"
 name: "clacgv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clacgv/"
 description: "clacgv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clacgv</code> (N, X, INCX)<br />
  <i></i><code>CLACGV</code> conjugates a complex vector.</p>

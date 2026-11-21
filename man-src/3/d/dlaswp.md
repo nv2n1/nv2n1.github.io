@@ -1,4 +1,5 @@
 ---
+
 title: "dlaswp(3)"
 name: "dlaswp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaswp/"
 description: "dlaswp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaswp</code> (N, A, LDA, K1, K2, IPIV, INCX)<br />
  <i></i><code>DLASWP</code> performs a series of row interchanges on a general rectangular matrix.</p>

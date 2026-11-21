@@ -1,4 +1,5 @@
 ---
+
 title: "cgbrfs(3)"
 name: "cgbrfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgbrfs/"
 description: "cgbrfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgbrfs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code>CGBRFS</code></p>

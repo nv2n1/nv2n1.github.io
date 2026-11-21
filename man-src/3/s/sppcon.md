@@ -1,4 +1,5 @@
 ---
+
 title: "sppcon(3)"
 name: "sppcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sppcon/"
 description: "sppcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>SPPCON</code></p>

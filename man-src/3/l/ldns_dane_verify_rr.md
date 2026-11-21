@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dane_verify_rr(3)"
 name: "ldns_dane_verify_rr"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_dane_verify, ldns_dane_verify_rr"
 
 <h2>NAME</h2>
 <p> ldns_dane_verify, ldns_dane_verify_rr </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_dane_verify(ldns_rr_list* tlsas, X509* cert, STACK_OF(X509)* extra_certs, X509_STORE* pkix_validation_store); </p>
 <p> ldns_status ldns_dane_verify_rr(const ldns_rr* tlsa_rr, X509* cert, STACK_OF(X509)* extra_certs, X509_STORE* pkix_validation_store); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dane_verify</i>()</dt>
 <dd>Verify if any of the given TLSA resource records matches the given certificate. </dd>

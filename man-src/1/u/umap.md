@@ -1,4 +1,5 @@
 ---
+
 title: "umap(1)"
 name: "umap"
 section: "1"
@@ -6,20 +7,13 @@ letter: "u"
 url: "/docs/linux/man/1-umap/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+umap - map between different character sets 
 
- umap - map between different character sets 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
  umap [options] &lt;before&gt;:&lt;after&gt;
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- The <i>umap</i> script acts as a filter between different encodings and character sets. 
+The <i>umap</i> script acts as a filter between different encodings and character sets. 
 
  The following options are recognized:
 <dl>

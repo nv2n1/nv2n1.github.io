@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-newinit(1)"
 name: "rpmdev-newinit"
 section: "1"
@@ -9,9 +10,7 @@ description: "rpmdev-newinit – manual page for rpmdev-newinit version 1.1"
 
 <h2>NAME</h2>
 <p> rpmdev-newinit &#8211; manual page for rpmdev-newinit version 1.1</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rpmdev-newinit</code> [<i>option</i>]&#8230; [<i>appname</i>[<i>.init</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> rpmdev-newinit generates new init script from a template</p>
 <h2>OPTIONS</h2>
 <dl>

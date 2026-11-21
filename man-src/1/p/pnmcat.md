@@ -1,4 +1,5 @@
 ---
+
 title: "pnmcat(1)"
 name: "pnmcat"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pnmcat/"
 description: "pnmcat – concatenate portable anymaps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmcat</code> [<code>-white</code>|<code>-black</code>] <code>-leftright</code>|<code>-lr</code> [<code>-jtop</code>|<code>-jbottom</code>] <i>pnmfile pnmfile</i> &#8230;<br />
  <code>pnmcat</code> [<code>-white</code>|<code>-black</code>] <code>-topbottom</code>|<code>-tb</code> [<code>-jleft</code>|<code>-jright</code>] <i>pnmfile pnmfile</i> &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> Reads portable anymaps as input. Concatenates them either left to right or top to bottom, and produces a portable anymap as output. </p>
 <p> <code>pamdice</code> splits an image up into smaller ones. </p>
 <p> <code>pnmtile</code> concatenates a single input image to itself repeatedly. </p>

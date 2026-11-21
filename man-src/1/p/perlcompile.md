@@ -1,4 +1,5 @@
 ---
+
 title: "perlcompile(1)"
 name: "perlcompile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlcompile/"
 description: "perlcompile – Introduction to the Perl Compiler-Translator"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Perl has always had a compiler: your source is compiled into an internal form (a parse tree) which is then optimized before being run. Since version 5.005, Perl has shipped with a module capable of inspecting the optimized parse tree (<tt>&quot;B&quot;</tt>), and this has been used to write many useful utilities, including a module that lets you turn your Perl into C source code that can be compiled into a native executable. </p>
 <p> The <tt>&quot;B&quot;</tt> module provides access to the parse tree, and other modules (&#8220;back ends&#8221;) do things with the tree. Some write it out as semi-human-readable text. Another traverses the parse tree to build a cross-reference of which subroutines, formats, and variables are used where. Another checks your code for dubious constructs. Yet another back end dumps the parse tree back out as Perl source, acting as a source code beautifier or deobfuscator. </p>
 <p> Because its original purpose was to be a way to produce C code corresponding to a Perl program, and in turn a native executable, the <tt>&quot;B&quot;</tt> module and its associated back ends are known as &#8220;the compiler&#8221;, even though they don&#8217;t really compile anything. Different parts of the compiler are more accurately a &#8220;translator&#8221;, or an &#8220;inspector&#8221;, but people want Perl to have a &#8220;compiler option&#8221; not an &#8220;inspector gadget&#8221;. What can you do? </p>

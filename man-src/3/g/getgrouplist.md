@@ -1,4 +1,5 @@
 ---
+
 title: "getgrouplist(3)"
 name: "getgrouplist"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getgrouplist/"
 description: "getgrouplist – get list of groups to which a user belongs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;grp.h&gt;</code> </p>
 <p> <code>int getgrouplist(const char *</code><i>user</i><code>, gid_t </code><i>group</i><code>,</code><br />
  <code> gid_t *</code><i>groups</i><code>, int *</code><i>ngroups</i><code>);</code> </p>
@@ -17,7 +17,6 @@ description: "getgrouplist – get list of groups to which a user belongs"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>getgrouplist</code>() function scans the group database (see <code><a href="/docs/linux/man/5-group/">group</a></code>(5)) to obtain the list of groups that <i>user</i> belongs to. Up to <i>*ngroups</i> of these groups are returned in the array <i>groups</i>. </p>
 <p> If it was not among the groups defined for <i>user</i> in the group database, then <i>group</i> is included in the list of groups returned by <code>getgrouplist</code>(); typically this argument is specified as the group ID from the password record for <i>user</i>. </p>
 <p> The <i>ngroups</i> argument is a value-result argument: on return it always contains the number of groups found for <i>user</i>, including <i>group</i>; this value may be greater than the number of groups stored in <i>groups</i>.</p>

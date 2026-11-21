@@ -1,4 +1,5 @@
 ---
+
 title: "ecvt(3)"
 name: "ecvt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ecvt/"
 description: "ecvt, fcvt – convert a floating-point number to a string"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>
 <p> <code>char *ecvt(double </code><i>number</i><code>, int </code><i>ndigits</i><code>, int *</code><i>decpt</i><code>,</code> <code>int *</code><i>sign</i><code>);</code> </p>
 <p> <code>char *fcvt(double </code><i>number</i><code>, int </code><i>ndigits</i><code>, int *</code><i>decpt</i><code>,</code> <code>int *</code><i>sign</i><code>);</code> </p>
@@ -24,7 +24,6 @@ description: "ecvt, fcvt – convert a floating-point number to a string"
 </dd><dt>Before glibc 2.12:</dt>
 <dd> _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>ecvt</code>() function converts <i>number</i> to a null-terminated string of <i>ndigits</i> digits (where <i>ndigits</i> is reduced to a system-specific limit determined by the precision of a <i>double</i>), and returns a pointer to the string. The high-order digit is nonzero, unless <i>number</i> is zero. The low order digit is rounded. The string itself does not contain a decimal point; however, the position of the decimal point relative to the start of the string is stored in <i>*decpt</i>. A negative value for <i>*decpt</i> means that the decimal point is to the left of the start of the string. If the sign of <i>number</i> is negative, <i>*sign</i> is set to a nonzero value, otherwise it is set to 0. If <i>number</i> is zero, it is unspecified whether <i>*decpt</i> is 0 or 1. </p>
 <p> The <code>fcvt</code>() function is identical to <code>ecvt</code>(), except that <i>ndigits</i> specifies the number of digits after the decimal point.</p>
 <h2>RETURN VALUE</h2>

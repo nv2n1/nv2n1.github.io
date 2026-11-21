@@ -1,4 +1,5 @@
 ---
+
 title: "pmiestatus(1)"
 name: "pmiestatus"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmiestatus – display information from pmie stats file"
 
 <h2>NAME</h2>
 <p> <code>pmiestatus</code> &#8211; display information from pmie stats file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmiestatus</code> <i>statsfile</i> [<i>&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmiestatus</code> displays information used to identify a running <code>pmie</code> process. It is mostly used by <code>pmie_check</code> and <code>pmie_daily</code> when they hunt for instances of <code>pmie</code> to check against the control file.</p>
 <h2>FILES</h2>
 <dl>

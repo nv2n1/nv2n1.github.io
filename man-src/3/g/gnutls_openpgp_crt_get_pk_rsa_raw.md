@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_get_pk_rsa_raw(3)"
 name: "gnutls_openpgp_crt_get_pk_rsa_raw"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_openpgp_crt_get_pk_rsa_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_pk_rsa_raw &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_pk_rsa_raw(gnutls_openpgp_crt_t </code><i>crt</i><code>, gnutls_datum_t * </code><i>m</i><code>, gnutls_datum_t * </code><i>e</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_openpgp_crt_get_pk_rsa_raw – API function"
 <dd> will hold the modulus</dd>
 <dt>gnutls_datum_t * e</dt>
 <dd> will hold the public exponent</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the RSA public key&#8217;s parameters found in the given structure. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, otherwise a negative error code.</p>

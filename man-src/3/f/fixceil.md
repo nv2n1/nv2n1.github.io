@@ -1,4 +1,5 @@
 ---
+
 title: "fixceil(3)"
 name: "fixceil"
 section: "3"
@@ -9,10 +10,8 @@ description: "fixceil – Returns the smallest integer not less than x. Allegro 
 
 <h2>NAME</h2>
 <p> fixceil &#8211; Returns the smallest integer not less than x. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int fixceil(fixed x);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Returns the smallest integer not less than x. That is, it rounds towards positive infinity. Example: </p>
 <pre><code>
 int result;

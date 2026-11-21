@@ -1,4 +1,5 @@
 ---
+
 title: "pmload(1)"
 name: "pmload"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pmload/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pmload - show what files a given module loads at compile time 
 
- pmload - show what files a given module loads at compile time 
-
-<h2>DESCRIPTION</h2>
-
- Given an argument of a module name, show all the files that are loaded directly or indirectly when the module is used at compile-time.
+Given an argument of a module name, show all the files that are loaded directly or indirectly when the module is used at compile-time.
 
 <h2>EXAMPLES</h2>
 

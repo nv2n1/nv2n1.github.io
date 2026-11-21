@@ -1,4 +1,5 @@
 ---
+
 title: "cstedc(3)"
 name: "cstedc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cstedc/"
 description: "cstedc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, RWORK, LRWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>CSTEDC</code></p>

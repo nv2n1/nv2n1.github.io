@@ -1,4 +1,5 @@
 ---
+
 title: "qemu-img(1)"
 name: "qemu-img"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qemu-img/"
 description: "qemu-img – QEMU disk image utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>qemu-img</code> [<i>standard</i> <i>options</i>] <i>command</i> [<i>command</i> <i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> qemu-img allows you to create, convert and modify images offline. It can handle all image formats supported by <font SIZE="-1">QEMU.</font> </p>
 <p> <code>Warning:</code> Never use qemu-img to modify images in use by a running virtual machine or any other process; this may destroy the image. Also, be aware that querying an image that is being modified by another process may encounter inconsistent state.</p>
 <h2>OPTIONS</h2>

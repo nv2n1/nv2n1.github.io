@@ -1,4 +1,5 @@
 ---
+
 title: "pamgradient(1)"
 name: "pamgradient"
 section: "1"
@@ -8,10 +9,8 @@ description: "pamgradient – create a four-corner gradient PAM image"
 ---
 
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>pamgradient</code> [<code>-maxval=</code><i>maxval</i>] <i>color-tl</i> <i>color-tr</i> <i>color-bl</i> <i>color-br</i> <i>width</i> <i>height</i> </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamgradient</code> creates an image of the specified dimensions <i>width</i> by <i>height</i> which contains a smooth, two-dimensional gradient between the specified colors of the four corners (from top left to bottom right). </p>
 <p> Specify the colors as described for the argument of the <code>ppm_parsecolor()</code> library routine . </p>

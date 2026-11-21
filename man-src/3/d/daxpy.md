@@ -1,4 +1,5 @@
 ---
+
 title: "daxpy(3)"
 name: "daxpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-daxpy/"
 description: "daxpy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>daxpy</code> (N, DA, DX, INCX, DY, INCY)<br />
  <i></i><code>DAXPY</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "geany(1)"
 name: "geany"
 section: "1"
@@ -9,9 +10,7 @@ description: "Geany — a small and lightweight IDE"
 
 <h2>NAME</h2>
 <p> Geany &#8212; a small and lightweight IDE</p>
-<h2>SYNOPSIS</h2>
 <p> <code>geany</code> [<code>option</code>] [+number] [<code>files &#8230;</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> Geany is a small and fast editor with basic features of an integrated development environment. </p>
 <p> Some of its features: syntax highlighting, code completion, code folding, symbol/tag lists and many supported filetypes like C(++), Java, PHP, HTML, DocBook, Perl and more. </p>
 <p> Homepage: <a rel="nofollow" href="http://www.geany.org/">http://www.geany.org/</a></p>

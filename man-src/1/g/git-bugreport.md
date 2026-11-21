@@ -1,4 +1,5 @@
 ---
+
 title: "git-bugreport(1)"
 name: "git-bugreport"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-bugreport/"
 description: "git-bugreport – Collect information for user to file a bug report"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git bugreport[(-o | --output - directory) &lt; path &gt; ][(-s | --suffix) &lt; format &gt; ]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Captures information about the user&#8217;s machine, Git client, and repository state, as well as a form requesting information about the behavior the user observed, into a single text file which the user can then share, for example to the Git mailing list, in order to report an observed bug. </p>
 <p> The following information is requested from the user: </p>
 <dl>

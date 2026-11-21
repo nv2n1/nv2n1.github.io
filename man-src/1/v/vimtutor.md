@@ -1,4 +1,5 @@
 ---
+
 title: "vimtutor(1)"
 name: "vimtutor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-vimtutor/"
 description: "vimtutor – the Vim tutor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vimtutor [-g] [language]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Vimtutor</code> starts the <code>Vim</code> tutor. It copies the tutor file first, so that it can be modified without changing the original file. </p>
 <p> The <code>Vimtutor</code> is useful for people that want to learn their first <code>Vim</code> commands. </p>
 <p> The optional argument -g starts vimtutor with gvim rather than vim, if the GUI version of vim is available, or falls back to Vim if gvim is not found. </p>

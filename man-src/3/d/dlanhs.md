@@ -1,4 +1,5 @@
 ---
+
 title: "dlanhs(3)"
 name: "dlanhs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlanhs/"
 description: "dlanhs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlanhs</code> (NORM, N, A, LDA, WORK)<br />
  <i></i><code>DLANHS</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of an upper Hessenberg matrix.</p>

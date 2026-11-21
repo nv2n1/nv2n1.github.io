@@ -1,4 +1,5 @@
 ---
+
 title: "g_principal_d(1)"
 name: "g_principal_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_principal – calculates axes of inertia for a group of atoms"
 <h2>NAME</h2>
 <p> g_principal &#8211; calculates axes of inertia for a group of atoms </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_principal</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-a1</code><i> axis1.dat </i> <code>-a2</code><i> axis2.dat </i> <code>-a3</code><i> axis3.dat </i> <code>-om</code><i> moi.dat </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]foo</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> g_principal calculates the three principal axes of inertia for a group of atoms.</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />

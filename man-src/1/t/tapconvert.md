@@ -1,4 +1,5 @@
 ---
+
 title: "tapconvert(1)"
 name: "tapconvert"
 section: "1"
@@ -9,10 +10,8 @@ description: "tapconvert – convert Twisted configurations from one format to a
 
 <h2>NAME</h2>
 <p> tapconvert &#8211; convert Twisted configurations from one format to another</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tapconvert -i </code><i>input</i> -o <i>output</i> [-f <i>input-type</i>] [-t <i>output-type</i>] [-d] [-e] </p>
 <p> <code>tapconvert &#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>&#8211;help</code> prints out a usage message to standard output.</p>
 <dl>
 <dt><code>&#8211;in</code>, <code>-i</code> <i>&lt;input file&gt;</i></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-loadtemplate(1)"
 name: "debconf-loadtemplate"
 section: "1"
@@ -6,20 +7,13 @@ letter: "d"
 url: "/docs/linux/man/1-debconf-loadtemplate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+debconf-loadtemplate - load template file into debconf database 
 
- debconf-loadtemplate - load template file into debconf database 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
  debconf-loadtemplate owner file [file ..]
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- Loads one or more template files into the debconf database. The first parameter specifies the owner of the templates (typically, the owner is the name of a debian package). The remaining parameters are template files to load.
+Loads one or more template files into the debconf database. The first parameter specifies the owner of the templates (typically, the owner is the name of a debian package). The remaining parameters are template files to load.
 
 <h2>WARNING</h2>
 

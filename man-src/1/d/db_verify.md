@@ -1,4 +1,5 @@
 ---
+
 title: "db_verify(1)"
 name: "db_verify"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-db_verify/"
 description: "db5.3_verify – Verifies the structure databases"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>db5.3_verify</code> [-NoqV] [-h home] [-P password] file &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The db5.3_verify utility verifies the structure of one or more files and the databases they contain.</p>
 <h2>OPTIONS</h2>
 <dl>

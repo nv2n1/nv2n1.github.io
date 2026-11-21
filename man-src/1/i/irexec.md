@@ -1,4 +1,5 @@
 ---
+
 title: "irexec(1)"
 name: "irexec"
 section: "1"
@@ -9,9 +10,7 @@ description: "irexec – run programs with one button press"
 
 <h2>NAME</h2>
 <p> irexec &#8211; run programs with one button press</p>
-<h2>SYNOPSIS</h2>
 <p> <code>irexec</code> [<i>options</i>] [<i>config_file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This program lets you execute arbitrary commands on an IR signal decoded by lircd, the LIRC daemon. You can give irexec a command line parameter which has to be a name of a valid config file. If no command line parameters are given irexec reads the default config file which is usually ~/.config/lircrc. </p>
 <p> If irexec executes a program it will wait until this program terminates. So append a &#8216;&amp;&#8217; to the command string if you don&#8217;t want that. </p>
 <p> The config string consists of the command to be run. Potential uses are shutting down the computer, starting a dial-up connection etc.</p>

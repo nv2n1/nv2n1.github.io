@@ -1,4 +1,5 @@
 ---
+
 title: "tor-resolve(1)"
 name: "tor-resolve"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tor-resolve/"
 description: "tor-resolve – resolve a hostname to an IP address via tor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tor-resolve</code> [-4|-5] [-v] [-x] [-p <i>socksport</i>] <i>hostname</i> [<i>sockshost</i>[:<i>socksport</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tor-resolve</code> is a simple script to connect to a SOCKS proxy that knows about the SOCKS RESOLVE command, hand it a hostname, and return an IP address. </p>
 <p> By default, <code>tor-resolve</code> uses the Tor server running on 127.0.0.1 on SOCKS port 9050. If this isn&#8217;t what you want, you should specify an explicit <i>sockshost</i> and/or <i>socksport</i> on the command line.</p>
 <h2>OPTIONS</h2>

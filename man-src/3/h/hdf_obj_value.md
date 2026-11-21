@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_obj_value(3)"
 name: "hdf_obj_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_obj_value/"
 description: "hdf_obj_value – Return the value of a node"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -16,7 +16,6 @@ char *hdf_obj_value(HDF *hdf);
 </code></pre>
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the hdf dataset node </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_obj_value is an accessor function for a dataset node which returns the value of the node, or NULL if the node has no value. This is not a copy of the value, so the node retains ownership of the value </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-sync(1)"
 name: "git-sync"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-sync – Sync local branch with remote branch"
 
 <h2>NAME</h2>
 <p> <code>git-sync</code> &#8211; Sync local branch with remote branch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git sync</code> [ &lt;remote&gt; &lt;branch&gt; ]</p>
-<h2>DESCRIPTION</h2>
 <p> Sync local branch with &lt;remote&gt;/&lt;branch&gt;. </p>
 <p> When &lt;remote&gt; and &lt;branch&gt; are not specified on the command line, upstream of local branch will be used by default. </p>
 <p> All changes and untracked files and directories will be removed.</p>

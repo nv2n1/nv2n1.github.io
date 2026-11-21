@@ -1,4 +1,5 @@
 ---
+
 title: "setupcon(1)"
 name: "setupcon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-setupcon/"
 description: "setupcon – sets up the font and the keyboard on the console"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>setupcon</code> [<i>OPTION</i>]&#8230;&nbsp;[<i>VARIANT</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>setupcon</code> is a program for fast and easy setup of the font and the keyboard on the console. Most of the time you invoke <code>setupcon</code> without arguments. The keyboard configuration is specified in <i>~/.keyboard</i> or <i>/etc/default/keyboard</i>. The font configuration is specified in <i>~/.console-setup</i> or <i>/etc/default/console-setup</i>. Consult <code><a href="/docs/linux/man/5-keyboard/">keyboard</a></code>(5) and <code><a href="/docs/linux/man/5-console-setup/">console-setup</a></code>(5) for instructions how to configure these two files. </p>
 <p> If you have to switch often between different encodings, keyboards or languages, you can prepare several alternative configuration files for <code>setupcon</code>. Suppose that most of the time you will use Greek language with Greek keyboard layout, but sometimes you need to type in German with German keyboard layout. In this situation you should customize the main configuration files (<i>keyboard</i> and <i>console-setup</i>) for Greek. Also, create alternative configuration files for German named <i>keyboard.german</i> and <i>console-setup.german</i>. Then in order to configure the console for Greek you will simply run the command with no arguments: <i>setupcon</i> and in order to configure the console for German you will use <i>setupcon german</i>. </p>
 <h2>OPTIONS</h2>

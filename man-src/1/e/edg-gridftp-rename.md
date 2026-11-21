@@ -1,4 +1,5 @@
 ---
+
 title: "edg-gridftp-rename(1)"
 name: "edg-gridftp-rename"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-edg-gridftp-rename/"
 description: "edg-gridftp-rename – Rename a file or directory on a GridFTP server."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> edg-gridftp-rename [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] <i>SourceURL</i> <i>DestinationURL</i> </p>
 <p> edg-gridftp-rename <code>&#8211;usage</code> </p>
 <p> edg-gridftp-rename <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>edg-gridftp-rename</code> renames a file or directory on a GridFTP server. Everything but the filename is ignored on the destination <font SIZE="-1">URL</font> meaning that files will not be moved between servers. This command will return a status of 0 if the file or directory was renamed. In all other cases, it will return a non-zero value and print an error message to the standard error.</p>
 <h2>OPTIONS</h2>
 <dl>

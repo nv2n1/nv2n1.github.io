@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-arx(1)"
 name: "shtool-arx"
 section: "1"
@@ -8,9 +9,7 @@ description: "shtool arx – GNU shtool"
 ---
 
 <p><a href="/docs/linux/man/1-ar/">ar</a>(1) extensional command</p>
-<h2>SYNOPSIS</h2>
 <p> <code>shtool arx</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-C</code>|<code>&#8211;command</code> <i>cmd</i>] <i>op</i> <i>archive</i> <i>file</i> [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>shtool arx</code> is a wrapper around the archiving tool <i><a href="/docs/linux/man/1-ar/">ar</a></i>(1). It provides the ability to create archives out of existing archives, i.e., if one of <i>file</i> matches &quot;<tt>&quot;*.a&quot;</tt>&quot;, the archive member files of <i>file</i> are used instead of <i>file</i> itself. </p>
 <p> The trick of this command is the automatic handling of archive members which is especially interesting if one wants to construct a (usually top-level) library archive out of pre-built sub-library archives (usually staying inside subdirs) in a large source tree. For <font SIZE="-1"><code>GNU</code></font><code> libtool</code> based projects, a similar functionality is provided by <font SIZE="-1"><code>GNU</code></font><code> libtool</code> internally, too.</p>
 <h2>OPTIONS</h2>

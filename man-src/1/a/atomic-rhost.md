@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-rhost(1)"
 name: "atomic-rhost"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-rhost/"
 description: "atomic-rhost – Manage cluster hosts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic rhost [OPTIONS] SUBCOMMAND</code> </p>
 <p> <code>atomic rhost</code> will issue commands to a Commissaire server over HTTP. </p>
 <p> Commissaire allows administrators of a Kubernetes, Atomic Enterprise or OpenShift installation to perform administrative tasks without the need to write custom scripts or manually intervene on systems. </p>

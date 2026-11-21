@@ -1,4 +1,5 @@
 ---
+
 title: "gcjh(1)"
 name: "gcjh"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gcjh/"
 description: "gcjh – – generate header files from Java class files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gcjh [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>CLASS</i></font><i></i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <tt>&quot;gcjh&quot;</tt> program is used to generate header files from class files. It can generate both <font SIZE="-1">CNI</font> and <font SIZE="-1">JNI</font> header files, as well as stub implementation files which can be used as a basis for implementing the required native methods. It is similar to <tt>&quot;javah&quot;</tt> but has slightly different command line options, and defaults to <font SIZE="-1">CNI</font>.</p>
 <h2>OPTIONS</h2>
 <p> See <tt>&quot;javah&quot;</tt> for a full description; this page only lists the additional options provided by <tt>&quot;gcjh&quot;</tt>. </p>

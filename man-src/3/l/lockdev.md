@@ -1,4 +1,5 @@
 ---
+
 title: "lockdev(3)"
 name: "lockdev"
 section: "3"
@@ -9,14 +10,12 @@ description: "lockdev, liblockdev, dev_testlock, dev_lock, dev_relock, dev_unloc
 
 <h2>NAME</h2>
 <p> lockdev, liblockdev, dev_testlock, dev_lock, dev_relock, dev_unlock &#8211; manage device lockfiles</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;lockdev.h&gt;</code> </p>
 <p> <code>pid_t dev_testlock( const char * </code><i>devname</i><code>);</code><br />
  <code>pid_t dev_lock( const char * </code><i>devname</i><code>);</code><br />
  <code>pid_t dev_relock( const char * </code><i>devname</i><code>, pid_t </code><i>pid</i><code>);</code><br />
  <code>pid_t dev_unlock( const char * </code><i>devname</i><code>, pid_t </code><i>pid</i><code>);</code> </p>
 <p> <code>cc [ flag</code><i> &#8230; ] file</i><code> &#8230; -llockdev [ library</code><i> ] </i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>lockdev</code> functions act on device locks normally located in <code>/var/lock .</code> The lock is acquired creating a pair of files hardlinked between them and named after the device name (as mandated by FSSTND) and the device&#8217;s major and minor numbers (as in SVr4 locks). This permits to circumvent a problem using only the FSSTND lock method when the same device exists under different names (for convenience or when a device must be accessable by more than one group of users).<br />
  The lock file names are typically in the form <code>LCK..ttyS1</code> and <code>LK.000.004.065 ,</code> but is provided a way to easily modify them to use the library on different architectures. The content of those files is the pid of the process who owns the lock. </p>
 <p> The <code>dev_testlock()</code> function simply checks if the device is in some way locked and if the owner of the lock is still active (otherwise it removes the lock). It recognise a valid lock even if only one of the two lock files exists (and is owned by an existing process), thus permitting a safe use of this library together with programs using only FSSTND or SVr4 lock style. </p>

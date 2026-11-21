@@ -1,4 +1,5 @@
 ---
+
 title: "clang-format-diff(1)"
 name: "clang-format-diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clang-format-diff/"
 description: "clang-format-diff.py – manual page for clang-format-diff.py 10"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> usage: clang-format-diff.py [-h] [-i] [-p NUM] [-regex PATTERN]</p>
 <dl>
 <dt>[-iregex PATTERN] [-sort-includes] [-v]</dt>

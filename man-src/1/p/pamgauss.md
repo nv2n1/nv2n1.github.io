@@ -1,4 +1,5 @@
 ---
+
 title: "pamgauss(1)"
 name: "pamgauss"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamgauss/"
 description: "pamgauss – create a two dimensional gaussian function as a PAM image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamgauss</code> <i>width</i> <i>height</i> <code>-sigma=</code><i>number</i> [<code>-maxval=</code><i>number</i>] [<code>-tupletype=</code><i>string</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
 <h2>EXAMPLES</h2>
@@ -15,7 +15,6 @@ description: "pamgauss – create a two dimensional gaussian function as a PAM i
      pamgauss 3 3 -sigma=.5 -tupletype=GRAYSCALE | pamtopnm &gt;gauss.pgm
      pnmconvol -nooffset gauss.pgm myimage.ppm &gt;blurred.ppm
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamgauss</code> generates a one-plane PAM image whose samples are a gaussian function of their distance from the center of the image. I.e. the sample value is highest in the center and goes down, in a bell curve shape, as you move away from the center. </p>
 <p> The values are scaled so that the volume under the surface of the two-dimensional Gaussian function is the maxval of the image. </p>

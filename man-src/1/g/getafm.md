@@ -1,4 +1,5 @@
 ---
+
 title: "getafm(1)"
 name: "getafm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getafm/"
 description: "getafm – create an AFM file for a PostScript font."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>getafm </code> <i>FontName</i> &gt; <i>output.ps</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Getafm</i> generates a PostScript file which prints an AFM file for a font to the printer&#8217;s output channel. The output of <i>getafm</i> should be sent to a printer, or to GhostScript. For example, </p>
 <p> <center> getafm Times-Roman | gsnd &#8211; &gt;Times-Roman.afm<br />
  </center> </p>

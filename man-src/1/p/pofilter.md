@@ -1,4 +1,5 @@
 ---
+
 title: "pofilter(1)"
 name: "pofilter"
 section: "1"
@@ -9,9 +10,7 @@ description: "pofilter – Perform quality checks on Gettext PO, XLIFF and TMX l
 
 <h2>NAME</h2>
 <p> pofilter &#8211; Perform quality checks on Gettext PO, XLIFF and TMX localization files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pofilter </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-l|&#8211;listfilters] [&#8211;review] [&#8211;noreview] [&#8211;fuzzy] [&#8211;nofuzzy] [&#8211;nonotes] [&#8211;autocorrect] [&#8211;language <i>LANG</i>] [&#8211;openoffice] [&#8211;mozilla] [&#8211;drupal] [&#8211;gnome] [&#8211;kde] [&#8211;wx] [&#8211;excludefilter <i>FILTER</i>] [-t|&#8211;test <i>FILTER</i>] [&#8211;notranslatefile <i>FILE</i>] [&#8211;musttranslatefile <i>FILE</i>] [&#8211;validcharsfile <i>FILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Snippet files are created whenever a test fails. These can be examined, corrected and merged back into the originals using pomerge. </p>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pofilter.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pofilter.html</a> for examples and usage instructions and <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pofilter_tests.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pofilter_tests.html</a> for full descriptions of all tests.</p>
 <h2>OPTIONS</h2>

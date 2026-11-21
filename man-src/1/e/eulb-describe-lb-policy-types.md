@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-lb-policy-types(1)"
 name: "eulb-describe-lb-policy-types"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-describe-lb-policy-types – Show information about load bala
 
 <h2>NAME</h2>
 <p> eulb-describe-lb-policy-types &#8211; Show information about load balancer policy types</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-describe-lb-policy-types [&#8211;show-long] [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [POLTYPE [POLTYPE &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about load balancer policy types</p>
 <h3>positional arguments:</h3>
 <dl>

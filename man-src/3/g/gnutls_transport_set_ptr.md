@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_transport_set_ptr(3)"
 name: "gnutls_transport_set_ptr"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_transport_set_ptr – API function"
 
 <h2>NAME</h2>
 <p> gnutls_transport_set_ptr &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_transport_set_ptr(gnutls_session_t </code><i>session</i><code>, gnutls_transport_ptr_t </code><i>ptr</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_transport_set_ptr – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_transport_ptr_t ptr</dt>
 <dd> is the value.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Used to set the first argument of the transport function (for push and pull callbacks). In berkeley style sockets this function will set the connection descriptor.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

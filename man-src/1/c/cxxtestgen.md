@@ -1,4 +1,5 @@
 ---
+
 title: "cxxtestgen(1)"
 name: "cxxtestgen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cxxtestgen/"
 description: "cxxtestgen – performs test discovery to create a CxxTest test runner"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cxxtestgen [options] [&lt;filename&gt; &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The cxxtestgen command processes C++ header files to perform test discovery, and then it creates files for the CxxTest test runner.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "icotool(1)"
 name: "icotool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-icotool/"
 description: "icotool – Convert and create Win32 icon and cursor files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>icotool</code> [<i>OPTION</i>]&#8230;<i> </i>[<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page document describes the <code>icotool</code> command. </p>
 <p> The <code>icotool</code> program converts and creates icon (.ico) and cursor (.cur) files. At the moment icons can only be created from and extracted into PNG files. This is done using libpng. </p>
 <p> Icon and cursor files are used mainly on the Microsoft Windows(R) platform. Each icons or cursors file may contain multiple images of various resolutions and with different number of colors. Cursor files differ from icon files in that they also contain information about the hotspot of each image. </p>

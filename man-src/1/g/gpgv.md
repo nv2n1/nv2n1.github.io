@@ -1,4 +1,5 @@
 ---
+
 title: "gpgv(1)"
 name: "gpgv"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-gpgv/"
 description: "gpgv – Verify OpenPGP signatures"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpgv</code> &#8211; Verify OpenPGP signatures </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpgv</code> [<i>options</i>] <i>signed_files</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gpgv</code> is an OpenPGP signature verification tool. </p>
 <p> This program is actually a stripped-down version of <code>gpg</code> which is only able to check signatures. It is somewhat smaller than the fully-blown <code>gpg</code> and uses a different (and simpler) way to check that the public keys used to make the signature are valid. There are no configuration files and only a few options are implemented. </p>
 <p> <code>gpgv</code> assumes that all keys in the keyring are trustworthy. That does also mean that it does not check for expired or revoked keys. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-copydb(1)"
 name: "debconf-copydb"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-debconf-copydb/"
 description: "debconf-copydb – copy a debconf database"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 debconf - copydb sourcedb destdb[--pattern = pattern][--owner - pattern = pattern] [--config = Foo:bar]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>debconf-copydb</code> copies items from an existing debconf database into another, possibly new database. The two databases may have different formats; if so a conversion will automatically be done.</p>
 <h2>OPTIONS</h2>
 <dl>

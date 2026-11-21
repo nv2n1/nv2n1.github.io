@@ -1,4 +1,5 @@
 ---
+
 title: "safecopy(1)"
 name: "safecopy"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-safecopy/"
 description: "safecopy – rescue data from a source that causes IO errors"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>safecopy</code> &#8211; rescue data from a source that causes IO errors</p>
-<h2>SYNOPSIS</h2>
 <p> <code>safecopy</code> [<i>OPTION</i>]&#8230; <i>SOURCE DEST</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>safecopy</code> tries to get as much data from SOURCE as possible, even resorting to device specific low level operations if applicable. </p>
 <p> This is achieved by identifying problematic or damaged areas, skipping over them and continuing reading afterwards. The corresponding area in the destination file is either skipped (on initial creation that means padded with zeros) or deliberately filled with a recognizable pattern to later find affected files on a corrupted device. </p>
 <p> Safecopy uses an incremental algorithm to identify the exact beginning and end of bad areas, allowing the user to trade minimum accesses to bad areas for thorough data resurrection. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lttng-ust-dl(3)"
 name: "lttng-ust-dl"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-lttng-ust-dl/"
 description: "lttng-ust-dl — LTTng UST 2.x Dynamic Linker Tracing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> Launch your application with:</p>
 <dl>
 <dt><code>LD_PRELOAD=liblttng-ust-dl.so</code> appname</dt>
 <dd></dd></dl>
 <p> This LD_PRELOAD library causes all calls to dlopen and dlclose in the application to be traced with LTTng. In addition to loading this library, enabling this tracing requires the following two events to be enabled: &quot;ust_baddr:push&quot; and &quot;ust_baddr:pop&quot;. </p>
-<h2>DESCRIPTION</h2>
 <p> The events have the following detailed definitions: </p>
 <dl>
 <dt>ust_baddr:push</dt>

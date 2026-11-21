@@ -1,4 +1,5 @@
 ---
+
 title: "freight-clear-cache(1)"
 name: "freight-clear-cache"
 section: "1"
@@ -9,9 +10,7 @@ description: "freight-clear-cache – clears existing package repositories"
 
 <h2>NAME</h2>
 <p> <code>freight-clear-cache</code> &#8211; clears existing package repositories</p>
-<h2>SYNOPSIS</h2>
 <p> <code>freight clear-cache</code> [<code>-c</code> <i>conf</i>] [<code>-v</code>] [<code>-h</code>] [<i>manager</i>/<i>distro</i>][&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>freight-clear-cache</code> clears the cache generated during <code>freight-cache</code> runs so that it can be regenerated on the next <code>freight-cache</code> invocation.</p>
 <h2>OPTIONS</h2>
 <dl>

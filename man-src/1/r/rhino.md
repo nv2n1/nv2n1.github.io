@@ -1,4 +1,5 @@
 ---
+
 title: "rhino(1)"
 name: "rhino"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rhino/"
 description: "rhino – invokes the JavaScript shell for running scripts in batch mode or interactive"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rhino</code> <i>[options]</i> <i>script_filename_or_url</i> <i>[script_arguments]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>rhino</code> command. </p>
 <p> <code>rhino</code> is a start script for the rhino JavaScript shell which provides a simple way to run scripts in batch mode or an interactive environment for exploratory programming. </p>
 <h2>OPTIONS</h2>

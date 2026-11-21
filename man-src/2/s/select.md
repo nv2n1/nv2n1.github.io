@@ -1,4 +1,5 @@
 ---
+
 title: "select(2)"
 name: "select"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-select/"
 description: "select, pselect, FD_CLR, FD_ISSET, FD_SET, FD_ZERO – synchronous I/O multiplexing"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/select.h&gt;
 int select(int nfds, fd_set *readfds, fd_set *writefds,
@@ -22,7 +22,6 @@ int pselect(int nfds, fd_set *readfds, fd_set *writefds,
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>pselect</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</p>
-<h2>DESCRIPTION</h2>
 <p> <code>select</code>() allows a program to monitor multiple file descriptors, waiting until one or more of the file descriptors become &quot;ready&quot; for some class of I/O operation (e.g., input possible). A file descriptor is considered ready if it is possible to perform a corresponding I/O operation (e.g., <code><a href="/docs/linux/man/2-read/">read</a></code>(2), or a sufficiently small <code><a href="/docs/linux/man/2-write/">write</a></code>(2)) without blocking. </p>
 <p> <code>select</code>() can monitor only file descriptors numbers that are less than <code>FD_SETSIZE</code>; <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) do not have this limitation. See BUGS.</p>
 <h3>File descriptor sets</h3>

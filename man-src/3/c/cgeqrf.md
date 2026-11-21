@@ -1,4 +1,5 @@
 ---
+
 title: "cgeqrf(3)"
 name: "cgeqrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgeqrf/"
 description: "cgeqrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeqrf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>CGEQRF</code></p>

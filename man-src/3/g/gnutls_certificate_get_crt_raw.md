@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_get_crt_raw(3)"
 name: "gnutls_certificate_get_crt_raw"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_get_crt_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_get_crt_raw &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_get_crt_raw(gnutls_certificate_credentials_t </code><i>sc</i><code>, unsigned </code><i>idx1</i><code>, unsigned </code><i>idx2</i><code>, gnutls_datum_t * </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_certificate_get_crt_raw – API function"
 <dd> the index in the certificate list. Zero gives the server&#8217;s certificate.</dd>
 <dt>gnutls_datum_t * cert</dt>
 <dd> Will hold the DER encoded certificate.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the DER encoded certificate of the server or any other certificate on its certificate chain (based on <i>idx2</i> ). The returned data should be treated as constant and only accessible during the lifetime of <i>sc</i> .</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value. In case the indexes are out of bounds <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.</p>

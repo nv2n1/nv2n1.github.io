@@ -1,4 +1,5 @@
 ---
+
 title: "truncate(1)"
 name: "truncate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-truncate/"
 description: "truncate – shrink or extend the size of a file to the specified size"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>truncate</code> <i>,OPTION/</i>&#8230; <i>,FILE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Shrink or extend the size of each FILE to the specified size </p>
 <p> A FILE argument that does not exist is created. </p>
 <p> If a FILE is larger than the specified size, the extra data is lost. If a FILE is shorter, it is extended and the sparse extended part (hole) reads as zero bytes. </p>

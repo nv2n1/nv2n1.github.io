@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-push(1)"
 name: "guilt-push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-push/"
 description: "guilt-push – Push patches onto the tree"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-push</i> [ -f ] [-a | &#8211;all | -n &lt;num&gt; | &lt;patchname&gt;]</p>
 <h2>OPTIONS</h2>
 <p> -f</p>

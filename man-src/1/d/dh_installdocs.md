@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installdocs(1)"
 name: "dh_installdocs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installdocs/"
 description: "dh_installdocs – install documentation into package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installdocs</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-X</code><i>item</i>] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installdocs</code> is a debhelper program that is responsible for installing documentation into <i>usr/share/doc/package</i> in package build directories. </p>
 <p> In compat 10 and earlier, <i><a href="/docs/linux/man/1-dh_install/">dh_install</a></i>(1) may be a better tool for handling the upstream documentation, when upstream&#8217;s own build system installs all the desired documentation correctly. In this case, <code>dh_installdocs</code> is still useful for installing packaging related documentation (e.g. the <i>debian/copyright</i> file). </p>
 <p> From debhelper compatibility level 11 on, <code>dh_install</code> will fall back to looking in <i>debian/tmp</i> for files, if it does not find them in the current directory (or wherever you&#8217;ve told it to look using <code>&#8211;sourcedir</code>). </p>

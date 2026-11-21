@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_atoaddr(3)"
 name: "ipsec_atoaddr"
 section: "3"
@@ -9,7 +10,6 @@ description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa –
 
 <h2>NAME</h2>
 <p> ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa &#8211; convert Internet addresses and Subnet masks to and from ASCII</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>const char *atoaddr(const char *src, size_t srclen,</code><br />
  &nbsp;<wbr> <code>struct in_addr *addr);</code><br />
@@ -19,7 +19,6 @@ description: "ipsec_atoaddr, ipsec_addrtoa, ipsec_atosubnet, ipsec_subnettoa –
  &nbsp;<wbr> <code>struct in_addr *addr, struct in_addr *mask);</code><br />
  <code>size_t subnettoa(struct in_addr addr, struct in_addr mask,</code><br />
  &nbsp;<wbr> <code>int format, char *dst, size_t dstlen);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These functions are obsolete; see <i>ipsec_ttoaddr</i>(3) for their replacements. </p>
 <p> <i>Atoaddr</i> converts an ASCII name or dotted-decimal address into a binary address (in network byte order). <i>Addrtoa</i> does the reverse conversion, back to an ASCII dotted-decimal address. <i>Atosubnet</i> and <i>subnettoa</i> do likewise for the &#8220;address/mask&#8221; ASCII form used to write a specification of a subnet. </p>
 <p> An address is specified in ASCII as a dotted-decimal address (e.g. <code>1.2.3.4</code>), an eight-digit network-order hexadecimal number with the usual C prefix (e.g. <code>0x01020304</code>, which is synonymous with <code>1.2.3.4</code>), an eight-digit host-order hexadecimal number with a <code>0h</code> prefix (e.g. <code>0h01020304</code>, which is synonymous with <code>1.2.3.4</code> on a big-endian host and <code>4.3.2.1</code> on a little-endian host), a DNS name to be looked up via <i><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></i>(3), or an old-style network name to be looked up via <i><a href="/docs/linux/man/3-getnetbyname/">getnetbyname</a></i>(3). </p>

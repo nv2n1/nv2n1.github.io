@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_t(3)"
 name: "globus_net_manager_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_net_manager.h –"
 ---
 
 <p> Globus Net Manager Interface.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common.h&#8217;<br />
  #include &#8216;globus_net_manager_attr.h&#8217; </p>
 <h3>Data Structures</h3>

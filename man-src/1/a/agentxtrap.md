@@ -1,4 +1,5 @@
 ---
+
 title: "agentxtrap(1)"
 name: "agentxtrap"
 section: "1"
@@ -9,9 +10,7 @@ description: "agentxtrap – send an AgentX NotifyPDU to an AgentX master agent"
 
 <h2>NAME</h2>
 <p> agentxtrap &#8211; send an AgentX NotifyPDU to an AgentX master agent</p>
-<h2>SYNOPSIS</h2>
 <p> <code>agentxtrap</code> [<i>OPTIONS</i>]<i> trap-oid </i>[<i>OID TYPE VALUE</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>agentxtrap</code> issues an AgentX NotifyPDU to a master agent. One or more object identifiers (OIDs) can be given as arguments on the command line. A type and a value must accompany each object identifier. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

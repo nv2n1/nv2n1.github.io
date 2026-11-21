@@ -1,4 +1,5 @@
 ---
+
 title: "perlaix(1)"
 name: "perlaix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlaix/"
 description: "perlaix – Perl version 5 on IBM AIX (UNIX) systems"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes various features of <font SIZE="-1">IBM</font>&#8216;s <font SIZE="-1">UNIX</font> operating system <font SIZE="-1">AIX</font> that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.</p>
 <h3>Compiling Perl 5 on <font SIZE="-1">AIX</font></h3>
 <p> For information on compilers on older versions of <font SIZE="-1">AIX,</font> see &#8220;Compiling Perl 5 on older <font SIZE="-1">AIX</font> versions up to 4.3.3&#8221;. </p>

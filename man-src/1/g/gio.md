@@ -1,4 +1,5 @@
 ---
+
 title: "gio(1)"
 name: "gio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gio/"
 description: "gio – GIO commandline tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gio</code> help [<i>COMMAND</i>]</dt>
 <dt> <code>gio</code> version</dt>
@@ -28,7 +28,6 @@ description: "gio – GIO commandline tool"
 <dt> <code>gio</code> set [<i>OPTION</i>&#8230;] <i>LOCATION</i> <i>ATTRIBUTE</i> <i>VALUE</i>&#8230;</dt>
 <dt> <code>gio</code> trash [<i>OPTION</i>&#8230;] [<i>LOCATION</i>&#8230;]</dt>
 <dt> <code>gio</code> tree [<i>OPTION</i>&#8230;] [<i>LOCATION</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gio</code></p>
 <dd>is a utility that makes many of the GIO features available from the commandline. In doing so, it provides commands that are similar to traditional utilities, but let you use GIO locations instead of local files: for example you can use something like <a href="smb://server/resource/file.txt">smb://server/resource/file.txt</a> as a location. </dd>
 <p> Plain filenames which contain a colon will be interpreted as URIs with an unknown protocol. To avoid this, prefix them with a path such as ./, or with the file: protocol.</p>

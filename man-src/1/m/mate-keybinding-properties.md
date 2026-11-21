@@ -1,4 +1,5 @@
 ---
+
 title: "mate-keybinding-properties(1)"
 name: "mate-keybinding-properties"
 section: "1"
@@ -9,9 +10,7 @@ description: "mate-keybinding-properties – configure MATE keybindings"
 
 <h2>NAME</h2>
 <p> <code>mate-keybinding-properties </code>&#8211; configure MATE keybindings</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-keybinding-properties</code> [<i>OPTIONS&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This executable is part of the package &#8216;mate-control-center&#8217;: The MATE Control Center. </p>
 <p> The MATE keybindings preference tool enables you to display the default keyboard shortcuts and customize them to your requirements. </p>
 <p> You can also create hot keys. Hot keys are keyboard shortcuts that start applications or perform other useful actions.</p>

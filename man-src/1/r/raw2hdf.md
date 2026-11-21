@@ -1,4 +1,5 @@
 ---
+
 title: "raw2hdf(1)"
 name: "raw2hdf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-raw2hdf/"
 description: "raw2hdf – Create an .hdf hard disk image from a raw data file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>raw2hdf</code> <i>rawfile hdffile</i></p>
-<h2>DESCRIPTION</h2>
 <p> raw2hdf converts a binary dump of a hard disk&#8217;s data into an IDE disk image in .hdf format for use with Sinclair ZX Spectrum emulators.</p>
 <h2>OPTIONS</h2>
 <dl>

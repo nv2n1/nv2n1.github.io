@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_cpy(3)"
 name: "gnutls_x509_privkey_cpy"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_privkey_cpy – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_cpy &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_cpy(gnutls_x509_privkey_t </code><i>dst</i><code>, gnutls_x509_privkey_t </code><i>src</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_privkey_cpy – API function"
 <dd> The destination key, which should be initialized.</dd>
 <dt>gnutls_x509_privkey_t src</dt>
 <dd> The source key</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will copy a private key from source to destination key. Destination has to be initialized.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

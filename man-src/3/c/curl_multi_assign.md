@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_assign(3)"
 name: "curl_multi_assign"
 section: "3"
@@ -9,11 +10,9 @@ description: "curl_multi_assign – set data to association with an internal soc
 
 <h2>NAME</h2>
 <p> curl_multi_assign &#8211; set data to association with an internal socket</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>
 <p> CURLMcode curl_multi_assign(CURLM *multi_handle, curl_socket_t sockfd,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>void&nbsp;<wbr>*sockptr);</p>
-<h2>DESCRIPTION</h2>
 <p> This function assigns an association in the multi handle between the given socket and a private pointer of the application. This is (only) useful for <i><a href="/docs/linux/man/3-curl_multi_socket/">curl_multi_socket</a>(3)</i> uses. </p>
 <p> When set, the <i>sockptr</i> pointer will be passed to all future socket callbacks for the specific <i>sockfd</i> socket. </p>
 <p> If the given <i>sockfd</i> isn&#8217;t already in use by libcurl, this function will return an error. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "amulegui(1)"
 name: "amulegui"
 section: "1"
@@ -8,11 +9,9 @@ description: "amulegui – aMule control program with GUI"
 ---
 
 <p>amulegui &#8211; aMule control program with GUI</p>
-<h2>SYNOPSIS</h2>
 <p> [<code>-c</code> <i>&lt;path&gt;</i>] [<code>-geometry</code> <i>&lt;geom&gt;</i>] _untranslated<code>[</code>-o<code>]</code> _untranslated<code>[</code>-r<code>]</code> _untranslated<code>[</code>-s<code>]</code> [<code>-t</code> <i>&lt;num&gt;</i>] </p>
 <p> _untranslated<code>[</code>-v<code>]</code> </p>
 <p> _untranslated<code>[</code>-h<code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>amulegui</code> is a client program, and can be connected to amule or amuled via EC. You can manage your amule program with it. It provides almost the same functionalities as amule, even if the core works on another computer.</p>
 <dl>
 <dt><code>[ -c</code> <i>&lt;path&gt;</i>, <code>&#8211;config-dir</code>=<i>&lt;path&gt;</i> <code>]</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "lsar(1)"
 name: "lsar"
 section: "1"
@@ -9,9 +10,7 @@ description: "lsar – list archive file contents"
 
 <h2>NAME</h2>
 <p> lsar &#8211; list archive file contents</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lsar</code> [<i>OPTION</i>]&#8230; <i>ARCHIVE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> List the contents of <i>ARCHIVE</i>s.</p>
 <h2>OPTIONS</h2>
 <dl>

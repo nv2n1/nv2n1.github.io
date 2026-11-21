@@ -1,4 +1,5 @@
 ---
+
 title: "shrinkfile(1)"
 name: "shrinkfile"
 section: "1"
@@ -9,9 +10,7 @@ description: "shrinkfile – shrink a file on a line boundary"
 
 <h2>NAME</h2>
 <p> shrinkfile &#8211; shrink a file on a line boundary</p>
-<h2>SYNOPSIS</h2>
 <p> <code>shrinkfile</code> [ <code>-n</code> ] [ <code>-m</code><i> maxsize</i> ] [ <code>-s</code><i> size</i> ] [ <code>-v</code> ] <i>file&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>shrinkfile</i> program shrinks files to a given <i>size</i> if the size is larger than <i>maxsize</i>, preserving the data at the end of the file. Truncation is performed on line boundaries, where a line is a series of bytes ending with a newline, &#8220;
 &#8221;. There is no line length restriction and files may contain any binary data. </p>
 <p> Temporary files are created in the <i>&lt;pathtmp in inn.conf&gt;</i> directory. The &#8220;TMPDIR&#8221; environment variable may be used to specify a different directory. </p>

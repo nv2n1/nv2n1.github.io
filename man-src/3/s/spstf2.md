@@ -1,4 +1,5 @@
 ---
+
 title: "spstf2(3)"
 name: "spstf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spstf2/"
 description: "spstf2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spstf2</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
  <i></i><code>SPSTF2</code> computes the Cholesky factorization with complete pivoting of a real symmetric or complex Hermitian positive semi-definite matrix.</p>

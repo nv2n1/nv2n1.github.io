@@ -1,4 +1,5 @@
 ---
+
 title: "perldtrace(1)"
 name: "perldtrace"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perldtrace/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perldtrace - Perl's support for DTrace 
 
- perldtrace - Perl's support for DTrace 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 #dtrace - Zn 'perl::sub-entry, perl::sub-return { trace(copyinstr(arg0)) }'
 dtrace : description 'perl::sub-entry, perl::sub-return ' matched 10 probes
 #perl - E 'sub outer { inner(@_) } sub inner { say shift } outer("hello")'
@@ -45,9 +41,7 @@ dtrace : description 'perl::sub-entry, perl::sub-return ' matched 10 probes
                                                                                                                                                                                                                                                        return outer
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- DTrace is a framework for comprehensive system- and application-level tracing. Perl is a DTrace <i>provider</i>, meaning it exposes several <i>probes</i> for instrumentation. You can use these in conjunction with kernel-level probes, as well as probes from other providers such as MySQL, in order to diagnose software defects, or even just your application's bottlenecks. 
+DTrace is a framework for comprehensive system- and application-level tracing. Perl is a DTrace <i>provider</i>, meaning it exposes several <i>probes</i> for instrumentation. You can use these in conjunction with kernel-level probes, as well as probes from other providers such as MySQL, in order to diagnose software defects, or even just your application's bottlenecks. 
 
  Perl must be compiled with the <tt>&quot;-Dusedtrace&quot;</tt> option in order to make use of the provided probes. While DTrace aims to have no overhead when its instrumentation is not active, Perl's support itself cannot uphold that guarantee, so it is built without DTrace probes under most systems. One notable exception is that Mac <font SIZE="-1">OS X</font> ships a <i>/usr/bin/perl</i> with DTrace support enabled.
 

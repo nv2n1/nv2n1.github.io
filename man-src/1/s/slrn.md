@@ -1,4 +1,5 @@
 ---
+
 title: "slrn(1)"
 name: "slrn"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slrn/"
 description: "slrn – An easy to use NNTP / spool based newsreader."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>slrn</code> [-aCdknmw] [-C-] [-D<i>name</i>] [-f&nbsp;<wbr><i>newsrc-file</i>] [-i&nbsp;<wbr><i>config-file</i>] [-k0] [&#8211;create] [&#8211;debug&nbsp;<wbr><i>file</i>] [&#8211;help] [&#8211;inews] [&#8211;kill-log <i>file</i>] [&#8211;nntp [-h&nbsp;<wbr><i>server</i>] [-p&nbsp;<wbr><i>port</i>]] [&#8211;show-config] [&#8211;spool] [&#8211;version]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>slrn</i> is an easy to use but powerful NNTP / spool based newsreader. </p>
 <p> It is highly customizable, supports scoring, free key bindings and can be extended using the embedded S-Lang interpreter. </p>
 <p> To use slrn, you either need to set the <i>NNTPSERVER</i> environment variable to the server you want to read news from or specify a server on the command line. A <i>newsrc</i> file is needed, too. In case you do not yet have one, you can create it using &#8220;slrn -f ~/.jnewsrc &#8211;create&#8221;. </p>

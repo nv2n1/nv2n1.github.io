@@ -1,4 +1,5 @@
 ---
+
 title: "mapproject(1)"
 name: "mapproject"
 section: "1"
@@ -9,10 +10,8 @@ description: "mapproject – Do forward and inverse map transformations, datum c
 
 <h2>NAME</h2>
 <p> mapproject &#8211; Do forward and inverse map transformations, datum conversions and geodesy</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mapproject</code> [ <i>tables</i> ] <i>parameters</i> <i>region</i> [ <code>b</code>|<code>B</code>|<code>f</code>|<code>F</code>|<code>o</code>|<code>O</code>[<i>lon0</i>/<i>lat0</i>] ] [ [<i>dx</i>/<i>dy</i>] ] [ <code>c</code>|<code>i</code>|<code>p</code> ] [ [<i>datum</i>] ] [ [<i>unit</i>] ] [ [<i>x0</i>/<i>y0</i>/][[<code>+</code>|<code>&#8211;</code>]<i>unit</i>][<code>+</code>|<code>&#8211;</code>] ] [ ] [ <i>line.xy</i>[/[<code>+</code>|<code>&#8211;</code>]<i>unit</i>][<code>+</code>] ] [ [<code>a</code>|<code>c</code>|<code>g</code>|<code>m</code>] ] [ [<code>d</code>|<code>e</code> ] [ ] [ [<code>h</code>]<i>from</i>[/<i>to</i>] ] [ [<i>level</i>] ] [ [<code>w</code>|<code>h</code>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mapproject</code> reads (longitude, latitude) positions from <i>tables</i> [or standard input] and computes (x,y) coordinates using the specified map projection and scales. Optionally, it can read (x,y) positions and compute (longitude, latitude) values doing the inverse transformation. This can be used to transform linear (x,y) points obtained by digitizing a map of known projection to geographical coordinates. May also calculate distances along track, to a fixed point, or closest approach to a line. Finally, can be used to perform various datum conversions. Additional data fields are permitted after the first 2 columns which must have (longitude,latitude) or (x,y). See option <code>-:</code> on how to read (latitude,longitude) files.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

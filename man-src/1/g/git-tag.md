@@ -1,4 +1,5 @@
 ---
+
 title: "git-tag(1)"
 name: "git-tag"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-tag/"
 description: "git-tag – Create, list, delete or verify a tag object signed with GPG"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git tag[-a | -s | -u&lt;keyid&gt;][-f][-m&lt;msg&gt; | -F&lt;file&gt;][-e]&lt;tagname&gt;[&lt;commit&gt; | &lt;object&gt;] git tag - d&lt;tagname&gt;... git tag[-n[&lt;num&gt;]] - l[--contains&lt;commit&gt;][--no - contains&lt;commit&gt;][--points - at&lt;object&gt;][--column[=&lt;options&gt;] | --no - column][--create - reflog][--sort = &lt;key&gt;][--format = &lt;format&gt;][--merged&lt;commit&gt;][--no - merged&lt;commit&gt;][&lt;pattern&gt;...] git tag - v[--format = &lt;format&gt;]&lt;tagname&gt;...
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Add a tag reference in <code>refs/tags/</code>, unless <code>-d/-l/-v</code> is given to delete, list or verify tags. </p>
 <p> Unless <code>-f</code> is given, the named tag must not yet exist. </p>
 <p> If one of <code>-a</code>, <code>-s</code>, or <code>-u &lt;keyid&gt;</code> is passed, the command creates a <i>tag</i> object, and requires a tag message. Unless <code>-m &lt;msg&gt;</code> or <code>-F &lt;file&gt;</code> is given, an editor is started for the user to type in the tag message. </p>

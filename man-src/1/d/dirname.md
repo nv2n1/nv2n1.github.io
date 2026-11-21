@@ -1,4 +1,5 @@
 ---
+
 title: "dirname(1)"
 name: "dirname"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dirname/"
 description: "dirname – strip last component from file name"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dirname</code> [<i>,OPTION/</i>] <i>,NAME/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Output each NAME with its last non-slash component and trailing slashes removed; if NAME contains no /&#8217;s, output &#8216;.&#8217; (meaning the current directory).</p>
 <dl>
 <dt><code>-z</code>, <code>&#8211;zero</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlaed6(3)"
 name: "dlaed6"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaed6/"
 description: "dlaed6.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaed6</code> (KNITER, ORGATI, RHO, D, Z, FINIT, TAU, INFO)<br />
  <i></i><code>DLAED6</code> used by sstedc. Computes one Newton step in solution of the secular equation.</p>

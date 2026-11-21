@@ -1,4 +1,5 @@
 ---
+
 title: "nvim(1)"
 name: "nvim"
 section: "1"
@@ -7,14 +8,11 @@ url: "/docs/linux/man/1-nvim/"
 description: "nvim – edit text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>nvim</code> &#8211; edit text </p>
-<h2>SYNOPSIS</h2>
 <p> <code>nvim</code> [<i>options</i> ] [<i>file &#8230;</i> ]<br />
 <code>nvim</code> [<i>options</i> ] &#8211;<br />
 <code>nvim</code> [<i>options</i> ] &#8211;<code>t </code><i>tag</i><br />
 <code>nvim</code> [<i>options</i> ] &#8211;<code>q </code>[<i>errorfile</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nvim</code> is a text editor based on Vim. Start <code>nvim</code> followed by any number of options and/or files: </p>
 <blockquote><p><tt>nvim [options] [file ...]</tt></p></blockquote>
 <p> Commands in <code>nvim</code> begin with colon (`:&#8217; ) Type &quot;:help subject&quot; to get help on a specific subject. Use &lt;Tab&gt; and CTRL-D to complete subjects (&quot;:help cmdline-completion&quot;). </p>

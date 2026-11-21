@@ -1,4 +1,5 @@
 ---
+
 title: "libnutclient_commands(3)"
 name: "libnutclient_commands"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnutclient_commands/"
 description: "libnutclient_commands, nutclient_get_device_commands, nutclient_has_device_command, nutclient_get_device_command_description, nutclient_execute_device_command – Instant command related functions in..."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nutclient.h&gt;
 </code></pre>
@@ -20,7 +20,6 @@ int nutclient_has_device_command(NUTCLIENT_t client, const char *dev, const char
 char *nutclient_get_device_command_description(NUTCLIENT_t client, const char *dev, const char *cmd);
 void nutclient_execute_device_command(NUTCLIENT_t client, const char *dev, const char *cmd);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These functions allow to manage instant commands of devices. </p>
 <p> The <code>nutclient_get_device_commands()</code> function retrieve the list of command names for a device. The returned strarr must be freed by <i>strarr_free</i>. </p>
 <p> The <code>nutclient_has_device_command</code> function test if the specified command is supported by the device. Return 1 is supported and 0 if not. </p>

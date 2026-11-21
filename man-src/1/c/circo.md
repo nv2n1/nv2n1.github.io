@@ -1,4 +1,5 @@
 ---
+
 title: "circo(1)"
 name: "circo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-circo/"
 description: "dot – filter for drawing directed graphs neato – filter for drawing undirected graphs twopi – filter for radial layouts of graphs circo – filter for circular layout of graphs fdp – filter for drawi..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> dot &#8211; filter for drawing directed graphs<br />
  neato &#8211; filter for drawing undirected graphs<br />
  twopi &#8211; filter for radial layouts of graphs<br />
@@ -16,7 +16,6 @@ description: "dot – filter for drawing directed graphs neato – filter for dr
  sfdp &#8211; filter for drawing large undirected graphs<br />
  patchwork &#8211; filter for squarified tree maps<br />
  osage &#8211; filter for array-based layouts </p>
-<h2>SYNOPSIS</h2>
 <p> <code>dot</code> [<i>options</i>] [files]<br />
  <code>neato</code> [<i>options</i>] [files]<br />
  <code>twopi</code> [<i>options</i>] [files]<br />
@@ -25,7 +24,6 @@ description: "dot – filter for drawing directed graphs neato – filter for dr
  <code>sfdp</code> [<i>options</i>] [files]<br />
  <code>patchwork</code> [<i>options</i>] [files]<br />
  <code>osage</code> [<i>options</i>] [files]</p>
-<h2>DESCRIPTION</h2>
 <p> These are a collection of programs for drawing graphs. There is actually only one main program; the specific layout algorithms are implemented as plugins. Thus, they largely share all of the same command-line options. </p>
 <p> <i>dot</i> draws directed graphs. It works well on directed acyclic graphs and other graphs that can be drawn as hierarchies or have a natural &#8220;flow.&#8221; </p>
 <p> <i>neato</i> draws undirected graphs using a &#8220;spring&#8221; model and reducing the related energy (see Kamada and Kawai, Information Processing Letters 31:1, April 1989). </p>

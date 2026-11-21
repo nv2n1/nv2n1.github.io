@@ -1,4 +1,5 @@
 ---
+
 title: "calculated_(3)"
 name: "calculated_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-calculated_/"
 description: "QuantLib::LazyObject – Framework for calculation on demand and result caching."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/patterns/lazyobject.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Observable</code>, and <code>QuantLib::Observer</code>. </p>
 <p> Inherited by <code>AbcdAtmVolCurve</code>, <code>CapFloorTermVolCurve</code>, <code>CapFloorTermVolSurface</code>, <code>CmsMarket</code>, <code>EurodollarFuturesImpliedStdDevQuote</code>, FdmBlackScholesSolver [private], FdmHestonSolver [private], <code>FittedBondDiscountCurve</code>, <code>FlatForward</code>, <code>ForwardSwapQuote</code>, <code>ImpliedStdDevQuote</code>, <code>Instrument</code>, InterpolatedSmileSection&lt; Interpolator &gt;, <code>OneFactorCopula</code>, <code>PiecewiseDefaultCurve&lt; Traits, Interpolator, Bootstrap &gt;</code>, <code>PiecewiseYieldCurve&lt; Traits, Interpolator, Bootstrap &gt;</code>, <code>PiecewiseYoYInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code>, <code>PiecewiseZeroInflationCurve&lt; Interpolator, Bootstrap, Traits &gt;</code>, SabrInterpolatedSmileSection, <code>StrippedOptionletAdapter</code>, <code>StrippedOptionletBase</code>, and SwaptionVolatilityDiscrete. </p>

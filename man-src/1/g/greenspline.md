@@ -1,4 +1,5 @@
 ---
+
 title: "greenspline(1)"
 name: "greenspline"
 section: "1"
@@ -9,10 +10,8 @@ description: "greenspline – Interpolate using Green’s functions for splines 
 
 <h2>NAME</h2>
 <p> greenspline &#8211; Interpolate using Green&#8217;s functions for splines in 1-3 dimensions</p>
-<h2>SYNOPSIS</h2>
 <p> <code>greenspline</code> [ <i>table</i> ] [ [<code>1</code>|<code>2</code>|<code>3</code>|<code>4</code>|<code>5</code>,]<i>gradfile</i> ] [ [<code>n</code>|<code>v</code>]<i>cut</i>[/<i>file</i>] ] [ <i>mode</i> ] [ <i>grdfile</i> ] [ <i>xinc</i>[/<i>yinc</i>[/<i>zinc</i>]] ] [ ] [ <i>nodefile</i> ] [ <i>az</i>|<i>x/y/z</i> ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ <code>c|t|l|r|p|q</code>[<i>pars</i>] ] [ <i>maskgrid</i> ] [ [<i>level</i>] ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-x</code>[[-]<i>n</i>] ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>greenspline</code> uses the Green&#8217;s function G(<code>x</code>; <code>x&#8217;</code>) for the chosen spline and geometry to interpolate data at regular [or arbitrary] output locations. Mathematically, the solution is composed as <i>w</i>(<code>x</code>) = sum {<i>c</i>(<i>i</i>) G(<code>x&#8217;</code>; <code>x</code>(<i>i</i>))}, for <i>i</i> = 1, <i>n</i>, the number of data points {<code>x</code>(<i>i</i>), <i>w</i>(<i>i</i>)}. Once the <i>n</i> coefficients <i>c</i>(<i>i</i>) have been found the sum can be evaluated at any output point <code>x</code>. Choose between minimum curvature, regularized, or continuous curvature splines in tension for either 1-D, 2-D, or 3-D Cartesian coordinates or spherical surface coordinates. After first removing a linear or planar trend (Cartesian geometries) or mean value (spherical surface) and normalizing these residuals, the least-squares matrix solution for the spline coefficients <i>c</i>(<i>i</i>) is found by solving the <i>n</i> by <i>n</i> linear system <i>w</i>(<i>j</i>) = sum-over-<i>i</i> {<i>c</i>(<i>i</i>) G(<code>x</code>(<i>j</i>); <code>x</code>(<i>i</i>))}, for <i>j</i> = 1, <i>n</i>; this solution yields an exact interpolation of the supplied data points. Alternatively, you may choose to perform a singular value decomposition (SVD) and eliminate the contribution from the smallest eigenvalues; this approach yields an approximate solution. Trends and scales are restored when evaluating the output.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

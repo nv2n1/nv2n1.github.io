@@ -1,4 +1,5 @@
 ---
+
 title: "update-mime-database(1)"
 name: "update-mime-database"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-update-mime-database/"
 description: "update-mime-database – a program to build the Shared MIME-Info database cache"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>update-mime-database -h</code> | <code>-v</code> | [ <code>-V</code> | <code>-n</code> ] <i>MIME-DIR</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>update-mime-database</code> is a program which is responsible for updating the shared mime-info cache according to the system described in the Shared MIME-Info Database specification from the X Desktop Group. </p>
 <h2>OPTIONS</h2>
 <dl>

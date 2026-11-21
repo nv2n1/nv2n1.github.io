@@ -1,4 +1,5 @@
 ---
+
 title: "clientlib(3)"
 name: "clientlib"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-clientlib/"
 
  clientlib - NNTP clientlib part of InterNetNews library
 
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 extern FILE *ser_rd_fp;
 extern FILE *ser_wr_fp;
 extern char ser_line[];
@@ -32,9 +31,7 @@ int buffsize;
 void close_server()
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- The routines described in this manual page are part of the InterNetNews library, <i><a HREF="/docs/linux/man/3-libinn/">libinn</a></i>(3). They are replacements for the ``clientlib'' part of the NNTP distribution, and are intended to be used in building programs like <i>rrn</i>. 
+The routines described in this manual page are part of the InterNetNews library, <i><a HREF="/docs/linux/man/3-libinn/">libinn</a></i>(3). They are replacements for the ``clientlib'' part of the NNTP distribution, and are intended to be used in building programs like <i>rrn</i>. 
 
  <i>Getserverbyfile</i> calls <i>GetConfigValue</i> to get the name of the local NNTP server. It returns a pointer to static space. The <i>file</i> parameter is ignored. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "git-clone-subset(1)"
 name: "git-clone-subset"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-git-clone-subset/"
 description: "git-clone-subset – Clones a subset of a git repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>git-clone-subset</code> [<i>options</i>] <i>repository destination-dir pattern</i></p>
-<h2>DESCRIPTION</h2>
 <p> Clones a <i>repository</i> into a <i>destination-dir</i> and runs on the clone<br />
  <code>git filter-branch &#8211;prune-empty &#8211;tree-filter &#8216;git rm &#8230;&#8217; &#8212; &#8211;all</code><br />
  to prune from history all files except the ones matching <i>pattern</i>, effectively creating a clone with a subset of files (and history) of the original repository. </p>

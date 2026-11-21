@@ -1,4 +1,5 @@
 ---
+
 title: "aseqdump(1)"
 name: "aseqdump"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aseqdump/"
 description: "aseqdump – show the events received at an ALSA sequencer port"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aseqdump</code> [<i>-p client:port,&#8230;</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>aseqdump</code> is a command-line utility that prints the sequencer events it receives as text. </p>
 <p> To stop receiving, press Ctrl+C. </p>
 <h2>OPTIONS</h2>

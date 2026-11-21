@@ -1,4 +1,5 @@
 ---
+
 title: "glade-previewer(1)"
 name: "glade-previewer"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-glade-previewer/"
 description: "glade-previewer – Preview glade user interface definitions"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glade-previewer </code><code>[OPTION&#8230;]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>glade-previewer</code></p>
 <dd>is a tool that can load and display a User Interface that has been defined with glade. glade itself uses glade-previewer, but it can also be used as a standalone utility.</dd>
 <h2>OPTIONS</h2>

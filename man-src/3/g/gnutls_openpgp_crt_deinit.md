@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_deinit(3)"
 name: "gnutls_openpgp_crt_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_openpgp_crt_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>void gnutls_openpgp_crt_deinit(gnutls_openpgp_crt_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_openpgp_crt_t key</dt>
 <dd> The structure to be initialized</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a key structure.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

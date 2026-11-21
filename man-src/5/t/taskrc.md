@@ -1,4 +1,5 @@
 ---
+
 title: "taskrc(5)"
 name: "taskrc"
 section: "5"
@@ -6,13 +7,12 @@ letter: "t"
 url: "/docs/linux/man/5-taskrc/"
 description: "taskrc – Configuration details for the"
 ---
+
 <p>taskrc &#8211; Configuration details for the </p>
 <p> <a href="/docs/linux/man/1-task/">task</a>(1) command </p>
-<h2>SYNOPSIS</h2>
 <p> <code>$HOME/.taskrc</code> <br />
  <code>task rc:&lt;directory-path&gt;/.taskrc ...</code> <br />
  <code>TASKRC=&lt;directory-path&gt;/.taskrc task ...</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Taskwarrior</code> obtains its configuration data from a file called <i>.taskrc</i> . This file is normally located in the user&#8217;s home directory: </p>
 <dl>
 <dd> <p> $HOME/.taskrc </p>

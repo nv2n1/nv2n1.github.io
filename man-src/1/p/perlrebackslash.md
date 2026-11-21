@@ -1,4 +1,5 @@
 ---
+
 title: "perlrebackslash(1)"
 name: "perlrebackslash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlrebackslash/"
 description: "perlrebackslash – Perl Regular Expression Backslash Sequences and Escapes"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The top level documentation about Perl regular expressions is found in perlre. </p>
 <p> This document describes all backslash and escape sequences. After explaining the role of the backslash, it lists all the sequences that have a special meaning in Perl regular expressions (in alphabetical order), then describes each of them. </p>
 <p> Most sequences are described in detail in different documents; the primary purpose of this document is to have a quick reference guide describing all backslash and escape sequences.</p>

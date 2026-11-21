@@ -1,4 +1,5 @@
 ---
+
 title: "slarrc(3)"
 name: "slarrc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarrc/"
 description: "slarrc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrc</code> (JOBT, N, VL, VU, D, E, PIVMIN, EIGCNT, LCNT, RCNT, INFO)<br />
  <i></i><code>SLARRC</code> computes the number of eigenvalues of the symmetric tridiagonal matrix.</p>

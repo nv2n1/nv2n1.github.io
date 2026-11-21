@@ -1,4 +1,5 @@
 ---
+
 title: "shell-quote(1)"
 name: "shell-quote"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-shell-quote/"
 description: "shell-quote – quote arguments for safe use, unmodified in a shell command"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>shell-quote</code> [<i>switch</i>]&#8230; <i>arg</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>shell-quote</code> lets you pass arbitrary strings through the shell so that they won&#8217;t be changed by the shell. This lets you process commands or files with embedded white space or shell globbing characters safely. Here are a few examples.</p>
 <h2>EXAMPLES</h2>
 <dl>

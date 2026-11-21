@@ -1,4 +1,5 @@
 ---
+
 title: "sensible-editor(1)"
 name: "sensible-editor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sensible-editor/"
 description: "sensible-editor – sensible editing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sensible-editor</code> [OPTIONS&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sensible-editor</code> makes sensible decisions on which editor to call. Programs in Debian can use this script as their default editor. <code>sensible-editor</code> try to do in the following order:</p>
 <dl>
 <dt>step]</dt>

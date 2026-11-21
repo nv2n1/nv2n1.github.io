@@ -1,4 +1,5 @@
 ---
+
 title: "pcxtoppm(1)"
 name: "pcxtoppm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pcxtoppm/"
 description: "pcxtoppm – convert a PCX file into a portable pixmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pcxtoppm</code> [<code>-stdpalette</code>] [<code>-verbose</code>] [<i>pcxfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PCX file as input. Produces a portable pixmap as output. Supported PCX types are:</p>
 <dl>
 <dt>Colormapped files with 2-16 colors.</dt>

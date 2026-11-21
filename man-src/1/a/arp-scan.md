@@ -1,4 +1,5 @@
 ---
+
 title: "arp-scan(1)"
 name: "arp-scan"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-arp-scan/"
 description: "arp-scan – The ARP scanner"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>arp-scan</code> [<i>options</i>]<i> </i>[<i>hosts</i>&#8230;] </p>
 <p> Target hosts must be specified on the command line unless the <code>&#8211;file</code> option is given, in which case the targets are read from the specified file instead, or the <code>&#8211;localnet</code> option is used, in which case the targets are generated from the network interface IP address and netmask. </p>
 <p> You will need to be root, or <code>arp-scan</code> must be SUID root, in order to run <code>arp-scan</code>, because the functions that it uses to read and write packets require root privilege. </p>
 <p> The target hosts can be specified as IP addresses or hostnames. You can also specify the target as <code>IPnetwork/bits</code> (e.g. 192.168.1.0/24) to specify all hosts in the given network (network and broadcast addresses included), <code>IPstart-IPend</code> (e.g. 192.168.1.3-192.168.1.27) to specify all hosts in the inclusive range, or <code>IPnetwork:NetMask</code> (e.g. 192.168.1.0:255.255.255.0) to specify all hosts in the given network and mask.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>arp-scan</code> sends ARP packets to hosts on the local network and displays any responses that are received. The network interface to use can be specified with the <code>&#8211;interface</code> option. If this option is not present, <code>arp-scan</code> will search the system interface list for the lowest numbered, configured up interface (excluding loopback). By default, the ARP packets are sent to the Ethernet broadcast address, ff:ff:ff:ff:ff:ff, but that can be changed with the <code>&#8211;destaddr</code> option. </p>
 <p> The target hosts to scan may be specified in one of three ways: by specifying the targets on the command line; by specifying a file containing the targets with the <code>&#8211;file</code> option; or by specifying the <code>&#8211;localnet</code> option which causes all possible hosts on the network attached to the interface (as defined by the interface address and mask) to be scanned. For hosts specified on the command line, or with the <code>&#8211;file</code> option, you can use either IP addresses or hostnames. You can also use network specifications <code>IPnetwork/bits</code>, <code>IPstart-IPend</code>, or <code>IPnetwork:NetMask</code>. </p>
 <p> The list of target hosts is stored in memory. Each host in this list uses 28 bytes of memory, so scanning a Class-B network (65,536 hosts) requires about 1.75MB of memory for the list, and scanning a Class-A (16,777,216 hosts) requires about 448MB. </p>

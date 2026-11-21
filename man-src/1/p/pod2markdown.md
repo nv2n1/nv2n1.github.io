@@ -1,4 +1,5 @@
 ---
+
 title: "pod2markdown(1)"
 name: "pod2markdown"
 section: "1"
@@ -6,18 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-pod2markdown/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pod2markdown - Convert POD text to Markdown 
+pod2markdown - Convert POD text to Markdown 
 
 <h2>VERSION</h2>
 
  version 2.002
 
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     # parse STDIN, print to STDOUT
     $ pod2markdown &lt; POD_File &gt; Markdown_File
     # parse file, print to STDOUT
@@ -28,9 +24,7 @@ url: "/docs/linux/man/1-pod2markdown/"
     $ pod2markdown - output.mkdn
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This program uses Pod::Markdown to convert <font SIZE="-1">POD</font> into Markdown sources. 
+This program uses Pod::Markdown to convert <font SIZE="-1">POD</font> into Markdown sources. 
 
  It accepts two optional arguments:
 <dl>

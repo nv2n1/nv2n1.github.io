@@ -1,4 +1,5 @@
 ---
+
 title: "spbtrs(3)"
 name: "spbtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spbtrs/"
 description: "spbtrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
  <i></i><code>SPBTRS</code></p>

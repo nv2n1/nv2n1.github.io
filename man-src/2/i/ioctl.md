@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl(2)"
 name: "ioctl"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-ioctl/"
 description: "ioctl – control device"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code> </p>
 <p> <code>int ioctl(int </code><i>fd</i><code>, unsigned long </code><i>request</i><code>, &#8230;);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ioctl</code>() system call manipulates the underlying device parameters of special files. In particular, many operating characteristics of character special files (e.g., terminals) may be controlled with <code>ioctl</code>() requests. The argument <i>fd</i> must be an open file descriptor. </p>
 <p> The second argument is a device-dependent request code. The third argument is an untyped pointer to memory. It&#8217;s traditionally <code>char *</code><i>argp</i> (from the days before <code>void *</code> was valid C), and will be so named for this discussion. </p>
 <p> An <code>ioctl</code>() <i>request</i> has encoded in it whether the argument is an <i>in</i> parameter or <i>out</i> parameter, and the size of the argument <i>argp</i> in bytes. Macros and defines used in specifying an <code>ioctl</code>() <i>request</i> are located in the file <i>&lt;sys/ioctl.h&gt;</i>. See NOTES.</p>

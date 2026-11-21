@@ -1,4 +1,5 @@
 ---
+
 title: "wminput(1)"
 name: "wminput"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wminput/"
 description: "wminput – an event driver for the wiimote"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wminput</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>wminput</code> command. </p>
 <p> <code>wminput</code> is a program that provides an event driver for the wiimote, supporting all buttons (except Power) and pointer tracking, and featuring a tracking algorithm plugin architecture. </p>
 <p> Your kernel must be configured with uinput support (INPUT_UINPUT, or Device Drivers/Input Device Support/Miscellaneous Drivers/User Level Driver Support under menuconfig). Compile into the kernel or as a module. See <a rel="nofollow" href="http://gentoo-wiki.com/HOWTO_Compile_a_Kernel_Manually">http://gentoo-wiki.com/HOWTO_Compile_a_Kernel_Manually</a> for information on kernel compilation. By default, some (most? all?) udev configurations set up a uinput device file readable only by root. Using wminput as a user other than root requires configuration udev to change the permissions on uinput. Place the following line in a file in /etc/udev/rules.d (see the documentation for your distro for the recommended file for local rules) to allow anyone on the system to use uinput: </p>

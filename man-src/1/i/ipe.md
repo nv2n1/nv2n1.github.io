@@ -1,4 +1,5 @@
 ---
+
 title: "ipe(1)"
 name: "ipe"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ipe/"
 description: "ipe – drawing editor for creating figures in PDF or PS formats"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ipe</code> [ <i>Qt options</i> ] [ -debug ] [ -sheet <i>stylesheet</i> ] [ -geom <i>WxH+X+Y</i> ] <i>filename</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Ipe is a program that supports making small figures for inclusion into LaTeX documents as well as making multi-page PDF presentations. </p>
 <p> This manual page only documents the command line options and environment variables. Full documentation for using Ipe can be found in HTML and PDF format; see below. </p>
 <dl>

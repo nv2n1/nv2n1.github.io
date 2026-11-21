@@ -1,4 +1,5 @@
 ---
+
 title: "perlmachten(1)"
 name: "perlmachten"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlmachten/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+README.machten - Perl version 5 on Power MachTen systems 
 
- README.machten - Perl version 5 on Power MachTen systems 
-
-<h2>DESCRIPTION</h2>
-
- This document describes how to build Perl 5 on Power MachTen systems, and discusses a few wrinkles in the implementation.
+This document describes how to build Perl 5 on Power MachTen systems, and discusses a few wrinkles in the implementation.
 
 <h2>Perl version 5.8.x and greater not supported</h2>
 

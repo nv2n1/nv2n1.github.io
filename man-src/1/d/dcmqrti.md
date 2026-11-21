@@ -1,4 +1,5 @@
 ---
+
 title: "dcmqrti(1)"
 name: "dcmqrti"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmqrti/"
 description: "dcmqrti – The Terminal Initiator Telnet Client Program"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmqrti [options] peer...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmqrti</code> program (telnet initiator) is an interactive character based program intended to be used for examining the dcmqrscp image databases and sending images contained within these databases to Vendor nodes. During a DICOM Demonstration the <code>dcmqrti</code> program can be activated by a Vendor by logging onto the computer running the <code>dcmqrscp</code> program. Each vendor will have their own login account and the <code>dcmqrti</code> program will be started instead of a normal shell when they login. </p>
 <p> The <code>dcmqrti</code> program takes one main argument, the hostname or vendor symbolic name (from the VendorTable in the configuration file) of a Vendor. It then searches in the configuration file for all AE titles associated with this hostname or vendor name, and all storage areas accessable to these AE titles. Thus only the accessable databases and peer applications discovered in the configuration file are available as choices within the <code>dcmqrti</code> user interface.</p>
 <h2>PARAMETERS</h2>

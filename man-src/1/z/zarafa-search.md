@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-search(1)"
 name: "zarafa-search"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zarafa-search/"
 description: "zarafa-search – Zarafa Indexed Search Service."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-search</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The zarafa-search daemon is used to index all messages for all users in the zarafa-server. Indexing messages greatly enhances the search performance of the zarafa-server. </dd>
 <p> After starting, the search daemon will continuesly update the store index files and will keep listening for connections on the configured TCP port and/or Unix socket for search requests from the <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1).</p>
 <h2>OPTIONS</h2>

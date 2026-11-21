@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-next(3)"
 name: "antlr3-next"
 section: "3"
@@ -8,7 +9,6 @@ description: "src/antlr3rewritestreams.c –"
 ---
 
 <p> Implementation of token/tree streams that are used by the tree re-write rules to manipulate the tokens and trees produced by rules that are subject to rewrite directives.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3rewritestreams.h">antlr3rewritestreams.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> static void * <code>_next</code> (<code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> stream)<br />

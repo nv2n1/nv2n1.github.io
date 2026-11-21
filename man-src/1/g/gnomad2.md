@@ -1,4 +1,5 @@
 ---
+
 title: "gnomad2(1)"
 name: "gnomad2"
 section: "1"
@@ -9,9 +10,7 @@ description: "gnomad2 – transfer files between a host and a Creative Labs Noma
 
 <h2>NAME</h2>
 <p> gnomad2 &#8211; transfer files between a host and a Creative Labs Nomad Jukebox, Zen jukebox or Dell Digital Jukebox (DJ).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gnomad2</code> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Gnomad 2 is a GUI built on top of GTK/GNOME 2, id3lib and libnjb that makes it possible to transfer tracks and files from/to a Creative Nomad Jukebox (all brands) and the Dell DJ. It is designed much like an ordinary graphical FTP program, in commander-style.</p>
 <h2>OPTIONS</h2>
 <dl>

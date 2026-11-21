@@ -1,4 +1,5 @@
 ---
+
 title: "dgelss(3)"
 name: "dgelss"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgelss/"
 description: "dgelss.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgelss</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, INFO)<br />
  <i></i><code> DGELSS solves overdetermined or underdetermined systems for GE matrices</code></p>

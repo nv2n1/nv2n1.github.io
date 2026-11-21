@@ -1,4 +1,5 @@
 ---
+
 title: "gmdb2(1)"
 name: "gmdb2"
 section: "1"
@@ -9,11 +10,9 @@ description: "gmdb2 – GNOME UI for MDB Tools"
 
 <h2>NAME</h2>
 <p> <code>gmdb2 </code>&#8211; GNOME UI for MDB Tools</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>gmdb2</code> [<i>database</i>]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>gmdb2</code> is a GNOME UI for MDB Tools.</p>
 <h2>ENVIRONMENT</h2>
 <dl>

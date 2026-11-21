@@ -1,4 +1,5 @@
 ---
+
 title: "devassistant(1)"
 name: "devassistant"
 section: "1"
@@ -9,11 +10,9 @@ description: "devassistant – setup development environment and create basic pr
 
 <h2>NAME</h2>
 <p> devassistant &#8211; setup development environment and create basic projects in various languages </p>
-<h2>SYNOPSIS</h2>
 <p> <code>devassistant [&#8211;debug] [&#8211;no-cache] [ ASSISTANT_TYPE ] [ OPTIONS ] [[ SUBASSISTANT ] [OPTIONS] &#8230;] </p>
 <p> devassistant [&#8211;debug] [&#8211;no-cache] [ ACTION ] [ OPTIONS ] </p>
 <p> </code></p>
-<h2>DESCRIPTION</h2>
 <p> Please note that the <code>da</code> command is the recommended way of running DevAssistant (even though it works exactly the same). </p>
 <p> <code>devassistant</code> is the main command of DevAssistant. It is responsible for dispatching commandline calls to assistants or actions. It accepts some optional flags: </p>
 <dl>

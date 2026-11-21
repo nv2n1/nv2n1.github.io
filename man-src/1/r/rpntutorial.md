@@ -1,4 +1,5 @@
 ---
+
 title: "rpntutorial(1)"
 name: "rpntutorial"
 section: "1"
@@ -6,14 +7,9 @@ letter: "r"
 url: "/docs/linux/man/1-rpntutorial/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+rpntutorial - Reading RRDtool RPN Expressions by Steve Rader 
 
- rpntutorial - Reading RRDtool RPN Expressions by Steve Rader 
-
-<h2>DESCRIPTION</h2>
-
- This tutorial should help you get to grips with RRDtool <font SIZE="-1">RPN</font> expressions as seen in <font SIZE="-1">CDEF</font> arguments of RRDtool graph.
+This tutorial should help you get to grips with RRDtool <font SIZE="-1">RPN</font> expressions as seen in <font SIZE="-1">CDEF</font> arguments of RRDtool graph.
 
 <h2>Reading Comparison Operators</h2>
 

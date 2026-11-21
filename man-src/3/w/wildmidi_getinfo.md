@@ -1,4 +1,5 @@
 ---
+
 title: "wildmidi_getinfo(3)"
 name: "wildmidi_getinfo"
 section: "3"
@@ -6,13 +7,12 @@ letter: "w"
 url: "/docs/linux/man/3-wildmidi_getinfo/"
 description: "WildMidi_GetInfo – get information on a midi"
 ---
+
 <p> WildMidi_GetInfo - get information on a midi  </p>
 <h2>LIBRARY</h2>
 <p> <code>libWildMidi</code>  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;wildmidi_lib.h&gt;</code> </p>
 <p> <code>struct _WM_Info *WildMidi_GetInfo (midi *</code><i>handle</i>); </p>
-<h2>DESCRIPTION</h2>
 <p> Obtains information allowing you to determine song position, current options, and any copyright information. </p>
 <dl>
 <dt><i>handle</i></dt>

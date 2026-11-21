@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_set_debug(3)"
 name: "fribidi_set_debug"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_set_debug/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_set_debug - set debug state 
 
- fribidi_set_debug - set debug state 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern int fribidi_set_debug(int state); </b>
 
@@ -23,9 +19,7 @@ url: "/docs/linux/man/3-fribidi_set_debug/"
 <dt><b>int state</b>
 </dt><dd> New state to set.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- Set debug state.
+Set debug state.
 
 <h2>SEE ALSO</h2>
 

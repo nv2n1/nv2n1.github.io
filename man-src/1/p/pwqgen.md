@@ -1,4 +1,5 @@
 ---
+
 title: "pwqgen(1)"
 name: "pwqgen"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-pwqgen/"
 description: "pwqgen – Generate quality controllable random passphrase"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pwqgen</code> &#8211; Generate quality controllable random passphrase </p>
-<h2>SYNOPSIS</h2>
 <p> [<i>options</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>Op Ar options</code> program generates a random passphrase using the libpasswdqc library. Strength of the generated passphrase depends on the amount of randomness read from /dev/urandom</p>
 <h2>OPTIONS</h2>
 <dl>

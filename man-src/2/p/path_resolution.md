@@ -1,4 +1,5 @@
 ---
+
 title: "path_resolution(2)"
 name: "path_resolution"
 section: "2"
@@ -9,7 +10,6 @@ description: "path_resolution – how a pathname is resolved to a file"
 
 <h2>NAME</h2>
 <p> path_resolution &#8211; how a pathname is resolved to a file</p>
-<h2>DESCRIPTION</h2>
 <p> Some UNIX/Linux system calls have as parameter one or more filenames. A filename (or pathname) is resolved as follows.</p>
 <h3>Step 1: Start of the resolution process</h3>
 <p> If the pathname starts with the &#8216;/&#8217; character, the starting lookup directory is the root directory of the calling process. (A process inherits its root directory from its parent. Usually this will be the root directory of the file hierarchy. A process may get a different root directory by use of the <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) system call. A process may get an entirely private mount namespace in case it&#8212;or one of its ancestors&#8212;was started by an invocation of the <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) system call that had the <code>CLONE_NEWNS</code> flag set.) This handles the &#8216;/&#8217; part of the pathname. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sched_setattr(2)"
 name: "sched_setattr"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_setattr/"
 description: "sched_setattr, sched_getattr – set and get scheduling policy and attributes"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sched.h&gt;
 int sched_setattr(pid_t pid, struct sched_attr *attr,
@@ -15,7 +15,6 @@ int sched_setattr(pid_t pid, struct sched_attr *attr,
 int sched_getattr(pid_t pid, struct sched_attr *attr,
                   unsigned int size, unsigned int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <h3>sched_setattr()</h3>
 <p> The <code>sched_setattr</code>() system call sets the scheduling policy and associated attributes for the thread whose ID is specified in <i>pid</i>. If <i>pid</i> equals zero, the scheduling policy and attributes of the calling thread will be set. </p>
 <p> Currently, Linux supports the following &quot;normal&quot; (i.e., non-real-time) scheduling policies as values that may be specified in <i>policy</i>:</p>

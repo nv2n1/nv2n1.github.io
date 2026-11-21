@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_state_s(3)"
 name: "globus_gass_copy_state_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_gass_copy_state_s –"
 ---
 
 <p> The state structure contains all that is required to perform a file transfer from a source to a destination.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> <code>globus_i_gass_copy_target_t</code> <code>source</code> </p>
 <p> <code>globus_i_gass_copy_target_t</code> <code>dest</code> </p>

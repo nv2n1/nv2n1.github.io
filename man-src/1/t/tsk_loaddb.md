@@ -1,4 +1,5 @@
 ---
+
 title: "tsk_loaddb(1)"
 name: "tsk_loaddb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tsk_loaddb/"
 description: "tsk_loaddb – populate a SQLite database with metadata from a disk image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tsk_loaddb [-ahkvV] [ -i</code> <i>imgtype</i> <code>] [ -b</code> <i>dev_sector_size</i> <code>] [ -i</code> <i>imgtype</i> <code>] [ -d</code> <i>database</i> <code>]</code> <i>image [images]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>tsk_loaddb</code> loads disk information from <i>image</i> to a SQLite database. This database can then be used by tools in other languages for analysis. By default, the database is stored in the same directory as the image with &quot;.db&quot; appended to the name or the database name can be specified with &#8216;-d&#8217;. </p>
 <p> The arguments are as follows:</p>
 <dl>

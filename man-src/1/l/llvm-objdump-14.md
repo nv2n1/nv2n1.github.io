@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-objdump-14(1)"
 name: "llvm-objdump-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-objdump-14/"
 description: "llvm-objdump – manual page for llvm-objdump 14"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> OVERVIEW: llvm object file dumper </p>
 <p> USAGE: llvm-objdump [options] &lt;input object files&gt;</p>
 <h3>OPTIONS:</h3>

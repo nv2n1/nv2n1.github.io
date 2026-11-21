@@ -1,4 +1,5 @@
 ---
+
 title: "memexist(1)"
 name: "memexist"
 section: "1"
@@ -9,9 +10,7 @@ description: "memexist – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memexist &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> memexist [options] [key]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>memexist</code> checks for the existance of a key within a cluster.</p>
 <h2>OPTIONS</h2>
 <p> You can specify servers via the option:</p>

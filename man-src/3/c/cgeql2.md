@@ -1,4 +1,5 @@
 ---
+
 title: "cgeql2(3)"
 name: "cgeql2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgeql2/"
 description: "cgeql2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>CGEQL2</code> computes the QL factorization of a general rectangular matrix using an unblocked algorithm.</p>

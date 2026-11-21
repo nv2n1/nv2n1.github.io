@@ -1,4 +1,5 @@
 ---
+
 title: "xgettext(1)"
 name: "xgettext"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xgettext/"
 description: "xgettext – extract gettext strings from source"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xgettext</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Extract translatable strings from given input files. </p>
 <p> Mandatory arguments to long options are mandatory for short options too. Similarly for optional arguments.</p>
 <h3>Input file location:</h3>

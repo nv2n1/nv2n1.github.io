@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-pause(1)"
 name: "docker-latest-pause"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-pause/"
 description: "docker-pause – Pause all processes within a container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker pause</code> CONTAINER [CONTAINER&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> The docker pause command uses the cgroups freezer to suspend all processes in a container. Traditionally when suspending a process the SIGSTOP signal is used, which is observable by the process being suspended. With the cgroups freezer the process is unaware, and unable to capture, that it is being suspended, and subsequently resumed. </p>
 <p> See the &lt;<a rel="nofollow" href="https://www.kernel.org/doc/Documentation/cgroups/freezer-subsystem.txt">https://www.kernel.org/doc/Documentation/cgroups/freezer-subsystem.txt</a>&gt; for further details. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmpscale(1)"
 name: "pbmpscale"
 section: "1"
@@ -6,18 +7,11 @@ letter: "p"
 url: "/docs/linux/man/1-pbmpscale/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pbmpscale - enlarge a portable bitmap with edge smoothing 
 
- pbmpscale - enlarge a portable bitmap with edge smoothing 
+pbmpscale N [ pbmfile ]
 
-<h2>SYNOPSIS</h2>
-
- pbmpscale N [ pbmfile ]
-
-<h2>DESCRIPTION</h2>
-
- Reads a portable bitmap as input, and outputs a portable bitmap enlarged N times. Enlargement is done by pixel replication, with some additional smoothing of corners and edges.
+Reads a portable bitmap as input, and outputs a portable bitmap enlarged N times. Enlargement is done by pixel replication, with some additional smoothing of corners and edges.
 
 <h2>SEE ALSO</h2>
 

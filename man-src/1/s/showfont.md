@@ -1,4 +1,5 @@
 ---
+
 title: "showfont(1)"
 name: "showfont"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-showfont/"
 description: "showfont – font dumper for X font server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>showfont</code> [ <i>-options</i> &#8230; ] <code>-fn</code> <i>pattern</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Showfont</i> displays data about a font that matches the given <i>pattern</i>. The information shown includes font information, font properties, character metrics, and character bitmaps. </p>
 <p> The wildcard character &quot;*&quot; can be used to match any sequence of characters (including none) in the font name, and &quot;?&quot; can be used to match any single character. The &quot;*&quot; and &quot;?&quot; characters must be quoted to prevent them from being expanded by the shell. If no pattern is given, &quot;*&quot; is assumed.</p>
 <h2>OPTIONS</h2>

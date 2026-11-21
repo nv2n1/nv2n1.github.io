@@ -1,4 +1,5 @@
 ---
+
 title: "knsec3hash(1)"
 name: "knsec3hash"
 section: "1"
@@ -9,9 +10,7 @@ description: "knsec3hash – Simple utility to compute NSEC3 hash (libknot equiv
 
 <h2>NAME</h2>
 <p> <code>knsec3hash</code> &#8211; Simple utility to compute NSEC3 hash (libknot equivalent of ISC nsec3hash)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>knsec3hash</code> {<i>salt</i>} {<i>algorithm</i>} {<i>iterations</i>} {<i>domain-name</i>}</p>
-<h2>DESCRIPTION</h2>
 <p> This utility generates NSEC3 hash for a given domain name and parameters of NSEC3 hash.</p>
 <h2>ARGUMENTS</h2>
 <dl>

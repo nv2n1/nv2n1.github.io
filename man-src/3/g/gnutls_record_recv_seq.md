@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_recv_seq(3)"
 name: "gnutls_record_recv_seq"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_record_recv_seq – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_recv_seq &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>ssize_t gnutls_record_recv_seq(gnutls_session_t </code><i>session</i><code>, void * </code><i>data</i><code>, size_t </code><i>data_size</i><code>, unsigned char * </code><i>seq</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_record_recv_seq – API function"
 <dd> the number of requested bytes</dd>
 <dt>unsigned char * seq</dt>
 <dd> is the packet&#8217;s 64-bit sequence number. Should have space for 8 bytes.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function is the same as <code>gnutls_record_recv()</code>, except that it returns in addition to data, the sequence number of the data. This is useful in DTLS where record packets might be received out-of-order. The returned 8-byte sequence number is an integer in big-endian format and should be treated as a unique message identification.</p>
 <h2>RETURNS</h2>
 <p> The number of bytes received and zero on EOF. A negative error code is returned in case of an error. The number of bytes received might be less than <i>data_size</i> .</p>

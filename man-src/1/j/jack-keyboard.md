@@ -1,4 +1,5 @@
 ---
+
 title: "jack-keyboard(1)"
 name: "jack-keyboard"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack-keyboard/"
 description: "jack-keyboard – A virtual keyboard for JACK MIDI"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jack-keyboard</code> [ <code>-C</code> ] [ <code>-G</code> ] [ <code>-K</code> ] [ <code>-T</code> ] [ <code>-V</code> ] [ <code>-a </code><i>input port</i> ] [ <code>-k</code> ] [ <code>-r </code><i>rate</i> ] [ <code>-t</code> ] [ <code>-u</code> ] [ <code>-c </code><i>channel</i> ] [ <code>-b </code><i>bank</i> ] [ <code>-p </code><i>program</i> ] [ <code>-l </code><i>layout</i> ] </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -40,7 +40,6 @@ description: "jack-keyboard – A virtual keyboard for JACK MIDI"
 <dd> Set initial MIDI program to <i>program</i>. With this option, <code>jack-keyboard</code> will send the bank/program change once, when it connects.</dd>
 <dt><code>-l </code><i>layout</i></dt>
 <dd> Specify the layout of computer keyboard being used. Valid arguments are QWERTY, QWERTZ, AZERTY and DVORAK. Default is QWERTY.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>jack-keyboard</code> is a virtual MIDI keyboard &#8211; a program that allows you to send JACK MIDI events (play ;-) using your PC keyboard. It&#8217;s somewhat similar to <code>vkeybd</code>, except it uses JACK MIDI instead of ALSA, and the keyboard mapping is much better &#8211; it uses the same layout as trackers (like Impulse Tracker) did, so you have two and half octaves under your fingers.</p>
 <h2>KEY BINDINGS</h2>
 <p> Keyboard mapping is the same as in Impulse Tracker. This is your QWERTY keyboard: </p>

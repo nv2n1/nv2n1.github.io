@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-graph(1)"
 name: "guilt-graph"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-graph/"
 description: "guilt-graph – Create a patch dependency graph"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-graph</i> [&lt;patchname&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> Create a <a href="/docs/linux/man/1-dot/">dot</a>(1) directed graph showing the dependencies between applied patches.</p>
 <h2>OPTIONS</h2>
 <p> &lt;patchname&gt;</p>

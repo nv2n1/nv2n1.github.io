@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_plugin_write_t(3)"
 name: "globus_ftp_client_plugin_write_t"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_ftp_client_plugin_write_t/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- Plugins - 
+Plugins - 
 
  Plugin API.
 

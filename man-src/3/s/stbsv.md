@@ -1,4 +1,5 @@
 ---
+
 title: "stbsv(3)"
 name: "stbsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stbsv/"
 description: "stbsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stbsv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br />
  <i></i><code>STBSV</code></p>

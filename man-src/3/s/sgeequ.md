@@ -1,4 +1,5 @@
 ---
+
 title: "sgeequ(3)"
 name: "sgeequ"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgeequ/"
 description: "sgeequ.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
  <i></i><code>SGEEQU</code></p>

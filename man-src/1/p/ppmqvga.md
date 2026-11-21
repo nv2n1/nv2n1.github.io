@@ -1,4 +1,5 @@
 ---
+
 title: "ppmqvga(1)"
 name: "ppmqvga"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmqvga/"
 description: "ppmqvga – 8 plane quantization"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ppmqvga [ options ] [ input file ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ppmqvga</code> quantizes PPM files to 8 planes, with optional Floyd-Steinberg dithering. Input is a PPM file from the file named, or standard input of no file is provided.</p>
 <h3>Options</h3>
 <p> <code>-d</code> dither. Apply Floyd-Steinberg dithering to the data </p>

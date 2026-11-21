@@ -1,4 +1,5 @@
 ---
+
 title: "key_gendes(3)"
 name: "key_gendes"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-key_gendes/"
 description: "key_decryptsession, key_encryptsession, key_setsecret, key_gendes, key_secretkey_is_set – interfaces to rpc keyserver daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;rpc/rpc.h&gt;</code> </p>
 <p> <code>int key_decryptsession(char *</code><i>remotename</i><code>,</code> <code>des_block *</code><i>deskey</i><code>);</code> </p>
 <p> <code>int key_encryptsession(char *</code><i>remotename</i><code>,</code> <code>des_block *</code><i>deskey</i><code>);</code> </p>
 <p> <code>int key_gendes(des_block *</code><i>deskey</i><code>);</code> </p>
 <p> <code>int key_setsecret(char *</code><i>key</i><code>);</code> </p>
 <p> <code>int key_secretkey_is_set(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The functions here are used within the RPC&#8217;s secure authentication mechanism (AUTH_DES). There should be no need for user programs to use this functions. </p>
 <p> The function <code>key_decryptsession</code>() uses the (remote) server netname and takes the DES key for decrypting. It uses the public key of the server and the secret key associated with the effective UID of the calling process. </p>
 <p> The function <code>key_encryptsession</code>() is the inverse of <code>key_decryptsession</code>(). It encrypts the DES keys with the public key of the server and the secret key associated with the effective UID of the calling process. </p>

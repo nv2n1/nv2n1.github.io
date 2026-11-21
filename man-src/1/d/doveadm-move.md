@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-move(1)"
 name: "doveadm-move"
 section: "1"
@@ -10,14 +11,12 @@ description: "doveadm-move – Move messages matching the given search query int
 <h2>NAME</h2>
 <p> doveadm-move &#8211; Move messages matching the given search query into another mailbox<br />
  doveadm-copy &#8211; Copy messages matching the given search query into another mailbox</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <i>destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>move</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i> </p>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <i>destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>copy</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user destination</i> [<code>user</code> <i>source_user</i>] <i>search_query</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>doveadm move</code> can be used for moving mails between mailboxes for one or more users. The <i>search_query</i> is used to restrict which messages are moved into the <i>destination</i> mailbox.<br />
  <code>doveadm copy</code> behaves the same as <code>doveadm move</code>, except that copied messages will not be expunged after copying. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will execute the <code>move</code>/<code>copy</code> action with the environment of the logged in system user. </p>

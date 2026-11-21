@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_ttl(3)"
 name: "ldns_rr_ttl"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_rr_rdf, ldns_rr_owner, ldns_rr_rd_count, ldns_rr_ttl, ldns_rr
 
 <h2>NAME</h2>
 <p> ldns_rr_rdf, ldns_rr_owner, ldns_rr_rd_count, ldns_rr_ttl, ldns_rr_get_class </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -18,7 +18,6 @@ description: "ldns_rr_rdf, ldns_rr_owner, ldns_rr_rd_count, ldns_rr_ttl, ldns_rr
 <p> size_t ldns_rr_rd_count(const ldns_rr *rr); </p>
 <p> uint32_t ldns_rr_ttl(const ldns_rr *rr); </p>
 <p> ldns_rr_class ldns_rr_get_class(const ldns_rr *rr); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_rdf</i>()</dt>
 <dd>returns the rdata field member counter. .br <code>*rr</code>: rr to operate on .br <code>nr</code>: the number of the rdf to return .br Returns ldns_rdf *</dd></dl>

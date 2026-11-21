@@ -1,4 +1,5 @@
 ---
+
 title: "claqge(3)"
 name: "claqge"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqge/"
 description: "claqge.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqge</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
  <i></i><code>CLAQGE</code> scales a general rectangular matrix, using row and column scaling factors computed by sgeequ.</p>

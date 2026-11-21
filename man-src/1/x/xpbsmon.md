@@ -1,4 +1,5 @@
 ---
+
 title: "xpbsmon(1)"
 name: "xpbsmon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xpbsmon/"
 description: "xpbsmon – GUI for displaying, monitoring the nodes/execution hosts under PBS"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> xpbsmon</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>xpbsmon</code> command provides a way to graphically display the various nodes that run jobs. A node or execution host can be running a <code>pbs_mom</code> daemon, or not running the daemon. For the latter case, it could just be a nodename that appears in a nodes file that is managed by a main <code>pbs_server </code> running on another host. This utility also provides the ability to monitor values of certain system resources by posting queries to the <code>pbs_mom</code> of a node. With this utility, you can see what job is running on what node, who owns the job, how many nodes assigned to a job, status of each node (color-coded and the colors are user-modifiable), how many nodes are available, free, down, reserved, offline, of unknown status, in use running multiple jobs or executing only 1 job. Please see the sections below for a tour and tutorials of xpbsmon. Also, within every dialog box, a <code>Help</code> button can be found for assistance.</p>
 <h2>GETTING STARTED</h2>
 <p> Running xpbsmon will initialize the X resource database from various sources in the following order:</p>

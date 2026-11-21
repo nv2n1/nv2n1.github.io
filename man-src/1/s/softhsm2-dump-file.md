@@ -1,4 +1,5 @@
 ---
+
 title: "softhsm2-dump-file(1)"
 name: "softhsm2-dump-file"
 section: "1"
@@ -9,9 +10,7 @@ description: "softhsm2-dump-file – SoftHSM object file dump"
 
 <h2>NAME</h2>
 <p> softhsm2-dump-file &#8211; SoftHSM object file dump</p>
-<h2>SYNOPSIS</h2>
 <p> <code>softhsm2-dump-file</code> <i>path</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>softhsm2-dump-file</code> is a tool that can dump SoftHSM v2 object file for debugging purposes. </p>
 <h2>OPTIONS</h2>
 <dl>

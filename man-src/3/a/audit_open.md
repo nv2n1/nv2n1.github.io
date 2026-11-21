@@ -1,4 +1,5 @@
 ---
+
 title: "audit_open(3)"
 name: "audit_open"
 section: "3"
@@ -9,10 +10,8 @@ description: "audit_open – Open a audit netlink socket connection"
 
 <h2>NAME</h2>
 <p> audit_open &#8211; Open a audit netlink socket connection</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> int audit_open (void); </p>
-<h2>DESCRIPTION</h2>
 <p> audit_open creates a NETLINK_AUDIT socket for communication with the kernel part of the Linux Audit Subsystem. The audit system uses the ACK feature of netlink. This means that every message to the kernel will return a netlink status packet even if the operation succeeds. </p>
 <h2>RETURN VALUE</h2>
 <p> Returns -1 if an error occurs; otherwise, the return value is a descriptor referencing the socket. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_tcp_send_query(3)"
 name: "ldns_tcp_send_query"
 section: "3"
@@ -9,14 +10,12 @@ description: "ldns_tcp_send_query, ldns_tcp_read_wire, ldns_tcp_connect"
 
 <h2>NAME</h2>
 <p> ldns_tcp_send_query, ldns_tcp_read_wire, ldns_tcp_connect </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ssize_t ldns_tcp_send_query(ldns_buffer *qbin, int sockfd, const struct sockaddr_storage *to, socklen_t tolen); </p>
 <p> uint8_t* ldns_tcp_read_wire(int sockfd, size_t *size); </p>
 <p> int ldns_tcp_connect(const struct sockaddr_storage *to, socklen_t tolen, struct timeval timeout); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_tcp_send_query</i>()</dt>
 <dd>send a query via tcp to a server. Don&#8217;t want for the answer </dd>

@@ -1,4 +1,5 @@
 ---
+
 title: "iperf3(1)"
 name: "iperf3"
 section: "1"
@@ -9,10 +10,8 @@ description: "iperf3 – perform network throughput tests"
 
 <h2>NAME</h2>
 <p> iperf3 &#8211; perform network throughput tests</p>
-<h2>SYNOPSIS</h2>
 <p> <code>iperf3 -s [</code> <i>options</i> <code>]</code><br />
  <code>iperf3 -c </code> <i>server</i> <code>[</code> <i>options</i> <code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> iperf3 is a tool for performing network throughput measurements. It can test either TCP or UDP throughput. To perform an iperf3 test the user must establish both a server and a client. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

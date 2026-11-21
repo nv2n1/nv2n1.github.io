@@ -1,4 +1,5 @@
 ---
+
 title: "draw_sprite(3)"
 name: "draw_sprite"
 section: "3"
@@ -9,10 +10,8 @@ description: "draw_sprite – Draws a copy of the sprite onto the destination bi
 
 <h2>NAME</h2>
 <p> draw_sprite &#8211; Draws a copy of the sprite onto the destination bitmap. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void draw_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Draws a copy of the sprite bitmap onto the destination bitmap at the specified position. This is almost the same as blit(sprite, bmp, 0, 0, x, y, sprite-&gt;w, sprite-&gt;h), but it uses a masked drawing mode where transparent pixels are skipped, so the background image will show through the masked parts of the sprite. Transparent pixels are marked by a zero in 256-color modes or bright pink for truecolor data (maximum red and blue, zero green). Example: </p>
 <pre><code>
 BITMAP *spaceship;

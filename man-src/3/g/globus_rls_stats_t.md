@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_stats_t(3)"
 name: "globus_rls_stats_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_rls_stats_t –"
 ---
 
 <p> Various configuration options and statistics about an RLS server returned in the following structures by <code>globus_rls_client_stats()</code>.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> int <code>flags</code> </p>
 <h2>Detailed Description</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "getexeccon_raw(3)"
 name: "getexeccon_raw"
 section: "3"
@@ -8,7 +9,6 @@ description: "getexeccon, setexeccon – get or set the SELinux security context
 ---
 
 <p> rpm_execcon &#8211; run a helper for rpm in an appropriate security context </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int getexeccon(char **</code><i>context</i><code>);</code> </p>
 <p> <code>int getexeccon_raw(char **</code><i>context</i><code>);</code> </p>
@@ -16,7 +16,6 @@ description: "getexeccon, setexeccon – get or set the SELinux security context
 <p> <code>int setexeccon_raw(char *</code><i>context</i><code>);</code> </p>
 <p> <code>int setexecfilecon(const char *</code><i>filename</i><code>, const char *</code><i>fallback_type</i><code>);</code> </p>
 <p> <code>int rpm_execcon(unsigned int </code><i>verified</i><code>, const char *</code><i>filename</i><code>, char *const </code><i>argv</i><code>[] , char *const </code><i>envp</i><code>[]);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>getexeccon</code>() retrieves the context used for executing a new process. This returned context should be freed with <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3) if non-NULL. <code>getexeccon</code>() sets <code>*</code><i>context</i> to NULL if no exec context has been explicitly set by the program (i.e. using the default policy behavior). </p>
 <p> <code>setexeccon</code>() sets the context used for the next <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) call. NULL can be passed to <code>setexeccon</code>() to reset to the default policy behavior. The exec context is automatically reset after the next <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), so a program doesn&#8217;t need to explicitly sanitize it upon startup. </p>
 <p> <code>setexeccon</code>() can be applied prior to library functions that internally perform an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), e.g. <code>execl</code>*(3), <code>execv</code>*(3), <code><a href="/docs/linux/man/3-popen/">popen</a></code>(3), in order to set an exec context for that operation. </p>

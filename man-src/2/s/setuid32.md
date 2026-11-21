@@ -1,4 +1,5 @@
 ---
+
 title: "setuid32(2)"
 name: "setuid32"
 section: "2"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/2-setuid32/"
 description: "setuid – set user identity"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setuid(uid_t </code><i>uid</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>setuid</code>() sets the effective user ID of the calling process. If the calling process is privileged (more precisely: if the process has the <code>CAP_SETUID</code> capability in its user namespace), the real UID and saved set-user-ID are also set. </p>
 <p> Under Linux, <code>setuid</code>() is implemented like the POSIX version with the <code>_POSIX_SAVED_IDS</code> feature. This allows a set-user-ID (other than root) program to drop all of its user privileges, do some un-privileged work, and then reengage the original effective user ID in a secure manner. </p>
 <p> If the user is root or the program is set-user-ID-root, special care must be taken: <code>setuid</code>() checks the effective user ID of the caller and if it is the superuser, all process-related user ID&#8217;s are set to <i>uid</i>. After this has occurred, it is impossible for the program to regain root privileges. </p>

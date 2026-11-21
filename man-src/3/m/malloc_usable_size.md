@@ -1,4 +1,5 @@
 ---
+
 title: "malloc_usable_size(3)"
 name: "malloc_usable_size"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-malloc_usable_size/"
 description: "malloc_usable_size – obtain size of block of memory allocated from heap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>size_t malloc_usable_size (void *</code><i>ptr</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>malloc_usable_size</code>() function returns the number of usable bytes in the block pointed to by <i>ptr</i>, a pointer to a block of memory allocated by <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) or a related function.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>malloc_usable_size</code>() returns the number of usable bytes in the block of allocated memory pointed to by <i>ptr</i>. If <i>ptr</i> is NULL, 0 is returned.</p>

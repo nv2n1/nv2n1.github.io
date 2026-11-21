@@ -1,4 +1,5 @@
 ---
+
 title: "smtpping(1)"
 name: "smtpping"
 section: "1"
@@ -9,9 +10,7 @@ description: "smtpping – SMTP benchmarking and measurement tool"
 
 <h2>NAME</h2>
 <p> <code>smtpping</code> &#8211; SMTP benchmarking and measurement tool</p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>dqrJ46</code> ] [-<code>p </code><i>port</i> ] [-<code>w </code><i>wait</i> ] [-<code>c </code><i>count</i> ] [-<code>P </code><i>parallell</i> ] [-<code>s </code><i>size</i> ] [-<code>f </code><i>file</i> ] [-<code>H </code><i>hello</i> ] [-<code>S </code><i>sender</i> ] <i>recipient</i> [<i>@server</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> is a small tool that performs SMTP server delay, delay variation and throughput measurements. </p>
 <p> It must be invoked with the <i>recipient</i> email address. Normally, the <i>server</i> should also be specified (prefixed with @); otherwise will try to find the recipient domain&#8217;s MX record, falling back on A/AAAA records. </p>
 <p> The following options are available:</p>

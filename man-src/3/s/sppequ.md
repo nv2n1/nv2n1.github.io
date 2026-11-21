@@ -1,4 +1,5 @@
 ---
+
 title: "sppequ(3)"
 name: "sppequ"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sppequ/"
 description: "sppequ.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sppequ</code> (UPLO, N, AP, S, SCOND, AMAX, INFO)<br />
  <i></i><code>SPPEQU</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xcursorlibraryloadcursor(3)"
 name: "xcursorlibraryloadcursor"
 section: "3"
@@ -6,13 +7,10 @@ letter: "x"
 url: "/docs/linux/man/3-xcursorlibraryloadcursor/"
 ---
 
-
  </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;X11/Xcursor/Xcursor.h&gt; 
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>Xcursor</code> is a simple library designed to help locate and load cursors. Cursors can be loaded from files or memory. A library of common cursors exists which map to the standard X cursor names. Cursors can exist in several sizes and the library automatically picks the best size. </p>
 <h2>FUNCTIONAL OVERVIEW</h2>
 <p> Xcursor is built in a couple of layers; at the bottom layer is code which can load cursor images from files. Above that is a layer which locates cursor files based on the library path and theme. At the top is a layer which builds cursors either out of an image loaded from a file or one of the standard X cursors. When using images loaded from files, Xcursor prefers to use the Render extension CreateCursor request if supported by the X server. Where not supported, Xcursor maps the cursor image to a standard X cursor and uses the core CreateCursor request. </p>

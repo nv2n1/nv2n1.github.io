@@ -1,4 +1,5 @@
 ---
+
 title: "clarrv(3)"
 name: "clarrv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clarrv/"
 description: "clarrv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarrv</code> (N, VL, VU, D, L, PIVMIN, ISPLIT, M, DOL, DOU, MINRGP, RTOL1, RTOL2, W, WERR, WGAP, IBLOCK, INDEXW, GERS, Z, LDZ, ISUPPZ, WORK, IWORK, INFO)<br />
  <i></i><code>CLARRV</code> computes the eigenvectors of the tridiagonal matrix T = L D LT given L, D and the eigenvalues of L D LT.</p>

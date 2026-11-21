@@ -1,4 +1,5 @@
 ---
+
 title: "rec_control(1)"
 name: "rec_control"
 section: "1"
@@ -9,7 +10,6 @@ description: "rec_control – control pdns_recursor"
 
 <h2>NAME</h2>
 <p> rec_control &#8211; control pdns_recursor</p>
-<h2>SYNOPSIS</h2>
 <p> rec_control [OPTION]&#8230; COMMAND [COMMAND-OPTION]&#8230;</p>
 <h3>DESCRIPTION</h3>
 <p> <a href="/docs/linux/man/1-rec_control/">rec_control</a>(1) allows the operator to control a running instance of the pdns_recursor. </p>

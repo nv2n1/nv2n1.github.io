@@ -1,4 +1,5 @@
 ---
+
 title: "chcon(1)"
 name: "chcon"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-chcon/"
 description: "chcon – change file security context"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>chcon</code> [<i>,OPTION/</i>]&#8230; <i>,CONTEXT FILE/</i>&#8230;<br />
  <code>chcon</code> [<i>,OPTION/</i>]&#8230; [<i>,-u USER/</i>] [<i>,-r ROLE/</i>] [<i>,-l RANGE/</i>] [<i>,-t TYPE/</i>] <i>,FILE/</i>&#8230;<br />
  <code>chcon</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;reference=RFILE FILE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Change the SELinux security context of each FILE to CONTEXT. With <code>&#8211;reference</code>, change the security context of each FILE to that of RFILE. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

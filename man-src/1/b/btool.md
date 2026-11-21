@@ -1,4 +1,5 @@
 ---
+
 title: "btool(1)"
 name: "btool"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-btool/"
 description: "btool – Barry Project’s program to interface with BlackBerry handheld"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>btool</code> &#8211; Barry Project&#8217;s program to interface with BlackBerry handheld </p>
-<h2>SYNOPSIS</h2>
 <p> <code>btool</code> [-B busname][-N devname][-a db][-c dn][-C dnattr][-d db [-f file][-r#][-R#]-D#]][-h][-l][-L][-m cmd][-M][-p pin][-P password][-s db -f file][-S][-t][-v][-X][-z][-Z]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>btool</code> is a program that communicates with a BlackBerry device over USB; there is no intention to support ancient serial-port BlackBerries. Since the protocols used by BlackBerry are not documented by the manufacturer Research In Motion, this program is experimental and you <code>use at own risk</code>. Be sure your device is backed up by another program if it contains important data.</p>
 <h2>OPTIONS</h2>
 <dl>

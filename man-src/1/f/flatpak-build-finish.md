@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-finish(1)"
 name: "flatpak-build-finish"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-build-finish/"
 description: "flatpak-build-finish – Finalize a build directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-finish</code> [OPTION&#8230;] DIRECTORY</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Finalizes a build directory, to prepare it for exporting. DIRECTORY is the name of the directory. </dd>
 <p> The result of this command is that desktop files, icons and D-Bus service files from the files subdirectory are copied to a new export subdirectory. In the metadata file, the command key is set in the [Application] group, and the supported keys in the [Environment] group are set according to the options. </p>
 <p> As part of finalization you can also specify permissions that the app needs, using the various options specified below. Additionally during finalization the permissions from the runtime are inherited into the app unless you specify <code>&#8211;no-inherit-permissions</code> </p>

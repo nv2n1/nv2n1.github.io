@@ -1,4 +1,5 @@
 ---
+
 title: "wildmidi(1)"
 name: "wildmidi"
 section: "1"
@@ -13,9 +14,7 @@ description: "wildmidi – example player for libWildMidi"
 <p> <code>libWildMidi</code> </p>
 <h2>FILES</h2>
 <p> <code>/etc/wildmidi/wildmidi.cfg</code> </p>
-<h2>SYNOPSIS</h2>
 <p> <code>wildmidi [-behlvwn] [-c </code><i>config-file</i><code>] [-d </code><i>audiodev</i><code>] [-m </code><i>volume-level</i><code>] [-o </code><i>wav-file</i><code>] </code><i>midifile &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This is a demonstration program to show the capabilities of libWildMidi. </p>
 <p> <i>midifile</i> is processed by libWildMidi and the resulting audio is output by the player. </p>
 <p> You can have more than one <i>midifile</i> on the command line and <code>wildmidi</code> will pass them to libWildMidi for processing, one after the other. You can also use wildcards, for example: <code>wildmidi *.mid</code> </p>

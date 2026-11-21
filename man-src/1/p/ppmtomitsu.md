@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtomitsu(1)"
 name: "ppmtomitsu"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtomitsu/"
 description: "ppmtomitsu – convert a portable pixmap to a Mitsubishi S340-10 file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtomitsu</code> [-sharpness <i>val</i>] [<code>-enlarge</code> <i>val</i>] [<code>-media</code> <i>string</i>] [<code>-copy</code> <i>val</i>] [<code>-dpi300</code>] [<code>-tiny</code>] [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input and converts it into a format suitable to be printed by a Mitsubishi S340-10 printer, or any other Mitsubishi color sublimation printer. </p>
 <p> The Mitsubishi S340-10 Color Sublimation printer supports 24bit color. Images of the available sizes take so long to transfer that there is a fast method, employing a lookuptable, that ppmtomitsu will use if there is a maximum of 256 colors in the pixmap. ppmtomitsu will try to position your image to the center of the paper, and will rotate your image for you if xsize is larger than ysize. If your image is larger than the media allows, ppmtomitsu will quit with an error message. (We decided that the media were too expensive to have careless users produce misprints.) Once data transmission has started, the job can&#8217;t be stopped in a sane way without resetting the printer. The printer understands putting together images in the printers memory; ppmtomitsu doesn&#8217;t utilize this as pnmcat etc provide the same functionality and let you view the result on-screen, too. The S340-10 is the lowest common denominator printer; for higher resolution printers there&#8217;s the dpi300 option. The other printers also support higher values for enlarge eg, but I don&#8217;t think that&#8217;s essential enough to warrant a change in the program.</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-launcher-uninstall(1)"
 name: "byobu-launcher-uninstall"
 section: "1"
@@ -9,9 +10,7 @@ description: "byobu-launcher-uninstall – Byobu Launcher uninstallation utility
 
 <h2>NAME</h2>
 <p> byobu-launcher-uninstall &#8211; Byobu Launcher uninstallation utility </p>
-<h2>SYNOPSIS</h2>
 <p> byobu-launcher-uninstall </p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-byobu-launcher-uninstall/">byobu-launcher-uninstall</a></code>(1) is a simple utilty that removes the line added to your <i>$HOME/.profile</i> by <code><a href="/docs/linux/man/1-byobu-launcher-install/">byobu-launcher-install</a></code>(1) which launches <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1) any time you login through <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) or on a <code><a href="/docs/linux/man/4-console/">console</a></code>(4). </p>
 <h2>SEE ALSO</h2>
 <dl>

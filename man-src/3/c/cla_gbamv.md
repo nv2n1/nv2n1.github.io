@@ -1,4 +1,5 @@
 ---
+
 title: "cla_gbamv(3)"
 name: "cla_gbamv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_gbamv/"
 description: "cla_gbamv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cla_gbamv</code> (TRANS, M, N, KL, KU, ALPHA, AB, LDAB, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>CLA_GBAMV</code> performs a matrix-vector operation to calculate error bounds.</p>

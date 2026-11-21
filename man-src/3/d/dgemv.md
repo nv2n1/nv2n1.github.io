@@ -1,4 +1,5 @@
 ---
+
 title: "dgemv(3)"
 name: "dgemv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgemv/"
 description: "dgemv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgemv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>DGEMV</code></p>

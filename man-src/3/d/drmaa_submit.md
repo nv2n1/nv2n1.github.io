@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_submit(3)"
 name: "drmaa_submit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa_submit/"
 description: "drmaa_run_job, drmaa_run_bulk_jobs, drmaa_get_next_job_id, drmaa_get_num_job_ids, drmaa_release_job_ids – Job submission"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>
 int drmaa_run_job(
@@ -47,7 +47,6 @@ int&amp;nbsp;value_len
 </dd></dl>
 </pre>
 <p> <code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> drmaa_run_job() submits an xxQS_NAMExx job with attributes defined in the DRMAA job template <i>jt</i>. On success up to <i>job_id_len</i> bytes of the job identifier are returned into the buffer, <i>job_id</i>. Note the effect of the <code>SGE_DRMAA_ALLOW_JOB_ERROR_STATE</code> environment variable, as below.</p>
 <h3>drmaa_run_bulk_jobs()</h3>
 <p> The drmaa_run_bulk_jobs() submits a xxQS_NAMExx array job very much as if the option `-t <i>start</i>&#8211;<i>end</i>:<i>incr</i>&#8216; had been used along with the additional attributes defined in the DRMAA job template, <i>jt</i>. The same constraints regarding value ranges are also in effect for the parameters <i>start</i>, <i>end</i>, and <i>incr</i> as for -t. On success a DRMAA job id string vector containing job identifiers for each array job task is returned into <i>jobids</i>. The job identifiers in the job id string vector can be extracted using The number of identifiers in the job id string vector can be determined using Note that this function is only available in the 1.0 implementation. The caller is responsible for releasing the job id string vector returned into <i>jobids</i> using </p>

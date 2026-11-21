@@ -1,4 +1,5 @@
 ---
+
 title: "hpmkdir(1)"
 name: "hpmkdir"
 section: "1"
@@ -9,7 +10,6 @@ description: "hpmkdir — create a directory on an HFS+ volume"
 
 <h2>NAME</h2>
 <p> hpmkdir &#8212; create a directory on an HFS+ volume</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hpmkdir</code> <i>hfs-path</i></p>
 <h2>Description</h2>
 <p> <code>hpmkdir</code> creates a new directory under the current working directory on the previously mounted HFS+ volume. Since write access to HFS+ volumes is still experimental, the program prints a warning message and prompts the user before writing anything to the file system.<br />

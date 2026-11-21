@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2pt1(1)"
 name: "ttf2pt1"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ttf2pt1/"
 description: "TTF2PT1 – A True Type to PostScript Type 1 Font Converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <tt>&quot;ttf2pt1 </tt>[-options] ttffont.ttf [Fontname]<tt>&quot;</tt> </p>
 <p> or </p>
 <p> <tt>&quot;ttf2pt1 </tt>[-options] ttffont.ttf &#8211;<tt>&quot;</tt></p>
-<h2>DESCRIPTION</h2>
 <p> Ttf2pt1 is a font converter from the True Type format (and some other formats supported by the FreeType library as well) to the Adobe Type1 format. </p>
 <p> The versions 3.0 and later got rather extensive post-processing algorithm that brings the converted fonts to the requirements of the Type1 standard, tries to correct the rounding errors introduced during conversions and some simple kinds of bugs that are typical for the public domain <font SIZE="-1">TTF</font> fonts. It also generates the hints that enable much better rendering of fonts in small sizes that are typical for the computer displays. But everything has its price, and some of the optimizations may not work well for certain fonts. That&#8217;s why the options were added to the converter, to control the performed optimizations.</p>
 <h2>OPTIONS</h2>

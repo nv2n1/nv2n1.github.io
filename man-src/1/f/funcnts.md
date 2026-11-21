@@ -1,4 +1,5 @@
 ---
+
 title: "funcnts(1)"
 name: "funcnts"
 section: "1"
@@ -9,7 +10,6 @@ description: "funcnts – count photons in specified regions, with bkgd subtract
 
 <h2>NAME</h2>
 <p> <code>funcnts &#8211; count photons in specified regions, with bkgd subtraction</code></p>
-<h2>SYNOPSIS</h2>
 <p> funcnts [switches] &lt;source_file&gt; [source_region] [bkgd_file] [bkgd_region|bkgd_value]</p>
 <h2>OPTIONS</h2>
 <pre><code>
@@ -30,7 +30,6 @@ description: "funcnts – count photons in specified regions, with bkgd subtract
   -T            # output in starbase/rdb format
   -z            # output regions with zero area
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>funcnts</code> counts photons in the specified source regions and reports the results for each region. Regions are specified using the Spatial Region Filtering mechanism. Photons are also counted in the specified bkgd regions applied to the same data file or a different data file. (Alternatively, a constant background value in counts/pixel**2 can be specified.) The bkgd regions are either paired one-to-one with source regions or pooled and normalized by area, and then subtracted from the source counts in each region. Displayed results include the bkgd-subtracted counts in each region, as well as the error on the counts, the area in each region, and the surface brightness (cnts/area**2) calculated for each region. </p>
 <p> The first argument to the program specifies the <font SIZE="-1">FITS</font> input image, array, or raw event file to process. If &#8220;stdin&#8221; is specified, data are read from the standard input. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions, image sections, and filters. </p>
 <p> The optional second argument is the source region descriptor. If no region is specified, the entire field is used. </p>

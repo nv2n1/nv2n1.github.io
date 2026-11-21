@@ -1,4 +1,5 @@
 ---
+
 title: "git-mailinfo(1)"
 name: "git-mailinfo"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-mailinfo/"
 description: "git-mailinfo – Extracts patch and authorship from a single e-mail message"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git mailinfo[-k | -b][-u | --encoding = &lt;encoding&gt; | -n]
             [--[no - ] scissors][--quoted - cr = &lt;action&gt;]&lt;msg&gt;&lt;patch&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Reads a single e-mail message from the standard input, and writes the commit log message in &lt;msg&gt; file, and the patches in &lt;patch&gt; file. The author name, e-mail and e-mail subject are written out to the standard output to be used by <i>git am</i> to create a commit. It is usually not necessary to use this command directly. See <code><a href="/docs/linux/man/1-git-am/">git-am</a></code>(1) instead.</p>
 <h2>OPTIONS</h2>
 <p> -k</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jflex(1)"
 name: "jflex"
 section: "1"
@@ -9,9 +10,7 @@ description: "jflex – a lexical analyzer generator (also known as scanner gene
 
 <h2>NAME</h2>
 <p> jflex &#8211; a lexical analyzer generator (also known as scanner generator) for Java</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jflex</code> <i>&lt;options&gt; &lt;input-files&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> JFlex is a lexical analyzer generator (also known as scanner generator) for Java(tm), written in Java(tm). It is also a rewrite of the very useful tool JLex. JFlex is designed to work together with the LALR parser generator CUP, and the Java modification of Berkeley Yacc BYacc/J. It can also be used together with other parser generators like ANTLR or as a standalone tool. </p>
 <h2>OPTIONS</h2>
 <dl>

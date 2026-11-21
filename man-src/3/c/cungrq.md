@@ -1,4 +1,5 @@
 ---
+
 title: "cungrq(3)"
 name: "cungrq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cungrq/"
 description: "cungrq.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cungrq</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>CUNGRQ</code></p>

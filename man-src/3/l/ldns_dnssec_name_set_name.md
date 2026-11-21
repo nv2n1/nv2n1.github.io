@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_name_set_name(3)"
 name: "ldns_dnssec_name_set_name"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_dnssec_name_new, ldns_dnssec_name_new_frm_rr, ldns_dnssec_nam
 
 <h2>NAME</h2>
 <p> ldns_dnssec_name_new, ldns_dnssec_name_new_frm_rr, ldns_dnssec_name_free, ldns_dnssec_name_name, ldns_dnssec_name_set_name, ldns_dnssec_name_set_nsec, ldns_dnssec_name_cmp, ldns_dnssec_name_add_rr, ldns_dnssec_name_find_rrset, ldns_dnssec_name_print </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -23,7 +23,6 @@ description: "ldns_dnssec_name_new, ldns_dnssec_name_new_frm_rr, ldns_dnssec_nam
 <p> ldns_status ldns_dnssec_name_add_rr(ldns_dnssec_name *name, ldns_rr *rr); </p>
 <p> ldns_dnssec_rrsets* ldns_dnssec_name_find_rrset(ldns_dnssec_name *name, ldns_rr_type type); </p>
 <p> void ldns_dnssec_name_print(FILE *out, ldns_dnssec_name *name); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_name_new</i>()</dt>
 <dd>Create a new data structure for a dnssec name .br Returns the allocated structure</dd></dl>

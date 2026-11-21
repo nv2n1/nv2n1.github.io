@@ -1,4 +1,5 @@
 ---
+
 title: "changestool(1)"
 name: "changestool"
 section: "1"
@@ -9,10 +10,8 @@ description: "changestool – verify, dump, modify, create or fix Debian .change
 
 <h2>NAME</h2>
 <p> changestool &#8211; verify, dump, modify, create or fix Debian .changes files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>changestool &#8211;help</code> </p>
 <p> <code>changestool</code> [ <i>options</i> ] <i>.changes-filename</i> <i>command</i> [ <i>per-command-arguments</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> changestool is a little program to operate on Debian .changes files, as they are produced by <code><a href="/docs/linux/man/1-dpkg-genchanges/">dpkg-genchanges</a></code>(1) and used to feed built Debian packages into Debian repository managers like <code><a href="/docs/linux/man/1-reprepro/">reprepro</a></code>(1) or <code>dak</code>. </p>
 <h2>EXAMPLES</h2>
 <p> <code>changestool </code><i>bloat.changes</i> setdistribution <i>local</i><br />

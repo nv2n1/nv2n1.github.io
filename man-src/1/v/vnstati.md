@@ -1,4 +1,5 @@
 ---
+
 title: "vnstati(1)"
 name: "vnstati"
 section: "1"
@@ -9,9 +10,7 @@ description: "vnstati – png image output support for vnStat"
 
 <h2>NAME</h2>
 <p> vnstati &#8211; png image output support for vnStat </p>
-<h2>SYNOPSIS</h2>
 <p> <code>vnstati</code> [ <code>-cdhimostv?</code> ] [ <code>&#8211;altdate</code> ] [ <code>&#8211;cache</code> <i>time</i> ] [ <code>&#8211;config</code> <i>file</i> ] [ <code>&#8211;days</code> ] [ <code>&#8211;dbdir</code> <i>directory</i> ] [ <code>&#8211;headertext</code> <i>text</i> ] [ <code>&#8211;help</code> ] [ <code>&#8211;hours</code> ] [ <code>-hs</code> ] [ <code>&#8211;hsummary</code> ] [ <code>-i</code> <i>interface</i> ] [ <code>&#8211;iface</code> <i>interface</i> ] [ <code>&#8211;locale</code> <i>locale</i> ] [ <code>&#8211;months</code> ] [ <code>-ne</code> ] [ <code>-nh</code> ] [ <code>-nl</code> ] [ <code>&#8211;noedge</code> ] [ <code>&#8211;noheader</code> ] [ <code>&#8211;nolegend</code> ] [ <code>&#8211;output</code> <i>file</i> ] [ <code>-ru</code> ] [ <code>&#8211;rateunit</code> ] [ <code>&#8211;style</code> <i>number</i> ] [ <code>&#8211;summary</code> ] [ <code>&#8211;top10</code> ] [ <code>&#8211;transparent</code> ] [ <code>&#8211;version</code> ] [ <code>-vs</code> ] [ <code>&#8211;vsummary</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The purpose of <code>vnstati</code> is to provide image output support for statistics collected using <code><a href="/docs/linux/man/1-vnstat/">vnstat</a></code>(1). The image file format is limited to png. All basic outputs of vnStat are supported excluding live traffic features. The image can be outputted either to a file or to standard output. </p>
 <h2>OPTIONS</h2>
 <dl>

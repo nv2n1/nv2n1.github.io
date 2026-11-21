@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_update(3)"
 name: "keyctl_update"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-keyctl_update/"
 description: "keyctl_update – Update a key"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_update(key_serial_t key, const void *payload,
                    size_t plen);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_update</code>() updates the payload of a key if the key type permits it. </p>
 <p> The caller must have <code>write</code> permission on a key to be able update it. </p>
 <p> <i>payload</i> and <i>plen</i> specify the data for the new payload. <i>payload</i> may be NULL and <i>plen</i> may be zero if the key type permits that. The key type may reject the data if it&#8217;s in the wrong format or in some other way invalid.</p>

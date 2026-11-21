@@ -1,4 +1,5 @@
 ---
+
 title: "vala-gen-project(1)"
 name: "vala-gen-project"
 section: "1"
@@ -9,9 +10,7 @@ description: "vala-gen-project – generate the and automake skeleton for your v
 
 <h2>NAME</h2>
 <p> vala-gen-project &#8211; generate the and automake skeleton for your vala project</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vala-gen-project</code> [OPTION&#8230;] [NAME]</p>
-<h2>DESCRIPTION</h2>
 <p> Vala project generator is a little gui or command line utility that creates an automake project skeletoni vala program. </p>
 <p> It can be used without specifing a project name, so that a gtk+ gui will be presented or directly from the command line.</p>
 <h2>OPTIONS</h2>

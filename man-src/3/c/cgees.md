@@ -1,4 +1,5 @@
 ---
+
 title: "cgees(3)"
 name: "cgees"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgees/"
 description: "cgees.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, W, VS, LDVS, WORK, LWORK, RWORK, BWORK, INFO)<br />
  <i></i><code> CGEES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>

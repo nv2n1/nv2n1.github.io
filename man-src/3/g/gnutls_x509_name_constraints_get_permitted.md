@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_name_constraints_get_permitted(3)"
 name: "gnutls_x509_name_constraints_get_permitted"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_name_constraints_get_permitted – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_name_constraints_get_permitted &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_name_constraints_get_permitted(gnutls_x509_name_constraints_t </code><i>nc</i><code>, unsigned </code><i>idx</i><code>, unsigned * </code><i>type</i><code>, gnutls_datum_t * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_name_constraints_get_permitted – API function"
 <dd> the type of the constraint (of type gnutls_x509_subject_alt_name_t)</dd>
 <dt>gnutls_datum_t * name</dt>
 <dd> the name in the constraint (of the specific type)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return an intermediate structure containing the name constraints of the provided CA certificate. That structure can be used in combination with <code>gnutls_x509_name_constraints_check()</code> to verify whether a server&#8217;s name is in accordance with the constraints. </p>
 <p> The name should be treated as constant and valid for the lifetime of <i>nc</i> .</p>
 <h2>RETURNS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pipe2(2)"
 name: "pipe2"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pipe2/"
 description: "pipe, pipe2 – create pipe"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 /* On Alpha, IA-64, MIPS, SuperH, and SPARC/SPARC64; see NOTES */
@@ -22,7 +22,6 @@ int pipe(int pipefd[2]);
 #include &lt;unistd.h&gt;
 int pipe2(int pipefd[2], int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>pipe</code>() creates a pipe, a unidirectional data channel that can be used for interprocess communication. The array <i>pipefd</i> is used to return two file descriptors referring to the ends of the pipe. <i>pipefd[0]</i> refers to the read end of the pipe. <i>pipefd[1]</i> refers to the write end of the pipe. Data written to the write end of the pipe is buffered by the kernel until it is read from the read end of the pipe. For further details, see <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7). </p>
 <p> If <i>flags</i> is 0, then <code>pipe2</code>() is the same as <code>pipe</code>(). The following values can be bitwise ORed in <i>flags</i> to obtain different behavior:</p>
 <dl>

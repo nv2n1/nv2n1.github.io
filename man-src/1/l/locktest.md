@@ -1,4 +1,5 @@
 ---
+
 title: "locktest(1)"
 name: "locktest"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-locktest/"
 description: "locktest – Find differences in locking between two SMB servers"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>locktest</code> {//server1/share1} {//server2/share2} [-U user%pass] [-U user%pass] [-s seed] [-o numops] [-a] [-O] [-E] [-Z] [-R range] [-B base] [-M min]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>locktest is a utility for detecting differences in behaviour in locking between SMB servers. It will run a random set of locking operations against <i>//server1/share1</i> and then the same random set against <i>//server2/share2</i> and display the differences in the responses it gets. </dd>
 <p> This utility is used by the Samba team to find differences in behaviour between Samba and Windows servers.</p>
 <h2>OPTIONS</h2>

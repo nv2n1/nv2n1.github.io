@@ -1,4 +1,5 @@
 ---
+
 title: "rbpf-slam(1)"
 name: "rbpf-slam"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rbpf-slam/"
 description: "rbpf-slam – Robot map building with Rao-Blackwellized Particle Filters"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> rbpf-slam <i>config_file.ini</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>rbpf-slam</code> is a command-line application which processes a rawlog and creates a map using the particle filter methods specified in the config file.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

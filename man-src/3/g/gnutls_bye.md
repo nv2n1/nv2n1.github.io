@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_bye(3)"
 name: "gnutls_bye"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_bye – API function"
 
 <h2>NAME</h2>
 <p> gnutls_bye &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_bye(gnutls_session_t </code><i>session</i><code>, gnutls_close_request_t </code><i>how</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_bye – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_close_request_t how</dt>
 <dd> is an integer</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Terminates the current TLS/SSL connection. The connection should have been initiated using <code>gnutls_handshake()</code>. <i>how</i> should be one of <code>GNUTLS_SHUT_RDWR</code>, <code>GNUTLS_SHUT_WR</code>. </p>
 <p> In case of <code>GNUTLS_SHUT_RDWR</code> the TLS session gets terminated and further receives and sends will be disallowed. If the return value is zero you may continue using the underlying transport layer. <code>GNUTLS_SHUT_RDWR</code> sends an alert containing a close request and waits for the peer to reply with the same message. </p>
 <p> In case of <code>GNUTLS_SHUT_WR</code> the TLS session gets terminated and further sends will be disallowed. In order to reuse the connection you should wait for an EOF from the peer. <code>GNUTLS_SHUT_WR</code> sends an alert containing a close request. </p>

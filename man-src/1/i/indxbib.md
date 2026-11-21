@@ -1,4 +1,5 @@
 ---
+
 title: "indxbib(1)"
 name: "indxbib"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-indxbib/"
 description: "indxbib – make inverted index for bibliographic databases"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-w</code> ] [ <code>-c </code><i>file</i> ] [ <code>-d </code><i>dir</i> ] [ <code>-f </code><i>file</i> ] [ <code>-h </code><i>n</i> ] [ <code>-i </code><i>string</i> ] [ <code>-k </code><i>n</i> ] [ <code>-l </code><i>n</i> ] [ <code>-n </code><i>n</i> ] [ <code>-o </code><i>file</i> ] [ <code>-t </code><i>n</i> ] [<i>filename</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>indxbib</code> makes an inverted index for the bibliographic databases in <i>filename</i>&#8230; for use with <code><a href="/docs/linux/man/1-refer/">refer</a></code>(1), <code><a href="/docs/linux/man/1-lookbib/">lookbib</a></code>(1), and <code><a href="/docs/linux/man/1-lkbib/">lkbib</a></code>(1). The index will be named filename<i>.i</i>; the index is written to a temporary file which is then renamed to this. If no filenames are given on the command line because the <code>-f</code> option has been used, and no <code>-o</code> option is given, the index will be named <i>Ind.i</i>. </p>
 <p> Bibliographic databases are divided into records by blank lines. Within a record, each fields starts with a <code>%</code> character at the beginning of a line. Fields have a one letter name which follows the <code>%</code> character. </p>
 <p> The values set by the <code>-c</code>, <code>-n</code>, <code>-l</code>, and <code>-t</code> options are stored in the index; when the index is searched, keys will be discarded and truncated in a manner appropriate to these options; the original keys will be used for verifying that any record found using the index actually contains the keys. This means that a user of an index need not know whether these options were used in the creation of the index, provided that not all the keys to be searched for would have been discarded during indexing and that the user supplies at least the part of each key that would have remained after being truncated during indexing. The value set by the <code>-i</code> option is also stored in the index and will be used in verifying records found using the index.</p>

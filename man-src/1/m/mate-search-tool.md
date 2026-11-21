@@ -1,4 +1,5 @@
 ---
+
 title: "mate-search-tool(1)"
 name: "mate-search-tool"
 section: "1"
@@ -9,10 +10,8 @@ description: "mate-search-tool – the MATE Search Tool"
 
 <h2>NAME</h2>
 <p> mate-search-tool &#8211; the MATE Search Tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-search-tool</code> [<i>options</i>] </p>
 <p> or select <code>Search for Files&#8230;</code> from a <code>Main Menu</code> or from the <code>Places</code> menu in a <code>Menu Bar</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>MATE Search Tool</code> is a utility for finding files on your system. To perform a basic search, you can type a filename or a partial filename, with or without wildcards. To refine your search, you can apply additional search options. </p>
 <p> <code>MATE Search Tool</code> uses the find, grep, and locate UNIX commands. The case sensitivity of the search depends on your operating system. For example, on Linux, the find, grep, and locate commands support the -i option, so all searches are case-insensitive. </p>
 <p> For full documentation see the <code>MATE Search Tool</code> online help. </p>

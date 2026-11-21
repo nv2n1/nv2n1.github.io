@@ -1,4 +1,5 @@
 ---
+
 title: "dptcon(3)"
 name: "dptcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dptcon/"
 description: "dptcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dptcon</code> (N, D, E, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>DPTCON</code></p>

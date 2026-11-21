@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtopalm(1)"
 name: "pnmtopalm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pnmtopalm/"
 description: "pnmtopalm – convert a portable anymap into a Palm pixmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtopalm</code> [<code>-verbose</code>] [<code>-depth</code> <i>N</i>] [<code>-maxdepth</code> <i>N</i>] [<code>-colormap</code>] [<code>-transparent</code> <i>color</i>] [<code>-offset</code>]<br />
  [<code>-rle-compression</code>|<code>-scanline-compression</code>] [<i>pnmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PNM image as input, from stdin or <i>pnmfile</i>. Produces a Palm pixmap as output. </p>
 <p> Palm pixmap files are either greyscale files 1, 2, or 4 bits wide, or color files 8 bits wide, so <code>pnmtopalm </code> automatically scales colors to have an appropriate maxval, unless you specify a depth or max depth. Input files must have an appropriate number and set of colors for the selected output constraints. This often means that you should run the PNM image through <code>ppmquant</code> before you pass it to <code>pnmtopalm</code>. Netpbm comes with several colormap files you can use with <code>ppmquant</code> for this purpose. They are <code>palmgray2.map </code> (4 shades of gray for a depth of 2), <code>palmgray4.map </code> (16 shades of gray for a depth of 4), and <code>palmcolor8.map </code> (232 colors in default Palm colormap). </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-keyring-3(1)"
 name: "gnome-keyring-3"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-gnome-keyring-3/"
 description: "gnome-keyring – The gnome-keyring commandline tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-keyring import </code><code>FILE</code></dt>
 <dt> <code>gnome-keyring certificate-exception</code></dt>
 <dt> <code>gnome-keyring version</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>gnome-keyring</code> tool can be used to interact with gnome-keyring-daemon.</dd>
 <h2>COMMANDS</h2>
 <p> The following commands can be used: </p>

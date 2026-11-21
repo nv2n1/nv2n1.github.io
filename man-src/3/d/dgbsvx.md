@@ -1,4 +1,5 @@
 ---
+
 title: "dgbsvx(3)"
 name: "dgbsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbsvx/"
 description: "dgbsvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbsvx</code> (FACT, TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code> DGBSVX computes the solution to system of linear equations A * X = B for GB matrices</code></p>

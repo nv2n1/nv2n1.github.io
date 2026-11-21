@@ -1,4 +1,5 @@
 ---
+
 title: "termstructurehandle_(3)"
 name: "termstructurehandle_"
 section: "3"
@@ -6,8 +7,8 @@ letter: "t"
 url: "/docs/linux/man/3-termstructurehandle_/"
 description: "QuantLib::FixedRateBondHelper – fixed-coupon bond helper"
 ---
+
 <p>QuantLib::FixedRateBondHelper &#8211; fixed-coupon bond helper </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructures/yield/bondhelpers.hpp&gt; </p>

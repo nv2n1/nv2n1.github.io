@@ -1,4 +1,5 @@
 ---
+
 title: "guestfish(1)"
 name: "guestfish"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-guestfish/"
 description: "guestfish – the guest filesystem shell"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code> guestfish [--options] [commands]
  guestfish
  guestfish [--ro|--rw] -a disk.img
@@ -18,7 +19,6 @@ description: "guestfish – the guest filesystem shell"
 <h2>WARNING</h2>
 <p> Using <code>&quot;guestfish&quot;</code> in write mode on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently. </p>
 <p> Use the <i>--ro</i> (read-only) option to use <code>&quot;guestfish&quot;</code> safely if the disk image or virtual machine might be live. You may see strange or inconsistent results if running concurrently with other changes, but with this option you won&#8217;t risk disk corruption.  </p>
-<h2>DESCRIPTION</h2>
 <p> Guestfish is a shell and command-line tool for examining and modifying virtual machine filesystems. It uses libguestfs and exposes all of the functionality of the guestfs <font SIZE="-1">API,</font> see <i>guestfs</i>(3). </p>
 <p> Guestfish gives you structured access to the libguestfs <font SIZE="-1">API,</font> from shell scripts or the command line or interactively. If you want to rescue a broken virtual machine image, you should look at the <i><a href="/docs/linux/man/1-virt-rescue/">virt-rescue</a></i>(1) command.  </p>
 <h2>EXAMPLES</h2>

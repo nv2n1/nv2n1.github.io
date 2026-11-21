@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_graph(3)"
 name: "cdk_graph"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_graph – curses graph widget"
 
 <h2>NAME</h2>
 <p> cdk_graph &#8211; curses graph widget</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -114,7 +114,6 @@ void setCDKGraphVerticalChar(
     chtype character);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk graph widget creates a graph in either X/Y plot or line mode. The following functions create or manipulate the Cdk graph box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

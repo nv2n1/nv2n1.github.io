@@ -1,4 +1,5 @@
 ---
+
 title: "g2root(1)"
 name: "g2root"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-g2root/"
 description: "g2root – convert GEANT geometry files to ROOT files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>g2rootd</code> <i>[-f map_name] geant_name macro_name</i></p>
-<h2>DESCRIPTION</h2>
 <p> You can convert a <code>GEANT</code> (see <i><a rel="nofollow" href="http://geant.cern.ch/">http://geant.cern.ch/</a></i> fore more on <code>GEANT</code>) geometry to <code>ROOT</code> geometry with the following steps</p>
 <dl>
 <dt>1</dt>

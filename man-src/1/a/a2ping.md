@@ -1,4 +1,5 @@
 ---
+
 title: "a2ping(1)"
 name: "a2ping"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-a2ping/"
 description: "a2ping.pl — convert between PS, EPS and PDF and other page description formats"
 ---
 
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<code>a2ping.pl</code>&nbsp;[<code>&#8212;</code>]<code>help</code><br />
 &nbsp;<code>a2ping.pl</code>&nbsp;[<code>&#8212;</code>]<code>doc</code><br />
 &nbsp;<code>a2ping.pl</code>&nbsp;[<i>options</i>]&nbsp;&lt;<i>inputfile</i>&gt;&nbsp;[[<i>outformat</i>:]&nbsp;<i>outputfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>a2ping</code> is a <font SIZE="-1">UNIX</font> command line utility written in Perl that converts many raster image and vector graphics formats to <font SIZE="-1">EPS</font> or <font SIZE="-1">PDF</font> and other page description formats. Accepted input file formats are: <font SIZE="-1">PS</font> (PostScript), <font SIZE="-1">EPS, PDF, PNG, JPEG, TIFF, PNM, BMP, GIF, LBM, XPM, PCX, TGA.</font> Accepted output formats are: <font SIZE="-1">EPS, PCL5, PDF, PDF1, PBM, PGM, PPM, PS,</font> markedEPS, markedPS, <font SIZE="-1">PNG, XWD, BMP, TIFF, JPEG, GIF, XPM.</font> <code>a2ping</code> delegates the low-level work to Ghostscript (<font SIZE="-1">GS</font>), <code>pdftops</code> and <code>sam2p</code>. <code>a2ping</code> fixes many glitches during the <font SIZE="-1">EPS</font> to <font SIZE="-1">EPS</font> conversion, so its output is often more compatible and better embeddable than its input. </p>
 <p> Without the <tt>&quot;--below&quot;</tt> option, it is guarenteed to start at the 0,0 coordinate. <tt>&quot;--below&quot;</tt>, <tt>&quot;--hires&quot;</tt> and <tt>&quot;-v&quot;</tt> are recommended options. </p>
 <p> The page size is set exactly corresponding to the BoundingBox. This means that when Ghostscript renders it, the result needs no cropping, and the <font SIZE="-1">PDF</font> MediaBox is correct. </p>

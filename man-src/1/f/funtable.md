@@ -1,4 +1,5 @@
 ---
+
 title: "funtable(1)"
 name: "funtable"
 section: "1"
@@ -9,7 +10,6 @@ description: "funtable – copy selected rows from a Funtools file to a FITS bin
 
 <h2>NAME</h2>
 <p> <code>funtable &#8211; copy selected rows from a Funtools file to a FITS binary table</code></p>
-<h2>SYNOPSIS</h2>
 <p> funtable [-a] [-i|-z] [-m] [-s cols] &lt;iname&gt; &lt;oname&gt; [columns]</p>
 <h2>OPTIONS</h2>
 <pre><code>
@@ -19,7 +19,6 @@ description: "funtable – copy selected rows from a Funtools file to a FITS bin
   -s "col1 ..." # columns on which to sort
   -z    # for image data, output zero-valued pixels
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>funtable</code> selects rows from the specified <font SIZE="-1">FITS</font> Extension (binary table only) of a <font SIZE="-1">FITS</font> file, or from a non-FITS raw event file, and writes those rows to a <font SIZE="-1">FITS</font> binary table file. It also will create a <font SIZE="-1">FITS</font> binary table from an image or a raw array file. </p>
 <p> The first argument to the program specifies the <font SIZE="-1">FITS</font> file, raw event file, or raw array file. If &#8220;stdin&#8221; is specified, data are read from the standard input. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions, and filters. The second argument is the output <font SIZE="-1">FITS</font> file. If &#8220;stdout&#8221; is specified, the <font SIZE="-1">FITS</font> binary table is written to the standard output. By default, all columns of the input file are copied to the output file. Selected columns can be output using an optional third argument in the form: </p>
 <pre>

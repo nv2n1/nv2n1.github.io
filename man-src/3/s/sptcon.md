@@ -1,4 +1,5 @@
 ---
+
 title: "sptcon(3)"
 name: "sptcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sptcon/"
 description: "sptcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sptcon</code> (N, D, E, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>SPTCON</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_translate(1)"
 name: "gdal_translate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_translate/"
 description: "gdal_translate – gdal_translate converts raster data between different formats"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_translate[--help - general]
               [-ot{Byte / Int16 / UInt16 / UInt32 / Int32 / Float32 / Float64 /
@@ -21,7 +21,6 @@ gdal_translate[--help - general]
                                    [-gcp pixel line easting northing[elevation]] *
     [-mo "META-TAG=VALUE"] * [-q][-sds][-co "NAME=VALUE"] * [-stats][-norat] src_dataset dst_dataset
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process. </p>
 <dl>
 <dt><code>-ot</code>: <i>type</i></dt>

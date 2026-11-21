@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-id-ns(1)"
 name: "nvme-id-ns"
 section: "1"
@@ -6,25 +7,14 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-id-ns/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-id-ns - Send NVMe Identify Namespace, return result and structure 
 
- nvme-id-ns - Send NVMe Identify Namespace, return result and structure 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme id - ns&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
                     [--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;][-f | --force]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- For the NVMe device given, sends an identify namespace command and provides the result and returned structure. 
+For the NVMe device given, sends an identify namespace command and provides the result and returned structure. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). If the character device is given, the '--namespace-id' option is mandatory, otherwise it will use the ns-id of the namespace for the block device you opened. For block devices, the ns-id used can be overridden with the same option. 
 

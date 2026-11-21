@@ -1,4 +1,5 @@
 ---
+
 title: "g_sgangle_d(1)"
 name: "g_sgangle_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_sgangle – computes the angle and distance between two groups"
 <h2>NAME</h2>
 <p> g_sgangle &#8211; computes the angle and distance between two groups </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_sgangle</code> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-s</code><i> topol.tpr </i> <code>-oa</code><i> sg_angle.xvg </i> <code>-od</code><i> sg_dist.xvg </i> <code>-od1</code><i> sg_dist1.xvg </i> <code>-od2</code><i> sg_dist2.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]one</code><i></i> <code>-[no]z</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> Compute the angle and distance between two groups. The groups are defined by a number of atoms given in an index file and may be two or three atoms in size. If -one is set, only one group should be specified in the index file and the angle between this group at time 0 and t will be computed. The angles calculated depend on the order in which the atoms are given. Giving for instance 5 6 will rotate the vector 5-6 with 180 degrees compared to giving 6 5. </p>
 <p> If three atoms are given, the normal on the plane spanned by those three atoms will be calculated, using the formula P1P2 x P1P3. The cos of the angle is calculated, using the inproduct of the two normalized vectors. </p>
 <p> Here is what some of the file options do: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "icedtea-web(1)"
 name: "icedtea-web"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icedtea-web/"
 description: "icedtea-web provides a Free Software web browser plugin running applets written in the Java programming language and an implementation of Java Web Start, originally based on the NetX project."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>icedtea-web </code> provides a Free Software web browser plugin running applets written in the Java programming language and an implementation of Java Web Start, originally based on the NetX project. </p>
 <p> NetX allows Java applets and applications to be downloaded over the network, cached, and (by default) run in a secure sandbox environment. Subsequent runs of the applet download the latest version automatically. Update and security settings, among others, can be set using the itw-settings command.<br />
  icedtea-web also includes a plugin to enable Java applets (</p>
@@ -20,7 +20,6 @@ description: "icedtea-web provides a Free Software web browser plugin running ap
 <dt>
 </dt><dd> News about releases of this project can be found in the file NEWS in the IcedTea-Web root directory. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>NetX features: </code> </p>
 <dl>
 <dt>Modular</dt>

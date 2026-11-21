@@ -1,4 +1,5 @@
 ---
+
 title: "makecol(3)"
 name: "makecol"
 section: "3"
@@ -9,10 +10,8 @@ description: "makecol – Converts an RGB value into the current pixel format. A
 
 <h2>NAME</h2>
 <p> makecol &#8211; Converts an RGB value into the current pixel format. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int makecol(int r, int g, int b);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Converts colors from a hardware independent format (red, green, and blue values ranging 0-255) to the pixel format required by the current video mode, calling the preceding 8, 15, 16, 24, or 32-bit makecol functions as appropriate. Example: </p>
 <pre><code>
 /* Regardless of color depth, this will look green. */

@@ -1,4 +1,5 @@
 ---
+
 title: "autoreconf(1)"
 name: "autoreconf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autoreconf/"
 description: "autoreconf – Update generated configuration files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autoreconf</code> [<i>,OPTION/</i>]&#8230; [<i>,DIRECTORY/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Run &#8216;autoconf&#8217; and, when needed, &#8216;aclocal&#8217;, &#8216;autoheader&#8217;, &#8216;automake&#8217;, &#8216;autopoint&#8217; (formerly &#8216;gettextize&#8217;), &#8216;libtoolize&#8217;, &#8216;intltoolize&#8217;, and &#8216;gtkdocize&#8217; to regenerate the GNU Build System files in specified DIRECTORIES and their subdirectories (defaulting to &#8216;.&#8217;). </p>
 <p> By default, it only remakes those files that are older than their sources. If you install new versions of the GNU Build System, you can make &#8216;autoreconf&#8217; remake all of the files by giving it the &#8216;&#8211;force&#8217; option.</p>
 <h3>Operation modes:</h3>

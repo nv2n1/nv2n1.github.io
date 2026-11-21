@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_extra_check_version(3)"
 name: "gnutls_extra_check_version"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_extra_check_version – checks the libgnutls-extra version"
 
 <h2>NAME</h2>
 <p> gnutls_extra_check_version &#8211; checks the libgnutls-extra version</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>const char * gnutls_extra_check_version(const char * </code><i>req_version</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>const char * req_version</dt>
 <dd> version string to compare with, or <code>NULL</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Check GnuTLS Extra Library version. </p>
 <p> See <code>GNUTLS_EXTRA_VERSION</code> for a suitable <i>req_version</i> string.</p>
 <h2>RETURN VALUE</h2>

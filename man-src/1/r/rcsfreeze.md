@@ -1,4 +1,5 @@
 ---
+
 title: "rcsfreeze(1)"
 name: "rcsfreeze"
 section: "1"
@@ -9,9 +10,7 @@ description: "rcsfreeze – freeze a configuration of sources checked in under R
 
 <h2>NAME</h2>
 <p> rcsfreeze &#8211; freeze a configuration of sources checked in under RCS</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rcsfreeze</code> [<i>name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rcsfreeze</code> assigns a symbolic revision number to a set of <font SIZE="-1">RCS</font> files that form a valid configuration. </p>
 <p> The idea is to run <code>rcsfreeze</code> each time a new version is checked in. A unique symbolic name (<code>C_</code><i>number,</i> where <i>number</i> is increased each time <code>rcsfreeze</code> is run) is then assigned to the most recent revision of each <font SIZE="-1">RCS</font> file of the main trunk. </p>
 <p> An optional <i>name</i> argument to <code>rcsfreeze</code> gives a symbolic name to the configuration. The unique identifier is still generated and is listed in the log file but it will not appear as part of the symbolic revision name in the actual <font SIZE="-1">RCS</font> files. </p>

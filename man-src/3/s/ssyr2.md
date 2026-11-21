@@ -1,4 +1,5 @@
 ---
+
 title: "ssyr2(3)"
 name: "ssyr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssyr2/"
 description: "ssyr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
  <i></i><code>SSYR2</code></p>

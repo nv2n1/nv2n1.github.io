@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_finalize(3)"
 name: "cpg_finalize"
 section: "3"
@@ -9,10 +10,8 @@ description: "cpg_finalize – Terminate a connection to the CPG service"
 
 <h2>NAME</h2>
 <p> cpg_finalize &#8211; Terminate a connection to the CPG service</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_finalize(cpg_handle_t </code><i>handle</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cpg_finalize</code> function is used to close a connection to the closed process group API. Once the connection is finalized, the handle may not be used again by applications. No more callbacks will be dispatched from the <code>cpg_dispatch function.</code> </p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>

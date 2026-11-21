@@ -1,4 +1,5 @@
 ---
+
 title: "slascl(3)"
 name: "slascl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slascl/"
 description: "slascl.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br />
  <i></i><code>SLASCL</code> multiplies a general rectangular matrix by a real scalar defined as cto/cfrom.</p>

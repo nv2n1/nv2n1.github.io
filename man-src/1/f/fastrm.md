@@ -1,4 +1,5 @@
 ---
+
 title: "fastrm(1)"
 name: "fastrm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fastrm/"
 description: "fastrm – Quickly remove a list of files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fastrm</code> [<code>-de</code>] [<code>-c</code>|<code>-c</code><i>I</i>] [<code>-s</code>|<code>-s</code><i>M</i>] [<code>-u</code>|<code>-u</code><i>N</i>] <i>base-directory</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fastrm</code> reads a list of either file names or storage <font SIZE="-1">API</font> tokens, one per line, from its standard input and removes them. Storage <font SIZE="-1">API</font> tokens are removed via the <i>SMcancel()</i> interface. <code>fastrm</code> does not delete files safely or with an eye to security, but rather cuts every corner it can to delete files as fast as it can. It should therefore never be run on publically writable directories, or in any other environment where a hostile party may control the directory structure in which it is working. </p>
 <p> If a file name is not an absolute path name, it is considered to be relative to <i>base-directory</i> as given on the command line. The <i>base-directory</i> parameter must be a simple absolute pathname (it must not contain multiple consecutive slashes or references to the special directories <tt>&quot;.&quot;</tt> or <tt>&quot;..&quot;</tt>). </p>
 <p> <code>fastrm</code> is designed to be faster than the typical <tt>&quot;| xargs rm&quot;</tt> pipeline when given a sorted list of file names as input. For example, <code>fastrm</code> will usually <i><a href="/docs/linux/man/2-chdir/">chdir</a></i>(2) into a directory before removing files from it, meaning that if its input is sorted, most names passed to <i><a href="/docs/linux/man/2-unlink/">unlink</a></i>(2) will be simple names. This can substantially reduce the operating system overhead from directory lookups. </p>

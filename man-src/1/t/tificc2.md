@@ -1,4 +1,5 @@
 ---
+
 title: "tificc2(1)"
 name: "tificc2"
 section: "1"
@@ -9,9 +10,7 @@ description: "tifficc – little cms ICC profile applier for TIFF."
 
 <h2>NAME</h2>
 <p> tifficc &#8211; little cms ICC profile applier for TIFF.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tifficc</code> [<i>options</i>]<i> input.tif output.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>tifficc </code> is little cms ICC profile applier for TIFF.</p>
 <h2>OPTIONS</h2>
 <dl>

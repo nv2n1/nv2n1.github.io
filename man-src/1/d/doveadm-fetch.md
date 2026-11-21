@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-fetch(1)"
 name: "doveadm-fetch"
 section: "1"
@@ -9,11 +10,9 @@ description: "doveadm-fetch – Fetch partial/full messages or message informati
 
 <h2>NAME</h2>
 <p> doveadm-fetch &#8211; Fetch partial/full messages or message information</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>fetch</code> [<code>-S</code> <i>socket_path</i>] <i>fields search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>fetch</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i> fields search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>fetch</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user fields search_query</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>doveadm fetch</code> can be used to fetch messages&#8217; contents and metadata. This can be useful for scripts and for debugging. If you want to fetch messages one at a time, see <code><a href="/docs/linux/man/1-doveadm-search/">doveadm-search</a></code>(1).</p>
 <dl>
 <dt>Important:</dt>

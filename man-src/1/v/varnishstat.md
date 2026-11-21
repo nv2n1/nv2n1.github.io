@@ -1,4 +1,5 @@
 ---
+
 title: "varnishstat(1)"
 name: "varnishstat"
 section: "1"
@@ -9,9 +10,7 @@ description: "varnishstat – Varnish Cache statistics"
 
 <h2>NAME</h2>
 <p> varnishstat &#8211; Varnish Cache statistics</p>
-<h2>SYNOPSIS</h2>
 <p> varnishstat [-1] [-x] [-j] [-f field_list] [-l] [-n varnish_name] [-N filename] [-V] [-w delay]</p>
-<h2>DESCRIPTION</h2>
 <p> The varnishstat utility displays statistics from a running <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) instance.</p>
 <h2>OPTIONS</h2>
 <p> The following options are available:</p>

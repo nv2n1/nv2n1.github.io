@@ -1,4 +1,5 @@
 ---
+
 title: "clag2z(3)"
 name: "clag2z"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clag2z/"
 description: "clag2z.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clag2z</code> (M, N, SA, LDSA, A, LDA, INFO)<br />
  <i></i><code>CLAG2Z</code> converts a complex single precision matrix to a complex double precision matrix.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmpause(1)"
 name: "pmpause"
 section: "1"
@@ -9,10 +10,8 @@ description: "pmpause, pmsleep – portable subsecond-capable sleep"
 
 <h2>NAME</h2>
 <p> <code>pmpause</code>, <code>pmsleep</code> &#8211; portable subsecond-capable sleep</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmpause</code><br />
  <code>$PCP_BINADM_DIR/pmsleep</code> <i>interval</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmpause</code> sleeps indefinitely, until interrupted by SIGKILL. </p>
 <p> <code>pmsleep</code> sleeps for the specified <i>interval.</i> The <i>interval</i> argument follows the syntax described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for <code>-t,</code> and in the simplest form may be an unsigned integer or floating point constant (the implied units in this case are seconds).</p>
 <h2>DIAGNOSTICS</h2>

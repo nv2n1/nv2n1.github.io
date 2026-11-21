@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-enable-metrics-collection(1)"
 name: "euscale-enable-metrics-collection"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-enable-metrics-collection – Enable monitoring of an auto
 
 <h2>NAME</h2>
 <p> euscale-enable-metrics-collection &#8211; Enable monitoring of an auto-scaling group&#8217;s group metrics</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-enable-metrics-collection <code>-g</code> GRANULARITY</p>
 <dl>
 <dt>[-m METRIC1,METRIC2,&#8230;] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ASGROUP</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Enable monitoring of an auto-scaling group&#8217;s group metrics</p>
 <h3>positional arguments:</h3>
 <dl>

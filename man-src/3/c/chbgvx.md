@@ -1,4 +1,5 @@
 ---
+
 title: "chbgvx(3)"
 name: "chbgvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chbgvx/"
 description: "chbgvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>CHBGST</code></p>

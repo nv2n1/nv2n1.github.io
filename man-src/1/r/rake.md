@@ -1,4 +1,5 @@
 ---
+
 title: "rake(1)"
 name: "rake"
 section: "1"
@@ -8,11 +9,8 @@ description: "rake – make-like build utility for Ruby"
 ---
 
 <p>rake 11.2.2</p>
-<h2 class="name">NAME</h2>
 <p> <code>rake</code> &#8211; make-like build utility for Ruby </p>
-<h2>SYNOPSIS</h2>
 <p> <code>rake</code> [-<code>f </code><i>rakefile</i> ] [<i>options</i> ] <i>targets &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>rake</code> is a <a href="/docs/linux/man/1-make/">make</a>(1)Ns-like build utility for Ruby. Tasks and dependencies are specified in standard Ruby syntax.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "dasdseq(1)"
 name: "dasdseq"
 section: "1"
@@ -9,10 +10,8 @@ description: "dasdseq – Hercules DSORG=PS retrieval command"
 
 <h2>NAME</h2>
 <p> <code>dasdseq</code> &#8211; Hercules DSORG=PS retrieval command </p>
-<h2>SYNOPSIS</h2>
 <p> <code>dasdseq</code> [options&#8230;] <code>image </code>[sf=shadow] <code>filespec</code><br />
  <code>dasdseq </code>[-debug] [-expert] [-ascii] <code>image </code>[sf=shadow] [attr] <code>filespec </code>[debugopts] [ascii] </p>
-<h2>DESCRIPTION</h2>
 <p> Hercules command to retrieve a DSORG=PS (sequential) dataset from CKD/CCKD DASD. The dataset is presumed to be encoded in EBCDIC. The second form of the command is for &#8216;expert mode&#8217; users, and allows more advanced access to data on the DASD image. </p>
 <h2>OPTIONS</h2>
 <p> The following options are used to specify dasdseq behavior. Surround each option by blank(s). Options are divided into three categories: <code>required, optional, and expert mode operands.</code> </p>

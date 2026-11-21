@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaib(1)"
 name: "pmdaib"
 section: "1"
@@ -11,7 +12,6 @@ description: "pmdaib – Infiniband performance metrics domain agent (PMDA)"
 <p> <code>pmdaib</code> &#8211; Infiniband performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSYS</h2>
 <p> <code>$PCP_PMDAS_DIR/infiniband/pmdaib</code> [<code>-c</code> <i>configFile</i>] [<code>-D</code> <i>debug</i>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-w</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdaib</code> is a Performance Metrics Domain Agent (PMDA) which exports information and performance metrics about local Infiniband HCAs and local or remote Infiniband GUIDs. </p>
 <p> A brief description of the <code>pmdaib</code> command line options follows:</p>
 <dl>

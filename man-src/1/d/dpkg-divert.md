@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-divert(1)"
 name: "dpkg-divert"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-divert/"
 description: "dpkg-divert – override a package’s version of a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-divert</code> [<i>option</i>&#8230;] <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-divert</code> is the utility used to set up and update the list of diversions. </p>
 <p> File <i>diversions</i> are a way of forcing <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1) not to install a file into its location, but to a <i>diverted</i> location. Diversions can be used through the Debian package scripts to move a file away when it causes a conflict. System administrators can also use it to override some package&#8217;s configuration file, or whenever some files (which aren&#8217;t marked as &#8220;conffiles&#8221;) need to be preserved by <code>dpkg</code>, when installing a newer version of a package which contains those files.</p>
 <h2>COMMANDS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ccon(1)"
 name: "ccon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ccon/"
 description: "cssh, crsh, ctel, ccon – Cluster administration tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cssh&nbsp;<wbr>[options]&nbsp;<wbr>[[user@]&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;] crsh&nbsp;<wbr>[options]&nbsp;<wbr>[[user@]&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;] ctel&nbsp;<wbr>[options]&nbsp;<wbr>[&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;] ccon&nbsp;<wbr>[options]&nbsp;<wbr>[[user@]&lt;server&gt;[:port]|&lt;tag&gt;]&nbsp;<wbr>[&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The command opens an administration console and an xterm to all specified hosts. Any text typed into the administration console is replicated to all windows. All windows may also be typed into directly. </p>
 <p> This tool is intended for (but not limited to) cluster administration where the same configuration or commands must be run on each node within the cluster. Performing these commands all at once via this tool ensures all nodes are kept in sync. </p>
 <p> Connections are opened via ssh so a correctly installed and configured ssh installation is required. If, however, the program is called by &#8220;crsh&#8221; then the rsh protocol is used (and the communications channel is insecure), or by &#8220;ctel&#8221; then telnet is used, or by &#8220;ccon&#8221; then console is used. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ethstatus(1)"
 name: "ethstatus"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ethstatus/"
 description: "ethstatus – Console-based ethernet statistics monitor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ethstatus</code> [ -h ] [ -i interface ] [ -v videomode ] [ -S bps[k|m|g] ] [ -s speed ] (backward compatibility)</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ethstatus</code> is a console-based monitoring utility for displaying statistical data of the ethernet interface on a quantity basis.</p>
 <h2>OPTIONS</h2>
 <p> The following options can be provided:</p>

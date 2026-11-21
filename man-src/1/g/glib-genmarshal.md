@@ -1,4 +1,5 @@
 ---
+
 title: "glib-genmarshal(1)"
 name: "glib-genmarshal"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-glib-genmarshal/"
 description: "glib-genmarshal – C code marshaller generation utility for GLib closures"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glib-genmarshal</code> [OPTION&#8230;] [FILE&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>glib-genmarshal</code></p>
 <dd>is a small utility that generates C code marshallers for callback functions of the GClosure mechanism in the GObject sublibrary of GLib. The marshaller functions have a standard signature, they get passed in the invoking closure, an array of value structures holding the callback function parameters and a value structure for the return value of the callback. The marshaller is then responsible to call the respective C code function of the closure with all the parameters on the stack and to collect its return value. </dd>
 <p> <code>glib-genmarshal</code> takes a list of marshallers to generate as input. The marshaller list is either read from files passed as additional arguments on the command line; or from standard input, by using &#8211; as the input file.</p>

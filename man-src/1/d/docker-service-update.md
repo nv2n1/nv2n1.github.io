@@ -1,4 +1,5 @@
 ---
+
 title: "docker-service-update(1)"
 name: "docker-service-update"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-service-update/"
 description: "docker-service-update – Update a service"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker service update [OPTIONS] SERVICE</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Update a service </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;args</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Service command args</p>

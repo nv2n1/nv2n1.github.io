@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-modify-ca(1)"
 name: "getcert-modify-ca"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-modify-ca/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert modify-ca [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Modifies the helper command in a <i>certmonger</i> CA configuration. </p>
 <h2>OPTIONS</h2>
 <dl>

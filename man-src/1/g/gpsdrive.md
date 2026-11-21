@@ -1,4 +1,5 @@
 ---
+
 title: "gpsdrive(1)"
 name: "gpsdrive"
 section: "1"
@@ -9,13 +10,11 @@ description: "gpsdrive – displays GPS position on a map"
 
 <h2>NAME</h2>
 <p> gpsdrive &#8211; displays GPS position on a map</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpsdrive [options]</code> </p>
 <h2>About this manual page</h2>
 <p> This manual page explains the basic functions of <code>GpsDrive</code> 2.10 and additional information regarding map setup and interfacing with support software. </p>
 <p> Within <code>GpsDrive</code> nearly all buttons have tooltips and there is also a HELP window describing the usage of mouse buttons and keyboard shortcuts. </p>
 <p> For additional information concerning advanced topics consult the specialized README files, e.g. README.kismet, etc. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>GpsDrive </code> is a car (bike, ship, plane, foot) navigation system. It will display your position on a map, record your track, and a number of other handy functions. </p>
 <p> <code>GpsDrive</code> connects to a GPS receiver and displays your position on a zoomable map. The maps are auto-selected depending on your position. You can choose the preferred map scale, which the program then tries to match from the available maps. Basic worldwide maps are provided and tools are included to help you add your own localized maps. </p>
 <p> <code>GpsDrive</code> will work with the vast majority of GPS receivers which output NMEA sentences to a serial device, and any USB GPS binary protocol known to the <code>Gpsd</code> software, which handles the back-end communication for <code>GpsDrive</code>. See the <code>Gpsd</code> website (<i><a rel="nofollow" href="http://gpsd.berlios.de">http://gpsd.berlios.de</a></i>) for an extensive list of GPS receivers known to work with that software. In most cases your GPS will &quot;just work&quot;. </p>

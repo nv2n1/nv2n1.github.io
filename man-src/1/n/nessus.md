@@ -1,4 +1,5 @@
 ---
+
 title: "nessus(1)"
 name: "nessus"
 section: "1"
@@ -9,9 +10,7 @@ description: "nessus – The client part of the Nessus Security Scanner"
 
 <h2>NAME</h2>
 <p> nessus &#8211; The client part of the Nessus Security Scanner</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nessus [-v] [-h] [-n] [-T</code> <i>&lt;type&gt;</i><code>]&nbsp;<wbr>[-q&nbsp;<wbr>[-pPS]&nbsp;<wbr></code><i>host port user password targets results</i><code>]</code> <code>nessus -i in.[nsr|nbe] -o out.[html|xml|nsr|nbe]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>Nessus Security Scanner</code> is a security auditing tool made up of two parts: a server, and a client. The server, <code>nessusd</code> is in charge of the attacks, whereas the client <code>nessus</code> provides an interface to the user. </p>
 <p> <code>nessus </code> is an X11 client based on the Gimp ToolKit (GTK). </p>
 <p> This man page explains how to use the client. </p>

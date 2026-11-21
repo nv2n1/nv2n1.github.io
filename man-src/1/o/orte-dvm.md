@@ -1,4 +1,5 @@
 ---
+
 title: "orte-dvm(1)"
 name: "orte-dvm"
 section: "1"
@@ -8,7 +9,6 @@ description: "orte-dvm, ompi_dvm – Establish a Distributed Virtual Machine (DV
 ---
 
 <p> <code>Note:</code> <i>orte-dvm</i> and <i>ompi-dvm</i> are synonyms for each other. Using either of the names will produce the same behavior. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>orte-dvm</code> [ options ] </p>
 <p> Invoking <i>orte-dvm</i> via an absolute path name is equivalent to specifying the <i>&#8211;prefix</i> option with a <i>&lt;dir&gt;</i> value equivalent to the directory where <i>orte-dvm</i> resides, minus its last subdirectory. For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<code>%</code>&nbsp;/usr/local/bin/orte-dvm &#8230; </p>
@@ -47,7 +47,6 @@ description: "orte-dvm, ompi_dvm – Establish a Distributed Virtual Machine (DV
 <dt><code>&#8211;debug-daemons-file</code></dt>
 <dd> Enable debugging of the ORTE daemons in the DVM, storing output in files.</dd></dl>
 <p> There may be other options listed with <i>orte-dvm &#8211;help</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>orte-dvm</i> starts a Distributed Virtual Machine (DVM) by launching a daemon on each node of the allocation, as modified or specified by the <i>-host</i> and <i>-hostfile</i> options. Applications can subsequently be executed using the <i>orte-submit</i> command. The DVM remains in operation until receiving the <i>orte-submit -terminate</i> command.</p>
 <h3>Specifying Host Nodes</h3>
 <p> Host nodes can be identified on the <i>orte-dvm</i> command line with the <i>-host</i> option or in a hostfile. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_gc(3)"
 name: "ck_rhs_gc"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_rhs_gc – perform maintenance on a hash set"
 <p> <code>ck_rhs_gc</code> &#8211; perform maintenance on a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_rhs.h Ft bool Fn ck_rhs_gc ck_rhs_t *hs</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_rhs_gc 3 function will perform various maintenance routines on the hash set pointed to by Fa hs , including recalculating the maximum number of probes.</p>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, Fn ck_rhs_gc 3 returns true and otherwise returns false on failure due to memory allocation failure.</p>

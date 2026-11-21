@@ -1,4 +1,5 @@
 ---
+
 title: "saxpy(3)"
 name: "saxpy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-saxpy/"
 description: "saxpy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>saxpy</code> (N, SA, SX, INCX, SY, INCY)<br />
  <i></i><code>SAXPY</code></p>

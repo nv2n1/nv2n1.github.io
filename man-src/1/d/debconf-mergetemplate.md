@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-mergetemplate(1)"
 name: "debconf-mergetemplate"
 section: "1"
@@ -6,20 +7,13 @@ letter: "d"
 url: "/docs/linux/man/1-debconf-mergetemplate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+debconf-mergetemplate - merge together multiple debconf template files 
 
- debconf-mergetemplate - merge together multiple debconf template files 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 debconf - mergetemplate[options][templates.ll...] templates
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Note: This utility is deprecated. You should switch to using po-debconf's po2debconf program. 
+Note: This utility is deprecated. You should switch to using po-debconf's po2debconf program. 
 
  This program is useful if you have multiple debconf templates files which you want to merge together into one big file. All the specified files will be read in, merged, and output to standard output. 
 

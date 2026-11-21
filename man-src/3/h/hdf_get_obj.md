@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_get_obj(3)"
 name: "hdf_get_obj"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_get_obj/"
 description: "hdf_get_obj – return the HDF data set node at a named location"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -17,7 +17,6 @@ HDF *hdf_get_obj(HDF *hdf, const char *name);
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the dataset node to start from<br />
  name -&gt; the name to walk to </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_get_obj walks the dataset given by hdf to the node named name, and then returns the pointer to that node </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

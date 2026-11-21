@@ -1,4 +1,5 @@
 ---
+
 title: "keytool(1)"
 name: "keytool"
 section: "1"
@@ -6,9 +7,9 @@ letter: "k"
 url: "/docs/linux/man/1-keytool/"
 description: "keytool – Manages a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates."
 ---
+
 <h2>NAME</h2>
 <p> keytool - Manages a keystore (database) of cryptographic keys, X.509 certificate chains, and trusted certificates.  </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  keytool  [ commands ]
 </code></pre>
@@ -119,7 +120,6 @@ description: "keytool – Manages a keystore (database) of cryptographic keys, X
 <dd> <p> -help </p>
  </dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>keytool</code> command is a key and certificate management utility. It enables users to administer their own public/private key pairs and associated certificates for use in self-authentication (where the user authenticates himself or herself to other users and services) or data integrity and authentication services, using digital signatures. The <code>keytool</code> command also enables users to cache the public keys (in the form of certificates) of their communicating peers. </p>
 <p> A certificate is a digitally signed statement from one entity (person, company, and so on.), that says that the public key (and some other information) of some other entity has a particular value. (See Certificate.) When data is digitally signed, the signature can be verified to check the data integrity and authenticity. Integrity means that the data has not been modified or tampered with, and authenticity means the data comes from whoever claims to have created and signed it. </p>
 <p> The <code>keytool</code> command also enables users to administer secret keys and passphrases used in symmetric encryption and decryption (DES). </p>

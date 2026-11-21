@@ -1,4 +1,5 @@
 ---
+
 title: "wish(1)"
 name: "wish"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wish/"
 description: "wish – Simple windowing shell"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wish</code> ?<code>-encoding </code><i>name</i>? ?<i>fileName arg arg &#8230;</i>?</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -33,7 +33,6 @@ description: "wish – Simple windowing shell"
 <dt><code>&#8212;</code></dt>
 <dd> Pass all remaining arguments through to the script&#8217;s <code>argv</code> variable without interpreting them. This provides a mechanism for passing arguments such as <code>-name</code> to a script instead of having <code>wish</code> interpret them.
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Wish</code> is a simple program consisting of the Tcl command language, the Tk toolkit, and a main program that reads commands from standard input or from a file. It creates a main window and then processes Tcl commands. If <code>wish</code> is invoked with arguments, then the first few arguments, ?<code>-encoding </code><i>name</i>? ?<i>fileName</i>?, specify the name of a script file, and, optionally, the encoding of the text data stored in that script file. A value for <i>fileName</i> is recognized if the appropriate argument does not start with &#8220;-&#8221;. </p>
 <p> If there are no arguments, or the arguments do not specify a <i>fileName</i>, then wish reads Tcl commands interactively from standard input. It will continue processing commands until all windows have been deleted or until end-of-file is reached on standard input. If there exists a file &#8220;<code>.wishrc</code>&#8221; in the home directory of the user, <code>wish</code> evaluates the file as a Tcl script just before reading the first command from standard input. </p>
 <p> If arguments to <code>wish</code> do specify a <i>fileName</i>, then <i>fileName</i> is treated as the name of a script file. <code>Wish</code> will evaluate the script in <i>fileName</i> (which presumably creates a user interface), then it will respond to events until all windows have been deleted. Commands will not be read from standard input. There is no automatic evaluation of &#8220;<code>.wishrc</code>&#8221; when the name of a script file is presented on the <code>wish</code> command line, but the script file can always <code>source</code> it if desired. </p>

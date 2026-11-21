@@ -1,4 +1,5 @@
 ---
+
 title: "rsvg-convert(1)"
 name: "rsvg-convert"
 section: "1"
@@ -9,9 +10,7 @@ description: "rsvg-convert – turn SVG files into raster images."
 
 <h2>NAME</h2>
 <p> rsvg-convert &#8211; turn SVG files into raster images.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rsvg-convert</code> [options] in.svg &gt; out.png <i></i></p>
-<h2>DESCRIPTION</h2>
 <p> Converts SVG images into PNG raster images, PDF, PS, or SVG vector images, or dumps of Cairo XML or recording surfaces.</p>
 <h3>OPTIONS</h3>
 <dl>

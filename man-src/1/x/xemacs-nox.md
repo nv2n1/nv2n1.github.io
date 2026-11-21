@@ -1,4 +1,5 @@
 ---
+
 title: "xemacs-nox(1)"
 name: "xemacs-nox"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xemacs-nox/"
 description: "xemacs – Emacs: The Next Generation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xemacs</code> [ <i>command-line switches</i> ] [ <i>files &#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>XEmacs</i> is a version of <i>Emacs</i>, compatible with and containing many improvements over <i>GNU</i> <i>Emacs</i>, written by Richard Stallman of the Free Software Foundation. It was originally based on an early release of <i>GNU Emacs Version</i> <i>19</i>, and has tracked subsequent releases of <i>GNU Emacs</i> as they have become available. </p>
 <p> The primary documentation of <i>XEmacs</i> is in the <i>XEmacs Reference</i> <i>Manual</i>, which you can read on-line using Info, a subsystem of <i>XEmacs</i>. Please look there for complete and up-to-date documentation. Complete documentation on using Emacs Lisp is available on-line through the <i>XEmacs Lisp Programmer&#8217;s</i> <i>Manual</i>. Both manuals also can be printed out nicely using the <i>TeX</i> formatting package. </p>
 <p> The user functionality of <i>XEmacs</i> encompasses everything other <i>Emacs</i> editors do, and it is easily extensible since its editing commands are written in Lisp. </p>

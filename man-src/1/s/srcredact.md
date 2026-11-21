@@ -1,4 +1,5 @@
 ---
+
 title: "srcredact(1)"
 name: "srcredact"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-srcredact/"
 description: "srcredact – a program for redaction of text files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> srcredact [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <code>-e</code> <i>audience</i> [<i>full_file</i>] </p>
 <p> srcredact [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <code>-u</code> <i>audience</i> <i>full_file</i> [<i>redacted_file</i>] </p>
 <p> srcredact <code>-l</code> [<i>full_file</i>] </p>
 <p> srcredact <code>-h|-v</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>srcredact</code> is the program to extract &#8220;redacted versions&#8221; of the master file (option <code>-e</code>) or to incorporate the changes in the redacted versions into the master file (&#8220;unredact&#8221;, option <code>-u</code>). </p>
 <p> The master file consists of <i>chunks</i> intended for different audiences. Each audience has a <i>name</i>, e.g. <tt>&quot;classified&quot;</tt>, <tt>&quot;unclssified&quot;</tt>, <tt>&quot;expert&quot;</tt> etc. Chunks are started and stopped by <i>guard lines</i>. Each guard line has the format (for the default TeX syntax) </p>
 <pre>

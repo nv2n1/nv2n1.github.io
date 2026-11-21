@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_decode_simple_der(3)"
 name: "asn1_decode_simple_der"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_decode_simple_der – API function"
 
 <h2>NAME</h2>
 <p> asn1_decode_simple_der &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_decode_simple_der(unsigned int </code><i>etype</i><code>, const unsigned char * </code><i>der</i><code>, unsigned int </code><i>_der_len</i><code>, const unsigned char ** </code><i>str</i><code>, unsigned int * </code><i>str_len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "asn1_decode_simple_der – API function"
 <dd> a pointer to the data</dd>
 <dt>unsigned int * str_len</dt>
 <dd> the length of the data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Decodes a simple DER encoded type (e.g. a string, which is not constructed). The output is a pointer inside the <i>der</i> .</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if successful or an error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-software(1)"
 name: "gnome-software"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gnome-software/"
 description: "gnome-software – Install applications"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-software</code> [OPTION&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>gnome-software</code> command. </dd>
 <p> <code>gnome-software</code> allows you to add and remove applications and update your system.</p>
 <h2>OPTIONS</h2>

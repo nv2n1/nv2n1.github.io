@@ -1,4 +1,5 @@
 ---
+
 title: "perl5240delta(1)"
 name: "perl5240delta"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perl5240delta/"
 description: "perl5240delta – what is new for perl v5.24.0"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> This document describes the differences between the 5.22.0 release and the 5.24.0 release.  </p>
 <h2>Core Enhancements</h2>
 <h3>Postfix dereferencing is no longer experimental</h3>

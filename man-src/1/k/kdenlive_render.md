@@ -1,4 +1,5 @@
 ---
+
 title: "kdenlive_render(1)"
 name: "kdenlive_render"
 section: "1"
@@ -9,9 +10,7 @@ description: "kdenlive_render – Render program for Kdenlive."
 
 <h2>NAME</h2>
 <p> kdenlive_render &#8211; Render program for Kdenlive.</p>
-<h2>SYNOPSIS</h2>
 <p> kdenlive_render [-erase] [in=pos] [out=pos] [render] [profile] [rendermodule] [player] [src] [dest] [[arg1] [arg2] &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Render program for Kdenlive. Renders kdenlive project detached from Kdenlive, while providing feedback through kuiserver. This program is not meant to be called directly by users, but is called from Kdenlive, when a rendering process is started.</p>
 <h2>OPTIONS</h2>
 <h3>

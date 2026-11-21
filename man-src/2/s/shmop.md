@@ -1,4 +1,5 @@
 ---
+
 title: "shmop(2)"
 name: "shmop"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-shmop/"
 description: "shmat, shmdt – System V shared memory operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/shm.h&gt;
 #include &lt;sys/types.h&gt;
 void *shmat(int shmid, const void *shmaddr, int shmflg);
 int shmdt(const void *shmaddr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <h3>shmat()</h3>
 <p> <code>shmat</code>() attaches the System V shared memory segment identified by <i>shmid</i> to the address space of the calling process. The attaching address is specified by <i>shmaddr</i> with one of the following criteria:</p>
 <dl>

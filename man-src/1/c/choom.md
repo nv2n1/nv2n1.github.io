@@ -1,4 +1,5 @@
 ---
+
 title: "choom(1)"
 name: "choom"
 section: "1"
@@ -10,7 +11,6 @@ description: "choom – display and adjust OOM-killer score."
 <p> <code>choom</code> <code>-p</code> <i>PID</i> </p>
 <p> <code>choom</code> <code>-p</code> <i>PID</i> <code>-n</code> <i>number</i> </p>
 <p> <code>choom</code> <code>-n</code> <i>number</i> [&#8211;] <i>command</i> [<i>argument</i> &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>choom</code> command displays and adjusts Out-Of-Memory killer score setting.</p>
 <h2>OPTIONS</h2>
 <p> <code>-p</code>, <code>&#8211;pid</code> <i>pid</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-grep(1)"
 name: "git-grep"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-grep/"
 description: "git-grep – Print lines matching a pattern"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  git grep  [-a | --text] [-I] [--textconv] [-i | --ignore-case] [-w | --word-regexp]
            [-v | --invert-match] [-h|-H] [--full-name]
@@ -29,7 +30,6 @@ description: "git-grep – Print lines matching a pattern"
            [ [--[no-]exclude-standard] [--cached | --no-index | --untracked] | &lt;tree&gt;...]
            [--] [&lt;pathspec&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Look for specified patterns in the tracked files in the work tree, blobs registered in the index file, or blobs in given tree objects. Patterns are lists of one or more search expressions separated by newline characters. An empty string as search expression matches all lines.  </p>
 <h2>OPTIONS</h2>
 <p> --cached </p>

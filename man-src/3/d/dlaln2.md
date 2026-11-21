@@ -1,4 +1,5 @@
 ---
+
 title: "dlaln2(3)"
 name: "dlaln2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaln2/"
 description: "dlaln2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaln2</code> (LTRANS, NA, NW, SMIN, CA, A, LDA, D1, D2, B, LDB, WR, WI, X, LDX, SCALE, XNORM, INFO)<br />
  <i></i><code>DLALN2</code> solves a 1-by-1 or 2-by-2 linear system of equations of the specified form.</p>

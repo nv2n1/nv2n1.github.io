@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-memos(1)"
 name: "pilot-memos"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-memos – Manipulate Memo entries from a file or your Palm d
 <p> pilot-memos &#8211; Manipulate Memo entries from a file or your Palm device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-memos</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-v</code>|<code>&#8211;verbose</code>]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;delete</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file</code>&nbsp;<wbr>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;save</code>&nbsp;<wbr>&nbsp;<wbr><i>dir</i>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;category</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-r</code>|<code>&#8211;regex</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> By default, the contents of your Palm&#8217;s memo database will be written to standard output as a standard UNIX mailbox (mbox-format) file, with each memo as a separate message. The subject of each message will be the category. </p>
 <p> If &#8216;-s&#8217; is specified, then instead of being written to standard output, memos will be saved in subdirectories of <i>dir</i>. Each subdirectory will be the name of a category on the Palm, and will contain the memos in that category. Each filename will be the first line (up to the first 40 characters) of the memo. Control characters, slashes, and equal signs that would otherwise appear in filenames are converted after the fashion of MIME&#8217;s quoted-printable encoding. Note that if you have two memos in the same category whose first lines are identical, one of them will be overwritten. </p>
 <p> If &#8216;-f&#8217; is specified, the specified file will be treated as a memo database from which to read memos, rather than HotSyncing from the Palm. </p>

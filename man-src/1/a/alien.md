@@ -1,4 +1,5 @@
 ---
+
 title: "alien(1)"
 name: "alien"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-alien/"
 description: "alien – Convert or install an alien binary package"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 alien[--to - deb][--to - rpm][--to - tgz][--to - slp][options] file[...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>alien</code> is a program that converts between Red Hat rpm, Debian deb, Stampede slp, Slackware tgz, and Solaris pkg file formats. If you want to use a package from another linux distribution than the one you have installed on your system, you can use <code>alien</code> to convert it to your preferred package format and install it. It also supports <font SIZE="-1">LSB</font> packages.</p>
 <h2>WARNING</h2>
 <p> <code>alien</code> should not be used to replace important system packages, like init, libc, or other things that are essential for the functioning of your system. Many of these packages are set up differently by the different distributions, and packages from the different distributions cannot be used interchangeably. In general, if you can&#8217;t remove a package without breaking your system, don&#8217;t try to replace it with an alien version.</p>

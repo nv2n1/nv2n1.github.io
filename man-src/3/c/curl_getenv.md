@@ -1,4 +1,5 @@
 ---
+
 title: "curl_getenv(3)"
 name: "curl_getenv"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_getenv – return value for environment name"
 
 <h2>NAME</h2>
 <p> curl_getenv &#8211; return value for environment name</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>char *curl_getenv(const char *</code><i>name</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> curl_getenv() is a portable wrapper for the getenv() function, meant to emulate its behaviour and provide an identical interface for all operating systems libcurl builds on (including win32).</p>
 <h2>AVAILABILITY</h2>
 <p> This function will be removed from the public libcurl API in a near future. It will instead be made &quot;available&quot; by source code access only, and then as curlx_getenv().</p>

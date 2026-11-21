@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdeactivatemfadevice(1)"
 name: "euare-userdeactivatemfadevice"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-userdeactivatemfadevice – Deactivate an MFA device"
 
 <h2>NAME</h2>
 <p> euare-userdeactivatemfadevice &#8211; Deactivate an MFA device</p>
-<h2>SYNOPSIS</h2>
 <p> euare-userdeactivatemfadevice <code>-s</code> SERIAL [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Deactivate an MFA device</p>
 <h3>positional arguments:</h3>
 <dl>

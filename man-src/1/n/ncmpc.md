@@ -1,4 +1,5 @@
 ---
+
 title: "ncmpc(1)"
 name: "ncmpc"
 section: "1"
@@ -9,9 +10,7 @@ description: "ncmpc – curses Music Player Daemon (MPD) client."
 
 <h2>NAME</h2>
 <p> ncmpc &#8211; curses Music Player Daemon (MPD) client.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ncmpc</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> ncmpc is a client for MPD, the Music Player Daemon. ncmpc connects to a MPD running on a machine on the local network. </p>
 <p> By default, ncmpc connects to localhost:6600. This can be changed either at compile-time, or by exporting the MPD_HOST and MPD_PORT environment variables, or by the command line options &#8211;host and &#8211;port. </p>
 <p> $ ncmpc &#8211;host=musicserver &#8211;port=44000 </p>

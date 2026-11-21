@@ -1,4 +1,5 @@
 ---
+
 title: "getrichacl(1)"
 name: "getrichacl"
 section: "1"
@@ -9,9 +10,7 @@ description: "getrichacl – Get Rich Access Control Lists"
 
 <h2>NAME</h2>
 <p> getrichacl &#8211; Get Rich Access Control Lists</p>
-<h2>SYNOPSIS</h2>
 <p> <code>getrichacl</code> [<i>option</i>]&#8230; [<i>file</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> For each file, <code>getrichacl</code> displays the file name and the file&#8217;s Rich Access Control List (RichACL). </p>
 <p> The output format of <code>getrichacl</code> is as follows: </p>
 <dl>

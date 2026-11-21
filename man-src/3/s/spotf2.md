@@ -1,4 +1,5 @@
 ---
+
 title: "spotf2(3)"
 name: "spotf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spotf2/"
 description: "spotf2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spotf2</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>SPOTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite matrix (unblocked algorithm).</p>

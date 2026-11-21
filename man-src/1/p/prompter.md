@@ -1,4 +1,5 @@
 ---
+
 title: "prompter(1)"
 name: "prompter"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-prompter/"
 description: "prompter – prompting editor front-end for nmh"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>prompter</code> [<code>-erase</code> <i>chr</i>] [<code>-kill</code> <i>chr</i>] [<code>-prepend</code> | <code>-noprepend</code>] [<code>-rapid</code> | <code>-norapid</code>] [<code>-doteof</code> | <code>-nodoteof</code>] <i>file</i> [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Prompter</code></p>
 <dd>is an editor front-end for <code>nmh</code> which allows rapid composition of messages. This program is not normally invoked directly by users but takes the place of an editor and acts as an editor front-end. It operates on an RFC 822 style message draft skeleton specified by <i>file</i>, normally provided by the <code>nmh</code> commands <code>comp</code>, <code>dist</code>, <code>forw</code>, or <code>repl</code>. </dd>
 <p> <code>Prompter</code> is particularly useful when composing messages over slow network or modem lines. It is an <code>nmh program in that it can have</code> its own profile entry with switches, but it is not invoked directly by the user. The commands <code>comp</code>, <code>dist</code>, <code>forw</code>, and <code>repl</code> invoke <code>prompter as an editor, either when invoked with</code> <code>-editor</code> <i>prompter</i>, or by the profile entry &#8220;Editor: prompter&#8221;, or when given the command <code>edit</code> <code>prompter</code> at the &#8220;What now?&#8221; prompt. </p>

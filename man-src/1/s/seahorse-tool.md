@@ -1,4 +1,5 @@
 ---
+
 title: "seahorse-tool(1)"
 name: "seahorse-tool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-seahorse-tool/"
 description: "seahorse-tool – PGP/GnuPG file encryption for the GNOME Desktop"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>seahorse-tool</code> [ <i>OPTION</i>&#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> Seahorse is a GNOME application for managing encryption keys. <code>seahorse-tool</code> allows you to encrypt, decrypt or sign files. It is integrated into the nautilus right-click menu, but can also be used from the command line. </p>
 <h2>OPTIONS</h2>
 <h3>Help options</h3>

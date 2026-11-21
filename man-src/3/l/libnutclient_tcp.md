@@ -1,4 +1,5 @@
 ---
+
 title: "libnutclient_tcp(3)"
 name: "libnutclient_tcp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnutclient_tcp/"
 description: "libnutclient_tcp, nutclient_tcp_create_client, nutclient_tcp_is_connected, nutclient_tcp_disconnect, nutclient_tcp_reconnect, nutclient_tcp_set_timeout, nutclient_tcp_get_timeout – TCP protocol rel..."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nutclient.h&gt;
 </code></pre>
@@ -22,7 +22,6 @@ int nutclient_tcp_reconnect(NUTCLIENT_TCP_t client);
 void nutclient_tcp_set_timeout(NUTCLIENT_TCP_t client, long timeout);
 long nutclient_tcp_get_timeout(NUTCLIENT_TCP_t client);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These functions allow to manage connections to <code><a href="/docs/linux/man/8-upsd/">upsd</a></code>(8) using NUT TCP protocol. </p>
 <p> The <code>nutclient_tcp_create_client()</code> function create the <i>NUTCLIENT_TCP_t</i> context and intend to connect to upsd at <i>host</i> and <i>port</i>. The context must be freed by <i>nutclient_destroy()</i> </p>
 <p> <i>host</i> can be a sever name or a valid IPv4 or IPv6 adress like &quot;localhost&quot;, &quot;127.0.0.1&quot; or &quot;::1&quot;. </p>

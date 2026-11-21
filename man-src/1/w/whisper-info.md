@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-info(1)"
 name: "whisper-info"
 section: "1"
@@ -13,7 +14,6 @@ description: "whisper-info – show information about a whisper database"
 <pre>
 whisper-info path [field]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command displays information about a whisper fixed-size database. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

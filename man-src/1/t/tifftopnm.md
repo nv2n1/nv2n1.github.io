@@ -1,4 +1,5 @@
 ---
+
 title: "tifftopnm(1)"
 name: "tifftopnm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-tifftopnm/"
 description: "tifftopnm – convert a TIFF file into a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tifftopnm</code> [<code>-alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<code>-headerdump</code>] [<code>-respectfillorder</code>] [<i>tiff-filename</i>] </p>
 <p> You may abbreviate any option to its shortest unique prefix. You may use two hyphens instead of one in options. You may separate an option and its value either by an equals sign or white space. </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a TIFF file as input. Produces a portable anymap as output. The type of the output file depends on the input file &#8211; if it&#8217;s black &amp; white, generates a <i>pbm</i> file; if it&#8217;s grayscale, generates a <i>pgm</i> file; otherwise, a <i>ppm</i> file. The program tells you which type it is writing. </p>
 <p> This program cannot read every possible TIFF file &#8212; there are myriad variations of the TIFF format. However, it does understand monochrome and gray scale, RGB, RGBA (red/green/blue with alpha channel), CMYK (Cyan-Magenta-Yellow-Black ink color separation), and color palette TIFF files. An RGB file can have either single plane (interleaved) color or multiple plane format. The program reads 1-8 and 16 bit-per-sample input, the latter in either bigendian or littlendian encoding. Tiff directory information may also be either bigendian or littendian. </p>
 <p> One reason this program isn&#8217;t as general as TIFF programs often are is that it does not use the TIFFRGBAImageGet() function of the TIFF library to read TIFF files. Rather, it uses the more primitive TIFFReadScanLine() function and decodes it itself. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "doxygen(1)"
 name: "doxygen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doxygen/"
 description: "doxygen – documentation system for various programming languages"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Doxygen is a documentation system for C++, C, Java, Objective-C, IDL (Corba and Microsoft flavors), Fortran, Python, VHDL and to some extent PHP, C#, and D. </p>
 <p> You can use doxygen in a number of ways:</p>
 <dl>

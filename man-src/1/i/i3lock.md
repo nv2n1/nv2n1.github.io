@@ -1,4 +1,5 @@
 ---
+
 title: "i3lock(1)"
 name: "i3lock"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-i3lock/"
 description: "i3lock – slightly improved version of slock"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>i3lock</code> [-v] [-n] [-b] [-d] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>i3lock</code> locks your screen by making it white. To quit <code>i3lock</code> just enter your password. </p>
 <h2>DIFFERENCES TO SLOCK</h2>
 <p> <code>i3lock</code> improves slock by making it fork() and therefore combinable with commands to suspend your computer. Additionally, instead of turning off your screen via DPMS and/or displaying a black screen, <code>i3lock</code> displays a white screen so you can see if your computer failed to resume from suspend or if your screen is just locked. Also, when entering a wrong password, <code>i3lock</code> does not call XBell(). This is important because <code>i3lock/slock</code> think you&#8217;ve entered a password when resuming from suspend, at least sometimes. </p>

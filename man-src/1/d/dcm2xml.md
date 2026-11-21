@@ -1,4 +1,5 @@
 ---
+
 title: "dcm2xml(1)"
 name: "dcm2xml"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcm2xml/"
 description: "dcm2xml – Convert DICOM file and data set to XML"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dcm2xml[options] dcmfile - in[xmlfile - out]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcm2xml</code> utility converts the contents of a DICOM file (file format or raw data set) to XML (Extensible Markup Language). The DTD (Document Type Definition) is described in the file <i>dcm2xml.dtd</i>. </p>
 <p> If <code>dcm2xml</code> reads a raw data set (DICOM data without a file format meta-header) it will attempt to guess the transfer syntax by examining the first few bytes of the file. It is not always possible to correctly guess the transfer syntax and it is better to convert a data set to a file format whenever possible (using the <code>dcmconv</code> utility). It is also possible to use the <i>-f</i> and <i>-t[ieb]</i> options to force <code>dcm2xml</code> to read a data set with a particular transfer syntax.</p>
 <h2>PARAMETERS</h2>

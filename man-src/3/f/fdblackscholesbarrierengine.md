@@ -1,4 +1,5 @@
 ---
+
 title: "fdblackscholesbarrierengine(3)"
 name: "fdblackscholesbarrierengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdblackscholesbarrierengine/"
 description: "ql/experimental/finitedifferences/fdblackscholesbarrierengine.hpp – Finite-Differences Black Scholes barrier option engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/finitedifferences/dividendbarrieroption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>

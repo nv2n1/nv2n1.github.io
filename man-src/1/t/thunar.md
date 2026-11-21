@@ -1,4 +1,5 @@
 ---
+
 title: "thunar(1)"
 name: "thunar"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-thunar/"
 description: "Thunar – File Manager for the Xfce Desktop Environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>Thunar</code> [options] [[URI]&#8230;]</dt>
 <dt> <code>Thunar</code> [options] &#8211;bulk-rename [[URI]&#8230;]</dt>
 <dt> <code>Thunar</code> [options] &#8211;quit</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Thunar</code></p>
 <dd>is a fast and easy to use file manager for the Xfce Desktop Environment. It has been designed from the ground up to be lighweight with special focus on usability. Its user interface is clean and intuitive, and does not include any confusing or useless options.</dd>
 <h2>INVOCATION</h2>

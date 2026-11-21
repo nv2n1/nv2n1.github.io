@@ -1,4 +1,5 @@
 ---
+
 title: "ctr(1)"
 name: "ctr"
 section: "1"
@@ -8,7 +9,6 @@ description: "ctr"
 ---
 
 <p>ctr is an unsupported debug and administrative client for interacting with the containerd daemon. Because it is unsupported, the commands, options, and operations are not guaranteed to be backward compatible or stable from release to release of the containerd project. </p>
-<h2>SYNOPSIS</h2>
 <p> ctr </p>
 <dl>
 <dt>

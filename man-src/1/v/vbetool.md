@@ -1,4 +1,5 @@
 ---
+
 title: "vbetool(1)"
 name: "vbetool"
 section: "1"
@@ -9,9 +10,7 @@ description: "vbetool – run real-mode video BIOS code to alter hardware state"
 
 <h2>NAME</h2>
 <p> vbetool &#8211; run real-mode video BIOS code to alter hardware state </p>
-<h2>SYNOPSIS</h2>
 <p> <code>vbetool [[vbestate save|restore]|[vbemode set|get]|[vgamode]|[dpms on|off|standby|suspend|reduced]|[post [romfile]]|[vgastate on|off]|[vbefp panelid|panelsize|getbrightness|setbrightness|invert]]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>vbetool</code> uses lrmi in order to run code from the video BIOS. Currently, it is able to alter DPMS states, save/restore video card state and attempt to initialize the video card from scratch. </p>
 <h2>OPTIONS</h2>
 <p> <code>vbetool</code> takes the following options:</p>

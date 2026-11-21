@@ -1,4 +1,5 @@
 ---
+
 title: "okular(1)"
 name: "okular"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-okular/"
 description: "okular – a universal document viewer"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>okular</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>Okular options</i>] [<i>URL</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>okular</code></p>
 <dd>is aimed to show documents in different formats.</dd>
 <h2>GENERIC OPTIONS</h2>

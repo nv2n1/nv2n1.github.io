@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-genbuildinfo(1)"
 name: "dpkg-genbuildinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-genbuildinfo/"
 description: "dpkg-genbuildinfo – generate Debian .buildinfo files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-genbuildinfo</code> [<i>option</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-genbuildinfo</code> reads information from an unpacked and built Debian source tree and from the files it has generated and generates a Debian control file describing the build environment and the build artifacts (<code>.buildinfo</code> file). </p>
 <p> This command was introduced in dpkg 1.18.11.</p>
 <h2>OPTIONS</h2>

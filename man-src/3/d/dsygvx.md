@@ -1,4 +1,5 @@
 ---
+
 title: "dsygvx(3)"
 name: "dsygvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsygvx/"
 description: "dsygvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsygvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, A, LDA, B, LDB, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, LWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>DSYGST</code></p>

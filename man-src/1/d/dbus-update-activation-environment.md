@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-update-activation-environment(1)"
 name: "dbus-update-activation-environment"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-dbus-update-activation-environment/"
 description: "dbus-update-activation-environment – update environment used for D-Bus session services"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-update-activation-environment</code> [&#8211;systemd] [&#8211;verbose] &#8211;all | <i>VAR</i>&#8230; | <i>VAR</i>=<i>VAL</i>&#8230;</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>dbus-update-activation-environment</code></p>
 <dd>updates the list of environment variables used by <code>dbus-daemon &#8211;session</code> when it activates session services without using <code>systemd</code>. </dd>
 <p> With the <code>&#8211;systemd</code> option, if an instance of <code>systemd &#8211;user</code> is available on D-Bus, it also updates the list of environment variables used by <code>systemd &#8211;user</code> when it activates user services, including D-Bus session services for which <code>dbus-daemon</code> has been configured to delegate activation to <code>systemd</code>. This is very similar to the <code>import-environment</code> command provided by <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1)). </p>

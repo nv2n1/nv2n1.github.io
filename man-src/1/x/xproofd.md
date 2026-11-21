@@ -1,4 +1,5 @@
 ---
+
 title: "xproofd(1)"
 name: "xproofd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xproofd/"
 description: "xproofd – PROOF (The Parallel ROOT Facility) xrootd version"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xproofd</code> [<code> -c </code><i>cfn</i> ] [<code> -d </code>] [<code> -l </code><i>fnc</i> ] [<code> -n </code><i>name</i> ] [<code> -p </code><i>port</i> ] [<code> -P </code><i>prot</i> ] [<i> prot_options </i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Using <code>PROOF</code><i> (The P</i>arallel <i>ROO</i>T <i>F</i>acility) one can analyze trees in parallel on a cluster of computers. The <code>PROOF</code> system consists of the <i><a href="/docs/linux/man/1-xproofd/">xproofd</a></i>(1) from-end program which is started via <i>inetd</i>(8). </p>
 <p> <i>xproofd</i> takes care of user authentication and overlays itself then with the desired version of the <i><a href="/docs/linux/man/1-proofserv/">proofserv</a></i>(1) executable. </p>
 <p> interactive module <i><a href="/docs/linux/man/1-root/">root</a></i>(1), except that it reads its commands from a socket instead of from the terminal. </p>

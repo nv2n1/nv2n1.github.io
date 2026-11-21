@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtopj(1)"
 name: "ppmtopj"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtopj/"
 description: "ppmtopj – convert a portable pixmap to an HP PaintJet file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtopj</code> [-gamma <i>val</i>] [<code>-xpos</code> <i>val</i>] [<code>-ypos</code> <i>val</i>] [<code>-back</code> <code>dark</code>|<code>lite</code>] [<code>-rle</code>] [<code>-center</code>] [<code>-render</code> <code>none|snap|bw|dither|diffuse|monodither|monodiffuse|clusterdither|monoclusterdither</code>] [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input and converts it into a format suitable to be printed by an HP PaintJet printer. </p>
 <p> For best results, the input file should be in 8-color RGB form; i.e. it should have only the 8 binary combinations of full-on and full-off primaries. You could get this by sending the input file through <i>ppmquant -map</i> with a map file such as: </p>
 <pre>

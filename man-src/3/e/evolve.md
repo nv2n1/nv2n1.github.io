@@ -1,4 +1,5 @@
 ---
+
 title: "evolve(3)"
 name: "evolve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-evolve/"
 description: "QuantLib::ExtendedBlackScholesMertonProcess – experimental Black-Scholes-Merton stochastic process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/processes/extendedblackscholesprocess.hpp&gt; </p>
 <p> Inherits <code>QuantLib::GeneralizedBlackScholesProcess</code>. </p>
 <h3>Public Types</h3>

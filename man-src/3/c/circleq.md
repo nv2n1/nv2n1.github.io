@@ -1,4 +1,5 @@
 ---
+
 title: "circleq(3)"
 name: "circleq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-circleq/"
 description: "CIRCLEQ_EMPTY, CIRCLEQ_ENTRY, CIRCLEQ_FIRST, CIRCLEQ_FOREACH, CIRCLEQ_FOREACH_REVERSE, CIRCLEQ_HEAD, CIRCLEQ_HEAD_INITIALIZER, CIRCLEQ_INIT, CIRCLEQ_INSERT_AFTER, CIRCLEQ_INSERT_BEFORE, CIRCLEQ_INS..."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/queue.h&gt;
 int CIRCLEQ_EMPTY(CIRCLEQ_HEAD *head);
@@ -38,7 +38,6 @@ struct TYPE *CIRCLEQ_PREV(struct TYPE *elm, CIRCLEQ_ENTRY NAME);
 void CIRCLEQ_REMOVE(CIRCLEQ_HEAD *head, struct TYPE *elm,
                     CIRCLEQ_ENTRY NAME);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These macros define and operate on doubly linked circular queues. </p>
 <p> In the macro definitions, <i>TYPE</i> is the name of a user-defined structure, that must contain a field of type <i>CIRCLEQ_ENTRY</i>, named <i>NAME</i>. The argument <i>HEADNAME</i> is the name of a user-defined structure that must be declared using the macro <code>CIRCLEQ_HEAD</code>(). </p>
 <p> A circular queue is headed by a structure defined by the <code>CIRCLEQ_HEAD</code>() macro. This structure contains a pair of pointers, one to the first element in the circular queue and the other to the last element in the circular queue. The elements are doubly linked so that an arbitrary element can be removed without traversing the circular queue. New elements can be added to the circular queue after an existing element, before an existing element, at the head of the circular queue, or at the end of the circular queue. A <i>CIRCLEQ_HEAD</i> structure is declared as follows: </p>

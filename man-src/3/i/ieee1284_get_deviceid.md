@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_get_deviceid(3)"
 name: "ieee1284_get_deviceid"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ieee1284_get_deviceid/"
 description: "ieee1284_get_deviceid – retrieve an IEEE 1284 Device ID"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>ssize_t ieee1284_get_deviceid(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>daisy</i><code>, int&nbsp;<wbr></code><i>flags</i><code>, char&nbsp;<wbr>*</code><i>buffer</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This function is for retrieving the IEEE 1284 Device ID of the specified device. The device is specified by the <i>port</i> to which it is attached, and optionally an address (<i>daisy</i>) on the daisy chain of devices on that port. </dd>
 <p> <i>daisy</i> should be -1 to indicate that the device is not participating in a IEEE 1284.3 daisy chain, meaning it is the last (or only) device on the port, or should be a number from 0 to 3 inclusive to indicate that it has the specified daisy chain address (0 is next to the port). </p>
 <p> The <i>flags</i> parameter should be a bitwise union of any flags that the program wants to use. Available flags are: </p>

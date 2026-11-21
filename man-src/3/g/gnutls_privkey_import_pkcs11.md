@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_privkey_import_pkcs11(3)"
 name: "gnutls_privkey_import_pkcs11"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_privkey_import_pkcs11 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_import_pkcs11 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_import_pkcs11(gnutls_privkey_t </code><i>pkey</i><code>, gnutls_pkcs11_privkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_privkey_import_pkcs11 – API function"
 <dd> The private key to be imported</dd>
 <dt>unsigned int flags</dt>
 <dd> Flags for the import</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will import the given private key to the abstract <code>gnutls_privkey_t</code> structure. </p>
 <p> The <code>gnutls_pkcs11_privkey_t</code> object must not be deallocated during the lifetime of this structure. </p>
 <p>&nbsp;<wbr><i>flags</i>&nbsp;<wbr>might be zero or one of&nbsp;<wbr><code>GNUTLS_PRIVKEY_IMPORT_AUTO_RELEASE</code> and <code>GNUTLS_PRIVKEY_IMPORT_COPY</code>.</p>

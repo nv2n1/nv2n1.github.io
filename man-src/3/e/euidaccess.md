@@ -1,4 +1,5 @@
 ---
+
 title: "euidaccess(3)"
 name: "euidaccess"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-euidaccess/"
 description: "euidaccess, eaccess – check effective user’s permissions for a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;unistd.h&gt;
 int euidaccess(const char *pathname, int mode);
 int eaccess(const char *pathname, int mode);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Like <code><a href="/docs/linux/man/2-access/">access</a></code>(2), <code>euidaccess</code>() checks permissions and existence of the file identified by its argument <i>pathname</i>. However, whereas <code><a href="/docs/linux/man/2-access/">access</a></code>(2) performs checks using the real user and group identifiers of the process, <code>euidaccess</code>() uses the effective identifiers. </p>
 <p> <i>mode</i> is a mask consisting of one or more of <code>R_OK</code>, <code>W_OK</code>, <code>X_OK</code>, and <code>F_OK</code>, with the same meanings as for <code><a href="/docs/linux/man/2-access/">access</a></code>(2). </p>
 <p> <code>eaccess</code>() is a synonym for <code>euidaccess</code>(), provided for compatibility with some other systems.</p>

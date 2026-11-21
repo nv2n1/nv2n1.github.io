@@ -1,4 +1,5 @@
 ---
+
 title: "ldap-agent(1)"
 name: "ldap-agent"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ldap-agent/"
 description: "ldap-agent – SNMP agent for Directory Server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ldap-agent</code> [<i>-D</i>]<i>&lt;configuration-file&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> ldap-agent is an SNMP subagent for Directory Server </p>
 <h2>OPTIONS</h2>
 <dl>

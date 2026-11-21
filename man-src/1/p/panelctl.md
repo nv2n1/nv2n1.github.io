@@ -1,4 +1,5 @@
 ---
+
 title: "panelctl(1)"
 name: "panelctl"
 section: "1"
@@ -9,9 +10,7 @@ description: "panelctl – manual page for panelctl (libavc1394) 0.1"
 
 <h2>NAME</h2>
 <p> panelctl &#8211; manual page for panelctl (libavc1394) 0.1</p>
-<h2>SYNOPSIS</h2>
 <p> <code>panelctl</code> [<i>OPTION</i>] <i>&lt;channel|command&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>panelctl</code> is a command line tool to send control commands via an IEEE1394 link to an AV/C Panel such as the Motorola Digital Consumer Terminal (DCT) series. Or for the non-techies: <code>panelctl</code> lets you remote control your digital cable box via a Firewire cable.</p>
 <h2>OPTIONS</h2>
 <dl>

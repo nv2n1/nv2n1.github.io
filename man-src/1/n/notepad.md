@@ -1,4 +1,5 @@
 ---
+
 title: "notepad(1)"
 name: "notepad"
 section: "1"
@@ -9,9 +10,7 @@ description: "notepad – Wine text editor"
 
 <h2>NAME</h2>
 <p> notepad &#8211; Wine text editor</p>
-<h2>SYNOPSIS</h2>
 <p> <code>notepad</code> [<i>text file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>notepad</code> is the Wine text editor, designed to be compatible with its Microsoft Windows counterpart. It supports ANSI, UTF-8 and UTF-16 files, and can read (but not write) files with Unix line endings.</p>
 <h2>BUGS</h2>
 <p> Bugs can be reported on the <code>Wine bug tracker</code></p>

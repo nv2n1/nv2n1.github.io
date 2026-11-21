@@ -1,4 +1,5 @@
 ---
+
 title: "dgbsv(3)"
 name: "dgbsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbsv/"
 description: "dgbsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbsv</code> (N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br />
  <i></i><code> DGBSV computes the solution to system of linear equations A * X = B for GB matrices</code> (simple driver)</p>

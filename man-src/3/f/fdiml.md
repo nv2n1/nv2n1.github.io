@@ -1,4 +1,5 @@
 ---
+
 title: "fdiml(3)"
 name: "fdiml"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdiml/"
 description: "fdim, fdimf, fdiml – positive difference"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double fdim(double </code><i>x</i><code>, double </code><i>y</i><code>);</code><br />
  <code>float fdimf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code><br />
@@ -18,7 +18,6 @@ description: "fdim, fdimf, fdiml – positive difference"
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return the positive difference, max(<i>x</i>&#8211;<i>y</i>,0), between their arguments.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the positive difference. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_context_get_default(3)"
 name: "bson_context_get_default"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_context_get_default() – None"
 
 <h2>NAME</h2>
 <p> bson_context_get_default() &#8211; None</p>
-<h2>SYNOPSIS</h2>
 <pre>
 bson_context_t *
 bson_context_get_default (void) BSON_GNUC_CONST;

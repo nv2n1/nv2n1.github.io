@@ -1,4 +1,5 @@
 ---
+
 title: "git-cherry(1)"
 name: "git-cherry"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-cherry/"
 description: "git-cherry – Find commits yet to be applied to upstream"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git cherry[-v][&lt;upstream&gt;[&lt;head&gt;[&lt;limit&gt;]]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Determine whether there are commits in <code>&lt;head&gt;..&lt;upstream&gt;</code> that are equivalent to those in the range <code>&lt;limit&gt;..&lt;head&gt;</code>. </p>
 <p> The equivalence test is based on the diff, after removing whitespace and line numbers. git-cherry therefore detects when commits have been &quot;copied&quot; by means of <code><a href="/docs/linux/man/1-git-cherry-pick/">git-cherry-pick</a></code>(1), <code><a href="/docs/linux/man/1-git-am/">git-am</a></code>(1) or <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1). </p>
 <p> Outputs the SHA1 of every commit in <code>&lt;limit&gt;..&lt;head&gt;</code>, prefixed with <code>&#8211;</code> for commits that have an equivalent in &lt;upstream&gt;, and <code>+</code> for commits that do not.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-cib2pcscmd(1)"
 name: "clufter-cib2pcscmd"
 section: "1"
@@ -9,9 +10,7 @@ description: "clufter – cib2pcscmd"
 
 <h2>NAME</h2>
 <p> clufter &#8211; cib2pcscmd</p>
-<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>cib2pcscmd </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> CIB -&gt; equivalent in pcs commands</p>
 <h2>OPTIONS</h2>
 <dl>

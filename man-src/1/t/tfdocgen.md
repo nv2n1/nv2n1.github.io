@@ -1,4 +1,5 @@
 ---
+
 title: "tfdocgen(1)"
 name: "tfdocgen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tfdocgen/"
 description: "tfdocgen – Tilp Framework Doc Generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tfdocgen</code> [<i>path</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tfdocgen</code> generates documentation for some components of the TiLP framework (libti*) from current folder or from a given top folder. Please note this is a crappy program! This program does not expect any arguments.</p>
 <h2>OPTIONS</h2>
 <p> <code>tfdocgen</code> accepts the following options:</p>

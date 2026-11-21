@@ -1,4 +1,5 @@
 ---
+
 title: "chetri(3)"
 name: "chetri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chetri/"
 description: "chetri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
  <i></i><code>CHETRI</code></p>

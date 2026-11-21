@@ -1,4 +1,5 @@
 ---
+
 title: "funimage(1)"
 name: "funimage"
 section: "1"
@@ -9,7 +10,6 @@ description: "funimage – create a FITS image from a Funtools data file"
 
 <h2>NAME</h2>
 <p> <code>funimage &#8211; create a FITS image from a Funtools data file</code></p>
-<h2>SYNOPSIS</h2>
 <p> funimage [-a] &lt;iname&gt; &lt;oname&gt; [bitpix=n] funimage [-l] &lt;iname&gt; &lt;oname&gt; &lt;xcol:xdims&gt; &lt;ycol:ydims&gt; &lt;vcol&gt; [bitpix=n] funimage [-p x|y] &lt;iname&gt; &lt;oname&gt; [bitpix=n]</p>
 <h2>OPTIONS</h2>
 <pre>
@@ -17,7 +17,6 @@ description: "funimage – create a FITS image from a Funtools data file"
   -l       # input is a list file containing xcol, ycol, value
   -p [x|y] # project along x or y axis to create a 1D image
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>funimage</code> creates a primary <font SIZE="-1">FITS</font> image from the specified <font SIZE="-1">FITS</font> Extension and/or Image Section of a <font SIZE="-1">FITS</font> file, or from an Image Section of a non-FITS array, or from a raw event file. </p>
 <p> The first argument to the program specifies the <font SIZE="-1">FITS</font> input image, array, or raw event file to process. If &#8220;stdin&#8221; is specified, data are read from the standard input. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions, image sections, and filters. The second argument is the output <font SIZE="-1">FITS</font> file. If &#8220;stdout&#8221; is specified, the <font SIZE="-1">FITS</font> image is written to the standard output. By default, the output pixel values are of the same data type as those of the input file (or type &#8220;int&#8221; when binning a table), but this can be overridden using an optional third argument of the form: </p>
 <pre>

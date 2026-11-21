@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_document_begin(3)"
 name: "bson_append_document_begin"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_document_begin() – The bson_append_document_begin() 
 
 <h2>NAME</h2>
 <p> bson_append_document_begin() &#8211; The bson_append_document_begin() function shall begin appending a sub-document to bson. Use child to add fields to the sub-document. When completed, call bson_append_document_end() to complete the element.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_document_begin(bson_t *bson,
                                 const char *key,
@@ -29,7 +29,6 @@ bool bson_append_document_begin(bson_t *bson,
 <dl>
 <dt><code>child</code></dt>
 <dd> An uninitialized <code>bson_t</code> to be initialized as the sub-document.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_document_begin/">bson_append_document_begin</a>(3)</code> function shall begin appending a sub-document to <code>bson</code> \&amp;. Use <code>child</code> to add fields to the sub-document. When completed, call <code><a href="/docs/linux/man/3-bson_append_document_end/">bson_append_document_end</a>(3)</code> to complete the element. </p>
 <p> <code>child</code> </p>
 <p> <code>MUST</code> be an uninitialized <code>bson_t</code> to avoid leaking memory. </p>

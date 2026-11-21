@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-security-send(1)"
 name: "nvme-security-send"
 section: "1"
@@ -6,16 +7,9 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-security-send/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-security-send - Security Send command 
 
- nvme-security-send - Security Send command 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme security - send[&lt;device&gt;][--file = &lt;file&gt; | -f&lt;file&gt;]
                     [--secp = &lt;security - protocol&gt; | -p&lt;security - protocol&gt;]
                     [--spsp = &lt;protocol - specific&gt; | -s&lt;protocol - specific&gt;]
@@ -24,11 +18,7 @@ nvme security - send[&lt;device&gt;][--file = &lt;file&gt; | -f&lt;file&gt;]
                     [--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The Security Send command is used to transfer security protocol data to the controller. The data structure transferred to the controller as part of this command contains security protocol specific commands to be performed by the controller. The data structure transferred may also contain data or parameters associated with the security protocol commands. Status and data that is to be returned to the host for the security protocol commands submitted by a Security Send command are retrieved with the Security Receive command. 
+The Security Send command is used to transfer security protocol data to the controller. The data structure transferred to the controller as part of this command contains security protocol specific commands to be performed by the controller. The data structure transferred may also contain data or parameters associated with the security protocol commands. Status and data that is to be returned to the host for the security protocol commands submitted by a Security Send command are retrieved with the Security Receive command. 
 
  The association between a Security Send command and subsequent Security Receive command is Security Protocol field dependent as defined in SPC-4.
 

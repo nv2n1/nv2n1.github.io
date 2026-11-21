@@ -1,4 +1,5 @@
 ---
+
 title: "inetutils-hostname(1)"
 name: "inetutils-hostname"
 section: "1"
@@ -8,11 +9,8 @@ description: "hostname – show or set the system host name"
 ---
 
 <p>GNU Network Utilities</p>
-<h2 class="name">NAME</h2>
 <p> <code>hostname</code> &#8211; show or set the system host name </p>
-<h2>SYNOPSIS</h2>
 <p> <code>hostname</code> [<i>option &#8230;</i> ] [<i>name</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> Show the system&#8217;s host name, or set it if <i>name</i> is specified.</p>
 <h2>OPTIONS</h2>
 <dl>

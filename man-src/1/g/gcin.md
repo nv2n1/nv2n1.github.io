@@ -1,4 +1,5 @@
 ---
+
 title: "gcin(1)"
 name: "gcin"
 section: "1"
@@ -9,9 +10,7 @@ description: "gcin – an input method server"
 
 <h2>NAME</h2>
 <p> gcin &#8211; an input method server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gcin</code> <code>[-h</code>|<code>-v</code>|<code>&#8211;version</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gcin</code> is an input method(IM) server, which focused mainly on Traditional Chinese. It is also very useful for Simplified Chinese, Japanese, and many other languages. IM table format of gcin is almost as same as those of scim and xcin. Users may append their IMs to gcin very easily. The &quot;g&quot; of gcin means that it features a better GTK+ user interface. </p>
 <p> If you are looking for configuration tool of gcin, please see the manpage of <code>gcin-setup</code>.</p>
 <h2>OPTIONS</h2>

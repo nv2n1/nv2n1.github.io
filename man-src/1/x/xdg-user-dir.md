@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-user-dir(1)"
 name: "xdg-user-dir"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xdg-user-dir/"
 description: "xdg-user-dir – Find an XDG user dir"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-user-dir</code> [NAME]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>xdg-user-dir</code></p>
 <dd>looks up the current path for one of the special XDG user dirs. </dd>
 <p> This command expects the name of an XDG user dir as argument. The possible names are:</p>

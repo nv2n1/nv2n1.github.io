@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_global_set_log_level(3)"
 name: "gnutls_global_set_log_level"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_global_set_log_level – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_set_log_level &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_global_set_log_level(int </code><i>level</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int level</dt>
 <dd> it&#8217;s an integer from 0 to 99.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This is the function that allows you to set the log level. The level is an integer between 0 and 9. Higher values mean more verbosity. The default value is 0. Larger values should only be used with care, since they may reveal sensitive information. </p>
 <p> Use a log level over 10 to enable all debugging options.</p>
 <h2>REPORTING BUGS</h2>

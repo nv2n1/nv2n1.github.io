@@ -1,4 +1,5 @@
 ---
+
 title: "fixwfwps(1)"
 name: "fixwfwps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fixwfwps/"
 description: "fixwfwps – filter to fix Word for Windows documents so PSUtils work"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fixwfwps </code> &lt; <i>WordforWindows.ps</i> &gt; <i>Fixed.ps</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Fixwfwps</i> is a <i>perl </i> filter which &quot;fixes&quot; PostScript from Word for Windows so that it works correctly with Angus Duggan&#8217;s <code>psutils</code> package.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) Angus J. C. Duggan 1991-1995</p>

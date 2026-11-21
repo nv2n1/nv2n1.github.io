@@ -1,4 +1,5 @@
 ---
+
 title: "libspectrum(3)"
 name: "libspectrum"
 section: "3"
@@ -6,14 +7,9 @@ letter: "l"
 url: "/docs/linux/man/3-libspectrum/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+libspectrum - Sinclair ZX Spectrum support library 
 
- libspectrum - Sinclair ZX Spectrum support library 
-
-<h2>DESCRIPTION</h2>
-
- <i>libspectrum</i> is a library for reading and writing some of the file formats used by emulators of the Sinclair ZX Spectrum. It also contains routines providing information about the various Spectrum clones which were available. 
+<i>libspectrum</i> is a library for reading and writing some of the file formats used by emulators of the Sinclair ZX Spectrum. It also contains routines providing information about the various Spectrum clones which were available. 
 
  The file formats currently supported by <i>libspectrum</i> are:
 <dl>

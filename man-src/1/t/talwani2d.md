@@ -1,4 +1,5 @@
 ---
+
 title: "talwani2d(1)"
 name: "talwani2d"
 section: "1"
@@ -9,10 +10,8 @@ description: "talwani2d – Compute free-air, geoid or vertical gravity gradient
 
 <h2>NAME</h2>
 <p> talwani2d &#8211; Compute free-air, geoid or vertical gravity gradients anomalies over 2-D bodies</p>
-<h2>SYNOPSIS</h2>
 <p> <code>talwani2d</code> [ <i>modeltable</i> ] [ ] [ <i>rho</i> ] ] [ <code>f</code>|<code>n</code>|<code>v</code> ] [ [<code>h</code>][<code>v</code>] ] [ <i>trackfile</i> ] [ <i>min</i><i>max</i>/<i>inc</i> ] [ <i>level</i>[<i>ymin</i>/<i>ymax</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>talwani2d</code> will read the multi-segment <i>modeltable</i> from file or standard input. This file contains cross-sections of one or more 2-D bodies, with one polygon per segment. The segment header must contain the parameter <i>rho</i>, which states the the density of this body (individual body densities may be overridden by a fixed constant density contrast given via <code>-D</code>). We can compute anomalies on an equidistant lattice (by specifying a lattice with <code>-T</code>) or provide arbitrary output points specified in a file via <code>-N</code>. Choose between free-air anomalies, vertical gravity gradient anomalies, or geoid anomalies. Options are available to control axes units and direction.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

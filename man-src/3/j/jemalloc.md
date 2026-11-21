@@ -1,4 +1,5 @@
 ---
+
 title: "jemalloc(3)"
 name: "jemalloc"
 section: "3"
@@ -9,7 +10,6 @@ description: "jemalloc – general purpose memory allocation functions"
 
 <h2>LIBRARY</h2>
 <p> This manual describes jemalloc 3.6.0-0-g46c0af68bd248b04df75e4f92d5fb804c3d75340. More information can be found at the m[blue]<code>jemalloc website</code>m[]<font SIZE="-2">[1]</font>.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;jemalloc/jemalloc.h&gt;
 #include &lt;stdlib.h&gt;
@@ -44,7 +44,6 @@ description: "jemalloc – general purpose memory allocation functions"
 <dt> <code>int sallocm(const void&nbsp;<wbr>*</code><i>ptr</i><code>, size_t&nbsp;<wbr>*</code><i>rsize</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code></dt>
 <dt> <code>int dallocm(void&nbsp;<wbr>*</code><i>ptr</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code></dt>
 <dt> <code>int nallocm(size_t&nbsp;<wbr>*</code><i>rsize</i><code>, size_t&nbsp;<wbr></code><i>size</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <h3>Standard API</h3>
 <dd>The <code>malloc</code> function allocates <i>size</i> bytes of uninitialized memory. The allocated space is suitably aligned (after possible pointer coercion) for storage of any type of object. </dd>
 <p> The <code>calloc</code> function allocates space for <i>number</i> objects, each <i>size</i> bytes in length. The result is identical to calling <code>malloc</code> with an argument of <i>number</i> * <i>size</i>, with the exception that the allocated memory is explicitly initialized to zero bytes. </p>

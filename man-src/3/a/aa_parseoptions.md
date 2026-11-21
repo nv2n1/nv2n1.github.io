@@ -1,4 +1,5 @@
 ---
+
 title: "aa_parseoptions(3)"
 name: "aa_parseoptions"
 section: "3"
@@ -9,7 +10,6 @@ description: "aa_parseoptions – parse the standard command line options used b
 
 <h2>NAME</h2>
 <p> aa_parseoptions &#8211; parse the standard command line options used by AA-lib.</p>
-<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_parseoptions<br />
  (<br />
@@ -28,7 +28,6 @@ description: "aa_parseoptions – parse the standard command line options used b
 <dd> Pointer to argc parameter passed to function &quot;main&quot;.</dd>
 <dt><code>char **argv</code></dt>
 <dd> Pointer to argv parameter passed to function &quot;main&quot;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Use this function to parse the standard command line options used by AA-lib. Every AA-lib program ought to call this function to let user specify some extra parameters. The function alters the aa_hardware_params and aa_renderparams structures and removes known options from the argc/argv lists. It also parse the AAOPTS environment variable. When called with NULL for the argc/argv parameters, it parses AAOPTS only. At least this call ought to be in every AA-lib program.</p>
 <h2>RETURNS</h2>
 <p> 1 when sucesfull and 0 on failure. The program then can print the help text available in aa_help variable.</p>

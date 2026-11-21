@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_pool(3)"
 name: "dmlite_pool"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_pool –"
 ---
 
 <p> Pool data.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;pool.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char <code>pool_type</code> [<code>POOL_TYPE_MAX</code>] </p>

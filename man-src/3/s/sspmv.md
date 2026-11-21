@@ -1,4 +1,5 @@
 ---
+
 title: "sspmv(3)"
 name: "sspmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspmv/"
 description: "sspmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspmv</code> (UPLO, N, ALPHA, AP, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>SSPMV</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xgc(1)"
 name: "xgc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xgc/"
 description: "xgc – X graphics demo"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xgc</code> [-<i>toolkitoption</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xgc</i> program demonstrates various features of the X graphics primitives. In X, most of the details about the graphics to be generated are stored in a resource called a graphics context (GC). The <code>xgc</code> program provides a user interface for setting various GC components. Pressing the &quot;Run&quot; button causes these results to be displayed in the large drawing window on the right. Timing information is displayed in the window immediately below. </p>
 <p> The items in the upper left hand window work as follows: </p>
 <p> <i>Function</i> &#8211; specify the logical function with which primitives will drawn. The most usual setting is &quot;set&quot;, i.e. simply to render pixels without regard to what has been drawn before. </p>

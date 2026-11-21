@@ -1,4 +1,5 @@
 ---
+
 title: "scantv(1)"
 name: "scantv"
 section: "1"
@@ -9,9 +10,7 @@ description: "scantv – scan a v4l device for TV stations."
 
 <h2>NAME</h2>
 <p> scantv &#8211; scan a v4l device for TV stations.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>scantv [ options ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>scantv</code> scans a v4l device for available TV stations and writes a xawtv/fbtv config file.</p>
 <h2>OPTIONS</h2>
 <dl>

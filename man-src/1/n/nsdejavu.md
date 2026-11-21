@@ -1,4 +1,5 @@
 ---
+
 title: "nsdejavu(1)"
 name: "nsdejavu"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-nsdejavu/"
 description: "nsdejavu – DjVu browser plugin"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>/usr/lib/mozilla/plugins/nsdejavu.so</code> or<br />
  <code>/usr/lib64/mozilla/plugins/nsdejavu.so</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The shared library <code>nsdejavu.so</code> uses the Netscape browser plugin <font SIZE="-1">API</font> to display DjVu images in in a number of popular web browsers. Different web browsers provide various level of support for Netscape plugins. Please check section &quot;Browser Compatibility&quot; for instructions on how to enable the DjVu browser plugin. </p>
 <p> The DjVuLibre browser plugin works by invoking a standalone viewer with the special command line option <code>-netscape</code>. The plugin first searches a program named <code>djview</code>. If this program cannot be found, it searches for <code>djview4</code> and finally <code>djview3.</code> It is always possible to override this search strategy by setting the environment variable <code>NPX_DJVIEW</code> to the full path of the desired executable. </p>
 <h2>MIME TYPES AND EXTENSIONS</h2>

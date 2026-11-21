@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-todo(1)"
 name: "pilot-install-todo"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-install-todo – Updates the Palm ToDo list with one new ent
 <p> pilot-install-todo &#8211; Updates the Palm ToDo list with one new entry.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-todo</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-P</code>|<code>&#8211;priority</code>&nbsp;<wbr>[<code>1|2|3|4|5</code>]]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;due</code>&nbsp;<wbr>&nbsp;<wbr><code>mm/dd/yyyy</code>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;completed</code>]&nbsp;<wbr>[<code>-D</code>|<code>&#8211;description</code>&nbsp;<wbr>[<code>title</code>]]&nbsp;<wbr>[<code>-n</code>|<code>&#8211;note</code>&nbsp;<wbr>&nbsp;<wbr><code>note</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file</code>&nbsp;<wbr>&nbsp;<wbr><i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-todo</i>&nbsp;<wbr>allows the user to install one new ToDo list entry with specified paramters passed to&nbsp;<wbr><i>pilot-install-todo</i>&nbsp;<wbr>and add a Note entry using text found in a filename&nbsp;<wbr>&lt;<i>filename</i>&gt;&nbsp;<wbr>passed to&nbsp;<wbr><i>pilot-install-todo</i>. </p>
 <h2>OPTIONS</h2>
 <h3>pilot-install-todo options</h3>

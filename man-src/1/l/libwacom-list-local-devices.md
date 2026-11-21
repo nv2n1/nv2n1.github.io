@@ -1,4 +1,5 @@
 ---
+
 title: "libwacom-list-local-devices(1)"
 name: "libwacom-list-local-devices"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-libwacom-list-local-devices/"
 description: "libwacom-list-local-devices – utility to list tablet devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>libwacom-list-local-devices [&#8211;format=oneline|datafile] [&#8211;database /path/to/datadir]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> libwacom-list-local-devices is a debug utility to list connected tablet devices identified by libwacom. It is usually used to check whether a libwacom data file is correct, present and/or applies to a specific device.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "slasq6(3)"
 name: "slasq6"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasq6/"
 description: "slasq6.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasq6</code> (I0, N0, Z, PP, DMIN, DMIN1, DMIN2, DN, DNM1, DNM2)<br />
  <i></i><code>SLASQ6</code> computes one dqd transform in ping-pong form. Used by sbdsqr and sstegr.</p>

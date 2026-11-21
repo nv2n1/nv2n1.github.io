@@ -1,4 +1,5 @@
 ---
+
 title: "globus-job-run(1)"
 name: "globus-job-run"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-globus-job-run/"
 description: "globus-job-run – Execute a job using GRAM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>globus-job-run</code> [-dumprsl|-dryrun|-verify] [-file ARGUMENT_FILE] <i>SERVICE-CONTACT</i> [OPTIONS] <i>EXECUTABLE</i> <i>ARGUMENT&#8230;</i> </p>
 <p> <code>globus-job-run</code> [-help | -usage | -version | -versions]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>globus-job-run</code> program constructs a job description from its command-line options and then submits the job to the GRAM service running at <i>SERVICE_CONTACT</i>. The executable and arguments to the executable are provided on the command-line after all other options. Note that the <i>-dumprsl</i>, <i>-dryrun</i>, <i>-verify</i>, and <i>-file</i> command-line options must occur before the first non-option argument, the <i>SERVICE_CONTACT</i>. </p>
 <p> The <code>globus-job-run</code> provides similar functionality to <code>globusrun</code> in that it allows interactive start-up of GRAM jobs. However, unlike <code>globusrun</code>, it uses command-line parameters to define the job instead of RSL expressions.</p>
 <h2>OPTIONS</h2>

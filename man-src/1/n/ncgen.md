@@ -1,4 +1,5 @@
 ---
+
 title: "ncgen(1)"
 name: "ncgen"
 section: "1"
@@ -9,11 +10,9 @@ description: "ncgen – From a CDL file generate a netCDF-3 file, a netCDF-4 fil
 
 <h2>NAME</h2>
 <p> ncgen &#8211; From a CDL file generate a netCDF-3 file, a netCDF-4 file or a C program</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>ncgen [-b] [-c] [-f] [-k <i>format_name</i>] [-<i>format_code</i>] [-l <i>output language</i>] [-n] [-o <i>netcdf_filename</i>] [-x] [<i>input_file</i>]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ncgen</code> generates either a netCDF-3 (i.e. classic) binary .nc file, a netCDF-4 (i.e. enhanced) binary .nc file or a file in some source language that when executed will construct the corresponding binary .nc file. The input to <code>ncgen</code> is a description of a netCDF file in a small language known as CDL (network Common Data form Language), described below. Input is read from standard input if no input_file is specified. If no options are specified in invoking <code>ncgen</code>, it merely checks the syntax of the input CDL file, producing error messages for any violations of CDL syntax. Other options can be used, for example, to create the corresponding netCDF file, or to generate a C program that uses the netCDF C interface to create the netCDF file. </p>
 <p> Note that this version of ncgen was originally called ncgen4. The older ncgen program has been renamed to ncgen3. </p>
 <p> <code>ncgen</code> may be used with the companion program <code>ncdump</code> to perform some simple operations on netCDF files. For example, to rename a dimension in a netCDF file, use <code>ncdump</code> to get a CDL version of the netCDF file, edit the CDL file to change the name of the dimensions, and use <code>ncgen</code> to generate the corresponding netCDF file from the edited CDL file.</p>

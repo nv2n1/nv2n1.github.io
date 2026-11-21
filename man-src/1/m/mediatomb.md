@@ -1,4 +1,5 @@
 ---
+
 title: "mediatomb(1)"
 name: "mediatomb"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mediatomb/"
 description: "mediatomb – UPnP MediaServer"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mediatomb</code> [<code>-i&nbsp;<wbr></code><i>IP address</i><code>&nbsp;<wbr></code>] [<code>-e&nbsp;<wbr></code><i>interface</i><code>&nbsp;<wbr></code>] [<code>-p&nbsp;<wbr></code><i>port</i><code>&nbsp;<wbr></code>] [<code>-c&nbsp;<wbr></code><i>config file</i><code>&nbsp;<wbr></code>] [<code>-d</code>] [<code>-m&nbsp;<wbr></code><i>home dir</i><code>&nbsp;<wbr></code>] [<code>-f&nbsp;<wbr></code><i>config dir</i><code>&nbsp;<wbr></code>] [<code>-P&nbsp;<wbr></code><i>PID file</i><code>&nbsp;<wbr></code>] [<code>-u&nbsp;<wbr></code><i>user</i><code>&nbsp;<wbr></code>] [<code>-g&nbsp;<wbr></code><i>group</i><code>&nbsp;<wbr></code>] [<code>-a&nbsp;<wbr></code><i>path</i><code>&nbsp;<wbr></code>] [<code>-l&nbsp;<wbr></code><i>logfile</i><code>&nbsp;<wbr></code>] [<code>-D</code>] [<code>&#8211;compile-info</code>] [<code>&#8211;version</code>] [<code>-h</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page describes the command line parameters for MediaTomb. For a detailed documentation please see the README file which is distributed with MediaTomb or visit <a rel="nofollow" href="http://mediatomb.cc/.">http://mediatomb.cc/.</a></dd>
 <h2>OPTIONS</h2>
 <p> <code>-i</code>, <code>&#8211;ip</code></p>

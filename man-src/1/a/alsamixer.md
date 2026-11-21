@@ -1,4 +1,5 @@
 ---
+
 title: "alsamixer(1)"
 name: "alsamixer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-alsamixer/"
 description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncurses interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>alsamixer</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>alsamixer</code> is an ncurses mixer program for use with the ALSA soundcard drivers. It supports multiple soundcards with multiple devices. </p>
 <h2>OPTIONS</h2>
 <dl>

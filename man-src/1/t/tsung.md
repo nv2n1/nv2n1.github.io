@@ -1,4 +1,5 @@
 ---
+
 title: "tsung(1)"
 name: "tsung"
 section: "1"
@@ -9,9 +10,7 @@ description: "tsung – A distributed multi-protocol load testing tool."
 
 <h2>NAME</h2>
 <p> tsung &#8211; A distributed multi-protocol load testing tool.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tsung</code> [ <code>-f configuration file</code> ] [ <code>-l log dir</code> ] [ <code>-m filename</code> ] [ <code>-r command</code> ] [ <code>-X directory</code> ] [ <code>-w delay</code> ] [ <code>-L lifetime</code> ] [ <code>-s</code> ] [ <code>-n</code> ] [ <code>-k</code> ] [ <code>-v</code> ] [ <code>-6</code> ] [ <code>-h</code> ] [ <code>start|stop|debug|status</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tsung</code> is a distributed load testing tool. It is protocol-independent and can currently be used to stress and benchmark HTTP, WebDAV, LDAP, PostgreSQL, MySQL and Jabber/XMPP servers. </p>
 <p> It simulates user behaviour using an XML description file, reports many measurements in real time (statistics can be customized with transactions, and graphics generated using gnuplot). </p>
 <p> For HTTP, it supports 1.0 and 1.1, has a proxy mode to record sessions, supports GET and POST methods, Cookies, and Basic WWW-authentication. It also has support for SSL. </p>

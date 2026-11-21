@@ -1,4 +1,5 @@
 ---
+
 title: "virt-edit(1)"
 name: "virt-edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-edit/"
 description: "virt-edit – Edit a file in a virtual machine"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk.img[-a disk.img...] file[file...] virt - edit[-d domname | -a disk.img] file - e 'expr'
 </code></pre>
@@ -18,7 +18,6 @@ virt - edit[--options] - d domname file[file...] virt - edit[--options] - a disk
 </pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-edit&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-edit&quot;</tt> is a command line tool to edit <tt>&quot;file&quot;</tt> where each <tt>&quot;file&quot;</tt> exists in the named virtual machine (or disk image). </p>
 <p> Multiple filenames can be given, in which case they are each edited in turn. Each filename must be a full path, starting at the root directory (starting with &#8216;/&#8217;). </p>
 <p> If you want to just view a file, use <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1). </p>

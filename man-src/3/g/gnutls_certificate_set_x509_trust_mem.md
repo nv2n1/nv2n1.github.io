@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_x509_trust_mem(3)"
 name: "gnutls_certificate_set_x509_trust_mem"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_x509_trust_mem – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_trust_mem &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_trust_mem(gnutls_certificate_credentials_t </code><i>res</i><code>, const gnutls_datum_t * </code><i>ca</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_certificate_set_x509_trust_mem – API function"
 <dd> is a list of trusted CAs or a DER certificate</dd>
 <dt>gnutls_x509_crt_fmt_t type</dt>
 <dd> is DER or PEM</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function adds the trusted CAs in order to verify client or server certificates. In case of a client this is not required to be called if the certificates are not verified using <code>gnutls_certificate_verify_peers2()</code>. This function may be called multiple times. </p>
 <p> In case of a server the CAs set here will be sent to the client if a certificate request is sent. This can be disabled using <code>gnutls_certificate_send_x509_rdn_sequence()</code>.</p>
 <h2>RETURNS</h2>

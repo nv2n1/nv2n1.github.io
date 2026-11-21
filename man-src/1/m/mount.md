@@ -1,4 +1,5 @@
 ---
+
 title: "mount(1)"
 name: "mount"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mount/"
 description: "mount.ecryptfs_private – eCryptfs private mount helper."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mount.ecryptfs_private [ALIAS]</code> </p>
 <p> <code>NOTE:</code> This program will <code>not</code> dynamically load the relevant keys. For this reason, it is recommended that users use <code><a href="/docs/linux/man/1-ecryptfs-mount-private/">ecryptfs-mount-private</a></code>(1) instead! </p>
-<h2>DESCRIPTION</h2>
 <p> <code>mount.ecryptfs_private</code> is a mount helper utility for non-root users to cryptographically mount a private directory, ~/Private by default. </p>
 <p> This program optionally takes one argument, ALIAS. If ALIAS is omitted, the program will default to using &quot;Private&quot; using:<br />
 &nbsp;<wbr>&#8211;&nbsp;<wbr>$HOME/.Private as the SOURCE<br />

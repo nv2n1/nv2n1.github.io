@@ -1,4 +1,5 @@
 ---
+
 title: "firefox(1)"
 name: "firefox"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-firefox/"
 description: "firefox – a free and open source web browser from Mozilla"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>firefox</code> [<i>OPTIONS</i>] [<i>url</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> See <a rel="nofollow" href="http://support.mozilla.com/">http://support.mozilla.com/</a> for help using the browser. This manpage only describes how to run it. </p>
 <h2>OPTIONS</h2>
 <dl>

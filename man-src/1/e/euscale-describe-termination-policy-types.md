@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-termination-policy-types(1)"
 name: "euscale-describe-termination-policy-types"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-describe-termination-policy-types – List all termination
 
 <h2>NAME</h2>
 <p> euscale-describe-termination-policy-types &#8211; List all termination policies supported by the service</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-describe-termination-policy-types [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> List all termination policies supported by the service</p>
 <h3>optional arguments:</h3>
 <dl>

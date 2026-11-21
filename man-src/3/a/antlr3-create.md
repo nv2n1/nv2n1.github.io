@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-create(3)"
 name: "antlr3-create"
 section: "3"
@@ -8,7 +9,6 @@ description: "src/antlr3commontreeadaptor.c –"
 ---
 
 <p> This is the standard tree adaptor used by the C runtime unless the grammar source file says to use anything different.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreeadaptor.h">antlr3commontreeadaptor.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> ANTLR3_API <code>pANTLR3_BASE_TREE_ADAPTOR</code> <code>ANTLR3_TREE_ADAPTORDebugNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory, <code>pANTLR3_DEBUG_EVENT_LISTENER</code> debugger)<br />

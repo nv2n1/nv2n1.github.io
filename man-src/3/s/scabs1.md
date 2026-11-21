@@ -1,4 +1,5 @@
 ---
+
 title: "scabs1(3)"
 name: "scabs1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-scabs1/"
 description: "scabs1.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>scabs1</code> (Z)<br />
  <i></i><code>SCABS1</code></p>

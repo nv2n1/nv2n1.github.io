@@ -1,4 +1,5 @@
 ---
+
 title: "jpilot(1)"
 name: "jpilot"
 section: "1"
@@ -9,9 +10,7 @@ description: "jpilot – A palm pilot desktop for Linux/Unix"
 
 <h2>NAME</h2>
 <p> jpilot &#8211; A palm pilot desktop for Linux/Unix</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jpilot [-v] [-h] [-d] [-a] [-A] [-i] [-s]</code></p>
-<h2>DESCRIPTION</h2>
 <p> J-Pilot is a desktop organizer application for the palm pilot and other Palm OS devices. It is similar in functionality to the one that 3Com/Palm distributes.</p>
 <h2>OPTIONS</h2>
 <dl>

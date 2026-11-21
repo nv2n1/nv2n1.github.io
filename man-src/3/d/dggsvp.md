@@ -1,4 +1,5 @@
 ---
+
 title: "dggsvp(3)"
 name: "dggsvp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dggsvp/"
 description: "dggsvp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br />
  <i></i><code>DGGSVP</code></p>

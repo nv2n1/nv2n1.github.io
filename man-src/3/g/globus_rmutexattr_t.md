@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rmutexattr_t(3)"
 name: "globus_rmutexattr_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_thread_rmutex.h –"
 ---
 
 <p> Recursive Mutex.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_thread.h&#8217; </p>
 <h3>Data Structures</h3>

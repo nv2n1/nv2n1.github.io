@@ -1,4 +1,5 @@
 ---
+
 title: "kid3(1)"
 name: "kid3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kid3/"
 description: "kid3, kid3-qt, kid3-cli – Kid3 ID3 Tagger"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kid3</code> [<code>&#8211;help</code> | <code>&#8211;help-qt</code> | <code>&#8211;help-kde</code> | <code>&#8211;help-all</code></dt>
 <dd>

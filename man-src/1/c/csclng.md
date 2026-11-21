@@ -1,4 +1,5 @@
 ---
+
 title: "csclng(1)"
 name: "csclng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-csclng/"
 description: "csclng – a compiler wrapper that runs the Clang analyzer in background"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>csclng</code> [<i>&#8211;help</i> | <i>&#8211;print-path-to-wrap</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> csclng is a compiler wrapper that runs clang in background. Create a symbolic link to csclng named as your compiler (gcc, g++, &#8230;) and put it to your $PATH. </p>
 <p> The following parameters are given to clang by default: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_iter(3)"
 name: "bson_append_iter"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_iter() – TODO:"
 
 <h2>NAME</h2>
 <p> bson_append_iter() &#8211; TODO:</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_iter(bson_t *bson,
                       const char *key,
@@ -29,7 +29,6 @@ bool bson_append_iter(bson_t *bson,
 <dl>
 <dt><code>iter</code></dt>
 <dd> A bson_iter_t.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> TODO: </p>
 <h2>RETURNS</h2>
 <p> TODO: </p>

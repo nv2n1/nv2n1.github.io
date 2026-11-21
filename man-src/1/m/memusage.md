@@ -1,4 +1,5 @@
 ---
+
 title: "memusage(1)"
 name: "memusage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-memusage/"
 description: "memusage – profile memory usage of a program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>memusage</code> [<i>option</i>]&#8230; <i>program</i> [<i>programoption</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>memusage</code> is a bash script which profiles memory usage of the program, <i>program</i>. It preloads the <code>libmemusage.so</code> library into the caller&#8217;s environment (via the <code>LD_PRELOAD</code> environment variable; see <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)). The <code>libmemusage.so</code> library traces memory allocation by intercepting calls to <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code><a href="/docs/linux/man/3-calloc/">calloc</a></code>(3), <code><a href="/docs/linux/man/3-free/">free</a></code>(3), and <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3); optionally, calls to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-mremap/">mremap</a></code>(2), and <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2) can also be intercepted. </p>
 <p> <code>memusage</code> can output the collected data in textual form, or it can use <code><a href="/docs/linux/man/1-memusagestat/">memusagestat</a></code>(1) (see the <code>-p</code> option, below) to create a PNG file containing graphical representation of the collected data.</p>
 <h3>Memory usage summary</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-diff-files(1)"
 name: "git-diff-files"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-diff-files/"
 description: "git-diff-files – Compares files in the working tree and the index"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git diff - files[-q][-0 | -1 | -2 | -3 | -c | --cc][&lt;common diff options&gt;][&lt;path&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Compares the files in the working tree and the index. When paths are specified, compares only those named paths. Otherwise all entries in the index are compared. The output format is the same as for <i>git diff-index</i> and <i>git diff-tree</i>.</p>
 <h2>OPTIONS</h2>
 <p> -p, -u, &#8211;patch</p>

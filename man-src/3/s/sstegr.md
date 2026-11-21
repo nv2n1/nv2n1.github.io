@@ -1,4 +1,5 @@
 ---
+
 title: "sstegr(3)"
 name: "sstegr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sstegr/"
 description: "sstegr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>SSTEGR</code></p>

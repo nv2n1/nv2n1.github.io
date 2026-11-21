@@ -1,4 +1,5 @@
 ---
+
 title: "bin_dec_hex(1)"
 name: "bin_dec_hex"
 section: "1"
@@ -6,14 +7,9 @@ letter: "b"
 url: "/docs/linux/man/1-bin_dec_hex/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+bin_dec_hex - How to use binary, decimal, and hexadecimal notation. 
 
- bin_dec_hex - How to use binary, decimal, and hexadecimal notation. 
-
-<h2>DESCRIPTION</h2>
-
- Most people use the decimal numbering system. This system uses ten symbols to represent numbers. When those ten symbols are used up, they start all over again and increment the position to the left. The digit 0 is only shown if it is the only symbol in the sequence, or if it is not the first one. 
+Most people use the decimal numbering system. This system uses ten symbols to represent numbers. When those ten symbols are used up, they start all over again and increment the position to the left. The digit 0 is only shown if it is the only symbol in the sequence, or if it is not the first one. 
 
  If this sounds cryptic to you, this is what I've just said in numbers: 
 

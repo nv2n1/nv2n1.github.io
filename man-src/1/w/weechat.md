@@ -1,4 +1,5 @@
 ---
+
 title: "weechat(1)"
 name: "weechat"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-weechat/"
 description: "weechat – the extensible chat client"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 weechat[-a | --no - connect][-d | --dir&lt;path&gt;][-p | --no - plugin][-r | --run - command&lt;command&gt;][-s | --no - script][--upgrade] [plugin:option...] weechat[-c | --colors] weechat[-h | --help] weechat[-l | --license] weechat[-v | --version]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> WeeChat (Wee Enhanced Environment for Chat) is a free chat client, fast and light, designed for many operating systems. It is highly customizable and extensible with scripts.</p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;no-connect</code></p>

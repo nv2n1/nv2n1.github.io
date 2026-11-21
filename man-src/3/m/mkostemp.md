@@ -1,4 +1,5 @@
 ---
+
 title: "mkostemp(3)"
 name: "mkostemp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mkostemp/"
 description: "mkstemp, mkostemp, mkstemps, mkostemps – create a unique temporary file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int mkstemp(char *template);
@@ -27,7 +27,6 @@ int mkostemps(char *template, int suffixlen, int flags);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE<br />
  <code>mkostemps</code>(): _GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mkstemp</code>() function generates a unique temporary filename from <i>template</i>, creates and opens the file, and returns an open file descriptor for the file. </p>
 <p> The last six characters of <i>template</i> must be &quot;XXXXXX&quot; and these are replaced with a string that makes the filename unique. Since it will be modified, <i>template</i> must not be a string constant, but should be declared as a character array. </p>
 <p> The file is created with permissions 0600, that is, read plus write for owner only. The returned file descriptor provides both read and write access to the file. The file is opened with the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_EXCL</code> flag, guaranteeing that the caller is the process that creates the file. </p>

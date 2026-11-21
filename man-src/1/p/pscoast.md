@@ -1,4 +1,5 @@
 ---
+
 title: "pscoast(1)"
 name: "pscoast"
 section: "1"
@@ -9,10 +10,8 @@ description: "pscoast – Plot continents, shorelines, rivers, and borders on ma
 
 <h2>NAME</h2>
 <p> pscoast &#8211; Plot continents, shorelines, rivers, and borders on maps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pscoast</code> <i>parameters</i> <i>region</i> [ <i>area</i> ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<code>l</code>|<code>r</code>/]<i>fill</i> ] [ <i>resolution</i>[<code>+</code>] ] [ <i>dcw</i> ] [ <i>box</i> ] [ <i>fill</i>|<code>c</code> ] [ <i>river</i>[/<i>pen</i>] ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ <i>ruler</i> ] [ ] [ <i>border</i>[/<i>pen</i>] ] [ ] [ ] [ ] [ <i>fill</i>|<code>c</code> ] [ <i>rose</i> ] [ <i>mag_rose</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<i>level</i>/]<i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pscoast</code> plots grayshaded, colored, or textured land-masses [or water-masses] on maps and [optionally] draws coastlines, rivers, and political boundaries. Alternatively, it can (1) issue clip paths that will contain all land or all water areas, or (2) dump the data to an ASCII table. The data files come in 5 different resolutions: (<code>f</code>)ull, (<code>h</code>)igh, (<code>i</code>)ntermediate, (<code>l</code>)ow, and (<code>c</code>)rude. The full resolution files amount to more than 55 Mb of data and provide great detail; for maps of larger geographical extent it is more economical to use one of the other resolutions. If the user selects to paint the land-areas and does not specify fill of water-areas then the latter will be transparent (i.e., earlier graphics drawn in those areas will not be overwritten). Likewise, if the water-areas are painted and no land fill is set then the land-areas will be transparent. A map projection must be supplied. The PostScript code is written to standard output.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

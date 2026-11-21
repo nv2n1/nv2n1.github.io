@@ -1,4 +1,5 @@
 ---
+
 title: "xliff2odf(1)"
 name: "xliff2odf"
 section: "1"
@@ -9,9 +10,7 @@ description: "xliff2odf – Convert XLIFF translation files to OpenDocument (ODF
 
 <h2>NAME</h2>
 <p> xliff2odf &#8211; Convert XLIFF translation files to OpenDocument (ODF) files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xliff2odf </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-t|&#8211;template <i>TEMPLATE</i>] [-S|&#8211;timestamp]</p>
-<h2>DESCRIPTION</h2>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/odf2xliff.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/odf2xliff.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>

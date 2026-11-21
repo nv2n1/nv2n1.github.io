@@ -1,4 +1,5 @@
 ---
+
 title: "slarfgp(3)"
 name: "slarfgp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarfgp/"
 description: "slarfgp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarfgp</code> (N, ALPHA, X, INCX, TAU)<br />
  <i></i><code>SLARFGP</code> generates an elementary reflector (Householder matrix) with non-negatibe beta.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlauditadmin(1)"
 name: "mysqlauditadmin"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlauditadmin/"
 description: "mysqlauditadmin – Maintain the audit log"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlauditadmin [</code><i>OPTIONS</i><code>]&#8230; </code><code>mysqlauditadmin [</code><i>OPTIONS</i><code>]&#8230; [</code><i>COMMAND</i><code>]</code><code>mysqlauditadmin l=</code><i>user:pass [at] host:port</i><code> [</code><i>OPTIONS</i><code>]&#8230; [</code><i>COMMAND</i><code>[&#8211;value=</code><i>VALUE</i><code>]]</code><code>mysqlauditadmin &#8211;file-stats &#8211;audit-log-name=</code><i>FULL_PATH</i><code>mysqlauditadmin copy &#8211;audit-log-name=</code><i>FULL_PATH</i><code> &#8211;copy-to=</code><i>DESTINATION</i><code> [&#8211;remote-login=</code><i>user:host</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility allow you to maintain the m[blue]<code>audit log</code>m[]<font SIZE="-2">[1]</font>, allowing you to monitor the audit log file growth and control its rotation. Rotation refers to the action of replacing the current audit log file by a new one for continuous use, renaming (with a timestamp extension) and copying the previously used audit log file to a defined location. </dd>
 <p> This utility allows you to view and modify a subset of audit log control variables, display the audit log file status, perform on-demand rotation of the log file, and copy files to other locations. These features enable you to easily monitor the audit log file growth and control its rotation (automatically based on the defined file size threshold, or manually by a on-demand command). </p>
 <p> The available actions include the following: </p>

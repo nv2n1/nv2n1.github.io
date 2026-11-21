@@ -1,4 +1,5 @@
 ---
+
 title: "sla_geamv(3)"
 name: "sla_geamv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_geamv/"
 description: "sla_geamv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sla_geamv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>SLA_GEAMV</code> computes a matrix-vector product using a general matrix to calculate error bounds.</p>

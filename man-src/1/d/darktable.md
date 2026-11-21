@@ -1,4 +1,5 @@
 ---
+
 title: "darktable(1)"
 name: "darktable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-darktable/"
 description: "darktable – a digital photography workflow application"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 darktable[options][IMG_1234.{RAW, ...} | image_folder / ]
 </code></pre>
@@ -21,7 +21,6 @@ darktable[options][IMG_1234.{RAW, ...} | image_folder / ]
 }
 --disable - opencl-- library&lt;library file&gt; --datadir&lt;data directory&gt; --moduledir&lt;module directory&gt; --tmpdir&lt;tmp directory&gt; --configdir&lt;user config directory&gt; --cachedir&lt;user cache directory&gt; --localedir&lt;locale directory&gt; --luacmd&lt;lua command&gt; --conf &lt; key &gt;= &lt;value&gt; --noiseprofiles&lt;noiseprofiles json file&gt; --help-- version
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. </p>
 <p> The application is designed to ease editing and consistent processing of large photo sessions and provides an easy to use digital light-table and a set of sophisticated post-processing tools. </p>
 <p> Most processing is done in 32-bit floating point per channel mode in device independent <font SIZE="-1"><code>CIE</code></font><code> L*a*b*</code> color space. <code>darktable</code> is also fully color managed, which gives you full control over the look of the photos. </p>

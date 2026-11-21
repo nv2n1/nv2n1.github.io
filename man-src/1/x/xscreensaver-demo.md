@@ -1,4 +1,5 @@
 ---
+
 title: "xscreensaver-demo(1)"
 name: "xscreensaver-demo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xscreensaver-demo/"
 description: "xscreensaver-demo – interactively control the background xscreensaver daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-demo</code> [-display <i>host:display.screen</i>] [-prefs] [&#8211;debug]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xscreensaver-demo</i> program is a graphical front-end for setting the parameters used by the background <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1) daemon. It is essentially two things: a tool for editing the <i>~/.xscreensaver</i> file; and a tool for demoing the various graphics hacks that the <i>xscreensaver</i> daemon will launch. </p>
 <p> The main window consists of a menu bar and two tabbed pages. The first page is for editing the list of demos, and the second is for editing various other parameters of the screensaver.</p>
 <h2>MENU COMMANDS</h2>

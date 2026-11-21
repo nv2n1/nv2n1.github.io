@@ -1,4 +1,5 @@
 ---
+
 title: "rrdflushcached(1)"
 name: "rrdflushcached"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdflushcached/"
 description: "rrdflushcached – Flush the values for a spcific RRD file from memory."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>flushcached</code> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>] <i>filename</i> [<i>filename</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flushcached</code> function connects to rrdcached, the <font SIZE="-1">RRD</font> caching daemon, and issues a &#8220;flush&#8221; command for the given files. The daemon will put the files to the head of the update queue so they are written &#8220;soon&#8221;. The status will be returned only after the files&#8217; pending updates have been written to disk.</p>
 <dl>
 <dt><i>filename</i></dt>

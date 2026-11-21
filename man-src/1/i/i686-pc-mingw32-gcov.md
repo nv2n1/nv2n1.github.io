@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-gcov(1)"
 name: "i686-pc-mingw32-gcov"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-gcov/"
 description: "gcov – coverage testing tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gcov [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>&#8211;all-blocks</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>|<code>&#8211;branch-probabilities</code>]<br />
@@ -18,7 +18,6 @@ description: "gcov – coverage testing tool"
 &nbsp;<wbr>&nbsp;<wbr>[<code>-f</code>|<code>&#8211;function-summaries</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>|<code>&#8211;object-directory</code>&nbsp;<wbr><i>directory|file</i>]&nbsp;<wbr><i>sourcefiles</i><br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-u</code>|<code>&#8211;unconditional-branches</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gcov</code> is a test coverage program. Use it in concert with <font SIZE="-1">GCC</font> to analyze your programs to help create more efficient, faster running code and to discover untested parts of your program. You can use <code>gcov</code> as a profiling tool to help discover where your optimization efforts will best affect your code. You can also use <code>gcov</code> along with the other profiling tool, <code>gprof</code>, to assess which parts of your code use the greatest amount of computing time. </p>
 <p> Profiling tools help you analyze your code&#8217;s performance. Using a profiler such as <code>gcov</code> or <code>gprof</code>, you can find out some basic performance statistics, such as:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-get-log(1)"
 name: "nvme-get-log"
 section: "1"
@@ -6,27 +7,16 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-get-log/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-get-log - Retrieves a log page from an NVMe device 
 
- nvme-get-log - Retrieves a log page from an NVMe device 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme get - log&lt;device&gt;[--log - id = &lt;log - id&gt; | -i&lt;log - id&gt;]
                       [--log - len = &lt;log - len&gt; | -l&lt;log - len&gt;]
                       [--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                       [--raw - binary | -b]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Retrieves an arbitrary NVMe log page from an NVMe device and provides the retuned structure. 
+Retrieves an arbitrary NVMe log page from an NVMe device and provides the retuned structure. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). 
 

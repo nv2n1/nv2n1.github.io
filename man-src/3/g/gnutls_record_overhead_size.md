@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_overhead_size(3)"
 name: "gnutls_record_overhead_size"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_record_overhead_size – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_overhead_size &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>size_t gnutls_record_overhead_size(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is <code>gnutls_session_t</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the set size in bytes of the overhead due to TLS (or DTLS) per record.</p>
 <h2>SINCE</h2>
 <p> 3.2.2</p>

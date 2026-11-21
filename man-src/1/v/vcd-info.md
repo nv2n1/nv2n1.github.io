@@ -1,4 +1,5 @@
 ---
+
 title: "vcd-info(1)"
 name: "vcd-info"
 section: "1"
@@ -9,9 +10,7 @@ description: "vcd-info – manual page for vcd-info 0.7.24"
 
 <h2>NAME</h2>
 <p> vcd-info &#8211; manual page for vcd-info 0.7.24</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lt-vcd-info</code> [<i>OPTION</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-a</code>, <code>&#8211;access-mode</code>=<i>ACCESS</i></dt>
 <dd> set CD-ROM access mode (IOCTL, READ_10, READ_CD)</dd>

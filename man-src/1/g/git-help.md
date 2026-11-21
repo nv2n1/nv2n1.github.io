@@ -1,4 +1,5 @@
 ---
+
 title: "git-help(1)"
 name: "git-help"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-help/"
 description: "git-help – Display help information about Git"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git help[-a | --all[--[no - ] verbose]]
         [[-i | --info][-m | --man][-w | --web]][COMMAND | GUIDE] git help[-g | --guides] git help[-c | --config]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> With no options and no COMMAND or GUIDE given, the synopsis of the <i>git</i> command and a list of the most commonly used Git commands are printed on the standard output. </p>
 <p> If the option <code>&#8211;all</code> or <code>-a</code> is given, all available commands are printed on the standard output. </p>
 <p> If the option <code>&#8211;guides</code> or <code>-g</code> is given, a list of the Git concept guides is also printed on the standard output. </p>

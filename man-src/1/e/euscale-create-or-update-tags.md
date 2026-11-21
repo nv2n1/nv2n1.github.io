@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-create-or-update-tags(1)"
 name: "euscale-create-or-update-tags"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-create-or-update-tags – Create or update one or more res
 
 <h2>NAME</h2>
 <p> euscale-create-or-update-tags &#8211; Create or update one or more resource tags</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-create-or-update-tags <code>&#8211;tag</code> &quot;k=VALUE, id=VALUE, t=VALUE,</p>
 <dl>
 <dt>v=VALUE, p={true,false}&quot; [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create or update one or more resource tags</p>
 <h3>optional arguments:</h3>
 <dl>

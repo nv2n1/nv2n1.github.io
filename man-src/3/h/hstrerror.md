@@ -1,4 +1,5 @@
 ---
+
 title: "hstrerror(3)"
 name: "hstrerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hstrerror/"
 description: "gethostbyname, gethostbyaddr, sethostent, gethostent, endhostent, h_errno, herror, hstrerror, gethostbyaddr_r, gethostbyname2, gethostbyname2_r, gethostbyname_r, gethostent_r – get network host entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 extern int h_errno;
@@ -65,7 +65,6 @@ int gethostbyname2_r(const char *name, int af,
 <dt>Before glibc 2.12:</dt>
 <dd> none</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>gethostbyname*</code>(), <code>gethostbyaddr*</code>(), <code>herror</code>(), and <code>hstrerror</code>() functions are obsolete. Applications should use <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), and <code><a href="/docs/linux/man/3-gai_strerror/">gai_strerror</a></code>(3) instead. </p>
 <p> The <code>gethostbyname</code>() function returns a structure of type <i>hostent</i> for the given host <i>name</i>. Here <i>name</i> is either a hostname or an IPv4 address in standard dot notation (as for <code>inet_addr</code>(3)). If <i>name</i> is an IPv4 address, no lookup is performed and <code>gethostbyname</code>() simply copies <i>name</i> into the <i>h_name</i> field and its <i>struct in_addr</i> equivalent into the <i>h_addr_list[0]</i> field of the returned <i>hostent</i> structure. If <i>name</i> doesn&#8217;t end in a dot and the environment variable <code>HOSTALIASES</code> is set, the alias file pointed to by <code>HOSTALIASES</code> will first be searched for <i>name</i> (see <code><a href="/docs/linux/man/7-hostname/">hostname</a></code>(7) for the file format). The current domain and its parents are searched unless <i>name</i> ends in a dot. </p>
 <p> The <code>gethostbyaddr</code>() function returns a structure of type <i>hostent</i> for the given host address <i>addr</i> of length <i>len</i> and address type <i>type</i>. Valid address types are <code>AF_INET</code> and <code>AF_INET6</code>. The host address argument is a pointer to a struct of a type depending on the address type, for example a <i>struct in_addr *</i> (probably obtained via a call to <code>inet_addr</code>(3)) for address type <code>AF_INET</code>. </p>

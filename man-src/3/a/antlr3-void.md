@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-void(3)"
 name: "antlr3-void"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_HASH_ENTRY_struct –"
 ---
 
 <p> Internal structure representing an element in a hash bucket.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Public Member Functions</h3>
 <p> <code>void</code> (ANTLR3_CDECL *free)(void *<code>data</code>)<br />

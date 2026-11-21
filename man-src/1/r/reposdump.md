@@ -1,4 +1,5 @@
 ---
+
 title: "reposdump(1)"
 name: "reposdump"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-reposdump/"
 description: "reposdump – utility for dumping SBLIM Data Gatherer online metric repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reposdump</code> [<i>age</i>] [<i>interval</i>] [<i>directory</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>reposdump</code> program is used to dump the metrics from the <code><a href="/docs/linux/man/8-reposd/">reposd</a></code>(8) daemons online repository. The metric data is exported into a flat text file. The file contains sections seperated by lines with the following format. </dd>
 <dl>
 <dt>

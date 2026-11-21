@@ -1,4 +1,5 @@
 ---
+
 title: "inkscape(1)"
 name: "inkscape"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inkscape/"
 description: "Inkscape – an SVG (Scalable Vector Graphics) editing program."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <tt>&quot;inkscape [options] [filename_1 filename_2 ...]&quot;</tt> </p>
 <p> options: </p>
 <pre><code>
@@ -16,7 +16,6 @@ description: "Inkscape – an SVG (Scalable Vector Graphics) editing program."
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   list - g,
                                                                                                                     --with - gui-- batch - process-- shell
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>Inkscape</code> is a Free and open source vector graphics editor. It offers a rich set of features and is widely used for both artistic and technical illustrations such as cartoons, clip art, logos, typography, diagramming and flowcharting. It uses vector graphics to allow for sharp printouts and renderings at unlimited resolution and is not bound to a fixed number of pixels like raster graphics. Inkscape uses the standardized <font SIZE="-1"><code>SVG</code></font> file format as its main format, which is supported by many other applications including web browsers. </p>
 <p> The interface is designed to be comfortable and efficient for skilled users, while remaining conformant to <font SIZE="-1"><code>GNOME</code></font> standards so that users familiar with other <font SIZE="-1">GNOME</font> applications can learn its interface rapidly. </p>
 <p> <font SIZE="-1"><code>SVG</code></font> is a W3C standard <font SIZE="-1">XML</font> format for 2D vector drawing. It allows defining objects in the drawing using points, paths, and primitive shapes. Colors, fonts, stroke width, and so forth are specified as `style&#8217; attributes to these objects. The intent is that since <font SIZE="-1">SVG</font> is a standard, and since its files are text/xml, it will be possible to use <font SIZE="-1">SVG</font> files in a sizeable number of programs and for a wide range of uses. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xhydra(1)"
 name: "xhydra"
 section: "1"
@@ -9,9 +10,7 @@ description: "xhydra – Gtk+2 frontend for thc-hydra"
 
 <h2>NAME</h2>
 <p> xhydra &#8211; Gtk+2 frontend for thc-hydra</p>
-<h2>SYNOPSIS</h2>
 <p> Execute xhydra in a terminal to start the application.</p>
-<h2>DESCRIPTION</h2>
 <p> Hydra is a parallized login cracker which supports numerous protocols to attack. New modules are easy to add, beside that, it is flexible and very fast. </p>
 <p> This tool gives researchers and security consultants the possiblity to show how easy it would be to gain unauthorized access from remote to a system. </p>
 <p> Currently this tool supports:<br />

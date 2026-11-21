@@ -1,4 +1,5 @@
 ---
+
 title: "irxevent(1)"
 name: "irxevent"
 section: "1"
@@ -9,9 +10,7 @@ description: "irxevent – infrared X-event sender"
 
 <h2>NAME</h2>
 <p> irxevent &#8211; infrared X-event sender</p>
-<h2>SYNOPSIS</h2>
 <p> <code>irxevent</code> [<i>option</i>]&#8230; [<i>config file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Irxevent is a program that I wrote to send button clicks and key presses to X applications triggered by a LIRC driven remote control. You can control your favorite CD/MP3 player or your TV tuner program or any other X application that responds to keyboard or mouse input. If you like to you can send emacs ^X^S from your armchair. </p>
 <p> Irxevent is a complement to irexec and irpty.</p>
 <dl>

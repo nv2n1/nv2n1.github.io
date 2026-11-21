@@ -1,4 +1,5 @@
 ---
+
 title: "ipythonx(1)"
 name: "ipythonx"
 section: "1"
@@ -9,11 +10,9 @@ description: "ipythonx – Simple graphical frontend to IPython, using WxWidgets
 
 <h2>NAME</h2>
 <p> <code>ipythonx &#8211; Simple graphical frontend to IPython, using WxWidgets. </code></p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>ipengine</code> [<i>options</i>]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> ipythonx is a simple graphical frontend to IPython, using WxWidgets.</p>
 <h2>OPTIONS</h2>
 <dl>

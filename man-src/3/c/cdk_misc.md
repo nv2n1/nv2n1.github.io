@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_misc(3)"
 name: "cdk_misc"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_misc – Curses Development Kit Miscellaneous Routines"
 
 <h2>NAME</h2>
 <p> cdk_misc &#8211; <code>Curses Development Kit</code> Miscellaneous Routines </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -91,7 +91,6 @@ void sortList(
     int length);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> These are miscellaneous functions which may be useful with the Cdk widget set.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

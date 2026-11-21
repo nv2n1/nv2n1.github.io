@@ -1,4 +1,5 @@
 ---
+
 title: "dcmqrscp(1)"
 name: "dcmqrscp"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmqrscp/"
 description: "dcmqrscp – DICOM image archive (central test node)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dcmqrscp[options][port]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The Image Central Test Node (<code>dcmqrscp</code>) Application implements a simple image archive. It manages a number of storage areas and allows images to be stored in these storage areas using the DICOM Storage Service Class. It also allows image attributes to be queried and images to be retrieved using the DICOM Query/Retrieve Service Class. The <code>dcmqrscp</code> application also implements access restriction rules to limit operations to specific peer application entities. </p>
 <p> The <code>dcmqrscp</code> application is intended to be used in DICOM demonstrations and as a compatibilitiy test tool. In particular, <code>dcmqrscp</code> will delete images if its quota restrictions have been exceeded.</p>
 <h2>PARAMETERS</h2>

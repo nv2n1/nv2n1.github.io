@@ -1,4 +1,5 @@
 ---
+
 title: "ps_mem(1)"
 name: "ps_mem"
 section: "1"
@@ -9,9 +10,7 @@ description: "ps_mem – Memory profiling tool"
 
 <h2>NAME</h2>
 <p> ps_mem &#8211; Memory profiling tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ps_mem</code> [-h|&#8211;help] [-s|&#8211;show-cmdline] [-p PID] [-w N]</p>
-<h2>DESCRIPTION</h2>
 <p> The ps_mem tool can determine how much RAM is used per program (not per process). </p>
 <p> In detail it reports: </p>
 <dl>

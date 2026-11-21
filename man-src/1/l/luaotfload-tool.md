@@ -1,4 +1,5 @@
 ---
+
 title: "luaotfload-tool(1)"
 name: "luaotfload-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-luaotfload-tool/"
 description: "luaotfload-tool – generate and query the Luaotfload font names database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>luaotfload-tool</code> [ -bcDfFiIlLnpqRSuvVhw ]</p>
 <dl>
 <dt><code>luaotfload-tool</code> &#8211;update [ &#8211;force ] [ &#8211;quiet ] [ &#8211;verbose ]</dt>
@@ -23,7 +23,6 @@ description: "luaotfload-tool – generate and query the Luaotfload font names d
 <p> <code>luaotfload-tool</code> &#8211;show-blacklist </p>
 <p> <code>luaotfload-tool</code> &#8211;diagnose=CHECK </p>
 <p> <code>luaotfload-tool</code> &#8211;conf=FILE &#8211;dumpconf</dl>
-<h2>DESCRIPTION</h2>
 <p> luaotfload-tool accesses the font names database that is required by the <i>Luaotfload</i> package. There are two general modes: <code>update</code> and <code>query</code>.</p>
 <dl>
 <dt>&bull;</dt>

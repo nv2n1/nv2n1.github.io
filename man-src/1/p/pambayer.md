@@ -1,4 +1,5 @@
 ---
+
 title: "pambayer(1)"
 name: "pambayer"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pambayer/"
 description: "pambayer – interpret Bayer patterns"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pambayer</code> <code>-type=</code>{<code>1</code>|<code>2</code>|<code>3</code>|<code>4</code>} [<code>-nointerpolate</code>] [<i>pamfile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pambayer</code> reads a Bayer pattern in a 1-deep Netpbm image and produces a color image in PAM RGB format as output. </p>
 <p> A Bayer pattern is what you get from the optical sensor in some digital cameras. Such a camera doesn&#8217;t have a red, green, and blue sensor in the exact same place for an individual pixel. Instead, it has red, green, and blue sensors laid out in a two dimensional array. The pattern in which they are laid out is the Bayer pattern. The input to <code>pambayer</code> is one sample value for each of those sensors, so some samples are red, some are green, and some are blue. </p>

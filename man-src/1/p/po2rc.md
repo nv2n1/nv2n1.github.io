@@ -1,4 +1,5 @@
 ---
+
 title: "po2rc(1)"
 name: "po2rc"
 section: "1"
@@ -9,9 +10,7 @@ description: "po2rc – Convert Gettext PO localization files back to Windows Re
 
 <h2>NAME</h2>
 <p> po2rc &#8211; Convert Gettext PO localization files back to Windows Resource (.rc) files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>po2rc </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-t|&#8211;template <i>TEMPLATE</i>] [-S|&#8211;timestamp] [&#8211;charset <i>CHARSET</i>] [-l|&#8211;lang <i>LANG</i>] [&#8211;sublang <i>SUBLANG</i>] [&#8211;threshold <i>PERCENT</i>] [&#8211;fuzzy] [&#8211;nofuzzy]</p>
-<h2>DESCRIPTION</h2>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/rc2po.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/rc2po.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>

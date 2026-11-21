@@ -1,4 +1,5 @@
 ---
+
 title: "docker-node-ps(1)"
 name: "docker-node-ps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-node-ps/"
 description: "docker-node-ps – List tasks running on one or more nodes, defaults to current node"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker node ps [OPTIONS] [NODE&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List tasks running on one or more nodes, defaults to current node </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

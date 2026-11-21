@@ -1,4 +1,5 @@
 ---
+
 title: "sbvarsign(1)"
 name: "sbvarsign"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sbvarsign/"
 description: "sbvarsign – UEFI authenticated variable signing tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sbvarsign</code> [<i>,options/</i>] <i>,&#8211;key &lt;keyfile&gt; &#8211;cert &lt;certfile&gt; &lt;var-name&gt; &lt;var-data-file&gt;/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Sign a blob of data for use in SetVariable().</p>
 <h2>OPTIONS</h2>
 <dl>

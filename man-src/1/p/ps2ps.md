@@ -1,4 +1,5 @@
 ---
+
 title: "ps2ps(1)"
 name: "ps2ps"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ps2ps/"
 description: "ps2ps, eps2eps – Ghostscript PostScript \"distiller\""
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ps2ps</code> [ <i>options</i> ] <i>input output.ps</i><br />
  <code>eps2eps</code> [ <i>options</i> ] <i>input output.eps</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ps2ps</code> uses <i><a href="/docs/linux/man/1-gs/">gs</a></i>(1) to convert <code>PostScript</code>(tm) or <code>PDF</code>(tm) file &quot;input&quot; to simpler, normalized and (usually) faster PostScript in &quot;output.ps&quot;. The output is level 2 DSC 3.0 conforming PostScript. </p>
 <p> <code>eps2eps</code> performs the equivalent optimization, creating Encapsulated PostScript (EPS) files. NB, despite the name, the input need not be an EPS file, PostScript or indeed PDF files are equally acceptable. </p>
 <p> Both accept any general Ghostscript command line options, and options specific to the ps2write and eps2write devices.</p>

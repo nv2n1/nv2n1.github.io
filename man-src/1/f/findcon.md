@@ -1,4 +1,5 @@
 ---
+
 title: "findcon(1)"
 name: "findcon"
 section: "1"
@@ -9,9 +10,7 @@ description: "findcon – SELinux file context search tool"
 
 <h2>NAME</h2>
 <p> findcon &#8211; SELinux file context search tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>findcon</code> FCLIST [OPTIONS] [EXPRESSION]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>findcon</code> allows the user to search for files with a specified context. Results can be filtered by object class as described below.</p>
 <h2>FCLIST</h2>
 <p> The <code>findcon</code> tool operates upon a file context list source. There are three valid file context lists.</p>

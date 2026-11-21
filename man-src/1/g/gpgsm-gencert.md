@@ -1,4 +1,5 @@
 ---
+
 title: "gpgsm-gencert(1)"
 name: "gpgsm-gencert"
 section: "1"
@@ -9,9 +10,7 @@ description: "gpgsm-gencert.sh – Generate an X.509 certificate request"
 
 <h2>NAME</h2>
 <p> <code>gpgsm-gencert.sh</code> &#8211; Generate an X.509 certificate request</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpgsm-gencert.sh</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This is a simple tool to interactively generate a certificate request which will be printed to stdout. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gpgsm/">gpgsm</a></code>(1), <code><a href="/docs/linux/man/1-gpg-agent/">gpg-agent</a></code>(1), <code><a href="/docs/linux/man/1-scdaemon/">scdaemon</a></code>(1) </p>

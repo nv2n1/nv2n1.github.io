@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_protocol_set_priority(3)"
 name: "gnutls_protocol_set_priority"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_protocol_set_priority – API function"
 
 <h2>NAME</h2>
 <p> gnutls_protocol_set_priority &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_protocol_set_priority(gnutls_session_t </code><i>session</i><code>, const int * </code><i>list</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_protocol_set_priority – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>const int * list</dt>
 <dd> is a 0 terminated list of gnutls_protocol_t elements.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Sets the priority on the protocol versions supported by gnutls. This function actually enables or disables protocols. Newer protocol versions always have highest priority.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

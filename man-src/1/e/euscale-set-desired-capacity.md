@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-set-desired-capacity(1)"
 name: "euscale-set-desired-capacity"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-set-desired-capacity – Set an auto-scaling group’s des
 
 <h2>NAME</h2>
 <p> euscale-set-desired-capacity &#8211; Set an auto-scaling group&#8217;s desired capacity</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-set-desired-capacity <code>-c</code> DESIREDCAPACITY [-h] [-H] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [&#8211;help] ASGROUP</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Set an auto-scaling group&#8217;s desired capacity</p>
 <h3>positional arguments:</h3>
 <dl>

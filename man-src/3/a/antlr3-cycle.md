@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-cycle(3)"
 name: "antlr3-cycle"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_TOPO_struct –"
 ---
 
 <p> A topological sort system that given a set of dependencies of a node m on node n, can sort them in dependency order.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>addEdge</code> )(struct <code>ANTLR3_TOPO_struct</code> *topo, <code>ANTLR3_UINT32</code> edge, <code>ANTLR3_UINT32</code> dependency)<br />

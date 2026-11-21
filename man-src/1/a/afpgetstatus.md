@@ -1,4 +1,5 @@
 ---
+
 title: "afpgetstatus(1)"
 name: "afpgetstatus"
 section: "1"
@@ -9,10 +10,8 @@ description: "afpgetstatus – Get simple status information from an AFP server 
 
 <h2>NAME</h2>
 <p> afpgetstatus &#8211; Get simple status information from an AFP server without logging into it.</p>
-<h2>SYNOPSIS</h2>
 <p> <i>afpgetstatus [afp_url|ipaddress[:port]]R </p>
 <p> </i></p>
-<h2>DESCRIPTION</h2>
 <p> afpcmd is a command-line tool that parses and prints the status information of an AFP server. It does this without having to login to a server. </p>
 <p> It is a response to the DSI GetStatus request (which is the same as the AFP FPGetSrvrInfo). </p>
 <p> It only handles IPv4 addresses. </p>

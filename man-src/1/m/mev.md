@@ -1,4 +1,5 @@
 ---
+
 title: "mev(1)"
 name: "mev"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mev/"
 description: "mev – a program to report mouse events"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mev</code> [ <i>options</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The `mev&#8217; program is part of the gpm package. The information below is extracted from the texinfo file, which is the preferred source of information. </p>
 <p> The mev program is modeled after xev. It prints to stdout the mouse console events it gets. </p>
 <p> mev&#8217;s default behaviour is to get anything, but command line switches can be used to set the various fields in the Gpm_Connect structure, in order to customize the program&#8217;s behaviour. I&#8217;m using mev to handle mouse events to Emacs. </p>

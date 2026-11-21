@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_get_persistent(3)"
 name: "keyctl_get_persistent"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-keyctl_get_persistent/"
 description: "keyctl_get_persistent – Get the persistent keyring for a user"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_get_persistent(uid_t uid, key_serial_t keyring);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_get_persistent</code>() gets the persistent keyring for the specified user ID. Unlike the session and user keyrings, this keyring will persist once all login sessions have been deleted and can thus be used to carry authentication tokens for processes that run without user interaction, such as programs started by cron. </p>
 <p> The persistent keyring will be created by the kernel if it does not yet exist. Each time this function is called, the persistent keyring will have its expiration timeout reset to the value in:</p>
 <dl>

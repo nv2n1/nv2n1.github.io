@@ -1,4 +1,5 @@
 ---
+
 title: "mc-wait-for-name(1)"
 name: "mc-wait-for-name"
 section: "1"
@@ -9,14 +10,12 @@ description: "mc-wait-for-name – run until a D-Bus name appears on the session
 
 <h2>NAME</h2>
 <p> mc-wait-for-name &#8211; run until a D-Bus name appears on the session bus</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mc-wait-for-name</code> <i>WELL-KNOWN-NAME</i> </p>
 <pre>
 <code>[D-BUS Service]</code>
 <code>Name=</code><i>org.freedesktop.Telepathy.Client.Something</i>
 <code>Exec=/usr/bin/mc-wait-for-name</code><i> org.freedesktop.Telepathy.Client.Something</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mc-wait-for-name</code> runs until a bus name appears, then exits successfully. This can be used as a service-activation helper for a bus name that is not directly activatable, but will be provided automatically (after a while) by the desktop session.</p>
 <h2>EXIT STATUS</h2>
 <dl>

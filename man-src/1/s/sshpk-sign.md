@@ -1,4 +1,5 @@
 ---
+
 title: "sshpk-sign(1)"
 name: "sshpk-sign"
 section: "1"
@@ -9,7 +10,6 @@ description: "sshpk-sign – sign data using an SSH key"
 
 <h2>SYNOPSYS</h2>
 <p> <code>sshpk-sign</code> -i KEYPATH [OPTION&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Takes in arbitrary bytes, and signs them using an SSH private key. The key can be of any type or format supported by the <code>sshpk</code> library, including the standard OpenSSH formats, as well as PEM PKCS#1 and PKCS#8. </p>
 <p> The signature is printed out in Base64 encoding, unless the <code>&#8211;binary</code> or <code>-b</code> option is given.</p>
 <h2>EXAMPLES</h2>

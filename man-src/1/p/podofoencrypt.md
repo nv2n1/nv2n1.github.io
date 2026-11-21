@@ -1,4 +1,5 @@
 ---
+
 title: "podofoencrypt(1)"
 name: "podofoencrypt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-podofoencrypt/"
 description: "podofoencrypt – encrypt PDF files and set PDF security settings"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>podofoencrypt</code> [&#8211;rc4v1] [&#8211;rc4v2] [&#8211;aes] [-u &lt;userpassword&gt;] -o &lt;ownerpassword&gt; &lt;inputfile&gt; &lt;outputfile&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>podofoencrypt</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can encrypt PDF files using RC4 or AES encoding and can set PDF security settings. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code></p>

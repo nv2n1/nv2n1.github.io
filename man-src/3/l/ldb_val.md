@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_val(3)"
 name: "ldb_val"
 section: "3"
@@ -8,7 +9,6 @@ description: "ldb_val –"
 ---
 
 <p> Result value.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ldb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> uint8_t * <code>data</code> </p>

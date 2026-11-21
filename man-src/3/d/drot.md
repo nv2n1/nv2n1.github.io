@@ -1,4 +1,5 @@
 ---
+
 title: "drot(3)"
 name: "drot"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drot/"
 description: "drot.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>drot</code> (N, DX, INCX, DY, INCY, C, S)<br />
  <i></i><code>DROT</code></p>

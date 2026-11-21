@@ -1,4 +1,5 @@
 ---
+
 title: "muscand(1)"
 name: "muscand"
 section: "1"
@@ -9,9 +10,7 @@ description: "Muscand – File scanner daemon for Museek"
 
 <h2>NAME</h2>
 <p> <code>Muscand</code> &#8211; File scanner daemon for Museek</p>
-<h2>SYNOPSIS</h2>
 <p> <code>muscand</code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-b] [&#8211;buddy] [-l] [&#8211;list] [-h] [&#8211;help] [-v] [&#8211;verbose] [&#8211;no-reload]</p>
-<h2>DESCRIPTION</h2>
 <p> Muscand is a FAM service that scans paths already configured by <i><a href="/docs/linux/man/1-muscan/">muscan</a></i>(1) or <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1). If it detects changes to the paths, it will update the Shares Database it is watching after a few seconds. There are two available shares databases, Normal and Buddies-Only. Buddies-Only is an optional shares database that, if enabled, is only accessable by the users you&#8217;ve chosen as &quot;Buddies&quot;. </p>
 <p> Before running muscand, you will need a configured museekd, which can be done with <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1) or fI&gt;<a href="/docs/linux/man/1-musetup-gtk/">musetup-gtk</a>(1), and add some shared paths with either of the setup tools or with <i><a href="/docs/linux/man/1-muscan/">muscan</a></i>(1).</p>
 <h2>OPTIONS</h2>

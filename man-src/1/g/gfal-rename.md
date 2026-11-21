@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-rename(1)"
 name: "gfal-rename"
 section: "1"
@@ -9,9 +10,7 @@ description: "gfal-rename – Renames files or directories"
 
 <h2>NAME</h2>
 <p> gfal-rename &#8211; Renames files or directories</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gfal-rename</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] <i>SOURCE</i> <i>DESTINATION</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gfal-rename</code> Renames SOURCE to DESTINATION. </p>
 <h2>OPTIONS</h2>
 <dl>

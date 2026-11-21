@@ -1,4 +1,5 @@
 ---
+
 title: "docbook2gjots(1)"
 name: "docbook2gjots"
 section: "1"
@@ -9,9 +10,7 @@ description: "docbook2gjots – Convert a DOCBOOK file to gjots format (on stdou
 
 <h2>NAME</h2>
 <p> docbook2gjots &#8211; Convert a DOCBOOK file to gjots format (on <code>stdout</code>)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>docbook2gjots</code> [ <i>DOCBOOK-file</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>docbook2gjots</code> converts a DOCBOOK XML file into gjots format. <code>docbook2gjots</code> uses <code><a href="/docs/linux/man/1-gawk/">gawk</a></code>(1) to perform the conversion. <code>&lt;preface&gt;</code>, <code>&lt;chapter&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;sect1&gt;</code>, <code>&lt;sect2&gt;</code>, <code>&lt;sect3&gt;</code> and <code>&lt;sect4&gt;</code> tags are used to define <code>NewEntry</code> and <code>NewFolder</code> boundaries. They should definitely have <code>&lt;title&gt;</code> tags. This is a quick and dirty hack using <code><a href="/docs/linux/man/1-gawk/">gawk</a></code>(1) and does no formal checking of XML or SGML syntax nor does it validate against the DOCBOOK DTD. Consequently, if the syntax of the file is broken the conversion will probably fail. It is intended that a round-trip can be made so that <code>gjots</code>(1) can be used as a tool at all stages of DOCBOOK production &#8211; mainly as an outline processor to help the author organise and order the work. A document may well start its life in <code>gjots</code>(1) as the initial thoughts are marshalled. As the document forms up, it can be converted to DOCBOOK with the following command which automatically adds tags such as <code>&lt;?xml&#8230;&gt;</code>, <code>&lt;para&gt; </code> etc:</p>
 <dl>
 <dt>

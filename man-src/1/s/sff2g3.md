@@ -1,4 +1,5 @@
 ---
+
 title: "sff2g3(1)"
 name: "sff2g3"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sff2g3/"
 description: "sff2g3 – convert CAPI SFF fax files into G3 fax files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sff2g3</code> [<code>-r</code>] [<code>-d</code>] [<code>-v</code>] <code>input.SFF output.%03d.g3 </code></p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Common ISDN API (CAPI) structured file format (SFF) input file, and converts every fax page contained in it to a raw G3 fax file. </p>
 <p> The input SFF files typically come from fax reception programs using CAPI on active ISDN cards (isdn4linux, AVM or DIVA cards) or similar. The output G3 files are in the &#8220;native&#8221; format that all other G3 utilites in the mgetty+sendfax package use. </p>
 <p> If the input file name is &#8220;-&#8221;, <code>sff2g3</code> will read from stdin. </p>

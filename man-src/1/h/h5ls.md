@@ -1,4 +1,5 @@
 ---
+
 title: "h5ls(1)"
 name: "h5ls"
 section: "1"
@@ -9,9 +10,7 @@ description: "h5ls – Prints information about a file or dataset."
 
 <h2>NAME</h2>
 <p> h5ls &#8211; Prints information about a file or dataset.</p>
-<h2>SYNOPSIS</h2>
 <p> h5ls [OPTIONS] file [OBJECTS&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> h5ls prints selected information about file objects in the specified format.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolscorrelate(1)"
 name: "dbcolscorrelate"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dbcolscorrelate/"
 description: "dbcolscorrelate – find the coefficient of correlation over columns"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     dbcolscorrelate column1 column2 [column3...]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Compute the coefficient of correlation over two (or more) columns. </p>
 <p> The output is one line of correlations. </p>
 <p> With exactly two columns, a new column <i>correlation</i> is created. </p>

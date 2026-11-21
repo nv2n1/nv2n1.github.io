@@ -1,4 +1,5 @@
 ---
+
 title: "sgsvj0(3)"
 name: "sgsvj0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgsvj0/"
 description: "sgsvj0.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgsvj0</code> (JOBV, M, N, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br />
  <i></i><code>SGSVJ0</code> pre-processor for the routine sgesvj.</p>

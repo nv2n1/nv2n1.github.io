@@ -1,4 +1,5 @@
 ---
+
 title: "mktemp(1)"
 name: "mktemp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mktemp/"
 description: "mktemp – create a temporary file or directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mktemp</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Create a temporary file or directory, safely, and print its name. TEMPLATE must contain at least 3 consecutive &#8216;X&#8217;s in last component. If TEMPLATE is not specified, use tmp.XXXXXXXXXX, and <code>&#8211;tmpdir</code> is implied. Files are created u+rw, and directories u+rwx, minus umask restrictions.</p>
 <dl>
 <dt><code>-d</code>, <code>&#8211;directory</code></dt>

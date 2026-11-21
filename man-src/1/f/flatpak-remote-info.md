@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-remote-info(1)"
 name: "flatpak-remote-info"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-remote-info/"
 description: "flatpak-remote-info – Show information about an application or runtime in a remote"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-info</code> [OPTION&#8230;] REMOTE REF</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Shows information about the runtime or application REF from the remote repository with the name REMOTE. You can find all configured remote repositories with flatpak remotes. </dd>
 <p> By default, the output is formatted in a friendly format. If you specify one of the <code>&#8211;show-&#8230;</code> options, the output is instead formatted in a machine-readable format. </p>
 <p> Unless overridden with the <code>&#8211;system</code>, <code>&#8211;user</code>, or <code>&#8211;installation</code> options, this command uses either the default system-wide installation or the per-user one, depending on which has the specified REMOTE.</p>

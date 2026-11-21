@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-legacy-replicas(1)"
 name: "gfal-legacy-replicas"
 section: "1"
@@ -9,10 +10,8 @@ description: "gfal-legacy-replicas – list replicas"
 
 <h2>NAME</h2>
 <p> gfal-legacy-replicas &#8211; list replicas</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gfal-legacy-replicas</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] <i> lfc </p>
 <p> </i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gfal-legacy-replicas</code> List the replicas of an entry in a catalog. </p>
 <h2>OPTIONS</h2>
 <dl>

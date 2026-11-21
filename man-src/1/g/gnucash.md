@@ -1,4 +1,5 @@
 ---
+
 title: "gnucash(1)"
 name: "gnucash"
 section: "1"
@@ -9,9 +10,7 @@ description: "gnucash – personal finance manager"
 
 <h2>NAME</h2>
 <p> gnucash &#8211; personal finance manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gnucash [options] [</code> <i>accounts.gnc</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>GnuCash</code> is a personal accounting package that allows you to record and track income, expenses, assets, and investments. It supports reconciliation, has substantial reporting capabilities, and is extensible using guile. It can import QIF data from Quicken(TM) and many other commercial accounting packages. It uses GTK+ and GNOME to provide an attractive user interface, and has extensive online help. </p>
 <h2>OPTIONS</h2>
 <dl>

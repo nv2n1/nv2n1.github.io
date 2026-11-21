@@ -1,4 +1,5 @@
 ---
+
 title: "rrdgraph_libdbi(1)"
 name: "rrdgraph_libdbi"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdgraph_libdbi/"
 description: "rrdgraph_libdbi – fetching data for graphing in rrdtool graph via libdbi"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> &lt;rrdfile&gt; = <code>sql//&lt;libdbi driver&gt;/&lt;driver-option-name&gt;=&lt;driver-option-value&gt;/&#8230;[/rrdminstepsize=&lt;stepsize&gt;][/rrdfillmissing=&lt;fill missing n seconds&gt;]//&lt;table&gt;/&lt;unixtimestamp column&gt;/&lt;data value column&gt;[/derive]/&lt;where clause 1&gt;/&#8230;/&lt;where clause n&gt;</code></p>
-<h2>DESCRIPTION</h2>
 <p> This pseudo-rrd-filename defines a sql datasource:</p>
 <dl>
 <dt><code>sql//</code></dt>

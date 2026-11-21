@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_undefined(3)"
 name: "bson_append_undefined"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_undefined() – The bson_append_undefined() function s
 
 <h2>NAME</h2>
 <p> bson_append_undefined() &#8211; The bson_append_undefined() function shall append a new element to bson of type BSON_TYPE_UNDEFINED. Undefined is common in Javascript. However, this element type is deprecated and should not be used in new code.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_undefined(bson_t *bson,
                            const char *key,
@@ -25,7 +25,6 @@ bool bson_append_undefined(bson_t *bson,
 <dl>
 <dt><code>key_length</code></dt>
 <dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_undefined/">bson_append_undefined</a>(3)</code> function shall append a new element to <code>bson</code> of type BSON_TYPE_UNDEFINED. Undefined is common in Javascript. However, this element type is deprecated and should not be used in new code. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

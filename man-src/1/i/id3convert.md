@@ -1,4 +1,5 @@
 ---
+
 title: "id3convert(1)"
 name: "id3convert"
 section: "1"
@@ -9,9 +10,7 @@ description: "id3convert – Converts between id3v1 and id3v2 tags of an mp3 fil
 
 <h2>NAME</h2>
 <p> id3convert &#8211; Converts between id3v1 and id3v2 tags of an mp3 file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>id3convert</code> [ <i>OPTION</i> ] [ <i>FILE</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Id3convert</code> converts between id3v1 and id3v2 tags of an mp3 file. Id3convert will render both types of tag by default. Only the last tag type indicated in the option list will be used. Non-rendered tags will remain unchanged in the original file. Id3convert will also parse and convert Lyrics3 v2.0 frames, but will not render them. </p>
 <h2>OPTIONS</h2>
 <dl>

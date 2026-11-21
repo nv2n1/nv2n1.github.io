@@ -1,4 +1,5 @@
 ---
+
 title: "h5stat(1)"
 name: "h5stat"
 section: "1"
@@ -9,9 +10,7 @@ description: "h5stat: – Reports statistics regarding an HDF5 file and the obje
 
 <h2>NAME</h2>
 <p> h5stat: &#8211; Reports statistics regarding an HDF5 file and the objects in the file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>h5stat</code> [<i>OPTIONS</i>] <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> OPTIONS</dd>

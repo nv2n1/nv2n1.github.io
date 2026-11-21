@@ -1,4 +1,5 @@
 ---
+
 title: "anxenc(1)"
 name: "anxenc"
 section: "1"
@@ -10,7 +11,6 @@ description: "anxenc — Encapsulate annotations and data into annodexed media"
 <h2>NAME</h2>
 <p> anxenc &#8212; Encapsulate annotations and data into annodexed media<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>anxenc</code> [-o <code>filename</code> | &#8211;output <code>filename</code> ] [-h | &#8211;help ] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> [-t <code>content-type</code> | &#8211;type <code>content-type</code> ]<br />
  filename &#8230;</p>
 <h2>Description</h2>

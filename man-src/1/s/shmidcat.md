@@ -1,4 +1,5 @@
 ---
+
 title: "shmidcat(1)"
 name: "shmidcat"
 section: "1"
@@ -18,11 +19,7 @@ url: "/docs/linux/man/1-shmidcat/"
 
  shmidcat [<i>VCDFILE</i>]
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Copies either the file specified at the command line or stdin (if no file specified) line by line to a shared memory block. stdout will contain a shared memory ID which should be passed on to <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1).
+Copies either the file specified at the command line or stdin (if no file specified) line by line to a shared memory block. stdout will contain a shared memory ID which should be passed on to <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1).
 
 <h2>EXAMPLES</h2>
 

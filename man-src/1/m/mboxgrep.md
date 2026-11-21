@@ -1,4 +1,5 @@
 ---
+
 title: "mboxgrep(1)"
 name: "mboxgrep"
 section: "1"
@@ -9,9 +10,7 @@ description: "mboxgrep – displays email messages matching a pattern"
 
 <h2>NAME</h2>
 <p> mboxgrep &#8211; displays email messages matching a pattern</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mboxgrep</code> [<i>OPTIONS</i>] PATTERN [<i>MAILBOX</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page refers to <code>mboxgrep</code> version <code>0.7.9</code>. </p>
 <p> <code>mboxgrep</code> scans a <i>MAILBOX</i> and displays messages matching <i>PATTERN.</i> </p>
 <p> If a mailbox name is ommited, or a single dash (-) is given instead, it reads from standard input. It can read mbox folders or output from another <code>mboxgrep</code> process from standard input. </p>

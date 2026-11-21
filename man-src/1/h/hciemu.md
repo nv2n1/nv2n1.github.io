@@ -1,4 +1,5 @@
 ---
+
 title: "hciemu(1)"
 name: "hciemu"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hciemu/"
 description: "hciemu – HCI emulator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hciemu</code> [<i>options</i>] <i>local_address</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>hciemu</code> is used to emulate an HCI via <code>hci_vhci</code> kernel module </p>
 <h2>OPTIONS</h2>
 <dl>

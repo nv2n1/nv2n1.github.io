@@ -1,4 +1,5 @@
 ---
+
 title: "fpcmake(1)"
 name: "fpcmake"
 section: "1"
@@ -9,9 +10,7 @@ description: "fpcmake – The Free Pascal makefile constructor program."
 
 <h2>NAME</h2>
 <p> fpcmake &#8211; The Free Pascal makefile constructor program. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fpcmake [-Ttarget] [-pwhrqvV] [filename [filename [filename]]]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fpcmake</code> reads a <i>Makefile.fpc</i> and converts it to a <i>Makefile</i> suitable for reading by GNU <i>make</i> to compile your projects. It is similar in functionality to GNU <i>autoconf </i> or <i>Imake</i> for making X projects. </p>
 <h2>USAGE</h2>
 <p> <code>fpcmake</code> accepts filenames of makefile description files as it&#8217;s command-line arguments. For each of these files it will create a <i>Makefile </i> in the same directory where the file is located, overwriting any existing file with the same name. </p>

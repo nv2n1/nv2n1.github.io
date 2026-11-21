@@ -1,4 +1,5 @@
 ---
+
 title: "pmdajson(1)"
 name: "pmdajson"
 section: "1"
@@ -9,7 +10,6 @@ description: "pmdajson – JSON PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdajson</code> &#8211; JSON PMDA</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdajson</code> is a Performance Metrics Domain Agent (PMDA) which exports metrics from arbitrary sources generating Javascript Object Notation (JSON) syntax, describing metric metadata and values. </p>
 <p> Further details on the JSON format can be found at <a rel="nofollow" href="http://www.json.org">http://www.json.org</a></p>
 <h2>JSON DATA SOURCES</h2>

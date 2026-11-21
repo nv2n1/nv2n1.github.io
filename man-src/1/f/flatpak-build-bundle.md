@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-bundle(1)"
 name: "flatpak-build-bundle"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-build-bundle/"
 description: "flatpak-build-bundle – Create a single-file bundle from a local repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-bundle</code> [OPTION&#8230;] LOCATION FILENAME NAME [BRANCH]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Creates a single-file named FILENAME for the application (or runtime) named NAME in the repository at LOCATION. If a BRANCH is specified, this branch of the application is used. </dd>
 <p> The collection ID set on the repository at LOCATION (if set) will be used for the bundle. </p>
 <p> The format of the bundle file is that of an ostree static delta (against an empty base) with some flatpak specific metadata for the application icons and appdata.</p>

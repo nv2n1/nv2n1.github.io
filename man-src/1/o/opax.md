@@ -1,4 +1,5 @@
 ---
+
 title: "opax(1)"
 name: "opax"
 section: "1"
@@ -6,14 +7,13 @@ letter: "o"
 url: "/docs/linux/man/1-opax/"
 description: "opax – read and write file archives and copy directory hierarchies (OpenBSD pax implementation)"
 ---
+
 <h2>NAME</h2>
 <p> <code>opax</code> - read and write file archives and copy directory hierarchies (OpenBSD <i>pax</i> implementation)  </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>0cdOnvz</code> ] -words [-<code>f </code><i>archive</i> ] -words [-<code>s </code><i>replstr</i> ] <i>...</i> -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] ] <i>...</i> [<i>pattern ...</i> ] <br />
  -<code>r</code> [-<code>cdiknuvzDOYZ</code> ] -words [-<code>f </code><i>archive</i> ] -words [-<code>o </code><i>options</i> ] <i>...</i> -words [-<code>p </code><i>string</i> ] <i>...</i> -words [-<code>s </code><i>replstr</i> ] <i>...</i> [-<code>E </code><i>limit</i> ] -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] ] <i>...</i> [<i>pattern ...</i> ] <br />
  -<code>w</code> [-<code>0dituvzHLOPX</code> ] -words [-<code>b </code><i>blocksize</i> ] [[-<code>a</code> ] [-<code>f </code><i>archive</i> ] ] -words [-<code>x </code><i>format</i> ] -words [-<code>s </code><i>replstr</i> ] <i>...</i> -words [-<code>o </code><i>options</i> ] <i>...</i> -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>B </code><i>bytes</i> ] -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] [<i>/[c][m]</i> ] ] <i>...</i> [<i>file ...</i> ] <br />
  -<code>r</code> -<code>w</code> [-<code>0diklntuvDHLOPXYZ</code> ] -words [-<code>p </code><i>string</i> ] <i>...</i> -words [-<code>s </code><i>replstr</i> ] <i>...</i> -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] [<i>/[c][m]</i> ] ] <i>...</i> [<i>file ...</i> ] <i>directory</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> will read, write, and list the members of an archive file, and will copy directory hierarchies. operation is independent of the specific archive format, and supports a wide variety of different archive formats. A list of supported archive formats can be found under the description of the -<code>x</code> option. </p>
 <p> The presence of the -<code>r</code> and the -<code>w</code> options specifies which of the following functional modes will operate under: <i>list , read , write</i> and <i>copy</i> </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdapipe(1)"
 name: "pmdapipe"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdapipe – command output capture performance metrics domain age
 
 <h2>NAME</h2>
 <p> <code>pmdapipe</code> &#8211; command output capture performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/pipe/pmdapipe</code> [<code>-c</code> <i>configfile</i>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>memory</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdapipe</code> is a configurable command output monitoring Performance Metrics Domain Agent (PMDA). It can be seen as analogous to a restricted shell, where options can be passed to preset commands, and each line of their output is converted into a performance event. These events can be consumed by client tools like <code>pmval</code>(1). </p>
 <p> The <code>pipe</code> PMDA exports both event-style metrics reflecting timestamped event records for text-oriented command output, as well as the more orthodox sample-style metrics such as event counts and throughput size values. </p>
 <p> The PMDA is configured via a <i>configfile</i> which contains one line for each process from which output can be captured, as described in the &#8220;CONFIGURATION&#8221; section below. </p>

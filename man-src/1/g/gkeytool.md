@@ -1,4 +1,5 @@
 ---
+
 title: "gkeytool(1)"
 name: "gkeytool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gkeytool/"
 description: "gkeytool – Manage private keys and public certificates"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> keytool [<i></i><font SIZE="-1"><i>COMMAND</i></font><i></i>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Cryptographic credentials, in a Java environment, are usually stored in a <i>Key Store</i>. The Java <font SIZE="-1">SDK</font> specifies a <i>Key Store</i> as a persistent container of two types of objects: <i>Key Entries</i> and <i>Trusted Certificates</i>. The security tool <code>keytool</code> is a Java-based application for managing those types of objects. </p>
 <p> A <i>Key Entry</i> represents the private key part of a key-pair used in Public-Key Cryptography, and a signed X.509 certificate which authenticates the public key part for a known entity; i.e. the owner of the key-pair. The X.509 certificate itself contains the public key part of the key-pair. </p>
 <p> A <i>Trusted Certificate</i> is a signed X.509 certificate issued by a trusted entity. The <i>Trust</i> in this context is relative to the User of the <code>keytool</code>. In other words, the existence of a <i>Trusted Certificate</i> in the <i>Key Store</i> processed by a <code>keytool</code> command implies that the User trusts the <i>Issuer</i> of that <i>Trusted Certificate</i> to also sign, and hence authenticates, other <i>Subjects</i> the tool may process. </p>

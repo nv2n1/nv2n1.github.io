@@ -1,4 +1,5 @@
 ---
+
 title: "hdb_remove(3)"
 name: "hdb_remove"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdb_remove/"
 description: "HDB –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>hdb_name</code> </p>

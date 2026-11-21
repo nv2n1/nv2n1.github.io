@@ -1,4 +1,5 @@
 ---
+
 title: "gtags-parser(1)"
 name: "gtags-parser"
 section: "1"
@@ -9,9 +10,7 @@ description: "gtags-parser – print cross reference list for gtags."
 
 <h2>NAME</h2>
 <p> gtags-parser &#8211; print cross reference list for gtags.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gtags-parser</code> [-bdenqrstvw] <i>file</i> &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Gtags-parser</code> print cross reference list for <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) from the specified C, C++, yacc, java, PHP and Assembly source to standard output. Each line of output contains the object name, the line number which it appears, the file in which it is defined, and a line image separated by white-space. It&#8217;s same with the output of <code><a href="/docs/linux/man/1-ctags/">ctags</a></code>(1) with <code>-x</code> option. </p>
 <p> Depending upon the options provided to <code>gtags-parser</code>, objects will consist of object definitions, object references and other symbols. </p>
 <p> Files whose names end in &#8216;.c&#8217; or &#8216;.h&#8217; are assumed to be C source files. Files whose names end in &#8216;.c++&#8217; &#8216;.cc&#8217; &#8216;.cpp&#8217; &#8216;.cxx&#8217; &#8216;.hxx&#8217; &#8216;.hpp&#8217; &#8216;.C&#8217; &#8216;.H&#8217; are assumed to be C++ source files. Files whose names end in &#8216;.y&#8217; are assumed to be YACC source files. Files whose names end in &#8216;.java&#8217; are assumed to be Java source files. Files whose names end in &#8216;.php&#8217; &#8216;.php3&#8217; &#8216;.phtml&#8217; are assumed to be PHP source files. Files whose names end in &#8216;.s&#8217; or &#8216;.S&#8217; are assumed to be Assembly source files. Other files are searched for C style definitions. </p>

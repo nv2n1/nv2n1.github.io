@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_calc(1)"
 name: "gdal_calc"
 section: "1"
@@ -6,18 +7,9 @@ letter: "g"
 url: "/docs/linux/man/1-gdal_calc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+gdal_calc - gdal_calc.py Command line raster calculator with numpy syntax 
 
- gdal_calc - gdal_calc.py Command line raster calculator with numpy syntax 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- 
-
- <pre><code>
+<pre><code>
 gdal_calc.py[-A&lt;filename&gt;][--A_band][-B... - Z filename][other_options] Options : -h, --help show this help message and exit-- calc = CALC calculation in gdalnumeric syntax using + -/* or any
                         numpy array functions (i.e. logical_and())
   -A A                  input gdal raster file, note you can use any letter
@@ -40,11 +32,7 @@ gdal_calc.py[-A&lt;filename&gt;][--A_band][-B... - Z filename][other_options] Op
   --debug               print debugging information
 </code></pre> 
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Command line raster calculator with numpy syntax. Use any basic arithmetic supported by numpy arrays such as +-*\ along with logical operators such as &gt;. Note that all files must have the same dimensions, but no projection checking is performed.
+Command line raster calculator with numpy syntax. Use any basic arithmetic supported by numpy arrays such as +-*\ along with logical operators such as &gt;. Note that all files must have the same dimensions, but no projection checking is performed.
 
 <h2>EXAMPLE</h2>
 

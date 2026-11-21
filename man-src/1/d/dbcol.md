@@ -1,4 +1,5 @@
 ---
+
 title: "dbcol(1)"
 name: "dbcol"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbcol/"
 description: "dbcol – select columns from an Fsdb file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbcol [-v] [-e -] [column&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Select one or more columns from the input database. If a value is given for empty columns with the -e option, then any named columns which don&#8217;t exist will be created. Otherwise, non-existent columns are an error. </p>
 <p> Note: a safer way to create columns is dbcolcreate.</p>
 <h2>OPTIONS</h2>

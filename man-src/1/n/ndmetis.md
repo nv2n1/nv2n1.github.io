@@ -1,4 +1,5 @@
 ---
+
 title: "ndmetis(1)"
 name: "ndmetis"
 section: "1"
@@ -9,9 +10,7 @@ description: "ndmetis – Computes a fill-reducing ordering of the vertices of t
 
 <h2>NAME</h2>
 <p> ndmetis &#8211; Computes a fill-reducing ordering of the vertices of the graph using multilevel nested dissection.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ndmetis</code> [<i>options</i>] <i>&lt;filename&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> Required parameters</dd>

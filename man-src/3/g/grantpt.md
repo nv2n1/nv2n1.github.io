@@ -1,4 +1,5 @@
 ---
+
 title: "grantpt(3)"
 name: "grantpt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-grantpt/"
 description: "grantpt – grant access to the slave pseudoterminal"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>
 <p> <code>int grantpt(int </code><i>fd</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -19,7 +19,6 @@ description: "grantpt – grant access to the slave pseudoterminal"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE_EXTENDED)<br />
  Glibc 2.23 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>grantpt</code>() function changes the mode and owner of the slave pseudoterminal device corresponding to the master pseudoterminal referred to by the file descriptor <i>fd</i>. The user ID of the slave is set to the real UID of the calling process. The group ID is set to an unspecified value (e.g., <i>tty</i>). The mode of the slave is set to 0620 (crw&#8211;w&#8212;-). </p>
 <p> The behavior of <code>grantpt</code>() is unspecified if a signal handler is installed to catch <code>SIGCHLD</code> signals.</p>
 <h2>RETURN VALUE</h2>

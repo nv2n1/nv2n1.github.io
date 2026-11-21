@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdelcert(1)"
 name: "euare-userdelcert"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-userdelcert – Delete a signing certificate"
 
 <h2>NAME</h2>
 <p> euare-userdelcert &#8211; Delete a signing certificate</p>
-<h2>SYNOPSIS</h2>
 <p> euare-userdelcert [-u USER] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] CERT</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a signing certificate</p>
 <h3>positional arguments:</h3>
 <dl>

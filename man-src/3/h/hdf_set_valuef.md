@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_set_valuef(3)"
 name: "hdf_set_valuef"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_set_valuef/"
 description: "hdf_set_valuef – Set the value of a named node"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ NEOERR *hdf_set_valuef(HDF *hdf, const char *fmt, ...)
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the pointer to the hdf dataset<br />
  fmt -&gt; the name=value <a href="/docs/linux/man/3-printf/">printf</a>(3) format string </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_set_valuef is a convenience function that wraps hdf_set_value. Due to limitations of C, the fmt is in the format &quot;name=value&quot;, where we will first format the entire string, and then break it at the first (from the left) equal sign (=) and use the left portion as the name and the right portion as the value. This function is somewhat inefficient in that it first allocates the full name=value, and then the call to hdf_set_value duplicates the value portion, and then we free the name=value. Currently, we don&#8217;t strip whitespace from the key or value. In the future, this function might work more like reading a single line of an HDF string or file, allowing for attributes and symlinks to be specified&#8230; maybe. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

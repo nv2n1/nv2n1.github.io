@@ -1,4 +1,5 @@
 ---
+
 title: "aa-enabled(1)"
 name: "aa-enabled"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aa-enabled/"
 description: "aa-enabled – test whether AppArmor is enabled"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aa-enabled</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>aa-enabled</code> is used to determine if AppArmor is enabled.</p>
 <h2>OPTIONS</h2>
 <p> <code>aa-enabled</code> accepts the following arguments:</p>

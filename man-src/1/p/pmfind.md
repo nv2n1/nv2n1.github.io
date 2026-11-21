@@ -1,4 +1,5 @@
 ---
+
 title: "pmfind(1)"
 name: "pmfind"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmfind – find PCP services on the network"
 
 <h2>NAME</h2>
 <p> <code>pmfind</code> &#8211; find PCP services on the network</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmfind</code> [<code>-q</code>] [<code>-m</code> <i>mechanism</i>] [<code>-s</code> <i>service</i>] [<code>-r</code>] [<code>-t</code> <i>timeout</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmfind</code> searches for instances of the specified PCP service being advertised on the network and prints a list of URLs corresponding to the services discovered. </p>
 <p> By default <code>pmfind</code> will search for all supported PCP services, however a specific PCP <i>service</i> to discover can be specified using the <code>-s</code> option. Supported services are <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), <code><a href="/docs/linux/man/1-pmproxy/">pmproxy</a></code>(1) and <code><a href="/docs/linux/man/1-pmwebd/">pmwebd</a></code>(1)<code>.</code> </p>
 <p> The <code>-m</code> option sets the <i>mechanism</i> that <code>pmfind</code> uses when performing service discovery. By default, or if the keyword &quot;all&quot; is specified, every available mechanism will be used (iteratively). Supported mechanisms are:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ctftri(3)"
 name: "ctftri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctftri/"
 description: "ctftri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctftri</code> (TRANSR, UPLO, DIAG, N, A, INFO)<br />
  <i></i><code>CTFTRI</code></p>

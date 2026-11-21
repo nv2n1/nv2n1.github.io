@@ -1,4 +1,5 @@
 ---
+
 title: "alsaunmute(1)"
 name: "alsaunmute"
 section: "1"
@@ -9,7 +10,6 @@ description: "alsaunmute – a simple script to initialize ALSA sound devices"
 
 <h2>NAME</h2>
 <p> alsaunmute &#8211; a simple script to initialize ALSA sound devices </p>
-<h2>DESCRIPTION</h2>
 <p> <code>alsaunmute</code> is a shell script which runs the <code><a href="/docs/linux/man/1-alsactl/">alsactl</a>(1)</code> utility with <i>init</i> argument (see the script for details). </p>
 <h2>OPTIONS</h2>
 <p> None </p>

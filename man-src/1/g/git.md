@@ -1,4 +1,5 @@
 ---
+
 title: "git(1)"
 name: "git"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git/"
 description: "git – the stupid content tracker"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git[--version][--help][-C&lt;path&gt;][-c &lt; name &gt;= &lt;value&gt;]
    [--exec - path[=&lt;path&gt;]][--html - path][--man - path][--info - path]
@@ -15,7 +15,6 @@ git[--version][--help][-C&lt;path&gt;][-c &lt; name &gt;= &lt;value&gt;]
    [--git - dir = &lt;path&gt;][--work - tree = &lt;path&gt;][--namespace = &lt;name&gt;]
    [--super - prefix = &lt;path&gt;][--config - env = &lt; name &gt;= &lt;envvar&gt;]&lt;command&gt;[&lt;args&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. </p>
 <p> See <code><a href="/docs/linux/man/7-gittutorial/">gittutorial</a></code>(7) to get started, then see <code><a href="/docs/linux/man/7-giteveryday/">giteveryday</a></code>(7) for a useful minimum set of commands. The m[blue]<code>Git User&#8217;s Manual</code>m[]<font SIZE="-2">[1]</font> has a more in-depth introduction. </p>
 <p> After you mastered the basic concepts, you can come back to this page to learn what commands Git offers. You can learn more about individual Git commands with &quot;git help command&quot;. <code><a href="/docs/linux/man/7-gitcli/">gitcli</a></code>(7) manual page gives you an overview of the command-line command syntax. </p>

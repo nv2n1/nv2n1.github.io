@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-expecting(3)"
 name: "antlr3-expecting"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_EXCEPTION_struct –"
 ---
 
 <p> Base structure for an ANTLR3 exception tracker.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3exception.h">antlr3exception.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_UCHAR</code> <code>c</code><br />

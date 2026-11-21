@@ -1,4 +1,5 @@
 ---
+
 title: "fdebugdump(1)"
 name: "fdebugdump"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fdebugdump/"
 description: "fdebugdump – dumps a hierarchy of the debug info dies"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fdebugrpm</code> {<i>executable</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fdebugdump</code></p>
 <dd>runs the given program and dumps a hierarchical view of libraries loaded at attach time. Does not watch for loading of new modules, but that would be a good extension.</dd>
 <h2>EXAMPLE</h2>

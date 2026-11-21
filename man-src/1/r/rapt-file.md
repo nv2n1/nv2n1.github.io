@@ -1,4 +1,5 @@
 ---
+
 title: "rapt-file(1)"
 name: "rapt-file"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rapt-file/"
 description: "rapt-file – APT package searching utility — search remotely"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rapt-file</code> [ <code>options</code> ] [ <code>action</code> ] [ <code>pattern</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>rapt-file</code> is a command line tool for searching files in packages for the APT package management system. It differs from apt-file in that it works with remote package indices, so it doesn&#8217;t need to download full Contents files.</p>
 <dl>
 <dt><code>find</code></dt>

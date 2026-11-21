@@ -1,4 +1,5 @@
 ---
+
 title: "extend_dmalloc(1)"
 name: "extend_dmalloc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-extend_dmalloc/"
 description: "extend_dmalloc – Analyze return-addresses from dmalloc logfiles."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>extend_dmalloc</code> [<i>dmalloc-log</i><code>binary</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>extend_dmalloc</code></p>
 <dd>will run <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1) to get information on the return-addresses from a <code>dmalloc</code>(1) logfile. Specifically it will examine any ra= lines and try to get the corresponding line numbers </dd>
 <p> The argument <code>binary</code> must be the binary that generated the log dmalloc-log. </p>

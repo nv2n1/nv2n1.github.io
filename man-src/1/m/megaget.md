@@ -1,4 +1,5 @@
 ---
+
 title: "megaget(1)"
 name: "megaget"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-megaget/"
 description: "megaget – download files from your Mega.co.nz account"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 megaget[--no - progress][--path&lt;path&gt;]&lt;remotepaths&gt;... megaget-- path - &lt;remotefile&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Downloads files from your Mega.co.nz account. </p>
 <p> <code>NOTE</code>: If you want to download entire directories, use <code><a href="/docs/linux/man/1-megasync/">megasync</a></code>(1).</p>
 <h2>OPTIONS</h2>

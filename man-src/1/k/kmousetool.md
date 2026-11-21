@@ -1,4 +1,5 @@
 ---
+
 title: "kmousetool(1)"
 name: "kmousetool"
 section: "1"
@@ -9,11 +10,9 @@ description: "kmousetool – Accessibility tool to help click the mouse"
 
 <h2>NAME</h2>
 <p> kmousetool &#8211; Accessibility tool to help click the mouse</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kmousetool</code> [KDE Generic Options] [Qt&#x2122;&nbsp;<wbr>Generic Options] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd>KMouseTool clicks the mouse whenever the mouse cursor pauses briefly. It was designed to help those with repetitive strain injuries, for whom pressing buttons hurts. </dd>
 <p> KMouseTool can also be configured to wait for a specified time for a drag to begin, before unclicking the mouse. This way, you can use it for drag and drop operations as well. </p>
 <h2>SEE ALSO</h2>

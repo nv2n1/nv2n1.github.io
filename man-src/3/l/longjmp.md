@@ -1,4 +1,5 @@
 ---
+
 title: "longjmp(3)"
 name: "longjmp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-longjmp/"
 description: "setjmp, sigsetjmp, longjmp, siglongjmp – performing a nonlocal goto"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;setjmp.h&gt;
 int setjmp(jmp_buf env);
@@ -18,7 +18,6 @@ void siglongjmp(sigjmp_buf env, int val);
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>setjmp</code>(): see NOTES. </p>
 <p> <code>sigsetjmp</code>(): _POSIX_C_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The functions described on this page are used for performing &quot;nonlocal gotos&quot;: transferring execution from one function to a predetermined location in another function. The <code>setjmp</code>() function dynamically establishes the target to which control will later be transferred, and <code>longjmp</code>() performs the transfer of execution. </p>
 <p> The <code>setjmp</code>() function saves various information about the calling environment (typically, the stack pointer, the instruction pointer, possibly the values of other registers and the signal mask) in the buffer <i>env</i> for later use by <code>longjmp</code>(). In this case, <code>setjmp</code>() returns 0. </p>
 <p> The <code>longjmp</code>() function uses the information saved in <i>env</i> to transfer control back to the point where <code>setjmp</code>() was called and to restore (&quot;rewind&quot;) the stack to its state at the time of the <code>setjmp</code>() call. In addition, and depending on the implementation (see NOTES), the values of some other registers and the process signal mask may be restored to their state at the time of the <code>setjmp</code>() call. </p>

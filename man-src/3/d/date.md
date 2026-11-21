@@ -1,4 +1,5 @@
 ---
+
 title: "date(3)"
 name: "date"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-date/"
 description: "ql/time/date.hpp – date- and time-related classes, typedefs and enumerations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/period.hpp&gt;<br />
  #include &lt;ql/time/weekday.hpp&gt;<br />
  #include &lt;ql/types.hpp&gt;<br />

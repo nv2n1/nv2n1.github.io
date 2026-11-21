@@ -1,4 +1,5 @@
 ---
+
 title: "xsetwacom(1)"
 name: "xsetwacom"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xsetwacom/"
 description: "xsetwacom – commandline utility to query and modify wacom driver settings."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> xsetwacom [options] [command [arguments]] </p>
-<h2>DESCRIPTION</h2>
 <p> This program queries or changes properties on the devices loaded by the wacom driver. The modification of properties happens at runtime and is not persistent through X server restarts.</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

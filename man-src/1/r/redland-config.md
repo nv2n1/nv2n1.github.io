@@ -1,4 +1,5 @@
 ---
+
 title: "redland-config(1)"
 name: "redland-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-redland-config/"
 description: "redland-config – script to get information about the installed version of Redland"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>redland-config</code> [&#8211;cflags] [&#8211;help] [&#8211;libs] [&#8211;libtool-libs] [&#8211;prefix<i>[=DIR]</i>] [&#8211;private-libs] [&#8211;version-decimal] [&#8211;version]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>redland-config</i> is a tool that is used to determine the compile and linker flags that should be used to compile and link programs that use the Redland RDF library.</p>
 <h2>OPTIONS</h2>
 <p> <i>redland-config</i> accepts the following options:</p>

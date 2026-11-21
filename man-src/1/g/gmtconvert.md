@@ -1,4 +1,5 @@
 ---
+
 title: "gmtconvert(1)"
 name: "gmtconvert"
 section: "1"
@@ -9,10 +10,8 @@ description: "gmtconvert – Convert, Paste, and/or Extract columns from data ta
 
 <h2>NAME</h2>
 <p> gmtconvert &#8211; Convert, Paste, and/or Extract columns from data tables</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtconvert</code> [ <i>table</i> ] [ ] [ [<code>+l</code><i>min</i>][<code>+u</code><i>max</i>][<code>+i</code>]] [ [<i>template</i>] ] [ [<code>f</code>|<code>l</code>|<code>m</code><i>stride</i>] ] [ ] [ [<code>c</code>|<code>n</code>|<code>r</code>|<code>v</code>][<i>refpoint</i>] ] [ [<code>tsr</code>] ] [ [<code>~</code>]<i>selection</i>] [ [<code>~</code>]<i>&quot;search string&quot;</i> | [<code>~</code>]/<i>regexp</i>/[<code>i</code>] ] [ ] [ [<i>level</i>] ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmtconvert</code> reads its standard input [or input files] and writes out the desired information to standard output. It can do a combination of nine tasks: (1) convert between binary and ASCII data tables, (2) paste corresponding records from multiple files horizontally into a single file, (3) extract a subset of the available columns, (4) only extract segments whose header record matches a text pattern search, (5) only list segment headers and no data records, (6) extract first and/or last data record for each segment, (7) reverse the order of items on output, (8) output only ranges of segment numbers, and (9) output only segments whose record count matches criteria. Input (and hence output) may have multiple sub-headers, and ASCII tables may have regular headers as well.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None</p>

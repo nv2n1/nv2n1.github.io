@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_version(3)"
 name: "gnutls_x509_crt_get_version"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_crt_get_version – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_version &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_version(gnutls_x509_crt_t </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_crt_t cert</dt>
 <dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the version of the specified Certificate.</p>
 <h2>RETURNS</h2>
 <p> version of certificate, or a negative error code on error.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kgb-client(1)"
 name: "kgb-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kgb-client/"
 description: "kgb-client – relay commits to KGB servers"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>kgb-client</code> &#8211;conf <i>/path/to/config</i> [<i>other-option</i> &#8230;]</dt>
 <dd>
@@ -27,7 +27,6 @@ description: "kgb-client – relay commits to KGB servers"
 <dd>
 </dd><dt><code>kgb-client</code> &#8211;man</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>kgb-client</code> is the client counterpart of <i><a href="/docs/linux/man/1-kgb-bot/">kgb-bot</a></i>(1). It is intended to be used as a hook in your version control system, executed after the repository gets updated. It analyzes the commit(s) and then relays the information to the <font SIZE="-1">KGB</font> server, which will show it on <font SIZE="-1">IRC.</font></p>
 <h2>CONFIGURATION</h2>
 <dl>

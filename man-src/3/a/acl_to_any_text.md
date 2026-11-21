@@ -1,4 +1,5 @@
 ---
+
 title: "acl_to_any_text(3)"
 name: "acl_to_any_text"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_to_any_text/"
 description: "acl_to_any_text – convert an ACL to text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_to_any_text</code> &#8211; convert an ACL to text </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft char * Fo acl_to_any_text Fa acl_t acl Fa const char *prefix Fa char separator Fa int options Fc</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_to_any_text function translates the ACL pointed to by the argument <i>acl</i> into a <code>NULL</code> terminated character string. This character string is composed of the ACL entries contained in <i>acl</i> in the entry text format described on <a href="/docs/linux/man/5-acl/">acl</a>(5). Entries are separated from each other by the <i>separator</i> character. If the argument <i>prefix</i> is not <code>(const char *)NULL</code> each entry is prefixed by this character string. </p>
 <p> If the argument <i>options</i> is <code>0</code> ACL entries are converted using the entry tag type keywords <code>user , group , mask</code> and <code>other</code> User IDs and group IDs of ACL entries that contain such qualifiers are converted to their corresponding names; if an identifier has no corresponding name, a decimal number string is produced. The ACL text representation contains no additional comments. A bitwise combinations of the following <i>options</i> can be used to modify the result:</p>
 <dl>

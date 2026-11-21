@@ -1,4 +1,5 @@
 ---
+
 title: "aio_cancel(3)"
 name: "aio_cancel"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-aio_cancel/"
 description: "aio_cancel – cancel an outstanding asynchronous I/O request"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>int aio_cancel(int </code><i>fd</i><code>, struct aiocb *</code><i>aiocbp</i><code>);</code> </p>
 <p> Link with <i>-lrt</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>aio_cancel</code>() function attempts to cancel outstanding asynchronous I/O requests for the file descriptor <i>fd</i>. If <i>aiocbp</i> is NULL, all such requests are canceled. Otherwise, only the request described by the control block pointed to by <i>aiocbp</i> is canceled. (See <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) for a description of the <i>aiocb</i> structure.) </p>
 <p> Normal asynchronous notification occurs for canceled requests (see <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) and <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7)). The request return status (<code><a href="/docs/linux/man/3-aio_return/">aio_return</a></code>(3)) is set to -1, and the request error status (<code><a href="/docs/linux/man/3-aio_error/">aio_error</a></code>(3)) is set to <code>ECANCELED</code>. The control block of requests that cannot be canceled is not changed. </p>
 <p> If the request could not be canceled, then it will terminate in the usual way after performing the I/O operation. (In this case, <code><a href="/docs/linux/man/3-aio_error/">aio_error</a></code>(3) will return the status <code>EINPROGRESSS</code>.) </p>

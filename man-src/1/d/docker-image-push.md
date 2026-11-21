@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-push(1)"
 name: "docker-image-push"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-image-push/"
 description: "docker-image-push – Push an image or a repository to a registry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker image push [OPTIONS] NAME[:TAG]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Use docker image push to share your images to the Docker Hub &lt;<a rel="nofollow" href="https://hub.docker.com">https://hub.docker.com</a>&gt; registry or to a self-hosted one. </p>
 <p> Refer to <code><a href="/docs/linux/man/1-docker-image-tag/">docker-image-tag</a>(1)</code> for more information about valid image and tag names. </p>
 <p> Killing the <code>docker image push</code> process, for example by pressing <code>CTRL-c</code> while it is running in a terminal, terminates the push operation. </p>

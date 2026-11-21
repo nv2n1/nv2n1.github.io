@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-codecs(1)"
 name: "oggz-codecs"
 section: "1"
@@ -10,7 +11,6 @@ description: "oggz-codecs — List codecs in one or more Ogg files and their bit
 <h2>NAME</h2>
 <p> oggz-codecs &#8212; List codecs in one or more Ogg files and their bitstreams.<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>oggz-codecs</code> [-a | &#8211;all ] [-m | &#8211;mime ] [-1 | &#8211;one-per-line] filename &#8230; </p>
 <p> <code>oggz-codecs</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

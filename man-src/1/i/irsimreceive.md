@@ -1,4 +1,5 @@
 ---
+
 title: "irsimreceive(1)"
 name: "irsimreceive"
 section: "1"
@@ -9,9 +10,7 @@ description: "irsimreceive- decode IR durations data."
 
 <h2>NAME</h2>
 <p> irsimreceive- decode IR durations data.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>irsimreceive [options] &lt;configfile&gt; &lt;datafile&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This is a simple test tool which decodes duration data in &lt;datafile&gt; using an lircd.conf type &lt;configfile&gt;. The outputted data is in the same format as on the lircd output socket. </p>
 <h2>OPTIONS</h2>
 <dl>

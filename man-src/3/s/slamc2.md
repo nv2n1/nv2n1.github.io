@@ -1,4 +1,5 @@
 ---
+
 title: "slamc2(3)"
 name: "slamc2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slamc2/"
 description: "slamchf77.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slamch</code> (CMACH)<br />
  <i></i><code>SLAMCHF77</code> deprecated<br />

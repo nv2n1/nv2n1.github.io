@@ -1,4 +1,5 @@
 ---
+
 title: "pdfimages(1)"
 name: "pdfimages"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdfimages/"
 description: "pdfimages – Portable Document Format (PDF) image extractor (version 3.03)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdfimages</code> [options] <i>PDF-file image-root</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Pdfimages</code> saves images from a Portable Document Format (PDF) file as Portable Pixmap (PPM), Portable Bitmap (PBM), Portable Network Graphics (PNG), Tagged Image File Format (TIFF), JPEG, JPEG2000, or JBIG2 files. </p>
 <p> Pdfimages reads the PDF file <i>PDF-file</i>, scans one or more pages, and writes one file for each image, <i>image-root</i>&#8211;<i>nnn</i>.<i>xxx</i>, where <i>nnn</i> is the image number and <i>xxx</i> is the image type (.ppm, .pbm, .png, .tif, .jpg, jp2, jb2e, or jb2g). If <i>PDF-file</i> is &#8216;-&#8216;, it reads the PDF file from stdin. </p>
 <p> The default output format is PBM (for monochrome images) or PPM for non-monochrome. The -png or -tiff options change to default output to PNG or TIFF respectively. If both -png and -tiff are specified, CMYK images will be written as TIFF and all other images will be written as PNG. In addition the -j, -jp2, and -jbig2 options will cause JPEG, JPEG2000, and JBIG2, respectively, images in the PDF file to be written in their native format.</p>

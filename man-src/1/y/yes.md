@@ -1,4 +1,5 @@
 ---
+
 title: "yes(1)"
 name: "yes"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-yes/"
 description: "yes – output a string repeatedly until killed"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>yes</code> [<i>,STRING/</i>]&#8230;<br />
  <code>yes</code> <i>,OPTION/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Repeatedly output a line with all specified STRING(s), or &#8216;y&#8217;.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

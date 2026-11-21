@@ -1,4 +1,5 @@
 ---
+
 title: "gnubiff(1)"
 name: "gnubiff"
 section: "1"
@@ -9,9 +10,7 @@ description: "gnubiff – a mail notification program supporting GTK+ and GNOME"
 
 <h2>NAME</h2>
 <p> gnubiff &#8211; a mail notification program supporting GTK+ and GNOME</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gnubiff</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> gnubiff is a mail notification program that checks for mail, displays headers when new mail has arrived and allow to read first lines of new messages. It relies on the GNOME and GTK libraries but can be compiled and used with or without GNOME support. Supported protocols are pop3, apop, imap4, mh, qmail and mailfile. Furthermore, gnubiff is fully configurable with a lot of options like polltime, poptime, sounds, mail reader, mailbox names, etc. and can also filter spam. Note that gnubiff is not a mail reader even if it offers the possibility of reading very first lines of new messages. If you send some requests for specific features to be implemented, keep that in mind!</p>
 <h2>OPTIONS</h2>
 <p> gnubiff accepts the following command line options:</p>

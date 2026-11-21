@@ -1,4 +1,5 @@
 ---
+
 title: "get_nfragments(3)"
 name: "get_nfragments"
 section: "3"
@@ -9,11 +10,9 @@ description: "get_nfragments — retrieve the number of format file fragments in
 
 <h2>NAME</h2>
 <p> get_nfragments &#8212; retrieve the number of format file fragments in a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int get_nfragments(const DIRFILE *</code><i>dirfile</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>get_nfragments</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the total number of parsed format file fragments in the database. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <h2>RETURN VALUE</h2>

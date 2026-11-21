@@ -1,4 +1,5 @@
 ---
+
 title: "xbacklight(1)"
 name: "xbacklight"
 section: "1"
@@ -9,9 +10,7 @@ description: "xbacklight – adjust backlight brightness using RandR extension"
 
 <h2>NAME</h2>
 <p> xbacklight &#8211; adjust backlight brightness using RandR extension</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xbacklight</code> [-help] [-display <i>display</i>] [-get] [-set percent] [-inc percent] [-dec percent]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xbacklight</i> is used to adjust the backlight brightness where supported. It finds all outputs on the X server supporting backlight brightness control and changes them all in the same way.</p>
 <dl>
 <dt>-get</dt>

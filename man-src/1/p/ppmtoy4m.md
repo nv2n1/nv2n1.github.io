@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoy4m(1)"
 name: "ppmtoy4m"
 section: "1"
@@ -9,9 +10,7 @@ description: "ppmtoy4m – Convert PPM images to YUV4MPEG2 stream"
 
 <h2>NAME</h2>
 <p> ppmtoy4m &#8211; Convert PPM images to YUV4MPEG2 stream </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtoy4m</code> [<i>options</i>] <i>[ filename ]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ppmtoy4m</code> converts one or more raw PPM images into a YUV4MPEG2 stream ready for further processing by other video tools. </p>
 <p> Output is to stdout to facilitate piping to other MJPEG tools. The size of the output frame(s) is determined from the (first) input image. </p>
 <p> Input is a &#8216;raw&#8217; format PPM image, read from stdin or from the optional filename. The input may contain multiple PPM images concatenated together; <code>ppmtoy4m</code> will read and process them sequentially. All images must have identical size and format. Input images can be interpreted as whole progressive frames, interleaved fields, or (in pairs) as sequential fields. The input images must have 8 bits per channel (i.e. &#8216;maxval&#8217; must be 255). </p>

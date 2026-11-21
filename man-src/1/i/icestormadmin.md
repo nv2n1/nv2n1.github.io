@@ -1,4 +1,5 @@
 ---
+
 title: "icestormadmin(1)"
 name: "icestormadmin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-icestormadmin/"
 description: "icestormadmin – The IceStorm administration tool."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> icestormadmin [options] [file&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> The IceStorm administration tool is a command-line program that provides administrative control of an IceStorm server. Full documentation for icestormadmin is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/IceStorm+Administration">http://doc.zeroc.com/display/Ice/IceStorm+Administration</a>&quot;. </p>
 <h2>OPTIONS</h2>

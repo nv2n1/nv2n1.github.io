@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_writefile(3)"
 name: "libssh2_knownhost_writefile"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_knownhost_writefile – write a collection of known hosts 
 
 <h2>NAME</h2>
 <p> libssh2_knownhost_writefile &#8211; write a collection of known hosts to a file</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_knownhost_writefile(LIBSSH2_KNOWNHOSTS *hosts,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const char&nbsp;<wbr>*filename, int type);</p>
-<h2>DESCRIPTION</h2>
 <p> Writes all the known hosts to the specified file using the specified file format. </p>
 <p> <i>filename</i> specifies what filename to create </p>
 <p> <i>type</i> specifies what file type it is, and <i>LIBSSH2_KNOWNHOST_FILE_OPENSSH</i> is the only currently supported format.</p>

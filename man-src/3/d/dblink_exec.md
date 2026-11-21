@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_exec(3)"
 name: "dblink_exec"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-dblink_exec/"
 description: "dblink_exec – executes a command in a remote database"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dblink_exec(text connname, text sql[, bool fail_on_error]) returns text
     dblink_exec(text connstr, text sql[, bool fail_on_error]) returns text
     dblink_exec(text sql[, bool fail_on_error]) returns text
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>dblink_exec</code> executes a command (that is, any SQL statement that doesn&#8217;t return rows) in a remote database. </p>
 <p> When two text arguments are given, the first one is first looked up as a persistent connection&#8217;s name; if found, the command is executed on that connection. If not found, the first argument is treated as a connection info string as for <code>dblink_connect</code>, and the indicated connection is made just for the duration of this command.</p>
 <h2>ARGUMENTS</h2>

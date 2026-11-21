@@ -1,4 +1,5 @@
 ---
+
 title: "wicd-gtk(1)"
 name: "wicd-gtk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wicd-gtk/"
 description: "wicd-client – frontend to the WICD daemon"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> wireless (and wired) connection daemon front-end. </p>
 <p> If <code>wicd-curses</code> is installed, and you attempt to run wicd-client without an active X server on the current terminal, wicd-client will attempt to run <code>wicd-curses</code> instead. It will warn you the first time this happens.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pcdovtoppm(1)"
 name: "pcdovtoppm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pcdovtoppm/"
 description: "pcdovtoppm – create index image for a photo CD"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pcdovtoppm</code> [<code>-m </code><i>width</i>] [<code>-s </code><i>size</i>] [<code>-a </code><i>across</i>] [<code>-c </code><i>colors</i>] [<code>-f </code><i>font</i>] [<code>-b</code>|<code>-w</code>] [<i>pcdfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> This program generates an index image in PPM format for a photo CD, based on the photo CD overview file. </p>
 <p> You can achieve a similar result with <code>hpcdtoppm -Overview</code> followed by <code>pnmindex -black</code> on the generated PPM images. </p>

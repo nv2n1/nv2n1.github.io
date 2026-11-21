@@ -1,4 +1,5 @@
 ---
+
 title: "cclive(1)"
 name: "cclive"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cclive/"
 description: "cclive – command line video download tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cclive [options] [url&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> cclive is a command line video download tool for Youtube and similar websites. It is a rewrite of the clive software in C<font SIZE="-2">++</font>.</p>
 <h2>OPTIONS</h2>
 <dl>

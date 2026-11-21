@@ -1,4 +1,5 @@
 ---
+
 title: "euca-replace-network-acl-entry(1)"
 name: "euca-replace-network-acl-entry"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-replace-network-acl-entry – Replace an entry in a VPC netwo
 
 <h2>NAME</h2>
 <p> euca-replace-network-acl-entry &#8211; Replace an entry in a VPC network ACL</p>
-<h2>SYNOPSIS</h2>
 <p> euca-replace-network-acl-entry <code>-n</code> INT (<code>&#8211;allow</code> | <code>&#8211;deny</code>) <code>-r</code> CIDR</p>
 <dl>
 <dt>[-P PROTOCOL] [&#8211;egress] [-p RANGE]</dt>
 <dd> [-t TYPE:CODE] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] NACL</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Replace an entry in a VPC network ACL</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "chpev(3)"
 name: "chpev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chpev/"
 description: "chpev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, RWORK, INFO)<br />
  <i></i><code> CHPEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

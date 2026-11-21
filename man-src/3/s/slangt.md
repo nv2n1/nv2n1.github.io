@@ -1,4 +1,5 @@
 ---
+
 title: "slangt(3)"
 name: "slangt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slangt/"
 description: "slangt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slangt</code> (NORM, N, DL, D, DU)<br />
  <i></i><code>SLANGT</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general tridiagonal matrix.</p>

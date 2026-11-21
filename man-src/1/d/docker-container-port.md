@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-port(1)"
 name: "docker-container-port"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-container-port/"
 description: "docker-container-port – List port mappings or a specific mapping for the container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker container port CONTAINER [PRIVATE_PORT[/PROTO]]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List port mappings for the CONTAINER, or lookup the public-facing port that is NAT-ed to the PRIVATE_PORT </p>
 <h2>EXAMPLES</h2>
 <dl>

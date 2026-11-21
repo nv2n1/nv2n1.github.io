@@ -1,4 +1,5 @@
 ---
+
 title: "aumix(1)"
 name: "aumix"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-aumix/"
 description: "aumix – adjust audio mixer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>aumix</code> &#8211; adjust audio mixer </p>
-<h2>SYNOPSIS</h2>
 <p> [-&lt;channel option&gt;[[+|-][&lt;amount&gt;]]|&lt;level&gt;|R[ecord]|P[lay]|q[uery]] [-dhILqS] [-f &lt;rc file&gt;][-C &lt;color scheme file&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> This program adjusts the settings of an audio mixing device. It can be used from the command line, in scripts, or interactively with the keyboard or mouse.</p>
 <h2>OPTIONS</h2>
 <h3>CHANNEL OPTIONS</h3>

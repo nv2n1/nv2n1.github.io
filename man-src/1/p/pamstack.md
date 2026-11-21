@@ -1,4 +1,5 @@
 ---
+
 title: "pamstack(1)"
 name: "pamstack"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pamstack/"
 description: "pamstack – stack planes of multiple PAM images into one PAM image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamstack</code> [<code>-tupletype </code><i>tupletype</i>] [<i>inputfilespec</i>] </p>
 <p> All options may be abbreviated to the shortest unique prefix. </p>
-<h2>DESCRIPTION</h2>
 <p> Reads multiple PAM or PNM images as input. Produces a PAM image as output, consisting of all the planes (channels) of the inputs, stacked in the order specified. </p>
 <p> The output is the same dimensions as the inputs, except that the depth is the sum of the depths of the inputs. It has the same maxval. <code>pamstack</code> fails if the inputs are not all the same width, height, and maxval. The tuple type is a null string unless you specify the <code>-tupletype</code> option. </p>
 <p> <code>pamchannel</code> does the opposite of <code>pamstack:</code> It extracts individual planes from a single PAM. </p>

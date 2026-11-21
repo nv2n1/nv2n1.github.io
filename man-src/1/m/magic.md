@@ -1,4 +1,5 @@
 ---
+
 title: "magic(1)"
 name: "magic"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-magic/"
 description: "magic – VLSI layout editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>magic</code> [ <code>-T&nbsp;<wbr></code> <i>technology</i> ] [ <code>-d&nbsp;<wbr></code> <i>device_type</i> ] [ <code>-g&nbsp;<wbr></code> <i>graphics_port</i> ] [ <code>-m&nbsp;<wbr></code> <i>monitor_type</i> ] [ <code>-D</code> ] [ <i>file</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> Magic is an interactive editor for VLSI layouts that runs under all variants of UNIX, including Mac OS-X and Cygwin. This man page is a reference manual; if you are a first-time user, you should use the Magic tutorials to get acquainted with the system (see the online resources links below). </p>
 <p> Magic uses two windows: one for text and a separate window for displaying layouts. Magic runs under the window system X11 (use under Cygwin requires the presence of an X11 server in Windows; the server that comes packaged with Cygwin works well). The command line switch &quot;-d&quot; can be used to tell Magic which kind of display you are running. Specifically, this is useful to tell magic to use OpenGL graphics instead of plain X11 (&quot;-d OGL&quot;), or to use 24 bit plane graphics instead of 8 bit planes (&quot;-d 24BITS&quot;) if both are available on a video card with overlay support. </p>
 <p> Here are the options accepted by Magic:</p>

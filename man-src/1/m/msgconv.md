@@ -1,4 +1,5 @@
 ---
+
 title: "msgconv(1)"
 name: "msgconv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msgconv/"
 description: "msgconv – character set conversion for message catalog"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msgconv</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Converts a translation catalog to a different character encoding. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

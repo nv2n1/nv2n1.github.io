@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-sql(1)"
 name: "mdb-sql"
 section: "1"
@@ -9,11 +10,9 @@ description: "mdb-sql – SQL interface to MDB Tools"
 
 <h2>NAME</h2>
 <p> <code>mdb-sql </code>&#8211; SQL interface to MDB Tools</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 mdb - sql[-HFp][-d delimiter][-i file][-o file][database]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mdb-sql</code> is a utility program distributed with MDB Tools. </p>
 <p> <code>mdb-sql</code> allows querying of an MDB <i>database</i> using a limited SQL subset language.</p>
 <h2>OPTIONS</h2>

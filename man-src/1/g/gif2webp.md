@@ -1,4 +1,5 @@
 ---
+
 title: "gif2webp(1)"
 name: "gif2webp"
 section: "1"
@@ -9,9 +10,7 @@ description: "gif2webp – Convert a GIF image to WebP"
 
 <h2>NAME</h2>
 <p> gif2webp &#8211; Convert a GIF image to WebP</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gif2webp</code> [<i>options</i>]<i> input_file.gif -o output_file.webp</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>gif2webp</code> command. </p>
 <p> <code>gif2webp</code> converts a GIF image to a WebP image.</p>
 <h2>OPTIONS</h2>

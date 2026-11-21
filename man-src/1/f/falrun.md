@@ -1,4 +1,5 @@
 ---
+
 title: "falrun(1)"
 name: "falrun"
 section: "1"
@@ -9,9 +10,7 @@ description: "flcrun – The Falcon command line execution tool"
 
 <h2>NAME</h2>
 <p> flcrun &#8211; The Falcon command line execution tool </p>
-<h2>SYNOPSIS</h2>
 <p> <code>falrun [options] [main_script] [script_options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>falrun</code> command line tool is a subset of the <code><a href="/docs/linux/man/1-falcon/">falcon</a>(1)</code> command line interpreter which only executes pre-compiled falcon scripts in &quot;.fam&quot; module files. This is meant to launch Falcon based application which were compiled on a different system, and whose source is not shipped. </p>
 <h2>OPTIONS</h2>
 <dl>

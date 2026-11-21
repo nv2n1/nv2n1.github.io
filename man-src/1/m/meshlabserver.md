@@ -1,4 +1,5 @@
 ---
+
 title: "meshlabserver(1)"
 name: "meshlabserver"
 section: "1"
@@ -11,7 +12,6 @@ description: "MeshLab – a tool for mesh inspection, processing, and conversion
 <p> MeshLab &#8211; a tool for mesh inspection, processing, and conversion</p>
 <h2>SYNOPSYS</h2>
 <p> meshlabserver [args]</p>
-<h2>DESCRIPTION</h2>
 <p> MeshLab is an open source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.The system is aimed to help the processing of the typical not-so-small unstructured models arising in 3D scanning, providing a set of tools for editing, cleaning, healing, inspecting, rendering and converting this kind of meshes.The system is based on the VCG library developed at the Visual Computing Lab of ISTI &#8211; CNR. </p>
 <h2>OPTIONS</h2>
 <p> <i> meshlabserver</i> accepts the following options:</p>

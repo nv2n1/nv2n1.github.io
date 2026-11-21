@@ -1,4 +1,5 @@
 ---
+
 title: "acpihelp(1)"
 name: "acpihelp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-acpihelp/"
 description: "acpihelp – ACPI help utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>acpihelp</code> &lt;option&gt;<i>&#8230;</i> [&lt;name-prefix&gt;|&lt;hex-value&gt;] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>acpihelp</code> command. The option list is taken from the acpihelp interactive help. </p>
 <p> <code>acpihelp</code> provides descriptive text for AML and ASL keywords, methods, and opcodes. </p>
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>

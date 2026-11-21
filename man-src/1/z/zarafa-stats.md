@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-stats(1)"
 name: "zarafa-stats"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zarafa-stats/"
 description: "zarafa-stats – Dump zarafa statistics tables."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-stats</code> <i>TABLE</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This program dumps a statistics table that the zarafa-server program collects. The Zarafa server must be running for <code>zarafa-stats</code> to work. </dd>
 <p> If no table, or an invalid table is given, an error message is printed.</p>
 <h2>TABLES</h2>

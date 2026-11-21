@@ -1,4 +1,5 @@
 ---
+
 title: "docker-swarm-ca(1)"
 name: "docker-swarm-ca"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-swarm-ca/"
 description: "docker-swarm-ca – Display and rotate the root CA"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker swarm ca [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Display and rotate the root CA </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;ca-cert</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Path to the PEM-formatted root CA certificate to use for the new cluster</p>

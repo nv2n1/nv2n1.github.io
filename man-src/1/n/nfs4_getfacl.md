@@ -1,4 +1,5 @@
 ---
+
 title: "nfs4_getfacl(1)"
 name: "nfs4_getfacl"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfs4_getfacl – get NFSv4 file/directory access control lists"
 
 <h2>NAME</h2>
 <p> nfs4_getfacl &#8211; get NFSv4 file/directory access control lists</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nfs4_getfacl [-H]</code> <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>nfs4_getfacl </code> will display the NFSv4 Access Control List (ACL) for <i>file </i> (a file or directory), provided <i>file </i> is on a mounted NFSv4 filesystem which supports ACLs. </p>
 <p> If the <code>-H</code>/<code>&#8211;more-help</code> flag is specified, <code>nfs4_getfacl</code> will print some information about NFSv4 ACLs and the fields used in ACEs. </p>
 <p> The output format for an NFSv4 file ACL, e.g., is:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dtzrqf(3)"
 name: "dtzrqf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtzrqf/"
 description: "dtzrqf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtzrqf</code> (M, N, A, LDA, TAU, INFO)<br />
  <i></i><code>DTZRQF</code></p>

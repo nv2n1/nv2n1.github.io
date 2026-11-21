@@ -1,4 +1,5 @@
 ---
+
 title: "pamendian(1)"
 name: "pamendian"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pamendian/"
 description: "pamendian – reverse endianness of a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamendian</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> All Netpbm formats that have samples in pure binary format with multiple bytes are defined to have them in big endian (most significant byte first) order. However, there exist variations on these formats, primarily developed before official multibyte Netpbm formats existed, that are identical to Netpbm formats in every respect except that samples are in little endian (least significant byte first) order. </p>
 <p> <code>pamendian</code> reverses the byte order of the sample to convert between the two formats. If the input is true PAM, PGM, or PPM, the output is the little endian variation on that format, and vice versa. </p>

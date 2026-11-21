@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_attach_counters_point_flow(3)"
 name: "ibv_attach_counters_point_flow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_attach_counters_point_flow/"
 description: "ibv_attach_counters_point_flow – attach individual counter definition to a flow object"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -18,7 +18,6 @@ int ibv_attach_counters_point_flow(struct ibv_counters *counters,
                                    struct ibv_flow *flow);
 </code></pre>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Attach counters point are a family of APIs to attach individual counter description definition to a verb object at a specific index location. </p>
 <p> Counters object will start collecting values after it is bound to the verb object resource. </p>
 <p> A static attach can be created when NULL is provided instead of the reference to the verbs object (e.g.: in case of flow providing NULL instead of flow). In this case, this counters object will only start collecting values after it is bound to the verbs resource, for flow this is when referencing the counters handle when creating a flow with ibv_create_flow(). </p>

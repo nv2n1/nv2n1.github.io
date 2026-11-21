@@ -1,4 +1,5 @@
 ---
+
 title: "fmod(3)"
 name: "fmod"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fmod/"
 description: "fmod, fmodf, fmodl – floating-point remainder function"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double fmod(double x, double y);
@@ -22,7 +22,6 @@ long double fmodl(long double x, long double y);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions compute the floating-point remainder of dividing <i>x</i> by <i>y</i>. The return value is <i>x</i> &#8211; <i>n</i> * <i>y</i>, where <i>n</i> is the quotient of <i>x</i> / <i>y</i>, rounded toward zero to an integer.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the value <i>x</i>&nbsp;&#8211;&nbsp;<i>n</i>*<i>y</i>, for some integer <i>n</i>, such that the returned value has the same sign as <i>x</i> and a magnitude less than the magnitude of <i>y</i>. </p>

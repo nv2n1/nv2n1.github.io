@@ -1,4 +1,5 @@
 ---
+
 title: "pltcl(1)"
 name: "pltcl"
 section: "1"
@@ -9,9 +10,7 @@ description: "pltcl – Tcl interface to PLplot"
 
 <h2>NAME</h2>
 <p> pltcl &#8211; Tcl interface to PLplot</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pltcl</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pltcl</code> command. </p>
 <p> <code>pltcl</code> is the main program for Tcl interface to PLplot. Allows interpretive execution of plotting primitives without regard to output driver. It is essentially an extended tclsh, with knowledge of the complete PLplot Tcl API.</p>
 <h2>SEE ALSO</h2>

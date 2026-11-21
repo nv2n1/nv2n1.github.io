@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-documents(1)"
 name: "gnome-documents"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gnome-documents/"
 description: "gnome-documents – A document manager application for GNOME"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-documents</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gnome-documents</code></p>
 <dd>is a document manager application designed to work with GNOME 3. You can view your local and online documents, search through them, print or mark them as favorites. It&#8217;s included in the default set of core applications since GNOME 3.2.</dd>
 <h2>BUGS</h2>

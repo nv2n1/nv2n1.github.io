@@ -1,4 +1,5 @@
 ---
+
 title: "idevicebackup(1)"
 name: "idevicebackup"
 section: "1"
@@ -9,9 +10,7 @@ description: "idevicebackup – Create or restore backup for devices."
 
 <h2>NAME</h2>
 <p> idevicebackup &#8211; Create or restore backup for devices.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>idevicebackup</code> [OPTIONS] CMD [DIRECTORY] </p>
-<h2>DESCRIPTION</h2>
 <p> Create or restore backup from the current or specified directory. </p>
 <h2>OPTIONS</h2>
 <dl>

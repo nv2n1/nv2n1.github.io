@@ -1,4 +1,5 @@
 ---
+
 title: "bond_(3)"
 name: "bond_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bond_/"
 description: "QuantLib::FixedRateBondHelper – fixed-coupon bond helper"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/bondhelpers.hpp&gt; </p>
 <p> Inherits <code>BootstrapHelper&lt; YieldTermStructure &gt;</code>. </p>
 <h3>Public Member Functions</h3>

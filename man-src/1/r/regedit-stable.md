@@ -1,4 +1,5 @@
 ---
+
 title: "regedit-stable(1)"
 name: "regedit-stable"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-regedit-stable/"
 description: "regedit – Wine registry editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>regedit</code> [<i>text file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>regedit</code> is the Wine registry editor, designed to be compatible with its Microsoft Windows counterpart. If called without any options, it will start the full GUI editor. </p>
 <p> The switches are case-insensitive and can be prefixed either by &#8216;-&#8216; or &#8216;/&#8217;.</p>
 <h2>OPTIONS</h2>

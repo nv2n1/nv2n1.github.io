@@ -1,4 +1,5 @@
 ---
+
 title: "project(1)"
 name: "project"
 section: "1"
@@ -9,10 +10,8 @@ description: "project – Project table data onto lines or great circles, genera
 
 <h2>NAME</h2>
 <p> project &#8211; Project table data onto lines or great circles, generate tracks, or translate coordinates</p>
-<h2>SYNOPSIS</h2>
 <p> <code>project</code> [ <i>table</i> ] <i>cx</i>/<i>cy</i> [ <i>azimuth</i> ] [ <i>bx</i>/<i>by</i> ] [ <i>flags</i> ] [ <i>dist</i>[/<i>colat</i>][<code>+</code>] ] [ [<code>w</code>][<i>l_min</i>/<i>l_max</i>] ] [ ] [ ] [ ] [ <i>px</i>/<i>py</i> ] [ [<i>level</i>] ] [ <i>w_min</i>/<i>w_max</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>project</code> reads arbitrary (<i>x</i>, <i>y</i>[,<i>z</i>]) data from standard input [or <i>table</i> ] and writes to standard output any combination of (<i>x</i>, <i>y</i>, <i>z</i>, <i>p</i>, <i>q</i>, <i>r</i>, <i>s</i>), where (<i>p</i>, <i>q</i>) are the coordinates in the projection, (<i>r</i>, <i>s</i>) is the position in the (<i>x</i>, <i>y</i>) coordinate system of the point on the profile (<i>q</i> = 0 path) closest to (<i>x</i>, <i>y</i>), and <i>z</i> is all remaining columns in the input (beyond the required <i>x</i> and <i>y</i> columns). </p>
 <p> Alternatively, <code>project</code> may be used to generate (<i>r</i>, <i>s</i>, <i>p</i>) triples at equal increments <i>dist</i> along a profile. In this case ( <code>-G</code> option), no input is read. </p>
 <p> Projections are defined in any (but only) one of three ways: </p>

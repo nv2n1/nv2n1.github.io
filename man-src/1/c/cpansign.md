@@ -1,4 +1,5 @@
 ---
+
 title: "cpansign(1)"
 name: "cpansign"
 section: "1"
@@ -6,14 +7,9 @@ letter: "c"
 url: "/docs/linux/man/1-cpansign/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+cpansign - CPAN signature management utility 
 
- cpansign - CPAN signature management utility 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     % cpansign              # verify an existing SIGNATURE, or
                             # make a new one if none exists 
     % cpansign file.par     # verify or sign a PAR file
@@ -26,9 +22,7 @@ url: "/docs/linux/man/1-cpansign/"
     % cpansign -h           # same thing
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This utility lets you create and verify <font SIZE="-1">SIGNATURE</font> files.
+This utility lets you create and verify <font SIZE="-1">SIGNATURE</font> files.
 
 <h2>SEE ALSO</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-images(1)"
 name: "atomic-images"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-images/"
 description: "atomic-images – operations on container images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic images COMMAND [OPTIONS] [IMAGES&#8230;]</code> </p>
 <p> atomic images allows the user to view and operate on container images in a docker registry. </p>
 <h2>COMMANDS</h2>

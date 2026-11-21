@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcmp(1)"
 name: "fstrcmp"
 section: "1"
@@ -9,13 +10,11 @@ description: "fstrcmp – fuzzy comparison of strings"
 
 <h2>NAME</h2>
 <p> fstrcmp &#8211; fuzzy comparison of strings</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fstrcmp</code> [ <code>-p</code> ] <i>first-string</i> <i>second-string</i> </p>
 <p> <code>fstrcmp</code> <code>-w</code> <i>first-string</i> <i>second-string</i> </p>
 <p> <code>fstrcmp</code> <code>-a</code> <i>first-file</i> <i>second-file</i> </p>
 <p> <code>fstrcmp</code> <code>-s</code> <i>needle</i> <i>haystack</i>&#8230; </p>
 <p> <code>fstrcmp</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> The fstrcmp command is used to make fuzzy comparisons between strings. The &#8220;edit distance&#8221; between the strings is printed, with 0.0 meaning the strings are utterly un-alike, and 1.0 meaning the strings are identical. </p>
 <p> You may need to quote the string to insulate them from the shell.</p>
 <h2>OPTIONS</h2>

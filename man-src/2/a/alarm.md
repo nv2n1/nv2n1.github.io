@@ -1,4 +1,5 @@
 ---
+
 title: "alarm(2)"
 name: "alarm"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-alarm/"
 description: "alarm – set an alarm clock for delivery of a signal"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 unsigned int alarm(unsigned int seconds);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>alarm</code>() arranges for a <code>SIGALRM</code> signal to be delivered to the calling process in <i>seconds</i> seconds. </p>
 <p> If <i>seconds</i> is zero, any pending alarm is canceled. </p>
 <p> In any event any previously set <code>alarm</code>() is canceled.</p>

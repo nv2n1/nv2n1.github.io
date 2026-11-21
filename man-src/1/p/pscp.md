@@ -1,4 +1,5 @@
 ---
+
 title: "pscp(1)"
 name: "pscp"
 section: "1"
@@ -9,7 +10,6 @@ description: "pscp – command-line SCP (secure copy) / SFTP client"
 
 <h2>NAME</h2>
 <p> <code>pscp</code> &#8211; command-line SCP (secure copy) / SFTP client</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 pscp &amp;nbsp;
 [options] &amp; nbsp;
@@ -25,7 +25,6 @@ source &amp;nbsp;
 - ls &amp;nbsp;
 [user @] host : filespec
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>pscp</code> is a command-line client for the SSH-based SCP (secure copy) and SFTP (secure file transfer protocol) protocols.</p>
 <h2>OPTIONS</h2>
 <p> The command-line options supported by <i>pscp</i> are:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "aptitude-create-state-bundle(1)"
 name: "aptitude-create-state-bundle"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-aptitude-create-state-bundle/"
 description: "aptitude-create-state-bundle – bundle the current aptitude state"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>aptitude-create-state-bundle</code> [&lt;<i>options</i>&gt;&#8230;] &lt;<i>output-file</i>&gt;</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>aptitude-create-state-bundle</code></p>
 <dd>produces a compressed archive storing the files that are required to replicate the current package archive state. The following files and directories are included in the bundle: </dd>
 <dl>

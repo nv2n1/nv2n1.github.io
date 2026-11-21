@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_obj_attr_u(3)"
 name: "hwloc_obj_attr_u"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_obj_attr_u/"
 description: "hwloc_obj_attr_u –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hwloc.h&gt;</p>
 <h3>Data Structures</h3>
 <p> struct <code>hwloc_bridge_attr_s</code> </p>

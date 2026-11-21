@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_proto_descriptor_t(3)"
 name: "globus_gass_transfer_proto_descriptor_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_gass_transfer_proto_descriptor_t –"
 ---
 
 <p> Protocol module descriptor structure.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_transfer_proto.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>url_scheme</code> </p>

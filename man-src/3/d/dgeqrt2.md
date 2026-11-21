@@ -1,4 +1,5 @@
 ---
+
 title: "dgeqrt2(3)"
 name: "dgeqrt2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgeqrt2/"
 description: "dgeqrt2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeqrt2</code> (M, N, A, LDA, T, LDT, INFO)<br />
  <i></i><code>DGEQRT2</code> computes a QR factorization of a general real or complex matrix using the compact WY representation of Q.</p>

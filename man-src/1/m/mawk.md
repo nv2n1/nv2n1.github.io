@@ -1,4 +1,5 @@
 ---
+
 title: "mawk(1)"
 name: "mawk"
 section: "1"
@@ -6,10 +7,9 @@ letter: "m"
 url: "/docs/linux/man/1-mawk/"
 description: "mawk – pattern scanning and text processing language"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>mawk</code> [-<code>W </code><i>option</i>] [-<code>F </code><i>value</i>] [-<code>v </code><i>var=value</i>] [--] &#8216;program text&#8217; [file ...] <br />
  <code>mawk</code> [-<code>W </code><i>option</i>] [-<code>F </code><i>value</i>] [-<code>v </code><i>var=value</i>] [-<code>f </code><i>program-file</i>] [--] [file ...]  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>mawk</code> is an interpreter for the AWK Programming Language. The AWK language is useful for manipulation of data files, text retrieval and processing, and for prototyping and experimenting with algorithms. <code>mawk</code> is a <i>new awk</i> meaning it implements the AWK language as defined in Aho, Kernighan and Weinberger, <i>The AWK Programming Language,</i> Addison-Wesley Publishing, 1988 (hereafter referred to as the AWK book.) <code>mawk</code> conforms to the POSIX 1003.2 (draft 11.3) definition of the AWK language which contains a few features not described in the AWK book, and <code>mawk</code> provides a small number of extensions. </p>
 <p> An AWK program is a sequence of <i>pattern {action}</i> pairs and function definitions. Short programs are entered on the command line usually enclosed in &#8216; &#8216; to avoid shell interpretation. Longer programs can be read in from a file with the -f option. Data input is read from the list of files on the command line or from standard input when the list is empty. The input is broken into records as determined by the record separator variable, <code>RS</code>. Initially, <code>RS</code> = ``\n&#8217;&#8216; and records are synonymous with lines. Each record is compared against each <i>pattern</i> and if it matches, the program text for <i>{action}</i> is executed.  </p>
 <h2>OPTIONS</h2>

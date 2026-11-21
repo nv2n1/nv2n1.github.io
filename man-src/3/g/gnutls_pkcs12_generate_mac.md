@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_generate_mac(3)"
 name: "gnutls_pkcs12_generate_mac"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs12_generate_mac – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_generate_mac &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_generate_mac(gnutls_pkcs12_t </code><i>pkcs12</i><code>, const char * </code><i>pass</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_pkcs12_generate_mac – API function"
 <dd> should contain a gnutls_pkcs12_t structure</dd>
 <dt>const char * pass</dt>
 <dd> The password for the MAC</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will generate a MAC for the PKCS12 structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tracker3-status(1)"
 name: "tracker3-status"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-tracker3-status/"
 description: "tracker3-status – Provide status and statistics on the data indexed"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 status
     tracker3 status [[expression1]...] tracker3 status-- stat[-a] [[expression1]...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Display the status of the current index and data set. A summary of recorded failures during file metadata indexing is also displayed. </p>
 <p> Providing a search expression will list the full details of the recorded failures matching the filename. </p>
 <p> With the <code>&#8211;stat</code> option, displays statistics about the RDF classes and how many of each exist for data set that has been indexed. For example, &quot;10 Folders&quot;.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wget(1)"
 name: "wget"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wget/"
 description: "Wget – The non-interactive network downloader."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> wget [<i>option</i>]&#8230; [<i></i><font SIZE="-1"><i>URL</i></font><i></i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">GNU</font> Wget is a free utility for non-interactive download of files from the Web. It supports <font SIZE="-1">HTTP, HTTPS,</font> and <font SIZE="-1">FTP</font> protocols, as well as retrieval through <font SIZE="-1">HTTP</font> proxies. </p>
 <p> Wget is non-interactive, meaning that it can work in the background, while the user is not logged on. This allows you to start a retrieval and disconnect from the system, letting Wget finish the work. By contrast, most of the Web browsers require constant user&#8217;s presence, which can be a great hindrance when transferring a lot of data. </p>
 <p> Wget can follow links in <font SIZE="-1">HTML, XHTML,</font> and <font SIZE="-1">CSS</font> pages, to create local versions of remote web sites, fully recreating the directory structure of the original site. This is sometimes referred to as &#8220;recursive downloading.&#8221; While doing that, Wget respects the Robot Exclusion Standard (<i>/robots.txt</i>). Wget can be instructed to convert the links in downloaded files to point at the local files, for offline viewing. </p>

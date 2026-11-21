@@ -1,4 +1,5 @@
 ---
+
 title: "ilaenv(3)"
 name: "ilaenv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ilaenv/"
 description: "ilaenv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilaenv</code> (ISPEC, NAME, OPTS, N1, N2, N3, N4)<br />
  <i></i><code>ILAENV</code></p>

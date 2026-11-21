@@ -1,4 +1,5 @@
 ---
+
 title: "afm2afm(1)"
 name: "afm2afm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-afm2afm/"
 description: "afm2afm – reencode an afm file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>afm2afm</code></dt>
 <dd> [<code>-help</code>] [<code>-version</code>] [<code>-encoding</code>=<i>&lt;encodingfile&gt;</i>] [<code>-kpx</code>=<i>&lt;kpxfile&gt;</i>] [<code>-output</code>=<i>&lt;outputfile&gt;</i>] <code>&lt;afmfile&gt;</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>afm2afm</code> re-encodes an <i>afm</i> file. </p>
 <p> Metrics (including kerning data) for characters not present in the chosen encoding are excluded from the output, which resuls in (potentially much) smaller files. </p>
 <p> Additional kerning pairs can be added to the output file. If you don&#8217;t specify an encoding file, the <i>afm</i> file isn&#8217;t re-encoded; however, all unused (unencoded) data is still pruned. </p>

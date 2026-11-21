@@ -1,4 +1,5 @@
 ---
+
 title: "dh_doxygen(1)"
 name: "dh_doxygen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_doxygen/"
 description: "dh_doxygen – helps with packaging doxygen-generated documentation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dh_doxygen [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<i>directory</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_doxygen</code> is a debhelper program that prepares doxygen-generated documentation for inclusion in a Debian package. More specifically:</p>
 <dl>
 <dt>&bull;</dt>

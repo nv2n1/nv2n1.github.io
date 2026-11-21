@@ -1,4 +1,5 @@
 ---
+
 title: "localectl(1)"
 name: "localectl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-localectl/"
 description: "localectl – Control the system locale and keyboard layout settings"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>localectl</code> [OPTIONS&#8230;] {COMMAND}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>localectl</code></p>
 <dd>may be used to query and change the system locale and keyboard layout settings. It communicates with <code><a href="/docs/linux/man/8-systemd-localed/">systemd-localed</a></code>(8) to modify files such as /etc/locale.conf and /etc/vconsole.conf. </dd>
 <p> The system locale controls the language settings of system services and of the UI before the user logs in, such as the display manager, as well as the default for users after login. </p>

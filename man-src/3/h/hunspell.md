@@ -1,4 +1,5 @@
 ---
+
 title: "hunspell(3)"
 name: "hunspell"
 section: "3"
@@ -6,14 +7,9 @@ letter: "h"
 url: "/docs/linux/man/3-hunspell/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+<b>hunspell</b> - spell checking, stemming, morphological generation and analysis 
 
- <b>hunspell</b> - spell checking, stemming, morphological generation and analysis 
-
-<h2>SYNOPSIS</h2>
-
- <b>#include &lt;hunspell/hunspell.hxx&gt; /* or */</b> 
+<b>#include &lt;hunspell/hunspell.hxx&gt; /* or */</b> 
  <b>#include &lt;hunspell/hunspell.h&gt;</b> 
  
 
@@ -61,9 +57,7 @@ url: "/docs/linux/man/3-hunspell/"
 
  <b>const char * get_version(</b><i>);</i>
 
-<h2>DESCRIPTION</h2>
-
- The <b>Hunspell</b> library routines give the user word-level linguistic functions: spell checking and correction, stemming, morphological generation and analysis in item-and-arrangement style. 
+The <b>Hunspell</b> library routines give the user word-level linguistic functions: spell checking and correction, stemming, morphological generation and analysis in item-and-arrangement style. 
 
  The optional C header contains the C interface of the C++ library with Hunspell_create and Hunspell_destroy constructor and destructor, and an extra HunHandle parameter (the allocated object) in the wrapper functions (see in the C header file <b>hunspell.h</b>). 
 

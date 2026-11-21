@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_qp_ex(3)"
 name: "ibv_create_qp_ex"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_create_qp_ex/"
 description: "ibv_create_qp_ex, ibv_destroy_qp – create or destroy a queue pair (QP)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_qp *ibv_create_qp_ex(struct ibv_context *context,
                                 struct ibv_qp_init_attr_ex *qp_init_attr);
 int ibv_destroy_qp(struct ibv_qp *qp);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_qp_ex()</code> creates a queue pair (QP) associated with the protection domain <i>pd</i>. The argument <i>qp_init_attr_ex</i> is an ibv_qp_init_attr_ex struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p>struct ibv_qp_init_attr_ex {<br />
     void *qp_context;                      /* Associated context of the QP */<br />

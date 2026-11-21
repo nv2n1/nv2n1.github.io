@@ -1,4 +1,5 @@
 ---
+
 title: "backupninja(1)"
 name: "backupninja"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-backupninja/"
 description: "BACKUPNINJA – A lightweight, extensible meta-backup system \"a silent flower blossom death strike to lost data.\""
 ---
 
-<h2 class="name">NAME</h2>
 <p> BACKUPNINJA &#8211; A lightweight, extensible meta-backup system<br />
  <i>&quot;a silent flower blossom death strike to lost data.&quot;</i> </p>
-<h2>SYNOPSIS</h2>
 <p> <code>backupninja [ -h ] [ -d ] [ -n ] [ -t ] [ -f filename ] [ &#8211;run filename ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Backupninja </code> allows you to coordinate system backups by dropping a few simple configuration files into /etc/backup.d/. Most programs you might use for making backups don&#8217;t have their own configuration file format. Backupninja provides a centralized way to configure and coordinate many different backup utilities. </p>
 <h2>FEATURES</h2>
 <dl>

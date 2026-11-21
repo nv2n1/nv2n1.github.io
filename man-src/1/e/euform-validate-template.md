@@ -1,4 +1,5 @@
 ---
+
 title: "euform-validate-template(1)"
 name: "euform-validate-template"
 section: "1"
@@ -9,12 +10,10 @@ description: "euform-validate-template – Validate a template"
 
 <h2>NAME</h2>
 <p> euform-validate-template &#8211; Validate a template</p>
-<h2>SYNOPSIS</h2>
 <p> euform-validate-template (<code>&#8211;template-file</code> FILE | <code>&#8211;template-url</code> URL)</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Validate a template</p>
 <h3>optional arguments:</h3>
 <dl>

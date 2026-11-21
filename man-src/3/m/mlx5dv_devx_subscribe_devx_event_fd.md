@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_subscribe_devx_event_fd(3)"
 name: "mlx5dv_devx_subscribe_devx_event_fd"
 section: "3"
@@ -6,16 +7,9 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_subscribe_devx_event_fd/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_subscribe_devx_event - Subscribe over an event channel for device events. 
+mlx5dv_devx_subscribe_devx_event - Subscribe over an event channel for device events. 
 
  mlx5dv_devx_subscribe_devx_event_fd - Subscribe over an event channel for device events to signal eventfd. 
-
-<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -31,11 +25,7 @@ int mlx5dv_devx_subscribe_devx_event(struct mlx5dv_devx_event_channel *dv_event_
                                                                                               uint16_t event_num)
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Subscribe over a DEVX event channel for device events.
+Subscribe over a DEVX event channel for device events.
 
 <h2>ARGUMENTS</h2>
 

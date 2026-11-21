@@ -1,4 +1,5 @@
 ---
+
 title: "moar(1)"
 name: "moar"
 section: "1"
@@ -6,21 +7,14 @@ letter: "m"
 url: "/docs/linux/man/1-moar/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+moar - a runtime for Perl 6 
 
- moar - a runtime for Perl 6 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 moar-- version
     moar[--dump][--crash][--libpath = ...][--full - cleanup] inputfile
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- <tt>&quot;moar&quot;</tt> is the binary of MoarVM, (short for Metamodel On A Runtime Virtual Machine). It can be used to execute <tt>&quot;.moarvm&quot;</tt> bytecode files.
+<tt>&quot;moar&quot;</tt> is the binary of MoarVM, (short for Metamodel On A Runtime Virtual Machine). It can be used to execute <tt>&quot;.moarvm&quot;</tt> bytecode files.
 
 <h2>ENVIRONMENT VARIABLES</h2>
 

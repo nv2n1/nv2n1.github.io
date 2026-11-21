@@ -1,4 +1,5 @@
 ---
+
 title: "biosdevname(1)"
 name: "biosdevname"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-biosdevname/"
 description: "biosdevname – give BIOS-given name of a device"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>biosdevname</code> [options]&nbsp;<wbr>[args]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> biosdevname takes a kernel device name as an argument, and returns the BIOS-given name it &quot;should&quot; be.</p>
 <h2>OPTIONS</h2>
 <dl>

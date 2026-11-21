@@ -1,4 +1,5 @@
 ---
+
 title: "perlpodspec(1)"
 name: "perlpodspec"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlpodspec/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlpodspec - Plain Old Documentation: format specification and notes 
 
- perlpodspec - Plain Old Documentation: format specification and notes 
-
-<h2>DESCRIPTION</h2>
-
- This document is detailed notes on the Pod markup language. Most people will only have to read perlpod to know how to write in Pod, but this document may answer some incidental questions to do with parsing and rendering Pod. 
+This document is detailed notes on the Pod markup language. Most people will only have to read perlpod to know how to write in Pod, but this document may answer some incidental questions to do with parsing and rendering Pod. 
 
  In this document, ``must'' / ``must not'', ``should'' / ``should not'', and ``may'' have their conventional (cf. <font SIZE="-1">RFC 2119</font>) meanings: ``X must do Y'' means that if X doesn't do Y, it's against this specification, and should really be fixed. ``X should do Y'' means that it's recommended, but X may fail to do Y, if there's a good reason. ``X may do Y'' is merely a note that X can do Y at will (although it is up to the reader to detect any connotation of &quot;and I think it would be <i>nice</i> if X did Y`` versus ''it wouldn't really <i>bother</i> me if X did Y&quot;). 
 

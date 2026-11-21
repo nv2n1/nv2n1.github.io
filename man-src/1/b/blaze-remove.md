@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-remove(1)"
 name: "blaze-remove"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-blaze-remove/"
 description: "blaze-remove – remove a post/page from the BlazeBlogger repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blaze-remove</code> [<code>-fipqPV</code>] [<code>-b</code> <i>directory</i>] <i>id</i>&#8230; </p>
 <p> <code>blaze-remove</code> <code>-h</code> | <code>-v</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>blaze-remove</code> deletes the blog posts or pages with given <i>id</i>s from the BlazeBlogger repository.</p>
 <h2>OPTIONS</h2>
 <dl>

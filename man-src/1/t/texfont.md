@@ -1,4 +1,5 @@
 ---
+
 title: "texfont(1)"
 name: "texfont"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-texfont/"
 description: "texfont – font installation tool for ConTeXt"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>texfont</code> [ <i>OPTION</i> &#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> TeXFont is a <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1) script that helps to set up and install TeX fonts. It was designed for use with ConTeXt, but may also be helpful for users of other formats, like plain TeX or LaTeX. Its use is described in detail in the files <i>mtexfont.pdf</i> and <i>mfont.pdf</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

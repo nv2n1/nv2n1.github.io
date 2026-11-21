@@ -1,4 +1,5 @@
 ---
+
 title: "acl_clear_perms(3)"
 name: "acl_clear_perms"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_clear_perms/"
 description: "acl_clear_perms – clear all permissions from an ACL permission set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_clear_perms</code> &#8211; clear all permissions from an ACL permission set </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_clear_perms acl_permset_t permset_d</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_clear_perms function clears all permissions from the permission set referred to by the argument <i>permset_d</i> </p>
 <p> Any existing descriptors that refer to <i>permset_d</i> shall continue to refer to that permission set.</p>
 <h2>RETURN VALUE</h2>

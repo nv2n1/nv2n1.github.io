@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_db_get_default_cache_expiration(3)"
 name: "gnutls_db_get_default_cache_expiration"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_db_get_default_cache_expiration – API function"
 
 <h2>NAME</h2>
 <p> gnutls_db_get_default_cache_expiration &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>unsigned gnutls_db_get_default_cache_expiration( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Returns the expiration time (in seconds) of stored sessions for resumption.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

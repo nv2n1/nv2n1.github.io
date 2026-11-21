@@ -1,4 +1,5 @@
 ---
+
 title: "sensors-conf-convert(1)"
 name: "sensors-conf-convert"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sensors-conf-convert/"
 description: "sensors-conf-convert – convert sensors.conf from lm-sensors 2 format to lm-sensors 3 format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sensors-conf-convert</code> <i>&lt; /etc/sensors.conf &gt; /etc/sensors3.conf</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>sensors-conf-convert</code> converts a sensors.conf file from the old (Linux 2.4, lm-sensors 2) symbol names to the new (Linux 2.6, lm-sensors 3) symbol names. </p>
 <p> Implemented conversions:</p>
 <dl>

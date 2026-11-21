@@ -1,4 +1,5 @@
 ---
+
 title: "pgmmedian(1)"
 name: "pgmmedian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmmedian/"
 description: "pgmmedian – apply a median filter to a PGM file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmmedian</code> </p>
 <p> [<code>-width=</code><i>n</i>] </p>
 <p> [<code>-height=</code><i>n</i>] </p>
@@ -15,7 +15,6 @@ description: "pgmmedian – apply a median filter to a PGM file"
 <p> [<code>-cutoff=</code><i>int</i>] </p>
 <p> [<i>pnmfile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pgmmedian</code> applies a median filter to a PGM image, using either the histogram sort or select kth value method to determine the median. </p>
 <p> A median filter is a convolution filter in which the value of a pixel in the output is the median of a certain set of pixels in the neighborhood of the corresponding input pixel. The effect is to eliminate locally extreme values. Such pixels typically show up as speckles. </p>

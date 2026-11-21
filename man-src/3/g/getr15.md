@@ -1,4 +1,5 @@
 ---
+
 title: "getr15(3)"
 name: "getr15"
 section: "3"
@@ -9,7 +10,6 @@ description: "getr8, getg8, getb8, getr15, getg15, getb15, getr16, getg16, getb1
 
 <h2>NAME</h2>
 <p> getr8, getg8, getb8, getr15, getg15, getb15, getr16, getg16, getb16, getr24, getg24, getb24, getr32, getg32, getb32 &#8211; Extract a color component from the specified pixel format. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int getr8(int c);</code> </p>
 <p> <code>int getg8(int c);</code> </p>
@@ -26,7 +26,6 @@ description: "getr8, getg8, getb8, getr15, getg15, getb15, getr16, getg16, getb1
 <p> <code>int getr32(int c);</code> </p>
 <p> <code>int getg32(int c);</code> </p>
 <p> <code>int getb32(int c);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Given a color in a display dependent format, these functions extract one of the red, green, or blue components (ranging 0-255). Example: </p>
 <pre><code>
 int r, g, b, color_value;

@@ -1,4 +1,5 @@
 ---
+
 title: "dvired(1)"
 name: "dvired"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dvired/"
 description: "dvired – print dvi-files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvired</code> [ <code>options</code> ] <code>file</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>dvired</i> behaves like <i>dvips</i>, except for the fact that two logical pages are put onto each physical sheet of paper. </p>
 <p> For <i>options</i>, see <i><a href="/docs/linux/man/1-dvips/">dvips</a></i>(1). This program only interprets the following options: </p>
 <p> <i>-o file</i> &#8211; redirect output into <i>file.</i> </p>

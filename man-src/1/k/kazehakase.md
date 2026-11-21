@@ -1,4 +1,5 @@
 ---
+
 title: "kazehakase(1)"
 name: "kazehakase"
 section: "1"
@@ -9,11 +10,9 @@ description: "kazehakase – Gecko based web browser using GTK"
 
 <h2>NAME</h2>
 <p> kazehakase &#8211; Gecko based web browser using GTK</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kazehakase</code> [<i>OPTION&#8230;</i>] [<i>URL&#8230;</i>] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>kazehakase</code> is a web browser using the Mozilla rendering and networking engines. </p>
 <h2>OPTIONS</h2>
 <dl>

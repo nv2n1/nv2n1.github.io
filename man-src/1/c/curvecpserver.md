@@ -1,4 +1,5 @@
 ---
+
 title: "curvecpserver(1)"
 name: "curvecpserver"
 section: "1"
@@ -9,9 +10,7 @@ description: "CurveCP — Message-handling programs"
 
 <h2>NAME</h2>
 <p> CurveCP &#8212; Message-handling programs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>curvecpserver</code> [<code>-q </code><i>(optional)</i>] [<code>-Q </code><i>(optional)</i>] [<code>-v </code><i>(optional)</i>] [<code>-c n</code><i>(optional)</i>] [sname] [keydir] [ip] [port] [ext] [prog]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>CurveCP</code> commands. </p>
 <p> A traditional UNIX-style server such as ftpd handles just one network connection, reading input from stdin and writing output to stdout. A &quot;superserver&quot; such as inetd or tcpserver listens for network connections and starts a separate server process for each connection. </p>
 <p> The <code>CurveCP</code> command-line tools have an extra level of modularity. The <code>curvecpserver</code> superserver listens for network connections. For each connection, <code>curvecpserver</code> starts the <code>curvecpmessage</code> message handler; <code>curvecpmessage</code> then starts a server such as ftpd. Then ftpd sends a stream of data to <code>curvecpmessage</code>, which in turn sends messages to <code>curvecpserver</code>, which encrypts and authenticates the messages and sends them inside network packets. At the same time <code>curvecpclient</code> receives network packets, verifies and decrypts messages inside the packets, and passes the messages to <code>curvecpmessage</code>; <code>curvecpmessage</code> sends a stream of data to ftpd. The same curvecpmessage tool is also used by <code>curvecpclient</code>. </p>

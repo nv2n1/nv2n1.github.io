@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_entry(3)"
 name: "cdk_entry"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_entry – curses text-entry widget."
 
 <h2>NAME</h2>
 <p> cdk_entry &#8211; curses text-entry widget.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -130,7 +130,6 @@ void setCDKEntryVerticalChar(
     chtype character);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk entry widget creates a text-entry box with a label and an entry field. The following functions create or manipulate the Cdk entry box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

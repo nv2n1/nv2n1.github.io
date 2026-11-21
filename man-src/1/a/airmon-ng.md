@@ -1,4 +1,5 @@
 ---
+
 title: "airmon-ng(1)"
 name: "airmon-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-airmon-ng/"
 description: "airmon-ng – bash script designed to turn wireless cards into monitor mode."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>airmon-ng</code> &lt;start|stop&gt; &lt;interface&gt; [channel] <code>airmon-ng</code> &lt;check&gt; [kill]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>airmon-ng</code> is script can be used to enable monitor mode on wireless interfaces. It may also be used to go back from monitor mode to managed mode. Entering the airmon-ng command without parameters will show the interfaces status. It can list/kill programs that can interfere with the wireless card and set the right sources in /etc/kismet/kismet.conf too.</p>
 <h2>OPTIONAL PARAMETERS</h2>
 <dl>

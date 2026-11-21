@@ -1,4 +1,5 @@
 ---
+
 title: "stgexc(3)"
 name: "stgexc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stgexc/"
 description: "stgexc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br />
  <i></i><code>STGEXC</code></p>

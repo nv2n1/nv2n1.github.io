@@ -1,4 +1,5 @@
 ---
+
 title: "interpolation2d(3)"
 name: "interpolation2d"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolation2d/"
 description: "ql/math/interpolations/interpolation2d.hpp – abstract base classes for 2-D interpolations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/extrapolation.hpp&gt;<br />
  #include &lt;ql/math/comparison.hpp&gt;<br />
  #include &lt;ql/math/matrix.hpp&gt;<br />

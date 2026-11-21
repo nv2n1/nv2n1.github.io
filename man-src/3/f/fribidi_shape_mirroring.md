@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_shape_mirroring(3)"
 name: "fribidi_shape_mirroring"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_shape_mirroring/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_shape_mirroring - do mirroring shaping 
 
- fribidi_shape_mirroring - do mirroring shaping 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern void fribidi_shape_mirroring 
  ( 
@@ -35,9 +31,7 @@ url: "/docs/linux/man/3-fribidi_shape_mirroring/"
 </dd><dt><b>FriBidiChar *str</b>
 </dt><dd> String to shape.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This functions replaces mirroring characters on right-to-left embeddings in string with their mirrored equivalent as returned by fribidi_get_mirror_char(). 
+This functions replaces mirroring characters on right-to-left embeddings in string with their mirrored equivalent as returned by fribidi_get_mirror_char(). 
 
  This function implements rule L4 of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#L4.">http://www.unicode.org/reports/tr9/#L4.</a>
 

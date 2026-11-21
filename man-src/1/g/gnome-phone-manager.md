@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-phone-manager(1)"
 name: "gnome-phone-manager"
 section: "1"
@@ -11,7 +12,6 @@ description: "gnome-phone-manager – Manage your mobile phone"
 <p> gnome-phone-manager &#8211; Manage your mobile phone</p>
 <h2>USAGE</h2>
 <p> <code>gnome-phone-manager</code> [&#8211;identify&nbsp;<wbr>&lt;baddr&gt;] [&#8211;config] [-d|&#8211;debug]] [&#8211;display=DISPLAY]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gnome-phone-manager</code> command. </p>
 <p> <code>gnome-phone-manager</code> is a program created to allow you to control aspects of your mobile phone from your GNOME 2 desktop.</p>
 <dl>

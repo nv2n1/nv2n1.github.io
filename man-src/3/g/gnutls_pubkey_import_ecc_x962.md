@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_import_ecc_x962(3)"
 name: "gnutls_pubkey_import_ecc_x962"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pubkey_import_ecc_x962 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_import_ecc_x962 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_import_ecc_x962(gnutls_pubkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>parameters</i><code>, const gnutls_datum_t * </code><i>ecpoint</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pubkey_import_ecc_x962 – API function"
 <dd> DER encoding of an ANSI X9.62 parameters</dd>
 <dt>const gnutls_datum_t * ecpoint</dt>
 <dd> DER encoding of ANSI X9.62 ECPoint</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will convert the given elliptic curve parameters to a <code>gnutls_pubkey_t</code>. The output will be stored in <i>key</i> .</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

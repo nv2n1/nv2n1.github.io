@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_pt_meo(1)"
 name: "tv_grab_pt_meo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_pt_meo/"
 description: "tv_grab_pt_meo – Grab TV listings for MEO from SAPO in Portugal."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_pt_meo &#8211;help </p>
 <p> tv_grab_pt_meo &#8211;configure [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>] </p>
 <p> tv_grab_pt_meo [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>]<br />
@@ -15,7 +15,6 @@ description: "tv_grab_pt_meo – Grab TV listings for MEO from SAPO in Portugal.
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug] </p>
 <p> tv_grab_pt_meo &#8211;list-channels [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug]</p>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> and listings in <font SIZE="-1">XMLTV</font> format for many stations available in Portugal. This program consumes the <font SIZE="-1">EPG</font> service offering from <font SIZE="-1">SAPO</font> at &lt;<a rel="nofollow" href="http://services.sapo.pt/Metadata/Service/EPG?culture=EN">http://services.sapo.pt/Metadata/Service/EPG?culture=EN</a>&gt;. See &lt;<a rel="nofollow" href="http://seguranca.sapo.pt/termosdeutilizacao/apis_rss_webservices.html">http://seguranca.sapo.pt/termosdeutilizacao/apis_rss_webservices.html</a>&gt; for their terms of service. (automatic translation suggests it&#8217;s free for personal use, verfication appreciated) </p>
 <p> First you must run <code>tv_grab_pt_meo &#8211;configure</code> to choose which stations you want to receive. </p>
 <p> Then running <code>tv_grab_pt_meo</code> with no arguments will get a listings for the stations you chose for all available days including today.</p>

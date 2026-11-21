@@ -1,4 +1,5 @@
 ---
+
 title: "perf-script-python(1)"
 name: "perf-script-python"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-perf-script-python/"
 description: "perf-script-python – Process trace data with a Python script"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perf script [-s[Python]:script[.py]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This perf script option is used to process perf script data using perf&#8217;s built-in Python interpreter. It reads and processes the input file and displays the results of the trace analysis implemented in the given Python script, if any.</p>
 <h2>A QUICK EXAMPLE</h2>
 <p> This section shows the process, start to finish, of creating a working Python script that aggregates and extracts useful information from a raw perf script stream. You can avoid reading the rest of this document if an example is enough for you; the rest of the document provides more details on each step and lists the library functions available to script writers. </p>

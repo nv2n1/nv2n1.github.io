@@ -1,4 +1,5 @@
 ---
+
 title: "fixmul(3)"
 name: "fixmul"
 section: "3"
@@ -9,10 +10,8 @@ description: "fixmul – Multiplies two fixed point values together. Allegro gam
 
 <h2>NAME</h2>
 <p> fixmul &#8211; Multiplies two fixed point values together. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixmul(fixed x, fixed y);</code></p>
-<h2>DESCRIPTION</h2>
 <p> A fixed point value can be multiplied or divided by an integer with the normal `*&#8217; and `/&#8217; operators. To multiply two fixed point values, though, you must use this function. </p>
 <p> If an overflow occurs, `errno&#8217; will be set and the maximum possible value will be returned, but `errno&#8217; is not cleared if the operation is successful. This means that if you are going to test for overflow you should set `errno=0&#8242; before calling fixmul(). Example: </p>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "locale(7)"
 name: "locale"
 section: "7"
@@ -6,12 +7,11 @@ letter: "l"
 url: "/docs/linux/man/7-locale/"
 description: "locale – description of multilanguage support"
 ---
+
 <p>locale &#8211; description of multilanguage support </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;locale.h&gt; 
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> A locale is a set of language and cultural rules. These cover aspects such as language for messages, different character sets, lexicographic conventions, and so on. A program needs to be able to determine its locale and act accordingly to be portable to different cultures. </p>
 <p>The header <i>&lt;locale.h&gt;</i> declares data types, functions and macros which are useful in this task. </p>
 <p>The functions it declares are <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3) to set the current locale, and <code><a href="/docs/linux/man/3-localeconv/">localeconv</a></code>(3) to get information about number formatting. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dnsget(1)"
 name: "dnsget"
 section: "1"
@@ -9,7 +10,6 @@ description: "dnsget – DNS lookup utility"
 
 <h2>SYNOPSYS</h2>
 <p> <code>dnsget</code> [<code>-v</code>|<code>-q</code>] [<code>-c</code> <i>class</i>] [<code>-t</code> <i>type</i>] [<code>-o</code> <i>opt</i>,<i>opt</i>,&#8230;] <i>name</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>dnsget</code> is a simple command-line to perform DNS lookups, similar to <code><a href="/docs/linux/man/1-host/">host</a></code>(1) and <code><a href="/docs/linux/man/1-dig/">dig</a></code>(1). It is useable for both interactive/debugging scenarious and in scripts. The program is implemented using <code><a href="/docs/linux/man/3-udns/">udns</a></code>(3) library. </p>
 <p> By default, <code>dnsget</code> produces a human-readable output, similar to</p>
 <dl>

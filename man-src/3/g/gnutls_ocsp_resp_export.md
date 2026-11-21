@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_export(3)"
 name: "gnutls_ocsp_resp_export"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ocsp_resp_export – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_resp_export &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_export(gnutls_ocsp_resp_t </code><i>resp</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_ocsp_resp_export – API function"
 <dd> Holds the OCSP response</dd>
 <dt>gnutls_datum_t * data</dt>
 <dd> newly allocate buffer holding DER encoded OCSP response</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the OCSP response to DER format.</p>
 <h2>RETURNS</h2>
 <p> In case of failure a negative error code will be returned, and 0 on success.</p>

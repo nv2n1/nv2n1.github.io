@@ -1,4 +1,5 @@
 ---
+
 title: "reprepro(1)"
 name: "reprepro"
 section: "1"
@@ -6,12 +7,11 @@ letter: "r"
 url: "/docs/linux/man/1-reprepro/"
 description: "reprepro – produce, manage and sync a local repository of Debian packages"
 ---
+
 <h2>NAME</h2>
 <p> reprepro - produce, manage and sync a local repository of Debian packages  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>reprepro --help</code> </p>
 <p> <code>reprepro</code> [ <i>options</i> ] <i>command</i> [ <i>per-command-arguments</i> ]  </p>
-<h2>DESCRIPTION</h2>
 <p> reprepro is a tool to manage a repository of Debian packages (.deb, .udeb, .dsc, ...). It stores files either being injected manually or downloaded from some other repository (partially) mirrored into a pool/ hierarchy. Managed packages and checksums of files are stored in a Berkeley DB database file, so no database server is needed. Checking signatures of mirrored repositories and creating signatures of the generated Package indices is supported. </p>
 <p> Former working title of this program was mirrorer.  </p>
 <h2>GLOBAL OPTIONS</h2>

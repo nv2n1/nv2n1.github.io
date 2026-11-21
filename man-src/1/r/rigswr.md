@@ -1,4 +1,5 @@
 ---
+
 title: "rigswr(1)"
 name: "rigswr"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-rigswr/"
 description: "rigswr – measure VSWR vs frequency using Hamlib."
 ---
 
-<h2 class="name">NAME</h2>
 <p> rigswr &#8211; measure VSWR vs frequency using <code>Hamlib</code>. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>rigswr</code> [<i>OPTION</i>]&#8230; start_freq stop_freq [freq_step]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rigswr</code> uses <code>Hamlib</code> to control a rig to measure VSWR vs frequency:<br />
  It scans frequencies from <i>start_freq</i> to <i>stop_freq</i> with a step of <i>freq_step</i>. For each frequency, it transmits at 25% of total POWER during 0.5 second in CW mode and reads VSWR. </p>
 <p> Frequency and the corresponding VSWR are then printed on <code>stdout</code>. </p>

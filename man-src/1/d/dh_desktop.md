@@ -1,4 +1,5 @@
 ---
+
 title: "dh_desktop(1)"
 name: "dh_desktop"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_desktop/"
 description: "dh_desktop – deprecated no-op"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_desktop</code> [<i>debhelper options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_desktop</code> was a debhelper program that registers <i>.desktop</i> files. However, it no longer does anything, and is now deprecated. </p>
 <p> If a package ships <i>desktop</i> files, they just need to be installed in the correct location (<i>/usr/share/applications</i>) and they will be registered by the appropriate tools for the corresponding desktop environments.</p>
 <h2>SEE ALSO</h2>

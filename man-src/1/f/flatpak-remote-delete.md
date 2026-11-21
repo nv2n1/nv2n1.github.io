@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-remote-delete(1)"
 name: "flatpak-remote-delete"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-remote-delete/"
 description: "flatpak-remote-delete – Delete a remote repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-delete</code> [OPTION&#8230;] NAME</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Removes a remote repository from the flatpak repository configuration. NAME is the name of an existing remote. </dd>
 <p> Unless overridden with the <code>&#8211;system</code>, <code>&#8211;user</code>, or <code>&#8211;installation</code> options, this command uses either the default system-wide installation or the per-user one, depending on which has the specified REMOTE.</p>
 <h2>OPTIONS</h2>

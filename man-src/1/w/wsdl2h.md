@@ -1,4 +1,5 @@
 ---
+
 title: "wsdl2h(1)"
 name: "wsdl2h"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wsdl2h/"
 description: "wsdl2h – the gSOAP WSDL parser for C and C++"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wsdl2h</code> [<i>OPTIONS</i>] <i>SOURCE</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Please see /usr/share/doc/gsoap/soapdoc2.html for details. </p>
 <p> Converts a <code>WSDL</code> or <code>XSD</code> input file, or from an HTTP address, <i>SOURCE</i> to a declaration file that can be parsed by <code><a href="/docs/linux/man/1-soapcpp2/">soapcpp2</a></code>(1). If no <i>SOURCE</i> argument is specified, read from standard input.</p>
 <h2>OPTIONS</h2>

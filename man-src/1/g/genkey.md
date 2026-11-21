@@ -1,4 +1,5 @@
 ---
+
 title: "genkey(1)"
 name: "genkey"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-genkey/"
 description: "genkey – generate SSL certificates and certificate requests"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>genkey</code> [<code>&#8211;test</code>] [<code>&#8211;days&nbsp;<wbr></code><i>count</i>] [[<code>&#8211;genreq</code>] | [<code>&#8211;makeca</code>] | [<code>&#8211;nss</code>] | [<code>&#8211;renew</code>] | [<code>&#8211;cacert</code>]] {<i>hostname</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>genkey</code></p>
 <dd>is an interactive command-line tool which can be used to generate SSL certificates or Certificate Signing Requests (CSR). Generated certificates are stored in the directory /etc/pki/tls/certs/, and the corresponding private key in /etc/pki/tls/private/. </dd>
 <p> When using mod_nss the private key is stored in the nss database. Consult the nss.conf file in /etc/httpd/conf.d/ for the location of the database. </p>

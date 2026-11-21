@@ -1,4 +1,5 @@
 ---
+
 title: "getaliasent_r(3)"
 name: "getaliasent_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getaliasent_r/"
 description: "setaliasent, endaliasent, getaliasent, getaliasent_r, getaliasbyname, getaliasbyname_r – read an alias entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aliases.h&gt;</code> </p>
 <p> <code>void setaliasent(void);</code> </p>
 <p> <code>void endaliasent(void);</code> </p>
@@ -17,7 +17,6 @@ description: "setaliasent, endaliasent, getaliasent, getaliasent_r, getaliasbyna
 <p> <code>struct aliasent *getaliasbyname(const char *</code><i>name</i><code>);</code> </p>
 <p> <code>int getaliasbyname_r(const char *</code><i>name</i><code>, struct aliasent *</code><i>result</i><code>,</code><br />
  <code> char *</code><i>buffer</i><code>, size_t </code><i>buflen</i><code>, struct aliasent **</code><i>res</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> One of the databases available with the Name Service Switch (NSS) is the aliases database, that contains mail aliases. (To find out which databases are supported, try <i>getent &#8211;help</i>.) Six functions are provided to access the aliases database. </p>
 <p> The <code>getaliasent</code>() function returns a pointer to a structure containing the group information from the aliases database. The first time it is called it returns the first entry; thereafter, it returns successive entries. </p>
 <p> The <code>setaliasent</code>() function rewinds the file pointer to the beginning of the aliases database. </p>

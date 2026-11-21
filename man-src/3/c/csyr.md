@@ -1,4 +1,5 @@
 ---
+
 title: "csyr(3)"
 name: "csyr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csyr/"
 description: "csyr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csyr</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br />
  <i></i><code>CSYR</code> performs the symmetric rank-1 update of a complex symmetric matrix.</p>

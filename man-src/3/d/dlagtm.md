@@ -1,4 +1,5 @@
 ---
+
 title: "dlagtm(3)"
 name: "dlagtm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlagtm/"
 description: "dlagtm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlagtm</code> (TRANS, N, NRHS, ALPHA, DL, D, DU, X, LDX, BETA, B, LDB)<br />
  <i></i><code>DLAGTM</code> performs a matrix-matrix product of the form C = αAB+βC, where A is a tridiagonal matrix, B and C are rectangular matrices, and α and β are scalars, which may be 0, 1, or -1.</p>

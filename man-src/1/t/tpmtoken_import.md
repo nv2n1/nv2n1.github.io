@@ -1,4 +1,5 @@
 ---
+
 title: "tpmtoken_import(1)"
 name: "tpmtoken_import"
 section: "1"
@@ -9,9 +10,7 @@ description: "tpmtoken_import – import an X.509 certficate and/or an RSA key p
 
 <p>TPM Management &#8211; tpmtoken_import<br />
  </center></p>
-<h2>SYNOPSIS</h2>
 <p> <code>tpmtoken_import</code> [ OPTION ] FILE </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tpmtoken_import</code> imports a PEM formatted representation of an X.509 certificate and/or an RSA key contained in FILE. </p>
 <p> Importing an X.509 certificate creates an X.509 Public Key Certificate PKCS#11 object and also an RSA Public Key PKCS#11 object using the RSA public key contained in the certificate. The certificate&#8217;s key must be an RSA key in order for the certificate to be successfully processed by this command. </p>
 <p> Importing an RSA key creates an RSA Public Key and an RSA Private Key PKCS#11 object. In order to associate the RSA PKCS#11 objects with an X.509 Public Key Certificate PKCS#11 object, the RSA PKCS#11 objects must have a subject name and key identifier associated with them. This can be accomplished by supplying the corresponding X.509 certificate as an optional command parameter. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtojbg(1)"
 name: "pbmtojbg"
 section: "1"
@@ -9,9 +10,7 @@ description: "pbmtojbg – portable bitmap to JBIG1 file converter"
 
 <h2>NAME</h2>
 <p> pbmtojbg &#8211; portable bitmap to JBIG1 file converter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtojbg</code> [ <i>options</i> ] [ <i>input-file</i> | &#8211; [ <i>output-file</i> ]] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads in a portable bitmap (PBM) from a file or standard input, compresses it, and outputs the image as a <i>JBIG1</i> bi-level image entity (BIE) file. </p>
 <p> <i>JBIG1</i> is a highly effective lossless compression algorithm for bi-level images (one bit per pixel), which is particularly suitable for scanned document pages. </p>
 <p> A <i>JBIG1</i> encoded image can be stored in several resolutions (progressive mode). These resolution layers can be stored all in one single BIE or they can be stored in several separate BIE files. All resolution layers except the lowest one are stored merely as differences to the next lower resolution layer, because this requires less space than encoding the full image completely every time. Each resolution layer has twice the number of horizontal and vertical pixels than the next lower layer. <i>JBIG1</i> files can also store several bits per pixel as separate bitmap planes, and <i>pbmtojbg</i> can read a PGM file and transform it into a multi-bitplane BIE. </p>

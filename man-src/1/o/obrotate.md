@@ -1,4 +1,5 @@
 ---
+
 title: "obrotate(1)"
 name: "obrotate"
 section: "1"
@@ -9,9 +10,7 @@ description: "obrotate – batch-rotate dihedral angles matching SMARTS patterns
 
 <h2>NAME</h2>
 <p> <code>obrotate</code> &#8211; batch-rotate dihedral angles matching SMARTS patterns</p>
-<h2>SYNOPSIS</h2>
 <p> <i>&#8216;SMARTS-pattern&#8217;</i> <i>filename</i> <i>atom1</i> <i>atom2</i> <i>atom3</i> <i>atom4</i> <i>angle</i></p>
-<h2>DESCRIPTION</h2>
 <p> The obrotate program rotates the torsional (dihedral) angle of a specified bond in molecules to that defined by the user. In other words, it does the same as a user setting an angle in a molecular modelling package, but much faster and in batch mode (i.e. across multiple molecules in a file). </p>
 <p> The four atom IDs required are indexes into the SMARTS pattern, which starts at atom 0 (zero). The angle supplied is in degrees. The two atoms used to set the dihedral angle &lt;atom1&gt; and &lt;atom4&gt; do not need to be connected to the atoms of the bond &lt;atom2&gt; and &lt;atom3&gt; in any way. </p>
 <p> The order of the atoms matters &#8212; the portion of the molecule attached to &lt;atom1&gt; and &lt;atom2&gt; remain fixed, but the portion bonded to &lt;atom3&gt; and &amp; &lt;atom4&gt; moves.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sysctl(2)"
 name: "sysctl"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-sysctl/"
 description: "sysctl – read/write system parameters"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/sysctl.h&gt;
 #include &lt;unistd.h&gt;
 int _sysctl(struct __sysctl_args *args);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>This system call no longer exists on current kernels!</code> See NOTES. </p>
 <p> The <code>_sysctl</code>() call reads and/or writes kernel parameters. For example, the hostname, or the maximum number of open files. The argument has the form </p>
 <p> struct __sysctl_args {<br />

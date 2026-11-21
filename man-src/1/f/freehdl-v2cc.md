@@ -1,4 +1,5 @@
 ---
+
 title: "freehdl-v2cc(1)"
 name: "freehdl-v2cc"
 section: "1"
@@ -9,9 +10,7 @@ description: "FreeHDL-V2CC – A VHDL to C++ converter."
 
 <h2>NAME</h2>
 <p> FreeHDL-V2CC &#8211; A VHDL to C++ converter.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>freehdl-v2cc</code> [<i>OPTION</i>] &#8230; [<i>FILE</i>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>FreeHDL</code> is a parser/compiler/simulator suite for the hardware description language VHDL. VHDL&#8217;93 as well as VHDL&#8217;87 files are supported. </p>
 <p> <code>FreeHDL-V2CC</code> translates the original VHDL source FILEs into C++. </p>
 <h2>OPTIONS</h2>

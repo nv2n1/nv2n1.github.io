@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_register_partition(3)"
 name: "ldb_register_partition"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_register_partition/"
 description: "ldb_register_partition –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> struct ldb_dn * <code>dn</code> </p>
 <h2>Author</h2>

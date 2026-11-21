@@ -1,4 +1,5 @@
 ---
+
 title: "ykneomgr(1)"
 name: "ykneomgr"
 section: "1"
@@ -9,9 +10,7 @@ description: "ykneomgr – YubiKey NEO management tool"
 
 <h2>NAME</h2>
 <p> ykneomgr &#8211; YubiKey NEO management tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ykneomgr</code> [<i>OPTIONS</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> ykneomgr 0.1.8 </p>
 <p> YubiKey NEO management tool.</p>
 <dl>

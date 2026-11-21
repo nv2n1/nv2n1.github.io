@@ -1,4 +1,5 @@
 ---
+
 title: "stg-unhide(1)"
 name: "stg-unhide"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-unhide/"
 description: "stg-unhide – Unhide a hidden patch"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg unhide[options][--]&lt;patch - range&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Unhide a hidden range of patches so that they are shown in the plain <i>stg series</i> command output.</p>
 <h2>OPTIONS</h2>
 <p> -b BRANCH, &#8211;branch BRANCH</p>

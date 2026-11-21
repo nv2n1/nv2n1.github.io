@@ -1,4 +1,5 @@
 ---
+
 title: "git-verify-pack(1)"
 name: "git-verify-pack"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-verify-pack/"
 description: "git-verify-pack – Validate packed Git archive files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git verify - pack[-v | --verbose][-s | --stat - only][--]&lt;pack&gt;.idx...
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Reads given idx file for packed Git archive created with the <i>git pack-objects</i> command and verifies idx file and the corresponding pack file.</p>
 <h2>OPTIONS</h2>
 <p> &lt;pack&gt;.idx &#8230;</p>

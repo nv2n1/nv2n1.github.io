@@ -1,4 +1,5 @@
 ---
+
 title: "dssi_osc_send(1)"
 name: "dssi_osc_send"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dssi_osc_send/"
 description: "dssi_osc_send – send OSC messages to DSSI applications."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dssi_osc_send</code> <i>&lt;option&gt; &lt;OSC URL&gt; &lt;values&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dssi_osc_send</code> sends DSSI OSC methods to DSSI applications. <code>dssi_osc_send</code> is typically used to control DSSI hosts (possibly for scripted operation), or to test DSSI user interfaces.</p>
 <h2>OPTIONS</h2>
 <dl>

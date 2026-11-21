@@ -1,4 +1,5 @@
 ---
+
 title: "tcscan(1)"
 name: "tcscan"
 section: "1"
@@ -9,13 +10,11 @@ description: "tcscan – scan multimedia streams from medium and print informati
 
 <h2>NAME</h2>
 <p> tcscan &#8211; scan multimedia streams from medium and print information on the standard output</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tcscan</code></dt>
 <dd> <code>-i</code> <i>name</i> [ <code>-x</code> <i>codec</i> ] [ <code>-e</code> <i>r[,b[,c]]</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-w</code> <i>num</i> ] [ <code>-f</code> <i>rate</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcscan</code> is Copyright (C) by Thomas Oestreich.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcscan</code> is part of and usually called by <code>transcode</code>.<br />
  However, it can also be used independently.<br />
  <code>tcscan</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>

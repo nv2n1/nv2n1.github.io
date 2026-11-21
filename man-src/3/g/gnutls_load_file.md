@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_load_file(3)"
 name: "gnutls_load_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_load_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_load_file &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_load_file(const char * </code><i>filename</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_load_file – API function"
 <dd> the name of the file to load</dd>
 <dt>gnutls_datum_t * data</dt>
 <dd> Where the file will be stored</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will load a file into a datum. The data are zero terminated but the terminating null is not included in length. The returned data are allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned. </p>

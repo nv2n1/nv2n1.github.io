@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-extensions(1)"
 name: "gnome-extensions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-extensions/"
 description: "gnome-extensions – Command line tool for managing GNOME extensions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-extensions</code> help [<i>COMMAND</i>] </p>
 <p> <code>gnome-extensions</code> version </p>
 <p> <code>gnome-extensions</code> enable <i>UUID</i> </p>
@@ -21,7 +21,6 @@ description: "gnome-extensions – Command line tool for managing GNOME extensio
 <p> <code>gnome-extensions</code> pack [<i>OPTION</i>&#8230;] </p>
 <p> <code>gnome-extensions</code> install [<i>OPTION</i>&#8230;] <i>PACK</i> </p>
 <p> <code>gnome-extensions</code> uninstall <i>UUID</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gnome-extensions</code> is a utility that makes some common GNOME extensions operations available on the command line.</p>
 <h2>COMMON OPTIONS</h2>
 <p> All commands except for <code>help</code> and <code>version</code> handle the following options: </p>

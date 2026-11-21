@@ -1,4 +1,5 @@
 ---
+
 title: "git-push(1)"
 name: "git-push"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-push/"
 description: "git-push – Update remote refs along with associated objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git push[--all | --mirror | --tags][--follow - tags][--atomic][-n | --dry - run][--receive - pack = &lt;git - receive - pack&gt;]
         [--repo = &lt;repository&gt;][-f | --force][-d | --delete][--prune][-v | --verbose]
@@ -16,7 +16,6 @@ git push[--all | --mirror | --tags][--follow - tags][--atomic][-n | --dry - run]
         [--force - with - lease[=&lt;refname&gt;[:&lt;expect&gt;]][--force - if - includes]]
         [--no - verify][&lt;repository&gt;[&lt;refspec&gt;...]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Updates remote refs using local refs, while sending objects necessary to complete the given refs. </p>
 <p> You can make interesting things happen to a repository every time you push into it, by setting up <i>hooks</i> there. See documentation for <code><a href="/docs/linux/man/1-git-receive-pack/">git-receive-pack</a></code>(1). </p>
 <p> When the command line does not specify where to push with the <code>&lt;repository&gt;</code> argument, <code>branch.*.remote</code> configuration for the current branch is consulted to determine where to push. If the configuration is missing, it defaults to <i>origin</i>. </p>

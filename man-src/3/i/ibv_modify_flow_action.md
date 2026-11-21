@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_modify_flow_action(3)"
 name: "ibv_modify_flow_action"
 section: "3"
@@ -6,14 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_modify_flow_action/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_flow_action_esp - Flow action esp for verbs 
-
-<h2>SYNOPSIS</h2>
+ibv_flow_action_esp - Flow action esp for verbs 
 
 <dl>
 <dt>
@@ -27,11 +21,7 @@ int ibv_modify_flow_action_esp(struct ibv_flow_action *action,
 int ibv_destroy_flow_action(struct ibv_flow_action *action);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- An IPSEC ESP flow steering action allows a flow steering rule to decrypt or encrypt a packet after matching. Each action contains the necessary information for this operation in the params argument. 
+An IPSEC ESP flow steering action allows a flow steering rule to decrypt or encrypt a packet after matching. Each action contains the necessary information for this operation in the params argument. 
 
  After the crypto operation the packet will continue to be processed by flow steering rules until it reaches a final action of discard or delivery. 
 

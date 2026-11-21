@@ -1,4 +1,5 @@
 ---
+
 title: "perl5101delta(1)"
 name: "perl5101delta"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perl5101delta/"
 description: "perl5101delta – what is new for perl v5.10.1"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> This document describes differences between the 5.10.0 release and the 5.10.1 release. </p>
 <p> If you are upgrading from an earlier release such as 5.8.8, first read the perl5100delta, which describes differences between 5.8.8 and 5.10.0  </p>
 <h2>Incompatible Changes</h2>

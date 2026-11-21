@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_xid(1)"
 name: "nfstest_xid"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfstest_xid – Verify packets are matched correctly by their XID"
 
 <h2>NAME</h2>
 <p> nfstest_xid &#8211; Verify packets are matched correctly by their XID</p>
-<h2>SYNOPSIS</h2>
 <p> nfstest_xid &lt;trace1&gt; [&lt;trace2&gt; &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Search all the packet traces given for XID inconsistencies. Verify all operations in the NFSv4.x COMPOUND reply are the same as the operations given in the call. </p>
 <h2>OPTIONS</h2>
 <dl>

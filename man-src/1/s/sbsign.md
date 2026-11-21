@@ -1,4 +1,5 @@
 ---
+
 title: "sbsign(1)"
 name: "sbsign"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sbsign/"
 description: "sbsign – UEFI secure boot signing tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sbsign</code> [<i>,options/</i>] <i>,&#8211;key &lt;keyfile&gt; &#8211;cert &lt;certfile&gt; &lt;efi-boot-image&gt;/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Sign an EFI boot image for use with secure boot.</p>
 <h2>OPTIONS</h2>
 <dl>

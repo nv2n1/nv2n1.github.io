@@ -1,4 +1,5 @@
 ---
+
 title: "todocli(1)"
 name: "todocli"
 section: "1"
@@ -9,9 +10,7 @@ description: "todocli – Command line To Do application"
 
 <h2>NAME</h2>
 <p> todocli &#8211; Command line To Do application</p>
-<h2>SYNOPSIS</h2>
 <p> todocli [-h |-n &lt;item&gt; |-d &lt;id&gt; ]</p>
-<h2>DESCRIPTION</h2>
 <p> A command line ToDo application with SQLite backend powered by Python</p>
 <h2>OPTIONS</h2>
 <dl>

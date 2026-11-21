@@ -1,4 +1,5 @@
 ---
+
 title: "dbfilepivot(1)"
 name: "dbfilepivot"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbfilepivot/"
 description: "dbfilepivot – pivot a table, converting multiple rows into single wide row"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbfilepivot [-e empty] -k KeyField -p PivotField [-v ValueField]</p>
-<h2>DESCRIPTION</h2>
 <p> Pivot a table, converting multiple rows corresponding to the same key into a single wide row. </p>
 <p> In a normalized database, one might have data with a schema like (id, attribute, value), but sometimes it&#8217;s more convenient to see the data with a schema like (id, attribute1, attribute2). (For example, gnuplot&#8217;s stacked histograms requires denormalized data.) Dbfilepivot converts the normalized format to the denormalized, but sometimes useful, format. Here the &#8220;id&#8221; is the key, the attribute is the &#8220;pivot&#8221;, and the value is, well, the optional &#8220;value&#8221;. </p>
 <p> An example is clearer. A gradebook usually looks like: </p>

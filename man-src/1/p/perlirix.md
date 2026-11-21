@@ -1,4 +1,5 @@
 ---
+
 title: "perlirix(1)"
 name: "perlirix"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlirix/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlirix - Perl version 5 on Irix systems 
 
- perlirix - Perl version 5 on Irix systems 
-
-<h2>DESCRIPTION</h2>
-
- This document describes various features of Irix that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
+This document describes various features of Irix that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
 
 <h3>Building 32-bit Perl in Irix</h3>
 

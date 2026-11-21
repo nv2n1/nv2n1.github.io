@@ -1,4 +1,5 @@
 ---
+
 title: "fixing(3)"
 name: "fixing"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixing/"
 description: "QuantLib::Index – purely virtual base class for indexes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/index.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Observable</code>. </p>
 <p> Inherited by <code>InflationIndex</code>, and <code>InterestRateIndex</code>. </p>

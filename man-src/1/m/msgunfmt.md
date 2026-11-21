@@ -1,4 +1,5 @@
 ---
+
 title: "msgunfmt(1)"
 name: "msgunfmt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msgunfmt/"
 description: "msgunfmt – uncompile message catalog from binary format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msgunfmt</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Convert binary message catalog to Uniforum style .po file. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Operation mode:</h3>

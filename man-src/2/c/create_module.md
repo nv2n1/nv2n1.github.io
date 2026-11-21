@@ -1,4 +1,5 @@
 ---
+
 title: "create_module(2)"
 name: "create_module"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-create_module/"
 description: "create_module – create a loadable module entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/module.h&gt;
 caddr_t create_module(const char *name, size_t size);
 </code></pre>
 <p> <i>Note</i>: No declaration of this system call is provided in glibc headers; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: This system call is present only in kernels before Linux 2.6. </p>
 <p> <code>create_module</code>() attempts to create a loadable module entry and reserve the kernel memory that will be needed to hold the module. This system call requires privilege.</p>
 <h2>RETURN VALUE</h2>

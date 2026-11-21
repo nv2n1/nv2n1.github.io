@@ -1,4 +1,5 @@
 ---
+
 title: "vig_optimize(1)"
 name: "vig_optimize"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-vig_optimize/"
 description: "vig_optimize – Optimise photometric parameters"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vig_optimize</code> [options] <code>-o</code> <i>output.pto</i> <i>input.pto</i></p>
-<h2>DESCRIPTION</h2>
 <p> Photometric calculation can be performed on the command-line with the vig_optimize tool. This functionally is configured via &#8216;v&#8217; variable lines in the .pto project file in a similar way to the autooptimiser tool: </p>
 <p> The camera response curve is simplified using the EMoR sensor model which reduces the variation to five numbers, these are the Ra, Rb, Rc, Rd &amp; Re image (i) parameters (the default values of 0.0 are equivalent to an &#8216;average&#8217; generic sensor). </p>
 <p> The vignetting model is represented by a polynomial with four parameters: Va (this is always 1.0 and doesn&#8217;t need to be optimised) and Vb, Vc &amp; Vd (which default to 0.0 &#8211; equivalent to no vignetting). The vignetting centre can also be different from the geometrical centre, this is specified by Vx &amp; Vy (both default to 0.0). </p>

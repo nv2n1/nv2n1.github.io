@@ -1,4 +1,5 @@
 ---
+
 title: "rrdcgi(1)"
 name: "rrdcgi"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdcgi/"
 description: "rrdcgi – Create web pages containing RRD graphs based on templates"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <tt>&quot;#!/path/to/&quot;</tt><code>rrdcgi</code> [<code>&#8211;filter</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rrdcgi</code> is a sort of very limited script interpreter. Its purpose is to run as a cgi-program and parse a web page template containing special &lt;<font SIZE="-1">RRD::</font> tags. <code>rrdcgi</code> will interpret and act according to these tags. In the end it will printout a web page including the necessary <font SIZE="-1">CGI</font> headers. </p>
 <p> <code>rrdcgi</code> parses the contents of the template in 3 steps. In each step it looks only for a subset of tags. This allows nesting of tags. </p>
 <p> The argument parser uses the same semantics as you are used from your C-shell.</p>

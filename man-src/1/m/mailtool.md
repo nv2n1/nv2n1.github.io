@@ -1,4 +1,5 @@
 ---
+
 title: "mailtool(1)"
 name: "mailtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mailtool/"
 description: "mailtool – Process mailboxes"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mailtool</code> [options&#8230;]</dt></dl>
 <h2>USAGE</h2>

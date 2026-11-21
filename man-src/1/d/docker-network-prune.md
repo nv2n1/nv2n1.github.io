@@ -1,4 +1,5 @@
 ---
+
 title: "docker-network-prune(1)"
 name: "docker-network-prune"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-network-prune/"
 description: "docker-network-prune – Remove all unused networks"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker network prune [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Remove all unused networks </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Provide filter values (e.g. &#8216;until=&#8217;)</p>

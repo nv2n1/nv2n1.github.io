@@ -1,4 +1,5 @@
 ---
+
 title: "ccrewrite(1)"
 name: "ccrewrite"
 section: "1"
@@ -9,9 +10,7 @@ description: "ccrewrite – Rewrite CLR assemblies for runtime code contract ver
 
 <h2>NAME</h2>
 <p> ccrewrite &#8211; Rewrite CLR assemblies for runtime code contract verification.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ccrewrite &#8211;assembly=&lt;assembly&gt; [options]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Rewrite CLR assemblies to convert calls into the System.Diagnostics.Contracts namespace to perform runtime contract verification. This includes contract inheritance for virtual methods. </p>
 <p> The assembly must have been built with the symbol CONTRACTS_FULL defined, otherwise the calls to the contract methods will have been removed by the compiler. </p>
 <p> Currently only pre-conditions are supported, using the Contract.Requires() method. Contract inheritance for virtual methods is supported. Only a limited range of operations and types can be used within a pre-condition, an error message will be shown if ccrewrite is unable to process the specified assembly.</p>

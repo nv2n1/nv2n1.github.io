@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_par_embedding_levels_ex(3)"
 name: "fribidi_get_par_embedding_levels_ex"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_par_embedding_levels_ex/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_get_par_embedding_levels_ex - get bidi embedding levels of a paragraph 
 
- fribidi_get_par_embedding_levels_ex - get bidi embedding levels of a paragraph 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiLevel fribidi_get_par_embedding_levels_ex 
  ( 
@@ -59,9 +55,7 @@ url: "/docs/linux/man/3-fribidi_get_par_embedding_levels_ex/"
 <dt><b>FriBidiLevel *embedding_levels</b>
 </dt><dd> Output list of embedding levels.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function finds the bidi embedding levels of a single paragraph, as defined by the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/.">http://www.unicode.org/reports/tr9/.</a> This function implements rules P2 to I1 inclusive, and parts 1 to 3 of L1, except for rule X9 which is implemented in fribidi_remove_bidi_marks(). Part 4 of L1 is implemented in fribidi_reorder_line(). 
+This function finds the bidi embedding levels of a single paragraph, as defined by the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/.">http://www.unicode.org/reports/tr9/.</a> This function implements rules P2 to I1 inclusive, and parts 1 to 3 of L1, except for rule X9 which is implemented in fribidi_remove_bidi_marks(). Part 4 of L1 is implemented in fribidi_reorder_line(). 
 
  There are a few macros defined in fribidi-bidi-types.h to work with this embedding levels.
 

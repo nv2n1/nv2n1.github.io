@@ -1,4 +1,5 @@
 ---
+
 title: "arm_report_transaction(3)"
 name: "arm_report_transaction"
 section: "3"
@@ -9,7 +10,6 @@ description: "arm_report_transaction – report transaction statistics"
 
 <h2>NAME</h2>
 <p> arm_report_transaction &#8211; report transaction statistics</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_report_transaction( </p>
@@ -22,7 +22,6 @@ description: "arm_report_transaction – report transaction statistics"
 <p>&nbsp;<wbr>const arm_correlator_t&nbsp;<wbr>*</code><i>current_correlator</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_report_transaction()</code> is used to report statistics about a transaction that has already completed.<br />
 &nbsp;<wbr> <code>arm_report_transaction()</code> may be used instead of a paired <code>arm_start_transaction()</code> and <code>arm_stop_transaction()</code> call. The application would have measured the response time. The transaction could have executed on the local system or on a remote system. If it executes on a remote system, the system address sub-buffer passed on the <code>arm_start_application()</code> provides the addressing information for the remote system. </p>
 <p> If the transaction represented by the <code>arm_report_transaction()</code> call is the correlation parent of another transaction, <code>arm_generate_correlator()</code> must be used to get a parent correlator, prior to invoking the child transaction (because it must be passed to the child). In this case, the sequence is the following: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ipython-wx(1)"
 name: "ipython-wx"
 section: "1"
@@ -9,11 +10,9 @@ description: "ipython-wx – Graphical frontend that embeds a multithreaded IPyt
 
 <h2>NAME</h2>
 <p> <code>ipython-wx &#8211; Graphical frontend that embeds a multithreaded IPython Shell </code></p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>ipython-wx</code>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> ipython-wx is, compared to ipythonx, a more advanced graphical frontend to IPython. It is implemented using WxWidgets.</p>
 <h2>OPTIONS</h2>
 <dl>

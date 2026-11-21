@@ -1,4 +1,5 @@
 ---
+
 title: "chroot(1)"
 name: "chroot"
 section: "1"
@@ -9,10 +10,8 @@ description: "chroot – run command or interactive shell with special root dire
 
 <h2>NAME</h2>
 <p> chroot &#8211; run command or interactive shell with special root directory</p>
-<h2>SYNOPSIS</h2>
 <p> <code>chroot</code> [<i>OPTION</i>] <i>NEWROOT </i>[<i>COMMAND </i>[<i>ARG</i>]&#8230;]<br />
  <code>chroot</code> <i>OPTION</i></p>
-<h2>DESCRIPTION</h2>
 <p> Run COMMAND with root directory set to NEWROOT.</p>
 <dl>
 <dt><code>&#8211;userspec</code>=<i>USER</i>:GROUP</dt>

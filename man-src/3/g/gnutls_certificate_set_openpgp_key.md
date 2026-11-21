@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_openpgp_key(3)"
 name: "gnutls_certificate_set_openpgp_key"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_openpgp_key – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_openpgp_key &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_openpgp_key(gnutls_certificate_credentials_t </code><i>res</i><code>, gnutls_openpgp_crt_t </code><i>crt</i><code>, gnutls_openpgp_privkey_t </code><i>pkey</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_certificate_set_openpgp_key – API function"
 <dd> contains an openpgp public key</dd>
 <dt>gnutls_openpgp_privkey_t pkey</dt>
 <dd> is an openpgp private key</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once (in case multiple keys/certificates exist for the server). </p>
 <p> Note that this function requires that the preferred key ids have been set and be used. See <code>gnutls_openpgp_crt_set_preferred_key_id()</code>. Otherwise the master key will be used.</p>
 <h2>RETURNS</h2>

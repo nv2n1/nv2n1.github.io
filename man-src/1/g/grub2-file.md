@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-file(1)"
 name: "grub2-file"
 section: "1"
@@ -9,7 +10,6 @@ description: "grub-file — Check if FILE is of specified type."
 
 <h2>NAME</h2>
 <p> <code>grub-file</code> &#8212; Check if FILE is of specified type. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>grub-file</code> (&#8211;is-i386-xen-pae-domu | &#8211;is-x86_64-xen-domu |</p>
 <dl>
 <dt>
@@ -45,7 +45,6 @@ description: "grub-file — Check if FILE is of specified type."
 <dt>
 </dt><dd> <i>FILE</i> </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>grub-file</code> is used to check if <i>FILE</i> is of a specified type. </p>
 <h2>OPTIONS</h2>
 <dl>

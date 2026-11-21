@@ -1,4 +1,5 @@
 ---
+
 title: "randpkt(1)"
 name: "randpkt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-randpkt/"
 description: "randpkt – Random Packet Generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>randpkt</code> [&nbsp;<wbr><code>-b</code>&nbsp;<wbr>&lt;maxbytes&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>&lt;count&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>&lt;type&gt;&nbsp;<wbr>] &lt;filename&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>randpkt</code> is a small utility that creates a <code>pcap</code> trace file full of random packets. </p>
 <p> By creating many randomized packets of a certain type, you can test packet sniffers to see how well they handle malformed packets. The sniffer can never trust the data that it sees in the packet because you can always sniff a very bad packet that conforms to no standard. <code>randpkt</code> produces <i>very bad</i> packets. </p>
 <p> When creating packets of a certain type, <code>randpkt</code> uses a sample packet that is stored internally to <code>randpkt</code>. It uses this as the starting point for your random packets, and then adds extra random bytes to the end of this sample packet. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "qtdoc(1)"
 name: "qtdoc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-qtdoc/"
 description: "qtdoc – Open a Qt(TM) help page in Konqueror"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>qtdoc</code> [<i>classname</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>qtdoc</code></p>
 <dd>opens a Qt(TM) help page in Konqueror. If <i>classname</i> is given, it opens the help page for that class. Otherwise the main Qt(TM) help page is opened. <i>classname</i> is case insensitive. </dd>
 <p> This utility is part of the KDE Software Development Kit</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "msgfmt(1)"
 name: "msgfmt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msgfmt/"
 description: "msgfmt – compile message catalog to binary format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msgfmt</code> [<i>OPTION</i>] <i>filename.po </i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Generate binary message catalog from textual translation description. </p>
 <p> Mandatory arguments to long options are mandatory for short options too. Similarly for optional arguments.</p>
 <h3>Input file location:</h3>

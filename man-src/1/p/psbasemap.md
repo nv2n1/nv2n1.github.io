@@ -1,4 +1,5 @@
 ---
+
 title: "psbasemap(1)"
 name: "psbasemap"
 section: "1"
@@ -9,10 +10,8 @@ description: "psbasemap – Plot PostScript base maps"
 
 <h2>NAME</h2>
 <p> psbasemap &#8211; Plot PostScript base maps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>psbasemap</code> <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<i>file</i>] ] [ <i>insert box</i> ] [ <i>box</i> ] [ ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ <i>ruler</i> ] [ ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ <i>rose</i> ] [ <i>mag_rose</i> ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>psbasemap</code> creates PostScript code that will produce a basemap. Several map projections are available, and the user may specify separate tick-mark intervals for boundary annotation, ticking, and [optionally] gridlines. A simple map scale or directional rose may also be plotted. At least one of the options <code>-B</code>, <code>-L</code>, or <code>-T</code> must be specified.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

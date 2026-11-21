@@ -1,4 +1,5 @@
 ---
+
 title: "pmexp(1)"
 name: "pmexp"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pmexp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pmexp - show a module's exports 
 
- pmexp - show a module's exports 
-
-<h2>DESCRIPTION</h2>
-
- Given a module name, this program identifies which symbols are automatically exported (in that package's <tt>@EXPORT</tt>), those which are optionally exported (in that package's <tt>@EXPORT_OK</tt>), and also lists out the import groups (in that package's <tt>%EXPORT_TAGS</tt> hash).
+Given a module name, this program identifies which symbols are automatically exported (in that package's <tt>@EXPORT</tt>), those which are optionally exported (in that package's <tt>@EXPORT_OK</tt>), and also lists out the import groups (in that package's <tt>%EXPORT_TAGS</tt> hash).
 
 <h2>EXAMPLES</h2>
 

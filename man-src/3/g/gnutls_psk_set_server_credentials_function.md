@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_psk_set_server_credentials_function(3)"
 name: "gnutls_psk_set_server_credentials_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_psk_set_server_credentials_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_psk_set_server_credentials_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_psk_set_server_credentials_function(gnutls_psk_server_credentials_t </code><i>cred</i><code>, gnutls_psk_server_credentials_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_psk_set_server_credentials_function – API function"
 <dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</dd>
 <dt>gnutls_psk_server_credentials_function * func</dt>
 <dd> is the callback function</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function can be used to set a callback to retrieve the user&#8217;s PSK credentials. The callback&#8217;s function form is: int (*callback)(gnutls_session_t, const char* username, gnutls_datum_t* key); </p>
 <p>&nbsp;<wbr><i>username</i>&nbsp;<wbr>contains the actual username. The <i>key</i> must be filled in using the <code>gnutls_malloc()</code>. </p>
 <p> In case the callback returned a negative number then gnutls will assume that the username does not exist. </p>

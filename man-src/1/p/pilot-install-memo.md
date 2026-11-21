@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-memo(1)"
 name: "pilot-install-memo"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-install-memo – Installs a new Memo Pad entry onto your Pal
 <p> pilot-install-memo &#8211; Installs a new Memo Pad entry onto your Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-memo</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;category</code>&nbsp;<wbr>&nbsp;<wbr><code>name</code>]&nbsp;<wbr>[<code>-r</code>|<code>&#8211;replace</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;title</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;file</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>&nbsp;<wbr>&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-memo</i>&nbsp;<wbr>allows the user to write one or more files as a new memo or memos, respectively, onto the Palm handheld. </p>
 <h2>OPTIONS</h2>
 <h3>pilot-install-memo options</h3>

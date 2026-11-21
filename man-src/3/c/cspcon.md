@@ -1,4 +1,5 @@
 ---
+
 title: "cspcon(3)"
 name: "cspcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cspcon/"
 description: "cspcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cspcon</code> (UPLO, N, AP, IPIV, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>CSPCON</code></p>

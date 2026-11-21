@@ -1,4 +1,5 @@
 ---
+
 title: "whoami(1)"
 name: "whoami"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-whoami/"
 description: "whoami – print effective userid"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>whoami</code> [<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print the user name associated with the current effective user ID. Same as id <code>-un</code>.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

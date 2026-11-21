@@ -1,4 +1,5 @@
 ---
+
 title: "dgbtrf(3)"
 name: "dgbtrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbtrf/"
 description: "dgbtrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
  <i></i><code>DGBTRF</code></p>

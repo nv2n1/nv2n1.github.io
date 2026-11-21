@@ -1,4 +1,5 @@
 ---
+
 title: "malloc_trim(3)"
 name: "malloc_trim"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-malloc_trim/"
 description: "malloc_trim – release free memory from the heap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>int malloc_trim(size_t </code><i>pad</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>malloc_trim</code>() function attempts to release free memory from the heap (by calling <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2) or <code><a href="/docs/linux/man/2-madvise/">madvise</a></code>(2) with suitable arguments). </p>
 <p> The <i>pad</i> argument specifies the amount of free space to leave untrimmed at the top of the heap. If this argument is 0, only the minimum amount of memory is maintained at the top of the heap (i.e., one page or less). A nonzero argument can be used to maintain some trailing space at the top of the heap in order to allow future allocations to be made without having to extend the heap with <code><a href="/docs/linux/man/2-sbrk/">sbrk</a></code>(2).</p>
 <h2>RETURN VALUE</h2>

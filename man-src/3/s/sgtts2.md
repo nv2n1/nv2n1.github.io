@@ -1,4 +1,5 @@
 ---
+
 title: "sgtts2(3)"
 name: "sgtts2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgtts2/"
 description: "sgtts2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgtts2</code> (ITRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB)<br />
  <i></i><code>SGTTS2</code> solves a system of linear equations with a tridiagonal matrix using the LU factorization computed by sgttrf.</p>

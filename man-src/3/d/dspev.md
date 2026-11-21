@@ -1,4 +1,5 @@
 ---
+
 title: "dspev(3)"
 name: "dspev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dspev/"
 description: "dspev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspev</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, INFO)<br />
  <i></i><code> DSPEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rpmreaper(1)"
 name: "rpmreaper"
 section: "1"
@@ -9,9 +10,7 @@ description: "rpmreaper – A tool for removing unnecessary packages from system
 
 <h2>NAME</h2>
 <p> rpmreaper &#8211; A tool for removing unnecessary packages from system </p>
-<h2>SYNOPSIS</h2>
 <p> <code>rpmreaper</code> [<code>-lvh</code>] [<code>-r</code> <i>root</i>] [<i>limit</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> rpmreaper is a simple ncurses application with a mutt-like interface that allows removing unnecessary packages and their dependencies from the system. </p>
 <h2>OPTIONS</h2>
 <dl>

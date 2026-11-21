@@ -1,4 +1,5 @@
 ---
+
 title: "lsattr(1)"
 name: "lsattr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lsattr/"
 description: "lsattr – list file attributes on a Linux second extended file system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lsattr</code> [ <code>-RVadlpv</code> ] [ <i>files&#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lsattr</code> lists the file attributes on a second extended file system. See <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1) for a description of the attributes and what they mean.</p>
 <h2>OPTIONS</h2>
 <dl>

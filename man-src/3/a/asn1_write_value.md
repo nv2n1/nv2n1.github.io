@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_write_value(3)"
 name: "asn1_write_value"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_write_value – API function"
 
 <h2>NAME</h2>
 <p> asn1_write_value &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_write_value(asn1_node </code><i>node_root</i><code>, const char * </code><i>name</i><code>, const void * </code><i>ivalue</i><code>, int </code><i>len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "asn1_write_value – API function"
 <dd> vector used to specify the value to set. If len is &gt;0, VALUE must be a two&#8217;s complement form integer. if len=0 *VALUE must be a null terminated string with an integer value.</dd>
 <dt>int len</dt>
 <dd> number of bytes of *value to use to set the value: value[0]..value[len-1] or 0 if value is a null terminated string</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Set the value of one element inside a structure. </p>
 <p> If an element is OPTIONAL and you want to delete it, you must use the value=NULL and len=0. Using &quot;pkix.asn&quot;: </p>
 <p> result=asn1_write_value(cert, &quot;tbsCertificate.issuerUniqueID&quot;, NULL, 0); </p>

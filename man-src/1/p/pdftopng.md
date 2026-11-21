@@ -1,4 +1,5 @@
 ---
+
 title: "pdftopng(1)"
 name: "pdftopng"
 section: "1"
@@ -9,9 +10,7 @@ description: "pdftopng – Portable Document Format (PDF) to Portable Network Gr
 
 <h2>NAME</h2>
 <p> pdftopng &#8211; Portable Document Format (PDF) to Portable Network Graphics (PNG) converter (version 3.04)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pdftopng</code> [options] <i>PDF-file PNG-root</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Pdftopng</code> converts Portable Document Format (PDF) files to color, grayscale, or monochrome image files in Portable Network Graphics (PNG) format. </p>
 <p> Pdftopng reads the PDF file, <i>PDF-file</i>, and writes one PNG file for each page, <i>PNG-root</i>&#8211;<i>nnnnnn</i>.png, where <i>nnnnnn</i> is the page number. If <i>PNG-root</i> is &#8216;-&#8216;, the image is sent to stdout (this is probably only useful when converting a single page).</p>
 <h2>CONFIGURATION FILE</h2>

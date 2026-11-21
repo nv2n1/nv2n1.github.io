@@ -1,4 +1,5 @@
 ---
+
 title: "fdmblackscholessolver(3)"
 name: "fdmblackscholessolver"
 section: "3"
@@ -6,17 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fdmblackscholessolver/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+ql/experimental/finitedifferences/fdmblackscholessolver.hpp - 
 
- ql/experimental/finitedifferences/fdmblackscholessolver.hpp - 
-
-<h2>SYNOPSIS</h2>
-
- 
- 
-
- #include &lt;ql/handle.hpp&gt; 
+#include &lt;ql/handle.hpp&gt; 
  #include &lt;ql/patterns/lazyobject.hpp&gt; 
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; 
  #include &lt;ql/math/interpolations/cubicinterpolation.hpp&gt; 

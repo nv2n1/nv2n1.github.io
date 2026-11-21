@@ -1,4 +1,5 @@
 ---
+
 title: "posttls-finger(1)"
 name: "posttls-finger"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-posttls-finger/"
 description: "posttls-finger – Probe the TLS properties of an ESMTP or LMTP server."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 posttls - finger[options] [inet:] domain[:port][match...]
                                                posttls -
                                                finger - S[options] unix : pathname[match...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-posttls-finger/">posttls-finger</a></code>(1) connects to the specified destination and reports TLS-related information about the server. With SMTP, the destination is a domainname; with LMTP it is either a domainname prefixed with <code>inet:</code> or a pathname prefixed with <code>unix:</code>. If Postfix is built without TLS support, the resulting posttls-finger program has very limited functionality, and only the <code>-a</code>, <code>-c</code>, <code>-h</code>, <code>-o</code>, <code>-S</code>, <code>-t</code>, <code>-T</code> and <code>-v</code> options are available. </p>
 <p> Note: this is an unsupported test program. No attempt is made to maintain compatibility between successive versions. </p>
 <p> For SMTP servers that don&#8217;t support ESMTP, only the greeting banner and the negative EHLO response are reported. Otherwise, the reported EHLO response details further server capabilities. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_crq(3)"
 name: "gnutls_x509_crt_set_crq"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_crq – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_crq &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_crq(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_crq_t </code><i>crq</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_crt_set_crq – API function"
 <dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
 <dt>gnutls_x509_crq_t crq</dt>
 <dd> holds a certificate request</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the name and public parameters as well as the extensions from the given certificate request to the certificate. Only RSA keys are currently supported. </p>
 <p> Note that this function will only set the <i>crq</i> if it is self signed and the signature is correct. See <code>gnutls_x509_crq_sign2()</code>.</p>
 <h2>RETURNS</h2>

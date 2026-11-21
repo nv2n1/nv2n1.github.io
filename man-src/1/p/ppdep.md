@@ -1,4 +1,5 @@
 ---
+
 title: "ppdep(1)"
 name: "ppdep"
 section: "1"
@@ -9,7 +10,6 @@ description: "ppdep – The FPC Pascal unit dependency tracking program."
 
 <h2>NAME</h2>
 <p> ppdep &#8211; The FPC Pascal unit dependency tracking program. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ppdep</code> [-DDefine] [-oFile] [-eext] [-V] [-h] [A[call]] file </p>
 <h2>Description</h2>
 <p> <code>ppdep</code> dumps the dependencies of a unit in a format that can be understood by GNU <code>make</code> writes these dependencies to standard output. It takes care of dependencies both in the interface and implementation section of the unit, and it can handle conditional defines. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_params(3)"
 name: "cdk_params"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_params – Cdk command-line parsing"
 
 <h2>NAME</h2>
 <p> cdk_params &#8211; Cdk command-line parsing</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -40,7 +40,6 @@ int CDKparamValue(
     int missing);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> These are a set of functions used to implement the command-line utilities and demonstration programs for Cdk. Rather than set the programs&#8217; options at initialization, they construct a simple database which holds the common parameters using <code>CDKparseParams()</code>.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

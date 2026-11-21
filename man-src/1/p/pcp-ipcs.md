@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-ipcs(1)"
 name: "pcp-ipcs"
 section: "1"
@@ -9,10 +10,8 @@ description: "pcp-ipcs – provide information on IPC facilities"
 
 <h2>NAME</h2>
 <p> pcp-ipcs &#8211; provide information on IPC facilities</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pcp-ipcs</code> [<code>resource-option</code>] [<code>output-format</code>]<br />
  <code>pcp-ipcs</code> [<code>resource-option</code>] <code>-i</code><i> id</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcp-ipcs</code> provides information on the inter-process communication facilities for which the calling process has read access.</p>
 <h2>OPTIONS</h2>
 <dl>

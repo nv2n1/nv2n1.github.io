@@ -1,4 +1,5 @@
 ---
+
 title: "bareftp(1)"
 name: "bareftp"
 section: "1"
@@ -9,9 +10,7 @@ description: "bareftp – graphical file transfer client"
 
 <h2>NAME</h2>
 <p> bareftp &#8211; graphical file transfer client</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bareftp</code> <i>[OPTION] &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bareFTP</code> is a graphical file transfer client supporting the FTP, FTP over SSL/TLS (FTPS) and SSH File Transfer Protocol (SFTP). <code>bareFTP</code> is written in C#, targeting the Mono framework and the GNOME desktop environment. <code>bareFTP</code> is free and open source software released under the terms of the GPL license.</p>
 <h2>OPTIONS</h2>
 <p> bareFTP does currently not use much command line options.</p>

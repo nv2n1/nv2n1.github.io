@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77info(1)"
 name: "mgd77info"
 section: "1"
@@ -9,10 +10,8 @@ description: "mgd77info – Extract information about MGD77 files"
 
 <h2>NAME</h2>
 <p> mgd77info &#8211; Extract information about MGD77 files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mgd77info</code> <i>NGDC-ids</i> [ [<code>m</code>|<code>e</code>] ] [ [<code>m</code>|<code>e</code>] ] [ <code>-I</code><i>ignore</i> ] [ <code>f</code>[<i>item</i>]|<code>r</code>|<code>e</code>|<code>h</code> ] [ [<code>v</code>] ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mgd77info</code> reads &lt;legid&gt;.[mgd77|nc] files and produces a single record of information about each cruise specified. The information includes beginning and end times, total track distances in km, longitude and latitude range, and the total number of geophysical observations. Optionally, choose instead to see the original MGD77 header meta-data section or its individual members. </p>
 <p> If you need to know which tracks are crossing through a given region and what kinds of geophysical observations are available, consider using the x2sys tools to set up a tracks index data base (see <code>x2sys_init</code> for more information).</p>
 <h2>REQUIRED ARGUMENTS</h2>

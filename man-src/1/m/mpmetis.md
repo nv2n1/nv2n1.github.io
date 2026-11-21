@@ -1,4 +1,5 @@
 ---
+
 title: "mpmetis(1)"
 name: "mpmetis"
 section: "1"
@@ -9,9 +10,7 @@ description: "mpmetis – Partitions a mesh into a specified number of parts."
 
 <h2>NAME</h2>
 <p> mpmetis &#8211; Partitions a mesh into a specified number of parts.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mpmetis</code> [<i>options</i>] <i>meshfile nparts</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> Required parameters</dd>

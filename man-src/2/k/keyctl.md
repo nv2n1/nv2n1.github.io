@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl(2)"
 name: "keyctl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-keyctl/"
 description: "keyctl – manipulate the kernel’s key management facility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 #include &lt;sys/types.h&gt;
@@ -21,7 +21,6 @@ long syscall(__NR_keyctl, int operation, __kernel_ulong_t arg2,
              __kernel_ulong_t arg5);
 </code></pre>
 <p> No glibc wrapper is provided for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl</code>() allows user-space programs to perform key manipulation. </p>
 <p> The operation performed by <code>keyctl</code>() is determined by the value of the <i>operation</i> argument. Each of these operations is wrapped by the <i>libkeyutils</i> library (provided by the <i>keyutils</i> package) into individual functions (noted below) to permit the compiler to check types. </p>
 <p> The permitted values for <i>operation</i> are:</p>

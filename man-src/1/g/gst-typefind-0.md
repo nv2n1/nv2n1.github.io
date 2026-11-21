@@ -1,4 +1,5 @@
 ---
+
 title: "gst-typefind-0(1)"
 name: "gst-typefind-0"
 section: "1"
@@ -9,9 +10,7 @@ description: "gst-typefind – print MIME type of file"
 
 <h2>NAME</h2>
 <p> gst-typefind &#8211; print MIME type of file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gst-typefind &lt;file&gt;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>gst-typefind</i> uses the GStreamer type finding system to determine the relevant GStreamer plugin to parse or decode <code>file</code>, and the corresponding MIME type.</p>
 <h2>OPTIONS</h2>
 <p> <i>gst-typefind</i> accepts the following options:</p>

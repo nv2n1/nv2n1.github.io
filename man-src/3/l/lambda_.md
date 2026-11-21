@@ -1,4 +1,5 @@
 ---
+
 title: "lambda_(3)"
 name: "lambda_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lambda_/"
 description: "QuantLib::Vasicek – Vasicek model class"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/shortrate/onefactormodels/vasicek.hpp&gt; </p>
 <p> Inherits <code>QuantLib::OneFactorAffineModel</code>. </p>
 <p> Inherited by <code>HullWhite</code>. </p>

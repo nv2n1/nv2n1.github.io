@@ -1,4 +1,5 @@
 ---
+
 title: "slasd3(3)"
 name: "slasd3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasd3/"
 description: "slasd3.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasd3</code> (NL, NR, SQRE, K, D, Q, LDQ, DSIGMA, U, LDU, U2, LDU2, VT, LDVT, VT2, LDVT2, IDXC, CTOT, Z, INFO)<br />
  <i></i><code>SLASD3</code> finds all square roots of the roots of the secular equation, as defined by the values in D and Z, and then updates the singular vectors by matrix multiplication. Used by sbdsdc.</p>

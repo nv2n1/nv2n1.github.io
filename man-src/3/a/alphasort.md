@@ -1,4 +1,5 @@
 ---
+
 title: "alphasort(3)"
 name: "alphasort"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-alphasort/"
 description: "scandir, scandirat, alphasort, versionsort – scan a directory for matching entries"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;dirent.h&gt;
 int scandir(const char *dirp, struct dirent ***namelist,
@@ -30,7 +30,6 @@ int scandirat(int dirfd, const char *dirp,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <p> <code>versionsort</code>(): _GNU_SOURCE </p>
 <p> <code>scandirat</code>(): _GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>scandir</code>() function scans the directory <i>dirp</i>, calling <i>filter</i>() on each directory entry. Entries for which <i>filter</i>() returns nonzero are stored in strings allocated via <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), sorted using <code><a href="/docs/linux/man/3-qsort/">qsort</a></code>(3) with the comparison function <i>compar</i>(), and collected in array <i>namelist</i> which is allocated via <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3). If <i>filter</i> is NULL, all entries are selected. </p>
 <p> The <code>alphasort</code>() and <code>versionsort</code>() functions can be used as the comparison function <i>compar</i>(). The former sorts directory entries using <code><a href="/docs/linux/man/3-strcoll/">strcoll</a></code>(3), the latter using <code><a href="/docs/linux/man/3-strverscmp/">strverscmp</a></code>(3) on the strings <i>(*a)-&gt;d_name</i> and <i>(*b)-&gt;d_name</i>.</p>
 <h3>scandirat()</h3>

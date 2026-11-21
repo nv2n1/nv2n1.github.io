@@ -1,4 +1,5 @@
 ---
+
 title: "rasgetpal(1)"
 name: "rasgetpal"
 section: "1"
@@ -9,9 +10,7 @@ description: "rasgetpal – extract the color palette of a rasterfile and write 
 
 <h2>NAME</h2>
 <p> rasgetpal &#8211; extract the color palette of a rasterfile and write it to standard output</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rasgetpal</code> [<code>-Version</code>] <i>srcfile</i> [<i>dstfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Given <i>srcfile</i> and no <i>dstfile</i>, <code>rasgetpal</code> will extract the color palette from <i>srcfile</i> and print it in textual form to standard output. Given <i>srcfile</i> and <i>dstfile</i>, <code>rasgetpal</code> will extract the color palette from <i>srcfile</i> and save it in file <i>dstfile</i>. If the extension of <i>dstfile</i> is &quot;.txt&quot;, the color palette is saved in textual form. If it is &quot;.pal&quot;, the palette is saved in a binary HDF-compatible format. </p>
 <p> Once you have a &quot;.pal&quot; color palette you can use it with NCSA&#8217;s XImage or any other application that uses this format of color palette. A textual color palette can be edited using a standard text editor and then fed back to <i>ctrans</i>, <i>rasview</i>, or <i>rascat</i> in order to get a modified color palette. It&#8217;s also useful when you simply want to know what&#8217;s in your color palette. See &quot;man ras_palette&quot; for more information on these different formats.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "cgegv(3)"
 name: "cgegv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgegv/"
 description: "cgegv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgegv</code> (JOBVL, JOBVR, N, A, LDA, B, LDB, ALPHA, BETA, VL, LDVL, VR, LDVR, WORK, LWORK, RWORK, INFO)<br />
  <i></i><code> CGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>

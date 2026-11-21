@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_publickey(3)"
 name: "libssh2_userauth_publickey"
 section: "3"
@@ -9,7 +10,6 @@ description: "libssh2_userauth_publickey – authenticate using a callback funct
 
 <h2>NAME</h2>
 <p> libssh2_userauth_publickey &#8211; authenticate using a callback function</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <pre><code>
 int libssh2_userauth_publickey(LIBSSH2_SESSION *session,
@@ -19,7 +19,6 @@ int libssh2_userauth_publickey(LIBSSH2_SESSION *session,
                                sign_callback,
                                void **abstract);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Authenticate with the <i>sign_callback</i> callback that matches the prototype below</p>
 <h2>CALLBACK</h2>
 <pre><code>

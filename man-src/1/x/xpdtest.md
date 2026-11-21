@@ -1,4 +1,5 @@
 ---
+
 title: "xpdtest(1)"
 name: "xpdtest"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xpdtest/"
 description: "xpdtest – xproofd test utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xpdtest</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>xpdtest</code> program, an utility whose purpose is to test the status of an xproofd daemon running on the local machine. The target is to run <code>xpdtest</code> inside a monitor infrastructure, for example <code>monit</code> (see <i><a rel="nofollow" href="http://mmonit.com/monit/">http://mmonit.com/monit/</a></i> ), capable to take some decisions and to do some actions following the result of <code>xpdtest.</code> </p>
 <h2>OPTIONS</h2>
 <dl>

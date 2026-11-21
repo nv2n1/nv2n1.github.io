@@ -1,4 +1,5 @@
 ---
+
 title: "rasplit(1)"
 name: "rasplit"
 section: "1"
@@ -9,9 +10,7 @@ description: "rasplit – split argus(8) data."
 
 <h2>NAME</h2>
 <p> <code>rasplit</code> &#8211; split <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rasplit</code> [[<code>-M</code> <i>splitmode</i>] [<i>splitmode options</i>]] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Rasplit</code> reads <code>argus</code> data from an <i>argus-data</i> source, and splits the resulting output into consecutive sections of records based on size, count time, or flow event, writing the output into a set of output-files. By default, <code>rasplit</code> puts 10,000 records of input into each <code>argus</code> output file, or standard out. </p>
 <p> The output files&#8217; name consists of a prefix, which is specified using the <i>-w</i> <i>ra option</i>, and a suffix, which is created for each resulting file. If no prefix is provided, then <code>rasplit</code> will use &#8216;x&#8217; as the default prefix. The suffix that is used is determined by the mode of operation. When <code>rasplit</code> is using the default count mode or the size mode, the suffix is a group of letters &#8216;aa&#8217;, &#8216;ab&#8217;, and so on, such that concatenating the output files in sorted order by file name produces the original input file. If <code>rasplit</code> will need to create more output files than are allowed by the default suffix strategy, more letters will be added, in order to accomodate the needed files. When the mode is <code>time</code> mode, the default output filename suffix is &#8216;%Y.%m.%d.%h.%m.%s&#8217;, which is used by strftime() to create an output filename that is time oriented. This default is overrided by adding a &#8216;%&#8217; extension to the name provided on the commandline using the <i>-w</i> option. </p>
 <p> When standard out is specified, using <i>-w &#8211;</i>, <code>rasplit</code> will output a single <code>argus-stream</code> with START and STOP argus management records inserted appropriately to indicate where the output is split. See <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> for more information on output stream formats. </p>

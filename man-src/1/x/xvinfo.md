@@ -1,4 +1,5 @@
 ---
+
 title: "xvinfo(1)"
 name: "xvinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xvinfo/"
 description: "xvinfo – Print out X-Video extension adaptor information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xvinfo</code> [-display <i>displayname</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xvinfo</code> prints out the capabilities of any video adaptors associated with the display that are accessible through the X-Video extension.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "instant-showcache(1)"
 name: "instant-showcache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-instant-showcache/"
 description: "instant-showcache – prints modules found in Instant cache"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>instant-showcache</code></dt>
 <dd> &#8211; prints all modules in Instant cache.</dd>

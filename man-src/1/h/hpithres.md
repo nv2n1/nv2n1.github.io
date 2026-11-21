@@ -1,4 +1,5 @@
 ---
+
 title: "hpithres(1)"
 name: "hpithres"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hpithres/"
 description: "hpithres – This sample openhpi application interactively displays sensors and sensor info."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpithres[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X][-h] hpithres[--domain = nn][--host = host[:port]][--cfgfile = file][--debug][--help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpithres interactively displays sensor info for resources with Sensor Capability. Resources, sensors,and sensor info can be individually selected. </p>
 <p> If no domain or host is selected, hpithres uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

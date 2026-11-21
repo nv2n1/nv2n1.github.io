@@ -1,4 +1,5 @@
 ---
+
 title: "init(1)"
 name: "init"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-init/"
 description: "systemd, init – systemd system and service manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/lib/systemd/systemd</code> [OPTIONS&#8230;]</dt>
 <dt> <code>init</code> [OPTIONS&#8230;] {COMMAND}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>systemd is a system and service manager for Linux operating systems. When run as first process on boot (as PID 1), it acts as init system that brings up and maintains userspace services. Separate instances are started for logged-in users to start their services. </dd>
 <p> <code>systemd</code> is usually not invoked directly by the user, but is installed as the /sbin/init symlink and started during early boot. The user manager instances are started automatically through the <code>user [at] .service</code>(5) service. </p>
 <p> For compatibility with SysV, if the binary is called as <code>init</code> and is not the first process on the machine (PID is not 1), it will execute <code>telinit</code> and pass all command line arguments unmodified. That means <code>init</code> and <code>telinit</code> are mostly equivalent when invoked from normal login sessions. See <code><a href="/docs/linux/man/8-telinit/">telinit</a></code>(8) for more information. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlfaq2(1)"
 name: "perlfaq2"
 section: "1"
@@ -6,18 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-perlfaq2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlfaq2 - Obtaining and Learning about Perl 
+perlfaq2 - Obtaining and Learning about Perl 
 
 <h2>VERSION</h2>
 
  version 5.20190126
 
-<h2>DESCRIPTION</h2>
-
- This section of the <font SIZE="-1">FAQ</font> answers questions about where to find source and documentation for Perl, support, and related matters.
+This section of the <font SIZE="-1">FAQ</font> answers questions about where to find source and documentation for Perl, support, and related matters.
 
 <h3>What machines support Perl? Where do I get it?</h3>
 

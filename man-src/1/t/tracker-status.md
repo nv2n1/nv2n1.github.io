@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-status(1)"
 name: "tracker-status"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-tracker-status/"
 description: "tracker-status – Provide status and statistics on the data indexed"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 tracker status
         tracker status-- stat[-a] [[expression1]...] tracker status-- collect -
     debug - info
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Display the status of the current index and data set. </p>
 <p> With the <code>&#8211;stat</code> option, displays statistics about the RDF classes and how many of each exist for data set that has been indexed. For example, &quot;10 Folders&quot;. </p>
 <p> This command also provides a way to collect information for debug purposes using the <code>&#8211;collect-debug-info</code> option. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dpbtrs(3)"
 name: "dpbtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpbtrs/"
 description: "dpbtrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
  <i></i><code>DPBTRS</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bootctl(1)"
 name: "bootctl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-bootctl/"
 description: "bootctl – Control EFI firmware boot settings and manage boot loader"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bootctl</code> [OPTIONS&#8230;] {COMMAND}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>bootctl</code></p>
 <dd>can check the EFI firmware and boot loader status, list and manage available boot loaders and boot loader entries, and install, update, or remove the <code><a href="/docs/linux/man/7-systemd-boot/">systemd-boot</a></code>(7) boot loader on the current system.</dd>
 <h2>GENERIC EFI FIRMWARE/BOOT LOADER COMMANDS</h2>

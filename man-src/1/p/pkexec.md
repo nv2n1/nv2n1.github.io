@@ -1,4 +1,5 @@
 ---
+
 title: "pkexec(1)"
 name: "pkexec"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pkexec/"
 description: "pkexec – Execute a command as another user"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkexec</code> [<code>&#8211;version</code>] [<code>&#8211;disable-internal-agent</code>] [<code>&#8211;help</code>]</dt>
 <dt> <code>pkexec</code> [<code>&#8211;user</code>&nbsp;<i>username</i>] <i>PROGRAM</i> [<i>ARGUMENTS</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>pkexec</code></p>
 <dd>allows an authorized user to execute <i>PROGRAM</i> as another user. If <i>username</i> is not specified, then the program will be executed as the administrative super user, <i>root</i>.</dd>
 <h2>RETURN VALUE</h2>

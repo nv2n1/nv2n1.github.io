@@ -1,4 +1,5 @@
 ---
+
 title: "portreserve(1)"
 name: "portreserve"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-portreserve/"
 description: "portreserve – reserve ports to prevent portmap mapping them"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>portreserve</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>portreserve</code> program aims to help services with well-known ports that lie in the <code>bindresvport</code> range. It prevents portmap (or other programs using <code>bindresvport</code>) from occupying a real service&#8217;s port by occupying it itself, until the real service tells it to release the port (generally in its init script). </dd>
 <p> It is intended that <code>portreserve</code> runs from an initscript of its own, and services wishing to interact with it should use <code>portrelease</code>. </p>
 <p> When the <code>portreserve</code> daemon is started, it examines the /etc/portreserve/ directory. Each file not containing &#8220;.&#8221; or &#8220;~&#8221; in its name is considered to be a service configuration file, and must contain a service name (as listed in /etc/services) or a port number. UDP services may be specified by appending &quot;/udp&quot; to the service name, and TCP services by &quot;/tcp&quot;. Several services may be specified, one per line. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_debug_ops(3)"
 name: "ldb_debug_ops"
 section: "3"
@@ -8,7 +9,6 @@ description: "ldb_debug_ops –"
 ---
 
 <p> the user can optionally supply a debug function.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ldb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>debug</code> )(void *context, enum ldb_debug_level level, const char *fmt, va_list ap) PRINTF_ATTRIBUTE(3 </p>

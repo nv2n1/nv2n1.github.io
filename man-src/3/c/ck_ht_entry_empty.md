@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_entry_empty(3)"
 name: "ck_ht_entry_empty"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_ht_entry_empty – determine whether entry contains a key-value
 <p> <code>ck_ht_entry_empty</code> &#8211; determine whether entry contains a key-value pair</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft bool Fn ck_ht_entry_empty ck_ht_entry_t *entry</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_entry_empty function will return <code>false</code> if Fa entry points to a valid key-value pair. If Fa entry does not point to a valid key-value pair it returns <code>true.</code> It is expected that the object pointed to by Fa entry was initialized by a preceding call to the ck_ht_entry_set family of functions, the ck_ht_get_spmc3 function or the ck_ht_set_spmc3 function.</p>
 <h2>ERRORS</h2>
 <p> Behavior is undefined if Fa entry has not been initialized.</p>

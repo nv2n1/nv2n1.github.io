@@ -1,4 +1,5 @@
 ---
+
 title: "bochs(1)"
 name: "bochs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bochs/"
 description: "bochs – Portable x86 Emulator."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bochs</code> [<i>bochs_options</i>] [<i>bochsrc_options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Bochs is a portable Intel Architecture 32 (x86) emulator that runs on most popular operating systems. Inside the emulator, it can run many operating systems including Linux and Microsoft(R) Windows(R).</p>
 <h2>OPTIONS</h2>
 <p> When you run bochs without one of the following options, it will search for a configuration file called .bochsrc in the current directory and your home directory and display the start menu.</p>

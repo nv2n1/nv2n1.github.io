@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-control(1)"
 name: "tracker-control"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tracker-control/"
 description: "tracker-control – Manage Tracker processes and data"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tracker-control</code> [<i>OPTION</i>&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tracker-control</code> manages and checks status of all Tracker processes and data. </p>
 <p> Controls Tracker both at process level, and at entity level (store, miners). </p>
 <p> To start or stop miners, you can use <code>&#8211;start.</code> The store is started automatically by the D-Bus calls from the miners. </p>

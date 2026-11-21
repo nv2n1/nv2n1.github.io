@@ -1,4 +1,5 @@
 ---
+
 title: "pg_top(1)"
 name: "pg_top"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pg_top/"
 description: "pg_top – display and update information about the top cpu PostgreSQL processes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pg_top</code> [ OPTIONS ] [ NUMBER ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>pg_top</i> displays the top processes on the system and periodically updates this information. Raw cpu percentage is used to rank the processes. If <i>number</i> is given, then the top <i>number</i> processes will be displayed instead of the default. </p>
 <p> <i>pg_top</i> makes a distinction between terminals that support advanced capabilities and those that do not. This distinction affects the choice of defaults for certain options. In the remainder of this document, an &quot;intelligent&quot; terminal is one that supports cursor addressing, clear screen, and clear to end of line. Conversely, a &quot;dumb&quot; terminal is one that does not support such features. If the output of <i>pg_top</i> is redirected to a file, it acts as if it were being run on a dumb terminal.</p>
 <h2>OPTIONS</h2>

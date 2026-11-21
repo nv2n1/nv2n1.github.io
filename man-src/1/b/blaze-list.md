@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-list(1)"
 name: "blaze-list"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-blaze-list/"
 description: "blaze-list – browse the content of the BlazeBlogger repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blaze-list</code> [<code>-cpqrsCPSV</code>] [<code>-b</code> <i>directory</i>] [<code>-I</code> <i>id</i>] [<code>-a</code> <i>author</i>] [<code>-t</code> <i>title</i>] [<code>-T</code> <i>tag</i>] [<code>-d</code> <i>day</i>] [<code>-m</code> <i>month</i>] [<code>-y</code> <i>year</i>] [<code>-n</code> <i>number</i>] </p>
 <p> <code>blaze-list</code> <code>-h</code> | <code>-v</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>blaze-list</code> displays the content of the BlazeBlogger repository. All items are listed by default, but desired subset can be easily selected via additional options.</p>
 <h2>OPTIONS</h2>
 <dl>

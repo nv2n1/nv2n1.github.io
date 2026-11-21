@@ -1,4 +1,5 @@
 ---
+
 title: "arcrenew(1)"
 name: "arcrenew"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arcrenew/"
 description: "arcrenew – ARC Proxy Renewal"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <code>arcrenew</code> command is used for renewing the proxy of jobs that have been submitted to grid enabled resources. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>arcrenew [options] [job &#8230;]</code> </p>
 <h2>OPTIONS</h2>
 <dl>

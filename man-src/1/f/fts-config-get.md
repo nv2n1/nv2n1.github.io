@@ -1,4 +1,5 @@
 ---
+
 title: "fts-config-get(1)"
 name: "fts-config-get"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-config-get/"
 
  fts-config-get
 
-<h2>SYNOPSIS</h2>
+fts-config-get [options]
 
- fts-config-get [options]
-
-<h2>DESCRIPTION</h2>
-
- fts-config-set is a tool for listing all the SE configurations that are available in the DB.
+fts-config-set is a tool for listing all the SE configurations that are available in the DB.
 
 <h2>OPTIONS</h2>
 

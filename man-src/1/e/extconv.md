@@ -1,4 +1,5 @@
 ---
+
 title: "extconv(1)"
 name: "extconv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-extconv/"
 description: "extconv – convert a TeX document in either Big 5+ or GBK encoding into `preprocessed’ form."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>extconv</code> &lt; <i>infile</i> &gt; <i>outfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> Big 5+ and GBK encodings use the characters and which have special meanings in TeX documents. </p>
 <p> After processing a LaTeX 2e document which contains such characters with <code>extconv</code> you need not care about these special characters. </p>
 <p> This filter is part of the <code>CJK</code> macro package for LaTeX 2e.</p>

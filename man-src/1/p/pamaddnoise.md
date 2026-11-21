@@ -1,4 +1,5 @@
 ---
+
 title: "pamaddnoise(1)"
 name: "pamaddnoise"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamaddnoise/"
 description: "pamaddnoise – add noise to a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamaddnoise</code> </p>
 <p> [<code>-type</code> <i>noise_type</i>] </p>
 <p> [<code>-seed</code> <i>int</i>] <code>pamaddnoise</code> <code>-type</code> <code>gaussian</code> </p>
@@ -22,7 +22,6 @@ description: "pamaddnoise – add noise to a Netpbm image"
 <p> [<code>-seed</code> <i>int</i>] [<i>netpbmfile</i>] <code>pamaddnoise</code> <code>-type </code> <code>poisson</code> </p>
 <p> [<code>-lambda</code> <i>value</i>] </p>
 <p> [<code>-seed</code> <i>int</i>] [<i>netpbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamaddnoise</code> adds the specified noise type to a Netpbm image. <code>pamaddnoise</code> treats a PPM image as 3 independent planes, not as a plane of colors in a color space. </p>
 <h2>OPTIONS</h2>

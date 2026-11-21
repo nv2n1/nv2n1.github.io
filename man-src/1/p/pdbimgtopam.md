@@ -1,4 +1,5 @@
 ---
+
 title: "pdbimgtopam(1)"
 name: "pdbimgtopam"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pdbimgtopam/"
 description: "pdbimgtopam – convert a Palm Pilot Image Viewer PDB Image to a PAM image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdbimgtopam</code> </p>
 <p> [<code>-notefile=</code><i>filename</i>] [<code>-verbose</code>] </p>
 <p> [<i>pdbimgfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pdbimgtopam</code> reads a Palm Pilot Image Viewer image (and Image record in a PDB file) as input, from Standard Input or <i>palmfile</i>, and produces a PAM image as output. </p>
 <p> If the Pilot image is monochrome, the PAM output has maxval 1. Otherwise, it has maxval 255. Note that Pilot images are always monochrome. The PAM image has tuple type GRAYSCALE. </p>

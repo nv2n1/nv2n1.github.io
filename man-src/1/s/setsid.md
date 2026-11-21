@@ -1,4 +1,5 @@
 ---
+
 title: "setsid(1)"
 name: "setsid"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-setsid/"
 description: "setsid – run a program in a new session"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>setsid</code> [options] <i>program</i> [<i>arguments</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>setsid</code> runs a program in a new session. The command calls <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) if already a process group leader. Otherwise, it executes a program in the current process. This default behavior is possible to override by the <code>&#8211;fork</code> option.</p>
 <h2>OPTIONS</h2>
 <p> <code>-c</code>, <code>&#8211;ctty</code></p>

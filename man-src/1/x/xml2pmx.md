@@ -1,4 +1,5 @@
 ---
+
 title: "xml2pmx(1)"
 name: "xml2pmx"
 section: "1"
@@ -6,9 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-xml2pmx/"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> xml2pmx translates MusicXML files to input suitable for PMX processing </p>
-<h2>SYNOPSIS</h2>
 <p> <code>xml2pmx </code> [<code>-v | &#8211;version | -h | &#8211;help</code>] </p>
 <p> <code>xml2pmx </code> <i>input</i>.xml <i>output</i>.pmx [ p | d | v | s | l ] .. </p>
 <p> The <code>musixtex.lua</code> script from version 0.23 supports <code>xml2pmx</code> as a pre-preprocessor for MusicXML files. </p>

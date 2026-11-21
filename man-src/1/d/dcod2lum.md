@@ -1,4 +1,5 @@
 ---
+
 title: "dcod2lum(1)"
 name: "dcod2lum"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcod2lum/"
 description: "dcod2lum – Convert hardcopy characteristic curve file to softcopy format"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcod2lum in-file out-file
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Command line program that converts a hardcopy characteristic curve file to softcopy format. In other words, the measured optical density (OD) values from the input file are transformed to the luminance space according to the formula: </p>
 <pre>
   L = La + L0 * 10^(-D)

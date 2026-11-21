@@ -1,4 +1,5 @@
 ---
+
 title: "dig(1)"
 name: "dig"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dig/"
 description: "dig – DNS lookup utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dig</code> [@server] [<code>-b</code> address] [<code>-c</code> class] [<code>-f</code> filename] [<code>-k</code> filename] [<code>-m</code>] [<code>-p</code> port#] [<code>-q</code> name] [<code>-t</code> type] [<code>-v</code>] [<code>-x</code> addr] [<code>-y</code> [hmac:]name:key] [ [<code>-4</code>] | [<code>-6</code>] ] [name] [type] [class] [queryopt&#8230;] </p>
 <p> <code>dig</code> [<code>-h</code>] </p>
 <p> <code>dig</code> [global-queryopt&#8230;] [query&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dig</code> is a flexible tool for interrogating DNS name servers. It performs DNS lookups and displays the answers that are returned from the name server(s) that were queried. Most DNS administrators use <code>dig</code> to troubleshoot DNS problems because of its flexibility, ease of use, and clarity of output. Other lookup tools tend to have less functionality than <code>dig</code>. </p>
 <p> Although <code>dig</code> is normally used with command-line arguments, it also has a batch mode of operation for reading lookup requests from a file. A brief summary of its command-line arguments and options is printed when the <i>-h</i> option is given. The BIND 9 implementation of <code>dig</code> allows multiple lookups to be issued from the command line. </p>
 <p> Unless it is told to query a specific name server, <code>dig</code> tries each of the servers listed in <code>/etc/resolv.conf</code>. If no usable server addresses are found, <code>dig</code> sends the query to the local host. </p>

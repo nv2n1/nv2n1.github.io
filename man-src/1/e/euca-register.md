@@ -1,4 +1,5 @@
 ---
+
 title: "euca-register(1)"
 name: "euca-register"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-register – Register a new image"
 
 <h2>NAME</h2>
 <p> euca-register &#8211; Register a new image</p>
-<h2>SYNOPSIS</h2>
 <p> euca-register <code>-n</code> NAME [-d DESCRIPTION] [-a {i386,x86_64,armhf}]</p>
 <dl>
 <dt>[&#8211;kernel KERNEL] [&#8211;ramdisk RAMDISK]</dt>
 <dd> [&#8211;root-device-name DEVICE] [-s SNAPSHOT] [-b DEVICE=MAPPED] [&#8211;virtualization-type {paravirtual,hvm}] [&#8211;platform windows] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [MANIFEST]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Register a new image</p>
 <h3>positional arguments:</h3>
 <dl>

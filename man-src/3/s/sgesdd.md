@@ -1,4 +1,5 @@
 ---
+
 title: "sgesdd(3)"
 name: "sgesdd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgesdd/"
 description: "sgesdd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgesdd</code> (JOBZ, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code>SGESDD</code></p>

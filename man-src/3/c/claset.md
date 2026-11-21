@@ -1,4 +1,5 @@
 ---
+
 title: "claset(3)"
 name: "claset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claset/"
 description: "claset.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claset</code> (UPLO, M, N, ALPHA, BETA, A, LDA)<br />
  <i></i><code>CLASET</code> initializes the off-diagonal elements and the diagonal elements of a matrix to given values.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dcmdjpls(1)"
 name: "dcmdjpls"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmdjpls/"
 description: "dcmdjpls – Decode JPEG-LS compressed DICOM file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmdjpls [options] dcmfile-in dcmfile-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmdjpls</code> utility reads a JPEG-ls compressed DICOM image (<i>dcmfile-in</i>), decompresses the JPEG-LS data (i. e. conversion to a native DICOM transfer syntax) and writes the converted image to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

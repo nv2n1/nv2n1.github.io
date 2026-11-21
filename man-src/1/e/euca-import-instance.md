@@ -1,4 +1,5 @@
 ---
+
 title: "euca-import-instance(1)"
 name: "euca-import-instance"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-import-instance – Import an instance into the cloud"
 
 <h2>NAME</h2>
 <p> euca-import-instance &#8211; Import an instance into the cloud</p>
-<h2>SYNOPSIS</h2>
 <p> euca-import-instance <code>-t</code> INSTANCETYPE <code>-f</code> FORMAT <code>-a</code> ARCH <code>-p</code></p>
 <dl>
 <dt>{Windows,Linux} (<code>-b</code> BUCKET | <code>&#8211;manifest-url</code> URL)</dt>
 <dd> [&#8211;prefix PREFIX] [-x DAYS] [&#8211;no-upload] [-d DESCRIPTION] [-g GROUP] [-z ZONE] [-s GiB] [&#8211;image-size BYTES] [&#8211;user-data DATA | <code>&#8211;user-data-file</code> FILE] [&#8211;subnet SUBNET] [&#8211;private-ip-address ADDRESS] [&#8211;monitor] [&#8211;instance-initiated-shutdown-behavior {stop,terminate}] [&#8211;key KEYPAIR] [&#8211;show-empty-fields] [&#8211;s3-url URL] [-o KEY_ID] [-w KEY] [&#8211;progress | <code>&#8211;no-progress]</code> [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] FILE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Import an instance into the cloud</p>
 <h3>positional arguments:</h3>
 <dl>

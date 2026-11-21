@@ -1,4 +1,5 @@
 ---
+
 title: "pcre2grep(1)"
 name: "pcre2grep"
 section: "1"
@@ -9,9 +10,7 @@ description: "pcre2grep – a grep with Perl-compatible regular expressions."
 
 <h2>NAME</h2>
 <p> pcre2grep &#8211; a grep with Perl-compatible regular expressions.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pcre2grep [options] [long options] [pattern] [path1 path2 &#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcre2grep</code> searches files for character patterns, in the same way as other grep commands do, but it uses the PCRE2 regular expression library to support patterns that are compatible with the regular expressions of Perl 5. See <code><a href="/docs/linux/man/3-pcre2syntax/">pcre2syntax</a></code>(3) for a quick-reference summary of pattern syntax, or <code><a href="/docs/linux/man/3-pcre2pattern/">pcre2pattern</a></code>(3) for a full description of the syntax and semantics of the regular expressions that PCRE2 supports. </p>
 <p> Patterns, whether supplied on the command line or in a separate file, are given without delimiters. For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pcre2grep Thursday&nbsp;<wbr>/etc/motd </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "h5unjam(1)"
 name: "h5unjam"
 section: "1"
@@ -9,9 +10,7 @@ description: "h5unjam – Extract the user block from a HDF5 file"
 
 <h2>NAME</h2>
 <p> h5unjam &#8211; Extract the user block from a HDF5 file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>h5unjam</code> <code>-i</code> <i>in_file.h5</i> [<code>-u</code> <i>user_block</i> | <code>&#8211;delete</code>] [<code>-o</code> <i>out_file.h5</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>h5unjam </code> splits an HDF5 file, writing the user block to a file or stdout and the HDF5 file to an HDF5 file with a header at byte 0 (i.e., with no user block). </p>
 <p> If <i>out_file.h5</i> is given, a new file is created with the <i>in_file.h5</i> without the user block. In this case, <i>infile.h5</i> is unchanged. </p>
 <p> If <i>out_file.h5</i> is not specified, the <i>user_block</i> is removed and <i>in_file.h5</i> is rewritten, starting at byte 0. </p>

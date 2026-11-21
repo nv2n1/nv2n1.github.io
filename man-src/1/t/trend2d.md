@@ -1,4 +1,5 @@
 ---
+
 title: "trend2d(1)"
 name: "trend2d"
 section: "1"
@@ -9,10 +10,8 @@ description: "trend2d – Fit a [weighted] [robust] polynomial model for z = f(x
 
 <h2>NAME</h2>
 <p> trend2d &#8211; Fit a [weighted] [robust] polynomial model for z = f(x,y) to xyz[w] data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>trend2d</code> [ <i>table</i> ] <code>xyzmrw</code> <i>n_model</i>[<code>r</code>] [ <i>xyz[w]file</i> ] [ <i>condition_number</i> ] [ [<i>confidence_level</i>] ] [ [<i>level</i>] ] [ ] [ [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>trend2d</code> reads x,y,z [and w] values from the first three [four] columns on standard input [or <i>xyz[w]file</i>] and fits a regression model z = f(x,y) + e by [weighted] least squares. The fit may be made robust by iterative reweighting of the data. The user may also search for the number of terms in f(x,y) which significantly reduce the variance in z. n_model may be in [1,10] to fit a model of the following form (similar to grdtrend): m1 + m2*x + m3*y + m4*x*y + m5*x*x + m6*y*y + m7*x*x*x + m8*x*x*y + m9*x*y*y + m10*y*y*y. </p>
 <p> The user must specify <code>-N</code><i>n_model</i>, the number of model parameters to use; thus, <code>-N</code><i>4</i> fits a bilinear trend, <code>-N</code><i>6</i> a quadratic surface, and so on. Optionally, append <code>r</code> to perform a robust fit. In this case, the program will iteratively reweight the data based on a robust scale estimate, in order to converge to a solution insensitive to outliers. This may be handy when separating a &quot;regional&quot; field from a &quot;residual&quot; which should have non-zero mean, such as a local mountain on a regional surface.</p>
 <h2>REQUIRED ARGUMENTS</h2>

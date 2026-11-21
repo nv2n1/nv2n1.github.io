@@ -1,4 +1,5 @@
 ---
+
 title: "ssbgvx(3)"
 name: "ssbgvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssbgvx/"
 description: "ssbgvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbgvx</code> (JOBZ, RANGE, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>SSBGST</code></p>

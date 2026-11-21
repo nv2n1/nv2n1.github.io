@@ -1,4 +1,5 @@
 ---
+
 title: "devdump(1)"
 name: "devdump"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-devdump/"
 description: "devdump, isoinfo, isovfy, isodump – Utility programs for dumping and verifying iso9660 images."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>devdump </code> <i>isoimage</i> </p>
 <p> <code>isodump </code> <i>isoimage</i> </p>
 <p> <code>isoinfo</code> [ <code>-d</code> ] [ <code>-h</code> ] [ <code>-R</code> ] [ <code>-J</code> ] [ <code>-j</code> <i>charset</i> ] [ <code>-f</code> ] [ <code>-l</code> ] [ <code>-p</code> ] [ <code>-T</code> <i>sector</i> ] [ <code>-N</code> <i>sector</i> ] [ <code>-i</code> <i>isoimage</i> ] [ <code>-x</code> <i>path</i> ] </p>
 <p> <code>isovfy </code> <i>isoimage</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>devdump</code> is a crude utility to interactively display the contents of device or filesystem images. The initial screen is a display of the first 256 bytes of the first 2048 byte sector. The commands are the same as with <code>isodump</code>. </p>
 <p> <code>isodump</code> is a crude utility to interactively display the contents of iso9660 images in order to verify directory integrity. The initial screen is a display of the first part of the root directory, and the prompt shows you the extent number and offset in the extent.</p>
 <dl>

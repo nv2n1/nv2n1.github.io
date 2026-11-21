@@ -1,4 +1,5 @@
 ---
+
 title: "dlm_create_lockspace(3)"
 name: "dlm_create_lockspace"
 section: "3"
@@ -9,7 +10,6 @@ description: "dlm_create_lockspace, dlm_open_lockspace, dlm_close_lockspace, dlm
 
 <h2>NAME</h2>
 <p> dlm_create_lockspace, dlm_open_lockspace, dlm_close_lockspace, dlm_release_lockspace &#8211; manipulate DLM lockspaces</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libdlm.h&gt;
 dlm_lshandle_t dlm_create_lockspace(const char *name, mode_t mode);
@@ -20,7 +20,6 @@ int dlm_close_lockspace(dlm_lshandle_t ls);
 int dlm_release_lockspace(const char *name, dlm_lshandle_t ls,
                           int force);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The DLM allows locks to be partitioned into &quot;lockspaces&quot;, and these can be manipulated by userspace calls. It is possible (though not recommended) for an application to have multiple lockspaces open at one time. </p>
 <p> Many of the DLM calls work on the &quot;default&quot; lockspace, which should be fine for most users. The calls with _ls_ in them allow you to isolate your application from all others running in the cluster. Remember, lockspaces are a cluster-wide resource, so if you create a lockspace called &quot;myls&quot; it will share locks with a lockspace called &quot;myls&quot; on all nodes. These calls allow users to create &amp; remove lockspaces, and users to connect to existing lockspace to store their locks there. </p>
 <h3>dlm_lshandle_t dlm_create_lockspace(const char *name, mode_t mode);</h3>

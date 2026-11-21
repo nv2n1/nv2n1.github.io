@@ -1,4 +1,5 @@
 ---
+
 title: "sensible-browser(1)"
 name: "sensible-browser"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sensible-browser/"
 description: "sensible-browser – sensible web browsing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sensible-browser</code> url </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sensible-browser</code> makes sensible decisions on which web browser to call. Programs in Debian can use this script as their default web browser or emulate their behavior.<br />
  BROWSER environment variable could be set, and will be used if set.</p>
 <h2>STANDARD</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ideviceprovision(1)"
 name: "ideviceprovision"
 section: "1"
@@ -9,9 +10,7 @@ description: "ideviceprovision – Manage provisioning profiles on a device."
 
 <h2>NAME</h2>
 <p> ideviceprovision &#8211; Manage provisioning profiles on a device.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ideviceprovision</code> [OPTIONS] COMMAND </p>
-<h2>DESCRIPTION</h2>
 <p> Manage provisioning profiles on a device. </p>
 <h2>OPTIONS</h2>
 <dl>

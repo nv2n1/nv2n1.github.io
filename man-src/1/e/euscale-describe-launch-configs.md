@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-launch-configs(1)"
 name: "euscale-describe-launch-configs"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-describe-launch-configs – Describe auto-scaling instance
 
 <h2>NAME</h2>
 <p> euscale-describe-launch-configs &#8211; Describe auto-scaling instance launch configurations</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-describe-launch-configs [&#8211;show-long] [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [LAUNCHCONFIG [LAUNCHCONFIG &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Describe auto-scaling instance launch configurations</p>
 <h3>positional arguments:</h3>
 <dl>

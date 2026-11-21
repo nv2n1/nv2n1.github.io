@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_expiration_time(3)"
 name: "gnutls_x509_crt_get_expiration_time"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_crt_get_expiration_time – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_expiration_time &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>time_t gnutls_x509_crt_get_expiration_time(gnutls_x509_crt_t </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_crt_t cert</dt>
 <dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the time this Certificate was or will be expired. </p>
 <p> The no well defined expiration time can be checked against with the <code>GNUTLS_X509_NO_WELL_DEFINED_EXPIRATION</code> macro.</p>
 <h2>RETURNS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "log10f(3)"
 name: "log10f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-log10f/"
 description: "log10, log10f, log10l – base-10 logarithmic function"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double log10(double x);
@@ -22,7 +22,6 @@ long double log10l(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return the base 10 logarithm of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the base 10 logarithm of <i>x</i>. </p>

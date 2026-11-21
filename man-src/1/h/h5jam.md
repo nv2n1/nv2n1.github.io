@@ -1,4 +1,5 @@
 ---
+
 title: "h5jam(1)"
 name: "h5jam"
 section: "1"
@@ -9,9 +10,7 @@ description: "h5jam – Add a user block to a HDF5 file"
 
 <h2>NAME</h2>
 <p> h5jam &#8211; Add a user block to a HDF5 file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>h5jam </code> <code>-u</code> <i>user_block</i> <code>-i</code> <i>in_file.h5</i> [<code>-o</code> <i>out_file.h5</i>] [<code>&#8211;clobber</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>h5jam</code> concatenates a <i>user_block</i> file and an HDF5 file to create an HDF5 file with a user block. The user block can be either binary or text. The output file is padded so that the HDF5 header begins on byte 512, 1024, etc.. (See the HDF5 File Format.) </p>
 <p> If <i>out_file.h5</i> is given, a new file is created with the <i>user_block</i> followed by the contents of <i>in_file.h5</i>. In this case, <i>infile.h5</i> is unchanged. </p>
 <p> If <i>out_file.h5</i> is not specified, the <i>user_block</i> is added to <i>in_file.h5</i>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xsane(1)"
 name: "xsane"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xsane/"
 description: "xsane – scanner frontend for SANE"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xsane</code> [<code>&#8211;version</code>|<code>-v</code>] [<code>&#8211;license</code>|<code>-l</code>] [<code>&#8211;device-settings</code> <i>file</i> |<code>-d</code> <i>file</i>] [<code>&#8211;viewer</code>|<code>-V</code>] [<code>&#8211;save</code>|<code>-s</code>] [<code>&#8211;copy</code>|<code>-c</code>] [<code>&#8211;fax</code>|<code>-f</code>] [<code>&#8211;mail</code>|<code>-m</code>] [<code>&#8211;no-mode-selection</code>|<code>-n</code>] [<code>&#8211;Fixed</code>|<code>-F</code>] [<code>&#8211;Resizable</code>|<code>-R</code>] [<code>&#8211;print-filenames</code>|<code>-p</code>] [<code>&#8211;force-filename</code> <i>name</i> |<code>-N</code> <i>name</i>] [<code>&#8211;display</code> <i>d</i>] [<code>&#8211;sync</code>] [<i>devicename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>xsane</code> provides a graphical user-interface to control an image acquisition device such as a flatbed scanner. It allows previewing and scanning individual images and can be invoked either directly from the command-line or through The GIMP image manipulation program. In the former case, <code>xsane</code> acts as a stand-alone program that saves acquired images in a suitable PNM format (PBM for black-and-white images, PGM for grayscale images, and PPM for color images) or converts the image to JPEG, PNG, PS or TIFF. In the latter case, the images are directly passed to The GIMP for further processing. </p>
 <p> <code>xsane</code> accesses image acquisition devices through the SANE (Scanner Access Now Easy) interface. The list of available devices depends on installed hardware and configuration. When invoked without an explicit devicename argument, <code>xsane</code> presents a dialog listing all known and available devices. To access an available device that is not known to the system, the devicename must be specified explicitly. The format of devicename is backendname:devicefile (eg: umax:/dev/sga).</p>
 <h2>RUNNING UNDER THE GIMP</h2>

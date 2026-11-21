@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-rustc(1)"
 name: "cargo-rustc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-rustc/"
 description: "cargo-rustc – Compile a package and all of its dependencies"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo rustc [OPTIONS] [&#8211;] [&lt;OPTS&gt;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The specified target for the current package (or package specified by SPEC if provided) will be compiled along with all of its dependencies. The specified &#8230; will all be passed to the final compiler invocation, not any of the dependencies. Note that the compiler will still unconditionally receive arguments such as -L, &#8211;extern, and &#8211;crate-type, and the specified &#8230; will simply be added to the compiler invocation. </p>
 <p> This command requires that only one target is being compiled. If more than one target is available for the current package the filters of &#8211;lib, &#8211;bin, etc, must be used to select which target is compiled. To pass flags to all compiler processes spawned by Cargo, use the $RUSTFLAGS environment variable or the build.rustflags configuration option. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pgmcrater(1)"
 name: "pgmcrater"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pgmcrater/"
 description: "pgmcrater – create cratered terrain by fractal forgery"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmcrater</code><br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-number</code> <i>n</i>] [<code>-height</code>|<code>-ysize</code> <i>s</i>] [<code>-width</code>|<code>-xsize</code> <i>s</i>] [<code>-gamma</code> <i>g</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pgmcrater</code> creates a PGM image which mimics cratered terrain. The PGM image is created by simulating the impact of a given number of craters with random position and size, then rendering the resulting terrain elevations based on a light source shining from one side of the screen. The size distribution of the craters is based on a power law which results in many more small craters than large ones. The number of craters of a given size varies as the reciprocal of the area as described on pages 31 and 32 of Peitgen and Saupe[1]; cratered bodies in the Solar System are observed to obey this relationship. The formula used to obtain crater radii governed by this law from a uniformly distributed pseudorandom sequence was developed by Rudy Rucker. </p>
 <p> High resolution images with large numbers of craters often benefit from being piped through <code>pnmsmooth</code>. The averaging performed by this process eliminates some of the jagged pixels and lends a mellow &#8220;telescopic image&#8221; feel to the overall picture. </p>
 <p> <code>pgmcrater</code> simulates only small craters, which are hemispherical in shape (regardless of the incidence angle of the impacting body, as long as the velocity is sufficiently high). Large craters, such as Copernicus and Tycho on the Moon, have a &#8220;walled plain&#8221; shape with a cross-section more like: </p>

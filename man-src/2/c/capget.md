@@ -1,4 +1,5 @@
 ---
+
 title: "capget(2)"
 name: "capget"
 section: "2"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/2-capget/"
 description: "capget, capset – set/get capabilities of thread(s)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>
 <p> <code>int capget(cap_user_header_t </code><i>hdrp</i><code>, cap_user_data_t </code><i>datap</i><code>);</code> </p>
 <p> <code>int capset(cap_user_header_t </code><i>hdrp</i><code>, const cap_user_data_t </code><i>datap</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These two system calls are the raw kernel interface for getting and setting thread capabilities. Not only are these system calls specific to Linux, but the kernel API is likely to change and use of these system calls (in particular the format of the <i>cap_user_*_t</i> types) is subject to extension with each kernel revision, but old programs will keep working. </p>
 <p> The portable interfaces are <code><a href="/docs/linux/man/3-cap_set_proc/">cap_set_proc</a></code>(3) and <code><a href="/docs/linux/man/3-cap_get_proc/">cap_get_proc</a></code>(3); if possible, you should use those interfaces in applications.</p>
 <h3>Current details</h3>

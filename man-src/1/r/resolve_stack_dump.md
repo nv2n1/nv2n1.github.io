@@ -1,4 +1,5 @@
 ---
+
 title: "resolve_stack_dump(1)"
 name: "resolve_stack_dump"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-resolve_stack_dump/"
 description: "resolve_stack_dump – resolve numeric stack trace dump to symbols"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>resolve_stack_dump [</code><i>options</i><code>] </code><i>symbols_file</i><code> [</code><i>numeric_dump_file</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>resolve_stack_dump</code></p>
 <dd>resolves a numeric stack dump to symbols. </dd>
 <dl>

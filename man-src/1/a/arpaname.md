@@ -1,4 +1,5 @@
 ---
+
 title: "arpaname(1)"
 name: "arpaname"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-arpaname/"
 description: "arpaname – translate IP addresses to the corresponding ARPA names"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>arpaname</code> {<i>ipaddress&nbsp;<wbr></i>&#8230;}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>arpaname</code></p>
 <dd>translates IP addresses (IPv4 and IPv6) to the corresponding IN-ADDR.ARPA or IP6.ARPA names.</dd>
 <h2>SEE ALSO</h2>

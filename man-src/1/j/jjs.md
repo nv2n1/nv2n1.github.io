@@ -1,4 +1,5 @@
 ---
+
 title: "jjs(1)"
 name: "jjs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jjs/"
 description: "jjs – Invokes the Nashorn engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -27,7 +27,6 @@ jjs[options][script - files][--arguments]
 <dl>
 <dt>
 </dt><dd> All values after the double hyphen marker (<code>&#8212;</code>) are passed through to the script or the interactive shell as arguments. These values can be accessed by using the <code>arguments</code> property (see Example 3).</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jjs</code> command-line tool is used to invoke the Nashorn engine. You can use it to interpret one or several script files, or to run an interactive shell.</p>
 <h2>OPTIONS</h2>
 <p> The options of the <code>jjs</code> command control the conditions under which scripts are interpreted by Nashorn. </p>

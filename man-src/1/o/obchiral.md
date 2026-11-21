@@ -1,4 +1,5 @@
 ---
+
 title: "obchiral(1)"
 name: "obchiral"
 section: "1"
@@ -9,9 +10,7 @@ description: "obchiral – print molecular chirality information"
 
 <h2>NAME</h2>
 <p> <code>obchiral</code> &#8211; print molecular chirality information</p>
-<h2>SYNOPSIS</h2>
 <p> <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> The obchiral program is a tool to print the chirality information for all molecules in a file. It also serves as example code for using the Open Babel library (libopenbabel).</p>
 <h2>EXAMPLES</h2>
 <blockquote><p><tt>&quot;obchiral pyridines.sdf&quot;</tt></p></blockquote>

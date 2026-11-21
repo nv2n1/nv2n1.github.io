@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_rr2ds(3)"
 name: "ldns_key_rr2ds"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_key_rr2ds"
 
 <h2>NAME</h2>
 <p> ldns_key_rr2ds </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr* ldns_key_rr2ds(const ldns_rr *key, ldns_hash h); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_rr2ds</i>()</dt>
 <dd>returns a new DS rr that represents the given key rr. </dd>

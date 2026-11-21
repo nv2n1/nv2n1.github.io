@@ -1,4 +1,5 @@
 ---
+
 title: "sphinx-build(1)"
 name: "sphinx-build"
 section: "1"
@@ -9,9 +10,7 @@ description: "sphinx-build – Sphinx documentation generator tool"
 
 <h2>NAME</h2>
 <p> sphinx-build &#8211; Sphinx documentation generator tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sphinx-build</code> [<i>options</i>] &lt;<i>sourcedir</i>&gt; &lt;<i>outdir</i>&gt; [<i>filenames</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sphinx-build</code> generates documentation from the files in <code>&lt;sourcedir&gt;</code> and places it in the <code>&lt;outdir&gt;</code>. </p>
 <p> <code>sphinx-build</code> looks for <code>&lt;sourcedir&gt;/conf.py</code> for the configuration settings. <i><a href="/docs/linux/man/1-sphinx-quickstart/">sphinx-quickstart</a>(1)</i> may be used to generate template files, including <code>conf.py</code>. </p>
 <p> <code>sphinx-build</code> can create documentation in different formats. A format is selected by specifying the builder name on the command line; it defaults to HTML. Builders can also perform other tasks related to documentation processing. </p>

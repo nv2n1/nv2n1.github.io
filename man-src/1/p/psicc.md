@@ -1,4 +1,5 @@
 ---
+
 title: "psicc(1)"
 name: "psicc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-psicc/"
 description: "psicc – little cms PostScript converter."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>psicc</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>psicc </code> is little cms PostScript converter.</p>
 <h2>OPTIONS</h2>
 <dl>

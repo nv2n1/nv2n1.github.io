@@ -1,4 +1,5 @@
 ---
+
 title: "ilasm(1)"
 name: "ilasm"
 section: "1"
@@ -9,10 +10,8 @@ description: "ilasm, ilasm2 – Mono IL assembler"
 
 <h2>NAME</h2>
 <p> ilasm, ilasm2 &#8211; Mono IL assembler</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ilasm</code> [option] [source-files] </p>
 <p> <code>ilasm2</code> [option] [source-files]</p>
-<h2>DESCRIPTION</h2>
 <p> ilasm is the Mono ILAsm assembler. You can pass one or more options to drive the compiler, and a set of source files. </p>
 <p> Use <i>ilasm</i> to generate 1.0 assemblies and use <i>ilasm2</i> to assemble programs that use the 2.0 features (generics). </p>
 <p> The Mono ILAsm assembler accepts options starting with / or &#8211; for mosted options. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rpmlint(1)"
 name: "rpmlint"
 section: "1"
@@ -9,9 +10,7 @@ description: "rpmlint – check common problems in rpm packages"
 
 <h2>NAME</h2>
 <p> rpmlint &#8211; check common problems in rpm packages</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rpmlint</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>|<i>PACKAGE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rpmlint</code> is a tool for checking common errors in rpm packages. It can be used to test individual packages and spec files before uploading or to check an entire distribution. By default all applicable checks are processed but specific checks can be performed by using command line parameters. </p>
 <p> <i>FILE</i> can be a rpm package file, a spec file, or a directory. In case of a directory, it is recursively searched for rpm and spec files to check. The special value <code>&#8211;</code> results in standard input being read and treated as (single) spec file content. <i>PACKAGE</i> is the name of an installed package or a <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7) pattern to match installed packages, unless a file by that name exists.</p>
 <dl>

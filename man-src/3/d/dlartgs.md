@@ -1,4 +1,5 @@
 ---
+
 title: "dlartgs(3)"
 name: "dlartgs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlartgs/"
 description: "dlartgs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlartgs</code> (X, Y, SIGMA, CS, SN)<br />
  <i></i><code>DLARTGS</code> generates a plane rotation designed to introduce a bulge in implicit QR iteration for the bidiagonal SVD problem.</p>

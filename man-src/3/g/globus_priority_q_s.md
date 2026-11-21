@@ -1,4 +1,5 @@
 ---
+
 title: "globus_priority_q_s(3)"
 name: "globus_priority_q_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_priority_q_s –"
 ---
 
 <p> Priority Queue Structure.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_priority_q.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Priority Queue Structure. </p>

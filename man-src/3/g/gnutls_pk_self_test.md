@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pk_self_test(3)"
 name: "gnutls_pk_self_test"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pk_self_test – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pk_self_test &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_pk_self_test(unsigned </code><i>all</i><code>, gnutls_pk_algorithm_t </code><i>pk</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_pk_self_test – API function"
 <dd> if non-zero then tests to all public key algorithms are performed.</dd>
 <dt>gnutls_pk_algorithm_t pk</dt>
 <dd> the algorithm to use</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will run self tests on the provided public key algorithm.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

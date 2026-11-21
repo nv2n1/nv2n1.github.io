@@ -1,4 +1,5 @@
 ---
+
 title: "pldes(1)"
 name: "pldes"
 section: "1"
@@ -10,20 +11,14 @@ url: "/docs/linux/man/1-pldes/"
 
  pl, pldes, plser, plmerge, plparse, pl2link<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>- property list tools
 
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 pldes filename(s)
 plget key[morekeys] plser filename(s)
     plmerge[destination - file][input - file(s)] plparse filename(s)
 pl2link input - file[destination - file] pl - input[input - file] - output[destination - file]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Property lists in GNUstep are hierarchical lists of values or attribute-value pairs. Programmatically they are represented by instances of the NSString, NSData, NSArray, or NSDictionary (most common) class (which may contain other instances of such classes). These instances can be serialized as binary objects to form a persistent representation. In addition, there are two alternative human-readable representations. The first, utilized in NeXTstep and OpenStep, utilizes a text format with equals signs expressing attribute-value bindings and set braces expressing hierarchical organization. The second, often (uninformatively) referred to as &quot;plist&quot; format, is in XML and is used by Mac OS X. The tools described here are utilities for manipulating the various persistent property list representations as files.
+Property lists in GNUstep are hierarchical lists of values or attribute-value pairs. Programmatically they are represented by instances of the NSString, NSData, NSArray, or NSDictionary (most common) class (which may contain other instances of such classes). These instances can be serialized as binary objects to form a persistent representation. In addition, there are two alternative human-readable representations. The first, utilized in NeXTstep and OpenStep, utilizes a text format with equals signs expressing attribute-value bindings and set braces expressing hierarchical organization. The second, often (uninformatively) referred to as &quot;plist&quot; format, is in XML and is used by Mac OS X. The tools described here are utilities for manipulating the various persistent property list representations as files.
 <dl>
 <dt><b>pldes</b> <i>filename(s)</i>
 </dt><dd> Converts a binary serialised property list (class instance) to a text representation.

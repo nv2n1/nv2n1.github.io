@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_ecp_fwd_to_rev(3)"
 name: "ieee1284_ecp_fwd_to_rev"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-ieee1284_ecp_fwd_to_rev/"
 description: "ieee1284_ecp_fwd_to_rev, ieee1284_ecp_rev_to_fwd – ECP direction switching"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>int ieee1284_ecp_fwd_to_rev(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt>
 <dt> <code>int ieee1284_ecp_rev_to_fwd(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>These functions are used to switch directions when in ECP mode. On negotiation to ECP mode the direction is forward (in other words, host-to-peripheral). Use <code>ieee1284_ecp_fwd_to_rev</code> to switch from forward to reverse, and <code>ieee1284_ecp_rev_to_fwd</code> to switch from reverse to forward. </dd>
 <p> They act on the parallel port associated with <i>port</i>, which must be claimed.</p>
 <h2>RETURN VALUE</h2>

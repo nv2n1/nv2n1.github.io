@@ -1,4 +1,5 @@
 ---
+
 title: "fet(1)"
 name: "fet"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fet/"
 description: "FET – free timetabling"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fet</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>FET</code> software is a free software implementation of a heuristical algorithm to automatically schedule the timetable of an educational institution (university, school or high-school) </p>
 <h2>AUTHOR</h2>
 <p> Written by Liviu Lalescu &lt;<a rel="nofollow" href="http://lalescu.ro/liviu/">http://lalescu.ro/liviu/</a>&gt;. This manual page was originally written by Liviu Lalescu &lt;<a rel="nofollow" href="http://lalescu.ro/liviu/">http://lalescu.ro/liviu/</a>&gt;.<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ibdiagui(1)"
 name: "ibdiagui"
 section: "1"
@@ -14,7 +15,6 @@ description: "ibdiagui – IB Diagnostic GUI"
 &nbsp;<wbr>&nbsp;<wbr>[-t&nbsp;<wbr>&lt;topo-file&gt;]&nbsp;<wbr>[-s&nbsp;<wbr>&lt;sys-name&gt;]&nbsp;<wbr>[-i&nbsp;<wbr>&lt;dev-index&gt;]&nbsp;<wbr>[-p&nbsp;<wbr>&lt;port-num&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-pm]&nbsp;<wbr>[-pc]&nbsp;<wbr>[-P&nbsp;<wbr>&lt;<font SIZE="-1">PM</font>&nbsp;<wbr>counter&gt;=&lt;Trash Limit&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-lw&nbsp;<wbr>&lt;1x|4x|12x&gt;]&nbsp;<wbr>[-ls&nbsp;<wbr>&lt;2.5|5|10&gt;]</p>
-<h2>DESCRIPTION</h2>
 <pre>
   ibdiagui is a GUI wrapper for ibdiagnet.
   Its main features:

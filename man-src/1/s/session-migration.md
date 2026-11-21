@@ -1,4 +1,5 @@
 ---
+
 title: "session-migration(1)"
 name: "session-migration"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-session-migration/"
 description: "session-migration – Migrate in user session settings."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>session-migration</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>session-migration</code> program can be used to migrate in-session user data when a program is evolving its configuration, or needing to have files moved and so on. This program is generally autostarted at the very beginning of the session and integrates caching capabilities. </p>
 <p> The general usage is to ship an executable file in XDG_DATA_DIR/session-migration/scripts. This one will be executed the next time the user log into the session. It will executes all executable files there in ascii order, one after another. </p>
 <p> Even if the program tries to cache some timestamp and scripts to not be launched twiced (they are skipped on subsequent runs), the executables file should be idempotent. </p>

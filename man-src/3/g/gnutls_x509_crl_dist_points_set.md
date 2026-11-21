@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_dist_points_set(3)"
 name: "gnutls_x509_crl_dist_points_set"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crl_dist_points_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_dist_points_set &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_dist_points_set(gnutls_x509_crl_dist_points_t </code><i>cdp</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const gnutls_datum_t * </code><i>san</i><code>, unsigned int </code><i>reasons</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crl_dist_points_set – API function"
 <dd> The point name data</dd>
 <dt>unsigned int reasons</dt>
 <dd> Revocation reasons. An ORed sequence of flags from <code>gnutls_x509_crl_reason_flags_t</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will store the specified CRL distibution point value the <i>cdp</i> structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0), otherwise a negative error value.</p>

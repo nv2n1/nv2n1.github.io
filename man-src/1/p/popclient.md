@@ -1,4 +1,5 @@
 ---
+
 title: "popclient(1)"
 name: "popclient"
 section: "1"
@@ -6,10 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-popclient/"
 description: "fetchmail – fetch mail from a POP, IMAP, ETRN, or ODMR-capable server"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>fetchmail</code> [<i>option...</i>] [<i>mailserver...</i>] <br />
  <code>fetchmailconf</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fetchmail</code> is a mail-retrieval and forwarding utility; it fetches mail from remote mailservers and forwards it to your local (client) machine&#8217;s delivery system. You can then handle the retrieved mail using normal mail user agents such as <code><a href="/docs/linux/man/1-mutt/">mutt</a></code>(1), <code>elm</code>(1) or <code><a href="/docs/linux/man/1-Mail/">Mail</a></code>(1). The <code>fetchmail</code> utility can be run in a daemon mode to repeatedly poll one or more systems at a specified interval. </p>
 <p> The <code>fetchmail</code> program can gather mail from servers supporting any of the common mail-retrieval protocols: POP2 (legacy, to be removed from future release), POP3, IMAP2bis, IMAP4, and IMAP4rev1. It can also use the ESMTP ETRN extension and ODMR. (The RFCs describing all these protocols are listed at the end of this manual page.) </p>
 <p> While <code>fetchmail</code> is primarily intended to be used over on-demand TCP/IP links (such as SLIP or PPP connections), it may also be useful as a message transfer agent for sites which refuse for security reasons to permit (sender-initiated) SMTP transactions with sendmail. </p>

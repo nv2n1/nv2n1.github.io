@@ -1,4 +1,5 @@
 ---
+
 title: "dund(1)"
 name: "dund"
 section: "1"
@@ -9,9 +10,7 @@ description: "dund – BlueZ Bluetooth dial-up networking daemon"
 
 <h2>NAME</h2>
 <p> dund &#8211; BlueZ Bluetooth dial-up networking daemon</p>
-<h2>DESCRIPTION</h2>
 <p> DUN daemon</p>
-<h2>SYNOPSIS</h2>
 <p> dund &lt;options&gt; [pppd options]</p>
 <h2>OPTIONS</h2>
 <dl>

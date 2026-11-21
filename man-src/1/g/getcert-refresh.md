@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-refresh(1)"
 name: "getcert-refresh"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-refresh/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert refresh [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Forces <i>certmonger</i> to immediately check on the status of an enrollment request for which it was either unable to contact a CA or for which it is waiting for the CA. </p>
 <h2>SPECIFYING REQUESTS BY NICKNAME</h2>
 <dl>

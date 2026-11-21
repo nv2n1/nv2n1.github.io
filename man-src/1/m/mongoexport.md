@@ -1,4 +1,5 @@
 ---
+
 title: "mongoexport(1)"
 name: "mongoexport"
 section: "1"
@@ -9,7 +10,6 @@ description: "mongoexport – MongoDB Export Utility"
 
 <h2>NAME</h2>
 <p> mongoexport &#8211; MongoDB Export Utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mongoexport</code> is a utility that produces a JSON or CSV export of data stored in a MongoDB instance. See the <a rel="nofollow" href="http://docs.mongodb.org/manual/core/import-export">http://docs.mongodb.org/manual/core/import-export</a> document for a more in depth usage overview, and the <code>mongoimport</code> document for more information regarding the <code>mongoimport</code> utility, which provides the inverse &quot;importing&quot; capability.</p>
 <h2>CONSIDERATIONS</h2>
 <p> Do not use <code>mongoimport</code> and <code>mongoexport</code> for full-scale production backups because they may not reliably capture data type information. Use <code>mongodump</code> and <code>mongorestore</code> as described in <a rel="nofollow" href="http://docs.mongodb.org/manual/core/backups">http://docs.mongodb.org/manual/core/backups</a> for this kind of functionality.</p>

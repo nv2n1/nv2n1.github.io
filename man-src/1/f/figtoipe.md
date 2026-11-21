@@ -1,4 +1,5 @@
 ---
+
 title: "figtoipe(1)"
 name: "figtoipe"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-figtoipe/"
 description: "figtoipe – Convert FIG figures into Ipe format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>figtoipe </code> [-g] [-p <i>preamble</i>] <i>FIGfile</i> <i>XMLfile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>figtoipe</code> converts files in FIG format (as created, e.g., by <code>xfig</code>) to Ipe&#8217;s XML format. </p>
 <p> <code>figtoipe</code> is not complete. The main lacking feature is the conversion of splines. Arc-boxes are replaced by rectangles. Feel free to improve this version! </p>
 <p> The drawing models of FIG and Ipe are somewhat different. Ipe does not support depth ordering independent of grouping, pattern fill, and Postscript fonts. </p>

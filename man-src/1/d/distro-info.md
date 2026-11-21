@@ -1,4 +1,5 @@
 ---
+
 title: "distro-info(1)"
 name: "distro-info"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-distro-info/"
 description: "distro-info – provides information about the distributions’ releases"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>distro-info</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>distro-info</code> is a symlink to the distro-info command for your distribution. On Debian it links to <code>debian-distro-info</code> and on Ubuntu it links to <code>ubuntu-distro-info</code>. All options described in this manual page are available in all <code>distro-info</code> commands. All other options, which are not described here, are distribution specific.</p>
 <h2>OPTIONS</h2>
 <dl>

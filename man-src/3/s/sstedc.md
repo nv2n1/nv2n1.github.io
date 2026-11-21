@@ -1,4 +1,5 @@
 ---
+
 title: "sstedc(3)"
 name: "sstedc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sstedc/"
 description: "sstedc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sstedc</code> (COMPZ, N, D, E, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>SSTEBZ</code></p>

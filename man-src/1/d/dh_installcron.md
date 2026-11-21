@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installcron(1)"
 name: "dh_installcron"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installcron/"
 description: "dh_installcron – install cron scripts into etc/cron.*"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installcron</code> [<code>debhelper options</code>] [<code>&#8211;name=</code><i>name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installcron</code> is a debhelper program that is responsible for installing cron scripts.</p>
 <h2>FILES</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "io_submit(2)"
 name: "io_submit"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-io_submit/"
 description: "io_submit – submit asynchronous I/O blocks for processing"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */
 int io_submit(aio_context_t ctx_id, long nr, struct iocb **iocbpp);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: this page describes the raw Linux system call interface. The wrapper function provided by <i>libaio</i> uses a different type for the <i>ctx_id</i> argument. See NOTES. </p>
 <p> The <code>io_submit</code>() system call queues <i>nr</i> I/O request blocks for processing in the AIO context <i>ctx_id</i>. The <i>iocbpp</i> argument should be an array of <i>nr</i> AIO control blocks, which will be submitted to context <i>ctx_id</i>. </p>
 <p> The <i>iocb</i> (I/O control block) structure defined in <i>linux/aio_abi.h</i> defines the parameters that control the I/O operation. </p>

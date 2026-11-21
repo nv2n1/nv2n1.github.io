@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_obj_import_url(3)"
 name: "gnutls_pkcs11_obj_import_url"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs11_obj_import_url – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_import_url &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_obj_import_url(gnutls_pkcs11_obj_t </code><i>obj</i><code>, const char * </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pkcs11_obj_import_url – API function"
 <dd> a PKCS 11 url identifying the key</dd>
 <dt>unsigned int flags</dt>
 <dd> Or sequence of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will &quot;import&quot; a PKCS 11 URL identifying an object (e.g. certificate) to the <code>gnutls_pkcs11_obj_t</code> structure. This does not involve any parsing (such as X.509 or OpenPGP) since the <code>gnutls_pkcs11_obj_t</code> is format agnostic. Only data are transferred.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

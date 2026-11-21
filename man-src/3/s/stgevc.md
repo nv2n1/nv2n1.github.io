@@ -1,4 +1,5 @@
 ---
+
 title: "stgevc(3)"
 name: "stgevc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stgevc/"
 description: "stgevc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br />
  <i></i><code>STGEVC</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "patchwork(1)"
 name: "patchwork"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-patchwork/"
 description: "patchwork – filter for drawing clustered graphs as treemaps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>patchwork</code> [<code>&#8211;</code>(<code>G</code>|<code>N</code>|<code>E</code>)<i>name=value</i>] [<code>-T</code><i>lang</i>] [<code>-l</code><i>libfile</i>] [<code>-o</code><i>outfile</i>] [<code>-O</code>] [<code>-P</code>] [<code>-v</code>] [<code>-V</code>] [files]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>patchwork</i> draws clustered graphs using a squarified treemap layout. As input, it takes any graph in the <i>dot</i> format. Each cluster is given an area based on the areas specified by the clusters and nodes it contains. The areas of nodes and empty clusters can be specified by the <code>area</code> attribute. The default value is 1. </p>
 <p> The root graph is laid out as a square. Then, recursively, the region of a cluster or graph is partitioned among its top-level nodes and clusters, with each given a roughly square subregion with its specified area.</p>
 <h2>OUTPUT FORMATS</h2>

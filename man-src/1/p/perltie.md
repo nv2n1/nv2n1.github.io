@@ -1,4 +1,5 @@
 ---
+
 title: "perltie(1)"
 name: "perltie"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-perltie/"
 description: "perltie – how to hide an object class in a simple variable"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  tie VARIABLE, CLASSNAME, LIST
  $object = tied VARIABLE
  untie VARIABLE
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Prior to release 5.0 of Perl, a programmer could use <code>dbmopen()</code> to connect an on-disk database in the standard Unix <code>dbm</code>(3x) format magically to a <tt>%HASH</tt> in their program. However, their Perl was either built with one particular dbm library or another, but not both, and you couldn&#8217;t extend this mechanism to other packages or types of variables. </p>
 <p> Now you can. </p>
 <p> The <code>tie()</code> function binds a variable to a class (package) that will provide the implementation for access methods for that variable. Once this magic has been performed, accessing a tied variable automatically triggers method calls in the proper class. The complexity of the class is hidden behind magic methods calls. The method names are in <font SIZE="-1">ALL CAPS,</font> which is a convention that Perl uses to indicate that they&#8217;re called implicitly rather than explicitly&#8212;just like the <font SIZE="-1"><code>BEGIN</code></font><code>()</code> and <font SIZE="-1"><code>END</code></font><code>()</code> functions. </p>

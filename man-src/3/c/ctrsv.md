@@ -1,4 +1,5 @@
 ---
+
 title: "ctrsv(3)"
 name: "ctrsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctrsv/"
 description: "ctrsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrsv</code> (UPLO, TRANS, DIAG, N, A, LDA, X, INCX)<br />
  <i></i><code>CTRSV</code></p>

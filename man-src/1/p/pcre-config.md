@@ -1,4 +1,5 @@
 ---
+
 title: "pcre-config(1)"
 name: "pcre-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pcre-config/"
 description: "pcre-config – program to return PCRE configuration"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pcre-config</code> [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;version</code>] [<code>&#8211;libs</code>] [<code>&#8211;libs-posix</code>] [<code>&#8211;cflags</code>] [<code>&#8211;cflags-posix</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcre-config</code> returns the configuration of the installed PCRE libraries: the options required to compile a program to use them. </p>
 <h2>OPTIONS</h2>
 <dl>

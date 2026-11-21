@@ -1,4 +1,5 @@
 ---
+
 title: "chicken(1)"
 name: "chicken"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-chicken/"
 description: "chicken – A Scheme-to-C translator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>chicken</code> <i>PATHNAME</i> [ <i>OPTION &#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>CHICKEN</i> is a compiler and interpreter for the programming language <i>Scheme</i> supporting most of the features as described in the <i>Revised^5 Report on</i> <i>the Algorithmic Language Scheme</i> . The <code>chicken</code> program is the basic Scheme-to-C translator used in this system. For a more convenient interface, see the manual page for <a href="/docs/linux/man/1-csc/">csc</a>(1). </p>
 <h2>OPTIONS</h2>
 <p> Enter <code>chicken -help</code> for a list of supported command-line options. </p>

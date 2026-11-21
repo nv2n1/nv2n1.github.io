@@ -1,4 +1,5 @@
 ---
+
 title: "collectdctl(1)"
 name: "collectdctl"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-collectdctl/"
 description: "collectdctl – Control interface for collectd"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> collectdctl <i>[options]</i> <i>&lt;command&gt;</i> <i>[command options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> collectdctl provides a control interface for collectd, which may be used to interact with the daemon using the <tt>&quot;unixsock plugin&quot;</tt>.</p>
 <h2>OPTIONS</h2>
 <p> collectdctl supports the following options:</p>

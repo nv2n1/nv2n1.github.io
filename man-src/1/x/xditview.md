@@ -1,4 +1,5 @@
 ---
+
 title: "xditview(1)"
 name: "xditview"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xditview/"
 description: "xditview – display ditroff output"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xditview</code> [ &#8211;<i>toolkitoption</i> &#8230; ] [ &#8211;<i>option</i> &#8230; ] [ <i>filename</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xditview</i> program displays <i>ditroff</i> output on an X display. It uses no special metrics and automatically converts the printer coordinates into screen coordinates; using the user-specified screen resolution, rather than the actual resolution so that the appropriate fonts can be found. If &#8220;<code>&#8211;</code>&#8221; is given as the <i>filename,</i> <i>xditview</i> reads from standard input. If &#8220;<code>|</code>&#8221; is the first character of <i>filename,</i> <i>xditview</i> forks <i>sh</i> to run the rest of the &#8220;file name&#8221; and uses the standard output of that command.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xditview</i> accepts all of the standard X Toolkit command line options along with the additional options listed below:</p>

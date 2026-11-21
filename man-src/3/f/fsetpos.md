@@ -1,4 +1,5 @@
 ---
+
 title: "fsetpos(3)"
 name: "fsetpos"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-fsetpos/"
 description: "fgetpos, fseek, fsetpos, ftell, rewind – reposition a stream"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>
 <p> <code>int fseek(FILE *</code><i>stream</i><code>, long </code><i>offset</i><code>, int </code><i>whence</i><code>);</code> </p>
 <p> <code>long ftell(FILE *</code><i>stream</i><code>);</code> </p>
 <p> <code>void rewind(FILE *</code><i>stream</i><code>);</code> </p>
 <p> <code>int fgetpos(FILE *</code><i>stream</i><code>, fpos_t *</code><i>pos</i><code>);</code> </p>
 <p> <code>int fsetpos(FILE *</code><i>stream</i><code>, const fpos_t *</code><i>pos</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>fseek</code>() function sets the file position indicator for the stream pointed to by <i>stream</i>. The new position, measured in bytes, is obtained by adding <i>offset</i> bytes to the position specified by <i>whence</i>. If <i>whence</i> is set to <code>SEEK_SET</code>, <code>SEEK_CUR</code>, or <code>SEEK_END</code>, the offset is relative to the start of the file, the current position indicator, or end-of-file, respectively. A successful call to the <code>fseek</code>() function clears the end-of-file indicator for the stream and undoes any effects of the <code><a href="/docs/linux/man/3-ungetc/">ungetc</a></code>(3) function on the same stream. </p>
 <p> The <code>ftell</code>() function obtains the current value of the file position indicator for the stream pointed to by <i>stream</i>. </p>
 <p> The <code>rewind</code>() function sets the file position indicator for the stream pointed to by <i>stream</i> to the beginning of the file. It is equivalent to: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_udp_driver_io(3)"
 name: "globus_xio_udp_driver_io"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_udp_driver_io/"
 description: "Reading/Writing – globus_xio_register_read() semantics:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Reading/Writing &#8211; <code>globus_xio_register_read()</code> semantics: </p>
 <p> If the waitforbytes parameter is greater than zero, the read will happen asynchronously and be completed when at least waitforbytes has been read/written. </p>
 <p> If the waitforbytes parameter is equal to zero, one of the following alternative behaviors occur: </p>

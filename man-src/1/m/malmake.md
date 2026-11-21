@@ -1,4 +1,5 @@
 ---
+
 title: "malmake(1)"
 name: "malmake"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-malmake/"
 description: "malmake – compile a Malaga project"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>malmake</code> [<code>-new</code>] <i>project-file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Malaga is a development environment for natural-language grammars based on the Left-Associative Grammar formalism. Malaga grammars can be used for automatic morphological and/or syntactic analysis. </p>
 <p> The program <code>malmake</code> reads a project file, checks if all grammar files needed do exist, and translates all grammar files that have not yet been translated or whose source files have changed since they have been translated. It calls the programs <code><a href="/docs/linux/man/1-malsym/">malsym</a></code>(1), <code><a href="/docs/linux/man/1-mallex/">mallex</a></code>(1) and <code><a href="/docs/linux/man/1-malrul/">malrul</a></code>(1) if needed. It is in essence a <code><a href="/docs/linux/man/1-make/">make</a></code>(1) for the Malaga programming language. </p>
 <p> See <code>info Malaga</code> for details. </p>

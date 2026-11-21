@@ -1,4 +1,5 @@
 ---
+
 title: "jpeg2yuv(1)"
 name: "jpeg2yuv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jpeg2yuv/"
 description: "jpeg2yuv – Convert jpeg images to the yuv format."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jpeg2yuv</code> [<code>-b</code> <i>num</i>] [<code>-f</code> <i>num</i>] [<code>-I</code> <i>num</i>] [<code>-A</code> <i>ratio</i>] [<code>-L</code> <i>num</i>] [<code>-n</code> num<code>]</code> [<code>-l</code> <i>num</i>] [<code>-j</code> <i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>jpeg2yuv</code> decompresses a sequence of JPEG files and pipes the image data to stdout as a YUV4MPEG2 stream. Any JPEG format supported by libjpeg can be read. stdout will be filled with the YUV4MPEG2 movie data stream, so be prepared to pipe it on to mpeg2enc or to write it into a file. </p>
 <h2>OPTIONS</h2>
 <p> <code>jpeg2yuv</code> accepts the following options: </p>

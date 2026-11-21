@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_obj_list_import_url2(3)"
 name: "gnutls_pkcs11_obj_list_import_url2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs11_obj_list_import_url2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_list_import_url2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_obj_list_import_url2(gnutls_pkcs11_obj_t ** </code><i>p_list</i><code>, unsigned int * </code><i>n_list</i><code>, const char * </code><i>url</i><code>, gnutls_pkcs11_obj_attr_t </code><i>attrs</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_pkcs11_obj_list_import_url2 – API function"
 <dd> Attributes of type <code>gnutls_pkcs11_obj_attr_t</code> that can be used to limit output</dd>
 <dt>unsigned int flags</dt>
 <dd> Or sequence of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will initialize and set values to an object list by using all objects identified by the PKCS 11 URL. The output is stored in <i>p_list</i> , which will be initialized. </p>
 <p> All returned objects must be deinitialized using <code>gnutls_pkcs11_obj_deinit()</code>, and <i>p_list</i> must be free&#8217;d using <code>gnutls_free()</code>.</p>
 <h2>RETURNS</h2>

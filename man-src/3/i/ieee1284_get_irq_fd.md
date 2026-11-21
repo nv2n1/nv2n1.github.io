@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_get_irq_fd(3)"
 name: "ieee1284_get_irq_fd"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ieee1284_get_irq_fd/"
 description: "ieee1284_get_irq_fd, ieee1284_clear_irq – interrupt notification"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int ieee1284_get_irq_fd(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt>
 <dt> <code>int ieee1284_clear_irq(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned int&nbsp;<wbr>*</code><i>count</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>If the <i>port</i> has a configured interrupt line and the port type supports interrupt notification, it is possible to obtain a file descriptor that may be used for <code><a href="/docs/linux/man/2-select/">select</a></code>(2) or <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2). Any event (readable, writable or exception) means that an interrupt has been triggered. No operations other than <code>select</code> or <code>poll</code> may be performed on the file descriptor. </dd>
 <p> The port must be open in order to call <code>ieee1284_get_irq_fd</code>, and must be claimed when using <code>select</code> or <code>poll</code>. </p>
 <p> The caller must not close the file descriptor, and may not use it at all when the port is not claimed. </p>

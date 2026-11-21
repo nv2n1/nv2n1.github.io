@@ -1,4 +1,5 @@
 ---
+
 title: "globus-job-get-output(1)"
 name: "globus-job-get-output"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-globus-job-get-output/"
 description: "globus-job-get-output – Retrieve the output and error streams from a GRAM job"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>globus-job-get-output</code> [ -r <i>RESOURCE</i> | -resource <i>RESOURCE</i> ] [OPTIONS] <i>JOBID</i> </p>
 <p> <code>globus-job-get-output</code> [-help | -usage | -version | -versions ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>globus-job-get-output</code> program retrieves the output and error streams of the job named by <i>JOBID</i>. By default, <code>globus-job-get-output</code> will retrieve all output and error data from the job and display them to its own output and error streams. Other behavior can be controlled by using command-line options. The data retrieval is implemented by submitting another job which simply displays the contents of the first job&#8217;s output and error streams. By default this retrieval job is submitted to the default GRAM resource running on the same host as the job. This behavior can be controlled by specifying a particular resource manager contact string as the <i>RESOURCE</i> parameter to the <i>-r</i> or <i>-resource</i> option.</p>
 <h2>OPTIONS</h2>
 <p> <code>-help, -usage</code></p>

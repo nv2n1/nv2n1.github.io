@@ -1,4 +1,5 @@
 ---
+
 title: "ftop(1)"
 name: "ftop"
 section: "1"
@@ -9,11 +10,9 @@ description: "ftop – show progress of open files and file systems"
 
 <h2>NAME</h2>
 <p> ftop &#8211; show progress of open files and file systems</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ftop</code> [options]</p>
 <h2>COPYRIGHT</h2>
 <p> ftop is Copyright (C) 2009 Jason Todd. Send bug reports and suggestions/patches/etc. to <i>jtodd1 [at] earthlink.net</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ftop</code> program displays progress information for the open files and file systems in a Linux system. As processes read and write files, ftop displays data rates and time estimates. Its feature-rich interface is similar to <code>top</code>, and includes extensive run-time configuration options. </p>
 <p> While this manual page contains the full documentation for <code>ftop</code>, the built-in online help is the best source for the most up to date documentation. To access the online help, run ftop with the <code>-h</code> command line option, or simply press &#8216;<code>h</code>&#8216; while ftop is running.</p>
 <h2>OPTIONS</h2>

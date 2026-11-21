@@ -1,4 +1,5 @@
 ---
+
 title: "yacc(1)"
 name: "yacc"
 section: "1"
@@ -9,9 +10,7 @@ description: "Yacc – an LALR(1) parser generator"
 
 <h2>NAME</h2>
 <p> Yacc &#8211; an LALR(1) parser generator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>yacc [ -dgilrtv ] [ -b</code> <i>file_prefix</i> <code>] [ -p</code> <i>symbol_prefix</i> <code>]</code> <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Yacc</code> reads the grammar specification in the file <i>filename</i> and generates an LALR(1) parser for it. The parsers consist of a set of LALR(1) parsing tables and a driver routine written in the C programming language. <code>Yacc</code> normally writes the parse tables and the driver routine to the file <i>y.tab.c.</i> </p>
 <p> The following options are available:</p>
 <dl>

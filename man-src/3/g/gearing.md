@@ -1,4 +1,5 @@
 ---
+
 title: "gearing(3)"
 name: "gearing"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gearing/"
 description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Coupon</code>, and <code>QuantLib::Observer</code>. </p>
 <p> Inherited by <code>AverageBMACoupon</code>, <code>CappedFlooredCoupon</code>, <code>CmsCoupon</code>, <code>DigitalCoupon</code>, <code>IborCoupon</code>, RangeAccrualFloatersCoupon, and SubPeriodsCoupon. </p>

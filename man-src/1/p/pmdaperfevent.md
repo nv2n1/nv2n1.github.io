@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaperfevent(1)"
 name: "pmdaperfevent"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdaperfevent – hardware performance counter performance metrics
 
 <h2>NAME</h2>
 <p> <code>pmdaperfevent</code> &#8211; hardware performance counter performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/perfevent/pmdaperfevent</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-i</code> <i>port</i>] [<code>-p</code>] [<code>-u</code> <i>socket</i>] [<code>-6</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdaperfevent</code> is a Performance Metrics Domain Agent (PMDA) that configures and reads the hardware performance counters using the Linux kernel perf_event API. </p>
 <p> The <code>perfevent</code> PMDA exports metrics for hardware performance counters that are configurable from the Linux kernel perf_event API. The PMDA uses the libpfm4 library to access the hardware performance counters so any counters that are supported in libpfm4 should be available. Also included is the ability to read the Intel RAPL counters via direct MSR access. The PMDA supports automatically loading different counters for each hardware architecture. A single configuration file is used to specify the desired counters for each hardware performance monitoring unit (PMU). The configuration file allows different counters to be programmed on different CPUs and supports round-robin assignment of uncore counters needed for some AMD chips. </p>
 <p> The PMDA configures the counters to count events in both user and kernel mode. This means that the hardware counters are unavailable to use by normal unprivileged user applications when they are in use by the PMDA. The PMDA provides a mechanism to temporarily disable the system-wide counters in order to allow normal users to be able to use the counters if they wish. See <code><a href="/docs/linux/man/1-perfalloc/">perfalloc</a></code>(1) for details. </p>

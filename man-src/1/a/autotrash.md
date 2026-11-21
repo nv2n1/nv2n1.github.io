@@ -1,4 +1,5 @@
 ---
+
 title: "autotrash(1)"
 name: "autotrash"
 section: "1"
@@ -9,11 +10,9 @@ description: "autotrash — program to automatically purge old files from the Fr
 
 <h2>NAME</h2>
 <p> autotrash &#8212; program to automatically purge old files from the FreeDesktop.org trash</p>
-<h2>SYNOPSIS</h2>
 <p> <code>autotrash</code> [<code>-d </code><i>purge_n_days_old</i>] </p>
 <p> <code>autotrash</code> [<code>&#8211;delete </code><i>number_of_megabytes_to_purge</i>] </p>
 <p> <code>autotrash</code> [<code>&#8211;keep-free </code><i>number_of_megabytes_to_free</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>autotrash</code> is a program that looks in a FreeDesktop.org Trash folder for information on it&#8217;s contents and then purges a part of the trash depending on the options. </p>
 <p> The most common option is <code>-d</code>, which will purge files that have been in the trash for more then a given number of days. </p>
 <p> The option <code>&#8211;delete</code> will remove at least the given number of megabytes from the trash, removing the oldest trash first. </p>

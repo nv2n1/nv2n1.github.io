@@ -1,4 +1,5 @@
 ---
+
 title: "dspam_train(1)"
 name: "dspam_train"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dspam_train/"
 description: "dspam_train – train a corpus of mail"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dspam_train</code> [<code>username</code>] [<code>&#8211;client</code>] [<code>-i&nbsp;<wbr></code>index|<code>spam_corpus</code>&nbsp;<wbr><code>nonspam_corpus</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>dspam_train</code> is used to train and test a corpus of mail (in maildir or MBOX format). This tool will present each message to DSPAM for a classification and then retrain only if the message was incorrect. This provides close to real-world training and should be used to build pretrained databases. Upon execution, the tool will automatically determine the ratio of spam:nonspam and train based on that ratio to ensure both corpora are trained consecutively. This tool can also be used as a test jig to measure the efficiency and accuracy of a particular corpus against DSPAM in a given configuration. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "casinh(3)"
 name: "casinh"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-casinh/"
 description: "casinh, casinhf, casinhl – complex arc sine hyperbolic"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex casinh(double complex </code><i>z</i><code>);</code><br />
  <code>float complex casinhf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex casinhl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex arc hyperbolic sine of <i>z</i>. If <i>y&nbsp;=&nbsp;casinh(z)</i>, then <i>z&nbsp;=&nbsp;csinh(y)</i>. The imaginary part of <i>y</i> is chosen in the interval [-pi/2,pi/2]. </p>
 <p> One has: </p>
 <pre>

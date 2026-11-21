@@ -1,4 +1,5 @@
 ---
+
 title: "dgbbrd(3)"
 name: "dgbbrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbbrd/"
 description: "dgbbrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbbrd</code> (VECT, M, N, NCC, KL, KU, AB, LDAB, D, E, Q, LDQ, PT, LDPT, C, LDC, WORK, INFO)<br />
  <i></i><code>DGBBRD</code></p>

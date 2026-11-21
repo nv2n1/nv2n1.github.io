@@ -1,4 +1,5 @@
 ---
+
 title: "flow-header(1)"
 name: "flow-header"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-header – Display meta information in flow file."
 
 <h2>NAME</h2>
 <p> flow-header &#8211; Display meta information in flow file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-header</code> [ <code>-h</code> ] [ <code>-c</code><i> comment_char</i> ] [ <code>-d</code><i> debug_level</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-header</code> utility will display the flow meta information flow-tools uses internally.</p>
 <h2>OPTIONS</h2>
 <dl>

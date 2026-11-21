@@ -1,4 +1,5 @@
 ---
+
 title: "fedpkg-copr(1)"
 name: "fedpkg-copr"
 section: "1"
@@ -6,26 +7,15 @@ letter: "f"
 url: "/docs/linux/man/1-fedpkg-copr/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fedpkg-copr - COPR dist-git client based on fedpkg 
 
- fedpkg-copr - COPR dist-git client based on fedpkg 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- fedpkg-copr [ global_options ] command [ command_options ] [ command_arguments ] 
+fedpkg-copr [ global_options ] command [ command_options ] [ command_arguments ] 
 
  fedpkg-copr help 
 
  fedpkg-copr command --help
 
-<h2>DESCRIPTION</h2>
-
- 
-
- This tool enables you to interact with COPR dist-git repository. Except it doesn't because COPR dist-git repos are currently closed. Currently, this tool only serves as srpm &quot;fetch&quot; tool for copr-backend service, so that it can build the srpms. 
+This tool enables you to interact with COPR dist-git repository. Except it doesn't because COPR dist-git repos are currently closed. Currently, this tool only serves as srpm &quot;fetch&quot; tool for copr-backend service, so that it can build the srpms. 
 
  There are two differences in COPR dist-git when compared to Fedora dist-git: 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "mactime(1)"
 name: "mactime"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mactime/"
 description: "mactime – Create an ASCII time line of file activity"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mactime [-b</code> <i>body</i> <code>] [-g </code> <i>group file</i> <code>] [-p </code> <i>password file</i> <code>] [-i</code> <i>(day|hour) index file</i> <code>] [-dhmVy] [-z</code> <i>TIME_ZONE</i> <code>] [DATE_RANGE]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mactime</code> creates an ASCII time line of file activity based on the body file specified by &#8216;-b&#8217; or from STDIN. The time line is written to STDOUT. The body file must be in the time machine format that is created by &#8216;ils -m&#8217;, &#8216;fls -m&#8217;, or the mac-robber tool. </p>
 <h2>ARGUMENTS</h2>
 <dl>

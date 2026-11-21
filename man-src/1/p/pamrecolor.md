@@ -1,4 +1,5 @@
 ---
+
 title: "pamrecolor(1)"
 name: "pamrecolor"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pamrecolor/"
 description: "pamrecolor – alter colors without affecting luminance"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamrecolor</code> [<code>&#8211;colorspace</code>=<i>name</i>] [<code>&#8211;rmult</code>=<i>fraction</i>] [<code>&#8211;gmult</code>=<i>fraction</i>] [<code>&#8211;bmult</code>=<i>fraction</i>] [<code>&#8211;targetcolor</code>=<i>color</i>] [<code>&#8211;colorfile</code>=<i>file</i>] [<code>-randomseed=</code><i>integer</i>] </p>
 <p> [<i>infile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamrecolor</code> changes an image&#8217;s colors to be as close as possible to given target colors but with the constraint that the luminance not be modified. That is, the original image and the target image will look identical if both are converted to grayscale (e.g. with <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) ). You can have <code>pamrecolor</code> select target colors randomly, specify a single hue for the entire image, or take the target colors from a target image. </p>
 <p> <code>pamrecolor</code> works on pseudo-Netpbm images based on arbitrary color spaces. You can define the color space explicitly or choose on of many that <code>pamrecolor</code> knows by name. </p>

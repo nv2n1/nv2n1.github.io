@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-build(1)"
 name: "cargo-build"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-build/"
 description: "cargo-build – Compile the current project"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo build [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> Compile a local package and all of its dependencies. </p>
 <p> If the &#8211;package argument is given, then SPEC is a package id specification which indicates which package should be built. If it is not given, then the current package is built. For more information on SPEC and its format, see the &quot;cargo help pkgid&quot; command. </p>
 <p> Compilation can be configured via the use of profiles which are configured in the manifest. The default profile for this command is dev, but passing the &#8211;release flag will use the release profile instead.</p>

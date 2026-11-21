@@ -1,4 +1,5 @@
 ---
+
 title: "pampick(1)"
 name: "pampick"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pampick/"
 description: "pampick – pick images out of a multi-image Netpbm image stream"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pampick</code> </p>
 <p> <i>image_sequence_number</i> &#8230; </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pampick</code> reads a PNM or PAM image stream as input. It picks certain images from the stream and copies them to a new image stream on Standard Output. </p>
 <p> You identify the images to pick by sequence number within the stream. Each <i>image_sequence_number</i> is a decimal sequence number, with zero meaning the first image. </p>

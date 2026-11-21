@@ -1,4 +1,5 @@
 ---
+
 title: "dsyevr(3)"
 name: "dsyevr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsyevr/"
 description: "dsyevr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyevr</code> (JOBZ, RANGE, UPLO, N, A, LDA, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code> DSYEVR computes the eigenvalues and, optionally, the left and/or right eigenvectors for SY matrices</code></p>

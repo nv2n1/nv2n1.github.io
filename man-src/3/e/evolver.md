@@ -1,4 +1,5 @@
 ---
+
 title: "evolver(3)"
 name: "evolver"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-evolver/"
 description: "QuantLib::FiniteDifferenceModel – Generic finite difference model."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/finitedifferencemodel.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> typedef Evolver::traits <code>traits</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtomrf(1)"
 name: "pbmtomrf"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pbmtomrf/"
 description: "pbmtomrf – convert a PBM format image to MRF"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtomrf</code> </p>
 <p> [<i>pbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pbmtomrf</code> converts a PBM image to MRF format. </p>
 <p> For more information about mrf, see <code>the</code>MRF specification (1) </p>

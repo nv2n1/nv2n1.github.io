@@ -1,4 +1,5 @@
 ---
+
 title: "cleanup_digikamdb(1)"
 name: "cleanup_digikamdb"
 section: "1"
@@ -9,7 +10,6 @@ description: "cleanup_digikamdb – Cleanup the digiKam databases to reduce thei
 
 <h2>NAME</h2>
 <p> cleanup_digikamdb &#8211; Cleanup the digiKam databases to reduce their sizes and increase access speed</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cleanup_digikamdb</code> [-t] [-T] [-p] [-h]</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -21,7 +21,6 @@ description: "cleanup_digikamdb – Cleanup the digiKam databases to reduce thei
 <dd> Specify a different database <i>path</i>. If this option is not set or the specified <i>path</i> is invalid, the entry from the configuration file will be used.</dd>
 <dt><code>-h</code></dt>
 <dd> Show command line options.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>cleanup_digikamdb</code> will cleanup and optimize the digiKam database file. This will, in most cases, lead to a smaller database file size and an increased access speed, because unneeded elements are removed from the database and data is optimized. </p>
 <p> The program will make sure that no instance of digiKam is running, because it is more safe to have no database access during the optimization process. It then will read the digiKam configuration file and determine the database location. In a final step the database will be optimized by invoking the sqlite command &#8216;<i>VACUUM</i>;&#8217; on it. If more then one database is found in this location, <code>cleanup_digikamdb</code> will optimize every database found in this path and below. </p>
 <p> For further explanation, see the following description of the <i>VACUUM</i> command from the sqlite3 website: </p>

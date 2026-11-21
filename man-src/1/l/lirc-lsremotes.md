@@ -1,4 +1,5 @@
 ---
+
 title: "lirc-lsremotes(1)"
 name: "lirc-lsremotes"
 section: "1"
@@ -9,10 +10,8 @@ description: "lirc-lsremotes – parse lirc configuration files."
 
 <h2>NAME</h2>
 <p> lirc-lsremotes &#8211; parse lirc configuration files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lirc-lsremotes [options] &lt;directory&gt;</code><br />
  <code>lirc-lsremotes [options] &lt;file&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> lirc-lsremotes can parse lirc remote configuration files (i. e., lircd.conf) and display a condensed index line, the complete data and/or diagnostics. </p>
 <p> When given a directory (first form) it expects this to contain a number of vendor directories, each of which containing one or more configuration files. </p>
 <p> In the second form lirc-lsremotes displays remote configurations for a given config file. </p>

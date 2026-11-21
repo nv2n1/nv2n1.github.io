@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_dn_import(3)"
 name: "gnutls_x509_dn_import"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_dn_import – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_dn_import &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_dn_import(gnutls_x509_dn_t </code><i>dn</i><code>, const gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_dn_import – API function"
 <dd> the structure that will hold the imported DN</dd>
 <dt>const gnutls_datum_t * data</dt>
 <dd> should contain a DER encoded RDN sequence</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function parses an RDN sequence and stores the result to a <code>gnutls_x509_dn_t</code> structure. The structure must have been initialized with <code>gnutls_x509_dn_init()</code>. You may use <code>gnutls_x509_dn_get_rdn_ava()</code> to decode the DN.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

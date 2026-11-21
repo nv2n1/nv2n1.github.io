@@ -1,4 +1,5 @@
 ---
+
 title: "htmerge(1)"
 name: "htmerge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-htmerge/"
 description: "htmerge – create document index and word database for the ht://Dig search engine"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>htmerge</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Htmerge</i> is used to create a document index and word database from the files that were created by <i>htdig</i>. These databases are then used by <i>htsearch</i> to perform the actual searched.</p>
 <h2>OPTIONS</h2>
 <dl>

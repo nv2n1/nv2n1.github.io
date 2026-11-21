@@ -1,4 +1,5 @@
 ---
+
 title: "spftri(3)"
 name: "spftri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spftri/"
 description: "spftri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spftri</code> (TRANSR, UPLO, N, A, INFO)<br />
  <i></i><code>SPFTRI</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dspgv(3)"
 name: "dspgv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dspgv/"
 description: "dspgv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, INFO)<br />
  <i></i><code>DSPGST</code></p>

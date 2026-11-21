@@ -1,4 +1,5 @@
 ---
+
 title: "resolv_wrapper(1)"
 name: "resolv_wrapper"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-resolv_wrapper/"
 description: "resolv_wrapper – A wrapper for dns name resolving or dns faking."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> LD_PRELOAD=libresolv_wrapper.so RESOLV_WRAPPER_CONF=&quot;/path/to/resolv.conf&quot; <code>./myapplication</code></p>
-<h2>DESCRIPTION</h2>
 <p> resolv_wrapper makes it possible on most UNIX platforms to contact your own DNS implementation in your test environment. It requires socket_wrapper to be able to contact it. If it doesn&#8217;t work on a special platform the wrapper is able to fake DNS queries and return valid responses to your application. </p>
 <dl>
 <dt>

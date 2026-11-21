@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-csd(1)"
 name: "pilot-csd"
 section: "1"
@@ -11,7 +12,6 @@ description: "pilot-csd – Connection Service Daemon for Palm Devices"
 <p> pilot-csd &#8211; Connection Service Daemon for Palm Devices</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>
-<h2>SYNOPSIS</h2>
 <p> Required for accepting logons via NetSync(tm) </p>
 <p>&nbsp;<wbr><i>pilot-csd</i>&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr><code>-H</code>&nbsp;<wbr>&nbsp;<wbr><code>&quot;localhost&quot;</code>&nbsp;<wbr>&nbsp;<wbr><code>-a</code>&nbsp;<wbr>&nbsp;<wbr><code>127.0.0.1</code>&nbsp;<wbr>&nbsp;<wbr><code>-n</code>&nbsp;<wbr>&nbsp;<wbr><code>255.255.255.0</code>&nbsp;<wbr> </p>
 <h2>OPTIONS</h2>

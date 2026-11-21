@@ -1,4 +1,5 @@
 ---
+
 title: "sched_getaffinity(2)"
 name: "sched_getaffinity"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_getaffinity/"
 description: "sched_setaffinity, sched_getaffinity – set and get a thread’s CPU affinity mask"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sched.h&gt;
@@ -16,7 +16,6 @@ int sched_setaffinity(pid_t pid, size_t cpusetsize,
 int sched_getaffinity(pid_t pid, size_t cpusetsize,
                       cpu_set_t *mask);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> A thread&#8217;s CPU affinity mask determines the set of CPUs on which it is eligible to run. On a multiprocessor system, setting the CPU affinity mask can be used to obtain performance benefits. For example, by dedicating one CPU to a particular thread (i.e., setting the affinity mask of that thread to specify a single CPU, and setting the affinity mask of all other threads to exclude that CPU), it is possible to ensure maximum execution speed for that thread. Restricting a thread to run on a single CPU also avoids the performance cost caused by the cache invalidation that occurs when a thread ceases to execute on one CPU and then recommences execution on a different CPU. </p>
 <p> A CPU affinity mask is represented by the <i>cpu_set_t</i> structure, a &quot;CPU set&quot;, pointed to by <i>mask</i>. A set of macros for manipulating CPU sets is described in <code><a href="/docs/linux/man/3-cpu_set/">CPU_SET</a></code>(3). </p>
 <p> <code>sched_setaffinity</code>() sets the CPU affinity mask of the thread whose ID is <i>pid</i> to the value specified by <i>mask</i>. If <i>pid</i> is zero, then the calling thread is used. The argument <i>cpusetsize</i> is the length (in bytes) of the data pointed to by <i>mask</i>. Normally this argument would be specified as <i>sizeof(cpu_set_t)</i>. </p>

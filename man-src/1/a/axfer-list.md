@@ -1,4 +1,5 @@
 ---
+
 title: "axfer-list(1)"
 name: "axfer-list"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-axfer-list/"
 description: "axfer-list – dump lists of available sound devices and nodes to transfer audio data frame."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>axfer list</code> <i>direction target</i> </p>
 <p> direction = <code>capture</code> | <code>playback</code> </p>
 <p> target = <code>device</code> | <code>pcm</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>list</code> subcommand of <code>axfer</code> dumps lists of available nodes to transfer audio data frame. At present, the subcommand is helpful just for libasound backend of <code>transfer</code> subcommand. </p>
 <h2>OPTIONS</h2>
 <h3>Direction</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "rrdlastupdate(1)"
 name: "rrdlastupdate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdlastupdate/"
 description: "rrdlastupdate – Return the most recent update to an RRD"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>lastupdate</code> <i>filename</i> [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>lastupdate</code> function returns the <font SIZE="-1">UNIX</font> timestamp and the value stored for each datum in the most recent update of an <font SIZE="-1">RRD</font>.</p>
 <dl>
 <dt><i>filename</i></dt>

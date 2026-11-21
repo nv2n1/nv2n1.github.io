@@ -1,4 +1,5 @@
 ---
+
 title: "be32toh(3)"
 name: "be32toh"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-be32toh/"
 description: "htobe16, htole16, be16toh, le16toh, htobe32, htole32, be32toh, le32toh, htobe64, htole64, be64toh, le64toh – convert values between host and big-/little-endian byte order"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;endian.h&gt;
 uint16_t htobe16(uint16_t host_16bits);
@@ -31,7 +31,6 @@ uint64_t le64toh(uint64_t little_endian_64bits);
     In glibc up to and including 2.19:
         _BSD_SOURCE
 </pre>
-<h2>DESCRIPTION</h2>
 <p> These functions convert the byte encoding of integer values from the byte order that the current CPU (the &quot;host&quot;) uses, to and from little-endian and big-endian byte order. </p>
 <p> The number, <i>nn</i>, in the name of each function indicates the size of integer handled by the function, either 16, 32, or 64 bits. </p>
 <p> The functions with names of the form &quot;htobe<i>nn</i>&quot; convert from host byte order to big-endian order. </p>

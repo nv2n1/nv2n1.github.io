@@ -1,4 +1,5 @@
 ---
+
 title: "column(1)"
 name: "column"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-column/"
 description: "column – columnate lists"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>column</code> [options] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>column</code> utility formats its input into multiple columns. The util support three modes: </p>
 <p> <code>columns are filled before rows</code></p>
 <dl>

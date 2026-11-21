@@ -1,4 +1,5 @@
 ---
+
 title: "hp-pkservice(1)"
 name: "hp-pkservice"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-pkservice/"
 description: "hp-pkservice – Policy Kit Service"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Policy Kit Service</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-pkservice [MODE] [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>

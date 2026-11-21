@@ -1,4 +1,5 @@
 ---
+
 title: "sggevx(3)"
 name: "sggevx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sggevx/"
 description: "sggevx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VL, LDVL, VR, LDVR, ILO, IHI, LSCALE, RSCALE, ABNRM, BBNRM, RCONDE, RCONDV, WORK, LWORK, IWORK, BWORK, INFO)<br />
  <i></i><code> SGGEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>

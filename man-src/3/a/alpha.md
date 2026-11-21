@@ -1,4 +1,5 @@
 ---
+
 title: "alpha(3)"
 name: "alpha"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-alpha/"
 description: "QuantLib::GaussianOrthogonalPolynomial – orthogonal polynomial for Gaussian quadratures"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/integrals/gaussianorthogonalpolynomial.hpp&gt; </p>
 <p> Inherited by <code>GaussHermitePolynomial</code>, <code>GaussHyperbolicPolynomial</code>, <code>GaussJacobiPolynomial</code>, and <code>GaussLaguerrePolynomial</code>. </p>
 <h3>Public Member Functions</h3>

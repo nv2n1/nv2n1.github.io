@@ -1,4 +1,5 @@
 ---
+
 title: "yaml_to_db(1)"
 name: "yaml_to_db"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-yaml_to_db/"
 description: "yaml_to_db – convert a subset of YAML into fsdb"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     yaml_to_db &lt;source.yaml
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Converts a <i>very limited</i> subset of <font SIZE="-1">YAML</font> into Fsdb format. </p>
 <p> The input is YAML-format (<i>not</i> fsdb). The input is parsed as <font SIZE="-1">YAML, </font> assuming the file is an array of dictionary entries. We extract the dictionary names and output this as an fsdb table. </p>
 <p> The output is tab-separated fsdb. (Someday more general field separators should be supported.)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ttftotype42(1)"
 name: "ttftotype42"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ttftotype42/"
 description: "ttftotype42 – create PostScript Type 42 wrapper of TrueType font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ttftotype42</code> [<i>input</i> [<i>output</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ttftotype42</code> converts TrueType or TrueType-flavored OpenType font programs into PostScript Type 42 format, which is a wrapper for the TrueType outlines. This conversion preserves all outlines and hint information from the original TrueType font. The Type 42 wrapper uses glyph names identical to those expected by or so encoding files suitable for TrueType fonts and <code>pdflatex</code> will also work for the Type 42 fonts and If the file <i>output</i> is not specified output goes to the standard output. If the file <i>input</i> is not specified input comes from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_transport_set_vec_push_function(3)"
 name: "gnutls_transport_set_vec_push_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_transport_set_vec_push_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_transport_set_vec_push_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_transport_set_vec_push_function(gnutls_session_t </code><i>session</i><code>, gnutls_vec_push_func </code><i>vec_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_transport_set_vec_push_function – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_vec_push_func vec_func</dt>
 <dd> a callback function similar to <code>writev()</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Using this function you can override the default <a href="/docs/linux/man/2-writev/">writev</a>(2) function for gnutls to send data. Setting this callback instead of <code>gnutls_transport_set_push_function()</code> is recommended since it introduces less overhead in the TLS handshake process. </p>
 <p>&nbsp;<wbr><i>vec_func</i>&nbsp;<wbr>is of the form, ssize_t (*gnutls_vec_push_func) (gnutls_transport_ptr_t, const giovec_t * iov, int iovcnt);</p>
 <h2>SINCE</h2>

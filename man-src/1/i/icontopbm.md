@@ -1,4 +1,5 @@
 ---
+
 title: "icontopbm(1)"
 name: "icontopbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-icontopbm/"
 description: "icontopbm – convert a Sun icon into a portable bitmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>icontopbm</code> [<i>iconfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Sun icon as input. Produces a portable bitmap as output. </p>
 <p> For windows icons (this format is used for &quot;favicon.ico&quot; on web pages) please see winicontoppm. </p>
 <h2>SEE ALSO</h2>

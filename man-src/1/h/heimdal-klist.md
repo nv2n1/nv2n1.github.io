@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-klist(1)"
 name: "heimdal-klist"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-heimdal-klist/"
 description: "klist – list Kerberos credentials"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>klist</code> &#8211; list Kerberos credentials </p>
-<h2>SYNOPSIS</h2>
 <p> -words [-<code>c </code><i>cache | </i> &#8211;<code>-cache= </code><i>cache</i> ] [-<code>s | -t | &#8211;test</code> ] [-<code>T | &#8211;tokens</code> ] [-<code>5 | &#8211;v5</code> ] [-<code>v | &#8211;verbose</code> ] [-<code>l | &#8211;list-caches</code> ] [-<code>f</code> ] [-<code>-version</code> ] [-<code>-help</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> reads and displays the current tickets in the credential cache (also known as the ticket file). </p>
 <p> Options supported:</p>
 <dl>

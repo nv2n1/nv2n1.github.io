@@ -1,4 +1,5 @@
 ---
+
 title: "certmaster-ca(1)"
 name: "certmaster-ca"
 section: "1"
@@ -6,20 +7,13 @@ letter: "c"
 url: "/docs/linux/man/1-certmaster-ca/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+certmaster-ca -- signs certificate requests gathered by certmaster. 
 
- certmaster-ca -- signs certificate requests gathered by certmaster. 
-
-<h2>SYNOPSIS</h2>
-
- certmaster-ca --list 
+certmaster-ca --list 
 
  certmaster-ca --sign machine.example.org
 
-<h2>DESCRIPTION</h2>
-
- ``certmaster-ca --list'' 
+``certmaster-ca --list'' 
 
  The list command prints all certificates that have been requested from certmaster by a remote application (such as funcd or certmaster-request) but are not yet signed. 
 

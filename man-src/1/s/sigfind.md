@@ -1,4 +1,5 @@
 ---
+
 title: "sigfind(1)"
 name: "sigfind"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sigfind/"
 description: "sigfind – Find a binary signature in a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sigfind [-b</code> <i>bsize</i> <code>] [-o</code> <i>offset</i> <code>] [-t</code> <i>template</i> <code>] [-lV] [</code> <i>hex_signature</i> <code>]</code> <i>file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sigfind</code> searches through a file and looks for the hex_signature at a given offset. This can be used to search for lost boot sectors, superblocks, and partition tables. </p>
 <h2>ARGUMENTS</h2>
 <dl>

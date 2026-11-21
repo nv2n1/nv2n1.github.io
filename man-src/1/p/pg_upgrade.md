@@ -1,4 +1,5 @@
 ---
+
 title: "pg_upgrade(1)"
 name: "pg_upgrade"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pg_upgrade/"
 description: "pg_upgrade – upgrade a PostgreSQL server instance"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_upgrade</code> <code>-b</code> <i>oldbindir</i> <code>-B</code> <i>newbindir</i> <code>-d</code> <i>olddatadir</i> <code>-D</code> <i>newdatadir</i> [<i>option</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>pg_upgrade (formerly called pg_migrator) allows data stored in PostgreSQL data files to be upgraded to a later PostgreSQL major version without the data dump/reload typically required for major version upgrades, e.g. from 8.4.7 to the current major release of PostgreSQL. It is not required for minor version upgrades, e.g. from 9.0.1 to 9.0.4. </dd>
 <p> Major PostgreSQL releases regularly add new features that often change the layout of the system tables, but the internal data storage format rarely changes. pg_upgrade uses this fact to perform rapid upgrades by creating new system tables and simply reusing the old user data files. If a future major release ever changes the data storage format in a way that makes the old data format unreadable, pg_upgrade will not be usable for such upgrades. (The community will attempt to avoid such situations.) </p>
 <p> pg_upgrade does its best to make sure the old and new clusters are binary-compatible, e.g. by checking for compatible compile-time settings, including 32/64-bit binaries. It is important that any external modules are also binary compatible, though this cannot be checked by pg_upgrade. </p>

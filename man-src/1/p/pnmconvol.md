@@ -1,4 +1,5 @@
 ---
+
 title: "pnmconvol(1)"
 name: "pnmconvol"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmconvol/"
 description: "pnmconvol – general MxN convolution on a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmconvol</code> <i>convolutionfile</i> [<i>pnmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads two portable anymaps as input. Convolves the second using the first, and writes a portable anymap as output. </p>
 <p> Convolution means replacing each pixel with a weighted average of the nearby pixels. The weights and the area to average are determined by the convolution matrix. The unsigned numbers in the convolution file are offset by -maxval/2 to make signed numbers, and then normalized, so the actual values in the convolution file are only relative. </p>
 <p> Here is a sample convolution file; it does a simple average of the nine immediate neighbors, resulting in a smoothed image: </p>

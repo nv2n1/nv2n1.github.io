@@ -1,4 +1,5 @@
 ---
+
 title: "gearmand(1)"
 name: "gearmand"
 section: "1"
@@ -6,20 +7,13 @@ letter: "g"
 url: "/docs/linux/man/1-gearmand/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+gearmand - Gearman client/worker connector. 
 
- gearmand - Gearman client/worker connector. 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
  gearmand --daemon
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This is the main executable for Gearman::Server. It provides command-line configuration of port numbers, pidfiles, and daemonization.
+This is the main executable for Gearman::Server. It provides command-line configuration of port numbers, pidfiles, and daemonization.
 
 <h2>OPTIONS</h2>
 

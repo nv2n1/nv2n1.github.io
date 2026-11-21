@@ -1,4 +1,5 @@
 ---
+
 title: "euform-describe-stack-resource(1)"
 name: "euform-describe-stack-resource"
 section: "1"
@@ -9,12 +10,10 @@ description: "euform-describe-stack-resource – Describe a resource from a part
 
 <h2>NAME</h2>
 <p> euform-describe-stack-resource &#8211; Describe a resource from a particular stack</p>
-<h2>SYNOPSIS</h2>
 <p> euform-describe-stack-resource <code>-l</code> RESOURCE [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] STACK</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Describe a resource from a particular stack</p>
 <h3>positional arguments:</h3>
 <dl>

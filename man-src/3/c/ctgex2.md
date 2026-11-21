@@ -1,4 +1,5 @@
 ---
+
 title: "ctgex2(3)"
 name: "ctgex2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctgex2/"
 description: "ctgex2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, INFO)<br />
  <i></i><code>CTGEX2</code> swaps adjacent diagonal blocks in an upper (quasi) triangular matrix pair by an unitary equivalence transformation.</p>

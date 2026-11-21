@@ -1,4 +1,5 @@
 ---
+
 title: "viewfax(1)"
 name: "viewfax"
 section: "1"
@@ -9,9 +10,7 @@ description: "viewfax – display fax files in an X11 window"
 
 <h2>NAME</h2>
 <p> viewfax &#8211; display fax files in an X11 window</p>
-<h2>SYNOPSIS</h2>
 <p> <code>viewfax</code> [<code>-fnluirvW24</code>] [<code>-h</code><i>height</i>] [<code>-w</code><i>width</i>] [<code>-z</code><i>zoom</i>] [<code>-d</code><i>display</i>] [<code>-g</code><i>wxh+x+y</i>] [<code>-b</code><i>bell</i>] [<code>-m</code><i>memory</i>] <i>filename&#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>viewfax</code> displays one or more fax files in an X11 window. The input files may be either raw, single-page faxes received by a fax modem with a program such as <code>mgetty(1),</code> or tiff files such as those used by <code>hylafax.</code> The first (or only) page of &quot;PC-Research&quot;-style (DigiFAX) files produced by the <code>ghostscript</code> dfaxhigh or dfaxlow drivers can also be displayed. </p>
 <p> Input files using any common fax encoding such as group 3 (1 and 2 dimensional) and group 4 can be displayed. </p>
 <p> The fax images are rendered at full resolution and then successively scaled down by a linear factor of 2 prior to display, until they fit on the screen. The display can be controlled interactively using mouse and keyboard commands. The left mouse button expands the image by a factor of two and the right button reduces it by the same factor. If the image is bigger than the available window size, the middle mouse button can be used to reposition it within the window. Hold down the middle button while dragging the image to its new position. </p>

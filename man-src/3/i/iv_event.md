@@ -1,4 +1,5 @@
 ---
+
 title: "iv_event(3)"
 name: "iv_event"
 section: "3"
@@ -9,7 +10,6 @@ description: "IV_EVENT_INIT, iv_event_register, iv_event_unregister, iv_event_po
 
 <h2>NAME</h2>
 <p> IV_EVENT_INIT, iv_event_register, iv_event_unregister, iv_event_post &#8211; manage ivykis objects for event notification</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_event.h&gt;</code> </p>
 <pre><code>
 struct iv_event {
@@ -21,7 +21,6 @@ struct iv_event {
  <code>int iv_event_register(struct iv_event *</code><i>this</i><code>);</code><br />
  <code>void iv_event_unregister(struct iv_event *</code><i>this</i><code>);</code><br />
  <code>void iv_event_post(struct iv_event *</code><i>this</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>iv_event</code> provides a way for delivering events to <code>ivykis</code>(3) recipients across thread boundaries. </p>
 <p> The intended event recipient calls <code>IV_EVENT_INIT</code> on a <code>struct iv_event</code> object, fills in <code>-&gt;cookie</code> and <code>-&gt;handler,</code> and then calls <code>iv_event_register</code> on the object. </p>
 <p> To generate an event, call <code>iv_event_post</code> on the previously initialized <code>struct iv_event</code> object. This will cause the callback specified by <code>-&gt;handler</code> to be called in the thread that the <code>struct iv_event</code> object was registered in, with <code>-&gt;cookie</code> as its sole argument. </p>

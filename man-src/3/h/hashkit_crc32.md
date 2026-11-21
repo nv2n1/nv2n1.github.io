@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_crc32(3)"
 name: "hashkit_crc32"
 section: "3"
@@ -10,7 +11,6 @@ description: "hashkit_crc32 – libhashkit Documentation"
 <h2>NAME</h2>
 <p> hashkit_crc32 &#8211; libhashkit Documentation </p>
 <p> Various hash functions to use for calculating values for keys</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libhashkit/hashkit.h&gt;</p>
 <dl>
 <dt><code>uint32_t hashkit_default(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
@@ -34,7 +34,6 @@ description: "hashkit_crc32 – libhashkit Documentation"
 </dd><dt><code>uint32_t hashkit_md5(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
 <p> Compile and link with -lhashkit</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions generate hash values from a key using a variety of algorithms. These functions can be used standalone, or as arguments to hashkit_set_hash_fn(3) or hashkit_set_continuum_hash_fn(3). </p>
 <p> The hashkit_hsieh is only available if the library is built with the appropriate flag enabled.</p>
 <h2>RETURN VALUE</h2>

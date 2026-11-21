@@ -1,4 +1,5 @@
 ---
+
 title: "mylvmbackup(1)"
 name: "mylvmbackup"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mylvmbackup/"
 description: "mylvmbackup – a utility for creating MySQL backups using LVM snapshots"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> mylvmbackup [<font SIZE="-1">OPTIONS</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>mylvmbackup</i> is a tool for quickly creating full physical backups of a MySQL server&#8217;s data files. To perform a backup, <i>mylvmbackup</i> obtains a read lock on all tables and flushes all server caches to disk, makes an <font SIZE="-1">LVM</font> snapshot of the volume containing the MySQL data directory, and unlocks the tables again. The snapshot process takes only a small amount of time. When it is done, the server can continue normal operations, while the actual file backup proceeds. </p>
 <p> The <font SIZE="-1">LVM</font> snapshot is mounted to a temporary directory and all data is backed up using the <i>tar</i> program by default. The archive files are created using names in the form of <i>backup-YYYYMMDD_hhmmss_mysql.tar.gz</i>, where <i></i><font SIZE="-1"><i>YYYY</i></font><i></i>, <i></i><font SIZE="-1"><i>MM</i></font><i></i>, <i></i><font SIZE="-1"><i>DD</i></font><i></i>, <i>hh</i>, <i>mm</i> and <i>ss</i> represent the year, month, day, hour, minute, and second of the time at which the backup occurred. The default prefix <i>backup</i>, date format and file suffix may be modified. The use of timestamped archive names allows you to run <i>mylvmbackup</i> many times without risking to overwrite old archives. It is possible to preserve only a defined number of last backups, to avoid running out of disk space. </p>
 <p> Alternatively, instead of <i>tar</i>, you can use <i>rsync</i>, <i>rsnap</i> or <i>zbackup</i> to perform the archiving. </p>

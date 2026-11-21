@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-create-usb(1)"
 name: "flatpak-create-usb"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-create-usb/"
 description: "flatpak-create-usb – Copy apps and/or runtimes onto removable media."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak create-usb</code> [OPTION&#8230;] MOUNT-PATH REF&#8230;</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Copies the specified apps and/or runtimes REFs onto the removable media mounted at MOUNT-PATH, along with all the dependencies and metadata needed for installing them. This is one way of transferring flatpaks between computers that doesn&#8217;t require an Internet connection. After using this command, the USB drive can be connected to another computer and <code>flatpak install</code> will prefer to install from it rather than the Internet if (a) each ref comes from a configured remote whose GPG keyring will be used for verification and (b) the refs on the drive are at least as new as what&#8217;s available elsewhere (e.g. the Internet if you&#8217;re online). For this process to work a collection ID must be configured on the relevant remotes on both the source and destination computers, and on the remote server. </dd>
 <p> On the destination computer one can install from the USB (or any mounted filesystem) the same way you would install from the Internet, e.g. with <code>flatpak install flathub org.gnome.Builder</code> or using a GUI. </p>
 <p> Each REF argument is a full or partial identifier in the flatpak ref format, which looks like &quot;(app|runtime)/ID/ARCH/BRANCH&quot;. All elements except ID are optional and can be left out, including the slashes, so most of the time you need only specify ID. Any part left out will be matched against what is installed, and if there are multiple matches an error message will list the alternatives. </p>

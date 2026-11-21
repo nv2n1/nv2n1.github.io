@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-libraries(1)"
 name: "beakerlib-libraries"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beakerlib-libraries/"
 description: "BeakerLib – libraries – mechanism for loading shared test code from libraries"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This file contains functions for bringing external code into the test namespace.</p>
 <h2>FUNCTIONS</h2>
 <p> <i>rlImport</i> </p>

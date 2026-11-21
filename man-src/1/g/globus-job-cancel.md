@@ -1,4 +1,5 @@
 ---
+
 title: "globus-job-cancel(1)"
 name: "globus-job-cancel"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-globus-job-cancel/"
 description: "globus-job-cancel – Cancel a GRAM batch job"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>globus-job-cancel</code> [-f | -force] [-q | -quiet] <i>JOBID</i> </p>
 <p> <code>globus-job-cancel</code> [-help | -usage ] [ -version | -versions ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-globus-job-cancel/">globus-job-cancel</a>(1) program cancels the job named by <i>JOBID</i>. Any cached files associated with the job will remain until <a href="/docs/linux/man/1-globus-job-clean/">globus-job-clean</a>(1) is executed for the job. </p>
 <p> By default, globus-job-cancel prompts the user prior to canceling the job. This behavior can be overridden by specifying the <i>-f</i> or <i>-force</i> command-line options.</p>
 <h2>OPTIONS</h2>

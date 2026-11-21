@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_handle_extended_data2(3)"
 name: "libssh2_channel_handle_extended_data2"
 section: "3"
@@ -9,10 +10,8 @@ description: "libssh2_channel_handle_extended_data2 – set extended data handli
 
 <h2>NAME</h2>
 <p> libssh2_channel_handle_extended_data2 &#8211; set extended data handling mode</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_channel_handle_extended_data2(LIBSSH2_CHANNEL *channel, int ignore_mode); </p>
-<h2>DESCRIPTION</h2>
 <p> <i>channel</i> &#8211; Active channel stream to change extended data handling on. </p>
 <p> <i>ignore_mode</i> &#8211; One of the three LIBSSH2_CHANNEL_EXTENDED_DATA_* Constants.<br />
  <code>LIBSSH2_CHANNEL_EXTENDED_DATA_NORMAL</code>: Queue extended data for eventual reading<br />

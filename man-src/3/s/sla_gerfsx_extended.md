@@ -1,4 +1,5 @@
 ---
+
 title: "sla_gerfsx_extended(3)"
 name: "sla_gerfsx_extended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_gerfsx_extended/"
 description: "sla_gerfsx_extended.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
  <i></i><code>SLA_GERFSX_EXTENDED</code> improves the computed solution to a system of linear equations for general matrices by performing extra-precise iterative refinement and provides error bounds and backward error estimates for the solution.</p>

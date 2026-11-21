@@ -1,4 +1,5 @@
 ---
+
 title: "gcj-dbtool(1)"
 name: "gcj-dbtool"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-gcj-dbtool/"
 description: "gcj-dbtool – Manipulate class file mapping databases for libgcj"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gcj-dbtool <font SIZE="-1"><code>OPTION</code></font> <i></i><font SIZE="-1"><i>DBFILE</i></font><i></i> [<font SIZE="-1"><code>MORE</code></font>] &#8230; </p>
 <p> gcj-dbtool [<code>-0</code>] [<code>&#8211;</code>] [<code>-n</code>] [<code>-a</code>] [<code>-f</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>]&nbsp;<wbr>[<code>-l</code>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr>[<i></i><font SIZE="-1"><i>LIBDIR</i></font><i></i>]]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-v</code>]&nbsp;<wbr>[<code>-m</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>&#8211;help</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;gcj-dbtool&quot;</tt> is a tool for creating and manipulating class file mapping databases. <tt>&quot;libgcj&quot;</tt> can use these databases to find a shared library corresponding to the bytecode representation of a class. This functionality is useful for ahead-of-time compilation of a program that has no knowledge of <tt>&quot;gcj&quot;</tt>. </p>
 <p> <tt>&quot;gcj-dbtool&quot;</tt> works best if all the jar files added to it are compiled using <tt>&quot;-findirect-dispatch&quot;</tt>. </p>
 <p> Note that <tt>&quot;gcj-dbtool&quot;</tt> is currently available as &#8220;preview technology&#8221;. We believe it is a reasonable way to allow application-transparent ahead-of-time compilation, but this is an unexplored area. We welcome your comments.</p>

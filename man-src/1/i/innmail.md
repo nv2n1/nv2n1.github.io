@@ -1,4 +1,5 @@
 ---
+
 title: "innmail(1)"
 name: "innmail"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-innmail/"
 description: "innmail – Simple mail-sending program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>innmail</code> [<code>-h</code>] [<code>-s</code> <i>subject</i>] <i>address</i> [<i>address</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>innmail</code> is a Perl script intended to provide the non-interactive mail-sending functionality of <i><a href="/docs/linux/man/1-mail/">mail</a></i>(1) while avoiding nasty security problems. It takes the body of a mail message on standard input and sends it to the specified addresses by invoking the value of <i>mta</i> in <i>inn.conf</i>. </p>
 <p> At least one address (formatted for the <font SIZE="-1">MTA</font> specified in <i>inn.conf</i>, if it matters) is required. <code>innmail</code> will sanitize the addresses so that they contain only alphanumerics and the symbols <tt>&quot;@&quot;</tt>, <tt>&quot;.&quot;</tt>, <tt>&quot;-&quot;</tt>, <tt>&quot;+&quot;</tt>, <tt>&quot;_&quot;</tt>, and <tt>&quot;%&quot;</tt>. </p>
 <p> <code>innmail</code> was written to be suitable for the <i>mailcmd</i> setting in <i>inn.conf</i>.</p>

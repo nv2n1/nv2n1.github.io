@@ -1,4 +1,5 @@
 ---
+
 title: "ypcat(1)"
 name: "ypcat"
 section: "1"
@@ -9,10 +10,8 @@ description: "ypcat – print values of all keys in a NIS database"
 
 <h2>NAME</h2>
 <p> ypcat &#8211; print values of all keys in a NIS database</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ypcat</code> [ <code>-kt</code> ] [ <code>-d</code><i> domain</i> ] [ <code>-h</code><i> hostname</i> ] <i>mapname</i><br />
  <code>ypcat</code> <code>-x</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ypcat</code> prints the values of all keys from the NIS database specified by <i>mapname,</i> which may be a map name or a map nickname.</p>
 <h2>OPTIONS</h2>
 <dl>

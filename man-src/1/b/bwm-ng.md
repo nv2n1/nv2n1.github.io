@@ -1,4 +1,5 @@
 ---
+
 title: "bwm-ng(1)"
 name: "bwm-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bwm-ng/"
 description: "bwm-ng – Bandwidth Monitor NG (Next Generation), a live bandwidth monitor for network and disk io."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bwm-ng [options]</code><i> &#8230; [configfile]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>bwm-ng</code> can be used to monitor the current bandwidth of all or some specific network interfaces or disks (or partitions). It shows total of in and out as well as total of all interfaces/devices. Several different output methods are supported (curses, curses2, plain, csv and html). </p>
 <p> <code>bwm-ng</code> is not limited in the number of interfaces or disks and can handle new ones dynamically while its running or hide those which are not up. </p>
 <h2>INPUT METHODS</h2>

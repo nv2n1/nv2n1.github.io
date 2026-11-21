@@ -1,4 +1,5 @@
 ---
+
 title: "slantb(3)"
 name: "slantb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slantb/"
 description: "slantb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slantb</code> (NORM, UPLO, DIAG, N, K, AB, LDAB, WORK)<br />
  <i></i><code>SLANTB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a triangular band matrix.</p>

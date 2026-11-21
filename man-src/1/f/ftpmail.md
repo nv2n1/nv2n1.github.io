@@ -1,4 +1,5 @@
 ---
+
 title: "ftpmail(1)"
 name: "ftpmail"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ftpmail/"
 description: "ftpmail – FIFO-based Perl script for sending email based on proftpd TransferLog"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ftpmail</code> [ <code>&#8211;help</code> ] [ <code>&#8211;fifo</code> <i>fifo-path</i> ] [ <code>&#8211;from</code> <i>email-address</i> ] [ <code>&#8211;log</code> <i>xferlog-file</i> ] [ <code>&#8211;recipient</code> <i>email-address</i> ] [ <code>&#8211;subject</code> <i>email-subject</i> ] [ <code>&#8211;smtp-server</code> <i>server-address</i> ] [ <code>&#8211;attach-file</code> ] [ <code>&#8211;auth</code> <i>smtp-auth-info-file</i> ] [ <code>&#8211;ignore-users</code> <i>regex-pattern</i> ] [ <code>&#8211;watch-users</code> <i>regex-pattern</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ftpmail</code> is a Perl script designed to read ProFTPD&#8217;s <i>TransferLog</i> log entries, watching for uploads, and to send an automatic email notification when uploads occur. To use <code>ftpmail</code> , you configure your <code>proftpd</code> daemon to write its <i>TransferLog</i> to a FIFO; the <code>ftpmail</code> program is a FIFO reading program which then processes those log messages.</p>
 <h2>OPTIONS</h2>
 <dl>

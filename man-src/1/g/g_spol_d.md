@@ -1,4 +1,5 @@
 ---
+
 title: "g_spol_d(1)"
 name: "g_spol_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_spol – analyzes solvent dipole orientation and polarization ar
 <h2>NAME</h2>
 <p> g_spol &#8211; analyzes solvent dipole orientation and polarization around solutes </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_spol</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> scdist.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]com</code><i></i> <code>-refat</code><i> int </i> <code>-rmin</code><i> real </i> <code>-rmax</code><i> real </i> <code>-dip</code><i> real </i> <code>-bw</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_spol analyzes dipoles around a solute; it is especially useful for polarizable water. A group of reference atoms, or a center of mass reference (option <code> -com</code>) and a group of solvent atoms is required. The program splits the group of solvent atoms into molecules. For each solvent molecule the distance to the closest atom in reference group or to the COM is determined. A cumulative distribution of these distances is plotted. For each distance between <code> -rmin</code> and <code> -rmax</code> the inner product of the distance vector and the dipole of the solvent molecule is determined. The average of these dipole components is printed. The same is done for the polarization, where the average dipole is subtracted from the instantaneous dipole. The magnitude of the average dipole is set with the option <code> -dip</code>, the direction is defined by the vector from the first atom in the selected solvent group to the midpoint between the second and the third atom.</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />

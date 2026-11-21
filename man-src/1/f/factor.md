@@ -1,4 +1,5 @@
 ---
+
 title: "factor(1)"
 name: "factor"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-factor/"
 description: "factor – factor numbers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>factor</code> [<i>,NUMBER/</i>]&#8230;<br />
  <code>factor</code> <i>,OPTION/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Print the prime factors of each specified integer NUMBER. If none are specified on the command line, read them from standard input.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

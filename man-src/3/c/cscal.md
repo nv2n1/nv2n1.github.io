@@ -1,4 +1,5 @@
 ---
+
 title: "cscal(3)"
 name: "cscal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cscal/"
 description: "cscal.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cscal</code> (N, CA, CX, INCX)<br />
  <i></i><code>CSCAL</code></p>

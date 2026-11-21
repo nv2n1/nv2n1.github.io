@@ -1,4 +1,5 @@
 ---
+
 title: "travelccm(1)"
 name: "travelccm"
 section: "1"
@@ -10,9 +11,7 @@ description: "travelccm –"
 <pre>
   Binary executable for the C++ Travel Customer Choice Model Library
 </pre>
-<h2>SYNOPSIS</h2>
 <p> <code>travelccm</code> [&#8211;prefix] [-v|&#8211;version] [-h|&#8211;help] [-b|&#8211;builtin] [-i|&#8211;input &lt;path-to-input&gt;] [-l|&#8211;log &lt;path-to-output-log-file&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>travelccm</i> is a small program showing how to use the Travelccm library. </p>
 <p> <i>travelccm</i> accepts the following options: </p>
 <p> <code>&#8211;prefix</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-associate-address(1)"
 name: "euca-associate-address"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-associate-address – Associate an elastic IP address with a 
 
 <h2>NAME</h2>
 <p> euca-associate-address &#8211; Associate an elastic IP address with a running instance</p>
-<h2>SYNOPSIS</h2>
 <p> euca-associate-address [-a ALLOC] (<code>-i</code> INSTANCE | <code>-n</code> INTERFACE)</p>
 <dl>
 <dt>[-p ADDRESS]</dt>
 <dd> [&#8211;allow-reassociation | <code>&#8211;no-allow-reassociation]</code> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [ADDRESS]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Associate an elastic IP address with a running instance</p>
 <h3>positional arguments:</h3>
 <dl>

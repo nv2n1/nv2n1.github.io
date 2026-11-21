@@ -1,4 +1,5 @@
 ---
+
 title: "dlarra(3)"
 name: "dlarra"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlarra/"
 description: "dlarra.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarra</code> (N, D, E, E2, SPLTOL, TNRM, NSPLIT, ISPLIT, INFO)<br />
  <i></i><code>DLARRA</code> computes the splitting points with the specified threshold.</p>

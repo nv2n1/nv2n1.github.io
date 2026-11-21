@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_ah(3)"
 name: "ibv_create_ah"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_create_ah/"
 description: "ibv_create_ah, ibv_destroy_ah – create or destroy an address handle (AH)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_ah *ibv_create_ah(struct ibv_pd *pd,
                              struct ibv_ah_attr *attr);
 int ibv_destroy_ah(struct ibv_ah *ah);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_ah()</code> creates an address handle (AH) associated with the protection domain <i>pd</i>. The argument <i>attr</i> is an ibv_ah_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_ah_attr {

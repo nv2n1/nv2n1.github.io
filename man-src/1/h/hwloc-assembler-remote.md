@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-assembler-remote(1)"
 name: "hwloc-assembler-remote"
 section: "1"
@@ -9,7 +10,6 @@ description: "hwloc-assembler-remote – Assemble multiple remote host topologie
 
 <h2>NAME</h2>
 <p> hwloc-assembler-remote &#8211; Assemble multiple remote host topologies</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hwloc-assembler-remote</code> [<i>options</i>] output.xml host1 host2 &#8230;</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -23,7 +23,6 @@ description: "hwloc-assembler-remote – Assemble multiple remote host topologie
 <dd> Display the resulting topology before exit.</dd>
 <dt><code>-f &#8211;force</code></dt>
 <dd> Ignore failure to load a remote host topology.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> hwloc-assembler-remote is a frontend to hwloc-assembler. It takes care of retrieving the remote nodes&#8217; topologies before assembling them with hwloc-assembler.</p>
 <h2>EXAMPLES</h2>
 <p> To assemble three nodes topologies: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_get_issuer(3)"
 name: "gnutls_certificate_get_issuer"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_get_issuer – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_get_issuer &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_get_issuer(gnutls_certificate_credentials_t </code><i>sc</i><code>, gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_x509_crt_t * </code><i>issuer</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_certificate_get_issuer – API function"
 <dd> Will hold the issuer if any. Should be treated as constant.</dd>
 <dt>unsigned int flags</dt>
 <dd> Use zero or <code>GNUTLS_TL_GET_COPY</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the issuer of a given certificate. As with <code>gnutls_x509_trust_list_get_issuer()</code> this function requires the <code>GNUTLS_TL_GET_COPY</code> flag in order to operate with PKCS <code>11</code> trust lists. In that case the issuer must be freed using <code>gnutls_x509_crt_deinit()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "userinfo(1)"
 name: "userinfo"
 section: "1"
@@ -9,9 +10,7 @@ description: "userinfo – A graphical equivilient to chfn."
 
 <h2>NAME</h2>
 <p> userinfo &#8211; A graphical equivilient to chfn.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>userinfo</code> [ <i>options</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>userinfo</code> is a graphical tool to allow users to conveniently change their finger information.</p>
 <h2>OPTIONS</h2>
 <p> This program has no command line options of its own, but it does take the standard X program options like <code>-display</code> and such. See the <i>X</i>(1) man page for some of the common options.</p>

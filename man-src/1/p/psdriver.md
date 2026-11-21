@@ -1,4 +1,5 @@
 ---
+
 title: "psdriver(1)"
 name: "psdriver"
 section: "1"
@@ -10,7 +11,6 @@ description: "PS driver – driver to create PostScript files (drivers)"
 <h2>NAME</h2>
 <p> <i></i><code> PS driver</code> &#8211; driver to create PostScript files<br />
  <i>(drivers)</i></p>
-<h2>DESCRIPTION</h2>
 <p> The PS driver generates a PostScript file from GRASS display commands. The driver is started as &#8216;pseudo&#8217; monitor (PS file instead) and when stopped, all output from previously used display commands are written to the PostScript file.</p>
 <h2>USAGE</h2>
 <h3>Environment variables</h3>

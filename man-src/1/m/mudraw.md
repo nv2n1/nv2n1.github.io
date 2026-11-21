@@ -1,4 +1,5 @@
 ---
+
 title: "mudraw(1)"
 name: "mudraw"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mudraw/"
 description: "mudraw – render PDF/XPS/CBZ/EPUB documents"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mudraw</code> [<i>options</i>] file [<i>pages]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>mudraw</code> will render a document of a supported document format to image files, convert to another vector format, or extract the text content. </p>
 <p> The supported input document formats are: pdf, xps, cbz, and epub. </p>
 <p> The supported output image formats are: pbm, pgm, ppm, pam, png, tga, pwg, and pcl. The supported output vector formats are: svg, pdf, and debug trace (as xml). The supported output text formats are: plain text, html, and structured text (as xml). </p>

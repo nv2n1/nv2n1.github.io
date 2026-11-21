@@ -1,4 +1,5 @@
 ---
+
 title: "qgpumode(1)"
 name: "qgpumode"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qgpumode/"
 description: "qgpumode – change GPU mode"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> qgpumode -H host -g gpuid -m mode</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>qgpumode </code> command will request a MOM to change the mode on one of it&#8217;s Nvidia GPUs. The GPU&#8217;s mode is changed by sending a <i>GPU Control</i> batch request to the batch server. </p>
 <p> Changing the GPU mode requires PBS Operator or Manager privilege. It also requires that Torque be configured with &#8211;enable-nvidia-gpu. </p>
 <h2>OPTIONS</h2>

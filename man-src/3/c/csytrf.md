@@ -1,4 +1,5 @@
 ---
+
 title: "csytrf(3)"
 name: "csytrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csytrf/"
 description: "csytrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csytrf</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
  <i></i><code>CSYTRF</code></p>

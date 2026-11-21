@@ -1,4 +1,5 @@
 ---
+
 title: "acl_get_fd(3)"
 name: "acl_get_fd"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_get_fd/"
 description: "acl_get_fd – get an ACL by file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_get_fd</code> &#8211; get an ACL by file descriptor </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft acl_t Fn acl_get_fd int fd</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_get_fd function retrieves the access ACL associated with the file referred to by <i>fd</i> The ACL is placed into working storage and Fn acl_get_fd returns a pointer to that storage. </p>
 <p> In order to read an ACL from an object, a process must have read access to the object&#8217;s attributes. </p>
 <p> This function may cause memory to be allocated. The caller should free any releasable memory, when the new ACL is no longer required, by calling acl_free3 with the <i>(void*)acl_t</i> returned by Fn acl_get_fd as an argument.</p>

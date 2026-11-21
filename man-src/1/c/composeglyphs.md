@@ -1,4 +1,5 @@
 ---
+
 title: "composeglyphs(1)"
 name: "composeglyphs"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-composeglyphs/"
 description: "composeglyphs – generate an encoding vector or new font for postscript"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>composeglyphs</code> <code>-e</code> <i>encoding.afm</i> <code>-E</code> <i>encoding.ps</i> </p>
 <p> <code>composeglyphs</code> <code>-i</code> <i>input.afm</i> <code>-o</code> <i>output.ps</i> <code>-c</code> <i>composite.afm</i> <code>-n</code> <i>newname</i> <code>-e</code> <i>base_encoding.afm</i> <code>-t</code> <i>target_encoding.afm</i> <code>-a</code> <i>output.afm</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>composeglyphs</code> is a script to generate either an encoding vector or a new font for postscript. It requires a pre-existing AFM and allows for the use of composite characters that that AFM does not already provide.</p>
 <h2>OPTIONS</h2>
 <dl>

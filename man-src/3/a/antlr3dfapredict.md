@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3dfapredict(3)"
 name: "antlr3dfapredict"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3defs.h –"
 ---
 
 <p> Basic type and constant definitions for ANTLR3 Runtime.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3errors.h">antlr3errors.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3config.h">antlr3config.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/stdio.h">stdio.h</a>&gt;<br />

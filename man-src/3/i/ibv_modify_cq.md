@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_modify_cq(3)"
 name: "ibv_modify_cq"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-ibv_modify_cq/"
 description: "ibv_modify_cq – modify a completion queue (CQ)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_modify_cq(struct ibv_cq *cq, struct ibv_modify_cq_attr *cq_attr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_modify_cq()</code> modify a CQ <i>cq</i>. The argument <i>cq_attr</i> is an ibv_modify_cq_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_moderate_cq {

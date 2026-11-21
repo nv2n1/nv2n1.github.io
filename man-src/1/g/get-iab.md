@@ -1,4 +1,5 @@
 ---
+
 title: "get-iab(1)"
 name: "get-iab"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-get-iab/"
 description: "get-iab – Fetch the arp-scan IAB file from the IEEE website"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>get-iab</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>get-iab</code> fetches the Ethernet IAB file from the IEEE website, and saves it in the format used by arp-scan. </p>
 <p> The IAB file contains all of the IABs (Individual Address Blocks) that have been registered with IEEE. Each IAB entry in the file specifies the first 36-bits of the 48-bit Ethernet hardware address, leaving the remaining 12-bits for use by the registering organisation. For example the IAB entry &quot;0050C2003&quot;, registered to Microsoft, applies to any Ethernet hardware address from <i>00:50:c2:00:30:00</i> to <i>00:50:c2:00:3f:ff</i> inclusive. Each IAB assignment represents a total of 2^12 (4,096) Ethernet addresses. </p>
 <p> Major Ethernet hardware vendors typically use an OUI registration rather than an IAB registration. See <code><a href="/docs/linux/man/1-get-oui/">get-oui</a></code>(1) for details. </p>

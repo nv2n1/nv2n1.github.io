@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_destroy(3)"
 name: "cgi_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_destroy/"
 description: "cgi_destroy – deallocate the data associated with a CGI"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -16,7 +16,6 @@ void cgi_destroy(CGI **cgi);
 </code></pre>
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; a pointer to a pointer to a CGI struct </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_destroy will destroy all the data associated with a CGI, which mostly means the associated HDF and removal of any files that were uploaded via multipart/form-data. (Note that even in the event of a crash, these files will be deleted, as they were unlinked on creation and only exist because of the open file pointer) </p>
 <h2>RETURN VALUE</h2>
 <p> cgi &#8211; NULL on output </p>

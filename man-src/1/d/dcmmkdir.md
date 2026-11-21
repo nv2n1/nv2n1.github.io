@@ -1,4 +1,5 @@
 ---
+
 title: "dcmmkdir(1)"
 name: "dcmmkdir"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmmkdir/"
 description: "dcmmkdir – Create a DICOMDIR file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dcmmkdir[options][dcmfile - in...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmmkdir</code> utility creates a <i>DICOMDIR</i> file from the specified referenced DICOM files according to the DICOM Part 11 Media Storage Application Profiles. </p>
 <p> Currently the following profiles are supported (others might be added later): </p>
 <dl>

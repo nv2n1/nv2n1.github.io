@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-cli(1)"
 name: "transmission-cli"
 section: "1"
@@ -9,10 +10,8 @@ description: "transmission-cli – a bittorrent client"
 
 <h2>NAME</h2>
 <p> <code>transmission-cli</code> &#8211; a bittorrent client</p>
-<h2>SYNOPSIS</h2>
 <p> <code>transmission-cli</code> -words &#8211;<code>h</code><br />
 <code>transmission-cli</code> [-<code>b | B</code> ] [-<code>d </code><i>number | &#8211;</i><code>D</code> ] [-<code>er | ep | et</code> ] [-<code>f </code><i>script</i> ] [-<code>g </code><i>directory</i> ] [-<code>h</code> ] [-<code>m | M</code> ] [-<code>p </code><i>port</i> ] [-<code>t </code><i>tos</i> ] [-<code>u </code><i>number | &#8211;</i><code>U</code> ] [-<code>v</code> ] [-<code>w </code><i>directory</i> ] <i>torrent-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>transmission-cli</code> program is a lightweight, command-line BitTorrent client with scripting capabilities. </p>
 <p> The options are as follows:</p>
 <dl>

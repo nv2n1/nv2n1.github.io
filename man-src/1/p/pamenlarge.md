@@ -1,4 +1,5 @@
 ---
+
 title: "pamenlarge(1)"
 name: "pamenlarge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pamenlarge/"
 description: "pamenlarge – Enlarge a Netpbm image N times"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamenlarge</code> <i>N</i> [<i>pnmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamenlarge</code> reads a Netpbm image as input, replicates its pixels <i>N</i> times, and produces a Netpbm image as output. The output is the same type of image as the input. </p>
 <p> If you enlarge by a factor of 3 or more, you should probably add a <code>pnmsmooth</code> step; otherwise, you can see the original pixels in the resulting image. </p>

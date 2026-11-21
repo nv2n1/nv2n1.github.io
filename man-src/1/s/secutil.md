@@ -1,4 +1,5 @@
 ---
+
 title: "secutil(1)"
 name: "secutil"
 section: "1"
@@ -9,9 +10,7 @@ description: "secutil – Extract X.509 certificates and strongnames from assemb
 
 <h2>NAME</h2>
 <p> secutil &#8211; Extract X.509 certificates and strongnames from assemblies.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>secutil [options] filename</code></p>
-<h2>DESCRIPTION</h2>
 <p> Extract X.509 certificates and strongnames from assemblies in a format that can be easily re-used in source code (C# or VB.NET syntax).</p>
 <h2>OPTIONS</h2>
 <dl>

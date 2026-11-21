@@ -1,4 +1,5 @@
 ---
+
 title: "perlsh(1)"
 name: "perlsh"
 section: "1"
@@ -6,21 +7,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlsh/"
 ---
 
-<h2 class="name">NAME</h2>
+perlsh - one-line perl evaluator with line editing function and <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> variable name completion function
  
 
- perlsh - one-line perl evaluator with line editing function and <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> variable name completion function
- 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
   perlsh
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This program reads input a line, and evaluates it by perl interpreter, and prints the result. If the result is a list value then each value of the list is printed line by line. This program can be used as a very strong calculator which has whole perl functions. 
+This program reads input a line, and evaluates it by perl interpreter, and prints the result. If the result is a list value then each value of the list is printed line by line. This program can be used as a very strong calculator which has whole perl functions. 
 
  This is a sample program Term::ReadLine::Gnu module. When you input a line, the line editing function of <font SIZE="-1">GNU</font> Readline Library is available. Perl symbol name completion function is also available. 
 

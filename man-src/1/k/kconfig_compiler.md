@@ -1,4 +1,5 @@
 ---
+
 title: "kconfig_compiler(1)"
 name: "kconfig_compiler"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-kconfig_compiler/"
 description: "kconfig_compiler – KDE configuration compiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kconfig_compiler</code> [Qt-options] [KDE-options] [options] <i>file.kcfg</i> <i>file.kcfgc</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>kconfig_compiler</code></p>
 <dd>generates C++ source code from two files. The first file (.kcfg) contains information about configuration options and the second file (.kcfgc) provides the code generation options. </dd>
 <p> The generated source code contains a class based on <code>KConfigSkeleton</code> that provides an API to access the applications configuration data.</p>

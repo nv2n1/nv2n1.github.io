@@ -1,4 +1,5 @@
 ---
+
 title: "printcbm(1)"
 name: "printcbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-printcbm/"
 description: "printcbm – list a Commodore BASIC file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>printcbm</code> <i>FILE</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>printcbm</code> lists all lines of the specified Commodore BASIC program. </p>
 <h2>OPTIONS</h2>
 <dl>

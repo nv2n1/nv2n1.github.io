@@ -1,4 +1,5 @@
 ---
+
 title: "dtptri(3)"
 name: "dtptri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtptri/"
 description: "dtptri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtptri</code> (UPLO, DIAG, N, AP, INFO)<br />
  <i></i><code>DTPTRI</code></p>

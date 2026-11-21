@@ -1,4 +1,5 @@
 ---
+
 title: "tcextract(1)"
 name: "tcextract"
 section: "1"
@@ -9,13 +10,11 @@ description: "tcextract – read multimedia file from medium, extract or demulti
 
 <h2>NAME</h2>
 <p> tcextract &#8211; read multimedia file from medium, extract or demultiplex requested stream and print to standard output</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tcextract</code></dt>
 <dd> <code>-i</code> <i>name</i> [ <code>-x</code> <i>codec</i> ] [ <code>-t</code> <i>magic</i> ] [ <code>-a</code> <i>track</i> ] [ <code>-C</code> <i>s-e</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcextract</code> is Copyright (C) by Thomas Oestreich.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcextract</code> is part of and usually called by <code>transcode</code>.<br />
  However, it can also be used independently.<br />
  <code>tcextract</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>

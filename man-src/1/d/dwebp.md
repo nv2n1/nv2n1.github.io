@@ -1,4 +1,5 @@
 ---
+
 title: "dwebp(1)"
 name: "dwebp"
 section: "1"
@@ -9,9 +10,7 @@ description: "dwebp – decompress a WebP file to an image file"
 
 <h2>NAME</h2>
 <p> dwebp &#8211; decompress a WebP file to an image file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dwebp</code> [<i>options</i>]<i> input_file.webp</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>dwebp</code> command. </p>
 <p> <code>dwebp</code> decompresses WebP files into PNG, PAM, PPM or PGM images.</p>
 <h2>OPTIONS</h2>

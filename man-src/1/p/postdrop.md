@@ -1,4 +1,5 @@
 ---
+
 title: "postdrop(1)"
 name: "postdrop"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-postdrop/"
 description: "postdrop – Postfix mail posting utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 postdrop[-rv][-c config_dir]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postdrop/">postdrop</a></code>(1) command creates a file in the <code>maildrop</code> directory and copies its standard input to the file. </p>
 <p> Options:</p>
 <dl>

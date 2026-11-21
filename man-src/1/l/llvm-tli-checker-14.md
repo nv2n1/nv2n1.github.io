@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-tli-checker-14(1)"
 name: "llvm-tli-checker-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-tli-checker-14/"
 description: "llvm-tli-checker – TargetLibraryInfo vs library checker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-tli-checker</code> [<i>options</i>] [<i>library-file…</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-tli-checker</code> compares TargetLibraryInfo’s opinion of the availability of library functions against the set of functions exported by the specified library files, reporting any disagreements between TLI’s opinion and whether the function is actually present. This is primarily useful for vendors to ensure the TLI for their target is correct, and the compiler will not “optimize” some code sequence into a library call that is not actually available.</p>
 <h2>EXAMPLE</h2>
 <pre><code>

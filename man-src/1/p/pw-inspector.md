@@ -1,4 +1,5 @@
 ---
+
 title: "pw-inspector(1)"
 name: "pw-inspector"
 section: "1"
@@ -9,9 +10,7 @@ description: "pw-inspector – A tool to reduce the password list"
 
 <h2>NAME</h2>
 <p> pw-inspector &#8211; A tool to reduce the password list</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pw-inspector</code> [-i FILE] [-o FILE] [-m MINLEN] [-M MAXLEN] [-c MINSETS] -l -u -n -p -s </p>
-<h2>DESCRIPTION</h2>
 <p> PW-Inspector reads passwords in and prints those which meet the requirements. The return code is the number of valid passwords found, 0 if none was found. Use for security: check passwords, if 0 is returned, reject password choice. Use for hacking: trim your dictionary file to the pw requirements of the target. Usage only allowed for legal purposes.</p>
 <h2>OPTIONS</h2>
 <dl>

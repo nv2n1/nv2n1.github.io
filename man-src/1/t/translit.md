@@ -1,4 +1,5 @@
 ---
+
 title: "translit(1)"
 name: "translit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-translit/"
 description: "translit – transliterate text between various writing systems"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> translit <code>-t</code> <i>name</i> <code>-r</code> <code>-i</code> <i>file</i> <code>-o</code> <i>file</i> -l -v -h</p>
-<h2>DESCRIPTION</h2>
 <p> <code>translit</code> transliterates <font SIZE="-1"><code>UTF-8</code></font> encoded natural language text from one writing system to another. </p>
 <p> It utilizes the Perl module Lingua::Translit to accomplish this task and follows the provided transliteration standards as strict as possible. </p>
 <p> <code>translit</code> regards the following commandline switches:</p>

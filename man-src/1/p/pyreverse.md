@@ -1,4 +1,5 @@
 ---
+
 title: "pyreverse(1)"
 name: "pyreverse"
 section: "1"
@@ -9,9 +10,7 @@ description: "pyreverse – parse python sources files and extract diagrams from
 
 <h2>NAME</h2>
 <p> pyreverse &#8211; parse python sources files and extract diagrams from them. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pyreverse </code> <i>[options]</i> &lt;modules&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pyreverse</code> is a python source analyzer. It parses a python packages and produces UML diagrams in different output formats. (dot, all formats available for dot, and vcg). With different options, you can have fine tuning on what and how modules, classes and attributes will be shown in the diagram. You can combine several modules in one project (except with <code>-c</code> ). </p>
 <p> If no -c and no &#8211;diadefs option specified, <code>pyreverse </code> will create<br />
 &nbsp;<wbr>&#8211; a diagram&nbsp;<wbr>&#8216;classes_&lt;name&gt;&#8217;&nbsp;<wbr>for the classes in&nbsp;<wbr>&lt;modules&gt;&nbsp;<wbr>and<br />

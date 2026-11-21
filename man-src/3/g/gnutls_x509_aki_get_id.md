@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_aki_get_id(3)"
 name: "gnutls_x509_aki_get_id"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_aki_get_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_aki_get_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_aki_get_id(gnutls_x509_aki_t </code><i>aki</i><code>, gnutls_datum_t * </code><i>id</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_aki_get_id – API function"
 <dd> The authority key ID structure</dd>
 <dt>gnutls_datum_t * id</dt>
 <dd> Will hold the identifier</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the key identifier as stored in the <i>aki</i> structure. The identifier should be treated as constant.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if the index is out of bounds, otherwise a negative error value.</p>

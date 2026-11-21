@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_protocol_get_version(3)"
 name: "gnutls_protocol_get_version"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_protocol_get_version – API function"
 
 <h2>NAME</h2>
 <p> gnutls_protocol_get_version &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>gnutls_protocol_t gnutls_protocol_get_version(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get TLS version, a <code>gnutls_protocol_t</code> value.</p>
 <h2>RETURNS</h2>
 <p> The version of the currently used protocol.</p>

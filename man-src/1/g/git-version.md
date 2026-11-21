@@ -1,4 +1,5 @@
 ---
+
 title: "git-version(1)"
 name: "git-version"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-version/"
 description: "git-version – Display version information about Git"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>git version</i> [--build-options]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> With no options given, the version of <i>git</i> is printed on the standard output. </p>
 <p> Note that <code>git &#8211;version</code> is identical to <code>git version</code> because the former is internally converted into the latter.</p>
 <h2>OPTIONS</h2>

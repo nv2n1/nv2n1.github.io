@@ -1,4 +1,5 @@
 ---
+
 title: "calc(1)"
 name: "calc"
 section: "1"
@@ -9,13 +10,11 @@ description: "calc – arbitrary precision calculator"
 
 <h2>NAME</h2>
 <p> calc &#8211; arbitrary precision calculator</p>
-<h2>SYNOPSIS</h2>
 <p> <i>calc</i> [<code>-c</code>] [<code>-C</code>] [<code>-d</code>]<br />
  [<code>-D calc_debug[:resource_debug[:user_debug]]</code>]<br />
  [<code>-e</code>] [<code>-h</code>] [<code>-i</code>] [<code>-m mode</code>] [<code>-O</code>]<br />
  [<code>-p</code>] [<code>-q</code>] [<code>-s</code>] [<code>-u</code>] [<code>-v</code>] [<code>[&#8211;]&nbsp;<wbr>calc_cmd &#8230;</code>] </p>
 <p> <i>#!/usr/bin/calc</i>&nbsp;<wbr>[other_flags &#8230;] <code>-f</code></p>
-<h2>DESCRIPTION</h2>
 <p> CALC OPTIONS </p>
 <dl>
 <dt><code>-c</code></dt>

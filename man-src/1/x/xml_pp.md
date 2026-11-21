@@ -1,4 +1,5 @@
 ---
+
 title: "xml_pp(1)"
 name: "xml_pp"
 section: "1"
@@ -6,18 +7,13 @@ letter: "x"
 url: "/docs/linux/man/1-xml_pp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- xml_pp - xml pretty-printer 
+xml_pp - xml pretty-printer 
 
 <h2>SYNOPSYS</h2>
 
  xml_pp [options] [&lt;files&gt;]
 
-<h2>DESCRIPTION</h2>
-
- <font SIZE="-1">XML</font> pretty printer using XML::Twig
+<font SIZE="-1">XML</font> pretty printer using XML::Twig
 
 <h2>OPTIONS</h2>
 

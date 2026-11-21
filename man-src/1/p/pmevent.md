@@ -1,4 +1,5 @@
 ---
+
 title: "pmevent(1)"
 name: "pmevent"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmval, pmevent – arbitrary performance metrics value dumper"
 
 <h2>NAME</h2>
 <p> <code>pmval</code>, <code>pmevent</code> &#8211; arbitrary performance metrics value dumper</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmval</code> [<code>-dgLrvz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>] [<code>-f</code> <i>N</i>] [<code>-h</code> <i>host</i>] [<code>-i</code> <i>instances</i>] [<code>-K</code> <i>spec</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>offset</i>] [<code>-p</code> <i>port</i>] [<code>-S</code> <i>starttime</i>] [<code>-s</code> <i>samples</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-U</code> <i>archive</i>] [<code>-w</code> <i>width</i>] [<code>-x</code> <i>pattern</i>] [<code>-Z</code> <i>timezone</i>] <i>metricname</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmval</code> prints current or archived values for the nominated performance metric. The metric of interest is named in the <i>metricname</i> argument, subject to instance qualification with the <code>-i</code> flag as described below. </p>
 <p> Unless directed to another host by the <code>-h</code> option, or to a set of archives by the <code>-a</code> or <code>-U</code> options, <code>pmval</code> will contact the Performance Metrics Collector Daemon (PMCD) on the local host to obtain the required information. </p>
 <p> The <i>metricname</i> argument may also be given in the metric specification syntax, as described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), where the source, metric and instance may all be included in the <i>metricname</i>, e.g. thathost:kernel.all.load[&quot;1 minute&quot;]. When this format is used, none of the <code>-h</code> or <code>-a</code> or <code>-U</code> options may be specified. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_send(3)"
 name: "gnutls_record_send"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_record_send – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_send &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>ssize_t gnutls_record_send(gnutls_session_t </code><i>session</i><code>, const void * </code><i>data</i><code>, size_t </code><i>data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_record_send – API function"
 <dd> contains the data to send</dd>
 <dt>size_t data_size</dt>
 <dd> is the length of the data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function has the similar semantics with <code>send()</code>. The only difference is that it accepts a GnuTLS session, and uses different error codes. Note that if the send buffer is full, <code>send()</code> will block this function. See the <code>send()</code> documentation for more information. </p>
 <p> You can replace the default push function which is <code>send()</code>, by using <code>gnutls_transport_set_push_function()</code>. </p>
 <p> If the EINTR is returned by the internal push function then <code>GNUTLS_E_INTERRUPTED</code> will be returned. If <code>GNUTLS_E_INTERRUPTED</code> or <code>GNUTLS_E_AGAIN</code> is returned, you must call this function again, with the exact same parameters; alternatively you could provide a <code>NULL</code> pointer for data, and 0 for size. cf. <code>gnutls_record_get_direction()</code>. </p>

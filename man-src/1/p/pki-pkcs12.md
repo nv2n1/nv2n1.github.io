@@ -1,4 +1,5 @@
 ---
+
 title: "pki-pkcs12(1)"
 name: "pki-pkcs12"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pki-pkcs12/"
 description: "pki-pkcs12 – Command-Line Interface for managing certificates and keys in PKCS #12 file."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] pkcs12
         pki[CLI options] pkcs12 -
     export[command options] pki[CLI options] pkcs12 - import[command options] pki[CLI options] pkcs12 - cert[command options] pki[CLI options] pkcs12 - key[command options]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki pkcs12</code> commands provide command-line interfaces to manage certificate and keys in a PKCS #12 file. </p>
 <p> <code>pki</code> [CLI options] <code>pkcs12-export</code> [command options]</p>
 <dl>

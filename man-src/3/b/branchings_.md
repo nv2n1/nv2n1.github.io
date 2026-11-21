@@ -1,4 +1,5 @@
 ---
+
 title: "branchings_(3)"
 name: "branchings_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-branchings_/"
 description: "QuantLib::TrinomialTree – Recombining trinomial tree class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/lattices/trinomialtree.hpp&gt; </p>
 <p> Inherits <code>Tree&lt; TrinomialTree &gt;</code>. </p>
 <h3>Public Types</h3>

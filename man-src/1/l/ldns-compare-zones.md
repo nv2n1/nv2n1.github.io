@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-compare-zones(1)"
 name: "ldns-compare-zones"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldns-compare-zones – read and compare two zonefiles and print di
 
 <h2>NAME</h2>
 <p> ldns-compare-zones &#8211; read and compare two zonefiles and print differences</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldns-compare-zones</code> <i>[-c]</i> <i>[-i]</i> <i>[-d]</i> <i>[-z]</i> <i>[-s]</i> <i>ZONEFILE1</i> <i>ZONEFILE2</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldns-compare-zones</code> reads two DNS zone files and prints number of differences. </p>
 <pre>
 Output is formated to:

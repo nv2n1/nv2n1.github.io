@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-policies(1)"
 name: "euscale-describe-policies"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-describe-policies – Describe auto-scaling policies"
 
 <h2>NAME</h2>
 <p> euscale-describe-policies &#8211; Describe auto-scaling policies</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-describe-policies [-g ASGROUP] [&#8211;show-long]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [POLICY [POLICY &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Describe auto-scaling policies</p>
 <h3>positional arguments:</h3>
 <dl>

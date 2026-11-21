@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmconv(1)"
 name: "gdcmconv"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcmconv – .TH \"gdcmconv\" 1 \"Fri Oct 29 2010\" \"Version 2.0.
 <pre>
 gdcmconv [options] file-in file-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcmconv</code> command line program takes as input a DICOM file (file-in) and process it to generate an output DICOM file (file-out). The command line option dictate the type of operation(s) gdcmconv will use to generate the output file.</p>
 <h2>PARAMETERS</h2>
 <pre>

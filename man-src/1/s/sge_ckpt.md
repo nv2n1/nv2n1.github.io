@@ -1,4 +1,5 @@
 ---
+
 title: "sge_ckpt(1)"
 name: "sge_ckpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sge_ckpt/"
 description: "Grid Engine Checkpointing – the Grid Engine checkpointing mechanism and checkpointing support"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Grid Engine supports two levels of checkpointing: the user level and a operating system provided transparent level. User level checkpointing refers to applications, which do their own checkpointing by writing restart files at certain times or algorithmic steps and by properly processing these restart files when restarted. </p>
 <p> Transparent checkpointing has to be provided by the operating system and is usually integrated in the operating system kernel. An example for a kernel integrated checkpointing facility is the Hibernator package from Softway for SGI IRIX platforms. </p>
 <p> Checkpointing jobs need to be identified to the Grid Engine system by using the <i>-ckpt</i> option of the command. The argument to this flag refers to a so called checkpointing environment, which defines the attributes of the checkpointing method to be used (see for details). Checkpointing environments are setup by the options <i>-ackpt</i>, <i>-dckpt</i>, <i>-mckpt</i> and <i>-sckpt</i>. The option <i>-c</i> can be used to overwrite the <i>when</i> attribute for the referenced checkpointing environment. </p>

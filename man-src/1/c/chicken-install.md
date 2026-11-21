@@ -1,4 +1,5 @@
 ---
+
 title: "chicken-install(1)"
 name: "chicken-install"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-chicken-install/"
 description: "chicken-install – download and install extension libraries for CHICKEN Scheme"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> chicken-install [OPTION | EXTENSION[:VERSION]] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <i>chicken-install</i> is a program that downloads, compiles and installs a prepackaged extension library from sources. If no extension name is given on the command-line, then any existing <code>setup</code> scripts in the current directory will be executed in some unspecified order. </p>
 <h2>OPTIONS</h2>
 <p> Enter <code>chicken-install -help</code> for a list of supported command-line options. </p>

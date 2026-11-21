@@ -1,4 +1,5 @@
 ---
+
 title: "more(1)"
 name: "more"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-more/"
 description: "more – file perusal filter for crt viewing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>more</code> [options] <i>file</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>more</code> is a filter for paging through text one screenful at a time. This version is especially primitive. Users should realize that <code><a href="/docs/linux/man/1-less/">less</a></code>(1) provides <code><a href="/docs/linux/man/1-more/">more</a></code>(1) emulation plus extensive enhancements.</p>
 <h2>OPTIONS</h2>
 <p> Options are also taken from the environment variable <code>MORE</code> (make sure to precede them with a dash (<code>&#8211;</code>)) but command-line options will override those. </p>

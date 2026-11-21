@@ -1,4 +1,5 @@
 ---
+
 title: "nmbscan(1)"
 name: "nmbscan"
 section: "1"
@@ -9,11 +10,9 @@ description: "nmbscan – NMB/SMB network scanner"
 
 <h2>NAME</h2>
 <p> nmbscan &#8211; NMB/SMB network scanner</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nmbscan</code> -L<br />
  <code>nmbscan</code> {-d|-m|-a}<br />
  <code>nmbscan</code> {-h|-n} host1 [host2 [&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>nmbscan</code> command. </p>
 <p> <code>nmbscan</code> scans the shares of a SMB/NetBIOS network, using the NMB/SMB/NetBIOS protocols. It is useful for acquiring information on a local area network for such purposes as security auditing. </p>
 <p> It can obtain such information as NMB/SMB/NetBIOS/Windows host name, IP address, IP host name, Ethernet MAC address, Windows user name, NMB/SMB/NetBIOS/Windows domain name, and master browser. </p>

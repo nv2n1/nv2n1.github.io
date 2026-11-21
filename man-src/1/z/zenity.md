@@ -1,4 +1,5 @@
 ---
+
 title: "zenity(1)"
 name: "zenity"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-zenity/"
 description: "zenity – display GTK+ dialogs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>zenity</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>zenity</code> is a program that will display GTK+ dialogs, and return (either in the return code, or on standard output) the users input. This allows you to present information, and ask for information from the user, from all manner of shell scripts. </p>
 <p> For example, <code>zenity &#8211;question</code> will return either 0, 1 or 5, depending on whether the user pressed <i>OK</i>, <i>Cancel</i> or timeout has been reached. <code>zenity &#8211;entry</code> will output on standard output what the user typed into the text entry field. </p>
 <p> Comprehensive documentation is available in the GNOME Help Browser.</p>

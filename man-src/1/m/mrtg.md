@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg(1)"
 name: "mrtg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mrtg/"
 description: "mrtg – What is MRTG ?"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The Multi Router Traffic Grapher (<font SIZE="-1">MRTG</font>) is a tool to monitor the traffic load on network links. <font SIZE="-1">MRTG</font> generates <font SIZE="-1">HTML</font> pages containing <font SIZE="-1">PNG</font> images which provide a <font SIZE="-1">LIVE</font> visual representation of this traffic. Check <a rel="nofollow" href="http://www.stat.ee.ethz.ch/mrtg/">http://www.stat.ee.ethz.ch/mrtg/</a> to see what it does. </p>
 <p> Go to<br />
 &nbsp;<wbr><a rel="nofollow" href="http://oss.oetiker.ch/mrtg">http://oss.oetiker.ch/mrtg</a>&nbsp;<wbr> for all the details about mrtg.</p>

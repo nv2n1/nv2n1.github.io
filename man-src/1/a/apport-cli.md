@@ -1,4 +1,5 @@
 ---
+
 title: "apport-cli(1)"
 name: "apport-cli"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-apport-cli/"
 description: "apport-cli, apport-gtk, apport-kde – Apport user interfaces for reporting problems"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>apport-cli</code> </p>
 <p> <code>apport-cli </code> [ <code>&#8211;save </code><i>file</i> ] <i>symptom </i>|<i> pid </i>|<i> package </i>|<i> program path </i>|<i> .apport/.crash file</i> </p>
 <p> <code>apport-cli -f</code> </p>
 <p> <code>apport-cli -f -p</code> <i>package</i> <code>-P</code> <i>pid</i> </p>
 <p> <code>apport-cli -u</code> <i>report-number</i> </p>
 <p> Same options/arguments for <code>apport-gtk</code> and <code>apport-kde</code>. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>apport </code> automatically collects data from crashed processes and compiles a problem report in <i>/var/crash/</i>. This is a command line frontend for reporting those crashes to the developers. It can also be used to report bugs about packages or running processes. </p>
 <p> If symptom scripts are available, it can also be given the name of a symptom, or be called with just <code>-f</code> to display a list of known symptoms. </p>
 <p> When being called without any options, it processes the pending crash reports and offers to report them one by one. You can also display the entire report to see what is sent to the software developers. </p>

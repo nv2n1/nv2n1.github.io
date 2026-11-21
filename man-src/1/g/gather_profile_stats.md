@@ -1,4 +1,5 @@
 ---
+
 title: "gather_profile_stats(1)"
 name: "gather_profile_stats"
 section: "1"
@@ -9,9 +10,7 @@ description: "gather_profile_stats.py – Performance analysis tool for the Djan
 
 <h2>NAME</h2>
 <p> gather_profile_stats.py &#8211; Performance analysis tool for the Django Web framework</p>
-<h2>SYNOPSIS</h2>
 <p> <code>python gather_profile_stats.py</code> <i>&lt;path&gt;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This utility script aggregates profiling logs generated using Python&#8217;s hotshot profiler. The sole command-line argument is the full path to the directory containing the profiling logfiles. </p>
 <h2>SEE ALSO</h2>
 <p> Discussion of profiling Django applications on the Django project&#8217;s wiki: </p>

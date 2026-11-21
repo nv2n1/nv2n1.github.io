@@ -1,4 +1,5 @@
 ---
+
 title: "pki-securitydomain(1)"
 name: "pki-securitydomain"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pki-securitydomain/"
 description: "pki-securitydomain – Command-Line Interface for managing Certificate System security domain."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] securitydomain
         pki[CLI options] securitydomain -
     show[command options]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki-securitydomain</code> commands provide command-line interfaces to manage the security domain. </p>
 <p> <code>pki</code> [CLI options] <code>securitydomain</code></p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "attr_list(3)"
 name: "attr_list"
 section: "3"
@@ -19,7 +20,6 @@ int attr_listf(int fd, char *buffer,
                const int buffersize, int flags,
                attrlist_cursor_t *cursor);
 [</code></pre>
-<h2>DESCRIPTION</h2>
 <p> ] The <code>attr_list</code> and <code>attr_listf</code> functions provide a way to list the existing attributes of a filesystem object. </p>
 <p> <i>Path</i> points to a path name for a filesystem object, and <i>fd</i> refers to the file descriptor associated with a file. The <i>buffer</i> will be filled with a structure describing at least a portion of the attributes associated with the given filesystem object. <i>Buffer</i> will be overwritten with an <tt>attrlist_t</tt> structure containing a list of the attributes associated with that filesystem object, up to a maximum of <i>buffersize</i> bytes. The <i>buffer</i> must be sufficiently large to hold the appropriate data structures plus at least one maximally sized attribute name, but cannot be more than ATTR_MAX_VALUELEN (currently 64KB) bytes in length. </p>
 <p> [c p a] The contents of an <tt>attrlist_t</tt> structure include the following members: </p>

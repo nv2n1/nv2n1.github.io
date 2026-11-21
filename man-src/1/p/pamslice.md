@@ -1,4 +1,5 @@
 ---
+
 title: "pamslice(1)"
 name: "pamslice"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pamslice/"
 description: "pamslice – extract one line of values out of a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamslice</code> {<code>-row=</code><i>rownumber</i> | <code>-column=</code><i>columnnumber</i>} [<code>-plane=</code><i>planenumber</i>] [<i>imagefile</i>] </p>
 <h2>OPTION USAGE</h2>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamslice</code> extracts one line of tuples (pixels) out of a Netpbm image and prints their values in a table. A line means a row or column. It shows you a one-dimensional cross section of a two-dimensional image. (With the <code>-plane</code> option, it can be thought of as a one-dimensional cross-section of a three-dimensional image). </p>
 <p> The table has one line per tuple, consisting of blank-separated ASCII decimal numbers. The first number is the column number if you specified a row slice or the row number if you specified a column slice. The rest of the numbers are the sample values in plane number order. For a PBM or PGM input, there is only one plane. For a PPM input, Plane 0 is red, Plane 1 is green, and Plane 2 is blue. See the specifications of the image formats for details on exactly what these numbers mean. </p>

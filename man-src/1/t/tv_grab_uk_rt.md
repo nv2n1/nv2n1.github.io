@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_uk_rt(1)"
 name: "tv_grab_uk_rt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_uk_rt/"
 description: "tv_grab_uk_rt – Grab TV listings for United Kingdom/Republic of Ireland"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_uk_rt &#8211;help </p>
 <p> tv_grab_uk_rt &#8211;version </p>
 <p> tv_grab_uk_rt &#8211;capabilities </p>
@@ -22,7 +22,6 @@ description: "tv_grab_uk_rt – Grab TV listings for United Kingdom/Republic of 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug] </p>
 <p> tv_grab_uk_rt &#8211;list-lineups </p>
 <p> tv_grab_uk_rt &#8211;get-lineup [&#8211;config-file <font SIZE="-1">FILE</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings in <font SIZE="-1">XMLTV</font> format for many channels available in the United Kingdom and Republic of Ireland. Source data comes from machine-readable files made available from the Radio Times website.</p>
 <h2>USAGE</h2>
 <p> First run <code>tv_grab_uk_rt &#8211;configure</code> to choose which channels you want to receive listings for. Then run <code>tv_grab_uk_rt</code> (with optional arguments) to get around 14 days of listings for your configured channels.</p>

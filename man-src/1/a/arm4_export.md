@@ -1,4 +1,5 @@
 ---
+
 title: "arm4_export(1)"
 name: "arm4_export"
 section: "1"
@@ -9,11 +10,9 @@ description: "arm4_export – export the ARM 4 database in XML format"
 
 <h2>NAME</h2>
 <p> arm4_export &#8211; export the ARM 4 database in XML format</p>
-<h2>SYNOPSIS</h2>
 <p> <code>arm4_export</code> <i>&#8211;help|-h</i><br />
  <code>arm4_export</code> <i>&#8211;version|-V</i><br />
  <code>arm4_export</code> [<i>&#8211;config|-C config_file</i>] [<i>&#8211;archive|-a archive_directory</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>arm4_export</code> program exports the <i>ARM 4</i> agent database to XML. This can then be used to archive the data or to facilitate conversion from one database type to another, or for upgrading agent versions. </p>
 <p> This is functionally equivalent to running the command <code>arm4_control export all</code>.</p>
 <h2>OPTIONS</h2>

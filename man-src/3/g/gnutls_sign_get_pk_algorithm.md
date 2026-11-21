@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_sign_get_pk_algorithm(3)"
 name: "gnutls_sign_get_pk_algorithm"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_sign_get_pk_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_sign_get_pk_algorithm &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>gnutls_pk_algorithm_t gnutls_sign_get_pk_algorithm(gnutls_sign_algorithm_t </code><i>sign</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_sign_algorithm_t sign</dt>
 <dd> is a signature algorithm</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function returns the public key algorithm corresponding to the given signature algorithms.</p>
 <h2>SINCE</h2>
 <p> 3.1.1</p>

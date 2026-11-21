@@ -1,4 +1,5 @@
 ---
+
 title: "hpiel(1)"
 name: "hpiel"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-hpiel/"
 description: "hpiel – An openhpi sample application that displays HPI event log entries."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpiel[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-d][-E entity - path][-c - p - r - X - h] hpiel[--domain = nn][--host = host[:port]][--cfgfile = file]
                                                                                          [--del][--entity - path = "entitypath"][--clear-- resource-- rdr-- debug-- help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpiel searches the <font SIZE="-1">RPT </font>(Resource Present Table) for resources with <font SIZE="-1">SAHPI_CAPABILITY_EVENT_LOG</font> and displays event log entries for resources found. </p>
 <p> If no domain is selected, hpiel uses a session with the default domain. The selected domain id must be configured via the openhpidclient.conf file specified in the environment.</p>
 <h2>OPTIONS</h2>

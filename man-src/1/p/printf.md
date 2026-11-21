@@ -1,4 +1,5 @@
 ---
+
 title: "printf(1)"
 name: "printf"
 section: "1"
@@ -6,10 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-printf/"
 description: "printf – format and print data"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>printf</code> <i>,FORMAT /</i>[<i>,ARGUMENT/</i>]... <br />
  <code>printf</code> <i>,OPTION/</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> Print ARGUMENT(s) according to FORMAT, or execute according to OPTION: </p>
 <dl>
 <dt><code>--help</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlcheat(1)"
 name: "perlcheat"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlcheat/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlcheat - Perl 5 Cheat Sheet 
 
- perlcheat - Perl 5 Cheat Sheet 
-
-<h2>DESCRIPTION</h2>
-
- This 'cheat sheet' is a handy reference, meant for beginning Perl programmers. Not everything is mentioned, but 195 features may already be overwhelming.
+This 'cheat sheet' is a handy reference, meant for beginning Perl programmers. Not everything is mentioned, but 195 features may already be overwhelming.
 
 <h3>The sheet</h3>
 

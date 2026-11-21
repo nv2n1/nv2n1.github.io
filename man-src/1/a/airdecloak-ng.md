@@ -1,4 +1,5 @@
 ---
+
 title: "airdecloak-ng(1)"
 name: "airdecloak-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-airdecloak-ng/"
 description: "airuncloak-ng – Removes wep cloaked framed from a pcap file."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>airuncloak-ng</code> &lt;options&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>airuncloak-ng</code> is a tool that removes wep cloaking from a pcap file. Some WIPS (actually one) can actively &quot;prevent&quot; cracking a WEP key by inserting chaff (fake wep frames) in the air to fool aircrack-ng. In some rare cases, cloaking fails and the key can be recovered without removing this chaff. In the cases where the key cannot be recovered, use this tool to filter out chaff. </p>
 <p> The program works by reading the input file and selecting packets from a specific network. Each selected packet is put into a list and classified (default status is &quot;unknown&quot;). Filters are then applied (in the order specified by the user) on this list. They will change the status of the packets (unknown, uncloaked, potentially cloaked or cloaked). The order of the filters is really important since each filter will base its analysis amongst other things on the status of the packets and different orders will give different results. </p>
 <p> Important requirement: The pcap file needs to have all packets (including beacons and all other &quot;useless&quot; packets) for the analysis (and if possible, prism/radiotap headers).</p>

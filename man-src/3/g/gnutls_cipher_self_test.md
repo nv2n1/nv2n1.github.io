@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_cipher_self_test(3)"
 name: "gnutls_cipher_self_test"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_cipher_self_test – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_self_test &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_cipher_self_test(unsigned </code><i>all</i><code>, gnutls_cipher_algorithm_t </code><i>cipher</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_cipher_self_test – API function"
 <dd> if non-zero then tests to all ciphers are performed.</dd>
 <dt>gnutls_cipher_algorithm_t cipher</dt>
 <dd> the encryption algorithm to use</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will run self tests on the provided cipher or all available ciphers if <i>all</i> is non-zero.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

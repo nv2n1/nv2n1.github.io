@@ -1,4 +1,5 @@
 ---
+
 title: "ppmlabel(1)"
 name: "ppmlabel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmlabel/"
 description: "ppmlabel – add text to a portable pixmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmlabel</code> [<code>-angle</code> <i>angle</i>] [<code>-background</code> <code>transparent</code> | <i>colour</i>] [<code>-colour</code> <i>colour</i>] [<code>-file</code> <i>filename</i>] [<code>-size</code> <i>textsize</i>] [<code>-text</code> <i>&#8216;text </i> <i>string&#8217;</i>] [<code>-x</code> <i>column</i>] [<code>-y</code> <i>row</i>]<i> &#8230; </i> [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ppmlabel</code> uses the text drawing facilities of <code>ppmdraw</code> to add text to a portable pixmap. The location, size, baseline angle, colour of the text and background colour (if any) are controlled by command line arguments. The text can be specified on the command line or read from files. Any number of separate text strings can be added by one invocation of <code>ppmlabel</code>, limited only by the maximum length of the command line. </p>
 <p> If no <i>ppmfile</i> is specified, <code>ppmdraw</code> reads its input pixmap from standard input.</p>
 <h2>OPTIONS</h2>

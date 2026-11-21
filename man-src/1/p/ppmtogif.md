@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtogif(1)"
 name: "ppmtogif"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-ppmtogif/"
 description: "ppmtogif – convert a portable pixmap into a GIF file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtogif</code> [<code>-interlace</code>] [<code>-sort</code>] [<code>-map</code> <i>mapfile</i>]<br />
  [<code>-transparent</code> [<code>=</code>]<i>color</i>] [<code>-alpha</code> <i>pgmfile</i>] [<code>-comment</code> <i>text</i>] [<code>-nolzw</code>]<br />
  [<i>ppmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces a GIF file as output. </p>
 <p> This program creates only individual GIF images. To combine multiple GIF images into an animated GIF, use <code>gifsicle</code> (not part of the Netpbm package). </p>
 <p> <code>ppmtogif</code> creates either an original GIF87 format GIF file or the newer GIF89 format. It creates GIF89 when you request features that were new with GIF89, to wit the <code>-transparent</code> or <code>-comment</code> options. Otherwise, it creates GIF87. Really old GIF readers conceivably could not recognize GIF89. </p>

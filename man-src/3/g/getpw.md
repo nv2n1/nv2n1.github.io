@@ -1,4 +1,5 @@
 ---
+
 title: "getpw(3)"
 name: "getpw"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-getpw/"
 description: "getpw – reconstruct password line entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;pwd.h&gt;
 #include &lt;sys/types.h&gt;
 int getpw(uid_t uid, char *buf);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getpw</code>() function reconstructs the password line entry for the given user ID <i>uid</i> in the buffer <i>buf</i>. The returned buffer contains a line of format </p>
 <p> <code>name:passwd:uid:gid:gecos:dir:shell</code> </p>
 <p> The <i>passwd</i> structure is defined in <i>&lt;pwd.h&gt;</i> as follows: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gtklp(1)"
 name: "gtklp"
 section: "1"
@@ -9,11 +10,9 @@ description: "gtklp – print files via CUPS"
 
 <h2>NAME</h2>
 <p> gtklp &#8211; print files via CUPS</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gtklp</code> [-P|-d <i>printer</i>] [-c <i>configdir</i>] [-S|-h <i>server</i>] [-p <i>port</i>] [-l] [-D] [-V] [-b] [-i] [-H] [-C] [-U <i>user</i>] [-#|-n <i>n</i>] [-E] [-q <i>priority</i>] [-t|-J <i>jobname</i>] [-o <i>option=value</i> &#8230; ][<i>file(s)</i>] </p>
 <p> <code>lp</code> [-d <i>printer</i>] [-S|-h <i>server</i>] [-p <i>port</i>] [-D] [-V] [-b] [-U <i>user</i>] [-#|-n <i>n</i>] [-E] [-q <i>priority</i>] [-t|-J <i>jobname</i>] [-P <i>page-list</i> [-H handling] [-X] [-o <i>option=value</i> &#8230; ][<i>file(s)</i>] </p>
 <p> <code>lpr</code> [-P|-d <i>printer</i>] [-S|-h <i>server</i>] [-p <i>port</i>] [-D] [-V] [-b] [-U <i>user</i>] [-#|-n <i>n</i>] [-E] [-q <i>priority</i>] [-t|-J|-C|-T <i>jobname</i>] [-X] [-o <i>option=value</i> &#8230; ][<i>file(s)</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>GtkLP</code> is an graphical frontend for <i>CUPS</i>, the Common UNIX Printing System.<br />
  It is used to have an easy (and graphical) access to all of the many options of cups-managed printers.</p>
 <h2>OPTIONS</h2>

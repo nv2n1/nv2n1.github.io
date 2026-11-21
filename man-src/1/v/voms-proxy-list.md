@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-list(1)"
 name: "voms-proxy-list"
 section: "1"
@@ -9,11 +10,9 @@ description: "voms-proxy-list – Shows a list of all availabel attributes from 
 
 <h2>NAME</h2>
 <p> voms-proxy-list &#8211; Shows a list of all availabel attributes from a specified server</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>voms-proxy-list</code> [options] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd>The voms-proxy-list prints on screen a list of all available attributes from a specified proxy server. </dd>
 <h2>OPTIONS</h2>
 <p> Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. The options from -help to -out are present for compatibility with grid-proxy-init, and have the exact same meaning. The meaning of the other ones is the following. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "commodity(3)"
 name: "commodity"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-commodity/"
 description: "ql/experimental/commodities/commodity.hpp – Commodity base class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt;<br />
  #include &lt;ql/money.hpp&gt;<br />
  #include &lt;vector&gt;<br />

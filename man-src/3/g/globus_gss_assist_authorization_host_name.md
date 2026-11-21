@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_authorization_host_name(3)"
 name: "globus_gss_assist_authorization_host_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_authorization_host_name/"
 description: "globus_gss_assist.h – GSS Assist Header."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;gssapi.h&#8217;<br />
  #include &lt;stdio.h&gt;<br />
  #include &lt;stdlib.h&gt;<br />

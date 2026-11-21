@@ -1,4 +1,5 @@
 ---
+
 title: "snmpnetstat(1)"
 name: "snmpnetstat"
 section: "1"
@@ -9,12 +10,10 @@ description: "snmpnetstat – display networking status and configuration inform
 
 <h2>NAME</h2>
 <p> snmpnetstat &#8211; display networking status and configuration information from a network entity via SNMP</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmpnetstat</code> [COMMON OPTIONS] [-Ca] [-Cn] AGENT<br />
  <code>snmpnetstat</code> [COMMON OPTIONS] [-Ci] [-Co] [-Cr] [-Cn] [-Cs] AGENT<br />
  <code>snmpnetstat</code> [COMMON OPTIONS] [-Ci] [-Cn] [-CI interface] AGENT [interval]<br />
  <code>snmpnetstat</code> [COMMON OPTIONS] [-Ca] [-Cn] [-Cs] [-Cp protocol] AGENT</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>snmpnetstat </code> command symbolically displays the values of various network-related information retrieved from a remote system using the SNMP protocol. There are a number of output formats, depending on the options for the information presented. The first form of the command displays a list of active sockets. The second form presents the values of other network-related information according to the option selected. Using the third form, with an <i>interval</i> specified, <i>snmpnetstat</i> will continuously display the information regarding packet traffic on the configured network interfaces. The fourth form displays statistics about the named protocol. </p>
 <p> <code>snmpnetstat</code> will issue GETBULK requests to query for information if at least protocol version <i>v2</i> is used. </p>
 <p> AGENT identifies a target SNMP agent, which is instrumented to monitor the given objects. At its simplest, the AGENT specification will consist of a hostname or an IPv4 address. In this situation, the command will attempt communication with the agent, using UDP/IPv4 to port 161 of the given target host. See <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1) for a full list of the possible formats for AGENT. </p>

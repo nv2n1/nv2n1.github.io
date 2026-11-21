@@ -1,4 +1,5 @@
 ---
+
 title: "stzrqf(3)"
 name: "stzrqf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stzrqf/"
 description: "stzrqf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stzrqf</code> (M, N, A, LDA, TAU, INFO)<br />
  <i></i><code>STZRQF</code></p>

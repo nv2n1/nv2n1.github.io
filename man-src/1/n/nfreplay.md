@@ -1,4 +1,5 @@
 ---
+
 title: "nfreplay(1)"
 name: "nfreplay"
 section: "1"
@@ -9,10 +10,8 @@ description: "nfreplay – netflow replay program"
 
 <h2>NAME</h2>
 <p> nfreplay &#8211; netflow replay program</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nfreplay [options] [filter]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nfreplay</code></p>
 <dd>is the netflow replay program of the nfdump tool set. It reads data from files stored by nfcapd and sents the netflow data to a host or a multicat group. The filter syntax is equivalent to nfdump. If a filter is supplied, only the matching flows are sent. See the <a href="/docs/linux/man/1-nfdump/">nfdump</a>(1) man page for a detailed description of the filter syntax. All records are sent as netflow version 5. </dd>
 <h2>OPTIONS</h2>

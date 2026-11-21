@@ -1,4 +1,5 @@
 ---
+
 title: "getprotoent(3)"
 name: "getprotoent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getprotoent/"
 description: "getprotoent, getprotobyname, getprotobynumber, setprotoent, endprotoent – get protocol entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 struct protoent *getprotoent(void);
@@ -16,7 +16,6 @@ struct protoent *getprotobynumber(int proto);
 void setprotoent(int stayopen);
 void endprotoent(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getprotoent</code>() function reads the next entry from the protocols database (see <code><a href="/docs/linux/man/5-protocols/">protocols</a></code>(5)) and returns a <i>protoent</i> structure containing the broken-out fields from the entry. A connection is opened to the database if necessary. </p>
 <p> The <code>getprotobyname</code>() function returns a <i>protoent</i> structure for the entry from the database that matches the protocol name <i>name</i>. A connection is opened to the database if necessary. </p>
 <p> The <code>getprotobynumber</code>() function returns a <i>protoent</i> structure for the entry from the database that matches the protocol number <i>number</i>. A connection is opened to the database if necessary. </p>

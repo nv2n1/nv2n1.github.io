@@ -1,4 +1,5 @@
 ---
+
 title: "dlauu2(3)"
 name: "dlauu2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlauu2/"
 description: "dlauu2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlauu2</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>DLAUU2</code> computes the product UUH or LHL, where U and L are upper or lower triangular matrices (unblocked algorithm).</p>

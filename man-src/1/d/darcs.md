@@ -1,4 +1,5 @@
 ---
+
 title: "darcs(1)"
 name: "darcs"
 section: "1"
@@ -9,7 +10,6 @@ description: "darcs – an advanced revision control system"
 
 <h2>NAME</h2>
 <p> darcs &#8211; an advanced revision control system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>darcs</code> <i>command</i> &lt;<i>arguments</i>|[<i>options</i>]&gt;&#8230; </p>
 <p> Where the <i>commands</i> and their respective <i>arguments</i> are </p>
 <p> <code>darcs help</code> [&lt;<i>darcs</i>_<i>command</i>&gt; [<i>darcs</i>_<i>subcommand</i>]]<br />
@@ -53,7 +53,6 @@ description: "darcs – an advanced revision control system"
  <code>darcs check</code><br />
  <code>darcs repair</code><br />
  <code>darcs convert</code> &lt;<i>source</i>&gt; [&lt;<i>destination</i>&gt;] </p>
-<h2>DESCRIPTION</h2>
 <p> Darcs is a free, open source revision control system. It is:</p>
 <dl>
 <dt>&bull;</dt>

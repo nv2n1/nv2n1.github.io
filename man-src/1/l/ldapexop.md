@@ -1,4 +1,5 @@
 ---
+
 title: "ldapexop(1)"
 name: "ldapexop"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ldapexop/"
 description: "ldapexop – issue LDAP extended operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ldapexop [<code>-V</code>[<code>V</code>]] [<code>-d</code><i>&nbsp;<wbr>debuglevel</i>] [<code>-n</code>] [<code>-v</code>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-x</code>] [<code>-D</code><i>&nbsp;<wbr>binddn</i>] [<code>-W</code>] [<code>-w</code><i>&nbsp;<wbr>passwd</i>] [<code>-y</code><i>&nbsp;<wbr>passwdfile</i>] [<code>-H</code><i>&nbsp;<wbr>URI</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]] [<code>-O</code><i>&nbsp;<wbr>security-properties</i>] [<code>-I</code>] [<code>-Q</code>] [<code>-N</code>] [<code>-U</code><i>&nbsp;<wbr>authcid</i>] [<code>-R</code><i>&nbsp;<wbr>realm</i>] [<code>-X</code><i>&nbsp;<wbr>authzid</i>] [<code>-Y</code><i>&nbsp;<wbr>mech</i>] [<code>-Z</code>[<code>Z</code>]] {<i>oid</i> | <code>oid:</code><i>data</i> | <code>oid::</code><i>b64data</i> | <code>whoami</code> | <code>cancel</code><i>&nbsp;<wbr>cancel-id</i> | <code>refresh</code><i>&nbsp;<wbr>DN</i><code>&nbsp;<wbr></code>[<i>ttl</i>]} </p>
-<h2>DESCRIPTION</h2>
 <p> ldapexop issues the LDAP extended operation specified by <code>oid</code> or one of the special keywords <code>whoami</code>, <code>cancel</code>, or <code>refresh</code>. </p>
 <p> Additional data for the extended operation can be passed to the server using <i>data</i> or base-64 encoded as <i>b64data</i> in the case of <code>oid</code>, or using the additional parameters in the case of the specially named extended operations above. </p>
 <p> Please note that ldapexop behaves differently for the same extended operation when it was given as an OID or as a specialliy named operation: </p>

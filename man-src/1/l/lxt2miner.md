@@ -1,4 +1,5 @@
 ---
+
 title: "lxt2miner(1)"
 name: "lxt2miner"
 section: "1"
@@ -11,7 +12,6 @@ description: "lxt2miner – Data mining of LXT2 files"
 <p> lxt2miner &#8211; Data mining of LXT2 files</p>
 <h2>SYNTAX</h2>
 <p> lxt2miner [<i>option</i>]&#8230; [<i>LXT2FILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Mines LXT2 files for specific data values and generates gtkwave save files to stdout for future reload.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-python-config(1)"
 name: "x86_64-linux-gnu-python-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-python-config/"
 description: "python-config – output build options for python C/C++ extensions or embedding"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>python-config</code> [ <code>&#8211;prefix</code> ] [ <code>&#8211;exec-prefix</code> ] [ <code>&#8211;includes</code> ] [ <code>&#8211;libs</code> ] [ <code>&#8211;cflags</code> ] [ <code>&#8211;ldflags</code> ] [ <code>&#8211;extension-suffix</code> ] [ <code>&#8211;configdir</code> ] [ <code>&#8211;help</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>python-config</code> helps compiling and linking programs, which embed the Python interpreter, or extension modules that can be loaded dynamically (at run time) into the interpreter.</p>
 <h2>OPTIONS</h2>
 <dl>

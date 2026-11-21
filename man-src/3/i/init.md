@@ -1,4 +1,5 @@
 ---
+
 title: "init(3)"
 name: "init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-init/"
 description: "QuantLib::FittedBondDiscountCurve::FittingMethod – Base fitting method used to construct a fitted bond discount curve."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/fittedbonddiscountcurve.hpp&gt; </p>
 <p> Inherited by <code>CubicBSplinesFitting</code>, <code>ExponentialSplinesFitting</code>, <code>NelsonSiegelFitting</code>, and <code>SimplePolynomialFitting</code>. </p>
 <h3>Public Member Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlindexcheck(1)"
 name: "mysqlindexcheck"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlindexcheck/"
 description: "mysqlindexcheck – Identify Potentially Redundant Table Indexes"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlindexcheck [</code><i>options</i><code>] </code><i>db</i><code>[</code><i>:table</i><code>] &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility reads the indexes for one or more tables and identifies duplicate and potentially redundant indexes. </dd>
 <p> To check all tables in a database, specify only the database name. To check a specific table, name the table in <i>db.table</i> format. It is possible to mix database and table names. </p>
 <p> You can scan tables in any database except the internal databases <code>mysql</code>, <code>INFORMATION_SCHEMA</code>, and <code>performance_schema</code>. </p>

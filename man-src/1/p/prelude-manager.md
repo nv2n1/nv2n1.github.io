@@ -1,4 +1,5 @@
 ---
+
 title: "prelude-manager(1)"
 name: "prelude-manager"
 section: "1"
@@ -9,9 +10,7 @@ description: "prelude-manager – Collects and normalize events."
 
 <h2>NAME</h2>
 <p> prelude-manager &#8211; Collects and normalize events.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>prelude-manager [options]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Prelude Manager is a high-availability server which can collect, filter, relay, reverse-relay, normalize and store events. Events can come from registered analyzers and/or managers. The common usage is to store nomalized events into a database, thus this can be extended to store informations in plain text or xml files. </p>
 <h2>OPTIONS</h2>
 <p> Some prelude-manager option are contextual, they have to be prefixed by another. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "npm-bin(1)"
 name: "npm-bin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-bin/"
 description: "npm-bin – Display npm bin folder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-bin</code> &#8211; Display npm bin folder </p>
 <h3>Synopsis</h3>
 <dl>

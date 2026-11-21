@@ -1,4 +1,5 @@
 ---
+
 title: "dvitype(1)"
 name: "dvitype"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dvitype/"
 description: "dvitype, odvitype – translate a dvi file for humans"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvitype</code> <i>dvi_name</i>[<i></i><code>.dvi</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>dvitype</code> program translates a DVI (DeVice Independent) file output by (for example) <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) or <code><a href="/docs/linux/man/1-gftodvi/">gftodvi</a></code>(1), to a file that humans can read. It also serves as a DVI file-validating program (i.e., if <code>dvitype</code> can read it, it&#8217;s correct) and as an example of a DVI-reading program for future device drivers. </p>
 <p> The output file can include all commands, just the important ones, or none at all (in which case only errors are reported). A subinterval of pages may be selected for transliteration; the magnification and resolution of the &#8220;output device&#8221; may be changed; and so on. All options are specified with an on-line dialog. </p>

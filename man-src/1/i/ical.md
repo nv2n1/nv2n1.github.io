@@ -1,4 +1,5 @@
 ---
+
 title: "ical(1)"
 name: "ical"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ical/"
 description: "ical – A Hijri/Islamic calendar (and converter)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ical</code> [<code>&#8211;gregorian</code> yyyymmdd] [<code>&#8211;hijri</code> yyyymmdd] [<code>&#8211;umm_alqura</code>] [<code>&#8211;fixed_view</code>] [<code>&#8211;dual</code>] [<code>&#8211;help</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ical</code> program is a Hijri/Islamic calendar displayer. It utilizes and includes a Gregorian to Hijri (and vice-versa) date converter. The application uses and offers multiple calculation methods with not all of them agreeing at all times. The reason for this multiplicity is due to not having one agreed upon method and so various entities develop and advocate their calculations. </p>
 <p> <code>ical</code> is able to comprehend and calculate both pre-epoch or pre-Hijrah, denoted as &quot;B.H&quot;, as well as post-epoch or post-Hijrah, denoted as &quot;A.H&quot;, dates. <code>ical</code> also utilizes Gregorian&#8217;s pre-epoch &quot;B.C&quot; and post-epoch &quot;A.D&quot; dates and notes them per its output. When entering pre-epoch years, negative numbers ought to be utilized. </p>
 <p> <code>ical</code> when run without any command-line options uses the host machine&#8217;s Gregorian date and converts it to Hijri to display that month&#8217;s view. Entries enclosed by [] denote exact day specified.</p>

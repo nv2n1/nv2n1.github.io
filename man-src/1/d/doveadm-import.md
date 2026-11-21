@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-import(1)"
 name: "doveadm-import"
 section: "1"
@@ -9,11 +10,9 @@ description: "doveadm-import – Import messages matching given search query"
 
 <h2>NAME</h2>
 <p> doveadm-import &#8211; Import messages matching given search query</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <i>source_location dest_parent search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <code>-A</code><i> source_location dest_parent search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <code>-u</code><i> user source_location dest_parent search_query</i></p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to import mails from another mail storage specified by <i>source_location</i> to one or more user&#8217;s mailboxes. All the mailboxes are imported under the given <i>dest_parent</i> mailbox, or to root level if <i>dest_parent</i> is empty (&quot;&quot;). The <i>search_query</i> can be used to restrict which mailboxes or messages are imported. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will executed the <code>import</code> action with the environment of the logged in system user. </p>
 <p> In the second form, the mails will be imported for all users. </p>

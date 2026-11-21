@@ -1,4 +1,5 @@
 ---
+
 title: "dla_porpvgrw(3)"
 name: "dla_porpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_porpvgrw/"
 description: "dla_porpvgrw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br />
  <i></i><code>DLA_PORPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric or Hermitian positive-definite matrix.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "makeinfo(1)"
 name: "makeinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-makeinfo/"
 description: "texi2any – translate Texinfo documents"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>makeinfo</code> [<i>,OPTION/</i>]&#8230; <i>,TEXINFO-FILE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Translate Texinfo source documentation to various other formats, by default Info files suitable for reading online with Emacs or standalone GNU Info. </p>
 <p> This program is commonly installed as both `makeinfo&#8217; and `texi2any&#8217;; the behavior is identical, and does not depend on the installed name.</p>
 <h3>General options:</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "slascl2(3)"
 name: "slascl2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slascl2/"
 description: "slascl2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slascl2</code> (M, N, D, X, LDX)<br />
  <i></i><code>SLASCL2</code> performs diagonal scaling on a vector.</p>

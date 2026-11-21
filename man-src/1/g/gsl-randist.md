@@ -1,4 +1,5 @@
 ---
+
 title: "gsl-randist(1)"
 name: "gsl-randist"
 section: "1"
@@ -11,7 +12,6 @@ description: "gsl-randist – generate random samples from various distributions
 <p> gsl-randist &#8211; generate random samples from various distributions</p>
 <h2>SYNOPSYS</h2>
 <p> <code>gsl-randist seed n DIST param1 param2 [..]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gsl-randist </code> is a demonstration program for the GNU Scientific Library. It generates n random samples from the distribution DIST using the distribution parameters param1, param2, &#8230;</p>
 <h2>EXAMPLE</h2>
 <p> Here is an example. We generate 10000 random samples from a Cauchy distribution with a width of 30 and histogram them over the range -100 to 100, using 200 bins.<br />

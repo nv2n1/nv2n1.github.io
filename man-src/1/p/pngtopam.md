@@ -1,4 +1,5 @@
 ---
+
 title: "pngtopam(1)"
 name: "pngtopam"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pngtopam/"
 description: "pngtopam – convert a PNG image into a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pngtopam</code> [<code>-verbose</code>] [<code>-alphapam</code> | <code>-alpha</code> | <code>-mix</code>] [<code>-background</code>=<i>color</i>] [<code>-gamma</code>=<i>value</i>] [<code>-text</code>=<i>filename</i>] [<code>-time</code>] [<code>-byrow</code>] [<i>pngfile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pngtopam</code> reads a PNG image (Portable Network Graphics) as input and produces a Netpbm image as output. The type of the output file depends on the input file &#8211; if it&#8217;s black &amp; white, <code>pngtopam</code> creates a PBM file. If it&#8217;s grayscale, <code>pngtopam</code> creates a PGM file. Otherwise, it creates a PPM file. Except that with the <code>-alphapam</code> option, it always creates a PAM file. That file has tuple type GRAYSCALE_ALPHA or RGB_ALPHA depending on whether the input has color or not. </p>
 <p> To convert in the other direction, use <code>pnmtopng</code> or <code>pamrgbatopng</code>. The former is more powerful in almost every way, except that only the latter can recognize transparency information in a PAM file, as you might generate with <code>pngtopam -alphapam</code>. To use <code>pnmtopng</code> with a PAM file with transparency, you can separate out the transparency channel with <code>pamchannel</code> and feed it to <code>pnmtopng</code> separately. But you may want to use <code>pngtopam -alpha</code> instead of <code>pngtopam -alphapam</code> if you&#8217;re going to be converting back. </p>

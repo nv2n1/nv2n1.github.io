@@ -1,4 +1,5 @@
 ---
+
 title: "postgresql-setup(1)"
 name: "postgresql-setup"
 section: "1"
@@ -9,9 +10,7 @@ description: "postgresql-setup – manual page for postgresql-setup 9.2.18"
 
 <h2>NAME</h2>
 <p> postgresql-setup &#8211; manual page for postgresql-setup 9.2.18</p>
-<h2>SYNOPSIS</h2>
 <p> <code>postgresql-setup</code> <i>{initdb|upgrade} </i>[<i>SERVICE_NAME</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Script is aimed to help sysadmin with basic database cluster administration. </p>
 <p> The SERVICE_NAME is used for selection of proper unit configuration file; For more info and howto/when use this script please look at the docu file <i>/usr/share/doc/postgresql-9.2.18/README.rpm-dist</i>. The &#8216;postgresql&#8217; string is used when no SERVICE_NAME is explicitly passed.</p>
 <h3>Available operation mode:</h3>

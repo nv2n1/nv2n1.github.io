@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_data_reader_new(3)"
 name: "bson_json_data_reader_new"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_json_data_reader_new() – Creates a new streaming JSON reade
 
 <h2>NAME</h2>
 <p> bson_json_data_reader_new() &#8211; Creates a new streaming JSON reader that will convert JSON documents to BSON.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 bson_json_reader_t *
 bson_json_data_reader_new (bool   allow_multiple,
@@ -22,7 +22,6 @@ bson_json_data_reader_new (bool   allow_multiple,
 <dl>
 <dt><code>size</code></dt>
 <dd> A requested buffer size.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Creates a new streaming JSON reader that will convert JSON documents to BSON. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated bson_json_reader_t that should be freed with bson_json_reader_destroy(). </p>

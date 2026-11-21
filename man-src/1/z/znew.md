@@ -1,4 +1,5 @@
 ---
+
 title: "znew(1)"
 name: "znew"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-znew/"
 description: "znew – recompress .Z files to .gz files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>znew</code> [ -ftv9PK] [ name.Z &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Znew</i> recompresses files from .Z (compress) format to .gz (gzip) format. If you want to recompress a file already in gzip format, rename the file to force a .Z extension then apply znew.</p>
 <h2>OPTIONS</h2>
 <dl>

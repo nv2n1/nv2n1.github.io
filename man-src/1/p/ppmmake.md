@@ -1,4 +1,5 @@
 ---
+
 title: "ppmmake(1)"
 name: "ppmmake"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmmake/"
 description: "ppmmake – create a pixmap of a specified size and color"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmmake</code> <i>color width height</i></p>
-<h2>DESCRIPTION</h2>
 <p> Produces a portable pixmap of the specified color, width, and height. </p>
 <p> The color can be specified in five ways:</p>
 <dl>

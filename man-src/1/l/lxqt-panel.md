@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-panel(1)"
 name: "lxqt-panel"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxqt-panel – Desktop panel for LXQt: The Lightweight Qt Desktop 
 
 <h2>NAME</h2>
 <p> lxqt-panel &#8211; Desktop panel for <code>LXQt</code>: The Lightweight Qt Desktop Environment</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxqt-panel</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This module adds a panel, with optional plugins, to the desktop.</p>
 <h2>BEHAVIOR</h2>
 <p> The panel can be run independently of <code>LXQt</code>, autostarted at logon, and have multiple instances. A horizontal bottom panel shows by default on the desktop, but the alignment, size, autohide, transparency (requires compositor), and other attributes are user configurable. </p>

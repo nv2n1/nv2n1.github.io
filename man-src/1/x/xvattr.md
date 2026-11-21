@@ -1,4 +1,5 @@
 ---
+
 title: "xvattr(1)"
 name: "xvattr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xvattr/"
 description: "xvattr – Query/Set X11 XVideo Setting(s)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xvattr</code> [<i>options</i>&#8230;] </p>
 <p> This program is used for getting and setting X11 Xv attributes such as <font SIZE="-1">XV_BRIGHTNESS, XV_CONTRAST, XV_SATURATION, XV_HUE, XV_COLORKEY, &#8230;</font> </p>
 <p> For this program to work, you must have a version of X11 with the XVideo extension and a graphics card that has Xv graphics acceleration. </p>

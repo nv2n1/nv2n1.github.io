@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-stop(1)"
 name: "atomic-stop"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-atomic-stop/"
 description: "atomic-stop – Execute container image stop method"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic stop</code> [<code>-h</code>|<code>&#8211;help</code>] container [ARG&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>atomic stop</code> attempts to stop a running container, first reading the LABEL STOP field in the container IMAGE. </p>
 <p> If the container image has a LABEL STOP instruction like the following: </p>
 <p> LABEL STOP /usr/bin/docker kill -s HUP \${NAME} </p>

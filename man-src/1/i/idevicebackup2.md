@@ -1,4 +1,5 @@
 ---
+
 title: "idevicebackup2(1)"
 name: "idevicebackup2"
 section: "1"
@@ -9,9 +10,7 @@ description: "idevicebackup2 – Create or restore backups for devices running i
 
 <h2>NAME</h2>
 <p> idevicebackup2 &#8211; Create or restore backups for devices running iOS 4 or later.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>idevicebackup2</code> [OPTIONS] CMD [CMDOPTIONS] DIRECTORY </p>
-<h2>DESCRIPTION</h2>
 <p> Create or restore backup from the current or specified directory. </p>
 <h2>OPTIONS</h2>
 <dl>

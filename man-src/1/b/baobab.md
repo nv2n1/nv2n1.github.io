@@ -1,4 +1,5 @@
 ---
+
 title: "baobab(1)"
 name: "baobab"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-baobab/"
 description: "baobab – A graphical disk usage analyzer for the GNOME desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>baobab</code> &#8211; A graphical disk usage analyzer for the GNOME desktop</p>
-<h2>SYNOPSIS</h2>
 <p> <code>baobab</code> [OPTIONS…] [DIRECTORY] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>baobab</code> (a.k.a. <code>Disk Usage Analyzer</code>) is able to scan either specific folders (local and remote) or devices, in order to give the user a tree representation including each directory size or percentage in the branch. It also auto-detects any mounted/unmounted device. A graphical representation is also provided for any selected folder. </p>
 <h2>OPTIONS</h2>
 <dl>

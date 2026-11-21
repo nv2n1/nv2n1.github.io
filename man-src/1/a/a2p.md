@@ -1,4 +1,5 @@
 ---
+
 title: "a2p(1)"
 name: "a2p"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-a2p/"
 description: "a2p – Awk to Perl translator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>a2p</code> [<i>options</i>] [<i>filename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>A2p</i> takes an awk script specified on the command line (or from standard input) and produces a comparable <i>perl</i> script on the standard output.</p>
 <h3><font SIZE="-1">OPTIONS</font></h3>
 <p> Options include:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3interfaces(3)"
 name: "antlr3interfaces"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3interfaces.h –"
 ---
 
 <p> Declarations for all the antlr3 C runtime interfaces/classes.</p>
-<h2>SYNOPSIS</h2>
 <h3>Typedefs</h3>
 <p> typedef struct <code>ANTLR3_ARBORETUM_struct</code> * <code>pANTLR3_ARBORETUM</code><br />
  <i>Pointer to an instantiation of &#8216;class&#8217; </i><code>ANTLR3_ARBORETUM</code>.<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "perldelta(1)"
 name: "perldelta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldelta/"
 description: "perldelta – what is new for perl v5.30.0"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.28.0 release and the 5.30.0 release. </p>
 <p> If you are upgrading from an earlier release such as 5.26.0, first read perl5280delta, which describes differences between 5.26.0 and 5.28.0.</p>
 <h2>Notice</h2>

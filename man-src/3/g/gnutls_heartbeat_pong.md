@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_heartbeat_pong(3)"
 name: "gnutls_heartbeat_pong"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_heartbeat_pong – API function"
 
 <h2>NAME</h2>
 <p> gnutls_heartbeat_pong &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_heartbeat_pong(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_heartbeat_pong – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>unsigned int flags</dt>
 <dd> should be zero</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function replies to a ping by sending a pong to the peer.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, otherwise a negative error code.</p>

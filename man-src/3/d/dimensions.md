@@ -1,4 +1,5 @@
 ---
+
 title: "dimensions(3)"
 name: "dimensions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dimensions/"
 description: "QuantLib::MultiCubicSpline – N-dimensional cubic spline interpolation between discrete points."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/multicubicspline.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> typedef c_splint::argument_type <code>argument_type</code> </p>

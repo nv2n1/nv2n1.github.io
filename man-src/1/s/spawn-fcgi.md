@@ -1,4 +1,5 @@
 ---
+
 title: "spawn-fcgi(1)"
 name: "spawn-fcgi"
 section: "1"
@@ -9,11 +10,9 @@ description: "spawn-fcgi – Spawns FastCGI processes"
 
 <h2>NAME</h2>
 <p> spawn-fcgi &#8211; Spawns FastCGI processes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>spawn-fcgi</code> [options] [ &#8212; &lt;fcgiapp&gt; [fcgi app arguments]] </p>
 <p> <code>spawn-fcgi</code> -v </p>
 <p> <code>spawn-fcgi</code> -h</p>
-<h2>DESCRIPTION</h2>
 <p> <i>spawn-fcgi</i> is used to spawn remote and local FastCGI processes. </p>
 <p> While it is obviously needed to spawn remote FastCGI backends (the web server can only spawn local ones), it is recommended to spawn local backends with spawn-fcgi, too. </p>
 <p> Reasons why you may want to use spawn-fcgi instead of something else:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "analyticcontinuousfixedlookback(3)"
 name: "analyticcontinuousfixedlookback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-analyticcontinuousfixedlookback/"
 description: "ql/pricingengines/lookback/analyticcontinuousfixedlookback.hpp – Analytic engine for continuous fixed-strike lookback."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/lookbackoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
  #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_set_escape_mode(3)"
 name: "auparse_set_escape_mode"
 section: "3"
@@ -9,10 +10,8 @@ description: "auparse_set_escape_mode – choose escape method"
 
 <h2>NAME</h2>
 <p> auparse_set_escape_mode &#8211; choose escape method</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> void auparse_set_escape_mode(auparse_state_t *au, auparse_esc_t mode); </p>
-<h2>DESCRIPTION</h2>
 <p> auparse_set_escape_mode is used to set the escaping method that will be used to output interpretted text. The choices for the mode variable are: </p>
 <dl>
 <dl>

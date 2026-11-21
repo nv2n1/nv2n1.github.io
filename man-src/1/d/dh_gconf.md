@@ -1,4 +1,5 @@
 ---
+
 title: "dh_gconf(1)"
 name: "dh_gconf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_gconf/"
 description: "dh_gconf – install GConf defaults files and register schemas"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_gconf</code> [<i>debhelper options</i>] [<code>&#8211;priority=</code><i>priority</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_gconf</code> is a debhelper program that is responsible for installing GConf defaults files and registering GConf schemas. </p>
 <p> An appropriate dependency on gconf2 will be generated in <code>${misc:Depends}</code>.</p>
 <h2>FILES</h2>

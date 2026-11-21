@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hex_decode(3)"
 name: "gnutls_hex_decode"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_hex_decode – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hex_decode &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_hex_decode(const gnutls_datum_t * </code><i>hex_data</i><code>, void * </code><i>result</i><code>, size_t * </code><i>result_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_hex_decode – API function"
 <dd> the place where decoded data will be copied</dd>
 <dt>size_t * result_size</dt>
 <dd> holds the size of the result</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will decode the given encoded data, using the hex encoding used by PSK password files. </p>
 <p> Note that hex_data should be null terminated.</p>
 <h2>RETURNS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-ml-readline(1)"
 name: "urxvt256c-ml-readline"
 section: "1"
@@ -6,14 +7,9 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-readline/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+readline - improve readline editing (enabled by default) 
 
- readline - improve readline editing (enabled by default) 
-
-<h2>DESCRIPTION</h2>
-
- A support package that tries to make editing with readline easier. At the moment, it reacts to clicking shift-left mouse button by trying to move the text cursor to this position. It does so by generating as many cursor-left or cursor-right keypresses as required (this only works for programs that correctly support wide characters). 
+A support package that tries to make editing with readline easier. At the moment, it reacts to clicking shift-left mouse button by trying to move the text cursor to this position. It does so by generating as many cursor-left or cursor-right keypresses as required (this only works for programs that correctly support wide characters). 
 
  To avoid too many false positives, this is only done when:
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "level(3)"
 name: "level"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-level/"
 description: "QuantLib::OrnsteinUhlenbeckProcess – Ornstein-Uhlenbeck process class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/ornsteinuhlenbeckprocess.hpp&gt; </p>
 <p> Inherits <code>QuantLib::StochasticProcess1D</code>. </p>
 <h3>Public Member Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "esc(1)"
 name: "esc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-esc/"
 description: "esc – Minimal Command-Line Interface for Smart Card Manager."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> esc [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>esc</code> provides a minimal command-line interface to Smart Card Manager which allows users to manage Smart Cards on the system. The program is most often run automatically when the user logs into the system or when an actual smart card is entered into the computer. This minimal command line interface may be of use in unusual circumstances.<br />
 &nbsp;<wbr>&nbsp;<wbr></p>
 <h2>OPTIONS</h2>

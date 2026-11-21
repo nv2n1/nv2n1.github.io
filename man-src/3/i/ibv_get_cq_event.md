@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_get_cq_event(3)"
 name: "ibv_get_cq_event"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_get_cq_event/"
 description: "ibv_get_cq_event, ibv_ack_cq_events – get and acknowledge completion queue (CQ) events"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_get_cq_event(struct ibv_comp_channel *channel,
                      struct ibv_cq **cq, void **cq_context);
 void ibv_ack_cq_events(struct ibv_cq *cq, unsigned int nevents);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_get_cq_event()</code> waits for the next completion event in the completion event channel <i>channel</i>. Fills the arguments <i>cq</i> with the CQ that got the event and <i>cq_context</i> with the CQ&#8217;s context. </p>
 <p> <code>ibv_ack_cq_events()</code> acknowledges <i>nevents</i> events on the CQ <i>cq</i>. </p>
 <h2>RETURN VALUE</h2>

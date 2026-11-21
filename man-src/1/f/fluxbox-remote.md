@@ -1,4 +1,5 @@
 ---
+
 title: "fluxbox-remote(1)"
 name: "fluxbox-remote"
 section: "1"
@@ -8,9 +9,7 @@ description: "fluxbox-remote – command line access to key commands for"
 ---
 
 <p><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fluxbox-remote</code> <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/1-fluxbox-remote/">fluxbox-remote</a>(1)</i> is designed to allow scripts to execute most key commands from <i><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</i>. <i><a href="/docs/linux/man/1-fluxbox-remote/">fluxbox-remote</a>(1)</i> will only work with <i><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</i>: its communications with <i><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</i> are not standardized in any way. It is recommended that a standards-based tool such as <i><a href="/docs/linux/man/1-wmctrl/">wmctrl</a>(1)</i> be used whenever possible, in order for scripts to work with other window managers.</p>
 <h2>CAVEATS</h2>
 <p> <i><a href="/docs/linux/man/1-fluxbox-remote/">fluxbox-remote</a>(1)</i> uses the X11 protocol to communicate with <i><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1)</i>. Therefore, it is possible for any user with access to the <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> server to use <i><a href="/docs/linux/man/1-fluxbox-remote/">fluxbox-remote</a>(1)</i>. For this reason, several key commands have been disabled. Users should be aware of the security implications when enabling <i><a href="/docs/linux/man/1-fluxbox-remote/">fluxbox-remote</a>(1)</i>, especially when using a forwarded <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> connection.</p>

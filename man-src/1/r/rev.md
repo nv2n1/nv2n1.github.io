@@ -1,4 +1,5 @@
 ---
+
 title: "rev(1)"
 name: "rev"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rev/"
 description: "rev – reverse lines characterwise"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rev</code> [option] [<i>file</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>rev</code> utility copies the specified files to standard output, reversing the order of characters in every line. If no files are specified, standard input is read. </p>
 <p> This utility is a line-oriented tool and it uses in-memory allocated buffer for a whole wide-char line. If the input file is huge and without line breaks than allocate the memory for the file may be unsuccessful.</p>
 <h2>OPTIONS</h2>

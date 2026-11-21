@@ -1,4 +1,5 @@
 ---
+
 title: "sn(1)"
 name: "sn"
 section: "1"
@@ -9,9 +10,7 @@ description: "sn – Digitally sign/verify/compare strongnames on CLR assemblies
 
 <h2>NAME</h2>
 <p> sn &#8211; Digitally sign/verify/compare strongnames on CLR assemblies.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sn [-q | -quiet] [options] [parameters]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Digitally sign, verify or compare CLR assemblies using strongnames. </p>
 <p> You can use the sn command to create &quot;snk files&quot; using the -k option described below.</p>
 <h2>CONFIGURATION OPTIONS</h2>

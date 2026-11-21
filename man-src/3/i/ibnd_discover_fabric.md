@@ -1,4 +1,5 @@
 ---
+
 title: "ibnd_discover_fabric(3)"
 name: "ibnd_discover_fabric"
 section: "3"
@@ -9,12 +10,10 @@ description: "ibnd_discover_fabric, ibnd_destroy_fabric, ibnd_debug ibnd_show_pr
 
 <h2>NAME</h2>
 <p> ibnd_discover_fabric, ibnd_destroy_fabric, ibnd_debug ibnd_show_progress &#8211; initialize ibnetdiscover library.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/ibnetdisc.h&gt;
 void ibnd_destroy_fabric(ibnd_fabric_t *fabric) void ibnd_debug(int i) void ibnd_show_progress(int i) int ibnd_set_max_smps_on_wire(int i)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibnd_discover_fabric()</code> Discover the fabric connected to the port specified by ibmad_port, using a timeout specified. The &quot;from&quot; and &quot;hops&quot; parameters are optional and allow one to scan part of a fabric by specifying a node &quot;from&quot; and a number of hops away from that node to scan, &quot;hops&quot;. This gives the user a &quot;sub-fabric&quot; which is &quot;centered&quot; anywhere they chose. </p>
 <p> ibmad_port must be opened with at least IB_SMI_CLASS and IB_SMI_DIRECT_CLASS classes for ibnd_discover_fabric to work. </p>
 <p> <code>ibnd_destroy_fabric()</code> free all memory and resources associated with the fabric. </p>

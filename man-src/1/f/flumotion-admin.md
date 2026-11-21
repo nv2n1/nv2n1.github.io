@@ -1,4 +1,5 @@
 ---
+
 title: "flumotion-admin(1)"
 name: "flumotion-admin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-flumotion-admin/"
 description: "flumotion-admin – streaming media server administration GUI"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>flumotion-admin</code> [ <code>-h</code> ] [ <code>&#8211;debug</code> <i>debug configuration</i> ] [ <code>-m</code> <i>manager</i> ] [ <code>&#8211;no-ssl</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>flumotion-admin</code> is a GUI application that provides administration capabilities for the flumotion streaming server. Using it, you can configure and monitor the streams flumotion serves. <code>flumotion-admin</code> connects to a running <i>flumotion-manager</i> to control the manager, start and stop components, and display logging and monitoring information about the running components. </p>
 <p> You must start <i>flumotion-manager</i> before you can use <code>flumotion-admin</code> , but once you&#8217;ve done so you can just run <code>flumotion-admin</code> with no arguments to start the GUI. </p>
 <h2>OPTIONS</h2>

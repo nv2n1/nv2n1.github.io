@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-submit(1)"
 name: "fts-rest-transfer-submit"
 section: "1"
@@ -11,7 +12,6 @@ description: "fts-rest-transfer-submit"
 <p> fts-rest-transfer-submit</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-submit [options] SOURCE DESTINATION [CHECKSUM]</p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to submit new jobs to FTS3. It supports simple and bulk submissions. The bulk format is as follows:</p>
 <dl>
 <dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "geoiplookup(1)"
 name: "geoiplookup"
 section: "1"
@@ -6,18 +7,11 @@ letter: "g"
 url: "/docs/linux/man/1-geoiplookup/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+geoiplookup - look up country using IP Address or hostname 
 
- geoiplookup - look up country using IP Address or hostname 
+geoiplookup [-d directory] [-f filename] [-v] &lt;ipaddress|hostname&gt;
 
-<h2>SYNOPSIS</h2>
-
- geoiplookup [-d directory] [-f filename] [-v] &lt;ipaddress|hostname&gt;
-
-<h2>DESCRIPTION</h2>
-
- geoiplookup uses the GeoIP library and database to find the Country that an IP address or hostname originates from. 
+geoiplookup uses the GeoIP library and database to find the Country that an IP address or hostname originates from. 
 
  For example 
 

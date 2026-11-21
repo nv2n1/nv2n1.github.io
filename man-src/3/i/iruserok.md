@@ -1,4 +1,5 @@
 ---
+
 title: "iruserok(3)"
 name: "iruserok"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iruserok/"
 description: "rcmd, rresvport, iruserok, ruserok, rcmd_af, rresvport_af, iruserok_af, ruserok_af – routines for returning a stream to a remote command"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt; &amp;nbsp;&amp;nbsp;/* Or &lt;unistd.h&gt; on some systems */
 int rcmd(char **ahost, unsigned short inport, const char *locuser,
@@ -32,7 +32,6 @@ int ruserok_af(const char *rhost, int superuser,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>rcmd</code>() function is used by the superuser to execute a command on a remote machine using an authentication scheme based on privileged port numbers. The <code>rresvport</code>() function returns a file descriptor to a socket with an address in the privileged port space. The <code>iruserok</code>() and <code>ruserok</code>() functions are used by servers to authenticate clients requesting service with <code>rcmd</code>(). All four functions are used by the <code>rshd</code>(8) server (among others).</p>
 <h3>rcmd()</h3>
 <p> The <code>rcmd</code>() function looks up the host <i>*ahost</i> using <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), returning -1 if the host does not exist. Otherwise, <i>*ahost</i> is set to the standard name of the host and a connection is established to a server residing at the well-known Internet port <i>inport</i>. </p>

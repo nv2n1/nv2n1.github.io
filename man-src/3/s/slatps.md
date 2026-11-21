@@ -1,4 +1,5 @@
 ---
+
 title: "slatps(3)"
 name: "slatps"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slatps/"
 description: "slatps.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br />
  <i></i><code>SLATPS</code> solves a triangular system of equations with the matrix held in packed storage.</p>

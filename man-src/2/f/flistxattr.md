@@ -1,4 +1,5 @@
 ---
+
 title: "flistxattr(2)"
 name: "flistxattr"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-flistxattr/"
 description: "listxattr, llistxattr, flistxattr – list extended attribute names"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
 #include &lt;sys/xattr.h&gt;
@@ -15,7 +15,6 @@ ssize_t listxattr(const char &amp;nbsp; *path, char &amp;nbsp; *list, size_t siz
 ssize_t llistxattr(const char &amp;nbsp; *path, char &amp;nbsp; *list, size_t size);
 ssize_t flistxattr(int fd, char &amp;nbsp; *list, size_t size);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Extended attributes are <i>name</i>:<i>value</i> pairs associated with inodes (files, directories, symbolic links, etc.). They are extensions to the normal attributes which are associated with all inodes in the system (i.e., the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) data). A complete overview of extended attributes concepts can be found in <code><a href="/docs/linux/man/7-xattr/">xattr</a></code>(7). </p>
 <p> <code>listxattr</code>() retrieves the list of extended attribute names associated with the given <i>path</i> in the filesystem. The retrieved list is placed in <i>list</i>, a caller-allocated buffer whose size (in bytes) is specified in the argument <i>size</i>. The list is the set of (null-terminated) names, one after the other. Names of extended attributes to which the calling process does not have access may be omitted from the list. The length of the attribute name <i>list</i> is returned. </p>
 <p> <code>llistxattr</code>() is identical to <code>listxattr</code>(), except in the case of a symbolic link, where the list of names of extended attributes associated with the link itself is retrieved, not the file that it refers to. </p>

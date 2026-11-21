@@ -1,4 +1,5 @@
 ---
+
 title: "virt-top(1)"
 name: "virt-top"
 section: "1"
@@ -9,7 +10,6 @@ description: "virt-top – ‘top’-like utility for virtualization stats"
 
 <h2>SUMMARY</h2>
 <p> virt-top [-options]</p>
-<h2>DESCRIPTION</h2>
 <p> virt-top is a <i><a href="/docs/linux/man/1-top/">top</a></i>(1)-like utility for showing stats of virtualized domains. Many keys and command line options are the same as for ordinary <i>top</i>. </p>
 <p> It uses libvirt so it is capable of showing stats across a variety of different virtualization systems.</p>
 <h2>OPTIONS</h2>

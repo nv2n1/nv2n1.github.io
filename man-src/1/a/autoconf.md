@@ -1,4 +1,5 @@
 ---
+
 title: "autoconf(1)"
 name: "autoconf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autoconf/"
 description: "autoconf – Generate configuration scripts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autoconf</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE-FILE/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Generate a configuration script from a TEMPLATE-FILE if given, or &#8216;configure.ac&#8217; if present, or else &#8216;configure.in&#8217;. Output is sent to the standard output if TEMPLATE-FILE is given, else into &#8216;configure&#8217;.</p>
 <h3>Operation modes:</h3>
 <dl>

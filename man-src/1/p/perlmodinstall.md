@@ -1,4 +1,5 @@
 ---
+
 title: "perlmodinstall(1)"
 name: "perlmodinstall"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlmodinstall/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlmodinstall - Installing CPAN Modules 
 
- perlmodinstall - Installing CPAN Modules 
-
-<h2>DESCRIPTION</h2>
-
- You can think of a module as the fundamental unit of reusable Perl code; see perlmod for details. Whenever anyone creates a chunk of Perl code that they think will be useful to the world, they register as a Perl developer at &lt;<a rel="nofollow" HREF="http://www.cpan.org/modules/04pause.html">http://www.cpan.org/modules/04pause.html</a>&gt; so that they can then upload their code to the <font SIZE="-1">CPAN.</font> The <font SIZE="-1">CPAN</font> is the Comprehensive Perl Archive Network and can be accessed at &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt; , and searched at &lt;<a rel="nofollow" HREF="http://search.cpan.org/">http://search.cpan.org/</a>&gt; . 
+You can think of a module as the fundamental unit of reusable Perl code; see perlmod for details. Whenever anyone creates a chunk of Perl code that they think will be useful to the world, they register as a Perl developer at &lt;<a rel="nofollow" HREF="http://www.cpan.org/modules/04pause.html">http://www.cpan.org/modules/04pause.html</a>&gt; so that they can then upload their code to the <font SIZE="-1">CPAN.</font> The <font SIZE="-1">CPAN</font> is the Comprehensive Perl Archive Network and can be accessed at &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt; , and searched at &lt;<a rel="nofollow" HREF="http://search.cpan.org/">http://search.cpan.org/</a>&gt; . 
 
  This documentation is for people who want to download <font SIZE="-1">CPAN</font> modules and install them on their own computer.
 

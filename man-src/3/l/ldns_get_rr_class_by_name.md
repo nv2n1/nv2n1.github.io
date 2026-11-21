@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_get_rr_class_by_name(3)"
 name: "ldns_get_rr_class_by_name"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_get_rr_class_by_name, ldns_get_rr_type_by_name"
 
 <h2>NAME</h2>
 <p> ldns_get_rr_class_by_name, ldns_get_rr_type_by_name </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_class ldns_get_rr_class_by_name(const char *name); </p>
 <p> ldns_rr_type ldns_get_rr_type_by_name(const char *name); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_get_rr_class_by_name</i>()</dt>
 <dd>retrieves a class by looking up its name. .br <code>name</code>: string with the name .br Returns the cass which corresponds with the name</dd></dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_oprfi_enable_client(3)"
 name: "gnutls_oprfi_enable_client"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_oprfi_enable_client – API function"
 
 <h2>NAME</h2>
 <p> gnutls_oprfi_enable_client &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void gnutls_oprfi_enable_client(gnutls_session_t </code><i>session</i><code>, size_t </code><i>len</i><code>, unsigned char * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_oprfi_enable_client – API function"
 <dd> length of Opaque PRF data to use in client.</dd>
 <dt>unsigned char * data</dt>
 <dd> Opaque PRF data to use in client.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Request that the client should attempt to negotiate the Opaque PRF Input TLS extension, using the given data as the client&#8217;s Opaque PRF input. </p>
 <p> The data is copied into the session context after this call, so you may de-allocate it immediately after calling this function.</p>
 <h2>REPORTING BUGS</h2>

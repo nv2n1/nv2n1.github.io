@@ -1,4 +1,5 @@
 ---
+
 title: "dsyrk(3)"
 name: "dsyrk"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsyrk/"
 description: "dsyrk.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyrk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
  <i></i><code>DSYRK</code></p>

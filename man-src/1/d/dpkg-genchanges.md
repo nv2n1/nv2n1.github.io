@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-genchanges(1)"
 name: "dpkg-genchanges"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-genchanges/"
 description: "dpkg-genchanges – generate Debian .changes files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-genchanges</code> [<i>option</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-genchanges</code> reads information from an unpacked and built Debian source tree and from the files it has generated and generates a Debian upload control file (<code>.changes</code> file).</p>
 <h2>OPTIONS</h2>
 <dl>

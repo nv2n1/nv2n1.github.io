@@ -1,4 +1,5 @@
 ---
+
 title: "ocamlprof(1)"
 name: "ocamlprof"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ocamlprof/"
 description: "ocamlprof – The OCaml profiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ocamlprof</code> [ <i>options</i> ] <i>filename &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ocamlprof</code> command prints execution counts gathered during the execution of a OCaml program instrumented with <code><a href="/docs/linux/man/1-ocamlcp/">ocamlcp</a></code>(1). </p>
 <p> It produces a source listing of the program modules given as arguments where execution counts have been inserted as comments. For instance, </p>
 <p> <code>ocamlprof foo.ml</code> </p>

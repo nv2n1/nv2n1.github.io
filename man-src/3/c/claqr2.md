@@ -1,4 +1,5 @@
 ---
+
 title: "claqr2(3)"
 name: "claqr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqr2/"
 description: "claqr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqr2</code> (WANTT, WANTZ, N, KTOP, KBOT, NW, H, LDH, ILOZ, IHIZ, Z, LDZ, NS, ND, SH, V, LDV, NH, T, LDT, NV, WV, LDWV, WORK, LWORK)<br />
  <i></i><code>CLAQR2</code> performs the unitary similarity transformation of a Hessenberg matrix to detect and deflate fully converged eigenvalues from a trailing principal submatrix (aggressive early deflation).</p>

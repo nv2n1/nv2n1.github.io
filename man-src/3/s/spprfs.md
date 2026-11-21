@@ -1,4 +1,5 @@
 ---
+
 title: "spprfs(3)"
 name: "spprfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spprfs/"
 description: "spprfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spprfs</code> (UPLO, N, NRHS, AP, AFP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>SPPRFS</code></p>

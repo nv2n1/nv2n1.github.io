@@ -1,4 +1,5 @@
 ---
+
 title: "dormql(3)"
 name: "dormql"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dormql/"
 description: "dormql.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dormql</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>DORMQL</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-purge(1)"
 name: "glite-lb-purge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-purge/"
 description: "glite-lb-purge – utility for removing inactive jobs from the L&B database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-purge</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-purge</code> is utility for removing inactive jobs from the L&amp;B database. By default, it removes jobs that reached CLEARED, ABORTED and CANCELLED state and also OTHER and DONE jobs that are inactive for specific (rather long) time. It is a command line frontend to server internal purge. It is used by administrators of bkserver and it is not supposed to be used at the user level. </p>
 <p> <code>glite-lb-purge </code> may be run periodically in order to avoid database overflow, however the periodic purges are done by server itself, so check the configuration of the server first. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlbook(1)"
 name: "perlbook"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlbook/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlbook - Books about and related to Perl 
 
- perlbook - Books about and related to Perl 
-
-<h2>DESCRIPTION</h2>
-
- There are many books on Perl and Perl-related. A few of these are good, some are <font SIZE="-1">OK,</font> but many aren't worth your money. There is a list of these books, some with extensive reviews, at &lt;<a rel="nofollow" HREF="http://books.perl.org/">http://books.perl.org/</a>&gt; . We list some of the books here, and while listing a book implies our endorsement, don't think that not including a book means anything. 
+There are many books on Perl and Perl-related. A few of these are good, some are <font SIZE="-1">OK,</font> but many aren't worth your money. There is a list of these books, some with extensive reviews, at &lt;<a rel="nofollow" HREF="http://books.perl.org/">http://books.perl.org/</a>&gt; . We list some of the books here, and while listing a book implies our endorsement, don't think that not including a book means anything. 
 
  Most of these books are available online through Safari Books Online ( &lt;<a rel="nofollow" HREF="http://safaribooksonline.com/">http://safaribooksonline.com/</a>&gt; ).
 

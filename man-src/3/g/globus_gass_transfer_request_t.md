@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_request_t(3)"
 name: "globus_gass_transfer_request_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_gass_transfer_request_t –"
 ---
 
 <p> Request handle.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_transfer.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Request handle. </p>

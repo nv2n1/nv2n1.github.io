@@ -1,4 +1,5 @@
 ---
+
 title: "scs2ps(1)"
 name: "scs2ps"
 section: "1"
@@ -9,9 +10,7 @@ description: "scs2ps – convert IBM SCS printer data into PostScript"
 
 <h2>NAME</h2>
 <p> scs2ps &#8211; convert IBM SCS printer data into PostScript</p>
-<h2>SYNOPSIS</h2>
 <p> <code>scs2ps</code></p>
-<h2>DESCRIPTION</h2>
 <p> The program converts from an SCS print stream on the standard input, to a PostScript&#174; file on the standard output. It is only intended for use with <code>lp5250d</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lp5250d/">lp5250d</a></code>(1), <code><a rel="nofollow" href="http://tn5250.sourceforge.net/">http://tn5250.sourceforge.net/</a></code></p>

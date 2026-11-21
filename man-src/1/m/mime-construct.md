@@ -1,4 +1,5 @@
 ---
+
 title: "mime-construct(1)"
 name: "mime-construct"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mime-construct/"
 description: "mime-construct – construct and optionally mail MIME messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mime-construct</code> <i>switch</i>&#8230; </p>
 <p> Sorry, it&#8217;s hard to provide a meaningful synopsis. See the examples.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mime-construct</code> constructs and (by default) mails <font SIZE="-1">MIME</font> messages. It is entirely driven from the command line, it is designed to be used by other programs, or people who act like programs.</p>
 <h2>OPTIONS</h2>
 <h3>Global Settings</h3>

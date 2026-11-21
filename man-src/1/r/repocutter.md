@@ -1,4 +1,5 @@
 ---
+
 title: "repocutter(1)"
 name: "repocutter"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-repocutter/"
 description: "repocutter – surgical and filtering operations on Subversion dump files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repocutter</code> [-q] [-r&nbsp;<wbr><i>selection</i>] <i>subcommand</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This program does surgical and filtering operations on Subversion dump files. While it is is not as flexible as <code><a href="/docs/linux/man/1-reposurgeon/">reposurgeon</a></code>(1), it can perform Subversion-specific transformations that reposurgeon cannot, and can be useful for processing Subversion repositories into a form suitable for conversion. </dd>
 <p> (As a matter of possible historical interest, the reason for the partial functional overlap between repocutter and reposurgeon is that repocutter was first written earlier and became a testbed for some of the design concepts in reposurgeon. After reposurgeon was written, the author learned that it could not naturally support some useful operations very specific to Subversion, and enhanced repocutter to do those.) </p>
 <p> In all commands, the -r (or &#8211;range) option limits the selection of revisions over which an operation will be performed. A selection consists of one or more comma-separated ranges. A range may consist of an integer revision number or the special name HEAD for the head revision. Or it may be a colon-separated pair of integers, or an integer followed by a colon followed by HEAD. </p>

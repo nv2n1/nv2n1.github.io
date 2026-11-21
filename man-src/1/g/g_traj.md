@@ -1,4 +1,5 @@
 ---
+
 title: "g_traj(1)"
 name: "g_traj"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_traj – plots x, v and f of selected atoms/groups (and more) fr
 <h2>NAME</h2>
 <p> g_traj &#8211; plots x, v and f of selected atoms/groups (and more) from a trajectory </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_traj</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-ox</code><i> coord.xvg </i> <code>-oxt</code><i> coord.xtc </i> <code>-ov</code><i> veloc.xvg </i> <code>-of</code><i> force.xvg </i> <code>-ob</code><i> box.xvg </i> <code>-ot</code><i> temp.xvg </i> <code>-ekt</code><i> ektrans.xvg </i> <code>-ekr</code><i> ekrot.xvg </i> <code>-vd</code><i> veldist.xvg </i> <code>-cv</code><i> veloc.pdb </i> <code>-cf</code><i> force.pdb </i> <code>-av</code><i> all_veloc.xvg </i> <code>-af</code><i> all_force.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]com</code><i></i> <code>-[no]mol</code><i></i> <code>-[no]nojump</code><i></i> <code>-[no]x</code><i></i> <code>-[no]y</code><i></i> <code>-[no]z</code><i></i> <code>-ng</code><i> int </i> <code>-[no]len</code><i></i> <code>-bin</code><i> real </i> <code>-scale</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_traj plots coordinates, velocities, forces and/or the box. With <code> -com</code> the coordinates, velocities and forces are calculated for the center of mass of each group. When <code> -mol</code> is set, the numbers in the index file are interpreted as molecule numbers and the same procedure as with <code> -com</code> is used for each molecule. </p>
 <p> Option <code> -ot</code> plots the temperature of each group, provided velocities are present in the trajectory file. No corrections are made for constrained degrees of freedom! This implies <code> -com</code>. </p>
 <p> Options <code> -ekt</code> and <code> -ekr</code> plot the translational and rotational kinetic energy of each group, provided velocities are present in the trajectory file. This implies <code> -com</code>. </p>

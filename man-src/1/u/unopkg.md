@@ -1,4 +1,5 @@
 ---
+
 title: "unopkg(1)"
 name: "unopkg"
 section: "1"
@@ -9,14 +10,12 @@ description: "unopkg – LibreOffice Extension Manager"
 
 <h2>Name</h2>
 <p> unopkg &#8211; LibreOffice Extension Manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>unopkg</code> [<code>add</code>] &lt;<i>options</i>&gt; <i>extension-path&#8230;</i><br />
  <code>unopkg</code> [<code>remove</code>] &lt;<i>options</i>&gt; <i>extension-identifier&#8230;</i><br />
  <code>unopkg</code> [<code>list</code>] &lt;<i>options</i>&gt; <i>extension-identifier&#8230;</i><br />
  <code>unopkg</code> [<code>reinstall</code>] &lt;<i>options</i>&gt;<br />
  <code>unopkg</code> [<code>gui</code>]<br />
  <code>unopkg</code> [<code>&#8211;help</code>|<code>-h</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> LibreOffice is a fully featured office suite for the daily use with all features you would normally expect in an office suite. </p>
 <p> There exists many LibreOffice extensions all over the world. For example, see <code><a rel="nofollow" href="https://extensions.libreoffice.org/">https://extensions.libreoffice.org/</a></code> </p>
 <p> This tool allows managing the extensions from the command line. </p>

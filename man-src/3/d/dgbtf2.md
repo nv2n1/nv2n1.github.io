@@ -1,4 +1,5 @@
 ---
+
 title: "dgbtf2(3)"
 name: "dgbtf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbtf2/"
 description: "dgbtf2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
  <i></i><code>DGBTF2</code> computes the LU factorization of a general band matrix using the unblocked version of the algorithm.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hunzip(1)"
 name: "hunzip"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hunzip/"
 description: "hunzip – decompress and decrypt hzip files to the standard output"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> hunzip [-h] file.hz [password]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Hunzip</i> is the decompression and decryption program of hzip format.</p>
 <h2>OPTIONS</h2>
 <dl>

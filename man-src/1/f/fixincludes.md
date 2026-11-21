@@ -1,4 +1,5 @@
 ---
+
 title: "fixincludes(1)"
 name: "fixincludes"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fixincludes/"
 description: "fixincludes – Reduce the number of #includes in KDE source files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fixincludes</code> [<code>-v, &#8211;verbose</code>] [<code>-e, &#8211;experimental</code>] [<code>-m, &#8211;modify</code>] [<i>file</i>] [<code>&#8211;help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fixincludes</code></p>
 <dd>tries to reduce the number of #includes in C++ source files. Much of it&#8217;s processing is specific to KDE sources and so it might not work so well with sources for non-KDE applications. </dd>
 <p> The following problems are identified by <code>fixincludes</code>: </p>

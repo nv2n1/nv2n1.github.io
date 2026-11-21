@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_get_responder(3)"
 name: "gnutls_ocsp_resp_get_responder"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ocsp_resp_get_responder – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_resp_get_responder &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_get_responder(gnutls_ocsp_resp_t </code><i>resp</i><code>, gnutls_datum_t * </code><i>dn</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_ocsp_resp_get_responder – API function"
 <dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</dd>
 <dt>gnutls_datum_t * dn</dt>
 <dd> newly allocated buffer with name</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will extract the name of the Basic OCSP Response in the provided buffer. The name will be in the form &quot;C=xxxx,O=yyyy,CN=zzzz&quot; as described in RFC2253. The output string will be ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> The caller needs to deallocate memory by calling <code>gnutls_free()</code> on<br />
 &nbsp;<wbr><i>dn</i>&nbsp;<wbr>-&gt;data.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libnodeupdown(3)"
 name: "libnodeupdown"
 section: "3"
@@ -9,7 +10,6 @@ description: "libnodeupdown – a library of functions to determine if a node is
 
 <h2>NAME</h2>
 <p> libnodeupdown &#8211; a library of functions to determine if a node is up or down</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;nodeupdown.h&gt;</code> </p>
 <p> <code>nodeupdown_t nodeupdown_handle_create(void);</code> </p>
 <p> <code>int nodeupdown_handle_destroy(nodeupdown_t handle);</code> </p>
@@ -30,7 +30,6 @@ description: "libnodeupdown – a library of functions to determine if a node is
 <p> <code>int nodeupdown_nodelist_create(nodeupdown_t handle, char ***list);</code> </p>
 <p> <code>int nodeupdown_nodelist_clear(nodeupdown_t handle, char **list);</code> </p>
 <p> <code>int nodeupdown_nodelist_destroy(nodeupdown_t handle, char **list);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The nodeupdown library functions are a set of functions that interacts with a particular backend tool and a clusterlist database to determine if the nodes of a cluster are up or down. See below for additional information on backend modules and clusterlist modules to learn about which backend tool and clusterlist database format is used. </p>
 <p> For API information, please see the individual manpages for each of the functions above, or read the comments written in /usr/include/nodeupdown.h. Please see the <code><a href="/docs/linux/man/5-nodeupdown-conf/">nodeupdown.conf</a></code>(5) manpage for information about the nodeupdown configuration file. </p>
 <h2>BACKEND MODULES</h2>

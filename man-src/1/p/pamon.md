@@ -1,4 +1,5 @@
 ---
+
 title: "pamon(1)"
 name: "pamon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamon/"
 description: "pacat – Play back or record raw or encoded audio streams on a PulseAudio sound server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>paplay [</code><i>options</i><code>] [</code><i>FILE</i><code>] </p>
 <p> parecord [</code><i>options</i><code>] [</code><i>FILE</i><code>] </p>
 <p> pacat [</code><i>options</i><code>] [</code><i>FILE</i><code>] </p>
@@ -15,7 +15,6 @@ description: "pacat – Play back or record raw or encoded audio streams on a Pu
 <p> pamon [</code><i>options</i><code>] [</code><i>FILE</i><code>] </p>
 <p> pacat &#8211;help </p>
 <p> pacat &#8211;version </code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>pacat</i> is a simple tool for playing back or capturing raw or encoded audio files on a PulseAudio sound server. It understands all audio file formats supported by <i>libsndfile</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

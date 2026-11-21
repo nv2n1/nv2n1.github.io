@@ -1,4 +1,5 @@
 ---
+
 title: "cgglse(3)"
 name: "cgglse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgglse/"
 description: "cgglse.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />
  <i></i><code> CGGLSE solves overdetermined or underdetermined systems for OTHER matrices</code></p>

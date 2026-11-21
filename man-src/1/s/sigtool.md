@@ -1,4 +1,5 @@
 ---
+
 title: "sigtool(1)"
 name: "sigtool"
 section: "1"
@@ -9,9 +10,7 @@ description: "sigtool – signature and database management tool"
 
 <h2>NAME</h2>
 <p> sigtool &#8211; signature and database management tool</p>
-<h2>SYNOPSIS</h2>
 <p> sigtool [options]</p>
-<h2>DESCRIPTION</h2>
 <p> sigtool can be used to generate MD5 checksums, convert data into hexadecimal format, list virus signatures and build/unpack/test/verify CVD databases and update scripts.</p>
 <h2>OPTIONS</h2>
 <dl>

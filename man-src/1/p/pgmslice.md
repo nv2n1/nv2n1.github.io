@@ -1,4 +1,5 @@
 ---
+
 title: "pgmslice(1)"
 name: "pgmslice"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pgmslice/"
 description: "pgmslice – extract one line of pixel values out of a portable graymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmslice</code> <code>-row</code>|<code>-col</code> <i>line</i> [<i>pgmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Extracts one line of pixel values out of a portable graymap and outputs it in a two column ascii format, with the first value being the pixel&#8217;s position in the line and the second value the pixel&#8217;s greyscale value. This is useful for making cross sections through, for example, greyscale CCD images.</p>
 <h2>OPTIONS</h2>
 <dl>

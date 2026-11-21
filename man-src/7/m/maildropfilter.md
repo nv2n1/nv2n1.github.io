@@ -1,4 +1,5 @@
 ---
+
 title: "maildropfilter(7)"
 name: "maildropfilter"
 section: "7"
@@ -6,10 +7,9 @@ letter: "m"
 url: "/docs/linux/man/7-maildropfilter/"
 description: "maildropfilter – maildrop’s filtering language"
 ---
+
 <p>maildropfilter &#8211; maildrop&#8217;s filtering language </p>
-<h2>SYNOPSIS</h2>
 <p>/etc/maildroprc, $HOME/.mailfilter, $HOME/.mailfilters/*, and friends...  </p>
-<h2>DESCRIPTION</h2>
 <p>This manual page describes the language used by <code>maildrop</code> to filter E-mail messages. The mail filtering instructions are read from a file. The language is loosely structured, it is based on pattern matching. The language has a distinct lexical and syntactical structure, very similar to Perl&#8217;s, but it is important to note that it is not Perl, and is very different from Perl, in certain cases. </p>
 <p>If the filtering instructions do not exist, <code>maildrop</code> delivers the message to the default mailbox without doing any additional processing, making it indistinguishable from the usual mail delivery agent. </p>
 <p>It is important to note that <code>maildrop</code> reads and parses the filter file before doing anything. If there are any errors <code>maildrop</code> prints an error message, and terminates with the exit code set to <code>EX_TEMPFAIL</code>. A compliant mail transport agent should re-queue the message for a later delivery attempt. Hopefully, most simple syntax errors will not cause mail to be bounced back if the error is caught and fixed quickly.  </p>

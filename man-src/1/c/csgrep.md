@@ -1,4 +1,5 @@
 ---
+
 title: "csgrep(1)"
 name: "csgrep"
 section: "1"
@@ -9,9 +10,7 @@ description: "csgrep – filter the list of defects by the specified regex-based
 
 <h2>NAME</h2>
 <p> csgrep &#8211; filter the list of defects by the specified regex-based predicates</p>
-<h2>SYNOPSIS</h2>
 <p> <code>csgrep</code> [<i>options</i>] [<i>file1.err </i>[&#8230;]]<i>, where options are:</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>&#8211;checker</code> arg</dt>
 <dd> defect matches if its checker matches the given regex (each defect has assigned exactly one checker)</dd>

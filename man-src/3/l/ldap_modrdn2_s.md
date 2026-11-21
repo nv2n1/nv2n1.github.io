@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_modrdn2_s(3)"
 name: "ldap_modrdn2_s"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldap_modrdn, ldap_modrdn_s, ldap_modrdn2, ldap_modrdn2_s – Perfo
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_modrdn(ld, dn, newrdn)
@@ -27,7 +27,6 @@ LDAP *ld;
 char *dn, *newrdn;
 int deleteoldrdn;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ldap_modrdn()</code> and <code>ldap_modrdn_s()</code> routines perform an LDAP modify RDN operation. They both take <i>dn</i>, the DN of the entry whose RDN is to be changed, and <i>newrdn</i>, the new RDN to give the entry. The old RDN of the entry is never kept as an attribute of the entry. <code>ldap_modrdn()</code> is asynchronous, returning the message id of the operation it initiates. <code>ldap_modrdn_s()</code> is synchronous, returning the LDAP error code indicating the success or failure of the operation. Use of these routines is deprecated. Use the versions described below instead. </p>
 <p> The <code>ldap_modrdn2()</code> and <code>ldap_modrdn2_s()</code> routines also perform an LDAP modify RDN operation, taking the same parameters as above. In addition, they both take the <i>deleteoldrdn</i> parameter which is used as a boolean value to indicate whether the old RDN values should be deleted from the entry or not.</p>
 <h2>ERRORS</h2>

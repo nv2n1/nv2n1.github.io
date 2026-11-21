@@ -1,4 +1,5 @@
 ---
+
 title: "addr2name(1)"
 name: "addr2name"
 section: "1"
@@ -9,7 +10,6 @@ description: "addr2name, name2addr – perform DNS lookups from scripts"
 
 <h2>NAME</h2>
 <p> addr2name, name2addr &#8211; perform DNS lookups from scripts</p>
-<h2>SYNOPSIS</h2>
 <p> <code>addr2name</code> [<code>-46cmnr</code>] [<code>HOSTNAMES</code>] </p>
 <p> <code>name2addr</code> [<code>-46cn</code>] [<code>HOSTNAMES</code>] </p>
 <h2>DESCRIPTON</h2>

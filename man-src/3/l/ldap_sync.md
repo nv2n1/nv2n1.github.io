@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_sync(3)"
 name: "ldap_sync"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldap_sync_init, ldap_sync_init_refresh_only, ldap_sync_init_refres
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_sync_init(ldap_sync_t *ls, int mode);
@@ -29,7 +29,6 @@ typedef int (*ldap_sync_intermediate_f)(ldap_sync_t *ls,
 typedef int (*ldap_sync_search_result_f)(ldap_sync_t *ls,
                                          LDAPMessage *msg, int refreshDeletes);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These routines provide an interface to the LDAP Content Synchronization operation (RFC 4533). They require an <code>ldap_sync_t</code> structure to be set up with parameters required for various phases of the operation; this includes setting some handlers for special events. All handlers take a pointer to the <code>ldap_sync_t</code> structure as the first argument, and a pointer to the <code>LDAPMessage</code> structure as received from the server by the client library, plus, occasionally, other specific arguments. </p>
 <p> The members of the <code>ldap_sync_t</code> structure are:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_rrsig_signame(3)"
 name: "ldns_rr_rrsig_signame"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_rr_rrsig_typecovered, ldns_rr_rrsig_set_typecovered, ldns_rr_
 
 <h2>NAME</h2>
 <p> ldns_rr_rrsig_typecovered, ldns_rr_rrsig_set_typecovered, ldns_rr_rrsig_algorithm, ldns_rr_rrsig_set_algorithm, ldns_rr_rrsig_labels, ldns_rr_rrsig_set_labels, ldns_rr_rrsig_origttl, ldns_rr_rrsig_set_origttl, ldns_rr_rrsig_expiration, ldns_rr_rrsig_set_expiration, ldns_rr_rrsig_inception, ldns_rr_rrsig_set_inception, ldns_rr_rrsig_keytag, ldns_rr_rrsig_set_keytag, ldns_rr_rrsig_signame, ldns_rr_rrsig_set_signame, ldns_rr_rrsig_sig, ldns_rr_rrsig_set_sig </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -31,7 +31,6 @@ description: "ldns_rr_rrsig_typecovered, ldns_rr_rrsig_set_typecovered, ldns_rr_
 <p> bool ldns_rr_rrsig_set_signame(ldns_rr *r, ldns_rdf *f); </p>
 <p> ldns_rdf* ldns_rr_rrsig_sig(const ldns_rr *r); </p>
 <p> bool ldns_rr_rrsig_set_sig(ldns_rr *r, ldns_rdf *f); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_rrsig_typecovered</i>()</dt>
 <dd>returns the type covered of a LDNS_RR_TYPE_RRSIG rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the type covered or NULL on failure</dd></dl>

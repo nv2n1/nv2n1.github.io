@@ -1,4 +1,5 @@
 ---
+
 title: "t1ascii(1)"
 name: "t1ascii"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-t1ascii/"
 description: "t1ascii – convert PostScript Type 1 font from binary to ASCII"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>t1ascii</code> [<code>-l</code> <i>length</i>] [<i>input</i> [<i>output</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>t1ascii</code> converts Adobe Type 1 font programs in PFB (binary) format to PFA (hexadecimal) format. If the file <i>output</i> is not specified output goes to the standard output. If the file <i>input</i> is not specified input comes from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

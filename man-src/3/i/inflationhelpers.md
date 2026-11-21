@@ -1,4 +1,5 @@
 ---
+
 title: "inflationhelpers(3)"
 name: "inflationhelpers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-inflationhelpers/"
 description: "ql/termstructures/inflation/inflationhelpers.hpp – Bootstrap helpers for inflation term structures."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/bootstraphelper.hpp&gt;<br />
  #include &lt;ql/instruments/zerocouponinflationswap.hpp&gt;<br />
  #include &lt;ql/instruments/yearonyearinflationswap.hpp&gt; </p>

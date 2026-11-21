@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-vpc-peering-connections(1)"
 name: "euca-describe-vpc-peering-connections"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-vpc-peering-connections – Show information about V
 
 <h2>NAME</h2>
 <p> euca-describe-vpc-peering-connections &#8211; Show information about VPC peering connections</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-vpc-peering-connections [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [PEERCONN [PEERCONN &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about VPC peering connections</p>
 <h3>positional arguments:</h3>
 <dl>

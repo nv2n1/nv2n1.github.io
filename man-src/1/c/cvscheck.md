@@ -1,4 +1,5 @@
 ---
+
 title: "cvscheck(1)"
 name: "cvscheck"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cvscheck/"
 description: "cvscheck – Offline status report for files in a checked-out CVS module."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cvscheck</code> [<i>dir</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>cvscheck</code></p>
 <dd>prints information about the status of your local CVS checkout without communicating with the server. This means it is extremely fast and does not require a network connection. </dd>
 <p> The given directory and all of its subdirectories will be processed recursively. If no directory is given, the current directory and its recursed subdirectories will be used. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "al_findnext(3)"
 name: "al_findnext"
 section: "3"
@@ -9,10 +10,8 @@ description: "al_findnext – Finds the next file in a search started by al_find
 
 <h2>NAME</h2>
 <p> al_findnext &#8211; Finds the next file in a search started by al_findfirst(). Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int al_findnext(struct al_ffblk *info);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This finds the next file in a search started by al_findfirst(). Example: </p>
 <pre><code>
 if (al_findfirst("*.pcx", &amp;info, 0) != 0)

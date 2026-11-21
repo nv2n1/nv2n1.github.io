@@ -1,4 +1,5 @@
 ---
+
 title: "avc_audit(3)"
 name: "avc_audit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-avc_audit/"
 description: "avc_has_perm, avc_has_perm_noaudit, avc_audit, avc_entry_ref_init – obtain and audit SELinux access decisions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>void avc_entry_ref_init(struct avc_entry_ref *</code><i>aeref</i><code>);</code> </p>
@@ -17,7 +17,6 @@ description: "avc_has_perm, avc_has_perm_noaudit, avc_audit, avc_entry_ref_init 
  <code>struct avc_entry_ref *</code><i>aeref</i><code>, struct av_decision *</code><i>avd</i><code>);</code> </p>
 <p> <code>void avc_audit(security_id_t </code><i>ssid</i><code>, security_id_t </code><i>tsid</i><code>,</code> <code>security_class_t </code><i>tclass</i><code>, access_vector_t </code><i>requested</i><code>,</code><br />
  <code>struct av_decision *</code><i>avd</i><code>, int </code><i>result</i><code>, void *</code><i>auditdata</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>avc_entry_ref_init</code>() initializes an <code>avc_entry_ref</code> structure; see <code>ENTRY REFERENCES</code> below. This function may be implemented as a macro. </p>
 <p> <code>avc_has_perm</code>() checks whether the <i>requested</i> permissions are granted for subject SID <i>ssid</i> and target SID <i>tsid</i>, interpreting the permissions based on <i>tclass</i> and updating <i>aeref</i>, if non-NULL, to refer to a cache entry with the resulting decision. The granting or denial of permissions is audited in accordance with the policy. The <i>auditdata</i> parameter is for supplemental auditing; see <code>avc_audit</code>() below. </p>
 <p> <code>avc_has_perm_noaudit</code>() behaves as <code>avc_has_perm</code>() without producing an audit message. The access decision is returned in <i>avd</i> and can be passed to <code>avc_audit</code>() explicitly. </p>

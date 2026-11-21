@@ -1,4 +1,5 @@
 ---
+
 title: "hp-pqdiag(1)"
 name: "hp-pqdiag"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-pqdiag/"
 description: "hp-pqdiag – Print Quality Diagnostic Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Print quality diagnostic utility for HPLIP supported inkjet printers. (Note: Most printers do not require the use of this utility).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-pqdiag [DEVICE_URI|PRINTER_NAME] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

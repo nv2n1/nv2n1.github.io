@@ -1,4 +1,5 @@
 ---
+
 title: "obex-data-server(1)"
 name: "obex-data-server"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-obex-data-server/"
 description: "obex-data-server – D-Bus service providing OBEX functionality"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>obex-data-server </code> [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>obex-data-server </code> is D-Bus service providing high-level OBEX client and server side functionality. It currently supports OPP (Object Push Profile), FTP (File Transfer profile) and partially BIP (Basic Imaging profile). Supported transports are Bluetooth, USB (client only) or TTY. obex-data-server exposes it&#8217;s functionality through &#8216;org.openobex&#8217; namespace in D-Bus.</p>
 <h2>OPTIONS</h2>
 <dl>

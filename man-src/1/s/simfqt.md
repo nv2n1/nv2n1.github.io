@@ -1,4 +1,5 @@
 ---
+
 title: "simfqt(1)"
 name: "simfqt"
 section: "1"
@@ -10,9 +11,7 @@ description: "simfqt –"
 <pre>
   Command-line interpreter for the C++ Simulated Fare Quote System Library
 </pre>
-<h2>SYNOPSIS</h2>
 <p> <code>simfqt</code> [&#8211;prefix] [-v|&#8211;version] [-h|&#8211;help] [-b|&#8211;builtin] [-i|&#8211;input &lt;path-to-input&gt;] [-l|&#8211;log &lt;path-to-output-log-file&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>simfqt</i> is a small program showing how to use the SimFQT library. </p>
 <p> <i>simfqt</i> accepts the following options: </p>
 <p> <code>&#8211;prefix</code> </p>

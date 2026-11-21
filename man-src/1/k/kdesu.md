@@ -1,4 +1,5 @@
 ---
+
 title: "kdesu(1)"
 name: "kdesu"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-kdesu/"
 description: "kdesu – Runs a program with elevated privileges"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kdesu</code> [<code>-c</code><i> command</i>] [<code>-d</code>] [<code>-f</code><i> file</i>] [<code>-i</code><i> icon name</i>] [<code>-n</code>] [<code>-p</code><i> priority</i>] [<code>-r</code>] [<code>-s</code>] [<code>-t</code>] [<code>-u</code><i> user</i>] [<code>&#8211;noignorebutton</code>] [<code>&#8211;attach</code><i> winid</i>]</dt>
 <dt> <code>kdesu</code> [KDE Generic Options] [Qt Generic Options]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>KDE su is a graphical front end for the UNIX&#174;<code>su</code> command for the K Desktop Environment. It allows you to run a program as different user by supplying the password for that user. KDE su is an unprivileged program; it uses the system&#8217;s <code>su</code>. </dd>
 <p> KDE su has one additional feature: it can optionally remember passwords for you. If you are using this feature, you only need to enter the password once for each command. </p>
 <p> This program is meant to be started from the command line or from .desktop files. </p>

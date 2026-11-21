@@ -1,4 +1,5 @@
 ---
+
 title: "avc_add_callback(3)"
 name: "avc_add_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-avc_add_callback/"
 description: "avc_add_callback – additional event notification for SELinux userspace object managers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_add_callback(int (*</code><i>callback</i><code>)(uint32_t </code><i>event</i><code>,</code> <code>security_id_t </code><i>ssid</i><code>,</code><br />
@@ -17,7 +17,6 @@ description: "avc_add_callback – additional event notification for SELinux use
  <code>access_vector_t *</code><i>out_retained</i><code>),</code> <code>uint32_t </code><i>events</i><code>, security_id_t </code><i>ssid</i><code>,</code><br />
  <code>security_id_t </code><i>tsid</i><code>, security_class_t </code><i>tclass</i><code>,</code><br />
  <code>access_vector_t </code><i>perms</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>avc_add_callback</code>() is used to register callback functions on security events. The purpose of this functionality is to allow userspace object managers to take additional action when a policy change, usually a policy reload, causes permissions to be granted or revoked. </p>
 <p> <i>events</i> is the bitwise-<i>or</i> of security events on which to register the callback; see <code>SECURITY EVENTS</code> below. </p>
 <p> <i>ssid</i>, <i>tsid</i>, <i>tclass</i>, and <i>perms</i> specify the source and target SID&#8217;s, target class, and specific permissions that the callback wishes to monitor. The special symbol <code>SECSID_WILD</code> may be passed as the <i>source</i> or <i>target</i> and will cause any SID to match. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-hinotes(1)"
 name: "pilot-hinotes"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-hinotes – Syncronize your Hi-Notes database with your desk
 <p> pilot-hinotes &#8211; Syncronize your Hi-Notes database with your desktop machine.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-hinotes</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;dirname</code>&nbsp;<wbr>&nbsp;<wbr><i>dir</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Hi-Notes must be installed on your Palm handheld (and at least one entry must exist within Hi-Notes). </p>
 <p> By default, the contents of your Palm&#8217;s Hi-Notes database (Hi-NoteDB.pdb) will be written to STDOUT as a standard Unix mailbox (in mbox-format) file, with each memo as a separate message. The subject of each message will be set as the category. </p>
 <p> The memos will be written to STDOUT unless the <code>-d</code> option is specified. Using <code>-d</code> will be save the memos in subdirectories of <i>dir</i>. Each subdirectory will contain the name of a category on the Palm where the record was stored, and will contain the memos found in that category. </p>

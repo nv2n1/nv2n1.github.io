@@ -1,4 +1,5 @@
 ---
+
 title: "scsieject(1)"
 name: "scsieject"
 section: "1"
@@ -9,9 +10,7 @@ description: "scsieject – control SCSI tape devices"
 
 <h2>NAME</h2>
 <p> scsieject &#8211; control SCSI tape devices</p>
-<h2>SYNOPSIS</h2>
 <p> scsieject [-f &lt;scsi-generic-device&gt;] commands</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>scsieject</code> command controls SCSI devices in a platform-independent manner. As long as &#8216;mtx&#8217; works on the platform, so does &#8216;scsieject&#8217;.</p>
 <h2>OPTIONS</h2>
 <p> The first argument, given following <code>-f</code> , is the SCSI generic device corresponding to your tape drive. Consult your operating system&#8217;s documentation for more information (for example, under Linux these are generally /dev/sg0 through /dev/sg15, under FreeBSD these are /dev/pass0 through /dev/passX. Under Solaris this is usually the same as your tape drive (Solaris has a SCSI passthrough ioctl). You can set the STAPE or TAPE environment variable rather than use -f. </p>

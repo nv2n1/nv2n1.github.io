@@ -1,4 +1,5 @@
 ---
+
 title: "getw(3)"
 name: "getw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getw/"
 description: "getw, putw – input and output of words (ints)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 int getw(FILE *stream);
@@ -24,7 +24,6 @@ int putw(int w, FILE *stream);
 <dt>Before glibc 2.3.3:</dt>
 <dd> _SVID_SOURCE || _BSD_SOURCE || _XOPEN_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>getw</code>() reads a word (that is, an <i>int</i>) from <i>stream</i>. It&#8217;s provided for compatibility with SVr4. We recommend you use <code><a href="/docs/linux/man/3-fread/">fread</a></code>(3) instead. </p>
 <p> <code>putw</code>() writes the word <i>w</i> (that is, an <i>int</i>) to <i>stream</i>. It is provided for compatibility with SVr4, but we recommend you use <code><a href="/docs/linux/man/3-fwrite/">fwrite</a></code>(3) instead.</p>
 <h2>RETURN VALUE</h2>

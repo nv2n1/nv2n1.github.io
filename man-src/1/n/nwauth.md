@@ -1,4 +1,5 @@
 ---
+
 title: "nwauth(1)"
 name: "nwauth"
 section: "1"
@@ -9,9 +10,7 @@ description: "nwauth – Verify username/password"
 
 <h2>NAME</h2>
 <p> nwauth &#8211; Verify username/password</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nwauth</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-D</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nwauth</code> does nothing but logging into a NetWare server. If the login was successful, an error code of 0 is returned. If the login was not successful, an error code of 1 is returned. It was designed for use by other programs who want authenticate users via a NetWare server. </p>
 <p> If there is no <code>-P</code> or <code>-n</code> option specified on command line, nwauth <code>always</code> expects a password on stdin. If the stdin is a tty, then the user is prompted for a password. Otherwise nwauth simply reads stdin for a password. </p>
 <p> <code>nwauth</code> looks up the file <i>$HOME/.nwclient</i> to find a file server and a user name if they are not specified on command line. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of <i>.nwclient</i> MUST be 600, for security reasons. </p>

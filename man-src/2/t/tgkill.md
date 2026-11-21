@@ -1,4 +1,5 @@
 ---
+
 title: "tgkill(2)"
 name: "tgkill"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-tgkill/"
 description: "tkill, tgkill – send a signal to a thread"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 int tkill(int tid, int sig);
 int tgkill(int tgid, int tid, int sig);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for <code>tkill</code>(); see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tgkill</code>() sends the signal <i>sig</i> to the thread with the thread ID <i>tid</i> in the thread group <i>tgid</i>. (By contrast, <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2) can be used to send a signal only to a process (i.e., thread group) as a whole, and the signal will be delivered to an arbitrary thread within that process.) </p>
 <p> <code>tkill</code>() is an obsolete predecessor to <code>tgkill</code>(). It allows only the target thread ID to be specified, which may result in the wrong thread being signaled if a thread terminates and its thread ID is recycled. Avoid using this system call. </p>
 <p> These are the raw system call interfaces, meant for internal thread library use.</p>

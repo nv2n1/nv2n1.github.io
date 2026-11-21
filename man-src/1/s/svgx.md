@@ -1,4 +1,5 @@
 ---
+
 title: "svgx(1)"
 name: "svgx"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-svgx/"
 description: "svgx – extract gradients from SVG files."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>svgx</code> [-a] [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-g&nbsp;<wbr><i>geometry</i>] [-h] [-l] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-p] [-s&nbsp;<wbr><i>name</i>] [-t&nbsp;<wbr><i>type</i>] [-T&nbsp;<wbr><i>rgb</i>] [-v] [-V] <i>file</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>svgx</code> program extracts and converts gradients in an SVG file. Unlike most of the other file formats handled by the cptutils package, SVG files may contain multiple gradients, so this program operates a little differently to the other programs in the package. </dd>
 <p> There are 4 modes of operation: The default is to extract the first gradient found in the file, or one can specify <code>-l</code> to list the names of all gradients in the file; <code>-s</code> to extract the gradient with the specified name or <code>-a</code> to extract all of the gradients. </p>
 <p> The output format is specified by the <code>-t</code> option as listed below (in fact there are several aliases for each format: <code>jgd</code> for <code>psp</code>, <code>gimp</code> for <code>ggr</code>, and so on). The <code>svgcpt</code>, <code>svggimp</code>, <code>svggpt</code>, <code>svgcss3</code>, <code>svgpsp</code>, <code>svgpov</code>, <code>svgpng</code>, <code>svgsao</code> and <code>svgsvg</code> programs are wrappers around <code>svgx</code> which use the <code>-t</code> switch to specify output type. </p>

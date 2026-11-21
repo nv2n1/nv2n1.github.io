@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-stat(1)"
 name: "trace-cmd-stat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-stat/"
 description: "trace-cmd-stat – show the status of the tracing (ftrace) system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd stat</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) stat displays the various status of the tracing (ftrace) system. The status that it shows is: </p>
 <p> <code>Tracer:</code> if one of the tracers (like function_graph) is active. Otherwise nothing is displayed. </p>
 <p> <code>Events:</code> Lists the events that are enable. </p>

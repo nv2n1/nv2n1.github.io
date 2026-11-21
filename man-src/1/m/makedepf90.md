@@ -1,4 +1,5 @@
 ---
+
 title: "makedepf90(1)"
 name: "makedepf90"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-makedepf90/"
 description: "makedepf90 – creates Makefile dependency list for Fortran source files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>makedepf90 </code> [<code>-h</code>] [<code>-V</code>] [<code>-W</code>|<code>-Wmissing</code>] [<code>-Wconfused</code>] [<code>-m</code> <i>fmt</i>] [<code>-u</code> <i>modulename</i>] [<code>-d</code> <i>file</i>] [<code>-r</code> <i>rule</i>] [<code>-R</code> <i>file rule</i>] [<code>-fixed</code>|<code>-free</code>] [<code>-o</code> <i>name-of-executable</i>] [<code>-coco</code>] [<code>-D</code> <i>NAME</i>] [<code>-b</code> <i>path</i>] [<code>-I</code> <i>PATH1:PATH2:&#8230;</i>] [<code>-nosrc</code>] <i>sourcefile(s)</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>makedepf90</i> is a program for automatic creation of dependency lists and compilation rules for Makefiles. </p>
 <p> The original idea was to provide the same functionality for Fortran as</p>
 <dl>

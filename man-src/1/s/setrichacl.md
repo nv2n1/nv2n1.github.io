@@ -1,4 +1,5 @@
 ---
+
 title: "setrichacl(1)"
 name: "setrichacl"
 section: "1"
@@ -9,9 +10,7 @@ description: "setrichacl – Set Rich Access Control Lists"
 
 <h2>NAME</h2>
 <p> setrichacl &#8211; Set Rich Access Control Lists</p>
-<h2>SYNOPSIS</h2>
 <p> <code>setrichacl</code> [<i>option</i>]&#8230; [<i>file</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>setrichacl</code> utility sets or modifies Rich Access Control Lists (RichACLs) of files and directories. </p>
 <p> The <code>-m</code> and <code>-s</code> options expect an ACL or parts of an ACL on the command line. The <code>-M</code> and <code>-S</code> options read an ACL or parts of an ACL from a file. In either case, the entry format is described in section <i>Text form</i> of the <code><a href="/docs/linux/man/7-richacl/">richacl</a></code>(7) manual page. The single-letter or long forms of flags and permissions can be mixed arbitrarily. Multiple entries are separated by whitespace, newlines, or commas. </p>
 <p> Note that the order of entries in a RichACL is significant, and that reordering entries may change the permissions granted. </p>

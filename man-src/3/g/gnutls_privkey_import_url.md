@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_privkey_import_url(3)"
 name: "gnutls_privkey_import_url"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_privkey_import_url – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_import_url &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_import_url(gnutls_privkey_t </code><i>key</i><code>, const char * </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_privkey_import_url – API function"
 <dd> A PKCS 11 url</dd>
 <dt>unsigned int flags</dt>
 <dd> should be zero</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will import a PKCS11 or TPM URL as a private key. The supported URL types can be checked using <code>gnutls_url_is_supported()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

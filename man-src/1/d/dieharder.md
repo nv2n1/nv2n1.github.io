@@ -1,4 +1,5 @@
 ---
+
 title: "dieharder(1)"
 name: "dieharder"
 section: "1"
@@ -9,7 +10,6 @@ description: "dieharder – A testing and benchmarking tool for random number ge
 
 <h2>NAME</h2>
 <p> <code>dieharder &#8211; A testing and benchmarking tool for random number</code> <code>generators.</code> </p>
-<h2>SYNOPSIS</h2>
 <p> dieharder [-a] [-d dieharder test number] [-f filename] [-B]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-D output flag&nbsp;<wbr>[-D output flag]&nbsp;<wbr>&#8230;&nbsp;<wbr>]&nbsp;<wbr>[-F]&nbsp;<wbr>[-c separator]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-g generator number or -1]&nbsp;<wbr>[-h]&nbsp;<wbr>[-k ks_flag]&nbsp;<wbr>[-l]&nbsp;<wbr><br />
@@ -89,7 +89,6 @@ description: "dieharder – A testing and benchmarking tool for random number ge
 <p> <code>NOTE WELL: </code> The assessment(s) for the rngs may, in fact, be completely incorrect or misleading. There are still &quot;bad tests&quot; in dieharder, although we are working to fix and improve them (and try to document them in the test descriptions visible with -g testnumber -h). In particular, &#8216;Weak&#8217; pvalues should occur one test in two hundred, and &#8216;Failed&#8217; pvalues should occur one test in a million with the default thresholds &#8211; that&#8217;s what p MEANS. Use them at your Own Risk! Be Warned! </p>
 <p> Or better yet, use the new -Y 1 and -Y 2 resolve ambiguity or test to destruction modes above, comparing to similar runs on one of the as-good-as-it-gets cryptographic generators, AES or threefish. </p>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>dieharder</code> </p>
 <p> Welcome to the current snapshot of the dieharder random number tester. It encapsulates all of the Gnu Scientific Library (GSL) random number generators (rngs) as well as a number of generators from the R statistical library, hardware sources such as /dev/*random, &quot;gold standard&quot; cryptographic quality generators (useful for testing dieharder and for purposes of comparison to new generators) as well as generators contributed by users or found in the literature into a <i>single harness </i> that can time them and subject them to various tests for randomness. These tests are variously drawn from George Marsaglia&#8217;s &quot;Diehard battery of random number tests&quot;, the NIST Statistical Test Suite, and again from other sources such as personal invention, user contribution, other (open source) test suites, or the literature. </p>
 <p> The primary point of dieharder is to make it easy to time and test (pseudo)random number generators, including both software and hardware rngs, with a fully open source tool. In addition to providing &quot;instant&quot; access to testing of all built-in generators, users can choose one of three ways to test their own random number generators or sources: a unix pipe of a raw binary (presumed random) bitstream; a file containing a (presumed random) raw binary bitstream or formatted ascii uints or floats; and embedding your generator in dieharder&#8217;s GSL-compatible rng harness and adding it to the list of built-in generators. The stdin and file input methods are described below in their own section, as is suggested &quot;best practice&quot; for newbies to random number generator testing. </p>

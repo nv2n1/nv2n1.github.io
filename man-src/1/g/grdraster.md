@@ -1,4 +1,5 @@
 ---
+
 title: "grdraster(1)"
 name: "grdraster"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdraster – Extract subregion from a binary raster and save as a
 
 <h2>NAME</h2>
 <p> grdraster &#8211; Extract subregion from a binary raster and save as a GMT grid</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdraster</code> [ <i>filenumber</i> | <i>&quot;text pattern&quot;</i> ] <i>region</i> [ <i>grdfile</i> ] [ <i>increment</i> ] [ <i>parameters</i> ] [ [<i>level</i>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdraster</code> reads a file called <i>grdraster.info</i> from the current working directory, the directories pointed to by the environment variables <code>$GMT_USERDIR</code> and <code>$GMT_DATADIR</code>, or in <code>$GMT_SHAREDIR</code>/dbase (in that order). The file <i>grdraster.info</i> defines binary arrays of data stored in scan-line format in data files. Each file is given a <i>filenumber</i> in the info file. <code>grdraster</code> figures out how to load the raster data into a grid file spanning a region defined by <code>-R</code>. By default the grid spacing equals the raster spacing. The <code>-I</code> option may be used to sub-sample the raster data. No filtering or interpolating is done, however; the <i>x_inc</i> and <i>y_inc</i> of the grid must be multiples of the increments of the raster file and <code>grdraster</code> simply takes every n&#8217;th point. The output of <code>grdraster</code> is either grid or pixel registered depending on the registration of the raster used. It is up to the GMT system person to maintain the <i>grdraster.info</i> file in accordance with the available rasters at each site. Raster data sets are not supplied with GMT but can be obtained by anonymous ftp and on CD-ROM (see README page in dbase directory). <code>grdraster</code> will list the available files if no arguments are given. Finally, <code>grdraster</code> will write xyz-triplets to stdout if no output gridfile name is given</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

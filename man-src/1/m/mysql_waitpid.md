@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_waitpid(1)"
 name: "mysql_waitpid"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysql_waitpid/"
 description: "mysql_waitpid – kill process and wait for its termination"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_waitpid [</code><i>options</i><code>] </code><i>pid</i><i>wait_time</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mysql_waitpid</code></p>
 <dd>signals a process to terminate and waits for the process to exit. It uses the kill() system call and Unix signals, so it runs on Unix and Unix-like systems. </dd>
 <p> Invoke <code>mysql_waitpid</code> like this: </p>

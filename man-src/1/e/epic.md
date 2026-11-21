@@ -1,4 +1,5 @@
 ---
+
 title: "epic(1)"
 name: "epic"
 section: "1"
@@ -9,9 +10,7 @@ description: "epic – Internet Relay Chat client for UNIX like systems"
 
 <h2>NAME</h2>
 <p> <code>epic</code> &#8211; Internet Relay Chat client for UNIX like systems</p>
-<h2>SYNOPSIS</h2>
 <p> <code>epic</code> [<i>-a</i> ] [<i>-b</i> ] [<i>-B</i> ] [<i>-c chan</i> ] [<i>-d </i> ] [<i>-f </i> ] [<i>-F </i> ] [<i>-h </i> ] [<i>-H hostname</i> ] [<i>-l filename</i> ] [<i>-L filename </i> ] [<i>-n nickname</i> ] [<i>-o</i> ] [<i>-O</i> ] [<i>-p port</i> ] [<i>-q </i> ] [<i>-v</i> ] [<i>-x</i> ] [<i>-z username</i> ] [<i>nickname</i> ] [<i>server description list</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ircII/EPIC</code> program is a unix-based character oriented user agent (&#8216;client&#8217;) to Internet Relay Chat. It is a fully functional ircII client with many useful extensions. This version works with all modern irc server classes as of early 1999. </p>
 <h2>OPTIONS</h2>
 <dl>

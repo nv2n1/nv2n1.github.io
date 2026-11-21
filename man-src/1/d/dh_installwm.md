@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installwm(1)"
 name: "dh_installwm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installwm/"
 description: "dh_installwm – register a window manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installwm</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;priority=</code><i>n</i>] [<i>wm</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installwm</code> is a debhelper program that is responsible for generating the <i>postinst</i> and <i>prerm</i> commands that register a window manager with <i>update-alternatives</i>(8). The window manager&#8217;s man page is also registered as a slave symlink (in v6 mode and up). It must be installed in <i>usr/share/man/man1/</i> in the package build directory prior to calling <code>dh_installwm</code>. In compat 9 and earlier, the manpage was optional.</p>
 <h2>FILES</h2>
 <dl>

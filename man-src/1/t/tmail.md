@@ -1,4 +1,5 @@
 ---
+
 title: "tmail(1)"
 name: "tmail"
 section: "1"
@@ -9,9 +10,7 @@ description: "tmail – Mail Delivery Module"
 
 <h2>NAME</h2>
 <p> tmail &#8211; Mail Delivery Module</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tmail</code> <i>[-b format] [-D] [-f from_name] [-I inbox_specifier] user[+folder] &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>tmail</i> delivers mail to a user&#8217;s INBOX or a designated folder. <i>tmail</i> may be configured as a drop-in replacement for <i>binmail</i>(1), <i>mail.local</i>(1) or any program intended for use for mail delivery by a mail delivery program such as <i>sendmail</i>(8). </p>
 <p> <i>tmail</i> is intended to be used for direct delivery by the mailer daemon; <i><a href="/docs/linux/man/1-dmail/">dmail</a></i>(1) is the preferred tool for user applications, e.g. a mail delivery filter such as <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1)<i>.</i> If <i>tmail</i> is used for a user application, then the calling program must be aware of the restrictions noted below. </p>
 <p> When <i>tmail</i> exits, it returns exit status values to enable the mail delivery program to determine whether a message was delivered successfully or had a temporary (requeue for later delivery) or permanent (return to sender) failure. </p>

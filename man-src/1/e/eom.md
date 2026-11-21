@@ -1,4 +1,5 @@
 ---
+
 title: "eom(1)"
 name: "eom"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-eom/"
 description: "eom – The Eye of MATE Image Viewer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>eom [&#8211;fullscreen] [&#8211;disable-image-collection] [&#8211;slide-show] [&#8211;new instance] [FILES&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>eom</code> or the Eye of MATE is the official image viewer for the MATE Desktop Environment. It aims to be simplistic, lightweight, and easy to use. The Eye of MATE may also be used to perform basic tasks like image flipping and rotation. </p>
 <p> Eye of MATE features a flexible plugin system which can be used to dynamically add new advanced features to <code>eom</code> itself. <code>eom</code> uses the gdk-pixbuf library, it can handle large images, zoom, and scroll with low memory usage. </p>
 <p> This manual page briefly documents the <code>eom</code> command.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-optimize(1)"
 name: "wimlib-imagex-optimize"
 section: "1"
@@ -9,9 +10,7 @@ description: "wimlib-imagex-optimize – Optimize a WIM archive"
 
 <h2>NAME</h2>
 <p> wimlib-imagex-optimize &#8211; Optimize a WIM archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex optimize</code> <i>WIMFILE</i> [<i>OPTION</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex optimize</code> will rebuild the stand-alone WIM <i>WIMFILE</i>. The new WIM is written to a temporary file, and it is renamed to the original file when it&#8217;s ready. This action will remove any holes that have been left as a result of appending images, so the new WIM may be slightly smaller than the old WIM. </p>
 <p> By default, compressed data will be re-used, and not recompressed. Use the <code>&#8211;recompress</code> or <code>&#8211;compress</code>=<i>TYPE</i>[:<i>LEVEL</i>] option to request recompression. </p>
 <p> This command is also available as simply <code>wimoptimize</code> if the appropriate hard link or batch file has been installed.</p>

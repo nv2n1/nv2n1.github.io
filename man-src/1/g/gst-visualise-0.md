@@ -1,4 +1,5 @@
 ---
+
 title: "gst-visualise-0(1)"
 name: "gst-visualise-0"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gst-visualise-0/"
 description: "gst-visualise – Run a GStreamer pipeline to display an audio visualisation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gst-visualise</code> <i>[visualiser]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>gst-visualise</i> is a tool that is used to run a basic <i>GStreamer</i> pipeline, to display a graphical visualisation of an audio stream. </p>
 <p> By default, the audio stream is read from ESD (the Enlightened Sound Daemon), but this can be changed by setting the AUDIOSRC parameter in ~/.gst. For example, you might set &quot;AUDIOSRC=osssrc&quot; to display a visualisation of the sound input to your soundcard. </p>
 <p> You can select a visualiser by providing a parameter naming the visualiser. For example: </p>

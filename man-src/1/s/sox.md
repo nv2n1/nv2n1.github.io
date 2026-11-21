@@ -1,4 +1,5 @@
 ---
+
 title: "sox(1)"
 name: "sox"
 section: "1"
@@ -9,7 +10,6 @@ description: "SoX – Sound eXchange, the Swiss Army knife of audio manipulation
 
 <h2>NAME</h2>
 <p> SoX &#8211; Sound eXchange, the Swiss Army knife of audio manipulation</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 sox[global - options][format - options] infile1
     [[format - options] infile2]...[format - options] outfile
@@ -18,7 +18,6 @@ sox[global - options][format - options] infile1
                                    [effect[effect - options]]... rec[global - options][format - options] outfile
                                        [effect[effect - options]]...
 </code></pre>
-<h2>DESCRIPTION</h2>
 <h3>Introduction</h3>
 <p> SoX reads and writes audio files in most popular formats and can optionally apply effects to them. It can combine multiple input sources, synthesise audio, and, on many systems, act as a general purpose audio player or a multi-track audio recorder. It also has limited ability to split the input into multiple output files. </p>
 <p> All SoX functionality is available using just the <code>sox</code> command. To simplify playing and recording audio, if SoX is invoked as <code>play</code>, the output file is automatically set to be the default sound device, and if invoked as <code>rec</code>, the default sound device is used as an input source. Additionally, the <code><a href="/docs/linux/man/1-soxi/">soxi</a></code>(1) command provides a convenient way to just query audio file header information. </p>

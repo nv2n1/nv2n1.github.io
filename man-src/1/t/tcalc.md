@@ -1,4 +1,5 @@
 ---
+
 title: "tcalc(1)"
 name: "tcalc"
 section: "1"
@@ -9,9 +10,7 @@ description: "tcalc – The terminal calculator"
 
 <h2>NAME</h2>
 <p> tcalc &#8211; The terminal calculator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tcalc [OPTIONS] [file-name]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The terminal calculator is a small and helpful program to help users of the GNU/Linux terminal do calculations simply and quickly. The formula to be calculated can be fed to tcalc through the command line. Alternatively, tcalc can be run with no formula and then the free mode is started, in which the calculator will wait for user input, do the necessary calculations and print out the result, and the cycle will repeat until the user enters &#8216;q&#8217; or &#8216;quit&#8217;. </p>
 <p> The calculator works with the decimal, hexadecimal, octal, and binary number systems. It automatically identifies hex numbers if entered with a preceding &quot;0x&quot; or &quot;0X&quot;, octal by preceding the number with a zero, binaries by preceding the number with &#8216;b&#8217; and decimals by absence of all of the above. Alternatively, the user can indicate the type of input by setting the &#8216;format&#8217; argument (See below). </p>
 <p> Math functions defined are:<br />

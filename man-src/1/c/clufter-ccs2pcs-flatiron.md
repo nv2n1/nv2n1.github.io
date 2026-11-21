@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-ccs2pcs-flatiron(1)"
 name: "clufter-ccs2pcs-flatiron"
 section: "1"
@@ -9,9 +10,7 @@ description: "clufter – ccs2pcs-flatiron"
 
 <h2>NAME</h2>
 <p> clufter &#8211; ccs2pcs-flatiron</p>
-<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcs-flatiron </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> (CMAN,rgmanager)-&gt;(Corosync/CMAN,Pacemaker) cluster cfg. </p>
 <p> More specifically, the output is suitable for Pacemaker integrated with Corosync ver. 1 (Flatiron) as present, e.g., in RHEL 6.{5, ..}, and consists of Corosync/CMAN configuration incl. fencing pass-through (~cluster.conf) along with Pacemaker proper one (~cib.xml).</p>
 <h2>OPTIONS</h2>

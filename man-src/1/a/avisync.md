@@ -1,4 +1,5 @@
 ---
+
 title: "avisync(1)"
 name: "avisync"
 section: "1"
@@ -9,11 +10,9 @@ description: "avisync – adjust audio synchronisation"
 
 <h2>NAME</h2>
 <p> avisync &#8211; adjust audio synchronisation</p>
-<h2>SYNOPSIS</h2>
 <p> <code>avisync</code> [ <code>-o</code> <i>file</i> <code>-i</code> <i>file</i> <code>-q</code> <code>-n</code> <i>num</i> <code>-b</code> <i>num</i> <code>-a</code> <i>track</i> <code>-f</code> <i>commentfile</i> ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>avisync</code> is Copyright (C) by Thomas Oestreich.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>avisync</code> shift audio on frame basis.</p>
 <h2>OPTIONS</h2>
 <dl>

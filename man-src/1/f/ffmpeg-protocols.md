@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg-protocols(1)"
 name: "ffmpeg-protocols"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmpeg-protocols/"
 description: "ffmpeg-protocols – FFmpeg protocols"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes the input and output protocols provided by the libavformat library.</p>
 <h2>PROTOCOL OPTIONS</h2>
 <p> The libavformat library provides some generic global options, which can be set on all the protocols. In addition each protocol may support so-called private options, which are specific for that component. </p>

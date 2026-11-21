@@ -1,4 +1,5 @@
 ---
+
 title: "skopeo(1)"
 name: "skopeo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-skopeo/"
 description: "skopeo — Various operations with container images images and container image registries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>skopeo</code> [<i>global options</i>] <i>command</i> [<i>command options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> skopeo is a command line utility providing various operations with container images and container image registries. For example, it is able to inspect a repository on a Docker registry and fetch image. It fetches the repository&#8217;s manifest and it is able to show you a docker inspect-like json output about a whole repository or a tag. This tool, in contrast to docker inspect, helps you gather useful information about a repository or a tag without requiring you to run docker pull &#8211; e.g. &#8211; which tags are available for the given repository? which labels the image has? </p>
 <p> It also allows you to copy container images between various registries, possibly converting them as necessary, and to sign and verify images. </p>
 <h2>IMAGE NAMES</h2>

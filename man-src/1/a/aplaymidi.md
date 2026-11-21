@@ -1,4 +1,5 @@
 ---
+
 title: "aplaymidi(1)"
 name: "aplaymidi"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aplaymidi/"
 description: "aplaymidi – play Standard MIDI Files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aplaymidi</code> -p client:port[,&#8230;] [-d delay] midifile &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>aplaymidi</code> is a command-line utility that plays the specified MIDI file(s) to one or more ALSA sequencer ports. </p>
 <h2>OPTIONS</h2>
 <dl>

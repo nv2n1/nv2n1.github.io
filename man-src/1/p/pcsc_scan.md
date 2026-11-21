@@ -1,4 +1,5 @@
 ---
+
 title: "pcsc_scan(1)"
 name: "pcsc_scan"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pcsc_scan/"
 description: "pcsc_scan – regularly scans every PC/SC readers connected to the host"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pcsc_scan [</code><i>options</i><code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pcsc_scan</code> command. </p>
 <p> <code>pcsc_scan</code> is a program that regularly scans every PC/SC readers connected to the host </p>
 <p> The normal way to exit the program is to use Control-C. </p>

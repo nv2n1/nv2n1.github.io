@@ -1,4 +1,5 @@
 ---
+
 title: "inc(1)"
 name: "inc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-inc/"
 description: "inc – incorporate new mail"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>inc</code> [<i>+folder</i>] [<code>-audit</code> <i>audit-file</i>] [<code>-noaudit</code>] [<code>-changecur</code> | <code>-nochangecur</code>] [<code>-form</code> <i>formfile</i>] [<code>-format</code> <i>string</i>] [<code>-file</code> <i>name</i>] [<code>-silent</code> | <code>-nosilent</code>] [<code>-truncate</code> | <code>-notruncate</code>] [<code>-width</code> <i>columns</i>] [<code>-host</code> <i>hostname</i>] [<code>-port</code> <i>portname/number</i>] [<code>-user</code> <i>username</i>] [<code>-pack</code> <i>file</i>] [<code>-nopack</code>] [<code>-proxy</code> <i>command</i>] [<code>-sasl</code> | <code>-nosasl</code>] [<code>-saslmech</code> <i>mechanism</i>] [<code>-snoop</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Inc</code></p>
 <dd>incorporates mail from the user&#8217;s incoming mail drop into an <code>nmh</code> folder. If the mail drop is a file, it can be in <code>mbox</code> or <code>MMDF</code> format. If the mail drop is a directory it will considered to be a <code>Maildir</code> format mail drop. </dd>
 <p> You may specify which folder to use with <i>+folder</i>. If no folder is specified, then <code>inc</code> will use either the folder given by a (non-empty) &#8220;<i>Inbox</i>&#8221; entry in the user&#8217;s profile, or the folder named &#8220;<i>inbox</i>&#8221;. If the specified (or default) folder doesn&#8217;t exist, the user will be queried prior to its creation. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "namazu(1)"
 name: "namazu"
 section: "1"
@@ -9,9 +10,7 @@ description: "namazu – a search program of Namazu"
 
 <h2>NAME</h2>
 <p> namazu &#8211; a search program of Namazu</p>
-<h2>SYNOPSIS</h2>
 <p> <code>namazu</code> [<i>options</i>] <i>&lt;query&gt; </i>[<i>index</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> namazu 2.0.19, a search program of Namazu.</p>
 <dl>
 <dt><code>-n</code>, <code>&#8211;max</code>=<i>NUM</i></dt>

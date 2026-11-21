@@ -1,4 +1,5 @@
 ---
+
 title: "perlsource(1)"
 name: "perlsource"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlsource/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlsource - A guide to the Perl source tree 
 
- perlsource - A guide to the Perl source tree 
-
-<h2>DESCRIPTION</h2>
-
- This document describes the layout of the Perl source tree. If you're hacking on the Perl core, this will help you find what you're looking for.
+This document describes the layout of the Perl source tree. If you're hacking on the Perl core, this will help you find what you're looking for.
 
 <h2>FINDING YOUR WAY AROUND</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "kombine(1)"
 name: "kombine"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-kombine/"
 description: "kombine – Combining (averaging) of CCD frames"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>kombine </code><i>[options] source_file &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The Kombine program combines a set of CCD frames to a single CCD frame. The source frames should be corrected already. The source frames are shifted by the offset stored in the corresponding MAT file. The MAT files are products of the Munimatch utility. Then, the resulting values are computed pixel by pixel by means of the mean algorithm (sum divided by total number of frames). Pixels in those regions, which are not covered by all frames, are set to zero. Pixels, which are zero on at least one of the source frames, are set always to zero. Pixels, which are overexposed on one the source frames, are set always to maximal value (655535 ADU). </p>
 <p> All source frames must be in FITS format and of same dimensions. Frames of the same color filter should be used. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

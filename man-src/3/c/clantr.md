@@ -1,4 +1,5 @@
 ---
+
 title: "clantr(3)"
 name: "clantr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clantr/"
 description: "clantr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clantr</code> (NORM, UPLO, DIAG, M, N, A, LDA, WORK)<br />
  <i></i><code>CLANTR</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a trapezoidal or triangular matrix.</p>

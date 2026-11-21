@@ -1,4 +1,5 @@
 ---
+
 title: "traits_type(3)"
 name: "traits_type"
 section: "3"
@@ -6,8 +7,8 @@ letter: "t"
 url: "/docs/linux/man/3-traits_type/"
 description: "QuantLib::PiecewiseDefaultCurve – Piecewise default-probability term structure."
 ---
+
 <p>QuantLib::PiecewiseDefaultCurve &#8211; Piecewise default-probability term structure. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructures/credit/piecewisedefaultcurve.hpp&gt; </p>

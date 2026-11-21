@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-retrace-client(1)"
 name: "abrt-retrace-client"
 section: "1"
@@ -6,22 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-retrace-client/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-retrace-client - Handles the communication with Retrace server. 
 
- abrt-retrace-client - Handles the communication with Retrace server. 
+<i>abrt-retrace-client</i> &lt;operation&gt; [options]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-retrace-client</i> &lt;operation&gt; [options]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- This tool is able to communicate with Retrace server: create a new task, ask about task's status, download log or backtrace of a finished task.
+This tool is able to communicate with Retrace server: create a new task, ask about task's status, download log or backtrace of a finished task.
 
 <h3>Integration with libreport events</h3>
 

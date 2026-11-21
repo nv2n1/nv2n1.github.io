@@ -1,4 +1,5 @@
 ---
+
 title: "perlwin32(1)"
 name: "perlwin32"
 section: "1"
@@ -6,9 +7,8 @@ letter: "p"
 url: "/docs/linux/man/1-perlwin32/"
 description: "perlwin32 – Perl under Windows"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> These are instructions for building Perl under Windows 2000 and later.  </p>
-<h2>DESCRIPTION</h2>
 <p> Before you start, you should glance through the <font SIZE="-1">README</font> file found in the top-level directory to which the Perl distribution was extracted. Make sure you read and understand the terms under which this software is being distributed. </p>
 <p> Also make sure you read ``<font SIZE="-1">BUGS AND CAVEATS&#8217;&#8216;</font> below for the known limitations of this port. </p>
 <p> The <font SIZE="-1">INSTALL</font> file in the perl top-level has much information that is only relevant to people building Perl on Unix-like systems. In particular, you can safely ignore any information that talks about ``Configure&#8217;&#8216;. </p>

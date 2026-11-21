@@ -1,4 +1,5 @@
 ---
+
 title: "svn-bisect(1)"
 name: "svn-bisect"
 section: "1"
@@ -6,20 +7,13 @@ letter: "s"
 url: "/docs/linux/man/1-svn-bisect/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+svn-bisect 
 
- svn-bisect 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 $ svn - bisect-- min 25000 --max 26000 start $ svn - bisect bad $ svn - bisect bad $ svn - bisect good[etc etc] $ svn - bisect reset
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This tool's purpose is to help you determine which revision of a subversion repository contains a change. It does this by employing a binary search. It will manage the current revision of your checkout directory, and narrow in on the target revision, as you give it clues about the current revision such as ``before'' (this revision is before the one you want) or ``after'' (this revision is after the one you want). 
+This tool's purpose is to help you determine which revision of a subversion repository contains a change. It does this by employing a binary search. It will manage the current revision of your checkout directory, and narrow in on the target revision, as you give it clues about the current revision such as ``before'' (this revision is before the one you want) or ``after'' (this revision is after the one you want). 
 
  Start a bisect session with the ``start'' command. Then, walk the binary tree by using the ``before'' and ``after'' commands. When you are done, the tool will tell you the target revision. 
 

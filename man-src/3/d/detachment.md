@@ -1,4 +1,5 @@
 ---
+
 title: "detachment(3)"
 name: "detachment"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-detachment/"
 description: "QuantLib::CDO – collateralized debt obligation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/cdo.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Public Member Functions</h3>

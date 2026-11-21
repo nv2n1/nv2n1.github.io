@@ -1,4 +1,5 @@
 ---
+
 title: "convmv(1)"
 name: "convmv"
 section: "1"
@@ -6,7 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-convmv/"
 description: "convmv – converts filenames from one encoding to another"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>convmv</code> [<code>options</code>] <font SIZE="-1">FILE</font>(S) ... <font SIZE="-1">DIRECTORY</font>(S)  </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -76,7 +77,6 @@ description: "convmv – converts filenames from one encoding to another"
 <dt><code>--dump-options</code></dt>
 <dd> <p> print a list of all available options </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>convmv</code> is meant to help convert a single filename, a directory tree and the contained files or a whole filesystem into a different encoding. It just converts the filenames, not the content of the files. A special feature of convmv is that it also takes care of symlinks, also converts the symlink target pointer in case the symlink target is being converted, too. </p>
 <p> All this comes in very handy when one wants to switch over from old 8-bit locales to <font SIZE="-1">UTF-8</font> locales. It is also possible to convert directories to <font SIZE="-1">UTF-8</font> which are already partly <font SIZE="-1">UTF-8</font> encoded. convmv is able to detect if certain files are <font SIZE="-1">UTF-8</font> encoded and will skip them by default. To turn this smartness off use the <code>&quot;--nosmart&quot;</code> switch.  </p>
 <h3>Filesystem issues</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "ttx(1)"
 name: "ttx"
 section: "1"
@@ -9,9 +10,7 @@ description: "ttx – tool for manipulating TrueType and OpenType fonts"
 
 <h2>NAME</h2>
 <p> <code>ttx</code> &#8211; tool for manipulating TrueType and OpenType fonts</p>
-<h2>SYNOPSIS</h2>
 <p> [<i>option &#8230;</i> ] <i>file &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> is a tool for manipulating TrueType and OpenType fonts. It can convert TrueType and OpenType fonts to and from an <code>XML -based format called</code> <code>TTX</code> <code>TTX</code> files have a `.ttx&#8217; extension. </p>
 <p> For each <i>file</i> argument it is given, detects whether it is a `.ttf&#8217; , `.otf&#8217; or `.ttx&#8217; file and acts accordingly: if it is a `.ttf&#8217; or `.otf&#8217; file, it generates a `.ttx&#8217; file; if it is a `.ttx&#8217; file, it generates a `.ttf&#8217; or `.otf&#8217; file. </p>
 <p> By default, every output file is created in the same directory as the corresponding input file and with the same name except for the extension, which is substituted appropriately. never overwrites existing files; if necessary, it appends a suffix to the output file name before the extension, as in Arial#1.ttf</p>

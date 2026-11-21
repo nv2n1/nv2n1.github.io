@@ -1,4 +1,5 @@
 ---
+
 title: "euca-add-keypair(1)"
 name: "euca-add-keypair"
 section: "1"
@@ -9,7 +10,6 @@ description: "euca-add-keypair – Eucalyptus tool: Creates a new key pair for u
 
 <h2>NAME</h2>
 <p> euca-add-keypair &#8211; Eucalyptus tool: Creates a new key pair for use with instances.</p>
-<h2>DESCRIPTION</h2>
 <p> Creates a new key pair for use with instances. </p>
 <p> euca-add-keypair [-h, <code>&#8211;help]</code> [&#8211;version] [&#8211;debug] keypair_name </p>
 <p> REQUIRED PARAMETERS </p>

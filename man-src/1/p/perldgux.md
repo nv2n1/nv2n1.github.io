@@ -1,4 +1,5 @@
 ---
+
 title: "perldgux(1)"
 name: "perldgux"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perldgux/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perldgux - Perl under DG/UX. 
 
- perldgux - Perl under DG/UX. 
-
-<h2>SYNOPSIS</h2>
-
- One can read this document in the following formats: 
+One can read this document in the following formats: 
 
  <pre>
         man perldgux
@@ -24,9 +20,7 @@ url: "/docs/linux/man/1-perldgux/"
 
  to list some (not all may be available simultaneously), or it may be read <i>as is</i>: as <i></i><font SIZE="-1"><i>README</i></font><i>.dgux</i>.
 
-<h2>DESCRIPTION</h2>
-
- Perl 5.7/8.x for <font SIZE="-1">DG/UX</font> ix86 R4.20MU0x
+Perl 5.7/8.x for <font SIZE="-1">DG/UX</font> ix86 R4.20MU0x
 
 <h2>BUILDING PERL ON DG/UX</h2>
 

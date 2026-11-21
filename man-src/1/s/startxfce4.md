@@ -1,4 +1,5 @@
 ---
+
 title: "startxfce4(1)"
 name: "startxfce4"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-startxfce4/"
 description: "startxfce4 – initialize an Xfce session"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>startxfce4</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>startxfce4 </code> is a script responsible for starting an Xfce session. It runs <code>xinit </code> passing the file specified in the <code>FILES</code> subsection as an argument. </p>
 <p> You may want to modify the default <code>xinitrc</code> file. In order to do that, copy <i>/etc/xdg/xfce4/xinitrc</i> to <i>~/.config/xfce4/xinitrc</i> and modify that file.</p>
 <h2>FILES</h2>

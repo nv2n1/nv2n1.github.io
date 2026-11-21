@@ -1,4 +1,5 @@
 ---
+
 title: "viewres(1)"
 name: "viewres"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-viewres/"
 description: "viewres – graphical class browser for Xt"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>viewres</code> [-option &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>viewres</i> program displays a tree showing the widget class hierarchy of the Athena Widget Set. Each node in the tree can be expanded to show the resources that the corresponding class adds (i.e. does not inherit from its parent) when a widget is created. This application allows the user to visually examine the structure and inherited resources for the Athena Widget Set.</p>
 <h2>OPTIONS</h2>
 <p> <i>Viewres</i> accepts all of the standard toolkit command line options as well as the following:</p>

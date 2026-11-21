@@ -1,4 +1,5 @@
 ---
+
 title: "pmdesc(1)"
 name: "pmdesc"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pmdesc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pmdesc - print out version and whatis description of perl modules 
 
- pmdesc - print out version and whatis description of perl modules 
-
-<h2>DESCRIPTION</h2>
-
- Given one or more module names, show the version number (if known) and the `whatis' line, that is, the <font SIZE="-1">NAME</font> section's description, typically used for generation whatis databases.
+Given one or more module names, show the version number (if known) and the `whatis' line, that is, the <font SIZE="-1">NAME</font> section's description, typically used for generation whatis databases.
 
 <h2>EXAMPLES</h2>
 

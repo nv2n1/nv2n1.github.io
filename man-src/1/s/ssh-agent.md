@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-agent(1)"
 name: "ssh-agent"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-ssh-agent/"
 description: "ssh-agent – OpenSSH authentication agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-agent</code> &#8211; OpenSSH authentication agent </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ssh-agent</code> [-<code>c | s</code> ] [-[-<code>a </code><i>bind_address</i> ] ] [-<code>E </code><i>fingerprint_hash</i> ] [-<code>P </code><i>allowed_providers</i> ] [-<code>t </code><i>life</i> ]<br />
 <code>ssh-agent</code> [-<code>a </code><i>bind_address</i> ] [-<code>E </code><i>fingerprint_hash</i> ] [-<code>P </code><i>allowed_providers</i> ] [-<code>t </code><i>life</i> ] <i>command </i>[<i>arg &#8230;</i> ]<br />
 <code>ssh-agent</code> [-<code>c | s</code> ] &#8211;<code>k</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ssh-agent</code> is a program to hold private keys used for public key authentication. Through use of environment variables the agent can be located and automatically used for authentication when logging in to other machines using <a href="/docs/linux/man/1-ssh/">ssh</a>(1). </p>
 <p> The options are as follows:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "transxx(1)"
 name: "transxx"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-transxx/"
 description: "transxx – Create a pseudo translated PO file from a PO template file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>transxx</code> [<i>template.pot</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>transxx</code></p>
 <dd>is a command-line tool that produces a basic fleshed-out PO-file from a PO-template file. Some of the formatting and structure of the msgid strings will be copied to the msgstr strings, but otherwise text will be translated to &#8220;xx&#8221;. </dd>
 <p> The fleshed-out PO-file is sent to standard output. </p>

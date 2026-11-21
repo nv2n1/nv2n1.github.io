@@ -1,4 +1,5 @@
 ---
+
 title: "ldbedit(1)"
 name: "ldbedit"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ldbedit/"
 description: "ldbedit – Edit LDB databases using your preferred editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbedit</code> [-?] [&#8211;usage] [-s base|one|sub] [-b basedn] [-a] [-e editor] [-H LDB-URL] [expression] [attributes&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>ldbedit is a utility that allows you to edit LDB entries (in tdb files, sqlite files or LDAP servers) using your preferred editor. ldbedit generates an LDIF file based on your query, allows you to edit the LDIF, and then merges that LDIF back into the LDB backend.</dd>
 <h2>OPTIONS</h2>
 <p> -?, &#8211;help</p>

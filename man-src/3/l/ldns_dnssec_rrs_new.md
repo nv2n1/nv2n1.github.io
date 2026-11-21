@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_rrs_new(3)"
 name: "ldns_dnssec_rrs_new"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_dnssec_rrs_new, ldns_dnssec_rrs_free, ldns_dnssec_rrs_add_rr,
 
 <h2>NAME</h2>
 <p> ldns_dnssec_rrs_new, ldns_dnssec_rrs_free, ldns_dnssec_rrs_add_rr, ldns_dnssec_rrs_print </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,7 +17,6 @@ description: "ldns_dnssec_rrs_new, ldns_dnssec_rrs_free, ldns_dnssec_rrs_add_rr,
 <p> void ldns_dnssec_rrs_free(ldns_dnssec_rrs *rrs); </p>
 <p> ldns_status ldns_dnssec_rrs_add_rr(ldns_dnssec_rrs *rrs, ldns_rr *rr); </p>
 <p> void ldns_dnssec_rrs_print(FILE *out, ldns_dnssec_rrs *rrs); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_rrs_new</i>()</dt></dl>
 <dl>

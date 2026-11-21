@@ -1,4 +1,5 @@
 ---
+
 title: "jdb-java-1(1)"
 name: "jdb-java-1"
 section: "1"
@@ -10,7 +11,6 @@ description: "jdb – The Java Debugger"
 <h2>Name</h2>
 <p> jdb &#8211; The Java Debugger </p>
 <p> <code>jdb</code> helps you find and fix bugs in Java language programs. </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 jdb[options][class][arguments]
 </code></pre>
@@ -23,7 +23,6 @@ jdb[options][class][arguments]
 <dt>arguments</dt>
 <dd> Arguments passed to the <i>main()</i> method of <i>class</i>.</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Java Debugger, <code>jdb</code>, is a simple command-line debugger for Java classes. It is a demonstration of the <i>Java Platform Debugger Architecture</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/jpda/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/jpda/index.html</a> that provides inspection and debugging of a local or remote Java Virtual Machine. </p>
 <h3>Starting a jdb Session</h3>
 <p> There are many ways to start a jdb session. The most frequently used way is to have <code>jdb</code> launch a new Java Virtual Machine (VM) with the main class of the application to be debugged. This is done by substituting the command <code>jdb</code> for <code>java</code> in the command line. For example, if your application&#8217;s main class is MyClass, you use the following command to debug it under JDB: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "boolstuff(3)"
 name: "boolstuff"
 section: "3"
@@ -9,9 +10,7 @@ description: "boolstuff – Disjunctive Normal Form boolean expression C++ libra
 
 <h2>NAME</h2>
 <p> boolstuff &#8211; Disjunctive Normal Form boolean expression C++ library</p>
-<h2>SYNOPSIS</h2>
 <p> <code>g++ prog.cpp -lboolstuff</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>boolstuff</code> is a C++ library that contains an algorithm to convert a boolean expression binary tree into the Disjunctive Normal Form. The NOT operator is supported. A C API covers most of the library&#8217;s functionality. </p>
 <p> The Disjunctive Normal Form is an ORing of ANDed terms. In other words, if the OR is considered an additive operation and the AND a multiplicative operation, then the DNF is a sum of products. </p>
 <p> For example, the DNF of the expression <code>a&amp;(b|c)</code> is <code>a&amp;b|a&amp;c</code> </p>

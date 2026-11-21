@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtotiff(1)"
 name: "pnmtotiff"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pnmtotiff/"
 description: "pnmtotiff – convert a portable anymap into a TIFF file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtotiff</code> [<code>-none</code>|<code>-packbits</code>|<code>-lzw</code>|<code>-g3</code>|<code>-g4</code>] [<code>-2d</code>] [<code>-fill</code>] [<code>-predictor</code> <i>n</i>] [<code>-msb2lsb</code>|<code>-lsb2msb</code>] [<code>-rowsperstrip</code> <i>n</i>] [<code>-minisblack</code>|<code>-miniswhite</code>] [<code>-truecolor</code>] [<code>-color</code>] [<code>-indexbits</code> <i>1|2|4|8</i>] [<i>pnmfile</i>] </p>
 <p> Minimum unambiguous abbreviations of options are acceptable. </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PNM image as input. Produces a TIFF file as output. </p>
 <p> The output goes to Standard Output, which must be a seekable file. That means no pipes, but any regular file should work. </p>
 <h2>OPTIONS</h2>

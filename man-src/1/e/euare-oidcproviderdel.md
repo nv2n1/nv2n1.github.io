@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcproviderdel(1)"
 name: "euare-oidcproviderdel"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-oidcproviderdel – Delete an OpenID Connect provider"
 
 <h2>NAME</h2>
 <p> euare-oidcproviderdel &#8211; Delete an OpenID Connect provider</p>
-<h2>SYNOPSIS</h2>
 <p> euare-oidcproviderdel [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] OIDC</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete an OpenID Connect provider</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "virt-p2v(1)"
 name: "virt-p2v"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-virt-p2v/"
 description: "virt-p2v – Convert a physical machine to use KVM"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  virt-p2v
  virt-p2v.iso
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Virt-p2v converts a physical machine to run virtualized on <font SIZE="-1">KVM,</font> managed by libvirt, OpenStack, oVirt, Red Hat Enterprise Virtualisation (<font SIZE="-1">RHEV</font>), or one of the other targets supported by <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). </p>
 <p> Normally you don&#8217;t run the virt-p2v program directly. Instead you have to boot the physical machine using the bootable CD-ROM, <font SIZE="-1">ISO</font> or <font SIZE="-1">PXE</font> image. This bootable image contains the virt-p2v binary and runs it automatically. Booting from a CD-ROM/etc is required because the disks which are being converted must be quiescent. It is not safe to try to convert a running physical machine where other programs may be modifying the disk content at the same time. </p>
 <p> This manual page documents running the virt-p2v program. To create the bootable image you should look at <i><a href="/docs/linux/man/1-virt-p2v-make-disk/">virt-p2v-make-disk</a></i>(1) or <i><a href="/docs/linux/man/1-virt-p2v-make-kickstart/">virt-p2v-make-kickstart</a></i>(1).</p>

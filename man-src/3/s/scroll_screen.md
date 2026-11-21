@@ -1,4 +1,5 @@
 ---
+
 title: "scroll_screen(3)"
 name: "scroll_screen"
 section: "3"
@@ -6,14 +7,11 @@ letter: "s"
 url: "/docs/linux/man/3-scroll_screen/"
 ---
 
-
  </p>
 <h2>NAME</h2>
 <p> scroll_screen &#8211; Requests a hardware scroll request. Allegro game programming library.  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int scroll_screen(int x, int y);</code>  </p>
-<h2>DESCRIPTION</h2>
 <p> Attempts to scroll the hardware screen to display a different part of the virtual screen (initially it will be positioned at 0, 0, which is the top left corner). You can use this to move the screen display around in a large virtual screen space, or to page flip back and forth between two non-overlapping areas of the virtual screen. Note that to draw outside the original position in the screen bitmap you will have to alter the clipping rectangle with set_clip_rect(). </p>
 <p> Mode-X scrolling is reliable and will work on any card, other drivers may not work or not work reliably. See the platform-specific section of the docs for more information. </p>
 <p> Allegro will handle any necessary vertical retrace synchronisation when scrolling the screen, so you don&#8217;t need to call vsync() before it. This means that scroll_screen() has the same time delay effects as vsync().  </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libiperf(3)"
 name: "libiperf"
 section: "3"
@@ -10,16 +11,10 @@ url: "/docs/linux/man/3-libiperf/"
 
  libiperf - API for iperf3 network throughput tester 
 
-<h2>SYNOPSIS</h2>
-
- #include &lt;iperf_api.h&gt; 
+#include &lt;iperf_api.h&gt; 
  -liperf 
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Libiperf gives you access to all the functionality of the iperf3 network testing tool. You can build it directly into your own program, instead of having to run it as a shell command. 
+Libiperf gives you access to all the functionality of the iperf3 network testing tool. You can build it directly into your own program, instead of having to run it as a shell command. 
 
 <h2>CALLS</h2>
 

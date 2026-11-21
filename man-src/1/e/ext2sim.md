@@ -1,4 +1,5 @@
 ---
+
 title: "ext2sim(1)"
 name: "ext2sim"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-ext2sim/"
 description: "ext2sim – convert hierarchical"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ext2sim &#8211; convert hierarchical <i></p>
 <p><a href="/docs/linux/man/5-ext/">ext</a></i>(5) extracted-circuit files to flat <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ext2sim</code> [ <code>-a</code> <i>aliasfile</i> ] [ <code>-l</code> <i>labelsfile</i> ] [ <code>-o</code> <i>simfile</i> ] [ <code>-A</code> ] [ <code>-B</code> ] [ <code>-F</code> ] [ <code>-L</code> ] [ <code>-t</code> ] [ <i>extcheck-options</i> ] [ <i>-y num</i> ] [ <i>-f mit|lbl|su</i> ] [ <i>-J hier|flat</i> ] [ <i>-j device:sdRclass[/subRclass]/defaultSubstrate</i> ] <i>root</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Ext2sim will convert an extracted circuit from the hierarchical <i><a href="/docs/linux/man/5-ext/">ext</a></i>(5) representation produced by Magic to the flat <i><a href="/docs/linux/man/5-sim/">sim</a></i>(5) representation required by many simulation tools. The root of the tree to be extracted is the file <i>root</i><code>.ext</code>; it and all the files it references are recursively flattened. The result is a single, flat representation of the circuit that is written to the file <i>root</i><code>.sim</code>, a list of node aliases written to the file <i>root</i><code>.al</code>, and a list of the locations of all nodenames in CIF format, suitable for plotting, to the file <i>root</i><code>.nodes</code>. The file <i>root</i><code>.sim</code> is suitable for use with programs such as <i>crystal</i>(1), <i>esim</i>(1), or <i>sim2spice</i>(1). </p>
 <p> The following options are recognized:</p>
 <dl>

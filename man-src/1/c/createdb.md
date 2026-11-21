@@ -1,4 +1,5 @@
 ---
+
 title: "createdb(1)"
 name: "createdb"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-createdb/"
 description: "createdb – create a new PostgreSQL database"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>createdb</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>dbname</i>&nbsp;<wbr>[<i>description</i>]]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>createdb creates a new PostgreSQL database. </dd>
 <p> Normally, the database user who executes this command becomes the owner of the new database. However, a different owner can be specified via the <code>-O</code> option, if the executing user has appropriate privileges. </p>
 <p> createdb is a wrapper around the SQL command CREATE DATABASE (<code><a href="/docs/linux/man/7-create_database/">CREATE_DATABASE</a></code>(7)). There is no effective difference between creating databases via this utility and via other methods for accessing the server.</p>

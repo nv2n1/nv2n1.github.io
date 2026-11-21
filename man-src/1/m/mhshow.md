@@ -1,4 +1,5 @@
 ---
+
 title: "mhshow(1)"
 name: "mhshow"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mhshow/"
 description: "mhshow – display MIME messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhshow</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>file</i>] [<code>-part</code> <i>number</i>] &#8230; [<code>-type</code> <i>content</i>] &#8230; [<code>-concat</code> | <code>-noconcat</code>] [<code>-textonly</code> | <code>-notextonly</code>] [<code>-inlineonly</code> | <code>-noinlineonly</code>] [<code>-form</code> <i>formfile</i>] [<code>-markform</code> <i>formfile</i>] [<code>-rcache</code> <i>policy</i>] [<code>-wcache</code> <i>policy</i>] [<code>-check</code> | <code>-nocheck</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>mhshow</code> command display contents of a MIME (multi-media) message or collection of messages. </dd>
 <p> <code>mhshow</code> manipulates multi-media messages as specified in RFC 2045 to RFC 2049. Currently <code>mhshow</code> only supports encodings in message bodies, and does not support the encoding of message headers as specified in RFC 2047. </p>
 <p> By default <code>mhshow</code> will display only text parts of a message that are not marked as attachments. This behavior can be changed by the <code>-notextonly</code> and <code>-noinlineonly</code> switches. In addition, by using the <code>-part</code> and <code>-type</code> switches, you may further limit the scope of <code>mhshow</code> to particular subparts (of a multipart content) and/or particular content types. The inclusion of any <code>-part</code> or <code>-type</code> switches will override the default settings of <code>-textonly</code> and <code>-inlineonly.</code> </p>

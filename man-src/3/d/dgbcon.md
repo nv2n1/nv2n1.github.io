@@ -1,4 +1,5 @@
 ---
+
 title: "dgbcon(3)"
 name: "dgbcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbcon/"
 description: "dgbcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbcon</code> (NORM, N, KL, KU, AB, LDAB, IPIV, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>DGBCON</code></p>

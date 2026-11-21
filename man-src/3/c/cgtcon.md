@@ -1,4 +1,5 @@
 ---
+
 title: "cgtcon(3)"
 name: "cgtcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgtcon/"
 description: "cgtcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgtcon</code> (NORM, N, DL, D, DU, DU2, IPIV, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>CGTCON</code></p>

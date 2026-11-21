@@ -1,4 +1,5 @@
 ---
+
 title: "spftrs(3)"
 name: "spftrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spftrs/"
 description: "spftrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br />
  <i></i><code>SPFTRS</code></p>

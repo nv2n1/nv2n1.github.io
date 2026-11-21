@@ -1,4 +1,5 @@
 ---
+
 title: "gimpsvg(1)"
 name: "gimpsvg"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gimpsvg/"
 description: "gimpsvg – convert a GIMP gradient (ggr) to the SVG format."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gimpsvg</code> [-g&nbsp;<wbr><i>geometry</i>] [-h] [-o&nbsp;<wbr><i>file</i>] [-p] [-s&nbsp;<wbr><i>samples</i>] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>gimpsvg</code> utility converts gradient files from the <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1), the GNU Image Manipulation Program, to the SVG (scalar vector graphics) format. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified. </p>
 <p> The output is formatted for machines to read, rather than humans. A post-processor such as <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1) could be used in the latter case.</p>

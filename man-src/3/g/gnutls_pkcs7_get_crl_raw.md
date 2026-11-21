@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs7_get_crl_raw(3)"
 name: "gnutls_pkcs7_get_crl_raw"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs7_get_crl_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs7_get_crl_raw &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs7_get_crl_raw(gnutls_pkcs7_t </code><i>pkcs7</i><code>, int </code><i>indx</i><code>, void * </code><i>crl</i><code>, size_t * </code><i>crl_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_pkcs7_get_crl_raw – API function"
 <dd> the contents of the crl will be copied there (may be null)</dd>
 <dt>size_t * crl_size</dt>
 <dd> should hold the size of the crl</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return a crl of the PKCS7 or RFC2630 crl set.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value. If the provided buffer is not long enough, then <i>crl_size</i> is updated and <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> is returned. After the last crl has been read <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>

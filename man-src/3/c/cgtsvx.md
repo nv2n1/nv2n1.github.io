@@ -1,4 +1,5 @@
 ---
+
 title: "cgtsvx(3)"
 name: "cgtsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgtsvx/"
 description: "cgtsvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgtsvx</code> (FACT, TRANS, N, NRHS, DL, D, DU, DLF, DF, DUF, DU2, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code> CGTSVX computes the solution to system of linear equations A * X = B for GT matrices </code></p>

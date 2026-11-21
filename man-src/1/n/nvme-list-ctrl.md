@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-list-ctrl(1)"
 name: "nvme-list-ctrl"
 section: "1"
@@ -6,16 +7,9 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-list-ctrl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-list-ctrl - Send NVMe Identify List Controllers, return result and structure 
 
- nvme-list-ctrl - Send NVMe Identify List Controllers, return result and structure 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme list - ctrl&lt;device&gt;[--cntid = &lt;cntid&gt; | -c&lt;cntid&gt;]
                         [--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;] DESCRIPTION
 </code></pre> 

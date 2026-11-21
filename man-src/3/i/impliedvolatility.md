@@ -1,4 +1,5 @@
 ---
+
 title: "impliedvolatility(3)"
 name: "impliedvolatility"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-impliedvolatility/"
 description: "ql/instruments/impliedvolatility.hpp – Utilities for implied-volatility calculation."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt;<br />
  #include &lt;ql/quotes/simplequote.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>

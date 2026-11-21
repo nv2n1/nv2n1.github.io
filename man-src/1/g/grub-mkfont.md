@@ -1,4 +1,5 @@
 ---
+
 title: "grub-mkfont(1)"
 name: "grub-mkfont"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-mkfont/"
 description: "grub-mkfont – make GRUB font files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grub-mkfont</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>] <i>,FONT_FILES/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Convert common font file formats into PF2</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;force-autohint</code></dt>

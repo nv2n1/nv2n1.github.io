@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_data_chain_struct(3)"
 name: "ldns_dnssec_data_chain_struct"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec
 
 <h2>NAME</h2>
 <p> ldns_dnssec_data_chain, ldns_dnssec_data_chain_struct, ldns_dnssec_trust_tree </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_dnssec_data_chain_struct(); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_data_chain</i></dt>
 <dd>

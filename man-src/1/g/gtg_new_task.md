@@ -1,4 +1,5 @@
 ---
+
 title: "gtg_new_task(1)"
 name: "gtg_new_task"
 section: "1"
@@ -9,9 +10,7 @@ description: "gtg_new_task – Adds a task to the Getting Things GNOME! organize
 
 <h2>NAME</h2>
 <p> gtg_new_task &#8211; Adds a task to the <code>Getting Things GNOME!</code> organizer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gtg_new_task</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gtg_new_task</code> creates a new task in the Getting Things GNOME! organizer for the GNOME desktop via the DBUS message bus. Getting Things GNOME! must be running for the command to work.</p>
 <h2>FILES</h2>
 <p> None</p>

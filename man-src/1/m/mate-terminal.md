@@ -1,4 +1,5 @@
 ---
+
 title: "mate-terminal(1)"
 name: "mate-terminal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-terminal/"
 description: "mate-terminal – manual page for MATE Terminal Emulator"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

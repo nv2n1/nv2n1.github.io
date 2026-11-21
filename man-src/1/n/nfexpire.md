@@ -1,4 +1,5 @@
 ---
+
 title: "nfexpire(1)"
 name: "nfexpire"
 section: "1"
@@ -9,10 +10,8 @@ description: "nfexpire – data expiry program"
 
 <h2>NAME</h2>
 <p> nfexpire &#8211; data expiry program</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nfexpire [options]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nfexpire</code></p>
 <dd>is used to manage the expiration of old netflow data files, created by <a href="/docs/linux/man/1-nfcapd/">nfcapd</a>(1) or other data collectors such as <a href="/docs/linux/man/1-sfcapd/">sfcapd</a>(1). Data expiration is done either by <a href="/docs/linux/man/1-nfcapd/">nfcapd</a>(1) in auto expiry mode, or by nfexpire which can by run at any time or any desired time interval by cron. nfexpire can also be savely run while nfcapd auto expires files, for cleaning up full disks etc. nfexpire is sub directory hierarchy aware, and handles any format automatically. For a fast and efficient expiration, nfexpire creates and maintains a stat file named <code>.nfstat</code> in the data directory. Any <i>directory</i> supplied with the options below corresponds to the data directory supplied to <a href="/docs/linux/man/1-nfcapd/">nfcapd</a>(1) using option -l. </dd>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "tailf(1)"
 name: "tailf"
 section: "1"
@@ -9,9 +10,7 @@ description: "tailf – follow the growth of a log file"
 
 <h2>NAME</h2>
 <p> tailf &#8211; follow the growth of a log file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tailf</code> [<i>OPTION</i>] <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>tailf</code> will print out the last 10 lines of a file and then wait for the file to grow. It is similar to <code>tail -f</code> but does not access the file when it is not growing. This has the side effect of not updating the access time for the file, so a filesystem flush does not occur periodically when no log activity is happening. </p>
 <p> <code>tailf</code> is extremely useful for monitoring log files on a laptop when logging is infrequent and the user desires that the hard disk spin down to conserve battery life. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

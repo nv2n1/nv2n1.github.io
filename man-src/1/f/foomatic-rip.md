@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-rip(1)"
 name: "foomatic-rip"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-foomatic-rip/"
 description: "foomatic-rip – Universal print filter/RIP wrapper"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>General Options:</h3>
 <p> <code>foomatic-rip</code>&nbsp;<code>[-v]&nbsp;[-q]</code><i>&nbsp;&lt;mode-specific options&gt;</i> </p>
 <h3>Spooler-less printing filter:</h3>
 <p> <code>foomatic-rip</code>&nbsp;<code>[-P</code><i>&nbsp;&lt;printer&gt;</i><code>&nbsp;</code> | &nbsp;<code>&#8211;ppd</code> &nbsp;<i>&lt;ppdfile&gt;</i> <code>]</code> &nbsp;[<code>-J</code>&nbsp;<i>&lt;jobtitle&gt;</i> ] [<code>-o</code> &nbsp;<i>&lt;option&gt;</i><code>=</code><i>&lt;value&gt;</i> &nbsp;[&#8230;]] &nbsp;<code>[</code><i>&lt;files&gt;</i><code>]</code> </p>
 <h3>CUPS filter:</h3>
 <p> <code>foomatic-rip</code>&nbsp;<i>&lt;jobid&gt;</i><i>&nbsp;&lt;user&gt;</i><code>&nbsp;</code><i>&lt;jobtitle&gt;</i><i>&nbsp;&lt;numcopies&gt;</i><code>&nbsp;</code><i>&lt;options&gt;</i><i>&nbsp;</i><code>[</code><i>&lt;file&gt;</i><code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> foomatic-rip is a universal print filter which can be used as CUPS filter or stand-alone for spooler-less, direct printing. It has the following features: </p>
 <dl>
 <dt>&bull;</dt>

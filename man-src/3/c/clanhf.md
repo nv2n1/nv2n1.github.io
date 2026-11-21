@@ -1,4 +1,5 @@
 ---
+
 title: "clanhf(3)"
 name: "clanhf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clanhf/"
 description: "clanhf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clanhf</code> (NORM, TRANSR, UPLO, N, A, WORK)<br />
  <i></i><code>CLANHF</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a Hermitian matrix in RFP format.</p>

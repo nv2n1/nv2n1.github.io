@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_initialize(3)"
 name: "ldap_initialize"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldap_init, ldap_initialize, ldap_open – Initialize the LDAP libr
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 LDAP *ldap_open(host, port)
@@ -37,7 +37,6 @@ int proto;
 char *uri;
 LDAP **ldp;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ldap_open()</code> opens a connection to an LDAP server and allocates an LDAP structure which is used to identify the connection and to maintain per-connection information. <code>ldap_init()</code> allocates an LDAP structure but does not open an initial connection. <code>ldap_initialize()</code> allocates an LDAP structure but does not open an initial connection. <code>ldap_init_fd()</code> allocates an LDAP structure using an existing connection on the provided socket. One of these routines must be called before any operations are attempted. </p>
 <p> <code>ldap_open()</code> takes <i>host</i>, the hostname on which the LDAP server is running, and <i>port</i>, the port number to which to connect. If the default IANA-assigned port of 389 is desired, LDAP_PORT should be specified for <i>port</i>. The <i>host</i> parameter may contain a blank-separated list of hosts to try to connect to, and each host may optionally by of the form <i>host:port</i>. If present, the <i>:port</i> overrides the <i>port</i> parameter to <code>ldap_open()</code>. Upon successfully making a connection to an LDAP server, <code>ldap_open()</code> returns a pointer to an opaque LDAP structure, which should be passed to subsequent calls to <code>ldap_bind()</code>, <code>ldap_search()</code>, etc. Certain fields in the LDAP structure can be set to indicate size limit, time limit, and how aliases are handled during operations; read and write access to those fields must occur by calling <code><a href="/docs/linux/man/3-ldap_get_option/">ldap_get_option</a></code>(3) and <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3) respectively, whenever possible. </p>
 <p> <code>ldap_init()</code> acts just like <code>ldap_open()</code>, but does not open a connection to the LDAP server. The actual connection open will occur when the first operation is attempted. </p>

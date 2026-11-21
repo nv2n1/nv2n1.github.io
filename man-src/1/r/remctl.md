@@ -1,4 +1,5 @@
 ---
+
 title: "remctl(1)"
 name: "remctl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-remctl/"
 description: "remctl – Remote execution tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> remctl [<code>-dhv</code>] [<code>-b</code> <i>source-ip</i>] [<code>-p</code> <i>port</i>] [<code>-s</code> <i>service</i>]<br />
 &nbsp;<wbr><i>host</i>&nbsp;<wbr><i>command</i>&nbsp;<wbr>[<i>subcommand</i>&nbsp;<wbr>[<i>parameters</i>&nbsp;<wbr>&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>remctl</code> is a program that allows a user to execute commands remotely on a server that is running the remctld daemon. <code>remctl</code> does not interpret the commands given to it. It passes them to the server and displays the return message. The commands must be defined on the server-side before a <code>remctl</code> client can execute them, and the user running <code>remctl</code> must be authorized to execute the particular command on the server. </p>
 <p> Access to remote commands is authenticated via Kerberos GSS-API, so a user must have a ticket granting ticket to use <code>remctl</code>. All transmissions to and from the remctld server are encrypted using GSS-API&#8217;s security layer. </p>
 <p> <i>host</i> is the hostname of the target server. <i>command</i> and <i>subcommand</i> together specify the command to run and correspond to the command names in the configuration file on the server. <i>parameters</i> are any additional command-line parameters to pass to the remote command.</p>

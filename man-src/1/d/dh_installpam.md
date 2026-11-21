@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installpam(1)"
 name: "dh_installpam"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installpam/"
 description: "dh_installpam – install pam support files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installpam</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installpam</code> is a debhelper program that is responsible for installing files used by <font SIZE="-1">PAM</font> into package build directories.</p>
 <h2>FILES</h2>
 <dl>

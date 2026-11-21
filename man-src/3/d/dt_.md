@@ -1,4 +1,5 @@
 ---
+
 title: "dt_(3)"
 name: "dt_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dt_/"
 description: "QuantLib::ExtendedBinomialTree – Binomial tree base class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/lattices/extendedbinomialtree.hpp&gt; </p>
 <p> Inherits <code>Tree&lt; T &gt;</code>. </p>
 <h3>Public Types</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "checkmk(1)"
 name: "checkmk"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-checkmk/"
 description: "checkmk – Awk script for generating C unit tests for use with the Check unit testing framework."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>checkmk</code> [ <code>clean_mode=1</code> ] [ <i>input-file</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> Generate C-language source files containing unit tests for use with the Check unit testing framework. The aim of this script is to automate away some of the typical boilerplate one must write when writing a test suite using Check: specifically, the instantiation of an SRunner, Suite(s), and TCase(s), and the building of relationships between these objects and the test functions. </p>
 <p> This tool is intended to be used by those who are familiar with the Check unit testing framework. Familiarity with the framework will be assumed throughout this manual. </p>
 <p> The Check framework, along with information regarding it, is available at <a rel="nofollow" href="http://check.sourceforge.net/">http://check.sourceforge.net/</a> &lt;URL:<a href="http://check.sourceforge.net/">http://check.sourceforge.net/</a>&gt;. </p>

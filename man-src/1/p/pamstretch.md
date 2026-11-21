@@ -1,4 +1,5 @@
 ---
+
 title: "pamstretch(1)"
 name: "pamstretch"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pamstretch/"
 description: "pamstretch – scale up a PNM or PAM image by interpolating between pixels"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamstretch</code> [<code>-xscale=</code><i>X</i>] [<code>-yscale=</code><i>Y</i>]<br />
  [<code>-blackedge</code>] [<code>-dropedge</code>] <i>N</i> [<i>infile</i>] </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pamstretch </code> scales up pictures by integer values, either vertically, horizontally, or both. <code>pamstretch </code> differs from <code>pnmscale</code> and <code>pnmenlarge</code> in that when it inserts the additional rows and columns, instead of making the new row or column a copy of its neighbor, <code>pamstretch</code> makes the new row or column an interpolation between its neighbors. In some images, this produces better looking output. </p>
 <p> To scale up to non-integer pixel sizes, e.g. 2.5, try <code><a href="/docs/linux/man/1-pamstretch-gen/">pamstretch-gen</a></code>(1) instead. </p>
 <p> Options let you select alternative methods of dealing with the right/bottom edges of the picture. Since the interpolation is done between the top-left corners of the scaled-up pixels, it&#8217;s not obvious what to do with the right/bottom edges. The default behaviour is to scale those up without interpolation (more precisely, the right edge is only interpolated vertically, and the bottom edge is only interpolated horizontally), but there are two other possibilities, selected by the <code>blackedge</code> and <code>dropedge</code> options. </p>

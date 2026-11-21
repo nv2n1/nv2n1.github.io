@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-set-selections(1)"
 name: "debconf-set-selections"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-debconf-set-selections/"
 description: "debconf-set-selections – insert new values into the debconf database"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  debconf-set-selections file
  debconf-get-selections | ssh newhost debconf-set-selections
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>debconf-set-selections</code> can be used to pre-seed the debconf database with answers, or to change answers in the database. Each question will be marked as seen to prevent debconf from asking the question interactively. </p>
 <p> Reads from a file if a filename is given, otherwise from stdin.</p>
 <h2>WARNING</h2>

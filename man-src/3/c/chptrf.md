@@ -1,4 +1,5 @@
 ---
+
 title: "chptrf(3)"
 name: "chptrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chptrf/"
 description: "chptrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chptrf</code> (UPLO, N, AP, IPIV, INFO)<br />
  <i></i><code>CHPTRF</code></p>

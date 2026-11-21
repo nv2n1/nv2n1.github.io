@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-instance(1)"
 name: "doveadm-instance"
 section: "1"
@@ -9,10 +10,8 @@ description: "doveadm-instance – Manage the list of running Dovecot instances"
 
 <h2>NAME</h2>
 <p> doveadm-instance &#8211; Manage the list of running Dovecot instances</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>instance list</code><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>instance remove</code> <i>name</i> | <i>base_dir</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>doveadm instance</code> commands are used to manage the list of Dovecot instances running on the server. In most installations there is only one Dovecot instance, but in some cases is may be useful to have more (e.g. running director proxy and backend in the same server). </p>
 <p> Instances are added to the list automatically when Dovecot is started. Each instance is uniquely identified by its <i>base_dir</i> setting. Instances can be named by setting <i>instance_name</i> in each instance&#8217;s <i>dovecot.conf</i>. When an instance is named, it can be accessed easily by giving <code>-i&nbsp;<wbr></code><i>instance_name</i> command line parameter for Dovecot binaries (e.g. doveadm).</p>
 <h2>OPTIONS</h2>

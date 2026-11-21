@@ -1,4 +1,5 @@
 ---
+
 title: "fgetpwent(3)"
 name: "fgetpwent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgetpwent/"
 description: "fgetpwent – get password file entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;pwd.h&gt;
 #include &lt;stdio.h&gt;
@@ -20,7 +20,6 @@ struct passwd *fgetpwent(FILE *stream);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_SVID_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>fgetpwent</code>() function returns a pointer to a structure containing the broken out fields of a line in the file <i>stream</i>. The first time it is called it returns the first entry; thereafter, it returns successive entries. The file referred to by <i>stream</i> must have the same format as <i>/etc/passwd</i> (see <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5)). </p>
 <p> The <i>passwd</i> structure is defined in <i>&lt;pwd.h&gt;</i> as follows: </p>
 <p> struct passwd {<br />

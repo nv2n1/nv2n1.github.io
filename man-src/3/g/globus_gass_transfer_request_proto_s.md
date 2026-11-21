@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_request_proto_s(3)"
 name: "globus_gass_transfer_request_proto_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_gass_transfer_request_proto_s –"
 ---
 
 <p> Protocol module request handling structure.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_transfer_proto.h&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>globus_gass_transfer_proto_send_t</code> <code>send_buffer</code> </p>

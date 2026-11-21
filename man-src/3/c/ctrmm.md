@@ -1,4 +1,5 @@
 ---
+
 title: "ctrmm(3)"
 name: "ctrmm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctrmm/"
 description: "ctrmm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrmm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
  <i></i><code>CTRMM</code></p>

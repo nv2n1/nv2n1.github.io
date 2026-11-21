@@ -1,4 +1,5 @@
 ---
+
 title: "funionfs(1)"
 name: "funionfs"
 section: "1"
@@ -9,7 +10,6 @@ description: "funionfs – user-space directory concatenation."
 
 <h2>NAME</h2>
 <p> funionfs &#8211; user-space directory concatenation.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>funionfs </code> <i>upper_dir mountpoint [ option ] &#8230;</i></p>
 <h2>OPTIONS</h2>
 <p>&nbsp;<wbr>-o opt,[opt&#8230;]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>mount options<br />
@@ -40,7 +40,6 @@ mounter&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<
 <p> You could use the mount command instead :<br />
 mount -t fuse funionfs#/upper_dir mountpoint&nbsp;<wbr>[&nbsp;<wbr>options&nbsp;<wbr>] </p>
 <p> If you want to name all directories in &#8216;-o dirs=&#8217;, then pass &quot;none&quot; as upper_dir </p>
-<h2>DESCRIPTION</h2>
 <p> <i>funionfs</i> concatenates directories mentioned in options (and <i>upper_dir</i> ) to <i>mountpoint. </i> Also, although some (but not all) of the directories are read-only, you still can write in resulting mounted directory. For example, if you have files <i>a/a </i> and <i>b/b </i> and mount mountpoint <i>r</i> with &quot;-o dirs=a=ro:b=ro:w=rw&quot;, then you will see files <i>r/a</i> and <i>r/b.</i> You will be able to write to them, and original files will remain intact (changes will go to <i>w</i> ). Note that it is impossible to have file with name ending by <i>del_string</i> value, if you create <i>r/a_DELETED~</i> in mentioned example, it will dissapear together with a.</p>
 <h2>SEE ALSO</h2>
 <p> The source..</p>

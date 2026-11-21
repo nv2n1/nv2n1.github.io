@@ -1,4 +1,5 @@
 ---
+
 title: "rotconverter(1)"
 name: "rotconverter"
 section: "1"
@@ -9,10 +10,8 @@ description: "rotconverter – Manipulate total reconstruction and stage rotatio
 
 <h2>NAME</h2>
 <p> rotconverter &#8211; Manipulate total reconstruction and stage rotations</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rotconverter</code> [ <code>+</code>|<code>&#8211;</code> ] <i>rotA</i> [ <code>+</code>|<code>&#8211;</code> <i>rotB</i> ] [ <code>+</code>|<code>&#8211;</code> <i>rotC</i> ] &#8230; [ ] [ ] [ [<i>fact</i>] ] [ <i>out</i> ] [ ] [ ] [ ] [ ] [ ] [ [<i>level</i>] ] [ <code>-h</code><i>&lt;headers&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rotconverter</code> reads one or more plate motion models (stage or total reconstruction rotations) stored in the given files. If more than one plate motion model is given we will add or subtract them in the order they were listed. The minus sign means we should first transpose the rotation and then add it to the previous rotation. If a file cannot be opened we will attempt to decode the file name as a single rotation whose parameters are separated by slashes.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

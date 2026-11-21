@@ -1,4 +1,5 @@
 ---
+
 title: "xsm(1)"
 name: "xsm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xsm/"
 description: "xsm – X Session Manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xsm</code> [-display <i>display</i>] [-session <i>sessionName</i>] [-verbose]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>xsm</i> is a session manager. A session is a group of applications, each of which has a particular state. <i>xsm</i> allows you to create arbitrary sessions &#8211; for example, you might have a &quot;light&quot; session, a &quot;development&quot; session, or an &quot;xterminal&quot; session. Each session can have its own set of applications. Within a session, you can perform a &quot;checkpoint&quot; to save application state, or a &quot;shutdown&quot; to save state and exit the session. When you log back in to the system, you can load a specific session, and you can delete sessions you no longer want to keep. </p>
 <p> Some session managers simply allow you to manually specify a list of applications to be started in a session. <i>xsm</i> is more powerful because it lets you run applications and have them automatically become part of the session. On a simple level, <i>xsm</i> is useful because it gives you this ability to easily define which applications are in a session. The true power of <i>xsm</i>, however, can be taken advantage of when more and more applications learn to save and restore their state.</p>
 <h2>OPTIONS</h2>

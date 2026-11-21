@@ -1,4 +1,5 @@
 ---
+
 title: "mongo(1)"
 name: "mongo"
 section: "1"
@@ -9,7 +10,6 @@ description: "mongo – MongoDB Shell"
 
 <h2>NAME</h2>
 <p> mongo &#8211; MongoDB Shell</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mongo</code> is an interactive JavaScript shell interface to MongoDB, which provides a powerful interface for systems administrators as well as a way for developers to test queries and operations directly with the database. <code>mongo</code> also provides a fully functional JavaScript environment for use with a MongoDB. This document addresses the basic invocation of the <code>mongo</code> shell and an overview of its usage.</p>
 <h2>OPTIONS</h2>
 <h3>Core Options</h3>

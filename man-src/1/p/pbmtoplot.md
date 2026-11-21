@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtoplot(1)"
 name: "pbmtoplot"
 section: "1"
@@ -8,9 +9,7 @@ description: "pbmtoplot – convert a portable bitmap into a Unix"
 ---
 
 <p> plot(5) file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtoplot</code> [<i>pbmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as input. Produces a Unix <i>plot</i> file. </p>
 <p> Note that there is no plottopbm tool &#8211; this transformation is one-way.</p>
 <h2>SEE ALSO</h2>

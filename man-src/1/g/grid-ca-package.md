@@ -1,4 +1,5 @@
 ---
+
 title: "grid-ca-package(1)"
 name: "grid-ca-package"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-grid-ca-package/"
 description: "grid-ca-package – Prepare a CA certificate, configuration, and policy for distribution"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grid-ca-sign</code> [-ca <i>HASH</i>] [-g] [-b] [-r] [-d] </p>
 <p> <code>grid-ca-sign</code> [ -help| -h| -usage| -version| -versions ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>grid-ca-sign</code> utility creates a tarball containing an RPM spec file and the files needed to use a CA with grid tools. It optionally will also create a GPT package for distributing a CA. </p>
 <p> By default, the <code>grid-ca-sign</code> utility displays a list of installed grid CA and prompts for which CA to package. It then creates a tarball containing the CA certificate, signing policy, CA configuration files, and an spec script to generate a binary RPM package containing the CA. If the CA hash is known prior to running <code>grid-ca-sign</code>, it may provided as an argument to the <i>-ca</i> parameter to avoid prompting. </p>
 <p> In addition to generating a spec script and tarball, <code>grid-ca-sign</code> creates a GPT package if either the <i>-g</i> or <i>-b</i> options are used on the command-line. These packages may be used to distribute a CA and configuration to systems which do not support RPM packages. </p>

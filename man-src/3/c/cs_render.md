@@ -1,4 +1,5 @@
 ---
+
 title: "cs_render(3)"
 name: "cs_render"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cs_render/"
 description: "cs_render – render a CS parse tree"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;
 </code></pre>
@@ -22,7 +22,6 @@ NEOERR *cs_render(CSPARSE *parse, void *ctx, CSOUTFUNC cb);
  cb &#8211; a CSOUTFUNC called to render the output. A CSOUTFUNC is<br />
  defined as:<br />
  typedef NEOERR* (*CSOUTFUNC)(void *, char *); </p>
-<h2>DESCRIPTION</h2>
 <p> cs_render will evaluate a CS parse tree, calling the CSOUTFUNC passed to it for output. Note that calling cs_render multiple times on the same parse tree may or may not render the same output as the set statement has side-effects, it updates the HDF data used by the render. Typically, you will call one of the cs_parse functions before calling this function. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

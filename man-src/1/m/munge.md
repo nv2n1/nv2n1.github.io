@@ -1,4 +1,5 @@
 ---
+
 title: "munge(1)"
 name: "munge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-munge/"
 description: "munge – MUNGE credential encoder"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>munge</code> [<i>OPTION</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>munge</code> program creates an MUNGE credential containing the UID and GID of the calling process. Additional payload data can be encapsulated in as well. The returned credential can be passed to another process which can validate its contents (e.g., via the <code>unmunge</code> program). This allows an unrelated and potentially remote process to ascertain the identity of the calling process. </p>
 <p> By default, payload input is read from stdin and the credential is written to stdout. </p>
 <h2>OPTIONS</h2>

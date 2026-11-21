@@ -1,4 +1,5 @@
 ---
+
 title: "sla_syrcond(3)"
 name: "sla_syrcond"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_syrcond/"
 description: "sla_syrcond.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>sla_syrcond</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, CMODE, C, INFO, WORK, IWORK)<br />
  <i></i><code>SLA_SYRCOND</code> estimates the Skeel condition number for a symmetric indefinite matrix.</p>

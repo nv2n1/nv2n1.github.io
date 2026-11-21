@@ -1,4 +1,5 @@
 ---
+
 title: "sl(1)"
 name: "sl"
 section: "1"
@@ -9,9 +10,7 @@ description: "sl – cure your bad habit of mistyping"
 
 <h2>NAME</h2>
 <p> sl &#8211; cure your bad habit of mistyping</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sl</code> [ <code>-alFc</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sl</code> is a highly advanced animation program for curing your bad habit of mistyping. </p>
 <dl>
 <dt><code>-a</code></dt>

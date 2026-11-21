@@ -1,4 +1,5 @@
 ---
+
 title: "abxtest(1)"
 name: "abxtest"
 section: "1"
@@ -9,9 +10,7 @@ description: "abxtest – double-blind ABX comparison testing script"
 
 <h2>NAME</h2>
 <p> abxtest &#8211; double-blind ABX comparison testing script</p>
-<h2>SYNOPSIS</h2>
 <p> <code>abxtest</code> [<code>-n</code> <i>min</i>] [<code>-m</code> <i>max</i>] [<code>-g</code> <i>goal</i>] <i>A-cmd B-cmd</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>abxtest</code> is a tool for conducting listening (or other subjective) tests to determine whether a listener can discern a difference between two subjects under test, denoted <code>A</code> and <code>B</code>. </p>
 <p> The listener conducts several trials in which an unknown subject, <code>X</code>, is randomly chosen to be either <code>A</code> or <code>B</code>. The probability that <code>X</code> is <code>A</code> or <code>B</code> is the same. The listener must decide whether <code>X</code> sounds the same as <code>A</code> or the same as <code>B</code>. The listener may repeat <code>A</code>, <code>B</code>, and <code>X</code> as many times as necessary before reaching a verdict. </p>
 <p> In order to prove the hypothesis that a difference can be discerned between <code>A</code> and <code>B</code>, the listener must disprove the null hypothesis that <code>A</code> sounds the same as <code>B</code>. This is accomplished by correctly identifying <code>X</code> often enough that randomly guessing correctly the same number of times would be statistically improbable. </p>

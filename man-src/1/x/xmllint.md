@@ -1,4 +1,5 @@
 ---
+
 title: "xmllint(1)"
 name: "xmllint"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-xmllint/"
 description: "xmllint – command line XML tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xmllint</code> [<code>&#8211;version</code> | <code>&#8211;debug</code> | <code>&#8211;shell</code> | <code>&#8211;xpath&nbsp;&quot;</code><i>XPath_expression</i><code>&quot;</code> | <code>&#8211;debugent</code> | <code>&#8211;copy</code> | <code>&#8211;recover</code> | <code>&#8211;noent</code> | <code>&#8211;noout</code> | <code>&#8211;nonet</code> | <code>&#8211;path&nbsp;&quot;</code><i>PATH(S)</i><code>&quot;</code> | <code>&#8211;load-trace</code> | <code>&#8211;htmlout</code> | <code>&#8211;nowrap</code> | <code>&#8211;valid</code> | <code>&#8211;postvalid</code> | <code>&#8211;dtdvalid&nbsp;</code><i>URL</i> | <code>&#8211;dtdvalidfpi&nbsp;</code><i>FPI</i> | <code>&#8211;timing</code> | <code>&#8211;output&nbsp;</code><i>FILE</i> | <code>&#8211;repeat</code> | <code>&#8211;insert</code> | <code>&#8211;compress</code> | <code>&#8211;html</code> | <code>&#8211;xmlout</code> | <code>&#8211;push</code> | <code>&#8211;memory</code> | <code>&#8211;maxmem&nbsp;</code><i>NBBYTES</i> | <code>&#8211;nowarning</code> | <code>&#8211;noblanks</code> | <code>&#8211;nocdata</code> | <code>&#8211;format</code> | <code>&#8211;encode&nbsp;</code><i>ENCODING</i> | <code>&#8211;dropdtd</code> | <code>&#8211;nsclean</code> | <code>&#8211;testIO</code> | <code>&#8211;catalogs</code> | <code>&#8211;nocatalogs</code> | <code>&#8211;auto</code> | <code>&#8211;xinclude</code> | <code>&#8211;noxincludenode</code> | <code>&#8211;loaddtd</code> | <code>&#8211;dtdattr</code> | <code>&#8211;stream</code> | <code>&#8211;walker</code> | <code>&#8211;pattern&nbsp;</code><i>PATTERNVALUE</i> | <code>&#8211;chkregister</code> | <code>&#8211;relaxng&nbsp;</code><i>SCHEMA</i> | <code>&#8211;schema&nbsp;</code><i>SCHEMA</i> | <code>&#8211;c14n</code>] {<i>XML-FILE(S)</i>&#8230; | -}</dt>
 <dt> <code>xmllint</code> <code>&#8211;help</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>xmllint</code> program parses one or more XML files, specified on the command line as <i>XML-FILE</i> (or the standard input if the filename provided is <code>&#8211;</code> ). It prints various types of output, depending upon the options selected. It is useful for detecting errors both in XML code and in the XML parser itself. </dd>
 <p> <code>xmllint</code> is included in <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3).</p>
 <h2>OPTIONS</h2>

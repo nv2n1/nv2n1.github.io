@@ -1,4 +1,5 @@
 ---
+
 title: "gvhdl(1)"
 name: "gvhdl"
 section: "1"
@@ -9,9 +10,7 @@ description: "gvhdl – Frontend to the VHDL compiler/simulator FreeHDL."
 
 <h2>NAME</h2>
 <p> gvhdl &#8211; Frontend to the VHDL compiler/simulator FreeHDL.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gvhdl</code> [<i>OPTION</i>] &#8230; [<i>VHDL_FILES</i>] &#8230; [<i>OBJECT_FILES</i>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>FreeHDL</code> is a compiler/simulator suite for the hardware description language VHDL. VHDL&#8217;93 as well as VHDL&#8217;87 standards are supported. </p>
 <p> <code>FreeHDL</code> translates the original VHDL source FILEs into C++. Then, the C++ source can be compiled and linked to the kernel to build the simulation program. Starting the generated executable will simulate the corresponding VHDL model. The actual build process to generate the simulator from the VHDL source is a complex process which is handled by the <code>gvhdl</code> script. </p>
 <p> <i>VHDL_FILES</i> is a list of VHDL source file names that must end with .vhdl or .vhd. The first VHDL file name also determines the name of the simulator executable. This is, the final executable will be named after the first VHDL file without the .vhdl or .vhd extension. Note that the object files as well as the simulator will be created in the current directory. </p>

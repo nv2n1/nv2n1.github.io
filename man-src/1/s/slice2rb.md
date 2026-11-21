@@ -1,4 +1,5 @@
 ---
+
 title: "slice2rb(1)"
 name: "slice2rb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slice2rb/"
 description: "slice2rb – The Slice to Ruby compiler."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> slice2rb [options] [files] </p>
-<h2>DESCRIPTION</h2>
 <p> slice2rb compiles Slice files to Ruby. </p>
 <p> Full documentation for slice2rb is available online at: &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Code+Generation+in+Ruby#CodeGenerationinRuby-slice2rb">http://doc.zeroc.com/display/Ice/Code+Generation+in+Ruby#CodeGenerationinRuby-slice2rb</a>&quot;. </p>
 <h2>OPTIONS</h2>

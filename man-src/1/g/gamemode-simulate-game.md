@@ -1,4 +1,5 @@
 ---
+
 title: "gamemode-simulate-game(1)"
 name: "gamemode-simulate-game"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gamemode-simulate-game/"
 description: "gamemode-simulate-game – simulate a game using gamemode"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gamemode-simulate-game</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>GameMode</code> is a daemon/lib combo for Linux that allows games to request a set of optimisations be temporarily applied to the host OS. </p>
 <p> The design has a clear cut abstraction between the host daemon and library (<code>gamemoded</code> and <code>libgamemode</code>), and the client loaders (<code>libgamemodeauto</code> and <code>gamemode_client.h</code>) that allows for safe usage without worrying about whether the daemon is installed or running. This design also means that while the host library currently relies on systemd for exchanging messages with the daemon, it&#8217;s entirely possible to implement other internals that still work with the same clients. </p>
 <p> <code>GameMode</code> was designed primarily as a stop-gap solution to problems with the Intel and AMD CPU powersave or ondemand governors, but is intended to be expanded beyond just CPU governor states, as there are a wealth of automation tasks one might want to apply. </p>

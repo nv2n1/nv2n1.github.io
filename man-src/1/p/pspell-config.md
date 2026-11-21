@@ -1,4 +1,5 @@
 ---
+
 title: "pspell-config(1)"
 name: "pspell-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "pspell-config – prints information about a libpspell installatio
 
 <h2>NAME</h2>
 <p> pspell-config &#8211; prints information about a libpspell installation</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pspell-config</code> <i>[options]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pspell-config</code> displays information about libpspell installation, mostly for use in build scripts. Note that this script is provided for backward compatibility with programs that use pspell. Do not use as it will eventually go away.</p>
 <h2>OPTIONS</h2>
 <dl>

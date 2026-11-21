@@ -1,4 +1,5 @@
 ---
+
 title: "gmp-ecm(1)"
 name: "gmp-ecm"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-gmp-ecm/"
 description: "ecm – integer factorization using ECM, P-1 or P+1"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ecm</code> [<code>options</code>] <i>B1</i> [<i>B2min</i>&#8211;<i>B2max</i> | <i>B2</i>]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <dd>ecm is an integer factoring program using the Elliptic Curve Method (ECM), the P-1 method, or the P+1 method. The following sections describe parameters relevant to these algorithms.</dd>
 <h2>STEP 1 AND STEP 2 BOUND PARAMETERS</h2>
 <p> <i>B1</i></p>

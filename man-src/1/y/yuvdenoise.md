@@ -1,4 +1,5 @@
 ---
+
 title: "yuvdenoise(1)"
 name: "yuvdenoise"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-yuvdenoise/"
 description: "yuvdenoise – Motion-Compensating-YUV4MPEG2-frame-denoiser"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>yuvdenoise</code> [<i>options</i>] &lt;/dev/stdin &gt;/dev/stdout </p>
-<h2>DESCRIPTION</h2>
 <p> <code>yuvdenoise</code> is a spatio-temporal noise-filter for YUV4MPEG2 streams. This is useful to reduce the bitrate needed to encode your captured movies for VCD and SVCD creation. </p>
 <h2>OPTIONS</h2>
 <p> <code>yuvdenoise</code> accepts the following options:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_open_qp(3)"
 name: "ibv_open_qp"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ibv_open_qp/"
 description: "ibv_open_qp – open a shareable queue pair (QP)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_qp *ibv_open_qp(struct ibv_context *context,
                            struct ibv_qp_open_attr *qp_open_attr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_open_qp()</code> opens an existing queue pair (QP) associated with the extended protection domain <i>xrcd</i>. The argument <i>qp_open_attr</i> is an ibv_qp_open_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_qp_open_attr {

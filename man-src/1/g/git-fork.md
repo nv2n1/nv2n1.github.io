@@ -1,4 +1,5 @@
 ---
+
 title: "git-fork(1)"
 name: "git-fork"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-fork – Fork a repo on github"
 
 <h2>NAME</h2>
 <p> <code>git-fork</code> &#8211; Fork a repo on github</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-fork</code> [&lt;github-repo-url&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> If a github repo url is given, fork the repo. Like clone but forks first.</p>
 <dl>
 <dt>1.</dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "include_server(1)"
 name: "include_server"
 section: "1"
@@ -9,9 +10,7 @@ description: "include_server.py – conservative approximation of include depend
 
 <h2>NAME</h2>
 <p> include_server.py &#8211; conservative approximation of include dependencies for C/C++</p>
-<h2>SYNOPSIS</h2>
 <p> <code>include_server</code> &#8211;port <i>INCLUDE_SERVER_PORT [OPTIONS]</i></p>
-<h2>DESCRIPTION</h2>
 <p> include_server.py starts an include server process. This process answers queries from <code><a href="/docs/linux/man/1-distcc/">distcc</a></code>(1) clients about what files to include in C/C++ compilations. The include_server.py command itself terminates as soon as the include server has been spawned. </p>
 <p> The INCLUDE_SERVER_PORT argument is the name of a socket used for all communication between distcc clients and the include server. The <code><a href="/docs/linux/man/1-pump/">pump</a></code>(1) command is responsible for creating the socket location, for passing it to this script, and for passing it to all distcc clients via the environment variable named INCLUDE_SERVER_PORT. </p>
 <p> The protocol used by the include server uses distcc&#8217;s RPC implementation. Each distcc request consists of (1) the current directory and (2) the list of arguments of the compilation command. </p>

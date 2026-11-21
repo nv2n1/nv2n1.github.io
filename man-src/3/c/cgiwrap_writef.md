@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_writef(3)"
 name: "cgiwrap_writef"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_writef/"
 description: "cgiwrap_writef – a wrapper for printf"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgiwrap.h&gt;
 </code></pre>
@@ -17,7 +17,6 @@ NEOERR *cgiwrap_writef(const char *fmt, ...)
 </code></pre>
 <h2>ARGUMENTS</h2>
 <p> fmt &#8211; standard printf fmt string and args </p>
-<h2>DESCRIPTION</h2>
 <p> cgiwrap_writef is the formatted output command that replaces printf or fprintf(stdout) in a standard CGI </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

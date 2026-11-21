@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_error_message(3)"
 name: "dblink_error_message"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-dblink_error_message/"
 description: "dblink_error_message – gets last error message on the named connection"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dblink_error_message(text connname) returns text
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>dblink_error_message</code> fetches the most recent remote error message for a given connection.</p>
 <h2>ARGUMENTS</h2>
 <p> <i>connname</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hsmarkdown(1)"
 name: "hsmarkdown"
 section: "1"
@@ -6,24 +7,11 @@ letter: "h"
 url: "/docs/linux/man/1-hsmarkdown/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+hsmarkdown - convert markdown-formatted text to HTML 
 
- 
+hsmarkdown [input-file]...
 
- hsmarkdown - convert markdown-formatted text to HTML 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- hsmarkdown [input-file]...
-
-<h2>DESCRIPTION</h2>
-
- 
-
- hsmarkdown converts markdown-formatted text to HTML. It is designed to be usable as a drop-in replacement for John Gruber's Markdown.pl. 
+hsmarkdown converts markdown-formatted text to HTML. It is designed to be usable as a drop-in replacement for John Gruber's Markdown.pl. 
 
  If no input-file is specified, input is read from stdin. Otherwise, the input-files are concatenated (with a blank line between each) and used as input. Output goes to stdout by default. For output to a file, use shell redirection: 
 

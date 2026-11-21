@@ -1,4 +1,5 @@
 ---
+
 title: "fiascotopnm(1)"
 name: "fiascotopnm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fiascotopnm/"
 description: "fiascotopnm – Convert compressed FIASCO image to PGM, or PPM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fiascotopnm </code> [<i>option</i>]&#8230; [<i>filename</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fiascotopnm</code> decompresses the named FIASCO files, or the Standard Input if no file is named, and writes the images as PGM, or PPM files, depending on whether the FIASCO image is black and white or color. </p>
 <h2>OPTIONS</h2>
 <p> All option names may be abbreviated; for example, &#8211;output may be written &#8211;outp or &#8211;ou. For all options an one letter short option is provided. Mandatory or optional arguments to long options are mandatory or optional for short options, too. Both short and long options are case sensitive. </p>

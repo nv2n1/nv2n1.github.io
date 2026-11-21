@@ -1,4 +1,5 @@
 ---
+
 title: "hcitool(1)"
 name: "hcitool"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hcitool/"
 description: "hcitool – Configure Bluetooth connections"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hcitool</code> -h </p>
 <p> <code>hcitool</code> <i>COMMAND</i> &#8211;help </p>
 <p> <code>hcitool</code> [-i <i>hciX</i>] [<i>COMMAND</i> [<i>PARAMETERS</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-hcitool/">hcitool</a>(1)</code> is used to configure Bluetooth connections and send some special command to Bluetooth devices. If no <code>command</code> is given, or if the option <code>-h</code> is used, <i>hcitool</i> prints some usage information and exits.</p>
 <h2>OPTIONS</h2>
 <dl>

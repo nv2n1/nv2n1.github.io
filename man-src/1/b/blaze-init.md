@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-init(1)"
 name: "blaze-init"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-blaze-init/"
 description: "blaze-init – create or recover a BlazeBlogger repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blaze-init</code> [<code>-fqV</code>] [<code>-b</code> <i>directory</i>] </p>
 <p> <code>blaze-init</code> <code>-h</code> | <code>-v</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>blaze-init</code>&#8216;s job is either to create a fresh new BlazeBlogger repository, or to recover an existing one, optionally changing the configuration and template files back to their original state while leaving the user data (i.e. both pages and blog posts) untouched.</p>
 <h2>OPTIONS</h2>
 <dl>

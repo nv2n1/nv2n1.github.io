@@ -1,4 +1,5 @@
 ---
+
 title: "ppltotf(1)"
 name: "ppltotf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppltotf/"
 description: "ppltotf, uppltotf – Create Japanese pTeX font metric (JFM)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppltotf</code> [<i>options</i>] <i>pl_file_name</i>[<i></i><code>.pl</code>] [<i>tfm_file_name</i>[<i></i><code>.tfm</code>]]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ppltotf</code> program translates a Japanese property list (JPL) file to a Japanese pTeX font metric (JFM) file. The resulting JFM file can be used with pTeX and e-pTeX. </p>
 <p> The <code>uppltotf</code> program is a Unicode-enabled version of ppltotf. The resulting JFM file can be used with upTeX and e-upTeX. </p>
 <p> In the following sections, we refer to these programs as <code>(u)ppltotf</code>. </p>

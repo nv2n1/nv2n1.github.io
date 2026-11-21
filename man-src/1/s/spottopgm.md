@@ -1,4 +1,5 @@
 ---
+
 title: "spottopgm(1)"
 name: "spottopgm"
 section: "1"
@@ -23,7 +24,6 @@ description: "spottopgm – convert SPOT satellite images to a PGM image"
 <dt><i>Firstcol Firstline Lastcol Lastline</i></dt>
 <dd> Extract the specified rectangle from the SPOT image. Most SPOT images are 3000 lines long and 3000 or more columns wide. Unfortunately, the SPOT format only gives the width and not the length. The width is printed on standard error. The default rectangle is the width of the input image by 3000 lines. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>spottopgm</code> converts the named <code>inputfile</code> to PGM format, defaulting to the first color and the whole SPOT image unless you specify otherwise with the options. </p>
 <h2>LIMITATIONS</h2>

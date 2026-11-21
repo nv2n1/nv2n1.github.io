@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs7_export2(3)"
 name: "gnutls_pkcs7_export2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs7_export2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs7_export2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs7_export2(gnutls_pkcs7_t </code><i>pkcs7</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pkcs7_export2 – API function"
 <dd> the format of output params. One of PEM or DER.</dd>
 <dt>gnutls_datum_t * out</dt>
 <dd> will contain a structure PEM or DER encoded</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the pkcs7 structure to DER or PEM format. </p>
 <p> The output buffer is allocated using <code>gnutls_malloc()</code>. </p>
 <p> If the structure is PEM encoded, it will have a header of &quot;BEGIN PKCS7&quot;.</p>

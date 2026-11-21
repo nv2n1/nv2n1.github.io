@@ -1,4 +1,5 @@
 ---
+
 title: "brasero(1)"
 name: "brasero"
 section: "1"
@@ -9,9 +10,7 @@ description: "brasero – Simple and easy to use CD/DVD burning application for 
 
 <h2>NAME</h2>
 <p> brasero &#8211; Simple and easy to use CD/DVD burning application for the GNOME Desktop</p>
-<h2>SYNOPSIS</h2>
 <p> <code>brasero</code> [<i>options</i>] [<i>uri</i>] [<i>uri</i>] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Brasero</code> is an easy-to-use application for burning CD-R/Ws and DVD-R/Ws. With Brasero you can create data, audio, or video CDs, DVDs, and SVCDs. You can copy existing disks, use image files, or create new projects. Brasero includes tools such as a media previewer, integrity checker and a cover creator.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

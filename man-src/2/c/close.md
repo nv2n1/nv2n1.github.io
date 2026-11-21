@@ -1,4 +1,5 @@
 ---
+
 title: "close(2)"
 name: "close"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-close/"
 description: "close – close a file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int close(int fd);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>close</code>() closes a file descriptor, so that it no longer refers to any file and may be reused. Any record locks (see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)) held on the file it was associated with, and owned by the process, are removed (regardless of the file descriptor that was used to obtain the lock). </p>
 <p> If <i>fd</i> is the last file descriptor referring to the underlying open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)), the resources associated with the open file description are freed; if the file descriptor was the last reference to a file which has been removed using <code><a href="/docs/linux/man/2-unlink/">unlink</a></code>(2), the file is deleted.</p>
 <h2>RETURN VALUE</h2>

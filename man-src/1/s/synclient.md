@@ -1,4 +1,5 @@
 ---
+
 title: "synclient(1)"
 name: "synclient"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-synclient/"
 description: "synclient – commandline utility to query and modify Synaptics driver options."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> synclient [<i>-lV?</i>] [var1=value1 [var2=value2] &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This program lets you change your Synaptics TouchPad driver for XOrg/XFree86 server parameters while X is running. </p>
 <h2>OPTIONS</h2>
 <dl>

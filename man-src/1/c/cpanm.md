@@ -1,4 +1,5 @@
 ---
+
 title: "cpanm(1)"
 name: "cpanm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpanm/"
 description: "cpanm – get, unpack build and install modules from CPAN"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
   cpanm Test::More                                 # install Test::More
   cpanm MIYAGAWA/Plack-0.99_05.tar.gz              # full distribution path

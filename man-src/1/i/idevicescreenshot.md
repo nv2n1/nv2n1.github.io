@@ -1,4 +1,5 @@
 ---
+
 title: "idevicescreenshot(1)"
 name: "idevicescreenshot"
 section: "1"
@@ -9,9 +10,7 @@ description: "idevicescreenshot – Gets a screenshot from the connected device.
 
 <h2>NAME</h2>
 <p> idevicescreenshot &#8211; Gets a screenshot from the connected device.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>idevicescreenshot</code> [OPTIONS] </p>
-<h2>DESCRIPTION</h2>
 <p> Gets a screenshot from the connected device. </p>
 <p> NOTE: A mounted developer disk image is required on the device, otherwise<br />
 &nbsp;<wbr>the screenshotr service is not available. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "funtablerowput(3)"
 name: "funtablerowput"
 section: "3"
@@ -9,9 +10,7 @@ description: "FunTableRowPut – put Funtools rows"
 
 <h2>NAME</h2>
 <p> <code>FunTableRowPut &#8211; put Funtools rows</code></p>
-<h2>SYNOPSIS</h2>
 <p> int FunTableRowPut(Fun fun, void *rows, int nev, int idx, char *plist)</p>
-<h2>DESCRIPTION</h2>
 <p> The FunTableRowPut() routine writes rows to a <font SIZE="-1">FITS</font> binary table, taking its input from an array of user structs that contain column values selected by a previous call to <i>FunColumnSelect()</i>. Selected column values are automatically converted from native data format to <font SIZE="-1">FITS</font> data format as necessary. </p>
 <p> The first argument is the Fun handle associated with this row data. The second <code>rows</code> argument is the array of user structs to output. The third <code>nrow</code> argument specifies the number number of rows to write. The routine will write <code>nrow</code> records, starting from the location specified by <code>rows</code>. </p>
 <p> The fourth <code>idx</code> argument is the index of the first raw input row to write, in the case where rows from the user buffer are being merged with their raw input row counterparts (see below). Note that this <code>idx</code> value is has nothing to do with the row buffer specified in argument 1. It merely matches the row being written with its corresponding (hidden) raw row. Thus, if you read a number of rows, process them, and then write them out all at once starting from the first user row, the value of <code>idx</code> should be 0: </p>

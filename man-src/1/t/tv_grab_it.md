@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_it(1)"
 name: "tv_grab_it"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-tv_grab_it/"
 description: "tv_grab_it – Grab TV listings for Italy."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_it &#8211;help </p>
 <p> tv_grab_it [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure </p>
 <p> tv_grab_it [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;output <font SIZE="-1">FILE</font>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;days N]&nbsp;<wbr>[&#8211;offset N]&nbsp;<wbr>[&#8211;quiet]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;slow]&nbsp;<wbr>[&#8211;verbose]&nbsp;<wbr>[&#8211;errors-in-xml]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;backend SITE1[,SITE2[,SITE3]]] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> [&#8211;cache-slow]</p>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings for several channels available in Italy. The grabber relies on parsing <font SIZE="-1">HTML</font> so it might stop working at any time. The data comes from different backends. This is to minimize blackouts in case of site changes but also to extend the number of channels. If the grabber can&#8217;t find the data with the first backend it will try the second one, and so on. You can specify your order of preference using the &#8211;backend option. </p>
 <p> Currently configured backends are (in default order):</p>
 <dl>

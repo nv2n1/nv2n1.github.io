@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_wait_status(3)"
 name: "ieee1284_wait_status"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ieee1284_wait_status/"
 description: "ieee1284_read_status, ieee1284_wait_status – analyse status lines"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int ieee1284_read_status(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt>
 <dt> <code>int ieee1284_wait_status(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>mask</i><code>, unsigned char&nbsp;<wbr></code><i>val</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>There are five status lines, one of which is usually inverted on PC-style ports. Where they differ, libieee1284 operates on the IEEE 1284 values, not the PC-style inverted values. The status lines are represented by the following enumeration: </dd>
 <dl>
 <dt>

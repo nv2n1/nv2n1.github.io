@@ -1,4 +1,5 @@
 ---
+
 title: "get_mfield_list(3)"
 name: "get_mfield_list"
 section: "3"
@@ -9,11 +10,9 @@ description: "get_mfield_list — retrieve a list of fields in a dirfile"
 
 <h2>NAME</h2>
 <p> get_mfield_list &#8212; retrieve a list of fields in a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>const char **get_mfield_list(DIRFILE *</code><i>dirfile</i><code>,</code> <code>const char *</code><i>parent</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>get_mfield_list</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns a read-only list of names of the all metafields for the specified parent field in the database. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <p> The array returned will be de-allocated by a call to <code><a href="/docs/linux/man/3-dirfile_close/">dirfile_close</a></code>(3) and should not be de-allocated by the caller. The list returned should not be assumed to be in any particular order. The array is terminated by a NULL pointer. The number of strings in the array can be obtained from a call to <code><a href="/docs/linux/man/3-get_nmfields/">get_nmfields</a></code>(3). </p>

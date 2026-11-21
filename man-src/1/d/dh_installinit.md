@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installinit(1)"
 name: "dh_installinit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installinit/"
 description: "dh_installinit – install service init files into package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installinit</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>] [<code>-n</code>] [<code>-R</code>] [<code>-r</code>] [<code>-d</code>] [<code>&#8212;</code> <i>params</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installinit</code> is a debhelper program that is responsible for installing init scripts with associated defaults files. In compatibility levels up to 11, <code>dh_installinit</code> also handled upstart job files and systemd service files. </p>
 <p> It also automatically generates the <i>postinst</i> and <i>postrm</i> and <i>prerm</i> commands needed to set up the symlinks in <i>/etc/rc*.d/</i> to start and stop the init scripts. </p>
 <p> In compat 10 or earlier: If a package only ships a systemd service file and no sysvinit script is provided, you may want to exclude the call to dh_installinit for that package (e.g. via <code>-N</code>). Otherwise, you may get warnings from lintian about init.d scripts not being included in the package.</p>

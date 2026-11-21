@@ -1,4 +1,5 @@
 ---
+
 title: "xlsclients(1)"
 name: "xlsclients"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xlsclients/"
 description: "xlsclients – list client applications running on a display"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xlsclients</code> [-display <i>displayname</i>] [-a] [-l] [-m maxcmdlen] [-version]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xlsclients</i> is a utility for listing information about the client applications running on a display. It may be used to generate scripts representing a snapshot of the user&#8217;s current session.</p>
 <h2>OPTIONS</h2>
 <dl>

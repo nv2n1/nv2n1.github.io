@@ -1,4 +1,5 @@
 ---
+
 title: "make_strings(1)"
 name: "make_strings"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-make_strings/"
 description: "make_strings – tool to build lists of localizable strings from Objective-C files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>make_strings</code> [<code>&#8211;help</code>] [<code>&#8211;verbose</code>] [<code>&#8211;aggresive-import</code>] [<code>&#8211;aggressive-match</code>] [<code>&#8211;aggressive-remove</code>] [<code>-L</code> <i>languages</i>] <i>files.[hmc&#8230;]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>make_strings</code> parses Objective-C files and builds lists of localizable strings. It then creates new <i>.strings</i> files or merges the strings with existing <i>.strings</i> files. It&#8217;s fairly intelligent when matching old and new strings, and produces <i>.strings</i> files that are (supposed to be) easy for a translator to work with. </p>
 <p> <code>make_strings</code> accepts the following options: </p>
 <h2>OPTIONS</h2>

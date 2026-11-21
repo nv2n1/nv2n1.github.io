@@ -1,4 +1,5 @@
 ---
+
 title: "list_audio_tracks(1)"
 name: "list_audio_tracks"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-list_audio_tracks/"
 description: "list_audio_tracks is an alias for icedax."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>list_audio-tracks</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>list_audio_tracks</code> equals to the invocation of icedax, so all the arguments for the latter can be used. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-icedax/">icedax</a>(1) </p>

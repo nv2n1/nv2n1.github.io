@@ -1,4 +1,5 @@
 ---
+
 title: "perlthrtut(1)"
 name: "perlthrtut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlthrtut/"
 description: "perlthrtut – Tutorial on threads in Perl"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This tutorial describes the use of Perl interpreter threads (sometimes referred to as <i>ithreads</i>). In this model, each thread runs in its own Perl interpreter, and any data sharing between threads must be explicit. The user-level interface for <i>ithreads</i> uses the threads class. </p>
 <p> <font SIZE="-1"><code>NOTE</code></font>: There was another older Perl threading flavor called the 5.005 model that used the threads class. This old model was known to have problems, is deprecated, and was removed for release 5.10. You are strongly encouraged to migrate any existing 5.005 threads code to the new model as soon as possible. </p>
 <p> You can see which (or neither) threading flavour you have by running <tt>&quot;perl -V&quot;</tt> and looking at the <tt>&quot;Platform&quot;</tt> section. If you have <tt>&quot;useithreads=define&quot;</tt> you have ithreads, if you have <tt>&quot;use5005threads=define&quot;</tt> you have 5.005 threads. If you have neither, you don&#8217;t have any thread support built in. If you have both, you are in trouble. </p>

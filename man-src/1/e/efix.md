@@ -1,4 +1,5 @@
 ---
+
 title: "efix(1)"
 name: "efix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-efix/"
 description: "efix – convert between fax, text, bit-map and gray-scale formats"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>efix</code> [ <i>options</i> ] <i>file&#8230;</i> </p>
 <h2>OPTIONS</h2>
 <p> Where <i>options</i> are: </p>

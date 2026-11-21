@@ -1,4 +1,5 @@
 ---
+
 title: "eject(1)"
 name: "eject"
 section: "1"
@@ -8,7 +9,6 @@ description: "eject – eject removable media"
 ---
 
 <p> <code>eject</code> [options] <i>device</i>|<i>mountpoint</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>eject</code> allows removable media (typically a CD-ROM, floppy disk, tape, JAZ, ZIP or USB disk) to be ejected under software control. The command can also control some multi-disc CD-ROM changers, the auto-eject feature supported by some devices, and close the disc tray of some CD-ROM drives. </p>
 <p> The device corresponding to <i>device</i> or <i>mountpoint</i> is ejected. If no name is specified, the default name <code>/dev/cdrom</code> is used. The device may be addressed by device name (e.g., &#8216;sda&#8217;), device path (e.g., &#8216;/dev/sda&#8217;), UUID=<i>uuid</i> or LABEL=<i>label</i> tags. </p>
 <p> There are four different methods of ejecting, depending on whether the device is a CD-ROM, SCSI device, removable floppy, or tape. By default <code>eject</code> tries all four methods in order until it succeeds. </p>

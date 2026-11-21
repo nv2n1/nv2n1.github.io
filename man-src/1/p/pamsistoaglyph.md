@@ -1,4 +1,5 @@
 ---
+
 title: "pamsistoaglyph(1)"
 name: "pamsistoaglyph"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pamsistoaglyph/"
 description: "pamsistoaglyph – convert a single-image stereogram to a red/cyan anaglyphic image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamsistoaglyph</code> [&#8211;<code>invert</code>] [&#8211;<code>sep</code>=<i>number</i>] [&#8211;<code>minsep</code>=<i>number</i>] [&#8211;<code>gray</code>=<i>number</i>] [<i>in_netpbmfile</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use either white space or an equals sign between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamsistoaglyph</code> reads a Netpbm image as input and produces a Netpbm image as output. </p>
 <p> <code>pamsistoaglyph</code> takes a single-image stereogram (SIS) such as those produced by <code><a href="/docs/linux/man/1-pamstereogram/">pamstereogram</a></code>(1) </p>

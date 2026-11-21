@@ -1,4 +1,5 @@
 ---
+
 title: "tiffdither(1)"
 name: "tiffdither"
 section: "1"
@@ -9,9 +10,7 @@ description: "tiffdither – convert a greyscale image to bilevel using ditherin
 
 <h2>NAME</h2>
 <p> tiffdither &#8211; convert a greyscale image to bilevel using dithering</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tiffdither</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>tiffdither</i> converts a single channel 8-bit greyscale image to a bilevel image using Floyd-Steinberg error propagation with thresholding.</p>
 <h2>OPTIONS</h2>
 <dl>

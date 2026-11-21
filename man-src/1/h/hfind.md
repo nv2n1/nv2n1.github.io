@@ -1,4 +1,5 @@
 ---
+
 title: "hfind(1)"
 name: "hfind"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hfind/"
 description: "hfind – Lookup a hash value in a hash database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hfind [-i</code> <i>db_type</i> <code>] [-f</code> <i>lookup_file</i> <code>] [-eq] </code> <i>db_file [hashes]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>hfind</code> looks up hash values in a database using a binary search algorithm. This allows one to easily create a hash database and identify if a file is known or not. It works with the NIST National Software Reference Library (NSRL) and the output of &#8216;md5sum&#8217;. </p>
 <p> Before the database can be used by &#8216;hfind&#8217;, an index file must be created with the &#8216;-i&#8217; option. </p>
 <p> This tool is needed for efficiency. Most text-based databases do not have fixed length entries and are sometimes not sorted. The hfind tool will create an index file that is sorted and has fixed-length entries. This allows for fast lookups using a binary search algorithm instead of a linear search such as &#8216;grep&#8217;. </p>

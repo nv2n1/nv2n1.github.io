@@ -1,4 +1,5 @@
 ---
+
 title: "calendar(3)"
 name: "calendar"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-calendar/"
 description: "ql/time/calendar.hpp – calendar class"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/date.hpp&gt;<br />
  #include &lt;ql/time/businessdayconvention.hpp&gt;<br />
  #include &lt;boost/shared_ptr.hpp&gt;<br />

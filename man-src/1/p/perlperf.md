@@ -1,4 +1,5 @@
 ---
+
 title: "perlperf(1)"
 name: "perlperf"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlperf/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlperf - Perl Performance and Optimization Techniques 
 
- perlperf - Perl Performance and Optimization Techniques 
-
-<h2>DESCRIPTION</h2>
-
- This is an introduction to the use of performance and optimization techniques which can be used with particular reference to perl programs. While many perl developers have come from other languages, and can use their prior knowledge where appropriate, there are many other people who might benefit from a few perl specific pointers. If you want the condensed version, perhaps the best advice comes from the renowned Japanese Samurai, Miyamoto Musashi, who said: 
+This is an introduction to the use of performance and optimization techniques which can be used with particular reference to perl programs. While many perl developers have come from other languages, and can use their prior knowledge where appropriate, there are many other people who might benefit from a few perl specific pointers. If you want the condensed version, perhaps the best advice comes from the renowned Japanese Samurai, Miyamoto Musashi, who said: 
 
  <pre>
  &quot;Do Not Engage in Useless Activity&quot;

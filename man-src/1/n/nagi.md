@@ -1,4 +1,5 @@
 ---
+
 title: "nagi(1)"
 name: "nagi"
 section: "1"
@@ -9,9 +10,7 @@ description: "nagi – Sierra Online ™ AGI game interpreter"
 
 <h2>NAME</h2>
 <p> nagi &#8211; Sierra Online &#8482; AGI game interpreter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nagi</code></p>
-<h2>DESCRIPTION</h2>
 <p> AGI, or the Adventure Game Interpreter, was developed and used by Sierra Online for their games, most notably the famous &quot;Quest-series&quot; in the late 1980&#8217;s. Nagi is an open source interpreter for playing AGI games. </p>
 <p> To start playing an AGI game, change to the directory where the AGI resources are and execute <code>nagi</code> without any parameters. </p>
 <p> Nagi supports a wide range of old Sierra games (you need the original files) as well as new AGI resources developed with tools like the Linux AGI Studio. </p>

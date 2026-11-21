@@ -1,4 +1,5 @@
 ---
+
 title: "help2man(1)"
 name: "help2man"
 section: "1"
@@ -9,9 +10,7 @@ description: "help2man – generate a simple manual page"
 
 <h2>NAME</h2>
 <p> help2man &#8211; generate a simple manual page</p>
-<h2>SYNOPSIS</h2>
 <p> <code>help2man</code> [<i>OPTION</i>]&#8230; <i>EXECUTABLE</i></p>
-<h2>DESCRIPTION</h2>
 <p> `help2man&#8217; generates a man page out of `&#8211;help&#8217; and `&#8211;version&#8217; output.</p>
 <dl>
 <dt><code>-n</code>, <code>&#8211;name</code>=<i>STRING</i></dt>

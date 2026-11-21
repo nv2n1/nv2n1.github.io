@@ -1,4 +1,5 @@
 ---
+
 title: "ssbtrd(3)"
 name: "ssbtrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssbtrd/"
 description: "ssbtrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbtrd</code> (VECT, UPLO, N, KD, AB, LDAB, D, E, Q, LDQ, WORK, INFO)<br />
  <i></i><code>SSBTRD</code></p>

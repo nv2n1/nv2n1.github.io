@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_to_string(3)"
 name: "bson_oid_to_string"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_oid_to_string() – Converts oid into a hex encoded string."
 
 <h2>NAME</h2>
 <p> bson_oid_to_string() &#8211; Converts oid into a hex encoded string.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_oid_to_string(const bson_oid_t *oid,
                         char str[25]);
@@ -21,7 +21,6 @@ void bson_oid_to_string(const bson_oid_t *oid,
 <dl>
 <dt><code>str</code></dt>
 <dd> A location for the resulting string.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Converts <code>oid</code> into a hex encoded string. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sgepasswd(1)"
 name: "sgepasswd"
 section: "1"
@@ -10,7 +11,6 @@ description: "sgepasswd – Modify the xxQS_NAMExx password file of xxQS_NAMExx"
 <h2>SYNTAX</h2>
 <p> <code>sgepasswd</code> [[ <code>-D domain</code> ] <code>-d user</code> ] </p>
 <p> <code>sgepasswd</code> [ <code>-D domain</code> ] [ <code>user</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>sgepasswd</i> modifies the xxQS_NAMExx password file </p>
 <p> This file contains a list of usernames and their Microsoft Windows password in encrypted form. and on hosts running Microsoft Windows as operating systems use this information to start jobs for a certain user. </p>
 <p> Each user can use the <i>sgepasswd</i> application to add a new entry for their own user account. (In fact, normal users can create an entry for any account, so the entry should be made initially, when the account is created.) It is also possible to change the stored password with <i>sgepasswd</i> if the user knows the old one. </p>

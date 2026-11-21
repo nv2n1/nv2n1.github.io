@@ -1,4 +1,5 @@
 ---
+
 title: "isfdtype(3)"
 name: "isfdtype"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isfdtype/"
 description: "isfdtype – test file type of a file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/stat.h&gt;
@@ -22,7 +22,6 @@ int isfdtype(int fd, int fdtype);
 <dt>Before glibc 2.20:</dt>
 <dd> _BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>isfdtype</code>() function tests whether the file descriptor <i>fd</i> refers to a file of type <i>fdtype</i>. The <i>fdtype</i> argument specifies one of the <code>S_IF*</code> constants defined in <i>&lt;sys/stat.h&gt;</i> and documented in <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) (e.g., <code>S_IFREG</code>).</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>isfdtype</code>() function returns 1 if the file descriptor <i>fd</i> is of type <i>fdtype</i> and 0 if it is not. On error, -1 is returned and <i>errno</i> is set to indicate the cause.</p>

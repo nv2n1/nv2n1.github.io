@@ -1,4 +1,5 @@
 ---
+
 title: "kitrace_to_db(1)"
 name: "kitrace_to_db"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-kitrace_to_db/"
 description: "kitrace_to_db – convert kitrace output to Fsdb format"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 kitrace_to_db[-Y year][registers]&lt;kitrace.out&gt; kitrace.fsdb
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Converts a kitrace data stream to Fsdb format. </p>
 <p> Optional arguments list registers which will be picked out of the output stream and formatted as their own columns.</p>
 <h2>OPTIONS</h2>

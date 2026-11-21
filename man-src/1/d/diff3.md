@@ -1,4 +1,5 @@
 ---
+
 title: "diff3(1)"
 name: "diff3"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-diff3/"
 description: "diff3 – compare three files line by line"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>diff3</code> [<i>OPTION</i>]&#8230; <i>MYFILE OLDFILE YOURFILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Compare three files line by line. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-sub(1)"
 name: "mlmmj-sub"
 section: "1"
@@ -9,7 +10,6 @@ description: "mlmmj-sub – subscribe address to a mailinglist run by mlmmj"
 
 <h2>NAME</h2>
 <p> mlmmj-sub &#8211; subscribe address to a mailinglist run by mlmmj</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mlmmj-sub</code> <i>-L /path/to/list</i> [<i>-a john [at] doe.org</i> | <i>-m str</i>] [<i>-c</i>] [<i>-C</i>] [<i>-d</i> | <i>-n</i>] [<i>-f</i>] [<i>-h</i>] [<i>-q</i>] [<i>-r</i> | <i>-R</i>] [<i>-s</i>] [<i>-U</i>] [<i>-V</i>]</p>
 <dl>
 <dt> <code>-a</code>: Email address to subscribe</dt>
@@ -27,7 +27,6 @@ description: "mlmmj-sub – subscribe address to a mailinglist run by mlmmj"
 <dt> <code>-s</code>: Don&#8217;t send a mail to the subscriber if already subscribed</dt>
 <dt> <code>-U</code>: Don&#8217;t switch to the user id of the listdir owner</dt>
 <dt> <code>-V</code>: Print version</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility is used to subscribe people to the specified mailinglist. It will write the email address in a file with the name of the beginning letter of the email address getting subscribed in the &lt;listdir&gt;/subscribers.d/ directory. </dd>
 <p> The digest version of the list is a list version where people receive postings to the list periodically (e.g. once a day) or when a large number of posts have accumulated. Digest subscribers are in the &lt;listdir&gt;/digesters.d/ directory. </p>
 <p> The nomail version of the list is a list version where people are subscribed like usual, but they won&#8217;t receive any postings to the list. This is useful for people who read the mailinglist through a news gateway, but want to be able to post to the list. Nomail subscribers are in the &lt;listdir&gt;/nomailsubs.d/ directory. </p>

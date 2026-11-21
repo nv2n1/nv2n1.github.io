@@ -1,4 +1,5 @@
 ---
+
 title: "capsh(1)"
 name: "capsh"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-capsh/"
 description: "capsh – capability shell wrapper"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>capsh</code> [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Linux capability support and use can be explored and constrained with this tool. This tool provides a handy wrapper for certain types of capability testing and environment creation. It also provides some debugging features useful for summarizing capability state.</p>
 <h2>OPTIONS</h2>
 <p> <code>capsh</code> takes a number of optional arguments, acting on them in the order they are provided. They are as follows:</p>

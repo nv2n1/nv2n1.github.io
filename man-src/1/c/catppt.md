@@ -1,4 +1,5 @@
 ---
+
 title: "catppt(1)"
 name: "catppt"
 section: "1"
@@ -9,9 +10,7 @@ description: "catppt – reads MS-PowerPoint file and puts its content on standa
 
 <h2>NAME</h2>
 <p> catppt &#8211; reads MS-PowerPoint file and puts its content on standard output</p>
-<h2>SYNOPSIS</h2>
 <p> <code>catppt </code>[<code>-lV</code>] [<code>-b</code> <i> string </i>] [<code>-s</code> <i> charset </i>] [<code>-d</code> <i> charset </i>] <i>files</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>catppt</code> reads MS-PowerPoint presentations and dumps its content to stdout.</p>
 <h2>OPTIONS</h2>
 <dl>

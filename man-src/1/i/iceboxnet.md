@@ -1,4 +1,5 @@
 ---
+
 title: "iceboxnet(1)"
 name: "iceboxnet"
 section: "1"
@@ -9,9 +10,7 @@ description: "iceboxnet.exe – CLI implementation of icebox"
 
 <h2>NAME</h2>
 <p> iceboxnet.exe &#8211; CLI implementation of icebox</p>
-<h2>SYNOPSIS</h2>
 <p> <code>iceboxnet.exe [OPTIONS]&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> IceBox.NET is a meta-application that may be configured to instantiate services implemented as DLL. A single IceBox instance may start as many services as required. </p>
 <p> Full documentation of this tool is available online at <i><a rel="nofollow" href="http://www.zeroc.com/doc/Ice-3.3.0/manual/IceBox.html">http://www.zeroc.com/doc/Ice-3.3.0/manual/IceBox.html</a></i></p>
 <h2>COPYRIGHT</h2>

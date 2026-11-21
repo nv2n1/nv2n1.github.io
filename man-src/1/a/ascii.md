@@ -1,4 +1,5 @@
 ---
+
 title: "ascii(1)"
 name: "ascii"
 section: "1"
@@ -6,7 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-ascii/"
 description: "ascii – report character aliases"
 ---
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>ascii</code> [-dxohv] [-t] [<i>char-alias</i>...] </dt>
 </dl>
@@ -41,7 +42,6 @@ description: "ascii – report character aliases"
 <dl>
 <dd> <p> Show version of program. </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Characters in the ASCII set can have many aliases, depending on context. A character&#8217;s possible names include: </p>
 <dl>
 <dd> <p> &bull; Its bit pattern (binary representation). </p>

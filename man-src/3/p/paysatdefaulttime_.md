@@ -1,4 +1,5 @@
 ---
+
 title: "paysatdefaulttime_(3)"
 name: "paysatdefaulttime_"
 section: "3"
@@ -6,8 +7,8 @@ letter: "p"
 url: "/docs/linux/man/3-paysatdefaulttime_/"
 description: "QuantLib::CreditDefaultSwap – Credit default swap."
 ---
+
 <p>QuantLib::CreditDefaultSwap &#8211; Credit default swap. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/instruments/creditdefaultswap.hpp&gt; </p>

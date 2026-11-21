@@ -1,4 +1,5 @@
 ---
+
 title: "whatsup(1)"
 name: "whatsup"
 section: "1"
@@ -9,9 +10,7 @@ description: "whatsup – list up and/or down nodes in a cluster"
 
 <h2>NAME</h2>
 <p> whatsup &#8211; list up and/or down nodes in a cluster</p>
-<h2>SYNOPSIS</h2>
 <p> <code>whatsup</code> [<i>OPTION</i>]&#8230; [<i>NODES</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>whatsup</code> lists which nodes are currently up or down in a cluster. It determines which nodes are up or down based on information provided by the <code>nodeupdown(3)</code> library. Configuration of backend components or clusterlists for the <code>nodeupdown(3)</code> library may be needed. Please see <code><a href="/docs/linux/man/3-libnodeupdown/">libnodeupdown</a>(3).</code> </p>
 <p> <code>whatsup</code> will check on the status of every node in the cluster unless specific nodes are listed at the command line. If the first node listed is &quot;-&quot;, nodes will be read in from standard input. The nodes can be listed in hostrange format, comma separated lists, or space separated lists. See the section below on HOST RANGES for instructions on how to list hosts in hostrange format. The hostnames listed must be the shortened names of hostnames. </p>
 <p> The exit value of <code>whatsup</code> depends on the options performed on the command line. If the default &#8211;updown option is used, the exit value will be 0 if the command succeeds without error. If the &#8211;up option is used and no nodes are specified via the command line or standard input, the exit value will be 0 if all cluster nodes are up. If nodes are specified via the command line or standard input, the exit value wil be 0 if all the specified nodes are up. The behavior is similar for the &#8211;down option. </p>

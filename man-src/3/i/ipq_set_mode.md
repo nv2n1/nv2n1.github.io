@@ -1,4 +1,5 @@
 ---
+
 title: "ipq_set_mode(3)"
 name: "ipq_set_mode"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-ipq_set_mode/"
 description: "ipq_set_mode — set the ip_queue queuing mode"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
 <p> <code>int ipq_set_mode(const struct ipq_handle *</code><i>h</i><code>, u_int8_t </code><i>mode</i><code>, size_t </code><i>range</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ipq_set_mode</code> function sends a message to the kernel ip_queue module, specifying whether packet metadata only, or packet payloads as well as metadata should be copied to userspace. </p>
 <p> The <i>h</i> parameter is a context handle which must previously have been returned successfully from a call to <code>ipq_create_handle</code>. </p>
 <p> The <i>mode</i> parameter must be one of:</p>

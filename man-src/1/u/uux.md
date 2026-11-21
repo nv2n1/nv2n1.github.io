@@ -1,4 +1,5 @@
 ---
+
 title: "uux(1)"
 name: "uux"
 section: "1"
@@ -9,9 +10,7 @@ description: "uux – Remote command execution over UUCP"
 
 <h2>NAME</h2>
 <p> uux &#8211; Remote command execution over UUCP</p>
-<h2>SYNOPSIS</h2>
 <p> <code>uux</code> [ options ] command</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>uux</i> command is used to execute a command on a remote system, or to execute a command on the local system using files from remote systems. The command is not executed immediately; the request is queued until the <i>uucico</i> (8) daemon calls the system and executes it. The daemon is started automatically unless one of the <code>-r</code> or <code>&#8211;nouucico</code> options is given. </p>
 <p> The actual command execution is done by the <i>uuxqt</i> (8) daemon. </p>
 <p> File arguments can be gathered from remote systems to the execution system, as can standard input. Standard output may be directed to a file on a remote system. </p>

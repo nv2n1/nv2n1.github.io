@@ -1,4 +1,5 @@
 ---
+
 title: "liborforwardmodel(3)"
 name: "liborforwardmodel"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-liborforwardmodel/"
 description: "ql/legacy/libormarketmodels/liborforwardmodel.hpp – libor forward model incl. exact cap pricing Rebonato formula to approximate swaption prices."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmprocess.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/swaption/swaptionvolmatrix.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/optionlet/capletvariancecurve.hpp&gt;<br />

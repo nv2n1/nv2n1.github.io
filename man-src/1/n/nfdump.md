@@ -1,4 +1,5 @@
 ---
+
 title: "nfdump(1)"
 name: "nfdump"
 section: "1"
@@ -9,10 +10,8 @@ description: "nfdump – netflow display and analyze program"
 
 <h2>NAME</h2>
 <p> nfdump &#8211; netflow display and analyze program</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nfdump [options] [filter]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nfdump</code></p>
 <dd>is the netflow display and analyzing program of the nfdump tool set. It reads the netflow data from files stored by nfcapd and processes the flows according the options given. The filter syntax is comparable to tcpdump and extended for netflow data. Nfdump can also display many different top N flow and flow element statistics. </dd>
 <h2>OPTIONS</h2>

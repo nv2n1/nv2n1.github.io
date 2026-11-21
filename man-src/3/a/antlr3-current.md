@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-current(3)"
 name: "antlr3-current"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_INT_TRIE_struct –"
 ---
 
 <p> Structure that defines an ANTLR3_INT_TRIE.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>add</code> )(struct <code>ANTLR3_INT_TRIE_struct</code> *trie, <code>ANTLR3_INTKEY</code> key, <code>ANTLR3_UINT32</code> type, <code>ANTLR3_INTKEY</code> intVal, void *data, void(ANTLR3_CDECL *freeptr)(void *)) </p>

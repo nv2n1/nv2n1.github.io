@@ -1,4 +1,5 @@
 ---
+
 title: "tificc(1)"
 name: "tificc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tificc/"
 description: "tificc – little cms ICC profile applier for TIFF."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tificc</code> [<i>options</i>]<i> input.tif output.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>tificc</code> is a little cms ICC profile applier for TIFF.</p>
 <h2>OPTIONS</h2>
 <dl>

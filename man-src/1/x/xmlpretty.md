@@ -1,4 +1,5 @@
 ---
+
 title: "xmlpretty(1)"
 name: "xmlpretty"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-xmlpretty/"
 description: "xmlpretty – XML pretty printer"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 xmlpretty[--options][filename]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>xmlpretty</code> is the commandline interface to XML::Handler::YAWriter, acting as a tool to add and remove pretty printing to <font SIZE="-1">XML</font> files. </p>
 <p> <code>xmlpretty</code> has several methods to add human readablitiy. </p>
 <p> If you want to add readablity without adding so-called <i>ignorable whitespace</i>, use it in the following way : </p>

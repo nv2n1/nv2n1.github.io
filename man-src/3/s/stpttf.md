@@ -1,4 +1,5 @@
 ---
+
 title: "stpttf(3)"
 name: "stpttf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stpttf/"
 description: "stpttf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stpttf</code> (TRANSR, UPLO, N, AP, ARF, INFO)<br />
  <i></i><code>STPTTF</code> copies a triangular matrix from the standard packed format (TP) to the rectangular full packed format (TF).</p>

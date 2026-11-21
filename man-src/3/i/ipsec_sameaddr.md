@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_sameaddr(3)"
 name: "ipsec_sameaddr"
 section: "3"
@@ -9,7 +10,6 @@ description: "ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubne
 
 <h2>NAME</h2>
 <p> ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubnet, ipsec_subnetinsubnet, ipsec_subnetishost, ipsec_samesaid, ipsec_sameaddrtype, ipsec_samesubnettype &#8211; do comparisons for addresses, subnets, SA IDs and address families</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>int sameaddr(const ip_address *a, const ip_address *b);</code><br />
  <code>int addrcmp(const ip_address *a, const ip_address *b);</code><br />
@@ -20,7 +20,6 @@ description: "ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubne
  <code>int samesaid(const ip_said *a, const ip_said *b);</code><br />
  <code>int sameaddrtype(const ip_address *a, const ip_address *b);</code><br />
  <code>int samesubnettype(const ip_subnet *a, const ip_subnet *b);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These functions do various comparisons and tests on the <i>ip_address</i> type and <i>ip_subnet</i> types. </p>
 <p> <i>Sameaddr</i> returns non-zero if addresses <i>a</i> and <i>b</i> are identical, and <code>0</code> otherwise. Addresses of different families are never identical. </p>
 <p> <i>Addrcmp</i> returns <code>-1</code>, <code>0</code>, or <code>1</code> respectively if address <i>a</i> is less than, equal to, or greater than <i>b</i>. If they are not of the same address family, they are never equal; the ordering reported in this case is arbitrary (and probably not useful) but consistent. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdalustrecomm(1)"
 name: "pmdalustrecomm"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdalustrecomm – Lustre filesystem comms performance metrics dom
 
 <h2>NAME</h2>
 <p> <code>pmdalustrecomm</code> &#8211; Lustre filesystem comms performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/lustrecomm/pmdalustrecomm</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdalustrecomm</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics from the Linux procfs filesystem about the state of various aspects of the Lustre filesystem. </p>
 <p> The <code>lustrecomm</code> PMDA exports metrics that focus on distributed communication in the filesystem, including metrics related to timeouts, network drops, send/recv information and route lengths. However, it also covers the memory use of some of the Lustre filesystem components. </p>
 <p> A brief description of the <code>pmdalustrecomm</code> command line options follows:</p>

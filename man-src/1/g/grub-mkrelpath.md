@@ -1,4 +1,5 @@
 ---
+
 title: "grub-mkrelpath(1)"
 name: "grub-mkrelpath"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-mkrelpath/"
 description: "grub-mkrelpath – make a system path relative to its root"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grub-mkrelpath</code> [<i>,OPTION/</i>&#8230;] <i>,PATH/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Transform a system filename into GRUB one.</p>
 <dl>
 <dt>-?, <code>&#8211;help</code></dt>

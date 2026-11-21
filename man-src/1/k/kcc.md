@@ -1,4 +1,5 @@
 ---
+
 title: "kcc(1)"
 name: "kcc"
 section: "1"
@@ -9,9 +10,7 @@ description: "kcc – Kanji code coverter with encoding auto detection"
 
 <h2>NAME</h2>
 <p> kcc &#8211; Kanji code coverter with encoding auto detection</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kcc</code> [ <code>&#8211;</code><i>IO</i><code>chnvxz</code> ] [ <code>-b</code><i> bufsize</i> ] [<i> file </i>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>kcc</code> is a filter that reads <i>file</i> sequencially, converts kanji encodings and output to stdou. If no file is specified, or specified <code>&#8211;</code> as filename, it read from stdin. You can specify kanji encodings for input/output. However, <code>kcc</code> detect input encodig automatically, if you don&#8217;t specify input encoding. </p>
 <p> Available kanji encodings are <font SIZE="-1">JIS (7 bit and/or 8 bit), Shift</font> <font SIZE="-1">JIS</font><font SIZE="-1">EUC</font><font SIZE="-1">DEC</font>. For input encoding, you can mix when these are pair of one of <font SIZE="-1">EUC</font> <font SIZE="-1">DEC</font> or Shift <font SIZE="-1">JIS</font> and 7 bit <font SIZE="-1">JIS.</font> <font SIZE="-1"><code>SI</code></font>/<font SIZE="-1"><code>SO</code></font><font SIZE="-1">ESC</font>(I are recognized as halfwidth of <font SIZE="-1">JIS</font>.</p>
 <h2>OPTIONS</h2>

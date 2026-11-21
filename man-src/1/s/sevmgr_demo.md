@@ -1,4 +1,5 @@
 ---
+
 title: "sevmgr_demo(1)"
 name: "sevmgr_demo"
 section: "1"
@@ -10,9 +11,7 @@ description: "sevmgr_demo –"
 <pre>
       Command-line demonstration utility for the C++ Simulation-Oriented Discrete Event Management Library
 </pre>
-<h2>SYNOPSIS</h2>
 <p> <code>sevmgr_demo</code> [&#8211;prefix] [-v|&#8211;version] [-h|&#8211;help] [-l|&#8211;log &lt;path-to-output-log-file&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>sevmgr_demo</i> is a small program showing how to use the SEvMgr library. </p>
 <p> <i>sevmgr_demo</i> accepts the following options: </p>
 <p> <code>&#8211;prefix</code> </p>

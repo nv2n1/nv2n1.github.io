@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_zone_rr_count(3)"
 name: "ldns_zone_rr_count"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_zone_rr_count"
 
 <h2>NAME</h2>
 <p> ldns_zone_rr_count </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_zone_rr_count(const ldns_zone *z); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_zone_rr_count</i>()</dt>
 <dd>Returns the number of resource records in the zone, NOT counting the SOA record .br <code>z</code>: the zone to read from .br Returns the number of rr&#8217;s in the zone</dd></dl>

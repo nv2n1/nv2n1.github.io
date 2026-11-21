@@ -1,4 +1,5 @@
 ---
+
 title: "strongswan_pki(1)"
 name: "strongswan_pki"
 section: "1"
@@ -9,9 +10,7 @@ description: "pki – Simple public key infrastructure (PKI) management tool"
 
 <h2>NAME</h2>
 <p> pki &#8211; Simple public key infrastructure (PKI) management tool</p>
-<h2>SYNOPSIS</h2>
 <p> <i>command</i> [<i>option~</i>&#8230;] <code>-h</code> | <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pki</code> is a suite of commands that allow you to manage a simple public key infrastructure (PKI). </p>
 <p> Generate RSA and ECDSA key pairs, create PKCS#10 certificate requests containing subjectAltNames, create X.509 self-signed end-entity and root CA certificates, issue end-entity and intermediate CA certificates signed by the private key of a CA and containing subjectAltNames, CRL distribution points and URIs of OCSP servers. You can also extract raw public keys from private keys, certificate requests and certificates and compute two kinds of SHA-1-based key IDs.</p>
 <h2>COMMANDS</h2>

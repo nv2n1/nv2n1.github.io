@@ -1,4 +1,5 @@
 ---
+
 title: "git-chore(1)"
 name: "git-chore"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-chore – Create chore branch"
 
 <h2>NAME</h2>
 <p> <code>git-chore</code> &#8211; Create chore branch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-chore</code> [finish] &lt;name&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Create the given chore branch</p>
 <h2>OPTIONS</h2>
 <p> &lt;finish&gt; </p>

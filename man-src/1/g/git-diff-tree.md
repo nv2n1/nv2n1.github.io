@@ -1,4 +1,5 @@
 ---
+
 title: "git-diff-tree(1)"
 name: "git-diff-tree"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-git-diff-tree/"
 description: "git-diff-tree – Compares the content and mode of blobs found via two tree objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git diff - tree[--stdin][-m][-s][-v][--no - commit - id][--pretty]
                [-t][-r][-c | --cc][--combined - all - paths][--root][--merge - base]
                [&lt;common diff options&gt;]&lt;tree - ish&gt;[&lt;tree - ish&gt;][&lt;path&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Compares the content and mode of the blobs found via two tree objects. </p>
 <p> If there is only one &lt;tree-ish&gt; given, the commit is compared with its parents (see &#8211;stdin below). </p>
 <p> Note that <i>git diff-tree</i> can use the tree encapsulated in a commit object.</p>

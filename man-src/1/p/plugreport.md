@@ -1,4 +1,5 @@
 ---
+
 title: "plugreport(1)"
 name: "plugreport"
 section: "1"
@@ -9,11 +10,9 @@ description: "plugreport – a program to read all MPR/PCR registers from all de
 
 <h2>NAME</h2>
 <p> plugreport &#8211; a program to read all MPR/PCR registers from all devices and report them.</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>plugreport</code> </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>plugreport</code> and was written for the Debian distribution because the original program does not have a manual page. </dd>
 <p> <code>plugreport</code> is a program to read all MPR/PCR registers from all devices and report them. </p>
 <h2>SEE ALSO</h2>

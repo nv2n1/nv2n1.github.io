@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-stop(1)"
 name: "docker-latest-stop"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-stop/"
 description: "docker-stop – Stop a container by sending SIGTERM and then SIGKILL after a grace period"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker stop</code> [<code>&#8211;help</code>] [<code>-t</code>|<code>&#8211;time</code>[=<i>10</i>]] CONTAINER [CONTAINER&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> Stop a container (Send SIGTERM, and then SIGKILL after<br />
 &nbsp;<wbr>grace period) </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ompi-top(1)"
 name: "ompi-top"
 section: "1"
@@ -8,7 +9,6 @@ description: "ompi-top, orte-top – Diagnostic to provide process info similar 
 ---
 
 <p> <code>NOTE:</code> <i>ompi-top</i>, and <i>orte-top</i> are exact synonyms for each other. Using any of the names will result in exactly identical behavior.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ompi-top</code> [ options ]</p>
 <h2>Options</h2>
 <p> <i>ompi-top</i> collects and displays process information in a manner similar to that of the popular &quot;top&quot; program.</p>
@@ -29,6 +29,5 @@ description: "ompi-top, orte-top – Diagnostic to provide process info similar 
 <dd> Provide an approximate time when each sample was taken. This time is approximate as it only shows the time when the sample command was issued.</dd>
 <dt><code>-log-file | &#8211;log-file </code>&lt;value&gt;</dt>
 <dd> Log the results to the specified file instead of displaying them to stdout.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>ompi-top</i> collects and displays process information in a manner similar to that of the popular &quot;top&quot; program. It doesn&#8217;t do the fancy screen display, but does allow you to monitor available process information (to the limits of the underlying operating system) of processes irrespective of their location.</p>
 <h2>SEE ALSO</h2>

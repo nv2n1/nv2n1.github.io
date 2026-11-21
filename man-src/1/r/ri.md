@@ -1,4 +1,5 @@
 ---
+
 title: "ri(1)"
 name: "ri"
 section: "1"
@@ -8,11 +9,8 @@ description: "ri – Ruby API reference front end"
 ---
 
 <p>UNIX</p>
-<h2 class="name">NAME</h2>
 <p> <code>ri</code> &#8211; Ruby API reference front end </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ri</code> [-<code>ahilTv </code>[-<code>d </code><i>DIRNAME</i> ] ] [-<code>f </code><i>FORMAT</i> ] [-<code>w </code><i>WIDTH</i> ] [-<code>&#8211; </code>[<code>no- pager</code> ] ] [-<code>-server </code>[= <i>PORT </i>] ] [-<code>&#8211; </code>[<code>no- list-doc-dirs</code> ] ] [-<code>-no-standard-docs</code> ] [-<code>&#8211; </code>[<code>no- Bro system | site | gems | home Brc</code> ] ] [-<code>&#8211; </code>[<code>no- profile</code> ] ] [-<code>-dump = </code><i>CACHE</i> ] [<i>name &#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ri</code> is a command-line front end for the Ruby API reference. You can search and read the API reference for classes and methods with <code>ri.</code> </p>
 <p> <code>ri</code> is a part of Ruby. </p>
 <p> <i>name</i> can be:</p>

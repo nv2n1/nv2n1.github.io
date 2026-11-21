@@ -1,4 +1,5 @@
 ---
+
 title: "kbxutil(1)"
 name: "kbxutil"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-kbxutil/"
 description: "kbxutil – List, export, import Keybox data"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>kbxutil</code> [<code>OPTIONS</code>] [<code>FILES</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> List, export, import Keybox data </p>
 <h2>COMMANDS</h2>
 <dl>

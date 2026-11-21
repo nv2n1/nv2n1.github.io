@@ -1,4 +1,5 @@
 ---
+
 title: "sshuttle(1)"
 name: "sshuttle"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sshuttle/"
 description: "sshuttle – sshuttle documentation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sshuttle</code> [<i>options</i>] [<code>-r</code> <i>[username@]sshserver[:port]</i>] &lt;<i>subnets</i> …&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sshuttle</code> allows you to create a VPN connection from your machine to any remote server that you can connect to via ssh, as long as that server has python 2.3 or higher. </p>
 <p> To work, you must have root access on the local machine, but you can have a normal account on the server. </p>
 <p> It’s valid to run <code>sshuttle</code> more than once simultaneously on a single client machine, connecting to a different server every time, so you can be on more than one VPN at once. </p>

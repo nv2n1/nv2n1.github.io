@@ -1,4 +1,5 @@
 ---
+
 title: "db_recover(1)"
 name: "db_recover"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-db_recover/"
 description: "db5.3_recover – Restore the database to a consistent state"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>db5.3_recover</code> [-ceVv] [-h home] [-P password] [-t [[CC]YY]MMDDhhmm[.SS]]]</p>
-<h2>DESCRIPTION</h2>
 <p> The db5.3_recover utility must be run after an unexpected application, Berkeley DB, or system failure to restore the database to a consistent state. All committed transactions are guaranteed to appear after db5.3_recover has run, and all uncommitted transactions will be completely undone.</p>
 <h2>OPTIONS</h2>
 <dl>

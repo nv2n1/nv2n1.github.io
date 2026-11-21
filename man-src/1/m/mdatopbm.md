@@ -1,4 +1,5 @@
 ---
+
 title: "mdatopbm(1)"
 name: "mdatopbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mdatopbm/"
 description: "mdatopbm – convert a Microdesign .mda or .mdp file into a portable bitmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mdatopbm</code> [<code>-a</code>][<code>-d</code>][<code>-i</code>][<code>&#8212;</code>] <i>[ mdafile ]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Reads a MicroDesign file as input. Reads from stdin if input file is omitted. Produces a portable bitmap as output.</p>
 <h2>OPTIONS</h2>
 <dl>

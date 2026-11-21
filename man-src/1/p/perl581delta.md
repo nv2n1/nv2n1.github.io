@@ -1,4 +1,5 @@
 ---
+
 title: "perl581delta(1)"
 name: "perl581delta"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perl581delta/"
 description: "perl581delta – what is new for perl v5.8.1"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> This document describes differences between the 5.8.0 release and the 5.8.1 release. </p>
 <p> If you are upgrading from an earlier release such as 5.6.1, first read the perl58delta, which describes differences between 5.6.0 and 5.8.0. </p>
 <p> In case you are wondering about 5.6.1, it was bug-fix-wise rather identical to the development release 5.7.1. Confused? This timeline hopefully helps a bit: it lists the new major releases, their maintenance releases, and the development releases. </p>

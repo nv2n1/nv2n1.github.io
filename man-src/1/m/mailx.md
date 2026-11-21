@@ -1,4 +1,5 @@
 ---
+
 title: "mailx(1)"
 name: "mailx"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-mailx/"
 description: "mail.mailutils – process mail messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mail.mailutils</code> [<i>,OPTION/</i>&#8230;] [<i>,address/</i>&#8230;]<br />
  <code>mail.mailutils</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTION/</i>&#8230;] [<i>,file/</i>]<br />
  <code>mail.mailutils</code> [<i>,OPTION/</i>&#8230;] <i>,&#8211;file /</i>[<i>,OPTION/</i>&#8230;] [<i>,file/</i>]<br />
  <code>mail.mailutils</code> [<i>,OPTION/</i>&#8230;] <i>,&#8211;file=file /</i>[<i>,OPTION/</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> GNU mail <code>&#8212;</code> process mail messages. If <code>-f</code> or <code>&#8211;file</code> is given, mail operates on the mailbox named by the first argument, or the user&#8217;s mbox, if no argument given.</p>
 <dl>
 <dt><code>-A</code>, <code>&#8211;attach</code>=<i>,FILE/</i></dt>

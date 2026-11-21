@@ -1,4 +1,5 @@
 ---
+
 title: "dlaneg(3)"
 name: "dlaneg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaneg/"
 description: "dlaneg.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>dlaneg</code> (N, D, LLD, SIGMA, PIVMIN, R)<br />
  <i></i><code>DLANEG</code> computes the Sturm count.</p>

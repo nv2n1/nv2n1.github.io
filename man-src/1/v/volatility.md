@@ -1,4 +1,5 @@
 ---
+
 title: "volatility(1)"
 name: "volatility"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-volatility/"
 description: "volatility – advanced memory forensics framework"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>volatility </code>&#8211; advanced memory forensics framework </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 vol[option] vol - f[image]-- profile = [profile][plugin]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The Volatility Framework is a completely open collection of tools for the extraction of digital artifacts from volatile memory (RAM) samples. It is useful in forensics analysis. The extraction techniques are performed completely independent of the system being investigated but offer unprecedented visibility into the runtime state of the system. </p>
 <p> Volatility supports several versions of the MS Windows, Linux and MAC OSX: </p>
 <p> MS Windows:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dconf-editor(1)"
 name: "dconf-editor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dconf-editor/"
 description: "dconf-editor – Graphical editor for gsettings and dconf"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dconf-editor [OPTIONS&#8230;]</code> <code>dconf-editor [OPTIONS&#8230;] [PATH]</code> <code>dconf-editor [OPTIONS&#8230;] [FIXED_SCHEMA | RELOCATABLE_SCHEMA:PATH] [KEY]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>dconf-editor</code> program provides a graphical interface for editing settings that are stored by other applications using the <i>gsettings</i> functions of the <i>glib</i> library, or in the <i>dconf</i> database. The <code><a href="/docs/linux/man/1-gsettings/">gsettings</a></code>(1) and <code><a href="/docs/linux/man/1-dconf/">dconf</a></code>(1) utilities provides similar functionality on the commandline.</p>
 <h2>OPTIONS</h2>
 <dl>

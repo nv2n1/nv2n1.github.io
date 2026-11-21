@@ -1,4 +1,5 @@
 ---
+
 title: "libraptor2(3)"
 name: "libraptor2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libraptor2/"
 description: "libraptor2 – Raptor RDF syntax library 2.0"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;raptor2.h&gt;
 world = raptor_new_world();
@@ -21,7 +21,6 @@ raptor_free_uri(file_uri);
 raptor_free_world(world);
 cc prog.c -o prog `pkg-config raptor2 --cflags` `pkg-config raptor2 --libs`
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <i>Raptor</i> library provides a high-level interface to a set of parsers and serializers that generate Resource Description Framework (RDF) triples by parsing syntaxes or serialize the triples into syntaxes. </p>
 <p> The supported parsing syntaxes include RDF/XML, N-Triples, Turtle, TRiG, RSS tag soup (including all RSS and Atoms), GRDDL, RDF/JSON, RDFa and the serializing syntaxes include RDF/XML (3 varieties), N-Quads, N-Triples, Turtle, RSS 1.0, Atom 1.0, GraphViz DOT and RDF/JSON. The RDF/XML parser can use either <i>expat</i> or <i>libxml</i> XML parsers for providing the SAX event stream. The library functions are arranged in an object-oriented style with constructors, destructors and method calls. The statements and error messages are delivered via callback functions. </p>
 <p> Raptor also contains classes to support the RDF graph triples: a statement object containing term objects and support for RDF URI-References for both parsing them and resolving / retrieval of URIs. </p>

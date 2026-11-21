@@ -1,4 +1,5 @@
 ---
+
 title: "dcmsign(1)"
 name: "dcmsign"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmsign/"
 description: "dcmsign – Sign and Verify DICOM Files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dcmsign[options] dcmfile - in[dcmfile - out]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmsign</code> utility reads a DICOM file (<i>dcmfile-in</i>), performs a digital signature operation and, if any modification has taken place, writes the DICOM object to an output file (<i>dcmfile-out</i>). </p>
 <p> Five digital signature operations are supported: </p>
 <dl>

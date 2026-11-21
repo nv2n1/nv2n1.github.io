@@ -1,4 +1,5 @@
 ---
+
 title: "ali(1)"
 name: "ali"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ali/"
 description: "ali – list mail aliases"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ali</code> [<code>-alias</code> <i>aliasfile</i>] [<code>-list</code> | <code>-nolist</code>] [<code>-user</code> | <code>-nouser</code>] [<code>-version</code>] [<code>-help</code>] [<i>aliases</i> &#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Ali</code></p>
 <dd>searches the named mail alias files for each of the given <i>aliases</i>. It creates a list of addresses for those <i>aliases</i>, and writes that list on standard output. If no arguments are given, <code>ali</code> outputs all alias entries. </dd>
 <p> By default, when an aliases expands to multiple addresses, the addresses are separated by commas and printed on as few lines as possible. If the <code>-list</code> option is specified, then when an address expands to multiple addresses, each address will appear on a separate line. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "aspell-import(1)"
 name: "aspell-import"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aspell-import/"
 description: "aspell-import – import old personal dictionaries into GNU Aspell"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aspell-import</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>aspell-import</code> is a command that will search for old personal dictionaries and will import them into GNU Aspell. It will look for both Ispell and Aspell dictionaries. To use it just run it from the command prompt.</p>
 <h2>OPTIONS</h2>
 <p> This program does not accept any command-line options.</p>

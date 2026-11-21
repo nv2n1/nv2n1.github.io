@@ -1,4 +1,5 @@
 ---
+
 title: "gencases(1)"
 name: "gencases"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-gencases/"
 description: "gencases – 802.11b weak IV generation tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gencases</code> &#8211; 802.11b weak IV generation tool </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gencases (-s </code><i>pw | </i><code>-h </code><i>key ) </i><code>-f </code><i>file </i>[-n <i>num </i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gencases</code> is used to generate test 802.11b packets that are encrypted with weak initialization vectors as described by Fluhrer, Mantin, and Shamir (FMS). The packets are saved to a user specified file in libpcap compatible format for later use with the <a href="/docs/linux/man/1-airsnort/">airsnort</a>(1) program. The intent is to provide airsnort with the packets required to demonstrate the FMS attack. </p>
 <p> Arguments to gencases allow the user to specify the WEP key that will be used to encrypt the packets as well as the number of packets to be generated for each byte of the wep key. The generated packets represent UDP echo requests from host 192.168.0.2 (on a wired net) to host 192.168.0.10 (on a wireless net) and the corresponding replies. The wireless client has MAC 00:02:2d:01:23:45, the wired host has MAC 00:04:5A:AB:CD:EF, and the access point has BSSID 00:02:2D:98:76:54. </p>
 <p> The generated packet file can be examined with standard packet analysis tools such as tcpdump or ethereal. It can also be loaded into <a href="/docs/linux/man/1-airsnort/">airsnort</a>(1) which, given that a sufficient number of cases were generated for each key byte, will produce a cracked WEP key. Running the generated file through the <a href="/docs/linux/man/1-decrypt/">decrypt</a>(1) utility will produce the decrypted versions of the packets which should reflect the echo request/reply traffic described above, and which can be verified using tcpdump or ethereal.</p>

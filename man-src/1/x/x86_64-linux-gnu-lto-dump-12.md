@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-lto-dump-12(1)"
 name: "x86_64-linux-gnu-lto-dump-12"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-lto-dump-12/"
 description: "lto-dump – Tool for dumping LTO object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> lto-dump [<code>-list</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-demangle</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-defined-only</code>]<br />
@@ -24,7 +24,6 @@ description: "lto-dump – Tool for dumping LTO object files"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-dump-level=</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-dump-body=</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-help</code>]&nbsp;<i>lto-dump</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>lto-dump</code> is a tool you can use in conjunction with <font SIZE="-1">GCC</font> to dump link time optimization object files.</p>
 <h2>OPTIONS</h2>
 <dl>

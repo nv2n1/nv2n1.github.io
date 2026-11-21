@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-power-information(1)"
 name: "xfce4-power-information"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-power-information/"
 description: "xfce4-power-information – Find information about your computer’s power usage"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

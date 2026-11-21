@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_set_max_empty_records(3)"
 name: "gnutls_record_set_max_empty_records"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_record_set_max_empty_records – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_set_max_empty_records &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_record_set_max_empty_records(gnutls_session_t </code><i>session</i><code>, const unsigned int </code><i>i</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_record_set_max_empty_records – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>const unsigned int i</dt>
 <dd> is the desired value of maximum empty records that can be accepted in a row.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Used to set the maximum number of empty fragments that can be accepted in a row. Accepting many empty fragments is useful for receiving length-hidden content, where empty fragments filled with pad are sent to hide the real length of a message. However, a malicious peer could send empty fragments to mount a DoS attack, so as a safety measure, a maximum number of empty fragments is accepted by default. If you know your application must accept a given number of empty fragments in a row, you can use this function to set the desired value.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

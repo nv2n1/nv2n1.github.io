@@ -1,4 +1,5 @@
 ---
+
 title: "faad(1)"
 name: "faad"
 section: "1"
@@ -9,9 +10,7 @@ description: "faad — Process an Advanced Audio Codec stream"
 
 <h2>NAME</h2>
 <p> faad &#8212; Process an Advanced Audio Codec stream </p>
-<h2>SYNOPSIS</h2>
 <p> <code>faad </code> [options] [-w | -o &lt;output_filename&gt; | -a &lt;output_filename&gt;] input_filename </p>
-<h2>DESCRIPTION</h2>
 <p> This utility provides a command line interface to libfaad2. This program reads in MPEG-4 AAC files, processes, and outputs them in either Microsoft WAV, MPEG-4 AAC ADTS, or standard PCM formats. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "xsetroot(1)"
 name: "xsetroot"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xsetroot/"
 description: "xsetroot – root window parameter setting utility for X"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xsetroot</code> [-help] [-version] [-def] [-display <i>display</i>] [-cursor <i>cursorfile maskfile</i>] [-cursor_name <i>cursorfontname</i>] [-xcf <i>cursorfile</i> <i>cursorsize</i>] [-bitmap <i>filename</i> | -mod <i>x y</i> | -gray | -grey | -solid <i>color</i>] [-bg <i>color</i>] [-fg <i>color</i>] [-rv] [-name <i>string</i>] [-d <i>display</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xsetroot</i> program allows you to tailor the appearance of the background (&quot;root&quot;) window on a workstation display running X. Normally, you experiment with <i>xsetroot</i> until you find a personalized look that you like, then put the <i>xsetroot</i> command that produces it into your X startup file. If no options are specified, or if <i>-def</i> is specified, the window is reset to its default state. The <i>-def</i> option can be specified along with other options and only the non-specified characteristics will be reset to the default state. </p>
 <p> Only one of the background color/tiling changing options (-solid, -gray, -grey, -bitmap, and -mod) may be specified at a time.</p>
 <h2>OPTIONS</h2>

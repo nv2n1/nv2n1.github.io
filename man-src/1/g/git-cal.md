@@ -1,4 +1,5 @@
 ---
+
 title: "git-cal(1)"
 name: "git-cal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-cal/"
 description: "git-cal – A simple tool to view commits calendar (similar to github contributions calendar) on command line"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> &#8220;git-cal&#8221; is a tool to visualize the git commit history in github&#8217;s contribution calendar style. The calendar shows how frequently the commits are made over the past year or some choosen period Activity can be displayed using ascii, ansi or unicode characters, default is choosen based on <font SIZE="-1">ENV</font> </p>
 <pre><code>
 git - cal git - cal-- period = &lt;1..12, -1.. - 11&gt;

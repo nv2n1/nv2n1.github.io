@@ -1,4 +1,5 @@
 ---
+
 title: "git-remote-ext(1)"
 name: "git-remote-ext"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-remote-ext/"
 description: "git-remote-ext – Bridge smart transport to external command."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 git remote add &lt;nick&gt; &quot;ext::&lt;command&gt;[ &lt;arguments&gt;...]&quot;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This remote helper uses the specified <i>&lt;command&gt;</i> to connect to a remote Git server. </p>
 <p> Data written to stdin of the specified <i>&lt;command&gt;</i> is assumed to be sent to a git:// server, git-upload-pack, git-receive-pack or git-upload-archive (depending on situation), and data read from stdout of &lt;command&gt; is assumed to be received from the same service. </p>
 <p> Command and arguments are separated by an unescaped space. </p>

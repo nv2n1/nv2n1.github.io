@@ -1,4 +1,5 @@
 ---
+
 title: "ilauplo(3)"
 name: "ilauplo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ilauplo/"
 description: "ilauplo.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilauplo</code> (UPLO)<br />
  <i></i><code>ILAUPLO</code></p>

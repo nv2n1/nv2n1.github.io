@@ -1,4 +1,5 @@
 ---
+
 title: "zsoelim(1)"
 name: "zsoelim"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-zsoelim/"
 description: "zsoelim – satisfy .so requests in roff input"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>zsoelim</code> [<code>-CVh</code>] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>zsoelim</code> parses <i>file</i> arguments, or if none are specified, its standard input for lines of the form: </p>
 <p> <code>.so</code> &lt;<i>filename</i>&gt; </p>
 <p> These requests are replaced by the contents of the <i>filename</i> specified. If the request cannot be met, <code>zsoelim</code> looks for <i>filename.ext</i> where <i>.ext</i> can be one of <code>.gz</code>, <code>.Z</code> or <code>.z</code>. Other extension types may be supported depending upon compile time options. If the request can be met by a compressed file, this file is decompressed using an appropriate decompressor and its output is used to satisfy the request. </p>

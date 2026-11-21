@@ -1,4 +1,5 @@
 ---
+
 title: "xeyes(1)"
 name: "xeyes"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xeyes/"
 description: "xeyes – a follow the mouse X demo"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xeyes</code> [-option &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xeyes</i> watches what you do and reports to the Boss.</p>
 <h2>OPTIONS</h2>
 <dl>

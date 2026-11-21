@@ -1,4 +1,5 @@
 ---
+
 title: "memcmp(3)"
 name: "memcmp"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-memcmp/"
 description: "memcmp – compare memory areas"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;
 int memcmp(const void *s1, const void *s2, size_t n);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>memcmp</code>() function compares the first <i>n</i> bytes (each interpreted as <i>unsigned char</i>) of the memory areas <i>s1</i> and <i>s2</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>memcmp</code>() function returns an integer less than, equal to, or greater than zero if the first <i>n</i> bytes of <i>s1</i> is found, respectively, to be less than, to match, or be greater than the first <i>n</i> bytes of <i>s2</i>. </p>

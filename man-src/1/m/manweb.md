@@ -1,4 +1,5 @@
 ---
+
 title: "manweb(1)"
 name: "manweb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-manweb/"
 description: "manweb – browse netpbm (and other) documentation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>manweb</code> <code>-help</code> </p>
 <p> <code>manweb</code> [<code>-config=</code><i>configfile</i>] [<i>topic</i> [ <i>subtopic</i> &#8230; ] ] </p>
 <h2>EXAMPLES</h2>
@@ -35,7 +35,6 @@ manweb 3 fopen
 manweb cp
 </pre>
 <p> This gets the GNU Info manual for the <code>cp</code> program, using <code>info</code>. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>manweb</code> displays reference documentation via quick shell commands. It is a replacement for the well-known <code>man</code>. </p>
 <h2>Differences Between Man and Manweb</h2>
 <p> <code>manweb</code>&#8216;s advantages over <code>man</code> are: </p>

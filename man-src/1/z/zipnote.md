@@ -1,4 +1,5 @@
 ---
+
 title: "zipnote(1)"
 name: "zipnote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zipnote/"
 description: "zipnote – write the comments in zipfile to stdout, edit comments and rename files in zipfile"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>zipnote</i> [<code>-w</code>] [<code>-b path</code>] [<code>-h</code>] [<code>-v</code>] [<code>-L</code>] zipfile </p>
 <h2>ARGUMENTS</h2>
 <p> zipfile Zipfile to read comments from or edit. </p>
@@ -24,7 +24,6 @@ description: "zipnote – write the comments in zipfile to stdout, edit comments
 <dt><code>-L</code></dt>
 <dd> Show software license. </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <i>zipnote</i> writes the comments in a zipfile to stdout. This is the default mode. A second mode allows updating the comments in a zipfile as well as allows changing the names of the files in the zipfile. These modes are described below. </p>
 <h2>EXAMPLES</h2>
 <p> To write all comments in a zipfile to stdout use for example </p>

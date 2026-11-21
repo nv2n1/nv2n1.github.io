@@ -1,4 +1,5 @@
 ---
+
 title: "dh_strip(1)"
 name: "dh_strip"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_strip/"
 description: "dh_strip – strip executables, shared libraries, and some static libraries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_strip</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>&#8211;dbg-package=</code><i>package</i>] [<code>&#8211;keep-debug</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_strip</code> is a debhelper program that is responsible for stripping executables, shared libraries, and static libraries that are not used for debugging. </p>
 <p> This program examines your package build directories and works out what to strip on its own. It uses <i><a href="/docs/linux/man/1-file/">file</a></i>(1) and file permissions and filenames to figure out what files are shared libraries (<i>*.so</i>), executable binaries, and static (<i>lib*.a</i>) and debugging libraries (<i>lib*_g.a</i>, <i>debug/*.so</i>), and strips each as much as is possible. (Which is not at all for debugging libraries.) In general it seems to make very good guesses, and will do the right thing in almost all cases. </p>
 <p> Since it is very hard to automatically guess if a file is a module, and hard to determine how to strip a module, <code>dh_strip</code> does not currently deal with stripping binary modules such as <i>.o</i> files.</p>

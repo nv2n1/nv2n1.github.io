@@ -1,4 +1,5 @@
 ---
+
 title: "xstdcmap(1)"
 name: "xstdcmap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xstdcmap/"
 description: "xstdcmap – X standard colormap utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xstdcmap</code> [-all] [-best] [-blue] [-default] [-delete <i>map</i>] [-display <i>dpy</i>] [-gray] [-green] [-help] [-red] [-verbose] [-version]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xstdcmap</i> utility can be used to selectively define standard colormap properties. It is intended to be run from a user&#8217;s X startup script to create standard colormap definitions in order to facilitate sharing of scarce colormap resources among clients. Where at all possible, colormaps are created with read-only allocations.</p>
 <h2>OPTIONS</h2>
 <p> The following options may be used with <i>xstdcmap</i>:</p>

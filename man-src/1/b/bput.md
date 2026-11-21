@@ -1,4 +1,5 @@
 ---
+
 title: "bput(1)"
 name: "bput"
 section: "1"
@@ -9,10 +10,8 @@ description: "axgetput – upload or download files via AX.25 / axspawn Linux lo
 
 <h2>NAME</h2>
 <p> axgetput &#8211; upload or download files via AX.25 / axspawn Linux login session.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>axgetput</code> [-b <i>blocksize</i>] [-i] [-v] [-h] [?] <i>filename</i><br />
  <code>axgetput</code> [-b <i>blocksize</i>] [-i] -s [-v] [-h] [?] [<i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-b blocksize</code></dt>
 <dd> Set the blocksize (frame length) of transmitted data. Defaults to 256 bytes which matches typical AX.25 network confurations best.</dd>

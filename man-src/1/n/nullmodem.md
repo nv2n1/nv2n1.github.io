@@ -1,4 +1,5 @@
 ---
+
 title: "nullmodem(1)"
 name: "nullmodem"
 section: "1"
@@ -9,9 +10,7 @@ description: "nullmodem – a Utility to loopback Pseudo-Terminals"
 
 <h2>NAME</h2>
 <p> nullmodem &#8211; a Utility to loopback Pseudo-Terminals</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nullmodem [-F] [-V] [-q] [-r] [-m] tty&#8230;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nullmodem</code> creates a virtual network of Pseudo-Terminals. It can be used as an adapter to connect two programs that normally need serial interface cards. </p>
 <h2>OPTIONS</h2>
 <dl>

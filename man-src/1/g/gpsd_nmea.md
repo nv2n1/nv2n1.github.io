@@ -1,4 +1,5 @@
 ---
+
 title: "gpsd_nmea(1)"
 name: "gpsd_nmea"
 section: "1"
@@ -9,7 +10,6 @@ description: "gpsd_nmea.sh – switches your gpsd to NMEA mode"
 
 <h2>NAME</h2>
 <p> gpsd_nmea.sh &#8211; switches your gpsd to NMEA mode</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpsdrive [options]</code> </p>
 <p> This is needed for some Gps-Receivers with SIF Chip�set. If you don&#8217;t switch them into NMEA mode the position will lag about 5-10 seconds behind the reality. </p>
 <h2>AUTHOR</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "pq2(1)"
 name: "pq2"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pq2/"
 description: "pq2 – The command line interface to a dataset meta-repository based on ROOT files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pq2</code> action <i>options</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pq2</code> program. </p>
 <p> <code>pq2</code> is a <code>ROOT</code> application providing an interface to a dataset meta-repository based on ROOT files; the repository can be accessed via the local file system or a remote file server daemon or a PROOF facility. </p>
 <p> When working with a local or remote file system, <i>pq2</i> instantiates a <i>TDataSetManagerFile</i> class on the specified local or remote directory. Remote access is done via the <i>TFile</i> interface, so any implementation of <i>TFile</i> supported by the installation can in principle be used. When working with PROOF server the <i>TProof</i> dataset manager interface is used to access the dataset repository attached to the PROOF cluster.</p>

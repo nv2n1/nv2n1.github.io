@@ -1,4 +1,5 @@
 ---
+
 title: "uuid(1)"
 name: "uuid"
 section: "1"
@@ -9,10 +10,8 @@ description: "uuid – Universally Unique Identifier Command-Line Tool"
 
 <h2>VERSION</h2>
 <p> <font SIZE="-1">OSSP</font> uuid <font SIZE="-1">1.6.2 (04-Jul-2008)</font></p>
-<h2>SYNOPSIS</h2>
 <p> <code>uuid</code> [<code>-v</code> <i>version</i>] [<code>-m</code>] [<code>-n</code> <i>count</i>] [<code>-1</code>] [<code>-F</code> <i>format</i>] [<code>-o</code> <i>filename</i>] [<i>namespace</i> <i>name</i>] </p>
 <p> <code>uuid</code> <code>-d</code> [<code>-r</code>] [<code>-o</code> <i>filename</i>] <i>uuid</i></p>
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1"><code>OSSP</code></font><code> uuid</code> is a <font SIZE="-1">ISO-C:1999</font> application programming interface (<font SIZE="-1">API</font>) and corresponding command line interface (<font SIZE="-1">CLI</font>) for the generation of <font SIZE="-1">DCE 1.1, ISO/IEC 11578:1996</font> and <font SIZE="-1">IETF RFC-4122</font> compliant <i>Universally Unique Identifier</i> (<font SIZE="-1">UUID</font>). It supports <font SIZE="-1">DCE 1.1</font> variant UUIDs of version 1 (time and node based), version 3 (name based, <font SIZE="-1">MD5</font>), version 4 (random number based) and version 5 (name based, <font SIZE="-1">SHA-1</font>). Additional <font SIZE="-1">API</font> bindings are provided for the languages <font SIZE="-1">ISO-C<font SIZE="-2">++</font>:1998,</font> Perl:5 and <font SIZE="-1">PHP:4/5.</font> Optional backward compatibility exists for the ISO-C <font SIZE="-1">DCE-1.1</font> and Perl Data::UUID APIs. </p>
 <p> UUIDs are 128 bit numbers which are intended to have a high likelihood of uniqueness over space and time and are computationally difficult to guess. They are globally unique identifiers which can be locally generated without contacting a global registration authority. UUIDs are intended as unique identifiers for both mass tagging objects with an extremely short lifetime and to reliably identifying very persistent objects across a network. </p>
 <p> This is the command line interface (<font SIZE="-1">CLI</font>) of <font SIZE="-1"><code>OSSP</code></font><code> uuid</code>. For a detailed description of UUIDs see the documentation of the application programming interface (<font SIZE="-1">API</font>) in <i><a href="/docs/linux/man/3-uuid/">uuid</a></i>(3).</p>

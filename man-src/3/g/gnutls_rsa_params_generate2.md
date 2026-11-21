@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rsa_params_generate2(3)"
 name: "gnutls_rsa_params_generate2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_rsa_params_generate2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_params_generate2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_params_generate2(gnutls_rsa_params_t </code><i>params</i><code>, unsigned int </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_rsa_params_generate2 – API function"
 <dd> The structure where the parameters will be stored</dd>
 <dt>unsigned int bits</dt>
 <dd> is the prime&#8217;s number of bits</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will generate new temporary RSA parameters for use in RSA-EXPORT ciphersuites. This function is normally slow. </p>
 <p> Note that if the parameters are to be used in export cipher suites the bits value should be 512 or less. Also note that the generation of new RSA parameters is only useful to servers. Clients use the parameters sent by the server, thus it&#8217;s no use calling this in client side.</p>
 <h2>RETURNS</h2>

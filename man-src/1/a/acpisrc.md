@@ -1,4 +1,5 @@
 ---
+
 title: "acpisrc(1)"
 name: "acpisrc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-acpisrc/"
 description: "acpisrc – ACPICA source code conversion utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>acpisrc</code> [<i>-c</i>|<i>-l</i>|<i>-u]</i>[-d]<i>[-s]</i>[-v]<i>[-y]</i>&lt;source-dir&gt;<i>&lt;dest-dir&gt;</i> &lt;aml-file&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>acpisrc</code> command. The option list is taken from the acpisrc interactive help. </p>
 <p> <code>acpisrc</code> converts the ACPICA into various forms for use with different operating systems. Source for ACPICA may be obtained from <a rel="nofollow" href="http://www.acpica.org/source/.">http://www.acpica.org/source/.</a> </p>
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>

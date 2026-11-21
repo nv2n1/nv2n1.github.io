@@ -1,4 +1,5 @@
 ---
+
 title: "gpscorrelate(1)"
 name: "gpscorrelate"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-gpscorrelate/"
 description: "gpscorrelate – correlates digital images with GPS data filling EXIF fields"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpscorrelate</code> [-z | &#8211;timeadd&nbsp;<wbr>+/-<i>HH</i>[:<i>MM</i>]] [-O | &#8211;photooffset&nbsp;<wbr><i>seconds</i>] [-i | &#8211;no-interpolation] [-v | &#8211;verbose] [-d | &#8211;datum&nbsp;<wbr><i>datum</i>] [-n | &#8211;no-write] [-m | &#8211;max-dist&nbsp;<wbr><i>time</i>] [-t | &#8211;ignore-tracksegs] [-M | &#8211;no-mtime] [-f | &#8211;fix-timestamps] [-p | &#8211;degmins] -g&nbsp;<wbr><i>file.gpx</i> <i>image.jpg</i>&#8230;</dt>
 <dt> <code>gpscorrelate</code> -s | &#8211;show | -o | &#8211;machine <i>image.jpg</i>&#8230;</dt>
 <dt> <code>gpscorrelate</code> [-M | &#8211;no-mtime] {-r | &#8211;remove} <i>image.jpg</i>&#8230;</dt>
 <dt> <code>gpscorrelate</code> -V | &#8211;version | -h | &#8211;help</dt>
 <dt> <code>gpscorrelate-gui</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>gpscorrelate</code> and <code>gpscorrelate-gui</code> commands. </dd>
 <p> There is an extended documenation available in HTML format; see below. </p>
 <p> <code>gpscorrelate</code> is a program that acts on digital images in JPEG format filling EXIF (Exchangeable Image File Format) fields related to GPS (Global Positioning System) information. Source for the GPS data is a record of GPS information encoded in GPX (GPS Exchange Format) Format. The act of filling those fields is referred to as <i>correlation</i>. </p>

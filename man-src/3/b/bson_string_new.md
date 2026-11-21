@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_new(3)"
 name: "bson_string_new"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_string_new() – Creates a new string builder, which uses pow
 
 <h2>NAME</h2>
 <p> bson_string_new() &#8211; Creates a new string builder, which uses power-of-two growth of buffers. Use the various bson_string_append*() functions to append to the string.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bson_string_t *
 bson_string_new(const char *str);
@@ -18,7 +18,6 @@ bson_string_new(const char *str);
 <dl>
 <dt><code>str</code></dt>
 <dd> A string to be copied or NULL.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Creates a new string builder, which uses power-of-two growth of buffers. Use the various bson_string_append*() functions to append to the string. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated bson_string_t that should be freed with bson_string_free() when no longer in use. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_set_timeout(3)"
 name: "keyctl_set_timeout"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-keyctl_set_timeout/"
 description: "keyctl_set_timeout – Set the expiration timer on a key"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_set_timeout(key_serial_t key, unsigned timeout);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_set_timeout</code>() sets the expiration timer on a key to <i>timeout</i> seconds into the future. Setting <i>timeout</i> to <code>zero</code> cancels the expiration, assuming the key hasn&#8217;t already expired. </p>
 <p> When the key expires, further attempts to access it will be met with error <code>EKEYEXPIRED</code>. </p>
 <p> The caller must have <code>setattr</code> permission on a key to be able change its permissions mask.</p>

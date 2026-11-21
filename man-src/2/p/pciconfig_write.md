@@ -1,4 +1,5 @@
 ---
+
 title: "pciconfig_write(2)"
 name: "pciconfig_write"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pciconfig_write/"
 description: "pciconfig_read, pciconfig_write, pciconfig_iobase – pci device information handling"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;pci.h&gt;
 int pciconfig_read(unsigned long bus, unsigned long dfn,
@@ -17,7 +17,6 @@ int pciconfig_write(unsigned long bus, unsigned long dfn,
 int pciconfig_iobase(long which, unsigned long bus,
                      unsigned long devfn);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Most of the interaction with PCI devices is already handled by the kernel PCI layer, and thus these calls should not normally need to be accessed from user space.</p>
 <dl>
 <dt><code>pciconfig_read</code>()</dt>

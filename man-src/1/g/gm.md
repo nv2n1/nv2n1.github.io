@@ -1,4 +1,5 @@
 ---
+
 title: "gm(1)"
 name: "gm"
 section: "1"
@@ -8,7 +9,6 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 ---
 
 </dl>
-<h2>SYNOPSIS</h2>
 <p> <code>gm animate</code> <code>[</code> <i>options &#8230;</i> <code>]</code> <i>file</i> <code>[ [</code> <i>options &#8230;</i> <code>]</code> <i>file &#8230;</i> <code>]</code> </p>
 <p> <code>gm batch</code> <code>[</code> <i>options &#8230;</i> <code>]</code> <code>[</code> <i>script</i> <code>]</code> </p>
 <p> <code>gm benchmark</code> <code>[</code> <i>options &#8230;</i> <code>]</code> subcommand </p>
@@ -23,7 +23,6 @@ description: "gm – command-line utility to create, edit, compare, convert, or 
 <p> <code>gm montage</code> <code>[</code> <i>options &#8230;</i> <code>]</code> <i>file</i> <code>[ [</code> <i>options &#8230;</i> <code>]</code> <i>file &#8230;</i> <code>]</code> <i>output-file</i> </p>
 <p> <code>gm time</code> subcommand </p>
 <p> <code>gm version</code></p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>GraphicsMagick&#8217;s&nbsp;<wbr><code>gm</code>&nbsp;<wbr>provides a suite of utilities for creating, comparing, converting, editing, and displaying images. All of the utilities are provided as sub-commands of a single <code>gm</code> executable: </p>
 <p> <code>animate</code> displays an animation (e.g. a GIF file) on any workstation display running an <i>X</i> server. </p>
 <p> <code>batch</code> executes an arbitary number of the utility commands (e.g. <code>convert</code>) in the form of a simple linear batch script in order to improve execution efficiency, and/or to allow use as a subordinate co-process under the control of an arbitrary script or program. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "remote-viewer(1)"
 name: "remote-viewer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-remote-viewer/"
 description: "remote-viewer – a simple remote desktop client"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>remote-viewer</code> [<font SIZE="-1">OPTIONS</font>] &#8212; [<font SIZE="-1">URI</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>remote-viewer</code> is a simple remote display client. The supported protocols are <font SIZE="-1">SPICE</font> and <font SIZE="-1">VNC.</font> </p>
 <p> Starting remote-viewer without <font SIZE="-1">URI</font> will open a simple dialog with an entry and a list of previously successfully accessed <font SIZE="-1">URI.</font> </p>
 <p> The <font SIZE="-1">URI</font> can also point to a connection settings file, see the <font SIZE="-1">CONNECTION FILE</font> section for a description of the format.</p>

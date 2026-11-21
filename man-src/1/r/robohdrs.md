@@ -1,4 +1,5 @@
 ---
+
 title: "robohdrs(1)"
 name: "robohdrs"
 section: "1"
@@ -9,9 +10,7 @@ description: "robohdrs – insert ROBODoc headers to source code."
 
 <h2>NAME</h2>
 <p> robohdrs &#8211; insert ROBODoc headers to source code.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>robohdrs</code> <code>[options]</code> &lt;source file&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> robohdrs inserts ROBODoc headers to source code files. This program processes one source file at the time. Existing ROBODoc headers, if any, are not checked for. Beware since this may result in double headers. Current working directory should be the same as where the source file is located. </p>
 <p> By default NAME and SYNOPSIS items are included in the template header. </p>
 <h2>OPTIONS</h2>

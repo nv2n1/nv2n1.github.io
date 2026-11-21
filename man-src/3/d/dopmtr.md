@@ -1,4 +1,5 @@
 ---
+
 title: "dopmtr(3)"
 name: "dopmtr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dopmtr/"
 description: "dopmtr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dopmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>DOPMTR</code></p>

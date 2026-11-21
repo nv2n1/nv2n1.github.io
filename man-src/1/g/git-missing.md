@@ -1,4 +1,5 @@
 ---
+
 title: "git-missing(1)"
 name: "git-missing"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-missing – Show commits missing from another branch"
 
 <h2>NAME</h2>
 <p> <code>git-missing</code> &#8211; Show commits missing from another branch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-missing</code> [&lt;first branch&gt;] &lt;second branch&gt; [&lt;git log options&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> Shows commits that are in either of two branches but not both. Useful for seeing what would come across in a merge or push.</p>
 <h2>OPTIONS</h2>
 <p> [&lt;first branch&gt;] </p>

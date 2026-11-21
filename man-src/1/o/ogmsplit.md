@@ -1,4 +1,5 @@
 ---
+
 title: "ogmsplit(1)"
 name: "ogmsplit"
 section: "1"
@@ -9,9 +10,7 @@ description: "ogmsplit – Split OGG/OGM files into sevaral smaller OGG/OGM file
 
 <h2>NAME</h2>
 <p> ogmsplit &#8211; Split OGG/OGM files into sevaral smaller OGG/OGM files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ogmsplit</code> [<i>options</i>] <i>inname</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ogmsplit</code> can be used to easily split an OGM file after a given size. Several OGM files will be created that each start with a keyframe.</p>
 <dl>
 <dt>inname</dt>

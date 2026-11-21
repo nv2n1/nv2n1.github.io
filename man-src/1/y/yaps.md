@@ -1,4 +1,5 @@
 ---
+
 title: "yaps(1)"
 name: "yaps"
 section: "1"
@@ -9,7 +10,6 @@ description: "YAPS – converts an abc file to a PostScript file"
 
 <h2>NAME</h2>
 <p> <code>YAPS</code> &#8211; converts an abc file to a PostScript file</p>
-<h2>SYNOPSIS</h2>
 <p> yaps abc file [-d] [-e&nbsp;<wbr>&lt;list&gt;] [-E] [-l] [-M XXXxYYY] [-N] [-k nn] [-o file name] [-P -ss] [-s XX] [-V][-ver] [-x] [-OCC] </p>
 <h2>OPTIONS</h2>
 <dl>

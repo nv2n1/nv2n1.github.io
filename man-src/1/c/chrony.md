@@ -1,4 +1,5 @@
 ---
+
 title: "chrony(1)"
 name: "chrony"
 section: "1"
@@ -9,10 +10,8 @@ description: "chrony – programs for keeping computer clocks accurate"
 
 <h2>NAME</h2>
 <p> chrony &#8211; programs for keeping computer clocks accurate </p>
-<h2>SYNOPSIS</h2>
 <p> <code>chronyc</code> [<i>OPTIONS</i>] </p>
 <p> <code>chronyd</code> [<i>OPTIONS</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>chrony</code> is a pair of programs for keeping computer clocks accurate. <i>chronyd</i> is a background (daemon) program and <i>chronyc</i> is a command-line interface to it. Time reference sources for chronyd can be RFC1305 NTP servers, human (via keyboard and <i>chronyc</i>), or the computer&#8217;s real-time clock at boot time (Linux only). chronyd can determine the rate at which the computer gains or loses time and compensate for it while no external reference is present. Its use of NTP servers can be switched on and off (through <i>chronyc</i>) to support computers with dial-up/intermittent access to the Internet, and it can also act as an RFC1305-compatible NTP server. </p>
 <h2>USAGE</h2>
 <p> <i>chronyc</i> is a command-line interface program which can be used to monitor <i>chronyd</i>&#8216;s performance and to change various operating parameters whilst it is running. </p>

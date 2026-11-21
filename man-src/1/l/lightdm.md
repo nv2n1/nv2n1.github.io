@@ -1,4 +1,5 @@
 ---
+
 title: "lightdm(1)"
 name: "lightdm"
 section: "1"
@@ -9,9 +10,7 @@ description: "lightdm – a display manager"
 
 <h2>NAME</h2>
 <p> lightdm &#8211; a display manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lightdm</code> [ <i>OPTION</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lightdm</code> is a display manager.</p>
 <h2>OPTIONS</h2>
 <dl>

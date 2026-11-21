@@ -1,4 +1,5 @@
 ---
+
 title: "sfinfo(1)"
 name: "sfinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sfinfo/"
 description: "sfinfo – display information about audio files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sfinfo</code> [<i>options</i>] <i>audio files</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> sfinfo prints information about the specified audio files, including file format, sample rate, duration, and audio data format. </p>
 <p> By default sfinfo displays information in a longer, multi-line format; specifying the &#8211;short or -s option produces a short, single-line summary. </p>
 <p> Any files which are not recognized as valid audio files will be ignored unless the &#8211;reporterror or -r option is given. The file formats currently supported by sfinfo are AIFF, AIFF-C, NeXT/Sun .snd/.au, WAVE, Berkeley/IRCAM/CARL Sound File, AVR, Amiga IFF/8SVX, Sample Vision, Creative Voice File, NIST SPHERE, and Core Audio Format.</p>

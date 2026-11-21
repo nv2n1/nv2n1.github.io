@@ -1,4 +1,5 @@
 ---
+
 title: "logout(3)"
 name: "logout"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-logout/"
 description: "login, logout – write utmp and wtmp entries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;utmp.h&gt;</code> </p>
 <p> <code>void login(const struct utmp *</code><i>ut</i><code>);</code> </p>
 <p> <code>int logout(const char *</code><i>ut_line</i><code>);</code> </p>
 <p> Link with <i>-lutil</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The utmp file records who is currently using the system. The wtmp file records all logins and logouts. See <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5). </p>
 <p> The function <code>login</code>() takes the supplied <i>struct utmp</i>, <i>ut</i>, and writes it to both the utmp and the wtmp file. </p>
 <p> The function <code>logout</code>() clears the entry in the utmp file again.</p>

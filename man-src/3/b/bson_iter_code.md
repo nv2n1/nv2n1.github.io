@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_code(3)"
 name: "bson_iter_code"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_code() – This function returns the contents of a BSON_
 
 <h2>NAME</h2>
 <p> bson_iter_code() &#8211; This function returns the contents of a BSON_TYPE_CODE field. The length of the string is stored in length if non-NULL.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define BSON_ITER_HOLDS_CODE(iter) \
     (bson_iter_type((iter)) == BSON_TYPE_CODE)
@@ -24,7 +24,6 @@ bson_iter_code(const bson_iter_t *iter,
 <dl>
 <dt><code>length</code></dt>
 <dd> A location for the length of the UTF-8 encoded string or NULL.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function returns the contents of a BSON_TYPE_CODE field. The length of the string is stored in <code>length</code> if non-NULL. </p>
 <p> It is invalid to call this function on a field that is not of type BSON_TYPE_CODE. </p>
 <h2>RETURNS</h2>

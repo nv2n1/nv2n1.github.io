@@ -1,4 +1,5 @@
 ---
+
 title: "bson_compare(3)"
 name: "bson_compare"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_compare() – The bson_compare() function shall compare two b
 
 <h2>NAME</h2>
 <p> bson_compare() &#8211; The bson_compare() function shall compare two bson documents for equality.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 int bson_compare(const bson_t *bson,
                  const bson_t *other);
@@ -21,7 +21,6 @@ int bson_compare(const bson_t *bson,
 <dl>
 <dt><code>other</code></dt>
 <dd> A <code>bson_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_compare/">bson_compare</a>(3)</code> function shall compare two bson documents for equality. </p>
 <p> This can be useful in conjunction with _qsort()_. </p>
 <p> If equal, 0 is returned. </p>

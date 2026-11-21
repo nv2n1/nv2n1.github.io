@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-patchbomb(1)"
 name: "guilt-patchbomb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-patchbomb/"
 description: "guilt-patchbomb – Email a series of commits interactively"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-patchbomb</i> [-n] [&#8211;in-reply-to &lt;msgid&gt;] [&#8211;git] [&lt;hash&gt; | &lt;since&gt;..[&lt;until&gt;] | ..&lt;until&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> Send a series of commits via email asking for To, CC and other information interactively.</p>
 <h2>OPTIONS</h2>
 <p> -n</p>

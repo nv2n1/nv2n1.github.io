@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-list-metrics(1)"
 name: "euwatch-list-metrics"
 section: "1"
@@ -9,12 +10,10 @@ description: "euwatch-list-metrics – Show a list of monitoring metrics"
 
 <h2>NAME</h2>
 <p> euwatch-list-metrics &#8211; Show a list of monitoring metrics</p>
-<h2>SYNOPSIS</h2>
 <p> euwatch-list-metrics [-d KEY1=VALUE1,KEY2=VALUE2,&#8230;] [-m METRIC]</p>
 <dl>
 <dt>[-n NAMESPACE] [&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show a list of monitoring metrics</p>
 <h3>optional arguments:</h3>
 <dl>

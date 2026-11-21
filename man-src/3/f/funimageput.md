@@ -1,4 +1,5 @@
 ---
+
 title: "funimageput(3)"
 name: "funimageput"
 section: "3"
@@ -9,13 +10,11 @@ description: "FunImagePut – put an image to a Funtools file"
 
 <h2>NAME</h2>
 <p> <code>FunImagePut &#8211; put an image to a Funtools file</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
 <p>int FunImagePut(Fun fun, void *buf, int dim1, int dim2, int bitpix,<br />
                 char *plist)</p>
-<h2>DESCRIPTION</h2>
 <p> The FunImagePut() routine outputs an image array to a <font SIZE="-1">FITS</font> file. The image is written either as a primary header/data unit or as an image extension, depending on whether other data have already been written to the file. That is, if the current file position is at the beginning of the file, a primary <font SIZE="-1">HDU</font> is written. Otherwise, an image extension is written. </p>
 <p> The first argument is the Funtools handle returned by <i>FunOpen()</i>. The second <code>buf</code> argument is a pointer to a data buffer to write. The <code>dim1</code>and <code>dim2</code> arguments that follow specify the dimensions of the image, where dim1 corresponds to naxis1 and dim2 corresponds to naxis2. The <code>bitpix</code> argument specifies the data type of the image and can have the following FITS-standard values:</p>
 <dl>

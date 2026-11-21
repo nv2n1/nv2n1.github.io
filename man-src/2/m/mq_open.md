@@ -1,4 +1,5 @@
 ---
+
 title: "mq_open(2)"
 name: "mq_open"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mq_open/"
 description: "mq_open – open a message queue"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt; /* For O_* constants */
 #include &lt;mqueue.h&gt;
@@ -17,7 +17,6 @@ mqd_t mq_open(const char *name, int oflag, mode_t mode,
               struct mq_attr *attr);
 </code></pre>
 <p> Link with <i>-lrt</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mq_open</code>() creates a new POSIX message queue or opens an existing queue. The queue is identified by <i>name</i>. For details of the construction of <i>name</i>, see <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7). </p>
 <p> The <i>oflag</i> argument specifies flags that control the operation of the call. (Definitions of the flags values can be obtained by including <i>&lt;fcntl.h&gt;</i>.) Exactly one of the following must be specified in <i>oflag</i>:</p>
 <dl>

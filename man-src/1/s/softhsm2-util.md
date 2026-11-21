@@ -1,4 +1,5 @@
 ---
+
 title: "softhsm2-util(1)"
 name: "softhsm2-util"
 section: "1"
@@ -9,13 +10,11 @@ description: "softhsm2-util – support tool for libsofthsm2"
 
 <h2>NAME</h2>
 <p> softhsm2-util &#8211; support tool for libsofthsm2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>softhsm2-util &#8211;show-slots</code> </p>
 <p> <code>softhsm2-util &#8211;init-token</code> <code>&#8211;slot</code> <i>number</i> <code>&#8211;label</code> <i>text</i> \<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>&#8211;so-pin</code> <i>PIN</i> <code>&#8211;pin</code> <i>PIN</i>] </p>
 <p> <code>softhsm2-util &#8211;import</code> <i>path</i> [<code>&#8211;file-pin</code> <i>PIN</i>] <code>&#8211;slot</code> <i>number</i> \<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>&#8211;pin</code> <i>PIN</i> <code>&#8211;no-public-key]</code> <code>&#8211;label</code> <i>text</i> <code>&#8211;id</code> <i>hex</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>softhsm2-util</code> is a support tool mainly for libsofthsm2. It can also be used with other PKCS#11 libraries by using the option <code>&#8211;module</code> </p>
 <p> Read the sections below to get more information on the libsofthsm2 and PKCS#11. Most applications assumes that the token they want to use is already initialized. It is then up to the user to initialize the PKCS#11 token. This is done by using the PKCS#11 interface, but instead of writing your own tool you can use the <code>softhsm2-util</code> tool. </p>
 <p> Keys are usually created directly in the token, but the user may want to use an existing key pair. Keys can be imported to a token by using the PKCS#11 interface, but this tool can also be used if the user has the key pair in a PKCS#8 file. If you need to convert keys from BIND .private-key format over to PKCS#8, one can use <code>softhsm2-keyconv</code>. </p>

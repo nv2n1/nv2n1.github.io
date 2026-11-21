@@ -1,4 +1,5 @@
 ---
+
 title: "dwp(1)"
 name: "dwp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dwp/"
 description: "dwp – The DWARF packaging utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dwp</code> [<i>,options/</i>] [<i>,file/</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Print this help message</dd>

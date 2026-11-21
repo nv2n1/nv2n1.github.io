@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-export(1)"
 name: "wimlib-imagex-export"
 section: "1"
@@ -9,9 +10,7 @@ description: "wimlib-imagex-export – Exports an image from a WIM archive to an
 
 <h2>NAME</h2>
 <p> wimlib-imagex-export &#8211; Exports an image from a WIM archive to an existing or new WIM archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex export</code> <i>SRC_WIMFILE</i> <i>SRC_IMAGE</i> <i>DEST_WIMFILE</i> [<i>DEST_IMAGE_NAME</i> [<i>DEST_IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Copies the specified image in <i>SRC_WIMFILE</i> to <i>DEST_WIMFILE</i>, optionally changing its name and/or description and/or compression type. If <i>DEST_WIMFILE</i> exists, it is taken be a WIM archive to which the image will be appended. Otherwise, it is created as a new WIM archive containing only the exported image. This command is also available as simply <code>wimexport</code> if the appropriate hard link or batch file has been installed. </p>
 <p> <i>SRC_IMAGE</i> specifies the image in <i>SRC_WIMFILE</i> to export. It may be a 1-based index of an image in <i>SRC_WIMFILE</i>, the name of an image in <i>SRC_WIMFILE</i>, or the keyword &quot;all&quot; to indicate that all images in <i>SRC_WIMFILE</i> are to be exported. Use the <code>wimlib-imagex info</code> (1) command to list the images a WIM file contains. </p>
 <p> If specified, <i>DEST_IMAGE_NAME</i> is the name to give the image being exported to <i>DEST_WIMFILE</i>. The default is its name in <i>SRC_WIMFILE</i>. <i>DEST_IMAGE_NAME</i> cannot be specified if multiple images are being exported. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dmtxwrite(1)"
 name: "dmtxwrite"
 section: "1"
@@ -9,9 +10,7 @@ description: "dmtxwrite – create Data Matrix barcodes"
 
 <h2>NAME</h2>
 <p> dmtxwrite &#8211; create Data Matrix barcodes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dmtxwrite</code> [<i>OPTION</i>]&#8230; [FILE]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dmtxwrite</code> encodes data from a file or standard input, and writes the resulting ECC200 Data Matrix barcode as an image.</p>
 <h2>OPTIONS</h2>
 <dl>

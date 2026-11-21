@@ -1,4 +1,5 @@
 ---
+
 title: "hpialarms(1)"
 name: "hpialarms"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-hpialarms/"
 description: "hpialarms – A openhpi sample application that shows \"Alarm Control\" management instruments"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpialarms[-D id][-N host[:port]][-C&lt;cfgfile&gt;]
          [-a 1 | 0][-b 1 | 0][-c 1 | 0][-m 1 | 0][-n 1 | 0][-p 1 | 0][-i n][-o][-X][-h] hpialarms[--domain = id][--host = host[:port]][--cfgfile = file]
                                                                                                  [--diska = 1 | 0][--diskb = 1 | 0][--critical = 1 | 0][--major = 1 | 0]
                                                                                                  [--minor = 1 | 0][--power = 1 | 0][--chassisid = n][--all][--debug][--help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpialarms walks the <font SIZE="-1">RPT </font>(Resource Presence Table) for resources that have &#8220;Alarm Control&#8221; management instruments (<font SIZE="-1">SAHPI_CTRL_LED</font>). </p>
 <p> If no domain or host is selected, hpialarms uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

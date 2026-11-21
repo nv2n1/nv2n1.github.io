@@ -1,4 +1,5 @@
 ---
+
 title: "csycon(3)"
 name: "csycon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csycon/"
 description: "csycon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csycon</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>CSYCON</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "supybot-plugin-doc(1)"
 name: "supybot-plugin-doc"
 section: "1"
@@ -9,9 +10,7 @@ description: "supybot-plugin-doc – Generates the documentation for a Supybot p
 
 <h2>NAME</h2>
 <p> supybot-plugin-doc &#8211; Generates the documentation for a Supybot plugin</p>
-<h2>SYNOPSIS</h2>
 <p> <code>supybot-plugin-doc</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>supybot-plugin-doc</code> is used to generate documentation (StructuredText or reStructuredText format) for a <i><a href="/docs/linux/man/1-supybot/">supybot</a></i>(1) plugin.</p>
 <h2>OPTIONS</h2>
 <dl>

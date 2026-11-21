@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_interop(1)"
 name: "nfstest_interop"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfstest_interop – NFS interoperability tests"
 
 <h2>NAME</h2>
 <p> nfstest_interop &#8211; NFS interoperability tests</p>
-<h2>SYNOPSIS</h2>
 <p> nfstest_interop &#8211;server &lt;server&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> Basic interoperability tests verify that a file written with different versions of NFS is written correctly. The contents of the file are verified by reading the file back using one of the NFS versions. </p>
 <p> The tests append different data from different versions of NFS one at a time then reads the contents of the file to verify it was written correctly. This is done twice for each test: </p>
 <p>1)&nbsp;<wbr>Mount different versions of NFS&nbsp;<wbr>(NFSv3, NFSv4, NFSv4.1)<br />

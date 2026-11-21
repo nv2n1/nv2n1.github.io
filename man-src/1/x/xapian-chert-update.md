@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-chert-update(1)"
 name: "xapian-chert-update"
 section: "1"
@@ -9,9 +10,7 @@ description: "chert-update – Update a chert database to the new format keys"
 
 <h2>NAME</h2>
 <p> chert-update &#8211; Update a chert database to the new format keys</p>
-<h2>SYNOPSIS</h2>
 <p> <code>chert-update</code> [<i>OPTIONS</i>] <i>SOURCE_DATABASE DESTINATION_DATABASE</i></p>
-<h2>DESCRIPTION</h2>
 <p> chert-update &#8211; Update a chert database to the new format keys</p>
 <h2>OPTIONS</h2>
 <dl>

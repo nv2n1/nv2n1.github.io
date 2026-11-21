@@ -1,4 +1,5 @@
 ---
+
 title: "startfluxbox(1)"
 name: "startfluxbox"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-startfluxbox/"
 description: "startfluxbox – start a fluxbox session"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>startfluxbox</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>startfluxbox</code> is a script which runs the file <code>~/.fluxbox/startup</code> If it doesn&#8217;t exist it will be generated. </p>
 <p> <code>startfluxbox</code> should be started from your <code>~/.xinitrc</code> if you use startx, or <code>~/.xsession</code> if you run a display manager, like xdm.</p>
 <h2>FILES</h2>

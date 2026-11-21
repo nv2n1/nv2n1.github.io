@@ -1,4 +1,5 @@
 ---
+
 title: "hp-faxsetup(1)"
 name: "hp-faxsetup"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-faxsetup/"
 description: "hp-faxsetup – Fax Device Setup Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Fax device setup utility for HPLIP supported printers.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-faxsetup [DEVICE_URI|PRINTER_NAME] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

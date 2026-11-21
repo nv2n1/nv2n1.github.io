@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt2wire(3)"
 name: "ldns_pkt2wire"
 section: "3"
@@ -9,14 +10,12 @@ description: "ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire"
 
 <h2>NAME</h2>
 <p> ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_rr2wire(uint8_t **dest, const ldns_rr *rr, int, size_t *size); </p>
 <p> ldns_status ldns_pkt2wire(uint8_t **dest, const ldns_pkt *p, size_t *size); </p>
 <p> ldns_status ldns_rdf2wire(uint8_t **dest, const ldns_rdf *rdf, size_t *size); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr2wire</i>()</dt>
 <dd>Allocates an array of uint8_t at dest, and puts the wireformat of the given rr in that array. The result_size value contains the length of the array, if it succeeds, and 0 otherwise (in which case the function also returns NULL) </dd>

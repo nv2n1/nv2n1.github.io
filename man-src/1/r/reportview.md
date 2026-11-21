@@ -1,4 +1,5 @@
 ---
+
 title: "reportview(1)"
 name: "reportview"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-reportview/"
 description: "reportview – ask KWeatherService to display a weather report"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reportview;</code> [<code>KDE Generic Options</code>] [<code>Qt Generic Options</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>reportview</code></p>
 <dd>is not intended to be used directly. </dd>
 <p> <code>reportview</code> is a small program that asks KWeatherService to display a weather report. Information shown includes the temperature, wind speed and air pressure. </p>

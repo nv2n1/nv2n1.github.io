@@ -1,4 +1,5 @@
 ---
+
 title: "greeks(3)"
 name: "greeks"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-greeks/"
 description: "ql/pricingengines/greeks.hpp – default greek calculations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Functions</h3>
 <p> Real <code>blackScholesTheta</code> (const boost::shared_ptr&lt; GeneralizedBlackScholesProcess &gt; &amp;, Real value, Real delta, Real gamma)<br />

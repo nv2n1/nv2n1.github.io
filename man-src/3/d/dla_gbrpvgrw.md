@@ -1,4 +1,5 @@
 ---
+
 title: "dla_gbrpvgrw(3)"
 name: "dla_gbrpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_gbrpvgrw/"
 description: "dla_gbrpvgrw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dla_gbrpvgrw</code> (N, KL, KU, NCOLS, AB, LDAB, AFB, LDAFB)<br />
  <i></i><code>DLA_GBRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a general banded matrix.</p>

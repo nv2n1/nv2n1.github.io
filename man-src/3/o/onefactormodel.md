@@ -1,4 +1,5 @@
 ---
+
 title: "onefactormodel(3)"
 name: "onefactormodel"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-onefactormodel/"
 description: "ql/models/shortrate/onefactormodel.hpp – Abstract one-factor interest rate model class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/model.hpp&gt;<br />
  #include &lt;ql/methods/lattices/lattice1d.hpp&gt;<br />
  #include &lt;ql/methods/lattices/trinomialtree.hpp&gt; </p>

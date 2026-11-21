@@ -1,4 +1,5 @@
 ---
+
 title: "radlast(1)"
 name: "radlast"
 section: "1"
@@ -9,9 +10,7 @@ description: "radlast – show \"last\" info from the radwtmp file"
 
 <h2>NAME</h2>
 <p> radlast &#8211; show &quot;last&quot; info from the radwtmp file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>radlast</code> <i>[</i>options<i>]</i></p>
-<h2>DESCRIPTION</h2>
 <p> The FreeRADIUS server can write an accounting log in the <i>wtmp</i> format of the local system. <code>radlast</code> is a frontend for the systems <code>last</code> command &#8211; it just calls <code>last</code> with the <i>-f path_to_radwtmp_file</i> argument, and passes all options on the command line to the system <code>last</code> command.</p>
 <h2>OPTIONS</h2>
 <p> See the manpage of the system <code>last</code> command.</p>

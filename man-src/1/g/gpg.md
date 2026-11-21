@@ -1,4 +1,5 @@
 ---
+
 title: "gpg(1)"
 name: "gpg"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-gpg/"
 description: "gpg – OpenPGP encryption and signing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg</code> &#8211; OpenPGP encryption and signing tool </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpg</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <i>command</i> [<i>args</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gpg</code> is the OpenPGP part of the GNU Privacy Guard (GnuPG). It is a tool to provide digital encryption and signing services using the OpenPGP standard. <code>gpg</code> features complete key management and all the bells and whistles you would expect from a full OpenPGP implementation. </p>
 <p> There are two main versions of GnuPG: GnuPG 1.x and GnuPG 2.x. GnuPG 2.x supports modern encryption algorithms and thus should be preferred over GnuPG 1.x. You only need to use GnuPG 1.x if your platform doesn&#8217;t support GnuPG 2.x, or you need support for some features that GnuPG 2.x has deprecated, e.g., decrypting data created with PGP-2 keys. </p>
 <p> If you are looking for version 1 of GnuPG, you may find that version installed under the name <code>gpg1</code>. </p>

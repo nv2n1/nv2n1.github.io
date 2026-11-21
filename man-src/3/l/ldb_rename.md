@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_rename(3)"
 name: "ldb_rename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_rename/"
 description: "ldb_rename –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> struct ldb_dn * <code>olddn</code> </p>
 <p> struct ldb_dn * <code>newdn</code> </p>

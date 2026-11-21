@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-log(1)"
 name: "blaze-log"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-blaze-log/"
 description: "blaze-log – display the BlazeBlogger repository log"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blaze-log</code> [<code>-cqrsCV</code>] [<code>-b</code> <i>directory</i>] [<code>-n</code> <i>number</i>] </p>
 <p> <code>blaze-log</code> <code>-h</code> | <code>-v</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>blaze-log</code> displays the content of the BlazeBlogger repository log.</p>
 <h2>OPTIONS</h2>
 <dl>

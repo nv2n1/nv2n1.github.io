@@ -1,4 +1,5 @@
 ---
+
 title: "autoheader(1)"
 name: "autoheader"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autoheader/"
 description: "autoheader – Create a template header for configure"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autoheader</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE-FILE/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Create a template file of C &#8216;#define&#8217; statements for &#8216;configure&#8217; to use. To this end, scan TEMPLATE-FILE, or &#8216;configure.ac&#8217; if present, or else &#8216;configure.in&#8217;.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

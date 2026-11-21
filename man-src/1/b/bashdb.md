@@ -1,4 +1,5 @@
 ---
+
 title: "bashdb(1)"
 name: "bashdb"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-bashdb/"
 description: "bashdb – bash debugger script"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bashdb</code> [<i>options</i>] [&#8211;] <i>script-name</i> [<i>script options</i>] </p>
 <p> <code>bashdb</code> [<i>options</i>] -c <i>execution-string</i> </p>
 <p> <code>bash &#8211;debugger</code> [<i>bash-options</i>&#8230;] <i>script-name</i> [<i>script options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;bashdb&quot;</tt> is a bash script to which arranges for another bash script to be debugged. The debugger has a similar command interface as <tt><a href="/docs/linux/man/1-gdb/">gdb</a>(1)</tt>. </p>
 <p> The way this script arranges debugging to occur is by including (or actually &#8220;source&#8221;-ing) some debug-support code and then sourcing the given script or command string. </p>
 <p> One problem with sourcing a debugged script is that the program name stored in <tt>$0</tt> will be <tt>&quot;bashdb&quot;</tt> rather than the name of the script to be debugged. The debugged script will appear in a call stack not as the top item but as the item below <tt>&quot;bashdb&quot;</tt>. If this is of concern, use the last form given above, <tt>&quot;bash --debugger&quot;</tt> <i>script-name</i> [<i>script-options</i>]. </p>

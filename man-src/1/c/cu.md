@@ -1,4 +1,5 @@
 ---
+
 title: "cu(1)"
 name: "cu"
 section: "1"
@@ -9,9 +10,7 @@ description: "cu – Call up another system"
 
 <h2>NAME</h2>
 <p> cu &#8211; Call up another system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cu</code> [ options ] [ system | phone | &quot;dir&quot; ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>cu</i> command is used to call up another system and act as a dial in terminal. It can also do simple file transfers with no error checking. </p>
 <p> <i>cu</i> takes a single argument, besides the options. If the argument is the string &quot;dir&quot; cu will make a direct connection to the port. This may only be used by users with write access to the port, as it permits reprogramming the modem. </p>
 <p> Otherwise, if the argument begins with a digit, it is taken to be a phone number to call. Otherwise, it is taken to be the name of a system to call. The <code>-z</code> or <code>&#8211;system</code> option may be used to name a system beginning with a digit, and the <code>-c</code> or <code>&#8211;phone</code> option may be used to name a phone number that does not begin with a digit. </p>

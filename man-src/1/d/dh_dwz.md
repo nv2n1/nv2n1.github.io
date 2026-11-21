@@ -1,4 +1,5 @@
 ---
+
 title: "dh_dwz(1)"
 name: "dh_dwz"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_dwz/"
 description: "dh_dwz – optimize DWARF debug information in ELF binaries via dwz"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_dwz</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Caveat</code>: This tool is experimental and may disappear or change behaviour without any notice. </p>
 <p> <code>dh_dwz</code> is a debhelper program that will optimize the (uncompressed) size of the <font SIZE="-1">DWARF</font> debug information in <font SIZE="-1">ELF</font> binaries. It does so by running <i><a href="/docs/linux/man/1-dwz/">dwz</a></i>(1) on all the <font SIZE="-1">ELF</font> binaries in the package.</p>
 <h2>OPTIONS</h2>

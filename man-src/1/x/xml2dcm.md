@@ -1,4 +1,5 @@
 ---
+
 title: "xml2dcm(1)"
 name: "xml2dcm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-xml2dcm/"
 description: "xml2dcm – Convert XML document to DICOM file or data set"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 xml2dcm [options] xmlfile-in dcmfile-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>xml2dcm</code> utility converts the contents of an XML (Extensible Markup Language) document to DICOM file or data set. The XML document is expected to validate against the DTD (Document Type Definition) which is described in file <i>dcm2xml.dtd</i>. An appropriate XML file can be created using the <code>dcm2xml</code> tool (option <i>+Wb</i> recommended to include binary data).</p>
 <h2>PARAMETERS</h2>
 <pre>

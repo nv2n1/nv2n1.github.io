@@ -1,4 +1,5 @@
 ---
+
 title: "go-list(1)"
 name: "go-list"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-go-list/"
 description: "go-list – list packages or modules"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>go list</code> [<code>-f</code> <i>format</i>] [<code>-json</code>] [<code>-m</code>] [<i>list flags</i>] [<i>build flags</i>] [<i>packages</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> List lists the packages named by the import paths, one per line.<br />
  The most commonly-used flags are -f and -json, which control the form of the output printed for each package. Other list flags, documented below, control more specific details. </p>
 <p> The default output shows the package import path: </p>

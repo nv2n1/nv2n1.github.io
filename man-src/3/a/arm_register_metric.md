@@ -1,4 +1,5 @@
 ---
+
 title: "arm_register_metric(3)"
 name: "arm_register_metric"
 section: "3"
@@ -9,7 +10,6 @@ description: "arm_register_metric – describe metrics"
 
 <h2>NAME</h2>
 <p> arm_register_metric &#8211; describe metrics</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_register_metric( </p>
@@ -22,7 +22,6 @@ description: "arm_register_metric – describe metrics"
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>, </p>
 <p>&nbsp;<wbr>arm_id_t&nbsp;<wbr>*</code><i>output_metric_id</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_register_metric()</code> describes metadata about a metric. </p>
 <p> The application uses <code>arm_register_metric()</code> to inform the ARM library of metadata about each metric the application provides. </p>
 <p> ARM generates an ID that is passed in the metric binding sub-buffer to <code>arm_register_transaction()</code>. </p>

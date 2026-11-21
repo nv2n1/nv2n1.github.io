@@ -1,4 +1,5 @@
 ---
+
 title: "ssh(1)"
 name: "ssh"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-ssh/"
 description: "ssh – OpenSSH remote login client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh</code> &#8211; OpenSSH remote login client </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ssh</code> [-<code>46AaCfGgKkMNnqsTtVvXxYy </code>[-<code>B </code><i>bind_interface</i> ] ] [-<code>b </code><i>bind_address</i> ] [-<code>c </code><i>cipher_spec</i> ] [-<code>D </code>[<i>bind_address : </i><i>port</i> ] ] [-<code>E </code><i>log_file</i> ] [-<code>e </code><i>escape_char</i> ] [-<code>F </code><i>configfile</i> ] [-<code>I </code><i>pkcs11</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>J </code><i>destination</i> ] [-<code>L </code><i>address</i> ] [-<code>l </code><i>login_name</i> ] [-<code>m </code><i>mac_spec</i> ] [-<code>O </code><i>ctl_cmd</i> ] [-<code>o </code><i>option</i> ] [-<code>p </code><i>port</i> ] [-<code>Q </code><i>query_option</i> ] [-<code>R </code><i>address</i> ] [-<code>S </code><i>ctl_path</i> ] [-<code>W </code><i>host : </i><i>port</i> ] [-<code>w </code><i>local_tun </i>[: <i>remote_tun</i> ] ] <i>destination</i> [<i>command </i>[<i>argument &#8230;</i> ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ssh</code> (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine. It is intended to provide secure encrypted communications between two untrusted hosts over an insecure network. X11 connections, arbitrary TCP ports and UNIX sockets can also be forwarded over the secure channel. </p>
 <p> <code>ssh</code> connects and logs into the specified <i>destination</i> which may be specified as either [user @ hostname] or a URI of the form <code>ssh:// </code>[user @ hostname [: port] ] The user must prove their identity to the remote machine using one of several methods (see below). </p>
 <p> If a <i>command</i> is specified, it will be executed on the remote host instead of a login shell. A complete command line may be specified as <i>command</i> or it may have additional arguments. If supplied, the arguments will be appended to the command, separated by spaces, before it is sent to the server to be executed. </p>

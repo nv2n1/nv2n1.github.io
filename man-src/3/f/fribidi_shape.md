@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_shape(3)"
 name: "fribidi_shape"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_shape/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_shape - do bidi-aware shaping 
 
- fribidi_shape - do bidi-aware shaping 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern void fribidi_shape 
  ( 
@@ -43,9 +39,7 @@ url: "/docs/linux/man/3-fribidi_shape/"
 </dd><dt><b>FriBidiChar *str</b>
 </dt><dd> String to shape.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function does all shaping work that depends on the resolved embedding levels of the characters. Currently it does mirroring and Arabic shaping, but the list may grow in the future. This function is a wrapper around fribidi_shape_mirroring and fribidi_shape_arabic. 
+This function does all shaping work that depends on the resolved embedding levels of the characters. Currently it does mirroring and Arabic shaping, but the list may grow in the future. This function is a wrapper around fribidi_shape_mirroring and fribidi_shape_arabic. 
 
  The flags parameter specifies which shapings are applied. The only flags affecting the functionality of this function are those beginning with FRIBIDI_FLAG_SHAPE_. Of these, only FRIBIDI_FLAG_SHAPE_MIRRORING is on in FRIBIDI_FLAGS_DEFAULT. For details of the Arabic-specific flags see fribidi_shape_arabic. If ar_props is NULL, no Arabic shaping is performed. 
 

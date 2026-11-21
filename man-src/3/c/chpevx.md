@@ -1,4 +1,5 @@
 ---
+
 title: "chpevx(3)"
 name: "chpevx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chpevx/"
 description: "chpevx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpevx</code> (JOBZ, RANGE, UPLO, N, AP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code> CHPEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

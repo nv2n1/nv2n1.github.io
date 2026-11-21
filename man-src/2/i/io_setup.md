@@ -1,4 +1,5 @@
 ---
+
 title: "io_setup(2)"
 name: "io_setup"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-io_setup/"
 description: "io_setup – create an asynchronous I/O context"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */
 long io_setup(unsigned nr_events, aio_context_t *ctx_idp);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: this page describes the raw Linux system call interface. The wrapper function provided by <i>libaio</i> uses a different type for the <i>ctx_idp</i> argument. See NOTES. </p>
 <p> The <code>io_setup</code>() system call creates an asynchronous I/O context suitable for concurrently processing <i>nr_events</i> operations. The <i>ctx_idp</i> argument must not point to an AIO context that already exists, and must be initialized to 0 prior to the call. On successful creation of the AIO context, <i>*ctx_idp</i> is filled in with the resulting handle.</p>
 <h2>RETURN VALUE</h2>

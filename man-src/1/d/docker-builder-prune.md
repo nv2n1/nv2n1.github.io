@@ -1,4 +1,5 @@
 ---
+
 title: "docker-builder-prune(1)"
 name: "docker-builder-prune"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-builder-prune/"
 description: "docker-builder-prune – Remove build cache"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker builder prune</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Remove build cache </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Remove all unused build cache, not just dangling ones</p>

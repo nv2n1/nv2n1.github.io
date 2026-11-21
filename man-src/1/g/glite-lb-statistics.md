@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-statistics(1)"
 name: "glite-lb-statistics"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-statistics/"
 description: "glite-lb-statistics – tool for converting L&B job dump to Job History Record in XML"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-statistics</code> [<i>OPTIONS</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-statistics</code> takes a dump file for one job and converts it to an XML-encoded Job History Record that contains all the relevant information from the job&#8217;s life. The Job History Records can be fed into statistics tools to reveal interesting information about job behavior in the Grid. </p>
 <p> The dump file should be a dump for a single job only. Typically, the <code><a href="/docs/linux/man/1-glite-lb-dump_exporter/">glite-lb-dump_exporter</a></code>(1) utility is used to convert L&amp;B server dumps for further processing by <code><a href="/docs/linux/man/1-glite-lb-statistics/">glite-lb-statistics</a></code>(1). </p>
 <h2>OPTIONS</h2>

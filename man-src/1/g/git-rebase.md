@@ -1,4 +1,5 @@
 ---
+
 title: "git-rebase(1)"
 name: "git-rebase"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-rebase/"
 description: "git-rebase – Reapply commits on top of another base tip"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git rebase[-i | --interactive][&lt;options&gt;][--exec&lt;cmd&gt;]
           [--onto&lt;newbase&gt; | --keep - base][&lt;upstream&gt;[&lt;branch&gt;]] git rebase[-i | --interactive][&lt;options&gt;][--exec&lt;cmd&gt;][--onto&lt;newbase&gt;]-- root[&lt;branch&gt;] git rebase(--continue | --skip | --abort | --quit | --edit - todo | --show - current - patch)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> If &lt;branch&gt; is specified, <i>git rebase</i> will perform an automatic <code>git switch &lt;branch&gt;</code> before doing anything else. Otherwise it remains on the current branch. </p>
 <p> If &lt;upstream&gt; is not specified, the upstream configured in branch.&lt;name&gt;.remote and branch.&lt;name&gt;.merge options will be used (see <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) for details) and the <code>&#8211;fork-point</code> option is assumed. If you are currently not on any branch or if the current branch does not have a configured upstream, the rebase will abort. </p>
 <p> All changes made by commits in the current branch but that are not in &lt;upstream&gt; are saved to a temporary area. This is the same set of commits that would be shown by <code>git log &lt;upstream&gt;..HEAD</code>; or by <code>git log &#8216;fork_point&#8217;..HEAD</code>, if <code>&#8211;fork-point</code> is active (see the description on <code>&#8211;fork-point</code> below); or by <code>git log HEAD</code>, if the <code>&#8211;root</code> option is specified. </p>

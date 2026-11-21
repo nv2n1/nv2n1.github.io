@@ -1,4 +1,5 @@
 ---
+
 title: "bindresvport(3)"
 name: "bindresvport"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-bindresvport/"
 description: "bindresvport – bind a socket to a privileged IP port"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netinet/in.h&gt;
 #include &lt;sys/types.h&gt;
 int bindresvport(int sockfd, struct sockaddr_in *sin);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>bindresvport</code>() is used to bind the socket referred to by the file descriptor <i>sockfd</i> to a privileged anonymous IP port, that is, a port number arbitrarily selected from the range 512 to 1023. </p>
 <p> If the <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) performed by <code>bindresvport</code>() is successful, and <i>sin</i> is not NULL, then <i>sin-&gt;sin_port</i> returns the port number actually allocated. </p>
 <p> <i>sin</i> can be NULL, in which case <i>sin-&gt;sin_family</i> is implicitly taken to be <code>AF_INET</code>. However, in this case, <code>bindresvport</code>() has no way to return the port number actually allocated. (This information can later be obtained using <code><a href="/docs/linux/man/2-getsockname/">getsockname</a></code>(2).)</p>

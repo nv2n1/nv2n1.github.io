@@ -1,4 +1,5 @@
 ---
+
 title: "zblacklist(1)"
 name: "zblacklist"
 section: "1"
@@ -9,9 +10,7 @@ description: "zblacklist – zmap IP blacklist tool"
 
 <h2>NAME</h2>
 <p> <code>zblacklist</code> &#8211; zmap IP blacklist tool</p>
-<h2>SYNOPSIS</h2>
 <p> zblacklist [ -b &lt;blacklist&gt; ] [ -w &lt;whitelist&gt; ] [ OPTIONS&#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>ZBlacklist</i> is a network tool for limiting and deduplicating a list of IP addresses using a blacklist or whitelist.</p>
 <h2>OPTIONS</h2>
 <h3>BASIC OPTIONS</h3>

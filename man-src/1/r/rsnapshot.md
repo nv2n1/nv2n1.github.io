@@ -1,4 +1,5 @@
 ---
+
 title: "rsnapshot(1)"
 name: "rsnapshot"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rsnapshot/"
 description: "rsnapshot – remote filesystem snapshot utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rsnapshot</code> [<code>-vtxqVD</code>] [<code>-c</code> cfgfile] [command] [args]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rsnapshot</code> is a filesystem snapshot utility. It can take incremental snapshots of local and remote filesystems for any number of machines. </p>
 <p> Local filesystem snapshots are handled with <a href="/docs/linux/man/1-rsync/">rsync</a><code>(1)</code>. Secure remote connections are handled with rsync over <a href="/docs/linux/man/1-ssh/">ssh</a><code>(1)</code>, while anonymous rsync connections simply use an rsync server. Both remote and local transfers depend on rsync. </p>
 <p> <code>rsnapshot</code> saves much more disk space than you might imagine. The amount of space required is roughly the size of one full backup, plus a copy of each additional file that is changed. <code>rsnapshot</code> makes extensive use of hard links, so if the file doesn&#8217;t change, the next snapshot is simply a hard link to the exact same file. </p>

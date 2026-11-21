@@ -1,4 +1,5 @@
 ---
+
 title: "clags2(3)"
 name: "clags2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clags2/"
 description: "clags2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br />
  <i></i><code>CLAGS2</code></p>

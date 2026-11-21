@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtopcx(1)"
 name: "ppmtopcx"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtopcx/"
 description: "ppmtopcx – convert a portable pixmap into a PCX file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtopcx</code> [<code>-24bit</code>] [<code>-packed</code>] [<code>-xpos=</code><i>cols</i>] [<code>-ypos=</code><i>rows</i>] [<i>ppmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a PPM image as input. Produces a PCX file as output. The type of the PCX file depends on the number of colors in the pixmap:</p>
 <dl>
 <dt>16 colors or less:</dt>

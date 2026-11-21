@@ -1,4 +1,5 @@
 ---
+
 title: "slabad(3)"
 name: "slabad"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slabad/"
 description: "slabad.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slabad</code> (SMALL, LARGE)<br />
  <i></i><code>SLABAD</code></p>

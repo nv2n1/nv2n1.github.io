@@ -1,4 +1,5 @@
 ---
+
 title: "audacity(1)"
 name: "audacity"
 section: "1"
@@ -9,12 +10,10 @@ description: "audacity – Graphical cross-platform audio editor"
 
 <h2>NAME</h2>
 <p> audacity &#8211; Graphical cross-platform audio editor</p>
-<h2>SYNOPSIS</h2>
 <p> <code>audacity</code> -help<br />
  <code>audacity</code> -version </p>
 <p> <code>audacity</code> [-blocksize nnn] -test<br />
  <code>audacity</code> [-blocksize nnn] [ <i>AUDIO-FILE</i> ] <code>&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Audacity</code> is a graphical audio editor. This man page does not describe all of the features of Audacity or how to use it; for this, see the html documentation that came with the program, which should be accessible from the Help menu. This man page describes the Unix-specific features, including special files and environment variables. </p>
 <p> Audacity currently uses <code>libsndfile</code> to open many uncompressed audio formats such as WAV, AIFF, and AU, and it can also be linked to <code>libmad,</code> <code>libvorbis,</code> and <code>libflac,</code> to provide support for opening MP2/3, Ogg Vorbis, and FLAC files, respectively. <code>LAME, libvorbis, libflac</code> and <code>libtwolame</code> provide facilities to export files to all these formats as well. </p>
 <p> Audacity is primarily an interactive, graphical editor, not a batch-processing tool. Whilst there is a basic batch processing tool it is experimental and incomplete. If you need to batch-process audio or do simple edits from the command line, using <code>sox</code> or <code>ecasound</code> driven by a bash script will be much more powerful than audacity. </p>

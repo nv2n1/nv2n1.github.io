@@ -1,4 +1,5 @@
 ---
+
 title: "telegram-desktop(1)"
 name: "telegram-desktop"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-telegram-desktop/"
 description: "telegram-desktop – official telegram messaging application"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>telegram-desktop</code> &#8211; official telegram messaging application</p>
-<h2>SYNOPSIS</h2>
 <p> [ <code>-startintray</code> ] [ <code>-many</code> ] [ <code>-debug</code> ] [ <code>&#8212; </code><i>URI</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents how to run <code>Telegram Desktop</code>, official Telegram client. </p>
 <h2>OPTIONS</h2>
 <p> The program understands various parameters, some of them are described in the present document.</p>

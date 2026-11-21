@@ -1,4 +1,5 @@
 ---
+
 title: "iv_tls_user_ptr(3)"
 name: "iv_tls_user_ptr"
 section: "3"
@@ -9,7 +10,6 @@ description: "iv_tls_user_register, iv_tls_user_ptr – thread-local storage han
 
 <h2>NAME</h2>
 <p> iv_tls_user_register, iv_tls_user_ptr &#8211; thread-local storage handling for ivykis modules</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_tls.h&gt;</code> </p>
 <pre><code>
 struct iv_tls_user {
@@ -20,7 +20,6 @@ struct iv_tls_user {
 </code></pre>
 <p> <code>void iv_tls_user_register(struct iv_tls_user *</code><i>tu</i><code>);</code><br />
  <code>void *iv_tls_user_ptr(struct iv_tls_user *</code><i>tu</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>iv_tls</code> interface provides thread-local storage handling to <code>ivykis</code> modules. </p>
 <p> An ivykis module can arrange for an amount of memory to be allocated for its use in each ivykis thread by calling <code>iv_tls_user_register.</code> This must be done before any calls to <code>iv_init</code> have been made in this process, and is typically done from a module initialization function marked as a constructor function. </p>
 <p> The <code>-&gt;sizeof_state</code> member of the passed-in structure indicates how many bytes of memory the module wants allocated for its use in every ivykis thread. </p>

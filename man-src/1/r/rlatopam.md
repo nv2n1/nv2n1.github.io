@@ -1,4 +1,5 @@
 ---
+
 title: "rlatopam(1)"
 name: "rlatopam"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-rlatopam/"
 description: "rlatopam – convert Alias/Wavefront RLA and RPF image files to PAM image files."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rlatopam</code> </p>
 <p> [<i>rlafile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>rlatopam</code> converts an Alias RLA (run-length encoded type A) or RPF (rich pixel format) image to a PAM image file. The output PAM file can be grayscale or RGB, with or without an alpha channel. </p>
 <p> <i>rlafile</i> is the file name of the input file. If you omit this parameter, <code>rlatopam</code> reads the image from Standard Input. </p>

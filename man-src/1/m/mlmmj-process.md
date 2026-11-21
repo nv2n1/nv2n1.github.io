@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-process(1)"
 name: "mlmmj-process"
 section: "1"
@@ -9,7 +10,6 @@ description: "mlmmj-process – process mail for an mlmmj managed mailinglist"
 
 <h2>NAME</h2>
 <p> mlmmj-process &#8211; process mail for an mlmmj managed mailinglist</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mlmmj-process</code> <i>-L /path/to/list -m /path/to/mail </i>[<i>-h</i>] [<i>-P</i>] [<i>-V</i>]</p>
 <dl>
 <dt> <code>-h</code>: This help</dt>
@@ -17,7 +17,6 @@ description: "mlmmj-process – process mail for an mlmmj managed mailinglist"
 <dt> <code>-m</code>: Full path to mail file</dt>
 <dt> <code>-P</code>: Don&#8217;t execute mlmmj-send (debugging only)</dt>
 <dt> <code>-V</code>: Print version</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This is the binary which processes a mail. Examples of what such processing is:</dd>
 <dl>
 <dl>

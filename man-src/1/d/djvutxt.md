@@ -1,4 +1,5 @@
 ---
+
 title: "djvutxt(1)"
 name: "djvutxt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-djvutxt/"
 description: "djvutxt – Extract the hidden text from DjVu documents."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>djvutxt [</code><i>options</i><code>] </code><i>inputdjvufile</i><code> [</code><i>outputtxtfile</i><code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Program <code>djvutxt</code> decodes the hidden text layer of a DjVu document <i>inputdjvufile</i> and prints it into file <i>outputtxtfile</i> or on the standard output. The hidden text layer is usually generated with the help of an optical character recognition software. </p>
 <p> Without options <code>-detail</code> and <code>-escape</code>, this program simply outputs the UTF-8 text. Option <code>-detail</code> cause the output of S-expressions describing the text and its location. Option <code>-escape</code> uses C-style escape sequences to represent nonprintable non-ASCII characters. </p>
 <h2>OPTIONS</h2>

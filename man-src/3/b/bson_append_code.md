@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_code(3)"
 name: "bson_append_code"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_code() – The bson_append_code() function shall appen
 
 <h2>NAME</h2>
 <p> bson_append_code() &#8211; The bson_append_code() function shall append a new element to bson using the UTF-8 encoded javascript provided. javascript must be a NULL terminated C string.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_code(bson_t *bson,
                       const char *key,
@@ -29,7 +29,6 @@ bool bson_append_code(bson_t *bson,
 <dl>
 <dt><code>javascript</code></dt>
 <dd> A UTF-8 encoded string containing the javascript.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_code/">bson_append_code</a>(3)</code> function shall append a new element to <code>bson</code> using the UTF-8 encoded <code>javascript</code> provided. <code>javascript</code> must be a NULL terminated C string. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-config(1)"
 name: "lxc-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-config – query LXC system configuration"
 
 <h2>NAME</h2>
 <p> lxc-config &#8211; query LXC system configuration</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-config</code> [-l] [<i>item</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-config</code> queries the lxc system configuration and lets you list all valid keys or query individual keys for their value.</p>
 <h2>OPTIONS</h2>
 <dl>

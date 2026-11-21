@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_data_descriptor_cntl(3)"
 name: "globus_xio_data_descriptor_cntl"
 section: "3"
@@ -8,7 +9,6 @@ description: "builtins/http/globus_xio_http.h –"
 ---
 
 <p> Globus XIO HTTP Driver Header.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_xio.h&#8217; </p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_xio_http_header_t</code><br />

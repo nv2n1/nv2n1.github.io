@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmgendir(1)"
 name: "gdcmgendir"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcmgendir – .TH \"gdcmgendir\" 1 \"Fri Oct 29 2010\" \"Version 
 <pre>
 gdcmgendir [options] file-in file-out
 </pre>
-<h2>DESCRIPTION</h2>
 <h2>PARAMETERS</h2>
 <pre>
 file-in   DICOM input filename

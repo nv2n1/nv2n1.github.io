@@ -1,4 +1,5 @@
 ---
+
 title: "stg-series(1)"
 name: "stg-series"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-series/"
 description: "stg-series – Print the patch series"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg series[options][--][&lt;patch - range&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Show all the patches in the series, or just those in the given range, ordered from top to bottom. </p>
 <p> The applied patches are prefixed with a + (except the current patch, which is prefixed with a &gt;), the unapplied patches with a -, and the hidden patches with a !. </p>
 <p> Empty patches are prefixed with a <i>0</i>.</p>

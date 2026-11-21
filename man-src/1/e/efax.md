@@ -1,4 +1,5 @@
 ---
+
 title: "efax(1)"
 name: "efax"
 section: "1"
@@ -9,7 +10,6 @@ description: "efax – send/receive faxes with Class 1, 2 or 2.0 fax modem"
 
 <p> <center> (Please read the <code>fax</code> man page first.)<br />
  </center> </p>
-<h2>SYNOPSIS</h2>
 <p> <code>efax</code> [ <i>options</i> ] [ <code>-t</code> <i>num</i> [ <i>file</i>&#8230; ] ] </p>
 <h2>OPTIONS</h2>
 <p> Where <i>options</i> are: </p>

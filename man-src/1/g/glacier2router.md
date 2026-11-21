@@ -1,4 +1,5 @@
 ---
+
 title: "glacier2router(1)"
 name: "glacier2router"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glacier2router/"
 description: "glacier2router – The Glacier2 router daemon."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> glacier2router [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Glacier2 is a lightweight firewall traversal solution for Ice applications. Full documentation for Glacier2 is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Glacier2">http://doc.zeroc.com/display/Ice/Glacier2</a>&quot;. </p>
 <h2>OPTIONS</h2>

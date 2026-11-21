@@ -1,4 +1,5 @@
 ---
+
 title: "tex4ht(1)"
 name: "tex4ht"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-tex4ht/"
 description: "TeX4ht – a system for authoring hypertext with TeX and friends"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mk4ht</code> <i>command</i> <i>file</i> [ <i>options1</i> ] [ <i>options2</i> ] [ <i>options3</i> ] </p>
 <p> <code>httex</code>|<code>htlatex</code>|<code>httexi</code> <i>file</i> [ <i>options1</i> ] [ <i>options2</i> ] [ <i>options3</i> ] </p>
 <p> <code>ht</code> tex|latex <i>file</i> [ <i>t4ht options</i> ] </p>
 <p> <code>tex4ht</code> [ <code>-f</code><i>dir-char</i> ] <i>file[.dvi]</i> [ <code>-c</code><i>tag-name</i> ] [ <code>-e</code><i>env-file</i> ] [ <code>-g</code><i>bitmap-file-ext</i> ] [ <code>-h</code>(<code>e|f|F|g|s|v|V</code>) ] [ <code>-i</code><i>htf-font-dir</i> ] [ <code>-l</code><i>bookkeeping-file</i> ] [ <code>-P</code>(<code>*</code>|<i>filter</i>) ] [ <code>-t</code><i>tfm-font-dir</i> ] [ <code>-u10</code> ] [ <code>-utf8</code> ] [ <code>-xs</code> ] </p>
 <p> <code>t4ht</code> [ <code>-f</code><i>dir-char</i> ] <i>file[.lg]</i> [ <code>-c</code><i>tag-name</i> ] [ <code>-d</code><i>out-dir</i> ] [ <code>-e</code><i>env-file</i> ] [ <code>-i</code> ] [ <code>-m</code><i>mode</i> ] [ <code>-M</code><i>mode</i> ] [ <code>-p</code> ] [ <code>-r</code> ] [ <code>-S</code>(<code>*</code>|<i>filter</i>) ] [ <code>-X</code><i>field-content</i> ] [ <code>-.</code><i>field-content</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> (This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. Instead, it is documented in detail at the author&#8217;s website; see below. Please refer to that documentation for more details or up to date information.) </p>
 <p> This page documents briefly the portmanteau perl script <code>mk4ht</code>, the more specific shell scripts <code>httex</code>, htlatex<code>, httexi</code>, and others like them, the lower level shell script interface <code>ht</code>, and the commands <code>tex4ht</code> and t4ht that all these scripts invoke. Together these programs constitute TeX4ht; a highly configurable TeX-based authoring system for producing hypertext. </p>
 <p> TeX4ht interacts with TeX-based applications through a style file <i>tex4ht.sty</i> and other files which are loaded by this style file, leaving the processing of the source files to the native TeX compiler. The output of the TeX compiler is then post-processed by <code>tex4ht</code> and t4ht<code>.</code> Consequently, TeX4ht can handle most features of TeX-based systems in general, and of LaTeX in particular. </p>

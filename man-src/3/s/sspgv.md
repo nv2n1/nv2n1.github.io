@@ -1,4 +1,5 @@
 ---
+
 title: "sspgv(3)"
 name: "sspgv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspgv/"
 description: "sspgv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, INFO)<br />
  <i></i><code>SSPGST</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "srot(3)"
 name: "srot"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-srot/"
 description: "srot.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>srot</code> (N, SX, INCX, SY, INCY, C, S)<br />
  <i></i><code>SROT</code></p>

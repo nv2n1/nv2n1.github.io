@@ -1,4 +1,5 @@
 ---
+
 title: "ppmrainbow(1)"
 name: "ppmrainbow"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ppmrainbow/"
 description: "ppmrainbow – Generate a rainbow"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmrainbow</code> [<code>-width=</code><i>number</i>] [<code>-height=</code><i>number</i>]<br />
  [<code>-tmpdir=</code><i>directory</i>] [<code>-verbose</code>] <i>color</i> &#8230; </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ppmrainbow</code> generates a PPM image that fades from one color to another to another from left to right, like a rainbow. The colors are those you specify on the command line, in that order. The first color is added again on the right end of the image. </p>
 <p> If you want a vertical or other non-horizontal rainbow, run the output through <code>pnmrotate</code>. </p>
 <p> One use for such a rainbow is to compose it with another image under an alpha mask in order to add a rainbow area to another image. In fact, you can make rainbow-colored text by using <code>pbmtext</code>, <code>pnmcomp</code>, and <code>ppmrainbow</code>. </p>

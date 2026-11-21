@@ -1,4 +1,5 @@
 ---
+
 title: "testparm(1)"
 name: "testparm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-testparm/"
 description: "testparm – check an smb.conf configuration file for internal correctness"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>testparm [-s|&#8211;suppress-prompt] [&#8211;help] [-v|&#8211;verbose] {config filename} [hostname hostIP]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> testparm is a very simple test program to check an <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8) configuration file for internal correctness. If this program reports no problems, you can use the configuration file with confidence that smbd will successfully load the configuration file. </p>
 <p> Note that this is <i>NOT</i> a guarantee that the services specified in the configuration file will be available or will operate as expected. </p>

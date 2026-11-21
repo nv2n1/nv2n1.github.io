@@ -1,4 +1,5 @@
 ---
+
 title: "graphml2gv(1)"
 name: "graphml2gv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-graphml2gv/"
 description: "graphml2gv – GRAPHML-DOT converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>graphml2gv</code> [ <code>-?v</code> ] [ <code>-g</code><i>gname</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>graphml2gv</code> converts a graph specified in the GRAPHML format to a graph in the GV (formerly DOT) format.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

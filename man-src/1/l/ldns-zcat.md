@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-zcat(1)"
 name: "ldns-zcat"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldns-zcat – reunite (z)split up a zone files"
 
 <h2>NAME</h2>
 <p> ldns-zcat &#8211; reunite (z)split up a zone files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldns-zcat</code> <i>zonefiles</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldns-zcat</code> will read in a bunch of (z)split up zonefiles and creates a new larger zone file. The SOA record in the first part is used as the SOA record in the generated zone. </p>
 <p> The resulted zone file is printed to standard output. </p>
 <h2>OPTIONS</h2>

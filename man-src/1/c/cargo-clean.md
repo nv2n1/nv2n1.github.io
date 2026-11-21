@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-clean(1)"
 name: "cargo-clean"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-clean/"
 description: "cargo-clean – Remove generated artifacts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo clean [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> Remove artifacts that cargo has generated in the past. </p>
 <p> If the &#8211;package argument is given, then SPEC is a package id specification which indicates which package should be built. If it is not given, then the current package is built. For more information on SPEC and its format, see the &quot;cargo help pkgid&quot; command.</p>
 <h2>OPTIONS</h2>

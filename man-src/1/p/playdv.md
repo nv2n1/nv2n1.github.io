@@ -1,4 +1,5 @@
 ---
+
 title: "playdv(1)"
 name: "playdv"
 section: "1"
@@ -9,9 +10,7 @@ description: "playdv – display digital video streams on screen"
 
 <h2>NAME</h2>
 <p> playdv &#8211; display digital video streams on screen</p>
-<h2>SYNOPSIS</h2>
 <p> <code>playdv</code> [ <code>options</code> ] <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>playdv</code> reads in DV-encoded video data from <i>file</i> and displays it on screen.</p>
 <dl>
 <dt><code>-v</code>, <code>&#8211;version</code></dt>

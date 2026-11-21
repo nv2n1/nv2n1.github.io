@@ -1,4 +1,5 @@
 ---
+
 title: "pdsh(1)"
 name: "pdsh"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdsh/"
 description: "pdsh – issue commands to groups of hosts in parallel"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdsh</code> [<i>options</i>]&#8230; command </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pdsh</code> is a variant of the <a href="/docs/linux/man/1-rsh/">rsh</a>(1) command. Unlike <a href="/docs/linux/man/1-rsh/">rsh</a>(1), which runs commands on a single remote host, <code>pdsh</code> can run multiple remote commands in parallel. <code>pdsh</code> uses a &quot;sliding window&quot; (or <i>fanout</i>) of threads to conserve resources on the initiating host while allowing some connections to time out. </p>
 <p> When <code>pdsh</code> receives SIGINT (ctrl-C), it lists the status of current threads. A second SIGINT within one second terminates the program. Pending threads may be canceled by issuing ctrl-Z within one second of ctrl-C. Pending threads are those that have not yet been initiated, or are still in the process of connecting to the remote host. </p>
 <p> If a remote command is not specified on the command line, <code>pdsh</code> runs interactively, prompting for commands and executing them when terminated with a carriage return. In interactive mode, target nodes that time out on the first command are not contacted for subsequent commands, and commands prefixed with an exclamation point will be executed on the local system. </p>

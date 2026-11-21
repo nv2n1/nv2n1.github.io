@@ -1,4 +1,5 @@
 ---
+
 title: "tfmtodit(1)"
 name: "tfmtodit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tfmtodit/"
 description: "tfmtodit – create font files for use with groff -Tdvi"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-s</code> ] [ <code>-g </code><i>gf_file</i> ] [ <code>-k </code><i>skewchar</i> ] <i>tfm_file</i> <i>map_file</i> <i>font</i> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>tfmtodit</code> creates a font file for use with <code>groff -Tdvi</code>. <i>tfm_file</i> is the name of the TeX font metric file for the font. <i>map_file</i> is a file giving the groff names for characters in the font; this file should consist of a sequence of lines of the form:</p>
 <dl>
 <dt>

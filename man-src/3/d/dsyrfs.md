@@ -1,4 +1,5 @@
 ---
+
 title: "dsyrfs(3)"
 name: "dsyrfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsyrfs/"
 description: "dsyrfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyrfs</code> (UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>DSYRFS</code></p>

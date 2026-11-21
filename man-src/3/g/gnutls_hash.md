@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hash(3)"
 name: "gnutls_hash"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_hash – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hash &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_hash(gnutls_hash_hd_t </code><i>handle</i><code>, const void * </code><i>text</i><code>, size_t </code><i>textlen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_hash – API function"
 <dd> the data to hash</dd>
 <dt>size_t textlen</dt>
 <dd> The length of data to hash</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will hash the given data using the algorithm specified by the context.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

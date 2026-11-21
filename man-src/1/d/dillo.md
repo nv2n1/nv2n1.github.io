@@ -1,4 +1,5 @@
 ---
+
 title: "dillo(1)"
 name: "dillo"
 section: "1"
@@ -9,9 +10,7 @@ description: "dillo – web browser"
 
 <h2>NAME</h2>
 <p> dillo &#8211; web browser</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dillo</code> [<i>OPTION</i>]&#8230; [<code>&#8212;</code>] [<i>URL</i>|<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Dillo is a lightweight graphical web browser that aims to be secure. It handles HTTP internally, and FILE, FTP, and DATA URIs are handled through a plugin system (dpi). In addition, <i>INSECURE</i> HTTPS support can be enabled. Both FTP and Dillo&#8217;s download manager use the <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) downloader. </p>
 <p> Dillo displays HTML, text, PNG, JPEG, and GIF files. It handles cookies, HTTP authentication (basic and digest), proxying (basic), and some CSS. </p>
 <p> Framesets are displayed as links to frames, and there is currently no support for javascript or video. </p>

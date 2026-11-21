@@ -1,4 +1,5 @@
 ---
+
 title: "ovsdb-server(1)"
 name: "ovsdb-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ovsdb-server/"
 description: "ovsdb-server – Open vSwitch database server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ovsdb-server</code> [<i>database</i>]&#8230; [<code>&#8211;remote=</code><i>remote</i>]&#8230; [<code>&#8211;run=</code><i>command</i>]</p>
 <dl>
 <dt>Daemon options:</dt>
@@ -29,7 +29,6 @@ description: "ovsdb-server – Open vSwitch database server"
 <dt>Common options:</dt>
 <dd> [<code>-h</code> | <code>&#8211;help</code>] [<code>-V</code> | <code>&#8211;version</code>] </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>ovsdb-server</code> program provides RPC interfaces to one or more Open vSwitch databases (OVSDBs). It supports JSON-RPC client connections over active or passive TCP/IP or Unix domain sockets. </p>
 <p> Each OVSDB file may be specified on the command line as <i>database</i>. If none is specified, the default is <code>/etc/openvswitch/conf.db</code>. The database files must already have been created and initialized using, for example, <code>ovsdb-tool create</code>.</p>
 <h2>OPTIONS</h2>

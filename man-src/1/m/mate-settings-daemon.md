@@ -1,4 +1,5 @@
 ---
+
 title: "mate-settings-daemon(1)"
 name: "mate-settings-daemon"
 section: "1"
@@ -9,9 +10,7 @@ description: "mate-settings-daemon – Handles the MATE session settings"
 
 <h2>NAME</h2>
 <p> mate-settings-daemon &#8211; Handles the MATE session settings</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-settings-daemon</code> [<code>&#8211;debug</code>] [<code>&#8211;replace</code>] [<code>&#8211;display</code>=<i>DISPLAY</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>mate-settings-daemon</i> is responsible for setting the various preference parameters of a MATE session and the applications that run under it.</p>
 <h2>OPTIONS</h2>
 <p> Help options</p>

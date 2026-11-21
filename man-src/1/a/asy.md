@@ -1,4 +1,5 @@
 ---
+
 title: "asy(1)"
 name: "asy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-asy/"
 description: "asy – Asymptote: a script-based vector graphics language"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>asy</code> [<i>options</i>] [<i>file</i>&nbsp;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Asymptote</code> is a powerful descriptive vector graphics language for technical drawings, inspired by MetaPost but with an improved C++-like syntax. Asymptote provides for figures the same high-quality level of typesetting that LaTeX does for scientific text.</p>
 <h2>OPTIONS</h2>
 <p> If no arguments are given, Asymptote runs in interactive mode. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libnetlink(3)"
 name: "libnetlink"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnetlink/"
 description: "libnetlink – A library for accessing the netlink service"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/types.h&gt;
 #include &lt;libnetlink.h&gt;
@@ -27,7 +27,6 @@ int rtnl_open(struct rtnl_handle *rth, unsigned subscriptions) int rtnl_wilddump
                                                                                                                                                                                                                                                                                                                                                                                           int (*handler)(struct sockaddr_nl *, struct nlmsghdr *n, void *),
                                                                                                                                                                                                                                                                                                                                                                                           void *jarg) int addattr32(struct nlmsghdr *n, int maxlen, int type, __u32 data) int addattr_l(struct nlmsghdr *n, int maxlen, int type, void *data, int alen) int rta_addattr32(struct rtattr *rta, int maxlen, int type, __u32 data) int rta_addattr_l(struct rtattr *rta, int maxlen, int type, void *data, int alen)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> libnetlink provides a higher level interface to <code><a href="/docs/linux/man/7-rtnetlink/">rtnetlink</a></code>(7). The read functions return 0 on success and a negative errno on failure. The send functions return the amount of data sent, or -1 on error.</p>
 <dl>
 <dt>rtnl_open</dt>

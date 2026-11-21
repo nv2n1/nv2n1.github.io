@@ -1,4 +1,5 @@
 ---
+
 title: "times(2)"
 name: "times"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-times/"
 description: "times – get process times"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/times.h&gt;</code> </p>
 <p> <code>clock_t times(struct tms *</code><i>buf</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>times</code>() stores the current process times in the <i>struct tms</i> that <i>buf</i> points to. The <i>struct tms</i> is as defined in <i>&lt;sys/times.h&gt;</i>: </p>
 <p> struct tms {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;clock_t tms_utime;&nbsp;<wbr>&nbsp;/*&nbsp;user time&nbsp;*/<br />

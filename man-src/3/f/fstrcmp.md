@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcmp(3)"
 name: "fstrcmp"
 section: "3"
@@ -10,9 +11,7 @@ url: "/docs/linux/man/3-fstrcmp/"
 
  fstrcmp - fuzzy comparison of two strings
 
-<h2>SYNOPSIS</h2>
-
- #include &lt;fstrcmp.h&gt; 
+#include &lt;fstrcmp.h&gt; 
 
  #define FSTRCMP_IDENTICAL 
  #define FSTRCMP_THRESHOLD 
@@ -20,9 +19,7 @@ url: "/docs/linux/man/3-fstrcmp/"
 
  double fstrcmp(const char *string1, const char *string2);
 
-<h2>DESCRIPTION</h2>
-
- The fstrcmp() function compares the two strings, string1 and string2.
+The fstrcmp() function compares the two strings, string1 and string2.
 
 <h2>RETURN VALUE</h2>
 

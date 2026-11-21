@@ -1,4 +1,5 @@
 ---
+
 title: "pandoc(1)"
 name: "pandoc"
 section: "1"
@@ -6,22 +7,11 @@ letter: "p"
 url: "/docs/linux/man/1-pandoc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pandoc - general markup converter 
 
- pandoc - general markup converter 
+pandoc [options] [input-file]...
 
-<h2>SYNOPSIS</h2>
-
- 
-
- pandoc [options] [input-file]...
-
-<h2>DESCRIPTION</h2>
-
- 
-
- Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library. 
+Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library. 
 
  Pandoc can convert between numerous markup and word processing formats, including, but not limited to, various flavors of Markdown, HTML, LaTeX and Word docx. For the full lists of input and output formats, see the --from and --to options below. Pandoc can also produce PDF output: see creating a PDF, below. 
 

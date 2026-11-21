@@ -1,4 +1,5 @@
 ---
+
 title: "csysvx(3)"
 name: "csysvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csysvx/"
 description: "csysvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csysvx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, LWORK, RWORK, INFO)<br />
  <i></i><code> CSYSVX computes the solution to system of linear equations A * X = B for SY matrices</code></p>

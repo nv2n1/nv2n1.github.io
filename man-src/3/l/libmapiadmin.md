@@ -1,4 +1,5 @@
 ---
+
 title: "libmapiadmin(3)"
 name: "libmapiadmin"
 section: "3"
@@ -8,7 +9,6 @@ description: "libmapiadmin/libmapiadmin.h –"
 ---
 
 <p> Structures for MAPI admin functions.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/sys/types.h">sys/types.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/stdio.h">stdio.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/stdlib.h">stdlib.h</a>&gt;<br />

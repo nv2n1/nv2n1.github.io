@@ -1,4 +1,5 @@
 ---
+
 title: "cmake(1)"
 name: "cmake"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-cmake/"
 description: "cmake – CMake Command-Line Reference"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 Generate a Project Buildsystem
         cmake[&lt;options&gt;]&lt;path - to - source&gt;
             cmake[&lt;options&gt;]&lt;path - to - existing - build&gt;
                 cmake[&lt;options&gt;] - S&lt;path - to - source&gt; - B&lt;path - to - build&gt; Build a Project cmake-- build&lt;dir&gt;[&lt;options&gt;][--&lt;build - tool - options&gt;] Install a Project cmake-- install&lt;dir&gt;[&lt;options&gt;] Open a Project cmake-- open&lt;dir&gt; Run a Script cmake[{-D &lt; var &gt;= &lt;value&gt;}...] - P&lt;cmake - script - file&gt; Run a Command - Line Tool cmake - E&lt;command&gt;[&lt;options&gt;] Run the Find - Package Tool cmake-- find - package[&lt;options&gt;] View Help cmake-- help[-&lt;topic&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmake</code> executable is the command-line interface of the cross-platform buildsystem generator CMake. The above <i>Synopsis</i> lists various actions the tool can perform as described in sections below. </p>
 <p> To build a software project with CMake, <i>Generate a Project Buildsystem</i>. Optionally use <code>cmake</code> to <i>Build a Project</i>, <i>Install a Project</i> or just run the corresponding build tool (e.g. <code>make</code>) directly. <code>cmake</code> can also be used to <i>View Help</i>. </p>
 <p> The other actions are meant for use by software developers writing scripts in the <code>CMake language</code> to support their builds. </p>

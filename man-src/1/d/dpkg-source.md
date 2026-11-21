@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-source(1)"
 name: "dpkg-source"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-source/"
 description: "dpkg-source – Debian source package (.dsc) manipulation tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-source</code> [<i>option</i>&#8230;] <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-source</code> packs and unpacks Debian source archives. </p>
 <p> None of these commands allow multiple options to be combined into one, and they do not allow the value for an option to be specified in a separate argument.</p>
 <h2>COMMANDS</h2>

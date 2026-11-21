@@ -1,4 +1,5 @@
 ---
+
 title: "snmpcheck(1)"
 name: "snmpcheck"
 section: "1"
@@ -9,9 +10,7 @@ description: "snmpcheck – enumerate information via SNMP protocol"
 
 <h2>NAME</h2>
 <p> snmpcheck &#8211; enumerate information via SNMP protocol</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmpcheck</code> [<code>-OPTIONS </code>] <code>-t</code> <i>&lt;IP address&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> Like to snmpwalk, snmpcheck permits to enumerate information via SNMP protocol. It allows enumeration (hardware, software, network) of any devices with SNMP protocol support. It could be useful for penetration testing or systems monitoring. </p>
 <p> Snmpcheck supports the following enumerations (in alfabetic order):</p>
 <dl>

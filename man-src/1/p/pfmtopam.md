@@ -1,4 +1,5 @@
 ---
+
 title: "pfmtopam(1)"
 name: "pfmtopam"
 section: "1"
@@ -9,10 +10,8 @@ description: "pamtopfm – Convert PFM (Portable Float Map) image to Netpbm form
 
 <h2>NAME</h2>
 <p> pamtopfm &#8211; Convert PFM (Portable Float Map) image to Netpbm format </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pfmtopam</code> [<code>-maxval=</code><i>n</i>] [<code>-verbose</code>] [<i>imagefile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pfmtopam</code> reads a PFM (Portable Float Map) image and converts it to PAM. </p>
 <p> See <code><a href="/docs/linux/man/1-pamtopfm/">pamtopfm</a></code>(1)<br />

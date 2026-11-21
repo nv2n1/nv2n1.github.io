@@ -1,4 +1,5 @@
 ---
+
 title: "dsptri(3)"
 name: "dsptri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsptri/"
 description: "dsptri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br />
  <i></i><code>DSPTRI</code></p>

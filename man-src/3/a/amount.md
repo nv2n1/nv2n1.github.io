@@ -1,4 +1,5 @@
 ---
+
 title: "amount(3)"
 name: "amount"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-amount/"
 description: "QuantLib::CashFlow – Base class for cash flows."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflow.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Event</code>. </p>
 <p> Inherited by CommodityCashFlow, <code>Coupon</code>, <code>Dividend</code>, and <code>SimpleCashFlow</code>. </p>

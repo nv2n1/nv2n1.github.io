@@ -1,4 +1,5 @@
 ---
+
 title: "funparamput(3)"
 name: "funparamput"
 section: "3"
@@ -9,7 +10,6 @@ description: "FunParamPut – put a Funtools param value"
 
 <h2>NAME</h2>
 <p> <code>FunParamPut &#8211; put a Funtools param value</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
@@ -21,7 +21,6 @@ description: "FunParamPut – put a Funtools param value"
                  char *comm, int append)</p>
 <p>int FunParamPuts(Fun fun, char *name, int n, char *value, char *comm,<br />
                  int append)</p>
-<h2>DESCRIPTION</h2>
 <p> The four routines FunParamPutb(), FunParamPuti(), FunParamPutd(), and FunParamPuts(), will set the value of a <font SIZE="-1">FITS</font> header parameter as a boolean, int, double, and string, respectively. </p>
 <p> The first argument is the Fun handle associated with the <font SIZE="-1">FITS</font> header being accessed. Normally, the header is associated with the <font SIZE="-1">FITS</font> extension that you opened with FunOpen(). However, you can use <i>FunInfoPut()</i> to specify that use of the primary header. In particular, if you set the <font SIZE="-1">FUN_PRIMARYHEADER</font> parameter to 1, then the primary header is used for all parameter access until the value is reset to 0. For example: </p>
 <p>int val;<br />

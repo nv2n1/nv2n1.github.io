@@ -1,4 +1,5 @@
 ---
+
 title: "npm-tag(1)"
 name: "npm-tag"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-npm-tag/"
 description: "npm-tag – Tag a published version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-tag</code> &#8211; Tag a published version </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 [DEPRECATED] npm tag&lt;name&gt; @&lt;version&gt;[&lt;tag&gt;] See `dist - tag`
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> THIS COMMAND IS DEPRECATED. See npm help dist-tag for details. </p>
 <p> Tags the specified version of the package with the specified tag, or the <code>&#8211;tag</code> config if not specified. </p>
 <p> A tag can be used when installing packages as a reference to a version instead of using a specific version number:</p>

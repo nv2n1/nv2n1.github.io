@@ -1,4 +1,5 @@
 ---
+
 title: "sgemm(3)"
 name: "sgemm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgemm/"
 description: "sgemm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
  <i></i><code>SGEMM</code></p>

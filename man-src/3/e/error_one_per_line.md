@@ -1,4 +1,5 @@
 ---
+
 title: "error_one_per_line(3)"
 name: "error_one_per_line"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-error_one_per_line/"
 description: "error, error_at_line, error_message_count, error_one_per_line, error_print_progname – glibc error reporting functions"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;error.h&gt;
 void error(int status, int errnum, const char *format, ...);
@@ -17,7 +17,6 @@ extern unsigned int error_message_count;
 extern int error_one_per_line;
 extern void (*error_print_progname)(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>error</code>() is a general error-reporting function. It flushes <i>stdout</i>, and then outputs to <i>stderr</i> the program name, a colon and a space, the message specified by the <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3)-style format string <i>format</i>, and, if <i>errnum</i> is nonzero, a second colon and a space followed by the string given by <i>strerror(errnum)</i>. Any arguments required for <i>format</i> should follow <i>format</i> in the argument list. The output is terminated by a newline character. </p>
 <p> The program name printed by <code>error</code>() is the value of the global variable <code><a href="/docs/linux/man/3-program_invocation_name/">program_invocation_name</a></code>(3). <i>program_invocation_name</i> initially has the same value as <i>main</i>()&#8217;s <i>argv[0]</i>. The value of this variable can be modified to change the output of <code>error</code>(). </p>
 <p> If <i>status</i> has a nonzero value, then <code>error</code>() calls <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) to terminate the program using the given value as the exit status. </p>

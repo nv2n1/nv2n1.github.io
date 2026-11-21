@@ -1,4 +1,5 @@
 ---
+
 title: "ocamldumpobj(1)"
 name: "ocamldumpobj"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ocamldumpobj/"
 description: "ocamldumpobj – disassembler for OCaml executable and .cmo object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ocamldumpobj</code> file &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Disassembler for executable and .cmo object files compiled by OCaml.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1), <code><a href="/docs/linux/man/1-ocamlobjinfo/">ocamlobjinfo</a></code>(1). </p>

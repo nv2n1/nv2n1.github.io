@@ -1,4 +1,5 @@
 ---
+
 title: "fork(2)"
 name: "fork"
 section: "2"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/2-fork/"
 description: "fork – create a child process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t fork(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fork</code>() creates a new process by duplicating the calling process. The new process is referred to as the <i>child</i> process. The calling process is referred to as the <i>parent</i> process. </p>
 <p> The child process and the parent process run in separate memory spaces. At the time of <code>fork</code>() both memory spaces have the same content. Memory writes, file mappings (<code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2)), and unmappings (<code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2)) performed by one of the processes do not affect the other. </p>
 <p> The child process is an exact duplicate of the parent process except for the following points:</p>

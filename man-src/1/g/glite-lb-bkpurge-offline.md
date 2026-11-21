@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-bkpurge-offline(1)"
 name: "glite-lb-bkpurge-offline"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-bkpurge-offline/"
 description: "glite-lb-bkpurge-offline – emergency utility for removing inactive jobs from the L&B database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-bkpurge-offline</code> [<i>OPTIONS</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-bkpurge-offline</code> is a utility for removing inactive jobs from the L&amp;B database. By default, it removes jobs that reached CLEARED, ABORTED and CANCELED state and also OTHER and DONE jobs that are inactive for a specific (rather long) period of time. It calls SQL database commands directly. </p>
 <p> This utility is provided for <code>emergency and expert use only</code>. Exact semantics of job age are slightly different from regular <code>glite-lb-bkpurge</code>, there is no synchronization with running L&amp;B server and/or proxy when jobs receive new events while being purged, and error handling is minimal. </p>
 <h2>OPTIONS</h2>

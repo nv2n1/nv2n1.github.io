@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-locstats-14(1)"
 name: "llvm-locstats-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-locstats-14/"
 description: "llvm-locstats – calculate statistics on DWARF debug location"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-locstats</code> [<i>options</i>] [<i>filename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-locstats</code> works like a wrapper around <code>llvm-dwarfdump</code>. It parses <code>llvm-dwarfdump</code> statistics regarding debug location by pretty printing it in a more human readable way. </p>
 <p> The line 0% shows the number and the percentage of DIEs with no location information, but the line 100% shows the information for DIEs where there is location information in all code section bytes (where the variable or parameter is in the scope). The line [50%,60%) shows the number and the percentage of DIEs where the location information is between 50 and 60 percentage of its scope covered.</p>
 <h2>OPTIONS</h2>

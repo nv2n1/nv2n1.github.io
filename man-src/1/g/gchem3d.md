@@ -1,4 +1,5 @@
 ---
+
 title: "gchem3d(1)"
 name: "gchem3d"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gchem3d/"
 description: "gchem3d – a small chemical viewer application"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gchem3d</code> [<code>OPTION(S)</code>&#8230;] [<i>FILE</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gchem3d</code></p>
 <dd>is a small chemical viewer application, which can show several chemical file formats.</dd>
 <h2>OPTIONS</h2>

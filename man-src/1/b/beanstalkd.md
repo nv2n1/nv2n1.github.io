@@ -1,4 +1,5 @@
 ---
+
 title: "beanstalkd(1)"
 name: "beanstalkd"
 section: "1"
@@ -9,9 +10,7 @@ description: "beanstalkd – simple, fast work queue"
 
 <h2>NAME</h2>
 <p> <code>beanstalkd</code> &#8211; simple, fast work queue</p>
-<h2>SYNOPSIS</h2>
 <p> <code>beanstalkd</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Beanstalkd</code> is a simple work-queue service. Its interface is generic, though it was originally designed for reducing the latency of page views in high-volume web applications by running time-consuming tasks asynchronously. </p>
 <p> When started, <code>beanstalkd</code> opens a socket (or uses a file descriptor provided by the <a href="/docs/linux/man/1-init/">init</a>(1) system, see <i>ENVIRONMENT</i>) and listens for incoming connections. For each connection, it reads a sequence of commands to create, reserve, delete, and otherwise manipulate &quot;jobs&quot;, units of work to be done. See file <code>doc/protocol.txt</code> in the <code>beanstalkd</code> distribution for a thorough description of the meaning and format of the <code>beanstalkd</code> protocol.</p>
 <h2>OPTIONS</h2>

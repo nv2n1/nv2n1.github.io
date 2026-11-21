@@ -1,4 +1,5 @@
 ---
+
 title: "clauum(3)"
 name: "clauum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clauum/"
 description: "clauum.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clauum</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>CLAUUM</code> computes the product UUH or LHL, where U and L are upper or lower triangular matrices (blocked algorithm).</p>

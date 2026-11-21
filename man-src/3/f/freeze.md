@@ -1,4 +1,5 @@
 ---
+
 title: "freeze(3)"
 name: "freeze"
 section: "3"
@@ -6,17 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-freeze/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+QuantLib::LazyObject - Framework for calculation on demand and result caching. 
 
- QuantLib::LazyObject - Framework for calculation on demand and result caching. 
-
-<h2>SYNOPSIS</h2>
-
- 
- 
-
- #include &lt;ql/patterns/lazyobject.hpp&gt; 
+#include &lt;ql/patterns/lazyobject.hpp&gt; 
 
  Inherits <b>QuantLib::Observable</b>, and <b>QuantLib::Observer</b>. 
 

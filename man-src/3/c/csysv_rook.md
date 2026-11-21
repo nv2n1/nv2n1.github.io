@@ -1,4 +1,5 @@
 ---
+
 title: "csysv_rook(3)"
 name: "csysv_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csysv_rook/"
 description: "csysv_rook.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csysv_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br />
  <i></i><code> CSYSV_ROOK computes the solution to system of linear equations A * X = B for SY matrices</code></p>

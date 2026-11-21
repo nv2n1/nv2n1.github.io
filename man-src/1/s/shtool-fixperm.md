@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-fixperm(1)"
 name: "shtool-fixperm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-shtool-fixperm/"
 description: "shtool fixperm – GNU shtool file permission fixing command"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>shtool fixperm</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] <i>path</i> [<i>path</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>shtool fixperm</code> fixes file permissions inside a source tree under <i>path</i> by cleaning up the permission bits. It determines the cleaned up permission from the already set bits. It is intended to be run before a tarball is rolled (usually with <code>shtool tarball</code>) out of a source tree. The trick is that this is more convenient than having to set the permissions manually or by using a large file list.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

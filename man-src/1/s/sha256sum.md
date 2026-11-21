@@ -1,4 +1,5 @@
 ---
+
 title: "sha256sum(1)"
 name: "sha256sum"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sha256sum/"
 description: "sha256sum – compute and check SHA256 message digest"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sha256sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print or check SHA256 (256-bit) checksums. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>

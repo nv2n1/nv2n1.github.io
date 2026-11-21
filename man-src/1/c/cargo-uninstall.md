@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-uninstall(1)"
 name: "cargo-uninstall"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cargo-uninstall/"
 description: "cargo-uninstall – Remove a Rust binary"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo uninstall [OPTIONS] &lt;SPEC&gt; </p>
 <p> cargo uninstall (-h | &#8211;help)</p>
-<h2>DESCRIPTION</h2>
 <p> The argument SPEC is a package id specification (see cargo help pkgid) to specify which crate should be uninstalled. By default all binaries are uninstalled for a crate but the &#8211;bin and &#8211;example flags can be used to only uninstall particular binaries.</p>
 <h2>OPTIONS</h2>
 <dl>

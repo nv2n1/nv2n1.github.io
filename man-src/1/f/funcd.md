@@ -1,4 +1,5 @@
 ---
+
 title: "funcd(1)"
 name: "funcd"
 section: "1"
@@ -9,13 +10,11 @@ description: "funcd – deaemon for the Fedora Universal Network Controller"
 
 <h2>NAME</h2>
 <p> <code>funcd</code> &#8211; deaemon for the Fedora Universal Network Controller</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>funcd [&#8211;daemon]</dt>
 <dd>
 </dd><dt>funcd &#8211;list-modules</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> funcd registers itself to a certificate server (certmaster) listed in /etc/certmaster/minion.conf and takes orders from the command line func when that program is run from that certificate server. </p>
 <p> Modules and capabilities provided by funcd are specified at <a rel="nofollow" href="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a></p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_epp_read_data(3)"
 name: "ieee1284_epp_read_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_epp_read_data/"
 description: "ieee1284_nibble_read, ieee1284_compat_write, ieee1284_byte_read, ieee1284_epp_read_data, ieee1284_epp_write_data, ieee1284_epp_read_addr, ieee1284_epp_write_addr, ieee1284_ecp_read_data, ieee1284_e..."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
@@ -23,7 +23,6 @@ description: "ieee1284_nibble_read, ieee1284_compat_write, ieee1284_byte_read, i
 <dt> <code>ssize_t ieee1284_ecp_write_data(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>flags</i><code>, const char&nbsp;<wbr>*</code><i>buffer</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dt>
 <dt> <code>ssize_t ieee1284_ecp_read_addr(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>flags</i><code>, char&nbsp;<wbr>*</code><i>buffer</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dt>
 <dt> <code>ssize_t ieee1284_ecp_write_addr(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>flags</i><code>, const char&nbsp;<wbr>*</code><i>buffer</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This set of functions is for tranferring bytes in the relevant transfer mode. For ECP and EPP modes two types of transfer are possible: data and address (usually referred to as channel in ECP). </dd>
 <p> The supplied <i>port</i> must be a claimed port. </p>
 <p> The supplied <i>buffer</i> must be at least <i>len</i> bytes long. When reading, the transferred data is stored in the buffer; when writing the data to be transferred is taken from the buffer. </p>

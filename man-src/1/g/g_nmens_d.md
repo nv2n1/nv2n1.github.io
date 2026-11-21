@@ -1,4 +1,5 @@
 ---
+
 title: "g_nmens_d(1)"
 name: "g_nmens_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_nmens – generates an ensemble of structures from the normal mo
 <h2>NAME</h2>
 <p> g_nmens &#8211; generates an ensemble of structures from the normal modes </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_nmens</code> <code>-v</code><i> eigenvec.trr </i> <code>-e</code><i> eigenval.xvg </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> ensemble.xtc </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]xvgr</code><i></i> <code>-temp</code><i> real </i> <code>-seed</code><i> int </i> <code>-num</code><i> int </i> <code>-first</code><i> int </i> <code>-last</code><i> int </i></p>
-<h2>DESCRIPTION</h2>
 <p> <code> g_nmens</code> generates an ensemble around an average structure in a subspace which is defined by a set of normal modes (eigenvectors). The eigenvectors are assumed to be mass-weighted. The position along each eigenvector is randomly taken from a Gaussian distribution with variance kT/eigenvalue. </p>
 <p> By default the starting eigenvector is set to 7, since the first six normal modes are the translational and rotational degrees of freedom.</p>
 <h2>FILES</h2>

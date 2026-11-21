@@ -1,4 +1,5 @@
 ---
+
 title: "hstr(1)"
 name: "hstr"
 section: "1"
@@ -9,12 +10,10 @@ description: "hh – easily view, navigate, sort and use your command history wi
 
 <h2>NAME</h2>
 <p> <code>hh</code> &#8211; easily view, navigate, sort and use your command history with shell history suggest box.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hh [option] [arg1] [arg2]&#8230; </code></p>
 <dl>
 <dt>
 </dt><dd> <code>hstr [option] [arg1] [arg2]&#8230;</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>hh</code> uses shell history to provide suggest box like functionality for commands used in the past. By default it parses .bash-history file that is filtered as you type a command substring. Commands are not just filtered, but also ordered by a ranking algorithm that considers number of occurences, length and timestamp. Favorite and frequently used commands can be bookmarked. In addition <code>hh</code> allows removal of commands from history &#8211; for instance with a typo or with a sensitive content.</p>
 <h2>OPTIONS</h2>
 <dl>

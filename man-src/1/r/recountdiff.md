@@ -1,4 +1,5 @@
 ---
+
 title: "recountdiff(1)"
 name: "recountdiff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-recountdiff/"
 description: "recountdiff – recompute patch counts and offsets"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>recountdiff</code> [<i>file</i>&#8230;]</dt>
 <dt> <code>recountdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>recountdiff</code></p>
 <dd>recomputes the counts and offsets in unified context diffs. It does this in two passes: first the counts are corrected by inspection of the actual patch lines, and then the offsets are adjusted according to the computed counts. </dd>
 <p> The corrected diff is sent to standard output.</p>

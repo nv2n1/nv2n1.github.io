@@ -1,4 +1,5 @@
 ---
+
 title: "dpoequ(3)"
 name: "dpoequ"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpoequ/"
 description: "dpoequ.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpoequ</code> (N, A, LDA, S, SCOND, AMAX, INFO)<br />
  <i></i><code>DPOEQU</code></p>

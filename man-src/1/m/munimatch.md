@@ -1,4 +1,5 @@
 ---
+
 title: "munimatch(1)"
 name: "munimatch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-munimatch/"
 description: "munimatch – Matching of CCD photometry files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>munimatch </code><i>[options] </i><code>ref=</code><i>file source_file &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The Munimatch finds corresponding stars in two photometry files. One file is refered as reference file, the second one is called source file. The output of the matching process is the photometry file, which the stars from source file is written in, but their order is changed, so corresponding stars are on the same indices in output and reference files. Instead of a reference file, which is usually one frame from a sequence being processed, a catalogue file in XML format can be used. </p>
 <p> The source and output files have to be in photometry file format. The reference file should be in photometry or catalogue file format, optionally. If a set of files is processed, then the reference file is common for all sources. </p>
 <h2>OPTIONS</h2>

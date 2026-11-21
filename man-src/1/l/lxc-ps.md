@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-ps(1)"
 name: "lxc-ps"
 section: "1"
@@ -9,7 +10,6 @@ description: "lxc-ps – list the processes belonging to a specific container."
 
 <h2>NAME</h2>
 <p> lxc-ps &#8211; list the processes belonging to a specific container.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-ps [&#8211;name name] [&#8211;lxc] [ps option] </code>.SH &quot;DESCRIPTION&quot; </p>
 <p> <code>lxc-ps</code> is a wrapper tp ps command to report the name of lxc container associated to reported processes. </p>
 <p> The cgroup fs must be mounted before container creation, to be able to have <code>lxc-ps</code> to find the container associated to processes. </p>

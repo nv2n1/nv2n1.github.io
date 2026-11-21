@@ -1,4 +1,5 @@
 ---
+
 title: "slaqgb(3)"
 name: "slaqgb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaqgb/"
 description: "slaqgb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqgb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
  <i></i><code>SLAQGB</code> scales a general band matrix, using row and column scaling factors computed by sgbequ.</p>

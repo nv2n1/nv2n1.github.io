@@ -1,4 +1,5 @@
 ---
+
 title: "atan2l(3)"
 name: "atan2l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-atan2l/"
 description: "atan2, atan2f, atan2l – arc tangent function of two variables"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double atan2(double y, double x);
@@ -22,7 +22,6 @@ long double atan2l(long double y, long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions calculate the principal value of the arc tangent of <i>y/x</i>, using the signs of the two arguments to determine the quadrant of the result.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the principal value of the arc tangent of <i>y/x</i> in radians; the return value is in the range [-pi, pi]. </p>

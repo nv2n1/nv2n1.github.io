@@ -1,4 +1,5 @@
 ---
+
 title: "carg(3)"
 name: "carg"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-carg/"
 description: "carg, cargf, cargl – calculate the complex argument"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double carg(double complex </code><i>z</i><code>);</code><br />
  <code>float cargf(float complex </code><i>z</i><code>);</code><br />
  <code>long double cargl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex argument (also called phase angle) of <i>z</i>, with a branch cut along the negative real axis. </p>
 <p> A complex number can be described by two real coordinates. One may use rectangular coordinates and gets </p>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_protect(3)"
 name: "dirfile_protect"
 section: "3"
@@ -9,11 +10,9 @@ description: "dirfile_protect — modify the protection level of a dirfile fragm
 
 <h2>NAME</h2>
 <p> dirfile_protect &#8212; modify the protection level of a dirfile fragment</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_protect(DIRFILE *</code><i>dirfile</i><code>, int</code> <i>protection_level</i><code>, int </code><i>fragment_index</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_protect</code>() function sets the advisory protection level of the format file fragment specified by <i>fragment_index</i> to <i>protection_level</i> in the <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i>. </dd>
 <p> The <i>protection_level</i> argument should be one of the following:</p>
 <dl>

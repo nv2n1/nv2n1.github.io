@@ -1,4 +1,5 @@
 ---
+
 title: "pnmfile(1)"
 name: "pnmfile"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmfile/"
 description: "pnmfile – describe a portable anymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmfile</code> [<code>-allimages</code>] [<i>pnmfile &#8230;</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads one or more Netpbm files as input. Writes out short descriptions of the image type, size, etc. This is mostly for use in shell scripts, so the format is not particularly pretty. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-touch(1)"
 name: "git-touch"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-touch – Touch and add file to the index"
 
 <h2>NAME</h2>
 <p> <code>git-touch</code> &#8211; Touch and add file to the index</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-touch</code> &lt;filename&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Call <code>touch</code> on the given file and add it to the current index. Used one-step creating new files.</p>
 <h2>OPTIONS</h2>
 <p> &lt;filename&gt; </p>

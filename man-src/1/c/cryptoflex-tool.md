@@ -1,4 +1,5 @@
 ---
+
 title: "cryptoflex-tool(1)"
 name: "cryptoflex-tool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cryptoflex-tool/"
 description: "cryptoflex-tool – utility for manipulating Schlumberger Cryptoflex data structures"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cryptoflex-tool</code> [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>cryptoflex-tool</code> is used to manipulate PKCS data structures on Schlumberger Cryptoflex smart cards. Users can create, list and read PINs and keys stored on the smart card. User PIN authentication is performed for those operations that require it.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;verify-pin, -V</code></p>

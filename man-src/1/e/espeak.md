@@ -1,4 +1,5 @@
 ---
+
 title: "espeak(1)"
 name: "espeak"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-espeak/"
 description: "espeak – A multi-lingual software speech synthesizer."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>espeak</code> [<i>options</i>]&nbsp;<wbr>[<i>words</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>espeak</code> is a software speech synthesizer for English, and some other languages.</p>
 <h2>OPTIONS</h2>
 <dl>

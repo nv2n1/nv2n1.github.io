@@ -1,4 +1,5 @@
 ---
+
 title: "dcgettext(3)"
 name: "dcgettext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dcgettext/"
 description: "gettext, dgettext, dcgettext – translate message"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libintl.h&gt;
 char *gettext(const char *msgid);
@@ -15,7 +15,6 @@ char *dgettext(const char *domainname, const char *msgid);
 char *dcgettext(const char *domainname, const char *msgid,
                 int category);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gettext</code>, <code>dgettext</code> and <code>dcgettext</code> functions attempt to translate a text string into the user&#8217;s native language, by looking up the translation in a message catalog. </p>
 <p> The <i>msgid</i> argument identifies the message to be translated. By convention, it is the English version of the message, with non-ASCII characters replaced by ASCII approximations. This choice allows the translators to work with message catalogs, called PO files, that contain both the English and the translated versions of each message, and can be installed using the <code>msgfmt</code> utility. </p>
 <p> A message domain is a set of translatable <i>msgid</i> messages. Usually, every software package has its own message domain. The domain name is used to determine the message catalog where the translation is looked up; it must be a non-empty string. For the <code>gettext</code> function, it is specified through a preceding <code>textdomain</code> call. For the <code>dgettext</code> and <code>dcgettext</code> functions, it is passed as the <i>domainname</i> argument; if this argument is NULL, the domain name specified through a preceding <code>textdomain</code> call is used instead. </p>

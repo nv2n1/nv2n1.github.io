@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_signature_algorithm(3)"
 name: "gnutls_x509_crt_get_signature_algorithm"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_crt_get_signature_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_signature_algorithm &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_signature_algorithm(gnutls_x509_crt_t </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_crt_t cert</dt>
 <dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return a value of the <code>gnutls_sign_algorithm_t</code> enumeration that is the signature algorithm that has been used to sign this certificate.</p>
 <h2>RETURNS</h2>
 <p> a <code>gnutls_sign_algorithm_t</code> value, or a negative error code on error.</p>

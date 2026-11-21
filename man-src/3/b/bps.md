@@ -1,4 +1,5 @@
 ---
+
 title: "bps(3)"
 name: "bps"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bps/"
 description: "QuantLib::CashFlows – cashflow-analysis functions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/cashflows.hpp&gt; </p>
 <h3>Static Public Member Functions</h3>
 <p> static Leg::const_iterator <code>previousCashFlow</code> (const Leg &amp;leg, <code>Date</code> refDate=<code>Date</code>()) </p>

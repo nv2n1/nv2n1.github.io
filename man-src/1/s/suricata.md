@@ -1,4 +1,5 @@
 ---
+
 title: "suricata(1)"
 name: "suricata"
 section: "1"
@@ -9,9 +10,7 @@ description: "suricata – Suricata"
 
 <h2>NAME</h2>
 <p> suricata &#8211; Suricata</p>
-<h2>SYNOPSIS</h2>
 <p> <code>suricata</code> [OPTIONS] [BPF FILTER]</p>
-<h2>DESCRIPTION</h2>
 <p> Suricata is a high performance Network IDS, IPS and Network Security Monitoring engine. Open Source and owned by a community run non-profit foundation, the Open Information Security Foundation (OISF).</p>
 <h2>OPTIONS</h2>
 <dl>

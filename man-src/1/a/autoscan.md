@@ -1,4 +1,5 @@
 ---
+
 title: "autoscan(1)"
 name: "autoscan"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autoscan/"
 description: "autoscan – Generate a preliminary configure.ac"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autoscan</code> [<i>,OPTION/</i>]&#8230; [<i>,SRCDIR/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Examine source files in the directory tree rooted at SRCDIR, or the current directory if none is given. Search the source files for common portability problems, check for incompleteness of &#8216;configure.ac&#8217;, and create a file &#8216;configure.scan&#8217; which is a preliminary &#8216;configure.ac&#8217; for that package.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

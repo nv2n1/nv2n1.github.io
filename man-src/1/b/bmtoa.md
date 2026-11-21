@@ -1,4 +1,5 @@
 ---
+
 title: "bmtoa(1)"
 name: "bmtoa"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-bmtoa/"
 description: "bitmap, bmtoa, atobm – bitmap editor and converter utilities for the X Window System"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bitmap</code> [ <i>-options</i> &#8230; ] [ <i>filename</i> ] [ <i>basename</i> ] </p>
 <p> <code>bmtoa</code> [ <code>-chars</code> &#8230; ] [ <i>filename</i> ] </p>
 <p> <code>atobm</code> [ <code>-chars</code> <i>cc</i> ] [ <code>-name</code> <i>variable</i> ] [ <code>-xhot</code> <i>number</i> ] [ <code>-yhot</code> <i>number</i> ] [ <i>filename</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>bitmap</i> program is a rudimentary tool for creating or editing rectangular images made up of 1&#8217;s and 0&#8217;s. Bitmaps are used in X for defining clipping regions, cursor shapes, icon shapes, and tile and stipple patterns. </p>
 <p> The <i>bmtoa</i> and <i>atobm</i> filters convert <i>bitmap</i> files (FILE FORMAT) to and from ASCII strings. They are most commonly used to quickly print out bitmaps and to generate versions for including in text.</p>
 <h2>COMMAND LINE OPTIONS</h2>

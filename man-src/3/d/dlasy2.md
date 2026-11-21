@@ -1,4 +1,5 @@
 ---
+
 title: "dlasy2(3)"
 name: "dlasy2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasy2/"
 description: "dlasy2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasy2</code> (LTRANL, LTRANR, ISGN, N1, N2, TL, LDTL, TR, LDTR, B, LDB, SCALE, X, LDX, XNORM, INFO)<br />
  <i></i><code>DLASY2</code> solves the Sylvester matrix equation where the matrices are of order 1 or 2.</p>

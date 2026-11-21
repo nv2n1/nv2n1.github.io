@@ -1,4 +1,5 @@
 ---
+
 title: "encfs(1)"
 name: "encfs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-encfs/"
 description: "encfs – mounts or creates an encrypted virtual filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>encfs</code> [<code>&#8211;version</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-c</code>|<code>&#8211;config</code>] [<code>-t</code>|<code>&#8211;syslogtag</code>] [<code>-s</code>] [<code>-f</code>] [<code>&#8211;annotate</code>] [<code>&#8211;standard</code>] [<code>&#8211;paranoia</code>] [<code>&#8211;insecure</code>] [<code>&#8211;reverse</code>] [<code>&#8211;reversewrite</code>] [<code>&#8211;extpass=program</code>] [<code>-S</code>|<code>&#8211;stdinpass</code>] [<code>&#8211;anykey</code>] [<code>&#8211;forcedecode</code>] [<code>-require-macs</code>] [<code>-i </code><font SIZE="-1"><code>MINUTES</code></font>|<code>&#8211;idle=MINUTES</code>] [<code>-m</code>|<code>&#8211;ondemand</code>] [<code>&#8211;delaymount</code>] [<code>-u</code>|<code>&#8211;unmount</code>] [<code>&#8211;public</code>] [<code>&#8211;nocache</code>] [<code>&#8211;noattrcache</code>] [<code>&#8211;nodatacache</code>] [<code>&#8211;no-default-flags</code>] [<code>-o </code><font SIZE="-1"><code>FUSE_OPTION</code></font>] [<code>-d</code>|<code>&#8211;fuse-debug</code>] [<code>-H</code>|<code>&#8211;fuse-help</code>] <i>rootdir</i> <i>mountPoint</i> [<code>&#8212;</code> [<i>Fuse Mount Options</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>EncFS</code> creates a virtual encrypted filesystem which stores encrypted data in the <i>rootdir</i> directory and makes the unencrypted data visible at the <i>mountPoint</i> directory. The user must supply a password which is used to (indirectly) encrypt both filenames and file contents. </p>
 <p> If <code>EncFS</code> is unable to find a supported filesystem at the specified <i>rootdir</i>, then the user will be asked if they wish to create a new encrypted filesystem at the specified location. Options will be presented to the user allowing some control over the algorithms to use. As <code>EncFS</code> matures, there may be an increasing number of choices.</p>
 <h2>OPTIONS</h2>

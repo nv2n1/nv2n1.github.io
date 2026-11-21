@@ -1,4 +1,5 @@
 ---
+
 title: "needs-restarting(1)"
 name: "needs-restarting"
 section: "1"
@@ -9,9 +10,7 @@ description: "needs-restarting – report running processes that have been updat
 
 <h2>NAME</h2>
 <p> needs-restarting &#8211; report running processes that have been updated</p>
-<h2>SYNOPSIS</h2>
 <p> <code>needs-restarting</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>needs-restarting</code> is a program that reports a list of process ids that started running before they or some component that they use were updated. </p>
 <h2>OPTIONS</h2>
 <dl>

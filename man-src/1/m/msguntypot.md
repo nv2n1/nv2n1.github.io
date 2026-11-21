@@ -1,4 +1,5 @@
 ---
+
 title: "msguntypot(1)"
 name: "msguntypot"
 section: "1"
@@ -6,18 +7,11 @@ letter: "m"
 url: "/docs/linux/man/1-msguntypot/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+msguntypot - update po files when a typo is fixed in pot file 
 
- msguntypot - update po files when a typo is fixed in pot file 
+msguntypot -o &lt;old_pot&gt; -n &lt;new_pot&gt; pofiles...
 
-<h2>SYNOPSIS</h2>
-
- msguntypot -o &lt;old_pot&gt; -n &lt;new_pot&gt; pofiles...
-
-<h2>DESCRIPTION</h2>
-
- When you fix a trivial error which surely doesn't affect translations (e.g. a typo) in a .pot file, you should unfuzzy the corresponding msgstr in the translated .po files to avoid so extra work to the translators. 
+When you fix a trivial error which surely doesn't affect translations (e.g. a typo) in a .pot file, you should unfuzzy the corresponding msgstr in the translated .po files to avoid so extra work to the translators. 
 
  This task is difficult and error prone when done manually, and this tool is there to help doing so correctly. You just need to provide the two versions of the pot file: before the edition and after as marked in the above synopsis, and it all becomes automatic.
 

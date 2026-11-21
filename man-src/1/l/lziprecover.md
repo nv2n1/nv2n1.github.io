@@ -1,4 +1,5 @@
 ---
+
 title: "lziprecover(1)"
 name: "lziprecover"
 section: "1"
@@ -9,9 +10,7 @@ description: "lziprecover – recovers data from damaged lzip files"
 
 <h2>NAME</h2>
 <p> lziprecover &#8211; recovers data from damaged lzip files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lziprecover</code> [<i>,options/</i>] [<i>,files/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Lziprecover &#8211; Data recovery tool and decompressor for the lzip format. </p>
 <p> Lziprecover can repair perfectly most files with small errors (up to one single-byte error per member), without the need of any extra redundance at all. Losing an entire archive just because of a corrupt byte near the beginning is a thing of the past. </p>
 <p> Lziprecover can also produce a correct file by merging the good parts of two or more damaged copies, extract data from damaged files, decompress files and test integrity of files. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-describe-alarm-history(1)"
 name: "euwatch-describe-alarm-history"
 section: "1"
@@ -9,12 +10,10 @@ description: "euwatch-describe-alarm-history – Retrieve history for one alarm 
 
 <h2>NAME</h2>
 <p> euwatch-describe-alarm-history &#8211; Retrieve history for one alarm or all alarms</p>
-<h2>SYNOPSIS</h2>
 <p> euwatch-describe-alarm-history [&#8211;end-date DATE]</p>
 <dl>
 <dt>[&#8211;history-item-type {Action,ConfigurationUpdate,StateUpdate}]</dt>
 <dd> [&#8211;show-long] [&#8211;start-date DATE] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [ALARM]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Retrieve history for one alarm or all alarms</p>
 <h3>positional arguments:</h3>
 <dl>

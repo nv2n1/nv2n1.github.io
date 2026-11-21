@@ -1,4 +1,5 @@
 ---
+
 title: "fts-set-blacklist(1)"
 name: "fts-set-blacklist"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-set-blacklist/"
 
  fts-set-blacklist
 
-<h2>SYNOPSIS</h2>
+fts-set-blacklist [options] TYPE SUBJECT MODE
 
- fts-set-blacklist [options] TYPE SUBJECT MODE
-
-<h2>DESCRIPTION</h2>
-
- fts-set-blacklist is a tool for blacklisting SEs and DNs. Accepted values for TYPE are: 'se', and 'dn', subject is either the DN or SE name, MODE is either 'on' (blacklisted) or 'off' (unblacklisted)
+fts-set-blacklist is a tool for blacklisting SEs and DNs. Accepted values for TYPE are: 'se', and 'dn', subject is either the DN or SE name, MODE is either 'on' (blacklisted) or 'off' (unblacklisted)
 
 <h2>OPTIONS</h2>
 

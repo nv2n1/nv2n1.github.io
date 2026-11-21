@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_get_random(3)"
 name: "gnutls_session_get_random"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_session_get_random – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_get_random &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_session_get_random(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>client</i><code>, gnutls_datum_t * </code><i>server</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_session_get_random – API function"
 <dd> the client part of the random</dd>
 <dt>gnutls_datum_t * server</dt>
 <dd> the server part of the random</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function returns pointers to the client and server random fields used in the TLS handshake. The pointers are not to be modified or deallocated. </p>
 <p> If a client random value has not yet been established, the output will be garbage.</p>
 <h2>SINCE</h2>

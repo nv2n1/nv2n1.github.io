@@ -1,4 +1,5 @@
 ---
+
 title: "libauth(3)"
 name: "libauth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libauth/"
 description: "libauth – routines for writing nnrpd resolvers and authenticators"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include "libauth.h"
 struct res_info {
@@ -24,7 +24,6 @@ struct res_info *get_res_info(FILE *);
 void free_auth_info(struct auth_info *);
 void free_res_info(struct res_info *);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These functions provide a convenient C frontend to the nnrpd external authentication interface documented in <i>doc/external-auth</i>. Use of this library is <code>not</code> required; in particular, external resolvers and authenticators written in languages other than C will need to implement the necessary functionality themselves. </p>
 <p> The <i>get_auth_info()</i> and <i>get_res_info()</i> functions allocate sufficient memory for a <code>struct auth_info</code> or <code>struct res_info</code> and any necessary fields, and return a pointer to the struct with the fields filled in from information supplied by nnrpd (the <code>FILE*</code> parameter generally should be <tt>&quot;stdin&quot;</tt>). Both functions return <font SIZE="-1">NULL</font> on error. The caller is responsible for deallocating the memory by using the functions below. </p>
 <p> The string fields of both structs are straightforward. The <code>client</code> and <code>local</code> fields of <code>struct res_info</code> actually point to instances of <code>struct sockaddr_in</code> (or <code>struct sockaddr_in6</code> if IPv6 support is compiled in). </p>

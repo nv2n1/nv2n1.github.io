@@ -1,4 +1,5 @@
 ---
+
 title: "exo-csource(1)"
 name: "exo-csource"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-exo-csource/"
 description: "exo-csource – C code generation utility for arbitrary data"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>exo-csource</code> [options] [file]</dt>
 <dt> <code>exo-csource</code> [options] &#8211;build-list [[name]&nbsp;[file]&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>exo-csource</code></p>
 <dd>is a small utility that generates C code containing arbitrary data, useful for compiling texts or other data directly into programs.</dd>
 <h2>INVOCATION</h2>

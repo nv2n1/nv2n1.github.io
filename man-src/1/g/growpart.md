@@ -1,4 +1,5 @@
 ---
+
 title: "growpart(1)"
 name: "growpart"
 section: "1"
@@ -9,7 +10,6 @@ description: "growpart – extend a partition in a partition table to fill avail
 
 <h2>NAME</h2>
 <p> growpart &#8211; extend a partition in a partition table to fill available space </p>
-<h2>SYNOPSIS</h2>
 <p> <code>growpart [OPTIONS] DISK PARTITION-NUMBER</code> </p>
 <p> growpart partition<br />
 rewrite partition table so that partition takes up all the space it can<br />
@@ -37,7 +37,6 @@ options:<br />
 <dt><code>PARTITION-NUMBER</code></dt>
 <dd> The number of the partition to resize (counting from 1) </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> Rewrite a the partition table in a disk or disk image so that the given partition takes up as much space as it can. After running, the partition will end at the end of the disk, or at the beginning of the next partition. </p>
 <h2>EXAMPLES</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ssytri2x(3)"
 name: "ssytri2x"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssytri2x/"
 description: "ssytri2x.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytri2x</code> (UPLO, N, A, LDA, IPIV, WORK, NB, INFO)<br />
  <i></i><code>SSYTRI2X</code></p>

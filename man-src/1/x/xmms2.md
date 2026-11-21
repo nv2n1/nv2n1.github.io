@@ -1,4 +1,5 @@
 ---
+
 title: "xmms2(1)"
 name: "xmms2"
 section: "1"
@@ -9,9 +10,7 @@ description: "xmms2 – offers a simple command-line interface to the XMMS2 daem
 
 <h2>NAME</h2>
 <p> xmms2 &#8211; offers a simple command-line interface to the XMMS2 daemon</p>
-<h2>SYNOPSIS</h2>
 <p> <i>xmms2</i> <code>command</code> <i>xmms2</i> <code>mlib</code> <code>command</code> <i>xmms2</i> <code>playlist</code> <code>command</code> <i>xmms2</i> <code>coll</code> <code>command </code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>XMMS2 </code> is a redesign of the XMMS (<a rel="nofollow" href="http://www.xmms.org)">http://www.xmms.org)</a> music player. It features a client-server model, allowing multiple (even simultaneous!) user interfaces, both textual and graphical. All common audio formats are supported using plugins. On top of this, there is a flexible media library to organize your music. </p>
 <p> <i>xmms2</i> is the official command-line interface client for <code>XMMS2</code> and acts as a reference implementation for the development of new clients. <i>xmms2</i> is able to issue commands to control the active playlist and playback as well as commands to control the media library. </p>
 <p> The following commands effect the current <code>XMMS2</code> playlist. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "claed8(3)"
 name: "claed8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claed8/"
 description: "claed8.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claed8</code> (K, N, QSIZ, Q, LDQ, D, RHO, CUTPNT, Z, DLAMDA, Q2, LDQ2, W, INDXP, INDX, INDXQ, PERM, GIVPTR, GIVCOL, GIVNUM, INFO)<br />
  <i></i><code>CLAED8</code> used by sstedc. Merges eigenvalues and deflates secular equation. Used when the original matrix is dense.</p>

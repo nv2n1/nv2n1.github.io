@@ -1,4 +1,5 @@
 ---
+
 title: "perl561delta(1)"
 name: "perl561delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl561delta/"
 description: "perl561delta – what’s new for perl v5.6.1"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.005 release and the 5.6.1 release.</p>
 <h2>Summary of changes between 5.6.0 and 5.6.1</h2>
 <p> This section contains a summary of the changes between the 5.6.0 release and the 5.6.1 release. More details about the changes mentioned here may be found in the <i>Changes</i> files that accompany the Perl source distribution. See perlhack for pointers to online resources where you can inspect the individual patches described by these changes.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "includeres(1)"
 name: "includeres"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-includeres/"
 description: "includeres – filter to include resources in a PostScript document"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>includeres </code> &lt; <i>document.ps</i> &gt; <i>output.ps</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Includeres</i> includes resources (fonts, procsets, patterns, files, etc) in place of <i>%%IncludeResource</i> comments in a PostScript document. The resources are searched for in the current directory and the system default directory under the resource name, and with an appropriate extension. The pipeline </p>
 <p> <center> extractres file.ps | includeres &gt;out.ps<br />
  </center> </p>

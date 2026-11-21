@@ -1,4 +1,5 @@
 ---
+
 title: "time(1)"
 name: "time"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-time/"
 description: "time – run programs and summarize system resource usage"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>time</code></dt>
 <dd> [ <code>-apqvV</code> ] [ <code>-f</code><i> FORMAT</i> ] [ <code>-o</code><i> FILE</i> ]<br />
  [ <code>&#8211;append</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;quiet</code> ] [ <code>&#8211;portability</code> ]<br />
  [ <code>&#8211;format=</code><i>FORMAT</i> ] [ <code>&#8211;output=</code><i>FILE</i> ] [ <code>&#8211;version</code> ]<br />
  [ <code>&#8211;help</code> ] <i>COMMAND</i> [ <i>ARGS</i> ]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>time</code> run the program <i>COMMAND</i> with any given arguments <i>ARG&#8230;</i>. When <i>COMMAND</i> finishes, <code>time</code> displays information about resources used by <i>COMMAND</i> (on the standard error output, by default). If <i>COMMAND</i> exits with non-zero status, <code>time</code> displays a warning message and the exit status. </p>
 <p> <code>time</code> determines which information to display about the resources used by the <i>COMMAND</i> from the string <i>FORMAT</i>. If no format is specified on the command line, but the <code>TIME</code> environment variable is set, its value is used as the format. Otherwise, a default format built into <code>time</code> is used. </p>
 <p> Options to <code>time</code> must appear on the command line before <i>COMMAND</i>. Anything on the command line after <i>COMMAND</i> is passed as arguments to <i>COMMAND</i>. </p>

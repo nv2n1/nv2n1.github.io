@@ -1,4 +1,5 @@
 ---
+
 title: "write(1)"
 name: "write"
 section: "1"
@@ -8,7 +9,6 @@ description: "write – send a message to another user"
 ---
 
 <p> <code>write</code> <i>user</i> [<i>ttyname</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>write</code> allows you to communicate with other users, by copying lines from your terminal to theirs. </p>
 <p> When you run the <code>write</code> command, the user you are writing to gets a message of the form: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pdldoc(1)"
 name: "pdldoc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdldoc/"
 description: "pdldoc – shell interface to PDL documentation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdldoc</code> &lt;text&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> The aim of <code>pdldoc</code> is to provide the same functionality as the <tt>&quot;apropos&quot;</tt>, <tt>&quot;help&quot;</tt>, <tt>&quot;sig&quot;</tt>,</p>
 <h2>OPTIONS</h2>
 <dl>

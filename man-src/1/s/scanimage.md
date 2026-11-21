@@ -1,4 +1,5 @@
 ---
+
 title: "scanimage(1)"
 name: "scanimage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-scanimage/"
 description: "scanimage – scan an image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>scanimage</code> [<code>-d</code>|<code>&#8211;device-name</code> <i>dev</i>] [<code>&#8211;format</code> <i>format</i>] [<code>-i</code>|<code>&#8211;icc-profile</code> <i>profile</i>] [<code>-L</code>|<code>&#8211;list-devices</code>] [<code>-f</code>|<code>&#8211;formatted-device-list</code> <i>format</i>] [<code>-b</code>|<code>&#8211;batch</code> [<i>format</i>]] [<code>&#8211;batch-start</code> <i>start</i>] [<code>&#8211;batch-count</code> <i>count</i>] [<code>&#8211;batch-increment</code> <i>increment</i>] [<code>&#8211;batch-double</code>] [<code>&#8211;accept-md5-only</code>] [<code>-p</code>|<code>&#8211;progress</code>] [<code>-o</code>|<code>&#8211;output-file</code> <i>path</i>] [<code>-n</code>|<code>&#8211;dont-scan</code>] [<code>-T</code>|<code>&#8211;test</code>] [<code>-A</code>|<code>&#8211;all-options</code>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-B</code>|<code>&#8211;buffer-size</code> [=<i>size</i>]] [<code>-V</code>|<code>&#8211;version</code>] [<i>device-specific-options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>scanimage</code> is a command-line interface to control image acquisition devices such as flatbed scanners or cameras. The device is controlled via command-line options. After command-line processing, <code>scanimage</code> normally proceeds to acquire an image. The image data is written to standard output in one of the PNM (portable aNyMaP) formats (PBM for black-and-white images, PGM for grayscale images, and PPM for color images), TIFF format (black-and-white, grayscale or color), PNG format, or JPEG format (compression level 75). <code>scanimage</code> accesses image acquisition devices through the <code>SANE</code> (Scanner Access Now Easy) interface and can thus support any device for which there exists a <code>SANE</code> backend (try <code>apropos</code> <i>sane-</i> to get a list of available backends). </p>
 <h2>EXAMPLES</h2>
 <p> To get a list of devices: </p>

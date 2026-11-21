@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_get_openpgp_key_id(3)"
 name: "gnutls_pubkey_get_openpgp_key_id"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pubkey_get_openpgp_key_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_get_openpgp_key_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_get_openpgp_key_id(gnutls_pubkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, unsigned char * </code><i>output_data</i><code>, size_t * </code><i>output_data_size</i><code>, unsigned int * </code><i>subkey</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_pubkey_get_openpgp_key_id – API function"
 <dd> holds the size of output_data (and will be replaced by the actual size of parameters)</dd>
 <dt>unsigned int * subkey</dt>
 <dd> Will be non zero if the key ID corresponds to a subkey</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function returns the OpenPGP key ID of the corresponding key. The key is a unique ID that depends on the public key parameters. </p>
 <p> If the flag <code>GNUTLS_PUBKEY_GET_OPENPGP_FINGERPRINT</code> is specified this function returns the fingerprint of the master key. </p>
 <p> If the buffer provided is not long enough to hold the output, then *output_data_size is updated and <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> will be returned. The output is <code>GNUTLS_OPENPGP_KEYID_SIZE</code> bytes long.</p>

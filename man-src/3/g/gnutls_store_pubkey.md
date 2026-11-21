@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_store_pubkey(3)"
 name: "gnutls_store_pubkey"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_store_pubkey – API function"
 
 <h2>NAME</h2>
 <p> gnutls_store_pubkey &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_store_pubkey(const char * </code><i>db_name</i><code>, gnutls_tdb_t </code><i>tdb</i><code>, const char * </code><i>host</i><code>, const char * </code><i>service</i><code>, gnutls_certificate_type_t </code><i>cert_type</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, time_t </code><i>expiration</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,7 +30,6 @@ description: "gnutls_store_pubkey – API function"
 <dd> The expiration time (use 0 to disable expiration)</dd>
 <dt>unsigned int flags</dt>
 <dd> should be 0.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will store the provided (raw or DER-encoded) certificate to the list of stored public keys. The key will be considered valid until the provided expiration time. </p>
 <p> The <i>store</i> variable if non-null specifies a custom backend for the storage of entries. If it is NULL then the default file backend will be used.</p>
 <h2>RETURNS</h2>

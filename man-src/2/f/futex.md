@@ -1,4 +1,5 @@
 ---
+
 title: "futex(2)"
 name: "futex"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-futex/"
 description: "futex – fast user-space locking"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/futex.h&gt;
 #include &lt;stdint.h&gt;
@@ -17,7 +17,6 @@ long futex(uint32_t *uaddr, int futex_op, uint32_t val,
            uint32_t *uaddr2, uint32_t val3);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>futex</code>() system call provides a method for waiting until a certain condition becomes true. It is typically used as a blocking construct in the context of shared-memory synchronization. When using futexes, the majority of the synchronization operations are performed in user space. A user-space program employs the <code>futex</code>() system call only when it is likely that the program has to block for a longer time until the condition becomes true. Other <code>futex</code>() operations can be used to wake any processes or threads waiting for a particular condition. </p>
 <p> A futex is a 32-bit value&#8212;referred to below as a <i>futex word</i>&#8212;whose address is supplied to the <code>futex</code>() system call. (Futexes are 32 bits in size on all platforms, including 64-bit systems.) All futex operations are governed by this value. In order to share a futex between processes, the futex is placed in a region of shared memory, created using (for example) <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) or <code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2). (Thus, the futex word may have different virtual addresses in different processes, but these addresses all refer to the same location in physical memory.) In a multithreaded program, it is sufficient to place the futex word in a global variable shared by all threads. </p>
 <p> When executing a futex operation that requests to block a thread, the kernel will block only if the futex word has the value that the calling thread supplied (as one of the arguments of the <code>futex</code>() call) as the expected value of the futex word. The loading of the futex word&#8217;s value, the comparison of that value with the expected value, and the actual blocking will happen atomically and will be totally ordered with respect to concurrent operations performed by other threads on the same futex word. Thus, the futex word is used to connect the synchronization in user space with the implementation of blocking by the kernel. Analogously to an atomic compare-and-exchange operation that potentially changes shared memory, blocking via a futex is an atomic compare-and-block operation. </p>

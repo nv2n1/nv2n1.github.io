@@ -1,4 +1,5 @@
 ---
+
 title: "get_framenum_subset(3)"
 name: "get_framenum_subset"
 section: "3"
@@ -9,12 +10,10 @@ description: "get_framenum_subset, get_framenum — perform a reverse look-up on
 
 <h2>NAME</h2>
 <p> get_framenum_subset, get_framenum &#8212; perform a reverse look-up on a monotonic dirfile field</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>double get_framenum_subset(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>double </code><i>value</i><code>, off_t </code><i>field_start</i><code>, off_t </code><i>field_end</i><code>);</code></dt>
 <dt> <code>double get_framenum(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>double </code><i>value</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>get_framenum_subset</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the fractional frame number at which the field specified by <i>field_code</i>, which may contain a representation suffix, equals <i>value</i>, by considering the field between the frame limits <i>field_start</i> and <i>field_end</i>. </dd>
 <p> If <i>field_start</i> is zero, the frame offset of the field is used as the lower limit instead (which may, in fact, be zero; see <code><a href="/docs/linux/man/3-get_frameoffset/">get_frameoffset</a></code>(3)). If <i>field_end</i> is zero, the number of frames in the dirfile, as reported by <code><a href="/docs/linux/man/3-get_nframes/">get_nframes</a></code>(3), is used instead as the upper limit. </p>
 <p> The <code>get_framenum</code>() function is equivalent to calling <code>get_framenum_subset</code>() with <i>field_start</i> and <i>field_end</i> equal to zero. </p>

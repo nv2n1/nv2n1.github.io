@@ -1,4 +1,5 @@
 ---
+
 title: "gtags-cscope(1)"
 name: "gtags-cscope"
 section: "1"
@@ -9,9 +10,7 @@ description: "gtags-cscope – pseudo cscope which implements the line-oriented 
 
 <h2>NAME</h2>
 <p> gtags-cscope &#8211; pseudo cscope which implements the line-oriented interface</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gtags-cscope</code> [-Cqv] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Gtags-cscope</code> is a pseudo cscope which implements the line-oriented interface. You can use this command for various clients instead of true cscope. </p>
 <p> Since <code>gtags-cscope</code> is intended to make GLOBAL available through cscope interface, the output is not necessarily the same as cscope.</p>
 <h2>OPTIONS</h2>

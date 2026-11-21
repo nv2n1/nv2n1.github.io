@@ -1,4 +1,5 @@
 ---
+
 title: "xmlsec1(1)"
 name: "xmlsec1"
 section: "1"
@@ -9,9 +10,7 @@ description: "xmlsec1 – sign, verify, encrypt and decrypt XML documents"
 
 <h2>NAME</h2>
 <p> xmlsec1 &#8211; sign, verify, encrypt and decrypt XML documents</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xmlsec</code> <i>&lt;command&gt; </i>[<i>&lt;options&gt;</i>] [<i>&lt;files&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> xmlsec is a command line tool for signing, verifying, encrypting and decrypting XML documents. The allowed &lt;command&gt; values are:</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

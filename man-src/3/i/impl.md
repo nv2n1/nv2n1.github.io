@@ -1,4 +1,5 @@
 ---
+
 title: "impl(3)"
 name: "impl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-impl/"
 description: "QuantLib::CuriouslyRecurringTemplate – Support for the curiously recurring template pattern."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/patterns/curiouslyrecurring.hpp&gt; </p>
 <h3>Protected Member Functions</h3>
 <p> Impl &amp; <code>impl</code> () </p>

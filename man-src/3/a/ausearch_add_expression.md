@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_add_expression(3)"
 name: "ausearch_add_expression"
 section: "3"
@@ -9,10 +10,8 @@ description: "ausearch_add_expression – build up search expression"
 
 <h2>NAME</h2>
 <p> ausearch_add_expression &#8211; build up search expression</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> <code>int ausearch_add_expression(auparse_state_t *</code><i>au</i><code>, const char *</code><i>expression</i><code>, char **</code><i>error</i><code>, ausearch_rule_t </code><i>how</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ausearch_add_item</code> adds an expression to the current audit search expression. The search conditions can then be used to scan logs, files, or buffers for something of interest. The <i>expression</i> parameter contains an expression, as specified in <code><a href="/docs/linux/man/5-ausearch-expression/">ausearch-expression</a></code>(5). </p>
 <p> The <i>how</i> parameter determines how this search expression will affect the existing search expression, if one is already defined. The possible values are:</p>
 <dl>

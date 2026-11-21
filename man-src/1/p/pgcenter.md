@@ -1,4 +1,5 @@
 ---
+
 title: "pgcenter(1)"
 name: "pgcenter"
 section: "1"
@@ -9,9 +10,7 @@ description: "pgcenter – is the PostgreSQL administration console with top-lik
 
 <h2>NAME</h2>
 <p> pgcenter &#8211; is the PostgreSQL administration console with top-like monitoring.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pgcenter</code> [OPTION]&#8230; [DBNAME [USERNAME]] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>PostgreSQL</code> provides various statistics which includes information about tables, indexes, functions and other database objects and their usage. Moreover, statistics has information about connections, current queries and database operations (INSERT/DELETE/UPDATE). But most of this statistics are provided as permanently incremented counters. The <code>pgcenter</code> provides convenient interface to this statistics and allow viewing statistics changes in time interval, eg. per second. The <code>pgcenter</code> provides fast access for database management task, such as editing configuration files, reloading services, viewing log files and canceling or terminating database backends (by pid or using state mask). However if need execute some specific operations, pgcenter can start psql session for this purposes. </p>
 <p> The <code>pgcenter</code> uses <i>screens</i> and <i>contexts</i>. Screen is a special area for displaying statistics. Number of screen limited by eight. Context is the type of displayed statistics: table statistics, index statistics, functions statistics, replication statistics, etc. </p>
 <p> All operations in pgcenter realized through hotkeys. </p>

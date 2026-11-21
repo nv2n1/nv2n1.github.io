@@ -1,4 +1,5 @@
 ---
+
 title: "fstatvfs(3)"
 name: "fstatvfs"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-fstatvfs/"
 description: "statvfs, fstatvfs – get filesystem statistics"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/statvfs.h&gt;</code> </p>
 <p> <code>int statvfs(const char *</code><i>path</i><code>, struct statvfs *</code><i>buf</i><code>);</code><br />
  <code>int fstatvfs(int </code><i>fd</i><code>, struct statvfs *</code><i>buf</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The function <code>statvfs</code>() returns information about a mounted filesystem. <i>path</i> is the pathname of any file within the mounted filesystem. <i>buf</i> is a pointer to a <i>statvfs</i> structure defined approximately as follows: </p>
 <p> struct statvfs {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;f_bsize;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Filesystem block size&nbsp;*/<br />

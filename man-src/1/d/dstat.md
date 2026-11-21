@@ -1,4 +1,5 @@
 ---
+
 title: "dstat(1)"
 name: "dstat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dstat/"
 description: "dstat – versatile tool for generating system resource statistics"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dstat [-afv] [options..] [delay [count]] </p>
-<h2>DESCRIPTION</h2>
 <p> Dstat is a versatile replacement for vmstat, iostat and ifstat. Dstat overcomes some of the limitations and adds some extra features. </p>
 <p> Dstat allows you to view all of your system resources instantly, you can eg. compare disk usage in combination with interrupts from your IDE controller, or compare the network bandwidth numbers directly with the disk throughput (in the same interval). </p>
 <p> Dstat also cleverly gives you the most detailed information in columns and clearly indicates in what magnitude and unit the output is displayed. Less confusion, less mistakes, more efficient. </p>

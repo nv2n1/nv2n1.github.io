@@ -1,4 +1,5 @@
 ---
+
 title: "ldexpl(3)"
 name: "ldexpl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldexpl/"
 description: "ldexp, ldexpf, ldexpl – multiply floating-point number by integral power of 2"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double ldexp(double x, int exp);
@@ -22,7 +22,6 @@ long double ldexpl(long double x, int exp);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return the result of multiplying the floating-point number <i>x</i> by 2 raised to the power <i>exp</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return <i>x * (2^exp)</i>. </p>

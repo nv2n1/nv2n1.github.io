@@ -1,4 +1,5 @@
 ---
+
 title: "swatch(1)"
 name: "swatch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-swatch/"
 description: "swatch – simple watcher"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>swatch</code> [ <code>&#8211;awk-field-syntax</code> ] [ <code>&#8211;config-file|-c</code> <i>file</i> ] [ <code>&#8211;daemon</code> ] [ <code>&#8211;extra-include-dir|-I</code> <i>path</i> ] [ <code>&#8211;extra-module|-M</code> <i>module_name</i> ] [ <code>&#8211;help|-h</code> ] [ <code>&#8211;input-record-separator</code> <i>regex</i> ] [ <code>&#8211;old-style-config|-O</code> ] [ <code>&#8211;pid-file</code> <i>file</i> ] [ <code>&#8211;restart-time|-r</code> <i>time</i> ] [ <code>&#8211;script-dir</code> <i>path</i> ] [ <code>&#8211;tail-args</code> <i>arguments_for_tail_program</i> ] [ <code>&#8211;tail-program-name</code> <i>filename</i> ] [ <code>&#8211;version|-V</code> ] [ <code>&#8211;use-cpan-file-tail</code> ] [ [ <code>&#8211;examine|-f</code> <i>file_to_examine</i> ] | [ <code>&#8211;read-pipe|-p</code> <i>program_to_pipe_from</i> ] | [ <code>&#8211;tail-file|-t</code> <i>file_to_tail</i> ] ] [ <code>&#8211;debug</code> [ <i>level</i> ] ] [ <code>&#8211;dump-script</code> <i>filename</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Swatch</code> is designed to monitor system activity. In order for <code>Swatch</code> to be useful, it requires a configuration file which contains <i>pattern(s)</i> to look for and <i>action(s)</i> to perform when each pattern is found.</p>
 <h2>COMMAND LINE OPTIONS</h2>
 <dl>

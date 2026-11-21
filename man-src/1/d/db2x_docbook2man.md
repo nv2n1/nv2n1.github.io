@@ -1,4 +1,5 @@
 ---
+
 title: "db2x_docbook2man(1)"
 name: "db2x_docbook2man"
 section: "1"
@@ -9,9 +10,7 @@ description: "docbook2man – Convert DocBook to man pages"
 
 <h2>NAME</h2>
 <p> docbook2man &#8211; Convert DocBook to man pages</p>
-<h2>SYNOPSIS</h2>
 <p> <code>docbook2man</code> [<i>options</i>] <i>xml-document</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>docbook2man</code> converts the given DocBook XML document into man pages. By default, the man pages will be output to the current directory. </p>
 <p> Only the refentry content in the DocBook document is converted. (To convert content outside of a refentry, stylesheet customization is required. See the docbook2X package for details.) </p>
 <p> The <code>docbook2man</code> command is a wrapper script for a two-step conversion process. See the section &#8220;CONVERSION PROCESS&#8221; below for details.</p>

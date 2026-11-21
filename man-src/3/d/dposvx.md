@@ -1,4 +1,5 @@
 ---
+
 title: "dposvx(3)"
 name: "dposvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dposvx/"
 description: "dposvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dposvx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, EQUED, S, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code> DPOSVX computes the solution to system of linear equations A * X = B for PO matrices</code></p>

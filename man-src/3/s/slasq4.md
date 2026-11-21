@@ -1,4 +1,5 @@
 ---
+
 title: "slasq4(3)"
 name: "slasq4"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasq4/"
 description: "slasq4.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasq4</code> (I0, N0, Z, PP, N0IN, DMIN, DMIN1, DMIN2, DN, DN1, DN2, TAU, TTYPE, G)<br />
  <i></i><code>SLASQ4</code> computes an approximation to the smallest eigenvalue using values of d from the previous transform. Used by sbdsqr.</p>

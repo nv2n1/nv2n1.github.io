@@ -1,4 +1,5 @@
 ---
+
 title: "stg-branch(1)"
 name: "stg-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-branch/"
 description: "stg-branch – Branch operations: switch, list, create, rename, delete, …"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg branch
     stg branch[--merge][--]&lt;branch&gt;
@@ -16,7 +16,6 @@ stg branch
                 stg branch-- protect[--][&lt;branch&gt;] stg branch-- unprotect[--][&lt;branch&gt;] stg branch-- delete[--force][--]&lt;branch&gt;
                     stg branch-- cleanup[--force][--][&lt;branch&gt;] stg branch-- description = &lt;description&gt;[--][&lt;branch&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Create, clone, switch between, rename, or delete development branches within a git repository. </p>
 <p> <i>stg branch</i></p>
 <dl>

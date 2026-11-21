@@ -1,4 +1,5 @@
 ---
+
 title: "getrpcport(3)"
 name: "getrpcport"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-getrpcport/"
 description: "getrpcport – get RPC port number"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;rpc/rpc.h&gt;
 int getrpcport(const char *host, unsigned long prognum,
                unsigned long versnum, unsigned proto);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>getrpcport</code>() returns the port number for version <i>versnum</i> of the RPC program <i>prognum</i> running on <i>host</i> and using protocol <i>proto</i>. It returns 0 if it cannot contact the portmapper, or if <i>prognum</i> is not registered. If <i>prognum</i> is registered but not with version <i>versnum</i>, it will still return a port number (for some version of the program) indicating that the program is indeed registered. The version mismatch will be detected upon the first call to the service.</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

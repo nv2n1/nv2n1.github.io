@@ -1,4 +1,5 @@
 ---
+
 title: "pcp2graphite(1)"
 name: "pcp2graphite"
 section: "1"
@@ -9,9 +10,7 @@ description: "pcp2graphite – pcp-to-graphite metrics exporter"
 
 <h2>NAME</h2>
 <p> <code>pcp2graphite </code> &#8211; pcp-to-graphite metrics exporter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pcp2graphite</code> [<code>-h</code> <i>hostspec</i>] [<code>-a</code> <i>archive</i>] [<code>-L</code>] [<code>-O</code> <i>origin</i>] [<code>-T</code> <i>finish</i>] [<code>-s</code> <i>samples</i>] [<code>-t</code> <i>delta</i>] [<code>-g</code> <i>graphitehost</i>] [<code>-p</code> <i>pickleport</i>] [<code>-P</code> <i>textport</i>] [<code>-r</code> <i>pickleprotocol</i>] [<code>-u</code> <i>units</i>] [<code>-m</code> <i>prefix</i>] <i>metricname</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcp2graphite</code> is a PCP metric exporter. It relays hierarchies of the <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5) to a designated Graphite (Carbon/Whisper) database by periodically polling, then copying/converting relevant numerical metrics across the Graphite &quot;text&quot; or &quot;pickled&quot; TCP protocols. Metric values are optionally scaled to a given unit/scale, but are not rate-converted. Metric names may be prefixed and are somewhat canonicalized to fit the Graphite namespace rules. </p>
 <p> The data transfer will continue on a best-effort basis until the program is interrupted. Temporary errors are ignored. Multiple copies of this program may be run in parallel, to populate different Graphite databases or subtrees, with different scaling or sampling intervals. </p>
 <p> The <code><a href="/docs/linux/man/1-pmmgr/">pmmgr</a></code>(1) daemon can be used to ensure one or more <code>pcp2grapite</code> instances start at system boot time.</p>

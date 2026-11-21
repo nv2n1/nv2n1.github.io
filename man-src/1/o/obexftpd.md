@@ -1,4 +1,5 @@
 ---
+
 title: "obexftpd(1)"
 name: "obexftpd"
 section: "1"
@@ -9,9 +10,7 @@ description: "obexftpd – Mobile Equipment file transfer server"
 
 <h2>NAME</h2>
 <p> obexftpd &#8211; Mobile Equipment file transfer server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>obexftpd</code> [<i>OPTIONS</i>] [<i>TRANSPORT</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> With <code>obexftpd</code> you can set up an obex server on any computers using <code>IrDA</code>, <code>Bluetooth</code> or <code>TCP/IP</code>. Use e.g. <code>obexftp</code> or the <code>ObexFS</code> to access the files on this server.</p>
 <h2>OPTIONS</h2>
 <p> The ordering of options is important. The first transport option will start the server. Use basedir and verbose options prior to any transport. See <code>EXAMPLES</code></p>

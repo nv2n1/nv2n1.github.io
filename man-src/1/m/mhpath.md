@@ -1,4 +1,5 @@
 ---
+
 title: "mhpath(1)"
 name: "mhpath"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mhpath/"
 description: "mhpath – print full pathnames of nmh messages and folders"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhpath</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mhpath</code></p>
 <dd>expands and sorts the message list `msgs&#8217; and writes the full pathnames of the messages to the standard output separated by newlines. If no `msgs&#8217; are specified, <code>mhpath</code> outputs the current mail folder&#8217;s pathname instead. If the only argument is `+&#8217;, your <code>nmh</code> &#8220;Path&#8221; is output; this can be useful in shell scripts. </dd>
 <p> Contrasted with other <code>nmh</code> commands, a message argument to <code>mhpath</code> may often be intended for writing. Because of this: </p>

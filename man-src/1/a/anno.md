@@ -1,4 +1,5 @@
 ---
+
 title: "anno(1)"
 name: "anno"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-anno/"
 description: "anno – annotate messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>anno</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-component</code> <i>field</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-date</code> | <code>-nodate</code>] [<code>-draft</code>] [<code>-append</code>] [<code>-list</code>] [<code>-delete</code>] [<code>-number</code> <i>[</i>num|all<i>]]</i> [<code>-preserve</code> | <code>-nopreserve</code>] [<code>-version</code>] [<code>-help</code>] [<code>-text</code> <i>body</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Anno</code></p>
 <dd>manipulates header fields or <i>annotations</i> in messages. Header fields consist of a field name and an optional field body as defined by RFC 2822. The <code>-component</code> option specifies the field name, and the <code>-text</code> option specifies the field body. </dd>
 <p> The messages are either the <i>msgs</i> in the named folder, or the draft if invoked with the <code>-draft</code> option. </p>

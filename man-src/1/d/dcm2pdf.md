@@ -1,4 +1,5 @@
 ---
+
 title: "dcm2pdf(1)"
 name: "dcm2pdf"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcm2pdf/"
 description: "dcm2pdf – Extract PDF file from DICOM encapsulated PDF"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcm2pdf [options] dcmfile-in pdffile-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcm2pdf</code> utility reads a DICOM file of the Encapsulated PDF Storage SOP Class (<i>dcmfile-in</i>), extracts the embedded PDF document and writes it to an output file (<i>pdffile-out</i>). Optionally a command can be executed after the creation of the PDF file.</p>
 <h2>PARAMETERS</h2>
 <pre>

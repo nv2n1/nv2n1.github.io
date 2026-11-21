@@ -1,4 +1,5 @@
 ---
+
 title: "go-version(1)"
 name: "go-version"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-go-version/"
 description: "go-version – print the build information for Go executables"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>go version</code> [<code>-m</code>] [<code>-v</code>] [<i>file &#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Go version reports the Go version used to build each of the named executable files. </p>
 <p> If no files are named on the command line, go version prints its own version information. </p>
 <p> If a directory is named, go version walks that directory, recursively, looking for recognized Go binaries and reporting their versions. By default, go version does not report unrecognized files found during a directory scan. The -v flag causes it to report unrecognized files. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_token_get_random(3)"
 name: "gnutls_pkcs11_token_get_random"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs11_token_get_random – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_token_get_random &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_token_get_random(const char * </code><i>token_url</i><code>, void * </code><i>rnddata</i><code>, size_t </code><i>len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pkcs11_token_get_random – API function"
 <dd> A pointer to the memory area to be filled with random data</dd>
 <dt>size_t len</dt>
 <dd> The number of bytes of randomness to request</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will get random data from the given token. It will store rnddata and fill the memory pointed to by rnddata with len random bytes from the token.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

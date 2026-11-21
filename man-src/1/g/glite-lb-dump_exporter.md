@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-dump_exporter(1)"
 name: "glite-lb-dump_exporter"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-dump_exporter/"
 description: "glite-lb-dump_exporter – L&B dump exporter for Job Provenance"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-dump_exporter</code> [<i>OPTIONS</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-dump_exporter</code> parses a complete L&amp;B job events dump file, creates one file per every job, and updates information in the message directory for further processing. </p>
 <p> This utility is used together with <code>glite-jp-importer</code> daemon for importing L&amp;B dumps to Job Provenance. </p>
 <h2>OPTIONS</h2>

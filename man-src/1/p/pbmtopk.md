@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtopk(1)"
 name: "pbmtopk"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pbmtopk/"
 description: "pbmtopk – convert a PBM image into a packed (PK) format font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtopk</code> <i>pkfile</i>[<code>.pk</code>] <i>tfmfile</i>[<code>.tfm</code>] <i>resolution</i> [<code>-s</code> <i>designsize</i>] [<code>-p</code> <i>num</i> <i>param</i>&#8230;] [<code>-C</code> <i>codingscheme</i>] [<code>-F</code> <i>family</i>] [<code>-f</code> <i>optfile</i>] [<code>-c</code> <i>num</i>] [<code>-W</code> <i>width</i>] [<code>-H</code> <i>height</i>] [<code>-D</code> <i>depth</i>] [<code>-I</code> <i>ital</i>] [<code>-h</code> <i>horiz</i>] [<code>-v</code> <i>vert</i>] [<code>-x</code> <i>xoff</i>] [<code>-y</code> <i>yoff</i>] [<i>pbmfile</i> &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pbmtopk</code> reads PBM images as input and produces a packed (PK) font file and a TFM (TeX font metric) file as output. The resolution parameter indicates the resolution of the font, in dots per inch. If the filename &#8216;-&#8216; is used for any of the filenames, <code>pbmtopk</code> uses Standard Input or Standard Output. </p>
 <h2>OPTIONS</h2>

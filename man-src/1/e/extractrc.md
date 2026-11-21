@@ -1,4 +1,5 @@
 ---
+
 title: "extractrc(1)"
 name: "extractrc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-extractrc/"
 description: "extractrc – Extract message strings from UI and GUI-RC files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>extractrc</code> [<i>filename</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>extractrc</code></p>
 <dd>finds all text tags and other message strings in the given files and writes the corresponding i18n() calls to standard output so that xgettext can parse them. </dd>
 <p> It understands both (Qt(TM)/KDE) designer&#8217;s UI files and XML GUI-RC files. </p>

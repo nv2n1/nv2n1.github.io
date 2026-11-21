@@ -1,4 +1,5 @@
 ---
+
 title: "acl_delete_def_file(3)"
 name: "acl_delete_def_file"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_delete_def_file/"
 description: "acl_delete_def_file – delete a default ACL by filename"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_delete_def_file</code> &#8211; delete a default ACL by filename </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_delete_def_file const char *path_p</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_delete_def_file function deletes a default ACL from the directory whose pathname is pointed to by the argument <i>path_p</i> </p>
 <p> The effective user ID of the process must match the owner of the file or directory or the process must have the CAP_FOWNER capability for the request to succeed. </p>
 <p> If the argument <i>path_p</i> is not a directory, then the function fails. It is no error if the directory whose pathname is pointed to by the argument <i>path_p</i> does not have a default ACL.</p>

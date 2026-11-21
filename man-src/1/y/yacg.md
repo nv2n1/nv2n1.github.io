@@ -1,4 +1,5 @@
 ---
+
 title: "yacg(1)"
 name: "yacg"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-yacg/"
 description: "yacg – Yet Another Configuration Generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>yacg</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <i></i><font SIZE="-1"><i>PATH</i></font><i></i> </p>
 <p> <code>yacg</code> <code>&#8211;help</code>|<code>&#8211;manual</code>|<code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>yacg</code> reads the given high-level configuration file, carefully validates it and generates ready-to-use (configuration) files. </p>
 <p> The high-level configuration file can be altered using the <code>&#8211;set</code>, <code>&#8211;unset</code> and <code>&#8211;merge</code> options. It can be inspected using the <code>&#8211;dump</code> option. </p>
 <p> The files can be generated at their final location (by default) or elsewhere (using the <code>&#8211;rootdir</code> option). <code>yacg</code> can also be instructed to check the files without changing them via the <code>&#8211;noaction</code> option. </p>

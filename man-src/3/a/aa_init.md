@@ -1,4 +1,5 @@
 ---
+
 title: "aa_init(3)"
 name: "aa_init"
 section: "3"
@@ -9,7 +10,6 @@ description: "aa_init – open the output display for AA-lib."
 
 <h2>NAME</h2>
 <p> aa_init &#8211; open the output display for AA-lib.</p>
-<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> aa_context *aa_init<br />
  (<br />
@@ -25,7 +25,6 @@ description: "aa_init – open the output display for AA-lib."
 <dd> Hardware parameters you want. Use aa_defparams for default values.</dd>
 <dt><code>const void *driverdata</code></dt>
 <dd> This pointer is passed dirrectly to driver used to specify additional driver dependent parameters.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This is the most primitive AA-lib initialization function. Allows better control over the process than the easier to use aa_autoinit function. </p>
 <p> Every AA-lib program ought to have call to aa_parseoptions before first call to aa_init.</p>
 <h2>RETURNS</h2>

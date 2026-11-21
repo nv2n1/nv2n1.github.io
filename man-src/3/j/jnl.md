@@ -1,4 +1,5 @@
 ---
+
 title: "jnl(3)"
 name: "jnl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-jnl/"
 description: "j0, j0f, j0l, j1, j1f, j1l, jn, jnf, jnl – Bessel functions of the first kind"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double j0(double x);
@@ -35,7 +35,6 @@ long double jnl(int n, long double x);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;(_ISOC99_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>j0</code>() and <code>j1</code>() functions return Bessel functions of <i>x</i> of the first kind of orders 0 and 1, respectively. The <code>jn</code>() function returns the Bessel function of <i>x</i> of the first kind of order <i>n</i>. </p>
 <p> The <code>j0f</code>(), <code>j1f</code>(), and <code>jnf</code>(), functions are versions that take and return <i>float</i> values. The <code>j0l</code>(), <code>j1l</code>(), and <code>jnl</code>() functions are versions that take and return <i>long double</i> values.</p>
 <h2>RETURN VALUE</h2>

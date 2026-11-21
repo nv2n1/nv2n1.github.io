@@ -1,4 +1,5 @@
 ---
+
 title: "reordercap(1)"
 name: "reordercap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-reordercap/"
 description: "reordercap – Reorder input file by timestamp into output file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>reordercap</code> [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] &lt;<i>infile</i>&gt; &lt;<i>outfile</i>&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Reordercap</code> is a program that reads an input capture file and rewrites the frames to an output capture file, but with the frames sorted by increasing timestamp. </p>
 <p> This functionality may be useful when capture files have been created by combining frames from more than one well-synchronised source, but the frames have not been combined in strict time order. </p>
 <p> <code>Reordercap</code> writes the output capture file in the same format as the input capture file. </p>

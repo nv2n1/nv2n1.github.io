@@ -1,4 +1,5 @@
 ---
+
 title: "jstest(1)"
 name: "jstest"
 section: "1"
@@ -9,9 +10,7 @@ description: "jstest – joystick test program"
 
 <h2>NAME</h2>
 <p> jstest &#8211; joystick test program</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jstest</code> [<code>&#8211;normal</code>] [<code>&#8211;old</code>] [<code>&#8211;event</code>] [<code>&#8211;nonblock</code>] [<code>&#8211;select</code>] &lt;<i>device-name</i>&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>jstest</code> can be used to test all the features of the Linux joystick API, including non-blocking and <code><a href="/docs/linux/man/2-select/">select</a></code>(2) access, as well as version 0.x compatibility mode. </p>
 <p> It is also intended to serve as an example implementation for those who wish to learn how to write their own joystick using applications.</p>
 <h2>OPTIONS</h2>

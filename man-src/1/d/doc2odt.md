@@ -1,4 +1,5 @@
 ---
+
 title: "doc2odt(1)"
 name: "doc2odt"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-doc2odt/"
 description: "unoconv – convert any document from and to any LibreOffice supported format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>unoconv</i> [options] file [file2 ..] </p>
 <p> <i>unoconv</i> &#8211;listener [&#8211;server SRV] [&#8211;port PRT] [&#8211;connection CON]</p>
-<h2>DESCRIPTION</h2>
 <p> unoconv is a command line utility that can convert any file format that LibreOffice can import, to any file format that LibreOffice is capable of exporting. </p>
 <p> unoconv uses the LibreOffice&#8217;s UNO bindings for non-interactive conversion of documents and therefore needs an LibreOffice instance to communicate with. Therefore if it cannot find one, it will start its own instance for temporary usage. If desired, one can start a &#8220;listener&#8221; instance to use for subsequent connections or even for remote connections.</p>
 <h2>OPTIONS</h2>

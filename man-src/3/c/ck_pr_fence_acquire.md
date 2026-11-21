@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_acquire(3)"
 name: "ck_pr_fence_acquire"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_pr_fence_acquire – enforce acquire semantics"
 <p> <code>ck_pr_fence_acquire</code> &#8211; enforce acquire semantics</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_acquire void</p>
-<h2>DESCRIPTION</h2>
 <p> This function enforces the partial ordering of any loads prior to invocation with respect to any following stores, loads and atomic operations. It is typically used to implement critical sections.</p>
 <h2>RETURN VALUES</h2>
 <p> This function has no return value.</p>

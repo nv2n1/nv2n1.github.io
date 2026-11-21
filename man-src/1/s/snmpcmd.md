@@ -1,4 +1,5 @@
 ---
+
 title: "snmpcmd(1)"
 name: "snmpcmd"
 section: "1"
@@ -9,9 +10,7 @@ description: "snmpcmd – options and behaviour common to most of the Net-SNMP c
 
 <h2>NAME</h2>
 <p> snmpcmd &#8211; options and behaviour common to most of the Net-SNMP command-line tools</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmpcmd</code> [OPTIONS] AGENT [PARAMETERS]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page describes the common options for the SNMP commands: <code>snmpbulkget</code>, <code>snmpbulkwalk</code>, <code>snmpdelta</code>, <code>snmpget</code>, <code>snmpgetnext</code>, <code>snmpnetstat</code>, <code>snmpset</code>, <code>snmpstatus</code>, <code>snmptable</code>, <code>snmptest</code>, <code>snmptrap</code>, <code> snmpdf,</code> snmpusm ,<code> snmpwalk .</code> The command line applications use the SNMP protocol to communicate with an SNMP capable network entity, an agent. Individual applications typically (but not necessarily) take additional parameters that are given after the agent specification. These parameters are documented in the manual pages for each application.</p>
 <h2>COMMAND-LINE CONFIG OPTIONS</h2>
 <p> In addition to the options described in this manual page, all of the tokens described in the <i>snmp.conf</i> and other .conf manual pages can be used on the command line of Net-SNMP applications as well by prefixing them with &quot;&#8211;&quot;. EG, specifying <i>&#8211;dontLoadHostConfig=true</i> on the command line will turn of loading of the host specific configuration files. </p>

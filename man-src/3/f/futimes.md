@@ -1,4 +1,5 @@
 ---
+
 title: "futimes(3)"
 name: "futimes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-futimes/"
 description: "futimes, lutimes – change file timestamps"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/time.h&gt;
 int futimes(int fd, const struct timeval tv[2]);
@@ -19,7 +19,6 @@ int lutimes(const char *filename, const struct timeval tv[2]);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> <code>futimes</code>() changes the access and modification times of a file in the same way as <code><a href="/docs/linux/man/2-utimes/">utimes</a></code>(2), with the difference that the file whose timestamps are to be changed is specified via a file descriptor, <i>fd</i>, rather than via a pathname. </p>
 <p> <code>lutimes</code>() changes the access and modification times of a file in the same way as <code><a href="/docs/linux/man/2-utimes/">utimes</a></code>(2), with the difference that if <i>filename</i> refers to a symbolic link, then the link is not dereferenced: instead, the timestamps of the symbolic link are changed.</p>
 <h2>RETURN VALUE</h2>

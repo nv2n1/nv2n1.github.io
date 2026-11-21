@@ -1,4 +1,5 @@
 ---
+
 title: "sha1sum(1)"
 name: "sha1sum"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sha1sum/"
 description: "sha1sum – compute and check SHA1 message digest"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sha1sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print or check SHA1 (160-bit) checksums. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>

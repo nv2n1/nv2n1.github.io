@@ -1,4 +1,5 @@
 ---
+
 title: "saidar(1)"
 name: "saidar"
 section: "1"
@@ -9,9 +10,7 @@ description: "saidar – a curses-based tool for viewing system statistics"
 
 <h2>NAME</h2>
 <p> saidar &#8211; a curses-based tool for viewing system statistics</p>
-<h2>SYNOPSIS</h2>
 <p> <code>saidar</code> [-d <i>delay</i>] [-c] [-v] [-h]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>saidar</code> is a curses-based tool for viewing the system statistics available through libstatgrab. Statistics include CPU, processes, load, memory, swap, network I/O, disk I/O, and file system information.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported.</p>

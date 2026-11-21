@@ -1,4 +1,5 @@
 ---
+
 title: "globus_i_gass_copy_state_target_s(3)"
 name: "globus_i_gass_copy_state_target_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_i_gass_copy_state_target_s –"
 ---
 
 <p> GASS copy target (e.g.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> char * <code>url</code> </p>
 <p> globus_gass_copy_attr_t * <code>attr</code> </p>

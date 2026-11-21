@@ -1,4 +1,5 @@
 ---
+
 title: "pcmanfm-qt(1)"
 name: "pcmanfm-qt"
 section: "1"
@@ -9,9 +10,7 @@ description: "PCManFM-Qt – A lightweight Qt-based file manager for X Window."
 
 <h2>NAME</h2>
 <p> PCManFM-Qt &#8211; A lightweight Qt-based file manager for X Window.</p>
-<h2>SYNOPSIS</h2>
 <p> pcmanfm-qt [OPTION&#8230;] [FILE1, FILE2,&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> PCMan File Manager Qt (<code>PCManFM-Qt</code>) is an extremely fast, lightweight, yet feature-rich file manager with tabbed browsing. It is the default file manager for the lightweight desktop environment <code>LXQt</code>.</p>
 <h2>OPTIONS</h2>
 <h3>Help Options:</h3>

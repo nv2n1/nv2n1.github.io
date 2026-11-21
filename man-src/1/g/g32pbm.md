@@ -1,4 +1,5 @@
 ---
+
 title: "g32pbm(1)"
 name: "g32pbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-g32pbm/"
 description: "g32pbm – convert a Group 3 fax file into a portable bitmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>g32pbm</code> [<code>-reversebits</code>] [<code>-stretch</code>] [<i>g3file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Group 3 fax file (raw or digifax) as input. If no filename is given, stdin is used. Produces a portable bitmap as output.</p>
 <h2>OPTIONS</h2>
 <dl>

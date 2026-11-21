@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl(1)"
 name: "keyctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-keyctl/"
 description: "keyctl – key management facility control"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>keyctl</code> &#8211;version<br />
  <code>keyctl</code> show [-x] [&lt;keyring&gt;]<br />
  <code>keyctl</code> add &lt;type&gt; &lt;desc&gt; &lt;data&gt; &lt;keyring&gt;<br />
@@ -57,7 +57,6 @@ description: "keyctl – key management facility control"
  <code>keyctl</code> pkey_decrypt &lt;key&gt; &lt;pass&gt; &lt;encfile&gt; [k=v]* &gt;&lt;datafile&gt;<br />
  <code>keyctl</code> pkey_sign &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; [k=v]* &gt;&lt;sigfile&gt;<br />
  <code>keyctl</code> pkey_decrypt &lt;key&gt; &lt;pass&gt; &lt;datafile&gt; &lt;sigfile&gt; [k=v]*</p>
-<h2>DESCRIPTION</h2>
 <p> This program is used to control the key management facility in various ways using a variety of subcommands.</p>
 <h2>KEY IDENTIFIERS</h2>
 <p> The key identifiers passed to or returned from keyctl are, in general, positive integers. There are, however, some special values with special meanings that can be passed as arguments:</p>

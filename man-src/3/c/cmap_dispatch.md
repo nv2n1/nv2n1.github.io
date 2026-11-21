@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_dispatch(3)"
 name: "cmap_dispatch"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-cmap_dispatch/"
 description: "cmap_dispatch – Dispatches callbacks from the CMAP service"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_dispatch (cmap_handle_t </code><i>handle</i><code>, cs_dispatch_flags_t </code><i>dispatch_types</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmap_dispatch</code> function is used to dispatch configuration changes. </p>
 <p> Each application may have several connections to the CMAP API. Each application uses the <i>handle</i> argument to uniquely identify the connection. </p>
 <p> The <i>dispatch_types</i> argument is used to identify the type of dispatch to execute. The possible types are CS_DISPATCH_ONE, CS_DISPATCH_ALL and CS_DISPATCH_BLOCKING. </p>

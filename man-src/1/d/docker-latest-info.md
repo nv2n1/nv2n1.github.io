@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-info(1)"
 name: "docker-latest-info"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-info/"
 description: "docker-info – Display system-wide information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker info</code> [<code>&#8211;help</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> This command displays system wide information regarding the Docker installation. Information displayed includes the kernel version, number of containers and images. The number of images shown is the number of unique images. The same image tagged under different names is counted only once. </p>
 <p> Depending on the storage driver in use, additional information can be shown, such as pool name, data file, metadata file, data space used, total data space, metadata space used, and total metadata space. </p>
 <p> The data file is where the images are stored and the metadata file is where the meta data regarding those images are stored. When run for the first time Docker allocates a certain amount of data space and meta data space from the space available on the volume where /var/lib/docker is mounted. </p>

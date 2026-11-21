@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-config(1)"
 name: "llvm-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-config/"
 description: "llvm-config – Print LLVM compilation options"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-config</code> <i>option</i> [<i>components</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-config</code> makes it easier to build applications that use <font SIZE="-1">LLVM</font>. It can print the compiler flags, linker flags and object libraries needed to link against <font SIZE="-1">LLVM</font>.</p>
 <h2>EXAMPLES</h2>
 <p> To link against the <font SIZE="-1">JIT:</font> </p>

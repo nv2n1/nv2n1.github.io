@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_vredirect(3)"
 name: "cgi_vredirect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_vredirect/"
 description: "cgi_vredirect – send an HTTP 302 redirect response"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -19,7 +19,6 @@ void cgi_vredirect(CGI *cgi, int uri, const char *fmt, va_list ap);
  uri &#8211; whether the URL is full (1) or path only (0)<br />
  fmt &#8211; printf format string<br />
  ap &#8211; stdarg va_list </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_vredirect is mostly used internally, but can be used if you need a varargs version of the function. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

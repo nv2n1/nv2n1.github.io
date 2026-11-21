@@ -1,4 +1,5 @@
 ---
+
 title: "fc-pattern(1)"
 name: "fc-pattern"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fc-pattern/"
 description: "fc-pattern – parse and show pattern"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fc-pattern</code> [ <code>-cdVh</code> ] [ <code>&#8211;config</code> ] [ <code>&#8211;default</code> ] [ <code> [ -f </code><i>format</i><code> ] [ &#8211;format </code><i>format</i><code> ] </code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>
 <p>&nbsp;[&nbsp;<i>pattern</i><code>&nbsp;<wbr>&nbsp;[&nbsp;</code><i>element</i><i>&#8230;</i><code>&nbsp;]&nbsp;<wbr>&nbsp;</code>&nbsp;]&nbsp;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fc-pattern</code> parses <i>pattern</i> (empty pattern by default) and shows the parsed result. If <code>&#8211;config</code> is given, config substitution is performed on the pattern before being displayed. If <code>&#8211;default</code> is given, default substitution is performed on the pattern before being displayed. </p>
 <p> If any elements are specified, only those are printed.</p>
 <h2>OPTIONS</h2>

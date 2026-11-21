@@ -1,4 +1,5 @@
 ---
+
 title: "sstebz(3)"
 name: "sstebz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sstebz/"
 description: "sstebz.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sstebz</code> (RANGE, ORDER, N, VL, VU, IL, IU, ABSTOL, D, E, M, NSPLIT, W, IBLOCK, ISPLIT, WORK, IWORK, INFO)<br />
  <i></i><code>SSTEBZ</code></p>

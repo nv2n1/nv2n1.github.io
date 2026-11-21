@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_policies_set(3)"
 name: "gnutls_x509_policies_set"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_policies_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_policies_set &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_policies_set(gnutls_x509_policies_t </code><i>policies</i><code>, const struct gnutls_x509_policy_st * </code><i>policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_policies_set – API function"
 <dd> An initialized policies structure</dd>
 <dt>const struct gnutls_x509_policy_st * policy</dt>
 <dd> Contains the policy to set</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will store the specified policy in the provided <i>policies</i> structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0), otherwise a negative error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xine(1)"
 name: "xine"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xine/"
 description: "xine – a free video player"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xine</code> <i>[options] [MRL] &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>xine</code> audio/video player. </p>
 <p> <code>xine</code> plays MPEG system (audio and video) streams, mpeg elementary streams (e.g. .mp3 or .mpv files), mpeg transport streams, ogg files, avi files, asf files, quicktime files, (S)VCDs and DVDs and many more.</p>
 <h2>OPTIONS</h2>

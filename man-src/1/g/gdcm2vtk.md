@@ -1,4 +1,5 @@
 ---
+
 title: "gdcm2vtk(1)"
 name: "gdcm2vtk"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcm2vtk – .TH \"gdcm2vtk\" 1 \"Fri Oct 29 2010\" \"Version 2.0.
 <pre>
 gdcm2vtk [options] file-in file-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcm2vtk</code> takes as input any file supported by VTK (including DICOM file) and will generate as output a DICOM file.</p>
 <h2>PARAMETERS</h2>
 <pre>

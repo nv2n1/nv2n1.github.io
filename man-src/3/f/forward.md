@@ -1,4 +1,5 @@
 ---
+
 title: "forward(3)"
 name: "forward"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-forward/"
 description: "ql/instruments/forward.hpp – Base forward class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt;<br />
  #include &lt;ql/position.hpp&gt;<br />
  #include &lt;ql/time/calendar.hpp&gt;<br />

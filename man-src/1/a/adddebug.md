@@ -1,4 +1,5 @@
 ---
+
 title: "adddebug(1)"
 name: "adddebug"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-adddebug/"
 description: "adddebug – Modifies Makefile(s) to add debug info"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>adddebug</code> [<code>-k</code>] [<code>-r</code>] [<code>-n</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>adddebug</code></p>
 <dd>modifies the Makefile in the current directory (and optionally in its subdirectories) to add debug info (<code>-g3</code>). It will also remove optimisations (<code>-O[1-9]</code>). </dd>
 <p> This utility is part of the KDE Software Development Kit.</p>

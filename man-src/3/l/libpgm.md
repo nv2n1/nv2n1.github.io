@@ -1,4 +1,5 @@
 ---
+
 title: "libpgm(3)"
 name: "libpgm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpgm/"
 description: "libpgm – libnetpbm functions to read and write PGM image files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/pgm.h&gt;</code> </p>
 <p> <code>void pgm_init( </code> <code>int *</code><i>argcP</i><code>,</code> <code>char *</code><i>argv</i><code>[]</code> <code>);</code> </p>
 <p> <code>gray ** pgm_allocarray(</code> <code>int </code><i>cols</i><code>,</code> <code>int </code><i>rows</i><code> );</code> </p>
@@ -31,7 +31,6 @@ description: "libpgm – libnetpbm functions to read and write PGM image files"
 <p> <code>#define PGM_TYPE PGM_FORMAT</code> </p>
 <p> <code>#define </code> </p>
 <p> <code>PGM_FORMAT_TYPE(</code><i>format</i><code>)</code> <code>&#8230;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> These library functions are part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <h3>TYPES AND CONSTANTS</h3>
 <p> Each <code>gray</code> should contain only the values between <code>0</code> and <code>PGM_OVERALLMAXVAL</code>. </p>

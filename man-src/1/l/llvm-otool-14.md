@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-otool-14(1)"
 name: "llvm-otool-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-otool-14/"
 description: "llvm-otool – Mach-O dumping tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-otool</code> [<i>option…</i>] <i>[file…]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-otool</code> is a tool for dumping Mach-O files. </p>
 <p> It attempts to be command-line-compatible and output-compatible with macOS’s <code>otool</code>.</p>
 <h2>OPTIONS</h2>

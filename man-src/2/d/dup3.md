@@ -1,4 +1,5 @@
 ---
+
 title: "dup3(2)"
 name: "dup3"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-dup3/"
 description: "dup, dup2, dup3 – duplicate a file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int dup(int oldfd);
@@ -17,7 +17,6 @@ int dup2(int oldfd, int newfd);
 #include &lt;unistd.h&gt;
 int dup3(int oldfd, int newfd, int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dup</code>() system call creates a copy of the file descriptor <i>oldfd</i>, using the lowest-numbered unused file descriptor for the new descriptor. </p>
 <p> After a successful return, the old and new file descriptors may be used interchangeably. They refer to the same open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) and thus share file offset and file status flags; for example, if the file offset is modified by using <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2) on one of the file descriptors, the offset is also changed for the other. </p>
 <p> The two file descriptors do not share file descriptor flags (the close-on-exec flag). The close-on-exec flag (<code>FD_CLOEXEC</code>; see <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2)) for the duplicate descriptor is off.</p>

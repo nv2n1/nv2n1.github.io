@@ -1,4 +1,5 @@
 ---
+
 title: "dormr2(3)"
 name: "dormr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dormr2/"
 description: "dormr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dormr2</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>DORMR2</code> multiplies a general matrix by the orthogonal matrix from a RQ factorization determined by sgerqf (unblocked algorithm).</p>

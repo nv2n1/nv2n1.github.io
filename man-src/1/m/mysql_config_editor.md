@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_config_editor(1)"
 name: "mysql_config_editor"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysql_config_editor/"
 description: "mysql_config_editor – configure authentication information for connecting to MySQL server"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_config_editor </code><i>options command</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>mysql_config_editor</code> utility enables you to store authentication credentials in an obfuscated login path file named .mylogin.cnf. The file location is the %APPDATA%\MySQL directory on Windows and the current user&#8217;s home directory on non-Windows systems. The file can be read later by MySQL client programs to obtain authentication credentials for connecting to MySQL Server. </dd>
 <p> The unobfuscated format of the .mylogin.cnf login path file consists of option groups, similar to other option files. Each option group in .mylogin.cnf is called a &#8220;login path,&#8221; which is a group that permits only certain options: <code>host</code>, <code>user</code>, <code>password</code>, <code>port</code> and <code>socket</code>. Think of a login path option group as a set of options that specify which MySQL server to connect to and which account to authenticate as. Here is an unobfuscated example: </p>
 <dl>

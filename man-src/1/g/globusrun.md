@@ -1,4 +1,5 @@
 ---
+
 title: "globusrun(1)"
 name: "globusrun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globusrun/"
 description: "globusrun – Execute and manage jobs via GRAM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>globusrun</code> [-help | -usage | -version -versions ] </p>
 <p> <code>globusrun</code> [-p | -parse] { -f <i>FILENAME</i> | -file <i>FILENAME</i> | <i>RSL</i> } </p>
 <p> <code>globusrun</code> [OPTIONS] {-r <i>RESOURCE</i>| -resource <i>RESOURCE</i>} { -a | -authenticate-only } </p>
@@ -16,7 +16,6 @@ description: "globusrun – Execute and manage jobs via GRAM"
 <p> <code>globusrun</code> [OPTIONS] [ -full-proxy | -D ] { -y | -refresh-proxy } <i>JOBID</i> </p>
 <p> <code>globusrun</code> [OPTIONS] -status <i>JOBID</i> </p>
 <p> <code>globusrun</code> [OPTIONS] { -r <i>RESOURCE</i> | -resource <i>RESOURCE</i> } { -f <i>FILENAME</i> | -file <i>FILENAME</i> | <i>RSL</i>}</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>globusrun</code> program for submits and manages jobs run on a local or remote job host. The jobs are controlled by the <code>globus-job-manager</code> program which interfaces with a local resource manager that schedules and executes the job. </p>
 <p> The <code>globusrun</code> program can be run in a number of different modes chosen by command-line options. </p>
 <p> When <i>-help</i>, <i>-usage</i>, <i>-version</i>, or <i>-versions</i> command-line options are used, <code>globusrun</code> will print out diagnostic information and then exit. </p>

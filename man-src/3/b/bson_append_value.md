@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_value(3)"
 name: "bson_append_value"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_value() – Appends a new field to bson by determining
 
 <h2>NAME</h2>
 <p> bson_append_value() &#8211; Appends a new field to bson by determining the boxed type in value. This is useful if you want to copy fields between documents but do not know the field type until runtime.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_value(bson_t *bson,
                        const char *key,
@@ -29,7 +29,6 @@ bool bson_append_value(bson_t *bson,
 <dl>
 <dt><code>value</code></dt>
 <dd> A <code>bson_value_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Appends a new field to <code>bson</code> by determining the boxed type in <code>value</code> \&amp;. This is useful if you want to copy fields between documents but do not know the field type until runtime. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

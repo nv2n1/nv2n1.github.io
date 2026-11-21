@@ -1,4 +1,5 @@
 ---
+
 title: "dlagts(3)"
 name: "dlagts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlagts/"
 description: "dlagts.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlagts</code> (JOB, N, A, B, C, D, IN, Y, TOL, INFO)<br />
  <i></i><code>DLAGTS</code> solves the system of equations (T-λI)x = y or (T-λI)Tx = y,where T is a general tridiagonal matrix and λ a scalar, using the LU factorization computed by slagtf.</p>

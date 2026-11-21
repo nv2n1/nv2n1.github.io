@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-krb5-config(1)"
 name: "heimdal-krb5-config"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-heimdal-krb5-config/"
 description: "krb5-config – give information on how to link code against Heimdal libraries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5-config</code> &#8211; give information on how to link code against Heimdal libraries </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>-prefix </code>[= <i>dir</i> ] ] [-<code>-exec-prefix </code>[= <i>dir</i> ] ] [-<code>-libs</code> ] [-<code>-cflags</code> ] [<i>libraries</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> tells the application programmer what special flags to use to compile and link programs against the libraries installed by Heimdal. </p>
 <p> Options supported:</p>
 <dl>

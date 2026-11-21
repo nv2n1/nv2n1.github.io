@@ -1,4 +1,5 @@
 ---
+
 title: "cgebd2(3)"
 name: "cgebd2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgebd2/"
 description: "cgebd2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br />
  <i></i><code>CGEBD2</code> reduces a general matrix to bidiagonal form using an unblocked algorithm.</p>

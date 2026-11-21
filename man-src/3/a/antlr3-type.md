@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-type(3)"
 name: "antlr3-type"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_BASE_RECOGNIZER_struct –"
 ---
 
 <p> Base tracking context structure for all types of recognizers.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_BOOLEAN</code>(* <code>alreadyParsedRule</code> )(struct <code>ANTLR3_BASE_RECOGNIZER_struct</code> *<code>recognizer</code>, <code>ANTLR3_MARKER</code> ruleIndex)<br />

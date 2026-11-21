@@ -1,4 +1,5 @@
 ---
+
 title: "factors_(3)"
 name: "factors_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-factors_/"
 description: "QuantLib::LfmCovarianceParameterization – Libor market model parameterization"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmcovarparam.hpp&gt; </p>
 <p> Inherited by <code>LfmCovarianceProxy</code>, and <code>LfmHullWhiteParameterization</code>. </p>
 <h3>Public Member Functions</h3>

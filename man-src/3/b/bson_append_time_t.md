@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_time_t(3)"
 name: "bson_append_time_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_time_t() – The bson_append_time_t() function is a he
 
 <h2>NAME</h2>
 <p> bson_append_time_t() &#8211; The bson_append_time_t() function is a helper that takes a time_t instead of milliseconds since the UNIX epoch.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_time_t(bson_t *bson,
                         const char *key,
@@ -29,7 +29,6 @@ bool bson_append_time_t(bson_t *bson,
 <dl>
 <dt><code>value</code></dt>
 <dd> A time_t.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_time_t/">bson_append_time_t</a>(3)</code> function is a helper that takes a <code>time_t</code> instead of milliseconds since the UNIX epoch. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

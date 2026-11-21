@@ -1,4 +1,5 @@
 ---
+
 title: "mlock(2)"
 name: "mlock"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mlock/"
 description: "mlock, mlock2, munlock, mlockall, munlockall – lock and unlock memory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/mman.h&gt;
 int mlock(const void *addr, size_t len);
@@ -16,7 +16,6 @@ int munlock(const void *addr, size_t len);
 int mlockall(int flags);
 int munlockall(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mlock</code>(), <code>mlock2</code>(), and <code>mlockall</code>() lock part or all of the calling process&#8217;s virtual address space into RAM, preventing that memory from being paged to the swap area. </p>
 <p> <code>munlock</code>() and <code>munlockall</code>() perform the converse operation, unlocking part or all of the calling process&#8217;s virtual address space, so that pages in the specified virtual address range may once more to be swapped out if required by the kernel memory manager. </p>
 <p> Memory locking and unlocking are performed in units of whole pages.</p>

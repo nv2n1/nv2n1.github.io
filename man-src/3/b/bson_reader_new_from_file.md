@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_new_from_file(3)"
 name: "bson_reader_new_from_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_reader_new_from_file() – Creates a new bson_reader_t using 
 
 <h2>NAME</h2>
 <p> bson_reader_new_from_file() &#8211; Creates a new bson_reader_t using the file denoted by filename.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bson_reader_t *
 bson_reader_new_from_file(const char *path,
@@ -22,7 +22,6 @@ bson_reader_new_from_file(const char *path,
 <dl>
 <dt><code>error</code></dt>
 <dd> A <code>bson_error_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Creates a new <code>bson_reader_t</code> using the file denoted by <code>filename</code> \&amp;. </p>
 <h2>ERRORS</h2>
 <p> Errors are propagated via the <code>error</code> parameter. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gxine(1)"
 name: "gxine"
 section: "1"
@@ -9,9 +10,7 @@ description: "gxine – a GTK/GNOME frontend to the xine video player"
 
 <h2>NAME</h2>
 <p> gxine &#8211; a GTK/GNOME frontend to the xine video player </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gxine</code> [<i>options</i>] [<i>files or MRLs</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gxine</code> plays MPEG system (audio and video) streams, MPEG elementary streams (e.g. .mp3, .mpa or .mpv files), MPEG transport streams, AVI files, ASF files, Quicktime files, (S)VCDs and DVDs &#8211; anything which xine-lib can handle. </p>
 <p> Typical usage looks like</p>
 <dl>

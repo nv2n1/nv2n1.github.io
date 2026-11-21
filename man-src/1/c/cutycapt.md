@@ -1,4 +1,5 @@
 ---
+
 title: "cutycapt(1)"
 name: "cutycapt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cutycapt/"
 description: "cutycapt – utility to capture WebKit’s rendering of a web page"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cutycapt</code> [<i>options</i>] <code>&#8211;url=</code><i><a rel="nofollow" href="http://www.someurl.com">http://www.someurl.com</a></i> <code>&#8211;out=</code><i>output.png</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>cutycapt</code> command. </p>
 <p> <code>CutyCapt</code> is a small cross-platform command-line utility to capture WebKit&#8217;s rendering of a web page into a variety of vector and bitmap formats, including SVG, PDF, PS, PNG, JPEG, TIFF, GIF, and BMP.</p>
 <h2>OPTIONS</h2>

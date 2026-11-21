@@ -1,4 +1,5 @@
 ---
+
 title: "ibdmtr(1)"
 name: "ibdmtr"
 section: "1"
@@ -12,7 +13,6 @@ description: "ibdmtr – Fabric Trace Route"
 <h2>SYNOPSYS</h2>
 <p> ibdmtr [-v][-h] {-c &lt;cbaling file&gt;|-t &lt;topo file&gt;} -s &lt;sm node name&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>-p&nbsp;<wbr>&lt;sm port num&gt;&nbsp;<wbr>-d&nbsp;<wbr>&lt;comma-sep-dr-path&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> This utility parses a cabling list or topology file describing the systems connections that make a fabric. Then it start following the direct route provided and print out the systems and nodes on the route.</p>
 <h2>ARGUMENTS Required arguments description.</h2>
 <dl>

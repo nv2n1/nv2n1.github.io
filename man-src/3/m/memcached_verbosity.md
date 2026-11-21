@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_verbosity(3)"
 name: "memcached_verbosity"
 section: "3"
@@ -10,13 +11,11 @@ description: "memcached_verbosity – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memcached_verbosity &#8211; libmemcached Documentation </p>
 <p> Modifiy verbosity of servers</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_return_t memcached_verbosity(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, uint32_t<i>&nbsp;<wbr>verbosity</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>memcached_verbosity()</i> modifies the &quot;verbosity&quot; of the <a href="/docs/linux/man/1-memcached/">memcached</a>(1) servers referenced in the <code>memcached_st</code> parameter.</p>
 <h2>RETURN</h2>
 <p> A value of type <code>memcached_return_t</code> is returned. </p>

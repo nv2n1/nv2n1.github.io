@@ -1,4 +1,5 @@
 ---
+
 title: "fgetspent_r(3)"
 name: "fgetspent_r"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fgetspent_r/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+getspnam, getspnam_r, getspent, getspent_r, setspent, endspent, fgetspent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf - get shadow password file entry 
 
- getspnam, getspnam_r, getspent, getspent_r, setspent, endspent, fgetspent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf - get shadow password file entry 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 /* General shadow password file API */
 #include &lt;shadow.h&gt;
 struct spwd *getspnam(const char *name);
@@ -45,9 +41,7 @@ int sgetspent_r(const char *s, struct spwd *spbuf,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier: 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE
 
-<h2>DESCRIPTION</h2>
-
- Long ago it was considered safe to have encrypted passwords openly visible in the password file. When computers got faster and people got more security-conscious, this was no longer acceptable. Julianne Frances Haugh implemented the shadow password suite that keeps the encrypted passwords in the shadow password database (e.g., the local shadow password file <i>/etc/shadow</i>, NIS, and LDAP), readable only by root. 
+Long ago it was considered safe to have encrypted passwords openly visible in the password file. When computers got faster and people got more security-conscious, this was no longer acceptable. Julianne Frances Haugh implemented the shadow password suite that keeps the encrypted passwords in the shadow password database (e.g., the local shadow password file <i>/etc/shadow</i>, NIS, and LDAP), readable only by root. 
 
  The functions described below resemble those for the traditional password database (e.g., see <b><a HREF="/docs/linux/man/3-getpwnam/">getpwnam</a></b>(3) and <b><a HREF="/docs/linux/man/3-getpwent/">getpwent</a></b>(3)). 
 

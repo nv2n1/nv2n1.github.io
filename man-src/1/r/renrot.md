@@ -1,4 +1,5 @@
 ---
+
 title: "renrot(1)"
 name: "renrot"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-renrot/"
 description: "renrot – rename and rotate images according EXIF data"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> renrot [<font SIZE="-1">OPTIONS</font>] [[<code>&#8212;</code>] <font SIZE="-1">FILE1 FILE2 &#8230;</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Renrot</code> is intended to work with a set of files containing <font SIZE="-1">EXIF</font> data and can do two things to them &#8212; rename and rotate. A set of files can be given either explicitly or using the <code>&#8211;extension</code> option, which select the files with the given suffix. <code>Renrot</code> operates on files in current working directory, unless given the <code>&#8211;work-directory</code> option, which changes this default. </p>
 <p> <code>Renrot</code> renames input files using a flexible name template (which, among others, uses DateTimeOriginal and FileModifyDate <font SIZE="-1">EXIF</font> tags, if they exist, otherwise names the file according to the current timestamp). Further, <code>renrot</code> can aggregate files according to the shooting time period or to a given template. </p>
 <p> Additionally, it rotates files and their thumbnails, as per Orientation <font SIZE="-1">EXIF</font> tag. If that tag is absent, the program allows to set rotation parameters using <code>&#8211;rotate-angle</code> and <code>&#8211;rotate-thumb</code> command line options. This is currently implemented only for <font SIZE="-1">JPEG</font> format. </p>

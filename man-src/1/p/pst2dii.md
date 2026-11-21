@@ -1,4 +1,5 @@
 ---
+
 title: "pst2dii(1)"
 name: "pst2dii"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pst2dii/"
 description: "pst2dii – extract email messages from a MS Outlook .pst file in DII load format"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pst2dii</code> [<code>-B&nbsp;<wbr></code><i>bates-prefix</i>] [<code>-O&nbsp;<wbr></code><i>dii-output-file</i>] [<code>-V</code>] [<code>-b&nbsp;<wbr></code><i>bates-number</i>] [<code>-c&nbsp;<wbr></code><i>bates-color</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] -f&nbsp;<wbr><i>ttf-font-file</i> [<code>-h</code>] [<code>-o&nbsp;<wbr></code><i>output-directory</i>] pstfilename</dt></dl>
 <h2>OPTIONS</h2>
@@ -46,7 +46,6 @@ description: "pst2dii – extract email messages from a MS Outlook .pst file in 
 <dl>
 <dt>
 </dt><dd> Specifies the output directory. The directory must already exist.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>pst2dii</code> reads the email messages from a MS Outlook .pst file and produces a DII load file that may be used to import message summaries into a Summation DII system. The DII output file contains references to the image and attachment files in the output directory.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2008 by 510 Software Group &lt;carl [at] five-ten-sg.com&gt; </p>

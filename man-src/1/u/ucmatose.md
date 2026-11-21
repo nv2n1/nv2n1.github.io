@@ -1,4 +1,5 @@
 ---
+
 title: "ucmatose(1)"
 name: "ucmatose"
 section: "1"
@@ -10,11 +11,7 @@ url: "/docs/linux/man/1-ucmatose/"
 
  ucmatose - RDMA CM connection and simple ping-pong test.
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 ucmatose[-s server_address][-b bind_address]
         [-f address_format][-P port_space]
         [-c connections][-C message_count][-S message_size] ucmatose -
@@ -23,9 +20,7 @@ ucmatose[-s server_address][-b bind_address]
                     [-c connections][-C message_count][-S message_size][-t tos]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Establishes a set of reliable RDMA connections between two nodes using the librdmacm, optionally transfers data between the nodes, then disconnects.
+Establishes a set of reliable RDMA connections between two nodes using the librdmacm, optionally transfers data between the nodes, then disconnects.
 
 <h2>OPTIONS</h2>
 

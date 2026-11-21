@@ -1,4 +1,5 @@
 ---
+
 title: "mcrypt(1)"
 name: "mcrypt"
 section: "1"
@@ -6,14 +7,13 @@ letter: "m"
 url: "/docs/linux/man/1-mcrypt/"
 description: "mcrypt, mdecrypt – encrypt or decrypt files"
 ---
+
 <h2>NAME</h2>
 <p> mcrypt, mdecrypt - encrypt or decrypt files  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mcrypt</code> [<code> -dLFubhvrzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 ...</code>] [<code>-f keyfile</code>] [ <i>filename ...</i> ] <br />
  </p>
 <p> <code>mdecrypt</code> [<code> -LFusbhvzp </code>] [<code>-a algorithm</code>] [<code>-c config_file</code>] [<code>-m mode</code>] [<code>-s keysize</code>] [<code>-o keymode</code>] [<code>-k key1 key2 ...</code>] [<code>-f keyfile</code>] [ <i>filename ...</i> ] <br />
   </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Mcrypt</i> is a simple crypting program, a replacement for the old unix <i>crypt</i>(1). When encrypting or decrypting a file, a new file is created with the extension <code>.nc</code> and mode 0600. The new file keeps the modification date of the original. The original file may be deleted by specifying the -u parameter. If no files are specified, the standard input is encrypted to the standard output. </p>
 <p> <i>Mcrypt</i> uses all the symmetric algorithms included in libmcrypt. </p>
 <h2>HINTS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "cdrdao(1)"
 name: "cdrdao"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cdrdao/"
 description: "cdrdao – reads and writes CDs in disc-at-once mode"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cdrdao</code> {<code>show-toc|toc-info|toc-size|read-toc|read-cd|read-cddb|show-data|read-test|disk-info|discid|msinfo|drive-info|unlock|scanbus|simulate|write|copy|blank</code>} [<code>&#8211;device</code> <i>device</i>] [<code>&#8211;source-device</code> <i>device</i>] [<code>&#8211;driver</code> <i>driver-id</i>] [<code>&#8211;source-driver</code> <i>driver-id</i>] [<code>&#8211;simulate</code>] [<code>&#8211;speed</code> <i>writing-speed</i>] [<code>&#8211;blank-mode</code> <i>mode]</i> [<code>&#8211;datafile</code> <i>file</i>] [<code>&#8211;read-raw</code>] [<code>&#8211;read-subchan</code> [<code>&#8211;no-mode2-mixed</code>] <i>mode</i>] [<code>&#8211;tao-source</code>] [<code>&#8211;tao-source-adjust</code> <i>link-blocks</i>] [<code>&#8211;fast-toc</code>] [<code>&#8211;buffers</code> <i>buffer-count</i>] [<code>&#8211;multi</code>] [<code>&#8211;overburn</code>] [<code>&#8211;eject</code>] [<code>&#8211;swap</code>] [<code>&#8211;session</code>] [<code>&#8211;force</code>] [<code>&#8211;reload</code>] [<code>&#8211;keepimage</code>] [<code>&#8211;on-the-fly</code>] [<code>&#8211;paranoia-mode</code> <i>mode</i>] [<code>&#8211;with-cddb</code>] [<code>&#8211;cddb-servers</code> <i>server-list</i>] [<code>&#8211;cddb-timeout</code> <i>timeout</i>] [<code>&#8211;cddb-directory</code> <i>directory</i>] [<code>&#8211;tmpdir</code> <i>directory</i>] [<code>&#8211;keep</code>] [<code>&#8211;save</code>] [<code>-n</code>] [<code>-v</code> <i>verbose-level</i>] toc-file</p>
-<h2>DESCRIPTION</h2>
 <p> <i>cdrdao</i> creates audio and data CD-Rs in disk-at-once (DAO) mode driven by a description file called <i>toc-file.</i> In DAO mode it is possible to create non standard track pre-gaps that have other lengths than 2 seconds and contain nonzero audio data. This is for example useful to divide live recordings into tracks where 2 second gaps would be kind of irritating. </p>
 <p> Instead of a <i>toc-file</i> a cue file (used by a famous DOS/Windows mastering tool) may be used. See the CUE FILES section for more details. </p>
 <h2>COMMANDS</h2>

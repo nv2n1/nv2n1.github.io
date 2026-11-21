@@ -1,4 +1,5 @@
 ---
+
 title: "obminimize(1)"
 name: "obminimize"
 section: "1"
@@ -9,9 +10,7 @@ description: "obminimize – optimize the geometry, minimize the energy for a mo
 
 <h2>NAME</h2>
 <p> <code>obminimize</code> &#8211; optimize the geometry, minimize the energy for a molecule</p>
-<h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> The obminimize tool can be used to minimize the energy for molecules inside (multi-)molecule files (e.g., MOL2, etc.)</p>
 <h2>OPTIONS</h2>
 <p> If no filename is given, obminimize will give all options including the available forcefields.</p>

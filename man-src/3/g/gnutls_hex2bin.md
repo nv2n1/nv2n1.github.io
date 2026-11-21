@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hex2bin(3)"
 name: "gnutls_hex2bin"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_hex2bin – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hex2bin &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_hex2bin(const char * </code><i>hex_data</i><code>, size_t </code><i>hex_size</i><code>, void * </code><i>bin_data</i><code>, size_t * </code><i>bin_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_hex2bin – API function"
 <dd> output array with binary data</dd>
 <dt>size_t * bin_size</dt>
 <dd> when calling should hold maximum size of <i>bin_data</i> , on return will hold actual length of <i>bin_data</i> .</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Convert a buffer with hex data to binary data.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, otherwise a negative error code.</p>

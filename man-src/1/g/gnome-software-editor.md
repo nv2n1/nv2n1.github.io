@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-software-editor(1)"
 name: "gnome-software-editor"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gnome-software-editor/"
 description: "gnome-software-editor – Design the featured banners for GNOME Software"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-software-editor</code> [OPTION&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>gnome-software-editor</code> command. </dd>
 <p> <code>gnome-software-editor</code> allows you to design featured banners for the GNOME Software overview page.</p>
 <h2>OPTIONS</h2>

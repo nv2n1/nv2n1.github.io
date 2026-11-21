@@ -1,4 +1,5 @@
 ---
+
 title: "ngettext(1)"
 name: "ngettext"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ngettext/"
 description: "ngettext – translate message and choose plural form"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ngettext</code> [<i>,OPTION/</i>] [<i>,TEXTDOMAIN/</i>] <i>,MSGID MSGID-PLURAL COUNT/</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ngettext</code> program translates a natural language message into the user&#8217;s language, by looking up the translation in a message catalog, and chooses the appropriate plural form, which depends on the number <i>COUNT</i> and the language of the message catalog where the translation was found. </p>
 <p> Display native language translation of a textual message whose grammatical form depends on a number.</p>
 <dl>

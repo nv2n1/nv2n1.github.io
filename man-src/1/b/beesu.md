@@ -1,4 +1,5 @@
 ---
+
 title: "beesu(1)"
 name: "beesu"
 section: "1"
@@ -9,9 +10,7 @@ description: "beesu – A wrapper for \"su\" that provides a graphical interface
 
 <h2>NAME</h2>
 <p> beesu &#8211; A wrapper for &quot;su&quot; that provides a graphical interface in Fedora.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>beesu [-P] [-v] [-l] [-m] [-f] [-s] [-c]</code> <i>COMMAND</i> <i>ARGs</i> <code>&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>beesu</code> is a wrapper around <code><a href="/docs/linux/man/1-su/">su</a></code>(1) and works with <code><a href="/docs/linux/man/8-consolehelper/">consolehelper</a></code>(8) in Fedora to provide a graphical interface like gksu. </p>
 <p> <code>beesu</code> is dedicated to all the friends of honey bees!</p>
 <h2>OPTIONS</h2>

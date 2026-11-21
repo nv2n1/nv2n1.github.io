@@ -1,4 +1,5 @@
 ---
+
 title: "sspgvx(3)"
 name: "sspgvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspgvx/"
 description: "sspgvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>SSPGST</code></p>

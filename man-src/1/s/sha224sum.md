@@ -1,4 +1,5 @@
 ---
+
 title: "sha224sum(1)"
 name: "sha224sum"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sha224sum/"
 description: "sha224sum – compute and check SHA224 message digest"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sha224sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print or check SHA224 (224-bit) checksums. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>

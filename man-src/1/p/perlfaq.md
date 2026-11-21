@@ -1,4 +1,5 @@
 ---
+
 title: "perlfaq(1)"
 name: "perlfaq"
 section: "1"
@@ -9,7 +10,6 @@ description: "perlfaq – Frequently asked questions about Perl"
 
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
-<h2>DESCRIPTION</h2>
 <p> The perlfaq comprises several documents that answer the most commonly asked questions about Perl and Perl programming. It&#8217;s divided by topic into nine major sections outlined in this document.</p>
 <h3>Where to find the perlfaq</h3>
 <p> The perlfaq is an evolving document. Read the latest version at &lt;<a rel="nofollow" href="http://learn.perl.org/faq/">http://learn.perl.org/faq/</a>&gt;. It is also included in the standard Perl distribution.</p>

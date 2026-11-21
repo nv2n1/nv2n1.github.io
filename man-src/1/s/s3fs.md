@@ -1,4 +1,5 @@
 ---
+
 title: "s3fs(1)"
 name: "s3fs"
 section: "1"
@@ -9,9 +10,7 @@ description: "s3fs – The S3 FUSE filesystem disk management utility"
 
 <h2>NAME</h2>
 <p> s3fs &#8211; The S3 FUSE filesystem disk management utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>s3fs </code> <code>[&lt;-C&gt; [-h] | [-cdrf &lt;bucket&gt;] [-p &lt;access_key&gt;] [-s secret_access_key] ] | [ -o &lt;options&gt; &lt;mountpoint&gt;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>s3fs </i> is a FUSE filesystem application backed by amazon web services simple storage service (s3, <a rel="nofollow" href="http://aws.amazon.com">http://aws.amazon.com</a>). s3fs can operate in a command mode or a mount mode. </p>
 <p> In mount mode, s3fs will mount an amazon s3 bucket (that has been properly formatted) as a local file system. </p>
 <p> In command mode, s3fs is capable of manipulating amazon s3 buckets in various usefull ways</p>

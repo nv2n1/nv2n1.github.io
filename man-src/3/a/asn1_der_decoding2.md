@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_der_decoding2(3)"
 name: "asn1_der_decoding2"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_der_decoding2 – API function"
 
 <h2>NAME</h2>
 <p> asn1_der_decoding2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_der_decoding2(asn1_node * </code><i>element</i><code>, const void * </code><i>ider</i><code>, int * </code><i>max_ider_len</i><code>, unsigned int </code><i>flags</i><code>, char * </code><i>errorDescription</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "asn1_der_decoding2 – API function"
 <dd> flags controlling the behaviour of the function.</dd>
 <dt>char * errorDescription</dt>
 <dd> null-terminated string contains details when an error occurred.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Fill the structure * <i>element</i> with values of a DER encoding string. The structure must just be created with function <code>asn1_create_element()</code>. </p>
 <p> If <code>ASN1_DECODE_FLAG_ALLOW_PADDING</code> flag is set then the function will ignore padding after the decoded DER data. Upon a successful return the value of * <i>max_ider_len</i> will be set to the number of bytes decoded. </p>
 <p> If <code>ASN1_DECODE_FLAG_STRICT_DER</code> flag is set then the function will not decode any BER-encoded elements.</p>

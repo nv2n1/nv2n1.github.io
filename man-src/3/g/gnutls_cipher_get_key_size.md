@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_cipher_get_key_size(3)"
 name: "gnutls_cipher_get_key_size"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_cipher_get_key_size – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_get_key_size &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>size_t gnutls_cipher_get_key_size(gnutls_cipher_algorithm_t </code><i>algorithm</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_cipher_algorithm_t algorithm</dt>
 <dd> is an encryption algorithm</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get key size for cipher.</p>
 <h2>RETURNS</h2>
 <p> length (in bytes) of the given cipher&#8217;s key size, or 0 if the given cipher is invalid.</p>

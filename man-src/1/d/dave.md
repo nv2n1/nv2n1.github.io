@@ -1,4 +1,5 @@
 ---
+
 title: "dave(1)"
 name: "dave"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dave/"
 description: "dave – DAV Explorer"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     dave [OPTIONS] URL
 </pre>
@@ -19,7 +19,6 @@ description: "dave – DAV Explorer"
 </pre>
 <p> Use <tt>&quot;dave -h&quot;</tt> to get help on options. </p>
 <p> Use <tt>&quot;perldoc dave&quot;</tt> for the whole manpage.</p>
-<h2>DESCRIPTION</h2>
 <p> dave is a powerful command-line program for interacting with WebDAV-enabled webservers. With dave you can:</p>
 <dl>
 <dt>&bull;</dt>

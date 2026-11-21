@@ -1,4 +1,5 @@
 ---
+
 title: "docker-checkpoint-ls(1)"
 name: "docker-checkpoint-ls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-checkpoint-ls/"
 description: "docker-checkpoint-ls – List checkpoints for a container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker checkpoint ls [OPTIONS] CONTAINER</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List checkpoints for a container </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;checkpoint-dir</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Use a custom checkpoint storage directory</p>

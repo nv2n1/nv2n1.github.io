@@ -1,4 +1,5 @@
 ---
+
 title: "unzipsfx(1)"
 name: "unzipsfx"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-unzipsfx/"
 description: "unzipsfx – self-extracting stub for prepending to ZIP archives"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>&lt;name of unzipsfx+archive combo&gt;</code> [<code>-cfptuz</code>[<code>ajnoqsCLV$</code>]] [<i>file(s)</i>&nbsp;&#8230; [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>unzipsfx</i> is a modified version of <i><a href="/docs/linux/man/1-unzip/">unzip</a></i>(1) designed to be prepended to existing ZIP archives in order to form self-extracting archives. Instead of taking its first non-flag argument to be the zipfile(s) to be extracted, <i>unzipsfx</i> seeks itself under the name by which it was invoked and tests or extracts the contents of the appended archive. Because the executable stub adds bulk to the archive (the whole purpose of which is to be as small as possible), a number of the less-vital capabilities in regular <i>unzip</i> have been removed. Among these are the usage (or help) screen, the listing and diagnostic functions (<code>-l</code> and <code>-v</code>), the ability to decompress older compression formats (the &#8220;reduce,&#8221; &#8220;shrink&#8221; and &#8220;implode&#8221; methods). The ability to extract to a directory other than the current one can be selected as a compile-time option, which is now enabled by default since UnZipSFX version 5.5. Similarly, decryption is supported as a compile-time option but should be avoided unless the attached archive contains encrypted files. Starting with release 5.5, another compile-time option adds a simple &#8220;run command after extraction&#8221; feature. This feature is currently incompatible with the &#8220;extract to different directory&#8221; feature and remains disabled by default. </p>
 <p> <code>Note that self-extracting archives made with</code> <i>unzipsfx</i> <code>are no more (or less) portable across different operating systems than is the</code> <i>unzip</i> <code>executable itself.</code> In general a self-extracting archive made on a particular Unix system, for example, will only self-extract under the same flavor of Unix. Regular <i>unzip</i> may still be used to extract the embedded archive as with any normal zipfile, although it will generate a harmless warning about extra bytes at the beginning of the zipfile. <i>Despite this</i>, however, the self-extracting archive is technically <i>not</i> a valid ZIP archive, and PKUNZIP may be unable to test or extract it. This limitation is due to the simplistic manner in which the archive is created; the internal directory structure is not updated to reflect the extra bytes prepended to the original zipfile.</p>
 <h2>ARGUMENTS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3commontreenodestream(3)"
 name: "antlr3commontreenodestream"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3commontreenodestream.h –"
 ---
 
 <p> Definition of the ANTLR3 common tree node stream.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3commontreeadaptor.h">antlr3commontreeadaptor.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt;<br />

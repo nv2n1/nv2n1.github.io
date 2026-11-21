@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_pin_function(3)"
 name: "gnutls_certificate_set_pin_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_pin_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_pin_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_set_pin_function(gnutls_certificate_credentials_t </code><i>cred</i><code>, gnutls_pin_callback_t </code><i>fn</i><code>, void * </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_certificate_set_pin_function – API function"
 <dd> A PIN callback</dd>
 <dt>void * userdata</dt>
 <dd> Data to be passed in the callback</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set a callback function to be used when required to access a protected object. This function overrides any other global PIN functions. </p>
 <p> Note that this function must be called right after initialization to have effect.</p>
 <h2>SINCE</h2>

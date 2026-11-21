@@ -1,4 +1,5 @@
 ---
+
 title: "euform-list-stacks(1)"
 name: "euform-list-stacks"
 section: "1"
@@ -9,12 +10,10 @@ description: "euform-list-stacks – List all running stacks"
 
 <h2>NAME</h2>
 <p> euform-list-stacks &#8211; List all running stacks</p>
-<h2>SYNOPSIS</h2>
 <p> euform-list-stacks [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> List all running stacks</p>
 <h3>optional arguments:</h3>
 <dl>

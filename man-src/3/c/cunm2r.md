@@ -1,4 +1,5 @@
 ---
+
 title: "cunm2r(3)"
 name: "cunm2r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunm2r/"
 description: "cunm2r.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunm2r</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>CUNM2R</code> multiplies a general matrix by the unitary matrix from a QR factorization determined by cgeqrf (unblocked algorithm).</p>

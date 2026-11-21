@@ -1,4 +1,5 @@
 ---
+
 title: "gpinyin(1)"
 name: "gpinyin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gpinyin/"
 description: "gpinyin – use Hanyu Pinyin Chinese in roff"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [<i>input-file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gpinyin</code> is a preprocessor for <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) that facilitates use of the Hanyu Pinyin <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7) files. Pinyin is a method for writing the Chinese language with the Latin alphabet. The Chinese language consists of more than four hundred syllables, each with one of five different tones. In Pinyin, a syllable is written in the Latin alphabet and a numeric tone indicator can be appended to each syllable. </p>
 <p> Each <i>input-file</i> is a file name or the hyphen-minus character &#8220;-&#8221; to indicate that standard input should be read. As usual, the argument &#8220;&#8211;&#8221; can be used in order to force interpretation of all remaining arguments as file names, even if an <i>input-file</i> argument begins with the hyphen-minus character.</p>
 <h3>Pinyin Sections</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "capletvariancecurve(3)"
 name: "capletvariancecurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-capletvariancecurve/"
 description: "ql/termstructures/volatility/optionlet/capletvariancecurve.hpp – caplet variance curve"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/equityfx/blackvariancecurve.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/flatsmilesection.hpp&gt; </p>

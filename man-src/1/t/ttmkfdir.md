@@ -1,4 +1,5 @@
 ---
+
 title: "ttmkfdir(1)"
 name: "ttmkfdir"
 section: "1"
@@ -9,9 +10,7 @@ description: "ttmkfdir – Utility to create fonts.scale files for truetype font
 
 <h2>NAME</h2>
 <p> <code>ttmkfdir</code>&nbsp;<wbr>&#8211; Utility to create fonts.scale files for truetype fonts</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ttmkfdir</code> [OPTION]</p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>Originally written by Joerg Pommnitz, ttmkfdir is a tool to create valid and complete fonts.scale file from TrueType fonts. It is very useful when you plan to use a TrueType enabled font server that is based on the X11R6 sample implementation&nbsp;<wbr>(xfsft for instance). Great care has been taken to correctly identify the encodings that a given TrueType font supports. </p>
 <p> The ttmkfdir comes with Red Hat Linux has experienced quite some modifications or improvements, include: </p>
 <p> &#8211; migration to FreeType 2 library</p>

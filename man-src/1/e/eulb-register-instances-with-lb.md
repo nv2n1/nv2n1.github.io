@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-register-instances-with-lb(1)"
 name: "eulb-register-instances-with-lb"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-register-instances-with-lb – Add one or more instances to a
 
 <h2>NAME</h2>
 <p> eulb-register-instances-with-lb &#8211; Add one or more instances to a load balancer</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-register-instances-with-lb <code>&#8211;instances</code> INSTANCE1,INSTANCE2,&#8230;</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Add one or more instances to a load balancer</p>
 <h3>positional arguments:</h3>
 <dl>

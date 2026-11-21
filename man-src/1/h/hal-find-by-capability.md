@@ -1,4 +1,5 @@
 ---
+
 title: "hal-find-by-capability(1)"
 name: "hal-find-by-capability"
 section: "1"
@@ -9,9 +10,7 @@ description: "hal-find-by-capability – find device objects by capability match
 
 <h2>NAME</h2>
 <p> hal-find-by-capability &#8211; find device objects by capability matching</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hal-find-by-capability</code> [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>hal-get-capability</i> finds device object in the <code>HAL </code> device database by looking at device capabilities. For more information about both the big picture and specific <code>HAL</code> properties, refer to the <i>HAL spec</i> which can be found in <i>/usr/share/doc/hal-0.5.13/spec/hal-spec.html</i> depending on the distribution. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

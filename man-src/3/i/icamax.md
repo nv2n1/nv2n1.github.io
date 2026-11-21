@@ -1,4 +1,5 @@
 ---
+
 title: "icamax(3)"
 name: "icamax"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-icamax/"
 description: "icamax.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>icamax</code> (N, CX, INCX)<br />
  <i></i><code>ICAMAX</code></p>

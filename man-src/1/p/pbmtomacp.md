@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtomacp(1)"
 name: "pbmtomacp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pbmtomacp/"
 description: "pbmtomacp – convert a portable bitmap into a MacPaint file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmtomacp</code> [<code>-l</code> <i>left</i>] [<code>-r</code> <i>right</i>] [<code>-b</code> <i>bottom</i>] [<code>-t</code> <i>top</i>] [<i>pbmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as input. If no input-file is given, standard input is assumed. Produces a MacPaint file as output. </p>
 <p> The generated file is only the data fork of a picture. You will need a program such as <i>mcvert</i> to generate a Macbinary or a BinHex file that contains the necessary information to identify the file as a PNTG file to MacOS.</p>
 <h2>OPTIONS</h2>

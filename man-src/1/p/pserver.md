@@ -1,4 +1,5 @@
 ---
+
 title: "pserver(1)"
 name: "pserver"
 section: "1"
@@ -9,9 +10,7 @@ description: "pserver – NetWare print server"
 
 <h2>NAME</h2>
 <p> pserver &#8211; NetWare print server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pserver</code> [ <code>-S</code> <i>server</i> ] [ <code>-h</code> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-q</code> <i>queue name</i> ] [ <code>-c</code> <i>command</i> ] [ <code>-j</code> <i>job type</i> ] [ <code>-t</code> <i>timeout</i> ] [ <code>-d</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pserver</code> is a program that connects to print queues on NetWare servers and feeds incoming print jobs to the Linux printing system. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code></p>

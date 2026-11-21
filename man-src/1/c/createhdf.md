@@ -1,4 +1,5 @@
 ---
+
 title: "createhdf(1)"
 name: "createhdf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-createhdf/"
 description: "createhdf – Create a blank IDE hard disk image in .hdf format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>createhdf</code> [ -c ] [ -s ] <i>cylinders heads sectors file</i></p>
-<h2>DESCRIPTION</h2>
 <p> createhdf creates a blank image of an IDE hard disk in .hdf format for use with Sinclair ZX Spectrum emulators.</p>
 <h2>OPTIONS</h2>
 <dl>

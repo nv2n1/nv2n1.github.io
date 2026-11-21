@@ -1,4 +1,5 @@
 ---
+
 title: "assogiate(1)"
 name: "assogiate"
 section: "1"
@@ -9,9 +10,7 @@ description: "assoGiate – modify the detection and display of file types"
 
 <h2>NAME</h2>
 <p> assoGiate &#8211; modify the detection and display of file types</p>
-<h2>SYNOPSIS</h2>
 <p> <code>assogiate [</code><i>options</i><code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> File Types Editor (assoGiate) is an editor of the file types database for GNOME. It allows users to modify the detection and display of file types. </p>
 <p> For full documentation, see the File Types Editor Manual in GNOME help.</p>
 <h2>OPTIONS</h2>

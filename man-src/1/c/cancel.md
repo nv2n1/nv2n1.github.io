@@ -1,4 +1,5 @@
 ---
+
 title: "cancel(1)"
 name: "cancel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cancel/"
 description: "cancel – cancel jobs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cancel</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-a</code> ] [ <code>-h</code> <i>hostname[:port]</i> ] [ <code>-u</code> <i>username</i> ] [ <code>-x</code> ] [ <i>id</i> ] [ <i>destination</i> ] [ <i>destination-id</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cancel</code> command cancels print jobs. If no <i>destination</i> or <i>id</i> is specified, the currently printing job on the default destination is canceled.</p>
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <code>cancel</code>:</p>

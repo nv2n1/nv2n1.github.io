@@ -1,4 +1,5 @@
 ---
+
 title: "euca-attach-network-interface(1)"
 name: "euca-attach-network-interface"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-attach-network-interface – Attach a VPC network interface t
 
 <h2>NAME</h2>
 <p> euca-attach-network-interface &#8211; Attach a VPC network interface to an instance</p>
-<h2>SYNOPSIS</h2>
 <p> euca-attach-network-interface <code>-i</code> INSTANCE <code>-d</code> INT [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INTERFACE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Attach a VPC network interface to an instance</p>
 <h3>positional arguments:</h3>
 <dl>

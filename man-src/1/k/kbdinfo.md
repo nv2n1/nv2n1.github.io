@@ -1,4 +1,5 @@
 ---
+
 title: "kbdinfo(1)"
 name: "kbdinfo"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-kbdinfo/"
 description: "kbdinfo – obtain information about the status of a console"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>kbdinfo</code> [-C <i>DEVICE</i>] getmode [text|graphics] </p>
 <p> <code>kbdinfo</code> [-C <i>DEVICE</i>] gkbmode [raw|xlate|mediumraw|unicode] </p>
 <p> <code>kbdinfo</code> [-C <i>DEVICE</i>] gkbmeta [metabit|escprefix] </p>
 <p> <code>kbdinfo</code> [-C <i>DEVICE</i>] gkbled [scrolllock|numlock|capslock]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>kbdinfo</code> is an interface to KDGETMODE, GKBMODE, GKBMETA and GKBLED ioctls. Its primary use case is to query the status of the given <i>CONSOLE</i> (or the currently active one, if no -C option is present) from a shell script. </p>
 <p> If the final value argument is not specified, <code>kbdinfo</code> will print the result of the desired ioctl to the standard output. Otherwise, the given value is compared to the actual result, and the utility will exit with a status code of 0 for a match, 1 otherwise. No text is printed for this style of invocation.</p>
 <h2>SEE ALSO</h2>

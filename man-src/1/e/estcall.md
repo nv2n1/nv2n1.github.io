@@ -1,4 +1,5 @@
 ---
+
 title: "estcall(1)"
 name: "estcall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-estcall/"
 description: "estcall – command line interface of the node API"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>estcall put [-proxy host port] [-tout num] [-auth user pass] nurl [file]</code> </p>
 <p> <code>estcall out [-proxy host port] [-tout num] [-auth user pass] nurl expr</code> </p>
 <p> <code>estcall edit [-proxy host port] [-tout num] [-auth user pass] nurl expr name [value]</code> </p>
@@ -21,7 +21,6 @@ description: "estcall – command line interface of the node API"
 <p> <code>estcall setuser [-proxy host port] [-tout num] [-auth user pass] nurl name mode</code> </p>
 <p> <code>estcall setlink [-proxy host port] [-tout num] [-auth user pass] nurl url label credit</code> </p>
 <p> <code>estcall raw [-proxy host port] [-tout num] [-auth user pass] [-np] [-eh expr] url [file]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>estcall</code> is an aggregation of sub commands. The name of a sub command is specified by the first argument. Other arguments are parsed according to each sub command. The argument <i>nurl</i> specifies the URL of a node. The option <code>-proxy</code> specifies the host name and the port number of a proxy server. The option <code>-tout</code> specifies timeout in seconds. The option <code>-auth</code> specifies the user name and the password of authentication information.</p>
 <dl>
 <dt><code>estcall put [-proxy host port] [-tout num] [-auth user pass] nurl [file]</code></dt>

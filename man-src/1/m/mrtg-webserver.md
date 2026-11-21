@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-webserver(1)"
 name: "mrtg-webserver"
 section: "1"
@@ -6,14 +7,9 @@ letter: "m"
 url: "/docs/linux/man/1-mrtg-webserver/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+mrtg-webserver - hints for web server configuration 
 
- mrtg-webserver - hints for web server configuration 
-
-<h2>SYNOPSIS</h2>
-
- If you want people to actually see the results of your network monitoring efforts you will need a webserver. 
+If you want people to actually see the results of your network monitoring efforts you will need a webserver. 
 
  This document lists some configuration hints for webservers. Contributions welcome.
 

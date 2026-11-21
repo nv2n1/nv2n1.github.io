@@ -1,4 +1,5 @@
 ---
+
 title: "funparamget(3)"
 name: "funparamget"
 section: "3"
@@ -9,7 +10,6 @@ description: "FunParamGet – get a Funtools param value"
 
 <h2>NAME</h2>
 <p> <code>FunParamGet &#8211; get a Funtools param value</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
@@ -17,7 +17,6 @@ description: "FunParamGet – get a Funtools param value"
 <p>int FunParamGeti(Fun fun, char *name, int n, int defval, int *got)</p>
 <p>double FunParamGetd(Fun fun, char *name, int n, double defval, int *got)</p>
 <p>char *FunParamGets(Fun fun, char *name, int n, char *defval, int *got)</p>
-<h2>DESCRIPTION</h2>
 <p> The four routines FunParamGetb(), FunParamGeti(), FunParamGetd(), and FunParamGets(), return the value of a <font SIZE="-1">FITS</font> header parameter as a boolean, int, double, and string, respectively. The string returned by FunParamGets() is a malloc&#8217;ed copy of the header value and should be freed when no longer needed. </p>
 <p> The first argument is the Fun handle associated with the <font SIZE="-1">FITS</font> header being accessed. Normally, the header is associated with the <font SIZE="-1">FITS</font> extension that you opened with FunOpen(). However, you can use <i>FunInfoPut()</i> to specify access of the primary header. In particular, if you set the <font SIZE="-1">FUN_PRIMARYHEADER</font> parameter to 1, then the primary header is used for all parameter access until the value is reset to 0. For example: </p>
 <p>int val;<br />

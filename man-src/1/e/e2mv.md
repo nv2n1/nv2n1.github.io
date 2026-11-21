@@ -1,4 +1,5 @@
 ---
+
 title: "e2mv(1)"
 name: "e2mv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-e2mv/"
 description: "e2mv – moves or renames files on an ext2fs filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>e2mv</code> [<i>options</i>]<i> files&#8230; dest</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>e2mv</code> command moves or renames files on an ext2fs filesystem. The source files must be explicitly stated. It does not use regular expressions, yet.</p>
 <h2>OPTIONS</h2>
 <dl>

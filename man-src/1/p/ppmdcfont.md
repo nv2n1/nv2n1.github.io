@@ -1,4 +1,5 @@
 ---
+
 title: "ppmdcfont(1)"
 name: "ppmdcfont"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmdcfont/"
 description: "ppmdcfont – Turn a Ppmdfont file into C source for a builtin font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmdcfont</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> (There are no arguments or options) </p>
 <p> <code>ppmdcfont</code> creates a C source file that you can compile into a built-in font for use with the Netpbm PPM drawing facilities. It reads a Ppmdfont file on Standard Input and writes the C source code to Standard Output. </p>

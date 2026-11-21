@@ -1,4 +1,5 @@
 ---
+
 title: "gendesc(1)"
 name: "gendesc"
 section: "1"
@@ -9,14 +10,12 @@ description: "gendesc – Generate a test case description file"
 
 <h2>NAME</h2>
 <p> gendesc &#8211; Generate a test case description file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gendesc</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>]</p>
 <dl>
 <dt>
 </dt><dd>
  [<code>-o</code>|<code>&#8211;output-filename</code> <i>filename</i>]<br />
  <i>inputfile</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Convert plain text test case descriptions into a format as understood by <code>genhtml</code>. <i>inputfile</i> needs to observe the following format: </p>
 <p> For each test case:</p>
 <dl>

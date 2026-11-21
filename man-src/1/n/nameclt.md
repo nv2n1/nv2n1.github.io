@@ -1,4 +1,5 @@
 ---
+
 title: "nameclt(1)"
 name: "nameclt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nameclt/"
 description: "nameclt – Naming Service client"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nameclt</code> [-ior &lt;object-reference&gt;] [-advanced] &lt;operation&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> The nameclt command invokes operations on the Naming Service. The allowed operations are:</p>
 <dl>
 <dl>

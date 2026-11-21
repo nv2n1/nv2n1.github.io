@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-import-commit(1)"
 name: "guilt-import-commit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-import-commit/"
 description: "guilt-import-commit – Import one or more commits as patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-import-commit</i> [&lt;hash&gt; | &lt;since&gt;..[&lt;until&gt;] | ..&lt;until&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> Import one or more commits as individual patches.</p>
 <h2>OPTIONS</h2>
 <p> &lt;hash&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "extract_a52(1)"
 name: "extract_a52"
 section: "1"
@@ -9,9 +10,7 @@ description: "extract_a52 – extract ATSC A/52 audio from a MPEG stream."
 
 <h2>NAME</h2>
 <p> extract_a52 &#8211; extract ATSC A/52 audio from a MPEG stream.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>extract_a52</code> [<i>-h</i>] [<i>-s [track]</i>] [<i>-t pid</i>] [<i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> `extract_a52&#8242; extracts ATSC A/52 audio from a MPEG stream. Input is from stdin if no file is given.</p>
 <dl>
 <dt><code>-h</code></dt>

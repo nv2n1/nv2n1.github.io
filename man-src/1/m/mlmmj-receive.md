@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-receive(1)"
 name: "mlmmj-receive"
 section: "1"
@@ -9,7 +10,6 @@ description: "mlmmj-receive – receive mails for an mlmmj managed mailinglist"
 
 <h2>NAME</h2>
 <p> mlmmj-receive &#8211; receive mails for an mlmmj managed mailinglist</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mlmmj-receive</code> <i>-L /path/to/listdir </i>[<i>-h</i>] [<i>-V</i>] [<i>-P</i>] [<i>-F</i>]</p>
 <dl>
 <dt> <code>-h</code>: This help</dt>
@@ -17,7 +17,6 @@ description: "mlmmj-receive – receive mails for an mlmmj managed mailinglist"
 <dt> <code>-L</code>: Full path to list directory</dt>
 <dt> <code>-P</code>: Don&#8217;t execute mlmmj-process (debugging only)</dt>
 <dt> <code>-V</code>: Print version</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The mlmmj-receive binary is the one specified in the mailserver configuration file (aliases file), which writes the mail to the &lt;listdir&gt;/incoming directory and invokes mlmmj-process unless the <code>-P</code> option is specified. On systems using mailservers supporting the <code>/etc/aliases</code> file, a line to activate an mlmmj managed mailinglist would look like this: </dd>
 <p> list: &quot;|/usr/bin/mlmmj-receive -L /var/spool/mlmmj/list/&quot; </p>
 <p> It&#8217;s very important to specify the full path to the binary, or the mailinglist will not function. </p>

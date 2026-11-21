@@ -1,4 +1,5 @@
 ---
+
 title: "docker-exec(1)"
 name: "docker-exec"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-exec/"
 description: "docker-exec – Run a command in a running container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker exec [OPTIONS] CONTAINER COMMAND [ARG&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker container exec. </p>
 <h2>OPTIONS</h2>
 <p> <code>-d</code>, <code>&#8211;detach</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Detached mode: run command in the background</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fdshoutengine(3)"
 name: "fdshoutengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdshoutengine/"
 description: "ql/pricingengines/vanilla/fdshoutengine.hpp – Finite-differences shout engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/fdstepconditionengine.hpp&gt;<br />
  #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt;<br />
  #include &lt;ql/instruments/vanillaoption.hpp&gt; </p>

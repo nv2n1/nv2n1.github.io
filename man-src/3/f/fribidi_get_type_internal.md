@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_type_internal(3)"
 name: "fribidi_get_type_internal"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_type_internal/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_get_type_internal - get character bidi type 
 
- fribidi_get_type_internal - get character bidi type 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiCharType fribidi_get_type_internal(FriBidiChar ch); </b>
 
@@ -23,9 +19,7 @@ url: "/docs/linux/man/3-fribidi_get_type_internal/"
 <dt><b>FriBidiChar ch</b>
 </dt><dd> Input character.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- Deprecated. Replaced by fribidi_get_bidi_type.
+Deprecated. Replaced by fribidi_get_bidi_type.
 
 <h2>RETURNS</h2>
 

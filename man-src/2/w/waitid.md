@@ -1,4 +1,5 @@
 ---
+
 title: "waitid(2)"
 name: "waitid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-waitid/"
 description: "wait, waitpid, waitid – wait for process to change state"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;sys/wait.h&gt;</code> </p>
 <p> <code>pid_t wait(int *</code><i>wstatus</i><code>);</code> </p>
@@ -25,7 +25,6 @@ description: "wait, waitpid, waitid – wait for process to change state"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> All of these system calls are used to wait for state changes in a child of the calling process, and obtain information about the child whose state has changed. A state change is considered to be: the child terminated; the child was stopped by a signal; or the child was resumed by a signal. In the case of a terminated child, performing a wait allows the system to release the resources associated with the child; if a wait is not performed, then the terminated child remains in a &quot;zombie&quot; state (see NOTES below). </p>
 <p> If a child has already changed state, then these calls return immediately. Otherwise, they block until either a child changes state or a signal handler interrupts the call (assuming that system calls are not automatically restarted using the <code>SA_RESTART</code> flag of <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)). In the remainder of this page, a child whose state has changed and which has not yet been waited upon by one of these system calls is termed <i>waitable</i>.</p>
 <h3>wait() and waitpid()</h3>

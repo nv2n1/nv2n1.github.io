@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountuploadpolicy(1)"
 name: "euare-accountuploadpolicy"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-accountuploadpolicy – [Eucalyptus cloud admin only] Attach
 
 <h2>NAME</h2>
 <p> euare-accountuploadpolicy &#8211; [Eucalyptus cloud admin only] Attach a policy to an account</p>
-<h2>SYNOPSIS</h2>
 <p> euare-accountuploadpolicy <code>-p</code> POLICY (<code>-o</code> POLICY_CONTENT | <code>-f</code> FILE)</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ACCOUNT</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> [Eucalyptus cloud admin only] Attach a policy to an account</p>
 <h3>positional arguments:</h3>
 <dl>

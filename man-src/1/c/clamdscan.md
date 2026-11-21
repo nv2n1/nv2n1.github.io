@@ -1,4 +1,5 @@
 ---
+
 title: "clamdscan(1)"
 name: "clamdscan"
 section: "1"
@@ -9,9 +10,7 @@ description: "clamdscan – scan files and directories for viruses using Clam An
 
 <h2>NAME</h2>
 <p> clamdscan &#8211; scan files and directories for viruses using Clam AntiVirus Daemon</p>
-<h2>SYNOPSIS</h2>
 <p> clamdscan [options] [file/directory]</p>
-<h2>DESCRIPTION</h2>
 <p> clamdscan is a clamd client which may be used as a clamscan replacement. It accepts all the options implemented in clamscan but most of them will be ignored because its scanning abilities only depend on clamd.</p>
 <h2>OPTIONS</h2>
 <dl>

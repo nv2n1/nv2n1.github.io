@@ -1,4 +1,5 @@
 ---
+
 title: "bximage(1)"
 name: "bximage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bximage/"
 description: "bximage – Interactive Disk Image Creator for Bochs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bximage</code> [<i>options</i>] [<i>filename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Bximage is an easy to use console based tool for creating disk images, particularly for use with Bochs. It is completely interactive if no command line arguments are used. It can be switched to a non-interactive mode if all required parameters are given in the command line.</p>
 <h2>OPTIONS</h2>
 <p> When you run bximage without one of the following options, it will appear in interactive mode and ask for all required parameters to create an image.</p>

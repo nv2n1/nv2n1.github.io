@@ -1,4 +1,5 @@
 ---
+
 title: "unicharset_extractor(1)"
 name: "unicharset_extractor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-unicharset_extractor/"
 description: "unicharset_extractor – extract unicharset from Tesseract boxfiles"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>unicharset_extractor</code> <i>[-D dir]</i> <i>FILE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Tesseract needs to know the set of possible characters it can output. To generate the unicharset data file, use the unicharset_extractor program on the same training pages bounding box files as used for clustering: </p>
 <dl>
 <dt>

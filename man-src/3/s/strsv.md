@@ -1,4 +1,5 @@
 ---
+
 title: "strsv(3)"
 name: "strsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-strsv/"
 description: "strsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>strsv</code> (UPLO, TRANS, DIAG, N, A, LDA, X, INCX)<br />
  <i></i><code>STRSV</code></p>

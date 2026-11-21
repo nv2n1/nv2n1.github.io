@@ -1,4 +1,5 @@
 ---
+
 title: "kpsexpand(1)"
 name: "kpsexpand"
 section: "1"
@@ -9,11 +10,9 @@ description: "kpsetool – script to make teTeX-style kpsetool, kpsexpand, and k
 
 <h2>NAME</h2>
 <p> kpsetool &#8211; script to make teTeX-style <code>kpsetool</code>, <code>kpsexpand</code>, and <code>kpsepath</code> available </p>
-<h2>SYNOPSIS</h2>
 <p> <code>kpsetool </code> [ <i>OPTIONS</i>&#8230; ] <i>COMMAND</i> </p>
 <p> <code>kpsexpand</code> [ <i>OPTIONS</i>&#8230; ] <i>STRING</i> </p>
 <p> <code>kpsepath</code> [ <i>OPTIONS</i>&#8230; ] <i>PATHTYPE</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>kpsetool</code> is a Bourne shell script that makes a teTeX-style <code>kpsetool</code>, <code>kpsexpand</code>, and <code>kpsepath</code> available. <code>kpsetool</code> uses <code>web2c</code>&#8216;s (new) <code>kpsexpand</code> binary, so the syntax for <code>kpsexpand</code> is incompatible with teTeX&#8217;s as of version 0.4. </p>
 <h2>OPTIONS</h2>
 <dl>

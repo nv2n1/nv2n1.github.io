@@ -1,4 +1,5 @@
 ---
+
 title: "npm-explore(1)"
 name: "npm-explore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-explore/"
 description: "npm-explore – Browse an installed package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-explore</code> &#8211; Browse an installed package </p>
 <h3>Synopsis</h3>
 <dl>

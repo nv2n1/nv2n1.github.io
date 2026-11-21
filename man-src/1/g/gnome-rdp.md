@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-rdp(1)"
 name: "gnome-rdp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gnome-rdp/"
 description: "gnome-rdp – Remote Desktop Client for the GNOME Desktop"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-rdp</code> [<code>&#8211;start-hidden</code>|<code>-m</code>] [<code>&#8211;version</code>|<code>-v</code>] [<code>&#8211;help</code>|<code>-h</code>] <i></i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gnome-rdp</code> command. </p>
 <p> <code>Gnome-RDP</code> is a front-end to rdesktop, tightvnc and ssh. Supported protocols: RDP, VNC and SSH. The above-mentioned applications are required for running. Gnome-RDP can be run with Mono runtime. </p>
 <h2>OPTIONS</h2>

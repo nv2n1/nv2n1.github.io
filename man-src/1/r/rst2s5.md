@@ -1,4 +1,5 @@
 ---
+
 title: "rst2s5(1)"
 name: "rst2s5"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rst2s5/"
 description: "rst2s5 – convert reST documents to S5 slides"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> rst2s5 [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
-<h2>DESCRIPTION</h2>
 <p> Generates S5 (X)HTML slideshow documents from standalone reStructuredText sources. Reads from &lt;source&gt; (default is stdin) and writes to &lt;destination&gt; (default is stdout). See &lt;<i><a rel="nofollow" href="http://docutils.sf.net/docs/user/config.html">http://docutils.sf.net/docs/user/config.html</a></i>&gt; for the full reference.</p>
 <h2>OPTIONS</h2>
 <h3>General Docutils Options</h3>

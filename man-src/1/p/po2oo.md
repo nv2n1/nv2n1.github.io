@@ -1,4 +1,5 @@
 ---
+
 title: "po2oo(1)"
 name: "po2oo"
 section: "1"
@@ -9,9 +10,7 @@ description: "po2oo – Convert Gettext PO localization files to an OpenOffice.o
 
 <h2>NAME</h2>
 <p> po2oo &#8211; Convert Gettext PO localization files to an OpenOffice.org (SDF) localization file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>po2oo </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-t|&#8211;template <i>TEMPLATE</i>] [-S|&#8211;timestamp] [-l|&#8211;language <i>LANG</i>] [&#8211;source-language <i>LANG</i>] [-T|&#8211;keeptimestamp] [&#8211;nonrecursiveoutput] [&#8211;nonrecursivetemplate] [&#8211;skipsource] [&#8211;filteraction <i>ACTION</i>] [&#8211;threshold <i>PERCENT</i>] [&#8211;fuzzy] [&#8211;nofuzzy] [&#8211;multifile <i>MULTIFILESTYLE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/oo2po.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/oo2po.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>

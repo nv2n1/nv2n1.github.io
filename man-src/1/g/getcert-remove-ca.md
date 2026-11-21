@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-remove-ca(1)"
 name: "getcert-remove-ca"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-remove-ca/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert remove-ca [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Remove a CA configuration from <i>certmonger</i>. Enrollment requests which reference the CA will behave as though they have no assigned CA. </p>
 <h2>OPTIONS</h2>
 <dl>

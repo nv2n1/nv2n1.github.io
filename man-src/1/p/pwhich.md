@@ -1,4 +1,5 @@
 ---
+
 title: "pwhich(1)"
 name: "pwhich"
 section: "1"
@@ -6,23 +7,16 @@ letter: "p"
 url: "/docs/linux/man/1-pwhich/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pwhich - Perl-only `which' 
 
- pwhich - Perl-only `which' 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
   $ pwhich perl
   $ pwhich -a perl          # print all matches
   $ pwhich perl perldoc ... # look for multiple programs
   $ pwhich -a perl perldoc ...
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- `pwhich' is a command-line utility program for finding paths to other programs based on the user's <tt>&quot;PATH&quot;</tt>. It is similar to the usualy Unix tool `which', and tries to emulate its functionality, but is written purely in Perl (uses the module <tt>&quot;File::Which&quot;</tt>), so is portable.
+`pwhich' is a command-line utility program for finding paths to other programs based on the user's <tt>&quot;PATH&quot;</tt>. It is similar to the usualy Unix tool `which', and tries to emulate its functionality, but is written purely in Perl (uses the module <tt>&quot;File::Which&quot;</tt>), so is portable.
 
 <h3>Calling syntax</h3>
 

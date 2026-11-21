@@ -1,4 +1,5 @@
 ---
+
 title: "dh_bugfiles(1)"
 name: "dh_bugfiles"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_bugfiles/"
 description: "dh_bugfiles – install bug reporting customization files into package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_bugfiles</code> [<code>-A</code>] [<i>debhelper options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_bugfiles</code> is a debhelper program that is responsible for installing bug reporting customization files (bug scripts and/or bug control files and/or presubj files) into package build directories.</p>
 <h2>FILES</h2>
 <dl>

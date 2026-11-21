@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_credentials_get(3)"
 name: "gnutls_credentials_get"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_credentials_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_credentials_get &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_credentials_get(gnutls_session_t </code><i>session</i><code>, gnutls_credentials_type_t </code><i>type</i><code>, void ** </code><i>cred</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_credentials_get – API function"
 <dd> is the type of the credentials to return</dd>
 <dt>void ** cred</dt>
 <dd> will contain the pointer to the credentials structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Returns the previously provided credentials structures. </p>
 <p> For <code>GNUTLS_CRD_ANON</code>, <i>cred</i> will be <code>gnutls_anon_client_credentials_t</code> in case of a client. In case of a server it should be <code>gnutls_anon_server_credentials_t</code>. </p>
 <p> For <code>GNUTLS_CRD_SRP</code>, <i>cred</i> will be <code>gnutls_srp_client_credentials_t</code> in case of a client, and <code>gnutls_srp_server_credentials_t</code>, in case of a server. </p>

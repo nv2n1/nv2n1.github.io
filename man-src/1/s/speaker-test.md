@@ -1,4 +1,5 @@
 ---
+
 title: "speaker-test(1)"
 name: "speaker-test"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-speaker-test/"
 description: "speaker-test – command-line speaker test tone generator for ALSA"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>speaker-test [-options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>speaker-test</code> generates a tone that can be used to test the speakers of a computer. </p>
 <p> <code>speaker-test</code> by default will test the <i>default</i> device. If you want to test another sound device you will have first to get a list of all of the sound cards in your system and the devices associated with those cards. Notice that there might be for example, one device for analog sound, one for digital sound and one for HDMI sound. To get the list of available cards and devices you can run <code>aplay -L</code>. </p>
 <pre>

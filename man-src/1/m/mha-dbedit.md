@@ -1,4 +1,5 @@
 ---
+
 title: "mha-dbedit(1)"
 name: "mha-dbedit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mha-dbedit/"
 description: "mha-dbedit – make database edits to a MHonArc archive"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mha-dbedit</code>&nbsp;<wbr>[<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mha-dbedit</code> is a utility program that is part of the <code>MHonArc</code> software package. The program allows archive database edits to be made without causing <font SIZE="-1">HTML</font> pages to be touched. </p>
 <p> The documentation for <code>MHonArc</code> is distributed in <font SIZE="-1">HTML</font> format. Due to its size and organization, it is not suited for manpage format. Consult your system administrator for where the documentation has been installed, or see &#8220;<font SIZE="-1">AVAILABILITY</font>&#8221; on where you can access the documentation on the web.</p>
 <h2>EXAMPLE</h2>

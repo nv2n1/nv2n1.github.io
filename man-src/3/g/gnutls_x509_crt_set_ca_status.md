@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_ca_status(3)"
 name: "gnutls_x509_crt_set_ca_status"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_ca_status – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_ca_status &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_ca_status(gnutls_x509_crt_t </code><i>crt</i><code>, unsigned int </code><i>ca</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_crt_set_ca_status – API function"
 <dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
 <dt>unsigned int ca</dt>
 <dd> <a href="/docs/linux/man/1-true/">true</a>(1) or false(0). Depending on the Certificate authority status.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the basicConstraints certificate extension. Use <code>gnutls_x509_crt_set_basic_constraints()</code> if you want to control the pathLenConstraint field too.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "funindex(1)"
 name: "funindex"
 section: "1"
@@ -9,7 +10,6 @@ description: "funindex – create an index for a column of a FITS binary table"
 
 <h2>NAME</h2>
 <p> <code>funindex &#8211; create an index for a column of a FITS binary table</code></p>
-<h2>SYNOPSIS</h2>
 <p> funindex &lt;switches&gt; &lt;iname&gt; [oname]</p>
 <h2>OPTIONS</h2>
 <pre><code>
@@ -28,7 +28,6 @@ NB : these options are not compatible with Funtools processing.Please
     i.e.no key value(s)(default
                         : long) "
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The funindex script creates an index for the specified column (key) by running funtable -s (sort) and then saving the column value and the record number for each sorted row. This index will be used automatically<br />
 &nbsp;<wbr>by funtools filtering of that column, provided the index file&#8217;s modification date is later than that of the data file. </p>
 <p> The first required argument is the name of the <font SIZE="-1">FITS</font> binary table to index. Please note that text files cannot be indexed at this time. The second required argument is the column (key) name to index. While multiple keys can be specified in principle, the funtools index processing assume a single key and will not recognize files containing multiple keys. </p>

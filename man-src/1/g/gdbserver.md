@@ -1,4 +1,5 @@
 ---
+
 title: "gdbserver(1)"
 name: "gdbserver"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-gdbserver/"
 description: "gdbserver – Remote Server for the GNU Debugger"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gdbserver <i>comm</i> <i>prog</i> [<i>args</i>&#8230;] </p>
 <p> gdbserver &#8211;attach <i>comm</i> <i>pid</i> </p>
 <p> gdbserver &#8211;multi <i>comm</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gdbserver</code> is a program that allows you to run <font SIZE="-1">GDB</font> on a different machine than the one which is running the program being debugged. </p>
 <p> Usage (server (target) side): </p>
 <p> First, you need to have a copy of the program you want to debug put onto the target system. The program can be stripped to save space if needed, as <code>gdbserver</code> doesn&#8217;t care about symbols. All symbol handling is taken care of by the <font SIZE="-1">GDB</font> running on the host system. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gftodvi(1)"
 name: "gftodvi"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gftodvi/"
 description: "gftodvi – make proof sheets from generic font files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gftodvi</code> [<code>-overflow-label-offset=</code><i>,real/</i>] [<code>-verbose</code>] <i>gf_file_name</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>gftodvi</code> program converts a generic font (<i>gf</i>) file output by, for example, <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), to a device independent (DVI) file (that can then be typeset using the same software that has already been written for TeX). The characters in the <i>gf</i> file will appear one per page, with labels, titles, and annotations as specified in Appendix H (Hardcopy Proofs) of <i>The Metafontbook</i>. </p>
 <p> <code>gftodvi</code> uses other fonts in addition to the main <i>gf</i> file. A `gray&#8217; font is used to typeset the pixels that actually make up the character. (We wouldn&#8217;t want all the pixels to be simply black, since then labels, key points, and other information would be lost.) A `title&#8217; font is used for the information at the top of the page. A `label&#8217; font is used for the labels on key points of the figure. A `slant&#8217; font is used to typeset diagonal lines, which otherwise have to be simulated using horizontal and vertical rules. The default gray, title, and label fonts are <i>gray</i>, <i>cmr8</i>, and <i>cmtt10</i>, respectively; there is no default slant font. </p>

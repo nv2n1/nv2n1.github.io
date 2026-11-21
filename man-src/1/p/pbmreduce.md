@@ -1,4 +1,5 @@
 ---
+
 title: "pbmreduce(1)"
 name: "pbmreduce"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pbmreduce/"
 description: "pbmreduce – read a portable bitmap and reduce it N times"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmreduce</code> [<code>-floyd</code>|<code>-fs</code>|<code>-threshold</code> ] [<code>-value</code> <i>val</i>] <i>N</i> [<i>pbmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as input. Reduces it by a factor of <i>N</i>, and produces a portable bitmap as output. </p>
 <p> <i>pbmreduce</i> duplicates a lot of the functionality of <i>pgmtopbm;</i> you could do something like <code>pnmscale | pgmtopbm,</code> but <i>pbmreduce</i> is a lot faster. </p>
 <p> <i>pbmreduce</i> can be used to &quot;re-halftone&quot; an image. Let&#8217;s say you have a scanner that only produces black&amp;white, not grayscale, and it does a terrible job of halftoning (most b&amp;w scanners fit this description). One way to fix the halftoning is to scan at the highest possible resolution, say 300 dpi, and then reduce by a factor of three or so using <i>pbmreduce</i>. You can even correct the brightness of an image, by using the <code>-value</code> flag.</p>

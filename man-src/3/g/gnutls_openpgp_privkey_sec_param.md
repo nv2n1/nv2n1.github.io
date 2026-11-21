@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_privkey_sec_param(3)"
 name: "gnutls_openpgp_privkey_sec_param"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_openpgp_privkey_sec_param – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_privkey_sec_param &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>gnutls_sec_param_t gnutls_openpgp_privkey_sec_param(gnutls_openpgp_privkey_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_openpgp_privkey_t key</dt>
 <dd> a key structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the security parameter appropriate with this private key.</p>
 <h2>RETURNS</h2>
 <p> On success, a valid security parameter is returned otherwise <code>GNUTLS_SEC_PARAM_UNKNOWN</code> is returned.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lshell(1)"
 name: "lshell"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lshell/"
 description: "lshell – Limited Shell"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lshell </code> [<i>OPTIONS</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>lshell</code> provides a limited shell configured per user. The configuration is done quite simply using a configuration file. Coupled with ssh&#8217;s <i>authorized_keys </i> or with <i>/etc/shells</i> and <i>/etc/passwd</i> , it becomes very easy to restrict user&#8217;s access to a limited set of command. </p>
 <h2>OPTIONS</h2>
 <dl>

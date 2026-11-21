@@ -1,4 +1,5 @@
 ---
+
 title: "g_trjconv_d(1)"
 name: "g_trjconv_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "trjconv – converts and manipulates trajectory files"
 <h2>NAME</h2>
 <p> trjconv &#8211; converts and manipulates trajectory files </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>trjconv</code> <code>-f</code><i> traj.xtc </i> <code>-o</code><i> trajout.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-fr</code><i> frames.ndx </i> <code>-sub</code><i> cluster.ndx </i> <code>-drop</code><i> drop.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-skip</code><i> int </i> <code>-dt</code><i> time </i> <code>-dump</code><i> time </i> <code>-t0</code><i> time </i> <code>-timestep</code><i> time </i> <code>-pbc</code><i> enum </i> <code>-ur</code><i> enum </i> <code>-[no]center</code><i></i> <code>-boxcenter</code><i> enum </i> <code>-box</code><i> vector </i> <code>-trans</code><i> vector </i> <code>-shift</code><i> vector </i> <code>-fit</code><i> enum </i> <code>-ndec</code><i> int </i> <code>-[no]vel</code><i></i> <code>-[no]force</code><i></i> <code>-trunc</code><i> time </i> <code>-exec</code><i> string </i> <code>-[no]app</code><i></i> <code>-split</code><i> time </i> <code>-[no]sep</code><i></i> <code>-nzero</code><i> int </i> <code>-[no]ter</code><i></i> <code>-dropunder</code><i> real </i> <code>-dropover</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> trjconv can convert trajectory files in many ways: </p>
 <p> <code> 1.</code> from one format to another </p>
 <p> <code> 2.</code> select a subset of atoms <code> 3.</code> change the periodicity representation </p>

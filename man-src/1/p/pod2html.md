@@ -1,4 +1,5 @@
 ---
+
 title: "pod2html(1)"
 name: "pod2html"
 section: "1"
@@ -6,20 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-pod2html/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pod2html - convert .pod files to .html files 
 
- pod2html - convert .pod files to .html files 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 pod2html-- help-- htmldir = &lt;name&gt; --htmlroot = &lt;URL&gt; --infile = &lt;name&gt; --outfile = &lt;name&gt; --podpath = &lt;name&gt; : ... : &lt;name&gt; --podroot = &lt;name&gt; --cachedir = &lt;name&gt; --flush-- recurse-- norecurse-- quiet-- noquiet-- verbose-- noverbose-- index-- noindex-- backlink-- nobacklink-- header-- noheader-- poderrors-- nopoderrors-- css = &lt;URL&gt; --title = &lt;name&gt;
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Converts files from pod format (see perlpod) to <font SIZE="-1">HTML</font> format.
+Converts files from pod format (see perlpod) to <font SIZE="-1">HTML</font> format.
 
 <h2>ARGUMENTS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "lwp-mirror(1)"
 name: "lwp-mirror"
 section: "1"
@@ -6,20 +7,13 @@ letter: "l"
 url: "/docs/linux/man/1-lwp-mirror/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+lwp-mirror - Simple mirror utility 
 
- lwp-mirror - Simple mirror utility 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 lwp - mirror[-v][-t timeout]&lt;url&gt;&lt;local file&gt;
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This program can be used to mirror a document from a <font SIZE="-1">WWW</font> server. The document is only transferred if the remote copy is newer than the local copy. If the local copy is newer nothing happens. 
+This program can be used to mirror a document from a <font SIZE="-1">WWW</font> server. The document is only transferred if the remote copy is newer than the local copy. If the local copy is newer nothing happens. 
 
  Use the <tt>&quot;-v&quot;</tt> option to print the version number of this program. 
 

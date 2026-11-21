@@ -1,4 +1,5 @@
 ---
+
 title: "virt-copy-in(1)"
 name: "virt-copy-in"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-virt-copy-in/"
 description: "virt-copy-in – Copy files and directories into a virtual machine disk image."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - copy - in - a disk.img file | dir[file | dir...] / destination virt - copy - in - d domain file | dir[file | dir...] / destination
 </code></pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-copy-in&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
-<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-copy-in&quot;</tt> copies files and directories from the local disk into a virtual machine disk image or named libvirt domain. </p>
 <p> You can give one of more filenames and directories on the command line. Directories are copied in recursively. The final parameter must be the destination directory in the disk image which must be an absolute path starting with a <i>/</i> character.</p>
 <h2>EXAMPLES</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "asl(1)"
 name: "asl"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-asl/"
 description: "asl – cross assembler for microprocessors and -controllers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>asl &#8211; cross assembler for microprocessors and -controllers</code></p>
 <h2>SYNTAX</h2>
 <p> <code>asl </code> [ option(s) ] file(s) [ option(s) ] file(s) &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> AS is a cross assembler that can be used to write assembler programs for a variety of different microprocessors and -controllers. <code>asl</code> is the UNIX/C implementation of AS. A complete description of AS is far beyond the scope of this manual page, which is only intended as a quick reference for AS&#8217;s command line interface. For a more detailed introduction into the usage of AS, see the user&#8217;s manual. </p>
 <h2>COMMAND-LINE PARAMETERS</h2>
 <p> Every argument that starts with a slash (/), plus (+) or minus (-) sign is regarded as a command-line parameter. Some command-line parameters take an argument as additional parameter. Every argument that is not recognized as a command-line parameter is regarded as an assembler source file to be assembled. A source file name that does not have an extension is automatically extended with the default extension &#8216;.asm&#8217;. Options are turned on with a parameter starting with a slash (/) or minus sign (-), whereas a parameter with a leading plus sign (+) turns an option off. In the following list, all options will be shown in the form that is needed to change the default behaviour, which might be a plus or minus sign, depening on wether the option is on or off by default. </p>

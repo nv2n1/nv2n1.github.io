@@ -1,4 +1,5 @@
 ---
+
 title: "gearadmin(1)"
 name: "gearadmin"
 section: "1"
@@ -10,7 +11,6 @@ description: "gearadmin – Gearmand Documentation, http://gearman.info/"
 <h2>NAME</h2>
 <p> gearadmin &#8211; Gearmand Documentation, <a rel="nofollow" href="http://gearman.info/">http://gearman.info/</a> </p>
 <p> Run Administrative commands against a server.</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>&#8211;help</code></dt>
 <dd> Provice help about the program.</dd>
@@ -32,7 +32,6 @@ description: "gearadmin – Gearmand Documentation, http://gearman.info/"
 <dd> Workers for the server.</dd>
 <dt><code>&#8211;shutdown</code></dt>
 <dd> Shutdown server.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Command line tool for manipulating gearmand servers.</p>
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://gearman.info/">http://gearman.info/</a></i></p>

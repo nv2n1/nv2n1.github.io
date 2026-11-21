@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_credentials(3)"
 name: "dmlite_credentials"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_credentials –"
 ---
 
 <p> Security credentials.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;dmlite.h&gt;</p>
 <h3>Data Fields</h3>
 <p> const char * <code>mech</code> </p>

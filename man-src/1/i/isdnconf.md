@@ -1,4 +1,5 @@
 ---
+
 title: "isdnconf(1)"
 name: "isdnconf"
 section: "1"
@@ -9,9 +10,7 @@ description: "isdnconf – manipulate or read ISDN phone number config files."
 
 <h2>NAME</h2>
 <p> isdnconf &#8211; manipulate or read ISDN phone number config files. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>isdnconf</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>isdnconf</i> can manipulate or read the file <i>/etc/isdn/callerid.conf</i> as well as <i>~/.isdn</i>. Entries can be added or removed from these files. Additionally, entries can be searched for and displayed in a way similar to <code>grep</code>. An entry can be an own MSN (<code>[MSN]</code>) or a phone number (<code>[NUMBER]</code>). </p>
 <p> You can use this program to build your own phonebook. These files are used by many of the other ISDN utilities that use phone numbers, to display a number symbolically instead of as a plain number. </p>
 <h2>OPTIONS</h2>

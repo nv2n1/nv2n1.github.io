@@ -1,4 +1,5 @@
 ---
+
 title: "docker-login(1)"
 name: "docker-login"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-login/"
 description: "docker-login – Log in to a Docker registry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker login [OPTIONS] [SERVER]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Log in to a Docker Registry located on the specified SERVER. You can specify a URL or a hostname for the SERVER value. If you do not specify a SERVER, the command uses Docker&#8217;s public registry located at <a rel="nofollow" href="https://registry-1.docker.io/">https://registry-1.docker.io/</a> by default. To get a username/password for Docker&#8217;s public registry, create an account on Docker Hub. </p>
 <p> docker login requires user to use sudo or be root, except when: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_pkt(1)"
 name: "nfstest_pkt"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfstest_pkt – Packet trace decoder"
 
 <h2>NAME</h2>
 <p> nfstest_pkt &#8211; Packet trace decoder</p>
-<h2>SYNOPSIS</h2>
 <p> nfstest_pkt [options] &lt;trace1.cap&gt; [&lt;trace2.cap&gt; &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Decode and display all packets in the packet trace file(s) given. The match option gives the ability to search for specific packets within the packet trace file. Other options allow displaying of their corresponding call or reply when only one or the other is matched. Only a range of packets can be displayed if the start and/or end options are used. </p>
 <p> There are three levels of verbosity in which they are specified using a bitmap, where the most significant bit gives a more verbose output. Verbose level 1 is used as a default where each packet is displayed condensed to one line using the last layer of the packet as the main output. By default only the NFS packets (NFS, MOUNT, NLM, etc.) are displayed. </p>
 <p> The packet trace files are processed either serially or in parallel. The packets are displayed using their timestamps so they are always displayed in the correct order even if the files given are out of order. If the packet traces were captured one after the other the packets are displayed serially, first the packets of the first file according to their timestamps, then the second and so forth. If the packet traces were captured at the same time on multiple clients the packets are displayed in parallel, packets are interleaved from all the files when displayed again according to their timestamps. </p>

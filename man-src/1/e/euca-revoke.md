@@ -1,4 +1,5 @@
 ---
+
 title: "euca-revoke(1)"
 name: "euca-revoke"
 section: "1"
@@ -9,9 +10,7 @@ description: "euca-revoke – Remove a rule from a security group"
 
 <h2>NAME</h2>
 <p> euca-revoke &#8211; Remove a rule from a security group</p>
-<h2>SYNOPSIS</h2>
 <p> euca-revoke [&#8211;egress] [-P PROTOCOL] [-p RANGE] [-t TYPE:CODE] [-s CIDR | <code>-o</code> GROUP] [-u ACCOUNT] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] GROUP</p>
-<h2>DESCRIPTION</h2>
 <p> Remove a rule from a security group</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "jbgtopbm(1)"
 name: "jbgtopbm"
 section: "1"
@@ -9,9 +10,7 @@ description: "jbgtopbm – JBIG1 to portable bitmap file converter"
 
 <h2>NAME</h2>
 <p> jbgtopbm &#8211; JBIG1 to portable bitmap file converter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jbgtopbm</code> [ <i>options</i> ] [ <i>input-file</i> | &#8211; [ <i>output-file</i> ]] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads in a <i>JBIG1</i> bi-level image entity (BIE) from a file or standard input, decompresses it, and outputs a portable bitmap (PBM) file. </p>
 <p> <i>JBIG1</i> is a highly effective lossless compression algorithm for bi-level images (one bit per pixel), which is particularly suitable for scanned document pages. </p>
 <p> A <i>JBIG1</i> encoded image can be stored in several resolutions in one or several BIEs. All resolution layers except the lowest one are stored efficiently as differences to the next lower resolution layer. Options <code>-x</code> and <code>-y</code> can be used to stop the decompression at a specified maximal output image size. With option <code>-m</code> the input file can consist of multiple concatenated BIEs which contain different increasing resolution layers of the same image. </p>

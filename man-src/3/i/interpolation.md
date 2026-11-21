@@ -1,4 +1,5 @@
 ---
+
 title: "interpolation(3)"
 name: "interpolation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-interpolation/"
 description: "ql/math/interpolation.hpp – base class for 1-D interpolations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/extrapolation.hpp&gt;<br />
  #include &lt;ql/math/comparison.hpp&gt;<br />
  #include &lt;ql/errors.hpp&gt;<br />

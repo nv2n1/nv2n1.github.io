@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-user(1)"
 name: "pilot-install-user"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-install-user – Reads or sets a Palm User and UserID on a P
 <p> pilot-install-user &#8211; Reads or sets a Palm User and UserID on a Palm Device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-user</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-u</code>|<code>&#8211;user</code>&nbsp;<wbr>&nbsp;<wbr><code>username</code>]&nbsp;<wbr>[<code>-i</code>|<code>&#8211;id</code>&nbsp;<wbr>&nbsp;<wbr><code>userid</code>]&nbsp;<wbr>[<code>-l</code>|<code>&#8211;list</code>] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-user</i>&nbsp;<wbr>allows the user to read or change the User and UserID information on the Palm handheld. </p>
 <h2>OPTIONS</h2>
 <h3>pilot-install-user options</h3>

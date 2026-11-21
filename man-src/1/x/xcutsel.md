@@ -1,4 +1,5 @@
 ---
+
 title: "xcutsel(1)"
 name: "xcutsel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xcutsel/"
 description: "xcutsel – interchange between cut buffer and selection"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xcutsel</code> [ <i>-toolkitoption</i> &#8230;] [-selection <i>selection</i>] [-cutbuffer <i>number</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xcutsel</i> program is used to copy the current selection into a cut buffer and to make a selection that contains the current contents of the cut buffer. It acts as a bridge between applications that don&#8217;t support selections and those that do. </p>
 <p> By default, <i>xcutsel</i> will use the selection named PRIMARY and the cut buffer CUT_BUFFER0. Either or both of these can be overridden by command line arguments or by resources. </p>
 <p> An <i>xcutsel</i> window has the following buttons:</p>

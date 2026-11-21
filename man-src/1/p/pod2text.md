@@ -1,4 +1,5 @@
 ---
+
 title: "pod2text(1)"
 name: "pod2text"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-pod2text/"
 description: "pod2text – Convert POD data to formatted ASCII text"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> pod2text [<code>-aclostu</code>] [<code>&#8211;code</code>] [<code>&#8211;errors</code>=<i>style</i>] [<code>-i</code> <i>indent</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-q</code> <i>quotes</i>]&nbsp;[<code>&#8211;nourls</code>]&nbsp;[<code>&#8211;stderr</code>]&nbsp;[<code>-w</code> <i>width</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>input</i>&nbsp;[<i>output</i>&nbsp;&#8230;]] </p>
 <p> pod2text <code>-h</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pod2text</code> is a front-end for Pod::Text and its subclasses. It uses them to generate formatted <font SIZE="-1">ASCII</font> text from <font SIZE="-1">POD</font> source. It can optionally use either termcap sequences or <font SIZE="-1">ANSI</font> color escape sequences to format the text. </p>
 <p> <i>input</i> is the file to read for <font SIZE="-1">POD</font> source (the <font SIZE="-1">POD</font> can be embedded in code). If <i>input</i> isn&#8217;t given, it defaults to <tt>&quot;STDIN&quot;</tt>. <i>output</i>, if given, is the file to which to write the formatted output. If <i>output</i> isn&#8217;t given, the formatted output is written to <tt>&quot;STDOUT&quot;</tt>. Several <font SIZE="-1">POD</font> files can be processed in the same <code>pod2text</code> invocation (saving module load and compile times) by providing multiple pairs of <i>input</i> and <i>output</i> files on the command line.</p>
 <h2>OPTIONS</h2>

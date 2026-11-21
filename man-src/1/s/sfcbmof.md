@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbmof(1)"
 name: "sfcbmof"
 section: "1"
@@ -9,9 +10,7 @@ description: "sfcbmof – MOF compile for the Small-Footprint CIM Broker (sfcb)"
 
 <h2>NAME</h2>
 <p> sfcbmof &#8211; MOF compile for the Small-Footprint CIM Broker (sfcb)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sfcbmof</code> [<i>options</i>] <i>infile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The MOF compiler for sfcb generates binary class data from plaintext MOF class definitions.</p>
 <h2>OPTIONS</h2>
 <dl>

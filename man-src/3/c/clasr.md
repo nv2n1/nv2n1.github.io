@@ -1,4 +1,5 @@
 ---
+
 title: "clasr(3)"
 name: "clasr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clasr/"
 description: "clasr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clasr</code> (SIDE, PIVOT, DIRECT, M, N, C, S, A, LDA)<br />
  <i></i><code>CLASR</code> applies a sequence of plane rotations to a general rectangular matrix.</p>

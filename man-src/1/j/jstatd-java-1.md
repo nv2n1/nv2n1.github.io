@@ -1,4 +1,5 @@
 ---
+
 title: "jstatd-java-1(1)"
 name: "jstatd-java-1"
 section: "1"
@@ -9,7 +10,6 @@ description: "jstatd – Virtual Machine jstat Daemon"
 
 <h2>Name</h2>
 <p> jstatd &#8211; Virtual Machine jstat Daemon </p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>jstatd [ </code><tt>options</tt><code> ]</code>
 <br>
@@ -20,7 +20,6 @@ description: "jstatd – Virtual Machine jstat Daemon"
 <dt>options</dt>
 <dd> Command-line options. The options may be in any order. If there are redundant or contradictory options, the last option specified will take precedence.</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jstatd</code> tool is an RMI server application that monitors for the creation and termination of instrumented HotSpot Java virtual machines (JVMs) and provides a interface to allow remote monitoring tools to attach to JVMs running on the local host. </p>
 <p> The <code>jstatd</code> server requires the presence of an RMI registry on the local host. The <code>jstatd</code> server will attempt to attach to the RMI registry on the default port, or on the port indicated by the <i>-p port</i> option. If an RMI registry is not found, one will be created within the <code>jstatd</code> application bound to the port indicated by the <i>-p port</i> option or to the default RMI registry port if <i>-p port</i> is omitted. Creation of an internal RMI registry can be inhibited by specifying the <i>-nr</i> option. </p>
 <p> <code>NOTE:</code> This utility is unsupported and may or may not be available in future versions of the JDK. It is not currently available on the Windows 98 and Windows ME platforms. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "getsid(2)"
 name: "getsid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getsid/"
 description: "getsid – get session ID"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t getsid(pid_t</code><i> pid</i><code>);</code> </p>
@@ -17,7 +17,6 @@ description: "getsid – get session ID"
 <dt>
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>getsid(0)</i> returns the session ID of the calling process. <code>getsid</code>() returns the session ID of the process with process ID <i>pid</i>. If <i>pid</i> is 0, <code>getsid</code>() returns the session ID of the calling process.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, a session ID is returned. On error, <i>(pid_t)&nbsp;-1</i> will be returned, and <i>errno</i> is set appropriately.</p>

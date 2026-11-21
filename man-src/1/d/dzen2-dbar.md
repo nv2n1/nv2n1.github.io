@@ -1,4 +1,5 @@
 ---
+
 title: "dzen2-dbar(1)"
 name: "dzen2-dbar"
 section: "1"
@@ -9,10 +10,8 @@ description: "dzen2-dbar – simple gadget that you can use in combination with 
 
 <h2>NAME</h2>
 <p> dzen2-dbar &#8211; simple gadget that you can use in combination with dzen to display a progressbar.</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dzen2-dbar</code> [-w <i>characters</i>] [-s <i>symbol</i>] [-min <i>minvalue</i>] [-max <i>maxvalue</i>] [-l <i>string</i>] [-nonl]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>dbar</code></p>
 <dd>is an application that generates semi graphical progress meters, from some values you supply to it. </dd>
 <p> See the usage examples for a description of the expected input format.</p>

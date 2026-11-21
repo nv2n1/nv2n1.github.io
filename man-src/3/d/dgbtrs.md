@@ -1,4 +1,5 @@
 ---
+
 title: "dgbtrs(3)"
 name: "dgbtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbtrs/"
 description: "dgbtrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbtrs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)<br />
  <i></i><code>DGBTRS</code></p>

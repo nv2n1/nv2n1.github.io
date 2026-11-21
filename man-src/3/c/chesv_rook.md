@@ -1,4 +1,5 @@
 ---
+
 title: "chesv_rook(3)"
 name: "chesv_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chesv_rook/"
 description: "chesv_rook.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chesv_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, LWORK, INFO)<br />
  <i></i><code>CHESV_ROOK</code> computes the solution to a system of linear equations A * X = B for HE matrices using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method</p>

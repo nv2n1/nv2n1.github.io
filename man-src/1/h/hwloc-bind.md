@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-bind(1)"
 name: "hwloc-bind"
 section: "1"
@@ -9,7 +10,6 @@ description: "hwloc-bind – Launch a command that is bound to specific processo
 
 <h2>NAME</h2>
 <p> hwloc-bind &#8211; Launch a command that is bound to specific processors and/or memory, or consult the binding of an existing program</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hwloc-bind</code> [<i>options</i>] <i>&lt;location1&gt; [&lt;location2&gt; [&#8230;] ] [&#8211;] &lt;command&gt; </i>&#8230; </p>
 <p> Note that <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) provides a detailed explanation of the hwloc system and of valid &lt;location&gt; formats; it should be read before reading this man page.</p>
 <h2>OPTIONS</h2>
@@ -60,7 +60,6 @@ description: "hwloc-bind – Launch a command that is bound to specific processo
 <dd> Verbose output.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> hwloc-bind execs an executable (with optional command line arguments) that is bound to the specified location (or list of locations). Upon successful execution, hwloc-bind simply sets bindings and then execs the executable over itself. </p>
 <p> If binding fails, or if the binding set is empty, and <code>&#8211;force</code> was not given, hwloc-bind returns with an error instead of launching the executable. </p>
 <p> <code>NOTE:</code> It is highly recommended that you read the <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) overview page before reading this man page. Most of the concepts described in <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) directly apply to the hwloc-bind utility.</p>

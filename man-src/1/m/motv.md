@@ -1,4 +1,5 @@
 ---
+
 title: "motv(1)"
 name: "motv"
 section: "1"
@@ -9,9 +10,7 @@ description: "motv – a Motif program for watching TV"
 
 <h2>NAME</h2>
 <p> motv &#8211; a Motif program for watching TV</p>
-<h2>SYNOPSIS</h2>
 <p> <code>motv [ options ] [ station name ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>motv</code> is a Motif application for watching TV with your unix box. </p>
 <p> It is basically xawtv with a more userfriendly GUI. It has the same features, uses the same config file, has the same command line switches, you can control it using xawtv-remote. Most keyboards shortcuts are identical too.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-stash(1)"
 name: "git-stash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-stash/"
 description: "git-stash – Stash the changes in a dirty working directory away"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git stash list[&lt;log - options&gt;] git stash show[-u | --include - untracked | --only - untracked][&lt;diff - options&gt;][&lt;stash&gt;] git stash drop[-q | --quiet][&lt;stash&gt;] git stash(pop | apply)[--index][-q | --quiet][&lt;stash&gt;] git stash branch&lt;branchname&gt;[&lt;stash&gt;] git stash[push[-p | --patch][-k | --[no - ] keep - index][-q | --quiet]
                                                                                                                                                                                                                                                                             [-u | --include - untracked][-a | --all][-m | --message&lt;message&gt;]
@@ -15,7 +15,6 @@ git stash list[&lt;log - options&gt;] git stash show[-u | --include - untracked 
                                                                                                                                                                                                                                                                             [--][&lt;pathspec&gt;...]] git stash clear
     git stash create[&lt;message&gt;] git stash store[-m | --message&lt;message&gt;][-q | --quiet]&lt;commit&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Use <code>git stash</code> when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the <code>HEAD</code> commit. </p>
 <p> The modifications stashed away by this command can be listed with <code>git stash list</code>, inspected with <code>git stash show</code>, and restored (potentially on top of a different commit) with <code>git stash apply</code>. Calling <code>git stash</code> without any arguments is equivalent to <code>git stash push</code>. A stash is by default listed as &quot;WIP on <i>branchname</i> &#8230;&quot;, but you can give a more descriptive message on the command line when you create one. </p>
 <p> The latest stash you created is stored in <code>refs/stash</code>; older stashes are found in the reflog of this reference and can be named using the usual reflog syntax (e.g. <code>stash@{0}</code> is the most recently created stash, <code>stash@{1}</code> is the one before it, <code>stash@{2.hours.ago}</code> is also possible). Stashes may also be referenced by specifying just the stash index (e.g. the integer <code>n</code> is equivalent to <code>stash@{n}</code>).</p>

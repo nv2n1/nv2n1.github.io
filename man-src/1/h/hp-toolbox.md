@@ -1,4 +1,5 @@
 ---
+
 title: "hp-toolbox(1)"
 name: "hp-toolbox"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-toolbox/"
 description: "hp-toolbox – HP Device Manager"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The HP Device Manager (aka &quot;Toolbox&quot;) for HPLIP supported devices. Provides access to status, tools, and supplies levels.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-toolbox [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>

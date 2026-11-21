@@ -1,4 +1,5 @@
 ---
+
 title: "ncmpcpp(1)"
 name: "ncmpcpp"
 section: "1"
@@ -9,9 +10,7 @@ description: "ncmpcpp – An ncurses Music Player Daemon (MPD) client."
 
 <h2>NAME</h2>
 <p> ncmpcpp &#8211; An ncurses Music Player Daemon (MPD) client.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ncmpcpp</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> ncmpcpp is an ncurses client for MPD (Music Player Daemon), inspired by ncmpc. </p>
 <p> Read more about MPD at <a rel="nofollow" href="http://www.musicpd.org">http://www.musicpd.org</a></p>
 <h2>OPTIONS</h2>

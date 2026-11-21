@@ -1,4 +1,5 @@
 ---
+
 title: "montage-im6(1)"
 name: "montage-im6"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-montage-im6/"
 description: "montage – create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>montage-im6.q16</code> <i>input-file[s]</i> [<i>options</i>] <i>output-file</i></dt>
 <dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> The <code>montage-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more. </p>
 <p> For more information about the montage command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/montage.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/montage.php.">https://www.imagemagick.org/script/montage.php.</a></p>
-<h2>DESCRIPTION</h2>
 <p> Image Settings:<br />
 &nbsp;<wbr>&nbsp;-adjoin&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;join images into a single multi-image file<br />
 &nbsp;<wbr>&nbsp;-affine matrix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;affine transform matrix<br />

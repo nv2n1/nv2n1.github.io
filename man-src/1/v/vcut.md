@@ -1,4 +1,5 @@
 ---
+
 title: "vcut(1)"
 name: "vcut"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-vcut/"
 description: "vcut – cuts Ogg Vorbis files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vcut</code> <i>infile.ogg</i> <i>outfile1.ogg</i> <i>outfile2.ogg</i> <i>[ cutpoint | +cutpoint]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>vcut</code> reads an Ogg Vorbis audio file and splits it at the given cutpoint, which is a sample number. If the cutpoint is prefixed with &#8216;+&#8217;, the cutpoint is an integer number of seconds. </p>
 <h2>AUTHORS</h2>
 <dl>

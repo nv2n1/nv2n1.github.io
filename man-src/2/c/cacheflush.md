@@ -1,4 +1,5 @@
 ---
+
 title: "cacheflush(2)"
 name: "cacheflush"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-cacheflush/"
 description: "cacheflush – flush contents of instruction and/or data cache"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/cachectl.h&gt;
 int cacheflush(char *addr, int nbytes, int cache);
 </code></pre>
 <p> <i>Note</i>: On some architectures, there is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>cacheflush</code>() flushes the contents of the indicated cache(s) for the user addresses in the range <i>addr</i> to <i>(addr+nbytes-1)</i>. <i>cache</i> may be one of:</p>
 <dl>
 <dt><code>ICACHE</code></dt>

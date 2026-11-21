@@ -1,4 +1,5 @@
 ---
+
 title: "catdoc(1)"
 name: "catdoc"
 section: "1"
@@ -6,11 +7,10 @@ letter: "c"
 url: "/docs/linux/man/1-catdoc/"
 description: "catdoc – reads MS-Word file and puts its content as plain text on standard output"
 ---
+
 <h2>NAME</h2>
 <p> catdoc - reads MS-Word file and puts its content as plain text on standard output  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>catdoc</code> [<code>-vlu8btawxV</code>] [<code>-m</code> <i>number</i>] [ <code>-s</code> <i>charset</i>] [ <code>-d </code> <i>charset</i>] [ <code>-f</code> <i>output-format</i>] <i>file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>catdoc</code> behaves much like <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1) but it reads MS-Word file and produces human-readable text on standard output. Optionally it can use <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1) escape sequences for characters which have special meaning for LaTeX. It also makes some effort to recognize MS-Word tables, although it never tries to write correct headers for LaTeX tabular environment. Additional output formats, such is HTML can be easily defined. </p>
 <p> <code>catdoc</code> doesn&#8217;t attempt to extract formatting information other than tables from MS-Word document, so different output modes means mainly that different characters should be escaped and different ways used to represent characters, missing from output charset. See CHARACTER SUBSTITUTION below </p>
 <p> <code>catdoc</code> uses internal <code>unicode</code>(4) representation of text, so it is able to convert texts when charset in source document doesn&#8217;t match charset on target system. See CHARACTER SETS below. </p>

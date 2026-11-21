@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogmv(1)"
 name: "pmlogmv"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmlogmv – move (rename) Performance Co-Pilot archive files"
 
 <h2>NAME</h2>
 <p> <code>pmlogmv</code> &#8211; move (rename) Performance Co-Pilot archive files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmlogmv</code> [<i>-NV</i>] <i>oldname</i> <i>newname</i></p>
-<h2>DESCRIPTION</h2>
 <p> A Performance Co-Pilot (PCP) archive consists of multiple files as created by <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). <code>pmlogmv</code> allows all the files of a single PCP archive to be moved or renamed as a group in a single operation. </p>
 <p> The <i>oldname</i> argument identifies the target archive, and may be either the basename that is common to all files in that archive or one of the archive&#8217;s files. The new archive&#8217;s basename is <i>newname</i>. </p>
 <p> The <code>-N</code> option performs a dry-run, checking and reporting what changes would be made without making any changes. </p>

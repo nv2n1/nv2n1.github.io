@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-size(1)"
 name: "i686-pc-mingw32-size"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-size/"
 description: "size – list section sizes and total size."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> size [<code>-A</code>|<code>-B</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>-o</code>|<code>-x</code>|<code>&#8211;radix=</code><i>number</i>]<br />
@@ -15,7 +15,6 @@ description: "size – list section sizes and total size."
 &nbsp;<wbr>&nbsp;<wbr>[<code>-t</code>|<code>&#8211;totals</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;target=</code><i>bfdname</i>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<i>objfile</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <font SIZE="-1">GNU</font> <code>size</code> utility lists the section sizes&#8212;and the total size&#8212;for each of the object or archive files <i>objfile</i> in its argument list. By default, one line of output is generated for each object file or each module in an archive. </p>
 <p> <i>objfile</i>&#8230; are the object files to be examined. If none are specified, the file <tt>&quot;a.out&quot;</tt> will be used.</p>
 <h2>OPTIONS</h2>

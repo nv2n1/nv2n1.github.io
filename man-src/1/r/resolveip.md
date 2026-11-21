@@ -1,4 +1,5 @@
 ---
+
 title: "resolveip(1)"
 name: "resolveip"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-resolveip/"
 description: "resolveip – resolve host name to IP address or vice versa"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>resolveip [</code><i>options</i><code>] {</code><i>host_name</i><code>|</code><i>ip-addr</i><code>} &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>resolveip</code> utility resolves host names to IP addresses and vice versa. </dd>
 <dl>
 <dt>

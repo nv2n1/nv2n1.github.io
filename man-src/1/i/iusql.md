@@ -1,4 +1,5 @@
 ---
+
 title: "iusql(1)"
 name: "iusql"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-iusql/"
 description: "isql, iusql – unixODBC command-line interactive SQL tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>isql</code> <i>DSN</i> [<i>USER</i> [<i>PASSWORD</i>]] [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>isql</code> is a command line tool which allows the user to execute SQL in batch or interactively. It has some interesting options such as an option to generate output wrapped in an HTML table. </p>
 <p> <code>iusql</code> is the same tool with built-in Unicode support. </p>
 <h2>ARGUMENTS</h2>

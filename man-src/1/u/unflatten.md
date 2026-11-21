@@ -1,4 +1,5 @@
 ---
+
 title: "unflatten(1)"
 name: "unflatten"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-unflatten/"
 description: "unflatten – adjust directed graphs to improve layout aspect ratio"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>unflatten</code> [<code>-f</code>] [<code>-l</code><i>len</i>] [<code>-c</code><i>len</i> ] [ <code>-o</code> <i>outfile</i> ] [ files ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>unflatten</code> is a preprocessor to <code>dot</code> that is used to improve the aspect ratio of graphs having many leaves or disconnected nodes. The usual layout for such a graph is generally very wide or tall. <code>unflatten</code> inserts invisible edges or adjusts the <code>minlen</code> on edges to improve layout compaction.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

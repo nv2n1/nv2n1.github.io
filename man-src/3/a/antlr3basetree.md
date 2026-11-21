@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3basetree(3)"
 name: "antlr3basetree"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3basetree.h –"
 ---
 
 <p> Definition of the ANTLR3 base tree.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt; </p>

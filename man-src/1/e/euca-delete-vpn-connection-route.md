@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-vpn-connection-route(1)"
 name: "euca-delete-vpn-connection-route"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-delete-vpn-connection-route – Delete a static route from a 
 
 <h2>NAME</h2>
 <p> euca-delete-vpn-connection-route &#8211; Delete a static route from a virtual private gateway to a customer gateway</p>
-<h2>SYNOPSIS</h2>
 <p> euca-delete-vpn-connection-route <code>&#8211;vpn-connection</code> VPNCONN <code>&#8211;cidr</code> CIDR</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a static route from a virtual private gateway to a customer gateway</p>
 <h3>optional arguments:</h3>
 <dl>

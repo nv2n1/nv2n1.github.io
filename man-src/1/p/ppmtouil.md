@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtouil(1)"
 name: "ppmtouil"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtouil/"
 description: "ppmtouil – convert a portable pixmap into a Motif UIL icon file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtouil</code> [<code>-name</code> <i>uilname</i>] [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces a Motif UIL icon file as output. </p>
 <p> If the program was compiled with an rgb database specified, and a RGB value from the ppm input matches a RGB value from the database, then the corresponding color name mnemonic is printed in the UIL&#8217;s colormap. If no rgb database was compiled in, or if the RGB values don&#8217;t match, then the color will be printed with the #RGB, #RRGGBB, #RRRGGGBBB, or #RRRRGGGGBBBB hexadecimal format.</p>
 <h2>OPTIONS</h2>

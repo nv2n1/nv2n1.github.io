@@ -1,4 +1,5 @@
 ---
+
 title: "c2ph(1)"
 name: "c2ph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-c2ph/"
 description: "c2ph, pstruct – Dump C structures as generated from \"cc -g -S\" stabs"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 c2ph[-dpnP][var = val][files...]
 </code></pre>
@@ -22,7 +22,6 @@ c2ph[-dpnP][var = val][files...]
     -t  trace execution<br />
     -d  spew reams of debugging output<br />
     -slist  give comma-separated list a structures to dump</p>
-<h2>DESCRIPTION</h2>
 <p> The following is the old c2ph.doc documentation by Tom Christiansen &lt;tchrist [at] perl.com&gt; Date: 25 Jul 91 08:10:21 <font SIZE="-1">GMT</font> </p>
 <p> Once upon a time, I wrote a program called pstruct. It was a perl program that tried to parse out C structures and display their member offsets for you. This was especially useful for people looking at binary dumps or poking around the kernel. </p>
 <p> Pstruct was not a pretty program. Neither was it particularly robust. The problem, you see, was that the C compiler was much better at parsing C than I could ever hope to be. </p>

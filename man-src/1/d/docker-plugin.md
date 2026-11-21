@@ -1,4 +1,5 @@
 ---
+
 title: "docker-plugin(1)"
 name: "docker-plugin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-plugin/"
 description: "docker-plugin – Manage plugins"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker plugin</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Manage plugins </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for plugin</p>

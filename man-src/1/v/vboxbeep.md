@@ -1,4 +1,5 @@
 ---
+
 title: "vboxbeep(1)"
 name: "vboxbeep"
 section: "1"
@@ -9,9 +10,7 @@ description: "vboxbeep – isdn voice box (beeper)"
 
 <h2>NAME</h2>
 <p> vboxbeep &#8211; isdn voice box (beeper)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>vboxbeep</code> <i>[OPTION] [OPTION] [&#8230;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> vboxbeep is a daemon, that watches several message directories. If new messages are found it will beep. Vboxbeep does not use vboxd, it can only watch local directories. </p>
 <p> Vboxbeep is also used to stop this annoying beep.</p>
 <h2>OPTIONS</h2>

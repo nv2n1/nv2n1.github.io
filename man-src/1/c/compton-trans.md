@@ -1,4 +1,5 @@
 ---
+
 title: "compton-trans(1)"
 name: "compton-trans"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-compton-trans/"
 description: "compton-trans – an opacity setter tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>compton-trans</code> [-w <i>WINDOW_ID</i>] [-n <i>WINDOW_NAME</i>] [-c] [-s] <i>OPACITY</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>compton-trans</code> is a bash script that sets <i>_NET_WM_WINDOW_OPACITY</i> attribute of a window using standard X11 command-line utilities, including <code><a href="/docs/linux/man/1-xprop/">xprop</a></code>(1) and <code><a href="/docs/linux/man/1-xwininfo/">xwininfo</a></code>(1). It is similar to <code><a href="/docs/linux/man/1-transset/">transset</a></code>(1) or <code>transset-df</code>(1).</p>
 <h2>OPTIONS</h2>
 <p> <code>-w</code> <i>WINDOW_ID</i></p>

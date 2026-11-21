@@ -1,4 +1,5 @@
 ---
+
 title: "mallinfo(3)"
 name: "mallinfo"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-mallinfo/"
 description: "mallinfo – obtain memory allocation information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>struct mallinfo mallinfo(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mallinfo</code>() function returns a copy of a structure containing information about memory allocations performed by <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) and related functions. </p>
 <p> Note that not all allocations are visible to <code>mallinfo</code>(); see BUGS and consider using <code><a href="/docs/linux/man/3-malloc_info/">malloc_info</a></code>(3) instead. </p>
 <p> The returned structure is defined as follows: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-screen(1)"
 name: "byobu-screen"
 section: "1"
@@ -9,7 +10,6 @@ description: "byobu-screen – Launch byobu with screen as the backend"
 
 <h2>NAME</h2>
 <p> byobu-screen &#8211; Launch byobu with screen as the backend </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu-screen</code> launches <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1) with <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) as the backend window manager. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1), <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "psclip(1)"
 name: "psclip"
 section: "1"
@@ -9,10 +10,8 @@ description: "psclip – Initialize or terminate polygonal clip paths"
 
 <h2>NAME</h2>
 <p> psclip &#8211; Initialize or terminate polygonal clip paths</p>
-<h2>SYNOPSIS</h2>
 <p> <code>psclip</code> [ <i>table</i> ] <i>parameters</i> [<i>n</i>] <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>m</code>|<code>p</code>|<code>x</code>|<code>y</code>] ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ ] [ ] [ ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>psclip</code> reads (x,y) file(s) [or standard input] and draws polygons that are activated as clipping paths. Several files may be read to create complex paths consisting of several non-connecting segments. Only marks that are subsequently drawn inside the clipping path will be shown. To determine what is inside or outside the clipping path, <code>psclip</code> uses the even-odd rule. When a ray drawn from any point, regardless of direction, crosses the clipping path segments an odd number of times, the point is inside the clipping path. If the number is even, the point is outside. The <code>-N</code> option, reverses the sense of what is the inside and outside of the paths by plotting a clipping path along the map boundary. After subsequent plotting, which will be clipped against these paths, the clipping may be deactivated by running <code>psclip</code> a second time with the <code>-C</code> option only.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

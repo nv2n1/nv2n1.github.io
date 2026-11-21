@@ -1,4 +1,5 @@
 ---
+
 title: "fts-transfer-submit(1)"
 name: "fts-transfer-submit"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-transfer-submit/"
 
  fts-transfer-submit
 
-<h2>SYNOPSIS</h2>
+fts-transfer-submit [options] SOURCE DEST [CHECKSUM]
 
- fts-transfer-submit [options] SOURCE DEST [CHECKSUM]
-
-<h2>DESCRIPTION</h2>
-
- fts-transfer-submit is a tool for submitting transfer-jobs using the GRID File Transfer Service 3. The user has to specify the source and destination, optionally the checksum may be specified (Algorithm:Value)
+fts-transfer-submit is a tool for submitting transfer-jobs using the GRID File Transfer Service 3. The user has to specify the source and destination, optionally the checksum may be specified (Algorithm:Value)
 
 <h2>OPTIONS</h2>
 

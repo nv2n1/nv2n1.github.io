@@ -1,4 +1,5 @@
 ---
+
 title: "spotrf(3)"
 name: "spotrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spotrf/"
 description: "spotrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spotrf</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>SPOTRF</code></p>

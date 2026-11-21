@@ -1,4 +1,5 @@
 ---
+
 title: "varnishncsa(1)"
 name: "varnishncsa"
 section: "1"
@@ -9,9 +10,7 @@ description: "varnishncsa – Display Varnish logs in Apache / NCSA combined log
 
 <h2>NAME</h2>
 <p> varnishncsa &#8211; Display Varnish logs in Apache / NCSA combined log format</p>
-<h2>SYNOPSIS</h2>
 <p> varnishncsa [-a] [-C] [-d] [-D] [-F format] [-g &lt;request|vxid&gt;] [-h] [-n name] [-N filename] [-P file] [-q query] [-V] [-w filename]</p>
-<h2>DESCRIPTION</h2>
 <p> The varnishncsa utility reads <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) shared memory logs and presents them in the Apache / NCSA &quot;combined&quot; log format. </p>
 <p> Each log line produced is based on a single Request type transaction gathered from the shared memory log. The Request transaction is then scanned for the relevant parts in order to output one log line. To filter the log lines produced, use the query language to select the applicable transactions. Non-request transactions are ignored. </p>
 <p> The following options are available:</p>

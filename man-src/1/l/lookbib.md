@@ -1,4 +1,5 @@
 ---
+
 title: "lookbib(1)"
 name: "lookbib"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lookbib/"
 description: "lookbib – search bibliographic databases"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-i </code><i>string</i> ] [ <code>-t </code><i>n</i> ] <i>filename</i> &#8230; <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>lookbib</i> prints a prompt on the standard error (unless the standard input is not a terminal), reads from the standard input a line containing a set of keywords, searches the bibliographic databases <i>filename</i> &#8230; for references containing those keywords, prints any references found on the standard output, and repeats this process until the end of input. For each database <i>filename</i> to be searched, if an index filename<i>.i</i> created by <i><a href="/docs/linux/man/1-indxbib/">indxbib</a></i>(1) exists, then it will be searched instead; each index can cover multiple databases.</p>
 <h2>OPTIONS</h2>
 <p> Whitespace is permitted between a command-line option and its argument.</p>

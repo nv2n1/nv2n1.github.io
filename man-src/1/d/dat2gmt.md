@@ -1,4 +1,5 @@
 ---
+
 title: "dat2gmt(1)"
 name: "dat2gmt"
 section: "1"
@@ -9,9 +10,7 @@ description: "dat2gmt – Convert an ASCII file to a binary gmt file"
 
 <h2>NAME</h2>
 <p> dat2gmt &#8211; Convert an ASCII file to a binary gmt file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dat2gmt</code> <i>gmtfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dat2gmt</code> reads an ASCII version of a gmt file (made by <code>gmt2dat</code>) from standard input and creates a binary gmt file.</p>
 <h2>EXAMPLES</h2>
 <p> To create a gmt file from the ASCII file c2104_fixed.ascii, run </p>

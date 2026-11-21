@@ -1,4 +1,5 @@
 ---
+
 title: "funmerge(1)"
 name: "funmerge"
 section: "1"
@@ -9,7 +10,6 @@ description: "funmerge – merge one or more Funtools table files"
 
 <h2>NAME</h2>
 <p> <code>funmerge &#8211; merge one or more Funtools table files</code></p>
-<h2>SYNOPSIS</h2>
 <p> funmerge [-w|-x] -f [colname] &lt;iname1&gt; &lt;iname2&gt; &#8230; &lt;oname&gt;</p>
 <h2>OPTIONS</h2>
 <pre>
@@ -17,7 +17,6 @@ description: "funmerge – merge one or more Funtools table files"
   -w    # adjust position values using WCS info
   -x    # adjust position values using WCS info and save old values
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>funmerge</code> merges <font SIZE="-1">FITS</font> data from one or more <font SIZE="-1">FITS</font> Binary Table files or raw event files. </p>
 <p> The first argument to the program specifies the first input <font SIZE="-1">FITS</font> table or raw event file. If &#8220;stdin&#8221; is specified, data are read from the standard input. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions and row filters. Subsequent arguments specify additional event files and tables to merge. (<font SIZE="-1">NB:</font> Stdin cannot not be used for any of these additional input file arguments.) The last argument is the output <font SIZE="-1">FITS</font> file. The columns in each input table must be identical. </p>
 <p> If an input file begins with the &#8216;@&#8217; character, it is processed as an include file, i.e., as a text file containing event file names (as well as blank lines and/or comment lines starting with the &#8216;#&#8217; sign). If standard input is specified as an include file (&#8216;@stdin&#8217;), then file names are read from the standard input until <font SIZE="-1">EOF</font> (^D). Event files and include files can be mixed on a command line. </p>

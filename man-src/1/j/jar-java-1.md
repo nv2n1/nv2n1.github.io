@@ -1,4 +1,5 @@
 ---
+
 title: "jar-java-1(1)"
 name: "jar-java-1"
 section: "1"
@@ -10,7 +11,6 @@ description: "jar-The Java Archive Tool"
 <h2>Name</h2>
 <p> jar-The Java Archive Tool </p>
 <p> <code>jar</code> combines multiple files into a single JAR archive file.</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dl>
 <dt>Create jar file</dt>
@@ -42,7 +42,6 @@ description: "jar-The Java Archive Tool"
 <dt>-Joption</dt>
 <dd> Option to be passed into the Java runtime environment. (There must be no space between <i>-J</i> and <i>option</i>).</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jar</code> tool combines multiple files into a single JAR archive file. <code>jar</code> is a general-purpose archiving and compression tool, based on ZIP and the <i>ZLIB</i> @ <a rel="nofollow" href="http://www.gzip.org/zlib/">http://www.gzip.org/zlib/</a> compression format. However, <code>jar</code> was designed mainly package java applets or applications into a single archive. When the components of an applet or application (files, images and sounds) are combined into a single archive, they can be downloaded by a java agent (like a browser) in a single HTTP transaction, rather than requiring a new connection for each piece. This dramatically improves download times. <code>jar</code> also compresses files and so further improves download time. In addition, it allows individual entries in a file to be signed by the applet author so that their origin can be authenticated. The syntax for the jar tool is almost identical to the syntax for the <i>tar</i> command. A <code>jar</code> archive can be used as a class path entry, whether or not it is compressed. </p>
 <p> Typical usage to combine files into a jar file is: </p>
 <pre>

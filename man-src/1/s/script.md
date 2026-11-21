@@ -1,4 +1,5 @@
 ---
+
 title: "script(1)"
 name: "script"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-script/"
 description: "script – make typescript of terminal session"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>script</code> [options] [<i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>script</code> makes a typescript of everything on your terminal session. The terminal data are stored in raw form to the log file and information about timing to another (optional) structured log file. The timing log file is necessary to replay the session later by <code><a href="/docs/linux/man/1-scriptreplay/">scriptreplay</a></code>(1) and to store additional information about the session. </p>
 <p> Since version 2.35, <code>script</code> supports multiple streams and allows the logging of input and output to separate files or all the one file. This version also supports new timing file which records additional information. The command <code>scriptreplay &#8211;summary</code> then provides all the information. </p>
 <p> If the argument <i>file</i> or option <code>&#8211;log-out</code> <i>file</i> is given, <code>script</code> saves the dialogue in this <i>file</i>. If no filename is given, the dialogue is saved in the file <i>typescript</i>. </p>

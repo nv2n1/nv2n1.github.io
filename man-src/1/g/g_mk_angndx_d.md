@@ -1,4 +1,5 @@
 ---
+
 title: "g_mk_angndx_d(1)"
 name: "g_mk_angndx_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "mk_angndx – generates index files for g_angle"
 <h2>NAME</h2>
 <p> mk_angndx &#8211; generates index files for g_angle </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>mk_angndx</code> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> angle.ndx </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-type</code><i> enum </i> <code>-[no]hyd</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> mk_angndx makes an index file for calculation of angle distributions etc. It uses a run input file (<code> .tpx</code>) for the definitions of the angles, dihedrals etc.</p>
 <h2>FILES</h2>
 <p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />

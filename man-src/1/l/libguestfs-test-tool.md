@@ -1,4 +1,5 @@
 ---
+
 title: "libguestfs-test-tool(1)"
 name: "libguestfs-test-tool"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-libguestfs-test-tool/"
 description: "libguestfs-test-tool – Diagnostics for libguestfs"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  libguestfs-test-tool [--options]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> libguestfs-test-tool is a test program shipped with libguestfs to allow you to check basic libguestfs functionality is working. This is needed because libguestfs occasionally breaks for reasons beyond our control: usually because of changes in the underlying qemu or kernel packages, or the host environment. </p>
 <p> If you suspect a problem in libguestfs, then just run: </p>
 <pre>

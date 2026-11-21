@@ -1,4 +1,5 @@
 ---
+
 title: "speexdec(1)"
 name: "speexdec"
 section: "1"
@@ -9,9 +10,7 @@ description: "speexdec – The reference implementation speex decoder."
 
 <h2>NAME</h2>
 <p> speexdec &#8211; The reference implementation speex decoder.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>speexdec</code> [<i>options</i>] <i>input_file.spx </i>[<i>output_file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Decodes a Speex file and produce a WAV file or raw file</p>
 <h3>input_file can be:</h3>
 <dl>

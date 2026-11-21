@@ -1,4 +1,5 @@
 ---
+
 title: "irrecord(1)"
 name: "irrecord"
 section: "1"
@@ -9,12 +10,10 @@ description: "irrecord – application for recording IR-codes for usage with LIR
 
 <h2>NAME</h2>
 <p> irrecord &#8211; application for recording IR-codes for usage with LIRC</p>
-<h2>SYNOPSIS</h2>
 <p> <code>irrecord [-f] [-n] [-H driver] [-d device] [file]</code><br />
  <code>irrecord -a &lt;file&gt;</code><br />
  <code>irrecord -l</code><br />
  <code>irrecord &#8211;help | &#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program will record the signals from your remote control and create a config file for lircd. A proper config file for lircd is maybe the most vital part of this package, so you should invest some time to create a working config file. Although I put a good deal of effort in this program it is often not possible to automatically recognize all features of a remote control. </p>
 <p> If the program fails to recognize the protocol of the remote control you should use the &#8211;force option to at least create a config file in raw mode. </p>
 <p> If <i>file</i> is not specified it defaults to &quot;irrecord.conf&quot; </p>

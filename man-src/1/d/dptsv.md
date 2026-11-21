@@ -1,4 +1,5 @@
 ---
+
 title: "dptsv(1)"
 name: "dptsv"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-dptsv/"
 description: "dptsv – mutual converter between TSV and QDBM Depot database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dptsv import</code> [-bnum <i>num</i>] [-bin] <i>name</i><br />
  <code>dptsv export</code> [-bin] <i>name</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>dptsv</code> commands. </p>
 <p> The command <i>dptsv</i> features mutual conversion between a database of Depot and a TSV text. This command is useful when data exchange with another version of QDBM or another DBM, or when data exchange between systems which have different byte orders. This command is used in the above format. <i>name</i> specifies a database name. </p>
 <p> The subcommand <code>export</code> reads TSV data from the standard input. If a key overlaps, the latter is adopted. <code>-bnum</code> specifies the number of the elements of the bucket array. The subcommand <code>import</code> writes TSV data to the standard output.</p>

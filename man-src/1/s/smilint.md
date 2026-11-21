@@ -1,4 +1,5 @@
 ---
+
 title: "smilint(1)"
 name: "smilint"
 section: "1"
@@ -9,9 +10,7 @@ description: "smilint – syntax and semantic checks of SMIv1/v2 and SPPI module
 
 <h2>NAME</h2>
 <p> smilint &#8211; syntax and semantic checks of SMIv1/v2 and SPPI modules</p>
-<h2>SYNOPSIS</h2>
 <p> <code>smilint</code> [ <code>-Vhersm</code> ] [ <code>-c </code><i>file</i> ] [ <code>-p </code><i>module</i> ] [ <code>-l </code><i>level</i> ] [ <code>-i </code><i>error-pattern</i> ] <i>module(s)</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>smilint</code> program is used to check MIB or PIB modules for syntax errors and semantics at some degree. SMIv1/v2 style MIB modules as well as SPPI PIB modules are supported. </p>
 <p> The rules that <code>smilint</code> is based on are taken from RFC 1155, RFC 1212 and RFC 1215 for SMIv1, RFCs 2578-2580 for SMIv2, RFC 3159 for SPPI.</p>
 <h2>OPTIONS</h2>

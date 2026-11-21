@@ -1,4 +1,5 @@
 ---
+
 title: "ccze-cssdump(1)"
 name: "ccze-cssdump"
 section: "1"
@@ -9,9 +10,7 @@ description: "ccze-cssdump – Dump CCZE color setup into CSS format"
 
 <h2>NAME</h2>
 <p> ccze-cssdump &#8211; Dump CCZE color setup into CSS format</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ccze-cssdump</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ccze-cssdump</code> utility, which is a simple tool to dump the color setup of CCZE into Cascading Style Sheet format, to be used later by <code>ccze -h -o cssfile</code>.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

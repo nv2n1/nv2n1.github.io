@@ -1,4 +1,5 @@
 ---
+
 title: "perl5121delta(1)"
 name: "perl5121delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5121delta/"
 description: "perl5121delta – what is new for perl v5.12.1"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.12.0 release and the 5.12.1 release. </p>
 <p> If you are upgrading from an earlier release such as 5.10.1, first read perl5120delta, which describes differences between 5.10.1 and 5.12.0.</p>
 <h2>Incompatible Changes</h2>

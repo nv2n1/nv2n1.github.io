@@ -1,4 +1,5 @@
 ---
+
 title: "claqp2(3)"
 name: "claqp2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqp2/"
 description: "claqp2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqp2</code> (M, N, OFFSET, A, LDA, JPVT, TAU, VN1, VN2, WORK)<br />
  <i></i><code>CLAQP2</code> computes a QR factorization with column pivoting of the matrix block.</p>

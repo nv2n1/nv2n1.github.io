@@ -1,4 +1,5 @@
 ---
+
 title: "statist(1)"
 name: "statist"
 section: "1"
@@ -9,9 +10,7 @@ description: "statist – calculate Huffman distribution for freeze(1)"
 
 <h2>NAME</h2>
 <p> statist &#8211; calculate Huffman distribution for <i><a href="/docs/linux/man/1-freeze/">freeze</a></i>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>statist</code> [ <code>-gx&#8230;</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The default table is tuned for both C texts and executable files (as in LHARC). If you will freeze any other files (natural language texts, databases, images, fonts, etc.) you can calculate the matching positions distribution using the <code>`statist&#8217;</code> program, which calculates and displays the mentioned distribution for the given file. It is useful for large (100K or more) files. </p>
 <p> Though the built-in position table is polyvalent, the tuning can increase the compression rate up to one additional percent. (Observed mainly on text files.)</p>
 <h2>USAGE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-tarball(1)"
 name: "shtool-tarball"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-shtool-tarball/"
 description: "shtool tarball – GNU shtool command for rolling standardized tarballs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>shtool tarball</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-o</code>|<code>&#8211;output</code> <i>tarball</i>] [<code>-c</code>|<code>&#8211;compress</code> <i>prog</i>] [<code>-d</code>|<code>&#8211;directory</code> <i>directory</i>] [<code>-u</code>|<code>&#8211;user</code> <i>user</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] [<code>-e</code>|<code>&#8211;exclude</code> <i>pattern</i>] <i>path</i> [<i>path</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This command is for rolling input files under <i>path</i> into a distribution tarballs which can be extracted by <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1). </p>
 <p> The four important aspects of good open source software tarballs are: (1) unpack into a single top-level directory, (2) top-level directory corresponds to the tarball filename, (3) tarball files should be sorted and (4) arbitrary names for file owner and group.</p>
 <h2>OPTIONS</h2>

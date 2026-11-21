@@ -1,4 +1,5 @@
 ---
+
 title: "tkiptun-ng(1)"
 name: "tkiptun-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tkiptun-ng/"
 description: "tkiptun-ng – inject a few frames into a WPA TKIP network with QoS"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tkiptun-ng</code> [options] &lt;replay interface&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tkiptun-ng</code> is a tool created by Martin Beck aka hirte, a member of aircrack-ng team. This tool is able to inject a few frames into a WPA TKIP network with QoS. He worked with Erik Tews (who created PTW attack) for a conference in PacSec 2008: &quot;Gone in 900 Seconds, Some Crypto Issues with WPA&quot;.</p>
 <h2>OPERATION</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-unpack-objects(1)"
 name: "git-unpack-objects"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-unpack-objects/"
 description: "git-unpack-objects – Unpack objects from a packed archive"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git unpack - objects[-n][-q][-r][--strict]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Read a packed archive (.pack) from the standard input, expanding the objects contained within and writing them into the repository in &quot;loose&quot; (one object per file) format. </p>
 <p> Objects that already exist in the repository will <code>not</code> be unpacked from the packfile. Therefore, nothing will be unpacked if you use this command on a packfile that exists within the target repository. </p>
 <p> See <code><a href="/docs/linux/man/1-git-repack/">git-repack</a></code>(1) for options to generate new packs and replace existing ones.</p>

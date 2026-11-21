@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtopclxl(1)"
 name: "pnmtopclxl"
 section: "1"
@@ -9,10 +10,8 @@ description: "pnmtopclxl – convert a PNM image to an HP LaserJet PCL XL printe
 
 <h2>NAME</h2>
 <p> pnmtopclxl &#8211; convert a PNM image to an HP LaserJet PCL XL printer stream </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtopclxl</code> &lt;br&gt;{ [<code>-dpi=</code><i>N</i>] [<code>-xoffs=</code><i>N</i>] [<code>-yoffs=</code><i>N</i>] [<code>-center</code>] [<code>-duplex=</code>{<code>vertical</code>|<code>horizontal</code>}] [<code>-format=</code><i>paperformat</i>] [<code>-feeder=</code><i>N</i>] [<code>-copies=</code><i>N</i>] [<code>-rendergray</code>] [<code>-jobsetup=</code><i>filename</i>] &lt;br&gt;| <code>-embedded</code> &lt;br&gt;} [<code>-colorok</code>] <i>pnmfile1</i> <i>pnmfile2</i> &#8230; </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pnmtopclxl</code> reads one or more PNM input streams, each containing one or more PNM images, and generates a sequence of output pages in the HP PCL-XL (formerly named PCL 6) printer control language. You can send this stream to a PCL-XL printer to print the images. </p>
 <p> Alternatively, you can make <code>pnmtopclxl</code> generate just the PCL-XL instructions to print an image, which you can embed in your own PCL-XL stream to place an image on one of your pages. (<code>-embedded</code> option). </p>

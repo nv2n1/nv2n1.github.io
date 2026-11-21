@@ -1,4 +1,5 @@
 ---
+
 title: "byteorder(3)"
 name: "byteorder"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-byteorder/"
 description: "htonl, htons, ntohl, ntohs – convert values between host and network byte order"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/inet.h&gt;
 uint32_t htonl(uint32_t hostlong);
@@ -15,7 +15,6 @@ uint16_t htons(uint16_t hostshort);
 uint32_t ntohl(uint32_t netlong);
 uint16_t ntohs(uint16_t netshort);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>htonl</code>() function converts the unsigned integer <i>hostlong</i> from host byte order to network byte order. </p>
 <p> The <code>htons</code>() function converts the unsigned short integer <i>hostshort</i> from host byte order to network byte order. </p>
 <p> The <code>ntohl</code>() function converts the unsigned integer <i>netlong</i> from network byte order to host byte order. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-getromtoken(1)"
 name: "pilot-getromtoken"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-getromtoken – Reads a ROM token from a Palm Handheld devic
 <p> pilot-getromtoken &#8211; Reads a ROM token from a Palm Handheld device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-getromtoken</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;token</code>&nbsp;<wbr>&nbsp;<wbr><code>token</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;sysinfo</code>]&nbsp;<wbr>[<code>&#8211;ram</code>]&nbsp;<wbr>[<code>&#8211;rom</code>]&nbsp;<wbr>[<i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Tokens you may currently extract are: </p>
 <p> adcc: Entropy for internal A-&gt;D convertor calibration </p>
 <p> irda: Present only on memory card w/IrDA support </p>

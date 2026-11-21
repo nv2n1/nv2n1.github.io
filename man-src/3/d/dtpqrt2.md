@@ -1,4 +1,5 @@
 ---
+
 title: "dtpqrt2(3)"
 name: "dtpqrt2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtpqrt2/"
 description: "dtpqrt2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtpqrt2</code> (M, N, L, A, LDA, B, LDB, T, LDT, INFO)<br />
  <i></i><code>DTPQRT2</code> computes a QR factorization of a real or complex &#8216;triangular-pentagonal&#8217; matrix, which is composed of a triangular block and a pentagonal block, using the compact WY representation for Q.</p>

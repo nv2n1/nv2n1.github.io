@@ -1,4 +1,5 @@
 ---
+
 title: "cjdroute(1)"
 name: "cjdroute"
 section: "1"
@@ -9,9 +10,7 @@ description: "cjdroute — Cjdns packet switch"
 
 <h2>NAME</h2>
 <p> <code>cjdroute</code> &#8212; Cjdns packet switch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>/usr/sbin/cjdroute</code> [&lt;options&gt;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Cjdns implements an encrypted IPv6 network using public-key cryptography for address allocation and a distributed hash table for routing. This provides near-zero-configuration networking, and prevents many of the security and scalability issues that plague existing networks. </p>
 <p> cjdroute runs in the background and either decrypts packets addressed to this node, or sends them on to the next node in the route.</p>
 <h2>OPTIONS</h2>

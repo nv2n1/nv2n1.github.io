@@ -1,4 +1,5 @@
 ---
+
 title: "slaruv(3)"
 name: "slaruv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaruv/"
 description: "slaruv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaruv</code> (ISEED, N, X)<br />
  <i></i><code>SLARUV</code> returns a vector of n random real numbers from a uniform distribution.</p>

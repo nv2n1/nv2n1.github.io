@@ -1,4 +1,5 @@
 ---
+
 title: "htstat(1)"
 name: "htstat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-htstat/"
 description: "htstat – returns statistics on the document and word databases, much like the -s option to htdig or htmerge."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>htstat</code> <i>[-v][-a][-c configfile][-u]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Htdig retrieves HTML documents using the HTTP protocol and gathers information from these documents which can later be used to search these documents. This program can be referred to as the search robot.</p>
 <h2>OPTIONS</h2>
 <dl>

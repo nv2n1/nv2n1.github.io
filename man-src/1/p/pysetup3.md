@@ -1,4 +1,5 @@
 ---
+
 title: "pysetup3(1)"
 name: "pysetup3"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pysetup3/"
 description: "pysetup3.3 – pysetup tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pysetup</code> [<i>options</i>] <i>action </i>[<i>action_options</i>]</p>
-<h2>DESCRIPTION</h2>
 <h3>Actions:</h3>
 <dl>
 <dt>

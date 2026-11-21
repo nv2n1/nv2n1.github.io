@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_job_template_s(3)"
 name: "drmaa_job_template_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "drmaa_job_template_s –"
 ---
 
 <p> Job template data.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;drmaa_impl.h&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>drmaa_session_t</code> * <code>session</code><br />

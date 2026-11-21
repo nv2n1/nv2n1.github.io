@@ -1,4 +1,5 @@
 ---
+
 title: "xconsole(1)"
 name: "xconsole"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xconsole/"
 description: "xconsole – monitor system console messages with X"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xconsole</code> [-<i>toolkitoption</i> &#8230;] [-file <i>file-name</i>] [-notify] [-stripNonprint] [-daemon] [-verbose] [-exitOnFail]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xconsole</i> program displays messages which are usually sent to /dev/console.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xconsole</i> accepts all of the standard X Toolkit command line options along with the additional options listed below:</p>

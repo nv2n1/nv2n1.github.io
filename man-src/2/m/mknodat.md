@@ -1,4 +1,5 @@
 ---
+
 title: "mknodat(2)"
 name: "mknodat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mknodat/"
 description: "mknod, mknodat – create a special or ordinary file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt;
 #include &lt;sys/stat.h&gt;
@@ -25,7 +25,6 @@ int mknodat(int dirfd, const char *pathname, mode_t mode, dev_t dev);
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The system call <code>mknod</code>() creates a filesystem node (file, device special file, or named pipe) named <i>pathname</i>, with attributes specified by <i>mode</i> and <i>dev</i>. </p>
 <p> The <i>mode</i> argument specifies both the file mode to use and the type of node to be created. It should be a combination (using bitwise OR) of one of the file types listed below and zero or more of the file mode bits listed in <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7). </p>
 <p> The file mode is modified by the process&#8217;s <i>umask</i> in the usual way: in the absence of a default ACL, the permissions of the created node are (<i>mode</i> &amp; ~<i>umask</i>). </p>

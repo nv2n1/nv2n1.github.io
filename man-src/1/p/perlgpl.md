@@ -1,4 +1,5 @@
 ---
+
 title: "perlgpl(1)"
 name: "perlgpl"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-perlgpl/"
 description: "perlgpl – the GNU General Public License, version 1"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  You can refer to this document in Pod via &quot;L&lt;perlgpl&gt;&quot;
  Or you can see this document by entering &quot;perldoc perlgpl&quot;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Perl is free software; you can redistribute it and/or modify it under the terms of either: </p>
 <pre>
         a) the GNU General Public License as published by the Free

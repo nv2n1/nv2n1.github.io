@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-fw-activate(1)"
 name: "nvme-fw-activate"
 section: "1"
@@ -6,25 +7,14 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-fw-activate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-fw-activate - Used to verify and commit a firmware image. 
 
- nvme-fw-activate - Used to verify and commit a firmware image. 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme fw - activate&lt;device&gt;[--slot = &lt;slot&gt; | -s&lt;slot&gt;]
                           [--action = &lt;action&gt; | -a&lt;action&gt;]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- For the NVMe device given, send an nvme Firmware Activate admin command and provides the results. 
+For the NVMe device given, send an nvme Firmware Activate admin command and provides the results. 
 
  The Firmware Activate command is used to verify that a valid firmware image has been downloaded and to commit that revision to a specific firmware slot. The host may select the firmware image to activate on the next controller reset (CC.EN transitions from '1' to '0', a PCI function level reset, and/or other Controller or NVM Subsystem Reset) as part of this command. The currently executing firmware revision may be determined from the Firmware Revision field of the Identify Controller data structure as indicated in the Firmware Slot Information log page. 
 

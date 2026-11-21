@@ -1,4 +1,5 @@
 ---
+
 title: "bip(1)"
 name: "bip"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bip/"
 description: "bip – BIP IRC Proxy"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bip</code> [ <code>-f</code> <i>config_file</i> ] [ <code>-n</code> ] [ <code>-h</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> BIP is an IRC Proxy </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "slarrj(3)"
 name: "slarrj"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarrj/"
 description: "slarrj.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrj</code> (N, D, E2, IFIRST, ILAST, RTOL, OFFSET, W, WERR, WORK, IWORK, PIVMIN, SPDIAM, INFO)<br />
  <i></i><code>SLARRJ</code> performs refinement of the initial estimates of the eigenvalues of the matrix T.</p>

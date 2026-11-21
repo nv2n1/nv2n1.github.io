@@ -1,4 +1,5 @@
 ---
+
 title: "add_key(2)"
 name: "add_key"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-add_key/"
 description: "add_key – add a key to the kernel’s key management facility"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 #include &lt;sys/types.h&gt;
@@ -16,7 +16,6 @@ key_serial_t add_key(const char *type, const char *description,
                      key_serial_t keyring);
 </code></pre>
 <p> No glibc wrapper is provided for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>add_key</code>() creates or updates a key of the given <i>type</i> and <i>description</i>, instantiates it with the <i>payload</i> of length <i>plen</i>, attaches it to the nominated <i>keyring</i>, and returns the key&#8217;s serial number. </p>
 <p> The key may be rejected if the provided data is in the wrong format or it is invalid in some other way. </p>
 <p> If the destination <i>keyring</i> already contains a key that matches the specified <i>type</i> and <i>description</i>, then, if the key type supports it, that key will be updated rather than a new key being created; if not, a new key (with a different ID) will be created and it will displace the link to the extant key from the keyring. </p>

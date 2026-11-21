@@ -1,4 +1,5 @@
 ---
+
 title: "stl2gts(1)"
 name: "stl2gts"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-stl2gts/"
 description: "stl2gts – convert an STL file to GTS format."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>stl2gts</code> [<i>OPTIONS</i>]&nbsp;&lt;&nbsp;<i>input.stl&nbsp;</i>&gt;&nbsp;<i>output.gts</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>stl2gts</code> command. </p>
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

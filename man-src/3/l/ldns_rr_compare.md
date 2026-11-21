@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_compare(3)"
 name: "ldns_rr_compare"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_rr_compare, ldns_rr_compare_ds"
 
 <h2>NAME</h2>
 <p> ldns_rr_compare, ldns_rr_compare_ds </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> int ldns_rr_compare(const ldns_rr *rr1, const ldns_rr *rr2); </p>
 <p> bool ldns_rr_compare_ds(const ldns_rr *rr1, const ldns_rr *rr2); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_compare</i>()</dt>
 <dd>compares two rrs. The TTL is not looked at. .br <code>rr1</code>: the first one .br <code>rr2</code>: the second one .br Returns 0 if equal -1 if rr1 comes before rr2 +1 if rr2 comes before rr1</dd></dl>

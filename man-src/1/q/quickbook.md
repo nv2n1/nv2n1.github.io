@@ -1,4 +1,5 @@
 ---
+
 title: "quickbook(1)"
 name: "quickbook"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-quickbook/"
 description: "Quickbook – WikiWiki style documentation tool geared towards C++ documentation"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <code>QuickBook </code> is a WikiWiki style documentation tool geared towards C++ documentation using simple rules and markup for simple formatting tasks. <code>QuickBook </code> extends the WikiWiki concept. Like the WikiWiki, QuickBook documents are simple text files. A single QuickBook document can generate a fully linked set of nice HTML and PostScript/PDF documents complete with images and syntax- colorized source code. </p>
 <p> Features include: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*&nbsp;generate BoostBook xml, to generate HTML, PostScript and PDF<br />

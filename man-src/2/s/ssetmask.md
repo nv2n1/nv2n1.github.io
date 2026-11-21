@@ -1,4 +1,5 @@
 ---
+
 title: "ssetmask(2)"
 name: "ssetmask"
 section: "2"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/2-ssetmask/"
 description: "sgetmask, ssetmask – manipulation of signal mask (obsolete)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>long sgetmask(void);</code> </p>
 <p> <code>long ssetmask(long </code><i>newmask</i><code>);</code> </p>
 <p> <i>Note</i>: There are no glibc wrappers for these system calls; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> These system calls are obsolete. <i>Do not use them</i>; use <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2) instead. </p>
 <p> <code>sgetmask</code>() returns the signal mask of the calling process. </p>
 <p> <code>ssetmask</code>() sets the signal mask of the calling process to the value given in <i>newmask</i>. The previous signal mask is returned. </p>

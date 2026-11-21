@@ -1,4 +1,5 @@
 ---
+
 title: "git-tar-tree(1)"
 name: "git-tar-tree"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-tar-tree/"
 description: "git-tar-tree – Create a tar archive of the files in the named tree object"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git tar - tree[--remote = &lt;repo&gt;]&lt;tree - ish&gt;[&lt;base&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> THIS COMMAND IS DEPRECATED. Use <i>git archive</i> with &#8211;format=tar option instead (and move the &lt;base&gt; argument to &#8211;prefix=base/). </p>
 <p> Creates a tar archive containing the tree structure for the named tree. When &lt;base&gt; is specified it is added as a leading path to the files in the generated tar archive. </p>
 <p> <i>git tar-tree</i> behaves differently when given a tree ID versus when given a commit ID or tag ID. In the first case the current time is used as modification time of each file in the archive. In the latter case the commit time as recorded in the referenced commit object is used instead. Additionally the commit ID is stored in a global extended pax header. It can be extracted using <i>git get-tar-commit-id</i>.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_madd_spec(3)"
 name: "dirfile_madd_spec"
 section: "3"
@@ -9,12 +10,10 @@ description: "dirfile_add_spec, dirfile_madd_spec — add a field to a dirfile"
 
 <h2>NAME</h2>
 <p> dirfile_add_spec, dirfile_madd_spec &#8212; add a field to a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_add_spec(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>line</i><code>,</code> <code>int </code><i>fragment_index</i><code>);</code></dt>
 <dt> <code>int dirfile_madd_spec(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>line</i><code>,</code> <code>const char *</code><i>parent</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_add_spec</code>() function adds the field described by the field specification line in <i>line</i> to the dirfile specified by <i>dirfile</i>. The <code>dirfile_madd_spec</code>() function behaves similarly, but adds the field as a metafield under the field indicated by the field <i>parent</i>. Field specification lines are described in detail in <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5). Since Standards Version 7 (see <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5)) permits specifying metafield without the use of the <code>/META</code> directive, <code>dirfile_add_spec</code>() may also be used to add metafields, by specifying the metafield&#8217;s full field code. See <a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a>(5) for full details. </dd>
 <p> When using <code>dirfile_madd_spec</code>(), <i>line</i> should only contain a field specification, and not a <code>/META</code> directive. </p>
 <p> Passing these functions a directive line instead of a field specification line will result in a syntax error. These functions never call the registered parser callback function, even if <i>line</i> contains a syntax error. </p>

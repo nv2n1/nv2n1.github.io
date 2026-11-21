@@ -1,4 +1,5 @@
 ---
+
 title: "dngettext(3)"
 name: "dngettext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dngettext/"
 description: "ngettext, dngettext, dcngettext – translate message and choose plural form"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libintl.h&gt;
 char *ngettext(const char *msgid, const char *msgid_plural,
@@ -19,7 +19,6 @@ char *dcngettext(const char *domainname,
                  const char *msgid, const char *msgid_plural,
                  unsigned long int n, int category);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ngettext</code>, <code>dngettext</code> and <code>dcngettext</code> functions attempt to translate a text string into the user&#8217;s native language, by looking up the appropriate plural form of the translation in a message catalog. </p>
 <p> Plural forms are grammatical variants depending on the a number. Some languages have two forms, called singular and plural. Other languages have three forms, called singular, dual and plural. There are also languages with four forms. </p>
 <p> The <code>ngettext</code>, <code>dngettext</code> and <code>dcngettext</code> functions work like the <code>gettext</code>, <code>dgettext</code> and <code>dcgettext</code> functions, respectively. Additionally, they choose the appropriate plural form, which depends on the number <i>n</i> and the language of the message catalog where the translation was found. </p>

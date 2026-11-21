@@ -1,4 +1,5 @@
 ---
+
 title: "perlretut(1)"
 name: "perlretut"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlretut/"
 description: "perlretut – Perl regular expressions tutorial"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> This page provides a basic tutorial on understanding, creating and using regular expressions in Perl. It serves as a complement to the reference page on regular expressions perlre. Regular expressions are an integral part of the <code>&quot;m//&quot;</code>, <code>&quot;s///&quot;</code>, <code>&quot;qr//&quot;</code> and <code>&quot;split&quot;</code> operators and so this tutorial also overlaps with ``Regexp Quote-Like Operators&#8217;&#8216; in perlop and ``split&#8217;&#8216; in perlfunc. </p>
 <p> Perl is widely renowned for excellence in text processing, and regular expressions are one of the big factors behind this fame. Perl regular expressions display an efficiency and flexibility unknown in most other computer languages. Mastering even the basics of regular expressions will allow you to manipulate text with surprising ease. </p>
 <p> What is a regular expression? At its most basic, a regular expression is a template that is used to determine if a string has certain characteristics. The string is most often some text, such as a line, sentence, web page, or even a whole book, but less commonly it could be some binary data as well. Suppose we want to determine if the text in variable, <code>$var</code> contains the sequence of characters <code>&quot;m u s h r o o m&quot;</code> (blanks added for legibility). We can write in Perl </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-ar-14(1)"
 name: "llvm-ar-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-ar-14/"
 description: "llvm-ar – LLVM archiver"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-ar</code> [-]{dmpqrstx}[abcDilLNoOPsSTuUvV] [relpos] [count] archive [files…]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-ar</code> command is similar to the common Unix utility, <code>ar</code>. It archives several files, such as objects and LLVM bitcode files into a single archive library that can be linked into a program. However, the archive can contain any kind of file. By default, <code>llvm-ar</code> generates a symbol table that makes linking faster because only the symbol table needs to be consulted, not each individual file member of the archive. </p>
 <p> The <code>llvm-ar</code> command can be used to <i>read</i> archive files in SVR4, GNU, BSD and Darwin format, and <i>write</i> in the GNU, BSD, and Darwin style archive files. If an SVR4 format archive is used with the <i>r</i> (replace), <i>d</i> (delete), <i>m</i> (move) or <i>q</i> (quick update) operations, the archive will be reconstructed in the format defined by <i>&#8211;format</i>. </p>
 <p> Here’s where <code>llvm-ar</code> departs from previous <code>ar</code> implementations: </p>

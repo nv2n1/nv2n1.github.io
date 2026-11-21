@@ -1,4 +1,5 @@
 ---
+
 title: "ilaclc(3)"
 name: "ilaclc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ilaclc/"
 description: "ilaclc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilaclc</code> (M, N, A, LDA)<br />
  <i></i><code>ILACLC</code> scans a matrix for its last non-zero column.</p>

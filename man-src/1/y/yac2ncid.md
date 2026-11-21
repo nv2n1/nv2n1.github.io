@@ -1,4 +1,5 @@
 ---
+
 title: "yac2ncid(1)"
 name: "yac2ncid"
 section: "1"
@@ -9,9 +10,7 @@ description: "yac2ncid – YAC server to NCID server gateway"
 
 <h2>NAME</h2>
 <p> <code>yac2ncid</code> &#8211; YAC server to NCID server gateway</p>
-<h2>SYNOPSIS</h2>
 <p> <code>yac2ncid</code> [-v]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>YAC2NCID</code> acts as a YAC client, listens to the CID information from a YAC server and sends it to the NCID server. The server then sends the CID information to the NCID clients. </p>
 <p> It is important to understand that to run YAC server with NCID clients you must run YAC2NCID gateway as well as NCID server. </p>
 <p> The configuration file for <i>ncid</i> is <i>/etc/ncid/ncid.conf</i>. It may be located in same directory as the script, or in the <i>etc</i> directory, or in NCID default configuration directory. Read the comments in the config file for more details. </p>

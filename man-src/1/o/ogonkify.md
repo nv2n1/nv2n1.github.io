@@ -1,4 +1,5 @@
 ---
+
 title: "ogonkify(1)"
 name: "ogonkify"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ogonkify/"
 description: "ogonkify – international support for PostScript"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ogonkify</code> [<code>-p</code> <i>procset</i>] [<code>-e</code> <i>encoding</i>] [<code>-r</code> <i>Old=New</i>] [<code>-a</code>] [<code>-c</code>] [<code>-h</code>] [<code>-t</code>] [<code>-A</code>] [<code>-C</code>] [<code>-H</code>] [<code>-T</code>] [<code>-AT</code>] [<code>-CT</code>] [<code>-ATH</code>] [<code>-CTH</code>] [<code>-E</code>] [<code>-N</code>] [<code>-M</code>] [<code>-mp</code>] [<code>-SO</code>] [<code>-AX</code>] [<code>-F</code>] [<code>-RS</code>] [<code>&#8212;</code>] <i>file &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ogonkify</code> does various munging of PostScript files related to printing in different languages. Its main use is to filter the output of Netscape, Mosaic and other programs in order to print in languages that don&#8217;t use the standard Western-European encoding (ISO 8859-1). </p>
 <h2>SUMMARY USAGE</h2>
 <p> Installation instructions are provided in the file INSTALL. Assuming the installation has been correctly completed, save the PostScript output of Netscape or Mosaic to a file, say <code>output.ps</code>. Then print it using</p>

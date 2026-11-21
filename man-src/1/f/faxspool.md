@@ -1,4 +1,5 @@
 ---
+
 title: "faxspool(1)"
 name: "faxspool"
 section: "1"
@@ -8,9 +9,7 @@ description: "faxspool – queue and convert files for faxing with"
 ---
 
 <p><a href="/docs/linux/man/8-sendfax/">sendfax</a>(8)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>faxspool</code> [options] phone-number files&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Queue the named files for later transmission with <i><a href="/docs/linux/man/8-sendfax/">sendfax</a>(8).</i> The input files are converted to G3 fax files, spooled to /var/spool/fax/outgoing/&lt;dir&gt;/f*.g3, and queued for transmsssion to the fax address &quot;phone-number&quot;. </p>
 <p> On top of each page, <i>faxspool</i> puts a header line, telling the other side the number of pages, your fax id, &#8230;, whatever you like. The format of this line is configurable via the file <code>/etc/mgetty+sendfax/faxheader</code> and per-user via the file <code>$HOME/.faxheader.</code> (you can select another one with the &quot;-h&quot; option, for example, one for your business faxes and one for the private stuff). </p>
 <p> This file should contain a few lines of text, normally only one line, but more than one line is permitted. The text may use the tokens @T@ for the remote telephone number, @U@ for the sending user name, @N@ for his full name (fifth field of /etc/passwd, if not given with &quot;-F&quot;), @P@ for the page number and @M@ for the total number of pages. @D@ will be replaced by the string specified with the &quot;-D&quot; option (see below), @DATE@ will be substituted by the output of the `date` command, and @ID@ stands for the sender&#8217;s fax number (FAX_STATION_ID). Finally, @S@ will be substituted by the JOB ID (Fxxxxxx). </p>

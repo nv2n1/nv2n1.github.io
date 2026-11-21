@@ -1,4 +1,5 @@
 ---
+
 title: "arm_get_error_message(3)"
 name: "arm_get_error_message"
 section: "3"
@@ -9,14 +10,12 @@ description: "arm_get_error_message – get error message"
 
 <h2>NAME</h2>
 <p> arm_get_error_message &#8211; get error message</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_get_error_message( </p>
 <p>&nbsp;<wbr>const arm_charset_t&nbsp;<wbr></code><i>charset</i><code>, </p>
 <p>&nbsp;<wbr>const arm_error_t&nbsp;<wbr></code><i>code</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>arm_message_buffer_t&nbsp;<wbr></code><i>msg</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_get_error_message()</code> stores a string containing an error message for the specified error code. </p>
 <p> ARM implementations return values that are specific to the implementation. The only enforced convention is that a return code of zero indicates that no errors are reported (though an error could have occurred), and a negative return code indicates that some error occurred. Some implementations may report an error at times when another implementation would not. </p>
 <p> To help an application developer or administrator understand what a negative error code means, <code>arm_get_error_message()</code> can be used to store a string containing an error message for the specified error code. The ARM library is not obliged to return a message, even if it returned a non-zero return code. </p>

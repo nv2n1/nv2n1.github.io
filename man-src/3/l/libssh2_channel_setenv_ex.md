@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_setenv_ex(3)"
 name: "libssh2_channel_setenv_ex"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_channel_setenv_ex – set an environment variable on the c
 
 <h2>NAME</h2>
 <p> libssh2_channel_setenv_ex &#8211; set an environment variable on the channel</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_channel_setenv_ex(LIBSSH2_CHANNEL *channel, char *varname, unsigned int varname_len, const char *value, unsigned int value_len); </p>
 <p> int libssh2_channel_setenv(LIBSSH2_CHANNEL *channel, char *varname, const char *value); </p>
-<h2>DESCRIPTION</h2>
 <p> <i>channel</i> &#8211; Previously opened channel instance such as returned by <code><a href="/docs/linux/man/3-libssh2_channel_open_ex/">libssh2_channel_open_ex</a>(3)</code> </p>
 <p> <i>varname</i> &#8211; Name of environment variable to set on the remote channel instance. </p>
 <p> <i>varname_len</i> &#8211; Length of passed varname parameter. </p>

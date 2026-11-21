@@ -1,4 +1,5 @@
 ---
+
 title: "dump2dcm(1)"
 name: "dump2dcm"
 section: "1"
@@ -6,10 +7,9 @@ letter: "d"
 url: "/docs/linux/man/1-dump2dcm/"
 description: "dump2dcm – Convert ASCII dump to DICOM file"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>dump2dcm [options] dumpfile-in dcmfile-out
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dump2dcm</code> utility converts an ASCII dump file to a DICOM file. The dump file has the same format as the output of <code>dcmdump</code>. Thus it is possible to capture the output of <code>dcmdump</code> into a file, modify some attributes and create a new DICOM file.  </p>
 <h2>PARAMETERS</h2>
 <pre><code>dumpfile-in dump input filename

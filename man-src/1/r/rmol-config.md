@@ -1,4 +1,5 @@
 ---
+
 title: "rmol-config(1)"
 name: "rmol-config"
 section: "1"
@@ -10,9 +11,7 @@ description: "rmol-config –"
 <pre>
     Configuration Script for the C++ Revenue Management Optimisation Library
 </pre>
-<h2>SYNOPSIS</h2>
 <p> <code>rmol-config</code> [&#8211;prefix] [&#8211;version] [&#8211;libs] [&#8211;cflags]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>rmol-config</i> is a tool that is used by configure to determine the compiler and linker flags that should be used to compile and link programs that use <i>RMOL</i>. It is also used internally by the .m4 macros, that are included with <i>RMOL</i>, for GNU autoconf.</p>
 <h2>OPTIONS</h2>
 <p> <i>rmol-config</i> accepts the following options: </p>

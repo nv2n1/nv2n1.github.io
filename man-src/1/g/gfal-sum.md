@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-sum(1)"
 name: "gfal-sum"
 section: "1"
@@ -9,9 +10,7 @@ description: "gfal-sum – Calculate checksum of a file"
 
 <h2>NAME</h2>
 <p> gfal-sum &#8211; Calculate checksum of a file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gfal-sum</code> [ <i>OPTIONS</i> ] <i>FILE CHECKSUM_TYPE</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gfal-sum</code> Calculates the checksum of the specified file, using a specified checksum algoritm. The supported algorithm depend on the protocol and endpoint. Some examples are <i>ADLER32</i> , <i>CRC32</i><br />
 &nbsp;<wbr>and <i>MD5</i> </p>
 <h2>OPTIONS</h2>

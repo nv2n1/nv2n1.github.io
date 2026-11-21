@@ -1,4 +1,5 @@
 ---
+
 title: "a2query(1)"
 name: "a2query"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-a2query/"
 description: "a2query – retrieve runtime configuration from a local Apache 2 HTTP server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>a2query</code> [-m [<i></i><font SIZE="-1"><i>MODULE</i></font><i></i>]] [-s [<i></i><font SIZE="-1"><i>SITE</i></font><i></i>]] [-c [<i></i><font SIZE="-1"><i>CONF</i></font><i></i>]] [-a] [-v] [-M] [-d] [-h]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>a2query</code> is a program designed to retrieve configuration values from a locally available Apache 2 <font SIZE="-1">HTTP</font> web server. It was designed to be as robust as possible by returning feasible values even if the Apache 2 syntax validator fails. </p>
 <p> This program is primarily meant to be used from maintainer scripts.</p>
 <h2>OPTIONS</h2>

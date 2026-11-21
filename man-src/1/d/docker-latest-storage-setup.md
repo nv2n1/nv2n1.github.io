@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-storage-setup(1)"
 name: "docker-latest-storage-setup"
 section: "1"
@@ -9,7 +10,6 @@ description: "docker-latest-storage-setup – Grows the root filesystem and sets
 
 <h2>NAME</h2>
 <p> docker-latest-storage-setup &#8211; Grows the root filesystem and sets up storage for docker-latest.</p>
-<h2>SYNOPSIS</h2>
 <p> docker-latest-storage-setup [OPTIONS]</p>
 <h2>OPTIONS</h2>
 <p> &#8211;help<br />

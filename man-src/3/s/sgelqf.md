@@ -1,4 +1,5 @@
 ---
+
 title: "sgelqf(3)"
 name: "sgelqf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgelqf/"
 description: "sgelqf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgelqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>SGELQF</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_bind_mw(3)"
 name: "ibv_bind_mw"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ibv_bind_mw/"
 description: "ibv_bind_mw – post a request to bind a type 1 memory window to a memory region"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_bind_mw(struct ibv_qp *qp, struct ibv_mw *mw,
                 struct ibv_mw_bind *mw_bind);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_bind_mw()</code> posts to the queue pair <i>qp</i> a request to bind the memory window <i>mw</i> according to the details in <i>mw_bind</i>. </p>
 <p> The argument <i>mw_bind</i> is an ibv_mw_bind struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p>struct ibv_mw_bind {<br />

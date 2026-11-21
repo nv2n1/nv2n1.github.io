@@ -1,4 +1,5 @@
 ---
+
 title: "nautilus(1)"
 name: "nautilus"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nautilus/"
 description: "nautilus – a file manager for GNOME"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nautilus</code> [<i>options</i>]<i> URIs</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nautilus</code> is a file manager, designed for the GNOME 3 desktop. </p>
 <h2>OPTIONS</h2>
 <dl>

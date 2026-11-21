@@ -1,4 +1,5 @@
 ---
+
 title: "mkpasswd(1)"
 name: "mkpasswd"
 section: "1"
@@ -8,9 +9,7 @@ description: "mkpasswd – Overfeatured front end to"
 ---
 
 <p> <a href="/docs/linux/man/3-crypt/">crypt</a>(3)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mkpasswd</code> <i>PASSWORD</i> [<i>SALT</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mkpasswd</code> encrypts the given password with the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) libc function, using the given salt.</p>
 <h2>OPTIONS</h2>
 <dl>

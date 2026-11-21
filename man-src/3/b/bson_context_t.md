@@ -1,4 +1,5 @@
 ---
+
 title: "bson_context_t(3)"
 name: "bson_context_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_context_t – BSON OID Generation Context"
 
 <h2>NAME</h2>
 <p> bson_context_t &#8211; BSON OID Generation Context</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef enum {
@@ -26,7 +26,6 @@ bson_context_t *bson_context_get_default(void) BSON_GNUC_CONST;
 bson_context_t *bson_context_new(bson_context_flags_t flags);
 void bson_context_destroy(bson_context_t *context);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>bson_context_t</code> structure is context for generation of BSON Object IDs. This context allows for specialized overriding of how ObjectIDs are generated based on the applications requirements. For example, disabling of PID caching can be configured if the application cannot detect when a call to <code>fork(3)</code> has occurred. \&amp;.</p>
 <h2>EXAMPLE</h2>
 <pre><code>

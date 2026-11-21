@@ -1,4 +1,5 @@
 ---
+
 title: "gmt2bin(1)"
 name: "gmt2bin"
 section: "1"
@@ -9,9 +10,7 @@ description: "gmt2bin – Create bin-index files from gmt files"
 
 <h2>NAME</h2>
 <p> gmt2bin &#8211; Create bin-index files from gmt files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmt2bin</code> <i>listfile</i> [ <code>-P</code><i>path</i> ] [ <code>-V</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmt2bin</code> reads a file with a list of leg ids, opens each gmt file, and creates a bin-index file for each leg called &lt;legid&gt;.bix. These are used by <code>binlegs</code> to update the system files read by <code>gmtlegs</code>. Normally, only the data archivist will need to be concerned with these operations.</p>
 <dl>
 <dt><i>listfile</i></dt>

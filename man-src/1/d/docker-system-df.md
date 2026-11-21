@@ -1,4 +1,5 @@
 ---
+
 title: "docker-system-df(1)"
 name: "docker-system-df"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-system-df/"
 description: "docker-system-df – Show docker disk usage"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker system df [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Show docker disk usage </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;format</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Pretty-print images using a Go template</p>

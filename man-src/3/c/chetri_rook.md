@@ -1,4 +1,5 @@
 ---
+
 title: "chetri_rook(3)"
 name: "chetri_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chetri_rook/"
 description: "chetri_rook.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetri_rook</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
  <i></i><code>CHETRI_ROOK</code> computes the inverse of HE matrix using the factorization obtained with the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method.</p>

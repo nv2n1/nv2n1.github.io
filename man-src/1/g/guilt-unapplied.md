@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-unapplied(1)"
 name: "guilt-unapplied"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-unapplied/"
 description: "guilt-unapplied – List all unapplied patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-unapplied</i></p>
-<h2>DESCRIPTION</h2>
 <p> List all unapplied patches.</p>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>

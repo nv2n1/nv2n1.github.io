@@ -1,4 +1,5 @@
 ---
+
 title: "mp4subtitle(1)"
 name: "mp4subtitle"
 section: "1"
@@ -9,9 +10,7 @@ description: "mp4subtitle – manual page for mp4subtitle – MP4v2 2.0.0"
 
 <h2>NAME</h2>
 <p> mp4subtitle &#8211; manual page for mp4subtitle &#8211; MP4v2 2.0.0</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mp4subtitle</code> [<i>OPTION</i>]&#8230; <i>ACTION file</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> For each mp4 file specified, perform the specified ACTION. An action must be specified. Some options are not applicable to some actions. </p>
 <p> ACTIONS</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ippserver(1)"
 name: "ippserver"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ippserver/"
 description: "ippserver – a simple internet printing protocol server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ippserver</code> [ <code>-2</code> ] [ <code>-M</code> <i>manufacturer</i> ] [ <code>-P</code> ] [ <code>-c</code> <i>command</i> ] [ <code>-d</code> <i>spool-directory</i> ] [ <code>-f</code> <i>type/subtype[,&#8230;]</i> ] [ <code>-h</code> ] [ <code>-i</code> <i>iconfile.png</i> ] [ <code>-k</code> ] [ <code>-l</code> <i>location</i> ] [ <code>-m</code> <i>model</i> ] [ <code>-n</code> <i>hostname</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-r</code> <i>subtype</i> ] [ <code>-s</code> <i>speed[,color-speed]</i> ] [ <code>-v[vvv]</code> ] <i>service-name</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ippserver</code> is a simple Internet Printing Protocol (IPP) server conforming to the IPP Everywhere (PWG 5100.14) specification. It can be used to test client software or act as a very basic print server that runs a command for every job that is printed.</p>
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <code>ippserver:</code></p>

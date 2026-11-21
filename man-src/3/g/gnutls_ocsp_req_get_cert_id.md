@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_req_get_cert_id(3)"
 name: "gnutls_ocsp_req_get_cert_id"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ocsp_req_get_cert_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_req_get_cert_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_req_get_cert_id(gnutls_ocsp_req_t </code><i>req</i><code>, unsigned </code><i>indx</i><code>, gnutls_digest_algorithm_t * </code><i>digest</i><code>, gnutls_datum_t * </code><i>issuer_name_hash</i><code>, gnutls_datum_t * </code><i>issuer_key_hash</i><code>, gnutls_datum_t * </code><i>serial_number</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_ocsp_req_get_cert_id – API function"
 <dd> output buffer with hash of issuer&#8217;s public key</dd>
 <dt>gnutls_datum_t * serial_number</dt>
 <dd> output buffer with serial number of certificate to check</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the certificate information of the<br />
 &nbsp;<wbr><i>indx</i>&nbsp;<wbr>&#8216;ed request in the OCSP request.&nbsp;<wbr>&nbsp;<wbr>The information returned corresponds to the CertID structure: </p>
 <p> &lt;informalexample&gt;&lt;programlisting&gt; CertID ::= SEQUENCE { hashAlgorithm AlgorithmIdentifier, issuerNameHash OCTET STRING, &#8212; Hash of Issuer&#8217;s DN issuerKeyHash OCTET STRING, &#8212; Hash of Issuers public key serialNumber CertificateSerialNumber } &lt;/programlisting&gt;&lt;/informalexample&gt; </p>

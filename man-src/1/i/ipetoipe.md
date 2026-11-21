@@ -1,4 +1,5 @@
 ---
+
 title: "ipetoipe(1)"
 name: "ipetoipe"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ipetoipe/"
 description: "ipetoipe – Convert between Ipe file formats"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ipetoipe</code> ( -pdf | -eps | -ps | -xml ) [ -export ] [ -from page ] [ -to page ] [ -noshading ] [ -lastview ] <i>input-file</i> <i>output-file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ipetoipe</code> converts between the various Ipe file formats. </p>
 <dl>
 <dt><code>-pdf</code></dt>

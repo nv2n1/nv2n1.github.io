@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlprocgrep(1)"
 name: "mysqlprocgrep"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlprocgrep/"
 description: "mysqlprocgrep – Search Server Process Lists"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlprocgrep [</code><i>options</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility scans the process lists for the servers specified using instances of the <code>&#8211;server</code> option and selects those that match the conditions specified using the <code>&#8211;age</code> and &#8211;match-xxx options. For a process to match, all conditions given must match. The utility then either prints the selected processes (the default) or executes certain actions on them. </dd>
 <p> If no <code>&#8211;age</code> or &#8211;match-xxx options are given, the utility selects all processes. </p>
 <p> The &#8211;match-xxx options correspond to the columns in the <code>INFORMATION_SCHEMA.PROCESSLIST</code> table. For example, <code>&#8211;match-command</code> specifies a matching condition for <code>PROCESSLIST.COMMAND</code> column values. There is no &#8211;match-time option. To specify a condition based on process time, use <code>&#8211;age</code>. </p>

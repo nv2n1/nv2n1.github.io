@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ecc_curve_get_size(3)"
 name: "gnutls_ecc_curve_get_size"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_ecc_curve_get_size – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ecc_curve_get_size &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_ecc_curve_get_size(gnutls_ecc_curve_t </code><i>curve</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ecc_curve_t curve</dt>
 <dd> is an ECC curve</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Returns the size in bytes of the curve.</p>
 <h2>RETURNS</h2>
 <p> a the size or (0).</p>

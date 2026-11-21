@@ -1,4 +1,5 @@
 ---
+
 title: "xournal(1)"
 name: "xournal"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xournal/"
 description: "xournal – GTK+ Application for note taking"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xournal</code> [<i>file</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>xournal</code> command. </p>
 <p> <code>Xournal</code> is a GTK+ application for notetaking, sketching and keeping a journal using a stylus. It can also be used to add annotations to PDF files and graphics files. It takes no options. </p>
 <p> The Xournal HTML manual may be found at file://usr/share/doc/xournal/manual.html</p>

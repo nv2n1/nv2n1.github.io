@@ -1,4 +1,5 @@
 ---
+
 title: "fixps(1)"
 name: "fixps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fixps/"
 description: "fixps – sanitize PostScript files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fixps</code> [<i>OPTIONS</i>] <i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Try to fix common PostScript problems that break postprocessing.</p>
 <h2>OPTIONS</h2>
 <dl>

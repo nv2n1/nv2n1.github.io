@@ -1,4 +1,5 @@
 ---
+
 title: "chmoddic(1)"
 name: "chmoddic"
 section: "1"
@@ -10,16 +11,12 @@ url: "/docs/linux/man/1-chmoddic/"
 
  <tt>chmoddic</tt> - change access rights for a directory
 
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 chmoddic [{(-cs | - cannaserver} canna-server] {+ | -}{r|w|rw|wr} 
 [-G] dicname
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Add and/or remove READ/WRITE rights for the dictionary <i>dicname</i>. The access rights for the dictionary cannot be changed if it is being used.
+Add and/or remove READ/WRITE rights for the dictionary <i>dicname</i>. The access rights for the dictionary cannot be changed if it is being used.
 
 <h2>OPTION</h2>
 

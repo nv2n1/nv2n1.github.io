@@ -1,4 +1,5 @@
 ---
+
 title: "query_module(2)"
 name: "query_module"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-query_module/"
 description: "query_module – query the kernel for various bits pertaining to modules"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/module.h&gt;
 int query_module(const char *name, int which, void *buf,
                  size_t bufsize, size_t *ret);
 </code></pre>
 <p> <i>Note</i>: No declaration of this system call is provided in glibc headers; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: This system call is present only in kernels before Linux 2.6. </p>
 <p> <code>query_module</code>() requests information from the kernel about loadable modules. The returned information is placed in the buffer pointed to by <i>buf</i>. The caller must specify the size of <i>buf</i> in <i>bufsize</i>. The precise nature and format of the returned information depend on the operation specified by <i>which</i>. Some operations require <i>name</i> to identify a currently loaded module, some allow <i>name</i> to be NULL, indicating the kernel proper. </p>
 <p> The following values can be specified for <i>which</i>:</p>

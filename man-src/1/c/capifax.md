@@ -1,4 +1,5 @@
 ---
+
 title: "capifax(1)"
 name: "capifax"
 section: "1"
@@ -10,15 +11,9 @@ url: "/docs/linux/man/1-capifax/"
 
  capifax - a FAX send application for CAPI
 
-<h2>SYNOPSIS</h2>
+capifax [-v] [-i stationID] [-h header] [-c callerNumber] phone file
 
- capifax [-v] [-i stationID] [-h header] [-c callerNumber] phone file
-
-<h2>DESCRIPTION</h2>
-
- 
-
- capifax is an application to send faxes via CAPI; you need a CAPI capable ISDN card with the appropriate drivers. The final argument must be the phone number of the receiving fax machine. This stuff is based heavily on AVM’s CAPI-adk for linux.
+capifax is an application to send faxes via CAPI; you need a CAPI capable ISDN card with the appropriate drivers. The final argument must be the phone number of the receiving fax machine. This stuff is based heavily on AVM’s CAPI-adk for linux.
 
 <h2>OPTIONS</h2>
 

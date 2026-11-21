@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-run(1)"
 name: "flatpak-run"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-run/"
 description: "flatpak-run – Run an application or open a shell in a runtime"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak run</code> [OPTION&#8230;] REF [ARG&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>If REF names an installed application, flatpak runs the application in a sandboxed environment. Extra arguments are passed on to the application. </dd>
 <p> If REF names a runtime, a shell is opened in the runtime. This is useful for development and testing. </p>
 <p> By default, flatpak will look for the application or runtime in all per-user and system installations. This can be overridden with the <code>&#8211;user</code>, <code>&#8211;system</code> and <code>&#8211;installation</code> options. </p>

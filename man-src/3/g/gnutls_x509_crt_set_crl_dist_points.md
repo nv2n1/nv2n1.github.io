@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_crl_dist_points(3)"
 name: "gnutls_x509_crt_set_crl_dist_points"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_crl_dist_points – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_crl_dist_points &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_crl_dist_points(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const void * </code><i>data_string</i><code>, unsigned int </code><i>reason_flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crt_set_crl_dist_points – API function"
 <dd> The data to be set</dd>
 <dt>unsigned int reason_flags</dt>
 <dd> revocation reasons</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the CRL distribution points certificate extension.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

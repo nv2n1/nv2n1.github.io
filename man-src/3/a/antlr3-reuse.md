@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-reuse(3)"
 name: "antlr3-reuse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-reuse/"
 description: "src/antlr3commontree.c –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> ANTLR3_API <code>pANTLR3_ARBORETUM</code> <code>antlr3ArboretumNew</code> (<code>pANTLR3_STRING_FACTORY</code> strFactory) </p>

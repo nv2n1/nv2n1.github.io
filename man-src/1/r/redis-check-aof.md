@@ -1,4 +1,5 @@
 ---
+
 title: "redis-check-aof(1)"
 name: "redis-check-aof"
 section: "1"
@@ -9,9 +10,7 @@ description: "redis-check-aof – Redis AOF file checker and repairer"
 
 <h2>NAME</h2>
 <p> redis-check-aof &#8211; Redis AOF file checker and repairer </p>
-<h2>SYNOPSIS</h2>
 <p> <code>redis-check-aof</code> [&#8211;fix] <i>file.aof</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Redis</code> is an open source (BSD licensed), in-memory data structure store, used as database, cache and message broker, found at <code><a rel="nofollow" href="http://redis.io/">http://redis.io/</a></code> </p>
 <p> The <code>redis-check-aof</code> command to check or repair redis-server AOF files. </p>
 <h2>OPTIONS</h2>

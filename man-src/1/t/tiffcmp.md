@@ -1,4 +1,5 @@
 ---
+
 title: "tiffcmp(1)"
 name: "tiffcmp"
 section: "1"
@@ -9,9 +10,7 @@ description: "tiffcmp – compare two TIFF files"
 
 <h2>NAME</h2>
 <p> tiffcmp &#8211; compare two <font SIZE="-1">TIFF</font> files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tiffcmp</code> [ <i>options</i> ] <i>file1.tif file2.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Tiffcmp</i> compares the tags and data in two files created according to the Tagged Image File Format, Revision 6.0. The schemes used for compressing data in each file are immaterial when data are compared-data are compared on a scanline-by-scanline basis after decompression. Most directory tags are checked; notable exceptions are: <i>GrayResponseCurve</i>, <i>ColorResponseCurve</i>, and <i>ColorMap</i> tags. Data will not be compared if any of the <i>BitsPerSample</i>, <i>SamplesPerPixel</i>, or <i>ImageWidth</i> values are not equal. By default, <i>tiffcmp</i> will terminate if it encounters any difference.</p>
 <h2>OPTIONS</h2>
 <dl>

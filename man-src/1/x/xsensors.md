@@ -1,4 +1,5 @@
 ---
+
 title: "xsensors(1)"
 name: "xsensors"
 section: "1"
@@ -6,18 +7,11 @@ letter: "x"
 url: "/docs/linux/man/1-xsensors/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+xsensors - display hardware sensor information as a graphical read-out.
 
- xsensors - display hardware sensor information as a graphical read-out.
+<b>xsensors</b> [<i>OPTION</i>]... 
 
-<h2>SYNOPSIS</h2>
-
- <b>xsensors</b> [<i>OPTION</i>]... 
-
-<h2>DESCRIPTION</h2>
-
- View the output from the libsensors library regarding hardware health in a graphical read-out. 
+View the output from the libsensors library regarding hardware health in a graphical read-out. 
 
 <h2>OPTIONS</h2>
 

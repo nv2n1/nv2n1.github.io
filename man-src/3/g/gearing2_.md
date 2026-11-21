@@ -1,4 +1,5 @@
 ---
+
 title: "gearing2_(3)"
 name: "gearing2_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gearing2_/"
 description: "QuantLib::DoubleStickyRatchetPayoff – Intermediate class for single/double sticky/ratchet payoffs."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/stickyratchet.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Payoff</code>. </p>
 <p> Inherited by <code>RatchetMaxPayoff</code>, <code>RatchetMinPayoff</code>, <code>RatchetPayoff</code>, <code>StickyMaxPayoff</code>, <code>StickyMinPayoff</code>, and <code>StickyPayoff</code>. </p>

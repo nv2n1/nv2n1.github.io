@@ -1,4 +1,5 @@
 ---
+
 title: "meson(1)"
 name: "meson"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-meson/"
 description: "meson – a high productivity build system"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Meson is a build system designed to optimize programmer productivity. It aims to do this by providing simple, out-of-the-box support for modern software development tools and practices, such as unit tests, coverage reports, Valgrind, Ccache and the like. </p>
 <p> The main Meson executable provides many subcommands to access all the functionality. </p>
 <h2>The setup command</h2>

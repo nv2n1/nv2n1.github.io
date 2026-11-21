@@ -1,4 +1,5 @@
 ---
+
 title: "dlange(3)"
 name: "dlange"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlange/"
 description: "dlange.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlange</code> (NORM, M, N, A, LDA, WORK)<br />
  <i></i><code>DLANGE</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general rectangular matrix.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fusioninventory-injector(1)"
 name: "fusioninventory-injector"
 section: "1"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/1-fusioninventory-injector/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fusioninventory-injector - A tool to push inventory in an OCS Inventory or compatible server. 
 
- fusioninventory-injector - A tool to push inventory in an OCS Inventory or compatible server. 
-
-<h2>SYNOPSIS</h2>
-
- fusioninventory-injector [options] [--file &lt;file&gt;|--directory &lt;directory&gt;|--stdin|--useragent &lt;user-agent&gt;] 
+fusioninventory-injector [options] [--file &lt;file&gt;|--directory &lt;directory&gt;|--stdin|--useragent &lt;user-agent&gt;] 
 
  <pre><code>
   Options:
@@ -32,6 +28,4 @@ url: "/docs/linux/man/1-fusioninventory-injector/"
     fusioninventory-injector -v -R -d /srv/ftp/fusion --url https://login:pw@glpi-server/plugins/fusioninventory/
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This tool can be used to test your server, do benchmark or push inventory from off-line machine.
+This tool can be used to test your server, do benchmark or push inventory from off-line machine.

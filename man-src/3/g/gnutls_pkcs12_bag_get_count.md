@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_bag_get_count(3)"
 name: "gnutls_pkcs12_bag_get_count"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_pkcs12_bag_get_count – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_bag_get_count &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_bag_get_count(gnutls_pkcs12_bag_t </code><i>bag</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_pkcs12_bag_t bag</dt>
 <dd> The bag</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the number of the elements withing the bag.</p>
 <h2>RETURNS</h2>
 <p> Number of elements in bag, or an negative error code on error.</p>

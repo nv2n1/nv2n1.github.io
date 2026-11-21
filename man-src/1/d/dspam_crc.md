@@ -1,4 +1,5 @@
 ---
+
 title: "dspam_crc(1)"
 name: "dspam_crc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dspam_crc/"
 description: "dspam_crc – calculate the DSPAM CRC/hash value for a text token"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dspam_crc</code> <i>[token]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dspam_crc</code> is used to calculate the DSPAM CRC/hash value for a text token. </p>
 <h2>OPTIONS</h2>
 <dl>

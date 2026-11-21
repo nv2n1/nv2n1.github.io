@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-import(1)"
 name: "docker-image-import"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-image-import/"
 description: "docker-image-import – Import the contents from a tarball to create a filesystem image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker image import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Create a new filesystem image from the contents of a tarball (.tar, .tar.gz, .tgz, .bzip, .tar.xz, .txz) into it, then optionally tag it. </p>
 <h2>EXAMPLES</h2>
 <h2>Import from a remote location</h2>

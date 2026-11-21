@@ -1,4 +1,5 @@
 ---
+
 title: "cpbtrf(3)"
 name: "cpbtrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpbtrf/"
 description: "cpbtrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpbtrf</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
  <i></i><code>CPBTRF</code></p>

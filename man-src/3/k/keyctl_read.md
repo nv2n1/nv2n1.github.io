@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_read(3)"
 name: "keyctl_read"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-keyctl_read/"
 description: "keyctl_read – Read a key"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_read(key_serial_t key, char *buffer,
                  size_tbuflen);
 long keyctl_read_alloc(key_serial_t key, void **_buffer);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_read</code>() reads the payload of a key if the key type supports it. </p>
 <p> The caller must have <code>read</code> permission on a key to be able to read it. </p>
 <p> <i>buffer</i> and <i>buflen</i> specify the buffer into which the payload data will be placed. If the buffer is too small, the full size of the payload will be returned, and no copy will take place. </p>

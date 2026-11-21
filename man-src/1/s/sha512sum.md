@@ -1,4 +1,5 @@
 ---
+
 title: "sha512sum(1)"
 name: "sha512sum"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sha512sum/"
 description: "sha512sum – compute and check SHA512 message digest"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sha512sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print or check SHA512 (512-bit) checksums. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>

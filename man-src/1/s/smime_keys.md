@@ -1,4 +1,5 @@
 ---
+
 title: "smime_keys(1)"
 name: "smime_keys"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-smime_keys/"
 description: "smime_keys – Utility to add S/MIME certificate to the internal database used by mutt"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>smime_keys</code> &lt;operation&gt; [file(s) | keyID [file(s)]]</p>
-<h2>DESCRIPTION</h2>
 <p> The purpose of this tool is to manipulate the internal database of S/MIME certificates used by mutt to sign mail messages which will be sent or to verify mail messages received and signed with S/MIME</p>
 <h2>OPTIONS</h2>
 <dl>

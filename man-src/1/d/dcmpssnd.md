@@ -1,4 +1,5 @@
 ---
+
 title: "dcmpssnd(1)"
 name: "dcmpssnd"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmpssnd/"
 description: "dcmpssnd – Network send for presentation state viewer"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dcmpssnd[options] config - file target study[series][instance]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmpssnd</code> application is invoked by the Grayscale Softcopy Presentation State Viewer and is not intended to be invoked manually. The application reads the common configuration file which is shared between the different components of the viewer, attempts to establish a DICOM association with the selected target and, if successful, selects the required DICOM instances from the viewer&#8217;s database and transmits them using the DICOM storage service class, which is supported as SCU. When transmission is finished (successfully or unsuccessfully), the application terminates. This application supports the same storage SOP classes as the <code>storescu</code> utility, but does not support encapsulated transfer syntaxes. See the full conformance statement for further details.</p>
 <h2>PARAMETERS</h2>
 <pre>

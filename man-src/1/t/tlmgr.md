@@ -1,4 +1,5 @@
 ---
+
 title: "tlmgr(1)"
 name: "tlmgr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tlmgr/"
 description: "tlmgr – the native TeX Live Manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tlmgr [<i>option</i>&#8230;] <i>action</i> [<i>option</i>&#8230;] [<i>operand</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tlmgr</code> manages an existing TeX Live installation, both packages and configuration options. For information on initially downloading and installing TeX Live, see &lt;<a rel="nofollow" href="https://tug.org/texlive/acquire.html">https://tug.org/texlive/acquire.html</a>&gt;. </p>
 <p> The most up-to-date version of this documentation (updated nightly from the development sources) is available at &lt;<a rel="nofollow" href="https://tug.org/texlive/tlmgr.html">https://tug.org/texlive/tlmgr.html</a>&gt;, along with procedures for updating <tt>&quot;tlmgr&quot;</tt> itself and information about test versions. </p>
 <p> WARNING: tlmgr in Debian runs always in user mode </p>

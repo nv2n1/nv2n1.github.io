@@ -1,4 +1,5 @@
 ---
+
 title: "git-archimport(1)"
 name: "git-archimport"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-archimport/"
 description: "git-archimport – Import an Arch repository into git"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git archimport[-h][-v][-o][-a][-f][-T][-D depth][-t tempdir]&lt;archive / branch&gt;[:&lt;git - branch&gt;]...
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Imports a project from one or more Arch repositories. It will follow branches and repositories within the namespaces defined by the &lt;archive/branch&gt; parameters supplied. If it cannot find the remote branch a merge comes from it will just import it as a regular commit. If it can find it, it will mark it as a merge whenever possible (see discussion below). </p>
 <p> The script expects you to provide the key roots where it can start the import from an <i>initial import</i> or <i>tag</i> type of Arch commit. It will follow and import new branches within the provided roots. </p>
 <p> It expects to be dealing with one project only. If it sees branches that have different roots, it will refuse to run. In that case, edit your &lt;archive/branch&gt; parameters to define clearly the scope of the import. </p>

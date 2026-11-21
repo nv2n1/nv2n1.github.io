@@ -1,4 +1,5 @@
 ---
+
 title: "olduname(2)"
 name: "olduname"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-olduname/"
 description: "uname – get name and information about current kernel"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/utsname.h&gt;</code> </p>
 <p> <code>int uname(struct utsname *</code><i>buf</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>uname</code>() returns system information in the structure pointed to by <i>buf</i>. The <i>utsname</i> struct is defined in <i>&lt;sys/utsname.h&gt;</i>: </p>
 <p> struct utsname {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char sysname[];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Operating system name&nbsp;(e.g.,&nbsp;&quot;Linux&quot;)&nbsp;*/<br />

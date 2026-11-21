@@ -1,4 +1,5 @@
 ---
+
 title: "sieve-test(1)"
 name: "sieve-test"
 section: "1"
@@ -9,9 +10,7 @@ description: "sieve-test – Pigeonhole’s Sieve script tester"
 
 <h2>NAME</h2>
 <p> sieve-test &#8211; Pigeonhole&#8217;s Sieve script tester</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sieve-test</code> [<i>options</i>] <i>script-file</i> <i>mail-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>sieve-test</code> command is part of the Pigeonhole Project (<code><a href="/docs/linux/man/7-pigeonhole/">pigeonhole</a></code>(7)), which adds Sieve (RFC 5228) support to the Dovecot secure IMAP and POP3 server (<code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1)). </p>
 <p> Using the <code>sieve-test</code> command, the execution of Sieve scripts can be tested. This evaluates the script for the provided message, yielding a set of Sieve actions. Unless the <code>-e</code> option is specified, it does not actually execute these actions, meaning that it does not store or forward the message anywere. In stead, it prints a detailed list of what actions would normally take place. Note that, even when <code>-e</code> is specified, no messages are ever transmitted to remote SMTP recipients. The outgoing messages are always printed to <code>stdout</code> in stead. </p>
 <p> This is a very useful tool to debug the execution of Sieve scripts. It can be used to verify newly installed scripts for the intended behaviour and it can provide more detailed information about script execution problems that are reported by the Sieve plugin, for example by tracing the execution and evaluation of commands and tests respectively.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mbrlen(3)"
 name: "mbrlen"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-mbrlen/"
 description: "mbrlen – determine number of bytes in next multibyte character"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;
 size_t mbrlen(const char *s, size_t n, mbstate_t *ps);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>mbrlen</code>() function inspects at most <i>n</i> bytes of the multibyte string starting at <i>s</i> and extracts the next complete multibyte character. It updates the shift state <i>*ps</i>. If the multibyte character is not the null wide character, it returns the number of bytes that were consumed from <i>s</i>. If the multibyte character is the null wide character, it resets the shift state <i>*ps</i> to the initial state and returns 0. </p>
 <p> If the <i>n</i> bytes starting at <i>s</i> do not contain a complete multibyte character, <code>mbrlen</code>() returns <i>(size_t)&nbsp;-2</i>. This can happen even if <i>n</i> &gt;= <i>MB_CUR_MAX</i>, if the multibyte string contains redundant shift sequences. </p>
 <p> If the multibyte string starting at <i>s</i> contains an invalid multibyte sequence before the next complete character, <code>mbrlen</code>() returns <i>(size_t)&nbsp;-1</i> and sets <i>errno</i> to <code>EILSEQ</code>. In this case, the effects on <i>*ps</i> are undefined. </p>

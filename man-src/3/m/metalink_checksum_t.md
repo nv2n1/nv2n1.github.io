@@ -1,4 +1,5 @@
 ---
+
 title: "metalink_checksum_t(3)"
 name: "metalink_checksum_t"
 section: "3"
@@ -9,9 +10,7 @@ description: "metalink_checksum_t – The structure that holds a hash value of a
 
 <h2>NAME</h2>
 <p> metalink_checksum_t &#8211; The structure that holds a hash value of an entire resource. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_types.h">metalink/metalink_types.h</a>&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>metalink_checksum_t</code> is a structure that holds a hash value of an entire resource. It contains a hash value of a resource and its message digest algorithm name. </p>
 <h2>STRUCTURE MEMBERS</h2>
 <p> char *type;<br />

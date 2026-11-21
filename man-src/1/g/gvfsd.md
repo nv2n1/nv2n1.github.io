@@ -1,4 +1,5 @@
 ---
+
 title: "gvfsd(1)"
 name: "gvfsd"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gvfsd/"
 description: "gvfsd – Main daemon for gvfs"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gvfsd</code> [OPTION&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gvfsd</code></p>
 <dd>is the main daemon for the gvfs virtual filesystem. It provides the <i>org.gtk.vfs.Daemon</i> name on the session bus. gvfsd is autostarted by GIO clients if it is not running. </dd>
 <p> The primary task of <code>gvfsd</code> is to act as a mount tracker/manager. It spawns new backends when requested and keeps track of their lifecycle, maintaining a list of active mounts and creates direct connections to them. </p>

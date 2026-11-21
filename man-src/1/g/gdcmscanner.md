@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmscanner(1)"
 name: "gdcmscanner"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcmscanner – .TH \"gdcmscanner\" 1 \"Fri Oct 29 2010\" \"Versio
 <pre>
 gdcmscanner [options] directory
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcmscanner</code> is a command line tool to quickly extract value from a set of DICOM attribute in a DICOM File-Set.</p>
 <h3>PARAMETERS</h3>
 <pre>

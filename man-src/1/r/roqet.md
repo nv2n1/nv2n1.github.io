@@ -1,4 +1,5 @@
 ---
+
 title: "roqet(1)"
 name: "roqet"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-roqet/"
 description: "roqet – Rasqal RDF query utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>roqet</code> [<code>OPTIONS</code>] <i>&lt;query-URI&gt;</i> <i>[base-URI]</i><br />
  <code>roqet</code> [<code>OPTIONS</code>]<code>-e</code> <i>query-string</i> <i>[base-URI]</i><br />
  <code>roqet</code> [<code>OPTIONS</code>]<code>-p</code> <i>sparql-protocol-service-URI</i> [<code>-e</code> <i>query-string</i> ] <i>[base-URI]</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>roqet</code> utility allows querying of RDF content using the <code>Rasqal</code> RDF query library, printing the results in variable bindings, RDF graph or boolean format. The query is read from <i>query-URI</i> and the optional <i>base-URI</i> is used as the base URI of the query if present.</p>
 <h2>MAIN OPTIONS</h2>
 <p> roqet uses the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;) if supported by the getopt_long function. Otherwise only the short options are available.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "megarm(1)"
 name: "megarm"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-megarm/"
 description: "megarm – Remove files and folders from your Mega.co.nz account"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>megarm</i> &lt;remotepaths&gt;...
 <i>megarm</i> /Contacts/&lt;contactemail&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Removes files and folders from your Mega.co.nz account. </p>
 <p> <code>NOTE</code>: This command removes folders recursively without asking. Be careful. </p>
 <p> As a special case, by removing a folder under /Contacts, you&#8217;re removing a &lt;contactemail&gt; from your contacts list.</p>

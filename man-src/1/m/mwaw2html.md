@@ -1,4 +1,5 @@
 ---
+
 title: "mwaw2html(1)"
 name: "mwaw2html"
 section: "1"
@@ -9,7 +10,6 @@ description: "mwaw2html – convert Mac text document into HTML"
 
 <h2>NAME</h2>
 <p> mwaw2html &#8211; convert Mac text document into HTML</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mwaw2html</code> [<i>OPTION</i>] <i>&lt;Text Mac Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>

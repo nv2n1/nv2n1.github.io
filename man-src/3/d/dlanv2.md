@@ -1,4 +1,5 @@
 ---
+
 title: "dlanv2(3)"
 name: "dlanv2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlanv2/"
 description: "dlanv2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlanv2</code> (A, B, C, D, RT1R, RT1I, RT2R, RT2I, CS, SN)<br />
  <i></i><code>DLANV2</code> computes the Schur factorization of a real 2-by-2 nonsymmetric matrix in standard form.</p>

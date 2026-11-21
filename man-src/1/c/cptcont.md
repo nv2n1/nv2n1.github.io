@@ -1,4 +1,5 @@
 ---
+
 title: "cptcont(1)"
 name: "cptcont"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cptcont/"
 description: "cptcont – create a continuous GMT colour palette table (cpt) file based on the colours of a non-continuous cpt file."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptcont</code> [-h] [-m] [-o&nbsp;<wbr><i>file</i>] [-p&nbsp;<wbr><i>percent</i>] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>cptcont</code> program converts a (possibly) discontinuous colour palette in the input to a continuous palette in the output. This is achieved by replacing the endpoints of segments at which a discontinuity occurs by their mean colour. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>
 <h2>OPTIONS</h2>

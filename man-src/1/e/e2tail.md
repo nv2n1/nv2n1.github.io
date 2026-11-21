@@ -1,4 +1,5 @@
 ---
+
 title: "e2tail(1)"
 name: "e2tail"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-e2tail/"
 description: "e2tail – a basic version of the tail command for an ext2 filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>e2tail</code> [<i>options</i>]<i> file</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>e2tail</code> command implements a basic version of the tail command.</p>
 <h2>OPTIONS</h2>
 <dl>

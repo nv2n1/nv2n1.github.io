@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogreduce(1)"
 name: "pmlogreduce"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmlogreduce – temporal reduction of Performance Co-Pilot archive
 
 <h2>NAME</h2>
 <p> <code>pmlogreduce</code> &#8211; temporal reduction of Performance Co-Pilot archives</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmlogreduce</code> [<code>-z</code>] [<code>-A</code> <i>align</i>] [<code>-S</code> <i>starttime</i>] [<code>-s</code> <i>samples</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-v</code> <i>volsamples</i>] [<code>-Z</code> <i>timezone</i>] <i>input</i> <i>output</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmlogreduce</code> reads one set of Performance Co-Pilot (PCP) archives identified by <i>input</i> and creates a temporally reduced PCP archive in <i>output</i>. <i>input</i> is a comma-separated list of names, each of which may be the base name of an archive or the name of a directory containing one or more archives. The data reduction involves statistical and temporal reduction of samples with an output sampling interval defined by the <code>-t</code> option in the <i>output</i> archive (independent of the sampling intervals in the <i>input</i> archives), and is further controlled by other command line arguments. </p>
 <p> For some metrics, temporal data reduction is not going to be helpful, so for metrics with types <code>PM_TYPE_AGGREGATE</code> or <code>PM_TYPE_EVENT</code>, a warning is issued if these metrics are found in <i>input</i> and they will be skipped and not appear in the <i>output</i> archive.</p>
 <h2>COMMAND LINE OPTIONS</h2>

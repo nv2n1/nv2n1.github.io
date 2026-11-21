@@ -1,4 +1,5 @@
 ---
+
 title: "fts-transfer-snapshot(1)"
 name: "fts-transfer-snapshot"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-transfer-snapshot/"
 
  fts-transfer-snapshot
 
-<h2>SYNOPSIS</h2>
+fts-transfer-snapshot [options]
 
- fts-transfer-snapshot [options]
-
-<h2>DESCRIPTION</h2>
-
- fts-transfer-snapshot is a tool for getting an up-to-date snapshot of a link status
+fts-transfer-snapshot is a tool for getting an up-to-date snapshot of a link status
 
 <h2>OPTIONS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "cross-objcopy(1)"
 name: "cross-objcopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cross-objcopy/"
 description: "objcopy – copy and translate object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> objcopy [<code>-F</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-I</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;output-target=</code><i>bfdname</i>]<br />
@@ -91,7 +91,6 @@ description: "objcopy – copy and translate object files"
 &nbsp;<wbr>&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;info</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr><i>infile</i>&nbsp;<wbr>[<i>outfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <font SIZE="-1">GNU </font><code>objcopy</code> utility copies the contents of an object file to another. <code>objcopy</code> uses the <font SIZE="-1">GNU BFD</font> Library to read and write the object files. It can write the destination object file in a format different from that of the source object file. The exact behavior of <code>objcopy</code> is controlled by command-line options. Note that <code>objcopy</code> should be able to copy a fully linked file between any two formats. However, copying a relocatable object file between any two formats may not work as expected. </p>
 <p> <code>objcopy</code> creates temporary files to do its translations and deletes them afterward. <code>objcopy</code> uses <font SIZE="-1">BFD</font> to do all its translation work; it has access to all the formats described in <font SIZE="-1">BFD</font> and thus is able to recognize most formats without being told explicitly. </p>
 <p> <code>objcopy</code> can be used to generate S-records by using an output target of <code>srec</code> (e.g., use <code>-O srec</code>). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cheese(1)"
 name: "cheese"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cheese/"
 description: "cheese – tool to take pictures and videos from your webcam"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cheese</code> [option&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>cheese</code></p>
 <dd>uses your webcam to take photos and videos, applies fancy special effects and lets you share the fun with others. It was written as part of Google&#8217;s 2007 Summer of Code lead by daniel g. siegel and mentored by Raphaël Slinckx. Under the hood, Cheese uses GStreamer to apply fancy effects to photos and videos. With Cheese it is easy to take photos of you, your friends, pets or whatever you want and share them with others. After the success of the Summer of Code, the development continued and we are still looking for people with nice ideas and patches ;)</dd>
 <h2>INVOCATION</h2>

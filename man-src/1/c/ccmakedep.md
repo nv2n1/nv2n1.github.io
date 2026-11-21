@@ -1,4 +1,5 @@
 ---
+
 title: "ccmakedep(1)"
 name: "ccmakedep"
 section: "1"
@@ -9,9 +10,7 @@ description: "ccmakedep – create dependencies in makefiles using a C compiler"
 
 <h2>NAME</h2>
 <p> ccmakedep &#8211; create dependencies in makefiles using a C compiler</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ccmakedep</code> [ <code>cpp-flags</code> ] [ <code>-w</code><i>width</i> ] [ <code>-s</code><i>magic-string</i> ] [ <code>-f</code><i>makefile</i> ] [ <code>-o</code><i>object-suffix</i> ] [ <code>-v</code> ] [ <code>-a</code> ] [ <code>-cc</code><i>compiler</i> ] [ &#8212; <i>options</i> &#8212; ] <i>sourcefile</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ccmakedep</code> program calls a C compiler to preprocess each <i>sourcefile</i>, and uses the output to construct <i>makefile</i> rules describing their dependencies. These rules instruct <code><a href="/docs/linux/man/1-make/">make</a></code>(1) on which object files must be recompiled when a dependency has changed. </p>
 <p> By default, <code>ccmakedep</code> places its output in the file named <i>makefile</i> if it exists, otherwise <i>Makefile.</i> An alternate makefile may be specified with the <code>-f</code> option. It first searches the makefile for a line beginning with </p>
 <p> # DO NOT DELETE </p>

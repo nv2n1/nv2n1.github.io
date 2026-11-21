@@ -1,4 +1,5 @@
 ---
+
 title: "globus-spec-creator(1)"
 name: "globus-spec-creator"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-globus-spec-creator/"
 description: "globus-spec-creator – Generate an RPM spec file from a GPT source package description"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>globus-spec-creator</code> &#8211; Generate an <font SIZE="-1">RPM</font> spec file from a <font SIZE="-1">GPT</font> source package description </p>
-<h2>SYNOPSIS</h2>
 <p> <code>globus-spec-creator</code> [options] [patches &#8230;] </p>
 <p> Options:</p>
 <dl>

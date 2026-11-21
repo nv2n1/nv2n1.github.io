@@ -1,4 +1,5 @@
 ---
+
 title: "map(1)"
 name: "map"
 section: "1"
@@ -6,22 +7,15 @@ letter: "m"
 url: "/docs/linux/man/1-map/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+map - An utility to map texts from and to unicode 
 
- map - An utility to map texts from and to unicode 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 map - recode from and to various character sets.Reads from STDIN, writes to STDOUT.usage : map[--from cset][--to cset]&lt;input.txt&gt; output.txt
                                                                                                from s Encoding of input files(default "ISO-8859-1")
                                                                                                    list Lists available character sets and their alias names.to s Encoding of output files(default "ISO-8859-1")
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Maps text from one character set representation to another. This work is actually long time very well done by <tt>&quot;recode&quot;</tt>, but unfortunately recode does not support Unicode and eastern asia character sets. But, if you have pure 8 bit things to do, recode will still be the best solution. 
+Maps text from one character set representation to another. This work is actually long time very well done by <tt>&quot;recode&quot;</tt>, but unfortunately recode does not support Unicode and eastern asia character sets. But, if you have pure 8 bit things to do, recode will still be the best solution. 
 
  Examples: 
 

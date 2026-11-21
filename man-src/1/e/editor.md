@@ -1,4 +1,5 @@
 ---
+
 title: "editor(1)"
 name: "editor"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-editor/"
 description: "nano – Nano’s ANOther editor, inspired by Pico"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nano</code> [<i>options</i>] [[<code>+</code><i>line</i>[<code>,</code><i>column</i>]] <i>file</i>]&#8230; </p>
 <p> <code>nano</code> [<i>options</i>] [[<code>+</code>[<code>crCR</code>](<code>/</code>|<code>?</code>)<i>string</i>] <i>file</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nano</code> is a small and friendly editor. It copies the look and feel of Pico, but is free software, and implements several features that Pico lacks, such as: opening multiple files, scrolling per line, undo/redo, syntax coloring, line numbering, and soft-wrapping overlong lines. </p>
 <p> When giving a filename on the command line, the cursor can be put on a specific line by adding the line number with a plus sign (<code>+</code>) before the filename, and even in a specific column by adding it with a comma. (Negative numbers count from the end of the file or line.) The cursor can be put on the first or last occurrence of a specific string by specifying that string after <code>+/</code> or <code>+?</code> before the filename. The string can be made case sensitive and/or caused to be interpreted as a regular expression by inserting <code>c</code> and/or <code>r</code> after the <code>+</code> sign. These search modes can be explicitly disabled by using the uppercase variant of those letters: <code>C</code> and/or <code>R</code>. When the string contains spaces, it needs to be enclosed in quotes. To give an example: to open a file at the first occurrence of the word &quot;Foo&quot;, you would do: </p>
 <dl>

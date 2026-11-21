@@ -1,4 +1,5 @@
 ---
+
 title: "ptksh(1)"
 name: "ptksh"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-ptksh/"
 description: "ptksh – Perl/Tk script to provide a graphical user interface for testing Perl/Tk commands and scripts."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 % ptksh ? scriptfile ? ... version information... ptksh &gt; $b = $mw-&gt;Button(-text = &gt; 'Hi', -command = &gt; sub{print 'Hi'})
                                                                    ptksh &gt; $b-&gt;pack
                                                                                ptksh &gt; o $b... list of options... ptksh &gt; help... help information... ptksh &gt; exit %
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> ptksh is a perl/Tk shell to enter perl commands interactively. When one starts ptksh a MainWindow is automaticly created, along with a ptksh command window. One can access the main window by typing commands using the variable <tt>$mw</tt> at the &#8216;ptksh&gt; &#8216; prompt of the command window. </p>
 <p> ptksh supports command line editing and history. Just type &#8220;&lt;Up&gt;&#8221; at the command prompt to see a history list. The last 50 commands entered are saved, then reloaded into history list the next time you start ptksh. </p>
 <p> ptksh supports some convenient commands for inspecting Tk widgets. See below. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmpage(1)"
 name: "pbmpage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pbmpage/"
 description: "pbmpage – create a one page test pattern for printing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pbmpage</code> [<code>-a4</code>] <i>test_pattern</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pbmpage</code> generates a one page test pattern to print on a sheet of paper, for use in calibrating a printer. The test pattern in is PBM format. </p>
 <p> <code>pbmpage</code> produces an image intended for 600 dots per inch printer resolution. </p>
 <p> If you are printing on an HP PPA printer, you can convert the output of this program to a stream that you can feed to the printer with <code>pbmtoppa</code>. </p>

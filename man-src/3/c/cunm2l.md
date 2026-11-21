@@ -1,4 +1,5 @@
 ---
+
 title: "cunm2l(3)"
 name: "cunm2l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunm2l/"
 description: "cunm2l.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunm2l</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>CUNM2L</code> multiplies a general matrix by the unitary matrix from a QL factorization determined by cgeqlf (unblocked algorithm).</p>

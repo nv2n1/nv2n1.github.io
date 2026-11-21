@@ -1,4 +1,5 @@
 ---
+
 title: "cggsvd(3)"
 name: "cggsvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cggsvd/"
 description: "cggsvd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cggsvd</code> (JOBU, JOBV, JOBQ, M, N, P, K, L, A, LDA, B, LDB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, RWORK, IWORK, INFO)<br />
  <i></i><code> CGGSVD computes the singular value decomposition (SVD) for OTHER matrices</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "zip(1)"
 name: "zip"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-zip/"
 description: "zip – package and compress (archive) files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>zip</code> [-<code>aABcdDeEfFghjklLmoqrRSTuvVwXyz!@$</code>] [&#8211;longoption &#8230;] [-<code>b</code> path] [-<code>n</code> suffixes] [-<code>t</code> date] [-<code>tt</code> date] [<i>zipfile</i> [<i>file</i> &#8230;]] [<code>-xi</code> list] </p>
 <p> <code>zipcloak</code> (see separate man page) </p>
 <p> <code>zipnote</code> (see separate man page) </p>
 <p> <code>zipsplit</code> (see separate man page) </p>
 <p> Note: Command line processing in <i>zip</i> has been changed to support long options and handle all options and arguments more consistently. Some old command lines that depend on command line inconsistencies may no longer work.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>zip</i> is a compression and file packaging utility for Unix, VMS, MSDOS, OS/2, Windows 9x/NT/XP, Minix, Atari, Macintosh, Amiga, and Acorn RISC OS. It is analogous to a combination of the Unix commands <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1) and <i><a href="/docs/linux/man/1-compress/">compress</a></i>(1) and is compatible with PKZIP (Phil Katz&#8217;s ZIP for MSDOS systems). </p>
 <p> A companion program (<i><a href="/docs/linux/man/1-unzip/">unzip</a></i>(1)) unpacks <i>zip</i> archives. The <i>zip</i> and <i><a href="/docs/linux/man/1-unzip/">unzip</a></i>(1) programs can work with archives produced by PKZIP (supporting most PKZIP features up to PKZIP version 4.6), and PKZIP and PKUNZIP can work with archives produced by <i>zip</i> (with some exceptions, notably streamed archives, but recent changes in the zip file standard may facilitate better compatibility). <i>zip</i> version 3.0 is compatible with PKZIP 2.04 and also supports the Zip64 extensions of PKZIP 4.5 which allow archives as well as files to exceed the previous 2 GB limit (4 GB in some cases). <i>zip</i> also now supports <code>bzip2</code> compression if the <code>bzip2</code> library is included when <i>zip</i> is compiled. Note that PKUNZIP 1.10 cannot extract files produced by PKZIP 2.04 or <i>zip 3.0</i>. You must use PKUNZIP 2.04g or <i>unzip 5.0p1</i> (or later versions) to extract them. </p>
 <p> See the <code>EXAMPLES</code> section at the bottom of this page for examples of some typical uses of <i>zip</i>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_readfile(3)"
 name: "libssh2_knownhost_readfile"
 section: "3"
@@ -9,11 +10,9 @@ description: "libssh2_knownhost_readfile – parse a file of known hosts"
 
 <h2>NAME</h2>
 <p> libssh2_knownhost_readfile &#8211; parse a file of known hosts</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_knownhost_readfile(LIBSSH2_KNOWNHOSTS *hosts,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const char&nbsp;<wbr>*filename, int type);</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a collection of known hosts from a specified file and adds them to the collection of known hosts. </p>
 <p> <i>filename</i> specifies which file to read </p>
 <p> <i>type</i> specifies what file type it is, and <i>LIBSSH2_KNOWNHOST_FILE_OPENSSH</i> is the only currently supported format. This file is normally found named ~/.ssh/known_hosts</p>

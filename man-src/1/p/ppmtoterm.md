@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoterm(1)"
 name: "ppmtoterm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ppmtoterm/"
 description: "ppmtoterm – convert a PPM image to a ANSI ISO 6429 ascii image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtoterm</code> </p>
 <p> [<i>ppmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> This program tries to produce an accurate representation of a PPM image on an terminal that implements the ANSI ISO 6429 standard. It approximates colors, finding the minimum Cartesian distance between the input RGB vectors and the ones in the generated palette. As the available color palette is somewhat restricted, you get the best results when the colors in the original image are few and the RGB intensities are close to zero, half of maximum, and maximum. </p>
 <p> You can usually get good results with cartoons or images with plain colors (no gradients). With photos, results can vary, but are usually not very accurate. </p>

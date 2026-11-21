@@ -1,4 +1,5 @@
 ---
+
 title: "euca-fingerprint-key(1)"
 name: "euca-fingerprint-key"
 section: "1"
@@ -9,9 +10,7 @@ description: "euca-fingerprint-key – Show the fingerprint of a private key as 
 
 <h2>NAME</h2>
 <p> euca-fingerprint-key &#8211; Show the fingerprint of a private key as it would appear in the output of euca-describe-keypairs.</p>
-<h2>SYNOPSIS</h2>
 <p> euca-fingerprint-key [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] FILE</p>
-<h2>DESCRIPTION</h2>
 <p> Show the fingerprint of a private key as it would appear in the output of euca-describe-keypairs.</p>
 <h2>DESCRIPTION</h2>
 <p> Note that this will differ from the key&#8217;s SSH key fingerprint.</p>

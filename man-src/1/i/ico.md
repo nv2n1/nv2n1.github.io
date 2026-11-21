@@ -1,4 +1,5 @@
 ---
+
 title: "ico(1)"
 name: "ico"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ico/"
 description: "ico – animate an icosahedron or other polyhedron"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ico</code> [-display display] [-geometry geometry] [-r] [-d pattern] [-i] [-dbl] [-faces] [-noedges] [-sleep n] [-obj object] [-colors color-list] </p>
 <p> <code>ico</code> -objhelp </p>
 <p> <code>ico</code> -version</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Ico</i> displays a wire-frame rotating polyhedron, with hidden lines removed, or a solid-fill polyhedron with hidden faces removed. There are a number of different polyhedra available; adding a new polyhedron to the program is quite simple.</p>
 <h2>OPTIONS</h2>
 <dl>

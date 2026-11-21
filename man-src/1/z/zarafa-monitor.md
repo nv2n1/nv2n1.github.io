@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-monitor(1)"
 name: "zarafa-monitor"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zarafa-monitor/"
 description: "zarafa-monitor – Start the Zarafa monitor."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-monitor</code> [<i>OPTION</i>&#8230;] [<i>SERVERNAME</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The monitor checks user mailbox sizes. When the quota is reached the monitor sends a quota email. When started, the program will keep running. </dd>
 <p> The defaults can be overwritten in the config file. </p>
 <p> The default settings of the monitor program are defined in <code><a href="/docs/linux/man/5-zarafa-monitor-cfg/">zarafa-monitor.cfg</a></code>(5).</p>

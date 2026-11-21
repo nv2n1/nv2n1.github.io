@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-import(1)"
 name: "guilt-import"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-import/"
 description: "guilt-import – Import specified patch file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-import</i> [-P &lt;patch&gt; ] &lt;patch_file&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Import a specified patch file into the series, placing it after the current topmost patch.</p>
 <h2>OPTIONS</h2>
 <p> -P &lt;patch&gt;</p>

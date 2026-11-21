@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_posix(1)"
 name: "nfstest_posix"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfstest_posix – POSIX file system level access tests"
 
 <h2>NAME</h2>
 <p> nfstest_posix &#8211; POSIX file system level access tests</p>
-<h2>SYNOPSIS</h2>
 <p> nfstest_posix &#8211;server &lt;server&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> Verify POSIX file system level access over the specified path using positive and negative testing. </p>
 <p> Valid for any version of NFS. </p>
 <h2>OPTIONS</h2>

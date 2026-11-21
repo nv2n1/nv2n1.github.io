@@ -1,4 +1,5 @@
 ---
+
 title: "dcmpsprt(1)"
 name: "dcmpsprt"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmpsprt/"
 description: "dcmpsprt – Read DICOM images and presentation states and render print job"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmpsprt [options] dcmfile-in...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmpsprt</code> utility reads one or more DICOM images and presentation states and creates a print job. The print job consists of one Stored Print object and one or more Hardcopy Grayscale images and is written to the database specified in the configuration file. The print job can optionally be spooled to the printer. In this case, <code>dcmpsprt</code> calls the <code>dcmprscu</code> application which performs communication with the printer.</p>
 <h2>PARAMETERS</h2>
 <pre>

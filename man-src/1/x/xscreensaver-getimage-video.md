@@ -1,4 +1,5 @@
 ---
+
 title: "xscreensaver-getimage-video(1)"
 name: "xscreensaver-getimage-video"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xscreensaver-getimage-video/"
 description: "xscreensaver-getimage-video – put a video frame on the root window"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-getimage-video</code> [-display <i>host:display.screen</i>] [&#8211;verbose] [&#8211;stdout]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xscreensaver-getimage-video</i> program is a helper program for the xscreensaver hacks that manipulate images. Specifically, it is invoked by <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1) as needed. This is not a user-level command. </p>
 <p> This program grabs a random frame of video from the system&#8217;s video input, and then loads it on the root window. It does this by figuring out which frame-grabbing programs are installed on the system, and invoking the first one it finds. Then it runs <code><a href="/docs/linux/man/1-xscreensaver-getimage-file/">xscreensaver-getimage-file</a></code>(1) to load that image onto the root window.</p>
 <h2>OPTIONS</h2>

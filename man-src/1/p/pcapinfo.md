@@ -1,4 +1,5 @@
 ---
+
 title: "pcapinfo(1)"
 name: "pcapinfo"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pcapinfo/"
 description: "pcapinfo – Prints detailed information about the network devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     pcapinfo
 </pre>
 <h2>OPTIONS</h2>
 <p> None.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pcapinfo</code> prints detailed information about the network devices and Pcap library available on the current host. Here is an example: </p>
 <pre><code>
 Host information-- -- -- -- -- -- -- --Hostname : fangorn.maddingue.net

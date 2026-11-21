@@ -1,4 +1,5 @@
 ---
+
 title: "cpstrf(3)"
 name: "cpstrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpstrf/"
 description: "cpstrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
  <i></i><code>CPSTRF</code></p>

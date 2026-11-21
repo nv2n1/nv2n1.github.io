@@ -1,4 +1,5 @@
 ---
+
 title: "strtrs(3)"
 name: "strtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-strtrs/"
 description: "strtrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>strtrs</code> (UPLO, TRANS, DIAG, N, NRHS, A, LDA, B, LDB, INFO)<br />
  <i></i><code>STRTRS</code></p>

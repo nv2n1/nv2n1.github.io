@@ -1,4 +1,5 @@
 ---
+
 title: "ucfr(1)"
 name: "ucfr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ucfr/"
 description: "ucfr – Update Configuration File Registry: associate packages with configuration files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ucfr</code> [<i>options</i>] <i>&lt;Package&gt;</i> <i>&lt;Path to configuration file&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> Where <i>Package</i> is the package associated with the configuration file (and, in some sense, its owner), and <i>Path to configuration file</i> is the full path to the location (usually under /etc) where the configuration file lives, and is potentially modified by the end user. Please note that usually this means that we register actual files, and not symbolic links to files. <code>ucfr</code> will follow symbolic links and register the real file, and not the symbolic link. </p>
 <p> This script maintains an association between configuration files and packages, and is meant to help provide facilities that <i>dpkg</i> provides conffiles for configuration files and not shipped in a <code>Debian</code> package, but handled by the postinst by <i>ucf</i> instead. This script is idempotent, associating a package to a file multiple times is not an error. It is normally an error to try to associate a file which is already associated with another package, but this can be overridden by using the <i>&#8211;force</i> option.</p>
 <h2>OPTIONS</h2>

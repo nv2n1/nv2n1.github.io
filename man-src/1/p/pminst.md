@@ -1,4 +1,5 @@
 ---
+
 title: "pminst(1)"
 name: "pminst"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pminst/"
 description: "pminst – find modules whose names match this pattern"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> pminst [<code>-s</code>] [<code>-l</code>] [<i>pattern</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Without arguments, show the names of all installed modules. Given a pattern, show all module names that match it. The <code>-l</code> flag will show the full pathname. The <code>-s</code> flag will separate the base directory from <tt>@INC</tt> from the module portion itself.</p>
 <h2>EXAMPLES</h2>
 <pre>

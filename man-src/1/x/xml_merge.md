@@ -1,4 +1,5 @@
 ---
+
 title: "xml_merge(1)"
 name: "xml_merge"
 section: "1"
@@ -6,16 +7,11 @@ letter: "x"
 url: "/docs/linux/man/1-xml_merge/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <pre>
+<pre>
   xml_merge - merge back XML files split with C&lt;xml_split&gt;
 </pre> 
 
-<h2>DESCRIPTION</h2>
-
- <tt>&quot;xml_merge&quot;</tt> takes several xml files that have been split using <tt>&quot;xml_split&quot;</tt> and recreates a single file.
+<tt>&quot;xml_merge&quot;</tt> takes several xml files that have been split using <tt>&quot;xml_split&quot;</tt> and recreates a single file.
 
 <h2>OPTIONS</h2>
 

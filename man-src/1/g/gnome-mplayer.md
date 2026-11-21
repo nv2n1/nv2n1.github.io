@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-mplayer(1)"
 name: "gnome-mplayer"
 section: "1"
@@ -9,13 +10,11 @@ description: "gnome-mplayer – a simple GUI for MPlayer"
 
 <h2>NAME</h2>
 <p> gnome-mplayer &#8211; a simple GUI for MPlayer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-mplayer</code> [<i>options</i>]<i> files</i>&#8230;<br />
  <code>gnome-mplayer</code> [<i>options</i>]<i> cdda://</i><br />
  <code>gnome-mplayer</code> [<i>options</i>]<i> [dvd|dvdnav]://</i><br />
  <code>gnome-mplayer</code> [<i>options</i>]<i> [http|mms|rtsp]://</i><br />
  <code>gnome-mplayer</code> [<i>options</i>]<i> /dev/[sd*|dvd|cdrom]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gnome-mplayer</code> command. </p>
 <p> <code>gnome-mplayer</code> provides a simple and clean interface to MPlayer.<br />
  GNOME MPlayer has a rich API that is exposed via DBus.<br />

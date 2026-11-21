@@ -1,4 +1,5 @@
 ---
+
 title: "xcalc(1)"
 name: "xcalc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xcalc/"
 description: "xcalc – scientific calculator for X"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xcalc</code> [-stipple] [-rpn] [-<i>toolkitoption&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>xcalc</i> is a scientific calculator desktop accessory that can emulate a TI-30 or an HP-10C.</p>
 <h2>OPTIONS</h2>
 <p> <i>xcalc</i> accepts all of the standard toolkit command line options along with two additional options: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pslog(1)"
 name: "pslog"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pslog/"
 description: "pslog – report current logs path of a process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pslog</code> <i>pid</i> &#8230;<br />
  <code>pslog -V</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pslog</code> command reports the current working logs of a process.</p>
 <h2>OPTIONS</h2>
 <dl>

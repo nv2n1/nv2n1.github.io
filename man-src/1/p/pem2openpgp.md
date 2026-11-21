@@ -1,4 +1,5 @@
 ---
+
 title: "pem2openpgp(1)"
 name: "pem2openpgp"
 section: "1"
@@ -9,10 +10,8 @@ description: "pem2openpgp – translate PEM-encoded RSA keys to OpenPGP certific
 
 <h2>NAME</h2>
 <p> pem2openpgp &#8211; translate PEM-encoded RSA keys to OpenPGP certificates</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pem2openpgp $USERID &lt; mykey.pem | gpg &#8211;import</code> </p>
 <p><code>PEM2OPENPGP_EXPIRATION=$((86400 * $DAYS)) PEM2OPENPGP_USAGE_FLAGS=authenticate,certify pem2openpgp $USERID &lt;mykey.pem</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pem2openpgp $USERID < mykey.pem | gpg \-\-import</code> is a low-level utility for transforming raw, PEM-encoded RSA secret keys into OpenPGP-formatted certificates. The generated certificates include the secret key material, so they should be handled carefully. </p>
 <p> It works as an element within a pipeline: feed it the raw key on stdin, supply the desired User ID as a command line argument. Note that you may need to quote the string to ensure that it is entirely in a single argument. </p>
 <p> Other choices about how to generate the new OpenPGP certificate are governed by environment variables.</p>

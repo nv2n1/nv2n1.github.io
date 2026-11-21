@@ -1,4 +1,5 @@
 ---
+
 title: "gdbm(3)"
 name: "gdbm"
 section: "3"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/3-gdbm/"
 description: "GDBM – The GNU database manager. Includes dbm and ndbm compatability. (Version 1.9.)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GDBM &#8211; The GNU database manager. Includes <code>dbm</code> and <code>ndbm</code> compatability. (Version 1.9.) </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;gdbm.h&gt;
 extern gdbm_error gdbm_errno;
@@ -54,7 +53,6 @@ int gdbm_fdesc(GDBM_FILE dbf);
  <code>int dbm_pagfno (DBM *</code><i>file</i><code>);</code><br />
  <code>int dbm_dirfno (DBM *</code><i>file</i><code>);</code><br />
  <code>int dbm_rdonly (DBM *</code><i>file</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>GNU dbm</code> is a library of routines that manages data files that contain key/data pairs. The access provided is that of storing, retrieval, and deletion by key and a non-sorted traversal of all keys. A process is allowed to use multiple data files at the same time. </p>
 <p> This manpage is a short description of the <code>GDBM</code> library. For a detailed discussion, including examples of the configuration and usage recommendations, refer to the <code>GDBM Manual</code> available in Texinfo format. To access it, run: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>info gdbm</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlas2(3)"
 name: "dlas2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlas2/"
 description: "dlas2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlas2</code> (F, G, H, SSMIN, SSMAX)<br />
  <i></i><code>DLAS2</code> computes singular values of a 2-by-2 triangular matrix.</p>

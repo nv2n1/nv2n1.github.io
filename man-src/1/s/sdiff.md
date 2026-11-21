@@ -1,4 +1,5 @@
 ---
+
 title: "sdiff(1)"
 name: "sdiff"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sdiff/"
 description: "sdiff – side-by-side merge of file differences"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sdiff</code> [<i>OPTION</i>]&#8230; <i>FILE1 FILE2</i></p>
-<h2>DESCRIPTION</h2>
 <p> Side-by-side merge of differences between FILE1 and FILE2. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

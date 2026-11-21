@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-user-dirs-update(1)"
 name: "xdg-user-dirs-update"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xdg-user-dirs-update/"
 description: "xdg-user-dirs-update – Update XDG user dir configuration"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-user-dirs-update</code> [OPTION&#8230;] [&#8211;set&nbsp;<i>NAME</i>&nbsp;<i>PATH</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>xdg-user-dirs-update</code></p>
 <dd>updates the current state of the users user-dirs.dir. If none existed before then one is created based on the system default values, or falling back to the old non-translated filenames if such directories exists. The list of old directories used are: ~/Desktop, ~/Templates and ~/Public. </dd>
 <p> If an old configuration exists it is updated with any new default directories. Additionally, any configured directories that point to non-existing locations are reset by pointing then to the users home directory. This typically happens when the users removed the directory, so they likely don&#8217;t want to use it anymore. </p>

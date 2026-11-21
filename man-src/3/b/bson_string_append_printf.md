@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_append_printf(3)"
 name: "bson_string_append_printf"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_string_append_printf() – Like bson_string_append() but form
 
 <h2>NAME</h2>
 <p> bson_string_append_printf() &#8211; Like bson_string_append() but formats a printf style string and then appends that to string.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_string_append_printf(bson_string_t *string,
                                const char *format,
@@ -22,7 +22,6 @@ void bson_string_append_printf(bson_string_t *string,
 <dl>
 <dt><code>format</code></dt>
 <dd> A printf style format string.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Like bson_string_append() but formats a printf style string and then appends that to <code>string</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

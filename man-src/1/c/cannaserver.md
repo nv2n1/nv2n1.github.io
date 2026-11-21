@@ -1,4 +1,5 @@
 ---
+
 title: "cannaserver(1)"
 name: "cannaserver"
 section: "1"
@@ -9,9 +10,7 @@ description: "cannaserver – Kana-Kanji conversion server"
 
 <h2>NAME</h2>
 <p> cannaserver &#8211; Kana-Kanji conversion server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cannaserver [-d] [-u </code><i>userid</i>] [-inet] [-inet6] [-l <i>n</i>] [-syslog] [-p <i>num</i>] [<i>ddpath</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> cannaserver(1M) provides the Kana-Kanji conversion service. Most commonly this daemon starts at daemon bootup framework like /etc/rc depending on your system, so you do not usually start it up manually. </p>
 <p> By default, cannaserver(1M) only accepts connections from clients at the same host where the server is running (via UNIX domain socket). You can make it accessible from other hosts via TCP by using option -inet (or -inet6). Whether you use this option or not, you can get access control based on user and host using /etc/hosts.canna. </p>
 <p> cannaserver(1M) immediately forks and gets into the background after it starts. You do not need to use &#8216;&amp;&#8217; explicitly to make it run in the background. </p>

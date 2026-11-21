@@ -1,4 +1,5 @@
 ---
+
 title: "pamtopdbimg(1)"
 name: "pamtopdbimg"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pamtopdbimg/"
 description: "pamtodbimg – convert a Netpbm image to a Palm Pilot Image Viewer PDB Image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamtopdbimg</code> </p>
 <p> [<code>-notefile=</code><i>filename</i>] [<code>-title=</code><i>text</i>] [<code>-compressed</code>] [<code>-uncompressed</code>] [<code>-maybecompressed</code>] [<code>-4depth</code>] </p>
 <p> [<i>netpbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtopdbimg</code> reads a Netpbm image as input and produced a Palm Pilot Image Viewer image (and Image record in a PDB file) as output. </p>
 <p> If the Neptbm image is black and white, the Pilot image is monochrome. Otherwise, the Pilot image is either 4-level or 16-level grayscale, depending on the <code>-4depth</code> option. </p>

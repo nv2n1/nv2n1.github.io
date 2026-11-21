@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-xdg-portal-3(1)"
 name: "tracker-xdg-portal-3"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tracker-xdg-portal-3/"
 description: "tracker-xdg-portal-3 – Portal to Tracker endpoints"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 tracker-xdg-portal-3 [--version | -v]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This daemon allows access to Tracker endpoints in a controlled manner. By default access to every service is disallowed, services may be whitelisted through additional policy in the <i>.flatpak-info</i> file. </p>
 <p> When whitelisting services, the policy may define specific graph names to allow access to, the <i>default</i> keyword to allow access to the default unnamed graph, or <i>*</i> keyword to allow access to all graphs.</p>
 <h2>CONFIGURATION</h2>

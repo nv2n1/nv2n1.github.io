@@ -1,4 +1,5 @@
 ---
+
 title: "dtrace(1)"
 name: "dtrace"
 section: "1"
@@ -9,9 +10,7 @@ description: "dtrace – Dtrace compatible user application static probe generat
 
 <h2>NAME</h2>
 <p> dtrace &#8211; Dtrace compatible user application static probe generation tool. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>dtrace -s </code><i>file</i> [<code>OPTIONS</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> The dtrace command converts probe descriptions defined in <i>file.d</i> into a probe header file via the <code>-h</code> option or a probe description file via the <code>-G</code> option. </p>
 <h2>OPTIONS</h2>
 <dl>

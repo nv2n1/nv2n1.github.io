@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlmetagrep(1)"
 name: "mysqlmetagrep"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlmetagrep/"
 description: "mysqlmetagrep – Search Database Object Definitions"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlmetagrep [</code><i>options</i><code>] [</code><i>pattern</i><code> | </code><i>server</i><code>] &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility searches for objects matching a given pattern on all the servers specified using instances of the <code>&#8211;server</code> option. It produces output that displays the matching objects. By default, the first nonoption argument is taken to be the pattern unless the <code>&#8211;pattern</code> option is given. If the <code>&#8211;pattern</code> option is given, all nonoption arguments are treated as connection specifications. </dd>
 <p> Internally, the utility generates an SQL statement for searching the necessary tables in the <code>INFORMATION_SCHEMA</code> database on the designated servers and executes it in turn before collecting the result and printing it as a table. Use the <code>&#8211;sql</code> option to have the utility display the statement rather than execute it. This can be useful if you want to feed the output of the statement to another application such as the <code>mysql</code> monitor. </p>
 <p> The MySQL server supports two forms of patterns when matching strings: SQL Simple Patterns (used with the <code>LIKE</code> operator) and POSIX Regular Expressions (used with the <code>REGEXP</code> operator). </p>

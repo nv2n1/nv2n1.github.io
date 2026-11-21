@@ -1,4 +1,5 @@
 ---
+
 title: "getservent(3)"
 name: "getservent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getservent/"
 description: "getservent, getservbyname, getservbyport, setservent, endservent – get service entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 struct servent *getservent(void);
@@ -16,7 +16,6 @@ struct servent *getservbyport(int port, const char *proto);
 void setservent(int stayopen);
 void endservent(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getservent</code>() function reads the next entry from the services database (see <code><a href="/docs/linux/man/5-services/">services</a></code>(5)) and returns a <i>servent</i> structure containing the broken-out fields from the entry. A connection is opened to the database if necessary. </p>
 <p> The <code>getservbyname</code>() function returns a <i>servent</i> structure for the entry from the database that matches the service <i>name</i> using protocol <i>proto</i>. If <i>proto</i> is NULL, any protocol will be matched. A connection is opened to the database if necessary. </p>
 <p> The <code>getservbyport</code>() function returns a <i>servent</i> structure for the entry from the database that matches the port <i>port</i> (given in network byte order) using protocol <i>proto</i>. If <i>proto</i> is NULL, any protocol will be matched. A connection is opened to the database if necessary. </p>

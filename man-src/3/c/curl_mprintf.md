@@ -1,4 +1,5 @@
 ---
+
 title: "curl_mprintf(3)"
 name: "curl_mprintf"
 section: "3"
@@ -9,7 +10,6 @@ description: "curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_m
 
 <h2>NAME</h2>
 <p> curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_msprintf curl_mvaprintf, curl_mvfprintf, curl_mvprintf, curl_mvsnprintf, curl_mvsprintf &#8211; formatted output conversion</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/mprintf.h&gt;</code> </p>
 <p> <code>int curl_mprintf(const char *</code><i>format</i><code>, &#8230;);</code><br />
  <code>int curl_mfprintf(FILE *</code><i>fd</i><code>, const char *</code><i>format</i><code>, &#8230;);</code><br />
@@ -21,7 +21,6 @@ description: "curl_maprintf, curl_mfprintf, curl_mprintf, curl_msnprintf, curl_m
  <code>int curl_mvsnprintf(char *</code><i>buffer</i><code>, size_t </code><i>maxlength</i><code>, const char *</code><i>format</i><code>, va_list </code><i>args</i><code>);</code><br />
  <code>char *curl_maprintf(const char *</code><i>format</i><code>, &#8230;);</code><br />
  <code>char *curl_mvaprintf(const char *</code><i>format</i><code>, va_list </code><i>args</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These are all functions that produce output according to a format string and given arguments. These are mostly clones of the well-known C-style functions and there will be no detailed explanation of all available formatting rules and usage here. </p>
 <p> See this table for notable exceptions.</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "slasv2(3)"
 name: "slasv2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasv2/"
 description: "slasv2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasv2</code> (F, G, H, SSMIN, SSMAX, SNR, CSR, SNL, CSL)<br />
  <i></i><code>SLASV2</code> computes the singular value decomposition of a 2-by-2 triangular matrix.</p>

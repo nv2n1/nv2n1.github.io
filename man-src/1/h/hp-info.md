@@ -1,4 +1,5 @@
 ---
+
 title: "hp-info(1)"
 name: "hp-info"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-info/"
 description: "hp-info – Device Information Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Query a printer for static model information, dynamic status information, and CUPS printer queue settings.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-info [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

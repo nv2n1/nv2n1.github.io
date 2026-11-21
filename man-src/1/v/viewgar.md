@@ -1,4 +1,5 @@
 ---
+
 title: "viewgar(1)"
 name: "viewgar"
 section: "1"
@@ -11,7 +12,6 @@ description: "viewgar – GiNaC archive file viewer"
 <p> viewgar &#8211; GiNaC archive file viewer</p>
 <h2>SYNPOSIS</h2>
 <p> <code>viewgar</code> [-d] [<i>file&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>viewgar</code> displays the contents of GiNaC archive files. By default it will print the archived expressions in standard mathematical notation. If given the <code>-d</code> option it will output a raw dump of the archive contents).</p>
 <h2>OPTIONS</h2>
 <dl>

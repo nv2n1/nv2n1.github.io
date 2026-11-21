@@ -1,4 +1,5 @@
 ---
+
 title: "eyuvtoppm(1)"
 name: "eyuvtoppm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-eyuvtoppm/"
 description: "eyuvtoppm – convert a Berkeley YUV file to a portable pixmap file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>eyuvtoppm</code> [<code>&#8211;width</code> <i>width</i>] [<code>&#8211;height</code> <i>height</i>] [<i>eyuvfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads a Berkeley Encoder YUV (not the same as Abekas YUV) file as input and produces a portable pixmap (ppm) file on the Standard Output. </p>
 <p> With no filename argument takes input from Standard Input. Otherwise, <i>eyuvfile </i> is the file specification of the input file.</p>
 <h2>SEE ALSO</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "fex(1)"
 name: "fex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fex/"
 description: "fex – simple and powerful field extraction"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fex</code> <i>selector &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> fex helps you split things by field. Common tasks you might do with awk or cut are much simpler in fex, and there are things in fex you can&#8217;t do nearly as easily in awk or cut.</p>
 <h2>SELECTOR SYNTAX</h2>
 <p> The selector syntax looks like this: </p>

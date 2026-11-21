@@ -1,4 +1,5 @@
 ---
+
 title: "flumotion-worker(1)"
 name: "flumotion-worker"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-flumotion-worker/"
 description: "flumotion-worker – streaming media server worker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>flumotion-worker</code> [ <code>&#8211;</code> ] [ <code>&#8211;debug</code> <i>debug configuration</i> ] [ <code>-L</code> <i>logdir</i> ] [ <code>-R</code> <i>rundir</i> ] [ <code>-H</code> <i>host</i> ] [ <code>-P</code> <i>port</i> ] [ <code>-T</code> <i>protocol</i> ] [ <code>-n</code> <i>name</i> ] [ <code>-D</code> ] [ <code>&#8211;daemonize-to=</code> <i>directory</i> ] [ <code>-F</code> <i>ports</i> | <code>&#8211;random-feederports</code> ] <code>-u username</code> <code>-p password</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>flumotion-worker</code> is the part of flumotion that actually performs all the real work of encoding, streaming, etc. In a flumotion system, there will be a single manager, and could be several workers running on different systems (this is useful to distribute the load of, for instance, video encoding). You need to have a minimum of one worker for flumotion to function correctly. </p>
 <p> You should start flumotion-manager first, then connect flumotion-worker to the running manager. </p>
 <h2>OPTIONS</h2>

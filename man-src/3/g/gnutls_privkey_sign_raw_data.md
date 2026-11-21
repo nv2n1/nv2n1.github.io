@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_privkey_sign_raw_data(3)"
 name: "gnutls_privkey_sign_raw_data"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_privkey_sign_raw_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_sign_raw_data &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_sign_raw_data(gnutls_privkey_t </code><i>key</i><code>, unsigned </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_privkey_sign_raw_data – API function"
 <dd> holds the data to be signed</dd>
 <dt>gnutls_datum_t * signature</dt>
 <dd> will contain the signature allocate with <code>gnutls_malloc()</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will sign the given data using a signature algorithm supported by the private key. Note that this is a low-level function and does not apply any preprocessing or hash on the signed data. For example on an RSA key the input <i>data</i> should be of the DigestInfo PKCS <code>1</code> 1.5 format. Use it only if you know what are you doing. </p>
 <p> Note this function is equivalent to using the <code>GNUTLS_PRIVKEY_SIGN_FLAG_TLS1_RSA</code> flag with <code>gnutls_privkey_sign_hash()</code>.</p>
 <h2>RETURNS</h2>

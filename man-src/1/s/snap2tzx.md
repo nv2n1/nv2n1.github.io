@@ -1,4 +1,5 @@
 ---
+
 title: "snap2tzx(1)"
 name: "snap2tzx"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-snap2tzx/"
 description: "snap2tzx – Convert ZX Spectrum snapshot to .tzx tape images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>snap2tzx</code> [-1 <i>string</i>] [-2 <i>string</i>] [-b <i>colour</i>] [-g <i>string</i>] [-l <i>string</i>] [-o <i>filename</i>] [-r] [-s <i>speed</i>] [-v] [-$ <i>filename</i>] <i>snapshot</i></p>
-<h2>DESCRIPTION</h2>
 <p> snap2tzx converts a ZX Spectrum snapshot into a .tzx tape image.</p>
 <h2>OPTIONS</h2>
 <dl>

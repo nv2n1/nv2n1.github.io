@@ -1,4 +1,5 @@
 ---
+
 title: "docker-swarm-init(1)"
 name: "docker-swarm-init"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-swarm-init/"
 description: "docker-swarm-init – Initialize a swarm"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker swarm init [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Initialize a swarm </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;advertise-addr</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Advertised address (format: [:port])</p>

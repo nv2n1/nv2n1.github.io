@@ -1,4 +1,5 @@
 ---
+
 title: "pip(1)"
 name: "pip"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pip/"
 description: "pip – A tool for installing and managing Python packages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> pip &lt;command&gt; [options] </p>
 <p> pip3 &lt;command&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pip</code> is a Python package installer, recommended for installing Python packages which are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation. </p>
 <p> On Debian, <code>pip</code> is the command to use when installing packages for Python 2, while <code>pip3</code> is the command to use when installing packages for Python 3.</p>
 <h2>COMMANDS</h2>

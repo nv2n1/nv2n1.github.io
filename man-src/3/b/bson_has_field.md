@@ -1,4 +1,5 @@
 ---
+
 title: "bson_has_field(3)"
 name: "bson_has_field"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_has_field() – Checks to see if key contains an element name
 
 <h2>NAME</h2>
 <p> bson_has_field() &#8211; Checks to see if key contains an element named key. This also accepts &quot;dotkey&quot; notation such as &quot;a.b.c.d&quot;.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_has_field(const bson_t *bson,
                     const char *key);
@@ -21,7 +21,6 @@ bool bson_has_field(const bson_t *bson,
 <dl>
 <dt><code>key</code></dt>
 <dd> A string containing the name of the field to check for.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Checks to see if key contains an element named <code>key</code> \&amp;. This also accepts &quot;dotkey&quot; notation such as &quot;a.b.c.d&quot;. </p>
 <h2>RETURNS</h2>
 <p> true if <code>key</code> was found within <code>bson</code> ; otherwise false. </p>

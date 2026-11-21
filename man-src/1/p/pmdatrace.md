@@ -1,4 +1,5 @@
 ---
+
 title: "pmdatrace(1)"
 name: "pmdatrace"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdatrace – application-level transaction performance metrics do
 
 <h2>NAME</h2>
 <p> <code>pmdatrace</code> &#8211; application-level transaction performance metrics domain agent</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/trace/pmdatrace</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-A</code> <i>access</i>] [<code>-I</code> <i>port</i>] [<code>-M</code> <i>username</i>] [<code>-N</code> <i>buckets</i>] [<code>-T</code> <i>period</i>] [<code>-U</code> <i>units</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdatrace</code> is a Performance Metrics Domain Agent (PMDA) which exports transaction performance metrics from application processes which use the <i>pcp_trace</i> library described in <code><a href="/docs/linux/man/3-pmdatrace/">pmdatrace</a></code>(3). </p>
 <p> A brief description of the <code>pmdatrace</code> command line options follows:</p>
 <dl>

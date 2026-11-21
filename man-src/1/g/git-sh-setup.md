@@ -1,4 +1,5 @@
 ---
+
 title: "git-sh-setup(1)"
 name: "git-sh-setup"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-sh-setup/"
 description: "git-sh-setup – Common Git shell script setup code"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>. &quot;$(git --exec-path)/git-sh-setup&quot;</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This is not a command the end user would want to run. Ever. This documentation is meant for people who are studying the Porcelain-ish scripts and/or are writing new ones. </p>
 <p> The <i>git sh-setup</i> scriptlet is designed to be sourced (using <code>.</code>) by other shell scripts to set up some variables pointing at the normal Git directories and a few helper shell functions. </p>
 <p> Before sourcing it, your script should set up a few variables; <code>USAGE</code> (and <code>LONG_USAGE</code>, if any) is used to define message given by <code>usage()</code> shell function. <code>SUBDIRECTORY_OK</code> can be set if the script can run from a subdirectory of the working tree (some commands do not). </p>

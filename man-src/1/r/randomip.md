@@ -1,4 +1,5 @@
 ---
+
 title: "randomip(1)"
 name: "randomip"
 section: "1"
@@ -6,12 +7,10 @@ letter: "r"
 url: "/docs/linux/man/1-randomip/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>randomip</code> [OPTIONS] [NUM] [BYTE1] [BYTE2] [BYTE3]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>randomip</code> is a simple tool to generate specified number of random IP addresses. By default it generates 10,000 of them. One can specify how many IP addresses to generate followed by the first, second and third byte of the IP address. </p>
 <h2>OPTIONS</h2>
 <dl>

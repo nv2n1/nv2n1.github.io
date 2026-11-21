@@ -1,4 +1,5 @@
 ---
+
 title: "ifdata(1)"
 name: "ifdata"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ifdata/"
 description: "ifdata – get network interface info without parsing ifconfig output"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ifdata</code> [options] {<i>iface</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ifdata</code></p>
 <dd>can be used to check for the existence of a network interface, or to get information about the interface, such as its IP address. Unlike <code>ifconfig</code> or <code>ip</code>, <code>ifdata</code> has simple to parse output that is designed to be easily used by a shell script.</dd>
 <h2>OPTIONS</h2>

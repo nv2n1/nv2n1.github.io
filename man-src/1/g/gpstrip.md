@@ -1,4 +1,5 @@
 ---
+
 title: "gpstrip(1)"
 name: "gpstrip"
 section: "1"
@@ -9,11 +10,9 @@ description: "gpstrip – discard symbols from object file"
 
 <h2>NAME</h2>
 <p> gpstrip &#8211; discard symbols from object file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpstrip [options] [file(s)]</code></p>
 <h2>WARNING</h2>
 <p> The information in this man page is an extract from the full documentation of gputils and is limited to the meaning of the options. For complete and current documentation, refer to &quot;gputils.ps&quot; located in the gputils docs directory.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gpstrip</code> discards symbols from GNU PIC object files. <code>gpstrip</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>

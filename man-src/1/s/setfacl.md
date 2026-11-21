@@ -1,4 +1,5 @@
 ---
+
 title: "setfacl(1)"
 name: "setfacl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-setfacl/"
 description: "setfacl – set file access control lists"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>setfacl</code> [-bkndRLPvh] [{-m|-x} acl_spec] [{-M|-X} acl_file] file &#8230; </p>
 <p> <code>setfacl</code> &#8211;restore={file|-} </p>
-<h2>DESCRIPTION</h2>
 <p> This utility sets Access Control Lists (ACLs) of files and directories. On the command line, a sequence of commands is followed by a sequence of files (which in turn can be followed by another sequence of commands, &#8230;). </p>
 <p> The <i>-m</i> and <i>-x</i> options expect an ACL on the command line. Multiple ACL entries are separated by comma characters (`,&#8217;). The <i>-M</i> and <i>-X</i> options read an ACL from a file or from standard input. The ACL entry format is described in Section ACL ENTRIES. </p>
 <p> The <i>&#8211;set</i> and <i>&#8211;set-file</i> options set the ACL of a file or a directory. The previous ACL is replaced. ACL entries for this operation must include permissions. </p>

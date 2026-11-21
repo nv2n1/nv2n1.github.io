@@ -1,4 +1,5 @@
 ---
+
 title: "ctpcon(3)"
 name: "ctpcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctpcon/"
 description: "ctpcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctpcon</code> (NORM, UPLO, DIAG, N, AP, RCOND, WORK, RWORK, INFO)<br />
  <i></i><code>CTPCON</code></p>

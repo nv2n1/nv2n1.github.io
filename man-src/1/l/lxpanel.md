@@ -1,4 +1,5 @@
 ---
+
 title: "lxpanel(1)"
 name: "lxpanel"
 section: "1"
@@ -11,7 +12,6 @@ description: "lxpanel – a lightweight GTK2-based panel for the LXDE desktop."
 <h2>Synopsis</h2>
 <dl>
 <dt> <code>lxpanel</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>lxpanel</code> command. </dd>
 <p> <code>lxpanel</code> is a program that provides a panel for the desktop, usually for LXDE. It is a lightweight GTK+ 2.x based desktop panel. </p>
 <p> <code>Features</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rsync-ssl(1)"
 name: "rsync-ssl"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-rsync-ssl/"
 description: "rsync-ssl – a helper script for connecting to an ssl rsync daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 rsync-ssl [--type=SSL_TYPE] RSYNC_ARGS
 </pre>
 <p> The online version of this manpage (that includes cross-linking of topics) is available at <a rel="nofollow" href="https://download.samba.org/pub/rsync/rsync-ssl.1.">https://download.samba.org/pub/rsync/rsync-ssl.1.</a> </p>
-<h2>DESCRIPTION</h2>
 <p> The rsync-ssl script helps you to run an rsync copy to/from an rsync daemon that requires ssl connections. </p>
 <p> The script requires that you specify an rsync-daemon arg in the style of either <code>hostname::</code> (with 2 colons) or <code><a href="rsync://hostname/">rsync://hostname/</a></code>. The default port used for connecting is 874 (one higher than the normal 873) unless overridden in the environment. You can specify an overriding port via <code>&#8211;port</code> or by including it in the normal spot in the URL format, though both of those require your rsync version to be at least 3.2.0. </p>
 <h2>OPTIONS</h2>

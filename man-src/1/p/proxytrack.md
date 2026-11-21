@@ -1,4 +1,5 @@
 ---
+
 title: "proxytrack(1)"
 name: "proxytrack"
 section: "1"
@@ -9,9 +10,7 @@ description: "proxytrack – proxy to serve content archived by httrack website 
 
 <h2>NAME</h2>
 <p> proxytrack &#8211; proxy to serve content archived by httrack website copier</p>
-<h2>SYNOPSIS</h2>
 <p> <code>proxytrack proxy_address:proxy_port icp_address:icp_port [ httrack_cache_filename_1 [ httrack_cache_filename_2 .. ] ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>proxytrack</code> this program allows you to create a proxy to deliver content already archived by <code><a href="/docs/linux/man/1-httrack/">httrack</a></code>(1) , a website copier.</p>
 <h2>EXAMPLES</h2>
 <dl>

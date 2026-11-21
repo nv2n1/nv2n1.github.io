@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo-db-import(1)"
 name: "osinfo-db-import"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-osinfo-db-import/"
 description: "osinfo-db-import – Import an osinfo database archive"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> osinfo-db-import [<font SIZE="-1">OPTIONS&#8230;</font>] ARCHIVE-FILE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>osinfo-db-import</code> tool will take an osinfo database archive and extract its contents into one of the standard database locations on the current host:</p>
 <dl>
 <dt><code>system</code></dt>

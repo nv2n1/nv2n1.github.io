@@ -1,4 +1,5 @@
 ---
+
 title: "shutdown(2)"
 name: "shutdown"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-shutdown/"
 description: "shutdown – shut down part of a full-duplex connection"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/socket.h&gt;</code> </p>
 <p> <code>int shutdown(int </code><i>sockfd</i><code>, int </code><i>how</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>shutdown</code>() call causes all or part of a full-duplex connection on the socket associated with <i>sockfd</i> to be shut down. If <i>how</i> is <code>SHUT_RD</code>, further receptions will be disallowed. If <i>how</i> is <code>SHUT_WR</code>, further transmissions will be disallowed. If <i>how</i> is <code>SHUT_RDWR</code>, further receptions and transmissions will be disallowed.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>

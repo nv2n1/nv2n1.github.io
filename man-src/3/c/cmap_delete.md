@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_delete(3)"
 name: "cmap_delete"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-cmap_delete/"
 description: "cmap_delete – Delete key/value pair from the CMAP service"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_delete(cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cmap_delete</code> function is used to delete key from cmap. Key must be previously created by <code><a href="/docs/linux/man/3-cmap_set/">cmap_set</a>(3)</code> function. The <i>handle</i> argument is connection to CMAP database obtained by calling <code><a href="/docs/linux/man/3-cmap_initialize/">cmap_initialize</a>(3)</code> function. <i>key_name</i> is name of key to delete. </p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful. If key_name is unspecified, CS_ERR_INVALID_PARAM is returned. For nonexisting keys, CS_ERR_NOT_EXIST error is returned. Some of keys may be tagged read-only directly in corosync and deleting such key will result in CS_ERR_ACCESS error. </p>

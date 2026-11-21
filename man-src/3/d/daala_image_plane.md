@@ -1,4 +1,5 @@
 ---
+
 title: "daala_image_plane(3)"
 name: "daala_image_plane"
 section: "3"
@@ -8,7 +9,6 @@ description: "daala_image_plane –"
 ---
 
 <p> Representation of a single component within an image or frame.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
 <p> unsigned char * <code>data</code><br />

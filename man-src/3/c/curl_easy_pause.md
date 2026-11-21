@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_pause(3)"
 name: "curl_easy_pause"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_easy_pause – pause and unpause a connection"
 
 <h2>NAME</h2>
 <p> curl_easy_pause &#8211; pause and unpause a connection</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>CURLcode curl_easy_pause(CURL *handle</code><i>, int bitmask</i><code> );</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Using this function, you can explicitly mark a running connection to get paused, and you can unpause a connection that was previously paused. </p>
 <p> A connection can be paused by using this function or by letting the read or the write callbacks return the proper magic return code (<i>CURL_READFUNC_PAUSE</i> and <i>CURL_WRITEFUNC_PAUSE</i>). A write callback that returns pause signals to the library that it couldn&#8217;t take care of any data at all, and that data will then be delivered again to the callback when the writing is later unpaused. </p>
 <p> NOTE: while it may feel tempting, take care and notice that you cannot call this function from another thread. </p>

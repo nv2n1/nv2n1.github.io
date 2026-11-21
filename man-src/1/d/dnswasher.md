@@ -1,4 +1,5 @@
 ---
+
 title: "dnswasher(1)"
 name: "dnswasher"
 section: "1"
@@ -9,9 +10,7 @@ description: "dnswasher – A PowerDNS nameserver debugging tool"
 
 <h2>NAME</h2>
 <p> dnswasher &#8211; A PowerDNS nameserver debugging tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dnswasher </code><i>[infile]</i> <i>[outfile]</i></p>
-<h2>DESCRIPTION</h2>
 <p> dnswasher takes an <i>infile</i> in PCAP format and writtes out <i>outfile</i> also in PCAP format. It copies all network traffic found in <i>infile</i> to <i>outfile</i> except for non DNS traffic. This might be handy when creating bug reports or test cases for DNS software e.g. PowerDNS.</p>
 <h2>OPTIONS</h2>
 <p> None.</p>

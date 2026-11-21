@@ -1,4 +1,5 @@
 ---
+
 title: "htsearch(1)"
 name: "htsearch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-htsearch/"
 description: "htsearch – create document index and word database for the ht://Dig search engine"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>htsearch</code> <i>[options] [query_string]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Htsearch</i> is used to search in de databases created by <i>htdig</i> for content. is the actual search engine of the <i>htdig</i> search system. It is a CGI program that is expected to be invoked by an HTML form. It will accept both the GET and POST methods of passing data to the CGI program.</p>
 <h2>OPTIONS</h2>
 <dl>

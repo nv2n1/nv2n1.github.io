@@ -1,4 +1,5 @@
 ---
+
 title: "l3build(1)"
 name: "l3build"
 section: "1"
@@ -6,18 +7,11 @@ letter: "l"
 url: "/docs/linux/man/1-l3build/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+l3build - Checking and building packages 
 
- l3build - Checking and building packages 
+l3build &lt;command&gt; [&lt;options&gt;] [&lt;names&gt;]
 
-<h2>SYNOPSIS</h2>
-
- l3build &lt;command&gt; [&lt;options&gt;] [&lt;names&gt;]
-
-<h2>DESCRIPTION</h2>
-
- The l3build system is a Lua script for building TeX packages, with particular emphasis on regression testing. It is written in cross-platform Lua code, so can be used by any modern TeX distribution with the texlua interpreter. A package for building with l3build can be written in any TeX dialect; its defaults are set up for LaTeX packages written in the DocStrip style. 
+The l3build system is a Lua script for building TeX packages, with particular emphasis on regression testing. It is written in cross-platform Lua code, so can be used by any modern TeX distribution with the texlua interpreter. A package for building with l3build can be written in any TeX dialect; its defaults are set up for LaTeX packages written in the DocStrip style. 
 
  The most commonly used l3build commands are:
 <dl>

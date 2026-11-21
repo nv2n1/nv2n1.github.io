@@ -1,4 +1,5 @@
 ---
+
 title: "i686-w64-mingw32-as(1)"
 name: "i686-w64-mingw32-as"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-w64-mingw32-as/"
 description: "AS – the portable GNU assembler."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> as [<code>-a</code>[<code>cdghlns</code>][=<i>file</i>]] [<code>&#8211;alternate</code>] [<code>-D</code>]<br />
 &nbsp;<wbr>[<code>&#8211;compress-debug-sections</code>]&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;nocompress-debug-sections</code>]<br />
 &nbsp;<wbr>[<code>&#8211;debug-prefix-map</code>&nbsp;<wbr><i>old</i>=<i>new</i>]<br />
@@ -217,7 +217,6 @@ description: "AS – the portable GNU assembler."
 &nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-warn-unportable-instructions</code>]&nbsp;<wbr>[<code>-Wup</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-forbid-undocumented-instructions</code>]&nbsp;<wbr>[<code>-Fud</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>-forbid-unportable-instructions</code>]&nbsp;<wbr>[<code>-Fup</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">GNU </font><code>as</code> is really a family of assemblers. If you use (or have used) the <font SIZE="-1">GNU</font> assembler on one architecture, you should find a fairly similar environment when you use it on another architecture. Each version has much in common with the others, including object file formats, most assembler directives (often called <i>pseudo-ops</i>) and assembler syntax. </p>
 <p> <code>as</code> is primarily intended to assemble the output of the <font SIZE="-1">GNU C</font> compiler <tt>&quot;gcc&quot;</tt> for use by the linker <tt>&quot;ld&quot;</tt>. Nevertheless, we&#8217;ve tried to make <code>as</code> assemble correctly everything that other assemblers for the same machine would assemble. Any exceptions are documented explicitly. This doesn&#8217;t mean <code>as</code> always uses the same syntax as another assembler for the same architecture; for example, we know of several incompatible versions of 680&#215;0 assembly language syntax. </p>
 <p> Each time you run <code>as</code> it assembles exactly one source program. The source program is made up of one or more files. (The standard input is also a file.) </p>

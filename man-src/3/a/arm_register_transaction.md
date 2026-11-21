@@ -1,4 +1,5 @@
 ---
+
 title: "arm_register_transaction(3)"
 name: "arm_register_transaction"
 section: "3"
@@ -9,7 +10,6 @@ description: "arm_register_transaction – describe transaction"
 
 <h2>NAME</h2>
 <p> arm_register_transaction &#8211; describe transaction</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_register_transaction( </p>
@@ -19,7 +19,6 @@ description: "arm_register_transaction – describe transaction"
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>, </p>
 <p>&nbsp;<wbr>arm_id_t&nbsp;<wbr>*</code><i>output_tran_id</i><code>);</code>&nbsp;<wbr></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_register_transaction()</code> describes metadata about a transaction.<br />
 &nbsp;<wbr> The application uses <code>arm_register_transaction()</code> to inform the ARM library of metadata about the transaction measured by the application. This metadata does not change from one application instance to another. It is the equivalent of the ARM 2.0 call <code>arm_getid()</code>.<br />
 &nbsp;<wbr> ARM generates an ID that is passed in to <code>arm_start_transaction()</code> and <code>arm_report_transaction()</code>. </p>

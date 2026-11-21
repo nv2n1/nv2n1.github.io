@@ -1,4 +1,5 @@
 ---
+
 title: "cptcss(1)"
 name: "cptcss"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cptcss/"
 description: "cptcss – create CSS fragment for colouring HTML tables."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptcss</code> [-h] [-f&nbsp;<wbr><i>format</i>] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>cptcss</code> utility prints a fragment of CSS which can be used to colour the cells of an HTML table, the colours specified by a colour palette table (cpt) file. </dd>
 <p> The cpt file to use is specified by the final argument. If no cpt file is specified then the program will read from stdin. Output is written to stdout. </p>
 <p> The input cpt should be a discrete (since the output CSS is) and each colour level in the file will lead to a CSS class directive for the &lt;td&gt; element. The class name can be modified from the default &quot;cptcss-%i&quot; by using the <code>-f</code> option.</p>

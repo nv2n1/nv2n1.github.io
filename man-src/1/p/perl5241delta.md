@@ -1,4 +1,5 @@
 ---
+
 title: "perl5241delta(1)"
 name: "perl5241delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5241delta/"
 description: "perl5241delta – what is new for perl v5.24.1"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.24.0 release and the 5.24.1 release. </p>
 <p> If you are upgrading from an earlier release such as 5.22.0, first read perl5240delta, which describes differences between 5.22.0 and 5.24.0.</p>
 <h2>Security</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-add(1)"
 name: "guilt-add"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-add/"
 description: "guilt-add – Add a file to git and guilt"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-add</i> &lt;file&gt;&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Adds the files specified to git using git-add making it available to guilt.</p>
 <h2>OPTIONS</h2>
 <p> &lt;files&gt;</p>

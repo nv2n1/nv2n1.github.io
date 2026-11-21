@@ -1,4 +1,5 @@
 ---
+
 title: "fc-cache(1)"
 name: "fc-cache"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fc-cache/"
 description: "fc-cache – build font information cache files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fc-cache</code> [ <code>-EfrsvVh</code> ] [ <code>&#8211;error-on-no-fonts</code> ] [ <code>&#8211;force</code> ] [ <code>&#8211;really-force</code> ] [ <code> [ -y </code><i>dir</i><code> ] [ &#8211;sysroot </code><i>dir</i><code> ] </code> ] [ <code>&#8211;system-only</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] [ <i>dir</i><i>&#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fc-cache</code> scans the font directories on the system and builds font information cache files for applications using fontconfig for their font handling. </p>
 <p> If directory arguments are not given, <code>fc-cache</code> uses each directory in the current font configuration. Each directory is scanned for font files readable by FreeType. A cache is created which contains properties of each font and the associated filename. This cache is used to speed up application startup when using the fontconfig library. </p>
 <p> Note that <code>fc-cache</code> must be executed once per architecture to generate font information customized for that architecture.</p>

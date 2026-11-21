@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-mailbox(1)"
 name: "doveadm-mailbox"
 section: "1"
@@ -9,9 +10,7 @@ description: "doveadm-mailbox – Commands related to handling mailboxes"
 
 <h2>NAME</h2>
 <p> doveadm-mailbox &#8211; Commands related to handling mailboxes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <i>mailbox_cmd</i> [<i>options</i>] [<i>arguments</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>doveadm mailbox</code> can be used to query and modify mailboxes.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>

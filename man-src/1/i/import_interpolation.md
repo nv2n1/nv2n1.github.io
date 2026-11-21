@@ -1,4 +1,5 @@
 ---
+
 title: "import_interpolation(1)"
 name: "import_interpolation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-import_interpolation/"
 description: "libpinyin – Library to deal with pinyin"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The libpinyin project aims to provide the algorithms core for intelligent sentence-based Chinese pinyin input methods. </p>
 <h2>TOOLS</h2>
 <p> gen_binary_files &#8211; generate initially binary pinyin libraries import_interpolation &#8211; import libpinyin textual format model data gen_unigram &#8211; increase the unigram frequency for all phrases </p>

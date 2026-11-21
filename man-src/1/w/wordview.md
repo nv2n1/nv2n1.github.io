@@ -1,4 +1,5 @@
 ---
+
 title: "wordview(1)"
 name: "wordview"
 section: "1"
@@ -9,9 +10,7 @@ description: "wordview – displays text contained in MS-Word file in X window"
 
 <h2>NAME</h2>
 <p> wordview &#8211; displays text contained in MS-Word file in X window </p>
-<h2>SYNOPSIS</h2>
 <p> <code>wordview</code> [ <i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>wordview</code> is simple GUI wrapper around <code><a href="/docs/linux/man/1-catdoc/">catdoc</a></code>(1) which allows to browse through word file interactively. It doesn&#8217;t allow to edit file, but allows to save plain text representation (or version with some TeX commands) into the file. </p>
 <p> If for some reason <code>catdoc</code> doesn&#8217;t recognize file encoding properly, <code>wordview</code> allows to specify encoding interactively. </p>
 <h2>OPTIONS</h2>

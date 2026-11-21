@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_t(3)"
 name: "bson_oid_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_oid_t – BSON ObjectID Abstraction"
 
 <h2>NAME</h2>
 <p> bson_oid_t &#8211; BSON ObjectID Abstraction</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct
@@ -17,7 +17,6 @@ typedef struct
     uint8_t bytes[12];
 } bson_oid_t;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>bson_oid_t</code> structure contains the 12-byte ObjectId notation defined by the <code>BSON ObjectID specificiation</code> \&amp;. </p>
 <p> ObjectId is a 12-byte BSON type, constructed using: </p>
 <dl>

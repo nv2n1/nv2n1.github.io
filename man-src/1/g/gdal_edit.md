@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_edit(1)"
 name: "gdal_edit"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-gdal_edit/"
 description: "gdal_edit – gdal_edit.py Edit in place various information of an existing GDAL dataset"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_edit[--help - general][-ro][-a_srs srs_def][-a_ullr ulx uly lrx lry]
          [-tr xres yres][-unsetgt][-a_nodata value]
          [-gcp pixel line easting northing[elevation]] *
     [-mo "META-TAG=VALUE"] * datasetname
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The gdal_edit.py script can be used to allows to edit in place various information of an existing GDAL dataset (projection, geotransform, nodata, metadata). </p>
 <p> It works only with raster formats that support update access to existing datasets.</p>
 <dl>

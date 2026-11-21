@@ -1,4 +1,5 @@
 ---
+
 title: "csyconv(3)"
 name: "csyconv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csyconv/"
 description: "csyconv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br />
  <i></i><code>CSYCONV</code></p>

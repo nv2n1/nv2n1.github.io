@@ -1,4 +1,5 @@
 ---
+
 title: "cscppc(1)"
 name: "cscppc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cscppc/"
 description: "cscppc – a compiler wrapper that runs cppcheck in background"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cscppc</code> [<i>&#8211;help</i> | <i>&#8211;print-path-to-wrap</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> cscppc is a compiler wrapper that runs cppcheck in background. Create a symbolic link to cscppc named as your compiler (gcc, g++, &#8230;) and put it to your $PATH. </p>
 <p> The following parameters are given to cppcheck by default: </p>
 <dl>

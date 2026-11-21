@@ -1,4 +1,5 @@
 ---
+
 title: "convertxls2csv(1)"
 name: "convertxls2csv"
 section: "1"
@@ -6,14 +7,9 @@ letter: "c"
 url: "/docs/linux/man/1-convertxls2csv/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+xls2csv - A script that recodes a spreadsheet's charset and saves as CSV. 
 
- xls2csv - A script that recodes a spreadsheet's charset and saves as CSV. 
-
-<h2>DESCRIPTION</h2>
-
- This script will recode a spreadsheet into a different character set and output the recoded data as a csv file. 
+This script will recode a spreadsheet into a different character set and output the recoded data as a csv file. 
 
  The script came about after many headaches from dealing with Excel spreadsheets from clients that were being received in various character sets.
 

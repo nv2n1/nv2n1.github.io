@@ -1,4 +1,5 @@
 ---
+
 title: "pdf2djvu(1)"
 name: "pdf2djvu"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-pdf2djvu/"
 description: "pdf2djvu – creates DjVu files from PDF files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pdf2djvu</code> [{<code>-o</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;output</code>}&nbsp;<wbr><i>output-djvu-file</i>] [<i>option</i>&#8230;] <i>pdf-file</i>&#8230;</dt>
 <dt> <code>pdf2djvu</code> {<code>-i</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;indirect</code>}&nbsp;<wbr><i>index-djvu-file</i> [<i>option</i>&#8230;] <i>pdf-file</i>&#8230;</dt>
 <dt> <code>pdf2djvu</code> {<code>&#8211;version</code> | <code>&#8211;help</code> | <code>-h</code>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This program creates a DjVu file from one or more Portable Document Format files.</dd>
 <h2>OPTIONS</h2>
 <p> <code>pdf2djvu</code> accepts the following options:</p>

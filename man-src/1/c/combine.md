@@ -1,4 +1,5 @@
 ---
+
 title: "combine(1)"
 name: "combine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-combine/"
 description: "combine – combine sets of lines from two files using boolean operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> combine file1 and file2 </p>
 <p> combine file1 not file2 </p>
 <p> combine file1 or file2 </p>
@@ -16,7 +16,6 @@ description: "combine – combine sets of lines from two files using boolean ope
 <p> _ file1 not file2 _ </p>
 <p> _ file1 or file2 _ </p>
 <p> _ file1 xor file2 _</p>
-<h2>DESCRIPTION</h2>
 <p> <code>combine</code> combines the lines in two files. Depending on the boolean operation specified, the contents will be combined in different ways:</p>
 <dl>
 <dt>and</dt>

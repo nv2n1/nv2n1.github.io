@@ -1,4 +1,5 @@
 ---
+
 title: "extendedblackvariancesurface(3)"
 name: "extendedblackvariancesurface"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-extendedblackvariancesurface/"
 description: "ql/experimental/volatility/extendedblackvariancesurface.hpp – Black volatility surface modelled as variance surface."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp&gt;<br />
  #include &lt;ql/math/matrix.hpp&gt;<br />
  #include &lt;ql/math/interpolations/interpolation2d.hpp&gt;<br />

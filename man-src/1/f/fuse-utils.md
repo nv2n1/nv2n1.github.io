@@ -1,4 +1,5 @@
 ---
+
 title: "fuse-utils(1)"
 name: "fuse-utils"
 section: "1"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/1-fuse-utils/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fuse-utils - various ZX Spectrum related utilities 
 
- fuse-utils - various ZX Spectrum related utilities 
-
-<h2>DESCRIPTION</h2>
-
- The Fuse (Free Unix Spectrum Emulator) utilities are a small suite of utilities relating to some of the file formats used by ZX Spectrum emulators. The currently available utilities are: 
+The Fuse (Free Unix Spectrum Emulator) utilities are a small suite of utilities relating to some of the file formats used by ZX Spectrum emulators. The currently available utilities are: 
 
  <i>audio2tape</i>
 <dl>

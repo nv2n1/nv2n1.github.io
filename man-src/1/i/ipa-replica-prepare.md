@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-replica-prepare(1)"
 name: "ipa-replica-prepare"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-replica-prepare – Create an IPA replica file"
 
 <h2>NAME</h2>
 <p> ipa-replica-prepare &#8211; Create an IPA replica file</p>
-<h2>SYNOPSIS</h2>
 <p> ipa-replica-prepare [<i>OPTION</i>]&#8230; hostname</p>
-<h2>DESCRIPTION</h2>
 <p> Generates a replica file that may be used with ipa-replica-install to create a replica of an IPA server. </p>
 <p> A replica can be created on any IPA master or replica server. </p>
 <p> You must provide the fully-qualified hostname of the machine you want to install the replica on and a host-specific replica_file will be created. It is host-specific because SSL server certificates are generated as part of the process and they are specific to a particular hostname. </p>

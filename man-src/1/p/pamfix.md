@@ -1,4 +1,5 @@
 ---
+
 title: "pamfix(1)"
 name: "pamfix"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pamfix/"
 description: "pamfix – repair a Netpbm image with various corruptions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamfix</code> </p>
 <p> [<code>-verbose</code>] </p>
 <p> [<i>netpbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamfix</code> reads a stream that is mostly a Netpbm image but may have certain types of corruptions and produces a valid Netpbm image that preserves much of the information in the original. In particular, Netpbm salvages streams that are truncated and that contain illegally large sample values. </p>
 <p> <code>pamfix</code> looks at only on the first image in a multi-image stream. </p>

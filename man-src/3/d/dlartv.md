@@ -1,4 +1,5 @@
 ---
+
 title: "dlartv(3)"
 name: "dlartv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlartv/"
 description: "dlartv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br />
  <i></i><code>DLARTV</code> applies a vector of plane rotations with real cosines and real sines to the elements of a pair of vectors.</p>

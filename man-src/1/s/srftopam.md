@@ -1,4 +1,5 @@
 ---
+
 title: "srftopam(1)"
 name: "srftopam"
 section: "1"
@@ -8,9 +9,7 @@ description: "srftopam – convert a SRF image file to Netpbm images"
 ---
 
 <p>&lt;html xmlns=&quot;<a rel="nofollow" href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>&quot; xml:lang=&quot;en&quot;&gt; </p>
-<h2>SYNOPSIS</h2>
 <p> <code>srftopam</code> [<code>-verbose</code>] [<i>netpbmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>srftopam</code> reads a SRF image file as input and produces a multi-image stream of PAM images as output. </p>
 <p> This program performs the inverse of the conversion that <code>pamtosrf</code> does. See that program&#8217;s manual for more information about SRF and the relationship between the SRF and Netpbm representation of the images. </p>

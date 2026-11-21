@@ -1,4 +1,5 @@
 ---
+
 title: "cunmrz(3)"
 name: "cunmrz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunmrz/"
 description: "cunmrz.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunmrz</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>CUNMRZ</code></p>

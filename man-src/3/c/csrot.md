@@ -1,4 +1,5 @@
 ---
+
 title: "csrot(3)"
 name: "csrot"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csrot/"
 description: "csrot.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csrot</code> (N, CX, INCX, CY, INCY, C, S)<br />
  <i></i><code>CSROT</code></p>

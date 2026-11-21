@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_othername_to_virtual(3)"
 name: "gnutls_x509_othername_to_virtual"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_othername_to_virtual – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_othername_to_virtual &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_othername_to_virtual(const char * </code><i>oid</i><code>, const gnutls_datum_t * </code><i>othername</i><code>, unsigned int * </code><i>virt_type</i><code>, gnutls_datum_t * </code><i>virt</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_othername_to_virtual – API function"
 <dd> GNUTLS_SAN_OTHERNAME_XXX</dd>
 <dt>gnutls_datum_t * virt</dt>
 <dd> allocated printable data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will parse and convert the othername data to a virtual type supported by gnutls.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

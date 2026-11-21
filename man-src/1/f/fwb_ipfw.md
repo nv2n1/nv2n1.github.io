@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_ipfw(1)"
 name: "fwb_ipfw"
 section: "1"
@@ -9,9 +10,7 @@ description: "fwb_ipfw – Policy compiler for ipfw"
 
 <h2>NAME</h2>
 <p> fwb_ipfw &#8211; Policy compiler for ipfw</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fwb_ipfw</code> <code>[-vVx]</code> <code>[-d wdir]</code> <code>[-o output.fw]</code> <code>[-i]</code> <code>-f data_file.xml</code> object_name </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fwb_ipfw</code> is a firewall policy compiler component of Firewall Builder (see <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1)). This compiler generates code for ipfw &#8211; a firewall and traffic shaper in FreeBSD (see ipfw(8)). Compiler reads objects definitions and firewall description from the data file specified with &quot;-f&quot; option and generates firewall configuration and activation script. </p>
 <p> The generated file has a name that starts with the name of the firewall object, with an extension &quot;.fw&quot;. It is a shell script that flushes current policy, then loads new filter and nat rules. </p>
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>

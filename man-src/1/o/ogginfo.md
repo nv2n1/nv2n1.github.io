@@ -1,4 +1,5 @@
 ---
+
 title: "ogginfo(1)"
 name: "ogginfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ogginfo/"
 description: "ogginfo – gives information about Ogg files, and does extensive validity checking"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ogginfo</code> [ <code>-q</code> ] [ <code>-v</code> ] [ <code>-h</code> ] <i>file1.ogg</i> <code>&#8230;</code> <i>fileN.ogg</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ogginfo</code> reads one or more Ogg files and prints information about stream contents (including chained and/or multiplexed streams) to standard output. It will detect (but not correct) a wide range of common defects, with many additional checks specifically for Ogg Vorbis streams. </p>
 <p> For all stream types <code>ogginfo</code> will print the filename being processed, the stream serial numbers, and various common error conditions. </p>
 <p> For <code>Vorbis</code> streams, information including the version used for encoding, the sample rate and number of channels, the bitrate and playback length, and the contents of the comment header are printed. </p>

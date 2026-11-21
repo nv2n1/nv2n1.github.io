@@ -1,4 +1,5 @@
 ---
+
 title: "virt-sysprep(1)"
 name: "virt-sysprep"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-virt-sysprep/"
 description: "virt-sysprep – Reset, unconfigure or customize a virtual machine so clones can be made"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a disk.img...]
 </code></pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-sysprep&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
-<h2>DESCRIPTION</h2>
 <p> Virt-sysprep can reset or unconfigure a virtual machine so that clones can be made from it. Steps in this process include removing <font SIZE="-1">SSH</font> host keys, removing persistent network <font SIZE="-1">MAC</font> configuration, and removing user accounts. Virt-sysprep can also customize a virtual machine, for instance by adding <font SIZE="-1">SSH</font> keys, users or logos. Each step can be enabled or disabled as required. </p>
 <p> Virt-sysprep modifies the guest or disk image <i>in place</i>. The guest must be shut down. If you want to preserve the existing contents of the guest, <i>you must snapshot, copy or clone the disk first</i>. See &#8220;<font SIZE="-1">COPYING AND CLONING&#8221;</font> below. </p>
 <p> You do <i>not</i> need to run virt-sysprep as root. In fact we&#8217;d generally recommend that you don&#8217;t. The time you might want to run it as root is when you need root in order to access the disk image, but even in this case it would be better to change the permissions on the disk image to be writable as the non-root user running virt-sysprep. </p>

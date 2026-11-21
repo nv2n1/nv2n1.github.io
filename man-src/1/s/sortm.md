@@ -1,4 +1,5 @@
 ---
+
 title: "sortm(1)"
 name: "sortm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-sortm/"
 description: "sortm – sort messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sortm</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-all</code> | <code>-noall</code>] [<code>-datefield</code> <i>field</i>] [<code>-textfield</code> <i>field</i>] [<code>-notextfield</code>] [<code>-limit</code> <i>days</i>] [<code>-nolimit</code>] [<code>-check</code> | <code>-nocheck</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Sortm</code></p>
 <dd>sorts the specified messages in the named folder according to the chronological order of the &#8220;Date:&#8221; field of each message. </dd>
 <p> If no messages are specified, the default is all messages in the folder. However, if no messages are specified and the <code>-noall</code> switch is enabled, then <code>sortm</code> reports that as an error and exits with non-zero status. <code>-noall</code> is most useful in the user&#8217;s profile, to avoid inadvertant sorting of an entire folder. The <code>-all</code> switch can then be used on the command line to disable it. Of course, a message specification of <i>all</i> can be used in any case. </p>

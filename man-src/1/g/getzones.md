@@ -1,4 +1,5 @@
 ---
+
 title: "getzones(1)"
 name: "getzones"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-getzones/"
 description: "getzones – list AppleTalk zone names"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>getzones</code> [-m | -l] [<i>address</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Getzones</code></p>
 <dd>is used to obtain a list of AppleTalk zone names using the Zone Information Protocol (ZIP). It sends a GetZoneList request to an AppleTalk router. By default, it sends the request to the locally running <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8).</dd>
 <h2>OPTIONS</h2>

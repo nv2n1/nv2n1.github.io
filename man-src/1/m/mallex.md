@@ -1,4 +1,5 @@
 ---
+
 title: "mallex(1)"
 name: "mallex"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mallex/"
 description: "mallex – generate a Malaga run-time lexicon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mallex</code> [<code>-binary</code>|<code>-readable</code>|<code>-prelex</code>] <i>project-file</i> </p>
 <p> <code>mallex</code> [<code>-binary</code>|<code>-readable</code>|<code>-prelex</code>] <i>symbol-file</i> <i>rule-file</i> [<i>lexicon-file</i>] [<i>prelex-file</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Malaga is a development environment for natural-language grammars based on the Left-Associative Grammar formalism. Malaga grammars can be used for automatic morphological and/or syntactic analysis. </p>
 <p> The program <code>mallex</code> generates a Malaga run-time lexicon by letting allomorph rules process a base-form lexicon. It can be started in <i>interactive mode</i> to help find bugs in the base-form lexicon or in the allomorph rules. </p>
 <p> <code>mallex</code> uses the following grammar components:</p>

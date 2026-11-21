@@ -1,4 +1,5 @@
 ---
+
 title: "binomialconvertibleengine(3)"
 name: "binomialconvertibleengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-binomialconvertibleengine/"
 description: "ql/pricingengines/hybrid/binomialconvertibleengine.hpp – binomial engine for convertible bonds"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/lattices/tflattice.hpp&gt;<br />
  #include &lt;ql/pricingengines/hybrid/discretizedconvertible.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />

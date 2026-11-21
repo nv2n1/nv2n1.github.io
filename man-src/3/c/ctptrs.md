@@ -1,4 +1,5 @@
 ---
+
 title: "ctptrs(3)"
 name: "ctptrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctptrs/"
 description: "ctptrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctptrs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, INFO)<br />
  <i></i><code>CTPTRS</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nfsservctl(2)"
 name: "nfsservctl"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-nfsservctl/"
 description: "nfsservctl – syscall interface to kernel nfs daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/nfsd/syscall.h&gt;
 long nfsservctl(int cmd, struct nfsctl_arg *argp,
                 union nfsctl_res *resp);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: Since Linux 3.1, this system call no longer exists. It has been replaced by a set of files in the <i>nfsd</i> filesystem; see <code><a href="/docs/linux/man/7-nfsd/">nfsd</a></code>(7). </p>
 <p> /*<br />
 &nbsp;*&nbsp;These are the commands understood by nfsctl().<br />

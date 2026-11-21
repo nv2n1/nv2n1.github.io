@@ -1,4 +1,5 @@
 ---
+
 title: "pmproxy(1)"
 name: "pmproxy"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmproxy – proxy for performance metrics collector daemon"
 
 <h2>NAME</h2>
 <p> <code>pmproxy</code> &#8211; proxy for performance metrics collector daemon</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmproxy</code> [<code>-Af</code>] [<code>-C</code> <i>dirname</i>] [<code>-i</code> <i>ipaddress</i>] [<code>-l</code> <i>logfile</i>] [<code>-L</code> <i>bytes</i>] [<code>-M</code> <i>certname</i>] [<code>-p</code> <i>port</i>[,<i>port</i> &#8230;] [<code>-P</code> <i>passfile</i>] [<code>-U</code> <i>username</i>] [<code>-x</code> <i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmproxy</code> acts as a protocol proxy for <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1), allowing Performance Co-Pilot (PCP) monitoring clients to connect to one or more <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) instances via <code>pmproxy</code>. </p>
 <p> Normally <code>pmproxy</code> is deployed in a firewall domain, or on a &#8220;head&#8221; node of a cluster where the IP (Internet Protocol) address of the hosts where <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) is running may be unknown to the PCP monitoring clients, although the IP address of the host where <code>pmproxy</code> is running is known to these clients. Similarly, the clients may have network connectivity only to the host where <code>pmproxy</code> is running, while there is network connectivity from that host to the hosts of interest where <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) is running. </p>
 <p> The behaviour of the PCP monitoring clients is controlled by either the <code>PMPROXY_HOST</code> environment variable or through the extended hostname specification (see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) for details). If neither of these mechanisms is used, clients will make their connections directly to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1). If the proxy hostname syntax is used or <code>PMPROXY_HOST</code> is set, then this should be the hostname or IP address of the system where <code>pmproxy</code> is running, and the clients will connect to <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) indirectly through the protocol proxy services of <code>pmproxy.</code> </p>

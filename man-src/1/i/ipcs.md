@@ -1,4 +1,5 @@
 ---
+
 title: "ipcs(1)"
 name: "ipcs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ipcs/"
 description: "ipcs – show information on IPC facilities"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ipcs</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ipcs</code> shows information on System V inter-process communication facilities. By default it shows information about all three resources: shared memory segments, message queues, and semaphore arrays.</p>
 <h2>OPTIONS</h2>
 <p> <code>-i</code>, <code>&#8211;id</code> <i>id</i></p>

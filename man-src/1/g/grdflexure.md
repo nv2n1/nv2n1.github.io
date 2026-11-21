@@ -1,4 +1,5 @@
 ---
+
 title: "grdflexure(1)"
 name: "grdflexure"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdflexure – Compute flexural deformation of 3-D surfaces for va
 
 <h2>NAME</h2>
 <p> grdflexure &#8211; Compute flexural deformation of 3-D surfaces for various rheologies</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdflexure</code> <i>topogrd</i> <i>rm</i>/<i>rl</i>[/<i>ri</i>]/<i>rw</i> <i>Te</i>[<code>u</code>] <i>outgrid</i> [ <i>Nx</i>/<i>Ny</i>/<i>Nxy</i> ] [ <code>p</code><i>poisson</i> ] [ <code>y</code><i>Young</i> ] [ <i>nu_a</i>[/<i>h_a</i>/<i>nu_m</i>] ] [ <i>list</i> ] [ [<code>f</code>|<code>q</code>|<code>s</code>|<i>nx</i>/<i>ny</i>][<code>+a</code>|<code>d</code>|<code>h</code>|<code>l</code>][<code>+e</code>|<code>n</code>|<code>m</code>][<code>+t</code><i>width</i>][<code>+w</code>[<i>suffix</i>]][<code>+z</code>[<code>p</code>]] [ <i>beta</i> ] [ <code>-T</code><i>t0</i>[<code>u</code>][/<i>t1</i>[<code>u</code>]/<i>dt</i>[<code>u</code>]|<i>n</i>][<code>+l</code>] ] [ [<i>level</i>] ] [ <i>wd</i>] [ <i>zm</i>] [ <code>-fg</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdflexure</code> computes the flexural response to loads using a range of user-selectable rheologies. User may select from elastic, viscoelastic, or firmoviscous (with one or two viscous layers). Temporal evolution can also be modeled by providing incremental load grids and specifying a range of model output times.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

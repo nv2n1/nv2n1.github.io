@@ -1,4 +1,5 @@
 ---
+
 title: "g_hbond_d(1)"
 name: "g_hbond_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_hbond – computes and analyzes hydrogen bonds"
 <h2>NAME</h2>
 <p> g_hbond &#8211; computes and analyzes hydrogen bonds </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_hbond</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-num</code><i> hbnum.xvg </i> <code>-g</code><i> hbond.log </i> <code>-ac</code><i> hbac.xvg </i> <code>-dist</code><i> hbdist.xvg </i> <code>-ang</code><i> hbang.xvg </i> <code>-hx</code><i> hbhelix.xvg </i> <code>-hbn</code><i> hbond.ndx </i> <code>-hbm</code><i> hbmap.xpm </i> <code>-don</code><i> donor.xvg </i> <code>-dan</code><i> danum.xvg </i> <code>-life</code><i> hblife.xvg </i> <code>-nhbdist</code><i> nhbdist.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]xvgr</code><i></i> <code>-[no]ins</code><i></i> <code>-a</code><i> real </i> <code>-r</code><i> real </i> <code>-[no]da</code><i></i> <code>-r2</code><i> real </i> <code>-abin</code><i> real </i> <code>-rbin</code><i> real </i> <code>-[no]nitacc</code><i></i> <code>-[no]contact</code><i></i> <code>-shell</code><i> real </i> <code>-fitstart</code><i> real </i> <code>-temp</code><i> real </i> <code>-smooth</code><i> real </i> <code>-dump</code><i> int </i> <code>-max_hb</code><i> real </i> <code>-[no]merge</code><i></i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_hbond computes and analyzes hydrogen bonds. Hydrogen bonds are determined based on cutoffs for the angle Acceptor &#8211; Donor &#8211; Hydrogen (zero is extended) and the distance Hydrogen &#8211; Acceptor. OH and NH groups are regarded as donors, O is an acceptor always, N is an acceptor by default, but this can be switched using <code> -nitacc</code>. Dummy hydrogen atoms are assumed to be connected to the first preceding non-hydrogen atom. </p>
 <p> You need to specify two groups for analysis, which must be either identical or non-overlapping. All hydrogen bonds between the two groups are analyzed. </p>
 <p> If you set -shell, you will be asked for an additional index group which should contain exactly one atom. In this case, only hydrogen bonds between atoms within the shell distance from the one atom are considered. </p>

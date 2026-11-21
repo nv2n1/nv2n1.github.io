@@ -1,4 +1,5 @@
 ---
+
 title: "json_xs(1)"
 name: "json_xs"
 section: "1"
@@ -6,20 +7,13 @@ letter: "j"
 url: "/docs/linux/man/1-json_xs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+json_xs - JSON::XS commandline utility 
 
- json_xs - JSON::XS commandline utility 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 json_xs[-v][-f inputformat][-t outputformat]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- <i>json_xs</i> converts between some input and output formats (one of them is <font SIZE="-1">JSON</font>). 
+<i>json_xs</i> converts between some input and output formats (one of them is <font SIZE="-1">JSON</font>). 
 
  The default input format is <tt>&quot;json&quot;</tt> and the default output format is <tt>&quot;json-pretty&quot;</tt>.
 

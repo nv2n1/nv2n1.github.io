@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_delete_all(1)"
 name: "ndb_delete_all"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ndb_delete_all/"
 description: "ndb_delete_all – delete all rows from an NDB table"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_delete_all </code><i>options</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ndb_delete_all</code></p>
 <dd>deletes all rows from the given NDB table. In some cases, this can be much faster than DELETE or even TRUNCATE TABLE. </dd>
 <p> <code>Usage</code>: </p>

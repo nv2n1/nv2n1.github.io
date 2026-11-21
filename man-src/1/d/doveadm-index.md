@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-index(1)"
 name: "doveadm-index"
 section: "1"
@@ -9,11 +10,9 @@ description: "doveadm-index – Index mailboxes"
 
 <h2>NAME</h2>
 <p> doveadm-index &#8211; Index mailboxes</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>index</code> [<code>-S</code> <i>socket_path</i>] [<code>-q</code>] [<code>-n</code> <i>max_recent</i>] <i>mailbox</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>index</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code> [<code>-q</code>] [<code>-n</code> <i>max_recent</i>] <i>mailbox</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>index</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i>&nbsp;<wbr>user</i> [<code>-q</code>] [<code>-n</code> <i>max_recent</i>] <i>mailbox</i></p>
-<h2>DESCRIPTION</h2>
 <p> Add unindexed messages in a mailbox into index/cache file. If full text search is enabled, also add unindexed messages to the fts database. </p>
 <p> The caching adds only the fields that were previously added to the mailbox&#8217;s caching decisions, so it won&#8217;t do anything useful for mailboxes that user&#8217;s client hasn&#8217;t accessed yet. You can use <code>doveadm dump</code> command to show a specific mailbox&#8217;s current caching decisions. </p>
 <p> Messages can also be added automatically to full text search index using: </p>

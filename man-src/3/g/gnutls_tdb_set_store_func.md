@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_tdb_set_store_func(3)"
 name: "gnutls_tdb_set_store_func"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_tdb_set_store_func – API function"
 
 <h2>NAME</h2>
 <p> gnutls_tdb_set_store_func &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_tdb_set_store_func(gnutls_tdb_t </code><i>tdb</i><code>, gnutls_tdb_store_func </code><i>store</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_tdb_set_store_func – API function"
 <dd> The trust storage</dd>
 <dt>gnutls_tdb_store_func store</dt>
 <dd> The storage function</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will associate a storage function with the trust storage structure. The function is of the following form. </p>
 <p> int gnutls_tdb_store_func(const char* db_name, const char* host, const char* service, time_t expiration, const gnutls_datum_t* pubkey); </p>
 <p> The <i>db_name</i> should be used to pass any private data to this function.</p>

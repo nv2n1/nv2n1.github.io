@@ -1,4 +1,5 @@
 ---
+
 title: "libavdevice(3)"
 name: "libavdevice"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libavdevice/"
 description: "libavdevice – multimedia device handling library"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The libavdevice library provides a generic framework for grabbing from and rendering to many common multimedia input/output devices, and supports several input and output devices, including Video4Linux2, VfW, DShow, and <font SIZE="-1">ALSA.</font></p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-ffmpeg/">ffmpeg</a></i>(1), <i><a href="/docs/linux/man/1-ffplay/">ffplay</a></i>(1), <i><a href="/docs/linux/man/1-ffprobe/">ffprobe</a></i>(1), <i><a href="/docs/linux/man/1-ffserver/">ffserver</a></i>(1), <i><a href="/docs/linux/man/1-ffmpeg-devices/">ffmpeg-devices</a></i>(1), <i><a href="/docs/linux/man/3-libavutil/">libavutil</a></i>(3), <i><a href="/docs/linux/man/3-libavcodec/">libavcodec</a></i>(3), <i><a href="/docs/linux/man/3-libavformat/">libavformat</a></i>(3)</p>

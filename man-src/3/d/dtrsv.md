@@ -1,4 +1,5 @@
 ---
+
 title: "dtrsv(3)"
 name: "dtrsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrsv/"
 description: "dtrsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrsv</code> (UPLO, TRANS, DIAG, N, A, LDA, X, INCX)<br />
  <i></i><code>DTRSV</code></p>

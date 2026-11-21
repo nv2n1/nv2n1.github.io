@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installxmlcatalogs(1)"
 name: "dh_installxmlcatalogs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installxmlcatalogs/"
 description: "dh_installxmlcatalogs – install and register XML catalog files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installxmlcatalogs</code> [<i>debhelper options</i>] [<code>-n</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installxmlcatalogs</code> is a debhelper program that installs and registers <font SIZE="-1">XML</font> catalog files. It complies with the Debian <font SIZE="-1">XML/SGML</font> policy. </p>
 <p> The file <i>debian/package.xmlcatalogs</i> lists the local <font SIZE="-1">XML</font> catalog files to be installed per package as well as the <font SIZE="-1">XML</font> entities in those local <font SIZE="-1">XML</font> catalog files that are to be registered in the <font SIZE="-1">XML</font> catalog system. </p>
 <p> The local <font SIZE="-1">XML</font> catalog file entries in that file should be of the form <tt>&quot;local;source;dest&quot;</tt>, where the verbatim <tt>&quot;local&quot;</tt> indicates this is an entry for a local <font SIZE="-1">XML</font> catalog file, <tt>&quot;source&quot;</tt> indicates where the local <font SIZE="-1">XML</font> catalog resides in the source tree, and <tt>&quot;dest&quot;</tt> indicates the destination location for the local <font SIZE="-1">XML</font> catalog under the package build area. <tt>&quot;dest&quot;</tt> should start with <i>/usr/share/xml/</i>. </p>

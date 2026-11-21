@@ -1,4 +1,5 @@
 ---
+
 title: "pkcheck(1)"
 name: "pkcheck"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pkcheck/"
 description: "pkcheck – Check whether a process is authorized"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkcheck</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt>
 <dt> <code>pkcheck</code> [<code>&#8211;list-temp</code>]</dt>
 <dt> <code>pkcheck</code> [<code>&#8211;revoke-temp</code>]</dt>
 <dt> <code>pkcheck</code> <code>&#8211;action-id</code>&nbsp;<i>action</i> {<code>&#8211;process</code>&nbsp;{&nbsp;<i>pid</i>&nbsp;|&nbsp;<i>pid,pid-start-time</i>&nbsp;|&nbsp;<i>pid,pid-start-time,uid</i>&nbsp;} | <code>&#8211;system-bus-name</code>&nbsp;<i>busname</i>} [<code>&#8211;allow-user-interaction</code>] [<code>&#8211;enable-internal-agent</code>] [<code>&#8211;detail</code>&nbsp;<i>key</i>&nbsp;<i>value</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>pkcheck</code></p>
 <dd>is used to check whether a process, specified by either <code>&#8211;process</code> (see below) or <code>&#8211;system-bus-name</code>, is authorized for <i>action</i>. The <code>&#8211;detail</code> option can be used zero or more times to pass details about <i>action</i>. If <code>&#8211;allow-user-interaction</code> is passed, <code>pkcheck</code> blocks while waiting for authentication. </dd>
 <p> The invocation <code>pkcheck &#8211;list-temp</code> will list all temporary authorizations for the current session and <code>pkcheck &#8211;revoke-temp</code> will revoke all temporary authorizations for the current session. </p>

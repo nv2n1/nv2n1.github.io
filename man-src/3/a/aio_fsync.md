@@ -1,4 +1,5 @@
 ---
+
 title: "aio_fsync(3)"
 name: "aio_fsync"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-aio_fsync/"
 description: "aio_fsync – asynchronous file synchronization"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>int aio_fsync(int </code><i>op</i><code>, struct aiocb *</code><i>aiocbp</i><code>);</code> </p>
 <p> Link with <i>-lrt</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>aio_fsync</code>() function does a sync on all outstanding asynchronous I/O operations associated with <i>aiocbp-&gt;aio_fildes</i>. (See <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) for a description of the <i>aiocb</i> structure.) </p>
 <p> More precisely, if <i>op</i> is <code>O_SYNC</code>, then all currently queued I/O operations shall be completed as if by a call of <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2), and if <i>op</i> is <code>O_DSYNC</code>, this call is the asynchronous analog of <code><a href="/docs/linux/man/2-fdatasync/">fdatasync</a></code>(2). </p>
 <p> Note that this is a request only; it does not wait for I/O completion. </p>

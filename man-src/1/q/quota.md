@@ -1,4 +1,5 @@
 ---
+
 title: "quota(1)"
 name: "quota"
 section: "1"
@@ -9,12 +10,10 @@ description: "quota – display disk usage and limits"
 
 <h2>NAME</h2>
 <p> quota &#8211; display disk usage and limits</p>
-<h2>SYNOPSIS</h2>
 <p> <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-guqvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]]<br />
  <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]] <code>-u</code> <i>user</i>&#8230;<br />
  <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswi</code> ] [ <code>-l</code>&nbsp;<wbr>| [ <code>-QAm</code> ]] <code>-g</code> <i>group</i>&#8230;<br />
  <code>quota</code> [ <code>-F</code> <i>format-name</i> ] [ <code>-qvswugQm</code> ] <code>-f</code> <i>filesystem</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>quota</code> displays users&#8217; disk usage and limits. By default only the user quotas are printed. </p>
 <p> <code>quota</code> reports the quotas of all the filesystems listed in <code>/etc/mtab</code>. For filesystems that are NFS-mounted a call to the rpc.rquotad on the server machine is performed to get the information.</p>
 <h2>OPTIONS</h2>

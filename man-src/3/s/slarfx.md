@@ -1,4 +1,5 @@
 ---
+
 title: "slarfx(3)"
 name: "slarfx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarfx/"
 description: "slarfx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarfx</code> (SIDE, M, N, V, TAU, C, LDC, WORK)<br />
  <i></i><code>SLARFX</code> applies an elementary reflector to a general rectangular matrix, with loop unrolling when the reflector has order ≤ 10.</p>

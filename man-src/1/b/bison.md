@@ -1,4 +1,5 @@
 ---
+
 title: "bison(1)"
 name: "bison"
 section: "1"
@@ -9,9 +10,7 @@ description: "bison – GNU Project parser generator (yacc replacement)"
 
 <h2>NAME</h2>
 <p> bison &#8211; GNU Project parser generator (yacc replacement)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bison</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Bison</i> is a parser generator in the style of <i><a href="/docs/linux/man/1-yacc/">yacc</a></i>(1). It should be upwardly compatible with input files designed for <i>yacc</i>. </p>
 <p> Input files should follow the <i>yacc</i> convention of ending in <code>.y</code>. Unlike <i>yacc</i>, the generated files do not have fixed names, but instead use the prefix of the input file. Moreover, if you need to put <i>C++</i> code in the input file, you can end his name by a C++-like extension (.ypp or .y++), then bison will follow your extension to name the output file (.cpp or .c++). For instance, a grammar description file named <code>parse.yxx</code> would produce the generated parser in a file named <code>parse.tab.cxx</code>, instead of <i>yacc</i>&#8216;s <code>y.tab.c</code> or old <i>Bison</i> version&#8217;s <code>parse.tab.c</code>. </p>
 <p> This description of the options that can be given to <i>bison</i> is adapted from the node <code>Invocation</code> in the <code>bison.texi</code> manual, which should be taken as authoritative. </p>

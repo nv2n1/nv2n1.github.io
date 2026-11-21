@@ -1,4 +1,5 @@
 ---
+
 title: "time(2)"
 name: "time"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-time/"
 description: "time – get time in seconds"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>time_t time(time_t *</code><i>tloc</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>time</code>() returns the time as the number of seconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). </p>
 <p> If <i>tloc</i> is non-NULL, the return value is also stored in the memory pointed to by <i>tloc</i>.</p>
 <h2>RETURN VALUE</h2>

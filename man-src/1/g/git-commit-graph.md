@@ -1,4 +1,5 @@
 ---
+
 title: "git-commit-graph(1)"
 name: "git-commit-graph"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-commit-graph/"
 description: "git-commit-graph – Write and verify Git commit-graph files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git commit - graph verify[--object - dir&lt;dir&gt;][--shallow][--[no - ] progress] git commit - graph write&lt;options&gt;[--object - dir&lt;dir&gt;][--[no - ] progress]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Manage the serialized commit-graph file.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;object-dir</p>

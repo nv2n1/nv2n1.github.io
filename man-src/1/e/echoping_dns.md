@@ -1,4 +1,5 @@
 ---
+
 title: "echoping_dns(1)"
 name: "echoping_dns"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-echoping_dns/"
 description: "echoping_dns – echoping plugin which queries a DNS server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [echoping options] -m dns <code>hostname</code> <code>request</code></p>
-<h2>DESCRIPTION</h2>
 <p> dns is an echoping plugin, fo testing the performances of DNS (RFC 1034 and 1035) servers.</p>
 <h2>ARGUMENTS</h2>
 <dl>

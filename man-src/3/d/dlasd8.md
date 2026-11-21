@@ -1,4 +1,5 @@
 ---
+
 title: "dlasd8(3)"
 name: "dlasd8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasd8/"
 description: "dlasd8.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd8</code> (ICOMPQ, K, D, Z, VF, VL, DIFL, DIFR, LDDIFR, DSIGMA, WORK, INFO)<br />
  <i></i><code>DLASD8</code> finds the square roots of the roots of the secular equation, and stores, for each element in D, the distance to its two nearest poles. Used by sbdsdc.</p>

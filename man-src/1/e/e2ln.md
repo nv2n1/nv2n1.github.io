@@ -1,4 +1,5 @@
 ---
+
 title: "e2ln(1)"
 name: "e2ln"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-e2ln/"
 description: "e2ln – create hard links on an ext2 filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>e2ln</code> [<i>options</i>]<i> source destination</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>e2ln</code> command is used to create hard links on an ext2 filesystem.</p>
 <h2>OPTIONS</h2>
 <dl>

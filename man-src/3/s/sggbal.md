@@ -1,4 +1,5 @@
 ---
+
 title: "sggbal(3)"
 name: "sggbal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sggbal/"
 description: "sggbal.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggbal</code> (JOB, N, A, LDA, B, LDB, ILO, IHI, LSCALE, RSCALE, WORK, INFO)<br />
  <i></i><code>SGGBAL</code></p>

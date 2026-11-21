@@ -1,4 +1,5 @@
 ---
+
 title: "perl5130delta(1)"
 name: "perl5130delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5130delta/"
 description: "perl5130delta – what is new for perl v5.13.0"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.12.0 release and the 5.13.0 release. </p>
 <p> If you are upgrading from an earlier release such as 5.10.0, first read perl5120delta, which describes differences between 5.10.0 and 5.12.0.</p>
 <h2>Core Enhancements</h2>

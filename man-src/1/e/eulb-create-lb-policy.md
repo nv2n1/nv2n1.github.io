@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-lb-policy(1)"
 name: "eulb-create-lb-policy"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-create-lb-policy – Add a new policy to a load balancer"
 
 <h2>NAME</h2>
 <p> eulb-create-lb-policy &#8211; Add a new policy to a load balancer</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-create-lb-policy <code>-n</code> POLICY <code>-t</code> POLTYPE</p>
 <dl>
 <dt>[-a &quot;name=NAME, value=VALUE&quot;] [-A NAME=VALUE,&#8230;]</dt>
 <dd> [&#8211;attributes-from-file FILE] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Add a new policy to a load balancer</p>
 <h3>positional arguments:</h3>
 <dl>

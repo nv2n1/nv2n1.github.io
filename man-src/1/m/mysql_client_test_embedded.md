@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_client_test_embedded(1)"
 name: "mysql_client_test_embedded"
 section: "1"
@@ -7,14 +8,11 @@ url: "/docs/linux/man/1-mysql_client_test_embedded/"
 description: "mysql_client_test – test client API mysql_client_test_embedded – test client API for embedded server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_client_test &#8211; test client API<br />
  mysql_client_test_embedded &#8211; test client API for embedded server </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_client_test [</code><i>options</i><code>] [</code><i>test_name</i><code>] &#8230;</code></dt>
 <dt> <code>mysql_client_test_embedded [</code><i>options</i><code>] [</code><i>test_name</i><code>] &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>mysql_client_test</code> program is used for testing aspects of the MariaDB client API that cannot be tested using <code>mysqltest</code> and its test language. <code>mysql_client_test_embedded</code> is similar but used for testing the embedded server. Both programs are run as part of the test suite. </dd>
 <p> The source code for the programs can be found in in tests/mysql_client_test.c in a source distribution. The program serves as a good source of examples illustrating how to use various features of the client API. </p>
 <p> <code>mysql_client_test</code> is used in a test by the same name in the main tests suite of <code>mysql-test-run.pl</code> but may also be run directly. Unlike the other programs listed here, it does not read an external description of what tests to run. Instead, all tests are coded into the program, which is written to cover all aspects of the C language API. </p>

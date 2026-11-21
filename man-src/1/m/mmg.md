@@ -1,4 +1,5 @@
 ---
+
 title: "mmg(1)"
 name: "mmg"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-mmg/"
 description: "mmg – a GUI for"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mmg &#8211; a GUI for <code></p>
 <p><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) including a chapter and a header editor</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mmg</code> [[&#8211;edit-headers&nbsp;<wbr>{filename.mkv}] | [preferences-file.mmg] | [source-file.ext]]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-mmg/">mmg</a></code>(1)</p>
 <dd>is a wxWindows(TM) based GUI for <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1). It offers easy access to all of <code><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1)&#8217;s options. All settings (e.g. source files, track options etc) can be saved and restored. Included is a chapter editor that can read OGM style and XML style chapter files, write XML style chapter files and even read chapters from Matroska(TM) files and write chapters directly to Matroska(TM) files. Included is also a header editor that can be used to quickly change properties of existing Matroska(TM) files without needing a complete remux. </dd>
 <p> <code><a href="/docs/linux/man/1-mmg/">mmg</a></code>(1) knows few options. The first possibility is to start it with a single file name. If that file name&#8217;s extenion is &#8216;.mmg&#8217; then it will be treated as a preferences file and <code><a href="/docs/linux/man/1-mmg/">mmg</a></code>(1) will load its setting when it starts. Otherwise the name is interpreted as being the name of an input file which will be added. </p>

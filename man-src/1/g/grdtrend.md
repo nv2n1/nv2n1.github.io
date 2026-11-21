@@ -1,4 +1,5 @@
 ---
+
 title: "grdtrend(1)"
 name: "grdtrend"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdtrend – Fit trend surface to grids and compute residuals"
 
 <h2>NAME</h2>
 <p> grdtrend &#8211; Fit trend surface to grids and compute residuals</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdtrend</code> <i>grdfile</i> <i>n_model</i>[<code>r</code>] [ <i>diff.nc</i> ] [ <i>region</i> ] [ <i>trend.nc</i> ] [ <i>weight.nc</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdtrend</code> reads a 2-D grid file and fits a low-order polynomial trend to these data by [optionally weighted] least-squares. The trend surface is defined by: m1 + m2*x + m3*y + m4*x*y + m5*x*x + m6*y*y + m7*x*x*x + m8*x*x*y + m9*x*y*y + m10*y*y*y. </p>
 <p> The user must specify <code>-N</code><i>n_model</i>, the number of model parameters to use; thus, <code>-N</code><i>3</i> fits a bilinear trend, <code>-N</code><i>6</i> a quadratic surface, and so on. Optionally, append <code>r</code> to the <code>-N</code> option to perform a robust fit. In this case, the program will iteratively reweight the data based on a robust scale estimate, in order to converge to a solution insensitive to outliers. This may be handy when separating a &quot;regional&quot; field from a &quot;residual&quot; which should have non-zero mean, such as a local mountain on a regional surface. </p>
 <p> If data file has values set to NaN, these will be ignored during fitting; if output files are written, these will also have NaN in the same locations.</p>

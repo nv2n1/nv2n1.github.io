@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-snapshot(1)"
 name: "fts-rest-snapshot"
 section: "1"
@@ -11,7 +12,6 @@ description: "fts-rest-snapshot"
 <p> fts-rest-snapshot</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-snapshot [options]</p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to retrieve the internal status FTS3 has on all pairs with ACTIVE transfers. It allows to filter by VO, source SE and destination SE</p>
 <h2>OPTIONS</h2>
 <dl>

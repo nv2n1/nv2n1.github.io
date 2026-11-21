@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_get_subkey_idx(3)"
 name: "gnutls_openpgp_crt_get_subkey_idx"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_openpgp_crt_get_subkey_idx – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_subkey_idx &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_subkey_idx(gnutls_openpgp_crt_t </code><i>key</i><code>, const gnutls_openpgp_keyid_t </code><i>keyid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_openpgp_crt_get_subkey_idx – API function"
 <dd> the structure that contains the OpenPGP public key.</dd>
 <dt>const gnutls_openpgp_keyid_t keyid</dt>
 <dd> the keyid.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get subkey&#8217;s index.</p>
 <h2>RETURNS</h2>
 <p> the index of the subkey or a negative error value.</p>

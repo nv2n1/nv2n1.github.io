@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-build(1)"
 name: "docker-image-build"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-image-build/"
 description: "docker-image-build – Build an image from a Dockerfile"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker image build [OPTIONS] PATH | URL | &#8211;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker build. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;add-host</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Add a custom host-to-IP mapping (host:ip)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-credential-cache(1)"
 name: "git-credential-cache"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-credential-cache/"
 description: "git-credential-cache – Helper to temporarily store passwords in memory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 git config credential.helper 'cache [&lt;options&gt;]'
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command caches credentials in memory for use by future Git programs. The stored credentials never touch the disk, and are forgotten after a configurable timeout. The cache is accessible over a Unix domain socket, restricted to the current user by filesystem permissions. </p>
 <p> You probably don&#8217;t want to invoke this command directly; it is meant to be used as a credential helper by other parts of Git. See <code><a href="/docs/linux/man/7-gitcredentials/">gitcredentials</a></code>(7) or <code>EXAMPLES</code> below.</p>
 <h2>OPTIONS</h2>

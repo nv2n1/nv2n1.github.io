@@ -1,4 +1,5 @@
 ---
+
 title: "dla_gerpvgrw(3)"
 name: "dla_gerpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_gerpvgrw/"
 description: "dla_gerpvgrw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
  <i></i><code>DLA_GERPVGRW</code></p>

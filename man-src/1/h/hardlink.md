@@ -1,4 +1,5 @@
 ---
+
 title: "hardlink(1)"
 name: "hardlink"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hardlink/"
 description: "hardlink – link multiple copies of a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hardlink</code> [options] [<i>directory</i>|<i>file</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>hardlink</code> is a tool which replaces copies of a file with hardlinks, therefore saving space.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code></p>

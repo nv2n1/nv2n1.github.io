@@ -1,4 +1,5 @@
 ---
+
 title: "atop(1)"
 name: "atop"
 section: "1"
@@ -9,13 +10,11 @@ description: "atop – Advanced System & Process Monitor"
 
 <h2>NAME</h2>
 <p> <code>atop </code> &#8211; Advanced System &amp; Process Monitor</p>
-<h2>SYNOPSIS</h2>
 <p> Interactive Usage: </p>
 <p> <code>atop</code> [-g|-m|-d|-n|-u|-p|-s|-c|-v|-o|-y] [-C|-M|-D|-N|-A] [-afFG1xR] [-L linelen] [-Plabel[,label]&#8230;] [ <i>interval</i> [ <i>samples</i> ]] </p>
 <p> Writing and reading raw logfiles: </p>
 <p> <code>atop</code> -w <i>rawfile</i> [-a] [-S] [ <i>interval</i> [ <i>samples</i> ]]<br />
  <code>atop</code> -r [ <i>rawfile</i> ] [-b <i>hh:mm</i> ] [-e <i>hh:mm</i> ] [-g|-m|-d|-n|-u|-p|-s|-c|-v|-o|-y] [-C|-M|-D|-N|-A] [-fFG1xR] [-L linelen] [-Plabel[,label]&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The program <i>atop</i> is an interactive monitor to view the load on a Linux system. It shows the occupation of the most critical hardware resources (from a performance point of view) on system level, i.e. cpu, memory, disk and network.<br />
  It also shows which processes are responsible for the indicated load with respect to cpu and memory load on process level. Disk load is shown per process if &quot;storage accounting&quot; is active in the kernel. Network load is shown per process if the kernel module `netatop&#8217; has been installed. </p>
 <p> Every <i>interval</i> (default: 10 seconds) information is shown about the resource occupation on system level (cpu, memory, disks and network layers), followed by a list of processes which have been active during the last interval (note that all processes that were unchanged during the last interval are not shown, unless the key &#8216;a&#8217; has been pressed). If the list of active processes does not entirely fit on the screen, only the top of the list is shown (sorted in order of activity).<br />

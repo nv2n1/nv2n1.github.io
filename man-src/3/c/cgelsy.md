@@ -1,4 +1,5 @@
 ---
+
 title: "cgelsy(3)"
 name: "cgelsy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgelsy/"
 description: "cgelsy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgelsy</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, LWORK, RWORK, INFO)<br />
  <i></i><code> CGELSY solves overdetermined or underdetermined systems for GE matrices</code></p>

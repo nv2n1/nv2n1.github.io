@@ -1,4 +1,5 @@
 ---
+
 title: "install(1)"
 name: "install"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-install/"
 description: "install – copy files and set attributes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>install</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br />
  <code>install</code> [<i>,OPTION/</i>]&#8230; <i>,SOURCE/</i>&#8230; <i>,DIRECTORY/</i><br />
  <code>install</code> [<i>,OPTION/</i>]&#8230; <i>,-t DIRECTORY SOURCE/</i>&#8230;<br />
  <code>install</code> [<i>,OPTION/</i>]&#8230; <i>,-d DIRECTORY/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This install program copies files (often just compiled) into destination locations you choose. If you want to download and install a ready-to-use package on a GNU/Linux system, you should instead be using a package manager like yum(1) or apt-get(1). </p>
 <p> In the first three forms, copy SOURCE to DEST or multiple SOURCE(s) to the existing DIRECTORY, while setting permission modes and owner/group. In the 4th form, create all components of the given DIRECTORY(ies). </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

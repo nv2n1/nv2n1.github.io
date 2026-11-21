@@ -1,4 +1,5 @@
 ---
+
 title: "claein(3)"
 name: "claein"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claein/"
 description: "claein.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claein</code> (RIGHTV, NOINIT, N, H, LDH, W, V, B, LDB, RWORK, EPS3, SMLNUM, INFO)<br />
  <i></i><code>CLAEIN</code> computes a specified right or left eigenvector of an upper Hessenberg matrix by inverse iteration.</p>

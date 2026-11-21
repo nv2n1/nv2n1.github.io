@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-nspawn(1)"
 name: "systemd-nspawn"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-systemd-nspawn/"
 description: "systemd-nspawn – Spawn a namespace container for debugging, testing and building"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-nspawn</code> [OPTIONS&#8230;] [<i>COMMAND</i>&nbsp;<wbr>[ARGS&#8230;]]</dt>
 <dt> <code>systemd-nspawn</code> -b [OPTIONS&#8230;] [ARGS&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-nspawn</code></p>
 <dd>may be used to run a command or OS in a light-weight namespace container. In many ways it is similar to <code><a href="/docs/linux/man/1-chroot/">chroot</a></code>(1), but more powerful since it fully virtualizes the file system hierarchy, as well as the process tree, the various IPC subsystems and the host and domain name. </dd>
 <p> <code>systemd-nspawn</code> limits access to various kernel interfaces in the container to read-only, such as /sys, /proc/sys or /sys/fs/selinux. Network interfaces and the system clock may not be changed from within the container. Device nodes may not be created. The host system cannot be rebooted and kernel modules may not be loaded from within the container. </p>

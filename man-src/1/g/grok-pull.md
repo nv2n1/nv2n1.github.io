@@ -1,4 +1,5 @@
 ---
+
 title: "grok-pull(1)"
 name: "grok-pull"
 section: "1"
@@ -9,9 +10,7 @@ description: "GROK-PULL – Clone or update local git repositories"
 
 <h2>NAME</h2>
 <p> GROK-PULL &#8211; Clone or update local git repositories</p>
-<h2>SYNOPSIS</h2>
 <p> grok-pull -c /path/to/repos.conf</p>
-<h2>DESCRIPTION</h2>
 <p> This utility runs from a cronjob and downloads the latest manifest from the grokmirror master. If there are new repositories or changes in the existing repositories, grok-pull will perform the necessary git commands to clone or fetch the required data from the master. </p>
 <p> At the end of its run, grok-pull will generate its own manifest file, which can then be used for further mirroring.</p>
 <h2>OPTIONS</h2>

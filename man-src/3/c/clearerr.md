@@ -1,4 +1,5 @@
 ---
+
 title: "clearerr(3)"
 name: "clearerr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clearerr/"
 description: "clearerr, feof, ferror, fileno – check and reset stream status"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>
 <p> <code>void clearerr(FILE *</code><i>stream</i><code>);</code> </p>
 <p> <code>int feof(FILE *</code><i>stream</i><code>);</code> </p>
@@ -15,7 +15,6 @@ description: "clearerr, feof, ferror, fileno – check and reset stream status"
 <p> <code>int fileno(FILE *</code><i>stream</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>fileno</code>(): _POSIX_C_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The function <code>clearerr</code>() clears the end-of-file and error indicators for the stream pointed to by <i>stream</i>. </p>
 <p> The function <code>feof</code>() tests the end-of-file indicator for the stream pointed to by <i>stream</i>, returning nonzero if it is set. The end-of-file indicator can be cleared only by the function <code>clearerr</code>(). </p>
 <p> The function <code>ferror</code>() tests the error indicator for the stream pointed to by <i>stream</i>, returning nonzero if it is set. The error indicator can be reset only by the <code>clearerr</code>() function. </p>

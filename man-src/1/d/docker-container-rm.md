@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-rm(1)"
 name: "docker-container-rm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-container-rm/"
 description: "docker-container-rm – Remove one or more containers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker container rm [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>docker container rm</code> will remove one or more containers from the host node. The container name or ID can be used. This does not remove images. You cannot remove a running container unless you use the <code>-f</code> option. To see all containers on a host use the <code>docker container ls -a</code> command. </p>
 <h2>EXAMPLES</h2>
 <h2>Removing a container using its ID</h2>

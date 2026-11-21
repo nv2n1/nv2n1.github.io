@@ -1,4 +1,5 @@
 ---
+
 title: "getline(3)"
 name: "getline"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getline/"
 description: "getline, getdelim – delimited string input"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
@@ -22,7 +22,6 @@ ssize_t getdelim(char **lineptr, size_t *n, int delim, FILE *stream);
 <dt>Before glibc 2.10:</dt>
 <dd> _GNU_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>getline</code>() reads an entire line from <i>stream</i>, storing the address of the buffer containing the text into <i>*lineptr</i>. The buffer is null-terminated and includes the newline character, if one was found. </p>
 <p> If <i>*lineptr</i> is set to NULL and <i>*n</i> is set 0 before the call, then <code>getline</code>() will allocate a buffer for storing the line. This buffer should be freed by the user program even if <code>getline</code>() failed. </p>
 <p> Alternatively, before calling <code>getline</code>(), <i>*lineptr</i> can contain a pointer to a <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3)-allocated buffer <i>*n</i> bytes in size. If the buffer is not large enough to hold the line, <code>getline</code>() resizes it with <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3), updating <i>*lineptr</i> and <i>*n</i> as necessary. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_set_crt_serial(3)"
 name: "gnutls_x509_crl_set_crt_serial"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crl_set_crt_serial – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_set_crt_serial &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_set_crt_serial(gnutls_x509_crl_t </code><i>crl</i><code>, const void * </code><i>serial</i><code>, size_t </code><i>serial_size</i><code>, time_t </code><i>revocation_time</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crl_set_crt_serial – API function"
 <dd> Holds the size of the serial field.</dd>
 <dt>time_t revocation_time</dt>
 <dd> The time this certificate was revoked</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set a revoked certificate&#8217;s serial number to the CRL.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

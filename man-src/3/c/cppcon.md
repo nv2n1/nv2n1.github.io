@@ -1,4 +1,5 @@
 ---
+
 title: "cppcon(3)"
 name: "cppcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cppcon/"
 description: "cppcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cppcon</code> (UPLO, N, AP, ANORM, RCOND, WORK, RWORK, INFO)<br />
  <i></i><code>CPPCON</code></p>

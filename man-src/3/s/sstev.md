@@ -1,4 +1,5 @@
 ---
+
 title: "sstev(3)"
 name: "sstev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sstev/"
 description: "sstev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sstev</code> (JOBZ, N, D, E, Z, LDZ, WORK, INFO)<br />
  <i></i><code> SSTEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

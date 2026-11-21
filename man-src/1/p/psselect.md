@@ -1,4 +1,5 @@
 ---
+
 title: "psselect(1)"
 name: "psselect"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-psselect/"
 description: "psselect – select pages from a PostScript file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>psselect</code> [ <code>-q</code> ] [ <code>-e</code> ] [ <code>-o</code> ] [ <code>-r</code> ] [ <code>-p</code><i>pages</i> ] [ <i>pages</i> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Psselect</i> selects pages from a PostScript document, creating a new PostScript file. The input PostScript file should follow the Adobe Document Structuring Conventions. </p>
 <p> The <i>-e</i> option selects all of the even pages; it may be used in conjunction with the other page selection options to select the even pages from a range of pages. </p>
 <p> The <i>-o</i> option selects all of the odd pages; it may be used in conjunction with the other page selection options. </p>

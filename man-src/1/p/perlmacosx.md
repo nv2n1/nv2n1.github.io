@@ -1,4 +1,5 @@
 ---
+
 title: "perlmacosx(1)"
 name: "perlmacosx"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlmacosx/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlmacosx - Perl under Mac OS X 
 
- perlmacosx - Perl under Mac OS X 
-
-<h2>SYNOPSIS</h2>
-
- This document briefly describes Perl under Mac <font SIZE="-1">OS X.</font> 
+This document briefly describes Perl under Mac <font SIZE="-1">OS X.</font> 
 
  <pre>
   curl -O <a rel="nofollow" HREF="http://www.cpan.org/src/perl-5.30.0.tar.gz">http://www.cpan.org/src/perl-5.30.0.tar.gz</a>
@@ -25,9 +21,7 @@ url: "/docs/linux/man/1-perlmacosx/"
   sudo make install
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- The latest Perl release (5.30.0 as of this writing) builds without changes under all versions of Mac <font SIZE="-1">OS X</font> from 10.3 ``Panther'' onwards. 
+The latest Perl release (5.30.0 as of this writing) builds without changes under all versions of Mac <font SIZE="-1">OS X</font> from 10.3 ``Panther'' onwards. 
 
  In order to build your own version of Perl you will need 'make', which is part of Apple's developer tools - also known as Xcode. From Mac <font SIZE="-1">OS X 10.7</font> ``Lion'' onwards, it can be downloaded separately as the 'Command Line Tools' bundle directly from &lt;<a rel="nofollow" HREF="https://developer.apple.com/downloads/">https://developer.apple.com/downloads/</a>&gt; (you will need a free account to log in), or as a part of the Xcode suite, freely available at the App Store. Xcode is a pretty big app, so unless you already have it or really want it, you are advised to get the 'Command Line Tools' bundle separately from the link above. If you want to do it from within Xcode, go to Xcode -&gt; Preferences -&gt; Downloads and select the 'Command Line Tools' option. 
 

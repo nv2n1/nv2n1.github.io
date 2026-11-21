@@ -1,4 +1,5 @@
 ---
+
 title: "cunbdb1(3)"
 name: "cunbdb1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cunbdb1/"
 description: "cunbdb1.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunbdb1</code> (M, P, Q, X11, LDX11, X21, LDX21, THETA, PHI, TAUP1, TAUP2, TAUQ1, WORK, LWORK, INFO)<br />
  <i></i><code>CUNBDB1</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gshhs(1)"
 name: "gshhs"
 section: "1"
@@ -9,9 +10,7 @@ description: "gshhs – Extract ASCII listings from binary GSHHS or WDBII data f
 
 <h2>NAME</h2>
 <p> gshhs &#8211; Extract ASCII listings from binary GSHHS or WDBII data files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gshhs</code> <i>binaryfile.b</i> [ <code>-I</code><i>id</i> ] [ <code>-L</code> ] [ <code>-M</code> ] &gt; <i>asciifile.txt</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gshhs</code> reads the binary coastline (GSHHS) or political boundary or river (WDBII) files and extracts an ASCII listing. It automatically handles byte-swabbing between different architectures. Optionally, only segment header info can be displayed. The header info has the format <i>ID npoints hierarchical-level source area f_area west east south north container ancestor</i>, where hierarchical levels for coastline polygons go from 1 (shoreline) to 4 (lake inside island inside lake inside land). Source is either W (World Vector Shoreline) or C (CIA World Data Bank II); lower case is used if a lake is a river-lake. The <i>west east south north</i> is the enclosing rectangle, area is the polygon area in km^2 while f_area is the actual area of the ancestor polygon, container is the ID of the polygon that contains this polygon (-1 if none), and ancestor is the ID of the polygon in the full resolution set that was reduced to yield this polygon (-1 if full resolution). For line data the header is simply <i>ID npoints hierarchical-level source west east south north</i></p>
 <dl>
 <dt><i>binaryfile.b</i></dt>

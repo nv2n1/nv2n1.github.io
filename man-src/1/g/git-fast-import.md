@@ -1,4 +1,5 @@
 ---
+
 title: "git-fast-import(1)"
 name: "git-fast-import"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-fast-import/"
 description: "git-fast-import – Backend for fast Git data importers"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 frontend | <i>git fast-import</i> [&lt;options&gt;]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This program is usually not what the end user wants to run directly. Most end users want to use one of the existing frontend programs, which parses a specific type of foreign source and feeds the contents stored there to <i>git fast-import</i>. </p>
 <p> fast-import reads a mixed command/data stream from standard input and writes one or more packfiles directly into the current repository. When EOF is received on standard input, fast import writes out updated branch and tag refs, fully updating the current repository with the newly imported data. </p>
 <p> The fast-import backend itself can import into an empty repository (one that has already been initialized by <i>git init</i>) or incrementally update an existing populated repository. Whether or not incremental imports are supported from a particular foreign source depends on the frontend program in use.</p>

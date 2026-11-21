@@ -1,4 +1,5 @@
 ---
+
 title: "mkdiskimage(1)"
 name: "mkdiskimage"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-mkdiskimage/"
 description: "mkdiskimage – Create a blank MS-DOS formatted hard disk image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mkdiskimage</code> &#8211; Create a blank MS-DOS formatted hard disk image</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mkdiskimage</code> [-doFMz4] [-i id] file cyl head sect </p>
-<h2>DESCRIPTION</h2>
 <p> This is a convenient tool to generate a hard disk image, pre-formatted according to the MS-DOS specification, and having stated properties. </p>
 <p> A disk image named <i>file</i> will be created, large enough to have <i>cyl</i> cylinders, <i>head</i> heads, and <i>sect</i> sectors. Using <code>-M</code>, the value of <i>cyl</i> will instead be interpreted as size in MBytes. </p>
 <p> Additional settings include ZIP type disks, FAT32 formatting, and the inclusion of an emulation header. </p>

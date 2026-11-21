@@ -1,4 +1,5 @@
 ---
+
 title: "splitdiff(1)"
 name: "splitdiff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-splitdiff/"
 description: "splitdiff – separate out incremental patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>splitdiff</code> [-a] [-d] [-D&nbsp;<i>dir</i>] [-p&nbsp;<i>n</i>] [-E] [<i>file</i>]</dt>
 <dt> <code>splitdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>If you have a patch file composed of several incremental patches, you can use splitdiff to separate them out. You may want to do this in preparation for re-combining them with <code><a href="/docs/linux/man/1-combinediff/">combinediff</a></code>(1). </dd>
 <p> The effect of running splitdiff is to separate its input into a set of output files, with no output file patching the same file more than once.</p>
 <h2>OPTIONS</h2>

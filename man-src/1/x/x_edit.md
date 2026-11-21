@@ -1,4 +1,5 @@
 ---
+
 title: "x_edit(1)"
 name: "x_edit"
 section: "1"
@@ -9,9 +10,7 @@ description: "x_edit – convert between binary and ASCII crossover correction t
 
 <h2>NAME</h2>
 <p> <code>x_edit</code> &#8211; convert between binary and ASCII crossover correction tables.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x_edit</code> <code>-A</code>|<code>X</code>[<i>name</i>] <code>-O</code>[<i>outname</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The purpose of <code>x_edit</code> is to convert between ASCII and binary versions of the crossover correction tables.</p>
 <dl>
 <dt><code>-A</code></dt>

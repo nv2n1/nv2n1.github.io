@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-frequency-info(1)"
 name: "cpupower-frequency-info"
 section: "1"
@@ -11,7 +12,6 @@ description: "cpupower frequency-info – Utility to retrieve cpufreq kernel inf
 <p> cpupower frequency-info &#8211; Utility to retrieve cpufreq kernel information</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpulist ] frequency-info [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> A small tool which prints out cpufreq information helpful to developers and interested users.</p>
 <h2>OPTIONS</h2>
 <dl>

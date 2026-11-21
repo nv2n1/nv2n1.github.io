@@ -1,4 +1,5 @@
 ---
+
 title: "esvalidate(1)"
 name: "esvalidate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-esvalidate/"
 description: "esvalidate – ECMAScript Validator using Esprima"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

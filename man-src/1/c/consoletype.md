@@ -1,4 +1,5 @@
 ---
+
 title: "consoletype(1)"
 name: "consoletype"
 section: "1"
@@ -9,9 +10,7 @@ description: "consoletype – print type of the console connected to standard in
 
 <h2>NAME</h2>
 <p> <code>consoletype &#8211; print type of the console connected to standard input </code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>consoletype [</code><i>stdout</i>] [<i>fg</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>consoletype prints the type of console connected to standard input, and checks whether the console connected to standard input is the current foreground virtual console. With no arguments, it prints </code><i>vt</i> if console is a virtual terminal (/dev/tty* or /dev/console device if not on a serial console), <i>serial</i> if standard input is a serial console (/dev/console or /dev/ttyS*) and <i>pty</i> if standard input is a pseudo terminal.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>consoletype when passed no arguments returns</p>

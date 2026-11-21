@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-pull(1)"
 name: "docker-latest-pull"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-pull/"
 description: "docker-pull – Pull an image or a repository from a registry"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker pull</code> [<code>-a</code>|<code>&#8211;all-tags</code>] [<code>&#8211;help</code>] NAME[:TAG] | [REGISTRY_HOST[:REGISTRY_PORT]/]NAME[:TAG] </p>
-<h2>DESCRIPTION</h2>
 <p> This command pulls down an image or a repository from a registry. If there is more than one image for a repository (e.g., fedora) then all images for that repository name can be pulled down including any tags (see the option <code>-a</code> or <code>&#8211;all-tags</code>). </p>
 <p> If you do not specify a REGISTRY_HOST, the command uses Docker&#8217;s public registry located at registry-1.docker.io by default. </p>
 <h2>OPTIONS</h2>

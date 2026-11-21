@@ -1,4 +1,5 @@
 ---
+
 title: "dsygs2(3)"
 name: "dsygs2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsygs2/"
 description: "dsygs2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsygs2</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
  <i></i><code>DSYGS2</code> reduces a symmetric definite generalized eigenproblem to standard form, using the factorization results obtained from spotrf (unblocked algorithm).</p>

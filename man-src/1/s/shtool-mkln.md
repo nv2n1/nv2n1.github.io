@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-mkln(1)"
 name: "shtool-mkln"
 section: "1"
@@ -8,9 +9,7 @@ description: "shtool mkln – GNU shtool enhanced"
 ---
 
 <p><a href="/docs/linux/man/1-ln/">ln</a>(1) replacement</p>
-<h2>SYNOPSIS</h2>
 <p> <code>shtool mkln</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-f</code>|<code>&#8211;force</code>] [<code>-s</code>|<code>&#8211;symbolic</code>] <i>src-path</i> [<i>src-path</i> &#8230;] <i>dst-path</i></p>
-<h2>DESCRIPTION</h2>
 <p> This is a <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1) style command. It is enhanced to provide automatic calculation and usage of relative links with the shortest possible path, if possible. Usually if <i>src-path</i> and <i>dst-path</i> are not absolute paths or at least they share a common prefix except the root directory (&#8220;<tt>&quot;/&quot;</tt>&#8221;). When more than one <i>src-path</i> is specified, all of them are linked into <i>dst-path</i>.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

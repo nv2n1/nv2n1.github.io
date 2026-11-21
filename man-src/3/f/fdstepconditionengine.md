@@ -1,4 +1,5 @@
 ---
+
 title: "fdstepconditionengine(3)"
 name: "fdstepconditionengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fdstepconditionengine/"
 description: "ql/pricingengines/vanilla/fdstepconditionengine.hpp – Finite-differences step-condition engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/fdtypedefs.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt; </p>

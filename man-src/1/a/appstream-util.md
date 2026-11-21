@@ -1,4 +1,5 @@
 ---
+
 title: "appstream-util(1)"
 name: "appstream-util"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-appstream-util/"
 description: "appstream-util – Manipulate AppStream, AppData and MetaInfo metadata"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>appstream-util</code> [OPTION&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>appstream-util</code> command. </dd>
 <p> <code>appstream-util</code> allows you to manipulate and validate AppStream, AppData and MetaInfo for syntax, formatting and style guidelines.</p>
 <h2>AUTHOR</h2>

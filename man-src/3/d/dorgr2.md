@@ -1,4 +1,5 @@
 ---
+
 title: "dorgr2(3)"
 name: "dorgr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dorgr2/"
 description: "dorgr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorgr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>DORGR2</code> generates all or part of the orthogonal matrix Q from an RQ factorization determined by sgerqf (unblocked algorithm).</p>

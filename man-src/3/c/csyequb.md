@@ -1,4 +1,5 @@
 ---
+
 title: "csyequb(3)"
 name: "csyequb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csyequb/"
 description: "csyequb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csyequb</code> (UPLO, N, A, LDA, S, SCOND, AMAX, WORK, INFO)<br />
  <i></i><code>CSYEQUB</code></p>

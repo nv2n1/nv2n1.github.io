@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-delete-tags(1)"
 name: "eulb-delete-tags"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-delete-tags – Remove one or more tags from a load balancer"
 
 <h2>NAME</h2>
 <p> eulb-delete-tags &#8211; Remove one or more tags from a load balancer</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-delete-tags <code>-t</code> KEY [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</p>
 <dl>
 <dt>[-S KEY] [&#8211;security-token TOKEN] [&#8211;debug]</dt>
 <dd> [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Remove one or more tags from a load balancer</p>
 <h3>positional arguments:</h3>
 <dl>

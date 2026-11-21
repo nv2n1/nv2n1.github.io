@@ -1,4 +1,5 @@
 ---
+
 title: "mftrace(1)"
 name: "mftrace"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mftrace/"
 description: "mftrace – convert METAFONT format fonts into Type1 outline fonts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mftrace</code> [<i>options</i>]<i> fontname</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mftrace</code> is a program that can convert a METAFONT font into a Type1 font. It is simply called with the name of the font (without a `.mf&#8217; suffix) and produces a Type1 font file called either <i>fontname</i>.pfa or <i>fontname</i>.pfb depending on the command line options. With the help of <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1) it can produce other font formats too. </p>
 <p> For tracing the bitmap, <code>mftrace</code> either uses <code><a href="/docs/linux/man/1-potrace/">potrace</a></code>(1) or <code><a href="/docs/linux/man/1-autotrace/">autotrace</a></code>(1) (the former preferred) if available; this can be overridden with the <code>&#8211;autotrace</code> and <code>&#8211;potrace</code> command line options.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_attributes(3)"
 name: "drmaa_attributes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa_attributes/"
 description: "drmaa_get_attribute_names, drmaa_get_vector_attribute_names, drmaa_get_next_attr_name, drmaa_get_num_attr_names, drmaa_release_attr_names – DRMAA job template attributes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre>
 <code>int drmaa_get_attribute_names(
@@ -60,7 +60,6 @@ int *size
 </code></pre>
 <p> );<code> </p>
 <p> </code></p>
-<h2>DESCRIPTION</h2>
 <p> The drmaa_get_attribute_names() function returns into <i>values</i> a DRMAA names string vector containing the set of supported non-vector DRMAA job template attribute names. The set includes supported DRMAA reserved attribute names and xxQS_NAMExx native attribute names. The names in the names string vector can be extracted using The number of names in the names string vector can be determined using Note that this function is only available in the 1.0 implementation. The caller is responsible for releasing the names string vector returned into <i>values</i> using Use and for setting and inspecting non-vector attributes.</p>
 <h3>drmaa_get_vector_attribute_names()</h3>
 <p> The drmaa_get_vector_attribute_names() function returns into <i>values</i> a DRMAA names string vector containing the set of supported vector DRMAA job template attribute names. The set includes supported DRMAA reserved attribute names and xxQS_NAMExx native attribute names. The names in the names string vector can be extracted using The caller is responsible for releasing the names string vector returned into <i>values</i> using Use and for setting and inspecting vector attributes. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ubuntu-distro-info(1)"
 name: "ubuntu-distro-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ubuntu-distro-info/"
 description: "ubuntu-distro-info – provides information about Ubuntu’s distributions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ubuntu-distro-info</code> [<i>OPTIONS</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlmroapi(1)"
 name: "perlmroapi"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlmroapi/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlmroapi - Perl method resolution plugin interface 
 
- perlmroapi - Perl method resolution plugin interface 
-
-<h2>DESCRIPTION</h2>
-
- As of Perl 5.10.1 there is a new interface for plugging and using method resolution orders other than the default (linear depth first search). The C3 method resolution order added in 5.10.0 has been re-implemented as a plugin, without changing its Perl-space interface. 
+As of Perl 5.10.1 there is a new interface for plugging and using method resolution orders other than the default (linear depth first search). The C3 method resolution order added in 5.10.0 has been re-implemented as a plugin, without changing its Perl-space interface. 
 
  Each plugin should register itself by providing the following structure 
 

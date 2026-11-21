@@ -1,4 +1,5 @@
 ---
+
 title: "cmark(3)"
 name: "cmark"
 section: "3"
@@ -9,7 +10,6 @@ description: "cmark – CommonMark parsing, manipulating, and rendering"
 
 <h2>NAME</h2>
 <p> cmark &#8211; CommonMark parsing, manipulating, and rendering </p>
-<h2>DESCRIPTION</h2>
 <h3>Simple Interface</h3>
 <p> <i>char *</i> <code>cmark_markdown_to_html</code>(<i>const char *text</i>, <i>size_t len</i>, <i>int options</i>) </p>
 <p> Convert text (assumed to be a UTF-8 encoded string with length len from CommonMark Markdown to HTML, returning a null-terminated, UTF-8-encoded string. </p>

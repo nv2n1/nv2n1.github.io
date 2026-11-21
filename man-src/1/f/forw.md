@@ -1,4 +1,5 @@
 ---
+
 title: "forw(1)"
 name: "forw"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-forw/"
 description: "forw – forward messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>forw</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-form</code> <i>formfile</i>] [<code>-format</code> | <code>-noformat</code>] [<code>-filter</code> <i>filterfile</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-mime</code> | <code>-nomime</code>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-width</code> <i>colums</i>] [<code>-from</code> <i>address</i>] [<code>-to</code> <i>address</i>] [<code>-cc</code> <i>address</i>] [<code>-fcc</code> <i>+folder</i>] [<code>-subject</code> <i>text</i>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-dashstuffing</code> | <code>-nodashstuffing</code>] [<code>-build</code>] [<code>-file</code> <i>msgfile</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dl>
 <dt> <code>forw</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-digest</code> <i>list</i>] [<code>-issue</code> <i>number</i>] [<code>-volume</code> <i>number</i>] [other switches for&nbsp;<wbr> <code>forw</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Forw</code></p>
 <dd>may be used to prepare a message containing other messages. </dd>
 <p> It constructs the new message from a forms (components) file, with a body composed of the message(s) to be forwarded. An editor is invoked as in <code>comp</code>, and after editing is complete, the user is prompted before the message is sent. </p>

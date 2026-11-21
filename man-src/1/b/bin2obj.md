@@ -1,4 +1,5 @@
 ---
+
 title: "bin2obj(1)"
 name: "bin2obj"
 section: "1"
@@ -9,9 +10,7 @@ description: "bin2obj – The Free Pascal binary to pascal include file converte
 
 <h2>NAME</h2>
 <p> bin2obj &#8211; The Free Pascal binary to pascal include file converter. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bin2obj [-aeouUz] -c constname infile</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bin2obj</code> reads a binary file and converts it to a pascal typed constant declaration. The constant is an array of bytes (zero based), in which each byte has the value of the byte at the offset <i>index</i> in the file. (index is the index in the array). </p>
 <h2>USAGE</h2>
 <p> <code>bin2obj</code> accepts a filename of a binary file, and needs the name of a constant (use the <code>-c</code> option). The output goes to standard output by default. If no unitname is given, the output will be in the form of code which can be written to an include file. </p>

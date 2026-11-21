@@ -1,4 +1,5 @@
 ---
+
 title: "rrdtutorial(1)"
 name: "rrdtutorial"
 section: "1"
@@ -6,14 +7,9 @@ letter: "r"
 url: "/docs/linux/man/1-rrdtutorial/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+rrdtutorial - Alex van den Bogaerdt's RRDtool tutorial 
 
- rrdtutorial - Alex van den Bogaerdt's RRDtool tutorial 
-
-<h2>DESCRIPTION</h2>
-
- RRDtool is written by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; with contributions from many people all around the world. This document is written by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; to help you understand what RRDtool is and what it can do for you. 
+RRDtool is written by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; with contributions from many people all around the world. This document is written by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; to help you understand what RRDtool is and what it can do for you. 
 
  The documentation provided with RRDtool can be too technical for some people. This tutorial is here to help you understand the basics of RRDtool. It should prepare you to read the documentation yourself. It also explains the general things about statistics with a focus on networking.
 

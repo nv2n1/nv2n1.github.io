@@ -1,4 +1,5 @@
 ---
+
 title: "ex12bit(3)"
 name: "ex12bit"
 section: "3"
@@ -9,10 +10,8 @@ description: "ex12bit – How to fake a 12-bit truecolor mode on an 8-bit card. 
 
 <h2>NAME</h2>
 <p> ex12bit &#8211; How to fake a 12-bit truecolor mode on an 8-bit card. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example ex12bit</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program sets up a 12-bit mode on any 8-bit card, by setting up a 256-colour palette that will fool the eye into grouping two 8-bit pixels into one 12-bit pixel. In order to do this, you make your 256-colour palette with all the combinations of blue and green, assuming green ranges from 0-15 and blue from 0-14. This takes up 16&#215;15=240 colours. This leaves 16 colours to use as red (red ranges from 0-15). Then you put your green/blue in one pixel, and your red in the pixel next to it. The eye gets fooled into thinking it&#8217;s all one pixel. </p>
 <p> The example starts setting a normal 256 color mode, and construct a special palette for it. But then comes the trick: you need to write to a set of two adjacent pixels to form a single 12 bit dot. Two eight bit pixels is the same as one 16 bit pixel, so after setting the video mode you need to hack the screen bitmap about, halving the width and changing it to use the 16 bit drawing code. Then, once you have packed a color into the correct format (using the makecol12() function below), any of the normal Allegro drawing functions can be used with this 12 bit display! </p>
 <p> Things to note: </p>

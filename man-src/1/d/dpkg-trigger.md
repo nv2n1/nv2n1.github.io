@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-trigger(1)"
 name: "dpkg-trigger"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-dpkg-trigger/"
 description: "dpkg-trigger – a package trigger utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-trigger</code> [<i>option</i>&#8230;] <i>trigger-name</i> </p>
 <p> <code>dpkg-trigger</code> [<i>option</i>&#8230;] <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-trigger</code> is a tool to explicitly activate triggers and check for its support on the running <code>dpkg</code>. </p>
 <p> This can be used by maintainer scripts in complex and conditional situations where the file triggers, or the declarative <code>activate</code> triggers control file directive, are insufficiently rich. It can also be used for testing and by system administrators (but note that the triggers won&#8217;t actually be run by <code>dpkg-trigger</code>). </p>
 <p> Unrecognized trigger name syntaxes are an error for <code>dpkg-trigger</code>.</p>

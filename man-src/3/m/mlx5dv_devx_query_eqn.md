@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_query_eqn(3)"
 name: "mlx5dv_devx_query_eqn"
 section: "3"
@@ -6,14 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_query_eqn/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_query_eqn - Query EQN for a given vector id. 
-
-<h2>SYNOPSIS</h2>
+mlx5dv_devx_query_eqn - Query EQN for a given vector id. 
 
 <dl>
 <dt>
@@ -23,11 +17,7 @@ int mlx5dv_devx_query_eqn(struct ibv_context *context, uint32_t vector,
                           uint32_t *eqn);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Query EQN for a given input vector, the EQN is needed for other device commands over the DEVX interface. 
+Query EQN for a given input vector, the EQN is needed for other device commands over the DEVX interface. 
 
  The DEVX API enables direct access from the user space area to the mlx5 device driver, the EQN information is needed for few commands such as CQ creation.
 

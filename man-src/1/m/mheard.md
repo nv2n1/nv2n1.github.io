@@ -1,4 +1,5 @@
 ---
+
 title: "mheard(1)"
 name: "mheard"
 section: "1"
@@ -9,9 +10,7 @@ description: "mheard – display AX.25 calls recently heard."
 
 <h2>NAME</h2>
 <p> mheard &#8211; display AX.25 calls recently heard.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mheard [-d cmns] [-n] [-o cfpt] [-v] [port&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Mheard</code> displays information about most recently heard AX.25 callsigns, the interface upon which they were heard, the total packets heard, the time at which the last one was heard and other information. <code>Mheard</code> displays different information, in different orders depending on the settings of the arguments. Information on specific ports can be displayed by giving the port names as arguments.</p>
 <h2>OPTIONS</h2>
 <dl>

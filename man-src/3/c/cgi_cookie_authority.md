@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_cookie_authority(3)"
 name: "cgi_cookie_authority"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_cookie_authority/"
 description: "cgi_cookie_authority – determine the cookie authority for a domain"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ char *cgi_cookie_authority(CGI *cgi, const char *host);
 <p> cgi &#8211; a CGI struct<br />
  host &#8211; optional host to match against. If NULL, the function<br />
  will use the HTTP.Host HDF variable. </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_cookie_authority will walk the CookieAuthority portion of the CGI HDF data set, and return the matching domain if it exists. The purpose of this is so that you set domain specific cookies. For instance, you might have CookieAuthority.0 = neotonic.com In which case, any webserver using a hostname ending in neotonic.com will generate a cookie authority of neotonic.com. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

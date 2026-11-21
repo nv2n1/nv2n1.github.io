@@ -1,4 +1,5 @@
 ---
+
 title: "draw_gouraud_sprite(3)"
 name: "draw_gouraud_sprite"
 section: "3"
@@ -9,10 +10,8 @@ description: "draw_gouraud_sprite – Draws a sprite with gouraud shading. Alleg
 
 <h2>NAME</h2>
 <p> draw_gouraud_sprite &#8211; Draws a sprite with gouraud shading. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void draw_gouraud_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y,</code> <code>int c1, int c2, int c3, int c4);</code></p>
-<h2>DESCRIPTION</h2>
 <p> More sophisticated version of draw_lit_sprite(): the &#8216;color&#8217; parameter is not constant across the sprite image anymore but interpolated between the four specified corner colors. The corner values passed to this function indicate the strength of the color applied on them, ranging from 0 (no strength) to 255 (full strength). Example: </p>
 <pre><code>
 /* Some one time initialisation code. */

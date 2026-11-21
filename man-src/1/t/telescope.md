@@ -1,4 +1,5 @@
 ---
+
 title: "telescope(1)"
 name: "telescope"
 section: "1"
@@ -9,9 +10,7 @@ description: "Telescope mount position control"
 
 <h2>NAME</h2>
 <p> Telescope mount position control</p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>telescope&nbsp;<wbr>[options]&nbsp;<wbr>[set | get]&nbsp;<wbr>[commands]</p>
-<h2>DESCRIPTION</h2>
 <p> The options are as follows: </p>
 <p> options:</p>
 <dl>

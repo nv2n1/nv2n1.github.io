@@ -1,4 +1,5 @@
 ---
+
 title: "pstoedit(1)"
 name: "pstoedit"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pstoedit/"
 description: "pstoedit – a tool converting PostScript and PDF files into various vector graphic formats"
 ---
-<h2>SYNOPSIS</h2>
+
 <h3>FROM THE COMMAND SHELL</h3>
 <p> pstoedit [<code>-v -help</code>] <br />
  </p>
@@ -15,7 +16,6 @@ description: "pstoedit – a tool converting PostScript and PDF files into vario
 <p> Pstoedit can be called from within gsview via &quot;<code>Edit | Convert to vector format</code>&quot; </p>
 <h3>FROM PROGRAMS THAT SUPPORT THE ALDUS GRAPHIC IMPORT FILTER INTERFACE</h3>
 <p> pstoedit can also be used as PostScript and PDF graphic import filter for several programs including MS Office, PaintShop-Pro and PhotoLine. See <code><a rel="nofollow" href="http://www.pstoedit.net/importps/">http://www.pstoedit.net/importps/</a></code> for more details. </p>
-<h2>DESCRIPTION</h2>
 <h3>RELEASE LEVEL</h3>
 <p> This manpage documents release 3.78 of pstoedit. </p>
 <h3>USE</h3>

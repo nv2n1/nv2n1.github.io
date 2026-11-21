@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-u(3)"
 name: "antlr3-u"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_BASE_TREE_struct –"
 ---
 
 <p> A generic tree implementation with no payload.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3basetree.h">antlr3basetree.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>addChild</code> )(struct <code>ANTLR3_BASE_TREE_struct</code> *tree, void *child) </p>

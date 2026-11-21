@@ -1,4 +1,5 @@
 ---
+
 title: "raw2tiff(1)"
 name: "raw2tiff"
 section: "1"
@@ -9,9 +10,7 @@ description: "raw2tiff – create a TIFF file from a raw data"
 
 <h2>NAME</h2>
 <p> raw2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a raw data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>raw2tiff</code> [ <i>options</i> ] <i>input.raw</i> <i>output.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>raw2tiff</i> converts a raw byte sequence into <font SIZE="-1">TIFF.</font> By default, the <font SIZE="-1">TIFF</font> image is created with data samples packed (<i>PlanarConfiguration</i>=1), compressed with the PackBits algorithm (<i>Compression</i>=32773), and with each strip no more than 8 kilobytes. These characteristics can overridden, or explicitly specified with the options described below.</p>
 <h2>OPTIONS</h2>
 <dl>

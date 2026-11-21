@@ -1,4 +1,5 @@
 ---
+
 title: "git-repack(1)"
 name: "git-repack"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-repack/"
 description: "git-repack – Pack unpacked objects in a repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git repack[-a][-A][-d][-f][-F][-l][-n][-q][-b][-m][--window = &lt;n&gt;][--depth = &lt;n&gt;][--threads = &lt;n&gt;][--keep - pack = &lt;pack - name&gt;][--write - midx]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command is used to combine all objects that do not currently reside in a &quot;pack&quot;, into a pack. It can also be used to re-organize existing packs into a single, more efficient pack. </p>
 <p> A pack is a collection of objects, individually compressed, with delta compression applied, stored in a single file, with an associated index file. </p>
 <p> Packs are used to reduce the load on mirror systems, backup engines, disk storage, etc.</p>

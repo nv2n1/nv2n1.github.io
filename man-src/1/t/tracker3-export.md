@@ -1,4 +1,5 @@
 ---
+
 title: "tracker3-export(1)"
 name: "tracker3-export"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tracker3-export/"
 description: "tracker3-export – Export all data from a Tracker database."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tracker3 export</code> [<i>options</i>&#8230;] [<code>IRI</code>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tracker3 export</code> exports data stored in a Tracker database, in Turtle format. By default all data is exported, if any <code>IRI</code>, only those resources will be printed. </p>
 <p> The output is intended to be machine-readable, not human readable. Use a tool such as <a href="/docs/linux/man/1-rapper/">rapper</a>(1) to convert the data to different formats.</p>
 <h2>OPTIONS</h2>

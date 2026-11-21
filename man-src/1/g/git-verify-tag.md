@@ -1,4 +1,5 @@
 ---
+
 title: "git-verify-tag(1)"
 name: "git-verify-tag"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-verify-tag/"
 description: "git-verify-tag – Check the GPG signature of tags"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>git verify-tag</i> [--format=&lt;format&gt;] &lt;tag&gt;...
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Validates the gpg signature created by <i>git tag</i>.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;raw</p>

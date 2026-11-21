@@ -1,4 +1,5 @@
 ---
+
 title: "cspctl(1)"
 name: "cspctl"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cspctl/"
 description: "cspctl – Sound Blaster 16 ASP/CSP control program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cspctl</code> command [-options] &lt;filename&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cspctl</code> is a simple CSP microcode loader for Crative Sound Blaster 16ASP and some Sound Blaster AWE32 sound cards with Creative Signal Processor (CSP) chip (CT1748A) installed. <code>cspctl</code> can also be used as a post-install function to <i>snd-sb16-csp</i> module to load default codec at module installation. If CSP chip is succesfully detected and initialized, it will be installed as a hardware dependant device <i>hwC0D2</i> into /dev/snd directory. Currently, following codecs can be loaded to CSP device:</p>
 <dl>
 <dt>

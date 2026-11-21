@@ -1,4 +1,5 @@
 ---
+
 title: "stpcon(3)"
 name: "stpcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stpcon/"
 description: "stpcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stpcon</code> (NORM, UPLO, DIAG, N, AP, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>STPCON</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bashmount(1)"
 name: "bashmount"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bashmount/"
 description: "bashmount – tool to mount and unmount removable media"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>bashmount</i></p>
-<h2>DESCRIPTION</h2>
 <p> bashmount is a menu-driven bash script that can use different backends to easily mount, unmount or eject removable devices without dependencies on udisks or any <font SIZE="-1">GUI.</font> An extensive configuration file allows many aspects of the script to be modified and custom commands to be run on devices. bashmount can also be used alongside any automounting solutions, such as graphical file managers, udev rules or Udiskie.</p>
 <h2>FILES</h2>
 <dl>

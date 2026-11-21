@@ -1,4 +1,5 @@
 ---
+
 title: "pki-cert(1)"
 name: "pki-cert"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pki-cert/"
 description: "pki-cert – Command-Line Interface for managing certificates on the Certificate System server."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - cert pki[CLI options]&lt;subsystem&gt; - cert - find[command options] pki[CLI options]&lt;subsystem&gt; - cert - show&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - revoke&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - hold&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - release - hold&lt;certificate ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - profile - find[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - profile - show&lt;profile ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - submit[command options] pki[CLI options]&lt;subsystem&gt; - cert - request - review&lt;request ID&gt;[command options]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki-cert</code> commands provide command-line interfaces to manage certificates on the specified subsystem. </p>
 <p> Valid subsystems are <code>ca</code> and <code>tps</code>. If the &lt;subsystem&gt;- prefix is omitted, it will default to <code>ca</code>. </p>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-cert</code></p>

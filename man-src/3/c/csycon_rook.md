@@ -1,4 +1,5 @@
 ---
+
 title: "csycon_rook(3)"
 name: "csycon_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csycon_rook/"
 description: "csycon_rook.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csycon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>CSYCON_ROOK</code></p>

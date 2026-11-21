@@ -1,4 +1,5 @@
 ---
+
 title: "livemedia-creator(1)"
 name: "livemedia-creator"
 section: "1"
@@ -9,7 +10,6 @@ description: "livemedia-creator – Create live install media"
 
 <h2>NAME</h2>
 <p> livemedia-creator &#8211; Create live install media </p>
-<h2>SYNOPSIS</h2>
 <p> livemedia-creator [-h]<br />
 &nbsp;<wbr>(&#8211;make-iso | &#8211;make-disk | &#8211;make-fsimage | &#8211;make-appliance | &#8211;make-ami | &#8211;make-tar | &#8211;make-pxe-live | &#8211;make-ostree-live)<br />
 &nbsp;<wbr>[&#8211;iso ISO]&nbsp;<wbr>[&#8211;disk-image DISK_IMAGE]<br />
@@ -31,7 +31,6 @@ description: "livemedia-creator – Create live install media"
 &nbsp;<wbr>[&#8211;dracut-arg DRACUT_ARGS]&nbsp;<wbr>[&#8211;title TITLE]<br />
 &nbsp;<wbr>[&#8211;project PROJECT]&nbsp;<wbr>[&#8211;releasever RELEASEVER]<br />
 &nbsp;<wbr>[&#8211;volid VOLID]&nbsp;<wbr>[&#8211;squashfs_args SQUASHFS_ARGS] </p>
-<h2>DESCRIPTION</h2>
 <p> livemedia-creator uses Anaconda, kickstart and Lorax to create bootable media that use the same install path as a normal system install. It can be used to make live isos, bootable (partitioned) disk images and filesystem images for use with virtualization. </p>
 <p> The general idea is to use virt-install to install into a disk image and then use the disk image to create the bootable media. </p>
 <p> livemedia-creator &#8211;help will describe all of the options available. At the minimum you need: </p>

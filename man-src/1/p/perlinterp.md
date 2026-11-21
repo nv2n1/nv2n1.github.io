@@ -1,4 +1,5 @@
 ---
+
 title: "perlinterp(1)"
 name: "perlinterp"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlinterp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlinterp - An overview of the Perl interpreter 
 
- perlinterp - An overview of the Perl interpreter 
-
-<h2>DESCRIPTION</h2>
-
- This document provides an overview of how the Perl interpreter works at the level of C code, along with pointers to the relevant C source code files.
+This document provides an overview of how the Perl interpreter works at the level of C code, along with pointers to the relevant C source code files.
 
 <h2>ELEMENTS OF THE INTERPRETER</h2>
 

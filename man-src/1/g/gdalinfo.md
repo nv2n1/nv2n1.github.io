@@ -1,4 +1,5 @@
 ---
+
 title: "gdalinfo(1)"
 name: "gdalinfo"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-gdalinfo/"
 description: "gdalinfo – gdalinfo lists information about a raster dataset"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 gdalinfo[--help - general][-mm][-stats][-hist][-nogcp][-nomd]
         [-norat][-noct][-nofl][-checksum][-proj4]
         [-listmdd][-mdd domain |`all`] *
     [-sd subdataset] datasetname
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The gdalinfo program lists various information about a GDAL supported raster dataset.</p>
 <dl>
 <dt><code>-mm</code></dt>

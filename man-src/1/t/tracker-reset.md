@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-reset(1)"
 name: "tracker-reset"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tracker-reset/"
 description: "tracker-reset – Reset the index and configuration"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tracker reset</code> [&#8211;hard | &#8211;soft] [&#8211;config] [&#8211;file <i>FILE</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> The reset command will change either your configuration or index irreversibly and should be used with care. Other than tags, actual data (e.g. files) should not be affected by this command. </p>
 <p> The &quot;index&quot; is a link between your content (either locally or remotely) and how it can be found quickly using a number of different queries. Under the hood, this is done using a database. </p>
 <p> Removing all data and starting again from the beginning with an empty data set (which is a common use of this command) is done by using the hard reset option. This behaves as if Tracker was just installed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pure(1)"
 name: "pure"
 section: "1"
@@ -9,7 +10,6 @@ description: "pure – the Pure interpreter"
 
 <h2>NAME</h2>
 <p> pure &#8211; the Pure interpreter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pure</code> [<i>options</i> &#8230;] [<i>script</i> &#8230;] [&#8211; <i>args</i> &#8230;]<br />
  <code>pure</code> [<i>options</i> &#8230;] -x <i>script</i> [<i>args</i> &#8230;]</p>
 <h2>OPTIONS</h2>
@@ -58,7 +58,6 @@ description: "pure – the Pure interpreter"
 <dd> Execute script with given command line arguments.</dd>
 <dt><code>&#8212;</code></dt>
 <dd> Stop option processing and pass the remaining command line arguments in the <code>argv</code> variable.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Pure is a modern-style functional programming language based on term rewriting. Pure programs are basically collections of equational rules used to evaluate expressions in a symbolic fashion by reducing them to normal form. </p>
 <p> <code>pure</code> is the Pure interpreter. The interpreter has an LLVM backend which JIT-compiles Pure programs to machine code, hence programs run blazingly fast and interfacing to C modules is easy, while the interpreter still provides a convenient, fully interactive environment for running Pure scripts and evaluating expressions. </p>
 <p> Basically, to run a Pure script with the interpreter, just specifiy the filename of the script on the command line. You can also invoke the interpreter without arguments, in which case it starts up in interactive mode. Or you can compile a script to a native executable (as well as a number of other recognized LLVM and native code formats) with the <code>-c</code> option (use <code>-o</code> to specify the output filename); this requires that you have some parts of the LLVM toolchain (llc, opt) as well as gcc installed. Last but not least, you can create a tags file for use with <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1) or <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1) with the <code>&#8211;etags</code> and <code>&#8211;ctags</code> options. </p>

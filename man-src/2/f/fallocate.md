@@ -1,4 +1,5 @@
 ---
+
 title: "fallocate(2)"
 name: "fallocate"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-fallocate/"
 description: "fallocate – manipulate file space"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;fcntl.h&gt;
 int fallocate(int fd, int mode, off_t offset, off_t len);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This is a nonportable, Linux-specific system call. For the portable, POSIX.1-specified method of ensuring that space is allocated for a file, see <code><a href="/docs/linux/man/3-posix_fallocate/">posix_fallocate</a></code>(3). </p>
 <p> <code>fallocate</code>() allows the caller to directly manipulate the allocated disk space for the file referred to by <i>fd</i> for the byte range starting at <i>offset</i> and continuing for <i>len</i> bytes. </p>
 <p> The <i>mode</i> argument determines the operation to be performed on the given range. Details of the supported operations are given in the subsections below.</p>

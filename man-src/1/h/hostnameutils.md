@@ -1,4 +1,5 @@
 ---
+
 title: "hostnameutils(1)"
 name: "hostnameutils"
 section: "1"
@@ -12,7 +13,6 @@ description: "gethostname, gethostbyname, gethostbyaddr, getservbyname – get l
 <p> <code>$SGE_ROOT/utilbin/$ARCH/gethostbyname&nbsp;</code>[<code>-help</code>|<code>-name</code>|<code>-aname</code>|<code>-all</code>] <i>name</i> </p>
 <p> <code>$SGE_ROOT/utilbin/$ARCH/gethostbyaddr&nbsp;</code>[<code>-help</code>|<code>-name</code>|<code>-aname</code>|<code>-all</code>] <i>ip</i> </p>
 <p> <code>$SGE_ROOT/utilbin/$ARCH/getservbyname&nbsp;</code>[<code>-help</code>|<code>-number</code>] <i>service</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>gethostname</i> and <i>gethostbyname</i> are used to get the local resolved host name. <i>gethostbyaddr</i> is used to get the hostname of a specified IP address (dotted decimal notation). <i>getservbyname</i> can be used to get the configured port number of a service (e.g. from /etc/services). </p>
 <p> The hostname utils are primarily used by the xxQS_NAMExx installation scripts. <i>gethostname</i> , <i>gethostbyname</i> and <i>gethostbyaddr</i> called without any option will print out the hostname, all specified aliases, and the IP address of the locally resolved hostname. Calling <i>getservbyname</i> without any option will print out the full service entry. </p>
 <h2>OPTIONS</h2>

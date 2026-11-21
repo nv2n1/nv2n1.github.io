@@ -1,4 +1,5 @@
 ---
+
 title: "pmnsdel(1)"
 name: "pmnsdel"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmnsdel – delete a subtree of names from the Performance Co-Pilo
 
 <h2>NAME</h2>
 <p> <code>pmnsdel</code> &#8211; delete a subtree of names from the Performance Co-Pilot PMNS</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnsdel</code> [<code>-n</code> <i>namespace</i>] <i>metricpath</i> [ &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmnsdel</code> removes subtrees of names from a Performance Metrics Name Space (PMNS), as used by the components of the Performance Co-Pilot (PCP). </p>
 <p> Normally <code>pmnsdel</code> operates on the default Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative namespace is used from the file <i>namespace</i>. </p>
 <p> The default PMNS is found in the file <i>$PCP_VAR_DIR/pmns/root</i> unless the environment variable <code>PMNS_DEFAULT</code> is set, in which case the value is assumed to be the pathname to the file containing the default PMNS. </p>

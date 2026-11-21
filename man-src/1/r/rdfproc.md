@@ -1,4 +1,5 @@
 ---
+
 title: "rdfproc(1)"
 name: "rdfproc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdfproc/"
 description: "rdfproc – Redland RDF processor utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rdfproc</code> [<code>options</code>] <i>store-name</i> <i>command</i> <i>arg&#8230;</i></p>
 <h2>EXAMPLE</h2>
 <pre>
@@ -18,7 +18,6 @@ description: "rdfproc – Redland RDF processor utility"
 <code>rdfproc test serialize ntriples</code>
 <br>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>rdfproc</code> utility allows parsing, querying, manipulating and serializing of RDF content using the <code>Redland</code> RDF library. The <i>store-name</i> is a Redland store name, typically a short identifier. The arguments to <i>command</i> vary and are explained in section COMMANDS below.</p>
 <h2>OPTIONS</h2>
 <p> rdfproc uses the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;) if supported by the getopt_long function. Otherwise the short options are only available.</p>

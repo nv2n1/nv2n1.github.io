@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_symbol(3)"
 name: "bson_iter_symbol"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_symbol() – The symbol element type is DEPRECATED in th
 
 <h2>NAME</h2>
 <p> bson_iter_symbol() &#8211; The symbol element type is DEPRECATED in the bson specification at <a rel="nofollow" href="http://bsonspec.org.">http://bsonspec.org.</a></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 const char *
 bson_iter_symbol(const bson_iter_t *iter,
@@ -22,7 +22,6 @@ bson_iter_symbol(const bson_iter_t *iter,
 <dl>
 <dt><code>length</code></dt>
 <dd> A uint32_t.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The symbol element type is <code>DEPRECATED</code> in the bson specification at <a rel="nofollow" href="http://bsonspec.org.">http://bsonspec.org.</a> </p>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_symbol/">bson_iter_symbol</a>(3)</code> function shall return the contents of a BSON_TYPE_SYMBOL element. </p>
 <p> if non-NULL, <code>length</code> will be set to the length of the resulting string. </p>

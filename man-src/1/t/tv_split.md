@@ -1,4 +1,5 @@
 ---
+
 title: "tv_split(1)"
 name: "tv_split"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tv_split/"
 description: "tv_split – Split XMLTV listings into separate files by date and channel."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_split &#8211;output <font SIZE="-1">TEMPLATE</font> [<font SIZE="-1">FILE&#8230;</font>]</p>
-<h2>DESCRIPTION</h2>
 <p> Read <font SIZE="-1">XMLTV</font> listings and split them into some number of output files. The output file chosen for each programme is given by substitutions on the filename template supplied. You can split listings by time and by channel. </p>
 <p> The <font SIZE="-1">TEMPLATE</font> is a filename but substitutions are applied: first <tt>%channel</tt> is replaced with the id of a programme&#8217;s channel, and then Date::Manip substitutions (which broadly follow <i><a href="/docs/linux/man/1-date/">date</a></i>(1)) are applied based on the start time of each programme. In this way each programme is written to a particular output file. When an output file is created it will also contain all the channel elements from the input. </p>
 <p> One or more input files can be given; if more than one then they are concatenated in the same way as tv_cat. If no input files are given then standard input is read.</p>

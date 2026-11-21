@@ -1,4 +1,5 @@
 ---
+
 title: "mozroots(1)"
 name: "mozroots"
 section: "1"
@@ -9,9 +10,7 @@ description: "mozroots – Download and import trusted root certificates from Mo
 
 <h2>NAME</h2>
 <p> mozroots &#8211; Download and import trusted root certificates from Mozilla&#8217;s LXR into Mono&#8217;s certificate store</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mozroots [&#8211;import [&#8211;machine] [&#8211;sync | &#8211;ask | &#8211;ask-add | &#8211;ask-remove]]</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program downloads the trusted root certificates from the Mozilla LXR web site into the Mono certificate store. </p>
 <p> Mono by default does not ship with any default certificates and allows the user to pick its trusted certificates. The mozroots command will bring the Mozilla certificates into your local machine.</p>
 <h2>OPTIONS</h2>

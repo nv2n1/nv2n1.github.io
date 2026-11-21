@@ -1,4 +1,5 @@
 ---
+
 title: "mate-appearance-properties(1)"
 name: "mate-appearance-properties"
 section: "1"
@@ -9,9 +10,7 @@ description: "mate-appearance-properties — is a control center applet."
 
 <h2>NAME</h2>
 <p> mate-appearance-properties &#8212; is a control center applet. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-appearance-properties</code> [<i>OPTIONS</i>]&#8230; [<i>WALLPAPER</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> MATE Appearance Properties is a control center applet to edit appearance settings. </p>
 <p> It allows one to change: GTK theme, window manager theme, icon theme, cursor theme, desktop background and font settings. </p>
 <h2>OPTIONS</h2>

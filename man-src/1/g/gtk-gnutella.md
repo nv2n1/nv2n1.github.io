@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-gnutella(1)"
 name: "gtk-gnutella"
 section: "1"
@@ -9,9 +10,7 @@ description: "gtk-gnutella – A Gnutella client for Gtk+"
 
 <h2>NAME</h2>
 <p> gtk-gnutella &#8211; A Gnutella client for Gtk+</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gtk-gnutella</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>gtk-gnutella</i> is a GTK+ Gnutella client for Unix. It supports both searching and sharing with the 0.6 version of the Gnutella protocol and includes support for numerous protocol improvements and additions that have been added to the Gnutella network since. </p>
 <p> The Gnutella network allows users to search for files and to advertise files shared locally, but is not handling file transfers which is done through HTTP. The addition of Gnutella-specific HTTP headers makes each Gnutella client a powerful file swarmer where even firewalled hosts can contribute. </p>
 <p> Great care has been devoted into making <i>gtk-gnutella</i> powerful, efficient and reliable.</p>

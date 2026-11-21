@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_destroy_qp(3)"
 name: "ibv_destroy_qp"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_destroy_qp/"
 description: "ibv_create_qp, ibv_destroy_qp – create or destroy a queue pair (QP)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_qp *ibv_create_qp(struct ibv_pd *pd,
                              struct ibv_qp_init_attr *qp_init_attr);
 int ibv_destroy_qp(struct ibv_qp *qp);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_qp()</code> creates a queue pair (QP) associated with the protection domain <i>pd</i>. The argument <i>qp_init_attr</i> is an ibv_qp_init_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_qp_init_attr {

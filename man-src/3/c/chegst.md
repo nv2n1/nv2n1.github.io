@@ -1,4 +1,5 @@
 ---
+
 title: "chegst(3)"
 name: "chegst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chegst/"
 description: "chegst.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chegst</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
  <i></i><code>CHEGST</code></p>

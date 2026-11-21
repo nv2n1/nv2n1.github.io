@@ -1,4 +1,5 @@
 ---
+
 title: "xcfinfo(1)"
 name: "xcfinfo"
 section: "1"
@@ -9,9 +10,7 @@ description: "xcfinfo – display information about GIMP xcf files"
 
 <h2>NAME</h2>
 <p> xcfinfo &#8211; display information about GIMP xcf files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xcfinfo</code> [ <i>options</i> ] <i>filename</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>xcfinfo</code> is a command-line tool that displays information about the contents of image files in the XCF format used by <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), particularly about the layers in the image.</p>
 <h2>OPTIONS</h2>
 <dl>

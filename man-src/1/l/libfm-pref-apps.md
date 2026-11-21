@@ -1,4 +1,5 @@
 ---
+
 title: "libfm-pref-apps(1)"
 name: "libfm-pref-apps"
 section: "1"
@@ -9,9 +10,7 @@ description: "libfm-pref-apps – sets preferred applications for programs based
 
 <h2>NAME</h2>
 <p> libfm-pref-apps &#8211; sets preferred applications for programs based on libfm</p>
-<h2>SYNOPSIS</h2>
 <p> <code>libfm-pref-apps</code></p>
-<h2>DESCRIPTION</h2>
 <p> libfm-pref-apps is an application that changes preferred applications &#8211; web browser and mail client. Those setting are appliable for programs based on libfm but should work also for other XDG standard compliant programs.</p>
 <h2>FILES</h2>
 <p> ~/.local/share/applications/mimeapps.list</p>

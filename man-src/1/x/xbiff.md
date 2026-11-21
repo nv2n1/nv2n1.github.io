@@ -1,4 +1,5 @@
 ---
+
 title: "xbiff(1)"
 name: "xbiff"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xbiff/"
 description: "xbiff – mailbox flag for X"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xbiff</code> [ &#8211;<i>toolkitoption</i> &#8230; ] [ <i>-option</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xbiff</i> program displays a little image of a mailbox. When there is no mail, the flag on the mailbox is down. When mail arrives, the flag goes up and the mailbox beeps. By default, pressing any mouse button in the image forces <i>xbiff</i> to remember the current size of the mail file as being the &#8220;empty&#8221; size and to lower the flag.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xbiff</i> accepts all of the standard X Toolkit command line options along with the additional options listed below:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "expect_mkpasswd(1)"
 name: "expect_mkpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expect_mkpasswd/"
 description: "mkpasswd – generate new password, optionally apply it to a user"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mkpasswd</code> <i>[</i> <i>args</i> ] [ <i>user</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>mkpasswd</code> generates passwords and can apply them automatically to users. mkpasswd is based on the code from Chapter 23 of the O&#8217;Reilly book &quot;Exploring Expect&quot;.</p>

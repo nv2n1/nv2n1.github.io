@@ -1,4 +1,5 @@
 ---
+
 title: "fstat(2)"
 name: "fstat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fstat/"
 description: "stat, fstat, lstat, fstatat – get file status"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/stat.h&gt;
 #include &lt;sys/types.h&gt;
@@ -36,7 +36,6 @@ int fstatat(int dirfd, const char *pathname, struct stat *statbuf,
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return information about a file, in the buffer pointed to by <i>statbuf</i>. No permissions are required on the file itself, but&#8212;in the case of <code>stat</code>(), <code>fstatat</code>(), and <code>lstat</code>()&#8212;execute (search) permission is required on all of the directories in <i>pathname</i> that lead to the file. </p>
 <p> <code>stat</code>() and <code>fstatat</code>() retrieve information about the file pointed to by <i>pathname</i>; the differences for <code>fstatat</code>() are described below. </p>
 <p> <code>lstat</code>() is identical to <code>stat</code>(), except that if <i>pathname</i> is a symbolic link, then it returns information about the link itself, not the file that the link refers to. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "adime_d_double_calc_edit_proc(3)"
 name: "adime_d_double_calc_edit_proc"
 section: "3"
@@ -9,10 +10,8 @@ description: "adime_d_double_calc_edit_proc"
 
 <h2>NAME</h2>
 <p> adime_d_double_calc_edit_proc</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/adime.h">adime.h</a>&gt;</code> </p>
 <p> <code>int adime_d_double_calc_edit_proc(int msg, DIALOG *d, int c);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Gui proc for an edit box accepting a mathematical expression whose result is a floating point number. The result is calculated and displayed on a separate gui object as the user types. The edit box has a 3d-ish look. </p>
 <p> The dp2 field points to a `struct ADIME_EDIT_NUMBER *&#8217; which holds some information about the behavior of the edit box: </p>
 <pre><code>

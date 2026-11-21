@@ -1,4 +1,5 @@
 ---
+
 title: "lzop(1)"
 name: "lzop"
 section: "1"
@@ -9,10 +10,8 @@ description: "lzop – compress or expand files"
 
 <h2>ABSTRACT</h2>
 <p> <code>lzop</code> is a file compressor very similar to <code>gzip</code>. <code>lzop</code> favors speed over compression ratio.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lzop</code> [&nbsp;<i>command</i>&nbsp;] [&nbsp;<i>options</i>&nbsp;] [&nbsp;<i>filename</i>&nbsp;&#8230;&nbsp;<wbr>&nbsp;] </p>
 <p> <code>lzop</code> [<code>-dxlthIVL19</code>] [<code>-qvcfFnNPkU</code>] [<code>-o</code>&nbsp;<i>file</i>] [<code>-p</code>[<i>path</i>]] [<code>-S</code>&nbsp;<i>suffix</i>] [<i>filename</i>&nbsp;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lzop</code> reduces the size of the named files. Whenever possible, each file is compressed into one with the extension <code>.lzo</code>, while keeping the same ownership modes, access and modification times. If no files are specified, or if a file name is &#8220;-&#8221;, lzop tries to compress the standard input to the standard output. lzop will only attempt to compress regular files or symbolic links to regular files. In particular, it will ignore directories. </p>
 <p> If the compressed file name is too long for its file system, <code>lzop</code> truncates it. </p>
 <p> Compressed files can be restored to their original form using <code>lzop -d</code>. <code>lzop -d</code> takes a list of files on its command line and decompresses each file whose name ends with <code>.lzo</code> and which begins with the correct magic number to an uncompressed file without the original extension. <code>lzop -d</code> also recognizes the special extension <code>.tzo</code> as shorthand for <code>.tar.lzo</code>. When compressing, lzop uses the <code>.tzo</code> extension if necessary instead of truncating a file with a <code>.tar</code> extension. </p>

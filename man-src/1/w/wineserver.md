@@ -1,4 +1,5 @@
 ---
+
 title: "wineserver(1)"
 name: "wineserver"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wineserver/"
 description: "wineserver – the Wine server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wineserver</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>wineserver</code> is a daemon process that provides to Wine roughly the same services that the Windows kernel provides on Windows. </p>
 <p> <code>wineserver</code> is normally launched automatically when starting <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1), so you shouldn&#8217;t have to worry about it. In some cases however, it can be useful to start <code>wineserver</code> explicitly with different options, as explained below.</p>
 <h2>OPTIONS</h2>

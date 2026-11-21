@@ -1,4 +1,5 @@
 ---
+
 title: "tcdecode(1)"
 name: "tcdecode"
 section: "1"
@@ -9,13 +10,11 @@ description: "tcdecode – read multimedia streams from medium, decode to raw fo
 
 <h2>NAME</h2>
 <p> tcdecode &#8211; read multimedia streams from medium, decode to raw format and print to standard output</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tcdecode</code></dt>
 <dd> <code>-i</code> <i>name</i> [ <code>-x</code> <i>codec</i> ] [ <code>-t</code> <i>package</i> ] [ <code>-g</code> <i>WxH</i> ] [ <code>-s</code> <i>c,f,r</i> ] [ <code>-C</code> <i>s-e</i> ] [ <code>-y</code> <i>codec</i> ] [ <code>-Y</code> ] [ <code>-Q</code> <i>mode</i> ] [ <code>-A</code> <i>flag</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcdecode</code> is Copyright (C) by Thomas Oestreich.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcdecode</code> is part of and usually called by <code>transcode</code>.<br />
  However, it can also be used independently.<br />
  <code>tcdecode</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>

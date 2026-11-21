@@ -1,4 +1,5 @@
 ---
+
 title: "bjerksundstenslandengine(3)"
 name: "bjerksundstenslandengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bjerksundstenslandengine/"
 description: "ql/pricingengines/vanilla/bjerksundstenslandengine.hpp – Bjerksund and Stensland approximation engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>

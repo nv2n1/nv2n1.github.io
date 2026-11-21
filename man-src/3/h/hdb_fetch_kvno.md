@@ -1,4 +1,5 @@
 ---
+
 title: "hdb_fetch_kvno(3)"
 name: "hdb_fetch_kvno"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdb_fetch_kvno/"
 description: "HDB –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>hdb_name</code> </p>

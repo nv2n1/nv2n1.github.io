@@ -1,4 +1,5 @@
 ---
+
 title: "perlsynology(1)"
 name: "perlsynology"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlsynology/"
 description: "perlsynology – Perl 5 on Synology DSM systems"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Synology manufactures a vast number of Network Attached Storage (<font SIZE="-1">NAS</font>) devices that are very popular in large organisations as well as small businesses and homes. </p>
 <p> The <font SIZE="-1">NAS</font> systems are equipped with Synology Disk Storage Manager (<font SIZE="-1">DSM</font>), which is a trimmed-down Linux system enhanced with several tools for managing the <font SIZE="-1">NAS.</font> There are several flavours of hardware: Marvell Armada (ARMv5tel, ARMv7l), Intel Atom (i686, x86_64), Freescale QorIQ (<font SIZE="-1">PPC</font>), and more. For a full list see the Synology <font SIZE="-1">FAQ</font> &lt;<a rel="nofollow" href="http://forum.synology.com/wiki/index.php/What_kind_of_CPU_does_my_NAS_have">http://forum.synology.com/wiki/index.php/What_kind_of_CPU_does_my_NAS_have</a>&gt;. </p>
 <p> Since it is based on Linux, the <font SIZE="-1">NAS</font> can run many popular Linux software packages, including Perl. In fact, Synology provides a ready-to-install package for Perl, depending on the version of <font SIZE="-1">DSM</font> the installed perl ranges from 5.8.6 on <font SIZE="-1">DSM-4.3</font> to 5.24.0 on <font SIZE="-1">DSM-6.1.</font> </p>

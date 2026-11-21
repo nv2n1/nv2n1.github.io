@@ -1,4 +1,5 @@
 ---
+
 title: "dsygv(3)"
 name: "dsygv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsygv/"
 description: "dsygv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsygv</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, INFO)<br />
  <i></i><code>DSYGST</code></p>

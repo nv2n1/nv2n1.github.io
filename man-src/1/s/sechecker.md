@@ -1,4 +1,5 @@
 ---
+
 title: "sechecker(1)"
 name: "sechecker"
 section: "1"
@@ -9,11 +10,9 @@ description: "sechecker – SELinux policy checking tool"
 
 <h2>NAME</h2>
 <p> sechecker &#8211; SELinux policy checking tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sechecker</code> [OPTIONS] -p profile [POLICY &#8230;]<br />
  <code>sechecker</code> [OPTIONS] -m module [POLICY &#8230;]<br />
  <code>sechecker</code> [OPTIONS] -p profile -m module [POLICY &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sechecker</code> allows the user to perform predefined modular checks on a SELinux policy. Profiles exist to group modules together and allow modification of module settings (see below).</p>
 <h2>POLICY</h2>
 <p> <code>sechecker</code> supports loading a SELinux policy in one of four formats.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-roledel(1)"
 name: "euare-roledel"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-roledel – Delete a role"
 
 <h2>NAME</h2>
 <p> euare-roledel &#8211; Delete a role</p>
-<h2>SYNOPSIS</h2>
 <p> euare-roledel [-c] [-p] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ROLE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a role</p>
 <h3>positional arguments:</h3>
 <dl>

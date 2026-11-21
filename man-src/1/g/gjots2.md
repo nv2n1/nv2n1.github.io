@@ -1,4 +1,5 @@
 ---
+
 title: "gjots2(1)"
 name: "gjots2"
 section: "1"
@@ -9,9 +10,7 @@ description: "gjots2 – A gnome-2/X11 jotter"
 
 <h2>NAME</h2>
 <p> gjots2 &#8211; A gnome-2/X11 jotter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gjots2</code> [<code>options</code>] <i>gjotsfile </i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gjots2</code> is a fairly simple jotter application for your desktop. It displays your data organised in a tree with each leaf being your text. Getting data into <code>gjots2</code> is fairly easy &#8211; you can type it in, cut and paste text or use an editor to convert other text files to the simple <code>gjots2</code> format (see below for details). You can also convert an existing DOCBOOK file into <code>gjots2</code> format with <code><a href="/docs/linux/man/1-docbook2gjots/">docbook2gjots</a></code>(1). <code>gjots2</code> files can be simply converted into HTML using <code><a href="/docs/linux/man/1-gjots2html/">gjots2html</a></code>(1) or into DOCBOOK with <code><a href="/docs/linux/man/1-gjots2docbook/">gjots2docbook</a></code>(1) Sensitive data can be encrypted by <code><a href="/docs/linux/man/1-ccrypt/">ccrypt</a></code>(1), <code>openssl</code>(1) or <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) simply by saving with an appropriate file suffix and providing a password:</p>
 <dl>
 <dl>

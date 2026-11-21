@@ -1,4 +1,5 @@
 ---
+
 title: "clipaccumulate(1)"
 name: "clipaccumulate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-clipaccumulate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- clipaccumulate - Make a bunch of little clipboards into one big one. 
+clipaccumulate - Make a bunch of little clipboards into one big one. 
 
 <h2>USAGE</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "cum_d2_(3)"
 name: "cum_d2_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cum_d2_/"
 description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/blackcalculator.hpp&gt; </p>
 <p> Inherited by <code>BlackScholesCalculator</code>. </p>
 <h3>Public Member Functions</h3>

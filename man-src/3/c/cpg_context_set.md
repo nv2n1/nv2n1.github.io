@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_context_set(3)"
 name: "cpg_context_set"
 section: "3"
@@ -9,10 +10,8 @@ description: "cpg_context_set – Sets the context variable for a CPG instance"
 
 <h2>NAME</h2>
 <p> cpg_context_set &#8211; Sets the context variable for a CPG instance</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_context_set(cpg_handle_t </code><i>handle</i><code>, void *</code><i>context</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cpg_context_set</code> function is used to set the context variable for a cpg instance. It has no meaning inside libcpg itself and will not be touched by the library. It can be retrieved using <code><a href="/docs/linux/man/3-cpg_context_get/">cpg_context_get</a>(3)</code></p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>

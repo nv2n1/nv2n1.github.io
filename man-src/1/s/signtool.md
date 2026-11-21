@@ -1,4 +1,5 @@
 ---
+
 title: "signtool(1)"
 name: "signtool"
 section: "1"
@@ -6,13 +7,12 @@ letter: "s"
 url: "/docs/linux/man/1-signtool/"
 description: "signtool – Digitally sign objects and files."
 ---
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>signtool</code> [[-b basename]] [[-c Compression Level]] [[-d cert-dir]] [[-e extension]] [[-f filename]] [[-i installer script]] [[-h]] [[-H]] [[-v]] [[-w]] [[-G nickname]] [[-J]] [[-j directory]] [-k keyName] [[--keysize | -s size]] [[-l]] [[-L]] [[-M]] [[-m metafile]] [[--norecurse]] [[-O]] [[-o]] [[--outfile]] [[-p password]] [[-t|--token tokenname]] [[-z]] [[-X]] [[-x name]] [[--verbose value]] [[--leavearc]] [[-Z jarfile]] [directory-tree] [archive] </dt>
 </dl>
 <h2>STATUS</h2>
 <dd> <p> This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font>  </p>
-<h2>DESCRIPTION</h2>
 <p> The Signing Tool, <code>signtool</code>, creates digital signatures and uses a Java Archive (JAR) file to associate the signatures with files in a directory. Electronic software distribution over any network involves potential security problems. To help address some of these problems, you can associate digital signatures with the files in a JAR archive. Digital signatures allow SSL-enabled clients to perform two important operations: </p>
 <p> * Confirm the identity of the individual, company, or other entity whose digital signature is associated with the files </p>
 <p> * Check whether the files have been tampered with since being signed </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlshow(1)"
 name: "mysqlshow"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlshow/"
 description: "mysqlshow – display database, table, and column information"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlshow [</code><i>options</i><code>] [</code><i>db_name</i><code> [</code><i>tbl_name</i><code> [</code><i>col_name</i><code>]]]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>mysqlshow</code> client can be used to quickly see which databases exist, their tables, or a table&#8217;s columns or indexes. </dd>
 <p> <code>mysqlshow</code> provides a command-line interface to several SQL SHOW statements. See Section 13.7.7, &#8220;SHOW Statements&#8221;. The same information can be obtained by using those statements directly. For example, you can issue them from the <code>mysql</code> client program. </p>
 <p> Invoke <code>mysqlshow</code> like this: </p>

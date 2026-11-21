@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-containers(1)"
 name: "atomic-containers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-containers/"
 description: "atomic-containers – operations on containers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic containers COMMAND [OPTIONS] [CONTAINERS&#8230;]</code> </p>
 <p> atomic containers allows the user to view and operate on containers </p>
 <h2>COMMANDS</h2>
@@ -21,7 +21,6 @@ description: "atomic-containers – operations on containers"
 <p> update a system container. </p>
 <p> <code>rollback</code> </p>
 <p> rollback a system container. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>atomic containers delete</code>, delete specified container image from the system. </p>
 <p> Using &#8211;all will delete all the installed containers. </p>
 <p> <code>atomic containers list</code>, by default, will list all running containers on your system. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dh_bash-completion(1)"
 name: "dh_bash-completion"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_bash-completion/"
 description: "dh_bash-completion – install bash completions for package"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_bash-completion</code> [<i>debhelper options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> dh_bash-completion is a debhelper program that is responsible for installing completions for bash, usable installing the &#8220;bash-completion&#8221; package. </p>
 <p> If a file named debian/package.bash-completion exists, then different actions are performed, depending on its format. </p>
 <p> It can be a proper completion snippet, and in that case it would be installed in the completion directory, and no other actions would be performed. </p>

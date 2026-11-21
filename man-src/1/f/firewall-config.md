@@ -1,4 +1,5 @@
 ---
+
 title: "firewall-config(1)"
 name: "firewall-config"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-firewall-config/"
 description: "firewall-config – firewalld GUI configuration tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>firewall-config</code> [OPTIONS&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>firewall-config is a GUI configuration tool for firewalld.</dd>
 <h2>OPTIONS</h2>
 <p> <code>firewall-config</code> does not support any special options. The only options that can be used are the general options that Gtk uses for Gtk application initialization. For more information on these options, please have a look at the runtime documentation for Gtk. </p>

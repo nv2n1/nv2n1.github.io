@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rnd(3)"
 name: "gnutls_rnd"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_rnd – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rnd &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_rnd(gnutls_rnd_level_t </code><i>level</i><code>, void * </code><i>data</i><code>, size_t </code><i>len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_rnd – API function"
 <dd> place to store random bytes</dd>
 <dt>size_t len</dt>
 <dd> The requested size</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will generate random data and store it to output buffer. </p>
 <p> This function is thread-safe and also fork-safe.</p>
 <h2>RETURNS</h2>

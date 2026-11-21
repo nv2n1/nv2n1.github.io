@@ -1,4 +1,5 @@
 ---
+
 title: "fcvt_r(3)"
 name: "fcvt_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fcvt_r/"
 description: "ecvt_r, fcvt_r, qecvt_r, qfcvt_r – convert a floating-point number to a string"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int ecvt_r(double number, int ndigits, int *decpt,
@@ -25,7 +25,6 @@ int qfcvt_r(long double number, int ndigits, int *decpt,
 <dt>
 </dt><dd> /* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The functions <code>ecvt_r</code>(), <code>fcvt_r</code>(), <code>qecvt_r</code>(), and <code>qfcvt_r</code>() are identical to <code><a href="/docs/linux/man/3-ecvt/">ecvt</a></code>(3), <code><a href="/docs/linux/man/3-fcvt/">fcvt</a></code>(3), <code><a href="/docs/linux/man/3-qecvt/">qecvt</a></code>(3), and <code><a href="/docs/linux/man/3-qfcvt/">qfcvt</a></code>(3), respectively, except that they do not return their result in a static buffer, but instead use the supplied <i>buf</i> of size <i>len</i>. See <code><a href="/docs/linux/man/3-ecvt/">ecvt</a></code>(3) and <code><a href="/docs/linux/man/3-qecvt/">qecvt</a></code>(3).</p>
 <h2>RETURN VALUE</h2>
 <p> These functions return 0 on success, and -1 otherwise.</p>

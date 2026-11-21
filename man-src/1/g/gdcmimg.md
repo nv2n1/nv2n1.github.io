@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmimg(1)"
 name: "gdcmimg"
 section: "1"
@@ -10,7 +11,6 @@ description: "gdcmimg – .TH \"gdcmimg\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16
 <pre>
 gdcmimg [options] file-in file-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcmimg</code> command line tool can be used in two fashions: </p>
 <dl>
 <dt>*</dt>

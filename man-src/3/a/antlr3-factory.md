@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-factory(3)"
 name: "antlr3-factory"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_COMMON_TREE_struct –"
 ---
 
 <p> Interface for an ANTLR3 common tree which is what gets passed around by the AST producing parser.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontree.h">antlr3commontree.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_BASE_TREE</code> <code>baseTree</code><br />

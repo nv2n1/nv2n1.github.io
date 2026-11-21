@@ -1,4 +1,5 @@
 ---
+
 title: "iterator(3)"
 name: "iterator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iterator/"
 description: "QuantLib::TimeBasket – Distribution over a number of dates."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/timebasket.hpp&gt; </p>
 <p> Inherits std::map&lt;Date,Real&gt;. </p>
 <h3>Public Member Functions</h3>

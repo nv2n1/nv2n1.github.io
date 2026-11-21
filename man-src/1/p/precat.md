@@ -1,4 +1,5 @@
 ---
+
 title: "precat(1)"
 name: "precat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-precat/"
 description: "prezip, preunzip, precat – prefix delta compressor for Aspell"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> precat [-dzhLV] [-cfksSq] [file &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>prezip</code> is a a prefix delta compressor. It is <i>not</i> a general purpose compressor and should only be used on sorted word lists or other similar text files. It will likely <i>increase</i> the size of binary data. </p>
 <p> If invoked as <code>prezip,</code> the default action is to compress. If invoked as <code>preunzip,</code> the default action is to decompress. If invoked as <code>precat,</code> the default action is to decompress to stdout. </p>
 <p> If no file names are given then <code>prezip</code> will compress or decompress from the standard input to the standard output. Short flags can be combined so that &quot;-c <code>-s</code>&quot; is the same as &quot;-cs&quot;.</p>

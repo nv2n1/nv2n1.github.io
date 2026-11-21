@@ -1,4 +1,5 @@
 ---
+
 title: "outocp(1)"
 name: "outocp"
 section: "1"
@@ -9,9 +10,7 @@ description: "outocp – debug an OCP file"
 
 <h2>NAME</h2>
 <p> outocp &#8211; debug an OCP file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>outocp</code> <i>OCPFILE</i>[<i></i><code>.ocp</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>outocp</code> is used for debugging Omega Compiled Translation Process (OCP) files. It generates some statistics about the OCP file, and then runs through the states that the file defines. </p>
 <p> Omega Translation Processes are rules used to translate one character set to another and to choose between characters with one or more context-sensitive variants. OTPs could also be used to change the case or hyphenation of text. </p>
 <h2>BUGS</h2>

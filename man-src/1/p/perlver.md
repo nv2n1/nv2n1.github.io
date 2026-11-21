@@ -1,4 +1,5 @@
 ---
+
 title: "perlver(1)"
 name: "perlver"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlver/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlver - The Perl Minimum Version Analyzer 
 
- perlver - The Perl Minimum Version Analyzer 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
   adam@red:~$ perlver Perl-MinimumVersion
   Found directory '.'
   Searching for Perl files... found 3 file(s)
@@ -31,9 +27,7 @@ url: "/docs/linux/man/1-perlver/"
   adam@red:~$
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- <tt>&quot;perlver&quot;</tt> is a console script created to provide convenient access to the functionality provided by Perl::MinimumVersion. 
+<tt>&quot;perlver&quot;</tt> is a console script created to provide convenient access to the functionality provided by Perl::MinimumVersion. 
 
  --blame option shows code which requires this version of perl 
 

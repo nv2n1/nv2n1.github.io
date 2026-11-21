@@ -1,4 +1,5 @@
 ---
+
 title: "git-gc(1)"
 name: "git-gc"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-gc/"
 description: "git-gc – Cleanup unnecessary files and optimize the local repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git gc[--aggressive][--auto][--quiet][--prune = &lt;date&gt; | --no - prune][--force][--keep - largest - pack]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Runs a number of housekeeping tasks within the current repository, such as compressing file revisions (to reduce disk space and increase performance), removing unreachable objects which may have been created from prior invocations of <i>git add</i>, packing refs, pruning reflog, rerere metadata or stale working trees. May also update ancillary indexes such as the commit-graph. </p>
 <p> When common porcelain operations that create objects are run, they will check whether the repository has grown substantially since the last maintenance, and if so run <code>git gc</code> automatically. See <code>gc.auto</code> below for how to disable this behavior. </p>
 <p> Running <code>git gc</code> manually should only be needed when adding objects to a repository without regularly running such porcelain commands, to do a one-off repository optimization, or e.g. to clean up a suboptimal mass-import. See the &quot;PACKFILE OPTIMIZATION&quot; section in <code><a href="/docs/linux/man/1-git-fast-import/">git-fast-import</a></code>(1) for more details on the import case.</p>

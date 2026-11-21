@@ -1,4 +1,5 @@
 ---
+
 title: "mosquitto_sub(1)"
 name: "mosquitto_sub"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-mosquitto_sub/"
 description: "mosquitto_sub – an MQTT version 3.1 client for subscribing to topics"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mosquitto_sub</code> [<code>-A</code>&nbsp;<wbr><i>bind_address</i>] [<code>-c</code>] [<code>-C</code>&nbsp;<wbr><i>msg count</i>] [<code>-d</code>] [<code>-h</code>&nbsp;<wbr><i>hostname</i>] [<code>-i</code>&nbsp;<wbr><i>client_id</i>] [<code>-I</code>&nbsp;<wbr><i>client id prefix</i>] [<code>-k</code>&nbsp;<wbr><i>keepalive time</i>] [<code>-p</code>&nbsp;<wbr><i>port number</i>] [<code>-q</code>&nbsp;<wbr><i>message QoS</i>] [<code>-R</code>] [<code>-S</code>] [<code>-N</code>] [<code>&#8211;quiet</code>] [<code>-v</code>] [[<code>-u</code>&nbsp;<wbr><i>username</i>]&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>password</i>]] [<code>&#8211;will-topic</code>&nbsp;<wbr><i>topic</i>&nbsp;<wbr>[<code>&#8211;will-payload</code>&nbsp;<wbr><i>payload</i>]&nbsp;<wbr>[<code>&#8211;will-qos</code>&nbsp;<wbr><i>qos</i>]&nbsp;<wbr>[<code>&#8211;will-retain</code>]] [[{<code>&#8211;cafile</code>&nbsp;<wbr><i>file</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;capath</code>&nbsp;<wbr><i>dir</i>}&nbsp;<wbr>[<code>&#8211;cert</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>&#8211;key</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>&#8211;tls-version</code>&nbsp;<wbr><i>version</i>]&nbsp;<wbr>[<code>&#8211;insecure</code>]] | [<code>&#8211;psk</code>&nbsp;<wbr><i>hex-key</i>&nbsp;<wbr><code>&#8211;psk-identity</code>&nbsp;<wbr><i>identity</i>&nbsp;<wbr>[<code>&#8211;tls-version</code>&nbsp;<wbr><i>version</i>]]] [<code>&#8211;proxy</code>&nbsp;<wbr><i>socks-url</i>] [<code>-V</code>&nbsp;<wbr><i>protocol-version</i>] [<code>-T</code>&nbsp;<wbr><i>filter-out</i>&#8230;] <code>-t</code>&nbsp;<wbr><i>message-topic</i>&#8230;</dt>
 <dt> <code>mosquitto_sub</code> [<code>&#8211;help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mosquitto_sub</code></p>
 <dd>is a simple MQTT version 3.1 client that will subscribe to a topic and print the messages that it receives.</dd>
 <h2>OPTIONS</h2>

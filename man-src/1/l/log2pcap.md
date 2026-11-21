@@ -1,4 +1,5 @@
 ---
+
 title: "log2pcap(1)"
 name: "log2pcap"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-log2pcap/"
 description: "log2pcap – Extract network traces from Samba log files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>log2pcap [-h] [-q] [logfile] [pcap_file]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> log2pcap reads in a samba log file and generates a pcap file (readable by most sniffers, such as ethereal or tcpdump) based on the packet dumps in the log file. </p>
 <p> The log file must have a <i>log level</i> of at least <code>5</code> to get the SMB header/parameters right, <code>10</code> to get the first 512 data bytes of the packet and <code>50</code> to get the whole packet.</p>

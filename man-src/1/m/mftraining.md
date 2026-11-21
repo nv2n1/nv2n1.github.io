@@ -1,4 +1,5 @@
 ---
+
 title: "mftraining(1)"
 name: "mftraining"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mftraining/"
 description: "mftraining – feature training for Tesseract"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> mftraining -U <i>unicharset</i> -O <i>lang.unicharset</i> <i>FILE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> mftraining takes a list of .tr files, from which it generates the files <code>inttemp</code> (the shape prototypes), <code>shapetable</code>, and <code>pffmtable</code> (the number of expected features for each character). (A fourth file called Microfeat is also written by this program, but it is not used.)</p>
 <h2>OPTIONS</h2>
 <p> -U <i>FILE</i></p>

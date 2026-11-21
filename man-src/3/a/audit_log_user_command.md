@@ -1,4 +1,5 @@
 ---
+
 title: "audit_log_user_command(3)"
 name: "audit_log_user_command"
 section: "3"
@@ -9,10 +10,8 @@ description: "audit_log_user_command – log a user command"
 
 <h2>NAME</h2>
 <p> audit_log_user_command &#8211; log a user command</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> <code>int audit_log_user_command(int audit_fd, int type, const char *command, const char *tty, int result);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This function will log a command to the audit system using a predefined message format. It encodes the command as the audit system expects for untrusted strings. This function should be used by all apps need to record commands. The function parameters are as follows: </p>
 <pre>
 audit_fd - The fd returned by audit_open

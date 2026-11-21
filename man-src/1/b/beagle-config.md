@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-config(1)"
 name: "beagle-config"
 section: "1"
@@ -9,12 +10,10 @@ description: "beagle-config – command-line interface to Beagle configuration"
 
 <h2>NAME</h2>
 <p> beagle-config &#8211; command-line interface to Beagle configuration</p>
-<h2>SYNOPSIS</h2>
 <p> <code>beagle-config</code> <i>options</i><br />
  <code>beagle-config</code> <i>sections</i><br />
  <code>beagle-config</code> <i>sections</i> <i>section-options</i> [<i>params</i>]<br />
  <code>beagle-config</code> <i>xml-options</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>beagle-config</code> is a command line tool designed to manipulate the Beagle configuration. </p>
 <p> The configuration is stored in a series of files usually located in the <code>~/.beagle/config</code> directory. The configuration is split up into <i>sections</i>, each section being represented by 1 file. </p>
 <p> The format used is the result of serialized objects. Manually modifying the configuration files is not recommended, you should use this utility instead. You can also the graphical interfaces beagle-settings (Gtk) or beagle-settings-qt (Qt4). </p>

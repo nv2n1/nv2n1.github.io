@@ -1,4 +1,5 @@
 ---
+
 title: "libpng-config(1)"
 name: "libpng-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-libpng-config/"
 description: "libpng16-config – get information about installed libpng library"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>libpng16-config</code> [<i>OPTION</i>] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Provides information about libpng library. </p>
 <p> Known values for OPTION are:</p>
 <dl>

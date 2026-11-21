@@ -1,4 +1,5 @@
 ---
+
 title: "xdpr(1)"
 name: "xdpr"
 section: "1"
@@ -9,9 +10,7 @@ description: "xdpr – dump an X window directly to a printer"
 
 <h2>NAME</h2>
 <p> xdpr &#8211; dump an X window directly to a printer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xdpr</code> [ <i>filename</i> ] [ <code>-display</code> <i>host:display</i> ] [ <code>-P</code><i>printer</i> ] [ <code>-device</code> <i>devtype</i> ] [ <i>option</i> &#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xdpr</i> uses the commands <i>xwd,</i> <i>xpr,</i> and <i>lpr</i> or <i>lp</i> to dump an X window, process it for a particular printer type, and print it out on the printer of your choice. This is the easiest way to get a printout of a window. <i>Xdpr</i> by default will print the largest possible representation of the window on the output page. </p>
 <p> The options for <i>xdpr</i> are the same as those for <i>xpr</i>, <i>xwd</i>, and <i>lpr</i> or <i>lp</i>. The most commonly-used options are described below; see the manual pages for these commands for more detailed descriptions of the many options available.</p>
 <h2>OPTIONS</h2>

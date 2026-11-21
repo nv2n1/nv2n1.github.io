@@ -1,4 +1,5 @@
 ---
+
 title: "aspell(1)"
 name: "aspell"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aspell/"
 description: "aspell – interactive spell checker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aspell</code> <i>[options] &lt;command&gt;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>aspell</code> is a utility program that connects to the Aspell library so that it can function as an <code>ispell -a</code> replacement, as an independent spell checker, as a test utility to test out Aspell library features, and as a utility for managing dictionaries used by the library. </p>
 <p> The Aspell library contains an interface allowing other programs direct access to its functions and therefore reducing the complex task of spell checking to simple library calls. The default library does not contain dictionary word lists. To add language dictionaries, please check your distro first for modified dictionaries, otherwise look here for base language dictionaries &lt;<a rel="nofollow" href="http://aspell.net">http://aspell.net</a>&gt;. </p>
 <p> The following information describes the commands and options used by the Aspell Utility. </p>

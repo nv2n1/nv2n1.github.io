@@ -1,4 +1,5 @@
 ---
+
 title: "libnpx(1)"
 name: "libnpx"
 section: "1"
@@ -7,16 +8,13 @@ url: "/docs/linux/man/1-libnpx/"
 description: "npx – execute npm package binaries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npx</code> &#8211; execute npm package binaries </p>
-<h2>SYNOPSIS</h2>
 <p> <code>npx [options] &lt;command&gt;[@version] [command-arg]&#8230;</code> </p>
 <p> <code>npx [options] [-p|&#8211;package &lt;pkg&gt;]&#8230; &lt;command&gt; [command-arg]&#8230;</code> </p>
 <p> <code>npx [options] -c &#8216;&lt;command-string&gt;&#8217;</code> </p>
 <p> <code>npx &#8211;shell-auto-fallback [shell]</code></p>
 <h2>INSTALL</h2>
 <p> <code>npm install -g npx</code></p>
-<h2>DESCRIPTION</h2>
 <p> Executes <code>&lt;command&gt;</code> either from a local <code>node_modules/.bin</code>, or from a central cache, installing any packages needed in order for <code>&lt;command&gt;</code> to run. </p>
 <p> By default, <code>npx</code> will check whether <code>&lt;command&gt;</code> exists in <code>$PATH</code>, or in the local project binaries, and execute that. If <code>&lt;command&gt;</code> is not found, it will be installed prior to execution. </p>
 <p> Unless a <code>&#8211;package</code> option is specified, <code>npx</code> will try to guess the name of the binary to invoke depending on the specifier provided. All package specifiers understood by <code>npm</code> may be used with <code>npx</code>, including git specifiers, remote tarballs, local directories, or scoped packages. </p>

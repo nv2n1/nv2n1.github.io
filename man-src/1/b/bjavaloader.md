@@ -1,4 +1,5 @@
 ---
+
 title: "bjavaloader(1)"
 name: "bjavaloader"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bjavaloader/"
 description: "bjavaloader – Barry Project’s program to manage BlackBerry applications"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bjavaloader</code> &#8211; Barry Project&#8217;s program to manage BlackBerry applications </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bjavaloader [-h][-p pin][-P pass][-v]</code></p>
 <dl>
 <dt><code>bjavaloader dir [-s]</code></dt>
@@ -34,7 +33,6 @@ description: "bjavaloader – Barry Project’s program to manage BlackBerry app
 <dd>
 </dd><dt><code>bjavaloader settime [yyyy-mm-dd HH:MM:SS]</code></dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>bjavaloader</code> is a tool for loading, listing, and deleting applications on a BlackBerry device. It has a few other features as well, not pertaining to application management. The command syntax is intentionally similar to the Windows program &#8216;javaloader.exe&#8217; provided by Research In Motion, in order to make it easy to use the same build scripts on Linux and Windows.</p>
 <h2>OPTIONS</h2>
 <dl>

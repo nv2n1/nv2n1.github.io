@@ -1,4 +1,5 @@
 ---
+
 title: "nvzoom(1)"
 name: "nvzoom"
 section: "1"
@@ -9,7 +10,6 @@ description: "NVIDIA – manual page for NVIDIA Texture Tools – Copyright NVID
 
 <h2>NAME</h2>
 <p> NVIDIA &#8211; manual page for NVIDIA Texture Tools &#8211; Copyright NVIDIA Corporation 2007</p>
-<h2>DESCRIPTION</h2>
 <p> NVIDIA Texture Tools &#8211; Copyright NVIDIA Corporation 2007 </p>
 <p> usage: nvzoom [options] input [output]</p>
 <h2>OPTIONS</h2>

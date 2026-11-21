@@ -1,4 +1,5 @@
 ---
+
 title: "icewm(1)"
 name: "icewm"
 section: "1"
@@ -9,7 +10,6 @@ description: "icewm – lightweight X11 window manager"
 
 <h2>NAME</h2>
 <p> icewm &#8211; lightweight X11 window manager </p>
-<h2>DESCRIPTION</h2>
 <p> <i>IceWM</i> is lightweight X11 window manager. The goal of IceWM is to provide a small, fast and familiar window manager for the X11 window system. Compatibility with the window manager is desired and will be implemented where appropriate. </p>
 <p> It was originally designed to emulate the look of Motif, OS/2 Warp 4, OS/2 Warp 3 and Windows 95. Since it has a theming engine (hint: <a rel="nofollow" href="http://www.icewm.org/)">http://www.icewm.org/)</a> others styles are possible. It also tries to combine the feel of the above systems whenever it is compatible. </p>
 <p> Generally, it tries to make all functions available both by keyboard and by mouse (this is not currently possible when using mouse focus). Extreme configurability similar to fvwm and many other window managers is NOT the goal. However IceWM configurability is very good throught its various <i>preferences</i> files. </p>

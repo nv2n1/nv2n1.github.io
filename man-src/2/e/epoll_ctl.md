@@ -1,4 +1,5 @@
 ---
+
 title: "epoll_ctl(2)"
 name: "epoll_ctl"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-epoll_ctl/"
 description: "epoll_ctl – control interface for an epoll file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/epoll.h&gt;</code> </p>
 <p> <code>int epoll_ctl(int </code><i>epfd</i><code>, int </code><i>op</i><code>, int </code><i>fd</i><code>, struct epoll_event *</code><i>event</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This system call is used to add, modify, or remove entries in the interest list of the <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) instance referred to by the file descriptor <i>epfd</i>. It requests that the operation <i>op</i> be performed for the target file descriptor, <i>fd</i>. </p>
 <p> Valid values for the <i>op</i> argument are:</p>
 <dl>

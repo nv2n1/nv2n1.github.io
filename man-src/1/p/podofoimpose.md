@@ -1,4 +1,5 @@
 ---
+
 title: "podofoimpose(1)"
 name: "podofoimpose"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-podofoimpose/"
 description: "podofoimpose – A powerful PDF imposition tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>podofoimpose</code> Input Output Plan [Interpretor] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>podofoimpose</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can do imposition of the final output according to the specified imposition plan. </p>
 <h2>OPTIONS</h2>
 <p> <code>Input</code></p>

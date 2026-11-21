@@ -1,4 +1,5 @@
 ---
+
 title: "ucfq(1)"
 name: "ucfq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ucfq/"
 description: "ucfq – query the ucf database"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 usage : ucfq[options](/ path / to / file | package)[/ path / to / file | package...]
 </code></pre>
@@ -38,7 +38,6 @@ usage : ucfq[options](/ path / to / file | package)[/ path / to / file | package
 <dl>
 </dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> This script takes a set of arguments, each of which is a package name (and thus does not contain a /) or a full path to a configuration file, and outputs the associated package, if any, if the file exists on disk, and whether it has been modified by the user. The output is either a human readable tabular form, or a compact colon-separated machine friendly format. </p>
 <p> This script can potentially be used in package <tt>&quot;postrm&quot;</tt> scripts during purge to query the system for configuration files that may still exist on the system, and whether these files have been locally modified by the user &#8212; assuming that the package registered all the configuration files with <code>ucf</code> using <tt>&quot;ucfr&quot;</tt>.</p>
 <h2>CAVEATS</h2>

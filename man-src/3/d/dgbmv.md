@@ -1,4 +1,5 @@
 ---
+
 title: "dgbmv(3)"
 name: "dgbmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbmv/"
 description: "dgbmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbmv</code> (TRANS, M, N, KL, KU, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>DGBMV</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_modify_qp_rate_limit(3)"
 name: "ibv_modify_qp_rate_limit"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-ibv_modify_qp_rate_limit/"
 description: "ibv_modify_qp_rate_limit – modify the send rate limits attributes of a queue pair (QP)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_modify_qp_rate_limit(struct ibv_qp *qp, struct ibv_qp_rate_limit_attr *attr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_modify_qp_rate_limit()</code> modifies the send rate limiting packet pacing attributes of QP <i>qp</i> with the attributes in <i>attr</i>. The argument <i>attr</i> is an ibv_qp_rate_limit_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p> The <i>rate_limit</i> defines the MAX send rate this QP will send as long as the link in not blocked and there are work requests in send queue. </p>
 <p> Finer control for shaping the rate limit of a QP is achieved by defining the <i>max_burst_sz</i>, single burst max bytes size and the <i>typical_pkt_sz</i>, typical packet bytes size. These allow the device to adjust the inter-burst gap delay required to correctly shape the scheduling of sends to the wire in order to reach for requested application requirements. </p>

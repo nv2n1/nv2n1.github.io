@@ -1,4 +1,5 @@
 ---
+
 title: "pcre2_substring_nametable_scan(3)"
 name: "pcre2_substring_nametable_scan"
 section: "3"
@@ -6,14 +7,13 @@ letter: "p"
 url: "/docs/linux/man/3-pcre2_substring_nametable_scan/"
 description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 ---
+
 <p>PCRE2 &#8211; Perl-compatible regular expressions (revised API) </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;pcre2.h&gt;</code> </p>
 <pre><code>
  int pcre2_substring_nametable_scan(const pcre2_code *  code ,
    PCRE2_SPTR  name , PCRE2_SPTR * first , PCRE2_SPTR * last );
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p>This convenience function finds, for a compiled pattern, the first and last entries for a given name in the table that translates capture group names into numbers. </p>
 <p> <br />
 &nbsp;<wbr>&nbsp;<i>code</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Compiled regular expression <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "clatrz(3)"
 name: "clatrz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clatrz/"
 description: "clatrz.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clatrz</code> (M, N, L, A, LDA, TAU, WORK)<br />
  <i></i><code>CLATRZ</code> factors an upper trapezoidal matrix by means of unitary transformations.</p>

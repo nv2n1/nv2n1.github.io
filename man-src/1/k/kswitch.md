@@ -1,4 +1,5 @@
 ---
+
 title: "kswitch(1)"
 name: "kswitch"
 section: "1"
@@ -9,9 +10,7 @@ description: "kswitch – switch primary ticket cache"
 
 <h2>NAME</h2>
 <p> kswitch &#8211; switch primary ticket cache</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kswitch</code> {<code>-c</code> <i>cachename</i>|<code>-p</code> <i>principal</i>}</p>
-<h2>DESCRIPTION</h2>
 <p> kswitch makes the specified credential cache the primary cache for the collection, if a cache collection is available.</p>
 <h2>OPTIONS</h2>
 <dl>

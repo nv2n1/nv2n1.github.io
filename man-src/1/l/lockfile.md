@@ -1,4 +1,5 @@
 ---
+
 title: "lockfile(1)"
 name: "lockfile"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lockfile/"
 description: "lockfile – conditional semaphore-file creator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lockfile</code> <i></i><code>&#8211;</code>sleeptime | <i></i><code>-r </code>retries |<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; <i></i><code>-l </code>locktimeout | <i></i><code>-s </code>suspend | <code>-!</code> | <code>-ml</code> | <code>-mu</code> | <i>filename</i> &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>lockfile</code> can be used to create one or more <i>semaphore</i> <i>files</i>. If lockfile can&#8217;t create all the specified files (in the specified order), it waits <i>sleeptime</i> (defaults to 8) seconds and retries the last file that didn&#8217;t succeed. You can specify the number of <i>retries</i> to do until failure is returned. If the number of <i>retries</i> is -1 (default, i.e., <code>-r-1</code>) lockfile will retry forever. </p>
 <p> If the number of <i>retries</i> expires before all files have been created, lockfile returns failure and removes all the files it created up till that point. </p>
 <p> Using lockfile as the condition of a loop in a shell script can be done easily by using the <code>-!</code> flag to invert the exit status. To prevent infinite loops, failures for any reason other than the lockfile already existing are not inverted to success but rather are still returned as failures. </p>

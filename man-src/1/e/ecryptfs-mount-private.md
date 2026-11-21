@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-mount-private(1)"
 name: "ecryptfs-mount-private"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ecryptfs-mount-private/"
 description: "ecryptfs-mount-private – interactive eCryptfs private mount wrapper script."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-mount-private</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-mount-private</code> is a wrapper script for the <code>mount.ecryptfs_private</code> utility that will interactively prompt for the user&#8217;s login password, if necessary. </p>
 <h2>FILES</h2>
 <p> <i>~/.Private</i> &#8211; underlying directory containing encrypted data </p>

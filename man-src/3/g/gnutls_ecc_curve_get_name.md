@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ecc_curve_get_name(3)"
 name: "gnutls_ecc_curve_get_name"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_ecc_curve_get_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ecc_curve_get_name &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_ecc_curve_get_name(gnutls_ecc_curve_t </code><i>curve</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ecc_curve_t curve</dt>
 <dd> is an ECC curve</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Convert a <code>gnutls_ecc_curve_t</code> value to a string.</p>
 <h2>RETURNS</h2>
 <p> a string that contains the name of the specified curve or <code>NULL</code>.</p>

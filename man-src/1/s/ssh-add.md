@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-add(1)"
 name: "ssh-add"
 section: "1"
@@ -7,14 +8,11 @@ url: "/docs/linux/man/1-ssh-add/"
 description: "ssh-add – adds private key identities to the OpenSSH authentication agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-add</code> &#8211; adds private key identities to the OpenSSH authentication agent </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ssh-add</code> [-<code>cDdKkLlqvXx </code>[-<code>E </code><i>fingerprint_hash</i> ] ] [-<code>H </code><i>hostkey_file</i> ] [-<code>h </code><i>destination_constraint</i> ] [-<code>S </code><i>provider</i> ] [-<code>t </code><i>life</i> ] [<i>file &#8230;</i> ]<br />
 <code>ssh-add</code> &#8211;<code>s </code><i>pkcs11</i><br />
 <code>ssh-add</code> &#8211;<code>e </code><i>pkcs11</i><br />
 <code>ssh-add</code> &#8211;<code>T</code> <i>pubkey &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ssh-add</code> adds private key identities to the authentication agent, ssh-agent1. When run without arguments, it adds the files ~/.ssh/id_rsa ~/.ssh/id_ecdsa ~/.ssh/id_ecdsa_sk ~/.ssh/id_ed25519 ~/.ssh/id_ed25519_sk and ~/.ssh/id_dsa After loading a private key, <code>ssh-add</code> will try to load corresponding certificate information from the filename obtained by appending -cert.pub to the name of the private key file. Alternative file names can be given on the command line. </p>
 <p> If any file requires a passphrase, <code>ssh-add</code> asks for the passphrase from the user. The passphrase is read from the user&#8217;s tty. <code>ssh-add</code> retries the last passphrase if multiple identity files are given. </p>
 <p> The authentication agent must be running and the <code>SSH_AUTH_SOCK</code> environment variable must contain the name of its socket for <code>ssh-add</code> to work. </p>

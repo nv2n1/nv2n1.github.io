@@ -1,4 +1,5 @@
 ---
+
 title: "acpidump-acpica(1)"
 name: "acpidump-acpica"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-acpidump-acpica/"
 description: "acpidump – ACPI table dump utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>acpidump</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>acpidump</code> command. The option list is taken from the interactive help. </p>
 <p> The <code>acpidump</code> command extracts the ACPI tables currently in use from the running kernel in a form usable for later processing by the <code>acpixtract</code> command. </p>
 <p> Invocation of <code>acpidump</code> without parameters will dump all available ACPI tables. Multiple mixed instances of the <code>-a</code> , <code>-f</code> , and <code>-n</code> parameters can be used. </p>

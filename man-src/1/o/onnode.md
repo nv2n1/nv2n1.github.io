@@ -1,4 +1,5 @@
 ---
+
 title: "onnode(1)"
 name: "onnode"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-onnode/"
 description: "onnode – run commands on CTDB cluster nodes"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>onnode</code> [<i>OPTION</i>&#8230;] {<i>NODES</i>} {<i>COMMAND</i>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>onnode is a utility to run commands on a specific node of a CTDB cluster, or on all nodes. </dd>
 <p> <i>NODES</i> specifies which node(s) to run a command on. See section NODES SPECIFICATION for details. </p>
 <p> <i>COMMAND</i> can be any shell command. The onnode utility uses ssh or rsh to connect to the remote nodes and run the command.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "unwrapdiff(1)"
 name: "unwrapdiff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-unwrapdiff/"
 description: "unwrapdiff – demangle word-wrapped patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>unwrapdiff</code> [-v] [<i>file</i>&#8230;]</dt>
 <dt> <code>unwrapdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>unwrapdiff</code></p>
 <dd>demangles patches that have been word-wrapped, in an attempt to make them useful. </dd>
 <p> The corrected diff is sent to standard output. Note that you will probably need to use the <code>-l</code> option when applying the patch, in order to ignore any whitespace differences there may be.</p>

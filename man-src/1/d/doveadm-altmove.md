@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-altmove(1)"
 name: "doveadm-altmove"
 section: "1"
@@ -9,11 +10,9 @@ description: "doveadm-altmove – Move matching mails to the alternative storage
 
 <h2>NAME</h2>
 <p> doveadm-altmove &#8211; Move matching mails to the alternative storage (dbox-only)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <i>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <code>-A</code><i> search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>altmove</code> [<code>-r</code>] [-S <i>socket_path</i>] <code>-u</code><i> user search_query</i></p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used with sdbox or mdbox storage to move mails to alternative storage path when :ALT=&lt;path&gt; is specified for the mail location. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will executed the <code>altmove</code> action with the environment of the logged in system user. </p>
 <p> In the second form, the command will be performed for all users. </p>

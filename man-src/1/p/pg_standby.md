@@ -1,4 +1,5 @@
 ---
+
 title: "pg_standby(1)"
 name: "pg_standby"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pg_standby/"
 description: "pg_standby – supports the creation of a PostgreSQL warm standby server"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_standby</code> [<i>option</i>&#8230;] <i>archivelocation</i> <i>nextwalfile</i> <i>xlogfilepath</i> [<i>restartwalfile</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>pg_standby supports creation of a &#8220;warm standby&#8221; database server. It is designed to be a production-ready program, as well as a customizable template should you require specific modifications. </dd>
 <p> pg_standby is designed to be a waiting <i>restore_command</i>, which is needed to turn a standard archive recovery into a warm standby operation. Other configuration is required as well, all of which is described in the main server manual (see Section 25.2, &#8220;Log-Shipping Standby Servers&#8221;, in the documentation). </p>
 <p> To configure a standby server to use pg_standby, put this into its recovery.conf configuration file: </p>

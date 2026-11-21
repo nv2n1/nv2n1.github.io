@@ -1,4 +1,5 @@
 ---
+
 title: "hid2hci(1)"
 name: "hid2hci"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hid2hci/"
 description: "hid2hci – Bluetooth HID to HCI mode switching utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hid2hci</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-hid2hci/">hid2hci</a>(1)</code> is used to set up switch supported Bluetooth devices into the HCI mode and back.</p>
 <h2>OPTIONS</h2>
 <dl>

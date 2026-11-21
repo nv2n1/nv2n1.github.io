@@ -1,4 +1,5 @@
 ---
+
 title: "usrp2_card_burner(1)"
 name: "usrp2_card_burner"
 section: "1"
@@ -9,9 +10,7 @@ description: "usrp2_card_burner – USRP N-Series FPGA/Firmware Burner"
 
 <h2>NAME</h2>
 <p> usrp2_card_burner &#8211; USRP N-Series FPGA/Firmware Burner</p>
-<h2>DESCRIPTION</h2>
 <p> Burn USRP2 firmware and FPGA images onto an SD card plugged into the host machine.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>usrp2_card_burner [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>

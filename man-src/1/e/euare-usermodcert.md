@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usermodcert(1)"
 name: "euare-usermodcert"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-usermodcert – Change the status of a signing certificate f
 
 <h2>NAME</h2>
 <p> euare-usermodcert &#8211; Change the status of a signing certificate from Active to Inactive, or vice versa</p>
-<h2>SYNOPSIS</h2>
 <p> euare-usermodcert [-u USER] <code>-s</code> {Active,Inactive} [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] CERT</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Change the status of a signing certificate from Active to Inactive, or vice versa</p>
 <h3>positional arguments:</h3>
 <dl>

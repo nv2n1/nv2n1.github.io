@@ -1,4 +1,5 @@
 ---
+
 title: "fixasin(3)"
 name: "fixasin"
 section: "3"
@@ -9,10 +10,8 @@ description: "fixasin – Fixed point inverse sine lookup table. Allegro game pr
 
 <h2>NAME</h2>
 <p> fixasin &#8211; Fixed point inverse sine lookup table. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixasin(fixed x);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This function finds the inverse sine of a value using a lookup table. The input value must be a fixed point value. The inverse sine is defined only in the domain from `-1&#8242; to `1&#8242;. Outside of this input range, the function will set `errno&#8217; to EDOM and return zero. Example: </p>
 <pre><code>
 float angle;

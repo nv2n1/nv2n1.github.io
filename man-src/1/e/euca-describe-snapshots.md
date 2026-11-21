@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-snapshots(1)"
 name: "euca-describe-snapshots"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-snapshots – Show information about snapshots"
 
 <h2>NAME</h2>
 <p> euca-describe-snapshots &#8211; Show information about snapshots</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-snapshots [-a] [-o ACCOUNT] [-r ACCOUNT]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [SNAPSHOT [SNAPSHOT &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about snapshots</p>
 <h2>DESCRIPTION</h2>
 <p> By default, only snapshots your account owns and snapshots for which your account has explicit restore permissions are shown.</p>

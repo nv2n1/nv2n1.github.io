@@ -1,4 +1,5 @@
 ---
+
 title: "ompi_info(1)"
 name: "ompi_info"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ompi_info/"
 description: "ompi_info – Display information about the Open MPI installation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ompi_info [options]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ompi_info</code> provides detailed information about the Open MPI installation. It can be useful for at least three common scenarios: </p>
 <p> 1. Checking local configuration and seeing how Open MPI was installed. </p>
 <p> 2. Submitting bug reports / help requests to the Open MPI community (see <i><a rel="nofollow" href="http://www.open-mpi.org/community/help/">http://www.open-mpi.org/community/help/</a></i>) </p>

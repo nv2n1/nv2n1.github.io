@@ -1,4 +1,5 @@
 ---
+
 title: "bigloo(1)"
 name: "bigloo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bigloo/"
 description: "bigloo v2.3 – `a practical Scheme compiler’"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bigloo</code> [ options ] <i>[ input ]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Bigloo</code> is a Scheme compiler. Scheme is defined in an IEEE standard for the Scheme Programming Language but Bigloo does not entirely conform to it. The compiler produces either C files or <code>Java</code> class files. The C files are then compiled by any <code>ISO</code> C compiler to produce <i>.o</i> or <i>executable</i> files. <code>Bigloo</code> is a module compiler which means that it is allowed to compile several files and to link them together to produce an unique executable. </p>
 <h2>OPTIONS</h2>
 <dl>

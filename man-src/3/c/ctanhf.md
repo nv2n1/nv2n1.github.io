@@ -1,4 +1,5 @@
 ---
+
 title: "ctanhf(3)"
 name: "ctanhf"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ctanhf/"
 description: "ctanh, ctanhf, ctanhl – complex hyperbolic tangent"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex ctanh(double complex </code><i>z</i><code>);</code><br />
  <code>float complex ctanhf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex ctanhl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex hyperbolic tangent of <i>z</i>. </p>
 <p> The complex hyperbolic tangent function is defined mathematically as: </p>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-delete-policy(1)"
 name: "euscale-delete-policy"
 section: "1"
@@ -9,12 +10,10 @@ description: "euscale-delete-policy – Delete a scaling policy"
 
 <h2>NAME</h2>
 <p> euscale-delete-policy &#8211; Delete a scaling policy</p>
-<h2>SYNOPSIS</h2>
 <p> euscale-delete-policy <code>-g</code> ASGROUP [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN]</dt>
 <dd> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] POLICY</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a scaling policy</p>
 <h3>positional arguments:</h3>
 <dl>

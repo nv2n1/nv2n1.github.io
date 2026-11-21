@@ -1,4 +1,5 @@
 ---
+
 title: "fauxv(1)"
 name: "fauxv"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fauxv/"
 description: "fauxv – print the auxiliary vector"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fauxv</code> [<i>options</i>] {<i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fauxv</code>prints the auxiliary vector of the specified process or core-file.</p>
 <h3>Standard Frysk Options</h3>
 <p> <code>-exe</code></p>

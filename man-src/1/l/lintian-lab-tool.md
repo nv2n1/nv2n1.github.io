@@ -1,4 +1,5 @@
 ---
+
 title: "lintian-lab-tool(1)"
 name: "lintian-lab-tool"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-lintian-lab-tool/"
 description: "lintian-lab-tool – perform common operations on/involving laboratories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lintian-lab-tool</code> &lt;cmd&gt; &lt;lab&gt; [&#8230;] </p>
 <p> <code>lintian-lab-tool</code> help</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>lintian-lab-tool</code> &#8230;</p>
 <h2>OPERATIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "thunar-volman(1)"
 name: "thunar-volman"
 section: "1"
@@ -9,7 +10,6 @@ description: "thunar-volman – controls configuration of thunar’s removable m
 
 <h2>NOTE</h2>
 <p> Note that usually this command is invoked by thunar itself and you should only use this if you are having problems adding the device as per the documentation cited at the end of this manpage.</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> thunar-volman [OPTION&#8230;]</dd>

@@ -1,4 +1,5 @@
 ---
+
 title: "avc_cleanup(3)"
 name: "avc_cleanup"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-avc_cleanup/"
 description: "avc_open, avc_destroy, avc_reset, avc_cleanup – userspace SELinux AVC setup and teardown"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>int avc_open(struct selinux_opt *</code><i>options</i><code>, unsigned </code><i>nopt</i><code>);</code> </p>
 <p> <code>void avc_destroy(void);</code> </p>
 <p> <code>int avc_reset(void);</code> </p>
 <p> <code>void avc_cleanup(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>avc_open</code>() initializes the userspace AVC and must be called before any other AVC operation can be performed. </p>
 <p> <code>avc_destroy</code>() destroys the userspace AVC, freeing all internal memory structures. After this call has been made, <code>avc_open</code>() must be called again before any AVC operations can be performed. </p>
 <p> <code>avc_reset</code>() flushes the userspace AVC, causing it to forget any cached access decisions. The userspace AVC normally calls this function automatically when needed, see <code>NETLINK NOTIFICATION</code> below. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hpixml(1)"
 name: "hpixml"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hpixml/"
 description: "hpxml – An openhpi sample application that displays system view in XML."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpixml[-D nn][-s][-i - t][-N host[:port]][-C = file][-h] hpixml[--domain = nn][--xsd][--indent-- text][--host = host[:port]][--cfgfile = file][--help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpixml displays system view in <font SIZE="-1">XML.</font> </p>
 <p> If no domain or host is selected, hpixml uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

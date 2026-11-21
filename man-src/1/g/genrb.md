@@ -1,4 +1,5 @@
 ---
+
 title: "genrb(1)"
 name: "genrb"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-genrb/"
 description: "genrb – compile a resource bundle"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>genrb</code> &#8211; compile a resource bundle </p>
-<h2>SYNOPSIS</h2>
 <p> <code>genrb</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-e</code>, <code>&#8211;encoding</code><i> encoding</i> ] [ <code>-j</code>, <code>&#8211;write-java</code><i> </i>[ encoding ] ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i> ] <i>bundle</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>genrb</code> converts the resource <i>bundle</i> source files passed on the command line to their binary form or to a Java source file for use with ICU4J. The resulting binary files have a <code>.res</code> extension while resource bundle source files typically have a <code>.txt</code> extension. Java source files have a <code>java</code> extension and follow the ICU4J naming conventions. </p>
 <p> It is customary to name the resource bundles by their locale name, i.e. to use a local identifier for the <i>bundle</i> filename, e.g. <code>ja_JP.txt</code> for Japanese (Japan) data, or <code>root.txt</code> for the root bundle. In any case, <code>genrb</code> will produce a file whose base name is the name of the locale found in the resource file, not the base name of the resource file itself. </p>
 <p> The binary files can be read directly by ICU, or used by <code><a href="/docs/linux/man/1-pkgdata/">pkgdata</a></code>(1) for incorporation into a larger archive or library.</p>

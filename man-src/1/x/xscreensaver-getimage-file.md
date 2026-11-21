@@ -1,4 +1,5 @@
 ---
+
 title: "xscreensaver-getimage-file(1)"
 name: "xscreensaver-getimage-file"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xscreensaver-getimage-file/"
 description: "xscreensaver-getimage-file – put a randomly-selected image on the root window"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-getimage-file</code> [-display <i>host:display.screen</i>] [&#8211;verbose] [&#8211;name] [&#8211;no-cache] directory-or-URL</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xscreensaver-getimage-file</i> program is a helper program for the xscreensaver hacks that manipulate images. Specifically, it is invoked by <code><a href="/docs/linux/man/1-xscreensaver-getimage/">xscreensaver-getimage</a></code>(1) as needed. This is not a user-level command. </p>
 <p> This program selects a random image from disk, and loads it on the root window. It does this by figuring out which image-loading programs are installed on the system, and invoking the first one it finds.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_array2tree(3)"
 name: "asn1_array2tree"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_array2tree – API function"
 
 <h2>NAME</h2>
 <p> asn1_array2tree &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_array2tree(const asn1_static_node * </code><i>array</i><code>, asn1_node * </code><i>definitions</i><code>, char * </code><i>errorDescription</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "asn1_array2tree – API function"
 <dd> return the pointer to the structure created by *ARRAY ASN.1 declarations</dd>
 <dt>char * errorDescription</dt>
 <dd> return the error description.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Creates the structures needed to manage the ASN.1 definitions.<br />
 &nbsp;<wbr><i>array</i>&nbsp;<wbr>is a vector created by&nbsp;<wbr><code>asn1_parser2array()</code>.</p>
 <h2>RETURNS</h2>

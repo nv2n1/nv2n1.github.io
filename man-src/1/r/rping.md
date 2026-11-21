@@ -1,4 +1,5 @@
 ---
+
 title: "rping(1)"
 name: "rping"
 section: "1"
@@ -10,17 +11,11 @@ url: "/docs/linux/man/1-rping/"
 
  rping - RDMA CM connection and RDMA ping-pong test.
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 rping - s[-v][-V][-d][-P][-a address][-p port][-C message_count][-S message_size] rping - c[-v][-V][-d] - a address[-p port][-C message_count][-S message_size]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Establishes a reliable RDMA connection between two nodes using the librdmacm, optionally performs RDMA transfers between the nodes, then disconnects.
+Establishes a reliable RDMA connection between two nodes using the librdmacm, optionally performs RDMA transfers between the nodes, then disconnects.
 
 <h2>OPTIONS</h2>
 

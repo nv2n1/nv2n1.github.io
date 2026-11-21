@@ -1,4 +1,5 @@
 ---
+
 title: "nghttpx(1)"
 name: "nghttpx"
 section: "1"
@@ -9,9 +10,7 @@ description: "nghttpx – HTTP/2 proxy"
 
 <h2>NAME</h2>
 <p> nghttpx &#8211; HTTP/2 proxy</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nghttpx</code> [OPTIONS]&#8230; [&lt;PRIVATE_KEY&gt; &lt;CERT&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> A reverse proxy for HTTP/2, HTTP/1 and SPDY.</p>
 <dl>
 <dt><code>&lt;PRIVATE_KEY&gt;</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "getcwd(3)"
 name: "getcwd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getcwd/"
 description: "getcwd, getwd, get_current_dir_name – get current working directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 char *getcwd(char *buf, size_t size);
@@ -31,7 +31,6 @@ char *get_current_dir_name(void);
 </dd><dt>Before glibc 2.12:</dt>
 <dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> These functions return a null-terminated string containing an absolute pathname that is the current working directory of the calling process. The pathname is returned as the function result and via the argument <i>buf</i>, if present. </p>
 <p> The <code>getcwd</code>() function copies an absolute pathname of the current working directory to the array pointed to by <i>buf</i>, which is of length <i>size</i>. </p>
 <p> If the length of the absolute pathname of the current working directory, including the terminating null byte, exceeds <i>size</i> bytes, NULL is returned, and <i>errno</i> is set to <code>ERANGE</code>; an application should check for this error, and allocate a larger buffer if necessary. </p>

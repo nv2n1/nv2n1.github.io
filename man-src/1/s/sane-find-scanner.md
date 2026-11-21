@@ -1,4 +1,5 @@
 ---
+
 title: "sane-find-scanner(1)"
 name: "sane-find-scanner"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sane-find-scanner/"
 description: "sane-find-scanner – find SCSI and USB scanners and their device files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sane-find-scanner</code> [<code>-?</code>|<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>] [<code>-q</code>] [<code>-p</code>] [<code>-f</code>] [<code>-F</code> <i>filename</i>] [<i>devname</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sane-find-scanner</code> is a command-line tool to find SCSI and USB scanners and determine their UNIX device files. Its primary aim is to make sure that scanners can be detected by SANE backends. </p>
 <p> For <code>SCSI</code> scanners, it checks the default generic SCSI device files (e.g., <i>/dev/sg0</i>) and <i>/dev/scanner</i>. The test is done by sending a SCSI inquiry command and looking for a device type of &quot;scanner&quot; or &quot;processor&quot; (some old HP scanners seem to send &quot;processor&quot;). So <code>sane-find-scanner</code> will find any SCSI scanner connected to those default device files even if it isn&#8217;t supported by any SANE backend. </p>
 <p> For <code>USB</code> scanners, first the USB kernel scanner device files (e.g. <i>/dev/usb/scanner0</i>, <i>/dev/usb/scanner</i>, and <i>/dev/usbscanner</i>) are tested. The files are opened and the vendor and device ids are determined, if the operating system supports this feature. Currently USB scanners are only found this way if they are supported by the Linux scanner module or the FreeBSD or OpenBSD uscanner driver. After that test, <code>sane-find-scanner</code> tries to scan for USB devices found by the USB library libusb (if available). There is no special USB class for scanners, so the heuristics used to distinguish scanners from other USB devices is not perfect. <code>sane-find-scanner</code> also tries to find out the type of USB chip used in the scanner. If detected, it will be printed after the vendor and product ids. <code>sane-find-scanner</code> will even find USB scanners, that are not supported by any SANE backend. </p>

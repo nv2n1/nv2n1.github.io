@@ -1,4 +1,5 @@
 ---
+
 title: "hybridhestonhullwhiteprocess(3)"
 name: "hybridhestonhullwhiteprocess"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hybridhestonhullwhiteprocess/"
 description: "ql/processes/hybridhestonhullwhiteprocess.hpp – hybrid equity (heston model) with stochastic interest rates (hull white model)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/hestonprocess.hpp&gt;<br />
  #include &lt;ql/processes/hullwhiteprocess.hpp&gt;<br />
  #include &lt;ql/processes/jointstochasticprocess.hpp&gt;<br />

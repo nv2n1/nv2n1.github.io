@@ -1,4 +1,5 @@
 ---
+
 title: "tpic2pdftex(1)"
 name: "tpic2pdftex"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-tpic2pdftex/"
 description: "tpic2pdftex – convert tpic \\specials for use by pdftex"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pic</code> -t <i>somefile.pic</i> | <code>tpic2pdftex</code> &gt; <i>somefile.tex</i> </p>
 <p> Process <i>somefile.tex</i> by <code>pdftex/pdflatex.</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Experimental <code>awk</code> script for conversion of <code>tpic</code> \specials as produced by <code>(groff-)pic</code> into <code>pdfTeX</code> \pdfliteral sections for further processing by <code>pdftex.</code> </p>
 <h2>NOTES</h2>
 <p> Current version: 1.97. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "slasd2(3)"
 name: "slasd2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasd2/"
 description: "slasd2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasd2</code> (NL, NR, SQRE, K, D, Z, ALPHA, BETA, U, LDU, VT, LDVT, DSIGMA, U2, LDU2, VT2, LDVT2, IDXP, IDX, IDXC, IDXQ, COLTYP, INFO)<br />
  <i></i><code>SLASD2</code> merges the two sets of singular values together into a single sorted set. Used by sbdsdc.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_addc(3)"
 name: "libssh2_knownhost_addc"
 section: "3"
@@ -9,7 +10,6 @@ description: "libssh2_knownhost_add – add a known host"
 
 <h2>NAME</h2>
 <p> libssh2_knownhost_add &#8211; add a known host</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_knownhost_addc(LIBSSH2_KNOWNHOSTS *hosts,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>char&nbsp;<wbr>*host, char&nbsp;<wbr>*salt,<br />
@@ -17,7 +17,6 @@ description: "libssh2_knownhost_add – add a known host"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>const char&nbsp;<wbr>*comment, size_t commentlen,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>int typemask,<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>struct libssh2_knownhost&nbsp;<wbr>**store);</p>
-<h2>DESCRIPTION</h2>
 <p> Adds a known host to the collection of known hosts identified by the &#8216;hosts&#8217; handle. </p>
 <p> <i>host</i> is a pointer the host name in plain text or hashed. If hashed, it must be provided base64 encoded. The host name can be the IP numerical address of the host or the full name. </p>
 <p> If you want to add a key for a specific port number for the given host, you must provide the host name like &#8216;[host]:port&#8217; with the actual characters &#8216;[&#8216; and &#8216;]&#8217; enclosing the host name and a colon separating the host part from the port number. For example: &quot;[host.example.com]:222&quot;. </p>

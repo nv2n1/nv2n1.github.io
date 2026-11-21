@@ -1,4 +1,5 @@
 ---
+
 title: "wbemcli(1)"
 name: "wbemcli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wbemcli/"
 description: "wbemcli – independent command line CIM Client"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wbemcli</code> <code>gc|gcd|dc|ec|ecn|gi|ci|mi|di|ei|ein|ai|ain|ri|rin|gp|sp|cm|cmx</code> [<code>-nl</code>] [<code>-h</code>] [<code>-t</code>] [<code>-cte]</code> [<code>-dx</code>] [<code>-dr</code>] [<code>-noverify</code>] [<code>-cacert</code>&nbsp;<wbr>file] [<code>-clientcert</code>&nbsp;<wbr>file] [<code>-clientkey</code>&nbsp;<wbr>file] [<code>-ac</code><i>&nbsp;<wbr>assocClass</i>] [<code>-arc</code><i>&nbsp;<wbr>resultClass</i>] [<code>-ar</code><i>&nbsp;<wbr>role</i>] [<code>-arr</code><i>&nbsp;<wbr>resultRole</i>] <i>objectPath</i> [<i>prop=value[,&#8230;]]</i> [<i>prop[,&#8230;]]</i></p>
 <h2>Alternate formats:</h2>
 <p> <code>wbemgc </code> [<code>-nl</code>] [<code>-h</code>] [<code>-t</code>] [<code>-dx</code>] [<code>-dr</code>] <i>objectPath</i> [<i>prop[,&#8230;]]</i> </p>
@@ -29,7 +29,6 @@ description: "wbemcli – independent command line CIM Client"
 <p> <code>wbemsp </code> [<code>-nl</code>] [<code>-h</code>] [<code>-t</code>] [<code>-dx</code>] [<code>-dr</code>] <i>objectPath</i> <i>prop=value</i> </p>
 <p> <code>wbemcm </code> [<code>-nl</code>] [<code>-h</code>] [<code>-t</code>] [<code>-dx</code>] [<code>-dr</code>] <i>objectPath</i> <i>method[.param=value[,&#8230;]]</i> </p>
 <p> <code>wbemcmx </code> [<code>-nl</code>] [<code>-h</code>] [<code>-t</code>] [<code>-dx</code>] [<code>-dr</code>] <i>objectPath</i> <i>method[.param=value[,&#8230;]]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>wbemcli</i> is a command line based CIM Client. It uses one of the <i>gc|gcd|dc|ec|ecn|gi|ci|mi|di|ei|ein|ai|ain|ri|rin|gp|sp|cm|cmx</i> operations and the fully qualified path to the CIM Object to get to the host and execute the specified operation. This implementation is CIMOM library independent and can be used with all WBEM compliant CIMOM implementations. The <i>objectPath</i> parameter is used to locate the CIM object and has the following format: </p>
 <p> <code> &lt;scheme&gt;://[user:pwd@]&lt;host&gt;:&lt;port&gt;/&lt;namespace[/..]&gt;:&lt;classname&gt;[.&lt;key=value[,..]&gt;]</code></p>
 <dl>

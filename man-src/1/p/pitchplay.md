@@ -1,4 +1,5 @@
 ---
+
 title: "pitchplay(1)"
 name: "pitchplay"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pitchplay/"
 description: "pitchplay – wrapper script to play audio tracks with cdda2wav with different pitches through a soundcard (cdda2wav must have soundcard support enabled)."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pitchplay</code> &lt;track a&gt; &lt;pitch a&gt; &lt;track b&gt; &lt;pitch b&gt;&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pitchplay</code> allows playback of audio tracks with cdda2wav with pitches specified in percentage with 100% being the original pitch, 50% being one octave lower, 200% one octave higher. </p>
 <h2>EXAMPLES</h2>
 <p> <code>pitchplay</code> 1 90 3 140 5 50<br />

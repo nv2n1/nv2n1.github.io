@@ -1,4 +1,5 @@
 ---
+
 title: "ldbrename(1)"
 name: "ldbrename"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ldbrename/"
 description: "ldbrename – Edit LDB databases using your favorite editor"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbrename</code> [-h] [-o options] {olddn} {newdn}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>ldbrename is a utility that allows you to rename trees in an LDB database based by DN. This utility takes two arguments: the original DN name of the top element and the DN to change it to.</dd>
 <h2>OPTIONS</h2>
 <p> -h</p>

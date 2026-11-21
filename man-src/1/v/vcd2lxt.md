@@ -1,4 +1,5 @@
 ---
+
 title: "vcd2lxt(1)"
 name: "vcd2lxt"
 section: "1"
@@ -11,7 +12,6 @@ description: "vcd2lxt – Converts VCD files to interlaced or linear LXT files"
 <p> vcd2lxt &#8211; Converts VCD files to interlaced or linear LXT files</p>
 <h2>SYNTAX</h2>
 <p> vcd2lxt [<i>VCDFILE</i>] [<i>LXTFILE</i>] [<i>option</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Converts VCD files to interlaced or linear LXT files. Noncompressed interlaced files will provide the fastest access, linear files will provide the slowest yet have the greatest compression ratios.</p>
 <h2>OPTIONS</h2>
 <dl>

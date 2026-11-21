@@ -1,4 +1,5 @@
 ---
+
 title: "hub(1)"
 name: "hub"
 section: "1"
@@ -9,7 +10,6 @@ description: "hub – git + hub = github"
 
 <h2>NAME</h2>
 <p> <code>hub</code> &#8211; git + hub = github</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hub</code> [<code>&#8211;noop</code>] <i>COMMAND</i> <i>OPTIONS</i><br />
  <code>hub alias</code> [<code>-s</code>] [<i>SHELL</i>]</p>
 <h3>Expanded git commands:</h3>
@@ -32,7 +32,6 @@ description: "hub – git + hub = github"
  <code>git fork</code> [<code>&#8211;no-remote</code>]<br />
  <code>git pull-request</code> [<code>-o</code>|<code>&#8211;browse</code>] [<code>-f</code>] [<code>-m</code> <i>MESSAGE</i>|<code>-F</code> <i>FILE</i>|<code>-i</code> <i>ISSUE</i>|<i>ISSUE-URL</i>] [<code>-b</code> <i>BASE</i>] [<code>-h</code> <i>HEAD</i>]<br />
  <code>git ci-status</code> [<code>-v</code>] [<i>COMMIT</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> hub enhances various git commands to ease most common workflows with GitHub.</p>
 <dl>
 <dt><code>hub &#8211;noop</code> <i>COMMAND</i></dt>

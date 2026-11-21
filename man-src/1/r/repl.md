@@ -1,4 +1,5 @@
 ---
+
 title: "repl(1)"
 name: "repl"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-repl/"
 description: "repl – reply to a message"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repl</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-group</code> | <code>-nogroup</code>] [<code>-cc</code></dt>
 <dd>all/to/cc/me] [<code>-nocc</code> all/to/cc/me] [<code>-query</code> | <code>-noquery</code>] [<code>-form</code> <i>formfile</i>] [<code>-format</code> | <code>-noformat</code>] [<code>-filter</code> <i>filterfile</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-mime</code> | <code>-nomime</code>] [<code>-fcc</code> <i>+folder</i>] [<code>-width</code> <i>columns</i>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-atfile</code>] [<code>-noatfile</code>] [<code>-fmtproc</code> <i>program</i>] [<code>-nofmtproc</code>] [<code>-build</code>] [<code>-file</code> <i>msgfile</i>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Repl</code> may be used to produce a reply to an existing message. </p>
 <p> In its simplest form (with no arguments), <code>repl</code> will set up a message-form skeleton in reply to the current message in the current folder, and invoke the whatnow shell. </p>
 <p> In order to construct the message draft of the reply, <code>repl</code> uses a reply template to guide its actions. A reply template is simply a <code>mhl</code> format file (see <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) for details). </p>

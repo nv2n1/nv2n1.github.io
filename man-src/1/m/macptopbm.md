@@ -1,4 +1,5 @@
 ---
+
 title: "macptopbm(1)"
 name: "macptopbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-macptopbm/"
 description: "macptopbm – convert a MacPaint file into a portable bitmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>macptopbm</code> [<code>-extraskip</code> <i>N</i>] [<i>macpfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a MacPaint file as input. Produces a portable bitmap as output.</p>
 <h2>OPTIONS</h2>
 <dl>

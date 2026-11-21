@@ -1,4 +1,5 @@
 ---
+
 title: "fmemopen(3)"
 name: "fmemopen"
 section: "3"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fmemopen/"
 description: "fmemopen – open memory as stream"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;stdio.h&gt; 
  FILE *fmemopen(void *buf  , size_t size  , const char *  mode  ); 
@@ -23,7 +24,6 @@ description: "fmemopen – open memory as stream"
 <dd> <p> _GNU_SOURCE </p>
  </dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>fmemopen</code>() function opens a stream that permits the access specified by <i>mode</i>. The stream allows I/O to be performed on the string or memory buffer pointed to by <i>buf</i>. </p>
 <p> The <i>mode</i> argument specifies the semantics of I/O on the stream, and is one of the following: </p>
 <dl>

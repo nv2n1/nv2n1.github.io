@@ -1,4 +1,5 @@
 ---
+
 title: "bidentify(1)"
 name: "bidentify"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-bidentify/"
 description: "bidentify – Barry Project’s program to identify BlackBerry handhelds"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bidentify</code> &#8211; Barry Project&#8217;s program to identify BlackBerry handhelds </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bidentify</code> [-B busname][-N devname][-h][-v]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>bidentify</code> scans the USB system for available BlackBerry devices and probes each one it finds, then sends the identifying information to stdout in a computer-friendly format.</p>
 <h2>OPTIONS</h2>
 <dl>

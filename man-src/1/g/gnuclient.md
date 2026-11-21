@@ -1,4 +1,5 @@
 ---
+
 title: "gnuclient(1)"
 name: "gnuclient"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-gnuclient/"
 description: "gnuserv, gnuclient – Server and Clients for XEmacs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnuclient</code> [-nw] [-display display] [-q] [-v] [-l library] [-batch] [-f function] [-eval form] [-h hostname] [-p port] [-r remote-pathname] [[+line] file] &#8230;<br />
  <code>gnudoit [-q] </code> form<br />
  <code>gnuserv</code><br />
  <code>gnuattach </code> Removed as of gnuserv 3.x</p>
-<h2>DESCRIPTION</h2>
 <p> <i>gnuserv</i> is a server program run as a subprocess of XEmacs to handle all incoming and outgoing requests from <i>gnuclient</i>. It is not usually invoked directly, but is started from XEmacs by loading the <i>gnuserv</i> package and evaluating the Lisp form (gnuserv-start). </p>
 <p> <i>gnuclient</i> allows the user to request a running XEmacs process to edit the named files or directories and/or evaluate lisp forms. Depending on your environment, TTY, X, GTK, or MS Windows frames, as well as batch (frameless) execution of Lisp may be available. One typical use for this is with a dialup connection to a machine on which an XEmacs process is currently running. </p>
 <p> <i>gnudoit</i> is a shell script frontend to &#8220;gnuclient -batch -eval form&#8221;. Its use is deprecated. Try to get used to calling gnuclient directly. </p>

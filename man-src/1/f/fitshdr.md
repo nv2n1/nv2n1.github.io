@@ -1,4 +1,5 @@
 ---
+
 title: "fitshdr(1)"
 name: "fitshdr"
 section: "1"
@@ -9,9 +10,7 @@ description: "fitshdr – List headers from a FITS file"
 
 <h2>NAME</h2>
 <p> fitshdr &#8211; List headers from a FITS file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fitshdr</code> [<i>-q N</i>] [<i>&lt;infile&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> List headers from a FITS file specified on the command line, or else on stdin, printing them as 80-character keyrecords without trailing blanks.</p>
 <h2>OPTIONS</h2>
 <dl>

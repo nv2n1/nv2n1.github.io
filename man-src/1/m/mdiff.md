@@ -1,4 +1,5 @@
 ---
+
 title: "mdiff(1)"
 name: "mdiff"
 section: "1"
@@ -9,9 +10,7 @@ description: "mdiff – manual page for mdiff 1.2.2"
 
 <h2>NAME</h2>
 <p> mdiff &#8211; manual page for mdiff 1.2.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mdiff</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> mdiff &#8211; Studies multiple files and searches for similar sequences, it then produces possibly detailed lists of differences and similarities.</p>
 <h3>Operation modes:</h3>
 <dl>

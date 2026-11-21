@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_security_ent(3)"
 name: "dmlite_security_ent"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_security_ent –"
 ---
 
 <p> Used to handle user and group information.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;dmlite.h&gt;</p>
 <h3>Data Fields</h3>
 <p> const char * <code>name</code> </p>

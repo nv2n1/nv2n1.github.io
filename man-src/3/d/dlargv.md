@@ -1,4 +1,5 @@
 ---
+
 title: "dlargv(3)"
 name: "dlargv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlargv/"
 description: "dlargv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlargv</code> (N, X, INCX, Y, INCY, C, INCC)<br />
  <i></i><code>DLARGV</code> generates a vector of plane rotations with real cosines and real sines.</p>

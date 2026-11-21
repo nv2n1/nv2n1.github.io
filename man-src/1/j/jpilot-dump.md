@@ -1,4 +1,5 @@
 ---
+
 title: "jpilot-dump(1)"
 name: "jpilot-dump"
 section: "1"
@@ -9,9 +10,7 @@ description: "jpilot-dump – A command line tool for dumping jpilot databases."
 
 <h2>NAME</h2>
 <p> jpilot-dump &#8211; A command line tool for dumping jpilot databases.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jpilot-dump</code> [ options ]</p>
-<h2>DESCRIPTION</h2>
 <p> Dump jpilot databases.</p>
 <h2>OPTIONS</h2>
 <dl>

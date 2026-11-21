@@ -1,4 +1,5 @@
 ---
+
 title: "urifind(1)"
 name: "urifind"
 section: "1"
@@ -6,20 +7,13 @@ letter: "u"
 url: "/docs/linux/man/1-urifind/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+urifind - find URIs in a document and dump them to STDOUT. 
 
- urifind - find URIs in a document and dump them to STDOUT. 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     $ urifind file
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- <i>urifind</i> is a simple script that finds URIs in one or more files (using <tt>&quot;URI::Find&quot;</tt>), and outputs them to to <font SIZE="-1">STDOUT. </font> That's it. 
+<i>urifind</i> is a simple script that finds URIs in one or more files (using <tt>&quot;URI::Find&quot;</tt>), and outputs them to to <font SIZE="-1">STDOUT. </font> That's it. 
 
  To find all the URIs in <i>file1</i>, use: 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "operon(1)"
 name: "operon"
 section: "1"
@@ -9,7 +10,6 @@ description: "operon – command line music tagger"
 
 <h2>NAME</h2>
 <p> operon &#8211; command line music tagger</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 operon[--version][--help][-v | --verbose]&lt;command&gt;[&lt;argument&gt;...] operon help&lt;command&gt;
 </code></pre>

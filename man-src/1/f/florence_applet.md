@@ -1,4 +1,5 @@
 ---
+
 title: "florence_applet(1)"
 name: "florence_applet"
 section: "1"
@@ -6,22 +7,11 @@ letter: "f"
 url: "/docs/linux/man/1-florence_applet/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+florence_applet - virtual keyboard applet for the GNOME panel 
 
- florence_applet - virtual keyboard applet for the GNOME panel 
+florence_applet [<i>OPTIONS</i>]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- florence_applet [<i>OPTIONS</i>]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- Florence is an extensible scalable virtual keyboard for GNOME. 
+Florence is an extensible scalable virtual keyboard for GNOME. 
 
  florence_applet is a panel applet which will display a virtual keyboard in a panel of the GNOME desktop. 
 

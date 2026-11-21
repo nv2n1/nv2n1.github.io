@@ -1,4 +1,5 @@
 ---
+
 title: "cdt(3)"
 name: "cdt"
 section: "3"
@@ -9,7 +10,6 @@ description: "Cdt – container data types"
 
 <h2>NAME</h2>
 <p> <code>Cdt</code> &#8211; container data types</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cdt.h&gt;
 </code></pre>
@@ -77,7 +77,6 @@ int dtstat(Dt_t *dt, Dtstat_t *, int all);</p>
 <h3>HASH FUNCTIONS</h3>
 <p>unsigned int dtstrhash(unsigned int h, char *str, int n);<br />
 unsigned int dtcharhash(unsigned int h, unsigned char c);</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Cdt</i> manages run-time dictionaries using standard container data types: unordered set/multiset, ordered set/multiset, list, stack, and queue. </p>
 <h3>DICTIONARY TYPES</h3>
 <h3> Void_t*</h3>

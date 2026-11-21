@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_obj_query(3)"
 name: "mlx5dv_devx_obj_query"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_obj_query/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_obj_create - Creates a devx object 
+mlx5dv_devx_obj_create - Creates a devx object 
 
  mlx5dv_devx_obj_destroy - Destroys a devx object 
 
@@ -22,8 +18,6 @@ url: "/docs/linux/man/3-mlx5dv_devx_obj_query/"
  mlx5dv_devx_obj_query_async - Queries a devx object in an asynchronous mode 
 
  mlx5dv_devx_general_cmd - Issues a general command over the devx interface 
-
-<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -45,11 +39,7 @@ int mlx5dv_devx_general_cmd(struct ibv_context *context, const void *in, size_t 
                             void *out, size_t outlen);
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Create / destroy / modify / query a devx object, issue a general command over the devx interface. 
+Create / destroy / modify / query a devx object, issue a general command over the devx interface. 
 
  The DEVX API enables direct access from the user space area to the mlx5 device driver by using the KABI mechanism. The main purpose is to make the user space driver as independent as possible from the kernel so that future device functionality and commands can be activated with minimal to none kernel changes. 
 

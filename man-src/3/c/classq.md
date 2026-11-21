@@ -1,4 +1,5 @@
 ---
+
 title: "classq(3)"
 name: "classq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-classq/"
 description: "classq.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>classq</code> (N, X, INCX, SCALE, SUMSQ)<br />
  <i></i><code>CLASSQ</code> updates a sum of squares represented in scaled form.</p>

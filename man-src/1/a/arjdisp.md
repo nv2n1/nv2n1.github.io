@@ -1,4 +1,5 @@
 ---
+
 title: "arjdisp(1)"
 name: "arjdisp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arjdisp/"
 description: "arjdisp – ARJ simple graphical interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>arj</code> [<i>test</i>|<i>archive_name</i> <i>filename uncompsize bytes compsize</i> <i>cmd_verb</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>arjdisp</code> command is a graphical interface for arj.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-arj/">arj</a></code>(1).</p>

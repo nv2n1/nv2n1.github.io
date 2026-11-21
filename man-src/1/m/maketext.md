@@ -1,4 +1,5 @@
 ---
+
 title: "maketext(1)"
 name: "maketext"
 section: "1"
@@ -6,20 +7,13 @@ letter: "m"
 url: "/docs/linux/man/1-maketext/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+maketext - translate and make messages 
 
- maketext - translate and make messages 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MSGID[PARAM...]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- The <tt>&quot;maketext&quot;</tt> script translates a natural language message into the user's language, by looking up the translation in a message <font SIZE="-1">MO</font> file, and process the plural transformation with Maketext. 
+The <tt>&quot;maketext&quot;</tt> script translates a natural language message into the user's language, by looking up the translation in a message <font SIZE="-1">MO</font> file, and process the plural transformation with Maketext. 
 
  The <tt>&quot;maketext&quot;</tt> script is a command-line interface to <i>Locale::Maketext::Gettext</i>(3) (and <i>Locale::Maketext</i>(3)). It can be used in shell scripts, etc, to translate, maketext and return the result. By this way, it enables Maketext to be integrated into other programming languages/systems, like bash/csh, python, <font SIZE="-1">PHP, C,</font> etc. It works like the command-line program gettext. 
 

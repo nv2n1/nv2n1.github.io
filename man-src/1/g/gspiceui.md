@@ -1,4 +1,5 @@
 ---
+
 title: "gspiceui(1)"
 name: "gspiceui"
 section: "1"
@@ -9,9 +10,7 @@ description: "gspiceui – GUI frontend for various electronic circuit simulatio
 
 <h2>NAME</h2>
 <p> gspiceui &#8211; GUI frontend for various electronic circuit simulation engines </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gspiceui</code> [-v] [-h] [-r RCFILE] [-s SIMENG] [-a ANA] [-g [PROC]] [-w VIEWER] [FILE/S] </p>
-<h2>DESCRIPTION</h2>
 <p> GNU Spice GUI (gSpiceUI) is intended to provide a GUI for various freely available electronic circuit simulation engines ie. GNU-Cap and NG-Spice. It uses gNetList to convert schematic files to net list files and gWave or Gaw to display simulation results. gSchem is the preferred schematic capture tool. </p>
 <h2>OPTIONS</h2>
 <p> <i>gspiceui</i> accepts the following options : </p>

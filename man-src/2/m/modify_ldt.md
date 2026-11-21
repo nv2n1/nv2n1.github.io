@@ -1,4 +1,5 @@
 ---
+
 title: "modify_ldt(2)"
 name: "modify_ldt"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-modify_ldt/"
 description: "modify_ldt – get or set a per-process LDT entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
 int modify_ldt(int func, void *ptr, unsigned long bytecount);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>modify_ldt</code>() reads or writes the local descriptor table (LDT) for a process. The LDT is an array of segment descriptors that can be referenced by user code. Linux allows processes to configure a per-process (actually per-mm) LDT. For more information about the LDT, see the Intel Software Developer&#8217;s Manual or the AMD Architecture Programming Manual. </p>
 <p> When <i>func</i> is 0, <code>modify_ldt</code>() reads the LDT into the memory pointed to by <i>ptr</i>. The number of bytes read is the smaller of <i>bytecount</i> and the actual size of the LDT, although the kernel may act as though the LDT is padded with additional trailing zero bytes. On success, <code>modify_ldt</code>() will return the number of bytes read. </p>
 <p> When <i>func</i> is 1 or 0x11, <code>modify_ldt</code>() modifies the LDT entry indicated by <i>ptr-&gt;entry_number</i>. <i>ptr</i> points to a <i>user_desc</i> structure and <i>bytecount</i> must equal the size of this structure. </p>

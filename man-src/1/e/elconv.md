@@ -1,4 +1,5 @@
 ---
+
 title: "elconv(1)"
 name: "elconv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-elconv/"
 description: "elconv – conversion program for ELOG messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>elconv</code> [ <code>-v</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The Electronic Logbook <code>ELOG</code> can be used to store and retrieve messages through a Web interface. Depending on the configuration, the <code>ELOG</code> system can host one or more logbooks which are stored in separate sections on the server. <code>elconv</code> is a support tool which converts the <code>ELOG</code> messages in old format to the current format. Basically you simply run <code>elconv</code> in the directory where all the `*.log&#8217; files live. If you have several directories with log files, you run it once in each directory.</p>
 <h2>OPTIONS</h2>
 <p> <code>elconv</code> accepts the following option:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "grub-editenv(1)"
 name: "grub-editenv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-editenv/"
 description: "grub-editenv – edit GRUB environment block"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grub-editenv</code> [<i>,OPTION/</i>&#8230;] <i>,FILENAME COMMAND/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Tool to edit environment block.</p>
 <dl>
 <dt>

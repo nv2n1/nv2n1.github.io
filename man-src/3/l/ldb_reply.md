@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_reply(3)"
 name: "ldb_reply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_reply/"
 description: "ldb_reply –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> int <code>error</code> </p>
 <p> enum ldb_reply_type <code>type</code> </p>

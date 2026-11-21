@@ -1,4 +1,5 @@
 ---
+
 title: "aclocal(1)"
 name: "aclocal"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aclocal/"
 description: "aclocal – manual page for aclocal 1.16.5"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aclocal</code> [<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Generate &#8216;aclocal.m4&#8217; by scanning &#8216;configure.ac&#8217; or &#8216;configure.in&#8217;</p>
 <h2>OPTIONS</h2>
 <dl>

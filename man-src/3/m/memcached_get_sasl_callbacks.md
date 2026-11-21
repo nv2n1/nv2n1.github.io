@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_get_sasl_callbacks(3)"
 name: "memcached_get_sasl_callbacks"
 section: "3"
@@ -9,7 +10,6 @@ description: "memcached_get_sasl_callbacks – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_get_sasl_callbacks &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached_pool.h&gt;</p>
 <dl>
 <dt><code>void memcached_set_sasl_callbacks(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const sasl_callback_t<i>&nbsp;<wbr>*callbacks</i>)</dt>
@@ -21,7 +21,6 @@ description: "memcached_get_sasl_callbacks – libmemcached Documentation"
 </dd><dt><code>memcached_return_t memcached_destroy_sasl_auth_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) allows you to plug in your own callbacks function used by libsasl to perform SASL authentication. </p>
 <p> Please note that SASL requires the memcached binary protocol, and you have to specify the callbacks before you connect to the server. </p>
 <p> <i>memcached_set_sasl_auth_data()</i> is a helper function defining the basic functionality for you, but it will store the username and password in memory. If you choose to use this method you have to call <i>memcached_destroy_sasl_auth_data</i> before calling <code>memcached_free</code> to avoid a memory leak. You should NOT call <i>memcached_destroy_sasl_auth_data</i> if you specify your own callback function with <i>memcached_set_sasl_callbacks()</i>.</p>

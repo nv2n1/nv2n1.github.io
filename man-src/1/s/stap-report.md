@@ -1,4 +1,5 @@
 ---
+
 title: "stap-report(1)"
 name: "stap-report"
 section: "1"
@@ -9,9 +10,7 @@ description: "stap-report – collect system information that is useful for debu
 
 <h2>NAME</h2>
 <p> stap-report &#8211; collect system information that is useful for debugging systemtap bugs </p>
-<h2>SYNOPSIS</h2>
 <p> <code>stap-report</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The stap-report executable collects system information that is useful for debugging systemtap bugs. It is a good idea to include such a report in bug reports especially if you send them directly to the upstream. stap-report can be run either as a normal user or as root. The report will be more complete if stap-report is run as root. </p>
 <h2>EXAMPLES</h2>
 <dl>

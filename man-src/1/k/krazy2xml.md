@@ -1,4 +1,5 @@
 ---
+
 title: "krazy2xml(1)"
 name: "krazy2xml"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-krazy2xml/"
 description: "krazy2xml – KDE source code checking for the English Breakfast Network (EBN)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> krazy2xml [options]</p>
-<h2>DESCRIPTION</h2>
 <p> krazy2xml is a big wrapper around <i>krazy</i>(1) for no obvious use other than generating Code Checking Quality reports on the English Breakfast Network.</p>
 <h2>OPTIONS</h2>
 <dl>

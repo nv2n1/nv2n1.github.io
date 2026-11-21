@@ -1,4 +1,5 @@
 ---
+
 title: "dlascl(3)"
 name: "dlascl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlascl/"
 description: "dlascl.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br />
  <i></i><code>DLASCL</code> multiplies a general rectangular matrix by a real scalar defined as cto/cfrom.</p>

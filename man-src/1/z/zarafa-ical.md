@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-ical(1)"
 name: "zarafa-ical"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zarafa-ical/"
 description: "zarafa-ical – Start the Zarafa ICal/CalDAV gateway."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-ical</code> [<i>OPTION</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The iCal/CalDAV gateway enables users to retrieve their calendar using iCalendar compliant clients. The iCal/CalDAV gateway can be configured to listen for HTTP and HTTPS requests. </dd>
 <p> The default settings of the gateway program are defined in <code><a href="/docs/linux/man/5-zarafa-ical-cfg/">zarafa-ical.cfg</a></code>(5).</p>
 <h2>OPTIONS</h2>

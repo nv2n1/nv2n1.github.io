@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-unwrap-passphrase(1)"
 name: "ecryptfs-unwrap-passphrase"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ecryptfs-unwrap-passphrase/"
 description: "ecryptfs-unwrap-passphrase – unwrap an eCryptfs mount passphrase from file."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-unwrap-passphrase [file]</code> </p>
 <p> printf &quot;%s&quot; &quot;wrapping passphrase&quot; | <code>ecryptfs-unwrap-passphrase [file] &#8211;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-unwrap-passphrase</code> is a utility to unwrap an eCryptfs mount passphrase from file, using a specified wrapping passphrase, and display the decrypted result on standard out. </p>
 <h2>SEE ALSO</h2>
 <dl>

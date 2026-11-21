@@ -1,4 +1,5 @@
 ---
+
 title: "exiv2(1)"
 name: "exiv2"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-exiv2/"
 description: "exiv2 – Image metadata manipulation tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>exiv2</code> [<i>options</i>] [<i>action</i>] <i>file</i> &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>exiv2</code> is a program to read and write Exif, IPTC and XMP image metadata and image comments. The following image formats are supported: </p>
 <table>
 <tr VALIGN=top>

@@ -1,4 +1,5 @@
 ---
+
 title: "glilypond(1)"
 name: "glilypond"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glilypond/"
 description: "glilypond – integrate lilypond parts into groff"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [{<code>&#8211;ly2eps</code>|<code>&#8211;pdf2eps</code>}] [<code>-e</code> <i>directory</i>] [ <code>-k</code> ] [<code>-o</code> <i>output-file</i>] [<code>-p</code> <i>filename-prefix</i>] [<code>-t</code> <i>tdir</i>] [{<code>-v</code>|<code>-V</code>}] [ <code>&#8211;</code> ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] [{<code>&#8211;ly2eps</code>|<code>&#8211;pdf2eps</code>}] [<code>&#8211;eps_dir</code> <i>directory</i>] [ <code>&#8211;keep_all</code> ] [<code>&#8211;output</code> <i>output-file</i>] [<code>&#8211;prefix</code> <i>filename-prefix</i>] [<code>&#8211;temp_dir</code> <i>tdir</i>] [ <code>&#8211;verbose</code> ] [ <code>&#8211;</code> ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-?</code> <code>-h</code> <code>&#8211;help</code> <code>&#8211;usage</code> <code>-l</code> <code>&#8211;license</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>glilypond</code> transforms sheet music written in the <i>lilypond</i> language into the <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7) language using the <code>.PSPIC</code> request, such that <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) can transform it into a format that can be displayed directly. <code>.PDFPIC</code> is available, but does on yet work with lilypond. </p>
 <p> Files in <i>groff</i> language and <i>standard input</i> can be provided as arguments.</p>
 <h2>WORKING GLILYPOND</h2>

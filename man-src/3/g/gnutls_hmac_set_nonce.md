@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hmac_set_nonce(3)"
 name: "gnutls_hmac_set_nonce"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_hmac_set_nonce – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hmac_set_nonce &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>void gnutls_hmac_set_nonce(gnutls_hmac_hd_t </code><i>handle</i><code>, const void * </code><i>nonce</i><code>, size_t </code><i>nonce_len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_hmac_set_nonce – API function"
 <dd> the data to set as nonce</dd>
 <dt>size_t nonce_len</dt>
 <dd> The length of data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the nonce in the MAC algorithm.</p>
 <h2>SINCE</h2>
 <p> 3.2.0</p>

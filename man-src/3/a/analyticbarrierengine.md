@@ -1,4 +1,5 @@
 ---
+
 title: "analyticbarrierengine(3)"
 name: "analyticbarrierengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-analyticbarrierengine/"
 description: "ql/pricingengines/barrier/analyticbarrierengine.hpp – Analytic barrier option engines."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/barrieroption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
  #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mupmate(1)"
 name: "mupmate"
 section: "1"
@@ -12,19 +13,9 @@ url: "/docs/linux/man/1-mupmate/"
 
  mupmate - user interface for Mup music publisher
 
-<h2>SYNOPSIS</h2>
+mupmate [<i>file</i>]
 
- 
-
- mupmate [<i>file</i>]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- 
-
- You can create a Mup file using any ordinary text editor. On Windows, Notepad is a typical choice; on Linux, editors like vim and emacs are commonly used. But if you prefer to be able to edit, display, and play from a single integrated and more graphical interface, a helper program called &quot;mupmate&quot; is provided. Mupmate is currently supported on Windows, Apple Mac OS-X, and Linux. However, since the source code is available, and it is based on the cross-platform FLTK toolkit, it can probably be made to run on any system supported by FLTK fairly easily. If you prefer to use the Mup program directly rather than via mupmate, you can. The Mupmate program just helps lead you through some of the steps. 
+You can create a Mup file using any ordinary text editor. On Windows, Notepad is a typical choice; on Linux, editors like vim and emacs are commonly used. But if you prefer to be able to edit, display, and play from a single integrated and more graphical interface, a helper program called &quot;mupmate&quot; is provided. Mupmate is currently supported on Windows, Apple Mac OS-X, and Linux. However, since the source code is available, and it is based on the cross-platform FLTK toolkit, it can probably be made to run on any system supported by FLTK fairly easily. If you prefer to use the Mup program directly rather than via mupmate, you can. The Mupmate program just helps lead you through some of the steps. 
 
  Once you have installed Mup and Mupmate on Windows, double clicking a .mup file in Windows explorer will run Mupmate on that file. Or, you can run Mupmate by going to the Start menu, and choosing Programs, then Arkkra, and then Mupmate. If you would like an icon on the desktop, you can create one by right clicking the Mupmate choice in the Arkkra menu, choosing &quot;copy&quot;, right clicking somewhere on the desktop, and choosing &quot;paste.&quot; 
 

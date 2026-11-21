@@ -1,4 +1,5 @@
 ---
+
 title: "apply(3)"
 name: "apply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-apply/"
 description: "QuantLib::LiborForwardModelProcess – libor-forward-model process"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmprocess.hpp&gt; </p>
 <p> Inherits <code>QuantLib::StochasticProcess</code>. </p>
 <h3>Public Member Functions</h3>

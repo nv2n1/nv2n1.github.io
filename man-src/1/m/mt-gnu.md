@@ -1,4 +1,5 @@
 ---
+
 title: "mt-gnu(1)"
 name: "mt-gnu"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mt-gnu/"
 description: "mt – control magnetic tape drive operation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mt</code> [<code>-V</code>] [<code>-f</code> <i>device</i>] [<code>&#8211;file=</code><i>device</i>] [<code>&#8211;rsh-command=</code><i>command</i>] [<code>&#8211;version</code>] <i>operation</i> [<i>count</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>mt</code>. <code>mt</code> performs the given <i>operation</i>, which must be one of the tape operations listed below, on a tape drive. </p>
 <p> The default tape device to operate on is taken from the file <code>/usr/include/sys/mtio.h</code> when <code>mt</code> is compiled. It can be overridden by giving a device file name in the environment variable <code>TAPE</code> or by a command line option (see below), which also overrides the environment variable. </p>
 <p> The device must be either a character special file or a remote tape drive. To use a tape drive on another machine as the archive, use a filename that starts with `HOSTNAME:&#8217;. The hostname can be preceded by a username and an `@&#8217; to access the remote tape drive as that user, if you have permission to do so (typically an entry in that user&#8217;s `~/.rhosts&#8217; file). </p>

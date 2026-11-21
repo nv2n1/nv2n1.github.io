@@ -1,4 +1,5 @@
 ---
+
 title: "euca-download-bundle(1)"
 name: "euca-download-bundle"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-download-bundle – Download a bundled image from the cloud"
 
 <h2>NAME</h2>
 <p> euca-download-bundle &#8211; Download a bundled image from the cloud</p>
-<h2>SYNOPSIS</h2>
 <p> euca-download-bundle [-d DIR] [&#8211;progress | <code>&#8211;no-progress]</code> <code>-b</code></p>
 <dl>
 <dt>BUCKET[/PREFIX]</dt>
 <dd> (<code>-m</code> MANIFEST | <code>-p</code> MANIFEST | <code>&#8211;local-manifest</code> FILE) [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Download a bundled image from the cloud</p>
 <h2>DESCRIPTION</h2>
 <p> You must run euca-unbundle-image on the bundle you download to obtain the original image.</p>

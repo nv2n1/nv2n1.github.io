@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_crt_check_hostname(3)"
 name: "gnutls_openpgp_crt_check_hostname"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_openpgp_crt_check_hostname – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_check_hostname &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_check_hostname(gnutls_openpgp_crt_t </code><i>key</i><code>, const char * </code><i>hostname</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_openpgp_crt_check_hostname – API function"
 <dd> should contain a <code>gnutls_openpgp_crt_t</code> structure</dd>
 <dt>const char * hostname</dt>
 <dd> A null terminated string that contains a DNS name</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will check if the given key&#8217;s owner matches the given hostname. This is a basic implementation of the matching described in RFC2818 (HTTPS), which takes into account wildcards.</p>
 <h2>RETURNS</h2>
 <p> non-zero for a successful match, and zero on failure.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "icecast(1)"
 name: "icecast"
 section: "1"
@@ -9,9 +10,7 @@ description: "icecast – an MP3/Ogg Vorbis broadcast streaming media server"
 
 <h2>NAME</h2>
 <p> icecast &#8211; an MP3/Ogg Vorbis broadcast streaming media server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>icecast</code> -c config.xml</p>
-<h2>DESCRIPTION</h2>
 <p> <code>icecast</code> is an audio broadcasting system that streams music in Ogg Vorbis and/or MPEG 1 Layer III format. It accepts stream input from sources like ices0 and ices2, and broadcasts to clients like xmms.</p>
 <h2>OPTIONS</h2>
 <p> <code>icecast</code> has no command line options, except to specify the location of an XML configuration file. All operational aspects of the software are controlled by this XML configuration file.</p>

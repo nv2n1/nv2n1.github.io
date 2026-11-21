@@ -1,4 +1,5 @@
 ---
+
 title: "dtprfb(3)"
 name: "dtprfb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtprfb/"
 description: "dtprfb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br />
  <i></i><code>DTPRFB</code> applies a real or complex &#8216;triangular-pentagonal&#8217; blocked reflector to a real or complex matrix, which is composed of two blocks.</p>

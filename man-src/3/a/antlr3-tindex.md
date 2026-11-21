@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-tindex(3)"
 name: "antlr3-tindex"
 section: "3"
@@ -8,7 +9,6 @@ description: "src/antlr3commontreenodestream.c –"
 ---
 
 <p> Defines the implementation of the common node stream the default tree node stream used by ANTLR.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreenodestream.h">antlr3commontreenodestream.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> static <code>ANTLR3_UINT32</code> <code>_LA</code> (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> i) </p>

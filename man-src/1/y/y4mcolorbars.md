@@ -1,4 +1,5 @@
 ---
+
 title: "y4mcolorbars(1)"
 name: "y4mcolorbars"
 section: "1"
@@ -9,9 +10,7 @@ description: "y4mcolorbars – Create a YUV4MPEG2 stream containing a colorbar t
 
 <h2>NAME</h2>
 <p> y4mcolorbars &#8211; Create a YUV4MPEG2 stream containing a colorbar test pattern </p>
-<h2>SYNOPSIS</h2>
 <p> <code>y4mcolorbars</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>y4mcolorbars</code> creates a YUV4MPEG2 stream consisting entirely of frames containing a colorbar test pattern. The pattern attempts to reproduce the standard SMPTE EG-1-1990 colorbar test signal as faithfully as possible, given the constraints of the Y&#8217;CbCr colorspace. </p>
 <p> Output is to stdout to facilitate piping to other MJPEG tools. </p>
 <h2>OPTIONS</h2>

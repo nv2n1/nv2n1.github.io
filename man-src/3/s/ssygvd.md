@@ -1,4 +1,5 @@
 ---
+
 title: "ssygvd(3)"
 name: "ssygvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssygvd/"
 description: "ssygvd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssygvd</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>SSYGST</code></p>

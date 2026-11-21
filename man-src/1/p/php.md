@@ -1,4 +1,5 @@
 ---
+
 title: "php(1)"
 name: "php"
 section: "1"
@@ -8,7 +9,6 @@ description: "php – PHP Command Line Interface ‘CLI’"
 ---
 
 <p> php-cgi &#8211; PHP Common Gateway Interface &#8216;CGI&#8217; command </p>
-<h2>SYNOPSIS</h2>
 <p> <code>php</code> [options] [ <code>-f</code> ] <i>file</i> [[&#8211;] <i>args&#8230;</i>] </p>
 <p> <code>php</code> [options] <code>-r</code> <i>code</i> [[&#8211;] <i>args&#8230;</i>] </p>
 <p> <code>php</code> [options] [-B <i>begin_code</i>] <code>-R</code> <i>code</i> [-E <i>end_code</i>] [[&#8211;] <i>args&#8230;</i>] </p>
@@ -16,7 +16,6 @@ description: "php – PHP Command Line Interface ‘CLI’"
 <p> <code>php</code> [options] &#8212; [ <i>args&#8230;</i>] </p>
 <p> <code>php </code>[options] <code>-a</code> </p>
 <p> <code>php</code> [options] -S <i>addr:port</i> [-t <i>docroot</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>PHP</code> is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML. This is the command line interface that enables you to do the following: </p>
 <p> You can parse and execute files by using parameter -f followed by the name of the <i>file</i> to be executed. </p>
 <p> Using parameter -r you can directly execute PHP <i>code</i> simply as you would do inside a <code>.php</code> file when using the <code>eval()</code> function. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pgawk(1)"
 name: "pgawk"
 section: "1"
@@ -6,15 +7,14 @@ letter: "p"
 url: "/docs/linux/man/1-pgawk/"
 description: "gawk – pattern scanning and processing language"
 ---
+
 <h2>NAME</h2>
 <p> gawk - pattern scanning and processing language  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />
  <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] [ <code>--</code> ] <i>program-text</i> file ... </p>
 <p> <code>pgawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />
  <code>pgawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] [ <code>--</code> ] <i>program-text</i> file ... </p>
 <p> <code>dgawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ...  </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Gawk</i> is the <font SIZE="-1">GNU</font> Project&#8217;s implementation of the <font SIZE="-1">AWK</font> programming language. It conforms to the definition of the language in the <font SIZE="-1">POSIX</font> 1003.1 Standard. This version in turn is based on the description in <i>The AWK Programming Language</i>, by Aho, Kernighan, and Weinberger. <i>Gawk</i> provides the additional features found in the current version of <font SIZE="-1">UNIX</font> <i>awk</i> and a number of <font SIZE="-1">GNU</font>-specific extensions. </p>
 <p> The command line consists of options to <i>gawk</i> itself, the <font SIZE="-1">AWK</font> program text (if not supplied via the <code>-f</code> or <code>--file</code> options), and values to be made available in the <code>ARGC</code> and <code>ARGV</code> pre-defined <font SIZE="-1">AWK</font> variables. </p>
 <p> <i>Pgawk</i> is the profiling version of <i>gawk</i>. It is identical in every way to <i>gawk</i>, except that programs run more slowly, and it automatically produces an execution profile in the file <code>awkprof.out</code> when done. See the <code>--profile</code> option, below. </p>

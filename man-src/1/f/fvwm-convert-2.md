@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-convert-2(1)"
 name: "fvwm-convert-2"
 section: "1"
@@ -9,7 +10,6 @@ description: "fvwm-convert-2.6 – convert fvwm 2.4.x configuration file to fvwm
 
 <h2>NAME</h2>
 <p> fvwm-convert-2.6 &#8211; convert fvwm 2.4.x configuration file to fvwm 2.6 style</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fvwm-convert-2.6</code> [<i>&#8211;follow-read</i>|<i>-f</i>] [<i>&#8211;help</i>|<i>-h</i>] source [<i>dest</i>]</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
@@ -18,7 +18,6 @@ description: "fvwm-convert-2.6 – convert fvwm 2.4.x configuration file to fvwm
 <dd> Prints a usage message to the screen.</dd>
 <dt><code>&#8211;follow-read</code> | <code>-f</code></dt>
 <dd> Follows files found along with the <code>Read</code> command.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>fvwm-convert-2.6</code> converts an fvwm 2.4.x configuration file into a fvwm 2.6 file with compatible syntax. It is not suitable to convert older 2.x configuration files. Please use <code>fvwm-convert-2.2</code> to convert these to the 2.2.x format first, and then if necessary <code>fvwm-convert-2.4</code> </p>
 <p> By default, <code>fvwm-convert-2.6</code> won&#8217;t look for a given config file. This must be specified as the first parameter to <code>fvwm-convert-2.6. </code> Different source and destination files may be given. If the destination file already exists, this program exits. If no destination file is given, then the filename is the same name as the source file with the suffix &quot;.converted&quot; added. Without an absolute path given as the destination path to the destination file, the program will create the destination file in the CWD. </p>
 <p> <code>fvwm-convert-2.6</code> makes the following changes:</p>

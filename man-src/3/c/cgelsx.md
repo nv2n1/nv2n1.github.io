@@ -1,4 +1,5 @@
 ---
+
 title: "cgelsx(3)"
 name: "cgelsx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgelsx/"
 description: "cgelsx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgelsx</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, RWORK, INFO)<br />
  <i></i><code> CGELSX solves overdetermined or underdetermined systems for GE matrices</code></p>

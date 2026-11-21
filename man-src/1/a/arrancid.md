@@ -1,4 +1,5 @@
 ---
+
 title: "arrancid(1)"
 name: "arrancid"
 section: "1"
@@ -9,10 +10,8 @@ description: "rancid – Cisco configuration filter"
 
 <h2>NAME</h2>
 <p> rancid &#8211; Cisco configuration filter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rancid</code> [<code>-dlCV</code>] [<code>-t device_type</code>] (<code>-f</code> filename | hostname) </p>
 <p> <code>rancid</code> [<code>-dhlCV</code>] <code>-t device_type</code> (<code>-f</code> filename | hostname)</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rancid</code> is a collection of <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1) scripts which uses the login scripts (see <code><a href="/docs/linux/man/1-clogin/">clogin</a></code>(1)) to login to a device, execute commands to display the configuration, etc, then filters the output for formatting, security, and so on. <code>rancid&#8217;s</code> product is a file with the name of it&#8217;s last argument plus the suffix .new. For example, <i>hostname.new</i>. </p>
 <p> <code>rancid</code> is also a <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1) script that operates much like <code>rancid,</code> but is generic and will eventually obsolete the <code>rancid</code> script. It uses the device_type specified with the -t option to look-up a device description that defines what it does to collect and process device information. </p>
 <p> There are scripts complementary to <code>rancid</code> for other platforms and/or manufacturers that are supported by <code><a href="/docs/linux/man/1-rancid/">rancid</a></code>(1). Briefly, these are: </p>

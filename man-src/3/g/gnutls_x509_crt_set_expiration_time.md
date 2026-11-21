@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_expiration_time(3)"
 name: "gnutls_x509_crt_set_expiration_time"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_expiration_time – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_expiration_time &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_expiration_time(gnutls_x509_crt_t </code><i>cert</i><code>, time_t </code><i>exp_time</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_x509_crt_set_expiration_time – API function"
 <dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
 <dt>time_t exp_time</dt>
 <dd> The actual time</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the time this Certificate will expire. Setting an expiration time to (time_t)-1 or to <code>GNUTLS_X509_NO_WELL_DEFINED_EXPIRATION</code> will set to the no well-defined expiration date value.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

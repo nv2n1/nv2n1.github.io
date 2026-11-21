@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_client_job_info_s(3)"
 name: "globus_gram_client_job_info_s"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_gram_client_job_info_s –"
 ---
 
 <p> Extensible job information structure.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gram_client.h&gt;</p>
 <h3>Data Fields</h3>
 <p> globus_hashtable_t <code>extensions</code> </p>

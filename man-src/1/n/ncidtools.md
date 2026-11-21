@@ -1,4 +1,5 @@
 ---
+
 title: "ncidtools(1)"
 name: "ncidtools"
 section: "1"
@@ -11,11 +12,9 @@ description: "cidlog – view Caller ID log file"
 <p> <code>cidlog</code> &#8211; view Caller ID log file </p>
 <p> <code>cidalias</code> &#8211; view Caller ID alias definitions </p>
 <p> <code>cidupdate</code> &#8211; update Caller ID aliases in log file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cidcall</code> [-r | -m] [cidlog] </p>
 <p> <code>cidalias</code> [-r] [aliasfile] </p>
 <p> <code>cidupdate</code> [-a aliasfile] [-l cidlog] [newcidlog]</p>
-<h2>DESCRIPTION</h2>
 <p> The script, <code>cidcall</code>, displays the current CID call file. </p>
 <p> The script, <code>cidalias</code>, displays the aliases in the ncidd.alias file. </p>
 <p> The Script, <code>cidupdate</code>, updates the CID log file using the aliases found in the ncidd.alias file.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "exonerate-server(1)"
 name: "exonerate-server"
 section: "1"
@@ -9,9 +10,7 @@ description: "exonerate-server – a sequence comparison server for exonerate"
 
 <h2>NAME</h2>
 <p> exonerate-server &#8211; a sequence comparison server for exonerate </p>
-<h2>SYNOPSIS</h2>
 <p> <code>exonerate-server [ options ] &lt;index path&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>exonerate-server</code> is a multi-threaded server for the exonerate sequence alignment program. </p>
 <p> It uses a set of sequences and a corresponding index file to allow fast of large datasets. </p>
 <h2>OVERVIEW</h2>

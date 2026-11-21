@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-getlang(1)"
 name: "debconf-getlang"
 section: "1"
@@ -6,20 +7,13 @@ letter: "d"
 url: "/docs/linux/man/1-debconf-getlang/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+debconf-getlang - extract a language from a templates file 
 
- debconf-getlang - extract a language from a templates file 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 debconf - getlang lang master[translation] debconf - getlang-- stats master translation[...]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Note: This utility is deprecated; you should switch to using the po-debconf package. 
+Note: This utility is deprecated; you should switch to using the po-debconf package. 
 
  This program helps make and manage translations of debconf templates. There are basically three situations in which this program might be called:
 <dl>

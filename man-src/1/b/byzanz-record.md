@@ -1,4 +1,5 @@
 ---
+
 title: "byzanz-record(1)"
 name: "byzanz-record"
 section: "1"
@@ -9,9 +10,7 @@ description: "byzanz-record – record your desktop session to an animated GIF"
 
 <h2>NAME</h2>
 <p> byzanz-record &#8211; record your desktop session to an animated GIF</p>
-<h2>SYNOPSIS</h2>
 <p> <code>byzanz-record</code> [<i>options</i>]<i> filename.gif</i></p>
-<h2>DESCRIPTION</h2>
 <p> Byzanz records your desktop session to an animated GIF. You can record your entire screen, a single window, or an arbitrary region. <code>byzanz-record</code> allows you to make recordings from the command line. Graphical users may want to use the panel applet instead.</p>
 <h2>OPTIONS</h2>
 <h3>Application Options:</h3>

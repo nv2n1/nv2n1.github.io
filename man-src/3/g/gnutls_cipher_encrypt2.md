@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_cipher_encrypt2(3)"
 name: "gnutls_cipher_encrypt2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_cipher_encrypt2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_encrypt2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_cipher_encrypt2(gnutls_cipher_hd_t </code><i>handle</i><code>, const void * </code><i>text</i><code>, size_t </code><i>textlen</i><code>, void * </code><i>ciphertext</i><code>, size_t </code><i>ciphertextlen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_cipher_encrypt2 – API function"
 <dd> the encrypted data</dd>
 <dt>size_t ciphertextlen</dt>
 <dd> The available length for encrypted data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will encrypt the given data using the algorithm specified by the context.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-c(1)"
 name: "abrt-action-analyze-c"
 section: "1"
@@ -6,22 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-c/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-action-analyze-c - Calculate and save UUID for a problem data directory DIR with coredump. 
 
- abrt-action-analyze-c - Calculate and save UUID for a problem data directory DIR with coredump. 
+<i>abrt-action-analyze-c</i> [-v] [-d DIR]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-action-analyze-c</i> [-v] [-d DIR]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- The tool reads the file named <i>coredump</i> from a problem data directory, processes it and generates a universally unique identifier (UUID). Then it saves this data as new element <i>uuid</i>.
+The tool reads the file named <i>coredump</i> from a problem data directory, processes it and generates a universally unique identifier (UUID). Then it saves this data as new element <i>uuid</i>.
 
 <h3>Integration with ABRT events</h3>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_verify_ap_req(3)"
 name: "krb5_verify_ap_req"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-krb5_verify_ap_req/"
 description: "krb5_mk_req krb5_mk_req_exact krb5_mk_req_extended krb5_rd_req krb5_rd_req_with_keyblock krb5_mk_rep krb5_mk_rep_exact krb5_mk_rep_extended krb5_rd_rep krb5_build_ap_req krb5_verify_ap_req – create..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_mk_req</code> <code>krb5_mk_req_exact</code> <code>krb5_mk_req_extended</code> <code>krb5_rd_req</code> <code>krb5_rd_req_with_keyblock</code> <code>krb5_mk_rep</code> <code>krb5_mk_rep_exact</code> <code>krb5_mk_rep_extended</code> <code>krb5_rd_rep</code> <code>krb5_build_ap_req</code> <code>krb5_verify_ap_req</code> &#8211; create and read application authentication request </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
-<h2>SYNOPSIS</h2>
 <p> In krb5.h Ft krb5_error_code Fo krb5_mk_req Fa krb5_context context Fa krb5_auth_context *auth_context Fa const krb5_flags ap_req_options Fa const char *service Fa const char *hostname Fa krb5_data *in_data Fa krb5_ccache ccache Fa krb5_data *outbuf Fc Ft krb5_error_code Fo krb5_mk_req_extended Fa krb5_context context Fa krb5_auth_context *auth_context Fa const krb5_flags ap_req_options Fa krb5_data *in_data Fa krb5_creds *in_creds Fa krb5_data *outbuf Fc Ft krb5_error_code Fo krb5_rd_req Fa krb5_context context Fa krb5_auth_context *auth_context Fa const krb5_data *inbuf Fa krb5_const_principal server Fa krb5_keytab keytab Fa krb5_flags *ap_req_options Fa krb5_ticket **ticket Fc Ft krb5_error_code Fo krb5_build_ap_req Fa krb5_context context Fa krb5_enctype enctype Fa krb5_creds *cred Fa krb5_flags ap_options Fa krb5_data authenticator Fa krb5_data *retdata Fc Ft krb5_error_code Fo krb5_verify_ap_req Fa krb5_context context Fa krb5_auth_context *auth_context Fa krb5_ap_req *ap_req Fa krb5_const_principal server Fa krb5_keyblock *keyblock Fa krb5_flags flags Fa krb5_flags *ap_req_options Fa krb5_ticket **ticket Fc</p>
-<h2>DESCRIPTION</h2>
 <p> The functions documented in this manual page document the functions that facilitates the exchange between a Kerberos client and server. They are the core functions used in the authentication exchange between the client and the server. </p>
 <p> The <code>krb5_mk_req</code> and <code>krb5_mk_req_extended</code> creates the Kerberos message <code>KRB_AP_REQ</code> that is sent from the client to the server as the first packet in a client/server exchange. The result that should be sent to server is stored in Fa outbuf . </p>
 <p> Fa auth_context should be allocated with Fn krb5_auth_con_init or <code>NULL</code> passed in, in that case, it will be allocated and freed internally. </p>

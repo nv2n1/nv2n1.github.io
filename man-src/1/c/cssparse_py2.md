@@ -1,4 +1,5 @@
 ---
+
 title: "cssparse_py2(1)"
 name: "cssparse_py2"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-cssparse_py2/"
 description: "cssparse – A CSS parser."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>cssparse</code> &#8211; A CSS parser. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cssparse</code> [<i>options</i>&#8230;] [<i>path</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Script version of cssutils.parseString(), cssutils.parseFile() and cssutils.parseUrl(). The combined CSS is outputed to <code>stdout</code>. Logging is directed to <code>stderr</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

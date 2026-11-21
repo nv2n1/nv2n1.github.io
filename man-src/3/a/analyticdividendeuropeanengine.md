@@ -1,4 +1,5 @@
 ---
+
 title: "analyticdividendeuropeanengine(3)"
 name: "analyticdividendeuropeanengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-analyticdividendeuropeanengine/"
 description: "ql/pricingengines/vanilla/analyticdividendeuropeanengine.hpp – Analytic discrete-dividend European engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>

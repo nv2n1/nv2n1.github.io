@@ -1,4 +1,5 @@
 ---
+
 title: "cpbequ(3)"
 name: "cpbequ"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpbequ/"
 description: "cpbequ.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpbequ</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, INFO)<br />
  <i></i><code>CPBEQU</code></p>

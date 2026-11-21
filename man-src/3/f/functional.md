@@ -1,4 +1,5 @@
 ---
+
 title: "functional(3)"
 name: "functional"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-functional/"
 description: "ql/math/functional.hpp – functionals and combinators not included in the STL"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/types.hpp&gt;<br />
  #include &lt;cmath&gt;<br />
  #include &lt;functional&gt; </p>

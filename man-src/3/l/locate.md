@@ -1,4 +1,5 @@
 ---
+
 title: "locate(3)"
 name: "locate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-locate/"
 description: "QuantLib::Interpolation::templateImpl – basic template implementation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Interpolation::Impl</code>. </p>
 <h3>Public Member Functions</h3>

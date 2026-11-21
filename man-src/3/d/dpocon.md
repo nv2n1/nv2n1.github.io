@@ -1,4 +1,5 @@
 ---
+
 title: "dpocon(3)"
 name: "dpocon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpocon/"
 description: "dpocon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>DPOCON</code></p>

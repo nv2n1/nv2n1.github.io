@@ -1,4 +1,5 @@
 ---
+
 title: "gitweb(1)"
 name: "gitweb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gitweb/"
 description: "gitweb – Git web interface (web frontend to Git repositories)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> To get started with gitweb, run <code><a href="/docs/linux/man/1-git-instaweb/">git-instaweb</a></code>(1) from a Git repository. This would configure and start your web server, and run web browser pointing to gitweb.</p>
-<h2>DESCRIPTION</h2>
 <p> Gitweb provides a web interface to Git repositories. Its features include: </p>
 <dl>
 <dt>

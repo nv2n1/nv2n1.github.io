@@ -1,4 +1,5 @@
 ---
+
 title: "nickle(1)"
 name: "nickle"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nickle/"
 description: "nickle – a desk calculator language"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> nickle [&#8211;help|&#8211;usage] [-f file] [-l library] [-e expr] [ script ] [&#8211;] [arg &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Nickle</i> is a desk calculator language with powerful programming and scripting capabilities. Nickle supports a variety of datatypes, especially arbitrary precision integers, rationals, and imprecise reals. The input language vaguely resembles C. Some things in C which do not translate easily are different, some design choices have been made differently, and a very few features are simply missing.</p>
 <h2>USAGE</h2>
 <p> An un-flagged argument is treated as a Nickle script, and replaces standard input. Any remaining arguments following the script are placed in the Nickle string array argv for programmatic inspection. When invoked without an expression or script argument, Nickle reads from standard input, and writes to standard output. </p>

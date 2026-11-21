@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool(1)"
 name: "pmempool"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmempool – Persistent Memory Pool Management Tool"
 
 <h2>NAME</h2>
 <p> pmempool &#8211; Persistent Memory Pool Management Tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmempool [&#8211;help] [&#8211;version] &lt;command&gt; [&lt;args&gt;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pmempool</code> is a management tool for <i>Persistent Memory</i> pool files created by <code>NVML</code> libraries. </p>
 <p> The main purpose of <code>pmempool</code> is to provide a user with a set of utilities for off-line analysis and manipulation of pools created by pmem libraries. The pmempool is a generic command which consists of subcommands for specific purposes. Some of subcommands are required to work <i>without</i> any impact on processed pool, but some of them <i>may</i> create a new or modify an existing one. </p>
 <p> The <code>pmempool</code> may be useful for troubleshooting by system administrators and for software developers who work on applications based on <code>NVML</code> library. The latter may find these tools useful for testing and debugging purposes also.</p>

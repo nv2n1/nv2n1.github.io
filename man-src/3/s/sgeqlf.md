@@ -1,4 +1,5 @@
 ---
+
 title: "sgeqlf(3)"
 name: "sgeqlf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgeqlf/"
 description: "sgeqlf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgeqlf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>SGEQLF</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ctanify(1)"
 name: "ctanify"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ctanify/"
 description: "ctanify – Prepare a package for upload to CTAN"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ctanify [<code>&#8211;pkgname</code>=<i>string</i>] [<code>&#8212;</code>[<code>no</code>]<code>auto</code>] [<code>&#8211;tdsonly</code>=<i>filespec</i> &#8230;] [<code>&#8212;</code>[<code>no</code>]<code>unixify</code>] [<code>&#8212;</code>[<code>no</code>]<code>skip</code>] [<code>&#8211;tdsdir</code>=<i>dirname</i> &#8230;] [<code>&#8211;tex</code>=<i>macro_pkg</i>] [<code>&#8212;</code>[<code>no</code>]<code>miscify</code>] [<code>&#8212;</code>[<code>no</code>]<code>tds</code>] <i>filespec</i>[=<i>dirname</i>] &#8230; </p>
 <p> ctanify [<code>&#8211;help</code>] </p>
 <p> ctanify [<code>&#8211;version</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ctanify</code> is intended for developers who have a LaTeX package that they want to distribute via the Comprehensive TeX Archive Network (<font SIZE="-1">CTAN</font>). Given a list of filenames, <code>ctanify</code> creates a tarball (a <i>.tar.gz</i> file) with the files laid out in <font SIZE="-1">CTAN</font>&#8216;s preferred structure. The tarball additionally contains a <font SIZE="-1">ZIP </font>(<i>.zip</i>) file with copies of all files laid out in the standard TeX Directory Structure (<font SIZE="-1">TDS</font>), which facilitates inclusion of the package in the TeX Live distribution.</p>
 <h2>OPTIONS</h2>
 <p> <code>ctanify</code> accepts the following command-line options:</p>

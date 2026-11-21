@@ -1,4 +1,5 @@
 ---
+
 title: "b2sum(1)"
 name: "b2sum"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-b2sum/"
 description: "b2sum – compute and check BLAKE2 message digest"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>b2sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print or check BLAKE2 (512-bit) checksums. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>

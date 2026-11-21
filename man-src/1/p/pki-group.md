@@ -1,4 +1,5 @@
 ---
+
 title: "pki-group(1)"
 name: "pki-group"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pki-group/"
 description: "pki-group – Command-Line Interface for managing Certificate System groups."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - group pki[CLI options]&lt;subsystem&gt; - group - find[command options] pki[CLI options]&lt;subsystem&gt; - group - show&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - add&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - mod&lt;group ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - group - del&lt;group ID&gt;[command options]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki-group</code> commands provide command-line interfaces to manage groups on the specified subsystem. </p>
 <p> Valid subsystems are <code>ca</code>, <code>kra</code>, <code>ocsp</code>, <code>tks</code>, and <code>tps</code>. If the <code>&lt;subsystem&gt;-</code> prefix is omitted, it will default to <code>ca</code>. </p>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-group</code></p>

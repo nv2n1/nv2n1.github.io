@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-operator(3)"
 name: "gstream-operator"
 section: "3"
@@ -9,11 +10,9 @@ description: "operator, operator"
 
 <h2>NAME</h2>
 <p> operator, operator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>ostream&amp; operator&lt;&lt;(ostream&amp; o, fix const&amp; x);</code> </p>
 <p> <code>istream&amp; operator&gt;&gt;(istream&amp; i, fix&amp; x);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These two functions don&#8217;t actually belong to the gstreams, they are here simply because they sometimes make the life a bit easier (without costing anything in executable size if they are left unused). Their purpose is to make the class fix capable of extracting/inserting with the notation </p>
 <pre>
    fix a_number = 0.3;

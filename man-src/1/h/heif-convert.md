@@ -1,4 +1,5 @@
 ---
+
 title: "heif-convert(1)"
 name: "heif-convert"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-heif-convert/"
 description: "heif-convert – convert HEIC/HEIF image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>heif-convert</code> [<code>-q</code> <i>QUALITY</i>] <i>filename</i> <i>output[.jpg|.png|.y4m]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>heif-convert</code> Convert HEIC/HEIF image to a different image format.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "vorbiscomment(1)"
 name: "vorbiscomment"
 section: "1"
@@ -6,11 +7,10 @@ letter: "v"
 url: "/docs/linux/man/1-vorbiscomment/"
 description: "vorbiscomment – List or edit comments in Ogg Vorbis files"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>vorbiscomment</code> <code>[-l]</code> [<code>-R</code>] [<code>-e</code>] <i>file.ogg</i> <br />
  <code>vorbiscomment</code> <code>-a</code> <code>[ -c commentfile | -t ``name=value&#8217;&#8216; ]</code> [<code>-q</code>] [<code>-R</code>] [<code>-e</code>] <i>in.ogg</i> <i>[out.ogg]</i> <br />
  <code>vorbiscomment</code> <code>-w</code> <code>[ -c commentfile | -t ``name=value&#8217;&#8216; ]</code> [<code>-q</code>] [<code>-R</code>] [<code>-e</code>] <i>in.ogg</i> <i>[out.ogg]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>vorbiscomment</code> Reads, modifies, and appends Ogg Vorbis audio file metadata tags. </p>
 <h2>OPTIONS</h2>
 <dl>

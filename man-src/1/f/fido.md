@@ -1,4 +1,5 @@
 ---
+
 title: "fido(1)"
 name: "fido"
 section: "1"
@@ -9,9 +10,7 @@ description: "fido is a realish-time log watchdog and alert daemon."
 
 <h2>NAME</h2>
 <p> fido is a realish-time log watchdog and alert daemon.</p>
-<h2>SYNOPSIS</h2>
 <p> fido [<i>option</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> fido is a multi-threaded daemon that can watch several files at once. It looks for patterns that you configure and executes scripts or programs in the event of a match. <tt>fido</tt> works in &#8220;realish-time&#8221; in that it is about a second or so behind the clock.</p>
 <h2>OPTIONS</h2>
 <p> <code>Option Syntax</code> </p>

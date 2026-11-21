@@ -1,4 +1,5 @@
 ---
+
 title: "slamc3(3)"
 name: "slamc3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slamc3/"
 description: "slamch.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slamch</code> (CMACH)<br />
  <i></i><code>SLAMCH</code><br />

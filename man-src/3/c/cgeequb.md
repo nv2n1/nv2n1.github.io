@@ -1,4 +1,5 @@
 ---
+
 title: "cgeequb(3)"
 name: "cgeequb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgeequb/"
 description: "cgeequb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeequb</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
  <i></i><code>CGEEQUB</code></p>

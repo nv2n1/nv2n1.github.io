@@ -1,4 +1,5 @@
 ---
+
 title: "nm-online(1)"
 name: "nm-online"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-nm-online/"
 description: "nm-online – ask NetworkManager whether the network is connected"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nm-online</code> [<i>OPTIONS</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nm-online</code></p>
 <dd>is a utility to find out whether we are online. It is done by asking NetworkManager about its status. When run, <code>nm-online</code> waits until NetworkManager reports an active connection, or specified timeout expires. On exit, the returned status code should be checked (see the return codes below). </dd>
 <p> This tool is not very useful to call directly. It is however used by NetworkManager-wait-online.service with &#8211;wait-for-startup argument. This is used to delay the service and indirectly network-online.target, until networking is up. Don&#8217;t order your own systemd services after NetworkManager-wait-online.service directly. Instead if necessary, order your services after network-online.target. Even better is to have your services react to network changes dynamically and don&#8217;t order them with respect to network-online.target at all. </p>

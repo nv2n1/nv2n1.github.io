@@ -1,4 +1,5 @@
 ---
+
 title: "cbcodec(1)"
 name: "cbcodec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cbcodec/"
 description: "cbcodec – popular encoders and decoders"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cbcodec url</code> [-d] [-br] [-rs <i>base</i> <i>target</i>] [-l] [-e <i>expr</i>] [<i>file</i>]<br />
  <code>cbcodec base</code> [-d] [-l] [-c <i>num</i>] [-e <i>expr</i>] [<i>file</i>]<br />
  <code>cbcodec quote</code> [-d] [-l] [-c <i>num</i>] [-e <i>expr</i>] [<i>file</i>]<br />
@@ -19,7 +19,6 @@ description: "cbcodec – popular encoders and decoders"
  <code>cbcodec bzip</code> [-d] [<i>file</i>]<br />
  <code>cbcodec iconv</code> [-ic <i>code</i>] [-oc <i>code</i>] [-ol <i>ltype</i>] [-cn] [-wc] [-um] [<i>file</i>]<br />
  <code>cbcodec date</code> [-wf] [-rf] [-utc] [<i>str</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>cbcodec</code> commands. </p>
 <p> <code>cbcodec</code> is a tool to use encoding and decoding features provided by Cabin. This command is used in the above format. <i>file</i> specifies a input file. If it is omitted, the standard input is read.</p>
 <h2>OPTIONS</h2>

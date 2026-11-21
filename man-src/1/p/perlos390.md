@@ -1,4 +1,5 @@
 ---
+
 title: "perlos390(1)"
 name: "perlos390"
 section: "1"
@@ -6,20 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-perlos390/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlos390 - building and installing Perl for OS/390 and z/OS 
 
- perlos390 - building and installing Perl for OS/390 and z/OS 
-
-<h2>SYNOPSIS</h2>
-
- This document will help you Configure, build, test and install Perl on <font SIZE="-1">OS/390</font> (aka z/OS) Unix System Services. 
+This document will help you Configure, build, test and install Perl on <font SIZE="-1">OS/390</font> (aka z/OS) Unix System Services. 
 
  <b>This document needs to be updated, but we don't know what it should say. Please email comments to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt;.</b>
 
-<h2>DESCRIPTION</h2>
-
- This is a fully ported Perl for <font SIZE="-1">OS/390</font> Version 2 Release 3, 5, 6, 7, 8, and 9. It may work on other versions or releases, but those are the ones we've tested it on. 
+This is a fully ported Perl for <font SIZE="-1">OS/390</font> Version 2 Release 3, 5, 6, 7, 8, and 9. It may work on other versions or releases, but those are the ones we've tested it on. 
 
  You may need to carry out some system configuration tasks before running the Configure script for Perl.
 

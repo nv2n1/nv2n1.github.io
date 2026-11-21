@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtopnm(1)"
 name: "pnmtopnm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pnmtopnm/"
 description: "pnmtopnm – copy a PNM image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtopnm</code> </p>
 <p> [<i>pnmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pnmtopnm</code> simply copies a PNM image to Standard Output. The output has the same major PNM format (PBM, PGM, or PPM) and maxval as the input. This may seem an unnecessary duplication of <code>cat</code>, but it lets you convert between the plain (ASCII) and raw (binary) subformats of PNM. Use the <code>-plain</code> Netpbm common option to ensure the output is plain PNM, and don&#8217;t use <code>-plain</code> to ensure the output is raw PNM. See<br />
 &nbsp;<wbr>Common Options . </p>

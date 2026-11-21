@@ -1,4 +1,5 @@
 ---
+
 title: "flists(1)"
 name: "flists"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-flists/"
 description: "flist, flists – list the number of messages in given sequence(s)"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flist</code> [<i>+folder1</i> [<i>+folder2</i> &#8230;]] [<code>-sequence</code> <i>name1</i> [<code>-sequence</code> <i>name2</i> &#8230;]] [<code>-all</code> | <code>-noall</code>] [<code>-showzero</code> | <code>-noshowzero</code>] [<code>-recurse</code> | <code>-norecurse</code>] [<code>-fast</code> | <code>-nofast</code>] [<code>-alpha</code> | <code>-noalpha</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dl>
 <dt> <code>flists</code></dt>
 <dd>is equivalent to <code>flist</code> <code>-all</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Flist</code> is used to search a list of folders and display the number of messages in these folders that are in a given sequence or set of sequences (for example the &#8220;<i>unseen</i>&#8221; sequence). This is especially useful if you use some mechanism such as <code>slocal</code> or <code>procmail</code> (typically in conjunction with <code>rcvstore</code>) to pre-sort your mail into different folders before you view it. </p>
 <p> By default, the command <code>flist</code> will search the current folder for the given sequence or sequences (usually &#8220;<i>unseen</i>&#8221;). If (possibly multiple) folders are specified on the command line with <i>+folder</i>, then all these folders are searched for the given sequence(s). <code>Flist</code> will display for each folder searched, the number of messages in each of the specified sequences, and the total number of messages. </p>
 <p> The option <code>-sequence</code> is used to specify the name of a sequence in which to search for. This option may be used multiple times to specify multiple sequences. If this is not given, then the default is to search for all the sequences specified by the &#8220;<i>Unseen-Sequence</i>&#8221; profile component. For more details about sequences, read the <i><a href="/docs/linux/man/5-mh-sequence/">mh-sequence</a></i>(5) man page. </p>

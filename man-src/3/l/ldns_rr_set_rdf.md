@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_set_rdf(3)"
 name: "ldns_rr_set_rdf"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_rr_set_owner, ldns_rr_set_ttl, ldns_rr_set_type, ldns_rr_set_
 
 <h2>NAME</h2>
 <p> ldns_rr_set_owner, ldns_rr_set_ttl, ldns_rr_set_type, ldns_rr_set_rd_count, ldns_rr_set_class, ldns_rr_set_rdf </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -19,7 +19,6 @@ description: "ldns_rr_set_owner, ldns_rr_set_ttl, ldns_rr_set_type, ldns_rr_set_
 <p> void ldns_rr_set_rd_count(ldns_rr *rr, size_t count); </p>
 <p> void ldns_rr_set_class(ldns_rr *rr, ldns_rr_class rr_class); </p>
 <p> ldns_rdf* ldns_rr_set_rdf(ldns_rr *rr, const ldns_rdf *f, size_t position); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_set_owner</i>()</dt>
 <dd>sets the owner in the rr structure. .br <code>*rr</code>: rr to operate on .br <code>*owner</code>: set to this owner .br Returns void</dd></dl>

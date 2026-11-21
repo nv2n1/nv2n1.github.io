@@ -1,4 +1,5 @@
 ---
+
 title: "cheev(3)"
 name: "cheev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cheev/"
 description: "cheev.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cheev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, RWORK, INFO)<br />
  <i></i><code> CHEEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for HE matrices</code></p>

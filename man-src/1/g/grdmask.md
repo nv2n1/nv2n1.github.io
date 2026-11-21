@@ -1,4 +1,5 @@
 ---
+
 title: "grdmask(1)"
 name: "grdmask"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdmask – Create mask grid from polygons or point coverage"
 
 <h2>NAME</h2>
 <p> grdmask &#8211; Create mask grid from polygons or point coverage</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdmask</code> <i>pathfiles</i> <i>mask_grd_file</i>] <i>increment</i> <i>region</i> [ [<code>m</code>|<code>p</code>|<code>x</code>|<code>y</code>] ] [ [<code>z</code>|<code>Z</code>|<code>p</code>|<code>P</code>]<i>values</i> ] [ <i>search_radius</i>[<i>unit</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdmask</code> can operate in two different modes. 1. It reads one or more <i>pathfiles</i> that each define a closed polygon. The nodes defined by the specified region and lattice spacing will be set equal to one of three possible values depending on whether the node is outside, on the polygon perimeter, or inside the polygon. The resulting mask may be used in subsequent operations involving <code>grdmath</code> to mask out data from polygonal areas. 2. The <i>pathfiles</i> simply represent data point locations and the mask is set to the inside or outside value depending on whether a node is within a maximum distance from the nearest data point. If the distance specified is zero then only the nodes nearest each data point are considered &quot;inside&quot;.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

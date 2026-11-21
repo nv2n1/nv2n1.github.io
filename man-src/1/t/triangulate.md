@@ -1,4 +1,5 @@
 ---
+
 title: "triangulate(1)"
 name: "triangulate"
 section: "1"
@@ -9,10 +10,8 @@ description: "triangulate – Do optimal (Delaunay) triangulation and gridding o
 
 <h2>NAME</h2>
 <p> triangulate &#8211; Do optimal (Delaunay) triangulation and gridding of Cartesian table data [method]</p>
-<h2>SYNOPSIS</h2>
 <p> <code>triangulate</code> [ <i>table</i> ] [ <code>x</code>|<code>y</code> ] [ <i>empty</i> ] [ <i>grdfile</i> ] [ <i>increment</i> ] [ <i>parameters</i> ] [ ] [ ] [ ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>triangulate</code> reads one or more ASCII [or binary] files (or standard input) containing x,y[,z] and performs Delaunay triangulation, i.e., it find how the points should be connected to give the most equilateral triangulation possible. If a map projection (give <code>-R</code> and <code>-J</code>) is chosen then it is applied before the triangulation is calculated. By default, the output is triplets of point id numbers that make up each triangle and is written to standard output. The id numbers refer to the points position (line number, starting at 0 for the first line) in the input file. As an option, you may choose to create a multiple segment file that can be piped through <code>psxy</code> to draw the triangulation network. If <code>-G</code> <code>-I</code> are set a grid will be calculated based on the surface defined by the planar triangles. The actual algorithm used in the triangulations is either that of Watson [1982] [Default] or Shewchuk [1996] (if installed; type <code>triangulate &#8211;</code> to see which method is selected). This choice is made during the GMT installation.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

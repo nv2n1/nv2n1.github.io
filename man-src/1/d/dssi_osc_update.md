@@ -1,4 +1,5 @@
 ---
+
 title: "dssi_osc_update(1)"
 name: "dssi_osc_update"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dssi_osc_update/"
 description: "dssi_osc_update – send a DSSI `update’ OSC request"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dssi_osc_update</code> <i>&lt;OSC URL&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dssi_osc_update</code> sends a DSSI `update&#8217; OSC request to a DSSI host, then waits for OSC responses from the host, writes any responses received to stdout, and exits when it has not received anything for five seconds. DSSI hosts should respond to an `update&#8217; request by sending the complete state of the plugin; this program can be used to retrieve and display that state.</p>
 <h2>OPTIONS</h2>
 <dl>

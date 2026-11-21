@@ -1,4 +1,5 @@
 ---
+
 title: "slasyf(3)"
 name: "slasyf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slasyf/"
 description: "slasyf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasyf</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
  <i></i><code>SLASYF</code> computes a partial factorization of a real symmetric matrix using the Bunch-Kaufman diagonal pivoting method.</p>

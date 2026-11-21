@@ -1,4 +1,5 @@
 ---
+
 title: "compton(1)"
 name: "compton"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-compton/"
 description: "compton – a compositor for X11"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>compton</code> [<i>OPTIONS</i>]</p>
 <h2>WARNING</h2>
 <p> This man page may be less up-to-date than the usage text in compton (compton -h).</p>
-<h2>DESCRIPTION</h2>
 <p> compton is a compositor based on Dana Jansens&#8217; version of xcompmgr (which itself was written by Keith Packard). It includes some improvements over the original xcompmgr, like window frame opacity and inactive window transparency.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code></p>

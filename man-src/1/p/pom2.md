@@ -1,4 +1,5 @@
 ---
+
 title: "pom2(1)"
 name: "pom2"
 section: "1"
@@ -6,23 +7,16 @@ letter: "p"
 url: "/docs/linux/man/1-pom2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pom2 - convert POD to Text, HTML, etc., with Pod::POM 
 
- pom2 - convert POD to Text, HTML, etc., with Pod::POM 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     pom2 text MyFile.pm &gt; MyFile.txt
     pom2 html MyFile.pm &gt; MyFile.html
     pom2 pod  MyFile.pm &gt; Myfile.pod
     pom2 format [options] MyFile.pm &gt; Myfile.xyz
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This script uses <tt>&quot;Pod::POM&quot;</tt> to convert a Pod document into text, <font SIZE="-1">HTML,</font> back into Pod (e.g. to normalise a document to fix any markup errors), or any other format for which you have a view module. 
+This script uses <tt>&quot;Pod::POM&quot;</tt> to convert a Pod document into text, <font SIZE="-1">HTML,</font> back into Pod (e.g. to normalise a document to fix any markup errors), or any other format for which you have a view module. 
 
  If the viewer is not one of the viewers bundled with <tt>&quot;Pod::POM&quot;</tt>, the script searches for an installed <tt>&quot;Pod::POM::View&quot;</tt> module that matches the specified format. For example if you have <tt>&quot;Pod::POM::View::DocBook&quot;</tt> installed then you could say: 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolelistpolicies(1)"
 name: "euare-rolelistpolicies"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-rolelistpolicies – List one or all policies attached to a 
 
 <h2>NAME</h2>
 <p> euare-rolelistpolicies &#8211; List one or all policies attached to a role</p>
-<h2>SYNOPSIS</h2>
 <p> euare-rolelistpolicies [-p POLICY] [-v] [&#8211;pretty-print]</p>
 <dl>
 <dt>[&#8211;as-account ACCOUNT] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ROLE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> List one or all policies attached to a role</p>
 <h3>positional arguments:</h3>
 <dl>

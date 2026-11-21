@@ -1,4 +1,5 @@
 ---
+
 title: "rrdfetch(1)"
 name: "rrdfetch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rrdfetch/"
 description: "rrdfetch – Fetch data from an RRD."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>fetch</code> <i>filename</i> <i></i><font SIZE="-1"><i>CF</i></font><i></i> [<code>&#8211;resolution</code>|<code>-r</code>&nbsp;<wbr><i>resolution</i>] [<code>&#8211;start</code>|<code>-s</code>&nbsp;<wbr><i>start</i>] [<code>&#8211;end</code>|<code>-e</code>&nbsp;<wbr><i>end</i>] [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>fetch</code> function is normally used internally by the graph function to get data from <font SIZE="-1"><code>RRD</code></font>s. <code>fetch</code> will analyze the <font SIZE="-1"><code>RRD</code></font> and try to retrieve the data in the resolution requested. The data fetched is printed to stdout. <i>*UNKNOWN*</i> data is often represented by the string &#8220;NaN&#8221; depending on your <font SIZE="-1">OS</font>&#8216;s printf function.</p>
 <dl>
 <dt><i>filename</i></dt>

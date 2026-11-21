@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-mount(1)"
 name: "doveadm-mount"
 section: "1"
@@ -9,9 +10,7 @@ description: "doveadm-mount – Manage the list of mountpoints where mails are s
 
 <h2>NAME</h2>
 <p> doveadm-mount &#8211; Manage the list of mountpoints where mails are stored</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>mount</code> <i>command</i> [<i>arguments</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The doveadm <code>mount</code> <i>command</i>s can be used to manage the list of mountpoints where mails are stored. This is used mainly for better error handling when a mountpoint isn&#8217;t mounted for some reason:</p>
 <dl>
 <dt>*</dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "ods-hsmspeed(1)"
 name: "ods-hsmspeed"
 section: "1"
@@ -9,9 +10,7 @@ description: "ods-hsmspeed – OpenDNSSEC HSM speed tester"
 
 <h2>NAME</h2>
 <p> <code>ods-hsmspeed</code> &#8211; OpenDNSSEC HSM speed tester</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ods-hsmspeed</code> [<code>-c</code> <i>config</i>] <code>-r</code> <i>repository</i> [<code>-i</code> <i>iterations</i>] [<code>-s</code> <i>keysize</i>] [<code>-t</code> <i>threads</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The ods-hsmspeed utility is part of OpenDNSSEC and can be used to test the performance of the configured HSMs. </p>
 <p> The components of OpenDNSSEC do not talk directly to the HSMs, but uses an internal library called libhsm. It then talks to the HSMs using PKCS#11. The libhsm simplifies the process of creating keys and signatures for the other components of OpenDNSSEC. </p>
 <p> ods-hsmspeed will measure the speed by using the libhsm. The result that you get is somewhat lower than what the manufactures promises, because the libhsm creates some overhead to the pure PKCS#11 environment.</p>

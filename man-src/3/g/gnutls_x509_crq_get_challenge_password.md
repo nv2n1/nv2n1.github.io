@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_get_challenge_password(3)"
 name: "gnutls_x509_crq_get_challenge_password"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crq_get_challenge_password – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_get_challenge_password &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_get_challenge_password(gnutls_x509_crq_t </code><i>crq</i><code>, char * </code><i>pass</i><code>, size_t * </code><i>pass_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crq_get_challenge_password – API function"
 <dd> will hold a (0)-terminated password string</dd>
 <dt>size_t * pass_size</dt>
 <dd> Initially holds the size of <i>pass</i> .</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the challenge password in the request. The challenge password is intended to be used for requesting a revocation of the certificate.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

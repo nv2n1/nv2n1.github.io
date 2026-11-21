@@ -1,4 +1,5 @@
 ---
+
 title: "extlinux(1)"
 name: "extlinux"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-extlinux/"
 description: "extlinux – install the SYSLINUX bootloader on an ext2/ext3/ext4/btrfs/xfs filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> extlinux &#8211; install the <font SIZE="-1">SYSLINUX</font> bootloader on an ext2/ext3/ext4/btrfs/xfs filesystem </p>
-<h2>SYNOPSIS</h2>
 <p> <code>extlinux</code> [<i>options</i>] <i>directory</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>EXTLINUX</code> is a new syslinux derivative, which boots from a Linux ext2/ext3/ext4/btrfs or xfs filesystem. It works the same way as <code>SYSLINUX</code>, with a few slight modifications. It is intended to simplify first-time installation of Linux, and for creation of rescue and other special-purpose boot disks. </p>
 <p> The installer is designed to be run on a mounted directory. For example, if you have an ext2, ext3, ext4, or btrfs usb key mounted on /mnt, you can run the following command:</p>
 <dl>

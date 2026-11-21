@@ -1,4 +1,5 @@
 ---
+
 title: "ck_hs_apply(3)"
 name: "ck_hs_apply"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_hs_apply – apply a function to hash set value"
 <p> <code>ck_hs_apply</code> &#8211; apply a function to hash set value</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft void * Fn ck_hs_apply_fn_t void *key void *closure Ft bool Fn ck_hs_apply ck_hs_t *hs unsigned long hash const void *key ck_hs_apply_fn_t *function void *argument</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_apply 3 function will lookup the hash set slot associated with Fa key and pass it to function pointed to by Fa function for further action. This callback may remove or replace the value by respectively returning NULL or a pointer to another object with an identical key. The first argument passed to Fa function is a pointer to the object found in the hash set and the second argument is the Fa argument pointer passed to Fn ck_hs_apply 3 . If the pointer returned by Fa function is equivalent to the first argument then no modification is made to the hash set.</p>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, Fn ck_hs_apply 3 returns true and otherwise returns false on failure.</p>

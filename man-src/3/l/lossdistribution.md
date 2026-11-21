@@ -1,4 +1,5 @@
 ---
+
 title: "lossdistribution(3)"
 name: "lossdistribution"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lossdistribution/"
 description: "ql/experimental/credit/lossdistribution.hpp – Loss distributions and probability of n defaults."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/distributions/binomialdistribution.hpp&gt;<br />
  #include &lt;ql/experimental/credit/distribution.hpp&gt;<br />
  #include &lt;ql/experimental/credit/onefactorcopula.hpp&gt; </p>

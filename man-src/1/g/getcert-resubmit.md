@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-resubmit(1)"
 name: "getcert-resubmit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-resubmit/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert resubmit [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Tells <i>certmonger</i> to generate (or regenerate) a signing request and submit (or resubmit) the signing request to a CA for signing. </p>
 <h2>SPECIFYING REQUESTS BY NICKNAME</h2>
 <dl>

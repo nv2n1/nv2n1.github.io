@@ -1,4 +1,5 @@
 ---
+
 title: "atril-previewer(1)"
 name: "atril-previewer"
 section: "1"
@@ -9,9 +10,7 @@ description: "atril-previewer – show print preview for a document"
 
 <h2>NAME</h2>
 <p> atril-previewer &#8211; show print preview for a document</p>
-<h2>SYNOPSIS</h2>
 <p> <code>atril-previewer</code> <code>[file]</code></p>
-<h2>DESCRIPTION</h2>
 <p> atril-previewer is a MATE program to show print preview dialog for files supported by atril.</p>
 <h2>OPTIONS</h2>
 <p> atril-previewer obeys all normal GTK+ command line options.</p>

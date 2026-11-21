@@ -1,4 +1,5 @@
 ---
+
 title: "bash(1)"
 name: "bash"
 section: "1"
@@ -6,11 +7,10 @@ letter: "b"
 url: "/docs/linux/man/1-bash/"
 description: "bash – GNU Bourne-Again SHell"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>bash</code> [options] [command_string | file]  </p>
 <h2>COPYRIGHT</h2>
 <p> Bash is Copyright (C) 1989-2020 by the Free Software Foundation, Inc.  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Bash</code> is an <code>sh</code>-compatible command language interpreter that executes commands read from the standard input or from a file. <code>Bash</code> also incorporates useful features from the <i>Korn</i> and <i>C</i> shells (<code>ksh</code> and <code>csh</code>). </p>
 <p> <code>Bash</code> is intended to be a conformant implementation of the Shell and Utilities portion of the IEEE POSIX specification (IEEE Standard 1003.1). <code>Bash</code> can be configured to be POSIX-conformant by default.  </p>
 <h2>OPTIONS</h2>

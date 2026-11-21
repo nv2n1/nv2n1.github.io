@@ -1,4 +1,5 @@
 ---
+
 title: "ocamldep(1)"
 name: "ocamldep"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ocamldep/"
 description: "ocamldep – Dependency generator for OCaml"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ocamldep</code> [ <i>options</i> ] <i>filename &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-ocamldep/">ocamldep</a></code>(1) command scans a set of OCaml source files (.ml and .mli files) for references to external compilation units, and outputs dependency lines in a format suitable for the <code><a href="/docs/linux/man/1-make/">make</a></code>(1) utility. This ensures that make will compile the source files in the correct order, and recompile those files that need to when a source file is modified. </p>
 <p> The typical usage is: </p>
 <p> ocamldep <i>options</i> *.mli *.ml &gt; .depend </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "iparmq(3)"
 name: "iparmq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iparmq/"
 description: "iparmq.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>iparmq</code> (ISPEC, NAME, OPTS, N, ILO, IHI, LWORK)<br />
  <i></i><code>IPARMQ</code></p>

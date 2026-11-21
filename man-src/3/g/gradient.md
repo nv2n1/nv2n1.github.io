@@ -1,4 +1,5 @@
 ---
+
 title: "gradient(3)"
 name: "gradient"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gradient/"
 description: "QuantLib::CostFunction – Cost function abstract class for optimization problem."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/optimization/costfunction.hpp&gt; </p>
 <p> Inherited by AbcdError, SABRError, FrobeniusCostFunction, <code>LeastSquareFunction</code>, PenaltyFunction&lt; Curve &gt;, and <code>ProjectedCostFunction</code>. </p>
 <h3>Public Member Functions</h3>

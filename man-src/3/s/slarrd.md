@@ -1,4 +1,5 @@
 ---
+
 title: "slarrd(3)"
 name: "slarrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarrd/"
 description: "slarrd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrd</code> (RANGE, ORDER, N, VL, VU, IL, IU, GERS, RELTOL, D, E, E2, PIVMIN, NSPLIT, ISPLIT, M, W, WERR, WL, WU, IBLOCK, INDEXW, WORK, IWORK, INFO)<br />
  <i></i><code>SLARRD</code> computes the eigenvalues of a symmetric tridiagonal matrix to suitable accuracy.</p>

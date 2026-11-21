@@ -1,4 +1,5 @@
 ---
+
 title: "accuracy_(3)"
 name: "accuracy_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-accuracy_/"
 description: "QuantLib::EurodollarFuturesImpliedStdDevQuote – quote for the Eurodollar-future implied standard deviation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/quotes/eurodollarfuturesquote.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Quote</code>, and <code>QuantLib::LazyObject</code>. </p>
 <h3>Public Member Functions</h3>

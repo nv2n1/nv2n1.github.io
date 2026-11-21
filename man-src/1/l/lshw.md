@@ -1,4 +1,5 @@
 ---
+
 title: "lshw(1)"
 name: "lshw"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-lshw/"
 description: "lshw – list hardware"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lshw</code> [ <code>-version</code> ] </p>
 <p> <code>lshw</code> [ <code>-help</code> ] </p>
 <p> <code>lshw</code> [ <code>-X</code> ] </p>
 <p> <code>lshw</code> [ <code> [ -html ] [ -short ] [ -xml ] [ -json ] [ -businfo ] </code> ] [ <code>-dump </code><i>filename</i> ] [ <code>-class </code><i>class</i><i>&#8230;</i> ] [ <code>-disable </code><i>test</i><i>&#8230;</i> ] [ <code>-enable </code><i>test</i><i>&#8230;</i> ] [ <code>-sanitize</code> ] [ <code>-numeric</code> ] [ <code>-quiet</code> ] [ <code>-notime</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lshw</code> is a small tool to extract detailed information on the hardware configuration of the machine. It can report exact memory configuration, firmware version, mainboard configuration, CPU version and speed, cache configuration, bus speed, etc. on DMI-capable x86 or IA-64 systems and on some PowerPC machines (PowerMac G4 is known to work). </p>
 <p> It currently supports DMI (x86 and IA-64 only), OpenFirmware device tree (PowerPC only), PCI/AGP, CPUID (x86), IDE/ATA/ATAPI, PCMCIA (only tested on x86), SCSI and USB. </p>
 <dl>

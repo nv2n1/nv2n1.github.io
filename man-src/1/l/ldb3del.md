@@ -1,4 +1,5 @@
 ---
+
 title: "ldb3del(1)"
 name: "ldb3del"
 section: "1"
@@ -12,10 +13,6 @@ ldbdel - Command-line program for deleting LDB records
 
 <dl>
 <dt> FCldbdelF[] [-h] [-H LDB-URL] [dn] [...]</dt></dl>
-
-<h2>DESCRIPTION</h2>
-
- 
 
 <dd>ldbdel deletes records from an ldb(7) database. It deletes the records identified by the dn's specified on the command-line. 
 

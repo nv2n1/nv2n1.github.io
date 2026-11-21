@@ -1,4 +1,5 @@
 ---
+
 title: "pnmmontage(1)"
 name: "pnmmontage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmmontage/"
 description: "pnmmontage – create a montage of portable anymaps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmmontage</code> [<code>-?</code>|<code>-help</code>] [<code>-header=</code><i>headerfile</i>] [<code>-quality=</code><i>n</i>] [<code>-prefix=</code><i>prefix</i>] [<code>-0</code>|<code>-1</code>|<code>-2</code>|<code>&#8230;</code>|<code>-9</code>] pnmfile<i>&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> Packs images of differing sizes into a minimum-area composite image, optionally producing a C header file with the locations of the subimages within the composite image.</p>
 <h2>OPTIONS</h2>
 <dl>

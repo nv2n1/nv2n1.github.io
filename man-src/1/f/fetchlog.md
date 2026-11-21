@@ -1,4 +1,5 @@
 ---
+
 title: "fetchlog(1)"
 name: "fetchlog"
 section: "1"
@@ -9,11 +10,9 @@ description: "fetchlog – fetch and convert new messages of a logfile"
 
 <h2>NAME</h2>
 <p> fetchlog &#8211; fetch and convert new messages of a logfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fetchlog</code> -f <i>first:last:len:conv</i> <i>logfile</i> <i>bookmarkfile</i> [ <i>pattern ..</i> ] </p>
 <p> <code>fetchlog</code> -F <i>first:last:len:conv</i> <i>logfile</i> <i>bookmarkfile</i> [ <i>pattern ..</i> ] </p>
 <p> <code>fetchlog</code> [<code>-h</code>|<code>-V</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>fetchlog </i> utility displays the last new messages of a logfile. It is similar like <i><a href="/docs/linux/man/1-tail/">tail</a></i>(1) but offers some extra functionality for output formatting. To show only the new messages appeared since the last call <i>fetchlog </i> uses a bookmark to remember which messages have been fetched. </p>
 <p> <i>fetchlog </i> scans backwards <i>logfile</i> and collects all messages, optionally only those matching any of the given regex-style patterns. Then <i>fetchlog </i> converts found message lines for output. It stops scanning when one of these conditions become true: The bookmark from <i>bookmarkfile</i> is reached, or <i>len</i> characters are ready for output, or an error occurs. <i>fetchlog</i> knows about rotated and uncompressed logfiles and continues scanning in rotated logfiles by appending &#8216;.0&#8217;, &#8216;.1&#8217; upto &#8216;.9&#8217; to <i>logfile</i> when scanning in rotated logfiles. Scanning stops without error when a rotated logfile does not exist. </p>
 <h2>OPTIONS</h2>

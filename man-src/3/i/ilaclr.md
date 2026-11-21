@@ -1,4 +1,5 @@
 ---
+
 title: "ilaclr(3)"
 name: "ilaclr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ilaclr/"
 description: "ilaclr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilaclr</code> (M, N, A, LDA)<br />
  <i></i><code>ILACLR</code> scans a matrix for its last non-zero row.</p>

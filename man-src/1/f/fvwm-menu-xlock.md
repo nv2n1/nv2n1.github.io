@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-menu-xlock(1)"
 name: "fvwm-menu-xlock"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fvwm-menu-xlock/"
 description: "fvwm-menu-xlock – builds xlock menu definition for fvwm"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fvwm-menu-xlock</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-V</code> ] [ <code>&#8211;name</code>|<code>-n</code> name ] [ <code>&#8211;title</code>|<code>-t</code> title ] [ <code>&#8211;item</code> format ] [ <code>&#8211;icon-title</code> icon ] [ <code>&#8211;icon-item</code> icon ] [ <code>&#8211;special-first</code>|<code>-s</code> ] [ &#8212; xlock params ]</p>
-<h2>DESCRIPTION</h2>
 <p> A simple perl script which parses xlock&#8217;s output to build an fvwm menu definition of all xlock&#8217;s modes.</p>
 <h2>OPTIONS</h2>
 <dl>

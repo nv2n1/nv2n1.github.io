@@ -1,4 +1,5 @@
 ---
+
 title: "incm(1)"
 name: "incm"
 section: "1"
@@ -9,9 +10,7 @@ description: "incm – Incorporating new mails for Mew"
 
 <h2>NAME</h2>
 <p> incm &#8211; Incorporating new mails for Mew</p>
-<h2>SYNOPSIS</h2>
 <p> incm [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>incm</code> utility incorporates new mails from the mbox or the maildir to Mew&#8217;s inbox folder. </p>
 <p> The options are as follows:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mvl2lxt(1)"
 name: "mvl2lxt"
 section: "1"
@@ -18,11 +19,7 @@ url: "/docs/linux/man/1-mvl2lxt/"
 
  mvl2lxt &lt;<i>filename.aet</i>&gt; &lt;<i>filename.lxt</i>&gt;
 
-<h2>DESCRIPTION</h2>
-
- 
-
- Converts AET files to LXT. This is experimental as it is not a complete implementation and is not intended for general use.
+Converts AET files to LXT. This is experimental as it is not a complete implementation and is not intended for general use.
 
 <h2>AUTHORS</h2>
 

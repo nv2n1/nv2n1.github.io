@@ -1,4 +1,5 @@
 ---
+
 title: "svgakeymap(1)"
 name: "svgakeymap"
 section: "1"
@@ -9,9 +10,7 @@ description: "svgakeymap – generates keymaps for svgalib"
 
 <h2>NAME</h2>
 <p> svgakeymap &#8211; generates keymaps for svgalib </p>
-<h2>SYNOPSIS</h2>
 <p> <code>svgakeymap [</code><i>physical_table</i><code> [</code><i>program_table</i><code>]] &gt; </code><i>output.keymap</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Generates a keymap conversion file for <code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7) from two keytable definitions. Keytables are searched for in <i>/lib/kbd/keymaps</i> and are automatically filtered through <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) if necessary. </p>
 <p> If only one keytable is specified, a keymap is generated that performs no conversion but contains the proper key names for that layout. If no keytables are specified, the standard US QWERTY keyboard is used. </p>
 <p> The generated keymap is sent to the standard output and may be redirected or piped in any creative manner you wish. </p>

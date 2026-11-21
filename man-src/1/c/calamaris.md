@@ -1,4 +1,5 @@
 ---
+
 title: "calamaris(1)"
 name: "calamaris"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-calamaris/"
 description: "calamaris – generate statistic out of log files from Proxy-Cache-Servers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cat log | <code>calamaris</code> [ calamaris_options ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Calamaris</code> is used to produce statistical output from <code>Squid</code>, <code>NetCache,</code> <code>Inktomi Traffic Server,</code> <code>Oops! proxy server,</code> <code>Compaq Tasksmart,</code> <code>Cisco Content Engines</code> or related Proxy log files. The resulting output can be <i>ascii</i> or <i>html</i>. It is possible to cache calculated data in a file to use them in later runs. </p>
 <p> This manual page describes the options of <code>Calamaris</code> and gives a few examples. </p>
 <h2>OPTIONS</h2>

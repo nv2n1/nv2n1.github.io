@@ -1,4 +1,5 @@
 ---
+
 title: "avlcpt(1)"
 name: "avlcpt"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-avlcpt/"
 description: "avlcpt – convert ArcView Legend gradients to GMT colour palette tables"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>avlcpt</code> [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-l&nbsp;<wbr><i>adjust</i>] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-p&nbsp;<wbr><i>precision</i>] [-u&nbsp;<wbr><i>adjust</i>] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>avlcpt</code> utility will extract a gradient from an ArcView Legend (avl) file and write it to the GMT (Generic Mapping Tools) cpt format. Note that not every avl file will contain a gradient, some just have patterns. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>
 <h2>OPTIONS</h2>

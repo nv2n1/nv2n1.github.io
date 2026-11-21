@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-config-session(1)"
 name: "lxqt-config-session"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxqt-config-session – Application settings of LXQt: The Lightwei
 
 <h2>NAME</h2>
 <p> <code>lxqt-config-session</code> &#8211; Application settings of <code>LXQt</code>: The Lightweight Qt Desktop Environment</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxqt-config-session</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This application handles <code>LXQt</code> default applications settings, autostart configuration, and environment settings.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="https://github.com/lxde/lxqt/issues">https://github.com/lxde/lxqt/issues</a></p>

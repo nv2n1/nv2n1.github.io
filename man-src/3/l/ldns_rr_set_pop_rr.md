@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_set_pop_rr(3)"
 name: "ldns_rr_set_pop_rr"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_rr_set_push_rr, ldns_rr_set_pop_rr"
 
 <h2>NAME</h2>
 <p> ldns_rr_set_push_rr, ldns_rr_set_pop_rr </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_rr_set_push_rr(ldns_rr_list *rr_list, ldns_rr *rr); </p>
 <p> ldns_rr* ldns_rr_set_pop_rr(ldns_rr_list *rr_list); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_set_push_rr</i>()</dt>
 <dd>pushes an rr to an rrset (which really are rr_list&#8217;s). .br <code>*rr_list</code>: the rrset to push the rr to .br <code>*rr</code>: the rr to push .br Returns true if the push succeeded otherwise false</dd></dl>

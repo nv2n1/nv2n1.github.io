@@ -1,4 +1,5 @@
 ---
+
 title: "claqhe(3)"
 name: "claqhe"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claqhe/"
 description: "claqhe.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqhe</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br />
  <i></i><code>CLAQHE</code> scales a Hermitian matrix.</p>

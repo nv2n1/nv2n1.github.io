@@ -1,4 +1,5 @@
 ---
+
 title: "kvirc(1)"
 name: "kvirc"
 section: "1"
@@ -9,9 +10,7 @@ description: "KVIrc – an Internet Relay Chat client."
 
 <h2>NAME</h2>
 <p> KVIrc &#8211; an Internet Relay Chat client.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>kvirc [options] [server [port]] [ircurl [ircurl [&#8230;]]]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> KVIrc is a Visual Internet Relay Chat client based on the Qt library. </p>
 <p> It is intended to be an &quot;user friendly&quot; interface to the IRC protocol (see <i>RFC1459</i>) and its extensions.</p>
 <h2>OPTIONS</h2>

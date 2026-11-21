@@ -1,4 +1,5 @@
 ---
+
 title: "sotruss(1)"
 name: "sotruss"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sotruss/"
 description: "sotruss – trace shared library calls through PLT"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sotruss</code> [<i>,OPTION/</i>&#8230;] [<i>,&#8211;/</i>] <i>,EXECUTABLE /</i>[<i>,EXECUTABLE-OPTION/</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sotruss </code> is a small wrapper around <code>ld.so</code> that runs the specified <i>executable</i> until it exits. It intercepts and produce a trace of the dynamic library calls which are called by the executed process via the Procedure Linkage Table (PLT). It outputs the caller, the calle and the parameters as each call is executed.</p>
 <h2>OPTIONS</h2>
 <dl>

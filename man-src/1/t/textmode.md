@@ -1,4 +1,5 @@
 ---
+
 title: "textmode(1)"
 name: "textmode"
 section: "1"
@@ -9,10 +10,8 @@ description: "savetextmode, textmode – save or restore the complete SVGA statu
 
 <h2>NAME</h2>
 <p> savetextmode, textmode &#8211; save or restore the complete SVGA status for textmode.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>savetextmode</code><br />
  <code>textmode</code> </p>
-<h2>DESCRIPTION</h2>
 <p> These are simple scripts to save the SVGA register state when in textmode to the files <i>/etc/vga/fontdata</i> and <i>/etc/vga/textregs</i> (<i>$HOME/.vga/fontdata</i> and <i>$HOME/.vga/textregs</i> if directory <i>/etc/vga</i> is not writeable) or to restore it from these files. </p>
 <p> The actual utilities used are <code><a href="/docs/linux/man/1-restorefont/">restorefont</a></code>(1), <code><a href="/docs/linux/man/1-restoretextmode/">restoretextmode</a></code>(1), and <code><a href="/docs/linux/man/1-restorepalette/">restorepalette</a></code>(1). </p>
 <p> The purpose of these scripts program is usually to recover from a crashed console due to an svgalib, Xfree or other program bug. </p>

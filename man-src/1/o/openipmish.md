@@ -1,4 +1,5 @@
 ---
+
 title: "openipmish(1)"
 name: "openipmish"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-openipmish/"
 description: "openipmish – Shell interface to an IPMI system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>openipmish</code> [<i>option</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>openipmish</code> is a command interpreter that gives the full power of the OpenIPMI library to a user-level command language. It is designed so it can easily be driven with a scripting language like TCL, it has well-formed output. </p>
 <p> <code>openipmish</code> starts up with no connections or anything of that nature. You must enter commands to make connections to domains. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-move(1)"
 name: "shtool-move"
 section: "1"
@@ -8,9 +9,7 @@ description: "shtool move – GNU shtool enhanced"
 ---
 
 <p><a href="/docs/linux/man/1-mv/">mv</a>(1) replacement</p>
-<h2>SYNOPSIS</h2>
 <p> <code>shtool move</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-e</code>|<code>&#8211;expand</code>] [<code>-p</code>|<code>&#8211;preserve</code>] <i>src-file</i> <i>dst-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> This is a <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1) style command enhanced with the ability to rename multiple files in a single operation and the ability to detect and not touch existing equal destinations files, thus preserving timestamps.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcpy(3)"
 name: "memcpy"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-memcpy/"
 description: "memcpy – copy memory area"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;
 void *memcpy(void *dest, const void *src, size_t n);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>memcpy</code>() function copies <i>n</i> bytes from memory area <i>src</i> to memory area <i>dest</i>. The memory areas must not overlap. Use <code><a href="/docs/linux/man/3-memmove/">memmove</a></code>(3) if the memory areas do overlap.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>memcpy</code>() function returns a pointer to <i>dest</i>.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gle(1)"
 name: "gle"
 section: "1"
@@ -9,9 +10,7 @@ description: "gle – Graphics Layout Engine"
 
 <h2>NAME</h2>
 <p> gle &#8211; Graphics Layout Engine</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gle</code> [options] <i>file.gle</i> <code>&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> GLE (Graphics Layout Engine) is a graphics scripting language designed for creating publication quality graphs, plots, diagrams, figures and slides. GLE supports various graph types (function plots, histograms, bar graphs, scatter plots, contour lines, color maps, surface plots, &#8230;) through a simple but flexible set of graphing commands. More complex output can be created by relying on GLE&#8217;s scripting language, which is full featured with subroutines, variables, and logic control. GLE relies on LaTeX for text output and supports mathematical formulea in graphs and figures. GLE&#8217;s output formats include EPS, PS, PDF, JPEG, and PNG.</p>
 <h2>DOCUMENTATION</h2>
 <p> GLE&#8217;s documentation is distrubuted in PDF format and can be found at the GLE website: &lt;<a rel="nofollow" href="http://www.gle-graphics.org">http://www.gle-graphics.org</a>&gt;</p>

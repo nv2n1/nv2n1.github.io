@@ -1,4 +1,5 @@
 ---
+
 title: "blkparse(1)"
 name: "blkparse"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-blkparse/"
 description: "blkparse – produce formatted output of event streams of block devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blkparse [ </code><i>options</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>blkparse</i> utility will attempt to combine streams of events for various devices on various CPUs, and produce a formatted output of the event information. Specifically, it will take the (machine-readable) output of the <i>blktrace</i> utility and convert it to a nicely formatted and human-readable form. </p>
 <p> As with <i>blktrace</i>, some details concerning <i>blkparse</i> will help in understanding the command line options presented below. </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ctan-o-mat(1)"
 name: "ctan-o-mat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ctan-o-mat/"
 description: "ctan-o-mat – Validate and upload a package for CTAN"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ctan-o-mat [options] [&lt;package configuration&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> This program can be used to automate the upload of a package to the Comprehensive TeX Archive Network (<a rel="nofollow" href="https://www.ctan.org">https://www.ctan.org</a>). The description of the package is taken from a configuration file. Thus it can be updated easily without the need to fill a Web form with the same old information again and again. </p>
 <p> The provided information is validated in any case. If the validation succeeds and not only the validation is requested then the provided archive file is placed in the incoming area of the <font SIZE="-1">CTAN</font> for further processing by the <font SIZE="-1">CTAN</font> team. </p>
 <p> In any case any finding during the validation is reported at the end of the processing. Note that the validation is the default and a official submission has to be requested by the an appropriate command line option. </p>

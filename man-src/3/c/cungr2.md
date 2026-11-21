@@ -1,4 +1,5 @@
 ---
+
 title: "cungr2(3)"
 name: "cungr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cungr2/"
 description: "cungr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cungr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>CUNGR2</code> generates all or part of the unitary matrix Q from an RQ factorization determined by cgerqf (unblocked algorithm).</p>

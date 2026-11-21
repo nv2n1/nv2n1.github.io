@@ -1,4 +1,5 @@
 ---
+
 title: "rcsclean(1)"
 name: "rcsclean"
 section: "1"
@@ -9,9 +10,7 @@ description: "rcsclean – clean up working files"
 
 <h2>NAME</h2>
 <p> rcsclean &#8211; clean up working files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rcsclean</code> [<i>options</i>] [ <i>file</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>rcsclean</code> removes files that are not being worked on. <code>rcsclean -u</code> also unlocks and removes files that are being worked on but have not changed. </p>
 <p> For each <i>file</i> given, <code>rcsclean</code> compares the working file and a revision in the corresponding <font SIZE="-1">RCS</font> file. If it finds a difference, it does nothing. Otherwise, it first unlocks the revision if the <code>-u</code> option is given, and then removes the working file unless the working file is writable and the revision is locked. It logs its actions by outputting the corresponding <code>rcs -u</code> and <code>rm -f</code> commands on the standard output. </p>
 <p> Files are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). If no <i>file</i> is given, all working files in the current directory are cleaned. Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wrestool(1)"
 name: "wrestool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wrestool/"
 description: "wrestool – extract resources from Microsoft Windows(R) binaries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wrestool</code> [<i>OPTIONS</i>]&#8230; [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>wrestool</code> command. This manual page was written for the Debian GNU distribution because the original program does not have a manual page. </p>
 <p> Wrestool reads 16- or 32-bit Microsoft Windows(R) binaries and lists or extracts the resources they contain. Some resources require processing before they can be written to files; wrestool is able to do this with icon and cursor resources. </p>
 <p> Filters, specified as command line options, control what resources to extract.</p>

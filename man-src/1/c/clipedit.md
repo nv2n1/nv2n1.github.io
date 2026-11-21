@@ -1,4 +1,5 @@
 ---
+
 title: "clipedit(1)"
 name: "clipedit"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-clipedit/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- clipedit - Edit clipboard contents in one swoop. 
+clipedit - Edit clipboard contents in one swoop. 
 
 <h2>MOTIVATION</h2>
 

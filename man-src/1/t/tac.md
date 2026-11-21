@@ -1,4 +1,5 @@
 ---
+
 title: "tac(1)"
 name: "tac"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tac/"
 description: "tac – concatenate and print files in reverse"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tac</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Write each FILE to standard output, last line first. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ps2pdfwr(1)"
 name: "ps2pdfwr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ps2pdfwr/"
 description: "ps2pdfwr – Convert PostScript to PDF without specifying CompatibilityLevel, using ghostscript"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ps2pdfwr</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]</p>
-<h2>DESCRIPTION</h2>
 <p> This wrapper script invokes <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) with following arguments </p>
 <p> <center> <code>-q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite</code><br />
  </center> </p>

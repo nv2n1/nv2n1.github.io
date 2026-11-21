@@ -1,4 +1,5 @@
 ---
+
 title: "xerbla(3)"
 name: "xerbla"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-xerbla/"
 description: "xerbla.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>xerbla</code> (SRNAME, INFO)<br />
  <i></i><code>XERBLA</code></p>

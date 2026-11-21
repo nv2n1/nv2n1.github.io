@@ -1,4 +1,5 @@
 ---
+
 title: "dgeesx(3)"
 name: "dgeesx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgeesx/"
 description: "dgeesx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeesx</code> (JOBVS, SORT, SELECT, SENSE, N, A, LDA, SDIM, WR, WI, VS, LDVS, RCONDE, RCONDV, WORK, LWORK, IWORK, LIWORK, BWORK, INFO)<br />
  <i></i><code> DGEESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>

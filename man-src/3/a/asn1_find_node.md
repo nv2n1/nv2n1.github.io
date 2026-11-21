@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_find_node(3)"
 name: "asn1_find_node"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_find_node – API function"
 
 <h2>NAME</h2>
 <p> asn1_find_node &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>asn1_node asn1_find_node(asn1_node </code><i>pointer</i><code>, const char * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "asn1_find_node – API function"
 <dd> NODE_ASN element pointer.</dd>
 <dt>const char * name</dt>
 <dd> null terminated string with the element&#8217;s name to find.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Searches for an element called <i>name</i> starting from <i>pointer</i> . The name is composed by differents identifiers separated by dots. When * <i>pointer</i> has a name, the first identifier must be the name of * <i>pointer</i> , otherwise it must be the name of one child of * <i>pointer</i> .</p>
 <h2>RETURNS</h2>
 <p> the search result, or <code>NULL</code> if not found.</p>

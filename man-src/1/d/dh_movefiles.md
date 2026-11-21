@@ -1,4 +1,5 @@
 ---
+
 title: "dh_movefiles(1)"
 name: "dh_movefiles"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_movefiles/"
 description: "dh_movefiles – move files out of debian/tmp into subpackages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_movefiles</code> [<i>debhelper options</i>] [<code>&#8211;sourcedir=</code><i>dir</i>] [<code>-X</code><i>item</i>] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_movefiles</code> is a debhelper program that is responsible for moving files out of <i>debian/tmp</i> or some other directory and into other package build directories. This may be useful if your package has a <i>Makefile</i> that installs everything into <i>debian/tmp</i>, and you need to break that up into subpackages. </p>
 <p> Note: <code>dh_install</code> is a much better program, and you are recommended to use it instead of <code>dh_movefiles</code>.</p>
 <h2>FILES</h2>

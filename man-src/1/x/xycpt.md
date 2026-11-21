@@ -1,4 +1,5 @@
 ---
+
 title: "xycpt(1)"
 name: "xycpt"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xycpt/"
 description: "xycpt – generate GMT colour palette table (cpt) files from column data."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xycpt</code> [-b&nbsp;<wbr><i>rgb</i>] [-d] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>file</i>] [-r&nbsp;<wbr><i>registration</i>] [-u] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>xycpt</code> program generates discrete or continuous cpt files from simple input describing sample values of the colour (or greyscale) range. The input consists of 1-4 columns. For 2 and 4 columns, the first column is interpreted as a (double) z value, for 1 and 3 the z value is taken implicitly. For 1 and 2 columns the final column will be taken as a greyscale value. For 3 and 4, the last 3 columns are taken as RGB values. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>
 <h2>OPTIONS</h2>

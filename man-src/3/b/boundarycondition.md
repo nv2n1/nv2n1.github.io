@@ -1,4 +1,5 @@
 ---
+
 title: "boundarycondition(3)"
 name: "boundarycondition"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-boundarycondition/"
 description: "ql/methods/finitedifferences/boundarycondition.hpp – boundary conditions for differential operators"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/utilities/null.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt; </p>
 <h3>Classes</h3>

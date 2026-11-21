@@ -1,4 +1,5 @@
 ---
+
 title: "git-filter-branch(1)"
 name: "git-filter-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-filter-branch/"
 description: "git-filter-branch – Rewrite branches"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git filter - branch[--setup&lt;command&gt;][--subdirectory - filter&lt;directory&gt;]
                    [--env - filter&lt;command&gt;][--tree - filter&lt;command&gt;]
@@ -19,7 +19,6 @@ git filter - branch[--setup&lt;command&gt;][--subdirectory - filter&lt;directory
 </code></pre>
 <h2>WARNING</h2>
 <p> <i>git filter-branch</i> has a plethora of pitfalls that can produce non-obvious manglings of the intended history rewrite (and can leave you with little time to investigate such problems since it has such abysmal performance). These safety and performance issues cannot be backward compatibly fixed and as such, its use is not recommended. Please use an alternative history filtering tool such as m[blue]<code>git filter-repo</code>m[]<font SIZE="-2">[1]</font>. If you still need to use <i>git filter-branch</i>, please carefully read the section called &#8220;SAFETY&#8221; (and the section called &#8220;PERFORMANCE&#8221;) to learn about the land mines of filter-branch, and then vigilantly avoid as many of the hazards listed there as reasonably possible.</p>
-<h2>DESCRIPTION</h2>
 <p> Lets you rewrite Git revision history by rewriting the branches mentioned in the &lt;rev-list options&gt;, applying custom filters on each revision. Those filters can modify each tree (e.g. removing a file or running a perl rewrite on all files) or information about each commit. Otherwise, all information (including original commit times or merge information) will be preserved. </p>
 <p> The command will only rewrite the <i>positive</i> refs mentioned in the command line (e.g. if you pass <i>a..b</i>, only <i>b</i> will be rewritten). If you specify no filters, the commits will be recommitted without any changes, which would normally have no effect. Nevertheless, this may be useful in the future for compensating for some Git bugs or such, therefore such a usage is permitted. </p>
 <p> <code>NOTE</code>: This command honors <code>.git/info/grafts</code> file and refs in the <code>refs/replace/</code> namespace. If you have any grafts or replacement refs defined, running this command will make them permanent. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_validate(3)"
 name: "dirfile_validate"
 section: "3"
@@ -9,11 +10,9 @@ description: "dirfile_validate — check a dirfile field code for validity"
 
 <h2>NAME</h2>
 <p> dirfile_validate &#8212; check a dirfile field code for validity</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_validate(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_validate</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and checks whether <i>field_code</i>, which may contain a representation suffix, specifies a valid field. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <p> This function checks whether the field and its input fields (if any) are found, whether the representation suffix (if any) is valid, and also that all non-literal scalar parameters specify valid <code>CONST</code> fields. </p>

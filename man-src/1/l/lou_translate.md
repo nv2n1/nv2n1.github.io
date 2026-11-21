@@ -1,4 +1,5 @@
 ---
+
 title: "lou_translate(1)"
 name: "lou_translate"
 section: "1"
@@ -9,9 +10,7 @@ description: "lou_translate – A Braille translator for large scale testing of 
 
 <h2>NAME</h2>
 <p> lou_translate &#8211; A Braille translator for large scale testing of liblouis Braille translation tables</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lou_translate</code> [<i>OPTION</i>] <i>TABLE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Translate whatever is on standard input and print it on standard output. It is intended for large-scale testing of the accuracy of Braille translation and back-translation.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

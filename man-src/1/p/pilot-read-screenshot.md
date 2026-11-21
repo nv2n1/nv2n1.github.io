@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-read-screenshot(1)"
 name: "pilot-read-screenshot"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-read-screenshot – Read screenshots from Palm (ScreenShotDB
 <p> pilot-read-screenshot &#8211; Read screenshots from Palm (ScreenShotDB).</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-read-screenshot</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;type</code>&nbsp;<wbr>[<code>ppm|png</code>]] </p>
-<h2>DESCRIPTION</h2>
 <p> ScreenShot is a Palm-compatible application for OS4 and OS5. </p>
 <p> ScreenShot captures the current screen of any application. All color and grayscale modes, as well as extended screen sizes and virtual Graffiti areas are supported. Also exports as JPG/GIF/BMP to card. </p>
 <p> For more information on ScreenShot, go to <a rel="nofollow" href="http://linkesoft.com/screenshot/">http://linkesoft.com/screenshot/</a> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nice(2)"
 name: "nice"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-nice/"
 description: "nice – change process priority"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int nice(int </code><i>inc</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>nice</code>(): _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nice</code>() adds <i>inc</i> to the nice value for the calling thread. (A higher nice value means a lower priority.) </p>
 <p> The range of the nice value is +19 (low priority) to -20 (high priority). Attempts to set a nice value outside the range are clamped to the range. </p>
 <p> Traditionally, only a privileged process could lower the nice value (i.e., set a higher priority). However, since Linux 2.6.12, an unprivileged process can decrease the nice value of a target process that has a suitable <code>RLIMIT_NICE</code> soft limit; see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2) for details.</p>

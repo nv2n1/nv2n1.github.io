@@ -1,4 +1,5 @@
 ---
+
 title: "pandoc-citeproc(1)"
 name: "pandoc-citeproc"
 section: "1"
@@ -12,17 +13,9 @@ url: "/docs/linux/man/1-pandoc-citeproc/"
 
  pandoc-citeproc - filter to resolve citations in a pandoc document.
 
-<h2>SYNOPSIS</h2>
+pandoc-citeproc [options] [file..]
 
- 
-
- pandoc-citeproc [options] [file..]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- The pandoc-citeproc executable has two modes, filter mode and convert mode.
+The pandoc-citeproc executable has two modes, filter mode and convert mode.
 
 <h3>Filter mode</h3>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "checon_rook(3)"
 name: "checon_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-checon_rook/"
 description: "checon_rook.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>checon_rook</code> (UPLO, N, A, LDA, IPIV, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>CHECON_ROOK</code> estimates the reciprocal of the condition number fort HE matrices using factorization obtained with one of the bounded diagonal pivoting methods (max 2 interchanges)</p>

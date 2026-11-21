@@ -1,4 +1,5 @@
 ---
+
 title: "swapindex(3)"
 name: "swapindex"
 section: "3"
@@ -6,8 +7,8 @@ letter: "s"
 url: "/docs/linux/man/3-swapindex/"
 description: "QuantLib::CmsCoupon – CMS coupon class."
 ---
+
 <p>QuantLib::CmsCoupon &#8211; CMS coupon class. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/cashflows/cmscoupon.hpp&gt; </p>

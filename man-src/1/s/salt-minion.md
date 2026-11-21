@@ -1,4 +1,5 @@
 ---
+
 title: "salt-minion(1)"
 name: "salt-minion"
 section: "1"
@@ -10,11 +11,9 @@ description: "salt-minion – salt-minion Documentation"
 <h2>NAME</h2>
 <p> salt-minion &#8211; salt-minion Documentation </p>
 <p> The Salt minion daemon, receives commands from a remote Salt master.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 salt-minion [ options ]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The Salt minion receives commands from the central Salt master and replies with the results of said commands.</p>
 <h2>OPTIONS</h2>
 <dl>

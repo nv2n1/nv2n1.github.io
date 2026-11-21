@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-buildpackage(1)"
 name: "dpkg-buildpackage"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-buildpackage/"
 description: "dpkg-buildpackage – build binary or source packages from sources"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-buildpackage</code> [<i>option</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-buildpackage</code> is a program that automates the process of building a Debian package. It consists of the following steps:</p>
 <dl>
 <dt><code>1.</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "podofotxt2pdf(1)"
 name: "podofotxt2pdf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-podofotxt2pdf/"
 description: "podofotxt2pdf – convert plain text files into PDF files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>podofotxt2pdf</code> [-fontname &lt;name&gt;] [-utf8] [inputfile] [outputfile] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>podofotxt2pdf</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can convert a plain text file into a PDF file. </p>
 <h2>OPTIONS</h2>
 <p> <code>-fontname</code> &lt;name&gt;</p>

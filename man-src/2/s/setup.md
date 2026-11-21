@@ -1,4 +1,5 @@
 ---
+
 title: "setup(2)"
 name: "setup"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-setup/"
 description: "setup – setup devices and filesystems, mount root filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setup(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>setup</code>() is called once from within <i>linux/init/main.c</i>. It calls initialization functions for devices and filesystems configured into the kernel and then mounts the root filesystem. </p>
 <p> No user process may call <code>setup</code>(). Any user process, even a process with superuser permission, will receive <code>EPERM</code>.</p>
 <h2>RETURN VALUE</h2>

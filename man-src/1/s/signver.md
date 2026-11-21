@@ -1,4 +1,5 @@
 ---
+
 title: "signver(1)"
 name: "signver"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-signver/"
 description: "signver – Verify a detached PKCS#7 signature for a file."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>signtool</code> -A | -V -d&nbsp;<wbr><i>directory</i> [-a] [-i&nbsp;<wbr><i>input_file</i>] [-o&nbsp;<wbr><i>output_file</i>] [-s&nbsp;<wbr><i>signature_file</i>] [-v]</dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
-<h2>DESCRIPTION</h2>
 <p> The Signature Verification Tool, <code>signver</code>, is a simple command-line utility that unpacks a base-64-encoded PKCS#7 signed object and verifies the digital signature using standard cryptographic techniques. The Signature Verification Tool can also display the contents of the signed object.</p>
 <h2>OPTIONS</h2>
 <p> -A</p>

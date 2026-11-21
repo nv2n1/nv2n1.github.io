@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_code_with_scope(3)"
 name: "bson_append_code_with_scope"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_code_with_scope() – The bson_append_code_with_scope(
 
 <h2>NAME</h2>
 <p> bson_append_code_with_scope() &#8211; The bson_append_code_with_scope() function shall perform like bson_append_code() except it allows providing a scope to the javascript function in the form of a bson document.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_code_with_scope(bson_t *bson,
                                  const char *key,
@@ -33,7 +33,6 @@ bool bson_append_code_with_scope(bson_t *bson,
 <dl>
 <dt><code>scope</code></dt>
 <dd> A <code>bson_t</code> containing the scope for <code>javascript</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_code_with_scope/">bson_append_code_with_scope</a>(3)</code> function shall perform like <code><a href="/docs/linux/man/3-bson_append_code/">bson_append_code</a>(3)</code> except it allows providing a scope to the javascript function in the form of a bson document. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

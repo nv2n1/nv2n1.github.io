@@ -1,4 +1,5 @@
 ---
+
 title: "cexp2f(3)"
 name: "cexp2f"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-cexp2f/"
 description: "cexp2, cexp2f, cexp2l – base-2 exponent of a complex number"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex cexp2(double complex </code><i>z</i><code>);</code><br />
  <code>float complex cexp2f(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex cexp2l(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> The function returns 2 raised to the power of <i>z</i>.</p>
 <h2>CONFORMING TO</h2>
 <p> These function names are reserved for future use in C99. </p>

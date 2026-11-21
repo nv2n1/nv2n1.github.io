@@ -1,4 +1,5 @@
 ---
+
 title: "tiffcp(1)"
 name: "tiffcp"
 section: "1"
@@ -9,9 +10,7 @@ description: "tiffcp – copy (and possibly convert) a TIFF file"
 
 <h2>NAME</h2>
 <p> tiffcp &#8211; copy (and possibly convert) a <font SIZE="-1">TIFF</font> file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tiffcp</code> [ <i>options</i> ] <i>src1.tif &#8230; srcN.tif dst.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>tiffcp</i> combines one or more files created according to the Tag Image File Format, Revision 6.0 into a single <font SIZE="-1">TIFF</font> file. Because the output file may be compressed using a different algorithm than the input files, <i>tiffcp</i> is most often used to convert between different compression schemes. </p>
 <p> By default, <i>tiffcp</i> will copy all the understood tags in a <font SIZE="-1">TIFF</font> directory of an input file to the associated directory in the output file. </p>
 <p> <i>tiffcp</i> can be used to reorganize the storage characteristics of data in a file, but it is explicitly intended to not alter or convert the image data content in any way.</p>

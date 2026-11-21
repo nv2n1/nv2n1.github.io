@@ -1,4 +1,5 @@
 ---
+
 title: "putty(1)"
 name: "putty"
 section: "1"
@@ -9,13 +10,11 @@ description: "putty – GUI SSH, Telnet and Rlogin client for X"
 
 <h2>NAME</h2>
 <p> <code>putty</code> &#8211; GUI SSH, Telnet and Rlogin client for X</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 putty &amp;nbsp;
 [&amp;nbsp; options &amp; nbsp;] &amp; nbsp;
 [&amp;nbsp; host &amp; nbsp;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>putty</code> is a graphical SSH, Telnet and Rlogin client for X. It is a direct port of the Windows SSH client of the same name.</p>
 <h2>OPTIONS</h2>
 <p> The command-line options supported by <code>putty</code> are:</p>

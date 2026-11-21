@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_close_device(3)"
 name: "ibv_close_device"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ibv_close_device/"
 description: "ibv_open_device, ibv_close_device – open and close an RDMA device context"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_context *ibv_open_device(struct ibv_device *device);
 int ibv_close_device(struct ibv_context *context);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_open_device()</code> opens the device <i>device</i> and creates a context for further use. </p>
 <p> <code>ibv_close_device()</code> closes the device context <i>context</i>.</p>
 <h2>RETURN VALUE</h2>

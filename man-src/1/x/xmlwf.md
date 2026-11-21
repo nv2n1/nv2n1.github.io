@@ -1,4 +1,5 @@
 ---
+
 title: "xmlwf(1)"
 name: "xmlwf"
 section: "1"
@@ -9,9 +10,7 @@ description: "xmlwf – Determines if an XML document is well-formed"
 
 <h2>NAME</h2>
 <p> xmlwf &#8211; Determines if an XML document is well-formed</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xmlwf</code> [ <code>-s</code>] [ <code>-n</code>] [ <code>-p</code>] [ <code>-x</code>] [ <code>-e </code><i>encoding</i>] [ <code>-w</code>] [ <code>-d </code><i>output-dir</i>] [ <code>-c</code>] [ <code>-m</code>] [ <code>-r</code>] [ <code>-t</code>] [ <code>-v</code>] [ <code>file &#8230;</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>xmlwf</code> uses the Expat library to determine if an XML document is well-formed. It is non-validating. </p>
 <p> If you do not specify any files on the command-line, and you have a recent version of <code>xmlwf</code>, the input file will be read from standard input.</p>
 <h2>WELL-FORMED DOCUMENTS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "clascl2(3)"
 name: "clascl2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clascl2/"
 description: "clascl2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clascl2</code> (M, N, D, X, LDX)<br />
  <i></i><code>CLASCL2</code> performs diagonal scaling on a vector.</p>

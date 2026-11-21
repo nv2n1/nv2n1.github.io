@@ -1,4 +1,5 @@
 ---
+
 title: "sleep(1)"
 name: "sleep"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-sleep/"
 description: "sleep – delay for a specified amount of time"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sleep</code> <i>,NUMBER/</i>[<i>,SUFFIX/</i>]&#8230;<br />
  <code>sleep</code> <i>,OPTION/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Pause for NUMBER seconds. SUFFIX may be &#8216;s&#8217; for seconds (the default), &#8216;m&#8217; for minutes, &#8216;h&#8217; for hours or &#8216;d&#8217; for days. NUMBER need not be an integer. Given two or more arguments, pause for the amount of time specified by the sum of their values.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

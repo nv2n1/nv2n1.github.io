@@ -1,4 +1,5 @@
 ---
+
 title: "mm-common-prepare(1)"
 name: "mm-common-prepare"
 section: "1"
@@ -9,9 +10,7 @@ description: "mm-common-prepare – Prepare a C++ binding module to use mm-commo
 
 <h2>NAME</h2>
 <p> mm-common-prepare &#8211; Prepare a C++ binding module to use mm-common</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mm-common-prepare</code> [<i>OPTION</i>]&#8230; [<i>SOURCE-DIR</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Run <code>mm-common-prepare</code> to install the <i>mm-common</i> build support files into the source tree of a C++ binding module. The exact location where these files will be installed can be influenced through special macros in the <i>configure.ac</i> file.</p>
 <dl>
 <dt><code>AC_CONFIG_AUX_DIR(</code><i>[AUX-DIR]</i><code>)</code></dt>

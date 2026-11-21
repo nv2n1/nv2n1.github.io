@@ -1,4 +1,5 @@
 ---
+
 title: "cgerc(3)"
 name: "cgerc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgerc/"
 description: "cgerc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgerc</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
  <i></i><code>CGERC</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bt-obex(1)"
 name: "bt-obex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bt-obex/"
 description: "bt-obex – a bluetooth OBEX client/server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> bt-obex [<font SIZE="-1">OPTION&#8230;</font>] </p>
 <p> Help Options:<br />
 &nbsp;<wbr>&nbsp;<wbr>-h, &#8211;help </p>
@@ -16,7 +16,6 @@ description: "bt-obex – a bluetooth OBEX client/server"
 &nbsp;<wbr>&nbsp;<wbr>-s, &#8211;server&nbsp;<wbr>[&lt;path&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>-p, &#8211;opp&nbsp;<wbr>&lt;name|mac&gt;&nbsp;<wbr>&lt;file&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>-f, &#8211;ftp=&lt;name|mac&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> This utility implemented support of Object Push Profile (<font SIZE="-1">OPP</font>) and File Transfer Profile (<font SIZE="-1">FTP</font>). You can send and receive files to/from remote device using this tool.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code><br />

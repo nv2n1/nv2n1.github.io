@@ -1,4 +1,5 @@
 ---
+
 title: "cdb(3)"
 name: "cdb"
 section: "3"
@@ -12,7 +13,6 @@ description: "cdb – Constant DataBase library"
 #include &lt;cdb.h&gt;
 cc... - lcdb
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>cdb</code> is a library to create and access Constant DataBase files. File stores (key,value) pairs and used to quickly find a value based on a given key. Cdb files are create-once files, that is, once created, file cannot be updated but recreated from scratch &#8212; this is why database is called <i>constant</i>. Cdb file is optimized for quick access. Format of such file described in <i><a href="/docs/linux/man/5-cdb/">cdb</a></i>(5) manpage. This manual page corresponds to version <code>0.78</code> of <code>tinycdb</code> package. </p>
 <p> Library defines two non-interlaced interfaces: for querying existing cdb file data (read-only mode) and for creating such a file (almost write-only). Strictly speaking, those modes allows very limited set of opposite operation as well (i.e. in query mode, it is possible to update key&#8217;s value). </p>
 <p> All routines in this library are thread-safe as no global data used, except of <i>errno</i> variable for error indication. </p>

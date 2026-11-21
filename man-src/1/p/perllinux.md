@@ -1,4 +1,5 @@
 ---
+
 title: "perllinux(1)"
 name: "perllinux"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perllinux/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perllinux - Perl version 5 on Linux systems 
 
- perllinux - Perl version 5 on Linux systems 
-
-<h2>DESCRIPTION</h2>
-
- This document describes various features of Linux that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
+This document describes various features of Linux that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
 
 <h3>Experimental Support for Sun Studio Compilers for Linux <font SIZE="-1">OS</font></h3>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "guile(1)"
 name: "guile"
 section: "1"
@@ -9,10 +10,8 @@ description: "guile – The GNU Project Extension Language"
 
 <h2>NAME</h2>
 <p> guile &#8211; The GNU Project Extension Language</p>
-<h2>SYNOPSIS</h2>
 <p> <code>guile</code> [<code>-L</code> <i>DIRECTORY</i>] [<code>-l</code> <i>FILE</i>] [<code>-e</code> <i>FUNCTION</i>] [<code>\</code>] [<code>-c</code> <i>EXPR</i>] [<code>-s</code> <i>SCRIPT</i>] [<code>&#8212;</code>] [<i>SCRIPT</i> [<i>ARGs for SCRIPT</i>]] </p>
 <p> Only the most useful options are listed here; see below for the remainder.</p>
-<h2>DESCRIPTION</h2>
 <p> GNU Guile is an implementation of the Scheme programming language. It extends the R5RS and R6RS language standards, providing additional features necessary for real-world use. </p>
 <p> Guile works well for interactive use, basic scripting, and extension of larger applications, as well as for stand-alone Scheme application development. </p>
 <p> The <code>guile</code> executable itself provides a stand-alone interactive compiler and run-time for Scheme programs, both for interactive use and for executing Scheme scripts or programs. </p>

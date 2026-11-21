@@ -1,4 +1,5 @@
 ---
+
 title: "openat(2)"
 name: "openat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-openat/"
 description: "open, openat, creat – open and possibly create a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt;
 #include &lt;sys/stat.h&gt;
@@ -30,7 +30,6 @@ int openat2(int dirfd, const char *pathname,
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>open</code>() system call opens the file specified by <i>pathname</i>. If the specified file does not exist, it may optionally (if <code>O_CREAT</code> is specified in <i>flags</i>) be created by <code>open</code>(). </p>
 <p> The return value of <code>open</code>() is a file descriptor, a small, nonnegative integer that is used in subsequent system calls (<code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-write/">write</a></code>(2), <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), etc.) to refer to the open file. The file descriptor returned by a successful call will be the lowest-numbered file descriptor not currently open for the process. </p>
 <p> By default, the new file descriptor is set to remain open across an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) (i.e., the <code>FD_CLOEXEC</code> file descriptor flag described in <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) is initially disabled); the <code>O_CLOEXEC</code> flag, described below, can be used to change this default. The file offset is set to the beginning of the file (see <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2)). </p>

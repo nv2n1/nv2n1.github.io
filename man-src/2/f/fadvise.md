@@ -1,4 +1,5 @@
 ---
+
 title: "fadvise(2)"
 name: "fadvise"
 section: "2"
@@ -9,14 +10,12 @@ description: "fadvise64,fadvise64_64 – Give advice about file access"
 
 <h2>NAME</h2>
 <p> fadvise64,fadvise64_64 &#8211; Give advice about file access</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>long&nbsp;<wbr><code>fadvise64_64</code> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>);</dd>
 <dt>
 </dt><dd>long&nbsp;<wbr><code>sys_fadvise64</code>&nbsp;<wbr> (int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>, int&nbsp;<wbr><i>fs</i>, loff_t&nbsp;<wbr><i>offset</i>, loff_t&nbsp;<wbr><i>len</i>, int&nbsp;<wbr><i>advice</i>); </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> Allows an application to to tell the kernel how it expects to use a file handle, so that the kernel can choose appropriate read-ahead and caching techniques for access to the corresponding file. This is similar to the POSIX version of the <code>madvise</code> system call, but for file access instead of memory access. The sys_fadvise64() function is obsolete and corresponds to a broken glibc API, sys_fadvise64_64() is the fixed version. The following are the values for the <i>advice</i> parameter: </p>
 <dl>
 <dt>FADV_NORMAL</dt>

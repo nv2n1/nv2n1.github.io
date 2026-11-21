@@ -1,4 +1,5 @@
 ---
+
 title: "bmpanel2(1)"
 name: "bmpanel2"
 section: "1"
@@ -6,24 +7,13 @@ letter: "b"
 url: "/docs/linux/man/1-bmpanel2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+bmpanel2 - X11 NETWM compliant panel (desktop switcher, taskbar, systray, clock, launcher, etc.) with themeing capabilities. 
 
- bmpanel2 - X11 NETWM compliant panel (desktop switcher, taskbar, systray, clock, launcher, etc.) with themeing capabilities. 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 bmpanel2[-h | --help][--version][--usage][--list][--theme = &lt;theme&gt;]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- BMPanel2 (bitmap panel) is a tiny little bar on the top of the screen or on the bottom. It contains different &quot;widgets&quot; - the pieces of functionality which help user to interact with his desktop. Some of the default widgets include: 
+BMPanel2 (bitmap panel) is a tiny little bar on the top of the screen or on the bottom. It contains different &quot;widgets&quot; - the pieces of functionality which help user to interact with his desktop. Some of the default widgets include: 
 
 <dl>
 <dt>

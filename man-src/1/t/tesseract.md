@@ -1,4 +1,5 @@
 ---
+
 title: "tesseract(1)"
 name: "tesseract"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tesseract/"
 description: "tesseract – command-line OCR engine"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tesseract</code> <i>imagename</i>|<i>stdin</i> <i>outputbase</i>|<i>stdout</i> [options&#8230;] [configfile&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/1-tesseract/">tesseract</a>(1) is a commercial quality OCR engine originally developed at HP between 1985 and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It was open-sourced by HP and UNLV in 2005, and has been developed at Google since then.</p>
 <h2>IN/OUT ARGUMENTS</h2>
 <p> <i>imagename</i></p>

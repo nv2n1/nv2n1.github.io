@@ -1,4 +1,5 @@
 ---
+
 title: "zlib_decompress(1)"
 name: "zlib_decompress"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-zlib_decompress/"
 description: "zlib_decompress – decompress mysqlpump ZLIB-compressed output"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zlib_decompress </code><i>input_file</i><i>output_file</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>zlib_decompress</code> utility decompresses <code>mysqlpump</code> output that was created using ZLIB compression. </dd>
 <dl>
 <dt>

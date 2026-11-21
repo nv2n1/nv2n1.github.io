@@ -1,4 +1,5 @@
 ---
+
 title: "seahorse-daemon(1)"
 name: "seahorse-daemon"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-seahorse-daemon/"
 description: "seahorse-daemon – seahorse pass phrase caching agent"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>seahorse-daemon</code> [ <i>OPTION</i>&#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> Seahorse is a GNOME application for managing encryption keys. </p>
 <p> This is the daemon program which provides services to other parts of Seahorse. </p>
 <h2>OPTIONS</h2>

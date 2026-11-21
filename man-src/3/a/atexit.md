@@ -1,4 +1,5 @@
 ---
+
 title: "atexit(3)"
 name: "atexit"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-atexit/"
 description: "atexit – register a function to be called at normal process termination"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int atexit(void (*function)(void));
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>atexit</code>() function registers the given <i>function</i> to be called at normal process termination, either via <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3) or via return from the program&#8217;s <i>main</i>(). Functions so registered are called in the reverse order of their registration; no arguments are passed. </p>
 <p> The same function may be registered multiple times: it is called once for each registration. </p>
 <p> POSIX.1 requires that an implementation allow at least <code>ATEXIT_MAX</code> (32) such functions to be registered. The actual limit supported by an implementation can be obtained using <code><a href="/docs/linux/man/3-sysconf/">sysconf</a></code>(3). </p>

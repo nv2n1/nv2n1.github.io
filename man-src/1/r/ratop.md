@@ -1,4 +1,5 @@
 ---
+
 title: "ratop(1)"
 name: "ratop"
 section: "1"
@@ -9,9 +10,7 @@ description: "ratop – display and update sorted network flow data"
 
 <h2>NAME</h2>
 <p> <code>ratop</code> &#8211; display and update sorted network flow data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ratop [raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ratop</code> reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from an <i>argus-file</i>, or from a remote data source, and periodically displays a sorted list of network flow records. When read from a file, <code>ratop</code> displays the resulting flow caches when the file is completed, updating its status display line with each input. When reading from a live argus data stream, <code>ratop</code> will display data, asynchronously in realtime, as it is received from the source. </p>
 <p> Flow data is aggregated as its read, (see <code>racluster.1</code>), resulting in a single line for each network transaction encountered in the data stream. The default sorting key is total packets per flow, but other keys can be used instead. Flow records that have been idle for more than the default 60s are removed. Various output options, such as the specific columns of data to display, the entry idle timeout value, the screen refresh rate, etc &#8230; are all configurable. </p>
 <p> <code>ratop</code> uses <code>ncurses</code> and <code>readline.3</code>, when available, to provide a <code>vi.1</code> look and feel for displaying, navigating and modifying network flow data. </p>

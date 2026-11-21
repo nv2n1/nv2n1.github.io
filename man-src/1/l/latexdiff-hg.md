@@ -1,4 +1,5 @@
 ---
+
 title: "latexdiff-hg(1)"
 name: "latexdiff-hg"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-latexdiff-hg/"
 description: "latexdiff-vc – wrapper script that calls latexdiff for different versions of a file under version management (CVS, RCS or SVN)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>latexdiff-vc</code> [ <i>latexdiff-options</i> ] [ <i>latexdiff-vc-options</i> ] <code>-r</code> [<i>rev1</i>] [<code>-r</code> <i>rev2</i>] <i>file1.tex</i> [ <i>file2.tex</i> &#8230;] </p>
 <pre>
  or
 </pre>
 <p> <code>latexdiff-vc</code> [ <i>latexdiff-options</i> ] [ <i>latexdiff-vc-options</i> ][ <code>&#8211;postscript</code> | <code>&#8211;pdf</code> ] <i>old.tex</i> <i>new.tex</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>latexdiff-vc</i> is a wrapper script that applies <i>latexdiff</i> to a file, or multiple files under version control (git, subversion (<font SIZE="-1">SVN</font>), mercurial (hg), <font SIZE="-1">CVS, RCS</font>), and optionally runs the sequence of <tt>&quot;latex&quot;</tt> and <tt>&quot;dvips&quot;</tt> or <tt>&quot;pdflatex&quot;</tt> commands necessary to produce pdf or postscript output of the difference tex file(s). It can also be applied to a pair of files to automatise the generation of difference file in postscript or pdf format.</p>
 <h2>OPTIONS</h2>
 <dl>

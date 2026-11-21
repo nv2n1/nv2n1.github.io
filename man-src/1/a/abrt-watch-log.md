@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-watch-log(1)"
 name: "abrt-watch-log"
 section: "1"
@@ -6,16 +7,9 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-watch-log/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-watch-log - Watch log file and run command when it grows or is replaced 
 
- abrt-watch-log - Watch log file and run command when it grows or is replaced 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-watch-log</i> [-vs] [-F STR] ... FILE PROG [ARGS]
+<i>abrt-watch-log</i> [-vs] [-F STR] ... FILE PROG [ARGS]
 
 <h2>OPTIONS</h2>
 

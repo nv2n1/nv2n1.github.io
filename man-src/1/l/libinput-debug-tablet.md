@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-debug-tablet(1)"
 name: "libinput-debug-tablet"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-libinput-debug-tablet/"
 description: "libinput-debug-tablet – debug and visualize tablet axes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>libinput debug-tablet [&#8211;help] [options] [</code><i>/dev/input/event0]</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>libinput debug-tablet</code> tool debugs the values of the various axes on a tablet. This is an interactive tool. When executed, the tool will prompt the user to interact with the tablet and display the current value on each available axis. </p>
 <p> This is a debugging tool only, its output may change at any time. Do not rely on the output. </p>
 <p> This tool usually needs to be run as root to have access to the /dev/input/eventX nodes.</p>

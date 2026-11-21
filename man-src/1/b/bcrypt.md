@@ -1,4 +1,5 @@
 ---
+
 title: "bcrypt(1)"
 name: "bcrypt"
 section: "1"
@@ -9,9 +10,7 @@ description: "bcrypt – blowfish file encryption"
 
 <h2>NAME</h2>
 <p> bcrypt &#8211; blowfish file encryption</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bcrypt</code> [-orc]<code>[-s</code>N] <i>file &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>bcrypt</code> encrypts and decrypts files using the <i>blowfish </i> algorithm. </p>
 <p> Encrypted files will be saved with an extension of <code>.bfe</code>. Any files ending in <code>.bfe</code> will be assumed to be encrypted with <code>bcrypt</code> and will attempt to decrypt them. Any other input files will be encrypted. If more than one type of file is given, <code>bcrypt</code> will process all files which are the same as the first filetype given. </p>
 <p> By default, <code>bcrypt</code> will compress input files before encryption, remove input files after they are processed (assuming they are processed successfully) and overwrite input files with random data to prevent data recovery. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "jade(1)"
 name: "jade"
 section: "1"
@@ -9,7 +10,6 @@ description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 
 <h2>NAME</h2>
 <p> openjade &#8211; apply a DSSSL stylesheet to an SGML or XML document</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 openjade[-vCegG2s][-b encoding][-f error_file]
         [-c catalog_sysid][-D dir][-a link_type]
@@ -17,7 +17,6 @@ openjade[-vCegG2s][-b encoding][-f error_file]
         [-w warning_type][-d dsssl_spec][-V variable = value]
         [-t output_type][-o output_file][sysid...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>openjade</code> is an implementation of the ISO/IEC 10179:1996 standard DSSSL language. The DSSSL engine receives as input an SGML or XML document and transforms it into formats like: </p>
 <p> * XML representation of the flow object tree. </p>
 <p> * RTF format that can be rendered and printed with Microsoft&#8217;s free Word Viewer 97 </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3filestream(3)"
 name: "antlr3filestream"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3filestream/"
 description: "include/antlr3filestream.h –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> ANTLR3_API void <code>antlr3Fclose</code> (<code>ANTLR3_FDSC</code> fd)<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pulseaudio(1)"
 name: "pulseaudio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pulseaudio/"
 description: "pulseaudio – The PulseAudio Sound System"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pulseaudio [</code><i>options</i><code>] </p>
 <p> pulseaudio &#8211;help </p>
 <p> pulseaudio &#8211;version </p>
@@ -18,7 +18,6 @@ description: "pulseaudio – The PulseAudio Sound System"
 <p> pulseaudio &#8211;start </p>
 <p> pulseaudio &#8211;kill </p>
 <p> pulseaudio &#8211;check </code></p>
-<h2>DESCRIPTION</h2>
 <p> PulseAudio is a networked low-latency sound server for Linux, POSIX and Windows systems.</p>
 <h2>OPTIONS</h2>
 <dl>

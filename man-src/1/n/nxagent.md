@@ -1,4 +1,5 @@
 ---
+
 title: "nxagent(1)"
 name: "nxagent"
 section: "1"
@@ -9,9 +10,7 @@ description: "nxagent – NoMachine’s NX Agent."
 
 <h2>NAME</h2>
 <p> nxagent &#8211; NoMachine&#8217;s NX Agent.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nxagent</code> <i>[options]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>nxagent</code> is an Xnest-like X server for remote application/desktop access. </p>
 <p> <code>nxagent</code> implements a very efficient compression of the X11 protocol. </p>
 <p> This increases performance when using X applications over high latency and low bandwidth networks, while providing a local (LAN-like) usage experience even if connecting from off-site locations (via cable modem or GSM). </p>

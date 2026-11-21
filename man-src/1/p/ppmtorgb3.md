@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtorgb3(1)"
 name: "ppmtorgb3"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtorgb3/"
 description: "ppmtorgb3 – separate a portable pixmap into three portable graymaps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtorgb3</code> [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Writes three portable graymaps as output, one each for red, green, and blue. </p>
 <p> The output filenames are constructed by taking the input filename, stripping off any extension, and appending &quot;.red&quot;, &quot;.grn&quot;, and &quot;.blu&quot;. For example, separating lenna.ppm would result in lenna.red, lenna.grn, and lenna.blu. If the input comes from stdin, the names are noname.red, noname.grn, and noname.blu.</p>
 <h2>SEE ALSO</h2>

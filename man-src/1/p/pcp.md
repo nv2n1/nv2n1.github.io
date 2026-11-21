@@ -1,4 +1,5 @@
 ---
+
 title: "pcp(1)"
 name: "pcp"
 section: "1"
@@ -9,10 +10,8 @@ description: "pcp, pcp-summary – run a command or summarize an installation"
 
 <h2>NAME</h2>
 <p> <code>pcp</code>, <code>pcp-summary</code> &#8211; run a command or summarize an installation</p>
-<h2>SYNOPSIS</h2>
 <p> <code> pcp</code> [pcp options&#8230;] pcp-<i>command</i> [command options&#8230;]<br />
  <code>pcp</code> [<code>-P</code>] [<code>-a</code> <i>archive</i>] [<code>-h</code> <i>host</i>] [<code>-n</code> <i>pmnsfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>pcp</code> command is used in one of two modes. By default, it summarizes the Performance Co-Pilot (PCP) installation on the local host. This mode can also be used to summarize the installation from a remote <i>host</i>, or a historical installation from a set of PCP <i>archives</i>. This mode indirectly invokes the <code>pcp-summary</code> <i>command</i> (in the absence of any other requested command). </p>
 <p> Alternatively, a <i>command</i> can be passed to <code>pcp</code> to run, again possibly in the context of a remote <i>host</i> or set of historical <i>archives</i>.</p>
 <h2>COMMAND MODE</h2>

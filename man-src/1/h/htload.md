@@ -1,4 +1,5 @@
 ---
+
 title: "htload(1)"
 name: "htload"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-htload/"
 description: "htload – reads in an ASCII-text version of the document database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>htload</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> Htload reads in an ASCII-text version of the document database in the same form as the -t option of htdig and htdump. Note that this will overwrite data in your databases, so this should be used with great care.</p>
 <h2>OPTIONS</h2>
 <dl>

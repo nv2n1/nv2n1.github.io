@@ -1,4 +1,5 @@
 ---
+
 title: "pmdiff(1)"
 name: "pmdiff"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdiff – compares archives and report significant differences"
 
 <h2>NAME</h2>
 <p> <code>pmdiff</code> &#8211; compares archives and report significant differences</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmdiff</code> [<code>-d</code>/<code>&#8211;keep</code>] [<code>-z</code>/<code>&#8211;hostzone</code>] [<code>-p</code>/<code>&#8211;precision</code> <i>precision</i>] [<code>-q</code>/<code>&#8211;threshold</code> <i>thres</i>] [<code>-S</code>/<code>&#8211;start</code> <i>starttime</i>] [<code>-T</code>/<code>&#8211;finish</code> <i>endtime</i>] [<code>-B</code>/<code>&#8211;begin</code> <i>starttime</i>] [<code>-E</code>/<code>&#8211;end</code> <i>endtime</i>] [<code>-x</code> <i>metric</i>] [<code>-X</code> <i>file</i>] [<code>&#8211;skip-excluded</code>] [<code>&#8211;skip-missing</code>] [<code>-Z</code>/<code>&#8211;timezone</code> <i>timezone</i>] <i>archive1</i> [<i>archive2</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdiff</code> compares the average values for every metric in either one or two sets of archives, in a given time window, for changes that are likely to be of interest when searching for performance regressions. </p>
 <p> The archive specifiers <i>archive1</i> and <i>archive2</i> may be comma-separated lists of names, each of which may be the base name of an archive or the name of a directory containing one or more archives. Each archive in the resulting set of archives must have been previously created using <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). The <code><a href="/docs/linux/man/1-pmlogsummary/">pmlogsummary</a></code>(1) utility is used to obtain the average values used for comparison. </p>
 <p> There are two sorts of invocation of the tool: with either one or two sets of archives. </p>

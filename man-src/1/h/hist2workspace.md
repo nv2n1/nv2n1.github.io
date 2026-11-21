@@ -1,4 +1,5 @@
 ---
+
 title: "hist2workspace(1)"
 name: "hist2workspace"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hist2workspace/"
 description: "hist2workspace – utility to create RooFit/RooStats workspace from histograms"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hist2workspace [option] input.xml</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>hist2workspace</code> is a utility to create RooFit/RooStats workspace from histograms</p>
 <h2>OPTIONS</h2>
 <p> <code>-standard_form</code> default model, which creates an extended PDF that interpolates between RooHistFuncs. This is much faster for models with many bins and uses significantly less memory.<br />

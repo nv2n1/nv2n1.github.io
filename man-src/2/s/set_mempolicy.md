@@ -1,4 +1,5 @@
 ---
+
 title: "set_mempolicy(2)"
 name: "set_mempolicy"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-set_mempolicy/"
 description: "set_mempolicy – set default NUMA memory policy for a thread and its children"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;numaif.h&gt;
 long set_mempolicy(int mode, const unsigned long *nodemask,
                    unsigned long maxnode);
 Link with - lnuma.
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>set_mempolicy</code>() sets the NUMA memory policy of the calling thread, which consists of a policy mode and zero or more nodes, to the values specified by the <i>mode</i>, <i>nodemask</i>, and <i>maxnode</i> arguments. </p>
 <p> A NUMA machine has different memory controllers with different distances to specific CPUs. The memory policy defines from which node memory is allocated for the thread. </p>
 <p> This system call defines the default policy for the thread. The thread policy governs allocation of pages in the process&#8217;s address space outside of memory ranges controlled by a more specific policy set by <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2). The thread default policy also controls allocation of any pages for memory-mapped files mapped using the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) call with the <code>MAP_PRIVATE</code> flag and that are only read (loaded) from by the thread and of memory-mapped files mapped using the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) call with the <code>MAP_SHARED</code> flag, regardless of the access type. The policy is applied only when a new page is allocated for the thread. For anonymous memory this is when the page is first touched by the thread. </p>

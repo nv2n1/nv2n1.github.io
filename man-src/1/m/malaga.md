@@ -1,4 +1,5 @@
 ---
+
 title: "malaga(1)"
 name: "malaga"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-malaga/"
 description: "malaga – natural-language word and sentence analysis"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>malaga</code> [<code>-morphology</code>|<code>-syntax</code>] [<code>-quoted</code>] [<code>-input</code> <i>input</i>] <i>project-file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Malaga is a development environment for natural-language grammars based on the Left-Associative Grammar formalism. Malaga grammars can be used for automatic morphological and/or syntactic analysis. </p>
 <p> The program <code>malaga</code> is Malaga&#8217;s user interface for analysing word forms and sentences, displaying the results and finding bugs in a grammar. </p>
 <p> <code>malaga</code> requires the name of a language-dependent <i>project-file</i> as a command-line argument. </p>

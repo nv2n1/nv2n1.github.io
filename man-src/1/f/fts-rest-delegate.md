@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-delegate(1)"
 name: "fts-rest-delegate"
 section: "1"
@@ -11,7 +12,6 @@ description: "fts-rest-delegate"
 <p> fts-rest-delegate</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-delegate [options]</p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to (re)delegate your credentials to the FTS3 server</p>
 <h2>OPTIONS</h2>
 <dl>

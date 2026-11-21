@@ -1,4 +1,5 @@
 ---
+
 title: "dh_link(1)"
 name: "dh_link"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_link/"
 description: "dh_link – create symlinks in package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_link</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-X</code><i>item</i>] [<i>source destination</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_link</code> is a debhelper program that creates symlinks in package build directories. </p>
 <p> <code>dh_link</code> accepts a list of pairs of source and destination files. The source files are the already existing files that will be symlinked from (called <code>target</code> by <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)). The destination files are the symlinks that will be created (called <code>link name</code> by <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)). There <code>must</code> be an equal number of source and destination files specified. </p>
 <p> Be sure you <code>do</code> specify the absolute path to both the source and destination files (unlike you would do if you were using something like <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)). Please note that the leading slash is optional. </p>

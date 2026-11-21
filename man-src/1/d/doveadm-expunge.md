@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-expunge(1)"
 name: "doveadm-expunge"
 section: "1"
@@ -9,11 +10,9 @@ description: "doveadm-expunge – Expunge messages matching given search query"
 
 <h2>NAME</h2>
 <p> doveadm-expunge &#8211; Expunge messages matching given search query</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <i>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <code>-A</code><i> search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <code>-u</code><i> user search_query</i></p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to expunge mails matching the given search query. It is typically used to expunge old mails from users&#8217; Trash and/or Spam mailboxes. To test which messages a given search query would match, you can use <i>doveadm fetch</i> or <i>doveadm search</i> commands. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will executed the <code>expunge</code> action with the environment of the logged in system user. </p>
 <p> In the second form, the command will be performed for all users. </p>

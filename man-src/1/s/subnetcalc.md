@@ -1,4 +1,5 @@
 ---
+
 title: "subnetcalc(1)"
 name: "subnetcalc"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-subnetcalc/"
 description: "subnetcalc – IPv4/IPv6 Subnet Calculator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>subnetcalc</code> &#8211; IPv4/IPv6 Subnet Calculator </p>
-<h2>SYNOPSIS</h2>
 <p> <code>subnetcalc</code> [Address] [Netmask/Prefix] [-<code>n</code> ] [-<code>uniquelocal</code> ] [-<code>uniquelocalhq</code> ] [-<code>nocolour|-nocolor</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>subnetcalc</code> is an IPv4/IPv6 subnet address calculator. For given IPv4 or IPv6 address and netmask or prefix length, it calculates network address, broadcast address, maximum number of hosts and host address range. Also, it prints the addresses in binary format for better understandability. Furthermore, it prints useful information on specific address types (e.g. type, scope, interface ID, etc.). </p>
 <h2>ARGUMENTS</h2>
 <p> The following arguments have to be provided:</p>

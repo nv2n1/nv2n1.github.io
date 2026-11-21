@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-mkdir(1)"
 name: "shtool-mkdir"
 section: "1"
@@ -8,9 +9,7 @@ description: "shtool mkdir – GNU shtool"
 ---
 
 <p><a href="/docs/linux/man/1-mkdir/">mkdir</a>(1) style command</p>
-<h2>SYNOPSIS</h2>
 <p> <code>shtool mkdir</code> [<code>-t</code>|<code>&#8211;trace</code>] [<code>-f</code>|<code>&#8211;force</code>] [<code>-p</code>|<code>&#8211;parents</code>] [<code>-m</code>|<code>&#8211;mode</code> <i>mode</i>] [<code>-o</code>|<code>&#8211;owner</code> <i>owner</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] <i>dir</i> [<i>dir</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This is a <i><a href="/docs/linux/man/1-mkdir/">mkdir</a></i>(1) style command with additional options and the ability to be smart if the directory already exists which is important for installation procedures.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

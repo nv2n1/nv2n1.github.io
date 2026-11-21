@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-elfedit(1)"
 name: "x86_64-linux-gnu-elfedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-elfedit/"
 description: "elfedit – update ELF header and program property of ELF files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> elfedit [<code>&#8211;input-mach=</code><i>machine</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;input-type=</code><i>type</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;input-osabi=</code><i>osabi</i>]<br />
@@ -21,7 +21,6 @@ description: "elfedit – update ELF header and program property of ELF files"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>elffile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>elfedit</code> updates the <font SIZE="-1">ELF</font> header and program property of <font SIZE="-1">ELF</font> files which have the matching <font SIZE="-1">ELF</font> machine and file types. The options control how and which fields in the <font SIZE="-1">ELF</font> header and program property should be updated. </p>
 <p> <i>elffile</i>&#8230; are the <font SIZE="-1">ELF</font> files to be updated. 32-bit and 64-bit <font SIZE="-1">ELF</font> files are supported, as are archives containing <font SIZE="-1">ELF</font> files.</p>
 <h2>OPTIONS</h2>

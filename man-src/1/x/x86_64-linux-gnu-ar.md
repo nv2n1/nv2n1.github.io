@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-ar(1)"
 name: "x86_64-linux-gnu-ar"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-ar/"
 description: "ar – create, modify, and extract from archives"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ar [<code>-X32_64</code>] [<code>&#8211;</code>]<i>p</i>[<i>mod</i>] [<code>&#8211;plugin</code> <i>name</i>] [<code>&#8211;target</code> <i>bfdname</i>] [<code>&#8211;output</code> <i>dirname</i>] [<code>&#8211;record-libdeps</code> <i>libdeps</i>] [<code>&#8211;thin</code>] [<i>relpos</i>] [<i>count</i>] <i>archive</i> [<i>member</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <font SIZE="-1">GNU</font> <code>ar</code> program creates, modifies, and extracts from archives. An <i>archive</i> is a single file holding a collection of other files in a structure that makes it possible to retrieve the original individual files (called <i>members</i> of the archive). </p>
 <p> The original files&#8217; contents, mode (permissions), timestamp, owner, and group are preserved in the archive, and can be restored on extraction. </p>
 <p> <font SIZE="-1">GNU</font> <code>ar</code> can maintain archives whose members have names of any length; however, depending on how <code>ar</code> is configured on your system, a limit on member-name length may be imposed for compatibility with archive formats maintained with other tools. If it exists, the limit is often 15 characters (typical of formats related to a.out) or 16 characters (typical of formats related to coff). </p>

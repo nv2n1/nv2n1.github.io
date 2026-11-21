@@ -1,4 +1,5 @@
 ---
+
 title: "flow-export(1)"
 name: "flow-export"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-export – Export flow-tools files into other NetFlow package
 
 <h2>NAME</h2>
 <p> flow-export &#8211; Export flow-tools files into other NetFlow packages.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-export</code> [ <code>-h</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> format</i> ] [ <code>-m</code><i> mask_fields</i> ] [ <code>-u</code><i> user:password:host:port:name:table</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-export</code> utility will convert flow-tools flow files to ASCII CSV, cflowd, pcap, wire, mySQL, and PGSQL format.</p>
 <h2>OPTIONS</h2>
 <dl>

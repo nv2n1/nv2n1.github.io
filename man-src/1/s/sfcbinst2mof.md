@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbinst2mof(1)"
 name: "sfcbinst2mof"
 section: "1"
@@ -9,7 +10,6 @@ description: "sfcbinst2mof – Dump static instances to mof"
 
 <h2>NAME</h2>
 <p> sfcbinst2mof &#8211; Dump static instances to mof</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sfcbinst2mof &lt;options&gt; [-n namespace] [-c classname]</code></p>
 <h2>OPTIONS</h2>
 <p> Allowed options are:</p>

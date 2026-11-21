@@ -1,4 +1,5 @@
 ---
+
 title: "pssh(1)"
 name: "pssh"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pssh/"
 description: "pssh — parallel ssh program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pssh</code> [<code>-vAiIP</code>] [<code>-h</code> <i>hosts_file</i>] [<code>-H</code> [<i>user</i>@]<i>host</i>[:<i>port</i>]] [<code>-l</code> <i>user</i>] [<code>-p</code> <i>par</i>] [<code>-o</code> <i>outdir</i>] [<code>-e</code> <i>errdir</i>] [<code>-t</code> <i>timeout</i>] [<code>-O</code> <i>options</i>] [<code>-x</code> <i>args</i>] [<code>-X</code> <i>arg</i>] <i>command &#8230;</i> </p>
 <p> <code>pssh -I</code> [<code>-vAiIP</code>] [<code>-h</code> <i>hosts_file</i>] [<code>-H</code> [<i>user</i>@]<i>host</i>[:<i>port</i>]] [<code>-l</code> <i>user</i>] [<code>-p</code> <i>par</i>] [<code>-o</code> <i>outdir</i>] [<code>-e</code> <i>errdir</i>] [<code>-t</code> <i>timeout</i>] [<code>-O</code> <i>options</i>] [<code>-x</code> <i>args</i>] [<code>-X</code> <i>arg</i>] [<i>command</i> <i>&#8230;</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pssh</code> is a program for executing ssh in parallel on a number of hosts. It provides features such as sending input to all of the processes, passing a password to ssh, saving output to files, and timing out. </p>
 <p> The PSSH_NODENUM and PSSH_HOST environment variables are sent to the remote host. The PSSH_NODENUM variable is assigned a unique number for each ssh connection, starting with 0 and counting up. The PSSH_HOST variable is assigned the name of the host as specified in the hosts list. Note that sshd drops environment variables by default, so sshd_config on the remote host must include the line:</p>
 <dl>

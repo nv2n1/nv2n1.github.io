@@ -1,4 +1,5 @@
 ---
+
 title: "xdt-csource(1)"
 name: "xdt-csource"
 section: "1"
@@ -6,24 +7,13 @@ letter: "x"
 url: "/docs/linux/man/1-xdt-csource/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+xdt-csource - C code generation utility for arbitrary data 
 
- xdt-csource - C code generation utility for arbitrary data 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <b>xdt-csource</b> [<i>options</i>] [<i>file</i>] 
+<b>xdt-csource</b> [<i>options</i>] [<i>file</i>] 
 
  <b>xdt-csource</b> [<i>options</i>] <b>--build-list</b> [[<i>name file</i>]...]
 
-<h2>DESCRIPTION</h2>
-
- 
-
- <b>xdt-csource</b> is a small utility that generates C code containing arbitrary data, useful for compiling texts or other data directly into programs.
+<b>xdt-csource</b> is a small utility that generates C code containing arbitrary data, useful for compiling texts or other data directly into programs.
 
 <h2>INVOCATION</h2>
 

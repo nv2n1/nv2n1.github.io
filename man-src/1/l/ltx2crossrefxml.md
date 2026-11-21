@@ -1,4 +1,5 @@
 ---
+
 title: "ltx2crossrefxml(1)"
 name: "ltx2crossrefxml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ltx2crossrefxml/"
 description: "ltx2crossrefxml.pl – create XML files for submitting to crossref.org"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ltx2crossrefxml [<code>-c</code> <i>config_file</i>] [<code>-o</code> <i>output_file</i>] [<code>-input-is-xml</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>latex_file1</i>&nbsp;<i>latex_file2</i>&nbsp;&#8230;</p>
 <h2>OPTIONS</h2>
@@ -19,7 +19,6 @@ description: "ltx2crossrefxml.pl – create XML files for submitting to crossref
 <dt><code>-rpi-is-xml</code></dt>
 <dd> Do not transform author and title input strings, assume they are valid <font SIZE="-1">XML.</font></dd></dl>
 <p> The usual <tt>&quot;--help&quot;</tt> and <tt>&quot;--version&quot;</tt> options are also supported. Options can begin with either <tt>&quot;-&quot;</tt> or <tt>&quot;--&quot;</tt>, and ordered arbitrarily.</p>
-<h2>DESCRIPTION</h2>
 <p> For each given <i>latex_file</i>, this script reads <tt>&quot;.rpi&quot;</tt> and (if they exist) <tt>&quot;.bbl&quot;</tt> files and outputs corresponding <font SIZE="-1">XML</font> that can be uploaded to Crossref (&lt;<a rel="nofollow" href="https://crossref.org">https://crossref.org</a>&gt;). Any extension of <i>latex_file</i> is ignored, and <i>latex_file</i> itself is not read (and need not even exist). </p>
 <p> Each <tt>&quot;.rpi&quot;</tt> file specifies the metadata for a single article to be uploaded to Crossref (a <tt>&quot;journal_article&quot;</tt> element in their schema); an example is below. These files are output by the <tt>&quot;resphilosophica&quot;</tt> package (&lt;<a rel="nofollow" href="https://ctan.org/pkg/resphilosophica">https://ctan.org/pkg/resphilosophica</a>&gt;), but (as always) can also be created by hand or by whatever other method you implement. </p>
 <p> Any <tt>&quot;.bbl&quot;</tt> files present are used for the citation information in the output <font SIZE="-1">XML.</font> See the <font SIZE="-1">CITATIONS</font> section below. </p>

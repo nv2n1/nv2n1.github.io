@@ -1,4 +1,5 @@
 ---
+
 title: "db2x_manxml(1)"
 name: "db2x_manxml"
 section: "1"
@@ -9,9 +10,7 @@ description: "db2x_manxml – Make man pages from Man-XML"
 
 <h2>NAME</h2>
 <p> db2x_manxml &#8211; Make man pages from Man-XML</p>
-<h2>SYNOPSIS</h2>
 <p> <code>db2x_manxml</code> [<i>options</i>] [<i>xml-document</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>db2x_manxml</code> converts a Man-XML document into one or more man pages. They are written in the current directory. </p>
 <p> If <i>xml-document</i> is not given, then the document to convert is read from standard input.</p>
 <h2>OPTIONS</h2>

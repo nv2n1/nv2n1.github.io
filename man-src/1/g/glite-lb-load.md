@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-load(1)"
 name: "glite-lb-load"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-load/"
 description: "glite-lb-load – utility for loading job events into the L&B database"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-load</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-load </code> is utility for loading job events into the L&amp;B database. It is primarilly used for recovery purposes. By default, it loads events from the last dump. </p>
 <h2>OPTIONS</h2>
 <dl>

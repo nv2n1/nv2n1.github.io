@@ -1,4 +1,5 @@
 ---
+
 title: "annuity_(3)"
 name: "annuity_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-annuity_/"
 description: "QuantLib::HaganPricer – CMS-coupon pricer."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/conundrumpricer.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CmsCouponPricer</code>. </p>
 <p> Inherited by <code>AnalyticHaganPricer</code>, and <code>NumericHaganPricer</code>. </p>

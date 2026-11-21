@@ -1,4 +1,5 @@
 ---
+
 title: "clacrt(3)"
 name: "clacrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clacrt/"
 description: "clacrt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clacrt</code> (N, CX, INCX, CY, INCY, C, S)<br />
  <i></i><code>CLACRT</code> performs a linear transformation of a pair of complex vectors.</p>

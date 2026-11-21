@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-generate-lockfile(1)"
 name: "cargo-generate-lockfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-generate-lockfile/"
 description: "cargo-generate-lockfile – Generate the lockfile for a project"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo generate-lockfile [OPTIONS]</p>
 <h2>OPTIONS</h2>
 <dl>

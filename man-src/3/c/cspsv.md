@@ -1,4 +1,5 @@
 ---
+
 title: "cspsv(3)"
 name: "cspsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cspsv/"
 description: "cspsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cspsv</code> (UPLO, N, NRHS, AP, IPIV, B, LDB, INFO)<br />
  <i></i><code> CSPSV computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>

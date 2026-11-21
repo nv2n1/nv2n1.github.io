@@ -1,4 +1,5 @@
 ---
+
 title: "ansible-playbook(1)"
 name: "ansible-playbook"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ansible-playbook/"
 description: "ansible-playbook – run an ansible playbook"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ansible-playbook &lt;filename.yml&gt; &#8230; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ansible playbooks</code> are a configuration and multinode deployment system. Ansible-playbook is the tool used to run them. See the project home page (link below) for more information.</p>
 <h2>ARGUMENTS</h2>
 <p> <code>filename.yml</code></p>

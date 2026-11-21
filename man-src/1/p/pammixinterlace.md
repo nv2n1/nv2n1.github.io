@@ -1,4 +1,5 @@
 ---
+
 title: "pammixinterlace(1)"
 name: "pammixinterlace"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-pammixinterlace/"
 description: "pammixinterlace – mix adjacent lines to merge interlaced images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pammixinterlace</code> </p>
 <p> [<code>-filter=</code>{<code>linear</code>, <code>fir</code>, <code>ffmpeg</code>}] </p>
 <p> [<code>-adaptive</code>] </p>
 <p> [<i>infile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pammixinterlace</code> is meant to operate on an image which is the interlacing of two images, where raster rows 0, 2, 4, etc. are from one image and rows 1, 3, 5, etc. are from another. (See below for why you might expect to encounter such an image). </p>
 <p> <code>pammixinterlace</code> makes each row of the output a mixture of the corresponding row of the input and its two neighbors. It uses half of the main row and a quarter each of the two neighbor rows. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fio2gnuplot(1)"
 name: "fio2gnuplot"
 section: "1"
@@ -9,13 +10,11 @@ description: "fio2gnuplot – Render fio’s output files with gnuplot"
 
 <h2>NAME</h2>
 <p> <code>fio2gnuplot </code>&#8211; Render fio&#8217;s output files with gnuplot</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 fio2gnuplot[-ghbiodvk][-t title][-o outputfile]
            [-d output_dir][-p pattern]
            [-G type][-m min_time][-M max_time]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>fio2gnuplot</code> analyze a set of fio&#8217;s log files to turn them into a set of graphical traces using gnuplot tool. Several flavor of plotting are produced</p>
 <dl>
 <dt><code>Individual 2D Graph</code></dt>

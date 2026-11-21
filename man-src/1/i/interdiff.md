@@ -1,4 +1,5 @@
 ---
+
 title: "interdiff(1)"
 name: "interdiff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-interdiff/"
 description: "interdiff – show differences between two diff files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>interdiff</code> [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [[-U&nbsp;<i>n</i>] | [&#8211;unified=<i>n</i>]] [[-d&nbsp;<i>PAT</i>] | [&#8211;drop-context=<i>PAT</i>]] [[-q] | [&#8211;quiet]] [[-z] | [&#8211;decompress]] [[-b] | [&#8211;ignore-space-change]] [[-B] | [&#8211;ignore-blank-lines]] [[-i] | [&#8211;ignore-case]] [[-w] | [&#8211;ignore-all-space]] [[&#8211;interpolate] | [&#8211;combine] | [&#8211;flip]] [&#8211;no-revert-omitted] <i>diff1</i> <i>diff2</i></dt>
 <dt> <code>interdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>interdiff</code></p>
 <dd>creates a unified format diff that expresses the difference between two diffs. The diffs must both be relative to the same files. For best results, the diffs must have at least three lines of context. </dd>
 <p> To reverse a patch, use /dev/null for <i>diff2</i>. </p>

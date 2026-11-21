@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_send(3)"
 name: "gnutls_ia_send"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ia_send – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ia_send &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>ssize_t gnutls_ia_send(gnutls_session_t </code><i>session</i><code>, const char * </code><i>data</i><code>, size_t </code><i>sizeofdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_ia_send – API function"
 <dd> contains the data to send</dd>
 <dt>size_t sizeofdata</dt>
 <dd> is the length of the data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Send TLS/IA application payload data. This function has the similar semantics with <code>send()</code>. The only difference is that it accepts a GnuTLS session, and uses different error codes. </p>
 <p> The TLS/IA protocol is synchronous, so you cannot send more than one packet at a time. The client always send the first packet. </p>
 <p> To finish an application phase in the server, use <code>gnutls_ia_endphase_send()</code>. The client cannot end an application phase unilaterally; rather, a client is required to respond with an endphase of its own if gnutls_ia_recv indicates that the server has sent one. </p>

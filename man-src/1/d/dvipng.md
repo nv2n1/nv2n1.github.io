@@ -1,4 +1,5 @@
 ---
+
 title: "dvipng(1)"
 name: "dvipng"
 section: "1"
@@ -6,10 +7,9 @@ letter: "d"
 url: "/docs/linux/man/1-dvipng/"
 description: "dvipng – A DVI-to-PNG translator"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> dvipng [options] filename </p>
 <p> dvipng [options] [filename] -  </p>
-<h2>DESCRIPTION</h2>
 <p> This program makes <font SIZE="-1">PNG</font> and/or <font SIZE="-1">GIF</font> graphics from <font SIZE="-1">DVI</font> files as obtained from TeX and its relatives. </p>
 <p> If <font SIZE="-1">GIF</font> support is enabled, <font SIZE="-1">GIF</font> output is chosen by using the <code>dvigif</code> binary or with the <code>--gif</code> option. </p>
 <p> The benefits of <code>dvipng</code>/<code>dvigif</code> include </p>

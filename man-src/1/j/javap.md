@@ -1,4 +1,5 @@
 ---
+
 title: "javap(1)"
 name: "javap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-javap/"
 description: "javap – Disassembles one or more class files."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -23,7 +23,6 @@ description: "javap – Disassembles one or more class files."
 <dl>
 <dt>
 </dt><dd> One or more classes separated by spaces to be processed for annotations such as DocFooter.class. You can specify a class that can be found in the class path, by its file name or with a URL such as <code>file:///home/user/myproject/src/DocFooter.class</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>javap</code> command disassembles one or more class files. The output depends on the options used. When no options are used, then the <code>javap</code> command prints the package, protected and public fields, and methods of the classes passed to it. The <code>javap</code> command prints its output to <code>stdout</code>.</p>
 <h2>OPTIONS</h2>
 <p> -help<br />

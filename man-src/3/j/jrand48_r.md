@@ -1,4 +1,5 @@
 ---
+
 title: "jrand48_r(3)"
 name: "jrand48_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-jrand48_r/"
 description: "drand48_r, erand48_r, lrand48_r, nrand48_r, mrand48_r, jrand48_r, srand48_r, seed48_r, lcong48_r – generate uniformly distributed pseudo-random numbers reentrantly"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int drand48_r(struct drand48_data *buffer, double *result);
@@ -29,7 +29,6 @@ int lcong48_r(unsigned short param[7],
 <p> All functions shown above:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> These functions are the reentrant analogs of the functions described in <code><a href="/docs/linux/man/3-drand48/">drand48</a></code>(3). Instead of modifying the global random generator state, they use the supplied data <i>buffer</i>. </p>
 <p> Before the first use, this struct must be initialized, for example, by filling it with zeros, or by calling one of the functions <code>srand48_r</code>(), <code>seed48_r</code>(), or <code>lcong48_r</code>().</p>
 <h2>RETURN VALUE</h2>

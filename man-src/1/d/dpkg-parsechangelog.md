@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-parsechangelog(1)"
 name: "dpkg-parsechangelog"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-parsechangelog/"
 description: "dpkg-parsechangelog – parse Debian changelog files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-parsechangelog</code> [<i>option</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-parsechangelog</code> reads and parses the changelog of an unpacked Debian source tree and outputs the information in it to standard output in a machine-readable form.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_za(1)"
 name: "tv_grab_za"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tv_grab_za/"
 description: "tv_grab_za – Grab TV listings for South Africa."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_za &#8211;help </p>
 <p> tv_grab_za [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">OPTION</font>] </p>
 <p> tv_grab_za [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;output <font SIZE="-1">FILE</font>] [&#8211;days N] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> [&#8211;quiet] [&#8211;retries N]</p>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings for <font SIZE="-1">DSTV</font> channels available in South Africa. The data comes from <a rel="nofollow" href="http://www.dstv.com">www.dstv.com</a>. The grabber relies on parsing <font SIZE="-1">HTML</font> so it might stop working at any time. </p>
 <p> First run <code>tv_grab_za &#8211;configure</code> to choose, which channels you want to download. Then running <code>tv_grab_za</code> with no arguments will output listings in <font SIZE="-1">XML</font> format to standard output. </p>
 <p> <code>&#8211;configure</code> Prompt for which channels, and write the configuration file. </p>

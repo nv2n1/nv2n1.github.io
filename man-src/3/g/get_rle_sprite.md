@@ -1,4 +1,5 @@
 ---
+
 title: "get_rle_sprite(3)"
 name: "get_rle_sprite"
 section: "3"
@@ -9,10 +10,8 @@ description: "get_rle_sprite – Creates an RLE sprite using a bitmap as source.
 
 <h2>NAME</h2>
 <p> get_rle_sprite &#8211; Creates an RLE sprite using a bitmap as source. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>RLE_SPRITE *get_rle_sprite(BITMAP *bitmap);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Creates an RLE sprite based on the specified bitmap (which must be a memory bitmap). Remember to free this RLE sprite later to avoid memory leaks. Example: </p>
 <pre><code>
 RLE_SPRITE *rle;

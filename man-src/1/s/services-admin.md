@@ -1,4 +1,5 @@
 ---
+
 title: "services-admin(1)"
 name: "services-admin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-services-admin/"
 description: "services-admin – Services Administration Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>services-admin</code> [<i>OPTION&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>services-admin</code> is part of the GNOME system tools, a set of tools to easily access and manage system configuration. </p>
 <p> <code>services-admin</code> allows you to specify which services will be started during the system boot process.</p>
 <h2>OPTIONS</h2>

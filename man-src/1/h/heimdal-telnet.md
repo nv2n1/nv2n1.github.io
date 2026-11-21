@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-telnet(1)"
 name: "heimdal-telnet"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-heimdal-telnet/"
 description: "telnet – user interface to the TELNET protocol"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>telnet</code> &#8211; user interface to the <code>TELNET</code> protocol </p>
-<h2>SYNOPSIS</h2>
 <p> <code>telnet</code> [-<code>78EFKLacdfrx</code> ] [-<code>S </code><i>tos</i> ] [-<code>X </code><i>authtype</i> ] [-<code>e </code><i>escapechar</i> ] [-<code>k </code><i>realm</i> ] [-<code>l </code><i>user</i> ] [-<code>n </code><i>tracefile</i> ] [<i>host</i> [port] ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>telnet</code> command is used to communicate with another host using the <code>TELNET</code> protocol. If <code>telnet</code> is invoked without the <i>host</i> argument, it enters command mode, indicated by its prompt (<code>telnet&gt;</code> ) In this mode, it accepts and executes the commands listed below. If it is invoked with arguments, it performs an <code>open</code> command with those arguments. </p>
 <p> Options:</p>
 <dl>

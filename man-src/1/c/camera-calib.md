@@ -1,4 +1,5 @@
 ---
+
 title: "camera-calib(1)"
 name: "camera-calib"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-camera-calib/"
 description: "camera-calib – GUI for calibrating a monocular camera using a checker-board"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> camera-calib</p>
-<h2>DESCRIPTION</h2>
 <p> <code>camera-calib-gui</code> is a graphical application which allows the user to select a sequence of images where a checkerboad (calibration pattern) appears, then it computes the intrinsic and distortion parameters of the camera, using the OpenCV implementation of Zhang&#8217;s algorithm. </p>
 <p> The sequence of images can be grabbed directly from a webcam, firewire camera or any other video source.</p>
 <h2>BUGS</h2>

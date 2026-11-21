@@ -1,4 +1,5 @@
 ---
+
 title: "djpeg(1)"
 name: "djpeg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-djpeg/"
 description: "djpeg – decompress a JPEG file to an image file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>djpeg</code> [ <i>options</i> ] [ <i>filename</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>djpeg</code> decompresses the named JPEG file, or the standard input if no file is named, and produces an image file on the standard output. PBMPLUS (PPM/PGM), BMP, GIF, Targa, or RLE (Utah Raster Toolkit) output format can be selected. (RLE is supported only if the URT library is available.)</p>
 <h2>OPTIONS</h2>
 <p> All switch names may be abbreviated; for example, <code>-grayscale</code> may be written <code>-gray</code> or <code>-gr</code>. Most of the &quot;basic&quot; switches can be abbreviated to as little as one letter. Upper and lower case are equivalent (thus <code>-BMP</code> is the same as <code>-bmp</code>). British spellings are also accepted (e.g., <code>-greyscale</code>), though for brevity these are not mentioned below. </p>

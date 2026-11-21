@@ -1,4 +1,5 @@
 ---
+
 title: "nitrocli(1)"
 name: "nitrocli"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nitrocli/"
 description: "nitrocli – access Nitrokey devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nitrocli</code> <i>command</i> [<i>arguments</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nitrocli</code> provides access to Nitrokey devices. It supports the Nitrokey Pro, the Nitrokey Storage, and the Librem Key. It can be used to access the encrypted volume, the one-time password generator, and the password safe.</p>
 <h3>Device selection</h3>
 <p> Per default, <code>nitrocli</code> connects to any attached Nitrokey device. You can use the <code>&#8211;model</code>, <code>&#8211;serial-number</code> and <code>&#8211;usb-path</code> options to select the device to connect to. <code>nitrocli</code> fails if more than one attached Nitrokey device matches this filter or if multiple Nitrokey devices are attached and none of the filter options is set. Use the <code>list</code> command to list all attached devices with their USB path, model, and serial number (if available).</p>

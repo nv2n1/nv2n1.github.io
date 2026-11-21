@@ -1,4 +1,5 @@
 ---
+
 title: "ctgsna(3)"
 name: "ctgsna"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctgsna/"
 description: "ctgsna.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code>CTGSNA</code></p>

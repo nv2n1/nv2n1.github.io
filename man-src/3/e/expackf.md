@@ -1,4 +1,5 @@
 ---
+
 title: "expackf(3)"
 name: "expackf"
 section: "3"
@@ -9,10 +10,8 @@ description: "expackf – Using custom PACKFILE vtables. Allegro game programmin
 
 <h2>NAME</h2>
 <p> expackf &#8211; Using custom PACKFILE vtables. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example expackf</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program demonstrates the use of the packfile functions, with some simple tests. </p>
 <p> The first test uses the standard packfile functions to transfer a bitmap file into a block of memory, then reads the bitmap out of the block of memory, using a custom packfile vtable. </p>
 <p> The second test reads in a bitmap with another custom packfile vtable, which uses libc&#8217;s file stream functions. </p>

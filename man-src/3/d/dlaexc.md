@@ -1,4 +1,5 @@
 ---
+
 title: "dlaexc(3)"
 name: "dlaexc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaexc/"
 description: "dlaexc.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaexc</code> (WANTQ, N, T, LDT, Q, LDQ, J1, N1, N2, WORK, INFO)<br />
  <i></i><code>DLAEXC</code> swaps adjacent diagonal blocks of a real upper quasi-triangular matrix in Schur canonical form, by an orthogonal similarity transformation.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-select-session(1)"
 name: "byobu-select-session"
 section: "1"
@@ -9,7 +10,6 @@ description: "byobu-select-session – select and connect to a byobu session"
 
 <h2>NAME</h2>
 <p> byobu-select-session &#8211; select and connect to a byobu session </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu-select-session</code> is an application that lists the available screen sessions running on the system, and prompts the user to select one. The user also has the option to create a new Byobu session, or launch the default shell without Byobu. </p>
 <p> If an invalid selection is chosen 3 times in a row, the user is connected to the youngest session. </p>
 <p> By default, if only one session exists, the user is connected to that session, and if no sessions exist, a new session is created &#8212; such that there is no interactive prompt in the normal behavior. However, some users may choose to always be prompted, by touching the file $BYOBU_CONFIG_DIR/.always-select. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dgetc2(3)"
 name: "dgetc2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgetc2/"
 description: "dgetc2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgetc2</code> (N, A, LDA, IPIV, JPIV, INFO)<br />
  <i></i><code>DGETC2</code> computes the LU factorization with complete pivoting of the general n-by-n matrix.</p>

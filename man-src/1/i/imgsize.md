@@ -1,4 +1,5 @@
 ---
+
 title: "imgsize(1)"
 name: "imgsize"
 section: "1"
@@ -11,7 +12,6 @@ description: "imgsize – read the dimensions of an image in several popular for
 <pre><code>
 imgsize[-r | -a | -f fmt] file[file...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> No-brainer to size an image supplied on the command-line. All the real work is done in Image::Size.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> <code>imgsize</code> expects file names on the command-line. If more than one file is provided, the file name will be included in the output: </p>

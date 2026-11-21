@@ -1,4 +1,5 @@
 ---
+
 title: "dnsipq(1)"
 name: "dnsipq"
 section: "1"
@@ -6,12 +7,10 @@ letter: "d"
 url: "/docs/linux/man/1-dnsipq/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnsipq</code> [<code>OPTIONS</code>] &lt;domain-name&gt; [&lt;domain-name&gt; &#8230;]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>dnsipq</code> accepts a list of fully qualified domain names, resolves each of them and prints a record of the form: </p>
 <p>&nbsp;<wbr>&lt;domain-name&gt;&nbsp;<wbr>&lt;ip-address&gt; </p>
 <p> for each domain name. </p>

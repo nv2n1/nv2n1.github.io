@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-purge(1)"
 name: "doveadm-purge"
 section: "1"
@@ -9,11 +10,9 @@ description: "doveadm-purge – Remove messages with refcount=0 from mdbox files
 
 <h2>NAME</h2>
 <p> doveadm-purge &#8211; Remove messages with refcount=0 from mdbox files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>purge</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i>&nbsp;<wbr>user</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>doveadm purge</code> command is used to remove all messages with refcount=0 from a user&#8217;s mail storage. The refcount of a message is decreased to 0 when the user (or some administration utility) has expunged all instances of a message from all mailboxes. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will perform the <code>purge</code> action for the currently logged in user. </p>
 <p> In the second form, the command will be executed for all users </p>

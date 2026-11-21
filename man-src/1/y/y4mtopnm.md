@@ -1,4 +1,5 @@
 ---
+
 title: "y4mtopnm(1)"
 name: "y4mtopnm"
 section: "1"
@@ -9,9 +10,7 @@ description: "y4mtopnm – Convert a YUV4MPEG2 stream to PNM images"
 
 <h2>NAME</h2>
 <p> y4mtopnm &#8211; Convert a YUV4MPEG2 stream to PNM images </p>
-<h2>SYNOPSIS</h2>
 <p> <code>y4mtopnm</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>y4mtopnm</code> converts a YUV4MPEG2 stream into a sequence of raw PPM, PGM, or PAM images. (Technically, &quot;pnm&quot; comprises the PPM, PGM and PBM formats. PAM is a fourth format, which can effectively contain any of the other three, and more.) </p>
 <p> Output is to stdout (but feel free to have the shell redirect to a file). </p>
 <p> Input is read from stdin, like all other YUV4MPEG2 filters and tools. YUV4MPEG2 streams contain frames using the Y&#8217;CbCr colorspace (ITU-R BT.601). For 4:4:4 (color) streams, <code>y4mtopnm</code> will convert each pixel to the usual R&#8217;G&#8217;B&#8217; colorspace used for computer graphics, and produce PPM images. &quot;MONO&quot; (luma-only) streams will be converted to full-range [0,255] grayscale and output as PGM images. </p>

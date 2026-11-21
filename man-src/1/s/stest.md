@@ -1,4 +1,5 @@
 ---
+
 title: "stest(1)"
 name: "stest"
 section: "1"
@@ -9,9 +10,7 @@ description: "stest – filter a list of files by properties"
 
 <h2>NAME</h2>
 <p> stest &#8211; filter a list of files by properties</p>
-<h2>SYNOPSIS</h2>
 <p> <code>stest</code> [<code>-abcdefghlpqrsuwx</code>] [<code>-n</code> <i>file</i>] [<code>-o</code> <i>file</i>] [<i>file</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>stest</code> takes a list of files and filters by the files&#8217; properties, analogous to <i><a href="/docs/linux/man/1-test/">test</a></i>(1). Files which pass all tests are printed to stdout. If no files are given, stest reads files from stdin.</p>
 <h2>OPTIONS</h2>
 <dl>

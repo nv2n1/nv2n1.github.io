@@ -1,4 +1,5 @@
 ---
+
 title: "slansp(3)"
 name: "slansp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slansp/"
 description: "slansp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slansp</code> (NORM, UPLO, N, AP, WORK)<br />
  <i></i><code>SLANSP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a symmetric matrix supplied in packed form.</p>

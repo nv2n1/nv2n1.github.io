@@ -1,4 +1,5 @@
 ---
+
 title: "getpeereid(3)"
 name: "getpeereid"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-getpeereid/"
 description: "getpeereid – get the effective credentials of a UNIX-domain peer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getpeereid</code> &#8211; get the effective credentials of a UNIX-domain peer </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In bsd/unistd.h Ft int Fn getpeereid int s uid_t *euid gid_t *egid</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn getpeereid function returns the effective user and group IDs of the peer connected to a UNIX socket. The argument Fa s must be a UNIX socket (unix(4) ) of type <code>SOCK_STREAM</code> on which either <a href="/docs/linux/man/2-connect/">connect</a>(2) or <a href="/docs/linux/man/2-listen/">listen</a>(2) have been called. The effective used ID is placed in Fa euid , and the effective group ID in Fa egid . </p>
 <p> The credentials returned to the <a href="/docs/linux/man/2-listen/">listen</a>(2) caller are those of its peer at the time it called <a href="/docs/linux/man/2-connect/">connect</a>(2); the credentials returned to the <a href="/docs/linux/man/2-connect/">connect</a>(2) caller are those of its peer at the time it called <a href="/docs/linux/man/2-listen/">listen</a>(2). This mechanism is reliable; there is no way for either side to influence the credentials returned to its peer except by calling the appropriate system call (i.e., either <a href="/docs/linux/man/2-connect/">connect</a>(2) or <a href="/docs/linux/man/2-listen/">listen</a>(2)) under different effective credentials. </p>
 <p> One common use of this routine is for a UNIX server to verify the credentials of its client. Likewise, the client can verify the credentials of the server.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-instaweb(1)"
 name: "git-instaweb"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-instaweb/"
 description: "git-instaweb – Instantly browse your working repository in gitweb"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git instaweb[--local][--httpd = &lt;httpd&gt;][--port = &lt;port&gt;]
             [--browser = &lt;browser&gt;] git instaweb[--start][--stop][--restart]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> A simple script to set up <code>gitweb</code> and a web server for browsing the local repository.</p>
 <h2>OPTIONS</h2>
 <p> -l, &#8211;local</p>

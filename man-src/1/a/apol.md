@@ -1,4 +1,5 @@
 ---
+
 title: "apol(1)"
 name: "apol"
 section: "1"
@@ -9,9 +10,7 @@ description: "apol – SELinux policy analysis tool"
 
 <h2>NAME</h2>
 <p> apol &#8211; SELinux policy analysis tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>apol</code> [OPTIONS] [POLICY &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>apol</code> is a graphical tool that allows the user to inspect aspects of a SELinux policy. The tool allows the user to browse policy components (types, classes, roles, users, etc.), rules (TE, RBAC, MLS), and file system contexts. The tool also provides in depth analyses of domain transitions, information flows, and relabeling permissions.</p>
 <h2>POLICY</h2>
 <p> <code>apol</code> supports loading a SELinux policy in one of four formats.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ev(3)"
 name: "ev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ev/"
 description: "libev – a high performance full-featured event loop written in C"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ev.h&gt;
 </code></pre>

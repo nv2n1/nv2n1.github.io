@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-measure-touchpad-tap(1)"
 name: "libinput-measure-touchpad-tap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-libinput-measure-touchpad-tap/"
 description: "libinput-measure-touchpad-tap – measure tap-to-click properties of devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>libinput measure touchpad-tap [&#8211;help] [&#8211;format=</code><i>&lt;format&gt;</i><code>] </code><i>[/dev/input/event0]</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>libinput measure touchpad-tap</code> tool measures properties of the tap-to-click behavior of the user. This is an interactive tool. When executed, the tool will prompt the user to interact with the touchpad. On termination, the tool prints a summary of the tap interactions seen. This data should be attached to any tap-related bug report. </p>
 <p> For a full description on how libinput&#8217;s tap-to-click behavior works, see the online documentation here: <i><a rel="nofollow" href="https://wayland.freedesktop.org/libinput/doc/latest/tapping.html">https://wayland.freedesktop.org/libinput/doc/latest/tapping.html</a></i> </p>
 <p> This is a debugging tool only, its output may change at any time. Do not rely on the output. </p>

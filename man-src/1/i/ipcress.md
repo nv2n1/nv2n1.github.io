@@ -1,4 +1,5 @@
 ---
+
 title: "ipcress(1)"
 name: "ipcress"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipcress – In-silico PCR experiment simulation system"
 
 <h2>NAME</h2>
 <p> ipcress &#8211; In-silico PCR experiment simulation system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ipcress [ options ] &lt;primer file&gt; &lt;sequence paths&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ipcress</code> is the <i>I</i>n-silico <i>PCR</i> <i>E</i>xperiment <i>S</i>imulation <i>S</i>ystem. </p>
 <p> This is a tool for simulation of PCR experiments. You supply a file containing primers and a set of sequences, and it predicts PCR products. </p>
 <p> Ipcress is similar to the e-PCR program from the NCBI, but is much faster, and does not suffer from problems identifying matches when there are ambiguity symbols near primer ends. </p>

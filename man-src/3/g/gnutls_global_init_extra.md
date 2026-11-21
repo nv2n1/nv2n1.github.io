@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_global_init_extra(3)"
 name: "gnutls_global_init_extra"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_global_init_extra – initializes the global state of gnutl
 
 <h2>NAME</h2>
 <p> gnutls_global_init_extra &#8211; initializes the global state of gnutls-extra</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>int gnutls_global_init_extra( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function initializes the global state of gnutls-extra library to defaults. </p>
 <p> Note that <code>gnutls_global_init()</code> has to be called before this function. If this function is not called then the gnutls-extra library will not be usable. </p>
 <p> This function is not thread safe, see the discussion for <code>gnutls_global_init()</code> on how to deal with that.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ovsdb-tool(1)"
 name: "ovsdb-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ovsdb-tool/"
 description: "ovsdb-tool – Open vSwitch database management utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ovsdb-tool </code>[<i>options</i>] <code>create </code>[<i>db</i> [<i>schema</i>]]<br />
  <code>ovsdb-tool </code>[<i>options</i>] <code>compact </code>[<i>db</i> [<i>target</i>]]<br />
  <code>ovsdb-tool </code>[<i>options</i>] <code>convert </code>[<i>db</i> [<i>schema </i>[<i>target</i>]]]<br />
@@ -28,7 +28,6 @@ description: "ovsdb-tool – Open vSwitch database management utility"
 <dt>Common options:</dt>
 <dd> [<code>-h</code> | <code>&#8211;help</code>] [<code>-V</code> | <code>&#8211;version</code>] </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>ovsdb-tool</code> program is a command-line tool for managing Open vSwitch database (OVSDB) files. It does not interact directly with running Open vSwitch database servers (instead, use <code>ovsdb-client</code>).</p>
 <h3>Basic Commands</h3>
 <dl>

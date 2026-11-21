@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlreport(1)"
 name: "mysqlreport"
 section: "1"
@@ -9,7 +10,6 @@ description: "mysqlreport – Makes a friendly report of important MySQL status 
 
 <h2>SYNTAX</h2>
 <p> mysqlreport [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> mysqlreport makes a friendly report of important MySQL status values. Actually, it makes a friendly report of nearly every status value from SHOW STATUS. Unlike SHOW STATUS which simply dumps over 100 values to screen in one long list, mysqlreport interprets and formats the values and presents the basic values and many more inferred values in a human-readable format. Numerous example reports are available at the mysqlreport web page at <a rel="nofollow" href="http://hackmysql.com/mysqlreport.">http://hackmysql.com/mysqlreport.</a> </p>
 <p> The benefit of mysqlreport is that it allows you to very quickly see a wide array of performance indicators for your MySQL server which would otherwise need to be calculated by hand from all the various SHOW STATUS values. For example, the Index Read Ratio is an important value but it&#8217;s not present in SHOW STATUS; it&#8217;s an inferred value (the ratio of Key_reads to Key_read_requests). </p>
 <p> This documentation outlines all the command line options in mysqlreport, most of which control which reports are printed. This document does not address how to interpret these reports; that topic is covered in the document Guide To Understanding mysqlreport at <a rel="nofollow" href="http://hackmysql.com/mysqlreportguide.">http://hackmysql.com/mysqlreportguide.</a> </p>

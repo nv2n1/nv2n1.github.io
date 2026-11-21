@@ -1,4 +1,5 @@
 ---
+
 title: "dislocker-fuse(1)"
 name: "dislocker-fuse"
 section: "1"
@@ -9,10 +10,8 @@ description: "Dislocker fuse – Read/write BitLocker encrypted volumes under Li
 
 <h2>NAME</h2>
 <p> Dislocker fuse &#8211; Read/write BitLocker encrypted volumes under Linux, OSX and FreeBSD.</p>
-<h2>SYNOPSIS</h2>
 <p> dislocker-fuse [-hqrsv] [-l <i>LOG_FILE</i>] [-O <i>OFFSET</i>] [-V <i>VOLUME</i> <i>DECRYPTMETHOD</i> -F[<i>N</i>]] [&#8211; <i>ARGS</i>&#8230;] </p>
 <p> Where DECRYPTMETHOD = {-p[<i>RECOVERY_PASSWORD</i>] | -f <i>BEK_FILE</i> | -u[<i>USER_PASSWORD</i>] | -k <i>FVEK_FILE</i> | -c}</p>
-<h2>DESCRIPTION</h2>
 <p> Given a decryption mean, the program is used to read or write BitLocker encrypted volumes. Technically, the program will create a virtual NTFS partition that you can mount as any other NTFS partition. </p>
 <p> The virtual partition is linked to the underlying BitLocker volume, so any write to this volume is put on the BitLocker volume as well. However, you can use <a href="/docs/linux/man/1-dd/">dd</a>(1) to get rid of this limitation &#8212; if it&#8217;s a limitation for you. An example is provided in the EXAMPLES section of this man page.</p>
 <h2>OPTIONS</h2>

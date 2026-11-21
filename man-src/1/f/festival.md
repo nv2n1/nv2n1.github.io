@@ -1,4 +1,5 @@
 ---
+
 title: "festival(1)"
 name: "festival"
 section: "1"
@@ -9,9 +10,7 @@ description: "festival – a text-to-speech system."
 
 <h2>NAME</h2>
 <p> festival &#8211; a text-to-speech system.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>festival </code> <i>[options]</i> <i>[file0]</i> <i>[file1]</i> <i>&#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Festival is a general purpose text-to-speech system. As well as simply rendering text as speech it can be used in an interactive command mode for testing and developing various aspects of speech synthesis technology. </p>
 <p> Festival has two major modes, command and tts (text-to-speech). When in command mode input (from file or interactively) is interpreted by the command interpreter. When in tts mode input is rendered as speech. When in command mode filenames that start with a left paranthesis are treated as literal commands and evaluated. </p>
 <h2>OPTIONS</h2>

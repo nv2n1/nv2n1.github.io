@@ -1,4 +1,5 @@
 ---
+
 title: "cluset(1)"
 name: "cluset"
 section: "1"
@@ -9,9 +10,7 @@ description: "cluset – compute advanced cluster node set operations"
 
 <h2>NAME</h2>
 <p> cluset &#8211; compute advanced cluster node set operations</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cluset</code> [OPTIONS] [COMMAND] [nodeset1 [OPERATION] nodeset2|&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Note: <code>cluset</code> and <code>nodeset</code> are the same command. </p>
 <p> <code>cluset</code> is an utility command provided with the ClusterShell library which implements some features of ClusterShell&#8217;s NodeSet and RangeSet Python classes. It provides easy manipulation of 1D or nD-indexed cluster nodes and node groups and supports RFC 1123 (except that a node name can&#8217;t be entirely numeric). </p>
 <p> Also, <code>cluset</code> is automatically bound to the library node group resolution mechanism. Thus, it is especially useful to enhance cluster aware administration shell scripts.</p>

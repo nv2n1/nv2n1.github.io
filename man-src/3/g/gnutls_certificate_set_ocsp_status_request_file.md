@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_ocsp_status_request_file(3)"
 name: "gnutls_certificate_set_ocsp_status_request_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_ocsp_status_request_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_ocsp_status_request_file &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_ocsp_status_request_file(gnutls_certificate_credentials_t </code><i>sc</i><code>, const char * </code><i>response_file</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_certificate_set_ocsp_status_request_file – API function"
 <dd> a filename of the OCSP response</dd>
 <dt>unsigned int flags</dt>
 <dd> should be zero</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets the filename of an OCSP response, that will be sent to the client if requests an OCSP certificate status. This is a convenience function which is inefficient on busy servers since the file is opened on every access. Use <code>gnutls_certificate_set_ocsp_status_request_function()</code> to fine-tune file accesses.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned.</p>

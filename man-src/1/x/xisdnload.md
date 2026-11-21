@@ -1,4 +1,5 @@
 ---
+
 title: "xisdnload(1)"
 name: "xisdnload"
 section: "1"
@@ -9,9 +10,7 @@ description: "xisdnload – ISDN load average display for X"
 
 <h2>NAME</h2>
 <p> xisdnload &#8211; ISDN load average display for X</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xisdnload</code>[-<i>toolkitoption</i> &#8230;] [-scale <i>integer</i>] [-update <i>seconds</i>] [-hl <i>color</i>] [-highlight <i>color</i>] [-online <i>color</i>] [-active <i>color</i>] [-trying <i>color</i>] [-activate <i>command</i>] [-deactivate <i>command</i>] [-jumpscroll <i>pixels</i>] [-number <i>regexp</i>] [-label <i>string</i>] [-nolabel]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>xisdnload </i> program displays a periodically updating histogram of the ISDN load average.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xisdnload</i> accepts all of the standard X Toolkit command line options (see <i>X(1)</i>). The order of the options in unimportant. <i>xisdnload also accepts the following additional options: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fbrun(1)"
 name: "fbrun"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fbrun/"
 description: "fbrun – display run dialog window"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fbrun</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-fbrun/">fbrun</a>(1)</code> is basically equivalent to the &#8220;Run&#8230;&#8221; dialog in other desktop environments. This means that it is an easy way to start a program that isn&#8217;t contained in the menu (or needs a special set of parameters for this particular invocation). </p>
 <p> Pressing &#8220;Enter&#8221; will close the window and execute the command in your present <code>$SHELL</code>. Pressing &#8220;Esc&#8221; will close the window and does not execute anything. </p>
 <p> Another way fbrun can be useful is to be called from the menu with a preloaded command line that you can edit and then execute. An example might be sshing to a very long host name with lots of options of which one changes all the time. In this case, you could add an entry for fbrun to your menu that contains all the options and the host name. When you use said entry, you could edit the line as necessary and execute it.</p>

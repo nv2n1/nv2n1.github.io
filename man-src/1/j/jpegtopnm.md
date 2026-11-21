@@ -1,4 +1,5 @@
 ---
+
 title: "jpegtopnm(1)"
 name: "jpegtopnm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-jpegtopnm/"
 description: "jpegtopnm – convert JPEG/JFIF file to portable pixmap or graymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jpegtopnm</code> [<code>-dct</code> {<code>int</code>|<code>fast</code>|<code>float</code>}] [<code>-nosmooth</code>] [<code>-maxmemory</code> <i>N</i>] [{<code>-adobe</code>|<code>-notadobe</code>}] [<code>-comments</code>] [<code>-dumpexif</code>] [<code>-exif=</code><i>filespec</i>] [<code>-verbose</code>] [<code>-tracelevel</code> <i>N</i>] [ <i>filename</i> ] </p>
 <p> All options may be abbreviated to their shortest unique prefix. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>jpegtopnm</code> converts the named JFIF file, or the standard input if no file is named to a PPM or PGM image file on the standard output. If the JFIF file is of the grayscale variety, <code>jpegtopnm</code> generates a PGM (Portable Graymap) file. Otherwise, it generates a PPM (Portable Pixmap) file. </p>
 <p> <code>jpegtopnm</code> uses the Independent JPEG Group&#8217;s JPEG library to interpret the input file. See <code><a rel="nofollow" href="http://www.ijg.org">http://www.ijg.org</a> </code> for information on the library. </p>
 <p> &quot;JFIF&quot; is the correct name for the image format commonly known as &quot;JPEG.&quot; Strictly speaking, JPEG is a method of compression. The image format using JPEG compression that is by far the most common is JFIF. There is also a subformat of TIFF that uses JPEG compression. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fts-config-del(1)"
 name: "fts-config-del"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-config-del/"
 
  fts-config-del
 
-<h2>SYNOPSIS</h2>
+fts-config-del [options]
 
- fts-config-del [options]
-
-<h2>DESCRIPTION</h2>
-
- fts-config-del is a tool to delete an existing SE configuration from the database.
+fts-config-del is a tool to delete an existing SE configuration from the database.
 
 <h2>OPTIONS</h2>
 

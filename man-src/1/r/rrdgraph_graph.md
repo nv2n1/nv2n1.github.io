@@ -1,4 +1,5 @@
 ---
+
 title: "rrdgraph_graph(1)"
 name: "rrdgraph_graph"
 section: "1"
@@ -6,7 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rrdgraph_graph/"
 description: "rrdgraph_graph – rrdtool graph command reference"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <font SIZE="-1"><code>PRINT</code></font><code>:</code><i>vname</i><code>:</code><i>format</i> </p>
 <p> <font SIZE="-1"><code>GPRINT</code></font><code>:</code><i>vname</i><code>:</code><i>format</i> </p>
 <p> <font SIZE="-1"><code>COMMENT</code></font><code>:</code><i>text</i> </p>
@@ -20,7 +21,6 @@ description: "rrdgraph_graph – rrdtool graph command reference"
 <p> <font SIZE="-1"><code>PRINT</code></font><code>:</code><i>vname</i><code>:</code><i></i><font SIZE="-1"><i>CF</i></font><i></i><code>:</code><i>format</i> (deprecated) </p>
 <p> <font SIZE="-1"><code>GPRINT</code></font><code>:</code><i>vname</i><code>:</code><i></i><font SIZE="-1"><i>CF</i></font><i></i><code>:</code><i>format</i> (deprecated) </p>
 <p> <font SIZE="-1"><code>STACK</code></font><code>:</code><i>vname</i><code>#</code><i>color</i>[<code>:</code><i>legend</i>] (deprecated)  </p>
-<h2>DESCRIPTION</h2>
 <p> These instructions allow you to generate your image or report. If you don&#8217;t use any graph elements, no graph is generated. Similarly, no report is generated if you don&#8217;t use print options.  </p>
 <font SIZE="-1"></font><h3>PRINT</h3>
 <p> <i></i><font SIZE="-1">PRINT:</font><i>vname</i>:<i>format[</i>:strftime <i>]</i> </p>

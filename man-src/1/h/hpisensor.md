@@ -1,4 +1,5 @@
 ---
+
 title: "hpisensor(1)"
 name: "hpisensor"
 section: "1"
@@ -7,16 +8,13 @@ url: "/docs/linux/man/1-hpisensor/"
 description: "hpisensor - This sample openhpi application displays sensor info for all resources with Sensor Capability SYNOPSIS hpisensor[-D nn][-N host[:port]][-C<cfgfile>][-t - r - s - X - h][-E epath] hpisen..."
 ---
 
-<h2 class="name">NAME</h2>
 <pre>
  hpisensor -  This sample openhpi application displays sensor info for all resources with Sensor Capability
 </pre>
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpisensor[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-t - r - s - X - h][-E epath] hpisensor[--domain = nn][--host = host[:port]][--cfgfile = file]
                                                                                      [--threshold-- range-- eventstate-- debug-- help][--entity - path = "epath"]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpisensor displays sensor info for all resources with Sensor Capability. Option -E (entity-path) restricts the output on the specified entity-path. </p>
 <p> If no domain or host is selected, hpisensor uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

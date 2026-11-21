@@ -1,4 +1,5 @@
 ---
+
 title: "libgpsd(3)"
 name: "libgpsd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libgpsd/"
 description: "libgpsd – service library for GPS applications"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 C:
 #include &lt;gpsd.h&gt;
@@ -19,7 +19,6 @@ C:
 <dt> <code>void gpsd_deactivate(struct gps_device_t&nbsp;<wbr>*&nbsp;<wbr></code><i>session</i><code>);</code></dt>
 <dt> <code>gps_mask_t gpsd_poll(struct gps_device_t&nbsp;<wbr>*&nbsp;<wbr></code><i>session</i><code>);</code></dt>
 <dt> <code>void gpsd_wrap(struct gps_device_t&nbsp;<wbr>*&nbsp;<wbr></code><i>session</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>libgpsd</code></p>
 <dd>is a service library which supports querying GPS devices; link it with the linker option -lgpsd. It is a set of low-level device-handling calls, which <code>gpsd</code>(1) itself uses. See <code>gpsd</code>(3) for a description of the high-level interface, which is almost certainly what you want. </dd>
 <p> Calling <code>gpsd_init()</code> initializes a session structure to hold the data collected by the GPS. </p>

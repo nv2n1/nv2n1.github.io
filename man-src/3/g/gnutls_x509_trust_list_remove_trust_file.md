@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_trust_list_remove_trust_file(3)"
 name: "gnutls_x509_trust_list_remove_trust_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_trust_list_remove_trust_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_remove_trust_file &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_remove_trust_file(gnutls_x509_trust_list_t </code><i>list</i><code>, const char * </code><i>ca_file</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_trust_list_remove_trust_file – API function"
 <dd> A file containing a list of CAs</dd>
 <dt>gnutls_x509_crt_fmt_t type</dt>
 <dd> The format of the certificates</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will remove the given certificate authorities from the trusted list, and add them into a black list when needed. PKCS 11 URLs are also accepted, instead of files, by this function. </p>
 <p> See also <code>gnutls_x509_trust_list_remove_cas()</code>.</p>
 <h2>RETURNS</h2>

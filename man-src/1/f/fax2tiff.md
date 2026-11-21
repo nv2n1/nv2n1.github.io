@@ -1,4 +1,5 @@
 ---
+
 title: "fax2tiff(1)"
 name: "fax2tiff"
 section: "1"
@@ -9,9 +10,7 @@ description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 
 <h2>NAME</h2>
 <p> fax2tiff &#8211; create a <font SIZE="-1">TIFF</font> Class F fax file from raw fax data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fax2tiff</code> [ <i>options</i> ] [ <code>-o</code> <i>output.tif</i> ] <i>input.raw</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Fax2tiff</i> creates a <font SIZE="-1">TIFF</font> file containing <font SIZE="-1">CCITT</font> Group 3 or Group 4 encoded data from one or more files containing &#8220;raw&#8221; Group 3 or Group 4 encoded data (typically obtained directly from a fax modem). By default, each row of data in the resultant <font SIZE="-1">TIFF</font> file is 1-dimensionally encoded and padded or truncated to 1728 pixels, as needed. The resultant image is a set of low resolution (98 lines/inch) or medium resolution (196 lines/inch) pages, each of which is a single strip of data. The generated file conforms to the <font SIZE="-1">TIFF</font> Class F (<font SIZE="-1">FAX</font>) specification for storing facsimile data. This means, in particular, that each page of the data does <code>not</code> include the trailing <i>return to control</i> (<font SIZE="-1">RTC</font>) code; as required for transmission by the <font SIZE="-1">CCITT</font> Group 3 specifications. The old, &#8220;classic&#8221;, format is created if the <code>-c</code> option is used. (The Class F format can also be requested with the <code>-f</code> option.) </p>
 <p> The default name of the output image is <i>fax.tif</i>; this can be changed with the <code>-o</code> option. Each input file is assumed to be a separate page of facsimile data from the same document. The order in which input files are specified on the command line is the order in which the resultant pages appear in the output file.</p>
 <h2>OPTIONS</h2>

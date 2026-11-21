@@ -1,4 +1,5 @@
 ---
+
 title: "prerex(1)"
 name: "prerex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-prerex/"
 description: "prerex – interactive editor of prerequisite-chart descriptions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>prerex</code> [ <i>options</i> ] [ <i>basefile</i>[<i>.tex</i>] [ <i>chartfile</i>[<i>.tex</i>] ] ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>prerex</code> is an interactive program for editing prerequisite-chart descriptions in the <code><a href="/docs/linux/man/5-prerex/">prerex</a></code>(5) format. The user does not normally have to be familiar with details of the format. The editor supports add, remove, cut-and-paste, and edit operations on diagram elements, and vertical or horizontal shifts of a list of specified elements, all the elements in a rectangular region, or the entire diagram. The edited diagram may be saved, re-processed, and viewed in a PDF viewer, without exiting the editor. Alternatively, <code><a href="/docs/linux/man/1-vprerex/">vprerex</a></code>(1) will open a <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) window and display the corresponding PDF file alongside.</p>
 <h2>TERMINOLOGY</h2>
 <p> A prerequisite chart consists of several <i>course boxes,</i> linked by <i>arrows.</i> Courses are either <i>half</i> or <i>full,</i> and may be <i>required </i> or <i>optional </i> (or neither). Each course box contains a course <i>code</i> (upper left corner), a course <i>title</i> (lower half), and <i>timetable</i> information (upper right corner). An arrow is either a <i>prerequisite </i> (solid), a <i>corequisite </i> (dotted), or <i>recommended </i> (dashed). When a conventional arrow would be inappropriate, a <i>mini </i> course just above a target box may be used. A line of text may have been placed anywhere in the chart. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-mkshadow(1)"
 name: "shtool-mkshadow"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-shtool-mkshadow/"
 description: "shtool mkshadow – GNU shtool create shadow tree using symlinks"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>shtool mkshadow</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-a</code>|<code>&#8211;all</code>] <i>src-dir</i> <i>dst-dir</i></p>
-<h2>DESCRIPTION</h2>
 <p> This command creates a shadow tree of <i>src-dir</i> under <i>dst-dir</i> by recreating the directory hierarchy of <i>src-dir</i> under <i>dst-dir</i> and by creating the files of <i>src-dir</i> by linking them into the corresponding directories under <i>dst-dir</i> via symbolic links. When <i>src-dir</i> can be reached via relative paths from <i>dst-dir</i>, relative symbolic links are used, too. This high-level functionality is originally designed for developers to create copies of source trees.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

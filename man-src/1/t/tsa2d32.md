@@ -1,4 +1,5 @@
 ---
+
 title: "tsa2d32(1)"
 name: "tsa2d32"
 section: "1"
@@ -9,11 +10,9 @@ description: "tsa2d32, tsd2a32, tsd2a – gcin’s Tsin tools"
 
 <h2>NAME</h2>
 <p> tsa2d32, tsd2a32, tsd2a &#8211; gcin&#8217;s Tsin tools</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tsa2d32</code><br />
  <code>tsd2a32</code> <code>[-nousecount</code>]<br />
  <code>tsd2a</code> <code>[-nousecount</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tsa2d32</code> is a tool to import Tsin input method phrase database. </p>
 <p> <code>tsd2a32</code> is a tool to export Tsin input method phrase database. </p>
 <p> <code>tsd2a</code> is an old tool only for back-compatibility.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gravfft(1)"
 name: "gravfft"
 section: "1"
@@ -9,10 +10,8 @@ description: "gravfft – Compute gravitational attraction of 3-D surfaces in th
 
 <h2>NAME</h2>
 <p> gravfft &#8211; Compute gravitational attraction of 3-D surfaces in the wavenumber (or frequency) domain</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gravfft</code> <i>ingrid</i> [ <i>ingrid2</i> ] <i>outfile</i> [ <i>n/wavelength/mean_depth/tbw</i> ] [ <i>density</i>|<i>rhogrid</i> ] [ <i>n_terms</i> ] [ [<code>f</code>[<code>+</code>]|<code>g</code>|<code>v</code>|<code>n</code>|<code>e</code>] ] [ <code>w</code>|<code>b</code>|<code>c</code>|<code>t</code> |<code>k</code> ] [ [<code>f</code>|<code>q</code>|<code>s</code>|<i>nx/ny</i>][<code>+a</code>|<code>d</code>|<code>h</code> |<code>l</code>][<code>+e</code>|<code>n</code>|<code>m</code>][<code>+t</code><i>width</i>][<code>+w</code>[<i>suffix</i>]][<code>+z</code>[<code>p</code>]] [ ] [ <i>te/rl/rm/rw</i>[<code>+m</code>] ] [ [<i>level</i>] ] [ <i>wd</i>] [ <i>zm</i>[<i>zl</i>] ] [ <code>-fg</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gravfft</code> can be used into three main modes. Mode 1: Simply compute the geopotential due to the surface given in the topo.grd file. Requires a density contrast (<code>-D</code>) and possibly a different observation level (<code>-W</code>). It will take the 2-D forward FFT of the grid and use the full Parker&#8217;s method up to the chosen terms. Mode 2: Compute the geopotential response due to flexure of the topography file. It will take the 2-D forward FFT of the grid and use the full Parker&#8217;s method applied to the chosen isostatic model. The available models are the &quot;loading from top&quot;, or elastic plate model, and the &quot;loading from below&quot; which accounts for the plate&#8217;s response to a sub-surface load (appropriate for hot spot modeling &#8211; if you believe them). In both cases, the model parameters are set with <code>-T</code> and <code>-Z</code> options. Mode 3: compute the admittance or coherence between two grids. The output is the average in the radial direction. Optionally, the model admittance may also be calculated. The horizontal dimensions of the grdfiles are assumed to be in meters. Geographical grids may be used by specifying the <code>-fg</code> option that scales degrees to meters. If you have grids with dimensions in km, you could change this to meters using <code>grdedit</code> or scale the output with <code>grdmath</code>. Given the number of choices this program offers, is difficult to state what are options and what are required arguments. It depends on what you are doing; see the examples for further guidance.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

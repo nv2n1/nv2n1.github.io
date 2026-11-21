@@ -1,4 +1,5 @@
 ---
+
 title: "gvgen(1)"
 name: "gvgen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gvgen/"
 description: "gvgen – generate graphs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gvgen</code> [ <code>-dv?</code> ] [ <code>-i</code><i>n</i> ] [ <code>-c</code><i>n</i> ] [ <code>-C</code><i>x,y</i> ] [ <code>-g</code><i>[</i><code>f</code>]x,y ] [ <code>-G</code><i>[</i><code>f</code>]x,y ] [ <code>-h</code><i>n</i> ] [ <code>-k</code><i>n</i> ] [ <code>-b</code><i>x,y</i> ] [ <code>-B</code><i>x,y</i> ] [ <code>-m</code><i>n</i> ] [ <code>-M</code><i>x,y</i> ] [ <code>-p</code><i>n</i> ] [ <code>-r</code><i>x,y</i> ] [ <code>-R</code><i>x</i> ] [ <code>-s</code><i>n</i> ] [ <code>-S</code><i>n</i> ] [ <code>-S</code><i>n,d</i> ] [ <code>-t</code><i>n</i> ] [ <code>-t</code><i>d,n</i> ] [ <code>-T</code><i>x,y</i> ] [ <code>-T</code><i>x,y,u,v</i> ] [ <code>-w</code><i>n</i> ] [ <code>-n</code><i>prefix</i> ] [ <code>-N</code><i>name</i> ] [ <code>-o</code><i>outfile</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gvgen</code> generates a variety of simple, regularly-structured abstract graphs.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

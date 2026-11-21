@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-screensaver(1)"
 name: "xdg-screensaver"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-xdg-screensaver/"
 description: "xdg-screensaver – command line tool for controlling the screensaver"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-screensaver</code> <code>suspend&nbsp;</code><i>WindowID</i></dt>
 <dt> <code>xdg-screensaver</code> <code>resume&nbsp;</code><i>WindowID</i></dt>
 <dt> <code>xdg-screensaver</code> {<code>activate</code> | <code>lock</code> | <code>reset</code> | <code>status</code>}</dt>
 <dt> <code>xdg-screensaver</code> {<code>&#8211;help</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>xdg-screensaver provides commands to control the screensaver. </dd>
 <p> xdg-screensaver is for use inside a desktop session only. It is not recommended to use xdg-screensaver as root.</p>
 <h2>COMMANDS</h2>

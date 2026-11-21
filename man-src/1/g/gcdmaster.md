@@ -1,4 +1,5 @@
 ---
+
 title: "gcdmaster(1)"
 name: "gcdmaster"
 section: "1"
@@ -9,9 +10,7 @@ description: "gcdmaster – Graphical front end to cdrdao for composing audio CD
 
 <h2>NAME</h2>
 <p> gcdmaster &#8211; Graphical front end to cdrdao for composing audio CDs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gcdmaster</code> [<i>toc-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>gcdmaster</i> allows the creation of toc-files for cdrdao and can control the recording process. Its main application is the composition of audio CDs from one or more audio files. It supports PQ-channel editing, entry of meta data like ISRC codes/CD-TEXT and non destructive cut of the audio data. </p>
 <p> If a <i>toc-file</i> is specified it will be read and the referenced audio data will be displayed. It is also possible to specify a &quot;.cue&quot; file. </p>
 <p> The GUI periodically polls all configured CD-ROM and CD-recorder devices (see section DEVICE CONFIGURE DIALOG) to retrieve their status (ready, busy, no disk). This is done by sending a TEST UNIT READY command to the devices. Following problems may arise:</p>

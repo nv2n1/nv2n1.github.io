@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_new_frm_fp_dsa(3)"
 name: "ldns_key_new_frm_fp_dsa"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_key_new_frm_fp_dsa, ldns_key_new_frm_fp_dsa_l"
 
 <h2>NAME</h2>
 <p> ldns_key_new_frm_fp_dsa, ldns_key_new_frm_fp_dsa_l </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> DSA* ldns_key_new_frm_fp_dsa(FILE *fp); </p>
 <p> DSA* ldns_key_new_frm_fp_dsa_l(FILE *fp, int *line_nr); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_new_frm_fp_dsa</i>()</dt>
 <dd>frm_fp helper function. This function parses the remainder of the (DSA) priv. key file .br <code>fp</code>: the file to parse .br Returns NULL on failure otherwise a RSA structure</dd></dl>

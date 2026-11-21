@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_get_subject_alt_othername_oid(3)"
 name: "gnutls_x509_crq_get_subject_alt_othername_oid"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crq_get_subject_alt_othername_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_get_subject_alt_othername_oid &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_get_subject_alt_othername_oid(gnutls_x509_crq_t </code><i>crq</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>ret</i><code>, size_t * </code><i>ret_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crq_get_subject_alt_othername_oid – API function"
 <dd> is the place where the otherName OID will be copied to</dd>
 <dt>size_t * ret_size</dt>
 <dd> holds the size of ret.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will extract the type OID of an otherName Subject Alternative Name, contained in the given certificate, and return the type as an enumerated element. </p>
 <p> This function is only useful if <code>gnutls_x509_crq_get_subject_alt_name()</code> returned <code>GNUTLS_SAN_OTHERNAME</code>.</p>
 <h2>RETURNS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_password_ex(3)"
 name: "libssh2_userauth_password_ex"
 section: "3"
@@ -9,7 +10,6 @@ description: "libssh2_userauth_password_ex – authenticate a session with usern
 
 <h2>NAME</h2>
 <p> libssh2_userauth_password_ex &#8211; authenticate a session with username and password</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <pre><code>
 int libssh2_userauth_password_ex(LIBSSH2_SESSION *session,
@@ -23,7 +23,6 @@ int libssh2_userauth_password_ex(LIBSSH2_SESSION *session,
                                  strlen(username),             \
                                  (password), strlen(password), NULL)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>username</i> &#8211; Name of user to attempt plain password authentication for. </p>
 <p> <i>username_len</i> &#8211; Length of username parameter. </p>

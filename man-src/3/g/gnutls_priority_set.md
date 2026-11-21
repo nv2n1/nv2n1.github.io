@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_priority_set(3)"
 name: "gnutls_priority_set"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_priority_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_priority_set &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_priority_set(gnutls_session_t </code><i>session</i><code>, gnutls_priority_t </code><i>priority</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_priority_set – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_priority_t priority</dt>
 <dd> is a <code>gnutls_priority_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Sets the priorities to use on the ciphers, key exchange methods, macs and compression methods.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

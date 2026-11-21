@@ -1,4 +1,5 @@
 ---
+
 title: "clarzb(3)"
 name: "clarzb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clarzb/"
 description: "clarzb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
  <i></i><code>CLARZB</code> applies a block reflector or its conjugate-transpose to a general matrix.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lrzip(1)"
 name: "lrzip"
 section: "1"
@@ -9,7 +10,6 @@ description: "lrzip – a large-file compression program"
 
 <h2>NAME</h2>
 <p> lrzip &#8211; a large-file compression program</p>
-<h2>SYNOPSIS</h2>
 <p> lrzip [OPTIONS] &lt;file&gt;<br />
  lrzip -d [OPTIONS] &lt;file&gt;<br />
  lrunzip [OPTIONS] &lt;file&gt;<br />
@@ -18,7 +18,6 @@ description: "lrzip – a large-file compression program"
  lrztar -d [lrzip options] &lt;directory&gt;<br />
  lrzuntar [lrzip options] &lt;directory&gt;<br />
  LRZIP=NOCONFIG [lrzip|lrunzip] [OPTIONS] &lt;file&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> LRZIP is a file compression program designed to do particularly well on very large files containing long distance redundancy. lrztar is a wrapper for LRZIP to simplify compression and decompression of directories. </p>
 <h2>OPTIONS SUMMARY</h2>
 <p> Here is a summary of the options to lrzip. </p>

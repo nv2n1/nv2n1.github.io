@@ -1,4 +1,5 @@
 ---
+
 title: "simpleftp(1)"
 name: "simpleftp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-simpleftp/"
 description: "simpleftp – Rudimentary FTP client"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>simpleftp</code> <i>url</i> [&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>simpleftp</code> is a Perl script that provides basic support for fetching files with <font SIZE="-1">FTP</font> in a batch oriented fashion. It takes one or more <font SIZE="-1">FTP</font> URLs on the command line. The file(s) will be retrieved from the remote server and placed in the current directory with the same basename as on the remote; e.g., &lt;<a href="ftp://ftp.isc.org/pub/usenet/CONFIG/active.gz">ftp://ftp.isc.org/pub/usenet/CONFIG/active.gz</a>&gt; is stored as <i>active.gz</i> in the current directory. </p>
 <p> The script properly understands usernames, passwords and ports specified as follows: </p>
 <pre>

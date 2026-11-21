@@ -1,4 +1,5 @@
 ---
+
 title: "ssbgvd(3)"
 name: "ssbgvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssbgvd/"
 description: "ssbgvd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbgvd</code> (JOBZ, UPLO, N, KA, KB, AB, LDAB, BB, LDBB, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>SSBGST</code></p>

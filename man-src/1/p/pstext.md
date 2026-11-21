@@ -1,4 +1,5 @@
 ---
+
 title: "pstext(1)"
 name: "pstext"
 section: "1"
@@ -9,10 +10,8 @@ description: "pstext – Plot or typeset text on maps"
 
 <h2>NAME</h2>
 <p> pstext &#8211; Plot or typeset text on maps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pstext</code> [ <i>textfiles</i> ] <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ ] [<code>p</code>|<code>s</code>]<i>parameters</i> [ [<code>j</code>|<code>J</code>]<i>dx</i>[/<i>dy</i>][<code>v</code>[<i>pen</i>]] ] [ [<code>+a</code>[<i>angle</i>]][<code>+c</code>[<i>justify</i>]][<code>+f</code>[<i>font</i>]][<code>+h</code>][<code>+j</code>[<i>justify</i>]][<code>+l</code>] ] [ <i>color</i> ] [ ((<code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ ] [ ] [ ] [ ] [ ] [ <code>l</code>|<code>u</code> ] [ <code>o</code>|<code>O</code>|<code>c</code>|<code>C</code> ] [ [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ ] [ <code>-a</code><i>col</i>=<i>name</i>[&#8230;] ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pstext</code> plots text strings of variable size, font type, and orientation. Various map projections are provided, with the option to draw and annotate the map boundaries. PostScript code is written to standard output. Greek characters, subscript, superscript, and small caps are supported as follows: The sequence @~ toggles between the selected font and Greek (Symbol). @%<i>no</i>% sets the font to <i>no</i>; @%% resets the font to the starting font, @- toggles subscripts on/off, @+ toggles superscript on/off, @# toggles small caps on/off, @;<i>color</i>; changes the font color (@;; resets it), @:<i>size</i>: changes the font size (@:: resets it), and @_ toggles underline on/off. @@ prints the @ sign. @e, @o, @a, @E, @O, @A give the accented Scandinavian characters. Composite characters (overstrike) may be indicated with the @!&lt;char1&gt;&lt;char2&gt; sequence, which will print the two characters on top of each other. To learn the octal codes for symbols not available on the keyboard and some accented European characters, see Section <i>Char-esc-seq</i> and Appendix <i>Chart-Octal-Codes-for-Chars</i> in the GMT Technical Reference and Cookbook. Note that <i>PS_CHAR_ENCODING</i> must be set to an extended character set in your <code>gmt.conf</code> file in order to use the accented characters. Using the <code>-G</code> or <code>-W</code> options, a rectangle underlying the text may be plotted (does not work for strings with sub/super scripts, symbols, or composite characters, except in paragraph mode (<code>-M</code>)).</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

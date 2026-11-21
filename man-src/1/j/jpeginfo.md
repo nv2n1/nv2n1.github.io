@@ -1,4 +1,5 @@
 ---
+
 title: "jpeginfo(1)"
 name: "jpeginfo"
 section: "1"
@@ -9,9 +10,7 @@ description: "jpeginfo – prints information and tests integrity of JPEG/JFIF f
 
 <h2>NAME</h2>
 <p> jpeginfo &#8211; prints information and tests integrity of JPEG/JFIF files. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>jpeginfo </code> [ <code>options </code> ] [ <code>filenames </code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>jpeginfo</i> is used to generate informative listings of jpeg files, and also to check jpeg files for errors. Program also supports automatic deletion of broken jpegs. </p>
 <h2>OPTIONS</h2>
 <p> Options may be either the traditional POSIX one letter options, or the GNU style long options. POSIX style options start with a single &#8220;-&#8221;, while GNU long options start with &#8220;&#8211;&#8221;. </p>

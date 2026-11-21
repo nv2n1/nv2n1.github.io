@@ -1,4 +1,5 @@
 ---
+
 title: "col(1)"
 name: "col"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-col/"
 description: "col – filter reverse line feeds from input"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>col</code> <i>options</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>col</code> filters out reverse (and half-reverse) line feeds so the output is in the correct order, with only forward and half-forward line feeds. It also replaces any whitespace characters with tabs where possible. This can be useful in processing the output of <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1) and <code><a href="/docs/linux/man/1-tbl/">tbl</a></code>(1). </p>
 <p> <code>col</code> reads from standard input and writes to standard output.</p>
 <h2>OPTIONS</h2>

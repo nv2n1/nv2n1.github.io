@@ -1,4 +1,5 @@
 ---
+
 title: "nghttp(1)"
 name: "nghttp"
 section: "1"
@@ -9,9 +10,7 @@ description: "nghttp – HTTP/2 client"
 
 <h2>NAME</h2>
 <p> nghttp &#8211; HTTP/2 client</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nghttp</code> [OPTIONS]&#8230; &lt;URI&gt;&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> HTTP/2 client</p>
 <dl>
 <dt><code>&lt;URI&gt;</code></dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-statoverride(1)"
 name: "dpkg-statoverride"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-statoverride/"
 description: "dpkg-statoverride – override ownership and mode of files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-statoverride</code> [<i>option</i>&#8230;] <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> &#8220;<code>stat overrides</code>&#8221; are a way to tell <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1) to use a different owner or mode for a path when a package is installed (this applies to any filesystem object that <code>dpkg</code> handles, including directories, devices, etc.). This can be used to force programs that are normally setuid to be install without a setuid flag, or only executable by a certain group. </p>
 <p> <code>dpkg-statoverride</code> is a utility to manage the list of stat overrides. It has three basic functions: adding, removing and listing overrides.</p>
 <h2>COMMANDS</h2>

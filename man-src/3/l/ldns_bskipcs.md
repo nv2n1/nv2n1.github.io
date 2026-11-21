@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_bskipcs(3)"
 name: "ldns_bskipcs"
 section: "3"
@@ -9,14 +10,12 @@ description: "ldns_bget_token, ldns_bgetc, ldns_bskipcs"
 
 <h2>NAME</h2>
 <p> ldns_bget_token, ldns_bgetc, ldns_bskipcs </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ssize_t ldns_bget_token(ldns_buffer *b, char *token, const char *delim, size_t limit); </p>
 <p> int ldns_bgetc(ldns_buffer *buffer); </p>
 <p> void ldns_bskipcs(ldns_buffer *buffer, const char *s); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_bget_token</i>()</dt>
 <dd>returns a token/char from the buffer b. This function deals with ( and ) in the buffer, and ignores when it finds them. .br <code>*b</code>: the buffer to read from .br <code>*token</code>: the token is put here .br <code>*delim</code>: chars at which the parsing should stop .br <code>*limit</code>: how much to read. If 0 the builtin maximum is used .br Returns s 0 on error of EOF of b. Otherwise return the length of what is read</dd></dl>

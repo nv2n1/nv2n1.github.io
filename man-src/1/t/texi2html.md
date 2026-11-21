@@ -1,4 +1,5 @@
 ---
+
 title: "texi2html(1)"
 name: "texi2html"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-texi2html/"
 description: "texi2html – a Texinfo to HTML converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>texi2html [options] file</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Texi2html</i> converts the given Texinfo file to a set of HTML files. It tries to handle most of the Texinfo commands. It creates hypertext links for cross-references, footnotes&#8230; </p>
 <p> <i>Texi2html</i> may furthermore use latex2html to generate HTML (code and/or images) for @math and @iftex tags (see the <code>&#8211;l2h</code> option). </p>
 <p> <i>Texi2html</i> creates several files depending on the contents of the Texinfo file and on the chosen options (see FILES). </p>

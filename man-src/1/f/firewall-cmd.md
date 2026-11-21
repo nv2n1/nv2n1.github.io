@@ -1,4 +1,5 @@
 ---
+
 title: "firewall-cmd(1)"
 name: "firewall-cmd"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-firewall-cmd/"
 description: "firewall-cmd – firewalld command line client"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>firewall-cmd</code> [OPTIONS&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>firewall-cmd is the command line client of the firewalld daemon. It provides interface to manage runtime and permanent configuration. </dd>
 <p> The runtime configuration in firewalld is separated from the permanent configuration. This means that things can get changed in the runtime or permanent configuration.</p>
 <h2>OPTIONS</h2>

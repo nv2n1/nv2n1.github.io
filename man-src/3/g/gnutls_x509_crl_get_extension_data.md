@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_get_extension_data(3)"
 name: "gnutls_x509_crl_get_extension_data"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crl_get_extension_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_extension_data &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_extension_data(gnutls_x509_crl_t </code><i>crl</i><code>, int </code><i>indx</i><code>, void * </code><i>data</i><code>, size_t * </code><i>sizeof_data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crl_get_extension_data – API function"
 <dd> a pointer to a structure to hold the data (may be null)</dd>
 <dt>size_t * sizeof_data</dt>
 <dd> initially holds the size of <i>oid</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the requested extension data in the CRL. The extension data will be stored as a string in the provided buffer. </p>
 <p> Use <code>gnutls_x509_crl_get_extension_info()</code> to extract the OID and critical flag. Use <code>gnutls_x509_crl_get_extension_info()</code> instead, if you want to get data indexed by the extension OID rather than sequence.</p>
 <h2>RETURNS</h2>

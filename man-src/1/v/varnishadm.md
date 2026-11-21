@@ -1,4 +1,5 @@
 ---
+
 title: "varnishadm(1)"
 name: "varnishadm"
 section: "1"
@@ -9,9 +10,7 @@ description: "varnishadm – Control a running Varnish instance"
 
 <h2>NAME</h2>
 <p> varnishadm &#8211; Control a running Varnish instance</p>
-<h2>SYNOPSIS</h2>
 <p> varnishadm [-t timeout] [-S secret_file] [-T address:port] [-n name] [command [&#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> The varnishadm utility establishes a CLI connection to varnishd either using -n <i>name</i> or using the -T and -S arguments. If -n <i>name</i> is given the location of the secret file and the address:port is looked up in shared memory. If neither is given varnishadm will look for an instance without a given name. </p>
 <p> If a command is given, the command and arguments are sent over the CLI connection and the result returned on stdout. </p>
 <p> If no command argument is given varnishadm will pass commands and replies between the CLI socket and stdin/stdout.</p>

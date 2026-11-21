@@ -1,4 +1,5 @@
 ---
+
 title: "parcellite(1)"
 name: "parcellite"
 section: "1"
@@ -9,9 +10,7 @@ description: "Parcellite – Lightweight GTK+ Clipboard Manager"
 
 <h2>NAME</h2>
 <p> Parcellite &#8211; Lightweight GTK+ Clipboard Manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>parcellite</code> [<i>OPTION</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Parcellite</code> is a lightweight GTK+ clipboard manager. This is a stripped down, basic-features-only clipboard manager with a small memory footprint for those who like simplicity. </p>
 <p> <code>Parcellite</code> features a clipboard CLI. Unrecognized options and the contents of your standard input get copied to your clipboard. See <code>CLI EXAMPLES</code>. </p>
 <p> <code>Look at the tool tips by hovering over each item in the prefrences dialog.</code></p>

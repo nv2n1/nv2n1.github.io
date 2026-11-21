@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_conf_init(3)"
 name: "lwres_conf_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_conf_init/"
 description: "lwres_conf_init, lwres_conf_clear, lwres_conf_parse, lwres_conf_print, lwres_conf_get – lightweight resolver configuration"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
@@ -17,7 +17,6 @@ description: "lwres_conf_init, lwres_conf_clear, lwres_conf_parse, lwres_conf_pr
 <dt> <code>lwres_result_t lwres_conf_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, const char&nbsp;<wbr>*</code><i>filename</i><code>);</code></dt>
 <dt> <code>lwres_result_t lwres_conf_print(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, FILE&nbsp;<wbr>*</code><i>fp</i><code>);</code></dt>
 <dt> <code>lwres_conf_t * lwres_conf_get(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lwres_conf_init()</code></p>
 <dd>creates an empty <code>lwres_conf_t</code> structure for lightweight resolver context <i>ctx</i>. </dd>
 <p> <code>lwres_conf_clear()</code> frees up all the internal memory used by that <code>lwres_conf_t</code> structure in resolver context <i>ctx</i>. </p>

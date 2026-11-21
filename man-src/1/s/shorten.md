@@ -1,4 +1,5 @@
 ---
+
 title: "shorten(1)"
 name: "shorten"
 section: "1"
@@ -6,14 +7,9 @@ letter: "s"
 url: "/docs/linux/man/1-shorten/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+shorten - CLI program to demonstrate use of WWW::Shorten 
 
- shorten - CLI program to demonstrate use of WWW::Shorten 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     # Default shortening service is Metamark
     $ shorten books.perl.org/book/171
     <a rel="nofollow" HREF="http://xrl.us/dv8">http://xrl.us/dv8</a>

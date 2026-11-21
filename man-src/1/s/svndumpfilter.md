@@ -1,4 +1,5 @@
 ---
+
 title: "svndumpfilter(1)"
 name: "svndumpfilter"
 section: "1"
@@ -9,7 +10,6 @@ description: "svndumpfilter – Filter a subversion repository ‘dumpfile’."
 
 <h2>NAME</h2>
 <p> svndumpfilter &#8211; Filter a subversion repository &#8216;dumpfile&#8217;.</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svndumpfilter</code> <i>command</i> [<i>options</i> &amp; <i>args</i>]</dt>
 <dd></dd></dl>

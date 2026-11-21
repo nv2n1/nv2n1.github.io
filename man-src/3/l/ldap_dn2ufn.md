@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_dn2ufn(3)"
 name: "ldap_dn2ufn"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldap_get_dn, ldap_explode_dn, ldap_explode_rdn, ldap_dn2ufn – LD
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 char *ldap_get_dn(LDAP *ld, LDAPMessage *entry) int ldap_str2dn(const char *str, LDAPDN *dn, unsigned flags) void ldap_dnfree(LDAPDN dn) int ldap_dn2str(LDAPDN dn, char **str, unsigned flags) char **ldap_explode_dn(const char *dn, int notypes) char **ldap_explode_rdn(const char *rdn, int notypes) char *ldap_dn2ufn(const char *dn) char *ldap_dn2dcedn(const char *dn) char *ldap_dcedn2dn(const char *dn) char *ldap_dn2ad_canonical(const char *dn)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These routines allow LDAP entry names (Distinguished Names, or DNs) to be obtained, parsed, converted to a user-friendly form, and tested. A DN has the form described in RFC 4414 &quot;Lightweight Directory Access Protocol (LDAP): String Representation of Distinguished Names&quot;. </p>
 <p> The <code>ldap_get_dn()</code> routine takes an <i>entry</i> as returned by <code><a href="/docs/linux/man/3-ldap_first_entry/">ldap_first_entry</a></code>(3) or <code><a href="/docs/linux/man/3-ldap_next_entry/">ldap_next_entry</a></code>(3) and returns a copy of the entry&#8217;s DN. Space for the DN will be obtained dynamically and should be freed by the caller using <code><a href="/docs/linux/man/3-ldap_memfree/">ldap_memfree</a></code>(3). </p>
 <p> <code>ldap_str2dn()</code> parses a string representation of a distinguished name contained in <code>str</code> into its components, which are stored in <code>dn</code> as <code>ldap_ava </code> structures, arranged in <code>LDAPAVA,</code> <code>LDAPRDN,</code> and <code>LDAPDN</code> terms. Space for <code>dn</code> will be obtained dynamically and should be freed by the caller using <code><a href="/docs/linux/man/3-ldap_dnfree/">ldap_dnfree</a></code>(3). The <code>LDAPDN</code> is defined as: </p>

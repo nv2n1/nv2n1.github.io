@@ -1,4 +1,5 @@
 ---
+
 title: "flawfinder(1)"
 name: "flawfinder"
 section: "1"
@@ -6,11 +7,10 @@ letter: "f"
 url: "/docs/linux/man/1-flawfinder/"
 description: "flawfinder – find potential security flaws (\"hits\") in source code"
 ---
+
 <h2>NAME</h2>
 <p> flawfinder - find potential security flaws (&quot;hits&quot;) in source code  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>flawfinder</code> [<code>--help</code>] [<code>--version</code>] [<code>--allowlink</code>] [<code>--inputs</code>|<code>-I</code>] [ <code>--minlevel </code><i>X</i> | <code>-m</code>&nbsp;<wbr><i>X</i> ] [<code>--falsepositive</code>|<code>-F</code>] [<code>--neverignore</code>|<code>-n</code>] [<code>--patch&nbsp;<wbr></code><i>filename</i>|<code>-P&nbsp;<wbr></code><i>filename</i>] [<code>--followdotdir</code>] [<code>--context</code>|<code>-c</code>] [<code>--columns</code>|<code>-C</code>] [<code>--dataonly</code>|<code>-D</code>] [<code>--html</code>] [<code>--immediate</code>|<code>-i</code>] [<code>--singleline</code>|<code>-S</code>] [<code>--omittime</code>] [<code>--quiet</code>|<code>-Q</code>] [ <code>--loadhitlist&nbsp;<wbr></code><i>F</i> ] [ <code>--savehitlist&nbsp;<wbr></code><i>F</i> ] [ <code>--diffhitlist&nbsp;<wbr></code><i>F</i> ] [<code>--</code>] <i>[ source code file or source root directory ]+</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> Flawfinder searches through C/C++ source code looking for potential security flaws. To run flawfinder, simply give flawfinder a list of directories or files. For each directory given, all files that have C/C++ filename extensions in that directory (and its subdirectories, recursively) will be examined. Thus, for most projects, simply give flawfinder the name of the source code&#8217;s topmost directory (use ``.&#8216;&#8216; for the current directory), and flawfinder will examine all of the project&#8217;s C/C++ source code. If you only want to have <i>changes</i> reviewed, save a unified diff of those changes (created by &quot;diff -u&quot; or &quot;svn diff&quot;) in a patch file and use the --patch (-P) option. </p>
 <p> Flawfinder will produce a list of ``hits&#8217;&#8216; (potential security flaws), sorted by risk; the riskiest hits are shown first. The risk level is shown inside square brackets and varies from 0, very little risk, to 5, great risk. This risk level depends not only on the function, but on the values of the parameters of the function. For example, constant strings are often less risky than fully variable strings in many contexts, and in those contexts the hit will have a lower risk level. Flawfinder knows about gettext (a common library for internationalized programs) and will treat constant strings passed through gettext as though they were constant strings; this reduces the number of false hits in internationalized programs. Flawfinder will do the same sort of thing with _T() and _TEXT(), common Microsoft macros for handling internationalized programs Flawfinder correctly ignores most text inside comments and strings. Normally flawfinder shows all hits with a risk level of at least 1, but you can use the --minlevel option to show only hits with higher risk levels if you wish. </p>
 <p> Not every hit is actually a security vulnerability, and not every security vulnerability is necessarily found. Nevertheless, flawfinder can be an aid in finding and removing security vulnerabilities. A common way to use flawfinder is to first apply flawfinder to a set of source code and examine the highest-risk items. Then, use --inputs to examine the input locations, and check to make sure that only legal and safe input values are accepted from untrusted users. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gajim-remote(1)"
 name: "gajim-remote"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-gajim-remote/"
 description: "gajim-remote – a remote control utility for"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gajim-remote</code> &#8211; a remote control utility for </p>
 <p><a href="/docs/linux/man/1-gajim/">gajim</a>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> is a script to control and communicate with a running instance of <a href="/docs/linux/man/1-gajim/">gajim</a>(1) by D-Bus.</p>
 <h2>OPTIONS</h2>
 <dl>

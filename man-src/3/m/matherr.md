@@ -1,4 +1,5 @@
 ---
+
 title: "matherr(3)"
 name: "matherr"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-matherr/"
 description: "matherr – SVID math library exception handling"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 int matherr(struct exception *exc);
 extern _LIB_VERSION_TYPE _LIB_VERSION;
 </code></pre>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: the mechanism described in this page is no longer supported by glibc. Before glibc 2.27, it had been marked as obsolete. Since glibc 2.27, the mechanism has been removed altogether. New applications should use the techniques described in <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) and <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3). This page documents the <code>matherr</code>() mechanism as an aid for maintaining and porting older applications. </p>
 <p> The System V Interface Definition (SVID) specifies that various math functions should invoke a function called <code>matherr</code>() if a math exception is detected. This function is called before the math function returns; after <code>matherr</code>() returns, the system then returns to the math function, which in turn returns to the caller. </p>
 <p> To employ <code>matherr</code>(), the programmer must define the <code>_SVID_SOURCE</code> feature test macro (before including <i>any</i> header files), and assign the value <code>_SVID_</code> to the external variable <code>_LIB_VERSION</code>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-base(1)"
 name: "mtx-base"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mtx-base/"
 description: "mtx-base – ConTeXt TDS Management Tool (aka luatools)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script base [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt TDS Management Tool (aka luatools)</code></p>
 <h2>OPTIONS</h2>
 <dl>

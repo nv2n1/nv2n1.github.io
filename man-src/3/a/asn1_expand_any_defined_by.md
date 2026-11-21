@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_expand_any_defined_by(3)"
 name: "asn1_expand_any_defined_by"
 section: "3"
@@ -9,7 +10,6 @@ description: "asn1_expand_any_defined_by – API function"
 
 <h2>NAME</h2>
 <p> asn1_expand_any_defined_by &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_expand_any_defined_by(asn1_node </code><i>definitions</i><code>, asn1_node * </code><i>element</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "asn1_expand_any_defined_by – API function"
 <dd> ASN1 definitions</dd>
 <dt>asn1_node * element</dt>
 <dd> pointer to an ASN1 structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Expands every &quot;ANY DEFINED BY&quot; element of a structure created from a DER decoding process (asn1_der_decoding function). The element ANY must be defined by an OBJECT IDENTIFIER. The type used to expand the element ANY is the first one following the definition of the actual value of the OBJECT IDENTIFIER.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if Substitution OK, <code>ASN1_ERROR_TYPE_ANY</code> if some &quot;ANY DEFINED BY&quot; element couldn&#8217;t be expanded due to a problem in OBJECT_ID -&gt; TYPE association, or other error codes depending on DER decoding.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "scalac(1)"
 name: "scalac"
 section: "1"
@@ -6,9 +7,8 @@ letter: "s"
 url: "/docs/linux/man/1-scalac/"
 description: "scalac – Compiler for the Scala 2 language"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>scalac</code> - Compiler for the Scala 2 language </p>
-<h2>SYNOPSIS</h2>
 <p> <code>scalac</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;  </p>
 <h2>PARAMETERS</h2>
 <dl>
@@ -18,7 +18,6 @@ description: "scalac – Compiler for the Scala 2 language"
 <dt>&lt;<i>source files</i>&gt;</dt>
 <dd> <p> One or more source files to be compiled (such as MyClass.scala). </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>scalac</code> tool reads class and object definitions, written in the Scala programming language, and compiles them into bytecode class files. </p>
 <p> By default, the compiler puts each class file in the same directory as its source file. You can specify a separate destination directory with -d (see <code>OPTIONS</code>, below).  </p>
 <h2>OPTIONS</h2>

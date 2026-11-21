@@ -1,4 +1,5 @@
 ---
+
 title: "delv(1)"
 name: "delv"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-delv/"
 description: "delv – DNS lookup and validation utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>delv</code> [@server] [ [<code>-4</code>] | [<code>-6</code>] ] [<code>-a</code> anchor-file] [<code>-b</code> address] [<code>-c</code> class] [<code>-d</code> level] [<code>-i</code>] [<code>-m</code>] [<code>-p</code> port#] [<code>-q</code> name] [<code>-t</code> type] [<code>-x</code> addr] [name] [type] [class] [queryopt&#8230;] </p>
 <p> <code>delv</code> [<code>-h</code>] </p>
 <p> <code>delv</code> [<code>-v</code>] </p>
 <p> <code>delv</code> [queryopt&#8230;] [query&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>delv</code> is a tool for sending DNS queries and validating the results, using the same internal resolver and validator logic as <i>named</i>. </p>
 <p> <code>delv</code> sends to a specified name server all queries needed to fetch and validate the requested data; this includes the original requested query, subsequent queries to follow CNAME or DNAME chains, queries for DNSKEY, and DS records to establish a chain of trust for DNSSEC validation. It does not perform iterative resolution, but simulates the behavior of a name server configured for DNSSEC validating and forwarding. </p>
 <p> By default, responses are validated using the built-in DNSSEC trust anchor for the root zone (&quot;.&quot;). Records returned by <code>delv</code> are either fully validated or were not signed. If validation fails, an explanation of the failure is included in the output; the validation process can be traced in detail. Because <code>delv</code> does not rely on an external server to carry out validation, it can be used to check the validity of DNS responses in environments where local name servers may not be trustworthy. </p>

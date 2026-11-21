@@ -1,4 +1,5 @@
 ---
+
 title: "sgpio(1)"
 name: "sgpio"
 section: "1"
@@ -9,9 +10,7 @@ description: "sgpio – captive backplane LED control utility"
 
 <h2>NAME</h2>
 <p> sgpio &#8211; captive backplane LED control utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sgpio</code> [-h] [-V] [[-d|&#8211;disk &lt;device&gt;[,&lt;device&gt;&#8230;]] | [-p|&#8211;port &lt;port&gt;[,&lt;port&gt;&#8230;]]] [-s|&#8211;status &lt;status&gt;] [-f|&#8211;freq &lt;frequency&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> Serial General Purpose Input Output (SGPIO) is a communication method used between a main board and a variety of internal and external hard disk drive bay enclosures. This utility can be used to control LEDs in an enclosure. For more information about SGPIO, please consult the SFF-8485 Specification.</p>
 <h2>OPTIONS</h2>
 <dl>

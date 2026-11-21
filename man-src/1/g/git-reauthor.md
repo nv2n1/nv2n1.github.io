@@ -1,4 +1,5 @@
 ---
+
 title: "git-reauthor(1)"
 name: "git-reauthor"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-reauthor – Rewrite history to change author’s identity"
 
 <h2>NAME</h2>
 <p> <code>git-reauthor</code> &#8211; Rewrite history to change author&#8217;s identity</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git reauthor [&lt;options&gt;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Lets you replace the author and/or committer identities in commits and tags. </p>
 <p> The command goes through all existing commits and tags in all local branches to selectively modify the identities present in those objects. All the other informations such as dates, messages,.. are preserved. </p>
 <p> You can rewrite all the identities in the commits and tags objects by using the &#8211;all flag, or only replace the identities whose email matches the value of the &#8211;old-email option. It is also possible to limit the rewrite to a certain type of identity: the author or the committer identity. By default, both of them are affected.<br />

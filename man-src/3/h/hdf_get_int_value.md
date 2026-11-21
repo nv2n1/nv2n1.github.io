@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_get_int_value(3)"
 name: "hdf_get_int_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_get_int_value/"
 description: "hdf_get_int_value – Return the integer value of a point in the data set"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -19,7 +19,6 @@ int hdf_get_int_value(HDF *hdf, const char *name, int defval);
  name -&gt; the name of a node to walk to in the data set<br />
  defval -&gt; value to return in case of error or if the node<br />
  doesn&#8217;t exist </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_get_int_value walks the HDF data set pointed to by hdf to name, and returns the value of that node converted to an integer. If that node does not exist, or it does not contain a number, the defval is returned. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmfilters(1)"
 name: "pbmfilters"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmfilters/"
 description: "pbmfilters – list of all programs in the netpbm package"
 ---
 
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>411toppm</code></dt>
 <dd> convert Sony Mavica .411 image to ppm</dd>

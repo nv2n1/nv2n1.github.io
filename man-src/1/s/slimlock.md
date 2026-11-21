@@ -1,4 +1,5 @@
 ---
+
 title: "slimlock(1)"
 name: "slimlock"
 section: "1"
@@ -9,11 +10,9 @@ description: "slimlock – Unholy Screen Locker"
 
 <h2>NAME</h2>
 <p> <code>slimlock</code> &#8211; Unholy Screen Locker</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>slimlock</code> [-v]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The Frankenstein&#8217;s monster of screen lockers. Grafting SLiM and slock together leads to blood, tears, and locked screens.</p>
 <h2>OPTIONS</h2>
 <dl>

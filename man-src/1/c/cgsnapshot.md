@@ -1,4 +1,5 @@
 ---
+
 title: "cgsnapshot(1)"
 name: "cgsnapshot"
 section: "1"
@@ -9,9 +10,7 @@ description: "cgsnapshot – generate the configuration file for given controlle
 
 <h2>NAME</h2>
 <p> cgsnapshot &#8211; generate the configuration file for given controllers </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cgsnapshot</code> [<code>-h</code>] [<code>-s</code>] [<code>-t</code>] [<code>-b</code> <i>file</i>] [<code>-w</code> <i>file</i>] [<code>-f</code> <i>output_file</i>] [<code>controller</code>] [&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cgsnapshot</code> generates the cgconfig compatible configuration file for the given controllers. If no controller is set, then cgsnapshot shows all mounted hierarchies. The output is in the same format as the <code>cgconfig.conf</code> configuration file. </p>
 <dl>
 <dt><code>-b file</code></dt>

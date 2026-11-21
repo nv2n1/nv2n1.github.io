@@ -1,4 +1,5 @@
 ---
+
 title: "flasm(1)"
 name: "flasm"
 section: "1"
@@ -9,7 +10,6 @@ description: "flasm – A swf bytecode assembler/disassembler"
 
 <h2>NAME</h2>
 <p> flasm &#8211; A swf bytecode assembler/disassembler</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flasm</code> [<code>-daubzx</code>] <i>filename</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -42,7 +42,6 @@ description: "flasm – A swf bytecode assembler/disassembler"
 <p> <i>flasm</i> <code>-z</code> foo.swf </p>
 <p> Compress foo.swf, create .$wf backup. Source <font SIZE="-1">SWF</font> doesn&#8217;t have to be Flash <font SIZE="-1">MX/MX</font> 2004 file. However, only Flash <font SIZE="-1">MX/MX</font> 2004 player will be able to play the resulting compressed file. </p>
 <p> <i>flasm</i> settings are read from <code>flasm.ini</code>. There aren&#8217;t many of them, and they are commented. You may, for example, switch bytecode offsets on and off there.</p>
-<h2>DESCRIPTION</h2>
 <p> <i>flasm</i> disassembles your entire <font SIZE="-1">SWF</font> including all the timelines and events. Looking at disassembly, you learn how the Flash compiler works, which improves your ActionScript skills. You can also do some optimizations on the disassembled code by hand or adjust the code as you wish. <i>flasm</i> then applies your changes to the original <font SIZE="-1">SWF</font>, replacing original actions. </p>
 <p> It&#8217;s also possible to embed <i>flasm</i> actions in your ActionScript, making optimizing of large projects more comfortable. <i>flasm</i> is not a decompiler. What you get is the human readable representation of <font SIZE="-1">SWF</font> bytecodes, not ActionScript source. If you&#8217;re looking for a decompiler, Flare may suit your needs. However, Flare can&#8217;t alter the <font SIZE="-1">SWF</font>.</p>
 <h2>URL</h2>

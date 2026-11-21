@@ -1,4 +1,5 @@
 ---
+
 title: "streamzip(1)"
 name: "streamzip"
 section: "1"
@@ -6,20 +7,13 @@ letter: "s"
 url: "/docs/linux/man/1-streamzip/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+streamzip - create a zip file from stdin 
 
- streamzip - create a zip file from stdin 
-
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 producer | streamzip[opts] | consumer producer | streamzip[opts] - zipfile = output.zip
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This program will read data from <tt>&quot;stdin&quot;</tt>, compress it into a zip container and, by default, write a <i>streamed</i> zip file to <tt>&quot;stdout&quot;</tt>. No temporary files are created. 
+This program will read data from <tt>&quot;stdin&quot;</tt>, compress it into a zip container and, by default, write a <i>streamed</i> zip file to <tt>&quot;stdout&quot;</tt>. No temporary files are created. 
 
  The zip container written to <tt>&quot;stdout&quot;</tt> is, by necessity, written in streaming format. Most programs that read Zip files can cope with a streamed zip file, but if interoperability is important, and your workflow allows you to write the zip file directly to disk you can create a non-streamed zip file using the <tt>&quot;zipfile&quot;</tt> option.
 

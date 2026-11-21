@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-listen(1)"
 name: "trace-cmd-listen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-listen/"
 description: "trace-cmd-listen – listen for incoming connection to record tracing."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd listen</code> -p <i>port</i> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) listen sets up a port to listen to waiting for connections from other hosts that run <i><a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1)</i> with the <code>-N</code> option. When a connection is made, and the remote host sends data, it will create a file called <i>trace.HOST:PORT.dat</i>. Where HOST is the name of the remote host, and PORT is the port that the remote host used to connect with.</p>
 <h2>OPTIONS</h2>
 <p> <code>-p</code> <i>port</i></p>

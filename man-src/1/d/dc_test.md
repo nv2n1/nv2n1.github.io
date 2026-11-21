@@ -1,4 +1,5 @@
 ---
+
 title: "dc_test(1)"
 name: "dc_test"
 section: "1"
@@ -9,9 +10,7 @@ description: "dc_test – Distributed session cache testing and benchmarking too
 
 <h2>NAME</h2>
 <p> dc_test &#8211; Distributed session cache testing and benchmarking tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dc_test</code> -connect &lt;addr&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dc_test</code> runs a configurable number of session caching operations against a given network address using the <i><a href="/docs/linux/man/8-distcache/">distcache</a></i>(8) protocol. This is typically to verify an installation, to help diagnose problems, and to measure latency and/or throughput. The given address could be for an instance of <code>dc_client</code> or directly to a running instance of <code>dc_server</code>. Note that whenever the service is running over TCP/IPv4, use of the <code>-persistent</code> flag is advised because many systems will fairly quickly exhaust the limit of available file-descriptors and stop allowing new sockets until the closed connections finish with the <font SIZE="-1">TIME_WAIT</font> state. </p>
 <p> <code>dc_test</code> runs one cache operation at a time, so it provides an accurate measurement of latency in the distcache architecture being tested. However if one wants to test the potential throughput of the architecture when multiple cache operations occur in parallel (and distcache tools are asynchronous to scale well in such circumstances), it makes sense to launch multiple instances of <code>dc_test</code> in parallel. </p>
 <p> <code>dc_test</code> attempts to verify correctness of any optimisation caching tricks in distcache tools by creating an array of &#8220;sessions&#8221; in advance and then sending sending <font SIZE="-1">ADD</font>, <font SIZE="-1">GET</font>, and <font SIZE="-1">REMOVE</font> requests on these sessions chosen completely at random. As such, many of these requests <code>should</code> fail, and <code>dc_test</code> will itself immediately halt with an error if any operation that should succeed fails or any operation that should fail succeeds.</p>

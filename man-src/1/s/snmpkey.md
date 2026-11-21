@@ -1,4 +1,5 @@
 ---
+
 title: "snmpkey(1)"
 name: "snmpkey"
 section: "1"
@@ -12,7 +13,6 @@ description: "snmpkey – Create SNMPv3 security keys for the Net::SNMP module"
 <pre><code>
 snmpkey&lt;authProto&gt;&lt;password&gt;&lt;authEngineID&gt;[&lt;privProto&gt;[&lt;password&gt;]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The User-based Security Model used by SNMPv3 defines an algorithm which &#8220;localizes&#8221; a plain text password to a specific authoritativeEngineID using a one-way hash. This resulting key is used by the <font SIZE="-1">SNMP</font> application instead of the plain text password for security reasons. </p>
 <p> The Net::SNMP module allows the user to either provide a plain text password or a localized key to the object constructor when configuring authentication or privacy. The <tt>&quot;snmpkey&quot;</tt> utility can be used to generate the key to be used by the <code>-authkey</code> or <code>-privkey</code> named arguments when they are passed to the Net::SNMP <tt>&quot;session()&quot;</tt> constructor.</p>
 <h2>REQUIRED ARGUMENTS</h2>

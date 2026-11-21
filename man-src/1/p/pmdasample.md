@@ -1,4 +1,5 @@
 ---
+
 title: "pmdasample(1)"
 name: "pmdasample"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdasample – sample performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdasample</code> &#8211; sample performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/pmdasample</code> [<code>-d</code> <i>domain</i>] [<code>-i</code> <i>port</i>] [<code>-l</code> <i>logfile</i>] [<code>-p</code>] [<code>-u</code> <i>socket</i>] [<code>-U</code> <i>username</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdasample</code> is a sample Performance Metrics Domain Agent (PMDA) which exports a variety of synthetic performance metrics. </p>
 <p> This PMDA was developed as part of the quality assurance testing for the PCP product, but has other uses, most notably in the development of new PCP clients. </p>
 <p> The metrics exported by the sample PMDA cover the full range of data types, data semantics, value cardinality, instance domain stability and error conditions found in real PMDAs. </p>

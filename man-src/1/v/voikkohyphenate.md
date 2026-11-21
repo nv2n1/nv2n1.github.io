@@ -1,4 +1,5 @@
 ---
+
 title: "voikkohyphenate(1)"
 name: "voikkohyphenate"
 section: "1"
@@ -9,9 +10,7 @@ description: "voikkohyphenate – test program for Voikko hyphenator"
 
 <h2>NAME</h2>
 <p> voikkohyphenate &#8211; test program for Voikko hyphenator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>voikkohyphenate</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>voikkohyphenate</code> is a test program for hyphenator functionality in libvoikko, library of Finnish language tools. It reads words from stdin (one word on a line) and prints them stdout in fully hyphenated form.</p>
 <h2>OPTIONS</h2>
 <dl>

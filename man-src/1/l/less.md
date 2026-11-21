@@ -1,4 +1,5 @@
 ---
+
 title: "less(1)"
 name: "less"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-less/"
 description: "less – opposite of more"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>less -?</code><br />
  <code>less &#8211;help</code><br />
  <code>less -V</code><br />
@@ -18,7 +18,6 @@ description: "less – opposite of more"
  <code> [-T </code><i>tagsfile/</i>] [-x <i>tab/</i>,&#8230;] [-y <i>lines/</i>] [-[z] <i>lines/</i>]<br />
  <code> [-# </code><i>shift/</i>] [+[+]<i>cmd/</i>] [&#8211;] [<i>filename/</i>]&#8230;<br />
  (See the OPTIONS section for alternate option syntax with long option names.)</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Less</i> is a program similar to <i><a href="/docs/linux/man/1-more/">more</a></i>(1), but it has many more features. <i>Less</i> does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like <i><a href="/docs/linux/man/1-vi/">vi</a></i>(1). <i>Less</i> uses termcap (or terminfo on some systems), so it can run on a variety of terminals. There is even limited support for hardcopy terminals. (On a hardcopy terminal, lines which should be printed at the top of the screen are prefixed with a caret.) </p>
 <p> Commands are based on both <i>more</i> and <i>vi</i>. Commands may be preceded by a decimal number, called N in the descriptions below. The number is used by some commands, as indicated.</p>
 <h2>COMMANDS</h2>

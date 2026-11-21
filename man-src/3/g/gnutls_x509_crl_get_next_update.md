@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_get_next_update(3)"
 name: "gnutls_x509_crl_get_next_update"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_crl_get_next_update – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_next_update &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>time_t gnutls_x509_crl_get_next_update(gnutls_x509_crl_t </code><i>crl</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_crl_t crl</dt>
 <dd> should contain a <code>gnutls_x509_crl_t</code> structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the time the next CRL will be issued. This field is optional in a CRL so it might be normal to get an error instead.</p>
 <h2>RETURNS</h2>
 <p> when the next CRL will be issued, or (time_t)-1 on error.</p>

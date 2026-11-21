@@ -1,4 +1,5 @@
 ---
+
 title: "setmclk(1)"
 name: "setmclk"
 section: "1"
@@ -9,9 +10,7 @@ description: "setmclk – adjust the memory timing of certain Cirrus cards."
 
 <h2>NAME</h2>
 <p> setmclk &#8211; adjust the memory timing of certain Cirrus cards.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>setmclk</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This program sets the <code>memory clock</code> of Cirrus 5424/26/28 cards. </p>
 <p> The first three values could be set by utility programs that came with my card (AVGA3), but somewhat higher values seem to work (on my card at least). It may be that better and more recent Cirrus cards use a higher value as boot-up default. It should depend on DRAM speed, but it seems to be more dependant on the card logic. </p>
 <p> I have the impression that many Cirrus 542x cards suffer from horrible BIOS version/DRAM timing misconfigurations. Perhaps even some versions of MS-Windows drivers change the MCLK register. In any case, the boot-up BIOS default (0x1c) may be inappropriately low for the type of DRAM timing most cards use. </p>

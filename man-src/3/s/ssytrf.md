@@ -1,4 +1,5 @@
 ---
+
 title: "ssytrf(3)"
 name: "ssytrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssytrf/"
 description: "ssytrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytrf</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
  <i></i><code>SSYTRF</code></p>

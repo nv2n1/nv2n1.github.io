@@ -1,4 +1,5 @@
 ---
+
 title: "sha1pass(1)"
 name: "sha1pass"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-sha1pass/"
 description: "sha1pass – Create a SHA1 password hash"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>sha1pass</code> &#8211; Create a SHA1 password hash</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sha1pass</code> [<i>PASSWORD</i>] [<i>SALT</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>sha1pass</code> creates a SHA1 password hash. In the absence of a salt value on the command line, a random salt vector will be generated. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-syslinux/">syslinux</a></i>(1) </p>

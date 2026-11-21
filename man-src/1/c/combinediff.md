@@ -1,4 +1,5 @@
 ---
+
 title: "combinediff(1)"
 name: "combinediff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-combinediff/"
 description: "combinediff – create a cumulative unified patch from two incremental patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>combinediff</code> [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [[-U&nbsp;<i>n</i>] | [&#8211;unified=<i>n</i>]] [[-d&nbsp;<i>PAT</i>] | [&#8211;drop-context=<i>PAT</i>]] [[-q] | [&#8211;quiet]] [[-z] | [&#8211;decompress]] [[-b] | [&#8211;ignore-space-change]] [[-B] | [&#8211;ignore-blank-lines]] [[-i] | [&#8211;ignore-case]] [[-w] | [&#8211;ignore-all-space]] [[&#8211;interpolate] | [&#8211;combine]] <i>diff1</i> <i>diff2</i></dt>
 <dt> <code>combinediff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>combinediff creates a unified diff that expresses the sum of two diffs. The diff files must be listed in the order that they are to be applied. For best results, the diffs must have at least three lines of context. </dd>
 <p> Since <code>combinediff</code> doesn&#8217;t have the advantage of being able to look at the files that are to be modified, it has stricter requirements on the input format than <code><a href="/docs/linux/man/1-patch/">patch</a></code>(1) does. The output of GNU diff will be okay, even with extensions, but if you intend to use a hand-edited patch it might be wise to clean up the offsets and counts using <code><a href="/docs/linux/man/1-recountdiff/">recountdiff</a></code>(1) first. </p>
 <p> Note, however, that the two patches must be in strict incremental order. In other words, the second patch must be relative to the state of the original set of files after the first patch was applied. </p>

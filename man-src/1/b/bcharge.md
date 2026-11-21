@@ -1,4 +1,5 @@
 ---
+
 title: "bcharge(1)"
 name: "bcharge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bcharge/"
 description: "bcharge – program to set BlackBerry handhelds to 500mA"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bcharge</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>bcharge</code> is a program that sends a special handshake to all BlackBerry devices it finds on the USB bus. This handshake causes the device to reset itself, and then request 500mA instead of the usual 100mA. This allows proper charging on Linux. </p>
 <p> It is safe to run this command multiple times, as it only changes devices that are not already set to 500mA. </p>
 <h2>OPTIONS</h2>

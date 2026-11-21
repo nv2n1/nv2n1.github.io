@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_getfsmap(2)"
 name: "ioctl_getfsmap"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-ioctl_getfsmap/"
 description: "ioctl_getfsmap – retrieve the physical layout of the filesystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code><br />
  <code>#include &lt;linux/fs.h&gt;</code><br />
  <code>#include &lt;linux/fsmap.h&gt;</code> </p>
 <p> <code>int ioctl(int </code><i>fd</i><code>, FS_IOC_GETFSMAP, struct fsmap_head * </code><i>arg</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation retrieves physical extent mappings for a filesystem. This information can be used to discover which files are mapped to a physical block, examine free space, or find known bad blocks, among other things. </p>
 <p> The sole argument to this operation should be a pointer to a single <i>struct fsmap_head</i>: </p>
 <p> struct fsmap {<br />

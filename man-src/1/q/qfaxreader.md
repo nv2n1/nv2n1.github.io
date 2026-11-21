@@ -1,4 +1,5 @@
 ---
+
 title: "qfaxreader(1)"
 name: "qfaxreader"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-qfaxreader/"
 
  qfaxreader - A multipage TIFF/FAX viewer
 
-<h2>SYNOPSIS</h2>
+qfaxreader [<i>tiff-file</i>]
 
- qfaxreader [<i>tiff-file</i>]
-
-<h2>DESCRIPTION</h2>
-
- <i>QFaxReader</i> is a color/monochrome multipage tiff files visualisation utility. Is designed for the users who receive faxes using computers.
+<i>QFaxReader</i> is a color/monochrome multipage tiff files visualisation utility. Is designed for the users who receive faxes using computers.
 
 <h2>FEATURES</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_copy(3)"
 name: "bson_oid_copy"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_oid_copy() – Copies the contents of src into dst."
 
 <h2>NAME</h2>
 <p> bson_oid_copy() &#8211; Copies the contents of src into dst.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_oid_copy(const bson_oid_t *src,
                    bson_oid_t *dst);
@@ -21,7 +21,6 @@ void bson_oid_copy(const bson_oid_t *src,
 <dl>
 <dt><code>dst</code></dt>
 <dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Copies the contents of src into dst. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

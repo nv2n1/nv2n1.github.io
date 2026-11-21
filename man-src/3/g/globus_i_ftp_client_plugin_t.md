@@ -1,4 +1,5 @@
 ---
+
 title: "globus_i_ftp_client_plugin_t(3)"
 name: "globus_i_ftp_client_plugin_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "globus_i_ftp_client_plugin_t –"
 
 <p> FTP Client Plugin. </p>
 <p> Each plugin implementation should define a method for initializing one of these structures. Plugins may be implemented as either a static function table, or a specialized plugin with plugin-specific attributes.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_i_ftp_client.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>plugin_name</code> </p>

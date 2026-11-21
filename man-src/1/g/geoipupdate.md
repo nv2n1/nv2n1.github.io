@@ -1,4 +1,5 @@
 ---
+
 title: "geoipupdate(1)"
 name: "geoipupdate"
 section: "1"
@@ -6,18 +7,11 @@ letter: "g"
 url: "/docs/linux/man/1-geoipupdate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+geoipupdate - a program for updating the MaxMind GeoIP databases 
 
- geoipupdate - a program for updating the MaxMind GeoIP databases 
+geoipupdate [-v] [-f licensefile]
 
-<h2>SYNOPSIS</h2>
-
- geoipupdate [-v] [-f licensefile]
-
-<h2>DESCRIPTION</h2>
-
- geoipupdate automatically updates the GeoIP database for GeoIP subscribers. It connects to the MaxMind GeoIP Update server and checks for an updated database. If it finds an updated database, then it downloads it, uncompresses it, and installs it. If you are running a firewall, it requires that the DNS and HTTP (80) ports be open. 
+geoipupdate automatically updates the GeoIP database for GeoIP subscribers. It connects to the MaxMind GeoIP Update server and checks for an updated database. If it finds an updated database, then it downloads it, uncompresses it, and installs it. If you are running a firewall, it requires that the DNS and HTTP (80) ports be open. 
 
  For example 
 

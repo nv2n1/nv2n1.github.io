@@ -1,4 +1,5 @@
 ---
+
 title: "ccze(1)"
 name: "ccze"
 section: "1"
@@ -9,9 +10,7 @@ description: "ccze – A robust log colorizer"
 
 <h2>NAME</h2>
 <p> ccze &#8211; A robust log colorizer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ccze</code> [<i>options</i>] &lt;<i>logfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ccze</code> utility, which is a drop-in replacement for <code>colorize</code>, but written in C, to be faster and less resource-hungry. The goal was to be fully backwards compatible, yet superior with respect to speed and features.</p>
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

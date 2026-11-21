@@ -1,4 +1,5 @@
 ---
+
 title: "xbindkeys_show(1)"
 name: "xbindkeys_show"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xbindkeys_show/"
 description: "xbindkeys_show – a program to show the grabbing keys used in xbindkeys"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xbindkeys_show</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>XbindKeys_Show</i> is a program that show the grabbing keys used in xbindkeys. </p>
 <h2>COMMAND LINE OPTIONS</h2>
 <p> Available command line options are as follows:</p>

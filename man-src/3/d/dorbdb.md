@@ -1,4 +1,5 @@
 ---
+
 title: "dorbdb(3)"
 name: "dorbdb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dorbdb/"
 description: "dorbdb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorbdb</code> (TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, PHI, TAUP1, TAUP2, TAUQ1, TAUQ2, WORK, LWORK, INFO)<br />
  <i></i><code>DORBDB</code></p>

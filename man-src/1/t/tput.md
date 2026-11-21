@@ -1,4 +1,5 @@
 ---
+
 title: "tput(1)"
 name: "tput"
 section: "1"
@@ -6,9 +7,8 @@ letter: "t"
 url: "/docs/linux/man/1-tput/"
 description: "tput, reset – initialize a terminal or query terminfo database"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>tput</code>, <code>reset</code> - initialize a terminal or query terminfo database </p>
-<h2>SYNOPSIS</h2>
 <p> <code>tput</code> [<code>-T</code><i>type</i>] <i>capname</i> [<i>parameters</i>] <br />
  <code>tput</code> [<code>-T</code><i>type</i>] [<code>-x</code>] <code>clear</code> <br />
  <code>tput</code> [<code>-T</code><i>type</i>] <code>init</code> <br />
@@ -17,7 +17,6 @@ description: "tput, reset – initialize a terminal or query terminfo database"
  <code>tput -S</code> <code>&lt;&lt;</code> <br />
  <code>tput -V</code> <br />
   </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>tput</code> utility uses the <code>terminfo</code> database to make the values of terminal-dependent capabilities and information available to the shell (see <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1)), to initialize or reset the terminal, or return the long name of the requested terminal type. The result depends upon the capability&#8217;s type: </p>
 <dl>
 <dd>  </dd>

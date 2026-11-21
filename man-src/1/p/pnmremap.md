@@ -1,4 +1,5 @@
 ---
+
 title: "pnmremap(1)"
 name: "pnmremap"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pnmremap/"
 description: "pnmremap – replace colors in a PPM image with colors from another set"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmremap</code> [<code>-floyd</code>|<code>-fs</code>|<code>-nfloyd</code>|<code>-nofs</code>] [<code>-firstisdefault</code>] [<code>-verbose</code>] [<code>-mapfile=</code><i>mapfile</i>] [<code>-missingcolor=</code><i>color</i>] [<i>pnmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pnmremap</code> replaces the colors in an input image with those from a colormap you specify. Where a color in the input is not in the colormap, you have three choices: 1) choose the closest color from the colormap; 2) choose the first color from the colormap; 3) use a color specified by a command option. (In this latter case, if the color you specify is not in your color map, the output will not necessarily contain only colors from the colormap). </p>
 <p> Two reasons to do this are: 1) you want to reduce the number of colors in the input image; and 2) you need to feed the image to something that can handle only certain colors. </p>
 <p> To reduce colors, you can generate the colormap with <code>ppmcolormap</code>. Example: </p>

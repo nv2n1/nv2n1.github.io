@@ -1,4 +1,5 @@
 ---
+
 title: "dirfilename(3)"
 name: "dirfilename"
 section: "3"
@@ -9,11 +10,9 @@ description: "dirfilename — retrieve the name of a dirfile"
 
 <h2>NAME</h2>
 <p> dirfilename &#8212; retrieve the name of a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>const char *dirfilename(const DIRFILE *</code><i>dirfile</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfilename</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns its name. The name of a dirfile is the pathname passed to <code>dirfile_cbopen</code>() or <code>dirfile_open</code>() when the dirfile was opened. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <h2>RETURN VALUE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "memkind_gbtlb(3)"
 name: "memkind_gbtlb"
 section: "3"
@@ -10,7 +11,6 @@ description: "memkind_gbtlb.h – gigabyte TLB memkind operations. Note: This is
 <h2>NAME</h2>
 <p> memkind_gbtlb.h &#8211; gigabyte TLB memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;memkind/internal/memkind_gbtlb.h&gt;
 Link with - lmemkind void *memkind_gbtlb_malloc(struct memkind *kind, size_t size);
@@ -21,7 +21,6 @@ void memkind_gbtlb_free(struct memkind *kind, void *ptr);
 int memkind_gbtlb_get_mmap_flags(struct memkind *kind, int *flags);
 int memkind_gbtlb_check_addr(struct memkind *kind, void *addr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Gigabyte TLB implementations for memkind operations. These are implemented without using the jemalloc library. The implementation is a wrapper around <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with a hash table for storing the address and extent of the mapped memory. The hash table is queried when freeing memory in order to determine the extent that should be passed to <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2) The reason for using such a simplified implementation instead of using a heap is that a heap manager is intended to mitigate the overhead of the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system call by calling it less frequently than the allocation requests that is services. Since there is a large amount of memory being allocated with each call in the case where there are gigabyte pages backing the allocation, the frequency of requests is assumed to be low. For this reason the traditional requirements of a heap manager to be faster than directly mapping memory from the operating system is relaxed. </p>
 <p> <code>memkind_gbtlb_malloc</code>() calls <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with <code>MAP_HUGE_1GB</code> mmap flag for allocating gigabyte pages for <i>size</i> bytes and <i>kind</i> can take <code>MEMKIND_GBTLB,</code> <code>MEMKIND_HBW_GBTLB,</code> <code>MEMKIND_HBW_GBTLB_PREFERRED</code> and stores the returned address in the internal hash table which can be queried to support the <code>memkind_gbtlb_free</code>() operation. If kind does not support GBTLB undefined behaviour occurs. </p>
 <p> <code>memkind_gbtlb_calloc</code>() is exactly the same implementation and supports the same <i>kind</i> as <code>memkind_gbtlb_malloc</code>() since the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system call is guaranteed to return memory of <i>size</i> bytes which has been zeroed. </p>

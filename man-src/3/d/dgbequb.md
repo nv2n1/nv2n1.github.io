@@ -1,4 +1,5 @@
 ---
+
 title: "dgbequb(3)"
 name: "dgbequb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbequb/"
 description: "dgbequb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbequb</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br />
  <i></i><code>DGBEQUB</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fontc(1)"
 name: "fontc"
 section: "1"
@@ -9,9 +10,7 @@ description: "fontc – Fontcap preprocessor for NCAR Graphics"
 
 <h2>NAME</h2>
 <p> fontc &#8211; Fontcap preprocessor for NCAR Graphics</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fontc</code> <i>ascii-fontcap-name</i> <i>binary-fontcap-name</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fontc</code> converts an ascii-encoded fontcap, <i>ascii-fontcap-name,</i> into a binary-encoded fontcap, <i>binary-fontcap-name.</i> </p>
 <p> Binary encoded fontcaps <i>are</i> system dependent and should not be assumed to be portable across different system architectures.</p>
 <h2>SEE ALSO</h2>

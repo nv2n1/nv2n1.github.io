@@ -1,4 +1,5 @@
 ---
+
 title: "ocamlrun(1)"
 name: "ocamlrun"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ocamlrun/"
 description: "ocamlrun – The OCaml bytecode interpreter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ocamlrun</code> [ <i>options</i> ] <i>filename argument &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-ocamlrun/">ocamlrun</a></code>(1) command executes bytecode files produced by the linking phase of the <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) command. </p>
 <p> The first non-option argument is taken to be the name of the file containing the executable bytecode. (That file is searched in the executable path as well as in the current directory.) The remaining arguments are passed to the OCaml program, in the string array <code>Sys.argv</code>. Element 0 of this array is the name of the bytecode executable file; elements 1 to <i>n</i> are the remaining arguments. </p>
 <p> In most cases, the bytecode executable files produced by the <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) command are self-executable, and manage to launch the <code><a href="/docs/linux/man/1-ocamlrun/">ocamlrun</a></code>(1) command on themselves automatically. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-resolver(1)"
 name: "ldns-resolver"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldns-resolver – tries to create a resolver from a resolv.conf fi
 
 <h2>NAME</h2>
 <p> ldns-resolver &#8211; tries to create a resolver from a resolv.conf file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldns-resolver</code> <i>file</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldns-resolver</code> tries to create a resolver from a resolv.conf file. This is only useful to test the library for robusteness with input data. </p>
 <h2>OPTIONS</h2>
 <p> <code>ldns-resolver</code> takes a filename of the resolv.conf file as input. For example <i>ldns-resolver /etc/resolv.conf</i> will show if the file can be parsed successfully. </p>

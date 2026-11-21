@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-top(1)"
 name: "lxc-top"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-top – monitor container statistics"
 
 <h2>NAME</h2>
 <p> lxc-top &#8211; monitor container statistics</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-top</code> [&#8211;help] [&#8211;max <i>count</i>] [&#8211;delay <i>delay</i>] [&#8211;sort <i>sortby</i>] [&#8211;reverse]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-top</code> displays container statistics. The output is updated every <i>delay</i> seconds, and is ordered according to the <i>sortby</i> value given. Specifying <i>count</i> will limit the number of containers displayed, otherwise <code>lxc-top</code> will display as many containers as can fit in your terminal.</p>
 <h2>OPTIONS</h2>
 <dl>

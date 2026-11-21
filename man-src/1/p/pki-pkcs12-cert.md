@@ -1,4 +1,5 @@
 ---
+
 title: "pki-pkcs12-cert(1)"
 name: "pki-pkcs12-cert"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pki-pkcs12-cert/"
 description: "pki-pkcs12-cert – Command-Line Interface for managing individual certificates in PKCS #12 file."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] pkcs12 - cert pki[CLI options] pkcs12 - cert - find[command options] pki[CLI options] pkcs12 - cert - export&lt;nickname&gt;[command options] pki[CLI options] pkcs12 - cert - add&lt;nickanme&gt;[command options] pki[CLI options] pkcs12 - cert - mod&lt;nickname&gt;[command options] pki[CLI options] pkcs12 - cert - del&lt;nickname&gt;[command options]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki pkcs12-cert</code> commands provide command-line interfaces to manage certificates in a PKCS #12 file. </p>
 <p> <code>pki</code> [CLI options] <code>pkcs12-cert-find</code> [command options]</p>
 <dl>

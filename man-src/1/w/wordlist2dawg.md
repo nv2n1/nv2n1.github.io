@@ -1,4 +1,5 @@
 ---
+
 title: "wordlist2dawg(1)"
 name: "wordlist2dawg"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-wordlist2dawg/"
 description: "wordlist2dawg – convert a wordlist to a DAWG for Tesseract"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wordlist2dawg</code> <i>WORDLIST</i> <i>DAWG</i> <i>lang.unicharset</i> </p>
 <p> <code>wordlist2dawg</code> -t <i>WORDLIST</i> <i>DAWG</i> <i>lang.unicharset</i> </p>
 <p> <code>wordlist2dawg</code> -r 1 <i>WORDLIST</i> <i>DAWG</i> <i>lang.unicharset</i> </p>
 <p> <code>wordlist2dawg</code> -r 2 <i>WORDLIST</i> <i>DAWG</i> <i>lang.unicharset</i> </p>
 <p> <code>wordlist2dawg</code> -l &lt;short&gt; &lt;long&gt; <i>WORDLIST</i> <i>DAWG</i> <i>lang.unicharset</i></p>
-<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/1-wordlist2dawg/">wordlist2dawg</a>(1) converts a wordlist to a Directed Acyclic Word Graph (DAWG) for use with Tesseract. A DAWG is a compressed, space and time efficient representation of a word list.</p>
 <h2>OPTIONS</h2>
 <p> -t Verify that a given dawg file is equivalent to a given wordlist. </p>

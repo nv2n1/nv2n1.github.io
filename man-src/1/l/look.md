@@ -1,4 +1,5 @@
 ---
+
 title: "look(1)"
 name: "look"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-look/"
 description: "look – display lines beginning with a given string"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>look</code> [options] <i>string</i> [<i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>look</code> utility displays any lines in <i>file</i> which contain <i>string</i>. As <code>look</code> performs a binary search, the lines in <i>file</i> must be sorted (where <code><a href="/docs/linux/man/1-sort/">sort</a></code>(1) was given the same options <code>-d</code> and/or <code>-f</code> that <code>look</code> is invoked with). </p>
 <p> If <i>file</i> is not specified, the file <i>/usr/share/dict/words</i> is used, only alphanumeric characters are compared and the case of alphabetic characters is ignored.</p>
 <h2>OPTIONS</h2>

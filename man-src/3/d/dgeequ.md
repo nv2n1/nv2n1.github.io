@@ -1,4 +1,5 @@
 ---
+
 title: "dgeequ(3)"
 name: "dgeequ"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgeequ/"
 description: "dgeequ.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeequ</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, INFO)<br />
  <i></i><code>DGEEQU</code></p>

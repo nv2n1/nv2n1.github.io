@@ -1,4 +1,5 @@
 ---
+
 title: "dvispc(1)"
 name: "dvispc"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-dvispc/"
 description: "dvispc – Modify a DVI file to be page-independent in specials"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvispc</code> [<code>-c</code>] [<code>-bvz</code>] <i>input_dvi_file</i> [<i>output_dvi_file</i>] </p>
 <p> <code>dvispc -d</code> <i>input_dvi_file</i> </p>
 <p> <code>dvispc -s</code> [<code>-p..</code>] <i>input_dvi_file</i> [<i>output_text_file</i>] </p>
 <p> <code>dvispc -a</code> [<code>-ltv</code>] [<code>-J..</code>] [<code>-p..</code>] [<code>-r..</code>] <i>input_dvi_file</i> [<i>output_text_file</i>] </p>
 <p> <code>dvispc -x[..]</code> [<code>-ltv</code>] [<code>-r..</code>] [<i>input_text_file</i>] <i>output_dvi_file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Dvispc</code> is a utility to modify/edit TeX DVI file with the following features: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Mode option&nbsp;<code>-c</code>&nbsp;(default):<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;correct an input DVI to be page-independent in specials&nbsp;(default) </p>

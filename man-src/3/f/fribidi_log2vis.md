@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_log2vis(3)"
 name: "fribidi_log2vis"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_log2vis/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_log2vis - get visual string 
 
- fribidi_log2vis - get visual string 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiLevel fribidi_log2vis 
  ( 
@@ -66,9 +62,7 @@ url: "/docs/linux/man/3-fribidi_log2vis/"
 </dd><dt><b>FriBidiLevel *embedding_levels</b>
 </dt><dd> Output list of embedding levels.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function converts the logical input string to the visual output strings as specified by the Unicode Bidirectional Algorithm. As a side effect it also generates mapping lists between the two strings, and the list of embedding levels as defined by the algorithm. 
+This function converts the logical input string to the visual output strings as specified by the Unicode Bidirectional Algorithm. As a side effect it also generates mapping lists between the two strings, and the list of embedding levels as defined by the algorithm. 
 
  If NULL is passed as any of the the lists, the list is ignored and not filled. 
 

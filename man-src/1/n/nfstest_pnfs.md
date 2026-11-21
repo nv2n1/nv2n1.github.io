@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_pnfs(1)"
 name: "nfstest_pnfs"
 section: "1"
@@ -9,9 +10,7 @@ description: "nfstest_pnfs – Basic pNFS functional tests"
 
 <h2>NAME</h2>
 <p> nfstest_pnfs &#8211; Basic pNFS functional tests</p>
-<h2>SYNOPSIS</h2>
 <p> nfstest_pnfs &#8211;server &lt;server&gt; [options]</p>
-<h2>DESCRIPTION</h2>
 <p> Verify basic pNFS functionality for file (both READ and WRITE), including opening a second file within the same mount and having a lock on the file. Also, verify basic pNFS functionality for a file opened for both READ and WRITE while reading the file first and then writing to it or the other way around by writing to the file fist and then reading the file. These tests verify proper functionality of pNFS and NFSv4.1 as well. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mhash(3)"
 name: "mhash"
 section: "3"
@@ -11,7 +12,6 @@ description: "mhash – Hash Library"
 <p> <code>mhash &#8211; Hash Library</code></p>
 <h2>VERSION</h2>
 <p> mhash <font SIZE="-1">0.9.2</font></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include "mhash.h"
 </code></pre>
@@ -59,7 +59,6 @@ int mhash_hmac_deinit(MHASH thread, void *result);</p>
 <p> <i></i><font SIZE="-1"><i>KEYGEN_S2K_SIMPLE</i></font><i></i>: The OpenPGP (rfc2440) Simple S2K. </p>
 <p> <i></i><font SIZE="-1"><i>KEYGEN_S2K_SALTED</i></font><i></i>: The OpenPGP Salted S2K. </p>
 <p> <i></i><font SIZE="-1"><i>KEYGEN_S2K_ISALTED</i></font><i></i>: The OpenPGP Iterated Salted S2K.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mhash</code> library provides an easy to use C interface for several <i>hash algorithms</i> (also known as &#8220;one-way&#8221; algorithms). These can be used to create checksums, message digests and more. Currently, <font SIZE="-1">MD5</font>, <font SIZE="-1">SHA1</font>, <font SIZE="-1">GOST</font>, <font SIZE="-1">TIGER</font>, <font SIZE="-1">RIPE-MD160</font>, <font SIZE="-1">HAVAL</font> and several other algorithms are supported. <code>mhash</code> support <i></i><font SIZE="-1"><i>HMAC</i></font><i> generation</i> (a mechanism for message authentication using cryptographic hash functions, and is described in rfc2104). <font SIZE="-1">HMAC</font> can be used to create message digests using a secret key, so that these message digests cannot be regenerated (or replaced) by someone else. A key generation mechanism was added to <code>mhash</code> since <i>key generation</i> algorithms usually involve hash algorithms.</p>
 <h2>API FUNCTIONS</h2>
 <p> We will describe the <font SIZE="-1">API</font> of <code>mhash</code> in detail now. The order follows the one in the <font SIZE="-1">SYNOPSIS</font> directly.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dorgtr(3)"
 name: "dorgtr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dorgtr/"
 description: "dorgtr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorgtr</code> (UPLO, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>DORGTR</code></p>

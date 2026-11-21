@@ -1,4 +1,5 @@
 ---
+
 title: "mblen(3)"
 name: "mblen"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-mblen/"
 description: "mblen – determine number of bytes in next multibyte character"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int mblen(const char *s, size_t n);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> If <i>s</i> is not NULL, the <code>mblen</code>() function inspects at most <i>n</i> bytes of the multibyte string starting at <i>s</i> and extracts the next complete multibyte character. It uses a static anonymous shift state known only to the <code>mblen</code>() function. If the multibyte character is not the null wide character, it returns the number of bytes that were consumed from <i>s</i>. If the multibyte character is the null wide character, it returns 0. </p>
 <p> If the <i>n</i> bytes starting at <i>s</i> do not contain a complete multibyte character, <code>mblen</code>() returns -1. This can happen even if <i>n</i> is greater than or equal to <i>MB_CUR_MAX</i>, if the multibyte string contains redundant shift sequences. </p>
 <p> If the multibyte string starting at <i>s</i> contains an invalid multibyte sequence before the next complete character, <code>mblen</code>() also returns -1. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "check-regexp(1)"
 name: "check-regexp"
 section: "1"
@@ -9,9 +10,7 @@ description: "check-regexp – test regular expressions from the command line"
 
 <h2>NAME</h2>
 <p> check-regexp &#8211; test regular expressions from the command line</p>
-<h2>SYNOPSIS</h2>
 <p> <code>check-regexp</code> <i>&#8216;regular expression&#8217; &#8216;string1&#8217; &#8216;string2&#8217; </i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> check-regexp (GNU Source-highlight) </p>
 <p> You simply pass as the first command line argument the regular expression and then the strings you want to try to match.<br />
  It is crucial, in order to avoid shell substitutions, to enclose both the expression and the strings in single quotes. </p>

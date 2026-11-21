@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_sign_hash(3)"
 name: "gnutls_x509_privkey_sign_hash"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_privkey_sign_hash – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_sign_hash &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_sign_hash(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>hash</i><code>, gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_privkey_sign_hash – API function"
 <dd> holds the data to be signed</dd>
 <dt>gnutls_datum_t * signature</dt>
 <dd> will contain newly allocated signature</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will sign the given hash using the private key. Do not use this function directly unless you know what it is. Typical signing requires the data to be hashed and stored in special formats (e.g. BER Digest-Info for RSA).</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value. </p>

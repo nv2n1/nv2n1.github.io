@@ -1,4 +1,5 @@
 ---
+
 title: "blkrawverify(1)"
 name: "blkrawverify"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-blkrawverify/"
 description: "blkrawverify – verifies an output file produced by blkparse"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>blkrawverify &lt;</code><i>dev</i>&gt; [&lt;<i>dev</i>&gt;&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> The <i>blkrawverify</i> utility can be used to verify data retrieved via <i>blktrace</i>. It will check for valid event formats, forward progressing sequence numbers and time stamps, also does reasonable checks for other potential issues within individual events. </p>
 <p> Errors found will be tracked in &lt;<i>dev</i>&gt;.verify.out. </p>
 <h2>AUTHORS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmdist(1)"
 name: "ppmdist"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmdist/"
 description: "ppmdist – simplistic grayscale assignment for machine generated, color images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmdist</code> [<code>-intensity</code>|<code>-frequency</code>] [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input, performs a simplistic grayscale assignment intended for use with grayscale or bitmap printers. </p>
 <p> Often conversion from ppm to pgm will yield an image with contrast too low for good printer output. The program maximizes contrast between the gray levels output. </p>
 <p> A ppm input of n colors is read, and a pgm of n gray levels is written. The gray levels take on the values 0..n-1, while maxval takes on n-1. </p>

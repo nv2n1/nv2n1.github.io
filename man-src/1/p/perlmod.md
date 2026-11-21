@@ -1,4 +1,5 @@
 ---
+
 title: "perlmod(1)"
 name: "perlmod"
 section: "1"
@@ -6,12 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlmod/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlmod - Perl modules (packages and symbol tables) 
-
-<h2>DESCRIPTION</h2>
+perlmod - Perl modules (packages and symbol tables) 
 
 <h3>Is this the document you were after?</h3>
 

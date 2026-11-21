@@ -1,4 +1,5 @@
 ---
+
 title: "cistopbm(1)"
 name: "cistopbm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cistopbm/"
 description: "cistopbm – convert Compuserve RLE image to PBM"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cistopbm</code> [<code>-i</code>] [<i>cisfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>cistopbm</code> reads a Compuserve RLE file as input. and produces a PBM image as output. </p>
 <h2>OPTIONS</h2>

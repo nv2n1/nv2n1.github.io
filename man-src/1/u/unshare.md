@@ -1,4 +1,5 @@
 ---
+
 title: "unshare(1)"
 name: "unshare"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-unshare/"
 description: "unshare – run program in new namespaces"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>unshare</code> [options] [<i>program</i> [<i>arguments</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>unshare</code> command creates new namespaces (as specified by the command-line options described below) and then executes the specified <i>program</i>. If <i>program</i> is not given, then &quot;${SHELL}&quot; is run (default: <i>/bin/sh</i>). </p>
 <p> By default, a new namespace persists only as long as it has member processes. A new namespace can be made persistent even when it has no member processes by bind mounting /proc/<i>pid</i>/ns/<i>type</i> files to a filesystem path. A namespace that has been made persistent in this way can subsequently be entered with <code><a href="/docs/linux/man/1-nsenter/">nsenter</a></code>(1) even after the <i>program</i> terminates (except PID namespaces where a permanently running init process is required). Once a persistent namespace is no longer needed, it can be unpersisted by using <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) to remove the bind mount. See the EXAMPLES section for more details. </p>
 <p> <code>unshare</code> since util-linux version 2.36 uses <i>/proc/[pid]/ns/pid_for_children</i> and <i>/proc/[pid]/ns/time_for_children</i> files for persistent PID and TIME namespaces. This change requires Linux kernel 4.17 or newer. </p>

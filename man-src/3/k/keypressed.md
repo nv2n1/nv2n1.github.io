@@ -1,4 +1,5 @@
 ---
+
 title: "keypressed(3)"
 name: "keypressed"
 section: "3"
@@ -9,10 +10,8 @@ description: "keypressed – Tells if there are keypresses waiting in the input 
 
 <h2>NAME</h2>
 <p> keypressed &#8211; Tells if there are keypresses waiting in the input buffer. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int keypressed();</code></p>
-<h2>DESCRIPTION</h2>
 <p> Returns TRUE if there are keypresses waiting in the input buffer. You can use this to see if the next call to readkey() is going to block or to simply wait for the user to press a key while you still update the screen possibly drawing some animation. Example: </p>
 <pre>
    while (!keypressed()) {

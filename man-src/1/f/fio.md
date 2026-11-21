@@ -1,4 +1,5 @@
 ---
+
 title: "fio(1)"
 name: "fio"
 section: "1"
@@ -9,9 +10,7 @@ description: "fio – flexible I/O tester"
 
 <h2>NAME</h2>
 <p> fio &#8211; flexible I/O tester</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fio</code> [<i>options</i>] [<i>jobfile</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fio</code> is a tool that will spawn a number of threads or processes doing a particular type of I/O action as specified by the user. The typical use of fio is to write a job file matching the I/O load one wants to simulate.</p>
 <h2>OPTIONS</h2>
 <dl>

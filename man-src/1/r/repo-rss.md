@@ -1,4 +1,5 @@
 ---
+
 title: "repo-rss(1)"
 name: "repo-rss"
 section: "1"
@@ -9,9 +10,7 @@ description: "repo-rss – generates an RSS feed from one or more Yum repositori
 
 <h2>NAME</h2>
 <p> repo-rss &#8211; generates an RSS feed from one or more Yum repositories</p>
-<h2>SYNOPSIS</h2>
 <p> <code>repo-rss</code> [options] repoid1 [repoid2&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>repo-rss</code> is a program for generating RSS feeds for one or more Yum repositories. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

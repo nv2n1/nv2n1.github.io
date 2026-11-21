@@ -1,4 +1,5 @@
 ---
+
 title: "dgerfs(3)"
 name: "dgerfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgerfs/"
 description: "dgerfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgerfs</code> (TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>DGERFS</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_url_validate(3)"
 name: "cgi_url_validate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_url_validate/"
 description: "cgi_url_validate – validate that url is of an allowed format"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -16,7 +16,6 @@ NEOERR *cgi_url_validate(const char *buf, char **esc);
 </code></pre>
 <h2>ARGUMENTS</h2>
 <p> buf &#8211; a 0 terminated string </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_url_validate will check that a URL starts with one of the accepted safe schemes. If not, it returns &quot;#&quot; as a safe substitute. Currently accepted schemes are http, https, ftp and mailto. It then html escapes the entire URL so that it is safe to insert in an href attribute. </p>
 <h2>RETURN VALUE</h2>
 <p> esc &#8211; a newly allocated string </p>

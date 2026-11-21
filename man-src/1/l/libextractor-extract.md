@@ -1,4 +1,5 @@
 ---
+
 title: "libextractor-extract(1)"
 name: "libextractor-extract"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-libextractor-extract/"
 description: "extract – determine meta-information about a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>extract</code> [ <code>-abdfghLnrsvV</code> ] [ <code>-B</code> <i>language</i> ] [ <code>-H</code> <i>hash-algorithm</i> ] [ <code>-l</code> <i>library</i> ] [ <code>-p</code> <i>type</i> ] [ <code>-x</code> <i>type</i> ] <i>file</i> &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents version 0.5.17 of the <code>extract</code> command. </p>
 <p> <code>extract</code> tests each file specified in the argument list in an attempt to infer meta-information from it. Each file is subjected to the meta-data extraction libraries from <i>libextractor.</i> </p>
 <p> libextractor classifies meta-information (also referred to as keywords) into types. A list of all types can be obtained with the <code>-L</code> option. </p>

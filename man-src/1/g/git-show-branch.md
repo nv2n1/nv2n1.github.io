@@ -1,4 +1,5 @@
 ---
+
 title: "git-show-branch(1)"
 name: "git-show-branch"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-show-branch/"
 description: "git-show-branch – Show branches and their commits"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git show - branch[-a | --all][-r | --remotes][--topo - order | --date - order][--current][--color[=&lt;when&gt;] | --no - color][--sparse][--more = &lt;n&gt; | --list | --independent | --merge - base][--no - name | --sha1 - name][--topics][(&lt;rev&gt; | &lt;glob&gt;)...] git show - branch(-g | --reflog)[=&lt;n&gt;[, &lt;base&gt;]][--list][&lt;ref&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Shows the commit ancestry graph starting from the commits named with &lt;rev&gt;s or &lt;glob&gt;s (or all refs under refs/heads and/or refs/tags) semi-visually. </p>
 <p> It cannot show more than 29 branches and commits at a time. </p>
 <p> It uses <code>showbranch.default</code> multi-valued configuration items if no &lt;rev&gt; or &lt;glob&gt; is given on the command line.</p>

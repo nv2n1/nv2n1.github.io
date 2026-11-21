@@ -1,4 +1,5 @@
 ---
+
 title: "dorgl2(3)"
 name: "dorgl2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dorgl2/"
 description: "dorgl2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorgl2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>DORGL2</code></p>

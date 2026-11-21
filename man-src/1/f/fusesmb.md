@@ -1,4 +1,5 @@
 ---
+
 title: "fusesmb(1)"
 name: "fusesmb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fusesmb/"
 description: "fusesmb – Mount network neighbourhood"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fusesmb</code> <i>mountpoint</i> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fusesmb</code> is a Network Neighborhood (Samba shares) filesystem. It works like smbfs, but instead of accessing one share at a time, all computers and workgroups are accessible at once from a single filesystem mount. </p>
 <h2>OPTIONS</h2>
 <p> <code>fusesmb</code> accepts the following options:</p>

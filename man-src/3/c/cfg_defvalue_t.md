@@ -1,4 +1,5 @@
 ---
+
 title: "cfg_defvalue_t(3)"
 name: "cfg_defvalue_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cfg_defvalue_t/"
 description: "cfg_defvalue_t – Data structure holding the default value given by the initialization macros."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>
 <p> long int <code>number</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pmtime(1)"
 name: "pmtime"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmtime – time control server for Performance Co-Pilot"
 
 <h2>NAME</h2>
 <p> <code>pmtime</code> &#8211; time control server for Performance Co-Pilot</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmtime</code> [<code>-p</code> <i>port</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmtime</code> is a graphical user interface for performance monitoring applications using the PCP infrastructure and requiring interactive time control. </p>
 <p> <code>pmtime</code> is not normally invoked directly by users. Rather, it is more typical for it to be started by client applications (e.g. <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1) and <code>pmval</code>(1)). </p>
 <p> There are two modes of interacting with a <code>pmtime</code> process &#8211; live host mode, and historical archive mode. In archive mode the window presents time controls suitable for manipulating the archive position, allowing full VCR control to move forwards and backwards in time at configurable rates and intervals. In live mode the <code>pmtime</code> window contains the simpler time controls suitable for live monitoring. </p>

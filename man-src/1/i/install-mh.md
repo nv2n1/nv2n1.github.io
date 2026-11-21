@@ -1,4 +1,5 @@
 ---
+
 title: "install-mh(1)"
 name: "install-mh"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-install-mh/"
 description: "install-mh – initialize the nmh environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/install-mh</code> [<code>-auto</code>] [<code>-check</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Install-mh</code></p>
 <dd>is the <code>nmh</code> program to create the initial setup for a first-time <code>nmh</code> user. <code>Install-mh</code> lives in two places for historical reasons. </dd>
 <p> The <code>-auto</code> option does things as automatically as possible and makes <code>install-mh</code> less chatty. </p>

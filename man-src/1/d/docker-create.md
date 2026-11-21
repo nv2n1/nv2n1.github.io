@@ -1,4 +1,5 @@
 ---
+
 title: "docker-create(1)"
 name: "docker-create"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-create/"
 description: "docker-create – Create a new container"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker create [OPTIONS] IMAGE [COMMAND] [ARG&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker container create. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;add-host</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Add a custom host-to-IP mapping (host:ip)</p>

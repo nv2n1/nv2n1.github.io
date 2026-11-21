@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_get_openpgp_keyring(3)"
 name: "gnutls_certificate_get_openpgp_keyring"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_get_openpgp_keyring – export keyring from a #
 
 <h2>NAME</h2>
 <p> gnutls_certificate_get_openpgp_keyring &#8211; export keyring from a #gnutls_certificate_credentials_t</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void gnutls_certificate_get_openpgp_keyring(gnutls_certificate_credentials_t </code><i>sc</i><code>, gnutls_openpgp_keyring_t * </code><i>keyring</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_certificate_get_openpgp_keyring – export keyring from a #
 <dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
 <dt>gnutls_openpgp_keyring_t * keyring</dt>
 <dd> the exported keyring. Should be treated as constant</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will export the OpenPGP keyring associated with the given credentials.</p>
 <h2>SINCE</h2>
 <p> 2.4.0</p>

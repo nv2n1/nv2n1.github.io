@@ -1,4 +1,5 @@
 ---
+
 title: "bno_plot(1)"
 name: "bno_plot"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-bno_plot/"
 description: "bno_plot – generate interactive 3D plot of IO blocks and sizes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bno_plot</code> [ -h | &#8211;help ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>-v | &#8211;verbose&nbsp;<wbr>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>-K | &#8211;keys-below&nbsp;<wbr>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr>&lt;file&#8230;&gt;&nbsp;<wbr>] </p>
-<h2>DESCRIPTION</h2>
 <p> bno_plot is a visualization tool for the block layer IO tracing tool called <a href="/docs/linux/man/8-blktrace/">blktrace</a>(8). As noted in its documentation, blktrace is a block layer IO tracing mechanism which provides detailed information about request queue operations up to user space. </p>
 <p> bno_plot utilizes gnuplot to generate a 3D plot of the block number output from btt. If no <i>&lt;files&gt;</i> are specified, it will utilize all files generated after btt was run with <i>-B blknos</i> (meaning: all files of the form <i>blknos*[rw].dat</i>). </p>
 <p> The <i>-K</i> option forces bno_plot to put the keys below the graph. If it is not specified, all keys for input files are put in the upper right corner of the graph. If the number of devices exceed 10, then bno_plot will automatically push the keys under the graph. </p>

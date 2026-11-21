@@ -1,4 +1,5 @@
 ---
+
 title: "bglmake(1)"
 name: "bglmake"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bglmake/"
 description: "bglmake – create or update Bigloo makefiles"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bglmake</code> [ options ] [ sourcefile ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bglmake</code> reads <i>sourcefile</i>, computes the transitive closure of the import relationship and generates a <i>makefile</i> file that can be used by the <code>glmake(1)</code> program to compile the application or the library. If no <i>sourcefile</i> is provided, then bglmake display the template file for generating Makefile. </p>
 <h2>OPTIONS</h2>
 <dl>

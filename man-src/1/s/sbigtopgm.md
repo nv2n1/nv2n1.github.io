@@ -1,4 +1,5 @@
 ---
+
 title: "sbigtopgm(1)"
 name: "sbigtopgm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sbigtopgm/"
 description: "sbigtopgm – convert an SBIG CCDOPS file into a portable graymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sbigtopgm</code> [<i>sbigfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads an an image file in the native format used by the Santa Barbara Instrument Group (SBIG) astronomical CCD cameras, and produces a portable graymap as output. Additional information on SBIG cameras and documentation of the file format is available at the Web site: <center> <code><a rel="nofollow" href="http://www.sbig.com/">http://www.sbig.com/</a></code><br />
  </center></p>
 <h2>SEE ALSO</h2>

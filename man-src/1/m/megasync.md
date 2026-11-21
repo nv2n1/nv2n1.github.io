@@ -1,4 +1,5 @@
 ---
+
 title: "megasync(1)"
 name: "megasync"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-megasync/"
 description: "megasync – Upload/download entire directories to/from your Mega.co.nz account"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 megasync[-n][--no - progress]-- local&lt;path&gt; --remote&lt;remotepath&gt;
     megasync[-n][--no - progress]-- download-- local&lt;path&gt; --remote&lt;remotepath&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Sync remote and local directories. No files are ever overwritten or removed. </p>
 <p> Default direction is to upload files to the cloud. If you want to download files, you have to add &#8211;download option.</p>
 <h2>OPTIONS</h2>

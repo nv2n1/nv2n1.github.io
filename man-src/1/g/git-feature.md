@@ -1,4 +1,5 @@
 ---
+
 title: "git-feature(1)"
 name: "git-feature"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-feature – Create/Merge feature branch"
 
 <h2>NAME</h2>
 <p> <code>git-feature</code> &#8211; Create/Merge feature branch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-feature</code> [-a|&#8211;alias branch_prefix] [finish] &lt;name&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Create/Merge the given feature branch</p>
 <h2>OPTIONS</h2>
 <p> &lt;-a|&#8211;alias branch_prefix&gt; </p>

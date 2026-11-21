@@ -1,4 +1,5 @@
 ---
+
 title: "cimmofl(1)"
 name: "cimmofl"
 section: "1"
@@ -9,7 +10,6 @@ description: "cimmofl – compile MOF files into the CIM Repository"
 
 <h2>NAME</h2>
 <p> cimmofl &#8211; compile MOF files into the CIM Repository</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cimmofl</code> <code>-h</code> | <code>&#8211;help</code> </p>
 <p> <code>cimmofl</code> <code>&#8211;version</code> </p>
 <p> <code>cimmofl</code> [ <code>-w</code> ] [ <code>-E</code> ] [ <code>-uc</code> ] [ <code>-aE | -aV | -aEV</code> ] [ <code>-I</code> path ]<br />
@@ -21,7 +21,6 @@ description: "cimmofl – compile MOF files into the CIM Repository"
 <p> Only a superuser or user with write access to the default or specified namespace can run the <code>cimmofl</code> command to compile MOFs in the CIM Repository. </p>
 <p> Superclasses must be compiled before subclasses, else the compile will fail. </p>
 <p> It is strongly recommended that MOF files include all necessary subclasses, so they can compile properly even if certain classes are not in the CIM Repository.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cimmofl</code> command is a command line interface to the Managed Object Format (MOF) Compiler. The MOF Compiler is a utility that compiles MOF files (using the MOF format defined by the DMTF CIM Specification) into CIM classes and instances that are stored in the CIM Repository. </p>
 <p> The <code>cimmofl</code> command can be used to compile MOF files at any time after installation. If no input file is specified, stdin is used as the input. </p>
 <p> The MOF Compiler requires that the input MOF files be in the current directory or that a fully qualified path be given. To simplify the specification of multiple MOF files in the <code>cimmofl</code> command line, the MOF Compiler allows compiling from files containing a list of MOF files using the include pragma (as shown below).</p>

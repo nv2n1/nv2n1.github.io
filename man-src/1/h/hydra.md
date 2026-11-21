@@ -1,4 +1,5 @@
 ---
+
 title: "hydra(1)"
 name: "hydra"
 section: "1"
@@ -9,13 +10,11 @@ description: "hydra – a very fast network logon cracker which support many dif
 
 <h2>NAME</h2>
 <p> hydra &#8211; a very fast network logon cracker which support many different services</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hydra</code><br />
 &nbsp;<wbr>[[[-l LOGIN|-L FILE]&nbsp;<wbr>[-p PASS|-P FILE|-x OPT]]&nbsp;<wbr>|&nbsp;<wbr>[-C FILE]]&nbsp;<wbr>[-e nsr]<br />
 &nbsp;<wbr>[-u]&nbsp;<wbr>[-f]&nbsp;<wbr>[-F]&nbsp;<wbr>[-M FILE]&nbsp;<wbr>[-o FILE]&nbsp;<wbr>[-t TASKS]&nbsp;<wbr>[-w TIME]&nbsp;<wbr>[-W TIME]<br />
 &nbsp;<wbr>[-s PORT]&nbsp;<wbr>[-S]&nbsp;<wbr>[-4/6]&nbsp;<wbr>[-vV]&nbsp;<wbr>[-d]<br />
 &nbsp;<wbr>server service&nbsp;<wbr>[OPTIONAL_SERVICE_PARAMETER] </p>
-<h2>DESCRIPTION</h2>
 <p> Hydra is a parallized login cracker which supports numerous protocols to attack. New modules are easy to add, beside that, it is flexible and very fast. </p>
 <p> This tool gives researchers and security consultants the possiblity to show how easy it would be to gain unauthorized access from remote to a system. </p>
 <p> Currently this tool supports:<br />

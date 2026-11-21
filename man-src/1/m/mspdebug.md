@@ -1,4 +1,5 @@
 ---
+
 title: "mspdebug(1)"
 name: "mspdebug"
 section: "1"
@@ -9,9 +10,7 @@ description: "MSPDebug – debugging tool for MSP430 MCUs"
 
 <h2>NAME</h2>
 <p> MSPDebug &#8211; debugging tool for MSP430 MCUs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mspdebug</code> [options] <i>driver</i> [<i>command</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> MSPDebug is a command-line tool designed for debugging and programming the MSP430 family of MCUs. It supports the eZ430-F2013, eZ430-RF2500, FET430UIF and Olimex MSP-JTAG-TINY programming tools, as well as a simulation mode. </p>
 <p> When started with appropriate options, MSPDebug will attempt to connect to the debugging tool specified and identify the device under test. Once connected, the user is presented with a command prompt which can be used to reflash the device memory, inspect memory and registers, set registers, and control the CPU (single step, run and run to breakpoint). </p>
 <p> It supports ELF32, Intel HEX and BSD-style symbol tables (such as the output produced by <code><a href="/docs/linux/man/1-nm/">nm</a></code>(1)). It can also be used as a remote stub for <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1). </p>

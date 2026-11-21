@@ -1,4 +1,5 @@
 ---
+
 title: "voikkovfstc(1)"
 name: "voikkovfstc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-voikkovfstc/"
 description: "voikkovfstc – compiler for Varissuo finite state transducers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>voikkovfstc</code> -o filename [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>voikkovfstc</code> is a compiler for Varissuo finite state transducers that are used as dictionaries for libvoikko, a library of language tools for Finnish and other languages. The compiler reads the transducer from stdin in unweighted AT&amp;T format. </p>
 <h2>OPTIONS</h2>
 <dl>

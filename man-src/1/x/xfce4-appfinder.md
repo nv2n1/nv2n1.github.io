@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-appfinder(1)"
 name: "xfce4-appfinder"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xfce4-appfinder/"
 description: "xfce4-appfinder – Xfce 4 Appfinder"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xfce4-appfinder [OPTION&#8230;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> Searches installed applications on your system.</p>
 <h3>Help Options:</h3>
 <dl>

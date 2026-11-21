@@ -1,4 +1,5 @@
 ---
+
 title: "resize-part-image(1)"
 name: "resize-part-image"
 section: "1"
@@ -9,7 +10,6 @@ description: "resize-part-image – resize a partition image"
 
 <h2>NAME</h2>
 <p> resize-part-image &#8211; resize a partition image </p>
-<h2>SYNOPSIS</h2>
 <p> <code>resize-part-image [ options ] IMAGE SIZE [OUTPUT]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -22,7 +22,6 @@ description: "resize-part-image – resize a partition image"
 <dt><code>[OUTPUT]</code></dt>
 <dd> If OUTPUT filname is given, do not modify &#8216;IMAGE&#8217;, but create new file &#8216;OUTPUT&#8217; </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> Resize a partition image to a new size. </p>
 <h2>SEE ALSO</h2>
 <dl>

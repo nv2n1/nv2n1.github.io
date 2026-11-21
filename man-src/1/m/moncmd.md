@@ -1,4 +1,5 @@
 ---
+
 title: "moncmd(1)"
 name: "moncmd"
 section: "1"
@@ -9,9 +10,7 @@ description: "moncmd – send commands to mon daemon and show the results."
 
 <h2>NAME</h2>
 <p> moncmd &#8211; send commands to mon daemon and show the results.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>moncmd</code> [<code>-a</code>] [<code>-d</code>] [<code>-l</code> <i>username</i>] [<code>-f</code> <i>file</i>] [<code>-s</code> <i>server</i>] [<code>-p</code> <i>port</i>] [<code>command</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>moncmd</code> sends commands to the <code>mon</code> server.</p>
 <h2>OPTIONS</h2>
 <dl>

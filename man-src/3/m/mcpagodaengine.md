@@ -1,4 +1,5 @@
 ---
+
 title: "mcpagodaengine(3)"
 name: "mcpagodaengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcpagodaengine/"
 description: "ql/pricingengines/basket/mcpagodaengine.hpp – Monte Carlo engine for pagoda options."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/pagodaoption.hpp&gt;<br />
  #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />

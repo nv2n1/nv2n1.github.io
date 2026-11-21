@@ -1,4 +1,5 @@
 ---
+
 title: "disnan(3)"
 name: "disnan"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-disnan/"
 description: "disnan.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> LOGICAL function <code>disnan</code> (DIN)<br />
  <i></i><code>DISNAN</code> tests input for NaN.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tinydns-edit(1)"
 name: "tinydns-edit"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-tinydns-edit/"
 description: "tinydns-edit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tinydns-edit</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>tinydns-edit</code> [<code>OPTIONS</code>] DATA DATA.TMP add TYPE NAME ADDRESS </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tinydns-edit</code> write the DNS records to the `data&#8217; file, which in turn is used by <code>tinydns-data</code> to generate the binary .cdb file used by <code>tinydns</code> or <code>axfrdns</code> server. The command line parameters required by <code>tinydns-edit</code> are </p>
 <dl>
 <dt>DATA</dt>

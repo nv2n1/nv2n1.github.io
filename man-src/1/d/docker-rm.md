@@ -1,4 +1,5 @@
 ---
+
 title: "docker-rm(1)"
 name: "docker-rm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-rm/"
 description: "docker-rm – Remove one or more containers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker rm [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker container rm. </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;force</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Force the removal of a running container (uses SIGKILL)</p>

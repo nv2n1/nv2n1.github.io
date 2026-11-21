@@ -1,4 +1,5 @@
 ---
+
 title: "hashdeep(1)"
 name: "hashdeep"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-hashdeep/"
 description: "hashdeep – Compute, compare, or audit multiple message digests"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hashdeep </code> -V | -h<br />
  <code>hashdeep</code> [-c &lt;alg1&gt;[,&lt;alg2&gt;]] [-k &lt;file&gt;] [-i &lt;size&gt;] [-f &lt;file&gt;] [-o &lt;fbcplsde&gt;] [-amxwMXreEspblvv] [-F&lt;bum&gt;] [-j &lt;num&gt;] [<code>FILES</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> Computes multiple hashes, or message digests, for any number of files while optionally recursively digging through the directory structure. By default the program computes MD5 and SHA-256 hashes, equivalent to -c md5,sha256. Can also take a list of known hashes and display the filenames of input files whose hashes either do or do not match any of the known hashes. Can also use a list of known hashes to audit a set of FILES. Errors are reported to standard error. If no FILES are specified, reads from standard input. </p>
 <dl>
 <dt><code>-c &lt;alg1&gt;[,&lt;alg2&gt;&#8230;]</code></dt>

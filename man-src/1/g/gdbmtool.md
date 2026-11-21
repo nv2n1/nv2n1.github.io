@@ -1,4 +1,5 @@
 ---
+
 title: "gdbmtool(1)"
 name: "gdbmtool"
 section: "1"
@@ -9,14 +10,12 @@ description: "gdbmtool – examine and modify a GDBM database"
 
 <h2>NAME</h2>
 <p> gdbmtool &#8211; examine and modify a GDBM database</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gdbmtool</code> [<code>-lmNnqrs</code>] [<code>-b</code> <i>SIZE</i>] [<code>-c</code> <i>SIZE</i>]<br />
 &nbsp;<wbr>[<code>-f</code>&nbsp;<wbr><i>FILE</i>]&nbsp;<wbr>[<code>&#8211;block-size</code>=<i>SIZE</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;cache-size</code>=<i>SIZE</i>]&nbsp;<wbr>[<code>&#8211;file</code>&nbsp;<wbr><i>FILE</i>]&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;newdb</code>]&nbsp;<wbr>[<code>&#8211;no-lock</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;no-mmap</code>]&nbsp;<wbr>[<code>&#8211;norc</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;read-only</code>]&nbsp;<wbr>[<code>&#8211;synchronize</code>]&nbsp;<wbr>[<i>DBFILE</i>] </p>
 <p> <code>gdbmtool</code> [<code>-Vh</code>] ][<code>&#8211;help</code>] [<code>&#8211;usage</code>] [<code>&#8211;version</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdbmtool</code> utility allows you to view and modify an existing GDBM database or to create a new one. </p>
 <p> The <i>DBFILE</i> argument supplies the name of the database to open. If not supplied, the default name <code>junk.gdbm</code> is used instead. If the named database does not exist, it will be created. An existing database can be cleared (i.e. all records removed from it) using the <code>&#8211;newdb</code> option (see below). </p>
 <p> Unless the <code>-N</code> (<code>&#8211;norc</code>) option is given, after startup <code>gdbmtool</code> looks for file named <code>.gdbmtoolrc</code> first in the current working directory, and, if not found there, in the home directory of the user who started the program. If found, this file is read and interpreted as a list of <code>gdbmtool</code> commands. </p>

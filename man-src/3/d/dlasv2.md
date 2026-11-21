@@ -1,4 +1,5 @@
 ---
+
 title: "dlasv2(3)"
 name: "dlasv2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasv2/"
 description: "dlasv2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasv2</code> (F, G, H, SSMIN, SSMAX, SNR, CSR, SNL, CSL)<br />
  <i></i><code>DLASV2</code> computes the singular value decomposition of a 2-by-2 triangular matrix.</p>

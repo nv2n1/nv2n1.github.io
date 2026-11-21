@@ -1,4 +1,5 @@
 ---
+
 title: "unison-2(1)"
 name: "unison-2"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-unison-2/"
 description: "unison-2.40.102 – a file-synchronization tool for Unix and Windows"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>unison-2.40.102</code> [<i>options</i>]<br />
  <code>unison-2.40.102</code> root1 root2 [<i>options</i>]<br />
  <code>unison-2.40.102</code> profilename [<i>options</i>]<br />
  <code>unison-2.40.102-gtk</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents Unison, and was written for the Debian GNU/Linux distribution because the original program does not have a manual page. For a full description, please refer to the inbuilt documentation or the manuals in /usr/share/doc/unison/. The unison-2.40.102-gtk binary has similar command-line options, but allows the user to select and create profiles and configure options from within the program. </p>
 <p> Unison is a file-synchronization tool for Unix and Windows. It allows two replicas of a collection of files and directories to be stored on different hosts (or different disks on the same host), modified separately, and then brought up to date by propagating the changes in each replica to the other. </p>
 <p> Unison offers several advantages over various synchronization methods such as CVS, Coda, rsync, Intellisync, etc. Unison can run on and synchronize between Windows and many UNIX platforms. Unison requires no root privileges, system access or kernel changes to function. Unison can synchronize changes to files and directories in both directions, on the same machine, or across a network using ssh or a direct socket connection. </p>

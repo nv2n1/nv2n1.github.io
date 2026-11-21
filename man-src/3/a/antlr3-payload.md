@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-payload(3)"
 name: "antlr3-payload"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-payload/"
 description: "ANTLR3_PARSE_TREE_struct –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3parsetree.h">antlr3parsetree.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_BASE_TREE</code> <code>baseTree</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtorast(1)"
 name: "pnmtorast"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnmtorast/"
 description: "pnmtorast – convert a portable pixmap into a Sun rasterfile"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtorast</code> [<code>-standard</code>|<code>-rle</code>] [<i>pnmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces a Sun rasterfile as output. </p>
 <p> Color values in Sun rasterfiles are eight bits wide, so <i>pnmtorast</i> will automatically scale colors to have a maxval of 255. An extra <i>pnmdepth</i> step is not necessary.</p>
 <h2>OPTIONS</h2>

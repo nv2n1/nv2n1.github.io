@@ -1,4 +1,5 @@
 ---
+
 title: "phpcompatinfo(1)"
 name: "phpcompatinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-phpcompatinfo/"
 description: "phpcompatinfo – PHP library that parse any data source to find out the minimum version and extensions required for it to run."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>phpcompatinfo</code> [<i>options</i>] <i>command</i> [<i>arguments</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-phpcompatinfo/">phpcompatinfo</a>(1) command parse any data source, defined in a json configuration file, to find out elements, such as classes, interfaces, functions, constants, namespaces.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code></p>

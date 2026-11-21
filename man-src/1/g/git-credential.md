@@ -1,4 +1,5 @@
 ---
+
 title: "git-credential(1)"
 name: "git-credential"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-credential/"
 description: "git-credential – Retrieve and store user credentials"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 git credential &lt;fill|approve|reject&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Git has an internal interface for storing and retrieving credentials from system-specific helpers, as well as prompting the user for usernames and passwords. The git-credential command exposes this interface to scripts which may want to retrieve, store, or prompt for credentials in the same manner as Git. The design of this scriptable interface models the internal C API; see credential.h for more background on the concepts. </p>
 <p> git-credential takes an &quot;action&quot; option on the command-line (one of <code>fill</code>, <code>approve</code>, or <code>reject</code>) and reads a credential description on stdin (see INPUT/OUTPUT FORMAT). </p>
 <p> If the action is <code>fill</code>, git-credential will attempt to add &quot;username&quot; and &quot;password&quot; attributes to the description by reading config files, by contacting any configured credential helpers, or by prompting the user. The username and password attributes of the credential description are then printed to stdout together with the attributes already provided. </p>

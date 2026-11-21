@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_obj_top(3)"
 name: "hdf_obj_top"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_obj_top/"
 description: "hdf_obj_top – Return the pointer to the top dataset node"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -16,7 +16,6 @@ HDF* hdf_obj_top (HDF *hdf);
 </pre>
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the hdf dataset node </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_obj_top is an accessor function which returns a pointer to the top of the dataset, the node which was returned by hdf_init. This is most useful for implementations of language wrappers where individual nodes are tied garbage colletion wise to the top node of the data set </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

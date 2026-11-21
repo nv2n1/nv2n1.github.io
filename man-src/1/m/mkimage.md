@@ -1,4 +1,5 @@
 ---
+
 title: "mkimage(1)"
 name: "mkimage"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-mkimage/"
 description: "mkimage – Generate image for U-Boot"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mkimage</code> -l [<code>uimage file name</code>] </p>
 <p> <code>mkimage</code> [<i>options</i>]<code> -f [</code>image tree source file<code>]</code> [<code>uimage file name</code>] </p>
 <p> <code>mkimage</code> [<i>options</i>]<code> -F [</code>uimage file name<code>]</code> </p>
 <p> <code>mkimage</code> [<i>options</i>]<code> (legacy mode)</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mkimage</code> command is used to create images for use with the U-Boot boot loader. These images can contain the linux kernel, device tree blob, root file system image, firmware images etc., either separate or combined. </p>
 <p> <code>mkimage</code> supports two different formats: </p>
 <p> The old <i>legacy image</i> format concatenates the individual parts (for example, kernel image, device tree blob and ramdisk image) and adds a 64 bytes header containing information about target architecture, operating system, image type, compression method, entry points, time stamp, checksums, etc. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "refile(1)"
 name: "refile"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-refile/"
 description: "refile – file message in other folders"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>refile</code> [<i>msgs</i>] [<code>-draft</code>] [<code>-link</code> | <code>-nolink</code>] [<code>-preserve</code> | <code>-nopreserve</code>] [<code>-retainsequences</code> | <code>-noretainsequences</code>] [<code>-unlink</code> | <code>-nounlink</code>] [<code>-src</code> <i>+folder</i>] [<code>-file</code> <i>file</i>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] <i>+folder1</i> &#8230; [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Refile</code></p>
 <dd>moves (see <i><a href="/docs/linux/man/1-mv/">mv</a></i>(1)) or links (see <i><a href="/docs/linux/man/1-ln/">ln</a></i>(1)) messages from a source folder into one or more destination folders. </dd>
 <p> If you think of a message as a sheet of paper, this operation is not unlike filing the sheet of paper (or copies) in file cabinet folders. When a message is filed, it is linked into the destination folder(s) if possible, and is copied otherwise. As long as the destination folders are all on the same file system, multiple filing causes little storage overhead. This facility provides a good way to cross-file or multiply-index messages. For example, if a message is received from Jones about the ARPA Map Project, the command </p>

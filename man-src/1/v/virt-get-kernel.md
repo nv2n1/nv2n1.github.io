@@ -1,4 +1,5 @@
 ---
+
 title: "virt-get-kernel(1)"
 name: "virt-get-kernel"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-virt-get-kernel/"
 description: "virt-get-kernel – Extract kernel and ramdisk from guests"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 virt - get - kernel[--options] - d domname virt - get - kernel[--options] - a disk.img
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This option extracts the kernel and initramfs from a guest. </p>
 <p> The format of the disk image is automatically detected unless you specify it by using the <i>&#8211;format</i> option. </p>
 <p> In the case where the guest contains multiple kernels, the one with the highest version number is chosen. To extract arbitrary kernels from the disk image, see <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). To extract the entire <tt>&quot;/boot&quot;</tt> directory of a guest, see <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1).</p>

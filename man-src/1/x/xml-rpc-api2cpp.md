@@ -1,4 +1,5 @@
 ---
+
 title: "xml-rpc-api2cpp(1)"
 name: "xml-rpc-api2cpp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xml-rpc-api2cpp/"
 description: "xml-rpc-api2cpp – Make a C++ wrapper class for an XML-RPC API"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xml-rpc-api2cpp</code> <i>server-url</i> <i>remote-method-prefix</i> <i>c++-class-name</i></p>
-<h2>DESCRIPTION</h2>
 <p> xml-rpc-api2cpp queries an XML-RPC server using the XML-RPC Instrospection API designed by Edd Dumbill. It then prints a C++ wrapper class to standard output. This class can be used with xmlrpc-c&#8217;s C++ API. </p>
 <p> You can find a list of supported XML-RPC server libraries (and patches for many others) at <code><a rel="nofollow" href="http://xmlrpc-c.sourceforge.net/hacks.php">http://xmlrpc-c.sourceforge.net/hacks.php</a></code>.</p>
 <h2>OPTIONS</h2>

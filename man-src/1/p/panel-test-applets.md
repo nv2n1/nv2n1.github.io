@@ -1,4 +1,5 @@
 ---
+
 title: "panel-test-applets(1)"
 name: "panel-test-applets"
 section: "1"
@@ -9,9 +10,7 @@ description: "panel-test-applets — display installed applets"
 
 <h2>NAME</h2>
 <p> panel-test-applets &#8212; display installed applets</p>
-<h2>SYNOPSIS</h2>
 <p> <code>panel-test-applets</code> [<code>&#8211;help </code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>panel-test-applets</code> display installed applets in a dialog box and does nothing else.</p>
 <h2>OPTIONS</h2>
 <dl>

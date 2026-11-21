@@ -1,4 +1,5 @@
 ---
+
 title: "stpmv(3)"
 name: "stpmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stpmv/"
 description: "stpmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stpmv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br />
  <i></i><code>STPMV</code></p>

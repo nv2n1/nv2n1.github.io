@@ -1,4 +1,5 @@
 ---
+
 title: "bzr(1)"
 name: "bzr"
 section: "1"
@@ -6,13 +7,12 @@ letter: "b"
 url: "/docs/linux/man/1-bzr/"
 description: "bzr – Bazaar next-generation distributed version control"
 ---
+
 <h2>NAME</h2>
 <p> bzr - Bazaar next-generation distributed version control  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bzr</code> <i>command</i> [ <i>command_options</i> ] <br />
  <code>bzr</code> <code>help</code> <br />
  <code>bzr</code> <code>help</code> <i>command</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> Bazaar (or bzr) is a distributed version control system that is powerful, friendly, and scalable. Bazaar is a project of Canonical Ltd and part of the GNU Project to develop a free operating system. </p>
 <p> Bazaar keeps track of changes to software source code (or similar information); lets you explore who changed it, when, and why; merges concurrent changes; and helps people work together in a team.  </p>
 <h2>COMMAND OVERVIEW</h2>

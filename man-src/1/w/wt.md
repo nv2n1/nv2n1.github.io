@@ -1,4 +1,5 @@
 ---
+
 title: "wt(1)"
 name: "wt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wt/"
 description: "wt – WiredTiger command line utility WiredTiger includes a command line utility, wt."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> wt [-LRVv] [-C config] [-E secretkey ] [-h directory] command [command-specific arguments]</p>
-<h2>DESCRIPTION</h2>
 <p> The wt tool is a command-line utility that provides access to various pieces of the WiredTiger functionality.</p>
 <h2>OPTIONS</h2>
 <p> There are several global options: </p>

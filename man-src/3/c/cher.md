@@ -1,4 +1,5 @@
 ---
+
 title: "cher(3)"
 name: "cher"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cher/"
 description: "cher.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cher</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br />
  <i></i><code>CHER</code></p>

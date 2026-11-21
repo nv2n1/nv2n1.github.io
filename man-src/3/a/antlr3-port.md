@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-port(3)"
 name: "antlr3-port"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_DEBUG_EVENT_LISTENER_struct –"
 ---
 
 <p> The ANTLR3 debugging interface for communicating with ANLTR Works.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3debugeventlistener.h">antlr3debugeventlistener.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>ack</code> )(<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy)<br />

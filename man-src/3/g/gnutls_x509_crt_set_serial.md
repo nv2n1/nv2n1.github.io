@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_serial(3)"
 name: "gnutls_x509_crt_set_serial"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_serial – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_serial &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_serial(gnutls_x509_crt_t </code><i>cert</i><code>, const void * </code><i>serial</i><code>, size_t </code><i>serial_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crt_set_serial – API function"
 <dd> The serial number</dd>
 <dt>size_t serial_size</dt>
 <dd> Holds the size of the serial field.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the X.509 certificate&#8217;s serial number. While the serial number is an integer, it is often handled as an opaque field by several CAs. For this reason this function accepts any kind of data as a serial number. To be consistent with the X.509/PKIX specifications the provided <i>serial</i> should be a big-endian positive number (i.e. it&#8217;s leftmost bit should be zero).</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

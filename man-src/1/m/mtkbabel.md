@@ -1,4 +1,5 @@
 ---
+
 title: "mtkbabel(1)"
 name: "mtkbabel"
 section: "1"
@@ -9,9 +10,7 @@ description: "mtkbabel – Tool for managing GPS data loggers based on the MTK c
 
 <h2>NAME</h2>
 <p> mtkbabel &#8211; Tool for managing GPS data loggers based on the MTK chip</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mtkbabel </code>[<code>-abcdEfhilmopRrstvwx</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mtkbabel</code> is a command line program to operate GPS data loggers based on the MediaTek MTK chip. It was tested on the i-Blue 747, Qstarz BT-Q1000 and on the Holux M-241, it should work also with other GPS devices based on the same chip. </p>
 <p> The main features are:<br />
 &nbsp;<wbr>&#8211; Command line interface<br />

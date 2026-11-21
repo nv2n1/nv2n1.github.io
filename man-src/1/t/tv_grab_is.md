@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_is(1)"
 name: "tv_grab_is"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-tv_grab_is/"
 description: "tv_grab_is – Grab TV listings for Iceland."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tv_grab_is &#8211;help </p>
 <p> tv_grab_is [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">OPTION</font>] </p>
 <p> tv_grab_is [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;output <font SIZE="-1">FILE</font>] [&#8211;days N]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;offset N]&nbsp;<wbr>[&#8211;quiet] </p>
 <p> tv_grab_is &#8211;capabilities </p>
 <p> tv_grab_is &#8211;version</p>
-<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings for several channels available in Iceland. </p>
 <p> First run <code>tv_grab_is &#8211;configure</code> to choose, which channels you want to download. Then running <code>tv_grab_is</code> with no arguments will output listings in <font SIZE="-1">XML</font> format to standard output. </p>
 <p> <code>&#8211;configure</code> Prompt for which channels, and write the configuration file. </p>

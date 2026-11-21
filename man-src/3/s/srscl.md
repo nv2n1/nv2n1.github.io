@@ -1,4 +1,5 @@
 ---
+
 title: "srscl(3)"
 name: "srscl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-srscl/"
 description: "srscl.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>srscl</code> (N, SA, SX, INCX)<br />
  <i></i><code>SRSCL</code> multiplies a vector by the reciprocal of a real scalar.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "autoupdate(1)"
 name: "autoupdate"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autoupdate/"
 description: "autoupdate – Update a configure.ac to a newer Autoconf"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autoupdate</code> [<i>,OPTION/</i>]&#8230; [<i>,TEMPLATE-FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Update each TEMPLATE-FILE if given, or &#8216;configure.ac&#8217; if present, or else &#8216;configure.in&#8217;, to the syntax of the current version of Autoconf. The original files are backed up.</p>
 <h3>Operation modes:</h3>
 <dl>

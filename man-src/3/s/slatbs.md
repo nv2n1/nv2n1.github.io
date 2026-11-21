@@ -1,4 +1,5 @@
 ---
+
 title: "slatbs(3)"
 name: "slatbs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slatbs/"
 description: "slatbs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slatbs</code> (UPLO, TRANS, DIAG, NORMIN, N, KD, AB, LDAB, X, SCALE, CNORM, INFO)<br />
  <i></i><code>SLATBS</code> solves a triangular banded system of equations.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmtconnect(1)"
 name: "gmtconnect"
 section: "1"
@@ -9,10 +10,8 @@ description: "gmtconnect – Connect individual lines whose end points match wit
 
 <h2>NAME</h2>
 <p> gmtconnect &#8211; Connect individual lines whose end points match within tolerance</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmtconnect</code> [ <i>table</i> ] [ [<i>closed</i>] ] [ [<i>template</i>] ] [ [<i>linkfile</i>] ] [ [<i>template</i>] ] [ [<i>cutoff</i>[<i>unit</i>][/<i>nn_dist</i>]] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gmtconnect</code> reads standard input or one or more data files, which may be multisegment files, and examines the coordinates of the end points of all line segments. If a pair of end points are identical or closer to each other than the specified separation tolerance then the two line segments are joined into a single segment. The process repeats until all the remaining endpoints no longer pass the tolerance test; the resulting segments are then written out to standard output or specified output file. If it is not clear what the separation tolerance should be then use <code>-L</code> to get a list of all separation distances and analyze them to determine a suitable cutoff.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-id-ctrl(1)"
 name: "nvme-id-ctrl"
 section: "1"
@@ -6,24 +7,13 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-id-ctrl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-id-ctrl - Send NVMe Identify Controller, return result and structure 
 
- nvme-id-ctrl - Send NVMe Identify Controller, return result and structure 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme id - ctrl&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- For the NVMe device given, sends an identify controller command and provides the result and returned structure. 
+For the NVMe device given, sends an identify controller command and provides the result and returned structure. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). 
 

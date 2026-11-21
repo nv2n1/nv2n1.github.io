@@ -1,4 +1,5 @@
 ---
+
 title: "ntfsclone(8)"
 name: "ntfsclone"
 section: "8"
@@ -6,13 +7,12 @@ letter: "n"
 url: "/docs/linux/man/8-ntfsclone/"
 description: "ntfsclone – Efficiently clone, image, restore or rescue an NTFS"
 ---
+
 <p>ntfsclone &#8211; Efficiently clone, image, restore or rescue an NTFS </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ntfsclone</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
  <code>ntfsclone --save-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
  <code>ntfsclone --restore-image</code> [<i>OPTIONS</i>] <i>SOURCE</i> <br />
  <code>ntfsclone --metadata</code> [<i>OPTIONS</i>] <i>SOURCE</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ntfsclone</code> will efficiently clone (copy, save, backup, restore) or rescue an NTFS filesystem to a sparse file, image, device (partition) or standard output. It works at disk sector level and copies only the used data. Unused disk space becomes zero (cloning to sparse file), encoded with control codes (saving in special image format), left unchanged (cloning to a disk/partition) or filled with zeros (cloning to standard output). </p>
 <p> <code>ntfsclone</code> can be useful to make backups, an exact snapshot of an NTFS filesystem and restore it later on, or for developers to test NTFS read/write functionality, troubleshoot/investigate users&#8217; issues using the clone without the risk of destroying the original filesystem. </p>
 <p>The clone, if not using the special image format, is an exact copy of the original NTFS filesystem from sector to sector thus it can be also mounted just like the original NTFS filesystem. For example if you clone to a file and the kernel has loopback device and NTFS support then the file can be mounted as </p>

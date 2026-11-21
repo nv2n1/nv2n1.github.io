@@ -1,4 +1,5 @@
 ---
+
 title: "a5booklet(1)"
 name: "a5booklet"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-a5booklet/"
 description: "a5booklet – copy two A5 pages from a .dvi file to one A4 page in another."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>a5booklet</code> <i>file</i><code>[.dvi]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>A5booklet</code> is a little script that allows you to typeset two A5 pages next to eachother on a single A4 page (landscape), combining pages from the original file in such a way that after double sided printing and some reshuffeling of the pages you get a nice a5 booklet that is ready for a staple in the middle. </p>
 <p> The script calls a very clever program <code>dvidvi</code>, written by Tomas Rokicki (the author of <code>dvips</code>), that does the real work. </p>
 <p> The output is written to two files, <i>file</i><code>-1.dvi</code> and <i>file</i><code>-2.dvi</code> </p>

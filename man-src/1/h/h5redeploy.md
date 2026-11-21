@@ -1,4 +1,5 @@
 ---
+
 title: "h5redeploy(1)"
 name: "h5redeploy"
 section: "1"
@@ -9,10 +10,8 @@ description: "h5redeploy – Updates HDF5 compiler tools after an HDF5 software 
 
 <h2>NAME</h2>
 <p> h5redeploy &#8211; Updates HDF5 compiler tools after an HDF5 software installation in a new location.</p>
-<h2>SYNOPSIS</h2>
 <p> h5redeploy [help | -help] </p>
 <p> h5redeploy [-echo] [-force] [-prefix=dir] [-tool=tool] [-show]</p>
-<h2>DESCRIPTION</h2>
 <p> h5redeploy updates the HDF5 compiler tools after the HDF5 software has been installed in a new location.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "procenv(1)"
 name: "procenv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-procenv/"
 description: "procenv – display process environment details"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>procenv</code> [<i>OPTION</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Display details of the process environment in a parseable format.</p>
 <h2>OPTIONS</h2>
 <p> Options shown with a bracketed asterisk &#8216;(*)&#8217; are non-display options and must preceed any other (display) options. </p>

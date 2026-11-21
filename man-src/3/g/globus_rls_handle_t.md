@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_handle_t(3)"
 name: "globus_rls_handle_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_rls_handle_t –"
 ---
 
 <p> RLS Client Handle.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> globus_url_t <code>url</code> </p>
 <p> globus_io_handle_t <code>handle</code> </p>

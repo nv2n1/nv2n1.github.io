@@ -1,4 +1,5 @@
 ---
+
 title: "albatross(1)"
 name: "albatross"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-albatross/"
 description: "albatross – a tool for finding fonts that contain a given (Unicode) glyph."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>albatross</code> [<i>options</i>] <i>glyphs</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>albatross</code> is a command line tool for finding fonts that contain a given (Unicode) glyph. It relies on Fontconfig, a library for configuring and customizing font access. </p>
 <p> Albatross takes a list of glyphs as input. Three formats are supported:</p>
 <dl>

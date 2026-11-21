@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-commander(1)"
 name: "gnome-commander"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gnome-commander/"
 description: "gnome-commander – a GNOME file manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-commander</code> [-d STRING] [options] [gtk,gnome,bonobo options] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>GNOME Commander</code> is a fast and powerful graphical filemanager for the GNOME desktop environment, it has a &quot;two-pane&quot; interface in the tradition of Norton and Midnight Commander.</p>
 <h2>OPTIONS</h2>
 <dl>

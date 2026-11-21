@@ -1,4 +1,5 @@
 ---
+
 title: "bcmp(3)"
 name: "bcmp"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-bcmp/"
 description: "bcmp – compare byte sequences"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;strings.h&gt;
 int bcmp(const void *s1, const void *s2, size_t n);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>bcmp</code>() function compares the two byte sequences <i>s1</i> and <i>s2</i> of length <i>n</i> each. If they are equal, and in particular if <i>n</i> is zero, <code>bcmp</code>() returns 0. Otherwise, it returns a nonzero result.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>bcmp</code>() function returns 0 if the byte sequences are equal, otherwise a nonzero result is returned.</p>

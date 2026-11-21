@@ -1,4 +1,5 @@
 ---
+
 title: "csqrtl(3)"
 name: "csqrtl"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-csqrtl/"
 description: "csqrt, csqrtf, csqrtl – complex square root"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex csqrt(double complex </code><i>z</i><code>);</code><br />
  <code>float complex csqrtf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex csqrtl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex square root of <i>z</i>, with a branch cut along the negative real axis. (That means that <i>csqrt(-1+eps*I)</i> will be close to I while <i>csqrt(-1-eps*I)</i> will be close to -I, <i>if eps</i> is a small positive real number.)</p>
 <h2>VERSIONS</h2>
 <p> These functions first appeared in glibc in version 2.1.</p>

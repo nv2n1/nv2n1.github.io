@@ -1,4 +1,5 @@
 ---
+
 title: "forwardengine(3)"
 name: "forwardengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-forwardengine/"
 description: "ql/pricingengines/forward/forwardengine.hpp – Forward (strike-resetting) vanilla-option engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/forwardvanillaoption.hpp&gt;<br />
  #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />

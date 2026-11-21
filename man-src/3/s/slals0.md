@@ -1,4 +1,5 @@
 ---
+
 title: "slals0(3)"
 name: "slals0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slals0/"
 description: "slals0.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slals0</code> (ICOMPQ, NL, NR, SQRE, NRHS, B, LDB, BX, LDBX, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, WORK, INFO)<br />
  <i></i><code>SLALS0</code> applies back multiplying factors in solving the least squares problem using divide and conquer SVD approach. Used by sgelsd.</p>

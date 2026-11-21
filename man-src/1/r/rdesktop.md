@@ -1,4 +1,5 @@
 ---
+
 title: "rdesktop(1)"
 name: "rdesktop"
 section: "1"
@@ -9,9 +10,7 @@ description: "rdesktop – Remote Desktop Protocol client"
 
 <h2>NAME</h2>
 <p> <i>rdesktop</i> &#8211; Remote Desktop Protocol client</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rdesktop [options] server[:port]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>rdesktop</i> is a client for Remote Desktop Protocol (RDP), used in a number of Microsoft products including Windows NT Terminal Server, Windows 2000 Server, Windows XP and Windows 2003 Server. </p>
 <h2>OPTIONS</h2>
 <dl>

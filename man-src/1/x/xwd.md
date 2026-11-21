@@ -1,4 +1,5 @@
 ---
+
 title: "xwd(1)"
 name: "xwd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xwd/"
 description: "xwd – dump an image of an X window"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xwd</code> [-debug] [-help] [-nobdrs] [-out <i>file</i>] [-xy] [-frame] [-add <i>value</i>] [-root | -id <i>id</i> | -name <i>name</i> ] [-icmap] [-screen] [-silent] [-display <i>display</i>] [-version]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xwd</i> is an X Window System window dumping utility. <i>Xwd</i> allows X users to store window images in a specially formatted dump file. This file can then be read by various other X utilities for redisplay, printing, editing, formatting, archiving, image processing, etc. The target window is selected by clicking the pointer in the desired window. The keyboard bell is rung once at the beginning of the dump and twice when the dump is completed.</p>
 <h2>OPTIONS</h2>
 <dl>

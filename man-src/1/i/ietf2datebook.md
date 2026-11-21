@@ -1,4 +1,5 @@
 ---
+
 title: "ietf2datebook(1)"
 name: "ietf2datebook"
 section: "1"
@@ -18,22 +19,8 @@ url: "/docs/linux/man/1-ietf2datebook/"
 
  pilot-link: Tools 
 
-<h2>SYNOPSIS</h2>
-
- 
-
- 
-
- 
 &nbsp;<wbr><i>ietf2datebook</i>&nbsp;<wbr>&lt;&nbsp;<wbr>ietf-agenda&nbsp;<wbr>&gt;&nbsp;<wbr>datebook.txt 
 
-<h2>DESCRIPTION</h2>
-
- 
-
- 
-
- 
 &nbsp;<wbr><i>ietf2datebook</i>&nbsp;<wbr>is a Perl script that converts IETF&nbsp;<wbr>(<i><a rel="nofollow" HREF="http://www.ietf.org">http://www.ietf.org</a></i>)&nbsp;<wbr>agenda to format suitable for the&nbsp;<wbr><i>install-datebook</i>&nbsp;<wbr>program. The agenda file is given to it as standard input and the output file is sent to standard output. Please remove all headers and footers from the agenda file before giving it to&nbsp;<wbr><i>ietf2datebook</i>. 
 
 <h2>OPTIONS</h2>

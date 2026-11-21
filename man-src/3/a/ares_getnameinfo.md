@@ -1,4 +1,5 @@
 ---
+
 title: "ares_getnameinfo(3)"
 name: "ares_getnameinfo"
 section: "3"
@@ -9,7 +10,6 @@ description: "ares_getnameinfo – Address-to-nodename translation in protocol-i
 
 <h2>NAME</h2>
 <p> ares_getnameinfo &#8211; Address-to-nodename translation in protocol-independent manner</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 typedef void (*ares_nameinfo_callback)(void *arg, int status,
@@ -17,7 +17,6 @@ void ares_getnameinfo(ares_channel channel, const struct sockaddr *sa,
 ares_socklen_t salen, int flags, ares_nameinfo_callback callback,
 void *arg)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>ares_getnameinfo</code> function is defined for protocol-independent address translation. The function is a combination of <i><a href="/docs/linux/man/3-ares_gethostbyaddr/">ares_gethostbyaddr</a>(3)</i> and <i><a href="/docs/linux/man/3-getservbyport/">getservbyport</a>(3)</i>. The function will translate the address either by executing a host query on the name service channel identified by <i>channel</i> or it will attempt to resolve it locally if possible. The parameters <i>sa</i> and <i>len</i> give the address as a sockaddr structure, and <i>flags</i> gives the options that the function will use. Valid flags are listed below:</p>
 <dl>
 <dt><code>ARES_NI_NOFQDN</code></dt>

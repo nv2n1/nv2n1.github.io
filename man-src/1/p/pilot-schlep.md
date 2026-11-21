@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-schlep(1)"
 name: "pilot-schlep"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-schlep – Pack an arbitrary file and install it on your Pal
 <p> pilot-schlep &#8211; Pack an arbitrary file and install it on your Palm or unpack a file from your Palm.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p> <i>pilot-schlep</i> [<code>-p</code>|<code>&#8211;port</code>&lt;<code>port</code>&gt;] [<code>&#8211;version</code>] [<code>-?</code>|<code>&#8211;help</code>] [<code>&#8211;usage</code>] [<code>-q</code>|<code>&#8211;quiet</code>] [<code>-i</code>|<code>&#8211;install</code> <i>file</i>] [<code>-f</code>|<code>&#8211;fetch</code> <i>file</i>] [<code>-d</code>|<code>&#8211;delete</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> Currently the stored name and file type is not queried so you can potentially install a PDF file, and retrieve it as a ZIP file. </p>
 <p> You must take care to remember what type of file you are installing and fetching. This will be updated in a later release to handle this type of capability, as well as handle multiple &#8216;Schlep&#8217; files. </p>
 <h2>OPTIONS</h2>

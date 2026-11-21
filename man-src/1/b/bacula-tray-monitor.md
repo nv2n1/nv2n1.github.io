@@ -1,4 +1,5 @@
 ---
+
 title: "bacula-tray-monitor(1)"
 name: "bacula-tray-monitor"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-bacula-tray-monitor/"
 description: "bacula-tray-monitor – Bacula’s ‘System Tray’ monitor"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>bacula-tray-monitor &#8211; Bacula&#8217;s&nbsp;<wbr>&#8216;System Tray&#8217;&nbsp;<wbr>monitor </p>
-<h2>SYNOPSIS</h2>
 <p> <code>bacula-tray-monitor</code> [options] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>bacula-tray-monitor</code> command, a simple monitor for the &#8216;system tray&#8217; in KDE/GNOME </p>
 <h2>OPTIONS</h2>
 <p> bacula-tray-monitor [-c config_file] [-d debug_level] [-t]</p>

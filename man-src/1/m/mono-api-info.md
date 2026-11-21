@@ -1,4 +1,5 @@
 ---
+
 title: "mono-api-info(1)"
 name: "mono-api-info"
 section: "1"
@@ -9,9 +10,7 @@ description: "mono-api-info – Expose IL structure of CLR assemblies as XML."
 
 <h2>NAME</h2>
 <p> mono-api-info &#8211; Expose IL structure of CLR assemblies as XML.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mono-api-info [&#8211;abi] assembly1.dll assembly2.exe &#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> Expose the structure of your CLR assemblies by examining their IL and giving XML output. </p>
 <p> By default this tool gives information about just the public API of the assemblies to scan. So it&#8217;s good for comparing API compatibility between versions of libraries.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "stprfs(3)"
 name: "stprfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stprfs/"
 description: "stprfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stprfs</code> (UPLO, TRANS, DIAG, N, NRHS, AP, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>STPRFS</code></p>

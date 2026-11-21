@@ -1,4 +1,5 @@
 ---
+
 title: "getlist(1)"
 name: "getlist"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getlist/"
 description: "getlist – Get a list from an NNTP server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>getlist</code> [<code>-AR</code>] [<code>-h</code> <i>host</i>] [<code>-p</code> <i>port</i>] [<i>list</i> [<i>pattern</i> [<i>types</i>]]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>getlist</code> obtains a list from an <font SIZE="-1">NNTP</font> server and sends it to standard output. <i>list</i> may be one of <tt>&quot;active&quot;</tt> (which is the default value), <tt>&quot;active.times&quot;</tt>, <tt>&quot;distrib.pats&quot;</tt>, or <tt>&quot;newsgroups&quot;</tt>. <tt>&quot;active&quot;</tt> contains a list of all newsgroups carried by the server with the high and low article numbers in the group, and the group status field. <tt>&quot;active.times&quot;</tt> is a list of newsgroups, their creation times (in seconds since epoch), and the creator of the group. <tt>&quot;distrib.pats&quot;</tt> is a list of relevant distributions and the newsgroups they apply to. <tt>&quot;newsgroups&quot;</tt> is a list of newsgroups along with their short descriptions. </p>
 <p> For more information on the formats of these files, see <i><a href="/docs/linux/man/5-active/">active</a></i>(5), <i><a href="/docs/linux/man/5-active-times/">active.times</a></i>(5), <i><a href="/docs/linux/man/5-distrib-pats/">distrib.pats</a></i>(5) and <i><a href="/docs/linux/man/5-newsgroups/">newsgroups</a></i>(5). </p>
 <p> The listing files other than the <i>active</i> file are common extensions to the <font SIZE="-1">NNTP</font> protocol and may not be available on all servers. For instance, <tt>&quot;counts&quot;</tt> <tt>&quot;distributions&quot;</tt>, <tt>&quot;headers&quot;</tt>, <tt>&quot;moderators&quot;</tt>, <tt>&quot;motd&quot;</tt>, <tt>&quot;overview.fmt&quot;</tt> and <tt>&quot;subscriptions&quot;</tt>, amongst other, may be available. Moreover, a <i><a href="/docs/linux/man/3-uwildmat/">uwildmat</a></i>(3) pattern <i>pattern</i> may also be usable for some of these listing files. </p>

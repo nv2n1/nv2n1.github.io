@@ -1,4 +1,5 @@
 ---
+
 title: "wineboot-stable(1)"
 name: "wineboot-stable"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wineboot-stable/"
 description: "wineboot – perform Wine initialization, startup, and shutdown tasks"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wineboot</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>wineboot</code> performs the initial creation and setup of a WINEPREFIX for <a href="/docs/linux/man/1-wine/">wine</a>(1). It can also perform a simulated reboot or shutdown to any applications running within the WINEPREFIX.</p>
 <h2>OPTIONS</h2>
 <dl>

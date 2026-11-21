@@ -1,4 +1,5 @@
 ---
+
 title: "redshift(1)"
 name: "redshift"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-redshift/"
 description: "redshift – set color temperature of display according to time of day"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>redshift</code> [<code>-l</code> <i>LAT</i><code>:</code><i>LON</i> | <code>-l</code> <i>PROVIDER</i><code>:</code><i>OPTIONS</i>] [<code>-t</code> <i>DAY</i><code>:</code><i>NIGHT</i>] [<i>OPTIONS</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>redshift</code> adjusts the color temperature of your screen according to your surroundings. This may help your eyes hurt less or reduce the risk for delayed sleep phase syndrome if you are working in front of the screen at night. </p>
 <p> The color temperature is set according to the position of the sun. A different color temperature is set during night and daytime. During twilight and early morning, the color temperature transitions smoothly from night to daytime temperature to allow your eyes to slowly adapt over a period of about an hour. At night the color temperature should be set to match the lamps in your room. This is typically a low temperature at around 3000K-4000K (default is 4500K). During the day, the color temperature should match the light from outside, typically around 5500K-6500K (default is 6500K). The light has a higher temperature on an overcast day. </p>
 <p> In addition to the command-line tool <code>redshift</code>, the GUI <code>redshift-gtk</code> provides an alternative interface that shows up as a notification icon in the desktop environment.</p>

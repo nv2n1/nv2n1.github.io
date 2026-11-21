@@ -1,4 +1,5 @@
 ---
+
 title: "scor2prt(1)"
 name: "scor2prt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-scor2prt/"
 description: "scor2prt – source-parts separation program for pmx, a MusiXTeX preprocessor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>scor2prt</code> basename<i>[.pmx]</i></p>
-<h2>DESCRIPTION</h2>
 <p> scor2prt is part of pmx(1), a preprocessor for MusiXTeX. It can automatically create parts from a score by generating a set of .pmx files, one for each part, from a single .pmx file for the score. The appearance of the parts can be controlled by special commands in the main file. Read the PMX Manual for more information about that.</p>
 <h2>SEE ALSO</h2>
 <p> pmx(1), <a href="/docs/linux/man/1-pmxab/">pmxab</a>(1), <a href="/docs/linux/man/1-musixtex/">musixtex</a>(1), PMX Manual</p>

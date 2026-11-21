@@ -1,4 +1,5 @@
 ---
+
 title: "euare-useraddcert(1)"
 name: "euare-useraddcert"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-useraddcert – Upload a signing certificate"
 
 <h2>NAME</h2>
 <p> euare-useraddcert &#8211; Upload a signing certificate</p>
-<h2>SYNOPSIS</h2>
 <p> euare-useraddcert (<code>-c</code> CERT_CONTENT | <code>-f</code> FILE) [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Upload a signing certificate</p>
 <h3>positional arguments:</h3>
 <dl>

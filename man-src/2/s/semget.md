@@ -1,4 +1,5 @@
 ---
+
 title: "semget(2)"
 name: "semget"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-semget/"
 description: "semget – get a System V semaphore set identifier"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;
 #include &lt;sys/sem.h&gt;
 #include &lt;sys/types.h&gt;
 </code></pre>
 <p> <code>int semget(key_t </code><i>key</i><code>,</code> <code>int </code><i>nsems</i><code>,</code> <code>int </code><i>semflg</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>semget</code>() system call returns the System V semaphore set identifier associated with the argument <i>key</i>. It may be used either to obtain the identifier of a previously created semaphore set (when <i>semflg</i> is zero and <i>key</i> does not have the value <code>IPC_PRIVATE</code>), or to create a new set. </p>
 <p> A new set of <i>nsems</i> semaphores is created if <i>key</i> has the value <code>IPC_PRIVATE</code> or if no existing semaphore set is associated with <i>key</i> and <code>IPC_CREAT</code> is specified in <i>semflg</i>. </p>
 <p> If <i>semflg</i> specifies both <code>IPC_CREAT</code> and <code>IPC_EXCL</code> and a semaphore set already exists for <i>key</i>, then <code>semget</code>() fails with <i>errno</i> set to <code>EEXIST</code>. (This is analogous to the effect of the combination <code>O_CREAT | O_EXCL</code> for <code><a href="/docs/linux/man/2-open/">open</a></code>(2).) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-trim-files(1)"
 name: "abrt-action-trim-files"
 section: "1"
@@ -6,16 +7,9 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-trim-files/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-action-trim-files - Deletes old problem directories or files in specified directories until they are smaller than specified size. 
 
- abrt-action-trim-files - Deletes old problem directories or files in specified directories until they are smaller than specified size. 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-action-trim-files</i> [-v] [-d SIZE:DIR]... [-f SIZE:DIR]... [-p DIR] [FILE]...
+<i>abrt-action-trim-files</i> [-v] [-d SIZE:DIR]... [-f SIZE:DIR]... [-p DIR] [FILE]...
 
 <h2>OPTIONS</h2>
 

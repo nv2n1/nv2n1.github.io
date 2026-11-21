@@ -1,4 +1,5 @@
 ---
+
 title: "ipq_destroy_handle(3)"
 name: "ipq_destroy_handle"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-ipq_destroy_handle/"
 description: "ipq_create_handle, ipq_destroy_handle — create and destroy libipq handles."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
 <p> <code>struct ipq_handle *ipq_create_handle(u_int32_t </code><i>flags</i><code>, u_int32_t </code><i>protocol</i><code>);</code><br />
  <code>int ipq_destroy_handle(struct ipq_handle *</code><i>h</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ipq_create_handle</code> function initialises libipq for an application, attempts to bind to the Netlink socket used by ip_queue, and returns an opaque context handle. It should be the first libipq function to be called by an application. The handle returned should be used in all subsequent library calls which require a handle parameter. </p>
 <p> The <i>flags</i> parameter is not currently used and should be set to zero by the application for forward compatibility. </p>
 <p> The <i>protocol</i> parameter is used to specify the protocol of the packets to be queued. Valid values are NFPROTO_IPV4 for IPv4 and NFPROTO_IPV6 for IPv6. Currently, only one protocol may be queued at a time for a handle. </p>

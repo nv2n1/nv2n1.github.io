@@ -1,4 +1,5 @@
 ---
+
 title: "alert(3)"
 name: "alert"
 section: "3"
@@ -9,10 +10,8 @@ description: "alert – Displays a popup alert box. Allegro game programming lib
 
 <h2>NAME</h2>
 <p> alert &#8211; Displays a popup alert box. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int alert(const char *s1, *s2, *s3, const char *b1, *b2, int c1, c2);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Displays a popup alert box, containing three lines of text (s1-s3), and with either one or two buttons. The text for these buttons is passed in `b1&#8242; and `b2&#8242; (`b2&#8242; may be NULL), and the keyboard shortcuts in `c1&#8242; and `c2&#8242; as ASCII value. Example: </p>
 <pre><code>
 if (!exists(CONFIG_FILE))

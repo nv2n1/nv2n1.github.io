@@ -1,4 +1,5 @@
 ---
+
 title: "irssi(1)"
 name: "irssi"
 section: "1"
@@ -9,9 +10,7 @@ description: "Irssi – a modular IRC client for UNIX"
 
 <h2>NAME</h2>
 <p> Irssi &#8211; a modular IRC client for UNIX</p>
-<h2>SYNOPSIS</h2>
 <p> <code>irssi</code> [-dv!?] [-c server] [-p port] [-n nickname] [-w password] [-h hostname]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Irssi</code> is a modular Internet Relay Chat client. It is highly extensible and very secure. Being a fullscreen, termcap based client with many features, <code>Irssi</code> is easily extensible through scripts and modules.</p>
 <h2>OPTIONS</h2>
 <dl>

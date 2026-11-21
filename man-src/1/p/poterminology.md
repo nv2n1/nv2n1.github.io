@@ -1,4 +1,5 @@
 ---
+
 title: "poterminology(1)"
 name: "poterminology"
 section: "1"
@@ -9,9 +10,7 @@ description: "poterminology – Create a terminology file by reading a set of .p
 
 <h2>NAME</h2>
 <p> poterminology &#8211; Create a terminology file by reading a set of .po or .pot files to produce a pootle-terminology.pot.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>poterminology </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-u|&#8211;update <i>UPDATEFILE</i>] [-S|&#8211;stopword-list <i>STOPFILE</i>] [-F|&#8211;fold-titlecase] [-C|&#8211;preserve-case] [-I|&#8211;ignore-case] [&#8211;accelerator <i>ACCELERATORS</i>] [-t|&#8211;term-words <i>LENGTH</i>] [&#8211;nonstop-needed <i>MIN</i>] [&#8211;inputs-needed <i>MIN</i>] [&#8211;fullmsg-needed <i>MIN</i>] [&#8211;substr-needed <i>MIN</i>] [&#8211;locs-needed <i>MIN</i>] [&#8211;sort <i>ORDER</i>] [&#8211;source-language <i>LANG</i>] [-v|&#8211;invert]</p>
-<h2>DESCRIPTION</h2>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poterminology.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/poterminology.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>

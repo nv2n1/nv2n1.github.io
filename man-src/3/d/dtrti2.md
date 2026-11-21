@@ -1,4 +1,5 @@
 ---
+
 title: "dtrti2(3)"
 name: "dtrti2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrti2/"
 description: "dtrti2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrti2</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
  <i></i><code>DTRTI2</code> computes the inverse of a triangular matrix (unblocked algorithm).</p>

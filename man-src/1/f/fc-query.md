@@ -1,4 +1,5 @@
 ---
+
 title: "fc-query(1)"
 name: "fc-query"
 section: "1"
@@ -6,13 +7,10 @@ letter: "f"
 url: "/docs/linux/man/1-fc-query/"
 ---
 
-
  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fc-query</code> [ <code>-Vh</code> ] </p>
 <p> <br />
 &nbsp;[&nbsp;<code>&nbsp;[&nbsp;-b&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;--ignore-blanks&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-i&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;--index&nbsp;</code><i>index</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>&nbsp;[&nbsp;-f&nbsp;</code><i>format</i><code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;--format&nbsp;</code><i>format</i><code>&nbsp;]&nbsp;</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>--version</code>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<code>--help</code>&nbsp;]&nbsp;<wbr>&nbsp;<i>font-file</i><i>...</i>  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fc-query</code> queries <i>font-file</i>(s) using the normal fontconfig rules and prints out font pattern for each face found. If <code>--index</code> is given, only one face of each file is queried, otherwise all faces are queried.  </p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_read_func_t(3)"
 name: "bson_reader_read_func_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_reader_read_func_t – A callback function that will be calle
 
 <h2>NAME</h2>
 <p> bson_reader_read_func_t &#8211; A callback function that will be called by bson_reader_t to read the next chunk of data from the underlying opaque file descriptor.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 typedef ssize_t (*bson_reader_read_func_t)(void *handle,
                                            void *buf,
@@ -25,7 +25,6 @@ typedef ssize_t (*bson_reader_read_func_t)(void *handle,
 <dl>
 <dt><code>count</code></dt>
 <dd> The number of bytes to read.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> A callback function that will be called by <code>bson_reader_t</code> to read the next chunk of data from the underlying opaque file descriptor. </p>
 <p> This function is meant to operate similar to the <code><a href="/docs/linux/man/2-read/">read</a>(2)</code> function as part of libc on UNIX-like systems. </p>
 <h2>RETURNS</h2>

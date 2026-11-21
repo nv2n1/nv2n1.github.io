@@ -1,4 +1,5 @@
 ---
+
 title: "slaqp2(3)"
 name: "slaqp2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaqp2/"
 description: "slaqp2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqp2</code> (M, N, OFFSET, A, LDA, JPVT, TAU, VN1, VN2, WORK)<br />
  <i></i><code>SLAQP2</code> computes a QR factorization with column pivoting of the matrix block.</p>

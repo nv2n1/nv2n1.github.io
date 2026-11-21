@@ -1,4 +1,5 @@
 ---
+
 title: "gspectrum(1)"
 name: "gspectrum"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gspectrum/"
 description: "gspectrum – a small spectrum viewer application"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gspectrum</code> [<code>OPTION(S)</code>&#8230;] [<i>FILE</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gspectrum</code></p>
 <dd>is a simple spectrum visualizer. It is only able to display files in the JCAMP-DX format.</dd>
 <h2>OPTIONS</h2>

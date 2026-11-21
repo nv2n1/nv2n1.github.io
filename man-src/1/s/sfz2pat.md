@@ -1,4 +1,5 @@
 ---
+
 title: "sfz2pat(1)"
 name: "sfz2pat"
 section: "1"
@@ -9,9 +10,7 @@ description: "sz2pat – convert sample files into extended GUS patches"
 
 <h2>NAME</h2>
 <p> sz2pat &#8211; convert sample files into extended GUS patches </p>
-<h2>SYNOPSIS</h2>
 <p> <code>sfz2pat</code> filename.sfz </p>
-<h2>DESCRIPTION</h2>
 <p> This documents both the conversion program <i>sfz2pat</i> and the <code>sfz</code> loader of the <i>gt</i> midi player. </p>
 <p> The name of one or more .wav files containing samples and various parameters describing the desired patch structure and how to play the patch are given in a text file with the extension <code>.sfz</code>. Run the <i>sfz2pat</i> utility on <i>filename</i><code>.sfz</code>, and, if all goes well, the result will be a GUS patch file named <i>filename</i><code>.pat</code>. </p>
 <p> The same <code>.sfz</code> file can be loaded and played directly by <i>gt</i>. Just put the name of the file into timidity.cfg or a file it sources, as you would the name of a GUS <code>.pat</code> file. Some features of <code>sfz</code> patches can only be used when the patch is loaded directly, because they don&#8217;t fit into the GUS format. </p>

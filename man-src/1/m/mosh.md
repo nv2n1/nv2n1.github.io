@@ -1,4 +1,5 @@
 ---
+
 title: "mosh(1)"
 name: "mosh"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mosh/"
 description: "mosh – mobile shell with roaming and intelligent local echo"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mosh</code> [<i>options</i>] [&#8211;] [user@]host [command&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>mosh</code> (mobile shell) is a remote terminal application that supports intermittent connectivity, allows roaming, and provides speculative local echo and line editing of user keystrokes. </p>
 <p> Compared with <code>ssh</code>, <code>mosh</code> is more robust &#8212; its connections stay up across sleeps and changes in the client&#8217;s IP address &#8212; and more responsive, because the protocol is tolerant of packet loss and the client can echo most keystrokes immediately, without waiting for a network round-trip. </p>
 <p> <code>mosh</code> uses <code>ssh</code> to establish a connection to the remote host and authenticate with existing means (e.g., public-key authentication or a password). <code>mosh</code> executes the unprivileged <code>mosh-server</code> helper program on the server, then closes the SSH connection and starts the <code>mosh-client</code>, which establishes a long-lived datagram connection over UDP. </p>

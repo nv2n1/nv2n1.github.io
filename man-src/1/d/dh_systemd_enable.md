@@ -1,4 +1,5 @@
 ---
+
 title: "dh_systemd_enable(1)"
 name: "dh_systemd_enable"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_systemd_enable/"
 description: "dh_systemd_enable – enable/disable systemd unit files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_systemd_enable</code> [<i>debhelper options</i>] [<code>&#8211;no-enable</code>] [<code>&#8211;name=</code><i>name</i>] [<i>unit file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_systemd_enable</code> is a debhelper program that is responsible for enabling and disabling systemd unit files. </p>
 <p> In the simple case, it finds all unit files installed by a package (e.g. bacula-fd.service) and enables them. It is not necessary that the machine actually runs systemd during package installation time, enabling happens on all machines in order to be able to switch from sysvinit to systemd and back. </p>
 <p> In the complex case, you can call <code>dh_systemd_enable</code> and <code>dh_systemd_start</code> manually (by overwriting the debian/rules targets) and specify flags per unit file. An example is colord, which ships colord.service, a dbus-activated service without an [Install] section. This service file cannot be enabled or disabled (a state called &#8220;static&#8221; by systemd) because it has no [Install] section. Therefore, running dh_systemd_enable does not make sense. </p>

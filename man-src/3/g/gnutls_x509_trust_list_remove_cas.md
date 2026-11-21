@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_trust_list_remove_cas(3)"
 name: "gnutls_x509_trust_list_remove_cas"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_trust_list_remove_cas – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_remove_cas &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_remove_cas(gnutls_x509_trust_list_t </code><i>list</i><code>, const gnutls_x509_crt_t * </code><i>clist</i><code>, int </code><i>clist_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_trust_list_remove_cas – API function"
 <dd> A list of CAs</dd>
 <dt>int clist_size</dt>
 <dd> The length of the CA list</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will remove the given certificate authorities from the trusted list. </p>
 <p> Note that this function can accept certificates and authorities not yet known. In that case they will be kept in a separate black list that will be used during certificate verification. Unlike <code>gnutls_x509_trust_list_add_cas()</code> there is no deinitialization restriction for certificate list provided in this function.</p>
 <h2>RETURNS</h2>

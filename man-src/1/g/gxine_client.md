@@ -1,4 +1,5 @@
 ---
+
 title: "gxine_client(1)"
 name: "gxine_client"
 section: "1"
@@ -9,9 +10,7 @@ description: "gxine_client – the gxine video player command line client"
 
 <h2>NAME</h2>
 <p> gxine_client &#8211; the gxine video player command line client </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gxine_client</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This is the command line client used to connect and control the gxine video player. </p>
 <h2>OPTIONS</h2>
 <p> This command supports no options or arguments. </p>

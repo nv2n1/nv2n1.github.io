@@ -1,4 +1,5 @@
 ---
+
 title: "httpcfg(1)"
 name: "httpcfg"
 section: "1"
@@ -9,9 +10,7 @@ description: "httpcfg – Mono Certificate Management for HttpListener"
 
 <h2>NAME</h2>
 <p> httpcfg &#8211; Mono Certificate Management for HttpListener</p>
-<h2>SYNOPSIS</h2>
 <p> <code>httpcfg [options] certificate</code></p>
-<h2>DESCRIPTION</h2>
 <p> This tool is used to manage the certificates used by the HttpListener embeddable server class when the HttpListener is configured as an HTTPS server instead of an HTTP server. </p>
 <p> You must select one of the possible actions: add, delete or list. </p>
 <p> When adding a certificate (-add), you must provide the following information: a certificate (with the -cert flag) a Private Key file (with the -pvk argument, the filename is typically &quot;key&quot;) and a port number (with the -port flag). </p>

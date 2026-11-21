@@ -1,4 +1,5 @@
 ---
+
 title: "bogolexer(1)"
 name: "bogolexer"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-bogolexer/"
 description: "bogolexer – Utility program for separating email messages into tokens"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogolexer</code> [-p] [-q] [-h] [-n] [-v] [-x&nbsp;<wbr><i>flags</i>] [-c&nbsp;<wbr><i>file</i>] [-C] [-D] [-I&nbsp;<wbr><i>file</i>] [-O&nbsp;<wbr><i>file</i>] [-V]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Bogolexer is part of the bogofilter Bayesian spam filter package. </dd>
 <p> It is used to separate messages into tokens and to test new versions of the lexer.l code.</p>
 <h2>OPTIONS</h2>

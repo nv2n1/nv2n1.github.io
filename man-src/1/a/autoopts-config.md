@@ -1,4 +1,5 @@
 ---
+
 title: "autoopts-config(1)"
 name: "autoopts-config"
 section: "1"
@@ -9,9 +10,7 @@ description: "autoopts-config – script to get information about installed vers
 
 <h2>NAME</h2>
 <p> autoopts-config &#8211; script to get information about installed version of autoopts</p>
-<h2>SYNOPSIS</h2>
 <p> <code>autoopts-config</code> <code>{ &lt;value-name&gt; [&#8230;] | everything }</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>autoopts-config</code> is a tool that is used by configure to determine the compile and linker flags that should be used to compile and link programs that use autoopts. <i>value-name</i>s may be preceeded by one or more hyphens. They are silently ignored.</p>
 <h2>VALUE NAMES</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-lbs(1)"
 name: "eulb-describe-lbs"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-describe-lbs – Show information about load balancers"
 
 <h2>NAME</h2>
 <p> eulb-describe-lbs &#8211; Show information about load balancers</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-describe-lbs [&#8211;show-long] [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [ELB [ELB &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about load balancers</p>
 <h3>positional arguments:</h3>
 <dl>

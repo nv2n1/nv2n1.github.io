@@ -1,4 +1,5 @@
 ---
+
 title: "itpp-config(1)"
 name: "itpp-config"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-itpp-config/"
 description: "itpp-config – script to get information about intalled IT++ library prefix, compiler flags and its version"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>itpp-config</code> [&#8211;prefix] [&#8211;exec-prefix] [&#8211;debug] [&#8211;static]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;cflags]&nbsp;<wbr>[&#8211;libs]&nbsp;<wbr>[&#8211;help]&nbsp;<wbr>[&#8211;version] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>itpp-config</i> is a tool that can be used to determine the compiler and linker flags required for compiling and linking programs that use IT++. It can be also used for checking the intalled libitpp library version. </p>
 <h2>OPTIONS</h2>
 <p> <i>itpp-config</i> accepts the following options: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_unref(3)"
 name: "ieee1284_unref"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ieee1284_unref/"
 description: "ieee1284_ref, ieee1284_unref – modify a port’s reference count"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int ieee1284_ref(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt>
 <dt> <code>int ieee1284_unref(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>If you want to free the port list from <code>ieee1284_find_ports</code> but open one of the ports later on, you will need to prevent it from being destroyed in <code>ieee1284_free_ports</code>. Each port has a reference count, and you can use <code>ieee1284_ref</code> to increment it and <code>ieee1284_unref</code> to decrement it. </dd>
 <p> If you use <code>ieee1284_ref</code> at any stage, you must later call <code>ieee1284_unref</code> to relinquish the extra reference. If you do not do this, the resources associated with the port will not be cleaned up. </p>
 <p> If you have not previously used <code>ieee1284_ref</code> on a port, you must not use <code>ieee1284_unref</code> on it.</p>

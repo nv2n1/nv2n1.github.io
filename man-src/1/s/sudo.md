@@ -1,4 +1,5 @@
 ---
+
 title: "sudo(1)"
 name: "sudo"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-sudo/"
 description: "sudo, sudoedit – execute a command as another user"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sudo</code> <code>-h</code> | <code>-K</code> | <code>-k</code> | <code>-L</code> | <code>-V</code> </p>
 <p> <code>sudo</code> <code>-v</code> [<code>-AknS</code>] [<code>-g</code>&nbsp;<wbr><i>group name</i>|<i>#gid</i>] [<code>-p</code>&nbsp;<wbr><i>prompt</i>] [<code>-u</code>&nbsp;<wbr><i>username</i>|<i>#uid</i>] </p>
 <p> <code>sudo</code> <code>-l[l]</code> [<code>-AknS</code>] [<code>-g</code>&nbsp;<wbr><i>group name</i>|<i>#gid</i>] [<code>-p</code>&nbsp;<wbr><i>prompt</i>] [<code>-U</code>&nbsp;<wbr><i>user name</i>] [<code>-u</code>&nbsp;<wbr><i>user name</i>|<i>#uid</i>] [<i>command</i>] </p>
 <p> <code>sudo</code> [<code>-AbEHnPS</code>] [<code>-C</code>&nbsp;<wbr><i>fd</i>] [<code>-g</code>&nbsp;<wbr><i>group name</i>|<i>#gid</i>] [<code>-p</code>&nbsp;<wbr><i>prompt</i>] [<code>-r</code>&nbsp;<wbr><i>role</i>] [<code>-t</code>&nbsp;<wbr><i>type</i>] [<code>-u</code>&nbsp;<wbr><i>user name</i>|<i>#uid</i>] [<font SIZE="-1"><code>VAR</code></font>=<i>value</i>] [<code>-i</code>&nbsp;<wbr>|&nbsp;<wbr><code>-s</code>] [<i>command</i>] </p>
 <p> <code>sudoedit</code> [<code>-AnS</code>] [<code>-C</code>&nbsp;<wbr><i>fd</i>] [<code>-g</code>&nbsp;<wbr><i>group name</i>|<i>#gid</i>] [<code>-p</code>&nbsp;<wbr><i>prompt</i>] [<code>-u</code>&nbsp;<wbr><i>user name</i>|<i>#uid</i>] file &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>sudo</code> allows a permitted user to execute a <i>command</i> as the superuser or another user, as specified in the <i>sudoers</i> file. The real and effective uid and gid are set to match those of the target user as specified in the passwd file and the group vector is initialized based on the group file (unless the <code>-P</code> option was specified). If the invoking user is root or if the target user is the same as the invoking user, no password is required. Otherwise, <code>sudo</code> requires that users authenticate themselves with a password by default (<font SIZE="-1">NOTE:</font> in the default configuration this is the user&#8217;s password, not the root password). Once a user has been authenticated, a time stamp is updated and the user may then use sudo without a password for a short period of time (<tt> 5<br />
  </tt> minutes unless overridden in <i>sudoers</i>). </p>
 <p> When invoked as <code>sudoedit</code>, the <code>-e</code> option (described below), is implied. </p>

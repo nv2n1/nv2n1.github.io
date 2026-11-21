@@ -1,4 +1,5 @@
 ---
+
 title: "pdns_server(1)"
 name: "pdns_server"
 section: "1"
@@ -9,9 +10,7 @@ description: "pdns_server – The PowerDNS nameserver"
 
 <h2>NAME</h2>
 <p> pdns_server &#8211; The PowerDNS nameserver</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pdns_server [options]</code></p>
-<h2>DESCRIPTION</h2>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>&#8211;daemon=</code><i>yes|no</i></dt>

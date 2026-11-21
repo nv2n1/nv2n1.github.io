@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_ext_import_proxy(3)"
 name: "gnutls_x509_ext_import_proxy"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_ext_import_proxy – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_import_proxy &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_import_proxy(const gnutls_datum_t * </code><i>ext</i><code>, int * </code><i>pathlen</i><code>, char ** </code><i>policyLanguage</i><code>, char ** </code><i>policy</i><code>, size_t * </code><i>sizeof_policy</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_x509_ext_import_proxy – API function"
 <dd> output variable with policy data</dd>
 <dt>size_t * sizeof_policy</dt>
 <dd> output variable size of policy data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the information from a proxy certificate extension. It reads the ProxyCertInfo X.509 extension (1.3.6.1.5.5.7.1.14). The <i>policyLanguage</i> and <i>policy</i> values must be deinitialized using <code>gnutls_free()</code> after use.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

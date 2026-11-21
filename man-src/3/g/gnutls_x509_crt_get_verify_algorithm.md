@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_verify_algorithm(3)"
 name: "gnutls_x509_crt_get_verify_algorithm"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_get_verify_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_verify_algorithm &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_verify_algorithm(gnutls_x509_crt_t </code><i>crt</i><code>, const gnutls_datum_t * </code><i>signature</i><code>, gnutls_digest_algorithm_t * </code><i>hash</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crt_get_verify_algorithm – API function"
 <dd> contains the signature</dd>
 <dt>gnutls_digest_algorithm_t * hash</dt>
 <dd> The result of the call with the hash algorithm used for signature</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will read the certifcate and the signed data to determine the hash algorithm used to generate the signature.</p>
 <h2>DEPRECATED</h2>
 <p> Use <code>gnutls_pubkey_get_verify_algorithm()</code> instead.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdanetfilter(1)"
 name: "pmdanetfilter"
 section: "1"
@@ -9,7 +10,6 @@ description: "pmdanetfilter – Linux netfilter IP connection tracking performan
 
 <h2>NAME</h2>
 <p> <code>pmdanetfilter</code> &#8211; Linux netfilter IP connection tracking performance metrics domain agent (PMDA)</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdanetfilter</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <font SIZE="-1">IP</font> connection tracking module in the Linux kernel.</p>
 <h2>INSTALLATION</h2>
 <p> Install the netfilter PMDA by using the Install script as root: </p>

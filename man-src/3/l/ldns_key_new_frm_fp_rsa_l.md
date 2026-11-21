@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_new_frm_fp_rsa_l(3)"
 name: "ldns_key_new_frm_fp_rsa_l"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_key_new_frm_fp_rsa, ldns_key_new_frm_fp_rsa_l"
 
 <h2>NAME</h2>
 <p> ldns_key_new_frm_fp_rsa, ldns_key_new_frm_fp_rsa_l </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> RSA* ldns_key_new_frm_fp_rsa(FILE *fp); </p>
 <p> RSA* ldns_key_new_frm_fp_rsa_l(FILE *fp, int *line_nr); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_new_frm_fp_rsa</i>()</dt>
 <dd>frm_fp helper function. This function parses the remainder of the (RSA) priv. key file generated from bind9 .br <code>fp</code>: the file to parse .br Returns NULL on failure otherwise a RSA structure</dd></dl>

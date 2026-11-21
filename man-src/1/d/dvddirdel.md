@@ -1,4 +1,5 @@
 ---
+
 title: "dvddirdel(1)"
 name: "dvddirdel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dvddirdel/"
 description: "dvddirdel – Deletes a previously authored DVD directory structure in DIR"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvddirdel</code> [ <code>-o </code><i>DIR</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>dvddirdel</code> safely deletes a previously authored DVD directory structure in DIR. Only items that look like part of a DVD-Video directory structure are removed. </p>
 <p> If you just want to replace an existing output directory with a new one, <a href="/docs/linux/man/1-dvdauthor/">dvdauthor</a>(1) can do that directly with its -O option.</p>
 <h2>USAGE</h2>

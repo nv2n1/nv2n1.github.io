@@ -1,4 +1,5 @@
 ---
+
 title: "rasls(1)"
 name: "rasls"
 section: "1"
@@ -9,9 +10,7 @@ description: "rasls – list information on rasterfiles"
 
 <h2>NAME</h2>
 <p> rasls &#8211; list information on rasterfiles</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rasls</code> [<code>-type</code>] [<code>-count</code>] [<code>-resolution</code>] [<code>-verbose</code>] [<code>-Version</code>] [<code>-ifmt </code><i>file_format</i>] [files]</p>
-<h2>DESCRIPTION</h2>
 <p> For each file <code>rasls</code> will generate a one line description of the rasterfile. Information provided includes the format type (Sun, HDF, etc.), the encoding (indexed, direct, etc.), resolution, and filename. Files that cannot be read as rasterfiles, are empty, are directories, or are otherwise unrecognizable are simply listed as such. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "hal-lock(1)"
 name: "hal-lock"
 section: "1"
@@ -9,9 +10,7 @@ description: "hal-lock – lock an interface"
 
 <h2>NAME</h2>
 <p> hal-lock &#8211; lock an interface</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hal-lock</code> [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>hal-lock</i> can be used to acquire a lock on a given interface either on a given device or globally. For more information about both the big picture and the semantics of <code>HAL</code> locks, refer to the <i>HAL spec</i> which can be found in <i>/usr/share/doc/hal-0.5.13/spec/hal-spec.html</i> depending on the distribution. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

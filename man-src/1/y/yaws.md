@@ -1,4 +1,5 @@
 ---
+
 title: "yaws(1)"
 name: "yaws"
 section: "1"
@@ -9,9 +10,7 @@ description: "yaws – yet another webserver"
 
 <h2>NAME</h2>
 <p> yaws &#8211; yet another webserver</p>
-<h2>SYNOPSIS</h2>
 <p> <code>yaws</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Yaws is fast lightweight webserver. It can run as daemon or in interactive mode where it is possible to directly interact with the webserver. Yaws is particularly good at generating dynamic content. See the user docs for more information on that topic. </p>
 <h2>DAEMON/SERVER options</h2>
 <dl>

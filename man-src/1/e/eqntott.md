@@ -1,4 +1,5 @@
 ---
+
 title: "eqntott(1)"
 name: "eqntott"
 section: "1"
@@ -9,9 +10,7 @@ description: "eqntott – generate truth table from Boolean equations"
 
 <h2>NAME</h2>
 <p> eqntott &#8211; generate truth table from Boolean equations</p>
-<h2>SYNOPSIS</h2>
 <p> <code>eqntott</code> [ <code>-l</code> ] [ <code>-f</code> ] [ <code>-s</code> ] [ <code>-r</code> ] [ <code>-R</code> ] ] [ -.key ] [ cc options ] [ files ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Eqntott</i> generates a truth table suitable for PLA programming from a set of Boolean equations which define the PLA outputs in terms of its inputs. When neither -f nor -s is specified, input and output variables must be mutually exclusive. If the -s option is given, an output variable may be used in an expression defining another output variable: the expression for the first output is substituted for the the name of that output when it is encountered. The -f option allows outputs to be defined in terms of their previous values in a synchronous system (e.g. an FSM): the same name appearing as both an input and an output may be thought of as referring to two distinct variables, or the same variable at two distinct times. (The -f and -s options are mutually exclusive.) </p>
 <p> If the -r option is specified, <i>eqntott</i> will attempt to reduce the size of the truth table by merging minterms. The -R option (implies -r) forces <i>eqntott</i> to produce a truth table with no redundant minterms. The truth table generated does not represent a minimal covering of the truth functions, but does preserve some &#8220;don&#8217;t care&#8221; information for some other program to use. </p>
 <p> If the -l option is specified, eqntott will output a truth table which includes the name of the pla and its inputs and outputs as specified in PLA(5). </p>

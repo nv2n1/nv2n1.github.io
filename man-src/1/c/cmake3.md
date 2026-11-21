@@ -1,4 +1,5 @@
 ---
+
 title: "cmake3(1)"
 name: "cmake3"
 section: "1"
@@ -9,13 +10,11 @@ description: "cmake – CMake Command-Line Reference"
 
 <h2>NAME</h2>
 <p> cmake &#8211; CMake Command-Line Reference</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 cmake3[&lt;options&gt;](&lt;path - to - source&gt; | &lt;path - to - existing - build&gt;)
         cmake3[(-D &lt; var &gt;= &lt;value&gt;)...] -
     P&lt;cmake - script - file&gt; cmake3-- build&lt;dir&gt;[&lt;options&gt;...][--&lt;build - tool - options&gt;...] cmake3 - E&lt;command&gt;[&lt;options&gt;...] cmake3-- find - package&lt;options&gt;...
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The &quot;cmake3&quot; executable is the CMake command-line interface. It may be used to configure projects in scripts. Project configuration settings may be specified on the command line with the -D option. </p>
 <p> CMake is a cross-platform build system generator. Projects specify their build process with platform-independent CMake listfiles included in each directory of a source tree with the name CMakeLists.txt. Users build a project by using CMake to generate a build system for a native tool on their platform.</p>
 <h2>OPTIONS</h2>

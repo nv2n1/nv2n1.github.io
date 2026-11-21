@@ -1,4 +1,5 @@
 ---
+
 title: "pgmbentley(1)"
 name: "pgmbentley"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pgmbentley/"
 description: "pgmbentley – Bentleyize a portable graymap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pgmbentley</code> [<i>pgmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable graymap as input. Performs The Bentley Effect, and writes a portable graymap as output. </p>
 <p> The Bentley Effect is described in &quot;Beyond Photography&quot; by Holzmann, chapter 4, photo 4. It&#8217;s a vertical smearing based on brightness.</p>
 <h2>SEE ALSO</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-fresh-branch(1)"
 name: "git-fresh-branch"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-fresh-branch – Create fresh branches"
 
 <h2>NAME</h2>
 <p> <code>git-fresh-branch</code> &#8211; Create fresh branches</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-fresh-branch</code> &lt;branchname&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Creates empty local branch named &lt;branchname&gt;.</p>
 <h2>OPTIONS</h2>
 <p> &lt;branchname&gt; </p>

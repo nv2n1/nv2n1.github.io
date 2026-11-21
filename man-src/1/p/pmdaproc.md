@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaproc(1)"
 name: "pmdaproc"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdaproc – process performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdaproc</code> &#8211; process performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/proc/pmdaproc</code> [<code>-AL</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-r</code> <i>cgroup</i>] [<code>-U</code> <i>username</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdaproc</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics describing the state of the individual processes running on a Linux system. </p>
 <p> The <code>proc</code> PMDA exports metrics that measure the memory, processor and other resource use of each process, as well as summary information collated across all of the running processes. The PMDA uses credentials passed from the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) monitoring tool identifying the user requesting the information, to ensure that only values the user is allowed to access are returned by the PMDA. This involves the PMDA temporarily changing its effective user and group identifiers for the duration of requests for instances and values. In other words, system calls to extract information are performed as the user originating the request and not as a privileged user. The mechanisms available for transfer of user credentials are described further in the <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) page. </p>
 <p> A brief description of the <code>pmdaproc</code> command line options follows:</p>

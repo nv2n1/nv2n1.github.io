@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-run-session(1)"
 name: "dbus-run-session"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-dbus-run-session/"
 description: "dbus-run-session – start a process as a new D-Bus session"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-run-session</code> [&#8211;config-file&nbsp;<i>FILENAME</i>] [&#8211;dbus-daemon&nbsp;<i>BINARY</i>] [&#8211;] <i>PROGRAM</i> [<i>ARGUMENTS</i>&#8230;]</dt>
 <dt> <code>dbus-run-session</code> &#8211;help</dt>
 <dt> <code>dbus-run-session</code> &#8211;version</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>dbus-run-session</code></p>
 <dd>is used to start a session bus instance of <code>dbus-daemon</code> from a shell script, and start a specified program in that session. The <code>dbus-daemon</code> will run for as long as the program does, after which it will terminate. </dd>
 <p> One use is to run a shell with its own <code>dbus-daemon</code> in a text-mode or SSH session, and have the <code>dbus-daemon</code> terminate automatically on leaving the sub-shell, like this: </p>

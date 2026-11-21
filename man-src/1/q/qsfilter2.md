@@ -1,4 +1,5 @@
 ---
+
 title: "qsfilter2(1)"
 name: "qsfilter2"
 section: "1"
@@ -6,18 +7,11 @@ letter: "q"
 url: "/docs/linux/man/1-qsfilter2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+qsfilter2 - an utility to generate mod_qos request line rules out from existing access/audit log data. 
 
- qsfilter2 - an utility to generate mod_qos request line rules out from existing access/audit log data. 
+qsfilter2 -i &lt;path&gt; [-c &lt;path&gt;] [-d &lt;num&gt;] [-h] [-b &lt;num&gt;] [-p|-s|-m|-o] [-l &lt;len&gt;] [-n] [-e] [-u 'uni'] [-k &lt;prefix&gt;] [-t] [-f &lt;path&gt;] [-v 0|1|2]
 
-<h2>SYNOPSIS</h2>
-
- qsfilter2 -i &lt;path&gt; [-c &lt;path&gt;] [-d &lt;num&gt;] [-h] [-b &lt;num&gt;] [-p|-s|-m|-o] [-l &lt;len&gt;] [-n] [-e] [-u 'uni'] [-k &lt;prefix&gt;] [-t] [-f &lt;path&gt;] [-v 0|1|2]
-
-<h2>DESCRIPTION</h2>
-
- mod_qos implements a request filter which validates each request line. The module supports both, negative and positive security model. The QS_Deny* directives are used to specify request line patterns which are not allowed to access the server (negative security model / blacklist). These rules are used to restrict access to certain resources which should not be available to users or to protect the server from malicious patterns. The QS_Permit* rules implement a positive security model (whitelist). These directives are used to define allowed request line patterns. Request which do not match any of thses patterns are not allowed to access the server. 
+mod_qos implements a request filter which validates each request line. The module supports both, negative and positive security model. The QS_Deny* directives are used to specify request line patterns which are not allowed to access the server (negative security model / blacklist). These rules are used to restrict access to certain resources which should not be available to users or to protect the server from malicious patterns. The QS_Permit* rules implement a positive security model (whitelist). These directives are used to define allowed request line patterns. Request which do not match any of thses patterns are not allowed to access the server. 
 
  qsfilter2 is an audit log analyzer used to generate filter rules (perl compatible regular expressions) which may be used by mod_qos to deny access for suspect requests (QS_PermitUri rules). It parses existing audit log files in order to generate request patterns covering all allowed requests.
 

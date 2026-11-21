@@ -1,4 +1,5 @@
 ---
+
 title: "openjade(1)"
 name: "openjade"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-openjade/"
 description: "openjade – apply a DSSSL stylesheet to an SGML or XML document"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>openjade</code> [<code>-vCegG2s</code>] [<code>-b&nbsp;</code><i>encoding</i>] [<code>-f&nbsp;</code><i>error_file</i>] [<code>-c&nbsp;</code><i>catalog_sysid</i>] [<code>-D&nbsp;</code><i>dir</i>] [<code>-a&nbsp;</code><i>link_type</i>] [<code>-A&nbsp;</code><i>arch</i>] [<code>-E&nbsp;</code><i>max_errors</i>] [<code>-i&nbsp;</code><i>entity</i>] [<code>-w&nbsp;</code><i>warning_type</i>] [<code>-d&nbsp;</code><i>dsssl_spec</i>] [<code>-V&nbsp;</code><i>variable[=value</i>]] [<code>-t&nbsp;</code><i>output_type</i>] [<code>-o&nbsp;</code><i>output_file</i>] [<i>sysid</i>&#8230;] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<code>openjade</code>&nbsp;is an implementation of the ISO/IEC 10179:1996 standard DSSSL language. The DSSSL engine receives as input an SGML or XML document and transforms it into formats like: </p>
 <p> * XML representation of the flow object tree. </p>
 <p> * RTF format that can be rendered and printed with Microsoft&#8217;s free Word Viewer 97 </p>

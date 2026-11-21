@@ -1,4 +1,5 @@
 ---
+
 title: "pamtogif(1)"
 name: "pamtogif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtogif/"
 description: "pamtogif – convert a Netpbm image to a GIF image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamtogif</code> </p>
 <p> [<code>-interlace</code>] </p>
 <p> [<code>-sort</code>] </p>
@@ -18,7 +18,6 @@ description: "pamtogif – convert a Netpbm image to a GIF image"
 <p> [<code>-aspect=</code><i>fraction</i>] </p>
 <p> [<code>-verbose</code>] [<i>netpbmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtogif</code> reads a Netpbm image as input and produces a GIF file as output. </p>
 <p> This program creates only individual GIF images. To combine multiple GIF images into an animated GIF, use <code>gifsicle</code> (not part of the Netpbm package). </p>

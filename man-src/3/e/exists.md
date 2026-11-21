@@ -1,4 +1,5 @@
 ---
+
 title: "exists(3)"
 name: "exists"
 section: "3"
@@ -9,10 +10,8 @@ description: "exists – Shortcut version of file_exists() for normal files. All
 
 <h2>NAME</h2>
 <p> exists &#8211; Shortcut version of file_exists() for normal files. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int exists(const char *filename);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Shortcut version of file_exists(), which checks for normal files, which may have the archive or read-only bits set, but are not hidden, directories, system files, etc.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns non-zero if the file exists, or zero if it doesn&#8217;t. </p>

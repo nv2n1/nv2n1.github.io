@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_send(3)"
 name: "ldns_send"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_send"
 
 <h2>NAME</h2>
 <p> ldns_send </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_send(ldns_pkt **pkt, ldns_resolver *r, const ldns_pkt *query_pkt); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_send</i>()</dt>
 <dd>Sends ptk to the nameserver at the resolver object. Returns the data as a ldns_pkt </dd>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_verify_data(3)"
 name: "gnutls_x509_privkey_verify_data"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_privkey_verify_data – Verify the signed data using p
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_verify_data &#8211; Verify the signed data using private key</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/x509.h">gnutls/x509.h</a>&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_verify_data(gnutls_x509_privkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, const gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_privkey_verify_data – Verify the signed data using p
 <dd> holds the data to be signed</dd>
 <dt>const gnutls_datum_t * signature</dt>
 <dd> contains the signature</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will verify the given signed data, using the parameters in the private key.</p>
 <h2>RETURNS</h2>
 <p> In case of a verification failure 0 is returned, and 1 on success.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "load_voc(3)"
 name: "load_voc"
 section: "3"
@@ -9,10 +10,8 @@ description: "load_voc – Loads a sample from a Creative Labs VOC file. Allegro
 
 <h2>NAME</h2>
 <p> load_voc &#8211; Loads a sample from a Creative Labs VOC file. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>SAMPLE *load_voc(const char *filename);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Loads a sample from a Creative Labs VOC file. Example: </p>
 <pre><code>
 SAMPLE *sample = load_voc("alarm.voc");

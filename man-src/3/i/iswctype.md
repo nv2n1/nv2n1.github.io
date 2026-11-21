@@ -1,4 +1,5 @@
 ---
+
 title: "iswctype(3)"
 name: "iswctype"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-iswctype/"
 description: "iswctype – wide-character classification"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswctype(wint_t wc, wctype_t desc);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> If <i>wc</i> is a wide character having the character property designated by <i>desc</i> (or in other words: belongs to the character class designated by <i>desc</i>), the <code>iswctype</code>() function returns nonzero. Otherwise, it returns zero. If <i>wc</i> is <code>WEOF</code>, zero is returned. </p>
 <p> <i>desc</i> must be a character property descriptor returned by the <code><a href="/docs/linux/man/3-wctype/">wctype</a></code>(3) function.</p>
 <h2>RETURN VALUE</h2>

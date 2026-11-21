@@ -1,4 +1,5 @@
 ---
+
 title: "akmods(1)"
 name: "akmods"
 section: "1"
@@ -9,9 +10,7 @@ description: "akmods – manual page for akmods 0.4.0"
 
 <h2>NAME</h2>
 <p> akmods &#8211; manual page for akmods 0.4.0</p>
-<h2>SYNOPSIS</h2>
 <p> <code>akmods</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Checks the akmod packages and rebuilds them if needed</p>
 <h3>Available options:</h3>
 <dl>

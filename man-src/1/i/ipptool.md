@@ -1,4 +1,5 @@
 ---
+
 title: "ipptool(1)"
 name: "ipptool"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ipptool/"
 description: "ipptool – perform internet printing protocol requests"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ipptool</code> [ <code>&#8211;help</code> ] [ <code>&#8211;ippserver</code> <i>filename</i> ] [ <code>&#8211;stop-after-include-error</code> ] [ <code>&#8211;version</code> ] [ <code>-4</code> ] [ <code>-6</code> ] [ <code>-C</code> ] [ <code>-E</code> ] [ <code>-I</code> ] [ <code>-L</code> ] [ <code>-P</code> <i>filename.plist</i> ] [ <code>-S</code> ] [ <code>-T</code> <i>seconds</i> ] [ <code>-V</code> <i>version</i> ] [ <code>-X</code> ] [ <code>-c</code> ] [ <code>-d</code> <i>name=value</i> ] [ <code>-f</code> <i>filename</i> ] [ <code>-h</code> ] [ <code>-i</code> <i>seconds</i> ] [ <code>-j</code> ] [ <code>-n</code> <i>repeat-count</i> ] [ <code>-q</code> ] [ <code>-t</code> ] [ <code>-v ]</code> <i>printer-uri</i> <i>testfile</i> [ &#8230; <i>testfile</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ipptool</code> sends IPP requests to the specified <i>printer-uri</i> and tests and/or displays the results. Each named <i>testfile</i> defines one or more requests, including the expected response status, attributes, and values. Output is either a plain text, formatted text, CSV, or XML report on the standard output, with a non-zero exit status indicating that one or more tests have failed. The <i>testfile</i> format is described in <code><a href="/docs/linux/man/5-ipptoolfile/">ipptoolfile</a></code>(5).</p>
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <code>ipptool:</code></p>

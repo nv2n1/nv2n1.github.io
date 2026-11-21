@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-power-manager(1)"
 name: "xfce4-power-manager"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xfce4-power-manager/"
 description: "xfce4-power-manager – The Xfce 4 Power manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xfce4-power-manager</code> <i>[options]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>xfce4-power-manager</code> manages the power sources on the computer and the devices that can be controlled to reduce their power consumption (such as LCD brightness level, monitor sleep). In addition, <code>xfce4-power-manager</code> provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption, and it provides the inhibit interface which allows applications to prevent automatic sleep actions via the power manager; as an example, the operating system&#8217;s package manager should make use of this interface while it is performing update operations. </p>
 <p> You can run <code>xfce4-power-manager</code> from the command line without specifying any extra arguments. </p>
 <h2>OPTIONS</h2>

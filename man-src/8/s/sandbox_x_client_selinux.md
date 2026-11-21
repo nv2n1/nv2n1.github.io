@@ -1,12 +1,13 @@
 ---
+
 title: "sandbox_x_client_selinux(8)"
 name: "sandbox_x_client_selinux"
 section: "8"
 letter: "s"
 url: "/docs/linux/man/8-sandbox_x_client_selinux/"
 ---
+
 <p> sandbox_x_client_selinux - Security Enhanced Linux Policy for the sandbox_x_client processes  </p>
-<h2>DESCRIPTION</h2>
 <p>Security-Enhanced Linux secures the sandbox_x_client processes via flexible mandatory access control. </p>
 <p>The sandbox_x_client processes execute with the sandbox_x_client_t SELinux type. You can check if you have these processes running by executing the <code>ps</code> command with the <code>-Z</code> qualifier. </p>
 <p>For example: </p>

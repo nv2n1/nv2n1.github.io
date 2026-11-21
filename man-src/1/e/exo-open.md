@@ -1,4 +1,5 @@
 ---
+
 title: "exo-open(1)"
 name: "exo-open"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-exo-open/"
 description: "exo-open – Open URLs and launch preferred applications"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>exo-open</code> [[url]&#8230;]</dt>
 <dt> <code>exo-open</code> &#8211;launch [category] [[parameter]&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>exo-open</code></p>
 <dd>is a command line frontend to the <code>Xfce Preferred Applications</code> framework. It can either be used to open a list of <i>url</i>s with the default URL handler or launch the preferred application for a certain category.</dd>
 <h2>INVOCATION</h2>

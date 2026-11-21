@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-diff(1)"
 name: "rpmdev-diff"
 section: "1"
@@ -9,9 +10,7 @@ description: "rpmdev-diff – manual page for rpmdev-diff version 1.4"
 
 <h2>NAME</h2>
 <p> rpmdev-diff &#8211; manual page for rpmdev-diff version 1.4</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rpmdev-diff</code> [<i>OPTION</i>]&#8230; [<i>DIFF-OPTIONS</i>] <i>FROM-ARCHIVE TO-ARCHIVE</i></p>
-<h2>DESCRIPTION</h2>
 <p> rpmdev-diff diffs contents of two archives. </p>
 <p> See <a href="/docs/linux/man/1-rpmdev-extract/">rpmdev-extract</a>(1) for information about supported archive types.</p>
 <h2>OPTIONS</h2>

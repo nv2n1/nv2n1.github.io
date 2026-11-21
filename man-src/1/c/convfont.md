@@ -1,4 +1,5 @@
 ---
+
 title: "convfont(1)"
 name: "convfont"
 section: "1"
@@ -9,9 +10,7 @@ description: "convfont – convert font files for svgalib"
 
 <h2>NAME</h2>
 <p> convfont &#8211; convert font files for svgalib</p>
-<h2>SYNOPSIS</h2>
 <p> <code>convfont</code><i> fontfile fontheight vgafontfile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> convert the standard format binary fontfile name <i>fontfile</i> to the codepage format required by <code><a href="/docs/linux/man/1-restorefont/">restorefont</a></code>(1). The converted font is written to <i>vgafontfile</i>. </p>
 <p> A binary font file of any number of characters up to 256 can be used, although at least defining the first 128 characters is a good idea. The <i>fontheight</i> must be in the range <code>1</code> &#8211; <code>32</code>. </p>
 <p> The <i>fontfile</i> file consist of <i>fontheight</i> bytes stored sequentially (top to bottom) for each character in your font, starting with the character with code 0. </p>

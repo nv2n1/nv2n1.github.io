@@ -1,4 +1,5 @@
 ---
+
 title: "qbittorrent(1)"
 name: "qbittorrent"
 section: "1"
@@ -6,28 +7,15 @@ letter: "q"
 url: "/docs/linux/man/1-qbittorrent/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+qBittorrent - a Bittorrent client written in C++ / Qt 
 
- 
-
- qBittorrent - a Bittorrent client written in C++ / Qt 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- qbittorrent [--no-splash] [--webui-port=x] [TORRENT_FILE | URL]... 
+qbittorrent [--no-splash] [--webui-port=x] [TORRENT_FILE | URL]... 
 
  qbittorrent --help 
 
  qbittorrent --version
 
-<h2>DESCRIPTION</h2>
-
- 
-
- qBittorrent is an advanced Bittorrent client written in C++ / Qt, using the libtorrent-rasterbar library by Arvid Norberg. qBittorrent is similar to uTorrent. qBittorrent is fast, stable, light, it supports unicode and it provides a good integrated search engine. It also comes with UPnP port forwarding / NAT-PMP, encryption (Vuze compatible), FAST extension (mainline) and PeX support (utorrent compatible).
+qBittorrent is an advanced Bittorrent client written in C++ / Qt, using the libtorrent-rasterbar library by Arvid Norberg. qBittorrent is similar to uTorrent. qBittorrent is fast, stable, light, it supports unicode and it provides a good integrated search engine. It also comes with UPnP port forwarding / NAT-PMP, encryption (Vuze compatible), FAST extension (mainline) and PeX support (utorrent compatible).
 
 <h2>OPTIONS</h2>
 

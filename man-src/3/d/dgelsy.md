@@ -1,4 +1,5 @@
 ---
+
 title: "dgelsy(3)"
 name: "dgelsy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgelsy/"
 description: "dgelsy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgelsy</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, LWORK, INFO)<br />
  <i></i><code> DGELSY solves overdetermined or underdetermined systems for GE matrices</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pem_base64_decode_alloc(3)"
 name: "gnutls_pem_base64_decode_alloc"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pem_base64_decode_alloc – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pem_base64_decode_alloc &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_pem_base64_decode_alloc(const char * </code><i>header</i><code>, const gnutls_datum_t * </code><i>b64_data</i><code>, gnutls_datum_t * </code><i>result</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pem_base64_decode_alloc – API function"
 <dd> contains the encoded data</dd>
 <dt>gnutls_datum_t * result</dt>
 <dd> the place where decoded data lie</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will decode the given encoded data. The decoded data will be allocated, and stored into result. If the header given is non null this function will search for &quot;&#8212;&#8211;BEGIN header&quot; and decode only this part. Otherwise it will decode the first PEM packet found. </p>
 <p> You should use <code>gnutls_free()</code> to free the returned data.</p>
 <h2>RETURNS</h2>

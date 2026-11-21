@@ -1,4 +1,5 @@
 ---
+
 title: "jpgicc(1)"
 name: "jpgicc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jpgicc/"
 description: "jpgicc – little cms ICC profile applier for JPEG."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jpgicc</code> [<i>options</i>]<i> input.jpg output.jpg</i></p>
-<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>jpgicc</code> is a little cms ICC profile applier for JPEG.</p>
 <h2>OPTIONS</h2>
 <dl>

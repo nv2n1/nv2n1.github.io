@@ -1,4 +1,5 @@
 ---
+
 title: "spix(1)"
 name: "spix"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-spix/"
 description: "spix – Compile a .tex file, executing commands that are set inside the file itself."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>spix</code> [<code>&#8211;version</code>] [<code>-h</code>] [<code>-n</code>] <i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>spix</code> parses a .tex file to find lines starting with <i>%$</i> (before the preambule). Those lines are shell commands that are executed by <code>spix</code>. </p>
 <p> Commands are executed as-is, excepted that:</p>
 <dl>

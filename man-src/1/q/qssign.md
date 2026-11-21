@@ -1,4 +1,5 @@
 ---
+
 title: "qssign(1)"
 name: "qssign"
 section: "1"
@@ -6,18 +7,11 @@ letter: "q"
 url: "/docs/linux/man/1-qssign/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+qssign - an utility to sign and verify the integrity of log data. 
 
- qssign - an utility to sign and verify the integrity of log data. 
+qssign -s|S &lt;secret&gt; [-e] [-v]
 
-<h2>SYNOPSIS</h2>
-
- qssign -s|S &lt;secret&gt; [-e] [-v]
-
-<h2>DESCRIPTION</h2>
-
- qssign is a log data integrity check tool. It reads log data from stdin (pipe) and writes the signed data to stdout.
+qssign is a log data integrity check tool. It reads log data from stdin (pipe) and writes the signed data to stdout.
 
 <h2>OPTIONS</h2>
 

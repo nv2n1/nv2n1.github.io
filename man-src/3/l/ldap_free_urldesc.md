@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_free_urldesc(3)"
 name: "ldap_free_urldesc"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldap_is_ldap_url, ldap_url_parse, ldap_free_urldesc – LDAP Unifo
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_is_ldap_url(const char *url) int ldap_url_parse(const char *url, LDAPURLDesc **ludpp) typedef struct ldap_url_desc {
@@ -26,7 +26,6 @@ int ldap_is_ldap_url(const char *url) int ldap_url_parse(const char *url, LDAPUR
 } LDAPURLDesc;
 void ldap_free_urldesc(LDAPURLDesc *ludp);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These routines support the use of LDAP URLs (Uniform Resource Locators) as detailed in RFC 4516. LDAP URLs look like this: </p>
 <pre>
   <code>ldap://</code><i>hostport</i><code>/</code><i>dn</i>[<code>?</code><i>attrs</i>[<code>?</code><i>scope</i>[<code>?</code><i>filter</i>[<code>?</code><i>exts</i>]]]]

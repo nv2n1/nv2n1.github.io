@@ -1,4 +1,5 @@
 ---
+
 title: "sopmtr(3)"
 name: "sopmtr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sopmtr/"
 description: "sopmtr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sopmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>SOPMTR</code></p>

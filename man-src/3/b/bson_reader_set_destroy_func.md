@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_set_destroy_func(3)"
 name: "bson_reader_set_destroy_func"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_reader_set_destroy_func() – Allows for setting a callback t
 
 <h2>NAME</h2>
 <p> bson_reader_set_destroy_func() &#8211; Allows for setting a callback to be executed when a reader is destroyed. This should only be used by implementations implementing their own read callbacks.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 void
 bson_reader_set_destroy_func (bson_reader_t             *reader,
@@ -22,7 +22,6 @@ bson_reader_set_destroy_func (bson_reader_t             *reader,
 <dl>
 <dt><code>func</code></dt>
 <dd> A <code>bson_reader_destroy_func_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Allows for setting a callback to be executed when a reader is destroyed. This should only be used by implementations implementing their own read callbacks. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

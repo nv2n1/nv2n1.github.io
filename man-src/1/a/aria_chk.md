@@ -1,4 +1,5 @@
 ---
+
 title: "aria_chk(1)"
 name: "aria_chk"
 section: "1"
@@ -9,9 +10,7 @@ description: "aria_chk – Aria table-maintenance utility"
 
 <h2>NAME</h2>
 <p> aria_chk &#8211; Aria table-maintenance utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>aria_chk</code> [<i>OPTIONS</i>] <i>tables</i>[<i>.MAI</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Describe, check and repair of Aria tables. Used without options all tables on the command will be checked for errors</p>
 <h3>Global options</h3>
 <dl>

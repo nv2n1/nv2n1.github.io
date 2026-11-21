@@ -1,4 +1,5 @@
 ---
+
 title: "browse(3)"
 name: "browse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-browse/"
 description: "QuantLib::CmsMarket – set of CMS quotes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/swaption/cmsmarket.hpp&gt; </p>
 <p> Inherits <code>QuantLib::LazyObject</code>. </p>
 <h3>Public Member Functions</h3>

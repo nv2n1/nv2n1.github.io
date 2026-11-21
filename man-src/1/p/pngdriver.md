@@ -1,4 +1,5 @@
 ---
+
 title: "pngdriver(1)"
 name: "pngdriver"
 section: "1"
@@ -10,7 +11,6 @@ description: "PNG driver – driver to create PNG and PPM images (drivers)"
 <h2>NAME</h2>
 <p> <i></i><code> PNG driver</code> &#8211; driver to create PNG and PPM images<br />
  <i>(drivers)</i></p>
-<h2>DESCRIPTION</h2>
 <p> The PNG driver generates PNG and PPM images from GRASS display commands. Per default PNG files are written with this driver. It is started as &#8216;pseudo&#8217; monitor (image file instead) and when stopped, all output from previously used display commands are written to the PNG image file.</p>
 <h2>USAGE</h2>
 <h3>Environment variables</h3>

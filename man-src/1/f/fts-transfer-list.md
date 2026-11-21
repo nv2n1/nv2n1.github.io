@@ -1,4 +1,5 @@
 ---
+
 title: "fts-transfer-list(1)"
 name: "fts-transfer-list"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-transfer-list/"
 
  fts-transfer-list
 
-<h2>SYNOPSIS</h2>
+fts-transfer-list [options] [STATE...]
 
- fts-transfer-list [options] [STATE...]
-
-<h2>DESCRIPTION</h2>
-
- fts-transfer-list is a tool for listing transfer-jobs in a given state (provided by user). By default the transfer-jobs in SUBMITTED, READY and ACTIVE states are listed.
+fts-transfer-list is a tool for listing transfer-jobs in a given state (provided by user). By default the transfer-jobs in SUBMITTED, READY and ACTIVE states are listed.
 
 <h2>OPTIONS</h2>
 

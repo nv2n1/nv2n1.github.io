@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_find_rows(1)"
 name: "mysql_find_rows"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysql_find_rows/"
 description: "mysql_find_rows – extract SQL statements from files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_find_rows [</code><i>options</i><code>] [</code><i>file_name</i><code> &#8230;]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mysql_find_rows</code></p>
 <dd>reads files containing SQL statements and extracts statements that match a given regular expression or that contain USE <i>db_name</i> or SET statements. The utility was written for use with update log files (as used prior to MySQL 5.0) and as such expects statements to be terminated with semicolon (;) characters. It may be useful with other files that contain SQL statements as long as statements are terminated with semicolons. </dd>
 <p> Invoke <code>mysql_find_rows</code> like this: </p>

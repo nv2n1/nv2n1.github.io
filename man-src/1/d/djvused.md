@@ -1,4 +1,5 @@
 ---
+
 title: "djvused(1)"
 name: "djvused"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-djvused/"
 description: "djvused – Multi-purpose DjVu document editor."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>djvused [</code><i>options</i><code>] </code><i>djvufile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Program <code>djvused </code> is a powerful command line tool for manipulating multi-page documents, creating or editing annotation chunks, creating or editing hidden text layers, pre-computing thumbnail images, and more. The program first reads the DjVu document <i>djvufile</i> and executes a number of djvused commands. </p>
 <p> Djvused commands can be read from a specific file (when option <code>-f</code> is specified), read from the command line (when option <code>-e</code> is specified), or read from the standard input (the default). </p>
 <h2>OPTIONS</h2>

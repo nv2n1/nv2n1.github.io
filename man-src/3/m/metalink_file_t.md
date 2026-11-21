@@ -1,4 +1,5 @@
 ---
+
 title: "metalink_file_t(3)"
 name: "metalink_file_t"
 section: "3"
@@ -9,9 +10,7 @@ description: "metalink_file_t – The structure that holds information of a sing
 
 <h2>NAME</h2>
 <p> metalink_file_t &#8211; The structure that holds information of a single file. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_types.h">metalink/metalink_types.h</a>&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>metalink_file_t</code> is a structure that holds information of a single file. It contains array of URLs(<code><a href="/docs/linux/man/3-metalink_resource_t/">metalink_resource_t</a></code>(3)), checksums and metadata for a file. </p>
 <h2>STRUCTURE MEMBERS</h2>
 <p> char *name;<br />

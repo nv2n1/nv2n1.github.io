@@ -1,4 +1,5 @@
 ---
+
 title: "perlunitut(1)"
 name: "perlunitut"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlunitut/"
 description: "perlunitut – Perl Unicode Tutorial"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> The days of just flinging strings around are over. It&#8217;s well established that modern programs need to be capable of communicating funny accented letters, and things like euro symbols. This means that programmers need new habits. It&#8217;s easy to program Unicode capable software, but it does require discipline to do it right. </p>
 <p> There&#8217;s a lot to know about character sets, and text encodings. It&#8217;s probably best to spend a full day learning all this, but the basics can be learned in minutes. </p>
 <p> These are not the very basics, though. It is assumed that you already know the difference between bytes and characters, and realise (and accept!) that there are many different character sets and encodings, and that your program has to be explicit about them. Recommended reading is ``The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)&#8216;&#8216; by Joel Spolsky, at &lt;<a rel="nofollow" href="http://joelonsoftware.com/articles/Unicode.html">http://joelonsoftware.com/articles/Unicode.html</a>&gt;. </p>

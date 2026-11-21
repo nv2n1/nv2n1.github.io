@@ -1,4 +1,5 @@
 ---
+
 title: "vsscanf(3)"
 name: "vsscanf"
 section: "3"
@@ -6,8 +7,8 @@ letter: "v"
 url: "/docs/linux/man/3-vsscanf/"
 description: "scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf – input format conversion"
 ---
+
 <p>scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf &#8211; input format conversion </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;stdio.h&gt; 
  int scanf(const char *  format  , ...); 
@@ -23,7 +24,6 @@ description: "scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf – input format c
 <dl>
 <dd> <p> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>scanf</code>() family of functions scans input according to <i>format</i> as described below. This format may contain <i>conversion specifications</i>; the results from such conversions, if any, are stored in the locations pointed to by the <i>pointer</i> arguments that follow <i>format</i>. Each <i>pointer</i> argument must be of a type that is appropriate for the value returned by the corresponding conversion specification. </p>
 <p>If the number of conversion specifications in <i>format</i> exceeds the number of <i>pointer</i> arguments, the results are undefined. If the number of <i>pointer</i> arguments exceeds the number of conversion specifications, then the excess <i>pointer</i> arguments are evaluated, but are otherwise ignored. </p>
 <p>The <code>scanf</code>() function reads input from the standard input stream <i>stdin</i>, <code>fscanf</code>() reads input from the stream pointer <i>stream</i>, and <code>sscanf</code>() reads its input from the character string pointed to by <i>str</i>. </p>

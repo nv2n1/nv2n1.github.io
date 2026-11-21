@@ -1,4 +1,5 @@
 ---
+
 title: "setmetamode(1)"
 name: "setmetamode"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-setmetamode/"
 description: "setmetamode – define the keyboard meta key handling"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>setmetamode</code> [ <i>options</i> ] [ <i>argument</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> Without argument, <code>setmetamode</code> prints the current Meta key mode. With argument, it sets the Meta key mode as indicated. The setting before and after the change are reported. </p>
 <p> The Meta key mode is specific for each VT (and the VT corresponding to stdin is used). One might use <code>setmetamode</code> in /etc/rc to define the initial state of the Meta key mode, e.g. by </p>
 <p> INITTY=/dev/tty[1-8]<br />

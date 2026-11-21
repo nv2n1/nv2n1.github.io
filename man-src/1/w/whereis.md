@@ -1,4 +1,5 @@
 ---
+
 title: "whereis(1)"
 name: "whereis"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-whereis/"
 description: "whereis – locate the binary, source, and manual page files for a command"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>whereis</code> [options] [<code>-BMS</code> <i>directory</i>&#8230; <code>-f</code>] <i>name</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>whereis</code> locates the binary, source and manual files for the specified command names. The supplied names are first stripped of leading pathname components. Prefixes of <code>s.</code> resulting from use of source code control are also dealt with. <code>whereis</code> then attempts to locate the desired program in the standard Linux places, and in the places specified by <code>$PATH</code> and <code>$MANPATH</code>. </p>
 <p> The search restrictions (options <code>-b</code>, <code>-m</code> and <code>-s</code>) are cumulative and apply to the subsequent <i>name</i> patterns on the command line. Any new search restriction resets the search mask. For example,</p>
 <dl>

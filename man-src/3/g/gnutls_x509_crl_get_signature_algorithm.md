@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_get_signature_algorithm(3)"
 name: "gnutls_x509_crl_get_signature_algorithm"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_crl_get_signature_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_signature_algorithm &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_signature_algorithm(gnutls_x509_crl_t </code><i>crl</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_crl_t crl</dt>
 <dd> should contain a <code>gnutls_x509_crl_t</code> structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return a value of the <code>gnutls_sign_algorithm_t</code> enumeration that is the signature algorithm.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

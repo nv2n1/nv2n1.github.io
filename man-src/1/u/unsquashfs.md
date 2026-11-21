@@ -1,4 +1,5 @@
 ---
+
 title: "unsquashfs(1)"
 name: "unsquashfs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-unsquashfs/"
 description: "unsquashfs – tool to uncompress squashfs filesystems"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>unsquashfs</code> [<i>OPTIONS</i>] <i>FILESYSTEM</i> [<i>directories or files to extract</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Squashfs is a highly compressed read-only filesystem for Linux. It uses zlib compression to compress both files, inodes and directories. Inodes in the system are very small and all blocks are packed to minimize data overhead. Block sizes greater than 4K are supported up to a maximum of 64K. </p>
 <p> Squashfs is intended for general read-only filesystem use, for archival use (i.e. in cases where a .tar.gz file may be used), and in constrained block device/memory systems (e.g. embedded systems) where low overhead is needed. </p>
 <h2>OPTIONS</h2>

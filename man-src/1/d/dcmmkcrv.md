@@ -1,4 +1,5 @@
 ---
+
 title: "dcmmkcrv(1)"
 name: "dcmmkcrv"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmmkcrv/"
 description: "dcmmkcrv – Add 2D curve data to image"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmmkcrv [options] dcmfile-in curvedata-in dcmfile-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmmkcrv</code> utility allows to create DICOM images containing curve data. Since curve data is hardly used by vendors today, this is intended as a means to test implementations that can read curve data. The utility reads an existing DICOM image and a text file containing the curve data in textual form. A DICOM curve data repeating group is created according to the options specified on the command line, added to the existing image and written back to file. The output file is encoded with the same transfer syntax used for the input file. This utility only supports the creation of two-dimensional curves.</p>
 <h2>PARAMETERS</h2>
 <pre>

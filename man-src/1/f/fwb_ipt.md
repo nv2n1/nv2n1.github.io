@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_ipt(1)"
 name: "fwb_ipt"
 section: "1"
@@ -9,9 +10,7 @@ description: "fwb_ipt – Policy compiler for iptables"
 
 <h2>NAME</h2>
 <p> fwb_ipt &#8211; Policy compiler for iptables</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fwb_ipt</code> [-wvV] [-d<code>wdir]</code> [-o<code>output.fw]</code> [-4] [-6] [-i] -f<code>data_file.xml</code> object_name </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fwb_ipt</code> is a firewall policy compiler component of Firewall Builder (see <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1)). Compiler reads objects definitions and firewall description from the data file specified with &quot;-f&quot; option and generates resultant iptables script. The script is written to the file with the name the same as the name of the firewall object, plus extension &quot;.fw&quot;. </p>
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>
 <h2>OPTIONS</h2>

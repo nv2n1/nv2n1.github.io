@@ -1,4 +1,5 @@
 ---
+
 title: "systasks(1)"
 name: "systasks"
 section: "1"
@@ -24,17 +25,12 @@ url: "/docs/linux/man/1-systasks/"
  
  ------------------------------------------------------------------------------ 
 
-<h2 class="name">NAME</h2>
- 
-
- $bitstoreal - convert 64 bit register to real 
+$bitstoreal - convert 64 bit register to real 
  $realtobits - convert real to 64 bit register 
  $itor - convert integer to real 
  $rtoi - convert real to integer by rounding 
 
-<h2>SYNOPSIS</h2>
-
- function real $bitstoreal; 
+function real $bitstoreal; 
  
  &nbsp;<wbr> input [63:0] bit_val; 
  function [63:0] $realtobits; 
@@ -47,9 +43,7 @@ url: "/docs/linux/man/1-systasks/"
  
  &nbsp;<wbr> input real real_val;
 
-<h2>DESCRIPTION</h2>
-
- System functions to convert to and from reals. Use $realtobits and $bitstoreal to pass reals across module ports. Use $itor and $rtoi to convert between integer and real by rounding. In Verilog, assignments also implicitly convert to or from a real depending on the left hand side Lvalue type. Cver conversion to real from wider than 32 bit values attempts to preserve as many bits as possible (usually 51 or 52 depending on hardware platform).
+System functions to convert to and from reals. Use $realtobits and $bitstoreal to pass reals across module ports. Use $itor and $rtoi to convert between integer and real by rounding. In Verilog, assignments also implicitly convert to or from a real depending on the left hand side Lvalue type. Cver conversion to real from wider than 32 bit values attempts to preserve as many bits as possible (usually 51 or 52 depending on hardware platform).
 
 <h2>REFERENCE</h2>
 

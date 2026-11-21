@@ -1,4 +1,5 @@
 ---
+
 title: "btree(3)"
 name: "btree"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-btree/"
 description: "btree – btree database access method"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;db.h&gt;
 #include &lt;sys/types.h&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>Note well</i>: This page documents interfaces provided in glibc up until version 2.1. Since version 2.2, glibc no longer provides these interfaces. Probably, you are looking for the APIs provided by the <i>libdb</i> library instead. </p>
 <p> The routine <code><a href="/docs/linux/man/3-dbopen/">dbopen</a></code>(3) is the library interface to database files. One of the supported file formats is btree files. The general description of the database access methods is in <code><a href="/docs/linux/man/3-dbopen/">dbopen</a></code>(3), this manual page describes only the btree-specific information. </p>
 <p> The btree data structure is a sorted, balanced tree structure storing associated key/data pairs. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmvers(1)"
 name: "pmvers"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-pmvers/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+pmvers - print out a module's version 
 
- pmvers - print out a module's version 
-
-<h2>DESCRIPTION</h2>
-
- Given one or more module names, show the version number if present. If more than one argument is given, the name of the module will also be printed. Not all modules define version numbers, however.
+Given one or more module names, show the version number if present. If more than one argument is given, the name of the module will also be printed. Not all modules define version numbers, however.
 
 <h2>EXAMPLES</h2>
 

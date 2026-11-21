@@ -1,4 +1,5 @@
 ---
+
 title: "getservbyport_r(3)"
 name: "getservbyport_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getservbyport_r/"
 description: "getservent_r, getservbyname_r, getservbyport_r – get service entry (reentrant)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 int getservent_r(struct servent *result_buf, char *buf,
@@ -25,7 +25,6 @@ int getservbyport_r(int port, const char *proto,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>getservent_r</code>(), <code>getservbyname_r</code>(), and <code>getservbyport_r</code>() functions are the reentrant equivalents of, respectively, <code><a href="/docs/linux/man/3-getservent/">getservent</a></code>(3), <code><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></code>(3), and <code><a href="/docs/linux/man/3-getservbyport/">getservbyport</a></code>(3). They differ in the way that the <i>servent</i> structure is returned, and in the function calling signature and return value. This manual page describes just the differences from the nonreentrant functions. </p>
 <p> Instead of returning a pointer to a statically allocated <i>servent</i> structure as the function result, these functions copy the structure into the location pointed to by <i>result_buf</i>. </p>
 <p> The <i>buf</i> array is used to store the string fields pointed to by the returned <i>servent</i> structure. (The nonreentrant functions allocate these strings in static storage.) The size of this array is specified in <i>buflen</i>. If <i>buf</i> is too small, the call fails with the error <code>ERANGE</code>, and the caller must try again with a larger buffer. (A buffer of length 1024 bytes should be sufficient for most applications.) </p>

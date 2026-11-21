@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbunstage(1)"
 name: "sfcbunstage"
 section: "1"
@@ -9,9 +10,7 @@ description: "sfcbstage – Script to remove provider MOF and registration files
 
 <h2>NAME</h2>
 <p> sfcbstage &#8211; Script to remove provider MOF and registration files from the Small-Footprint CIM Broker (sfcb) staging area</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sfcbstage</code> [<i>options</i>] [<i>mof&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> sfcbunstage removes provider mof and registration files from the sfcb staging area. Used to remove classes from sfcb offline. The class repository must be rebuilt with sfcbrepos and the sfcb CIMOM restarted before changes take effect.</p>
 <h2>OPTIONS</h2>
 <dl>

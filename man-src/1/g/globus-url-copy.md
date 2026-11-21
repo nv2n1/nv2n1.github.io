@@ -1,4 +1,5 @@
 ---
+
 title: "globus-url-copy(1)"
 name: "globus-url-copy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-globus-url-copy/"
 description: "globus-url-copy – globus-url-copy"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>globus-url-copy</code> [options] SOURCE-URL DESTINATION-URL</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>globus-url-copy</code> program is a command line tool for multi-protocol data movement. It supports gsiftp:// (GridFTP), <a href="ftp://,">ftp://,</a> <a rel="nofollow" href="http://,">http://,</a> <a href="https://,">https://,</a> sshftp:// and file:/// protocol specifiers in the URL.</p>
 <h2>OPTIONS</h2>
 <p> <code>-help, -usage</code></p>

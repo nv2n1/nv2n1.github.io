@@ -1,4 +1,5 @@
 ---
+
 title: "yum-debug-restore(1)"
 name: "yum-debug-restore"
 section: "1"
@@ -9,9 +10,7 @@ description: "yum-debug-restore – replay Yum transactions captured in a debug-
 
 <h2>NAME</h2>
 <p> yum-debug-restore &#8211; replay Yum transactions captured in a debug-dump file</p>
-<h2>SYNOPSIS</h2>
 <p> <code>yum-debug-restore</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>yum-debug-restore</code> is a program which takes a gzipped file created by <code>yum-debug-dump</code> and acts on the information about installed packages contained within. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

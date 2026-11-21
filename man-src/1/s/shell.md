@@ -1,4 +1,5 @@
 ---
+
 title: "shell(1)"
 name: "shell"
 section: "1"
@@ -9,7 +10,6 @@ description: "shell – Print the message of the day and launch a shell"
 
 <h2>NAME</h2>
 <p> shell &#8211; Print the message of the day and launch a shell </p>
-<h2>DESCRIPTION</h2>
 <p> <code>shell</code> is a simple script that prints the message of the day (/etc/motd) and launches a shell. </p>
 <p> $SHELL will be invoked if it exists. Otherwise, /bin/sh will be used. </p>
 <dl>

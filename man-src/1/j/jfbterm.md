@@ -1,4 +1,5 @@
 ---
+
 title: "jfbterm(1)"
 name: "jfbterm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jfbterm/"
 description: "jfbterm – program to print several character sets on framebuffer device."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jfbterm</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>jfbterm</code> command. </p>
 <p> <code>jfbterm</code> is a program that prints various encodings such as UTF-8, ISO-8859-*, EUC-*, and so on, on Linux framebuffer device, like KON that prints on VGA device. It supports ISO-2022-compliant character sets, encodings which consist from such character sets, UTF-8, and encodings which <code>iconv</code>(3) can convert from/to UTF-8. In GNU libc systems, all encodings which are available for <code>iconv</code>(3) meet this condition and are available. </p>
 <p> This supports fullwidth characters (which occupies two columns, like CJK Ideogram, Hiragana, Katakana, and Hangul). However, this doesn&#8217;t support combining characters nor BIDI.</p>

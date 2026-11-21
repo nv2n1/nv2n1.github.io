@@ -1,4 +1,5 @@
 ---
+
 title: "coverpg(1)"
 name: "coverpg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-coverpg/"
 description: "make.coverpg – create a fax coverpg on stdout"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> make.coverpg [options] &lt;pages&gt; &lt;sender-ID&gt; &lt;sender-NAME&gt; &lt;receiver-ID&gt; &lt;receiver-NAME&gt; &lt;date&gt; &lt;time&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <i>make.coverpg </i> is called from <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) to generate a cover page for the just-processed fax. It has to create a proper G3 file (e.g. via <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1) or hp2hig3(1) or <a href="/docs/linux/man/1-ghostscript/">ghostscript</a>(1)) and output that on stdout. If the program doesn&#8217;t exist, or can&#8217;t be executed, the fax simply won&#8217;t get a coverpage (so, if you don&#8217;t want a fax coverpage, do not install it&#8230;) </p>
 <p> <i>make.coverpg</i> can put anything it wants on the page, but note that there are certain legal requirements in certain countries about the contents that *have* to be on the cover page, for example, the fax phone number of the sender and the recepient, the number of pages, or similar things. </p>
 <p> <i>make.coverpg</i> gets the informations about the fax to be sent from the command line, in the order listed above. </p>

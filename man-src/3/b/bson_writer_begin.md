@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_begin(3)"
 name: "bson_writer_begin"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_writer_begin() – Begins writing a new document. The caller 
 
 <h2>NAME</h2>
 <p> bson_writer_begin() &#8211; Begins writing a new document. The caller may use the bson structure to write out a new BSON document. When completed, the caller must call either bson_writer_end() or bson_writer_rollback().</p>
-<h2>SYNOPSIS</h2>
 <pre>
 bool
 bson_writer_begin (bson_writer_t *writer,
@@ -22,7 +22,6 @@ bson_writer_begin (bson_writer_t *writer,
 <dl>
 <dt><code>bson</code></dt>
 <dd> A <code>bson_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Begins writing a new document. The caller may use the bson structure to write out a new BSON document. When completed, the caller must call either <code><a href="/docs/linux/man/3-bson_writer_end/">bson_writer_end</a>(3)</code> or <code><a href="/docs/linux/man/3-bson_writer_rollback/">bson_writer_rollback</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> true if there was space in the underlying buffers to begin the document. </p>

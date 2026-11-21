@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-instance-attribute(1)"
 name: "euca-describe-instance-attribute"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-instance-attribute – Show one of an instance’s a
 
 <h2>NAME</h2>
 <p> euca-describe-instance-attribute &#8211; Show one of an instance&#8217;s attributes.</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-instance-attribute</p>
 <dl>
 <dt>(<code>-b</code> | <code>&#8211;disable-api-termination</code> | <code>&#8211;ebs-optimized</code> | <code>-g</code> | <code>-p</code> | <code>&#8211;instance-initiated-shutdown-behavior</code> | <code>-t</code> | <code>&#8211;kernel</code> | <code>&#8211;ramdisk</code> | <code>&#8211;root-device-name</code> | <code>&#8211;source-dest-check</code> | <code>&#8211;user-data</code>)</dt>
 <dd> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show one of an instance&#8217;s attributes.</p>
 <h2>DESCRIPTION</h2>
 <p> Note that exactly one attribute may be shown at a time.</p>

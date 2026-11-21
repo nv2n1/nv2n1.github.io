@@ -1,4 +1,5 @@
 ---
+
 title: "xmltoman(1)"
 name: "xmltoman"
 section: "1"
@@ -9,9 +10,7 @@ description: "xmltoman – xml to man converter"
 
 <h2>NAME</h2>
 <p> xmltoman &#8211; xml to man converter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>xmltoman </code><i>file.1.xml</i><code> &gt; file.1 </code></p>
-<h2>DESCRIPTION</h2>
 <p> xmltoman is a small script to convert xml to a man page in groff format. It features the usual man page items such a description, options, see also etc. The xml format also supports converting to html pages. </p>
 <p> You will find the dtd in <i>/usr/share/xmltoman/</i> on a debian system. There is also an xsl file to generate html using <code><a href="/docs/linux/man/1-xsltproc/">xsltproc</a>(1)</code>. See also <i>/usr/share/doc/xmltoman/examples</i> for examples.</p>
 <h2>FILES</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "sorml2(3)"
 name: "sorml2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sorml2/"
 description: "sorml2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sorml2</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>SORML2</code> multiplies a general matrix by the orthogonal matrix from a LQ factorization determined by sgelqf (unblocked algorithm).</p>

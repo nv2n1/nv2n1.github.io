@@ -1,4 +1,5 @@
 ---
+
 title: "luac(1)"
 name: "luac"
 section: "1"
@@ -9,9 +10,7 @@ description: "luac – Lua compiler"
 
 <h2>NAME</h2>
 <p> luac &#8211; Lua compiler</p>
-<h2>SYNOPSIS</h2>
 <p> <code>luac</code> [ <i>options</i> ] [ <i>filenames</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>luac</code> is the Lua compiler. It translates programs written in the Lua programming language into binary files that can be later loaded and executed. </p>
 <p> The main advantages of precompiling chunks are: faster loading, protecting source code from accidental user changes, and off-line syntax checking. </p>
 <p> Pre-compiling does not imply faster execution because in Lua chunks are always compiled into bytecodes before being executed. <code>luac</code> simply allows those bytecodes to be saved in a file for later execution. </p>

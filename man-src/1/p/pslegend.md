@@ -1,4 +1,5 @@
 ---
+
 title: "pslegend(1)"
 name: "pslegend"
 section: "1"
@@ -9,10 +10,8 @@ description: "pslegend – Plot legends on maps"
 
 <h2>NAME</h2>
 <p> pslegend &#8211; Plot legends on maps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pslegend</code> [ <i>specfile</i> ] <i>refpoint</i> ] [ <i>dx</i>/<i>dy</i> ] [ <i>box</i> ] [ <i>parameters</i> ] [ ] [ ] [ ] [ <i>region</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pslegend</code> will make legends that can be overlaid on maps. It reads specific legend-related information from an input file [or stdin]. Unless otherwise noted, annotations will be made using the primary annotation font and size in effect (i.e., FONT_ANNOT_PRIMARY)</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

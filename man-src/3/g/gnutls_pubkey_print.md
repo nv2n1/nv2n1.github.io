@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_print(3)"
 name: "gnutls_pubkey_print"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pubkey_print – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_print &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_print(gnutls_pubkey_t </code><i>pubkey</i><code>, gnutls_certificate_print_formats_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pubkey_print – API function"
 <dd> Indicate the format to use</dd>
 <dt>gnutls_datum_t * out</dt>
 <dd> Newly allocated datum with null terminated string.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will pretty print public key information, suitable for display to a human. </p>
 <p> Only <code>GNUTLS_CRT_PRINT_FULL</code> and <code>GNUTLS_CRT_PRINT_FULL_NUMBERS</code> are implemented. </p>
 <p> The output <i>out</i> needs to be deallocated using <code>gnutls_free()</code>.</p>

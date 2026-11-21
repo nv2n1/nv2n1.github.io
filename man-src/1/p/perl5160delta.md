@@ -1,4 +1,5 @@
 ---
+
 title: "perl5160delta(1)"
 name: "perl5160delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5160delta/"
 description: "perl5160delta – what is new for perl v5.16.0"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.14.0 release and the 5.16.0 release. </p>
 <p> If you are upgrading from an earlier release such as 5.12.0, first read perl5140delta, which describes differences between 5.12.0 and 5.14.0. </p>
 <p> Some bug fixes in this release have been backported to later releases of 5.14.x. Those are indicated with the 5.14.x version in parentheses.</p>

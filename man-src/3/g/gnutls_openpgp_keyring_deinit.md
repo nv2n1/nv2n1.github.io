@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_keyring_deinit(3)"
 name: "gnutls_openpgp_keyring_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_openpgp_keyring_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_keyring_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>void gnutls_openpgp_keyring_deinit(gnutls_openpgp_keyring_t </code><i>keyring</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_openpgp_keyring_t keyring</dt>
 <dd> A pointer to the type to be initialized</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a keyring structure.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

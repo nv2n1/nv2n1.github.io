@@ -1,4 +1,5 @@
 ---
+
 title: "em8300setup(1)"
 name: "em8300setup"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-em8300setup/"
 description: "em8300setup – program to configure and upload microcode images to em8300-based MPEG decoder cards"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>em8300setup</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>em8300setup</code> is a program that configures and uploads microcode images to em8300-based MPEG decoder cards, such as the Creative Labs DXR3 or the Sigma Designs Hollywood+. With no option, this program tries to upload a microcode image from the (system-dependent) default location, which is not relevant if you extracted your own microcodes. </p>
 <h2>OPTIONS</h2>
 <dl>

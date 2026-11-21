@@ -1,4 +1,5 @@
 ---
+
 title: "glob(3)"
 name: "glob"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-glob/"
 description: "glob, globfree – find pathnames matching a pattern, free memory from glob()"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;glob.h&gt;
 int glob(const char *pattern, int flags,
@@ -15,7 +15,6 @@ int glob(const char *pattern, int flags,
          glob_t *pglob);
 void globfree(glob_t *pglob);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>glob</code>() function searches for all the pathnames matching <i>pattern</i> according to the rules used by the shell (see <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7)). No tilde expansion or parameter substitution is done; if you want these, use <code><a href="/docs/linux/man/3-wordexp/">wordexp</a></code>(3). </p>
 <p> The <code>globfree</code>() function frees the dynamically allocated storage from an earlier call to <code>glob</code>(). </p>
 <p> The results of a <code>glob</code>() call are stored in the structure pointed to by <i>pglob</i>. This structure is of type <i>glob_t</i> (declared in <i>&lt;glob.h&gt;</i>) and includes the following elements defined by POSIX.2 (more may be present as an extension): </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdamailq(1)"
 name: "pmdamailq"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmdamailq – mail queue performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdamailq</code> &#8211; mail queue performance metrics domain agent (PMDA)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/mailq/pmdamailq</code> [<code>-b</code> <i>binlist</i>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-r</code> <i>regex</i>] [<code>-U</code> <i>username</i>] [<i>queuedir</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdamailq</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics describing the state of the e-mail queues managed by <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) and other mail transfer agents. </p>
 <p> The <code>mailq</code> PMDA exports metrics that measure the total number of entries in the mail queue, and the subtotals for entries that have been queued for various time periods. </p>
 <p> A brief description of the <code>pmdamailq</code> command line options follows:</p>

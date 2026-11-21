@@ -1,4 +1,5 @@
 ---
+
 title: "hivexsh(1)"
 name: "hivexsh"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hivexsh/"
 description: "hivexsh – Windows Registry hive shell"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hivexsh[-options][hivefile]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This program provides a simple shell for navigating Windows Registry &#8216;hive&#8217; files. It uses the hivex library for access to these binary files. </p>
 <p> Firstly you will need to provide a hive file from a Windows operating system. The hive files are usually located in <tt>&quot;C:\Windows\System32\Config&quot;</tt> and have names like <tt>&quot;software&quot;</tt>, <tt>&quot;system&quot;</tt> etc (without any file extension). For more information about hive files, read <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3). For information about downloading files from virtual machines, read <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1) and <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). </p>
 <p> You can provide the name of the hive file to examine on the command line. For example: </p>

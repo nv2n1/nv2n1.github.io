@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-bucket(3)"
 name: "antlr3-bucket"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_HASH_ENUM_struct –"
 ---
 
 <p> Internal structure representing an enumeration of a table.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_UINT32</code> <code>bucket</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hdf_copy(3)"
 name: "hdf_copy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdf_copy/"
 description: "hdf_copy – copy part of an HDF dataset to another"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,7 +18,6 @@ NEOERR *hdf_copy(HDF *dest_hdf, const char *name, HDF *src);
 <p> dest_hdf -&gt; the destination dataset<br />
  name -&gt; the name of the destination node<br />
  src -&gt; the hdf dataset to copy to the destination </p>
-<h2>DESCRIPTION</h2>
 <p> hdf_copy is a deep copy of an HDF tree pointed to by src to the named node of dest. dest and src need not be part of the same data set </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

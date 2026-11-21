@@ -1,4 +1,5 @@
 ---
+
 title: "ppmglobe(1)"
 name: "ppmglobe"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ppmglobe/"
 description: "ppmglobe – generate strips to glue onto a sphere"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmglobe</code> [<code>-background=</code><i>colorname</i>] [<code>-closeok</code>] <i>stripcount</i> [<i>filename</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmglobe</code> does the inverse of a cylindrical projection of a sphere. Starting with a cylindrical projection, it produces an image you can cut up and glue onto a sphere to obtain the spherical image of which it is the cylindrical projection. </p>
 <p> What is a cylindrical projection? Imagine a map of the Earth on flat paper. There are lots of different ways cartographers show the three dimensional information in such a two dimensional map. The cylindrical projection is one. You could make a cylindrical projection by tracing as folows: wrap a rectangular sheet of paper around the globe, touching the globe at the Equator. For each point of color on the globe, run a horizontal line from the axis of the globe through that point and out to the paper. Mark the same color on the paper there. Lay the paper out flat and you have a cylindrical projection. </p>

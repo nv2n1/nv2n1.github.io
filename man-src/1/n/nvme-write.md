@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-write(1)"
 name: "nvme-write"
 section: "1"
@@ -6,16 +7,9 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-write/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-write - Send an NVMe write command, provide results 
 
- nvme-write - Send an NVMe write command, provide results 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme - write&lt;device&gt;[--start - block = &lt;slba&gt; | -s&lt;slba&gt;]
                     [--block - count = &lt;nlb&gt; | -c&lt;nlb&gt;]
                     [--data - size = &lt;size&gt; | -z&lt;size&gt;]
@@ -31,11 +25,7 @@ nvme - write&lt;device&gt;[--start - block = &lt;slba&gt; | -s&lt;slba&gt;]
                     [--force - unit - access | -f]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The Write command writes the logical blocks specified by the command to the medium from the data data buffer provided. Will use stdin by default if you don't provide a file.
+The Write command writes the logical blocks specified by the command to the medium from the data data buffer provided. Will use stdin by default if you don't provide a file.
 
 <h2>OPTIONS</h2>
 

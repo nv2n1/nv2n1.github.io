@@ -1,4 +1,5 @@
 ---
+
 title: "docker-secret-ls(1)"
 name: "docker-secret-ls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-secret-ls/"
 description: "docker-secret-ls – List secrets"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker secret ls [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> List secrets </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dgesvd(3)"
 name: "dgesvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgesvd/"
 description: "dgesvd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgesvd</code> (JOBU, JOBVT, M, N, A, LDA, S, U, LDU, VT, LDVT, WORK, LWORK, INFO)<br />
  <i></i><code> DGESVD computes the singular value decomposition (SVD) for GE matrices</code></p>

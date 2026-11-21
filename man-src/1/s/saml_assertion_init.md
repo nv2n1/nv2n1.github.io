@@ -1,4 +1,5 @@
 ---
+
 title: "saml_assertion_init(1)"
 name: "saml_assertion_init"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-saml_assertion_init/"
 description: "saml_assertion_init – ARC client to voms saml service, or arc aa service"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <code>saml_assertion_init</code> command is a prototype client which is used for sending an attribute query request to a voms saml service or arc aa service. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>saml_assertion_init [options] [filename &#8230;]</code> </p>
 <p> saml_assertion_init -c saml_assertion_init_client.xml -d DEBUG <a rel="nofollow" href="https://squark.uio.no:8443/voms/saml/knowarc/services/AttributeAuthorityPortType">https://squark.uio.no:8443/voms/saml/knowarc/services/AttributeAuthorityPortType</a> </p>
 <h2>OPTIONS</h2>

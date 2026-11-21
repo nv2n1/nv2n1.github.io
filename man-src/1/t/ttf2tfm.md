@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2tfm(1)"
 name: "ttf2tfm"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ttf2tfm/"
 description: "ttf2tfm – build TeX metric files from a TrueType font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ttf2tfm</code> <i>ttffile</i>[<code>.ttf</code>|<code>.ttc</code>] [<code>-c</code><i>&nbsp;caps-height-factor</i>] [<code>-e</code><i>&nbsp;extension-factor</i>] [<code>-E</code><i>&nbsp;encoding-id</i>] [<code>-f</code><i>&nbsp;font-index</i>] [<code>-l</code>] [<code>-L&nbsp;</code><i>ligature-file</i>[<i>.sfd</i>]] [<code>-n</code>] [<code>-N</code>] [<code>-O</code>] [<code>-p&nbsp;</code><i>inencfile</i>[<i>.enc</i>]] [<code>-P</code><i>&nbsp;platform-id</i>] [<code>-q</code>] [<code>-r</code><i>&nbsp;old-glyphname new-glyphname</i>] [<code>-R&nbsp;</code><i>replacement-file</i>[<i>.rpl</i>]] [<code>-s</code><i>&nbsp;slant-factor</i>] [<code>-t&nbsp;</code><i>outencfile</i>[<i>.enc</i>]] [<code>-T&nbsp;</code><i>inoutencfile</i>[<i>.enc</i>]] [<code>-u</code>] [<code>-v&nbsp;</code><i>vplfile</i>[<i>.vpl</i>]] [<code>-V&nbsp;</code><i>scvplfile</i>[<i>.vpl</i>]] [<code>-w</code>] [<code>-x</code>] [<code>-y</code><i>&nbsp;vertical-shift-factor</i>] [<i>tfmfile</i>[<i>.tfm</i>]]<br />
  <code>ttf2tfm &#8211;version</code> | <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program extracts the metric and kerning information of a TrueType font and converts it into metric files usable by TeX (quite similar to <code>afm2tfm</code> which is part of the <code>dvips</code> package; please consult its info files for more details on the various parameters (especially encoding files). </p>
 <p> Since a TrueType font often contains more than 256 glyphs, some means are necessary to map a subset of the TrueType glyphs onto a TeX font. To do this, two mapping tables are needed: the first (called `input&#8217; or `raw&#8217; encoding) maps the TrueType font to a raw TeX font (this mapping table is used by both <code>ttf2tfm</code> and <code>ttf2pk</code>), and the second (called `output&#8217; or `virtual&#8217; encoding) maps the raw TeX font to another (virtual) TeX font, providing all kerning and ligature information needed by TeX. </p>
 <p> This two stage mapping has the advantage that one raw font can be accessed with various LaTeX encodings (e.g. T1 and OT1) via the virtual font mechanism, and just one file is necessary. </p>

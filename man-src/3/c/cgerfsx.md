@@ -1,4 +1,5 @@
 ---
+
 title: "cgerfsx(3)"
 name: "cgerfsx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgerfsx/"
 description: "cgerfsx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgerfsx</code> (TRANS, EQUED, N, NRHS, A, LDA, AF, LDAF, IPIV, R, C, B, LDB, X, LDX, RCOND, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, RWORK, INFO)<br />
  <i></i><code>CGERFSX</code></p>

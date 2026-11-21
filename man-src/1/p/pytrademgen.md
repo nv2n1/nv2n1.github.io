@@ -1,4 +1,5 @@
 ---
+
 title: "pytrademgen(1)"
 name: "pytrademgen"
 section: "1"
@@ -10,9 +11,7 @@ description: "pytrademgen –"
 <pre>
   Python wrapper around the C++ Simulated Travel Demand Generation Library
 </pre>
-<h2>SYNOPSIS</h2>
 <p> <code>pytrademgen</code> [&#8211;prefix] [-v|&#8211;version] [-h|&#8211;help] [-b|&#8211;builtin] [-i|&#8211;input &lt;path-to-input&gt;] [-l|&#8211;log &lt;path-to-output-log-file&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>pytrademgen</i> is a small Python wrapper around the TraDemGen library. </p>
 <p> <i>pytrademgen</i> accepts the following options: </p>
 <p> <code>-h</code>, <code>&#8211;help</code> </p>

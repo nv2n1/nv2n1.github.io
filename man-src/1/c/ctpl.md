@@ -1,4 +1,5 @@
 ---
+
 title: "ctpl(1)"
 name: "ctpl"
 section: "1"
@@ -9,9 +10,7 @@ description: "ctpl – CTPL command-line template parsing tool"
 
 <h2>NAME</h2>
 <p> <code>ctpl</code> &#8211; CTPL command-line template parsing tool </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ctpl</code> [<i>OPTION</i>]&#8230; <i>INPUTFILE</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ctpl</code> parses one or more <i>INPUTFILE</i> template against the provided environment and outputs the result. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "acl_equiv_mode(3)"
 name: "acl_equiv_mode"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_equiv_mode/"
 description: "acl_equiv_mode – check for an equivalent ACL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_equiv_mode</code> &#8211; check for an equivalent ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft int Fn acl_equiv_mode acl_t acl mode_t *mode_p</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_equiv_mode function checks if the ACL pointed to by the argument <i>acl</i> contains only the required ACL entries of tag types ACL_USER_OBJ, ACL_GROUP_OBJ, and ACL_OTHER, and contains no permissions other that ACL_READ, ACL_WRITE or ACL_EXECUTE. If the ACL has this form, it can can be fully represented with the traditional file permission bits, and is considered equivalent with the traditional file permission bits. </p>
 <p> If <i>acl</i> is an equivalent ACL and the pointer <i>mode_p</i> is not <code>NULL , </code> the value pointed to by <i>mode_p</i> is set to the value that defines the same owner, group and other permissions as contained in the ACL.</p>
 <h2>RETURN VALUE</h2>

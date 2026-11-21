@@ -1,4 +1,5 @@
 ---
+
 title: "lchown32(2)"
 name: "lchown32"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-lchown32/"
 description: "chown, fchown, lchown, fchownat – change ownership of a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int chown(const char *pathname, uid_t owner, gid_t group);
@@ -33,7 +33,6 @@ int fchownat(int dirfd, const char *pathname,
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> These system calls change the owner and group of a file. The <code>chown</code>(), <code>fchown</code>(), and <code>lchown</code>() system calls differ only in how the file is specified:</p>
 <dl>
 <dt>*</dt>

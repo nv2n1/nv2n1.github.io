@@ -1,4 +1,5 @@
 ---
+
 title: "wcsnrtombs(3)"
 name: "wcsnrtombs"
 section: "3"
@@ -6,8 +7,8 @@ letter: "w"
 url: "/docs/linux/man/3-wcsnrtombs/"
 description: "wcsnrtombs – convert a wide-character string to a multibyte string"
 ---
+
 <p>wcsnrtombs &#8211; convert a wide-character string to a multibyte string </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;wchar.h&gt; 
  size_t wcsnrtombs(char *  dest  , const wchar_t **  src  , size_t  nwc  , 
@@ -25,7 +26,6 @@ description: "wcsnrtombs – convert a wide-character string to a multibyte stri
 <dd> <p> _GNU_SOURCE </p>
  </dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>wcsnrtombs</code>() function is like the <code><a href="/docs/linux/man/3-wcsrtombs/">wcsrtombs</a></code>(3) function, except that the number of wide characters to be converted, starting at <i>*src</i>, is limited to <i>nwc</i>. </p>
 <p>If <i>dest</i> is not NULL, the <code>wcsnrtombs</code>() function converts at most <i>nwc</i> wide characters from the wide-character string <i>*src</i> to a multibyte string starting at <i>dest</i>. At most <i>len</i> bytes are written to <i>dest</i>. The shift state <i>*ps</i> is updated. The conversion is effectively performed by repeatedly calling <i>wcrtomb(dest, *src, ps)</i>, as long as this call succeeds, and then incrementing <i>dest</i> by the number of bytes written and <i>*src</i> by one. The conversion can stop for three reasons: </p>
 <dl>

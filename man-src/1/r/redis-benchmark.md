@@ -1,4 +1,5 @@
 ---
+
 title: "redis-benchmark(1)"
 name: "redis-benchmark"
 section: "1"
@@ -9,9 +10,7 @@ description: "redis-benchmark – Redis benchmark"
 
 <h2>NAME</h2>
 <p> redis-benchmark &#8211; Redis benchmark </p>
-<h2>SYNOPSIS</h2>
 <p> <code>redis-benchmark</code> [ options ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Redis</code> is an open source (BSD licensed), in-memory data structure store, used as database, cache and message broker, found at <code><a rel="nofollow" href="http://redis.io/">http://redis.io/</a></code> </p>
 <p> The <code>redis-benchmark</code> command is a command to benchmark redis-server. </p>
 <h2>OPTIONS</h2>

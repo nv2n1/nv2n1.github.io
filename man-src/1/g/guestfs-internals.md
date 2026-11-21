@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-internals(1)"
 name: "guestfs-internals"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestfs-internals/"
 description: "guestfs-internals – architecture and internals of libguestfs"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This manual page is for hackers who want to understand how libguestfs works internally. This is just a description of how libguestfs works now, and it may change at any time in the future.</p>
 <h2>ARCHITECTURE</h2>
 <p> Internally, libguestfs is implemented by running an appliance (a special type of small virtual machine) using <code><a href="/docs/linux/man/1-qemu/">qemu</a></code>(1). Qemu runs as a child process of the main program. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pamstereogram(1)"
 name: "pamstereogram"
 section: "1"
@@ -8,9 +9,7 @@ description: "pamstereogram – create a single-image stereogram from a PAM dept
 ---
 
 <p>Updated:30 December 2012 </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pamstereogram</code> [<code>-help</code>] [<code>-verbose</code>] [<code>-blackandwhite</code> | <code>-grayscale</code> | <code>-color</code>] [<code>-maxval=</code><i>value</i>] [<code>-patfile=</code><i>pamfile</i>] [<code>-texfile=</code><i>pamfile</i>] [<code>-bgcolor=</code><i>color</i>] [<code>-smoothing=</code><i>pixels</i>] [<code>-xshift=</code><i>pixels</i>] [<code>-yshift=</code><i>pixels</i>] [<code>-magnifypat=</code><i>scale</i>] [<code>-guidetop</code>] [<code>-guidebottom</code>] [<code>-guidesize=</code><i>pixels</i>] [<code>-dpi=</code><i>resolution</i>] [<code>-crosseyed</code>] [<code>-makemask</code>] [<code>-eyesep=</code><i>inches</i>] [<code>-depth=</code><i>fraction</i>] [<code>-planes=</code><i>near_pixels</i>,<i>far_pixels</i>] [<code>-randomseed=</code><i>integer</i>] [<i>infile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamstereogram</code> inputs a depth map (a map of the distances from your eye of the points in a scene) and outputs a single-image stereogram (SIS). A SIS is a 2-D image specially designed to appear three dimensional when viewed with relaxed, slightly unfocused eyes. What&#8217;s exciting about single-image stereograms is that they don&#8217;t require special glasses to view, although it does require a bit of practice to train your eyes to unfocus properly. The <code>pamstereogram</code> program provides a wealth of control over how the stereogram is generated, including the following: </p>
 <dl>

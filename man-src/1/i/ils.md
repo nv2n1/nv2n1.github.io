@@ -1,4 +1,5 @@
 ---
+
 title: "ils(1)"
 name: "ils"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ils/"
 description: "ils – List inode information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ils [-emOpvV] [-f </code> <i>fstype</i> <code>] [-s </code> <i>seconds</i> <code>] [-i</code> <i>imgtype</i> <code>] [-o</code> <i>imgoffset</i> <code>] [-b dev_sector_size] </code> <i>image [images] [start-stop]</i> </p>
 <p> <code>ils [-aAlLvVzZ] [-f</code> <i>fstype</i> <code>] [-s</code> <i>seconds</i> <code>] [-i</code> <i>imgtype</i> <code>] [-o</code> <i>imgoffset</i> <code>]</code> <i>image [images] [start-stop]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ils</code> opens the named <i>image(s)</i> and lists inode information. By default, <code>ils</code> lists only the inodes of removed files. </p>
 <p> Arguments:</p>
 <dl>

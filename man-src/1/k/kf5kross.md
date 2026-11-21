@@ -1,4 +1,5 @@
 ---
+
 title: "kf5kross(1)"
 name: "kf5kross"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-kf5kross/"
 description: "kf5kross – KDE application to run kross scripts."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kf5kross</code> [-h, &#8211;help] [-v, &#8211;version] [&#8211;author] [&#8211;license] [file &#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>kf5kross</code></p>
 <dd>executes kross scripts written in KDE Javascript, Python, Ruby, Java and Falcon. </dd>
 <p> This command line tool is used for any non-GUI scripts, e.g. Calligra Sheets has some of these.</p>

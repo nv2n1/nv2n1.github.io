@@ -1,4 +1,5 @@
 ---
+
 title: "coxingersollross(3)"
 name: "coxingersollross"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-coxingersollross/"
 description: "ql/models/shortrate/onefactormodels/coxingersollross.hpp – Cox-Ingersoll-Ross model."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br />
  #include &lt;ql/stochasticprocess.hpp&gt; </p>
 <h3>Classes</h3>

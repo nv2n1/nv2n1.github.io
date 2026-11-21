@@ -1,4 +1,5 @@
 ---
+
 title: "dcmscale(1)"
 name: "dcmscale"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dcmscale/"
 description: "dcmscale – Scale DICOM images"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dcmscale [options] dcmfile-in dcmfile-out
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>dcmscale</code> utility reads a DICOM image, scales it according to the command line settings and writes back the DICOM image. This utility only supports uncompressed and RLE compressed DICOM images.</p>
 <h2>PARAMETERS</h2>
 <pre>

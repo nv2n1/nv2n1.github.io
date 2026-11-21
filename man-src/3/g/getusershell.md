@@ -1,4 +1,5 @@
 ---
+
 title: "getusershell(3)"
 name: "getusershell"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getusershell/"
 description: "getusershell, setusershell, endusershell – get permitted user shells"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 char *getusershell(void);
@@ -25,7 +25,6 @@ Since glibc 2.21 : _DEFAULT_SOURCE
                                          ||
                                          (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE &amp; nbsp; &lt; &amp;nbsp; 500)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getusershell</code>() function returns the next line from the file <i>/etc/shells</i>, opening the file if necessary. The line should contain the pathname of a valid user shell. If <i>/etc/shells</i> does not exist or is unreadable, <code>getusershell</code>() behaves as if <i>/bin/sh</i> and <i>/bin/csh</i> were listed in the file. </p>
 <p> The <code>setusershell</code>() function rewinds <i>/etc/shells</i>. </p>
 <p> The <code>endusershell</code>() function closes <i>/etc/shells</i>.</p>

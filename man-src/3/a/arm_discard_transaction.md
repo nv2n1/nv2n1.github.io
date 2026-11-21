@@ -1,4 +1,5 @@
 ---
+
 title: "arm_discard_transaction(3)"
 name: "arm_discard_transaction"
 section: "3"
@@ -9,14 +10,12 @@ description: "arm_discard_transaction – discard transaction"
 
 <h2>NAME</h2>
 <p> arm_discard_transaction &#8211; discard transaction</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_discard_transaction( </p>
 <p>&nbsp;<wbr>const arm_tran_start_handle_t&nbsp;<wbr></code><i>tran_handle</i><code>, </p>
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_discard_transaction()</code> signals that the <code>referenced arm_start_transaction()</code> should be ignored and treated as if it never happened. Measurements associated with a transaction that is processing should be discarded. Either <code>arm_discard_transaction()</code> or <code>arm_stop_transaction()</code> is used &#8211; never both. </p>
 <p> An example of when a transaction would be discarded could happen is if proxy instrumentation believes a transaction is starting, but then learns that it did not. It can be called from any thread in the process that executed the <code>arm_start_transaction()</code>. In general, the use of <code>arm_discard_transaction()</code> is discouraged, but experience has shown a few use cases that require the functionality. </p>
 <p> <code>arm_discard_transaction()</code> clears any thread bindings [<code>arm_bind_thread()</code>] and blocking conditions [<code>arm_block_transaction()</code>]. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_scale(3)"
 name: "cdk_scale"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_scale – curses scale widget (type int)."
 
 <h2>NAME</h2>
 <p> cdk_scale &#8211; curses scale widget (type int).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -110,7 +110,6 @@ void setCDKScaleVerticalChar(
     chtype character);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk scale widget creates a scale box with a label and a scale field. The following functions create or manipulate the Cdk scale box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

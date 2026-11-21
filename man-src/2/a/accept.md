@@ -1,4 +1,5 @@
 ---
+
 title: "accept(2)"
 name: "accept"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-accept/"
 description: "accept, accept4 – accept a connection on a socket"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt; /* See NOTES */
@@ -17,7 +17,6 @@ int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 int accept4(int sockfd, struct sockaddr *addr,
             socklen_t *addrlen, int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>accept</code>() system call is used with connection-based socket types (<code>SOCK_STREAM</code>, <code>SOCK_SEQPACKET</code>). It extracts the first connection request on the queue of pending connections for the listening socket, <i>sockfd</i>, creates a new connected socket, and returns a new file descriptor referring to that socket. The newly created socket is not in the listening state. The original socket <i>sockfd</i> is unaffected by this call. </p>
 <p> The argument <i>sockfd</i> is a socket that has been created with <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2), bound to a local address with <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), and is listening for connections after a <code><a href="/docs/linux/man/2-listen/">listen</a></code>(2). </p>
 <p> The argument <i>addr</i> is a pointer to a <i>sockaddr</i> structure. This structure is filled in with the address of the peer socket, as known to the communications layer. The exact format of the address returned <i>addr</i> is determined by the socket&#8217;s address family (see <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2) and the respective protocol man pages). When <i>addr</i> is NULL, nothing is filled in; in this case, <i>addrlen</i> is not used, and should also be NULL. </p>

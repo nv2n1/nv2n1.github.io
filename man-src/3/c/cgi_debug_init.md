@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_debug_init(3)"
 name: "cgi_debug_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_debug_init/"
 description: "cgi_debug_init – initialize standalone debugging"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -16,7 +16,6 @@ void cgi_debug_init(int argc, char **argv);
 </code></pre>
 <h2>ARGUMENTS</h2>
 <p> argc/argv &#8211; the arguments from main </p>
-<h2>DESCRIPTION</h2>
 <p> cgi_debug_init initializes a CGI program for standalone debugging. By running a ClearSilver CGI program with a filename on the command line as the first argument, the CGI program will load that file of the form K=V as a set of HTTP/CGI environment variables. This allows you to run the program under a debugger in a reproducible environment. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "valgrind-di-server(1)"
 name: "valgrind-di-server"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-valgrind-di-server/"
 description: "valgrind-di-server – Experimental debuginfo server for valgrind"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>valgrind-di-server</code> [<i>options</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>valgrind-di-server</code></p>
 <dd>accepts (multiple) connections from <code>valgrind</code> processes that use the <code> &#8211;debuginfo-server</code> option on the specified port and serves (compressed) debuginfo files (in chunks) from the current working directory.</dd>
 <h2>OPTIONS</h2>

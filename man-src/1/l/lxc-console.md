@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-console(1)"
 name: "lxc-console"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-console – Launch a console for the specified container"
 
 <h2>NAME</h2>
 <p> lxc-console &#8211; Launch a console for the specified container</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-console</code> {-n <i>name</i>} [-e <i>escape character</i>] [-t <i>ttynum</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> If the tty service has been configured and is available for the container specified as parameter, this command will launch a console allowing to log on the container. </p>
 <p> The available tty are free slots taken by this command. That means if the container has four ttys available and the command has been launched four times each taking a different tty, the fifth command will fail because no console will be available. </p>
 <p> The command will connect to a tty. If the connection is lost or broken, the command can be launched again and regain the tty at the state it was before the disconnection. </p>

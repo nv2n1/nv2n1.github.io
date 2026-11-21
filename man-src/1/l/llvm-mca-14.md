@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-mca-14(1)"
 name: "llvm-mca-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-mca-14/"
 description: "llvm-mca – LLVM Machine Code Analyzer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-mca</code> [<i>options</i>] [input]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-mca</code> is a performance analysis tool that uses information available in LLVM (e.g. scheduling models) to statically measure the performance of machine code in a specific CPU. </p>
 <p> Performance is measured in terms of throughput as well as processor resource consumption. The tool currently works for processors with a backend for which there is a scheduling model available in LLVM. </p>
 <p> The main goal of this tool is not just to predict the performance of the code when run on the target, but also help with diagnosing potential performance issues. </p>

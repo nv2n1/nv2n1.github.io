@@ -1,4 +1,5 @@
 ---
+
 title: "cla_geamv(3)"
 name: "cla_geamv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_geamv/"
 description: "cla_geamv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cla_geamv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>CLA_GEAMV</code> computes a matrix-vector product using a general matrix to calculate error bounds.</p>

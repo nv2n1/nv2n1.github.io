@@ -1,4 +1,5 @@
 ---
+
 title: "sspevd(3)"
 name: "sspevd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspevd/"
 description: "sspevd.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspevd</code> (JOBZ, UPLO, N, AP, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code> SSPEVD computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

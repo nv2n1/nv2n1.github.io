@@ -1,4 +1,5 @@
 ---
+
 title: "bgljfile(1)"
 name: "bgljfile"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bgljfile/"
 description: "Bgljfile – a Jvm Access File Generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bgljfile</code> [ options ] <i>file &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Bgljfile</code> is a Jvm Access File generator. It produces file that suits Bigloo option <i>-bgljfile</i>. A Jvm Access File is a scheme list. Each elements of that list is a list of at least two elements: a module name, the Java class file that implements that module. </p>
 <h2>OPTIONS</h2>
 <dl>

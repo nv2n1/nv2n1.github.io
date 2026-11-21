@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-doc(1)"
 name: "cargo-doc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-doc/"
 description: "cargo-doc – Build a package’s documentation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo doc [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> Build a package&#8217;s documentation. </p>
 <p> By default the documentation for the local package and all dependencies is built. The output is all placed in &#8216;target/doc&#8217; in rustdoc&#8217;s usual format. </p>
 <p> If the &#8211;package argument is given, then SPEC is a package id specification which indicates which package should be built. If it is not given, then the current package is built. For more information on SPEC and its format, see the &quot;cargo help pkgid&quot; command.</p>

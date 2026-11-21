@@ -1,4 +1,5 @@
 ---
+
 title: "dumpdb(1)"
 name: "dumpdb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dumpdb/"
 description: "dumpdb – The Freeze database inspector."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dumpdb [options] dbenv db </p>
-<h2>DESCRIPTION</h2>
 <p> The FreezeScript tool dumpdb is used to examine a Freeze database. Its simplest invocation displays every record of the database, but the tool also supports more selective activities. In fact, dumpdb supports a scripted mode that shares many of the same XML descriptors as transformdb, enabling sophisticated filtering and reporting. Full documentation for dumpdb is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Using+dumpdb">http://doc.zeroc.com/display/Ice/Using+dumpdb</a>&quot;. </p>
 <h2>OPTIONS</h2>

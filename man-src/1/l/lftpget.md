@@ -1,4 +1,5 @@
 ---
+
 title: "lftpget(1)"
 name: "lftpget"
 section: "1"
@@ -9,9 +10,7 @@ description: "lftpget – get a file with lftp(1)"
 
 <h2>NAME</h2>
 <p> lftpget &#8211; get a file with <a href="/docs/linux/man/1-lftp/">lftp</a>(1) </p>
-<h2>SYNOPSIS</h2>
 <p> <code>lftpget </code> [-c] [-d] [-v] <i>URL</i> [URL&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>lftpget</code> command. </p>
 <p> <code>lftpget</code> is a shell script for downloading by URL, it calls `lftp -c&#8217;. It supports the same set of protocols as lftp does, including ftp, http, fish, sftp. </p>
 <h2>OPTIONS</h2>

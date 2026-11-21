@@ -1,4 +1,5 @@
 ---
+
 title: "dssi_analyse_plugin(1)"
 name: "dssi_analyse_plugin"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dssi_analyse_plugin/"
 description: "dssi_analyse_plugin – describe a DSSI plugin"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dssi_analyse_plugin</code> [-v|&#8211;verbose] [<i>path</i>]&lt;<i>libname</i>&gt;[:&lt;<i>label</i>&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dssi_analyse_plugin</code> lists information about DSSI plugins within a specified DSSI shared library <i>libname</i>. If <i>label</i> is given, only information for the plugin labeled <i>label</i> will be listed, otherwise, all plugins in the shared library will be listed. If <i>path</i> is not given, the shared library is searched for in the colon-separated list of directories specified in the environment variable <code>DSSI_PATH</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

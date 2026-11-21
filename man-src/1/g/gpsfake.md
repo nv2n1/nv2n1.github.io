@@ -1,4 +1,5 @@
 ---
+
 title: "gpsfake(1)"
 name: "gpsfake"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gpsfake/"
 description: "gpsfake – test harness for gpsd, simulating a GPS"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsfake</code> [-1] [-h] [-b] [-f] [-c&nbsp;<wbr><i>interval</i>] [-i] [-D&nbsp;<wbr><i>debuglevel</i>] [-l] [-m&nbsp;<wbr><i>monitor</i>] [-g] [-n] [-o&nbsp;<wbr><i>options</i>] [-p] [-P&nbsp;<wbr><i>port</i>] [-r&nbsp;<wbr><i>initcmd</i>] [-s&nbsp;<wbr><i>speed</i>] [-u] [-t] [-v] [<i>logfile</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>gpsfake is a test harness for gpsd and its clients. It opens a pty (pseudo-TTY), launches a gpsd instance that thinks the slave side of the pty is its GPS device, and repeatedly feeds the contents of one or more test logfiles through the master side to the GPS. If there are multiple logfiles, sentences from them are interleaved in the order the files are specified. </dd>
 <p> gpsfake does not require root privileges, and can be run concurrently with a production gpsd instance without causing problems. </p>
 <p> The logfiles may contain packets in any supported format, including in particular NMEA, SiRF, TSIP, or Zodiac. Leading lines beginning with # will be treated as comments and ignored, except in the following special cases: </p>

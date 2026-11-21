@@ -1,4 +1,5 @@
 ---
+
 title: "pmmgr(1)"
 name: "pmmgr"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmmgr – pcp daemon manager"
 
 <h2>NAME</h2>
 <p> <code>pmmgr</code> &#8211; pcp daemon manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmmgr</code> [<code>-v</code>] [<code>-c</code> <i>config-directory</i>] [<code>-p</code> <i>polling-interval</i>] [<code>-l</code> <i>log-file</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmmgr</code> manages a collection of PCP daemons for a set of discovered local and remote hosts running the Performance Metrics Collection Daemon (PMCD), according to zero or more configuration directories. It keeps a matching set of <code>pmlogger</code>, <code>pmie</code>, and other clients/daemons running, and their archives/logs merged/rotated. It supplants the older <code>pmlogger_*</code> and <code>pmie_*</code> check/daily management shell scripts. </p>
 <p> pmmgr is largely self-configuring and perseveres despite most run-time errors. pmmgr runs in the foreground until interrupted. When signaled, it will stop its running daemons before exiting. </p>
 <p> A description of the command line options specific to <code>pmmgr</code> follows:</p>

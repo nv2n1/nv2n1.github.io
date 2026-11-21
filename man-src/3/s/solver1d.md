@@ -1,4 +1,5 @@
 ---
+
 title: "solver1d(3)"
 name: "solver1d"
 section: "3"
@@ -6,8 +7,8 @@ letter: "s"
 url: "/docs/linux/man/3-solver1d/"
 description: "ql/math/solver1d.hpp – Abstract 1-D solver class."
 ---
+
 <p>ql/math/solver1d.hpp &#8211; Abstract 1-D solver class. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/utilities/null.hpp&gt; <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-set(1)"
 name: "cpupower-set"
 section: "1"
@@ -9,9 +10,7 @@ description: "cpupower-set – Set processor power related kernel or hardware co
 
 <h2>NAME</h2>
 <p> cpupower-set &#8211; Set processor power related kernel or hardware configurations</p>
-<h2>SYNOPSIS</h2>
 <p> <code> cpupower set [ -b VAL ]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cpupower set </code> sets kernel configurations or directly accesses hardware registers affecting processor power saving policies. </p>
 <p> Some options are platform wide, some affect single cores. By default values are applied on all cores. How to modify single core configurations is described in the <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1) manpage in the &#8211;cpu option section. Whether an option affects the whole system or can be applied to individual cores is described in the Options sections. </p>
 <p> Use <code>cpupower info </code> to read out current settings and whether they are supported on the system at all. </p>

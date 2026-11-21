@@ -1,4 +1,5 @@
 ---
+
 title: "dvi2tty(1)"
 name: "dvi2tty"
 section: "1"
@@ -6,9 +7,8 @@ letter: "d"
 url: "/docs/linux/man/1-dvi2tty/"
 description: "dvi2tty – preview a TeX DVI file on an ordinary ASCII terminal"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>dvi2tty</code> [ options ] dvifile  </p>
-<h2>DESCRIPTION</h2>
 <p> <i>dvi2tty</i> converts a TeX DVI file to a format that is appropriate for terminals and line printers. The program is intended to be used for preliminary proofreading of TeX-ed documents. By default the output is directed to the terminal, possibly through a pager (depending on how the program was installed), but it can be directed to a file or a pipe. </p>
 <p> The output leaves much to be desired, but is still useful if you want to avoid walking to the laser printer (or whatever) for each iteration of your document. <br />
  Since <i>dvi2tty</i> produces output for terminals and line printers the representation of documents is naturally quite primitive. In principle font changes are totally ignored, but <i>dvi2tty</i> recognizes a few mathematical and special symbols that can be displayed on an ordinary ASCII terminal, such as the &#8216;+&#8216; and &#8216;-&#8216; symbol. </p>

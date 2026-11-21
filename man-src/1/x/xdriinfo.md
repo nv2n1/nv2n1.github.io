@@ -1,4 +1,5 @@
 ---
+
 title: "xdriinfo(1)"
 name: "xdriinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xdriinfo/"
 description: "xdriinfo – query configuration information of DRI drivers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xdriinfo</code> [-display <i>displayname</i>] [-version] [command]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>xdriinfo</i> can be used to query configuration information of direct rendering drivers. If no command argument is specified it lists the names of the direct rendering drivers for all screens. </p>
 <p> Valid options are:</p>
 <dl>

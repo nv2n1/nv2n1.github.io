@@ -1,4 +1,5 @@
 ---
+
 title: "simul-landmarks(1)"
 name: "simul-landmarks"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-simul-landmarks/"
 description: "simul-landmarks – Robot dataset simulator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> simul-landmarks <i>config_file.ini</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>simul-landmarks</code> is a command-line application which generates a synthetic rawlog of a simulated robot as it follows a predefined path and observes a set of landmarks (through range, and 2 direction angles).</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

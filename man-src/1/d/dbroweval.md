@@ -1,4 +1,5 @@
 ---
+
 title: "dbroweval(1)"
 name: "dbroweval"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dbroweval/"
 description: "dbroweval – evaluate code for each row of a fsdb file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dbroweval[-f CodeFile] code[code...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Evaluate code for each row of the data. </p>
 <p> Typical actions are things like reformatting and other data transformations. </p>
 <p> Code can include embedded column names preceded by underscores; these result in the value of that column for the current row. </p>

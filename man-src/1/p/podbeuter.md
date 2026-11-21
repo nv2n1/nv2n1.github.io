@@ -1,4 +1,5 @@
 ---
+
 title: "podbeuter(1)"
 name: "podbeuter"
 section: "1"
@@ -6,18 +7,11 @@ letter: "p"
 url: "/docs/linux/man/1-podbeuter/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+podbeuter - a podcast download manage for text terminals 
 
- podbeuter - a podcast download manage for text terminals 
+<i>podbeuter</i> [-C configfile] [-q queuefile] [-a] [-h] 
 
-<h2>SYNOPSIS</h2>
-
- <i>podbeuter</i> [-C configfile] [-q queuefile] [-a] [-h] 
-
-<h2>DESCRIPTION</h2>
-
- <i>podbeuter</i> is a podcast manager for text terminals. It is a helper program to <i>newsbeuter</i> which queues podcast downloads into a file. These queued downloads can then be download with <i>newsbeuter</i>. 
+<i>podbeuter</i> is a podcast manager for text terminals. It is a helper program to <i>newsbeuter</i> which queues podcast downloads into a file. These queued downloads can then be download with <i>newsbeuter</i>. 
 
 <h2>OPTIONS</h2>
 

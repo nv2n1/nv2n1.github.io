@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-tags(1)"
 name: "euca-create-tags"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-create-tags – Add or overwrite tags for one or more resourc
 
 <h2>NAME</h2>
 <p> euca-create-tags &#8211; Add or overwrite tags for one or more resources</p>
-<h2>SYNOPSIS</h2>
 <p> euca-create-tags <code>&#8211;tag</code> KEY[=VALUE] [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] RESOURCE [RESOURCE &#8230;]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Add or overwrite tags for one or more resources</p>
 <h3>positional arguments:</h3>
 <dl>

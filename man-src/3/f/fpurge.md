@@ -1,4 +1,5 @@
 ---
+
 title: "fpurge(3)"
 name: "fpurge"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fpurge/"
 description: "fpurge, __fpurge – purge a stream"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 /* unsupported */
 #include &lt;stdio.h&gt;
@@ -17,7 +17,6 @@ int fpurge(FILE *stream);
 #include &lt;stdio_ext.h&gt;
 void __fpurge(FILE *stream);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The function <code>fpurge</code>() clears the buffers of the given stream. For output streams this discards any unwritten output. For input streams this discards any input read from the underlying object but not yet obtained via <code><a href="/docs/linux/man/3-getc/">getc</a></code>(3); this includes any text pushed back via <code><a href="/docs/linux/man/3-ungetc/">ungetc</a></code>(3). See also <code><a href="/docs/linux/man/3-fflush/">fflush</a></code>(3). </p>
 <p> The function <code>__fpurge</code>() does precisely the same, but without returning a value.</p>
 <h2>RETURN VALUE</h2>

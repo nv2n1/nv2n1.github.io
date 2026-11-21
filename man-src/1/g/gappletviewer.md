@@ -1,4 +1,5 @@
 ---
+
 title: "gappletviewer(1)"
 name: "gappletviewer"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-gappletviewer/"
 description: "gappletviewer – Load and runs an applet"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> appletviewer [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>URL</i></font><i></i>&#8230; </p>
 <p> appletviewer [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <code>-code</code> <i></i><font SIZE="-1"><i>CODE</i></font><i></i> </p>
 <p> appletviewer [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <code>-plugin</code> <i></i><font SIZE="-1"><i>INPUT</i></font><i></i>,<i></i><font SIZE="-1"><i>OUTPUT</i></font><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>appletviewer</code> tool loads and runs an applet. </p>
 <p> Use the first form to test applets specified by tag. The <font SIZE="-1">URL</font> should resolve to an <font SIZE="-1">HTML</font> document from which the <code>appletviewer</code> will extract applet tags. The <font SIZE="-1">APPLET</font>, <font SIZE="-1">EMBED</font> and <font SIZE="-1">OBJECT</font> tags are supported. If a given document contains multiple applet tags, all the applets will be loaded, with each applet appearing in its own window. Likewise, when multiple URLs are specified, each applet tag instance is given its own window. If a given document contains no recognized tags the <code>appletviewer</code> does nothing. </p>
 <pre>

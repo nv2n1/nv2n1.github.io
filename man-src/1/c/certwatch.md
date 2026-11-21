@@ -1,4 +1,5 @@
 ---
+
 title: "certwatch(1)"
 name: "certwatch"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-certwatch/"
 description: "certwatch – generate SSL certificate expiry warnings"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>certwatch</code> [OPTION&#8230;] <i>filename</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>certwatch</code> program is used to issue warning mail when an SSL certificate is about to expire. </dd>
 <p> The program has two modes of operation: normal mode and quiet mode. In normal mode, the certificate given by the <i>filename</i> argument is examined, and a warning email is issued to standard output if the certificate is outside its validity period, or approaching expiry. If the certificate cannot be found, or any errors occur whilst parsing the certificate, the certificate is ignored and no output is produced. In quiet mode, no output is given, but the exit status can still be used. </p>
 <p> The certificate can be specified by its nickname or by a path to the containing file.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "clarzt(3)"
 name: "clarzt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clarzt/"
 description: "clarzt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarzt</code> (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)<br />
  <i></i><code>CLARZT</code> forms the triangular factor T of a block reflector H = I &#8211; vtvH.</p>

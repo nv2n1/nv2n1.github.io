@@ -1,4 +1,5 @@
 ---
+
 title: "transfig(1)"
 name: "transfig"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-transfig/"
 description: "transfig – creates a makefile for portable LaTeX figures"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>transfig</code> [ -L <i>language</i> ] [ -M <i>makefile</i> ] [ -T <i>texfile</i> ] [ -I <i>macrofile</i> ] [ -V ] [ <i>control_specs</i> figfile &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Transfig</i> creates a makefile to translate figures described in Fig code or PIC into a specified LaTeX graphics <i>language</i>. PIC files are identified by the suffix &quot;.pic&quot;; Fig files can be specified either with or without the suffix &quot;.fig&quot; . Transfig also creates a TeX macro file appropriate to the target language.</p>
 <h2>OPTIONS</h2>
 <p> The <i>language</i> specifier must be one of <code>box,</code> <code>cgm,</code> <code>eepic,</code> <code>eepicemu,</code> <code>emf,</code> <code>epic,</code> <code>eps,</code> <code>ge,</code> <code>gif,</code> <code>ibmgl,</code> <code>jpeg,</code> <code>latex,</code> <code>map,</code> <code>mf,</code> <code>mmp,</code> <code>mp,</code> <code>pcx,</code> <code>pdf,</code> <code>pdftex,</code> <code>pdftex_t,</code> <code>pic,</code> <code>pictex,</code> <code>png,</code> <code>ppm,</code> <code>ps,</code> <code>psfig,</code> <code>pstex,</code> <code>pstex_t,</code> <code>ptk,</code> <code>sld,</code> <code>textyl,</code> <code>tiff,</code> <code>tk,</code> <code>tpic,</code> <code>xbm,</code> <code>xpm</code> or <code>null</code>. The specifier <code>psfig</code> is like the <code>ps</code> specifier, except that it make use of the psfig macro package. The specifier <code>pstex</code> is like <code>psfig,</code> except that it uses LaTeX to process formatted (special) text. The specifier <code>null</code> results in the figures being replaced by empty boxes of the appropriate size. If no language is specified, <code>epic</code> is the default. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mingle(1)"
 name: "mingle"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mingle/"
 description: "mingle – fast edge bundling"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mingle</code> [ <i>options</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mingle</code> takes as input a graph in DOT format with node position information (the <i>pos</i> attribute) and bundles the edges.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

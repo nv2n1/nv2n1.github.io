@@ -1,4 +1,5 @@
 ---
+
 title: "perlexperiment(1)"
 name: "perlexperiment"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlexperiment/"
 description: "perlexperiment – A listing of experimental features in Perl"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document lists the current and past experimental features in the perl core. Although all of these are documented with their appropriate topics, this succinct listing gives you an overview and basic facts about their status. </p>
 <p> So far we&#8217;ve merely tried to find and list the experimental features and infer their inception, versions, etc. There&#8217;s a lot of speculation here.</p>
 <h3>Current experiments</h3>

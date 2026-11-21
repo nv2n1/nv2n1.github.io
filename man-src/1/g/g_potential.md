@@ -1,4 +1,5 @@
 ---
+
 title: "g_potential(1)"
 name: "g_potential"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_potential – calculates the electrostatic potential across the 
 <h2>NAME</h2>
 <p> g_potential &#8211; calculates the electrostatic potential across the box </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_potential</code> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-s</code><i> topol.tpr </i> <code>-o</code><i> potential.xvg </i> <code>-oc</code><i> charge.xvg </i> <code>-of</code><i> field.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-d</code><i> string </i> <code>-sl</code><i> int </i> <code>-cb</code><i> int </i> <code>-ce</code><i> int </i> <code>-tz</code><i> real </i> <code>-[no]spherical</code><i></i> <code>-ng</code><i> int </i> <code>-[no]correct</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> Compute the electrostatical potential across the box. The potential iscalculated by first summing the charges per slice and then integratingtwice of this charge distribution. Periodic boundaries are not taken into account. Reference of potential is taken to be the left side ofthe box. It&#8217;s also possible to calculate the potential in sphericalcoordinates as function of r by calculating a charge distribution inspherical slices and twice integrating them. epsilon_r is taken as 1,2 is more appropriate in many cases</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "faac(1)"
 name: "faac"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-faac/"
 description: "faac – open source MPEG-4 and MPEG-2 AAC encoder"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>faac</code> [<i>options</i>] [-o&nbsp;<wbr><i>outfile</i>] <i>infiles</i> &#8230; </p>
 <p> &lt;<i>infiles</i>&gt; and/or &lt;<i>outfile</i>&gt; can be &quot;-&quot;, which means stdin/stdout. </p>
-<h2>DESCRIPTION</h2>
 <p> <code>FAAC</code> is an open source MPEG-4 and MPEG-2 AAC encoder, it is licensed under the LGPL license. Note that the quality of <code>FAAC</code> is not up to par with the currently best AAC encoders available. </p>
 <h2>FEATURES</h2>
 <dl>

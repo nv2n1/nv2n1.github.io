@@ -1,4 +1,5 @@
 ---
+
 title: "ncgm2cgm(1)"
 name: "ncgm2cgm"
 section: "1"
@@ -9,11 +10,9 @@ description: "cgm2ncgm ncgm2cgm – filter NCAR CGM to/from vanilla CGM"
 
 <h2>NAME</h2>
 <p> cgm2ncgm ncgm2cgm &#8211; filter <code>NCAR CGM</code> to/from vanilla <code>CGM</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>ncgm2cgm</code> [&nbsp;<wbr><code>-s&nbsp;<wbr></code><i>output block size</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-V&nbsp;<wbr>] </p>
 <p> cgm2ncgm</code> [&nbsp;<wbr><code>-s&nbsp;<wbr></code><i>input block size</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-V&nbsp;<wbr>] </p>
 <p> </code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ncgm2cgm</code> and <code>cgm2ncgm</code> are filters for converting back and forth between <code>NCAR Computer Graphics Metafile</code> (CGM) and vanilla CGM. <code>ncgm2cgm</code> strips the wrapper from NCAR CGM records while cgm2ncgm restores it. I/O is done from standard in/out respectively. </p>
 <h2>OPTIONS</h2>
 <dl>

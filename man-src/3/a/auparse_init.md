@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_init(3)"
 name: "auparse_init"
 section: "3"
@@ -9,10 +10,8 @@ description: "auparse_init – initialize an instance of the audit parsing libra
 
 <h2>NAME</h2>
 <p> auparse_init &#8211; initialize an instance of the audit parsing library</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> auparse_state_t *auparse_init(ausource_t source, const void *b); </p>
-<h2>DESCRIPTION</h2>
 <p> auparse_init initializes an instance of the audit parsing library. The function returns an opaque pointer to the parser&#8217;s internal state. It is used in subsequent calls to the library so. The source variable determines where the library looks for data. Legal values can be: </p>
 <pre>
         AUSOURCE_LOGS - use audit logs

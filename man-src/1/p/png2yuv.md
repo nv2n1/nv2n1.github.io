@@ -1,4 +1,5 @@
 ---
+
 title: "png2yuv(1)"
 name: "png2yuv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-png2yuv/"
 description: "png2yuv – Convert PNG images to the YUV4MPEG stream format."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>png2yuv</code> [<code>-b</code> <i>num</i>] [<code>-f</code> <i>num</i>] [<code>-I</code> <i>num</i>] [<code>-L</code> <i>num</i>] [<code>-n</code> num<code>]</code> [<code>-l</code> <i>num</i>] [<code>-j</code> <i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>png2yuv</code> decompresses a sequence of PNG files and pipes the image data to stdout as a YUV4MPEG2 stream. Any 8bit/pixel PNG format supported by libpng can be read. stdout will be filled with the YUV4MPEG movie data stream, so be prepared to pipe it on to mpeg2enc or to write it into a file. </p>
 <p> <code>This tool is incomplete.</code> The alternative utility you are probably looking for is <code><a href="/docs/linux/man/1-ppmtoy4m/">ppmtoy4m</a></code>(1), which is also included in MJPEGtools. </p>
 <h2>OPTIONS</h2>

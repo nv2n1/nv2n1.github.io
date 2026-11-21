@@ -1,4 +1,5 @@
 ---
+
 title: "pmpython(1)"
 name: "pmpython"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmpython – run a python script using a preferred python variant"
 
 <h2>NAME</h2>
 <p> <code>pmpython</code> &#8211; run a python script using a preferred python variant</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmpython</code> [<i>python-args-and-script</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmpython</code> provides a way to run python scripts using a customisable python interpreter, rather than embedding the name of a particular version of python into each script. </p>
 <p> This can be useful as it allows version-independent python code to be run anywhere. All python modules shipped with PCP support versions 2.6 and later (in the python2 series), and 3.3 and later (in the python3 release series). </p>
 <p> Due to python monitoring and collecting scripts being relatively simple in PCP (not requiring new modules, language features, etc), it has been possible to ensure they work for all of the above python versions. </p>

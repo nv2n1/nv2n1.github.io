@@ -1,4 +1,5 @@
 ---
+
 title: "fwbedit(1)"
 name: "fwbedit"
 section: "1"
@@ -9,9 +10,7 @@ description: "fwbedit – General purpose object tree editing tool"
 
 <h2>NAME</h2>
 <p> fwbedit &#8211; General purpose object tree editing tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fwbedit</code> command [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>fwbedit</code> is a general purpose object tree editing tool for Firewall Builder (see <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1)). This tool can be used in the shell scripts written for batch-processing of the Firewall Builder data files. Fwbedit can perform the following operations on the objects and the tree: create new object, delete existing object, modify attributes of an object, add a reference to the given object to a group, remove reference to an object from a group, upgrade data file and check object tree in the file and repair it if necessary. Both object and a group can be defined by their ID or by their name and a full path in the tree (see section <code>EXAMPLES</code> below). </p>
 <h2>COMMANDS AND OPTIONS:</h2>
 <p> <code>new -f file.fwb -t objtype -n name -p parent [-c comment] [-a attrs]</code> </p>

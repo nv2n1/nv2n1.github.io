@@ -1,4 +1,5 @@
 ---
+
 title: "tilestache-seed(1)"
 name: "tilestache-seed"
 section: "1"
@@ -9,9 +10,7 @@ description: "tilestache-seed – seed a single layer in your TileStache configu
 
 <h2>NAME</h2>
 <p> tilestache-seed &#8211; seed a single layer in your TileStache configuration</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tilestache-seed</code> [<i>options</i>]<i> zoom</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tilestache-seed</code> command. </p>
 <p> <code>tilestache-seed</code> seeds a single layer in your TileStache configuration. No images are returned, but TileStache ends up with a pre-filled cache. Bounding box is given as a pair of lat/lon coordinates, e.g. &quot;37.788 -122.349 37.833 -122.246&quot;. Output is a list of tile paths as they are created.<br />
  Configuration, BBox, and Layer options are required.</p>

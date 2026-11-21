@@ -1,4 +1,5 @@
 ---
+
 title: "identify-im6(1)"
 name: "identify-im6"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-identify-im6/"
 description: "identify – describes the format and characteristics of one or more image files."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>identify-im6.q16</code> [<i>options</i>] <i>input-file</i></dt>
 <dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> The <code>identify-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. It describes the format and characteristics of one or more image files. It also reports if an image is incomplete or corrupt. The information returned includes the image number, the file name, the width and height of the image, whether the image is colormapped or not, the number of colors in the image (by default off use <i>-define unique=true</i> option), the number of bytes in the image, the format of the image (JPEG, PNM, etc.), and finally the number of seconds it took to read and process the image. Many more attributes are available with the verbose option. </p>
 <p> For more information about the identify command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/identify.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/identify.php.">https://www.imagemagick.org/script/identify.php.</a></p>
-<h2>DESCRIPTION</h2>
 <p> Image Settings:<br />
 &nbsp;<wbr>&nbsp;-alpha option&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on, activate, off, deactivate, set, opaque, copy<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;transparent, extract, background, or shape<br />

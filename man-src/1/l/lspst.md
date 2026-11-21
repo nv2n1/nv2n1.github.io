@@ -1,4 +1,5 @@
 ---
+
 title: "lspst(1)"
 name: "lspst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lspst/"
 description: "lspst – list PST (MS Outlook Personal Folders) file data"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lspst</code> [<code>-V</code>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-h</code>] pstfile</dt></dl>
 <h2>OPTIONS</h2>
@@ -22,7 +22,6 @@ description: "lspst – list PST (MS Outlook Personal Folders) file data"
 <dl>
 <dt>
 </dt><dd> Show summary of options and exit.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lspst</code> is a program that can read an Outlook PST (Personal Folders) file and produce a simple listing of the data (contacts, email subjects, etc).</p>
 <h2>AUTHOR</h2>
 <p> lspst was written by Joe Nahmias &lt;joe [at] nahmias.net&gt; based on readpst. This man page was written by 510 Software Group &lt;carl [at] five-ten-sg.com&gt;.</p>

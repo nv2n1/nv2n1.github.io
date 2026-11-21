@@ -1,4 +1,5 @@
 ---
+
 title: "setpgrp(2)"
 name: "setpgrp"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-setpgrp/"
 description: "setpgid, getpgid, setpgrp, getpgrp – set/get process group"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setpgid(pid_t </code><i>pid</i><code>, pid_t </code><i>pgid</i><code>);</code><br />
@@ -35,7 +35,6 @@ _XOPEN_SOURCE &amp;nbsp;
 (_POSIX_SOURCE || _POSIX_C_SOURCE || _XOPEN_SOURCE ||
  _GNU_SOURCE || _SVID_SOURCE)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> All of these interfaces are available on Linux, and are used for getting and setting the process group ID (PGID) of a process. The preferred, POSIX.1-specified ways of doing this are: <code>getpgrp</code>(void), for retrieving the calling process&#8217;s PGID; and <code>setpgid</code>(), for setting a process&#8217;s PGID. </p>
 <p> <code>setpgid</code>() sets the PGID of the process specified by <i>pid</i> to <i>pgid</i>. If <i>pid</i> is zero, then the process ID of the calling process is used. If <i>pgid</i> is zero, then the PGID of the process specified by <i>pid</i> is made the same as its process ID. If <code>setpgid</code>() is used to move a process from one process group to another (as is done by some shells when creating pipelines), both process groups must be part of the same session (see <code><a href="/docs/linux/man/2-setsid/">setsid</a></code>(2) and <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)). In this case, the <i>pgid</i> specifies an existing process group to be joined and the session ID of that group must match the session ID of the joining process. </p>
 <p> The POSIX.1 version of <code>getpgrp</code>(), which takes no arguments, returns the PGID of the calling process. </p>

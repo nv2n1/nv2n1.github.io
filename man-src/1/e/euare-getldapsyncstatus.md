@@ -1,4 +1,5 @@
 ---
+
 title: "euare-getldapsyncstatus(1)"
 name: "euare-getldapsyncstatus"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-getldapsyncstatus – [Eucalyptus cloud admin only] Show the
 
 <h2>NAME</h2>
 <p> euare-getldapsyncstatus &#8211; [Eucalyptus cloud admin only] Show the status of the cloud&#8217;s LDAP synchronization</p>
-<h2>SYNOPSIS</h2>
 <p> euare-getldapsyncstatus [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> [Eucalyptus cloud admin only] Show the status of the cloud&#8217;s LDAP synchronization</p>
 <h3>optional arguments:</h3>
 <dl>

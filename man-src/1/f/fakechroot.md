@@ -1,4 +1,5 @@
 ---
+
 title: "fakechroot(1)"
 name: "fakechroot"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fakechroot/"
 description: "fakechroot – gives a fake chroot environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fakechroot</code> [<code>-s</code>|<code>&#8211;use-system-libs</code>] [<code>-l</code>|<code>&#8211;lib</code>&nbsp;<wbr><i>library</i>] [<code>&#8212;</code>] [<i>command</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> fakechroot runs a command in an environment were is additional possibility to use <i><a href="/docs/linux/man/8-chroot/">chroot</a></i>(8) command without root privileges. This is useful for allowing users to create own chrooted environment with possibility to install another packages without need for root privileges. </p>
 <p> fakechroot replaces more library functions (<i><a href="/docs/linux/man/2-chroot/">chroot</a></i>(2), <i><a href="/docs/linux/man/2-open/">open</a></i>(2), etc.) by ones that simulate the effect the real library functions would have had, had the user really been in chroot. These wrapper functions are in a shared library <i>/usr/lib/fakechroot/libfakechroot.so</i> which is loaded through the <font SIZE="-1"><code>LD_PRELOAD</code></font> mechanism of the dynamic loader. (See <i><a href="/docs/linux/man/8-ld-so/">ld.so</a></i>(8)) </p>
 <p> In fake chroot you can install Debian bootstrap with `debootstrap &#8211;variant=fakechroot&#8217; command. In this environment you can use i.e. <i><a href="/docs/linux/man/8-apt-get/">apt-get</a></i>(8) command to install another packages from common user&#8217;s account. </p>

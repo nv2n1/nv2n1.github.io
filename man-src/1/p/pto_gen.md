@@ -1,4 +1,5 @@
 ---
+
 title: "pto_gen(1)"
 name: "pto_gen"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pto_gen/"
 description: "pto_gen – Generate a Hugin project file from a list of images."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pto_gen</code> [options] <i>image</i> [&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pto_gen</code> assembles a Hugin .pto project file that is suitable as input for further tools such as the <code>cpfind</code> control-point generator, or for opening with the Hugin panorama <font SIZE="-1">GUI</font> itself. Functionality is similar to <code>match-n-shift</code>.</p>
 <h2>USAGE</h2>
 <pre>

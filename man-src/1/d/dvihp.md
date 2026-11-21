@@ -1,4 +1,5 @@
 ---
+
 title: "dvihp(1)"
 name: "dvihp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dvihp/"
 description: "dvihp – convert a TeX DVI file to Hewlett-Packard PCL"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvihp</code> [<i>options</i>] <i>dvifile</i>[.dvi]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dvihp</code> translates the given <i>dvifile</i> to Hewlett-Packard PCL using <code><a href="/docs/linux/man/1-dvicopy/">dvicopy</a></code>(1) then $DVILJ (dvilj4 by default). </p>
 <p> In the absence of other options, pipe the PCL to $SPOOL (lpr by default).</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usergetpolicy(1)"
 name: "euare-usergetpolicy"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-usergetpolicy – Display a user’s policy"
 
 <h2>NAME</h2>
 <p> euare-usergetpolicy &#8211; Display a user&#8217;s policy</p>
-<h2>SYNOPSIS</h2>
 <p> euare-usergetpolicy <code>-p</code> POLICY [&#8211;pretty-print] [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Display a user&#8217;s policy</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-sparse-checkout(1)"
 name: "git-sparse-checkout"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-sparse-checkout/"
 description: "git-sparse-checkout – Initialize and modify the sparse-checkout configuration, which reduces the checkout to a set of paths given by a list of patterns."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>git sparse-checkout &lt;subcommand&gt; [options]</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Initialize and modify the sparse-checkout configuration, which reduces the checkout to a set of paths given by a list of patterns. </p>
 <p> THIS COMMAND IS EXPERIMENTAL. ITS BEHAVIOR, AND THE BEHAVIOR OF OTHER COMMANDS IN THE PRESENCE OF SPARSE-CHECKOUTS, WILL LIKELY CHANGE IN THE FUTURE.</p>
 <h2>COMMANDS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "curlftpfs(1)"
 name: "curlftpfs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-curlftpfs/"
 description: "curlftpfs – mount a ftp host as a local directory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>curlftpfs [options]</code> <i>host path</i></p>
-<h2>DESCRIPTION</h2>
 <p> The program <code>curlftpfs</code> is a tool to mount remote ftp hosts as local directories. It connects to the <i>host</i> FTP server and maps its directory structure to the <i>path</i> directory. </p>
 <p> curlftpfs is powered by libcurl for all transfer-related features. See <code><a href="/docs/linux/man/3-libcurl/">libcurl</a></code>(3) for details. The filesystem part is implemented on top of FUSE. See <code><a rel="nofollow" href="http://fuse.sourceforge.net/">http://fuse.sourceforge.net/</a></code> for details.</p>
 <h2>FTP OPTIONS</h2>

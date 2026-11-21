@@ -1,4 +1,5 @@
 ---
+
 title: "daala_packet(3)"
 name: "daala_packet"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-daala_packet/"
 description: "daala_packet –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> unsigned char * <code>packet</code> </p>
 <p> long <code>bytes</code> </p>

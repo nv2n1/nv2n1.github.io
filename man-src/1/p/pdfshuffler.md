@@ -1,4 +1,5 @@
 ---
+
 title: "pdfshuffler(1)"
 name: "pdfshuffler"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdfshuffler/"
 description: "PDF-Shuffler – Application for PDF Merging, Rearranging, and Splitting"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdfshuffler [file1] [file2] &#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>PDF-Shuffler</code> is a small python-gtk application, which helps the user to merge or split pdf documents and rearrange their pages using an interactive and intuitive graphical interface. In the current version, page rotation and cropping is also supported. PDF-Shuffler is a frontend for python-pyPdf.</p>
 <h2>OPTIONS</h2>
 <p> Currently PDF-Shuffler doesn&#8217;t receive any options.</p>

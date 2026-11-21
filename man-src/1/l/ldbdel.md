@@ -1,4 +1,5 @@
 ---
+
 title: "ldbdel(1)"
 name: "ldbdel"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ldbdel/"
 description: "ldbdel – Command-line program for deleting LDB records"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbdel</code> [-h] [-H LDB-URL] [dn] [&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>ldbdel deletes records from an <a href="/docs/linux/man/3-ldb/">ldb</a>(3) database. It deletes the records identified by the dn&#8217;s specified on the command-line. </dd>
 <p> ldbdel uses either the database that is specified with the -H option or the database specified by the LDB_URL environment variable.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_bag_get_type(3)"
 name: "gnutls_pkcs12_bag_get_type"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs12_bag_get_type – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_bag_get_type &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>gnutls_pkcs12_bag_type_t gnutls_pkcs12_bag_get_type(gnutls_pkcs12_bag_t </code><i>bag</i><code>, int </code><i>indx</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_pkcs12_bag_get_type – API function"
 <dd> The bag</dd>
 <dt>int indx</dt>
 <dd> The element of the bag to get the type</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the bag&#8217;s type.</p>
 <h2>RETURNS</h2>
 <p> One of the <code>gnutls_pkcs12_bag_type_t</code> enumerations.</p>

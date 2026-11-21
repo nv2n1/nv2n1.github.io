@@ -1,4 +1,5 @@
 ---
+
 title: "mb2org(1)"
 name: "mb2org"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-mb2org/"
 description: "createPYMB, readPYBase, readPYMB, mb2org, scel2org – fcitx Pinyin related tools"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>createPYMB</code> <i>&lt;PinyinFile&gt;</i> <i>&lt;PhraseFile&gt;</i> </p>
 <p> <code>readPYBase [</code><i>-b &lt;PinyinMBFile&gt;</i><code>] [</code><i>-h</i><code>]</code> </p>
 <p> <code>readPYMB [</code><i>-f &lt;PhraseMBFile&gt;</i><code>] [</code><i>-s</i><code>] [</code><i>-h</i><code>]</code> </p>
 <p> <code>mb2org [</code><i>-b &lt;PinyinMBFile&gt;</i><code>] [</code><i>-f &lt;PhraseMBFile&gt;</i><code>] [</code><i>-s</i><code>] [</code><i>-h</i><code>]</code> </p>
 <p> <code>scel2org [</code><i>-o &lt;Phrase File&gt;</i><code>] [</code><i>-h</i><code>]</code></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-b &lt;PinyinMBFile&gt;</code></dt>
 <dd> If not specified, it will read system default pybase.mb.</dd>

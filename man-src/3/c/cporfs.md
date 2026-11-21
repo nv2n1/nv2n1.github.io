@@ -1,4 +1,5 @@
 ---
+
 title: "cporfs(3)"
 name: "cporfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cporfs/"
 description: "cporfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cporfs</code> (UPLO, N, NRHS, A, LDA, AF, LDAF, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code>CPORFS</code></p>

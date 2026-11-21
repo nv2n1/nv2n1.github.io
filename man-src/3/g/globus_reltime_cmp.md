@@ -1,4 +1,5 @@
 ---
+
 title: "globus_reltime_cmp(3)"
 name: "globus_reltime_cmp"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_time.h –"
 ---
 
 <p> Time Types and Macros.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_types.h&#8217;<br />
  #include &lt;time.h&gt; </p>
 <h3>Macros</h3>

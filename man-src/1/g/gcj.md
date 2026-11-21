@@ -1,4 +1,5 @@
 ---
+
 title: "gcj(1)"
 name: "gcj"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcj/"
 description: "gcj – Ahead-of-time compiler for the Java language"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gcj [<code>-I</code><i>dir</i>&#8230;] [<code>-d</code> <i>dir</i>&#8230;]<br />
 &nbsp;<wbr>[<code>&#8211;CLASSPATH</code>=<i>path</i>]&nbsp;<wbr>[<code>&#8211;classpath</code>=<i>path</i>]<br />
 &nbsp;<wbr>[<code>-f</code><i>option</i>&#8230;]&nbsp;<wbr>[<code>&#8211;encoding</code>=<i>name</i>]<br />
@@ -15,7 +15,6 @@ description: "gcj – Ahead-of-time compiler for the Java language"
 &nbsp;<wbr>[<code>-C</code>]&nbsp;<wbr>[<code>&#8211;resource</code>&nbsp;<wbr><i>resource-name</i>]&nbsp;<wbr>[<code>-d</code>&nbsp;<wbr><i>directory</i>]<br />
 &nbsp;<wbr>[<code>-W</code><i>warn</i>&#8230;]<br />
 &nbsp;<wbr><i>sourcefile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> As <code>gcj</code> is just another front end to <code>gcc</code>, it supports many of the same options as gcc. This manual only documents the options specific to <code>gcj</code>.</p>
 <h2>OPTIONS</h2>
 <h2>Input and output files</h2>

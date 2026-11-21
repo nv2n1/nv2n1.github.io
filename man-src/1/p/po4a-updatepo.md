@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-updatepo(1)"
 name: "po4a-updatepo"
 section: "1"
@@ -6,20 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-po4a-updatepo/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+po4a-updatepo - update the translation (in po format) of documentation 
 
- po4a-updatepo - update the translation (in po format) of documentation 
-
-<h2>SYNOPSIS</h2>
-
- po4a-updatepo -f &lt;fmt&gt; (-m &lt;master.doc&gt;)+ (-p &lt;<font SIZE="-1">XX</font>.po&gt;)+ 
+po4a-updatepo -f &lt;fmt&gt; (-m &lt;master.doc&gt;)+ (-p &lt;<font SIZE="-1">XX</font>.po&gt;)+ 
 
  (<font SIZE="-1">XX</font>.po are the outputs, all others are inputs)
 
-<h2>DESCRIPTION</h2>
-
- The po4a (po for anything) project goal is to ease translations (and more interestingly, the maintenance of translations) using gettext tools on areas where they were not expected like documentation. 
+The po4a (po for anything) project goal is to ease translations (and more interestingly, the maintenance of translations) using gettext tools on areas where they were not expected like documentation. 
 
  The <tt>&quot;po4a-updatepo&quot;</tt> script is in charge of updating po files to make them reflect the changes made to the original documentation file. For that, it converts the documentation file to a pot file, and call <i><a HREF="/docs/linux/man/1-msgmerge/">msgmerge</a></i>(1) on this new pot and on the provided po files. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "wbinfo(1)"
 name: "wbinfo"
 section: "1"
@@ -6,11 +7,10 @@ letter: "w"
 url: "/docs/linux/man/1-wbinfo/"
 description: "wbinfo – Query information from winbind daemon"
 ---
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dd> <p> wbinfo [-a user%password] [--all-domains] [--allocate-gid] [--allocate-uid] [-c] [--ccache-save] [--change-user-password] [-D domain] [--dc-info domain] [--domain domain] [--dsgetdcname domain] [-g] [--getdcname domain] [--get-auth-user] [-G gid] [--gid-info gid] [--group-info group] [--help|-?] [-i user] [-I ip] [-K user%password] [--krb5ccname cctype] [--lanman] [--logoff] [--logoff-uid uid] [--logoff-user username] [--lookup-sids] [-m] [-n name] [-N netbios-name] [--ntlmv1] [--ntlmv2] [--online-status] [--own-domain] [-p] [-P|--ping-dc] [--pam-logon user%password] [-r user] [-R|--lookup-rids] [--remove-gid-mapping gid,sid] [--remove-uid-mapping uid,sid] [-s sid] [--separator] [--sequence] [--set-auth-user user%password] [--set-gid-mapping gid,sid] [--set-uid-mapping uid,sid] [-S sid] [--sid-aliases sid] [--sid-to-fullname sid] [--sids-to-unix-ids sidlist] [-t] [-u] [--uid-info uid] [--usage] [--user-domgroups sid] [--user-sidinfo sid] [--user-sids sid] [-U uid] [-V] [--verbose] [-Y sid] </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The wbinfo program queries and returns information created and used by the <code><a href="/docs/linux/man/8-winbindd/">winbindd</a></code>(8) daemon. </p>
 <p> The <code><a href="/docs/linux/man/8-winbindd/">winbindd</a></code>(8) daemon must be configured and running for the wbinfo program to be able to return information.  </p>

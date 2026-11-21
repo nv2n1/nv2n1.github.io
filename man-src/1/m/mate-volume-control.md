@@ -1,4 +1,5 @@
 ---
+
 title: "mate-volume-control(1)"
 name: "mate-volume-control"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-mate-volume-control/"
 description: "mate-volume-control – The MATE Volume Control application"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mate-volume-control</code> &#8211; The MATE Volume Control application </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-volume-control [OPTIONS]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The MATE Volume Control application is an audio mixer that enables you to mix audio and adjust volume levels of various audio mixer devices on your system.</p>
 <h2>OPTIONS</h2>
 <dl>

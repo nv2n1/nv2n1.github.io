@@ -1,4 +1,5 @@
 ---
+
 title: "sspr2(3)"
 name: "sspr2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sspr2/"
 description: "sspr2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sspr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, AP)<br />
  <i></i><code>SSPR2</code></p>

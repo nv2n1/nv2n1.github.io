@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-color-chooser(1)"
 name: "gnome-color-chooser"
 section: "1"
@@ -9,9 +10,7 @@ description: "gnome-color-chooser – GTK+/GNOME desktop appearance customizatio
 
 <h2>NAME</h2>
 <p> gnome-color-chooser &#8211; GTK+/GNOME desktop appearance customization tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-color-chooser</code> [<i>options</i>] [<i>filename</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> GNOME Color Chooser is an application for customizing the appearance of the GNOME desktop. </p>
 <p> Filename: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Theme to open&nbsp;<wbr>(*.gnomecc) </p>

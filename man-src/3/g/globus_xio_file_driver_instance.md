@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_file_driver_instance(3)"
 name: "globus_xio_file_driver_instance"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_file_driver_instance/"
 description: "Opening/Closing – An XIO handle with the file driver can be created with globus_xio_handle_create()"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Opening/Closing &#8211; An XIO handle with the file driver can be created with <code>globus_xio_handle_create()</code> </p>
 <p> If there is no handle set on the attr passed to the <code>globus_xio_open()</code> call, it performs the equivalent of an open() call. In this case, the contact string must contain either a pathname or one of </p>
 <p><a href="stdin://,">stdin://,</a> <a href="stdout://,">stdout://,</a> or <a href="stderr://.">stderr://.</a> If a pathname is used, that path is opened. If one of the schemes are used the corresponding stdio handle is used (retrieved with fileno()). </p>

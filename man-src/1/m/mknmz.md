@@ -1,4 +1,5 @@
 ---
+
 title: "mknmz(1)"
 name: "mknmz"
 section: "1"
@@ -9,9 +10,7 @@ description: "mknmz – an indexer of Namazu"
 
 <h2>NAME</h2>
 <p> mknmz &#8211; an indexer of Namazu</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mknmz</code> [<i>options</i>] <i>&lt;target&gt;</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> mknmz 2.0.19, an indexer of Namazu.</p>
 <h3>Target files:</h3>
 <dl>

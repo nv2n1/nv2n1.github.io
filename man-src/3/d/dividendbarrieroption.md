@@ -1,4 +1,5 @@
 ---
+
 title: "dividendbarrieroption(3)"
 name: "dividendbarrieroption"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dividendbarrieroption/"
 description: "ql/experimental/finitedifferences/dividendbarrieroption.hpp – Barrier option on a single asset with discrete dividends."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/barrieroption.hpp&gt;<br />
  #include &lt;ql/instruments/dividendschedule.hpp&gt;<br />
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>

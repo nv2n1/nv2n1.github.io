@@ -1,4 +1,5 @@
 ---
+
 title: "perluts(1)"
 name: "perluts"
 section: "1"
@@ -6,20 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-perluts/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perluts - Perl under UTS 
 
- perluts - Perl under UTS 
-
-<h2>SYNOPSIS</h2>
-
- This document can be read <i>as is</i>: as <i></i><font SIZE="-1"><i>README</i></font><i>.uts</i>, or you can read it after you build your package using ``man perluts''. 
+This document can be read <i>as is</i>: as <i></i><font SIZE="-1"><i>README</i></font><i>.uts</i>, or you can read it after you build your package using ``man perluts''. 
 
  The purpose is to help you build Perl for <font SIZE="-1">UTS</font>, which, if you follow these instructions, should be easy, and result in a solidly working installation.
 
-<h2>DESCRIPTION</h2>
-
- Perl 5.7.2 (Developmental) or Perl 5.8.x (forthcoming) for <font SIZE="-1">UTS</font>
+Perl 5.7.2 (Developmental) or Perl 5.8.x (forthcoming) for <font SIZE="-1">UTS</font>
 
 <h2>BUILDING PERL ON UTS</h2>
 

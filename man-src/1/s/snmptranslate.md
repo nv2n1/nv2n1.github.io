@@ -1,4 +1,5 @@
 ---
+
 title: "snmptranslate(1)"
 name: "snmptranslate"
 section: "1"
@@ -9,9 +10,7 @@ description: "snmptranslate – translate MIB OID names between numeric and text
 
 <h2>NAME</h2>
 <p> snmptranslate &#8211; translate MIB OID names between numeric and textual forms</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmptranslate</code> [OPTIONS] OID [OID]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>snmptranslate</code> is an application that translates one or more SNMP object identifier values from their symbolic (textual) forms into their numerical forms (or vice versa). </p>
 <p> OID is either a numeric or textual object identifier.</p>
 <h2>OPTIONS</h2>

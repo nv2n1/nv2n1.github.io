@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_message(3)"
 name: "ldb_message"
 section: "3"
@@ -8,7 +9,6 @@ description: "ldb_message –"
 ---
 
 <p> a <code>ldb_message</code> represents all or part of a record.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ldb.h&gt;</p>
 <h3>Data Fields</h3>
 <p> struct ldb_dn * <code>dn</code> </p>

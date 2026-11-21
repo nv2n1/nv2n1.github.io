@@ -1,4 +1,5 @@
 ---
+
 title: "ocamlobjinfo(1)"
 name: "ocamlobjinfo"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ocamlobjinfo/"
 description: "ocamlobjinfo – dump information about OCaml compiled objects"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ocamlobjinfo</code> file &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Dump information contained in OCaml compiled objects. It works on .cmi, .cmo, .cma, .cmx, .cmxa, .cmxs files and pure bytecode executables. </p>
 <p> <code>ocamlobjinfo</code> is able to show information regarding: </p>
 <dl>

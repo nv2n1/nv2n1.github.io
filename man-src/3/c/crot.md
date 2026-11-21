@@ -1,4 +1,5 @@
 ---
+
 title: "crot(3)"
 name: "crot"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-crot/"
 description: "crot.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>crot</code> (N, CX, INCX, CY, INCY, C, S)<br />
  <i></i><code>CROT</code> applies a plane rotation with real cosine and complex sine to a pair of complex vectors.</p>

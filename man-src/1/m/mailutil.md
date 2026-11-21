@@ -1,4 +1,5 @@
 ---
+
 title: "mailutil(1)"
 name: "mailutil"
 section: "1"
@@ -22,7 +23,6 @@ description: "mailutil – mail utility program"
 <p> <code>mailutil appenddelete [-rw] [-kw] [-ig] SOURCE DESTINATION</code> </p>
 <p> <code>mailutil prune MAILBOX CRITERIA</code> </p>
 <p> <code>mailutil transfer [-m mode] [-rw] [-kw] [-ig] SOURCE DESTINATION</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>mailutil</code> replaces the old chkmail, imapcopy, imapmove, imapxfer, mbxcopy, mbxcreat, and mbxcvt programs. </p>
 <p> <code>mailutil check</code> determines whether new mail exists in the given mailbox (the default is INBOX). The number of new messages is defined as the number of messages that have &quot;Recent&quot; status set. If the mailbox contains no new messages, <code>mailutil check</code> will indicate that no new mail is present; otherwise, it will report the number of new messages. In either case, it will also indicate the canonical form of the name of the mailbox. </p>
 <p> <code>mailutil create</code> creates a new <i>mailbox</i> with the given name. The mailbox name must not already exist. A mailbox can be created in a particular format by prefixing the name with <i>#driver.</i> followed by the format name and a <i>/</i> character. For example, the command </p>

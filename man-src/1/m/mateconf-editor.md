@@ -1,4 +1,5 @@
 ---
+
 title: "mateconf-editor(1)"
 name: "mateconf-editor"
 section: "1"
@@ -9,9 +10,7 @@ description: "mateconf-editor – an editor for the MateConf configuration syste
 
 <h2>NAME</h2>
 <p> mateconf-editor &#8211; an editor for the MateConf configuration system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mateconf-editor</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>MateConf-Editor</code> is a tool used for editing the MateConf configuration database. It might be useful when the proper configuration utility for some software provides no way of changing some option.</p>
 <h2>USAGE</h2>
 <p> The main window consists of a tree showing the MateConf configuration database hierarchy, a list of the keys available, and documentation for the selected key. </p>

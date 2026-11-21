@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-builder-convert(1)"
 name: "gtk-builder-convert"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gtk-builder-convert/"
 description: "gtk-builder-convert – Glade file conversion utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-builder-convert</code> [&#8211;skip-windows] [&#8211;target-version&nbsp;<i>version</i>] [&#8211;root&nbsp;<i>name</i>] {input} {output}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gtk-builder-convert</code></p>
 <dd>converts glade files into XML files which can be loaded with GtkBuilder. </dd>
 <p> It expects the name of a glade file as the first argument, and writes its output the file specified as the second argument.</p>

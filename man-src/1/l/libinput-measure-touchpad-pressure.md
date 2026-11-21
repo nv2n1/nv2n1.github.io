@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-measure-touchpad-pressure(1)"
 name: "libinput-measure-touchpad-pressure"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-libinput-measure-touchpad-pressure/"
 description: "libinput-measure-touchpad-pressure – measure pressure properties of devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>libinput measure touchpad-pressure [&#8211;help] [options]</code> [<i>/dev/input/event0] </i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>libinput measure touchpad-pressure</code> tool measures the pressure of touches on a touchpad. This is an interactive tool. When executed, the tool will prompt the user to interact with the touchpad. On termination, the tool prints a summary of the pressure values seen. This data should be attached to any pressure-related bug report. </p>
 <p> For a full description on how libinput&#8217;s pressure-to-click behavior works, see the online documentation here: <i><a rel="nofollow" href="https://wayland.freedesktop.org/libinput/doc/latest/touchpad_pressure.html">https://wayland.freedesktop.org/libinput/doc/latest/touchpad_pressure.html</a></i> and <i><a rel="nofollow" href="https://wayland.freedesktop.org/libinput/doc/latest/palm_detection.html">https://wayland.freedesktop.org/libinput/doc/latest/palm_detection.html</a></i> </p>
 <p> This is a debugging tool only, its output may change at any time. Do not rely on the output. </p>

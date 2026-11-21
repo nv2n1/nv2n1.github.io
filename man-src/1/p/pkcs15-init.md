@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs15-init(1)"
 name: "pkcs15-init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkcs15-init/"
 description: "pkcs15-init – smart card personalization utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <code>pkcs15-init</code> utility can be used to create a PKCS #15 structure on a smart card, and add key or certificate objects. Details of the structure that will be created are controlled via profiles. </p>
 <p> The profile used by default is <code>pkcs15</code>. Alternative profiles can be specified via the <code>-p</code> switch.</p>
 <h2>PIN USAGE</h2>

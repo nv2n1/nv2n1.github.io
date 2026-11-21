@@ -1,4 +1,5 @@
 ---
+
 title: "tload(1)"
 name: "tload"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tload/"
 description: "tload – graphic representation of system load average"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tload</code> [<i>options</i>] [<i>tty</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tload</code> prints a graph of the current system load average to the specified <i>tty</i> (or the tty of the <code>tload</code> process if none is specified).</p>
 <h2>OPTIONS</h2>
 <dl>

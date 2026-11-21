@@ -1,4 +1,5 @@
 ---
+
 title: "join(1)"
 name: "join"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-join/"
 description: "join – join lines of two files on a common field"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>join</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i></p>
-<h2>DESCRIPTION</h2>
 <p> For each pair of input lines with identical join fields, write a line to standard output. The default join field is the first, delimited by blanks. </p>
 <p> When FILE1 or FILE2 (not both) is -, read standard input.</p>
 <dl>

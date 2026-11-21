@@ -1,4 +1,5 @@
 ---
+
 title: "isamax(3)"
 name: "isamax"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isamax/"
 description: "isamax.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>isamax</code> (N, SX, INCX)<br />
  <i></i><code>ISAMAX</code></p>

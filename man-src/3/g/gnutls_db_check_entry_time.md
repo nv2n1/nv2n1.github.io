@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_db_check_entry_time(3)"
 name: "gnutls_db_check_entry_time"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_db_check_entry_time – API function"
 
 <h2>NAME</h2>
 <p> gnutls_db_check_entry_time &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>time_t gnutls_db_check_entry_time(gnutls_datum_t * </code><i>entry</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_datum_t * entry</dt>
 <dd> is a pointer to a <code>gnutls_datum_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function returns the time that this entry was active. It can be used for database entry expiration.</p>
 <h2>RETURNS</h2>
 <p> The time this entry was created, or zero on error.</p>

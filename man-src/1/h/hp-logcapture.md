@@ -1,4 +1,5 @@
 ---
+
 title: "hp-logcapture(1)"
 name: "hp-logcapture"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-logcapture/"
 description: "hp-logcapture – HPLIP logs capture Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Captures the HPLIP log files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>[su -c /sudo] hp-logcapture [USER INFO] [OPTIONS]</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>e.g. su -c &#8216;hp-logcapture&#8217;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-ls-remote(1)"
 name: "git-ls-remote"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-git-ls-remote/"
 description: "git-ls-remote – List references in a remote repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git ls - remote[--heads][--tags][--refs][--upload - pack = &lt;exec&gt;]
                [-q | --quiet][--exit - code][--get - url][--sort = &lt;key&gt;]
                [--symref][&lt;repository&gt;[&lt;refs&gt;...]]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Displays references available in a remote repository along with the associated commit IDs.</p>
 <h2>OPTIONS</h2>
 <p> -h, &#8211;heads, -t, &#8211;tags</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "oprofile(1)"
 name: "oprofile"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-oprofile/"
 description: "oprofile – a system-wide profiler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>opcontrol</code> [ <i>options</i> ]<br />
  <code>opreport</code> [ <i>options</i> ] [ profile specification ]<br />
  <code>opannotate</code> [ <i>options</i> ] [ profile specification ]<br />
  <code>oparchive</code> [ <i>options</i> ] [ profile specification ]<br />
  <code>opgprof</code> [ <i>options</i> ] [ profile specification ] </p>
-<h2>DESCRIPTION</h2>
 <p> OProfile is a profiling system for systems running Linux 2.6 and greater. Profiling runs transparently in the background and profile data can be collected at any time. OProfile makes use of the hardware performance counters provided on Intel, AMD, and other processors, and uses a timer-interrupt based mechanism on CPUs without counters. OProfile can profile the whole system in high detail.<br />
  For a gentle guide to using OProfile, please read the HTML documentation listed in SEE ALSO. </p>
 <h2>OPCONTROL</h2>

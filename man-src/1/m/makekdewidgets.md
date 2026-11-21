@@ -1,4 +1,5 @@
 ---
+
 title: "makekdewidgets(1)"
 name: "makekdewidgets"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-makekdewidgets/"
 description: "makekdewidgets – Builds Qt(TM) widget plugins from an ini style description file."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>makekdewidgets</code> [Qt(TM)-options] [KDE-options] <i>file</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>makekdewidgets</code></p>
 <dd>builds Qt(TM) widget plugins from an ini style description file.</dd>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "postqueue(1)"
 name: "postqueue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postqueue/"
 description: "postqueue – Postfix queue control"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 To flush the mail queue : postqueue[-v][-c config_dir] - f postqueue[-v][-c config_dir] - i queue_id postqueue[-v][-c config_dir] - s site
                                                                                                                                         To list the mail queue : postqueue[-v][-c config_dir] -
@@ -15,7 +15,6 @@ To flush the mail queue : postqueue[-v][-c config_dir] - f postqueue[-v][-c conf
                                                                                                                                                                      postqueue[-v][-c config_dir] -
                                                                                                                                                                  p
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postqueue/">postqueue</a></code>(1) command implements the Postfix user interface for queue management. It implements operations that are traditionally available via the <code><a href="/docs/linux/man/1-sendmail/">sendmail</a></code>(1) command. See the <code><a href="/docs/linux/man/1-postsuper/">postsuper</a></code>(1) command for queue operations that require super-user privileges such as deleting a message from the queue or changing the status of a message. </p>
 <p> The following options are recognized:</p>
 <dl>

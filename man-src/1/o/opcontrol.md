@@ -1,4 +1,5 @@
 ---
+
 title: "opcontrol(1)"
 name: "opcontrol"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-opcontrol/"
 description: "opcontrol – control OProfile profiling"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>opcontrol</code> [ <i>options</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>opcontrol</code> can be used to start profiling, end a profiling session, dump profile data, and set up the profiling parameters. </p>
 <h2>OPTIONS</h2>
 <dl>

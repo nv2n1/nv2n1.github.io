@@ -1,4 +1,5 @@
 ---
+
 title: "rzxcheck(1)"
 name: "rzxcheck"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rzxcheck/"
 description: "rzxcheck – Check the signature in a ZX Spectrum RZX file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rzxcheck</code> <i>rzxfile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> rzxcheck verifies the digital signature found in a Sinclair ZX Spectrum RZX input recording file.</p>
 <h2>OPTIONS</h2>
 <dl>

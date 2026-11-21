@@ -1,4 +1,5 @@
 ---
+
 title: "fpdoc(1)"
 name: "fpdoc"
 section: "1"
@@ -9,7 +10,6 @@ description: "fpdoc – The FPC Pascal unit documentation generator."
 
 <h2>NAME</h2>
 <p> fpdoc &#8211; The FPC Pascal unit documentation generator. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fpdoc</code> &#8211;input=inputcommand [&#8211;output=output] [&#8211;format=fmt] [&#8211;descr=descriptionfile] [&#8211;show-private] [&#8211;hide-protected] [&#8211;lang=language] [&#8211;content=contentfile] [&#8211;import=importfile] [&#8211;package=packagename] [&#8211;html-search=searchpage] [&#8211;ostarget=target] [&#8211;cpu-target=target] [&#8211;latex-extension=ext] [&#8211;latex-highlight] </p>
 <h2>Description</h2>
 <p> <code>fpdoc</code> scans a Free Pascal unit source file and generates documentation for it. The documentation can be in various formats (currently HTML and LaTeX) It can read various description files which contain the description for the various symbols found in the unit file. </p>

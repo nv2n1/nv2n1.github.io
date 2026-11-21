@@ -1,4 +1,5 @@
 ---
+
 title: "volname(1)"
 name: "volname"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-volname/"
 description: "volname – return volume name"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> volname [&lt;device-file&gt;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Volname</code> returns the volume name for a device formatted with an ISO-9660 file system, typically a CD-ROM. It also works with normal files that contain a ISO-9660 file system. </p>
 <p> The file name can be specified on the command line. If omitted, it defaults to /dev/cdrom. </p>
 <h2>AUTHOR</h2>

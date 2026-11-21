@@ -1,4 +1,5 @@
 ---
+
 title: "brecsum(1)"
 name: "brecsum"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-brecsum/"
 description: "brecsum – Generate SHA1 sums of raw Blackberry database records."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>brecsum</code> &#8211; Generate SHA1 sums of raw Blackberry database records. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>brecsum</code> [-d db][-h][-p pin][-P pass][-v]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>brecsum</code> downloads the specified database(s) and computes a SHA1 checksum on each raw record it finds. The SHA1 sums are written to stdout. </p>
 <p> This is mainly useful for verifying the integrity of restored data during testing.</p>
 <h2>OPTIONS</h2>

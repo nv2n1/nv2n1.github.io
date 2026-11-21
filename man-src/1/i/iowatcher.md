@@ -1,4 +1,5 @@
 ---
+
 title: "iowatcher(1)"
 name: "iowatcher"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-iowatcher/"
 description: "iowatcher – Create visualizations from blktrace results"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>iowatcher</code> <i>OPTIONS&#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> iowatcher graphs the results of a blktrace run. It can graph the result of an existing blktrace, start a new blktrace, or start a new blktrace and a benchmark run. It can then create an image or movie of the IO from a given trace. iowatcher can produce either SVG files or movies in mp4 format (with ffmpeg) or ogg format (with png2theora). </p>
 <h2>OPTIONS</h2>
 <dl>

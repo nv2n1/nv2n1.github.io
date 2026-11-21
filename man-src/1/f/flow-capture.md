@@ -1,4 +1,5 @@
 ---
+
 title: "flow-capture(1)"
 name: "flow-capture"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-capture – Manage storage of flow file archives by expiring 
 
 <h2>NAME</h2>
 <p> flow-capture &#8211; Manage storage of flow file archives by expiring old data.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-capture</code> [ <code>-hu</code> ] [ <code>-b</code><i> big|little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-c</code><i> flow_clients</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-D</code><i> daemonize</i> ] [ <code>-e</code><i> expire_count</i> ] [ <code>-f</code><i> filter_fname</i> ] [ <code>-F</code><i> filter_definition</i> ] [ <code>-E</code><i> expire_size</i> ] [ <code>-n</code><i> rotations</i> ] [ <code>-N</code><i> nesting_level</i> ] [ <code>-p</code><i> pidfile</i> ] [ <code>-R</code><i> rotate_program</i> ] [ <code>-S</code><i> stat_interval</i> ] [ <code>-t</code><i> tag_fname</i> ] [ <code>-T</code><i> active_def</i><code>|</code><i>active_def,active_def</i><i>&#8230;</i> ] [ <code>-V</code><i> pdu_version</i> ] [ <code>-z</code><i> z_level</i> ] <code>-w</code><i> workdir</i> [ <code>-x</code><i> xlate_fname</i> ] [ <code>-X</code><i> xlate_definition</i> ] <i>localip/remoteip/port</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-capture</code> utility will receive and store NetFlow exports to disk. The flow files are rotated <i>rotations</i>times per day and expiration of old flow files can be configured by number of files or total space utilization. Files are stored in <i>workdir</i> and can optionally be stored in additional levels of directories. Active files created by <code>flow-capture</code> begin with &#8216;tmp&#8217;. Files that are complete begin with &#8216;ft&#8217;. </p>
 <p> When the <i>remoteip</i> is configured only flows from that exporter will be processed, this is the most secure and recommended configuration. When the <i>localip</i> is configured <code>flow-capture</code> will only process flows sent to the <i> localip</i> IP address. If <i>remoteip</i> is 0 (not configured) flows from any source IP address are accepted. Multiple non aggregated PDU versions may be accepted at once to support Cisco&#8217;s Catalyst 6500 NetFlow implementation which exports from both the supervisor and MSFC with the same IP address and same port but different export versions. In this case the exports will be stored in the format specified by <i>pdu_version</i> or whichever export type is received first. </p>
 <p> NetFlow exports are UDP and do not employ congestion control or a retransmission mechanism. If the server flow-capture is configured on is too busy, or the network is congested or lossy NetFlow exports will be lost. An estimate of lost flows is recorded in the flow files, and logged via syslog. Most servers will provide a count of dropped packets due to full socket buffers via the <code>netstat</code> utility. For example <code>netstat -s | grep full</code> will provide a count of UDP packets dropped due to full socket buffers. If this is a persistent occurrence either <code>flow-capture</code> will need a larger server or the compression level should be decreased with -z. </p>

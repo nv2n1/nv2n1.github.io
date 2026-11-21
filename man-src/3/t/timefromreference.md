@@ -1,4 +1,5 @@
 ---
+
 title: "timefromreference(3)"
 name: "timefromreference"
 section: "3"
@@ -6,8 +7,8 @@ letter: "t"
 url: "/docs/linux/man/3-timefromreference/"
 description: "QuantLib::TermStructure – Basic term-structure functionality."
 ---
+
 <p>QuantLib::TermStructure &#8211; Basic term-structure functionality. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructure.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gchemtable(1)"
 name: "gchemtable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gchemtable/"
 description: "gchemtable – periodic table of the elements"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <code>gchemtable</code> is a periodic table of the elements application.</p>
 <h2>OPTIONS</h2>
 <p> No options are available.</p>

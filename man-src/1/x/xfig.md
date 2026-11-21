@@ -1,4 +1,5 @@
 ---
+
 title: "xfig(1)"
 name: "xfig"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-xfig/"
 description: "xfig – Facility for Interactive Generation of figures under X11 Version 3.2.7b"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfig &#8211; Facility for Interactive Generation of figures under X11<br />
  Version 3.2.7b </p>
-<h2>SYNOPSIS</h2>
 <p> <code>xfig</code> [<i>options</i>] [<i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xfig</i> is a menu-driven tool that allows the user to draw and manipulate objects interactively under the X Window System. <code>It runs under X version 11</code> <code>release 4 or higher</code> and requires a two- or three-button mouse. <i>file</i> specifies the name of a file to be edited. The objects in the file will be read at the start of <i>xfig</i>. </p>
 <p> The bulk of the documentation for <i>xfig</i> is in an HTML-based reference guide. See the Help menu in <i>xfig</i> or point your browser at <i>/usr/share/doc/xfig/html/index.html</i>. There are both English and Japanese versions. </p>
 <p> When using a two-button mouse use the <i>&lt;Meta&gt;</i> key and the right button at the same time to effect the action of the middle button. </p>

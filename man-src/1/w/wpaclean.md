@@ -1,4 +1,5 @@
 ---
+
 title: "wpaclean(1)"
 name: "wpaclean"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-wpaclean/"
 description: "wpaclean – clean wpa capture files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wpaclean &lt;out.cap&gt; &lt;in.cap&gt; [in2.cap] [&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>wpaclean</code> Cleans capture files to get only the 4-way handshake and a beacon. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by David Francos Cuartero &lt;xayon [at] xayon.net&gt;. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>

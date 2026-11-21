@@ -1,4 +1,5 @@
 ---
+
 title: "bggen(1)"
 name: "bggen"
 section: "1"
@@ -11,7 +12,6 @@ description: "bggen – generates colored backgrounds on X11 displays"
 <p> bggen &#8211; generates colored backgrounds on X11 displays</p>
 <h2>SYNTAX</h2>
 <p> <code>bggen</code> [-d display] [-g geometry] [-G rptgeom] [-r rot] [-a] [-w width] [-h height] [-b bits] &lt;color-spec&gt; [&lt;color-spec&gt; &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>bggen</code> is a program that generates a rectangular 24-bit image, with a smooth vertical gradient between the listed colors. (If you only specify one color, the image will be a single solid color.) The top of the image will be in color (r1,g1,b1), and the bottom of the image will be in color (rn,gn,bn). Intermediate positions in the image are interpolated between these colors. If you specify more than 2 colors, the gradient passes through all the specified colors, in the order specified. </p>
 <p> The &#8216;-d&#8217; option lets you specify what display to connect to. <code>bggen</code> only connects to the display to find out the size of the screen (and hence, the default size for the generated image). </p>
 <p> The &#8216;-g&#8217; option lets you control the size of the image, as a standard X geometry specification. (ie, something like &quot;512&#215;348&quot;) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wxcas(1)"
 name: "wxcas"
 section: "1"
@@ -7,8 +8,6 @@ url: "/docs/linux/man/1-wxcas/"
 description: "wxcas – wx c aMule statistics"
 ---
 
-<h2>SYNOPSIS</h2>
-<h2>DESCRIPTION</h2>
 <p> <code>wxcas</code> is a program for displaying the contents of your online signature file in a nice wx Window on your Desktop. For this to work, you must enable the &quot;Online Signature&quot; option in aMule&#8217;s preferences. </p>
 <p> Based on Pedro de Oliveira&#8217;s <code><a href="/docs/linux/man/1-cas/">cas</a></code>(1). <code>wxcas</code> was written by ThePolish &lt;thepolish [at] vipmail.ru&gt; </p>
 <p> This app doesn&#8217;t take any arguments.</p>

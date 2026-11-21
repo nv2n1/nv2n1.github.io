@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-delete-lb-policy(1)"
 name: "eulb-delete-lb-policy"
 section: "1"
@@ -9,12 +10,10 @@ description: "eulb-delete-lb-policy – Delete a policy from a load balancer"
 
 <h2>NAME</h2>
 <p> eulb-delete-lb-policy &#8211; Delete a policy from a load balancer</p>
-<h2>SYNOPSIS</h2>
 <p> eulb-delete-lb-policy <code>-p</code> POLICY [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN]</dt>
 <dd> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Delete a policy from a load balancer</p>
 <h3>positional arguments:</h3>
 <dl>

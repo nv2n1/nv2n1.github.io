@@ -1,4 +1,5 @@
 ---
+
 title: "re2c(1)"
 name: "re2c"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-re2c/"
 description: "re2c – convert regular expressions to C/C++"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>re2c</code> [<i>OPTIONS</i>] <i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>re2c</code> is a lexer generator for C/C++. It finds regular expression specifications inside of C/C++ comments and replaces them with a hard-coded DFA. The user must supply some interface code in order to control and customize the generated DFA.</p>
 <h2>EXAMPLE</h2>
 <p> Given the following code: </p>

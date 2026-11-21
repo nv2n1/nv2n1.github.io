@@ -1,4 +1,5 @@
 ---
+
 title: "dd_driver(3)"
 name: "dd_driver"
 section: "3"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/3-dd_driver/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- dd_driver - Data descriptors globus_xio uses data descriptors to associate meta data with the data being writen or the data read. 
+dd_driver - Data descriptors globus_xio uses data descriptors to associate meta data with the data being writen or the data read. 
 
  Data descriptors flow into the drivers read and write interface functions by way of the operation structure. If the driver is interested in viewing the data decriptor it can request it from the operation structure via a call to globus_xio_driver_operation_get_data_descriptor() and it can view any driver specific data descriptor via a call to globus_xio_driver_data_descriptor_get_specific(). The driver can modify values in the data descriptor by setting values before passing the request down the stack. Several functions are available to modify the data descriptors. There is no need to 'set()' the data descriptors back into the operation. The functions for manipluating the values in a DD affect the values xio has directly. 
 

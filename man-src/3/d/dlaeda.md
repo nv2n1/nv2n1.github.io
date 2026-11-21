@@ -1,4 +1,5 @@
 ---
+
 title: "dlaeda(3)"
 name: "dlaeda"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaeda/"
 description: "dlaeda.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaeda</code> (N, TLVLS, CURLVL, CURPBM, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, Q, QPTR, Z, ZTEMP, INFO)<br />
  <i></i><code>DLAEDA</code> used by sstedc. Computes the Z vector determining the rank-one modification of the diagonal matrix. Used when the original matrix is dense.</p>

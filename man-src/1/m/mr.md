@@ -1,4 +1,5 @@
 ---
+
 title: "mr(1)"
 name: "mr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mr/"
 description: "mr – a tool to manage all your version control repos"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mr</code> [options] checkout </p>
 <p> <code>mr</code> [options] update </p>
 <p> <code>mr</code> [options] status </p>
@@ -26,7 +26,6 @@ description: "mr – a tool to manage all your version control repos"
 <p> <code>mr</code> [options] action [params &#8230;] </p>
 <p> <code>mr</code> [options] [online|offline] </p>
 <p> <code>mr</code> [options] remember action [params &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mr</code> is a tool to manage all your version control repos. It can checkout, update, or perform other actions on a set of repositories as if they were one combined repository. It supports any combination of subversion, git, cvs, mercurial, bzr, darcs, fossil and veracity repositories, and support for other version control systems can easily be added. </p>
 <p> <code>mr</code> cds into and operates on all registered repositories at or below your working directory. Or, if you are in a subdirectory of a repository that contains no other registered repositories, it will stay in that directory, and work on only that repository, </p>
 <p> <code>mr</code> is configured by .mrconfig files, which list the repositories. It starts by reading the .mrconfig file in your home directory, and this can in turn chain load .mrconfig files from repositories. It also automatically looks for a .mrconfig file in the current directory, or in one of its parent directories. </p>

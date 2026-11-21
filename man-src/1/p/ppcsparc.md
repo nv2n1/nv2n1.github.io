@@ -1,4 +1,5 @@
 ---
+
 title: "ppcsparc(1)"
 name: "ppcsparc"
 section: "1"
@@ -9,9 +10,7 @@ description: "ppcsparc – Free Pascal Compiler (FPC) binary, name derived from 
 
 <h2>NAME</h2>
 <p> ppcsparc &#8211; Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ppcsparc [options] [sourcefile]</code></p>
-<h2>DESCRIPTION</h2>
 <p> This binary is the back-end binary of the <i>Free Pascal Compiler (FPC)</i> which is a <i>Turbo Pascal</i> and <i>Delphi (7.0) </i> compatible standalone (non GCC frontend) multitarget Pascal compiler. </p>
 <p> This binary should not be called directly, instead the <code>fpc</code> program should be used instead. It will choose the right back-end for compiling units for the requested platforms. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "seahorse-sharing(1)"
 name: "seahorse-sharing"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-seahorse-sharing/"
 description: "seahorse-sharing – public pgp key sharing"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>seahorse-sharing</code> [ <i>OPTION</i>&#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p> Seahorse is a GNOME application for managing encryption keys. </p>
 <p> This is the daemon program which shares your keys over the network if so desired. </p>
 <h2>OPTIONS</h2>

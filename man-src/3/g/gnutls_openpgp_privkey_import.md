@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_privkey_import(3)"
 name: "gnutls_openpgp_privkey_import"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_openpgp_privkey_import – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_privkey_import &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_privkey_import(gnutls_openpgp_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,7 +24,6 @@ description: "gnutls_openpgp_privkey_import – API function"
 <dd> not used for now</dd>
 <dt>unsigned int flags</dt>
 <dd> should be (0)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will convert the given RAW or Base64 encoded key to the native gnutls_openpgp_privkey_t format. The output will be stored in &#8216;key&#8217;.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_build_sql_delete(3)"
 name: "dblink_build_sql_delete"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-dblink_build_sql_delete/"
 description: "dblink_build_sql_delete – builds a DELETE statement using supplied values for primary key field values"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dblink_build_sql_delete(text relname,
                         int2vector primary_key_attnums,
                         integer num_primary_key_atts,
                         text[] tgt_pk_att_vals_array) returns text
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>dblink_build_sql_delete</code> can be useful in doing selective replication of a local table to a remote database. It builds a SQL <code>DELETE</code> command that will delete the row with the given primary key values.</p>
 <h2>ARGUMENTS</h2>
 <p> <i>relname</i></p>

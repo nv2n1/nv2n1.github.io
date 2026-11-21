@@ -1,4 +1,5 @@
 ---
+
 title: "genresscript(1)"
 name: "genresscript"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-genresscript/"
 description: "genresscript – generate resource script from PE and NE binaries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>genresscript</code> [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>genresscript</code> command. This manual page was written for the Debian GNU distribution because the original program does not have a manual page. </p>
 <p> Genresscript takes any number of PE or NE binaries, and outputs a resource script with all resources from the binaries listed. (Everything but the destination filename will be filled in in the script.) This is useful when you already have extracted images and want to create a resource script of them.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ndbd_redo_log_reader(1)"
 name: "ndbd_redo_log_reader"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ndbd_redo_log_reader/"
 description: "ndbd_redo_log_reader – check and print content of cluster redo log"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndbd_redo_log_reader </code><i>file_name</i><code> [</code><i>options</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Reads a redo log file, checking it for errors, printing its contents in a human-readable format, or both. <code>ndbd_redo_log_reader</code> is intended for use primarily by MySQL developers and support personnel in debugging and diagnosing problems. </dd>
 <p> This utility was made available as part of default builds beginning with MySQL Cluster NDB 6.1.3. It remains under development, and its syntax and behavior are subject to change in future releases. For this reason, it should be considered experimental at this time. </p>
 <p> The C++ source files for <code>ndbd_redo_log_reader</code> can be found in the directory /storage/ndb/src/kernel/blocks/dblqh/redoLogReader. </p>

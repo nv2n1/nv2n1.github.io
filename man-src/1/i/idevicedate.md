@@ -1,4 +1,5 @@
 ---
+
 title: "idevicedate(1)"
 name: "idevicedate"
 section: "1"
@@ -9,9 +10,7 @@ description: "idevicedate – Display the current date or set it on a device."
 
 <h2>NAME</h2>
 <p> idevicedate &#8211; Display the current date or set it on a device.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>idevicedate</code> [OPTIONS] </p>
-<h2>DESCRIPTION</h2>
 <p> Simple utility to manage the clock on a device. </p>
 <h2>OPTIONS</h2>
 <dl>

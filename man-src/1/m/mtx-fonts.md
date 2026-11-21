@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-fonts(1)"
 name: "mtx-fonts"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mtx-fonts/"
 description: "mtx-fonts – ConTeXt Font Database Management"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script fonts [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt Font Database Management</code></p>
 <h2>OPTIONS</h2>
 <dl>

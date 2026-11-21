@@ -1,4 +1,5 @@
 ---
+
 title: "git-credential-store(1)"
 name: "git-credential-store"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-credential-store/"
 description: "git-credential-store – Helper to store credentials on disk"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 git config credential.helper 'store [&lt;options&gt;]'
 </pre>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd>

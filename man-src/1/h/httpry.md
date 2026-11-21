@@ -1,4 +1,5 @@
 ---
+
 title: "httpry(1)"
 name: "httpry"
 section: "1"
@@ -9,11 +10,9 @@ description: "httpry – HTTP logging and information retrieval tool"
 
 <h2>NAME</h2>
 <p> httpry &#8211; HTTP logging and information retrieval tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>httpry [ -dFpq ] [ -b file ] [ -f format ] [ -i device ] [ -m methods ] [ -n count ] [ -o file ] [ -P file ] [ -r file ] [ -S bytes ] [ -u user ] [ &#8216;expression&#8217; ]</code><br />
  <code>httpry -s [ -l threshold ] [ -t seconds ]</code><br />
  <code>httpry -h</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>httpry</i> is a tool designed for displaying and logging HTTP traffic. It is not designed to perform analysis itself, but instead to capture, parse and log the traffic for later analysis. It can be run in real-time displaying the live traffic on the wire, or as a daemon process that logs to an output file.</p>
 <h2>OPTIONS</h2>
 <dl>

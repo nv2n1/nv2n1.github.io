@@ -1,4 +1,5 @@
 ---
+
 title: "podpath(1)"
 name: "podpath"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-podpath/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+podpath - print the path to the Pod 
 
- podpath - print the path to the Pod 
-
-<h2>DESCRIPTION</h2>
-
- podpath prints the path to the Pod. podpath calls stdpods underneath if the Pod name includes 'perl'. Otherwise, it searches down <tt>@INC</tt>, printing the '.pod' filename if there is a separate Pod file, otherwise printing the 'pm' filename. This accommodates systems where the Pod lives in a separate file from the module file.
+podpath prints the path to the Pod. podpath calls stdpods underneath if the Pod name includes 'perl'. Otherwise, it searches down <tt>@INC</tt>, printing the '.pod' filename if there is a separate Pod file, otherwise printing the 'pm' filename. This accommodates systems where the Pod lives in a separate file from the module file.
 
 <h2>EXAMPLES</h2>
 

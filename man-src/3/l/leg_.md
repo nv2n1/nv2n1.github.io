@@ -1,4 +1,5 @@
 ---
+
 title: "leg_(3)"
 name: "leg_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-leg_/"
 description: "QuantLib::CreditDefaultSwap – Credit default swap."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/creditdefaultswap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Public Member Functions</h3>

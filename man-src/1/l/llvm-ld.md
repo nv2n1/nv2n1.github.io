@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-ld(1)"
 name: "llvm-ld"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-ld/"
 description: "llvm-ld – LLVM linker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-ld</code> &lt;options&gt; &lt;files&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-ld</code> tool takes a set of <font SIZE="-1">LLVM</font> bitcode files and links them together into a single <font SIZE="-1">LLVM</font> bitcode file. The output bitcode file can be another bitcode file or an executable bitcode program. Using additional options, <code>llvm-ld</code> is able to produce native code executables. </p>
 <p> The <code>llvm-ld</code> tool is the main linker for <font SIZE="-1">LLVM</font>. It is used to link together the output of <font SIZE="-1">LLVM</font> front-end compilers and run &#8220;link time&#8221; optimizations (mostly the inter-procedural kind). </p>
 <p> The <code>llvm-ld</code> tools attempts to mimic the interface provided by the default system linker so that it can act as a <i>drop-in</i> replacement.</p>

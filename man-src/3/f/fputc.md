@@ -1,4 +1,5 @@
 ---
+
 title: "fputc(3)"
 name: "fputc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fputc/"
 description: "fputc, fputs, putc, putchar, puts – output of characters and strings"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 int fputc(int c, FILE *stream);
@@ -16,7 +16,6 @@ int putc(int c, FILE *stream);
 int putchar(int c);
 int puts(const char *s);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>fputc</code>() writes the character <i>c</i>, cast to an <i>unsigned char</i>, to <i>stream</i>. </p>
 <p> <code>fputs</code>() writes the string <i>s</i> to <i>stream</i>, without its terminating null byte (&#8216;\0&#8217;). </p>
 <p> <code>putc</code>() is equivalent to <code>fputc</code>() except that it may be implemented as a macro which evaluates <i>stream</i> more than once. </p>

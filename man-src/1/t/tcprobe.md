@@ -1,4 +1,5 @@
 ---
+
 title: "tcprobe(1)"
 name: "tcprobe"
 section: "1"
@@ -9,13 +10,11 @@ description: "tcprobe – probe multimedia streams from medium and print informa
 
 <h2>NAME</h2>
 <p> tcprobe &#8211; probe multimedia streams from medium and print information on the standard output</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tcprobe</code></dt>
 <dd> <code>-i</code> <i>name</i> [ <code>-B</code> ] [ <code>-M</code> ] [ <code>-T</code> <i>title</i> ] [ <code>-b</code> <i>bitrate</i> ] [ <code>-H</code> <i>n</i> ] [ <code>-f</code> <i>seekfile</i> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tcprobe</code> is Copyright (C) by Thomas Oestreich.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tcprobe</code> is part of and usually called by <code>transcode</code>.<br />
  However, it can also be used independently.<br />
  <code>tcprobe</code> reads source (from stdin if not explicitely defined) and prints on the standard output.</p>

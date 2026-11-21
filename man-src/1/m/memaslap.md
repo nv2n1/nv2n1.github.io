@@ -1,4 +1,5 @@
 ---
+
 title: "memaslap(1)"
 name: "memaslap"
 section: "1"
@@ -9,14 +10,12 @@ description: "memaslap – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memaslap &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> memaslap [options]</p>
 <dl>
 <dt><code>&#8211;help</code></dt>
 <dd>
 </dd><dt><code>MEMCACHED_SERVERS</code></dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>memaslap</code> is a load generation and benchmark tool for memcached servers. It generates configurable workload such as threads, concurrencies, connections, run time, overwrite, miss rate, key size, value size, get/set proportion, expected throughput, and so on. Furthermore, it also testss data verification, expire-time verification, UDP, binary protocol, facebook test, replication test, multi-get and reconnection, etc. </p>
 <p> Memaslap manages network connections like memcached with libevent. Each thread of memaslap is bound with a CPU core, all the threads don&#8217;t communicate with each other, and there are several socket connections in each thread. Each connection keeps key size distribution, value size distribution, and command distribution by itself. </p>
 <p> You can specify servers via the <i>memslap &#8211;servers</i> option or via the environment variable <i>MEMCACHED_SERVERS</i>.</p>

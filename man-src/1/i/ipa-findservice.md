@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-findservice(1)"
 name: "ipa-findservice"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-findservice – Find a service principal"
 
 <h2>NAME</h2>
 <p> ipa-findservice &#8211; Find a service principal</p>
-<h2>SYNOPSIS</h2>
 <p> ipa-findservice <i>string</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Searches for a service principal that contains <i>string</i>. </p>
 <p> The search is a substring search in the service principal. You can search for all principals for a given host, by service or a substring. </p>
 <p> All entries that match are displayed.</p>

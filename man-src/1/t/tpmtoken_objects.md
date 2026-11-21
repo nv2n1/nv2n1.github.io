@@ -1,4 +1,5 @@
 ---
+
 title: "tpmtoken_objects(1)"
 name: "tpmtoken_objects"
 section: "1"
@@ -9,9 +10,7 @@ description: "tpmtoken_objects – display the objects in the user’s TPM PKCS#
 
 <p>TPM Management &#8211; tpmtoken_objects<br />
  </center></p>
-<h2>SYNOPSIS</h2>
 <p> <code>tpmtoken_objects</code> [ OPTION ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tpmtoken_objects</code> displays information about the PKCS#11 objects that are in the user&#8217;s data store. </p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

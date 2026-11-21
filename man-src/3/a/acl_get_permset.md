@@ -1,4 +1,5 @@
 ---
+
 title: "acl_get_permset(3)"
 name: "acl_get_permset"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_get_permset/"
 description: "acl_get_permset – retrieve the permission set from an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_get_permset</code> &#8211; retrieve the permission set from an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_get_permset acl_entry_t entry_d acl_permset_t *permset_p</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_get_permset function returns in <i>permset_p</i> a descriptor to the permission set in the ACL entry indicated by <i>entry_d</i> Subsequent operations using the returned permission set descriptor operate on the permission set within the ACL entry. </p>
 <p> Any ACL entry descriptors that refer to the entry referred to by <i>entry_d</i> shall continue to refer to those entries.</p>
 <h2>RETURN VALUE</h2>

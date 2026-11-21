@@ -1,4 +1,5 @@
 ---
+
 title: "sec(1)"
 name: "sec"
 section: "1"
@@ -6,9 +7,9 @@ letter: "s"
 url: "/docs/linux/man/1-sec/"
 description: "sec – simple event correlator"
 ---
+
 <h2>NAME</h2>
 <p> sec - simple event correlator  </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>sec</code></dt>
 <dd> <p> [--conf=&lt;file pattern&gt; ...] <br />
@@ -46,7 +47,6 @@ description: "sec – simple event correlator"
  [--help] [-?] <br />
  [--version] </p>
  </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> SEC is an event correlation tool for advanced event processing which can be harnessed for event log monitoring, for network and security management, for fraud detection, and for any other task which involves event correlation. Event correlation is a procedure where a stream of events is processed, in order to detect (and act on) certain event groups that occur within predefined time windows. Unlike many other event correlation products which are heavyweight solutions, SEC is a lightweight and platform-independent event correlator which runs as a single process. The user can start it as a daemon, employ it in shell pipelines, execute it interactively in a terminal, run many SEC processes simultaneously for different tasks, and use it in a wide variety of other ways. </p>
 <p> SEC reads lines from files, named pipes, or standard input, matches the lines with patterns (regular expressions, Perl subroutines, etc.) for recognizing input events, and correlates events according to the rules in its configuration file(s). Rules are matched against input in the order they are given in the configuration file. If there are two or more configuration files, rule sequence from every file is matched against input (unless explicitly specified otherwise). SEC can produce output by executing external programs (e.g., <code><a href="/docs/linux/man/1-snmptrap/">snmptrap</a></code>(1) or <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1)), by writing to files, by sending data to TCP and UDP based servers, by calling precompiled Perl subroutines, etc. </p>
 <p> SEC can be run in various ways. For example, the following command line starts it as a daemon, in order to monitor events appended to the /var/log/messages syslog file with rules from /etc/sec/syslog.rules: </p>

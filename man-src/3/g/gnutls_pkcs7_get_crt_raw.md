@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs7_get_crt_raw(3)"
 name: "gnutls_pkcs7_get_crt_raw"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs7_get_crt_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs7_get_crt_raw &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs7_get_crt_raw(gnutls_pkcs7_t </code><i>pkcs7</i><code>, int </code><i>indx</i><code>, void * </code><i>certificate</i><code>, size_t * </code><i>certificate_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_pkcs7_get_crt_raw – API function"
 <dd> the contents of the certificate will be copied there (may be null)</dd>
 <dt>size_t * certificate_size</dt>
 <dd> should hold the size of the certificate</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return a certificate of the PKCS7 or RFC2630 certificate set. </p>
 <p> After the last certificate has been read <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>
 <h2>RETURNS</h2>

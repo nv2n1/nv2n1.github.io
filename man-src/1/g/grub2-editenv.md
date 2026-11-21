@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-editenv(1)"
 name: "grub2-editenv"
 section: "1"
@@ -9,13 +10,11 @@ description: "grub-editenv — Manage the GRUB environment block."
 
 <h2>NAME</h2>
 <p> <code>grub-editenv</code> &#8212; Manage the GRUB environment block. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>grub-editenv</code> [-v | &#8211;verbose] [<i>FILE</i>]</p>
 <dl>
 <dt>
 </dt><dd> &lt;create | list | set <i>NAME</i>=<i>VALUE</i> | unset <i>NAME</i>&gt; </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>grub-editenv</code> is a command line tool to manage GRUB&#8217;s stored environment. </p>
 <h2>OPTIONS</h2>
 <dl>

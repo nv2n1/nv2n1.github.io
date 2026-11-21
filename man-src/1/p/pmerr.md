@@ -1,4 +1,5 @@
 ---
+
 title: "pmerr(1)"
 name: "pmerr"
 section: "1"
@@ -9,10 +10,8 @@ description: "pmerr – translate Performance Co-Pilot error codes into error me
 
 <h2>NAME</h2>
 <p> <code>pmerr</code> &#8211; translate Performance Co-Pilot error codes into error messages</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmerr</code> <i>code</i> &#8230;<br />
  <code>pmerr</code> <code>-l</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmerr</code> accepts standard Performance Co-Pilot (PCP) error codes via the <i>code</i> argument(s) and generates the corresponding error text. </p>
 <p> Each <i>code</i> may be an integer, a hexadecimal value or a hexadecimal value prefixed by either &#8220;0x&#8221; or &#8220;0X&#8221;. </p>
 <p> Error codes must be less than zero, so if <i>code</i> is a positive number, a warning message is produced, and the negated value is used. </p>

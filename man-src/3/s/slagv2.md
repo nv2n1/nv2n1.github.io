@@ -1,4 +1,5 @@
 ---
+
 title: "slagv2(3)"
 name: "slagv2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slagv2/"
 description: "slagv2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slagv2</code> (A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, CSL, SNL, CSR, SNR)<br />
  <i></i><code>SLAGV2</code> computes the Generalized Schur factorization of a real 2-by-2 matrix pencil (A,B) where B is upper triangular.</p>

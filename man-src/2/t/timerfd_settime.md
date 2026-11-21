@@ -1,4 +1,5 @@
 ---
+
 title: "timerfd_settime(2)"
 name: "timerfd_settime"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-timerfd_settime/"
 description: "timerfd_create, timerfd_settime, timerfd_gettime – timers that notify via file descriptors"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/timerfd.h&gt;
 int timerfd_create(int clockid, int flags);
@@ -16,7 +16,6 @@ int timerfd_settime(int fd, int flags,
                     struct itimerspec *old_value);
 int timerfd_gettime(int fd, struct itimerspec *curr_value);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These system calls create and operate on a timer that delivers timer expiration notifications via a file descriptor. They provide an alternative to the use of <code><a href="/docs/linux/man/2-setitimer/">setitimer</a></code>(2) or <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2), with the advantage that the file descriptor may be monitored by <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7). </p>
 <p> The use of these three system calls is analogous to the use of <code><a href="/docs/linux/man/2-timer_create/">timer_create</a></code>(2), <code><a href="/docs/linux/man/2-timer_settime/">timer_settime</a></code>(2), and <code><a href="/docs/linux/man/2-timer_gettime/">timer_gettime</a></code>(2). (There is no analog of <code><a href="/docs/linux/man/2-timer_getoverrun/">timer_getoverrun</a></code>(2), since that functionality is provided by <code><a href="/docs/linux/man/2-read/">read</a></code>(2), as described below.)</p>
 <h3>timerfd_create()</h3>

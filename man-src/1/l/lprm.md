@@ -1,4 +1,5 @@
 ---
+
 title: "lprm(1)"
 name: "lprm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lprm/"
 description: "lprm – cancel print jobs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lprm</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h</code> <i>server</i>[<i>:port</i>] ] [ <code>-P</code> <i>destination</i>[<i>/instance</i>] ] [ <code>&#8211;</code> ] [ <i>job-id(s)</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lprm</code> cancels print jobs that have been queued for printing. If no arguments are supplied, the current job on the default destination is canceled. You can specify one or more job ID numbers to cancel those jobs or use the <i>&#8211;</i> option to cancel all jobs.</p>
 <h2>OPTIONS</h2>
 <p> The <code>lprm</code> command supports the following options:</p>

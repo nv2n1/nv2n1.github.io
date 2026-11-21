@@ -1,4 +1,5 @@
 ---
+
 title: "perf-script(1)"
 name: "perf-script"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-perf-script/"
 description: "perf-script – Read perf.data (created by perf record) and display trace output"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 perf script[&lt;options&gt;] perf script[&lt;options&gt;] record&lt;script&gt;[&lt;record - options&gt;]&lt;command&gt;
     perf script[&lt;options&gt;] report&lt;script&gt;[script - args] perf script[&lt;options&gt;]&lt;script&gt;&lt;required - script - args&gt;[&lt;record - options&gt;]&lt;command&gt;
         perf script[&lt;options&gt;]&lt;top - script&gt;[script - args]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command reads the input file and displays the trace recorded. </p>
 <p> There are several variants of perf script: </p>
 <dl>

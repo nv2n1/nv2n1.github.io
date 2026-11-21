@@ -1,4 +1,5 @@
 ---
+
 title: "readdir(2)"
 name: "readdir"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-readdir/"
 description: "readdir – read directory entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 int readdir(unsigned int fd, struct old_linux_dirent *dirp,
             unsigned int count);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
-<h2>DESCRIPTION</h2>
 <p> This is not the function you are interested in. Look at <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3) for the POSIX conforming C library interface. This page documents the bare kernel system call interface, which is superseded by <code><a href="/docs/linux/man/2-getdents/">getdents</a></code>(2). </p>
 <p> <code>readdir</code>() reads one <i>old_linux_dirent</i> structure from the directory referred to by the file descriptor <i>fd</i> into the buffer pointed to by <i>dirp</i>. The argument <i>count</i> is ignored; at most one <i>old_linux_dirent</i> structure is read. </p>
 <p> The <i>old_linux_dirent</i> structure is declared (privately in Linux kernel file <code>fs/readdir.c</code>) as follows: </p>

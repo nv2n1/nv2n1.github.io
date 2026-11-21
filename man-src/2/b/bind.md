@@ -1,4 +1,5 @@
 ---
+
 title: "bind(2)"
 name: "bind"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-bind/"
 description: "bind – bind a name to a socket"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt; /* See NOTES */
 int bind(int sockfd, const struct sockaddr *addr,
          socklen_t addrlen);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> When a socket is created with <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2), it exists in a name space (address family) but has no address assigned to it. <code>bind</code>() assigns the address specified by <i>addr</i> to the socket referred to by the file descriptor <i>sockfd</i>. <i>addrlen</i> specifies the size, in bytes, of the address structure pointed to by <i>addr</i>. Traditionally, this operation is called &#8220;assigning a name to a socket&#8221;. </p>
 <p> It is normally necessary to assign a local address using <code>bind</code>() before a <code>SOCK_STREAM</code> socket may receive connections (see <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2)). </p>
 <p> The rules used in name binding vary between address families. Consult the manual entries in Section 7 for detailed information. For <code>AF_INET</code>, see <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7); for <code>AF_INET6</code>, see <code><a href="/docs/linux/man/7-ipv6/">ipv6</a></code>(7); for <code>AF_UNIX</code>, see <code><a href="/docs/linux/man/7-unix/">unix</a></code>(7); for <code>AF_APPLETALK</code>, see <code><a href="/docs/linux/man/7-ddp/">ddp</a></code>(7); for <code>AF_PACKET</code>, see <code><a href="/docs/linux/man/7-packet/">packet</a></code>(7); for <code>AF_X25</code>, see <code><a href="/docs/linux/man/7-x25/">x25</a></code>(7); and for <code>AF_NETLINK</code>, see <code><a href="/docs/linux/man/7-netlink/">netlink</a></code>(7). </p>

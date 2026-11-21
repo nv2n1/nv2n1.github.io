@@ -1,4 +1,5 @@
 ---
+
 title: "lcov(1)"
 name: "lcov"
 section: "1"
@@ -9,7 +10,6 @@ description: "lcov – a graphical GCOV front-end"
 
 <h2>NAME</h2>
 <p> lcov &#8211; a graphical GCOV front-end</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lcov</code> <code>-c</code>|<code>&#8211;capture</code></p>
 <dl>
 <dt>
@@ -76,7 +76,6 @@ description: "lcov – a graphical GCOV front-end"
 <p> <code>lcov</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>]</p>
 <dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lcov</code> is a graphical front-end for GCC&#8217;s coverage testing tool gcov. It collects line, function and branch coverage data for multiple source files and creates HTML pages containing the source code annotated with coverage information. It also adds overview pages for easy navigation within the file structure. </p>
 <p> Use <code>lcov</code> to collect coverage data and <code>genhtml</code> to create HTML pages. Coverage data can either be collected from the currently running Linux kernel or from a user space application. To do this, you have to complete the following preparation steps: </p>
 <p> For Linux kernel coverage:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-clear(1)"
 name: "git-clear"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-clear – Rigorously clean up a repository"
 
 <h2>NAME</h2>
 <p> <code>git-clear</code> &#8211; Rigorously clean up a repository</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-clear</code></p>
-<h2>DESCRIPTION</h2>
 <p> Clears the repository to a state that it looks as if it was freshly cloned with the current HEAD. Basically it is a git-reset &#8211;hard together with deletion of all untracked files that reside inside the working directory, including those in .gitignore.</p>
 <h2>EXAMPLES</h2>
 <p> Clears the repo.</p>

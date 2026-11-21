@@ -1,4 +1,5 @@
 ---
+
 title: "npm-profile(1)"
 name: "npm-profile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-profile/"
 description: "npm-profile – Change settings on your registry profile"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-profile</code> &#8211; Change settings on your registry profile </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-as-14(1)"
 name: "llvm-as-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-as-14/"
 description: "llvm-as – LLVM assembler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-as</code> [<i>options</i>] [<i>filename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-as</code> is the LLVM assembler. It reads a file containing human-readable LLVM assembly language, translates it to LLVM bitcode, and writes the result into a file or to standard output. </p>
 <p> If <i>filename</i> is omitted or is <code>&#8211;</code>, then <code>llvm-as</code> reads its input from standard input. </p>
 <p> If an output file is not specified with the <code>-o</code> option, then <code>llvm-as</code> sends its output to a file or standard output by following these rules:</p>

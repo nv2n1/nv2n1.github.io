@@ -1,4 +1,5 @@
 ---
+
 title: "arecord(1)"
 name: "arecord"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-arecord/"
 description: "arecord, aplay – command-line sound recorder and player for ALSA soundcard driver"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>arecord</code> [<i>flags</i>] [filename]<br />
  <code>aplay</code> [<i>flags</i>] [filename [filename]] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>arecord</code> is a command-line soundfile recorder for the ALSA soundcard driver. It supports several file formats and multiple soundcards with multiple devices. If recording with interleaved mode samples the file is automatically split before the 2GB filesize. </p>
 <p> <code>aplay</code> is much the same, only it plays instead of recording. For supported soundfile formats, the sampling rate, bit depth, and so forth can be automatically determined from the soundfile header. </p>
 <p> If filename is not specified, the standard output or input is used. The <code>aplay</code> utility accepts multiple filenames. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dgbrfs(3)"
 name: "dgbrfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgbrfs/"
 description: "dgbrfs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbrfs</code> (TRANS, N, KL, KU, NRHS, AB, LDAB, AFB, LDAFB, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>DGBRFS</code></p>

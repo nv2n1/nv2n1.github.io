@@ -1,4 +1,5 @@
 ---
+
 title: "gnumeric(1)"
 name: "gnumeric"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gnumeric/"
 description: "gnumeric – a GNOME spreadsheet application."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnumeric</code> [<i>OPTIONS</i>] [<i>files</i> <i>&#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Gnumeric</code> is a powerful spreadsheet program created by the GNOME project. <code>Gnumeric</code> intends to compete with commercial spreadsheets by becoming fully compatible with Microsoft Excel(TM) and through the support of most popular spreadsheet file formats such as Excel(TM), Lotus 1-2-3(TM), Applix(TM), Sylk(TM), XBase(TM), Oleo(TM) and OpenOffice.org formats. </p>
 <p> <code>Gnumeric</code> supports advanced calculations using statistical, financial and database access functions. Plotting data is supported through an incomplete but powerful plotting system. A plugin system extends <code>gnumeric</code> , for instance enabling the export of data to the LaTeX \longtable format. Plugins can be used to define custom functionality. A rudimentary scripting API for the Python language exists and will be extended in the near future. Since <code>gnumeric</code> is <code>free</code> software, <code>gnumeric</code> can also be extended directly at the source code level by any competent programmer. </p>
 <p> The program can be started from the command line as <code>gnumeric</code> or from one of the menus provided by the underlying platform. When started on the command line, <code>gnumeric</code> may be followed by the options listed below and possibly the names of files in various spreadsheet formats which will then be opened immediately. For instance, the command: </p>

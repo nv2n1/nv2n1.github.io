@@ -1,4 +1,5 @@
 ---
+
 title: "cdb(1)"
 name: "cdb"
 section: "1"
@@ -15,7 +16,6 @@ description: "cdb – Constant DataBase manipulation tool"
  <code>cdb</code> -l [-m] [<i>dbname</i>|-]<br />
  <code>cdb</code> -s [<i>dbname</i>|-]<br />
  <code>cdb</code> -c [-m] [-t <i>tmpname</i>|-] [-p <i>perms</i>] [-weru0] <i>dbname</i> [<i>infile</i>&#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>cdb</code> used to query, dump, list, analyze or create CDB (Constant DataBase) files. Format of cdb described in <i><a href="/docs/linux/man/5-cdb/">cdb</a></i>(5) manpage. This manual page corresponds to version <code>0.78</code> of <code>tinycdb</code> package. </p>
 <h3>Query</h3>
 <p> <code>cdb -q</code> finds given <i>key</i> in a given <i>dbname</i> cdb file, and writes associated value to standard output if found (and exits with zero), or exits with non-zero if not found. <i>dbname</i> must be seekable file, and stdin can not be used as input. By default, <code>cdb</code> will print <i>all</i> records found. Options recognized in query mode: </p>

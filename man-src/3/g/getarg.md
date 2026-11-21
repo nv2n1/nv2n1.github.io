@@ -1,4 +1,5 @@
 ---
+
 title: "getarg(3)"
 name: "getarg"
 section: "3"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/3-getarg/"
 description: "getarg arg_printusage – collect command line options"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getarg</code> <code>arg_printusage</code> &#8211; collect command line options </p>
-<h2>SYNOPSIS</h2>
 <p> In getarg.h Ft int Fn getarg struct getargs *args size_t num_args int argc char **argv int *optind Ft void Fn arg_printusage struct getargs *args size_t num_args const char *progname const char *extra_string</p>
-<h2>DESCRIPTION</h2>
 <p> Fn getarg collects any command line options given to a program in an easily used way. Fn arg_printusage pretty-prints the available options, with a short help text. </p>
 <p> Fa args is the option specification to use, and it&#8217;s an array of Fa struct getargs elements. Fa num_args is the size of Fa args (in elements). Fa argc and Fa argv are the argument count and argument vector to extract option from. Fa optind is a pointer to an integer where the index to the last processed argument is stored, it must be initialised to the first index (minus one) to process (normally 0) before the first call. </p>
 <p> Fa arg_printusage take the same Fa args and Fa num_args as getarg; Fa progname is the name of the program (to be used in the help text), and Fa extra_string is a string to print after the actual options to indicate more arguments. The usefulness of this function is realised only be people who has used programs that has help strings that doesn&#8217;t match what the code does. </p>

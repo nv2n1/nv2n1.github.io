@@ -1,4 +1,5 @@
 ---
+
 title: "stg-refresh(1)"
 name: "stg-refresh"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-stg-refresh/"
 description: "stg-refresh – Generate a new commit for the current patch"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 stg refresh[options][--][ &lt; files or dirs &gt; ]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Include the latest work tree and index changes in the current patch. This command generates a new git commit object for the patch; the old commit is no longer visible. </p>
 <p> Refresh will warn if the index is dirty, and require use of either the <i>&#8211;index</i> or <i>&#8211;force</i> options to override this check. This is to prevent accidental full refresh when only some changes were staged using git add interative mode. </p>
 <p> You may optionally list one or more files or directories relative to the current working directory; if you do, only matching files will be updated. </p>

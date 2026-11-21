@@ -1,4 +1,5 @@
 ---
+
 title: "slacon(3)"
 name: "slacon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slacon/"
 description: "slacon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slacon</code> (N, V, X, ISGN, EST, KASE)<br />
  <i></i><code>SLACON</code> estimates the 1-norm of a square matrix, using reverse communication for evaluating matrix-vector products.</p>

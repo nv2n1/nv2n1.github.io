@@ -1,4 +1,5 @@
 ---
+
 title: "pk-device-rebind(1)"
 name: "pk-device-rebind"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pk-device-rebind/"
 description: "pk-device-rebind – Device software reloader"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pk-device-rebind</code> [<code>&#8211;help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>pk-device-rebind</code> command. </dd>
 <p> <code>pk-device-rebind</code> is the command line client for reloading devices after firmware has been installed.</p>
 <h2>OPTIONS</h2>

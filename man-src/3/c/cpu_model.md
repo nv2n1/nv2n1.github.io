@@ -1,4 +1,5 @@
 ---
+
 title: "cpu_model(3)"
 name: "cpu_model"
 section: "3"
@@ -9,10 +10,8 @@ description: "cpu_model – Contains the Intel CPU submodel. Allegro game progra
 
 <h2>NAME</h2>
 <p> cpu_model &#8211; Contains the Intel CPU submodel. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern int cpu_model;</code></p>
-<h2>DESCRIPTION</h2>
 <p> Contains the CPU submodel, where applicable. Allegro defines at least the following CPU family types (see include/allegro/system.h for a more complete list): </p>
 <pre>
    CPU_FAMILY_I586:

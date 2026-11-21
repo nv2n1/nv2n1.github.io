@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_delete(3)"
 name: "dirfile_delete"
 section: "3"
@@ -9,11 +10,9 @@ description: "dirfile_delete — remove a field from a dirfile"
 
 <h2>NAME</h2>
 <p> dirfile_delete &#8212; remove a field from a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_delete(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>int </code><i>flags</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_delete</code>() function attempts to delete the field specified by <i>field_code</i> in the dirfile specified by <i>dirfile</i>. The <i>field_code</i> should not contain a representation suffix. </dd>
 <p> The <i>flags</i> argument influences how the deletion attempt occurs. It may be zero, for the default behaviour, or else one or more of the following flags, bitwise or&#8217;d together:</p>
 <dl>

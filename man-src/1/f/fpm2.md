@@ -1,4 +1,5 @@
 ---
+
 title: "fpm2(1)"
 name: "fpm2"
 section: "1"
@@ -9,7 +10,6 @@ description: "fpm2 – Figaro’s Password Manager 2"
 
 <h2>NAME</h2>
 <p> fpm2 &#8211; Figaro&#8217;s Password Manager 2</p>
-<h2>DESCRIPTION</h2>
 <p> <code>fpm2</code> is a <font SIZE="-1">GUI</font> password manager using the <font SIZE="-1">GTK2 libraries. Passwords are encrypted using the AES-256 algorithm.</font></p>
 <h2>OPTIONS</h2>
 <dl>

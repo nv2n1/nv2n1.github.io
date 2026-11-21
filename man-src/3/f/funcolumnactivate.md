@@ -1,4 +1,5 @@
 ---
+
 title: "funcolumnactivate(3)"
 name: "funcolumnactivate"
 section: "3"
@@ -9,14 +10,12 @@ description: "FunColumnActivate – activate Funtools columns"
 
 <h2>NAME</h2>
 <p> <code>FunColumnActivate &#8211; activate Funtools columns</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
 <pre>
   void FunColumnActivate(Fun fun, char *s, char *plist)
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The FunColumnActivate() routine determines which columns (set up by <i>FunColumnSelect()</i>) ultimately will be read and/or written. By default, all columns that are selected using <i>FunColumnSelect()</i> are activated. The <i>FunColumnActivate()</i> routine can be used to turn off/off activation of specific columns. </p>
 <p> The first argument is the Fun handle associated with this set of columns. The second argument is a space-delimited list of columns to activate or de-activate. Columns preceded by &#8220;+&#8221; are activated and columns preceded by a &#8220;-&#8221; are de-activated. If a column is named without &#8220;+&#8221; or &#8220;-&#8221;, it is activated. The reserved strings &#8220;$region&#8221; and &#8216;$n&#8217; are used to activate a special columns containing the filter region value and row value, respectively, associated with this row. For example, if a filter containing two circular regions is specified as part of the Funtools file name, this column will contain a value of 1 or 2, depending on which region that row was in. The reserved strings &#8220;$x&#8221; and &#8220;$y&#8221; are used to activate the current binning columns. Thus, if the columns <font SIZE="-1">DX</font> and <font SIZE="-1">DY</font> are specified as binning columns: </p>
 <p>[sh $] fundisp foo.fits[bincols = (DX, DY)]</p>

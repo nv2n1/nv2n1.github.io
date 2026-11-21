@@ -1,4 +1,5 @@
 ---
+
 title: "openstack-db(1)"
 name: "openstack-db"
 section: "1"
@@ -9,9 +10,7 @@ description: "openstack-db – Set up a local database for use with an OpenStack
 
 <h2>NAME</h2>
 <p> openstack-db &#8211; Set up a local database for use with an OpenStack service</p>
-<h2>SYNOPSIS</h2>
 <p> <code>openstack-db</code> <i>&#8211;service &lt;service&gt; &#8211;init|&#8211;drop </i>[<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Set up a local database (MySQL) for use with openstack-&lt;service&gt;. This script will create a &#8216;&lt;service&gt;&#8217; database that is accessible only on localhost by user &#8216;&lt;service&gt;&#8217; with password &#8216;&lt;service&gt;&#8217;. The setup of a database with a multi-server OpenStack installation is outside of the scope of this simple helper script.</p>
 <h2>OPTIONS</h2>
 <dl>

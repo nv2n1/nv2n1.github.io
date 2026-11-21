@@ -1,4 +1,5 @@
 ---
+
 title: "dlatrz(3)"
 name: "dlatrz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlatrz/"
 description: "dlatrz.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlatrz</code> (M, N, L, A, LDA, TAU, WORK)<br />
  <i></i><code>DLATRZ</code> factors an upper trapezoidal matrix by means of orthogonal transformations.</p>

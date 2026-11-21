@@ -1,4 +1,5 @@
 ---
+
 title: "smiquery(1)"
 name: "smiquery"
 section: "1"
@@ -9,9 +10,7 @@ description: "smiquery – query single information from SMI MIB modules"
 
 <h2>NAME</h2>
 <p> smiquery &#8211; query single information from SMI MIB modules</p>
-<h2>SYNOPSIS</h2>
 <p> <code>smiquery</code> [ <code>-Vh</code> ] [ <code>-p </code><i>module</i> ] <i>command name</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>smiquery</code> program is used to query information on a single item from an MIB module, e.g. module meta information or a single type definition.</p>
 <h2>OPTIONS</h2>
 <dl>

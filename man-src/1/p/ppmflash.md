@@ -1,4 +1,5 @@
 ---
+
 title: "ppmflash(1)"
 name: "ppmflash"
 section: "1"
@@ -6,18 +7,11 @@ letter: "p"
 url: "/docs/linux/man/1-ppmflash/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+ppmflash - brighten a picture up to complete white-out 
 
- ppmflash - brighten a picture up to complete white-out 
+ppmflash <i>flashfactor </i> [<i>ppmfile</i>]
 
-<h2>SYNOPSIS</h2>
-
- ppmflash <i>flashfactor </i> [<i>ppmfile</i>]
-
-<h2>DESCRIPTION</h2>
-
- Reads a portable pixmap as input. Increases its brightness by the specified flashfactor up to a total white-out image. The flashfactor may be in the range from 0.0 (original picture's brightness) to 1.0 (full white-out, The Second After). 
+Reads a portable pixmap as input. Increases its brightness by the specified flashfactor up to a total white-out image. The flashfactor may be in the range from 0.0 (original picture's brightness) to 1.0 (full white-out, The Second After). 
 
  As <i>pnmgamma</i> does not do the brightness correction in the way I wanted it, this small program was written. 
 

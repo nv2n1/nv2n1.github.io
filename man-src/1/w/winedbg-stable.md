@@ -1,4 +1,5 @@
 ---
+
 title: "winedbg-stable(1)"
 name: "winedbg-stable"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-winedbg-stable/"
 description: "winedbg – Wine debugger"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>winedbg</code> [ <i>options</i> ] [ <i>program_name</i> [ <i>program_arguments</i> ] | <i>wpid</i> ] </p>
 <p> <code>winedbg &#8211;gdb</code> [ <i>options</i> ] [ <i>program_name</i> [ <i>program_arguments</i> ] | <i>wpid</i> ] </p>
 <p> <code>winedbg &#8211;auto </code><i>wpid</i> </p>
 <p> <code>winedbg &#8211;minidump</code> [ <i>file.mdmp</i> ] <i>wpid</i> </p>
 <p> <code>winedbg </code><i>file.mdmp</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>winedbg</code> is a debugger for Wine. It allows:</p>
 <dl>
 <dt>

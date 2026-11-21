@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-certupdate(1)"
 name: "ipa-certupdate"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-certupdate – Update local IPA certificate databases with cer
 
 <h2>NAME</h2>
 <p> ipa-certupdate &#8211; Update local IPA certificate databases with certificates from the server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ipa-certupdate</code> [<i>OPTIONS</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ipa-certupdate</code> can be used to update local IPA certificate databases with certificates from the server.</p>
 <h2>OPTIONS</h2>
 <dl>

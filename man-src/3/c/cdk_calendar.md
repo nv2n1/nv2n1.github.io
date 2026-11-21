@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_calendar(3)"
 name: "cdk_calendar"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_calendar – curses calendar widget."
 
 <h2>NAME</h2>
 <p> cdk_calendar &#8211; curses calendar widget.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -148,7 +148,6 @@ void setCDKCalendarYearAttribute(
     chtype attribute);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The Cdk calendar widget creates a pop-up calendar. The calendar widget allows the user to traverse through months/years using the cursor keys.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

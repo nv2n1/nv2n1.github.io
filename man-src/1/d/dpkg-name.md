@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-name(1)"
 name: "dpkg-name"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-name/"
 description: "dpkg-name – rename Debian packages to full package names"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-name</code> [<i>option</i>&#8230;] [<code>&#8212;</code>] <i>file</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>dpkg-name</code> program which provides an easy way to rename <code>Debian</code> packages into their full package names. A full package name consists of <i>package</i><code>_</code><i>version</i><code>_</code><i>architecture</i><code>.</code><i>package-type</i> as specified in the control file of the package. The <i>version</i> part of the filename consists of the upstream version information optionally followed by a hyphen and the revision information. The <i>package-type</i> part comes from that field if present or fallbacks to <code>deb</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

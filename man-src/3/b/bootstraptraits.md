@@ -1,4 +1,5 @@
 ---
+
 title: "bootstraptraits(3)"
 name: "bootstraptraits"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bootstraptraits/"
 description: "ql/termstructures/yield/bootstraptraits.hpp – bootstrap traits"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/discountcurve.hpp&gt;<br />
  #include &lt;ql/termstructures/yield/zerocurve.hpp&gt;<br />
  #include &lt;ql/termstructures/yield/forwardcurve.hpp&gt;<br />

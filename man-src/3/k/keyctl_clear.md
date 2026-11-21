@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_clear(3)"
 name: "keyctl_clear"
 section: "3"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/3-keyctl_clear/"
 description: "keyctl_clear – Clear a keyring"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_clear(key_serial_t keyring);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_clear</code>() clears the contents of a <i>keyring</i>. </p>
 <p> The caller must have <code>write</code> permission on a keyring to be able clear it.</p>
 <h2>RETURN VALUE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-create(1)"
 name: "whisper-create"
 section: "1"
@@ -13,7 +14,6 @@ description: "whisper-create – create a whisper database"
 <pre>
 whisper-create path secondsPerPoint:pointsToStore [secondsPerPoint:pointsToStore]*
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command creates a new whisper fixed-size database. For each database you specify one or more pairs of numbers describing how data points should be archived in this database. The first part of the pair is the precision, the second part of the pair is how many data points should be stored. You cannot configure two archives with the same precision inside a single database. Higher precision archives must evenly divide all lower precision archives&#8217; precision. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "cgttrf(3)"
 name: "cgttrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgttrf/"
 description: "cgttrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgttrf</code> (N, DL, D, DU, DU2, IPIV, INFO)<br />
  <i></i><code>CGTTRF</code></p>

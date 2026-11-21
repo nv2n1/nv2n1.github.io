@@ -1,4 +1,5 @@
 ---
+
 title: "fotoxx(1)"
 name: "fotoxx"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-fotoxx/"
 description: "fotoxx – digital photo editor and collection manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>fotoxx &#8211; digital photo editor and collection manager</p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><code>fotoxx</code>&nbsp;<wbr>[&nbsp;<wbr><code>-v</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-l</code>&nbsp;<wbr><i>code</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><i>file</i>&nbsp;<wbr>|&nbsp;<wbr><i>directory</i>&nbsp;<wbr>] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>Fotoxx is a graphical menu-driven program which operates in&nbsp;<wbr><br />
 &nbsp;<wbr>its own window. Organize and administer a collection of images,&nbsp;<wbr><br />
 &nbsp;<wbr>search for images, edit images, perform utility functions. </p>

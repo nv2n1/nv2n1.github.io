@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_new_frm_type(3)"
 name: "ldns_rr_new_frm_type"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print,
 
 <h2>NAME</h2>
 <p> ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print, ldns_resolver_print, ldns_zone_print </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -19,7 +19,6 @@ description: "ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print,
 <p> void ldns_rr_list_print(FILE *output, const ldns_rr_list *list); </p>
 <p> void ldns_resolver_print(FILE *output, const ldns_resolver *r); </p>
 <p> void ldns_zone_print(FILE *output, const ldns_zone *z); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_print</i>()</dt>
 <dd>Prints the data in the resource record to the given file stream (in presentation format) </dd>

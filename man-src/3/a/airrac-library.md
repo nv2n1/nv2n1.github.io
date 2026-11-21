@@ -1,4 +1,5 @@
 ---
+
 title: "airrac-library(3)"
 name: "airrac-library"
 section: "3"
@@ -10,11 +11,9 @@ description: "airrac-library –"
 <pre>
       C++ Simulated Revenue Accounting (RAC) System Library
 </pre>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;airrac/...&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> AirRAC is a C++ library of airline revenue accounting classes and functions, mainly targeting simulation purposes. </p>
 <p> AirRAC makes an extensive use of existing open-source libraries for increased functionality, speed and accuracy. In particular the Boost (C++ Standard Extensions: <a rel="nofollow" href="http://www.boost.org)">http://www.boost.org)</a> library is used. </p>
 <p> The library covers the following areas:</p>

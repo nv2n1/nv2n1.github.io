@@ -1,4 +1,5 @@
 ---
+
 title: "build-jar-repository(1)"
 name: "build-jar-repository"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-build-jar-repository/"
 description: "build-jar-repository – create a symbolic link to a JAR"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>build-jar-repository</code> [OPTION]&#8230; DIRECTORY JAR|artifact-coordinates</p>
-<h2>DESCRIPTION</h2>
 <p> Build a JAR repository in the named directory by copying files or creating symbolic links. The JARs can be identified by their names or Maven artifact coordinates. Artifact coordinates specify Maven artifact and are in format <code>groupId:artifactId[:extension[:classifier]]:version</code>. If extension is omitted then &quot;jar&quot; is used. If classifier is omitted then empty classifier is used. For more information see XMvn Configuration Reference.</p>
 <h2>OPTIONS</h2>
 <p> If no option is specified the default action will be to create symbolic links </p>

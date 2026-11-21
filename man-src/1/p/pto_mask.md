@@ -1,4 +1,5 @@
 ---
+
 title: "pto_mask(1)"
 name: "pto_mask"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pto_mask/"
 description: "pto_mask – Apply a mask"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pto_mask</code> [options] input.pto</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pto_mask</code> applies a mask to nominated images</p>
 <h2>USAGE</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "tracker3-info(1)"
 name: "tracker3-info"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tracker3-info/"
 description: "tracker3-info – Retrieve all information available for a certain file."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tracker3 info</code> [<i>options</i>&#8230;] &lt;<i>file1</i>&gt; [[<i>file2</i>] &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tracker3 info</code> asks for all the known metadata available for the given <i>file</i>. </p>
 <p> Multiple <i>file</i> arguments can be provided to retrieve information about multiple files. </p>
 <p> The <i>file</i> argument can be either a local path or a URI. It also does not have to be an absolute path.</p>

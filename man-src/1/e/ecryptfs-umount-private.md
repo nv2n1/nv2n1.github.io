@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-umount-private(1)"
 name: "ecryptfs-umount-private"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ecryptfs-umount-private/"
 description: "ecryptfs-umount-private – eCryptfs private unmount wrapper script."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-umount-private</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-umount-private</code> is a wrapper script for the <code>umount.ecryptfs_private</code> utility. </p>
 <p> It will unmount the user&#8217;s private directory and clear any associated keys from the user&#8217;s kernel keyring. </p>
 <h2>SEE ALSO</h2>

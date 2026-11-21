@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_attribute_t(3)"
 name: "globus_rls_attribute_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_rls_attribute_t –"
 ---
 
 <p> Object (LFN or PFN) attribute type.</p>
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> char * <code>name</code> </p>
 <p> <code>globus_rls_obj_type_t</code> <code>objtype</code> </p>

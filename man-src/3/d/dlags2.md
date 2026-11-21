@@ -1,4 +1,5 @@
 ---
+
 title: "dlags2(3)"
 name: "dlags2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlags2/"
 description: "dlags2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br />
  <i></i><code>DLAGS2</code> computes 2-by-2 orthogonal matrices U, V, and Q, and applies them to matrices A and B such that the rows of the transformed A and B are parallel.</p>

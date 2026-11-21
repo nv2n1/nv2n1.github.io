@@ -1,4 +1,5 @@
 ---
+
 title: "tangerine(1)"
 name: "tangerine"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tangerine/"
 description: "tangerine – Perl dependency metadata tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> tangerine [options] &lt;files or directories&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> This utility attempts to examine and analyze perl files, directories or perl distribution archives, reporting provided modules, and compile-time and run-time depencies. </p>
 <p> In the <code>diff</code> mode it reports differences between two directories or perl distribution archives.</p>
 <h2>OPTIONS</h2>

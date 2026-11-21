@@ -1,4 +1,5 @@
 ---
+
 title: "xclip(1)"
 name: "xclip"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xclip/"
 description: "xclip – command line interface to X selections (clipboard)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xclip</code> [OPTION] [FILE]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Reads from standard in, or from one or more files, and makes the data available as an X selection for pasting into X applications. Prints current X selection to standard out.</p>
 <dl>
 <dt><code>-i</code>, <code>-in</code></dt>

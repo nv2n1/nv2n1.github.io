@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_strerror(3)"
 name: "curl_multi_strerror"
 section: "3"
@@ -9,12 +10,10 @@ description: "curl_multi_strerror – return string describing error code"
 
 <h2>NAME</h2>
 <p> curl_multi_strerror &#8211; return string describing error code</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;curl/curl.h&gt;
 const char *curl_multi_strerror(CURLMcode errornum);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The curl_multi_strerror() function returns a string describing the CURLMcode error code passed in the argument <i>errornum</i>.</p>
 <h2>AVAILABILITY</h2>
 <p> This function was added in libcurl 7.12.0</p>

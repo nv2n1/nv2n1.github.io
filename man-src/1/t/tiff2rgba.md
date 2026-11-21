@@ -1,4 +1,5 @@
 ---
+
 title: "tiff2rgba(1)"
 name: "tiff2rgba"
 section: "1"
@@ -9,9 +10,7 @@ description: "tiff2rgba – convert a TIFF image to RGBA color space"
 
 <h2>NAME</h2>
 <p> tiff2rgba &#8211; convert a <font SIZE="-1">TIFF</font> image to RGBA color space</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tiff2rgba</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Tiff2rgba</i> converts a wide variety of TIFF images into an RGBA TIFF image. This includes the ability to translate different color spaces and photometric interpretation into RGBA, support for alpha blending, and translation of many different bit depths into a 32bit RGBA image. </p>
 <p> Internally this program is implemented using the <i>TIFFReadRGBAImage()</i> function, and it suffers any limitations of that image. This includes limited support for &gt; 8 BitsPerSample images, and flaws with some esoteric combinations of BitsPerSample, photometric interpretation, block organization and planar configuration. </p>
 <p> The generated images are stripped images with four samples per pixel (red, green, blue and alpha) or if the <code>-n</code> flag is used, three samples per pixel (red, green, and blue). The resulting images are always planar configuration contiguous. For this reason, this program is a useful utility for transform exotic TIFF files into a form ingestible by almost any TIFF supporting software.</p>

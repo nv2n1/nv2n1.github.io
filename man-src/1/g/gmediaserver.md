@@ -1,4 +1,5 @@
 ---
+
 title: "gmediaserver(1)"
 name: "gmediaserver"
 section: "1"
@@ -9,9 +10,7 @@ description: "GMediaServer – A UPnP compatible media server"
 
 <h2>NAME</h2>
 <p> GMediaServer &#8211; A UPnP compatible media server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmediaserver</code> [<i>OPTIONS</i>]&#8230; <i>DIRECTORIES</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Run the UPnP compatible media server. The directories arguments specify where audio files are located. </p>
 <p> <code>GMediaServer</code> is a UPnP music media server. It implements the server component that provides UPnP media devices with information on available audio files. GMediaServer uses the built-in http server of libupnp to stream the audio files to clients. </p>
 <p> When the main process receives the <code>USR1</code> signal, all directories specified on the command line will be rescanned. This functionality is currently quite crude in that all files are rescanned even if they were not changed.</p>

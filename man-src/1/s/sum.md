@@ -1,4 +1,5 @@
 ---
+
 title: "sum(1)"
 name: "sum"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sum/"
 description: "sum – checksum and count the blocks in a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print checksum and block counts for each FILE. </p>
 <p> With no FILE, or when FILE is -, read standard input.</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-cpan-update(1)"
 name: "git-cpan-update"
 section: "1"
@@ -6,20 +7,13 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-update/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+git-cpan-update - Import the latest version of a module and rebase the current branch 
 
- git-cpan-update - Import the latest version of a module and rebase the current branch 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     % git cpan-update
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This command runs <tt>&quot;git cpan-import&quot;</tt>, and then if <tt>&quot;cpan/master&quot;</tt> was updated runs <tt>&quot;git rebase cpan/master&quot;</tt>, bringing your patches up to date with the upstream.
+This command runs <tt>&quot;git cpan-import&quot;</tt>, and then if <tt>&quot;cpan/master&quot;</tt> was updated runs <tt>&quot;git rebase cpan/master&quot;</tt>, bringing your patches up to date with the upstream.
 
 <h2>VERSION</h2>
 

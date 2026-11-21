@@ -1,4 +1,5 @@
 ---
+
 title: "closelog(3)"
 name: "closelog"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-closelog/"
 description: "closelog, openlog, syslog, vsyslog – send messages to the system logger"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;syslog.h&gt;</code> </p>
 <p> <code>void openlog(const char *</code><i>ident</i><code>, int </code><i>option</i><code>, int </code><i>facility</i><code>);</code><br />
  <code>void syslog(int </code><i>priority</i><code>, const char *</code><i>format</i><code>, &#8230;);</code><br />
@@ -19,7 +19,6 @@ description: "closelog, openlog, syslog, vsyslog – send messages to the system
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <h3>openlog()</h3>
 <p> <code>openlog</code>() opens a connection to the system logger for a program. </p>
 <p> The string pointed to by <i>ident</i> is prepended to every message, and is typically set to the program name. If <i>ident</i> is NULL, the program name is used. (POSIX.1-2008 does not specify the behavior when <i>ident</i> is NULL.) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mprof-decoder(1)"
 name: "mprof-decoder"
 section: "1"
@@ -9,9 +10,7 @@ description: "mprof-decoder – Console decoder for the logging profiler output 
 
 <h2>NAME</h2>
 <p> mprof-decoder &#8211; Console decoder for the logging profiler output files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mprof-decoder</code> file</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mprof-decoder</code> Console decoder for the logging profiler output files </p>
 <p> Decodes the contents of a logging profiler output file and prints the data on standard output.</p>
 <h2>Options</h2>

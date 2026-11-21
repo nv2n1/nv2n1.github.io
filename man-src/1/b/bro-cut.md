@@ -1,4 +1,5 @@
 ---
+
 title: "bro-cut(1)"
 name: "bro-cut"
 section: "1"
@@ -9,9 +10,7 @@ description: "bro-cut – parse Bro logs"
 
 <h2>NAME</h2>
 <p> bro-cut &#8211; parse Bro logs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bro-cut</code> [<i>options</i>] [<i>columns</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Extracts the given columns from ASCII Bro logs on standard input, and outputs them to standard output. If no columns are given, all are selected. By default, <code>bro-cut</code> does not include format header blocks in the output. </p>
 <p> Columns are specified as a list of space-separated field names. The order of field names given to <code>bro-cut</code> determines the output order, which means <code>bro-cut</code> can be used to reorder columns. </p>
 <p> The ASCII Bro logs read on standard input must have intact format header blocks because <code>bro-cut</code> needs this information to correctly interpret the log file format. In fact, <code>bro-cut</code> can process the concatenation of multiple ASCII log files that have different column layouts.</p>

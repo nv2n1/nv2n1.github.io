@@ -1,4 +1,5 @@
 ---
+
 title: "gmake(1)"
 name: "gmake"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gmake/"
 description: "make – GNU make utility to maintain groups of programs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>make</code> [<i>OPTION</i>]&#8230; [<i>TARGET</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>make</i> utility will determine automatically which pieces of a large program need to be recompiled, and issue the commands to recompile them. The manual describes the GNU implementation of <code>make</code>, which was written by Richard Stallman and Roland McGrath, and is currently maintained by Paul Smith. Our examples show C programs, since they are very common, but you can use <code>make</code> with any programming language whose compiler can be run with a shell command. In fact, <code>make</code> is not limited to programs. You can use it to describe any task where some files must be updated automatically from others whenever the others change. </p>
 <p> To prepare to use <code>make</code>, you must write a file called the <i>makefile</i> that describes the relationships among files in your program, and the states the commands for updating each file. In a program, typically the executable file is updated from object files, which are in turn made by compiling source files. </p>
 <p> Once a suitable makefile exists, each time you change some source files, this simple shell command: </p>

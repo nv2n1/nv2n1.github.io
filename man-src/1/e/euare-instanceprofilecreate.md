@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofilecreate(1)"
 name: "euare-instanceprofilecreate"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-instanceprofilecreate – Create a new instance profile"
 
 <h2>NAME</h2>
 <p> euare-instanceprofilecreate &#8211; Create a new instance profile</p>
-<h2>SYNOPSIS</h2>
 <p> euare-instanceprofilecreate [-p PATH] [-r ROLE | <code>&#8211;create-role]</code> [-v]</p>
 <dl>
 <dt>[&#8211;as-account ACCOUNT] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] IPROFILE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a new instance profile</p>
 <h3>positional arguments:</h3>
 <dl>

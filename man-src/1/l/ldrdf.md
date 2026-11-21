@@ -1,4 +1,5 @@
 ---
+
 title: "ldrdf(1)"
 name: "ldrdf"
 section: "1"
@@ -9,9 +10,7 @@ description: "ldrdf – link RDOFF objects and libraries produced by rdflib(1)"
 
 <h2>NAME</h2>
 <p> ldrdf &#8211; link RDOFF objects and libraries produced by <a href="/docs/linux/man/1-rdflib/">rdflib</a>(1)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ldrdf</code> [-o <i>output-file</i>] <i>object-file</i>&#8230; [-l<i>library</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ldrdf</code> is a version of unix <code><a href="/docs/linux/man/1-ld/">ld</a></code>(1) (or DOS LINK) for use with RDOFF files. It is capable of linking RDOFF objects, and libraries produced with the <code><a href="/docs/linux/man/1-rdflib/">rdflib</a></code>(1) utility. </p>
 <p> Libraries must be specified with their path as no search is performed. Modules in libraries are not linked to the program unless they are referred to.</p>
 <h2>OPTIONS</h2>

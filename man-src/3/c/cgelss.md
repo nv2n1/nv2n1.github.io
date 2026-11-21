@@ -1,4 +1,5 @@
 ---
+
 title: "cgelss(3)"
 name: "cgelss"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgelss/"
 description: "cgelss.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgelss</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, RWORK, INFO)<br />
  <i></i><code> CGELSS solves overdetermined or underdetermined systems for GE matrices</code></p>

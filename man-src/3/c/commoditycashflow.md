@@ -1,4 +1,5 @@
 ---
+
 title: "commoditycashflow(3)"
 name: "commoditycashflow"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-commoditycashflow/"
 description: "ql/experimental/commodities/commoditycashflow.hpp – Commodity cash flow."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflow.hpp&gt;<br />
  #include &lt;ql/money.hpp&gt;<br />
  #include &lt;map&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sloccount(1)"
 name: "sloccount"
 section: "1"
@@ -9,9 +10,7 @@ description: "sloccount – count source lines of code (SLOC)"
 
 <h2>NAME</h2>
 <p> sloccount &#8211; count source lines of code (SLOC)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sloccount</code> [<code>&#8211;version</code>] [<code>&#8211;cached</code>] [<code>&#8211;append</code>] [ <code>&#8211;datadir</code> <i>directory</i> ] [<code>&#8211;follow</code>] [<code>&#8211;duplicates</code>] [<code>&#8211;crossdups</code>] [<code>&#8211;autogen</code>] [<code>&#8211;multiproject</code>] [<code>&#8211;filecount</code>] [<code>&#8211;wide</code>] [<code>&#8211;details</code>] [ <code>&#8211;effort</code> <i>F</i> <i>E</i> ] [ <code>&#8211;schedule</code> <i>F</i> <i>E</i> ] [ <code>&#8211;personcost</code> <i>cost</i> ] [ <code>&#8211;overhead</code> <i>overhead</i> ] [ <code>&#8211;addlang</code> <i>language</i> ] [ <code>&#8211;addlangall</code> ] [<code>&#8212;</code>] <i>directories</i></p>
-<h2>DESCRIPTION</h2>
 <p> sloccount counts the physical source lines of code (SLOC) contained in descendants of the specified set of directories. It automatically determines which files are source code files, and it automatically determines the computer language used in each file. By default it summarizes the SLOC results and presents various estimates (such as effort and cost to develop), but its output can be controlled by various options. </p>
 <p> If you give sloccount a list of two or more directories, the counts will be broken up according to that list. There is one important limitation: the basenames of the directories given as parameters must be different, because those names are used to group summary information. Thus, you can&#8217;t run &quot;sloccount /usr/src/hello /usr/local/src/hello&quot;. This limitation only applies to parameters of sloccount &#8211; subdirectories descended from the top directories can have the same basename. </p>
 <p> If you give sloccount only a single directory, sloccount tries to automatically find a reasonable breakdown for purposes of reporting (so it&#8217;ll produce a useful report). In this case, if the directory has at least two subdirectories, then those subdirectories will be used as the breakdown. If the single directory contains files as well as directories (or if you give sloccount some files as parameters), those files will be assigned to the directory &quot;top_dir&quot; so you can tell them apart from other contents. Finally, if there&#8217;s a subdirectory named &quot;src&quot;, then that subdirectory is again broken down, with all the further subdirectories prefixed with &quot;src_&quot;. Thus, if directory &quot;X&quot; has a subdirectory &quot;src&quot;, which contains subdirectory &quot;modules&quot;, sloccount will report a separate count for &quot;src_modules&quot;. </p>

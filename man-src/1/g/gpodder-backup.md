@@ -1,4 +1,5 @@
 ---
+
 title: "gpodder-backup(1)"
 name: "gpodder-backup"
 section: "1"
@@ -9,9 +10,7 @@ description: "gpodder-backup – Backup and restore utility for gPodder user dat
 
 <h2>NAME</h2>
 <p> gpodder-backup &#8211; Backup and restore utility for gPodder user data</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpodder-backup</code> [<i>&#8211;create|&#8211;extract</i>] <i>&lt;archive.gpo.tar.gz&gt; </i>[<i>options</i>] <code>gpodder-backup</code> <i>&#8211;purge</i></p>
-<h2>DESCRIPTION</h2>
 <p> This utility can be used to create a dump of the current gPodder data (configuration files + downloads), optionally skipping the real contents of the download folder (for submitting your data to a bug report without having to transfer lots of data).</p>
 <h2>OPTIONS</h2>
 <dl>

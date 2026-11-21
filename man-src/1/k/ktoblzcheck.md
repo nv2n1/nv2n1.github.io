@@ -1,4 +1,5 @@
 ---
+
 title: "ktoblzcheck(1)"
 name: "ktoblzcheck"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ktoblzcheck/"
 description: "ktoblzcheck – Check Account and BLZ (bank routing code)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ktoblzcheck [&#8211;returncode] [&#8211;file=&lt;datafile&gt;] &lt;bank-id&gt; &lt;account-id&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ktoblzcheck</code> application. </p>
 <p> <code>ktoblzcheck</code> is a program that will check a given account and blz for the bank being valid and the account being valid using some checksum calculations, if supported for that particular bank. The output is the clear-text name of the bank specified by &lt;bank-id&gt;, and whether the given &lt;account-id&gt; is a valid account number at this bank.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "xpath(1)"
 name: "xpath"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xpath/"
 description: "XML::XPath – a set of modules for parsing and evaluating XPath statements"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This module aims to comply exactly to the XPath specification at <a rel="nofollow" href="http://www.w3.org/TR/xpath">http://www.w3.org/TR/xpath</a> and yet allow extensions to be added in the form of functions. Modules such as <font SIZE="-1">XSLT</font> and XPointer may need to do this as they support functionality beyond XPath.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 use XML::XPath;
 use XML::XPath::XMLParser;

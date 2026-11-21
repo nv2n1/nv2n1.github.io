@@ -1,4 +1,5 @@
 ---
+
 title: "html-minifier(1)"
 name: "html-minifier"
 section: "1"
@@ -9,9 +10,7 @@ description: "html-minifier – HTML minifier with lint-like capabilities"
 
 <h2>NAME</h2>
 <p> html-minifier &#8211; HTML minifier with lint-like capabilities</p>
-<h2>SYNOPSIS</h2>
 <p> html-minifier [OPTIONS] [FILE(s)]</p>
-<h2>DESCRIPTION</h2>
 <p> HTMLMinifier is a highly configurable, well-tested, Javascript-based HTML minifier, with lint-like capabilities.</p>
 <h2>USAGE</h2>
 <p> If no input file(s) specified then STDIN will be used for input.</p>

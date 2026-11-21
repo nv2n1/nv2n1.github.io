@@ -1,4 +1,5 @@
 ---
+
 title: "semtimedop(2)"
 name: "semtimedop"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-semtimedop/"
 description: "semop, semtimedop – System V semaphore operations"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;
 #include &lt;sys/sem.h&gt;
@@ -18,7 +18,6 @@ int semtimedop(int semid, struct sembuf *sops, size_t nsops,
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>semtimedop</code>(): _GNU_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> Each semaphore in a System V semaphore set has the following associated values: </p>
 <p> unsigned short semval; /* semaphore value */ unsigned short semzcnt; /* # waiting for zero */ unsigned short semncnt; /* # waiting for increase */ pid_t sempid; /* PID of process that last </p>
 <p> <code>semop</code>() performs operations on selected semaphores in the set indicated by <i>semid</i>. Each of the <i>nsops</i> elements in the array pointed to by <i>sops</i> is a structure that specifies an operation to be performed on a single semaphore. The elements of this structure are of type <i>struct sembuf</i>, containing the following members: </p>

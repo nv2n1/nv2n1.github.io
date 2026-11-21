@@ -1,4 +1,5 @@
 ---
+
 title: "perlpragma(1)"
 name: "perlpragma"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlpragma/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlpragma - how to write a user pragma 
 
- perlpragma - how to write a user pragma 
-
-<h2>DESCRIPTION</h2>
-
- A pragma is a module which influences some aspect of the compile time or run time behaviour of Perl, such as <tt>&quot;strict&quot;</tt> or <tt>&quot;warnings&quot;</tt>. With Perl 5.10 you are no longer limited to the built in pragmata; you can now create user pragmata that modify the behaviour of user functions within a lexical scope.
+A pragma is a module which influences some aspect of the compile time or run time behaviour of Perl, such as <tt>&quot;strict&quot;</tt> or <tt>&quot;warnings&quot;</tt>. With Perl 5.10 you are no longer limited to the built in pragmata; you can now create user pragmata that modify the behaviour of user functions within a lexical scope.
 
 <h2>A basic example</h2>
 

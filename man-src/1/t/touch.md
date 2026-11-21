@@ -1,4 +1,5 @@
 ---
+
 title: "touch(1)"
 name: "touch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-touch/"
 description: "touch – change file timestamps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>touch</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Update the access and modification times of each FILE to the current time. </p>
 <p> A FILE argument that does not exist is created empty, unless <code>-c</code> or <code>-h</code> is supplied. </p>
 <p> A FILE argument string of &#8211; is handled specially and causes touch to change the times of the file associated with standard output. </p>

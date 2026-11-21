@@ -1,4 +1,5 @@
 ---
+
 title: "fddividendengine(3)"
 name: "fddividendengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fddividendengine/"
 description: "ql/pricingengines/vanilla/fddividendengine.hpp – base engine for option with dividends"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/vanilla/fdmultiperiodengine.hpp&gt;<br />
  #include &lt;ql/cashflows/dividend.hpp&gt; </p>
 <h3>Classes</h3>

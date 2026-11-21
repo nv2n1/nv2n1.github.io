@@ -1,4 +1,5 @@
 ---
+
 title: "columns(1)"
 name: "columns"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-columns/"
 description: "columns – Columnize Input Text"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>columns</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i>[[=| ]<i>value</i>]]&#8230; </p>
 <p> All arguments must be options.</p>
-<h2>DESCRIPTION</h2>
 <p> There is no description for this command.</p>
 <h2>OPTIONS</h2>
 <h3>Specify the output dimensions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "cggrqf(3)"
 name: "cggrqf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cggrqf/"
 description: "cggrqf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cggrqf</code> (M, P, N, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />
  <i></i><code>CGGRQF</code></p>

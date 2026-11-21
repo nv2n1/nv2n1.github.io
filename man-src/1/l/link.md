@@ -1,4 +1,5 @@
 ---
+
 title: "link(1)"
 name: "link"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-link/"
 description: "link – call the link function to create a link to a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>link</code> <i>,FILE1 FILE2/</i><br />
  <code>link</code> <i>,OPTION/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Call the link function to create a link named FILE2 to an existing FILE1.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

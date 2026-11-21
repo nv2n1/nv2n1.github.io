@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-update(1)"
 name: "docker-container-update"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-container-update/"
 description: "docker-container-update – Update configuration of one or more containers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker container update [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>docker container update</code> command dynamically updates container configuration. You can use this command to prevent containers from consuming too many resources from their Docker host. With a single command, you can place limits on a single container or on many. To specify more than one container, provide space-separated list of container names or IDs. </p>
 <p> With the exception of the <code>&#8211;kernel-memory</code> option, you can specify these options on a running or a stopped container. On kernel version older than 4.6, You can only update <code>&#8211;kernel-memory</code> on a stopped container or on a running container with kernel memory initialized. </p>
 <h2>OPTIONS</h2>

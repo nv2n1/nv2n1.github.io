@@ -1,4 +1,5 @@
 ---
+
 title: "ro-localization(1)"
 name: "ro-localization"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ro-localization/"
 description: "ro-localization – Monte-Carlo localization for beacon range-only measurements"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ro-localization <i>config_file.ini</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ro-localization</code> is a command-line application which processes a rawlog and tracks a mobile robot pose from the sequence of odometry and observations. It can also perform global localization. </p>
 <p> This program is a specialization of pf-localization, with an extended model to cope with unknown, dynamic biases in the beacon ranges. It also shows a real-time visualization in 3D of the particles, the beacons, and the measurements.</p>
 <h2>BUGS</h2>

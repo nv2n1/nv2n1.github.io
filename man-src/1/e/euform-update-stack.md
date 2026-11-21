@@ -1,4 +1,5 @@
 ---
+
 title: "euform-update-stack(1)"
 name: "euform-update-stack"
 section: "1"
@@ -9,12 +10,10 @@ description: "euform-update-stack – Update a stack’s template, parameters, o
 
 <h2>NAME</h2>
 <p> euform-update-stack &#8211; Update a stack&#8217;s template, parameters, or capabilities</p>
-<h2>SYNOPSIS</h2>
 <p> euform-update-stack [&#8211;template-file FILE | <code>&#8211;template-url</code> URL]</p>
 <dl>
 <dt>[&#8211;capabilities CAP[,&#8230;]] [-p KEY=VALUE]</dt>
 <dd> [&#8211;tag KEY[=VALUE] | <code>&#8211;delete-tags]</code> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] STACK</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Update a stack&#8217;s template, parameters, or capabilities</p>
 <h3>positional arguments:</h3>
 <dl>

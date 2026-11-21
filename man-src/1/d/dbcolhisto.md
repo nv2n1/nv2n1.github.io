@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolhisto(1)"
 name: "dbcolhisto"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbcolhisto/"
 description: "dbcolhisto – compute a histogram over a column of Fsdb data"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbcolhisto [-ag] [-W BucketWidth] [-S BucketStart] [-E BucketEnd] [-N NumberOfBuckets] column</p>
-<h2>DESCRIPTION</h2>
 <p> This program computes a histogram over a column of data. Records containing non-numeric data are considered null do not contribute to the stats (optionally they are treated as zeros). </p>
 <p> Defaults to 10 buckets over the exact range of data. Up to three parameters (number of buckets, start, end, and width) can be specified, the rest default accordingly. </p>
 <p> Buckets range from a value (given the the low column) to just below the next low value and buckets are equal width. If necessary, extra &#8220;&lt;min&#8221; and &#8220;&gt;max&#8221; buckets are created. By default, the last bucket includes max (and is thus infinitesimally larger than the other buckets). This irregularity can be removed with the <tt>&quot;-I&quot;</tt> option. </p>

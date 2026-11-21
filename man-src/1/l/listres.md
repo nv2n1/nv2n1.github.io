@@ -1,4 +1,5 @@
 ---
+
 title: "listres(1)"
 name: "listres"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-listres/"
 description: "listres – list resources in widgets"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>listres</code> [-option &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>listres</i> program generates a list of a widget&#8217;s resource database. The class in which each resource is first defined, the instance and class name, and the type of each resource is listed. If no specific widgets or the <i>-all</i> switch are given, a two-column list of widget names and their class hierarchies is printed.</p>
 <h2>OPTIONS</h2>
 <p> <i>Listres</i> accepts all of the standard toolkit command line options along with those listed below:</p>

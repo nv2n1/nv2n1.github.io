@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-format(1)"
 name: "nvme-format"
 section: "1"
@@ -6,16 +7,9 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-format/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-format - Format an NVMe device 
 
- nvme-format - Format an NVMe device 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme format&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                    [--lbaf = &lt;lbaf&gt; | -l&lt;lbaf&gt;]
                    [--ses = &lt;ses&gt; | -s&lt;ses&gt;]
@@ -24,11 +18,7 @@ nvme format&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                    [--ms = &lt;ms&gt; | -m&lt;ms&gt;]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- For the NVMe device given, send an nvme Format Namespace admin command and provides the results. 
+For the NVMe device given, send an nvme Format Namespace admin command and provides the results. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). If the character device is given, the namespace identifier will default to 0xffffffff to send the format to all namespace, but can be overridden to any namespace with the <i>namespace-id</i> option. If the block device is given, the namespace identifier will default to the namespace id of the block device given, but can be overridden with the same option. 
 

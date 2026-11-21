@@ -1,4 +1,5 @@
 ---
+
 title: "talwani3d(1)"
 name: "talwani3d"
 section: "1"
@@ -9,10 +10,8 @@ description: "talwani3d – Compute free-air, geoid or vertical gravity gradient
 
 <h2>NAME</h2>
 <p> talwani3d &#8211; Compute free-air, geoid or vertical gravity gradients anomalies over 3-D bodies</p>
-<h2>SYNOPSIS</h2>
 <p> <code>talwani3d</code> [ <i>modeltable</i> ] [ ] [ <i>rho</i> ] ] [ <code>f</code>|<code>n</code>|<code>v</code> ] [ <i>grdfile</i> ] [ <i>increment</i> ] [ [<code>h</code>][<code>v</code>] ] [ <i>trackfile</i> ] [ <i>region</i> ] [ <i>level</i>|<i>obsgrid</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-fg</code> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>talwani3d</code> will read the multi-segment <i>modeltable</i> from file or standard input. This file contains contours of a 3-D body at different <i>z</i>-levels, with one contour per segment. The segment header must contain the parameters <i>zlevel rho</i>, which states the <i>z</i> contour level and the density of this slice (individual slice densities may be overridden by a fixed density contrast given via <code>-D</code>). We can compute anomalies on an equidistant grid (by specifying a new grid with <code>-R</code> and <code>-I</code> or provide an observation grid with elevations) or at arbitrary output points specified via <code>-N</code>. Chose from free-air anomalies, vertical gravity gradient anomalies, or geoid anomalies. Options are available to control axes units and direction.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

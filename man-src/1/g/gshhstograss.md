@@ -1,4 +1,5 @@
 ---
+
 title: "gshhstograss(1)"
 name: "gshhstograss"
 section: "1"
@@ -9,9 +10,7 @@ description: "gshhs2grass – Extracting GSHHS and WDBII data in GRASS-compatibl
 
 <h2>NAME</h2>
 <p> gshhs2grass &#8211; Extracting GSHHS and WDBII data in GRASS-compatible ASCII format</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gshhs2grass</code> <code>-i</code> gshhs_[f|h|i|l|c].b [ <code>-x</code><i>minx</i> ] [<code>-X</code><i>maxx</i> ] [ <code>-y</code><i>miny</i> ] [ <code>-Y</code><i>maxy</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gshhs2grass</code> reads the binary coastline (GSHHS) and and translates it into an ASCII format suitable for import into GRASS. It automatically handles byte-swabbing between different architectures.</p>
 <dl>
 <dt><i>gshhs_[f|h|i|l|c].b</i></dt>

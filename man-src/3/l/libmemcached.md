@@ -1,4 +1,5 @@
 ---
+
 title: "libmemcached(3)"
 name: "libmemcached"
 section: "3"
@@ -9,7 +10,6 @@ description: "libmemcached – Introducing the C Client Library for memcached"
 
 <h2>NAME</h2>
 <p> libmemcached &#8211; Introducing the C Client Library for memcached</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt; </p>
 <p> Compile and link with -lmemcached </p>
 <p> <center> &#8212;-<br />
@@ -31,7 +31,6 @@ description: "libmemcached – Introducing the C Client Library for memcached"
 <dd> A complete reference guide and documentation to the API.</dd>
 <dt>7.</dt>
 <dd> Tools to Manage your Memcached networks.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> &quot;Memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.&quot; <i><a rel="nofollow" href="http://memcached.org/">http://memcached.org/</a></i> </p>
 <p> <code>libmemcached</code> is a small, thread-safe client library for the memcached protocol. The code has all been written to allow for both web and embedded usage. It handles the work behind routing individual keys to specific servers specified by the developer (and values are matched based on server order as supplied by the user). It implements a modular and consistent method of object distribution. </p>
 <p> There are multiple implemented routing and hashing methods. See the <code>memcached_behavior_set()</code> manpage for more information. </p>

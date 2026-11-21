@@ -1,4 +1,5 @@
 ---
+
 title: "libdieharder(3)"
 name: "libdieharder"
 section: "3"
@@ -9,7 +10,6 @@ description: "libdieharder – A testing and benchmarking library for random num
 
 <h2>NAME</h2>
 <p> libdieharder &#8211; A testing and benchmarking library for random number generators </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include dieharder.h</code> </p>
 <p> <code>void run_user_template()</code><br />
  <code>{</code> </p>
@@ -44,7 +44,6 @@ description: "libdieharder – A testing and benchmarking library for random num
  <code> */.</code><br />
  <code>show_test_results(&amp;user_template_dtest,user_template_test);</code> </p>
 <p> <code>}</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>libdieharder</code> </p>
 <p> The libdieharder library provides an API to user interface programs wishing to call dieharder tests. Commands are defined for creating tests, initializing the tests and running the tests. Showing the results is of course the responsibility of the UI. </p>
 <p> libdieharder also wraps certain additional random number generators so that they can be tested. libdieharder can be default test all the random number generators in the Gnu Scientific Library plus these additional generators (which include &quot;generators&quot; for reading in numbers from a file). </p>

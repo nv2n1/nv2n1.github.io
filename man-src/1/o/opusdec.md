@@ -1,4 +1,5 @@
 ---
+
 title: "opusdec(1)"
 name: "opusdec"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-opusdec/"
 description: "opusdec – decode audio from Opus format to WAV (or simple audio output)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>opusdec</code> [ <code>-hV</code> ] [ <code>&#8211;rate Hz</code> ] [ <code>&#8211;gain dB</code> ] [ <code>&#8211;no-dither</code> ] [ <code>&#8211;force-wav</code> ] [ <code>&#8211;packet-loss pct</code> ] [ <code>&#8211;save-range file</code> ] <code>input.opus</code> [ <code>output.wav</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>opusdec</code> decodes Opus files into PCM Wave (uncompressed) files. </p>
 <p> If the input file is specified as <code>&#8211;</code> , then <code>opusdec</code> will read from stdin. Likewise, an output filename of <code>&#8211;</code> will cause output to be to stdout. </p>
 <p> If no output is specified <code>opusdec</code> will attempt to play the audio in realtime if it supports audio playback on your system. </p>

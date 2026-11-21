@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_exist(3)"
 name: "memcached_exist"
 section: "3"
@@ -9,7 +10,6 @@ description: "memcached_exist – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_exist &#8211; libmemcached Documentation</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_return_t memcached_exist(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>*key_length</i>)</dt>
@@ -17,7 +17,6 @@ description: "memcached_exist – libmemcached Documentation"
 </dd><dt><code>memcached_return_t memcached_exist_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>*group_key_length</i>, char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>*key_length</i>)</dt>
 <dd> New in version 0.53. </dd>
 <p> Compile and link with -lmemcached</dl>
-<h2>DESCRIPTION</h2>
 <p> <i>memcached_exist()</i> can be used to check to see if a key exists. No value is returned if the key exists, or does not exist, on the server.</p>
 <h2>RETURN</h2>
 <p> <i>memcached_exist()</i> sets error to to <code>MEMCACHED_SUCCESS</code> upon finding that the key exists. <code>MEMCACHED_NOTFOUND</code> will be return if the key is not found.</p>

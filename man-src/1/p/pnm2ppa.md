@@ -1,4 +1,5 @@
 ---
+
 title: "pnm2ppa(1)"
 name: "pnm2ppa"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pnm2ppa/"
 description: "pnm2ppa – convert portable anymap (PNM) images to HP’s PPA printer format."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> pnm2ppa [options] [ -i <i>infile</i> ] [ -o <i>outfile</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> Reads portable anymap (PNM) format as input. Binary PNM formats pnmraw = {ppmraw (color pixmap), pgmraw (graymap), and pbmraw (black-and-white bitmap)} are strongly preferred. Output stream can be locally processed by Hewlett-Packard&#8217;s Printing Performance Architecture (PPA) printers (HP DeskJet 710C, 712C, 720C, 722C, 820C, and 1000C series). </p>
 <p> (PNM format output can be produced from PostScript(tm) input by the GhostScript output devices &quot;pbmraw&quot;, &quot;pgmraw&quot; or &quot;ppmraw&quot;, or by &quot;pnmraw&quot;, which will choose one of these formats as appropriate for the document.) <code>pnm2ppa</code> assumes the input resolution is 600dpi (or 300dpi if the command-line option <code>&#8211;dpi300</code> is used): input at higher/lower resolutions will result in a correspondingly larger/smaller printed image, provided it is within the printer&#8217;s allowed size range. </p>
 <h2>OPTIONS</h2>

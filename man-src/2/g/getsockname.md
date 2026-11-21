@@ -1,4 +1,5 @@
 ---
+
 title: "getsockname(2)"
 name: "getsockname"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-getsockname/"
 description: "getsockname – get socket name"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 int getsockname(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>getsockname</code>() returns the current address to which the socket <i>sockfd</i> is bound, in the buffer pointed to by <i>addr</i>. The <i>addrlen</i> argument should be initialized to indicate the amount of space (in bytes) pointed to by <i>addr</i>. On return it contains the actual size of the socket address. </p>
 <p> The returned address is truncated if the buffer provided is too small; in this case, <i>addrlen</i> will return a value greater than was supplied to the call.</p>
 <h2>RETURN VALUE</h2>

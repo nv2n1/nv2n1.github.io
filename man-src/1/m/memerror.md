@@ -1,4 +1,5 @@
 ---
+
 title: "memerror(1)"
 name: "memerror"
 section: "1"
@@ -12,17 +13,9 @@ url: "/docs/linux/man/1-memerror/"
 
  Translates a memcached error code into a string
 
-<h2>SYNOPSIS</h2>
+memerror [options] [error code]
 
- 
-
- memerror [options] [error code]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- <b>memerror</b> translates an error code from <a HREF="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) into a human readable string.
+<b>memerror</b> translates an error code from <a HREF="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) into a human readable string.
 
 <h2>OPTIONS</h2>
 

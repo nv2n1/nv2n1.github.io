@@ -1,4 +1,5 @@
 ---
+
 title: "pamfunc(1)"
 name: "pamfunc"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pamfunc/"
 description: "pamfunc – Apply a simple monadic arithmetic function to a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamfunc</code> { <code>-multiplier=</code><i>realnum</i> | <code>-divisor=</code><i>realnum</i> | <code>-adder=</code><i>integer</i> | <code>-subtractor=</code><i>integer</i> | <code>-min=</code><i>wholenum</i> | <code>-max=</code><i>wholenum</i> <code>-andmask=</code><i>hexmask</i> <code>-ormask=</code><i>hexmask</i> <code>-xormask=</code><i>hexmask</i> <code>-not</code> <code>-shiftleft=</code><i>count</i> <code>-shiftright=</code><i>count</i> } [<i>filespec</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamfunc</code> reads a Netpbm image as input and produces a Netpbm image as output, with the same format, maxval, and dimensions as the input. <code>pamfunc</code> applies a simple transfer function to each sample in the input to generate the corresponding sample in the output. The options determine what function. </p>
 <p> <code>pamarith</code> is the same thing for binary functions &#8212; it takes two images as input and applies a specified simple arithmetic function (e.g. addition) on pairs of samples from the two to produce the single output image. </p>

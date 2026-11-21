@@ -1,4 +1,5 @@
 ---
+
 title: "ssptrf(3)"
 name: "ssptrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssptrf/"
 description: "ssptrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssptrf</code> (UPLO, N, AP, IPIV, INFO)<br />
  <i></i><code>SSPTRF</code></p>

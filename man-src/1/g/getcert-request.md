@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-request(1)"
 name: "getcert-request"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-request/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert request [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Tells <i>certmonger</i> to use an existing key pair (or to generate one if one is not already found in the specified location), to generate a signing request using the key pair, and to submit them for signing to a CA. </p>
 <h2>KEY AND CERTIFICATE STORAGE OPTIONS</h2>
 <dl>

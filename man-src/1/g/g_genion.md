@@ -1,4 +1,5 @@
 ---
+
 title: "g_genion(1)"
 name: "g_genion"
 section: "1"
@@ -10,9 +11,7 @@ description: "genion – generates mono atomic ions on energetically favorable p
 <h2>NAME</h2>
 <p> genion &#8211; generates mono atomic ions on energetically favorable positions </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>genion</code> <code>-s</code><i> topol.tpr </i> <code>-table</code><i> table.xvg </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> out.gro </i> <code>-g</code><i> genion.log </i> <code>-pot</code><i> pot.pdb </i> <code>-p</code><i> topol.top </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]xvgr</code><i></i> <code>-np</code><i> int </i> <code>-pname</code><i> string </i> <code>-pq</code><i> int </i> <code>-nn</code><i> int </i> <code>-nname</code><i> string </i> <code>-nq</code><i> int </i> <code>-rmin</code><i> real </i> <code>-[no]random</code><i></i> <code>-seed</code><i> int </i> <code>-scale</code><i> real </i> <code>-conc</code><i> real </i> <code>-[no]neutral</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> genion replaces solvent molecules by monoatomic ions at the position of the first atoms with the most favorable electrostatic potential or at random. The potential is calculated on all atoms, using normal GROMACS particle based methods (in contrast to other methods based on solving the Poisson-Boltzmann equation). The potential is recalculated after every ion insertion. If specified in the run input file, a reaction field, shift function or user function can be used. For the user function a table file can be specified with the option <code> -table</code>. The group of solvent molecules should be continuous and all molecules should have the same number of atoms. The user should add the ion molecules to the topology file and include the file <code> ions.itp</code>. Ion names for Gromos96 should include the charge. </p>
 <p> With the option <code> -pot</code> the potential can be written as B-factors in a pdb file (for visualisation using e.g. rasmol). The unit of the potential is 1000 kJ/(mol e), the scaling be changed with the <code> -scale</code> option. </p>
 <p> For larger ions, e.g. sulfate we recommended to use genbox.</p>

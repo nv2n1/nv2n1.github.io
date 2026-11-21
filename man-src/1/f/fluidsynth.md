@@ -1,4 +1,5 @@
 ---
+
 title: "fluidsynth(1)"
 name: "fluidsynth"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fluidsynth/"
 description: "FluidSynth – a SoundFont synthesizer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fluidsynth</code> [<i>options</i>] [ SoundFonts ] [ midifiles ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>FluidSynth</code> is a real-time MIDI synthesizer based on the SoundFont(R) 2 specifications. It can be used to render MIDI input or MIDI files to audio. The MIDI events are read from a MIDI device. The sound is rendered in real-time to the sound output device. </p>
 <p> The easiest way to start the synthesizer is to give it a SoundFont on the command line: &#8216;fluidsynth soundfont.sf2&#8217;. fluidsynth will load the SoundFont and read MIDI events from the default MIDI device using the default MIDI driver. Once FluidSynth is running, it reads commands from the stdin. There are commands to send MIDI events manually, to load or unload SoundFonts, and so forth. All the available commands are discussed below. </p>
 <p> FluidSynth can also be used to play a list of MIDI files. Simply run FluidSynth with the SoundFont and the list of MIDI files to play. In this case you might not want to open the MIDI device to read external events. Use the -n option to deactivate MIDI input. If you also want to deactivate the use of the shell, start FluidSynth with the -i option: &#8216;fluidsynth -ni soundfont.sf2 midifile1.mid midifile2.mid&#8217;. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gccgo(1)"
 name: "gccgo"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-gccgo/"
 description: "gccgo – A GCC-based compiler for the Go language"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gccgo [<code>-c</code>|<code>-S</code>]<br />
 [<code>-g</code>]&nbsp;<wbr>[<code>-pg</code>]&nbsp;<wbr>[<code>-O</code><i>level</i>]<br />
 [<code>-I</code><i>dir</i>&#8230;]&nbsp;<wbr>[<code>-L</code><i>dir</i>&#8230;]<br />
 [<code>-o</code>&nbsp;<wbr><i>outfile</i>]&nbsp;<wbr><i>infile</i>&#8230; </p>
 <p> Only the most useful options are listed here; see below for the remainder.</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>gccgo</code> command is a frontend to <code>gcc</code> and supports many of the same options. This manual only documents the options specific to <code>gccgo</code>. </p>
 <p> The <code>gccgo</code> command may be used to compile Go source code into an object file, link a collection of object files together, or do both in sequence. </p>
 <p> Go source code is compiled as packages. A package consists of one or more Go source files. All the files in a single package must be compiled together, by passing all the files as arguments to <code>gccgo</code>. A single invocation of <code>gccgo</code> may only compile a single package. </p>

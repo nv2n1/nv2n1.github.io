@@ -1,4 +1,5 @@
 ---
+
 title: "img_cat(1)"
 name: "img_cat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-img_cat/"
 description: "img_cat – Output contents of an image file."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>img_cat [-i imgtype] [-b dev_sector_size] [-s start_sector] [-e stop_sector] [-vV] </code> <i>image [images] </i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>img_cat</code> outputs the contents of an image file. Image files that are not raw will have embedded data and metadata. img_cat will output only the data. This allows you to convert an embedded format to raw or to calculate the MD5 hash of the data by piping the output to the appropriate tool. </p>
 <h2>ARGUMENTS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "tlock(1)"
 name: "tlock"
 section: "1"
@@ -9,12 +10,10 @@ description: "tlock – terminal lock"
 
 <h2>NAME</h2>
 <p> tlock &#8211; terminal lock</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tlock</code> [<i>OPTIONS</i>]</dt>
 <dd>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>tlock</code> is a console based application intended to lock the terminal until the correct password is supplied by the user. Terminal is locked with the user&#8217;s login password. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported by <code>tlock</code></p>

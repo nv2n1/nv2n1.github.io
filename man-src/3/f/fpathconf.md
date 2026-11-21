@@ -1,4 +1,5 @@
 ---
+
 title: "fpathconf(3)"
 name: "fpathconf"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-fpathconf/"
 description: "fpathconf, pathconf – get configuration values for files"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 long fpathconf(int fd, int name);
 long pathconf(const char *path, int name);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>fpathconf</code>() gets a value for the configuration option <i>name</i> for the open file descriptor <i>fd</i>. </p>
 <p> <code>pathconf</code>() gets a value for configuration option <i>name</i> for the filename <i>path</i>. </p>
 <p> The corresponding macros defined in <i>&lt;unistd.h&gt;</i> are minimum values; if an application wants to take advantage of values which may change, a call to <code>fpathconf</code>() or <code>pathconf</code>() can be made, which may yield more liberal results. </p>

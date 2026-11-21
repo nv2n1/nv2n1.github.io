@@ -1,4 +1,5 @@
 ---
+
 title: "funcalc(1)"
 name: "funcalc"
 section: "1"
@@ -9,7 +10,6 @@ description: "funcalc – Funtools calculator (for binary tables)"
 
 <h2>NAME</h2>
 <p> <code>funcalc &#8211; Funtools calculator (for binary tables)</code></p>
-<h2>SYNOPSIS</h2>
 <p> funcalc [-n] [-a argstr] [-e expr] [-f file] [-l link] [-p prog] &lt;iname&gt; [oname [columns]]</p>
 <h2>OPTIONS</h2>
 <pre>
@@ -21,7 +21,6 @@ description: "funcalc – Funtools calculator (for binary tables)"
   -p prog      # generate named program, no execution
   -u           # die if any variable is undeclared (don't auto-declare)
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>funcalc</code> is a calculator program that allows arbitrary expressions to be constructed, compiled, and executed on columns in a Funtools table (<font SIZE="-1">FITS</font> binary table or raw event file). It works by integrating user-supplied expression(s) into a template C program, then compiling and executing the program. <code>funcalc</code> expressions are C statements, although some important simplifications (such as automatic declaration of variables) are supported. </p>
 <p> <code>funcalc</code> expressions can be specified in three ways: on the command line using the <code>-e [expression]</code> switch, in a file using the <code>-f [file]</code> switch, or from stdin (if neither <code>-e</code> nor <code>-f</code> is specified). Of course a file containing <code>funcalc</code> expressions can be read from stdin. </p>
 <p> Each invocation of <code>funcalc</code> requires an input Funtools table file to be specified as the first command line argument. The output Funtools table file is the second optional argument. It is needed only if an output <font SIZE="-1">FITS</font> file is being created (i.e., in cases where the <code>funcalc</code> expression only prints values, no output file is needed). If input and output file are both specified, a third optional argument can specify the list of columns to activate (using <i>FunColumnActivate()</i>). Note that <code>funcalc</code> determines whether or not to generate code for writing an output file based on the presence or absence of an output file argument. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lyx(1)"
 name: "lyx"
 section: "1"
@@ -9,9 +10,7 @@ description: "LyX – A Document Processor"
 
 <h2>NAME</h2>
 <p> LyX &#8211; A Document Processor</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lyx</code> [ <i>command-line switches</i> ] [ <i>name[.lyx] &#8230;</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>LyX</code> is too complex to be described completely in the &quot;man&quot; page format. If your system is properly configured, you can access the full documentation within <code>LyX</code> under the Help menu. </p>
 <p> <code>LyX</code> is a document preparation system. It excels at letting you create complex technical and scientific articles with mathematics, cross-references, bibliographies, indices, etc. It is very good at documents of any length in which the usual processing abilities are required: automatic sectioning and pagination, spellchecking, and so forth. It can also be used to write a letter to your mom, though granted, there are probably simpler programs available for that. It is definitely not the best tool for creating banners, flyers, or advertisements, though with some effort all these can be done, too. Some examples of what it is used for: memos, letters, dissertations and theses, lecture notes, seminar notebooks, conference proceedings, software documentation, books (on PostgreSQL, remote sensing, cryptology, fictional novels, poetry, and even a children&#8217;s book or two), articles in refereed scientific journals, scripts for plays and movies, business proposals&#8230; you get the idea. </p>
 <p> Currently, <code>LyX</code> uses the Qt4 library as a toolkit. <code>LyX</code> should run everywhere, where this library runs. This is on all major Unix platforms as well as Windows and Mac OS X (which actually is a unix platform).</p>

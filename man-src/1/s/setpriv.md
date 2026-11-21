@@ -1,4 +1,5 @@
 ---
+
 title: "setpriv(1)"
 name: "setpriv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-setpriv/"
 description: "setpriv – run a program with different Linux privilege settings"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>setpriv</code> [options] <i>program</i> [<i>arguments</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Sets or queries various Linux privilege settings that are inherited across <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). </p>
 <p> In comparison to <code><a href="/docs/linux/man/1-su/">su</a></code>(1) and <code><a href="/docs/linux/man/1-runuser/">runuser</a></code>(1), <code>setpriv</code> neither uses PAM, nor does it prompt for a password. It is a simple, non-set-user-ID wrapper around <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), and can be used to drop privileges in the same way as <code>setuidgid</code>(8) from <code>daemontools</code>, <code>chpst</code>(8) from <code>runit</code>, or similar tools shipped by other service managers.</p>
 <h2>OPTIONS</h2>

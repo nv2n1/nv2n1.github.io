@@ -1,4 +1,5 @@
 ---
+
 title: "davix-get(1)"
 name: "davix-get"
 section: "1"
@@ -9,11 +10,9 @@ description: "davix-get – Download tool based on libdavix"
 
 <h2>NAME</h2>
 <p> davix-get &#8211; Download tool based on libdavix</p>
-<h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-get [options]&#8230; url<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-get [options]&#8230; url local_file</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>davix-get</code> is a tool to download resources from HTTP, Webdav or REST compatible services.<br />
  The command supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
 <p> Target resources can either be a single file or a collection.<br />

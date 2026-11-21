@@ -1,4 +1,5 @@
 ---
+
 title: "callgrind_control(1)"
 name: "callgrind_control"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-callgrind_control/"
 description: "callgrind_control – observe and control programs being run by Callgrind"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>callgrind_control</code> [<i>options</i>] [<i>pid|program-name</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>callgrind_control</code></p>
 <dd>controls programs being run by the Valgrind tool Callgrind. When a <code>pid/program name</code> argument is not specified, all applications currently being run by Callgrind on this system will be used for actions given by the specified option(s). The default action is to give some brief information about the applications being run by Callgrind.</dd>
 <h2>OPTIONS</h2>

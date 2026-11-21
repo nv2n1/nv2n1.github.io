@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rdf2buffer_str_apl(3)"
 name: "ldns_rdf2buffer_str_apl"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_rdf2buffer_str_a, ldns_rdf2buffer_str_aaaa, ldns_rdf2buffer_s
 
 <h2>NAME</h2>
 <p> ldns_rdf2buffer_str_a, ldns_rdf2buffer_str_aaaa, ldns_rdf2buffer_str_str, ldns_rdf2buffer_str_b64, ldns_rdf2buffer_str_hex, ldns_rdf2buffer_str_type, ldns_rdf2buffer_str_class, ldns_rdf2buffer_str_alg, ldns_rdf2buffer_str_loc, ldns_rdf2buffer_str_unknown, ldns_rdf2buffer_str_nsap, ldns_rdf2buffer_str_wks, ldns_rdf2buffer_str_nsec, ldns_rdf2buffer_str_period, ldns_rdf2buffer_str_tsigtime, ldns_rdf2buffer_str_apl, ldns_rdf2buffer_str_int16_data, ldns_rdf2buffer_str_int16, ldns_rdf2buffer_str_ipseckey </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -32,7 +32,6 @@ description: "ldns_rdf2buffer_str_a, ldns_rdf2buffer_str_aaaa, ldns_rdf2buffer_s
 <p> ldns_status ldns_rdf2buffer_str_int16_data(ldns_buffer *output, const ldns_rdf *rdf); </p>
 <p> ldns_status ldns_rdf2buffer_str_int16(ldns_buffer *output, const ldns_rdf *rdf); </p>
 <p> ldns_status ldns_rdf2buffer_str_ipseckey(ldns_buffer *output, const ldns_rdf *rdf); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rdf2buffer_str_a</i>()</dt>
 <dd>Converts an LDNS_RDF_TYPE_A rdata element to string format and adds it to the output buffer .br <code>*rdf</code>: The rdata to convert .br <code>*output</code>: The buffer to add the data to .br Returns LDNS_STATUS_OK on success, and error status on failure</dd></dl>

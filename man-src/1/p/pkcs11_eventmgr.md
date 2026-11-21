@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs11_eventmgr(1)"
 name: "pkcs11_eventmgr"
 section: "1"
@@ -11,7 +12,6 @@ description: "pkcs11_eventmgr – SmartCard PKCS#11 Event Manager"
 <p> pkcs11_eventmgr &#8211; SmartCard PKCS#11 Event Manager</p>
 <h2>SYNTAX</h2>
 <p> pkcs11_eventmgr [<i>[no]debug</i>] [<i>[no]daemon</i>] [<i>polling_time=&lt;secs&gt;</i> ] [<i>expire_time=&lt;secs&gt;</i>] [<i>pkcs11_module=&lt;module&gt;</i> ] [<i>config_file=&lt;filename&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> card_eventmgr is a SmartCard Monitoring that listen to the status of the card reader and dispatch actions on several events. card_eventmgr can be used to several actions, like lock screen on card removal<br />
  Three events are supported: card insert, card removal and timeout on removed card. Actions to take are specified in the configuration file</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-snapshot(1)"
 name: "lxc-snapshot"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxc-snapshot – Snapshot an existing container."
 
 <h2>NAME</h2>
 <p> lxc-snapshot &#8211; Snapshot an existing container.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} [-c, &#8211;comment <i>file</i>] <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} {-d, -destroy <i>snapshot-name</i>} <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} {-L, &#8211;list } [-C, &#8211;showcomments ] <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} {-r, -restore <i>snapshot-name</i>} [ <i>newname</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>lxc-snapshot</code> creates, lists, and restores container snapshots. </p>
 <p> Snapshots are stored as snapshotted containers under a private configuration path. For instance, if the container&#8217;s configuration path is <i>/var/lib/lxc</i> and the container is <i>c1</i>, then the first snapshot will be stored as container <i>snap0</i> under configuration path <i>/var/lib/lxcsnaps/c1</i>.</p>
 <h2>OPTIONS</h2>

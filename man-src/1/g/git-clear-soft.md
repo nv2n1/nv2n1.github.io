@@ -1,4 +1,5 @@
 ---
+
 title: "git-clear-soft(1)"
 name: "git-clear-soft"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-clear-soft – Soft clean up a repository"
 
 <h2>NAME</h2>
 <p> <code>git-clear-soft</code> &#8211; Soft clean up a repository</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-clear-soft</code></p>
-<h2>DESCRIPTION</h2>
 <p> Clears the repository to a state that it looks as if it was freshly cloned with the current HEAD, however, preserving all changes that are located in files and directories listed in .gitignore. It is a git-reset &#8211;hard together with deletion of all untracked files that reside inside the working directory, excluding those in .gitignore.</p>
 <h2>EXAMPLES</h2>
 <p> Clears the repo.</p>

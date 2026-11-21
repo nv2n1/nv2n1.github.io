@@ -1,4 +1,5 @@
 ---
+
 title: "drawtiming(1)"
 name: "drawtiming"
 section: "1"
@@ -9,9 +10,7 @@ description: "drawtiming – generate timing diagram from signal description"
 
 <h2>NAME</h2>
 <p> <code>drawtiming</code> &#8211; generate timing diagram from signal description</p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>-verbose</code> ] [-<code>-scale </code><i>factor</i> ] [-<code>-pagesize </code><i>WxH</i> ] [-<code>-aspect</code> ] [-<code>-cell-height </code><i>H</i> ] [-<code>-cell-width </code><i>W</i> ] [-<code>-font-size </code><i>pts</i> ] [-<code>-line-width </code><i>W</i> ] &#8211;<code>-output </code><i>target</i> <i>file &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> This application provides a command line tool for documenting hardware and software designs through ideal timing diagrams. It reads signal descriptions from a text file with an intuitive syntax, and outputs an ideal timing diagram to an image file. Notation typical of timing diagrams found in the Electrical Engineering discipline is used, including arrows indicating causal relationships between signal transitions. </p>
 <p> The options are as follows:</p>
 <dl>

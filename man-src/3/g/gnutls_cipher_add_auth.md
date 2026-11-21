@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_cipher_add_auth(3)"
 name: "gnutls_cipher_add_auth"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_cipher_add_auth – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_add_auth &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_cipher_add_auth(gnutls_cipher_hd_t </code><i>handle</i><code>, const void * </code><i>text</i><code>, size_t </code><i>text_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_cipher_add_auth – API function"
 <dd> the data to be authenticated</dd>
 <dt>size_t text_size</dt>
 <dd> The length of the data</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function operates on authenticated encryption with associated data (AEAD) ciphers and authenticate the input data. This function can only be called once and before any encryption operations.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

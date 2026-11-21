@@ -1,4 +1,5 @@
 ---
+
 title: "bluez-simple-agent(1)"
 name: "bluez-simple-agent"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-bluez-simple-agent/"
 description: "bluez-simple-agent – A PIN management and agent program for pairing to Bluetooth device."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bluez-simple-agent [&lt;hciX&gt;] [&lt;bdaddr&gt;] [remove]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>bluez-simple-agent is pass agent program for bluetooth.</dd>
 <h2>OPTIONS</h2>
 <p> <code>&lt;hciX&gt;</code></p>

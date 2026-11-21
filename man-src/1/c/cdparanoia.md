@@ -1,4 +1,5 @@
 ---
+
 title: "cdparanoia(1)"
 name: "cdparanoia"
 section: "1"
@@ -9,9 +10,7 @@ description: "cdparanoia 10.2 (Paranoia release III) – an audio CD reading uti
 
 <h2>NAME</h2>
 <p> cdparanoia 10.2 (Paranoia release III) &#8211; an audio CD reading utility which includes extra data verification features</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cdparanoia</code> [<code>options</code>] <code>span </code> [<code>outfile</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>cdparanoia</code> retrieves audio tracks from CDDA capable CDROM drives. The data can be saved to a file or directed to standard output in WAV, AIFF, AIFF-C or raw format. Most ATAPI, SCSI and several proprietary CDROM drive makes are supported; <code>cdparanoia</code> can determine if the target drive is CDDA capable. </p>
 <p> In addition to simple reading, <code>cdparanoia</code> adds extra-robust data verification, synchronization, error handling and scratch reconstruction capability.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "shtoolize(1)"
 name: "shtoolize"
 section: "1"
@@ -9,9 +10,7 @@ description: "shtoolize – Build individual GNU shtool scripts"
 
 <h2>VERSION</h2>
 <p> <font SIZE="-1">GNU</font> shtool <font SIZE="-1">2.0.8 (18-Jul-2008)</font></p>
-<h2>SYNOPSIS</h2>
 <p> <code>shtoolize</code> [<code>-h</code>] [<code>-v</code>] [<code>-q</code>] [<code>-o</code> <i>script</i>] <i>module</i> [ <i>module</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>shtoolize</code> program builds individual <font SIZE="-1">GNU </font><code>shtool</code> scripts (written to the default output file <tt>&quot;shtool&quot;</tt> or to the specified <i>script</i>) out of one or more <code>shtool</code> ingredient <i>module</i>s. Available <i>module</i>s are: </p>
 <pre>
  echo       Print string with optional construct expansion

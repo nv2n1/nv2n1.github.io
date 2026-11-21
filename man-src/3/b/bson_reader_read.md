@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_read(3)"
 name: "bson_reader_read"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_reader_read() – The bson_reader_read() function shall read 
 
 <h2>NAME</h2>
 <p> bson_reader_read() &#8211; The bson_reader_read() function shall read the next document from the underlying file-descriptor or buffer.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 const bson_t *
 bson_reader_read (bson_reader_t *reader,
@@ -22,7 +22,6 @@ bson_reader_read (bson_reader_t *reader,
 <dl>
 <dt><code>reached_eof</code></dt>
 <dd> A UNKNOWN.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_reader_read/">bson_reader_read</a>(3)</code> function shall read the next document from the underlying file-descriptor or buffer. </p>
 <p> If there are no further documents or a failure was detected, then NULL is returned. </p>
 <p> If we reached the end of the sequence, <code>reached_eof</code> is set to true. </p>

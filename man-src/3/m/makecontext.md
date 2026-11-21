@@ -1,4 +1,5 @@
 ---
+
 title: "makecontext(3)"
 name: "makecontext"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-makecontext/"
 description: "makecontext, swapcontext – manipulate user context"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ucontext.h&gt;</code> </p>
 <p> <code>void makecontext(ucontext_t *</code><i>ucp</i><code>, void (*</code><i>func</i><code>)(),</code> <code>int </code><i>argc</i><code>, &#8230;);</code> </p>
 <p> <code>int swapcontext(ucontext_t *</code><i>oucp</i><code>, const ucontext_t *</code><i>ucp</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> In a System V-like environment, one has the type <i>ucontext_t</i> (defined in <i>&lt;ucontext.h&gt;</i> and described in <code><a href="/docs/linux/man/3-getcontext/">getcontext</a></code>(3)) and the four functions <code><a href="/docs/linux/man/3-getcontext/">getcontext</a></code>(3), <code><a href="/docs/linux/man/3-setcontext/">setcontext</a></code>(3), <code>makecontext</code>(), and <code>swapcontext</code>() that allow user-level context switching between multiple threads of control within a process. </p>
 <p> The <code>makecontext</code>() function modifies the context pointed to by <i>ucp</i> (which was obtained from a call to <code><a href="/docs/linux/man/3-getcontext/">getcontext</a></code>(3)). Before invoking <code>makecontext</code>(), the caller must allocate a new stack for this context and assign its address to <i>ucp-&gt;uc_stack</i>, and define a successor context and assign its address to <i>ucp-&gt;uc_link</i>. </p>
 <p> When this context is later activated (using <code><a href="/docs/linux/man/3-setcontext/">setcontext</a></code>(3) or <code>swapcontext</code>()) the function <i>func</i> is called, and passed the series of integer (<i>int</i>) arguments that follow <i>argc</i>; the caller must specify the number of these arguments in <i>argc</i>. When this function returns, the successor context is activated. If the successor context pointer is NULL, the thread exits. </p>

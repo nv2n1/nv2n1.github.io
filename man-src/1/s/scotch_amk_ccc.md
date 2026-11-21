@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_amk_ccc(1)"
 name: "scotch_amk_ccc"
 section: "1"
@@ -9,11 +10,9 @@ description: "amk_ccc, amk_fft2, amk_hy, amk_m2, amk_p2 – create target archit
 
 <h2>NAME</h2>
 <p> <code>amk_ccc, amk_fft2, amk_hy, amk_m2, amk_p2 </code>&#8211; create target architectures</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 amk_ccc[options] dim[tfile] amk_fft2[options] dim[tfile] amk_hy[options] dim[tfile] amk_m2[options] dimX[dimY][tfile] amk_p2[options][wght0][wght1][tfile]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The amk_* programs create target architecture files for some common, regular topologies. </p>
 <p> <code>amk_ccc</code> creates a decomposition-defined cube-connected-cycle topology of dimension <i>dim</i>. The decomposition is performed first by bisection along the dimensions of the hypercube, then along the remaining cycle graphs. </p>
 <p> <code>amk_fft2</code> creates a decomposition-defined fast-Fourier-transform topology of dimension <i>dim</i>. The decomposition is performed by recursive bisection of the vertices, by descending dimension (that is, bit number in the labeling of the vertices). </p>

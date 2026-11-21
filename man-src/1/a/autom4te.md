@@ -1,4 +1,5 @@
 ---
+
 title: "autom4te(1)"
 name: "autom4te"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-autom4te/"
 description: "autom4te – Generate files and scripts thanks to M4"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autom4te</code> [<i>,OPTION/</i>]&#8230; [<i>,FILES/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Run GNU M4 on the FILES, avoiding useless runs. Output the traces if tracing, the frozen file if freezing, otherwise the expansion of the FILES. </p>
 <p> If some of the FILES are named &#8216;FILE.m4f&#8217; they are considered to be M4 frozen files of all the previous files (which are therefore not loaded). If &#8216;FILE.m4f&#8217; is not found, then &#8216;FILE.m4&#8217; will be used, together with all the previous files. </p>
 <p> Some files may be optional, i.e., will only be processed if found in the include path, but then must end in &#8216;.m4?&#8217;; the question mark is not part of the actual file name.</p>

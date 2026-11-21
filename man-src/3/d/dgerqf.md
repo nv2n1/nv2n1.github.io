@@ -1,4 +1,5 @@
 ---
+
 title: "dgerqf(3)"
 name: "dgerqf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgerqf/"
 description: "dgerqf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgerqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>DGERQF</code></p>

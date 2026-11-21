@@ -1,4 +1,5 @@
 ---
+
 title: "fpcres(1)"
 name: "fpcres"
 section: "1"
@@ -9,9 +10,7 @@ description: "fpcres – The Free Pascal resource compiler program."
 
 <h2>NAME</h2>
 <p> fpcres &#8211; The Free Pascal resource compiler program. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fpcres [options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Compiles a .res file into .o file. </p>
 <p> <code>fpcres</code> TO BE FILLED. </p>
 <h2>USAGE</h2>

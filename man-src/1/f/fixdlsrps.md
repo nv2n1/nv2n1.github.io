@@ -1,4 +1,5 @@
 ---
+
 title: "fixdlsrps(1)"
 name: "fixdlsrps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fixdlsrps/"
 description: "fixdlsrps – filter to fix DviLaser/PS documents to work with PSUtils"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fixdlsrps </code> &lt; <i>dvilaser.ps</i> &gt; <i>Fixed.ps</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Fixdlsrps</i> is a <i>perl </i> filter which &quot;fixes&quot; PostScript generated from the DviLaser/PS driver so that it works correctly with Angus Duggan&#8217;s <code>psutils</code> package.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) Angus J. C. Duggan 1991-1995</p>

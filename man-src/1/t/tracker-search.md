@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-search(1)"
 name: "tracker-search"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tracker-search/"
 description: "tracker-search – Search for content by type or across all types"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tracker search</code> [<i>options</i>&#8230;] [[<i>expression1</i>] &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tracker search</code> searches all indexed content for <i>expression</i>. The resource in which <i>expression</i> matches must exist (see <code>&#8211;all</code> for more information). All results are returned in ascending order. In all cases, if no <i>expression</i> is given for an argument (like <code>&#8211;folders</code> for example) then ALL items in that category are returned instead.</p>
 <dl>
 <dt><i>expression</i></dt>

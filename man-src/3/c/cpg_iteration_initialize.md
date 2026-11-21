@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_iteration_initialize(3)"
 name: "cpg_iteration_initialize"
 section: "3"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/3-cpg_iteration_initialize/"
 description: "cpg_iteration_initialize – Initialize iterator for members of CPG"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>cs_error_t cpg_iteration_initialize (cpg_handle_t </code><i>handle</i><code>, cpg_iteration_type_t </code><i>iteration_type</i><code>, const struct cpg_name *</code><i>group</i><code>, cpg_iteration_handle_t *</code><i>cpg_iteration_handle</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>cpg_iteration_initialize</code> function is used to initialize iteration of CPG members. The <i>handle</i> argument is connection to CPG database obtained by calling <code><a href="/docs/linux/man/3-cpg_initialize/">cpg_initialize</a>(3)</code> function. <i>iteration_type</i> is used for limit number of returned items and can be one of: </p>
 <p> <code>CPG_ITERATION_NAME_ONLY</code> &#8211; only name of used groups are returned </p>
 <p> <code>CPG_ITERATION_ONE_GROUP</code> &#8211; only members group with name <i>group</i> are returned </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_t(3)"
 name: "bson_reader_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_reader_t – Streaming BSON Document Reader"
 
 <h2>NAME</h2>
 <p> bson_reader_t &#8211; Streaming BSON Document Reader</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct _bson_reader_t bson_reader_t;
@@ -24,7 +24,6 @@ bson_reader_t *bson_reader_new_from_data(const uint8_t *data,
                                          size_t length);
 void bson_reader_destroy(bson_reader_t *reader);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>bson_reader_t</code> is a structure used for reading a sequence of BSON documents. The sequence can come from a file-descriptor, memory region, or custom callbacks. </p>
 <h2>EXAMPLE</h2>
 <pre><code>

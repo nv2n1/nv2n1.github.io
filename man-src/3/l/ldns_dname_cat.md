@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname_cat(3)"
 name: "ldns_dname_cat"
 section: "3"
@@ -9,13 +10,11 @@ description: "ldns_dname_cat_clone, ldns_dname_cat"
 
 <h2>NAME</h2>
 <p> ldns_dname_cat_clone, ldns_dname_cat </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_dname_cat_clone(const ldns_rdf *rd1, const ldns_rdf *rd2); </p>
 <p> ldns_status ldns_dname_cat(ldns_rdf *rd1, ldns_rdf *rd2); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dname_cat_clone</i>()</dt>
 <dd>concatenates two dnames together .br <code>rd1</code>: the leftside .br <code>rd2</code>: the rightside .br Returns a new rdf with leftside/rightside</dd></dl>

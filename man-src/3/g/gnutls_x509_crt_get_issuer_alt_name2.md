@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_issuer_alt_name2(3)"
 name: "gnutls_x509_crt_get_issuer_alt_name2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_get_issuer_alt_name2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_issuer_alt_name2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_issuer_alt_name2(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>ian</i><code>, size_t * </code><i>ian_size</i><code>, unsigned int * </code><i>ian_type</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_x509_crt_get_issuer_alt_name2 – API function"
 <dd> holds the type of the alternative name (one of gnutls_x509_subject_alt_name_t).</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the alternative names, contained in the given certificate. It is the same as <code>gnutls_x509_crt_get_issuer_alt_name()</code> except for the fact that it will return the type of the alternative name in <i>ian_type</i> even if the function fails for some reason (i.e. the buffer provided is not enough).</p>
 <h2>RETURNS</h2>
 <p> the alternative issuer name type on success, one of the enumerated <code>gnutls_x509_subject_alt_name_t</code>. It will return <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> if <i>ian_size</i> is not large enough to hold the value. In that case <i>ian_size</i> will be updated with the required size. If the certificate does not have an Alternative name with the specified sequence number then <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.</p>

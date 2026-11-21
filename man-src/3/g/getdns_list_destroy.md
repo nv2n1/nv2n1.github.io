@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_list_destroy(3)"
 name: "getdns_list_destroy"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-getdns_list_destroy/"
 description: "getdns_list, getdns_list_create, getdns_list_create_with_extended_memory_functions, getdns_list_create_with_memory_functions, getdns_list_destroy — getdns list create and destroy routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getdns_list, </code> <code>getdns_list_create, </code> <code>getdns_list_create_with_extended_memory_functions, </code> <code>getdns_list_create_with_memory_functions, </code> <code>getdns_list_destroy </code> &#8212; getdns list create and destroy routines</p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_list *<br />
  <code>getdns_list_create</code> () </p>
@@ -33,7 +32,6 @@ description: "getdns_list, getdns_list_create, getdns_list_create_with_extended_
  void (*free)(void *buf)</dd></dl>
 <p> void<br />
  <code>getdns_list_destroy</code> (getdns_list *this_dict) </p>
-<h2>DESCRIPTION</h2>
 <p> The getdns_list type is used to manage heterogeneous indexed lists name/value pairs in which the data types of the values include</p>
 <dl>
 <dt>

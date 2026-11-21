@@ -1,4 +1,5 @@
 ---
+
 title: "mateconf-gsettings-schema-convert(1)"
 name: "mateconf-gsettings-schema-convert"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mateconf-gsettings-schema-convert/"
 description: "mateconf-gsettings-schema-convert – MateConf to GSettings schema conversion"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mateconf-gsettings-schema-convert</code> [option&#8230;] {file}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>mateconf-gsettings-schema-convert</code></p>
 <dd>converts between MateConf and GSettings schema file formats. Note that the conversion is not expected to be fully automated. You are expected to verify and edit the result of the conversion. </dd>
 <p> Note that GSettings schemas need to be converted into binary form with glib-compile-schemas before they can be used by applications.</p>

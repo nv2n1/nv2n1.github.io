@@ -1,4 +1,5 @@
 ---
+
 title: "img_stat(1)"
 name: "img_stat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-img_stat/"
 description: "img_stat – Display details of an image file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>img_stat [-i imgtype] [-b dev_sector_size] [-tvV] </code> <i>image [images] </i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>img_stat</code> displays the details associated with an image file. The output of this command is image format specific. At a minimum, the size will be given and the byte range of each file will be given for split image formats. </p>
 <h2>ARGUMENTS</h2>
 <dl>

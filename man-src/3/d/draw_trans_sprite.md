@@ -1,4 +1,5 @@
 ---
+
 title: "draw_trans_sprite(3)"
 name: "draw_trans_sprite"
 section: "3"
@@ -9,10 +10,8 @@ description: "draw_trans_sprite – Draws a sprite blending it with the destinat
 
 <h2>NAME</h2>
 <p> draw_trans_sprite &#8211; Draws a sprite blending it with the destination. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void draw_trans_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Uses the global color_map table or truecolor blender functions to overlay the sprite on top of the existing image. This must only be used after you have set up the color mapping table (for 256-color modes) or blender functions (for truecolor modes). Because it involves reading as well as writing the bitmap memory, translucent drawing is very slow if you draw directly to video RAM, so wherever possible you should use a memory bitmap instead. Example: </p>
 <pre><code>
 /* Some one time initialisation code. */

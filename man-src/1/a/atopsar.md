@@ -1,4 +1,5 @@
 ---
+
 title: "atopsar(1)"
 name: "atopsar"
 section: "1"
@@ -9,10 +10,8 @@ description: "atopsar – Advanced System Activity Report (atop related)"
 
 <h2>NAME</h2>
 <p> <code>atopsar</code> &#8211; Advanced System Activity Report (atop related)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>atopsar</code> [-flags&#8230;] [-r <i>file|date</i> ] [-R <i>cnt</i> ] [-b <i>hh:mm</i> ] [-e <i>hh:mm</i> ]<br />
  <code>atopsar</code> [-flags&#8230;] <i>interval</i> [ <i>samples</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> The program <i>atopsar</i> can be used to report statistics on system level. </p>
 <p> In the first synopsis line (no sampling interval specified), <i>atopsar</i> extracts data from a raw logfile that has been recorded previously by the program <i>atop</i> (option <code>-w </code> of the <i>atop</i> program).<br />
  You can specify the name of the logfile with the <code>-r</code> option of the <i>atopsar</i> program. When a daily logfile of <i>atop</i> is used, named <code>/var/log/atop/atop_YYYYMMDD</code> (where YYYYMMDD reflects the date), the required date of the form YYYYMMDD can be specified with the <code>-r</code> option instead of the filename, or the symbolic name &#8216;y&#8217; can be used for yesterday&#8217;s daily logfile (this can be repeated so &#8216;yyyy&#8217; indicates the logfile of four days ago). If the <code>-r</code> option is not specified at all, today&#8217;s daily logfile is used by default.<br />

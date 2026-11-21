@@ -1,4 +1,5 @@
 ---
+
 title: "rmiregistry(1)"
 name: "rmiregistry"
 section: "1"
@@ -9,14 +10,12 @@ description: "rmiregistry – Starts a remote object registry on the specified p
 
 <h2>NAME</h2>
 <p> rmiregistry &#8211; Starts a remote object registry on the specified port on the current host.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>rmiregistry</code> [ <i>port</i> ]
 </pre>
 <dl>
 <dt><i>port</i></dt>
 <dd> The number of a <code>port</code> on the current host at which to start the remote object registry.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>rmiregistry</code> command creates and starts a remote object registry on the specified port on the current host. If the port is omitted, then the registry is started on port 1099. The <code>rmiregistry</code> command produces no output and is typically run in the background, for example: </p>
 <pre>
 <code>rmiregistry &amp;</code>

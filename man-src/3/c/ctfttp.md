@@ -1,4 +1,5 @@
 ---
+
 title: "ctfttp(3)"
 name: "ctfttp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctfttp/"
 description: "ctfttp.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctfttp</code> (TRANSR, UPLO, N, ARF, AP, INFO)<br />
  <i></i><code>CTFTTP</code> copies a triangular matrix from the rectangular full packed format (TF) to the standard packed format (TP).</p>

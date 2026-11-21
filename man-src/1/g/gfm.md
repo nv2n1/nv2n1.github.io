@@ -1,4 +1,5 @@
 ---
+
 title: "gfm(1)"
 name: "gfm"
 section: "1"
@@ -9,7 +10,6 @@ description: "gfm – a program to manipulate files for TI’s handhelds"
 
 <h2>SYNOPSYS</h2>
 <p> <code>gfm</code> [-h / &#8211;help] [-v / &#8211;version] filename </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>gfm</code> program allows you to group/ungroup files as well as add/remove/rename entries. </p>
 <h2>OPTIONS</h2>
 <p> The command line of gfm can be used for loading files. </p>

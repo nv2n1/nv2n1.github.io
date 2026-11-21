@@ -1,4 +1,5 @@
 ---
+
 title: "ffado-dice-firmware(1)"
 name: "ffado-dice-firmware"
 section: "1"
@@ -9,9 +10,7 @@ description: "ffado-dice-firmware – firmware download application for DICE-bas
 
 <h2>NAME</h2>
 <p> ffado-dice-firmware &#8211; firmware download application for DICE-based devices</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ffado-dice-firmware [OPTION&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ffado-dice-firmware</code> permits firmware updates to be made to DICE-based devices under Linux. </p>
 <h2>OPTIONS</h2>
 <dl>

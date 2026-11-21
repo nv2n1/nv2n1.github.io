@@ -1,4 +1,5 @@
 ---
+
 title: "nqs2pbs(1)"
 name: "nqs2pbs"
 section: "1"
@@ -6,18 +7,11 @@ letter: "n"
 url: "/docs/linux/man/1-nqs2pbs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nqs2pbs - convert NQS job scripts to PBS 
 
- nqs2pbs - convert NQS job scripts to PBS 
+nqs2pbs nqs_script [pbs_script]
 
-<h2>SYNOPSIS</h2>
-
- nqs2pbs nqs_script [pbs_script]
-
-<h2>DESCRIPTION</h2>
-
- This utility converts a existing NQS job script to work with PBS and NQS. The existing script is copied and PBS directives, <i>#PBS ,</i> are inserted prior to each NQS directive <i>#QSUB </i> or <i>#@$ ,</i> in the original script. 
+This utility converts a existing NQS job script to work with PBS and NQS. The existing script is copied and PBS directives, <i>#PBS ,</i> are inserted prior to each NQS directive <i>#QSUB </i> or <i>#@$ ,</i> in the original script. 
 
  Certain NQS date specification and options are not supported by PBS. A warning message will be displayed indicating the problem and the line of the script on which it occurred. 
 

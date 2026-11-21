@@ -1,4 +1,5 @@
 ---
+
 title: "nfanon(1)"
 name: "nfanon"
 section: "1"
@@ -9,10 +10,8 @@ description: "nfanon – netflow anonymisation"
 
 <h2>NAME</h2>
 <p> nfanon &#8211; netflow anonymisation</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nfanon [options]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>nfanon</code></p>
 <dd>is used to anonymise all IP addresses ( src, dst, next hop, router IP etc. ) in the netflow records using the CryptoPAn (Cryptography-based Prefix-preserving Anonymization) module. The key <i>-K</i> is used to initialize the Rijndael cipher. The key is either a 32 character string, or a 64 hex digit string starting with 0x. </dd>
 <dl>

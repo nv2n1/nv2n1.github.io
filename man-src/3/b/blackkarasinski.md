@@ -1,4 +1,5 @@
 ---
+
 title: "blackkarasinski(3)"
 name: "blackkarasinski"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-blackkarasinski/"
 description: "ql/models/shortrate/onefactormodels/blackkarasinski.hpp – Black-Karasinski model."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/shortrate/onefactormodel.hpp&gt;<br />
  #include &lt;ql/processes/ornsteinuhlenbeckprocess.hpp&gt; </p>
 <h3>Classes</h3>

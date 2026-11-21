@@ -1,4 +1,5 @@
 ---
+
 title: "floor_(3)"
 name: "floor_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-floor_/"
 description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-rate coupon."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/capflooredcoupon.hpp&gt; </p>
 <p> Inherits <code>QuantLib::FloatingRateCoupon</code>. </p>
 <p> Inherited by CappedFlooredCmsCoupon, and CappedFlooredIborCoupon. </p>

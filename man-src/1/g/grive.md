@@ -1,4 +1,5 @@
 ---
+
 title: "grive(1)"
 name: "grive"
 section: "1"
@@ -9,9 +10,7 @@ description: "grive – Google Drive client for GNU/Linux"
 
 <h2>NAME</h2>
 <p> grive &#8211; Google Drive client for GNU/Linux </p>
-<h2>SYNOPSIS</h2>
 <p> <code>grive [OPTIONS]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Grive</i> is a Google Drive (online storage service) client for GNU/Linux systems. </p>
 <p> It allows the synchronization of all your files on the cloud with a directory of your choice and the upload of new files to Google Drive. </p>
 <p> The options are as follows:</p>

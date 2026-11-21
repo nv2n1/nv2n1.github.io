@@ -1,4 +1,5 @@
 ---
+
 title: "audio2tape(1)"
 name: "audio2tape"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-audio2tape/"
 description: "audio2tape – Sinclair ZX Spectrum audio to tape file converter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>audio2tape</code> [-t <i>type</i>] [-s] [-r] [-k] [-z <i>level</i>] [-c <i>level</i>] <i>infile outfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> audio2tape converts audio files to ZX Spectrum tape images.</p>
 <h2>OPTIONS</h2>
 <dl>

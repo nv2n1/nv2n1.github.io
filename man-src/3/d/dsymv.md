@@ -1,4 +1,5 @@
 ---
+
 title: "dsymv(3)"
 name: "dsymv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsymv/"
 description: "dsymv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsymv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>DSYMV</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ot2kpx(1)"
 name: "ot2kpx"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ot2kpx/"
 description: "ot2kpx – extract kerning information from OpenType fonts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ot2kpx</code> [ <i>-afm</i> | <i>-kpx</i> | <i>-lua</i> ] <code>&lt;fontfile&gt;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ot2kpx</code> extract the kerning data from OpenType fonts and prints it to <tt>&quot;stdout&quot;</tt>, either in Adobe&#8217;s <font SIZE="-1">KPX</font> format (for adding to an <i>afm</i> file) or as a Luatex custom feature, for use with the <tt>&quot;\directlua&quot;</tt> command.</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <dl>

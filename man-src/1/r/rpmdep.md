@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdep(1)"
 name: "rpmdep"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rpmdep/"
 description: "rpmdep – display the full dependency of an installed rpm package"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> rpmdep is an improved &#8216;rpm -qR&#8217; command : it search recursively for package dependencies, and resolvs all dependencies to package names. It can also prepare a file to build a graph of dependencies, with graphviz.</p>
-<h2>SYNOPSIS</h2>
 <p> rpmdep.pl [options] package </p>
 <p> options: </p>
 <pre>

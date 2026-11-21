@@ -1,4 +1,5 @@
 ---
+
 title: "mewcat(1)"
 name: "mewcat"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-mewcat/"
 description: "mewencode, mewdecode, mewcat – MIME encoder/decoder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mewencode</code>, <code>mewdecode</code>, <code>mewcat</code> &#8211; MIME encoder/decoder </p>
-<h2>SYNOPSIS</h2>
 <p> <code>mewencode</code> [<code>-options</code>] [<i>infile</i> [<i>outfile</i>]] </p>
 <p> <code>mewdecode</code> [<code>-options</code>] [<i>infile</i> [<i>outfile</i>]] </p>
 <p> <code>mewcat</code> [<code>-options</code>] [<i>infile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>mewencode</code> utility encode/decode MIME objects. </p>
 <p> The options are as follows:</p>
 <dl>

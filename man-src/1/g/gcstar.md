@@ -1,4 +1,5 @@
 ---
+
 title: "gcstar(1)"
 name: "gcstar"
 section: "1"
@@ -9,9 +10,7 @@ description: "GCstar – Personal collection manager"
 
 <h2>NAME</h2>
 <p> GCstar &#8211; Personal collection manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gcstar</code> [-u UPDATE-OPTIONS] [-x EXECUTE-OPTIONS] [FILENAME]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>GCstar</code> is a Gtk2 program used to manage personal collections.</p>
 <h2>OPTIONS</h2>
 <p> Without any option, it will open FILENAME if specified or the previously opened file. There are also two groups of options. </p>

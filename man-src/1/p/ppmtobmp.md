@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtobmp(1)"
 name: "ppmtobmp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtobmp/"
 description: "ppmtobmp – convert a portable pixmap into a BMP file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtobmp</code> [<code>-windows</code>] [<code>-os2</code>] [<code>-bpp=</code><i>bits_per_pixel</i>] [<i>ppmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces a Microsoft Windows or OS/2 BMP file as output.</p>
 <h2>OPTIONS</h2>
 <p> All options can be abbreviated to their shortest unique prefix and you can use a double dash in place of the single dash, GNU-style.</p>

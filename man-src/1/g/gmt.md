@@ -1,4 +1,5 @@
 ---
+
 title: "gmt(1)"
 name: "gmt"
 section: "1"
@@ -11,7 +12,6 @@ description: "gmt – The Generic Mapping Tools data processing and display soft
 <p> gmt &#8211; The Generic Mapping Tools data processing and display software package</p>
 <h2>INTRODUCTION</h2>
 <p> GMT is a collection of public-domain Unix tools that allows you to manipulate x,y and x,y,z data sets (filtering, trend fitting, gridding, projecting, etc.) and produce PostScript illustrations ranging from simple x-y plots, via contour maps, to artificially illuminated surfaces and 3-D perspective views in black/white or full color. Linear, log10, and power scaling is supported in addition to over 30 common map projections. The processing and display routines within GMT are completely general and will handle any (x,y) or (x,y,z) data as input.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gmt</code> is the main program that can start any of the modules: </p>
 <p> <code>gmt</code> module module-options </p>
 <p> where module is the name of a GMT module and the options are those that pertain to that particular module. If no module is given then several other options are available:</p>
@@ -1340,7 +1340,6 @@ description: "gmt – The Generic Mapping Tools data processing and display soft
 <p> The <code>gmt</code> program can also load custom modules from shared libraries built as specified in the GMT API documentation. This way your modules can benefit form the GMT infrastructure and extend GMT in specific ways.</p>
 <h2>THE COMMON GMT OPTIONS</h2>
 <p> [<code>p</code>|<code>s</code>]<i>parameters</i> <code>-J</code><i>parameters</i> <code>-Jz</code>|<code>Z</code><i>parameters</i> <code>-K</code> <code>-O</code> <code>-P</code> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] [<i>level</i>] <i>x_offset</i> <i>y_offset</i> <code>-a</code><i>&lt;flags&gt;</i> <code>-b</code><i>&lt;binary&gt;</i> <code>-d</code><i>&lt;nodata&gt;</i> <code>-f</code><i>&lt;flags&gt;</i> <code>-g</code><i>&lt;gaps&gt;</i> <code>-h</code><i>&lt;headers&gt;</i> <code>-i</code><i>&lt;flags&gt;</i> <code>-n</code><i>&lt;flags&gt;</i> <code>-o</code><i>&lt;flags&gt;</i> <code>-p</code><i>&lt;flags&gt;</i> <code>-r</code> <code>-s</code><i>&lt;flags&gt;</i> <code>-t</code><i>&lt;transp&gt;</i> <code>-x</code>[[-]<i>n</i>] <code>-:</code>[<code>i</code>|<code>o</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> These are all the common GMT options that remain the same for all GMT programs. No space between the option flag and the associated arguments.</p>
 <dl>
 <dt><code>-B</code>[<code>p</code>|<code>s</code>]<i>parameters</i></dt>

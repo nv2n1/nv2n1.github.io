@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogextract(1)"
 name: "pmlogextract"
 section: "1"
@@ -9,9 +10,7 @@ description: "pmlogextract – reduce, extract, concatenate and merge Performanc
 
 <h2>NAME</h2>
 <p> <code>pmlogextract</code> &#8211; reduce, extract, concatenate and merge Performance Co-Pilot archives</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmlogextract</code> [<code>-dfwz</code>] [<code>-c</code> <i>configfile</i>] [<code>-S</code> <i>starttime</i>] [<code>-s</code> <i>samples</i>] [<code>-T</code> <i>endtime</i>] [<code>-v</code> <i>volsamples</i>] [<code>-Z</code> <i>timezone</i>] <i>input</i> [&#8230;] <i>output</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmlogextract</code> reads one or more Performance Co-Pilot (PCP) archive logs identified by <i>input</i> and creates a temporally merged and/or reduced PCP archive log in <i>output</i>. <i>input</i> is a comma-separated list of names, each of which may be the base name of an archive or the name of a directory containing one or more archives. The nature of merging is controlled by the number of input archive logs, while the nature of data reduction is controlled by the command line arguments. The input(s) must be sets of PCP archive logs created by <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) with performance data collected from the <code>same</code> host, but usually over different time periods and possibly (although not usually) with different performance metrics being logged. </p>
 <p> If only one <i>input</i> is specified, then the default behavior simply copies the input set of PCP archive logs, into the output PCP archive log. When two or more sets of PCP archive logs are specified as <i>input</i>, the sets of logs are merged (or concatenated) and written to <i>output</i>. </p>
 <p> In the output archive log a <i>&lt;mark&gt;</i> record will be inserted at a time just past the end of each of the input archive logs to indicate a possible temporal discontinuity between the end of one input archive log and the start of the next input archive log. See the <code>MARK RECORDS</code> section below for more information. There is no <i>&lt;mark&gt;</i> record after the end of the <i>last</i> (in temporal order) of the input archive logs.</p>

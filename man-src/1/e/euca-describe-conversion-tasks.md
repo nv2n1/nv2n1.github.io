@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-conversion-tasks(1)"
 name: "euca-describe-conversion-tasks"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-conversion-tasks – Show information about import o
 
 <h2>NAME</h2>
 <p> euca-describe-conversion-tasks &#8211; Show information about import operations</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-conversion-tasks [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [TASK [TASK &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about import operations</p>
 <h3>positional arguments:</h3>
 <dl>

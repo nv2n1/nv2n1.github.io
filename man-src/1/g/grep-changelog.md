@@ -1,4 +1,5 @@
 ---
+
 title: "grep-changelog(1)"
 name: "grep-changelog"
 section: "1"
@@ -9,9 +10,7 @@ description: "grep-changelog – print ChangeLog entries matching criteria"
 
 <h2>NAME</h2>
 <p> grep-changelog &#8211; print ChangeLog entries matching criteria</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grep-changelog</code> [<i>options</i>] [<i>CHANGELOG</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grep-changelog</code> searches the named <i>CHANGELOG</i>s (by default files matching the regular expressions <code>ChangeLog</code> and <code>ChangeLog\.[0-9]+</code>) for entries matching the specified criteria. At least one option or file must be specified. This program is distributed with <code>GNU Emacs</code>. </p>
 <h2>OPTIONS</h2>
 <p> The program accepts unambiguous abbreviations for option names.</p>

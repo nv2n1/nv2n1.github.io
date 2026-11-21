@@ -1,4 +1,5 @@
 ---
+
 title: "cpftri(3)"
 name: "cpftri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpftri/"
 description: "cpftri.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpftri</code> (TRANSR, UPLO, N, A, INFO)<br />
  <i></i><code>CPFTRI</code></p>

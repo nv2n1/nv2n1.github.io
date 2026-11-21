@@ -1,4 +1,5 @@
 ---
+
 title: "cd-read(1)"
 name: "cd-read"
 section: "1"
@@ -9,9 +10,7 @@ description: "cd-read – reads Information from a CD or CD-image"
 
 <h2>NAME</h2>
 <p> cd-read &#8211; reads Information from a CD or CD-image</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cd-read</code> [<i>OPTION</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-a</code>, <code>&#8211;access-mode</code>=<i>STRING</i></dt>
 <dd> Set CD control access mode</dd>

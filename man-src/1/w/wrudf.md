@@ -1,4 +1,5 @@
 ---
+
 title: "wrudf(1)"
 name: "wrudf"
 section: "1"
@@ -9,12 +10,10 @@ description: "wrudf – Maintain an UDF filesystem."
 
 <h2>NAME</h2>
 <p> <code>wrudf </code>&#8211; Maintain an UDF filesystem.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>wrudf</code> <i>device</i>
 <code>wrudf</code> <code>--help</code> | <code>-help</code> | <code>-h</code> 
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>wrudf</code> provides an interactive shell with operations on existing UDF filesystem: cp, rm, mkdir, rmdir, ls, cd.</p>
 <h3>COMMANDS</h3>
 <dl>

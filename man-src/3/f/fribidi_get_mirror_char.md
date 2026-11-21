@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_mirror_char(3)"
 name: "fribidi_get_mirror_char"
 section: "3"
@@ -6,14 +7,9 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_mirror_char/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+fribidi_get_mirror_char - get mirrored character 
 
- fribidi_get_mirror_char - get mirrored character 
-
-<h2>SYNOPSIS</h2>
-
- <b> #include &lt;fribidi.h&gt; 
+<b> #include &lt;fribidi.h&gt; 
 
  extern fribidi_boolean fribidi_get_mirror_char 
  ( 
@@ -31,9 +27,7 @@ url: "/docs/linux/man/3-fribidi_get_mirror_char/"
 </dd><dt><b>FriBidiChar *mirrored_ch</b>
 </dt><dd> Output mirrored character.</dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- This function finds the mirrored equivalent of a character as defined in the file BidiMirroring.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/BidiMirroring.txt.">http://www.unicode.org/Public/UNIDATA/BidiMirroring.txt.</a> 
+This function finds the mirrored equivalent of a character as defined in the file BidiMirroring.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/BidiMirroring.txt.">http://www.unicode.org/Public/UNIDATA/BidiMirroring.txt.</a> 
 
  If the input character is a declared as a mirroring character in the Unicode standard and has a mirrored equivalent. The matching mirrored character is put in the output, otherwise the input character itself is put.
 

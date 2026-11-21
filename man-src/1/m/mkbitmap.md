@@ -1,4 +1,5 @@
 ---
+
 title: "mkbitmap(1)"
 name: "mkbitmap"
 section: "1"
@@ -9,11 +10,9 @@ description: "mkbitmap – transform images into bitmaps with scaling and filter
 
 <h2>NAME</h2>
 <p> mkbitmap &#8211; transform images into bitmaps with scaling and filtering</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 mkbitmap[options][filename...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mkbitmap</code> reads an image, and applies one or more of the following operations to it, in this order: inversion, highpass filtering, scaling, and thresholding. Each operation can be individually controlled and turned on or off. </p>
 <p> The principal use of <code>mkbitmap</code> is to convert color or greyscale images into a format suitable as input for other programs, particularly the tracing program <code><a href="/docs/linux/man/1-potrace/">potrace</a></code>(1). It is particularly useful for converting scanned line art, such as cartoons, handwritten text, etc., to high-resolution bilevel images. </p>
 <p> <i>Highpass filtering</i> can be used to ensure that foreground features such as lines and text are preserved, while at the same time compensating for uneven background. Optional <i>blurring</i> can be applied to smooth out the image and remove visual noise. <i>Scaling</i> is important because a scanned greyscale image contains more visual detail than a bilevel image at the same resolution. By scaling the image to a higher resolution (using interpolation) before thresholding it, some of this detail is preserved. <i>Thresholding</i> means converting a greyscale image to a bilevel image using only black and white pixels. Pixels that are darker than a certain threshold value are converted to black. Optional <i>inversion</i> is useful if the input image shows bright features on dark background, such as a picture of chalk drawings on a blackboard. </p>

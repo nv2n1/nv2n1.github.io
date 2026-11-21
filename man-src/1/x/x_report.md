@@ -1,4 +1,5 @@
 ---
+
 title: "x_report(1)"
 name: "x_report"
 section: "1"
@@ -9,9 +10,7 @@ description: "x_report – Report Cross-Over Error Statistics for Cruises"
 
 <h2>NAME</h2>
 <p> <code>x_report</code> &#8211; Report Cross-Over Error Statistics for Cruises</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x_report</code> [ <i>leg</i> ] [ <code>-X</code><i>legbase</i> ] [ <code>-G</code> ] [ <code>-M</code> ] [ <code>-T</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>x_report</code> reads the x_system data base file and prints out statistics for each leg. The statistics are the number of, means, and standard deviations of COEs for both the internal and external cases. One or more data types (GMT) may be specified.</p>
 <dl>
 <dt><i>leg</i></dt>

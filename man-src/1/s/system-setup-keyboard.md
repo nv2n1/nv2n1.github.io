@@ -1,4 +1,5 @@
 ---
+
 title: "system-setup-keyboard(1)"
 name: "system-setup-keyboard"
 section: "1"
@@ -9,11 +10,9 @@ description: "system-setup-keyboard – xorg.conf keyboard layout daemon"
 
 <h2>NAME</h2>
 <p> system-setup-keyboard &#8211; xorg.conf keyboard layout daemon</p>
-<h2>SYNOPSIS</h2>
 <pre>
 system-setup-keyboard
 </pre>
-<h2>DESCRIPTION</h2>
 <p> system-setup-keyboard is a daemon that monitors /etc/sysconfig/keyboard and writes out an xorg.conf.d snippet based on this file&#8217;s contents. Whenever the file is updated, system-setup-keyboard writes out the matching XKB configuration for the selected layout. This configuration applies to all keyboards but may be overwritten by other xorg.conf.d snippets or entries in the xorg.conf configuration file. </p>
 <p> system-setup-keyboard is started on entering runlevel 5 by upstart or before starting prefdm by systemd depending on the used init system.</p>
 <h2>KEYBOARD LAYOUTS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "rpload(1)"
 name: "rpload"
 section: "1"
@@ -11,7 +12,6 @@ description: "rpload – alpine remote data utility"
 <p> rpload &#8211; alpine remote data utility</p>
 <h2>SYNTAX</h2>
 <p> <code>rpload</code> [ -f ] [ -s trimSize ] -t Type -l Local_file -r Remote_folder</p>
-<h2>DESCRIPTION</h2>
 <p> Rpload may be used to convert local Alpine configuration files or address books into remote configurations or address books. It is intended to be used by system administrators. Regular users should normally use the facilities provided within Alpine. </p>
 <p> Local_file will usually be a user&#8217;s alpine configuration file, and Remote_folder is the IMAP folder which will be used (with the help of Alpine&#8217;s <code>-p</code>, <code>-P</code>, and <code>-x</code> commands or PINECONF, PINERC, and PINERCEX environment variables) as the user&#8217;s remote configuration folder. A copy of Local_file will be placed in the folder with the correct header lines to satisfy Alpine.</p>
 <dl>

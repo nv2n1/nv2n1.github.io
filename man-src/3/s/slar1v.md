@@ -1,4 +1,5 @@
 ---
+
 title: "slar1v(3)"
 name: "slar1v"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slar1v/"
 description: "slar1v.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slar1v</code> (N, B1, BN, LAMBDA, D, L, LD, LLD, PIVMIN, GAPTOL, Z, WANTNC, NEGCNT, ZTZ, MINGMA, R, ISUPPZ, NRMINV, RESID, RQCORR, WORK)<br />
  <i></i><code>SLAR1V</code> computes the (scaled) r-th column of the inverse of the submatrix in rows b1 through bn of the tridiagonal matrix LDLT &#8211; λI.</p>

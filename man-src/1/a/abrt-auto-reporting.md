@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-auto-reporting(1)"
 name: "abrt-auto-reporting"
 section: "1"
@@ -6,22 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-auto-reporting/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-auto-reporting - Get or modify the auto reporting option values 
 
- abrt-auto-reporting - Get or modify the auto reporting option values 
+<i>abrt-auto-reporting</i> [-v] [ enabled | yes | 1 | on | disabled | no | 0 | off ]
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-auto-reporting</i> [-v] [ enabled | yes | 1 | on | disabled | no | 0 | off ]
-
-<h2>DESCRIPTION</h2>
-
- 
-
- Reads the configuration from abrt.conf and saves the changes to the same file. 
+Reads the configuration from abrt.conf and saves the changes to the same file. 
 
  The changes will take effect immediately without necessity to restart any ABRT process and will be persistent. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "sla_gerpvgrw(3)"
 name: "sla_gerpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_gerpvgrw/"
 description: "sla_gerpvgrw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>sla_gerpvgrw</code> (N, NCOLS, A, LDA, AF, LDAF)<br />
  <i></i><code>SLA_GERPVGRW</code></p>

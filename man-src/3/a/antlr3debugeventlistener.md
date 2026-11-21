@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3debugeventlistener(3)"
 name: "antlr3debugeventlistener"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3debugeventlistener.h –"
 ---
 
 <p> The definition of all debugging events that a recognizer can trigger.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3basetree.h">antlr3basetree.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt; </p>

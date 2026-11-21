@@ -1,4 +1,5 @@
 ---
+
 title: "npm-token(1)"
 name: "npm-token"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-token/"
 description: "npm-token – Manage your authentication tokens"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-token</code> &#8211; Manage your authentication tokens </p>
 <h3>Synopsis</h3>
 <dl>

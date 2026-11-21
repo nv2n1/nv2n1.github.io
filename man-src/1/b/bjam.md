@@ -1,4 +1,5 @@
 ---
+
 title: "bjam(1)"
 name: "bjam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bjam/"
 description: "Boost.Build – software build tool"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Boost.Build 4.0-git </p>
 <p> Project-specific help:</p>
 <dl>

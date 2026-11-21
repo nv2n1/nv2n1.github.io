@@ -1,4 +1,5 @@
 ---
+
 title: "hpi_shell(1)"
 name: "hpi_shell"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hpi_shell/"
 description: "hpi_shell – An openhpi sample application that allows a user to interactively perform a number of HPI operations."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpi_shell[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-e][-f&lt;file&gt;][-X][-h] hpi_shell[--domain = nn][--host = host[:port]][--cfgfile = file][--events][--cmdfile = filename][--debug][--help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpi_shell reads commands and performs <font SIZE="-1">HPI</font> operations based on those commands. This allows it to exercise HPI-managed hardware and do manual operations on that hardware. </p>
 <p> Once in hpi_shell, use the &#8220;help&#8221; command for a list of commands, or &#8220;help command&#8221; for details on a particular command. </p>
 <p> If no domain or host is selected, ohparam uses the default domain as specified in the openhpiclient.conf file.</p>

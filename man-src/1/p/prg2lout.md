@@ -1,4 +1,5 @@
 ---
+
 title: "prg2lout(1)"
 name: "prg2lout"
 section: "1"
@@ -9,9 +10,7 @@ description: "prg2lout – convert computer program text into Lout"
 
 <h2>NAME</h2>
 <p> prg2lout &#8211; convert computer program text into Lout</p>
-<h2>SYNOPSIS</h2>
 <p> <code>prg2lout</code> -l <i>language</i> [ <i>options</i> ] <i>files</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Reformat computer program text for input to the Lout document formatting system, taking care of comments, character strings, tab characters, etc. </p>
 <p> <code>prg2lout</code> reads the named program source files and produces output suitable for input to <code>lout -s</code>. Thus, </p>
 <dl>

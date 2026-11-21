@@ -1,4 +1,5 @@
 ---
+
 title: "chktrust(1)"
 name: "chktrust"
 section: "1"
@@ -9,9 +10,7 @@ description: "chktrust – Check the trust of a PE executable."
 
 <h2>NAME</h2>
 <p> chktrust &#8211; Check the trust of a PE executable.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>chktrust [options] filename</code></p>
-<h2>DESCRIPTION</h2>
 <p> Verify if an PE executable (CLR assembly, Win32 EXE or DLL) has a valid Authenticode(r) signature that can be traced back to a trusted certificate authority (CA). This means that</p>
 <dl>
 <dt>(a) the signature is valid (i.e. file integrity) and,</dt>

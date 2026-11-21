@@ -1,4 +1,5 @@
 ---
+
 title: "pamflip(1)"
 name: "pamflip"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pamflip/"
 description: "pamflip – flip or rotate a PAM or PNM image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pamflip</code> { <code>-leftright</code> | <code>-lr</code> | <code>-topbottom</code> | <code>-tb</code> | <code>-transpose</code> | <code>-xy</code> | <code>-rotate90</code> | <code>-r90</code> | <code>-cw</code> | <code>-rotate270</code> | <code>-r270</code> | <code>-ccw</code> | <code>-rotate180</code> | <code>-r180</code> <code>-null</code> | <code>-xform=</code><i>xform1</i><code>,</code><i>xform2</i>&#8230; } [<code>-memsize=</code><i>mebibytes</i>] [<code>-pagesize=</code><i>bytes</i>] [<i>pamfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamflip</code> flips a PAM or PNM image top for bottom or left for right, or transposes it horizontal for vertical, or rotates it 1, 2, or 3 quarter turns. </p>
 <p> To rotate at other angles, use <code>pnmrotate</code>. It is much slower, though. </p>

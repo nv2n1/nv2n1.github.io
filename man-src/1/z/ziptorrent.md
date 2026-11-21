@@ -1,4 +1,5 @@
 ---
+
 title: "ziptorrent(1)"
 name: "ziptorrent"
 section: "1"
@@ -9,9 +10,7 @@ description: "ziptorrent – torrentzip zip archives"
 
 <h2>NAME</h2>
 <p> ziptorrent &#8211; torrentzip zip archives</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ziptorrent</code> [<code>-hnVv</code>] <code>archive Op &#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ziptorrent</code> torrentzips <code>archive.</code> This is a restricted file format used for using bittorrent on zip files. Please see zip_set_archive_flag(3) for details on what information gets lost through this process. </p>
 <p> Supported options:</p>
 <dl>

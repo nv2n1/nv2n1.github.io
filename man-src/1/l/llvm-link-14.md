@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-link-14(1)"
 name: "llvm-link-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-link-14/"
 description: "llvm-link – LLVM bitcode linker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-link</code> [<i>options</i>] <i>filename …</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-link</code> takes several LLVM bitcode files and links them together into a single LLVM bitcode file. It writes the output file to standard output, unless the <i>-o</i> option is used to specify a filename.</p>
 <h2>OPTIONS</h2>
 <dl>

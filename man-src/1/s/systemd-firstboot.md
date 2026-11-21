@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-firstboot(1)"
 name: "systemd-firstboot"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-systemd-firstboot/"
 description: "systemd-firstboot, systemd-firstboot.service – Initialize basic system settings on or before the first boot-up of a system"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-firstboot</code> [OPTIONS&#8230;]</dt></dl>
 <dd>systemd-firstboot.service</dd>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-firstboot</code> initializes the most basic system settings interactively on the first boot, or optionally non-interactively when a system image is created. The following settings may be set up: </p>
 <dl>
 <dt>

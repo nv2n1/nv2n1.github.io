@@ -1,4 +1,5 @@
 ---
+
 title: "storescp(1)"
 name: "storescp"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-storescp/"
 description: "storescp – DICOM storage (C-STORE) SCP"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 storescp[options][port]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>storescp</code> application implements a Service Class Provider (SCP) for the Storage Service Class. It listens on a specific TCP/IP port for incoming association requests from a Storage Service Class User (SCU) and can receive both DICOM images and other DICOM composite objects. The <code>storescp</code> application also supports the Verification Service Class as an SCP.</p>
 <h2>PARAMETERS</h2>
 <pre>

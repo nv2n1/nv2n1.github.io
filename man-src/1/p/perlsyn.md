@@ -1,4 +1,5 @@
 ---
+
 title: "perlsyn(1)"
 name: "perlsyn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlsyn/"
 description: "perlsyn – Perl syntax"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> A Perl program consists of a sequence of declarations and statements which run from the top to the bottom. Loops, subroutines, and other control structures allow you to jump around within the code. </p>
 <p> Perl is a <code>free-form</code> language: you can format and indent it however you like. Whitespace serves mostly to separate tokens, unlike languages like Python where it is an important part of the syntax, or Fortran where it is immaterial. </p>
 <p> Many of Perl&#8217;s syntactic elements are <code>optional</code>. Rather than requiring you to put parentheses around every function call and declare every variable, you can often leave such explicit elements off and Perl will figure out what you meant. This is known as <code>Do What I Mean</code>, abbreviated <font SIZE="-1"><code>DWIM</code></font>. It allows programmers to be <code>lazy</code> and to code in a style with which they are comfortable. </p>

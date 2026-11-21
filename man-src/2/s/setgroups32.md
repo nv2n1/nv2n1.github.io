@@ -1,4 +1,5 @@
 ---
+
 title: "setgroups32(2)"
 name: "setgroups32"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-setgroups32/"
 description: "getgroups, setgroups – get/set list of supplementary group IDs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int getgroups(int </code><i>size</i><code>, gid_t </code><i>list</i><code>[]);</code> </p>
@@ -19,7 +19,6 @@ description: "getgroups, setgroups – get/set list of supplementary group IDs"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> <code>getgroups</code>() returns the supplementary group IDs of the calling process in <i>list</i>. The argument <i>size</i> should be set to the maximum number of items that can be stored in the buffer pointed to by <i>list</i>. If the calling process is a member of more than <i>size</i> supplementary groups, then an error results. </p>
 <p> It is unspecified whether the effective group ID of the calling process is included in the returned list. (Thus, an application should also call <code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2) and add or remove the resulting value.) </p>
 <p> If <i>size</i> is zero, <i>list</i> is not modified, but the total number of supplementary group IDs for the process is returned. This allows the caller to determine the size of a dynamically allocated <i>list</i> to be used in a further call to <code>getgroups</code>(). </p>

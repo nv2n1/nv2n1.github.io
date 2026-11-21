@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_free(3)"
 name: "bson_string_free"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_string_free() – Frees the bson_string_t structure and optio
 
 <h2>NAME</h2>
 <p> bson_string_free() &#8211; Frees the bson_string_t structure and optionally the string itself.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 char *
 bson_string_free (bson_string_t *string,
@@ -22,7 +22,6 @@ bson_string_free (bson_string_t *string,
 <dl>
 <dt><code>free_segment</code></dt>
 <dd> A bool indicating if <code>str-&gt;str</code> should be returned.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Frees the bson_string_t structure and optionally the string itself. </p>
 <h2>RETURNS</h2>
 <p> <code>str-&gt;str</code> if <code>free_segment</code> is true, otherwise NULL. </p>

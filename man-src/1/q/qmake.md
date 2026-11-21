@@ -1,4 +1,5 @@
 ---
+
 title: "qmake(1)"
 name: "qmake"
 section: "1"
@@ -9,7 +10,6 @@ description: "qmake – distributed parallel make, scheduling by xxQS_NAMExx."
 
 <h2>SYNTAX</h2>
 <p> <code>qmake</code> [<i>options</i>] &#8212; [<i>gmake options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Qmake</i> is a parallel, distributed <i><a href="/docs/linux/man/1-make/">make</a></i>(1) utility. Scheduling of the parallel <i>make</i> tasks is done by xxQS_NAMExx. It is based on GNU make, version 3.82 ( gmake ). Both xxQS_NAMExx and GNU make command line options can be specified. They are separated by &quot;&#8211;&quot;. </p>
 <p> All xxQS_NAMExx options valid with or can be specified with <i>qmake</i>. See for a description of all xxQS_NAMExx command line options. The GNU Make manual (via <i>info</i>) or the <i><a href="/docs/linux/man/1-make/">make</a></i>(1) manual page describes the <i>gmake</i> command line syntax. </p>
 <p> The syntax of <i>qmake</i> makefiles corresponds to <i>gmake</i> and is described in the &quot;GNU Make Manual&quot;. </p>

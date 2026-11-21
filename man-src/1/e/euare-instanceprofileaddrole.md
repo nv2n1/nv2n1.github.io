@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofileaddrole(1)"
 name: "euare-instanceprofileaddrole"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-instanceprofileaddrole – Add a role to an instance profile
 
 <h2>NAME</h2>
 <p> euare-instanceprofileaddrole &#8211; Add a role to an instance profile</p>
-<h2>SYNOPSIS</h2>
 <p> euare-instanceprofileaddrole <code>-r</code> ROLENAME [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] IPROFILE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Add a role to an instance profile</p>
 <h3>positional arguments:</h3>
 <dl>

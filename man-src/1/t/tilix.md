@@ -1,4 +1,5 @@
 ---
+
 title: "tilix(1)"
 name: "tilix"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-tilix/"
 description: "tilix – Tiling GTK3 terminal emulator for GNOME"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tilix</code> &#8211; Tiling GTK3 terminal emulator for GNOME </p>
-<h2>SYNOPSIS</h2>
 <p> <code>tilix</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>tilix</code> is an advanced GTK3 tiling terminal emulator designed to adhere to Gnome Human Interface Guidelines.</p>
 <h2>OPTIONS</h2>
 <p> The <code>tilix</code> application accepts the following command line parameters:</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_privkey_generate(3)"
 name: "gnutls_privkey_generate"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_privkey_generate – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_generate &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_generate(gnutls_privkey_t </code><i>pkey</i><code>, gnutls_pk_algorithm_t </code><i>algo</i><code>, unsigned int </code><i>bits</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_privkey_generate – API function"
 <dd> the size of the modulus</dd>
 <dt>unsigned int flags</dt>
 <dd> unused for now. Must be 0.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will generate a random private key. Note that this function must be called on an empty private key. </p>
 <p> Note that when generating an elliptic curve key, the curve can be substituted in the place of the bits parameter using the <code>GNUTLS_CURVE_TO_BITS()</code> macro. </p>
 <p> Do not set the number of bits directly, use <code>gnutls_sec_param_to_pk_bits()</code>.</p>

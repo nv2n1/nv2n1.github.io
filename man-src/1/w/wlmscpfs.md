@@ -1,4 +1,5 @@
 ---
+
 title: "wlmscpfs(1)"
 name: "wlmscpfs"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-wlmscpfs/"
 description: "wlmscpfs – DICOM Basic Worklist Management SCP (based on data files)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 wlmscpfs [options] port
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>wlmscpfs</code> application implements a Service Class Provider (SCP) for the Basic Worklist Management Service. The application will listen on a specified TCP/IP port for incoming association requests from a Worklist Management SCU. In case an association was acknowledged and a worklist query was received, the <code>wlmscpfs</code> application will query particular files in a certain directory (which can be specified through corresponding program options) on the file system for corresponding worklist information, and it will send this information back to the calling Worklist Management SCU. Aside from dealing with Worklist Management queries, the <code>wlmscpfs</code> application also supports the Verification Service Class as an SCP.</p>
 <h2>PARAMETERS</h2>
 <pre>

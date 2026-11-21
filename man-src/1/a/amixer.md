@@ -1,4 +1,5 @@
 ---
+
 title: "amixer(1)"
 name: "amixer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-amixer/"
 description: "amixer – command-line mixer for ALSA soundcard driver"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>amixer</code> [<i>-option</i>] [<i>cmd</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>amixer</code> allows command-line control of the mixer for the ALSA soundcard driver. <code>amixer</code> supports multiple soundcards. </p>
 <p> <code>amixer</code> with no arguments will display the current mixer settings for the default soundcard and device. This is a good way to see a list of the simple mixer controls you can use. </p>
 <h2>COMMANDS</h2>

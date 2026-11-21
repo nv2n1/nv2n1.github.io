@@ -1,4 +1,5 @@
 ---
+
 title: "amule(1)"
 name: "amule"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-amule/"
 description: "amule – the all-platform eMule p2p client"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [<code>-c</code> <i>&lt;path&gt;</i>] [<code>-geometry</code> <i>&lt;geom&gt;</i>] _untranslated<code>[</code>-o<code>]</code> _untranslated<code>[</code>-r<code>]</code> [<code>-w</code> <i>&lt;path&gt;</i>] _untranslated<code>[</code>-d<code>]</code> _untranslated<code>[</code>-i<code>]</code> [<code>-t</code> <i>&lt;num&gt;</i>] [<i>eD2k-link</i>] </p>
 <p> _untranslated<code>[</code>-v<code>]</code> </p>
 <p> _untranslated<code>[</code>-h<code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>[ -c</code> <i>&lt;path&gt;</i>, <code>&#8211;config-dir</code>=<i>&lt;path&gt;</i> <code>]</code></dt>
 <dd> Read config from <i>&lt;path&gt;</i> instead of home</dd>

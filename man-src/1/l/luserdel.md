@@ -1,4 +1,5 @@
 ---
+
 title: "luserdel(1)"
 name: "luserdel"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-luserdel/"
 description: "luserdel – Delete an user"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> luserdel [<i>OPTION</i>]&#8230; <i>user</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Deletes the user with name <i>user</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

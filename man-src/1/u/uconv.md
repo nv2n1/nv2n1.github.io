@@ -1,4 +1,5 @@
 ---
+
 title: "uconv(1)"
 name: "uconv"
 section: "1"
@@ -6,11 +7,9 @@ letter: "u"
 url: "/docs/linux/man/1-uconv/"
 description: "uconv – convert data from one encoding to another"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>uconv</code> - convert data from one encoding to another </p>
-<h2>SYNOPSIS</h2>
 <p> <code>uconv</code> [ <code>-h</code>, <code>-?</code>, <code>--help</code> ] [ <code>-V</code>, <code>--version</code> ] [ <code>-s</code>, <code>--silent</code> ] [ <code>-v</code>, <code>--verbose</code> ] [ <code>-l</code>, <code>--list</code> | <code>-l</code>, <code>--list-code</code><i> code</i> | <code>--default-code</code> | <code>-L</code>, <code>--list-transliterators</code> ] [ <code>--canon</code> ] [ <code>-x</code><i> transliteration</i> ] [ <code>--to-callback</code><i> callback</i> | <code>-c</code> ] [ <code>--from-callback</code><i> callback</i> | <code>-i</code> ] [ <code>--callback</code><i> callback</i> ] [ <code>--fallback</code> | <code>--no-fallback</code> ] [ <code>-b</code>, <code>--block-size</code><i> size</i> ] [ <code>-f</code>, <code>--from-code</code><i> encoding</i> ] [ <code>-t</code>, <code>--to-code</code><i> encoding</i> ] [ <code>--add-signature</code> ] [ <code>--remove-signature</code> ] [ <code>-o</code>, <code>--output</code><i> file</i> ] [ <i>file</i>... ]  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>uconv</code> converts, or transcodes, each given <i>file</i> (or its standard input if no <i>file</i> is specified) from one <i>encoding</i> to another. The transcoding is done using Unicode as a pivot encoding (i.e. the data are first transcoded from their original encoding to Unicode, and then from Unicode to the destination encoding). </p>
 <p> If an <i>encoding</i> is not specified or is <code>-</code>, the default encoding is used. Thus, calling <code>uconv</code> with no <i>encoding</i> provides an easy way to validate and sanitize data files for further consumption by tools requiring data in the default encoding. </p>
 <p> When calling <code>uconv</code>, it is possible to specify callbacks that are used to handle invalid characters in the input, or characters that cannot be transcoded to the destination encoding. Some encodings, for example, offer a default substitution character that can be used to represent the occurrence of such characters in the input. Other callbacks offer a useful visual representation of the invalid data. </p>

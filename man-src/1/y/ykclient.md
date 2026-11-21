@@ -1,4 +1,5 @@
 ---
+
 title: "ykclient(1)"
 name: "ykclient"
 section: "1"
@@ -9,9 +10,7 @@ description: "ykclient – YubiCloud One-Time-Password Validation Client"
 
 <h2>NAME</h2>
 <p> ykclient &#8211; YubiCloud One-Time-Password Validation Client</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ykclient</code> [<i>OPTION</i>]&#8230; <i>CLIENTID YUBIKEYOTP</i></p>
-<h2>DESCRIPTION</h2>
 <p> Validate the YUBIKEYOTP one-time-password against the YubiCloud using CLIENTID as the client identifier. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

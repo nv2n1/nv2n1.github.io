@@ -1,4 +1,5 @@
 ---
+
 title: "ferm(1)"
 name: "ferm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ferm/"
 description: "ferm – a firewall rule parser for linux"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ferm</code> <i>options</i> <i>inputfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ferm</code> is a frontend for <code>iptables</code>. It reads the rules from a structured configuration file and calls <i><a href="/docs/linux/man/8-iptables/">iptables</a></i>(8) to insert them into the running kernel. </p>
 <p> <code>ferm</code>&#8216;s goal is to make firewall rules easy to write and easy to read. It tries to reduce the tedious task of writing down rules, thus enabling the firewall administrator to spend more time on developing good rules than the proper implementation of the rule. </p>
 <p> To achieve this, <code>ferm</code> uses a simple but powerful configuration language, which allows variables, functions, arrays, blocks. It also allows you to include other files, allowing you to create libraries of commonly used structures and functions. </p>

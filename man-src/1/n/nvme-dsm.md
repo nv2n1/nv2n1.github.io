@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-dsm(1)"
 name: "nvme-dsm"
 section: "1"
@@ -6,16 +7,9 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-dsm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+nvme-dsm - Send NVMe Data Set Management, return results 
 
- nvme-dsm - Send NVMe Data Set Management, return results 
-
-<h2>SYNOPSIS</h2>
-
- 
-
- <pre><code>
+<pre><code>
 nvme dsm&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                 [--ctx - attrs = &lt;attribute - list, &gt; | -a&lt;attribute - list, &gt;]
                 [--blocks = &lt;nlb - list, &gt; | -b&lt;nlb - list, &gt;]
@@ -24,11 +18,7 @@ nvme dsm&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                 [--cdw11 = &lt;cdw11&gt; | -c&lt;cdw11&gt;]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- For the NVMe device given, sends an Data Set Management command and provides the result and returned structure. 
+For the NVMe device given, sends an Data Set Management command and provides the result and returned structure. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). If the character device is given, the '--namespace-id' option is mandatory, otherwise it will use the ns-id of the namespace for the block device you opened. For block devices, the ns-id used can be overridden with the same option. 
 

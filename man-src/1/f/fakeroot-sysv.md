@@ -1,4 +1,5 @@
 ---
+
 title: "fakeroot-sysv(1)"
 name: "fakeroot-sysv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fakeroot-sysv/"
 description: "fakeroot – run a command in an environment faking root privileges for file manipulation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fakeroot </code> <code>[-l|&#8211;lib</code> <i>library]</i> <code>[&#8211;faked</code> <i>faked-binary</i><code>]</code> <code>[-i</code> <i>load-file</i><code>]</code> <code>[-s</code> <i>save-file</i><code>]</code> <code>[-u|&#8211;unknown-is-real ]</code> <code>[-b|&#8211;fd-base ]</code> <code>[-h|&#8211;help ]</code> <code>[-v|&#8211;version ]</code> <code>[&#8211;]</code> <code>[command]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fakeroot</code> runs a command in an environment wherein it appears to have root privileges for file manipulation. This is useful for allowing users to create archives (tar, ar, .deb etc.) with files in them with root permissions/ownership. Without <code>fakeroot</code> one would need to have root privileges to create the constituent files of the archives with the correct permissions and ownership, and then pack them up, or one would have to construct the archives directly, without using the archiver. </p>
 <p> <code>fakeroot</code> works by replacing the file manipulation library functions (<a href="/docs/linux/man/2-chmod/">chmod</a>(2), <a href="/docs/linux/man/2-stat/">stat</a>(2) etc.) by ones that simulate the effect the real library functions would have had, had the user really been root. These wrapper functions are in a shared library <code>/usr/lib/*/libfakeroot-*.so</code> or similar location on your platform. The shared object is loaded through the <code>LD_PRELOAD</code> mechanism of the dynamic loader. (See <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)) </p>
 <p> If you intend to build packages with <code>fakeroot</code>, please try building the fakeroot package first: the &quot;debian/rules build&quot; stage has a few tests (testing mostly for bugs in old fakeroot versions). If those tests fail (for example because you have certain libc5 programs on your system), other packages you build with fakeroot will quite likely fail too, but possibly in much more subtle ways. </p>

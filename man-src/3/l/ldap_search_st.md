@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_search_st(3)"
 name: "ldap_search_st"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldap_search, ldap_search_s, ldap_search_st, ldap_search_ext, ldap_
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 #include &lt;sys/types.h&gt;
@@ -38,7 +38,6 @@ int ldap_search_ext_s(
     int sizelimit,
     LDAPMessage **res);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> These routines are used to perform LDAP search operations. The <code>ldap_search_ext_s()</code> routine does the search synchronously (i.e., not returning until the operation completes), providing a pointer to the resulting LDAP messages at the location pointed to by the <i>res</i> parameter. </p>
 <p> The <code>ldap_search_ext()</code> routine is the asynchronous version, initiating the search and returning the message id of the operation it initiated in the integer pointed to by the <i>msgidp</i> parameter. </p>
 <p> The <i>base</i> parameter is the DN of the entry at which to start the search. </p>

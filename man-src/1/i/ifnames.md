@@ -1,4 +1,5 @@
 ---
+
 title: "ifnames(1)"
 name: "ifnames"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ifnames/"
 description: "ifnames – Extract CPP conditionals from a set of files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ifnames</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Scan all of the C source FILES (or the standard input, if none are given) and write to the standard output a sorted list of all the identifiers that appear in those files in &#8216;#if&#8217;, &#8216;#elif&#8217;, &#8216;#ifdef&#8217;, or &#8216;#ifndef&#8217; directives. Print each identifier on a line, followed by a space-separated list of the files in which that identifier occurs.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

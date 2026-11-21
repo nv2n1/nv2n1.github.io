@@ -1,4 +1,5 @@
 ---
+
 title: "openbox(1)"
 name: "openbox"
 section: "1"
@@ -9,9 +10,7 @@ description: "openbox — A minimalistic, highly configurable, next generation w
 
 <h2>NAME</h2>
 <p> openbox &#8212; A minimalistic, highly configurable, next generation window manager with extensive standards support.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>openbox</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;replace</code>] [<code>&#8211;reconfigure</code>] [<code>&#8211;restart</code>] [<code>&#8211;sm-disable</code>] [<code>&#8211;sync</code>] [<code>&#8211;debug</code>] [<code>&#8211;debug-focus</code>] [<code>&#8211;debug-xinerama</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> Openbox is minimalistic, highly configurable, next generation window manager with extensive standards support. </p>
 <p> You can start Openbox in three ways: </p>
 <p> If you run a display manager such as GDM, you will find 3 entries in the login session type menu for Openbox: <code>GNOME/Openbox</code>, <code>KDE/Openbox</code> and <code>Openbox</code>. If you want to use Openbox within GNOME or KDE, you can choose the appropriate entry, and it will launch GNOME or KDE with Openbox as the window manager. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_tcaf_d(1)"
 name: "g_tcaf_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_tcaf – calculates viscosities of liquids"
 <h2>NAME</h2>
 <p> g_tcaf &#8211; calculates viscosities of liquids </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_tcaf</code> <code>-f</code><i> traj.trr </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-ot</code><i> transcur.xvg </i> <code>-oa</code><i> tcaf_all.xvg </i> <code>-o</code><i> tcaf.xvg </i> <code>-of</code><i> tcaf_fit.xvg </i> <code>-oc</code><i> tcaf_cub.xvg </i> <code>-ov</code><i> visc_k.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]mol</code><i></i> <code>-[no]k34</code><i></i> <code>-wt</code><i> real </i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_tcaf computes tranverse current autocorrelations. These are used to estimate the shear viscosity eta. For details see: Palmer, JCP 49 (1994) pp 359-366. </p>
 <p> Transverse currents are calculated using the k-vectors (1,0,0) and (2,0,0) each also in the y- and z-direction, (1,1,0) and (1,-1,0) each also in the 2 other plains (these vectors are not independent) and (1,1,1) and the 3 other box diagonals (also not independent). For each k-vector the sine and cosine are used, in combination with the velocity in 2 perpendicular directions. This gives a total of 16*2*2=64 transverse currents. One autocorrelation is calculated fitted for each k-vector, which gives 16 tcaf&#8217;s. Each of these tcaf&#8217;s is fitted to f(t) = exp(-v)(cosh(Wv) + 1/W sinh(Wv)), v = -t/(2 tau), W = sqrt(1 &#8211; 4 tau eta/rho k2), which gives 16 tau&#8217;s and eta&#8217;s. The fit weights decay with time as exp(-t/wt), the tcaf and fit are calculated up to time 5*wt. The eta&#8217;s should be fitted to 1 &#8211; a eta(k) k2, from which one can estimate the shear viscosity at k=0. </p>
 <p> When the box is cubic, one can use the option <code> -oc</code>, which averages the tcaf&#8217;s over all k-vectors with the same length. This results in more accurate tcaf&#8217;s. Both the cubic tcaf&#8217;s and fits are written to <code> -oc</code> The cubic eta estimates are also written to <code> -ov</code>. </p>

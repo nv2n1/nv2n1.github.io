@@ -1,4 +1,5 @@
 ---
+
 title: "racount(1)"
 name: "racount"
 section: "1"
@@ -9,9 +10,7 @@ description: "racount – count things from an argus(8) data file/stream."
 
 <h2>NAME</h2>
 <p> <code>racount</code> &#8211; count things from an <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file/stream.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>racount</code> <i>[-M addr proto] [</i><code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Racount</code> reads <code>argus</code> data from an <i>argus-file</i> list, and prints out various counts from the data in the file. Racount supports, by default, a single line output that provide total records and pkt and byte counts, broken down by source and destination. </p>
 <h2>OPTIONS</h2>
 <p> Racount, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. </p>

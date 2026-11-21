@@ -1,4 +1,5 @@
 ---
+
 title: "discrepancy(3)"
 name: "discrepancy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-discrepancy/"
 description: "QuantLib::DiscrepancyStatistics – Statistic tool for sequences with discrepancy calculation."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/statistics/discrepancystatistics.hpp&gt; </p>
 <p> Inherits <code>GenericSequenceStatistics&lt; Statistics &gt;</code>. </p>
 <h3>Public Types</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "gspath(1)"
 name: "gspath"
 section: "1"
@@ -9,9 +10,7 @@ description: "gspath – Utility to display standard directory/path information"
 
 <h2>NAME</h2>
 <p> gspath &#8211; Utility to display standard directory/path information</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gspath</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This utility can be used to print out a single directory or path in order for external applications to know what paths the GNUstep system is using. It was written to provide information for the GNUstep make package. </p>
 <p> The <code>gspath</code> usility is called with exactly one argument, which determines what it prints. </p>
 <h2>Arguments</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_modify_wq(3)"
 name: "ibv_modify_wq"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ibv_modify_wq/"
 description: "ibv_modify_wq – Modify a Work Queue (WQ)."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct int ibv_modify_wq(struct ibv_wq *wq,
                          struct ibv_wq_attr *wq_attr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_modify_wq()</code> modifys a WQ <i>wq</i>. The argument <i>wq_attr</i> is an ibv_wq_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_wq_attr {

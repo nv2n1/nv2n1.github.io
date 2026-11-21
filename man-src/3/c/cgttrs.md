@@ -1,4 +1,5 @@
 ---
+
 title: "cgttrs(3)"
 name: "cgttrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgttrs/"
 description: "cgttrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br />
  <i></i><code>CGTTRS</code></p>

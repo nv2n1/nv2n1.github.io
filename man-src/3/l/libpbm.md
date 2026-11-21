@@ -1,4 +1,5 @@
 ---
+
 title: "libpbm(3)"
 name: "libpbm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpbm/"
 description: "libpbm – libnetpbm functions to read and write PBM image files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/pbm.h&gt;</code> </p>
 <p> <code>bit **pbm_allocarray(int</code> <i>cols</i><code>, int </code><i>rows</i><code>);</code> </p>
 <p> <code>bit *pbm_allocrow(int</code> <i>cols</i><code>);</code> </p>
@@ -24,7 +24,6 @@ description: "libpbm – libnetpbm functions to read and write PBM image files"
 <p> <code>#define pbm_packed_bytes(</code><i>cols</i><code>) &#8230;</code> </p>
 <p> <code>void pbm_nextimage(</code> <code>FILE *</code><i>file</i><code>,</code> <code>int * const </code><i>eofP</i><code>);</code> </p>
 <p> <code>void pbm_check(</code> <code>FILE * </code><i>file</i><code>,</code> <code>const enum pm_check_type </code><i>check_type</i><code>,</code> <code>const int </code><i>format</i><code>,</code> <code>const int </code><i>cols</i><code>,</code> <code>const int </code><i>rows</i><code>,</code> <code>enum pm_check_code * const </code><i>retval</i><code>);</code> </p>
-<h2>DESCRIPTION</h2>
 <p> These library functions are part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <h3>TYPES AND CONSTANTS</h3>
 <p> <code>typedef &#8230; bit;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dropbearconvert(1)"
 name: "dropbearconvert"
 section: "1"
@@ -9,9 +10,7 @@ description: "dropbearconvert – convert between Dropbear and OpenSSH private k
 
 <h2>NAME</h2>
 <p> dropbearconvert &#8211; convert between Dropbear and OpenSSH private key formats</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dropbearconvert</code> <i>input_type</i> <i>output_type</i> <i>input_file</i> <i>output_file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Dropbear</code> and <code>OpenSSH</code> SSH implementations have different private key formats. <code>dropbearconvert</code> can convert between the two. </p>
 <p> Dropbear uses the same SSH public key format as OpenSSH, it can be extracted from a private key by using <code>dropbearkey -y</code> </p>
 <p> Encrypted private keys are not supported, use <a href="/docs/linux/man/1-ssh-keygen/">ssh-keygen</a>(1) to decrypt them first.</p>

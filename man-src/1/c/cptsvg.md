@@ -1,4 +1,5 @@
 ---
+
 title: "cptsvg(1)"
 name: "cptsvg"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cptsvg/"
 description: "cptsvg – convert GMT colour palette tables (cpt) to SVG gradients."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptsvg</code> [-g&nbsp;<wbr><i>geometry</i>] [-h] [-o&nbsp;<wbr><i>file</i>] [-p] [-v] [-V] [<i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>cptsvg</code> utility converts the colour palette table (cpt) files used by <code><a href="/docs/linux/man/1-gmt/">GMT</a></code>(1) to the gradients in the Scalar Vector Graphics (SVG) format. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified. </p>
 <p> The output is formatted for machines to read, rather than humans. A post-processor such as <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1) could be used in the latter case.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "basepods(1)"
 name: "basepods"
 section: "1"
@@ -6,14 +7,9 @@ letter: "b"
 url: "/docs/linux/man/1-basepods/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+basepods - print out pod paths for the standard perl manpages 
 
- basepods - print out pod paths for the standard perl manpages 
-
-<h2>DESCRIPTION</h2>
-
- This program uses your configuration's <tt>&quot;installprivlib&quot;</tt> directory to look up the full paths to those pod pages. Any files in that directory whose names end in <tt>&quot;.pod&quot;</tt> will be printed to the standard output, one per line. This is normally used in backticks to produce a list of filenames for other commands.
+This program uses your configuration's <tt>&quot;installprivlib&quot;</tt> directory to look up the full paths to those pod pages. Any files in that directory whose names end in <tt>&quot;.pod&quot;</tt> will be printed to the standard output, one per line. This is normally used in backticks to produce a list of filenames for other commands.
 
 <h2>EXAMPLES</h2>
 

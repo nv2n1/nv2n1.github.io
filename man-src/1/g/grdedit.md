@@ -1,4 +1,5 @@
 ---
+
 title: "grdedit(1)"
 name: "grdedit"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdedit – Modify header or content of a grid"
 
 <h2>NAME</h2>
 <p> grdedit &#8211; Modify header or content of a grid</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdedit</code> <i>grid</i> [ ] [ <i>xname</i>/<i>yname</i>/<i>zname</i>/<i>scale</i>/<i>offset</i>/<i>invalid</i>/<i>title</i>/<i>remark</i> ] [ [<code>a</code>|<code>h</code>|<code>l</code>|<code>r</code>|<code>t</code>|<code>v</code>] ] [ <i>outgrid</i> ] [ <i>parameters</i> ] [ <i>table</i> ] [ <i>region</i> ] [ ] [ ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdedit</code> reads the header information in a binary 2-D grid file and replaces the information with values provided on the command line [if any]. As an option, global, geographical grids (with 360 degrees longitude range) can be rotated in the east-west direction, and individual nodal values can be replaced from a table of <i>x</i>, <i>y</i>, <i>z</i> values. <code>grdedit</code> only operates on files containing a grid header. Note: If it is important to retain the original data you should use <code>-G</code> to save the modified grid to a new file.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

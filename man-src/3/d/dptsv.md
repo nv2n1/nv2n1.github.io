@@ -1,4 +1,5 @@
 ---
+
 title: "dptsv(3)"
 name: "dptsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dptsv/"
 description: "dptsv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dptsv</code> (N, NRHS, D, E, B, LDB, INFO)<br />
  <i></i><code> DPTSV computes the solution to system of linear equations A * X = B for PT matrices</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "if_freenameindex(3)"
 name: "if_freenameindex"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-if_freenameindex/"
 description: "if_nameindex, if_freenameindex – get network interface names and indexes"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;net/if.h&gt;
 struct if_nameindex *if_nameindex(void);
 void if_freenameindex(struct if_nameindex *ptr);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>if_nameindex</code>() function returns an array of <i>if_nameindex</i> structures, each containing information about one of the network interfaces on the local system. The <i>if_nameindex</i> structure contains at least the following entries: </p>
 <p> unsigned int if_index; /* Index of interface (1, 2, &#8230;) */ char *if_name; /* Null-terminated name (&quot;eth0&quot;, etc.) */ </p>
 <p> The <i>if_index</i> field contains the interface index. The <i>if_name</i> field points to the null-terminated interface name. The end of the array is indicated by entry with <i>if_index</i> set to zero and <i>if_name</i> set to NULL. </p>

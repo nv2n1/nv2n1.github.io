@@ -1,4 +1,5 @@
 ---
+
 title: "slaed0(3)"
 name: "slaed0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaed0/"
 description: "slaed0.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed0</code> (ICOMPQ, QSIZ, N, D, E, Q, LDQ, QSTORE, LDQS, WORK, IWORK, INFO)<br />
  <i></i><code>SLAED0</code> used by sstedc. Computes all eigenvalues and corresponding eigenvectors of an unreduced symmetric tridiagonal matrix using the divide and conquer method.</p>

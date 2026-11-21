@@ -1,4 +1,5 @@
 ---
+
 title: "bson_subtype_t(3)"
 name: "bson_subtype_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_subtype_t – Binary Field Subtype"
 
 <h2>NAME</h2>
 <p> bson_subtype_t &#8211; Binary Field Subtype</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef enum {
@@ -22,7 +22,6 @@ typedef enum {
     BSON_SUBTYPE_USER = 0x80,
 } bson_subtype_t;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This enumeration contains the various subtypes that may be used in a binary field. See <code><a rel="nofollow" href="http://bsonspec.org">http://bsonspec.org</a></code> for more information. </p>
 <h2>EXAMPLE</h2>
 <pre><code>

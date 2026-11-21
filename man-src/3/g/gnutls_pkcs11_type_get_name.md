@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_type_get_name(3)"
 name: "gnutls_pkcs11_type_get_name"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_pkcs11_type_get_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_type_get_name &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>const char * gnutls_pkcs11_type_get_name(gnutls_pkcs11_obj_type_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_pkcs11_obj_type_t type</dt>
 <dd> Holds the PKCS 11 object type, a <code>gnutls_pkcs11_obj_type_t</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return a human readable description of the PKCS11 object type <i>obj</i> . It will return &quot;Unknown&quot; for unknown types.</p>
 <h2>RETURNS</h2>
 <p> human readable string labeling the PKCS11 object type<br />

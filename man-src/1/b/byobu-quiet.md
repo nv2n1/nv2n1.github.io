@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-quiet(1)"
 name: "byobu-quiet"
 section: "1"
@@ -11,7 +12,6 @@ description: "byobu-quiet – Silence all of Byobu’s status indicators and eli
 <p> byobu-quiet &#8211; Silence all of Byobu&#8217;s status indicators and eliminate the hardstatus line </p>
 <h2>USAGE</h2>
 <p> byobu-quiet [&#8211;undo] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu-quiet</code> will disable ALL of Byobu&#8217;s status indicators and eliminate the hardstatus line. </p>
 <p> Some administrators, in some environments, at some times may prefer a very minimal, quiet Byobu, without the potentially distracting status indicators and eye candy. However, the window menu is preserved, as well as all of Byobu&#8217;s keybindings and helper utilities. To elminate the window list, use <code><a href="/docs/linux/man/1-byobu-silent/">byobu-silent</a></code>(1). </p>
 <h2>SEE ALSO</h2>

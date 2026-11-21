@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_dbpointer(3)"
 name: "bson_append_dbpointer"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_append_dbpointer() – The dbpointer field type is DEPRECATED
 
 <h2>NAME</h2>
 <p> bson_append_dbpointer() &#8211; The dbpointer field type is DEPRECATED and should only be used when interacting with legacy systems.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_dbpointer(bson_t *bson,
                            const char *key,
@@ -33,7 +33,6 @@ bool bson_append_dbpointer(bson_t *bson,
 <dl>
 <dt><code>oid</code></dt>
 <dd> The target document identifer.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>NOTE</code></p>
 <dl>
 <dt>

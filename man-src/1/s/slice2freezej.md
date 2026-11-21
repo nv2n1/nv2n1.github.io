@@ -1,4 +1,5 @@
 ---
+
 title: "slice2freezej(1)"
 name: "slice2freezej"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slice2freezej/"
 description: "slice2freezej – Generates Freeze map and index classes in Java."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> slice2freezej [options] [files] </p>
-<h2>DESCRIPTION</h2>
 <p> slice2java generates Freeze map and index classes in Java. </p>
 <p> Full documentation for slice2freezej is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Using+a+Freeze+Map+in+Java">http://doc.zeroc.com/display/Ice/Using+a+Freeze+Map+in+Java</a>&quot;. </p>

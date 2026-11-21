@@ -1,4 +1,5 @@
 ---
+
 title: "ieeeck(3)"
 name: "ieeeck"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieeeck/"
 description: "ieeeck.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ieeeck</code> (ISPEC, ZERO, ONE)<br />
  <i></i><code>IEEECK</code></p>

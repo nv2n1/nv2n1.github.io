@@ -1,4 +1,5 @@
 ---
+
 title: "git-interpret-trailers(1)"
 name: "git-interpret-trailers"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-git-interpret-trailers/"
 description: "git-interpret-trailers – Add or parse structured information in commit messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git interpret - trailers[&lt;options&gt;][(--trailer&lt;token&gt;[(= |
                                                        :) &lt; value &gt; ])...][&lt;file&gt;...] git interpret -
     trailers[&lt;options&gt;][--parse][&lt;file&gt;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Help parsing or adding <i>trailers</i> lines, that look similar to RFC 822 e-mail headers, at the end of the otherwise free-form part of a commit message. </p>
 <p> This command reads some patches or commit messages from either the &lt;file&gt; arguments or the standard input if no &lt;file&gt; is specified. If <code>&#8211;parse</code> is specified, the output consists of the parsed trailers. </p>
 <p> Otherwise, this command applies the arguments passed using the <code>&#8211;trailer</code> option, if any, to the commit message part of each input file. The result is emitted on the standard output. </p>

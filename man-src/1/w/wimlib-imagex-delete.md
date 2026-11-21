@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-delete(1)"
 name: "wimlib-imagex-delete"
 section: "1"
@@ -9,9 +10,7 @@ description: "wimlib-imagex-delete – Delete an image from a WIM archive"
 
 <h2>NAME</h2>
 <p> wimlib-imagex-delete &#8211; Delete an image from a WIM archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex delete</code> <i>WIMFILE</i> <i>IMAGE</i> [<i>OPTION</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex delete</code> deletes the specified image from the Windows Imaging (WIM) file <i>WIMFILE</i>. This command is also available as simply <code>wimdelete</code> if the appropriate hard link or batch file has been installed. </p>
 <p> <i>IMAGE</i> specifies the WIM image in <i>WIMFILE</i> to delete. It may be a 1-based index of an image in the WIM, the name of an image in the WIM, or the keyword &quot;all&quot; to indicate that all images are to be deleted. Use the <code>wimlib-imagex info</code> (1) command to show what images a WIM file contains.</p>
 <h2>NOTES</h2>

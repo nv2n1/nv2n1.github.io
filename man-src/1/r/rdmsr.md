@@ -1,4 +1,5 @@
 ---
+
 title: "rdmsr(1)"
 name: "rdmsr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rdmsr/"
 description: "rdmsr – tool for reading CPU machine specific registers (MSR)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rdmsr [options] regno</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>rdmsr </code> is a tool used for reading a CPU&#8217;s machine specific registers (MSR).<br />
  Note: if you&#8217;re running a Debian kernel, be sure that the msr.ko kernel module is loaded. &#8216;modprobe msr&#8217; should do the trick. Otherwise, you&#8217;ll get an error about <code>rdmsr</code> not being able to open files in /dev/cpu/&#8230;</p>
 <h2>OPTIONS</h2>

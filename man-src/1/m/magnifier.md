@@ -1,4 +1,5 @@
 ---
+
 title: "magnifier(1)"
 name: "magnifier"
 section: "1"
@@ -9,11 +10,9 @@ description: "magnifier – GNOME Magnifier (gnome-mag)"
 
 <h2>NAME</h2>
 <p> magnifier &#8211; GNOME Magnifier (gnome-mag)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>magnifier</code> [-vhmif?] [-t|&#8211;target-display STRING] [-s|&#8211;source-display STRING] [&#8211;cursor-set=STRING] [&#8211;cursor-size=INT] [&#8211;cursor-scale-factor=FLOAT] [&#8211;cursor-color=LONG] [-v|&#8211;vertical] [-h|&#8211;horizontal] [-m|&#8211;mouse-follow] [-r|&#8211;refresh-time INT] [&#8211;mouse-latency=INT] [-z|&#8211;zoom-factor FLOAT] [-i|&#8211;invert-image] [&#8211;no-initial-region] [&#8211;timing-iterations=INT] [&#8211;timing-output] [&#8211;timing-pan-rate=INT] [&#8211;timing-delta-x=INT] [&#8211;timing-delta-y=INT] [&#8211;smoothing-type=STRING] [-f|&#8211;fullscreen] [&#8211;smooth-scrolling] [-b|&#8211;border-size INT] [-c|&#8211;border-color LONG] [&#8211;use-test-pattern] [&#8211;override-redirect] [&#8211;ignore-damage] [-?|&#8211;help] [&#8211;usage]</p>
 <h2>AVAILABILITY</h2>
 <p> The GNOME magnifier (gnome-mag) provides a command-line interface for standalone use, although its primary goal is to provide a set of magnification services for use by other client applications and assistive technologies, like Gnopernicus, Orca or LSR. This magnifier is compatible with operating systems using X Window System, although the magnifier will have a better performance and functionality when the Damage and Fixes extensions are present.</p>
-<h2>DESCRIPTION</h2>
 <p> A desktop screen magnifier. If present, the Region Of Interest (ROI) for the magnifier can be driven by a screen reader via the Assistive Technology Service Provider Interface (ATSPI); otherwise, the magnifier will be centered to the pointer position.</p>
 <h2>OPTIONS</h2>
 <dl>

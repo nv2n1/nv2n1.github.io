@@ -1,4 +1,5 @@
 ---
+
 title: "latex(1)"
 name: "latex"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-latex/"
 description: "latex, pdflatex, xelatex, lualatex, dvilualatex, cslatex, pdfcslatex, platex, uplatex, lamed – structured text formatting and typesetting"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>latex</code> [<i>first-line</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page is a mere skeleton. </p>
 <p> The LaTeX language is described in the book <i>LaTeX &#8211; A Document Preparation System</i>. LaTeX is a TeX macro package, not a modification to the TeX source program, so all the capabilities described in <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) are present. </p>
 <p> The LaTeX macros encourage writers to think about the content of their documents, rather than the form. The ideal, very difficult to realize, is to have no formatting commands (like &#8220;switch to italic&#8221; or &#8220;skip 2 picas&#8221;) in the document at all; instead, everything is done by specific markup instructions: &#8220;emphasize&#8221;, &#8220;start a section&#8221;. </p>

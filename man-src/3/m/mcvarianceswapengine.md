@@ -1,4 +1,5 @@
 ---
+
 title: "mcvarianceswapengine(3)"
 name: "mcvarianceswapengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcvarianceswapengine/"
 description: "ql/pricingengines/forward/mcvarianceswapengine.hpp – Monte Carlo variance-swap engine."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
  #include &lt;ql/math/integrals/segmentintegral.hpp&gt;<br />
  #include &lt;ql/instruments/varianceswap.hpp&gt;<br />

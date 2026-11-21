@@ -1,4 +1,5 @@
 ---
+
 title: "digitalcoupon(3)"
 name: "digitalcoupon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-digitalcoupon/"
 description: "ql/cashflows/digitalcoupon.hpp – Floating-rate coupon with digital call/put option."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/floatingratecoupon.hpp&gt;<br />
  #include &lt;ql/cashflows/couponpricer.hpp&gt;<br />
  #include &lt;ql/cashflows/replication.hpp&gt;<br />

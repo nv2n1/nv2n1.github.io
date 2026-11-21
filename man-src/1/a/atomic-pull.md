@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-pull(1)"
 name: "atomic-pull"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-atomic-pull/"
 description: "atomic-pull – fetch an image locally"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic pull</code> [<code>-h|&#8211;help</code>] [<code>&#8211;storage=[ostree|docker]</code>] [<code>-t</code>|<code>&#8211;type</code> atomic] IMAGE </p>
-<h2>DESCRIPTION</h2>
 <p> <code>atomic pull</code>, will fetch a remote image and store it locally. </p>
 <p> You can pull an image from a docker registry (like docker.io) to your local docker daemon with atomic pull. </p>
 <p> atomic pull docker.io/busybox:latest </p>

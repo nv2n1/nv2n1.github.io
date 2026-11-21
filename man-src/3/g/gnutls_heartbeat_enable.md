@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_heartbeat_enable(3)"
 name: "gnutls_heartbeat_enable"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_heartbeat_enable – API function"
 
 <h2>NAME</h2>
 <p> gnutls_heartbeat_enable &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_heartbeat_enable(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_heartbeat_enable – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>unsigned int type</dt>
 <dd> one of the GNUTLS_HB_* flags</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> If this function is called with the <code>GNUTLS_HB_PEER_ALLOWED_TO_SEND</code><br />
 &nbsp;<wbr><i>type</i>&nbsp;<wbr>, GnuTLS will allow heartbeat messages to be received. Moreover it also request the peer to accept heartbeat messages. </p>
 <p> If the <i>type</i> used is <code>GNUTLS_HB_LOCAL_ALLOWED_TO_SEND</code>, then the peer will be asked to accept heartbeat messages but not send ones. </p>

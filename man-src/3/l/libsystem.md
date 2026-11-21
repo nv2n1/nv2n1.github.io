@@ -1,4 +1,5 @@
 ---
+
 title: "libsystem(3)"
 name: "libsystem"
 section: "3"
@@ -70,7 +71,6 @@ pm_system(&amp;pm_feed_from_pamtuples, &amp;inPamtuples,<br />
           &#8220;ppmbrighten -v 100&#8221;);<br />
 outpam.file = stdout;<br />
 pnm_writepam(&amp;outpam, outTuples);</p>
-<h2>DESCRIPTION</h2>
 <p> These library functions are part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pm_system()</code> is a lot like the standard C library <code>system()</code> subroutine. It runs a shell and has that shell execute a shell command that you specify. But <code>pm_system()</code> gives you more control over the Standard Input and Standard Output of that shell command than <code>system()</code>. <code>system()</code> passes to the shell command as Standard Input and Output whatever is the Standard Input and Output of the process that calls <code>system()</code>. But with <code>pm_system()</code>, you specify as arguments subroutines to execute to generate the shell command&#8217;s Standard Input stream and to process the shell command&#8217;s Standard Output stream. </p>
 <p> Your Standard Input feeder subroutine can generate the stream in limitless ways. <code>pm_system()</code> gives it a file descriptor of a pipe to which to write the stream it generates. <code>pm_system()</code> hooks up the other end of that pipe to the shell command&#8217;s Standard Input. </p>

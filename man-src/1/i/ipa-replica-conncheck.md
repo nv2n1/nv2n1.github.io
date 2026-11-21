@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-replica-conncheck(1)"
 name: "ipa-replica-conncheck"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-replica-conncheck – Check a replica-master network connectio
 
 <h2>NAME</h2>
 <p> ipa-replica-conncheck &#8211; Check a replica-master network connection before installation</p>
-<h2>SYNOPSIS</h2>
 <p> ipa-replica-conncheck [<i>OPTION</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> When an IPA replica is being installed a network connection between a replica machine and a replicated IPA master machine has to be prepared for master-replica communication. In case of a flawed connection the installation may fail with inconvenient error messages. A common connection problem is a misconfigured firewall with closed required port on a replica or master machine. </p>
 <p> The connection is checked by running a set of tests from both master and replica machines. The program is incorporated to <a href="/docs/linux/man/1-ipa-replica-install/">ipa-replica-install</a>(1) but can be also run separately. </p>
 <h2>OPTIONS</h2>

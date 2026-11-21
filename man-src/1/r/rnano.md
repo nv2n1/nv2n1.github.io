@@ -1,4 +1,5 @@
 ---
+
 title: "rnano(1)"
 name: "rnano"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rnano/"
 description: "rnano – a restricted nano"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rnano</code> [<i>options</i>] [[+<i>line</i>[,<i>column</i>]]&nbsp;<i>file</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>rnano</code> runs the <code>nano</code> editor in restricted mode. This allows editing only the specified file or files, and doesn&#8217;t allow the user access to the filesystem nor to a command shell. </p>
 <p> In restricted mode, <code>nano</code> will:</p>
 <dl>

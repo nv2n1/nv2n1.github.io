@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-permission-reset(1)"
 name: "flatpak-permission-reset"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-flatpak-permission-reset/"
 description: "flatpak-permission-reset – Reset permissions"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak permission-reset</code> [OPTION&#8230;] APP_ID</dt>
 <dt> <code>flatpak permission-reset</code> [OPTION&#8230;] &#8211;all</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Removes all permissions for the given app from the Flatpak permission store. </dd>
 <p> The permission store is used by portals. Each portal generally has its own table in the permission store, and the format of the table entries is specific to each portal.</p>
 <h2>OPTIONS</h2>

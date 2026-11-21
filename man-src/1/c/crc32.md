@@ -1,4 +1,5 @@
 ---
+
 title: "crc32(1)"
 name: "crc32"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-crc32/"
 description: "crc32 – compute CRC-32 checksums for the given files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>crc32</code> <i>filename</i> [ <i>filename</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>crc32</code> is a simple utility that calculates the CRC-32 checksum for each of the given files. </p>
 <p> Note that the CRC-32 checksum is merely used for error detection in transmission and storage. It is not intended to guard against the malicious modification of files (i.e., it is not a cryptographic hash). </p>
 <p> This utility is supplied with the <code>Archive::Zip</code> module for Perl.</p>

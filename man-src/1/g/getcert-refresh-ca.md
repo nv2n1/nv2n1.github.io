@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-refresh-ca(1)"
 name: "getcert-refresh-ca"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-refresh-ca/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert refresh-ca [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Forces <i>certmonger</i> to refresh information specific to a CA, such as locally-stored copies of its certificates. </p>
 <h2>OPTIONS</h2>
 <dl>

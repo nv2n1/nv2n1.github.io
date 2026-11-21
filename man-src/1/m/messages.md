@@ -1,4 +1,5 @@
 ---
+
 title: "messages(1)"
 name: "messages"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-messages/"
 description: "messages.mailutils – count the number of messages in a mailbox"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>messages.mailutils</code> [<i>,OPTION/</i>&#8230;] [<i>,mailbox/</i>&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> GNU messages <code>&#8212;</code> count the number of messages in a mailbox</p>
 <dl>
 <dt><code>-q</code>, <code>-s</code>, <code>&#8211;[no-]quiet</code>, <code>&#8211;silent</code></dt>

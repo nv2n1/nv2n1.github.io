@@ -1,4 +1,5 @@
 ---
+
 title: "psxy(1)"
 name: "psxy"
 section: "1"
@@ -9,10 +10,8 @@ description: "psxy – Plot lines, polygons, and symbols on maps"
 
 <h2>NAME</h2>
 <p> psxy &#8211; Plot lines, polygons, and symbols on maps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>psxy</code> [ <i>table</i> ] <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>m</code>|<code>p</code>|<code>x</code>|<code>y</code>] ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ <i>dx</i>/<i>dy</i> ] [ [<code>x</code>[<code>+</code>]|<code>y</code>[<code>+</code>]|<code>X</code>|<code>Y</code>][<code>n</code>][<i>cap</i>][/[<code>&#8211;</code>|<code>+</code>]<i>pen</i>] ] [ [<code>c</code>|<code>n</code>|<code>r</code>][<i>refpoint</i>] ] [ <i>fill</i> ] [ <i>intens</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ [<code>+b</code>|<code>d</code>|<code>D</code>][<code>+xl</code>|<code>r</code>|<i>x0</i>][<code>+yl</code>|<code>r</code>|<i>y0</i>][<code>+p</code><i>pen</i>] ] [ [<code>c</code>|<code>r</code>] ] [ ] [ ] [ [<i>symbol</i>][<i>size</i>[<code>u</code>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>&#8211;</code>|<code>+</code>][<i>pen</i>][<i>attr</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>psxy</code> reads (<i>x</i>,<i>y</i>) pairs from <i>files</i> [or standard input] and generates PostScript code that will plot lines, polygons, or symbols at those locations on a map. If a symbol is selected and no symbol size given, then <code>psxy</code> will interpret the third column of the input data as symbol size. Symbols whose <i>size</i> is &lt;= 0 are skipped. If no symbols are specified then the symbol code (see <code>-S</code> below) must be present as last column in the input. If <code>-S</code> is not used, a line connecting the data points will be drawn instead. To explicitly close polygons, use <code>-L</code>. Select a fill with <code>-G</code>. If <code>-G</code> is set, <code>-W</code> will control whether the polygon outline is drawn or not. If a symbol is selected, <code>-G</code> and <code>-W</code> determines the fill and outline/no outline, respectively. The PostScript code is written to standard output.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

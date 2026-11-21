@@ -1,4 +1,5 @@
 ---
+
 title: "down_(3)"
 name: "down_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-down_/"
 description: "QuantLib::ExtendedTian – Tian tree: third moment matching, multiplicative approach"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/lattices/extendedbinomialtree.hpp&gt; </p>
 <p> Inherits <code>ExtendedBinomialTree&lt; ExtendedTian &gt;</code>. </p>
 <h3>Public Member Functions</h3>

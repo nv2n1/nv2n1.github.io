@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_get_peers(3)"
 name: "gnutls_certificate_get_peers"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_get_peers – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_get_peers &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const gnutls_datum_t * gnutls_certificate_get_peers(gnutls_session_t </code><i>session</i><code>, unsigned int * </code><i>list_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_certificate_get_peers – API function"
 <dd> is a gnutls session</dd>
 <dt>unsigned int * list_size</dt>
 <dd> is the length of the certificate list (may be <code>NULL</code>)</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Get the peer&#8217;s raw certificate (chain) as sent by the peer. These certificates are in raw format (DER encoded for X.509). In case of a X.509 then a certificate list may be present. The first certificate in the list is the peer&#8217;s certificate, following the issuer&#8217;s certificate, then the issuer&#8217;s issuer etc. </p>
 <p> In case of OpenPGP keys a single key will be returned in raw format.</p>
 <h2>RETURNS</h2>

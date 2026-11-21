@@ -1,4 +1,5 @@
 ---
+
 title: "ber_start_set(3)"
 name: "ber_start_set"
 section: "3"
@@ -9,7 +10,6 @@ description: "ber_alloc_t, ber_flush, ber_flush2, ber_printf, ber_put_int, ber_p
 
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;lber.h&gt;</code> </p>
 <p> <code>BerElement *ber_alloc_t(int </code><i>options</i><code>);</code> </p>
 <p> <code>int ber_flush(Sockbuf *</code><i>sb</i><code>, BerElement *</code><i>ber</i><code>, int </code><i>freeit</i><code>);</code> </p>
@@ -26,7 +26,6 @@ description: "ber_alloc_t, ber_flush, ber_flush2, ber_printf, ber_put_int, ber_p
 <p> <code>int ber_start_set(BerElement *</code><i>ber</i><code>, ber_tag_t </code><i>tag</i><code>);</code> </p>
 <p> <code>int ber_put_seq(BerElement *</code><i>ber</i><code>);</code> </p>
 <p> <code>int ber_put_set(BerElement *</code><i>ber</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These routines provide a subroutine interface to a simplified implementation of the Basic Encoding Rules of ASN.1. The version of BER these routines support is the one defined for the LDAP protocol. The encoding rules are the same as BER, except that only definite form lengths are used, and bitstrings and octet strings are always encoded in primitive form. This man page describes the encoding routines in the lber library. See <code><a href="/docs/linux/man/3-lber-decode/">lber-decode</a></code>(3) for details on the corresponding decoding routines. Consult <code><a href="/docs/linux/man/3-lber-types/">lber-types</a></code>(3) for information about types, allocators, and deallocators. </p>
 <p> Normally, the only routines that need to be called by an application are <code>ber_alloc_t</code>() to allocate a BER element for encoding, <code>ber_printf</code>() to do the actual encoding, and <code>ber_flush2</code>() to actually write the element. The other routines are provided for those applications that need more control than <code>ber_printf</code>() provides. In general, these routines return the length of the element encoded, or -1 if an error occurred. </p>
 <p> The <code>ber_alloc_t</code>() routine is used to allocate a new BER element. It should be called with an argument of LBER_USE_DER. </p>

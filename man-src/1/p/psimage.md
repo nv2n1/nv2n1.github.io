@@ -1,4 +1,5 @@
 ---
+
 title: "psimage(1)"
 name: "psimage"
 section: "1"
@@ -9,10 +10,8 @@ description: "psimage – Place images or EPS files on maps"
 
 <h2>NAME</h2>
 <p> psimage &#8211; Place images or EPS files on maps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>psimage</code> <i>imagefile</i> [ <i>refpoint</i> ] [ <i>box</i> ] [ [<code>b</code>|<code>f</code>|<code>t</code>]<i>color</i> ] [ ] [ <i>parameters</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ ] [ ] [ ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>psimage</code> reads an Encapsulated PostScript file or a raster image file and plots it on a map. The image can be scaled arbitrarily, and 1-bit raster images can be (1) inverted, i.e., black pixels (on) becomes white (off) and vice versa, or (2) colorized, by assigning different foreground and background colors, and (3) made transparent where one of back- or foreground is painted only. As an option, the user may choose to convert colored raster images to grayscale using TV&#8217;s YIQ-transformation. For raster files, the user can select which color to be made transparent. The user may also choose to replicate the image which, when preceded by appropriate clip paths, may allow larger custom-designed fill patterns to be implemented (the <code>-Gp</code> mechanism offered in most GMT programs is limited to rasters smaller than 146 by 146).</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

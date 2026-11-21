@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_print(3)"
 name: "ldns_key_print"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_key_print"
 
 <h2>NAME</h2>
 <p> ldns_key_print </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_key_print(FILE *output, const ldns_key *k); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_print</i>()</dt>
 <dd>print a private key to the file ouput </dd>

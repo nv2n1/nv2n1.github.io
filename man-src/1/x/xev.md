@@ -1,4 +1,5 @@
 ---
+
 title: "xev(1)"
 name: "xev"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xev/"
 description: "xev – print contents of X events"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xev</code> [-display <i>displayname</i>] [-geometry <i>geom</i>] [-bw <i>pixels</i>] [-bs <i>{NotUseful,WhenMapped,Always}</i>] [-id <i>windowid</i>] [-root] [-s] [-name <i>string</i>] [-rv] [-version] [-event <i>event_mask</i> [-event <i>event_mask</i> &#8230;]]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Xev</i> creates a window and then asks the X server to send it <i>events</i> whenever anything happens to the window (such as it being moved, resized, typed in, clicked in, etc.). You can also attach it to an existing window. It is useful for seeing what causes events to occur and to display the information that they contain; it is essentially a debugging and development tool, and should not be needed in normal usage.</p>
 <h2>OPTIONS</h2>
 <dl>

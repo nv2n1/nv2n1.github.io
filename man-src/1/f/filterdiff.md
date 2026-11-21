@@ -1,4 +1,5 @@
 ---
+
 title: "filterdiff(1)"
 name: "filterdiff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-filterdiff/"
 description: "filterdiff – extract or exclude diffs from a diff file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>filterdiff</code> [[-i&nbsp;<i>PATTERN</i>] | [&#8211;include=<i>PATTERN</i>]] [[-I&nbsp;<i>FILE</i>] | [&#8211;include-from-file=<i>FILE</i>]] [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [&#8211;strip=<i>n</i>] [&#8211;addprefix=<i>PREFIX</i>] [&#8211;addoldprefix=<i>PREFIX</i>] [&#8211;addnewprefix=<i>PREFIX</i>] [[-x&nbsp;<i>PATTERN</i>] | [&#8211;exclude=<i>PATTERN</i>]] [[-X&nbsp;<i>FILE</i>] | [&#8211;exclude-from-file=<i>FILE</i>]] [[-v] | [&#8211;verbose]] [&#8211;clean] [[-z] | [&#8211;decompress]] [[-#&nbsp;<i>RANGE</i>] | [&#8211;hunks=<i>RANGE</i>]] [&#8211;lines=<i>RANGE</i>] [[-F<i>RANGE</i>] | [&#8211;files=<i>RANGE</i>]] [&#8211;annotate] [&#8211;format=<i>FORMAT</i>] [&#8211;as-numbered-lines=<i>WHEN</i>] [&#8211;remove-timestamps] [<i>file</i>&#8230;]</dt>
 <dt> <code>filterdiff</code> {[&#8211;help] | [&#8211;version] | [&#8211;list] | [&#8211;grep &#8230;]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>You can use filterdiff to obtain a patch that applies to files matching the shell wildcard <i>PATTERN</i> from a larger collection of patches. For example, to see the patches in patch-2.4.3.gz that apply to all files called lp.c: </dd>
 <dl>
 <dt>

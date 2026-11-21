@@ -1,4 +1,5 @@
 ---
+
 title: "referencedate_(3)"
 name: "referencedate_"
 section: "3"
@@ -6,8 +7,8 @@ letter: "r"
 url: "/docs/linux/man/3-referencedate_/"
 description: "QuantLib::InflationIndex – Base class for inflation-rate indexes,."
 ---
+
 <p>QuantLib::InflationIndex &#8211; Base class for inflation-rate indexes,. </p>
-<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/indexes/inflationindex.hpp&gt; </p>

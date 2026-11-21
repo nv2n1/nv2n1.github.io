@@ -1,4 +1,5 @@
 ---
+
 title: "ddjvu(1)"
 name: "ddjvu"
 section: "1"
@@ -9,9 +10,7 @@ description: "ddjvu – Command line DjVu decoder."
 
 <h2>NAME</h2>
 <p> ddjvu &#8211; Command line DjVu decoder. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ddjvu -format=</code><i>fmt</i><code> [</code><i>options</i><code>] [</code><i>djvufile</i><code>] [</code><i>outputfile</i><code>]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Decode the DjVu file <i>djvufile</i>, produces the image file <i>outputfile</i>. </p>
 <p> The DjVu data is read from the standard input when argument <i>djvufile</i> is not specified or when it is equal to a single dash. Similarly, the output data is written to the standard output when argument <i>outputfile</i> is not specified or equal to a single dash. However a valid output file name is always required when producing a TIFF or PDF file. </p>
 <h2>MAIN OPTIONS</h2>

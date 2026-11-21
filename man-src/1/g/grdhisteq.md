@@ -1,4 +1,5 @@
 ---
+
 title: "grdhisteq(1)"
 name: "grdhisteq"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdhisteq – Perform histogram equalization for a grid"
 
 <h2>NAME</h2>
 <p> grdhisteq &#8211; Perform histogram equalization for a grid</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdhisteq</code> <i>in_grdfile</i> [ <i>out_grdfile</i> ] [ <i>n_cells</i> ] [ [<i>file</i>] ] [ [<i>norm</i>] ] [ ] <i>region</i> [<i>level</i>] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdhisteq</code> allows the user to find the data values which divide a given grid file into patches of equal area. One common use of <code>grdhisteq</code> is in a kind of histogram equalization of an image. In this application, the user might have a grid of flat topography with a mountain in the middle. Ordinary gray shading of this file (using grdimage/grdview) with a linear mapping from topography to graytone will result in most of the image being very dark gray, with the mountain being almost white. One could use <code>grdhisteq</code> to write to stdout or file an ASCII list of those data values which divide the range of the data into <i>n_cells</i> segments, each of which has an equal area in the image. Using <code>awk</code> or <code>makecpt</code> one can take this output and build a CPT file; using the CPT file with grdimage will result in an image with all levels of gray occurring equally. Alternatively, see <code>grd2cpt</code>. </p>
 <p> The second common use of <code>grdhisteq</code> is in writing a grid with statistics based on some kind of cumulative distribution function. In this application, the output has relative highs and lows in the same (x,y) locations as the input file, but the values are changed to reflect their place in some cumulative distribution. One example would be to find the lowest 10% of the data: Take a grid, run <code>grdhisteq</code> and make a grid using <i>n_cells</i> = 10, and then contour the result to trace the 1 contour. This will enclose the lowest 10% of the data, regardless of their original values. Another example is in equalizing the output of <code>grdgradient</code>. For shading purposes it is desired that the data have a smooth distribution, such as a Gaussian. If you run <code>grdhisteq</code> on output from <code>grdgradient</code> and make a grid file output with the Gaussian option, you will have a grid whose values are distributed according to a Gaussian distribution with zero mean and unit variance. The locations of these values will correspond to the locations of the input; that is, the most negative output value will be in the (x,y) location of the most negative input value, and so on.</p>
 <h2>REQUIRED ARGUMENTS</h2>

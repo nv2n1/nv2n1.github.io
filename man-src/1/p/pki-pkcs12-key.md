@@ -1,4 +1,5 @@
 ---
+
 title: "pki-pkcs12-key(1)"
 name: "pki-pkcs12-key"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pki-pkcs12-key/"
 description: "pki-pkcs12-key – Command-Line Interface for managing individual keys in PKCS #12 file."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] pkcs12 - key pki[CLI options] pkcs12 - key - find[command options] pki[CLI options] pkcs12 - key - del&lt;key ID&gt;[command options]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>pki pkcs12-key</code> commands provide command-line interfaces to manage keys in a PKCS #12 file. </p>
 <p> <code>pki</code> [CLI options] <code>pkcs12-key-find</code> [command options]</p>
 <dl>

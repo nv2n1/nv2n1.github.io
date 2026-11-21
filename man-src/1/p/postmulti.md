@@ -1,4 +1,5 @@
 ---
+
 title: "postmulti(1)"
 name: "postmulti"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postmulti/"
 description: "postmulti – Postfix multi-instance manager"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>Enabling multi-instance management:</code> </p>
 <p> <code>postmulti</code> <code>-e init</code> [<code>-v</code>] </p>
 <p> <code>Iterator mode:</code> </p>
@@ -22,7 +22,6 @@ description: "postmulti – Postfix multi-instance manager"
 <p> <code>postmulti</code> <code>-e enable</code> [<code>-v</code>] <code>-i </code><i>name</i> </p>
 <p> <code>postmulti</code> <code>-e disable</code> [<code>-v</code>] <code>-i </code><i>name</i> </p>
 <p> <code>postmulti</code> <code>-e assign</code> [<code>-v</code>] <code>-i </code><i>name</i> [<code>-I </code><i>name</i>] [-G <i>group</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postmulti/">postmulti</a></code>(1) command allows a Postfix administrator to manage multiple Postfix instances on a single host. </p>
 <p> <code><a href="/docs/linux/man/1-postmulti/">postmulti</a></code>(1) implements two fundamental modes of operation. In <code>iterator</code> mode, it executes the same command for multiple Postfix instances. In <code>life-cycle management</code> mode, it adds or deletes one instance, or changes the multi-instance status of one instance. </p>
 <p> Each mode of operation has its own command syntax. For this reason, each mode is documented in separate sections below.</p>

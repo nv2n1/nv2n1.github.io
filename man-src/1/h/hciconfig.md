@@ -1,4 +1,5 @@
 ---
+
 title: "hciconfig(1)"
 name: "hciconfig"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hciconfig/"
 description: "hciconfig – Configure Bluetooth devices"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>hciconfig</code> -h </p>
 <p> <code>hciconfig</code> [-a] </p>
 <p> <code>hciconfig</code> [-a] <i>hciX</i> [<i>COMMAND</i> [<i>PARAMETERS</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-hciconfig/">hciconfig</a>(1)</code> is used to configure Bluetooth devices. <i>hciX</i> is the name of a Bluetooth device installed in the system. If hciX is not given, hciconfig prints name and basic information about all the Bluetooth devices installed in the system. </p>
 <p> If <i>hciX</i> is given but no command is given, it prints basic information on device <i>hciX</i> only. Basic information is interface type, BD address, ACL MTU, SCO MTU, flags (up, init, running, raw, page scan enabled, inquiry scan enabled, inquiry, authentication enabled, encryption enabled).</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "cgelqf(3)"
 name: "cgelqf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgelqf/"
 description: "cgelqf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgelqf</code> (M, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>CGELQF</code></p>

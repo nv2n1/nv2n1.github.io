@@ -1,4 +1,5 @@
 ---
+
 title: "papi_native_avail(1)"
 name: "papi_native_avail"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-papi_native_avail/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- papi_native_avail - papi_native_avail utility. 
+papi_native_avail - papi_native_avail utility. 
 
  file native_avail.c 
 

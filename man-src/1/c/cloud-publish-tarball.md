@@ -1,4 +1,5 @@
 ---
+
 title: "cloud-publish-tarball(1)"
 name: "cloud-publish-tarball"
 section: "1"
@@ -9,7 +10,6 @@ description: "cloud-publish-tarball – publish a cloud archive"
 
 <h2>NAME</h2>
 <p> cloud-publish-tarball &#8211; publish a cloud archive </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cloud-publish-tarball [OPTIONS] TARFILE BUCKET [ARCH]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -47,7 +47,6 @@ description: "cloud-publish-tarball – publish a cloud archive"
 <dt><code>EC2PRE</code></dt>
 <dd> Underlying tools will be invoked using this prefix. The default is &#8216;euca-&#8216;, which results in using tools like &#8216;euca-register&#8217; and &#8216;euca-bundle-image&#8217;. To use the ec2-api-tools or ec2-ami-tools, set EC2PRE=&#8217;ec2-&#8216; </dd>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> Register a Ubuntu Cloud image tarball per <a rel="nofollow" href="http://cloud-images.ubuntu.com">http://cloud-images.ubuntu.com</a> </p>
 <h2>EXAMPLES</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>cloud-publish-tarball lucid-cloud-i386.tar.gz my-lucid-bucket i386 </p>

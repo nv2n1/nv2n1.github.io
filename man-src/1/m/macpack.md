@@ -1,4 +1,5 @@
 ---
+
 title: "macpack(1)"
 name: "macpack"
 section: "1"
@@ -9,9 +10,7 @@ description: "macpack – Macintosh OS X Packager for managed gui assemblies"
 
 <h2>NAME</h2>
 <p> macpack &#8211; Macintosh OS X Packager for managed gui assemblies</p>
-<h2>SYNOPSIS</h2>
 <p> <code>macpack [options] assembly</code></p>
-<h2>DESCRIPTION</h2>
 <p> <i>macpack</i> is a tool used to package managed assemblies (like System.Windows.Forms or Cocoa#) that require gui availability for deployment on Mac OS X. </p>
 <p> macpack will prepare a OS X compatible bundle from the provided assembly and resources. The bundle will include the specified assembly as well as any of the provided resources (specified with the -resource: switch). </p>
 <p> Developers can specify the kind of application to produce using the -mode: argument. This controls how the environment in the Mono class libraries is setup. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "makemime(1)"
 name: "makemime"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-makemime/"
 description: "makemime – Create MIME-formatted messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>makemime</code> [<i>options</i>&#8230;]</dt>
 <dt> <code>makemime</code> [@<i>filename</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>makemime</code></p>
 <dd>creates MIME-formatted messages of arbitrary complexity. <code>makemime</code> reads one or more individual files, MIME-encodes them, adds basic MIME headers, and adds any additional headers specified bye command line options. The result is saved to another file or standard output. Complex MIME-formatted messages are created by piping together multiple instances of <code>makemime</code>. Advanced options direct <code>makemime</code> to <code>fork</code>() itself, and handle the details of setting up all the pipelines. </dd>
 <p> In most cases, options for <code>makemime</code> come directly from the command line. @filename reads the options from a file. &quot;@&amp;<i>n</i>&quot; reads options from a pipe on file descriptor #<i>n</i>. &quot;@-&quot; is a shortcut for &quot;@&amp;0&quot;, which reads options from standard input. </p>

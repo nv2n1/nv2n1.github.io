@@ -1,4 +1,5 @@
 ---
+
 title: "fparseln(3)"
 name: "fparseln"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-fparseln/"
 description: "fparseln – return the next logical line from a stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fparseln</code> &#8211; return the next logical line from a stream </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>
-<h2>SYNOPSIS</h2>
 <p> In bsd/stdio.h Ft char * Fo fparseln Fa FILE *stream size_t *len size_t *lineno Fa const char delim[3] int flags Fc</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn fparseln function returns a pointer to the next logical line from the stream referenced by Fa stream . This string is <code>NUL</code> terminated and it is dynamically allocated on each invocation. It is the responsibility of the caller to free the pointer. </p>
 <p> By default, if a character is escaped, both it and the preceding escape character will be present in the returned string. Various Fa flags alter this behaviour. </p>
 <p> The meaning of the arguments is as follows:</p>

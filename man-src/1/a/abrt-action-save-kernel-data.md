@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-save-kernel-data(1)"
 name: "abrt-action-save-kernel-data"
 section: "1"
@@ -6,22 +7,11 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-save-kernel-data/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+abrt-action-save-kernel-data - Creates uReport mandatory files for kernel oopses. 
 
- abrt-action-save-kernel-data - Creates uReport mandatory files for kernel oopses. 
+<i>abrt-action-save-kernel-data</i>
 
-<h2>SYNOPSIS</h2>
-
- 
-
- <i>abrt-action-save-kernel-data</i>
-
-<h2>DESCRIPTION</h2>
-
- 
-
- The tool reads problem directory DIR. It analyzes contents of <i>kernel</i> element, checks database of installed packages, and creates new elements <i>pkg_name</i>, <i>pkg_arch</i>, <i>pkg_version</i>, <i>pkg_release</i>. 
+The tool reads problem directory DIR. It analyzes contents of <i>kernel</i> element, checks database of installed packages, and creates new elements <i>pkg_name</i>, <i>pkg_arch</i>, <i>pkg_version</i>, <i>pkg_release</i>. 
 
  These files are required by reporter-ureporter (mandatory in uReport).
 

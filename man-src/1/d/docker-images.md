@@ -1,4 +1,5 @@
 ---
+
 title: "docker-images(1)"
 name: "docker-images"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-images/"
 description: "docker-images – List images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker images [OPTIONS] [REPOSITORY[:TAG]]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker image ls. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show all images (default hides intermediate images)</p>

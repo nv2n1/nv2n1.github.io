@@ -1,4 +1,5 @@
 ---
+
 title: "idna_strerror(3)"
 name: "idna_strerror"
 section: "3"
@@ -9,14 +10,12 @@ description: "idna_strerror – API function"
 
 <h2>NAME</h2>
 <p> idna_strerror &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;idna.h&gt;</code> </p>
 <p> <code>const char * idna_strerror(Idna_rc </code><i>rc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>Idna_rc rc</dt>
 <dd> an <code>Idna_rc</code> return code.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Convert a return code integer to a text string. This string can be used to output a diagnostic message to the user.</p>
 <h2>IDNA_SUCCESS</h2>
 <p> Successful operation. This value is guaranteed to always be zero, the remaining ones are only guaranteed to hold non-zero values, for logical comparison purposes.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rgb2pct(1)"
 name: "rgb2pct"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-rgb2pct/"
 description: "rgb2pct – rgb2pct.py Convert a 24bit RGB image to 8bit paletted"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 rgb2pct.py[-n colors | -pct palette_file][-of format] source_file dest_file
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This utility will compute an optimal pseudo-color table for a given RGB image using a median cut algorithm on a downsampled RGB histogram. Then it converts the image into a pseudo-colored image using the color table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize output image visual quality. </p>
 <dl>
 <dt><code>-n</code> <i>colors</i>:</dt>

@@ -1,4 +1,5 @@
 ---
+
 title: "netpbm(1)"
 name: "netpbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netpbm/"
 description: "netpbm – package of graphics manipulation programs and libraries"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <code>Netpbm</code> is a package of graphics programs and programming libraries. </p>
 <p> There are over 220 separate programs in the package, most of which have &quot;pbm&quot;, &quot;pgm&quot;, &quot;ppm&quot;, or &quot;pnm&quot; in their names. For example, <code>pnmscale</code> and <code>giftopnm</code>. </p>
 <p> For example, you might use <code>pnmscale</code> to shrink an image by 10%. Or use <code>pnmcomp</code> to overlay one image on top of another. Or use <code>pbmtext</code> to create an image of text. Or reduce the number of colors in an image with <code>pnmquant</code>. </p>

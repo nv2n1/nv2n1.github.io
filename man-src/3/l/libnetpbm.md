@@ -1,4 +1,5 @@
 ---
+
 title: "libnetpbm(3)"
 name: "libnetpbm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnetpbm/"
 description: "libnetpbm – general introduction to the netpbm library"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <code>libnetpbm</code> is a C programming library for reading, writing, and manipulating Netpbm images. It also contains a few general graphics manipulation tools, but it is not intended to be a graphics tools library. For graphics tools, Netpbm expects you to run the Netpbm programs. From a C program, the <code>libnetpbm</code> function <code>pm_system()</code> makes this easy. However, since it creates a process and execs a program, this may be too heavyweight for some applications. </p>
 <p> To use <code>libnetpbm</code> services in your C program, #include the <code>pam.h</code> interface header file. For historical reasons, you can also get by in some cases with <code>pbm.h</code>, <code>pgm.h</code>, <code>ppm.h</code>, or <code>pnm.h</code>, but there&#8217;s really no point to that anymore. </p>
 <p> The <code>libnetpbm</code> functions are divided into these categories: </p>

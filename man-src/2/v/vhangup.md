@@ -1,4 +1,5 @@
 ---
+
 title: "vhangup(2)"
 name: "vhangup"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-vhangup/"
 description: "vhangup – virtually hangup the current terminal"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int vhangup(void);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -21,7 +21,6 @@ Since glibc 2.21 : _DEFAULT_SOURCE
                                          ||
                                          (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE &amp; nbsp; &lt; &amp;nbsp; 500)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>vhangup</code>() simulates a hangup on the current terminal. This call arranges for other users to have a &#8220;clean&#8221; terminal at login time.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>

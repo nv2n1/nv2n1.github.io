@@ -1,4 +1,5 @@
 ---
+
 title: "csplit(1)"
 name: "csplit"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-csplit/"
 description: "csplit – split a file into sections determined by context lines"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>csplit</code> [<i>,OPTION/</i>]&#8230; <i>,FILE PATTERN/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Output pieces of FILE separated by PATTERN(s) to files &#8216;xx00&#8217;, &#8216;xx01&#8217;, &#8230;, and output byte counts of each piece to standard output. </p>
 <p> Read standard input if FILE is &#8211; </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

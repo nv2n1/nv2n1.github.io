@@ -1,4 +1,5 @@
 ---
+
 title: "g_covar(1)"
 name: "g_covar"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_covar – calculates and diagonalizes the covariance matrix"
 <h2>NAME</h2>
 <p> g_covar &#8211; calculates and diagonalizes the covariance matrix </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_covar</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> eigenval.xvg </i> <code>-v</code><i> eigenvec.trr </i> <code>-av</code><i> average.pdb </i> <code>-l</code><i> covar.log </i> <code>-ascii</code><i> covar.dat </i> <code>-xpm</code><i> covar.xpm </i> <code>-xpma</code><i> covara.xpm </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]xvgr</code><i></i> <code>-[no]fit</code><i></i> <code>-[no]ref</code><i></i> <code>-[no]mwa</code><i></i> <code>-last</code><i> int </i> <code>-[no]pbc</code><i></i></p>
-<h2>DESCRIPTION</h2>
 <p> <code> g_covar</code> calculates and diagonalizes the (mass-weighted) covariance matrix. All structures are fitted to the structure in the structure file. When this is not a run input file periodicity will not be taken into account. When the fit and analysis groups are identical and the analysis is non mass-weighted, the fit will also be non mass-weighted. </p>
 <p> The eigenvectors are written to a trajectory file (<code> -v</code>). When the same atoms are used for the fit and the covariance analysis, the reference structure for the fit is written first with t=-1. The average (or reference when <code> -ref</code> is used) structure is written with t=0, the eigenvectors are written as frames with the eigenvector number as timestamp. </p>
 <p> The eigenvectors can be analyzed with <code> g_anaeig</code>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlacon(3)"
 name: "dlacon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlacon/"
 description: "dlacon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlacon</code> (N, V, X, ISGN, EST, KASE)<br />
  <i></i><code>DLACON</code> estimates the 1-norm of a square matrix, using reverse communication for evaluating matrix-vector products.</p>

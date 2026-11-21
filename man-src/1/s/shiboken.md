@@ -1,4 +1,5 @@
 ---
+
 title: "shiboken(1)"
 name: "shiboken"
 section: "1"
@@ -9,7 +10,6 @@ description: "shiboken – CPython bindings generator for C++ libraries"
 
 <h2>NAME</h2>
 <p> shiboken &#8211; CPython bindings generator for C++ libraries</p>
-<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

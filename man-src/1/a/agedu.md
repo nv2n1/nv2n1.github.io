@@ -1,4 +1,5 @@
 ---
+
 title: "agedu(1)"
 name: "agedu"
 section: "1"
@@ -9,14 +10,12 @@ description: "agedu – correlate disk usage with last-access times to identify 
 
 <h2>NAME</h2>
 <p> <code>agedu</code> &#8211; correlate disk usage with last-access times to identify large and disused data</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 agedu &amp;nbsp;
 [&amp;nbsp; options &amp; nbsp;] &amp; nbsp;
 action &amp;nbsp;
 [action...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>agedu</code> scans a directory tree and produces reports about how much disk space is used in each directory and subdirectory, and also how that usage of disk space corresponds to files with last-access times a long time ago. </p>
 <p> In other words, <code>agedu</code> is a tool you might use to help you free up disk space. It lets you see which directories are taking up the most space, as <code>du</code> does; but unlike <code>du</code>, it also distinguishes between large collections of data which are still in use and ones which have not been accessed in months or years &#8211; for instance, large archives downloaded, unpacked, used once, and never cleaned up. Where <code>du</code> helps you find what&#8217;s using your disk space, <code>agedu</code> helps you find what&#8217;s <i>wasting</i> your disk space. </p>
 <p> <code>agedu</code> has several operating modes. In one mode, it scans your disk and builds an index file containing a data structure which allows it to efficiently retrieve any information it might need. Typically, you would use it in this mode first, and then run it in one of a number of `query&#8217; modes to display a report of the disk space usage of a particular directory and its subdirectories. Those reports can be produced as plain text (much like <code>du</code>) or as HTML. <code>agedu</code> can even run as a miniature web server, presenting each directory&#8217;s HTML report with hyperlinks to let you navigate around the file system to similar reports for other directories. </p>

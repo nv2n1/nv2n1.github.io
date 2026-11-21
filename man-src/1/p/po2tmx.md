@@ -1,4 +1,5 @@
 ---
+
 title: "po2tmx(1)"
 name: "po2tmx"
 section: "1"
@@ -9,9 +10,7 @@ description: "po2tmx – Convert Gettext PO localization files to a TMX (Transla
 
 <h2>NAME</h2>
 <p> po2tmx &#8211; Convert Gettext PO localization files to a TMX (Translation Memory eXchange) file.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>po2tmx </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp] [-l|&#8211;language <i>LANG</i>] [&#8211;source-language <i>LANG</i>] [&#8211;comments]</p>
-<h2>DESCRIPTION</h2>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/po2tmx.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/po2tmx.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>

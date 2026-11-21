@@ -1,4 +1,5 @@
 ---
+
 title: "mirmon(1)"
 name: "mirmon"
 section: "1"
@@ -9,7 +10,6 @@ description: "mirmon – monitor the state of mirrors"
 
 <h2>NAME</h2>
 <p> mirmon &#8211; monitor the state of mirrors</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 mirmon[-v][-q][-t timeout][-c conf][-get all | update | url url]
 </code></pre>

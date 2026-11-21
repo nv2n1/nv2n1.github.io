@@ -1,4 +1,5 @@
 ---
+
 title: "initdb(1)"
 name: "initdb"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-initdb/"
 description: "initdb – create a new PostgreSQL database cluster"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>initdb</code> [<i>option</i>&#8230;] [<code>&#8211;pgdata</code> | <code>-D</code>]<i> directory</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>initdb</code></p>
 <dd>creates a new PostgreSQL database cluster. A database cluster is a collection of databases that are managed by a single server instance. </dd>
 <p> Creating a database cluster consists of creating the directories in which the database data will live, generating the shared catalog tables (tables that belong to the whole cluster rather than to any particular database), and creating the template1 and postgres databases. When you later create a new database, everything in the template1 database is copied. (Therefore, anything installed in template1 is automatically copied into each database created later.) The postgres database is a default database meant for use by users, utilities and third party applications. </p>

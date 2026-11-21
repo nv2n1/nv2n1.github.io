@@ -1,4 +1,5 @@
 ---
+
 title: "strip(1)"
 name: "strip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-strip/"
 description: "strip – discard symbols and other data from object files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code>&nbsp;<i>bfdname</i>&nbsp;|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-O</code>&nbsp;<i>bfdname</i>&nbsp;|<code>&#8211;output-target=</code><i>bfdname</i>]<br />
@@ -31,7 +31,6 @@ description: "strip – discard symbols and other data from object files"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>&nbsp;|<code>&#8211;verbose</code>]&nbsp;[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;help</code>]&nbsp;[<code>&#8211;info</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>objfile</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">GNU</font> <code>strip</code> discards all symbols from object files <i>objfile</i>. The list of object files may include archives. At least one object file must be given. </p>
 <p> <code>strip</code> modifies the files named in its argument, rather than writing modified copies under different names.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "grog(1)"
 name: "grog"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grog/"
 description: "grog – guess options for a following groff command"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-C</code> ] [ <code>-T </code><i>device</i> ] [ <code>&#8211;run</code> ] [ <code>&#8211;warnings</code> ] [ <code>&#8211;ligatures</code> ] [<i>groff-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>grog</code> reads the input (file names or standard input) and guesses which of the <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) options are needed to perform the input with the <code>groff</code> program. A suitable device is now always written as <code>-T</code><i>device</i> including the groff default as <code>-T ps</code>. </p>
 <p> The corresponding <code>groff</code> command is usually displayed in standard output. With the option <code>&#8211;run</code>, the generated line is output into standard error and the generated <code>groff</code> command is run on the <i>standard output</i>. <code><a href="/docs/linux/man/1-groffer/">groffer</a></code>(1) relies on a perfectly running <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1).</p>
 <h2>OPTIONS</h2>

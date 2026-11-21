@@ -1,4 +1,5 @@
 ---
+
 title: "calfjackhost(1)"
 name: "calfjackhost"
 section: "1"
@@ -9,9 +10,7 @@ description: "calfjackhost – JACK wrapper for Calf plugins"
 
 <h2>NAME</h2>
 <p> calfjackhost &#8211; JACK wrapper for Calf plugins</p>
-<h2>SYNOPSIS</h2>
 <p> <code>calfjackhost [</code><i>options</i>] <i>plugin[:preset]</i> [<code>!</code>] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> Calf JACK host application provides a way to use Calf plugins directly, without need for any external host application. It also offers best GUI functionality (using GTK+ 2 widget set), as there is no restrictive plugin standard getting in a way between GUI and audio processing code. </p>
 <h2>OPTIONS</h2>
 <dl>

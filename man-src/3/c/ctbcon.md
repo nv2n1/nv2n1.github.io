@@ -1,4 +1,5 @@
 ---
+
 title: "ctbcon(3)"
 name: "ctbcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctbcon/"
 description: "ctbcon.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctbcon</code> (NORM, UPLO, DIAG, N, KD, AB, LDAB, RCOND, WORK, RWORK, INFO)<br />
  <i></i><code>CTBCON</code></p>

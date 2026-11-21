@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-dhcp-options(1)"
 name: "euca-describe-dhcp-options"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-dhcp-options – Show information about VPC DHCP opt
 
 <h2>NAME</h2>
 <p> euca-describe-dhcp-options &#8211; Show information about VPC DHCP option sets</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-dhcp-options [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [DHCPOPTS [DHCPOPTS &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about VPC DHCP option sets</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "getnameinfo(3)"
 name: "getnameinfo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getnameinfo/"
 description: "getnameinfo – address-to-name translation in protocol-independent manner"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 #include &lt;sys/socket.h&gt;
@@ -19,7 +19,6 @@ int getnameinfo(const struct sockaddr *addr, socklen_t addrlen,
 <p> <code>getnameinfo</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.22:&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.21 and earlier:&nbsp;_POSIX_C_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>getnameinfo</code>() function is the inverse of <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3): it converts a socket address to a corresponding host and service, in a protocol-independent manner. It combines the functionality of <code><a href="/docs/linux/man/3-gethostbyaddr/">gethostbyaddr</a></code>(3) and <code><a href="/docs/linux/man/3-getservbyport/">getservbyport</a></code>(3), but unlike those functions, <code>getnameinfo</code>() is reentrant and allows programs to eliminate IPv4-versus-IPv6 dependencies. </p>
 <p> The <i>addr</i> argument is a pointer to a generic socket address structure (of type <i>sockaddr_in</i> or <i>sockaddr_in6</i>) of size <i>addrlen</i> that holds the input IP address and port number. The arguments <i>host</i> and <i>serv</i> are pointers to caller-allocated buffers (of size <i>hostlen</i> and <i>servlen</i> respectively) into which <code>getnameinfo</code>() places null-terminated strings containing the host and service names respectively. </p>
 <p> The caller can specify that no hostname (or no service name) is required by providing a NULL <i>host</i> (or <i>serv</i>) argument or a zero <i>hostlen</i> (or <i>servlen</i>) argument. However, at least one of hostname or service name must be requested. </p>

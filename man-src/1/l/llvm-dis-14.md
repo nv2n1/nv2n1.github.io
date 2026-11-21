@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-dis-14(1)"
 name: "llvm-dis-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-dis-14/"
 description: "llvm-dis – LLVM disassembler"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-dis</code> [<i>options</i>] [<i>filename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-dis</code> command is the LLVM disassembler. It takes an LLVM bitcode file and converts it into human-readable LLVM assembly language. </p>
 <p> If filename is omitted or specified as <code>&#8211;</code>, <code>llvm-dis</code> reads its input from standard input. </p>
 <p> If the input is being read from standard input, then <code>llvm-dis</code> will send its output to standard output by default. Otherwise, the output will be written to a file named after the input file, with a <code>.ll</code> suffix added (any existing <code>.bc</code> suffix will first be removed). You can override the choice of output file using the <code>-o</code> option.</p>

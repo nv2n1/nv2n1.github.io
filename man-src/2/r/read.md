@@ -1,4 +1,5 @@
 ---
+
 title: "read(2)"
 name: "read"
 section: "2"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/2-read/"
 description: "read – read from a file descriptor"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 ssize_t read(int fd, void *buf, size_t count);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>read</code>() attempts to read up to <i>count</i> bytes from file descriptor <i>fd</i> into the buffer starting at <i>buf</i>. </p>
 <p> On files that support seeking, the read operation commences at the file offset, and the file offset is incremented by the number of bytes read. If the file offset is at or past the end of file, no bytes are read, and <code>read</code>() returns zero. </p>
 <p> If <i>count</i> is zero, <code>read</code>() <i>may</i> detect the errors described below. In the absence of any errors, or if <code>read</code>() does not check for errors, a <code>read</code>() with a <i>count</i> of 0 returns zero and has no other effects. </p>

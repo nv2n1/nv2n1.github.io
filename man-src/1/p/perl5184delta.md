@@ -1,4 +1,5 @@
 ---
+
 title: "perl5184delta(1)"
 name: "perl5184delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5184delta/"
 description: "perl5184delta – what is new for perl v5.18.4"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.18.4 release and the 5.18.2 release. <code>Please note:</code> This document ignores perl 5.18.3, a broken release which existed for a few hours only. </p>
 <p> If you are upgrading from an earlier release such as 5.18.1, first read perl5182delta, which describes differences between 5.18.1 and 5.18.2.</p>
 <h2>Modules and Pragmata</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "carbon-c-relay(1)"
 name: "carbon-c-relay"
 section: "1"
@@ -9,9 +10,7 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 
 <h2>NAME</h2>
 <p> <code>carbon-c-relay</code> &#8212; graphite relay, aggregator and rewriter <i><a rel="nofollow" href="https://travis-ci.org/grobian/carbon-c-relay">https://travis-ci.org/grobian/carbon-c-relay</a></i></p>
-<h2>SYNOPSIS</h2>
 <p> <code>carbon-c-relay</code> <code>-f</code> <i>config-file</i> <code>[ options</code> &#8230; <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>carbon-c-relay</code> accepts, cleanses, matches, rewrites, forwards and aggregates graphite metrics by listening for incoming connections and relaying the messages to other servers defined in its configuration. The core functionality is to route messages via flexible rules to the desired destinations. </p>
 <p> <code>carbon-c-relay</code> is a simple program that reads its routing information from a file. The command line arguments allow to set the location for this file, as well as the amount of dispatchers (worker threads) to use for reading the data from incoming connections and passing them onto the right destination(s). The route file supports two main constructs: clusters and matches. The first define groups of hosts data metrics can be sent to, the latter define which metrics should be sent to which cluster. Aggregation rules are seen as matches. </p>
 <p> For every metric received by the relay, cleansing is performed. The following changes are performed before any match, aggregate or rewrite rule sees the metric:</p>

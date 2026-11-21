@@ -1,4 +1,5 @@
 ---
+
 title: "crypt_gensalt(3)"
 name: "crypt_gensalt"
 section: "3"
@@ -8,13 +9,10 @@ description: "crypt_gensalt , crypt_gensalt_rn , crypt_gensalt_ra – encode set
 ---
 
 <p>Openwall Project</p>
-<h2 class="name">NAME</h2>
 <p> <code>crypt_gensalt , crypt_gensalt_rn , crypt_gensalt_ra</code> &#8211; encode settings for passphrase hashing </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>
-<h2>SYNOPSIS</h2>
 <p> In crypt.h Ft char * Fo crypt_gensalt Fa const char *prefix Fa unsigned long count Fa const char *rbytes Fa int nrbytes Fc Ft char * Fo crypt_gensalt_rn Fa const char * prefix Fa unsigned long count Fa const char *rbytes Fa int nrbytes Fa char * output Fa int output_size Fc Ft char * Fo crypt_gensalt_ra Fa const char *prefix Fa unsigned long count Fa const char *rbytes Fa int nrbytes Fc</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>crypt_gensalt</code> <code>crypt_gensalt_rn</code> and <code>crypt_gensalt_ra</code> functions compile a string for use as the Fa setting argument to <code>crypt</code> <code>crypt_r</code> <code>crypt_rn</code> and <code>crypt_ra</code> Fa prefix selects the hashing method to use. Fa count controls the CPU time cost of the hash; the valid range for Fa count and the exact meaning of &#8220;CPU time cost&#8221; depends on the hashing method, but larger numbers correspond to more costly hashes. Fa rbytes should point to Fa nrbytes cryptographically random bytes for use as &#8220;salt.&#8221; </p>
 <p> If Fa prefix is a null pointer, the best available hashing method will be selected. Po Sy CAUTION : if Fa prefix is an empty string, the &#8220;traditional&#8221; DES-based hashing method will be selected; this method is unacceptably weak by modern standards. Pc If Fa count is 0, a low default cost will be selected. If Fa rbytes is a null pointer, an appropriate number of random bytes will be obtained from the operating system, and Fa nrbytes is ignored. </p>
 <p> See <a href="/docs/linux/man/5-crypt/">crypt</a>(5) for other strings that can be used as Fa prefix , and valid values of Fa count for each.</p>

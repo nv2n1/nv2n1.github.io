@@ -1,4 +1,5 @@
 ---
+
 title: "mdig(1)"
 name: "mdig"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-mdig/"
 description: "mdig – DNS pipelined lookup utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mdig</code> <i>{@server</i>} [<code>-f</code> filename] [<code>-h</code>] [<code>-v</code>] [ [<code>-4</code>] | [<code>-6</code>] ] [<code>-m</code>] [<code>-b</code> address] [<code>-p</code> port#] [<code>-c</code> class] [<code>-t</code> type] [<code>-i</code>] [<code>-x</code> addr] [plusopt&#8230;] </p>
 <p> <code>mdig</code> {<code>-h</code>} </p>
 <p> <code>mdig</code> [@server] {global-opt&#8230;} { {local-opt&#8230;} {query} &#8230;}</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mdig</code> is a multiple/pipelined query version of <i>dig</i>: instead of waiting for a response after sending each query, it begins by sending all queries. Responses are displayed in the order in which they are received, not in the order the corresponding queries were sent. </p>
 <p> <code>mdig</code> options are a subset of the <i>dig</i> options, and are divided into &quot;anywhere options,&quot; which can occur anywhere, &quot;global options,&quot; which must occur before the query name (or they are ignored with a warning), and &quot;local options,&quot; which apply to the next query on the command line. </p>
 <p> The <code>@server</code> option is a mandatory global option. It is the name or IP address of the name server to query. (Unlike <i>dig</i>, this value is not retrieved from <code>/etc/resolv.conf</code>.) It can be an IPv4 address in dotted-decimal notation, an IPv6 address in colon-delimited notation, or a hostname. When the supplied <code>server</code> argument is a hostname, <code>mdig</code> resolves that name before querying the name server. </p>

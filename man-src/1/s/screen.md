@@ -1,4 +1,5 @@
 ---
+
 title: "screen(1)"
 name: "screen"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-screen/"
 description: "screen – screen manager with VT100/ANSI terminal emulation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>screen</code> [ <code>&#8211;</code><i>options</i> ] [ <i>cmd</i> [ <i>args</i> ] ]<br />
  <code>screen -r</code> [[<i>pid</i><code>.</code>]<i>tty</i>[<code>.</code><i>host</i>]]<br />
  <code>screen -r</code> <i>sessionowner</i><code>/</code>[[<i>pid</i><code>.</code>]<i>tty</i>[<code>.</code><i>host</i>]] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Screen</i> is a full-screen window manager that multiplexes a physical terminal between several processes (typically interactive shells). Each virtual terminal provides the functions of a DEC VT100 terminal and, in addition, several control functions from the ISO 6429 (ECMA 48, ANSI X3.64) and ISO 2022 standards (e.g. insert/delete line and support for multiple character sets). There is a scrollback history buffer for each virtual terminal and a copy-and-paste mechanism that allows moving text regions between windows. </p>
 <p> When <i>screen</i> is called, it creates a single window with a shell in it (or the specified command) and then gets out of your way so that you can use the program as you normally would. Then, at any time, you can create new (full-screen) windows with other programs in them (including more shells), kill existing windows, view a list of windows, turn output logging on and off, copy-and-paste text between windows, view the scrollback history, switch between windows in whatever manner you wish, etc. All windows run their programs completely independent of each other. Programs continue to run when their window is currently not visible and even when the whole <i>screen </i> session is detached from the user&#8217;s terminal. When a program terminates, <i>screen</i> (per default) kills the window that contained it. If this window was in the foreground, the display switches to the previous window; if none are left, <i>screen</i> exits. Shells usually distinguish between running as login-shell or sub-shell. Screen runs them as sub-shells, unless told otherwise (See shell .screenrc command). </p>
 <p> Everything you type is sent to the program running in the current window. The only exception to this is the one keystroke that is used to initiate a command to the window manager. By default, each command begins with a control-a (abbreviated C-a from now on), and is followed by one other keystroke. The command character and all the key bindings can be fully customized to be anything you like, though they are always two characters in length. </p>

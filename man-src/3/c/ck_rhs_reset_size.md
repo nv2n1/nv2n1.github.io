@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_reset_size(3)"
 name: "ck_rhs_reset_size"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_rhs_reset_size – remove all keys from a hash set"
 <p> <code>ck_rhs_reset_size</code> &#8211; remove all keys from a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_rhs.h Ft bool Fn ck_rhs_reset_size ck_rhs_t *hs unsigned long size</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_rhs_reset_size 3 function will remove all keys stored in the hash set pointed to by the Fa hs argument and create a new generation of the hash set that is preallocated for Fa size entries.</p>
 <h2>RETURN VALUES</h2>
 <p> If successful, Fn ck_rhs_reset_size 3 will return true and will otherwise return false on failure. This function will only fail if a replacement hash set could not be allocated internally.</p>

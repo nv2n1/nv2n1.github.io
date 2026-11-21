@@ -1,4 +1,5 @@
 ---
+
 title: "txt2man(1)"
 name: "txt2man"
 section: "1"
@@ -9,12 +10,10 @@ description: "txt2man – convert flat ASCII text to man page format"
 
 <h2>NAME</h2>
 <p> <code>txt2man </code>&#8211; convert flat ASCII text to man page format</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 txt2man[-hpTX][-t mytitle][-P pname][-r rel][-s sect]
        [-v vol][-I txt][-B txt][-d date][ifile]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>txt2man</code> converts the input text into nroff/troff standard <code><a href="/docs/linux/man/7-man/">man</a></code>(7) macros used to format Unix manual pages. Nice pages can be generated specially for commands (section 1 or 8) or for C functions reference (sections 2, 3), with the ability to recognize and format command and function names, flags, types and arguments. </p>
 <p> <code>txt2man</code> is also able to recognize and format sections, paragraphs, lists (standard, numbered, description, nested), cross references and literal display blocks. </p>
 <p> If input file <i>ifile</i> is omitted, standard input is used. Result is displayed on standard output. </p>

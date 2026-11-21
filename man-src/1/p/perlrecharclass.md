@@ -1,4 +1,5 @@
 ---
+
 title: "perlrecharclass(1)"
 name: "perlrecharclass"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlrecharclass/"
 description: "perlrecharclass – Perl Regular Expression Character Classes"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> The top level documentation about Perl regular expressions is found in perlre. </p>
 <p> This manual page discusses the syntax and use of character classes in Perl regular expressions. </p>
 <p> A character class is a way of denoting a set of characters in such a way that one character of the set is matched. It&#8217;s important to remember that: matching a character class consumes exactly one character in the source string. (The source string is the string the regular expression is matched against.) </p>

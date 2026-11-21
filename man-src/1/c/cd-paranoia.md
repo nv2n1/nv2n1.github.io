@@ -1,4 +1,5 @@
 ---
+
 title: "cd-paranoia(1)"
 name: "cd-paranoia"
 section: "1"
@@ -9,9 +10,7 @@ description: "cd-paranoia – 9.8 (Paranoia release III via libcdio) – an audi
 
 <h2>NAME</h2>
 <p> cd-paranoia &#8211; 9.8 (Paranoia release III via libcdio) &#8211; an audio CD reading utility which includes extra data verification features</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cd-paranoia</code> [<code>options</code>] <code>span </code> [<code>outfile</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>cd-paranoia</code> retrieves audio tracks from CDDA capable CD-ROM drives. The data can be saved to a file or directed to standard output in WAV, AIFF, AIFF-C or raw format. Most ATAPI, SCSI and several proprietary CD-ROM drive makes are supported; <code>cd-paranoia</code> can determine if the target drive is CDDA capable. </p>
 <p> In addition to simple reading, <code>cd-paranoia</code> adds extra-robust data verification, synchronization, error handling and scratch reconstruction capability. </p>
 <p> This version uses the libcdio library for interaction with a CD-ROM drive. The jitter and error correction however are the same as used in Xiph&#8217;s cdparanoia.</p>

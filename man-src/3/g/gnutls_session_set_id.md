@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_set_id(3)"
 name: "gnutls_session_set_id"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_session_set_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_set_id &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_set_id(gnutls_session_t </code><i>session</i><code>, const gnutls_datum_t * </code><i>sid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_session_set_id – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>const gnutls_datum_t * sid</dt>
 <dd> the session identifier</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets the session ID to be used in a client hello. This is a function intended for exceptional uses. Do not use this function unless you are implementing a custom protocol. </p>
 <p> To set session resumption parameters use <code>gnutls_session_set_data()</code> instead.</p>
 <h2>RETURNS</h2>

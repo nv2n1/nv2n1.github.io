@@ -1,4 +1,5 @@
 ---
+
 title: "fedpkg(1)"
 name: "fedpkg"
 section: "1"
@@ -9,11 +10,9 @@ description: "fedpkg – RPM Packaging utility"
 
 <h2>NAME</h2>
 <p> fedpkg &#8211; RPM Packaging utility</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fedpkg</code> [ <i>global_options</i> ] <i>command</i> [ <i>command_options</i> ] [ <i>command_arguments</i> ]<br />
  <code>fedpkg</code> <code>help</code><br />
  <code>fedpkg</code> <i>command</i> <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fedpkg</code> is a script to interact with the RPM Packaging system.</p>
 <h3>Global Options</h3>
 <p>&nbsp;<wbr>&nbsp;<wbr>&#8211;config CONFIG, -C CONFIG<br />

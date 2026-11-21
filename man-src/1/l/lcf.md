@@ -1,4 +1,5 @@
 ---
+
 title: "lcf(1)"
 name: "lcf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lcf/"
 description: "lcf – Determine which of the historical versions of a config is installed"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>lcf</code> <i>[options]</i> <i>&lt;Destination File Name&gt;</i> <i>&lt;Historical MD5SUM source directory&gt;</i></p>
-<h2>DESCRIPTION</h2>
 <p> This script, given a destination file name, and a directory containing md5sums of historical versions of the file, attempts to determine if the installed version corresponds to a historical version. lcf uses the same algorithm that ucf uses, and should exhibit the same behaviour. </p>
 <p> The source directory is the place where historical md5sums are expected to live. Specifically, the historical md5sums are looked for in either the file <i>${filename}.md5sum, </i> or the subdirectory <i>${filename}.md5sum.d/</i></p>
 <h2>OPTIONS</h2>

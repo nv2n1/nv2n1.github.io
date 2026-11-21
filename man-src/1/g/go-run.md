@@ -1,4 +1,5 @@
 ---
+
 title: "go-run(1)"
 name: "go-run"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-go-run/"
 description: "go-run – compile and run Go program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>go run</code> [<i>build flags</i>] [<code>-exec</code> <i>xprog</i>] <i>package</i> [<i>arguments&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Run compiles and runs the named main Go package.<br />
  Typically the package is specified as a list of .go source files from a single directory, but it may also be an import path, file system path, or pattern matching a single known package, as in &#8216;go run .&#8217; or &#8216;go run my/cmd&#8217;. </p>
 <p> If the package argument has a version suffix (like @latest or @v1.0.0), &quot;go run&quot; builds the program in module-aware mode, ignoring the go.mod file in the current directory or any parent directory, if there is one. This is useful for running programs without affecting the dependencies of the main module. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libinput(1)"
 name: "libinput"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-libinput/"
 description: "libinput – tool to interface with libinput"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>libinput [&#8211;help|&#8211;version] </code><i>&lt;command&gt;</i> <i>[&lt;args&gt;]</i></p>
-<h2>DESCRIPTION</h2>
 <p> libinput is a library to handle input devices and provides device detection and input device event processing for most Wayland compositors and the X.Org xf86-input-libinput driver. </p>
 <p> The <code>libinput</code> tools are a set of tools to debug, interface with and analyze data for libinput. These tools create libinput contexts separate from that of the compositor/X server and cannot change settings in a running session. See section <code>COMMANDS</code> for a list of available commands. </p>
 <p> libinput&#8217;s API documentation and details on features and various high-level concepts are available online at <i><a rel="nofollow" href="https://wayland.freedesktop.org/libinput/doc/latest/">https://wayland.freedesktop.org/libinput/doc/latest/</a></i> </p>

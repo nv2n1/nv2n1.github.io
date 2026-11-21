@@ -1,4 +1,5 @@
 ---
+
 title: "pmdumplog(1)"
 name: "pmdumplog"
 section: "1"
@@ -9,10 +10,8 @@ description: "pmdumplog – dump internal details of a performance metrics archi
 
 <h2>NAME</h2>
 <p> <code>pmdumplog</code> &#8211; dump internal details of a performance metrics archive log</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pmdumplog</code> [<code>-adilLmMrstxz</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i> [<i>metricname</i> &#8230;]<br />
  <code>pmdumplog</code> [<code>-v</code> <i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdumplog</code> dumps assorted control, metadata, index and state information from the files of a Performance Co-Pilot (PCP) archive log. The archive log has the base name <i>archive</i> and must have been previously created using <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
 <p> Normally <code>pmdumplog</code> operates on the distributed Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative local PMNS is loaded from the file <i>pmnsfile.</i> </p>
 <p> If any <i>metricname</i> arguments appear, the report will be restricted to information relevant to the named performance metrics. If <i>metricname</i> is a non-leaf node in the namespace (see <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)), then <code>pmdumplog</code> will recursively descend the archive&#8217;s namespace and report on all leaf nodes. </p>

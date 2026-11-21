@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-ugraph(1)"
 name: "byobu-ugraph"
 section: "1"
@@ -9,7 +10,6 @@ description: "byobu-ugraph – helper script for notification history graphs"
 
 <h2>NAME</h2>
 <p> <code>byobu-ugraph</code> &#8211; helper script for notification history graphs </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu-ugraph</code> is a helper script that can be used to create history graphs </p>
 <h2>USAGE</h2>
 <p> <code>byobu-ugraph</code> [options] [command [args&#8230;]] </p>

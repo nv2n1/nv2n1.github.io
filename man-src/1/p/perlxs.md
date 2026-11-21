@@ -1,4 +1,5 @@
 ---
+
 title: "perlxs(1)"
 name: "perlxs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlxs/"
 description: "perlxs – XS language reference manual"
 ---
 
-<h2>DESCRIPTION</h2>
 <h3>Introduction</h3>
 <p> <font SIZE="-1">XS</font> is an interface description file format used to create an extension interface between Perl and C code (or a C library) which one wishes to use with Perl. The <font SIZE="-1">XS</font> interface is combined with the library to create a new library which can then be either dynamically loaded or statically linked into perl. The <font SIZE="-1">XS</font> interface description is written in the <font SIZE="-1">XS</font> language and is the core component of the Perl extension interface. </p>
 <p> Before writing <font SIZE="-1">XS,</font> read the &#8220;<font SIZE="-1">CAVEATS&#8221;</font> section below. </p>

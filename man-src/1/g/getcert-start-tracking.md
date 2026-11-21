@@ -1,4 +1,5 @@
 ---
+
 title: "getcert-start-tracking(1)"
 name: "getcert-start-tracking"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-getcert-start-tracking/"
 description: "getcert"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> getcert start-tracking [options] </p>
-<h2>DESCRIPTION</h2>
 <p> Tells <i>certmonger</i> to monitor an already-issued certificate. Optionally, when the certificate nears expiration, use an existing key pair (or to generate one if one is not already found in the specified location), to generate a signing request using the key pair and to submit them for signing to a CA. </p>
 <h2>SPECIFYING EXISTING REQUESTS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncap(1)"
 name: "ncap"
 section: "1"
@@ -11,7 +12,6 @@ description: "ncap – netCDF Arithmetic Processor"
 <p> ncap &#8211; netCDF Arithmetic Processor</p>
 <h2>SYNTAX</h2>
 <p> ncap [-3] [-4] [-6] [-7] [-A] [-C] [-c] [-D <i>dbg_lvl</i>] [-F] [-f] [-h] [&#8211;hdf] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [&#8211;no_tmp_fl] [-O] [-o <i>output-file</i>] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [-S <i>script-file</i>]<i>[-s</i> <i>script</i>]<i>[-v</i> <i>var</i>[, &#8230;&nbsp;<wbr>]] <i>input-file [</i> <i>output-file ]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ncap </code> arithmetically processes a netCDF file. However, in about 2008 <code>ncap </code> was deprecated in favor of <code>ncap2</code> which far surpasses its capabilities. <code>ncap will eventually be completely removed from</code> <code>NCO.</code> It is currently retained only because it provides an easier-to-build arithmetic operator than <code>ncap2.</code> </p>
 <p> The processing instructions are contained either in the <code>NCO</code> script file <code>fl.nco</code> or in a sequence of command line arguments. The options <code>-s</code> (or long options <code>&#8211;spt</code> or <code>&#8211;script)</code> are used for in-line scripts and <code>-S</code> (or long options <code>&#8211;fl_spt</code> or <code>&#8211;script-file)</code> are used to provide the filename where (usually multiple) scripting commands are pre-stored. <code>ncap</code> was written to perform arbitrary albebraic transformations of data and archive the results as easily as possible. Missing values are treated correctly. The results of the algebraic manipulations are called <i>derived fields. </i> </p>
 <p> Unlike the other operators, <code>ncap</code> does not accept a list of variables to be operated on as an argument to <code>-v.</code> Rather, the <code>-v </code> switch takes no arguments and indicates that <code>ncap</code> should output <i>only</i> user-defined variables. <code>ncap</code> does not accept or understand the <code>-x </code> switch. </p>

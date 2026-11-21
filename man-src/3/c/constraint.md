@@ -1,4 +1,5 @@
 ---
+
 title: "constraint(3)"
 name: "constraint"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-constraint/"
 description: "ql/math/optimization/constraint.hpp – Abstract constraint class."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/array.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>Constraint</code><br />

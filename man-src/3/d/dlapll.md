@@ -1,4 +1,5 @@
 ---
+
 title: "dlapll(3)"
 name: "dlapll"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlapll/"
 description: "dlapll.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlapll</code> (N, X, INCX, Y, INCY, SSMIN)<br />
  <i></i><code>DLAPLL</code> measures the linear dependence of two vectors.</p>

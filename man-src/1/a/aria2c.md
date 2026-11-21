@@ -1,4 +1,5 @@
 ---
+
 title: "aria2c(1)"
 name: "aria2c"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aria2c/"
 description: "aria2c – The ultra fast download utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aria2c</code> [&lt;OPTIONS&gt;] [&lt;URI&gt;|&lt;MAGNET&gt;|&lt;TORRENT_FILE&gt;|&lt;METALINK_FILE&gt;] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> aria2 is a utility for downloading files. The supported protocols are HTTP(S), FTP, SFTP, BitTorrent, and Metalink. aria2 can download a file from multiple sources/protocols and tries to utilize your maximum download bandwidth. It supports downloading a file from HTTP(S)/FTP /SFTP and BitTorrent at the same time, while the data downloaded from HTTP(S)/FTP/SFTP is uploaded to the BitTorrent swarm. Using Metalink chunk checksums, aria2 automatically validates chunks of data while downloading a file.</p>
 <h2>OPTIONS</h2>
 <p> <code>NOTE:</code> Most FTP related options are applicable to SFTP as well. Some options are not effective against SFTP (e.g., <i>&#8211;ftp-pasv</i>)</p>

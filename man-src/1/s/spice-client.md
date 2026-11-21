@@ -1,4 +1,5 @@
 ---
+
 title: "spice-client(1)"
 name: "spice-client"
 section: "1"
@@ -6,14 +7,9 @@ letter: "s"
 url: "/docs/linux/man/1-spice-client/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+Spice-GTK - a client-side library to access remote SPICE displays 
 
- Spice-GTK - a client-side library to access remote SPICE displays 
-
-<h2>DESCRIPTION</h2>
-
- Spice-GTK is a library allowing access to remote displays over the <font SIZE="-1">SPICE</font> protocol. At the moment It's mainly used to access remote virtual machines. 
+Spice-GTK is a library allowing access to remote displays over the <font SIZE="-1">SPICE</font> protocol. At the moment It's mainly used to access remote virtual machines. 
 
  The Spice-GTK library provides a set of command line options which can be used to tweak some SPICE-specific option.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "hbwmalloc(3)"
 name: "hbwmalloc"
 section: "3"
@@ -10,7 +11,6 @@ description: "hbwmalloc – The high bandwidth memory interface Note: hbwmalloc.
 <h2>NAME</h2>
 <p> hbwmalloc &#8211; The high bandwidth memory interface<br />
  Note: hbwmalloc.h functionality is considered as stable API (STANDARD API).</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;hbwmalloc.h&gt;
 Link with - lmemkind int hbw_check_available(void);
@@ -23,7 +23,6 @@ int hbw_posix_memalign_psize(void **memptr, size_t alignment, size_t size, hbw_p
 hbw_policy_t hbw_get_policy(void);
 int hbw_set_policy(hbw_policy_t mode);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>hbw_check_available</code>() returns 0 if high bandwidth memory is available and an error code described in the <code>ERRORS</code> section if not. </p>
 <p> <code>hbw_malloc</code>() allocates <i>size</i> bytes of uninitialized high bandwidth memory. The allocated space is suitably aligned (after possible pointer coercion) for storage of any type of object. If <i>size</i> is zero then <code>hbw_malloc</code>() returns NULL. </p>
 <p> <code>hbw_calloc</code>() allocates space for <i>nmemb</i> objects in high bandwidth memory, each <i>size</i> bytes in length. The result is identical to calling <code>hbw_malloc</code>() with an argument of <i>nmemb</i>*<i>size</i> , with the exception that the allocated memory is explicitly initialized to zero bytes. If <i>nmemb</i> or <i>size</i> is 0, then <code>hbw_calloc</code>() returns NULL. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mongofiles(1)"
 name: "mongofiles"
 section: "1"
@@ -9,7 +10,6 @@ description: "mongofiles – MongoDB GridFS Utility"
 
 <h2>NAME</h2>
 <p> mongofiles &#8211; MongoDB GridFS Utility</p>
-<h2>SYNOPSIS</h2>
 <p> The <code>mongofiles</code> utility makes it possible to manipulate files stored in your MongoDB instance in <i>GridFS</i> objects from the command line. It is particularly useful as it provides an interface between objects stored in your file system and GridFS. </p>
 <p> All <code>mongofiles</code> commands have the following form: </p>
 <pre>

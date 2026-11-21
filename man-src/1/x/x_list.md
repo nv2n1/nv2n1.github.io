@@ -1,4 +1,5 @@
 ---
+
 title: "x_list(1)"
 name: "x_list"
 section: "1"
@@ -9,9 +10,7 @@ description: "x_list – Extract Cross-Over Information from the Data Base."
 
 <h2>NAME</h2>
 <p> <code>x_list</code> &#8211; Extract Cross-Over Information from the Data Base.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x_list</code> [ <i>leg1</i> ] [ <i>leg2</i> ] [ <code>&#8211;</code><i>dataflags</i> ] [ <code>-R</code><i>west/east/south/north</i> ] [ <code>-X</code><i>xbase</i> ] [ <code>-H</code> ] [ <code>-I</code> ] [ <code>-V</code> ] [ <code>-C</code><i>corrfile</i> ] [ <code>-Z</code><i>ignorefile</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>x_list</code> will allow the user to extract information from the xx_base.b and xx_legs.b files. Several options can be passed on the command line in order to specify which parameters to extract. They are:</p>
 <dl>
 <dt><i>leg1 leg2</i></dt>

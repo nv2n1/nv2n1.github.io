@@ -1,4 +1,5 @@
 ---
+
 title: "byobu(1)"
 name: "byobu"
 section: "1"
@@ -9,12 +10,10 @@ description: "byobu – wrapper script for seeding a user’s byobu configuratio
 
 <h2>NAME</h2>
 <p> byobu &#8211; wrapper script for seeding a user&#8217;s byobu configuration and launching a text based window manager (either screen or tmux) </p>
-<h2>SYNOPSIS</h2>
 <p> <code>byobu</code> [screen options] </p>
 <p> <code>byobu-screen</code> [screen options] </p>
 <p> <code>byobu-tmux</code> [tmux options] </p>
 <p> Options to <code>byobu</code> are simply passed through <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) or <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1). </p>
-<h2>DESCRIPTION</h2>
 <p> <code>byobu</code> is a script that launches a text based window manager (either <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) or <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1)) in the byobu configuration. This enables the display of system information and status notifications within two lines at the bottom of the screen session. It also enables multiple tabbed terminal sessions, accessible through simple keystrokes. </p>
 <p> <code>byobu</code> currently defaults to using <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1) (if present) as the backend, however, this can be overridden with the <code><a href="/docs/linux/man/1-byobu-select-backend/">byobu-select-backend</a></code>(1) utility. </p>
 <p> Note that BYOBU_CONFIG_DIR=<i>$XDG_CONFIG_HOME/byobu</i> if defined, and <i>$HOME/.byobu</i> otherwise. </p>

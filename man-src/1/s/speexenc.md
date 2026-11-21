@@ -1,4 +1,5 @@
 ---
+
 title: "speexenc(1)"
 name: "speexenc"
 section: "1"
@@ -9,9 +10,7 @@ description: "speexenc – The reference implementation speex encoder."
 
 <h2>NAME</h2>
 <p> speexenc &#8211; The reference implementation speex encoder.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>speexenc</code> [<i>options</i>] <i>input_file output_file</i></p>
-<h2>DESCRIPTION</h2>
 <p> Encodes input_file using Speex. It can read the WAV or raw files.</p>
 <h3>input_file can be:</h3>
 <dl>

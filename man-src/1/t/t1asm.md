@@ -1,4 +1,5 @@
 ---
+
 title: "t1asm(1)"
 name: "t1asm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-t1asm/"
 description: "t1asm – assemble PostScript Type 1 font"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>t1asm</code> [<code>-a</code>|<code>-b</code>] [<code>-l</code> <i>length</i>] [<i>input</i> [<i>output</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>t1asm</code> assembles Adobe Type 1 font programs into either PFA (hexadecimal) or PFB (binary) formats from a human-readable form. If the file <i>output</i> is not specified output goes to the standard output. If the file <i>input</i> is not specified input comes from the standard input. </p>
 <p> <code>t1asm</code> tokenizes the charstring data and performs eexec and charstring encryption as specified in the &#8220;black book,&#8221; <i>Adobe Type 1 Font Format.</i> </p>
 <p> The input must have a line of the form</p>

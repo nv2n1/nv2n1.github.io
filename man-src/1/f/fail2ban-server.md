@@ -1,4 +1,5 @@
 ---
+
 title: "fail2ban-server(1)"
 name: "fail2ban-server"
 section: "1"
@@ -9,9 +10,7 @@ description: "fail2ban-server – start the server"
 
 <h2>NAME</h2>
 <p> fail2ban-server &#8211; start the server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>fail2ban-server</code> [<i>,OPTIONS/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Fail2Ban v0.9.6 reads log file that contains password failure report and bans the corresponding IP addresses using firewall rules. </p>
 <p> Only use this command for debugging purpose. Start the server with fail2ban-client instead. The default behaviour is to start the server in background.</p>
 <h2>OPTIONS</h2>

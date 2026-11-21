@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-set_input_string(3)"
 name: "gstream-set_input_string"
 section: "3"
@@ -9,10 +10,8 @@ description: "set_input_string"
 
 <h2>NAME</h2>
 <p> set_input_string</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>void set_input_string(char const *s);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This function provides a way to specify an editable default string when inputting. Consider the following example: </p>
 <pre><code>
 char buf[100];

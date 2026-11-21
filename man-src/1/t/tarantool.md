@@ -1,4 +1,5 @@
 ---
+
 title: "tarantool(1)"
 name: "tarantool"
 section: "1"
@@ -6,20 +7,13 @@ letter: "t"
 url: "/docs/linux/man/1-tarantool/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+tarantool- a Lua application server and a NoSQL database 
 
- tarantool- a Lua application server and a NoSQL database 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     tarantool [OPTIONS]
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- Tarantool is a Lua application server and a NoSQL database. 
+Tarantool is a Lua application server and a NoSQL database. 
 
  Its key properties include:
 <dl>

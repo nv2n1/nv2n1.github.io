@@ -1,4 +1,5 @@
 ---
+
 title: "stgsna(3)"
 name: "stgsna"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stgsna/"
 description: "stgsna.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code>STGSNA</code></p>

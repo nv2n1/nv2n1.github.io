@@ -1,4 +1,5 @@
 ---
+
 title: "ctzrqf(3)"
 name: "ctzrqf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctzrqf/"
 description: "ctzrqf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctzrqf</code> (M, N, A, LDA, TAU, INFO)<br />
  <i></i><code>CTZRQF</code></p>

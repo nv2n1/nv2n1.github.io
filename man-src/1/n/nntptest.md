@@ -1,4 +1,5 @@
 ---
+
 title: "nntptest(1)"
 name: "nntptest"
 section: "1"
@@ -8,12 +9,10 @@ description: "nntptest – interactive NNTP test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nntptest</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-a</code> <i>userid</i> ] [ <code>-u</code> <i>userid</i> ] [ <code>-k</code> <i>num</i> ] [ <code>-l</code> <i>num</i> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-r</code> <i>realm</i> ] [ <code>-f</code> <i>file</i> ] [ <code>-n</code> <i>num</i> ] [ <code>-s</code> ] [ <code>-c</code> ] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <code>-i</code> ] [ <code>-o</code> <i>option</i><code>=</code><i>value</i> ] [ <code>-v</code> ] <i>hostname</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>nntptest</i> is a utility that allows you to authenticate to a NNTP server and interactively issue commands to it. Once authenticated you may issue any NNTP command by simply typing it in. It is capable of multiple SASL authentication mechanisms and handles encryption layers transparently. This utility is often used for testing the operation of a nntp server. Also those developing NNTP clients find it useful. </p>
 <h2>OPTIONS</h2>
 <dl>

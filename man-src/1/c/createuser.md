@@ -1,4 +1,5 @@
 ---
+
 title: "createuser(1)"
 name: "createuser"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-createuser/"
 description: "createuser – define a new PostgreSQL user account"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>createuser</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>username</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>createuser creates a new PostgreSQL user (or more precisely, a role). Only superusers and users with CREATEROLE privilege can create new users, so createuser must be invoked by someone who can connect as a superuser or a user with CREATEROLE privilege. </dd>
 <p> If you wish to create a new superuser, you must connect as a superuser, not merely with CREATEROLE privilege. Being a superuser implies the ability to bypass all access permission checks within the database, so superuserdom should not be granted lightly. </p>
 <p> createuser is a wrapper around the SQL command CREATE ROLE (<code><a href="/docs/linux/man/7-create_role/">CREATE_ROLE</a></code>(7)). There is no effective difference between creating users via this utility and via other methods for accessing the server.</p>

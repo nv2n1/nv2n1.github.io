@@ -1,4 +1,5 @@
 ---
+
 title: "imaxabs(3)"
 name: "imaxabs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-imaxabs/"
 description: "abs, labs, llabs, imaxabs – compute the absolute value of an integer"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int abs(int j);
@@ -21,7 +21,6 @@ intmax_t imaxabs(intmax_t j);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>abs</code>() function computes the absolute value of the integer argument <i>j</i>. The <code>labs</code>(), <code>llabs</code>(), and <code>imaxabs</code>() functions compute the absolute value of the argument <i>j</i> of the appropriate integer type for the function.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns the absolute value of the integer argument, of the appropriate integer type for the function.</p>

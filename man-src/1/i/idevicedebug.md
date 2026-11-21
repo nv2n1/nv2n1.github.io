@@ -1,4 +1,5 @@
 ---
+
 title: "idevicedebug(1)"
 name: "idevicedebug"
 section: "1"
@@ -9,9 +10,7 @@ description: "idevicedebug – Interact with the debugserver service of a device
 
 <h2>NAME</h2>
 <p> idevicedebug &#8211; Interact with the debugserver service of a device.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>idevicedebug</code> [OPTIONS] COMMAND </p>
-<h2>DESCRIPTION</h2>
 <p> Interact with the debug service of a device. Currently the only implemented command is &quot;run&quot; and allows execution of developer apps and watch the stdout/stderr of the process. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-sort(1)"
 name: "oggz-sort"
 section: "1"
@@ -10,7 +11,6 @@ description: "oggz-sort — Sort the pages of an Ogg file in order of presentati
 <h2>NAME</h2>
 <p> oggz-sort &#8212; Sort the pages of an Ogg file in order of presentation time.<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>oggz-sort</code> [-o <code>filename</code> | &#8211;output <code>filename</code> ] filename </p>
 <p> <code>oggz-sort</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

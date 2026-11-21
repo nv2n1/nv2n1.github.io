@@ -1,4 +1,5 @@
 ---
+
 title: "sgeqp3(3)"
 name: "sgeqp3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgeqp3/"
 description: "sgeqp3.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgeqp3</code> (M, N, A, LDA, JPVT, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>SGEQP3</code></p>

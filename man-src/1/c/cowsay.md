@@ -1,4 +1,5 @@
 ---
+
 title: "cowsay(1)"
 name: "cowsay"
 section: "1"
@@ -9,9 +10,7 @@ description: "cowsay/cowthink – configurable speaking/thinking cow (and a bit 
 
 <h2>NAME</h2>
 <p> cowsay/cowthink &#8211; configurable speaking/thinking cow (and a bit more)</p>
-<h2>SYNOPSIS</h2>
 <p> cowsay [<code>-e</code> <i>eye_string</i>] [<code>-f</code> <i>cowfile</i>] [<code>-h</code>] [<code>-l</code>] [<code>-n</code>] [<code>-T</code> <i>tongue_string</i>] [<code>-W</code> <i>column</i>] [<code>-bdgpstwy</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Cowsay</i> generates an ASCII picture of a cow saying something provided by the user. If run with no arguments, it accepts standard input, word-wraps the message given at about 40 columns, and prints the cow saying the given message on standard output. </p>
 <p> To aid in the use of arbitrary messages with arbitrary whitespace, use the <code>-n</code> option. If it is specified, the given message will not be word-wrapped. This is possibly useful if you want to make the cow think or speak in figlet(6). If <code>-n</code> is specified, there must not be any command-line arguments left after all the switches have been processed. </p>
 <p> The <code>-W</code> specifies roughly (where the message should be wrapped. The default is equivalent to <code>-W 40</code> i.e. wrap words at or before the 40th column. </p>

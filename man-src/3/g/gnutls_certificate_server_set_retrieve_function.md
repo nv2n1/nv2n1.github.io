@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_server_set_retrieve_function(3)"
 name: "gnutls_certificate_server_set_retrieve_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_server_set_retrieve_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_server_set_retrieve_function &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_server_set_retrieve_function(gnutls_certificate_credentials_t </code><i>cred</i><code>, gnutls_certificate_server_retrieve_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_certificate_server_set_retrieve_function – API function"
 <dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
 <dt>gnutls_certificate_server_retrieve_function * func</dt>
 <dd> is the callback function</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets a callback to be called in order to retrieve the certificate to be used in the handshake. You are advised to use <code>gnutls_certificate_set_retrieve_function2()</code> because it is much more efficient in the processing it requires from gnutls. </p>
 <p> The callback&#8217;s function prototype is: int (*callback)(gnutls_session_t, gnutls_retr_st* st); </p>
 <p>&nbsp;<wbr><i>st</i>&nbsp;<wbr>should contain the certificates and private keys. </p>

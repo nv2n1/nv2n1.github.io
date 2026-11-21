@@ -1,4 +1,5 @@
 ---
+
 title: "users(1)"
 name: "users"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-users/"
 description: "users – print the user names of users currently logged in to the current host"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>users</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Output who is currently logged in according to FILE. If FILE is not specified, use <i>,/var/run/utmp/</i>. <i>,/var/log/wtmp/</i> as FILE is common.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

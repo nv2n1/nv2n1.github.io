@@ -1,4 +1,5 @@
 ---
+
 title: "jhat-java-1(1)"
 name: "jhat-java-1"
 section: "1"
@@ -9,7 +10,6 @@ description: "jhat – Java Heap Analysis Tool"
 
 <h2>Name</h2>
 <p> jhat &#8211; Java Heap Analysis Tool </p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>jhat</code> [ <i>options</i> ] &lt;heap-dump-file&gt;
 </pre>
@@ -21,7 +21,6 @@ description: "jhat – Java Heap Analysis Tool"
 <dt>heap-dump-file</dt>
 <dd> Java binary heap dump file to be browsed. For a dump file that contains multiple heap dumps, you may specify which dump in the file by appending &quot;#&lt;number&gt; to the file name, i.e. &quot;foo.hprof#3&quot;.</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>jhat</code> command parses a java heap dump file and launches a webserver. jhat enables you to browse heap dumps using your favorite webbrowser. jhat supports pre-designed queries (such as &#8216;show all instances of a known class &quot;Foo&quot;&#8217;) as well as <code>OQL</code> (<code>O</code>bject <code>Q</code>uery <code>L</code>anguage) &#8211; a SQL-like query language to query heap dumps. Help on OQL is available from the OQL help page shown by jhat. With the default port, OQL help is available at <a rel="nofollow" href="http://localhost:7000/oqlhelp/">http://localhost:7000/oqlhelp/</a> </p>
 <p> There are several ways to generate a java heap dump: </p>
 <dl>

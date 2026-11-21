@@ -1,4 +1,5 @@
 ---
+
 title: "grfdiff(1)"
 name: "grfdiff"
 section: "1"
@@ -9,7 +10,6 @@ description: "GRFDiff – A tool to create a binary GRF diff from to GRFs."
 
 <h2>NAME</h2>
 <p> <code>GRFDiff</code> &#8211; A tool to create a binary GRF diff from to GRFs.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grfdiff</code> [-<code>hnxyv</code> ] [-<code>l </code><i>numbers</i> ] [-<code>o </code><i>GRF-File</i> ] <i>Original-GRF-file</i> <i>New-GRF-file</i> </p>
 <p> Compare the two GRF files and produce a GRD file containing only the sprites from the second file that are different from the first file. </p>
 <p> GRFDiff makes a .GRD file with the same basename as the new GRF file.</p>

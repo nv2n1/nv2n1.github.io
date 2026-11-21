@@ -1,4 +1,5 @@
 ---
+
 title: "htpasswd(1)"
 name: "htpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htpasswd/"
 description: "htpasswd – Manage user files for basic authentication"
 ---
 
-<h2>SYNOPSIS</h2>
 <p>&nbsp; </p>
 <p> <code>htpasswd</code> [ &#8211;<code>c</code> ] [ &#8211;<code>i</code> ] [ &#8211;<code>m</code> | &#8211;<code>B</code> | &#8211;<code>d</code> | &#8211;<code>s</code> | &#8211;<code>p</code> ] [ &#8211;<code>C</code> <i>cost</i> ] [ &#8211;<code>D</code> ] [ &#8211;<code>v</code> ] <i>passwdfile</i> <i>username</i><br />
 &nbsp; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "h5copy(1)"
 name: "h5copy"
 section: "1"
@@ -9,7 +10,6 @@ description: "h5copy: – Copies HDF5 objects from a file to a new file"
 
 <h2>NAME</h2>
 <p> h5copy: &#8211; Copies HDF5 objects from a file to a new file</p>
-<h2>DESCRIPTION</h2>
 <p> usage: h5copy [OPTIONS] [OBJECTS&#8230;]</p>
 <dl>
 <dt>

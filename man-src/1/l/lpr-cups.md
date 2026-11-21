@@ -1,4 +1,5 @@
 ---
+
 title: "lpr-cups(1)"
 name: "lpr-cups"
 section: "1"
@@ -9,9 +10,7 @@ description: "lpr – print files"
 
 <h2>NAME</h2>
 <p> lpr &#8211; print files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lpr</code> [ -E ] [ -H <i>server[:port]</i> ] [ -U <i>username</i> ] [ -P <i>destination[/instance]</i> ] [ -# <i>num-copies</i> [ -h ] [ -l ] [ -m ] [ -o <i>option[=value]</i> ] [ -p] [ -q ] [ -r ] [ -C/J/T <i>title</i> ] [ <i>file(s)</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>lpr</i> submits files for printing. Files named on the command line are sent to the named printer (or the default destination if no destination is specified). If no files are listed on the command-line, <i>lpr</i> reads the print file from the standard input.</p>
 <h2>THE DEFAULT DESTINATION</h2>
 <p> CUPS provides many ways to set the default destination. The &quot;LPDEST&quot; and &quot;PRINTER&quot; environment variables are consulted first. If neither are set, the current default set using the <i><a href="/docs/linux/man/1-lpoptions/">lpoptions</a>(1)</i> command is used, followed by the default set using the <i><a href="/docs/linux/man/8-lpadmin/">lpadmin</a>(8)</i> command.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dm_zdump(1)"
 name: "dm_zdump"
 section: "1"
@@ -6,22 +7,15 @@ letter: "d"
 url: "/docs/linux/man/1-dm_zdump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+dm_zdump - timezone dumper 
 
- dm_zdump - timezone dumper 
-
-<h2>SYNOPSIS</h2>
-
- This performs the same operation as the unix 'zdump' command, but using the Date::Manip module. 
+This performs the same operation as the unix 'zdump' command, but using the Date::Manip module. 
 
  <pre><code>
 dm_zdump[-v][-c YEAR][ZONE ZONE...]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- This displays the current time in each <font SIZE="-1">ZONE</font> named on the command line unless the -v option is given.
+This displays the current time in each <font SIZE="-1">ZONE</font> named on the command line unless the -v option is given.
 <dl>
 <dt>-h, --help
 </dt><dd> Print online help.

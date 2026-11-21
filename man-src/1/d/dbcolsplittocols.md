@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolsplittocols(1)"
 name: "dbcolsplittocols"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dbcolsplittocols/"
 description: "dbcolsplittocols – split an existing column into multiple new columns"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dbcolsplittocols [-E] [-C ElementSeparator] column [column&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Create new columns by splitting an existing column. The fragments of the column are each divided by ElementSeparator (default is underscore). </p>
 <p> This command is the opposite of dbcolmerge. Names of the new columns are given by splitting the name of the existing column. dbcolrename may be useful to set column names.</p>
 <h2>OPTIONS</h2>

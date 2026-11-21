@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usercreatecert(1)"
 name: "euare-usercreatecert"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-usercreatecert – [Eucalyptus only] Create a new signing ce
 
 <h2>NAME</h2>
 <p> euare-usercreatecert &#8211; [Eucalyptus only] Create a new signing certificate</p>
-<h2>SYNOPSIS</h2>
 <p> euare-usercreatecert [&#8211;out FILE] [&#8211;keyout FILE]</p>
 <dl>
 <dt>[&#8211;as-account ACCOUNT] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [USER]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> [Eucalyptus only] Create a new signing certificate</p>
 <h3>positional arguments:</h3>
 <dl>

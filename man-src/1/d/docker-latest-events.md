@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-events(1)"
 name: "docker-latest-events"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-latest-events/"
 description: "docker-events – Get real time events from the server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker events</code> [<code>&#8211;help</code>] [<code>-f</code>|<code>&#8211;filter</code>[=<i>[]</i>]] [<code>&#8211;since</code>[=<i>SINCE</i>]] [<code>&#8211;until</code>[=<i>UNTIL</i>]] </p>
-<h2>DESCRIPTION</h2>
 <p> Get event information from the Docker daemon. Information can include historical information and real-time information. </p>
 <p> Docker containers will report the following events: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "fchmod(2)"
 name: "fchmod"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fchmod/"
 description: "chmod, fchmod, fchmodat – change permissions of a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/stat.h&gt;
 int chmod(const char *pathname, mode_t mode);
@@ -39,7 +39,6 @@ int fchmodat(int dirfd, const char *pathname, mode_t mode, int flags);
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>chmod</code>() and <code>fchmod</code>() system calls change a files mode bits. (The file mode consists of the file permission bits plus the set-user-ID, set-group-ID, and sticky bits.) These system calls differ only in how the file is specified:</p>
 <dl>
 <dt>*</dt>

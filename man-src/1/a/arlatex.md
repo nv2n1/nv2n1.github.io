@@ -1,4 +1,5 @@
 ---
+
 title: "arlatex(1)"
 name: "arlatex"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-arlatex/"
 description: "arlatex – archive a number of ancillary LaTeX files into a master .tex file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> arlatex [<code>&#8211;outfile</code>=<i>filename</i><i>.tex</i>] <code>&#8211;document</code>=<i>filename</i><i>.tex</i> <i>filename</i> &#8230; </p>
 <p> arlatex <code>&#8211;version</code> </p>
 <p> arlatex <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arlatex</code> is an archiving program like <code>shar</code>, <code>tar</code>, <code>zip</code>, etc. Unlike those other archivers, however, <code>arlatex</code> is designed specifically for use with LaTeX. <code>arlatex</code> takes the name of a master <i>.tex</i> file and a number of ancillary files used by that master file (e.g., <i>.tex</i>, <i>.sty</i>, <i>.cls</i>, and <i>.eps</i> files). From these, <code>arlatex</code> outputs a single file that, when it&#8217;s run through <code>latex</code>, both regenerates the ancillary files and compiles the document into a <i>.dvi</i> file. </p>
 <p> <code>arlatex</code> has a few advantages over other archiving programs:</p>
 <dl>

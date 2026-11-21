@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoarbtxt(1)"
 name: "ppmtoarbtxt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtoarbtxt/"
 description: "ppmtoarbtxt – generate image in arbitrary text format from PPM image"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtoarbtxt</code> <i>bodyskl</i> [<code>-hd</code> <i>headskl</i>] [<code>-tl</code> <i>tailskl</i>] [<i>ppmfile</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmtoarbtxt</code> generates simple text-based graphics formats based on format descriptions given as input. A text-based graphics format is one in which an image is represented by text (like PNM plain format, but unlike PNM raw format). </p>
 <p> <code>ppmtoarbtxt</code> reads a PPM image as input. For each pixel in the image, <code>ppmtoarbtxt</code> writes the contents of the skeleton file <i>bodyskl</i>, with certain substitutions based on the value of the pixel, to stdout. The substitutions are as follows: </p>

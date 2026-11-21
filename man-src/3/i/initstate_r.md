@@ -1,4 +1,5 @@
 ---
+
 title: "initstate_r(3)"
 name: "initstate_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-initstate_r/"
 description: "random_r, srandom_r, initstate_r, setstate_r – reentrant random number generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int random_r(struct random_data *buf, int32_t *result);
@@ -22,7 +22,6 @@ int setstate_r(char *statebuf, struct random_data *buf);
 <dt>
 </dt><dd> /* Glibc since 2.19: */ _DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> These functions are the reentrant equivalents of the functions described in <code><a href="/docs/linux/man/3-random/">random</a></code>(3). They are suitable for use in multithreaded programs where each thread needs to obtain an independent, reproducible sequence of random numbers. </p>
 <p> The <code>random_r</code>() function is like <code><a href="/docs/linux/man/3-random/">random</a></code>(3), except that instead of using state information maintained in a global variable, it uses the state information in the argument pointed to by <i>buf</i>, which must have been previously initialized by <code>initstate_r</code>(). The generated random number is returned in the argument <i>result</i>. </p>
 <p> The <code>srandom_r</code>() function is like <code><a href="/docs/linux/man/3-srandom/">srandom</a></code>(3), except that it initializes the seed for the random number generator whose state is maintained in the object pointed to by <i>buf</i>, which must have been previously initialized by <code>initstate_r</code>(), instead of the seed associated with the global state variable. </p>

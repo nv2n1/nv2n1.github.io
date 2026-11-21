@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-perllib(1)"
 name: "fvwm-perllib"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fvwm-perllib/"
 description: "fvwm-perllib – shows the documentation of the Fvwm Perl library"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fvwm-perllib</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-v</code>|<code>-V</code> ] [ <code>man</code> [ <i>Perl::Class</i> ] ] [ <code>cat</code> [ <i>Perl::Class</i> ] ] [ <code>raw</code> [ <i>Perl::Class</i> ] ] [ <code>dir</code> ]</p>
-<h2>DESCRIPTION</h2>
 <p> Starting from fvwm-2.5.x versions there is a built-in support for creating fvwm modules in Perl. This <code>fvwm-perllib</code> utility provides help services for the Fvwm Perl library.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code> show the help and exit </p>

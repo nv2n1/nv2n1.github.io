@@ -1,4 +1,5 @@
 ---
+
 title: "evolution(3)"
 name: "evolution"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-evolution/"
 description: "QuantLib::MarketModel – base class for market models"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/marketmodels/marketmodel.hpp&gt; </p>
 <p> Inherited by <code>AbcdVol</code>, CotSwapToFwdAdapter, FlatVol, FwdPeriodAdapter, FwdToCotSwapAdapter, and PseudoRootFacade. </p>
 <h3>Public Member Functions</h3>

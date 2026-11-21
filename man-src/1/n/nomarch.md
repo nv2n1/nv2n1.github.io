@@ -1,4 +1,5 @@
 ---
+
 title: "nomarch(1)"
 name: "nomarch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nomarch/"
 description: "nomarch – extract `.arc’ archives"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nomarch</code> [<i>-hlptUv</i>] [<code>archive.arc</code>] [<code>match1</code> [<code>match2</code> &#8230; ]] </p>
-<h2>DESCRIPTION</h2>
 <p> nomarch lists, extracts, or tests `.arc&#8217; archives. (An alternate extension sometimes used was `.ark&#8217;; these work too.) This is a <i>very</i> outdated file format which should certainly not be used for anything new, but you may still need an extraction utility, and here it is. :-) </p>
 <p> The default action is to extract all files in the specified archive; see <code>OPTIONS</code> below for how to do other things instead.</p>
 <h2>OPTIONS</h2>

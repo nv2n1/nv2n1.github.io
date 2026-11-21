@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_report(1)"
 name: "x2sys_report"
 section: "1"
@@ -9,10 +10,8 @@ description: "x2sys_report – Report statistics from crossover data base"
 
 <h2>NAME</h2>
 <p> x2sys_report &#8211; Report statistics from crossover data base</p>
-<h2>SYNOPSIS</h2>
 <p> <code>x2sys_report</code> <i>column</i> <i>TAG</i> [ <i>coedbase.txt</i> ] [ ] [ [<i>list</i>] ] [ [<i>corrtable</i>] ] [ <i>nx_min</i> ] [ <code>e</code>|<code>i</code> ] [ [ <i>region</i> ] [ <i>track</i> ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>x2sys_report</code> will read the input crossover ASCII data base <i>coedbase.txt</i> (or <i>stdin</i>) and report on the statistics of crossovers (<i>n</i>, <i>mean</i>, <i>stdev</i>, <i>rms</i>, <i>weight</i>) for each track. Options are available to let you exclude tracks and limit the output.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

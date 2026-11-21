@@ -1,4 +1,5 @@
 ---
+
 title: "csyswapr(3)"
 name: "csyswapr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csyswapr/"
 description: "csyswapr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csyswapr</code> (UPLO, N, A, LDA, I1, I2)<br />
  <i></i><code>CSYSWAPR</code></p>

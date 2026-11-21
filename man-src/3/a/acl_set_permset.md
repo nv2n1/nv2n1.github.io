@@ -1,4 +1,5 @@
 ---
+
 title: "acl_set_permset(3)"
 name: "acl_set_permset"
 section: "3"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/3-acl_set_permset/"
 description: "acl_set_permset – set the permission set in an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_set_permset</code> &#8211; set the permission set in an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
-<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_set_permset acl_entry_t entry_d acl_permset_t permset_d</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn acl_set_permset function sets the permission set of the ACL entry indicated by the argument <i>entry_d </i> to the permissions contained in the argument <i>permset_d</i> </p>
 <p> Any ACL entry descriptors that refer to the entry containing the permission set referred to by <i>permset_d</i> shall continue to refer to those entries. Any ACL entry descriptors that refer to the entry referred to by <i>entry_d</i> shall continue to refer to that entry.</p>
 <h2>RETURN VALUE</h2>

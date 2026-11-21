@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-foto-treo600(1)"
 name: "pilot-foto-treo600"
 section: "1"
@@ -11,9 +12,7 @@ description: "pilot-foto-treo600 – Copies Treo \"foto\" databases to current d
 <p> pilot-foto-treo600 &#8211; Copies Treo &quot;foto&quot; databases to current directory and extracts image files from within them.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
-<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-foto-treo600</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-w</code>|<code>&#8211;write</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> Copies Treo &quot;foto&quot; databases to current directory and extracts the .jpg image files within them. </p>
 <h2>OPTIONS</h2>
 <h3>pilot-foto-treo600 options</h3>

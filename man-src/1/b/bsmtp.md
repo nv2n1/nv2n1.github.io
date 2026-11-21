@@ -1,4 +1,5 @@
 ---
+
 title: "bsmtp(1)"
 name: "bsmtp"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-bsmtp/"
 description: "bsmtp – Bacula’s SMTP client (mail submission program)"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>bsmtp &#8211; Bacula&#8217;s SMTP client&nbsp;<wbr>(mail submission program)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bsmtp</code> [<i>options</i>] <i>&lt;recipient&gt; &lt;&#8230;&gt;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bsmtp</code> is a simple mail user agent designed to permit more flexibility than the standard mail programs typically found on Unix systems, and to ease portability. It can even run on Windows machines. It is used by the Director daemon to send notifications and requests to the operator. </p>
 <h2>OPTIONS</h2>
 <dl>

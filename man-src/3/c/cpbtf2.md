@@ -1,4 +1,5 @@
 ---
+
 title: "cpbtf2(3)"
 name: "cpbtf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpbtf2/"
 description: "cpbtf2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpbtf2</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
  <i></i><code>CPBTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite band matrix (unblocked algorithm).</p>

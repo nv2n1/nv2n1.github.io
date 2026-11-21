@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-document-unexport(1)"
 name: "flatpak-document-unexport"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-flatpak-document-unexport/"
 description: "flatpak-document-unexport – Stop exporting a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak document-unexport</code> [OPTION&#8230;] FILE</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>Removes the document id for the file from the document portal. This will make the document unavailable to all sandboxed applications.</dd>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>

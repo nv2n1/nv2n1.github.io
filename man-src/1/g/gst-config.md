@@ -1,4 +1,5 @@
 ---
+
 title: "gst-config(1)"
 name: "gst-config"
 section: "1"
@@ -9,7 +10,6 @@ description: "gst-config – configuration for libgst"
 
 <h2>NAME</h2>
 <p> gst-config &#8211; configuration for libgst</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gst-config</code> [<i>OPTIONS</i>] [<i>LIBRARIES</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

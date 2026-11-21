@@ -1,4 +1,5 @@
 ---
+
 title: "mate-mouse-properties(1)"
 name: "mate-mouse-properties"
 section: "1"
@@ -9,9 +10,7 @@ description: "mate-mouse-properties – configure MATE mouse preferences"
 
 <h2>NAME</h2>
 <p> <code>mate-mouse-properties </code>&#8211; configure MATE mouse preferences</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mate-mouse-properties</code> [&#8211;get-legacy]</p>
-<h2>DESCRIPTION</h2>
 <p> This executable is part of the package &#8216;mate-control-center&#8217;: The MATE Control Center. </p>
 <p> The MATE mouse preference tool enables you to configure your mouse for right-hand or left-hand use. It is also used to specify the speed and sensitivity of mouse movement and mouse button press events.</p>
 <h2>OPTIONS</h2>

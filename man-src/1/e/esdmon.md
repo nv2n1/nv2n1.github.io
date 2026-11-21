@@ -1,4 +1,5 @@
 ---
+
 title: "esdmon(1)"
 name: "esdmon"
 section: "1"
@@ -6,14 +7,9 @@ letter: "e"
 url: "/docs/linux/man/1-esdmon/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+esdmon - The Enlightened Sound Daemon 
 
- esdmon - The Enlightened Sound Daemon 
-
-<h2>DESCRIPTION</h2>
-
- EsounD monitor. Opens the esd socket and duplicates the stream being sent to the sound device.
+EsounD monitor. Opens the esd socket and duplicates the stream being sent to the sound device.
 
 <h2>USAGE</h2>
 

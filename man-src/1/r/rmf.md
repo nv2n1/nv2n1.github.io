@@ -1,4 +1,5 @@
 ---
+
 title: "rmf(1)"
 name: "rmf"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-rmf/"
 description: "rmf – remove an nmh folder"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rmf </code> [<i>+folder</i>] [<code>-interactive</code> | <code>-nointeractive</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Rmf</code></p>
 <dd>removes all of the messages (files) within the specified (or default) folder, and then removes the folder (directory) itself. </dd>
 <p> If there are any files within the folder which are not a part of <code>nmh</code>, they will <code>not</code> be removed, and an error will be produced. If the folder is given explicitly or the <code>-nointeractive</code> option is given, then the folder will be removed without confirmation. Otherwise, the user will be asked for confirmation. If <code>rmf</code> can&#8217;t find the current folder, for some reason, the folder to be removed defaults to `+inbox&#8217; (unless overridden by user&#8217;s profile entry &#8220;Inbox&#8221;) with confirmation. </p>

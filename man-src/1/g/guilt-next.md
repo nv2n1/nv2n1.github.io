@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-next(1)"
 name: "guilt-next"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-next/"
 description: "guilt-next – Output the name of next patch to be pushed"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-next</i> [-p|&#8211;path]</p>
-<h2>DESCRIPTION</h2>
 <p> Output the name of next patch to be pushed. If linkguilt:guilt-push[1] is issued, this patch would be the topmost patch.</p>
 <h2>OPTIONS</h2>
 <p> -p, &#8211;path</p>

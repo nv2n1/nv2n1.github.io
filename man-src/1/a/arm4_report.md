@@ -1,4 +1,5 @@
 ---
+
 title: "arm4_report(1)"
 name: "arm4_report"
 section: "1"
@@ -9,14 +10,12 @@ description: "arm4_report – report on ARM 4 transactions"
 
 <h2>NAME</h2>
 <p> arm4_report &#8211; report on ARM 4 transactions</p>
-<h2>SYNOPSIS</h2>
 <p> <code>arm4_report</code> <i>&#8211;help|-h</i><br />
  <code>arm4_report</code> <i>&#8211;version|-V</i><br />
  <code>arm4_report</code> [[<i>&#8211;summary|-s</i>] | [<i>&#8211;detailed|-d</i>]]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<i>&#8211;config|-C config_file</i>]&nbsp;<wbr>[<i>&#8211;archive|-a archive_directory</i>]</p>
 <h2>WARNING</h2>
 <p> <code>This program is deprecated and may not exist in a future release</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <code>arm4_report</code> program is a simple reporting interface to the <i>ARM 4</i> transaction database. Two types of reports are available. The summary report shows response time statistics for all instances of a transaction instead of individual instances. The detailed report shows the results of individual transactions.</p>
 <h2>OPTIONS</h2>
 <dl>

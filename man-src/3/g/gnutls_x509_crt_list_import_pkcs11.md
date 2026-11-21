@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_list_import_pkcs11(3)"
 name: "gnutls_x509_crt_list_import_pkcs11"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_list_import_pkcs11 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_list_import_pkcs11 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_list_import_pkcs11(gnutls_x509_crt_t * </code><i>certs</i><code>, unsigned int </code><i>cert_max</i><code>, gnutls_pkcs11_obj_t * const </code><i>objs</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crt_list_import_pkcs11 – API function"
 <dd> A list of PKCS 11 objects</dd>
 <dt>unsigned int flags</dt>
 <dd> 0 for now</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will import a PKCS 11 certificate list to a list of <code>gnutls_x509_crt_t</code> structure. These must not be initialized.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

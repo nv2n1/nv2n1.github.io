@@ -1,4 +1,5 @@
 ---
+
 title: "pdftexi2dvi(1)"
 name: "pdftexi2dvi"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-pdftexi2dvi/"
 description: "texi2dvi – convert Texinfo documents to DVI or PDF"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>texi2dvi</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;<br />
  <code>texi2pdf</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;<br />
  <code>pdftexi2dvi</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Run each Texinfo or (La)TeX FILE through TeX in turn until all cross-references are resolved, building all indices. The directory containing each FILE is searched for included files. The suffix of FILE is used to determine its language ((La)TeX or Texinfo). To process (e)plain TeX files, set the environment variable LATEX=tex. </p>
 <p> When invoked as `texi2pdf&#8217; or given the option <code>&#8211;pdf</code> generate PDF output. Otherwise, generate DVI.</p>
 <h3>General options:</h3>

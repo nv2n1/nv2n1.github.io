@@ -1,4 +1,5 @@
 ---
+
 title: "globus-job-clean(1)"
 name: "globus-job-clean"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-globus-job-clean/"
 description: "globus-job-clean – Cancel and clean up a GRAM batch job"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>globus-job-clean</code> [OPTIONS] <i>JOBID</i> </p>
 <p> <code>globus-job-clean</code> [ -help | -usage | -version | -versions ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>globus-job-clean</code> program cancels the job named by <i>JOBID</i> if it is still running, and then removes any cached files on the GRAM service node related to that job. In order to do the file clean up, it submits a job which removes the cache files. By default this cleanup job is submitted to the default GRAM resource running on the same host as the job. This behavior can be controlled by specifying a resource manager contact string as the parameter to the <i>-r</i> or <i>-resource</i> option. </p>
 <p> By default, <code>globus-job-clean</code> prompts the user prior to canceling the job. This behavior can be overridden by specifying the <i>-f</i> or <i>-force</i> command-line options.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "zipmerge(1)"
 name: "zipmerge"
 section: "1"
@@ -9,9 +10,7 @@ description: "zipmerge – merge zip archives"
 
 <h2>NAME</h2>
 <p> zipmerge &#8211; merge zip archives</p>
-<h2>SYNOPSIS</h2>
 <p> <code>zipmerge</code> [<code>-DhIiSsV</code>] <code>target-zip</code> <code>source-zip Op source-zip &#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>zipmerge</code> merges the source zip archives <code>source-zip</code> into the target zip archive <code>target-zip.</code> By default, files in the source zip archives overwrite existing files of the same name in the target zip archive. </p>
 <p> Supported options:</p>
 <dl>

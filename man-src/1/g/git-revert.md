@@ -1,4 +1,5 @@
 ---
+
 title: "git-revert(1)"
 name: "git-revert"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-revert/"
 description: "git-revert – Revert some existing commits"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git revert[--[no - ] edit][-n][-m parent - number][-s][-S[&lt;keyid&gt;]]&lt;commit&gt;... git revert(--continue | --skip | --abort | --quit)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Given one or more existing commits, revert the changes that the related patches introduce, and record some new commits that record them. This requires your working tree to be clean (no modifications from the HEAD commit). </p>
 <p> Note: <i>git revert</i> is used to record some new commits to reverse the effect of some earlier commits (often only a faulty one). If you want to throw away all uncommitted changes in your working directory, you should see <code><a href="/docs/linux/man/1-git-reset/">git-reset</a></code>(1), particularly the <code>&#8211;hard</code> option. If you want to extract specific files as they were in another commit, you should see <code><a href="/docs/linux/man/1-git-restore/">git-restore</a></code>(1), specifically the <code>&#8211;source</code> option. Take care with these alternatives as both will discard uncommitted changes in your working directory. </p>
 <p> See &quot;Reset, restore and revert&quot; in <code><a href="/docs/linux/man/1-git/">git</a></code>(1) for the differences between the three commands.</p>

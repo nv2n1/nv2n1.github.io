@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-cat(1)"
 name: "systemd-cat"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-systemd-cat/"
 description: "systemd-cat – Connect a pipeline or program’s output with the journal"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-cat </code><code>[OPTIONS&#8230;]</code><code>[COMMAND]</code><code>[ARGUMENTS&#8230;]</code></dt>
 <dt> <code>systemd-cat </code><code>[OPTIONS&#8230;]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>systemd-cat</code></p>
 <dd>may be used to connect the standard input and output of a process to the journal, or as a filter tool in a shell pipeline to pass the output the previous pipeline element generates to the journal. </dd>
 <p> If no parameter is passed, <code>systemd-cat</code> will write everything it reads from standard input (stdin) to the journal. </p>

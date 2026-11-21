@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_init_random(3)"
 name: "ldns_init_random"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_init_random"
 
 <h2>NAME</h2>
 <p> ldns_init_random </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> int ldns_init_random(FILE *fd, unsigned int size); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_init_random</i>()</dt>
 <dd>Seed the random function. If the file descriptor is specified, the random generator is seeded with data from that file. If not, /dev/urandom is used. </dd>

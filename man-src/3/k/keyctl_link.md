@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_link(3)"
 name: "keyctl_link"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-keyctl_link/"
 description: "keyctl_link – Link a key to a keyring keyctl_unlink – Unlink a key from a keyring"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_link(key_serial_t key, key_serial_t keyring);
 long keyctl_unlink(key_serial_t key, key_serial_t keyring);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_link</code>() creates a link from <i>keyring</i> to <i>key</i>, displacing any link to another key of the same type and description in that keyring if one exists. </p>
 <p> <code>keyctl_unlink</code>() removes the link from <i>keyring</i> to <i>key</i> if it exists. </p>
 <p> The caller must have <code>write</code> permission on a keyring to be able create or remove links in it. </p>

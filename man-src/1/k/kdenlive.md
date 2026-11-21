@@ -1,4 +1,5 @@
 ---
+
 title: "kdenlive(1)"
 name: "kdenlive"
 section: "1"
@@ -9,9 +10,7 @@ description: "kdenlive – An open source non-linear video editor."
 
 <h2>NAME</h2>
 <p> kdenlive &#8211; An open source non-linear video editor.</p>
-<h2>SYNOPSIS</h2>
 <p> kdenlive [Qt-options] [KDE-options] [options] [file]</p>
-<h2>DESCRIPTION</h2>
 <p> Kdenlive is an open source non-linear video editor which supports a large number of formats for editing, including DV, AVCHD (experimental support) and HDV. Kdenlive relies on several other open source projects, such as FFmpeg and MLT video framework.</p>
 <h2>OPTIONS</h2>
 <h3>

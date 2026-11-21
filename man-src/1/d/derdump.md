@@ -1,4 +1,5 @@
 ---
+
 title: "derdump(1)"
 name: "derdump"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-derdump/"
 description: "derdump_ – Dumps C-sequence strings from a DER encoded certificate file"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>derdump</code> [<code>-r</code>] [<code>-i&nbsp;<wbr></code><i>input-file</i>] [<code>-o&nbsp;<wbr></code><i>output-file</i>]</dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
-<h2>DESCRIPTION</h2>
 <p> <code>derdump </code>dumps C-sequence strings from a DER encode certificate file</p>
 <h2>OPTIONS</h2>
 <p> <code>-r </code></p>

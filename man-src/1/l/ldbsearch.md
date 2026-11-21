@@ -1,4 +1,5 @@
 ---
+
 title: "ldbsearch(1)"
 name: "ldbsearch"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-ldbsearch/"
 description: "ldbsearch – Search for records in a LDB database"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbsearch</code> [-h] [-s base|one|sub] [-b basedn] [-i] [-H LDB-URL] [expression] [attributes]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>ldbsearch searches a LDB database for records matching the specified expression (see the <a href="/docs/linux/man/1-ldapsearch/">ldapsearch</a>(1) manpage for a description of the expression format). For each record, the specified attributes are printed.</dd>
 <h2>OPTIONS</h2>
 <p> -h</p>

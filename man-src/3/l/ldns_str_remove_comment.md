@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_str_remove_comment(3)"
 name: "ldns_str_remove_comment"
 section: "3"
@@ -9,12 +10,10 @@ description: "ldns_str_remove_comment"
 
 <h2>NAME</h2>
 <p> ldns_str_remove_comment </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_str_remove_comment(); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_str_remove_comment</i>()</dt></dl>
 <h2>AUTHOR</h2>

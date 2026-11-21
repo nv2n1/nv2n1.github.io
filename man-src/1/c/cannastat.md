@@ -1,4 +1,5 @@
 ---
+
 title: "cannastat(1)"
 name: "cannastat"
 section: "1"
@@ -9,9 +10,7 @@ description: "cannastat – Display information about the Kana-Kanji conversion 
 
 <h2>NAME</h2>
 <p> cannastat &#8211; Display information about the Kana-Kanji conversion server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cannastat [{-cs|-cannaserver} </code><i>canna-server</i>] [-p] [-t] [-a]</p>
-<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/1-cannastat/">cannastat</a>(1)</i> displays information about the Kana-Kanji conversion server <i>cannaserver(1M)</i>. The information includes the following: the name of the machine on which the connected server exists, the <i>cannaserver(1M)</i>&#8216;s version, the number of clients connecting to the server, the name of the user connecting to the server, its user number, the socket number, the number of contexts, the time of connection to the server, the time of use of the server, the idle time, the name of the host under which the client exists, and the frequency of using each protocol. </p>
 <p> If <i><a href="/docs/linux/man/1-cannastat/">cannastat</a>(1)</i> is called without options, the following is displayed: </p>
 <pre>

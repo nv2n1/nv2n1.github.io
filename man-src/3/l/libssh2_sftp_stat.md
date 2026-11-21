@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_stat(3)"
 name: "libssh2_sftp_stat"
 section: "3"
@@ -9,10 +10,8 @@ description: "libssh2_sftp_stat – convenience macro for libssh2_sftp_fstat_ex(
 
 <h2>NAME</h2>
 <p> libssh2_sftp_stat &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_sftp_fstat_ex/">libssh2_sftp_fstat_ex</a>(3)</i> calls</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_sftp_stat(LIBSSH2_SFTP *sftp, const char *path, LIBSSH2_STFP_ATTRIBUTES *attrs); </p>
-<h2>DESCRIPTION</h2>
 <p> This is a macro defined in a public libssh2 header file that is using the underlying function <i><a href="/docs/linux/man/3-libssh2_sftp_fstat_ex/">libssh2_sftp_fstat_ex</a>(3)</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> See <i><a href="/docs/linux/man/3-libssh2_sftp_fstat_ex/">libssh2_sftp_fstat_ex</a>(3)</i></p>

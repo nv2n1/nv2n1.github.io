@@ -1,4 +1,5 @@
 ---
+
 title: "npm-doctor(1)"
 name: "npm-doctor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-doctor/"
 description: "npm-doctor – Check your environments"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-doctor</code> &#8211; Check your environments </p>
 <h3>Synopsis</h3>
 <dl>

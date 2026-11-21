@@ -1,4 +1,5 @@
 ---
+
 title: "glite-lb-logevent(1)"
 name: "glite-lb-logevent"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-glite-lb-logevent/"
 description: "glite-lb-logevent – program for logging events to L&B subsystem"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-logevent</code> <code>-s Application -e UserTag</code> <code>-j</code> <i>JOBID </i> <code>-c</code> <i>SEQCODE </i> <code>&#8211;name </code> <i>NAME</i> <code>&#8211;value</code> <i>VALUE</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-logevent </code> is a low-level program for logging events to the L&amp;B service. It is used internally by WMS components and has many more options, that are not recomend to be used at the user level. At the user level it is supposed to be used only for logging user tag events. </p>
 <h2>USAGE</h2>
 <p> Besides <i>NAME</i> and <i>VALUE</i> of the tag, which are user defined, the user has to specify a valid <i>JOBID</i>, and <i>SEQCODE</i> (L&amp;B event sequence code). </p>

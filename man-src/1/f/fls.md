@@ -1,4 +1,5 @@
 ---
+
 title: "fls(1)"
 name: "fls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fls/"
 description: "fls – List file and directory names in a disk image."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fls [-adDFlpruvV] [-m</code> <i>mnt</i> <code>] [-z</code> <i>zone</i> <code>] [-f</code> <i>fstype</i> <code>] [-s</code> <i>seconds</i> <code>] [-i </code> <i>imgtype</i> <code>] [-o </code> <i>imgoffset</i> <code>] [-b dev_sector_size] </code> <i>image [images] </i> <code>[</code> <i>inode</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>fls</code> lists the files and directory names in the <i>image</i> and can display file names of recently deleted files for the directory using the given <i>inode.</i> If the inode argument is not given, the inode value for the root directory is used. For example, on an NTFS file system it would be 5 and on a Ext3 file system it would be 2. </p>
 <p> The arguments are as follows:</p>
 <dl>

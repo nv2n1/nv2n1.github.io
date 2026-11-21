@@ -1,4 +1,5 @@
 ---
+
 title: "linearinterpolation(3)"
 name: "linearinterpolation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-linearinterpolation/"
 description: "ql/math/interpolations/linearinterpolation.hpp – linear interpolation between discrete points"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>

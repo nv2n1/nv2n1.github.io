@@ -1,4 +1,5 @@
 ---
+
 title: "kf-slam(1)"
 name: "kf-slam"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-kf-slam/"
 description: "kf-slam – SLAM method using Kalman filtering"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> kf-slam <i>config_file.ini</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>kf-slam</code> is a command-line application which processes a rawlog and create a map of landmarks using a 6D <font SIZE="-1">SLAM</font> algorithm.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

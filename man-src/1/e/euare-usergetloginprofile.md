@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usergetloginprofile(1)"
 name: "euare-usergetloginprofile"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-usergetloginprofile – Verify that a user has a password"
 
 <h2>NAME</h2>
 <p> euare-usergetloginprofile &#8211; Verify that a user has a password</p>
-<h2>SYNOPSIS</h2>
 <p> euare-usergetloginprofile [&#8211;verbose] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Verify that a user has a password</p>
 <h3>positional arguments:</h3>
 <dl>

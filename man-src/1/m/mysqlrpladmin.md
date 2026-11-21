@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlrpladmin(1)"
 name: "mysqlrpladmin"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlrpladmin/"
 description: "mysqlrpladmin – Administration utility for MySQL replication"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlrpladmin [</code><i>options</i><code>]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility permits users to perform administrative actions on a replication topology consisting of a master and its slaves. The utility is designed to make it easy to recover from planned maintenance of the master or from an event that takes the master offline unexpectedly. </dd>
 <p> The act of taking the master offline intentionally and switching control to another slave is called switchover. In this case, there is no loss of transactions as the master is locked and all slaves are allowed to catch up to the master. Once the slaves have read all events from the master, the master is shutdown and control switched to a slave (in this case called a candidate slave). </p>
 <p> Recovering from the loss of a downed master is more traumatic and since there is no way to know what transactions the master may have failed to send, the new master (called a candidate slave) must be the slave that is most up-to-date. How this is determined depends on the version of the server (see below). However, it can result in the loss of some transactions that were executed on the downed master but not sent. The utility accepts a list of slaves to be considered the candidate slave. If no slave is found to meet the requirements, the operation will search the list of known slaves. </p>

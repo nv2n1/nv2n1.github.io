@@ -1,4 +1,5 @@
 ---
+
 title: "ansible-galaxy(1)"
 name: "ansible-galaxy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ansible-galaxy/"
 description: "ansible-galaxy – manage roles using galaxy.ansible.com"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ansible-galaxy [delete|import|info|init|install|list|login|remove|search|setup] [&#8211;help] [options] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ansible Galaxy</code> is a shared repository for Ansible roles. The ansible-galaxy command can be used to manage these roles, or for creating a skeleton framework for roles you&#8217;d like to upload to Galaxy.</p>
 <h2>COMMON OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlbeos(1)"
 name: "perlbeos"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlbeos/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlbeos - Perl version 5.8+ on BeOS 
 
- perlbeos - Perl version 5.8+ on BeOS 
-
-<h2>DESCRIPTION</h2>
-
- This file contains instructions how to build Perl under BeOS and lists known problems.
+This file contains instructions how to build Perl under BeOS and lists known problems.
 
 <h2>BUILD AND INSTALL</h2>
 

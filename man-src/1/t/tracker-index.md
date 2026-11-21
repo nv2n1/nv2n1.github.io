@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-index(1)"
 name: "tracker-index"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tracker-index/"
 description: "tracker-index – List, pause, resume and command data miners indexing content"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 tracker index-- reindex - mime - type&lt;mime1&gt;[[-m[mime2]]...] tracker index-- file&lt;file1&gt; [[file2]...] tracker index-- import &lt;file1&gt; [[file2]...] tracker index-- backup&lt;file&gt; | --restore&lt;file&gt;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This command perform actions on the current index. The &quot;index&quot; holds a snapshot of the working tree in a database. </p>
 <p> The index command allows some level of control on existing data indexed, such as re-indexing content from a specific demographic &#8211; e.g. all JPEG images, or simply reindexing an existing or non-existent file. </p>
 <p> It may be a good idea to backup your index before an upgrade in case there is data loss (which should never happen). In those cases, the backup command is made available and of course the restore command will import an older data set (or index) into an empty index. </p>

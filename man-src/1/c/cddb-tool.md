@@ -1,4 +1,5 @@
 ---
+
 title: "cddb-tool(1)"
 name: "cddb-tool"
 section: "1"
@@ -9,14 +10,12 @@ description: "cddb-tool – Get CDDB information"
 
 <h2>NAME</h2>
 <p> cddb-tool &#8211; Get CDDB information</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cddb-tool parse </code> <i>file [-i|-d|-a|-t] [num|-c|-p]</i> </p>
 <p> <code>cddb-tool template disc-id tracks</code> </p>
 <p> <code>cddb-tool send</code> <i>[file] address</i> </p>
 <p> <code>cddb-tool query</code> <i>server user host disc-id tracks</i> </p>
 <p> <code>cddb-tool read</code> <i>server user host disc-id genre</i> </p>
 <p> <code>cddb-tool help</code> </p>
-<h2>DESCRIPTION</h2>
 <p> cddb-tool is a backend tool for abcde. It is passed information from cd-discid and uses it look up the CD title, artist, and track information on the cddb database (<a rel="nofollow" href="http://freedb.freedb.org)">http://freedb.freedb.org)</a> on the internet.</p>
 <h2>COMMANDS</h2>
 <p> <code>parse</code> <i>[file] option</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "anxinfo(1)"
 name: "anxinfo"
 section: "1"
@@ -10,7 +11,6 @@ description: "anxinfo — Display information about annodexed media"
 <h2>NAME</h2>
 <p> anxinfo &#8212; Display information about annodexed media<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>anxinfo</code> [-v | &#8211;verbose ] [-h | &#8211;help ] filename &#8230;</p>
 <h2>Description</h2>
 <p> <code>anxinfo</code> displays information about annodexed media. The default behavior is to list the <code>id</code>, <code>serial number</code>, <code>granule rate</code> and number of <code>extra headers</code> for each track in <code>filename</code>. If the <code>&#8211;verbose</code> option is given, additional information including the <code>timebase</code> and <code>duration</code> of the file is displayed.</p>

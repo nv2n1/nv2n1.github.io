@@ -1,4 +1,5 @@
 ---
+
 title: "totem(1)"
 name: "totem"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-totem/"
 description: "Totem – GNOME desktop movie player based on GStreamer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>totem</code> [<i>option&#8230;</i>]<i> </i>[<i>filenames</i>|<i>URI</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Totem</code> is a movie player for the GNOME desktop. Through use of the <code>GStreamer</code> backend many popular file and streaming formats are supported including: MPEG audio and video (MP3/MPV), Ogg, AVI, ASF, MOV, WMV, QuickTime, and more. Playing of DVD and VCD media is also possible. Although primarily intended as a movie player, <code>Totem</code> can also play many audio formats. </p>
 <p> For additional documentation on interactive use of <code>Totem</code> select the <i>Help</i> menu option. The menus allow access to some features not available through keybindings or command-line options.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "alsabat(1)"
 name: "alsabat"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-alsabat/"
 description: "alsabat – command-line sound tester for ALSA sound card driver"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>alsabat</code> [<i>flags</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>ALSABAT(ALSA Basic Audio Tester)</code> is a simple command-line utility intended to help automate audio driver and sound server testing with little human interaction. ALSABAT can be used to test audio quality, stress test features and test audio before and after PM state changes. </p>
 <p> ALSABAT&#8217;s design is relatively simple. ALSABAT plays an audio stream and captures the same stream in either a digital or analog loop back. It then compares the captured stream using a FFT to the original to determine if the test case passes or fails. </p>
 <p> ALSABAT can either run wholly on the target machine being tested (standalone mode) or can run as a client/server mode where by alsabat client runs on the target and runs as a server on a separate tester machine. The client/server mode still requires some manual interaction for synchronization, but this is actively being developed for future releases. </p>

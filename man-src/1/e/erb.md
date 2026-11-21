@@ -1,4 +1,5 @@
 ---
+
 title: "erb(1)"
 name: "erb"
 section: "1"
@@ -8,11 +9,8 @@ description: "erb – Ruby Templating"
 ---
 
 <p>UNIX</p>
-<h2 class="name">NAME</h2>
 <p> <code>erb</code> &#8211; Ruby Templating </p>
-<h2>SYNOPSIS</h2>
 <p> <code>erb</code> [-<code>-version</code> ] [-<code>UPdnvx</code> ] [-<code>E </code><i>ext </i>[<code>: int</code> ] ] [-<code>S </code><i>level</i> ] [-<code>T </code><i>mode</i> ] [-<code>r </code><i>library</i> ] [- ] [file &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>erb</code> is a command line front-end for <code>ERB</code> library, which is an implementation of eRuby. </p>
 <p> ERB provides an easy to use but powerful templating system for Ruby. Using ERB, actual Ruby code can be added to any plain text document for the purposes of generating document information details and/or flow control. </p>
 <p> <code>erb</code> is a part of <code>Ruby</code> </p>

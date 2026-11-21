@@ -1,4 +1,5 @@
 ---
+
 title: "fluxstyle(1)"
 name: "fluxstyle"
 section: "1"
@@ -8,9 +9,7 @@ description: "fluxstyle – A comprehensive look at styles/themes for"
 ---
 
 <p><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1).</p>
-<h2>SYNOPSIS</h2>
 <p> This document describes various options available for fluxbox styles. </p>
-<h2>DESCRIPTION</h2>
 <p> What is a Style? </p>
 <p> Styles, sometimes referred to as Themes, are a graphical overlay for the <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) window manager. If you wanted to get to know fluxbox, the styles would be the <i>look</i> of the <i>look and feel</i>. </p>
 <p> Styles are simple ASCII text files that tell <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) how to generate the appearance of different components of the window manager. The default installation of <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) is shipped with many classic examples that show a great deal of what one could do. To use one of the standard styles navigate to the <i>System Styles</i> menu under your main <a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) menu. </p>

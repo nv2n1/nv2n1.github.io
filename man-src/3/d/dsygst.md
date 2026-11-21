@@ -1,4 +1,5 @@
 ---
+
 title: "dsygst(3)"
 name: "dsygst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsygst/"
 description: "dsygst.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsygst</code> (ITYPE, UPLO, N, A, LDA, B, LDB, INFO)<br />
  <i></i><code>DSYGST</code></p>

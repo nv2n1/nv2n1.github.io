@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_retrieve_function2(3)"
 name: "gnutls_certificate_set_retrieve_function2"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_retrieve_function2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_retrieve_function2 &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_set_retrieve_function2(gnutls_certificate_credentials_t </code><i>cred</i><code>, gnutls_certificate_retrieve_function2 * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_certificate_set_retrieve_function2 – API function"
 <dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
 <dt>gnutls_certificate_retrieve_function2 * func</dt>
 <dd> is the callback function</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function sets a callback to be called in order to retrieve the certificate to be used in the handshake. </p>
 <p> The callback&#8217;s function prototype is: int (*callback)(gnutls_session_t, const gnutls_datum_t* req_ca_dn, int nreqs, const gnutls_pk_algorithm_t* pk_algos, int pk_algos_length, gnutls_pcert_st** pcert, unsigned int *pcert_length, gnutls_privkey_t * pkey); </p>
 <p>&nbsp;<wbr><i>req_ca_dn</i>&nbsp;<wbr>is only used in X.509 certificates. Contains a list with the CA names that the server considers trusted. Normally we should send a certificate that is signed by one of these CAs. These names are DER encoded. To get a more meaningful value use the function <code>gnutls_x509_rdn_get()</code>. </p>

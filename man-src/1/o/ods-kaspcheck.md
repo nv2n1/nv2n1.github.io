@@ -1,4 +1,5 @@
 ---
+
 title: "ods-kaspcheck(1)"
 name: "ods-kaspcheck"
 section: "1"
@@ -9,9 +10,7 @@ description: "ods-kaspcheck – Performs a sanity check of the policy for OpenDN
 
 <h2>NAME</h2>
 <p> <code>ods-kaspcheck</code> &#8211; Performs a sanity check of the policy for OpenDNSSEC</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ods-kaspcheck</code> [<code>-c</code> <i>path</i> <code>-k</code> <i>path</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The OpenDNSSEC XML configuration files (conf.xml and kasp.xml) offer the user many options to configure the OpenDNSSEC signing system. Some syntactic constraints are placed on the configuration by the .rng definition (for example, whether an element is required or optional), but some semantic constraints cannot be defined this way (for example, if NSEC3 is used to secure the zone, then a consistent DNSKEY algorithm choice should be made). </p>
 <p> ods-kaspcheck is provided to check that the configuration files (conf.xml and kasp.xml) are semantically sane and contain no inconsistencies. It is advisable to use this tool to check your configuration before starting to use OpenDNSSEC.</p>
 <h2>OPTIONS</h2>

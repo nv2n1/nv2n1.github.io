@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_x509_trust_file(3)"
 name: "gnutls_certificate_set_x509_trust_file"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_set_x509_trust_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_trust_file &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_trust_file(gnutls_certificate_credentials_t </code><i>cred</i><code>, const char * </code><i>cafile</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_certificate_set_x509_trust_file – API function"
 <dd> is a file containing the list of trusted CAs (DER or PEM list)</dd>
 <dt>gnutls_x509_crt_fmt_t type</dt>
 <dd> is PEM or DER</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function adds the trusted CAs in order to verify client or server certificates. In case of a client this is not required to be called if the certificates are not verified using <code>gnutls_certificate_verify_peers2()</code>. This function may be called multiple times. </p>
 <p> In case of a server the names of the CAs set here will be sent to the client if a certificate request is sent. This can be disabled using <code>gnutls_certificate_send_x509_rdn_sequence()</code>. </p>
 <p> This function can also accept URLs. In that case it will import all certificates that are marked as trusted. Note that the supported URLs are the ones indicated by <code>gnutls_url_is_supported()</code>.</p>

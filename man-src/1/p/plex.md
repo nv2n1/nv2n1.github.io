@@ -1,4 +1,5 @@
 ---
+
 title: "plex(1)"
 name: "plex"
 section: "1"
@@ -31,11 +32,7 @@ url: "/docs/linux/man/1-plex/"
 </dt><dd> <i>Optimize:</i> Lex optimizes DFA tables to produce a minimal DFA. 
 </dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- TP Lex is a program generator that is used to generate the Turbo Pascal source code for a lexical analyzer subroutine from the specification of an input language by a regular expression grammar. 
+TP Lex is a program generator that is used to generate the Turbo Pascal source code for a lexical analyzer subroutine from the specification of an input language by a regular expression grammar. 
 
  TP Lex parses the source grammar contained in lex-file (with default suffix output-file (with default suffix .pas); if no output file is specified, output goes to lex-file with new suffix .pas. If any errors are found during compilation, error messages are written to the list file (lex-file with new suffix .lst). 
 

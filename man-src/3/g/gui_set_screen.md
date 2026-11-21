@@ -1,4 +1,5 @@
 ---
+
 title: "gui_set_screen(3)"
 name: "gui_set_screen"
 section: "3"
@@ -9,10 +10,8 @@ description: "gui_set_screen – Changes the bitmap surface GUI routines draw to
 
 <h2>NAME</h2>
 <p> gui_set_screen &#8211; Changes the bitmap surface GUI routines draw to. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void gui_set_screen(BITMAP *bmp);</code></p>
-<h2>DESCRIPTION</h2>
 <p> This function can be used to change the bitmap surface the GUI routines draw to. This can be useful if you are using a double buffering or page flipping system. Passing NULL will cause the default surface (screen) to be used again. Example: </p>
 <pre><code>
 BITMAP *page[2];

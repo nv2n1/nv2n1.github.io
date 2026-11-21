@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-substr(3)"
 name: "antlr3-substr"
 section: "3"
@@ -8,7 +9,6 @@ description: "ANTLR3_INPUT_STREAM_struct –"
 ---
 
 <p> Master context structure for an ANTLR3 C runtime based input stream.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void *(* <code>_LT</code> )(struct <code>ANTLR3_INPUT_STREAM_struct</code> *input, <code>ANTLR3_INT32</code> lt)<br />

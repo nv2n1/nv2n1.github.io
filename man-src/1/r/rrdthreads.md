@@ -1,4 +1,5 @@
 ---
+
 title: "rrdthreads(1)"
 name: "rrdthreads"
 section: "1"
@@ -6,20 +7,13 @@ letter: "r"
 url: "/docs/linux/man/1-rrdthreads/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+rrdthreads - Provisions for linking the RRD library to use in multi-threaded programs 
 
- rrdthreads - Provisions for linking the RRD library to use in multi-threaded programs 
-
-<h2>SYNOPSIS</h2>
-
- Using librrd in multi-threaded programs requires some extra precautions, as the <font SIZE="-1">RRD</font> library in its original form was not thread-safe at all. This document describes requirements and pitfalls on the way to use the multi-threaded version of librrd in your own programs. It also gives hints for future <font SIZE="-1">RRD</font> development to keep the library thread-safe. 
+Using librrd in multi-threaded programs requires some extra precautions, as the <font SIZE="-1">RRD</font> library in its original form was not thread-safe at all. This document describes requirements and pitfalls on the way to use the multi-threaded version of librrd in your own programs. It also gives hints for future <font SIZE="-1">RRD</font> development to keep the library thread-safe. 
 
  Currently only some <font SIZE="-1">RRD</font> operations are implemented in a thread-safe way. They all end in the usual &quot;<tt>&quot;_r&quot;</tt>&quot; suffix.
 
-<h2>DESCRIPTION</h2>
-
- In order to use librrd in multi-threaded programs you must:
+In order to use librrd in multi-threaded programs you must:
 <dl>
 <dt>&bull;
 </dt><dd> Link with <i>librrd_th</i> instead of <i>librrd</i> (use <tt>&quot;-lrrd_th&quot;</tt> when linking)

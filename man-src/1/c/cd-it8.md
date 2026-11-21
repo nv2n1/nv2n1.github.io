@@ -1,4 +1,5 @@
 ---
+
 title: "cd-it8(1)"
 name: "cd-it8"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cd-it8/"
 description: "cd-it8 – Color Manager Testing Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cd-it8</code> [<code>&#8211;verbose</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>cd-it8</code> command. </dd>
 <p> <code>cd-it8</code> allows an administrator to modify IT8 files, such as .sp, .ti1, .ti3, .ccmx in various ways.</p>
 <h2>OPTIONS</h2>

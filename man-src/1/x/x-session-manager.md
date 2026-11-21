@@ -1,4 +1,5 @@
 ---
+
 title: "x-session-manager(1)"
 name: "x-session-manager"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-x-session-manager/"
 description: "gnome-session – Start the GNOME desktop environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-session [-a|&#8211;autostart=DIR] [&#8211;session=SESSION] [&#8211;failsafe|-f] [&#8211;debug] [&#8211;whale]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>gnome-session</i> program starts up the GNOME desktop environment. This command is typically executed by your login manager (either gdm, xdm, or from your X startup scripts). It will load either your saved session, or it will provide a default session for the user as defined by the system administrator (or the default GNOME installation on your system). Note that <i>gnome-session</i> is a wrapper script for <i>gnome-session-binary</i>. </p>
 <p> The default session is defined in <code>gnome.session</code>, a .desktop-like file that is looked for in <code>$XDG_CONFIG_HOME/gnome-session/sessions</code>, <code>$XDG_CONFIG_DIRS/gnome-session/sessions</code> and <code>$XDG_DATA_DIRS/gnome-session/sessions</code>. </p>
 <p> When saving a session, <i>gnome-session</i> saves the currently running applications in the <code>$XDG_CONFIG_HOME/gnome-session/saved-session</code> directory. Saving sessions is only supported with the legacy non-systemd startup method. </p>

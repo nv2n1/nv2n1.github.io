@@ -1,4 +1,5 @@
 ---
+
 title: "chattr(1)"
 name: "chattr"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-chattr/"
 description: "chattr – change file attributes on a Linux file system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>chattr</code> [ <code>-RVf</code> ] [ <code>-v</code> <i>version</i> ] [ <code>-p</code> <i>project</i> ] [ <i>mode</i> ] <i>files&#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>chattr</code> changes the file attributes on a Linux file system. </p>
 <p> The format of a symbolic mode is +-=[aAcCdDeFijmPsStTux]. </p>
 <p> The operator &#8216;+&#8217; causes the selected attributes to be added to the existing attributes of the files; &#8216;-&#8216; causes them to be removed; and &#8216;=&#8217; causes them to be the only attributes that the files have. </p>

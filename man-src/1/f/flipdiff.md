@@ -1,4 +1,5 @@
 ---
+
 title: "flipdiff(1)"
 name: "flipdiff"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-flipdiff/"
 description: "flipdiff – exchange the order of two incremental patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flipdiff</code> [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [[-U&nbsp;<i>n</i>] | [&#8211;unified=<i>n</i>]] [[-d&nbsp;<i>PAT</i>] | [&#8211;drop-context=<i>PAT</i>]] [[-q] | [&#8211;quiet]] [[-z] | [&#8211;decompress]] [[-b] | [&#8211;ignore-space-change]] [[-B] | [&#8211;ignore-blank-lines]] [[-i] | [&#8211;ignore-case]] [[-w] | [&#8211;ignore-all-space]] [&#8211;in-place] <i>diff1</i> <i>diff2</i></dt>
 <dt> <code>flipdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>flipdiff</code></p>
 <dd>exchanges the order of two patch files that apply one after the other. The patches must be &#8220;clean&#8221;: the context lines must match and there should be no mis-matched offsets. </dd>
 <p> The swapped patches are sent to standard output, with a marker line (&#8220;===&nbsp;8&lt;&nbsp;===&nbsp;cut here&nbsp;===&nbsp;8&lt;&nbsp;===&#8221;) between them, unless the <code>&#8211;in-place</code> option is passed. In that case, the output is written back to the original input files.</p>

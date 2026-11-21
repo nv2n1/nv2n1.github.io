@@ -1,4 +1,5 @@
 ---
+
 title: "ripright(1)"
 name: "ripright"
 section: "1"
@@ -9,9 +10,7 @@ description: "ripright – CD ripper"
 
 <h2>NAME</h2>
 <p> ripright &#8211; CD ripper</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ripright [-d] [-a] [-r] [-s] [-w] [-c </code><i>device</i>] [-o <i>format</i>] [<i>outpath</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> RigRight is a minimal CD ripper with few options. It can run as a daemon and will automatically start ripping any CD found in the drive after which the disc will be ejected. Ripping is always to FLAC lossless audio format with tags taken from the MusicBrainz lookup service and cover art from Amazon where possible. If a disc is unknown to MusicBrainz, the CD will be ejected without ripping. </p>
 <p> In case a disc is unknown, MusicBrainz Picard can be used to send the CD ToC to the MusicBrainz database. The MusicBrainz website can then be used to find or add details of a CD, after which the CD can be ripped using RipRight. </p>
 <h2>OPTIONS</h2>

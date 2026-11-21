@@ -1,4 +1,5 @@
 ---
+
 title: "postlog(1)"
 name: "postlog"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-postlog/"
 description: "postlog – Postfix-compatible logging utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>postlog</code> [<code>-iv</code>] [<code>-c </code><i>config_dir</i>] [<code>-p </code><i>priority</i>] [<code>-t </code><i>tag</i>] [<i>text&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postlog/">postlog</a></code>(1) command implements a Postfix-compatible logging interface for use in, for example, shell scripts. </p>
 <p> By default, <code><a href="/docs/linux/man/1-postlog/">postlog</a></code>(1) logs the <i>text</i> given on the command line as one record. If no <i>text</i> is specified on the command line, <code><a href="/docs/linux/man/1-postlog/">postlog</a></code>(1) reads from standard input and logs each input line as one record. </p>
 <p> By default, logging is sent to <code>syslogd</code>(8) or <code>postlogd</code>(8); when the standard error stream is connected to a terminal, logging is sent there as well. </p>

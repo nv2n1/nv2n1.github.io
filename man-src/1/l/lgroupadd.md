@@ -1,4 +1,5 @@
 ---
+
 title: "lgroupadd(1)"
 name: "lgroupadd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-lgroupadd/"
 description: "lgroupadd – Add an user group"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> lgroupadd [<i>OPTION</i>]&#8230; <i>group</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Adds a new user group with name <i>group</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

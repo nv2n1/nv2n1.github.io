@@ -1,4 +1,5 @@
 ---
+
 title: "ucs2any(1)"
 name: "ucs2any"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ucs2any/"
 description: "ucs2any – generate BDF fonts containing subsets of ISO 10646-1 codepoints"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ucs2any</code> [ <code>+d</code> | <code>-d</code> ] <i>source-name</i> { <i>mapping-file</i> <i>registry-encoding</i> } &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ucs2any</code> allows one to generate from an ISO 10646-1 encoded BDF font other BDF fonts in any possible encoding. This way, one can derive from a single ISO 10646-1 master font a whole set of 8-bit fonts in all ISO 8859 and various other encodings.</p>
 <h2>OPTIONS</h2>
 <dl>

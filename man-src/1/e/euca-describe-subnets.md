@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-subnets(1)"
 name: "euca-describe-subnets"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-describe-subnets – Show information about one or more VPC s
 
 <h2>NAME</h2>
 <p> euca-describe-subnets &#8211; Show information about one or more VPC subnets</p>
-<h2>SYNOPSIS</h2>
 <p> euca-describe-subnets [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [SUBNET [SUBNET &#8230;]]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about one or more VPC subnets</p>
 <h3>positional arguments:</h3>
 <dl>

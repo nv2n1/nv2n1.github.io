@@ -1,4 +1,5 @@
 ---
+
 title: "rahosts(1)"
 name: "rahosts"
 section: "1"
@@ -11,9 +12,7 @@ description: "rahosts – report network addresses in argus(8) data."
 <p> <code>rahosts</code> &#8211; report network addresses in <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2003 QoSient. All rights reserved.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rahosts</code> [ra-options] <code>-M modes</code> [ <i>expression</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Rahosts</code> reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from an <i>argus data</i> source, and outputs a list of sorted network addresses. Based on user supplied criteria, <code>rahosts</code> can generate lists of IP addresses and/or MAC addresses, if available. With IP addresses, <code>rahosts</code> can track the full network and host address, or any network address, based on the <i>mode</i> indicated. </p>
 <p> Like all ra based clients, <code>rahosts </code> supports a large number of options, configuration through .rarc files, and input filtering using the terminating filter <i>expression</i>. </p>
 <p> See the <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> man page for details on <i>ra-options</i> and <i>expression</i> syntax. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "inotify_init1(2)"
 name: "inotify_init1"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-inotify_init1/"
 description: "inotify_init, inotify_init1 – initialize an inotify instance"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/inotify.h&gt;
 int inotify_init(void);
 int inotify_init1(int flags);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> For an overview of the inotify API, see <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7). </p>
 <p> <code>inotify_init</code>() initializes a new inotify instance and returns a file descriptor associated with a new inotify event queue. </p>
 <p> If <i>flags</i> is 0, then <code>inotify_init1</code>() is the same as <code>inotify_init</code>(). The following values can be bitwise ORed in <i>flags</i> to obtain different behavior:</p>

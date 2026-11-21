@@ -1,4 +1,5 @@
 ---
+
 title: "rmic(1)"
 name: "rmic"
 section: "1"
@@ -9,7 +10,6 @@ description: "rmic – Generates stub, skeleton, and tie classes for remote obje
 
 <h2>NAME</h2>
 <p> rmic &#8211; Generates stub, skeleton, and tie classes for remote objects that use the Java Remote Method Protocol (JRMP) or Internet Inter-Orb protocol (IIOP). Also generates Object Management Group (OMG) Interface Definition Language (IDL)</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>rmic</code> [ <i>options</i> ] <i>package-qualified-class-names</i>
 </pre>
@@ -18,7 +18,6 @@ description: "rmic – Generates stub, skeleton, and tie classes for remote obje
 <dd> The command-line <code>options</code>. See Options.</dd>
 <dt><i>package-qualified-class-names</i></dt>
 <dd> Class names that include their packages, for example, <code>java.awt.Color</code>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>Deprecation Note:</i> Support for static generation of Java Remote Method Protocol (JRMP) stubs and skeletons has been deprecated. Oracle recommends that you use dynamically generated JRMP stubs instead, eliminating the need to use this tool for JRMP-based applications. See the <code>java.rmi.server.UnicastRemoteObject</code> specification at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/java/rmi/server/UnicastRemoteObject.html">http://docs.oracle.com/javase/8/docs/api/java/rmi/server/UnicastRemoteObject.html</a> for further information. </p>
 <p> The <code>rmic</code> compiler generates stub and skeleton class files using the Java Remote Method Protocol (JRMP) and stub and tie class files (IIOP protocol) for remote objects. These class files are generated from compiled Java programming language classes that are remote object implementation classes. A remote implementation class is a class that implements the interface <code>java.rmi.Remote</code>. The class names in the <code>rmic</code> command must be for classes that were compiled successfully with the <code>javac</code> command and must be fully package qualified. For example, running the <code>rmic</code> command on the class file name <code>HelloImpl</code> as shown here creates the <code>HelloImpl_Stub.class</code>file in the hello subdirectory (named for the class&#8217;s package): </p>
 <pre>

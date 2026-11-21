@@ -1,4 +1,5 @@
 ---
+
 title: "git-show-tree(1)"
 name: "git-show-tree"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-show-tree – show branch tree of commit history"
 
 <h2>NAME</h2>
 <p> <code>git-show-tree</code> &#8211; show branch tree of commit history</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-show-tree</code></p>
-<h2>DESCRIPTION</h2>
 <p> Show the decorated graph view of one liner summarized commits from all branches.</p>
 <h2>EXAMPLES</h2>
 <p> Output the commit history log for all branches as tree view:</p>

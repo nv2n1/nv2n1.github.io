@@ -1,4 +1,5 @@
 ---
+
 title: "mulk(1)"
 name: "mulk"
 section: "1"
@@ -9,9 +10,7 @@ description: "mulk – Non-interactive multi-connection network downloader with 
 
 <h2>NAME</h2>
 <p> mulk &#8211; Non-interactive multi-connection network downloader with image filtering and Metalink support.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mulk [OPTION]&#8230; [URL]&#8230; </code></p>
-<h2>DESCRIPTION</h2>
 <p> Multi-connection command line tool for downloading Internet sites with image filtering and Metalink support. Similar to wget and cURL, but it manages up to 50 simultaneous and parallel links. Main features are: HTML code parsing, recursive fetching, Metalink retrieving, segmented download and image filtering by width and height. It is based on libcurl, libtidy and libxml2. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

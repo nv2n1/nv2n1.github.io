@@ -1,4 +1,5 @@
 ---
+
 title: "perlothrtut(1)"
 name: "perlothrtut"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlothrtut/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlothrtut - old tutorial on threads in Perl 
 
- perlothrtut - old tutorial on threads in Perl 
-
-<h2>DESCRIPTION</h2>
-
- <font SIZE="-1"><b>WARNING</b></font>: This tutorial describes the old-style thread model that was introduced in release 5.005. This model is deprecated, and has been removed for version 5.10. The interfaces described here were considered experimental, and are likely to be buggy. 
+<font SIZE="-1"><b>WARNING</b></font>: This tutorial describes the old-style thread model that was introduced in release 5.005. This model is deprecated, and has been removed for version 5.10. The interfaces described here were considered experimental, and are likely to be buggy. 
 
  For information about the new interpreter threads (``ithreads'') model, see the <i>perlthrtut</i> tutorial, and the threads and threads::shared modules. 
 

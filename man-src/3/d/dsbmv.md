@@ -1,4 +1,5 @@
 ---
+
 title: "dsbmv(3)"
 name: "dsbmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsbmv/"
 description: "dsbmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsbmv</code> (UPLO, N, K, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>DSBMV</code></p>

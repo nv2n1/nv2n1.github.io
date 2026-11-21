@@ -1,4 +1,5 @@
 ---
+
 title: "odmgr(1)"
 name: "odmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-odmgr/"
 description: "odmgr – administration utility for QDBM Odeum"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>odmgr create</code> <i>name</i><br />
  <code>odmgr put</code> [-uri <i>str</i>] [-title <i>str</i>] [-author <i>str</i>] [-date <i>str</i>] [-wmax <i>num</i>] [-keep] <i>name</i> [<i>file</i>]<br />
  <code>odmgr out</code> [-id] <i>name</i> <i>expr</i><br />
@@ -20,7 +20,6 @@ description: "odmgr – administration utility for QDBM Odeum"
  <code>odmgr remove</code> <i>name</i><br />
  <code>odmgr break</code> [-h|-k|-s] [<i>file</i>]<br />
  <code>odmgr version</code></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>odmgr</code> commands. </p>
 <p> <code>odmgr</code> is a utility for debugging Odeum and its applications. It features editing and checking of a database. It can be used for full-text search systems with shell scripts. This command is used in the above format. <i>name</i> specifies a database name. <i>file</i> specifies a file name, <i>expr</i> specifies the URI or the ID number of a document, <i>words</i> specifies searching words. <i>elems</i> specifies element databases.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_instantiate(3)"
 name: "keyctl_instantiate"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-keyctl_instantiate/"
 description: "keyctl_assume_authority – Assume the authority to instantiate a key keyctl_instantiate – Instantiate a key from flat data keyctl_instantiate_iov – Instantiate a key from segmented data keyctl_rejec..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_assume_authority &#8211; Assume the authority to instantiate a key<br />
  keyctl_instantiate &#8211; Instantiate a key from flat data<br />
  keyctl_instantiate_iov &#8211; Instantiate a key from segmented data<br />
  keyctl_reject &#8211; Negatively instantiate a key specifying search error<br />
  keyctl_negate &#8211; Negatively instantiate a key </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_assume_authority(key_serial_t key);
@@ -27,7 +26,6 @@ long keyctl_negate(key_serial_t key, unsigned timeout,
 long keyctl_reject(key_serial_t key, unsigned timeout,
                    unsigned error, key_serial_t keyring);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>keyctl_assume_authority</code>() assumes the authority for the calling thread to deal with and instantiate the specified uninstantiated <i>key</i>. </p>
 <p> The calling thread must have the appopriate authorisation key resident in one of its keyrings for this to succeed, and that authority must not have been revoked. </p>
 <p> The authorising key is allocated by request_key() when it needs to invoke userspace to generate a key for the requesting process. This is then attached to one of the keyrings of the userspace process to which the task of instantiating the key is given:</p>

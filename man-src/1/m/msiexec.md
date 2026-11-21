@@ -1,4 +1,5 @@
 ---
+
 title: "msiexec(1)"
 name: "msiexec"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msiexec/"
 description: "msiexec – Wine MSI Installer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msiexec</code> <i>command</i> {<i>required parameter</i>} [<i>optional parameter</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>msiexec</code> is the Wine MSI installer, which is command line compatible with its Microsoft Windows counterpart.</p>
 <h2>INSTALL OPTIONS</h2>
 <dl>

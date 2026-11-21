@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-check-events(1)"
 name: "trace-cmd-check-events"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-check-events/"
 description: "trace-cmd-check-events – parse the event formats on local system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd check-events</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) check-events parses format strings for all the events on the local system. It returns whether all the format strings can be parsed correctly. It will load plugins unless specified otherwise. </p>
 <p> This is useful to check for any trace event format strings which may contain some internal kernel function references which cannot be decoded outside of the kernel. This may mean that either the unparsed format strings of the trace events need to be changed or that a plugin needs to be created to parse them.</p>
 <h2>OPTIONS</h2>

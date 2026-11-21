@@ -1,4 +1,5 @@
 ---
+
 title: "dar_split(1)"
 name: "dar_split"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-dar_split/"
 description: "dar_split – dar helper to split an archive over several tapes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> dar_split { split_input | split_output } &lt;filename&gt; </p>
 <p> dar_split -v </p>
 <p> dar_split -h</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dar_split</code> is to be used with dar to read or write a large archive from or to several tapes. </p>
 <h2>OPTIONS</h2>
 <p> <code>dar_split</code> has two modes of operation: split_input and split_output</p>

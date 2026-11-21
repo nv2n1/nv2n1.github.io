@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ring_dequeue_spsc(3)"
 name: "ck_ring_dequeue_spsc"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_ring_dequeue_spsc – dequeue pointer from bounded FIFO"
 <p> <code>ck_ring_dequeue_spsc</code> &#8211; dequeue pointer from bounded FIFO</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_ring.h Ft bool Fn ck_ring_dequeue_spsc ck_ring_t *ring ck_ring_buffer_t *buffer void *result</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_ring_dequeue_spsc 3 function dequeues a pointer from the bounded buffer pointed to by Fa ring in FIFO fashion. The pointer is stored in the pointer pointed to by Fa result . The buffer pointed to by Fa buffer must be unique to Fa ring and point to an array of ck_ring_buffer_t of sufficient length (according to the power-of-2 elements in the buffer). The decoupling of the ring from the buffer serves to address use-cases involving multiple address spaces and DMA, among others. If you are on non-POSIX platforms or wish for strict compliance with C, then it is recommended to pass a pointer of type void ** for Fa result . This function is safe to call without locking for one concurrent invocation of Fn ck_ring_dequeue_spsc 3 and up to one concurrent Fn ck_ring_enqueue_spsc 3 invocation. This function provides wait-free progress guarantees.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

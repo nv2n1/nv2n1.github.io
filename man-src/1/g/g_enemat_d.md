@@ -1,4 +1,5 @@
 ---
+
 title: "g_enemat_d(1)"
 name: "g_enemat_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_enemat – extracts an energy matrix from an energy file"
 <h2>NAME</h2>
 <p> g_enemat &#8211; extracts an energy matrix from an energy file </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_enemat</code> <code>-f</code><i> ener.edr </i> <code>-groups</code><i> groups.dat </i> <code>-eref</code><i> eref.dat </i> <code>-emat</code><i> emat.xpm </i> <code>-etot</code><i> energy.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]sum</code><i></i> <code>-skip</code><i> int </i> <code>-[no]mean</code><i></i> <code>-nlevels</code><i> int </i> <code>-max</code><i> real </i> <code>-min</code><i> real </i> <code>-[no]coul</code><i></i> <code>-[no]coulr</code><i></i> <code>-[no]coul14</code><i></i> <code>-[no]lj</code><i></i> <code>-[no]lj</code><i></i> <code>-[no]lj14</code><i></i> <code>-[no]bhamsr</code><i></i> <code>-[no]bhamlr</code><i></i> <code>-[no]free</code><i></i> <code>-temp</code><i> real </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_enemat extracts an energy matrix from the energy file (<code> -f</code>). With <code> -groups</code> a file must be supplied with on each line a group of atoms to be used. For these groups matrix of interaction energies will be extracted from the energy file by looking for energy groups with names corresponding to pairs of groups of atoms. E.g. if your <code> -groups</code> file contains: </p>
 <p> <code> 2</code> </p>
 <p> <code> Protein</code> </p>

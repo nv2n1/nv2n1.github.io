@@ -1,4 +1,5 @@
 ---
+
 title: "repotool(1)"
 name: "repotool"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-repotool/"
 description: "repotool – query or manipulate a CVS, Subversion, git, bzr, hg, or darcs repository in a uniform way"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repotool</code> [<i>action</i>] [<i>URL-or-dir</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>repotool is a script wrapper around repository operations that differ by version-control system. It is little use by itself, existing mainly to generate and simplify a conversion makefile usable with <code><a href="/docs/linux/man/1-reposurgeon/">reposurgeon</a></code>(1). </dd>
 <p> Not all actions are supported on all systems. You will get an error message and a return value of 1 when attempting an unsupported action. </p>
 <p> The &quot;initialize&quot; option takes a project name (and, optionally, following source and target VCCS types) and generates a Makefile that will sequence various steps of a repository conversion. It also generates stub lift and options files. This is meant to be run in an empty work directory, and it is an error to do &#8216;initialize&#8217; where any of these files already exist. Afterwards, you will need to set some variables in the Makefile; read its header comment. </p>

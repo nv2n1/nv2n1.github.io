@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_handshake_set_max_packet_length(3)"
 name: "gnutls_handshake_set_max_packet_length"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_handshake_set_max_packet_length – API function"
 
 <h2>NAME</h2>
 <p> gnutls_handshake_set_max_packet_length &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_handshake_set_max_packet_length(gnutls_session_t </code><i>session</i><code>, size_t </code><i>max</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_handshake_set_max_packet_length – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>size_t max</dt>
 <dd> is the maximum number.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the maximum size of all handshake messages. Handshakes over this size are rejected with <code>GNUTLS_E_HANDSHAKE_TOO_LARGE</code> error code. The default value is 128kb which is typically large enough. Set this to 0 if you do not want to set an upper limit. </p>
 <p> The reason for restricting the handshake message sizes are to limit Denial of Service attacks. </p>
 <p> Note that the maximum handshake size was increased to 128kb from 48kb in GnuTLS 3.3.25.</p>

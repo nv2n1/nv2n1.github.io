@@ -1,4 +1,5 @@
 ---
+
 title: "wsdl(1)"
 name: "wsdl"
 section: "1"
@@ -9,9 +10,7 @@ description: "wsdl – Mono’s Web Service Proxy Generator"
 
 <h2>NAME</h2>
 <p> wsdl &#8211; Mono&#8217;s Web Service Proxy Generator</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wsdl</code> [options] [path | url]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>wsdl</i> is a tool for generating proxy classes that can be used to access to web services. The tool reads a WSDL document from the provided path or url, and downloads referenced schemas or other WSDL documents if needed. </p>
 <p> This tool is used to target the 1.x API, for targetting the 2.x API, please use the wsdl2 tool. </p>
 <h2>OPTIONS</h2>

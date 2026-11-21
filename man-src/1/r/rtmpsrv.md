@@ -1,4 +1,5 @@
 ---
+
 title: "rtmpsrv(1)"
 name: "rtmpsrv"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rtmpsrv/"
 description: "rtmsrv – a stub server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rtmsrv</code> [<code>-z</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>rtmsrv</code> is useful for obtaining all the parameters that a real Flash client would send to an RTMP server, so that they can be used with <code>rtmpdump.</code> <code>rtmpdump</code> is invoked automatically after parsing a client request.</p>
 <h2>OPTIONS</h2>
 <p> <code>-z</code> Debug level output. Extremely verbose.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "colorize(1)"
 name: "colorize"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-colorize/"
 description: "colorize – A robust log colorizer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>colorize</code> [<i>options</i>]<i>&lt;</i>logfile</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>colorize</code> utility. </p>
 <p> <code>colorize</code> is a short (no, it&#8217;s not short anymore :) perl script to colorize your logs. You can even use syslog-ng to redirect all logs to the script and colorize them on the fly!</p>
 <h2>OPTIONS</h2>

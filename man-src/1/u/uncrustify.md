@@ -1,4 +1,5 @@
 ---
+
 title: "uncrustify(1)"
 name: "uncrustify"
 section: "1"
@@ -9,9 +10,7 @@ description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier
 
 <h2>NAME</h2>
 <p> uncrustify &#8211; C, C++, C#, D, Java and Pawn source code beautifier </p>
-<h2>SYNOPSIS</h2>
 <p> <code>uncrustify </code>[<i>OPTIONS</i>] [<i>FILES</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> If no input files are specified, the input is read from stdin.<br />
  If reading from stdin, you should specify the language using -l. </p>
 <p> If -F is used or files are specified on the command line, the output filename is <i>PFX</i> + &quot;/&quot; + filename + <i>SFX</i>.<br />

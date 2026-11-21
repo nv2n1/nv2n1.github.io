@@ -1,4 +1,5 @@
 ---
+
 title: "po4a-gettextize(1)"
 name: "po4a-gettextize"
 section: "1"
@@ -6,20 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-po4a-gettextize/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+po4a-gettextize - convert an original file (and its translation) to a po file 
 
- po4a-gettextize - convert an original file (and its translation) to a po file 
-
-<h2>SYNOPSIS</h2>
-
- po4a-gettextize -f &lt;fmt&gt; -m &lt;master.doc&gt; [-l &lt;<font SIZE="-1">XX</font>.doc&gt;] -p &lt;<font SIZE="-1">XX</font>.po&gt; 
+po4a-gettextize -f &lt;fmt&gt; -m &lt;master.doc&gt; [-l &lt;<font SIZE="-1">XX</font>.doc&gt;] -p &lt;<font SIZE="-1">XX</font>.po&gt; 
 
  (<font SIZE="-1">XX</font>.po is the output, all others are inputs)
 
-<h2>DESCRIPTION</h2>
-
- The po4a (po for anything) project goal is to ease translations (and more interestingly, the maintenance of translations) using gettext tools on areas where they were not expected like documentation. 
+The po4a (po for anything) project goal is to ease translations (and more interestingly, the maintenance of translations) using gettext tools on areas where they were not expected like documentation. 
 
  The <tt>&quot;po4a-gettextize&quot;</tt> script is in charge of converting documentation files to po files. If you start a new translation, <tt>&quot;po4a-gettextize&quot;</tt> will extract the translatable strings from the documentation file and write a pot file from it. 
 

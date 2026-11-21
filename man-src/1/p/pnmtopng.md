@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtopng(1)"
 name: "pnmtopng"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pnmtopng/"
 description: "pnmtopng – convert a portable anymap into a Portable Network Graphics file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pnmtopng</code> [-verbose] [-downscale] [-interlace] [-alpha file]<br />
  [-transparent [=]color] [-background color] [-gamma value]<br />
  [-hist] [-chroma wx wy rx ry gx gy bx by] [-phys x y unit]<br />
  [-text file] [-ztxt file] [-time [yy]yy-mm-dd hh:mm:ss]<br />
  [-filter type] [-compression level] [-force] [<i>pnmfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces a Portable Network Graphics file as output. </p>
 <p> Color values in PNG files are either eight or sixteen bits wide, so <i>pnmtopng</i> will automatically scale colors to have a maxval of 255 or 65535. Grayscale files will be produced with bit depths 1, 2, 4, 8 or 16. An extra <i>pnmdepth</i> step is not necessary.</p>
 <h2>OPTIONS</h2>

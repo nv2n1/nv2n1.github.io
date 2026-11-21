@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg-formats(1)"
 name: "ffmpeg-formats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmpeg-formats/"
 description: "ffmpeg-formats – FFmpeg formats"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes the supported formats (muxers and demuxers) provided by the libavformat library.</p>
 <h2>FORMAT OPTIONS</h2>
 <p> The libavformat library provides some generic global options, which can be set on all the muxers and demuxers. In addition each muxer or demuxer may support so-called private options, which are specific for that component. </p>

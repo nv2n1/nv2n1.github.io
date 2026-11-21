@@ -1,4 +1,5 @@
 ---
+
 title: "gv(1)"
 name: "gv"
 section: "1"
@@ -9,9 +10,7 @@ description: "gv – Postscript and PDF viewer"
 
 <h2>NAME</h2>
 <p> gv &#8211; Postscript and PDF viewer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gv</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> PostScript and PDF viewer.</p>
 <dl>
 <dt>[-]-monochrome</dt>

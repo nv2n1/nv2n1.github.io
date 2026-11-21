@@ -1,4 +1,5 @@
 ---
+
 title: "wks2raw(1)"
 name: "wks2raw"
 section: "1"
@@ -9,7 +10,6 @@ description: "wks2raw – debug the conversion library"
 
 <h2>NAME</h2>
 <p> wks2raw &#8211; debug the conversion library</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wks2raw</code> [<i>OPTION</i>] <i>&lt;Works Spreadsheet Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>

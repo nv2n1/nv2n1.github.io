@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-rebase(1)"
 name: "guilt-rebase"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-guilt-rebase/"
 description: "guilt-rebase – Rebase pushed patches"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>guilt-rebase</i> &lt;upstream&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Rebase pushed patches against an upstream branch.</p>
 <h2>OPTIONS</h2>
 <p> &lt;upstream&gt;</p>

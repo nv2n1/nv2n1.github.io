@@ -1,4 +1,5 @@
 ---
+
 title: "axfer(1)"
 name: "axfer"
 section: "1"
@@ -12,7 +13,6 @@ description: "axfer – command-line sound recorder and player for sound devices
 <p> subcommand = <code>transfer</code> | <code>list</code> | <code>version</code> | <code>help</code> </p>
 <p> direction = <code>capture</code> | <code>playback</code> </p>
 <p> options = ( depends on <i>subcommand</i> ) </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>axfer</code> is a command-line recorder and player to transfer audio data frame between sound devices/nodes and files/stdin/stdout. </p>
 <h2>OPTIONS</h2>
 <h3>Subcommand</h3>

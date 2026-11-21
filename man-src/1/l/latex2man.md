@@ -1,4 +1,5 @@
 ---
+
 title: "latex2man(1)"
 name: "latex2man"
 section: "1"
@@ -6,12 +7,10 @@ letter: "l"
 url: "/docs/linux/man/1-latex2man/"
 description: "Latex2man is a tool to translate UNIX manual pages written with LaTeXinto a format understood by the UNIX"
 ---
-<h2 class="name">NAME</h2>
+
 <p> Latex2man is a tool to translate UNIX manual pages written with LaTeXinto a format understood by the UNIX <i> </p>
 <p> <a href="/docs/linux/man/1-man/">man</a></i>(1)-command. Alternatively HTML, TexInfo, or LaTeX code can be produced too. Output of parts of the text may be suppressed using the conditional text feature (for this, LaTeX generation may be used). </p>
-<h2>SYNOPSIS</h2>
 <p> latex2man [<code>-t</code><i>transfile</i>] [<code>-c</code><i>CSSfile</i>] [<code>-HMTL</code>] [<code>-h</code>] [<code>-V</code>] [<code>-C</code><i>name</i>] [<code>-a</code><i>char</i>] <i>infile</i> <i>outfile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Latex2man reads the file <i>infile</i> and writes <i>outfile</i>. The input must be a LaTeX document using the latex2man LaTeXpackage. Latex2man translates that document into the <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1) format using the <code>-man</code> macro package. </p>
 <p> Using the <code>-H</code> option, HTML code can be produced, instead of <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1). With this option you can, optionally, specify a <i>CSSfile</i> as an argument. CSS (Cascading Style Sheets) allows you to control the appearance of the resulting HTML page. See below for the names of CSS classes that are included in the HTML tags as attributes. </p>
 <p> Using the <code>-T</code> option, TexInfo code can be produced, instead of <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1). </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "elasticity(3)"
 name: "elasticity"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-elasticity/"
 description: "QuantLib::OneAssetOption – Base class for options on a single asset."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Option</code>. </p>
 <p> Inherited by <code>BarrierOption</code>, <code>CliquetOption</code>, <code>ContinuousAveragingAsianOption</code>, <code>ContinuousFixedLookbackOption</code>, <code>ContinuousFloatingLookbackOption</code>, option, <code>DiscreteAveragingAsianOption</code>, <code>DividendVanillaOption</code>, <code>ForwardVanillaOption</code>, <code>QuantoVanillaOption</code>, and <code>VanillaOption</code>. </p>

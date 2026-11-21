@@ -1,4 +1,5 @@
 ---
+
 title: "mkbindic(1)"
 name: "mkbindic"
 section: "1"
@@ -11,7 +12,6 @@ description: "mkbindic – Convert a text-form dictionary into a binary-form dic
 <p> mkbindic &#8211; Convert a text-form dictionary into a binary-form dictionary </p>
 <h2>SYNOPSYS</h2>
 <p> <code>mkbindic [-m | -s] [-name </code><i>dicname</i>] [-c <i>version</i>] <i>textfile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>mkbindic</code> creates a binary-form dictionary (with extension .cbd or <i>dicname</i>) from a text-form dictionary <i>textfile</i>. With -c mkbindic creates old format dictionary. Current supported <i>version</i>s are 3.0 and 3.7. </p>
 <h2>EXAMPLE</h2>
 <pre>

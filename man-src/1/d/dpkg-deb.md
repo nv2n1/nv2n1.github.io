@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-deb(1)"
 name: "dpkg-deb"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dpkg-deb/"
 description: "dpkg-deb – Debian package archive (.deb) manipulation tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dpkg-deb</code> [<i>option</i>&#8230;] <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dpkg-deb</code> packs, unpacks and provides information about Debian archives. </p>
 <p> Use <code>dpkg</code> to install and remove packages from your system. </p>
 <p> You can also invoke <code>dpkg-deb</code> by calling <code>dpkg</code> with whatever options you want to pass to <code>dpkg-deb</code>. <code>dpkg</code> will spot that you wanted <code>dpkg-deb</code> and run it for you. </p>

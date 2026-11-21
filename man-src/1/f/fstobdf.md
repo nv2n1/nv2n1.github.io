@@ -1,4 +1,5 @@
 ---
+
 title: "fstobdf(1)"
 name: "fstobdf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fstobdf/"
 description: "fstobdf – generate BDF font from X font server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fstobdf</code> [ <code>-server</code> <i>servername</i> ] <code>-fn</code> <i>fontname</i></p>
-<h2>DESCRIPTION</h2>
 <p> The <i>fstobdf</i> program reads a font from a font server and prints a BDF file on the standard output that may be used to recreate the font. This is useful in testing servers, debugging font metrics, and reproducing lost BDF files.</p>
 <h2>OPTIONS</h2>
 <dl>

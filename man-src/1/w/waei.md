@@ -1,4 +1,5 @@
 ---
+
 title: "waei(1)"
 name: "waei"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-waei/"
 description: "waei – Japanese-English dictionary"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>waei</code> [<i>options</i>]<i> pattern</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> A Japanese-English dictionary that is a drop-in replacement for gjiten. </p>
 <p> This is the console version of <code>gwaei.</code></p>
 <h2>OPTIONS</h2>

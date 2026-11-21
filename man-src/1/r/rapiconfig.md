@@ -1,4 +1,5 @@
 ---
+
 title: "rapiconfig(1)"
 name: "rapiconfig"
 section: "1"
@@ -9,9 +10,7 @@ description: "rapiconfig – upload an XML config file to a SynCE connected devi
 
 <h2>NAME</h2>
 <p> rapiconfig &#8211; upload an XML config file to a SynCE connected device </p>
-<h2>SYNOPSIS</h2>
 <p> <code>rapiconfig</code> [-d <i>LEVEL</i>] [-P DEVNAME] [-h] [-p] [-m] <i>FILENAME</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>rapiconfig</code> uploads an XML config file to a device connected via SynCE. </p>
 <h2>OPTIONS</h2>
 <dl>

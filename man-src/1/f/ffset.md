@@ -1,4 +1,5 @@
 ---
+
 title: "ffset(1)"
 name: "ffset"
 section: "1"
@@ -9,9 +10,7 @@ description: "ffset – set force-feedback device parameters"
 
 <h2>NAME</h2>
 <p> ffset &#8211; set force-feedback device parameters</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ffset</code> &lt;<i>device</i>&gt; [<code>-g</code> &lt;<i>gain</i>&gt;] [<code>-a</code> &lt;<i>autocenter strength</i>&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> ffset sets the gain and autocenter strength of a force-feedback device.</p>
 <h2>OPTIONS</h2>
 <dl>

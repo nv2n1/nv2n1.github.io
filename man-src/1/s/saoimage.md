@@ -1,4 +1,5 @@
 ---
+
 title: "saoimage(1)"
 name: "saoimage"
 section: "1"
@@ -9,7 +10,6 @@ description: "SAOimage 1.23 – X11 window based, interactive, color or halftone
 
 <h2>NAME</h2>
 <p> SAOimage 1.23 &#8211; X11 window based, interactive, color or halftone image display program for astronomical images</p>
-<h2>SYNOPSIS</h2>
 <p> <code>saoimage</code> [ <code>-display </code><i>nodename:0.0 </i>] [ <code>-geometry | -gd </code><i>geometry </i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-pros | +/-imtool | -fits | -dfits | -oif </code>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-u1 | -u2 | -i2 | -i4 | -r4 | -r8 [ </code><i>width height </i>] ]<br />
@@ -24,7 +24,6 @@ description: "SAOimage 1.23 – X11 window based, interactive, color or halftone
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>-idev </code><i>pipename </i>] [ <code>-odev </code><i>pipename </i>] [ <code>-fbconfig </code><i>filename </i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <code>+/-verbose </code>] [ <code>-quiet </code>] [ <code>-lprbuttons </code>] [ <code>-mtf </code>] [ <code>-bordercolor </code><i>color </i>] [ <code>-lfrac </code><i>histogram fraction </i>] [ <code>-wcscom </code><i>WCS command </i>] [ <code>-gal | -fk4 | -fk5 </code>] [ <code>-zf </code><i>zoom factor</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [ <i>filename</i> | <code>-name </code><i>filename </i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>SAOimage</i> is a utility for displaying astronomical images which runs under the X11 window environment. Image files can be read directly, or image data may be passed through a named pipe (Unix) or a mailbox (VMS) from IRAF display tasks. <i>SAOimage</i> provides a large selection of options for zooming, panning, scaling, coloring, pixel readback, display blinking, and region specification. User interactions are generally performed with the mouse. </p>
 <p> The <i>SAOimage</i> desktop includes, a main image display window, a button menu panel, a display magnifier, a pan and zoom reference image, and a color bar. A color table graph window can be brought up by clicking on the color bar.</p>
 <h2>WORLD COORDINATE SYSTEMS</h2>

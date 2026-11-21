@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_anon_allocate_client_credentials(3)"
 name: "gnutls_anon_allocate_client_credentials"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_anon_allocate_client_credentials – API function"
 
 <h2>NAME</h2>
 <p> gnutls_anon_allocate_client_credentials &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_anon_allocate_client_credentials(gnutls_anon_client_credentials_t * </code><i>sc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_anon_client_credentials_t * sc</dt>
 <dd> is a pointer to a <code>gnutls_anon_client_credentials_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This structure is complex enough to manipulate directly thus this helper function is provided in order to allocate it.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

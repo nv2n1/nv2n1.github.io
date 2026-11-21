@@ -1,4 +1,5 @@
 ---
+
 title: "autooptimiser(1)"
 name: "autooptimiser"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-autooptimiser/"
 description: "autooptimiser – Optimize image positions"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>autooptimiser</code> [options] <i>project.pto</i> </p>
 <p> (<code>&#8211;</code> can be specified to read the project from stdio.)</p>
-<h2>DESCRIPTION</h2>
 <p> autooptimiser works similarly to PToptimizer but with extra command-line options. </p>
 <p> It is also different in that PToptimizer appends its output onto the input file in the form of &#8216;o&#8217; lines which need further processing. autooptimiser simply updates the project and writes it to a new file.</p>
 <h2>OPTIONS</h2>

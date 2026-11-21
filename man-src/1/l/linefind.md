@@ -1,4 +1,5 @@
 ---
+
 title: "linefind(1)"
 name: "linefind"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-linefind/"
 description: "linefind – Detect vertical features in images"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>linefind</code> [options] -o <i>output.pto</i> <i>input.pto</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>linefind</code> is a detector for vertical features in images. It tries to find vertical lines using the same algorithm as Calibrate_lens_gui and assigns vertical control points to them. The detection runs on the source images, if the input images are rectilinear images. In the other cases (e. g. fisheye images) the input images are reprojected to an equirectangular projection and the detection works on the reprojected images. It uses the roll value, saved in the pto project file, to determine what is &#8220;top&#8221; and &#8220;bottom&#8221;. So before running linefind check that your roll values are correct (E. g. when using images straight from the camera, use a roll value of 0 for landscape and a value of 90 or 270 for portrait images. If your camera has an orientation sensor, Hugin can detect this information automatically and sets the roll value accordingly when adding such images into Hugin.</p>
 <h2>OPTIONS</h2>
 <dl>

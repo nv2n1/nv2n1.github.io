@@ -1,4 +1,5 @@
 ---
+
 title: "cpphs(1)"
 name: "cpphs"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cpphs/"
 description: "cpphs – liberalised cpp-a-like preprocessor for Haskell"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>cpphs</code> [<i>FILENAME</i>|<i>OPTION</i>]&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <i>cpphs</i> is a liberalised re-implementation of <code>cpp (1),</code> the C pre-processor, in and for Haskell. </p>
 <p> Why re-implement cpp? Rightly or wrongly, the C pre-processor is widely used in Haskell source code. It enables conditional compilation for different compilers, different versions of the same compiler, and different OS platforms. It is also occasionally used for its macro language, which can enable certain forms of platform-specific detail-filling, such as the tedious boilerplate generation of instance definitions and FFI declarations. However, there are two problems with cpp, aside from the obvious aesthetic ones:</p>
 <dl>

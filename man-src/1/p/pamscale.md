@@ -1,4 +1,5 @@
 ---
+
 title: "pamscale(1)"
 name: "pamscale"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamscale/"
 description: "pamscale – scale a Netpbm image"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
    pamscale
       [ 
@@ -34,7 +34,6 @@ description: "pamscale – scale a Netpbm image"
    [pnmfile]
 </code></pre>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
-<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamscale</code> scales a Netpbm image by a specified factor, or scales individually horizontally and vertically by specified factors. </p>
 <p> You can either enlarge (scale factor &gt; 1) or reduce (scale factor &lt; 1). </p>

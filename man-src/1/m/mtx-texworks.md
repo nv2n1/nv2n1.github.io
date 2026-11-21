@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-texworks(1)"
 name: "mtx-texworks"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mtx-texworks/"
 description: "mtx-texworks – TeXworks Startup Script"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script texworks [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>TeXworks Startup Script</code></p>
 <h2>OPTIONS</h2>
 <dl>

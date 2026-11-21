@@ -1,4 +1,5 @@
 ---
+
 title: "snmpinform(1)"
 name: "snmpinform"
 section: "1"
@@ -9,11 +10,9 @@ description: "snmptrap, snmpinform – sends an SNMP notification to a manager"
 
 <h2>NAME</h2>
 <p> snmptrap, snmpinform &#8211; sends an SNMP notification to a manager</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmptrap -v 1</code> [COMMON OPTIONS] AGENT enterprise-oid agent generic-trap specific-trap uptime [OID TYPE VALUE]&#8230; </p>
 <p> <code>snmptrap -v [2c|3]</code> [COMMON OPTIONS] [-Ci] AGENT uptime trap-oid [OID TYPE VALUE]&#8230; </p>
 <p> <code>snmpinform -v [2c|3]</code> [COMMON OPTIONS] AGENT uptime trap-oid [OID TYPE VALUE]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>snmptrap</code> is an SNMP application that uses the SNMP TRAP operation to send information to a network manager. One or more object identifiers (OIDs) can be given as arguments on the command line. A type and a value must accompany each object identifier. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>. </p>
 <p> When invoked as <code>snmpinform,</code> or when <code>-Ci</code> is added to the command line flags of snmptrap, it sends an INFORM-PDU, expecting a response from the trap receiver, retransmitting if required. Otherwise it sends an TRAP-PDU or TRAP2-PDU. </p>
 <p> If any of the required version 1 parameters, <i>enterprise-oid</i>, <i>agent</i>, and <i>uptime</i> are specified as empty, it defaults to <i>1.3.6.1.4.1.3.1.1 (enterprises.cmu.1.1)</i>, <i>hostname</i>, and <i>host-uptime</i> respectively. </p>

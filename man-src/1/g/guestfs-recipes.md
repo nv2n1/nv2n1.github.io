@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-recipes(1)"
 name: "guestfs-recipes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestfs-recipes/"
 description: "guestfs-recipes – libguestfs, guestfish and virt tools recipes"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This page contains recipes for and links to things you can do using libguestfs, <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) and the virt tools.</p>
 <h2>Access a remote disk image using guestfish</h2>
 <p> If the disk image is on a remote server which is accessible using <font SIZE="-1">SSH, HTTP, FTP, NBD,</font> iSCSI, or similar, then you can open it directly. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <code><a href="/docs/linux/man/1-guestfish/">guestfish</a></code>(1) for several examples. This requires libguestfs ≥ 1.22 and qemu ≥ 1.5.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pkfix-helper(1)"
 name: "pkfix-helper"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pkfix-helper/"
 description: "pkfix-helper – preprocess dvips-produced PostScript documents before passing them to pkfix"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> pkfix-helper [<code>&#8211;help</code>] [<code>&#8211;verbose</code>] [<code>&#8211;force</code>=<i>name</i>=<i>fontspec</i>] [<code>&#8211;ps</code>=<i>filename.ps</i>] [<code>&#8211;tex</code>=<i>filename.tex</i>] [<code>&#8211;cache</code>=<i>filename</i>] [<code>&#8211;include</code>=<i>fontspec</i>] [<code>&#8211;exclude</code>=<i>regexp</i>] [<code>&#8211;keep</code>=<i>fontspec</i>] [<code>&#8211;quiet</code>] [<code>&#8211;no-repeats</code>] [<code>&#8211;spp</code>=<i>number</i>] [<i>input.ps</i> [<i>output.ps</i>]]</p>
-<h2>DESCRIPTION</h2>
 <h3>Motivation</h3>
 <p> PostScript documents created with old versions of <code>dvips</code> almost invariably utilize bitmapped (PostScript Type 3) fonts. The problem with bitmapped fonts is that they target a specific device resolution; a PostScript file produced using 300&nbsp;<font SIZE="-1">DPI</font> fonts will look grainy on a 600&nbsp;<font SIZE="-1">DPI</font> printer. Even worse, <i>all</i> bitmapped fonts look grainy when zoomed in on screen. The solution is to use vector (PostScript Type 1) fonts, which are resolution-independent and appear crisp at any size or scale. </p>
 <p> While it is no longer difficult to configure <code>dvips</code> to use vector fonts, it is not always possible to rerun <code>dvips</code> on an old <i>.dvi</i> file. The <i>.dvi</i> file and document source may have been lost; or, the source may no longer compile because packages it depends upon may no longer be available. </p>

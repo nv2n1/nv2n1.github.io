@@ -1,4 +1,5 @@
 ---
+
 title: "euare-getcallerid(1)"
 name: "euare-getcallerid"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-getcallerid – Show information about the currently-active 
 
 <h2>NAME</h2>
 <p> euare-getcallerid &#8211; Show information about the currently-active credentials</p>
-<h2>SYNOPSIS</h2>
 <p> euare-getcallerid [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</p>
 <dl>
 <dt>[&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger]</dt>
 <dd> [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Show information about the currently-active credentials</p>
 <h3>optional arguments:</h3>
 <dl>

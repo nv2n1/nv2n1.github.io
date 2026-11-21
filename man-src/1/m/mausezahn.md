@@ -1,4 +1,5 @@
 ---
+
 title: "mausezahn(1)"
 name: "mausezahn"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-mausezahn/"
 description: "mausezahn – a fast versatile packet generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mausezahn</code> [<i>options</i>]<i>&lt;arg_string&gt; | &lt;hex_string&gt;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Mausezahn</code> is a free fast traffic generator written in C which allows you to send nearly every possible and impossible packet.<br />
  Mausezahn can also be used for example as didactical tool in network labs or for security audits including penetration and DoS testing. As traffic generator Mausezahn is for example used test IP multicast or VoIP networks. Speeds close to the Ethernet limit are reachable (depending on the HW platform). </p>
 <h2>USAGE</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "cswap(3)"
 name: "cswap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cswap/"
 description: "cswap.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cswap</code> (N, CX, INCX, CY, INCY)<br />
  <i></i><code>CSWAP</code></p>

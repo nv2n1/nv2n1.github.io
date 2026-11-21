@@ -1,4 +1,5 @@
 ---
+
 title: "groff_mom(7)"
 name: "groff_mom"
 section: "7"
@@ -6,8 +7,8 @@ letter: "g"
 url: "/docs/linux/man/7-groff_mom/"
 description: "groff_mom – groff “mom” macros; “mom” is a “roff” language, part of “groff”"
 ---
+
 <p>groff_mom &#8211; groff "mom" macros; "mom" is a "roff" language, part of "groff" </p>
-<h2>SYNOPSIS</h2>
 <p> [<code>-Tps</code> [<i>pdfroff-option</i> ]] [<i>groff-option</i> ] <i>file</i> <code>-mom</code> [<i>option</i> ] <i>file</i> <code>-m mom</code> [<i>option</i> ] <i>file</i>  </p>
 <h2>CALLING MOM</h2>
 <p> <code>mom</code> is a macro set for <code>groff</code>, designed primarily to format documents for <i>PDF</i> and <i>PostScript</i> output. </p>

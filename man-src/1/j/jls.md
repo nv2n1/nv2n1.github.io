@@ -1,4 +1,5 @@
 ---
+
 title: "jls(1)"
 name: "jls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-jls/"
 description: "jls – List the contents of a file system journal"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>jls [-f</code> <i>fstype</i> <code>] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images] [inode] </i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>jls</code> lists the records and entries in a file system journal. If inode is given, then it will look there for a journal. Otherwise, it will use the default location. The output lists the journal block number and a description. </p>
 <h2>ARGUMENTS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_close_xrcd(3)"
 name: "ibv_close_xrcd"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-ibv_close_xrcd/"
 description: "ibv_open_xrcd, ibv_close_xrcd – open or close an XRC protection domain (XRCDs)"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_xrcd *ibv_open_xrcd(struct ibv_context *context,
                                struct ibv_xrcd_init_attr *xrcd_init_attr);
 int ibv_close_xrcd(struct ibv_xrcd *xrcd);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>ibv_open_xrcd()</code> open an XRC domain for the RDMA device context <i>context</i> <i>xrcd_init_attr</i> is an ibv_xrcd_init_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_xrcd_init_attr {

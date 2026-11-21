@@ -1,4 +1,5 @@
 ---
+
 title: "gsettings(1)"
 name: "gsettings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsettings/"
 description: "gsettings – GSettings configuration tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gsettings</code> get <i>SCHEMA</i>&nbsp;[:<i>PATH</i>] <i>KEY</i></dt>
 <dt> <code>gsettings</code> monitor <i>SCHEMA</i>&nbsp;[:<i>PATH</i>] [<i>KEY</i>]</dt>
@@ -23,7 +23,6 @@ description: "gsettings – GSettings configuration tool"
 <dt> <code>gsettings</code> list-children <i>SCHEMA</i>&nbsp;[:<i>PATH</i>]</dt>
 <dt> <code>gsettings</code> list-recursively [<i>SCHEMA</i>&nbsp;[:<i>PATH</i>]]</dt>
 <dt> <code>gsettings</code> help [<i>COMMAND</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gsettings</code></p>
 <dd>offers a simple commandline interface to <code>GSettings</code>. It lets you get, set or monitor an individual key for changes. </dd>
 <p> The <i>SCHEMA</i> and <i>KEY</i> arguments are required for most commands to specify the schema id and the name of the key to operate on. The schema id may optionally have a :<i>PATH</i> suffix. Specifying the path is only needed if the schema does not have a fixed path. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "default_store(3)"
 name: "default_store"
 section: "3"
@@ -9,7 +10,6 @@ description: "default_store – generic storage of global data."
 
 <h2>NAME</h2>
 <p> default_store &#8211; generic storage of global data.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;net-snmp/net-snmp-config.h&gt;</code><br />
  <code>#include &lt;net-snmp/config_api.h&gt;</code> </p>
 <p> <code>int netsnmp_ds_set_boolean(int </code><i>store</i><code>, int </code><i>which</i><code>, int </code><i>val</i><code>);</code><br />
@@ -28,7 +28,6 @@ description: "default_store – generic storage of global data."
  <code> const char *</code><i>token</i><code>,</code><br />
  <code> int </code><i>store</i><code>, int </code><i>which</i><code>);</code><br />
  <code>void netsnmp_ds_shutdown(void);</code></p>
-<h2>DESCRIPTION</h2>
 <p> The purpose of the default storage is three-fold:</p>
 <dl>
 <dt>1)</dt>

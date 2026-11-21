@@ -1,4 +1,5 @@
 ---
+
 title: "submit(1)"
 name: "submit"
 section: "1"
@@ -15,7 +16,6 @@ description: "qsub, qsh, qlogin, qrsh, qalter, qresub – submit jobs to xxQS_NA
 <p> <code>qalter</code> [<i>options</i>] <i>wc_job_range_list</i> [<code>&#8212;</code> [<i>command_args</i>]] </p>
 <p> <code>qalter</code> [<i>options</i>] <code>-u </code> <i>user_list</i> | <code>-u *</code> [<code>&#8212;</code> [<i>command_args</i>]] </p>
 <p> <code>qresub</code> [<i>options</i>] <i>job_id_list</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Qsub</i> submits batch jobs to the xxQS_NAMExx queuing system. xxQS_NAMExx supports single- and multiple-node jobs. <i>command</i> can be a path to a binary or a script (see <code>-b</code> below) which contains the commands to be run by the job using a shell (for example, or Arguments to the command are given as <i>command_args</i> to <i>qsub</i>. If <i>command</i> is handled as a script then it is possible to embed flags in the script. If the first two characters of a script line either match &#8216;#$&#8217; or are equal to the prefix string defined with the <code>-C</code> option described below, the line is parsed for embedded command flags. </p>
 <p> <i>Qsh</i> submits an interactive X-windows session to xxQS_NAMExx. An is brought up from the executing machine with the display directed either to the X-server indicated by the DISPLAY environment variable or as specified with the <code>-display</code> option of <i>qsh</i>. Interactive jobs are not spooled if no resource is available to execute them. They are either dispatched to a suitable machine for execution immediately or the user submitting the job is notified by <i>qsh</i> that appropriate resources to execute the job are not available. <i>xterm_args</i> are passed to the executable. Note, however, that the <i>-e</i> and <i>-ls</i> xterm options do not work with <i>qsh</i>. </p>
 <p> <i>Qlogin</i> is similar to <i>qsh</i> in that it submits an interactive job to the queuing system. It does not open an window on the X display, but uses the current terminal for user I/O. It establishes a connection with the remote host, using the configured mechanisms described in <i>Qlogin</i> is invoked exactly like <i>qsh</i> and its jobs can only run on INTERACTIVE queues. <i>Qlogin</i> jobs can only be used if the is running under the root account. </p>

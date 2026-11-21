@@ -1,4 +1,5 @@
 ---
+
 title: "stgsen(3)"
 name: "stgsen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-stgsen/"
 description: "stgsen.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>STGSEN</code></p>

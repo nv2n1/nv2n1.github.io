@@ -1,4 +1,5 @@
 ---
+
 title: "gml2gv(1)"
 name: "gml2gv"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gml2gv/"
 description: "gml2gv,gv2gml – GML-DOT converters"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gml2gv</code> [ <code>-?v</code> ] [ <code>-g</code><i>gname</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br />
  <code>gv2gml</code> [ <code>-?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>gml2gv</code> converts a graph specified in the GML format to a graph in the GV (formerly DOT) format. <code>gv2gml</code> converts a graph specified in the GV format to a graph in the GML format.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

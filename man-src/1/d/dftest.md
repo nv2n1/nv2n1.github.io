@@ -1,4 +1,5 @@
 ---
+
 title: "dftest(1)"
 name: "dftest"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dftest/"
 description: "dftest – Shows display filter byte-code, for debugging dfilter routines."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dftest</code> [&nbsp;<wbr>&lt;filter&gt;&nbsp;<wbr>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dftest</code> is a simple tool which compiles a display filter and shows its bytecode.</p>
 <h2>OPTIONS</h2>
 <dl>

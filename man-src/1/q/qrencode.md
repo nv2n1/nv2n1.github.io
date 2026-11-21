@@ -1,4 +1,5 @@
 ---
+
 title: "qrencode(1)"
 name: "qrencode"
 section: "1"
@@ -9,9 +10,7 @@ description: "qrencode – Encode input data in a QR Code and save as a PNG or E
 
 <h2>NAME</h2>
 <p> qrencode &#8211; Encode input data in a QR Code and save as a PNG or EPS image.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>qrencode</code> [OPTION]&#8230; [STRING] </p>
-<h2>DESCRIPTION</h2>
 <p> Libqrencode is a library for encoding data in a QR Code symbol, a kind of 2D symbology that can be scanned by handy terminals such as a mobile phone with CCD. The capacity of QR Code is up to 7000 digits or 4000 characters, and has high robustness. </p>
 <p> Qrencode is a utility software using libqrencode to encode string data in a QR Code and save as a PNG or EPS image. </p>
 <h2>OPTIONS</h2>

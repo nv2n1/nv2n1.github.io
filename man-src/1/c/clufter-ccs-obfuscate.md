@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-ccs-obfuscate(1)"
 name: "clufter-ccs-obfuscate"
 section: "1"
@@ -9,9 +10,7 @@ description: "clufter – ccs-obfuscate"
 
 <h2>NAME</h2>
 <p> clufter &#8211; ccs-obfuscate</p>
-<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs-obfuscate </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Obfuscate credentials/IDs in CMAN-based cluster config. </p>
 <p> Either obfuscation pass can be suppressed by skip parameter, by default they are performed both in row. </p>
 <p> Following conventions are used for substituted ids/credentials: 1. identifiers used for crosslinking (referential integrity) ought to be converted in a way not violating this integrity 2. identifiers clearly out of referential integrity (i.e., arbitrary value unrelated to the rest of the XML tree) ought to be substituted with strings starting with &#8216;REL-&#8216; 3. credentials ought to be substituted with strings starting with &#8216;SECRET-&#8216; 4. overall, any affected item should be substituted with capitalized string to visually emphasize the substitution</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "el_tok_init(3)"
 name: "el_tok_init"
 section: "3"
@@ -11,7 +12,6 @@ description: "editline, el_init, el_end, el_reset, el_gets, el_getc, el_push, el
 <p> <code>editline</code>, <code>el_init</code>, <code>el_end</code>, <code>el_reset</code>, <code>el_gets</code>, <code>el_getc</code>, <code>el_push</code>, <code>el_parse</code>, <code>el_set</code>, <code>el_get</code>, <code>el_source</code>, <code>el_resize</code>, <code>el_line</code>, <code>el_insertstr</code>, <code>el_deletestr</code>, <code>history_init</code>, <code>history_end</code>, <code>history</code>, <code>tok_init</code>, <code>tok_end</code>, <code>tok_reset</code>, <code>tok_line</code>, <code>tok_str</code> &#8211; line editor, history and tokenization functions</p>
 <h2>LIBRARY</h2>
 <p> Command Line Editor Library (libedit, -ledit)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/histedit.h">histedit.h</a>&gt;</code> </p>
 <p> <i>EditLine *</i><br />
  <code>el_init</code>(<i>const char *prog</i>, <i>FILE *fin</i>, <i>FILE *fout</i>, <i>FILE *ferr</i>); </p>
@@ -57,7 +57,6 @@ description: "editline, el_init, el_end, el_reset, el_gets, el_getc, el_push, el
  <code>tok_line</code>(<i>Tokenizer *t</i>, <i>const LineInfo *li</i>, <i>int *argc</i>, <i>const char **argv[]</i>, <i>int *cursorc</i>, <i>int *cursoro</i>); </p>
 <p> <i>int</i><br />
  <code>tok_str</code>(<i>Tokenizer *t</i>, <i>const char *str</i>, <i>int *argc</i>, <i>const char **argv[]</i>);</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>editline</code> library provides generic line editing, history and tokenization functions, similar to those found in <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1). </p>
 <p> These functions are available in the <code>libedit</code> library (which needs the <code>libcurses</code> library). Programs should be linked with <code>-ledit</code> <code>-lcurses</code>.</p>
 <h2>LINE EDITING FUNCTIONS</h2>

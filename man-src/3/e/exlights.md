@@ -1,4 +1,5 @@
 ---
+
 title: "exlights(3)"
 name: "exlights"
 section: "3"
@@ -9,10 +10,8 @@ description: "exlights – One way to do colored lighting effects in a hicolor v
 
 <h2>NAME</h2>
 <p> exlights &#8211; One way to do colored lighting effects in a hicolor video mode. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exlights</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program shows one way to implement colored lighting effects in a hicolor video mode. Warning: it is not for the faint of heart! This is by no means the simplest or easiest to understand method, I just thought it was a cool concept that would be worth demonstrating. </p>
 <p> The basic approach is to select a 15 or 16 bit screen mode, but then draw onto 24 bit memory bitmaps. Since we only need the bottom 5 bits of each 8 bit color in order to store 15 bit data within a 24 bit location, we can fit a light level into the top 3 bits. The tricky bit is that these aren&#8217;t actually 24 bit images at all: they are implemented as 8 bit memory bitmaps, and we just store the red level in one pixel, green in the next, and blue in the next, making the total image be three times wider than we really wanted. This allows us to use all the normal 256 color graphics routines for drawing onto our memory surfaces, most importantly the lookup table translucency, which can be used to combine the low 5 bits of color and the top 3 bits of light in a single drawing operation. Some trickery is needed to load 24 bit data into this fake 8 bit format, and of course it needs a custom routine to convert the resulting image while copying it across to the hardware screen. </p>
 <p> This program chugs slightly on my p133, but not significantly worse than any double buffering in what amounts to a 1920&#215;640, 256 color resolution. The light blending doesn&#8217;t seem to slow it down too badly, so I think this technique would be quite usable on faster machines and in lower resolution hicolor modes. The biggest problem is that although you keep the full 15 bit color resolution, you only get 3 bits of light, ie. 8 light levels. You can do some nice colored light patches, but smooth gradients aren&#8217;t going to work too well :-) </p>

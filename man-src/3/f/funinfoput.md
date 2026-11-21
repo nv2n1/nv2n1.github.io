@@ -1,4 +1,5 @@
 ---
+
 title: "funinfoput(3)"
 name: "funinfoput"
 section: "3"
@@ -9,14 +10,12 @@ description: "FunInfoPut – put information into a Funtools struct"
 
 <h2>NAME</h2>
 <p> <code>FunInfoPut &#8211; put information into a Funtools struct</code></p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
 <pre>
   int FunInfoPut(Fun fun, int type, char *addr, ...)
 </pre>
-<h2>DESCRIPTION</h2>
 <p> The FunInfoPut() routine puts information into a Funtools structure. The first argument is the Fun handle from which information is to be retrieved. After this first required argument comes a variable length list of pairs of arguments. Each pair consists of an integer representing the type of information to store and the address of the new information to store in the struct. The variable list is terminated by a 0. The routine returns the number of put actions performed. </p>
 <p> The full list of available information is described above with the <i>FunInfoPut()</i> routine. Although use of this routine is expected to be uncommon, there is one important situation in which it plays an essential part: writing multiple extensions to a single output file. </p>
 <p> For input, multiple extensions are handled by calling <i>FunOpen()</i> for each extension to be processed. When opening multiple inputs, it sometimes is the case that you will want to process them and then write them (including their header parameters) to a single output file. To accomplish this, you open successive input extensions using <i>FunOpen()</i> and then call FunInfoPut() to set the Funtools reference handle of the output file to that of the newly opened input extension: </p>

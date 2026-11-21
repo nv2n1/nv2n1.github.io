@@ -1,4 +1,5 @@
 ---
+
 title: "regpatch(1)"
 name: "regpatch"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-regpatch/"
 description: "regpatch – Applies registry patches to registry files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>regpatch</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;credentials=CREDENTIALS] [location] [patch-file]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The regpatch utility applies registry patches to Windows registry files. The patch files should have the same format as is being used by the regdiff utility and regedit32.exe from Windows. </dd>
 <p> If no patch file is specified on the command line, regpatch attempts to read it from standard input.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-volume-create(1)"
 name: "docker-volume-create"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-volume-create/"
 description: "docker-volume-create – Create a volume"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker volume create [OPTIONS] [VOLUME]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Creates a new volume that containers can consume and store data in. If a name is not specified, Docker generates a random name. You create a volume and then configure the container to use it, for example: </p>
 <dl>
 <dt>

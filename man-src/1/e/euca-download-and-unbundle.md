@@ -1,4 +1,5 @@
 ---
+
 title: "euca-download-and-unbundle(1)"
 name: "euca-download-and-unbundle"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-download-and-unbundle – Download and unbundle a bundled ima
 
 <h2>NAME</h2>
 <p> euca-download-and-unbundle &#8211; Download and unbundle a bundled image from the cloud</p>
-<h2>SYNOPSIS</h2>
 <p> euca-download-and-unbundle [-d (FILE | DIR)] [-k PRIVATEKEY]</p>
 <dl>
 <dt>[&#8211;progress | <code>&#8211;no-progress]</code> <code>-b</code></dt>
 <dd> BUCKET[/PREFIX] (<code>-m</code> MANIFEST | <code>-p</code> MANIFEST | <code>&#8211;local-manifest</code> FILE) [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Download and unbundle a bundled image from the cloud</p>
 <h2>DESCRIPTION</h2>
 <p> The key used to unbundle the image must match a certificate that was used to bundle it.</p>

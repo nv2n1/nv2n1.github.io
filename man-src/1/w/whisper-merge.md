@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-merge(1)"
 name: "whisper-merge"
 section: "1"
@@ -13,7 +14,6 @@ description: "whisper-merge – merge two whisper database files"
 <pre>
 whisper-merge from_path to_path
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command merges two whisper database files. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

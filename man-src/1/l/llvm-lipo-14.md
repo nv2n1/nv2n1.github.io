@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-lipo-14(1)"
 name: "llvm-lipo-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-lipo-14/"
 description: "llvm-lipo – LLVM tool for manipulating universal binaries"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-lipo</code> [<i>filenames…</i>] [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>llvm-lipo</code> can create universal binaries from Mach-O files, extract regular object files from universal binaries, and display architecture information about both universal and regular files.</p>
 <h2>COMMANDS</h2>
 <p> <code>llvm-lipo</code> supports the following mutually exclusive commands:</p>

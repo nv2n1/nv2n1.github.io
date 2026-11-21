@@ -1,4 +1,5 @@
 ---
+
 title: "perlxstut(1)"
 name: "perlxstut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlxstut/"
 description: "perlxstut – Tutorial for writing XSUBs"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This tutorial will educate the reader on the steps involved in creating a Perl extension. The reader is assumed to have access to perlguts, perlapi and perlxs. </p>
 <p> This tutorial starts with very simple examples and becomes more complex, with each new example adding new features. Certain concepts may not be completely explained until later in the tutorial in order to slowly ease the reader into building extensions. </p>
 <p> This tutorial was written from a Unix point of view. Where I know them to be otherwise different for other platforms (e.g. Win32), I will list them. If you find something that was missed, please let me know.</p>

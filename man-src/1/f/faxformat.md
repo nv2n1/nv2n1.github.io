@@ -1,4 +1,5 @@
 ---
+
 title: "faxformat(1)"
 name: "faxformat"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-faxformat/"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> This page, part of the <code>Netpbm</code>user&#8217;s<code>guide</code>(1) , describes FAX formats in relation to Netpbm facilities. </p>
-<h2>DESCRIPTION</h2>
 <p> The ITU (formerly CCITT) publishes standards for operation of fax machines (the idea is to provide a way to be sure that a fax machine is able to receive a fax sent by another). These standards incidentally specify graphics file formats &#8212; a protocol for representing a visual image in sequences of bits. </p>
 <p> The two relevant standards are called Group 3 (G3) and Group 4 (G4) (Groups 1 and 2 are analog standards no longer in use). Virtually every fax machine in existence conforms at least generally to at least one of these standards. </p>
 <p> The standard for Group 3 fax is defined in ITU Recommendation T.4. In the U.S., that is implemented by EIA standards EIA-465 and EIA-466. These standards cover more than the file format as well, including how to transmit bits over a telephone line and procedures for handling document transmissions. </p>

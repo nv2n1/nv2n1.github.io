@@ -1,4 +1,5 @@
 ---
+
 title: "jed(1)"
 name: "jed"
 section: "1"
@@ -9,9 +10,7 @@ description: "Jed – programmers editor"
 
 <h2>NAME</h2>
 <p> Jed &#8211; programmers editor</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jed [options] </code> <i>file</i> <code>&#8230;</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Jed &#8211; programmers editor</code> </p>
 <p> Features: </p>
 <p> Color syntax <i>highlighting. </i> Emulation of <code>Emacs,</code> <code>EDT,</code> <code>Wordstar, </code> and Brief editors. Extensible in a language resembling C. Completely customizable. Editing TeX files with AUC-TeX style editing (BiBTeX support too). Folding support, and much more&#8230; </p>

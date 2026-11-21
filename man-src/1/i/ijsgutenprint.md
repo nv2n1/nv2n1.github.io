@@ -1,4 +1,5 @@
 ---
+
 title: "ijsgutenprint(1)"
 name: "ijsgutenprint"
 section: "1"
@@ -9,9 +10,7 @@ description: "ijsgutenprint – Ghostscript driver for Gutenprint"
 
 <h2>NAME</h2>
 <p> ijsgutenprint &#8211; Ghostscript driver for Gutenprint</p>
-<h2>SYNOPSIS</h2>
 <p> <code>gs</code> -sDEVICE=ijs -sIjsServer=/usr/bin/ijsgutenprint -sDeviceManufacturer=<i>vendor</i> -sDeviceModel=<i>name</i> [ <i>-dIjsUseOutputFD</i> ] -sIjsParams=[ <i>key1</i>=<i>value1</i>,<i>keyn</i>=<i>valuen</i>&#8230; ] [ <i>options</i> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ijsgutenprint</code> provides Ghostscript with a Gutenprint driver, supporting all printers supported by libgutenprint. </p>
 <p> <code>NOTE:</code> ijsgutenprint should never be called directly. Ghostscript will run it if the IjsServer parameter is set to IjsServer=ijsgutenprint when invoking the IJS driver. </p>
 <p> <code>NOTE:</code> The only <i>supported</i> method of running ijsgutenprint is via Foomatic. Users running ghostscript directly will not be supported. The driver name used by Foomatic is <i>gutenprint-ijs.5.2</i>.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "curl_formadd(3)"
 name: "curl_formadd"
 section: "3"
@@ -9,10 +10,8 @@ description: "curl_formadd – add a section to a multipart/formdata HTTP POST"
 
 <h2>NAME</h2>
 <p> curl_formadd &#8211; add a section to a multipart/formdata HTTP POST</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>CURLFORMcode curl_formadd(struct curl_httppost ** </code><i>firstitem,</i> <code>struct curl_httppost ** </code><i>lastitem,</i><code> &#8230;);</code></p>
-<h2>DESCRIPTION</h2>
 <p> curl_formadd() is used to append sections when building a multipart/formdata HTTP POST (sometimes referred to as RFC2388-style posts). Append one section at a time until you&#8217;ve added all the sections you want included and then you pass the <i>firstitem</i> pointer as parameter to <code>CURLOPT_HTTPPOST</code>. <i>lastitem</i> is set after each <i><a href="/docs/linux/man/3-curl_formadd/">curl_formadd</a>(3)</i> call and on repeated invokes it should be left as set to allow repeated invokes to find the end of the list faster. </p>
 <p> After the <i>lastitem</i> pointer follow the real arguments. </p>
 <p> The pointers <i>firstitem</i> and <i>lastitem</i> should both be pointing to NULL in the first call to this function. All list-data will be allocated by the function itself. You must call <i><a href="/docs/linux/man/3-curl_formfree/">curl_formfree</a>(3)</i> on the <i>firstitemP after the form post has been done to free the resources. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "valgrind(1)"
 name: "valgrind"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-valgrind/"
 description: "valgrind – a suite of tools for debugging and profiling programs"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>valgrind</code> [<i>valgrind-options</i>] [<code>your-program</code>] [<i>your-program-options</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Valgrind</code></p>
 <dd>is a flexible program for debugging and profiling Linux executables. It consists of a core, which provides a synthetic CPU in software, and a series of debugging and profiling tools. The architecture is modular, so that new tools can be created easily and without disturbing the existing structure. </dd>
 <p> Some of the options described below work with all Valgrind tools, and some only work with a few or one. The section MEMCHECK OPTIONS and those below it describe tool-specific options. </p>

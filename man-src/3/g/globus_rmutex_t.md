@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rmutex_t(3)"
 name: "globus_rmutex_t"
 section: "3"
@@ -8,7 +9,6 @@ description: "globus_rmutex_t –"
 ---
 
 <p> Recursive Mutex.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_thread_rmutex.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Recursive Mutex. </p>

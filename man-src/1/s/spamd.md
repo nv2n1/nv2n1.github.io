@@ -1,4 +1,5 @@
 ---
+
 title: "spamd(1)"
 name: "spamd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spamd/"
 description: "spamd – daemonized version of spamassassin"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> spamd [options] </p>
 <p> Options: </p>
 <pre><code>
@@ -67,7 +67,6 @@ description: "spamd – daemonized version of spamassassin"
  -V, --version                     Print version and exit
 </code></pre>
 <p> The &#8211;listen option (or -i) may be specified multiple times, its syntax is: [ ssl: ] [ host-name-or-IP-address ] [ : port ] or an absolute path (filename) of a Unix socket. If port is omitted it defaults to &#8211;port or to 783. Option &#8211;ssl implies a prefix &#8216;ssl:&#8217;. An IPv6 address should be enclosed in square brackets, e.g. [::1]:783, an IPv4 address may be but need not be enclosed in square brackets. An asterisk &#8216;*&#8217; in place of a hostname implies an unspecified address, (&#8216;0.0.0.0&#8217; or &#8216;::&#8217;), i.e. it binds to all interfaces. An empty option value implies &#8216;*&#8217;. A default is &#8216;&#8211;listen localhost&#8217;, which binds to a loopback interface only.</p>
-<h2>DESCRIPTION</h2>
 <p> The purpose of this program is to provide a daemonized version of the spamassassin executable. The goal is improving throughput performance for automated mail checking. </p>
 <p> This is intended to be used alongside <tt>&quot;spamc&quot;</tt>, a fast, low-overhead C client program. </p>
 <p> See the <font SIZE="-1">README</font> file in the <tt>&quot;spamd&quot;</tt> directory of the SpamAssassin distribution for more details. </p>

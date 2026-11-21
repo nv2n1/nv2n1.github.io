@@ -1,4 +1,5 @@
 ---
+
 title: "itstool(1)"
 name: "itstool"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-itstool/"
 description: "itstool – convert between XML and PO using ITS"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> itstool [OPTIONS] XMLFILES&#8230;<br />
  itstool <code>-m</code> &lt;MOFILE&gt; [OPTIONS] XMLFILES&#8230;<br />
  itstool <code>-j</code> &lt;XMLFILE&gt; [OPTIONS] MOFILES&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>itstool </code> extracts messages from XML files and outputs PO template files, then merges translations from MO files to create translated XML files. It determines what to translate and how to chunk it into messages using the W3C Internationalization Tag Set (ITS). </p>
 <p> To extract messages from XML files <code>XMLFILES</code> and output them to <code>OUT.pot</code>: </p>
 <p> <code>itstool -o OUT.pot XMLFILES</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "man-recode(1)"
 name: "man-recode"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-man-recode/"
 description: "man-recode – convert manual pages to another encoding"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>man-recode</code> <code>-t</code> <i>to-code</i> {<code>&#8211;suffix=</code><i>suffix/</i>|<code>&#8211;in-place</code>} [<code>-dqhV</code>] [<i>filename</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>man-recode</code> converts multiple manual pages from one encoding to another, guessing the appropriate input encoding for each one. It is useful when permanently recoding pages written in legacy character sets, or in build systems that need to recode a set of pages to a single common encoding (usually UTF-8) for installation. When converting many manual pages, this program is much faster than running <code>man &#8211;recode</code> or <code>manconv</code> on each page. </p>
 <p> If an encoding declaration is found on the first line of a manual page, then that declaration is used as the input encoding for that page. Failing that, the input encoding is guessed based on the file name. </p>
 <p> Encoding declarations have the following form: </p>

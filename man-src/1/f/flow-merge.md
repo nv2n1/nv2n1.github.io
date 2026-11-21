@@ -1,4 +1,5 @@
 ---
+
 title: "flow-merge(1)"
 name: "flow-merge"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-merge – Merge flow files."
 
 <h2>NAME</h2>
 <p> flow-merge &#8211; Merge flow files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-merge</code> [ <code>-aghm</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-o</code><i> filename</i> ] [ <code>-z</code><i> z_level</i> ] [ <i>file</i><code>|</code><i>directory</i><i>&#8230;</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-merge</code> utility processes files and/or directories of files in the flow-tools format. The resulting merged data set is written to the standard output or <i>file</i> specified by <code>-o</code>. If <i>file</i> is a single dash (`-&#8216;) or absent, flow-merge will read from the standard input. Unlike flow-cat, flow-merge interleaves flow records preserving the relative chronological order.</p>
 <h2>OPTIONS</h2>
 <dl>

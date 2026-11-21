@@ -1,4 +1,5 @@
 ---
+
 title: "ffi_call(3)"
 name: "ffi_call"
 section: "3"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/3-ffi_call/"
 description: "ffi_call – Invoke a foreign function."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ffi_call</code> &#8211; Invoke a foreign function. </p>
-<h2>SYNOPSIS</h2>
 <p> In ffi.h Ft void Fo ffi_call Fa ffi_cif *cif Fa void (*fn)(void) Fa void *rvalue Fa void **avalue Fc</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>ffi_call</code> function provides a simple mechanism for invoking a function without requiring knowledge of the function&#8217;s interface at compile time. Fa fn is called with the values retrieved from the pointers in the Fa avalue array. The return value from Fa fn is placed in storage pointed to by Fa rvalue . Fa cif contains information describing the data types, sizes and alignments of the arguments to and return value from Fa fn , and must be initialized with <code>ffi_prep_cif</code> before it is used with <code>ffi_call</code> </p>
 <p> Fa rvalue must point to storage that is sizeof(ffi_arg) or larger for non-floating point types. For smaller-sized return value types, the <code>ffi_arg</code> or <code>ffi_sarg</code> integral type must be used to hold the return value.</p>
 <h2>EXAMPLES</h2>

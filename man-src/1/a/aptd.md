@@ -1,4 +1,5 @@
 ---
+
 title: "aptd(1)"
 name: "aptd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aptd/"
 description: "aptd – package managing daemon proving a D-Bus interface"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aptd</code> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>aptd</code> allows to perform package management tasks, e.g. installing or removing software, using a D-Bus interface. The privileges are handled by PolicyKit so the client application doesn&#8217;t need to run as root. Furthermore aptd is started by D-Bus activation only when an user calls a method.</p>
 <h2>OPTIONS</h2>
 <dl>

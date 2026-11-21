@@ -1,4 +1,5 @@
 ---
+
 title: "ip(7)"
 name: "ip"
 section: "7"
@@ -6,15 +7,14 @@ letter: "i"
 url: "/docs/linux/man/7-ip/"
 description: "ip – Linux IPv4 protocol implementation"
 ---
+
 <p>ip &#8211; Linux IPv4 protocol implementation </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/socket.h&gt;</code> <br />
  <code>#include &lt;netinet/in.h&gt;</code> <br />
  <code>#include &lt;netinet/ip.h&gt; </code>/* superset of previous */ </p>
 <p> <i>tcp_socket</i><code> = socket(AF_INET, SOCK_STREAM, 0);</code> <br />
  <i>udp_socket</i><code> = socket(AF_INET, SOCK_DGRAM, 0);</code> <br />
  <i>raw_socket</i><code> = socket(AF_INET, SOCK_RAW, </code><i>protocol</i><code>);</code>  </p>
-<h2>DESCRIPTION</h2>
 <p> Linux implements the Internet Protocol, version 4, described in RFC 791 and RFC 1122. <code>ip</code> contains a level 2 multicasting implementation conforming to RFC 1112. It also contains an IP router including a packet filter. </p>
 <p>The programming interface is BSD-sockets compatible. For more information on sockets, see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7). </p>
 <p>An IP socket is created using <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2): </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bpython(1)"
 name: "bpython"
 section: "1"
@@ -9,11 +10,9 @@ description: "bpython – a fancy {curses, GTK+, urwid} interface to the Python 
 
 <h2>NAME</h2>
 <p> bpython &#8211; a fancy {curses, GTK+, urwid} interface to the Python interactive interpreter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>bpython</code> [<i>options</i>] [<i>file</i> [<i>args</i>]] </p>
 <p> <code>bpython-gtk</code> [<i>options</i>] [<i>file</i> [<i>args</i>]] </p>
 <p> <code>bpython-urwid</code> [<i>options</i>] [<i>file</i> [<i>args</i>]]</p>
-<h2>DESCRIPTION</h2>
 <p> The idea is to provide the user with all the features in-line, much like modern IDEs, but in a simple, lightweight package that can be run in a terminal window.</p>
 <dl>
 <dt><code>In-line syntax highlighting.</code></dt>

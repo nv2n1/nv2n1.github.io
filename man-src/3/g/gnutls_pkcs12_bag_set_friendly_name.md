@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_bag_set_friendly_name(3)"
 name: "gnutls_pkcs12_bag_set_friendly_name"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs12_bag_set_friendly_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_bag_set_friendly_name &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_bag_set_friendly_name(gnutls_pkcs12_bag_t </code><i>bag</i><code>, int </code><i>indx</i><code>, const char * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_pkcs12_bag_set_friendly_name – API function"
 <dd> The bag&#8217;s element to add the id</dd>
 <dt>const char * name</dt>
 <dd> the name</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will add the given key friendly name, to the specified, by the index, bag element. The name will be encoded as a &#8216;Friendly name&#8217; bag attribute, which is usually used to set a user name to the local private key and the certificate pair.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value. or a negative error code on error.</p>

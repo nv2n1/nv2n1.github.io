@@ -1,4 +1,5 @@
 ---
+
 title: "cla_gbrpvgrw(3)"
 name: "cla_gbrpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_gbrpvgrw/"
 description: "cla_gbrpvgrw.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>cla_gbrpvgrw</code> (N, KL, KU, NCOLS, AB, LDAB, AFB, LDAFB)<br />
  <i></i><code>CLA_GBRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a general banded matrix.</p>

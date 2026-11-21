@@ -1,4 +1,5 @@
 ---
+
 title: "sbcl(1)"
 name: "sbcl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sbcl/"
 description: "SBCL — Steel Bank Common Lisp"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> SBCL is an implementation of ANSI Common Lisp, featuring a high-performance native compiler, native threads on several platforms, a socket interface, a source-level debugger, a statistical profiler, and much more. </p>
 <p> It is free software, mostly in the public domain, but with some subsystems under BSD-style licenses which allow modification and reuse as long as credit is given. It is provided &quot;as is&quot;, with no warranty of any kind. </p>
 <p> For more information about license issues, see the COPYING file in the distribution. For more information about history, see the CREDITS file in the distribution. </p>

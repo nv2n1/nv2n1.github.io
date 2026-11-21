@@ -1,4 +1,5 @@
 ---
+
 title: "ppa-purge(1)"
 name: "ppa-purge"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppa-purge/"
 description: "ppa-purge – disables a PPA and reverts to official packages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppa-purge [-h | [-d &lt;distribution&gt;] [-s &lt;host&gt;] [-p &lt;ppaname&gt;] &lt;ppa:&lt;ppaowner[/ppaname&gt;]&gt;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This script provides a bash shell script capable of automatically downgrading all packages in a given PPA back to the ubuntu versions. </p>
 <p> You have to run it using root privileges because of the package manager. </p>
 <h2>OPTIONS</h2>

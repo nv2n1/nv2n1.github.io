@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-gcov-dump-9(1)"
 name: "x86_64-linux-gnu-gcov-dump-9"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-gcov-dump-9/"
 description: "gcov-dump – offline gcda and gcno profile dump tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> gcov-dump [<code>-v</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-h</code>|<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-l</code>|<code>&#8211;long</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-p</code>|<code>&#8211;positions</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>gcovfiles</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gcov-dump</code> is a tool you can use in conjunction with <font SIZE="-1">GCC</font> to dump content of gcda and gcno profile files offline.</p>
 <h2>OPTIONS</h2>
 <dl>

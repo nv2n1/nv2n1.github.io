@@ -1,4 +1,5 @@
 ---
+
 title: "mcbarrierengine(3)"
 name: "mcbarrierengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcbarrierengine/"
 description: "ql/pricingengines/barrier/mcbarrierengine.hpp – Monte Carlo barrier option engines."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/barrieroption.hpp&gt;<br />
  #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-stats(1)"
 name: "tracker-stats"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-tracker-stats/"
 description: "tracker-stats – Provides statistics on the data indexed"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tracker-stats</code> [<i>OPTION</i>&#8230;] [[<i>EXPRESSION</i>&#8230;] [<i>EXPRESSION</i>&#8230;]] </p>
-<h2>DESCRIPTION</h2>
 <p> Display statistics about RDF classes in and how many of each exist for the data set that has been indexed. </p>
 <p> By default, only common and useful classes are shown, e.g. nfo:Document or nfo:Folder, for a full set of statistics, see the option. </p>
 <p> If one or more <i>EXPRESSION</i> is given, the statistics returned are filtered to only include information about RDF types matching <i>EXPRESSION</i> (case folded and matching accented variants). </p>

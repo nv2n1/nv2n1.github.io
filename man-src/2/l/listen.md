@@ -1,4 +1,5 @@
 ---
+
 title: "listen(2)"
 name: "listen"
 section: "2"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/2-listen/"
 description: "listen – listen for connections on a socket"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt; /* See NOTES */
 int listen(int sockfd, int backlog);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>listen</code>() marks the socket referred to by <i>sockfd</i> as a passive socket, that is, as a socket that will be used to accept incoming connection requests using <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2). </p>
 <p> The <i>sockfd</i> argument is a file descriptor that refers to a socket of type <code>SOCK_STREAM</code> or <code>SOCK_SEQPACKET</code>. </p>
 <p> The <i>backlog</i> argument defines the maximum length to which the queue of pending connections for <i>sockfd</i> may grow. If a connection request arrives when the queue is full, the client may receive an error with an indication of <code>ECONNREFUSED</code> or, if the underlying protocol supports retransmission, the request may be ignored so that a later reattempt at connection succeeds.</p>

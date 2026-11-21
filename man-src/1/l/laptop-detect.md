@@ -1,4 +1,5 @@
 ---
+
 title: "laptop-detect(1)"
 name: "laptop-detect"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-laptop-detect/"
 description: "laptop-detect – attempt to detect a laptop"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> laptop-detect [<i>-h</i>|<i>&#8211;help</i>|<i>-v</i>|<i>&#8211;verbose</i>|<i>-V</i>|<i>&#8211;version</i>|<i>-D</i>|<i>&#8211;debug</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Laptop-detect attempts to determine whether it is being run on a laptop or a desktop and appraises its caller of this.</p>
 <h2>OPTIONS</h2>
 <dl>

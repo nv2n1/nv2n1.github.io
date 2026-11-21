@@ -1,4 +1,5 @@
 ---
+
 title: "perlcommunity(1)"
 name: "perlcommunity"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlcommunity/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlcommunity - a brief overview of the Perl community 
 
- perlcommunity - a brief overview of the Perl community 
-
-<h2>DESCRIPTION</h2>
-
- This document aims to provide an overview of the vast perl community, which is far too large and diverse to provide a detailed listing. If any specific niche has been forgotten, it is not meant as an insult but an omission for the sake of brevity. 
+This document aims to provide an overview of the vast perl community, which is far too large and diverse to provide a detailed listing. If any specific niche has been forgotten, it is not meant as an insult but an omission for the sake of brevity. 
 
  The Perl community is as diverse as Perl, and there is a large amount of evidence that the Perl users apply <font SIZE="-1">TMTOWTDI</font> to all endeavors, not just programming. From websites, to <font SIZE="-1">IRC,</font> to mailing lists, there is more than one way to get involved in the community.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ncftpget(1)"
 name: "ncftpget"
 section: "1"
@@ -9,7 +10,6 @@ description: "ncftpget – Internet file transfer program for scripts"
 
 <h2>NAME</h2>
 <p> ncftpget &#8211; Internet file transfer program for scripts</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ncftpget</code> [<i>options</i>] <i>remote-host local-directory remote-files&#8230;</i> </p>
 <p> <code>ncftpget</code> [<i>options</i>] <i>bookmark-name local-directory remote-files&#8230;</i> </p>
 <p> <code>ncftpget</code> -f login.cfg [<i>options</i>] <i>local-directory remote-files&#8230;</i> </p>
@@ -80,7 +80,6 @@ description: "ncftpget – Internet file transfer program for scripts"
 <dd> Set advanced option <i>XX</i>.</dd>
 <dt>
 </dt><dd> This option is used primarily for debugging. It sets the value of an internal variable to an integer value. An example usage would be: <code>-o </code><i>useFEAT=0,useCLNT=1</i> which in this case, disables use of the FEAT command and enables the CLNT command. The available variables include: usePASV, useSIZE, useMDTM, useREST, useNLST_a, useNLST_d, useFEAT, useMLSD, useMLST, useCLNT, useHELP_SITE, useSITE_UTIME, STATfileParamWorks, NLSTfileParamWorks, require20, allowProxyForPORT, doNotGetStartCWD.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The purpose of <i>ncftpget</i> is to do file transfers from the command-line without entering an interactive shell. This lets you write shell scripts or other unattended processes that can do FTP. It is also useful for advanced users who want to retrieve files from the shell command line without entering an interactive FTP program such as <i>ncftp</i>. </p>
 <p> One particularly useful feature of this program is that you can give it a <i>uniform resource locator</i> as the only argument and the program will download that file. You can then copy and paste from your web browser or newsreader and use that URL. Example:</p>
 <dl>

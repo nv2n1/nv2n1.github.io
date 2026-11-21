@@ -1,4 +1,5 @@
 ---
+
 title: "enca(1)"
 name: "enca"
 section: "1"
@@ -9,7 +10,6 @@ description: "enca — detect and convert encoding of text files"
 
 <h2>NAME</h2>
 <p> enca &#8212; detect and convert encoding of text files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>enca</code> [<code>-L</code> <i>LANGUAGE</i>] [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;<br />
  <code>enconv</code> [<code>-L</code> <i>LANGUAGE</i>] [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
 <h2>INTRODUCTION AND EXAMPLES</h2>
@@ -48,7 +48,6 @@ description: "enca — detect and convert encoding of text files"
 </dt><dd>
 <p> enca &#8211;help</dd></dl>
 <p> to get description of all other Enca options (and to find the rest of this manual page redundant).</p>
-<h2>DESCRIPTION</h2>
 <p> Enca reads given text files, or standard input when none are given, and uses knowledge about their language (must be supported by you) and a mixture of parsing, statistical analysis, guessing and black magic to determine their encodings, which it then prints to standard output (or it confesses it doesn&#8217;t have any idea what the encoding could be). By default, Enca presents results as a multiline human-readable descriptions, several other formats are available&#8211;see Output type selectors below. </p>
 <p> Enca can also convert files to some other encoding <i>ENC</i> when you ask for it&#8211;either using a built-in converter, some conversion library, or by calling an external converter. </p>
 <p> Enca&#8217;s primary goal is to be usable unattended, as an automatic conversion tool, though it perhaps have not reached this point yet (please see section <code>SECURITY</code>). </p>

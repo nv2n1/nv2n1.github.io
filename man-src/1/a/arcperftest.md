@@ -1,4 +1,5 @@
 ---
+
 title: "arcperftest(1)"
 name: "arcperftest"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-arcperftest/"
 description: "arcperftest – ARC service performance tester"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>arcperftest</code> [ <code>-c</code> <i>config</i> ] [ <code>-d</code> <i>debug</i> ] [ <code>-r</code> ] <i>url threads duration</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>arcperftest</code> command test the performance of an ARC service specified by its <i>url</i> sending <i>threads</i> number of concurrent requests for a duration of <i>duration</i> seconds. </p>
 <h2>OPTIONS</h2>
 <dl>

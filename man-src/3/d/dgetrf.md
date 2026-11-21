@@ -1,4 +1,5 @@
 ---
+
 title: "dgetrf(3)"
 name: "dgetrf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgetrf/"
 description: "dgetrf.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgetrf</code> (M, N, A, LDA, IPIV, INFO)<br />
  <i></i><code>DGETRF</code></p>

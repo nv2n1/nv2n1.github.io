@@ -1,4 +1,5 @@
 ---
+
 title: "cannacheck(1)"
 name: "cannacheck"
 section: "1"
@@ -9,9 +10,7 @@ description: "cannacheck – Display information about Japanese input system Can
 
 <h2>NAME</h2>
 <p> cannacheck &#8211; Display information about Japanese input system Canna</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cannacheck [-v]</code></p>
-<h2>DESCRIPTION</h2>
 <p> cannacheck displays the problems concerning use of Canna and the related information. It examines the following items:</p>
 <dl>
 <dt>&#8211;</dt>

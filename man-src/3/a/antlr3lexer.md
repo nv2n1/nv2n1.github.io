@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3lexer(3)"
 name: "antlr3lexer"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3lexer.h –"
 ---
 
 <p> Base interface for any ANTLR3 lexer.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt;<br />

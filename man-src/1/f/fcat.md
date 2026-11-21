@@ -1,4 +1,5 @@
 ---
+
 title: "fcat(1)"
 name: "fcat"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-fcat/"
 description: "fcat – Output the contents of a file based on its name."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fcat </code>&#8211; Output the contents of a file based on its name. </p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 fcat[-hRsvV][-f fstype][-i imgtype][-o imgoffset][-b dev_sector_size] path_of_file image[images]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>fcat</code> opens the named <code>image</code>(s) and copies the file at the path <i>path_of_file</i> to standard output.</p>
 <h2>ARGUMENTS</h2>
 <dl>

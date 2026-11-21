@@ -1,4 +1,5 @@
 ---
+
 title: "tbl-dctrl(1)"
 name: "tbl-dctrl"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tbl-dctrl/"
 description: "tbl-dctrl – generate tabular representations of data in dctrl format"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>tbl-dctrl</code> [ <i>options</i> ] [ <code>-c</code> <i>column-specification</i> &#8230; ] [ <i>filename</i> ] &#8230; </p>
 <p> <code>tbl-dctrl</code> <code>&#8211;version</code> </p>
 <p> <code>tbl-dctrl</code> <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>tbl-dctrl</code> creates tabular representations of data given to it in Debian control file format. </p>
 <p> By default, <code>tbl-dctrl</code> reads the whole database, looking for the longest entry in each requested column; it then outputs a table, with borders and column titles, where each column is just wide enough to fit the longest entry. Most of this behaviour can be customized as described below. </p>
 <p> A column is requested by specifying the <code>-c</code> (<code>&#8211;column</code>) switch with a column specification. The simplest kind of a column specification consists solely of the name of a field. In such a case, <code>tbl-dctrl</code> will include in the output a column whose title is the literal column specification and whose data is drawn from fields with that name. If no <code>-c</code> options are given, <code>tbl-dctrl</code> will use all fields in the input in the order in which they first appear. </p>

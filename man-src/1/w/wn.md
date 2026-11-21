@@ -1,4 +1,5 @@
 ---
+
 title: "wn(1)"
 name: "wn"
 section: "1"
@@ -9,9 +10,7 @@ description: "wn – command line interface to WordNet lexical database"
 
 <h2>NAME</h2>
 <p> wn &#8211; command line interface to WordNet lexical database</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wn</code> [ <i>searchstr</i> ] [ <code>-h</code>] [ <code>-g</code> ] [ <code>-a</code> ] [ <code>-l</code> ] [ <code>-o</code> ] [ <code>-s</code> ] [ <code>-n</code><i>#</i> ] [ <i>search_option</i>&#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>wn()</code> provides a command line interface to the WordNet database, allowing synsets and relations to be displayed as formatted text. For each word, different searches are provided, based on syntactic category and pointer types. Although only base forms of words are usually stored in WordNet, users may search for inflected forms. A morphological process is applied to the search string to generate a form that is present in WordNet. </p>
 <p> The command line interface is often useful when writing scripts to extract information from the WordNet database. Post-processing of the output with various scripting tools can reformat the results as desired.</p>
 <h2>OPTIONS</h2>

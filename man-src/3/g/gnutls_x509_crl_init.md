@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crl_init(3)"
 name: "gnutls_x509_crl_init"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_x509_crl_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_init &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_init(gnutls_x509_crl_t * </code><i>crl</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_crl_t * crl</dt>
 <dd> The structure to be initialized</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will initialize a CRL structure. CRL stands for Certificate Revocation List. A revocation list usually contains lists of certificate serial numbers that have been revoked by an Authority. The revocation lists are always signed with the authority&#8217;s private key.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dvipdf(1)"
 name: "dvipdf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dvipdf/"
 description: "dvipdf – Convert TeX DVI file to PDF using ghostscript and dvips"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dvipdf</code> [ <i>options</i> ] <i>input.dvi</i> [ <i>output.pdf</i> ] &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This script invokes <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1) with the <code>-q</code> option, and pipes its output into <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) with the following options: </p>
 <p> <center> <code>-q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite</code><br />
  </center> </p>

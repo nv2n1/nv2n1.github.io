@@ -1,4 +1,5 @@
 ---
+
 title: "lag_(3)"
 name: "lag_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lag_/"
 description: "QuantLib::InflationSwap – Abstract base class for inflation swaps."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/inflationswap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>YearOnYearInflationSwap</code>, and <code>ZeroCouponInflationSwap</code>. </p>

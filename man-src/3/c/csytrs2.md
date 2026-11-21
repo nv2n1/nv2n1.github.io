@@ -1,4 +1,5 @@
 ---
+
 title: "csytrs2(3)"
 name: "csytrs2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csytrs2/"
 description: "csytrs2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csytrs2</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, WORK, INFO)<br />
  <i></i><code>CSYTRS2</code></p>

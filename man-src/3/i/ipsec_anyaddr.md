@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_anyaddr(3)"
 name: "ipsec_anyaddr"
 section: "3"
@@ -9,7 +10,6 @@ description: "ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecad
 
 <h2>NAME</h2>
 <p> ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecaddr, ipsec_loopbackaddr, ipsec_isloopbackaddr &#8211; get and test for addresses of type &quot;any&quot;, &quot;unspecified&quot; and loopback get &quot;any&quot; address</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>const char *anyaddr(int af, ip_address *dst);</code><br />
  <code>int isanyaddr(const ip_address *src);</code><br />
@@ -17,7 +17,6 @@ description: "ipsec_anyaddr, ipsec_isanyaddr, ipsec_unspecaddr, ipsec_isunspecad
  <code>int isunspecaddr(const ip_address *src);</code><br />
  <code>const char *loopbackaddr(int af, ip_address *dst);</code><br />
  <code>int isloopbackaddr(const ip_address *src);</code></p>
-<h2>DESCRIPTION</h2>
 <p> These functions fill in, and test for, special values of the <i>ip_address</i> type. </p>
 <p> <i>Anyaddr</i> fills in the destination <i>*dst</i> with the &#8220;any&#8221; address of address family <i>af</i> (normally <code>AF_INET</code> or <code>AF_INET6</code>). The IPv4 &#8220;any&#8221; address is the one embodied in the old <code>INADDR_ANY</code> macro. </p>
 <p> <i>Isanyaddr</i> returns <code>1</code> if the <i>src</i> address equals the &#8220;any&#8221; address, and <code>0</code> otherwise. </p>

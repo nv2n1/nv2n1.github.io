@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-apply(1)"
 name: "wimlib-imagex-apply"
 section: "1"
@@ -6,11 +7,10 @@ letter: "w"
 url: "/docs/linux/man/1-wimlib-imagex-apply/"
 description: "wimlib-imagex-apply – Extract one image, or all images, from a WIM archive"
 ---
+
 <h2>NAME</h2>
 <p> wimlib-imagex-apply - Extract one image, or all images, from a WIM archive  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex apply</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>TARGET</i> [<i>OPTION</i>...]  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex apply</code> extracts an image, or all images, from the Windows Imaging (WIM) file <i>WIMFILE</i>. This command is also available as simply <code>wimapply</code> if the appropriate hard link or batch file has been installed. </p>
 <p> This command is designed to extract, or &quot;apply&quot;, one or more full WIM images. If you instead want to extract only certain files or directories contained in a WIM image, consider using <code>wimlib-imagex extract</code> or <code>wimlib-imagex mount</code> instead. (<code>wimlib-imagex mount</code> is not supported on Windows.) </p>
 <p> <i>IMAGE</i> specifies the WIM image in <i>WIMFILE</i> to extract. It may be a 1-based index of an image in <i>WIMFILE</i>, the name of an image in <i>WIMFILE</i>, or the keyword &quot;all&quot; to indicate that all images in <i>WIMFILE</i> are to be extracted. Use the <code>wimlib-imagex info</code> (1) command to show what images a WIM file contains. <i>IMAGE</i> may be omitted if <i>WIMFILE</i> contains only one image. </p>

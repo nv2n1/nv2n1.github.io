@@ -1,4 +1,5 @@
 ---
+
 title: "make_step_iterator(3)"
 name: "make_step_iterator"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-make_step_iterator/"
 description: "QuantLib::step_iterator – Iterator advancing in constant steps."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/utilities/steppingiterator.hpp&gt; </p>
 <p> Inherits boost::iterator_adaptor&lt;step_iterator&lt;Iterator&gt;, Iterator&gt;. </p>
 <h3>Public Member Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "pdf2dsc(1)"
 name: "pdf2dsc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdf2dsc/"
 description: "pdf2dsc – generate a PostScript page list of a PDF document"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdf2dsc</code> <i>input.pdf</i> [ <i>output.dsc</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pdf2dsc</code> uses <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to read an Adobe <code>Portable Document Format</code> (PDF) document &quot;input.pdf&quot; and create a <code>PostScript</code>(tm) document &quot;output.dsc&quot; that conforms to Adobe&#8217;s <code>Document Structuring Conventions</code> (DSC) requirements. </p>
 <p> This new document simply tells Ghostscript to read the PDF file and to display pages one at a time. The generated document can then be viewed with any PostScript viewer based on Ghostscript, like <code>ghostview</code>(1) on Unix or <code>GSview</code> on Windows, with which the user can browse through the pages of the PDF document in any order. </p>
 <p> If no output file is named on the command line, the name of the output file is that of the input file with any extension removed, followed by the extension &quot;.dsc&quot;.</p>

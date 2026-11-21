@@ -1,4 +1,5 @@
 ---
+
 title: "cone(1)"
 name: "cone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cone/"
 description: "cone – Read and send E-mail messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cone</code> [-r] [-c&nbsp;<wbr><i>directory</i>]</dt></dl>
 <h2>USAGE</h2>

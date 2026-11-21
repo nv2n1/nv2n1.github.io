@@ -1,4 +1,5 @@
 ---
+
 title: "log4cpp(3)"
 name: "log4cpp"
 section: "3"
@@ -8,7 +9,6 @@ description: "log4cpp –"
 ---
 
 <p> The top level namespace for all &#8216;Log for C++&#8217; types and classes.</p>
-<h2>SYNOPSIS</h2>
 <h3>Namespaces</h3>
 <p> <code>details</code> </p>
 <p> <code>threading</code> </p>

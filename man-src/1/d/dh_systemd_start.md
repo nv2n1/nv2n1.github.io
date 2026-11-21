@@ -1,4 +1,5 @@
 ---
+
 title: "dh_systemd_start(1)"
 name: "dh_systemd_start"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_systemd_start/"
 description: "dh_systemd_start – start/stop/restart systemd unit files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_systemd_start</code> [<i>debhelper options</i>] [<code>&#8211;restart-after-upgrade</code>] [<code>&#8211;no-stop-on-upgrade</code>] [<i>unit file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_systemd_start</code> is a debhelper program that is responsible for starting/stopping or restarting systemd unit files in case no corresponding sysv init script is available. </p>
 <p> As with <code>dh_installinit</code>, the unit file is stopped before upgrades and started afterwards (unless <code>&#8211;restart-after-upgrade</code> is specified, in which case it will only be restarted after the upgrade). This logic is not used when there is a corresponding SysV init script because invoke-rc.d performs the stop/start/restart in that case.</p>
 <h2>OPTIONS</h2>

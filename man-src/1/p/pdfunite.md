@@ -1,4 +1,5 @@
 ---
+
 title: "pdfunite(1)"
 name: "pdfunite"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pdfunite/"
 description: "pdfunite – Portable Document Format (PDF) page merger"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pdfunite</code> [options] <i>PDF-sourcefile1..PDF-sourcefilen PDF-destfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>pdfunite</code> merges several PDF (Portable Document Format) files in order of their occurrence on command line to one PDF result file.</p>
 <dl>
 <dt>Neither of the PDF-sourcefile1 to PDF-sourcefilen should be encrypted.</dt>

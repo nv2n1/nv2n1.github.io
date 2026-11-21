@@ -1,4 +1,5 @@
 ---
+
 title: "slaed5(3)"
 name: "slaed5"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaed5/"
 description: "slaed5.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed5</code> (I, D, Z, DELTA, RHO, DLAM)<br />
  <i></i><code>SLAED5</code> used by sstedc. Solves the 2-by-2 secular equation.</p>

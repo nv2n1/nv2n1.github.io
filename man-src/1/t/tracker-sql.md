@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-sql(1)"
 name: "tracker-sql"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-tracker-sql/"
 description: "tracker-sql – Use SQL to query the Tracker databases."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <code>tracker sql</code> -q &lt;<i>sql</i>&gt; | -f &lt;<i>file</i>&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command allows probing of the current database. When using commands like <code>tracker sparql</code>, the SPARQL used is translated into SQL before being run on the database. This allows direct use of the database using SQL avoiding the SPARQL engine entirely. </p>
 <p> The caller can run a query two ways, either by providing a <i>file</i> with the query or by providing a string with the <i>sql</i> query. </p>
 <p> The <i>file</i> argument can be either a local path or a URI. It also does not have to be an absolute path. </p>

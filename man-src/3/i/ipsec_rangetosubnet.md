@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_rangetosubnet(3)"
 name: "ipsec_rangetosubnet"
 section: "3"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/3-ipsec_rangetosubnet/"
 description: "ipsec_rangetosubnet – convert address range to subnet"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;freeswan.h&gt;
 </code></pre>
 <dl>
 <dt> <code>const char *rangetosubnet(const ip_address&nbsp;<wbr>*&nbsp;<wbr></code><i>start</i><code>, const ip_address&nbsp;<wbr>*&nbsp;<wbr></code><i>stop</i><code>, ip_subnet&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <i>Rangetosubnet</i></p>
 <dd>accepts two IP addresses which define an address range, from <i>start</i> to <i>stop</i> inclusive, and converts this to a subnet if possible. The addresses must both be IPv4 or both be IPv6, and the address family of the resulting subnet is the same. </dd>
 <p> <i>Rangetosubnet</i> returns NULL for success and a pointer to a string-literal error message for failure; see DIAGNOSTICS.</p>

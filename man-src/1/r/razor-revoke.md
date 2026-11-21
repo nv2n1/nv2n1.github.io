@@ -1,4 +1,5 @@
 ---
+
 title: "razor-revoke(1)"
 name: "razor-revoke"
 section: "1"
@@ -6,23 +7,16 @@ letter: "r"
 url: "/docs/linux/man/1-razor-revoke/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+&quot;razor-revoke&quot; - Razor Revoking Agent 
 
- &quot;razor-revoke&quot; - Razor Revoking Agent 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     razor-revoke [options]  file_with_mail_in_rfc822_format
     $ cat mail | razor-revoke
     $ razor-revoke ./mail 
     $ razor-revoke -d ./mail
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- <tt>&quot;razor-revoke&quot;</tt> is the Razor Revoking Agent which is used for reporting messages as <font SIZE="-1">NOT</font> spam to a Razor Nomination Server. For instance, it can be invoked if a check incorrectly marked a message as spam or after a message was incorrectly reported as spam. <tt>&quot;razor-revoke&quot;</tt> should be generally called from a <font SIZE="-1">MUA,</font> although there are no restrictions on invoking it from the command-line. <tt>&quot;razor-revoke&quot;</tt> is a filter, which means that spam messages should be piped through it. By default, <tt>&quot;razor-revoke&quot;</tt> backgrounds and detaches itself from the control terminal at start-up. 
+<tt>&quot;razor-revoke&quot;</tt> is the Razor Revoking Agent which is used for reporting messages as <font SIZE="-1">NOT</font> spam to a Razor Nomination Server. For instance, it can be invoked if a check incorrectly marked a message as spam or after a message was incorrectly reported as spam. <tt>&quot;razor-revoke&quot;</tt> should be generally called from a <font SIZE="-1">MUA,</font> although there are no restrictions on invoking it from the command-line. <tt>&quot;razor-revoke&quot;</tt> is a filter, which means that spam messages should be piped through it. By default, <tt>&quot;razor-revoke&quot;</tt> backgrounds and detaches itself from the control terminal at start-up. 
 
  If <tt>&quot;razor-revoke&quot;</tt> is passed more than one mail, it will revoke each against the database. Please use this with caution, we don't want the database to have inaccurate information. <tt>&quot;razor-revoke&quot;</tt> supports mbox-formatted files with 1 or more mails in them as well as files containing a single <font SIZE="-1">RFC 822 </font>(non-mbox) mail. More than one file may be present on the command line, can be either a non-mbox or mbox in any order. However, more than one non-mbox mail cannot be read from stdin. 
 

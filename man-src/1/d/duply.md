@@ -1,4 +1,5 @@
 ---
+
 title: "duply(1)"
 name: "duply"
 section: "1"
@@ -8,7 +9,6 @@ url: "/docs/linux/man/1-duply/"
 
 <h2>VERSION</h2>
 <p> duply version 1.11.3 (<a rel="nofollow" href="http://duply.net)">http://duply.net)</a></p>
-<h2>DESCRIPTION</h2>
 <p> Duply deals as a wrapper for the mighty duplicity magic. It simplifies running duplicity with cron or on command line by:</p>
 <dl>
 <dl>

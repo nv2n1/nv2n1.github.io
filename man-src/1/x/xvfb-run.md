@@ -1,4 +1,5 @@
 ---
+
 title: "xvfb-run(1)"
 name: "xvfb-run"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xvfb-run/"
 description: "xvfb-run – run specified X client or command in a virtual X server environment"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>xvfb-run</code> [ <i>options</i> ] <i>command</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>xvfb-run</code> is a wrapper for the <code>Xvfb</code>(1x) command which simplifies the task of running commands (typically an X client, or a script containing a list of clients to be run) within a virtual X server environment. </p>
 <p> <code>xvfb-run</code> sets up an X authority file (or uses an existing user-specified one), writes a cookie to it (see <code>xauth</code>(1x)) and then starts the <code>Xvfb</code> X server as a background process. The process ID of <code>Xvfb</code> is stored for later use. The specified <i>command</i> is then run using the X display corresponding to the <code>Xvfb</code> server just started and the X authority file created earlier. </p>
 <p> When the <i>command</i> exits, its status is saved, the <code>Xvfb</code> server is killed (using the process ID stored earlier), the X authority cookie removed, and the authority file deleted (if the user did not specify one to use). <code>xvfb-run</code> then exits with the exit status of <i>command</i>, except in error conditions (see <font SIZE="-1"><code>EXIT STATUS</code> </font> below). </p>

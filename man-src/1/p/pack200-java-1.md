@@ -1,4 +1,5 @@
 ---
+
 title: "pack200-java-1(1)"
 name: "pack200-java-1"
 section: "1"
@@ -9,7 +10,6 @@ description: "pack200 – Packages a JAR file into a compressed pack200 file for
 
 <h2>NAME</h2>
 <p> pack200 &#8211; Packages a JAR file into a compressed pack200 file for web deployment.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>pack200</code> [<i>options</i>] <i>output-file</i> <i>JAR-file</i>
 </pre>
@@ -21,7 +21,6 @@ description: "pack200 – Packages a JAR file into a compressed pack200 file for
 <dd> Name of the output file.</dd>
 <dt><i>JAR-file</i></dt>
 <dd> Name of the input file.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>pack200</code> command is a Java application that transforms a JAR file into a compressed pack200 file with the Java gzip compressor. The pack200 files are highly compressed files that can be directly deployed to save bandwidth and reduce download time. </p>
 <p> The <code>pack200</code> command has several options to fine-tune and set the compression engine. The typical usage is shown in the following example, where <code>myarchive.pack.gz</code> is produced with the default <code>pack200</code> command settings: </p>
 <pre>

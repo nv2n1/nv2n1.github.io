@@ -1,4 +1,5 @@
 ---
+
 title: "htproxyinfo(1)"
 name: "htproxyinfo"
 section: "1"
@@ -9,10 +10,8 @@ description: "htproxyput, htproxydestroy, htproxytime, htproxyunixtime, htproxyr
 
 <h2>NAME</h2>
 <p> <code>htproxyput, htproxydestroy, htproxytime, htproxyunixtime, htproxyrenew</code> &#8211; GSI proxy delegations and querying, using GridSite/gLite delegation API</p>
-<h2>SYNOPSIS</h2>
 <p> <code>htproxyput, htproxydestroy, htproxytime, htproxyunixtime, htproxyrenew</code> [options] Service-URL </p>
 <p> <code>htproxyinfo</code> [options] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>htproxyput</code> is a client to perform GSI proxy delegations using the GridSite/gLite delegation Web Service portType. The <a href="/docs/linux/man/8-gridsite-delegation/">gridsite-delegation</a>(8) CGI program is the complementary server-side implementation. </p>
 <p> <code>htproxyinfo</code> examines a local copy of a GSI proxy, and outputs a summary of its X.509 and VOMS contents. </p>
 <h2>OPTIONS</h2>

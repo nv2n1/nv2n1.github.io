@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_getaddrinfo(3)"
 name: "lwres_getaddrinfo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_getaddrinfo/"
 description: "lwres_getaddrinfo, lwres_freeaddrinfo – socket address structure to host and service name"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
@@ -31,7 +31,6 @@ struct addrinfo {
 };
 </code></pre>
 </dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>lwres_getaddrinfo()</code> is used to get a list of IP addresses and port numbers for host <i>hostname</i> and service <i>servname</i>. The function is the lightweight resolver&#8217;s implementation of <code>getaddrinfo()</code> as defined in RFC2133. <i>hostname</i> and <i>servname</i> are pointers to null-terminated strings or <code>NULL</code>. <i>hostname</i> is either a host name or a numeric host address string: a dotted decimal IPv4 address or an IPv6 address. <i>servname</i> is either a decimal port number or a service name as listed in <i>/etc/services</i>. </p>
 <p> <i>hints</i> is an optional pointer to a <code>struct addrinfo</code>. This structure can be used to provide hints concerning the type of socket that the caller supports or wishes to use. The caller can supply the following structure elements in <i>*hints</i>: </p>
 <p> <code>ai_family</code></p>

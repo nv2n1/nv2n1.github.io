@@ -1,4 +1,5 @@
 ---
+
 title: "atomic(1)"
 name: "atomic"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-atomic/"
 description: "atomic – Atomic Management Tool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>atomic</code> [OPTIONS] COMMAND [arg&#8230;]<br />
 &nbsp;<wbr>&nbsp;<wbr>{containers,diff,images,install,mount,pull,push,run,scan,sign,stop,storage,migrate,top,trust,uninstall,unmount,umount,update,verify,version} </p>
 <p> [<code>-h</code>|<code>&#8211;help</code>] </p>
-<h2>DESCRIPTION</h2>
 <p> Atomic Management Tool </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code> <code>&#8211;help</code><br />

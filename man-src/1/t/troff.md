@@ -1,4 +1,5 @@
 ---
+
 title: "troff(1)"
 name: "troff"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-troff/"
 description: "troff – the troff processor of the groff text formatting system"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-abcivzCERU</code> ] [ <code>-d </code><i>cs</i> ] [ <code>-f </code><i>fam</i> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-m </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-n </code><i>num</i> ] [ <code>-o </code><i>list</i> ] [ <code>-r </code><i>cn</i> ] [ <code>-T </code><i>name</i> ] [ <code>-w </code><i>name</i> ] [ <code>-W </code><i>name</i> ] [<i>file</i> &#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page describes the GNU version of <code>troff</code>. It is part of the groff document formatting system. It is functionally compatible with Unix troff, but has many extensions, see <code><a href="/docs/linux/man/7-groff_diff/">groff_diff</a></code>(7). Usually it should be invoked using the <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) command which will also run preprocessors and postprocessors in the appropriate order and with the appropriate options.</p>
 <h2>OPTIONS</h2>
 <p> Whitespace is permitted between a command-line option and its argument.</p>

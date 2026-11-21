@@ -1,4 +1,5 @@
 ---
+
 title: "iverilog-vpi(1)"
 name: "iverilog-vpi"
 section: "1"
@@ -9,9 +10,7 @@ description: "iverilog-vpi – Compile front end for VPI modules"
 
 <h2>NAME</h2>
 <p> iverilog-vpi &#8211; Compile front end for VPI modules </p>
-<h2>SYNOPSIS</h2>
 <p> <code>iverilog-vpi</code> [&#8211;name=<i>name</i>] <i>sourcefile</i>&#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <i>iverilog-vpi</i> is a tool to simplify the compilation of VPI modules for use with Icarus Verilog. It takes on the command line a list of C or C++ source files, and generates as output a linked VPI module. See the <code><a href="/docs/linux/man/1-vvp/">vvp</a></code>(1) man page for a description of how the linked module is loaded by a simulation. </p>
 <p> The output is named after the first source file. For example, if the first source file is named <i>foo.c</i>, the output becomes <i>foo.vpi</i>. </p>
 <h2>OPTIONS</h2>

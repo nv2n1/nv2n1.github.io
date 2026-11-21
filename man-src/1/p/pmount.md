@@ -1,4 +1,5 @@
 ---
+
 title: "pmount(1)"
 name: "pmount"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-pmount/"
 description: "pmount – mount arbitrary hotpluggable devices as normal user"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pmount</code> [ <i>options</i> ] <i>device</i> </p>
 <p> <code>pmount</code> [ <i>options</i> ] <i>device label</i> </p>
 <p> <code>pmount &#8211;lock</code> [ <i>options</i> ] <i>device pid</i> </p>
 <p> <code>pmount &#8211;unlock</code> [ <i>options</i> ] <i>device pid</i> </p>
 <p> <code>pmount</code> </p>
-<h2>DESCRIPTION</h2>
 <p> pmount (&quot;policy mount&quot;) is a wrapper around the standard mount program which permits normal users to mount removable devices without a matching /etc/fstab entry. </p>
 <p> pmount also supports encrypted devices which use dm-crypt and have LUKS metadata. If a LUKS-capable <code>cryptsetup</code> is installed, pmount will use it to decrypt the device first and mount the mapped unencrypted device instead. </p>
 <p> <code>pmount</code> is invoked like this: </p>

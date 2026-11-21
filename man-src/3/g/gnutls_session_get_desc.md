@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_get_desc(3)"
 name: "gnutls_session_get_desc"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_session_get_desc – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_get_desc &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>char * gnutls_session_get_desc(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function returns a string describing the current session. The string is null terminated and allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
 <p> a description of the protocols and algorithms in the current session.</p>

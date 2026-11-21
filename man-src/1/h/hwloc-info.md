@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-info(1)"
 name: "hwloc-info"
 section: "1"
@@ -9,7 +10,6 @@ description: "hwloc-info – Show some information about some objects or about a
 
 <h2>NAME</h2>
 <p> hwloc-info &#8211; Show some information about some objects or about a topology</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hwloc-info</code> [ <i>options </i>]&#8230; <i>&lt;object&gt;</i>&#8230; </p>
 <p> <code>hwloc-info</code> [ <i>options </i>]&#8230; </p>
 <p> Note that <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) provides a detailed explanation of the hwloc system and of valid &lt;object&gt; formats; it should be read before reading this man page.</p>
@@ -57,7 +57,6 @@ description: "hwloc-info – Show some information about some objects or about a
 <dd> Use logical indexes instead of physical/OS indexes for input (default).</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> hwloc-info displays information about the specified object. It is intended to be used with tools such as grep for filtering certain attribute lines. When no object is specified, hwloc-info prints a summary of the topology. </p>
 <p> Objects may be specified as location tuples, as explained in <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7). However hexadecimal bitmasks are not accepted since they may correspond to multiple objects. </p>
 <p> <code>NOTE:</code> It is highly recommended that you read the <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) overview page before reading this man page. Most of the concepts described in <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) directly apply to the hwloc-calc utility.</p>

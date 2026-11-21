@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_t(3)"
 name: "bson_string_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_string_t – String Building Abstraction"
 
 <h2>NAME</h2>
 <p> bson_string_t &#8211; String Building Abstraction</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct
@@ -19,7 +19,6 @@ typedef struct
     uint32_t alloc;
 } bson_string_t;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>bson_string_t</code> is an abstraction for building strings. As chunks are added to the string, allocations are performed in powers of two. </p>
 <p> This API is useful if you need to build UTF-8 encoded strings. </p>
 <h2>EXAMPLE</h2>

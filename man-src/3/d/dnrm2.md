@@ -1,4 +1,5 @@
 ---
+
 title: "dnrm2(3)"
 name: "dnrm2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dnrm2/"
 description: "dnrm2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dnrm2</code> (N, X, INCX)<br />
  <i></i><code>DNRM2</code></p>

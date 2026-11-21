@@ -1,4 +1,5 @@
 ---
+
 title: "sxpm(1)"
 name: "sxpm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sxpm/"
 description: "sxpm – Show an XPM (X PixMap) file and/or convert XPM 1 or 2 files to XPM 3."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>sxpm</code> [<code>-d</code> displayname] [<code>-g</code> geometry] [<code>-hints</code>] [<code>-icon</code> filename] [<code>-plaid | </code>filename | -] [<code>-o</code> filename | <code>-o</code> -] [<code>-pcmap</code>] [<code>-closecolors</code>] [<code>-nod</code>] [<code>-nom</code>] [<code>-mono | -grey4 | -grey | -color</code>] [<code>-sc</code> symbol color] [<code>-sp</code> symbol pixel] [<code>-cp</code> color pixel] [<code>-rgb</code> filename] [<code>-v</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <i>sxpm</i> program can be used to view any XPM (version 1, 2, or 3) file and/or to convert a file from XPM1 or XPM2 to XPM version 3. If <i>sxpm</i> is run with any dummy option specified, the usage is displayed. If no geometry is specified, the show window will have the size of the read pixmap. Pressing the key Q in the window will quit the program.</p>
 <h2>OPTIONS</h2>
 <dl>

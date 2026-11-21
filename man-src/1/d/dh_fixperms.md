@@ -1,4 +1,5 @@
 ---
+
 title: "dh_fixperms(1)"
 name: "dh_fixperms"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_fixperms/"
 description: "dh_fixperms – fix permissions of files in package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_fixperms</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_fixperms</code> is a debhelper program that is responsible for setting the permissions of files and directories in package build directories to a sane state &#8212; a state that complies with Debian policy. </p>
 <p> <code>dh_fixperms</code> makes all files in <i>usr/share/doc</i> in the package build directory (excluding files in the <i>examples/</i> directory) be mode 644. It also changes the permissions of all man pages to mode 644. It removes group and other write permission from all files. It removes execute permissions from any libraries, headers, Perl modules, or desktop files that have it set. It makes all files in the standard <i>bin</i> and <i>sbin</i> directories, <i>usr/games/</i> and <i>etc/init.d</i> executable (since v4). Finally, it removes the setuid and setgid bits from all files in the package. </p>
 <p> When the <i>Rules-Requires-Root</i> field has the (effective) value of <i>binary-targets</i>, <code>dh_fixperms</code> will also reset the ownership of all paths to &#8220;root:root&#8221;.</p>

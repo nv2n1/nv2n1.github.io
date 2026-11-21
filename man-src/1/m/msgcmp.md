@@ -1,4 +1,5 @@
 ---
+
 title: "msgcmp(1)"
 name: "msgcmp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-msgcmp/"
 description: "msgcmp – compare message catalog and template"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>msgcmp</code> [<i>OPTION</i>] <i>def.po ref.pot</i></p>
-<h2>DESCRIPTION</h2>
 <p> Compare two Uniforum style .po files to check that both contain the same set of msgid strings. The def.po file is an existing PO file with the translations. The ref.pot file is the last created PO file, or a PO Template file (generally created by xgettext). This is useful for checking that you have translated each and every message in your program. Where an exact match cannot be found, fuzzy matching is used to produce better diagnostics. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

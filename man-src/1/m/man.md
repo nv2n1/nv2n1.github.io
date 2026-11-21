@@ -1,4 +1,5 @@
 ---
+
 title: "man(1)"
 name: "man"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-man/"
 description: "man – an interface to the system reference manuals"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>man</code> [<i>man options</i>] [[<i>section</i>] <i>page</i>&nbsp;&#8230;]&nbsp;&#8230;<br />
  <code>man</code> <code>-k</code> [<i>apropos options</i>] <i>regexp</i> &#8230;<br />
  <code>man</code> <code>-K</code> [<i>man options</i>] [<i>section</i>] <i>term</i>&nbsp;&#8230;<br />
  <code>man</code> <code>-f</code> [<i>whatis</i> <i>options</i>] <i>page</i> &#8230;<br />
  <code>man</code> <code>-l</code> [<i>man options</i>] <i>file</i> &#8230;<br />
  <code>man</code> <code>-w</code>|<code>-W</code> [<i>man options</i>] <i>page</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>man</code> is the system&#8217;s manual pager. Each <i>page</i> argument given to <code>man</code> is normally the name of a program, utility or function. The <i>manual page</i> associated with each of these arguments is then found and displayed. A <i>section</i>, if provided, will direct <code>man</code> to look only in that <i>section</i> of the manual. The default action is to search in all of the available <i>sections</i> following a pre-defined order (see <code>DEFAULTS</code>), and to show only the first <i>page</i> found, even if <i>page</i> exists in several <i>sections</i>. </p>
 <p> The table below shows the <i>section</i> numbers of the manual followed by the types of pages they contain. </p>
 <table>

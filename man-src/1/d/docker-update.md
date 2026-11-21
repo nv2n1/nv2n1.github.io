@@ -1,4 +1,5 @@
 ---
+
 title: "docker-update(1)"
 name: "docker-update"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-update/"
 description: "docker-update – Update configuration of one or more containers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker update [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Alias for docker container update. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;blkio-weight</code>=0 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0)</p>

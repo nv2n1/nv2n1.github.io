@@ -1,4 +1,5 @@
 ---
+
 title: "trademgen_with_db(1)"
 name: "trademgen_with_db"
 section: "1"
@@ -10,9 +11,7 @@ description: "trademgen_with_db –"
 <pre>
   Database-enabled C++ Simulated Travel Demand Generation Library
 </pre>
-<h2>SYNOPSIS</h2>
 <p> <code>trademgen_with_db</code> [&#8211;prefix] [-v|&#8211;version] [-h|&#8211;help] [-b|&#8211;builtin] [-i|&#8211;input &lt;path-to-input&gt;] [-l|&#8211;log &lt;path-to-output-log-file&gt;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>trademgen_with_db</i> is the database-enabled version of the <i>trademgen</i> executable, i.e., a small program showing how to use the TraDemGen library. </p>
 <p> <i>trademgen_with_db</i> accepts the following options: </p>
 <p> <code>&#8211;prefix</code> </p>

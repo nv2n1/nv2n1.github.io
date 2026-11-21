@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd(1)"
 name: "trace-cmd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd/"
 description: "trace-cmd – interacts with Ftrace Linux kernel internal tracer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd</code> <i>COMMAND</i> [<i>OPTIONS</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) command interacts with the Ftrace tracer that is built inside the Linux kernel. It interfaces with the Ftrace specific files found in the debugfs file system under the tracing directory. A <i>COMMAND</i> must be specified to tell trace-cmd what to do.</p>
 <h2>COMMANDS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-graft(1)"
 name: "git-graft"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-graft – Merge and destroy a given branch"
 
 <h2>NAME</h2>
 <p> <code>git-graft</code> &#8211; Merge and destroy a given branch</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-graft</code> &lt;src-branch&gt; &lt;dest-branch&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Merge commits from &lt;src-branch&gt; into &lt;dest-branch&gt;</p>
 <h2>OPTIONS</h2>
 <p> &lt;src-branch&gt; </p>

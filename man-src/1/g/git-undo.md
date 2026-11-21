@@ -1,4 +1,5 @@
 ---
+
 title: "git-undo(1)"
 name: "git-undo"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-undo – Remove latest commits"
 
 <h2>NAME</h2>
 <p> <code>git-undo</code> &#8211; Remove latest commits</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-undo</code> [&lt;commitcount&gt;] [-s, &#8211;soft, -h, &#8211;hard]</p>
-<h2>DESCRIPTION</h2>
 <p> Removes the latest commits.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;soft or -s </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dmascc_cfg(1)"
 name: "dmascc_cfg"
 section: "1"
@@ -9,9 +10,7 @@ description: "dmascc_cfg – Configure dmascc devices"
 
 <h2>NAME</h2>
 <p> dmascc_cfg &#8211; Configure dmascc devices</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dmascc &lt;interface&gt; [&lt;options&gt;]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>dmascc_cfg</code> is used to configure dmascc devices such as PI2 and PackeTwin cards. The <code>&#8211;show</code> option can be used by any user, all other options must be used by root.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-plugin-ls(1)"
 name: "docker-plugin-ls"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-plugin-ls/"
 description: "docker-plugin-ls – List plugins"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker plugin ls [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Lists all the plugins that are currently installed. You can install plugins using the docker plugin install command. You can also filter using the -f or &#8211;filter flag. </p>
 <h2>Filters</h2>
 <p> Filter output based on these conditions:<br />

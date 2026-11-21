@@ -1,4 +1,5 @@
 ---
+
 title: "cla_heamv(3)"
 name: "cla_heamv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_heamv/"
 description: "cla_heamv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cla_heamv</code> (UPLO, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>CLA_HEAMV</code> computes a matrix-vector product using a Hermitian indefinite matrix to calculate error bounds.</p>

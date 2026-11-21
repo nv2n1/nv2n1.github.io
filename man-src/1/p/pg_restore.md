@@ -1,4 +1,5 @@
 ---
+
 title: "pg_restore(1)"
 name: "pg_restore"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pg_restore/"
 description: "pg_restore – restore a PostgreSQL database from an archive file created by pg_dump"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_restore</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>filename</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>pg_restore is a utility for restoring a PostgreSQL database from an archive created by <code><a href="/docs/linux/man/1-pg_dump/">pg_dump</a></code>(1) in one of the non-plain-text formats. It will issue the commands necessary to reconstruct the database to the state it was in at the time it was saved. The archive files also allow pg_restore to be selective about what is restored, or even to reorder the items prior to being restored. The archive files are designed to be portable across architectures. </dd>
 <p> pg_restore can operate in two modes. If a database name is specified, pg_restore connects to that database and restores archive contents directly into the database. Otherwise, a script containing the SQL commands necessary to rebuild the database is created and written to a file or standard output. This script output is equivalent to the plain text output format of pg_dump. Some of the options controlling the output are therefore analogous to pg_dump options. </p>
 <p> Obviously, pg_restore cannot restore information that is not present in the archive file. For instance, if the archive was made using the &#8220;dump data as <code>INSERT</code> commands&#8221; option, pg_restore will not be able to load the data using <code>COPY</code> statements.</p>

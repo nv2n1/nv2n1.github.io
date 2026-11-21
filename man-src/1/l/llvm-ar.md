@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-ar(1)"
 name: "llvm-ar"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-ar/"
 description: "llvm-ar – LLVM archiver"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-ar</code> [-]{dmpqrtx}[Rabfikouz] [relpos] [count] &lt;archive&gt; [files&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-ar</code> command is similar to the common Unix utility, <tt>&quot;ar&quot;</tt>. It archives several files together into a single file. The intent for this is to produce archive libraries by <font SIZE="-1">LLVM</font> bitcode that can be linked into an <font SIZE="-1">LLVM</font> program. However, the archive can contain any kind of file. By default, <code>llvm-ar</code> generates a symbol table that makes linking faster because only the symbol table needs to be consulted, not each individual file member of the archive. </p>
 <p> The <code>llvm-ar</code> command can be used to <i>read</i> both <font SIZE="-1">SVR4</font> and <font SIZE="-1">BSD</font> style archive files. However, it cannot be used to write them. While the <code>llvm-ar</code> command produces files that are <i>almost</i> identical to the format used by other <tt>&quot;ar&quot;</tt> implementations, it has two significant departures in order to make the archive appropriate for <font SIZE="-1">LLVM</font>. The first departure is that <code>llvm-ar</code> only uses <font SIZE="-1">BSD4</font>.4 style long path names (stored immediately after the header) and never contains a string table for long names. The second departure is that the symbol table is formated for efficient construction of an in-memory data structure that permits rapid (red-black tree) lookups. Consequently, archives produced with <code>llvm-ar</code> usually won&#8217;t be readable or editable with any <tt>&quot;ar&quot;</tt> implementation or useful for linking. Using the <tt>&quot;f&quot;</tt> modifier to flatten file names will make the archive readable by other <tt>&quot;ar&quot;</tt> implementations but not for linking because the symbol table format for <font SIZE="-1">LLVM</font> is unique. If an <font SIZE="-1">SVR4</font> or <font SIZE="-1">BSD</font> style archive is used with the <tt>&quot;r&quot;</tt> (replace) or <tt>&quot;q&quot;</tt> (quick update) operations, the archive will be reconstructed in <font SIZE="-1">LLVM</font> format. This means that the string table will be dropped (in deference to <font SIZE="-1">BSD</font> 4.4 long names) and an <font SIZE="-1">LLVM</font> symbol table will be added (by default). The system symbol table will be retained. </p>
 <p> Here&#8217;s where <code>llvm-ar</code> departs from previous <tt>&quot;ar&quot;</tt> implementations:</p>

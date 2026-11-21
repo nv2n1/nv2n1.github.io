@@ -1,4 +1,5 @@
 ---
+
 title: "idevicesyslog(1)"
 name: "idevicesyslog"
 section: "1"
@@ -9,9 +10,7 @@ description: "idevicesyslog – Relay syslog of a connected device."
 
 <h2>NAME</h2>
 <p> idevicesyslog &#8211; Relay syslog of a connected device.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>idevicesyslog</code> [OPTIONS] </p>
-<h2>DESCRIPTION</h2>
 <p> Relay syslog of a connected device. </p>
 <h2>OPTIONS</h2>
 <dl>

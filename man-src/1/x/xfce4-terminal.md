@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-terminal(1)"
 name: "xfce4-terminal"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-xfce4-terminal/"
 description: "xfce4-terminal – A Terminal emulator for X"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xfce4-terminal</code> [OPTION&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>xfce4-terminal is what is known as an X terminal emulator, often referred to as terminal or shell. It provides an equivalent to the old-fashioned text screen on your desktop, but one which can easily share the screen with other graphical applications. Windows users may already be familiar with the MS-DOS Prompt utility, which has the analogous function of offering a DOS command-line under Windows, though one should note that the UNIX CLI offer far more power and ease of use than does DOS. </dd>
 <p> xfce4-terminal emulates the xterm application developed by the X Consortium. In turn, the xterm application emulates the DEC VT102 terminal and also supports the DEC VT220 escape sequences. An escape sequence is a series of characters that start with the Esc character. xfce4-terminal accepts all of the escape sequences that the VT102 and VT220 terminals use for functions such as to position the cursor and to clear the screen.</p>
 <h2>OPTIONS</h2>

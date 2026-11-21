@@ -1,4 +1,5 @@
 ---
+
 title: "freight-init(1)"
 name: "freight-init"
 section: "1"
@@ -9,9 +10,7 @@ description: "freight-init – initialize a Freight directory"
 
 <h2>NAME</h2>
 <p> <code>freight-init</code> &#8211; initialize a Freight directory</p>
-<h2>SYNOPSIS</h2>
 <p> <code>freight init</code> [<code>&#8211;libdir</code> <i>varlib</i>] [<code>&#8211;cachedir</code> <i>varcache</i>] [<code>&#8211;archs</code> <i>archs</i>] [<code>&#8211;origin</code> <i>origin</i>] [<code>&#8211;label</code> <i>label</i>] [<code>-v</code>] [<code>-h</code>] <code>-g</code> <i>gpg</i> <i>dirname</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>freight-init</code> will setup a directory to be used by Freight. It will generate small wrappers around the original Freight commands. Use <code><a href="/docs/linux/man/1-freight-add/">freight-add</a></code>(1) and <code><a href="/docs/linux/man/1-freight-cache/">freight-cache</a></code>(1) to work against the <code>VARLIB</code> and <code>VARCACHE</code> given to <code>freight init</code>. </p>
 <p> The benefit of using <code>freight-init</code> is to automate the setup of Freight and to configure all data to be stored in one directory. </p>
 <p> Configuration is stored in <i>dirname</i><code>/etc/freight.conf</code>.</p>

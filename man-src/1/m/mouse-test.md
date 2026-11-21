@@ -1,4 +1,5 @@
 ---
+
 title: "mouse-test(1)"
 name: "mouse-test"
 section: "1"
@@ -11,7 +12,6 @@ description: "mouse-test – a tool for determining mouse type and device it’s
 <p> mouse-test &#8211; a tool for determining mouse type and device it&#8217;s attached to.</p>
 <h2>SYNTAX</h2>
 <p> <code>mouse-test</code> [ <i>device</i> &#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> This experimental and incomplete application tries to help in detecting which protocol does your mouse speak. It is able to detect MouseMan devices, and to choose between -t ms (three-buttons aware) and -t bare old two-buttons-only serial mice. </p>
 <h2>BUGS</h2>
 <p> I know the application is buggy, but I only own one mouse device. If you are interested in this application, just call me and awake me from my laziness. </p>

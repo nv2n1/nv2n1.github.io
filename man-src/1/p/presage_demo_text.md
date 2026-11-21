@@ -1,4 +1,5 @@
 ---
+
 title: "presage_demo_text(1)"
 name: "presage_demo_text"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-presage_demo_text/"
 description: "presage_demo_text – presage demo program (text)"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>presage_demo_text</code> [<i>,OPTION/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> At the prompt, type in some text. Hit enter to generate a prediction. Any text input is valid, including no text, a single character, or a long string.</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;config</code> CONFIG</dt>

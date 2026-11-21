@@ -1,4 +1,5 @@
 ---
+
 title: "klogctl(3)"
 name: "klogctl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-klogctl/"
 description: "syslog, klogctl – read and/or clear kernel message ring buffer; set console_loglevel"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 int syslog(int type, char *bufp, int len);
 /* No wrapper provided in glibc */
@@ -15,7 +15,6 @@ int syslog(int type, char *bufp, int len);
 #include &lt;sys/klog.h&gt;
 int klogctl(int type, char *bufp, int len);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: Probably, you are looking for the C library function <code>syslog</code>(), which talks to <code>syslogd</code>(8); see <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) for details. </p>
 <p> This page describes the kernel <code>syslog</code>() system call, which is used to control the kernel <i>printk</i>() buffer; the glibc wrapper function for the system call is called <code>klogctl</code>().</p>
 <h3>The kernel log buffer</h3>

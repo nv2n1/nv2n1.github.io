@@ -1,4 +1,5 @@
 ---
+
 title: "defined(3)"
 name: "defined"
 section: "3"
@@ -6,14 +7,7 @@ letter: "d"
 url: "/docs/linux/man/3-defined/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- libmaxminddb - a library for working with MaxMind DB files 
-
-<h2>SYNOPSIS</h2>
+libmaxminddb - a library for working with MaxMind DB files 
 
 <dl>
 <dt>
@@ -262,11 +256,7 @@ typedef struct MMDB_entry_data_list_s &amp;nbsp;
 MMDB_entry_data_list_s;
 </code></pre></dd></dl>
 
-<h2>DESCRIPTION</h2>
-
- 
-
- The libmaxminddb library provides functions for working MaxMind DB files. See <a rel="nofollow" HREF="http://maxmind.github.io/MaxMind-DB/">http://maxmind.github.io/MaxMind-DB/</a> for the MaxMind DB format specification. The database and results are all represented by different data structures. Databases are opened by calling MMDB_open(). You can look up IP addresses as a string with MMDB_lookup_string() or as a pointer to a sockaddr structure with MMDB_lookup_sockaddr(). 
+The libmaxminddb library provides functions for working MaxMind DB files. See <a rel="nofollow" HREF="http://maxmind.github.io/MaxMind-DB/">http://maxmind.github.io/MaxMind-DB/</a> for the MaxMind DB format specification. The database and results are all represented by different data structures. Databases are opened by calling MMDB_open(). You can look up IP addresses as a string with MMDB_lookup_string() or as a pointer to a sockaddr structure with MMDB_lookup_sockaddr(). 
 
  If the lookup finds the IP address in the database, it returns a MMDB_lookup_result_s structure. If that structure indicates that the database has data for the IP, there are a number of functions that can be used to fetch that data. These include MMDB_get_value() and MMDB_get_entry_data_list(). See the function documentation below for more details. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "refer(1)"
 name: "refer"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-refer/"
 description: "refer – preprocess bibliographic references for groff"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-benCPRS</code> ] [ <code>-a </code><i>n</i> ] [ <code>-c </code><i>fields</i> ] [ <code>-f </code><i>n</i> ] [ <code>-i </code><i>fields</i> ] [ <code>-k </code><i>field</i> ] [ <code>-l </code><i>m,n</i> ] [ <code>-p </code><i>filename</i> ] [ <code>-s </code><i>fields</i> ] [ <code>-t </code><i>n</i> ] <code>-B </code><i>field</i><code>.</code><i>macro</i> [<i>file</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> This file documents the GNU version of <code>refer</code>, which is part of the groff document formatting system. <code>refer</code> copies the contents of <i>filename</i>&#8230; to the standard output, except that lines between <code>.[</code> and <code>.]</code> are interpreted as citations, and lines between <code>.R1</code> and <code>.R2</code> are interpreted as commands about how citations are to be processed. </p>
 <p> Each citation specifies a reference. The citation can specify a reference that is contained in a bibliographic database by giving a set of keywords that only that reference contains. Alternatively it can specify a reference by supplying a database record in the citation. A combination of these alternatives is also possible. </p>
 <p> For each citation, <code>refer</code> can produce a mark in the text. This mark consists of some label which can be separated from the text and from other labels in various ways. For each reference it also outputs <code>groff</code> commands that can be used by a macro package to produce a formatted reference for each citation. The output of <code>refer</code> must therefore be processed using a suitable macro package. The <code>-ms</code> and <code>-me</code> macros are both suitable. The commands to format a citation&#8217;s reference can be output immediately after the citation, or the references may be accumulated, and the commands output at some later point. If the references are accumulated, then multiple citations of the same reference will produce a single formatted reference. </p>

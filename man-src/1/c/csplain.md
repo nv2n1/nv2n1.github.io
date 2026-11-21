@@ -1,4 +1,5 @@
 ---
+
 title: "csplain(1)"
 name: "csplain"
 section: "1"
@@ -6,9 +7,8 @@ letter: "c"
 url: "/docs/linux/man/1-csplain/"
 description: "pdftex – PDF output from TeX"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> <code>pdftex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]  </p>
-<h2>DESCRIPTION</h2>
 <p> Run the pdfTeX typesetter on <i>file</i>, usually creating <i>file.pdf</i>. If the file argument has no extension, &quot;.tex&quot; will be appended to it. Instead of a filename, a set of pdfTeX commands can be given, the first of which must start with a backslash. With a <code>&amp;</code><i>format</i> argument pdfTeX uses a different set of precompiled commands, contained in <i>format</i><code>.fmt</code>; it is usually better to use the <code>-fmt</code> <i>format</i> option instead. </p>
 <p> pdfTeX is a version of TeX, with the e-TeX extensions, that can create PDF files as well as DVI files. </p>
 <p> In DVI mode, pdfTeX can be used as a complete replacement for the TeX engine. </p>

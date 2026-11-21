@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-dump(1)"
 name: "oggz-dump"
 section: "1"
@@ -10,7 +11,6 @@ description: "oggz-dump — Hexdump packets of an Ogg file, or revert an Ogg fil
 <h2>NAME</h2>
 <p> oggz-dump &#8212; Hexdump packets of an Ogg file, or revert an Ogg file from such a hexdump<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>oggz-dump</code> [-b | &#8211;binary ] [-x | &#8211;hexadecimal ] [-n | &#8211;new ] [-o <code>filename</code> | &#8211;output <code>filename</code> ] [-c <code>content-type</code> | &#8211;content-type <code>content-type</code> ] [-s <code>serialno</code> | &#8211;serialno <code>serialno</code> ] [-O | &#8211;hide-offset ] [-S | &#8211;hide-serialno ] [-G | &#8211;hide-granulepos ] [-P | &#8211;hide-packetno ] filename </p>
 <p> <code>oggz-dump</code> [-r | &#8211;revert ] [-o <code>filename</code> | &#8211;output <code>filename</code> ] filename </p>
 <p> <code>oggz-dump</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>

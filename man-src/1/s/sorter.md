@@ -1,4 +1,5 @@
 ---
+
 title: "sorter(1)"
 name: "sorter"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-sorter/"
 description: "sorter – Sort files in an image into categories based on file type"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>[-b</code> <i>size</i> <code>] [-e] [-E] [-h] [-l] [-md5] [-s] [-sha1] [-U] [-v] [-V] [-a</code> <i>hash_alert</i> <code>] [-c </code> <i>config</i> <code>] [-C </code> <i>config</i> <code>] [-d</code> <i>dir</i> <code>] [-m</code> <i>mnt</i> <code>] [-n</code> <i>nsrl_db</i> <code>] [-x</code> <i>hash_exclude</i> <code>] [-i imgtype] [-o imgoffset] [-f fstype] image [image] [meta_addr]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>sorter</code> is a Perl script that analyzes a file system to organize the allocated and unallocated files by file type. It runs the &#8216;file&#8217; command on each file and organizes the files according to the rules in configuration files. Extension mismatching is also done to identify &#8216;hidden&#8217; files. One can also provide hash databases for files that are known to be good and can be ignored and files that are known to be bad and should be alerted. </p>
 <p> By default, the program uses the configuration files in the directory where The Sleuth Kit was installed. Those can be overruled with run-time options. There is a standard configuration file for all file system types and then a specific one for a given operating system. </p>
 <h2>ARGUMENTS</h2>

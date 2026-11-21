@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_iflags(2)"
 name: "ioctl_iflags"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl_iflags/"
 description: "ioctl_iflags – ioctl() operations for inode flags"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Various Linux filesystems support the notion of <i>inode flags</i>&#8212;attributes that modify the semantics of files and directories. These flags can be retrieved and modified using two <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations: </p>
 <p> int attr; fd = open(&quot;pathname&quot;, &#8230;); </p>
 <p> ioctl(fd, FS_IOC_GETFLAGS, &amp;attr); /* Place current flags<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_set_basic_constraints(3)"
 name: "gnutls_x509_crt_set_basic_constraints"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_set_basic_constraints – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_basic_constraints &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_basic_constraints(gnutls_x509_crt_t </code><i>crt</i><code>, unsigned int </code><i>ca</i><code>, int </code><i>pathLenConstraint</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_crt_set_basic_constraints – API function"
 <dd> <a href="/docs/linux/man/1-true/">true</a>(1) or false(0). Depending on the Certificate authority status.</dd>
 <dt>int pathLenConstraint</dt>
 <dd> non-negative error codes indicate maximum length of path, and negative error codes indicate that the pathLenConstraints field should not be present.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will set the basicConstraints certificate extension.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

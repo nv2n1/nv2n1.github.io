@@ -1,4 +1,5 @@
 ---
+
 title: "perl5139delta(1)"
 name: "perl5139delta"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perl5139delta/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perl5139delta - what is new for perl v5.13.9 
 
- perl5139delta - what is new for perl v5.13.9 
-
-<h2>DESCRIPTION</h2>
-
- This document describes differences between the 5.13.8 release and the 5.13.9 release. 
+This document describes differences between the 5.13.8 release and the 5.13.9 release. 
 
  If you are upgrading from an earlier release such as 5.13.7, first read perl5138delta, which describes differences between 5.13.7 and 5.13.8.
 

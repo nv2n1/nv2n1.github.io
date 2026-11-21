@@ -1,4 +1,5 @@
 ---
+
 title: "dd_rescue(1)"
 name: "dd_rescue"
 section: "1"
@@ -9,11 +10,9 @@ description: "dd_rescue – Data recovery and protection tool"
 
 <h2>NAME</h2>
 <p> dd_rescue &#8211; Data recovery and protection tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>dd_rescue</code> [options] infile outfile<br />
  <code>dd_rescue</code> [options] [-2/-3/-4/-z/-Z seed/seedfile] outfile<br />
  <code>dd_rescue</code> [options] [&#8211;shred2/&#8211;shred3/&#8211;shred4/&#8211;random/&#8211;frandom seed/seedfile] outfile</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dd_rescue</code> is a tool that copies data from a source (file, block device, pipe, &#8230;) to one (or several) output file(s). </p>
 <p> If input and output files are seekable (block devices or regular files), <code>dd_rescue</code> does copy with large blocks (softbs) to increase performance. When a read error is encountered, <code>dd_rescue</code> falls back to reading smaller blocks (hardbs), to allow to recover the maximum amount of data. If blocks can still not be read, <code>dd_rescue</code> by default skips over them also in the output file, avoiding to overwrite data that might have been copied there successfully in a previous run. (Option -A / &#8211;alwayswrite changes this.). </p>
 <p> <code>dd_rescue</code> can copy in reverse direction as well, allowing to approach a bad spot from both directions. As trying to read over a bad spot of significant size can take very long (and potentially cause further damage), this is an important optimization when recovering data. The <code>dd_rhelp</code> tool takes advantage of this and automates data recovery. <code>dd_rescue</code> does not (by default) truncate the output file. </p>

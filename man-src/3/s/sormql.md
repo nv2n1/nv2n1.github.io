@@ -1,4 +1,5 @@
 ---
+
 title: "sormql(3)"
 name: "sormql"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sormql/"
 description: "sormql.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sormql</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>SORMQL</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo(1)"
 name: "osinfo"
 section: "1"
@@ -9,11 +10,9 @@ description: "osinfo – gather information regarding the running operating syst
 
 <h2>NAME</h2>
 <p> osinfo &#8211; gather information regarding the running operating system</p>
-<h2>SYNOPSIS</h2>
 <p> <code>osinfo</code> [ <code>-s</code> ] [ <code>-h</code> hostname ] [ <code>-p</code> portnumber ]<br />
 &nbsp;<wbr>[&nbsp;<wbr><code>-u</code>&nbsp;<wbr>username&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-w</code>&nbsp;<wbr>password&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-t</code>&nbsp;<wbr>timeout&nbsp;<wbr>]<br />
 &nbsp;<wbr>[&nbsp;<wbr><code>-c</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;help</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;version</code>&nbsp;<wbr>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>osinfo </code> command displays information regarding the operating system, gathered via WBEM using the PG_OperatingSystem class supported by the OperatingSystem Provider (bundled with OpenPegasus). <code>osinfo</code> requires the CIM Server to be installed and running. </p>
 <p> By default, the information is formatted for display, converting CIMDateTime strings into a more user-readable format (see Examples), and converting the total number of seconds of uptime into the appropriate number of days, hours, minutes, and seconds. </p>
 <p> If a property value is unavailable, it will be shown as &quot;Unknown&quot;</p>

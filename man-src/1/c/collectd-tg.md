@@ -1,4 +1,5 @@
 ---
+
 title: "collectd-tg(1)"
 name: "collectd-tg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-collectd-tg/"
 description: "collectd-tg – Traffic generator for collectd."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> collectd-tg <code>-n</code> <i>num_vl</i> <code>-H</code> <i>num_hosts</i> <code>-p</code> <i>num_plugins</i> <code>-i</code> <i>interval</i> <code>-d</code> <i>dest</i> <code>-D</code> <i>dport</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>collectd-tg</code> generates bogus <i>collectd</i> network traffic. While host, plugin and values are generated randomly, the generated traffic tries to mimic &#8220;real&#8221; traffic as closely as possible.</p>
 <h2>ARGUMENTS AND OPTIONS</h2>
 <p> The following options are understood by <i>collectd-tg</i>. The order of the arguments generally doesn&#8217;t matter, as long as no argument is passed more than once.</p>

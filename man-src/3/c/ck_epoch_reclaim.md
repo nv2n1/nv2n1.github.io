@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_reclaim(3)"
 name: "ck_epoch_reclaim"
 section: "3"
@@ -11,9 +12,7 @@ description: "ck_epoch_reclaim – immediately execute all deferred callbacks"
 <p> <code>ck_epoch_reclaim</code> &#8211; immediately execute all deferred callbacks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
-<h2>SYNOPSIS</h2>
 <p> In ck_epoch.h Ft void Fn ck_epoch_reclaim ck_epoch_record_t *record</p>
-<h2>DESCRIPTION</h2>
 <p> The Fn ck_epoch_reclaim 3 function will unconditionally execute all callbacks that have been deferred with Fn ck_epoch_call 3 .</p>
 <h2>EXAMPLE</h2>
 <blockquote>

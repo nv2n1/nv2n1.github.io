@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installudev(1)"
 name: "dh_installudev"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installudev/"
 description: "dh_installudev – install udev rules files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installudev</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;name=</code><i>name</i>] [<code>&#8211;priority=</code><i>priority</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installudev</code> is a debhelper program that is responsible for installing <code>udev</code> rules files.</p>
 <h2>FILES</h2>
 <dl>

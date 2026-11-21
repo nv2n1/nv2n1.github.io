@@ -1,4 +1,5 @@
 ---
+
 title: "extendedblackvariancecurve(3)"
 name: "extendedblackvariancecurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-extendedblackvariancecurve/"
 description: "ql/experimental/volatility/extendedblackvariancecurve.hpp – Black volatility curve modelled as variance curve."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp&gt;<br />
  #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;ql/handle.hpp&gt;<br />

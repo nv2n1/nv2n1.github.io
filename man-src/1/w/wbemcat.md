@@ -1,4 +1,5 @@
 ---
+
 title: "wbemcat(1)"
 name: "wbemcat"
 section: "1"
@@ -9,9 +10,7 @@ description: "wbemcat – a multi-protocol CIM-XML client"
 
 <h2>NAME</h2>
 <p> wbemcat &#8211; a multi-protocol CIM-XML client </p>
-<h2>SYNOPSIS</h2>
 <p> <code>wbemcatX</code> [<i>options</i>] [<i>FILE</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Utility to send raw CIM-XML request <i>FILE</i> to the a CIMOM and display the response/results. Default CIMOM is <i><a rel="nofollow" href="http://localhost:5988">http://localhost:5988</a></i>. If no input file is specified then get XML data from stdin. This used to be the wbemcatX utility before it officially replaced the original.</p>
 <h2>OPTIONS</h2>
 <dl>

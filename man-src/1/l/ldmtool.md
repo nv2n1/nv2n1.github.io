@@ -1,4 +1,5 @@
 ---
+
 title: "ldmtool(1)"
 name: "ldmtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldmtool/"
 description: "ldmtool – A tool to manage Microsoft Windows dynamic disks"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldmtool</code> [options]</dt>
 <dt> <code>ldmtool</code> [options] scan [<i>device</i>&#8230;]</dt>
@@ -19,7 +19,6 @@ description: "ldmtool – A tool to manage Microsoft Windows dynamic disks"
 <p> <code>-d|&#8211;device</code> <i>device</i></p>
 <dl>
 <dd>Automatically scan <i>device</i>.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>ldmtool</code> is a tool for managing Microsoft Windows dynamic disks, which use Microsoft&#8217;s LDM metadata. It can inspect them, and also create and remove device-mapper block devices which can be mounted. </p>
 <p> Although a filesystem can be mounted read-write and its contents modified, <code>ldmtool</code> is not able to modify the LDM metadata itself. That is, it cannot create, remove or edit dynamic disks. </p>
 <p> It is also not able to mount RAID5 volumes which have a partition missing, although it can mount mirrored volumes with a partition missing. However, mounting a volume with a missing partition is not recommended, as ldmtool does not update the LDM metadata in any way. This means Windows will have no way to determine that the partitions are not synchronised when it subsequently mounted, which may result in corruption.</p>

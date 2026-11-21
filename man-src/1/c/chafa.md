@@ -1,4 +1,5 @@
 ---
+
 title: "chafa(1)"
 name: "chafa"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-chafa/"
 description: "chafa – Character art facsimile generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chafa</code> [OPTION&#8230;] [IMAGE&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>chafa</code></p>
 <dd>is a utility that converts all kinds of images, including animated GIFs, into (potentially animated) ANSI/Unicode character output that can be displayed in a terminal. It supports alpha transparency and multiple color modes and color spaces, and combines a range of Unicode characters for optimal output. </dd>
 <p> You can specify one or more input files, but the default behavior is slightly different with multiple files &#8212; for instance, animations will not loop forever when there is more than one input file.</p>

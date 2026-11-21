@@ -1,4 +1,5 @@
 ---
+
 title: "shellinaboxd(1)"
 name: "shellinaboxd"
 section: "1"
@@ -9,11 +10,9 @@ description: "shellinaboxd – publish command line shell through AJAX interface
 
 <h2>NAME</h2>
 <p> shellinaboxd &#8211; publish command line shell through AJAX interface</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>shellinaboxd</code></dt>
 <dd> [&nbsp;<wbr><code>-b</code>&nbsp;<wbr>| <code>&#8211;background</code>[<code>=</code><i>pidfile</i>]&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>| <code>&#8211;cert=</code><i>certdir</i>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;cert-fd=</code><i>fd</i>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;css=</code><i>filename</i>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;cgi</code>[<code>=</code><i>portrange</i>]&nbsp;<wbr>] [&nbsp;<wbr><code>-d</code>&nbsp;<wbr>| <code>&#8211;debug</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-f</code>&nbsp;<wbr>| <code>&#8211;static-file=</code><i>url</i>:<i>file</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-g</code>&nbsp;<wbr>| <code>&#8211;group=</code><i>gid</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>| <code>&#8211;help</code>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;linkify</code>=[<code>none</code>|<code>normal</code>|<code>aggressive</code>]&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;localhost-only</code>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;no-beep</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>| <code>&#8211;numeric</code>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;pidfile=</code><i>pidfile</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-p</code>&nbsp;<wbr>| <code>&#8211;port=</code><i>port</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>| <code>&#8211;service=</code><i>service</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>| <code>&#8211;disable-ssl</code>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;disable-ssl-menu</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-q</code>&nbsp;<wbr>| <code>&#8211;quiet</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-u</code>&nbsp;<wbr>| <code>&#8211;user=</code><i>uid</i>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;user-css=</code><i>styles</i>&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>| <code>&#8211;verbose</code>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;version</code>&nbsp;<wbr>]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>shellinaboxd</code> daemon implements a webserver that listens on the specified <i>port</i>. The web server publishes one or more <i>services</i> that will be displayed in a VT100 emulator implemented as an AJAX web application. By default, the port is 4200 and the default service URL is <i><a rel="nofollow" href="http://localhost:4200/">http://localhost:4200/</a></i>. </p>
 <p> If no particular <i>service</i> was requested, the server launches <code>/bin/login</code> querying the user for their username and password. It then starts the user&#8217;s default login shell. </p>
 <p> Any modern JavaScript and CSS enabled browser will be able to access the published <i>service</i> without requiring additional plugins.</p>

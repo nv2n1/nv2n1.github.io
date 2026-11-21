@@ -1,4 +1,5 @@
 ---
+
 title: "myisamlog(1)"
 name: "myisamlog"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-myisamlog/"
 description: "myisamlog – display MyISAM log file contents"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>myisamlog [</code><i>options</i><code>] [</code><i>log_file</i><code> [</code><i>tbl_name</i><code>] &#8230;]</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>myisamlog</code></p>
 <dd>processes the contents of a MyISAM log file. To create such a file, start the server with a <code>&#8211;log-isam=</code><code>log_file</code> option. </dd>
 <p> Invoke <code>myisamlog</code> like this: </p>

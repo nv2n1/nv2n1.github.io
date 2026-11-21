@@ -1,4 +1,5 @@
 ---
+
 title: "ctbmv(3)"
 name: "ctbmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctbmv/"
 description: "ctbmv.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctbmv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br />
  <i></i><code>CTBMV</code></p>

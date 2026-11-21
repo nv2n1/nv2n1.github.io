@@ -1,4 +1,5 @@
 ---
+
 title: "emacsclient(1)"
 name: "emacsclient"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-emacsclient/"
 description: "emacsclient – tells a running Emacs to visit a file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>emacsclient</code> <i>[options] files &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>emacsclient</code> command. Full documentation is available in the GNU Info format; see below. This manual page was originally written for the Debian GNU/Linux distribution, but is not specific to that system. </p>
 <p> <code>emacsclient</code> works in conjunction with the built-in Emacs server. </p>
 <p> You can either call <code>emacsclient</code> directly or let other programs run it for you when necessary. On GNU and Unix systems many programs consult the environment variable EDITOR (sometimes also VISUAL) to obtain the command used for editing. Thus, setting this environment variable to &#8217;emacsclient&#8217; will allow these programs to use an already running Emacs for editing. Other operating systems might have their own methods for defining the default editor. </p>

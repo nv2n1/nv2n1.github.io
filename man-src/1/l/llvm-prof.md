@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-prof(1)"
 name: "llvm-prof"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-prof/"
 description: "llvm-prof – print execution profile of LLVM program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-prof</code> [<i>options</i>] [<i>bitcode file</i>] [<i>llvmprof.out</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-prof</code> tool reads in an <i>llvmprof.out</i> file (which can optionally use a specific file with the third program argument), a bitcode file for the program, and produces a human readable report, suitable for determining where the program hotspots are. </p>
 <p> This program is often used in conjunction with the <i>utils/profile.pl</i> script. This script automatically instruments a program, runs it with the <font SIZE="-1">JIT</font>, then runs <code>llvm-prof</code> to format a report. To get more information about <i>utils/profile.pl</i>, execute it with the <code>-help</code> option.</p>
 <h2>OPTIONS</h2>

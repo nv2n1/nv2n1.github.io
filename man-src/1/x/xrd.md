@@ -1,4 +1,5 @@
 ---
+
 title: "xrd(1)"
 name: "xrd"
 section: "1"
@@ -9,12 +10,10 @@ description: "xrd – xrootd file and directory meta-data utility"
 
 <h2>NAME</h2>
 <p> xrd &#8211; xrootd file and directory meta-data utility</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 xrd[host][options][command] options : [-DSpname stringval][-DIpname numberval][options]
                                                           [-Oopaqueinfo][-h]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>This tool is DEPRECATED. Please use xrdfs instead.</code> </p>
 <p> The <code>xrd</code> utility executes meta-data oriented operations (e.g., ls, mv, rm, etc.) on one or more xrootd servers. Usage synopsis can be displayed by typing &quot;<code>xrd -h</code>&quot;. Command help is available by invoking <code>xrd</code> with no command line options or parameters and then typing &quot;help&quot; in response to the input prompt.</p>
 <h2>OPTIONS</h2>

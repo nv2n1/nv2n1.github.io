@@ -1,4 +1,5 @@
 ---
+
 title: "fopencookie(3)"
 name: "fopencookie"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-fopencookie/"
 description: "fopencookie – opening a custom stream"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;stdio.h&gt;
 FILE *fopencookie(void *cookie, const char *mode,
                   cookie_io_functions_t io_funcs);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>fopencookie</code>() function allows the programmer to create a custom implementation for a standard I/O stream. This implementation can store the stream&#8217;s data at a location of its own choosing; for example, <code>fopencookie</code>() is used to implement <code><a href="/docs/linux/man/3-fmemopen/">fmemopen</a></code>(3), which provides a stream interface to data that is stored in a buffer in memory. </p>
 <p> In order to create a custom stream the programmer must:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_dih_d(1)"
 name: "g_dih_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_dih – analyzes dihedral transitions"
 <h2>NAME</h2>
 <p> g_dih &#8211; analyzes dihedral transitions </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_dih</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-o</code><i> hello.out </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]sa</code><i></i> <code>-mult</code><i> int </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_dih can do two things. The default is to analyze dihedral transitions by merely computing all the dihedral angles defined in your topology for the whole trajectory. When a dihedral flips over to another minimum an angle/time plot is made. </p>
 <p> The opther option is to discretize the dihedral space into a number of bins, and group each conformation in dihedral space in the appropriate bin. The output is then given as a number of dihedral conformations sorted according to occupancy.</p>
 <h2>FILES</h2>

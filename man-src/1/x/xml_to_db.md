@@ -1,4 +1,5 @@
 ---
+
 title: "xml_to_db(1)"
 name: "xml_to_db"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-xml_to_db/"
 description: "xml_to_db – convert a subset of XML into fsdb"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
     xml_to_db -k EntityField &lt;source.xml
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Converts a <i>very limited</i> subset of <font SIZE="-1">XML</font> into Fsdb format. </p>
 <p> The input is XML-format (<i>not</i> fsdb). The input is parsed as <font SIZE="-1">XML,</font> and each entity of type <font SIZE="-1">ENTITYFIELD</font> is extracted as a row. <font SIZE="-1">ENTITYFIELD</font> can have mutliple components separated by slashes to walk down the <font SIZE="-1">XML</font> tree, if necessary. </p>
 <p> The input <font SIZE="-1">XML</font> file is assumed to be <i>very simple</i>. All rows are assumed to be sequential in one entity. Any other than the specified <font SIZE="-1">ENTITYFIELD</font> are ignored. The schema is assumed to be defined by the first instances of that field. </p>

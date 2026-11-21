@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_set_client_avp_function(3)"
 name: "gnutls_ia_set_client_avp_function"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ia_set_client_avp_function – Used to set a AVP callback"
 
 <h2>NAME</h2>
 <p> gnutls_ia_set_client_avp_function &#8211; Used to set a AVP callback</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>void gnutls_ia_set_client_avp_function(gnutls_ia_client_credentials_t </code><i>cred</i><code>, gnutls_ia_avp_func </code><i>avp_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_ia_set_client_avp_function – Used to set a AVP callback"
 <dd> is a <code>gnutls_ia_client_credentials_t</code> structure.</dd>
 <dt>gnutls_ia_avp_func avp_func</dt>
 <dd> is the callback function</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Set the TLS/IA AVP callback handler used for the session. </p>
 <p> The AVP callback is called to process AVPs received from the server, and to get a new AVP to send to the server. </p>
 <p> The callback&#8217;s function form is: int (*avp_func) (gnutls_session_t session, void *ptr, const char *last, size_t lastlen, char **next, size_t *nextlen); </p>

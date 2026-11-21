@@ -1,4 +1,5 @@
 ---
+
 title: "analyticcontinuousfloatinglookback(3)"
 name: "analyticcontinuousfloatinglookback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-analyticcontinuousfloatinglookback/"
 description: "ql/pricingengines/lookback/analyticcontinuousfloatinglookback.hpp – Analytic engine for continuous floating-strike lookback."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/lookbackoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />
  #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>

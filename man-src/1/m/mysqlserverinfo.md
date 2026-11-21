@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlserverinfo(1)"
 name: "mysqlserverinfo"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mysqlserverinfo/"
 description: "mysqlserverinfo – Display Common Diagnostic Information from a Server"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlserverinfo [</code><i>options</i><code>] </code><i>db1</i><code> [</code><i>:db2</i><code>] &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>This utility displays critical information about a server for use in diagnosing problems. The information displayed includes the following: </dd>
 <dl>
 <dt>

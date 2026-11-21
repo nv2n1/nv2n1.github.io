@@ -1,4 +1,5 @@
 ---
+
 title: "iopl(2)"
 name: "iopl"
 section: "2"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/2-iopl/"
 description: "iopl – change I/O privilege level"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/io.h&gt;</code> </p>
 <p> <code>int iopl(int </code><i>level</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>iopl</code>() changes the I/O privilege level of the calling thread, as specified by the two least significant bits in <i>level</i>. </p>
 <p> The I/O privilege level for a normal thread is 0. Permissions are inherited from parents to children. </p>
 <p> This call is deprecated, is significantly slower than <code><a href="/docs/linux/man/2-ioperm/">ioperm</a></code>(2), and is only provided for older X servers which require access to all 65536 I/O ports. It is mostly for the i386 architecture. On many other architectures it does not exist or will always return an error.</p>

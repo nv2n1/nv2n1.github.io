@@ -1,4 +1,5 @@
 ---
+
 title: "gvmap(1)"
 name: "gvmap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gvmap/"
 description: "gvmap – find clusters and create a geographical map highlighting clusters."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gvmap</code> [ <i>options</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>files</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gvmap</code> takes as input a graph in DOT format, finds node clusters and produces a rendering of the graph as a geographic-style map, with clusters highlighted as countries, in xdot format. </p>
 <p> In the input graph, each node must have position, width and height information (pos, width and height attributes, respectively) defined, and nodes must not overlap. </p>
 <p> By default, <code>gvmap</code> will generate the clusters from the data. If desired, the input graph can specify cluster information by giving every node a <i>cluster</i> attribute whose value is a small positive integer. (It is works best if <i>cluster</i> values are all integers in the interval [1,K] for some K. Nodes sharing the same <i>cluster</i> attribute value will be put into the same cluster. <code>N.B.</code> For the <i>cluster</i> attribute to be used, all nodes must have a valid value. </p>

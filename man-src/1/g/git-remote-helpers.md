@@ -1,4 +1,5 @@
 ---
+
 title: "git-remote-helpers(1)"
 name: "git-remote-helpers"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-remote-helpers/"
 description: "git-remote-helpers – Helper programs to interact with remote repositories"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>git remote-&lt;transport&gt;</i> &lt;repository&gt; [&lt;URL&gt;]
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Remote helper programs are normally not used directly by end users, but they are invoked by git when it needs to interact with remote repositories git does not support natively. A given helper will implement a subset of the capabilities documented here. When git needs to interact with a repository using a remote helper, it spawns the helper as an independent process, sends commands to the helper&#8217;s standard input, and expects results from the helper&#8217;s standard output. Because a remote helper runs as an independent process from git, there is no need to re-link git to add a new helper, nor any need to link the helper with the implementation of git. </p>
 <p> Every helper must support the &quot;capabilities&quot; command, which git uses to determine what other commands the helper will accept. Those other commands can be used to discover and update remote refs, transport objects between the object database and the remote repository, and update the local object store. </p>
 <p> Git comes with a &quot;curl&quot; family of remote helpers, that handle various transport protocols, such as <i>git-remote-http</i>, <i>git-remote-https</i>, <i>git-remote-ftp</i> and <i>git-remote-ftps</i>. They implement the capabilities <i>fetch</i>, <i>option</i>, and <i>push</i>.</p>

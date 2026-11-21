@@ -1,4 +1,5 @@
 ---
+
 title: "grub-fstest(1)"
 name: "grub-fstest"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-grub-fstest/"
 description: "grub-fstest – debug tool for GRUB filesystem drivers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>grub-fstest</code> [<i>,OPTION/</i>&#8230;] <i>,IMAGE_PATH COMMANDS/</i></p>
-<h2>DESCRIPTION</h2>
 <p> Debug tool for filesystem driver.</p>
 <dl>
 <dt>

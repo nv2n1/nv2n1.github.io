@@ -1,4 +1,5 @@
 ---
+
 title: "rmt(1)"
 name: "rmt"
 section: "1"
@@ -9,10 +10,8 @@ description: "rmt – remote magnetic tape protocol server"
 
 <h2>NAME</h2>
 <p> rmt &#8211; remote magnetic tape protocol server</p>
-<h2>SYNOPSIS</h2>
 <p> <code>/opt/schily/sbin/rmt</code><br />
  <code>/etc/rmt</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This is the description of the enhanced <code>Schily</code> version of the <code>rmt</code> remote tape server program. <code>rmt</code> is a program used by programs like <code>star </code> and <code>ufsdump </code> that like to access remote magnetic tape drives and files through an interprocess communication connection. <code>rmt</code> is normally started up with an <code><a href="/docs/linux/man/3-rexec/">rexec</a></code>(3) or <code><a href="/docs/linux/man/3-rcmd/">rcmd</a></code>(3) call. </p>
 <p> The <code>rmt</code> program accepts <code>open</code>, <code>close</code>, <code>read</code>, <code>write </code> and <code>seek</code> requests as well as requests that are specific to magnetic tapes. <code>rmt</code> performs the commands and then responds with a status indication. </p>
 <p> This version of the rmt server gives full compatibility to the original BSD version, the enhanced Sun version and the enhanced GNU version. In addition to the Sun and GNU enhancements, it implements further abstractions for better cross platform compliance. It supports best speed and best compliance even when server and client code are running on different platforms. It is prepared to be installed as a user shell in the passwd file to create remote tape specific logins and security checking. To use the enhanced compatibility features, you need to either use the remote tape client code from <code>star</code> which is available in <code>librmt</code> or reimplement its features. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtompeg(1)"
 name: "ppmtompeg"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ppmtompeg/"
 description: "ppmtompeg – encodes MPEG-1 bitstreams"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ppmtompeg</code> [ <i>options</i> ] <i>parameter-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>ppmtompeg</code> produces an MPEG-1 video stream. param_file is a parameter file which includes a list of input files and other parameters. The file is described in detail below. The -gop, -combine_gops, -frames, and -combine_frames options are all exclusive. This man page is probably incomplete. For complete usage, see the User&#8217;s Guide.</p>
 <h2>OPTIONS</h2>
 <dl>

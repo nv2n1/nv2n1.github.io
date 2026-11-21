@@ -1,4 +1,5 @@
 ---
+
 title: "pskctool(1)"
 name: "pskctool"
 section: "1"
@@ -9,9 +10,7 @@ description: "pskctool – Portable Symmetric Key Container (PSKC) tool"
 
 <h2>NAME</h2>
 <p> pskctool &#8211; Portable Symmetric Key Container (PSKC) tool</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pskctool</code> [<i>OPTIONS</i>]&#8230; [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> pskctool 2.4.1 </p>
 <p> Manipulate Portable Symmetric Key Container (PSKC) data. </p>
 <p> This tool allows you to parse, print, validate, sign and verify PSKC data. The input is provided in FILE or on standard input.</p>

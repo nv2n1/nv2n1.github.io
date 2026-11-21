@@ -1,4 +1,5 @@
 ---
+
 title: "mh-chart(1)"
 name: "mh-chart"
 section: "1"
@@ -9,7 +10,6 @@ description: "mh-chart – Chart of nmh Commands"
 
 <h2>NAME</h2>
 <p> mh-chart &#8211; Chart of nmh Commands</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ali</code> [<code>-alias</code> <i>aliasfile</i>] [<code>-list</code> | <code>-nolist</code>] [<code>-normalize</code> | <code>-nonormalize</code>] [<code>-user</code> | <code>-nouser</code>] [<code>-version</code>] [<code>-help</code>] [<i>aliases</i> &#8230;] </dt>
 <dt> <code>anno</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-component</code> <i>field</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-date</code> | <code>-nodate</code>] [<code>-version</code>] [<code>-help</code>] [<code>-text</code> <i>body</i>] </dt>

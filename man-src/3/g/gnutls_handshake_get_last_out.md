@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_handshake_get_last_out(3)"
 name: "gnutls_handshake_get_last_out"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_handshake_get_last_out – API function"
 
 <h2>NAME</h2>
 <p> gnutls_handshake_get_last_out &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>gnutls_handshake_description_t gnutls_handshake_get_last_out(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function is only useful to check where the last performed handshake failed. If the previous handshake succeed or was not performed at all then no meaningful value will be returned. </p>
 <p> Check <code>gnutls_handshake_description_t</code> in gnutls.h for the available handshake descriptions.</p>
 <h2>RETURNS</h2>

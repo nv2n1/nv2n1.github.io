@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_send_x509_rdn_sequence(3)"
 name: "gnutls_certificate_send_x509_rdn_sequence"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_certificate_send_x509_rdn_sequence – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_send_x509_rdn_sequence &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_send_x509_rdn_sequence(gnutls_session_t </code><i>session</i><code>, int </code><i>status</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_certificate_send_x509_rdn_sequence – API function"
 <dd> is a pointer to a <code>gnutls_session_t</code> structure.</dd>
 <dt>int status</dt>
 <dd> is 0 or 1</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> If status is non zero, this function will order gnutls not to send the rdnSequence in the certificate request message. That is the server will not advertise its trusted CAs to the peer. If status is zero then the default behaviour will take effect, which is to advertise the server&#8217;s trusted CAs. </p>
 <p> This function has no effect in clients, and in authentication methods other than certificate with X.509 certificates.</p>
 <h2>REPORTING BUGS</h2>

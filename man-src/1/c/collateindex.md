@@ -1,4 +1,5 @@
 ---
+
 title: "collateindex(1)"
 name: "collateindex"
 section: "1"
@@ -9,11 +10,9 @@ description: "collateindex.pl – generate DocBook index files"
 
 <h2>NAME</h2>
 <p> collateindex.pl &#8211; generate DocBook index files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>collateindex.pl</code> [<code>-f</code>] [<code>-g</code>] [<code>-i</code> <i>id</i>] [<code>-I</code> <i>scope</i>] [<code>-N</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-p</code>]&nbsp;<wbr>[<code>-P</code>&nbsp;<wbr><i>file</i>]&nbsp;<wbr>[<code>-q</code>]&nbsp;<wbr>[<code>-s</code>&nbsp;<wbr><i>name</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-S</code>&nbsp;<wbr><i>scope</i>]&nbsp;<wbr>[<code>-t</code>&nbsp;<wbr><i>name</i>]&nbsp;<wbr>[<code>-x</code>]&nbsp;<wbr><i>file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>collateindex.pl</code> creates index data for DocBook <font SIZE="-1">XML</font> or <font SIZE="-1">SGML</font> files.</p>
 <h2>OPTIONS</h2>
 <dl>

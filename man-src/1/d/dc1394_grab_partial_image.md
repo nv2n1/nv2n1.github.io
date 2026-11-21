@@ -1,4 +1,5 @@
 ---
+
 title: "dc1394_grab_partial_image(1)"
 name: "dc1394_grab_partial_image"
 section: "1"
@@ -9,9 +10,7 @@ description: "grab_partial_image – grab a partial image using libdc1394"
 
 <h2>NAME</h2>
 <p> grab_partial_image &#8211; grab a partial image using libdc1394</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grab_partial_image</code></p>
-<h2>DESCRIPTION</h2>
 <p> Grab partial image from camera. Camera must be format 7 (scalable image size) compatible. The image will be stored as a Portable Grayscale map in Part.pgm.</p>
 <h2>OPTIONS</h2>
 <dl>

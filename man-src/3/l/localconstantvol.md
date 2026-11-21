@@ -1,4 +1,5 @@
 ---
+
 title: "localconstantvol(3)"
 name: "localconstantvol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-localconstantvol/"
 description: "ql/termstructures/volatility/equityfx/localconstantvol.hpp – Local constant volatility, no time dependence, no asset dependence."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/equityfx/blackconstantvol.hpp&gt;<br />
  #include &lt;ql/termstructures/volatility/equityfx/localvoltermstructure.hpp&gt; </p>
 <h3>Classes</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_obj_memory_s_hwloc_obj_memory_page_type_s(3)"
 name: "hwloc_obj_memory_s_hwloc_obj_memory_page_type_s"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_obj_memory_s_hwloc_obj_memory_page_type_s/"
 description: "hwloc_obj_memory_s::hwloc_obj_memory_page_type_s –"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;hwloc.h&gt;</p>
 <h3>Data Fields</h3>
 <p> hwloc_uint64_t <code>size</code> </p>

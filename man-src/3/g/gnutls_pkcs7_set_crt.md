@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs7_set_crt(3)"
 name: "gnutls_pkcs7_set_crt"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_pkcs7_set_crt – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs7_set_crt &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs7_set_crt(gnutls_pkcs7_t </code><i>pkcs7</i><code>, gnutls_x509_crt_t </code><i>crt</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,7 +18,6 @@ description: "gnutls_pkcs7_set_crt – API function"
 <dd> should contain a <code>gnutls_pkcs7_t</code> structure</dd>
 <dt>gnutls_x509_crt_t crt</dt>
 <dd> the certificate to be copied.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will add a parsed certificate to the PKCS7 or RFC2630 certificate set. This is a wrapper function over <code>gnutls_pkcs7_set_crt_raw()</code> .</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

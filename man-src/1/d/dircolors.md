@@ -1,4 +1,5 @@
 ---
+
 title: "dircolors(1)"
 name: "dircolors"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dircolors/"
 description: "dircolors – color setup for ls"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dircolors</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Output commands to set the LS_COLORS environment variable.</p>
 <h3>Determine format of output:</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-parsecsv(1)"
 name: "mdb-parsecsv"
 section: "1"
@@ -9,11 +10,9 @@ description: "mdb-parsecsv – Convert CSV table dump into C file."
 
 <h2>NAME</h2>
 <p> <code>mdb-parsecsv </code>&#8211; Convert CSV table dump into C file.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>mdb-parsecsv</code> <i>file</i>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mdb-parsecsv</code> is a utility program distributed with MDB Tools. </p>
 <p> <code>mdb-parsecsv</code> takes a CSV <i>file</i> representing a database table, and converts it into a C array.</p>
 <h2>NOTES</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-session(1)"
 name: "lxqt-session"
 section: "1"
@@ -9,9 +10,7 @@ description: "lxqt-session – Session manager of LXQt: The Lightweight Qt Deskt
 
 <h2>NAME</h2>
 <p> <code>lxqt-session</code> &#8211; Session manager of <code>LXQt</code>: The Lightweight Qt Desktop Environment</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lxqt-session</code> </p>
-<h2>DESCRIPTION</h2>
 <p> This module handles session autostart application over <code>LXQt</code> desktop environment startup. </p>
 <p> The <code>LXQt modules</code> are desktop independent tools, and operate as daemons for the local user on desktop specific operations. </p>
 <p> <code>LXQt</code> is an advanced, easy-to-use, and fast desktop environment based on the Qt framework. It has been tailored for users who value simplicity, speed, and an intuitive interface, with minimal resource requirements. It comprises several optional desktop components: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77manage(1)"
 name: "mgd77manage"
 section: "1"
@@ -9,10 +10,8 @@ description: "mgd77manage – Manage the content of MGD77+ files"
 
 <h2>NAME</h2>
 <p> mgd77manage &#8211; Manage the content of MGD77+ files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>mgd77manage</code> <i>NGDC-ids</i> [ [<code>+</code>]<code>a</code>|<code>c</code>|<code>d</code>|<code>D</code>|<code>e</code>|<code>E</code>|<code>g</code>|<code>i</code>|<code>n</code>|<code>t</code>|<code>T</code><i>fileinfo</i> ] [ <code>f</code>|<code>g</code>|<code>e</code> ] [ <i>abbrev1</i>,<i>abbrev2</i>,&#8230;) ] [ <i>empty</i> ] [ ] [ <i>abbrev</i>/<i>name</i>/<i>unit</i>/<code>t</code>/<i>scale</i>/<i>offset</i>/<i>comment</i> ] [ <i>unit</i> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mgd77manage</code> deals with maintaining extra custom columns in MGD77+ netCDF files. You can either delete one or more columns, add a new column, update an existing column with new data, or supply error correction information (*.e77 files). New data may come from a table (ASCII unless <code>-bi</code> is used), be based on existing columns and certain theoretical expressions, or they may be obtained by sampling a grid (choose between GMT grid or a Sandwell/Smith Mercator *.img grid) along track. The new data will be appended to the MGD77+ file in the form of an extra data column of specified type. The data file will be modified; no new file will be created. For the big issues, see the DISCUSSION section below.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

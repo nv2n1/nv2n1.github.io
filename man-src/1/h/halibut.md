@@ -1,4 +1,5 @@
 ---
+
 title: "halibut(1)"
 name: "halibut"
 section: "1"
@@ -9,14 +10,12 @@ description: "halibut – multi-format documentation formatting tool"
 
 <h2>NAME</h2>
 <p> <code>halibut</code> &#8211; multi-format documentation formatting tool</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 halibut &amp;nbsp;
 [options] &amp; nbsp;
 file1.but &amp;nbsp;
 [file2.but &amp; nbsp;...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>halibut</code> reads the given set of input files, assembles them into a document, and outputs that document in one or more formats. </p>
 <p> The available command-line options can configure what formats Halibut should output in, and can also configure other things about the way Halibut works.</p>
 <h2>OPTIONS</h2>

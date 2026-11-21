@@ -1,4 +1,5 @@
 ---
+
 title: "slaed3(3)"
 name: "slaed3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaed3/"
 description: "slaed3.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed3</code> (K, N, N1, D, Q, LDQ, RHO, DLAMDA, Q2, INDX, CTOT, W, S, INFO)<br />
  <i></i><code>SLAED3</code> used by sstedc. Finds the roots of the secular equation and updates the eigenvectors. Used when the original matrix is tridiagonal.</p>

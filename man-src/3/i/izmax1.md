@@ -1,4 +1,5 @@
 ---
+
 title: "izmax1(3)"
 name: "izmax1"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-izmax1/"
 description: "izmax1.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>izmax1</code> (N, CX, INCX)<br />
  <i></i><code>IZMAX1</code> finds the index of the vector element whose real part has maximum absolute value.</p>

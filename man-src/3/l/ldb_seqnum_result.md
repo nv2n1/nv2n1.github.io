@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_seqnum_result(3)"
 name: "ldb_seqnum_result"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_seqnum_result/"
 description: "ldb_seqnum_result –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> uint64_t <code>seq_num</code> </p>
 <p> uint32_t <code>flags</code> </p>

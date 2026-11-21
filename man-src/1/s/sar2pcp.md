@@ -1,4 +1,5 @@
 ---
+
 title: "sar2pcp(1)"
 name: "sar2pcp"
 section: "1"
@@ -9,9 +10,7 @@ description: "sar2pcp – import sar data and create a PCP archive"
 
 <h2>NAME</h2>
 <p> <code>sar2pcp</code> &#8211; import sar data and create a PCP archive</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sar2pcp</code> <i>infile</i> <i>outfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>sar2pcp</code> is intended to read a binary System Activity Reporting (sar) data file as created by <code>sadc</code>(1) (<i>infile</i>) and translate this into a Performance Co-Pilot (<font SIZE="-1">PCP</font>) archive with the basename <i>outfile</i>. </p>
 <p> However, if <i>infile</i> has the suffix .xml, then it will be considered already in <font SIZE="-1">XML</font> format and <code>sar2pcp</code> will operate directly on it. </p>
 <p> The resultant <font SIZE="-1">PCP</font> achive may be used with all the <font SIZE="-1">PCP</font> client tools to graph subsets of the data using <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), perform data reduction and reporting, filter with the <font SIZE="-1">PCP</font> inference engine <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), etc. </p>

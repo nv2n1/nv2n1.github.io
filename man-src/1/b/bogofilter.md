@@ -1,4 +1,5 @@
 ---
+
 title: "bogofilter(1)"
 name: "bogofilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bogofilter/"
 description: "bogofilter – fast Bayesian spam filter"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogofilter</code> [help options | classification options | registration options | parameter options | info options] [general options] [config file options]</dt></dl>
 <dd>where </dd>
@@ -39,7 +39,6 @@ description: "bogofilter – fast Bayesian spam filter"
 <dl>
 <dt> [&#8211;<i>option=value</i>]</dt></dl>
 <dd>Note: Use <code>bogofilter &#8211;help</code> to display the complete list of options.</dd>
-<h2>DESCRIPTION</h2>
 <p> Bogofilter is a Bayesian spam filter. In its normal mode of operation, it takes an email message or other text on standard input, does a statistical check against lists of &quot;good&quot; and &quot;bad&quot; words, and returns a status code indicating whether or not the message is spam. Bogofilter is designed with a fast algorithm, uses the Berkeley DB for fast startup and lookups, coded directly in C, and tuned for speed, so it can be used for production by sites that process a lot of mail.</p>
 <h2>THEORY OF OPERATION</h2>
 <p> Bogofilter treats its input as a bag of tokens. Each token is checked against a wordlist, which maintains counts of the numbers of times it has occurred in non-spam and spam mails. These numbers are used to compute an estimate of the probability that a message in which the token occurs is spam. Those are combined to indicate whether the message is spam or ham. </p>

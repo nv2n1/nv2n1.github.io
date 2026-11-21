@@ -1,4 +1,5 @@
 ---
+
 title: "ctrsm(3)"
 name: "ctrsm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctrsm/"
 description: "ctrsm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrsm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
  <i></i><code>CTRSM</code></p>

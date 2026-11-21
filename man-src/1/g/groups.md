@@ -1,4 +1,5 @@
 ---
+
 title: "groups(1)"
 name: "groups"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-groups/"
 description: "groups – print the groups a user is in"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>groups</code> [<i>,OPTION/</i>]&#8230; [<i>,USERNAME/</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Print group memberships for each USERNAME or, if no USERNAME is specified, for the current process (which may differ if the groups database has changed).</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

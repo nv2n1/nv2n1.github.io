@@ -1,4 +1,5 @@
 ---
+
 title: "gitstats(1)"
 name: "gitstats"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gitstats/"
 description: "gitstats – git history statistics generator"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gitstats</code> [options] &lt;repository dir&gt; &lt;output dir&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>gitstats</code> is a statistics generator for <i><a href="/docs/linux/man/1-git/">git</a></i>(1) repositories. It examines the repository and produces some interesting statistics from the history of it. Currently <font SIZE="-1">HTML</font> is the only output format.</p>
 <h2>OPTIONS</h2>
 <p> -c option=value </p>

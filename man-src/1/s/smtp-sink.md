@@ -1,4 +1,5 @@
 ---
+
 title: "smtp-sink(1)"
 name: "smtp-sink"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-smtp-sink/"
 description: "smtp-sink – parallelized SMTP/LMTP test server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>smtp-sink</code> [<i>options</i>] [<code>inet:</code>][<i>host</i>]:<i>port</i> <i>backlog</i> </p>
 <p> <code>smtp-sink</code> [<i>options</i>] <code>unix:</code><i>pathname</i> <i>backlog</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>smtp-sink</code> listens on the named host (or address) and port. It takes SMTP messages from the network and throws them away. The purpose is to measure client performance, not protocol compliance. </p>
 <p> <code>smtp-sink</code> may also be configured to capture each mail delivery transaction to file. Since disk latencies are large compared to network delays, this mode of operation can reduce the maximal performance by several orders of magnitude. </p>
 <p> Connections can be accepted on IPv4 or IPv6 endpoints, or on UNIX-domain sockets. IPv4 and IPv6 are the default. This program is the complement of the <code><a href="/docs/linux/man/1-smtp-source/">smtp-source</a></code>(1) program. </p>

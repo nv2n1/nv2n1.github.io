@@ -1,4 +1,5 @@
 ---
+
 title: "git-config(1)"
 name: "git-config"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-config/"
 description: "git-config – Get and set repository or global options"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  git config  [&lt;file-option&gt;] [--type=&lt;type&gt;] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] name [value [value-pattern]]
  git config  [&lt;file-option&gt;] [--type=&lt;type&gt;] --add name value
@@ -24,7 +25,6 @@ description: "git-config – Get and set repository or global options"
  git config  [&lt;file-option&gt;] --get-colorbool name [stdout-is-tty]
  git config  [&lt;file-option&gt;] -e | --edit
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> You can query/set/replace/unset options with this command. The name is actually the section and the key separated by a dot, and the value will be escaped. </p>
 <p> Multiple lines can be added to an option by using the <code>--add</code> option. If you want to update or unset an option which can occur on multiple lines, a <code>value-pattern</code> (which is an extended regular expression, unless the <code>--fixed-value</code> option is given) needs to be given. Only the existing values that match the pattern are updated or unset. If you want to handle the lines that do <code>not</code> match the pattern, just prepend a single exclamation mark in front (see also the section called "EXAMPLES"), but note that this only works when the <code>--fixed-value</code> option is not in use. </p>
 <p> The <code>--type=&lt;type&gt;</code> option instructs <i>git config</i> to ensure that incoming and outgoing values are canonicalize-able under the given &lt;type&gt;. If no <code>--type=&lt;type&gt;</code> is given, no canonicalization will be performed. Callers may unset an existing <code>--type</code> specifier with <code>--no-type</code>. </p>

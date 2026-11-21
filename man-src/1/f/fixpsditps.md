@@ -1,4 +1,5 @@
 ---
+
 title: "fixpsditps(1)"
 name: "fixpsditps"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-fixpsditps/"
 description: "fixpsditps – filter to fix Transcript psdit documents so PSUtils work"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>fixpsditps </code> &lt; <i>psdit.ps</i> &gt; <i>Fixed.ps</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Fixpsditps</i> is a <i>perl </i> filter which &quot;fixes&quot; PostScript from Transcript&#8217;s psdit program so that it works correctly with Angus Duggan&#8217;s <code>psutils</code> package.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) Angus J. C. Duggan 1991-1995</p>

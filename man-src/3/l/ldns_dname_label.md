@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname_label(3)"
 name: "ldns_dname_label"
 section: "3"
@@ -9,14 +10,12 @@ description: "ldns_dname_is_subdomain, ldns_dname_str_absolute, ldns_dname_label
 
 <h2>NAME</h2>
 <p> ldns_dname_is_subdomain, ldns_dname_str_absolute, ldns_dname_label </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_dname_is_subdomain(const ldns_rdf *sub, const ldns_rdf *parent); </p>
 <p> bool ldns_dname_str_absolute(const char *dname_str); </p>
 <p> ldns_rdf * ldns_dname_label(const ldns_rdf *rdf, uint8_t labelpos); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dname_is_subdomain</i>()</dt>
 <dd>test wether the name sub falls under parent (i.e. is a subdomain of parent). This function will return false if the given dnames are equal. .br <code>sub</code>: the name to test .br <code>parent</code>: the parent&#8217;s name .br Returns true if sub falls under parent, otherwise false</dd></dl>

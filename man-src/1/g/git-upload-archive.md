@@ -1,4 +1,5 @@
 ---
+
 title: "git-upload-archive(1)"
 name: "git-upload-archive"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-git-upload-archive/"
 description: "git-upload-archive – Send archive back to git-archive"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 <i>git upload-archive</i> &lt;directory&gt;
 </pre>
-<h2>DESCRIPTION</h2>
 <p> Invoked by <i>git archive &#8211;remote</i> and sends a generated archive to the other end over the Git protocol. </p>
 <p> This command is usually not invoked directly by the end user. The UI for the protocol is on the <i>git archive</i> side, and the program pair is meant to be used to get an archive from a remote repository.</p>
 <h2>SECURITY</h2>

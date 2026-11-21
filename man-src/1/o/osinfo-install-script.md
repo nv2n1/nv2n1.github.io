@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo-install-script(1)"
 name: "osinfo-install-script"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-osinfo-install-script/"
 description: "osinfo-install-script – generate a script for automated installation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> osinfo-install-script [<font SIZE="-1">OPTIONS&#8230;</font>] MEDIA-FILE|OS-ID</p>
-<h2>DESCRIPTION</h2>
 <p> Generate a script suitable for performing an automated installation of <tt>&quot;MEDIA_FILE&quot;</tt> or <tt>&quot;OS-ID&quot;</tt>. <tt>&quot;MEDIA_FILE&quot;</tt> should be a path to an installer or live media (typically an <font SIZE="-1">ISO</font> file). <tt>&quot;OS-ID&quot;</tt> should be a <font SIZE="-1">URI</font> identifying the operating system, or its short <font SIZE="-1">ID.</font> </p>
 <p> By default a script will be generated for a <tt>&quot;JEOS&quot;</tt> style install.</p>
 <h2>OPTIONS</h2>

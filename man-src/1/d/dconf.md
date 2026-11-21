@@ -1,4 +1,5 @@
 ---
+
 title: "dconf(1)"
 name: "dconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dconf/"
 description: "dconf – Simple tool for manipulating a dconf database"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dconf</code> read [-d] <i>KEY</i></dt>
 <dt> <code>dconf</code> list <i>DIR</i></dt>
@@ -19,7 +19,6 @@ description: "dconf – Simple tool for manipulating a dconf database"
 <dt> <code>dconf</code> dump <i>DIR</i></dt>
 <dt> <code>dconf</code> load [-f] <i>DIR</i></dt>
 <dt> <code>dconf</code> help [<i>COMMAND</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>dconf</code> program can perform various operations on a dconf database, such as reading or writing individual values or entire directories. This tool operates on dconf directly, without using gsettings schema information. Therefore, it cannot perform type and consistency checks on values. The <code><a href="/docs/linux/man/1-gsettings/">gsettings</a></code>(1) utility is an alternative if such checks are needed. </dd>
 <p> The <i>DIR</i> arguments must be directory paths (starting and ending with &#8216;/&#8217;), the <i>KEY</i> arguments must be key paths (starting, but not ending with &#8216;/&#8217;) and the <i>PATH</i> arguments can be either directory or key paths. </p>
 <p> The <i>OUTPUT</i> argument must the location to write a (binary) dconf database to and the <i>KEYFILEDIR</i> argument must be a .d directory containing keyfiles. </p>

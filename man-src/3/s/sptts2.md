@@ -1,4 +1,5 @@
 ---
+
 title: "sptts2(3)"
 name: "sptts2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sptts2/"
 description: "sptts2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sptts2</code> (N, NRHS, D, E, B, LDB)<br />
  <i></i><code>SPTTS2</code> solves a tridiagonal system of the form AX=B using the L D LH factorization computed by spttrf.</p>

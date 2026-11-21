@@ -1,4 +1,5 @@
 ---
+
 title: "typefortune(1)"
 name: "typefortune"
 section: "1"
@@ -9,9 +10,7 @@ description: "typefortune – manual page for typefortune (part of gtypist)"
 
 <h2>NAME</h2>
 <p> typefortune &#8211; manual page for typefortune (part of gtypist)</p>
-<h2>SYNOPSIS</h2>
 <p> <code>typefortune</code> [ <i>Options</i>&#8230; ]</p>
-<h2>DESCRIPTION</h2>
 <p> typefortune creates a gtypist lesson-file from `fortune&#8217; and runs `gtypist&#8217; on it.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-cov-14(1)"
 name: "llvm-cov-14"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-llvm-cov-14/"
 description: "llvm-cov – emit coverage information"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>llvm-cov</code> <i>command</i> [<i>args…</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>llvm-cov</code> tool shows code coverage information for programs that are instrumented to emit profile data. It can be used to work with <code>gcov</code>-style coverage or with <code>clang</code>&#8216;s instrumentation based profiling. </p>
 <p> If the program is invoked with a base name of <code>gcov</code>, it will behave as if the <code>llvm-cov gcov</code> command were called. Otherwise, a command should be provided.</p>
 <h2>COMMANDS</h2>

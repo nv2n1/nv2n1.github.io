@@ -1,4 +1,5 @@
 ---
+
 title: "pnmscalefixed(1)"
 name: "pnmscalefixed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmscalefixed/"
 description: "pnmscalefixed – scale a portable anymap quickly, but less accurate"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> <code>pnmscalefixed</code> is the same thing as <code>pnmscale</code> except that it uses fixed point arithmetic internally instead of floating point, which makes it run faster. In turn, it is less accurate and may distort the image. </p>
 <p> Use the <code>pnmscale</code> man page with <code>pnmscalefixed</code>. This man page only describes the difference. </p>
 <p> <code>pnmscalefixed</code> uses fixed point 12 bit arithmetic. By contrast, <code>pnmscale</code> uses floating point arithmetic which on most machines is probably 24 bit precision. This makes <code>pnmscalefixed</code> run faster (30% faster in one experiment), but the imprecision can cause distortions at the right and bottom edges. </p>

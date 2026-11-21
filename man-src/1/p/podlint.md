@@ -1,4 +1,5 @@
 ---
+
 title: "podlint(1)"
 name: "podlint"
 section: "1"
@@ -6,20 +7,13 @@ letter: "p"
 url: "/docs/linux/man/1-podlint/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+podlint - check POD for correctness using Pod::POM 
 
- podlint - check POD for correctness using Pod::POM 
-
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
     podlint MyFile.pm
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- This script uses Pod::POM to parse a Pod document with full warnings enabled, effectively acting as a syntax and structure checker. 
+This script uses Pod::POM to parse a Pod document with full warnings enabled, effectively acting as a syntax and structure checker. 
 
  The -f option can be specified to have the parsed Pod Object Model printed to <font SIZE="-1">STDOUT</font> with any markup errors fixed. Note there are some critical parse errors that can't be handled and fixed by the parser and in this case the script will terminate reporting the error.
 

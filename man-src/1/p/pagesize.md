@@ -1,4 +1,5 @@
 ---
+
 title: "pagesize(1)"
 name: "pagesize"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pagesize/"
 description: "pagesize – Print supported system page sizes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pagesize [options]</code></p>
-<h2>DESCRIPTION</h2>
 <p> The pagesize utility prints the page sizes of a page of memory in bytes, as returned by getpagesizes(3). This is useful when creating portable shell scripts, configuring huge page pools with hugeadm or launching applications to use huge pages with hugectl. </p>
 <p> If no parameters are specified, <code>pagesize</code> prints the system base page size as returned by <code>getpagesize()</code>. The following parameters affect what other pagesizes are displayed. </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "dbjoin(1)"
 name: "dbjoin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbjoin/"
 description: "dbjoin – join two tables on common columns"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 dbjoin[-Sid]-- input table1.fsdb-- input table2.fsdb[-nNrR] column[column...]
 </code></pre>
@@ -15,7 +15,6 @@ dbjoin[-Sid]-- input table1.fsdb-- input table2.fsdb[-nNrR] column[column...]
 <pre><code>
 cat table1.fsdb | dbjoin[-Sid]-- input table2.fsdb[-nNrR] column[column...]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Does a natural, inner join on <font SIZE="-1">TABLE1</font> and <font SIZE="-1">TABLE2 </font> the specified columns. With the <tt>&quot;-a&quot;</tt> option, or with <tt>&quot;-t outer&quot;</tt> it will do a natural, full outer join. </p>
 <p> (Database review: inner joints output records only when there are matches in both tables and will omit records that do not match. Outer joins output all records from both tables, filling with the empty value as needed. Right (left) outer joins keep all elements of the right (left) table, even those that don&#8217;t match in the other table.) </p>
 <p> By default for non-hash joins, data will be sorted lexically, but the usual sorting options can be mixed with the column specification. </p>

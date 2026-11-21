@@ -1,4 +1,5 @@
 ---
+
 title: "falcon(1)"
 name: "falcon"
 section: "1"
@@ -9,9 +10,7 @@ description: "falcon – The Falcon Programming Language command line interprete
 
 <h2>NAME</h2>
 <p> falcon &#8211; The Falcon Programming Language command line interpreter </p>
-<h2>SYNOPSIS</h2>
 <p> <code>falcon [options] [main_script] [script_options]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>falcon</code> command line interpreter is used to launch, compile, assemble or debug scripts written in the Falcon Programming Language. The command line interpreter pushes the <code>core</code> module and the <code>rtl</code> module in the script load table, so they are available by default to all the scripts. </p>
 <p> The default operation is that of launching the given script, or read it from the standard input if the script name is not given. By default, <code>falcon</code> saves also the compiled module of the script in the same directory where it is found, changing the extension to &quot;.fam&quot;. </p>
 <p> The <code>main_script</code> can be a &quot;logical&quot; module name, a relative path or an absolute path. In case it&#8217;s a logical module name, that is, a script name without extension nor leading path, it is searched through the load path. The default load path is determined by the compilation options of the interpreter, and usually it includes the current directory. The environment variable <code>FALCON_LOAD_PATH</code> and the command line option <code>-L can change the default module search path.</code> </p>

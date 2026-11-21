@@ -1,4 +1,5 @@
 ---
+
 title: "top(1)"
 name: "top"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-top/"
 description: "top – display Linux processes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>top</code> &#8211;<code>hv</code>|-<code>bcEeHiOSs1</code> &#8211;<code>d</code> secs &#8211;<code>n</code> max &#8211;<code>u</code>|<code>U</code> user &#8211;<code>p</code> pids &#8211;<code>o</code> field &#8211;<code>w</code> [cols] </p>
 <p> The traditional switches `-&#8216; and whitespace are optional. </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>top</code> program provides a dynamic real-time view of a running system. It can display<code> system</code> summary information as well as a list of <code>processes</code> or <code>threads</code> currently being managed by the Linux kernel. The types of system summary information shown and the types, order and size of information displayed for processes are all user configurable and that configuration can be made persistent across restarts. </p>
 <p> The program provides a limited interactive interface for process manipulation as well as a much more extensive interface for personal configuration &nbsp;&#8212;&nbsp; encompassing every aspect of its operation. And while <code>top</code> is referred to throughout this document, you are free to name the program anything you wish. That new name, possibly an alias, will then be reflected on top&#8217;s display and used when reading and writing a configuration file. </p>
 <h2>OVERVIEW</h2>

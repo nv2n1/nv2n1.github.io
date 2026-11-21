@@ -1,4 +1,5 @@
 ---
+
 title: "git-cvsserver(1)"
 name: "git-cvsserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-cvsserver/"
 description: "git-cvsserver – A CVS server emulator for Git"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> SSH: </p>
 <pre>
 export CVS_SERVER=&quot;git cvsserver&quot;
@@ -47,7 +47,6 @@ git - cvsserver[options][pserver | server][&lt;directory&gt;...]
 <dl>
 <dt>
 </dt><dd> You can specify a list of allowed directories. If no directories are given, all are allowed. This is an additional restriction, gitcvs access still needs to be enabled by the gitcvs.enabled config option unless <i>&#8211;export-all</i> was given, too.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This application is a CVS emulation layer for Git. </p>
 <p> It is highly functional. However, not all methods are implemented, and for those methods that are implemented, not all switches are implemented. </p>
 <p> Testing has been done using both the CLI CVS client, and the Eclipse CVS plugin. Most functionality works fine with both of these clients.</p>

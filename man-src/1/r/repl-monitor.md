@@ -1,4 +1,5 @@
 ---
+
 title: "repl-monitor(1)"
 name: "repl-monitor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-repl-monitor/"
 description: "repl-monitor – Directory Server replication monitor"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>repl-monitor</code> &nbsp;<wbr>[-f configuration-file] [<i>-h host</i>] [<i>-p port</i>] [<i>-r</i>] [<i>-c connection</i>] [<i>-a alias</i>] [<i>-k color</i>] [<i>-u refresh-url</i>] [<i>-s</i>] [<i>-t refresh-interval</i>] [<i>-v</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Outputs the status of all of the configured Directory Servers participating in replication. The servers to query for status are specified in the configuration file. </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>

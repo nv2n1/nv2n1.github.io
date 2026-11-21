@@ -1,4 +1,5 @@
 ---
+
 title: "chla_transtype(3)"
 name: "chla_transtype"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chla_transtype/"
 description: "chla_transtype.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> CHARACTER *1 function <code>chla_transtype</code> (TRANS)<br />
  <i></i><code>CHLA_TRANSTYPE</code></p>

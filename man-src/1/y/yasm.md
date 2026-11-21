@@ -1,4 +1,5 @@
 ---
+
 title: "yasm(1)"
 name: "yasm"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-yasm/"
 description: "yasm – The Yasm Modular Assembler"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>yasm</code> [<code>-f&nbsp;<wbr></code><i>format</i>] [<code>-o&nbsp;<wbr></code><i>outfile</i>] [<i>other options</i>&#8230;] {<i>infile</i>}</dt>
 <dt> <code>yasm</code> <code>-h</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The Yasm Modular Assembler is a portable, retargetable assembler written under the &#8220;new&#8221; (2 or 3 clause) BSD license. Yasm currently supports the x86 and AMD64 instruction sets, accepts NASM and GAS assembler syntaxes, outputs binary, ELF32, ELF64, COFF, Win32, and Win64 object formats, and generates source debugging information in STABS, DWARF 2, and CodeView 8 formats. </dd>
 <p> YASM consists of the <code>yasm</code> command, libyasm, the core backend library, and a large number of modules. Currently, libyasm and the loadable modules are statically built into the <code>yasm</code> executable. </p>
 <p> The <code>yasm</code> command assembles the file infile and directs output to the file <i>outfile</i> if specified. If <i>outfile</i> is not specified, <code>yasm</code> will derive a default output file name from the name of its input file, usually by appending .o or .obj, or by removing all extensions for a raw binary file. Failing that, the output file name will be yasm.out. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "exswitch(3)"
 name: "exswitch"
 section: "3"
@@ -9,10 +10,8 @@ description: "exswitch – Controlling the console switch mode for background ru
 
 <h2>NAME</h2>
 <p> exswitch &#8211; Controlling the console switch mode for background running. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exswitch</code></p>
-<h2>DESCRIPTION</h2>
 <p> This program shows how to control the console switching mode, and let your program run in the background. These functions don&#8217;t apply to every platform and driver, for example you can&#8217;t control the switching mode from a DOS program. </p>
 <p> Yes, I know the fractal drawing is very slow: that&#8217;s the point! This is so you can easily check whether it goes on working in the background after you switch away from the app. </p>
 <p> Depending on the type of selected switching mode, you will see whether the contents of the screen are preserved or not. </p>

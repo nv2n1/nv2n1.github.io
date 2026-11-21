@@ -1,4 +1,5 @@
 ---
+
 title: "txt2regex(1)"
 name: "txt2regex"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-txt2regex/"
 description: "txt2regex – a Regular Expression Wizard, written with bash2 builtins"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>txt2regex</code> </p>
 <p> <code>txt2regex</code> &#8211;nocolor|&#8211;whitebg </p>
 <p> <code>txt2regex</code> &#8211;all|&#8211;prog &lt;p1,p2,&#8230;,pN&gt; </p>
 <p> <code>txt2regex</code> &#8211;showmeta|&#8211;showinfo &lt;program&gt; </p>
 <p> <code>txt2regex</code> &#8211;make &lt;target&gt; </p>
 <p> <code>txt2regex</code> &#8211;history &lt;value&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> <code>txt2regex</code> is a Regular Expression &quot;wizard&quot;, all written with bash2 builtins, that converts human sentences to regexes. </p>
 <p> With a simple interactive interface, you just answer to questions and build your own regex for a large variety of programs, like awk, emacs, grep, perl, php, procmail, python, sed and vim. There are more than 20 supported programs. </p>
 <p> It&#8217;s bash so download and run, no compilation needed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer_printf(3)"
 name: "ldns_buffer_printf"
 section: "3"
@@ -9,7 +10,6 @@ description: "ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns
 
 <h2>NAME</h2>
 <p> ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns_buffer_printf, ldns_buffer_free, ldns_buffer_export </p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -19,7 +19,6 @@ description: "ldns_buffer_new, ldns_buffer_new_frm_data, ldns_buffer_clear, ldns
 <p> int ldns_buffer_printf(ldns_buffer *buffer, const char *format, &#8230;); </p>
 <p> void ldns_buffer_free(ldns_buffer *buffer); </p>
 <p> void* ldns_buffer_export(ldns_buffer *buffer); </p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_buffer_new</i>()</dt>
 <dd>creates a new buffer with the specified capacity. </dd>

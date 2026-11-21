@@ -1,4 +1,5 @@
 ---
+
 title: "snmp-bridge-mib(1)"
 name: "snmp-bridge-mib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmp-bridge-mib/"
 description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>snmp-bridge-mib</code> {bridge}</dt></dl>
 <h2>ARGUMENTS</h2>
@@ -16,7 +16,6 @@ description: "snmp-bridge-mib – provide Linux bridge information via SNMP"
 <dl>
 <dt>
 </dt><dd> The name of the Linux bridge for which you want to provide information via SNMP, e.g. br0.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The snmp-bridge-mib is an extension to net-snmp. It collects information about a bridge in a Linux system and exports them for query from other (remote) systems for management purposes.</p>
 <h2>CONFIGURATION:</h2>
 <p> The preferred method of snmp-bridge-mib to attach to net-snmp is agentx. For this to work, you will have to add the following line to /etc/snmp/snmpd.conf, </p>

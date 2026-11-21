@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_get_status(3)"
 name: "gnutls_ocsp_resp_get_status"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_ocsp_resp_get_status – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_resp_get_status &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_get_status(gnutls_ocsp_resp_t </code><i>resp</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ocsp_resp_t resp</dt>
 <dd> should contain a <code>gnutls_ocsp_resp_t</code> structure</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return the status of a OCSP response, an <code>gnutls_ocsp_resp_status_t</code> enumeration.</p>
 <h2>RETURNS</h2>
 <p> status of OCSP request as a <code>gnutls_ocsp_resp_status_t</code>, or a negative error code on error.</p>

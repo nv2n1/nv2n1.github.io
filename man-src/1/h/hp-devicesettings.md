@@ -1,4 +1,5 @@
 ---
+
 title: "hp-devicesettings(1)"
 name: "hp-devicesettings"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-devicesettings/"
 description: "hp-devicesettings – Device Setup Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Device settings utility for HPLIP supported printers. (Note: Not all printers require the use of this utility).</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-devicesettings [DEVICE_URI|PRINTER_NAME] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

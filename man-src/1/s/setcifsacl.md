@@ -1,4 +1,5 @@
 ---
+
 title: "setcifsacl(1)"
 name: "setcifsacl"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-setcifsacl/"
 description: "setcifsacl – Userspace helper to alter an ACL in a security descriptor for Common Internet File System (CIFS)"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>setcifsacl [-v|-a|-D|-M|-S] &quot;{one or more ACEs}&quot; {file system object}</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This tool is part of the cifs-utils suite. </p>
 <p> setcifsacl is a userspace helper program for the Linux CIFS client file system. It is intended to alter an ACL of a security descriptor for a file system object. Whether a security descriptor to be set is applied or not is determined by the CIFS/SMB server. </p>
 <p> This program uses a plugin to handle the mapping of user and group names to SIDs. <code>/etc/cifs-utils/idmap-plugin</code> should be a symlink that points to the correct plugin to use.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "metalink_t(3)"
 name: "metalink_t"
 section: "3"
@@ -9,9 +10,7 @@ description: "metalink_t – Metalink top level structure."
 
 <h2>NAME</h2>
 <p> metalink_t &#8211; Metalink top level structure.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_types.h">metalink/metalink_types.h</a>&gt;</code> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>metalink_t</code> is a top level structure that contains metadata for Metalink file and list of <code><a href="/docs/linux/man/3-metalink_file_t/">metalink_file_t</a></code>(3) structure. Typically <code>metalink_t</code> is created by parser function such as <code><a href="/docs/linux/man/3-metalink_parse_file/">metalink_parse_file</a></code>(3). </p>
 <h2>STRUCTURE MEMBERS</h2>
 <p> metalink_file_t **files;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "proj(1)"
 name: "proj"
 section: "1"
@@ -10,10 +11,8 @@ description: "proj – forward cartographic projection filter invproj – invers
 <h2>NAME</h2>
 <p> proj &#8211; forward cartographic projection filter<br />
  invproj &#8211; inverse cartographic projection filter</p>
-<h2>SYNOPSIS</h2>
 <p> <code>proj</code> [ <code>-bceEfiIlmorsStTvVwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]<br />
  <code>invproj</code> [ <code>-bceEfiIlmorsStTwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Proj</i> and <i>invproj</i> perform respective forward and inverse transformation of cartographic data to or from cartesian data with a wide range of selectable projection functions. </p>
 <p> The following control parameters can appear in any order:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-install(1)"
 name: "cargo-install"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-cargo-install/"
 description: "cargo-install – Install a Rust binary"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo install [OPTIONS] &lt;CRATE&gt; </p>
 <p> cargo install [OPTIONS] &#8211;list</p>
-<h2>DESCRIPTION</h2>
 <p> Install a Rust binary </p>
 <p> This command manages Cargo&#8217;s local set of install binary crates. Only packages which have [[bin]] targets can be installed, and all binaries are installed into the installation root&#8217;s bin folder. The installation root is determined, in order of precedence, by &#8211;root, $CARGO_INSTALL_ROOT, the install.root configuration key, and finally the home directory (which is either $CARGO_HOME if set or $HOME/.cargo by default). </p>
 <p> There are multiple sources from which a crate can be installed. The default location is crates.io but the &#8211;git and &#8211;path flags can change this source. If the source contains more than one package (such as crates.io or a git repository with multiple crates) the argument is required to indicate which crate should be installed. </p>

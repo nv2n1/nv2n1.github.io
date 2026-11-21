@@ -1,4 +1,5 @@
 ---
+
 title: "nemiver(1)"
 name: "nemiver"
 section: "1"
@@ -9,9 +10,7 @@ description: "nemiver – graphical debugger for GNOME"
 
 <h2>NAME</h2>
 <p> nemiver &#8211; graphical debugger for GNOME</p>
-<h2>SYNOPSIS</h2>
 <p> <code>nemiver</code> [<i>options</i>]<i> [&lt;prog-to-debug&gt; [prog-args]]</i> </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>nemiver</code> command. </p>
 <p> <code>nemiver</code> is a standalone graphical debugger that integrates well in the GNOME desktop environment. It currently features a backend which uses the well known GNU Debugger gdb to debug C/C++ programs.</p>
 <h2>OPTIONS</h2>

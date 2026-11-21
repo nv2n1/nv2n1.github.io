@@ -1,4 +1,5 @@
 ---
+
 title: "g_sham_d(1)"
 name: "g_sham_d"
 section: "1"
@@ -10,9 +11,7 @@ description: "g_sham – read/write xmgr and xvgr data sets"
 <h2>NAME</h2>
 <p> g_sham &#8211; read/write xmgr and xvgr data sets </p>
 <p> <code>VERSION 4.0.1</code></p>
-<h2>SYNOPSIS</h2>
 <p> <code>g_sham</code> <code>-f</code><i> graph.xvg </i> <code>-ge</code><i> gibbs.xvg </i> <code>-ene</code><i> esham.xvg </i> <code>-dist</code><i> ener.xvg </i> <code>-histo</code><i> edist.xvg </i> <code>-bin</code><i> bindex.ndx </i> <code>-lp</code><i> prob.xpm </i> <code>-ls</code><i> gibbs.xpm </i> <code>-lsh</code><i> enthalpy.xpm </i> <code>-lss</code><i> entropy.xpm </i> <code>-map</code><i> map.xpm </i> <code>-ls3</code><i> gibbs3.pdb </i> <code>-mdata</code><i> mapdata.xvg </i> <code>-g</code><i> shamlog.log </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]time</code><i></i> <code>-b</code><i> real </i> <code>-e</code><i> real </i> <code>-ttol</code><i> real </i> <code>-n</code><i> int </i> <code>-[no]d</code><i></i> <code>-bw</code><i> real </i> <code>-[no]sham</code><i></i> <code>-tsham</code><i> real </i> <code>-pmin</code><i> real </i> <code>-dim</code><i> vector </i> <code>-ngrid</code><i> vector </i> <code>-xmin</code><i> vector </i> <code>-xmax</code><i> vector </i> <code>-pmax</code><i> real </i> <code>-gmax</code><i> real </i> <code>-emin</code><i> real </i> <code>-emax</code><i> real </i> <code>-nlevels</code><i> int </i> <code>-mname</code><i> string </i></p>
-<h2>DESCRIPTION</h2>
 <p> g_sham makes multi-dimensional free-energy, enthalpy and entropy plots. g_sham reads one or more xvg files and analyzes data sets. g_sham basic purpose is plotting Gibbs free energy landscapes (option <code> -ls</code>) by Bolzmann inverting multi-dimensional histograms (option <code> -lp</code>) but it can also make enthalpy (option <code> -lsh</code>) and entropy (option <code> -lss</code>) plots. The histograms can be made for any quantities the user supplies. A line in the input file may start with a time (see option <code> -time</code>) and any number of y values may follow. Multiple sets can also be read when they are seperated by &amp; (option <code> -n</code>), in this case only one y value is read from each line. All lines starting with and @ are skipped. </p>
 <p> Option <code> -ge</code> can be used to supply a file with free energies when the ensemble is not a Boltzmann ensemble, but needs to be biased by this free energy. One free energy value is required for each (multi-dimensional) data point in the <code> -f</code> input. </p>
 <p> Option <code> -ene</code> can be used to supply a file with energies. These energies are used as a weighting function in the single histogram analysis method due to Kumar et. al. When also temperatures are supplied (as a second column in the file) an experimental weighting scheme is applied. In addition the vales are used for making enthalpy and entropy plots. </p>

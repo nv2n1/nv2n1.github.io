@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_resp_print(3)"
 name: "gnutls_ocsp_resp_print"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_ocsp_resp_print – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_resp_print &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_resp_print(gnutls_ocsp_resp_t </code><i>resp</i><code>, gnutls_ocsp_print_formats_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_ocsp_resp_print – API function"
 <dd> Indicate the format to use</dd>
 <dt>gnutls_datum_t * out</dt>
 <dd> Newly allocated datum with (0) terminated string.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will pretty print a OCSP response, suitable for display to a human. </p>
 <p> If the format is <code>GNUTLS_OCSP_PRINT_FULL</code> then all fields of the response will be output, on multiple lines. </p>
 <p> The output <i>out</i> -&gt;data needs to be deallocate using <code>gnutls_free()</code>.</p>

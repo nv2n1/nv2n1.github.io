@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-ver(1)"
 name: "mdb-ver"
 section: "1"
@@ -9,12 +10,10 @@ description: "mdb-ver – Return the format of a given MDB database."
 
 <h2>NAME</h2>
 <p> <code>mdb-ver </code>&#8211; Return the format of a given MDB database.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 <code>mdb-ver</code> <i>database</i>
 <code>mdb-ver</code> <code>-M</code>
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>mdb-ver</code> is a utility program distributed with MDB Tools. </p>
 <p> It will return a single line of output with &#8216;JET3&#8217; for those files produced in Access 97 format, &#8216;JET4&#8217; for those produced by Access 2000, XP and 2003, &#8216;ACE12&#8217; for those produced by Access 2007, or &#8216;ACE14&#8217; for those produced by Access 2010.</p>
 <h2>OPTIONS</h2>

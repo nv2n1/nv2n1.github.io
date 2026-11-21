@@ -1,4 +1,5 @@
 ---
+
 title: "rlibmap(1)"
 name: "rlibmap"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rlibmap/"
 description: "rlibmap – ROOT utility to create class to library maps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rlibmap</code> [-f] [[-r|-o] <i>mapfile</i>] -l <i>library</i> -d <i>dependecy</i> -c <i>Linkdef</i></p>
-<h2>DESCRIPTION</h2>
 <p> Creates a map from classes to shared libraries that contain these classes.</p>
 <h2>OPTIONS</h2>
 <dl>

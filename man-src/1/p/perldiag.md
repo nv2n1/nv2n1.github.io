@@ -1,4 +1,5 @@
 ---
+
 title: "perldiag(1)"
 name: "perldiag"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perldiag/"
 description: "perldiag – various Perl diagnostics"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> These messages are classified as follows (listed in increasing order of desperation): </p>
 <pre><code>    (W) A warning (optional).
     (D) A deprecation (enabled by default).

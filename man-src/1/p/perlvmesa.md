@@ -1,4 +1,5 @@
 ---
+
 title: "perlvmesa(1)"
 name: "perlvmesa"
 section: "1"
@@ -6,18 +7,11 @@ letter: "p"
 url: "/docs/linux/man/1-perlvmesa/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+perlvmesa - building and installing Perl for VM/ESA. 
 
- perlvmesa - building and installing Perl for VM/ESA. 
+This document will help you Configure, build, test and install Perl on <font SIZE="-1">VM/ESA</font>.
 
-<h2>SYNOPSIS</h2>
-
- This document will help you Configure, build, test and install Perl on <font SIZE="-1">VM/ESA</font>.
-
-<h2>DESCRIPTION</h2>
-
- This is a fully ported perl for <font SIZE="-1">VM/ESA</font> 2.3.0. It may work on other versions, but that's the one we've tested it on. 
+This is a fully ported perl for <font SIZE="-1">VM/ESA</font> 2.3.0. It may work on other versions, but that's the one we've tested it on. 
 
  If you've downloaded the binary distribution, it needs to be installed below /usr/local. Source code distributions have an automated ``make install'' step that means you do not need to extract the source code below /usr/local (though that is where it will be installed by default). You may need to worry about the networking configuration files discussed in the last bullet below.
 

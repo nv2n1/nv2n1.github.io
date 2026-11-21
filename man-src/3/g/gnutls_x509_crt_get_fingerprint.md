@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crt_get_fingerprint(3)"
 name: "gnutls_x509_crt_get_fingerprint"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_crt_get_fingerprint – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_fingerprint &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_fingerprint(gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_digest_algorithm_t </code><i>algo</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_crt_get_fingerprint – API function"
 <dd> a pointer to a structure to hold the fingerprint (may be null)</dd>
 <dt>size_t * buf_size</dt>
 <dd> initially holds the size of <i>buf</i></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will calculate and copy the certificate&#8217;s fingerprint in the provided buffer. The fingerprint is a hash of the DER-encoded data of the certificate. </p>
 <p> If the buffer is null then only the size will be filled.</p>
 <h2>RETURNS</h2>

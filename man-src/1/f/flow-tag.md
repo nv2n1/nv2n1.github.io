@@ -1,4 +1,5 @@
 ---
+
 title: "flow-tag(1)"
 name: "flow-tag"
 section: "1"
@@ -9,9 +10,7 @@ description: "flow-tag – Apply tags to flow files."
 
 <h2>NAME</h2>
 <p> flow-tag &#8211; Apply tags to flow files.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>flow-tag</code> [ <code>-hk</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-t</code><i> tag_fname</i> ] [ <code>-T</code><i> tag_definition</i> ] [ <code>-v</code><i> variable binding</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>flow-tag</code> utility is used to add or modify source and destination tags in flow records. Tags are 32 bit identifiers derived from rules and fields in a flow record. Tags can be used to group flows with common prefixes, autonomous systems, next hops, exporter id and/or input/output interface. <code>flow-stat</code> can be used with tagged flows to produce group based reports. For example, all outbound traffic for a customer where the customer is defined by a list of IP prefixes.</p>
 <h2>OPTIONS</h2>
 <dl>

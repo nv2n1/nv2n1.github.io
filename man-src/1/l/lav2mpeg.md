@@ -1,4 +1,5 @@
 ---
+
 title: "lav2mpeg(1)"
 name: "lav2mpeg"
 section: "1"
@@ -9,9 +10,7 @@ description: "lav2mpeg – easy conversion of lav files to mpeg"
 
 <h2>NAME</h2>
 <p> lav2mpeg &#8211; easy conversion of lav files to mpeg</p>
-<h2>SYNOPSIS</h2>
 <p> <code>lav2mpeg [ options ]</code> <i>lavfile1 [lavfile2 &#8230; lavfileN]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>lav2mpeg</code> is a shell script to ease the use of the mjpeg utilities, providing a convenient way to convert from MJPEG files to popular MPEG file formats. It supports output in VCD, medium and high rate VCD, SVCD, high rate SVCD, and generic mpeg1 and mpeg2 </p>
 <p> The input files may be any combination of AVI (.avi), Quicktime (.qt) or editlist files so long as they are all lavtools- readable (e.g. MJPEG-encoded AVI/Quicktime or DV type 2 AVI).</p>
 <h2>OPTIONS</h2>

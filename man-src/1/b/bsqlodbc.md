@@ -1,4 +1,5 @@
 ---
+
 title: "bsqlodbc(1)"
 name: "bsqlodbc"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-bsqlodbc/"
 description: "bsqlodbc – batch SQL script processor using ODBC"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bsqlodbc</code> &#8211; batch SQL script processor using ODBC </p>
-<h2>SYNOPSIS</h2>
 <p> [-<code>hqv</code> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>S </code><i>server</i> ] [-<code>D </code><i>database</i> ] [-<code>i </code><i>input_file</i> ] [-<code>o </code><i>output_file</i> ] [-<code>e </code><i>error_file</i> ] [-<code>t </code><i>field_term</i> ] [-<code>V </code><i>odbc_version</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> is a utility program distributed with FreeTDS. </p>
 <p> is a non-interactive equivalent of the `isql&#8217; utility programs distributed by Sybase and Microsoft. Like them, uses the command `go&#8217; on a line by itself as a separator between batches. The last batch need not be followed by `go&#8217; </p>
 <p> makes use of the ODBC API provided by FreeTDS. This API is of course also available to application developers.</p>

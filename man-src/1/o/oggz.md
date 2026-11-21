@@ -1,4 +1,5 @@
 ---
+
 title: "oggz(1)"
 name: "oggz"
 section: "1"
@@ -10,7 +11,6 @@ description: "oggz — inspect and manipulate Ogg multimedia files"
 <h2>NAME</h2>
 <p> oggz &#8212; inspect and manipulate Ogg multimedia files<br />
 &nbsp;<wbr></p>
-<h2>SYNOPSIS</h2>
 <p> <code>oggz</code>help <code>command</code> command <code>args</code></p>
 <h2>Description</h2>
 <p> <code>oggz</code> is a suite of tools for manipulating Ogg multimedia files. It supports multiplexed files conformant with RFC3533. Oggz can parse headers for CELT, CMML, Dirac, FLAC, Kate, PCM, Speex, Theora and Vorbis, and can read and write Ogg Skeleton logical bitstreams.<br />

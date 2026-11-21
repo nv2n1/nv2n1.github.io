@@ -1,4 +1,5 @@
 ---
+
 title: "move_pages(2)"
 name: "move_pages"
 section: "2"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/2-move_pages/"
 description: "move_pages – move individual pages of a process to another node"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;numaif.h&gt;
 long move_pages(int pid, unsigned long count, void **pages,
                 const int *nodes, int *status, int flags);
 </code></pre>
 <p> Link with <i>-lnuma</i>.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>move_pages</code>() moves the specified <i>pages</i> of the process <i>pid</i> to the memory nodes specified by <i>nodes</i>. The result of the move is reflected in <i>status</i>. The <i>flags</i> indicate constraints on the pages to be moved. </p>
 <p> <i>pid</i> is the ID of the process in which pages are to be moved. If <i>pid</i> is 0, then <code>move_pages</code>() moves pages of the calling process. </p>
 <p> To move pages in another process requires the following privileges:</p>

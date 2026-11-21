@@ -1,4 +1,5 @@
 ---
+
 title: "konve(1)"
 name: "konve"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-konve/"
 description: "konve – CCD image conversion"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>konve </code><i>[options] source_file &#8230;</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The Konve program converts CCD frames from the format used by camera controling software to FITS format. The correction of time of observation or image flipping can be applied also. </p>
 <p> The program can be run in several modes, the mode is selected by command-line parameters. Besides the usual conversion mode, it allows printing header informations of source files in short or detailed form. You can convert header only while not copying the image. Additional informations, which shall be written to the output files can be given in parameter file. </p>
 <p> Current version of program supports reading SBIG (ST-xx) compressed and uncompressed files and the FITS files also. Note, that you can use FITS to FITS conversion for gathering files from many locations into one directory. It will solve the file name collisions. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ctfsm(3)"
 name: "ctfsm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctfsm/"
 description: "ctfsm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br />
  <i></i><code>CTFSM</code> solves a matrix equation (one operand is a triangular matrix in RFP format).</p>

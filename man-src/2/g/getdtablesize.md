@@ -1,4 +1,5 @@
 ---
+
 title: "getdtablesize(2)"
 name: "getdtablesize"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getdtablesize/"
 description: "getdtablesize – get file descriptor table size"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int getdtablesize(void);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -22,7 +22,6 @@ description: "getdtablesize – get file descriptor table size"
 </code></pre>
 </dd><dd> Before glibc 2.12: _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>getdtablesize</code>() returns the maximum number of files a process can have open, one more than the largest possible value for a file descriptor.</p>
 <h2>RETURN VALUE</h2>
 <p> The current limit on the number of open files per process.</p>

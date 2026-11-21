@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_privkey_import_openssl(3)"
 name: "gnutls_x509_privkey_import_openssl"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_privkey_import_openssl – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_import_openssl &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_import_openssl(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, const char * </code><i>password</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,7 +20,6 @@ description: "gnutls_x509_privkey_import_openssl – API function"
 <dd> The DER or PEM encoded key.</dd>
 <dt>const char * password</dt>
 <dd> the password to decrypt the key (if it is encrypted).</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will convert the given PEM encrypted to the native gnutls_x509_privkey_t format. The output will be stored in <i>key</i> . </p>
 <p> The <i>password</i> should be in ASCII. If the password is not provided or wrong then <code>GNUTLS_E_DECRYPTION_FAILED</code> will be returned. </p>
 <p> If the Certificate is PEM encoded it should have a header of &quot;PRIVATE KEY&quot; and the &quot;DEK-Info&quot; header.</p>

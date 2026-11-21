@@ -1,4 +1,5 @@
 ---
+
 title: "fixcvsdiff(1)"
 name: "fixcvsdiff"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-fixcvsdiff/"
 description: "fixcvsdiff – fix problematic diff files"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fixcvsdiff</code> [-p] [-b] [<i>file</i>&#8230;]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>fixcvsdiff modifies diff files created from the <code>cvs diff</code> command, where files have been added or removed. CVS tends to create diff files that <code><a href="/docs/linux/man/1-patch/">patch</a></code>(1) mis-interprets. The diff file must retain the lines beginning with &#8220;Index:&#8221; in order for the correction to work.</dd>
 <h2>OPTIONS</h2>
 <p> <code>-b</code></p>

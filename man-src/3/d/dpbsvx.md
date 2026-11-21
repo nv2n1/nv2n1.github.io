@@ -1,4 +1,5 @@
 ---
+
 title: "dpbsvx(3)"
 name: "dpbsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpbsvx/"
 description: "dpbsvx.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpbsvx</code> (FACT, UPLO, N, KD, NRHS, AB, LDAB, AFB, LDAFB, EQUED, S, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code> DPBSVX computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>

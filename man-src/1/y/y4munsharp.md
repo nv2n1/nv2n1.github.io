@@ -1,4 +1,5 @@
 ---
+
 title: "y4munsharp(1)"
 name: "y4munsharp"
 section: "1"
@@ -9,9 +10,7 @@ description: "y4munsharp – Unsharp filter for YUV4MPEG2 streams"
 
 <h2>NAME</h2>
 <p> y4munsharp &#8211; Unsharp filter for YUV4MPEG2 streams</p>
-<h2>SYNOPSIS</h2>
 <p> <code>y4munsharp</code> [<i>options</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>y4munsharp</code> is an implementation of the GIMP unsharp filter for YUV4MPEG2 streams. The usual 3 parameters for unshap mask processing (radius, amount and threshold) are specified on the command line. By default only the Y&#8217; (luma) component is processed although processing of the CbCr (chroma) may be requested by a commandline option. Output must be either to a pipe or a file, leaving stdout as a terminal will elicit an error and the program will exit.</p>
 <h2>OPTIONS</h2>
 <p> <code>y4munsharp</code> accepts the following options:</p>

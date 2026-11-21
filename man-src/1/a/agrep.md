@@ -1,4 +1,5 @@
 ---
+
 title: "agrep(1)"
 name: "agrep"
 section: "1"
@@ -9,9 +10,7 @@ description: "agrep – print lines approximately matching a pattern"
 
 <h2>NAME</h2>
 <p> agrep &#8211; print lines approximately matching a pattern</p>
-<h2>SYNOPSIS</h2>
 <p> <code>agrep</code> [<i>OPTION</i>]&#8230; <i>PATTERN</i> [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Searches for approximate matches of PATTERN in each FILE or standard input. Example: `agrep -2 optimize foo.txt&#8217; outputs all lines in file `foo.txt&#8217; that match &quot;optimize&quot; within two errors. E.g. lines which contain &quot;optimise&quot;, &quot;optmise&quot;, and &quot;opitmize&quot; all match.</p>
 <h2>OPTIONS</h2>
 <h3>Regexp selection and interpretation:</h3>

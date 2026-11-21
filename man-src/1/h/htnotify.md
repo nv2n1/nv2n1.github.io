@@ -1,4 +1,5 @@
 ---
+
 title: "htnotify(1)"
 name: "htnotify"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-htnotify/"
 description: "htnotify – sends email notifications about out-dated web pages discovered by htmerge"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>htnotify</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>Htnotify</i> scans the document database created by <i>htmerge</i> and sends an email message for every page that is out of date. Please have a look at the ht://Dig notification manual for instructions on how to set up this service.</p>
 <h2>OPTIONS</h2>
 <dl>

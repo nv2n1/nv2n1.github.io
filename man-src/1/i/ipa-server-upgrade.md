@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-server-upgrade(1)"
 name: "ipa-server-upgrade"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipa-server-upgrade – upgrade IPA server"
 
 <h2>NAME</h2>
 <p> ipa-server-upgrade &#8211; upgrade IPA server</p>
-<h2>SYNOPSIS</h2>
 <p> ipa-server-upgrade [options]</p>
-<h2>DESCRIPTION</h2>
 <p> ipa-server-upgrade is used to upgrade IPA server when the IPA packages are being updated. It is not intended to be executed by end-users. </p>
 <p> ipa-server-upgrade will: </p>
 <p>&nbsp;<wbr>*&nbsp;<wbr>update LDAP schema<br />

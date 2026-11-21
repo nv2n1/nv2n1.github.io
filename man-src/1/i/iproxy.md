@@ -1,4 +1,5 @@
 ---
+
 title: "iproxy(1)"
 name: "iproxy"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-iproxy/"
 description: "iproxy – proxy that enables tcp service access to iPhone/iPod"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>iproxy </code> [LOCAL_TCP_PORT] [DEVICE_TCP_PORT] </p>
-<h2>DESCRIPTION</h2>
 <p> iproxy allows you to forward localhost ports to the device&#8212;allows SSH over USB on jailbroken devices, or allowing access the lockdown daemon (and then to all of the file access, sync, notification and backup services running on the device). </p>
 <p> Example :<br />
 &nbsp;<wbr>./iproxy 2222 22&nbsp;<wbr>&amp;<br />

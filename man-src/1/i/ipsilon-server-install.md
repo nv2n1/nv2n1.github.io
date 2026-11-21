@@ -1,4 +1,5 @@
 ---
+
 title: "ipsilon-server-install(1)"
 name: "ipsilon-server-install"
 section: "1"
@@ -9,9 +10,7 @@ description: "ipsilon-server-install – Configure an Ipsilon Identity Provider 
 
 <h2>NAME</h2>
 <p> ipsilon-server-install &#8211; Configure an Ipsilon Identity Provider instance</p>
-<h2>SYNOPSIS</h2>
 <p> ipsilon-server-install [OPTION]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Configure an Ipsilon instance to provide identity services using any of the supported and enabled protocols. </p>
 <p> Ipsilon uses a plugable framework so some options may not be available, depending on what plugins have been installed. </p>
 <p> Ipsilon supports three types of plugins: </p>

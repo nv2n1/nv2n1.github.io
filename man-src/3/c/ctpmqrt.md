@@ -1,4 +1,5 @@
 ---
+
 title: "ctpmqrt(3)"
 name: "ctpmqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ctpmqrt/"
 description: "ctpmqrt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctpmqrt</code> (SIDE, TRANS, M, N, K, L, NB, V, LDV, T, LDT, A, LDA, B, LDB, WORK, INFO)<br />
  <i></i><code>CTPMQRT</code></p>

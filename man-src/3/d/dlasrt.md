@@ -1,4 +1,5 @@
 ---
+
 title: "dlasrt(3)"
 name: "dlasrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlasrt/"
 description: "dlasrt.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasrt</code> (ID, N, D, INFO)<br />
  <i></i><code>DLASRT</code> sorts numbers in increasing or decreasing order.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-swarm-update(1)"
 name: "docker-swarm-update"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-docker-swarm-update/"
 description: "docker-swarm-update – Update the swarm"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>docker swarm update [OPTIONS]</code> </p>
-<h2>DESCRIPTION</h2>
 <p> Update the swarm </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;autolock</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Change manager autolocking setting (true|false)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-new(1)"
 name: "cargo-new"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-new/"
 description: "cargo-new – Create a new cargo package"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo new [OPTIONS] &lt;PATH&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> Create a new cargo package at &lt;PATH&gt;. </p>
 <p> Use the &#8211;vcs option to control the version control system to use.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usergetinfo(1)"
 name: "euare-usergetinfo"
 section: "1"
@@ -9,12 +10,10 @@ description: "euare-usergetinfo – [Eucalyptus only] Display information about 
 
 <h2>NAME</h2>
 <p> euare-usergetinfo &#8211; [Eucalyptus only] Display information about a user</p>
-<h2>SYNOPSIS</h2>
 <p> euare-usergetinfo [-k INFOKEY] [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [USER]</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> [Eucalyptus only] Display information about a user</p>
 <h3>positional arguments:</h3>
 <dl>

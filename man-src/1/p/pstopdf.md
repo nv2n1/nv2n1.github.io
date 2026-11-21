@@ -1,4 +1,5 @@
 ---
+
 title: "pstopdf(1)"
 name: "pstopdf"
 section: "1"
@@ -9,9 +10,7 @@ description: "pstopdf – convert EPS to PDF"
 
 <h2>NAME</h2>
 <p> pstopdf &#8211; convert EPS to PDF </p>
-<h2>SYNOPSIS</h2>
 <p> <code>pstopdf</code> [ <i>OPTION</i> &#8230; ] <i>FILE</i> [ &#8230; ] </p>
-<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr> <code>pstopdf</code> converts EPS (encapsulated PostScript) to PDF. </p>
 <h2>OPTIONS</h2>
 <dl>

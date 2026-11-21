@@ -1,4 +1,5 @@
 ---
+
 title: "safekeep(1)"
 name: "safekeep"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-safekeep/"
 description: "safekeep – Client/server backup script"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <i>safekeep</i> &#8211;server [-q] [-v] [&#8211;noemail] [&#8211;force] [-c file] [&#8211;cleanup] &lt;clientid&gt;* </p>
 <p> <i>safekeep</i> &#8211;keys [-q] [-v] [&#8211;noemail] [-c file] [-i file] [&#8211;status] [&#8211;print] [&#8211;deploy] &lt;clientid&gt;* </p>
 <p> <i>safekeep</i> &#8211;list [-q] [-v] [&#8211;noemail] [-c file] [&#8211;increments] [&#8211;parsable-output] [&#8211;sizes] [&#8211;changed=&lt;time&gt;] [&#8211;at-time=&lt;time&gt;] &lt;clientid&gt;* </p>
 <p> <i>safekeep</i> &#8211;client [&#8211;cleanup] </p>
 <p> <i>safekeep</i> -h | -V</p>
-<h2>DESCRIPTION</h2>
 <p> SafeKeep is a client/server backup script which enhances the power of rdiff-backup with simple configuration and use. </p>
 <p> SafeKeep can work in server mode, client mode, SSH key management mode or list mode. </p>
 <p> In server mode, SafeKeep parses a set of configurations files which defines a set of backup clients. For each backup client, SafeKeep connects to the client host over SSH (using a public key authentification system previously set up using safekeep &#8211;keys &#8211;deploy), and launches safekeep &#8211;client onto the client host. The client does the real backup and sends the data over SSH to the SafeKeep server which stores it in the specified location. </p>

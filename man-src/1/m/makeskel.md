@@ -1,4 +1,5 @@
 ---
+
 title: "makeskel(1)"
 name: "makeskel"
 section: "1"
@@ -9,7 +10,6 @@ description: "makeskel – generate description file for fpdoc."
 
 <h2>NAME</h2>
 <p> makeskel &#8211; generate description file for <code>fpdoc.</code> </p>
-<h2>SYNOPSIS</h2>
 <p> <code>makeskel</code> [&#8211;descr=filename] [&#8211;disable-arguments] [&#8211;disable-errors] [&#8211;disable-function-results] [&#8211;disable-private] [&#8211;disable-protected] [&#8211;disable-seealso] [&#8211;emit-class-separator] [&#8211;help] [&#8211;lang=language] [&#8211;output=filename] [&#8211;update] &#8211;package=name &#8211;input=cmdline </p>
 <h2>Description</h2>
 <p> <code>makeskel</code> scans a Free Pascal unit source file and generates a skeleton description file for it. It generates nodes for all identifiers found in the interface section of the unit, although this behaviour can be adjusted with some options. It can also update an existing XML file, and then emits only nodes for identifiers for which no node exists yet. </p>

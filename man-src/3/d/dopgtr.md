@@ -1,4 +1,5 @@
 ---
+
 title: "dopgtr(3)"
 name: "dopgtr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dopgtr/"
 description: "dopgtr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dopgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br />
  <i></i><code>DOPGTR</code></p>

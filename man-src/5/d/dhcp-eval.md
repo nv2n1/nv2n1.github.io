@@ -1,4 +1,5 @@
 ---
+
 title: "dhcp-eval(5)"
 name: "dhcp-eval"
 section: "5"
@@ -6,8 +7,8 @@ letter: "d"
 url: "/docs/linux/man/5-dhcp-eval/"
 description: "dhcp-eval – ISC DHCP conditional evaluation"
 ---
+
 <p>dhcp-eval &#8211; ISC DHCP conditional evaluation </p>
-<h2>DESCRIPTION</h2>
 <p> The Internet Systems Consortium DHCP client and server both provide the ability to perform conditional behavior depending on the contents of packets they receive. The syntax for specifying this conditional behaviour is documented here.  </p>
 <h2>REFERENCE: CONDITIONAL BEHAVIOUR</h2>
 <p> Conditional behaviour may be specified using the if statement and the else or elsif statements or the switch and case statements. A conditional statement can appear anywhere that a regular statement (e.g., an option statement) can appear, and can enclose one or more such statements. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "uuname(1)"
 name: "uuname"
 section: "1"
@@ -9,9 +10,7 @@ description: "uuname – List the names of the known remote UUCP sites."
 
 <h2>NAME</h2>
 <p> uuname &#8211; List the names of the known remote UUCP sites.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>uuname</code> [<i>-a</i>] [<i>-l</i>] [<i>-I file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Uuname</i> is a program that lists the names of the known remote UUCP sites.</p>
 <h2>OPTIONS</h2>
 <dl>

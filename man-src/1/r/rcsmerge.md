@@ -1,4 +1,5 @@
 ---
+
 title: "rcsmerge(1)"
 name: "rcsmerge"
 section: "1"
@@ -9,9 +10,7 @@ description: "rcsmerge – merge RCS revisions"
 
 <h2>NAME</h2>
 <p> rcsmerge &#8211; merge RCS revisions</p>
-<h2>SYNOPSIS</h2>
 <p> <code>rcsmerge</code> [<i>options</i>]<i> file</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>rcsmerge</code> incorporates the changes between two revisions of an <font SIZE="-1">RCS</font> file into the corresponding working file. </p>
 <p> Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
 <p> At least one revision must be specified with one of the options described below, usually <code>-r</code>. At most two revisions may be specified. If only one revision is specified, the latest revision on the default branch (normally the highest branch on the trunk) is assumed for the second revision. Revisions may be specified numerically or symbolically. </p>

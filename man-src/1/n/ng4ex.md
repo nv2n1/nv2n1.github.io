@@ -1,4 +1,5 @@
 ---
+
 title: "ng4ex(1)"
 name: "ng4ex"
 section: "1"
@@ -9,9 +10,7 @@ description: "ng4ex – NCAR Graphics High Level Utilities Example Programs"
 
 <h2>NAME</h2>
 <p> ng4ex &#8211; NCAR Graphics High Level Utilities Example Programs</p>
-<h2>SYNOPSIS</h2>
 <p> <code>ng4ex</code> [<i>-A</i>] [<i>-C</i>] [<i>-Fortran</i>] [<i>-NCL</i>] [<i>-cdf</i>] [<i>-csagrid</i>] [<i>-cssgrid</i>] [<i>-gui</i>] [<i>-anno</i>] [<i>-gsun</i>] [<code>-W workstation_type</code>] [<i>-app</i>] [<i>-basic</i>] [<i>-contourplot</i>] [<i>-fitgrid</i>] [<i>-labelbar</i>] [<i>-legend</i>] [<i>-primitives</i>] [<i>-mapplot</i>] [<i>-natgrid</i>] [<i>-ngmath</i>] [<i>-streamplot</i>] [<i>-shgrid</i>] [<i>-textitem</i>] [<i>-tickmark</i>] [<i>-title</i>] [<i>-vectorplot</i>] [<i>-xyplot</i>] [<i>-list</i>] [<i>-clean</i>] [<i>-n</i>] <i>name &#8230;</i></p>
-<h2>DESCRIPTION</h2>
 <p> <i>ng4ex</i> provides the user with access to several C, Fortran, and NCL examples illustrating the use of the NCAR Graphics HLUs (High Level Utilities) and NCL. Please note that NCL is not available for Cray systems. </p>
 <p> <i>ng4ex</i> copies the source code for the specified example(s) into the current directory and then compiles, links, and executes the example (if it&#8217;s a Fortran or C program) or runs NCL on it (if it&#8217;s an NCL script file). Depending on the example, the output may be sent to an NCGM (NCAR Graphics Metafile) file and/or displayed to an X window on your screen. You must be running X and have your DISPLAY environment set correctly in order for the X window examples to execute properly. </p>
 <p> If the requested example creates an NCGM file, it will have the same name as the example, suffixed with &quot;.ncgm&quot;. An option allows you to request that only the source code be copied to your directory, without compiling or running the example. Another option allows you to request that only the NCGM file be left in your directory and that all other files created by <code>ng4ex</code> be deleted. The argument <i>name</i> may be selected from the lists that appear below.</p>

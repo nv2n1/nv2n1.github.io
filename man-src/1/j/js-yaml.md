@@ -1,4 +1,5 @@
 ---
+
 title: "js-yaml(1)"
 name: "js-yaml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-js-yaml/"
 description: "js-yaml.js – JavaScript YAML parser and dumper"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> usage: js-yaml [-h] [-v] [-c] [-t] [file]</p>
 <h3>Positional arguments:</h3>
 <dl>

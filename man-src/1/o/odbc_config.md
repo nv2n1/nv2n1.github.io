@@ -1,4 +1,5 @@
 ---
+
 title: "odbc_config(1)"
 name: "odbc_config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-odbc_config/"
 description: "odbc_config – get compile options for compiling unixODBC client"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>&#8211;prefix</code> ] [ <code>&#8211;exec-prefix</code> ] [ <code>&#8211;include-prefix</code> ] [ <code>&#8211;lib-prefix</code> ] [ <code>&#8211;bin-prefix</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;libs</code> ] [ <code>&#8211;static-libs</code> ] [ <code>&#8211;libtool-libs</code> ] [ <code>&#8211;cflags</code> ] [ <code>&#8211;odbcversion</code> ] [ <code>&#8211;odbcini</code> ] [ <code>&#8211;odbcinstini</code> ] [ <code>&#8211;header</code> ] [ <code>&#8211;ulen</code> ] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>odbc_config</code> provides built-in options, specified at build time of the unixODBC suite, which are useful for building unixODBC clients and similar programs. </p>
 <h2>OPTIONS</h2>
 <p> <code></p>

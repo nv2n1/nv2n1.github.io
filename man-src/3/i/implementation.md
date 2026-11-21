@@ -1,4 +1,5 @@
 ---
+
 title: "implementation(3)"
 name: "implementation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-implementation/"
 description: "QuantLib::Parameter – Base class for model arguments."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/parameter.hpp&gt; </p>
 <p> Inherited by <code>ConstantParameter</code>, <code>NullParameter</code>, <code>PiecewiseConstantParameter</code>, and <code>TermStructureFittingParameter</code>. </p>
 <h3>Classes</h3>

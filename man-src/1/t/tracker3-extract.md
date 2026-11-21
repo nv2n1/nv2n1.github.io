@@ -1,4 +1,5 @@
 ---
+
 title: "tracker3-extract(1)"
 name: "tracker3-extract"
 section: "1"
@@ -9,7 +10,6 @@ description: "tracker3-extract – Extract metadata from a file."
 
 <h2>SYNOPSYS</h2>
 <p> <code>tracker3 extract</code> <i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>tracker3 extract</code> reads the file provided and extracts any metadata it can from this file, then displays the metadata on standard output. </p>
 <p> The metadata is displayed as a SPARQL update command, that can be run against a SPARQL endpoint to update its copy of the metadata. </p>
 <p> The actual extraction is done by a separate process. This is done to isolate the calling process from any memory leaks or crashes in the libraries Tracker uses to extract metadata. </p>

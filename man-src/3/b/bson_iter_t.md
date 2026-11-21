@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_t(3)"
 name: "bson_iter_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_t – BSON Document Iterator"
 
 <h2>NAME</h2>
 <p> bson_iter_t &#8211; BSON Document Iterator</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct
@@ -17,7 +17,6 @@ typedef struct
     /*&lt; private &gt;*/
 } bson_iter_t;
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <code>bson_iter_t</code> is a structure used to iterate through the elements of a <code>bson_t</code> \&amp;. It is meant to be used on the stack and can be discarded at any time as it contains no external allocation. The contents of the structure should be considered private and may change between releases, however the structure size will not change. </p>
 <p> The <code>bson_t</code> </p>
 <p> <code>MUST</code> be valid for the lifetime of the iter and it is an error to modify the <code>bson_t</code> while using the iter. </p>

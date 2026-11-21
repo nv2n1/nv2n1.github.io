@@ -1,4 +1,5 @@
 ---
+
 title: "dgemm(3)"
 name: "dgemm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgemm/"
 description: "dgemm.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgemm</code> (TRANSA, TRANSB, M, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
  <i></i><code>DGEMM</code></p>

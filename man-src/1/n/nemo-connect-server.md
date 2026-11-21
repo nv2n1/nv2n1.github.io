@@ -1,4 +1,5 @@
 ---
+
 title: "nemo-connect-server(1)"
 name: "nemo-connect-server"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nemo-connect-server/"
 description: "nemo-connect-server – To Access a remote server"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nemo-connect-server</code> [<i>options</i>] [<i>URI</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>nemo-connect-server</code> command. </p>
 <p> Nemo Connect Server is the connection manager for the GNOME desktop. </p>
 <p> You can use the file manager to access a remote server, be it an FTP site, a Windows share, a WebDav server or an SSH server.</p>

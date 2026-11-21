@@ -1,4 +1,5 @@
 ---
+
 title: "manpath(1)"
 name: "manpath"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-manpath/"
 description: "manpath – determine search path for manual pages"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>manpath</code> [<code>-qgdc?V</code>] [<code>-m</code> <i>system</i>[,&#8230;]] [<code>-C</code> <i>file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> If $<code>MANPATH</code> is set, <code>manpath</code> will simply display its contents and issue a warning. If not, <code>manpath</code> will determine a suitable manual page hierarchy search path and display the results. </p>
 <p> The colon-delimited path is determined using information gained from the man-db configuration file &#8211; (<i>/etc/manpath.config</i>) and the user&#8217;s environment.</p>
 <h2>OPTIONS</h2>

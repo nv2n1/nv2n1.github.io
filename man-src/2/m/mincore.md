@@ -1,4 +1,5 @@
 ---
+
 title: "mincore(2)"
 name: "mincore"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mincore/"
 description: "mincore – determine whether pages are resident in memory"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />
  <code>#include &lt;sys/mman.h&gt;</code> </p>
 <p> <code>int mincore(void *</code><i>addr</i><code>, size_t </code><i>length</i><code>, unsigned char *</code><i>vec</i><code>);</code> </p>
@@ -17,7 +17,6 @@ description: "mincore – determine whether pages are resident in memory"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
-<h2>DESCRIPTION</h2>
 <p> <code>mincore</code>() returns a vector that indicates whether pages of the calling process&#8217;s virtual memory are resident in core (RAM), and so will not cause a disk access (page fault) if referenced. The kernel returns residency information about the pages starting at the address <i>addr</i>, and continuing for <i>length</i> bytes. </p>
 <p> The <i>addr</i> argument must be a multiple of the system page size. The <i>length</i> argument need not be a multiple of the page size, but since residency information is returned for whole pages, <i>length</i> is effectively rounded up to the next multiple of the page size. One may obtain the page size (<code>PAGE_SIZE</code>) using <i>sysconf(_SC_PAGESIZE)</i>. </p>
 <p> The <i>vec</i> argument must point to an array containing at least <i>(length+PAGE_SIZE-1) / PAGE_SIZE</i> bytes. On return, the least significant bit of each byte will be set if the corresponding page is currently resident in memory, and be clear otherwise. (The settings of the other bits in each byte are undefined; these bits are reserved for possible later use.) Of course the information returned in <i>vec</i> is only a snapshot: pages that are not locked in memory can come and go at any moment, and the contents of <i>vec</i> may already be stale by the time this call returns.</p>

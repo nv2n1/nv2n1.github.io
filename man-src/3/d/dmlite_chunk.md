@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_chunk(3)"
 name: "dmlite_chunk"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_chunk –"
 ---
 
 <p> Chunk of data.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;pool.h&gt;</p>
 <h3>Data Fields</h3>
 <p> off_t <code>offset</code> </p>

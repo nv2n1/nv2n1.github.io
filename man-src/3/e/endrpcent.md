@@ -1,4 +1,5 @@
 ---
+
 title: "endrpcent(3)"
 name: "endrpcent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-endrpcent/"
 description: "getrpcent, getrpcbyname, getrpcbynumber, setrpcent, endrpcent – get RPC entry"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 struct rpcent *getrpcent(void);
@@ -16,7 +16,6 @@ struct rpcent *getrpcbynumber(int number);
 void setrpcent(int stayopen);
 void endrpcent(void);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>getrpcent</code>(), <code>getrpcbyname</code>(), and <code>getrpcbynumber</code>() functions each return a pointer to an object with the following structure containing the broken-out fields of an entry in the RPC program number data base. </p>
 <p> struct rpcent {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;*r_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;name of server for this RPC program&nbsp;*/<br />

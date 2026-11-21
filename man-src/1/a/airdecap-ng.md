@@ -1,4 +1,5 @@
 ---
+
 title: "airdecap-ng(1)"
 name: "airdecap-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-airdecap-ng/"
 description: "airdecap-ng – decrypt a WEP/WPA crypted pcap file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>airdecap-ng</code> [options] &lt;pcap file&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>airdecap-ng</code> decrypts a WEP/WPA crypted pcap file to a uncrypted one by using the right WEP/WPA keys.</p>
 <h2>OPTIONS</h2>
 <dl>

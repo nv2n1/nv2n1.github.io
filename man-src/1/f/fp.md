@@ -1,4 +1,5 @@
 ---
+
 title: "fp(1)"
 name: "fp"
 section: "1"
@@ -9,9 +10,7 @@ description: "fp – Free Pascal Compiler (FPC) integrated development enviromen
 
 <h2>NAME</h2>
 <p> fp &#8211; Free Pascal Compiler (FPC) integrated development enviroment </p>
-<h2>SYNOPSIS</h2>
 <p> <code>fp [options] [sourcefile]</code></p>
-<h2>DESCRIPTION</h2>
 <p> This binary is the integrated development environment of the <i>Free Pascal Compiler (FPC)</i> which is an advanced <i>Turbo Pascal</i> and <i>Delphi (7.0) </i> compatible multitarget Pascal compiler. The compiler engine is not based on GCC, but is completely standalone. </p>
 <p> The compiler uses <code><a href="/docs/linux/man/1-ld/">LD</a></code>(1) and can use <code><a href="/docs/linux/man/1-as/">AS</a></code>(1) (see parameter -Aas), but also has its own binary object writer. </p>
 <p> The current main targets are <i>Go32V2</i> (Dos DJGPP extender), <i>Freebsd,</i> <i>Linux,</i> <i>MacOS,</i> <i>MacOSX,</i> <i>MorphOS,</i> <i>Netware,</i> <i>OS/2</i> and <i>Win32.</i> The other targets (M68K compilers for Atari and Amiga) are either based on older versions of the compiler or are still in development. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gropdf(1)"
 name: "gropdf"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gropdf/"
 description: "gropdf – PDF driver for groff"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> [ <code>-dels</code> ] [ <code>-F </code><i>dir</i> ] [ <code>-I </code><i>dir</i> ] [ <code>-p </code><i>paper-size</i> ] #.OP -w n [<code>-u</code> [<i>cmapfile</i>]] [ <code>-y </code><i>foundry</i> ] [<i>file</i> &#8230;] <code>-v</code> <code>&#8211;version</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gropdf</code> translates the output of GNU <code>troff</code> to PDF. Normally <code>gropdf</code> should be invoked by using the groff command with a <code>-Tpdf</code> option. If no files are given, <code>gropdf</code> reads the standard input. A filename of <code>&#8211;</code> also causes <code>gropdf</code> to read the standard input. PDF output is written to the standard output. When <code>gropdf</code> is run by <code>groff</code> options can be passed to <code>gropdf</code> using <code>groff</code>&#8216;s <code>-P</code> option. </p>
 <p> See section &#8220;Font Installation&#8221; below for a guide how to install fonts for <code>gropdf</code>.</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "sieveshell(1)"
 name: "sieveshell"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-sieveshell/"
 description: "sieveshell – remotely manipulate sieve scripts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> sieveshell [<code>&#8211;user</code>=<i>user</i>] [<code>&#8211;authname</code>=<i>authname</i>] [<code>&#8211;realm</code>=<i>realm</i>] [<code>&#8211;exec</code>=<i>script</i>] <i>server</i>[<code>:</code><i>port</i>] </p>
 <p> sieveshell <code>&#8211;help</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>sieveshell</code> allows users to manipulate their scripts on a remote server. It works via <font SIZE="-1">MANAGESIEVE,</font> a work in progress. </p>
 <p> The following commands are recognized: </p>
 <dl>

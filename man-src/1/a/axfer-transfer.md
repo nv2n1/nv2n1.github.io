@@ -1,4 +1,5 @@
 ---
+
 title: "axfer-transfer(1)"
 name: "axfer-transfer"
 section: "1"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/1-axfer-transfer/"
 description: "axfer-transfer – transferrer of audio data frame for sound devices and nodes."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>axfer transfer</code> <i>direction</i> [ <i>common-options</i> ] [ <i>backend-options</i> ] [ <i>filepath</i> ] </p>
 <p> <code>axfer transfer</code> <i>direction</i> [ <i>common-options</i> ] [ <i>backend-options</i> ] <i>-I</i> | <i>&#8211;separate-channels filepath &#8230;</i> </p>
 <p> direction = <code>capture</code> | <code>playback</code> </p>
 <p> common-options = ( read <i>OPTIONS</i> section ) </p>
 <p> backend-options = ( read <i>OPTIONS</i> section ) </p>
 <p> filepaths = ( read <i>OPTIONS</i> section ) </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>transfer</code> subcommand of <code>axfer</code> performs transmission of audio data frames for devices available in supported backends. This program is essentially designed to use alsa-lib APIs (libasound backend) to handle sound devices supported by Linux sound subsystem (ALSA). </p>
 <h2>OPTIONS</h2>
 <h3>Direction</h3>

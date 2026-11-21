@@ -1,4 +1,5 @@
 ---
+
 title: "extresso(1)"
 name: "extresso"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-extresso/"
 description: "extresso – wrapper for wrestool and icotool"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>extresso</code> [<i>OPTIONS</i>]&#8230; [<i>FILE</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>extresso</code> command. This manual page was written for the Debian GNU distribution because the original program does not have a manual page. </p>
 <p> Extresso reads resource scripts, and uses wrestool to extract the listed resources and icotool to convert them (if necessary).</p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gearings(3)"
 name: "gearings"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gearings/"
 description: "QuantLib::CapFloor::arguments – Arguments for cap/floor calculation"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/capfloor.hpp&gt; </p>
 <p> Inherits QuantLib::PricingEngine::arguments. </p>
 <h3>Public Member Functions</h3>

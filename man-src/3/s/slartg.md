@@ -1,4 +1,5 @@
 ---
+
 title: "slartg(3)"
 name: "slartg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slartg/"
 description: "slartg.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slartg</code> (F, G, CS, SN, R)<br />
  <i></i><code>SLARTG</code> generates a plane rotation with real cosine and real sine.</p>

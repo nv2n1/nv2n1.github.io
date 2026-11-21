@@ -1,4 +1,5 @@
 ---
+
 title: "osd_cat(1)"
 name: "osd_cat"
 section: "1"
@@ -9,10 +10,8 @@ description: "osd_cat – X on-screen file displayer"
 
 <h2>NAME</h2>
 <p> osd_cat &#8211; X on-screen file displayer</p>
-<h2>SYNOPSIS</h2>
 <p> <code>osd_cat</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br />
  <code>osd_cat</code> <code>-b percentage</code>|<code>slider</code> [<i>OPTION</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Display FILE, or standard input, on X screen.</p>
 <dl>
 <dt><code>-p</code>, <code>&#8211;pos</code>=<i>POS</i></dt>

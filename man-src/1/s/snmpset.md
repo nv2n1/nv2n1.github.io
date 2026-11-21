@@ -1,4 +1,5 @@
 ---
+
 title: "snmpset(1)"
 name: "snmpset"
 section: "1"
@@ -9,9 +10,7 @@ description: "snmpset – communicates with a network entity using SNMP SET requ
 
 <h2>NAME</h2>
 <p> snmpset &#8211; communicates with a network entity using SNMP SET requests</p>
-<h2>SYNOPSIS</h2>
 <p> <code>snmpset</code> [COMMON OPTIONS] AGENT OID TYPE VALUE [OID TYPE VALUE]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>snmpset</code> is an SNMP application that uses the SNMP SET request to set information on a network entity. One or more object identifiers (OIDs) must be given as arguments on the command line. A type and a value to be set must accompany each object identifier. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>. </p>
 <p> The <i>TYPE</i> is a single character, one of:</p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpre(1)"
 name: "gpre"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-gpre/"
 description: "gpre – Firebird source pre-processor"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>gpre</code> [<i>option</i>&#8230;] <i>input</i> <i>output</i></dt>
 <dd></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gpre</code> is a source pre-processor for easier writing of programs working with the raw Firebird <font SIZE="-1">API.</font> It supports multiple source languages. Using <code>gpre</code>, you can mix special SQL-like language with the normal program source.</p>
 <h2>OPTIONS</h2>
 <dl>

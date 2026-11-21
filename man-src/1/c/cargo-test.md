@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-test(1)"
 name: "cargo-test"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-test/"
 description: "cargo-test – Execute unit and integration tests of a package"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo test [OPTIONS] [&#8211;] [&lt;ARGS&gt;&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> Execute all unit and integration tests of a local package. </p>
 <p> All of the trailing arguments are passed to the test binaries generated for filtering tests and generally providing options configuring how they run. For example, this will run all tests with the name &#8216;foo&#8217; in their name:</p>
 <dl>

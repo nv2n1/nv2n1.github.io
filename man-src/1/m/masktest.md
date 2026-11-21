@@ -1,4 +1,5 @@
 ---
+
 title: "masktest(1)"
 name: "masktest"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-masktest/"
 description: "masktest – Find differences in wildcard matching between Samba’s implementation and that of a remote server."
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>masktest</code> {//server/share} [-U user%pass] [-d debuglevel] [-W workgroup] [-n numloops] [-s seed] [-a] [-E] [-M max protocol] [-f filechars] [-m maskchars] [-v]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>masktest is a utility for detecting differences in behaviour between Samba&#8217;s own implementation and that of a remote server. It will run generate random filenames/masks and check if these match the same files they do on the remote file as they do on the local server. It will display any differences it finds. </dd>
 <p> This utility is used by the Samba team to find differences in behaviour between Samba and Windows servers.</p>
 <h2>OPTIONS</h2>

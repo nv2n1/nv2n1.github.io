@@ -1,4 +1,5 @@
 ---
+
 title: "enblend(1)"
 name: "enblend"
 section: "1"
@@ -9,9 +10,7 @@ description: "enblend – manual page for enblend 4.1.1"
 
 <h2>NAME</h2>
 <p> enblend &#8211; manual page for enblend 4.1.1</p>
-<h2>SYNOPSIS</h2>
 <p> <code>enblend</code> [<i>options</i>] [<i>&#8211;output=IMAGE</i>] <i>INPUT</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> Blend INPUT images into a single IMAGE. </p>
 <p> INPUT&#8230; are image filenames or response filenames. Response filenames start with an &quot;@&quot; character.</p>
 <h3>Common options:</h3>

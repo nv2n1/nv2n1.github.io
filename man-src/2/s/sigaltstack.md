@@ -1,4 +1,5 @@
 ---
+
 title: "sigaltstack(2)"
 name: "sigaltstack"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sigaltstack/"
 description: "sigaltstack – set and/or get signal stack context"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>int sigaltstack(const stack_t *</code><i>ss</i><code>, stack_t *</code><i>old_ss</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -17,7 +17,6 @@ description: "sigaltstack – set and/or get signal stack context"
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>sigaltstack</code>() allows a thread to define a new alternate signal stack and/or retrieve the state of an existing alternate signal stack. An alternate signal stack is used during the execution of a signal handler if the establishment of that handler (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) requested it. </p>
 <p> The normal sequence of events for using an alternate signal stack is the following:</p>
 <dl>

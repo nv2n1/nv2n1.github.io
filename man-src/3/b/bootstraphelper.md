@@ -1,4 +1,5 @@
 ---
+
 title: "bootstraphelper(3)"
 name: "bootstraphelper"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bootstraphelper/"
 description: "ql/termstructures/bootstraphelper.hpp – base helper class used for bootstrapping"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/quote.hpp&gt;<br />
  #include &lt;ql/time/date.hpp&gt;<br />
  #include &lt;ql/handle.hpp&gt;<br />

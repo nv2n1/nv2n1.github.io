@@ -1,4 +1,5 @@
 ---
+
 title: "openvt(1)"
 name: "openvt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-openvt/"
 description: "openvt – start a program on a new virtual terminal (VT)."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>openvt</code> [-c vtnumber] [OPTIONS] [&#8211;] command</p>
-<h2>DESCRIPTION</h2>
 <p> <code>openvt</code> will find the first available VT, and run on it the given <code>command</code> with the given <code>command options,</code> standard input, output and error are directed to that terminal. The current search path ($PATH) is used to find the requested command. If no command is specified then the environment variable $SHELL is used.</p>
 <h3>OPTIONS</h3>
 <dl>

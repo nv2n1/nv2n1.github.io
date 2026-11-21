@@ -1,4 +1,5 @@
 ---
+
 title: "otftotfm(1)"
 name: "otftotfm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-otftotfm/"
 description: "otftotfm – create TeX font metrics from OpenType fonts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>otftotfm</code> [<code>-a</code>] [<code>options</code>] <i>fontfile</i> [<i>texname</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>Otftotfm</code> creates the font metric and encoding files required to use an OpenType font with TeX. You supply an OpenType &quot;.otf&quot; or &quot;.ttf&quot; font file, a base &quot;.enc&quot; encoding, and a TeX name &quot;<i>texname</i>&quot; for the resulting font, and say which OpenType features should be turned on. Then <code>otftotfm</code> generates and installs the corresponding TeX-related metric files (&quot;.tfm&quot; TeX font metrics, &quot;.vf&quot; virtual fonts, and &quot;.enc&quot; encoding files). It works on both PostScript-flavored and TrueType-flavored OpenType fonts, although TrueType-flavor support will only work easily with pdftex. </p>
 <p> The easiest way to use <code>otftotfm</code> is with the <code>-a</code> option; see Automatic Mode below. Without <code>-a</code>, <code>otftotfm</code> writes all its output files to the current directory. </p>
 <p> After running &quot;<code>otftotfm</code> <i>fontfile</i> <i>texname</i>&quot; and installing the results (manually or with <code>-a</code>), you can use the OpenType font in plain TeX with a command like this: </p>

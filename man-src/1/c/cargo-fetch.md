@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-fetch(1)"
 name: "cargo-fetch"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-cargo-fetch/"
 description: "cargo-fetch – Fetch dependencies of a package from the network"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> cargo fetch [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> If a lockfile is available, this command will ensure that all of the git dependencies and/or registries dependencies are downloaded and locally available. The network is never touched after a `cargo fetch` unless the lockfile changes. </p>
 <p> If the lockfile is not available, then this is the equivalent of `cargo generate-lockfile`. A lockfile is generated and dependencies are also all updated. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "qemu-kvm(1)"
 name: "qemu-kvm"
 section: "1"
@@ -6,18 +7,11 @@ letter: "q"
 url: "/docs/linux/man/1-qemu-kvm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+qemu-doc - QEMU Emulator User Documentation 
 
- qemu-doc - QEMU Emulator User Documentation 
+usage: qemu-kvm [options] [<i>disk_image</i>]
 
-<h2>SYNOPSIS</h2>
-
- usage: qemu-kvm [options] [<i>disk_image</i>]
-
-<h2>DESCRIPTION</h2>
-
- The <font SIZE="-1">QEMU PC</font> System emulator simulates the following peripherals:
+The <font SIZE="-1">QEMU PC</font> System emulator simulates the following peripherals:
 <dl>
 <dt>-
 </dt><dd> i440FX host <font SIZE="-1">PCI</font> bridge and <font SIZE="-1">PIIX3 PCI</font> to <font SIZE="-1">ISA</font> bridge

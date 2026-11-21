@@ -1,4 +1,5 @@
 ---
+
 title: "xas(1)"
 name: "xas"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-xas/"
 description: "xas – X-Chat aMule Statistics"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>none</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>xas</code> is a plugin for xchat. For loading see your xchat documentation. After loading type /xas and it will send statistics to the channel you are in. These are taken from your Online Signature file. For this to work, you must enable the &quot;Online Signature&quot; option in aMule&#8217;s preferences. </p>
 <p> To enable it on every startup of xchat you can just run the autstart-xas script (in /usr/bin if you installed with &#8211;prefix=/usr). </p>
 <p> <code>xas</code> was originally written by niet</p>

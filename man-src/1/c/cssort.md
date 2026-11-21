@@ -1,4 +1,5 @@
 ---
+
 title: "cssort(1)"
 name: "cssort"
 section: "1"
@@ -9,9 +10,7 @@ description: "cssort – manual page for cssort 1.3.2"
 
 <h2>NAME</h2>
 <p> cssort &#8211; manual page for cssort 1.3.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cssort</code> [<i>options</i>] [<i>file1.err </i>[&#8230;]]<i>, where options are:</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>&#8211;key</code> arg (=path)</dt>
 <dd> checker, path</dd>

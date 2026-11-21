@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_alter_multiply(3)"
 name: "dirfile_alter_multiply"
 section: "3"
@@ -9,7 +10,6 @@ description: "dirfile_alter_bit, dirfile_alter_clincom, dirfile_alter_const, dir
 
 <h2>NAME</h2>
 <p> dirfile_alter_bit, dirfile_alter_clincom, dirfile_alter_const, dirfile_alter_cpolynom, dirfile_alter_lincom, dirfile_alter_linterp, dirfile_alter_multiply, dirfile_alter_phase, dirfile_alter_polynom, dirfile_alter_raw, dirfile_alter_sbit &#8212; modify a field in a dirfile</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_alter_bit(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>const char *</code><i>in_field</i><code>, gd_bit_t </code><i>bitnum</i><code>, gd_bit_t </code><i>numbits</i><code>);</code></dt>
@@ -23,7 +23,6 @@ description: "dirfile_alter_bit, dirfile_alter_clincom, dirfile_alter_const, dir
 <dt> <code>int dirfile_alter_polynom(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>int </code><i>poly_ord</i><code>, const char *</code><i>in_field</i><code>, const double *</code><i>ca</i><code>);</code></dt>
 <dt> <code>int dirfile_alter_raw(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>gd_type_t </code><i>data_type</i><code>, gd_spf_t </code><i>spf</i><code>, int </code><i>recode</i><code>);</code></dt>
 <dt> <code>int dirfile_alter_sbit(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>const char *</code><i>in_field</i><code>, gd_bit_t </code><i>bitnum</i><code>, gd_bit_t </code><i>numbits</i><code>);</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>These functions provide alternatives to using the <code><a href="/docs/linux/man/3-dirfile_alter_entry/">dirfile_alter_entry</a></code>(3) function to modify a field of the indicated type in the dirfile specified by <i>dirfile</i>. In all of these calls, <i>field_code</i> indicates the the field to be modified, which may be a regular field, or a metafield specified by its full (slashed) field code, but should not contain a representtion suffix. The meaning and valid types of other arguments may be obtained from the <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3) and <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5) manual pages. </dd>
 <p> The <code>dirfile_alter_clincom</code>() and <code>dirfile_alter_cpolynom</code>() functions are identical to <code>dirfile_alter_lincom</code>() and <code>dirfile_alter_polynom</code>(), except they take complex scalar parameters, instead of purely real values. This only matters for the input of <i>new</i> parameters; if the scalar parameters are not changed (by passing NULL instead of a list of scalars), the functions can be used interchangeably, regardless of whether the altered field has complex scalar parameters or not. </p>
 <p> If the corresponding parameters are to be changed, the <code>dirfile_alter_lincom</code>() and <code>dirfile_alter_clincom</code>() functions take pointers to three arrays of length <i>n_fields</i> containing the input field names (<i>in_fields</i>), the gain factors (<i>m</i> or <i>cm</i>), and the offset terms (<i>b</i> or <i>cb</i>). Similarly, <code>dirfile_alter_polynom</code>() and <code>dirfile_alter_cpolynom</code>() take an array of length <i>poly_ord</i> + 1 containing the polynomial co-efficients (<i>a</i> or <i>ca</i>). </p>

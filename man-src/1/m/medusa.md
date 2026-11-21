@@ -1,4 +1,5 @@
 ---
+
 title: "medusa(1)"
 name: "medusa"
 section: "1"
@@ -9,9 +10,7 @@ description: "MEDUSA – Parallel Network Login Auditor"
 
 <h2>NAME</h2>
 <p> MEDUSA &#8211; Parallel Network Login Auditor</p>
-<h2>SYNOPSIS</h2>
 <p> <code>medusa</code> [-h host|-H file] [-u username|-U file] [-p password|-P file] [-C file] -M module [OPTIONS]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Medusa</i> is intended to be a speedy, massively parallel, modular, login brute-forcer. The goal is to support as many services which allow remote authentication as possible. The author considers following items to some of the key features of this application: </p>
 <p> *Thread-based parallel testing. Brute-force testing can be performed against multiple hosts, users or passwords concurrently. </p>
 <p> *Flexible user input. Target information (host/user/password) can be specified in a variety of ways. For example, each item can be either a single entry or a file containing multiple entries. Additionally, a combination file format allows the user to refine their target listing. </p>

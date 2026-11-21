@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_overwrite_int64(3)"
 name: "bson_iter_overwrite_int64"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_iter_overwrite_int64() – The bson_iter_overwrite_int64() fu
 
 <h2>NAME</h2>
 <p> bson_iter_overwrite_int64() &#8211; The bson_iter_overwrite_int64() function shall overwite the contents of a BSON_TYPE_INT64 element in place.</p>
-<h2>SYNOPSIS</h2>
 <pre>
 void
 bson_iter_overwrite_int64 (bson_iter_t *iter,
@@ -22,7 +22,6 @@ bson_iter_overwrite_int64 (bson_iter_t *iter,
 <dl>
 <dt><code>value</code></dt>
 <dd> A int64_t.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_overwrite_int64/">bson_iter_overwrite_int64</a>(3)</code> function shall overwite the contents of a BSON_TYPE_INT64 element in place. </p>
 <p> This may only be done when the underlying bson document allows mutation. </p>
 <p> It is a programming error to call this function when <code>iter</code> is not obvserving an element of type BSON_TYPE_INT64. </p>

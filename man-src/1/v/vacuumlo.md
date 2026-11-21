@@ -1,4 +1,5 @@
 ---
+
 title: "vacuumlo(1)"
 name: "vacuumlo"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-vacuumlo/"
 description: "vacuumlo – remove orphaned large objects from a PostgreSQL database"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>vacuumlo</code> [<i>option</i>&#8230;] <i>dbname</i>&#8230;</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>vacuumlo is a simple utility program that will remove any &#8220;orphaned&#8221; large objects from a PostgreSQL database. An orphaned large object (LO) is considered to be any LO whose OID does not appear in any oid or lo data column of the database. </dd>
 <p> If you use this, you may also be interested in the <code>lo_manage</code> trigger in the lo module. <code>lo_manage</code> is useful to try to avoid creating orphaned LOs in the first place. </p>
 <p> All databases named on the command line are processed.</p>

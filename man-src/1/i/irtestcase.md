@@ -1,4 +1,5 @@
 ---
+
 title: "irtestcase(1)"
 name: "irtestcase"
 section: "1"
@@ -9,11 +10,9 @@ description: "irtestcase – create or check decoding testcases."
 
 <h2>NAME</h2>
 <p> irtestcase &#8211; create or check decoding testcases.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>irtestcase [-l lircrc-file -p prog] &lt;socket&gt;</code><br />
  <code>irtestcase [-l lircrc-file -p prog] -t testdata &lt;socket&gt;</code><br />
  <code>irtestcase [-v|-h|</code> </p>
-<h2>DESCRIPTION</h2>
 <p> irtestcase is a tool which can record keypresses from a remote together with the decoded values. Given output from another session, it can also verify that the decoding still works as expected. </p>
 <p> In the first form irtestcase will wait for input and create log files for it. Doing so, it also echoes received buttons on stdout. There is no way to stop the program in a clean way, just use ctrl-C when completed. </p>
 <p> In the second form it will feed the data from the testdata file to lircd and log the the decoded data as usually. Thus, this makes it possible to test the output from the remote which generated the testdata. In this form lircd must be running with the &quot;file&quot; driver. </p>

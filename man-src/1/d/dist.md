@@ -1,4 +1,5 @@
 ---
+
 title: "dist(1)"
 name: "dist"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-dist/"
 description: "dist – redistribute a message to additional addresses"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dist</code> [<i>+folder</i>] [<i>msg</i>] [<code>-form</code> <i>formfile</i>] [<code>-annotate</code> | <code>-noannotate</code>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-width</code> <i>columns</i>] [<code>-from</code> <i>address</i>] [<code>-to</code> <i>address</i>] [<code>-cc</code> <i>address</i>] [<code>-fcc</code> <i>+folder</i>] [<code>-whatnowproc</code> <i>program</i>] [<code>-nowhatnowproc</code>] [<code>-atfile</code>] [<code>-noatfile</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>Dist</code></p>
 <dd>is similar to <code>forw</code>. It prepares the specified message for redistribution to addresses that (presumably) are not on the original address list. </dd>
 <p> The default message form contains the following elements: </p>

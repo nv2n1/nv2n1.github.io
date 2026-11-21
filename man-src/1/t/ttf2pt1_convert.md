@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2pt1_convert(1)"
 name: "ttf2pt1_convert"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ttf2pt1_convert/"
 description: "ttf2pt1_convert – convenience font conversion script"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ttf2pt1_convert <code>[config-file]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>Ttf2pt1_Convert</code>&#8216; is the master conversion script provided with ttf2pt1. </p>
 <p> If the configuration file is not specified as an argument then the file `<tt>&quot;convert.cfg&quot;</tt>&#8216; in the current directory is used. This file contains a set of configuration variables. The distribution contains a sample file file `<tt>&quot;convert.cfg.sample&quot;</tt>&#8216;. Please copy it to `<tt>&quot;convert.cfg&quot;</tt>&#8216;, look inside it and change the configuration variables. The more stable configuration variables, such as the path names of the scripts and encoding files are located in `<tt>&quot;ttf2pt1_convert&quot;</tt>&#8216; itself, they are automatically updated when installing <code>ttf2pt1</code>. </p>
 <p> Put all the <font SIZE="-1">TTF</font> fonts you want to convert into some directory (this may be just the directory that already contains all the Windows fonts on a mounted <font SIZE="-1">FAT</font> filesystem). If you have fonts in different source encoding then put the fonts in each of the encodings into a separate directory. Up to 10 source directories are supported. If you (in a rather unlikely case) have more source directories then you can make two separate runs of the converter, converting up to 10 directories at a time. </p>

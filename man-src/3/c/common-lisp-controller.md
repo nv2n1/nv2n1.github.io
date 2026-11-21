@@ -1,4 +1,5 @@
 ---
+
 title: "common-lisp-controller(3)"
 name: "common-lisp-controller"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-common-lisp-controller/"
 description: "common-lisp-controller – Common Lisp system management tool"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The <i>common-lisp-controller</i> system will manage the installed Common Lisp <i>implementations</i> and <i>libraries</i> on the system. The main function is to enable every user to load any available <i>library</i> and to store the compiled files in a user and implementation specific cache directory. </p>
 <p> On upgrades of either <i>implementations</i> or <i>libraries</i> these directories will be cleared so that no old fasl files will remain. </p>
 <p> There are also options to add libraries by default to new images, see <i>/usr/share/doc/common-lisp-controller/README.Debian</i> , or to add user specific libraries to the management system, see <i>clc-register-user-package.</i><br />

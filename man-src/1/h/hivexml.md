@@ -1,4 +1,5 @@
 ---
+
 title: "hivexml(1)"
 name: "hivexml"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hivexml/"
 description: "hivexml – Convert Windows Registry binary \"hive\" into XML"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
  hivexml [-dk] hivefile &gt; output.xml
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This program converts a single Windows Registry binary &#8220;hive&#8221; file into a self-describing <font SIZE="-1">XML</font> format.</p>
 <h2>OPTIONS</h2>
 <dl>

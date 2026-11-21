@@ -1,4 +1,5 @@
 ---
+
 title: "file-roller(1)"
 name: "file-roller"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-file-roller/"
 description: "file-roller – archive manager for GNOME"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>file-roller</code> [<i>OPTIONS&#8230;</i>] [<i>FILE&#8230;</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> File Roller is a graphical interface to archiving utilities such as tar and zip. </p>
 <p> It supports most common operations such as creating, modifing and extracting files from an archive. You can also view the contents of an archive and open files contained in the archive.</p>
 <h2>OPTIONS</h2>

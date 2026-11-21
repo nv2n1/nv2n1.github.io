@@ -1,4 +1,5 @@
 ---
+
 title: "fmtmsg(3)"
 name: "fmtmsg"
 section: "3"
@@ -7,14 +8,12 @@ url: "/docs/linux/man/3-fmtmsg/"
 description: "fmtmsg – print formatted error messages"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fmtmsg.h&gt;
 int fmtmsg(long classification, const char *label,
            int severity, const char *text,
            const char *action, const char *tag);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> This function displays a message described by its arguments on the device(s) specified in the <i>classification</i> argument. For messages written to <i>stderr</i>, the format depends on the <code>MSGVERB</code> environment variable. </p>
 <p> The <i>label</i> argument identifies the source of the message. The string must consist of two colon separated parts where the first part has not more than 10 and the second part not more than 14 characters. </p>
 <p> The <i>text</i> argument describes the condition of the error. </p>

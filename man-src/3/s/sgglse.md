@@ -1,4 +1,5 @@
 ---
+
 title: "sgglse(3)"
 name: "sgglse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgglse/"
 description: "sgglse.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgglse</code> (M, N, P, A, LDA, B, LDB, C, D, X, WORK, LWORK, INFO)<br />
  <i></i><code> SGGLSE solves overdetermined or underdetermined systems for OTHER matrices</code></p>

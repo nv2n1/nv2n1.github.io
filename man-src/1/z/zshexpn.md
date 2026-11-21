@@ -1,4 +1,5 @@
 ---
+
 title: "zshexpn(1)"
 name: "zshexpn"
 section: "1"
@@ -6,7 +7,7 @@ letter: "z"
 url: "/docs/linux/man/1-zshexpn/"
 description: "zshexpn – zsh expansion and substitution"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> The following types of expansions are performed in the indicated order in five steps: </p>
 <dl>
 <dd> <p> <i>History Expansion</i> This is performed only in interactive shells. </p>

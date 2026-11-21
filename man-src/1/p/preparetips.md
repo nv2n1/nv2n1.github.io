@@ -1,4 +1,5 @@
 ---
+
 title: "preparetips(1)"
 name: "preparetips"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-preparetips/"
 description: "preparetips – extract text from tips file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> preparetips<br />
 &nbsp;<wbr>&#8211; extract text from tips file </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>preparetips</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>preparetips</code></p>
 <dd>is a script to extract the text from a tips file. It outputs the text so <code>xgettext</code> can add the tips to a PO file. PO files provide a human-readable string format used for translations. </dd>
 <p> <code>preparetips</code> looks for <i>data/tips-en</i> as tips file.</p>

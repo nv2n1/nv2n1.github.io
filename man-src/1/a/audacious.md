@@ -1,4 +1,5 @@
 ---
+
 title: "audacious(1)"
 name: "audacious"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-audacious/"
 description: "audacious – an advanced audio player."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>audacious</code> [OPTION] &#8230; [FILE] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> Audacious is a free advanced audio player for Linux and many other UNIX-compatible systems. It focuses on low resource usage, high audio quality, and support for a wide range of audio formats. It was originally based on Beep Media Player, which was in turn based on XMMS. </p>
 <h2>OPTIONS</h2>
 <p> <code>Getting help:</code> </p>

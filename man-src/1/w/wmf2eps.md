@@ -1,4 +1,5 @@
 ---
+
 title: "wmf2eps(1)"
 name: "wmf2eps"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-wmf2eps/"
 description: "wmf2eps – Convert metafile image to postscript"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>wmf2eps</code> [<i>OPTION</i>] &#8230; [<code>-o</code><i> &lt;file.eps</i>&gt;] &lt;<i>file.wmf</i>&gt; </p>
 <p> <code>wmf2eps</code> [<i>OPTION</i>] &#8230; <code>&#8211;auto</code><i> &lt;file1.wmf</i>&gt; [&lt;<i>file2.wmf</i>&gt; &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> Convert metafile image to postscript. </p>
 <h2>OPTIONS</h2>
 <dl>

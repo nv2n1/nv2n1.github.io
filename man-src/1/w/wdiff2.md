@@ -1,4 +1,5 @@
 ---
+
 title: "wdiff2(1)"
 name: "wdiff2"
 section: "1"
@@ -9,9 +10,7 @@ description: "wdiff – manual page for wdiff 1.2.2"
 
 <h2>NAME</h2>
 <p> wdiff &#8211; manual page for wdiff 1.2.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>wdiff2</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i></p>
-<h2>DESCRIPTION</h2>
 <p> wdiff &#8211; Compute word differences by internally launching `mdiff <code>-W</code>&#8216;. This program exists mainly to support the now oldish `wdiff&#8217; syntax. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

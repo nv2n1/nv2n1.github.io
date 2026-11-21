@@ -1,4 +1,5 @@
 ---
+
 title: "secret-tool(1)"
 name: "secret-tool"
 section: "1"
@@ -7,13 +8,11 @@ url: "/docs/linux/man/1-secret-tool/"
 description: "secret-tool – Store and retrieve passwords"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>secret-tool store </code><code>&#8211;label=&#8217;Label&#8217;</code><code>{attribute}</code><code>{value}</code><code> &#8230;</code></dt>
 <dt> <code>secret-tool lookup </code><code>{attribute}</code><code>{value}</code><code> &#8230;</code></dt>
 <dt> <code>secret-tool clear </code><code>{attribute}</code><code>{value}</code><code> &#8230;</code></dt>
 <dt> <code>secret-tool search </code><code>[&#8211;all]</code><code>{attribute}</code><code>{value}</code><code> &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>secret-tool</code></p>
 <dd>is a command line tool that can be used to store and retrieve passwords. </dd>
 <p> Each password is stored in an item. Items are uniquely identified by a set of attribute keys and values. When storing a password you must specify unique pairs of attributes names and values, and when looking up a password you provide the same attribute name and value pairs.</p>

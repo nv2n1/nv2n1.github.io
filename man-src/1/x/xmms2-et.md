@@ -1,4 +1,5 @@
 ---
+
 title: "xmms2-et(1)"
 name: "xmms2-et"
 section: "1"
@@ -9,9 +10,7 @@ description: "xmms2-et – transmits an anonymous informative packet to the XMMS
 
 <h2>NAME</h2>
 <p> xmms2-et &#8211; transmits an anonymous informative packet to the XMMS2 team on each song change</p>
-<h2>SYNOPSIS</h2>
 <p> <i>xmms2-et</i></p>
-<h2>DESCRIPTION</h2>
 <p> <code>XMMS2 </code> is a redesign of the XMMS (<a rel="nofollow" href="http://www.xmms.org)">http://www.xmms.org)</a> music player. It features a client-server model, allowing multiple (even simultaneous!) user interfaces, both textual and graphical. All common audio formats are supported using plugins. On top of this, there is a flexible media library to organize your music. </p>
 <p> <i>xmms2-et</i> is the ET Phone Home Client for <code>XMMS2.</code> <i>xmms2-et </i> is designed to transmit a packet of information to the <code>XMMS2</code> team whenever a new song is played. The packet is anonymous and does not contain metadata about the song being played. The specifics of what data is transmitted to the <code>XMMS2</code> team can be found in the <code>ET PACKET</code> section of this manual page. <i>xmms2-et</i> is used for release engineering by the <code>XMMS2</code> team. During a release cycle, the usage of various plugins, operating systems, and XMMS2 components is collected from data transmitted by the <i>xmms2-et</i> client. A release is made when sufficient testing has occured as determined by the number of related <i>xmms2-et</i> packets that the <code>XMMS2</code> team has received.</p>
 <h2>ET PACKET</h2>

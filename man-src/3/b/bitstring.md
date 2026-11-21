@@ -1,4 +1,5 @@
 ---
+
 title: "bitstring(3)"
 name: "bitstring"
 section: "3"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/3-bitstring/"
 description: "bit_alloc bit_clear bit_decl bit_ffs bit_nclear bit_nset bit_set bitstr_size bit_test – bit-string manipulation macros"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bit_alloc</code> <code>bit_clear</code> <code>bit_decl</code> <code>bit_ffs</code> <code>bit_nclear</code> <code>bit_nset</code> <code>bit_set</code> <code>bitstr_size</code> <code>bit_test</code> &#8211; bit-string manipulation macros </p>
-<h2>SYNOPSIS</h2>
 <p> In bsd/bitstring.h Ft bitstr_t * Fn bit_alloc int nbits Ft void Fn bit_decl bitstr_t *name int nbits Ft void Fn bit_clear bitstr_t *name int bit Ft void Fn bit_ffc bitstr_t *name int nbits int *value Ft void Fn bit_ffs bitstr_t *name int nbits int *value Ft void Fn bit_nclear bitstr_t *name int start int stop Ft void Fn bit_nset bitstr_t *name int start int stop Ft void Fn bit_set bitstr_t *name int bit Ft int Fn bitstr_size int nbits Ft int Fn bit_test bitstr_t *name int bit</p>
-<h2>DESCRIPTION</h2>
 <p> These macros operate on strings of bits. </p>
 <p> The macro Fn bit_alloc returns a pointer of type &#8220;Fa bitstr_t * &#8221; to sufficient space to store Fa nbits bits, or <code>NULL</code> if no space is available. </p>
 <p> The macro Fn bit_decl allocates sufficient space to store Fa nbits bits on the stack. </p>

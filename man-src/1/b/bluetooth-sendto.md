@@ -1,4 +1,5 @@
 ---
+
 title: "bluetooth-sendto(1)"
 name: "bluetooth-sendto"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bluetooth-sendto/"
 description: "bluetooth-sendto – GTK application for transferring files over Bluetooth"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bluetooth-sendto</code> [&#8211;device=XX:XX:XX:XX:XX:XX [&#8211;name=NAME]] [file&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>bluetooth-sendto</i> will display a dialog for transferring files over Bluetooth. <i>bluetooth-sendto</i> is part of gnome-bluetooth, see also <a rel="nofollow" href="http://live.gnome.org/GnomeBluetooth">http://live.gnome.org/GnomeBluetooth</a></p>
 <h2>OPTIONS</h2>
 <dl>

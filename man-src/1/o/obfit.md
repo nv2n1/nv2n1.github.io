@@ -1,4 +1,5 @@
 ---
+
 title: "obfit(1)"
 name: "obfit"
 section: "1"
@@ -9,9 +10,7 @@ description: "obfit – superimpose two molecules based on a pattern"
 
 <h2>NAME</h2>
 <p> <code>obfit</code> &#8211; superimpose two molecules based on a pattern</p>
-<h2>SYNOPSIS</h2>
 <p> <i>SMARTS-pattern</i> <i>fixed-file</i> <i>outfile</i></p>
-<h2>DESCRIPTION</h2>
 <p> Superimpose two molecules using a quaternion fit. The atoms used to fit the two molecules are defined by the SMARTS pattern given by the user. It is useful to align congeneric series of molecules on a common structural scaffold for 3D-QSAR studies. It can also be useful for displaying the results of conformational generation. </p>
 <p> Any molecules matching the supplied SMARTS pattern will be rotated and translated to provide the smallest possible RMSD between the matching regions. If a molecule does not match the SMARTS pattern, it will be output with no transformation.</p>
 <h2>EXAMPLES</h2>

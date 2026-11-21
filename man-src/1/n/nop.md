@@ -1,4 +1,5 @@
 ---
+
 title: "nop(1)"
 name: "nop"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-nop/"
 description: "nop – pretty-print graph file"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>nop</code> [ <code>-p?</code> ] [ <i>files </i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>nop</code> reads a stream of graphs and prints each in pretty-printed (canonical) format on stdout. If no <i>files</i> are given, it reads from stdin.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

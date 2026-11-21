@@ -1,4 +1,5 @@
 ---
+
 title: "rubber-pipe(1)"
 name: "rubber-pipe"
 section: "1"
@@ -9,10 +10,8 @@ description: "rubber – a building system for LaTeX documents"
 
 <h2>NAME</h2>
 <p> rubber &#8211; a building system for LaTeX documents </p>
-<h2>SYNOPSIS</h2>
 <p> <code>rubber</code> [<i>options</i>] <i>sources &#8230;</i><br />
  <code>rubber-pipe</code> [<i>options</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> Rubber is a wrapper for LaTeX and companion programs. Its purpose is, given a LaTeX source to process, to compile it enough times to resolve all references, possibly running satellite programs such as BibTeX, makeindex, Metapost, etc. to produce appropriate data files. </p>
 <p> The command <code>rubber</code> builds the specified documents completely. The source files may be either LaTeX sources (in which case the suffix .tex may be omitted) or documents in a format Rubber knows how to translate into LaTeX (this currently means CWEB or Literate Haskell documents). If one compilation fails, the whole process stops, including the compilation of the next documents on the command line, and <code>rubber</code> returns a non-zero exit code. </p>
 <p> The command <code>rubber-pipe</code> does the same for one document but it reads the LaTeX source from standard input and dumps the compiled document on standard output. </p>

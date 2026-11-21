@@ -1,4 +1,5 @@
 ---
+
 title: "tipc-config(1)"
 name: "tipc-config"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-tipc-config/"
 
  tipc-config - tipc configuration
 
-<h2>SYNOPSIS</h2>
+tipc-config command [command ...] 
 
- tipc-config command [command ...] 
-
-<h2>DESCRIPTION</h2>
-
- The tipc-config tool provides numerous commands for configuring and monitoring a TIPC network. Certain commands are only available to users having network administrator privileges (eg. root) to prevent unauthorized users from reconfiguring the network. 
+The tipc-config tool provides numerous commands for configuring and monitoring a TIPC network. Certain commands are only available to users having network administrator privileges (eg. root) to prevent unauthorized users from reconfiguring the network. 
 
  Users can pass multiple commands to tipc-config in a single invocation. Commands are normally processed serially, from left to right; exceptions are the &quot;-v&quot;, &quot;-i&quot;, and &quot;-dest&quot; commands, which have an immediate effect on all commands in a command set. If tipc-config detects a failure while executing a set of commands, it exits without attempting any unprocessed commands. 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "tilestache-clean(1)"
 name: "tilestache-clean"
 section: "1"
@@ -9,9 +10,7 @@ description: "tilestache-clean – clean tiles from a TileStache cache"
 
 <h2>NAME</h2>
 <p> tilestache-clean &#8211; clean tiles from a TileStache cache</p>
-<h2>SYNOPSIS</h2>
 <p> <code>tilestache-clean</code> [<i>options</i>]<i> zoom</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tilestache-clean</code> command. </p>
 <p> <code>tilestache-clean</code> is used to clean tiles from a TileStache cache. </p>
 <p> Cleans a single layer in your TileStache configuration &#8211; no images are returned, and TileStache ends up with an empty in selected areas cache. Bounding box is given as a pair of lat/lon coordinates, e.g. &quot;37.788 -122.349 37.833 -122.246&quot;. Output is a list of tile paths as they are created. </p>

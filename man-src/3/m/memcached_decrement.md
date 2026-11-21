@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_decrement(3)"
 name: "memcached_decrement"
 section: "3"
@@ -9,7 +10,6 @@ description: "memcached_decrement – Incrementing and Decrementing Values"
 
 <h2>NAME</h2>
 <p> memcached_decrement &#8211; Incrementing and Decrementing Values</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_return_t memcached_increment(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, uint32_t<i>&nbsp;<wbr>offset</i>, uint64_t<i>&nbsp;<wbr>*value</i>)</dt>
@@ -29,7 +29,6 @@ description: "memcached_decrement – Incrementing and Decrementing Values"
 </dd><dt><code>memcached_return_t memcached_decrement_with_initial_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, uint64_t<i>&nbsp;<wbr>offset</i>, uint64_t<i>&nbsp;<wbr>initial</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint64_t<i>&nbsp;<wbr>*value</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/1-memcached/">memcached</a>(1)</i> servers have the ability to increment and decrement keys (overflow and underflow are not detected). This gives you the ability to use memcached to generate shared sequences of values. </p>
 <p> memcached_increment takes a key and keylength and increments the value by the offset passed to it. The value is then returned via the uint32_t value pointer you pass to it. </p>
 <p> memcached_decrement takes a key and keylength and decrements the value by the offset passed to it. The value is then returned via the uint32_t value pointer you pass to it. </p>

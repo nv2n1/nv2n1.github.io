@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_location(3)"
 name: "dmlite_location"
 section: "3"
@@ -8,7 +9,6 @@ description: "dmlite_location –"
 ---
 
 <p> Collection of chunks that form a replica.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;pool.h&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>dmlite_chunk</code> * <code>chunks</code> </p>

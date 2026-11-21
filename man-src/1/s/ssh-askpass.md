@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-askpass(1)"
 name: "ssh-askpass"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ssh-askpass/"
 description: "gnome-ssh-askpass – prompts a user for a passphrase using GNOME"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnome-ssh-askpass</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>gnome-ssh-askpass</code> is a GNOME-based passphrase dialog for use with OpenSSH. It is intended to be called by the <code><a href="/docs/linux/man/1-ssh-add/">ssh-add</a></code>(1) program and not invoked directly. It allows <code><a href="/docs/linux/man/1-ssh-add/">ssh-add</a></code>(1) to obtain a passphrase from a user, even if not connected to a terminal (assuming that an X display is available). This happens automatically in the case where <code>ssh-add</code> is invoked from one&#8217;s <code>~/.xsession</code> or as one of the GNOME startup programs, for example. </p>
 <p> In order to be called automatically by <code>ssh-add</code>, <code>gnome-ssh-askpass</code> should be installed as <i>/usr/bin/ssh-askpass</i>.</p>
 <h2>ENVIRONMENT VARIABLES</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_trust_list_get_issuer(3)"
 name: "gnutls_x509_trust_list_get_issuer"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_trust_list_get_issuer – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_get_issuer &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_get_issuer(gnutls_x509_trust_list_t </code><i>list</i><code>, gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_x509_crt_t * </code><i>issuer</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,7 +22,6 @@ description: "gnutls_x509_trust_list_get_issuer – API function"
 <dd> Will hold the issuer if any. Should be treated as constant.</dd>
 <dt>unsigned int flags</dt>
 <dd> Use zero or <code>GNUTLS_TL_GET_COPY</code></dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will find the issuer of the given certificate. If the flag <code>GNUTLS_TL_GET_COPY</code> is specified a copy of the issuer will be returned which must be freed using <code>gnutls_x509_crt_deinit()</code>. Note that the flag <code>GNUTLS_TL_GET_COPY</code> is required for this function to work with PKCS <code>11</code> trust lists in a thread-safe way.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

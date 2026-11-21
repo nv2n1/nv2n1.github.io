@@ -1,4 +1,5 @@
 ---
+
 title: "sasum(3)"
 name: "sasum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sasum/"
 description: "sasum.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>sasum</code> (N, SX, INCX)<br />
  <i></i><code>SASUM</code></p>

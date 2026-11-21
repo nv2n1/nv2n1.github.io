@@ -1,4 +1,5 @@
 ---
+
 title: "cvtenc(1)"
 name: "cvtenc"
 section: "1"
@@ -6,12 +7,11 @@ letter: "c"
 url: "/docs/linux/man/1-cvtenc/"
 description: "cvtenc – file encoding converter"
 ---
+
 <h2>NAME</h2>
 <p> cvtenc - file encoding converter </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cvtenc</code> [<code>-Encoding</code> <i>encoding</i>] [<code>-EscapeIn</code> <i>yes|NO</i>] [<code>-EscapeOut</code> <i>yes|NO</i>] <br />
 &nbsp;<wbr><i>filename</i> </p>
-<h2>DESCRIPTION</h2>
 <p> Converts a file encoded in a specified or default non-unicode encoding to unicode (UTF16), or, if the file is already in unicode, converts it to a specified or default non-unicode encoding. The converted text is printed to standard out. If the filename is a hyphen then this tool reads from standard input. </p>
 <h2>OPTIONS</h2>
 <dl>

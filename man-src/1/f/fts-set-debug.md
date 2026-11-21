@@ -1,4 +1,5 @@
 ---
+
 title: "fts-set-debug(1)"
 name: "fts-set-debug"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-fts-set-debug/"
 
  fts-set-debug
 
-<h2>SYNOPSIS</h2>
+fts-set-debug [options] LEVEL
 
- fts-set-debug [options] LEVEL
-
-<h2>DESCRIPTION</h2>
-
- fts-set-debug is a tool for setting the debug mode to one of the possible levels: 0, 1, 2 or 3 for a source SE, destination SE or a SE pair.
+fts-set-debug is a tool for setting the debug mode to one of the possible levels: 0, 1, 2 or 3 for a source SE, destination SE or a SE pair.
 
 <h2>OPTIONS</h2>
 

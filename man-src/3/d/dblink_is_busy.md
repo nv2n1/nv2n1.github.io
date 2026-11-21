@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_is_busy(3)"
 name: "dblink_is_busy"
 section: "3"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/3-dblink_is_busy/"
 description: "dblink_is_busy – checks if connection is busy with an async query"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre>
 dblink_is_busy(text connname) returns int
 </pre>
-<h2>DESCRIPTION</h2>
 <p> <code>dblink_is_busy</code> tests whether an async query is in progress.</p>
 <h2>ARGUMENTS</h2>
 <p> <i>connname</i></p>

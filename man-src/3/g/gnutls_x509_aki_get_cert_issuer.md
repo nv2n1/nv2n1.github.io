@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_aki_get_cert_issuer(3)"
 name: "gnutls_x509_aki_get_cert_issuer"
 section: "3"
@@ -9,7 +10,6 @@ description: "gnutls_x509_aki_get_cert_issuer – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_aki_get_cert_issuer &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_aki_get_cert_issuer(gnutls_x509_aki_t </code><i>aki</i><code>, unsigned int </code><i>seq</i><code>, unsigned int * </code><i>san_type</i><code>, gnutls_datum_t * </code><i>san</i><code>, gnutls_datum_t * </code><i>othername_oid</i><code>, gnutls_datum_t * </code><i>serial</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,7 +26,6 @@ description: "gnutls_x509_aki_get_cert_issuer – API function"
 <dd> The object identifier if <i>san_type</i> is <code>GNUTLS_SAN_OTHERNAME</code></dd>
 <dt>gnutls_datum_t * serial</dt>
 <dd> The authorityCertSerialNumber number</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function will return a specific authorityCertIssuer name as stored in the <i>aki</i> structure, as well as the authorityCertSerialNumber. All the returned values should be treated as constant, and may be set to <code>NULL</code> when are not required.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if the index is out of bounds, otherwise a negative error value.</p>

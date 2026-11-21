@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-preset-passphrase(1)"
 name: "gpg-preset-passphrase"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-gpg-preset-passphrase/"
 description: "gpg-preset-passphrase – Put a passphrase into gpg-agent’s cache"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg-preset-passphrase</code> &#8211; Put a passphrase into gpg-agent&#8217;s cache </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpg-preset-passphrase</code> [<i>options</i>] [<i>command</i>] <i>cache-id</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>gpg-preset-passphrase</code> is a utility to seed the internal cache of a running <code>gpg-agent</code> with passphrases. It is mainly useful for unattended machines, where the usual <code>pinentry</code> tool may not be used and the passphrases for the to be used keys are given at machine startup. </p>
 <p> This program works with GnuPG 2 and later. GnuPG 1.x is not supported. </p>
 <p> Passphrases set with this utility don&#8217;t expire unless the <code>&#8211;forget</code> option is used to explicitly clear them from the cache &#8212; or <code>gpg-agent</code> is either restarted or reloaded (by sending a SIGHUP to it). Note that the maximum cache time as set with <code>&#8211;max-cache-ttl</code> is still honored. It is necessary to allow this passphrase presetting by starting <code>gpg-agent</code> with the <code>&#8211;allow-preset-passphrase</code>. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "show-changed-rco(1)"
 name: "show-changed-rco"
 section: "1"
@@ -9,9 +10,7 @@ description: "show-changed-rco – show changes in an RPM package"
 
 <h2>NAME</h2>
 <p> show-changed-rco &#8211; show changes in an RPM package</p>
-<h2>SYNOPSIS</h2>
 <p> <code>show-changed-rco</code> [options]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>show-changed-rco</code> gives a compact description of the changes to a packages Requires, Conflicts and Obsoletes data from the installed (or old) to a specified rpm file.</p>
 <h2>OPTIONS</h2>
 <dl>

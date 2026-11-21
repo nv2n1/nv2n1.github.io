@@ -1,4 +1,5 @@
 ---
+
 title: "bson_copy_to(3)"
 name: "bson_copy_to"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_copy_to() – The bson_copy_to() function shall initialize ds
 
 <h2>NAME</h2>
 <p> bson_copy_to() &#8211; The bson_copy_to() function shall initialize dst with a copy of the contents of src.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_copy_to(const bson_t *src,
                   bson_t *dst);
@@ -21,7 +21,6 @@ void bson_copy_to(const bson_t *src,
 <dl>
 <dt><code>dst</code></dt>
 <dd> A <code>bson_t</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_copy_to/">bson_copy_to</a>(3)</code> function shall initialize <code>dst</code> with a copy of the contents of <code>src</code> \&amp;. </p>
 <p> <code>dst</code> </p>
 <p> <code>MUST</code> be an uninitialized <code>bson_t</code> to avoid leaking memory. </p>

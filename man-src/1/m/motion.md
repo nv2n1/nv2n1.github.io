@@ -1,4 +1,5 @@
 ---
+
 title: "motion(1)"
 name: "motion"
 section: "1"
@@ -9,9 +10,7 @@ description: "motion – Detect motion using a video4linux device"
 
 <h2>NAME</h2>
 <p> motion &#8211; Detect motion using a video4linux device</p>
-<h2>SYNOPSIS</h2>
 <p> <code>motion</code> [ -hmns ] [ -c config file path ] [ -d log level ] [ -k log type ] [ -p process_id_file ] [ -l logfile ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>Motion</i> uses a video4linux device to detect motion. If motion is detected both normal and motion pictures will be taken. Motion can also take actions to notify you if needed. Creation of automated snapshots is also possible.</p>
 <h2>OPTIONS</h2>
 <dl>

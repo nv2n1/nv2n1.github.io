@@ -1,4 +1,5 @@
 ---
+
 title: "kasumi(1)"
 name: "kasumi"
 section: "1"
@@ -9,11 +10,9 @@ description: "kasumi – a personal dictionary manager for Anthy"
 
 <h2>NAME</h2>
 <p> kasumi &#8211; a personal dictionary manager for Anthy</p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kasumi</code> [<i>options</i>] </dt>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> <code>kasumi</code> is a personal dictionary manager for Anthy. </p>
 <h2>OPTIONS</h2>
 <dl>

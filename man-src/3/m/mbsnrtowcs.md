@@ -1,4 +1,5 @@
 ---
+
 title: "mbsnrtowcs(3)"
 name: "mbsnrtowcs"
 section: "3"
@@ -6,7 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mbsnrtowcs/"
 description: "mbsnrtowcs – convert a multibyte string to a wide-character string"
 ---
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;wchar.h&gt; 
  size_t mbsnrtowcs(wchar_t *  dest  , const char **  src  , 
@@ -24,7 +25,6 @@ description: "mbsnrtowcs – convert a multibyte string to a wide-character stri
 <dd> <p> _GNU_SOURCE </p>
  </dd></dl>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> The <code>mbsnrtowcs</code>() function is like the <code><a href="/docs/linux/man/3-mbsrtowcs/">mbsrtowcs</a></code>(3) function, except that the number of bytes to be converted, starting at <i>*src</i>, is limited to at most <i>nms</i> bytes. </p>
 <p> If <i>dest</i> is not NULL, the <code>mbsnrtowcs</code>() function converts at most <i>nms</i> bytes from the multibyte string <i>*src</i> to a wide-character string starting at <i>dest</i>. At most <i>len</i> wide characters are written to <i>dest</i>. The shift state <i>*ps</i> is updated. The conversion is effectively performed by repeatedly calling <i>mbrtowc(dest, *src, n, ps)</i> where <i>n</i> is some positive number, as long as this call succeeds, and then incrementing <i>dest</i> by one and <i>*src</i> by the number of bytes consumed. The conversion can stop for three reasons: </p>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "sqlite3(1)"
 name: "sqlite3"
 section: "1"
@@ -7,13 +8,10 @@ url: "/docs/linux/man/1-sqlite3/"
 description: "sqlite3 – A command line interface for SQLite version 3"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>sqlite3 </code> &#8211; A command line interface for SQLite version 3</p>
-<h2>SYNOPSIS</h2>
 <p> <code>sqlite3</code> [<i>options</i>] [<i>databasefile</i>] [<i>SQL</i>] </p>
 <h2>SUMMARY</h2>
 <p> <code>sqlite3</code> is a terminal-based front-end to the SQLite library that can evaluate queries interactively and display the results in multiple formats. <code>sqlite3</code> can also be used within shell scripts and other applications to provide batch processing features. </p>
-<h2>DESCRIPTION</h2>
 <p> To start a <code>sqlite3</code> interactive session, invoke the <code>sqlite3</code> command and optionally provide the name of a database file. If the database file does not exist, it will be created. If the database file does exist, it will be opened. </p>
 <p> For example, to create a new database file named &quot;mydata.db&quot;, create a table named &quot;memos&quot; and insert a couple of records into that table: </p>
 <p> $ <code>sqlite3 mydata.db</code><br />

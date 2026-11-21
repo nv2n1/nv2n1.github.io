@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-network-interface(1)"
 name: "euca-create-network-interface"
 section: "1"
@@ -9,12 +10,10 @@ description: "euca-create-network-interface – Create a new VPC network interfa
 
 <h2>NAME</h2>
 <p> euca-create-network-interface &#8211; Create a new VPC network interface</p>
-<h2>SYNOPSIS</h2>
 <p> euca-create-network-interface [-d DESC] [-g GROUP]</p>
 <dl>
 <dt>[&#8211;private-ip-address ADDRESS]</dt>
 <dd> [&#8211;secondary-address ADDRESS | <code>&#8211;secondary-count</code> COUNT] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] SUBNET</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Create a new VPC network interface</p>
 <h3>positional arguments:</h3>
 <dl>

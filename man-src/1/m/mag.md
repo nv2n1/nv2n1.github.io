@@ -1,4 +1,5 @@
 ---
+
 title: "mag(1)"
 name: "mag"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-mag/"
 description: "mag – computes TeX fontsizes and magsteps"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>mag</code> [-<code>R</code><i>dpi</i>] magstep . . . </p>
 <p> <code>mag</code> [-<code>r</code>] [-<code>R</code><i>dpi</i>] fontsize . . . </p>
-<h2>DESCRIPTION</h2>
 <p> delim $$ This tool calculates fontsizes given magsteps. TeXfonts are provided as true sized fonts or as magnifications. The fontsize of a true sized font equals the resolution of the printer (ex. 300). The fontsize of a font magnified $n$ <i>magsteps</i> equals: 1.2 sup{n} times 300 delim off rounded to its nearest integer value. Fontnames for TeX fonts normally consists of the name (<i>cmr</i>), pointsize (<i>10</i>), type (<i>pk</i>) and fontsize (<i>360</i>), for example: <i>cmr10.360pk</i>. </p>
 <h2>EXAMPLES</h2>
 <p> The result of <i>mag -R240 -2 0 0.5 1</i> will be: </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cshtml(1)"
 name: "cshtml"
 section: "1"
@@ -9,9 +10,7 @@ description: "cshtml – manual page for cshtml 1.3.2"
 
 <h2>NAME</h2>
 <p> cshtml &#8211; manual page for cshtml 1.3.2</p>
-<h2>SYNOPSIS</h2>
 <p> <code>cshtml</code> [<i>options</i>] <i>proj.js, where options are:</i></p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>&#8211;defect-url-template</code> arg</dt>
 <dd> e.g. <a rel="nofollow" href="http://localhost/index.php?proj=%d">http://localhost/index.php?proj=%d</a>&amp;defect=%d</dd>

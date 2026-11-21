@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-list(1)"
 name: "fts-rest-transfer-list"
 section: "1"
@@ -11,7 +12,6 @@ description: "fts-rest-transfer-list"
 <p> fts-rest-transfer-list</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-list [options]</p>
-<h2>DESCRIPTION</h2>
 <p> This command can be used to list the running jobs, allowing to filter by user dn or vo name</p>
 <h2>OPTIONS</h2>
 <dl>

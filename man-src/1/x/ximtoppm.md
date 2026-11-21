@@ -1,4 +1,5 @@
 ---
+
 title: "ximtoppm(1)"
 name: "ximtoppm"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-ximtoppm/"
 description: "ximtoppm – convert an Xim file into a portable pixmap"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>ximtoppm</code> [<code>&#8211;alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<i>ximfile</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> Reads an Xim file as input. Produces a portable pixmap as output. The Xim toolkit is included in the contrib tree of the X.V11R4 release.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "diffstat(1)"
 name: "diffstat"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-diffstat/"
 description: "diffstat – make histogram from diff-output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>diffstat</code> &#8211; make histogram from diff-output </p>
-<h2>SYNOPSIS</h2>
 <p> <code>diffstat</code><i> [options] [file-specifications]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This program reads the output of <code>diff</code> and displays a histogram of the insertions, deletions, and modifications per-file. <code>Diffstat</code> is a program that is useful for reviewing large, complex patch files. It reads from one or more input files which contain output from <code>diff</code>, producing a histogram of the total lines changed for each file referenced. </p>
 <p> If the input filename ends with &#8220;.bz2&#8221;, &#8220;.gz&#8221;, &#8220;.lzma&#8221;, &#8220;.xz&#8221;, &#8220;.z&#8221; or &#8220;.Z&#8221;, <code>diffstat</code> will read the uncompressed data via a pipe from the corresponding program. It also can infer the compression type from files piped via the standard input. </p>
 <p> <code>Diffstat</code> recognizes the most popular types of output from <code>diff</code>:</p>

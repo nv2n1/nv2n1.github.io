@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_binding(3)"
 name: "cdk_binding"
 section: "3"
@@ -9,7 +10,6 @@ description: "cdk_binding – Curses Development Kit Character Binding Capabilit
 
 <h2>NAME</h2>
 <p> cdk_binding &#8211; <code>Curses Development Kit</code> Character Binding Capabilities. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <pre><code>
 #include &lt;cdk.h&gt;
@@ -41,7 +41,6 @@ int getchCDKObject(
     boolean *functionKey);
 </code></pre>
 </dl>
-<h2>DESCRIPTION</h2>
 <p> Cdk has the ability to create user definable key bindings. This ability makes Cdk more dynamic and usable for a wide variety of tasks. The following section outlines the binding functions, their use, and their purpose.</p>
 <dl>
 <dt><code>bindCDKObject</code></dt>

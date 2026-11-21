@@ -1,4 +1,5 @@
 ---
+
 title: "perl570delta(1)"
 name: "perl570delta"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perl570delta/"
 description: "perl570delta – what’s new for perl v5.7.0"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> This document describes differences between the 5.6.0 release and the 5.7.0 release.  </p>
 <h2>Security Vulnerability Closed</h2>
 <p> A potential security vulnerability in the optional suidperl component of Perl has been identified. suidperl is neither built nor installed by default. As of September the 2nd, 2000, the only known vulnerable platform is Linux, most likely all Linux distributions. <font SIZE="-1">CERT</font> and various vendors have been alerted about the vulnerability. </p>

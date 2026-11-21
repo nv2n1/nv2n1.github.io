@@ -1,4 +1,5 @@
 ---
+
 title: "pumount(1)"
 name: "pumount"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-pumount/"
 description: "pumount – umount arbitrary hotpluggable devices as normal user"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pumount</code> [ <i>options</i> ] <i>device</i> </p>
-<h2>DESCRIPTION</h2>
 <p> pumount is a wrapper around the standard umount program which permits normal users to umount removable devices without a matching /etc/fstab entry. </p>
 <p> pumount also supports encrypted devices which use dm-crypt and have LUKS metadata. If a LUKS-capable <code>cryptsetup</code> is installed, pumount will umount the mapped device instead and call cryptsetup to close the decrypted device afterwards. </p>
 <p> <code>pumount</code> expects the <i>device</i> as its only argument. This will umount <i>device</i> from a directory below /media if policy is met (see below). </p>

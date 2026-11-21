@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-w64-mingw32-ld(1)"
 name: "x86_64-w64-mingw32-ld"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-ld/"
 description: "ld – The GNU linker"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> ld [<code>options</code>] <i>objfile</i> &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>ld</code> combines a number of object and archive files, relocates their data and ties up symbol references. Usually the last step in compiling a program is to run <code>ld</code>. </p>
 <p> <code>ld</code> accepts Linker Command Language files written in a superset of <font SIZE="-1">AT&amp;T</font>&#8216;s Link Editor Command Language syntax, to provide explicit and total control over the linking process. </p>
 <p> This man page does not describe the command language; see the <code>ld</code> entry in <tt>&quot;info&quot;</tt> for full details on the command language and on other aspects of the <font SIZE="-1">GNU</font> linker. </p>

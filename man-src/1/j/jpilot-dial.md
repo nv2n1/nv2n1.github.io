@@ -1,4 +1,5 @@
 ---
+
 title: "jpilot-dial(1)"
 name: "jpilot-dial"
 section: "1"
@@ -9,9 +10,7 @@ description: "jpilot-dial – generates the DTMF tone signals used for telephone
 
 <h2>NAME</h2>
 <p> jpilot-dial &#8211; generates the DTMF tone signals used for telephone dialing</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jpilot-dial</code> [<i>options</i>]<i> number</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>jpilot-dial</code> generates the DTMF tone signals used for telephone dialing and by default sends the signals to the sound card. </p>
 <p> It can be used for easy dialing, simply put the telephone microphone near the computer speaker and let the software dial for you. </p>
 <p> It is intended for dialing from within database programs that also store telephone numbers.</p>

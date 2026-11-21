@@ -1,4 +1,5 @@
 ---
+
 title: "aireplay-ng(1)"
 name: "aireplay-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-aireplay-ng/"
 description: "aireplay-ng – inject packets into a wireless network to generate traffic"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>aireplay-ng</code> [options] &lt;replay interface&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>aireplay-ng</code> is used to inject/replay frames. The primary function is to generate traffic for the later use in aircrack-ng for cracking the WEP and WPA-PSK keys. There are different attacks which can cause deauthentications for the purpose of capturing WPA handshake data, fake authentications, Interactive packet replay, hand-crafted ARP request injection and ARP-request reinjection. With the packetforge-ng tool it&#8217;s possible to create arbitrary frames. </p>
 <p> <code>aireplay-ng</code> supports single-NIC injection/monitor.<br />
  This feature needs driver patching. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "chicken-uninstall(1)"
 name: "chicken-uninstall"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-chicken-uninstall/"
 description: "chicken-uninstall – uninstall extension library"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> chicken-uninstall [OPTION | PATTERN] &#8230; </p>
-<h2>DESCRIPTION</h2>
 <p> <i>chicken-uninstall</i> removes one or more already installed extension libraries for the CHICKEN Scheme system. <code>PATTERN</code> may be a regular expression naming multiple extensions or just an extension name. </p>
 <h2>OPTIONS</h2>
 <p> Enter <code>chicken-uninstall -help</code> for a list of supported command-line options. </p>

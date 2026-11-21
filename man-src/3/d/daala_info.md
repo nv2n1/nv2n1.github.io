@@ -1,4 +1,5 @@
 ---
+
 title: "daala_info(3)"
 name: "daala_info"
 section: "3"
@@ -8,7 +9,6 @@ description: "daala_info –"
 ---
 
 <p> Configuration parameters for a codec instance.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
 <p> unsigned char <code>version_major</code> </p>

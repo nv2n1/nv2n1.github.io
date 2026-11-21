@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmdump(1)"
 name: "gdcmdump"
 section: "1"
@@ -6,10 +7,10 @@ letter: "g"
 url: "/docs/linux/man/1-gdcmdump/"
 description: "gdcmdump – .TH \"gdcmdump\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
+
 <pre><code>gdcmdump [options] dcm_file
 gdcmdump [options] dcm_directory
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> The <code>gdcmdump</code> command line program dumps a DICOM file to the console. For those familiary with dcmdump output, gdcmdump has some minor differences. Namely: </p>
 <dl>
 <dt>*</dt>

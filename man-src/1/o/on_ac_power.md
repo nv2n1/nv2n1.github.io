@@ -1,4 +1,5 @@
 ---
+
 title: "on_ac_power(1)"
 name: "on_ac_power"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-on_ac_power/"
 description: "on_ac_power – test whether computer is running on AC power"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>on_ac_power</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>on_ac_power</code> checks whether the system is running on abundant power (such as AC mains, an USB charger, etc), as opposed to battery power.</p>
 <h2>OPTIONS</h2>
 <p> None.</p>

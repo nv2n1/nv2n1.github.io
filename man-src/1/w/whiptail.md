@@ -1,4 +1,5 @@
 ---
+
 title: "whiptail(1)"
 name: "whiptail"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-whiptail/"
 description: "whiptail – display dialog boxes from shell scripts"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>whiptail</code> [ <code>&#8211;title</code> <i>title</i> ] [ <code>&#8211;backtitle</code> <i>backtitle</i> ] [ <code>&#8211;clear</code> ] [ <code>&#8211;default-item</code> <i>string</i> ] [ <code>&#8211;defaultno</code> ] [ <code>&#8211;fb</code> ] [ <code>&#8211;nocancel</code> ] [ <code>&#8211;yes-button</code> <i>text</i> ] [ <code>&#8211;no-button</code> <i>text</i> ] [ <code>&#8211;ok-button</code> <i>text</i> ] [ <code>&#8211;cancel-button</code> <i>text</i> ] [ <code>&#8211;noitem</code> [ ] <code>&#8211;output-fd</code> <i>fd</i> ] [ <code>&#8211;separate-output</code> ] [ <code>&#8211;scrolltext</code> ] [ <code>&#8211;topleft</code> ] <code>box-options</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>whiptail</code> is a program that will let you present a variety of questions or display messages using dialog boxes from a shell script. Currently, these types of dialog boxes are implemented: </p>
 <p> <code>yes/no</code> box,<code> menu</code> box,<code> input</code> box, <code>message</code> box,<code> text</code> box,<code> info</code> box, <code>checklist</code> box,<code> radiolist</code> box<code>, gauge</code> box, and <code>password</code> box.</p>
 <h2>OPTIONS</h2>

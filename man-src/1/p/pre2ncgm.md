@@ -1,4 +1,5 @@
 ---
+
 title: "pre2ncgm(1)"
 name: "pre2ncgm"
 section: "1"
@@ -9,9 +10,7 @@ description: "pre2ncgm – convert a pre-CGM NCAR metafile to an NCAR CGM."
 
 <h2>NAME</h2>
 <p> pre2ncgm &#8211; convert a pre-CGM NCAR metafile to an NCAR CGM.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>pre2ncgm</code> [<code>-n</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> The &quot;pre2ncgm&quot; command reads a pre-CGM NCAR metafile from standard input and writes an NCAR CGM file to standard output. When plotted, the output file should have virtually the same appearance as the input file.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pv(1)"
 name: "pv"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-pv/"
 description: "pv – monitor the progress of data through a pipe"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>pv</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br />
  <code>pv</code> [<i>-h</i>|<i>-V</i>] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>pv</code> shows the progress of data through a pipeline by giving information such as time elapsed, percentage completed (with progress bar), current throughput rate, total data transferred, and ETA. </p>
 <p> To use it, insert it in a pipeline between two processes, with the appropriate options. Its standard input will be passed through to its standard output and progress will be shown on standard error. </p>
 <p> <code>pv</code> will copy each supplied <code>FILE</code> in turn to standard output (<code>&#8211;</code> means standard input), or if no <code>FILE</code>s are specified just standard input is copied. This is the same behaviour as <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1). </p>

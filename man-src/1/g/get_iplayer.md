@@ -1,4 +1,5 @@
 ---
+
 title: "get_iplayer(1)"
 name: "get_iplayer"
 section: "1"
@@ -9,7 +10,6 @@ description: "get_iplayer – Stream Recording tool and PVR for BBC iPlayer, BBC
 
 <h2>NAME</h2>
 <p> get_iplayer &#8211; Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more</p>
-<h2>SYNOPSIS</h2>
 <p> <code>get_iplayer</code> [&lt;options&gt;] [&lt;regex|index&gt; &#8230;] </p>
 <p> <code>get_iplayer</code> <code>&#8211;get</code> [&lt;options&gt;] &lt;regex|index&gt; &#8230;<br />
  <code>get_iplayer</code> &lt;url&gt; <code>&#8211;type</code>=&lt;type&gt; [&lt;options&gt;] </p>
@@ -18,7 +18,6 @@ description: "get_iplayer – Stream Recording tool and PVR for BBC iPlayer, BBC
 <p> <code>get_iplayer</code> <code>&#8211;stream</code> [&lt;options&gt;] <code>&#8211;type</code>=&lt;type&gt; &lt;pid|url&gt; | mplayer <code>-cache</code> 3072 &#8211; </p>
 <p> <code>get_iplayer</code> <code>&#8211;stream</code> [&lt;options&gt;] <code>&#8211;type</code>=livetv,liveradio &lt;regex|index&gt; <code>&#8211;player</code>=&quot;mplayer -cache 128 -&quot; </p>
 <p> <code>get_iplayer</code> <code>&#8211;refresh</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>get_iplayer</code> lists, searches and records BBC iPlayer TV/Radio, BBC Podcast programmes. Other 3rd-Party plugins may be available. </p>
 <p> <code>get_iplayer</code> has three modes: recording a complete programme for later playback, streaming a programme directly to a playback application, such as mplayer; and as a Personal Video Recorder (PVR), subscribing to search terms and recording programmes automatically. It can also stream or record live BBC iPlayer output </p>
 <p> If given no arguments, <code>get_iplayer</code> updates and displays the list of currently available programmes. Each available programme has a numerical identifier, <code>pid</code>. <code>get_iplayer</code> utilises the <code>rtmpdump</code> tool to record BBC iPlayer programmes from RTMP flash streams at various qualities. </p>

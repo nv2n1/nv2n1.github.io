@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-update-icon-cache-3(1)"
 name: "gtk-update-icon-cache-3"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-gtk-update-icon-cache-3/"
 description: "gtk-update-icon-cache – Icon theme caching utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-update-icon-cache</code> [&#8211;force] [&#8211;ignore-theme-index] [&#8211;index-only] [&#8211;source&nbsp;<wbr><i>NAME</i>] [&#8211;quiet] [&#8211;validate] <i>PATH</i></dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>gtk-update-icon-cache</code></p>
 <dd>creates mmapable cache files for icon themes. </dd>
 <p> It expects to be given the <i>PATH</i> to a icon theme directory containing an index.theme, e.g. /usr/share/icons/hicolor, and writes a icon-theme.cache containing cached information about the icons in the directory tree below the given directory. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-wks-server(1)"
 name: "gpg-wks-server"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gpg-wks-server/"
 description: "gpg-wks-server – Server providing the Web Key Service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg-wks-server</code> &#8211; Server providing the Web Key Service </p>
-<h2>SYNOPSIS</h2>
 <p> <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;receive</code><br />
  <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;cron</code><br />
  <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;list-domains</code><br />
@@ -17,7 +16,6 @@ description: "gpg-wks-server – Server providing the Web Key Service"
  <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;install-key</code> <i>file</i> <i>user-id</i><br />
  <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;remove-key</code> <i>user-id</i><br />
  <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;revoke-key</code> <i>user-id</i> </p>
-<h2>DESCRIPTION</h2>
 <p> The <code>gpg-wks-server</code> is a server site implementation of the Web Key Service. It receives requests for publication, sends confirmation requests, receives confirmations, and published the key. It also has features to ease the setup and maintenance of a Web Key Directory. </p>
 <p> When used with the command <code>&#8211;receive</code> a single Web Key Service mail is processed. Commonly this command is used with the option <code>&#8211;send</code> to directly send the crerated mails back. See below for an installation example. </p>
 <p> The command <code>&#8211;cron</code> is used for regualr cleanup tasks. For example non-confirmed requested should be removed after their expire time. It is best to run this command once a day from a cronjob. </p>

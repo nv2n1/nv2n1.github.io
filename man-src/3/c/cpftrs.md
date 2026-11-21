@@ -1,4 +1,5 @@
 ---
+
 title: "cpftrs(3)"
 name: "cpftrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpftrs/"
 description: "cpftrs.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br />
  <i></i><code>CPFTRS</code></p>

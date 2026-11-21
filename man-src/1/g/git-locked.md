@@ -1,4 +1,5 @@
 ---
+
 title: "git-locked(1)"
 name: "git-locked"
 section: "1"
@@ -9,9 +10,7 @@ description: "git-locked – ls files that have been locked"
 
 <h2>NAME</h2>
 <p> <code>git-locked</code> &#8211; ls files that have been locked</p>
-<h2>SYNOPSIS</h2>
 <p> <code>git-locked</code></p>
-<h2>DESCRIPTION</h2>
 <p> List local files that have been locked</p>
 <h2>EXAMPLES</h2>
 <pre>

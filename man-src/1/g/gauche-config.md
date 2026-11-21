@@ -1,4 +1,5 @@
 ---
+
 title: "gauche-config(1)"
 name: "gauche-config"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gauche-config/"
 description: "gauche-config – retrieve configuration parameters of Gauche"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gauche-config</code> <i>option</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <i>Gauche-config </i> displays various parameters specified at the configuration time of the Gauche Scheme implementation. It can be used in Makefile and other configuration scripts that uses Gauche. </p>
 <h2>OPTIONS</h2>
 <h3>General parameters</h3>

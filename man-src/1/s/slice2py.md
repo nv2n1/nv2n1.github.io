@@ -1,4 +1,5 @@
 ---
+
 title: "slice2py(1)"
 name: "slice2py"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-slice2py/"
 description: "slice2py – The Slice to Python compiler."
 ---
 
-<h2>SYNOPSIS</h2>
 <p> slice2py [options] [files] </p>
-<h2>DESCRIPTION</h2>
 <p> slice2py compiles Slice files to Python. </p>
 <p> Full documentation for slice2py is available online at: &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Code+Generation+in+Python#CodeGenerationinPython-slice2py">http://doc.zeroc.com/display/Ice/Code+Generation+in+Python#CodeGenerationinPython-slice2py</a>&quot;. </p>
 <h2>OPTIONS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3parser(3)"
 name: "antlr3parser"
 section: "3"
@@ -8,7 +9,6 @@ description: "include/antlr3parser.h –"
 ---
 
 <p> Base implementation of an ANTLR3 parser.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt; </p>
 <h3>Data Structures</h3>

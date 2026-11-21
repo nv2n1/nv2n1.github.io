@@ -1,4 +1,5 @@
 ---
+
 title: "renice(1)"
 name: "renice"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-renice/"
 description: "renice – alter priority of running processes"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>renice</code> [<code>-n</code>] <i>priority</i> [<code>-g</code>|<code>-p</code>|<code>-u</code>] <i>identifier</i>&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>renice</code> alters the scheduling priority of one or more running processes. The first argument is the <i>priority</i> value to be used. The other arguments are interpreted as process IDs (by default), process group IDs, user IDs, or user names. <code>renice</code>&#8216;ing a process group causes all processes in the process group to have their scheduling priority altered. <code>renice</code>&#8216;ing a user causes all processes owned by the user to have their scheduling priority altered.</p>
 <h2>OPTIONS</h2>
 <p> <code>-n</code>, <code>&#8211;priority</code> <i>priority</i></p>

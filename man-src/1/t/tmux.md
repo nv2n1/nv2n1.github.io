@@ -1,4 +1,5 @@
 ---
+
 title: "tmux(1)"
 name: "tmux"
 section: "1"
@@ -6,11 +7,10 @@ letter: "t"
 url: "/docs/linux/man/1-tmux/"
 description: "tmux – terminal multiplexer"
 ---
+
 <h2>NAME</h2>
 <p> <code>tmux</code> - terminal multiplexer  </p>
-<h2>SYNOPSIS</h2>
 <p> <code>tmux</code> -words [-<code>28lCquvV</code> ] [-<code>c </code><i>shell-command</i> ] [-<code>f </code><i>file</i> ] [-<code>L </code><i>socket-name</i> ] [-<code>S </code><i>socket-path</i> ] [<i>command </i>[<i>flags</i> ] ]  </p>
-<h2>DESCRIPTION</h2>
 <p> <code>tmux</code> is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. <code>tmux</code> may be detached from a screen and continue running in the background, then later reattached. </p>
 <p> When <code>tmux</code> is started it creates a new <i>session</i> with a single <i>window</i> and displays it on screen. A status line at the bottom of the screen shows information on the current session and is used to enter interactive commands. </p>
 <p> A session is a single collection of <i>pseudo terminals</i> under the management of <code>.</code> Each session has one or more windows linked to it. A window occupies the entire screen and may be split into rectangular panes, each of which is a separate pseudo terminal (the pty(4) manual page documents the technical details of pseudo terminals). Any number of <code>tmux</code> instances may connect to the same session, and any number of windows may be present in the same session. Once all sessions are killed, <code>tmux</code> exits. </p>

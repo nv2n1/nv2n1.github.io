@@ -1,4 +1,5 @@
 ---
+
 title: "qhold-torque(1)"
 name: "qhold-torque"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-qhold-torque/"
 description: "qhold – hold pbs batch jobs"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> qhold [-h hold_list] [-t array_range] job_identifier &#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> The <code>qhold </code> command requests that a server place one or more holds on a job. A job that has a hold is not eligible for execution. There are three supported holds: <font SIZE="-1"></font><font SIZE="-2"><code> (also known as operator), and </code></font><font SIZE="-3"><code> </p>
 <p> A user may place a </code></font><font SIZE="-4"><code> hold upon any job the user owns. An &quot;operator&quot;, who is a user with &quot;operator privilege,&quot; may place ether an </code></font><font SIZE="-5"><code> or an </code></font><font SIZE="-6"><code> hold on any job. The batch administrator may place any hold on any job. </p>
 <p> If no </code><i> option is given, the USER hold will be applied to the jobs described by the operand list. </p>

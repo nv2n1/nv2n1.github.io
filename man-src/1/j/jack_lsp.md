@@ -1,4 +1,5 @@
 ---
+
 title: "jack_lsp(1)"
 name: "jack_lsp"
 section: "1"
@@ -9,9 +10,7 @@ description: "jack_lsp – JACK toolkit client to list informtion on ports"
 
 <h2>NAME</h2>
 <p> jack_lsp &#8211; JACK toolkit client to list informtion on ports</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jack_lsp</code> [ <i>-s</i> | <i>&#8211;server</i> servername ] [ <i>-AclLptvh</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>jack_lsp</code> lists all known ports associated with a JACK server. It can also optionally list various kinds of information about each port.</p>
 <h2>OPTIONS</h2>
 <dl>

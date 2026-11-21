@@ -1,4 +1,5 @@
 ---
+
 title: "ppufiles(1)"
 name: "ppufiles"
 section: "1"
@@ -9,7 +10,6 @@ description: "ppufiles – The FPC Pascal unit object file lister."
 
 <h2>NAME</h2>
 <p> ppufiles &#8211; The FPC Pascal unit object file lister. </p>
-<h2>SYNOPSIS</h2>
 <p> <code>ppufiles</code> [options] [file [file [file]]] </p>
 <h2>Description</h2>
 <p> <code>ppufiles</code> lists all the binary files that are needed to link a unit file. This includes any object files or libraries that must be linked in through some directive in the unit. </p>

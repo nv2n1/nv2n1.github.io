@@ -1,4 +1,5 @@
 ---
+
 title: "git-fetch(1)"
 name: "git-fetch"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-git-fetch/"
 description: "git-fetch – Download objects and refs from another repository"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 git fetch[&lt;options&gt;][&lt;repository&gt;[&lt;refspec&gt;...]] git fetch[&lt;options&gt;]&lt;group&gt;
     git fetch-- multiple[&lt;options&gt;][(&lt;repository&gt; | &lt;group&gt;)...] git fetch-- all[&lt;options&gt;]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> Fetch branches and/or tags (collectively, &quot;refs&quot;) from one or more other repositories, along with the objects necessary to complete their histories. Remote-tracking branches are updated (see the description of &lt;refspec&gt; below for ways to control this behavior). </p>
 <p> By default, any tag that points into the histories being fetched is also fetched; the effect is to fetch tags that point at branches that you are interested in. This default behavior can be changed by using the &#8211;tags or &#8211;no-tags options or by configuring remote.&lt;name&gt;.tagOpt. By using a refspec that fetches tags explicitly, you can fetch tags that do not point into branches you are interested in as well. </p>
 <p> <i>git fetch</i> can fetch from either a single named repository or URL, or from several repositories at once if &lt;group&gt; is given and there is a remotes.&lt;group&gt; entry in the configuration file. (See <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1)). </p>

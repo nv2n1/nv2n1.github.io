@@ -1,4 +1,5 @@
 ---
+
 title: "makeivs-ng(1)"
 name: "makeivs-ng"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-makeivs-ng/"
 description: "makeivs – generate a dummy IVS dump file with a specific WEP key"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>makeivs</code> &lt;ivs file&gt; &lt;104-bit key&gt;</p>
-<h2>DESCRIPTION</h2>
 <p> <code>makeivs</code> is a tool designed to generate an IVS dump file with an inputed WEP key. The aim of is tools is to provide a way to create dumps with a known encryption key for tests.</p>
 <h2>EXAMPLE</h2>
 <p> <code>makeivs</code> makeivs out.ivs 123456789ABCDEF123456789AB</p>

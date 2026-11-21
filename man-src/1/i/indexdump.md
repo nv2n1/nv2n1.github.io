@@ -1,4 +1,5 @@
 ---
+
 title: "indexdump(1)"
 name: "indexdump"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-indexdump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- indexdump - Show the content of the index file 
+indexdump - Show the content of the index file 
 
 <h2>FORMAT</h2>
 
@@ -23,16 +21,12 @@ indexdump[options] file[tag]
 --debug output record separator(default newline)-- type specifies the num / date / char type of the index-- start defines the value to start dump from-- n prints also the total number of records in the file
 </code></pre>
 
-<h2>SYNOPSIS</h2>
-
- <pre>
+<pre>
         indexdump rooms.cdx FACILITY
         indexdump --debug=14 --start=Dub rooms.cdx ROOMNAME
 </pre>
 
-<h2>DESCRIPTION</h2>
-
- Indexdump prints to standard output the content of the index file. The type of the index is one of those supported by the XBase::Index Perl module (cdx, idx, ntx, ndx, mdx). 
+Indexdump prints to standard output the content of the index file. The type of the index is one of those supported by the XBase::Index Perl module (cdx, idx, ntx, ndx, mdx). 
 
  The output contains the index key and the value, which is the record number in the correcponding dbf file. 
 

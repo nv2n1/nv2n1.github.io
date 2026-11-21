@@ -1,4 +1,5 @@
 ---
+
 title: "claesy(3)"
 name: "claesy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claesy/"
 description: "claesy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claesy</code> (A, B, C, RT1, RT2, EVSCAL, CS1, SN1)<br />
  <i></i><code>CLAESY</code> computes the eigenvalues and eigenvectors of a 2-by-2 complex symmetric matrix.</p>

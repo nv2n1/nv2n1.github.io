@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-mem(1)"
 name: "trace-cmd-mem"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-trace-cmd-mem/"
 description: "trace-cmd-mem – show memory usage of certain kmem events"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd mem</code> [<i>OPTIONS</i>][<i>input-file</i>]</p>
-<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) mem requires a trace-cmd record that enabled the following events: </p>
 <dl>
 <dt>

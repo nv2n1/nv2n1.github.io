@@ -1,4 +1,5 @@
 ---
+
 title: "gps(1)"
 name: "gps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gps/"
 description: "gps, xgps, xgpsspeed, cgps, lcdgps, gegps – test clients for gpsd"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xgps</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
 <dt> <code>xgpsspeed</code> [-D&nbsp;<wbr><i>debug-level</i>] [-h] [-V] [&#8211;speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
@@ -15,7 +15,6 @@ description: "gps, xgps, xgpsspeed, cgps, lcdgps, gegps – test clients for gps
 <dt> <code>lcdgps</code> [-h] [-V] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
 <dt> <code>gpxlogger</code> [-D&nbsp;<wbr><i>debug-level</i>] [-d] [-e&nbsp;<wbr><i>export-method</i>] [-f&nbsp;<wbr><i>filename</i>] [-l] [-m&nbsp;<wbr><i>minmove</i>] [-h] [-V] [-i&nbsp;<wbr><i>track timeout</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
 <dt> <code>gegps</code> [-d&nbsp;<wbr><i>directory</i>] [-i]</dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>These are the demonstration clients shipped with gpsd. They have some common options: </dd>
 <p> The <code>-h</code> option causes each client to emit a summary of its options and then exit. </p>
 <p> The <code>-V</code> option causes each client to dump the package version and exit. </p>

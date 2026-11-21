@@ -1,4 +1,5 @@
 ---
+
 title: "tipc-pipe(1)"
 name: "tipc-pipe"
 section: "1"
@@ -10,13 +11,9 @@ url: "/docs/linux/man/1-tipc-pipe/"
 
  tipc-PIPE - simple client/server
 
-<h2>SYNOPSIS</h2>
+tipc-pipe &lt;options&gt; [address 1] [address 2] 
 
- tipc-pipe &lt;options&gt; [address 1] [address 2] 
-
-<h2>DESCRIPTION</h2>
-
- tipc-pipe acts as a netcat like program for tipc. It is used for reading and writing network connections using tipc 
+tipc-pipe acts as a netcat like program for tipc. It is used for reading and writing network connections using tipc 
 
 <h3>Options</h3>
 

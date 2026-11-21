@@ -1,4 +1,5 @@
 ---
+
 title: "myisamchk(1)"
 name: "myisamchk"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-myisamchk/"
 description: "myisamchk – MyISAM table-maintenance utility"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>myisamchk [</code><i>options</i><code>] </code><i>tbl_name</i><code> &#8230;</code></dt></dl>
-<h2>DESCRIPTION</h2>
 <dd>The <code>myisamchk</code> utility gets information about your database tables or checks, repairs, or optimizes them. <code>myisamchk</code> works with MyISAM tables (tables that have .MYD and .MYI files for storing data and indexes). </dd>
 <p> You can also use the CHECK TABLE and REPAIR TABLE statements to check and repair MyISAM tables. See Section 13.7.3.2, &#8220;CHECK TABLE Statement&#8221;, and Section 13.7.3.5, &#8220;REPAIR TABLE Statement&#8221;. </p>
 <p> The use of <code>myisamchk</code> with partitioned tables is not supported. </p>

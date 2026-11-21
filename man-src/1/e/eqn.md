@@ -1,4 +1,5 @@
 ---
+
 title: "eqn(1)"
 name: "eqn"
 section: "1"
@@ -6,9 +7,8 @@ letter: "e"
 url: "/docs/linux/man/1-eqn/"
 description: "eqn – format equations for troff or MathML"
 ---
-<h2>SYNOPSIS</h2>
+
 <p> [ <code>-rvCNR</code> ] [ <code>-d </code><i>xy</i> ] [ <code>-T </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-f </code><i>F</i> ] [ <code>-s </code><i>n</i> ] [ <code>-p </code><i>n</i> ] [ <code>-m </code><i>n</i> ] [<i>file</i> ...]  </p>
-<h2>DESCRIPTION</h2>
 <p> This manual page describes the GNU version of <code>eqn</code>, which is part of the groff document formatting system. <code>eqn</code> compiles descriptions of equations embedded within <code>troff</code> input files into commands that are understood by <code>troff</code>. Normally, it should be invoked using the <code>-e</code> option of <code>groff</code>. The syntax is quite compatible with Unix eqn. The output of GNU <code>eqn</code> cannot be processed with Unix troff; it must be processed with GNU troff. If no files are given on the command line, the standard input is read. A filename of <code>-</code> causes the standard input to be read. </p>
 <p> <code>eqn</code> searches for the file <i>eqnrc</i> in the directories given with the <code>-M</code> option first, then in <i>/usr/lib/groff/site-tmac</i>, <i>/usr/share/groff/site-tmac</i>, and finally in the standard macro directory <i>/usr/share/groff/1.22.4/tmac</i>. If it exists, <code>eqn</code> processes it before the other input files. The <code>-R</code> option prevents this. </p>
 <p> GNU <code>eqn</code> does not provide the functionality of neqn: it does not support low-resolution, typewriter-like devices (although it may work adequately for very simple input).  </p>

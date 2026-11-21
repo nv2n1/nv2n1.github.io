@@ -1,4 +1,5 @@
 ---
+
 title: "rrd2whisper(1)"
 name: "rrd2whisper"
 section: "1"
@@ -13,7 +14,6 @@ description: "rrd2whisper – convert an RRD database to a whisper database"
 <pre>
 wrrd2whisper rrd_path
 </pre>
-<h2>DESCRIPTION</h2>
 <p> This command converts an RRD database to a whisper fixed-size database. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

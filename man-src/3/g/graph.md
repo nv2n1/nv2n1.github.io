@@ -1,4 +1,5 @@
 ---
+
 title: "graph(3)"
 name: "graph"
 section: "3"
@@ -9,7 +10,6 @@ description: "libgraph – abstract graph library"
 
 <h2>NAME</h2>
 <p> <code>libgraph</code> &#8211; abstract graph library</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;graphviz/graph.h&gt;
 void aginit();
@@ -50,7 +50,6 @@ Agsym_t *agnodeattr(Agraph_t *g, char *name, char *value);
 Agsym_t *agedgeattr(Agraph_t *g, char *name, char *value);
 Agsym_t *agfindattr(void *obj, char *name);
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> <i>libgraph</i> maintains directed and undirected attributed graphs in memory and reads and writes graph files. Graphs are composed of nodes, edges, and nested subgraphs. A subgraph may contain any nodes and edges of its parents, and may be passed to any <i>libgraph</i> function taking a graph pointer, except the three that create new attributes (where a main graph is required). </p>
 <p> Attributes are internal or external. Internal attributes are fields in the graph, node and edge structs defined at compile time. These allow efficient representation and direct access to values such as marks, weights, and pointers for writing graph algorithms. External attributes, on the other hand, are character strings (name-value pairs) dynamically allocated at runtime and accessed through <i>libgraph</i> calls. External attributes are used in graph file I/O; internal attributes are not. Conversion between internal and external attributes must be explicitly programmed. </p>
 <p> The subgraphs in a main graph are represented by an auxiliary directed graph (a meta-graph). Meta-nodes correspond to subgraphs, and meta-edges signify containment of one subgraph in another. agmetanode and agusergraph map between subgraphs and meta-nodes. The nodes and edges of the meta-graph may be traversed by the usual <i>libgraph</i> functions for this purpose. </p>

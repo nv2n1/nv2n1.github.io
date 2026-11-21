@@ -1,4 +1,5 @@
 ---
+
 title: "ssteqr(3)"
 name: "ssteqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssteqr/"
 description: "ssteqr.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssteqr</code> (COMPZ, N, D, E, Z, LDZ, WORK, INFO)<br />
  <i></i><code>SSTEQR</code></p>

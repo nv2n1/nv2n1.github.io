@@ -1,4 +1,5 @@
 ---
+
 title: "getfacl(1)"
 name: "getfacl"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-getfacl/"
 description: "getfacl – get file access control lists"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>getfacl</code> [-aceEsRLPtpndvh] file &#8230; </p>
 <p> <code>getfacl</code> [-aceEsRLPtpndvh] &#8211; </p>
-<h2>DESCRIPTION</h2>
 <p> For each file, getfacl displays the file name, owner, the group, and the Access Control List (ACL). If a directory has a default ACL, getfacl also displays the default ACL. Non-directories cannot have default ACLs. </p>
 <p> If getfacl is used on a file system that does not support ACLs, getfacl displays the access permissions defined by the traditional file mode permission bits. </p>
 <p> The output format of getfacl is as follows:</p>

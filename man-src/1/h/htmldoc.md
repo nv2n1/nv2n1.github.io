@@ -1,4 +1,5 @@
 ---
+
 title: "htmldoc(1)"
 name: "htmldoc"
 section: "1"
@@ -9,11 +10,9 @@ description: "htmldoc – convert html source files into html, postscript, or pd
 
 <h2>NAME</h2>
 <p> htmldoc &#8211; convert html source files into html, postscript, or pdf. </p>
-<h2>SYNOPSIS</h2>
 <p> htmldoc [options] filename1.html [ &#8230; filenameN.html ] </p>
 <p> htmldoc [options] &#8211; </p>
 <p> htmldoc [filename.book] </p>
-<h2>DESCRIPTION</h2>
 <p> <i>HTMLDOC</i> converts HTML source files into indexed HTML, PostScript, or Portable Document Format (PDF) files that can be viewed online or printed. With no options a HTML document is produced on stdout. </p>
 <p> The second form of <i>HTMLDOC</i> reads HTML source from stdin, which allows you to use <i>HTMLDOC</i> as a filter. </p>
 <p> The third form of <i>HTMLDOC</i> launches a graphical interface that allows you to change options and generate documents interactively.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnuplot-qt(1)"
 name: "gnuplot-qt"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-gnuplot-qt/"
 description: "gnuplot – an interactive plotting program"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>gnuplot</code> [X11 options] [options] [file &#8230;] </p>
-<h2>DESCRIPTION</h2>
 <p> <code>Gnuplot</code> is a command-driven interactive plotting program. </p>
 <p> If file names are given on the command line, gnuplot loads and executes each file in the order specified, and exits after the last file is processed. If no files are given, <code>gnuplot</code> prompts for interactive commands. </p>
 <p> Here are some of its features: </p>

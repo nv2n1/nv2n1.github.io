@@ -1,4 +1,5 @@
 ---
+
 title: "getcon(3)"
 name: "getcon"
 section: "3"
@@ -10,7 +11,6 @@ description: "getcon, getprevcon, getpidcon – get SELinux security context of 
 <p> freecon, freeconary &#8211; free memory associated with SELinux security contexts </p>
 <p> getpeercon &#8211; get security context of a peer socket </p>
 <p> setcon &#8211; set current security context of a process </p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>
 <p> <code>int getcon(char **</code><i>context</i><code>);</code> </p>
 <p> <code>int getcon_raw(char **</code><i>context</i><code>);</code> </p>
@@ -24,7 +24,6 @@ description: "getcon, getprevcon, getpidcon – get SELinux security context of 
 <p> <code>void freeconary(char **</code><i>con</i><code>);</code> </p>
 <p> <code>int setcon(char *</code><i>context</i><code>);</code> </p>
 <p> <code>int setcon_raw(char *</code><i>context</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>getcon</code>() retrieves the context of the current process, which must be free&#8217;d with freecon. </p>
 <p> <code>getprevcon</code>() same as getcon but gets the context before the last exec. </p>
 <p> <code>getpidcon</code>() returns the process context for the specified PID. </p>

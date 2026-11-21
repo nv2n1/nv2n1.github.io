@@ -1,4 +1,5 @@
 ---
+
 title: "musixtex(1)"
 name: "musixtex"
 section: "1"
@@ -7,11 +8,8 @@ url: "/docs/linux/man/1-musixtex/"
 description: "musixtex – processes MusiXTeX files, using pre-processors prepmx, xml2pmx, pmxab and autosp as necessary, and then deletes intermediate and log files (unless -i is used)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> musixtex &#8211; processes MusiXTeX files, using pre-processors prepmx, xml2pmx, pmxab and autosp as necessary, and then deletes intermediate and log files (unless <code>-i </code> is used) </p>
-<h2>SYNOPSIS</h2>
 <p> [ texlua ] <code>musixtex[.lua]</code> { <i>option </i> | <i>jobname </i> [ .xml | .mtx | .pmx | .aspc | .tex | .ltx ] } &#8230;</p>
-<h2>DESCRIPTION</h2>
 <dl>
 <dt>If a jobname argument has a .tex extension, the default effect is to process the file using</dt>
 <dd>

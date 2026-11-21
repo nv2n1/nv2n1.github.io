@@ -1,4 +1,5 @@
 ---
+
 title: "nco(1)"
 name: "nco"
 section: "1"
@@ -11,7 +12,6 @@ description: "NCO – netCDF Operators"
 <p> NCO &#8211; netCDF Operators</p>
 <h2>SYNTAX</h2>
 <p> operator [ <i>options</i>] <i>input-files</i> <i>output-file</i></p>
-<h2>DESCRIPTION</h2>
 <p> The netCDF Operators, or <code>NCO</code> are a suite of programs known as <i>operators</i>. Each operator is a standalone, command line program which is executed at the UNIX shell-level like, e.g., <code>ls</code> or <code>mkdir</code>. The operators take netCDF (&lt;<a rel="nofollow" href="http://www.unidata.ucar.edu/packages/netcdf">http://www.unidata.ucar.edu/packages/netcdf</a>&gt;) files as input, then perform a set of operations (e.g., deriving new data, averaging, hyperslabbing, or metadata manipulation) and produce a netCDF file as output. The operators are primarily designed to aid manipulation and analysis of gridded scientific data. The single command style of <code>NCO </code> allows users to manipulate and analyze files interactively and with simple scripts, avoiding the overhead (and some of the power) of a higher level programming environment. The <code>NCO User&#8217;s Guide</code> illustrates their use with examples from the field of climate modeling and analysis. </p>
 <p> The available <i>operators </i> are: </p>
 <dl>

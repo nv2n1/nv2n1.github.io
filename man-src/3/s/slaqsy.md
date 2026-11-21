@@ -1,4 +1,5 @@
 ---
+
 title: "slaqsy(3)"
 name: "slaqsy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaqsy/"
 description: "slaqsy.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqsy</code> (UPLO, N, A, LDA, S, SCOND, AMAX, EQUED)<br />
  <i></i><code>SLAQSY</code> scales a symmetric/Hermitian matrix, using scaling factors computed by spoequ.</p>

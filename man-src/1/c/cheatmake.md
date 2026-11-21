@@ -1,4 +1,5 @@
 ---
+
 title: "cheatmake(1)"
 name: "cheatmake"
 section: "1"
@@ -7,12 +8,9 @@ url: "/docs/linux/man/1-cheatmake/"
 description: "cheatmake – fool make into not rebuilding certain files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cheatmake &#8211; fool <code>make</code> into not rebuilding certain files </p>
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cheatmake</code> [<code>hidechange</code><i>file</i>] [<code>show</code>] [<code>why</code><i>file</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>cheatmake</code></p>
 <dd>is used to save time when recompiling. It can fool make into skipping files that haven&#8217;t changed in a meaningful way. This can be used for instance when you change a comment in a file but none of the actual code. </dd>
 <p> This utility is part of the KDE Software Development Kit.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "slarzb(3)"
 name: "slarzb"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slarzb/"
 description: "slarzb.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarzb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
  <i></i><code>SLARZB</code> applies a block reflector or its transpose to a general matrix.</p>

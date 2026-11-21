@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_priority_deinit(3)"
 name: "gnutls_priority_deinit"
 section: "3"
@@ -9,14 +10,12 @@ description: "gnutls_priority_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_priority_deinit &#8211; API function</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_priority_deinit(gnutls_priority_t </code><i>priority_cache</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_priority_t priority_cache</dt>
 <dd> is a <code>gnutls_prioritity_t</code> structure.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Deinitializes the priority cache.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

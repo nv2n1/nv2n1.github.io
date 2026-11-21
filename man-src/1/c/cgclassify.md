@@ -1,4 +1,5 @@
 ---
+
 title: "cgclassify(1)"
 name: "cgclassify"
 section: "1"
@@ -9,9 +10,7 @@ description: "cgclassify – move running task(s) to given cgroups"
 
 <h2>NAME</h2>
 <p> cgclassify &#8211; move running task(s) to given cgroups </p>
-<h2>SYNOPSIS</h2>
 <p> <code>cgclassify</code> [<code>-g</code> &lt;<i>controllers&gt;:&lt;path</i>&gt;] [&#8211;sticky | &#8211;cancel-sticky] &lt;<i>pidlist</i>&gt; </p>
-<h2>DESCRIPTION</h2>
 <p> this command moves processes defined by the list of processes (<code>pidlist</code>) to the given control groups. </p>
 <p> The pids in the pidlist are separated by spaces </p>
 <dl>

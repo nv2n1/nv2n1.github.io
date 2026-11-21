@@ -1,4 +1,5 @@
 ---
+
 title: "grdlandmask(1)"
 name: "grdlandmask"
 section: "1"
@@ -9,10 +10,8 @@ description: "grdlandmask – \"Create a \"\"wet-dry\"\" mask grid from shorelin
 
 <h2>NAME</h2>
 <p> grdlandmask &#8211; &quot;Create a &quot;&quot;wet-dry&quot;&quot; mask grid from shoreline data base&quot;</p>
-<h2>SYNOPSIS</h2>
 <p> <code>grdlandmask</code> <i>mask_grd_file</i> <i>xinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>][/<i>yinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>]] <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] [ <i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code> |<code>S</code>][<code>+r</code>|<code>l</code>][<code>p</code><i>percent</i>] ] [ <i>resolution</i>[<code>+</code>] ] [ <i>maskvalues</i>[<code>o</code>] ] [ [<i>level</i>] ] [ <code>-r</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
-<h2>DESCRIPTION</h2>
 <p> <code>grdlandmask</code> reads the selected shoreline database and uses that information to decide which nodes in the specified grid are over land or over water. The nodes defined by the selected region and lattice spacing will be set according to one of two criteria: (1) land vs water, or (2) the more detailed (hierarchical) ocean vs land vs lake vs island vs pond. The resulting mask may be used in subsequent operations involving <code>grdmath</code> to mask out data from land [or water] areas.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

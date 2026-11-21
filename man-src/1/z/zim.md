@@ -1,4 +1,5 @@
 ---
+
 title: "zim(1)"
 name: "zim"
 section: "1"
@@ -9,7 +10,6 @@ description: "zim – A Desktop Wiki Editor"
 
 <h2>NAME</h2>
 <p> zim &#8211; A Desktop Wiki Editor </p>
-<h2>SYNOPSIS</h2>
 <p> usage: zim [OPTIONS] [NOTEBOOK [PAGE]]<br />
 or: zim &#8211;server&nbsp;<wbr>[OPTIONS]&nbsp;<wbr>[NOTEBOOK]<br />
 or: zim &#8211;export&nbsp;<wbr>[OPTIONS]&nbsp;<wbr>NOTEBOOK&nbsp;<wbr>[PAGE]<br />
@@ -18,7 +18,6 @@ or: zim &#8211;index&nbsp;<wbr>&nbsp;<wbr>NOTEBOOK<br />
 or: zim &#8211;plugin PLUGIN&nbsp;<wbr>[ARGUMENTS]<br />
 or: zim &#8211;manual&nbsp;<wbr>[OPTIONS]&nbsp;<wbr>[PAGE]<br />
 or: zim &#8211;help </p>
-<h2>DESCRIPTION</h2>
 <p> Zim is a graphical text editor used to maintain a collection of wiki pages. Each page can contain links to other pages, simple formatting and images. Pages are stored in a folder structure, like in an outliner, and can have attachments. Creating a new page is as easy as linking to a nonexistent page. All data is stored in plain text files with wiki formatting. Various plugins provide additional functionality, like a task list manager, an equation editor, a tray icon, and support for version control. </p>
 <p> Zim can be used to: * Keep an archive of notes * Take notes during meetings or lectures * Organize task lists * Draft blog entries and emails * Do brainstorming</p>
 <h2>OPTIONS</h2>

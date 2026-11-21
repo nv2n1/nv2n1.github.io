@@ -1,4 +1,5 @@
 ---
+
 title: "psmandup(1)"
 name: "psmandup"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-psmandup/"
 description: "psmandup – print duplex on non duplex printers"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>psmandup</code> <i>FILE</i></p>
-<h2>DESCRIPTION</h2>
 <p> Tries to produce a version of the PostScript FILE to print in manual Duplex.</p>
 <h2>OPTIONS</h2>
 <dl>

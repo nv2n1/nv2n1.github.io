@@ -1,4 +1,5 @@
 ---
+
 title: "bglpp(1)"
 name: "bglpp"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-bglpp/"
 description: "bglpp – a Scheme Pretty Printer"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>bglpp</code> [ options ] <i>sourcefile</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>bglpp</code> reads <i>sourcefile</i> one at a time and pretty print them. Normally <code>bglpp</code> output its result on the standard output device. </p>
 <h2>OPTIONS</h2>
 <dl>

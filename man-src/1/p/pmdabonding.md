@@ -1,4 +1,5 @@
 ---
+
 title: "pmdabonding(1)"
 name: "pmdabonding"
 section: "1"
@@ -9,7 +10,6 @@ description: "pmdabonding – Linux bonded interface performance metrics domain 
 
 <h2>NAME</h2>
 <p> <code>pmdabonding</code> &#8211; Linux bonded interface performance metrics domain agent (PMDA)</p>
-<h2>DESCRIPTION</h2>
 <p> <code>pmdabonding</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from bonded network interfaces in the Linux kernel.</p>
 <h2>INSTALLATION</h2>
 <p> Install the bonding PMDA by using the Install script as root: </p>

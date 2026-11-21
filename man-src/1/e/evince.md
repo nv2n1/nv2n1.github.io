@@ -1,4 +1,5 @@
 ---
+
 title: "evince(1)"
 name: "evince"
 section: "1"
@@ -7,12 +8,10 @@ url: "/docs/linux/man/1-evince/"
 description: "evince – GNOME document viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>evince</code> &#8211; GNOME document viewer </p>
 <p> The Evince Document Viewer application for the GNOME desktop environment</p>
 <h2>SYNTAX</h2>
 <p> <code>evince</code> [&#8211;help] [&#8211;page-label=PAGE | &#8211;page-index=NUMBER | &#8211;named-dest=DEST] [&#8211;fullscreen] [&#8211;presentation] [&#8211;preview] [&#8211;find=STRING] [filename(s)&#8230;]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>evince</code> </p>
 <p> Evince is a document viewer capable of displaying multiple and single page document formats like PDF and Postscript. For more general information about Evince please visit our website at <a rel="nofollow" href="http://www.gnome.org/projects/evince/">http://www.gnome.org/projects/evince/</a> </p>
 <h2>OPTIONS</h2>

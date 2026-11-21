@@ -1,4 +1,5 @@
 ---
+
 title: "hp-doctor(1)"
 name: "hp-doctor"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-hp-doctor/"
 description: "hp-doctor – Self Diagnse Utility and Healing Utility"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> Tool checks for the deprecated, plug-in, dependencies, queues, permission issues and provides self diagnose steps</p>
-<h2>SYNOPSIS</h2>
 <p> <code>hp-doctor [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>

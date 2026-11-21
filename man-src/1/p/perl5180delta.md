@@ -1,4 +1,5 @@
 ---
+
 title: "perl5180delta(1)"
 name: "perl5180delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5180delta/"
 description: "perl5180delta – what is new for perl v5.18.0"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> This document describes differences between the v5.16.0 release and the v5.18.0 release. </p>
 <p> If you are upgrading from an earlier release such as v5.14.0, first read perl5160delta, which describes differences between v5.14.0 and v5.16.0.</p>
 <h2>Core Enhancements</h2>

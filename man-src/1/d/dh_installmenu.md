@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installmenu(1)"
 name: "dh_installmenu"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-dh_installmenu/"
 description: "dh_installmenu – install Debian menu files into package build directories"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>dh_installmenu</code> [<code>debhelper options</code>] [<code>-n</code>]</p>
-<h2>DESCRIPTION</h2>
 <p> <code>dh_installmenu</code> is a debhelper program that is responsible for installing files used by the Debian <code>menu</code> package into package build directories. </p>
 <p> It also automatically generates the <i>postinst</i> and <i>postrm</i> commands needed to interface with the Debian <code>menu</code> package. These commands are inserted into the maintainer scripts by <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1).</p>
 <h2>FILES</h2>

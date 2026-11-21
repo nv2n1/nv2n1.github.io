@@ -1,4 +1,5 @@
 ---
+
 title: "repodiff(1)"
 name: "repodiff"
 section: "1"
@@ -9,9 +10,7 @@ description: "repodiff – list differences between two or more Yum repositories
 
 <h2>NAME</h2>
 <p> repodiff &#8211; list differences between two or more Yum repositories</p>
-<h2>SYNOPSIS</h2>
 <p> <code>repodiff</code> &#8211;old=old_repo_baseurl &#8211;new=new_repo_baseurl</p>
-<h2>DESCRIPTION</h2>
 <p> <code>repodiff</code> is a program which will list differences between two sets of repositories. <code>Note</code> that by default only source packages are compared. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

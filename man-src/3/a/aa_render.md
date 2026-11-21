@@ -1,4 +1,5 @@
 ---
+
 title: "aa_render(3)"
 name: "aa_render"
 section: "3"
@@ -9,7 +10,6 @@ description: "aa_render – convert image buffer to ASCII-art."
 
 <h2>NAME</h2>
 <p> aa_render &#8211; convert image buffer to ASCII-art.</p>
-<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> void aa_render<br />
  (<br />
@@ -34,7 +34,6 @@ description: "aa_render – convert image buffer to ASCII-art."
 <dd> Column of bottom right coner of rendered area.</dd>
 <dt><code>int y2</code></dt>
 <dd> Row of bottom right coner of rendered area.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> This function does the trick of converting the emulated framebuffer into high quality ASCII-art. If you want to be really fast, you might use aa_fastrender. If you want to emulate palette, use aa_renderpalette. </p>
 <p> Note that to see the effect you need to call aa_flush too. </p>
 <p> First call to this function may take a while, because the rendering tables are produced.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rootd(1)"
 name: "rootd"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-rootd/"
 description: "rootd – The ROOT file server daemon"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>rootd</code> <i>[options]</i></p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>rootd</code> program. </p>
 <p> <code>rootd</code> is a <code>ROOT</code> remote file server daemon. </p>
 <p> This small server is started either by <i>inetd</i>(8) (or <i><a href="/docs/linux/man/8-xinetd/">xinetd</a></i>(8)) when a client requests a connection to a <i>rootd</i> server or by hand (i.e. from the command line). The <i>rootd</i> server works with the <code>ROOT</code> <i>TNetFile</i>, <i>TFTP</i> and <i>TNetSystem</i> classes. It allows access to remote directories and <code>ROOT</code> files in either read or write mode from any <code>ROOT</code> interactive session. By default rootd listens on port 1094, assigned to it by IANA.</p>

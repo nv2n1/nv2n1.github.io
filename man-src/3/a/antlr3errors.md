@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3errors(3)"
 name: "antlr3errors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3errors/"
 description: "include/antlr3errors.h –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Defines</h3>
 <p> #define <code>ANTLR3_CHARSTREAM_EOF</code> 0xFFFFFFFF<br />
  <i>Indicates end of character stream and is an invalid Unicode code point. </i><br />

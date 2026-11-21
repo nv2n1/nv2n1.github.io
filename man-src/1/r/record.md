@@ -1,4 +1,5 @@
 ---
+
 title: "record(1)"
 name: "record"
 section: "1"
@@ -9,9 +10,7 @@ description: "record – records *.wav files"
 
 <h2>NAME</h2>
 <p> record &#8211; records *.wav files</p>
-<h2>SYNOPSIS</h2>
 <p> <code>record [ options ]</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>record</code> records *.wav files in CD quality (i.e. 44100 Hz, 16bit, stereo). It has a input level meter, which might be useful for sound trouble shooting (check if the mixer settings ok for recording from the TV card etc.)</p>
 <h2>OPTIONS</h2>
 <dl>

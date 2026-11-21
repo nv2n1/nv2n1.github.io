@@ -1,4 +1,5 @@
 ---
+
 title: "xnightview(1)"
 name: "xnightview"
 section: "1"
@@ -9,9 +10,7 @@ description: "xnightview – interactive control center for camera."
 
 <h2>NAME</h2>
 <p> xnightview &#8211; interactive control center for camera.</p>
-<h2>SYNOPSIS</h2>
 <p> xnightview [-] [-i fits]</p>
-<h2>DESCRIPTION</h2>
 <p> Without options create a frame. A right-click opens a control panel for a CCD. An option will display an image. The options are as follows: </p>
 <p> <code>-i fits</code> load FITS image</p>
 <dl>

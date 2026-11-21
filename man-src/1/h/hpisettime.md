@@ -1,4 +1,5 @@
 ---
+
 title: "hpisettime(1)"
 name: "hpisettime"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-hpisettime/"
 description: "hpisettime – This sample openhpi application excercises Event Log clock APIs."
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 hpisettime[-D nn][-N host[:port]][-C&lt;cfgfile&gt;] - d mm / dd / yyyy - t HH : MM : SS[-X][-h] hpisettime[--domain = nn][--host = host[:port]][--cfgfile = file]-- date = mm / dd / yyyy-- time = HH : MM : SS[--debug][--help]
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> hpisettime sets new date and time for the Event Log clock. </p>
 <p> If no domain is selected, hpisettime uses a session with the default domain. The selected domain id must be configured via the openhpidclient.conf file specified in the environment.</p>
 <h2>OPTIONS</h2>

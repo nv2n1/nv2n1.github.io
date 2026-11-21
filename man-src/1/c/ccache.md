@@ -1,4 +1,5 @@
 ---
+
 title: "ccache(1)"
 name: "ccache"
 section: "1"
@@ -7,11 +8,9 @@ url: "/docs/linux/man/1-ccache/"
 description: "ccache – a fast C/C++ compiler cache"
 ---
 
-<h2>SYNOPSIS</h2>
 <pre><code>
 ccache[options] ccache compiler[compiler options] compiler[compiler options](via symbolic link)
 </code></pre>
-<h2>DESCRIPTION</h2>
 <p> ccache is a compiler cache. It speeds up recompilation by caching the result of previous compilations and detecting when the same compilation is being done again. Supported languages are C, C++, Objective-C and Objective-C++. </p>
 <p> ccache has been carefully written to always produce exactly the same compiler output that you would get without the cache. The only way you should be able to tell that you are using ccache is the speed. Currently known exceptions to this goal are listed under BUGS. If you ever discover an undocumented case where ccache changes the output of your compiler, please let us know.</p>
 <h3>Features</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "dsytf2_rook(3)"
 name: "dsytf2_rook"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsytf2_rook/"
 description: "dsytf2_rook.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsytf2_rook</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
  <i></i><code>DSYTF2_ROOK</code> computes the factorization of a real symmetric indefinite matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method (unblocked algorithm).</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perl(1)"
 name: "perl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl/"
 description: "perl – The Perl 5 language interpreter"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>perl</code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-sTtuUWX</code>&nbsp;<wbr>]<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-hv</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-V</code>[:<i>configvar</i>]&nbsp;<wbr>]<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&nbsp;<wbr><code>-cw</code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-d</code>[<code>t</code>][:<i>debugger</i>]&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr><code>-D</code>[<i>number/list</i>]&nbsp;<wbr>]<br />
@@ -228,7 +228,6 @@ description: "perl – The Perl 5 language interpreter"
 <p> On a Unix-like system, these documentation files will usually also be available as manpages for use with the <i>man</i> program. </p>
 <p> Some documentation is not available as man pages, so if a cross-reference is not found by man, try it with perldoc. Perldoc can also take you directly to documentation for functions (with the <code>-f</code> switch). See <tt>&quot;perldoc --help&quot;</tt> (or <tt>&quot;perldoc perldoc&quot;</tt> or <tt>&quot;man perldoc&quot;</tt>) for other helpful options perldoc has to offer. </p>
 <p> In general, if something strange has gone wrong with your program and you&#8217;re not sure where you should look for help, try making your code comply with <code>use strict</code> and <code>use warnings</code>. These will often point out exactly where the trouble is.</p>
-<h2>DESCRIPTION</h2>
 <p> Perl officially stands for Practical Extraction and Report Language, except when it doesn&#8217;t. </p>
 <p> Perl was originally a language optimized for scanning arbitrary text files, extracting information from those text files, and printing reports based on that information. It quickly became a good language for many system management tasks. Over the years, Perl has grown into a general-purpose programming language. It&#8217;s widely used for everything from quick &#8220;one-liners&#8221; to full-scale application development. </p>
 <p> The language is intended to be practical (easy to use, efficient, complete) rather than beautiful (tiny, elegant, minimal). It combines (in the author&#8217;s opinion, anyway) some of the best features of <code>sed</code>, <code>awk</code>, and <code>sh</code>, making it familiar and easy to use for Unix users to whip up quick solutions to annoying problems. Its general-purpose programming facilities support procedural, functional, and object-oriented programming paradigms, making Perl a comfortable language for the long haul on major projects, whatever your bent. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cover(1)"
 name: "cover"
 section: "1"
@@ -6,24 +7,17 @@ letter: "c"
 url: "/docs/linux/man/1-cover/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cover - report coverage statistics 
+cover - report coverage statistics 
 
 <h2>VERSION</h2>
 
  version 1.03
 
-<h2>SYNOPSIS</h2>
-
- <pre><code>
+<pre><code>
 cover - help - info - version - summary - report report_format - outputdir dir - select filename - ignore filename - select_re RE - ignore_re RE - write[db] - delete - dump_db - launch - silent - coverage criterion - test - gcov - make[make] - add_uncoverable_point - delete_uncoverable_point - clean_uncoverable_points - uncoverable_file[report specific options] coverage_database[coverage_database...]
 </code></pre>
 
-<h2>DESCRIPTION</h2>
-
- Report coverage statistics in a variety of formats. 
+Report coverage statistics in a variety of formats. 
 
  The summary option produces a short textual summary. Other reports are available by using the report option. 
 

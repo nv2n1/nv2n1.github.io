@@ -1,4 +1,5 @@
 ---
+
 title: "jwhois(1)"
 name: "jwhois"
 section: "1"
@@ -9,9 +10,7 @@ description: "jwhois – client for the whois service"
 
 <h2>NAME</h2>
 <p> jwhois &#8211; client for the whois service</p>
-<h2>SYNOPSIS</h2>
 <p> <code>jwhois</code> [ <i>OPTIONS</i> ]&#8230; [ <i>QUERY</i> ]</p>
-<h2>DESCRIPTION</h2>
 <p> <i>jwhois</i> searches Whois servers for the object on the command line. </p>
 <p> The host to query is taken from a global configuration file, a configuration file specified on the command line, or selected directly on the command line. </p>
 <h2>OPTIONS</h2>

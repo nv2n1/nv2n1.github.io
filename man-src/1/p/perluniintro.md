@@ -1,4 +1,5 @@
 ---
+
 title: "perluniintro(1)"
 name: "perluniintro"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perluniintro/"
 description: "perluniintro – Perl Unicode introduction"
 ---
-<h2>DESCRIPTION</h2>
+
 <p> This document gives a general idea of Unicode and how to use Unicode in Perl. See ``Further Resources&#8217;&#8216; for references to more in-depth treatments of Unicode.  </p>
 <h3>Unicode</h3>
 <p> Unicode is a character set standard which plans to codify all of the writing systems of the world, plus many other symbols. </p>

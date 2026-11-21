@@ -1,4 +1,5 @@
 ---
+
 title: "odbcinst(1)"
 name: "odbcinst"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-odbcinst/"
 description: "odbcinst – An unixODBC tool for manipulating configuration files"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>odbcinst</code> <i>ACTION OBJECT OPTIONS</i> </p>
-<h2>DESCRIPTION</h2>
 <p> <code>odbcinst</code> is a command line tool which has been created for allowing people who are developing the install scripts/RPMs for Drivers to be able to easily create/remove entries in odbc.ini and odbcinst.ini. This command line tool is a complement to the shared library of the same name (libodbcinst.so). This tool is a part of the odbcinst component of unixODBC. </p>
 <h2>OPTIONS</h2>
 <h3>ACTIONS</h3>

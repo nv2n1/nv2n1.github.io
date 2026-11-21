@@ -1,4 +1,5 @@
 ---
+
 title: "arm_get_correlator_flags(3)"
 name: "arm_get_correlator_flags"
 section: "3"
@@ -9,14 +10,12 @@ description: "arm_get_correlator_flags – get value of flag"
 
 <h2>NAME</h2>
 <p> arm_get_correlator_flags &#8211; get value of flag</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_get_correlator_flags( </p>
 <p>&nbsp;<wbr>const arm_correlator_t&nbsp;<wbr>*</code><i>correlator</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>corr_flag_num</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>arm_boolean_t&nbsp;<wbr>*</code><i>flag</i><code>);</code></p>
-<h2>DESCRIPTION</h2>
 <p> <code>arm_get_correlator_flags()</code> returns the value of a specified flag in the correlator header. </p>
 <p> A correlator header contains bit flags. <code>arm_get_correlator_flags()</code> is used to test the value of those flags. See <code>arm_generate_correlator()</code> for a description of a correlator. </p>
 <p> <i>corr_flag_num</i> is an enumerated value that indicates which flag&#8217;s value is requested. The enumerated values are:</p>

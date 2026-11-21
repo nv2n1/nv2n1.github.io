@@ -1,4 +1,5 @@
 ---
+
 title: "svlc(1)"
 name: "svlc"
 section: "1"
@@ -7,9 +8,7 @@ url: "/docs/linux/man/1-svlc/"
 description: "vlc, qvlc, svlc, nvlc, rvlc, cvlc – the VLC media player"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> <code>vlc</code> [<i>OPTIONS</i>] [<i>ITEMS</i>]&#8230;</p>
-<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>VLC</code> multimedia player and server. </p>
 <h2>OPTIONS</h2>
 <p> <code>VLC</code> follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). For a precise description of options, please use &quot;vlc &#8211;help&quot;. </p>

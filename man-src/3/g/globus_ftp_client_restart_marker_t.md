@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_restart_marker_t(3)"
 name: "globus_ftp_client_restart_marker_t"
 section: "3"
@@ -9,7 +10,6 @@ description: "globus_ftp_client_restart_marker_t –"
 
 <p> Restart marker. </p>
 <p> This structure is may be either a stream mode transfer offset, or an extended block mode byte range.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_ftp_client.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Restart marker. </p>

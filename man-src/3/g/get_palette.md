@@ -1,4 +1,5 @@
 ---
+
 title: "get_palette(3)"
 name: "get_palette"
 section: "3"
@@ -9,10 +10,8 @@ description: "get_palette – Retrieves the entire palette of 256 colors. Allegr
 
 <h2>NAME</h2>
 <p> get_palette &#8211; Retrieves the entire palette of 256 colors. Allegro game programming library.</p>
-<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void get_palette(PALETTE p);</code></p>
-<h2>DESCRIPTION</h2>
 <p> Retrieves the entire palette of 256 colors. You should provide an array of 256 RGB structures to store it in. Example: </p>
 <pre><code>
 PALETTE pal;

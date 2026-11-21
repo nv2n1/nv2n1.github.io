@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_data_reader_ingest(3)"
 name: "bson_json_data_reader_ingest"
 section: "3"
@@ -9,7 +10,6 @@ description: "bson_json_data_reader_ingest() – Feed data to a memory based jso
 
 <h2>NAME</h2>
 <p> bson_json_data_reader_ingest() &#8211; Feed data to a memory based json reader.</p>
-<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_json_data_reader_ingest(bson_json_reader_t *reader,
                                   const uint8_t *data,
@@ -25,7 +25,6 @@ void bson_json_data_reader_ingest(bson_json_reader_t *reader,
 <dl>
 <dt><code>len</code></dt>
 <dd> A size_t containing the length of <code>data</code> \&amp;.</dd></dl>
-<h2>DESCRIPTION</h2>
 <p> Feed data to a memory based json reader. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

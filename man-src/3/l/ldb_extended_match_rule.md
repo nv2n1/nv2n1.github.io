@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_extended_match_rule(3)"
 name: "ldb_extended_match_rule"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_extended_match_rule/"
 description: "ldb_extended_match_rule –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> const char * <code>oid</code> </p>
 <p> int(* <code>callback</code> )(struct <code>ldb_context</code> *, const char *oid, const struct <code>ldb_message</code> *, const char *, const struct <code>ldb_val</code> *, bool *) </p>

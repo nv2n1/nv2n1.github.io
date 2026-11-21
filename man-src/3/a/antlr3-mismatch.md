@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-mismatch(3)"
 name: "antlr3-mismatch"
 section: "3"
@@ -8,7 +9,6 @@ description: "src/antlr3treeparser.c –"
 ---
 
 <p> Implementation of the tree parser and overrides for the base recognizer.</p>
-<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3treeparser.h">antlr3treeparser.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> ANTLR3_API void <code>antlr3MTNExceptionNew</code> (<code>pANTLR3_BASE_RECOGNIZER</code> recognizer)<br />

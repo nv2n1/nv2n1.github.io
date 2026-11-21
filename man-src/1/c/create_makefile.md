@@ -1,4 +1,5 @@
 ---
+
 title: "create_makefile(1)"
 name: "create_makefile"
 section: "1"
@@ -7,10 +8,8 @@ url: "/docs/linux/man/1-create_makefile/"
 description: "create_makefile – Creates Makefile.in and Makefile from a Makefile.am"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>create_makefile</code> [<i>relativepath/Makefile</i>] [<i>relativepath</i>]</dt></dl>
-<h2>DESCRIPTION</h2>
 <p> <code>create_makefile</code></p>
 <dd>creates the Makefile.in and Makefile in a subdirectory containing a Makefile.am. This script saves time compared to re-running configure completely </dd>
 <p> Note that you must supply the path to the desired MakefileMakefile.am (though the final /Makefile may be omitted). </p>

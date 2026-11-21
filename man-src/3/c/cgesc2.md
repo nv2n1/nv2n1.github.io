@@ -1,4 +1,5 @@
 ---
+
 title: "cgesc2(3)"
 name: "cgesc2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgesc2/"
 description: "cgesc2.f –"
 ---
 
-<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgesc2</code> (N, A, LDA, RHS, IPIV, JPIV, SCALE)<br />
  <i></i><code>CGESC2</code> solves a system of linear equations using the LU factorization with complete pivoting computed by sgetc2.</p>

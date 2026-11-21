@@ -1,4 +1,5 @@
 ---
+
 title: "perlbal(1)"
 name: "perlbal"
 section: "1"
@@ -6,14 +7,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlbal/"
 ---
 
-<h2 class="name">NAME</h2>
- 
+Perlbal - Reverse-proxy load balancer and webserver 
 
- Perlbal - Reverse-proxy load balancer and webserver 
-
-<h2>DESCRIPTION</h2>
-
- For now, see example configuration files in conf/ from the <font SIZE="-1">CPAN</font> tarball 
+For now, see example configuration files in conf/ from the <font SIZE="-1">CPAN</font> tarball 
 
  <a rel="nofollow" HREF="http://search.cpan.org/dist/Perlbal/">http://search.cpan.org/dist/Perlbal/</a>
 

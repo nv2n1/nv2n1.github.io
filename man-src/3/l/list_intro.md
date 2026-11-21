@@ -1,4 +1,5 @@
 ---
+
 title: "list_intro(3)"
 name: "list_intro"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-list_intro/"
 description: "list_intro – a library providing generic list functionality and database-like list management"
 ---
 
-<h2>DESCRIPTION</h2>
 <p> The Grid Engine List Library provides the functionality of a generic list. This means the list functions are applicable to every list based on a number of certain basic types. List definitions are extensible on a per-program basis as long as the old fields remain in the list definition. [Note that the information here is probably outdated.]</p>
 <h2>LIBRARY FUNCTIONS</h2>
 <p> The list library provides the following functions. See the adoc-derived documentation for more information.</p>
