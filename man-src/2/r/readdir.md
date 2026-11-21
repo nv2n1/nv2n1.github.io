@@ -24,5 +24,33 @@ int readdir(unsigned int fd, struct old_linux_dirent *dirp,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long d_offset;&nbsp;<wbr>&nbsp;/*&nbsp;offset to this&nbsp;<i>old_linux_dirent</i>&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short d_namlen;&nbsp;/*&nbsp;length of this&nbsp;<i>d_name</i>&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;d_name[1];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;filename&nbsp;(null-terminated)&nbsp;*/ } </p>
-<p> <i>d_ino</i> is an inode number. <i>d_offset</i> is the distance from the start of the directory to this <i>old_linux_dirent</i>. <i>d_reclen</i> is the size of <i>d_name</i>, not counting the terminating null byte (&#8216;
-</p>
+<p> <i>d_ino</i> is an inode number. <i>d_offset</i> is the distance from the start of the directory to this <i>old_linux_dirent</i>. <i>d_reclen</i> is the size of <i>d_name</i>, not counting the terminating null byte (&#8216;\0&#8217;). <i>d_name</i> is a null-terminated filename.  </p>
+<h2>RETURN VALUE</h2>
+<p> On success, 1 is returned. On end of directory, 0 is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.  </p>
+<h2>ERRORS</h2>
+<dl>
+<dt><code>EBADF</code></dt>
+<dd> <p> Invalid file descriptor <i>fd</i>. </p>
+ </dd>
+<dt><code>EFAULT</code></dt>
+<dd> <p> Argument points outside the calling process&#8217;s address space. </p>
+ </dd>
+<dt><code>EINVAL</code></dt>
+<dd> <p> Result buffer is too small. </p>
+ </dd>
+<dt><code>ENOENT</code></dt>
+<dd> <p> No such directory. </p>
+ </dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> <p> File descriptor does not refer to a directory. </p>
+ </dd></dl>
+<h2>CONFORMING TO</h2>
+<p> This system call is Linux-specific.  </p>
+<h2>NOTES</h2>
+<p> Glibc does not provide a wrapper for this system call; call it using <code><a href="/docs/linux/man/2-syscall/">syscall</a></code>(2). You will need to define the <i>old_linux_dirent</i> structure yourself. However, probably you should use <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3) instead. </p>
+<p> This system call does not exist on x86-64.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-getdents/">getdents</a></code>(2), <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3)  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

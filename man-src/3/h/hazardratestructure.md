@@ -37,5 +37,18 @@ description: "QuantLib::HazardRateStructure – hazard-rate adapter for default-
 <h2>Member Function Documentation</h2>
 <h3>Probability survivalProbabilityImpl (Time) const [protected, virtual]</h3>
 <p>probability of survival between today (t = 0) and a given time </p>
-<p> implemented in terms of the hazard rate $ h(t) $ as [ S(t) = 
-</p>
+<p> implemented in terms of the hazard rate $ h(t) $ as [ S(t) = \xp </p>
+<hr />
+<p> : </p>
+<dl>
+<dd> <p> This implementation uses numerical integration. Derived classes should override it if a more efficient formula is available. </p>
+ </dd></dl>
+<p> Implements <code>DefaultProbabilityTermStructure</code>. </p>
+<p> Reimplemented in <code>InterpolatedHazardRateCurve&lt; Interpolator &gt;</code>.  </p>
+<code></code><h3>Real defaultDensityImpl (Time) const [protected, virtual]</h3>
+<p> instantaneous default density at a given time </p>
+<p> implemented in terms of the hazard rate $ h(t) $ and the survival probability $ S(t) $ as $ p(t) = h(t) S(t). $ </p>
+<p> Implements <code>DefaultProbabilityTermStructure</code>. </p>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>

@@ -50,5 +50,19 @@ description: "setcifsacl – Userspace helper to alter an ACL in a security desc
 <p> mask: Either one of FULL, CHANGE, READ, a combination of R W X D P O, or a hex value</p>
 <h2>EXAMPLES</h2>
 <p> Add an ACE<br />
- setcifsacl -a &quot;ACL:CIFSTESTDOM
-</p>
+ setcifsacl -a &quot;ACL:CIFSTESTDOM\user2:DENIED/0x1/D&quot; &lt;file_name&gt; setcifsacl -a &quot;ACL:CIFSTESTDOM\user1:ALLOWED/OI|CI|NI/D&quot; &lt;file_name&gt; </p>
+<p> Delete an ACE <br />
+ setcifsacl -D &quot;ACL:S-1-1-0:0x1/OI/0x1201ff&quot; &lt;file_name&gt; </p>
+<p> Modify an ACE <br />
+ setcifsacl -M &quot;ACL:CIFSTESTDOM\user1:ALLOWED/0x1f/CHANGE&quot; &lt;file_name&gt; </p>
+<p> Set an ACL <br />
+ setcifsacl -S &quot;ACL:CIFSTESTDOM\Administrator:0x0/0x0/FULL, <br />
+ ACL:CIFSTESTDOM\user2:0x0/0x0/FULL&quot; &lt;file_name&gt; </p>
+<h2>NOTES</h2>
+<p> Kernel support for getcifsacl/setcifsacl utilities was initially introduced in the 2.6.37 kernel.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/8-mount.cifs/">mount.cifs</a></code>(8), <code><a href="/docs/linux/man/1-getcifsacl/">getcifsacl</a></code>(1) </p>
+<h2>AUTHOR</h2>
+<p> Shirish Pargaonkar wrote the setcifsacl program. </p>
+<p> The Linux CIFS Mailing list is the preferred place to ask questions regarding these programs. </p>
+<h2>Index</h2>

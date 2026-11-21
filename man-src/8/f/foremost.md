@@ -88,5 +88,52 @@ description: "foremost – Recover files using their headers, footers, and data 
 <h2>Configuration File</h2>
 <p>The configuration file is used to control what types of files foremost searches for. A sample configuration file, foremost.conf, is included with this distribution. For each file type, the configuration file describes the file&#8217;s extension, whether the header and footer are case sensitive, the maximum file size, and the header and footer for the file. The footer field is optional, but header, size, case sensitivity, and extension are not! </p>
 <p> Any line that begins with a pound sign is considered a comment and ignored. Thus, to skip a file type just put a pound sign at the beginning of that line </p>
-<p> Headers and footers are decoded before use. To specify a value in hexadecimal use 
-</p></dd></dl>
+<p> Headers and footers are decoded before use. To specify a value in hexadecimal use \x[0-f][0-f], and for octal use \[1-9][1-9][1-9]. Spaces can be represented by \s. Example: &quot;\x4F\123\I\sCCI&quot; decodes to &quot;OSI CCI&quot;. </p>
+<p> To match any single character (aka a wildcard) use a ?. If you need to search for the ? character, you will need to change the wildcard line *and* every occurrence of the old wildcard character in the configuration file. Do not forget those hex and octal values! ? is equal to \x3f and \063. </p>
+<p> There is a sample set of headers in the README file. </p>
+<h2>EXAMPLES</h2>
+<dl>
+</dl>
+<h2>Search for jpeg format skipping the first 100 blocks</h2>
+<dd> <p> foremost -s 100 -t jpg -i image.dd </p>
+ </dd>
+<dl>
+</dl>
+<h2>Only generate an audit file, and print to the screen (verbose mode)</h2>
+<dd> <p> foremost -av image.dd </p>
+ </dd>
+<dl>
+</dl>
+<h2>Search all defined types</h2>
+<dd> <p> foremost -t all -i image.dd </p>
+ </dd>
+<dl>
+</dl>
+<h2>Search for gif and pdf's</h2>
+<dd> <p> foremost -t gif,pdf -i image.dd </p>
+ </dd>
+<dl>
+</dl>
+<h2>Search for office documents and jpeg files in a Unix file system in verbose mode.</h2>
+<dd> <p> foremost -vd -t ole,jpeg -i image.dd </p>
+ </dd>
+<dl>
+</dl>
+<h2>Run the default case</h2>
+<dd> <p> foremost image.dd </p>
+<h2>AUTHORS</h2>
+<p> Original Code written by Special Agent Kris Kendall and Special Agent Jesse Kornblum of the United States Air Force Office of Special Investigations. </p>
+<p> Modification by Nick Mikus a Research Associate at the Naval Postgraduate School Center for Information Systems Security Studies and Research. The modification of Foremost was part of a masters thesis at NPS. </p>
+<h2>BUGS</h2>
+<p> When compiling foremost on systems with versions of glibc 2.1.x or older, you will get some (harmless) compiler warnings regarding the implicit declaration of fseeko and ftello. You can safely ignore these warnings. </p>
+<h2>REPORTING BUGS</h2>
+<p> Because Foremost could be used to obtain evidence for criminal prosecutions, we take all bug reports <i>very</i> seriously. Any bug that jeopardizes the forensic integrity of this program could have serious consequenses. When submitting a bug report, please include a description of the problem, how you found it, and your contact information. </p>
+<p> Send bug reports to: <br />
+ namikus AT users d0t sf d0t net </p>
+<h2>COPYRIGHT</h2>
+<p> This program is a work of the US Government. In accordance with 17 USC 105, copyright protection is not available for any work of the US Government. </p>
+<p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
+<h2>SEE ALSO</h2>
+<p> There is more information in the README file. </p>
+<p> Foremost was originally designed to imitate the functionality of CarvThis, a DOS program written by the Defense Computer Forensics Lab in in 1999. </p>
+<h2>Index</h2>

@@ -22,6 +22,17 @@ description: "figtoipe – Convert FIG figures into Ipe format"
 <dt><code>-p </code><i>latex</i></dt>
 <dd> add <i>latex</i> as a preamble to the generated XML file, e.g. </dd>
 <pre>
-'
-</dl>
-</pre>
+'\usepackage{amsmath}'
+</code></pre>
+<h2>AUTHORS</h2>
+<pre><code>Otfried Cheong
+Alexander B[:u]rger &lt;acfb [at] users.sf.net&gt; (image handling)
+</code></pre>
+<h2>REPORTING BUGS</h2>
+<p> Please report bugs using Ipe bugzilla at <i><a rel="nofollow" href="http://tclab.kaist.ac.kr/ipe/bugzilla.html">http://tclab.kaist.ac.kr/ipe/bugzilla.html</a></i> </p>
+<h2>SEE ALSO</h2>
+<p> More information about Ipe can be found in <i>The Ipe Manual</i>, which can be found in your Ipe installation. </p>
+<h2>LICENSE & WARRANTY</h2>
+<p> <code>figtoipe</code> comes with ABSOLUTELY NO WARRANTY. It is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
+<p> See the file <code>GPL-2</code> accompanying the source for details. </p>
+<h2>Index</h2>

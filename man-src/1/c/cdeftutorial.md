@@ -337,5 +337,89 @@ then a else b<br />
       DEF:cel=demo.rrd:exhaust:AVERAGE \
       CDEF:far=9,5,/,cel,*,32,+ \
       LINE2:cel#00a000:&quot;D. Celsius&quot; \
-      LINE2:far#ff0000:&quot;D. Fahrenheit
-</pre>
+      LINE2:far#ff0000:&quot;D. Fahrenheit\c&quot;
+</code></pre>
+<p> This example gets the <font SIZE="-1">DS</font> called ``exhaust&#8217;&#8216; from database ``demo.rrd&#8217;&#8216; and puts the values in variable ``cel&#8217;&#8216;. The <font SIZE="-1">CDEF</font> used is evaluated as follows: </p>
+<pre><code>   CDEF:far=9,5,/,cel,*,32,+
+   1. push 9, push 5
+   2. push function &quot;divide&quot; and process it
+      the stack now contains 9/5
+   3. push variable &quot;cel&quot;
+   4. push function &quot;multiply&quot; and process it
+      the stack now contains 9/5*cel
+   5. push 32
+   6. push function &quot;plus&quot; and process it
+      the stack contains now the temperature in Fahrenheit
+</code></pre>
+<h3>Changing unknown into zero</h3>
+<pre><code>   rrdtool graph demo.png --title=&quot;Demo Graph&quot; \
+      DEF:idat1=interface1.rrd:ds0:AVERAGE \
+      DEF:idat2=interface2.rrd:ds0:AVERAGE \
+      DEF:odat1=interface1.rrd:ds1:AVERAGE \
+      DEF:odat2=interface2.rrd:ds1:AVERAGE \
+      CDEF:agginput=idat1,UN,0,idat1,IF,idat2,UN,0,idat2,IF,+,8,* \
+      CDEF:aggoutput=odat1,UN,0,odat1,IF,odat2,UN,0,odat2,IF,+,8,* \
+      AREA:agginput#00cc00:Input Aggregate \
+      LINE1:aggoutput#0000FF:Output Aggregate
+</code></pre>
+<p> These two CDEFs are built from several functions. It helps to split them when viewing what they do. Starting with the first <font SIZE="-1">CDEF</font> we would get: </p>
+<pre><code> idat1,UN --&gt; a
+ 0 --&gt; b
+ idat1 --&gt; c
+ if (a) then (b) else (c)
+</code></pre>
+<p> The result is therefore ``0&#8217;&#8216; if it is true that ``idat1&#8217;&#8216; equals ``<font SIZE="-1">UN</font>&#8216;&#8216;. If not, the original value of ``idat1&#8217;&#8216; is put back on the stack. Lets call this answer ``d&#8217;&#8216;. The process is repeated for the next five items on the stack, it is done the same and will return answer ``h&#8217;&#8216;. The resulting stack is therefore ``d,h&#8217;&#8216;. The expression has been simplified to ``d,h,+,8,*&#8216;&#8216; and it will now be easy to see that we add ``d&#8217;&#8216; and ``h&#8217;&#8216;, and multiply the result with eight. </p>
+<p> The end result is that we have added ``idat1&#8217;&#8216; and ``idat2&#8217;&#8216; and in the process we effectively ignored unknown values. The result is multiplied by eight, most likely to convert bytes/s to bits/s.  </p>
+<h3>Infinity demo</h3>
+<pre><code>   rrdtool graph example.png --title=&quot;INF demo&quot; \
+      DEF:val1=some.rrd:ds0:AVERAGE \
+      DEF:val2=some.rrd:ds1:AVERAGE \
+      DEF:val3=some.rrd:ds2:AVERAGE \
+      DEF:val4=other.rrd:ds0:AVERAGE \
+      CDEF:background=val4,POP,TIME,7200,%,3600,LE,INF,UNKN,IF \
+      CDEF:wipeout=val1,val2,val3,val4,+,+,+,UN,INF,UNKN,IF \
+      AREA:background#F0F0F0 \
+      AREA:val1#0000FF:Value1 \
+      STACK:val2#00C000:Value2 \
+      STACK:val3#FFFF00:Value3 \
+      STACK:val4#FFC000:Value4 \
+      AREA:whipeout#FF0000:Unknown
+</code></pre>
+<p> This demo demonstrates two ways to use infinity. It is a bit tricky to see what happens in the ``background&#8217;&#8216; <font SIZE="-1">CDEF</font>. </p>
+<pre><code>   &quot;val4,POP,TIME,7200,%,3600,LE,INF,UNKN,IF&quot;
+</code></pre>
+<p> This <font SIZE="-1">RPN</font> takes the value of ``val4&#8217;&#8216; as input and then immediately removes it from the stack using ``<font SIZE="-1">POP</font>&#8216;&#8216;. The stack is now empty but as a side effect we now know the time that this sample was taken. This time is put on the stack by the ``<font SIZE="-1">TIME</font>&#8216;&#8216; function. </p>
+<p> ``<font SIZE="-1">TIME</font>,7200,%&#8216;&#8216; takes the modulo of time and 7&#8217;200 (which is two hours). The resulting value on the stack will be a number in the range from 0 to 7199. </p>
+<p> For people who don&#8217;t know the modulo function: it is the remainder after an integer division. If you divide 16 by 3, the answer would be 5 and the remainder would be 1. So, ``16,3,%&#8216;&#8216; returns 1. </p>
+<p> We have the result of ``<font SIZE="-1">TIME</font>,7200,%&#8216;&#8216; on the stack, lets call this ``a&#8217;&#8216;. The start of the <font SIZE="-1">RPN</font> has become ``a,3600,LE&#8217;&#8216; and this checks if ``a&#8217;&#8216; is less or equal than ``3600&#8217;&#8216;. It is true half of the time. We now have to process the rest of the <font SIZE="-1">RPN</font> and this is only a simple ``<font SIZE="-1">IF</font>&#8216;&#8216; function that returns either ``<font SIZE="-1">INF</font>&#8216;&#8216; or ``<font SIZE="-1">UNKN</font>&#8216;&#8216; depending on the time. This is returned to variable ``background&#8217;&#8216;. </p>
+<p> The second <font SIZE="-1">CDEF</font> has been discussed earlier in this document so we won&#8217;t do that here. </p>
+<p> Now you can draw the different layers. Start with the background that is either unknown (nothing to see) or infinite (the whole positive part of the graph gets filled). </p>
+<p> Next you draw the data on top of this background, it will overlay the background. Suppose one of val1..val4 would be unknown, in that case you end up with only three bars stacked on top of each other. You don&#8217;t want to see this because the data is only valid when all four variables are valid. This is why you use the second <font SIZE="-1">CDEF</font>, it will overlay the data with an <font SIZE="-1">AREA</font> so the data cannot be seen anymore. </p>
+<p> If your data can also have negative values you also need to overwrite the other half of your graph. This can be done in a relatively simple way: what you need is the ``wipeout&#8217;&#8216; variable and place a negative sign before it: ``CDEF:wipeout2=wipeout,-1,*&#8216;&#8216;  </p>
+<h3>Filtering data</h3>
+<p> You may do some complex data filtering: </p>
+<pre><code>  MEDIAN FILTER: filters shot noise
+    DEF:var=database.rrd:traffic:AVERAGE
+    CDEF:prev1=PREV(var)
+    CDEF:prev2=PREV(prev1)
+    CDEF:prev3=PREV(prev2)
+    CDEF:median=prev1,prev2,prev3,+,+,3,/
+    LINE3:median#000077:filtered
+    LINE1:prev2#007700:'raw data'
+  DERIVATE:
+    DEF:var=database.rrd:traffic:AVERAGE
+    CDEF:prev1=PREV(var)
+    CDEF:time=var,POP,TIME
+    CDEF:prevtime=PREV(time)
+    CDEF:derivate=var,prev1,-,time,prevtime,-,/
+    LINE3:derivate#000077:derivate
+    LINE1:var#007700:'raw data'
+</code></pre>
+<h2>Out of ideas for now</h2>
+<p> This document was created from questions asked by either myself or by other people on the RRDtool mailing list. Please let me know if you find errors in it or if you have trouble understanding it. If you think there should be an addition, mail me: &lt;alex [at] vandenbogaerdt.nl&gt; </p>
+<p> Remember: <code>No feedback equals no changes!</code>  </p>
+<h2>SEE ALSO</h2>
+<p> The RRDtool manpages  </p>
+<h2>AUTHOR</h2>
+<p> Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; </p>
+<h2>Index</h2>

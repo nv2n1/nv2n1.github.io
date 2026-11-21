@@ -88,5 +88,14 @@ struct dirent *readdir(DIR *dirp);</code></pre>
 <p> Only the fields <i>d_name</i> and (as an XSI extension) <i>d_ino</i> are specified in POSIX.1. Other than Linux, the <i>d_type</i> field is available mainly only on BSD systems. The remaining fields are available on many, but not all systems. Under glibc, programs can check for the availability of the fields not defined in POSIX.1 by testing whether the macros <code>_DIRENT_HAVE_D_NAMLEN</code>, <code>_DIRENT_HAVE_D_RECLEN</code>, <code>_DIRENT_HAVE_D_OFF</code>, or <code>_DIRENT_HAVE_D_TYPE</code> are defined.</p>
 <h3>The d_name field</h3>
 <p>The <i>dirent</i> structure definition shown above is taken from the glibc headers, and shows the <i>d_name</i> field with a fixed size. </p>
-<p> <i>Warning</i>: applications should avoid any dependence on the size of the <i>d_name</i> field. POSIX defines it as <i>char d_name[],</i> a character array of unspecified size, with at most <code>NAME_MAX</code> characters preceding the terminating null byte (&#8216;
-</p>
+<p> <i>Warning</i>: applications should avoid any dependence on the size of the <i>d_name</i> field. POSIX defines it as <i>char d_name[],</i> a character array of unspecified size, with at most <code>NAME_MAX</code> characters preceding the terminating null byte (&#8216;\0&#8217;). </p>
+<p> POSIX.1 explicitly notes that this field should not be used as an lvalue. The standard also notes that the use of <i>sizeof(d_name)</i> is incorrect; use <i>strlen(d_name)</i> instead. (On some systems, this field is defined as <i>char d_name[1]</i>!) By implication, the use <i>sizeof(struct dirent)</i> to capture the size of the record including the size of <i>d_name</i> is also incorrect. </p>
+<p> Note that while the call </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fpathconf(fd,&nbsp;_PC_NAME_MAX) </p>
+<p> returns the value 255 for most filesystems, on some filesystems (e.g., CIFS, Windows SMB servers), the null-terminated filename that is (correctly) returned in <i>d_name</i> can actually exceed this size. In such cases, the <i>d_reclen</i> field will contain a value that exceeds the size of the glibc <i>dirent</i> structure shown above.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-getdents/">getdents</a></code>(2), <code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/3-closedir/">closedir</a></code>(3), <code><a href="/docs/linux/man/3-dirfd/">dirfd</a></code>(3), <code><a href="/docs/linux/man/3-ftw/">ftw</a></code>(3), <code><a href="/docs/linux/man/3-offsetof/">offsetof</a></code>(3), <code><a href="/docs/linux/man/3-opendir/">opendir</a></code>(3), <code><a href="/docs/linux/man/3-readdir_r/">readdir_r</a></code>(3), <code><a href="/docs/linux/man/3-rewinddir/">rewinddir</a></code>(3), <code><a href="/docs/linux/man/3-scandir/">scandir</a></code>(3), <code><a href="/docs/linux/man/3-seekdir/">seekdir</a></code>(3), <code><a href="/docs/linux/man/3-telldir/">telldir</a></code>(3)  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

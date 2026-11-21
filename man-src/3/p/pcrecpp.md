@@ -147,5 +147,22 @@ description: "PCRE – Perl-compatible regular expressions."
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;pcrecpp::CRadix(&amp;c), pcrecpp::CRadix(&amp;d)); </p>
 <p> will leave 64 in a, b, c, and d.</p>
 <h2>Replacing Parts Of Strings</h2>
-<p>You can replace the first match of &quot;pattern&quot; in &quot;str&quot; with &quot;rewrite&quot;. Within &quot;rewrite&quot;, backslash-escaped digits (\1 to \9) can be used to insert text matching corresponding parenthesized group from the pattern. 
-</p>
+<p>You can replace the first match of &quot;pattern&quot; in &quot;str&quot; with &quot;rewrite&quot;. Within &quot;rewrite&quot;, backslash-escaped digits (\1 to \9) can be used to insert text matching corresponding parenthesized group from the pattern. \0 in &quot;rewrite&quot; refers to the entire matching text. For example: </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;string s&nbsp;=&nbsp;&quot;yabba dabba doo&quot;; <br />
+&nbsp;<wbr>&nbsp;pcrecpp::RE(&quot;b+&quot;).Replace(&quot;d&quot;,&nbsp;&amp;s); </p>
+<p> will leave &quot;s&quot; containing &quot;yada dabba doo&quot;. The result is true if the pattern matches and a replacement occurs, false otherwise. </p>
+<p> <code>GlobalReplace</code> is like <code>Replace</code> except that it replaces all occurrences of the pattern in the string with the rewrite. Replacements are not subject to re-matching. For example: </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;string s&nbsp;=&nbsp;&quot;yabba dabba doo&quot;; <br />
+&nbsp;<wbr>&nbsp;pcrecpp::RE(&quot;b+&quot;).GlobalReplace(&quot;d&quot;,&nbsp;&amp;s); </p>
+<p> will leave &quot;s&quot; containing &quot;yada dada doo&quot;. It returns the number of replacements made. </p>
+<p> <code>Extract</code> is like <code>Replace</code>, except that if the pattern matches, &quot;rewrite&quot; is copied into &quot;out&quot; (an additional argument) with substitutions. The non-matching portions of &quot;text&quot; are ignored. Returns true iff a match occurred and the extraction happened successfully; if no match occurs, the string is left unaffected.  </p>
+<h2>AUTHOR</h2>
+<pre><code>The C++ wrapper was contributed by Google Inc.
+Copyright (c) 2007 Google Inc.
+</code></pre>
+<h2>REVISION</h2>
+<pre><code>Last updated: 08 January 2012
+</code></pre>
+<h2>Index</h2>

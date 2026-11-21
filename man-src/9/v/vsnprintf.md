@@ -29,5 +29,9 @@ description: "vsnprintf – Format a string and place it in a buffer"
 <p> <code>n</code> is unsupported <code>p</code>* is handled by <code>pointer</code> </p>
 <p> See <code>pointer</code> or Documentation/printk-formats.txt for more extensive description. </p>
 <p> ** Please update the documentation in both places when making changes ** </p>
-<p> The return value is the number of characters which would be generated for the given input, excluding the trailing &#8216;
-</p>
+<p> The return value is the number of characters which would be generated for the given input, excluding the trailing &#8216;\0&#8217;, as per ISO C99. If you want to have the exact number of characters written into <i>buf</i> as return value (not including the trailing &#8216;\0&#8217;), use <code>vscnprintf</code>. If the return is greater than or equal to <i>size</i>, the resulting string is truncated. </p>
+<p> If you&#8217;re not already dealing with a va_list consider using <code>snprintf</code>.  </p>
+<h2>COPYRIGHT</h2>
+<p> <br />
+ </p>
+<h2>Index</h2>

@@ -205,5 +205,282 @@ Any additional ld flags(NOT including libraries) ? [none] - s
  parent (0xC1A000) != child(0xA6A000)
 </pre>
 <p> or: </p>
-<p> 183 [main] perl 3588 C:
-</p></dl>
+<p> 183 [main] perl 3588 C:\cygwin\bin\perl.exe: *** fatal error &#8211; unable to remap C:\cygwin\bin\cygsvn_subr-1-0.dll to same address as parent(0x6FB30000) != 0x6FE60000 46 [main] perl 3488 fork: child 3588 &#8211; died waiting for dll loading, errno11 </code></pre>
+ </p>
+<p> See &lt;<a rel="nofollow" href="http://cygwin.com/faq/faq-nochunks.html#faq.using.fixing-fork-failures">http://cygwin.com/faq/faq-nochunks.html#faq.using.fixing-fork-failures</a>&gt; It helps if not too many DLLs are loaded in memory so the available address space is larger, e.g. stopping the <font SIZE="-1">MS</font> Internet Explorer might help. </p>
+<p> Use the perlrebase or rebase utilities to resolve the conflicting dll addresses. The rebase package is included in the Cygwin setup. Use <i>setup.exe</i> from &lt;<a rel="nofollow" href="http://www.cygwin.com/setup.exe">http://www.cygwin.com/setup.exe</a>&gt; to install it. </p>
+<p> 1. kill all perl processes and run <code>&quot;perlrebase&quot;</code> or </p>
+<p> 2. kill all cygwin processes and services, start dash from cmd.exe and run <code>&quot;rebaseall&quot;</code>. </p>
+<dt>&bull;</dt>
+<dd> <p> <code>&quot;chown()&quot;</code> </p>
+<p> On WinNT <code>&quot;chown()&quot;</code> can change a file&#8217;s user and group IDs. On Win9x <code>&quot;chown()&quot;</code> is a no-op, although this is appropriate since there is no security model. </p>
+ </dd>
+<dt>&bull;</dt>
+<dd> <p> Miscellaneous </p>
+<p> File locking using the <code>&quot;F_GETLK&quot;</code> command to <code>&quot;fcntl()&quot;</code> is a stub that returns <code>&quot;ENOSYS&quot;</code>. </p>
+<p> Win9x can not <code>&quot;rename()&quot;</code> an open file (although WinNT can). </p>
+<p> The Cygwin <code>&quot;chroot()&quot;</code> implementation has holes (it can not restrict file access by native Win32 programs). </p>
+<p> Inplace editing <code>&quot;perl -i&quot;</code> of files doesn&#8217;t work without doing a backup of the file being edited <code>&quot;perl -i.bak&quot;</code> because of windowish restrictions, therefore Perl adds the suffix <code>&quot;.bak&quot;</code> automatically if you use <code>&quot;perl -i&quot;</code> without specifying a backup extension. </p>
+ </dd></dl>
+<h3>Prebuilt methods:</h3>
+<dl>
+<dt>&quot;Cwd::cwd&quot;</dt>
+<dd> <p> Returns the current working directory. </p>
+ </dd>
+<dt>&quot;Cygwin::pid_to_winpid&quot;</dt>
+<dd> <p> Translates a cygwin pid to the corresponding Windows pid (which may or may not be the same). </p>
+ </dd>
+<dt>&quot;Cygwin::winpid_to_pid&quot;</dt>
+<dd> <p> Translates a Windows pid to the corresponding cygwin pid (if any). </p>
+ </dd>
+<dt>&quot;Cygwin::win_to_posix_path&quot;</dt>
+<dd> <p> Translates a Windows path to the corresponding cygwin path respecting the current mount points. With a second non-null argument returns an absolute path. Double-byte characters will not be translated. </p>
+ </dd>
+<dt>&quot;Cygwin::posix_to_win_path&quot;</dt>
+<dd> <p> Translates a cygwin path to the corresponding cygwin path respecting the current mount points. With a second non-null argument returns an absolute path. Double-byte characters will not be translated. </p>
+ </dd>
+<dt>&quot;Cygwin::mount_table()&quot;</dt>
+<dd> <p> Returns an array of [mnt_dir, mnt_fsname, mnt_type, mnt_opts]. </p>
+<pre><code>  perl -e 'for $i (Cygwin::mount_table) {print join(&quot; &quot;,@$i),&quot;\n&quot;;}'
+  /bin c:\cygwin\bin system binmode,cygexec
+  /usr/bin c:\cygwin\bin system binmode
+  /usr/lib c:\cygwin\lib system binmode
+  / c:\cygwin system binmode
+  /cygdrive/c c: system binmode,noumount
+  /cygdrive/d d: system binmode,noumount
+  /cygdrive/e e: system binmode,noumount
+</code></pre>
+ </dd>
+<dt>&quot;Cygwin::mount_flags&quot;</dt>
+<dd> <p> Returns the mount type and flags for a specified mount point. A comma-separated string of mntent-&gt;mnt_type (always ``system&#8217;&#8216; or ``user&#8217;&#8216;), then the mntent-&gt;mnt_opts, where the first is always ``binmode&#8217;&#8216; or ``textmode&#8217;&#8216;. </p>
+<pre><code>  system|user,binmode|textmode,exec,cygexec,cygdrive,mixed,
+  notexec,managed,nosuid,devfs,proc,noumount
+</code></pre>
+<p> If the argument is ``/cygdrive&#8217;&#8216;, then just the volume mount settings, and the cygdrive mount prefix are returned. </p>
+<p> User mounts override system mounts. </p>
+<pre><code>  $ perl -e 'print Cygwin::mount_flags &quot;/usr/bin&quot;'
+  system,binmode,cygexec
+  $ perl -e 'print Cygwin::mount_flags &quot;/cygdrive&quot;'
+  binmode,cygdrive,/cygdrive
+</code></pre>
+ </dd>
+<dt>&quot;Cygwin::is_binmount&quot;</dt>
+<dd> <p> Returns true if the given cygwin path is binary mounted, false if the path is mounted in textmode. </p>
+ </dd>
+<dt>&quot;Cygwin::sync_winenv&quot;</dt>
+<dd> <p> Cygwin does not initialize all original Win32 environment variables. See the bottom of this page &lt;<a rel="nofollow" href="http://cygwin.com/cygwin-ug-net/setup-env.html">http://cygwin.com/cygwin-ug-net/setup-env.html</a>&gt; for ``Restricted Win32 environment&#8217;&#8216;. </p>
+<p> Certain Win32 programs called from cygwin programs might need some environment variable, such as e.g. <font SIZE="-1">ADODB</font> needs <code>%COMMONPROGRAMFILES</code>%. Call <code>Cygwin::sync_winenv()</code> to copy all Win32 environment variables to your process and note that cygwin will warn on every encounter of non-POSIX paths. </p>
+ </dd></dl>
+<h2>INSTALL PERL ON CYGWIN</h2>
+<p> This will install Perl, including <i>man</i> pages. </p>
+<pre><code>  make install 2&gt;&amp;1 | tee log.make-install
+</code></pre>
+<p> <font SIZE="-1">NOTE:</font> If <code>&quot;STDERR&quot;</code> is redirected <code>&quot;make install&quot;</code> will <code>not</code> prompt you to install <i>perl</i> into <i>/usr/bin</i>. </p>
+<p> You may need to be <i>Administrator</i> to run <code>&quot;make install&quot;</code>. If you are not, you must have write access to the directories in question. </p>
+<p> Information on installing the Perl documentation in <font SIZE="-1">HTML</font> format can be found in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> document.  </p>
+<h2>MANIFEST ON CYGWIN</h2>
+<p> These are the files in the Perl release that contain references to Cygwin. These very brief notes attempt to explain the reason for all conditional code. Hopefully, keeping this up to date will allow the Cygwin port to be kept as clean as possible. </p>
+<dl>
+<dt>Documentation</dt>
+<dd> <pre><code> INSTALL README.cygwin README.win32 MANIFEST
+ pod/perl.pod pod/perlport.pod pod/perlfaq3.pod
+ pod/perldelta.pod pod/perl5004delta.pod pod/perl56delta.pod
+ pod/perl561delta.pod pod/perl570delta.pod pod/perl572delta.pod
+ pod/perl573delta.pod pod/perl58delta.pod pod/perl581delta.pod
+ pod/perl590delta.pod pod/perlhist.pod pod/perlmodlib.pod
+ pod/perltoc.pod Porting/Glossary pod/perlgit.pod
+ Porting/checkAUTHORS.pl
+ dist/Cwd/Changes ext/Compress-Raw-Zlib/Changes
+ dist/Time-HiRes/Changes
+ ext/Compress-Raw-Zlib/README ext/Compress-Zlib/Changes
+ ext/DB_File/Changes ext/Encode/Changes ext/Sys-Syslog/Changes
+ ext/Win32API-File/Changes
+ lib/ExtUtils/CBuilder/Changes lib/ExtUtils/Changes
+ lib/ExtUtils/NOTES lib/ExtUtils/PATCHING lib/ExtUtils/README
+ lib/Net/Ping/Changes lib/Test/Harness/Changes
+ lib/Term/ANSIColor/ChangeLog lib/Term/ANSIColor/README
+ README.symbian symbian/TODO
+</code></pre>
+ </dd>
+<dt>Build, Configure, Make, Install</dt>
+<dd> <pre><code> cygwin/Makefile.SHs
+ ext/IPC/SysV/hints/cygwin.pl
+ ext/NDBM_File/hints/cygwin.pl
+ ext/ODBM_File/hints/cygwin.pl
+ hints/cygwin.sh
+ Configure - help finding hints from uname,
+                         shared libperl required for dynamic loading
+ Makefile.SH Cross/Makefile-cross-SH
+                       - linklibperl
+ Porting/patchls - cygwin in port list
+ installman - man pages with :: translated to .
+ installperl - install dll, install to 'pods'
+ makedepend.SH - uwinfix
+ regen_lib.pl - file permissions
+ NetWare/Makefile
+ plan9/mkfile
+ symbian/sanity.pl symbian/sisify.pl
+ hints/uwin.sh
+ vms/descrip_mms.template
+ win32/Makefile win32/makefile.mk
+</code></pre>
+ </dd>
+<dt>Tests</dt>
+<dd> <pre><code> t/io/fs.t - no file mode checks if not ntsec
+                         skip rename() check when not
+                         check_case:relaxed
+ t/io/tell.t - binmode
+ t/lib/cygwin.t - builtin cygwin function tests
+ t/op/groups.t - basegroup has ID = 0
+ t/op/magic.t - $^X/symlink WORKAROUND, s/.exe//
+ t/op/stat.t - no /dev, skip Win32 ftCreationTime quirk
+                         (cache manager sometimes preserves ctime of
+                         file previously created and deleted), no -u
+                         (setuid)
+ t/op/taint.t - can't use empty path under Cygwin Perl
+ t/op/time.t - no tzset()
+</code></pre>
+ </dd>
+<dt>Compiled Perl Source</dt>
+<dd> <pre><code> EXTERN.h - __declspec(dllimport)
+ XSUB.h - __declspec(dllexport)
+ cygwin/cygwin.c - os_extras (getcwd, spawn, and several
+                         Cygwin:: functions)
+ perl.c - os_extras, -i.bak
+ perl.h - binmode
+ doio.c - win9x can not rename a file when it is open
+ pp_sys.c - do not define h_errno, init
+                         _pwent_struct.pw_comment
+ util.c - use setenv
+ util.h - PERL_FILE_IS_ABSOLUTE macro
+ pp.c - Comment about Posix vs IEEE math under
+                         Cygwin
+ perlio.c - CR/LF mode
+ perliol.c - Comment about EXTCONST under Cygwin
+</code></pre>
+ </dd>
+<dt>Compiled Module Source</dt>
+<dd> <pre><code> ext/Compress-Raw-Zlib/Makefile.PL
+                       - Can't install via CPAN shell under Cygwin
+ ext/Compress-Raw-Zlib/zlib-src/zutil.h
+                       - Cygwin is Unix-like and has vsnprintf
+ ext/Errno/Errno_pm.PL - Special handling for Win32 Perl under
+                         Cygwin
+ ext/POSIX/POSIX.xs - tzname defined externally
+ ext/SDBM_File/sdbm/pair.c
+                       - EXTCONST needs to be redefined from
+                         EXTERN.h
+ ext/SDBM_File/sdbm/sdbm.c
+                       - binary open
+ ext/Sys/Syslog/Syslog.xs
+                       - Cygwin has syslog.h
+ ext/Sys/Syslog/win32/compile.pl
+                       - Convert paths to Windows paths
+ ext/Time-HiRes/HiRes.xs
+                       - Various timers not available
+ ext/Time-HiRes/Makefile.PL
+                       - Find w32api/windows.h
+ ext/Win32/Makefile.PL - Use various libraries under Cygwin
+ ext/Win32/Win32.xs - Child dir and child env under Cygwin
+ ext/Win32API-File/File.xs
+                       - _open_osfhandle not implemented under
+                         Cygwin
+ ext/Win32CORE/Win32CORE.c
+                       - __declspec(dllexport)
+</code></pre>
+ </dd>
+<dt>Perl Modules/Scripts</dt>
+<dd> <pre><code> ext/B/t/OptreeCheck.pm - Comment about stderr/stdout order under
+                          Cygwin
+ ext/Digest-SHA/bin/shasum
+                       - Use binary mode under Cygwin
+ ext/Sys/Syslog/win32/Win32.pm
+                       - Convert paths to Windows paths
+ ext/Time-HiRes/HiRes.pm
+                       - Comment about various timers not available
+ ext/Win32API-File/File.pm
+                       - _open_osfhandle not implemented under
+                         Cygwin
+ ext/Win32CORE/Win32CORE.pm
+                       - History of Win32CORE under Cygwin
+ lib/Cwd.pm - hook to internal Cwd::cwd
+ lib/ExtUtils/CBuilder/Platform/cygwin.pm
+                       - use gcc for ld, and link to libperl.dll.a
+ lib/ExtUtils/CBuilder.pm
+                       - Cygwin is Unix-like
+ lib/ExtUtils/Install.pm - Install and rename issues under Cygwin
+ lib/ExtUtils/MM.pm - OS classifications
+ lib/ExtUtils/MM_Any.pm - Example for Cygwin
+ lib/ExtUtils/MakeMaker.pm
+                       - require MM_Cygwin.pm
+ lib/ExtUtils/MM_Cygwin.pm
+                       - canonpath, cflags, manifypods, perl_archive
+ lib/File/Fetch.pm - Comment about quotes using a Cygwin example
+ lib/File/Find.pm - on remote drives stat() always sets
+                         st_nlink to 1
+ lib/File/Spec/Cygwin.pm - case_tolerant
+ lib/File/Spec/Unix.pm - preserve //unc
+ lib/File/Spec/Win32.pm - References a message on cygwin.com
+ lib/File/Spec.pm - Pulls in lib/File/Spec/Cygwin.pm
+ lib/File/Temp.pm - no directory sticky bit
+ lib/Module/CoreList.pm - List of all module files and versions
+ lib/Net/Domain.pm - No domainname command under Cygwin
+ lib/Net/Netrc.pm - Bypass using stat() under Cygwin
+ lib/Net/Ping.pm - ECONREFUSED is EAGAIN under Cygwin
+ lib/Pod/Find.pm - Set 'pods' dir
+ lib/Pod/Perldoc/ToMan.pm - '-c' switch for pod2man
+ lib/Pod/Perldoc.pm - Use 'less' pager, and use .exe extension
+ lib/Term/ANSIColor.pm - Cygwin terminal info
+ lib/perl5db.pl - use stdin not /dev/tty
+ utils/perlbug.PL - Add CYGWIN environment variable to report
+</code></pre>
+ </dd>
+<dt>Perl Module Tests</dt>
+<dd> <pre><code> dist/Cwd/t/cwd.t
+ ext/Compress-Zlib/t/14gzopen.t
+ ext/DB_File/t/db-btree.t
+ ext/DB_File/t/db-hash.t
+ ext/DB_File/t/db-recno.t
+ ext/DynaLoader/t/DynaLoader.t
+ ext/File-Glob/t/basic.t
+ ext/GDBM_File/t/gdbm.t
+ ext/POSIX/t/sysconf.t
+ ext/POSIX/t/time.t
+ ext/SDBM_File/t/sdbm.t
+ ext/Sys/Syslog/t/syslog.t
+ ext/Time-HiRes/t/HiRes.t
+ ext/Win32/t/Unicode.t
+ ext/Win32API-File/t/file.t
+ ext/Win32CORE/t/win32core.t
+ lib/AnyDBM_File.t
+ lib/Archive/Extract/t/01_Archive-Extract.t
+ lib/Archive/Tar/t/02_methods.t
+ lib/ExtUtils/t/Embed.t
+ lib/ExtUtils/t/eu_command.t
+ lib/ExtUtils/t/MM_Cygwin.t
+ lib/ExtUtils/t/MM_Unix.t
+ lib/File/Compare.t
+ lib/File/Copy.t
+ lib/File/Find/t/find.t
+ lib/File/Path.t
+ lib/File/Spec/t/crossplatform.t
+ lib/File/Spec/t/Spec.t
+ lib/Net/hostent.t
+ lib/Net/Ping/t/110_icmp_inst.t
+ lib/Net/Ping/t/500_ping_icmp.t
+ lib/Net/t/netrc.t
+ lib/Pod/Simple/t/perlcyg.pod
+ lib/Pod/Simple/t/perlcygo.txt
+ lib/Pod/Simple/t/perlfaq.pod
+ lib/Pod/Simple/t/perlfaqo.txt
+ lib/User/grent.t
+ lib/User/pwent.t
+</code></pre>
+ </dd></dl>
+<h2>BUGS ON CYGWIN</h2>
+<p> Support for swapping real and effective user and group IDs is incomplete. On WinNT Cygwin provides <code>&quot;setuid()&quot;</code>, <code>&quot;seteuid()&quot;</code>, <code>&quot;setgid()&quot;</code> and <code>&quot;setegid()&quot;</code>. However, additional Cygwin calls for manipulating WinNT access tokens and security contexts are required.  </p>
+<h2>AUTHORS</h2>
+<p> Charles Wilson &lt;cwilson [at] ece.gatech.edu&gt;, Eric Fifer &lt;egf7 [at] columbia.edu&gt;, alexander smishlajev &lt;als [at] turnhere.com&gt;, Steven Morlock &lt;newspost [at] morlock.net&gt;, Sebastien Barre &lt;Sebastien.Barre [at] utc.fr&gt;, Teun Burgers &lt;burgers [at] ecn.nl&gt;, Gerrit P. Haase &lt;gp [at] familiehaase.de&gt;, Reini Urban &lt;rurban [at] cpan.org&gt;, Jan Dubois &lt;jand [at] activestate.com&gt;, Jerry D. Hedden &lt;jdhedden [at] cpan.org&gt;.  </p>
+<h2>HISTORY</h2>
+<p> Last updated: 2012-02-08 </p>
+<h2>Index</h2>

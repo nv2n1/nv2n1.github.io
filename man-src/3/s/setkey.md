@@ -97,5 +97,51 @@ int main(void)
 &quot;, orig);
     encrypt(buf, 0);
     for (int i = 0; i &lt; 8; i++) {
-        for (int j = 0, txt[i] = '
-</code></pre>
+        for (int j = 0, txt[i] = '</code>\0';&nbsp;j&nbsp;&lt;&nbsp;8;&nbsp;j++)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[i]&nbsp;|=&nbsp;buf[i&nbsp;*&nbsp;8&nbsp;+&nbsp;j]&nbsp;&lt;&lt;&nbsp;j;
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[8]&nbsp;=&nbsp;'\0';
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;After encrypting:&nbsp;<wbr>&nbsp;%s\n&quot;, txt);
+
+
+&nbsp;<p> <wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;encrypt(buf, 1);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;8;&nbsp;i++)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for&nbsp;(int j&nbsp;=&nbsp;0, txt[i]&nbsp;=&nbsp;'\0';&nbsp;j&nbsp;&lt;&nbsp;8;&nbsp;j++)&nbsp;{
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[i]&nbsp;|=&nbsp;buf[i&nbsp;*&nbsp;8&nbsp;+&nbsp;j]&nbsp;&lt;&lt;&nbsp;j;
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;txt[8]&nbsp;=&nbsp;'\0';
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;printf(&quot;After decrypting:&nbsp;<wbr>&nbsp;%s\n&quot;, txt);
+
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS);
+}
+
+ </p>
+<h2>SEE ALSO</h2>
+
+ cbc_crypt (3),
+ crypt (3),
+ ecb_crypt (3),
+
+<h2>COLOPHON</h2>
+This page is part of release 5.10 of the Linux
+ man-pages project.
+A description of the project,
+information about reporting bugs,
+and the latest version of this page,
+can be found at
+https://www.kernel.org/doc/man-pages/.
+<h2>Index</h2>

@@ -13,5 +13,15 @@ description: "ps2frag – obsolete shell script for the PSfrag system."
 <p> The new PSfrag system no longer requires the ps2frag script; instead, it handles the processing entirely within TeX/LaTeX and DVIPS. I&#8217;m sure you will agree that never needing to run ps2frag again is a nice convenience! </p>
 <p> However, there are two significant differences in the way this new version of PSfrag works. Please make yourself aware of them: </p>
 <p> 1) XDvi is no longer able to determine where your PSfrag replacements should go, so instead it lines them up in a vertical list to the left of the figure. This allows you to confirm that they have been typeset properly, at least. However, to confirm that PSfrag <code>positions </code> your replacements properly, you will have to view the PostScript version of your file with a viewer like GhostView, or print it out. This seems to be the only disadvantage to the elimination of the pre-processing step. </p>
-<p> 2) If you embed &#8216;	ex&#8217; commands inside your figures, you now need to explicitly _tell_ PSfrag to process these commands. To do so, use 
-</p>
+<p> 2) If you embed &#8216;	ex&#8217; commands inside your figures, you now need to explicitly _tell_ PSfrag to process these commands. To do so, use \usepackage[scanall]{psfrag} instead of \usepackage{psfrag} at the beginning of your LaTeX file. </p>
+<p> If you only use &#8216;\tex&#8217; commands in a small number of figures, then a more efficient might be to turn on &#8216;\tex&#8217;-scanning only for those figures. To do that, add the command &#8216;\psfragscanon&#8217; immediately before each relevant \includegraphics or \epsfbox command. </p>
+<h2>NOTES</h2>
+<p> See the PSfrag documentation for further information.  </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-dvips/">dvips</a>(1), <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-ghostview/">ghostview</a>(1), <a href="/docs/linux/man/1-latex/">latex</a>(1)  </p>
+<h2>AUTHORS</h2>
+<dl>
+<dt>psfrag [at] rascals.stanford.edu</dt>
+<dd> <p> The PSfrag maintainer&#8217;s mailing list. </p>
+ </dd></dl>
+<h2>Index</h2>

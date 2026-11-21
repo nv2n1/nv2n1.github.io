@@ -17,5 +17,19 @@ CURLcode curl_easy_setopt(CURL *handle, CURLOPT_USERNAME,
 <p> <code><a href="/docs/linux/man/3-curlopt_username/">CURLOPT_USERNAME</a>(3)</code> sets the user name to be used in protocol authentication. You should not use this option together with the (older) <i><a href="/docs/linux/man/3-curlopt_userpwd/">CURLOPT_USERPWD</a>(3)</i> option. </p>
 <p> When using Kerberos V5 authentication with a Windows based server, you should include the domain name in order for the server to successfully obtain a Kerberos Ticket. If you don&#8217;t then the initial part of the authentication handshake may fail. </p>
 <p> When using NTLM, the user name can be specified simply as the user name without the domain name should the server be part of a single domain and forest. </p>
-<p> To include the domain name use either Down-Level Logon Name or UPN (User Principal Name) formats. For example, EXAMPLE
-</p>
+<p> To include the domain name use either Down-Level Logon Name or UPN (User Principal Name) formats. For example, EXAMPLE\user and user [at] example.com respectively. </p>
+<p> Some HTTP servers (on Windows) support inclusion of the domain for Basic authentication as well. </p>
+<p> To specify the password and login options, along with the user name, use the <i><a href="/docs/linux/man/3-CURLOPT_PASSWORD/">CURLOPT_PASSWORD</a>(3)</i> and <i><a href="/docs/linux/man/3-CURLOPT_LOGIN_OPTIONS/">CURLOPT_LOGIN_OPTIONS</a>(3)</i> options.  </p>
+<h2>DEFAULT</h2>
+<p> blank  </p>
+<h2>PROTOCOLS</h2>
+<p> Most  </p>
+<h2>EXAMPLE</h2>
+<p> TODO  </p>
+<h2>AVAILABILITY</h2>
+<p> Added in 7.19.1  </p>
+<h2>RETURN VALUE</h2>
+<p> Returns CURLE_OK if the option is supported, CURLE_UNKNOWN_OPTION if not, or CURLE_OUT_OF_MEMORY if there was insufficient heap space.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-CURLOPT_USERPWD/">CURLOPT_USERPWD</a></code>(3), <code><a href="/docs/linux/man/3-CURLOPT_PASSWORD/">CURLOPT_PASSWORD</a></code>(3), <code><a href="/docs/linux/man/3-CURLOPT_HTTPAUTH/">CURLOPT_HTTPAUTH</a></code>(3), <code><a href="/docs/linux/man/3-CURLOPT_PROXYAUTH/">CURLOPT_PROXYAUTH</a></code>(3) </p>
+<h2>Index</h2>

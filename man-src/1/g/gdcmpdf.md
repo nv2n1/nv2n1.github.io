@@ -103,5 +103,31 @@ PDF version:    1.4
 (0040,a043) SQ (Sequence with explicit length #=0)      #   0, 1 ConceptNameCodeSequence
 (fffe,e0dd) na (SequenceDelimitationItem for re-encod.) #   0, 0 SequenceDelimitationItem
 (0042,0010) ST [GDCM Reference Manual]                  #  22, 1 DocumentTitle
-(0042,0011) OB 25\50\44\46\2d\31\2e\34
+(0042,0011) OB 25\50\44\46\2d\31\2e\34</code>\0a\25\e7\f3\cf\d3\0a\33\32\30\37\37\20\30... # 13756842, 1 EncapsulatedDocument
+(0042,0012) LO [application/pdf] # 16, 1 MIMETypeOfEncapsulatedDocument
 </code></pre>
+<pre><code>$ stat gdcm.pdf
+  File: `gdcm.pdf'
+  Size: 13756841 Blocks: 26912 IO Block: 4096 regular file
+Device: fe01h/65025d Inode: 2675750 Links: 1
+Access: (0644/-rw-r--r--) Uid: ( 1002/mmalaterre) Gid: ( 1002/mmalaterre)
+Access: 2009-04-28 16:05:00.000000000 +0200
+Modify: 2009-04-28 15:34:37.000000000 +0200
+Change: 2009-04-28 16:05:00.000000000 +0200
+</code></pre>
+<p> Explanation for the different Date/Time mappings: </p>
+<dl>
+<dt>*</dt>
+<dd> <p> Study Date/Time, Instance Creation Date/Time are both equal to the current time gdcmpdf tool was run, </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> Acquisition Date Time is set to the Modify Time of the actual pdf file, </p>
+ </dd>
+<dt>*</dt>
+<dd> <p> Content Date/Time are set from the actual PDF header info: CreationDate. </p>
+ </dd></dl>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-gdcmconv/">gdcmconv</a></code>(1), <code><a href="/docs/linux/man/1-gdcmraw/">gdcmraw</a></code>(1), <code><a href="/docs/linux/man/1-pdfinfo/">pdfinfo</a></code>(1)  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
+<h2>Index</h2>

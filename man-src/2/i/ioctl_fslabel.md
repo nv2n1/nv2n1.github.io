@@ -34,5 +34,9 @@ description: "ioctl_fslabel – get or set a filesystem label"
 <h2>CONFORMING TO</h2>
 <p> This API is Linux-specific.</p>
 <h2>NOTES</h2>
-<p> The maximum string length for this interface is <code>FSLABEL_MAX</code>, including the terminating null byte (&#8216;
-</p>
+<p> The maximum string length for this interface is <code>FSLABEL_MAX</code>, including the terminating null byte (&#8216;\0&#8217;). Filesystems have differing maximum label lengths, which may or may not include the terminating null. The string provided to <code>FS_IOC_SETFSLABEL</code> must always be null-terminated, and the string returned by <code>FS_IOC_GETFSLABEL</code> will always be null-terminated.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2), <code><a href="/docs/linux/man/8-blkid/">blkid</a></code>(8)  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

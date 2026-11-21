@@ -45,5 +45,39 @@ description: "QuantLib::GenericGaussianStatistics – Statistics tool for gaussi
 <p> See Dembo, Freeman &#8216;The Rules Of Risk&#8217;, Wiley (2001)</p>
 <h3>Real gaussianPercentile (Real percentile) const</h3>
 <p> gaussian-assumption y-th percentile, defined as the value x such that [ y = ac{1}{qrt{2<br />
- i}} int_{-infty}^{x} 
-</p>
+ i}} int_{-infty}^{x} \xp (-u^2/2) du ] </p>
+<p> <code>Precondition:</code> </p>
+<dl>
+<dd> <p> percentile must be in range (0-100%) extremes excluded </p>
+ </dd></dl>
+<h3>Real gaussianTopPercentile (Real percentile) const</h3>
+<p> <code>Precondition:</code> </p>
+<dl>
+<dd> <p> percentile must be in range (0-100%) extremes excluded </p>
+ </dd></dl>
+<h3>Real gaussianPotentialUpside (Real percentile) const</h3>
+<p> gaussian-assumption Potential-Upside at a given percentile </p>
+<p> <code>Precondition:</code> </p>
+<dl>
+<dd> <p> percentile must be in range [90-100%) </p>
+ </dd></dl>
+<h3>Real gaussianValueAtRisk (Real percentile) const</h3>
+<p> gaussian-assumption Value-At-Risk at a given percentile </p>
+<p> <code>Precondition:</code> </p>
+<dl>
+<dd> <p> percentile must be in range [90-100%) </p>
+ </dd></dl>
+<h3>Real gaussianExpectedShortfall (Real percentile) const</h3>
+<p> gaussian-assumption Expected Shortfall at a given percentile </p>
+<p> Assuming a gaussian distribution it returns the expected loss in case that the loss exceeded a VaR threshold, </p>
+<p> [ mathrm{E} </p>
+<hr />
+<p> average of observations below the given percentile $ p $. Also know as conditional value-at-risk. </p>
+<p> See Artzner, Delbaen, Eber and Heath, &#8216;Coherent measures of risk&#8217;, Mathematical Finance 9 (1999) </p>
+<p> <code>Precondition:</code> </p>
+<dl>
+<dd> <p> percentile must be in range [90-100%) </p>
+ </dd></dl>
+<h2>Author</h2>
+<p> Generated automatically by Doxygen for QuantLib from the source code. </p>
+<h2>Index</h2>

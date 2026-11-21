@@ -25,5 +25,41 @@ description: "resgen, resgen2 – Mono/CLI Resource Generator"
 </pre>
 <p> The value argument can contain special characters as long as they are escaped. The escape sequences currently supported are 
 , 
-, 	, \ (to get the escape sequence itself) and with resgen2 unicode escape sequences are supported with the 
-</p></dd></dl>
+, 	, \ (to get the escape sequence itself) and with resgen2 unicode escape sequences are supported with the \uXXXX escape sequence, where XXXX is a four digit number. </p>
+<p> Lines that start with the # or ; character are considered comments and ignored. </p>
+<dt><i>&#8216;.resources&#8217;</i></dt>
+<dd> <p> This is the binary file format implemented by the <i>System.Resources.ResourceReader</i> class, part of mscorlib.dll </p>
+ </dd>
+<dt><i>&#8216;.resx&#8217;</i></dt>
+<dd> <p> This is the binary file format implemented by the <i>System.Resources.ResXResourceReader</i> class. This class is not part of mscorlib.dll, this class is part of System.Windows.Forms. </p>
+ </dd>
+<dt><i>&#8216;.po&#8217;.</i></dt>
+<dd> <p> PO files are the source files used by the Unix gettext infrastructure that is typically used to internationalize applications. </p>
+<p> Lines starting with the &#8216;#&#8216; character are comment lines. </p>
+<p> The file contains many instance of strings like this: </p>
+<pre><code>     msgid KEY
+     msgstr VALUE
+</code></pre>
+<p> The KEY is typically the string to translate and the VALUE is the translation. On PO files instead of using codes as the KEY (as it is customary with resource files) the KEY is typically a complete english message that applications embed in their source code and will be used as a fallback if no translation resources are used. </p>
+<p> Since resources are key value pairs, the extended features in PO files are not supported (plurals and support for N-cases). </p>
+<p> To learn more about the po file format, use your info browser and point it to the &quot;(gettext)PO Files&quot; node. </p>
+ </dd></dl>
+<p> If the destination file is not specified, source.resources will be used. </p>
+<p> The /compile option takes a list of .resX or .txt files to convert to the output file name.  </p>
+<h2>OPTIONS</h2>
+<dl>
+<dt><i>-compile</i></dt>
+<dd> <p> This switch instructs <i>resgen</i> to compile multiple files. It must appear before any resources are specified on the command line. </p>
+ </dd>
+<dt><i>-usesourcepath</i></dt>
+<dd> <p> This option is only available for <i>resgen2</i>, and it instructs resgen to resolve relative paths using the directory of the resx file as current directory. </p>
+ </dd></dl>
+<h2>FILES</h2>
+<p> This program will load referenced assemblies from the Mono assembly cache.  </p>
+<h2>MAILING LISTS</h2>
+<p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-devel-list">http://lists.ximian.com/mailman/listinfo/mono-devel-list</a> for details.  </p>
+<h2>WEB SITE</h2>
+<p> Visit: <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/1-mcs/">mcs</a>(1),</code><a href="/docs/linux/man/1-mono/">mono</a>(1),<code><a href="/docs/linux/man/5-mono-config/">mono-config</a>(5).</code> </p>
+<h2>Index</h2>

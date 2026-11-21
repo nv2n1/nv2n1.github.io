@@ -45,5 +45,45 @@ c2ph[-dpnP][var = val][files...]
 require &#8216;syscall.ph&#8217;;<br />
 require &#8216;sys/time.ph&#8217;;<br />
 require &#8216;sys/resource.ph&#8217;;<br />
-$ru = &#8220;
-</p>
+$ru = &#8220;\0&quot; x &amp;rusage&#8217;sizeof(); syscall(&amp;SYS_getrusage, &amp;RUSAGE_SELF, $ru) &amp;&amp; die &quot;getrusage: $!&quot;; @ru = unpack($t = &amp;rusage&#8217;typedef(), $ru); $utime = $ru[ &amp;rusage&#8217;ru_utime + &amp;timeval&#8217;tv_sec ] + ($ru[ &amp;rusage&#8217;ru_utime + &amp;timeval&#8217;tv_usec ]) / 1e6; $stime = $ru[ &amp;rusage&#8217;ru_stime + &amp;timeval&#8217;tv_sec ] + ($ru[ &amp;rusage&#8217;ru_stime + &amp;timeval&#8217;tv_usec ]) / 1e6; printf &quot;you have used %8.3fs+%8.3fu seconds.\n&quot;, $utime, $stime; </code></pre>
+ </p>
+<p> As you see, the name of the package is the name of the structure. Regular fields are just their own names. Plus the following accessor functions are provided for your convenience: </p>
+<pre><code>    struct This takes no arguments, and is merely the number of first-level
+                elements in the structure. You would use this for indexing
+                into arrays of structures, perhaps like this
+                    $usec = $u[ &amp;user'u_utimer
+                                + (&amp;ITIMER_VIRTUAL * &amp;itimerval'struct)
+                                + &amp;itimerval'it_value
+                                + &amp;timeval'tv_usec
+                              ];
+    sizeof Returns the bytes in the structure, or the member if
+                you pass it an argument, such as
+                        &amp;rusage'sizeof(&amp;rusage'ru_utime)
+    typedef This is the perl format definition for passing to pack and
+                unpack. If you ask for the typedef of a nothing, you get
+                the whole structure, otherwise you get that of the member
+                you ask for. Padding is taken care of, as is the magic to
+                guarantee that a union is unpacked into all its aliases.
+                Bitfields are not quite yet supported however.
+    offsetof This function is the byte offset into the array of that
+                member. You may wish to use this for indexing directly
+                into the packed structure with vec() if you're too lazy
+                to unpack it.
+    typeof Not to be confused with the typedef accessor function, this
+                one returns the C type of that field. This would allow
+                you to print out a nice structured pretty print of some
+                structure without knoning anything about it beforehand.
+                No args to this one is a noop. Someday I'll post such
+                a thing to dump out your u structure for you.
+</code></pre>
+<p> The way I see this being used is like basically this: </p>
+<pre><code>        % h2ph &lt;some_include_file.h &gt; /usr/lib/perl/tmp.ph
+        % c2ph some_include_file.h &gt;&gt; /usr/lib/perl/tmp.ph
+        % install
+</code></pre>
+<p> It&#8217;s a little tricker with c2ph because you have to get the includes right. I can&#8217;t know this for your system, but it&#8217;s not usually too terribly difficult. </p>
+<p> The code isn&#8217;t pretty as I mentioned --- I never thought it would be a 1000- line program when I started, or I might not have begun. :-) But I would have been less cavalier in how the parts of the program communicated with each other, etc. It might also have helped if I didn&#8217;t have to divine the makeup of the stabs on the fly, and then account for micro differences between my compiler and gcc. </p>
+<p> Anyway, here it is. Should run on perl v4 or greater. Maybe less. </p>
+<pre><code> --tom
+</code></pre>
+<h2>Index</h2>

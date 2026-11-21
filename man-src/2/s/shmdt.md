@@ -160,5 +160,38 @@ int shmdt(const void *shmaddr);
 &quot;, argv[0]);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE);<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
-<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;len&nbsp;=&nbsp;strlen(argv[3])&nbsp;+&nbsp;1;&nbsp;<wbr>&nbsp;/*&nbsp;+1 to include trailing&nbsp;&#8216;
-</p>
+<p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;len&nbsp;=&nbsp;strlen(argv[3])&nbsp;+&nbsp;1;&nbsp;<wbr>&nbsp;/*&nbsp;+1 to include trailing&nbsp;&#8216;\0&#8217;&nbsp;*/ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(len&nbsp;&gt;&nbsp;MEM_SIZE)&nbsp;{ <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;fprintf(stderr,&nbsp;&quot;String is too big!\n&quot;); <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_FAILURE); <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;} </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Get object IDs from command-line&nbsp;*/ </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shmid&nbsp;=&nbsp;atoi(argv[1]); <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;semid&nbsp;=&nbsp;atoi(argv[2]); </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Attach shared memory into our address space and copy string <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;(including trailing null byte)&nbsp;into memory.&nbsp;*/ </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;addr&nbsp;=&nbsp;shmat(shmid, NULL, 0); <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(addr&nbsp;==&nbsp;(void&nbsp;*)&nbsp;-1) <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errExit(&quot;shmat&quot;); </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;memcpy(addr, argv[3], len); </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Decrement semaphore to 0&nbsp;*/ </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sop.sem_num&nbsp;=&nbsp;0; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sop.sem_op&nbsp;=&nbsp;-1; <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;sop.sem_flg&nbsp;=&nbsp;0; </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;if&nbsp;(semop(semid,&nbsp;&amp;sop, 1)&nbsp;==&nbsp;-1) <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;errExit(&quot;semop&quot;); </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;exit(EXIT_SUCCESS); }  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/2-brk/">brk</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-shmctl/">shmctl</a></code>(2), <code><a href="/docs/linux/man/2-shmget/">shmget</a></code>(2), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7), <code><a href="/docs/linux/man/7-shm_overview/">shm_overview</a></code>(7), <code><a href="/docs/linux/man/7-sysvipc/">sysvipc</a></code>(7)  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

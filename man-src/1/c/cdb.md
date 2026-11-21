@@ -55,5 +55,61 @@ description: "cdb – Constant DataBase manipulation tool"
 <p>&nbsp;<wbr>+<i>klen</i>,<i>vlen</i>:<i>key</i>-&gt;<i>val</i>
 <br />
  where &quot;+&quot;, &quot;,&quot;, &quot;:&quot;, &quot;-&quot;, &quot;&gt;&quot; and &quot;
-&quot; (newline) are literal characters, <i>klen</i> and <i>vlen</i> are length of key and value as decimal numbers, and <i>key</i> and <i>val</i> are key and value themselves. Series of records terminated by an empty line. This is the only format where key and value may contain any character including newline, zero (
-</p>
+&quot; (newline) are literal characters, <i>klen</i> and <i>vlen</i> are length of key and value as decimal numbers, and <i>key</i> and <i>val</i> are key and value themselves. Series of records terminated by an empty line. This is the only format where key and value may contain any character including newline, zero (\0) and so on. </p>
+<p> When <code>-l</code> option requested (list keys mode), <code>cdb</code> will produce slightly modified output in a form: <br />
+ <br />
+&nbsp;<wbr>+<i>klen</i>:<i>key</i>\n <br />
+ (note <i>vlen</i> and <i>val</i> are omitted, together with surrounding delimiters). </p>
+<p> If <code>-m</code> option is given, <code>cdb</code> will expect or produce one line for every record (newline is a record delimiter), and every line should contain optional whitespace, key, whitespace and value up to end of line. Lines started with hash character (#) and empty lines are ignored. This is the same format as <code><a href="/docs/linux/man/1-mkmap/">mkmap</a></code>(1) utility expects. </p>
+<h2>OPTIONS SUMMARY</h2>
+<p> Here is a short summary of all options accepted by <code>cdb</code> utility: </p>
+<dl>
+<dt><code>-0</code></dt>
+<dd> <p> zero-fill duplicate records in create (<code>-c</code>) mode. </p>
+ </dd>
+<dt><code>-c</code></dt>
+<dd> <p> create mode. </p>
+ </dd>
+<dt><code>-d</code></dt>
+<dd> <p> dump mode. </p>
+ </dd>
+<dt><code>-e</code></dt>
+<dd> <p> abort (error) on duplicate key in create (<code>-c</code>) mode. </p>
+ </dd>
+<dt><code>-h</code></dt>
+<dd> <p> print short help and exit. </p>
+ </dd>
+<dt><code>-l</code></dt>
+<dd> <p> list mode. </p>
+ </dd>
+<dt><code>-m</code></dt>
+<dd> <p> input or output is in &quot;map&quot; format, not in native cdb format. In query mode, add a newline after every value written. </p>
+ </dd>
+<dt><code>-n</code><i>num</i></dt>
+<dd> <p> find and print <i>num</i>th record in query (<code>-q</code>) mode. </p>
+ </dd>
+<dt><code>-q</code></dt>
+<dd> <p> query mode. </p>
+ </dd>
+<dt><code>-r</code></dt>
+<dd> <p> replace duplicate keys in create (<code>-c</code>) mode. </p>
+ </dd>
+<dt><code>-s</code></dt>
+<dd> <p> statistics mode. </p>
+ </dd>
+<dt><code>-t</code><i>tempfile</i></dt>
+<dd> <p> specify temporary file when creating (<code>-c</code>) cdb file (use single dash (-) as <i>tempfile</i> to stop using temp file). </p>
+ </dd>
+<dt><code>-u</code></dt>
+<dd> <p> do not insert duplicate keys (unique) in create (<code>-c</code>) mode. </p>
+ </dd>
+<dt><code>-w</code></dt>
+<dd> <p> warn about duplicate keys in create (<code>-c</code>) mode. </p>
+ </dd></dl>
+<h2>AUTHOR</h2>
+<p> The <code>tinycdb</code> package written by Michael Tokarev &lt;mjt [at] corpit.ru&gt;, based on ideas and shares file format with original cdb library by Dan Bernstein. </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/5-cdb/">cdb</a>(5), <a href="/docs/linux/man/3-cdb/">cdb</a>(3). </p>
+<h2>LICENCE</h2>
+<p> Public domain. </p>
+<h2>Index</h2>

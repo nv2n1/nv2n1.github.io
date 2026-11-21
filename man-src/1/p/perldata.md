@@ -192,5 +192,316 @@ print &#8220;We use ${who}speak when ${who}&#8217;s here.
 <p> Perl doesn&#8217;t understand <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt> as numeric literals, but you can have them as strings, and Perl will convert them as needed: &#8220;Inf&#8221; + 1. (You can, however, import them from the <font SIZE="-1">POSIX</font> extension; <tt>&quot;use POSIX qw(Inf NaN);&quot;</tt> and then use them as literals.) </p>
 <p> Note that on input (string to number) Perl accepts <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt> in many forms. Case is ignored, and the Win32-specific forms like <tt>&quot;1.#INF&quot;</tt> are understood, but on output the values are normalized to <tt>&quot;Inf&quot;</tt> and <tt>&quot;NaN&quot;</tt>. </p>
 <p> <i>Version Strings</i> </p>
-<p> A literal of the form <tt>&quot;v1.20.300.4000&quot;</tt> is parsed as a string composed of characters with the specified ordinals. This form, known as v-strings, provides an alternative, more readable way to construct strings, rather than use the somewhat less readable interpolation form <tt>&quot;
-</p></p>
+<p> A literal of the form <tt>&quot;v1.20.300.4000&quot;</tt> is parsed as a string composed of characters with the specified ordinals. This form, known as v-strings, provides an alternative, more readable way to construct strings, rather than use the somewhat less readable interpolation form <tt>&quot;</tt>\x{1}\x{14}\x{12c}\x{fa0}&quot;</code>. This is useful for representing Unicode strings, and for comparing version ``numbers&#8217;&#8216; using the string comparison operators, <code>&quot;cmp&quot;</code>, <code>&quot;gt&quot;</code>, <code>&quot;lt&quot;</code> etc. If there are two or more dots in the literal, the leading <code>&quot;v&quot;</code> may be omitted. </p>
+<pre><code>    print v9786; # prints SMILEY, &quot;\x{263a}&quot;
+    print v102.111.111; # prints &quot;foo&quot;
+    print 102.111.111; # same
+</code></pre>
+<p> Such literals are accepted by both <code>&quot;require&quot;</code> and <code>&quot;use&quot;</code> for doing a version check. Note that using the v-strings for IPv4 addresses is not portable unless you also use the <code>inet_aton()</code>/<code>inet_ntoa()</code> routines of the Socket package. </p>
+<p> Note that since Perl 5.8.1 the single-number v-strings (like <code>&quot;v65&quot;</code>) are not v-strings before the <code>&quot;=&gt;&quot;</code> operator (which is usually used to separate a hash key from a hash value); instead they are interpreted as literal strings (&#8216;v65&#8217;). They were v-strings from Perl 5.6.0 to Perl 5.8.0, but that caused more confusion and breakage than good. Multi-number v-strings like <code>&quot;v65.66&quot;</code> and <code>65.66.67</code> continue to be v-strings always. </p>
+<p> <i>Special Literals</i> </p>
+<p> The special literals __FILE__, __LINE__, and __PACKAGE__ represent the current filename, line number, and package name at that point in your program. __SUB__ gives a reference to the current subroutine. They may be used only as separate tokens; they will not be interpolated into strings. If there is no current package (due to an empty <code>&quot;package;&quot;</code> directive), __PACKAGE__ is the undefined value. (But the empty <code>&quot;package;&quot;</code> is no longer supported, as of version 5.10.) Outside of a subroutine, __SUB__ is the undefined value. __SUB__ is only available in 5.16 or higher, and only with a <code>&quot;use v5.16&quot;</code> or <code>&quot;use feature &quot;current_sub&quot;&quot;</code> declaration. </p>
+<p> The two control characters ^D and ^Z, and the tokens __END__ and __DATA__ may be used to indicate the logical end of the script before the actual end of file. Any following text is ignored. </p>
+<p> Text after __DATA__ may be read via the filehandle <code>&quot;PACKNAME::DATA&quot;</code>, where <code>&quot;PACKNAME&quot;</code> is the package that was current when the __DATA__ token was encountered. The filehandle is left open pointing to the line after __DATA__. The program should <code>&quot;close DATA&quot;</code> when it is done reading from it. (Leaving it open leaks filehandles if the module is reloaded for any reason, so it&#8217;s a safer practice to close it.) For compatibility with older scripts written before __DATA__ was introduced, __END__ behaves like __DATA__ in the top level script (but not in files loaded with <code>&quot;require&quot;</code> or <code>&quot;do&quot;</code>) and leaves the remaining contents of the file accessible via <code>&quot;main::DATA&quot;</code>. </p>
+<p> The <code>&quot;DATA&quot;</code> file handle by default has whatever PerlIO layers were in place when Perl read the file to parse the source. Normally that means that the file is being read bytewise, as if it were encoded in Latin-1, but there are two major ways for it to be otherwise. Firstly, if the <code>&quot;__END__&quot;</code>/<code>&quot;__DATA__&quot;</code> token is in the scope of a <code>&quot;use utf8&quot;</code> pragma then the <code>&quot;DATA&quot;</code> handle will be in <font SIZE="-1">UTF-8</font> mode. And secondly, if the source is being read from perl&#8217;s standard input then the <code>&quot;DATA&quot;</code> file handle is actually aliased to the <code>&quot;STDIN&quot;</code> file handle, and may be in <font SIZE="-1">UTF-8</font> mode because of the <code>&quot;PERL_UNICODE&quot;</code> environment variable or perl&#8217;s command-line switches. </p>
+<p> See SelfLoader for more description of __DATA__, and an example of its use. Note that you cannot read from the <font SIZE="-1">DATA</font> filehandle in a <font SIZE="-1">BEGIN</font> block: the <font SIZE="-1">BEGIN</font> block is executed as soon as it is seen (during compilation), at which point the corresponding __DATA__ (or __END__) token has not yet been seen. </p>
+<p> <i>Barewords</i> </p>
+<p> A word that has no other interpretation in the grammar will be treated as if it were a quoted string. These are known as ``barewords&#8217;&#8216;. As with filehandles and labels, a bareword that consists entirely of lowercase letters risks conflict with future reserved words, and if you use the <code>&quot;use warnings&quot;</code> pragma or the <code>-w</code> switch, Perl will warn you about any such words. Perl limits barewords (like identifiers) to about 250 characters. Future versions of Perl are likely to eliminate these arbitrary limitations. </p>
+<p> Some people may wish to outlaw barewords entirely. If you say </p>
+<pre><code>    use strict 'subs';
+</code></pre>
+<p> then any bareword that would <font SIZE="-1">NOT</font> be interpreted as a subroutine call produces a compile-time error instead. The restriction lasts to the end of the enclosing block. An inner block may countermand this by saying <code>&quot;no strict &#8216;subs&#8217;&quot;</code>. </p>
+<p> <i>Array Interpolation</i> </p>
+<p> Arrays and slices are interpolated into double-quoted strings by joining the elements with the delimiter specified in the <code>$&quot;</code> variable (<code>$LIST_SEPARATOR</code> if ``use English;&#8216;&#8216; is specified), space by default. The following are equivalent: </p>
+<pre><code>    $temp = join($&quot;, @ARGV);
+    system &quot;echo $temp&quot;;
+    system &quot;echo @ARGV&quot;;
+</code></pre>
+<p> Within search patterns (which also undergo double-quotish substitution) there is an unfortunate ambiguity: Is <code>&quot;/$foo[bar]/&quot;</code> to be interpreted as <code>&quot;/${foo}[bar]/&quot;</code> (where <code>&quot;[bar]&quot;</code> is a character class for the regular expression) or as <code>&quot;/${foo[bar]}/&quot;</code> (where <code>&quot;[bar]&quot;</code> is the subscript to array <code>@foo</code>)? If <code>@foo</code> doesn&#8217;t otherwise exist, then it&#8217;s obviously a character class. If <code>@foo</code> exists, Perl takes a good guess about <code>&quot;[bar]&quot;</code>, and is almost always right. If it does guess wrong, or if you&#8217;re just plain paranoid, you can force the correct interpretation with curly braces as above. </p>
+<p> If you&#8217;re looking for the information on how to use here-documents, which used to be here, that&#8217;s been moved to ``Quote and Quote-like Operators&#8217;&#8216; in perlop.  </p>
+<h3>List value constructors</h3>
+<p> List values are denoted by separating individual values by commas (and enclosing the list in parentheses where precedence requires it): </p>
+<pre><code>    (LIST)
+</code></pre>
+<p> In a context not requiring a list value, the value of what appears to be a list literal is simply the value of the final element, as with the C comma operator. For example, </p>
+<pre><code>    @foo = ('cc', '-E', $bar);
+</code></pre>
+<p> assigns the entire list value to array <code>@foo</code>, but </p>
+<pre><code>    $foo = ('cc', '-E', $bar);
+</code></pre>
+<p> assigns the value of variable <code>$bar</code> to the scalar variable <code>$foo</code>. Note that the value of an actual array in scalar context is the length of the array; the following assigns the value 3 to <code>$foo:</code> </p>
+<pre><code>    @foo = ('cc', '-E', $bar);
+    $foo = @foo; # $foo gets 3
+</code></pre>
+<p> You may have an optional comma before the closing parenthesis of a list literal, so that you can say: </p>
+<pre><code>    @foo = (
+        1,
+        2,
+        3,
+    );
+</code></pre>
+<p> To use a here-document to assign an array, one line per element, you might use an approach like this: </p>
+<pre><code>    @sauces = &lt;&lt;End_Lines =~ m/(\S.*\S)/g;
+        normal tomato
+        spicy tomato
+        green chile
+        pesto
+        white wine
+    End_Lines
+</code></pre>
+<p> LISTs do automatic interpolation of sublists. That is, when a <font SIZE="-1">LIST</font> is evaluated, each element of the list is evaluated in list context, and the resulting list value is interpolated into <font SIZE="-1">LIST</font> just as if each individual element were a member of <font SIZE="-1">LIST.</font> Thus arrays and hashes lose their identity in a LIST---the list </p>
+<pre><code>    (@foo,@bar,&amp;SomeSub,%glarch)
+</code></pre>
+<p> contains all the elements of <code>@foo</code> followed by all the elements of <code>@bar</code>, followed by all the elements returned by the subroutine named SomeSub called in list context, followed by the key/value pairs of <code>%glarch</code>. To make a list reference that does <i></i><font SIZE="-1"><i>NOT</i></font><i></i> interpolate, see perlref. </p>
+<p> The null list is represented by (). Interpolating it in a list has no effect. Thus ((),(),()) is equivalent to (). Similarly, interpolating an array with no elements is the same as if no array had been interpolated at that point. </p>
+<p> This interpolation combines with the facts that the opening and closing parentheses are optional (except when necessary for precedence) and lists may end with an optional comma to mean that multiple commas within lists are legal syntax. The list <code>&quot;1,,3&quot;</code> is a concatenation of two lists, <code>&quot;1,&quot;</code> and <code>3</code>, the first of which ends with that optional comma. <code>&quot;1,,3&quot;</code> is <code>&quot;(1,),(3)&quot;</code> is <code>&quot;1,3&quot;</code> (And similarly for <code>&quot;1,,,3&quot;</code> is <code>&quot;(1,),(,),3&quot;</code> is <code>&quot;1,3&quot;</code> and so on.) Not that we&#8217;d advise you to use this obfuscation. </p>
+<p> A list value may also be subscripted like a normal array. You must put the list in parentheses to avoid ambiguity. For example: </p>
+<pre><code>    # Stat returns list value.
+    $time = (stat($file))[8];
+    # SYNTAX ERROR HERE.
+    $time = stat($file)[8]; # OOPS, FORGOT PARENTHESES
+    # Find a hex digit.
+    $hexdigit = ('a','b','c','d','e','f')[$digit-10];
+    # A &quot;reverse comma operator&quot;.
+    return (pop(@foo),pop(@foo))[0];
+</code></pre>
+<p> Lists may be assigned to only when each element of the list is itself legal to assign to: </p>
+<pre><code>    ($x, $y, $z) = (1, 2, 3);
+    ($map{'red'}, $map{'blue'}, $map{'green'}) = (0x00f, 0x0f0, 0xf00);
+</code></pre>
+<p> An exception to this is that you may assign to <code>&quot;undef&quot;</code> in a list. This is useful for throwing away some of the return values of a function: </p>
+<pre><code>    ($dev, $ino, undef, undef, $uid, $gid) = stat($file);
+</code></pre>
+<p> As of Perl 5.22, you can also use <code>&quot;(undef)x2&quot;</code> instead of <code>&quot;undef, undef&quot;</code>. (You can also do <code>&quot;($x) x 2&quot;</code>, which is less useful, because it assigns to the same variable twice, clobbering the first value assigned.) </p>
+<p> When you assign a list of scalars to an array, all previous values in that array are wiped out and the number of elements in the array will now be equal to the number of elements in the right-hand list --- the list from which assignment was made. The array will automatically resize itself to precisely accommodate each element in the right-hand list. </p>
+<pre><code>    use warnings;
+    my (@xyz, $x, $y, $z);
+    @xyz = (1, 2, 3);
+    print &quot;@xyz\n&quot;; # 1 2 3
+    @xyz = ('al', 'be', 'ga', 'de');
+    print &quot;@xyz\n&quot;; # al be ga de
+    @xyz = (101, 102);
+    print &quot;@xyz\n&quot;; # 101 102
+</code></pre>
+<p> When, however, you assign a list of scalars to another list of scalars, the results differ according to whether the left-hand list --- the list being assigned to --- has the same, more or fewer elements than the right-hand list. </p>
+<pre><code>    ($x, $y, $z) = (1, 2, 3);
+    print &quot;$x $y $z\n&quot;; # 1 2 3
+    ($x, $y, $z) = ('al', 'be', 'ga', 'de');
+    print &quot;$x $y $z\n&quot;; # al be ga
+    ($x, $y, $z) = (101, 102);
+    print &quot;$x $y $z\n&quot;; # 101 102
+    # Use of uninitialized value $z in concatenation (.)
+    # or string at [program] line [line number].
+</code></pre>
+<p> If the number of scalars in the left-hand list is less than that in the right-hand list, the ``extra&#8217;&#8216; scalars in the right-hand list will simply not be assigned. </p>
+<p> If the number of scalars in the left-hand list is greater than that in the left-hand list, the ``missing&#8217;&#8216; scalars will become undefined. </p>
+<pre><code>    ($x, $y, $z) = (101, 102);
+    for my $el ($x, $y, $z) {
+        (defined $el) ? print &quot;$el &quot; : print &quot;&lt;undef&gt;&quot;;
+    }
+    print &quot;\n&quot;;
+                                                # 101 102 &lt;undef&gt;
+</code></pre>
+<p> List assignment in scalar context returns the number of elements produced by the expression on the right side of the assignment: </p>
+<pre><code>    $x = (($foo,$bar) = (3,2,1)); # set $x to 3, not 2
+    $x = (($foo,$bar) = f()); # set $x to f()'s return count
+</code></pre>
+<p> This is handy when you want to do a list assignment in a Boolean context, because most list functions return a null list when finished, which when assigned produces a 0, which is interpreted as <font SIZE="-1">FALSE.</font> </p>
+<p> It&#8217;s also the source of a useful idiom for executing a function or performing an operation in list context and then counting the number of return values, by assigning to an empty list and then using that assignment in scalar context. For example, this code: </p>
+<pre><code>    $count = () = $string =~ /\d+/g;
+</code></pre>
+<p> will place into <code>$count</code> the number of digit groups found in <code>$string</code>. This happens because the pattern match is in list context (since it is being assigned to the empty list), and will therefore return a list of all matching parts of the string. The list assignment in scalar context will translate that into the number of elements (here, the number of times the pattern matched) and assign that to <code>$count</code>. Note that simply using </p>
+<pre><code>    $count = $string =~ /\d+/g;
+</code></pre>
+<p> would not have worked, since a pattern match in scalar context will only return true or false, rather than a count of matches. </p>
+<p> The final element of a list assignment may be an array or a hash: </p>
+<pre><code>    ($x, $y, @rest) = split;
+    my($x, $y, %rest) = @_;
+</code></pre>
+<p> You can actually put an array or hash anywhere in the list, but the first one in the list will soak up all the values, and anything after it will become undefined. This may be useful in a <code>my()</code> or <code>local()</code>. </p>
+<p> A hash can be initialized using a literal list holding pairs of items to be interpreted as a key and a value: </p>
+<pre><code>    # same as map assignment above
+    %map = ('red',0x00f,'blue',0x0f0,'green',0xf00);
+</code></pre>
+<p> While literal lists and named arrays are often interchangeable, that&#8217;s not the case for hashes. Just because you can subscript a list value like a normal array does not mean that you can subscript a list value as a hash. Likewise, hashes included as parts of other lists (including parameters lists and return lists from functions) always flatten out into key/value pairs. That&#8217;s why it&#8217;s good to use references sometimes. </p>
+<p> It is often more readable to use the <code>&quot;=&gt;&quot;</code> operator between key/value pairs. The <code>&quot;=&gt;&quot;</code> operator is mostly just a more visually distinctive synonym for a comma, but it also arranges for its left-hand operand to be interpreted as a string if it&#8217;s a bareword that would be a legal simple identifier. <code>&quot;=&gt;&quot;</code> doesn&#8217;t quote compound identifiers, that contain double colons. This makes it nice for initializing hashes: </p>
+<pre><code>    %map = (
+                 red =&gt; 0x00f,
+                 blue =&gt; 0x0f0,
+                 green =&gt; 0xf00,
+   );
+</code></pre>
+<p> or for initializing hash references to be used as records: </p>
+<pre><code>    $rec = {
+                witch =&gt; 'Mable the Merciless',
+                cat =&gt; 'Fluffy the Ferocious',
+                date =&gt; '10/31/1776',
+    };
+</code></pre>
+<p> or for using call-by-named-parameter to complicated functions: </p>
+<pre><code>   $field = $query-&gt;radio_group(
+               name =&gt; 'group_name',
+               values =&gt; ['eenie','meenie','minie'],
+               default =&gt; 'meenie',
+               linebreak =&gt; 'true',
+               labels =&gt; \%labels
+   );
+</code></pre>
+<p> Note that just because a hash is initialized in that order doesn&#8217;t mean that it comes out in that order. See ``sort&#8217;&#8216; in perlfunc for examples of how to arrange for an output ordering. </p>
+<p> If a key appears more than once in the initializer list of a hash, the last occurrence wins: </p>
+<pre><code>    %circle = (
+                  center =&gt; [5, 10],
+                  center =&gt; [27, 9],
+                  radius =&gt; 100,
+                  color =&gt; [0xDF, 0xFF, 0x00],
+                  radius =&gt; 54,
+    );
+    # same as
+    %circle = (
+                  center =&gt; [27, 9],
+                  color =&gt; [0xDF, 0xFF, 0x00],
+                  radius =&gt; 54,
+    );
+</code></pre>
+<p> This can be used to provide overridable configuration defaults: </p>
+<pre><code>    # values in %args take priority over %config_defaults
+    %config = (%config_defaults, %args);
+</code></pre>
+<h3>Subscripts</h3>
+<p> An array can be accessed one scalar at a time by specifying a dollar sign (<code>&quot;$&quot;</code>), then the name of the array (without the leading <code>&quot;@&quot;</code>), then the subscript inside square brackets. For example: </p>
+<pre><code>    @myarray = (5, 50, 500, 5000);
+    print &quot;The Third Element is&quot;, $myarray[2], &quot;\n&quot;;
+</code></pre>
+<p> The array indices start with 0. A negative subscript retrieves its value from the end. In our example, <code>$myarray[-1]</code> would have been 5000, and <code>$myarray[-2]</code> would have been 500. </p>
+<p> Hash subscripts are similar, only instead of square brackets curly brackets are used. For example: </p>
+<pre><code>    %scientists =
+    (
+        &quot;Newton&quot; =&gt; &quot;Isaac&quot;,
+        &quot;Einstein&quot; =&gt; &quot;Albert&quot;,
+        &quot;Darwin&quot; =&gt; &quot;Charles&quot;,
+        &quot;Feynman&quot; =&gt; &quot;Richard&quot;,
+    );
+    print &quot;Darwin's First Name is &quot;, $scientists{&quot;Darwin&quot;}, &quot;\n&quot;;
+</code></pre>
+<p> You can also subscript a list to get a single element from it: </p>
+<pre><code>    $dir = (getpwnam(&quot;daemon&quot;))[7];
+</code></pre>
+<h3>Multi-dimensional array emulation</h3>
+<p> Multidimensional arrays may be emulated by subscripting a hash with a list. The elements of the list are joined with the subscript separator (see ``$;&#8216;&#8216; in perlvar). </p>
+<pre><code>    $foo{$x,$y,$z}
+</code></pre>
+<p> is equivalent to </p>
+<pre><code>    $foo{join($;, $x, $y, $z)}
+</code></pre>
+<p> The default subscript separator is ``\034&#8217;&#8216;, the same as <font SIZE="-1">SUBSEP</font> in <code>awk</code>.  </p>
+<h3>Slices</h3>
+<p> A slice accesses several elements of a list, an array, or a hash simultaneously using a list of subscripts. It&#8217;s more convenient than writing out the individual elements as a list of separate scalar values. </p>
+<pre><code>    ($him, $her) = @folks[0,-1]; # array slice
+    @them = @folks[0 .. 3]; # array slice
+    ($who, $home) = @ENV{&quot;USER&quot;, &quot;HOME&quot;}; # hash slice
+    ($uid, $dir) = (getpwnam(&quot;daemon&quot;))[2,7]; # list slice
+</code></pre>
+<p> Since you can assign to a list of variables, you can also assign to an array or hash slice. </p>
+<pre><code>    @days[3..5] = qw/Wed Thu Fri/;
+    @colors{'red','blue','green'}
+                   = (0xff0000, 0x0000ff, 0x00ff00);
+    @folks[0, -1] = @folks[-1, 0];
+</code></pre>
+<p> The previous assignments are exactly equivalent to </p>
+<pre><code>    ($days[3], $days[4], $days[5]) = qw/Wed Thu Fri/;
+    ($colors{'red'}, $colors{'blue'}, $colors{'green'})
+                   = (0xff0000, 0x0000ff, 0x00ff00);
+    ($folks[0], $folks[-1]) = ($folks[-1], $folks[0]);
+</code></pre>
+<p> Since changing a slice changes the original array or hash that it&#8217;s slicing, a <code>&quot;foreach&quot;</code> construct will alter some---or even all---of the values of the array or hash. </p>
+<pre><code>    foreach (@array[ 4 .. 10 ]) { s/peter/paul/ }
+    foreach (@hash{qw[key1 key2]}) {
+        s/^\s+//; # trim leading whitespace
+        s/\s+$//; # trim trailing whitespace
+        s/(\w+)/\u\L$1/g; # &quot;titlecase&quot; words
+    }
+</code></pre>
+<p> As a special exception, when you slice a list (but not an array or a hash), if the list evaluates to empty, then taking a slice of that empty list will always yield the empty list in turn. Thus: </p>
+<pre><code>    @a = ()[0,1]; # @a has no elements
+    @b = (@a)[0,1]; # @b has no elements
+    @c = (sub{}-&gt;())[0,1]; # @c has no elements
+    @d = ('a','b')[0,1]; # @d has two elements
+    @e = (@d)[0,1,8,9]; # @e has four elements
+    @f = (@d)[8,9]; # @f has two elements
+</code></pre>
+<p> This makes it easy to write loops that terminate when a null list is returned: </p>
+<pre><code>    while ( ($home, $user) = (getpwent)[7,0] ) {
+        printf &quot;%-8s %s\n&quot;, $user, $home;
+    }
+</code></pre>
+<p> As noted earlier in this document, the scalar sense of list assignment is the number of elements on the right-hand side of the assignment. The null list contains no elements, so when the password file is exhausted, the result is 0, not 2. </p>
+<p> Slices in scalar context return the last item of the slice. </p>
+<pre><code>    @a = qw/first second third/;
+    %h = (first =&gt; 'A', second =&gt; 'B');
+    $t = @a[0, 1]; # $t is now 'second'
+    $u = @h{'first', 'second'}; # $u is now 'B'
+</code></pre>
+<p> If you&#8217;re confused about why you use an &#8216;@&#8216; there on a hash slice instead of a &#8216;%&#8216;, think of it like this. The type of bracket (square or curly) governs whether it&#8217;s an array or a hash being looked at. On the other hand, the leading symbol (&#8216;$&#8216; or &#8216;@&#8216;) on the array or hash indicates whether you are getting back a singular value (a scalar) or a plural one (a list). </p>
+<p> <i>Key/Value Hash Slices</i> </p>
+<p> Starting in Perl 5.20, a hash slice operation with the % symbol is a variant of slice operation returning a list of key/value pairs rather than just values: </p>
+<pre><code>    %h = (blonk =&gt; 2, foo =&gt; 3, squink =&gt; 5, bar =&gt; 8);
+    %subset = %h{'foo', 'bar'}; # key/value hash slice
+    # %subset is now (foo =&gt; 3, bar =&gt; 8)
+    %removed = delete %h{'foo', 'bar'};
+    # %removed is now (foo =&gt; 3, bar =&gt; 8)
+    # %h is now (blonk =&gt; 2, squink =&gt; 5)
+</code></pre>
+<p> However, the result of such a slice cannot be localized or used in assignment. These are otherwise very much consistent with hash slices using the @ symbol. </p>
+<p> <i>Index/Value Array Slices</i> </p>
+<p> Similar to key/value hash slices (and also introduced in Perl 5.20), the % array slice syntax returns a list of index/value pairs: </p>
+<pre><code>    @a = &quot;a&quot;..&quot;z&quot;;
+    @list = %a[3,4,6];
+    # @list is now (3, &quot;d&quot;, 4, &quot;e&quot;, 6, &quot;g&quot;)
+    @removed = delete %a[3,4,6]
+    # @removed is now (3, &quot;d&quot;, 4, &quot;e&quot;, 6, &quot;g&quot;)
+    # @list[3,4,6] are now undef
+</code></pre>
+<p> Note that calling <code>&quot;delete&quot;</code> on array values is strongly discouraged.  </p>
+<h3>Typeglobs and Filehandles</h3>
+<p> Perl uses an internal type called a <i>typeglob</i> to hold an entire symbol table entry. The type prefix of a typeglob is a <code>&quot;*&quot;</code>, because it represents all types. This used to be the preferred way to pass arrays and hashes by reference into a function, but now that we have real references, this is seldom needed. </p>
+<p> The main use of typeglobs in modern Perl is create symbol table aliases. This assignment: </p>
+<pre><code>    *this = *that;
+</code></pre>
+<p> makes <code>$this</code> an alias for <code>$that</code>, <code>@this</code> an alias for <code>@that</code>, <code>%this</code> an alias for <code>%that</code>, &amp;this an alias for &amp;that, etc. Much safer is to use a reference. This: </p>
+<pre><code>    local *Here::blue = \$There::green;
+</code></pre>
+<p> temporarily makes <code>$Here::blue</code> an alias for <code>$There::green</code>, but doesn&#8217;t make <code>@Here::blue</code> an alias for <code>@There::green</code>, or <code>%Here::blue</code> an alias for <code>%There::green</code>, etc. See ``Symbol Tables&#8217;&#8216; in perlmod for more examples of this. Strange though this may seem, this is the basis for the whole module import/export system. </p>
+<p> Another use for typeglobs is to pass filehandles into a function or to create new filehandles. If you need to use a typeglob to save away a filehandle, do it this way: </p>
+<pre><code>    $fh = *STDOUT;
+</code></pre>
+<p> or perhaps as a real reference, like this: </p>
+<pre><code>    $fh = \*STDOUT;
+</code></pre>
+<p> See perlsub for examples of using these as indirect filehandles in functions. </p>
+<p> Typeglobs are also a way to create a local filehandle using the <code>local()</code> operator. These last until their block is exited, but may be passed back. For example: </p>
+<pre><code>    sub newopen {
+        my $path = shift;
+        local *FH; # not my!
+        open (FH, $path) or return undef;
+        return *FH;
+    }
+    $fh = newopen('/etc/passwd');
+</code></pre>
+<p> Now that we have the <code>*foo{THING}</code> notation, typeglobs aren&#8217;t used as much for filehandle manipulations, although they&#8217;re still needed to pass brand new file and directory handles into or out of functions. That&#8217;s because <code>*HANDLE{IO}</code> only works if <font SIZE="-1">HANDLE</font> has already been used as a handle. In other words, <code>*FH</code> must be used to create new symbol table entries; <code>*foo{THING}</code> cannot. When in doubt, use <code>*FH</code>. </p>
+<p> All functions that are capable of creating filehandles (<code>open()</code>, <code>opendir()</code>, <code>pipe()</code>, <code>socketpair()</code>, <code>sysopen()</code>, <code>socket()</code>, and <code>accept()</code>) automatically create an anonymous filehandle if the handle passed to them is an uninitialized scalar variable. This allows the constructs such as <code>&quot;open(my $fh, ...)&quot;</code> and <code>&quot;open(local $fh,...)&quot;</code> to be used to create filehandles that will conveniently be closed automatically when the scope ends, provided there are no other references to them. This largely eliminates the need for typeglobs when opening filehandles that must be passed around, as in the following example: </p>
+<pre><code>    sub myopen {
+        open my $fh, &quot;@_&quot;
+             or die &quot;Can't open '@_': $!&quot;;
+        return $fh;
+    }
+    {
+        my $f = myopen(&quot;&lt;/etc/motd&quot;);
+        print &lt;$f&gt;;
+        # $f implicitly closed here
+    }
+</code></pre>
+<p> Note that if an initialized scalar variable is used instead the result is different: <code>&quot;my $fh=&#8216;zzz&#8217;; open($fh, ...)&quot;</code> is equivalent to <code>&quot;open( *{&#8216;zzz&#8217;}, ...)&quot;</code>. <code>&quot;use strict &#8216;refs&#8217;&quot;</code> forbids such practice. </p>
+<p> Another way to create anonymous filehandles is with the Symbol module or with the IO::Handle module and its ilk. These modules have the advantage of not hiding different types of the same name during the <code>local()</code>. See the bottom of ``open&#8217;&#8216; in perlfunc for an example.  </p>
+<h2>SEE ALSO</h2>
+<p> See perlvar for a description of Perl&#8217;s built-in variables and a discussion of legal variable names. See perlref, perlsub, and ``Symbol Tables&#8217;&#8216; in perlmod for more discussion on typeglobs and the <code>*foo{THING}</code> syntax. </p>
+<h2>Index</h2>

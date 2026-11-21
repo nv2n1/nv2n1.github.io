@@ -294,5 +294,82 @@ vi      Cursor invisible
 vs      Standout cursor
 wi      Set window from line %1 to %2 and column %3 to %4
 XF      XOFF character if not haS</code></pre>
-<p> There are several ways of defining the control codes for string capabilities: Every normal character represents itself, except &#8216;ha&#8217;, &#8216;\&#8217;, and &#8216;%&#8217;. A <code>hax</code> means Control-x. Control-A equals 1 decimal. 
-</p>
+<p> There are several ways of defining the control codes for string capabilities: Every normal character represents itself, except &#8216;ha&#8217;, &#8216;\&#8217;, and &#8216;%&#8217;. A <code>hax</code> means Control-x. Control-A equals 1 decimal. </p>
+<p> \x means a special code. x can be one of the following characters: </p>
+<dl>
+<dd> <p> E Escape (27) <br />
+ n Linefeed (10) <br />
+ r Carriage return (13) <br />
+ t Tabulation (9) <br />
+ b Backspace (8) <br />
+ f Form feed (12) <br />
+ 0 Null character. A \xxx specifies the octal character xxx. </p>
+ </dd></dl>
+<dl>
+<dt>i</dt>
+<dd> <p> Increments parameters by one. </p>
+ </dd>
+<dt>r</dt>
+<dd> <p> Single parameter capability </p>
+ </dd>
+<dt>+</dt>
+<dd> <p> Add value of next character to this parameter and do binary output </p>
+ </dd>
+<dt>2</dt>
+<dd> <p> Do ASCII output of this parameter with a field with of 2 </p>
+ </dd>
+<dt>d</dt>
+<dd> <p> Do ASCII output of this parameter with a field with of 3 </p>
+ </dd>
+<dt>%</dt>
+<dd> <p> Print a &#8216;%&#8216; </p>
+ </dd></dl>
+<p> If you use binary output, then you should avoid the null character (&#8216;\0&#8217;) because it terminates the string. You should reset tabulator expansion if a tabulator can be the binary output of a parameter. </p>
+<dl>
+<dt>Warning:</dt>
+<dd> <p> The above metacharacters for parameters may be wrong: they document Minix termcap which may not be compatible with Linux termcap. </p>
+ </dd></dl>
+<p> The block graphic characters can be specified by three string capabilities: </p>
+<dl>
+<dt>as</dt>
+<dd> <p> start the alternative charset </p>
+ </dd>
+<dt>ae</dt>
+<dd> <p> end the alternative charset </p>
+ </dd>
+<dt>ac</dt>
+<dd> <p> pairs of characters. The first character is the name of the block graphic symbol and the second characters is its definition. </p>
+ </dd></dl>
+<p> The following names are available: </p>
+<pre><code>+ right arrow (&gt;)
+, left arrow (&lt;)
+. down arrow (v)
+0 full square (#)
+I lantern (#)
+- upper arrow (ha)
+' rhombus (+)
+a chess board (:)
+f degree (')
+g plus-minus (#)
+h square (#)
+j right bottom corner (+)
+k right upper corner (+)
+l left upper corner (+)
+m left bottom corner (+)
+n cross (+)
+o upper horizontal line (-)
+q middle horizontal line (-)
+s bottom horizontal line (_)
+t left tee (+)
+u right tee (+)
+v bottom tee (+)
+w normal tee (+)
+x vertical line (|)
+~ paragraph (???)
+</code></pre>
+<p> The values in parentheses are suggested defaults which are used by the <i>curses</i> library, if the capabilities are missing.  </p>
+<h2>SEE ALSO</h2>
+<p> <code><a href="/docs/linux/man/3-ncurses/">ncurses</a></code>(3), <code><a href="/docs/linux/man/3-termcap/">termcap</a></code>(3), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5)  </p>
+<h2>COLOPHON</h2>
+<p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
+<h2>Index</h2>

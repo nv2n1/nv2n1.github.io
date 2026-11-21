@@ -812,5 +812,674 @@ L       List the contents of a compressed tar-archive
 <p> <code>Preserve attributes</code> </p>
 <p> determines whether to preserve the permissions, timestamps and (if you are root) the ownership of the original files. If this option is not set, the current value of the umask will be respected. </p>
 <p> <code>Use shell patterns</code> </p>
-<p> When this option is on you can use the &#8216;*&#8217; and &#8216;?&#8217; wildcards in the source mask. They work like they do in the shell. In the target mask only the &#8216;*&#8217; and &#8216;\&lt;digit&gt;&#8217; wildcards are allowed. The first &#8216;*&#8217; wildcard in the target mask corresponds to the first wildcard group in the source mask, the second &#8216;*&#8217; corresponds to the second group and so on. The &#8216;\1&#8217; wildcard corresponds to the first wildcard group in the source mask, the &#8216;\2&#8217; wildcard corresponds to the second group and so on all the way up to &#8216;\9&#8217;. The &#8216;
-</p>
+<p> When this option is on you can use the &#8216;*&#8217; and &#8216;?&#8217; wildcards in the source mask. They work like they do in the shell. In the target mask only the &#8216;*&#8217; and &#8216;\&lt;digit&gt;&#8217; wildcards are allowed. The first &#8216;*&#8217; wildcard in the target mask corresponds to the first wildcard group in the source mask, the second &#8216;*&#8217; corresponds to the second group and so on. The &#8216;\1&#8217; wildcard corresponds to the first wildcard group in the source mask, the &#8216;\2&#8217; wildcard corresponds to the second group and so on all the way up to &#8216;\9&#8217;. The &#8216;\0&#8217; wildcard is the whole filename of the source file. </p>
+<p> Two examples: </p>
+<p> If the source mask is &quot;*.tar.gz&quot;, the destination is &quot;/bla/*.tgz&quot; and the file to be copied is &quot;foo.tar.gz&quot;, the copy will be &quot;foo.tgz&quot; in &quot;/bla&quot;. </p>
+<p> Suppose you want to swap basename and extension so that &quot;file.c&quot; would become &quot;c.file&quot; and so on. The source mask for this is &quot;*.*&quot; and the destination is &quot;\2.\1&quot;. </p>
+<p> <code>Use shell patterns off</code> </p>
+<p> When the shell patterns option is off the MC doesn&#8217;t do automatic grouping anymore. You must use &#8216;\(...\)&#8216; expressions in the source mask to specify meaning for the wildcards in the target mask. This is more flexible but also requires more typing. Otherwise target masks are similar to the situation when the shell patterns option is on. </p>
+<p> Two examples: </p>
+<p> If the source mask is &quot;^\(.*\)\.tar\.gz$&quot;, the destination is &quot;/bla/*.tgz&quot; and the file to be copied is &quot;foo.tar.gz&quot;, the copy will be &quot;/bla/foo.tgz&quot;. </p>
+<p> Let&#8217;s suppose you want to swap basename and extension so that &quot;file.c&quot; will become &quot;c.file&quot; and so on. The source mask for this is &quot;^\(.*\)\.\(.*\)$&quot; and the destination is &quot;\2.\1&quot;. </p>
+<p> <code>Case Conversions</code> </p>
+<p> You can also change the case of the filenames. If you use &#8216;\u&#8217; or &#8216;\l&#8217; in the target mask, the next character will be converted to uppercase or lowercase correspondingly. </p>
+<p> If you use &#8216;\U&#8217; or &#8216;\L&#8217; in the target mask, the next characters will be converted to uppercase or lowercase correspondingly up to the next &#8216;\E&#8217; or next &#8216;\U&#8217;, &#8216;\L&#8217; or the end of the file name. </p>
+<p> The &#8216;\u&#8217; and &#8216;\l&#8217; are stronger than &#8216;\U&#8217; and &#8216;\L&#8217;. </p>
+<p> For example, if the source mask is &#8216;*&#8216; ( <i>Use shell patterns</i> on) or &#8216;^\(.*\)$&#8216; ( <i>Use shell patterns</i> off) and the target mask is &#8216;\L\u*&#8216; the file names will be converted to have initial upper case and otherwise lower case. </p>
+<p> You can also use &#8216;\&#8216; as a quote character. For example, &#8216;\\&#8216; is a backslash and &#8216;\*&#8216; is an asterisk. </p>
+<p> <code>Stable symlinks</code> </p>
+<p> commands Midnight Commander, that it should change symlinks in the target, so that they&#8217;ll point to the same location as it did before. With absolute symbolic links this does nothing, but if you have a relative one, it will recompute its value, adding necessary ../ and other directory parts and making the value as short as possible (most modern filesystems keep short symlinks inside inodes and thus don&#8217;t waste much disk space). </p>
+<h2>Select/Unselect Files</h2>
+<p> The dialog of group of files and directories selection or uselection. The input line allow enter the regular expression of filenames that will be selected/unselected. </p>
+<p> When <i>Files only</i> checkbox is on, only files will be selected. If <i>Files only</i> is off, as files as directories will be selected. When <i>Shell Patterns</i> checkbox is on, the regular expression is much like the filename globbing in the shell (* standing for zero or more characters and ? standing for one character). If <i>Shell Patterns</i> is off, then the tagging of files is done with normal regular expressions (see ed (1)). When <i>Case sensitive</i> checkbox is on, the selection will be case sensitive characters. If <i>Case sensitive</i> is off, the case will be ignored.  </p>
+<h2>Internal Diff Viewer</h2>
+<p> The mcdiff is a visual diff tool. You can compare two files and edit them in-place (diffs are updated dynamically). You can browse and view a working copy from popular version control systems (GIT, Subversion, etc). </p>
+<p> Following shortcuts are available in internal diff viewer of Midnight Commander. </p>
+<p> <code>F1</code> Invoke the built-in hypertext help viewer. </p>
+<p> <code>F2</code> Save modified files. </p>
+<p> <code>F4</code> Edit file of the left panel in the internal editor. </p>
+<p> <code>F14</code> Edit file of the right panel in the internal editor. </p>
+<p> <code>F5</code> Merge the current hunk. Only the current hunk will be merged. </p>
+<p> <code>F7</code> Start search. </p>
+<p> <code>F17</code> Continue search. </p>
+<p> <code>F10, Esc, q</code> Exit from diff viewer. </p>
+<p> <code>Alt-s, s</code> Toggle show of hunk status. </p>
+<p> <code>Alt-n, l</code> Toggle show of line numbers. </p>
+<p> <code>f</code> Maximize left panel. </p>
+<p> <code>=</code> Make panels equal in width. </p>
+<p> <code>&gt;</code> Reduce the size of the right panel. </p>
+<p> <code>&lt;</code> Reduce the size of the left panel. </p>
+<p> <code>c</code> Toggle show of trailing carriage return (CR) symbol as ^M. </p>
+<p> <code>2, 3, 4, 8</code> Set tabulation size </p>
+<p> <code>C-u</code> Swap contents of diff panels. </p>
+<p> <code>C-r</code> Refresh the screen. </p>
+<p> <code>C-o</code> Switch to the subshell and show the command screen. </p>
+<p> <code>Enter, Space, n</code> Find next diff hunk. </p>
+<p> <code>Backspace, p</code> Find previous diff hunk. </p>
+<p> <code>g</code> Go to line. </p>
+<p> <code>Down</code> Scroll one line forward. </p>
+<p> <code>Up</code> Scroll one line backward. </p>
+<p> <code>PageUp</code> Move one page up. </p>
+<p> <code>PageDown</code> Mves one page down. </p>
+<p> <code>Home, A1</code> Moves to the line beginning. </p>
+<p> <code>End</code> Moves to the line end. </p>
+<p> <code>C-Home</code> Move to the file beginning. </p>
+<p> <code>C-End, C1</code> Move to the file end.  </p>
+<h2>Internal File Viewer</h2>
+<p> The internal file viewer provides two display modes: ASCII and hex. To toggle between modes, use the F4 key. </p>
+<p> The viewer will try to use the best method provided by your system or the file type to display the information. Some character sequences, which appear most often in preformatted manual pages, are displayed bold and underlined, thus making a pretty display of your files. </p>
+<p> When in hex mode, the search function accepts text in quotes and constant numbers. Text in quotes is matched exactly after removing the quotes. Each number matches one byte. You can mix quoted text with constants like this: </p>
+<pre><code>&quot;String&quot; -1 0xBB 012 &quot;more text&quot;
+</code></pre>
+<p> Note that 012 is an octal number. -1 is converted to 0xFF. </p>
+<p> Here is a listing of the actions associated with each key that the Midnight Commander handles in the internal file viewer. </p>
+<p> <code>F1</code> Invoke the built-in hypertext help viewer. </p>
+<p> <code>F2</code> Toggle the wrap mode. </p>
+<p> <code>F4</code> Toggle the hex mode. </p>
+<p> <code>F5</code> Goto line. This will prompt you for a line number and will display that line. </p>
+<p> <code>F6, /.</code> Regular expression search. </p>
+<p> <code>?,</code> Reverse regular expression search. </p>
+<p> <code>F7</code> Normal search / hex mode search. </p>
+<p> <code>C-s, F17, n.</code> Start normal search if there was no previous search expression else find next match. </p>
+<p> <code>C-r.</code> Start reverse search if there was no previous search expression else find next match. </p>
+<p> <code>F8</code> Toggle Raw/Parsed mode: This will show the file as found on disk or if a processing filter has been specified in the mc.ext file, then the output from the filter. Current mode is always the other than written on the button label, since on the button is the mode which you enter by that key. </p>
+<p> <code>F9</code> Toggle the format/unformat mode: when format mode is on the viewer will interpret some string sequences to show bold and underline with different colors. Also, on button label is the other mode than current. </p>
+<p> <code>F10, Esc.</code> Exit the internal file viewer. </p>
+<p> <code>next-page, space, C-v.</code> Scroll one page forward. </p>
+<p> <code>prev-page, Alt-v, C-b, Backspace.</code> Scroll one page backward. </p>
+<p> <code>down-key</code> Scroll one line forward. </p>
+<p> <code>up-key</code> Scroll one line backward. </p>
+<p> <code>C-l</code> Refresh the screen. </p>
+<p> <code>C-o</code> Switch to the subshell and show the command screen. </p>
+<p> <code>[n] m</code> Set the mark n. </p>
+<p> <code>[n] r</code> Jump to the mark n. </p>
+<p> <code>C-f</code> Jump to the next file. </p>
+<p> <code>C-b</code> Jump to the previous file. </p>
+<p> <code>Alt-r</code> Toggle the ruler. </p>
+<p> <code>Alt-e</code> to change charset of displayed text may use M-e (Alt-e). Recoding is made from selected codepage into system codepage. To cancel the recoding you may select &quot;&lt;No translation&gt;&quot; in charset selection dialog. </p>
+<p> It&#8217;s possible to instruct the file viewer how to display a file, look at the Extension File Edit section </p>
+<h2>Internal File Editor</h2>
+<p> The internal file editor is a full-featured full screen editor. It can edit files up to 64 megabytes. It is possible to edit binary files. The internal file editor is invoked using <code>F4</code> if the <i>use_internal_edit</i> option is set in the initialization file. </p>
+<p> The features it presently supports are: block copy, move, delete, cut, paste; key for key undo; pull-down menus; file insertion; macro commands; regular expression search and replace; shift-arrow text highlighting (if supported by the terminal); insert-overwrite toggle; word wrap; autoindent; tunable tab size; syntax highlighting for various file types; and an option to pipe text blocks through shell commands like indent and ispell. </p>
+<p> Sections: </p>
+<dl>
+<dd> <p> Options of editor in ini-file </p>
+ </dd></dl>
+<p> The editor is very easy to use and requires no tutoring. To see what keys do what, just consult the appropriate pull-down menu. Other keys are: Shift movement keys do text highlighting. <code>Ctrl-Ins</code> copies to the file <code>mcedit.clip</code> and <code>Shift-Ins</code> pastes from mcedit.clip. <code>Shift-Del</code> cuts to <code>mcedit.clip</code>, and <code>Ctrl-Del</code> deletes highlighted text. Mouse highlighting also works, and you can override the mouse as usual by holding down the shift key while dragging the mouse to let normal terminal mouse highlighting work. </p>
+<p> To define a macro, press <code>Ctrl-R</code> and then type out the key strokes you want to be executed. Press <code>Ctrl-R</code> again when finished. You can then assign the macro to any key you like by pressing that key. The macro is executed when you press <code>Ctrl-A</code> and then the assigned key. The macro is also executed if you press Meta, Ctrl, or Esc and the assigned key, provided that the key is not used for any other function. Once defined, the macro commands go into the file <code>~/.local/share/mc/mcedit/mcedit.macros</code> You can delete a macro by deleting the appropriate line in this file. </p>
+<p> To change charset of displayed text may use M-e (Alt-e). Recoding is made from selected codepage into system codepage. To cancel the recoding you may select &quot;&lt;No translation&gt;&quot; in charset selection dialog. </p>
+<p> <code>F19</code> will format the currently highlighted block (plain text or <code>C</code> or <code>C++</code> code or another). This is controlled by the file <code>/usr/share/mc/edit.indent.rc</code> which is copied to <code>~/.local/share/mc/mcedit/edit.indent.rc</code> in your home directory the first time you use it. </p>
+<p> The editor also displays non-us characters (160+). When editing binary files, you should set <code>display bits</code> to 7 bits in the options menu to keep the spacing clean. </p>
+<h2>Options of editor in ini-file</h2>
+<p> Some editor options of ini-file are described in this section. Options are placed in [Midnight-Commander] section </p>
+<dl>
+<dt><i>editor_wordcompletion_collect_entire_file</i></dt>
+<dd> <p> Search autocomplete candidates in entire of file or just from begin of file to cursor position (0) </p>
+ </dd></dl>
+<h2>Screen selector</h2>
+<p> Midnight Commander supports running many internal modules (such as editor, viewer and diff viewer) simultaneously and switching between them without closing open files. Using several file managers at a time, however, is not currently supported. </p>
+<p> Let&#8217;s call each of these modules a screen. There are three ways to switch between screens, using one of these global shortcuts: </p>
+<dl>
+<dt><code>Alt-}</code></dt>
+<dd> <p> switch to the next screen; </p>
+ </dd>
+<dt><code>Alt-{</code></dt>
+<dd> <p> switch to the previous screen; </p>
+ </dd>
+<dt><code>Alt-`</code></dt>
+<dd> <p> open a dialog window with the list of currently open screens (or use the &quot;Screen list&quot; menu item). </p>
+ </dd></dl>
+<h2>Completion</h2>
+<p> Let the Midnight Commander type for you. </p>
+<p> Attempt to perform completion on the text before current position. MC attempts completion treating the text as variable (if the text begins with <code>$</code>), username (if the text begins with <code>~</code>), hostname (if the text begins with <code>@</code>) or command (if you are on the command line in the position where you might type a command, possible completions then include shell reserved words and shell built-in commands as well) in turn. If none of these matches, filename completion is attempted. </p>
+<p> Filename, username, variable and hostname completion works on all input lines, command completion is command line specific. If the completion is ambiguous (there are more different possibilities), MC beeps and the following action depends on the setting of the <i>Complete: show all</i> option in the Configuration dialog. If it is enabled, a list of all possibilities pops up next to the current position and you can select with the arrow keys and <code>Enter</code> the correct entry. You can also type the first letters in which the possibilities differ to move to a subset of all possibilities and complete as much as possible. If you press <code>Alt-Tab</code> again, only the subset will be shown in the listbox, otherwise the first item which matches all the previous characters will be highlighted. As soon as there is no ambiguity, dialog disappears, but you can hide it by canceling keys <code>Esc</code>, <code>F10</code> and left and right arrow keys. If Complete: show all is disabled, the dialog pops up only if you press <code>Alt-Tab</code> for the second time, for the first time MC just beeps.  </p>
+<h2>Virtual File System</h2>
+<p> The Midnight Commander is provided with a code layer to access the file system; this code layer is known as the virtual file system switch. The virtual file system switch allows the Midnight Commander to manipulate files not located on the Unix file system. </p>
+<p> Currently the Midnight Commander is packaged with some Virtual File Systems (VFS): the <i>local</i> file system, used for accessing the regular Unix file system; the <i>ftpfs</i>, used to manipulate files on remote systems with the FTP protocol; the <i>tarfs</i>, used to manipulate tar and compressed tar files; the <i>undelfs</i>, used to recover deleted files on ext2 file systems (the default file system for Linux systems), <i>fish</i> (for manipulating files over shell connections such as rsh and ssh). If the code was compiled with <i>sftpfs</i> (for manipulating files over SFTP connections). If the code was compiled with <i>smbfs</i> support, you can manipulate files on remote systems with the SMB (CIFS) protocol. </p>
+<p> A generic <i>extfs</i> (EXTernal virtual File System) is provided in order to easily expand VFS capabilities using scripts and external software. </p>
+<p> The VFS switch code will interpret all of the path names used and will forward them to the correct file system, the formats used for each one of the file systems is described later in their own section.  </p>
+<h2>FTP File System</h2>
+<p> The FTP File System (ftpfs) allows you to manipulate files on remote machines. To actually use it, you can use the <i>FTP link</i> item in the menu or directly change your current directory using the <i>cd</i> command to a path name that looks like this: </p>
+<p> <i><a href="ftp://[!][user[:pass]@]machine[:port][remote-dir]">ftp://[!][user[:pass]@]machine[:port][remote-dir]</a></i> </p>
+<p> The <i>user</i>, <i>port</i> and <i>remote-dir</i> elements are optional. If you specify the <i>user</i> element, the Midnight Commander will login to the remote machine as that user, otherwise it will use anonymous login or the login name from the <i>~/.netrc</i> file. The optional <i>pass</i> element is the password used for the connection. Using the password in the VFS directory name is not recommended, because it can appear on the screen in clear text and can be saved to the directory history. </p>
+<p> To enable using FTP proxy, prepend <code>!</code> (an exclamation sign) to the hostname. </p>
+<p> Examples: </p>
+<pre><code>ftp://ftp.nuclecu.unam.mx/linux/localftp://tsx-11.mit.edu/pub/linux/packagesftp://!behind.firewall.edu/pubftp://guest@remote-host.com:40/pubftp://miguel:xxx@server/pub
+</code></pre>
+<p> Please check the Virtual File System dialog box for ftpfs options.  </p>
+<h2>Tar File System</h2>
+<p> The tar file system provides you with read-only access to your tar files and compressed tar files by using the chdir command. To change your directory to a tar file, you change your current directory to the tar file by using the following syntax: </p>
+<p> <i>/filename.tar/<a href="utar://[dir-inside-tar]">utar://[dir-inside-tar]</a></i> </p>
+<p> The mc.ext file already provides a shortcut for tar files, this means that usually you just point to a tar file and press return to enter into the tar file, see the Extension File Edit section for details on how this is done. </p>
+<p> Examples: </p>
+<pre><code>    mc-3.0.tar.gz/utar://mc-3.0/vfs    /ftp/GCC/gcc-2.7.0.tar/utar://
+</code></pre>
+<p> The latter specifies the full path of the tar archive.  </p>
+<h2>FIle transfer over SHell filesystem</h2>
+<p> The fish file system is a network based file system that allows you to manipulate the files in a remote machine as if they were local. To use this, the other side has to either run fish server, or has to have bash-compatible shell. </p>
+<p> To connect to a remote machine, you just need to chdir into a special directory which name is in the following format: </p>
+<p> <i>sh://[user@]machine[:options]/[remote-dir]</i> </p>
+<p> The <i>user,</i> <i>options</i> and <i>remote-dir</i> elements are optional. If you specify the <i>user</i> element, the Midnight Commander will try to login on the remote machine as that user, otherwise it will use your login name. </p>
+<p> The available <i>options</i> are: </p>
+<pre><code>  'C' - use compression;
+  'r' - use rsh instead of ssh;
+  port - specify the port used by remote server.
+</code></pre>
+<p> If the <i>remote-dir</i> element is present, your current directory on the remote machine will be set to this one. </p>
+<p> Examples: </p>
+<pre><code>    sh://onlyrsh.mx:r/linux/local
+    sh://joe [at] want.compression.edu:C/private
+    sh://joe [at] noncompressed.ssh.edu/private
+    sh://joe [at] somehost.ssh.edu:2222/private
+</code></pre>
+<h2>SFTP (SSH File Transfer Protocol) filesystem</h2>
+<p> The SFTP file system is a network based file system that allows you to manipulate the files in a remote machine as if they were local. </p>
+<p> To connect to a remote machine, you just need to chdir into a special directory which name is in the following format: </p>
+<p> <i><a href="sftp://[user@]machine:[port]/[remote-dir]">sftp://[user@]machine:[port]/[remote-dir]</a></i> </p>
+<p> The <i>user,</i> <i>port</i> and <i>remote-dir</i> elements are optional. If you specify the <i>user</i> element, the Midnight Commander will try to login on the remote machine as that user, otherwise it will use your login name. <i>port</i> &#8211; specify the port used by remote server (22 by default). If the <i>remote-dir</i> element is present, your current directory on the remote machine will be set to this one. </p>
+<p> Examples: </p>
+<pre><code>sftp://onlyrsh.mx/linux/localsftp://joe:password@want.compression.edu/privatesftp://joe@noncompressed.ssh.edu/privatesftp://joe@somehost.ssh.edu:2222/private
+</code></pre>
+<h2>Undelete File System</h2>
+<p> On Linux systems, if you asked configure to use the ext2fs undelete facilities, you will have the undelete file system available. Recovery of deleted files is only available on ext2 file systems. The undelete file system is just an interface to the ext2fs library to retrieve all of the deleted files names on an ext2fs and provides and to extract the selected files into a regular partition. </p>
+<p> To use this file system, you have to chdir into the special file name formed by the &quot;undel://&quot; prefix and the file name where the actual file system resides. </p>
+<p> For example, to recover deleted files on the second partition of the first SCSI disk on Linux, you would use the following path name: </p>
+<pre><code>undel://sda2
+</code></pre>
+<p> It may take a while for the undelfs to load the required information before you start browsing files there.  </p>
+<h2>SMB File System</h2>
+<p> The smbfs allows you to manipulate files on remote machines with SMB (or CIFS) protocol. These include Windows for Workgroups, Windows 9x/ME/XP, Windows NT, Windows 2000 and Samba. To actually use it, you may try to use the panel command &quot;SMB link...&quot; (accessible from the menubar) or you may directly change your current directory to it using the cd command to a path name that looks like this: </p>
+<p> <i><a href="smb://[user@]machine[/service][/remote-dir]">smb://[user@]machine[/service][/remote-dir]</a></i> </p>
+<p> The <i>user</i>, <i>service</i> and <i>remote-dir</i> elements are optional. The <i>user</i>, <i>domain</i> and <i>password</i> can be specified in an input dialog. </p>
+<p> Examples: </p>
+<pre><code>smb://machine/Sharesmb://other_machinesmb://guest@machine/Public/Irlex
+</code></pre>
+<h2>EXTernal File System</h2>
+<p> <code>extfs</code> allows you to integrate numerous features and file types into GNU Midnight Commander in an easy way, by writing scripts. </p>
+<p> Extfs filesystems can be divided into two categories: </p>
+<p> 1. Stand-alone filesystems, which are not associated with any existing file. They represent certain system-wide data as a directory tree. You can invoke them by typing &#8216;<i>cd fsname://</i>&#8216; where fsname is an extfs short name (see below). Examples of such filesystems include audio (list audio tracks on the CD) or apt (list of all Debian packages in the system). </p>
+<p> For example, to list CD-Audio tracks on your CD-ROM drive, type </p>
+<pre><code>  cd audio://
+</code></pre>
+<p> 2. &#8216;Archive&#8217; filesystems (like rpm, patchfs and more), which represent contents of a file as a directory tree. It can consist of &#8216;real&#8217; files compressed in an archive (urar, rpm) or virtual files, like messages in a mailbox (mailfs) or parts of a patch (patchfs). To access such filesystems &#8216;<i>fsname://</i>&#8216; should be appended to the archive name. Note that the archive itself can be on another vfs. </p>
+<p> For example, to list contents of a zip archive documents.zip type </p>
+<pre><code>  cd documents.zip/uzip://
+</code></pre>
+<p> In many aspects, you could treat extfs like any other directory. For instance, you can add it to the hotlist or change to it from directory history. An important limitation is that you cannot invoke shell commands inside extfs, just like any other non-local VFS. </p>
+<p> Common extfs scripts included with Midnight Commander are: </p>
+<dl>
+<dt><code>a</code></dt>
+<dd> <p> access &#8216;A:&#8216; DOS/Windows diskette (<i>cd a://</i>). </p>
+ </dd>
+<dt><code>apt</code></dt>
+<dd> <p> front end to Debian&#8217;s APT package management system (<i>cd apt://</i>). </p>
+ </dd>
+<dt><code>audio</code></dt>
+<dd> <p> audio CD ripping and playing (<i>cd audio://</i> or <i>cd device/audio://</i>). </p>
+ </dd>
+<dt><code>bpp</code></dt>
+<dd> <p> package of Bad Penguin GNU/Linux distribution (<i>cd file.bpp/bpp://</i>). </p>
+ </dd>
+<dt><code>deb</code></dt>
+<dd> <p> package of Debian GNU/Linux distribution (<i>cd file.deb/deb://</i>). </p>
+ </dd>
+<dt><code>dpkg</code></dt>
+<dd> <p> Debian GNU/Linux installed packages (<i>cd deb://</i>). </p>
+ </dd>
+<dt><code>hp48</code></dt>
+<dd> <p> view and copy files to/from a HP48 calculator (<i>cd hp48://</i>). </p>
+ </dd>
+<dt><code>lslR</code></dt>
+<dd> <p> browsing of lslR listings as found on many FTPs (<i>cd filename/lslR://</i>). </p>
+ </dd>
+<dt><code>mailfs</code></dt>
+<dd> <p> mbox-style mailbox files support (<i>cd mailbox/mailfs://</i>). </p>
+ </dd>
+<dt><code>patchfs</code></dt>
+<dd> <p> extfs to handle unified and context diffs (<i>cd filename/patchfs://</i>). </p>
+ </dd>
+<dt><code>rpm</code></dt>
+<dd> <p> RPM package (<i>cd filename/rpm://</i>). </p>
+ </dd>
+<dt><code>rpms</code></dt>
+<dd> <p> RPM database management (<i>cd rpms://</i>). </p>
+ </dd>
+<dt><code>ulha, urar, uzip, uzoo, uar, uha</code></dt>
+<dd> <p> archivers (<i>cd archive/xxxx://</i> where xxxx is one of: <i>ulha</i>, <i>urar</i>, <i>uzip</i>, <i>uzoo</i>, <i>uar</i>, <i>uha</i>). </p>
+ </dd></dl>
+<p> You could bind file type/extension to specified extfs as described in the Extension File Edit section. Here is an example entry for Debian packages: </p>
+<pre><code>  regex/.deb$
+          Open=%cd %p/deb://
+</code></pre>
+<h2>Colors</h2>
+<p> The Midnight Commander will try to detect if your terminal supports color using the terminal database and your terminal name. Sometimes it gets confused, so you may force color mode or disable color mode using the -c and -b flag respectively. </p>
+<p> If the program is compiled with the Slang screen manager instead of ncurses, it will also check the variable <code>COLORTERM,</code> if it is set, it has the same effect as the -c flag. </p>
+<p> You may specify terminals that always force color mode by adding the <i>color_terminals</i> variable to the Colors section of the initialization file. This will prevent the Midnight Commander from trying to detect if your terminal supports color. Example: </p>
+<pre><code>[Colors]
+color_terminals=linux,xterm
+color_terminals=terminal-name1,terminal-name2...
+</code></pre>
+<p> The program can be compiled with both ncurses and slang, ncurses does not provide a way to force color mode: ncurses uses just the information in the terminal database. </p>
+<p> The Midnight Commander provides a way to change the default colors. Currently the colors are configured using the environment variable <code>MC_COLOR_TABLE</code> or the Colors section in the initialization file. </p>
+<p> In the Colors section, the default color map is loaded from the <i>base_color</i> variable. You can specify an alternate color map for a terminal by using the terminal name as the key in this section. Example: </p>
+<pre><code>[Colors]
+base_color=
+xterm=menu=magenta:marked=,magenta:markselect=,red
+</code></pre>
+<p> The format for the color definition is: </p>
+<pre><code>  &lt;keyword&gt;=&lt;fgcolor&gt;,&lt;bgcolor&gt;,&lt;attributes&gt;:&lt;keyword&gt;=...
+</code></pre>
+<p> The colors are optional, and the keywords are: normal, selected, disabled, marked, markselect, errors, input, inputmark, inputunchanged, commandlinemark, reverse, gauge, header, inputhistory, commandhistory. Button bar colors are: bbarhotkey, bbarbutton. Status bar color: statusbar. Menu colors are: menunormal, menusel, menuhot, menuhotsel, menuinactive. Dialog colors are: dnormal, dfocus, dhotnormal, dhotfocus, dtitle. Error dialog colors are: errdfocus, errdhotnormal, errdhotfocus, errdtitle. Help colors are: helpnormal, helpitalic, helpbold, helplink, helpslink, helptitle. Viewer color are: viewbold, viewunderline, viewselected. Editor colors are: editnormal, editbold, editmarked, editwhitespace, editlinestate. Popup menu colors are: pmenunormal, pmenusel, pmenutitle. </p>
+<p> <i>header</i> determines the color of panel header, the line that contains column titles and sort mode indicator. </p>
+<p> <i>input</i> determines the color of input lines used in query dialogs. </p>
+<p> <i>gauge</i> determines the color of the filled part of the progress bar (gauge), which is used to show the user the progress of file operations, such as copying. </p>
+<p> <i>disabled</i> determines the color of the widget that cannot be selected. </p>
+<p> The dialog boxes use the following colors: <i>dnormal</i> is used for the normal text, <i>dfocus</i> is the color used for the currently selected component, <i>dhotnormal</i> is the color used to differentiate the hotkey color in normal components, whereas the <i>dhotfocus</i> color is used for the highlighted color in the currently selected component. </p>
+<p> Menus use the same scheme but uses the menunormal, menusel, menuhot, menuhotsel and menuinactive tags instead. </p>
+<p> Help uses the following colors: <i>helpnormal</i> is used for normal text, <i>helpitalic</i> is used for text which is emphasized in italic in the manual page, <i>helpbold</i> is used for text which is emphasized in bold in the manual page, <i>helplink</i> is used for not selected hyperlinks and <i>helpslink</i> is used for selected hyperlink. </p>
+<p> Popup menu uses following colors: <i>pmenunormal</i> is used for non-selected menu items and as a main color of popup menu window, <i>pmenusel</i> is used for selected menu item, <i>pmenutitle</i> is used for popup menu title. </p>
+<p> The possible colors are: black, gray, red, brightred, green, brightgreen, brown, yellow, blue, brightblue, magenta, brightmagenta, cyan, brightcyan, lightgray and white. And there is a special keyword for transparent background. It is &#8216;default&#8217;. The &#8216;default&#8217; can only be used for background color. Another special keyword &quot;base&quot; means mc&#8217;s main colors. When 256 colors are available, they can be specified either as color16 to color255, or as rgb000 to rgb555 and gray0 to gray23. Example: </p>
+<pre><code>[Colors]
+base_color=normal=white,default:marked=magenta,default
+</code></pre>
+<p> Attributes can be any of bold, underline, reverse and blink, appended by a plus sign if more than one are desired. The special word &quot;none&quot; means no attributes, without attempting to fall back to base_color. Example: </p>
+<pre><code>menuhotsel=yellow;black;bold+underline
+</code></pre>
+<h2>Skins</h2>
+<p> You can change the appearance of Midnight Commander. To do this, you must specify a file that contain descriptions of colors and lines to draw boxes. Redefining of the colors is entirely compatible with the assignment of colors, as described in Section Colors. </p>
+<p> If your skin contains any of 256-color definitions, you should define the &#8216;256colors&#8217; key set to TRUE value in [skin] section. </p>
+<p> A skin-file is searched on the following algorithm (to the first one found): </p>
+<dl>
+<dd> <p> <br />
+ 1) command line option <code>-S &lt;skin&gt;</code> or <code>--skin=&lt;skin&gt;</code> <br />
+ 2) Environment variable <code>MC_SKIN</code> <br />
+ 3) Parameter <code>skin</code> in section <code>[Midnight-Commander]</code> in config file. <br />
+ 4) File <code>/etc/mc/skins/default.ini</code> <br />
+ 5) File <code>/usr/share/mc/skins/default.ini</code> </p>
+ </dd></dl>
+<p> Command line option, environment variable and parameter in config file may contain the absolute path to the skin-file (with the extension .ini or without it). Search of skin-file will occur in (to the first one found): </p>
+<dl>
+<dd> <p> 1) <code>~/.local/share/mc/skins/</code> <br />
+ 2) <code>@sysconfdir@/mc/skins/</code> <br />
+ 3) <code>/usr/share/mc/skins/</code> <br />
+ </p>
+ </dd></dl>
+<p> For getting extended info, refer to: </p>
+<dl>
+<dd> <p> Description of section and parameters <br />
+ Color pair definitions <br />
+ Draw lines <br />
+ Compatibility <br />
+ </p>
+ </dd></dl>
+<h2>Description of section and parameters</h2>
+<p> Section <code>[skin]</code> contain metainfo for skin-file. Parameter <i>description</i> contain short text about skin. </p>
+<p> Section <code>[filehighlight]</code> contain descriptions of color pairs for filenames highlighting. Name of parameters must be equal to names of sections into filehighlight.ini file. See Filenames Highlight for getting more info. </p>
+<p> Section <code>[core]</code> describes the elements that are used everywhere. </p>
+<dl>
+<dt><i>_default_</i></dt>
+<dd> <p> Default color pair. Used in all other sections if they not contain color definitions </p>
+ </dd>
+<dt><i>selected</i></dt>
+<dd> <p> cursor </p>
+ </dd>
+<dt><i>marked</i></dt>
+<dd> <p> selected data </p>
+ </dd>
+<dt><i>markselect</i></dt>
+<dd> <p> cursor on selected data </p>
+ </dd>
+<dt><i>gauge</i></dt>
+<dd> <p> color of the filled part of the progress bar </p>
+ </dd>
+<dt><i>input</i></dt>
+<dd> <p> color of input lines used in query dialogs </p>
+ </dd>
+<dt><i>inputmark</i></dt>
+<dd> <p> color of input selected text </p>
+ </dd>
+<dt><i>inputunhanged</i></dt>
+<dd> <p> color of input text before first modification or cursor movement </p>
+ </dd>
+<dt><i>commandlinemark</i></dt>
+<dd> <p> color of selected text in command line </p>
+ </dd>
+<dt><i>reverse</i></dt>
+<dd> <p> reverse color </p>
+ </dd></dl>
+<p> Section <code>[dialog]</code> describes the elements that are placed on dialog windows (except error dialogs). </p>
+<dl>
+<dt><i>_default_</i></dt>
+<dd> <p> Default color for this section. Used [core]._default_ if not specified </p>
+ </dd>
+<dt><i>dfocus</i></dt>
+<dd> <p> Color of active element (in focus) </p>
+ </dd>
+<dt><i>dhotnormal</i></dt>
+<dd> <p> Color of hotkeys </p>
+ </dd>
+<dt><i>dhotfocus</i></dt>
+<dd> <p> Color of hotkeys in focused element </p>
+ </dd></dl>
+<p> Section <code>[error]</code> describes the elements that are placed on error dialog windows </p>
+<dl>
+<dt><i>_default_</i></dt>
+<dd> <p> Default color for this section. Used [core]._default_ if not specified </p>
+ </dd>
+<dt><i>errdhotnormal</i></dt>
+<dd> <p> Color of hotkeys </p>
+ </dd>
+<dt><i>errdhotfocus</i></dt>
+<dd> <p> Color of hotkeys in focused element </p>
+ </dd></dl>
+<p> Section <code>[menu]</code> describes the elements that are placed in menu. This section describes system menu (called by F9) and user-defined menus (called by F2 in panels and by F11 in editor). </p>
+<dl>
+<dt><i>_default_</i></dt>
+<dd> <p> Default color for this section. Used [core]._default_ if not specified </p>
+ </dd>
+<dt><i>entry</i></dt>
+<dd> <p> Color of menu items </p>
+ </dd>
+<dt><i>menuhot</i></dt>
+<dd> <p> Color of menu hotkeys </p>
+ </dd>
+<dt><i>menusel</i></dt>
+<dd> <p> Color of active menu item (in focus) </p>
+ </dd>
+<dt><i>menuhotsel</i></dt>
+<dd> <p> Color of menu hotkeys in focused menu item </p>
+ </dd>
+<dt><i>menuinactive</i></dt>
+<dd> <p> Color of inactive menu </p>
+ </dd></dl>
+<p> Section <code>[help]</code> describes the elements that are placed on help window. </p>
+<dl>
+<dt><i>_default_</i></dt>
+<dd> <p> Default color for this section. Used [core]._default_ if not specified </p>
+ </dd>
+<dt><i>helpitalic</i></dt>
+<dd> <p> Color pair for element with <code>italic</code> attribute </p>
+ </dd>
+<dt><i>helpbold</i></dt>
+<dd> <p> Color pair for element with <code>bold</code> attribute </p>
+ </dd>
+<dt><i>helplink</i></dt>
+<dd> <p> Color of links </p>
+ </dd>
+<dt><i>helpslink</i></dt>
+<dd> <p> Color of active link (on focus) </p>
+ </dd></dl>
+<p> Section <code>[editor]</code> describes the colors of elements placed in editor. </p>
+<dl>
+<dt><i>_default_</i></dt>
+<dd> <p> Default color for this section. Used [core]._default_ if not specified </p>
+ </dd>
+<dt><i>editbold</i></dt>
+<dd> <p> Color pair for element with <code>bold</code> attribute </p>
+ </dd>
+<dt><i>editmarked</i></dt>
+<dd> <p> Color of selected text </p>
+ </dd>
+<dt><i>editwhitespace</i></dt>
+<dd> <p> Color of tabs and trailing spaces highlighting </p>
+ </dd>
+<dt><i>editlinestate</i></dt>
+<dd> <p> Color for line state area </p>
+ </dd></dl>
+<p> Section <code>[viewer]</code> describes the colors of elements placed in viewer. </p>
+<dl>
+<dt><i>viewunderline</i></dt>
+<dd> <p> Color pair for element with <code>underline</code> attribute </p>
+ </dd></dl>
+<h2>Color pair definitions</h2>
+<p> Any parameter in skin-file contain definition of color pair. </p>
+<p> Color pairs described as two colors and the optional attributes separated by &#8216;;&#8216;. First field sets the foreground color, second field sets background color, third field sets the attributes. Any of the fields may be omitted, in this case value will be taken from default color pair (global color pair or from default color pair of this section). </p>
+<p> Example: <br />
+ </p>
+<pre><code>[core]
+    # green on black
+    _default_=green;black
+    # green (default) on blue
+    selected=;blue
+    # yellow on black (default)
+    # underlined yellow on black (default)
+    marked=yellow;;underline
+</code></pre>
+<p> Possible colors (names) and attributes are described in Colors. section. </p>
+<h2>Draw lines</h2>
+<p> Lines sets in section <code>[Lines]</code> into skin-file. By default single lines are used, but you may redefine to usage of any utf-8 symbols (like to lines, for example). </p>
+<p> <i>WARNING!!!</i> When you build Midnight Commander with the Ncurses screen library usage of drawing lines is limited! Possible only drawing a single lines. For all questions and comments please contact the developers of Ncurses. </p>
+<p> Descriptions of parameters <code>[Lines]</code>: </p>
+<dl>
+<dt><i>lefttop</i></dt>
+<dd> <p> left-top line fragment. </p>
+ </dd>
+<dt><i>righttop</i></dt>
+<dd> <p> right-top line fragment. </p>
+ </dd>
+<dt><i>centertop</i></dt>
+<dd> <p> down branch of horizontal line </p>
+ </dd>
+<dt><i>centerbottom</i></dt>
+<dd> <p> up branch of horizontal line </p>
+ </dd>
+<dt><i>leftbottom</i></dt>
+<dd> <p> left-bottom line fragment </p>
+ </dd>
+<dt><i>rightbottom</i></dt>
+<dd> <p> right-bottom line fragment </p>
+ </dd>
+<dt><i>leftmiddle</i></dt>
+<dd> <p> right branch of vertical line </p>
+ </dd>
+<dt><i>rightmiddle</i></dt>
+<dd> <p> left branch of vertical line </p>
+ </dd>
+<dt><i>centermiddle</i></dt>
+<dd> <p> cross of lines </p>
+ </dd>
+<dt><i>horiz</i></dt>
+<dd> <p> horizontal line </p>
+ </dd>
+<dt><i>vert</i></dt>
+<dd> <p> vertical line </p>
+ </dd>
+<dt><i>thinhoriz</i></dt>
+<dd> <p> thin horizontal line </p>
+ </dd>
+<dt><i>thinvert</i></dt>
+<dd> <p> thin vertical line </p>
+ </dd></dl>
+<h2>Compatibility</h2>
+<p> Appointment of color by skin-files fully compatible with the appointment of the colors described in Colors. section. </p>
+<p> In this case, reassignment of colors has priority over the skin file and is complementary. </p>
+<h2>Filenames Highlight</h2>
+<p> Section [filehighlight] in current skin-file contains key names as highlight groups and values as color pairs. Color pairs is documented in Skins section. </p>
+<p> Rules of filenames highlight are placed in /usr/share/mc/filehighlight.ini file (~/.config/mc/filehighlight.ini). Name of section in this file must be equal to parameters names in [filehighlight] section (in current skin-file). </p>
+<p> Keys in these groups are: </p>
+<dl>
+<dt><i>type</i></dt>
+<dd> <p> file type. If present, all other options are ignored. </p>
+ </dd>
+<dt><i>regexp</i></dt>
+<dd> <p> regular expression. If present, &#8216;extensions&#8217; option is ignored. </p>
+ </dd>
+<dt><i>extensions</i></dt>
+<dd> <p> list of extensions of files. Separated by &#8216;;&#8216; sign. </p>
+ </dd>
+<dt><i>extensions_case</i></dt>
+<dd> <p> (make sense only with &#8216;extensions&#8217; parameter) make &#8216;extensions&#8217; rule case sensitive (true) or not (false). </p>
+ </dd></dl>
+<p> `type&#8217; key may have values: </p>
+<pre><code>- FILE (all files)
+  - FILE_EXE
+- DIR (all directories)
+  - LINK_DIR
+- LINK (all links except stale link)
+  - HARDLINK
+  - SYMLINK
+- STALE_LINK
+- DEVICE (all device files)
+  - DEVICE_BLOCK
+  - DEVICE_CHAR
+- SPECIAL (all special files)
+  - SPECIAL_SOCKET
+  - SPECIAL_FIFO
+  - SPECIAL_DOOR
+</code></pre>
+<h2>Special Settings</h2>
+<p> Most of the Midnight Commander settings can be changed from the menus. However, there are a small number of settings which can only be changed by editing the setup file. </p>
+<p> These variables may be set in your ~/.config/mc/ini file: </p>
+<dl>
+<dt><i>clear_before_exec</i></dt>
+<dd> <p> By default the Midnight Commander clears the screen before executing a command. If you would prefer to see the output of the command at the bottom of the screen, edit your ~/.config/mc/ini file and change the value of the field clear_before_exec to 0. </p>
+ </dd>
+<dt><i>confirm_view_dir</i></dt>
+<dd> <p> If you press F3 on a directory, normally MC enters that directory. If this flag is set to 1, then MC will ask for confirmation before changing the directory if you have files tagged. </p>
+ </dd>
+<dt><i>ftpfs_retry_seconds</i></dt>
+<dd> <p> This value is the number of seconds the Midnight Commander will wait before attempting to reconnect to an FTP server that has denied the login. If the value is zero, the login will no be retried. </p>
+ </dd>
+<dt><i>max_dirt_limit</i></dt>
+<dd> <p> Specifies how many screen updates can be skipped at most in the internal file viewer. Normally this value is not significant, because the code automatically adjusts the number of updates to skip according to the rate of incoming keystrokes. However, on very slow machines or terminals with a fast keyboard auto repeat, a big value can make screen updates too jumpy. </p>
+ </dd>
+<dd> <p> It seems that setting max_dirt_limit to 10 causes the best behavior, and that is the default value. </p>
+ </dd>
+<dt><i>mouse_move_pages_viewer</i></dt>
+<dd> <p> Controls if scrolling with the mouse is done by pages or line by line on the internal file viewer. </p>
+ </dd>
+<dt><i>only_leading_plus_minus</i></dt>
+<dd> <p> Allow special treatment for &#8216;+&#8216;, &#8216;-&#8216;, &#8216;*&#8216; in the command line (select, unselect, reverse selection) only if the command line is empty. You don&#8217;t need to quote those characters in the middle of the command line. On the other hand, you cannot use them to change selection when the command line is not empty. </p>
+ </dd>
+<dt><i>show_output_starts_shell</i></dt>
+<dd> <p> This variable only works if you are not using the subshell support. When you use the C-o keystroke to go back to the user screen, if this one is set, you will get a fresh shell. Otherwise, pressing any key will bring you back to the Midnight Commander. </p>
+ </dd>
+<dt><i>timeformat_recent</i></dt>
+<dd> <p> Change the time format used to display dates less than 6 months from now. See strftime or date man page for the format specification. If this option is absent, default timeformat is used. </p>
+ </dd>
+<dt><i>timeformat_old</i></dt>
+<dd> <p> Change the time format used to display dates older than 6 months from now or for dates in the future. See strftime or date man page for the format specification. If this option is absent, default timeformat is used. </p>
+ </dd>
+<dt><i>torben_fj_mode</i></dt>
+<dd> <p> If this flag is set, then the home and end keys will work slightly different on the panels, instead of moving the selection to the first and last files in the panels, they will act as follows: </p>
+ </dd>
+<dd> <p> The home key will: Go up to the middle line, if below it; else go to the top line unless it is already on the top line, in this case it will go to the first file in the panel. </p>
+ </dd>
+<dd> <p> The end key has a similar behavior: Go down to the middle line, if over it; else go to the bottom line unless you already are at the bottom line, in such case it will move the selection to the last file name in the panel. </p>
+ </dd>
+<dt><i>use_file_to_guess_type</i></dt>
+<dd> <p> If this variable is on (the default) it will spawn the file command to match the file types listed on the mc.ext file. </p>
+ </dd>
+<dt><i>xtree_mode</i></dt>
+<dd> <p> If this variable is on (default is off) when you browse the file system on a Tree panel, it will automatically reload the other panel with the contents of the selected directory. </p>
+ </dd>
+<dt><i>fish_directory_timeout</i></dt>
+<dd> <p> This variable holds the lifetime of a directory cache entry in seconds. The default value is 900 seconds. </p>
+ </dd>
+<dt><i>clipboard_store</i></dt>
+<dd> <p> This variable contains path (with options) to the external clipboard utility like &#8216;xclip&#8217; to read text into X selection from file. For example: </p>
+ </dd></dl>
+<pre><code>clipboard_store=xclip -i
+</code></pre>
+<dl>
+<dt><i>clipboard_paste</i></dt>
+<dd> <p> This variable contains path (with options) to the external clipboard utility like &#8216;xclip&#8217; to print the selection to standard out. For example: </p>
+ </dd></dl>
+<pre><code>clipboard_pastee=xclip -o
+</code></pre>
+<dl>
+<dt><i>autodetect_codeset</i></dt>
+<dd> <p> This option allows use the `enca&#8217; command to autodetect codeset of text files in internal viewer and editor. List of valid values can be obtain by the `enca --list languages | cut -d : -f1&#8217; command. Option must be located in the [Misc] section. </p>
+ </dd></dl>
+<p> For example: </p>
+<pre><code>autodetect_codeset=russian
+</code></pre>
+<h2>Terminal databases</h2>
+<p> The Midnight Commander provides a way to fix your system terminal database without requiring root privileges. The Midnight Commander searches in the system initialization file (the mc.lib file located in the Midnight Commander library directory) and in the ~/.config/mc/ini file for the section &quot;terminal:your-terminal-name&quot; and then for the section &quot;terminal:general&quot;, each line of the section contains a key symbol that you want to define, followed by an equal sign and the definition for the key. You can use the special \e form to represent the escape character and the ^x to represent the control-x character. </p>
+<p> The possible key symbols are: </p>
+<pre><code>f0 to f20 Function keys f0-f20
+bs backspace
+home home key
+end end key
+up up arrow key
+down down arrow key
+left left arrow key
+right right arrow key
+pgdn page down key
+pgup page up key
+insert the insert character
+delete the delete character
+complete to do completion
+</code></pre>
+<p> For example, to define the key insert to be the Escape + [ + O + p, you set this in the ini file: </p>
+<pre><code>insert=\e[Op
+</code></pre>
+<p> Also now you can use <i>extended learn keys.</i> For example: </p>
+<pre><code>    ctrl-alt-right=\e[[1;6C
+    ctrl-alt-left=\e[[1;6D
+</code></pre>
+<p> This means that ctrl+alt+left sends a \e[[1;6D escape sequence and therefore Midnight Commander interprets &quot;\e[[1;6D&quot; as Ctrl-Alt-Left. </p>
+<p> The <i>complete</i> key symbol represents the escape sequences used to invoke the completion process, this is invoked with Alt-tab, but you can define other keys to do the same work (on those keyboard with tons of nice and unused keys everywhere).  </p>
+<h2></h2>
+<h2>FILES</h2>
+<p> Full paths below may vary between installations. They are also affected by the <code>MC_DATADIR</code> environment variable. If it&#8217;s set, its value is used instead of /usr/share/mc in the paths below. </p>
+<p> <i>/usr/share/mc/mc.hlp</i> </p>
+<dl>
+<dd> <p> The help file for the program. </p>
+ </dd></dl>
+<p> <i>/usr/share/mc/mc.ext</i> </p>
+<dl>
+<dd> <p> The default system-wide extensions file. </p>
+ </dd></dl>
+<p> <i>~/.config/mc/mc.ext</i> </p>
+<dl>
+<dd> <p> User&#8217;s own extension, view configuration and edit configuration file. They override the contents of the system wide files if present. </p>
+ </dd></dl>
+<p> <i>/usr/share/mc/mc.ini</i> </p>
+<dl>
+<dd> <p> The default system-wide setup for the Midnight Commander, used only if the user doesn&#8217;t have his own ~/.config/mc/ini file. </p>
+ </dd></dl>
+<p> <i>/usr/share/mc/mc.lib</i> </p>
+<dl>
+<dd> <p> Global settings for the Midnight Commander. Settings in this file affect all users, whether they have ~/.config/mc/ini or not. Currently, only terminal settings are loaded from mc.lib. </p>
+ </dd></dl>
+<p> <i>~/.config/mc/ini</i> </p>
+<dl>
+<dd> <p> User&#8217;s own setup. If this file is present then the setup is loaded from here instead of the system-wide startup file. </p>
+ </dd></dl>
+<p> <i>/usr/share/mc/mc.hint</i> </p>
+<dl>
+<dd> <p> This file contains the hints displayed by the program. </p>
+ </dd></dl>
+<p> <i>/usr/share/mc/mc.menu</i> </p>
+<dl>
+<dd> <p> This file contains the default system-wide applications menu. </p>
+ </dd></dl>
+<p> <i>~/.config/mc/menu</i> </p>
+<dl>
+<dd> <p> User&#8217;s own application menu. If this file is present it is used instead of the system-wide applications menu. </p>
+ </dd></dl>
+<p> <i>~/.cache/mc/Tree</i> </p>
+<dl>
+<dd> <p> The directory list for the directory tree and tree view features. </p>
+ </dd></dl>
+<p> <i>~/.local/share/mc.menu</i> </p>
+<dl>
+<dd> <p> Local user-defined menu. If this file is present, it is used instead of the home or system-wide applications menu. </p>
+ </dd></dl>
+<p> To change default root directory of MC, you can use <code>MC_HOME</code> environment variable. The value of MC_HOME must be an absolute path. If MC_HOME is unset or empty, HOME variable is used. If HOME is unset or empty, MC directories are get from GLib library.  </p>
+<h2>LICENSE</h2>
+<p> This program is distributed under the terms of the GNU General Public License as published by the Free Software Foundation. See the built-in help for details on the License and the lack of warranty.  </p>
+<h2>AVAILABILITY</h2>
+<p> The latest version of this program can be found at <a href="ftp://ftp.gnu.org/gnu/mc/.">ftp://ftp.gnu.org/gnu/mc/.</a>  </p>
+<h2>SEE ALSO</h2>
+<p> <a href="/docs/linux/man/1-ed/">ed</a>(1), <a href="/docs/linux/man/1-gpm/">gpm</a>(1), <a href="/docs/linux/man/1-terminfo/">terminfo</a>(1), <a href="/docs/linux/man/1-view/">view</a>(1), <a href="/docs/linux/man/1-sh/">sh</a>(1), <a href="/docs/linux/man/1-bash/">bash</a>(1), <a href="/docs/linux/man/1-tcsh/">tcsh</a>(1), <a href="/docs/linux/man/1-zsh/">zsh</a>(1). </p>
+<pre><code>The Midnight Commander page on the World Wide Web:http://www.midnight-commander.org/
+</code></pre>
+<h2>AUTHORS</h2>
+<p> Authors and contributors are listed in the AUTHORS file in the source distribution.  </p>
+<h2>BUGS</h2>
+<p> See the file TODO in the distribution for information on what remains to be done. </p>
+<p> If you want to report a problem with the program, please send mail to this address: mc-devel [at] gnome.org. </p>
+<p> Provide a detailed description of the bug, the version of the program you are running (<i>mc -V</i> displays this information), the operating system you are running the program on. If the program crashes, we would appreciate a stack trace. </p>
+<h2>Index</h2>

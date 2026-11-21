@@ -74,5 +74,28 @@ description: "sg_write_same – send SCSI WRITE SAME command"
 <pre><code>sg_write_same --lba=0x1234 --num=63 /dev/sdc</code></pre>
 <p> Since <i>&#8211;xferlen=LEN</i> has not been given, then this utility will call the READ CAPACITY command on /dev/sdc to determine the number of bytes in a logical block. Let us assume that is 512 bytes. Since <i>&#8211;in=IF</i> is not given a block of zeros is assumed. So 63 blocks of zeros (each block containing 512 bytes) will be written from (and including) LBA 0x1234 . Note that only one block of zeros is passed to the SCSI WRITE SAME command in the data out buffer (as required by SBC-3). A similar example follows but in this case the blocks are &quot;unmapped&quot; (&quot;trimmed&quot; in ATA speak) rather than zeroed:<br />
 &nbsp;<wbr>&nbsp;<wbr>sg_write_same &#8211;unmap -L 0x1234 -n 63&nbsp;<wbr>/dev/sdc Note that if the LBPRZ bit in the READ CAPACITY(16) response is set (i.e. LPPRZ is an acronym for logical block provisioning read zeros) then these two examples do the same thing, at least seen from the point of view of subsequent reads. This utility can also be used to write protection information (PI) on disks formatted with a protection type greater than zero. PI is 8 bytes of extra data appended to the user data of a logical block: the first two bytes are a CRC (the &quot;guard&quot;), the next two bytes are the &quot;application tag&quot; and the last four bytes are the &quot;reference tag&quot;. With protection types 1 and 2 if the application tag is 0xffff then the guard should not be checked (against the user data). In this example we assume the logical block size (of the user data) is 512 bytes and the disk has been formatted with protection type 1. Since we are going to modify LBA 2468 then we take a copy of it first: dd if=/dev/sdb skip=2468 bs=512 of=2468.bin count=1 The following command line sets the user data to zeros and the PI to 8 0xFF bytes on LBA 2468: sg_write_same &#8211;lba=2468 /dev/sdb Reading back that block should be successful because the application tag is 0xffff which suppresses the guard (CRC) check (which would otherwise be wrong): dd if=/dev/sdb skip=2468 bs=512 of=/dev/null count=1 Now an attempt is made to create a binary file with zeros in the user data, 0x0000 in the application tag and 0xff bytes in the other two PI fields. It is awkward to create 0xff bytes in a file (in Unix) as the &quot;tr&quot; command below shows: dd if=/dev/zero bs=1 count=512 of=ud.bin</p>
-<p>tr &quot;
-</p>
+<p>tr &quot;\000&quot;&nbsp;<wbr>&quot;\377&quot;&nbsp;<wbr>&lt;&nbsp;<wbr>/dev/zero | dd bs=1 of=ff_s.bin count=8 <br />
+ <br />
+&nbsp;<wbr>&nbsp;<wbr>cat ud.bin ff_s.bin&nbsp;<wbr>&gt;&nbsp;<wbr>lb.bin <br />
+ <br />
+&nbsp;<wbr>&nbsp;<wbr>dd if=/dev/zero bs=1 count=2 seek=514 conv=notrunc of=lb.bin </p>
+<p> The resulting file can be viewed with &#8216;hexdump -C lb.bin&#8217; and should contain 520 bytes. Now that file can be written to LBA 2468 as follows: </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>sg_write_same --lba=2468 wrprotect=3 --in=lb.bin&nbsp;<wbr>/dev/sdb </p>
+<p> Note the <i>--wrprotect=3</i> rather than being set to 1, since we want the WRITE SAME command to succeed even though the PI data now indicates the user data is corrupted. When an attempt is made to read the LBA, an error should occur: </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>dd if=/dev/sdb skip=2468 bs=512 of=/dev/null count=1 </p>
+<p> dd errors are not very expressive, if dmesg is checked there should be a line something like this: &quot;[sdb] Add. Sense: Logical block guard check failed&quot;. The block can be corrected by doing a &quot;sg_write_same --lba=1234 /dev/sdb&quot; again or restoring the original contents of that LBA: </p>
+<p> <br />
+&nbsp;<wbr>&nbsp;<wbr>dd if=2468.bin bs=512 seek=2468 of=/dev/sdb conv=notrunc count=1 </p>
+<p> Hopefully the dd command would never try to truncate the output file when it is a block device.  </p>
+<h2>AUTHORS</h2>
+<p> Written by Douglas Gilbert.  </p>
+<h2>REPORTING BUGS</h2>
+<p> Report bugs to &lt;dgilbert at interlog dot com&gt;.  </p>
+<h2>COPYRIGHT</h2>
+<p> Copyright &#169; 2009-2013 Douglas Gilbert <br />
+ This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  </p>
+<h2>SEE ALSO</h2>
+<p> <code>sg_format,sg_get_lba_status,sg_readcap,sg_vpd,sg_unmap(sg3_utils)</code> </p>
+<h2>Index</h2>
